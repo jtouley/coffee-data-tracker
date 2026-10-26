@@ -1,0 +1,1407 @@
+{
+ "items": [
+  {
+   "id": "5e78dea795068707e5f4d5bb",
+   "title": "Subscription - Monthly (Roaster's Choice or Sugar Shack)",
+   "urlId": "monthly-subscription",
+   "fullUrl": "/shop/monthly-subscription",
+   "tags": [
+    "Sugar Shack",
+    "Roaster's Choice",
+    "Signature Blend"
+   ],
+   "categories": [
+    "Subscriptions",
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584984112808-EO8KS8QDWICG45M5M1YG/IMG_1430.JPG",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Roasted Fresh and Delivered Once a Month. Choice of:</strong></p><ul data-rte-list=\"default\"><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Roaster\u2019s Choice Subscription: </strong>Two 10oz. Bags selected by Ian and Kevin</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Sugar Shack Subscription: </strong>Two 10oz. Bags of your favorite blend - Sugar Shack</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Decaf - Sugar Shack Subscription:</strong> Two bags of your favorite decaf</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">1 Bag Sugar Shack and 1 Bag Decaf</p></li></ul><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Shipping and Pickup Details: </strong></h2><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>We are currently fulfilling orders and shipping via USPS Monday through Friday. Select USPS for shipping. </strong></h2><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>New Pick-Up Policy:</strong></h2><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Online orders and subscription pick-ups will be held 150 Cherry Street, Burlington, Vermont (the location of our new cafe) during cafe business hours. Weekdays 7-2 and Weekends 8-3</p>",
+   "variants": [
+    {
+     "attributes": {
+      "Type": "Roaster's Choice (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "Roaster's Choice (2 x 10oz)"
+      }
+     ],
+     "id": "aa0fe93a-c53f-4b1c-bb61-296f95448630",
+     "sku": "SQ1582010",
+     "price": 3200,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "32.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 3200,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "32.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "Sugar Shack (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "Sugar Shack (2 x 10oz)"
+      }
+     ],
+     "id": "c1487ecf-a2a9-45a2-8f50-aec554cd00ef",
+     "sku": "SQ3517677",
+     "price": 2700,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "27.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 2700,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "27.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "DECAF (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "DECAF (2 x 10oz)"
+      }
+     ],
+     "id": "3ca2c3f5-8e84-4213-ab3f-a3613812b94d",
+     "sku": "SQ1327975",
+     "price": 2700,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "27.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 2700,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "27.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "1 Bag Sugar Shack and 1 bag DECAF (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "1 Bag Sugar Shack and 1 bag DECAF (2 x 10oz)"
+      }
+     ],
+     "id": "ecea08fc-a120-426d-ae00-7d3bc603986b",
+     "sku": "SQ9085701",
+     "price": 2700,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "27.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 2700,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "27.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "2lb. Sugar Shack"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "2lb. Sugar Shack"
+      }
+     ],
+     "id": "991886ac-3aab-4d43-90c9-5fa5fd6845ee",
+     "sku": "SQ8128256",
+     "price": 4000,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "40.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 3.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 4000,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "40.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "5 lb. Sugar Shack"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "5 lb. Sugar Shack"
+      }
+     ],
+     "id": "b98f04bd-0767-4624-af96-eb763ab413be",
+     "sku": "SQ1561908",
+     "price": 7800,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "78.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 6.0,
+     "imageIds": [],
+     "images": [],
+     "pricingOptions": [
+      {
+       "price": 7800,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "78.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "463b2439-10bc-4668-977b-8a99dcf689c5",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 1,
+         "unit": "MONTH"
+        },
+        "planVersionId": "a38caa9d-d79c-48ae-91cf-4fc4026aae40",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "5e77c85755c6b75f3085f245",
+   "title": "Subscription - Every Other Week (Roaster's Choice or Sugar Shack)",
+   "urlId": "every-other-week-subscription",
+   "fullUrl": "/shop/every-other-week-subscription",
+   "tags": [
+    "Roaster's Choice",
+    "Sugar Shack",
+    "Signature Blend"
+   ],
+   "categories": [
+    "Subscriptions",
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979208933-GHMFBF6PY7K4W115EU70/IMG_1428.JPG",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Roasted and Delivered Every Other Week. Choice of:</strong></p><ul data-rte-list=\"default\"><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Roaster\u2019s Choice Subscription: </strong>Two 10oz. Bags selected by Ian and Kevin</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Sugar Shack Subscription: </strong>Two 10oz. Bags of your favorite blend - Sugar Shack</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Decaf Sugar Shack: </strong>Two 10oz bags of your favorite decaf</p></li><li><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">1 Bag Decaf and 1 Bag Sugar Shack (10oz)</p></li></ul><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>Shipping and Pickup Details: </strong></h2><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>We are currently fulfilling orders and shipping via USPS Monday through Friday. Select USPS for shipping. </strong></h2><h2 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong>New Pick-Up Policy:</strong></h2><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Online orders and subscription pick-ups will be held 150 Cherry Street, Burlington, Vermont (the location of our new cafe) during cafe business hours. Weekdays 7-4 and Weekends 8-5</p>",
+   "variants": [
+    {
+     "attributes": {
+      "Type": "Roaster's Choice - (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "Roaster's Choice - (2 x 10oz)"
+      }
+     ],
+     "id": "f17caab6-f313-40e9-9b2a-4ae278e30c16",
+     "sku": "SQ4147126",
+     "price": 2900,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "29.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "mainImageId": "5e78dcfb7ad76d5324b8c701",
+     "images": [],
+     "mainImage": {
+      "id": "5e78dcfb7ad76d5324b8c701",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979196803-TPFM5AF1WQXYMMXZL26M/IMG_1428.JPG",
+      "systemDataSourceType": "JPG",
+      "systemDataVariants": "1923x1923,100w,300w,500w,750w,1000w,1500w",
+      "originalSize": "1923x1923",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 1
+     },
+     "pricingOptions": [
+      {
+       "price": 2900,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "29.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "cd17170d-a2b4-402d-8c64-2c41d65e108e",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 2,
+         "unit": "WEEK"
+        },
+        "planVersionId": "6aa41102-8f48-478e-8a48-12fd9fd66d77",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "Sugar Shack (2 x 10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "Sugar Shack (2 x 10oz)"
+      }
+     ],
+     "id": "34e9a91f-e393-4b06-90f5-9ff9d573dc36",
+     "sku": "SQ1335514",
+     "price": 2600,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "26.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "mainImageId": "5e78dcfb7ad76d5324b8c701",
+     "images": [],
+     "mainImage": {
+      "id": "5e78dcfb7ad76d5324b8c701",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979196803-TPFM5AF1WQXYMMXZL26M/IMG_1428.JPG",
+      "systemDataSourceType": "JPG",
+      "systemDataVariants": "1923x1923,100w,300w,500w,750w,1000w,1500w",
+      "originalSize": "1923x1923",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 1
+     },
+     "pricingOptions": [
+      {
+       "price": 2600,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "26.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "cd17170d-a2b4-402d-8c64-2c41d65e108e",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 2,
+         "unit": "WEEK"
+        },
+        "planVersionId": "6aa41102-8f48-478e-8a48-12fd9fd66d77",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "DECAF (2 x 10oz"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "DECAF (2 x 10oz"
+      }
+     ],
+     "id": "1477c878-a7dc-44e6-b104-6a59bf7ab37e",
+     "sku": "SQ0107215",
+     "price": 2600,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "26.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "mainImageId": "5e78dcfb7ad76d5324b8c701",
+     "images": [],
+     "mainImage": {
+      "id": "5e78dcfb7ad76d5324b8c701",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979196803-TPFM5AF1WQXYMMXZL26M/IMG_1428.JPG",
+      "systemDataSourceType": "JPG",
+      "systemDataVariants": "1923x1923,100w,300w,500w,750w,1000w,1500w",
+      "originalSize": "1923x1923",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 1
+     },
+     "pricingOptions": [
+      {
+       "price": 2600,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "26.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "cd17170d-a2b4-402d-8c64-2c41d65e108e",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 2,
+         "unit": "WEEK"
+        },
+        "planVersionId": "6aa41102-8f48-478e-8a48-12fd9fd66d77",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "1 Bag Sugar Shack and 1 bag DECAF (2 x10oz)"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "1 Bag Sugar Shack and 1 bag DECAF (2 x10oz)"
+      }
+     ],
+     "id": "75d48b01-69b8-4d02-9474-1979059d4a21",
+     "sku": "SQ9290303",
+     "price": 2600,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "26.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 1.0,
+     "imageIds": [],
+     "mainImageId": "5e78dcfb7ad76d5324b8c701",
+     "images": [],
+     "mainImage": {
+      "id": "5e78dcfb7ad76d5324b8c701",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979196803-TPFM5AF1WQXYMMXZL26M/IMG_1428.JPG",
+      "systemDataSourceType": "JPG",
+      "systemDataVariants": "1923x1923,100w,300w,500w,750w,1000w,1500w",
+      "originalSize": "1923x1923",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 1
+     },
+     "pricingOptions": [
+      {
+       "price": 2600,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "26.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "cd17170d-a2b4-402d-8c64-2c41d65e108e",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 2,
+         "unit": "WEEK"
+        },
+        "planVersionId": "6aa41102-8f48-478e-8a48-12fd9fd66d77",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Type": "5 lb Sugar Shack Bag"
+     },
+     "optionValues": [
+      {
+       "optionName": "Type",
+       "value": "5 lb Sugar Shack Bag"
+      }
+     ],
+     "id": "0d5217a2-2b06-40e4-8fea-117365b320ec",
+     "sku": "SQ3996014",
+     "price": 7500,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "75.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 5.5,
+     "imageIds": [],
+     "mainImageId": "5e78dcfb7ad76d5324b8c701",
+     "images": [],
+     "mainImage": {
+      "id": "5e78dcfb7ad76d5324b8c701",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1584979196803-TPFM5AF1WQXYMMXZL26M/IMG_1428.JPG",
+      "systemDataSourceType": "JPG",
+      "systemDataVariants": "1923x1923,100w,300w,500w,750w,1000w,1500w",
+      "originalSize": "1923x1923",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 1
+     },
+     "pricingOptions": [
+      {
+       "price": 7500,
+       "salePrice": 0,
+       "percentageDiscount": 0,
+       "priceMoney": {
+        "currency": "USD",
+        "value": "75.00"
+       },
+       "salePriceMoney": {
+        "currency": "USD",
+        "value": "0.00"
+       },
+       "onSale": false,
+       "productSubscriptionOptionId": "cd17170d-a2b4-402d-8c64-2c41d65e108e",
+       "subscriptionPlan": {
+        "billingPeriod": {
+         "value": 2,
+         "unit": "WEEK"
+        },
+        "planVersionId": "6aa41102-8f48-478e-8a48-12fd9fd66d77",
+        "numBillingCycles": 0
+       }
+      }
+     ],
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "6a7b76865d7fa22d3f48db47",
+   "title": "Habtamu Fikadu, Chelbesa, Ethiopia - Washed Process",
+   "urlId": "habtamu-fikadu",
+   "fullUrl": "/shop/habtamu-fikadu",
+   "tags": [
+    "Ethiopia"
+   ],
+   "categories": [
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/74ba3448-b202-4670-b3c8-432d37e9c2f8/habtamu+fikadu.jpg",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">An incredibly complex version of the classic Chelbesa/Guji flavor profile. <br /><br /><strong>Habtamu Fikadu, Ethiopia</strong></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Tasting notes: Orange blossom, lemon meringue, hojicha, peach fruit leather, raspberry</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Elevation: 2,000+ masl</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Variety: Heirloom</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Process: Washed</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Region: Chelbesa, Guji<br /><br /><span>Habtamu Fikadu Aga (trading as Kuri Mountain Coffee) was founded in 2015 by Aaga Dinsa, the grandson of a coffee</span><br /><span>farmer in Kuri Kebele. He inherited his grandfather\u2019s farm, which remains the export-hub of the operation. Today the</span><br /><span>organization spans 105 hectares planted in Kuri Kebele, plus 837 hectares total including the farms of 144 registered</span><br /><span>outgrowers. These outgrowers deliver cherry to washing stations owned or managed by the company across Wolega,</span><br /><span>Guji, and Jimma.</span><br /><br /><span>At the company\u2019s washing stations, cherries are pulped and undergo a submerged fermentation lasting 48\u201372 hours</span><br /><span>depending on temperature. After washing, the parchment rests in water for another 12 hours before being dried on raised beds for 10\u201312 days. This careful and consistent method underpins the quality across all of Habtamu\u2019s lots.</span><br /><span>The company is certified organic (Ecocert) and holds Fair for Life certification. Through Fair for Life, they contribute US</span><br /><span>$0.12 per pound on exports plus 5% of company profits into a development fund, which is reinvested locally (in food,</span><br /><span>clothing, schooling, roads, health care facilities &amp; equipment). Until 2017, they sold via ECX; now, they export directly.</span><br /></p>",
+   "variants": [
+    {
+     "attributes": {
+      "size": "10oz. Bag"
+     },
+     "optionValues": [
+      {
+       "optionName": "size",
+       "value": "10oz. Bag"
+      }
+     ],
+     "id": "966ad082-c2de-4268-b9cd-8d9f9a2d8bdc",
+     "sku": "SQ7317867",
+     "price": 2400,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "24.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.8,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "size": "2#"
+     },
+     "optionValues": [
+      {
+       "optionName": "size",
+       "value": "2#"
+      }
+     ],
+     "id": "24ba311d-3461-404c-a20d-aebb86963f08",
+     "sku": "SQ4853851",
+     "price": 6000,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "60.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 2.5,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "66ccb5b7d2dc0c4cbca9692a",
+   "title": "Bogalech Dukkale, Ethiopia",
+   "urlId": "riripa",
+   "fullUrl": "/shop/riripa",
+   "tags": [
+    "Single-Farm",
+    "Ethiopia"
+   ],
+   "categories": [
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1e152ac8-725f-41d1-a5a9-d95d433631cf/Bag_Bogalech-Dukkale---Ethiopia.jpg",
+   "body": null,
+   "excerpt": "<h3 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Bogalech Dukkale \u2014 Ethiopia</span></h3><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong><span>Tasting Notes:</span></strong><span> Fruit Punch, Pineapple, Jasmine</span><br /><strong><span>Origin:</span></strong><span> Sidamo, Ethiopia</span><br /><strong><span>Producer:</span></strong><span> Bogalech Dukkale</span><br /><strong><span>Variety:</span></strong><span> Ethiopia Heirloom</span><br /><strong><span>Process:</span></strong><span> Natural</span><br /><strong><span>Elevation:</span></strong><span> 2,180 MASL</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong><span>A beautiful coffee. A meaningful relationship. A commitment to the years ahead.</span></strong></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Bogalech Dukkale returns to Vivid Coffee for a second year, marking an important milestone in our sourcing relationships. This is the </span><strong><span>first Ethiopian coffee to join our Relationship Coffee category</span></strong><span>, reflecting our commitment to purchasing from Bogalech year after year.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Bogalech is a 45-year-old mother of six who, alongside her husband, manages a four-hectare coffee farm in Ethiopia\u2019s Sidamo region. She inherited the land from her parents, continuing a family tradition of coffee farming across generations. Through our importing partner, Osito, and their longstanding relationship with Sookoo, we have the opportunity to purchase her coffee as a distinct, single-farm lot.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>This year, we purchased precisely half of Bogalech\u2019s harvest, with the other half going to a European buyer. For us, that commitment is about more than securing an exceptional coffee. It\u2019s an investment in a lasting relationship with a producer whose work we believe in.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>In the cup, this naturally processed coffee is remarkably elegant. Expect the juicy sweetness of fruit punch and ripe pineapple, balanced by delicate jasmine florals and lively acidity. The result is a clean, refined cup with vibrant fruit character and a floral complexity that invites another sip.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>At Vivid, Relationship Coffee means committing to work with producers year after year, building familiarity, trust, and a shared commitment to quality over time. We believe the best sourcing relationships extend beyond a single harvest. Bogalech\u2019s coffee embodies that philosophy, and we\u2019re proud to continue building this relationship with her.</span></p>",
+   "variants": [
+    {
+     "attributes": {
+      "size": "10oz. Bag"
+     },
+     "optionValues": [
+      {
+       "optionName": "size",
+       "value": "10oz. Bag"
+      }
+     ],
+     "id": "54ee8a3f-7b94-4231-a60a-615a1b2fb1b0",
+     "sku": "SQ7673670",
+     "price": 2300,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "23.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 5.0,
+     "imageIds": [],
+     "mainImageId": "68229b0cf9c8016586feff05",
+     "images": [],
+     "mainImage": {
+      "id": "68229b0cf9c8016586feff05",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1e152ac8-725f-41d1-a5a9-d95d433631cf/Bag_Bogalech-Dukkale---Ethiopia.jpg",
+      "systemDataSourceType": "JPEG",
+      "systemDataVariants": "1080x1080,100w,300w,500w,750w,1000w",
+      "originalSize": "1080x1080",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "size": "2 lb."
+     },
+     "optionValues": [
+      {
+       "optionName": "size",
+       "value": "2 lb."
+      }
+     ],
+     "id": "a0d00afa-a0ca-4090-8b39-0def3a16778b",
+     "sku": "SQ6368514",
+     "price": 6500,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "65.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 5.0,
+     "imageIds": [],
+     "mainImageId": "68229b0cf9c8016586feff05",
+     "images": [],
+     "mainImage": {
+      "id": "68229b0cf9c8016586feff05",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/1e152ac8-725f-41d1-a5a9-d95d433631cf/Bag_Bogalech-Dukkale---Ethiopia.jpg",
+      "systemDataSourceType": "JPEG",
+      "systemDataVariants": "1080x1080,100w,300w,500w,750w,1000w",
+      "originalSize": "1080x1080",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "6ad7b273c52ce05530e92dc2",
+   "title": "Decaf Gesha? Decaf Gesha!",
+   "urlId": "sugarshack-decaf-8-oz-bag-n8x59",
+   "fullUrl": "/shop/sugarshack-decaf-8-oz-bag-n8x59",
+   "tags": [
+    "Signature Blend Decaf"
+   ],
+   "categories": [
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/d555ebb7-8fdb-425c-8d88-9cd78ea18cd5/Decaf+Gesha%3F+Decaf+Gesha%21.jpg",
+   "body": null,
+   "excerpt": "<h1 style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Decaf Gesha? Decaf Gesha!</span></h1><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong><span>Origin:</span></strong><span> Huila, Colombia</span><br /><strong><span>Process:</span></strong><span> EA Decaffeination</span><br /><strong><span>Variety:</span></strong><span> Gesha</span><br /><strong><span>Tasting Notes:</span></strong><span> Peach, Mixed Flowers, Cherry</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Decaf Gesha? Decaf Gesha! Yes, really.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Meet our newest decaf offering and our first alternative to Sugar Shack Decaf. While Sugar Shack is our go-to for a richer, espresso-friendly decaf, this coffee takes things in a different direction: an exceptionally sweet, floral, and fruit-forward cup that can stand toe to toe with any of our microlots.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>Sourced through our friends at Osito Coffee, Huila Fortune EA Gesha brings together Gesha coffees from five producers across Huila, Colombia. Jos\u00e9 Mart\u00ednez, Argemiro Hoyos, Olimpo and Gregorio Calder\u00f3n, and Policarpo Yossa all contribute to this special lot, which was decaffeinated using the EA (ethyl acetate) process at Descafecol in Manizales, Colombia.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>For Osito, decaf deserves the same care, attention, and quality standards as any other specialty coffee. This lot puts that philosophy into practice, starting with exceptional coffees selected from trusted producer relationships and preserving what makes them special through decaffeination.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>The result is a beautifully sweet cup with notes of ripe peach, mixed flowers, and cherry. Delicate and expressive, with the kind of complexity we look for in our favorite microlots.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><span>And no, we don't mean </span><em><span>nice for decaf</span></em><span>. We mean genuinely, unequivocally good coffee.</span></p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\"><strong><span>Decaf Gesha? Decaf Gesha!</span></strong></p>",
+   "variants": [
+    {
+     "attributes": {
+      "Size": "10oz."
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "10oz."
+      }
+     ],
+     "id": "04769504-24b0-4d54-baf6-dc55f8db85b0",
+     "sku": "SQ7414568",
+     "price": 1900,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "19.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.75,
+     "imageIds": [],
+     "mainImageId": "6ad7b5a393519c2112b593e4",
+     "images": [],
+     "mainImage": {
+      "id": "6ad7b5a393519c2112b593e4",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/d555ebb7-8fdb-425c-8d88-9cd78ea18cd5/Decaf+Gesha%3F+Decaf+Gesha%21.jpg",
+      "systemDataSourceType": "JPEG",
+      "systemDataVariants": "1080x1080",
+      "originalSize": "1080x1080",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "Decaf Gesha? Decaf Gesha!.jpg",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Size": "2lb."
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "2lb."
+      }
+     ],
+     "id": "fb95bfbe-cc54-49d4-bdb2-2ed04bbeed0b",
+     "sku": "SQ6213764",
+     "price": 4600,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "46.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 2.5,
+     "imageIds": [],
+     "mainImageId": "6ad7b5a393519c2112b593e4",
+     "images": [],
+     "mainImage": {
+      "id": "6ad7b5a393519c2112b593e4",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/d555ebb7-8fdb-425c-8d88-9cd78ea18cd5/Decaf+Gesha%3F+Decaf+Gesha%21.jpg",
+      "systemDataSourceType": "JPEG",
+      "systemDataVariants": "1080x1080",
+      "originalSize": "1080x1080",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "Decaf Gesha? Decaf Gesha!.jpg",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Size": "5lb."
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "5lb."
+      }
+     ],
+     "id": "94e8d3a7-ebe7-4129-8ef9-2488e2413eed",
+     "sku": "SQ0241588",
+     "price": 9000,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "90.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 5.0,
+     "imageIds": [],
+     "mainImageId": "6ad7b5a393519c2112b593e4",
+     "images": [],
+     "mainImage": {
+      "id": "6ad7b5a393519c2112b593e4",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/d555ebb7-8fdb-425c-8d88-9cd78ea18cd5/Decaf+Gesha%3F+Decaf+Gesha%21.jpg",
+      "systemDataSourceType": "JPEG",
+      "systemDataVariants": "1080x1080",
+      "originalSize": "1080x1080",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "Decaf Gesha? Decaf Gesha!.jpg",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "6a139fed9bbeeb1bb6188682",
+   "title": "Fazenda Olhos D'Agua - Brazil Cup of Excellence - #4 Experimental",
+   "urlId": "fazenda-olhos-dagua",
+   "fullUrl": "/shop/fazenda-olhos-dagua",
+   "tags": null,
+   "categories": [
+    "Reserve Coffee",
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/8f95d7df-e340-4065-8120-ec881f8d2394/fazenda+olhos.jpg",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">We purchased three coffees from the most recent Cup of Excellence Brazil auction. </p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">All three of the coffees feature the  Arara variety. Arara is a hybrid of Obata and a Yellow Catuai. The fruit ripens to a yellow color and the seeds are larger than average, the plant has shown resistance to leaf rust diseases and it is known to produce an exceptional quality in Brazil. Perhaps due to the fact that it matures slower than other fruit, giving the seed time to develop complex sugars resulting in fruity to floral flavors in the coffee. <br /><br />17 of the 30 COE coffees were of the Arara variety and only 4/30 were the gesha variety. These are the first time we have offered this variety in our lineup and our first coffees from Brazil in over 6 years. While we do not buy blender quality from Brazil, we have been eager to welcome exceptional coffee from Brazil back to our lineup. And these coffees are some of the very best we have ever tasted from Brazil. Ian (founder and green buyer at Vivid Coffee) had the incredible opportunity to participate as a member of the international jury during Brazil\u2019s Cup of Excellence where he first tasted these coffees. <br /><br />These coffees are not only exceptional \u2014 they reflect the excellence of the Arara variety, the unique terroir of Brazilian coffee, and the work of truly remarkable coffee producers. These coffees are not \u201cgood for Brazil\u201d - they are unique and delicious, full stop, no disclaimers, no asterisks. <br /></p>",
+   "variants": [
+    {
+     "attributes": {
+      "Size": "8oz.",
+      "Roast Date": "9/23"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "8oz."
+      },
+      {
+       "optionName": "Roast Date",
+       "value": "9/23"
+      }
+     ],
+     "id": "8c78bb3b-3470-4985-9766-d6c9f5d5a6ce",
+     "sku": "SQ5202513",
+     "price": 5000,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "50.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": false,
+     "qtyInStock": 6,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Size": "2lb.",
+      "Roast Date": "9/23"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "2lb."
+      },
+      {
+       "optionName": "Roast Date",
+       "value": "9/23"
+      }
+     ],
+     "id": "8e0fc537-c286-4186-b53f-8784fe386100",
+     "sku": "SQ0902236",
+     "price": 17500,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "175.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": false,
+     "qtyInStock": 7,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "6a13ab3aca5f313c7fee3d60",
+   "title": "Sitio Pedro Varinhas - Brazil Cup of Excellence - #4 Honey Process",
+   "urlId": "sitio-pedro-varinhas",
+   "fullUrl": "/shop/sitio-pedro-varinhas",
+   "tags": null,
+   "categories": null,
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/f5970433-6665-450e-8512-149c3e404a4b/sitio+pedro+varinhas.jpg",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">We purchased three coffees from the most recent Cup of Excellence Brazil auction. </p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">All three of the coffees feature the  Arara variety. Arara is a hybrid of Obata and a Yellow Catuai. The fruit ripens to a yellow color and the seeds are larger than average, the plant has shown resistance to leaf rust diseases and it is known to produce an exceptional quality in Brazil. Perhaps due to the fact that it matures slower than other fruit, giving the seed time to develop complex sugars resulting in fruity to floral flavors in the coffee. <br /><br />17 of the 30 COE coffees were of the Arara variety and only 4/30 were the gesha variety. These are the first time we have offered this variety in our lineup and our first coffees from Brazil in over 6 years. While we do not buy blender quality from Brazil, we have been eager to welcome exceptional coffee from Brazil back to our lineup. And these coffees are some of the very best we have ever tasted from Brazil. Ian (founder and green buyer at Vivid Coffee) had the incredible opportunity to participate as a member of the international jury during Brazil\u2019s Cup of Excellence where he first tasted these coffees. <br /><br />These coffees are not only exceptional \u2014 they reflect the excellence of the Arara variety, the unique terroir of Brazilian coffee, and the work of truly remarkable coffee producers. These coffees are not \u201cgood for Brazil\u201d - they are unique and delicious, full stop, no disclaimers, no asterisks. <br /></p>",
+   "variants": [
+    {
+     "attributes": {
+      "Size": "8oz.",
+      "Roast Date": "9/23"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "8oz."
+      },
+      {
+       "optionName": "Roast Date",
+       "value": "9/23"
+      }
+     ],
+     "id": "301de06c-4b01-4a15-ace2-72b73ae4e867",
+     "sku": "SQ7663748",
+     "price": 4500,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "45.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": false,
+     "qtyInStock": 8,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Size": "2lb.",
+      "Roast Date": "9/23"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "2lb."
+      },
+      {
+       "optionName": "Roast Date",
+       "value": "9/23"
+      }
+     ],
+     "id": "47e6cf6e-a2c0-4dc7-8d5f-3f56d9e49992",
+     "sku": "SQ9565490",
+     "price": 16000,
+     "salePrice": 0,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "160.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "0.00"
+     },
+     "onSale": false,
+     "unlimited": false,
+     "qtyInStock": 9,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "images": [],
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  },
+  {
+   "id": "62d0a42db7ad9d1471bbb125",
+   "title": "Gesha, Nidia Enr\u00edquez, Colombia",
+   "urlId": "gesha-nidia-enrquez-colombia",
+   "fullUrl": "/shop/gesha-nidia-enrquez-colombia",
+   "tags": [
+    "Colombia",
+    "Single-Farm",
+    "Single-Variety"
+   ],
+   "categories": [
+    "Reserve Coffee",
+    "Coffee"
+   ],
+   "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/9d9ecf02-c2a4-4c9a-83a5-184d216faa00/Reserve+Coffee+Nidia+Enriquez.png",
+   "body": null,
+   "excerpt": "<p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">We are now in our 6th year buying coffee from Nidia Enr\u00edquez. Her gesha offering is what we consider \u201cclassic gesha\u201d in the best way possible\u2026 a super delicate and clean coffee with citrus notes, tons of a jasmine florals, and sweet stone fruit. <br /><br />Notes from previous years:<br /><br />We\u2019re grateful to be able to offer a small amount of this beautiful coffee by Nidia Enriquez for a limited time. Ian first tasted this coffee in November 2021 at Azahar\u2019s lab in Armenia, Colombia. It was fortuitous that this stunning gesha had been delivered the week before the scheduled cupping. </p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">The lot was the first cup in the series of microlot tastings and as it was a blind cupping everyone\u2019s feedback was what you\u2019d expect from a magnificent gesha on the table\u2026 \u201cthis coffee tastes like peach, bergamot, stone fruit, citrus, flowers, jasmine, lemon\u201d, etc\u2026 Ian took notes that the coffee tasted like a classic gesha profile. Alas, it was gesha.</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">However, the producer of the coffee was more mysterious than the variety: Nidia Enr\u00edquez. At the time, the team at Azahar didn\u2019t have much information about Nidia or her farm. This is rare, given that the majority of the producers who work with Azahar have been doing so for many years and relationships are typically incredibly rich. But this coffee was Nidia\u2019s first delivery to Azahar for purchase. Talk about an introduction! </p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Azahar has since connected with Nidia to learn about her farm and story. Coffee of this quality never happens by accident and we urgently wanted to learn more. And her story is fascinating. Azahar\u2019s bio will be published below. We hope to purchase more of Nidia\u2019s coffee from the upcoming harvest in Nari\u00f1o. It is Ian\u2019s hope to visit Nidia\u2019s farm next month during the harvest.</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">More from Azahar: </p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">In the department of Nari\u00f1o, in the municipality of Chachag\u00fc\u00ed, located in the vereda El Convento, there are two lots planted in coffee. One is named La Pradera (The Meadow) and the other El Manantial (The Spring). Nidia Enr\u00edquez is the proud owner of them and alongside her daughter, Milena Salazar, they grow different varieties of coffee. Out of the two lots, El Manantial is the newer one, named as such because it has a fresh water spring and is where this Gesha lot was grown.</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">Nidia dedicates most of her time teaching philosophy and literature in the department\u2019s capital, Pasto, leaving the coffee-growing tradition in her daughter\u2019s hands. Milena Salazar is well versed in coffee knowledge as she has not only inherited generations worth of wisdom, but also educated herself outside of her family. Milena Salazar and Nidia Enr\u00edquez represent part of a new generation of coffee growers that are learning to work with the teachings of the past and their vision set on the future.</p><p style=\"white-space:pre-wrap;\" data-rte-preserve-empty=\"true\">This widely sought-after Gesha coffee comes from mere 700 producing trees that sit at a height of 2,000 m.a.s.l. and is hand selected at its peak ripeness. The cherry is firstly bagged, weighted and left to rest for 2 to 3 days. The next step in Nidia Enr\u00edquez farm is to put the cherry in tanks with water to allow low density beans and debris to float and be removed. The clean and ripest batch is then de-pulped and placed in tanks to ferment for 24 hours. The cof- fee is then washed and placed in raised beds for a period of 8-10 days.</p>",
+   "variants": [
+    {
+     "attributes": {
+      "Size": "8oz.",
+      "Roast Date:": "8/26"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "8oz."
+      },
+      {
+       "optionName": "Roast Date:",
+       "value": "8/26"
+      }
+     ],
+     "id": "b08af86b-47c9-42fe-b7e2-932b23cd5bc9",
+     "sku": "SQ9011801",
+     "price": 3000,
+     "salePrice": 2400,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "30.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "24.00"
+     },
+     "onSale": true,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "mainImageId": "6a559f7b1b9743318cc74353",
+     "images": [],
+     "mainImage": {
+      "id": "6a559f7b1b9743318cc74353",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/9d9ecf02-c2a4-4c9a-83a5-184d216faa00/Reserve+Coffee+Nidia+Enriquez.png",
+      "systemDataSourceType": "PNG",
+      "systemDataVariants": "2000x2000",
+      "originalSize": "2000x2000",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "Reserve Coffee Nidia Enriquez.png",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    },
+    {
+     "attributes": {
+      "Size": "2lb.",
+      "Roast Date:": "8/26"
+     },
+     "optionValues": [
+      {
+       "optionName": "Size",
+       "value": "2lb."
+      },
+      {
+       "optionName": "Roast Date:",
+       "value": "8/26"
+      }
+     ],
+     "id": "09875313-f937-4ac4-bc70-9c48edf37024",
+     "sku": "SQ9206111",
+     "price": 10200,
+     "salePrice": 9000,
+     "priceMoney": {
+      "currency": "USD",
+      "value": "102.00"
+     },
+     "salePriceMoney": {
+      "currency": "USD",
+      "value": "90.00"
+     },
+     "onSale": true,
+     "unlimited": true,
+     "qtyInStock": 0,
+     "width": 0.0,
+     "height": 0.0,
+     "weight": 0.0,
+     "imageIds": [],
+     "mainImageId": "6a559f7b1b9743318cc74353",
+     "images": [],
+     "mainImage": {
+      "id": "6a559f7b1b9743318cc74353",
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/58b873e415d5db7f879a5b72/9d9ecf02-c2a4-4c9a-83a5-184d216faa00/Reserve+Coffee+Nidia+Enriquez.png",
+      "systemDataSourceType": "PNG",
+      "systemDataVariants": "2000x2000",
+      "originalSize": "2000x2000",
+      "mediaFocalPoint": {
+       "x": 0.5,
+       "y": 0.5,
+       "source": 3
+      },
+      "title": "Reserve Coffee Nidia Enriquez.png",
+      "displayIndex": 0
+     },
+     "len": 0.0
+    }
+   ],
+   "productType": 1
+  }
+ ],
+ "pagination": null
+}

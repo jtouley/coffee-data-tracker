@@ -1,0 +1,21 @@
+name: coffeedata
+version: "0.1.0"
+config-version: 2
+profile: coffeedata
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+target-path: "target"
+clean-targets: ["target"]
+
+vars:
+  # Point these at tests/fixtures/... to build offline (see `make test`).
+  data_dir: "data"
+  config_dir: "config"
+
+models:
+  coffeedata:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

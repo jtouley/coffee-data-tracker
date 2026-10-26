@@ -1,5 +1,7 @@
 # One-shot MVP prompt: Coffee Data
 
+> **Status:** this prompt has been carried out. The repo now *is* this design, so you don't need to run it again. It's kept as the spec, and as a template for similar projects.
+
 Paste everything inside the fence into Claude Code, run from the root of `coffee-data-tracker`. It turns this repo into a data project with two inputs:
 
 - **Catalog:** what specialty roasters sell, refreshed daily.

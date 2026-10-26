@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: dim_coffee
+    description: One row per coffee a roaster lists (current snapshot), with extracted attributes and pricing.
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: process
+        data_tests:
+          - accepted_values: {arguments: {values: [washed, natural, honey, anaerobic, other]}}
+      - name: roast_level
+        data_tests:
+          - accepted_values: {arguments: {values: [light, medium, dark]}}
+  - name: dim_roaster
+    columns:
+      - name: roaster_slug
+        data_tests: [unique, not_null]
+      - name: domain
+        data_tests: [unique, not_null]
+  - name: fct_shot
+    columns:
+      - name: shot_id
+        data_tests: [unique, not_null]
+      - name: coffee_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('dim_coffee'), field: coffee_id}
+              config: {severity: warn}
+      - name: rating
+        data_tests:
+          - accepted_values: {arguments: {values: [1, 2, 3, 4, 5], quote: false}}
+  - name: fct_price_event
+    columns:
+      - name: event
+        data_tests:
+          - accepted_values: {arguments: {values: [new, price, availability, removed]}}
+
+seeds:
+  - name: flavor_lexicon
+    description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.
+    columns:
+      - name: note
+        data_tests: [unique]

@@ -1,6 +1,6 @@
 # Coffee Data Tracker — Repo Review (Oct 2026)
 
-> **Update:** the project's direction has changed to a combined data play: a daily roaster catalog pulled from Shopify `/products.json`, a shot log, and dbt + DuckDB, all on GitHub Actions. That design replaces the GCP stack reviewed below. [`MVP_PROMPT.md`](./MVP_PROMPT.md) now builds the new design. The review below is kept for history.
+> **Update (2026-10-26):** this review led to the current rebuild, described in the root [README](../README.md): a daily US roaster catalog (Shopify / WooCommerce / Squarespace / JSON-LD feeds), a shot log, and dbt + DuckDB on GitHub Actions. The GCP stack reviewed below is tagged `v0-gcp`. [`MVP_PROMPT.md`](./MVP_PROMPT.md) is the one-shot prompt the rebuild was specified from. The review below is kept for history.
 
 ## TL;DR
 

@@ -1,0 +1,47 @@
+# Log a shot or add a roaster from your phone via GitHub issue forms. Only the repo owner's issues are processed.
+name: issue-forms
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: data
+  cancel-in-progress: false
+jobs:
+  handle:
+    if: github.actor == github.repository_owner && (contains(github.event.issue.labels.*.name, 'shot') || contains(github.event.issue.labels.*.name, 'roaster'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: {python-version: "3.12"}
+      - run: uv sync
+      - name: Process issue
+        id: run
+        env:
+          BODY: ${{ github.event.issue.body }}
+          KIND: ${{ contains(github.event.issue.labels.*.name, 'shot') && 'shot' || 'roaster' }}
+        run: |
+          printf '%s' "$BODY" > /tmp/body.md
+          if [ "$KIND" = shot ]; then cmd="uv run coffeedata shot from-issue --file /tmp/body.md"
+          else cmd="uv run coffeedata add-roaster --file /tmp/body.md"; fi
+          if $cmd > /tmp/reply.md 2> /tmp/err.txt; then echo "ok=true" >> "$GITHUB_OUTPUT"
+          else { echo "Couldn't process this:"; echo; echo '```'; tail -5 /tmp/err.txt; echo '```'; } > /tmp/reply.md; echo "ok=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Commit
+        if: steps.run.outputs.ok == 'true'
+        run: |
+          git config user.name "coffee-data-bot"
+          git config user.email "coffee-data-bot@users.noreply.github.com"
+          git add data/shots.jsonl config/roasters.csv
+          git diff --cached --quiet || git commit -m "log: issue #${{ github.event.issue.number }}"
+          git pull --rebase origin ${{ github.event.repository.default_branch }}
+          git push
+      - name: Reply
+        env:
+          GH_TOKEN: ${{ github.token }}
+          N: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$N" --repo "$GITHUB_REPOSITORY" --body-file /tmp/reply.md
+          if [ "${{ steps.run.outputs.ok }}" = true ]; then gh issue close "$N" --repo "$GITHUB_REPOSITORY"; fi

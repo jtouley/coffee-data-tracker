@@ -1,0 +1,7 @@
+coffeedata:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('COFFEEDATA_DB', 'build/coffee.duckdb') }}"
+      threads: 4
