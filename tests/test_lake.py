@@ -57,3 +57,34 @@ def test_publish_refuses_to_overwrite_and_replaces_marts(tmp_path, monkeypatch):
     lake.write_partition("fetches", "2026-10-26", "b1", [row])  # already in the remote dataset
     with pytest.raises(FileExistsError):
         lake.publish("again")
+
+
+def test_init_creates_private_dataset_with_card(tmp_path, monkeypatch):
+    import huggingface_hub
+
+    from coffeedata import cli
+
+    calls = []
+
+    class FakeApi:
+        def __init__(self, token=None):
+            pass
+
+        def create_repo(self, repo_id, repo_type, private, exist_ok):
+            calls.append(("create", repo_id, private))
+            return f"https://huggingface.co/datasets/{repo_id}"
+
+        def upload_file(self, path_or_fileobj, path_in_repo, repo_id, repo_type, commit_message):
+            calls.append(("card", path_in_repo))
+
+        def list_repo_files(self, repo_id, repo_type):
+            return []
+
+        def create_commit(self, repo_id, repo_type, operations, commit_message):
+            calls.append(("commit", len(operations)))
+
+    monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    monkeypatch.setenv("COFFEEDATA_LAKE", "hf://datasets/someone/coffee")
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    cli.main(["init"])
+    assert calls == [("create", "someone/coffee", True), ("card", "README.md"), ("commit", len(SCHEMA_FILES))]

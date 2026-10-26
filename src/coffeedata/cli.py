@@ -26,8 +26,23 @@ def _print(obj: object) -> None:
 
 
 def cmd_init(args: argparse.Namespace) -> None:
+    """Create the lake. For hf:// this creates the dataset repo (private unless --public), adds the dataset
+    card, and publishes the empty table schemas. Safe to re-run."""
     lake = Lake()
-    print(f"lake ready at {lake.url}" + (f"; published {lake.publish('init')} schema files" if lake.remote else ""))
+    if not lake.remote:
+        print(f"local lake ready at {lake.url}")
+        return
+    from huggingface_hub import HfApi
+
+    repo_id = lake.url.removeprefix("hf://datasets/").split("@")[0]
+    api = HfApi(token=os.environ.get("HF_TOKEN"))
+    url = api.create_repo(repo_id, repo_type="dataset", private=not args.public, exist_ok=True)
+    card = Path("docs/DATASET_CARD.md")
+    if card.exists():
+        api.upload_file(path_or_fileobj=str(card), path_in_repo="README.md", repo_id=repo_id, repo_type="dataset",
+                        commit_message="dataset card")
+    print(f"dataset {url} ready ({'public' if args.public else 'private'}); "
+          f"published {lake.publish('init: table schemas')} schema files")
 
 
 def cmd_discover(args: argparse.Namespace) -> None:
@@ -199,7 +214,8 @@ def main(argv: list[str] | None = None) -> None:
         sp.set_defaults(fn=fn)
         return sp
 
-    add("init", cmd_init, "create the lake's schema files (and publish them to a remote lake)")
+    ini = add("init", cmd_init, "create the lake (for hf://: the dataset repo, card and table schemas)")
+    ini.add_argument("--public", action="store_true", help="make a new HF dataset public (default private)")
     d = add("discover", cmd_discover, "record roasters from an open dataset")
     d.add_argument("source", choices=["overture", "osm"])
     d.add_argument("--release", help="Overture release (default: latest)")

@@ -86,15 +86,18 @@ config/roasters.csv (seed) + lake registry ──probe──▶ platform ──i
 
 ## Setup on GitHub
 
-1. Create a Hugging Face dataset, e.g. `<you>/coffee-data`, public or private.
-2. In repo settings:
+1. Create a **write** token at huggingface.co → Settings → Access Tokens.
+2. Create the dataset (once, from any machine). This creates the dataset (private by default; add `--public` to share it), uploads the dataset card and publishes the empty table schemas:
+   ```bash
+   COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
+   ```
+3. In the GitHub repo settings:
    - **Variables:** `LAKE_URL` = `hf://datasets/<you>/coffee-data`
-   - **Secrets:** `HF_TOKEN` (a write token)
+   - **Secrets:** `HF_TOKEN`
    - **Secrets (optional):** `ANTHROPIC_API_KEY`
-3. Run `COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=… uv run coffeedata init` once. It publishes the empty table schemas.
 4. Settings → Pages → Source: **GitHub Actions**.
 5. Create the `shot` and `roaster` issue labels.
-6. Run the **weekly** workflow by hand. Try `sample: 50` first.
+6. Actions → **weekly** → Run workflow. Try `sample: 50` first, then leave it to the Monday schedule.
 
 ## Logging shots
 
