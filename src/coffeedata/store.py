@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -61,8 +62,12 @@ def save(slug: str, items: list[CatalogItem], root: Path = DATA, now: datetime |
     first_seen = {p["product_id"]: p.get("first_seen") for p in prev}
     today = now.date().isoformat()
     cur = []
+    items = list({i.product_id: i for i in reversed(items)}.values())  # feeds can repeat a product across pages
+    handles = Counter(i.handle for i in items)
     for it in sorted(items, key=lambda i: i.product_id):
         d = it.model_dump()
+        if handles[it.handle] > 1:  # some stores reuse slugs; coffee_id = roaster:handle must stay unique
+            d["handle"] = f"{it.handle}-{it.product_id}"
         d["variants"] = sorted(d["variants"], key=lambda v: v["variant_id"])
         d["first_seen"] = first_seen.get(it.product_id) or today
         cur.append(d)
@@ -72,9 +77,9 @@ def save(slug: str, items: list[CatalogItem], root: Path = DATA, now: datetime |
     if cur or prev:
         path.write_text(_dump(cur))
     if events:
-        obs = root / "observations" / f"{now:%Y}" / f"{now:%m}.jsonl"
+        obs = root / "observations" / f"{now:%Y}" / f"{now:%m}" / f"{now:%d}.jsonl"
         obs.parent.mkdir(parents=True, exist_ok=True)
         with obs.open("a") as f:
             for e in events:
-                f.write(json.dumps(e, sort_keys=True) + "\n")
+                f.write(json.dumps(e, sort_keys=True, separators=(",", ":")) + "\n")
     return events

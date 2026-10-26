@@ -43,7 +43,7 @@ config/roasters.csv ──probe──▶ platform ──ingest──▶ data/cat
 | Merge finished Claude batches | `make collect` | daily, before ingest |
 | Models + site | `make site` | daily, deployed to Pages |
 
-**Platforms.** On 2026-10-26 the registry probe found 1,070 Shopify, 233 WooCommerce and 339 Squarespace roasters. That's about half of all reachable US roasters with a clean JSON catalog. The rest (Wix, Square Online, custom sites) go through the generic sitemap + JSON-LD adapter, which works for Wix but not for sites that render their store in JavaScript. `data/coverage.json` and the site's Coverage section show where things stand after each run.
+**Platforms.** On 2026-10-26 the registry probe found 1,070 Shopify, 233 WooCommerce and 339 Squarespace roasters. That's about half of all reachable US roasters with a clean JSON catalog. The rest (Wix, Square Online, custom sites) go through the generic sitemap + JSON-LD adapter, which works for Wix but not for sites that render their store in JavaScript. The first full run (2026-10-26) found **42,323 coffees (35,470 in stock) from 1,634 roasters**: 1,054 Shopify, 220 WooCommerce, 239 Squarespace and 121 via JSON-LD. `data/coverage.json` and the site's Coverage section show where things stand after each run.
 
 **Enrichment.** Rules read structured tags (`origin:Panama`, `roastlevel__light-roast`), titles, and labelled body text. When origin, process or notes are still missing and `ANTHROPIC_API_KEY` is set, the listing goes to **Claude Haiku** with a strict JSON schema:
 

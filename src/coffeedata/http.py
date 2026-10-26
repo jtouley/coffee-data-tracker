@@ -26,7 +26,8 @@ class PoliteClient:
         self.retries = retries
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
-            timeout=timeout, follow_redirects=True, transport=transport,
+            timeout=httpx.Timeout(timeout, pool=120.0), follow_redirects=True, transport=transport,
+            limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self._last: dict[str, float] = {}

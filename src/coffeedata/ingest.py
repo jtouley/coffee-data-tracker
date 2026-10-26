@@ -42,7 +42,9 @@ class Result:
 def select(rows: list[dict], only: str | None = None, sample: int | None = None,
            shard: tuple[int, int] | None = None) -> list[dict]:
     todo = [r for r in rows if r.get("status", "pending") in INGESTABLE and r.get("platform") not in ("", None)]
-    if only:
+    if only == "failed":
+        todo = [r for r in todo if (r.get("failures") or "0") != "0"]
+    elif only:
         todo = [r for r in rows if only in (r["slug"], r["domain"])]
     if shard:
         i, n = shard

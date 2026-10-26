@@ -133,7 +133,7 @@ def main(argv: list[str] | None = None) -> None:
     pr.set_defaults(fn=_probe)
 
     i = sub.add_parser("ingest", help="fetch catalogs, store snapshots and observations, enrich")
-    i.add_argument("--only", help="one roaster slug or domain")
+    i.add_argument("--only", help='one roaster slug or domain, or "failed" to retry last run\'s failures')
     i.add_argument("--sample", type=int)
     i.add_argument("--shard", help="i/n, e.g. 0/4")
     i.add_argument("--workers", type=int, default=32)
