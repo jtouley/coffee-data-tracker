@@ -81,9 +81,14 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     )
 
 
+GIVE_UP_AFTER = 10  # pages without Product markup before assuming the site has none
+
+
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
-    for url in product_urls(sitemap_urls(client, roaster.host)):
+    for n, url in enumerate(product_urls(sitemap_urls(client, roaster.host))):
+        if n >= GIVE_UP_AFTER and not items:
+            break
         try:
             r = client.get(url)
         except Blocked:

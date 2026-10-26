@@ -123,4 +123,4 @@ This version reframes it as a data project:
 - dbt + DuckDB replaces the cloud stack.
 - MCP and issue forms replace the web form.
 
-The original GCP version is tagged [`v0-gcp`](../../tree/v0-gcp). The review that led here is in [`docs/REVIEW.md`](docs/REVIEW.md).
+The original GCP version is commit [`92f74da`](../../tree/92f74da332184533e4c10e3dab83c9fb44e0d796) (suggested tag: `v0-gcp`). The review that led here is in [`docs/REVIEW.md`](docs/REVIEW.md).

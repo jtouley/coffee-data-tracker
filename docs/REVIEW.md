@@ -1,6 +1,6 @@
 # Coffee Data Tracker — Repo Review (Oct 2026)
 
-> **Update (2026-10-26):** this review led to the current rebuild, described in the root [README](../README.md): a daily US roaster catalog (Shopify / WooCommerce / Squarespace / JSON-LD feeds), a shot log, and dbt + DuckDB on GitHub Actions. The GCP stack reviewed below is tagged `v0-gcp`. [`MVP_PROMPT.md`](./MVP_PROMPT.md) is the one-shot prompt the rebuild was specified from. The review below is kept for history.
+> **Update (2026-10-26):** this review led to the current rebuild, described in the root [README](../README.md): a daily US roaster catalog (Shopify / WooCommerce / Squarespace / JSON-LD feeds), a shot log, and dbt + DuckDB on GitHub Actions. The GCP stack reviewed below is commit `92f74da` (the last `main` before the rebuild). [`MVP_PROMPT.md`](./MVP_PROMPT.md) is the one-shot prompt the rebuild was specified from. The review below is kept for history.
 
 ## TL;DR
 
