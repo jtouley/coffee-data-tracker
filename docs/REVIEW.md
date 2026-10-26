@@ -1,5 +1,7 @@
 # Coffee Data Tracker — Repo Review (Oct 2026)
 
+> **Update:** the project's direction has changed to a combined data play: a daily roaster catalog pulled from Shopify `/products.json`, a shot log, and dbt + DuckDB, all on GitHub Actions. That design replaces the GCP stack reviewed below. [`MVP_PROMPT.md`](./MVP_PROMPT.md) now builds the new design. The review below is kept for history.
+
 ## TL;DR
 
 The repo has the right idea: a web form, a Cloud Function, BigQuery, and Terraform. But **no data reaches BigQuery today, on `main` or on any branch.** On `main` the function writes to a hardcoded bucket called `"bucketname"`, the form posts to the literal string `"YOUR_CLOUD_FUNCTION_URL"`, and nothing connects GCS to BigQuery. The `feature/pubsub-dataflow-setup` branch gets closer, but it adds a hardcoded `/Users/...` path, a Pub/Sub schema that is never attached to the topic, and a 90-day partition expiration that would delete your history.
