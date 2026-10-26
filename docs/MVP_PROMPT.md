@@ -26,9 +26,8 @@ Known not to work: bluebottlecoffee.com (403), ritualcoffee.com (no /products.js
    - Run `git tag v0-gcp` on the current commit; it is pushed with the branch at the end.
    - Delete src/ (Terraform, Cloud Function, zip, web form) and every .DS_Store.
    - Move the project story from docs/README.md into a "History" section of the new root README.
-   - Seed config/roasters.yaml from the list above. Then use the roaster <option> list in
-     src/web/coffeetracker.html (read it before deleting): add the domains you can confirm, and leave the
-     rest as commented-out TODOs. Fields per roaster: slug, name, domain, platform: shopify, enabled.
+   - The roaster registry is config/roasters.csv (already committed, ~3,200 US roasters with their
+     platform already probed). Section 1b describes it. Do not hand-maintain a YAML list.
 
 1. PROJECT LAYOUT (Python 3.12, uv, single package `coffeedata`)
    pyproject.toml (deps: httpx, pydantic>=2, pyyaml, duckdb, dbt-duckdb, anthropic, mcp, jinja2;
@@ -46,8 +45,60 @@ Known not to work: bluebottlecoffee.com (403), ritualcoffee.com (no /products.js
    - `make test`: ruff + pytest + dbt build on fixtures
    - `make all`: ingest → enrich → build → site
 
-2. INGEST (fetch.py, classify.py, store.py)
-   - Paginate products.json until an empty page. Be polite:
+1b. ROASTER REGISTRY + DISCOVERY (discover.py, registry.py). Goal: as many US roasters as possible.
+   - config/roasters.csv is the registry. Columns: slug, name, domain, city, state, sources, locations,
+     confidence, tagged_roastery, roast_in_name, status, final_host, platform. Treat it as data:
+     rows are sorted by domain, and slug is derived from the domain.
+   - Seed it from scripts/discovery/: overture_roasters.py (Overture Maps Places via DuckDB over HTTPS,
+     no credentials needed) and probe.py (platform detection). Move both into the package as
+     `coffeedata discover overture`, `coffeedata discover osm` and `coffeedata probe`, then delete
+     scripts/.
+   - Discovery sources. Use only openly licensed data, and record attribution in data/ATTRIBUTION.md:
+     1. Overture Maps Places (CDLA-Permissive-2.0). Use taxonomy coffee_roastery, plus coffee places
+        with "roast" in the name. Run monthly against the latest release.
+     2. OpenStreetMap via Overpass (ODbL; attribution required): craft=coffee_roaster or
+        roastery=yes. Query one state at a time with [timeout:60], since a whole-US query times out.
+        Run monthly.
+     3. Manual adds: an issue form .github/ISSUE_TEMPLATE/add-roaster.yml (name + website), handled
+        by the same owner-only workflow pattern as log-shot.
+     DO NOT use Roast Local (its terms forbid scraping or bulk download), Google Places or Yelp (their
+     terms forbid storing the data), or anything behind a login.
+   - Merge and dedupe on the registrable domain, using the public-suffix list (tldextract). Strip www.,
+     locations. and shop. prefixes, and union the sources. Exclude social and aggregator hosts
+     (instagram, facebook, linktr.ee, toasttab, square.site, …); keep the list in config.
+   - Probe weekly (`coffeedata probe --stale-days 7`). Platform detection, in this order:
+     shopify (/products.json?limit=1 returns JSON), woocommerce (/wp-json/wc/store/v1/products?per_page=1),
+     squarespace (HTML marker; then find the shop collection from sitemap.xml and fetch
+     <collection>?format=json), then bigcommerce?, wix?, square_online?, webflow? and other from HTML
+     markers.
+   - Status lifecycle:
+     - active: has a catalog adapter and has yielded at least 1 coffee
+     - no_adapter
+     - no_coffee: the catalog has 0 coffee products (cafés and chains whose shop isn't online)
+     - unreachable: 3 consecutive failures
+     - opted_out: a manual flag, always honored
+   - Chains: locations > 10, or a known chain (Dutch Bros, Caribou, PJ's, Blank Street, …). Keep them
+     but flag is_chain, so marts can exclude them.
+
+2. INGEST (fetch.py, classify.py, store.py, adapters/)
+   - Adapter interface: `fetch_catalog(roaster) -> list[CatalogItem]`, one module per platform.
+     Implement shopify, woocommerce and squarespace fully.
+   - For everything else, implement a generic adapter:
+     - read sitemap.xml (and its sitemap index) and pick likely product URLs (/product, /shop/, /coffee/)
+     - fetch at most 60 pages per roaster
+     - parse schema.org Product JSON-LD (name, offers.price, description, sku); skip pages that
+       have none
+   - Scale: about 2,000+ roasters per day. Use a global concurrency of 16 and at most 1 in-flight
+     request per host. Send If-None-Match / If-Modified-Since when the server gave an ETag or
+     Last-Modified.
+     - Shard roasters into 4 GitHub Actions matrix jobs by hash(slug) % 4, then merge.
+     - The run must finish in under 30 minutes.
+     - Write data/coverage.json with roasters by status and platform, coffees found, and failures, and
+       show it on the site.
+   - Keep repo growth small. Snapshots store body_hash, not body_html. The body text lives only in
+     data/enriched/. If the data/ directory grows past 1 GB, move data/ to a Hugging Face dataset
+     repo (note this in the README).
+   - Shopify: paginate products.json until an empty page. Be polite:
      - User-Agent "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
      - 1 request per second per host, timeouts, 3 retries with backoff
      - respect robots.txt via urllib.robotparser
@@ -83,6 +134,9 @@ Known not to work: bluebottlecoffee.com (403), ritualcoffee.com (no /products.js
         body text with HTML stripped and truncated to about 4k characters.
    - Cache results in data/enriched/<roaster>/<product_id>.json, keyed by body_hash, so only
      new or changed products ever hit the API. Print the token/cost estimate at the end of a run.
+   - At registry scale the first backfill is tens of thousands of products. Use the Message
+     Batches API, cap each run with ENRICH_MAX (default 2000), and skip the LLM when the
+     deterministic extraction already filled origin, process and notes.
    - Normalize tasting notes against a small seed lexicon in config/flavors.yaml, mapping notes to
      SCA flavor-wheel categories (fruity/berry, floral, sweet/chocolate, nutty, …). Unknown notes
      are kept as-is.
@@ -189,6 +243,12 @@ ACCEPTANCE (run these yourself and fix until green)
    widths, and check there's no console error and the catalog table has rows.
 7. The issue-body parser test covers a valid form and an invalid one.
 8. `git grep -nE "sk-ant|/Users/|chromedriver"` returns nothing.
+9. Run discovery and coverage:
+   - `coffeedata probe --sample 50` runs live and agrees with the platform already in
+     config/roasters.csv for at least 90% of rows.
+   - `make ingest SAMPLE=100` runs over 100 random active roasters, covering every adapter, and writes
+     data/coverage.json.
+   - Report coffees found per adapter, and fix the adapter for any platform yielding less than 50%.
 
 When done, commit in logical steps, push the branch and the v0-gcp tag, and tell me:
 - the one-time GitHub settings to flip: Pages source = GitHub Actions, the "shot" label, the
