@@ -78,7 +78,7 @@ def _jsonable(v: object) -> object:
     return str(v)
 
 
-def build(db: Path, out: Path, data_root: Path = Path("data")) -> Path:
+def build(db: Path, out: Path) -> Path:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
@@ -90,25 +90,22 @@ def build(db: Path, out: Path, data_root: Path = Path("data")) -> Path:
     processes = _q(con, """
         select coalesce(process, 'not stated') as process, count(*) as n
         from dim_coffee where in_stock and not is_blend group by 1 order by n desc""")
+    statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     shots = _q(con, """
         select brew_ratio, rating, coalesce(coffee_title, coffee_freetext, '?') as coffee, time_s, brewed_at
         from fct_shot order by brewed_at desc""")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
-    new = _q(con, """
-        select * from mart_new_arrivals
-        where first_seen >= current_date - 7 and first_seen > (select min(first_seen) from dim_coffee)
-        limit 25""")
+    new = _q(con, "select * from mart_new_arrivals limit 25")
     totals = _q(con, """
-        select count(*) as coffees, count(*) filter (where in_stock) as in_stock,
-               count(distinct roaster_slug) as roasters from dim_coffee""")[0]
+        select count(*) filter (where is_listed) as coffees, count(*) filter (where in_stock) as in_stock,
+               count(distinct roaster_id) as roasters from dim_coffee where is_listed""")[0]
     catalog = _q(con, """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
                tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
-        from dim_coffee where not is_chain order by roaster_name, title""")
+        from dim_coffee where is_listed and not is_chain order by roaster_name, title""")
     con.close()
 
-    coverage_p = data_root / "coverage.json"
-    coverage = json.loads(coverage_p.read_text()) if coverage_p.exists() else {}
+    coverage = {"registry": {r["status"]: r["n"] for r in statuses}}
     charts = {
         "origin_price": hbar_chart(
             [(r["origin_country"], round(r["med"], 2), f"{r['origin_country']}: ${r['med']:.2f} per 100 g "

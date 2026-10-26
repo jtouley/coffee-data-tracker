@@ -1,0 +1,44 @@
+# The weekly run: discover (first week of the month), probe stale roasters, fetch every catalog, enrich,
+# build, publish to the lake, deploy the site. Nothing is committed to git; data lives in the lake.
+name: weekly
+on:
+  schedule:
+    - cron: "17 9 * * 1"   # Mondays
+  workflow_dispatch:
+    inputs:
+      sample:
+        description: "Only N roasters (blank = all)"
+        required: false
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: lake
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: {python-version: "3.12"}
+      - run: uv sync
+      - name: Check lake config
+        run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
+      - name: Weekly run
+        run: uv run coffeedata weekly ${{ inputs.sample && format('--sample {0}', inputs.sample) || '' }}
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: build/site}
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment: {name: github-pages, url: "${{ steps.deployment.outputs.page_url }}"}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

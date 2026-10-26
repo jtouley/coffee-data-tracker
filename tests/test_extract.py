@@ -5,7 +5,7 @@ from coffeedata.models import CatalogItem, Enrichment
 
 
 def item(title, tags=(), body=""):
-    return CatalogItem(roaster_slug="r", product_id="1", handle="h", url="u", title=title, platform="shopify",
+    return CatalogItem(roaster_id="r", product_id="1", handle="h", url="u", title=title, platform="shopify",
                        tags=list(tags), body_text=body)
 
 
@@ -34,7 +34,7 @@ def test_needs_llm():
 
 
 def test_llm_request_shape():
-    req = extract.llm_request(item("X", body="y" * 10_000))
+    req = extract.llm_request("X", ["a"], "y" * 10_000)
     assert req["model"] == "claude-haiku-5-5"
     assert req["output_config"]["format"]["type"] == "json_schema"
     assert len(req["messages"][0]["content"]) < 4200

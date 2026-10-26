@@ -2,20 +2,20 @@
 
 from __future__ import annotations
 
-import json
+import logging
 import re
+import time
 import uuid
 from datetime import UTC, datetime
-from functools import lru_cache
-from pathlib import Path
 
 from rapidfuzz import fuzz, process
 
+from .lake import Lake
 from .models import Shot
 
-SHOTS = Path("data/shots.jsonl")
-CATALOG = Path("data/catalog")
-REGISTRY = Path("config/roasters.csv")
+log = logging.getLogger(__name__)
+
+INDEX_TTL_S = 3600
 
 TARGET_RATIO = (1.8, 2.3)
 TARGET_TIME = (25.0, 32.0)
@@ -31,19 +31,26 @@ ALIASES = {
 
 # --- catalog matching --------------------------------------------------------------------------------
 
-@lru_cache(maxsize=1)
-def _index(catalog: Path = CATALOG, registry: Path = REGISTRY) -> dict[str, str]:
-    """coffee_id -> 'Roaster Name Coffee Title' for fuzzy search."""
-    import csv
+_index_cache: dict[str, tuple[float, dict[str, str]]] = {}
 
-    names = {}
-    if registry.exists():
-        with registry.open(newline="") as f:
-            names = {r["slug"]: r["name"] for r in csv.DictReader(f)}
-    idx = {}
-    for p in sorted(catalog.glob("*.json")) if catalog.exists() else []:
-        for item in json.loads(p.read_text()):
-            idx[f"{item['roaster_slug']}:{item['handle']}"] = f"{names.get(item['roaster_slug'], '')} {item['title']}"
+
+def _index(lake: Lake | None = None) -> dict[str, str]:
+    """coffee_id -> 'Roaster Name Coffee Title', from the weekly dim_coffee export; refreshed hourly so a
+    long-running MCP server picks up new catalog weeks."""
+    lake = lake or Lake()
+    cached = _index_cache.get(lake.url)
+    if cached and time.monotonic() - cached[0] < INDEX_TTL_S:
+        return cached[1]
+    idx: dict[str, str] = {}
+    try:
+        con = lake.connect()
+        src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
+        for cid, roaster, title in con.execute(
+                f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true)").fetchall():
+            idx[cid] = f"{roaster or ''} {title or ''}"
+    except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
+        log.info("no catalog index: %s", e)
+    _index_cache[lake.url] = (time.monotonic(), idx)
     return idx
 
 
@@ -60,8 +67,8 @@ def match_score(query: str, label: str) -> int:
     return round(70 * covered + 0.3 * fuzz.WRatio(query, label))
 
 
-def fuzzy_match_coffee(text: str, limit: int = 3) -> list[dict]:
-    idx = _index()
+def fuzzy_match_coffee(text: str, limit: int = 3, lake: Lake | None = None) -> list[dict]:
+    idx = _index(lake)
     if not text or not idx:
         return []
     pool = process.extract(text, idx, scorer=fuzz.partial_token_set_ratio, limit=300)
@@ -87,33 +94,41 @@ def normalize(payload: dict) -> dict:
     return out
 
 
-def log_shot(payload: dict, path: Path = SHOTS, min_score: int = 80) -> tuple[Shot, list[dict]]:
-    """Validate and append a shot. Free-text coffee is matched against the catalog; returns (shot, matches)."""
+def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tuple[Shot, list[dict]]:
+    """Validate and record a shot as its own immutable lake file. Free-text coffee is matched to the catalog.
+    To correct a shot, log it again with the same shot_id (latest wins); add deleted=True to retract it."""
+    lake = lake or Lake()
     data = normalize(payload)
+    deleted = bool(data.pop("deleted", False))
     data.setdefault("shot_id", str(uuid.uuid4()))
     data.setdefault("brewed_at", datetime.now(UTC).isoformat(timespec="seconds"))
     matches: list[dict] = []
     if not data.get("coffee_id") and data.get("coffee_freetext"):
-        matches = fuzzy_match_coffee(data["coffee_freetext"])
+        matches = fuzzy_match_coffee(data["coffee_freetext"], lake=lake)
         clear_winner = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
         if matches and matches[0]["score"] >= min_score and clear_winner:
             data["coffee_id"] = matches[0]["coffee_id"]
     shot = Shot(**data)
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a") as f:
-        f.write(shot.model_dump_json(exclude_none=True) + "\n")
+    now = datetime.now(UTC).replace(microsecond=0)
+    lake.write("shots", f"shots/{shot.shot_id}__{now:%Y%m%dT%H%M%S}.parquet",
+               [shot.model_dump() | {"logged_at": now, "deleted": deleted}])
     return shot, matches
 
 
-def load_shots(path: Path = SHOTS) -> list[Shot]:
-    if not path.exists():
-        return []
-    return [Shot(**json.loads(line)) for line in path.read_text().splitlines() if line.strip()]
+def load_shots(lake: Lake | None = None) -> list[Shot]:
+    """Current shots: the latest record per shot_id, without retracted ones."""
+    lake = lake or Lake()
+    cur = lake.connect().execute(f"""
+        select * exclude (logged_at, deleted) from {lake.scan('shots')}
+        where shot_id is not null
+        qualify row_number() over (partition by shot_id order by logged_at desc) = 1 and not deleted""")
+    cols = [d[0] for d in cur.description]
+    return [Shot(**{k: v for k, v in zip(cols, r, strict=True) if v is not None}) for r in cur.fetchall()]
 
 
-def history(ref: str, path: Path = SHOTS) -> list[Shot]:
+def history(ref: str, lake: Lake | None = None) -> list[Shot]:
     """Shots for a coffee_id, or whose free-text coffee resembles ref."""
-    shots = load_shots(path)
+    shots = load_shots(lake)
     exact = [s for s in shots if s.coffee_id == ref]
     if exact:
         return sorted(exact, key=lambda s: s.brewed_at)
@@ -129,9 +144,9 @@ def _step(shots: list[Shot]) -> float:
     return min(diffs) if diffs else 1.0
 
 
-def suggest_next(ref: str, path: Path = SHOTS, finer_is_lower: bool = True) -> str:
+def suggest_next(ref: str, lake: Lake | None = None, finer_is_lower: bool = True) -> str:
     """Deterministic espresso dial-in advice from the last shot of this coffee (target ~1:2 in 25-32 s)."""
-    shots = history(ref, path)
+    shots = history(ref, lake)
     if not shots:
         return "No shots logged for this coffee yet. Start around 1:2 (e.g. 18 g in, 36 g out) in 25–32 s."
     last = shots[-1]
@@ -181,7 +196,7 @@ def parse_issue_body(body: str) -> dict:
     return out
 
 
-def issue_reply(shot: Shot, matches: list[dict], path: Path = SHOTS) -> str:
+def issue_reply(shot: Shot, matches: list[dict], lake: Lake | None = None) -> str:
     lines = [f"Logged shot `{shot.shot_id}`."]
     if shot.coffee_id:
         lines.append(f"Matched coffee: **{matches[0]['label'] if matches else shot.coffee_id}** (`{shot.coffee_id}`).")
@@ -189,5 +204,5 @@ def issue_reply(shot: Shot, matches: list[dict], path: Path = SHOTS) -> str:
         opts = ", ".join(f"`{m['coffee_id']}` ({m['score']})" for m in matches)
         lines.append(f"No confident catalog match for “{shot.coffee_freetext}”. Closest: {opts}.")
     lines.append("")
-    lines.append(suggest_next(shot.coffee_id or shot.coffee_freetext or "", path))
+    lines.append(suggest_next(shot.coffee_id or shot.coffee_freetext or "", lake))
     return "\n".join(lines)

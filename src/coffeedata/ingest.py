@@ -1,204 +1,129 @@
-"""Daily pipeline: fetch every active roaster's catalog, keep the coffees, store, enrich, track coverage."""
+"""Weekly pipeline: fetch every roaster with a usable storefront, append the raw results to the lake.
+
+Writes (never rewrites): snapshots (every product, coffee or not), fetches (one row per roaster attempt,
+ok or error), bodies (description text, once per new body_hash) and rule-based enrichments (once per new
+body_hash). Re-running for the same run date only fetches roasters without a successful fetch that day.
+"""
 
 from __future__ import annotations
 
-import json
+import hashlib
 import logging
-import random
-import zlib
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
-from pathlib import Path
 
-import httpx
-
-from . import extract, registry, store
+from . import extract, registry
 from .adapters import fetch_catalog
 from .classify import is_coffee
-from .http import Blocked, PoliteClient
-from .models import CatalogItem, Enrichment, Roaster
+from .http import PoliteClient
+from .lake import Lake, new_batch_id
+from .models import CatalogItem, Roaster
 
 log = logging.getLogger(__name__)
 
-INGESTABLE = {"pending", "active", "no_coffee"}
-MAX_FAILURES = 3
-STATE = Path("data/state")
+INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
+CHUNK = 200  # roasters per written batch: a crash loses at most one chunk
 
 
 @dataclass
 class Result:
-    slug: str
-    adapter: str
-    products: int = 0
-    coffees: int = 0
-    events: int = 0
+    roaster: Roaster
+    fetched_at: datetime
+    items: list[CatalogItem] = field(default_factory=list)
     error: str | None = None
-    to_llm: list[CatalogItem] = field(default_factory=list)
-    base: dict[str, Enrichment] = field(default_factory=dict)
+
+    @property
+    def coffees(self) -> list[CatalogItem]:
+        return [i for i in self.items if is_coffee(i)]
 
 
-def select(rows: list[dict], only: str | None = None, sample: int | None = None,
-           shard: tuple[int, int] | None = None) -> list[dict]:
-    todo = [r for r in rows if r.get("status", "pending") in INGESTABLE and r.get("platform") not in ("", None)]
-    if only == "failed":
-        todo = [r for r in todo if (r.get("failures") or "0") != "0"]
-    elif only:
-        todo = [r for r in rows if only in (r["slug"], r["domain"])]
-    if shard:
-        i, n = shard
-        todo = [r for r in todo if zlib.crc32(r["slug"].encode()) % n == i]
-    if sample:
-        rng = random.Random(date.today().toordinal())
-        todo = rng.sample(todo, min(sample, len(todo)))
-    return todo
-
-
-def ingest_one(client: PoliteClient, roaster: Roaster, data_root: Path, enriched_root: Path) -> Result:
-    res = Result(roaster.slug, roaster.adapter)
+def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
+    res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
     try:
-        items = fetch_catalog(client, roaster)
-    except (httpx.HTTPError, Blocked, ValueError, KeyError) as e:
-        res.error = f"{type(e).__name__}: {e}"[:200]
-        return res
-    res.products = len(items)
-    coffees = [i for i in items if is_coffee(i)]
-    res.coffees = len(coffees)
-    res.events = len(store.save(roaster.slug, coffees, data_root))
-    cache = extract.load_cache(roaster.slug, enriched_root)
-    for it in coffees:
-        cached = cache.get(it.product_id)
-        if cached and cached.get("body_hash") == it.body_hash:
-            continue
-        e = extract.rules(it)
-        cache[it.product_id] = e.model_dump()
-        if extract.needs_llm(e) and it.body_text:
-            res.to_llm.append(it)
-            res.base[it.product_id] = e
-    live = {i.product_id for i in coffees}
-    cache = {k: v for k, v in cache.items() if k in live}
-    if cache or (enriched_root / f"{roaster.slug}.json").exists():
-        extract.save_cache(roaster.slug, cache, enriched_root)
+        res.items = list({i.product_id: i for i in fetch_catalog(client, roaster)}.values())  # feeds repeat items
+    except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
+        res.error = f"{type(e).__name__}: {e}"[:300]
+        res.items = []
     return res
 
 
-def update_row(row: dict, res: Result) -> None:
-    today = date.today().isoformat()
-    if res.error:
-        row["failures"] = str(int(row.get("failures") or 0) + 1)
-        if int(row["failures"]) >= MAX_FAILURES:
-            row["status"] = "unreachable"
-        return
-    row.update(failures="0", last_ingested=today, coffees=str(res.coffees))
-    row["status"] = "active" if res.coffees else ("no_coffee" if res.products else "no_catalog")
+def select(lake: Lake, run_date: str, only: str | None = None, sample: int | None = None,
+           retry_failed: bool = False) -> list[Roaster]:
+    states = registry.current(lake)
+    if only:
+        return [s.roaster for s in states if s.roaster.roaster_id == only]
+    con = lake.connect()
+    done = {r[0] for r in con.execute(
+        f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and status = 'ok'",
+        [date.fromisoformat(run_date)]).fetchall()}
+    tried = {r[0] for r in con.execute(
+        f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ?", [date.fromisoformat(run_date)]
+    ).fetchall()}
+    # Draw a sample from a population that doesn't change as the run progresses, so re-running the same
+    # command picks the same roasters (and then skips the ones already done).
+    pool = sorted((s for s in states if s.roaster.platform and s.status != "opted_out"),
+                  key=lambda s: s.roaster.roaster_id)
+    if sample:  # a hash order is stable as roasters are added, so weekly samples keep the same roasters
+        pool = sorted(pool, key=lambda s: hashlib.sha1(s.roaster.roaster_id.encode()).hexdigest())[:sample]
+    todo = [s.roaster for s in pool if (s.status in INGESTABLE or s.roaster.roaster_id in tried)
+            and s.roaster.roaster_id not in done]
+    if retry_failed:
+        todo = [r for r in todo if r.roaster_id in tried]
+    return todo
 
 
-def run(rows: list[dict], todo: list[dict], workers: int = 16, data_root: Path = store.DATA,
-        enriched_root: Path = extract.ENRICHED, enrich_max: int = 2000) -> dict:
-    results: list[Result] = []
-    roasters = registry.roasters(todo)
-    with PoliteClient() as client, ThreadPoolExecutor(workers) as ex:
-        for res in ex.map(lambda r: ingest_one(client, r, data_root, enriched_root), roasters):
-            log.info("%-32s %-11s products=%-4d coffees=%-4d events=%-4d %s", res.slug, res.adapter,
-                     res.products, res.coffees, res.events, res.error or "")
-            results.append(res)
-    by_slug = {r["slug"]: r for r in rows}
+def rows_for(results: list[Result], run_date: date, batch_id: str, known_bodies: set[str],
+             enriched: set[tuple[str, str, str]]) -> dict[str, list[dict]]:
+    snaps, fetches, bodies, enrich = [], [], [], []
     for res in results:
-        update_row(by_slug[res.slug], res)
-    llm = 0
-    if extract.llm_enabled():
-        llm = enrich_with_llm(results, enriched_root, enrich_max)
-    return coverage(rows, results, llm, data_root)
+        r = res.roaster
+        coffee_ids = {i.product_id for i in res.coffees}
+        fetches.append({"run_date": run_date, "batch_id": batch_id, "fetched_at": res.fetched_at,
+                        "roaster_id": r.roaster_id, "adapter": r.adapter, "status": "error" if res.error else "ok",
+                        "error": res.error, "products": len(res.items), "coffees": len(coffee_ids)})
+        for it in res.items:
+            d = it.model_dump()
+            snaps.append(d | {"run_date": run_date, "batch_id": batch_id, "fetched_at": res.fetched_at,
+                              "is_coffee": it.product_id in coffee_ids})
+            if it.body_hash and it.body_hash not in known_bodies:
+                known_bodies.add(it.body_hash)
+                bodies.append({"body_hash": it.body_hash, "body_text": it.body_text, "first_seen_run": run_date})
+            key = (r.roaster_id, it.product_id, it.body_hash)
+            if it.product_id in coffee_ids and key not in enriched:
+                enriched.add(key)
+                e = extract.rules(it)
+                enrich.append(e.model_dump() | {"extracted_at": res.fetched_at, "roaster_id": r.roaster_id,
+                                                "product_id": it.product_id, "needs_llm": extract.needs_llm(e)})
+    return {"snapshots": snaps, "fetches": fetches, "bodies": bodies, "enrichments": enrich}
 
 
-def enrich_with_llm(results: list[Result], enriched_root: Path, enrich_max: int) -> int:
-    """Small runs go synchronously; big backfills go through the Message Batches API (collected next run)."""
-    pending = [(r, it) for r in results for it in r.to_llm][:enrich_max]
-    if not pending:
-        return 0
-    if len(pending) <= 100:
-        done = 0
-        for r in results:
-            items = [it for rr, it in pending if rr is r]
-            if not items:
-                continue
-            out = extract.enrich_llm_sync(items, r.base)
-            cache = extract.load_cache(r.slug, enriched_root)
-            for pid, e in out.items():
-                cache[pid] = e.model_dump()
-            extract.save_cache(r.slug, cache, enriched_root)
-            done += len(out)
-        return done
-    return submit_batch(pending)
-
-
-def submit_batch(pending: list[tuple[Result, CatalogItem]]) -> int:
-    import anthropic
-    from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
-    from anthropic.types.messages.batch_create_params import Request
-
-    client = anthropic.Anthropic()
-    reqs, base = [], {}
-    for i, (r, it) in enumerate(pending):
-        cid = f"e{i}"
-        reqs.append(Request(custom_id=cid, params=MessageCreateParamsNonStreaming(**extract.llm_request(it))))
-        base[cid] = {"slug": r.slug, "product_id": it.product_id, "base": r.base[it.product_id].model_dump()}
-    batch = client.messages.batches.create(requests=reqs)
-    STATE.mkdir(parents=True, exist_ok=True)
-    (STATE / f"batch-{batch.id}.json").write_text(json.dumps(base, sort_keys=True))
-    log.info("submitted enrichment batch %s (%d items)", batch.id, len(reqs))
-    return 0
-
-
-def collect_batches(enriched_root: Path = extract.ENRICHED) -> int:
-    """Merge results of any finished enrichment batches into the cache."""
-    import anthropic
-
-    if not STATE.exists():
-        return 0
-    client = anthropic.Anthropic()
-    merged = 0
-    for f in sorted(STATE.glob("batch-*.json")):
-        batch_id = f.stem.removeprefix("batch-")
-        if client.messages.batches.retrieve(batch_id).processing_status != "ended":
-            continue
-        meta = json.loads(f.read_text())
-        caches: dict[str, dict] = {}
-        for res in client.messages.batches.results(batch_id):
-            m = meta.get(res.custom_id)
-            if not m or res.result.type != "succeeded":
-                continue
-            e = extract.parse_llm_message(res.result.message, Enrichment(**m["base"]))
-            if e:
-                cache = caches.setdefault(m["slug"], extract.load_cache(m["slug"], enriched_root))
-                if m["product_id"] in cache:  # product may have been removed since submission
-                    cache[m["product_id"]] = e.model_dump()
-                    merged += 1
-        for slug, cache in caches.items():
-            extract.save_cache(slug, cache, enriched_root)
-        f.unlink()
-    return merged
-
-
-def coverage(rows: list[dict], results: list[Result], llm: int, data_root: Path) -> dict:
+def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -> dict:
+    rd = date.fromisoformat(run_date)
+    con = lake.connect()
+    known_bodies = {r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()}
+    enriched = {tuple(r) for r in con.execute(
+        f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}").fetchall()}
+    stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
-    for r in results:
-        c = by_adapter.setdefault(r.adapter, Counter())
-        c["roasters"] += 1
-        c["with_coffee"] += bool(r.coffees)
-        c["coffees"] += r.coffees
-        c["errors"] += bool(r.error)
-    cov = {
-        "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
-        "registry": dict(sorted(Counter(r.get("status", "pending") for r in rows).items())),
-        "platforms": dict(sorted(Counter(r.get("platform") or "unknown" for r in rows).items())),
-        "this_run": {k: dict(v) for k, v in sorted(by_adapter.items())},
-        "coffees_this_run": sum(r.coffees for r in results),
-        "events_this_run": sum(r.events for r in results),
-        "llm_enriched_this_run": llm,
-        "failures": sorted(f"{r.slug}: {r.error}" for r in results if r.error)[:200],
-    }
-    data_root.mkdir(parents=True, exist_ok=True)
-    (data_root / "coverage.json").write_text(json.dumps(cov, indent=1, sort_keys=True) + "\n")
-    return cov
+    failures: list[str] = []
+    with PoliteClient() as client, ThreadPoolExecutor(workers) as ex:
+        for start in range(0, len(roasters), CHUNK):
+            chunk = list(ex.map(lambda r: ingest_one(client, r), roasters[start:start + CHUNK]))
+            batch = new_batch_id()
+            for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched).items():
+                lake.write_partition(table, run_date, batch, rows)
+            for res in chunk:
+                a = by_adapter.setdefault(res.roaster.adapter, Counter())
+                a["roasters"] += 1
+                a["errors"] += bool(res.error)
+                a["with_coffee"] += bool(res.coffees)
+                a["coffees"] += len(res.coffees)
+                stats["products"] += len(res.items)
+                if res.error:
+                    failures.append(f"{res.roaster.roaster_id}: {res.error}")
+                log.info("%-36s %-13s products=%-4d coffees=%-4d %s", res.roaster.roaster_id, res.roaster.adapter,
+                         len(res.items), len(res.coffees), res.error or "")
+    return {"run_date": run_date, "roasters": len(roasters), "products": stats["products"],
+            "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())}, "failures": failures[:50]}

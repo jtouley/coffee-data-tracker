@@ -14,18 +14,21 @@ def test_check_sql():
 
 
 @pytest.mark.anyio
-async def test_tools_over_mcp_protocol(tmp_path, monkeypatch):
-    """Drive the real server through an in-memory MCP client session."""
+async def test_tools_over_mcp_protocol(lake, tmp_path, monkeypatch):
+    """Drive the real server through an in-process MCP client."""
     import duckdb
     from mcp import Client
 
     db = tmp_path / "c.duckdb"
     con = duckdb.connect(str(db))
-    con.execute("create table dim_coffee as select 'onyxcoffeelab:geometry' as coffee_id, 'Geometry' as title")
+    con.execute("""create table dim_coffee as select 'onyxcoffeelab.com:1' as coffee_id, 'Onyx Coffee Lab' as roaster_name,
+                   'Geometry' as title, 'u' as url, 'Ethiopia' as origin_country, 'washed' as process,
+                   ['peach'] as tasting_notes, true as in_stock, true as is_listed, 3.5 as price_per_100g,
+                   'onyxcoffeelab.com' as roaster_id""")
+    lake.write_mart("dim_coffee", con, "select * from dim_coffee")
     con.close()
     monkeypatch.setattr(mcp_server, "DB", db)
-    monkeypatch.setattr(shots, "SHOTS", tmp_path / "shots.jsonl")
-    monkeypatch.setattr(shots, "_index", lambda: {"onyxcoffeelab:geometry": "Onyx Coffee Lab Geometry"})
+    monkeypatch.setattr(shots, "_index", lambda lake=None: {"onyxcoffeelab.com:1": "Onyx Coffee Lab Geometry"})
 
     async with Client(mcp_server.mcp) as client:
         names = {t.name for t in (await client.list_tools()).tools}
@@ -33,11 +36,13 @@ async def test_tools_over_mcp_protocol(tmp_path, monkeypatch):
 
         r = await client.call_tool("log_shot", {"coffee": "onyx geometry", "dose_g": 18, "yield_g": 36,
                                                 "time_s": 22, "grinder_setting": 15, "rating": 3})
-        assert "onyxcoffeelab:geometry" in r.content[0].text and "finer" in r.content[0].text
+        assert "onyxcoffeelab.com:1" in r.content[0].text and "finer" in r.content[0].text
+
+        r = await client.call_tool("search_coffees", {"query": "geometry", "process": "washed"})
+        assert "Geometry" in r.content[0].text
 
         r = await client.call_tool("run_sql", {"sql": "select coffee_id, title from dim_coffee"})
-        payload = json.loads(r.content[0].text)
-        assert payload["rows"] == [["onyxcoffeelab:geometry", "Geometry"]]
+        assert json.loads(r.content[0].text)["rows"] == [["onyxcoffeelab.com:1", "Geometry"]]
 
         r = await client.call_tool("run_sql", {"sql": "drop table dim_coffee"})
         assert r.is_error

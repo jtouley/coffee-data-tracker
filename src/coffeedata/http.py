@@ -15,7 +15,11 @@ log = logging.getLogger(__name__)
 USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
 
 
-class Blocked(Exception):
+class FetchError(Exception):
+    """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error."""
+
+
+class Blocked(FetchError):
     """robots.txt disallows the URL."""
 
 
@@ -52,8 +56,10 @@ class PoliteClient:
                 r = self._client.get(f"https://{host}/robots.txt")
                 if r.status_code == 200:
                     rp.parse(r.text.splitlines())
+                elif r.status_code in (401, 403):
+                    rp.disallow_all = True  # same convention as urllib.robotparser
                 else:
-                    rp = None  # no robots.txt (or unreadable) means no restrictions
+                    rp = None  # no robots.txt means no restrictions
             except httpx.HTTPError:
                 rp = None
             with self._lock:
@@ -76,6 +82,7 @@ class PoliteClient:
         last_exc: Exception | None = None
         for attempt in range(self.retries):
             self._wait_turn(host)
+            retry_after = ""
             try:
                 r = self._client.get(url, params=params or None)
             except httpx.HTTPError as e:
@@ -85,14 +92,13 @@ class PoliteClient:
                     return r
                 last_exc = httpx.HTTPStatusError(f"{r.status_code}", request=r.request, response=r)
                 retry_after = r.headers.get("retry-after", "")
-                if retry_after.isdigit():
-                    time.sleep(min(int(retry_after), 30))
-            time.sleep(2**attempt)
+            if attempt < self.retries - 1:  # no pointless sleep after the final attempt
+                time.sleep(min(int(retry_after), 30) if retry_after.isdigit() else 2**attempt)
         assert last_exc is not None
         raise last_exc
 
     def get_json(self, url: str, **params: object) -> object | None:
-        """JSON body on a 200 with a JSON payload, else None."""
+        """JSON body on a 200 with a JSON payload, else None (for probing, where a miss is an answer)."""
         r = self.get(url, **params)
         if r.status_code != 200:
             return None
@@ -100,3 +106,16 @@ class PoliteClient:
             return r.json()
         except ValueError:
             return None
+
+    def fetch_json(self, url: str, **params: object) -> object:
+        """JSON body, or FetchError: for catalog pages, where a miss must never look like an empty catalog."""
+        try:
+            r = self.get(url, **params)
+        except httpx.HTTPError as e:
+            raise FetchError(f"{type(e).__name__} {url}") from e
+        if r.status_code != 200:
+            raise FetchError(f"HTTP {r.status_code} {url}")
+        try:
+            return r.json()
+        except ValueError as e:
+            raise FetchError(f"not JSON: {url}") from e

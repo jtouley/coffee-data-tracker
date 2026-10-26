@@ -7,7 +7,9 @@ import json
 import re
 from urllib.parse import urlparse
 
-from ..http import Blocked, PoliteClient
+import httpx
+
+from ..http import Blocked, FetchError, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
@@ -59,7 +61,7 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     if isinstance(offers, dict):
         offers = offers.get("offers") or [offers]
     variants = []
-    for i, o in enumerate(offers):
+    for i, o in enumerate(o for o in offers if isinstance(o, dict)):
         title = str(o.get("name") or o.get("sku") or "")
         avail = str(o.get("availability") or "")
         variants.append(Variant(variant_id=str(o.get("sku") or i), title=title,
@@ -74,7 +76,7 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
     pid = str(p.get("productID") or p.get("sku") or hashlib.sha1(url.encode()).hexdigest()[:12])
     return CatalogItem(
-        roaster_slug=roaster.slug, product_id=pid, handle=handle, url=url,
+        roaster_id=roaster.roaster_id, product_id=pid, handle=handle, url=url,
         title=html_to_text(str(p.get("name") or handle)), platform="generic",
         product_type=str(p.get("category") or ""), image=image, variants=variants,
         body_text=html_to_text(str(p.get("description") or "")),
@@ -86,16 +88,23 @@ GIVE_UP_AFTER = 10  # pages without Product markup before assuming the site has 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
-    for n, url in enumerate(product_urls(sitemap_urls(client, roaster.host))):
+    failed = 0
+    urls = product_urls(sitemap_urls(client, roaster.host))
+    for n, url in enumerate(urls):
         if n >= GIVE_UP_AFTER and not items:
             break
         try:
             r = client.get(url)
-        except Blocked:
+        except (Blocked, httpx.HTTPError):
+            failed += 1
             continue
         if r.status_code != 200:
+            failed += 1
             continue
         for p in jsonld_products(r.text)[:1]:
             item = parse_jsonld(p, url, roaster)
             items.setdefault(item.product_id, item)
+    if failed and failed >= len(items):
+        # Mostly failures: can't tell "no products" from "couldn't read them", so don't claim either.
+        raise FetchError(f"{failed} product pages failed")
     return list(items.values())

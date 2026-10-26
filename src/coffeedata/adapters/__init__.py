@@ -6,7 +6,7 @@ from collections.abc import Callable
 
 from ..http import PoliteClient
 from ..models import CatalogItem, Roaster
-from . import generic, shopify, squarespace, woocommerce
+from . import generic, shopify, square_online, squarespace, woocommerce
 
 Adapter = Callable[[PoliteClient, Roaster], list[CatalogItem]]
 
@@ -14,6 +14,7 @@ ADAPTERS: dict[str, Adapter] = {
     "shopify": shopify.fetch,
     "woocommerce": woocommerce.fetch,
     "squarespace": squarespace.fetch,
+    "square_online": square_online.fetch,
     "generic": generic.fetch,
 }
 

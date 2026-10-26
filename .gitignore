@@ -11,3 +11,5 @@ dbt/logs/
 dbt/dbt_packages/
 .pytest_cache/
 .ruff_cache/
+lake/
+data/

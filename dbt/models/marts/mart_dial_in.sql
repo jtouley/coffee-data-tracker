@@ -11,8 +11,8 @@ per_coffee as (
 ),
 per_style as (
     select
-        'origin_process' as grain, coalesce(origin_country, '?') || ' / ' || coalesce(process, '?') as key,
-        coalesce(origin_country, '?') || ' / ' || coalesce(process, '?') as label,
+        'origin_process', coalesce(origin_country, '?') || ' / ' || coalesce(process, '?'),
+        coalesce(origin_country, '?') || ' / ' || coalesce(process, '?'),
         count(*), round(avg(rating), 2), max(rating), arg_max(grinder_setting, rating), arg_max(dose_g, rating),
         arg_max(yield_g, rating), arg_max(time_s, rating), round(avg(brew_ratio), 2), max(brewed_at)
     from s where coffee_id is not null group by all

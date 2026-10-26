@@ -9,37 +9,25 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
-Platform = Literal["shopify", "woocommerce", "squarespace", "generic"]
+Platform = Literal["shopify", "woocommerce", "squarespace", "square_online", "generic"]
 
 
 class Roaster(BaseModel):
-    slug: str
+    roaster_id: str  # normalized domain; stable and unique
     name: str
-    domain: str
+    host: str  # hostname that actually serves the site (after redirects)
+    platform: str = ""  # from the latest successful probe: shopify, woocommerce, squarespace?, wix?, ...
     city: str = ""
     state: str = ""
-    sources: str = ""
-    locations: int = 1
-    confidence: str = ""
-    tagged_roastery: str = ""
-    roast_in_name: str = ""
-    is_chain: str = "false"
-    final_host: str = ""
-    platform: str = ""
-    status: str = "pending"
-    last_probed: str = ""
-
-    @property
-    def host(self) -> str:
-        return self.final_host or self.domain
+    is_chain: bool = False
 
     @property
     def adapter(self) -> Platform:
         p = self.platform.rstrip("?")
         if self.platform in ("shopify", "woocommerce"):
             return self.platform  # type: ignore[return-value]
-        if p == "squarespace":
-            return "squarespace"
+        if p in ("squarespace", "square_online"):
+            return p  # type: ignore[return-value]
         return "generic"
 
 
@@ -52,7 +40,7 @@ class Variant(BaseModel):
 
 
 class CatalogItem(BaseModel):
-    roaster_slug: str
+    roaster_id: str
     product_id: str
     handle: str
     url: str
@@ -73,7 +61,8 @@ class CatalogItem(BaseModel):
 
     @property
     def coffee_id(self) -> str:
-        return f"{self.roaster_slug}:{self.handle}"
+        """Stable across runs and renames: the roaster's domain plus the store's own product id."""
+        return f"{self.roaster_id}:{self.product_id}"
 
 
 class Enrichment(BaseModel):

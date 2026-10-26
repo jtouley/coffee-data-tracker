@@ -1,7 +1,7 @@
-slug,name,domain,city,state,sources,locations,confidence,tagged_roastery,roast_in_name,is_chain,final_host,platform,status,last_probed
-anaheimcoffee,Anaheim Coffee,anaheimcoffee.com,Anaheim,CA,overture,1,0.9,true,false,false,anaheimcoffee.com,woocommerce,pending,2026-10-26
-counterculturecoffee,Counter Culture Coffee,counterculturecoffee.com,Durham,NC,curated,1,,true,false,false,counterculturecoffee.com,shopify,pending,2026-10-26
-intelligentsia,Intelligentsia,intelligentsia.com,Chicago,IL,curated,3,,true,false,false,www.intelligentsia.com,shopify,pending,2026-10-26
-onyxcoffeelab,Onyx Coffee Lab,onyxcoffeelab.com,Rogers,AR,curated,1,,true,false,false,onyxcoffeelab.com,shopify,pending,2026-10-26
-vividcoffee,Vivid Coffee,vividcoffee.com,Sunnyvale,CA,curated,1,,true,false,false,vividcoffee.com,squarespace?,pending,2026-10-26
-1802roasters,1802 Roasters,1802roasters.com,,CA,overture,1,0.8,true,true,false,www.1802roasters.com,wix?,pending,2026-10-26
+roaster_id,name,city,state,sources,locations,confidence,tagged_roastery,roast_in_name,is_chain,opted_out,final_host,platform,last_probed
+1802roasters.com,1802 Roasters,,CA,overture,1,0.8,true,true,false,false,www.1802roasters.com,wix?,2026-10-26
+anaheimcoffee.com,Anaheim Coffee,Anaheim,CA,overture,1,0.9,true,false,false,false,anaheimcoffee.com,woocommerce,2026-10-26
+counterculturecoffee.com,Counter Culture Coffee,Durham,NC,curated,1,,true,false,false,false,counterculturecoffee.com,shopify,2026-10-26
+intelligentsia.com,Intelligentsia,Chicago,IL,curated,3,,true,false,false,false,www.intelligentsia.com,shopify,2026-10-26
+onyxcoffeelab.com,Onyx Coffee Lab,Rogers,AR,curated,1,,true,false,false,false,onyxcoffeelab.com,shopify,2026-10-26
+vividcoffee.com,Vivid Coffee,Sunnyvale,CA,curated,1,,true,false,false,false,vividcoffee.com,squarespace?,2026-10-26

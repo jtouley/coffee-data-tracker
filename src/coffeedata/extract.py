@@ -6,7 +6,6 @@ import json
 import logging
 import os
 import re
-from pathlib import Path
 
 from .models import CatalogItem, Enrichment
 from .origins import COUNTRIES, canonical_country
@@ -14,7 +13,6 @@ from .origins import COUNTRIES, canonical_country
 log = logging.getLogger(__name__)
 
 MODEL = "claude-haiku-5-5"
-ENRICHED = Path("data/enriched")
 
 _PROCESS = [
     ("anaerobic", r"anaerobic|carbonic|thermal shock|co-?ferment"),
@@ -173,8 +171,8 @@ SCHEMA = {
 }
 
 
-def llm_request(item: CatalogItem) -> dict:
-    listing = f"Title: {item.title}\nTags: {', '.join(item.tags)}\n\n{item.body_text[:4000]}"
+def llm_request(title: str, tags: list[str], body_text: str) -> dict:
+    listing = f"Title: {title}\nTags: {', '.join(tags)}\n\n{body_text[:4000]}"
     return {
         "model": MODEL,
         "max_tokens": 1024,
@@ -205,31 +203,3 @@ def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
 
 def llm_enabled() -> bool:
     return bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"))
-
-
-def enrich_llm_sync(items: list[CatalogItem], base: dict[str, Enrichment]) -> dict[str, Enrichment]:
-    import anthropic
-
-    client = anthropic.Anthropic()
-    out = {}
-    for it in items:
-        try:
-            msg = client.messages.create(**llm_request(it))
-        except anthropic.APIStatusError as e:
-            log.warning("enrich %s failed: %s", it.coffee_id, e)
-            continue
-        if e2 := parse_llm_message(msg, base[it.product_id]):
-            out[it.product_id] = e2
-    return out
-
-
-# --- cache -------------------------------------------------------------------------------------------
-
-def load_cache(slug: str, root: Path = ENRICHED) -> dict[str, dict]:
-    p = root / f"{slug}.json"
-    return json.loads(p.read_text()) if p.exists() else {}
-
-
-def save_cache(slug: str, cache: dict[str, dict], root: Path = ENRICHED) -> None:
-    root.mkdir(parents=True, exist_ok=True)
-    (root / f"{slug}.json").write_text(json.dumps(cache, indent=1, sort_keys=True, ensure_ascii=False) + "\n")

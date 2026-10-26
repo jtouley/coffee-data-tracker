@@ -4,13 +4,15 @@ config-version: 2
 profile: coffeedata
 
 model-paths: ["models"]
+macro-paths: ["macros"]
 seed-paths: ["seeds"]
+test-paths: ["tests"]
 target-path: "target"
 clean-targets: ["target"]
 
 vars:
-  # Point these at tests/fixtures/... to build offline (see `make test`).
-  data_dir: "data"
+  # Lake roots to read: the local lake/staging dir, plus the remote dataset when publishing (see lake.py).
+  lake_roots: ["lake"]
   config_dir: "config"
 
 models:

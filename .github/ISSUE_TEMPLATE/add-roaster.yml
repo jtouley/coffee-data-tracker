@@ -14,3 +14,9 @@ body:
   - type: input
     id: state
     attributes: {label: State, placeholder: "OR"}
+  - type: checkboxes
+    id: opt_out
+    attributes:
+      label: Opt out
+      description: For roasters who'd rather not be included. Their site is never fetched again.
+      options: [{label: Exclude this roaster}]

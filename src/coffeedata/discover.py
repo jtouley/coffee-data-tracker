@@ -6,7 +6,7 @@ import logging
 import re
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
-from datetime import date
+from datetime import UTC, date, datetime
 from urllib.parse import urlparse
 
 import httpx
@@ -54,31 +54,29 @@ def overture(release: str | None = None) -> list[dict]:
         SELECT website, name, city, state, confidence, cat = 'coffee_roastery' AS tagged,
                name ILIKE '%roast%' AS roast_in_name
         FROM r""")
-    from .registry import normalize_domain
+    from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
     for website, name, city, state, conf, tagged, roast in rel.fetchall():
         d = normalize_domain(website or "")
-        if not d:
+        if not is_storefront_host(d):
             continue
-        row = out.setdefault(d, {"domain": d, "name": name, "city": city, "state": state, "locations": 0,
-                                 "confidence": 0.0, "tagged_roastery": "false", "roast_in_name": "false",
-                                 "source": f"overture:{release}"})
+        row = out.setdefault(d, {"roaster_id": d, "name": name, "city": city, "state": state, "locations": 0,
+                                 "confidence": 0.0, "tagged_roastery": False, "roast_in_name": False,
+                                 "source": f"overture-{release}"})
         row["locations"] += 1
         if (conf or 0) > row["confidence"]:
             row.update(name=name, city=city, state=state, confidence=round(conf or 0, 2))
-        if tagged:
-            row["tagged_roastery"] = "true"
-        if roast:
-            row["roast_in_name"] = "true"
-    return list(out.values())
+        row["tagged_roastery"] |= bool(tagged)
+        row["roast_in_name"] |= bool(roast)
+    return sorted(out.values(), key=lambda r: r["roaster_id"])
 
 
 # --- OpenStreetMap via Overpass (ODbL) ----------------------------------------------------------------
 
 def osm(states: list[str] | None = None) -> list[dict]:
     """craft=coffee_roaster / roastery=yes with a website, queried one state at a time."""
-    from .registry import normalize_domain
+    from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
     with httpx.Client(timeout=90, headers={"User-Agent": "coffee-data/0.1"}) as client:
@@ -95,11 +93,10 @@ def osm(states: list[str] | None = None) -> list[dict]:
             for el in elements:
                 t = el.get("tags", {})
                 d = normalize_domain(t.get("website") or t.get("contact:website") or "")
-                if d:
-                    out.setdefault(d, {"domain": d, "name": t.get("name", ""), "city": t.get("addr:city", ""),
-                                       "state": st, "locations": 1, "tagged_roastery": "true",
-                                       "source": "osm"})
-    return list(out.values())
+                if is_storefront_host(d):
+                    out.setdefault(d, {"roaster_id": d, "name": t.get("name", ""), "city": t.get("addr:city", ""),
+                                       "state": st, "locations": 1, "tagged_roastery": True, "source": "osm"})
+    return sorted(out.values(), key=lambda r: r["roaster_id"])
 
 
 # --- Platform probe ----------------------------------------------------------------------------------
@@ -112,18 +109,21 @@ HTML_MARKERS = [
 
 
 def probe_one(client: PoliteClient, domain: str) -> dict:
-    """Which platform serves this roaster's catalog? Returns status, final_host, platform."""
+    """Which platform serves this roaster's catalog? status: ok | blocked | unreachable | http_<code>."""
     home = None
     for host in (domain, f"www.{domain}"):
         try:
             home = client.get(f"https://{host}/")
             break
         except Blocked:
-            return {"status": "blocked", "final_host": host, "platform": ""}
+            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
         except httpx.HTTPError:
             continue
-    if home is None or home.status_code >= 500:
-        return {"status": "unreachable", "final_host": "", "platform": ""}
+    if home is None:
+        return {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}
+    if home.status_code != 200:
+        return {"status": f"http_{home.status_code}", "final_host": urlparse(str(home.url)).netloc,
+                "platform": "", "http_status": home.status_code}
     host = urlparse(str(home.url)).netloc
     for platform, path, params, kind in [
         ("shopify", "/products.json", {"limit": 1}, dict),
@@ -134,23 +134,25 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
         except (Blocked, httpx.HTTPError):
             data = None
         if isinstance(data, kind) and (kind is list or "products" in data):
-            return {"status": "pending", "final_host": host, "platform": platform}
-    html = home.text.lower() if home.status_code == 200 else ""
-    for platform, pat in HTML_MARKERS:
-        if re.search(pat, html):
-            return {"status": "pending", "final_host": host, "platform": platform}
-    return {"status": "pending" if home.status_code == 200 else f"http_{home.status_code}",
-            "final_host": host, "platform": "other"}
+            return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
+    html = home.text.lower()
+    platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")
+    return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
 
 
-def probe(rows: list[dict], workers: int = 16) -> list[dict]:
-    """Probe registry rows in place (skipping opted_out), stamping last_probed."""
-    today = date.today().isoformat()
-    todo = [r for r in rows if r.get("status") != "opted_out"]
-    with PoliteClient(min_interval=0.5, timeout=12, retries=1) as client, ThreadPoolExecutor(workers) as ex:
-        for r, res in zip(todo, ex.map(lambda r: probe_one(client, r["domain"]), todo), strict=True):
-            prev_status = r.get("status")
-            r.update(res, last_probed=today)
-            if prev_status in ("active", "no_coffee") and res["status"] == "pending":
-                r["status"] = prev_status  # a healthy probe doesn't reset what ingest learned
-    return rows
+def probe(domains: list[str], workers: int = 16, run_date: str | None = None) -> list[dict]:
+    """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten)."""
+    run_date = run_date or date.today().isoformat()
+    with PoliteClient(min_interval=0.5, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
+        results = list(ex.map(lambda d: _safe_probe(client, d), domains))
+    now = datetime.now(UTC).replace(microsecond=0)
+    return [{"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": d, **res}
+            for d, res in zip(domains, results, strict=True)]
+
+
+def _safe_probe(client: PoliteClient, domain: str) -> dict:
+    try:
+        return probe_one(client, domain)
+    except Exception as e:  # noqa: BLE001 - one odd site must not abort the probe run
+        log.warning("probe %s failed: %s", domain, e)
+        return {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}

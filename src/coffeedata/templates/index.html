@@ -79,7 +79,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <header>
   <button class="theme" id="theme" type="button">Theme</button>
   <h1>Coffee Data</h1>
-  <p>What US specialty roasters are selling today, and the shots I pull with it. Updated {{ generated }}.</p>
+  <p>What US specialty roasters are selling this week, and the shots I pull with it. Updated {{ generated }}.</p>
 </header>
 
 <div class="tiles">
@@ -108,7 +108,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 </div>
 
 <section>
-  <h2>New this week</h2>
+  <h2>New since last week</h2>
   {% if new %}
   <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
   {% for c in new %}<tr><td><a href="{{ c.url }}" rel="noopener">{{ c.title }}</a><br><span class="notes">{{ c.roaster_name }}</span></td>
@@ -116,7 +116,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     <td class="hide-sm notes">{{ (c.tasting_notes or [])|join(", ") }}</td>
     <td class="num">{{ "%.2f"|format(c.price_per_100g) if c.price_per_100g else "" }}</td></tr>{% endfor %}
   </tbody></table>
-  {% else %}<p class="empty">Nothing new in the last 7 days.</p>{% endif %}
+  {% else %}<p class="empty">Nothing new since each roaster's previous run.</p>{% endif %}
 </section>
 
 <section>
@@ -156,7 +156,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 
 <footer>
   Roaster discovery: <a href="https://overturemaps.org">Overture Maps Foundation</a> Places (CDLA-Permissive-2.0) and
-  © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Product data is read once a day
+  © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Product data is read once a week
   from each roaster's public storefront feed; every coffee links back to the roaster.
   Source: <a href="https://github.com/jtouley/coffee-data-tracker">jtouley/coffee-data-tracker</a>.
 </footer>

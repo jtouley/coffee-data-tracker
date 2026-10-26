@@ -1,4 +1,7 @@
-select coffee_id, roaster_name, title, origin_country, process, tasting_notes, price_per_100g, min_price_usd, url, first_seen
-from {{ ref('dim_coffee') }}
-where in_stock and first_seen >= current_date - 30
-order by first_seen desc, roaster_name, title
+-- Coffees that appeared in a roaster's latest run but not in its previous successful run.
+select c.coffee_id, c.roaster_name, c.title, c.origin_country, c.process, c.tasting_notes, c.price_per_100g,
+       c.min_price_usd, c.url, c.first_seen
+from {{ ref('dim_coffee') }} c
+join {{ ref('stg_runs') }} r on r.roaster_id = c.roaster_id and r.is_latest_run
+where c.in_stock and c.first_seen = r.run_date and r.prev_run is not null
+order by c.first_seen desc, c.roaster_name, c.title

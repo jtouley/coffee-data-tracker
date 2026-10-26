@@ -1,35 +1,38 @@
-# Coffee Data — `make all` runs the whole daily pipeline locally.
-DBT := uv run dbt
-DBT_ARGS := --project-dir dbt --profiles-dir dbt
-ROASTER ?=
+# Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
 
-.PHONY: install ingest collect build site all test lint probe discover mcp clean
+.PHONY: install init weekly ingest probe discover enrich build site publish mcp lint test clean
 
 install:
 	uv sync
 
-ingest:  ## make ingest [ROASTER=slug] [SAMPLE=100]
-	uv run coffeedata ingest $(if $(ROASTER),--only $(ROASTER)) $(if $(SAMPLE),--sample $(SAMPLE))
+init:  ## create the lake (and publish its schema files to a remote lake)
+	uv run coffeedata init
 
-collect:  ## merge finished Claude enrichment batches (needs ANTHROPIC_API_KEY)
-	uv run coffeedata collect-batches
+weekly:  ## the full weekly run: discover (1st week), probe, ingest, enrich, build, publish, site
+	uv run coffeedata weekly $(if $(SAMPLE),--sample $(SAMPLE))
 
-build:
-	mkdir -p build
-	$(DBT) build $(DBT_ARGS)
+ingest:  ## make ingest [SAMPLE=50]
+	uv run coffeedata ingest $(if $(SAMPLE),--sample $(SAMPLE))
+
+probe:
+	uv run coffeedata probe
+
+discover:
+	uv run coffeedata discover overture
+	uv run coffeedata discover osm
+
+enrich:  ## Claude enrichment (needs ANTHROPIC_API_KEY)
+	uv run coffeedata enrich
+
+build:  ## dbt build from the lake + export marts
+	uv run coffeedata build
 
 site: build
 	uv run coffeedata site
 
-all: collect ingest site
-
-probe:  ## re-detect storefront platforms for roasters not probed in 7 days
-	uv run coffeedata probe --stale-days 7
-
-discover:  ## pull new roasters from Overture Maps and OpenStreetMap
-	uv run coffeedata discover overture
-	uv run coffeedata discover osm
+publish:
+	uv run coffeedata publish
 
 mcp:
 	uv run coffeedata mcp
@@ -37,7 +40,7 @@ mcp:
 lint:
 	uv run ruff check src tests
 
-test: lint  ## offline: unit tests + dbt build on recorded fixtures
+test: lint  ## offline: unit tests + dbt builds over synthetic lakes
 	uv run pytest -q
 
 clean:

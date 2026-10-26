@@ -1,48 +1,84 @@
-"""Build the dbt project offline from the recorded fixtures (the same data path the daily job uses)."""
+"""Build the dbt project over a synthetic lake and check the derived history (the same SQL the weekly run uses)."""
 
 import json
 import os
 import shutil
 import subprocess
-from datetime import UTC, datetime
+from datetime import date
 from pathlib import Path
 
 import duckdb
 import pytest
 
-from coffeedata import extract, store
-from coffeedata.classify import is_coffee
+from coffeedata import registry
 
-from .conftest import FIX
+from .lakehelp import probe, product, run
 
 ROOT = Path(__file__).parent.parent
+FIX = Path(__file__).parent / "fixtures"
+pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 
 
-@pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
-def test_dbt_build_on_fixtures(tmp_path, fixture_items):
-    data = tmp_path / "data"
-    for slug, items in fixture_items.items():
-        coffees = [i for i in items if is_coffee(i)]
-        store.save(slug, coffees, data, datetime(2026, 10, 20, tzinfo=UTC))
-        extract.save_cache(slug, {i.product_id: extract.rules(i).model_dump() for i in coffees}, data / "enriched")
-    first = next(i for i in fixture_items["onyxcoffeelab"] if is_coffee(i))
-    shots = [
-        {"shot_id": "a", "brewed_at": "2026-10-25T08:00:00Z", "coffee_id": first.coffee_id, "grinder_setting": 15,
-         "dose_g": 18, "yield_g": 36, "time_s": 28, "rating": 4, "taste": "balanced"},
-        {"shot_id": "b", "brewed_at": "2026-10-26T08:00:00Z", "coffee_freetext": "mystery bag", "grinder_setting": 12,
-         "dose_g": 18, "yield_g": 40, "time_s": 24, "rating": 3, "roast_date": "2026-10-10"},
-    ]
-    (data / "shots.jsonl").write_text("".join(json.dumps(s) + "\n" for s in shots))
+def build(lake, tmp_path):
     db = tmp_path / "coffee.duckdb"
-    env = os.environ | {"COFFEEDATA_DB": str(db)}
-    vars_ = json.dumps({"data_dir": str(data), "config_dir": str(FIX)})
-    r = subprocess.run(["dbt", "build", "--project-dir", "dbt", "--profiles-dir", "dbt", "--vars", vars_,
+    if db.exists():
+        db.unlink()
+    r = subprocess.run(["dbt", "build", "--project-dir", "dbt", "--profiles-dir", "dbt",
+                        "--vars", json.dumps({"lake_roots": [str(lake.root)], "config_dir": str(FIX)}),
                         "--target-path", str(tmp_path / "target"), "--log-path", str(tmp_path / "logs")],
-                       cwd=ROOT, env=env, capture_output=True, text=True)
-    assert r.returncode == 0, r.stdout[-3000:]
-    con = duckdb.connect(str(db), read_only=True)
-    assert con.execute("select count(*) from dim_coffee").fetchone()[0] > 20
-    assert con.execute("select count(*) from fct_shot").fetchone()[0] == 2
-    assert con.execute("select brew_ratio from fct_shot where shot_id = 'a'").fetchone()[0] == 2.0
-    assert con.execute("select count(*) from mart_dial_in where grain = 'coffee'").fetchone()[0] == 2
-    assert con.execute("select count(*) from fct_price_event where event = 'new'").fetchone()[0] > 0
+                       cwd=ROOT, env=os.environ | {"COFFEEDATA_DB": str(db)}, capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout[-4000:]
+    return duckdb.connect(str(db), read_only=True)
+
+
+def test_history_is_derived_from_successful_runs(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A", 20.0), product("B", 18.0), product("M", coffee=False, title="Mug")])
+    run(lake, "2026-10-26", rid, None)  # failed fetch: must not look like a delisting
+    run(lake, "2026-11-02", rid, [product("A", 22.0), product("C", 25.0)])
+    con = build(lake, tmp_path)
+
+    events = sorted(con.execute("select run_date, coffee_id, event, price_usd, previous_price_usd "
+                                "from fct_price_event").fetchall())
+    d1, d3 = date(2026, 10, 19), date(2026, 11, 2)
+    assert events == [
+        (d1, f"{rid}:A", "new", 20.0, None), (d1, f"{rid}:B", "new", 18.0, None),
+        (d3, f"{rid}:A", "price", 22.0, 20.0), (d3, f"{rid}:B", "removed", None, 18.0),
+        (d3, f"{rid}:C", "new", 25.0, None),
+    ]
+    coffees = {r[0]: r[1:] for r in con.execute(
+        "select product_id, is_listed, in_stock, first_seen, last_seen from dim_coffee").fetchall()}
+    assert coffees["B"] == (False, False, d1, d1)  # delisted but kept: history still resolves (finding 6)
+    assert coffees["A"][:2] == (True, True) and "M" not in coffees
+    assert con.execute("select status from dim_roaster where roaster_id = ?", [rid]).fetchone()[0] == "active"
+    assert con.execute("select count(*) from mart_new_arrivals").fetchone()[0] == 1  # C
+
+    # Re-running a week (another successful batch the same day) changes nothing downstream.
+    run(lake, "2026-11-02", rid, [product("A", 22.0), product("C", 25.0)], hour=18)
+    con2 = build(lake, tmp_path)
+    assert sorted(con2.execute("select run_date, coffee_id, event, price_usd, previous_price_usd "
+                               "from fct_price_event").fetchall()) == events
+
+
+def test_relisting(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A"), product("B")])
+    run(lake, "2026-10-26", rid, [product("A")])
+    run(lake, "2026-11-02", rid, [product("A"), product("B")])
+    con = build(lake, tmp_path)
+    b = con.execute("select run_date, event from fct_price_event where coffee_id like '%:B' order by 1").fetchall()
+    assert b == [(date(2026, 10, 19), "new"), (date(2026, 10, 26), "removed"), (date(2026, 11, 2), "relisted")]
+
+
+def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
+    a, b, c = "onyxcoffeelab.com", "intelligentsia.com", "vividcoffee.com"
+    run(lake, "2026-10-19", a, [product("1")])
+    run(lake, "2026-10-19", b, [product("1", coffee=False)])
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, c, None)
+    probe(lake, "2026-11-03", a, status="unreachable")
+    con = build(lake, tmp_path)
+    dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
+    py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert dbt_status == py_status
+    assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")

@@ -1,8 +1,10 @@
 version: 2
 
 models:
+  - name: stg_runs
+    description: One row per successful (roaster, run_date); re-runs of a week collapse here.
   - name: dim_coffee
-    description: One row per coffee a roaster lists (current snapshot), with extracted attributes and pricing.
+    description: Every coffee ever seen, with its latest listing; delisted coffees stay with is_listed = false.
     columns:
       - name: coffee_id
         data_tests: [unique, not_null]
@@ -14,10 +16,11 @@ models:
           - accepted_values: {arguments: {values: [light, medium, dark]}}
   - name: dim_roaster
     columns:
-      - name: roaster_slug
+      - name: roaster_id
         data_tests: [unique, not_null]
-      - name: domain
-        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
   - name: fct_shot
     columns:
       - name: shot_id
@@ -32,9 +35,11 @@ models:
           - accepted_values: {arguments: {values: [1, 2, 3, 4, 5], quote: false}}
   - name: fct_price_event
     columns:
+      - name: coffee_id
+        data_tests: [not_null]
       - name: event
         data_tests:
-          - accepted_values: {arguments: {values: [new, price, availability, removed]}}
+          - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
 
 seeds:
   - name: flavor_lexicon
