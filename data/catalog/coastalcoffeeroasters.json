@@ -1,0 +1,5070 @@
+[
+ {
+  "body_hash": "657b8b101674e67e",
+  "first_seen": "2026-10-26",
+  "handle": "beach-breeze",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/5046742c-55fe-46b7-88f4-3d4ee1b2f864/beach+breeze+commerce+bag.png",
+  "platform": "squarespace",
+  "product_id": "664a911cf70aea387c29b542",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Central American",
+   "Coopetarrazú",
+   "coffee",
+   "costa rica",
+   "delicious",
+   "light roast",
+   "natural",
+   "natural process",
+   "pineapple",
+   "specialty coffee",
+   "strawberry jam",
+   "sweet"
+  ],
+  "title": "Beach Breeze (Tirra Natural)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/beach-breeze",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.95,
+    "title": "French press",
+    "variant_id": "6fd5bcec-8ee5-481a-92cf-4f923a3fa0b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.95,
+    "title": "espresso",
+    "variant_id": "77588678-2c9a-48f9-91bd-b4d374d2e0f9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.95,
+    "title": "whole bean",
+    "variant_id": "ccaba073-256f-4b35-8862-e8daac5cf82d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.95,
+    "title": "paper filter",
+    "variant_id": "d9b463fa-00e3-4a49-a3b4-4c381cc7b39e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60d0ea409ffbb1ef",
+  "first_seen": "2026-10-26",
+  "handle": "brasil",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9125c8db261fecc2805d/1792529300515/",
+  "platform": "squarespace",
+  "product_id": "664a9125c8db261fecc2805d",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "caramel",
+   "chocolate",
+   "city",
+   "light roast",
+   "sweet"
+  ],
+  "title": "Primavera Brazil (City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/brasil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "2f69363b-bdf5-4548-9e82-1cfe2a94f2ad"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "3618020b-2823-44c6-933e-e240df03875d"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "3d05aa64-06d9-403b-932d-44f4f66cf88a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "487dc912-ed77-4a9d-923e-8927c20de285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "4ae52801-ac8f-41e1-8770-42d60d33671b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "537a2ade-5769-438a-9d1b-ab485346b803"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "5519b151-8a11-4af3-b4ad-ebd89b74d45f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.95,
+    "title": "2 lbs espresso",
+    "variant_id": "6bd70539-c00b-466a-9470-2d6a7eec39c2"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "6dee6768-83ea-400f-ae97-ee3fbaace589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.95,
+    "title": "2 lbs french press",
+    "variant_id": "72ea4efd-1217-4028-859b-6249b56ff0a9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "751d7a78-ea53-4520-ae38-f6e33cb05f35"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "79b8169c-44c6-4027-8537-2c5c8664ebb5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs french press",
+    "variant_id": "8e46723b-aeb0-4ae8-abad-8adefb276af0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs espresso",
+    "variant_id": "a3f7d2d3-39b6-49cf-99ee-5ed80354dbcb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "ab2f13a5-e815-42b5-9f88-2871ba4441a1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs french press",
+    "variant_id": "abf0acf7-166f-45a9-b9ea-5818a7c4839a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "c727bd5a-a55c-440a-9eac-1d0792f1285c"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "c87c156e-6273-4d6d-8407-a6f4abd7eac0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "cd43289b-7db7-4577-9f0f-5b3246c1ca9e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs espresso",
+    "variant_id": "f10e637f-4a41-4083-82d2-b8ce3ce6be05"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b441c3d5b926b75d",
+  "first_seen": "2026-10-26",
+  "handle": "brasilian-decaf-city-roast",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9129c0031f160637c1db/1792529301124/",
+  "platform": "squarespace",
+  "product_id": "664a9129c0031f160637c1db",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "brasil",
+   "brasilian",
+   "brazil",
+   "brazilian"
+  ],
+  "title": "Brasilian Decaf (City+ Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/brasilian-decaf-city-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "09e7eb73-cb93-4db4-bd6b-80f9f72649b2"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "2dfb3ccb-4094-4c8e-ac46-d268ee5dce8d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "35e37921-6f1c-4883-85fb-e0e91362fc80"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs french press",
+    "variant_id": "3619725d-2787-4da1-82a9-b23d52722d9f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "3e23383b-3d5f-4730-8f2c-8016ca8df77a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "5b9bc3d6-cbb9-43d9-9bd4-7c6544be2db7"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "675d5cf0-1079-4642-b962-ea7e8cc99336"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "75482015-38a8-47b6-b443-0cc65335921b"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "7cfdbfc7-7a5e-495b-8fac-89dd2a1b0c0e"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "80841372-3929-4219-b426-5fb1ce009f29"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "815f6b68-97fc-4cbf-ba43-262dbd608cee"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "83986c88-978b-4fd5-8e4b-71c2fcd0d80b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "aa79bbd2-b36d-4534-9e41-76e6e6760322"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "ac2dfa7e-e870-4d55-8374-bd6e6024715f"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "cf236366-993a-4e11-806b-2b30cc7775d4"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs espresso",
+    "variant_id": "ddb0c6c4-25f1-4af0-a585-5de54a58d975"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs french press",
+    "variant_id": "def0ef76-be05-496e-9250-63ffb23e268f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "ee28c5be-357f-45f4-b573-ea132f1a10cc"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs espresso",
+    "variant_id": "f131367b-edf2-46a7-8ce6-21fb0f6aa447"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "fc971727-9e1d-493e-86c8-a4618332889e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad7432d7e10f30ca",
+  "first_seen": "2026-10-26",
+  "handle": "carolina-morning",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9131f70aea387c29b552/1792529305233/",
+  "platform": "squarespace",
+  "product_id": "664a9131f70aea387c29b552",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city+"
+  ],
+  "title": "Carolina Morning (Medium Roast) [ORGANIC]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/carolina-morning",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs french press",
+    "variant_id": "07696f6b-eb21-4076-bf31-73173882ab72"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "356167b8-0969-48f9-afab-c7c1c74bfd5f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs espresso",
+    "variant_id": "4bf8cfbb-c72c-46b5-a67d-73479b78b865"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "5066849f-d4e0-4c3b-b4c0-3b1c1397f96a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "5cfc9480-8c72-47ae-976f-aaa908c6b388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "77bd163c-d0f8-4d81-9106-beccb3d1dae0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "8eea5d89-a498-4f3d-bf47-e1fe6567f143"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "98a91c2a-8d7f-43fd-bd80-67f486b3965f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "9c59deb2-8e91-4e81-bc3e-ad4e6bceff9f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs french press",
+    "variant_id": "b60308ff-96f4-4a6f-9ca8-0ae55e72b8f3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "d84a8cc6-0cc0-4039-a52f-e1248ee41694"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "d93c1784-c61d-4c73-abd0-9a7ccfa272d4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "da8b3f24-4724-43db-8f36-c9ab773642e2"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "df3285c0-aef8-4130-984d-a7bb966bc607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "df36279e-39c5-46f1-9735-976762effd72"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs french press",
+    "variant_id": "e516a042-89d6-4efe-b36f-46c96677f692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "ef979b17-8f38-463a-8e91-3bf7a03a95ef"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs espresso",
+    "variant_id": "f1ba8fb0-7ae2-433d-9b07-cced217fdfa1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "f58a4949-f776-43be-9297-12fdfec177ed"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs espresso",
+    "variant_id": "f67fb665-eadf-4dc2-940b-20479963660d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e4ceb86e9e323d7",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-mexico",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a913dc8db261fecc28069/1792529308857/",
+  "platform": "squarespace",
+  "product_id": "664a913dc8db261fecc28069",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "chocolate",
+   "delicious",
+   "single origin",
+   "sweet"
+  ],
+  "title": "Chiapas Mexico (city+)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/chiapas-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "04160001-7ab0-4839-b544-82f008552776"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "0b270da6-b946-4b15-a982-74e73b52e758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lbs espresso",
+    "variant_id": "24a190b1-27f5-497e-9aea-0514e130426d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "283e2342-b301-42ca-967f-e38d8dd97b91"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "4ed0acee-7054-46f7-a084-4d92b8dd1ad3"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "4fb940ec-1f30-4446-b845-c607f55a3c14"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "5d16c143-7bca-44bf-8a7b-558b8358fd8b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "603f8715-478c-4959-8ad1-5b932bcd0aef"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs espresso",
+    "variant_id": "67ef8548-687a-4db5-96dd-8b1592c1f25d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "6ee97c51-6d89-4767-863e-98e86fddf3f4"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "74d5b93c-9f32-4496-9db5-6e9635c347e3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "7601e185-e023-4b72-96fa-05129b3d1169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "7e15e97d-9496-437b-84a9-f075c0955ed1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "9b3758f2-5655-4b84-99c1-7347235e250e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs french press",
+    "variant_id": "9c354ce5-c9c7-473f-a73f-8a3cfd53a646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "a210e4eb-1085-4cf8-a0b2-fcf143711cdb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "b5912515-61c4-4a8c-9157-359fbe7fa22e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "d6be9dc8-137e-41c0-b11d-a3920f182531"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "dea77ba6-7708-4db2-baf1-028aca52a2f4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lbs french press",
+    "variant_id": "f6e22b8e-4f1a-48f8-8f4a-259e186d41d6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0048bb7b61adcb75",
+  "first_seen": "2026-10-26",
+  "handle": "coastal-blend",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9148f70aea387c29b563/1792529311620/",
+  "platform": "squarespace",
+  "product_id": "664a9148f70aea387c29b563",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city+"
+  ],
+  "title": "Coastal Blend (Light to Medium Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/coastal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "033cc6cb-d3d0-4e4c-ac70-6ffa45b8deaa"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "0a42c2cc-e949-4177-b213-22fa0b7028bd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs espresso",
+    "variant_id": "32ca6e32-6bdd-44a4-bfaf-c4d9fb1789b4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "3d39cf6e-bc7a-4092-8c60-fd1e7ce749aa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "44f818f2-1819-4866-af64-12deaa829a44"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "4e6bc00a-c13a-4dc1-b271-402ed52a84b8"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "4f1e60b8-9c66-4819-9a69-342ce6f1efcb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "52b7d9b9-45cd-4273-b7fc-2154b2a82ace"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs french press",
+    "variant_id": "61466aa2-6d4e-4a7a-92e2-70e5e0222a0b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs espresso",
+    "variant_id": "6670b853-5fae-4aff-8d37-9879f9fb6212"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "676b991b-ae1f-4754-9a98-04abf914cc1a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "6c1a867c-0bc5-417f-8c9c-becc067cc4fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs french press",
+    "variant_id": "76e35ee0-e85b-480d-b727-b491e14db382"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "808058db-985c-4302-a1d4-d0e71c18bd25"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "86f36a88-78e4-43a7-ae23-bbf2a164b3cb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "9ed4a14a-e942-40b5-8f2d-1fd920f27b5f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "a490bc44-c504-499d-bd29-ac0cb8c074ba"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "ac14555d-8feb-4234-9b9d-cefcbda03dee"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "e4f6a4c8-aa48-4b05-83d0-15e809df5280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "ec92dd90-497d-4d54-a509-053cf2560575"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6c9921755d0e9b7",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-city-rainforest-alliance",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9151b0d64367e497737a/1792529318503/",
+  "platform": "squarespace",
+  "product_id": "664a9151b0d64367e497737a",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "cocoa",
+   "fresh crop",
+   "fruity",
+   "new",
+   "smooth"
+  ],
+  "title": "Colombian (City+) [Rainforest Alliance]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/colombian-city-rainforest-alliance",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs french press",
+    "variant_id": "1354dfd0-5650-4307-aece-ffed8cdd043f"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "1c5c9aba-d2a0-4d1e-9ab1-9346fcf2f0ae"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "20c2be81-d70b-4a8c-b69d-8d9c91da27f6"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "2957390f-7b11-4ab8-9006-58db2e9abf70"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "2b96e32d-ce12-485a-8b19-9ce83535a72f"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "31042718-a309-4528-b81a-35979beb134d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs espresso",
+    "variant_id": "48894d2d-c53e-4849-a657-cd5993a7ac8c"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "4d1414de-7272-4a42-917f-cce7ea785fe1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "4e26969d-26b1-4149-b1e0-86501b3d781a"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "7222d952-eed0-43b9-921b-4df49cd8c10d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "728bd495-ef18-4635-a5dc-4d617f06c385"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "8bad42c2-8c92-4cf7-9b43-13ae540d8193"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs french press",
+    "variant_id": "92e5763c-7471-4858-ab69-239a4283d771"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "9b35bad3-5c56-42f7-b5a3-c4ce5aca9578"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "9d0b7d73-f1f2-4931-adda-4d1933450c67"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "a99d0ea4-1eb9-4b61-93e5-89d0ab9a0133"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "c75c0e2b-7305-4537-9d54-d99006a14247"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "df1dc0a6-022f-48ad-bcf6-5b63624edb26"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs espresso",
+    "variant_id": "ed0b45f7-d604-4c6b-b9ee-cb369de3f8fa"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "f03a62fd-7b3f-4d5a-ad0a-7400ad90d4fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a78b46316030100",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-vienna-rainforest-alliance",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9154c8db261fecc28078/1792529319116/",
+  "platform": "squarespace",
+  "product_id": "664a9154c8db261fecc28078",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "dark roast",
+   "robust",
+   "smooth",
+   "tasty",
+   "vienna"
+  ],
+  "title": "Colombian (Vienna) [Rainforest Alliance]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/colombian-vienna-rainforest-alliance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "051602a5-1ebb-40d4-81b7-7c7ed2089aa1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "05bb30db-8277-4333-8c56-5f7142eabc7b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs auto drip",
+    "variant_id": "0888da1f-4330-4697-b21b-6b52f97d12ff"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "1a5400d8-bd88-41f7-a69b-92587c039089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs auto drip",
+    "variant_id": "2c592c88-a2af-4787-a179-f64c64915427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "41e527e2-584e-4d7c-bfd5-7db1c8470785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs espresso",
+    "variant_id": "469df805-8fc6-4382-8bbc-cabdb5f34391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs french press",
+    "variant_id": "4919fee7-755f-4aef-8fa3-8f5391b00772"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "597362fa-456a-447e-a19c-619c757eaaa9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs auto drip",
+    "variant_id": "708bd8d4-fe8e-42b2-93fb-2b10be1860b5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "7d5c7b1a-33c1-417c-9956-33b772ac48a2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs french press",
+    "variant_id": "94346670-aeba-4d5e-82b2-72ca7c184624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs espresso",
+    "variant_id": "a2c3c902-81da-4634-90b9-881b41edd8e1"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs auto drip",
+    "variant_id": "a7a876e5-aa29-4b0f-a500-4f51ce12c88b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "bf2cbd83-71d2-4d72-8498-e99d874bd02c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "c3b463c3-6746-47a6-a1f0-d7aea4c9f953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "d536dca7-5afa-47bf-a968-86d022020a70"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "dfcf586a-2510-443f-8ddb-8dad7718f2a2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs auto drip",
+    "variant_id": "f1a4e8a7-863b-41fe-8e7a-ab35e5cf613c"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "fb1c5b3f-03bf-4584-94b6-83c689c328e0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a70a3cc390f8f364",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-papua-new-guinea-city",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a915ef70aea387c29b56f/1792529320261/",
+  "platform": "squarespace",
+  "product_id": "664a915ef70aea387c29b56f",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city+"
+  ],
+  "title": "Papua New Guinea (City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/copy-of-papua-new-guinea-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "1853662e-58f5-4bbe-afe2-77fc4aa64385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "20c58a32-c108-40d1-b912-c0ed966eb258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "28b6bc98-18e5-429a-b153-15896f730016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "6d965021-3d1f-47b7-b5e1-db9eb055fbbe"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "75732402-ddf7-4cff-81a9-1434250030d5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "760b2b83-931f-4f3c-93e5-18c518a1104f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs french press",
+    "variant_id": "8c880b5a-d767-479f-a993-e4712c34d8e2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "98d49e79-eef6-48cb-a08d-208d230f52c7"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "a03adf9c-7ba1-4422-90bb-139a34253e8a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "a8dcf690-4cef-467e-8ef1-b5a8ebf747c5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "d0888298-2e8b-4892-bc64-1bccb5fab2fc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs espresso",
+    "variant_id": "dd34b75d-07e2-4f97-9bcd-ab21d0f583fd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "dfe12206-815e-4761-87b8-c3e1383d3f2c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "e8a6c425-5dbe-4d31-887e-54123477f001"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "e9be80f1-69ec-4974-89f2-911d350cd23b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "ebb50945-b50e-46a1-a918-c2ff661f46cf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "f2b746f1-51b2-4bcd-b23f-4cb336400e4f"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "f2c5e06a-cb9c-405b-8de1-8493a362f903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "f5ffd9a2-ea71-47d1-9e8d-59ba044fb5da"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "fde4a02e-7c6b-4032-92df-cbef6a160896"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "458ee5cbd5c7defa",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-papua-new-guinea-city-kb7sy",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9161c0031f160637c202/1792529320838/",
+  "platform": "squarespace",
+  "product_id": "664a9161c0031f160637c202",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "vienna"
+  ],
+  "title": "Papua New Guinea (Vienna)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/copy-of-papua-new-guinea-city-kb7sy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "19ad3a9a-700a-4871-a755-d2f7e01d41fd"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "1fe7b73c-df5c-4179-926b-8fe94f20af7e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "2ee33f3c-a519-439c-9377-3c80e6bfbf13"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs espresso",
+    "variant_id": "37252847-f6d7-4b25-a94b-c650c99b7709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "390bff14-0fbc-4ee0-8c27-a24479d0b912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "3ee1e3e9-ae13-4821-ae0a-855f92019df5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "4d32ef6f-f5ef-447f-afc6-211aac36f1c6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "5cfe7372-eadc-4c78-a26a-7c97691ad90c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "5fd8c282-440a-4b52-b778-5385cacce068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "625971b6-3a91-4e2a-bd96-bed56626653b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "69e51ab3-b74e-42b3-9851-c9720fa7e2cd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "7ff3be76-137b-4557-aefa-87d89024ac7d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "8a8d7a80-2893-437e-9d6e-7e4bb7c9d680"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "9e496938-ef3f-4540-bcab-5570f4c609e7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "a7e100f3-43a8-4de2-b265-0d7af056c663"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "b44992b3-0793-45da-a609-9fc162f01041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "baf67ef7-a90d-45bf-a993-59f4bb6473ab"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs french press",
+    "variant_id": "d9329c83-3fab-4178-900d-e320f0a02fa0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "f8f8b9c3-da70-4331-9d96-ff6db746b764"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "fb5aeaec-9304-400d-b830-a8d62129a311"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7aebfd7ea9a1bf2d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9165c0031f160637c208/1792529321444/",
+  "platform": "squarespace",
+  "product_id": "664a9165c0031f160637c208",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city",
+   "light roast",
+   "microlot"
+  ],
+  "title": "Costa Rican (City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "1c3886e2-0a50-4593-ab9a-6d0876bd6989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "2402f537-4fde-42a0-a2c8-2563298292b2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs espresso",
+    "variant_id": "264f8fca-3e82-4636-95ef-5ed9cea89100"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "35b30719-2882-4010-8f06-d79f3576d880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "3a15e7ab-efe7-4fb3-8a0f-56c40a153bf1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs french press",
+    "variant_id": "442f7af1-f16b-44be-ba54-5a86ae6f4d0a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "4b3ba464-7762-441e-aefd-83211ec48a98"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "4f065bb8-bdf5-4529-b767-4652d051f4ea"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "605f6640-9068-4c75-9c79-2b12e7f4a857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "83f7dc06-396a-4fed-884d-01d8d6548e35"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "8bb27316-ffaa-4e9b-a7a6-873d2935572b"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "8cc86dd7-8a3c-438b-9a9c-be7fe1b1758e"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "951b7807-56cf-43af-be52-e98a53cfe6ad"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "a0a74563-aeda-4dd3-a5e8-40e0271cc389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "a3acf9c1-503b-4feb-9761-090d60879379"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "aa45df62-47a9-49be-b489-65c16383aadd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "b0c762c7-5149-4e96-83fe-6276e9c89d54"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "c04e2bec-dfae-4717-b58e-5275fcd86f3c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "cb6d21f2-7010-4d58-b996-0bb470b49e47"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "cd124fd7-db96-4e0c-8af1-2a2d9b49aa40"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "48c4cc88d62d9a00",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a917ac8db261fecc2809a/1792529326148/",
+  "platform": "squarespace",
+  "product_id": "664a917ac8db261fecc2809a",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Full City",
+   "blend",
+   "city",
+   "espresso",
+   "espresso blend",
+   "medium roast",
+   "post-roast blend",
+   "special blend",
+   "specialty coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.95,
+    "title": "5 lbs espresso",
+    "variant_id": "14e8ab6d-d23c-4b65-9d81-2169f1d29800"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "2451f3a2-e937-4c4f-8058-6c15778f3c4f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "26769d4e-5b41-4227-a5b9-cb50dafb0a2a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "32c4916b-4682-4eec-a05c-8fcb498ec502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "39945858-3d45-42cd-8f62-499794e78ddb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "4b583021-22fc-4ff6-973f-481b155ecf60"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "4cdd328d-1927-4ffb-83ee-6ce4de47b578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "6a350fae-44e7-4139-95d3-fbd9a7308124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "6ebf69fe-bb85-4c65-845e-9988885fb40d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "7a3ae402-df32-4306-bd7d-5735882e3fd4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "85eed2f4-f76e-4914-b4bc-12b95ec40cd6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "a218e320-6843-424e-bdb2-2ce9b7d30783"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "a8416c95-9250-4071-b213-83bf84a810fb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "b6753d7a-edd0-4d60-86a7-2887de164aae"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "b6e85041-a1a2-4df2-ba8b-9b4bb51a6328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "b7a4775a-7545-433f-9a36-c0e2866e1324"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "cf6e9d50-66c1-4439-8963-df58ebefd5ae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "d64b049d-abee-4f1f-a522-e37685aef64c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "e95f903c-f204-4d52-becc-e38b16845fdf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.95,
+    "title": "5 lbs french press",
+    "variant_id": "f0f3225f-08cb-4834-955e-5c4f68005cd8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a415edf0b663c6b2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a917fc8db261fecc2809d/1792529326744/",
+  "platform": "squarespace",
+  "product_id": "664a917fc8db261fecc2809d",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city",
+   "natural"
+  ],
+  "title": "Ethiopian (City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "0851714b-be5d-4c12-a6df-f15c14ab7d07"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "18fc3fb5-c55c-4834-93f8-113452e8a814"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs espresso",
+    "variant_id": "1c121193-7ab4-4e20-9ce4-bb541dd59837"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "4b06463e-1023-443f-b2a5-8a6aa7503693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "4c18301f-b276-414c-a157-02e7806c8f28"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs french press",
+    "variant_id": "5bd9708e-40e8-4ee9-9414-eecec2ef2b74"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "6a56ea46-b851-4088-b0b6-9b40d8e02b16"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "6b4baadd-5d71-43a7-8829-cf717ae98a0a"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "6dff5d66-7a3f-43c6-83ee-1c14c865d530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "7de3c399-8bd8-42b5-819c-984de1693605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "914a1ac3-8bba-41c5-9ae2-9b5b942b3705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "ac323fd6-c057-4b26-aef8-c0bc2490d2f7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "b185c0b4-84d6-4429-8a90-b0b761461fa8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "b9177a0d-8633-4ba5-a452-736a4e56fb06"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "ce68244b-a47f-49c4-990a-37b25faf3a5e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "d3d8d8c6-f853-4a76-8a28-13571eb25cc6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "df0598ff-a54b-441f-8781-d20e750a8107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs espresso",
+    "variant_id": "e1fae5b4-fccd-4c42-bea5-3f88c168004c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs french press",
+    "variant_id": "e7a0d1e9-4d79-4905-af52-9c35026d9d6f"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "fb814312-6f75-4e17-b6b3-e6d76c420cd5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f290461ca94effca",
+  "first_seen": "2026-10-26",
+  "handle": "flowertown-medium-roast",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9182b0d64367e4977396/1792529327359/",
+  "platform": "squarespace",
+  "product_id": "664a9182b0d64367e4977396",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "blend",
+   "chocolate",
+   "nutty",
+   "specialty coffee",
+   "sweet"
+  ],
+  "title": "Flowertown (Medium Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/flowertown-medium-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "231ae36a-a620-4bfe-80c1-7e8d106bc6c2"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "2c04ca3c-2d72-4ef9-95de-6db6d585497a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "44771372-0158-43b3-b067-b6526181fa63"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs french press",
+    "variant_id": "67d2507f-23a0-41b2-940c-a0041a89b041"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "78bf9bc2-0ab0-45ca-8d75-e1f6a7c4bed2"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "8f233395-3632-495b-977c-a64bdb1b9f68"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs espresso",
+    "variant_id": "94f6eae9-0f57-4ae2-ba78-9dce37a881d3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "9900fbaf-b737-47d4-b66e-91469d516d88"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "a9aecbe0-14e4-4bf6-9050-5943c9ba3a77"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "abdcac90-ed50-4091-bac3-3f952c7b5539"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "b3bece6e-5115-4137-b91a-d028b69215a4"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "b7f00f0c-6206-4b3b-8d8c-6387e57e59d5"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "c00d0176-3e24-46fc-8d07-1e99195cf746"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs french press",
+    "variant_id": "c90c8ff2-ca1f-48aa-a43f-6fb36725a14d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs espresso",
+    "variant_id": "caef60e9-794c-419f-a949-8c0b6394e0dc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "d14902fc-4396-4104-b188-258bcacfbff4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "d4d93327-79b8-4175-a3ea-0c842cd620c3"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "e15ba03d-8db3-4cf7-976c-c2106f3006de"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "ef6f26fb-38fc-410f-a7f6-adf35cac7a97"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "f4485bc9-db38-4660-92a0-e1cfc95291fb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b94d673c8eb882f1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-full-city-na88s",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9197f70aea387c29b59c/1792529332238/",
+  "platform": "squarespace",
+  "product_id": "664a9197f70aea387c29b59c",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "antigua",
+   "chocolate",
+   "fresh",
+   "medina"
+  ],
+  "title": "Guatemala (Full City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/guatemala-antigua-full-city-na88s",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "1227de42-8bf0-419d-9724-958fca9e8303"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "15d2cc25-a9d3-4c17-b6f4-280f4879dc0f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs french press",
+    "variant_id": "18415992-e9e6-4923-a5bd-8b2c664900c8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "1e892a4f-6d26-4f17-a87a-92714d6afca4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "33bd01db-9b4d-4626-a745-21dbede2a2cf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "41c5b7f3-ff4e-4e41-96ab-6d8d8ad1d177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "4f45885d-8428-457a-a49d-6885bcf7e6e2"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "64f06691-4f26-4e54-952a-6646c589914f"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "6f4c1432-5f0c-4f95-8492-9df8cdd78fed"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "704224d6-f4ba-4190-bc1e-5c6bbe2a1227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs french press",
+    "variant_id": "7cf7e017-5a23-4cfb-b15d-a0876ae0f0fe"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "7d358ee5-e11c-4d97-aa86-7500a9283aae"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs espresso",
+    "variant_id": "8fcb5c61-28c9-4908-862d-ba92e68527ff"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "919c1757-3d02-4d1d-bb5f-ee8942df8a83"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "aa76c8b1-09c3-46e1-9873-47482581f3fb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs espresso",
+    "variant_id": "b7f6f22b-1d66-4af0-a4f0-4fd287f3bd84"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "b8bd7b1e-f2fc-43d5-a44b-aafa57f5588a"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "dac477a8-b150-4d68-9849-139f39377311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "e8e4f635-4573-4756-89d7-d5fd1f9bb3b7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "e9c9568b-c6c0-4ddb-9ccf-b9217b29930e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7862599e11c9cde0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-vienna-kz4hb",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a919eb0d64367e49773a2/1792529333361/",
+  "platform": "squarespace",
+  "product_id": "664a919eb0d64367e49773a2",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "bold",
+   "chocolate",
+   "guatemala",
+   "robust",
+   "vienna"
+  ],
+  "title": "Guatemala (Vienna)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/guatemala-antigua-vienna-kz4hb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "0733b281-67ed-4e79-924a-dee8740f744f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "0c714587-5919-43ad-88d9-dbd959c5049e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "11c1e1e0-71e8-4f16-a793-a6d4fb4c23be"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "4114ea01-732c-4191-a6be-37ffba2f09cf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "411cf8cd-143a-455e-a98b-f5e360cfe0dd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs french press",
+    "variant_id": "4399d9c3-cbc7-4840-b1d2-5f28bcd46432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "59b4e02e-fe73-46ff-9a1c-a365281463e5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "59d75b3e-2f3a-4c5f-85fd-8386df6e68e0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs espresso",
+    "variant_id": "6a994c1a-d019-4b6c-9089-9feef4808333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs french press",
+    "variant_id": "79053e42-93b4-4240-bacd-9ad794ada762"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "79507f7d-8e97-41e0-88af-7ad29309acf9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "828a15eb-a6db-4c33-8673-d24a226c4945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "8aba7d59-ede7-4f52-9fb3-4f51616a26a7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs espresso",
+    "variant_id": "96774b3d-c141-44fc-84e4-98d34bf070f3"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "9a841dc9-c135-432b-8cd5-8908915bf975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "a2d97f53-4b60-4504-ad06-b6ee9abccfba"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "d8143d0f-3c1a-4847-aad9-f1ff3616d01c"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "e1fd5795-37d9-40e9-88a5-23d56a842222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "e283e651-e4b3-41d9-a589-cf5ad14b74fa"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "fc719e9f-3226-47f0-a647-2666ccc5a2b2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "421cb0011b8b59b0",
+  "first_seen": "2026-10-26",
+  "handle": "huehuetenango",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91afb0d64367e49773aa/1792529338169/",
+  "platform": "squarespace",
+  "product_id": "664a91afb0d64367e49773aa",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Central American",
+   "citrus",
+   "delicious",
+   "guatemala",
+   "orange",
+   "single origin",
+   "small farm",
+   "sweet"
+  ],
+  "title": "Huehuetenango (City-)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "0d28d1f3-5e5f-4ed9-a2b0-2d642d1eb2b6"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "0f0cca84-2c7c-4fe7-abba-477e8f14492c"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "15447483-4cbb-4e9a-aa22-14860d18ed05"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs espresso",
+    "variant_id": "1e9588a3-3e55-4c6c-8bf5-78899bb1a015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "24a495cb-8d89-40a0-bb4b-1356bd9d3075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "4f6c8151-25a6-45a1-9a22-49e4f99da11c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "5b277736-1ff6-4057-a197-469a034113b3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs french press",
+    "variant_id": "5f8de8d5-c4f3-4e42-9401-4210c62bab97"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "78555351-6c46-4762-adff-e4f1f78a16f0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "7ef0385f-3773-486b-8af9-18478f1dae47"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "8b7a4c9f-1ee3-4408-b7c5-183382a3c837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "8d2eb23b-96f3-4032-b9cf-e990ca005fc1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "9c815fe1-2740-431f-8303-620c0f146547"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "b4073a66-dc2c-4ac1-9a12-6010e1b87f0d"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "d3763480-3c78-4f82-bf06-3139213c81d9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs espresso",
+    "variant_id": "d6342ebb-4e4a-4416-8eeb-b2492f561bf5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lbs french press",
+    "variant_id": "f13ec722-f97f-45a5-806e-feb8dc48faff"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "f62b1305-f7e4-4d4e-926d-f91c99b59fdd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "fb853c3e-7abc-4b3e-a949-b7f42cdb2ffd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "fbf337ef-78dd-4625-94d8-61f20530f707"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9712d95db4b01924",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-city",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/8dad4ffe-d907-4b7c-85ac-3247f74ffddc/Kenya+Bag.jpg",
+  "platform": "squarespace",
+  "product_id": "664a91b9c0031f160637c242",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city+"
+  ],
+  "title": "Kenyan (City+)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/kenyan-city",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "0c935613-053e-4d3e-9eb5-efd619e04ced"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "118a0641-6138-4be3-aafe-bd696613a23f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "120ec48a-34f8-4720-9073-3f0510038a74"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "1dff3ae5-1bac-4603-8c38-1dda18775c2a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "2bcd5a30-a82c-43d4-80af-940308a72e66"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "38e30c6b-7414-4259-93c0-5946e6d30074"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "3d7ff114-8d39-48e9-8173-18870567c8f8"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "3dd8f9a6-176c-435d-abc9-6a7fdc27dcce"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "4715818d-5894-4577-a374-c641208cd020"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "471aa70f-0bbb-4867-861e-6cd1d99ab690"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "6d1c97cf-a3a5-495f-98e9-d2588e7f285e"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "6e38e626-1e14-4fc5-8fe4-ae077f9b5068"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs french press",
+    "variant_id": "7817ac32-c648-4cc6-93ce-e88fe8d44d68"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "825bdbc1-5962-491c-84ee-0cfd66c529a5"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs french press",
+    "variant_id": "961b85c0-41a2-4787-877b-344bdc965836"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "966a07df-e3ad-49af-a414-4938147a365c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.95,
+    "title": "5 lbs espresso",
+    "variant_id": "b9b833f3-1b3b-4bd7-884b-931bd07d1fac"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "baf680cb-1370-4a58-bb48-53f03e534cc8"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs espresso",
+    "variant_id": "c4442246-30ea-4096-96ba-efc71bdedacf"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "e044d6c5-aeb6-45df-b165-9dad3da7a33d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "383659a73857a3a7",
+  "first_seen": "2026-10-26",
+  "handle": "nic-nic",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91cdb0d64367e49773c5/1792529348574/",
+  "platform": "squarespace",
+  "product_id": "664a91cdb0d64367e49773c5",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "french",
+   "vienna"
+  ],
+  "title": "Nic & Nic (Dark Roast) [ORGANIC]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/nic-nic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "0110de4b-020a-4eb4-a2bb-de2e37f2290d"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "0251482e-43b5-4293-a4dd-9e8cd9a40035"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "06a00aaf-6f5f-4144-9236-461ef2811e60"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "59f98228-6ece-48ef-a48b-62b676262102"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "65f9136a-3928-4e7c-8783-585709c58ca1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "6c83ffa1-bb39-446a-9c46-cc1a96ff54d9"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "6cf1ba19-3e2f-4add-923f-ed2413214f9c"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "8373995c-67ca-45c0-b56d-37da3474020a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "8920771f-f87f-43f5-a200-b2c2b9b3c989"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs french press",
+    "variant_id": "944ff5e1-5b12-49fb-a4eb-8df39ba5560a"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs espresso",
+    "variant_id": "9895b3d8-da5d-43ca-8d32-47532e846d24"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "9d553195-9970-4836-b179-1591afa64da8"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "b866685d-2730-4c76-b5d4-d8d602781972"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "c3d1ff47-9cf8-4cfd-9489-225df22d1728"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "d6d65991-6b78-42c5-8b27-bcf45c5c5ae8"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "e0031548-7c8b-4177-962a-b0092b82c674"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "e6e5ecac-7b18-4a9f-8279-b45d49210658"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "eaad3736-877d-490e-9b6b-a0fb12c0b04c"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "ebabff27-76c8-42ea-82a6-112cd40de65e"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "fcdbdc78-6aa2-41ad-813e-12cacc41b5b6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88298e9b362711ef",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91d1b0d64367e49773c6/1792529349139/",
+  "platform": "squarespace",
+  "product_id": "664a91d1b0d64367e49773c6",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "clean",
+   "fresh",
+   "high grown",
+   "nutty",
+   "shb",
+   "sweet"
+  ],
+  "title": "Nicaragua (City+) [ORGANIC]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/nicaraguan",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs french press",
+    "variant_id": "025c9bcf-1026-410c-afa3-4f74c9a5738c"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "0871db6b-5a4e-4f11-886d-3f86ff9332df"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "09784f53-be38-49d1-ab39-0ffa3b29cf25"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "0f773b35-a682-45a8-9254-950b18dcb89d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "105da249-3821-4241-81a6-f3c32c924366"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "168d72c7-be50-4328-9822-3eaa4c8b5484"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "2eb0e790-4fb0-45e8-9011-61edae06dff9"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "31b579c8-4f0d-4078-a34f-277decaefa89"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "655e3334-e4d3-467a-a71c-3992ed4f74e4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "6a42b0c4-e3ba-46bf-81f2-a5edc04c57c7"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs espresso",
+    "variant_id": "8bea9f9c-f21c-4f4d-a3b8-176560fc1347"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "9761674c-f89f-4992-813c-71471124ad16"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "a2b5ea62-094b-4aad-83d6-abab301a247b"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "c5a9493b-8ada-45f7-b8ef-a613f1116d03"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "c7362c91-a3ff-4767-bf98-6f0561ddb9d7"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "cfd851b8-4d13-418e-a668-cf10c6947f3b"
+   },
+   {
+    "available": false,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "d7889730-a8dd-4aa0-829e-ed5b5ce93b2f"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "dcaab4b6-9643-45ea-9780-6a7c074eb17c"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "e4937235-bd10-4b87-9b21-9753d4d9db23"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "f66b165f-a1fa-41eb-9b5b-7b23c1e18d63"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "38f8c129404bc3f9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swp-decaf-city-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/e6dcf9dd-6c9a-4334-8e0c-3bc9caff40df/SWP+Colombia+decaf+bag.png",
+  "platform": "squarespace",
+  "product_id": "664a91d7b0d64367e49773c9",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Swiss water process",
+   "Swiss water process decaf",
+   "colombia",
+   "decaf"
+  ],
+  "title": "Swiss Water Processed Colombia Decaf (City+ Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/colombia-swp-decaf-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs french press",
+    "variant_id": "000afc2d-aed4-43d2-bd45-6455e3455be4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "1fd5bd63-e858-40c9-ad93-9c872204132f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "2b8b9e6c-0db9-47e4-b7b3-bba108d3ab4f"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "3d28f6e0-7f7f-4bef-9af1-370634e71eba"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "435c788e-04c7-4cdc-84aa-faa7e4ea9d4a"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "4db225e5-93af-42b0-9ddf-eb876e88f4a8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "5937aa37-e180-4bbb-b78b-f874b6d5debc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "5e7d7ee7-63e1-429f-8a57-d47d9fc13422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "6513707d-6284-423f-9916-f95ea8098ef0"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "6919f0aa-27df-4973-a3b0-7e8fbadcee30"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "84f7e33a-eb09-4ac8-a34a-1b9c98a9854d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "8888c66e-0efc-485c-a559-f99d162abddb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "8fee2729-c1fe-4400-85dc-b34cb29254ed"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "9c2b170d-2ba3-467e-8529-d2a9cbc92ba2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs espresso",
+    "variant_id": "a9a74275-a84f-4dbf-a7d9-ec9e36490029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "b009303f-e53f-42d9-98ae-9c8776c39a90"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lbs french press",
+    "variant_id": "c30cdcfe-37f4-4986-810e-d5b370b9595a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.95,
+    "title": "2 lbs espresso",
+    "variant_id": "da1eeec6-9926-408e-95c8-2e21a8782751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "fe25856f-1ef6-4f7f-8849-564cb704526f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "fe685b7f-894d-458c-ba0b-55624175f0ec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "07fbbc489b4bac29",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-full-city",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91dbb0d64367e49773cc/1792529353012/",
+  "platform": "squarespace",
+  "product_id": "664a91dbb0d64367e49773cc",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "full city",
+   "organic",
+   "single origin"
+  ],
+  "title": "Peruvian (Full City) [ORGANIC]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/peruvian-full-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "075b8c5a-c72f-49f0-bf45-6c74792f0678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs french press",
+    "variant_id": "08a546df-d0bf-47fa-a328-a9d47855cdf1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "0ee6c47e-5d3b-42cc-9bd9-903d08efaff1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "4550c107-d6a1-44ff-a24e-96b93516c56c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "4c081ccb-ce11-4035-961e-5ec28744fbb8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "503ae9bf-ac47-4e74-bcd7-9794ae5565be"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "51270661-d1b6-4a5e-bf24-ebca3e286195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "5fd74d25-ef3f-435f-a986-5d6e8c3cfe4e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "610aba94-af95-4311-8172-184a1fb66fa4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "6bbbd53b-b359-4b4f-bf8d-c6fbe67f33d9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "77bcd95b-dcbc-4309-8775-d526f66c8b54"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "7ed822f7-7dec-4ae3-9c21-0aa3b1c26767"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "83744e00-5e73-4c50-8059-227b68e01599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs espresso",
+    "variant_id": "a21b66e1-af0b-4db1-92fe-d0dee5a52637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "ae89206f-426e-40a1-9135-7ed7a538ce30"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "c5fc4c81-3de0-40c6-99ca-018d62bc92d9"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "d173bbda-6c3d-47c3-900d-9532911ee9fb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "d57651ce-8192-4bff-a9eb-f8b705dd909d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "e3bd80fc-1137-4b0b-8bc9-ab2d5ac4463f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "f959a10e-6dc5-417c-9cf6-95688b251fea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3586d67870d1f80b",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-ibisil-city",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91f4c8db261fecc280df/1792529356691/",
+  "platform": "squarespace",
+  "product_id": "664a91f4c8db261fecc280df",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "apricot",
+   "cherry",
+   "chocolate",
+   "city",
+   "floral",
+   "honey"
+  ],
+  "title": "Rwanda (City)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/rwanda-ibisil-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "013dcb61-d8bf-4f86-aca4-91cc9b646a9f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "0fe013f8-2091-4e30-b707-93f64614f826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "27645de5-bd7f-4798-b21d-c2f52ad11afc"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "2b2f7df2-3b1e-4d40-9191-91139215eacf"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "2df6b2fe-f86f-4691-a473-afa6d2ba9ff2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "6198b991-0abb-460d-ac78-83eb17f72217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs espresso",
+    "variant_id": "6de394d5-a70a-4966-b6e3-bb8f38412fc3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "74937b52-fdc4-463c-bc01-4994f2c4b034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "7a693633-7f89-49b5-b488-730d65e79d54"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "a239c1c4-b694-42db-b875-0208d57cc2c5"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "a5764712-e6c3-4f5b-a16f-afc8fc1fca12"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "a5dd7dd3-8a7f-4743-a325-842f4fa9c7b8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "af080ff8-6f95-4850-ab10-91ae8966b222"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "b3ae3aee-06bb-4066-b136-5587c16b4285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "b441b389-0bf9-40b4-837d-c9a9a99ce5d8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "b7332057-e33e-4718-85ba-cfddf9e2354c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "bac49190-422c-46da-b1d9-b88765f930f2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "bd899300-950e-4ea1-bd0d-e0025afb7b56"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs french press",
+    "variant_id": "dbdf7c6b-e15a-4548-9bf8-dbbb65f39d76"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "e50774a6-cd43-44ef-91f3-55d5e87d1098"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6644056281a2c05c",
+  "first_seen": "2026-10-26",
+  "handle": "sexy-seven",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a91fbf70aea387c29b5e3/1792529357412/",
+  "platform": "squarespace",
+  "product_id": "664a91fbf70aea387c29b5e3",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "french"
+  ],
+  "title": "Sexy Seven (Dark French Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/sexy-seven",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "04598f80-c6c5-47d6-90f2-2bceee076ca6"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "047f505d-de77-4320-99b2-a0e673ea83f5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "0c843247-b321-47f2-bc40-fa282050bd48"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs french press",
+    "variant_id": "1a9b55da-6e05-4b26-80bf-1d517be431f1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "240cf1af-4fb3-4f5a-9050-ecab8c9b5ccc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "27216133-dbc6-4051-b557-ee6962c81d62"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs french press",
+    "variant_id": "42e952ce-d96c-4ac2-b1ec-6e143510f280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs espresso",
+    "variant_id": "4ad6079b-191c-4fc5-9432-031709aec498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "5ea81a9b-baff-476c-8258-943b3ab7c2d1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs espresso",
+    "variant_id": "66075ca6-bc49-438f-bc8f-03cb2053cabd"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "6bbfb9ab-954c-44c8-a7a0-9018f05a1f22"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "80c6b679-559a-4715-a8b0-d550539735af"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "9d6517e2-9771-4198-99e9-a7923c77c24e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "a420f9d7-0d76-4d49-94df-2c70cd41fec7"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "bc6d219e-567d-4f02-bab7-4282ee218930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs french press",
+    "variant_id": "df118417-eb3d-4aec-8509-a0e7c12ff508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "e581a5cb-df2d-429a-9e88-418de1313d0a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "e752da3e-2c6e-4bbd-9374-2e4b697514d4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 lbs espresso",
+    "variant_id": "f1a6a208-1809-4c93-a187-572f4533dba1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "ffc0aa98-72cf-447a-ad9d-85ab736a2c10"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "721303c118e7775d",
+  "first_seen": "2026-10-26",
+  "handle": "storm-surge",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9209c0031f160637c279/1792529362137/",
+  "platform": "squarespace",
+  "product_id": "664a9209c0031f160637c279",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Dorchester County emergency management department",
+   "blend",
+   "coffee",
+   "delicious",
+   "dorchester county",
+   "dorchestercounty",
+   "emergency management",
+   "hurricane",
+   "hurricane season",
+   "know your zone",
+   "knowyourzone",
+   "medium roast",
+   "partnership",
+   "post-roast blend",
+   "specialty coffee"
+  ],
+  "title": "Storm Surge (Medium Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/storm-surge",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "paper filter",
+    "variant_id": "578d3f66-17e6-44d4-bc68-dd98d5ba3e70"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "espresso",
+    "variant_id": "b3c0591e-2663-46b9-88e5-5efd77a9bc31"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "French press",
+    "variant_id": "bc902a7d-aeb6-42dd-a57c-6c1127fa1eb5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "whole bean",
+    "variant_id": "d02e8d1b-e937-4c47-853e-292c9bf2cf28"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56a0aead26e355aa",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-full-city",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9214c0031f160637c284/1792529364002/",
+  "platform": "squarespace",
+  "product_id": "664a9214c0031f160637c284",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "asia",
+   "bold",
+   "full city+",
+   "pacific island",
+   "single origin"
+  ],
+  "title": "Sumatra (full city+) [ORGANIC]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/sumatra-full-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lbs french press",
+    "variant_id": "062a7fb5-eca5-427a-8275-53d9d8e3eaf6"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "0d437787-2777-454b-9592-0a46756597af"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "0eb7eaa5-4782-42e8-acc0-5cd826429e61"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "31fb039c-0124-4fc9-8a31-a7dd76b34e13"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "4241d7ce-56e2-458b-b548-ed8737f08cb0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "5659ef21-48c2-47d1-8b86-373b855673dc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "60888ba8-000a-443d-8121-b5abc52b41da"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "60d798f0-ed43-47c4-a516-3bf9f90b0b60"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "7822aecf-9518-46e5-849f-a5c3c94f1afb"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs french press",
+    "variant_id": "7e3550f5-6fc0-425a-b9cf-01851e3657ad"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "7e55160d-9274-4052-8503-91d6baf2099f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "96435961-bcf3-4123-9787-0170071041b8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "9db31fb2-5128-4681-8c08-ae75430053ef"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lbs espresso",
+    "variant_id": "a0abccdd-e85d-48e8-a47c-fe2723919f2e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "a3360cab-3710-439d-9ef2-8c3a537ce31e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs espresso",
+    "variant_id": "aa75ea0d-ef40-4787-8bb5-8ff7638d4a43"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "bc876413-258c-45c0-8817-526ccfdf5abe"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "cbe6c447-924c-417a-b8ab-f7369a132732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "cc0e0a1b-fe73-450a-85b9-235559b0669c"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "e01a1b9a-c410-41c7-8e4a-9b745d064346"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a9c6aa5707e77e1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-city",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9219f70aea387c29b5fd/1792529364595/",
+  "platform": "squarespace",
+  "product_id": "664a9219f70aea387c29b5fd",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "city+",
+   "pb",
+   "peaberry"
+  ],
+  "title": "Tanzanian PB (City+)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/tanzanian-peaberry-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs french press",
+    "variant_id": "135b13b2-2385-4d5e-9ec9-3f049d56795f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "144a7881-c2bd-4a66-a40e-d07c2af1c503"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "1e3691bd-7302-4784-9c9c-90636a82c9cd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "2493d083-5c47-4f61-b3d9-afd1d366086c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "266f0127-387a-4011-919e-5a17077bcfcf"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "2a258c4d-3765-4154-a2a7-b54b5ac04639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "374a359c-2f35-49c9-8323-c6ee7c4762d8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "42ee2746-b0f8-4c45-9965-fddd4929ff2d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs espresso",
+    "variant_id": "4da59feb-24dc-4c2e-926a-305b13e87883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "73f47823-b374-4657-b8bb-359b8895819f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs espresso",
+    "variant_id": "755b57c7-86a1-4b23-85f7-b2c557b12213"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "833e8d6a-95b1-4d97-9839-1ba08cf8fa0f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "86ae21a3-9050-4077-8eb7-b26c301d3963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs french press",
+    "variant_id": "8af07d3a-a83e-453c-946b-fb7e00059df9"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "8e7f7ece-3cd7-49a5-be4a-d5e96f9731fd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs espresso",
+    "variant_id": "9327179a-09fd-4470-b760-9d394c6ecc97"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.95,
+    "title": "2 lbs french press",
+    "variant_id": "b46567e5-d69b-440e-8c1f-d658c0301bcd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "c8314c10-7894-4e1c-8579-ac7a4f9c8924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "ec00542d-c95a-4bfa-a9c9-d279d77289ae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "f3ac1d24-d64f-43e8-810e-a2f150bc943c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f7088fc5f660aa6c",
+  "first_seen": "2026-10-26",
+  "handle": "tirra-honey",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/bd27bf67-5179-4f6a-8f56-04b25c299efe/Tirra+Honey+New-2.jpg",
+  "platform": "squarespace",
+  "product_id": "664a9224c8db261fecc280fd",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "black bag",
+   "black bag coffee",
+   "direct trade",
+   "farm to table",
+   "farmers",
+   "honey",
+   "honey process",
+   "sustainable"
+  ],
+  "title": "Tirra Honey",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/tirra-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "",
+    "variant_id": "530622fa-9759-47c1-835d-d5fb2050ee2d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b95ded8b9c78acf",
+  "first_seen": "2026-10-26",
+  "handle": "white-coffee",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a922dc8db261fecc280fe/1792529372007/",
+  "platform": "squarespace",
+  "product_id": "664a922dc8db261fecc280fe",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "coffee",
+   "delicious",
+   "light roast",
+   "specialty coffee",
+   "white coffee"
+  ],
+  "title": "White Coffee",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/white-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "paper filter",
+    "variant_id": "5830aa2e-2d25-42e3-b64a-1688ae36781e"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "espresso",
+    "variant_id": "bf7c7eab-4be6-4e8c-bdb2-f538767e0732"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "French press",
+    "variant_id": "e5e13c06-4115-4dc1-b5c8-57a8afd8a3fb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "517e05a3dfe950b6",
+  "first_seen": "2026-10-26",
+  "handle": "woodstock-blend",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9230b0d64367e4977412/1792529372538/",
+  "platform": "squarespace",
+  "product_id": "664a9230b0d64367e4977412",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "full city",
+   "rainforest alliance"
+  ],
+  "title": "Woodstock Blend (Medium-Dark Roast) (Rainforest Alliance)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/woodstock-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "09ac7312-c278-4e8e-a928-a929b7e1f388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "381dcf42-11a6-4bc2-b523-0967421fa358"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "5c4d95ee-d779-4f0b-b0c5-2a972ce5d472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "7d696aad-715e-46cc-9c6c-5385191de3d6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "7e4e3ba5-9831-460e-ab06-ebcd2eb41ec9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs french press",
+    "variant_id": "842ad34a-46f1-459c-a851-71848b947e60"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "89788eeb-2513-4756-8cff-38266fbea47e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "9da7d81d-a417-4cf0-adba-efb4252dc746"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "a69a004f-b322-4372-8c0b-645e4b15bf40"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "b8d88a48-b786-4800-816f-d9dd1676321f"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "bf5b7a86-afc8-46fb-ade2-fd4d68eef9ab"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "c97ffa69-e5b7-4fb2-b383-89c078e1e765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lbs espresso",
+    "variant_id": "cc973acd-1624-4e50-9e20-fe110d5f255b"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "d397520e-328c-4a5e-a92d-eb1a7b8184f5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "d9a60030-3e42-4dac-b4f1-9e82a3635cc3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs espresso",
+    "variant_id": "e2813b4b-3e7d-4783-b589-7f4df468e63b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.95,
+    "title": "5 lbs french press",
+    "variant_id": "eaaaf9fa-715b-47f0-8b69-3f33cf24a073"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "ee761f7c-5b50-4d33-a415-01d776ce02da"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "f2274de0-6f6e-44b9-ae20-a3151bb06b06"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "f99e1674-2f78-4dcc-937f-a2dce36d1057"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "849bfe9dcf03c077",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-420-f-floral",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a9235b0d64367e4977416/1792529374207/",
+  "platform": "squarespace",
+  "product_id": "664a9235b0d64367e4977416",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "acidic",
+   "citrus",
+   "floral",
+   "fruity"
+  ],
+  "title": "Yirgacheffe (420º F. floral)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/yirgacheffe-420-f-floral",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "2ea5b2df-dc89-4e44-9c22-b1aea4d835be"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "415a9bf2-e171-4092-bb03-fb24443abf21"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "47d43727-db81-45ce-8f2e-27870fc75c18"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs french press",
+    "variant_id": "677a5ec3-40d6-4182-8cbf-cc17a9efa724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "767212c1-2d9e-4445-8906-25d6b87fdd35"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs espresso",
+    "variant_id": "76e32d7d-d851-4c4a-af56-b281d98f80b5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "7f016cbd-6176-4041-82ce-5e7dfbd9493d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs espresso",
+    "variant_id": "870386de-543b-4889-88e2-a07c1edad4fa"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "87a4c72b-b274-4c6b-a2cb-d050888be81f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.95,
+    "title": "5 lbs french press",
+    "variant_id": "a5957c99-28af-4e1b-8888-529b24ed06f5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.95,
+    "title": "5 lbs espresso",
+    "variant_id": "cbfdca9d-e3b8-48fd-b8c3-a4349131181a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "cf096f70-9b53-4413-a186-7b10655ce135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "d327fa8e-8d97-4baf-ab0d-82aa8251560c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 lbs french press",
+    "variant_id": "d83e9714-2efa-4a38-b578-2e4b727e9283"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "d869bc8f-588e-4d64-8999-87abe10d419f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "db24f3e0-a50d-44ed-b0a2-163816fd00a7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "dc3124bb-a088-4cab-ab83-a87629ce06b6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "e02b5ebb-5514-4395-bf96-c7667856d0dc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "e1d08f47-f227-451d-a8cf-4d1ad75dbbe4"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "fd86e192-c3a5-4041-ab6c-6f4152db4347"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce8de4fd48ecb0f5",
+  "first_seen": "2026-10-26",
+  "handle": "headless-horseman",
+  "image": "https://static1.squarespace.com/static/663bce67126cc43c62dfeb31/663bfe22d5c51214cbe2c678/664a94c7c8db261fecc28296/1792529335469/",
+  "platform": "squarespace",
+  "product_id": "664a94c7c8db261fecc28296",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "dark roast",
+   "delicious",
+   "light roast",
+   "medium roast",
+   "post-roast blend",
+   "specialty coffee"
+  ],
+  "title": "Headless Horseman Blend",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/headless-horseman",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz espresso",
+    "variant_id": "491653a5-0674-48d0-86ea-e8c16c174d26"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz French press",
+    "variant_id": "6cb16037-1b9b-435c-a647-9749d25d5746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz whole bean",
+    "variant_id": "7c7a3dc3-4302-4cf2-98ea-419c44001da0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "box of 12 pods",
+    "variant_id": "ac97e711-f157-42e3-ab1f-b702be944334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz paper filter",
+    "variant_id": "b33e0102-36ba-410a-9d1b-fa288f53e8d7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4edd2f8d75f5ca6",
+  "first_seen": "2026-10-26",
+  "handle": "papu-papu",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/d40f4679-697e-4725-a585-38d85c72fa8e/Papu+n+Papu+Commerce+Bag.png",
+  "platform": "squarespace",
+  "product_id": "685be263e09425692fb53f0c",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "french",
+   "vienna"
+  ],
+  "title": "Papu & Papu (Dark Roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/papu-papu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "065160f7-6c77-439f-b95b-b56b1a9b29ba"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "0b3b450f-f146-4419-9cfb-6a7904103a8f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs espresso",
+    "variant_id": "1f173692-1a34-4dd7-a8e3-5ed7099b7582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "278b192c-dedc-4123-8019-1c0798f14f6d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs french press",
+    "variant_id": "35f41a2e-129a-4673-a723-8bed291b6460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs espresso",
+    "variant_id": "36dc05ed-53bf-4da2-b3ee-a52ab0e0beae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "5772d493-9bdb-4d9a-aba0-1401d455ff2d"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "5e40daf8-1e51-4c76-92d7-a346905a7ac0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "67dac91f-ca9d-40b7-af61-9dc046b62405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.95,
+    "title": "5 lbs espresso",
+    "variant_id": "79b46814-c873-4dfa-837c-c38163843175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.95,
+    "title": "5 lbs french press",
+    "variant_id": "84db6b96-f8f5-4f7e-aab1-93c9051be831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "8f662868-f798-47ef-b1e0-55bb1ee839f2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "960708db-5a8c-41ad-abd1-97338cc7ba98"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "9d3fc071-d622-4b96-8bbf-4c8209aacc3a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "b17b669c-141e-4bdf-a690-1e0e1de8eaf1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lbs french press",
+    "variant_id": "b4024c3f-e18a-4077-84b3-da14fd9f760a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "d372f63d-76df-4717-8eac-00168582ea2b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "db28c2f8-bdc2-4f56-93d9-acee6ee005b3"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 5.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "e95a0424-49f7-4652-8d66-63613367cb31"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "ffdb2a69-9fb8-4b66-a4e1-75d68ba69529"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "560d0e893a8e95e9",
+  "first_seen": "2026-10-26",
+  "handle": "vets-helping-vets",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/7aa25ec9-a93b-4a0c-8dfe-12605c597978/Pirate+Blend+Bag+front.jpg",
+  "platform": "squarespace",
+  "product_id": "689e0905586f753e04c33d70",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "charity",
+   "low country pirates",
+   "medium roast",
+   "veterans day",
+   "vets helping vets"
+  ],
+  "title": "Vets Helping Vets (12oz, medium roast)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/vets-helping-vets",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Whole bean",
+    "variant_id": "6da4e533-4c18-404f-a5b2-d410cb95012d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Auto drip grind",
+    "variant_id": "72e856bf-afa0-44b5-b66a-9a15c1d9f877"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Espresso grind",
+    "variant_id": "7b344538-ddcd-4f8c-91b9-54d2cc7aa258"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "French press grind",
+    "variant_id": "7efe40a7-45aa-4d40-91b2-f7bf5e1cb5b9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eef091b6d539850a",
+  "first_seen": "2026-10-26",
+  "handle": "gibbons-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/b1d09ea2-c24a-4c55-a756-f3b0698b7ae5/Gibbons+Blend+bag.png",
+  "platform": "squarespace",
+  "product_id": "691f1b680e215a2ffe3c6c31",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Gibbons",
+   "IPPL",
+   "Medium roast"
+  ],
+  "title": "Gibbons Blend",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/gibbons-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "French press",
+    "variant_id": "35f54348-764e-4188-8f95-9293ef1d95a5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "espresso",
+    "variant_id": "40a77baa-7fa7-42bc-b2a4-97e5c96a245f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "paper filter",
+    "variant_id": "8d633a9c-70ca-4b98-8516-92a37d8ca507"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "whole bean",
+    "variant_id": "affa38a6-0e77-4b6a-ba08-e05a7371bf5e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b57308c00d56b4f9",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-swp-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/1770658106103-I2788AJY591RFJKJKVPT/0CBF65E8-9FB8-48B5-BCA2-D4868F1A865B.png",
+  "platform": "squarespace",
+  "product_id": "698374f3f6a6cd54d4d9ca57",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [],
+  "title": "Swiss Water Processed Honduras Decaf (Full City Roast) [Rain Forest Alliance]",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/honduras-swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 lbs espresso",
+    "variant_id": "1ea11657-a7cb-4846-b711-b156e19fd85e"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 6.95,
+    "title": "0.13 lbs paper filter",
+    "variant_id": "1f73f0af-d218-4c80-addc-ea6fd7f3ebba"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 lbs french press",
+    "variant_id": "204e27ef-9b8f-4ad8-83df-6aead2bd4ca0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "0.75 lbs french press",
+    "variant_id": "25041ff0-7caf-421d-aee0-e18cf2241b96"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "0.75 lbs whole bean",
+    "variant_id": "485d92e6-56d0-4f72-873c-3e8f4a0b1d77"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "2 lbs whole bean",
+    "variant_id": "548257ce-d975-4396-9a93-0be12e7f5bdb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.95,
+    "title": "5 lbs whole bean",
+    "variant_id": "54a37714-7d4f-44c1-b1e0-1de030e4d7c4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.95,
+    "title": "5 lbs espresso",
+    "variant_id": "642f8d23-12fd-4fcd-83b5-ed137e5d3bb7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "2 lbs french press",
+    "variant_id": "73d447eb-b795-4aff-a510-db62e5799774"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 6.95,
+    "title": "0.13 lbs whole bean",
+    "variant_id": "7751879a-cb5e-4e0d-9dec-cf2bc8b1fb11"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 6.95,
+    "title": "0.13 lbs french press",
+    "variant_id": "79cb3d18-b54a-42d5-97c7-1ac681d585bb"
+   },
+   {
+    "available": true,
+    "grams": 59,
+    "price_usd": 6.95,
+    "title": "0.13 lbs espresso",
+    "variant_id": "a436b274-696b-465b-810b-eb60aaa48307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 lbs whole bean",
+    "variant_id": "a98d8def-85ac-45bf-9aab-b2c93a2b2a03"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "0.75 lbs paper filter",
+    "variant_id": "b3f05b20-9b2c-4f74-8a17-45fe271144e3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "0.75 lbs espresso",
+    "variant_id": "ba564f6a-a347-4d9a-a263-6df42d7a22ef"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.95,
+    "title": "5 lbs french press",
+    "variant_id": "bf808bbe-729a-4468-9660-a584ecd033b5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "2 lbs espresso",
+    "variant_id": "bfd7b30b-2234-4c6e-9205-3044d9e95b22"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.95,
+    "title": "5 lbs paper filter",
+    "variant_id": "d208ec45-67a9-4446-9b5e-a1a94054ab31"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 lbs paper filter",
+    "variant_id": "d6c436d2-7e40-4c8b-9f92-5d6da2ef5dd1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "2 lbs paper filter",
+    "variant_id": "f6ed1d73-0534-4218-986b-30201285f90f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e0a9b5b98f56177",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry-surf",
+  "image": "https://images.squarespace-cdn.com/content/v1/663bce67126cc43c62dfeb31/0fc61c9c-a868-4fdd-89cc-426b9b91aaca/Strawberry+Surf+Bag+Final.png",
+  "platform": "squarespace",
+  "product_id": "6a68cd4bd9c2633558514efa",
+  "product_type": "",
+  "roaster_slug": "coastalcoffeeroasters",
+  "tags": [
+   "Viviana",
+   "botero",
+   "coferment",
+   "coffee",
+   "colombia",
+   "delicious",
+   "finca el eden",
+   "finca el edén",
+   "light roast",
+   "peach",
+   "quindio",
+   "rosé",
+   "south american",
+   "specialty coffee",
+   "strawberry",
+   "strawberry shake",
+   "strawberry surf",
+   "sweet",
+   "white chocolate"
+  ],
+  "title": "Strawberry Surf (12oz)",
+  "url": "https://www.coastalcoffeeroasters.com/coffee/p/strawberry-surf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.95,
+    "title": "French press",
+    "variant_id": "2270bcc3-dd92-4870-bf83-52edbe270161"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.95,
+    "title": "whole bean",
+    "variant_id": "610fccc2-0175-4c2d-9826-f5698ccbd9c1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.95,
+    "title": "paper filter",
+    "variant_id": "95d290e1-dd83-4f25-b9bc-4a6f5c6f8328"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.95,
+    "title": "espresso",
+    "variant_id": "a51a6288-eac8-4593-a3f3-b0b3229b4283"
+   }
+  ],
+  "vendor": ""
+ }
+]

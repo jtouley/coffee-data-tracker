@@ -1,0 +1,1729 @@
+[
+ {
+  "body_hash": "671e1d774df03898",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gedeb-chelbessa",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/CD7404E5-4BE8-4384-85BF-A515A0C4702E.jpg?v=1792597886",
+  "platform": "shopify",
+  "product_id": "15424226328788",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Ethiopia Gedeb Chelbessa",
+  "url": "https://headycup.com/products/ethiopia-gedeb-chelbessa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "67772829368532"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "67772829401300"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "67772829434068"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "67772829466836"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "67772829499604"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "67772829532372"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "67772829565140"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "67772829597908"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "67772829630676"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "67772829663444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "67772829696212"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "fa91b985f060dd5f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kercha-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/85609CA5-BEAB-4685-B606-782EAF222BB1.jpg?v=1792597698",
+  "platform": "shopify",
+  "product_id": "15428344512724",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Ethiopia Guji Kercha Sundried",
+  "url": "https://headycup.com/products/ethiopia-guji-kercha-sundried",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Whole Bean / 4 OZ",
+    "variant_id": "67848089600212"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10 OZ",
+    "variant_id": "67848089632980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180.0,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "67848089665748"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "French Press / 4 OZ",
+    "variant_id": "67848089698516"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "French Press / 10 OZ",
+    "variant_id": "67848089731284"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Pour-Over / 4 OZ",
+    "variant_id": "67848089796820"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Pour-Over / 10 OZ",
+    "variant_id": "67848089829588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Drip / 4 OZ",
+    "variant_id": "67848089895124"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Drip / 10 OZ",
+    "variant_id": "67848089927892"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Espresso / 4 OZ",
+    "variant_id": "67848089993428"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Espresso / 10 OZ",
+    "variant_id": "67848090026196"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "6eabc44cba7bfdc4",
+  "first_seen": "2026-10-26",
+  "handle": "sun-peel-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/Sun-Peel_Heady-Cup_Updated-Roast-Slider_Mockup_Front_9760e03a-556f-4925-b576-6595b6289242.png?v=1771427354",
+  "platform": "shopify",
+  "product_id": "7765436203220",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Blends",
+   "caramelized sugar",
+   "cocoa",
+   "coffee",
+   "grapefruit",
+   "retail-only",
+   "toffee"
+  ],
+  "title": "Sun Peel - Light Roast",
+  "url": "https://headycup.com/products/sun-peel-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Whole Bean",
+    "variant_id": "43623008108756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "43652139122900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / French Press",
+    "variant_id": "45964451905748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Pour-Over",
+    "variant_id": "45964451938516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Drip",
+    "variant_id": "45964451971284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Espresso",
+    "variant_id": "45964452004052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / French Press",
+    "variant_id": "45964452036820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Pour-Over",
+    "variant_id": "45964452069588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Drip",
+    "variant_id": "45964452102356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Espresso",
+    "variant_id": "45964452135124"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "7fb7540c5019396c",
+  "first_seen": "2026-10-26",
+  "handle": "flow",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/Flo_Heady-Cup_Updated-Roast-Slider_Mockup_Front_83181bce-1d75-4e0a-a513-df6454f710bb.png?v=1771429745",
+  "platform": "shopify",
+  "product_id": "7766253240532",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Blends",
+   "almond",
+   "cherry",
+   "chocolate",
+   "coffee",
+   "grapefruit",
+   "hazelnut",
+   "retail-only"
+  ],
+  "title": "Flo - Medium Roast",
+  "url": "https://headycup.com/products/flow",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "43622908756180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Whole Bean",
+    "variant_id": "43652144464084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / French Press",
+    "variant_id": "45964426969300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Pour-Over",
+    "variant_id": "45964427002068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Drip",
+    "variant_id": "45964427034836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Espresso",
+    "variant_id": "45964427067604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / French Press",
+    "variant_id": "45964427100372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Pour-Over",
+    "variant_id": "45964427133140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Drip",
+    "variant_id": "45964427165908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 POUND / Espresso",
+    "variant_id": "45964427198676"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "1782205205791268",
+  "first_seen": "2026-10-26",
+  "handle": "long-jump",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/Long-Jump_Heady-Cup_FlatBottom_5Wx9.25Hx2.875D_For-Print_Updated-Roast-Slider_Front-Mockup_2066257a-9883-4a36-a751-117bcd364571.png?v=1771429886",
+  "platform": "shopify",
+  "product_id": "7766365831380",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Blends",
+   "blueberry",
+   "caramelized brown sugar",
+   "chocolate",
+   "cocoa",
+   "coffee",
+   "lavender",
+   "lemon",
+   "retail-only"
+  ],
+  "title": "Long Jump - Dark Roast",
+  "url": "https://headycup.com/products/long-jump",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "43622973931732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LBS / Whole Bean",
+    "variant_id": "43652141809876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / French Press",
+    "variant_id": "45964440404180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Pour-Over",
+    "variant_id": "45964440436948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Drip",
+    "variant_id": "45964440469716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 OZ / Espresso",
+    "variant_id": "45964440502484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LBS / French Press",
+    "variant_id": "45964440535252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LBS / Pour-Over",
+    "variant_id": "45964440568020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LBS / Drip",
+    "variant_id": "45964440600788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LBS / Espresso",
+    "variant_id": "45964440633556"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "f7607bd0f46912a3",
+  "first_seen": "2026-10-26",
+  "handle": "mwp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/decaf_bag.png?v=1771429360",
+  "platform": "shopify",
+  "product_id": "7868988686548",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Blends",
+   "Decaffeinated",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Colombia - Mountain Water Decaffeinated",
+  "url": "https://headycup.com/products/mwp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "43662465597652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 OZ / French Press",
+    "variant_id": "43827216548052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 OZ / Pour Over",
+    "variant_id": "43827216580820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 OZ / Drip",
+    "variant_id": "43827216613588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 POUND / Whole Bean",
+    "variant_id": "44156221358292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 POUND / French Press",
+    "variant_id": "44156221391060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 POUND / Pour Over",
+    "variant_id": "44156221423828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 POUND / Drip",
+    "variant_id": "44156221456596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 OZ / Espresso",
+    "variant_id": "45964484116692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 POUND / Espresso",
+    "variant_id": "45964484149460"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "0b52d7e678aa1ae2",
+  "first_seen": "2026-10-26",
+  "handle": "bloom-shroomery-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/Heady-Cup_Mushroom-Bag_Mockup_Front.png?v=1771429430",
+  "platform": "shopify",
+  "product_id": "8212044742868",
+  "product_type": "Mushroom Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Blends",
+   "Mushroom",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Mushroom Coffee - Natural Energy & Focus",
+  "url": "https://headycup.com/products/bloom-shroomery-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.99,
+    "title": "Default Title",
+    "variant_id": "44644673257684"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "0ccb432ed7e9b9a1",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-washed-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/AE73AF75-502D-4DF0-BDB6-231287191124.jpg?v=1792597993",
+  "platform": "shopify",
+  "product_id": "8707203465428",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Sebastian Ramirez Washed Pink Bourbon",
+  "url": "https://headycup.com/products/colombian-washed-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "45905382015188"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "45905382047956"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "45905382080724"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "45905382113492"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "45905382146260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "46961180836052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "47141895143636"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "47141895176404"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "47141895209172"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "47141895241940"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "47141895274708"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "843f4eef1e95c381",
+  "first_seen": "2026-10-26",
+  "handle": "lemon-heady-cold-brew-shandy",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/Lemon-Heady-Can-Mockup_Front.png?v=1770316453",
+  "platform": "shopify",
+  "product_id": "8819650855124",
+  "product_type": "Cold Brew Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Cold Brew",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Lemon Heady - Cold Brew Shandy",
+  "url": "https://headycup.com/products/lemon-heady-cold-brew-shandy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2177,
+    "price_usd": 25.0,
+    "title": "6-PACK",
+    "variant_id": "46258445615316"
+   },
+   {
+    "available": true,
+    "grams": 8709,
+    "price_usd": 84.0,
+    "title": "24-Pack",
+    "variant_id": "46802084266196"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "d0f4411c8b46f72e",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-big-red",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/7998DC3A-5E6A-40AB-BABD-721DA42EF9DD.jpg?v=1789065439",
+  "platform": "shopify",
+  "product_id": "8877554598100",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Papua New Guinea - Big Red",
+  "url": "https://headycup.com/products/papua-new-guinea-big-red",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "46500166435028"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / FRENCH PRESS",
+    "variant_id": "46500166467796"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / DRIP",
+    "variant_id": "46500166500564"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / POUR OVER",
+    "variant_id": "46500166533332"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / ESPRESSO",
+    "variant_id": "46500166566100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "46961227301076"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / WHOLE BEAN",
+    "variant_id": "48597459304660"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / FRENCH PRESS",
+    "variant_id": "48597459337428"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / DRIP",
+    "variant_id": "48597459370196"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / POUR OVER",
+    "variant_id": "48597459402964"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / ESPRESSO",
+    "variant_id": "48597459435732"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "da55050533b51041",
+  "first_seen": "2026-10-26",
+  "handle": "custom-cafe-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/custom_label.png?v=1771432743",
+  "platform": "shopify",
+  "product_id": "9077362426068",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Custom Cafe Blend",
+  "url": "https://headycup.com/products/custom-cafe-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "47566933950676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 OZ / Drip",
+    "variant_id": "47566933983444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "47566934016212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 LB / Drip",
+    "variant_id": "47566934048980"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "43b1506de8a1f7ac",
+  "first_seen": "2026-10-26",
+  "handle": "outward-x",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/outward_x_3.png?v=1773937110",
+  "platform": "shopify",
+  "product_id": "9103981510868",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [],
+  "title": "Outward x",
+  "url": "https://headycup.com/products/outward-x",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "47649294057684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "French Press / 12 OZ",
+    "variant_id": "47649294090452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Pour-over / 12 OZ",
+    "variant_id": "47649294123220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Drip / 12 OZ",
+    "variant_id": "47649294155988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Espresso / 12 OZ",
+    "variant_id": "47649294188756"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 4 OZ",
+    "variant_id": "47663763652820"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "French Press / 4 OZ",
+    "variant_id": "47663763685588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "Pour-over / 4 OZ",
+    "variant_id": "47663763718356"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "Drip / 4 OZ",
+    "variant_id": "47663763751124"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "Espresso / 4 OZ",
+    "variant_id": "47663763783892"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "6e01b7b42791b680",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-anaerobic-washed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/La_Noria.png?v=1781205428",
+  "platform": "shopify",
+  "product_id": "9212163096788",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Ecuador - Anaerobic Washed Bourbon",
+  "url": "https://headycup.com/products/ecuador-anaerobic-washed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "4 OZ / WHOLE BEAN",
+    "variant_id": "48114535629012"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "4 OZ / FRENCH PRESS",
+    "variant_id": "48114535661780"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "4 OZ / DRIP",
+    "variant_id": "48114535694548"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "4 OZ / POUR OVER",
+    "variant_id": "48114535727316"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "4 OZ / ESPRESSO",
+    "variant_id": "48114535760084"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "48114535792852"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 OZ / FRENCH PRESS",
+    "variant_id": "48114535825620"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 OZ / DRIP",
+    "variant_id": "48114535858388"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 OZ / POUR OVER",
+    "variant_id": "48114535891156"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 OZ / ESPRESSO",
+    "variant_id": "48114535923924"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 250.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "48114535956692"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "a74beb55719b1fad",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed-mulish",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/C2D4B9FA-7869-410F-A205-EDAA14BB009E.jpg?v=1790793165",
+  "platform": "shopify",
+  "product_id": "9270412509396",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Ethiopia Washed Mulish",
+  "url": "https://headycup.com/products/ethiopia-washed-mulish",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48310724919508"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48310724952276"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48310724985044"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48310725017812"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48310725050580"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48310725083348"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48310725116116"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48310725148884"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48310725181652"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48310725214420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48310725247188"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "a252b5b467517ea5",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-washed-rianjagi",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/ACA8EE36-BB01-4534-BB87-41282FABFB7E.jpg?v=1790790862",
+  "platform": "shopify",
+  "product_id": "9270417293524",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Kenya Washed Rianjagi",
+  "url": "https://headycup.com/products/kenya-washed-rianjagi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48310742843604"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48310742876372"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48310742909140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48310742941908"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48310742974676"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48310743007444"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48310743040212"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48310743072980"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48310743105748"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48310743138516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48310743171284"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "0e0d4d33877d0131",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-san-jeronimo",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/36283CDC-EC1C-4C42-9F06-702E84423E46.jpg?v=1790790571",
+  "platform": "shopify",
+  "product_id": "9270425452756",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Guatemala Finca San Jerónimo",
+  "url": "https://headycup.com/products/guatemala-finca-san-jeronimo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48310854811860"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48310854844628"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48310854877396"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48310854910164"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48310854942932"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48310854975700"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48310855008468"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48310855041236"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48310855074004"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48310855106772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48310855139540"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "2de02075f1ffcf6c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kamwangi",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/C588307A-70F4-48F3-A620-7576D54D931F.jpg?v=1790790320",
+  "platform": "shopify",
+  "product_id": "9278677516500",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Kenya Kamwangi",
+  "url": "https://headycup.com/products/kenya-kamwangi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48355715678420"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48355715711188"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48355715743956"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48355715776724"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48355715809492"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48355715842260"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48355715875028"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48355715907796"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48355715940564"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48355715973332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48355716006100"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "55f7500f926af7f7",
+  "first_seen": "2026-10-26",
+  "handle": "watermelon-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/2A01C775-F5D6-43C7-BCEE-8009E52DCA73.jpg?v=1789065139",
+  "platform": "shopify",
+  "product_id": "9327791440084",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Colombia - Watermelon Co-Ferment",
+  "url": "https://headycup.com/products/watermelon-co-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48598225486036"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48598225518804"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48598225551572"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48598225584340"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48598225617108"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48598225649876"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48598225682644"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48598225715412"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48598225748180"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48598225780948"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "2314ee0926f0c7a4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-marlon-bolanos-washed-aji-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/BE6CF5A2-B5BF-46F9-AEA0-206B589D6DEB.jpg?v=1789066172",
+  "platform": "shopify",
+  "product_id": "9340039266516",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Colombia - Marlon Bolaños - Washed Aji Bourbon",
+  "url": "https://headycup.com/products/colombia-marlon-bolanos-washed-aji-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48649658794196"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48649658826964"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48649658859732"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48649658892500"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48649658925268"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48649658958036"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48649658990804"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48649659023572"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48649659056340"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48649659089108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48649659121876"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ },
+ {
+  "body_hash": "2c113e249dc19fc2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-yessica-parra-pinkbourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0651/2767/8164/files/BE709EC3-F4BD-48D2-B395-0ED1D3AD762C.jpg?v=1789065885",
+  "platform": "shopify",
+  "product_id": "9340051882196",
+  "product_type": "Coffee",
+  "roaster_slug": "headycup",
+  "tags": [
+   "Za Za",
+   "coffee",
+   "retail-only"
+  ],
+  "title": "Colombia - Yessica Parra - Pink Bourbon",
+  "url": "https://headycup.com/products/colombia-yessica-parra-pinkbourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Whole Bean",
+    "variant_id": "48649683304660"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / French Press",
+    "variant_id": "48649683337428"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Pour-Over",
+    "variant_id": "48649683370196"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Drip",
+    "variant_id": "48649683402964"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 OZ / Espresso",
+    "variant_id": "48649683435732"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Whole Bean",
+    "variant_id": "48649683468500"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / French Press",
+    "variant_id": "48649683501268"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Pour-Over",
+    "variant_id": "48649683534036"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Drip",
+    "variant_id": "48649683566804"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 OZ / Espresso",
+    "variant_id": "48649683599572"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "48649683632340"
+   }
+  ],
+  "vendor": "Heady Cup Coffee Roasters"
+ }
+]

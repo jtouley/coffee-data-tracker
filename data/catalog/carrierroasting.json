@@ -1,0 +1,510 @@
+[
+ {
+  "body_hash": "1f4f71e71bf73f3f",
+  "first_seen": "2026-10-26",
+  "handle": "chit-chat",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/CARRIER_prodshotchitchat_C.jpg?v=1624400295",
+  "platform": "shopify",
+  "product_id": "1860120019057",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "blend",
+   "seasonal"
+  ],
+  "title": "Chit Chat // Seasonal Blend",
+  "url": "https://carrierroasting.com/products/chit-chat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "18884632641649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lbs",
+    "variant_id": "21532015263857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2 lbs",
+    "variant_id": "43716012736709"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "738317aab296e595",
+  "first_seen": "2026-10-26",
+  "handle": "deep-thought-seasonal-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/CARRIER_prodshotdeepthought_C.jpg?v=1624400366",
+  "platform": "shopify",
+  "product_id": "1860127424625",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "dark roast",
+   "seasonal"
+  ],
+  "title": "Deep Thought // Seasonal Dark Roast",
+  "url": "https://carrierroasting.com/products/deep-thought-seasonal-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "18884745724017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lbs",
+    "variant_id": "21532024176753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2 lbs",
+    "variant_id": "43716013719749"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "c6fe36ee4c7d783b",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-one-for-one-donation",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/CarrierRoastingCoRoastersChoice_89a45ff6-6a3b-4d4c-8a6a-d9ec8a43b968.png?v=1624275095",
+  "platform": "shopify",
+  "product_id": "4425691168881",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://carrierroasting.com/products/roasters-choice-one-for-one-donation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "46428510683333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lbs",
+    "variant_id": "46428510716101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 lbs",
+    "variant_id": "46428510748869"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "667893c838f502e8",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-2x-8-oz-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/RoastersChoice.png?v=1589055352",
+  "platform": "shopify",
+  "product_id": "4463431549041",
+  "product_type": "",
+  "roaster_slug": "carrierroasting",
+  "tags": [],
+  "title": "Roaster's Choice 2 x 8 oz Single Origin",
+  "url": "https://carrierroasting.com/products/roasters-choice-2x-8-oz-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "Default Title",
+    "variant_id": "31618844426353"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "40e539cd5ecea912",
+  "first_seen": "2026-10-26",
+  "handle": "conversation-kit-2x-8-oz-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/ConversationKit.png?v=1589370139",
+  "platform": "shopify",
+  "product_id": "4463434301553",
+  "product_type": "",
+  "roaster_slug": "carrierroasting",
+  "tags": [],
+  "title": "Conversation Kit 2 x 8 oz Core Coffees",
+  "url": "https://carrierroasting.com/products/conversation-kit-2x-8-oz-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 34.0,
+    "title": "1 x 8 oz Chit Chat & 1 x 8 oz Deep Thought",
+    "variant_id": "31620403200113"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 34.0,
+    "title": "2 x 8 oz Chit Chat",
+    "variant_id": "31620403232881"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 34.0,
+    "title": "2 x 8 oz Deep Thought",
+    "variant_id": "31620403265649"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "55331a99e81f1021",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-2x-8-oz-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/products/HalfCaf.png?v=1589055281",
+  "platform": "shopify",
+  "product_id": "4463434825841",
+  "product_type": "",
+  "roaster_slug": "carrierroasting",
+  "tags": [],
+  "title": "Half Caf 1 x 8 oz decaf, 1 x 8 oz regular",
+  "url": "https://carrierroasting.com/products/half-caf-2x-8-oz-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "Chit Chat",
+    "variant_id": "31618857435249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "Deep Thought",
+    "variant_id": "31618857468017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "Roaster's Choice Single Origin",
+    "variant_id": "31918365933681"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "458974d5719819a1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bookkisa",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_BOOKISSA.jpg?v=1789989226",
+  "platform": "shopify",
+  "product_id": "7999195971781",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "ethiopia",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Ethiopia Bookissa",
+  "url": "https://carrierroasting.com/products/ethiopia-bookkisa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12 oz",
+    "variant_id": "43796061028549"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2 lbs",
+    "variant_id": "43796061061317"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.25,
+    "title": "5 lbs",
+    "variant_id": "43796061094085"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "0d5052e206e5d6bf",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-union-cantinil",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_UNIONCANTINIL.jpg?v=1755433022",
+  "platform": "shopify",
+  "product_id": "8401131307205",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "guatemala",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Guatemala Unión Cantinil",
+  "url": "https://carrierroasting.com/products/guatemala-union-cantinil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "45016636653765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2 lbs",
+    "variant_id": "45016636686533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lbs",
+    "variant_id": "45016636719301"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "e7321f272939947f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-nensebo-bosecha",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_NENSEBOBOCHESA.jpg?v=1774796314",
+  "platform": "shopify",
+  "product_id": "8782044627141",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "ethiopia",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Ethiopia Nensebo Bosecha",
+  "url": "https://carrierroasting.com/products/ethiopia-nensebo-bosecha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz",
+    "variant_id": "46008802640069"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.25,
+    "title": "2 lbs",
+    "variant_id": "46008802672837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.25,
+    "title": "5 lbs",
+    "variant_id": "46008802705605"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "f2afc261e7e79b00",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gititu-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_GITITUAA.jpg?v=1784197747",
+  "platform": "shopify",
+  "product_id": "8928017219781",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "kenya",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Kenya Gititu AA",
+  "url": "https://carrierroasting.com/products/kenya-gititu-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "12 oz",
+    "variant_id": "46544001892549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.25,
+    "title": "2 lbs",
+    "variant_id": "46544001925317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lbs",
+    "variant_id": "46544001958085"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "6bb561f28bebffae",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-fortune",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_DECAFFORTUNE.jpg?v=1788116741",
+  "platform": "shopify",
+  "product_id": "8995341500613",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "colombia",
+   "decaf"
+  ],
+  "title": "Decaf Fortune",
+  "url": "https://carrierroasting.com/products/decaf-fortune",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12 oz",
+    "variant_id": "46833820795077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lbs",
+    "variant_id": "46833820827845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.25,
+    "title": "5 lbs",
+    "variant_id": "46833820860613"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "258444c93483e0e2",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-ninga-hills",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_NINGAHILLS.jpg?v=1788116954",
+  "platform": "shopify",
+  "product_id": "8995343171781",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "burundi",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Burundi Ninga Hills",
+  "url": "https://carrierroasting.com/products/burundi-ninga-hills",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz",
+    "variant_id": "46833829544133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "46833829576901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs",
+    "variant_id": "46833829609669"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ },
+ {
+  "body_hash": "6efb406b824f711d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-juan-jimenez-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0079/2752/9585/files/CR_webpic_JUANJIMENEZ_f44add64-e885-4669-930c-2bc00398de54.jpg?v=1790075260",
+  "platform": "shopify",
+  "product_id": "9042532729029",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "carrierroasting",
+  "tags": [
+   "colombia",
+   "light roast",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "Colombia Juan Jiménez Pink Bourbon",
+  "url": "https://carrierroasting.com/products/colombia-juan-jimenez-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz",
+    "variant_id": "46980176969925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.75,
+    "title": "2 lbs",
+    "variant_id": "46980177002693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5 lbs",
+    "variant_id": "46980177035461"
+   }
+  ],
+  "vendor": "Carrier Roasting Co."
+ }
+]

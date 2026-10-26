@@ -1,0 +1,380 @@
+[
+ {
+  "body_hash": "c4c54c8e755254c4",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-light-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/light_12_web.jpg?v=1536614451",
+  "platform": "shopify",
+  "product_id": "1543207321659",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "light",
+   "light roast",
+   "organic",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters Light Roast Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-organic-light-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "14373406441531"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "ffde5e8b45603f1f",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-espresso-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/esp_12_web.jpg?v=1536614894",
+  "platform": "shopify",
+  "product_id": "1543215611963",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "espresso",
+   "light roast",
+   "organic",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters Espresso Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-organic-espresso-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "14373549867067"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "0be28e9a87164ece",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-sunshine-organic-coffee-roasters-mexicano-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/mex_12_web.jpg?v=1536614565",
+  "platform": "shopify",
+  "product_id": "1543229341755",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "medium-light roast",
+   "mexicano unico",
+   "organic",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters Mexicano Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-sunshine-organic-coffee-roasters-mexicano-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "14373746016315"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "345b47b15a354411",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-sunshine-organic-coffee-roasters-french-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/french_12_web.jpg?v=1536615551",
+  "platform": "shopify",
+  "product_id": "1555569639483",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "french",
+   "organic",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters French Roast Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-sunshine-organic-coffee-roasters-french-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "14531603300411"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "474f526715cdad08",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-sunshine-organic-coffee-roasters-italiano-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/ital_12_web.jpg?v=1536615522",
+  "platform": "shopify",
+  "product_id": "1555578585147",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "italiano",
+   "organic",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters Italiano Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-sunshine-organic-coffee-roasters-italiano-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "14531668738107"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "e3f67bb6258fd356",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-sunshine-organic-coffee-roasters-water-processed-decaf-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/decaf12_web.jpg?v=1536616513",
+  "platform": "shopify",
+  "product_id": "1555584024635",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "decaf",
+   "organic",
+   "water processed",
+   "whole bean"
+  ],
+  "title": "12oz Sunshine Organic Coffee Roasters Water Processed Decaf Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/12oz-sunshine-organic-coffee-roasters-water-processed-decaf-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "14531701997627"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "ffde5e8b45603f1f",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-espresso-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/espresso_5_web.jpg?v=1536616081",
+  "platform": "shopify",
+  "product_id": "1555593396283",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "espresso",
+   "light roast",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Espresso Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-espresso-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "14531760914491"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "2d3f5565677cb094",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-light-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/light_5_web.jpg?v=1536616304",
+  "platform": "shopify",
+  "product_id": "1555595755579",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "light",
+   "light roast",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Light Roast Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-light-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "14531769860155"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "7c7380509296f9d1",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-mexicano-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/mex_5_web.jpg?v=1536616751",
+  "platform": "shopify",
+  "product_id": "1555602899003",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "medium-light roast",
+   "mexicano unico",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Mexicano Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-mexicano-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "14531800006715"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "345b47b15a354411",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-french-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/french_5_web.jpg?v=1536616633",
+  "platform": "shopify",
+  "product_id": "1555605913659",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "french",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters French Roast Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-french-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "14531813998651"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "474f526715cdad08",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-italiano-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/ital_5_web.jpg?v=1536616728",
+  "platform": "shopify",
+  "product_id": "1555607715899",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "italiano",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Italiano Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-italiano-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "14531824058427"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "e3f67bb6258fd356",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-water-processed-decaf-roast-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/DECAF5_web.jpg?v=1536617322",
+  "platform": "shopify",
+  "product_id": "1555610501179",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "decaf",
+   "organic",
+   "water processed",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Water Processed Decaf Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-water-processed-decaf-roast-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 80.0,
+    "title": "Default Title",
+    "variant_id": "14531842146363"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ },
+ {
+  "body_hash": "72541050837f4771",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-sunshine-organic-coffee-roasters-water-processed-decaf-espresso-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0095/1923/5131/products/IMG_2103.jpg?v=1629216480",
+  "platform": "shopify",
+  "product_id": "7047663091900",
+  "product_type": "",
+  "roaster_slug": "sunshineorganiccoffeeroasters",
+  "tags": [
+   "coffee",
+   "decaf",
+   "decaf espresso",
+   "espresso",
+   "organic",
+   "whole bean"
+  ],
+  "title": "5lb Sunshine Organic Coffee Roasters Water Processed Decaf Espresso Whole Bean",
+  "url": "https://sunshinecoffeeroasters.com/products/5lb-sunshine-organic-coffee-roasters-water-processed-decaf-espresso-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 80.0,
+    "title": "Default Title",
+    "variant_id": "40575981093052"
+   }
+  ],
+  "vendor": "Sunshine Organic Coffee Roasters"
+ }
+]

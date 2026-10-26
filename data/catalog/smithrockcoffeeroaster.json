@@ -1,0 +1,407 @@
+[
+ {
+  "body_hash": "221e324736789030",
+  "first_seen": "2026-10-26",
+  "handle": "v63hu5m4nk273fdp56lo9j5lf573av",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/4ae09fb6-5a05-4414-a772-65999fdbaa69/IMG_1695.jpg",
+  "platform": "squarespace",
+  "product_id": "6522ba27cefdc309c7a0a62e",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Medium Roast",
+   "Morning Bloom"
+  ],
+  "title": "Morning Bloom",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/v63hu5m4nk273fdp56lo9j5lf573av",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "1d407f1a-8a5a-4a15-b97a-aa85c5ad8d95"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (wholesale)",
+    "variant_id": "b2d2e8d1-2790-4b39-bf9f-f3e1516a4a85"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "c31563a4-60a4-409f-8973-7dab428b17b7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2aa84836171cfa3e",
+  "first_seen": "2026-10-26",
+  "handle": "ywg6rudxkngylevz8ipdj8dkyigaak",
+  "image": "https://static1.squarespace.com/static/65033cf6ea1b04216ec010f1/65034989f1bbc05551edb82c/65301411a2028366a6f61848/1791823880404/",
+  "platform": "squarespace",
+  "product_id": "65301411a2028366a6f61848",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Dark Roast",
+   "French Roast",
+   "Misery Ridge Blend"
+  ],
+  "title": "Misery Ridge Blend",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/ywg6rudxkngylevz8ipdj8dkyigaak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "4ed22a43-fe59-49ae-b08f-4b63cf4cb4b0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "7122816d-c4f0-4144-92fa-a4b23fde4d86"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "ea54203a-ce10-42af-b135-f15353dda65d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b9ce27fd5bdc7a2",
+  "first_seen": "2026-10-26",
+  "handle": "5mppu9q4w4xf9g3inxr74f6lw0i1v9",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/1696625980104-B9CQJBD81GJB30Y2MYU3/logo+with+contact+info.jpeg",
+  "platform": "squarespace",
+  "product_id": "6568fec7e1b4721e3d71ebb8",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Dark Roast",
+   "Guatemalan",
+   "Small Batch"
+  ],
+  "title": "Guatemalan",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/5mppu9q4w4xf9g3inxr74f6lw0i1v9",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "29a122ab-4a45-47d2-a32b-67123c784d5e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "c68e70c0-a596-4d36-94c1-4556a1ee5a8d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "eb01096b-e270-46c5-9b31-e7c94a474628"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8f843069a634551",
+  "first_seen": "2026-10-26",
+  "handle": "0y2a19umb120kvy0itkot9jjo0vr3x",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/1d0b500a-16e1-4bb9-8faf-e9f9c01bce9d/IMG_1692.jpg",
+  "platform": "squarespace",
+  "product_id": "6568ff50e1b4721e3d71ec27",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Medium Roast",
+   "Nicaraguan",
+   "Small Batch"
+  ],
+  "title": "Nicaraguan",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/0y2a19umb120kvy0itkot9jjo0vr3x",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "70bf2a85-b862-4aad-bf8a-38c13ab897e8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "cc0283c3-3547-43de-8263-312a0c292a6e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "f36b01cf-421d-446f-8388-aa1d7a7b9bff"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56db92368bb78ae1",
+  "first_seen": "2026-10-26",
+  "handle": "ghh65ok419q85dwhpt6hmdc1iqen4q",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/1e56de03-191e-4457-8eb9-e1abce703840/IMG_1691.jpg",
+  "platform": "squarespace",
+  "product_id": "656d00d5263fd234be04c5ed",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/ghh65ok419q85dwhpt6hmdc1iqen4q",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "3d6c155b-4e5e-43f1-90f5-4cc680cfc873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "3f44ee87-d78f-49fd-95ea-fe26395749bd"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "c3c18dbd-75d2-4489-8845-652821a5b161"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b23285c1ddc9319",
+  "first_seen": "2026-10-26",
+  "handle": "rqfnmrs4ayzd22adgwhj3nto4j0872",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/eb5bf806-aa9e-40f3-9f82-4aa402ac9ccf/IMG_1690.jpg",
+  "platform": "squarespace",
+  "product_id": "656d036586f859321413607d",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Golden Hour",
+   "Medium-dark Roast",
+   "Small Batch"
+  ],
+  "title": "Golden Hour",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/rqfnmrs4ayzd22adgwhj3nto4j0872",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "23a98256-f02b-43c0-a6c8-35fb8b0d817d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "65592a6f-4532-42a4-9cec-a1dedd589289"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "eb0f4557-6d84-4ef4-b542-e1e38fa583d1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "457f66d6c2b85f39",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/2a23fb8e-eb4e-4541-a6f4-504e9d3562a3/IMG_8809.jpeg",
+  "platform": "squarespace",
+  "product_id": "6578de29adc5af3d28dc502d",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Espress",
+   "Medium Roast",
+   "Small Batch"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "1ee6029f-b952-4d9c-ad03-d9368bcb1174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "59dab12e-932f-477b-be1c-d5df03f90f21"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "925d99da-db89-4759-b451-56aa580b6133"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2a14fd1a06aff76",
+  "first_seen": "2026-10-26",
+  "handle": "ywg6rudxkngylevz8ipdj8dkyigaak-rm2c4",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/031cb2f8-9e18-4254-b9cf-627f4af0d411/IMG_1688.jpg",
+  "platform": "squarespace",
+  "product_id": "675cd3d35bab46474143eb04",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Dark Roast",
+   "French Roast",
+   "Misery Ridge Blend"
+  ],
+  "title": "Decaf",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/ywg6rudxkngylevz8ipdj8dkyigaak-rm2c4",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "6783f18f-10d7-4c00-a3dd-2506053aa607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "b45decfa-598b-42cb-9d42-8c91796e6d7e"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "f9a3b3a3-a21d-4136-9274-c56358786bc4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c943873e7930588d",
+  "first_seen": "2026-10-26",
+  "handle": "0y2a19umb120kvy0itkot9jjo0vr3x-ll4b5",
+  "image": "https://images.squarespace-cdn.com/content/v1/65033cf6ea1b04216ec010f1/04da6c2e-7913-4f71-b679-972f0d348096/IMG_1687.jpg",
+  "platform": "squarespace",
+  "product_id": "684b19b6477988083d0079ce",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Medium Roast",
+   "Peruvian",
+   "Small Batch"
+  ],
+  "title": "Peruvian",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/0y2a19umb120kvy0itkot9jjo0vr3x-ll4b5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "7b4dddd4-6e93-419a-b9da-3b017dc7ca2e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "be755384-6c65-41a5-9364-2a8c4a148ef1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "e2e55bdb-d0a0-463a-8dcc-bdc7848f7e20"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b64f1a83da5b1dc3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-bfpw7",
+  "image": "https://static1.squarespace.com/static/65033cf6ea1b04216ec010f1/65034989f1bbc05551edb82c/684b1c629a1ef75b6585d3aa/1791824001484/",
+  "platform": "squarespace",
+  "product_id": "684b1c629a1ef75b6585d3aa",
+  "product_type": "",
+  "roaster_slug": "smithrockcoffeeroaster",
+  "tags": [
+   "Medium Roast",
+   "Mexico",
+   "Small Batch"
+  ],
+  "title": "Abuelit's Brew (Mexico)",
+  "url": "https://www.smithrockcoffeeroaster.com/shop/p/espresso-blend-bfpw7",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "078932a4-f53a-4e33-bfb1-0fb3407ff76c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "4bff87bb-3f09-4914-92ad-fcefadd6ec22"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb (Wholesale)",
+    "variant_id": "716da13b-06db-4c9c-90b4-21a325e3df6b"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,28 @@
+[
+ {
+  "body_hash": "3a7ccd5b73ca7266",
+  "first_seen": "2026-10-26",
+  "handle": "1-pound-bag-of-beyond-coffee",
+  "image": "https://beyondcoffeemaine.com/wp-content/uploads/2026/07/SingleBag.jpg",
+  "platform": "woocommerce",
+  "product_id": "17",
+  "product_type": "simple",
+  "roaster_slug": "beyondcoffee",
+  "tags": [
+   "beverage",
+   "beyond coffee"
+  ],
+  "title": "1-Pound Bag of Beyond Coffee",
+  "url": "https://beyondcoffeemaine.com/product/1-pound-bag-of-beyond-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.95,
+    "title": "1-Pound Bag of Beyond Coffee",
+    "variant_id": "17:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

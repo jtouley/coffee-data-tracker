@@ -1,0 +1,25 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cart-menu-honey",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9249328824469",
+  "product_type": "",
+  "roaster_slug": "lighthousecoffeeri",
+  "tags": [],
+  "title": "Sweet As Honey",
+  "url": "https://www.lighthousecoffeeri.com/products/cart-menu-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Default Title",
+    "variant_id": "47467452465301"
+   }
+  ],
+  "vendor": "Lighthouse Coffee Roasters"
+ }
+]

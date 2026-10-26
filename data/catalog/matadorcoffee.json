@@ -1,0 +1,393 @@
+[
+ {
+  "body_hash": "9c08694733f40263",
+  "first_seen": "2026-10-26",
+  "handle": "water-processed-decaf-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "00011",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.matadorcoffee.com/product-page/water-processed-decaf-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c77620d017fa164",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-sul-de-minas-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0004",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Brazilian Sul De Minas 1lb",
+  "url": "https://www.matadorcoffee.com/product-page/brazilian-sul-de-minas-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "02378f9d36d616ac",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0010",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Italian Espresso 1lb",
+  "url": "https://www.matadorcoffee.com/product-page/italian-espresso-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f21bca4d243362ba",
+  "first_seen": "2026-10-26",
+  "handle": "nau-jacked-blend-dark-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "094606d8dc33",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "NAU Jacked Blend Dark Roast",
+  "url": "https://www.matadorcoffee.com/product-page/nau-jacked-blend-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0696884e2840770c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0a849f7589cf",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.matadorcoffee.com/product-page/french-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f90fcdeba1f7e42e",
+  "first_seen": "2026-10-26",
+  "handle": "grand-canyon-blend-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2f6b0c4a23b1",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Grand Canyon Blend",
+  "url": "https://www.matadorcoffee.com/product-page/grand-canyon-blend-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4a6eab0bcb46e2c",
+  "first_seen": "2026-10-26",
+  "handle": "matador-20th-anniversary-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "512e5a1e64c8",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Matador 20th Anniversary Blend",
+  "url": "https://www.matadorcoffee.com/product-page/matador-20th-anniversary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1991357dd4cddff5",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7704e53a6fa3",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.matadorcoffee.com/product-page/breakfast-blend-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d34a07d80fa56eda",
+  "first_seen": "2026-10-26",
+  "handle": "traditional-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7e3ec4a0245c",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Traditional Espresso",
+  "url": "https://www.matadorcoffee.com/product-page/traditional-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ee90bac7b9399af",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "992744074d51",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Moka Java",
+  "url": "https://www.matadorcoffee.com/product-page/moka-java-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a2722040cf6441e",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged-coffee-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9c8fcce8b89c",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Whiskey Barrel Aged Coffee",
+  "url": "https://www.matadorcoffee.com/product-page/whiskey-barrel-aged-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec9f1cf57cd38502",
+  "first_seen": "2026-10-26",
+  "handle": "nau-jacked-blend-light-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a326c17a644c",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "NAU Jacked Blend Medium Roast",
+  "url": "https://www.matadorcoffee.com/product-page/nau-jacked-blend-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f21d0347b9c1bd5",
+  "first_seen": "2026-10-26",
+  "handle": "black-velvet-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d52366e9e590",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Black Velvet Blend",
+  "url": "https://www.matadorcoffee.com/product-page/black-velvet-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a4550d586ad3ac2",
+  "first_seen": "2026-10-26",
+  "handle": "red-rock-blend-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "db2939aea82a",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Red Rock Blend",
+  "url": "https://www.matadorcoffee.com/product-page/red-rock-blend-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca37879f930c7c23",
+  "first_seen": "2026-10-26",
+  "handle": "6-month-coffee-club-membership",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e340375843b1",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "6 Month Coffee Club Membership",
+  "url": "https://www.matadorcoffee.com/product-page/6-month-coffee-club-membership",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 288.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a45e125f26337b08",
+  "first_seen": "2026-10-26",
+  "handle": "route-66",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e67e73b193a3",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Route 66 100th Anniversary Blend",
+  "url": "https://www.matadorcoffee.com/product-page/route-66",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6f69bb36fc8f013",
+  "first_seen": "2026-10-26",
+  "handle": "northwest-rainier-dark-espresso-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ffb748451081",
+  "product_type": "",
+  "roaster_slug": "matadorcoffee",
+  "tags": [],
+  "title": "Dark Espresso",
+  "url": "https://www.matadorcoffee.com/product-page/northwest-rainier-dark-espresso-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

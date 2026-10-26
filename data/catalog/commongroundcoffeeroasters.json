@@ -1,0 +1,433 @@
+[
+ {
+  "body_hash": "b043aa71a7a804ba",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dark-roast",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2016/08/cafe-do-brasil-2.png",
+  "platform": "woocommerce",
+  "product_id": "1079",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Brazilian Coffee",
+   "Dark roast"
+  ],
+  "title": "Brazil dark roast",
+  "url": "https://commongroundcoffeeroasters.com/product/brazil-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1 Lbs",
+    "variant_id": "1079:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.99,
+    "title": "5 Lbs",
+    "variant_id": "1079:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/19.png",
+  "platform": "woocommerce",
+  "product_id": "1090",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "House blend"
+  ],
+  "title": "House blend",
+  "url": "https://commongroundcoffeeroasters.com/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 Lbs",
+    "variant_id": "1090:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 Lbs",
+    "variant_id": "1090:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/4.png",
+  "platform": "woocommerce",
+  "product_id": "1093",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Honduras"
+  ],
+  "title": "Honduras",
+  "url": "https://commongroundcoffeeroasters.com/product/honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 Lbs",
+    "variant_id": "1093:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 Lbs",
+    "variant_id": "1093:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/07/sumatra.png",
+  "platform": "woocommerce",
+  "product_id": "1096",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Honduras",
+   "Sumatra"
+  ],
+  "title": "Sumatra",
+  "url": "https://commongroundcoffeeroasters.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 Lbs",
+    "variant_id": "1096:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5 Lbs",
+    "variant_id": "1096:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "1099",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Guatemala"
+  ],
+  "title": "Guatemala",
+  "url": "https://commongroundcoffeeroasters.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 Lbs",
+    "variant_id": "1099:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5 Lbs",
+    "variant_id": "1099:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/5.png",
+  "platform": "woocommerce",
+  "product_id": "1105",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Organic Coffee",
+   "Organic`s"
+  ],
+  "title": "Decaf organic",
+  "url": "https://commongroundcoffeeroasters.com/product/decaf-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 Lbs",
+    "variant_id": "1105:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5 Lbs",
+    "variant_id": "1105:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/07/espresso5.png",
+  "platform": "woocommerce",
+  "product_id": "1108",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Espresso",
+   "Espresso Coffee"
+  ],
+  "title": "Espresso",
+  "url": "https://commongroundcoffeeroasters.com/product/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 Lbs",
+    "variant_id": "1108:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 Lbs",
+    "variant_id": "1108:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/1.png",
+  "platform": "woocommerce",
+  "product_id": "1111",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Organic Coffee",
+   "Organic`s",
+   "Peru",
+   "Peru organic"
+  ],
+  "title": "Peru organic",
+  "url": "https://commongroundcoffeeroasters.com/product/peru-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 Lbs",
+    "variant_id": "1111:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5 Lbs",
+    "variant_id": "1111:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/10.png",
+  "platform": "woocommerce",
+  "product_id": "1133",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Colombia",
+   "Colombia supremo",
+   "Ethiopian"
+  ],
+  "title": "Colombia supremo",
+  "url": "https://commongroundcoffeeroasters.com/product/colombia-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 Lbs",
+    "variant_id": "1133:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5 Lbs",
+    "variant_id": "1133:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b63879b104181a8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dark-roast-18-per-box",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2017/08/21.png",
+  "platform": "woocommerce",
+  "product_id": "1139",
+  "product_type": "simple",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Brazilian Coffee",
+   "Dark roast"
+  ],
+  "title": "Brazil dark roast – 18 per box",
+  "url": "https://commongroundcoffeeroasters.com/product/brazil-dark-roast-18-per-box/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "Brazil dark roast &#8211; 18 per box",
+    "variant_id": "1139:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b043aa71a7a804ba",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dark-roast-copy",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2021/10/9.png",
+  "platform": "woocommerce",
+  "product_id": "3515",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Brazilian Coffee",
+   "Dark roast"
+  ],
+  "title": "Brazil Medium Roast",
+  "url": "https://commongroundcoffeeroasters.com/product/brazil-dark-roast-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1 Lbs",
+    "variant_id": "3515:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.99,
+    "title": "5 Lbs",
+    "variant_id": "3515:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2026/04/6.png",
+  "platform": "woocommerce",
+  "product_id": "5708",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Mexican Coffee",
+   "Mexican organic",
+   "Mexico",
+   "Nayarity",
+   "Organic Coffee",
+   "Organic`s"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://commongroundcoffeeroasters.com/product/mexico-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 Lbs",
+    "variant_id": "5708:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 Lbs",
+    "variant_id": "5708:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aaf916528239811",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://commongroundcoffeeroasters.com/wp-content/uploads/2026/04/7.png",
+  "platform": "woocommerce",
+  "product_id": "5713",
+  "product_type": "variable",
+  "roaster_slug": "commongroundcoffeeroasters",
+  "tags": [
+   "Mexican Coffee",
+   "Mexican organic",
+   "Mexico",
+   "Nayarity",
+   "Organic Coffee",
+   "Organic`s"
+  ],
+  "title": "Nicaragua",
+  "url": "https://commongroundcoffeeroasters.com/product/nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 Lbs",
+    "variant_id": "5713:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 Lbs",
+    "variant_id": "5713:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

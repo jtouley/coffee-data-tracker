@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "843de78f9db83e02",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://blackwaterjava.com/wp-content/uploads/2024/10/dr.jpg",
+  "platform": "woocommerce",
+  "product_id": "136",
+  "product_type": "simple",
+  "roaster_slug": "blackwaterjava",
+  "tags": [],
+  "title": "Dark Roast",
+  "url": "https://blackwaterjava.com/product/dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Dark Roast",
+    "variant_id": "136:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e310c0fd430cbcb",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast",
+  "image": "https://blackwaterjava.com/wp-content/uploads/2024/10/MR.jpg",
+  "platform": "woocommerce",
+  "product_id": "137",
+  "product_type": "simple",
+  "roaster_slug": "blackwaterjava",
+  "tags": [],
+  "title": "Medium Roast",
+  "url": "https://blackwaterjava.com/product/medium-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Medium Roast",
+    "variant_id": "137:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e53fd68a95b859bb",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast",
+  "image": "https://blackwaterjava.com/wp-content/uploads/2024/10/lr.jpg",
+  "platform": "woocommerce",
+  "product_id": "149",
+  "product_type": "simple",
+  "roaster_slug": "blackwaterjava",
+  "tags": [],
+  "title": "Light Roast",
+  "url": "https://blackwaterjava.com/product/light-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Light Roast",
+    "variant_id": "149:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

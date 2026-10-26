@@ -1,0 +1,945 @@
+[
+ {
+  "body_hash": "bd9ad67c5e9d2684",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-powder",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/PNG-Papua-New-Guinea-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4446",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "P’NG",
+  "url": "https://www.pourcityroasters.com/product/coffee-powder/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4446:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4446:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4446:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4446:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4446:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4446:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4446:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4446:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4446:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4446:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4446:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4446:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ba608eac420b34d",
+  "first_seen": "2026-10-26",
+  "handle": "legender-medium-dark-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Legender-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4496",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Legender",
+  "url": "https://www.pourcityroasters.com/product/legender-medium-dark-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4496:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4496:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4496:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4496:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4496:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4496:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4496:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4496:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4496:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4496:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4496:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4496:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fedb059f6ff057c7",
+  "first_seen": "2026-10-26",
+  "handle": "yirga-medium-dark-roast-whole-beans",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Yirga-Ethiopia-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4502",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Yirga",
+  "url": "https://www.pourcityroasters.com/product/yirga-medium-dark-roast-whole-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4502:0"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4502:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto - Drip / Drip Machine",
+    "variant_id": "4502:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4502:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4502:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4502:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4502:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4502:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4502:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4502:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4502:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4502:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0ca0aaa1f249ccc",
+  "first_seen": "2026-10-26",
+  "handle": "kivu-dark-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Kivu-Rwanda-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4507",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Kivu",
+  "url": "https://www.pourcityroasters.com/product/kivu-dark-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4507:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4507:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4507:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4507:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4507:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4507:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4507:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4507:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4507:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4507:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4507:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4507:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0e5ad895a4a6f08",
+  "first_seen": "2026-10-26",
+  "handle": "aponte-light-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2025/08/Huila.jpg",
+  "platform": "woocommerce",
+  "product_id": "4512",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Huila",
+  "url": "https://www.pourcityroasters.com/product/aponte-light-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4512:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4512:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4512:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4512:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4512:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4512:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4512:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4512:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4512:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4512:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4512:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4512:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c630e232cb0d6ce",
+  "first_seen": "2026-10-26",
+  "handle": "sidamo-medium-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Sidamo-Ethiopia-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4524",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Sidamo",
+  "url": "https://www.pourcityroasters.com/product/sidamo-medium-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4524:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4524:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4524:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4524:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4524:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4524:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4524:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4524:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4524:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4524:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4524:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4524:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f96dd697a3887ee",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-whole-roasted-coffee-beans-medium-dark",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Decaf-Brazil-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4529",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://www.pourcityroasters.com/product/decaf-whole-roasted-coffee-beans-medium-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "4529:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "4529:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "4529:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "4529:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "4529:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "4529:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "4529:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "4529:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "4529:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "4529:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "4529:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "4529:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2b8becf5e7b8b31",
+  "first_seen": "2026-10-26",
+  "handle": "kaffe-french-press",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2025/08/Kaffe_French_Press_Coffee_Maker.webp",
+  "platform": "woocommerce",
+  "product_id": "5045",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee Making &amp; Accessories"
+  ],
+  "title": "Kaffe",
+  "url": "https://www.pourcityroasters.com/product/kaffe-french-press/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 765,
+    "price_usd": 34.99,
+    "title": "27 oz",
+    "variant_id": "5045:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c2d3ad0379290a4",
+  "first_seen": "2026-10-26",
+  "handle": "comsa-medium-light-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2025/10/Comsa-Honduras-All-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "7392",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Comsa",
+  "url": "https://www.pourcityroasters.com/product/comsa-medium-light-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "7392:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "7392:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "7392:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "7392:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "7392:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "7392:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "7392:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "7392:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "7392:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "7392:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "7392:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "7392:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "582526399740a6ce",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark-roast-whole-bean-coffee",
+  "image": "https://www.pourcityroasters.com/wp-content/uploads/2026/01/Sumatra-Indonesia-All.jpg",
+  "platform": "woocommerce",
+  "product_id": "7505",
+  "product_type": "variable",
+  "roaster_slug": "pourcityroasters",
+  "tags": [
+   "Shop Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.pourcityroasters.com/product/sumatra-dark-roast-whole-bean-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.5,
+    "title": "1/4 lb",
+    "variant_id": "7505:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.5,
+    "title": "1 lb",
+    "variant_id": "7505:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Auto Drip / Drip Machine",
+    "variant_id": "7505:10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Espresso",
+    "variant_id": "7505:11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.5,
+    "title": "5 lb",
+    "variant_id": "7505:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Whole Bean",
+    "variant_id": "7505:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "French Press",
+    "variant_id": "7505:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Pour Over / Drip",
+    "variant_id": "7505:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Moka Pot",
+    "variant_id": "7505:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Turkish",
+    "variant_id": "7505:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Cold Brew",
+    "variant_id": "7505:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Percolator",
+    "variant_id": "7505:9"
+   }
+  ],
+  "vendor": ""
+ }
+]

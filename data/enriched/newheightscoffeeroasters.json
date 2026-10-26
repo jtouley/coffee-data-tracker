@@ -1,0 +1,132 @@
+{
+ "11050393960615": {
+  "body_hash": "2fff1bbd4a2deefb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ruby red"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Java",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "11050394091687": {
+  "body_hash": "e01cf9f8b5b72f33",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "11050394157223": {
+  "body_hash": "9935b1dd08dc6918",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "11050394222759": {
+  "body_hash": "52f751d74b16bb08",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ruby red"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Java",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "11050394386599": {
+  "body_hash": "1e5d6f6df692efbf",
+  "elevation_masl_max": 1258,
+  "elevation_masl_min": 1258,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "white grape",
+   "caramel",
+   "papaya"
+  ],
+  "varietals": [
+   "Catuaí"
+  ]
+ },
+ "11188402454695": {
+  "body_hash": "3fc5c1d28a5b7997",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pricot",
+   "goji berry",
+   "brown sugar"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ }
+}

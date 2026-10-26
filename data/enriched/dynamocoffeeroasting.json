@@ -1,0 +1,193 @@
+{
+ "8584549105743": {
+  "body_hash": "498fb27fe7544547",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toasted nuts",
+   "citrus",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "8584549171279": {
+  "body_hash": "6172a5823e747d5c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "berry",
+   "dark chocolate",
+   "melon"
+  ],
+  "varietals": []
+ },
+ "8584549204047": {
+  "body_hash": "9d49e24922972952",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "carmel",
+   "almond",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "8584549269583": {
+  "body_hash": "f76aabf3ee2393b7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cocoa",
+   "toasted nuts",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "8584549302351": {
+  "body_hash": "7a764927e9d0307b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blueberry",
+   "honey",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "8584549367887": {
+  "body_hash": "89c86010c624150d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "sweet body",
+   "stone fruit",
+   "bright"
+  ],
+  "varietals": []
+ },
+ "8584549400655": {
+  "body_hash": "a08ed101a63278eb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "raisin",
+   "brown spice"
+  ],
+  "varietals": []
+ },
+ "8584549433423": {
+  "body_hash": "0f0ee0ceaba1162b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "robust",
+   "dark chocolate",
+   "smoke"
+  ],
+  "varietals": []
+ },
+ "9033591324751": {
+  "body_hash": "d848beb548bd9af5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smokey",
+   "bold",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "9069293207631": {
+  "body_hash": "bc6a91d404ea8ea0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "cinnamon",
+   "hibiscus"
+  ],
+  "varietals": []
+ }
+}

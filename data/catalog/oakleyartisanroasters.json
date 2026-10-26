@@ -1,0 +1,452 @@
+[
+ {
+  "body_hash": "3ec644894594fdaa",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/5fa137a6-3af7-44ca-96c7-62950cfa1f01/Costa_Rican.png",
+  "platform": "squarespace",
+  "product_id": "5f5f705af54b1d692850d7d8",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "0f24d33c-e8b7-4e9e-aa91-6fcabd5c59ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "82501c29-4dd2-42e2-8507-532ca584c279"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fea008eb31c3b250",
+  "first_seen": "2026-10-26",
+  "handle": "oakley-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/7d15cd5f-b02a-4e5a-9c85-a59ffa58c10b/Oakley_Blend.png",
+  "platform": "squarespace",
+  "product_id": "5f5f70f652f87c233cab901f",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Oakley Blend",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/oakley-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "904167f7-4ddd-4e19-9dda-692210ae20de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "e641af73-698c-4442-b341-ff070c9f97de"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2eabd68e7e03e79c",
+  "first_seen": "2026-10-26",
+  "handle": "blue-hour-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/e7a6b607-8b1d-4ee2-adfb-65fa2d3cb5f1/Blue_Hour_Blend.png",
+  "platform": "squarespace",
+  "product_id": "5f5f7129d871bb4ffc64ab20",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Blue Hour Blend",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/blue-hour-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "30359e79-01a7-452a-8bd1-741bdb6215a5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "fc21524e-1979-4e0a-a71a-39375e5108e5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f7336be4b5294b2b",
+  "first_seen": "2026-10-26",
+  "handle": "queen-city-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/d9285745-973d-407e-877a-bcfa9cf9db4c/Queen_City_Expresso.png",
+  "platform": "squarespace",
+  "product_id": "5f8860594d20d63f2f568754",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Queen City Espresso",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/queen-city-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "1b568320-99ff-4235-8fc9-90d3bcd428bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "f81a8c9d-dcbc-44f4-a9f1-0cf852e8db5a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "79b80fb0e865f576",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/5b6c561c-daad-41ea-a374-9ed9e39f2163/Moka_Java.png",
+  "platform": "squarespace",
+  "product_id": "5f88612da451ed07319d0f4a",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Moka Java",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/moka-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "795c6e72-af47-4019-aa3d-221780a9328c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "9f542e80-8d9d-47ad-abeb-7d7e7fdc5f6e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2dce58ddd90abb8e",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/9e2521ae-ed19-488d-bede-f858c02609aa/Decaf_Highlander_Grogg.png",
+  "platform": "squarespace",
+  "product_id": "5f8862237b06227ca86a71df",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "HIghlander Grogg (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/highlander-grogg-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "6d8c2f8c-2668-4356-aba7-bf2f887e5763"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "e2beed21-c7f7-44fc-8c2e-b2e1e6c0e527"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ceccc77d8bd424b",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/2365516e-00d5-4261-b35d-fb4ca6718022/Decaf_Cinnamon_Hazelnut.png",
+  "platform": "squarespace",
+  "product_id": "5f8862530ba66d097a7e9114",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Cinnamon Hazelnut (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/cinnamon-hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "4c2f8b2d-9fc0-494a-bc88-98ccea1ebdb3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "7c2f4109-3f3f-4341-8886-80738e210308"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a4bc459d2dd1ecc",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/dbcf3c79-9b83-4281-a43c-d4213595d90a/Decaf_Caramel.png",
+  "platform": "squarespace",
+  "product_id": "5f88627503c3291d747735a0",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Caramel (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/caramel-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "23413c55-7d27-4d33-a721-f28045d5c44f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "c8a6d8bf-c99f-47e6-9117-9c3eec5a8e2f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84c593a38d020892",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/b8819d48-0333-4dc8-95b8-c0d0b4a1c108/Decaf_Blueberry.png",
+  "platform": "squarespace",
+  "product_id": "5f88629403c3291d74773ba1",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Blueberry (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/blueberry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "794bad36-d731-49ac-95b2-291d191e7922"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "f0758d34-fe7f-4bc3-a63f-7349fdeaaf05"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e404d07fb6d11e45",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-cream-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/73178ac5-14d2-4de2-b986-6601edf30a11/Decaf_Vanilla_Cream.png",
+  "platform": "squarespace",
+  "product_id": "5f8862b03d17c33baeddb0fc",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Vanilla Cream (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/vanilla-cream-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "16450a20-3354-4152-87cf-7ae2cb269918"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "54dee4cd-8f86-49fa-b1c8-96c8ef2b0b36"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d0167378c98b7f5",
+  "first_seen": "2026-10-26",
+  "handle": "spiced-almond-toffee-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/4346f591-a1da-4d32-8370-292fa0873938/Decaf_Spiced_Almond_Toffee.png",
+  "platform": "squarespace",
+  "product_id": "5f8862c99b4b5f2b64a90629",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Spiced Almond Toffee (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/spiced-almond-toffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "72cbb47d-a64c-40b1-b4d3-98d50a622a68"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "ee0b8c6e-7be8-4d92-8c27-0962f69fe832"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0d14c9230738e4e",
+  "first_seen": "2026-10-26",
+  "handle": "appalachian-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/442f68c3-191f-4fb5-bf1c-7b80d52fad1c/Appalachian_Blend.png",
+  "platform": "squarespace",
+  "product_id": "5fa5347d782875020ebf892e",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Appalachian Blend",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/appalachian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Whole",
+    "variant_id": "af9a2ac9-7c38-48f5-b8e4-1d0902987d5f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "e9c68226-d78d-4bcd-a70f-5b3daacb7b26"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f34425f8b532d799",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-1718-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/53b4914f-c8dd-4b1d-8189-a0cece09dfea/Decaf_Brazil.png",
+  "platform": "squarespace",
+  "product_id": "675754dfaa0e1e29e27f9a43",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Brazilian 17/18 (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/brazilian-1718-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.5,
+    "title": "Ground",
+    "variant_id": "4638bd8c-4c22-4a22-a754-9ce3ae0a7e67"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.5,
+    "title": "Whole",
+    "variant_id": "d66bc436-e7e8-49f0-881d-ed3d7ff54c7c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e51ffbda9423707d",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-cherry-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/fcdc0905-a3c7-4798-92e8-4deadbc3602d/Decaf_Chocolate_covered_Cherry.png",
+  "platform": "squarespace",
+  "product_id": "67575783aa0e1e29e27f9da4",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Chocolate Covered Cherry (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/chocolate-covered-cherry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "a49d6030-7f9f-4412-b917-e29ed9c4e0b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "f2748f24-59fe-4d9c-85db-e493ee31747a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d9f27bc51c9afd8",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f4e50de5bcc4130f1fd0462/313e13ff-1911-4e70-93e7-17b541aaa28a/Decaf_Chocolate_Raspberry.png",
+  "platform": "squarespace",
+  "product_id": "67e0145d6d2b5904d0d11b01",
+  "product_type": "",
+  "roaster_slug": "oakleyartisanroasters",
+  "tags": [],
+  "title": "Chocolate Raspberry (Decaf)",
+  "url": "https://www.oakleyartisanroasters.com/shop/p/chocolate-raspberry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "27794f07-5ba0-46fb-9df0-d791a82e9158"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole",
+    "variant_id": "b54b3c2d-c757-4b8d-91db-32f085f46b05"
+   }
+  ],
+  "vendor": ""
+ }
+]

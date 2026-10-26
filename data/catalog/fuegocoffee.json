@@ -1,0 +1,261 @@
+[
+ {
+  "body_hash": "6c9ef92b9325c4c4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0605/0978/2201/products/Bag_of_Beans.jpg?v=1644420438",
+  "platform": "shopify",
+  "product_id": "7211173740729",
+  "product_type": "Coffee",
+  "roaster_slug": "fuegocoffee",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://fuegocoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41912370626745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41912370659513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium / 12 oz",
+    "variant_id": "41912370692281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "41912370725049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 lb",
+    "variant_id": "41912370757817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5 lb",
+    "variant_id": "41912370790585"
+   }
+  ],
+  "vendor": "Fuego Coffee Roasters"
+ },
+ {
+  "body_hash": "cfe04856a188e12a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0605/0978/2201/products/Bag_of_Beans_155bcd3c-5b96-45c0-b220-27407f331d1f.jpg?v=1644420440",
+  "platform": "shopify",
+  "product_id": "7211173773497",
+  "product_type": "Coffee",
+  "roaster_slug": "fuegocoffee",
+  "tags": [],
+  "title": "Ethiopia Uraga",
+  "url": "https://fuegocoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41912370823353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41912370856121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / 12 oz",
+    "variant_id": "41912370888889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "41912370921657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse / 5 lb",
+    "variant_id": "41912370954425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / 5 lb",
+    "variant_id": "41912370987193"
+   }
+  ],
+  "vendor": "Fuego Coffee Roasters"
+ },
+ {
+  "body_hash": "1de2b38f0848c0ad",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-belvedere",
+  "image": "https://cdn.shopify.com/s/files/1/0605/0978/2201/products/Bag_of_Beans_e2e4616f-a647-480f-b510-2a5f1f0db305.jpg?v=1644420442",
+  "platform": "shopify",
+  "product_id": "7211173806265",
+  "product_type": "Coffee",
+  "roaster_slug": "fuegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "El Salvador Belvedere",
+  "url": "https://fuegocoffee.com/products/el-salvador-belvedere",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41912371019961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41912371052729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12 oz",
+    "variant_id": "41912371085497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "41912371118265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Coarse / 5 lb",
+    "variant_id": "41912371151033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Medium / 5 lb",
+    "variant_id": "41912371183801"
+   }
+  ],
+  "vendor": "Fuego Coffee Roasters"
+ },
+ {
+  "body_hash": "889bf6cda26606ad",
+  "first_seen": "2026-10-26",
+  "handle": "bear-claw-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0605/0978/2201/products/Bag_of_Beans_9894ee9e-309e-4e1b-9ee3-d67f3a840428.jpg?v=1644420451",
+  "platform": "shopify",
+  "product_id": "7211174002873",
+  "product_type": "Coffee",
+  "roaster_slug": "fuegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Bear Claw Blend",
+  "url": "https://fuegocoffee.com/products/bear-claw-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41912372035769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41912372068537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium / 12 oz",
+    "variant_id": "41912372101305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "41912372134073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 lb",
+    "variant_id": "41912372166841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5 lb",
+    "variant_id": "41912372199609"
+   }
+  ],
+  "vendor": "Fuego Coffee Roasters"
+ },
+ {
+  "body_hash": "bdc09709cccdae17",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-condor-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0605/0978/2201/files/Bag_of_Beans_ace2fda8-ec8c-4c56-ae34-e2a663b1c121.jpg?v=1713980856",
+  "platform": "shopify",
+  "product_id": "8008572633273",
+  "product_type": "Coffee",
+  "roaster_slug": "fuegocoffee",
+  "tags": [],
+  "title": "Colombia Condor decaf",
+  "url": "https://fuegocoffee.com/products/colombia-condor-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44567959699641"
+   }
+  ],
+  "vendor": "Fuego Coffee Roasters"
+ }
+]

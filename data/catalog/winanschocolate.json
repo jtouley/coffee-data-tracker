@@ -1,0 +1,2168 @@
+[
+ {
+  "body_hash": "f43ab14a62560534",
+  "first_seen": "2026-10-26",
+  "handle": "blackberry-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANSBLACKBERRYBOURBON-3655x3655-8724b6f.jpg?v=1699579961",
+  "platform": "shopify",
+  "product_id": "10626409300286",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored",
+   "holiday beans"
+  ],
+  "title": "Blackberry Bourbon",
+  "url": "https://winanschocolate.com/products/blackberry-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "47854887338302"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "47854887371070"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "47854887403838"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "47854887436606"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "624e0f611b246346",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANSCOFFEEBAGKENYAAA-3655x3655-525bf46.jpg?v=1743798705",
+  "platform": "shopify",
+  "product_id": "11371277091134",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All coffee",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Kenya AA",
+  "url": "https://winanschocolate.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "50314138550590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Medium Grind (drip coffee maker)",
+    "variant_id": "50314138583358"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Fine Grind (espresso machine/pour over)",
+    "variant_id": "50314138616126"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Course Grind (french press/cold brew)",
+    "variant_id": "50314138648894"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "20a71f833b92164b",
+  "first_seen": "2026-10-26",
+  "handle": "no-2-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/TastingNotes-NoText-No.2.jpg?v=1747836823",
+  "platform": "shopify",
+  "product_id": "11794136465726",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Winans No. 2 Signature Blend",
+  "url": "https://winanschocolate.com/products/no-2-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Coarse",
+    "variant_id": "51402993959230"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Medium",
+    "variant_id": "51402993991998"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Fine",
+    "variant_id": "51402994024766"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "51553727709502"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "f86eafc067009c8d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-farm-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/TastingNotes-NoText-Guatemala.jpg?v=1773019653",
+  "platform": "shopify",
+  "product_id": "11811757719870",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All coffee",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Guatemalan Farm Blend",
+  "url": "https://winanschocolate.com/products/guatemalan-farm-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Coarse",
+    "variant_id": "51402996908350"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Medium",
+    "variant_id": "51402996941118"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Fine",
+    "variant_id": "51402996973886"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "51553729806654"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "bbc49427155fbd9f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-dulce",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/TastingNotes-NoText-ElDulce.jpg?v=1747836737",
+  "platform": "shopify",
+  "product_id": "11811762274622",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All coffee",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Colombia El Dulce",
+  "url": "https://winanschocolate.com/products/colombia-el-dulce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Coarse",
+    "variant_id": "51403006673214"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Medium",
+    "variant_id": "51403006705982"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Fine",
+    "variant_id": "51403006738750"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "51553727578430"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "554139f98af5a45f",
+  "first_seen": "2026-10-26",
+  "handle": "winans-blend-fresh-cups-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_fresh_cups_Winans_Blend.png?v=1689967294",
+  "platform": "shopify",
+  "product_id": "12036392190270",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "decaf",
+   "fresh-cups"
+  ],
+  "title": "Winans Blend Fresh Cups Decaf",
+  "url": "https://winanschocolate.com/products/winans-blend-fresh-cups-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "52225015906622"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "fbd44f1885c63651",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-cafe-jesus-martin",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WInans_PinkBourbon.jpg?v=1762886804",
+  "platform": "shopify",
+  "product_id": "12044277645630",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All coffee",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Pink Bourbon - Cafe Jesus Martin",
+  "url": "https://winanschocolate.com/products/pink-bourbon-cafe-jesus-martin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.95,
+    "title": "Whole Bean",
+    "variant_id": "52542187110718"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "a55cd5c3f0ed5507",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_5_POUND_BAG-4.jpg?v=1773019653",
+  "platform": "shopify",
+  "product_id": "12289414463806",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Colombia El Dulce",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099975442750"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "4b9a8c6109d44a9a",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-2",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_5_POUND_BAG-4.jpg?v=1773019653",
+  "platform": "shopify",
+  "product_id": "12289415151934",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Guatemalan Farm Blend",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099981504830"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "db5445e7fb9e9827",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-3",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGkenyaaa_2b6922f1-e118-4a26-9a77-1f3f0888e0ba.png?v=1773019566",
+  "platform": "shopify",
+  "product_id": "12289415184702",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Kenya AA",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099981537598"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "16e0c6d5ca9cbde1",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-6",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGcostaricacosecha.png?v=1773019232",
+  "platform": "shopify",
+  "product_id": "12289415283006",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Costa Rica Pico de Cosecha",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-6",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099981635902"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "91880dc21f926969",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-7",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGindonesiabalibluemoon.png?v=1773019205",
+  "platform": "shopify",
+  "product_id": "12289415315774",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Indonesian Bali Blue Moon",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-7",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099981668670"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "e2617b2a822044b9",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-single-origin-coffee-beans-8",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGethiopiayirg.png?v=1773019086",
+  "platform": "shopify",
+  "product_id": "12289415348542",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "5 lb. Ethiopia Yirgacheffe",
+  "url": "https://winanschocolate.com/products/5-lb-single-origin-coffee-beans-8",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53099981898046"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "c5f33892516d7678",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-no-2-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_5_POUND_BAG-4.jpg?v=1773019653",
+  "platform": "shopify",
+  "product_id": "12290114453822",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Winans No. 2 Signature Blend",
+  "url": "https://winanschocolate.com/products/5-lb-no-2-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53105947443518"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53105947476286"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "b68a4bc58114c4bd",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-seattle-full-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGseattle.png?v=1773018945",
+  "platform": "shopify",
+  "product_id": "12290129854782",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Seattle Full City Blend",
+  "url": "https://winanschocolate.com/products/5-lb-seattle-full-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53105973756222"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "b22264022eb9628f",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-mokka-java-traditional-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGmokkajava.png?v=1773018928",
+  "platform": "shopify",
+  "product_id": "12290133721406",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Mokka Java Traditional Blend",
+  "url": "https://winanschocolate.com/products/5-lb-mokka-java-traditional-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53105990500670"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "235fa22a0d37122c",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-espresso-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGEspressoBlend.png?v=1773018913",
+  "platform": "shopify",
+  "product_id": "12290136179006",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Espresso House Blend",
+  "url": "https://winanschocolate.com/products/5-lb-espresso-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53106004394302"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "fd4a56b1cce529ba",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-winans-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGwinansblend.png?v=1773018740",
+  "platform": "shopify",
+  "product_id": "12290138145086",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Winans Signature House Blend",
+  "url": "https://winanschocolate.com/products/5-lb-winans-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106688393534"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106688426302"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "28de556880119389",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-five-o-five",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGfive-o-five.png?v=1773018715",
+  "platform": "shopify",
+  "product_id": "12290139193662",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Five O-Five",
+  "url": "https://winanschocolate.com/products/5-lb-five-o-five",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53106017763646"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "290874a57e4d2e82",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-carriage-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGCarriageHouse.png?v=1773018694",
+  "platform": "shopify",
+  "product_id": "12290140471614",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "5 lb. Carriage House Blend",
+  "url": "https://winanschocolate.com/products/5-lb-carriage-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Default Title",
+    "variant_id": "53106038079806"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "61de186e9ce550e3",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-blackberry-bourbon-1",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGblackberrybourbon.png?v=1773018665",
+  "platform": "shopify",
+  "product_id": "12290227372350",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Blackberry Bourbon",
+  "url": "https://winanschocolate.com/products/5-lb-blackberry-bourbon-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106698125630"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106698158398"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "4141ca205f76c86e",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-buckeye-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGbuckeyeblend.png?v=1773018650",
+  "platform": "shopify",
+  "product_id": "12290236907838",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Buckeye Blend",
+  "url": "https://winanschocolate.com/products/5-lb-buckeye-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106776998206"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106777030974"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "42f0d0a453a9fd48",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-caramel-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGcaramelcream.png?v=1773018634",
+  "platform": "shopify",
+  "product_id": "12290242314558",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Caramel Cream",
+  "url": "https://winanschocolate.com/products/5-lb-caramel-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106802032958"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106802098494"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "9e1b47df5ecb394a",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-campfire-smores",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGcampfires_mores.png?v=1773018515",
+  "platform": "shopify",
+  "product_id": "12290244116798",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Campfire S'mores",
+  "url": "https://winanschocolate.com/products/5-lb-campfire-smores",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "53106818548030"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "53106818613566"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "b6581e7403a54fd5",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-cashew-butter-crunch",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGcashewbuttercrunch.png?v=1773018500",
+  "platform": "shopify",
+  "product_id": "12290252308798",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Cashew Butter Crunch",
+  "url": "https://winanschocolate.com/products/5-lb-cashew-butter-crunch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "53106885198142"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "53106885263678"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "397c28b041a4dd59",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-chocolate-swiss-almond",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGchocolateswissalmond.png?v=1773018481",
+  "platform": "shopify",
+  "product_id": "12290254766398",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Chocolate Swiss Almond",
+  "url": "https://winanschocolate.com/products/5-lb-chocolate-swiss-almond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106901745982"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106901811518"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "7d981b3df9db7e83",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-highlander-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGhighlanergrogg.png?v=1773018382",
+  "platform": "shopify",
+  "product_id": "12290256568638",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Highlander Grogg",
+  "url": "https://winanschocolate.com/products/5-lb-highlander-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "53106908037438"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "53106908102974"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "3243ce368a2c08c9",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-maine-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGmaineblueberry.png?v=1773018352",
+  "platform": "shopify",
+  "product_id": "12290258075966",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Maine Blueberry",
+  "url": "https://winanschocolate.com/products/5-lb-maine-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106914754878"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106914820414"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "7b282b7c868cc819",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-snikkerdoodle",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGsnikkerdoodle_ec8290bf-12c7-4a23-804a-1f52ef5b7ac9.png?v=1773018358",
+  "platform": "shopify",
+  "product_id": "12290259419454",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Snikkerdoodle",
+  "url": "https://winanschocolate.com/products/5-lb-snikkerdoodle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "53106921636158"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Medium",
+    "variant_id": "53106921668926"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "53106921701694"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Medium",
+    "variant_id": "53106921734462"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "33a2b28edc309f9a",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-toasted-almond-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGtoastedalmondcream.png?v=1773018226",
+  "platform": "shopify",
+  "product_id": "12290260762942",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Toasted Almond Cream",
+  "url": "https://winanschocolate.com/products/5-lb-toasted-almond-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "53106933432638"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "53106933498174"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular / Medium",
+    "variant_id": "53982630052158"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf / Medium",
+    "variant_id": "53982630084926"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "84c514ef10adc0c7",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-shortbread-cookie",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGshortbreadcookie.png?v=1773018191",
+  "platform": "shopify",
+  "product_id": "12290261418302",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Shortbread Cookie",
+  "url": "https://winanschocolate.com/products/5-lb-shortbread-cookie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106941657406"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106941722942"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "a53b43d1f80581b4",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-pecan-praline-brulee",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans5POUNDBAGpecanpralinebrulee.png?v=1773018456",
+  "platform": "shopify",
+  "product_id": "12290262499646",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "5 lb. Pecan Praline Brûlée",
+  "url": "https://winanschocolate.com/products/5-lb-pecan-praline-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Regular",
+    "variant_id": "53106975572286"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 94.95,
+    "title": "Decaf",
+    "variant_id": "53106975637822"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "9c9350ac6869bd50",
+  "first_seen": "2026-10-26",
+  "handle": "volcanic-bloom",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/VolcanicBloom.jpg?v=1790169193",
+  "platform": "shopify",
+  "product_id": "12618323132734",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [],
+  "title": "Volcanic Bloom",
+  "url": "https://winanschocolate.com/products/volcanic-bloom",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 39.95,
+    "title": "Default Title",
+    "variant_id": "54498352791870"
+   }
+  ],
+  "vendor": "Winans Coffee & Chocolate"
+ },
+ {
+  "body_hash": "aa4c702b742f50b5",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Screenshot_12-10-2026_16107_docs.google.com.jpg?v=1791835814",
+  "platform": "shopify",
+  "product_id": "12654920532286",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [],
+  "title": "Caramel Apple",
+  "url": "https://winanschocolate.com/products/caramel-apple",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "54603792548158"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "54603792580926"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine/ pour over)",
+    "variant_id": "54603792613694"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "54603792646462"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "13828ba7d0a09758",
+  "first_seen": "2026-10-26",
+  "handle": "carriage-house",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_CARRIAGE_HOUSE_BLEND.jpg?v=1743799061",
+  "platform": "shopify",
+  "product_id": "8317055926590",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Carriage House Blend",
+  "url": "https://winanschocolate.com/products/carriage-house",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631511986494"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631512019262"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631512052030"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631512084798"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "d9c6fd5f11c590bb",
+  "first_seen": "2026-10-26",
+  "handle": "five-o-five",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_FIVE_O_FIVE.jpg?v=1743799027",
+  "platform": "shopify",
+  "product_id": "8317056319806",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Five O-Five",
+  "url": "https://winanschocolate.com/products/five-o-five",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631620219198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631620251966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631620284734"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631620317502"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "06b8ac809b07ab8e",
+  "first_seen": "2026-10-26",
+  "handle": "winans-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_WINANS_BLEND.jpg?v=1743799007",
+  "platform": "shopify",
+  "product_id": "8317056713022",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Winans Signature House Blend",
+  "url": "https://winanschocolate.com/products/winans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631380291902"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631380324670"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45631380357438"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45631380390206"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631480135998"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631480168766"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631480201534"
+   },
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45631480234302"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "50c70b3bccd11012",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_ETHIOPIA_YIRGACHEFFE.png?v=1743798205",
+  "platform": "shopify",
+  "product_id": "8317059858750",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://winanschocolate.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631706825022"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631706857790"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631706890558"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631706923326"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "845ee8f43614bb08",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_INDONESIA_BALI_BLUE_MOON.png?v=1743798466",
+  "platform": "shopify",
+  "product_id": "8317060677950",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "Indonesian Bali Blue Moon",
+  "url": "https://winanschocolate.com/products/indonesian-bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671356989758"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671357022526"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671357055294"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671357088062"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "f6e0c4cbcfabbfba",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-cups-single-serve",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/1134877936.jpg?v=1775582623",
+  "platform": "shopify",
+  "product_id": "8345982894398",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "fresh-cups"
+  ],
+  "title": "Highlander Grogg Fresh Cups",
+  "url": "https://winanschocolate.com/products/fresh-cups-single-serve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 771,
+    "price_usd": 17.95,
+    "title": "Decaf",
+    "variant_id": "53999586246974"
+   },
+   {
+    "available": true,
+    "grams": 771,
+    "price_usd": 17.95,
+    "title": "Regular",
+    "variant_id": "53999586279742"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "2f92f11791abab21",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-cherry-cordials-with-watershed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_bourbon_cherries-1.jpg?v=1687984105",
+  "platform": "shopify",
+  "product_id": "8347334967614",
+  "product_type": "Chocolate",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All Chocolate",
+   "all-gifts",
+   "buckeyes-cherries",
+   "milk-dark-chocolates"
+  ],
+  "title": "Watershed Bourbon Cherry Cordials",
+  "url": "https://winanschocolate.com/products/bourbon-cherry-cordials-with-watershed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 39.95,
+    "title": "Milk And Dark Assortment / 15 piece Gift Box",
+    "variant_id": "45429162967358"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 14.95,
+    "title": "Milk And Dark Assortment / 6 Piece Gift Box",
+    "variant_id": "51674033193278"
+   }
+  ],
+  "vendor": "Winans Handcrafted Chocolate"
+ },
+ {
+  "body_hash": "9d323f938941f3bc",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-dried-cherries",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_CHOC_CHERRIES_POUCH-1.jpg?v=1697912513",
+  "platform": "shopify",
+  "product_id": "8347452145982",
+  "product_type": "Chocolate",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All Chocolate",
+   "Chocolate Covered Treats",
+   "candy-treats",
+   "stocking stuffers"
+  ],
+  "title": "Chocolate Covered Dried Cherries",
+  "url": "https://winanschocolate.com/products/chocolate-covered-dried-cherries",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 13.95,
+    "title": "Default Title",
+    "variant_id": "45429585576254"
+   }
+  ],
+  "vendor": "Winans Handcrafted Chocolate"
+ },
+ {
+  "body_hash": "dff1d7a0f446b4bd",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Espresso_Beans_-_Milk_and_Dark.jpg?v=1763389541",
+  "platform": "shopify",
+  "product_id": "8347460337982",
+  "product_type": "Chocolate",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "All Chocolate",
+   "Chocolate Covered Treats",
+   "candy-treats",
+   "stocking stuffers"
+  ],
+  "title": "Chocolate Covered Espresso Beans",
+  "url": "https://winanschocolate.com/products/chocolate-covered-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 6.95,
+    "title": "Milk",
+    "variant_id": "45429675262270"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 6.95,
+    "title": "Dark",
+    "variant_id": "45429675295038"
+   }
+  ],
+  "vendor": "Winans Handcrafted Chocolate"
+ },
+ {
+  "body_hash": "5982727303952efb",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAG_ESPRESSO_BLEND.jpg?v=1743799082",
+  "platform": "shopify",
+  "product_id": "8396490375486",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Espresso House Blend",
+  "url": "https://winanschocolate.com/products/espresso-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631548981566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631549014334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631549047102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631549079870"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "5457baf4eab93cc4",
+  "first_seen": "2026-10-26",
+  "handle": "mokka-java-traditional-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/Winans_Mokka_Java_1.jpg?v=1743798985",
+  "platform": "shopify",
+  "product_id": "8396496634174",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Mokka Java Traditional Blend",
+  "url": "https://winanschocolate.com/products/mokka-java-traditional-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631580733758"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631580766526"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631580799294"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631580832062"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "3f16c42648d1e517",
+  "first_seen": "2026-10-26",
+  "handle": "seattle-full-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_SEATTLE_FULL_CITY_BLEND.png?v=1743799045",
+  "platform": "shopify",
+  "product_id": "8396503515454",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "blends",
+   "coffee"
+  ],
+  "title": "Seattle Full City Blend",
+  "url": "https://winanschocolate.com/products/seattle-full-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45631608291646"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45631608324414"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45631608357182"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45631608389950"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "4c9fd4e815f52264",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-pico-de-cosecha",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_COFFEE_BAGS_COSTA_RICA_COSECHA.jpg?v=1743798305",
+  "platform": "shopify",
+  "product_id": "8396519047486",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "Costa Rica Pico de Cosecha",
+  "url": "https://winanschocolate.com/products/costa-rica-pico-de-cosecha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671289848126"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671289880894"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671289913662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671289946430"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "5d738cc0ceb07ba1",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_SNIKKERDOODLE.png?v=1743798547",
+  "platform": "shopify",
+  "product_id": "8405741601086",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Snikkerdoodle",
+  "url": "https://winanschocolate.com/products/snickerdoodle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671035175230"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671035207998"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671035240766"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671035273534"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45671035306302"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45671035339070"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671035371838"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45671035404606"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "2e491f80fe51bb63",
+  "first_seen": "2026-10-26",
+  "handle": "maine-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_MAINE_BLUEBERRY.jpg?v=1743798629",
+  "platform": "shopify",
+  "product_id": "8405742518590",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Maine Blueberry",
+  "url": "https://winanschocolate.com/products/maine-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671037960510"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671037993278"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671038026046"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671038058814"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45671038091582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45671038124350"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671038157118"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45671038189886"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "61594b7b62f5fd16",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_HIGHLANDER_GROGG.jpg?v=1743798800",
+  "platform": "shopify",
+  "product_id": "8405744288062",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://winanschocolate.com/products/highlander-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671064371518"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671064404286"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671064437054"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671064469822"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45671064502590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45671064535358"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671064568126"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45671064600894"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "77671494ec24c75a",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_CARAMEL_CREAM.jpg?v=1743798896",
+  "platform": "shopify",
+  "product_id": "8405753168190",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Caramel Cream",
+  "url": "https://winanschocolate.com/products/caramel-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 372,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671102546238"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671102579006"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671102611774"
+   },
+   {
+    "available": true,
+    "grams": 822,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671102644542"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45671102677310"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45671102710078"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671102742846"
+   },
+   {
+    "available": true,
+    "grams": 820,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45671102775614"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "776417025088cad4",
+  "first_seen": "2026-10-26",
+  "handle": "buckeye-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_BUCKEYE_BLEND.jpg?v=1743798915",
+  "platform": "shopify",
+  "product_id": "8405760966974",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Buckeye Blend",
+  "url": "https://winanschocolate.com/products/buckeye-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "45671127417150"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "45671127449918"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671127482686"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "45671127515454"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "45671127548222"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Medium Grind (drip coffee maker)",
+    "variant_id": "45671127580990"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Fine Grind (espresso machine / pour over)",
+    "variant_id": "45671127613758"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Decaf / Course Grind (french press/cold brew)",
+    "variant_id": "45671127646526"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "6624bc6e19e4298c",
+  "first_seen": "2026-10-26",
+  "handle": "winans-blend-fresh-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/1134877892.jpg?v=1775582661",
+  "platform": "shopify",
+  "product_id": "8405813657918",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "fresh-cups"
+  ],
+  "title": "Winans Signature Blend Fresh Cups",
+  "url": "https://winanschocolate.com/products/winans-blend-fresh-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "45671426621758"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ },
+ {
+  "body_hash": "5bbe0c1d9da6d9d9",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0761/9071/2126/files/WINANS_PUMPKIN_SPICE.jpg?v=1743798612",
+  "platform": "shopify",
+  "product_id": "9804669419838",
+  "product_type": "Coffee",
+  "roaster_slug": "winanschocolate",
+  "tags": [
+   "coffee",
+   "flavored"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://winanschocolate.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Whole Bean",
+    "variant_id": "46901480587582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Medium Grind (drip coffee maker)",
+    "variant_id": "46901480751422"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Fine Grind (espresso machine / pour over)",
+    "variant_id": "46901480784190"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Regular / Course Grind (french press/cold brew)",
+    "variant_id": "46901480816958"
+   }
+  ],
+  "vendor": "Winans Coffee Roasters"
+ }
+]

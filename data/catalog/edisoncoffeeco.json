@@ -1,0 +1,1661 @@
+[
+ {
+  "body_hash": "9462ecfbe9202451",
+  "first_seen": "2026-10-26",
+  "handle": "telegraph-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Telegraph_305f7e3f-2e0f-42a2-9de7-d387068a8977.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10064847864048",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Telegraph Blend",
+  "url": "https://edisoncoffeeco.com/products/telegraph-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49859230466288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49859230630128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49859230793968"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49859311436016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49859311468784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49859311501552"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49868684329200"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49868684361968"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49868684394736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49868684427504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49868684460272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49868684493040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49868684525808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49868684558576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49868684591344"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "af90d6059a2e121e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-piragua-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/La_Piragua.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10069188346096",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Colombia - La Piragua Natural",
+  "url": "https://edisoncoffeeco.com/products/colombia-la-piragua-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49873398366448"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49873398399216"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49873398431984"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49873398464752"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49873398497520"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49873398530288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49873398563056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49873398595824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49873398628592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49873398661360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49873398694128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.25,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49873398726896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.25,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49873398759664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.25,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49873398792432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.25,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49873398825200"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "722f730fda896138",
+  "first_seen": "2026-10-26",
+  "handle": "phonograph-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Phonograph.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10069191426288",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Phonograph Blend",
+  "url": "https://edisoncoffeeco.com/products/phonograph-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49873410326768"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49873410359536"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49873410392304"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49873410425072"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49873410457840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49873410490608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49873410523376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49873410556144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49873410588912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49873410621680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49873410654448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49873410687216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49873410719984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.75,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49873410752752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.75,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49873410785520"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "ea1a6295ef163da1",
+  "first_seen": "2026-10-26",
+  "handle": "luminary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Luminary.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10086997098736",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Luminary Blend",
+  "url": "https://edisoncoffeeco.com/products/luminary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981298245872"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981298278640"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981298311408"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981298344176"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981298376944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981298409712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981298442480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981298475248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981298508016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981298540784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981298573552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.25,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981298606320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.25,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981298639088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.25,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981298671856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.25,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981298704624"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "0852e9ade36bec34",
+  "first_seen": "2026-10-26",
+  "handle": "frequency-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Frequency.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10086999261424",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Frequency Blend",
+  "url": "https://edisoncoffeeco.com/products/frequency-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.25,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981305553136"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.25,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981305585904"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.25,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981305618672"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.25,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981305651440"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.25,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981305684208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981305716976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981305749744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981305782512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981305815280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981305848048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981305880816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.25,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981305913584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.25,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981305946352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.25,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981305979120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.25,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981306011888"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "022023efae74820b",
+  "first_seen": "2026-10-26",
+  "handle": "transmitter-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Transmitter.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10087011844336",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Transmitter Blend",
+  "url": "https://edisoncoffeeco.com/products/transmitter-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981354541296"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981354574064"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981354606832"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981354639600"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981354672368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981354705136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981354737904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981354770672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981354803440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981354836208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981354868976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981354901744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981354934512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981354967280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981355000048"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "1b280c50ee6ef448",
+  "first_seen": "2026-10-26",
+  "handle": "resistance-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Resistance.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10087019872496",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Resistance Cold Brew Blend",
+  "url": "https://edisoncoffeeco.com/products/resistance-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981411983600"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981412016368"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981412049136"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981412081904"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981412114672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981412147440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981412180208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981412212976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981412245744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981412278512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981412311280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981412344048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981412376816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981412409584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981412442352"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "3bbb9c3c21fce3f9",
+  "first_seen": "2026-10-26",
+  "handle": "lowbeam",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Low_Beam.jpg?v=1784827951",
+  "platform": "shopify",
+  "product_id": "10087021805808",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Low Beam Half-Caff Blend",
+  "url": "https://edisoncoffeeco.com/products/lowbeam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981425746160"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981425778928"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981425811696"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981425844464"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981425877232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981425910000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981425942768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981425975536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981426008304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981426041072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981426073840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981426106608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981426139376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981426172144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981426204912"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "021a550a6111db07",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Decaf.jpg?v=1784827952",
+  "platform": "shopify",
+  "product_id": "10087027245296",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Colombia Decaf",
+  "url": "https://edisoncoffeeco.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49981479813360"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "49981479846128"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "49981479878896"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "49981479911664"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "49981479944432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49981479977200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "49981480009968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "49981480042736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "49981480075504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "49981480108272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49981480141040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "49981480173808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "49981480206576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "49981480239344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "49981480272112"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "ef96686179785c64",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-reserva-limited-release-5",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/La_Reserva.jpg?v=1783975085",
+  "platform": "shopify",
+  "product_id": "10092489736432",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Colombia - La Reserva",
+  "url": "https://edisoncoffeeco.com/products/colombia-la-reserva-limited-release-5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.75,
+    "title": "8oz / Whole Bean",
+    "variant_id": "49996899156208"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.75,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "49996899188976"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.75,
+    "title": "8oz / Ground for Espresso",
+    "variant_id": "49996899221744"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.75,
+    "title": "8oz / Ground for Pour Over",
+    "variant_id": "49996899254512"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.75,
+    "title": "8oz / Ground — Other in notes",
+    "variant_id": "49996899287280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50251115135216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.75,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "50251116773616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.75,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "50251117854960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.75,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "50251118903536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.75,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "50251120869616"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "7ebd4c677c432ab1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-primavera-family",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/PFAM_6514a474-8bc6-4021-ae06-8cbc596e25c5.png?v=1787267315",
+  "platform": "shopify",
+  "product_id": "10216459501808",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Guatemala - Primavera Family",
+  "url": "https://edisoncoffeeco.com/products/guatemala-primavera-family",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "50288178692336"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "50288178725104"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "50288178757872"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "50288178790640"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "50288178823408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50288178856176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "50288178888944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "50288178921712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "50288178954480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "50288178987248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50288179020016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "50288179052784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "50288179085552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "50288179118320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "50288179151088"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "d15a571d4f6bef27",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sheka",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Sheka.jpg?v=1789740781",
+  "platform": "shopify",
+  "product_id": "10228105642224",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Ethiopia - Sheka Natural",
+  "url": "https://edisoncoffeeco.com/products/ethiopia-sheka",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "50345512141040"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "50345512173808"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "50345512206576"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "50345512239344"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "50345512272112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50345512304880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "50345512337648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "50345512370416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "50345512403184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.75,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "50345512435952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50345512468720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "50345512501488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "50345512534256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "50345512567024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.75,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "50345512599792"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "e95089566e75d15f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-caldas-excelso",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/Caldas_114b587b-9dcb-47b2-85f7-6e046154b0e5.jpg?v=1790868732",
+  "platform": "shopify",
+  "product_id": "10303172280560",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Colombia - Caldas Excelso",
+  "url": "https://edisoncoffeeco.com/products/colombia-caldas-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "50490211762416"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "50490211795184"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "50490211827952"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "50490211860720"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "50490211893488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50490211926256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "50490211959024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "50490211991792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "50490212024560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "50490212057328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50490212090096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.25,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "50490212122864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.25,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "50490212155632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.25,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "50490212188400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.25,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "50490212221168"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ },
+ {
+  "body_hash": "f32583961f5c4c95",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-wush-wush",
+  "image": "https://cdn.shopify.com/s/files/1/0846/0956/4912/files/wushwush_26.jpg?v=1792764444",
+  "platform": "shopify",
+  "product_id": "10365488955632",
+  "product_type": "",
+  "roaster_slug": "edisoncoffeeco",
+  "tags": [],
+  "title": "Ethiopia - Wush Wush",
+  "url": "https://edisoncoffeeco.com/products/ethiopia-wush-wush",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz / Whole Bean",
+    "variant_id": "50648841879792"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "50648841912560"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "50648841945328"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz / Ground for Pour Over",
+    "variant_id": "50648841978096"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz / Ground — Other in notes",
+    "variant_id": "50648842010864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50648842043632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2lb / Ground for Drip",
+    "variant_id": "50648842076400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2lb / Ground for Espresso",
+    "variant_id": "50648842109168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2lb / Ground for Pour Over",
+    "variant_id": "50648842141936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2lb / Ground — Other in notes",
+    "variant_id": "50648842174704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50648842207472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "50648842240240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "50648842273008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Ground for Pour Over",
+    "variant_id": "50648842305776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Ground — Other in notes",
+    "variant_id": "50648842338544"
+   }
+  ],
+  "vendor": "Edison Coffee"
+ }
+]

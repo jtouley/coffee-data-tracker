@@ -1,0 +1,251 @@
+{
+ "688a4c876f6e084af578d13e": {
+  "body_hash": "8f5b2f840a5bb0c0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "rich brownies",
+   "subtle floral"
+  ],
+  "varietals": []
+ },
+ "688a4efa6f6e084af578d47e": {
+  "body_hash": "cbd7aaf25bcc5efe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "layered",
+   "expressive",
+   "brazil nut",
+   "zesty kumquat",
+   "dulce de leche",
+   "toasted almond"
+  ],
+  "varietals": []
+ },
+ "688a54b960176e377175a2cd": {
+  "body_hash": "be02c99024308734",
+  "elevation_masl_max": 750,
+  "elevation_masl_min": 750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "passion fruit",
+   "apple",
+   "brazilian nut"
+  ],
+  "varietals": []
+ },
+ "688a574e2dcf7978cad81420": {
+  "body_hash": "5a34e9e7760370a3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Dominican Republic",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lush blueberry",
+   "plum",
+   "deep molasses"
+  ],
+  "varietals": []
+ },
+ "688a5c9d0e1dc476108d0280": {
+  "body_hash": "9877fcf1f377cbf4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red fruit",
+   "subtle florals"
+  ],
+  "varietals": []
+ },
+ "688a5df538bc613033558e5a": {
+  "body_hash": "889db70e5a703587",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Bolivia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "dried cherry",
+   "fudge"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "688a600a8100fe3754ec3871": {
+  "body_hash": "212c5197e31251e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruit",
+   "caramelizedsugar",
+   "butter cream",
+   "butter cookie"
+  ],
+  "varietals": []
+ },
+ "688a620381e8426a5dc82f73": {
+  "body_hash": "b46c529674405893",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toasted nuts",
+   "vanilla",
+   "black tea",
+   "hibiscus",
+   "rose"
+  ],
+  "varietals": []
+ },
+ "688a63ae842f0f2a5139c227": {
+  "body_hash": "37a421f66f56d7bc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fudge brownie",
+   "ripe plum"
+  ],
+  "varietals": []
+ },
+ "688a64d7f18d3f64f3f78303": {
+  "body_hash": "d75f0fb36be6189b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "deep chocolate",
+   "creamy oat milk"
+  ],
+  "varietals": []
+ },
+ "688a65a85c82c0270d60c175": {
+  "body_hash": "0dfc1403d3af4e45",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "passion fruit"
+  ],
+  "varietals": []
+ },
+ "690e430a5393d146db383fc7": {
+  "body_hash": "19ef2c531b146687",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "pie crust",
+   "flowerless chocolate cake"
+  ],
+  "varietals": []
+ },
+ "69543943ea18d47e1f89dc0c": {
+  "body_hash": "33e1e7e7c6397d6c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark cherry",
+   "caramel",
+   "sweet milk"
+  ],
+  "varietals": []
+ }
+}

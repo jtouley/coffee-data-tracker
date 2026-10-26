@@ -1,0 +1,2263 @@
+[
+ {
+  "body_hash": "eca2044b0e0e9f3b",
+  "first_seen": "2026-10-26",
+  "handle": "carpe-diem-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "10072",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test"
+  ],
+  "title": "Carpe Diem Blend",
+  "url": "https://www.carpediemcoffee.com/product/carpe-diem-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "10072:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "10072:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-pecan-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "10074",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Pecan",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-pecan-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "10074:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "10074:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "10074:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "10074:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-amaretto-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "10075",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Vanilla Amaretto",
+  "url": "https://www.carpediemcoffee.com/product/vanilla-amaretto-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "10075:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "10075:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "10075:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "10075:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-cinnamon-hazelnut-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "10076",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Vanilla Cinnamon Hazelnut",
+  "url": "https://www.carpediemcoffee.com/product/vanilla-cinnamon-hazelnut-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "10076:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "10076:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "10076:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "10076:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-caramel-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "10077",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Vanilla Caramel",
+  "url": "https://www.carpediemcoffee.com/product/vanilla-caramel-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "10077:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "10077:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "10077:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "10077:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "1341",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "English Toffee",
+  "url": "https://www.carpediemcoffee.com/product/english-toffee-1lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "1341:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "1341:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "1341:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "1341:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e66455a575ae2ae",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-dark-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "263",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Decaf French Roast Blend",
+  "url": "https://www.carpediemcoffee.com/product/decaf-french-roast-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "263:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "263:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c400f7c4f0b32b7b",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-colombia",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/07/dark-beans-med.jpg",
+  "platform": "woocommerce",
+  "product_id": "26302",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Hi-Test",
+   "Roast Type",
+   "Varietals"
+  ],
+  "title": "French Roast Colombia",
+  "url": "https://www.carpediemcoffee.com/product/french-roast-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "26302:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "26302:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc3505a2809962e7",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-costa-rica",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/07/dark-beans-med.jpg",
+  "platform": "woocommerce",
+  "product_id": "26332",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Hi-Test",
+   "Roast Type",
+   "Varietals"
+  ],
+  "title": "French Roast Costa Rica",
+  "url": "https://www.carpediemcoffee.com/product/french-roast-costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "26332:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "26332:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56cf2b3f14585974",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-new-day-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/blend-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "265",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Decaf New Day Blend",
+  "url": "https://www.carpediemcoffee.com/product/decaf-new-day-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "265:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "265:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "735e81504df3e82a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-thunderbolt-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-dark-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "267",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Decaf Thunderbolt Blend",
+  "url": "https://www.carpediemcoffee.com/product/decaf-thunderbolt-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "267:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "267:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "67ecfdb84b87b6c0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/blend-dark.jpg",
+  "platform": "woocommerce",
+  "product_id": "269",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Hi-Test"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.carpediemcoffee.com/product/espresso-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "269:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "269:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "00f55b168e1ccbad",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-certified-organic-decaf-foggy-morning-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/blend-decaf-fairtrade.jpg",
+  "platform": "woocommerce",
+  "product_id": "271",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Decaf",
+   "Fair Trade Organics"
+  ],
+  "title": "Fair Trade Certified Organic Decaf Foggy Morning Blend",
+  "url": "https://www.carpediemcoffee.com/product/fair-trade-certified-organic-decaf-foggy-morning-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "(1 pound)",
+    "variant_id": "271:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "271:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d08f970523340c1",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-certified-organic-foggy-morning-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/fairtrade-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "274",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Fair Trade Organics",
+   "Hi-Test"
+  ],
+  "title": "Fair Trade Certified Organic Foggy Morning Blend",
+  "url": "https://www.carpediemcoffee.com/product/fair-trade-certified-organic-foggy-morning-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.35,
+    "title": "(1 pound)",
+    "variant_id": "274:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.35,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "274:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e161f9bc76a213f",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-certified-organic-french-roast-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/dark-fairtrade-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "276",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Fair Trade Organics",
+   "Hi-Test"
+  ],
+  "title": "Fair Trade Certified Organic French Roast Blend",
+  "url": "https://www.carpediemcoffee.com/product/fair-trade-certified-organic-french-roast-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.35,
+    "title": "(1 pound)",
+    "variant_id": "276:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.35,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "276:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0dc7c58bf337464",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "278",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Medium Roast"
+  ],
+  "title": "Fireside Blend",
+  "url": "https://www.carpediemcoffee.com/product/fireside-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "278:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "278:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ab35b0e0d8e7cda",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/blend-dark.jpg",
+  "platform": "woocommerce",
+  "product_id": "280",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Hi-Test"
+  ],
+  "title": "French Roast Blend",
+  "url": "https://www.carpediemcoffee.com/product/french-roast-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.3,
+    "title": "(1 pound)",
+    "variant_id": "280:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.3,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "280:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "257b1f687ab02a60",
+  "first_seen": "2026-10-26",
+  "handle": "friendship-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "282",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test"
+  ],
+  "title": "Friendship Blend",
+  "url": "https://www.carpediemcoffee.com/product/friendship-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "282:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "282:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "05b722bb58f12d69",
+  "first_seen": "2026-10-26",
+  "handle": "heavenly-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "284",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test",
+   "Medium Roast"
+  ],
+  "title": "Heavenly Blend",
+  "url": "https://www.carpediemcoffee.com/product/heavenly-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "284:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "284:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b2a622b5946a934",
+  "first_seen": "2026-10-26",
+  "handle": "michelangelos-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "286",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test",
+   "Medium Roast"
+  ],
+  "title": "Michelangelo’s Blend",
+  "url": "https://www.carpediemcoffee.com/product/michelangelos-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "286:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "286:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "290",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.carpediemcoffee.com/product/mocha-java-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "290:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "290:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92ecd7633ef8e063",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "292",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test"
+  ],
+  "title": "Sunrise Blend",
+  "url": "https://www.carpediemcoffee.com/product/sunrise-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "292:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "292:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd535e21debd5659",
+  "first_seen": "2026-10-26",
+  "handle": "sweethearts-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "294",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test"
+  ],
+  "title": "Sweethearts Blend",
+  "url": "https://www.carpediemcoffee.com/product/sweethearts-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "294:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "294:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac86544586d54afd",
+  "first_seen": "2026-10-26",
+  "handle": "thunderbolt-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/blend-dark.jpg",
+  "platform": "woocommerce",
+  "product_id": "296",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Hi-Test"
+  ],
+  "title": "Thunderbolt Blend",
+  "url": "https://www.carpediemcoffee.com/product/thunderbolt-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.3,
+    "title": "(1 pound)",
+    "variant_id": "296:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.3,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "296:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0328421d557d7adb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/varietal-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "299",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://www.carpediemcoffee.com/product/colombian-supremo-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "299:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "299:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "833fb7fbf7589970",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/varietal-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "301",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "Costa Rican Tarrazu",
+  "url": "https://www.carpediemcoffee.com/product/costa-rican-tarrazu-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "301:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "301:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1b00d4814da7c6f",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-certified-organic-peru-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/organic-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "305",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Fair Trade Organics",
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "Fair Trade Certified Organic Peru",
+  "url": "https://www.carpediemcoffee.com/product/fair-trade-certified-organic-peru-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.35,
+    "title": "(1 pound)",
+    "variant_id": "305:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.35,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "305:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43daa4b765961fe0",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-kenya-aa-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/dark-varietal.jpg",
+  "platform": "woocommerce",
+  "product_id": "307",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "French Roast Kenya AA",
+  "url": "https://www.carpediemcoffee.com/product/french-roast-kenya-aa-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.3,
+    "title": "(1 pound)",
+    "variant_id": "307:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.3,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "307:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7abe2093db934598",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-sumatra-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/dark-varietal.jpg",
+  "platform": "woocommerce",
+  "product_id": "309",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "French Roast Sumatra",
+  "url": "https://www.carpediemcoffee.com/product/french-roast-sumatra-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "309:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "309:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df7584e4d3135be6",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-estate-java-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/varietal-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "311",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "Indonesian Estate Java",
+  "url": "https://www.carpediemcoffee.com/product/indonesian-estate-java-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "311:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "311:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59a1f641a08195c2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/varietal-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "313",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Hi-Test",
+   "Varietals"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.carpediemcoffee.com/product/kenya-aa-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "313:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "313:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ff0534e23671b17",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-full-city-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/06/varietal-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "315",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Varietals"
+  ],
+  "title": "Sumatra Mandheling (Full City)",
+  "url": "https://www.carpediemcoffee.com/product/sumatra-mandheling-full-city-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "315:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "315:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e172b487550db5dd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "317",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Colombian",
+  "url": "https://www.carpediemcoffee.com/product/decaf-colombian-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "317:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "317:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acc38e16b22c983d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-dark-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "319",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Decaf Espresso Blend",
+  "url": "https://www.carpediemcoffee.com/product/decaf-espresso-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "319:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "319:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "736d5d0f302933cf",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-full-city-sumatran-swiss-h2o-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-varietal.jpg",
+  "platform": "woocommerce",
+  "product_id": "321",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Varietals"
+  ],
+  "title": "Decaf Full City Sumatran",
+  "url": "https://www.carpediemcoffee.com/product/decaf-full-city-sumatran-swiss-h2o-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "321:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "321:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9855ab40258d0c52",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-guatemalan-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "323",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Guatemalan (Swiss H2O)",
+  "url": "https://www.carpediemcoffee.com/product/decaf-guatemalan-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "(1 pound)",
+    "variant_id": "323:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "323:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "325",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Amaretto",
+  "url": "https://www.carpediemcoffee.com/product/amaretto-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "325:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "325:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "325:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "325:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-doodle-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "377",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Blueberry Doodle",
+  "url": "https://www.carpediemcoffee.com/product/blueberry-doodle-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "377:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "377:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "377:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "377:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "butter-rum-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "380",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Butter Rum",
+  "url": "https://www.carpediemcoffee.com/product/butter-rum-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "380:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "380:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "380:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "380:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-nut-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "383",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Caramel Nut",
+  "url": "https://www.carpediemcoffee.com/product/caramel-nut-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "383:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "383:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "383:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "383:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-caramel-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "386",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Caramel",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-caramel-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "386:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "386:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "386:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "386:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "389",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Hazelnut",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-hazelnut-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "389:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "389:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "389:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "389:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-irish-creme-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "392",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Irish Creme",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-irish-creme-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "392:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "392:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "392:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "392:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-orange-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "398",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Raspberry",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-orange-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "398:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "398:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "398:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "398:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cheery-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "404",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Chocolate Cherry",
+  "url": "https://www.carpediemcoffee.com/product/chocolate-cheery-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "404:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "404:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "404:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "404:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-1-lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "407",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Coconut",
+  "url": "https://www.carpediemcoffee.com/product/coconut-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "407:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "407:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "407:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "407:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-1-lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "410",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Gingerbread",
+  "url": "https://www.carpediemcoffee.com/product/gingerbread-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "410:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "410:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "410:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "410:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-supreme-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "413",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Hazelnut Supreme",
+  "url": "https://www.carpediemcoffee.com/product/hazelnut-supreme-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "413:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "413:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "413:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "413:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "416",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Irish Creme",
+  "url": "https://www.carpediemcoffee.com/product/irish-creme-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "416:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "416:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "416:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "416:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "maine-maple-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "419",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Maine Maple",
+  "url": "https://www.carpediemcoffee.com/product/maine-maple-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "419:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "419:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "419:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "419:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pecan-royale-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "422",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Pecan Royale",
+  "url": "https://www.carpediemcoffee.com/product/pecan-royale-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "422:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "422:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "422:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "422:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "425",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://www.carpediemcoffee.com/product/pumpkin-spice-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "425:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "425:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "425:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "425:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-mocha-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "428",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Swiss Mocha",
+  "url": "https://www.carpediemcoffee.com/product/swiss-mocha-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "428:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "428:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "428:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "428:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-bean-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "434",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Vanilla Bean",
+  "url": "https://www.carpediemcoffee.com/product/vanilla-bean-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "434:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "434:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "434:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "434:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2018/11/flavored-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "440",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Hi-Test &amp; Decaf",
+   "Hi-Test"
+  ],
+  "title": "Vanilla Hazelnut",
+  "url": "https://www.carpediemcoffee.com/product/vanilla-hazelnut-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "DECAF (1 Pound)",
+    "variant_id": "440:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.35,
+    "title": "Hi-Test (1 Pound)",
+    "variant_id": "440:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) - DECAF",
+    "variant_id": "440:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.35,
+    "title": "SUPERSIZE (5 POUND BAG) Hi-Test",
+    "variant_id": "440:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c7a4a91a7981a31",
+  "first_seen": "2026-10-26",
+  "handle": "bistro-blend-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2016/07/blend-beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "513",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Blends",
+   "Hi-Test",
+   "Medium Roast"
+  ],
+  "title": "Bistro Blend",
+  "url": "https://www.carpediemcoffee.com/product/bistro-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "(1 pound)",
+    "variant_id": "513:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "513:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47bfa1ccaa11741b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-sumatran-swiss-h2o-1lb",
+  "image": "https://www.carpediemcoffee.com/wp-content/uploads/2021/08/decaf-dark-varietal.jpg",
+  "platform": "woocommerce",
+  "product_id": "6851",
+  "product_type": "variable",
+  "roaster_slug": "carpediemcoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Varietals"
+  ],
+  "title": "Decaf French Roast Sumatran",
+  "url": "https://www.carpediemcoffee.com/product/decaf-french-roast-sumatran-swiss-h2o-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "(1 pound)",
+    "variant_id": "6851:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.8,
+    "title": "Supersize (5 pounds)",
+    "variant_id": "6851:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

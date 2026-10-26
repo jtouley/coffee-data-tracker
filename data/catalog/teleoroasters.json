@@ -1,0 +1,89 @@
+[
+ {
+  "body_hash": "e7e18a4e1aa05c4f",
+  "first_seen": "2026-10-26",
+  "handle": "calvin-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0566/0062/5270/files/costa-label.jpg?v=1712809353",
+  "platform": "shopify",
+  "product_id": "7007436865654",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "teleoroasters",
+  "tags": [
+   "Coffee",
+   "Costa Rican",
+   "Fresh Roast",
+   "High caffeine",
+   "Medium Roast",
+   "Whole Bean"
+  ],
+  "title": "Calvin Roast Coffee 1 lb. Whole Bean",
+  "url": "https://teleoroasters.com/products/calvin-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "40420995104886"
+   }
+  ],
+  "vendor": "Teleo Roasters"
+ },
+ {
+  "body_hash": "24b91f314d37b0da",
+  "first_seen": "2026-10-26",
+  "handle": "total-eclipse-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0566/0062/5270/files/Sumat-label.jpg?v=1712809536",
+  "platform": "shopify",
+  "product_id": "7124953497718",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "teleoroasters",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Fresh Roast",
+   "Whole Bean"
+  ],
+  "title": "Total Eclipse Roast Coffee 1 lb. Whole Bean",
+  "url": "https://teleoroasters.com/products/total-eclipse-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "40718581989494"
+   }
+  ],
+  "vendor": "Teleo Roasters"
+ },
+ {
+  "body_hash": "9a4eca53ff4f7756",
+  "first_seen": "2026-10-26",
+  "handle": "outer-darkness-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0566/0062/5270/files/DecafLabel.jpg?v=1713931824",
+  "platform": "shopify",
+  "product_id": "7124957888630",
+  "product_type": "Medium Decaf Roast Coffee",
+  "roaster_slug": "teleoroasters",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Fresh Roast",
+   "Medium Roast",
+   "Whole Bean"
+  ],
+  "title": "Outer Darkness Roast Coffee 1 lb. Whole Bean",
+  "url": "https://teleoroasters.com/products/outer-darkness-roast-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "40718594244726"
+   }
+  ],
+  "vendor": "Teleo Roasters"
+ }
+]

@@ -1,0 +1,2320 @@
+[
+ {
+  "body_hash": "8ec515cbfb8eda23",
+  "first_seen": "2026-10-26",
+  "handle": "tokyo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/tokyo1.png?v=1755892079",
+  "platform": "shopify",
+  "product_id": "8533306048809",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Black",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "Coffees",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Exclusive Coffees",
+   "Floral",
+   "Honey",
+   "Japan Blend",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Plant-based milk",
+   "South America",
+   "Tropical",
+   "With milk",
+   "coffee",
+   "japan",
+   "siraj",
+   "tokyo"
+  ],
+  "title": "Tokyo Blend",
+  "url": "https://www.brooklynroasting.com/products/tokyo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz-Tin: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46162314035497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz-Tin: $24 / Fine (Espresso)",
+    "variant_id": "46162314068265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz-Tin: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "46162314101033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz-Tin: $24 / Whole Bean",
+    "variant_id": "46162314133801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46162314166569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Fine (Espresso)",
+    "variant_id": "46162314199337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "46162314232105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Whole Bean",
+    "variant_id": "46162314264873"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "0617135d07380374",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/ColdBrew-Tin-PhotoRoom.png?v=1708228621",
+  "platform": "shopify",
+  "product_id": "8533921300777",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "COLD BREW",
+   "Caramel",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Roast",
+   "Espresso",
+   "Exclusive Coffees",
+   "Medium to Dark Roasts",
+   "Medium-bodied & Balanced",
+   "Single Origin",
+   "South America",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Cold Brew",
+  "url": "https://www.brooklynroasting.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46166652977449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Fine (Espresso)",
+    "variant_id": "46166653010217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "46166653042985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Whole Bean",
+    "variant_id": "46166653075753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46166653108521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Fine (Espresso)",
+    "variant_id": "46166653141289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "46166653174057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Whole Bean",
+    "variant_id": "46166653206825"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "e5fdbc2bed27702f",
+  "first_seen": "2026-10-26",
+  "handle": "brompton-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/Brompton-Tin-PhotoRoom.png?v=1708228620",
+  "platform": "shopify",
+  "product_id": "8534243967273",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Black",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "Coffees",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Espresso",
+   "Exclusive Coffees",
+   "Floral",
+   "Honey",
+   "Light to Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Plant-based milk",
+   "South America",
+   "Tropical",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Brompton Blend",
+  "url": "https://www.brooklynroasting.com/products/brompton-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin / Coarse (French Press or Cold Brew)",
+    "variant_id": "46168393482537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin / Fine (Espresso)",
+    "variant_id": "46168393515305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin / Medium (Autodrip or Pourover)",
+    "variant_id": "46168393548073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin / Whole Bean",
+    "variant_id": "46168393580841"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "6fbbf2ab07ecef3b",
+  "first_seen": "2026-10-26",
+  "handle": "japan-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/JapanFront.png?v=1778789865",
+  "platform": "shopify",
+  "product_id": "8536598905129",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "Coffees",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Exclusive Coffees",
+   "Floral",
+   "Japan Blend",
+   "Light to Medium Roasts",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "Plant-based milk",
+   "South America",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Japan Blend",
+  "url": "https://www.brooklynroasting.com/products/japan-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46182969934121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Fine (Espresso)",
+    "variant_id": "46182969966889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46182969999657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Whole Bean",
+    "variant_id": "46182970032425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Cherry Blossom: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46182970753321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Cherry Blossom: $24 / Fine (Espresso)",
+    "variant_id": "46182970786089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Cherry Blossom: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "46182970818857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Cherry Blossom: $24 / Whole Bean",
+    "variant_id": "46182970851625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bulk: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46182971801897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bulk: $115 / Fine (Espresso)",
+    "variant_id": "46182971834665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bulk: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "46182971867433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bulk: $115 / Whole Bean",
+    "variant_id": "46182971900201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Notes: $24 / Whole Bean",
+    "variant_id": "47258615054633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Notes: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47258615087401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Notes: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "47258615120169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Notes: $24 / Fine (Espresso)",
+    "variant_id": "47258615152937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Japan Flag: $24 / Whole Bean",
+    "variant_id": "47258615185705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Japan Flag: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47258615218473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Japan Flag: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "47258615251241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin Japan Flag: $24 / Fine (Espresso)",
+    "variant_id": "47258615284009"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "16ca84ed71a97480",
+  "first_seen": "2026-10-26",
+  "handle": "japan-blend-collection",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/GFI_7.png?v=1773242861",
+  "platform": "shopify",
+  "product_id": "8536688951593",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Coffee Samplers",
+   "Japan Blend"
+  ],
+  "title": "Japan Blend Collection",
+  "url": "https://www.brooklynroasting.com/products/japan-blend-collection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 70.0,
+    "title": "Whole Bean",
+    "variant_id": "46183317209385"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 70.0,
+    "title": "Fine (Espresso)",
+    "variant_id": "52820613824809"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 70.0,
+    "title": "Medium (Autodrip or Pour Over)",
+    "variant_id": "52820613857577"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 70.0,
+    "title": "Course (French Press or Cold Brew)",
+    "variant_id": "52820613890345"
+   }
+  ],
+  "vendor": "Brooklyn Roasting"
+ },
+ {
+  "body_hash": "36e6faf8c1c7c31f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/BrazilFront_2.png?v=1778790184",
+  "platform": "shopify",
+  "product_id": "8537515098409",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Brewed",
+   "Central & South American Coffees",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium to Dark Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "Seasonal Coffees",
+   "Single Origin",
+   "Smoky",
+   "South America",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Brazil",
+  "url": "https://www.brooklynroasting.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46187343315241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Fine (Espresso)",
+    "variant_id": "46187343348009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46187343380777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Whole Bean",
+    "variant_id": "46187343413545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46187343446313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Fine (Espresso)",
+    "variant_id": "46187343479081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "46187343511849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Whole Bean",
+    "variant_id": "46187343544617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46187343577385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Fine (Espresso)",
+    "variant_id": "46187343610153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "46187343642921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Whole Bean",
+    "variant_id": "46187343675689"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "ba35765c5acee1f1",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/NicaraguaFront_1.png?v=1778787773",
+  "platform": "shopify",
+  "product_id": "8537645875497",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Brewed",
+   "Central & South American Coffees",
+   "Central America",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Dark Roast",
+   "Light to Medium Roasts",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "Seasonal Coffees",
+   "Single Origin",
+   "Smoky",
+   "Spicy",
+   "With milk",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Nicaragua Prodecoop",
+  "url": "https://www.brooklynroasting.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189096206633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46189096239401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189096272169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46189096304937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189096337705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46189096370473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189096403241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46189096436009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189096468777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46189096501545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189096534313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46189096567081"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "6c14169866dad23c",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/MexicoFront.png?v=1778788515",
+  "platform": "shopify",
+  "product_id": "8537855492393",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Brewed",
+   "Caramel",
+   "Central & South American Coffees",
+   "Central America",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Light Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "Seasonal Coffees",
+   "Single Origin",
+   "Spicy",
+   "With milk",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Mexico",
+  "url": "https://www.brooklynroasting.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189769261353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46189769294121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189769326889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46189769359657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189769392425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46189769425193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189769457961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46189769490729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46189769523497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46189769556265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46189769589033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46189769621801"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "c983fcbbab204402",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/ColombiaFront_1.png?v=1778790278",
+  "platform": "shopify",
+  "product_id": "8537933119785",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Brewed",
+   "Central & South American Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Dark Roast",
+   "Floral",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium to Dark Roasts",
+   "Medium-bodied & Balanced",
+   "Seasonal Coffees",
+   "Single Origin",
+   "South America",
+   "Spicy",
+   "With milk",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Colombia Tolima",
+  "url": "https://www.brooklynroasting.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46190102511913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46190102577449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46190102610217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46190102642985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46190102708521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46190102741289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46190102839593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46190102872361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "52853440610601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "52853440643369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "52853440676137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "52853440708905"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "0db1345cd7e8e4da",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/PeruFront.png?v=1778788409",
+  "platform": "shopify",
+  "product_id": "8541112566057",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Central & South American Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Dark Roast",
+   "Medium Roast",
+   "Medium Roasts",
+   "Seasonal Coffees",
+   "Single Origin",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Peru",
+  "url": "https://www.brooklynroasting.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46211858039081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46211858071849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46211858137385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46211858202921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46211858268457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46211858301225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46211858366761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46211858432297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46211858465065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46211858530601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46211858596137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46211858661673"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "8193ea3a5fff99d2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/GuatemalaFront.png?v=1778788247",
+  "platform": "shopify",
+  "product_id": "8541179805993",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Brewed",
+   "Caramel",
+   "Central & South American Coffees",
+   "Central America",
+   "Chocolate",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "Seasonal Coffees",
+   "Single Origin",
+   "With milk",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.brooklynroasting.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46212173267241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46212173300009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46212173332777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46212173365545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46212173398313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46212173431081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46212173463849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46212173496617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46212173529385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46212173562153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46212173594921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46212173627689"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "97c10af2d80899ca",
+  "first_seen": "2026-10-26",
+  "handle": "iris-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/IrisFront.png?v=1778775833",
+  "platform": "shopify",
+  "product_id": "8541241475369",
+  "product_type": "Espresso",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Blends",
+   "Chocolate",
+   "Coffees By Roast",
+   "Custum Blends & Espressos",
+   "East Africa Cofffees",
+   "Espresso",
+   "Espressos & Decafs",
+   "Medium Roasts",
+   "Medium to Dark Roasts",
+   "Medium-bodied & Balanced",
+   "Plant-based milk",
+   "South America",
+   "Spicy",
+   "With milk",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Iris Espresso",
+  "url": "https://www.brooklynroasting.com/products/iris-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Whole Bean",
+    "variant_id": "46213531599145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Fine (Espresso)",
+    "variant_id": "46213531762985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Whole Bean",
+    "variant_id": "46213531894057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Fine (Espresso)",
+    "variant_id": "46213531959593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Whole Bean",
+    "variant_id": "46213532025129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Fine (Espresso)",
+    "variant_id": "46213532090665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "47167206261033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47167206293801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "47167206326569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47167206359337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "47167206392105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47167206424873"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "30a37795c9777991",
+  "first_seen": "2026-10-26",
+  "handle": "bqe-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/BQEFront.png?v=1778774952",
+  "platform": "shopify",
+  "product_id": "8541395091753",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Blends",
+   "Central America",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Roast",
+   "Custum Blends & Espressos",
+   "Dark Roast",
+   "Espresso",
+   "Espressos & Decafs",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Nutty",
+   "South America",
+   "Spicy",
+   "With milk",
+   "siraj"
+  ],
+  "title": "BQE Espresso",
+  "url": "https://www.brooklynroasting.com/products/bqe-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214084231465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46214084264233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214084297001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46214084329769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214084362537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46214084395305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214084428073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46214084460841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214084493609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46214084526377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214084559145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46214084591913"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "d0f4a9a258720cb8",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/DecafFront.png?v=1778789687",
+  "platform": "shopify",
+  "product_id": "8541432873257",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Caramel",
+   "Central & South American Coffees",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Dark Roast",
+   "Decaf",
+   "Medium Roast",
+   "Medium to Dark Roasts",
+   "Medium-bodied & Balanced",
+   "Seasonal Coffees",
+   "Single Origin",
+   "Smoky",
+   "With milk",
+   "cream",
+   "siraj"
+  ],
+  "title": "Peruvian Decaf",
+  "url": "https://www.brooklynroasting.com/products/peruvian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214802800937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Fine (Espresso)",
+    "variant_id": "46214802833705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214802866473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag: $22 / Whole Bean",
+    "variant_id": "46214802899241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214802932009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Fine (Espresso)",
+    "variant_id": "46214802964777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214802997545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz Tin: $24 / Whole Bean",
+    "variant_id": "46214803030313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214803063081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Fine (Espresso)",
+    "variant_id": "46214803095849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214803128617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag: $115 / Whole Bean",
+    "variant_id": "46214803161385"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "7a1aa9e68900f34d",
+  "first_seen": "2026-10-26",
+  "handle": "java-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/JavaMochaFront.png?v=1778788986",
+  "platform": "shopify",
+  "product_id": "8541471998249",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Roast",
+   "Custum Blends & Espressos",
+   "East Africa Cofffees",
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Plant-based milk",
+   "Smoky",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Java Mocha",
+  "url": "https://www.brooklynroasting.com/products/java-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214848151849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46214848184617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214848217385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46214848250153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214848413993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46214848446761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214848479529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46214848512297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214848545065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46214848577833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214848610601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46214848643369"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "c5ccc531b17757c3",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/MochaJavaFront.png?v=1778788711",
+  "platform": "shopify",
+  "product_id": "8541479731497",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Black",
+   "Blend",
+   "Blends",
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Roast",
+   "Custum Blends & Espressos",
+   "East Africa Cofffees",
+   "Honey",
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Plant-based milk",
+   "Spicy",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.brooklynroasting.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214870335785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46214870368553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214870401321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46214870434089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214870466857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46214870499625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214870532393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46214870565161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46214870597929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46214870630697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46214870663465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46214870696233"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "9e91a907e8b4dfd6",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-ketiara",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/SumatraFront.png?v=1778788004",
+  "platform": "shopify",
+  "product_id": "8541489299753",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "Dark Roast",
+   "Darker Roasts",
+   "Earthy",
+   "Heavy-bodied & Syrupy",
+   "Indonesian Coffees",
+   "Medium to Dark Roasts",
+   "Seasonal Coffees",
+   "Single Origin",
+   "Smoky",
+   "With milk",
+   "siraj"
+  ],
+  "title": "Sumatra Ketiara",
+  "url": "https://www.brooklynroasting.com/products/sumatra-ketiara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46215011762473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "46215011795241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "46215011828009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "46215011893545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46215011926313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Fine (Espresso)",
+    "variant_id": "46215011959081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "46215011991849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin: $22 / Whole Bean",
+    "variant_id": "46215012024617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "46215012057385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Fine (Espresso)",
+    "variant_id": "46215012090153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "46215012122921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag: $105 / Whole Bean",
+    "variant_id": "46215012155689"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "cdf46929d8c4368d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/EWashedFront.png?v=1778789596",
+  "platform": "shopify",
+  "product_id": "8806983303465",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Black",
+   "Brewed",
+   "Citrus",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "ETHIOPIA KOCHERE",
+   "East Africa Cofffees",
+   "Floral",
+   "Honey",
+   "Light Roast",
+   "Light-Bodied",
+   "Seasonal Coffees",
+   "Single Origin",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Ethiopia Washed",
+  "url": "https://www.brooklynroasting.com/products/ethiopia-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47080816148777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Fine (Espresso)",
+    "variant_id": "47080816181545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "47080816214313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Whole Bean",
+    "variant_id": "47080816247081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47080816279849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "47080816312617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "47080816345385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "47080816378153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47080816410921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Fine (Espresso)",
+    "variant_id": "47080816443689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "47080816476457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Whole Bean",
+    "variant_id": "47080816509225"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "c97c700741e8db15",
+  "first_seen": "2026-10-26",
+  "handle": "roaster-s-pick",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/Roaster_s_Choice.webp?v=1699340467",
+  "platform": "shopify",
+  "product_id": "8810803855657",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [],
+  "title": "Roaster’s Pick",
+  "url": "https://www.brooklynroasting.com/products/roaster-s-pick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Oz Tin / Whole Bean",
+    "variant_id": "47245651345705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Oz Tin / Coarse (French Press or Cold Brew)",
+    "variant_id": "47245651411241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Oz Tin / Medium (Autodrip or Pourover)",
+    "variant_id": "47245651444009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Oz Tin / Fine (Espresso",
+    "variant_id": "47245651509545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5Lb Bag / Whole Bean",
+    "variant_id": "47245651542313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5Lb Bag / Coarse (French Press or Cold Brew)",
+    "variant_id": "47245651575081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5Lb Bag / Medium (Autodrip or Pourover)",
+    "variant_id": "47245651640617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5Lb Bag / Fine (Espresso",
+    "variant_id": "47245651706153"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "8afdd1eb67f254a2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/ENaturalFront.png?v=1778789481",
+  "platform": "shopify",
+  "product_id": "8873589670185",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Black",
+   "Blueberry",
+   "Brewed",
+   "Citrus",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "ETHIOPIA KOCHERE",
+   "East Africa Cofffees",
+   "Floral",
+   "Honey",
+   "Light Roast",
+   "Light-Bodied",
+   "Seasonal Coffees",
+   "Single Origin",
+   "coffee",
+   "siraj"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://www.brooklynroasting.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Whole Bean",
+    "variant_id": "47289761857833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47289761890601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Medium (Autodrip or Pourover)",
+    "variant_id": "47289761923369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Tin = $22 / Fine (Espresso)",
+    "variant_id": "47289761956137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Whole Bean",
+    "variant_id": "47289761988905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47289762021673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Medium (Autodrip or Pourover)",
+    "variant_id": "47289762054441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag: $20 / Fine (Espresso)",
+    "variant_id": "47289762087209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Whole Bean",
+    "variant_id": "47289762119977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Coarse (French Press or Cold Brew)",
+    "variant_id": "47289762152745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Medium (Autodrip or Pourover)",
+    "variant_id": "47289762185513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag = $105 / Fine (Espresso)",
+    "variant_id": "47289762218281"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "fb30a53457e33fe4",
+  "first_seen": "2026-10-26",
+  "handle": "oatmilk-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/lattecan_trans.png?v=1732131222",
+  "platform": "shopify",
+  "product_id": "9537617527081",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Light to Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Seasonal Coffees",
+   "Tropical",
+   "siraj"
+  ],
+  "title": "NEW Oatmilk Latte",
+  "url": "https://www.brooklynroasting.com/products/oatmilk-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz 4-Pack: $16.00",
+    "variant_id": "49476421878057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz 12-Pack: $45.00",
+    "variant_id": "49476421910825"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "e39c8810cc7e270e",
+  "first_seen": "2026-10-26",
+  "handle": "oatmilk-mocha-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/mochacan_trans.png?v=1732134137",
+  "platform": "shopify",
+  "product_id": "9537631158569",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Light to Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Seasonal Coffees",
+   "Tropical",
+   "siraj"
+  ],
+  "title": "NEW Oatmilk Mocha Latte",
+  "url": "https://www.brooklynroasting.com/products/oatmilk-mocha-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz 4-Pack: $16.00",
+    "variant_id": "49476459790633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz 12-Pack: $45.00",
+    "variant_id": "49476459823401"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ },
+ {
+  "body_hash": "6a0e096f32b22b79",
+  "first_seen": "2026-10-26",
+  "handle": "classic-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0780/2899/6905/files/coldbrewcan_trans.png?v=1732136239",
+  "platform": "shopify",
+  "product_id": "9537652523305",
+  "product_type": "",
+  "roaster_slug": "brooklynroasting",
+  "tags": [
+   "Berry",
+   "Black",
+   "Brewed",
+   "Chocolate",
+   "Coffees",
+   "Coffees By Origin",
+   "Coffees By Roast",
+   "East Africa Cofffees",
+   "Light to Medium Roasts",
+   "Medium-bodied & Balanced",
+   "Seasonal Coffees",
+   "Tropical",
+   "siraj"
+  ],
+  "title": "NEW Classic Cold Brew",
+  "url": "https://www.brooklynroasting.com/products/classic-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz 4-Pack: $16.00",
+    "variant_id": "49476511039785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz 12-Pack: $45.00",
+    "variant_id": "49476511072553"
+   }
+  ],
+  "vendor": "Brooklyn Roasting Company"
+ }
+]

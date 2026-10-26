@@ -1,0 +1,252 @@
+[
+ {
+  "body_hash": "ce7ef157c2f3cf2e",
+  "first_seen": "2026-10-26",
+  "handle": "red-dog-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0121/1042/files/Copy_of_2026_Sirius_Seasonal_Labels_8.png?v=1792002493",
+  "platform": "shopify",
+  "product_id": "108730794",
+  "product_type": "Sirius Signature",
+  "roaster_slug": "store-siriusroasters",
+  "tags": [
+   "Coffee Hound",
+   "Gravity",
+   "Red Dog",
+   "Sirius Coffee Roasters",
+   "coffee",
+   "craft coffee",
+   "craft roasted",
+   "locally roasted",
+   "locally roasted coffee",
+   "special blend",
+   "specialty coffee"
+  ],
+  "title": "Red Dog",
+  "url": "https://store.siriusroasters.com/products/red-dog-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press / COARSE",
+    "variant_id": "21351367737424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso / FINE",
+    "variant_id": "21351367966800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / WHOLEBEAN",
+    "variant_id": "248498672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / WHOLEBEAN",
+    "variant_id": "29864736905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip / MEDIUM",
+    "variant_id": "29891244489"
+   }
+  ],
+  "vendor": "Sirius Signature // House Blend"
+ },
+ {
+  "body_hash": "195811efaafc218b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0121/1042/files/Copy_of_2026_Sirius_Seasonal_Labels_9.png?v=1792002704",
+  "platform": "shopify",
+  "product_id": "1338146652240",
+  "product_type": "Sirius Signature",
+  "roaster_slug": "store-siriusroasters",
+  "tags": [
+   "Coffee Hound",
+   "Colombia Decaf",
+   "Decaf",
+   "Ethyl Acetate",
+   "Sirius Coffee Roasters",
+   "coffee subscription",
+   "craft coffee",
+   "craft roasted",
+   "international coffee",
+   "locally roasted",
+   "locally roasted coffee",
+   "specialty coffee",
+   "subscribe and save"
+  ],
+  "title": "No Pressure: Decaf",
+  "url": "https://store.siriusroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / WHOLEBEAN",
+    "variant_id": "12273598857296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip / MEDIUM",
+    "variant_id": "12273598890064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso / FINE",
+    "variant_id": "21351346995280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press / COARSE",
+    "variant_id": "21351348142160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / WHOLEBEAN",
+    "variant_id": "29199649144912"
+   }
+  ],
+  "vendor": "Sirius Signature // Medium Roast"
+ },
+ {
+  "body_hash": "c68e43fc9403e720",
+  "first_seen": "2026-10-26",
+  "handle": "beacon",
+  "image": "https://cdn.shopify.com/s/files/1/0121/1042/files/Copy_of_2026_Sirius_Seasonal_Labels_6.png?v=1792001730",
+  "platform": "shopify",
+  "product_id": "174563262473",
+  "product_type": "Sirius Signature",
+  "roaster_slug": "store-siriusroasters",
+  "tags": [
+   "Coffee Hound",
+   "Sirius Coffee Roasters",
+   "coffee",
+   "coffee subscription",
+   "craft coffee",
+   "craft roasted",
+   "espresso",
+   "locally roasted",
+   "locally roasted coffee",
+   "sirius",
+   "specialty coffee",
+   "subscribe and save"
+  ],
+  "title": "Beacon",
+  "url": "https://store.siriusroasters.com/products/beacon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / WHOLEBEAN",
+    "variant_id": "2009155731465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip / MEDIUM",
+    "variant_id": "2009155862537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press / COARSE",
+    "variant_id": "21351266091088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso / FINE",
+    "variant_id": "21351269793872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / WHOLEBEAN",
+    "variant_id": "29199579643984"
+   }
+  ],
+  "vendor": "Sirius Signature // Dark Roast"
+ },
+ {
+  "body_hash": "83abfb5fe272eea3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0121/1042/files/Copy_of_2026_Sirius_Seasonal_Labels_7.png?v=1792002401",
+  "platform": "shopify",
+  "product_id": "99435248",
+  "product_type": "Sirius Signature",
+  "roaster_slug": "store-siriusroasters",
+  "tags": [
+   "Chroma",
+   "Coffee Hound",
+   "Sirius Coffee Roasters",
+   "Switchback Espresso",
+   "espresso",
+   "locally roasted coffee"
+  ],
+  "title": "Switchback",
+  "url": "https://store.siriusroasters.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press / COARSE",
+    "variant_id": "21351301087312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso / FINE",
+    "variant_id": "21351301644368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / WHOLEBEAN",
+    "variant_id": "29199621455952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / WHOLEBEAN",
+    "variant_id": "29865165833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip / MEDIUM",
+    "variant_id": "29893037129"
+   }
+  ],
+  "vendor": "Sirius Signature // House Espresso"
+ }
+]

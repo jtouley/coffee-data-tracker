@@ -1,0 +1,402 @@
+[
+ {
+  "body_hash": "4f7a64e51bfad6cc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gigesa-washed-1",
+  "image": "https://cdn.shopify.com/s/files/1/0277/5603/6141/files/ARC03853.png?v=1767041631",
+  "platform": "shopify",
+  "product_id": "4402576883757",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "avatarcoffeeroasters",
+  "tags": [
+   "Africa",
+   "Constant",
+   "East Africa",
+   "Home Page",
+   "Light Roast",
+   "Roasted Coffee",
+   "Single Origin",
+   "Washed Process"
+  ],
+  "title": "Ethiopia Guji Gigesa",
+  "url": "https://www.avatarcoffeeroasters.com/products/ethiopia-guji-gigesa-washed-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 285 Gram",
+    "variant_id": "33288488419373"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Coarse - French Press / 285 Gram",
+    "variant_id": "33288488452141"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Medium - Auto Drip / 285 Gram",
+    "variant_id": "33288488517677"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Fine - Pour Over / 285 Gram",
+    "variant_id": "33288488550445"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 2 Kg",
+    "variant_id": "34420387512477"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 118.0,
+    "title": "Coarse - French Press / 2 Kg",
+    "variant_id": "34420387545245"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 118.0,
+    "title": "Medium - Auto Drip / 2 Kg",
+    "variant_id": "34420387578013"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 118.0,
+    "title": "Fine - Pour Over / 2 Kg",
+    "variant_id": "34420387610781"
+   }
+  ],
+  "vendor": "Avatar Coffee Roasters"
+ },
+ {
+  "body_hash": "1af4f0984a49499a",
+  "first_seen": "2026-10-26",
+  "handle": "jeevan-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0277/5603/6141/files/ARC03821.png?v=1767055870",
+  "platform": "shopify",
+  "product_id": "4402577899565",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "avatarcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Cold Brew",
+   "Constant",
+   "Dark Roast",
+   "Latin America",
+   "Medium Roast",
+   "Natural Process",
+   "Roasted Coffee",
+   "Washed Process"
+  ],
+  "title": "Jeevan",
+  "url": "https://www.avatarcoffeeroasters.com/products/jeevan-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 285 Gram",
+    "variant_id": "33288582496301"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 20.0,
+    "title": "Coarse - French Press (cold brew) / 285 Gram",
+    "variant_id": "33288582529069"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 20.0,
+    "title": "Medium - Auto Drip / 285 Gram",
+    "variant_id": "33288582561837"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 20.0,
+    "title": "Fine - Pour Over / 285 Gram",
+    "variant_id": "33288582594605"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 2 Kg",
+    "variant_id": "34420397080733"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 100.0,
+    "title": "Coarse - French Press (cold brew) / 2 Kg",
+    "variant_id": "34420397441181"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 100.0,
+    "title": "Medium - Auto Drip / 2 Kg",
+    "variant_id": "34420397670557"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 100.0,
+    "title": "Fine - Pour Over / 2 Kg",
+    "variant_id": "34420397703325"
+   }
+  ],
+  "vendor": "Avatar Coffees"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "andhera",
+  "image": "https://cdn.shopify.com/s/files/1/0277/5603/6141/files/ARC03863.png?v=1767054522",
+  "platform": "shopify",
+  "product_id": "8717234143389",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "avatarcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "Roasted Coffee",
+   "Specialty Coffee"
+  ],
+  "title": "Andhera",
+  "url": "https://www.avatarcoffeeroasters.com/products/andhera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 285 Gram",
+    "variant_id": "47249716150429"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press (cold brew) / 285 Gram",
+    "variant_id": "47249716215965"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Medium - Auto Drip / 285 Gram",
+    "variant_id": "47249716281501"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Fine - Pour Over / 285 Gram",
+    "variant_id": "47249716347037"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 2 Kg",
+    "variant_id": "47519430574237"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Coarse - French Press (cold brew) / 2 Kg",
+    "variant_id": "47519430607005"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Medium - Auto Drip / 2 Kg",
+    "variant_id": "47519430639773"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Fine - Pour Over / 2 Kg",
+    "variant_id": "47519430672541"
+   }
+  ],
+  "vendor": "Avatar Coffee Roasters"
+ },
+ {
+  "body_hash": "13f273a892429345",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-2",
+  "image": "https://cdn.shopify.com/s/files/1/0277/5603/6141/files/ARC03936.png?v=1767055206",
+  "platform": "shopify",
+  "product_id": "8811610669213",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "avatarcoffeeroasters",
+  "tags": [
+   "Constant",
+   "Decaf",
+   "Home Page",
+   "Latin America",
+   "Medium Roast",
+   "Roasted Coffee",
+   "Single Origin",
+   "South America",
+   "Washed Process"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://www.avatarcoffeeroasters.com/products/colombia-decaf-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 285 Gram",
+    "variant_id": "47519439192221"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 2 Kg",
+    "variant_id": "47519439224989"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Coarse - French Press / 285 Gram",
+    "variant_id": "47519439257757"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 110.0,
+    "title": "Coarse - French Press / 2 Kg",
+    "variant_id": "47519439290525"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Medium - Auto Drip / 285 Gram",
+    "variant_id": "47519439323293"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 110.0,
+    "title": "Medium - Auto Drip / 2 Kg",
+    "variant_id": "47519439356061"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Fine - Pour Over / 285 Gram",
+    "variant_id": "47519439388829"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 110.0,
+    "title": "Fine - Pour Over / 2 Kg",
+    "variant_id": "47519439421597"
+   }
+  ],
+  "vendor": "Avatar Coffees"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0277/5603/6141/files/ARC03713.png?v=1767057143",
+  "platform": "shopify",
+  "product_id": "8811612831901",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "avatarcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "Roasted Coffee",
+   "Specialty Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.avatarcoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 285 Gram",
+    "variant_id": "47519448694941"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 2 Kg",
+    "variant_id": "47519448727709"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press (cold brew) / 285 Gram",
+    "variant_id": "47519448760477"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Coarse - French Press (cold brew) / 2 Kg",
+    "variant_id": "47519448793245"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Medium - Auto Drip / 285 Gram",
+    "variant_id": "47519448826013"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Medium - Auto Drip / 2 Kg",
+    "variant_id": "47519448858781"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 21.0,
+    "title": "Fine - Pour Over / 285 Gram",
+    "variant_id": "47519448891549"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "Fine - Pour Over / 2 Kg",
+    "variant_id": "47519448924317"
+   }
+  ],
+  "vendor": "Avatar Coffee Roasters"
+ }
+]

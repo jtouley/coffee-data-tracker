@@ -1,0 +1,182 @@
+{
+ "1527556079725": {
+  "body_hash": "5f69f44277c6d8cd",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa nibs",
+   "toasted almond",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "3851563008109": {
+  "body_hash": "06ea79f56450ac32",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "baker's chocolate",
+   "strawberry",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "4785861918829": {
+  "body_hash": "762009fc95a96a09",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "orange",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "4785866571885": {
+  "body_hash": "c0ecc8369ed52518",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "clove",
+   "syrupy"
+  ],
+  "varietals": []
+ },
+ "8005991399606": {
+  "body_hash": "db4235fd5e150f4a",
+  "elevation_masl_max": 1220,
+  "elevation_masl_min": 1220,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red apple",
+   "citrus",
+   "praline"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8154617282742": {
+  "body_hash": "18a47feeb0b7f760",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "candied apple",
+   "almond"
+  ],
+  "varietals": []
+ },
+ "8344063705270": {
+  "body_hash": "2bccef6f377d8073",
+  "elevation_masl_max": 2050,
+  "elevation_masl_min": 2050,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "red apple",
+   "cane sugar"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8355516776630": {
+  "body_hash": "a0ca05ed32b88043",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry",
+   "blood orange",
+   "floral"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "8767043338422": {
+  "body_hash": "54fa14df9e1dcd3c",
+  "elevation_masl_max": 2050,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "peach",
+   "floral"
+  ],
+  "varietals": [
+   "74110",
+   "74112"
+  ]
+ }
+}

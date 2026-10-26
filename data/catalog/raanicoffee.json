@@ -1,0 +1,425 @@
+[
+ {
+  "body_hash": "5d87e5a8894499b0",
+  "first_seen": "2026-10-26",
+  "handle": "colbran-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_1.jpg?v=1758176632",
+  "platform": "shopify",
+  "product_id": "7631919382590",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Colbran Geisha",
+  "url": "https://raanicoffee.com/products/colbran-geisha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41624034082878"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41624034115646"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41624034148414"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41624034181182"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "07f17f1a11c43df0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-valle-del-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_2.jpg?v=1758176614",
+  "platform": "shopify",
+  "product_id": "7631919644734",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Decaf Valle Del Cauca",
+  "url": "https://raanicoffee.com/products/decaf-valle-del-cauca",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41624015011902"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41624015044670"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41624015077438"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41624015110206"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "75df0f1f7001b019",
+  "first_seen": "2026-10-26",
+  "handle": "kirimiri-kanja",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_5.jpg?v=1758176596",
+  "platform": "shopify",
+  "product_id": "7631919874110",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Kirimiri Kanja",
+  "url": "https://raanicoffee.com/products/kirimiri-kanja",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623968710718"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623968743486"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623968776254"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623968809022"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "5f9253c594b2243b",
+  "first_seen": "2026-10-26",
+  "handle": "ratnagiri-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_6.jpg?v=1758176579",
+  "platform": "shopify",
+  "product_id": "7631920201790",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Ratnagiri Natural",
+  "url": "https://raanicoffee.com/products/ratnagiri-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623929323582"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623929356350"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623929389118"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623929421886"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "caaa732849439cae",
+  "first_seen": "2026-10-26",
+  "handle": "ratnagiri-yellow-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_7.jpg?v=1758176056",
+  "platform": "shopify",
+  "product_id": "7631920431166",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Ratnagiri Yellow Honey",
+  "url": "https://raanicoffee.com/products/ratnagiri-yellow-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623913005118"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623913037886"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623913070654"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623913103422"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "b236ba9e382b6947",
+  "first_seen": "2026-10-26",
+  "handle": "house-drip",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_3.png?v=1758194688",
+  "platform": "shopify",
+  "product_id": "7631920660542",
+  "product_type": "Blends",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "House Drip",
+  "url": "https://raanicoffee.com/products/house-drip",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623898095678"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623898128446"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623898161214"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623898193982"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "682e31794a08a207",
+  "first_seen": "2026-10-26",
+  "handle": "ritual-kaapi",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_8.jpg?v=1758176024",
+  "platform": "shopify",
+  "product_id": "7631920824382",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "whole beans"
+  ],
+  "title": "Ritual Kaapi",
+  "url": "https://raanicoffee.com/products/ritual-kaapi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623879090238"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623879123006"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623879155774"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623879188542"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "f866644bd58b7165",
+  "first_seen": "2026-10-26",
+  "handle": "house-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_4.jpg?v=1758194679",
+  "platform": "shopify",
+  "product_id": "7631920988222",
+  "product_type": "Blends",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "House Espresso",
+  "url": "https://raanicoffee.com/products/house-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "41623875944510"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "41623875977278"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "41623876010046"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "41623876042814"
+   }
+  ],
+  "vendor": "RAANI"
+ },
+ {
+  "body_hash": "6fb6073f19ec5a0e",
+  "first_seen": "2026-10-26",
+  "handle": "bensa-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0556/3190/4830/files/websire_card_template_9.jpg?v=1758175993",
+  "platform": "shopify",
+  "product_id": "7760751394878",
+  "product_type": "Single Origin",
+  "roaster_slug": "raanicoffee",
+  "tags": [
+   "Coffee",
+   "Whole Beans"
+  ],
+  "title": "Bensa Natural",
+  "url": "https://raanicoffee.com/products/bensa-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41638391283774"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb",
+    "variant_id": "41638391316542"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb",
+    "variant_id": "41638391349310"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "41638391382078"
+   }
+  ],
+  "vendor": "RAANI"
+ }
+]

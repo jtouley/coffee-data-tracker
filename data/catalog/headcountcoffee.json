@@ -1,0 +1,4545 @@
+[
+ {
+  "body_hash": "9fec94ef18570fba",
+  "first_seen": "2026-10-26",
+  "handle": "light-speed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/LightSpeedCropped_2435996f-8c12-4c26-9cd4-1c21d6ab81c3.jpg?v=1767929678",
+  "platform": "shopify",
+  "product_id": "10056124563730",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [
+   "coffee",
+   "headcount coffee"
+  ],
+  "title": "Light Speed",
+  "url": "https://www.headcountcoffee.com/products/light-speed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "50995885179154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "50995885211922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "50995885244690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "50995885277458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "50995885310226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine",
+    "variant_id": "50995885342994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "50995885375762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "50995885408530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "50995885441298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "50995885474066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "50995885506834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "50995885539602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "50995885572370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "50995885605138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "50995885637906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Turkish",
+    "variant_id": "50995885670674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "50995885703442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "50995885736210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "50995885768978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "50995885801746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "50995885834514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Fine",
+    "variant_id": "50995885867282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "50995885900050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Turkish",
+    "variant_id": "50995885932818"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "c4a89ee0690321b7",
+  "first_seen": "2026-10-26",
+  "handle": "time-attack-1",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/TimeAttackCropped.jpg?v=1767930124",
+  "platform": "shopify",
+  "product_id": "10056140488978",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [
+   "coffee",
+   "headcount coffee"
+  ],
+  "title": "Time Attack",
+  "url": "https://www.headcountcoffee.com/products/time-attack-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "50995910115602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "50995910148370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "50995910181138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "50995910213906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "50995910246674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine",
+    "variant_id": "50995910279442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "50995910312210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "50995910344978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "50995910377746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "50995910410514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "50995910443282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "50995910476050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "50995910508818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "50995910541586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "50995910574354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb bag / Turkish",
+    "variant_id": "50995910607122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "50995910639890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "50995910672658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "50995910705426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "50995910738194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "50995910770962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Fine",
+    "variant_id": "50995910803730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "50995910836498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb bag / Turkish",
+    "variant_id": "50995910869266"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "8ce43b271b21add0",
+  "first_seen": "2026-10-26",
+  "handle": "rock-crawler",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/RockCrawlerCropped_3.jpg?v=1767930528",
+  "platform": "shopify",
+  "product_id": "10133972582674",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Rock Crawler",
+  "url": "https://www.headcountcoffee.com/products/rock-crawler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "51274748428562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Coarse (Percolator)",
+    "variant_id": "51274748461330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Coarse (French Press)",
+    "variant_id": "51274748494098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium (Pour Over)",
+    "variant_id": "51274748526866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium (Drip)",
+    "variant_id": "51274748559634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Fine",
+    "variant_id": "51274748592402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Fine (Espresso)",
+    "variant_id": "51274748625170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Turkish",
+    "variant_id": "51274748657938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Whole Bean",
+    "variant_id": "51274748690706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Coarse (Percolator)",
+    "variant_id": "51274748723474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Coarse (French Press)",
+    "variant_id": "51274748756242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Medium (Pour Over)",
+    "variant_id": "51274748789010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Medium (Drip)",
+    "variant_id": "51274748821778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Fine",
+    "variant_id": "51274748854546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Fine (Espresso)",
+    "variant_id": "51274748887314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1 lb Bag / Turkish",
+    "variant_id": "51274748920082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "51274748952850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Coarse (Percolator)",
+    "variant_id": "51274748985618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Coarse (French Press)",
+    "variant_id": "51274749018386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Medium (Pour Over)",
+    "variant_id": "51274749051154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Medium (Drip)",
+    "variant_id": "51274749083922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Fine",
+    "variant_id": "51274749116690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Fine (Espresso)",
+    "variant_id": "51274749149458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lb Bag / Turkish",
+    "variant_id": "51274749182226"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "3f458f39e6149152",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/388-Roasters-Headcount-Coffee-Sumatra.jpg?v=1762878716",
+  "platform": "shopify",
+  "product_id": "10133972844818",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Sumatra G1",
+  "url": "https://www.headcountcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "51289043173650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Coarse (Percolator)",
+    "variant_id": "51289043206418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Coarse (French Press)",
+    "variant_id": "51289043239186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Medium (Pour Over)",
+    "variant_id": "51289043271954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Medium (Drip)",
+    "variant_id": "51289043304722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Fine",
+    "variant_id": "51289043337490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Fine (Espresso)",
+    "variant_id": "51289043370258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.99,
+    "title": "12 oz Bag / Turkish",
+    "variant_id": "51289043403026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Whole Bean",
+    "variant_id": "51289043435794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Coarse (Percolator)",
+    "variant_id": "51289043468562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Coarse (French Press)",
+    "variant_id": "51289043501330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Medium (Pour Over)",
+    "variant_id": "51289043534098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Medium (Drip)",
+    "variant_id": "51289043566866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Fine",
+    "variant_id": "51289043599634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Fine (Espresso)",
+    "variant_id": "51289043632402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.32,
+    "title": "1 lb Bag / Turkish",
+    "variant_id": "51289043665170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "51289043697938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Coarse (Percolator)",
+    "variant_id": "51289043730706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Coarse (French Press)",
+    "variant_id": "51289043763474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Medium (Pour Over)",
+    "variant_id": "51289043796242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Medium (Drip)",
+    "variant_id": "51289043829010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Fine",
+    "variant_id": "51289043861778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Fine (Espresso)",
+    "variant_id": "51289043894546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 186.6,
+    "title": "5 lb Bag / Turkish",
+    "variant_id": "51289043927314"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "77595a3d258087cd",
+  "first_seen": "2026-10-26",
+  "handle": "nessie-s-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/NESSYSROASTfrontandback.jpg?v=1762877349",
+  "platform": "shopify",
+  "product_id": "10216528183570",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Nessy's Roast",
+  "url": "https://www.headcountcoffee.com/products/nessie-s-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "51601958043922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "51601958076690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "51601958109458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "51601958142226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "51601958174994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Fine",
+    "variant_id": "51601958207762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "51601958240530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "51601958273298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Whole Bean",
+    "variant_id": "51601958306066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Coarse (Percolator)",
+    "variant_id": "51601958338834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Coarse (French Press)",
+    "variant_id": "51601958371602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Medium (Pour Over)",
+    "variant_id": "51601958404370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Medium (Drip)",
+    "variant_id": "51601958437138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Fine",
+    "variant_id": "51601958469906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Fine (Espresso)",
+    "variant_id": "51601958502674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Turkish",
+    "variant_id": "51601958535442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "51601958568210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Coarse (Percolator)",
+    "variant_id": "51601958600978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Coarse (French Press)",
+    "variant_id": "51601958633746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Medium (Pour Over)",
+    "variant_id": "51601958666514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Medium (Drip)",
+    "variant_id": "51601958699282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Fine",
+    "variant_id": "51601958732050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Fine (Espresso)",
+    "variant_id": "51601958764818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Turkish",
+    "variant_id": "51601958797586"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "efce041de98571ed",
+  "first_seen": "2026-10-26",
+  "handle": "bigfoot-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/BIGFOOTSBREWfrontandback.jpg?v=1761751336",
+  "platform": "shopify",
+  "product_id": "10216529723666",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Bigfoot's Brew",
+  "url": "https://www.headcountcoffee.com/products/bigfoot-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "51601962172690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "51601962205458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "51601962238226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "51601962270994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "51601962303762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Fine",
+    "variant_id": "51601962336530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "51601962369298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "51601962402066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Whole Bean",
+    "variant_id": "51601962434834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Coarse (Percolator)",
+    "variant_id": "51601962467602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Coarse (French Press)",
+    "variant_id": "51601962500370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Medium (Pour Over)",
+    "variant_id": "51601962533138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Medium (Drip)",
+    "variant_id": "51601962565906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Fine",
+    "variant_id": "51601962598674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Fine (Espresso)",
+    "variant_id": "51601962631442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Bag / Turkish",
+    "variant_id": "51601962664210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "51601962696978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Coarse (Percolator)",
+    "variant_id": "51601962729746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Coarse (French Press)",
+    "variant_id": "51601962762514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Medium (Pour Over)",
+    "variant_id": "51601962795282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Medium (Drip)",
+    "variant_id": "51601962828050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Fine",
+    "variant_id": "51601962860818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Fine (Espresso)",
+    "variant_id": "51601962893586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb Bag / Turkish",
+    "variant_id": "51601962926354"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "1ad859500831f257",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/Decaf.png?v=1762879659",
+  "platform": "shopify",
+  "product_id": "10233171411218",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Decaf Coffee",
+  "url": "https://www.headcountcoffee.com/products/decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Light / Whole Bean",
+    "variant_id": "51660230394130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Light / Ground",
+    "variant_id": "51660230426898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Medium / Whole Bean",
+    "variant_id": "51660230459666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Medium / Ground",
+    "variant_id": "51660230492434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Dark / Whole Bean",
+    "variant_id": "51660230525202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz Bag / Dark / Ground",
+    "variant_id": "51660230557970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Light / Whole Bean",
+    "variant_id": "51661569261842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Light / Ground",
+    "variant_id": "51661569294610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Medium / Whole Bean",
+    "variant_id": "51661569327378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Medium / Ground",
+    "variant_id": "51661569360146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Dark / Whole Bean",
+    "variant_id": "51661569392914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb Bag / Dark / Ground",
+    "variant_id": "51661569425682"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "3f2e2cfad4894ade",
+  "first_seen": "2026-10-26",
+  "handle": "g-force-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/G-force_close_up.jpg?v=1769445515",
+  "platform": "shopify",
+  "product_id": "10295952310546",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "G-Force Coffee",
+  "url": "https://www.headcountcoffee.com/products/g-force-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "51979734810898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "51979734843666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "51979734876434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "51979734909202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "51979734941970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine",
+    "variant_id": "51979734974738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "51979735007506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "51979735040274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Whole Bean",
+    "variant_id": "51979735073042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Coarse (Percolator)",
+    "variant_id": "51979735105810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Coarse (French Press)",
+    "variant_id": "51979735138578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Medium (Pour Over)",
+    "variant_id": "51979735171346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Medium (Drip)",
+    "variant_id": "51979735204114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Fine",
+    "variant_id": "51979735236882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Fine (Espresso)",
+    "variant_id": "51979735269650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.99,
+    "title": "1lb Bag / Turkish",
+    "variant_id": "51979735302418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "51979735335186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Coarse (Percolator)",
+    "variant_id": "51979735367954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Coarse (French Press)",
+    "variant_id": "51979735400722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Medium (Pour Over)",
+    "variant_id": "51979735433490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Medium (Drip)",
+    "variant_id": "51979735466258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Fine",
+    "variant_id": "51979735499026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Fine (Espresso)",
+    "variant_id": "51979735531794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5lb Bag / Turkish",
+    "variant_id": "51979735564562"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "c92110fb1d7147cf",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/Tanzania1nocarameldrip.jpg?v=1770638486",
+  "platform": "shopify",
+  "product_id": "10303911035154",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [
+   "headcount coffee"
+  ],
+  "title": "Tanzania",
+  "url": "https://www.headcountcoffee.com/products/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "52012904251666"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Ground",
+    "variant_id": "52012904284434"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "5f00e0f7e3e27ad8",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/Honduras-cropped_1.jpg?v=1779972347",
+  "platform": "shopify",
+  "product_id": "10357237481746",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Honduras Geisha",
+  "url": "https://www.headcountcoffee.com/products/honduras-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "8oz Bag / Whole Bean",
+    "variant_id": "52282652721426"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "8oz Bag / Ground",
+    "variant_id": "52282653507858"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "6cda9848f012208b",
+  "first_seen": "2026-10-26",
+  "handle": "whole-roasted-cacao-beans-grade-1-ivory-coast",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/rn-image_picker_lib_temp_80af941f-b846-4d93-8264-e5467f2c3169.png?v=1782992502",
+  "platform": "shopify",
+  "product_id": "10378132259090",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Whole Roasted Cacao Beans - Grade 1 Ivory Coast",
+  "url": "https://www.headcountcoffee.com/products/whole-roasted-cacao-beans-grade-1-ivory-coast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.99,
+    "title": "Default Title",
+    "variant_id": "52457132228882"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "be836ee346aafa9a",
+  "first_seen": "2026-10-26",
+  "handle": "under-armour®-mens-polo-1",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/mens-under-armour-performance-polo-shirt-black-front-6aac1c366d62f.jpg?v=1789664322",
+  "platform": "shopify",
+  "product_id": "10437332304146",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Under Armour® men's polo",
+  "url": "https://www.headcountcoffee.com/products/under-armour®-mens-polo-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 63.0,
+    "title": "Black",
+    "variant_id": "52715975541010"
+   },
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 63.0,
+    "title": "White",
+    "variant_id": "52715975573778"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "3a9465e6a95b4a3e",
+  "first_seen": "2026-10-26",
+  "handle": "hinter",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/Hintercropped.png?v=1790885706",
+  "platform": "shopify",
+  "product_id": "10444508234002",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Jay J's Blend",
+  "url": "https://www.headcountcoffee.com/products/hinter",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "67593072738578"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Ground",
+    "variant_id": "67593072771346"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "smore-scares-kiddoccino",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/icon-512.png?v=1774381620",
+  "platform": "shopify",
+  "product_id": "15412161184018",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Smore Scares Kiddoccino",
+  "url": "https://www.headcountcoffee.com/products/smore-scares-kiddoccino",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.5,
+    "title": "Default Title",
+    "variant_id": "67642043990290"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "ead531861ee10cca",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/MexicanFTONEWLABEL.jpg?v=1782911545",
+  "platform": "shopify",
+  "product_id": "8177780850962",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Mexican FTO - Medium Roast",
+  "url": "https://www.headcountcoffee.com/products/mexican-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47659204903186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (Percolator)",
+    "variant_id": "47659204935954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (French Press)",
+    "variant_id": "47659204968722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Pour Over)",
+    "variant_id": "47659205001490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "47659205034258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine",
+    "variant_id": "47659205067026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "47659205099794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "47659205132562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Coarse (Percolator)",
+    "variant_id": "47659205165330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Coarse (French Press)",
+    "variant_id": "47659205198098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Pour Over)",
+    "variant_id": "47659205230866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Drip)",
+    "variant_id": "47659205263634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine",
+    "variant_id": "47659205296402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine (Espresso)",
+    "variant_id": "47659205329170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47659205361938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Coarse (Percolator)",
+    "variant_id": "47659205394706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Coarse (French Press)",
+    "variant_id": "47659205427474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Pour Over)",
+    "variant_id": "47659205460242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Drip)",
+    "variant_id": "47659205493010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine",
+    "variant_id": "47659205525778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "47659205558546"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "877bd4cb937481e8",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/ColombianFTONEWLABEL.jpg?v=1782911442",
+  "platform": "shopify",
+  "product_id": "8179684638994",
+  "product_type": "",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Colombian FTO - Medium Roast",
+  "url": "https://www.headcountcoffee.com/products/colombian-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50105799115026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (Percolator)",
+    "variant_id": "50105799147794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (French Press)",
+    "variant_id": "50105799180562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Pour Over)",
+    "variant_id": "50105799213330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "50105799246098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine",
+    "variant_id": "50105799278866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "50105799311634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50105799344402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Coarse (Percolator)",
+    "variant_id": "50105799377170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Coarse (French Press)",
+    "variant_id": "50105799409938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Medium (Pour Over)",
+    "variant_id": "50105799442706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Medium (Drip)",
+    "variant_id": "50105799475474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Fine",
+    "variant_id": "50105799508242"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Fine (Espresso)",
+    "variant_id": "50105799541010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50105799573778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Coarse (Percolator)",
+    "variant_id": "50105799606546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Coarse (French Press)",
+    "variant_id": "50105799639314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Medium (Pour Over)",
+    "variant_id": "50105799672082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Medium (Drip)",
+    "variant_id": "50105799704850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Fine",
+    "variant_id": "50105799737618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Fine (Espresso)",
+    "variant_id": "50105799770386"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "7fd5b51725d06e50",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/BrazilCerradoNEWLABEL.jpg?v=1782911326",
+  "platform": "shopify",
+  "product_id": "8179685032210",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Brazil Cerrado - Medium Roast",
+  "url": "https://www.headcountcoffee.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Whole Bean",
+    "variant_id": "47611207483666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (Percolator)",
+    "variant_id": "47611207516434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "47611207549202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Pour Over)",
+    "variant_id": "47611207581970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "47611207614738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine",
+    "variant_id": "47611207647506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "47611207680274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "47611207713042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "47611207745810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47611207778578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "47611207811346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47611207844114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47611207876882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47611207909650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "47611207942418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "47611207975186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "47611208007954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "47611208040722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "47611208073490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine",
+    "variant_id": "47611208106258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "47611208139026"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "df513e0997fb6b45",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/BreakfastblendNEWLABEL.jpg?v=1782911354",
+  "platform": "shopify",
+  "product_id": "8225761132818",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Breakfast Blend - Dark Roast",
+  "url": "https://www.headcountcoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47659220533522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (Percolator)",
+    "variant_id": "47659220566290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Coarse (French Press)",
+    "variant_id": "47659220599058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Pour Over)",
+    "variant_id": "47659220631826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "47659220664594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine",
+    "variant_id": "47659220697362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "47659220730130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "47659220762898"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Coarse (Percolator)",
+    "variant_id": "47659220795666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Coarse (French Press)",
+    "variant_id": "47659220828434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Pour Over)",
+    "variant_id": "47659220861202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Drip)",
+    "variant_id": "47659220893970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine",
+    "variant_id": "47659220926738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine (Espresso)",
+    "variant_id": "47659220959506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47659220992274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Coarse (Percolator)",
+    "variant_id": "47659221025042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Coarse (French Press)",
+    "variant_id": "47659221057810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Pour Over)",
+    "variant_id": "47659221090578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Drip)",
+    "variant_id": "47659221123346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine",
+    "variant_id": "47659221156114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "47659221188882"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "5f817cc676fc1041",
+  "first_seen": "2026-10-26",
+  "handle": "profiled-pour-your-custom-coffee-experiance",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/20240811_204748351_iOS.jpg?v=1762878868",
+  "platform": "shopify",
+  "product_id": "8785018421522",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Profiled Pour - Start Your Coffee Journey",
+  "url": "https://www.headcountcoffee.com/products/profiled-pour-your-custom-coffee-experiance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean / Light",
+    "variant_id": "47137758707986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "47137758740754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "47137758773522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (Perculator) / White*",
+    "variant_id": "47137758806290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (Perculator) / Light",
+    "variant_id": "47137758839058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (Perculator) / Medium",
+    "variant_id": "47137758871826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (Perculator) / Dark",
+    "variant_id": "47137758904594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (French Press) / White*",
+    "variant_id": "47137758937362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (French Press) / Light",
+    "variant_id": "47137758970130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "47137759002898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Coarse (French Press) / Dark",
+    "variant_id": "47137759035666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Pour Over) / White*",
+    "variant_id": "47137759068434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Pour Over) / Light",
+    "variant_id": "47137759101202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Pour Over) / Medium",
+    "variant_id": "47137759133970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Pour Over) / Dark",
+    "variant_id": "47137759166738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Drip Coffee) / Light",
+    "variant_id": "47137759232274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Drip Coffee) / Medium",
+    "variant_id": "47137759265042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Medium (Drip Coffee) / Dark",
+    "variant_id": "47137759297810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine / Light",
+    "variant_id": "47137759330578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine / Medium",
+    "variant_id": "47137759363346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine / Dark",
+    "variant_id": "47137759396114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine (Espresso) / Light",
+    "variant_id": "47137759428882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "47137759461650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Fine (Espresso) / Dark",
+    "variant_id": "47137759494418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Whole Bean / Light",
+    "variant_id": "47137759527186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Whole Bean / Medium",
+    "variant_id": "47137759559954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Whole Bean / Dark",
+    "variant_id": "47137759592722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (Perculator) / White*",
+    "variant_id": "47137759625490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (Perculator) / Light",
+    "variant_id": "47137759658258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (Perculator) / Medium",
+    "variant_id": "47137759691026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (Perculator) / Dark",
+    "variant_id": "47137759723794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (French Press) / White*",
+    "variant_id": "47137759756562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (French Press) / Light",
+    "variant_id": "47137759789330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (French Press) / Medium",
+    "variant_id": "47137759822098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Coarse (French Press) / Dark",
+    "variant_id": "47137759854866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Pour Over) / White*",
+    "variant_id": "47137759887634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Pour Over) / Light",
+    "variant_id": "47137759920402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Pour Over) / Medium",
+    "variant_id": "47137759953170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Pour Over) / Dark",
+    "variant_id": "47137759985938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Drip Coffee) / Light",
+    "variant_id": "47137760051474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Drip Coffee) / Medium",
+    "variant_id": "47137760084242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Medium (Drip Coffee) / Dark",
+    "variant_id": "47137760117010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine / Light",
+    "variant_id": "47137760149778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine / Medium",
+    "variant_id": "47137760182546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine / Dark",
+    "variant_id": "47137760215314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine (Espresso) / Light",
+    "variant_id": "47137760248082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine (Espresso) / Medium",
+    "variant_id": "47137760280850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Fine (Espresso) / Dark",
+    "variant_id": "47137760313618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Turkish / Light",
+    "variant_id": "50451258638610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Turkish / Medium",
+    "variant_id": "50451258671378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Turkish / Dark",
+    "variant_id": "50451258704146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Turkish / White*",
+    "variant_id": "50451258736914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Turkish / Light",
+    "variant_id": "50451258769682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Turkish / Medium",
+    "variant_id": "50451258802450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Turkish / Dark",
+    "variant_id": "50451258835218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "1lb / Turkish / White*",
+    "variant_id": "50451258867986"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "5100345d43dfd248",
+  "first_seen": "2026-10-26",
+  "handle": "1calavera-catrina",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/LaCalaveraCatrinaNEWLABEL_2.jpg?v=1782911494",
+  "platform": "shopify",
+  "product_id": "8814049952018",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "La Calavera Catrina - Light Roast",
+  "url": "https://www.headcountcoffee.com/products/1calavera-catrina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Whole Bean",
+    "variant_id": "47197841391890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "47197841555730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Coarse (Percolator)",
+    "variant_id": "47197978853650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Coarse (French Press)",
+    "variant_id": "47197978886418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Medium (Pour Over)",
+    "variant_id": "47197978919186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Medium (Drip)",
+    "variant_id": "47197978951954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Fine",
+    "variant_id": "47197978984722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Fine (Espresso)",
+    "variant_id": "47197979017490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "47197979050258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47197979083026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "47197979115794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47197979148562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47197979181330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47197979214098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "47296354550034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "47296354582802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "47296354615570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "47296354648338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "47296354681106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Fine",
+    "variant_id": "47296354713874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "47296354746642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz Bag / Turkish",
+    "variant_id": "50333436051730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Turkish",
+    "variant_id": "50333436084498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Turkish",
+    "variant_id": "50333436117266"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "61f89d807a0c4185",
+  "first_seen": "2026-10-26",
+  "handle": "bruja-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/BrujaBrewNEWLABEL.jpg?v=1782911379",
+  "platform": "shopify",
+  "product_id": "8814068236562",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Bruja Brew - Dark Roast",
+  "url": "https://www.headcountcoffee.com/products/bruja-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Whole Bean",
+    "variant_id": "47197877076242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "47197877371154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (Perculator)",
+    "variant_id": "47197932683538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "47197932716306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Pour Over)",
+    "variant_id": "47197932749074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "47197932781842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine",
+    "variant_id": "47197932814610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "47197932847378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Perculator)",
+    "variant_id": "47197932880146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47197932912914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "47197932945682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47197932978450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47197933011218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47197933043986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "47296346128658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Coarse (Perculator)",
+    "variant_id": "47296346161426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "47296346194194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "47296346226962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "47296346259730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Fine",
+    "variant_id": "47296346292498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "47296346325266"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "7d5127aa52bb5f45",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-vaquero",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/CafeVaqueroagainstredwallNEWLABEL.jpg?v=1782911408",
+  "platform": "shopify",
+  "product_id": "8834029388050",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Cafe Vaquero - Medium Roast",
+  "url": "https://www.headcountcoffee.com/products/cafe-vaquero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Whole bean",
+    "variant_id": "47260761719058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (Peculator)",
+    "variant_id": "47260761751826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "47260761784594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Pour Over)",
+    "variant_id": "47260761817362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "47260761850130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine",
+    "variant_id": "47260761882898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "47260761915666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole bean",
+    "variant_id": "47260761948434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Peculator)",
+    "variant_id": "47260761981202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47260762177810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "47260762243346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47260762276114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47260762308882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47260762341650"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Whole bean",
+    "variant_id": "47296349372690"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Coarse (Peculator)",
+    "variant_id": "47296349405458"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Coarse (French Press)",
+    "variant_id": "47296349438226"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Medium (Pour Over)",
+    "variant_id": "47296349470994"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Medium (Drip)",
+    "variant_id": "47296349503762"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Fine",
+    "variant_id": "47296349536530"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb ag / Fine (Espresso)",
+    "variant_id": "47296349569298"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "f8e1de87d030aa1f",
+  "first_seen": "2026-10-26",
+  "handle": "la-llorona",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/LaLloronaNEWLABEL_2.jpg?v=1782911518",
+  "platform": "shopify",
+  "product_id": "8853136146706",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "La Llorona Espresso Roast – Dark Colombian Organic Coffee",
+  "url": "https://www.headcountcoffee.com/products/la-llorona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Whole bean",
+    "variant_id": "47307086659858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (Percolator)",
+    "variant_id": "47307086790930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "47307086823698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Pour over)",
+    "variant_id": "47307086856466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "47307086889234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine",
+    "variant_id": "47307086922002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "47307086954770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole bean",
+    "variant_id": "47307086987538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "47307087020306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47307087053074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour over)",
+    "variant_id": "47307087085842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47307087118610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47307087151378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47307087184146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Whole bean",
+    "variant_id": "47307087216914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "47307087249682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "47307087282450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Pour over)",
+    "variant_id": "47307087315218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "47307087347986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine",
+    "variant_id": "47307087380754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "47307087413522"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "b8ded0fab24aa89f",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/HouseBlendNEWLABEL_2.jpg?v=1782911468",
+  "platform": "shopify",
+  "product_id": "8878007419154",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "House Blend - Dark /Medium",
+  "url": "https://www.headcountcoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Coarse (Percolator)",
+    "variant_id": "47400840495378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Coarse (French Press)",
+    "variant_id": "47400840528146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Medium (Pour Over)",
+    "variant_id": "47400840560914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Medium (Drip)",
+    "variant_id": "47400840593682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Fine",
+    "variant_id": "47400840659218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Fine (Espresso)",
+    "variant_id": "47400840691986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Coarse (Percolator)",
+    "variant_id": "47400840757522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Coarse (French Press)",
+    "variant_id": "47400840790290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Medium (Pour Over)",
+    "variant_id": "47400840823058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Medium (Drip)",
+    "variant_id": "47400840855826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Fine",
+    "variant_id": "47400840888594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1 lb / Fine (Espresso)",
+    "variant_id": "47400840921362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Coarse (Percolator)",
+    "variant_id": "47400840986898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Coarse (French Press)",
+    "variant_id": "47400841019666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Medium (Pour Over)",
+    "variant_id": "47400841052434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Medium (Drip)",
+    "variant_id": "47400841085202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Fine",
+    "variant_id": "47400841117970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5 lb / Fine (Espresso)",
+    "variant_id": "47400841150738"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "68a47b70ce84a4bf",
+  "first_seen": "2026-10-26",
+  "handle": "rebel-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/RebelRoast250BDayEdition.jpg?v=1782911572",
+  "platform": "shopify",
+  "product_id": "8939797250322",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Rebel Roast - Dark Roast",
+  "url": "https://www.headcountcoffee.com/products/rebel-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47584061817106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Course (Percolator)",
+    "variant_id": "47584061849874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Course (French Press)",
+    "variant_id": "47584061882642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Pour Over)",
+    "variant_id": "47584061915410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "47584061948178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine",
+    "variant_id": "47584061980946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "47584062013714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "47584062046482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Course (Percolator)",
+    "variant_id": "47584062079250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Course (French Press)",
+    "variant_id": "47584062112018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Pour Over)",
+    "variant_id": "47584062144786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Medium (Drip)",
+    "variant_id": "47584062177554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine",
+    "variant_id": "47584062210322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Fine (Espresso)",
+    "variant_id": "47584062243090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47584062275858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Course (Percolator)",
+    "variant_id": "47584062308626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Course (French Press)",
+    "variant_id": "47584062341394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Pour Over)",
+    "variant_id": "47584062374162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Medium (Drip)",
+    "variant_id": "47584062406930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine",
+    "variant_id": "47584062439698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "47584062472466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Turkish",
+    "variant_id": "50996073333010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb / Turkish",
+    "variant_id": "50996073365778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb / Turkish",
+    "variant_id": "50996073398546"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "a338cb1b91f61bd4",
+  "first_seen": "2026-10-26",
+  "handle": "three-kings",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/ThreeKingsNEWLABEL.jpg?v=1782911596",
+  "platform": "shopify",
+  "product_id": "8993840824594",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Three Kings",
+  "url": "https://www.headcountcoffee.com/products/three-kings",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Whole Bean",
+    "variant_id": "47737341346066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (Precolator)",
+    "variant_id": "47737341378834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "47737341411602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Pour Over)",
+    "variant_id": "47737341444370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "47737341477138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine",
+    "variant_id": "47737341509906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "47737341542674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "47737341575442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (Precolator)",
+    "variant_id": "47737341608210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "47737341640978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "47737341673746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "47737341706514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine",
+    "variant_id": "47737341739282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "47737341772050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "47737341804818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (Precolator)",
+    "variant_id": "47737341837586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "47737341870354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "47737341903122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "47737341935890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine",
+    "variant_id": "47737341968658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "47737342001426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz bag / Turkish",
+    "variant_id": "50996072841490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb bag / Turkish",
+    "variant_id": "50996072874258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lb bag / Turkish",
+    "variant_id": "50996072907026"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "388b67e590b43a8a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee-guji-zone",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/20240811_204949829_iOS.jpg?v=1762878265",
+  "platform": "shopify",
+  "product_id": "9067777294610",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Ethiopian Coffee",
+  "url": "https://www.headcountcoffee.com/products/ethiopian-coffee-guji-zone",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Whole Bean",
+    "variant_id": "48030830493970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Coarse (Percolator)",
+    "variant_id": "48030830526738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Coarse (French Press)",
+    "variant_id": "48030830559506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Medium (Pour Over)",
+    "variant_id": "48030830592274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Medium (Drip)",
+    "variant_id": "48030830625042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Fine",
+    "variant_id": "48030830657810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Fine (Espresso)",
+    "variant_id": "48030830690578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Whole Bean",
+    "variant_id": "48030830723346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Coarse (Percolator)",
+    "variant_id": "48030830756114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Coarse (French Press)",
+    "variant_id": "48030830788882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Medium (Pour Over)",
+    "variant_id": "48030830821650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Medium (Drip)",
+    "variant_id": "48030830854418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Fine",
+    "variant_id": "48030830887186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Fine (Espresso)",
+    "variant_id": "48030830919954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Whole Bean",
+    "variant_id": "48030830952722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Coarse (Percolator)",
+    "variant_id": "48030830985490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Coarse (French Press)",
+    "variant_id": "48030831018258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Medium (Pour Over)",
+    "variant_id": "48030831051026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Medium (Drip)",
+    "variant_id": "48030831083794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Fine",
+    "variant_id": "48030831116562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Fine (Espresso)",
+    "variant_id": "48030831149330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz bag / Turkish",
+    "variant_id": "50996072513810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb bag / Turkish",
+    "variant_id": "50996072546578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag / Turkish",
+    "variant_id": "50996072579346"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "4afe9652b4f40bec",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-guatemala-huehuetenango-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/GuatemalaDarkRoast.jpg?v=1762877510",
+  "platform": "shopify",
+  "product_id": "9797866324242",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Dark Roast - Guatemala Huehuetenango SHB",
+  "url": "https://www.headcountcoffee.com/products/dark-roast-guatemala-huehuetenango-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50259539329298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (Percolator)",
+    "variant_id": "50259539362066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (French Press)",
+    "variant_id": "50259539394834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Pour Over)",
+    "variant_id": "50259539427602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Drip)",
+    "variant_id": "50259539460370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine",
+    "variant_id": "50259539493138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine (Espresso)",
+    "variant_id": "50259539525906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50259539558674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (Percolator)",
+    "variant_id": "50259539591442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (French Press)",
+    "variant_id": "50259539624210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Pour Over)",
+    "variant_id": "50259539656978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Drip)",
+    "variant_id": "50259539689746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine",
+    "variant_id": "50259539722514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine (Espresso)",
+    "variant_id": "50259539755282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50259539788050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (Percolator)",
+    "variant_id": "50259539820818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (French Press)",
+    "variant_id": "50259539853586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Pour Over)",
+    "variant_id": "50259539886354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Drip)",
+    "variant_id": "50259539919122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine",
+    "variant_id": "50259539951890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine (Espresso)",
+    "variant_id": "50259539984658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "50404769923346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Turkish Grind",
+    "variant_id": "50404769956114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "50404769988882"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "ce33878fb213a75d",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-guatemala-huehuetenango-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/GuatemalaMediumRoast.jpg?v=1762877563",
+  "platform": "shopify",
+  "product_id": "9797868880146",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Medium Roast - Guatemala Huehuetenango SHB",
+  "url": "https://www.headcountcoffee.com/products/medium-roast-guatemala-huehuetenango-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50259546898706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (Percolator)",
+    "variant_id": "50259546931474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (French Press)",
+    "variant_id": "50259546964242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Pour Over)",
+    "variant_id": "50259546997010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Drip)",
+    "variant_id": "50259547029778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine",
+    "variant_id": "50259547062546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine (Espresso)",
+    "variant_id": "50259547095314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "50259547128082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50259547160850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (Percolator)",
+    "variant_id": "50259547193618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (French Press)",
+    "variant_id": "50259547226386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Pour Over)",
+    "variant_id": "50259547259154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Drip)",
+    "variant_id": "50259547291922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine",
+    "variant_id": "50259547324690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine (Espresso)",
+    "variant_id": "50259547357458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Turkish Grind",
+    "variant_id": "50259547390226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50259547422994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (Percolator)",
+    "variant_id": "50259547455762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (French Press)",
+    "variant_id": "50259547488530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Pour Over)",
+    "variant_id": "50259547521298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Drip)",
+    "variant_id": "50259547554066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine",
+    "variant_id": "50259547586834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine (Espresso)",
+    "variant_id": "50259547619602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "50259547652370"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ },
+ {
+  "body_hash": "d2ddbc2902de00ce",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-guatemala-huehuetenango-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0710/5999/6946/files/GuatemalaLightRoast.jpg?v=1762877456",
+  "platform": "shopify",
+  "product_id": "9797871042834",
+  "product_type": "Coffee",
+  "roaster_slug": "headcountcoffee",
+  "tags": [],
+  "title": "Light Roast - Guatemala Huehuetenango SHB",
+  "url": "https://www.headcountcoffee.com/products/light-roast-guatemala-huehuetenango-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50259553616146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (Percolator)",
+    "variant_id": "50259553648914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Coarse (French Press)",
+    "variant_id": "50259553681682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Pour Over)",
+    "variant_id": "50259553714450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Medium (Drip)",
+    "variant_id": "50259553747218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine",
+    "variant_id": "50259553779986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Fine (Espresso)",
+    "variant_id": "50259553812754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "50259553845522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50259553878290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (Percolator)",
+    "variant_id": "50259553911058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Coarse (French Press)",
+    "variant_id": "50259553943826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Pour Over)",
+    "variant_id": "50259553976594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Medium (Drip)",
+    "variant_id": "50259554009362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine",
+    "variant_id": "50259554042130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Fine (Espresso)",
+    "variant_id": "50259554074898"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Turkish Grind",
+    "variant_id": "50259554107666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50259554140434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (Percolator)",
+    "variant_id": "50259554173202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Coarse (French Press)",
+    "variant_id": "50259554205970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Pour Over)",
+    "variant_id": "50259554238738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Medium (Drip)",
+    "variant_id": "50259554271506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine",
+    "variant_id": "50259554304274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Fine (Espresso)",
+    "variant_id": "50259554337042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "50259554369810"
+   }
+  ],
+  "vendor": "Headcount Coffee"
+ }
+]

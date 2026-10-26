@@ -1,0 +1,448 @@
+[
+ {
+  "body_hash": "523265595abf9a46",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682105677103-YPGOI0FGU76CTSB1UQ6I/Coumbian_Flag.png",
+  "platform": "squarespace",
+  "product_id": "643f046c332d6c33d7c70754",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Organic Colombian Excelso - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/colombian-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "93fecf83-f71b-4951-b5ba-34c47184b51f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "fe0b346c-34d5-4d8a-b7d2-1f3522e38beb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "189b10f8b56e8332",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-mandheling",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682105651442-SF4JTAZBFZGNLIU4RA0G/Sumatran_Flag.png",
+  "platform": "squarespace",
+  "product_id": "643f04b6d85ee67e79958381",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Sumatran Mandheling - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/sumatran-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean Decaf",
+    "variant_id": "1073e6b5-2a95-4dad-9ec8-2e1088a9db98"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground Regular",
+    "variant_id": "13b21ae7-c796-4137-8da8-d7567cd2815e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground Decaf",
+    "variant_id": "d4c128ab-daff-4fd2-9acb-c28958f1e344"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean Regular",
+    "variant_id": "f6f098be-f0ec-4414-a77d-16b39f49aa3d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f29a2f1d0b08433",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian-yirgacheffe",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682105288946-R1FCGYTUWFDORKYPYZAS/Etheopian_Flag.png",
+  "platform": "squarespace",
+  "product_id": "643f05722851d211fe811899",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Organic Ethiopian Yirgacheffe - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/organic-ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Ground",
+    "variant_id": "8edfde32-2eea-4d91-ba85-28526d70a9f6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "d982af94-6a97-4adb-8fae-fa9ff37aa76b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95e5266dbfdffe98",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682366326063-QMRZHCBLQ61D66HKQXMA/French+Roast.png",
+  "platform": "squarespace",
+  "product_id": "6442e7a9f44efb28e90d3346",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Mexican French Roast - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/mexican-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground Regular",
+    "variant_id": "679fc260-aecd-44c1-ba0f-a92231e6e25d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground Decaf",
+    "variant_id": "7529e291-664d-4678-b2c6-a24b3b064e72"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean Decaf",
+    "variant_id": "9d82774e-eca2-434b-bd40-8b7023ea31fb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean Regular",
+    "variant_id": "fdaf744f-3614-4806-9b8c-74c051ec5e2b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b62bdd8073ba3e06",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-italian-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682366359726-E3930KVVLZPDPENNJI6L/Italian+Roast.png",
+  "platform": "squarespace",
+  "product_id": "6442e7f2d249cd3d2e7953b3",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Colombian Italian Roast - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/colombian-italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Organic Whole Bean",
+    "variant_id": "4fdbd4ca-9eff-4ba7-aa4a-70101621bc7a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Organic Ground",
+    "variant_id": "b61cd1c9-7582-47a7-8ce1-2042e6964507"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "156eed57c47014a1",
+  "first_seen": "2026-10-26",
+  "handle": "balanced-rock-breakfast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/f48ed630-2c06-4f45-b9b2-844bed26631f/AM-Print+2.jpg",
+  "platform": "squarespace",
+  "product_id": "6442f4f4ddbaf63adc2f68fe",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Balanced Rock Breakfast Blend - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/balanced-rock-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "3487da84-5671-419d-ba2a-52391ad1c8c6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "a080bde6-52c5-4767-9741-947631be507c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5028978d99d6077",
+  "first_seen": "2026-10-26",
+  "handle": "barr-trail-house-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/bec87a35-2553-4ad0-882f-e4f5aa437daa/AM-Print+4.jpg",
+  "platform": "squarespace",
+  "product_id": "6442f67fb092ed4c3df35981",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Barr Trail House Blend - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/barr-trail-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean Decaf",
+    "variant_id": "96095be7-406f-4600-a760-8a0d7970ae7c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground Regular",
+    "variant_id": "c91204f8-2903-4a59-9fad-ade425db1f04"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean Regular",
+    "variant_id": "ebdeafba-6e5b-4e87-9341-16e3aff4f973"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground Decaf",
+    "variant_id": "f00a8017-1a2a-4aaf-ac49-c40a1c7baa7c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "233b0de339a48af6",
+  "first_seen": "2026-10-26",
+  "handle": "jackalope-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/26d11faa-c02a-415c-bcd1-c705cc5c0b67/AM-Print+3.jpg",
+  "platform": "squarespace",
+  "product_id": "6442f8cd3297064ec9945595",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Jackalope Blend - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/jackalope-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "03d8c5fa-2c7b-4793-a6a2-c9ca206fb7df"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "2d887b81-2471-4a85-8982-767714daafab"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa4e5f0cc5d56c1f",
+  "first_seen": "2026-10-26",
+  "handle": "devils-playground-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/94be22ec-7149-4f94-9906-ed616e8cb268/Devil%E2%80%99sPlayground+%281%29.JPG",
+  "platform": "squarespace",
+  "product_id": "6442fd878b62b22b375b9940",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Devil's Playground Espresso Blend - 16oz",
+  "url": "https://www.pikesperkcoffee.com/shop/p/devils-playground-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground Decaf",
+    "variant_id": "3aefea7e-2bb5-447c-b2b7-9e75a4bbfd85"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground Regular",
+    "variant_id": "450d7e59-d7da-4b0a-a90f-a9ccb481affa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean Regular",
+    "variant_id": "972c844f-c63e-443b-98ee-281ad6af4a7f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean Decaf",
+    "variant_id": "9edfa0fd-886f-4d8c-9dd2-c1b8dcd9793a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfa8e0dddd321d61",
+  "first_seen": "2026-10-26",
+  "handle": "monarch-organic-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/400be894-8e46-4f39-bddf-4bf7af07d99f/AM-Print+5.jpg",
+  "platform": "squarespace",
+  "product_id": "644310c24c63584c03b21c6a",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Monarch Organic Blend - 16 oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/monarch-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "3752912e-1f07-446a-8000-13de3c466343"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "61fc314b-af74-4e90-baf8-37eba7ba679c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d972452d3a701657",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682366816660-H6AJSUOOFYIECL3SDIGF/Italian+Roast+Organic.png",
+  "platform": "squarespace",
+  "product_id": "6446dd5c2c9e8f380694dc92",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "SW Decaf Organic Italian Roast - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/italian-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "3d73e2ba-65b8-4e34-80f5-c37d0f104cdd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground",
+    "variant_id": "8ea12d0b-0bd4-4a95-a5bb-014534902041"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "523265595abf9a46",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682105677103-YPGOI0FGU76CTSB1UQ6I/Coumbian_Flag.png",
+  "platform": "squarespace",
+  "product_id": "6446e31a8fd1225005f19530",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "Decaf Colombian Excelso - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/colombian-excelso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "d3c31165-709d-4b11-9e39-200374606f82"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground",
+    "variant_id": "e6b10540-ede7-4bec-9ff1-171aace073af"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5df941d9fd9bf966",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/643efaf2feba373b3b1e4305/1682105717671-FWM5FDAFXVR3JHODDUD7/Mexico_Flag.png",
+  "platform": "squarespace",
+  "product_id": "6446e7d1dfcdde4ca65b4b7b",
+  "product_type": "",
+  "roaster_slug": "pikesperkcoffee",
+  "tags": [],
+  "title": "SW Decaf Organic Mexican Chiapas - 16oz.",
+  "url": "https://www.pikesperkcoffee.com/shop/p/mexican-chiapas-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Ground",
+    "variant_id": "0d553167-a037-4bf8-812d-12a292d31e17"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "ef9e2c1b-5742-4198-a616-9d6b3abd4ad8"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1927 @@
+[
+ {
+  "body_hash": "247c32c4ad312371",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-french-1",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/house_espresso.jpg?v=1742323058",
+  "platform": "shopify",
+  "product_id": "2179776249954",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Brazil French",
+  "url": "https://coffeefactoryroasters.com/products/brazil-french-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "20075586388066"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "20075586420834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40290994520162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "40290994651234"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "59ac18f33ead1772",
+  "first_seen": "2026-10-26",
+  "handle": "grizzly-peak-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/Grizzly_Peak_Blend.jpg?v=1742261773",
+  "platform": "shopify",
+  "product_id": "367221833760",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Grizzly Peak Blend",
+  "url": "https://coffeefactoryroasters.com/products/grizzly-peak-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547145609314"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "41547145642082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4678351683616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4678351814688"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "6a89cab0bfdffa8c",
+  "first_seen": "2026-10-26",
+  "handle": "beartooth-mountain-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/BMB_Organic.jpg?v=1742263227",
+  "platform": "shopify",
+  "product_id": "367403073568",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Organic Beartooth Mountain Blend",
+  "url": "https://coffeefactoryroasters.com/products/beartooth-mountain-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547209080930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "41547209113698"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 5.75,
+    "title": "1/4 Pound",
+    "variant_id": "41808829284450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4679032012832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4679032078368"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "8f5637e2033d3981",
+  "first_seen": "2026-10-26",
+  "handle": "lewis-clark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/lewis_clark_Blend2.jpg?v=1742263818",
+  "platform": "shopify",
+  "product_id": "367420211232",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Lewis & Clark Blend",
+  "url": "https://coffeefactoryroasters.com/products/lewis-clark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547150000226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "41547150032994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4679088996384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4679089029152"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "b32cbab8b1b6a366",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-french",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/kona.jpg?v=1742325534",
+  "platform": "shopify",
+  "product_id": "367474081824",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Kona",
+  "url": "https://coffeefactoryroasters.com/products/brazil-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "1 pound",
+    "variant_id": "4679256080416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.2,
+    "title": "1/2 pound",
+    "variant_id": "4679256145952"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "9dd54ebd1d6a5965",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/house_espresso_copy.jpg?v=1742323224",
+  "platform": "shopify",
+  "product_id": "367968256032",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://coffeefactoryroasters.com/products/columbian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40290996191330"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "40290996420706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 pound",
+    "variant_id": "4680936063008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 8.95,
+    "title": "1/2 pound",
+    "variant_id": "4680936095776"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "6a5e70c6166be8d0",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/Costa_Rican.jpg?v=1742323399",
+  "platform": "shopify",
+  "product_id": "367974514720",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Costa Rican",
+  "url": "https://coffeefactoryroasters.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40290996715618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "40290996879458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 pound",
+    "variant_id": "4680957853728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4680957919264"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "f769ac3f48097e52",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/espressoroast.jpg?v=1742323836",
+  "platform": "shopify",
+  "product_id": "367979626528",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Espresso Roast (Italian Roast)",
+  "url": "https://coffeefactoryroasters.com/products/espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40290997960802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "40290998091874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound",
+    "variant_id": "4680971092000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound",
+    "variant_id": "4680971124768"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "7ad0d735cb5d0b38",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/mexorganic.jpg?v=1742325619",
+  "platform": "shopify",
+  "product_id": "367985164320",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind",
+   "organic"
+  ],
+  "title": "Organic Mexican",
+  "url": "https://coffeefactoryroasters.com/products/mexican-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208949858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound half caff",
+    "variant_id": "41547208982626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 pound",
+    "variant_id": "4680989376544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4680989409312"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "9bd6d03621a78a5d",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/peruorganic.jpg?v=1742325696",
+  "platform": "shopify",
+  "product_id": "367999844384",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind",
+   "organic"
+  ],
+  "title": "Organic Peru",
+  "url": "https://coffeefactoryroasters.com/products/peru-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208884322"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound half caff",
+    "variant_id": "41547208917090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 pound",
+    "variant_id": "4681038725152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4681038757920"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "df99c4983f948984",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/drsumorganic.jpg?v=1742325827",
+  "platform": "shopify",
+  "product_id": "368026812448",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind",
+   "organic"
+  ],
+  "title": "Dark Roast Organic Sumatra",
+  "url": "https://coffeefactoryroasters.com/products/sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40274677629026"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.5,
+    "title": "1/2 pound half caff",
+    "variant_id": "40274677858402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "1 pound",
+    "variant_id": "4681108389920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.5,
+    "title": "1/2 pound",
+    "variant_id": "4681108422688"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "cf2d98cf53c898e9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/espres_deacf.jpg?v=1742323612",
+  "platform": "shopify",
+  "product_id": "368072359968",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "decaf",
+   "grind"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://coffeefactoryroasters.com/products/espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound",
+    "variant_id": "4681220161568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.35,
+    "title": "1/2 pound",
+    "variant_id": "4681220194336"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "b6e8f22c26e396a7",
+  "first_seen": "2026-10-26",
+  "handle": "red-lodge-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/RL_decaf_blend.jpg?v=1742264784",
+  "platform": "shopify",
+  "product_id": "368077930528",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "decaf",
+   "grind"
+  ],
+  "title": "Decaf Red Lodge Blend",
+  "url": "https://coffeefactoryroasters.com/products/red-lodge-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4681231204384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound",
+    "variant_id": "4681231237152"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "65bd840d479db40e",
+  "first_seen": "2026-10-26",
+  "handle": "rattlesnake-bite",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/ratlesnake.jpg?v=1742263939",
+  "platform": "shopify",
+  "product_id": "373348139040",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Rattlesnake Bite",
+  "url": "https://coffeefactoryroasters.com/products/rattlesnake-bite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208818786"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208851554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4717450952736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4717451018272"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "53befcccbdb84ec7",
+  "first_seen": "2026-10-26",
+  "handle": "red-lodge-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/RL_Blend.jpg?v=1742263055",
+  "platform": "shopify",
+  "product_id": "373382184992",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Red Lodge Blend",
+  "url": "https://coffeefactoryroasters.com/products/red-lodge-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208753250"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208786018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 pound",
+    "variant_id": "4717794656288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 8.95,
+    "title": "1/2 pound",
+    "variant_id": "4717794689056"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "8cff9a6d0a8a9254",
+  "first_seen": "2026-10-26",
+  "handle": "rock-creek-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/rock_creek_blend.jpg?v=1742264141",
+  "platform": "shopify",
+  "product_id": "373387886624",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Rock Creek Blend",
+  "url": "https://coffeefactoryroasters.com/products/rock-creek-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208687714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208720482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 pound",
+    "variant_id": "4717845086240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4717845119008"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "81c265e25fe3f3c0",
+  "first_seen": "2026-10-26",
+  "handle": "rocky-mountain-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/Rocky_Moun_Blend.jpg?v=1742263331",
+  "platform": "shopify",
+  "product_id": "373392834592",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Rocky Mountain Blend",
+  "url": "https://coffeefactoryroasters.com/products/rocky-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208622178"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208654946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4717899087904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4717899186208"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "86c7a1d2e364ff3c",
+  "first_seen": "2026-10-26",
+  "handle": "wild-west-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/ww_espresso.jpg?v=1742264330",
+  "platform": "shopify",
+  "product_id": "373399748640",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Wild West Espresso Blend",
+  "url": "https://coffeefactoryroasters.com/products/wild-west-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208556642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208589410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4717992312864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4717992378400"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "77fe139524757036",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/ethioproast.jpg?v=1742324076",
+  "platform": "shopify",
+  "product_id": "373402075168",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Ethiopian Roast",
+  "url": "https://coffeefactoryroasters.com/products/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547145674850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547145707618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4718045691936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4718045757472"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "c28b0696793effac",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/frenchroast.jpg?v=1742324164",
+  "platform": "shopify",
+  "product_id": "373403975712",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "French Roast",
+  "url": "https://coffeefactoryroasters.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547145740386"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547145773154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4718079901728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 pound",
+    "variant_id": "4718079934496"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "fbef43ab400f8044",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/guateroast.jpg?v=1742324441",
+  "platform": "shopify",
+  "product_id": "373405483040",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Guatemalan Roast",
+  "url": "https://coffeefactoryroasters.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547145805922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547145838690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 pound",
+    "variant_id": "4718115225632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 8.95,
+    "title": "1/2 pound",
+    "variant_id": "4718115291168"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "eaa9888ca90514ab",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/kenyaroast.jpg?v=1742325444",
+  "platform": "shopify",
+  "product_id": "373407350816",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Kenya Roast",
+  "url": "https://coffeefactoryroasters.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547145904226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547145936994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound",
+    "variant_id": "4718153433120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound",
+    "variant_id": "4718153465888"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "676981853a77799a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/mrsumorganic.jpg?v=1742325918",
+  "platform": "shopify",
+  "product_id": "373411807264",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind",
+   "organic"
+  ],
+  "title": "Medium Roast Sumatra Organic",
+  "url": "https://coffeefactoryroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "40274653020258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "40274653085794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4718228275232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4718228340768"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "d7c688aed98f0348",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/products/coffeetanzaniapeaberry.jpg?v=1737140365",
+  "platform": "shopify",
+  "product_id": "373413838880",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://coffeefactoryroasters.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208392802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.35,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208425570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound",
+    "variant_id": "4718255538208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.35,
+    "title": "1/2 pound",
+    "variant_id": "4718255603744"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "a6a25b7696deb33e",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/viennaroast.jpg?v=1742325989",
+  "platform": "shopify",
+  "product_id": "373416034336",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Vienna Roast",
+  "url": "https://coffeefactoryroasters.com/products/vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208327266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208360034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 pound",
+    "variant_id": "4718310293536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 8.95,
+    "title": "1/2 pound",
+    "variant_id": "4718310326304"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "11c6a1423d44e4e2",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/mex_deacf.jpg?v=1742323694",
+  "platform": "shopify",
+  "product_id": "373428224032",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "decaf",
+   "grind"
+  ],
+  "title": "Decaf Mexican",
+  "url": "https://coffeefactoryroasters.com/products/mexican-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4718422196256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 pound",
+    "variant_id": "4718422229024"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "b38dc1a0269b666a",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/irish.jpg?v=1742353425",
+  "platform": "shopify",
+  "product_id": "373462958112",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Irish Creme",
+  "url": "https://coffeefactoryroasters.com/products/irish-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547146231906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547146264674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697709916258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697709949026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4719080538144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4719080603680"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "08071d97bbc89532",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/jamaicanmecr.jpg?v=1742353663",
+  "platform": "shopify",
+  "product_id": "373464236064",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Jamaican Me Crazy",
+  "url": "https://coffeefactoryroasters.com/products/jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547146330210"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547146461282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697709588578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697709621346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4719113732128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4719113797664"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "3a72b8d748f67b30",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/jazzyjava.jpg?v=1742353820",
+  "platform": "shopify",
+  "product_id": "373465972768",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Jazzy Java",
+  "url": "https://coffeefactoryroasters.com/products/jazzy-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547146657890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547146690658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697709490274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697709523042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4719169830944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4719169863712"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "7740f520d5dba40e",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/jinglebell.jpg?v=1742352451",
+  "platform": "shopify",
+  "product_id": "373471445024",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Jingle Bell Java",
+  "url": "https://coffeefactoryroasters.com/products/jingle-bell-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547146723426"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547146756194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697709162594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697709195362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4719231303712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4719231369248"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "4450ca010c030bf4",
+  "first_seen": "2026-10-26",
+  "handle": "mistletoe-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/mmocha_5973d0e4-53b5-4f8a-b9fb-a38f967320a4.jpg?v=1742352874",
+  "platform": "shopify",
+  "product_id": "373475803168",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Mistletoe Mocha",
+  "url": "https://coffeefactoryroasters.com/products/mistletoe-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547150098530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547150131298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697709064290"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697709097058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4719306670112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4719306702880"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "40c65a00b22741c6",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/snicker.jpg?v=1742354195",
+  "platform": "shopify",
+  "product_id": "373506375712",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Snickerdoodle",
+  "url": "https://coffeefactoryroasters.com/products/snickerdoodle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547208032354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547208065122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697708179554"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697708212322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4720000237600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4720000270368"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "23dae76642fcb9ab",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan-creme",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/southpc.jpg?v=1742354264",
+  "platform": "shopify",
+  "product_id": "373508145184",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Southern Pecan Creme",
+  "url": "https://coffeefactoryroasters.com/products/southern-pecan-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547207966818"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547207999586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697708114018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697708146786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4720024518688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4720024551456"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "4ab2f9d5c5aaa026",
+  "first_seen": "2026-10-26",
+  "handle": "the-nutcracker",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/nutcrack_tree.jpg?v=1742576544",
+  "platform": "shopify",
+  "product_id": "373511847968",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "The Nutcracker",
+  "url": "https://coffeefactoryroasters.com/products/the-nutcracker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547207901282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41547207934050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 pound Decaf",
+    "variant_id": "41697707786338"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 pound Decaf",
+    "variant_id": "41697707819106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "4720077864992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "4720077963296"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "77964667a63eee08",
+  "first_seen": "2026-10-26",
+  "handle": "airscape®-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/PXL_20240425_144157584.MP.jpg?v=1737140338",
+  "platform": "shopify",
+  "product_id": "4529469292642",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [],
+  "title": "Airscape® Coffee Canister",
+  "url": "https://coffeefactoryroasters.com/products/airscape®-coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "32059652014178"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "1fd4f072a1d52cb8",
+  "first_seen": "2026-10-26",
+  "handle": "sasquatch-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/sas_sunrise_blend.jpg?v=1742264639",
+  "platform": "shopify",
+  "product_id": "6821141315682",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "blonde roast",
+   "caramel",
+   "chocolate",
+   "coffee",
+   "grind"
+  ],
+  "title": "Sasquatch Sunrise",
+  "url": "https://coffeefactoryroasters.com/products/sasquatch-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 Pound",
+    "variant_id": "40186545143906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound",
+    "variant_id": "40187614167138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41547207606370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "41547207639138"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "21a2eeeff67c4464",
+  "first_seen": "2026-10-26",
+  "handle": "haitian-blue",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/haitianblue.jpg?v=1742324891",
+  "platform": "shopify",
+  "product_id": "6834622726242",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Haitian Blue",
+  "url": "https://coffeefactoryroasters.com/products/haitian-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 pound",
+    "variant_id": "40229829181538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "1/2 Pound",
+    "variant_id": "40229829214306"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "c3e03e9f2afec990",
+  "first_seen": "2026-10-26",
+  "handle": "advent-coffee-calendar",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/PXL-20231128_175153362.jpg?v=1737140325",
+  "platform": "shopify",
+  "product_id": "6951001260130",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [],
+  "title": "Advent Coffee Calendar",
+  "url": "https://coffeefactoryroasters.com/products/advent-coffee-calendar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Default Title",
+    "variant_id": "40591124693090"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "9914e7bd2732174f",
+  "first_seen": "2026-10-26",
+  "handle": "special-edition-crooked-tree-ranch-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/IMG_4190.jpg?v=1742265357",
+  "platform": "shopify",
+  "product_id": "7277023952994",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Crooked Tree Ranch Blend, Special Edition",
+  "url": "https://coffeefactoryroasters.com/products/special-edition-crooked-tree-ranch-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "41650056921186"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 pound",
+    "variant_id": "41650056953954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41650056986722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.5,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41650057019490"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "bdb5e57cbaf11305",
+  "first_seen": "2026-10-26",
+  "handle": "organic-beartooth-mountain-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/coldbrewblend.jpg?v=1742265557",
+  "platform": "shopify",
+  "product_id": "7290679197794",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Coffee Factory Roasters Cold Brew Blend",
+  "url": "https://coffeefactoryroasters.com/products/organic-beartooth-mountain-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 pound",
+    "variant_id": "41707222302818"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.95,
+    "title": "1/2 pound",
+    "variant_id": "41707222335586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41707222368354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.95,
+    "title": "1/2 Pound Half Caff",
+    "variant_id": "41707222401122"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "e2372fd172a30e76",
+  "first_seen": "2026-10-26",
+  "handle": "cfr-house-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/houseespresso.jpg?v=1742265707",
+  "platform": "shopify",
+  "product_id": "7290682409058",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Coffee Factory Roasters House Espresso",
+  "url": "https://coffeefactoryroasters.com/products/cfr-house-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 pound",
+    "variant_id": "41707227218018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.17,
+    "title": "1/2 pound",
+    "variant_id": "41707227250786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 Pound Half Caff",
+    "variant_id": "41707227283554"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 pound Half Caff",
+    "variant_id": "41707227316322"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ },
+ {
+  "body_hash": "a9e941745bfefb49",
+  "first_seen": "2026-10-26",
+  "handle": "crooked-tree-ranch-blend-special-edition-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2528/5462/files/knifehand.jpg?v=1784824464",
+  "platform": "shopify",
+  "product_id": "7751422050402",
+  "product_type": "",
+  "roaster_slug": "coffeefactoryroasters",
+  "tags": [
+   "grind"
+  ],
+  "title": "Veteran's Navigation Network  - Knife Hand Black",
+  "url": "https://coffeefactoryroasters.com/products/crooked-tree-ranch-blend-special-edition-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "43141629313122"
+   }
+  ],
+  "vendor": "Coffee Factory Roasters"
+ }
+]

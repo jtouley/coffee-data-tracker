@@ -1,0 +1,145 @@
+{
+ "1808843669574": {
+  "body_hash": "ed5d9da870b9f485",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "to maximize",
+   "aroma"
+  ],
+  "varietals": []
+ },
+ "1867351916614": {
+  "body_hash": "bb4676875ced0726",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "rise"
+  ],
+  "varietals": []
+ },
+ "1915236974662": {
+  "body_hash": "bff0a49d5951a894",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "to maximize",
+   "aroma"
+  ],
+  "varietals": []
+ },
+ "1980604874822": {
+  "body_hash": "c7b6e31ebc793ae8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "to maximize",
+   "aroma"
+  ],
+  "varietals": []
+ },
+ "3927314858054": {
+  "body_hash": "d855d27c56710352",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "to maximize",
+   "aroma"
+  ],
+  "varietals": []
+ },
+ "4881527963736": {
+  "body_hash": "149b2efa8adcdd53",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "to maximize",
+   "aroma"
+  ],
+  "varietals": []
+ },
+ "6847050612824": {
+  "body_hash": "8e18c45617a14956",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "slightly grassy",
+   "medium-roasted coffee"
+  ],
+  "varietals": []
+ },
+ "7842443395160": {
+  "body_hash": "78d8daa72eaeaa11",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "slightly sweet",
+   "medium-roasted coffee"
+  ],
+  "varietals": []
+ }
+}

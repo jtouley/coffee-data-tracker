@@ -1,0 +1,497 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-elkin-guzman",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/ElkinGuzmanKazkara.png?v=1791319672",
+  "platform": "shopify",
+  "product_id": "10340714905797",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Colombia - Elkin Guzman",
+  "url": "https://kazkara.com/products/colombia-elkin-guzman",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 24.5,
+    "title": "300 G",
+    "variant_id": "50625855914181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB",
+    "variant_id": "50625855946949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 LB",
+    "variant_id": "50625855979717"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-garra-de-jaguar",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/MX_GarradeJaguar_mockup.png?v=1791213175",
+  "platform": "shopify",
+  "product_id": "10340721098949",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Mexico - Garra de Jaguar",
+  "url": "https://kazkara.com/products/mexico-garra-de-jaguar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.5,
+    "title": "300 G",
+    "variant_id": "50625874657477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LB",
+    "variant_id": "50625874690245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB",
+    "variant_id": "50625874723013"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-luis-anibal-acevedo",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/ColombiaLuisAnibal_mockup.png?v=1791401284",
+  "platform": "shopify",
+  "product_id": "10343836942533",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Colombia - Luis Anibal Acevedo",
+  "url": "https://kazkara.com/products/colombia-luis-anibal-acevedo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 24.0,
+    "title": "300 G",
+    "variant_id": "50640967368901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB",
+    "variant_id": "50640967401669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 LB",
+    "variant_id": "50640967434437"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-los-cauchos",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/LosCauchos_kazkara.png?v=1792082511",
+  "platform": "shopify",
+  "product_id": "10361019138245",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Colombia - Los Cauchos",
+  "url": "https://kazkara.com/products/colombia-los-cauchos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300 G",
+    "variant_id": "50708674445509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 LB",
+    "variant_id": "50708674478277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 LB",
+    "variant_id": "50708674511045"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-ea-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/decafkazkara.png?v=1792083299",
+  "platform": "shopify",
+  "product_id": "10361055346885",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Colombia - EA Decaf",
+  "url": "https://kazkara.com/products/colombia-ea-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "300 G",
+    "variant_id": "50708720681157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 LB",
+    "variant_id": "50708720713925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 LB",
+    "variant_id": "50708720746693"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-coffee-duo",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/honeyandwashedbundle.png?v=1793031204",
+  "platform": "shopify",
+  "product_id": "10383237906629",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Ecuador - Coffee Duo",
+  "url": "https://kazkara.com/products/ecuador-coffee-duo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 60.0,
+    "title": "2x 300 G",
+    "variant_id": "50807065018565"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-kazkara-bags-300g",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/Honduras_kazkara.png?v=1742950573",
+  "platform": "shopify",
+  "product_id": "8254903484613",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Honduras",
+  "url": "https://kazkara.com/products/honduras-kazkara-bags-300g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.5,
+    "title": "300 G",
+    "variant_id": "46509327843525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 LB",
+    "variant_id": "46509327876293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 LB",
+    "variant_id": "46509327909061"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "a88dda7d914b7ccc",
+  "first_seen": "2026-10-26",
+  "handle": "mabel-gray-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/mabelgraymockup.png?v=1780320749",
+  "platform": "shopify",
+  "product_id": "8870004359365",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Mabel Gray Blend",
+  "url": "https://kazkara.com/products/mabel-gray-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 22.0,
+    "title": "300 g",
+    "variant_id": "46298183303365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 LB",
+    "variant_id": "46298183336133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB",
+    "variant_id": "46298183368901"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-finca-san-pablo",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/Kazkara_SanPablo.png?v=1782334283",
+  "platform": "shopify",
+  "product_id": "8897197736133",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee",
+   "roastretreat"
+  ],
+  "title": "Ecuador - Finca San Pablo",
+  "url": "https://kazkara.com/products/ecuador-finca-san-pablo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 28.0,
+    "title": "300 G",
+    "variant_id": "46509313556677"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 LB",
+    "variant_id": "46509313589445"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 LB",
+    "variant_id": "46509313622213"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-da-cabana",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/dacabanamockup.png?v=1782408583",
+  "platform": "shopify",
+  "product_id": "8897968013509",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Brazil - Fazenda Da Cabana",
+  "url": "https://kazkara.com/products/brazil-fazenda-da-cabana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 22.5,
+    "title": "300 G",
+    "variant_id": "46509308739781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 LB",
+    "variant_id": "46509308772549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 LB",
+    "variant_id": "46509308805317"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/LasLajas_Finalist.png?v=1793024316",
+  "platform": "shopify",
+  "product_id": "8905612427461",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee",
+   "roastretreat"
+  ],
+  "title": "Costa Rica - Las Lajas",
+  "url": "https://kazkara.com/products/costa-rica-las-lajas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.5,
+    "title": "300 G",
+    "variant_id": "46509297238213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB",
+    "variant_id": "46509297270981"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 137.0,
+    "title": "5 LB",
+    "variant_id": "46509297303749"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-arelis-nohelia-funes",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/Guatemala_ArelisNoheliaFunes.png?v=1788380418",
+  "platform": "shopify",
+  "product_id": "9001321136325",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Guatemala - Arelis Nohelia Funes",
+  "url": "https://kazkara.com/products/guatemala-arelis-nohelia-funes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 22.0,
+    "title": "300 G",
+    "variant_id": "46851443425477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 LB",
+    "variant_id": "46851443458245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 LB",
+    "variant_id": "46851443491013"
+   }
+  ],
+  "vendor": "kazkara"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza",
+  "image": "https://cdn.shopify.com/s/files/1/0411/2216/8993/files/BlueAyarzaKazkara.png?v=1789256162",
+  "platform": "shopify",
+  "product_id": "9023875186885",
+  "product_type": "",
+  "roaster_slug": "kazkara",
+  "tags": [
+   "kazkara coffee"
+  ],
+  "title": "Guatemala - Blue Ayarza",
+  "url": "https://kazkara.com/products/guatemala-blue-ayarza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 22.0,
+    "title": "300 G",
+    "variant_id": "46905623412933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 LB",
+    "variant_id": "46905623445701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 LB",
+    "variant_id": "46905623478469"
+   }
+  ],
+  "vendor": "kazkara"
+ }
+]

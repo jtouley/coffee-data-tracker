@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "74ae7d602320408d",
+  "first_seen": "2026-10-26",
+  "handle": "2-bag-option-honduras-medium-roast-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3c6370c89f4d",
+  "product_type": "",
+  "roaster_slug": "muttscoffee",
+  "tags": [],
+  "title": "2 Bag Option- Honduras Medium Roast Coffee",
+  "url": "https://www.muttscoffee.com/product-page/2-bag-option-honduras-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dac5b03d0243ff5b",
+  "first_seen": "2026-10-26",
+  "handle": "2-bag-option-honduras-dark-roast-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "793174abdac0",
+  "product_type": "",
+  "roaster_slug": "muttscoffee",
+  "tags": [],
+  "title": "2 Bag Option- Honduras Dark Roast Coffee",
+  "url": "https://www.muttscoffee.com/product-page/2-bag-option-honduras-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a3258df34e1df4a",
+  "first_seen": "2026-10-26",
+  "handle": "2-bag-option-nicaragua-plumeria-light-roast-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8ef189f851e5",
+  "product_type": "",
+  "roaster_slug": "muttscoffee",
+  "tags": [],
+  "title": "2 Bag Option- Nicaragua Plumeria Light Roast Coffee",
+  "url": "https://www.muttscoffee.com/product-page/2-bag-option-nicaragua-plumeria-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f66b7864b3af246",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-bulk-coffee-option-reduced-waste",
+  "image": null,
+  "platform": "generic",
+  "product_id": "dd107e0ca773",
+  "product_type": "",
+  "roaster_slug": "muttscoffee",
+  "tags": [],
+  "title": "5 lb. Bulk Coffee Option-Reduced Waste",
+  "url": "https://www.muttscoffee.com/product-page/5-lb-bulk-coffee-option-reduced-waste",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

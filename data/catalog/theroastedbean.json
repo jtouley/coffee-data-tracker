@@ -1,0 +1,160 @@
+[
+ {
+  "body_hash": "25bd3ad7e159c63c",
+  "first_seen": "2026-10-26",
+  "handle": "rosario-geisha",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/2.jpg",
+  "platform": "woocommerce",
+  "product_id": "102",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "El Salvador",
+   "Single Origin"
+  ],
+  "title": "Geisha",
+  "url": "https://theroastedbean.com/product/rosario-geisha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Geisha",
+    "variant_id": "102:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e8b47120d4a97b6",
+  "first_seen": "2026-10-26",
+  "handle": "delicias-pacamara",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/1.jpg",
+  "platform": "woocommerce",
+  "product_id": "107",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "El Salvador",
+   "Single Origin"
+  ],
+  "title": "Pacamara",
+  "url": "https://theroastedbean.com/product/delicias-pacamara/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Pacamara",
+    "variant_id": "107:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c01083a2962decbd",
+  "first_seen": "2026-10-26",
+  "handle": "pangea-blend",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/4.jpg",
+  "platform": "woocommerce",
+  "product_id": "111",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Light Roast"
+  ],
+  "title": "Pangea Blend",
+  "url": "https://theroastedbean.com/product/pangea-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Pangea Blend",
+    "variant_id": "111:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b73b3d4aa3e64ad8",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/6.jpg",
+  "platform": "woocommerce",
+  "product_id": "146",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Sunrise Blend",
+  "url": "https://theroastedbean.com/product/sunrise/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Sunrise Blend",
+    "variant_id": "146:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b383b621f0cac3b",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-blend",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/5.jpg",
+  "platform": "woocommerce",
+  "product_id": "148",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Rainforest Blend",
+  "url": "https://theroastedbean.com/product/rainforest-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Rainforest Blend",
+    "variant_id": "148:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80866a614e3d6e60",
+  "first_seen": "2026-10-26",
+  "handle": "san-mateo-bourbon",
+  "image": "https://theroastedbean.com/wp-content/uploads/2020/06/3.jpg",
+  "platform": "woocommerce",
+  "product_id": "74",
+  "product_type": "variable",
+  "roaster_slug": "theroastedbean",
+  "tags": [
+   "El Salvador",
+   "Single Origin"
+  ],
+  "title": "Bourbon",
+  "url": "https://theroastedbean.com/product/san-mateo-bourbon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Bourbon",
+    "variant_id": "74:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

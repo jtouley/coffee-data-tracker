@@ -1,0 +1,1514 @@
+[
+ {
+  "body_hash": "bbe0e013e471cef5",
+  "first_seen": "2026-10-26",
+  "handle": "ivonne-herrera-coffee-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Ivonne_Herrera_PDP_front_guatemalan_coffee.png?v=1753373678",
+  "platform": "shopify",
+  "product_id": "271030452245",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ivonne Herrera: Guatemala | Washed | Medium Roast",
+  "url": "https://ondaorigins.com/products/ivonne-herrera-coffee-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "20905701277785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "3405982760981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111976800345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111976833113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111976865881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431151571033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431152291929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431153176665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "8715849728089"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "a4c285bb3ffbe04a",
+  "first_seen": "2026-10-26",
+  "handle": "neo-noir",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Neo_Noir_PDP_front_dark_roast_coffee_blend.png?v=1734550871",
+  "platform": "shopify",
+  "product_id": "4421759139929",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Neo Noir: Specialty Blend | Dark Roast",
+  "url": "https://ondaorigins.com/products/neo-noir",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31339187142745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "31339187175513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "31339187208281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111980273753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111980306521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111980339289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431171821657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431172018265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431172083801"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "bd53e6fa909de195",
+  "first_seen": "2026-10-26",
+  "handle": "tusitala-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Tusitala_PDP_front_espresso_coffee_blend.png?v=1734551447",
+  "platform": "shopify",
+  "product_id": "4421776048217",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Tusitala: Specialty Espresso Blend | Medium Roast",
+  "url": "https://ondaorigins.com/products/tusitala-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31339254939737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "31339255005273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "31339255038041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111981191257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111981224025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111981256793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431164186713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431170642009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431171264601"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "c4e8d2ff3e15d694",
+  "first_seen": "2026-10-26",
+  "handle": "kikos-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Kiko_New_Bag_PDP_Front_Transparent_1.png?v=1778778151",
+  "platform": "shopify",
+  "product_id": "6687772486",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "carbon-reduction",
+   "coffee",
+   "kiko",
+   "single origin",
+   "solar-power"
+  ],
+  "title": "Kiko Ribeiro: Brazil | Natural | Medium Roast",
+  "url": "https://ondaorigins.com/products/kikos-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "20905708126297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "21108737542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "21108737606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111977717849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111977750617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111977783385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431147540569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431149080665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431149441113"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "766037c4cdaa462e",
+  "first_seen": "2026-10-26",
+  "handle": "enriques-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Enrique_Navarro_PDP_front_coffee_costa_rica.png?v=1753373678",
+  "platform": "shopify",
+  "product_id": "6742903174",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "enrique",
+   "fair-wages",
+   "single origin"
+  ],
+  "title": "Enrique Navarro: Costa Rica | Washed | Light Roast",
+  "url": "https://ondaorigins.com/products/enriques-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "20905568272473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "21271900038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "21271900102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111969001561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111969034329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111969067097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431178801241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431178932313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431179259993"
+   }
+  ],
+  "vendor": "Enrique"
+ },
+ {
+  "body_hash": "2b0a08da34453396",
+  "first_seen": "2026-10-26",
+  "handle": "carlos-cadena-mexico-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Carlos_Cadena_Single_Origins_Coffee_Veracruz_Mexico.png?v=1735936580",
+  "platform": "shopify",
+  "product_id": "6850777808985",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Carlos Cadena: Mexico | Anaerobic | Light Roast",
+  "url": "https://ondaorigins.com/products/carlos-cadena-mexico-single-origin-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "39508753580121"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "39508753612889"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111961661529"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111961694297"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431176999001"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431177162841"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431177228377"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42439729283161"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42439729512537"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "e85d2b133cf9dfc9",
+  "first_seen": "2026-10-26",
+  "handle": "ana-nelly-luna-colombia-pink-bourbon-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Anna_Nelly_Luna_Reserve_PDP_front_colombian_reserve_coffee.png?v=1734545928",
+  "platform": "shopify",
+  "product_id": "7711067340889",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Ana Nelly Luna Reserve: Colombia | Washed | Light Roast",
+  "url": "https://ondaorigins.com/products/ana-nelly-luna-colombia-pink-bourbon-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "41594833240153"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "41594833272921"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "41594833305689"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42111957958745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42111957991513"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42111958024281"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42431163531353"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42431164022873"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42431164055641"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "c9f7e973a6694e47",
+  "first_seen": "2026-10-26",
+  "handle": "familia-osorio-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Familia_Osorio_Single_Origin_Coffee_Colombia_Decaf_Front_88a107db-4d41-4101-8f2a-2322b92bf8aa.png?v=1759177349",
+  "platform": "shopify",
+  "product_id": "8027018723417",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Familia Osorio: Colombia | Washed Decaf | Medium Roast",
+  "url": "https://ondaorigins.com/products/familia-osorio-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42665347809369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42665347842137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42665347874905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "42665347907673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42665347940441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42665347973209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "42665348005977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42665348038745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42665348071513"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "b610ca14e0f4f33f",
+  "first_seen": "2026-10-26",
+  "handle": "sergio-garcia-campos-peru",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Coffee_Bag_From_Peru_Single_Origin.png?v=1767633919",
+  "platform": "shopify",
+  "product_id": "8047957868633",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Sergio Garcia Campos: Peru | Washed | Light Roast",
+  "url": "https://ondaorigins.com/products/sergio-garcia-campos-peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42736049356889"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42736049389657"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42736049422425"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "42736049455193"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42736049487961"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42736049520729"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "42736049553497"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42736049586265"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42736049619033"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "d4ad27a351372446",
+  "first_seen": "2026-10-26",
+  "handle": "lintong-indonesia",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Indonesian_Single_Origin_Coffee_Beans_Bag.png?v=1767285798",
+  "platform": "shopify",
+  "product_id": "8047958327385",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Lintong: Indonesia | Wet Hulled | Medium Roast",
+  "url": "https://ondaorigins.com/products/lintong-indonesia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42736051748953"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42736051781721"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42736051814489"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "42736051847257"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42736051880025"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42736051912793"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "42736051945561"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42736051978329"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42736052011097"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "fa6efa9383804227",
+  "first_seen": "2026-10-26",
+  "handle": "familia-urbano-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Familia_Urbano_PDP_front_transparent-01.png?v=1763503875",
+  "platform": "shopify",
+  "product_id": "8082528338009",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Familia Urbano: Colombia | Washed | Medium Roast",
+  "url": "https://ondaorigins.com/products/familia-urbano-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42849778597977"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42849778630745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42849778663513"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "42849778696281"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "42849778729049"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "42849778761817"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "42849778794585"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "42849778827353"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "42849778860121"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "40c8cc050b878c68",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/Front_5lb_Coffee_Bag.png?v=1777577357",
+  "platform": "shopify",
+  "product_id": "8206951153753",
+  "product_type": "",
+  "roaster_slug": "ondaorigins",
+  "tags": [],
+  "title": "Bulk Specialty Coffee",
+  "url": "https://ondaorigins.com/products/bulk-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Whole Bean",
+    "variant_id": "43289455591513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Neo Noir: Specialty Blend | Dark Roast / Whole Bean",
+    "variant_id": "43289455722585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Ground - Drip",
+    "variant_id": "43289456246873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Ground - French Press",
+    "variant_id": "43289456279641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Neo Noir: Specialty Blend | Dark Roast / Ground - Drip",
+    "variant_id": "43289456509017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Neo Noir: Specialty Blend | Dark Roast / Ground - French Press",
+    "variant_id": "43289456541785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Whole Bean",
+    "variant_id": "43289456640089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Ground - Drip",
+    "variant_id": "43289456672857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Ground - French Press",
+    "variant_id": "43289456705625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Whole Bean",
+    "variant_id": "43289456836697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Ground - Drip",
+    "variant_id": "43289456869465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Ground - French Press",
+    "variant_id": "43289456902233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Whole Bean",
+    "variant_id": "43289456935001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Ground - Drip",
+    "variant_id": "43289456967769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Ground - French Press",
+    "variant_id": "43289457000537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Whole Bean",
+    "variant_id": "43289457033305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Ground - Drip",
+    "variant_id": "43289457066073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Kiko Ribeiro: Brazil | Natural | Medium Roast / Ground - French Press",
+    "variant_id": "43289457098841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Neo Noir: Specialty Blend | Dark Roast / Whole Bean",
+    "variant_id": "43289457426521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Neo Noir: Specialty Blend | Dark Roast / Ground - Drip",
+    "variant_id": "43289457459289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Neo Noir: Specialty Blend | Dark Roast / Ground - French Press",
+    "variant_id": "43289457492057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Whole Bean",
+    "variant_id": "43289457623129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Ground - Drip",
+    "variant_id": "43289457655897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Enrique Navarro: Costa Rica | Washed | Light Roast / Ground - French Press",
+    "variant_id": "43289457688665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Whole Bean",
+    "variant_id": "43289457819737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Ground - Drip",
+    "variant_id": "43289457852505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb / Familia Osorio: Colombia | Washed Decaf | Medium Roast / Ground - French Press",
+    "variant_id": "43289457885273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Whole Bean",
+    "variant_id": "43289457918041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Ground - Drip",
+    "variant_id": "43289457950809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb / Tusitala: Specialty Espresso Blend | Medium Roast / Ground - French Press",
+    "variant_id": "43289457983577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Whole Bean",
+    "variant_id": "44547615260761"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Ground - Drip",
+    "variant_id": "44547615293529"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Ground - French Press",
+    "variant_id": "44547615326297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Whole Bean",
+    "variant_id": "44547615359065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Ground - Drip",
+    "variant_id": "44547615391833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lb / Ivonne Herrera: Guatemala | Washed | Medium Roast / Ground - French Press",
+    "variant_id": "44547615424601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Whole Bean",
+    "variant_id": "44786607390809"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Ground - Drip",
+    "variant_id": "44786607423577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Ground - French Press",
+    "variant_id": "44786607456345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Whole Bean",
+    "variant_id": "44786607489113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Ground - Drip",
+    "variant_id": "44786607521881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Rudy Pascual Perez: Guatemala | Washed | Light Roast / Ground - French Press",
+    "variant_id": "44786607554649"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "8a3ac8b85e5ccf32",
+  "first_seen": "2026-10-26",
+  "handle": "cruz-perez-pablo-guatemala-washed-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/CruzFrontTransparent.png?v=1789498665",
+  "platform": "shopify",
+  "product_id": "8354893856857",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Cruz Perez Pablo: Guatemala | Washed | Light Roast",
+  "url": "https://ondaorigins.com/products/cruz-perez-pablo-guatemala-washed-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44556065538137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44556065570905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44556065603673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "44556065636441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "44556065669209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "44556065701977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "44556065734745"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "44556065767513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "44556065800281"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "san-juan-coatzospam-mexico-washed-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/MexicoFront_52da3792-662a-4adb-84fa-fdfae2ee7f22.png?v=1789498622",
+  "platform": "shopify",
+  "product_id": "8361723199577",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "mexico",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "San Juan Coatzospam: Mexico | Washed | Dark Roast",
+  "url": "https://ondaorigins.com/products/san-juan-coatzospam-mexico-washed-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44579143188569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44579143221337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44579143254105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "44579143286873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "44579143319641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "44579143352409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "44579143385177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "44579143417945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "44579143450713"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kainumui-aa-kenya-washed-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/KenyaFrontTransparent.png?v=1789498572",
+  "platform": "shopify",
+  "product_id": "8361729654873",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee",
+   "responsible coffee",
+   "single origin",
+   "sustainable"
+  ],
+  "title": "Kainumui AA: Kenya | Washed | Light Roast",
+  "url": "https://ondaorigins.com/products/kainumui-aa-kenya-washed-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44579162325081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "44579162423385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "44579162521689"
+   }
+  ],
+  "vendor": "Onda Origins"
+ },
+ {
+  "body_hash": "70494bcfd699c1b1",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-flours-specialty-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1329/3307/files/FFBlendFrontTransparent.png?v=1788891828",
+  "platform": "shopify",
+  "product_id": "8361737125977",
+  "product_type": "Coffee",
+  "roaster_slug": "ondaorigins",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Fresh Flours: Specialty Blend | Medium-Dark Roast",
+  "url": "https://ondaorigins.com/products/fresh-flours-specialty-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44579208691801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44579208724569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44579208757337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "44579208790105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "44579208822873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "44579208855641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "44579208888409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground - French Press / 2lb",
+    "variant_id": "44579208921177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "44579208953945"
+   }
+  ],
+  "vendor": "Onda Origins"
+ }
+]

@@ -1,0 +1,1688 @@
+[
+ {
+  "body_hash": "cd642ec44cfa7d30",
+  "first_seen": "2026-10-26",
+  "handle": "12-biweekly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f16033344a1342ab90/1787776619358/",
+  "platform": "squarespace",
+  "product_id": "609d46f16033344a1342ab90",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "12 deliveries",
+   "6 mos",
+   "Biweekly",
+   "subscription"
+  ],
+  "title": "6 Months of Biweekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/12-biweekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "1 Ibs",
+    "variant_id": "492ea8f1-8ef9-46e5-a4ca-170a6dc2aa99"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2.5 Ibs",
+    "variant_id": "a7e76aed-83f4-49a9-88b5-e519c3621da3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "5 Ibs",
+    "variant_id": "f63f0e1d-7514-456a-b95e-9f0963edd3b4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "55dec5770d16f30f",
+  "first_seen": "2026-10-26",
+  "handle": "12-monthly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f23bda9e1d2d4062e7/1787776619368/",
+  "platform": "squarespace",
+  "product_id": "609d46f23bda9e1d2d4062e7",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "12 deliveries",
+   "12 mos",
+   "monthly",
+   "subscription"
+  ],
+  "title": "A Year of Monthly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/12-monthly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "2.5 Ibs",
+    "variant_id": "40d59c96-30c9-4d78-ae6d-98aafabb0ea7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "1 Ibs",
+    "variant_id": "8f9552c4-0d72-4f6a-9c15-aa10c1822f83"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lbs",
+    "variant_id": "95ea5961-4fde-4197-83c0-1d3b5729efb8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "70f770d85d4d1dcc",
+  "first_seen": "2026-10-26",
+  "handle": "12-weekly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f3127f406327c7ba86/1787776619371/",
+  "platform": "squarespace",
+  "product_id": "609d46f3127f406327c7ba86",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "12 deliveries",
+   "3 mos",
+   "subscription",
+   "weekly"
+  ],
+  "title": "3 Months of Weekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/12-weekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "5 Ibs",
+    "variant_id": "685b05e4-73e5-4267-b15d-6e30cc5bdb05"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "1 Ibs",
+    "variant_id": "727a9216-78e6-4323-8b89-c396cb61c082"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "2.5 Ibs",
+    "variant_id": "9ab2f810-7ef3-4c58-9fa5-797f713e58d5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b891dc24519d9ce1",
+  "first_seen": "2026-10-26",
+  "handle": "24-biweekly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f56033344a1342ab92/1787776619382/",
+  "platform": "squarespace",
+  "product_id": "609d46f56033344a1342ab92",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "12 mos",
+   "24 deliveries",
+   "Biweekly",
+   "subscription"
+  ],
+  "title": "A Year of Biweekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/24-biweekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2.5 Ibs",
+    "variant_id": "73f35a10-9b2a-4157-a901-d2b54ccc0f9f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.0,
+    "title": "5 Ibs",
+    "variant_id": "78de2664-4a9f-4635-a91a-fa5a033f35a6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "1 Ibs",
+    "variant_id": "b6d99268-2313-4632-a652-568d8337b5aa"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f7ef0a6b3cf2c51",
+  "first_seen": "2026-10-26",
+  "handle": "26-weekly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f63bda9e1d2d4062ed/1787776619385/",
+  "platform": "squarespace",
+  "product_id": "609d46f63bda9e1d2d4062ed",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "26 deliveries",
+   "6 mos",
+   "subscription",
+   "weekly"
+  ],
+  "title": "6 Months of Weekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/26-weekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "5 Ibs",
+    "variant_id": "042813e3-da88-43d9-8c4e-b9bd405f8720"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "1 Ibs",
+    "variant_id": "37bb2841-33b9-4f4a-88d9-5c3199865d73"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2.5 Ibs",
+    "variant_id": "c43bdf9f-13ef-4601-8edf-4f7b1c595bb6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d9cfd0f05f73b64",
+  "first_seen": "2026-10-26",
+  "handle": "515-espresso",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f7127f406327c7ba8b/1792430653215/",
+  "platform": "squarespace",
+  "product_id": "609d46f7127f406327c7ba8b",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Americas",
+   "Asia",
+   "Blend",
+   "Central Italian Espresso Roast",
+   "Coffee Beans",
+   "Espresso",
+   "Indonesia",
+   "Medium Roast"
+  ],
+  "title": "5:15 ESPRESSO",
+  "url": "https://www.strongtreecoffee.com/all/p/515-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "08762aa2-0437-4873-a9d6-61651569dc06"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5 lbs",
+    "variant_id": "82111930-083d-4abf-9f46-3f757dd7acfc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "86022851-d546-4a9c-85b8-3fadb9ec40a2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "c2baa9b7-943e-4329-8de8-be26d40c0bdf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "f03c189d-df7a-4ab3-8ca7-ab3da727d0ec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85caa314b242270b",
+  "first_seen": "2026-10-26",
+  "handle": "6-biweekly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46f93bda9e1d2d4062ef/1787776619405/",
+  "platform": "squarespace",
+  "product_id": "609d46f93bda9e1d2d4062ef",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "3 mos",
+   "6 deliveries",
+   "Biweekly",
+   "subscription"
+  ],
+  "title": "3 Months of Biweekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/6-biweekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.0,
+    "title": "5 Ibs",
+    "variant_id": "2817deeb-b6d9-406c-914e-63c6d1821830"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "2.5 Ibs",
+    "variant_id": "5b90be69-0df5-4d16-a5b6-76345296ddd1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "1 Ibs",
+    "variant_id": "b2a3ea27-8872-46ff-bdc0-c36ed3831556"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ca8b8297edabd3b",
+  "first_seen": "2026-10-26",
+  "handle": "6-monthly-coffee-deliveries",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46fa127f406327c7ba8c/1787776619410/",
+  "platform": "squarespace",
+  "product_id": "609d46fa127f406327c7ba8c",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "6 deliveries",
+   "6 mos",
+   "monthly",
+   "subscription"
+  ],
+  "title": "6 Monthly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/6-monthly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "1 Ibs",
+    "variant_id": "515d7d4e-bab4-42ff-b4da-aba4d7595a13"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.0,
+    "title": "5 Ibs",
+    "variant_id": "be93a8c6-bc53-4db9-87ce-9d9d3a4d90ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "2.5 Ibs",
+    "variant_id": "ce6d0304-cdae-4037-8f5b-17a8df50b415"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "754b44c9072c1c35",
+  "first_seen": "2026-10-26",
+  "handle": "braulio-la-mina",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46fc3bda9e1d2d4062f1/1793021678100/",
+  "platform": "squarespace",
+  "product_id": "609d46fc3bda9e1d2d4062f1",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Coffee Beans",
+   "Costa Rica",
+   "Light City Roast",
+   "Microlot",
+   "Single Origin"
+  ],
+  "title": "COSTA RICA BRAULIO LA MINA FANCY 2026 New Arrival",
+  "url": "https://www.strongtreecoffee.com/all/p/braulio-la-mina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.0,
+    "title": "2.5 lbs",
+    "variant_id": "306dc438-cce7-43f7-b67e-8b78f6f9566f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "73be3b78-a146-433f-84fc-aeb9b4d4114c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb",
+    "variant_id": "90c3a028-3468-4e25-85ac-6397360a5a58"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "bbf01c7a-1cda-4685-a836-dc92aaf3b880"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e745c44b8e55baf",
+  "first_seen": "2026-10-26",
+  "handle": "coco-mojo",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d46ff127f406327c7ba8f/1787776619437/",
+  "platform": "squarespace",
+  "product_id": "609d46ff127f406327c7ba8f",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Dark Roast",
+   "Espresso",
+   "Southern Italian Roast"
+  ],
+  "title": "COCO MOJO ESPRESSO",
+  "url": "https://www.strongtreecoffee.com/all/p/coco-mojo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs bulk",
+    "variant_id": "1e1dbd1b-ca3c-457e-b0c9-c0b599870edb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "63661ae7-5a76-46f2-8675-82a7226bb6d6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "a81b9bd2-cab9-4791-b973-fd00722d5a1e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs bulk",
+    "variant_id": "c0ebcdea-72a3-4a73-9f00-977684310cc4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "e510ab4b-4d35-44f0-9664-dffb32455fb7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a5c6539fb5aab09",
+  "first_seen": "2026-10-26",
+  "handle": "coco-mojo-decaf",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47006033344a1342ab96/1787776619443/",
+  "platform": "squarespace",
+  "product_id": "609d47006033344a1342ab96",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Coffee Beans",
+   "Dark Roast",
+   "Decaf",
+   "Espresso",
+   "Southern Italian Roast"
+  ],
+  "title": "COCO MOJO ESPRESSO DECAF",
+  "url": "https://www.strongtreecoffee.com/all/p/coco-mojo-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb",
+    "variant_id": "4082cd2c-47a2-4325-bc61-a876ff3f8c07"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "922dba36-6db1-4136-9f0f-8886e53b6a7d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "b4002b32-b4b7-4a2e-9508-152dcdceb682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "c7570d56-d456-4a40-b41f-0e5c0109eb7c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.0,
+    "title": "2.5 lbs",
+    "variant_id": "d761dd0b-5b9d-44ba-9aff-56c7509f742c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95a67bfda26f1344",
+  "first_seen": "2026-10-26",
+  "handle": "costa-opia",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4703127f406327c7ba91/1792429886497/",
+  "platform": "squarespace",
+  "product_id": "609d4703127f406327c7ba91",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Costa Rica",
+   "Dark Roast",
+   "Ethiopia",
+   "French Roast",
+   "Northern Italian Roast"
+  ],
+  "title": "COSTA OPIA",
+  "url": "https://www.strongtreecoffee.com/all/p/costa-opia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "368c01d8-c2a9-4cc3-9971-669a21e6b9a4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs bulk",
+    "variant_id": "5b94af53-0f35-4839-96ee-e97e481d83a8"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5 lbs bulk",
+    "variant_id": "69af9f74-9446-413d-82f5-336a80f99559"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 45.0,
+    "title": "2.2 lbs Eco Friendly Paper",
+    "variant_id": "8e22ad76-f094-4d3a-aff8-8f7a876215df"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb",
+    "variant_id": "ea2f5a48-eae8-409a-a35d-4c856e56ddbd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "fe4acb62-4934-40ab-a3fc-2a5458e3e2bd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "480967d6edbc0be3",
+  "first_seen": "2026-10-26",
+  "handle": "deep-roots",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4705127f406327c7ba93/1792430036449/",
+  "platform": "squarespace",
+  "product_id": "609d4705127f406327c7ba93",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Americas",
+   "Blend",
+   "Brazil",
+   "Coffee Beans",
+   "Ethiopia",
+   "Full City Roast",
+   "Viennese Roast"
+  ],
+  "title": "DEEP ROOTS",
+  "url": "https://www.strongtreecoffee.com/all/p/deep-roots",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "955c857e-00a8-4461-8926-95c270f75132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "b83ea417-1c62-4e00-ae49-7078539d723b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "e21a290b-7094-41e3-8817-9d9cdb7e6e90"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "fc211065-439f-4582-a750-89a0b12c3fc1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Bag",
+    "variant_id": "fd66675e-79bf-4ee2-98b5-704ee5c3fb78"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "938c1ac51cbc2ae2",
+  "first_seen": "2026-10-26",
+  "handle": "diamond-street",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47066033344a1342ab9a/1792430447188/",
+  "platform": "squarespace",
+  "product_id": "609d47066033344a1342ab9a",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Dark Roast",
+   "French Roast"
+  ],
+  "title": "DIAMOND STREET",
+  "url": "https://www.strongtreecoffee.com/all/p/diamond-street",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "20d6637d-aee0-49ea-a616-c3ecfbedcc2e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "22636fce-054d-4ca7-8ea4-fb6931db7e53"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5 lbs",
+    "variant_id": "3a2bd5a0-7835-4a67-8e92-17ea781585c6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "67afec75-8f14-491c-8493-9d4da1ad5845"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "d9d4e37d-0115-4c7a-8ffb-effad8db6c85"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "deb88a66e03c43d9",
+  "first_seen": "2026-10-26",
+  "handle": "dr-b",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d470a3bda9e1d2d4062f6/1787776619499/",
+  "platform": "squarespace",
+  "product_id": "609d470a3bda9e1d2d4062f6",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Brazil",
+   "Coffee Beans",
+   "Espresso",
+   "Medium Roast",
+   "Northern Italian Roast",
+   "Single Origin"
+  ],
+  "title": "BRAZIL \"DR. B\" PURE YELLOW BOURBON  2026  new crop!",
+  "url": "https://www.strongtreecoffee.com/all/p/dr-b",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb",
+    "variant_id": "99c3931e-597b-4fcc-880b-f666b77570fa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "a02c66e2-1bb4-40d8-91be-762d1e986823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "d4fa9f20-3b6a-478f-b1ae-0e367f30b7da"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.0,
+    "title": "2.5 lbs",
+    "variant_id": "e3b8fdef-fa5c-43ba-85e8-7590a5b5364c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs",
+    "variant_id": "f976e9d0-bc51-448e-b910-da45b6ed8b73"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed4217d7bf91461c",
+  "first_seen": "2026-10-26",
+  "handle": "frontside",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d470f6033344a1342ab9f/1792430130686/",
+  "platform": "squarespace",
+  "product_id": "609d470f6033344a1342ab9f",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "French Roast",
+   "Full City Roast"
+  ],
+  "title": "FRONTSIDE",
+  "url": "https://www.strongtreecoffee.com/all/p/frontside",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "446c672b-b787-4198-be37-dc65a386d238"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "668f9c21-3374-4c00-841c-6ae0d562f643"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "7c210fd3-f984-45af-8cf9-e1ece1b77c59"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "a82ad053-f9ef-49fe-99be-8abab83a8986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "f84cc62b-c7b8-4af7-9d14-dc36433829dd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "001e8593d6384100",
+  "first_seen": "2026-10-26",
+  "handle": "goroka-aianora",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47113bda9e1d2d4062fa/1791532537578/",
+  "platform": "squarespace",
+  "product_id": "609d47113bda9e1d2d4062fa",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Coffee Beans",
+   "Oceania",
+   "Papua New Guinea",
+   "Single Origin",
+   "Viennese Roast"
+  ],
+  "title": "PAPUA NEW GUINEA GOROKA AIANORA",
+  "url": "https://www.strongtreecoffee.com/all/p/goroka-aianora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "543440a9-2e8b-4d7b-8bc5-b79a34034dbd"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5 lbs",
+    "variant_id": "7d51eb02-8b29-4e1a-8108-992be48600eb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "c8150578-f791-4de7-bc48-1a24df7ec26b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs",
+    "variant_id": "df8dfdd8-93f6-4e00-8439-be739b6c44c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "f7c5931d-5c78-48e0-8b84-cf75b2584e24"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6cacb0bf67c24680",
+  "first_seen": "2026-10-26",
+  "handle": "grand-supreme",
+  "image": "https://images.squarespace-cdn.com/content/v1/609be952e276e94141039d97/1620920084562-I0FX8W110MGN16BK4100/Grand-Supreme.png",
+  "platform": "squarespace",
+  "product_id": "609d47133bda9e1d2d4062fc",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Coffee Beans",
+   "Espresso",
+   "Medium Roast",
+   "Northern Italian Roast"
+  ],
+  "title": "GRAND SUPREME",
+  "url": "https://www.strongtreecoffee.com/all/p/grand-supreme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "0c7c70ed-f71d-4b1a-8a50-16eeed94326f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5 lbs",
+    "variant_id": "14f8601b-7ba4-4c95-b821-a06314c62136"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "1cac54f4-1dba-44f1-89cf-1cdf1026557e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "a17c39c9-338c-4a6e-9048-3172c7e4db8a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "b082fe11-f77d-456b-a98c-82c3b0a60fb8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "66ef5cd9dd270274",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d471d6033344a1342aba7/1787776619590/",
+  "platform": "squarespace",
+  "product_id": "609d471d6033344a1342aba7",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Coffee Beans",
+   "Kenya",
+   "Light City Roast",
+   "Single Origin"
+  ],
+  "title": "KENYA KII  AA TOP 2026   LIGHT CITY ROAST",
+  "url": "https://www.strongtreecoffee.com/all/p/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5 lbs",
+    "variant_id": "237249db-25a1-4d84-885c-6c3c555fcdd3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "4bc79f11-78d5-4090-97a2-ac487b6b22fa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "827cf74b-e6aa-472e-b7ce-9a7963ebddf6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs",
+    "variant_id": "a5c47abe-e499-4b92-8d58-cc875de911c0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "b4ac603a-2daa-48a8-b608-bde1e57d273c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "fa269a7a-a3fe-4810-b124-67858986846c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80785735a0e1774a",
+  "first_seen": "2026-10-26",
+  "handle": "la-donna",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d471f127f406327c7baa2/1792430318584/",
+  "platform": "squarespace",
+  "product_id": "609d471f127f406327c7baa2",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "French Roast",
+   "Full City Roast",
+   "Guatemala"
+  ],
+  "title": "LA DONNA ~ Water is LIFE ~ GUATEMALA  BLEND",
+  "url": "https://www.strongtreecoffee.com/all/p/la-donna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "00e341fb-6ed0-44cd-8c7c-f2932ee1fafa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "7473a1ff-0601-475c-985d-128b10c49803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "a1062a53-40c3-473e-a0cb-af938bdf99aa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "bbdcaf01-c790-4380-9cec-dc5712839abd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "be0847ac-704e-4d56-b568-37527aa0bc41"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2267f3865525eee1",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-mollie",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47236033344a1342aba9/1792430372274/",
+  "platform": "squarespace",
+  "product_id": "609d47236033344a1342aba9",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Asia",
+   "Blend",
+   "Coffee Beans",
+   "Ethiopia",
+   "French Roast",
+   "Indonesia"
+  ],
+  "title": "MIDNIGHT MOLLIE",
+  "url": "https://www.strongtreecoffee.com/all/p/midnight-mollie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "42c2a51e-877a-400a-bb3c-b8694b0f846d"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "50d304b8-fd6c-4aeb-adff-6d2bf7d59b2a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "a06483f8-3a85-44c3-ae86-b29ab0c657a3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "a3bcd9ae-4328-4cbb-ba93-bf791b6ece36"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "c9fbbd87-7656-4432-951b-c5ac25d3af80"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "656b8415ae6065a6",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47273bda9e1d2d406302/1787776619652/",
+  "platform": "squarespace",
+  "product_id": "609d47273bda9e1d2d406302",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Asia",
+   "Blend",
+   "Coffee Beans",
+   "Ethiopia",
+   "Indonesia",
+   "Viennese Roast"
+  ],
+  "title": "MOKA JAVA",
+  "url": "https://www.strongtreecoffee.com/all/p/moka-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "0e6429df-9991-4323-a91d-41abc04916f1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "3c859e6a-c4e4-4497-8b09-2ab1438eb3b7"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "5e1cb1f8-b02d-43a6-8114-8beaa0e9438d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "d86a7204-993b-45e6-aaf3-999b726210a7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "efac975f-9a69-4164-a50e-6dda6910e41f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "f1277d4d-aff3-4332-986f-265d33b17f10"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ceafad8619a2defd",
+  "first_seen": "2026-10-26",
+  "handle": "sunny-day",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4731127f406327c7baaa/1787776619708/",
+  "platform": "squarespace",
+  "product_id": "609d4731127f406327c7baaa",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Full City Roast"
+  ],
+  "title": "SUNNY DAY",
+  "url": "https://www.strongtreecoffee.com/all/p/sunny-day",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "0f61ff39-f80f-4591-8e1e-5b16eccb4a1f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "1b05f051-116c-485e-962b-790af0327caa"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "393b713e-d5d4-4380-9b4a-d260253be3fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "53b525c3-35ea-4d73-9a62-eebbd2666ec8"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "b9def7bc-650a-4487-9156-d1983808af6a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "f1f1c658-af0d-4d24-9626-0ff44e363f43"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "508aadb3baac3db1",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-erna",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47333bda9e1d2d40630a/1787776619710/",
+  "platform": "squarespace",
+  "product_id": "609d47333bda9e1d2d40630a",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Espresso",
+   "Northern Italian Roast"
+  ],
+  "title": "SWEET ERNA ESPRESSO",
+  "url": "https://www.strongtreecoffee.com/all/p/sweet-erna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "352b88db-2417-4649-b8b1-51d548a1e1cf"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "580ab21c-dcf9-432e-ba17-7adc0a8760b0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs",
+    "variant_id": "a6152763-808b-4220-ab4f-ab1d52af12a7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "ea43cde9-b326-4d20-8c24-89ce85f4d31f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5lbs",
+    "variant_id": "fca6c57c-4f5c-42b1-9e73-cd43ce3604e8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "778279428b7659c3",
+  "first_seen": "2026-10-26",
+  "handle": "terruno-nayarita-french",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47356033344a1342abb1/1792430176730/",
+  "platform": "squarespace",
+  "product_id": "609d47356033344a1342abb1",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Coffee Beans",
+   "French Roast",
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "TERRUNO NAYARITA FRENCH ROAST",
+  "url": "https://www.strongtreecoffee.com/all/p/terruno-nayarita-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "cc7f7c7c-85d9-4bc7-92dd-d2a2d669cec4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "d3f0c4f5-93f2-4ce9-a575-7dfee34d049d"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "dc17ff89-48a9-4904-bda6-d7e01a37eb5c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "ead0c9db-5fa1-422d-9433-18e810e0b98e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "efee474f-931c-4d2d-af34-61b94c9fbfc4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe07e0906a97c428",
+  "first_seen": "2026-10-26",
+  "handle": "terruno-nayarita-full",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4736127f406327c7baab/1787776619727/",
+  "platform": "squarespace",
+  "product_id": "609d4736127f406327c7baab",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Coffee Beans",
+   "Full City Roast",
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "MEXICO TERRUNO NAYARITA FULL CITY ROAST    2026",
+  "url": "https://www.strongtreecoffee.com/all/p/terruno-nayarita-full",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "23311d36-4dc0-4be2-ab04-1d195a6e2f4a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs",
+    "variant_id": "3ee4838c-38ec-453c-b684-fb777c4a6612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "586f5161-423a-44ed-85b3-04d741372b2a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "b4881d4b-eed6-4c65-bf5e-491a0486ab0e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "d7d21a73-7749-4129-a3b8-7dc0644444a7"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 44.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "fa9599d2-8273-40a4-9c3c-164db6fb7e20"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc59e1799de6994e",
+  "first_seen": "2026-10-26",
+  "handle": "two-birds",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d47373bda9e1d2d40630c/1792430501565/",
+  "platform": "squarespace",
+  "product_id": "609d47373bda9e1d2d40630c",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Coffee Beans",
+   "Full City Roast",
+   "Guatemala",
+   "Single Origin"
+  ],
+  "title": "GUATEMALA   TWO BIRDS 2026",
+  "url": "https://www.strongtreecoffee.com/all/p/two-birds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "0e7581e1-2f1b-4e19-82fa-eef01b0fbbe5"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5 lbs",
+    "variant_id": "303c0f43-2687-4271-ba10-faa453a7bef4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "706a7ea1-b6e0-460a-93be-c4b94730a09d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lbs",
+    "variant_id": "7ee6843c-ac74-4305-82fc-6d327c4428f2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "ced9922a-c1b5-4e76-bed8-d6172d5f0a83"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5 lbs Eco Friendly Paper",
+    "variant_id": "f01f92ee-92ce-45c8-8815-1581888dfad9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9efa4fe0bb52af55",
+  "first_seen": "2026-10-26",
+  "handle": "uprising",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4738127f406327c7baac/1787776619736/",
+  "platform": "squarespace",
+  "product_id": "609d4738127f406327c7baac",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Americas",
+   "Blend",
+   "Coffee Beans",
+   "Medium Roast"
+  ],
+  "title": "UPRISING",
+  "url": "https://www.strongtreecoffee.com/all/p/uprising",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "34166bb5-8018-406b-aba1-14caae30e467"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "8767a108-756b-49b0-b3d6-cf4f5f9e3091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "9820ac76-a7db-4cbb-b2af-246fe76a4782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "d2741483-e62f-445a-873c-03004d35e3c7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 lb",
+    "variant_id": "f0642c2e-b96b-4718-ab57-1f5f83552c8e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "858ea224a320a8ce",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-kochere",
+  "image": "https://static1.squarespace.com/static/609be952e276e94141039d97/609d3b28f7b2590ff9113d75/609d4739127f406327c7baad/1792429957839/",
+  "platform": "squarespace",
+  "product_id": "609d4739127f406327c7baad",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "Africa",
+   "Coffee Beans",
+   "Ethiopia",
+   "Light City Roast",
+   "Single Origin"
+  ],
+  "title": "ETHIOPIA   YIRGACHEFFE KOCHERE G1 Z",
+  "url": "https://www.strongtreecoffee.com/all/p/yirgacheffe-kochere",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "071a4a09-e1d0-4992-acbb-00c60a9df067"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5 lbs",
+    "variant_id": "23f02efd-aa43-4091-8a14-b148503c21a5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "70ef1614-1d7c-4337-a7eb-16f8cb4a40e8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "7cce5428-8599-46f8-9320-9b76585d56b1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs Eco Friendly Paper",
+    "variant_id": "dd797cac-45bd-4c4b-858d-52b939760d8a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2809f8d32ac07443",
+  "first_seen": "2026-10-26",
+  "handle": "a-year-of-weekly-coffee-deliveries",
+  "image": "https://images.squarespace-cdn.com/content/v1/609be952e276e94141039d97/1674835001751-RCR01SFYT4KX6OFO17AB/Subscriptions-Weekly-Year.jpeg",
+  "platform": "squarespace",
+  "product_id": "63d3f38a1a1d235bf53769d8",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [
+   "12 mos",
+   "52 Deliveries",
+   "Subscription",
+   "Weekly"
+  ],
+  "title": "A Year of Weekly Coffee Deliveries",
+  "url": "https://www.strongtreecoffee.com/all/p/a-year-of-weekly-coffee-deliveries",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 38.0,
+    "title": "2.5 lbs",
+    "variant_id": "315f2422-b405-48c5-96b8-d1cb99fab04e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lbs",
+    "variant_id": "c1489fa7-ac07-4aa3-bf29-743f88f25999"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "50cdbb40e4e44314",
+  "first_seen": "2026-10-26",
+  "handle": "515-espresso-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/609be952e276e94141039d97/1689972449231-OP2S0K95PQFQUVTXVZ4W/Copy+of+weblabel.png",
+  "platform": "squarespace",
+  "product_id": "642c7a3bf358017e7b6bd662",
+  "product_type": "",
+  "roaster_slug": "strongtreecoffee",
+  "tags": [],
+  "title": "DECAF- 5:15 ESPRESSO DECAF",
+  "url": "https://www.strongtreecoffee.com/all/p/515-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb",
+    "variant_id": "04522e33-5b03-4cf5-888d-bf3bb2b5de8c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb Eco Friendly Paper",
+    "variant_id": "0f5b381a-4b9e-41dd-9b45-9c3259e504ce"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Eco Friendly Paper",
+    "variant_id": "57960102-0b78-4966-a2c7-31a934bb02d7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb",
+    "variant_id": "79aba0b1-6e90-43f7-b113-ccbc096e9c89"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.0,
+    "title": "2.5 lb",
+    "variant_id": "c3fab25a-0e92-46b6-9d3c-33b958a8d0a9"
+   }
+  ],
+  "vendor": ""
+ }
+]

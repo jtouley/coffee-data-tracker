@@ -1,0 +1,189 @@
+[
+ {
+  "body_hash": "16df8923c1429128",
+  "first_seen": "2026-10-26",
+  "handle": "analog",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_ANALOG_web_bf7e7ab3-aa84-4a8f-8262-a19632659515.jpg?v=1728071686",
+  "platform": "shopify",
+  "product_id": "7093027668129",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425",
+   "validate-product-description"
+  ],
+  "title": "ANALOG Dark Roast",
+  "url": "https://signalcoffee.com/products/analog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "41205643509921"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "d2bac9a1b4fa5419",
+  "first_seen": "2026-10-26",
+  "handle": "ohm",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_OHM_web_5d358fd3-648b-4652-bdac-74b818c632e8.jpg?v=1728071750",
+  "platform": "shopify",
+  "product_id": "7093028618401",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425",
+   "validate-product-description"
+  ],
+  "title": "OHM Medium Roast",
+  "url": "https://signalcoffee.com/products/ohm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "41205658452129"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "343646b97795f982",
+  "first_seen": "2026-10-26",
+  "handle": "resistor",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_RESISTOR_web_940c45ca-b810-4a84-bd90-5aed7bfa7657.jpg?v=1728071776",
+  "platform": "shopify",
+  "product_id": "7093028913313",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425"
+  ],
+  "title": "RESISTOR Decaf",
+  "url": "https://signalcoffee.com/products/resistor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "41205807284385"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "69ce8e34b1a5c215",
+  "first_seen": "2026-10-26",
+  "handle": "solidstate",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_SOLIDSTATE_web_54b9e41c-46ec-4ef2-a7d3-b2aea236ed5e.jpg?v=1728071806",
+  "platform": "shopify",
+  "product_id": "7093029535905",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425",
+   "validate-product-description"
+  ],
+  "title": "SOLID STATE Espresso Blend",
+  "url": "https://signalcoffee.com/products/solidstate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "41205671198881"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "f4f8ceb41ebab1b9",
+  "first_seen": "2026-10-26",
+  "handle": "transmission",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_TRANSMISSION_web_f5fcaaeb-b551-4937-9305-6bf4485d5d32.jpg?v=1728071840",
+  "platform": "shopify",
+  "product_id": "7093029830817",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425"
+  ],
+  "title": "TRANSMISSION Medium Roast",
+  "url": "https://signalcoffee.com/products/transmission",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "41205932523681"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "f97602665ac498b7",
+  "first_seen": "2026-10-26",
+  "handle": "wavelength",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_WAVELENGTH_web_2eb67183-89a6-4035-b1c6-2b6d4a708945.jpg?v=1728071887",
+  "platform": "shopify",
+  "product_id": "7093029863585",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425",
+   "validate-product-description"
+  ],
+  "title": "WAVELENGTH Medium Roast",
+  "url": "https://signalcoffee.com/products/wavelength",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "41129710026913"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ },
+ {
+  "body_hash": "d85089aba2486801",
+  "first_seen": "2026-10-26",
+  "handle": "digital-espresso-blend-10-oz-whole-bean-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0441/6415/3505/files/SIGNAL_DIGITAL_web_9881cf0d-c537-47ea-8a79-d0e58da8887e.jpg?v=1728071719",
+  "platform": "shopify",
+  "product_id": "8144924410017",
+  "product_type": "",
+  "roaster_slug": "signalcoffee",
+  "tags": [
+   "Coffee",
+   "import_2021_10_24_155425",
+   "validate-product-description"
+  ],
+  "title": "DIGITAL Espresso Blend",
+  "url": "https://signalcoffee.com/products/digital-espresso-blend-10-oz-whole-bean-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44653788692641"
+   }
+  ],
+  "vendor": "SIGNAL Coffee Roasters"
+ }
+]

@@ -1,0 +1,2885 @@
+[
+ {
+  "body_hash": "5d59ec40aff0ad5d",
+  "first_seen": "2026-10-26",
+  "handle": "bike-fuel",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/BikeFuelFairTradeOrganicCoffee.png?v=1684760320",
+  "platform": "shopify",
+  "product_id": "153715187",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "bike fuel",
+   "blend",
+   "coffee",
+   "fair trade",
+   "fair trade coffee",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "small batch",
+   "specialty coffee"
+  ],
+  "title": "Bike Fuel",
+  "url": "https://justcoffee.coop/products/bike-fuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "351837765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "351837769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "351837771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "351837773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "351837775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "351837777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "351837779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "351837781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "351837783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "351837785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "351837787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356853549"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "80637ba2313af042",
+  "first_seen": "2026-10-26",
+  "handle": "wtf-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/WTFFairTradeOrganicCoffee.png?v=1705603788",
+  "platform": "shopify",
+  "product_id": "153723919",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Marc Maron",
+   "WTF Pod",
+   "coffee",
+   "dark roast",
+   "fair trade",
+   "fair trade coffee",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "small batch",
+   "wtf"
+  ],
+  "title": "WTF Roast",
+  "url": "https://justcoffee.coop/products/wtf-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "351856989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "351856991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "351856993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "351856995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "351856997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "351856999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "351857001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "351857003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "351857005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "351857007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "351857009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "351857011"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "1265b73ea92dfff5",
+  "first_seen": "2026-10-26",
+  "handle": "electric-monkey-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/ElectricMonkeyEspressoFairTradeOrganicCoffee_9744a83b-1d4a-4936-ae35-10136ed5ad1a.png?v=1705601046",
+  "platform": "shopify",
+  "product_id": "155722413",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "dark roast",
+   "dark roast coffee",
+   "electric monkey espresso",
+   "espresso",
+   "espresso blend",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade organic espresso",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee"
+  ],
+  "title": "Electric Monkey Espresso",
+  "url": "https://justcoffee.coop/products/electric-monkey-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356812085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "356812285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "356812423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "356813379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "356813381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "356813383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "356813523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "356813525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "356813527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "356813681"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "356813683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "356813687"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "706e644cd8cc9088",
+  "first_seen": "2026-10-26",
+  "handle": "runner-s-high",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/RunnersHighfairtradeorganiccoffee.png?v=1705604306",
+  "platform": "shopify",
+  "product_id": "155724943",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Ethiopian Coffee",
+   "Fair Trade Organic Coffee",
+   "SCFCU",
+   "USDA certified organic",
+   "african coffee",
+   "blend",
+   "certified organic",
+   "coffee",
+   "colombian coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "featured",
+   "just coffee coop",
+   "just coffee cooperative",
+   "light roasted coffee",
+   "organic coffee",
+   "organic farming",
+   "roasted",
+   "roasted coffee",
+   "runner's high",
+   "shade grown coffee",
+   "specialty coffee"
+  ],
+  "title": "Runner's High",
+  "url": "https://justcoffee.coop/products/runner-s-high",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "356818513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356818515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "356818517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / FIne",
+    "variant_id": "356818521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "356818523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "356818529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "356818531"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / FIne",
+    "variant_id": "356818533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "356818535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "356818539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "356818541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / FIne",
+    "variant_id": "356818543"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "6e4d02250037f631",
+  "first_seen": "2026-10-26",
+  "handle": "el-corazon",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/elcorazonfairtradeorganiccoffee.png?v=1705324614",
+  "platform": "shopify",
+  "product_id": "155760595",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "El Corazon",
+   "blend",
+   "coffee",
+   "fair trade",
+   "fair trade certified tea",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "shade grown",
+   "shade grown coffee",
+   "small batch roasted"
+  ],
+  "title": "El Corazon",
+  "url": "https://justcoffee.coop/products/el-corazon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356941189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "356941191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "356941193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "356941195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "356941197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "356941199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "356941201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "356941203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "356941205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "356941207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "356941209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "356941213"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "4d25c64349013e8c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiansidama",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/HumdingerFairTradeOrganicCoffee_f432c3c1-5d69-4963-882b-b0681911c05c.png?v=1705600760",
+  "platform": "shopify",
+  "product_id": "155769277",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "coffee",
+   "fair trade",
+   "featured",
+   "medium roasted coffee",
+   "organic coffee",
+   "roasted"
+  ],
+  "title": "Humdinger",
+  "url": "https://justcoffee.coop/products/ethiopiansidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356966453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "356966457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "356966459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "356966463"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "356966465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "356966469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "356966473"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "356966475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "356966481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "356966485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "356966489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "356966493"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "a198ae868955f037",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-las-diosas",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/LasDiosasfairtradeorganiccoffee.png?v=1705605333",
+  "platform": "shopify",
+  "product_id": "155770219",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "coffee",
+   "las diosas",
+   "light roast",
+   "roasted",
+   "single origin"
+  ],
+  "title": "Nicaragua Las Diosas",
+  "url": "https://justcoffee.coop/products/nicaragua-las-diosas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "356971275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "356971277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "356971279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "356971281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "356971283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "356971285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "356971287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "356971289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "356971291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "356971293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "356971295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "356971297"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "e5de6f3834ddd397",
+  "first_seen": "2026-10-26",
+  "handle": "revolution-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/RevolutionRoastfairtradeorganiccoffee.png?v=1705604047",
+  "platform": "shopify",
+  "product_id": "155804799",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "fair trade",
+   "fair trade coffee",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee",
+   "single origin"
+  ],
+  "title": "Revolution Roast",
+  "url": "https://justcoffee.coop/products/revolution-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "357032369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "357032371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "357032375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "357032379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "357032381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "357032385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "357032387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "357032393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "357032395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "357032401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "357032405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "357032407"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "b8c15632716fde92",
+  "first_seen": "2026-10-26",
+  "handle": "the-reanimator",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/ReanimatorFairTradeOrganicCoffee.png?v=1705602668",
+  "platform": "shopify",
+  "product_id": "156057533",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "dark roast",
+   "fair trade",
+   "fair trade coffee",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee"
+  ],
+  "title": "The Reanimator",
+  "url": "https://justcoffee.coop/products/the-reanimator",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "357668931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "357668933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "357668935"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "357668937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "357668939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "357668941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "357668943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "357668945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "357668947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "357668949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "357668951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "357668953"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "369af1222537e6e0",
+  "first_seen": "2026-10-26",
+  "handle": "maya-super-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/MayaSuperDarkFairtradeorganiccoffee.png?v=1705604957",
+  "platform": "shopify",
+  "product_id": "156057985",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Guatemalan Coffee",
+   "Premium Coffee",
+   "certified organic",
+   "chiapas",
+   "coffee",
+   "dark roast",
+   "dark roast coffee",
+   "dark roasted coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "guatemala",
+   "just coffee coop",
+   "just coffee cooperative",
+   "mayan coffee",
+   "mexican coffee",
+   "mexico",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "roasted",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "single origin coffee",
+   "specialty coffee"
+  ],
+  "title": "Maya Super Dark",
+  "url": "https://justcoffee.coop/products/maya-super-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "357669961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "357669963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "357669965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "357669967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "357669969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "357669971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "357669973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "357669975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "357669977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "357669979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "357669985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "357669987"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "ebe78d48d8f9a3f1",
+  "first_seen": "2026-10-26",
+  "handle": "majority-report-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/MajorityReport_20Years_Fairtradeorganiccoffee.png?v=1721667930",
+  "platform": "shopify",
+  "product_id": "156071671",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "fair trade",
+   "organic",
+   "roasted"
+  ],
+  "title": "Majority Report Blend",
+  "url": "https://justcoffee.coop/products/majority-report-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "357711993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "357711995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "357712001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "357712003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "357712005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "357712007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "357712009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "357712011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "357712015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "357712017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "357712019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "357712021"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "64bef84f0d31aecf",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/products/HalfCaffFairTradeOrganicCoffee.png?v=1645647076",
+  "platform": "shopify",
+  "product_id": "156072371",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "fair trade",
+   "half caff",
+   "organic",
+   "roasted"
+  ],
+  "title": "Half Caff",
+  "url": "https://justcoffee.coop/products/half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "357713093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "357713095"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "357713097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "357713099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "357713101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "357713103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "357713107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "357713109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "357713111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "357713113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "357713115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "357713117"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "3dc45684b764ba32",
+  "first_seen": "2026-10-26",
+  "handle": "arriba-breakfast-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/Arribafairtradeorganiccoffee.png?v=1705089296",
+  "platform": "shopify",
+  "product_id": "156846539",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Premium Coffee",
+   "USDA Organic",
+   "USDA certified organic",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "colombian coffee",
+   "comsa",
+   "fair trade",
+   "fair trade coffee",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "roasted coffee",
+   "shade grown coffee",
+   "specialty coffee"
+  ],
+  "title": "¡Arriba! Breakfast Blend",
+  "url": "https://justcoffee.coop/products/arriba-breakfast-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "359510587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "359510589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "359510591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "359510593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "359510595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "359510597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "359510599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "359510601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "359510603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "359510605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "359510607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "359510609"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "3918d9546bdb898f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-monkey",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/DecafEspressoMonkeyfairtradeorganiccoffee.png?v=1705601624",
+  "platform": "shopify",
+  "product_id": "156854267",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "decaf",
+   "decaf coffee",
+   "decaf espresso",
+   "espresso",
+   "espresso monkey decaf",
+   "fair trade",
+   "fair trade coffee",
+   "medium roast",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "shade grown coffee"
+  ],
+  "title": "Espresso Monkey Decaf",
+  "url": "https://justcoffee.coop/products/decaf-espresso-monkey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "359535817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "359535819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "359535821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "359535825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "359535827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "359535829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "359535831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "359535833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "359535835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "359535837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "359535839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "359535841"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "b0350cc81f09c286",
+  "first_seen": "2026-10-26",
+  "handle": "hot-cocoa-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/products/HotCocoaFairTradeOrganic.png?v=1606161767",
+  "platform": "shopify",
+  "product_id": "157134291",
+  "product_type": "Chocolate",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Ghana",
+   "USDA Organic",
+   "all natrual",
+   "certified organic",
+   "chocolate",
+   "cocoa",
+   "cocoa powder",
+   "dessert",
+   "fair trade",
+   "hot cocoa",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic"
+  ],
+  "title": "Hot Cocoa",
+  "url": "https://justcoffee.coop/products/hot-cocoa-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "Cocoa",
+    "variant_id": "360080235"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "a7215fafc1161a09",
+  "first_seen": "2026-10-26",
+  "handle": "stampede-sumatra-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/StampedeFairTradeOrganicCoffee.png?v=1705603185",
+  "platform": "shopify",
+  "product_id": "199024509",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Premium Coffee",
+   "USDA Organic",
+   "USDA certified organic",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "dark roast coffee",
+   "dark roasted coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "organic product",
+   "roasted",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "single origin coffee",
+   "specialty coffee"
+  ],
+  "title": "Stampede",
+  "url": "https://justcoffee.coop/products/stampede-sumatra-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "453156337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "453156341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "453156345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "453156349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "453156353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "453156357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "453156361"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "453156365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "453156369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "453156373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "453156377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "453156381"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "ac07a7295e3dd226",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/decafdarkfairtradeorganiccoffee_3ddbd642-4773-4c32-baa6-2bd420305b10.png?v=1705601439",
+  "platform": "shopify",
+  "product_id": "213092705",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "blend",
+   "dark roast coffee",
+   "decaf",
+   "decaf dark",
+   "fair trade",
+   "fair trade coffee",
+   "honduras",
+   "naturally decaffeinated",
+   "organic",
+   "organic coffee",
+   "small batch roasted"
+  ],
+  "title": "Decaf Dark",
+  "url": "https://justcoffee.coop/products/decaf-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "481792981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "481792993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "481792997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "481793001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "481793005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "481793009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "481793017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "481793025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "481793029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "481793033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "481793037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "481793045"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "6071ac999d80c659",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-light",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/DecafLightFairTradeOrganicCoffee.png?v=1705601968",
+  "platform": "shopify",
+  "product_id": "213106913",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "coffee",
+   "decaf",
+   "decaf light",
+   "decaffeinated coffee",
+   "decaffeinated naturally",
+   "fair trade",
+   "fair trade coffee",
+   "light roasted coffee",
+   "organic",
+   "organic coffee",
+   "shade grown coffee",
+   "small batch"
+  ],
+  "title": "Decaf Light",
+  "url": "https://justcoffee.coop/products/decaf-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "481809429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "481809437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "481809441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "481809445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "481809449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "481809457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "481809461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "481809465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "481809469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "481809473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "481809477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "481809485"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "66ec08d3e7e5298a",
+  "first_seen": "2026-10-26",
+  "handle": "skateperk-grind",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/SkatePerkFairtradeorganiccoffee_dd065277-0ce0-457a-98d5-9360671c03a0.png?v=1705603487",
+  "platform": "shopify",
+  "product_id": "269686449",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Bolivia",
+   "Fair Trade Organic Coffee",
+   "Premium Coffee",
+   "Skate Coffee",
+   "Skate Perk Grind",
+   "SkatePerk",
+   "USDA Organic",
+   "USDA certified organic",
+   "blend",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "colombia",
+   "colombian coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "organic product",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "small batch roasted"
+  ],
+  "title": "Skate Perk",
+  "url": "https://justcoffee.coop/products/skateperk-grind",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32252840870025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "32252849356937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "32252852207753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "32252854141065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32252859056265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "32252860465289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "32252864135305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "32252866855049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "631431273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "631431277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "631431281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "631431289"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "b587e6c397ab1c6b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/ColdBrew2024FairTradeOrganicCoffee.png?v=1713884345",
+  "platform": "shopify",
+  "product_id": "337419121",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Premium Coffee",
+   "USDA certified organic",
+   "blend",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "cold brew",
+   "colombia",
+   "dark roast",
+   "dark roast coffee",
+   "dark roasted coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "just coffee coop",
+   "just coffee cooperative",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "roasted",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "small batch roasted",
+   "specialty coffee",
+   "sumatra"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://justcoffee.coop/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "821768749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "821768753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "821768757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "821768761"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "821768765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "821768769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "821768773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "821768777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "821768781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "821768785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "821768789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "821768793"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "2bc76212c695f942",
+  "first_seen": "2026-10-26",
+  "handle": "wake-the-dead-fall-seasonal",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/WTDfairtradeorganiccoffee.png?v=1724770720",
+  "platform": "shopify",
+  "product_id": "361354653",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Nicaraguan",
+   "Premium Coffee",
+   "USDA Organic",
+   "USDA certified organic",
+   "arabica",
+   "blend",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "colombian coffee",
+   "dark roast",
+   "dark roast coffee",
+   "dark roasted coffee",
+   "fair trade",
+   "fair trade coffee",
+   "fall seasonal",
+   "just coffee coop",
+   "just coffee cooperative",
+   "laos",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "organic product",
+   "roasted",
+   "roasted coffee",
+   "robusta",
+   "seasonal",
+   "seasonal coffee",
+   "shade grown",
+   "shade grown coffee",
+   "specialty coffee"
+  ],
+  "title": "Fall Seasonal: Wake the Dead",
+  "url": "https://justcoffee.coop/products/wake-the-dead-fall-seasonal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "919560625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "919560633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "919560641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "919560645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "919560649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "919560653"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "919560657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "919560661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "919560665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "919560669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "919560673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "919560677"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "f0887e4042681629",
+  "first_seen": "2026-10-26",
+  "handle": "wisconsin-bike-fed-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/WIBikeFedJustBikesfairtradeorganiccoffee.png?v=1708543788",
+  "platform": "shopify",
+  "product_id": "416018076",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Bike Fed",
+   "Ethiopian",
+   "Ethiopian Coffee",
+   "Fair Trade Organic Coffee",
+   "Just Bikes",
+   "MOSA",
+   "Non GMO",
+   "Premium Coffee",
+   "USDA Organic",
+   "USDA certified organic",
+   "Wisconsin",
+   "Wisconsin Bike Federation",
+   "african coffee",
+   "blend",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "colombia",
+   "colombian coffee",
+   "ethiopia",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "organic product",
+   "roasted",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "small batch roasted",
+   "specialty coffee"
+  ],
+  "title": "Wisconsin Bike Fed Roast",
+  "url": "https://justcoffee.coop/products/wisconsin-bike-fed-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "1142593680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "1142593684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "1142593688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "1142593692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "1142593696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "1142593700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "1142593704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "1142593708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "1142593712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "1142593716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "1142593720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "1142593724"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "73ad89f7588ede1e",
+  "first_seen": "2026-10-26",
+  "handle": "wake-the-flock-up",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/Flock2025_fairtradeorganiccoffee.png?v=1750880622",
+  "platform": "shopify",
+  "product_id": "4368920477833",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Community",
+   "Fair Trade Organic Coffee",
+   "Forward Madison FC",
+   "MOSA",
+   "Non GMO",
+   "Premium Coffee",
+   "The Flock",
+   "The Flock Soccer Foundation",
+   "USDA Organic",
+   "USDA certified organic",
+   "blend",
+   "certified organic",
+   "coffee",
+   "coffee beans",
+   "fair trade",
+   "fair trade coffee",
+   "fair trade product",
+   "honduras",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "organic farming",
+   "organic product",
+   "peru",
+   "roasted",
+   "roasted coffee",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "small batch",
+   "small batch roasted",
+   "specialty coffee"
+  ],
+  "title": "Wake the Flock Up",
+  "url": "https://justcoffee.coop/products/wake-the-flock-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31279131558025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "31279131590793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "31279131623561"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "31279131656329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "31279131689097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Coarse",
+    "variant_id": "31279131721865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Medium",
+    "variant_id": "31279131754633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "2lb / Fine",
+    "variant_id": "31279131787401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31279131820169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Coarse",
+    "variant_id": "31279131852937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Medium",
+    "variant_id": "31279131885705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.5,
+    "title": "5lb / Fine",
+    "variant_id": "31279131918473"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "3263e415ce022cae",
+  "first_seen": "2026-10-26",
+  "handle": "la-luz",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/LaLuzfairtradeorganiccoffee_5e9f008d-69b5-4cae-9373-74acdc73c573.png?v=1687984940",
+  "platform": "shopify",
+  "product_id": "7620480139416",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [],
+  "title": "La Luz",
+  "url": "https://justcoffee.coop/products/la-luz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42631160266904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42631160299672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "42631160332440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "42631160365208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "42631160397976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "42631160430744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "42631160463512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "42631160496280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42631160529048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42631160561816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "42631160594584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "42631160627352"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ },
+ {
+  "body_hash": "888de2b660a75d57",
+  "first_seen": "2026-10-26",
+  "handle": "soulshaker",
+  "image": "https://cdn.shopify.com/s/files/1/0262/2413/files/SoulShakerfairtradeorganiccoffee.png?v=1705604687",
+  "platform": "shopify",
+  "product_id": "835473092",
+  "product_type": "roasted coffee",
+  "roaster_slug": "justcoffee",
+  "tags": [
+   "Fair Trade Organic Coffee",
+   "Guatemalan Coffee",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "fair trade",
+   "fair trade coffee",
+   "guatemala",
+   "just coffee coop",
+   "just coffee cooperative",
+   "medium roast",
+   "medium roasted coffee",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "shade grown",
+   "shade grown coffee",
+   "single origin",
+   "single origin coffee",
+   "specialty coffee"
+  ],
+  "title": "Soul Shaker",
+  "url": "https://justcoffee.coop/products/soulshaker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "3111094020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "3111094084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "3111094212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "3111094276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "3111094404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine",
+    "variant_id": "3111094532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "3111094596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Coarse",
+    "variant_id": "3111094660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Fine",
+    "variant_id": "3111094788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium",
+    "variant_id": "31972605828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium",
+    "variant_id": "31972624964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5lb / Medium",
+    "variant_id": "31972637444"
+   }
+  ],
+  "vendor": "Just Coffee Cooperative"
+ }
+]

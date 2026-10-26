@@ -1,0 +1,418 @@
+[
+ {
+  "body_hash": "fc4ec72f2a103844",
+  "first_seen": "2026-10-26",
+  "handle": "milk-money-seasonal-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/Milk_Money_with_award.png?v=1760311819",
+  "platform": "shopify",
+  "product_id": "1317173788731",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Milk Money - Seasonal Espresso",
+  "url": "https://stampactcoffee.com/products/milk-money-seasonal-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12oz/ 340g",
+    "variant_id": "12203391483963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5lbs",
+    "variant_id": "12441174016059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2lbs",
+    "variant_id": "18090523983931"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "12e909ed77cb1c13",
+  "first_seen": "2026-10-26",
+  "handle": "mwendi-wega-aa-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/Mwendi_Wega_AA_with_award.png?v=1760311721",
+  "platform": "shopify",
+  "product_id": "1515282792507",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Mwendi Wega AA - Kenya",
+  "url": "https://stampactcoffee.com/products/mwendi-wega-aa-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz/ 340g",
+    "variant_id": "21297310597179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.25,
+    "title": "2 lbs",
+    "variant_id": "46553115394299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.25,
+    "title": "5 lbs",
+    "variant_id": "46553116672251"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "46d010ea462ba274",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-samambaia-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/SanCoffeePeaberry.jpg?v=1690819962",
+  "platform": "shopify",
+  "product_id": "2177099300923",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "San Coffee Peaberry - Brazil",
+  "url": "https://stampactcoffee.com/products/fazenda-samambaia-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz",
+    "variant_id": "20694992158779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lbs",
+    "variant_id": "20906426859579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.25,
+    "title": "5lbs",
+    "variant_id": "20906426892347"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "fac7b6b2007c8ddc",
+  "first_seen": "2026-10-26",
+  "handle": "old-school-seasonal-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/7.png?v=1775844774",
+  "platform": "shopify",
+  "product_id": "4666782449723",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Old School - Seasonal Espresso (medium roast)",
+  "url": "https://stampactcoffee.com/products/old-school-seasonal-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz/ 340g",
+    "variant_id": "32816920690747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.75,
+    "title": "2lbs",
+    "variant_id": "32816920756283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lbs",
+    "variant_id": "32816920821819"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "8e638e43f059ca0a",
+  "first_seen": "2026-10-26",
+  "handle": "regina-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/8.png?v=1775844843",
+  "platform": "shopify",
+  "product_id": "7443649790203",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Regina - A Custom Blend",
+  "url": "https://stampactcoffee.com/products/regina-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "340g/ 120z",
+    "variant_id": "42126071005435"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "93442a051e7d5253",
+  "first_seen": "2026-10-26",
+  "handle": "diego-ramirez-huehuetenango-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/DiegoRamirez.jpg?v=1698958274",
+  "platform": "shopify",
+  "product_id": "8225161740539",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Diego Ramirez - Huehuetenango, Guatemala",
+  "url": "https://stampactcoffee.com/products/diego-ramirez-huehuetenango-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz/ 340g",
+    "variant_id": "44962811576571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lbs",
+    "variant_id": "44962811609339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lbs",
+    "variant_id": "46626942746875"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "89a51a232706975e",
+  "first_seen": "2026-10-26",
+  "handle": "condor-ea-decaf-tolima-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/condor_decaf_with_award.png?v=1760311625",
+  "platform": "shopify",
+  "product_id": "8336385736955",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Condor EA Decaf - Tolima, Colombia",
+  "url": "https://stampactcoffee.com/products/condor-ea-decaf-tolima-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz/ 340g",
+    "variant_id": "45350688260347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lbs",
+    "variant_id": "45350688293115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.5,
+    "title": "5lbs",
+    "variant_id": "45350688325883"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "6eb2939b1cb4d8ee",
+  "first_seen": "2026-10-26",
+  "handle": "spinnaker-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/SpinnakerBlend.jpg?v=1778687895",
+  "platform": "shopify",
+  "product_id": "9314178072827",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Spinnaker Blend - Seasonal Espresso",
+  "url": "https://stampactcoffee.com/products/spinnaker-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "340g/ 120z",
+    "variant_id": "48857657508091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.3,
+    "title": "2LBS",
+    "variant_id": "48858234552571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.5,
+    "title": "5LBS",
+    "variant_id": "48858235339003"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "9c693fb44556c558",
+  "first_seen": "2026-10-26",
+  "handle": "fredy-orantes-natural-gesha-fraijanes-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/FedyGesha2026_f6527bea-6ac0-4885-b19f-094bbff168e1.jpg?v=1784564961",
+  "platform": "shopify",
+  "product_id": "9373185900795",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Fredy Orantes (Natural Gesha) Fraijanes, Guatemala",
+  "url": "https://stampactcoffee.com/products/fredy-orantes-natural-gesha-fraijanes-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250g",
+    "variant_id": "49087463915771"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "787d2628fe91a29f",
+  "first_seen": "2026-10-26",
+  "handle": "bochessa-sidama-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/Bochessanat2026.jpg?v=1788052588",
+  "platform": "shopify",
+  "product_id": "9403442757883",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Bochessa, Sidama Ethiopia - Natural",
+  "url": "https://stampactcoffee.com/products/bochessa-sidama-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz/ 340g",
+    "variant_id": "49234393202939"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 63.25,
+    "title": "2lbs",
+    "variant_id": "49234393235707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.5,
+    "title": "5lbs",
+    "variant_id": "49234393268475"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "7e9c546d4b2826d3",
+  "first_seen": "2026-10-26",
+  "handle": "san-lucas-zoquiapam-oaxaca-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/SanLucasOaxaca2026.jpg?v=1789406852",
+  "platform": "shopify",
+  "product_id": "9417554690299",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "San Lucas Zoquiapam - Oaxaca, Mexico",
+  "url": "https://stampactcoffee.com/products/san-lucas-zoquiapam-oaxaca-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.75,
+    "title": "12oz",
+    "variant_id": "49312538886395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.9,
+    "title": "2lbs",
+    "variant_id": "49312538919163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.5,
+    "title": "5lbs",
+    "variant_id": "49312538951931"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ },
+ {
+  "body_hash": "555a3c41d4c09fa3",
+  "first_seen": "2026-10-26",
+  "handle": "ayla-shantawene-sidama-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1390/9563/files/Shantawene2026.jpg?v=1790007431",
+  "platform": "shopify",
+  "product_id": "9427797672187",
+  "product_type": "Seasonal Coffee",
+  "roaster_slug": "stampactcoffee",
+  "tags": [],
+  "title": "Ayla Shantawene, Sidama Ethiopia",
+  "url": "https://stampactcoffee.com/products/ayla-shantawene-sidama-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz/ 340g",
+    "variant_id": "49345490387195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lbs",
+    "variant_id": "49345490419963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lbs",
+    "variant_id": "49345490452731"
+   }
+  ],
+  "vendor": "stampactcoffee"
+ }
+]

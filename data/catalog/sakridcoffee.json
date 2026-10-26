@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "alchemy-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0781/5295/8164/files/DSC00124.jpg?v=1770227611",
+  "platform": "shopify",
+  "product_id": "9061658820820",
+  "product_type": "",
+  "roaster_slug": "sakridcoffee",
+  "tags": [],
+  "title": "Alchemy House Blend",
+  "url": "https://sakridcoffee.com/products/alchemy-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "47514679148756"
+   }
+  ],
+  "vendor": "Coffee-Sakrid"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "relativity-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0781/5295/8164/files/DSC00150.jpg?v=1770227611",
+  "platform": "shopify",
+  "product_id": "9061677367508",
+  "product_type": "",
+  "roaster_slug": "sakridcoffee",
+  "tags": [],
+  "title": "Relativity Espresso Blend",
+  "url": "https://sakridcoffee.com/products/relativity-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "47514778337492"
+   }
+  ],
+  "vendor": "Coffee-Sakrid"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino",
+  "image": "https://cdn.shopify.com/s/files/1/0781/5295/8164/files/ColombiaNarino_8acf3325-fe34-42d3-b12d-5b4ccd7478ca.jpg?v=1772470588",
+  "platform": "shopify",
+  "product_id": "9089493598420",
+  "product_type": "",
+  "roaster_slug": "sakridcoffee",
+  "tags": [],
+  "title": "Colombia Narino Buesaco - Sareni",
+  "url": "https://sakridcoffee.com/products/colombia-narino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "47609976258772"
+   }
+  ],
+  "vendor": "Sākrid Coffee Roasters"
+ }
+]

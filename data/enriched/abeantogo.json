@@ -1,0 +1,617 @@
+{
+ "5890f523d1758e5ffeefd611": {
+  "body_hash": "cfa19903a884d8a7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "grapefruit",
+   "chocolate",
+   "marshmallow",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "589219c4e6f2e11e25c71a3c": {
+  "body_hash": "f45ff44cf2138e3c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark molasses",
+   "bittersweet chocolate"
+  ],
+  "varietals": []
+ },
+ "58921a86e6f2e11e25c7284c": {
+  "body_hash": "54d2bfbafbd780f3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "coming soon"
+  ],
+  "varietals": []
+ },
+ "58921ab6e6f2e11e25c72ba9": {
+  "body_hash": "54d2bfbafbd780f3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "coming soon"
+  ],
+  "varietals": []
+ },
+ "58921b1cbe6594b1d704fb6f": {
+  "body_hash": "498e3baf58864bc4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "caramelized sugar",
+   "tobacco"
+  ],
+  "varietals": []
+ },
+ "589232e703596e3daedc4057": {
+  "body_hash": "54d2bfbafbd780f3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "coming soon"
+  ],
+  "varietals": []
+ },
+ "58935c31bebafb25099b4cf1": {
+  "body_hash": "9c389c5c55c237e4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "earthy",
+   "tobacco",
+   "full bodied"
+  ],
+  "varietals": []
+ },
+ "58935c9903596e0c36b757d5": {
+  "body_hash": "8f12e21a8e1e5f9a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "marshmallow",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "58936fc7bebafb25099c95e4": {
+  "body_hash": "252fc3826309cf2b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pumpkin",
+   "pastry"
+  ],
+  "varietals": []
+ },
+ "58936ff837c581a242f8f353": {
+  "body_hash": "30b221d1796094e4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate liqueur",
+   "vanilla"
+  ],
+  "varietals": []
+ },
+ "5893703cc534a5319ae16d8a": {
+  "body_hash": "70e2dae5d6a95adc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "kahlua",
+   "vanilla",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "589370951b10e307dc5c5b56": {
+  "body_hash": "caf8f991f64bfc8f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "hazelnut",
+   "cream"
+  ],
+  "varietals": []
+ },
+ "5893712c17bffc8ec6705028": {
+  "body_hash": "b1415f4ef23dea97",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "pecan",
+   "rum"
+  ],
+  "varietals": []
+ },
+ "58937154e58c621f775dfb42": {
+  "body_hash": "fa3ee33cde7e6df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "blueberry",
+   "cream"
+  ],
+  "varietals": []
+ },
+ "589371783e00be593d18d6a7": {
+  "body_hash": "90e60b4b945cad8f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tart cherries"
+  ],
+  "varietals": []
+ },
+ "58937230d2b857bc9d8cda62": {
+  "body_hash": "ccdb4c1368b84f2f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "subtle berry",
+   "smokey"
+  ],
+  "varietals": []
+ },
+ "59d8d7a251a584c7c86341d1": {
+  "body_hash": "7bd9832e607827f0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bourbon",
+   "cream",
+   "almond"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "5e84d15fdf9ce6275031db7b": {
+  "body_hash": "8505e37ff0454e6a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "raspberry"
+  ],
+  "varietals": []
+ },
+ "5e84d24bb2c53d0e6dca2b31": {
+  "body_hash": "3048b2a0a72e5afd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cinnamon",
+   "sweet bread"
+  ],
+  "varietals": []
+ },
+ "5e84d367b35c3c2a44ed1787": {
+  "body_hash": "d6c52af560534964",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "graham cracker",
+   "cinnamon",
+   "coconut"
+  ],
+  "varietals": []
+ },
+ "5e9631e0e89b9e37584c5ca8": {
+  "body_hash": "24cefe845e9490b1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5e9639ecd2c16745eb1ae2f2": {
+  "body_hash": "f3c455fb77bedb25",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tasting"
+  ],
+  "varietals": []
+ },
+ "5e96f12f53790b6f9ef55565": {
+  "body_hash": "bcc0d81c8d4f7008",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peanut butter cereal"
+  ],
+  "varietals": []
+ },
+ "5ecf8edd7a668f3cbed0c607": {
+  "body_hash": "54d2bfbafbd780f3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "coming soon"
+  ],
+  "varietals": []
+ },
+ "5f8ed8d07002bd760968c757": {
+  "body_hash": "c89ede6b0ce48c6e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "buttercream frosting"
+  ],
+  "varietals": []
+ },
+ "5fbfb9fe173fb5383ba255b7": {
+  "body_hash": "97b55fad04a60fe2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smokey",
+   "full bodied",
+   "campfire",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "601c0782feb474791abc695a": {
+  "body_hash": "369d09b5cabba6ad",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "bakers chocolate",
+   "subtle berry"
+  ],
+  "varietals": []
+ },
+ "60f954e49f96d85b0b970ea6": {
+  "body_hash": "bc57163317cf3d36",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peanut butter",
+   "nutty",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "60f9560bb640d10afb0b25c5": {
+  "body_hash": "670a78dd9a2ec26b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pastry",
+   "strawberry",
+   "nutty",
+   "pretzel"
+  ],
+  "varietals": []
+ },
+ "6242f502c056621f52534180": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "628240269fb4d5179e3789ef": {
+  "body_hash": "fcd6bba312e07912",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "peanut butter"
+  ],
+  "varietals": []
+ },
+ "65707afb9741180e4c39ee6b": {
+  "body_hash": "6297ad036e467cde",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "tart fruit",
+   "blueberry"
+  ],
+  "varietals": []
+ },
+ "65e706aa08cf320fee4a932f": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "67222749dc06b7459017c45b": {
+  "body_hash": "64f92c6288e0167c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "earthy",
+   "full bodied",
+   "campfire"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,1999 @@
+[
+ {
+  "body_hash": "d372d7987cb0c794",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-st-louis-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/cafe-st-louis-coffee-blend-635298.png?v=1762527686",
+  "platform": "shopify",
+  "product_id": "1704475918426",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes",
+   "popular"
+  ],
+  "title": "Cafe St. Louis Coffee Blend",
+  "url": "https://twinpike.com/products/cafe-st-louis-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16470231089242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16470231122010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16470231154778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16470231187546"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16470231220314"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Coarse",
+    "variant_id": "16470231253082"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16470231285850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16470231318618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16470231351386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "16470231384154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16470231416922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16470231449690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43756080955554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Coarse",
+    "variant_id": "43756081152162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "43756081709218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "43756081840290"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975072141474"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975072174242"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975072207010"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975072239778"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "af7758b3522f32c1",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/origin-papua-new-guinea-coffee-744908.png?v=1762527689",
+  "platform": "shopify",
+  "product_id": "1705640591450",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes"
+  ],
+  "title": "Origin - Papua New Guinea Coffee",
+  "url": "https://twinpike.com/products/papua-new-guinea-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16484743675994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "16484743708762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "16484743741530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "16484743839834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16484743905370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16484743970906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16484744036442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16484744101978"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16484744134746"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Coarse",
+    "variant_id": "16484744167514"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16484744200282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16484744233050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16484744265818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "16484744298586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16484744331354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16484744364122"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975457689762"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975457722530"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975457755298"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975457788066"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "12dfe96997df8454",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/origin-costa-rica-west-valley-coffee-772881.png?v=1762527693",
+  "platform": "shopify",
+  "product_id": "1705653207130",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes"
+  ],
+  "title": "Origin - Costa Rica West Valley Coffee",
+  "url": "https://twinpike.com/products/costa-rica-tarrazu-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16484867932250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "16484867965018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "16484867997786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "16484868030554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16484868063322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16484868096090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16484868128858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16484868161626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16484868194394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Coarse",
+    "variant_id": "16484868227162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16484868259930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16484868292698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16484868325466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "16484868358234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16484868391002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16484868423770"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975725797538"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975725830306"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975725863074"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975725895842"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "3bbf1f7e5bee865a",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-regional-select-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/origin-colombia-coffee-844727.png?v=1762527693",
+  "platform": "shopify",
+  "product_id": "1705667362906",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes",
+   "popular"
+  ],
+  "title": "Origin - Colombia Coffee",
+  "url": "https://twinpike.com/products/columbia-regional-select-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16485034000474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Coarse",
+    "variant_id": "16485034033242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "16485034066010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "16485034098778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16485034131546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16485034164314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16485034197082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16485034229850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16485034262618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Coarse",
+    "variant_id": "16485034295386"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16485034328154"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16485034360922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16485034393690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "16485034426458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16485034459226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16485034491994"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975636308130"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975636340898"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975636373666"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975636406434"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "ebc0a335471c8148",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-eterna-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/origin-guatemala-finca-nueva-granada-coffee-162386.png?v=1762527696",
+  "platform": "shopify",
+  "product_id": "1705683320922",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes"
+  ],
+  "title": "Origin - Guatemala Finca Nueva Granada Coffee",
+  "url": "https://twinpike.com/products/guatemala-la-eterna-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16485214453850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "16485214486618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "16485214519386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "16485214552154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16485214584922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16485214617690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16485214748762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16485214781530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16485214814298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Coarse",
+    "variant_id": "16485214847066"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16485214879834"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16485214912602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16485214945370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5LBS / Coarse",
+    "variant_id": "16485214978138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16485215010906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16485215043674"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975694667938"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975694700706"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975694733474"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975694766242"
+   }
+  ],
+  "vendor": "Twin Pikes Roastery"
+ },
+ {
+  "body_hash": "009e50b3fd2c021a",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/decaf-colombia-coffee-beans-350875.png?v=1762527697",
+  "platform": "shopify",
+  "product_id": "1705693216858",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes"
+  ],
+  "title": "DECAF Colombia Coffee Beans",
+  "url": "https://twinpike.com/products/columbia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16485325701210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Coarse",
+    "variant_id": "16485325733978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "16485325766746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "16485325799514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1LB / Whole Bean",
+    "variant_id": "16485325832282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1LB / Coarse",
+    "variant_id": "16485325865050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "16485325897818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "16485325930586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "16485325963354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Coarse",
+    "variant_id": "16485325996122"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "16485326028890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "16485326061658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "16485326094426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "16485326127194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "16485326159962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "16485326192730"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975440027810"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975440060578"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975440093346"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975440126114"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "dc57815c6ce6161e",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete-floreal-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/origin-panama-boquete-coffee-117205.png?v=1762529347",
+  "platform": "shopify",
+  "product_id": "4657790419034",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes",
+   "popular"
+  ],
+  "title": "Origin - Panama Boquete Coffee",
+  "url": "https://twinpike.com/products/panama-boquete-floreal-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32180165083226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Coarse",
+    "variant_id": "32180165115994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "32180165148762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "32180165181530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1LB / Whole Bean",
+    "variant_id": "32180165214298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1LB / Coarse",
+    "variant_id": "32180165247066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "32180165279834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "32180165312602"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "32180165345370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Coarse",
+    "variant_id": "32180165378138"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "32180165410906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "32180165443674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "32180165476442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "32180165509210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "32180165541978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "32180165574746"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975663931554"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975663964322"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975663997090"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975664029858"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "71677387bf5a9123",
+  "first_seen": "2026-10-26",
+  "handle": "st-genevieve-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/ste-genevieve-espresso-blend-207770.png?v=1743515319",
+  "platform": "shopify",
+  "product_id": "8073104162978",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [],
+  "title": "Ste. Genevieve Espresso Blend",
+  "url": "https://twinpike.com/products/st-genevieve-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43759446163618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Coarse",
+    "variant_id": "43759446196386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "43759446229154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "43759446261922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "43759446294690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Coarse",
+    "variant_id": "43759446327458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Medium (Drip)",
+    "variant_id": "43759446360226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Fine (Espresso)",
+    "variant_id": "43759446392994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43759446425762"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "43759446458530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium (Drip)",
+    "variant_id": "43759446491298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine (Espresso)",
+    "variant_id": "43759446524066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43759446556834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Coarse",
+    "variant_id": "43759446589602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Medium (Drip)",
+    "variant_id": "43759446622370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "43759446655138"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975363121314"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975363154082"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975363186850"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975363219618"
+   }
+  ],
+  "vendor": "Twin Pikes Roastery"
+ },
+ {
+  "body_hash": "88df374eeec5372c",
+  "first_seen": "2026-10-26",
+  "handle": "borromeo-coffee-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/borromeo-coffee-blend-623213.png?v=1743515319",
+  "platform": "shopify",
+  "product_id": "8075756667042",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [],
+  "title": "Borromeo Coffee Blend",
+  "url": "https://twinpike.com/products/borromeo-coffee-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43765716025506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse",
+    "variant_id": "43765716058274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "43765716091042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "43765716123810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1lb / Whole Bean",
+    "variant_id": "43765716156578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1lb / Coarse",
+    "variant_id": "43765716189346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1lb / Medium (Drip)",
+    "variant_id": "43765716222114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "1lb / Fine (Espresso)",
+    "variant_id": "43765716254882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43765716287650"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Coarse",
+    "variant_id": "43765716320418"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Medium (Drip)",
+    "variant_id": "43765716353186"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.5,
+    "title": "2lb / Fine (Espresso)",
+    "variant_id": "43765716385954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43765716418722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Coarse",
+    "variant_id": "43765716451490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Medium (Drip)",
+    "variant_id": "43765716484258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "43765716517026"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975414042786"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975414075554"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975414108322"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975414141090"
+   }
+  ],
+  "vendor": "Twin Pikes Roastery"
+ },
+ {
+  "body_hash": "1a8c646c5f3acead",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-shop-vintage",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/coffee-shop-vintage-992807.jpg?v=1759460567",
+  "platform": "shopify",
+  "product_id": "8476957343906",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [],
+  "title": "Coffee Shop Vintage",
+  "url": "https://twinpike.com/products/coffee-shop-vintage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Maroon / S",
+    "variant_id": "44877093077154"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Maroon / M",
+    "variant_id": "44877093109922"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Maroon / L",
+    "variant_id": "44877093142690"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Maroon / XL",
+    "variant_id": "44877093175458"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Maroon / 2XL",
+    "variant_id": "44877093208226"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Black / S",
+    "variant_id": "44877093273762"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Black / M",
+    "variant_id": "44877093306530"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Black / L",
+    "variant_id": "44877093339298"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Black / XL",
+    "variant_id": "44877093372066"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Black / 2XL",
+    "variant_id": "44877093404834"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Navy / S",
+    "variant_id": "44877093503138"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Navy / M",
+    "variant_id": "44877093535906"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Navy / L",
+    "variant_id": "44877093568674"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Navy / XL",
+    "variant_id": "44877093601442"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Navy / 2XL",
+    "variant_id": "44877093634210"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Purple / S",
+    "variant_id": "44877093699746"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Purple / M",
+    "variant_id": "44877093732514"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Purple / L",
+    "variant_id": "44877093765282"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Purple / XL",
+    "variant_id": "44877093798050"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Purple / 2XL",
+    "variant_id": "44877093830818"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Dark Chocolate / S",
+    "variant_id": "44877093896354"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Dark Chocolate / M",
+    "variant_id": "44877093929122"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Dark Chocolate / L",
+    "variant_id": "44877093961890"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Dark Chocolate / XL",
+    "variant_id": "44877093994658"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Dark Chocolate / 2XL",
+    "variant_id": "44877094060194"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Dark Heather / S",
+    "variant_id": "44877094879394"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Dark Heather / M",
+    "variant_id": "44877094912162"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Dark Heather / L",
+    "variant_id": "44877094944930"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Dark Heather / XL",
+    "variant_id": "44877094977698"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Dark Heather / 2XL",
+    "variant_id": "44877095010466"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Charcoal / S",
+    "variant_id": "44877095076002"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Charcoal / M",
+    "variant_id": "44877095108770"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Charcoal / L",
+    "variant_id": "44877095141538"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Charcoal / XL",
+    "variant_id": "44877095174306"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Charcoal / 2XL",
+    "variant_id": "44877095207074"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 25.0,
+    "title": "Military Green / S",
+    "variant_id": "44877095272610"
+   },
+   {
+    "available": true,
+    "grams": 190,
+    "price_usd": 25.0,
+    "title": "Military Green / M",
+    "variant_id": "44877095305378"
+   },
+   {
+    "available": true,
+    "grams": 215,
+    "price_usd": 25.0,
+    "title": "Military Green / L",
+    "variant_id": "44877095338146"
+   },
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 25.0,
+    "title": "Military Green / XL",
+    "variant_id": "44877095370914"
+   },
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 27.0,
+    "title": "Military Green / 2XL",
+    "variant_id": "44877095403682"
+   }
+  ],
+  "vendor": "Twin Pikes Roastery"
+ },
+ {
+  "body_hash": "c520ac6075d588c0",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/french-roast-coffee-blend-818704.png?v=1743515319",
+  "platform": "shopify",
+  "product_id": "8575536890018",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [
+   "_tab_bulk-discount-codes",
+   "popular"
+  ],
+  "title": "French Roast Coffee Blend",
+  "url": "https://twinpike.com/products/french-roast-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45202265604258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "45202265637026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "45202265669794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "45202265702562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1LB / Whole Bean",
+    "variant_id": "45202265735330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1LB / Coarse",
+    "variant_id": "45202265768098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1LB / Medium (Drip)",
+    "variant_id": "45202265800866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1LB / Fine (Espresso)",
+    "variant_id": "45202265833634"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2LBS / Whole Bean",
+    "variant_id": "45202265866402"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2LBS / Coarse",
+    "variant_id": "45202265899170"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2LBS / Medium (Drip)",
+    "variant_id": "45202265931938"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2LBS / Fine (Espresso)",
+    "variant_id": "45202265964706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Whole Bean",
+    "variant_id": "45202265997474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Coarse",
+    "variant_id": "45202266030242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Medium (Drip)",
+    "variant_id": "45202266063010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5LBS / Fine (Espresso)",
+    "variant_id": "45202266095778"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Whole Bean",
+    "variant_id": "46975388844194"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Coarse",
+    "variant_id": "46975388876962"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Medium (Drip)",
+    "variant_id": "46975388909730"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 9.49,
+    "title": "Sampler 3.5oz / Fine (Espresso)",
+    "variant_id": "46975388942498"
+   }
+  ],
+  "vendor": "Twin Pike's Roastery"
+ },
+ {
+  "body_hash": "b7f11f3d3248445c",
+  "first_seen": "2026-10-26",
+  "handle": "legacy-racing-92-matt-macheca",
+  "image": "https://cdn.shopify.com/s/files/1/0050/4676/3610/files/legacy-racing-92-matt-macheca-1833770.jpg?v=1758688641",
+  "platform": "shopify",
+  "product_id": "8777183887522",
+  "product_type": "",
+  "roaster_slug": "twinpike",
+  "tags": [],
+  "title": "Legacy Racing 92 Matt Macheca",
+  "url": "https://twinpike.com/products/legacy-racing-92-matt-macheca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 159,
+    "price_usd": 38.0,
+    "title": "Black / S",
+    "variant_id": "45844599734434"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 38.0,
+    "title": "Black / M",
+    "variant_id": "45844599767202"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 38.0,
+    "title": "Black / L",
+    "variant_id": "45844599799970"
+   },
+   {
+    "available": true,
+    "grams": 230,
+    "price_usd": 38.0,
+    "title": "Black / XL",
+    "variant_id": "45844599832738"
+   },
+   {
+    "available": true,
+    "grams": 269,
+    "price_usd": 41.5,
+    "title": "Black / 2XL",
+    "variant_id": "45844599865506"
+   },
+   {
+    "available": true,
+    "grams": 159,
+    "price_usd": 38.0,
+    "title": "Navy / S",
+    "variant_id": "45844599898274"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 38.0,
+    "title": "Navy / M",
+    "variant_id": "45844599931042"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 38.0,
+    "title": "Navy / L",
+    "variant_id": "45844599963810"
+   },
+   {
+    "available": true,
+    "grams": 230,
+    "price_usd": 38.0,
+    "title": "Navy / XL",
+    "variant_id": "45844599996578"
+   },
+   {
+    "available": true,
+    "grams": 269,
+    "price_usd": 41.5,
+    "title": "Navy / 2XL",
+    "variant_id": "45844600029346"
+   },
+   {
+    "available": true,
+    "grams": 159,
+    "price_usd": 38.0,
+    "title": "Graphite / S",
+    "variant_id": "45844600062114"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 38.0,
+    "title": "Graphite / M",
+    "variant_id": "45844600094882"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 38.0,
+    "title": "Graphite / L",
+    "variant_id": "45844600127650"
+   },
+   {
+    "available": true,
+    "grams": 230,
+    "price_usd": 38.0,
+    "title": "Graphite / XL",
+    "variant_id": "45844600160418"
+   },
+   {
+    "available": true,
+    "grams": 269,
+    "price_usd": 41.5,
+    "title": "Graphite / 2XL",
+    "variant_id": "45844600193186"
+   }
+  ],
+  "vendor": " Twin Pikes Roastery"
+ }
+]

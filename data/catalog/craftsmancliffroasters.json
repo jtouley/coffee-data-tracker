@@ -1,0 +1,2913 @@
+[
+ {
+  "body_hash": "8228b5ac020a60a3",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-peru-70",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageSep23_2026_08_02_53AM.png?v=1790165008",
+  "platform": "shopify",
+  "product_id": "10297658900660",
+  "product_type": "Cacao",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Cacao",
+   "Chocolate"
+  ],
+  "title": "Dark Chocolate Peru 70%",
+  "url": "https://craftsmancliffroasters.com/products/dark-chocolate-peru-70",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "50478441463988"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "69a71c5c103073b7",
+  "first_seen": "2026-10-26",
+  "handle": "vinnie",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Vinnie.png?v=1777599285",
+  "platform": "shopify",
+  "product_id": "4773904023732",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Craftsman Cliff Roasters",
+   "Fair-Trade",
+   "Italian Roast",
+   "Micro Batch",
+   "Organic"
+  ],
+  "title": "Vinnie Boombotz",
+  "url": "https://craftsmancliffroasters.com/products/vinnie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "32450120188084"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "32450120220852"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "32450120253620"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French/Cold Brew",
+    "variant_id": "32450120286388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "32450120319156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "32450120351924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "32450120384692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French/Cold Brew",
+    "variant_id": "32450120417460"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "37532109209780"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "37532109996212"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "37532111569076"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French/Cold Brew",
+    "variant_id": "37532112879796"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43909581308084"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43909581340852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43909581373620"
+   }
+  ],
+  "vendor": "Craftsman Cliff"
+ },
+ {
+  "body_hash": "44d3078b2cc22ed1",
+  "first_seen": "2026-10-26",
+  "handle": "fireworks",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageMay1_2026_08_26_05AM.png?v=1777638409",
+  "platform": "shopify",
+  "product_id": "4773905924276",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Fireworks",
+  "url": "https://craftsmancliffroasters.com/products/fireworks",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Pack / Whole",
+    "variant_id": "32450123923636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Pack / Ground for Reusable K-Cup",
+    "variant_id": "32450123956404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Pack / Espresso/Turkish",
+    "variant_id": "32450123989172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Pack / French/Cold Brew",
+    "variant_id": "32450124021940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz. Bag / Whole",
+    "variant_id": "37531993571508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz. Bag / Drip/Percolator",
+    "variant_id": "37531995570356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz. Bag / French/Cold Brew",
+    "variant_id": "37532000125108"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37532001304756"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "37532002713780"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37532005433524"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French/Cold Brew",
+    "variant_id": "37532006678708"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "c399a2e8ee668d17",
+  "first_seen": "2026-10-26",
+  "handle": "joe-crazzy-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Joe_92d3852a-86f8-43a6-ba7e-7ecb6ce2035f.png?v=1777599256",
+  "platform": "shopify",
+  "product_id": "4773906874548",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "French Roast"
+  ],
+  "title": "Joe Crazzy",
+  "url": "https://craftsmancliffroasters.com/products/joe-crazzy-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "32450130149556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "32450130182324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "32450130215092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French/Cold Brew",
+    "variant_id": "32450130247860"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37532022440116"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37532025094324"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French/Cold Brew",
+    "variant_id": "37532026732724"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "37532032958644"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "37532034138292"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "37532035449012"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French/Cold Brew",
+    "variant_id": "37532037546164"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for reusable K-Cup",
+    "variant_id": "43909580816564"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "b8db7714e848f71a",
+  "first_seen": "2026-10-26",
+  "handle": "cool-dude-medium-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/CoolDude.png?v=1777598775",
+  "platform": "shopify",
+  "product_id": "4773910413492",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "Cool Dude",
+  "url": "https://craftsmancliffroasters.com/products/cool-dude-medium-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "32450135982260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "37531961524404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "37531963556020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turkish",
+    "variant_id": "37531964801204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "37531970273460"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37531973124276"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37531977875636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "41544846344372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "41544846377140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "41544846409908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "41544846442676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "41544846475444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43909582225588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43909582258356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43909582291124"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "d35322ce35f69f44",
+  "first_seen": "2026-10-26",
+  "handle": "dont-stop-honey-apple-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Screenshot2026-04-30at9.25.16PM.png?v=1777598724",
+  "platform": "shopify",
+  "product_id": "4773912805556",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Don't Stop Get It, Get It",
+  "url": "https://craftsmancliffroasters.com/products/dont-stop-honey-apple-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37116893823156"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / French/Cold Brew",
+    "variant_id": "37116893855924"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37116893888692"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37116893921460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37116893954228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French/Cold Brew",
+    "variant_id": "37116893986996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37116894019764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "37116894052532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "37531982201012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turkish",
+    "variant_id": "37531986690228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43909582487732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43909582520500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43909582553268"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "21fa58aa70afeae4",
+  "first_seen": "2026-10-26",
+  "handle": "thinker",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageApr2_2026_01_34_48PM.png?v=1777598643",
+  "platform": "shopify",
+  "product_id": "5946593607860",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "Thinker",
+  "url": "https://craftsmancliffroasters.com/products/thinker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "37057605435572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "37057605468340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "37057605501108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "37057605533876"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37057605566644"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37057605599412"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37057605632180"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "37057605664948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37057605697716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37057605730484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "37057605763252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "37057605796020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43925199093940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43925199126708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43925199159476"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "7dbd5cbd3fbd3ba7",
+  "first_seen": "2026-10-26",
+  "handle": "hd",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/HD.png?v=1777598587",
+  "platform": "shopify",
+  "product_id": "5946593706164",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Dark"
+  ],
+  "title": "HD",
+  "url": "https://craftsmancliffroasters.com/products/hd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "37057606746292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "37057606779060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "37057606811828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turkish",
+    "variant_id": "37057606844596"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37057606877364"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37057606910132"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37057606942900"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37057606975668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37057607008436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37057607041204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "37057607073972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "37057607106740"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for reusable K-Cup",
+    "variant_id": "43910137315508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for reusable K-Cup",
+    "variant_id": "43910137348276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for reusable K-Cup",
+    "variant_id": "43910137381044"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "580109677c5c0f28",
+  "first_seen": "2026-10-26",
+  "handle": "mama",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Mama.png?v=1777598535",
+  "platform": "shopify",
+  "product_id": "5946593804468",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Craftsman Cliff Roasters",
+   "Dark Roast",
+   "Micro Batch",
+   "U Mama",
+   "Uganda"
+  ],
+  "title": "Mama",
+  "url": "https://craftsmancliffroasters.com/products/mama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole / 12 Oz",
+    "variant_id": "37057607925940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Drip/Percolator / 12 Oz",
+    "variant_id": "37057607958708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "French Press/Cold Brew / 12 Oz",
+    "variant_id": "37057607991476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Espresso/Turkish / 12 Oz",
+    "variant_id": "37057608024244"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Whole / Kilo",
+    "variant_id": "37057608057012"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Drip/Percolator / Kilo",
+    "variant_id": "37057608089780"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "French Press/Cold Brew / Kilo",
+    "variant_id": "37057608122548"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Espresso/Turkish / Kilo",
+    "variant_id": "37057608155316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole / 5 Lb",
+    "variant_id": "37057608188084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Percolator / 5 Lb",
+    "variant_id": "37057608220852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press/Cold Brew / 5 Lb",
+    "variant_id": "37057608253620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso/Turkish / 5 Lb",
+    "variant_id": "37057608286388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Ground for Reusable K-Cup / 12 Oz",
+    "variant_id": "43925200437428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Ground for Reusable K-Cup / Kilo",
+    "variant_id": "43925200470196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground for Reusable K-Cup / 5 Lb",
+    "variant_id": "43925200502964"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "54ee6db031e3866e",
+  "first_seen": "2026-10-26",
+  "handle": "hondusaurus",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Screenshot2026-04-30at9.21.21PM.png?v=1777598489",
+  "platform": "shopify",
+  "product_id": "5946593837236",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "French"
+  ],
+  "title": "Hondusaurus",
+  "url": "https://craftsmancliffroasters.com/products/hondusaurus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "37057608319156"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "37057608351924"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "37057608384692"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "37057608417460"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37057608450228"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37057608482996"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37057608515764"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37057608548532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37057608581300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37057608614068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "37057608646836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "37057608679604"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for reusable K-Cup",
+    "variant_id": "43910137544884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for reusable K-Cup",
+    "variant_id": "43910137577652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for reusable K-Cup",
+    "variant_id": "43910137610420"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "7757d920f0419380",
+  "first_seen": "2026-10-26",
+  "handle": "goodie",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Goodie.png?v=1777598367",
+  "platform": "shopify",
+  "product_id": "5946593902772",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Medium-Dark Roast"
+  ],
+  "title": "Goodie",
+  "url": "https://craftsmancliffroasters.com/products/goodie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "37057609105588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "37057609138356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "37057609171124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turkish",
+    "variant_id": "37057609203892"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37057609236660"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37057609269428"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37057609302196"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37057609334964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37057609367732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37057609400500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "37057609433268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "37057609466036"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43923558957236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43923558990004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43923559022772"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "b1e27c8027d79581",
+  "first_seen": "2026-10-26",
+  "handle": "contender",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Contender_7417a9b4-9521-4a4c-88ad-48fd2c18f068.png?v=1777598328",
+  "platform": "shopify",
+  "product_id": "5946593968308",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Contender",
+  "url": "https://craftsmancliffroasters.com/products/contender",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "37057611235508"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "37057611268276"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "37057611301044"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "37057611333812"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "37057611366580"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "37057611399348"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "37057611432116"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "37057611464884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "37057611497652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "37057611530420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "37057611563188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "37057611595956"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for reusable K Cup",
+    "variant_id": "43923557351604"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for reusable K Cup",
+    "variant_id": "43923557384372"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for reusable K Cup",
+    "variant_id": "43923557417140"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "e06750a49a87c1cd",
+  "first_seen": "2026-10-26",
+  "handle": "blue-java",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Screenshot2026-04-30at9.12.54PM.png?v=1777597983",
+  "platform": "shopify",
+  "product_id": "6220968132788",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Blue Java",
+  "url": "https://craftsmancliffroasters.com/products/blue-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "38089945776308"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "38089945809076"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "38089945841844"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "38089945874612"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "38089946038452"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "38089946071220"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "38089946103988"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "38089946136756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "38089946169524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "38089946202292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "38089946235060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "38089946267828"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43925199519924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43925199552692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43925199585460"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "9f20e64d49050606",
+  "first_seen": "2026-10-26",
+  "handle": "vietnamese-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageMay1_2026_08_44_09AM.png?v=1777639552",
+  "platform": "shopify",
+  "product_id": "6685088481460",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Peace, Love & Caffeine",
+  "url": "https://craftsmancliffroasters.com/products/vietnamese-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "39912240087220"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Perc/Reusable Kcup",
+    "variant_id": "39912240119988"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "39912240152756"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turk",
+    "variant_id": "39912240185524"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "39912240349364"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Perc/Kcup",
+    "variant_id": "39912240382132"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "39912240414900"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "39912240447668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "39912240480436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Perc/Kcup",
+    "variant_id": "39912240513204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "39912240545972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "39912240578740"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "e4db25cea1fc257b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-satchels",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/products/coldbrew4satchel_1.jpg?v=1651262978",
+  "platform": "shopify",
+  "product_id": "6852554031284",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Cold Brew Satchels",
+  "url": "https://craftsmancliffroasters.com/products/cold-brew-satchels",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "Default Title",
+    "variant_id": "40559153152180"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "7305594c2d453f81",
+  "first_seen": "2026-10-26",
+  "handle": "dr-assaf-schaft-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageMay1_2026_09_37_05AM.png?v=1777642735",
+  "platform": "shopify",
+  "product_id": "7257721241780",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [],
+  "title": "Dr. Assaf Schaft Half Caff",
+  "url": "https://craftsmancliffroasters.com/products/dr-assaf-schaft-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/ Percolator",
+    "variant_id": "41953099350196"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/ Percolator",
+    "variant_id": "41953099415732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/ Percolator",
+    "variant_id": "41953099448500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "41953124876468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/ Cold Brew",
+    "variant_id": "41953124909236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/ Turkish",
+    "variant_id": "41953124942004"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole Bean",
+    "variant_id": "41953125073076"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/ Cold Brew",
+    "variant_id": "41953125105844"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/ Turkish",
+    "variant_id": "41953125138612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "41953125171380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/ Cold Brew",
+    "variant_id": "41953125204148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/ Turkish",
+    "variant_id": "41953125236916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for K Cup",
+    "variant_id": "43923556335796"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for K Cup",
+    "variant_id": "43923556368564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for K Cup",
+    "variant_id": "43923556401332"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "f74be32041d1c3a2",
+  "first_seen": "2026-10-26",
+  "handle": "kuroshio",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/Japan_ae60b3e7-6030-40c2-934e-076323d70393.png?v=1777597775",
+  "platform": "shopify",
+  "product_id": "7914954391732",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "黒潮 (Kuroshio) Black Tide",
+  "url": "https://craftsmancliffroasters.com/products/kuroshio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "43813027807412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Perc/Kcup",
+    "variant_id": "43813027840180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "43813027872948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "43813027905716"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "43813027938484"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Perc/Kcup",
+    "variant_id": "43813027971252"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "43813028004020"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "43813028036788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "43813028069556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Perc/Kcup",
+    "variant_id": "43813028102324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "43813028135092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "43813028167860"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "5547cf1b8aa77134",
+  "first_seen": "2026-10-26",
+  "handle": "darkest-before-dawn",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/CowboyCoffeecopy.jpg?v=1745890976",
+  "platform": "shopify",
+  "product_id": "7942070927540",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Fair-Trade",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Organic",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "The DARK before DAWN",
+  "url": "https://craftsmancliffroasters.com/products/darkest-before-dawn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "43909575049396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Perc/Kcup",
+    "variant_id": "43909575082164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "43909575114932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "43909575147700"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "43909575180468"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Perc/Kcup",
+    "variant_id": "43909575213236"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "43909575246004"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "43909575278772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "43909575311540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Perc/Kcup",
+    "variant_id": "43909575344308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "43909575377076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "43909575409844"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "94e6e86e04007706",
+  "first_seen": "2026-10-26",
+  "handle": "seeker",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageJun4_2026_11_33_49AM.png?v=1780587266",
+  "platform": "shopify",
+  "product_id": "7959176446132",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Micro Batch",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "Seeker",
+  "url": "https://craftsmancliffroasters.com/products/seeker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "43953063624884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "43953063657652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "43953063690420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "43953063723188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "43953063755956"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "43953063788724"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "43953063821492"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "43953063854260"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "43953063887028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "43953063919796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "43953063952564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "43953063985332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "43953064018100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "43953064050868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "43953064083636"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "9ebf6031df81d458",
+  "first_seen": "2026-10-26",
+  "handle": "the-light",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/TheLight.png?v=1777551018",
+  "platform": "shopify",
+  "product_id": "8029406265524",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "The Light",
+  "url": "https://craftsmancliffroasters.com/products/the-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "44144934551732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "44144934584500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "44144934617268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "44144934650036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "44144934682804"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44144934715572"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44144934748340"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44144934781108"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "44144934813876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "44144934846644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44144934879412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44144934912180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44144934944948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "44144934977716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "44144935010484"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "f498ff4ff566d467",
+  "first_seen": "2026-10-26",
+  "handle": "dreamer",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageMay19_2026_09_28_17AM.png?v=1779200692",
+  "platform": "shopify",
+  "product_id": "8061183525044",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "Dreamer",
+  "url": "https://craftsmancliffroasters.com/products/dreamer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "44229554503860"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "44229554536628"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "44229554569396"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turk",
+    "variant_id": "44229554602164"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for Reusable K-Cup",
+    "variant_id": "44229554634932"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44229554667700"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44229554700468"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44229554733236"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "44229554766004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "44229554798772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44229554831540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44229554864308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44229554897076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "44229554929844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "44229554962612"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "c92ae344bb909d85",
+  "first_seen": "2026-10-26",
+  "handle": "wake-up-feeling-like-a-million-bucks",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageSep2_2026_08_07_40AM_b2a35916-5a0d-4a47-8402-bbd09b251158.png?v=1788351249",
+  "platform": "shopify",
+  "product_id": "8061183885492",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "¡Qué Chiva",
+  "url": "https://craftsmancliffroasters.com/products/wake-up-feeling-like-a-million-bucks",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "44229555388596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "44229555421364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "44229555454132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "44229555486900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "44229555519668"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44229555552436"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44229555585204"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44229555617972"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "44229555650740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "44229555683508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44229555716276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44229555749044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44229555781812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "44229555814580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "44229555847348"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "2781d9df76a0a6dc",
+  "first_seen": "2026-10-26",
+  "handle": "wake-up-feeling-like-a-million-bucks-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageSep2_2026_08_23_29AM.png?v=1788352009",
+  "platform": "shopify",
+  "product_id": "8069140021428",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Medium-Dark Roast",
+   "Micro Batch",
+   "Peru",
+   "Peruvian",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "It's Your Birthday",
+  "url": "https://craftsmancliffroasters.com/products/wake-up-feeling-like-a-million-bucks-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "44241562697908"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "44241562730676"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "44241562763444"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turk",
+    "variant_id": "44241562796212"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for Reusable K-Cup",
+    "variant_id": "44241562828980"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44241562861748"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44241562894516"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44241562927284"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "44241562960052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "44241562992820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44241563025588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44241563058356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44241563091124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "44241563123892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "44241563156660"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "5df23b0be95e8cde",
+  "first_seen": "2026-10-26",
+  "handle": "rip",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageJun4_2026_10_28_00AM.png?v=1780583837",
+  "platform": "shopify",
+  "product_id": "8069145329844",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "RIP",
+  "url": "https://craftsmancliffroasters.com/products/rip",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11oz / Whole",
+    "variant_id": "44241568825524"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11oz / Drip/Percolator",
+    "variant_id": "44241568891060"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11oz / Espresso/Turkish",
+    "variant_id": "44241568923828"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11oz / French/Cold Brew",
+    "variant_id": "44241568956596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Pounds / Whole",
+    "variant_id": "44241569120436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Pounds / Drip/Percolator",
+    "variant_id": "44241569185972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Pounds / Espresso/Turkish",
+    "variant_id": "44241569218740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Pounds / French/Cold Brew",
+    "variant_id": "44241569251508"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "06296371fa93863f",
+  "first_seen": "2026-10-26",
+  "handle": "night-watcher",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageAug26_2026_01_22_29PM.png?v=1787765892",
+  "platform": "shopify",
+  "product_id": "8114017534132",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Craft Roasted",
+   "Dark",
+   "Dark Roast",
+   "Micro Batch",
+   "Single Orgin",
+   "Small Batch"
+  ],
+  "title": "Night Watcher",
+  "url": "https://craftsmancliffroasters.com/products/night-watcher",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Whole",
+    "variant_id": "44371556663476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Drip/Percolator",
+    "variant_id": "44371556696244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / French Press/Cold Brew",
+    "variant_id": "44371556729012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Espresso/Turk",
+    "variant_id": "44371556761780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Oz / Ground for Reusable K-Cup",
+    "variant_id": "44371556794548"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44371556827316"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44371556860084"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44371556892852"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.0,
+    "title": "Kilo / Espresso/Turk",
+    "variant_id": "44371556925620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Kilo / Ground for Reusable K-Cup",
+    "variant_id": "44371556958388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44371556991156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44371557023924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44371557056692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Espresso/Turk",
+    "variant_id": "44371557089460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb / Ground for Reusable K-Cup",
+    "variant_id": "44371557122228"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ },
+ {
+  "body_hash": "e8d1845ecfc28049",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-you-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0268/3676/2804/files/ChatGPTImageSep2_2026_10_42_55AM.png?v=1788361174",
+  "platform": "shopify",
+  "product_id": "8115707052212",
+  "product_type": "Coffee",
+  "roaster_slug": "craftsmancliffroasters",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "I Love You (coffee)",
+  "url": "https://craftsmancliffroasters.com/products/i-love-you-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Whole",
+    "variant_id": "44375905697972"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Drip/Percolator",
+    "variant_id": "44375905730740"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / French Press/Cold Brew",
+    "variant_id": "44375905763508"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Espresso/Turkish",
+    "variant_id": "44375905796276"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.0,
+    "title": "11 Oz / Ground for reusable K Cup",
+    "variant_id": "44375905829044"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Whole",
+    "variant_id": "44375905861812"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Drip/Percolator",
+    "variant_id": "44375905894580"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / French Press/Cold Brew",
+    "variant_id": "44375905927348"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 41.0,
+    "title": "Kilo / Espresso/Turkish",
+    "variant_id": "44375905960116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Kilo / Ground for reusable K Cup",
+    "variant_id": "44375905992884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Whole",
+    "variant_id": "44375906025652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Drip/Percolator",
+    "variant_id": "44375906058420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / French Press/Cold Brew",
+    "variant_id": "44375906091188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Espresso/Turkish",
+    "variant_id": "44375906123956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb / Ground for reusable K Cup",
+    "variant_id": "44375906156724"
+   }
+  ],
+  "vendor": "Craftsman Cliff Roasters"
+ }
+]

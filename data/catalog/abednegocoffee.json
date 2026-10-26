@@ -1,0 +1,970 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2019/04/mexico-1.png",
+  "platform": "woocommerce",
+  "product_id": "1053",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Mexico Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/mexico-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Mexico Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "1053:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2019/04/mexico-1.png",
+  "platform": "woocommerce",
+  "product_id": "1066",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Mexico Coffee",
+  "url": "https://abednegocoffee.com/product/mexico-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12oz.",
+    "variant_id": "1066:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1lb.",
+    "variant_id": "1066:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2lbs.",
+    "variant_id": "1066:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2019/04/mexico-1.png",
+  "platform": "woocommerce",
+  "product_id": "1087",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Mexico Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/mexico-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Mexico Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1087:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0000_guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "1088",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Guatemala Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/guatemala-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Guatemala Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1088:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0003_colombia.png",
+  "platform": "woocommerce",
+  "product_id": "1091",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Colombia Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/colombia-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Colombia Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1091:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0002_ethiopia.png",
+  "platform": "woocommerce",
+  "product_id": "1092",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Ethiopia Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/ethiopia-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Ethiopia Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1092:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0004_honduras.png",
+  "platform": "woocommerce",
+  "product_id": "1093",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Honduras Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/honduras-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Honduras Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1093:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/uganda-blend.png",
+  "platform": "woocommerce",
+  "product_id": "1095",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Uganda Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/uganda-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Uganda Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1095:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0007_breakfast.png",
+  "platform": "woocommerce",
+  "product_id": "1096",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Breakfast Blend Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/breakfast-blend-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Breakfast Blend Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1096:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "route-30-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0008_route30.png",
+  "platform": "woocommerce",
+  "product_id": "1097",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Route 30 Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/route-30-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Route 30 Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1097:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "moon-over-rouzerville-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0009_moon.png",
+  "platform": "woocommerce",
+  "product_id": "1098",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Moon Over Rouzerville Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/moon-over-rouzerville-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Moon Over Rouzerville Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1098:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "king-street-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0010_kingstreet.png",
+  "platform": "woocommerce",
+  "product_id": "1099",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "King Street Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/king-street-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "King Street Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1099:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cross-blend-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0011_cross.png",
+  "platform": "woocommerce",
+  "product_id": "1100",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Cross Blend Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/cross-blend-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Cross Blend Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1100:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chambersburg-coffee-2oz-whole-bean",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0012_chambersburg.png",
+  "platform": "woocommerce",
+  "product_id": "1101",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Chambersburg Coffee – 2oz. – Whole Bean",
+  "url": "https://abednegocoffee.com/product/chambersburg-coffee-2oz-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Chambersburg Coffee &#8211; 2oz. &#8211; Whole Bean",
+    "variant_id": "1101:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4160f521b3e51e4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0000_guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "51",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Guatemala Coffee",
+  "url": "https://abednegocoffee.com/product/guatemala-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "51:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "51:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "51:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb6e5ede6c7831d5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0003_colombia.png",
+  "platform": "woocommerce",
+  "product_id": "53",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Colombia Coffee",
+  "url": "https://abednegocoffee.com/product/colombia-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "53:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "53:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "53:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "682a594d5384be06",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0002_ethiopia.png",
+  "platform": "woocommerce",
+  "product_id": "54",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Ethiopia Coffee",
+  "url": "https://abednegocoffee.com/product/ethiopia-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "54:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "54:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "54:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47a53eb8b84a6ddd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0004_honduras.png",
+  "platform": "woocommerce",
+  "product_id": "55",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Honduras Coffee",
+  "url": "https://abednegocoffee.com/product/honduras-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "55:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "55:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "55:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed00688528be3682",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0006_uganda.png",
+  "platform": "woocommerce",
+  "product_id": "57",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Uganda Coffee",
+  "url": "https://abednegocoffee.com/product/uganda-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "57:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "57:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "57:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dea3c7ab5061474c",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0007_breakfast.png",
+  "platform": "woocommerce",
+  "product_id": "58",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Breakfast Blend Coffee",
+  "url": "https://abednegocoffee.com/product/breakfast-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "58:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "58:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "58:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75cd961e5483b7f1",
+  "first_seen": "2026-10-26",
+  "handle": "route-30-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0008_route30.png",
+  "platform": "woocommerce",
+  "product_id": "59",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Route 30 Coffee",
+  "url": "https://abednegocoffee.com/product/route-30-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "59:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "59:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "59:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ece7a835f2b2aec",
+  "first_seen": "2026-10-26",
+  "handle": "moon-over-rouzerville-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0009_moon.png",
+  "platform": "woocommerce",
+  "product_id": "60",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Moon Over Rouzerville Coffee",
+  "url": "https://abednegocoffee.com/product/moon-over-rouzerville-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "60:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "60:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "60:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c05e549b2a44755",
+  "first_seen": "2026-10-26",
+  "handle": "king-street-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0010_kingstreet.png",
+  "platform": "woocommerce",
+  "product_id": "61",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "King Street Coffee",
+  "url": "https://abednegocoffee.com/product/king-street-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "61:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "61:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "61:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e071293cc10a326c",
+  "first_seen": "2026-10-26",
+  "handle": "cross-blend-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0011_cross.png",
+  "platform": "woocommerce",
+  "product_id": "62",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Cross Blend Coffee",
+  "url": "https://abednegocoffee.com/product/cross-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "62:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "62:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "62:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fff52334c572121f",
+  "first_seen": "2026-10-26",
+  "handle": "chambersburg-coffee",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0012_chambersburg.png",
+  "platform": "woocommerce",
+  "product_id": "63",
+  "product_type": "variable",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Chambersburg Coffee",
+  "url": "https://abednegocoffee.com/product/chambersburg-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz.",
+    "variant_id": "63:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1lb.",
+    "variant_id": "63:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2lbs.",
+    "variant_id": "63:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cross-blend-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0011_cross.png",
+  "platform": "woocommerce",
+  "product_id": "969",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Cross Blend Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/cross-blend-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Cross Blend Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "969:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0007_breakfast.png",
+  "platform": "woocommerce",
+  "product_id": "973",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Breakfast Blend Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/breakfast-blend-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Breakfast Blend Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "973:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/uganda-blend.png",
+  "platform": "woocommerce",
+  "product_id": "974",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Uganda Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/uganda-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Uganda Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "974:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0004_honduras.png",
+  "platform": "woocommerce",
+  "product_id": "976",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Honduras Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/honduras-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Honduras Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "976:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0002_ethiopia.png",
+  "platform": "woocommerce",
+  "product_id": "977",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Ethiopia Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/ethiopia-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Ethiopia Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "977:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0003_colombia.png",
+  "platform": "woocommerce",
+  "product_id": "978",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Colombia Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/colombia-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Colombia Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "978:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-coffee-2oz-ground",
+  "image": "https://abednegocoffee.com/wp-content/uploads/2016/02/abednego-bag_0000_guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "979",
+  "product_type": "simple",
+  "roaster_slug": "abednegocoffee",
+  "tags": [
+   "Mix &amp; Match"
+  ],
+  "title": "Guatemala Coffee – 2oz. – Ground",
+  "url": "https://abednegocoffee.com/product/guatemala-coffee-2oz-ground/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Guatemala Coffee &#8211; 2oz. &#8211; Ground",
+    "variant_id": "979:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

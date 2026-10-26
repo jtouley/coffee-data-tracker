@@ -1,0 +1,368 @@
+[
+ {
+  "body_hash": "dfb4643fedf1929b",
+  "first_seen": "2026-10-26",
+  "handle": "graffeo-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0568/7351/7131/files/Dark_Roast.png?v=1746458187",
+  "platform": "shopify",
+  "product_id": "7983564881995",
+  "product_type": "",
+  "roaster_slug": "graffeo",
+  "tags": [
+   "cavallino subscription"
+  ],
+  "title": "Graffeo Dark Roast",
+  "url": "https://graffeo.com/products/graffeo-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Whole Bean",
+    "variant_id": "42850262614091"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Espresso",
+    "variant_id": "42850262646859"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Pour-over",
+    "variant_id": "42850262679627"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Drip",
+    "variant_id": "42850262712395"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "French Press",
+    "variant_id": "42850262745163"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Cold Brew",
+    "variant_id": "42850262777931"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Turkish",
+    "variant_id": "42850262810699"
+   }
+  ],
+  "vendor": "Graffeo"
+ },
+ {
+  "body_hash": "30913b867003a452",
+  "first_seen": "2026-10-26",
+  "handle": "graffeo-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0568/7351/7131/files/Light_Roast.png?v=1746458186",
+  "platform": "shopify",
+  "product_id": "7983576023115",
+  "product_type": "",
+  "roaster_slug": "graffeo",
+  "tags": [
+   "cavallino subscription"
+  ],
+  "title": "Graffeo Light Roast",
+  "url": "https://graffeo.com/products/graffeo-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 466,
+    "price_usd": 25.99,
+    "title": "Whole Bean",
+    "variant_id": "42850384019531"
+   },
+   {
+    "available": true,
+    "grams": 465,
+    "price_usd": 25.99,
+    "title": "Espresso",
+    "variant_id": "42850384052299"
+   },
+   {
+    "available": true,
+    "grams": 465,
+    "price_usd": 25.99,
+    "title": "Pour-over",
+    "variant_id": "42850384085067"
+   },
+   {
+    "available": true,
+    "grams": 465,
+    "price_usd": 25.99,
+    "title": "Drip",
+    "variant_id": "42850384117835"
+   },
+   {
+    "available": true,
+    "grams": 465,
+    "price_usd": 25.99,
+    "title": "French Press",
+    "variant_id": "42850384150603"
+   },
+   {
+    "available": true,
+    "grams": 465,
+    "price_usd": 25.99,
+    "title": "Cold Brew",
+    "variant_id": "42850384183371"
+   },
+   {
+    "available": true,
+    "grams": 466,
+    "price_usd": 25.99,
+    "title": "Turkish",
+    "variant_id": "42850384216139"
+   }
+  ],
+  "vendor": "Graffeo"
+ },
+ {
+  "body_hash": "60d9c53f2192f386",
+  "first_seen": "2026-10-26",
+  "handle": "graffeo-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0568/7351/7131/files/Decaff_292bf8cd-5427-4845-a029-ec3c1eeefc5d.png?v=1755101816",
+  "platform": "shopify",
+  "product_id": "7983581134923",
+  "product_type": "",
+  "roaster_slug": "graffeo",
+  "tags": [
+   "cavallino subscription"
+  ],
+  "title": "Graffeo Swiss Water Decaf",
+  "url": "https://graffeo.com/products/graffeo-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Whole Bean",
+    "variant_id": "42850414526539"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Espresso",
+    "variant_id": "42850414559307"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Pour-over",
+    "variant_id": "42850414592075"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Drip",
+    "variant_id": "42850414624843"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "French Press",
+    "variant_id": "42850414657611"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Cold Brew",
+    "variant_id": "42850414690379"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 25.99,
+    "title": "Turkish",
+    "variant_id": "42850414723147"
+   }
+  ],
+  "vendor": "Graffeo"
+ },
+ {
+  "body_hash": "fcdc984ee8948c85",
+  "first_seen": "2026-10-26",
+  "handle": "graffeo-custom-blends",
+  "image": "https://cdn.shopify.com/s/files/1/0568/7351/7131/files/HALF-HALF_1.png?v=1746458189",
+  "platform": "shopify",
+  "product_id": "7983583559755",
+  "product_type": "",
+  "roaster_slug": "graffeo",
+  "tags": [
+   "cavallino subscription"
+  ],
+  "title": "Graffeo Custom Blends",
+  "url": "https://graffeo.com/products/graffeo-custom-blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Whole Bean",
+    "variant_id": "42850429108299"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Espresso",
+    "variant_id": "42850429141067"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Pour-over",
+    "variant_id": "42850429173835"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Drip",
+    "variant_id": "42850429206603"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / French Press",
+    "variant_id": "42850429239371"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Cold Brew",
+    "variant_id": "42850429272139"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Half Dark / Half Light / Turkish",
+    "variant_id": "42850429304907"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Whole Bean",
+    "variant_id": "42850429337675"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Espresso",
+    "variant_id": "42850429370443"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Pour-over",
+    "variant_id": "42850429403211"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Drip",
+    "variant_id": "42850429435979"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / French Press",
+    "variant_id": "42850429468747"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Cold Brew",
+    "variant_id": "42850429501515"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Light Half Caff / Turkish",
+    "variant_id": "42850429534283"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Whole Bean",
+    "variant_id": "42850429567051"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Espresso",
+    "variant_id": "42850429599819"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Pour-over",
+    "variant_id": "42850429632587"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Drip",
+    "variant_id": "42850429665355"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / French Press",
+    "variant_id": "42850429698123"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Cold Brew",
+    "variant_id": "42850429730891"
+   },
+   {
+    "available": true,
+    "grams": 468,
+    "price_usd": 25.99,
+    "title": "Dark Half Caff / Turkish",
+    "variant_id": "42850429763659"
+   }
+  ],
+  "vendor": "Graffeo"
+ }
+]

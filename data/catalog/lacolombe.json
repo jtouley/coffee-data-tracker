@@ -1,0 +1,1217 @@
+[
+ {
+  "body_hash": "8b65a70e2bb44dd7",
+  "first_seen": "2026-10-26",
+  "handle": "frogtown",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_FROGTOWN.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "1304152539249",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "BOGO",
+   "Balanced",
+   "Bulk Size",
+   "Espresso",
+   "French Press",
+   "Frogtown",
+   "High Priority",
+   "Light",
+   "Melitta",
+   "Mellow",
+   "Percolator",
+   "african coffee blends",
+   "cafe coffees",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee brewing",
+   "coffee gift",
+   "coffee grinds",
+   "coffee lover",
+   "coffee roasts",
+   "coffee samples",
+   "coffee variety pack",
+   "dark roast coffee",
+   "flashsale",
+   "frogtown coffee",
+   "frogtown workshop coffee",
+   "gift",
+   "high-quality coffee blends",
+   "la colombe frogtown",
+   "la colombe frogtown workshop",
+   "la colombe workshop",
+   "lighter roast coffee",
+   "medium",
+   "medium roast coffee",
+   "seasonal coffees",
+   "top-rated",
+   "under-25",
+   "workshop coffee"
+  ],
+  "title": "Frogtown",
+  "url": "https://www.lacolombe.com/products/frogtown",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "12139687673969"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip",
+    "variant_id": "43476792868977"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "6344774d362950e4",
+  "first_seen": "2026-10-26",
+  "handle": "finca-mercado-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/1_5e65381d-e1ab-43b1-a079-483a3de332ee.png?v=1790783778",
+  "platform": "shopify",
+  "product_id": "15393888796785",
+  "product_type": "Goods",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "MEXICO",
+   "NewArrival",
+   "la colombe mexico coffee",
+   "la colombe mexico mercado",
+   "mexico mercado tote",
+   "mexico tote"
+  ],
+  "title": "Finca Mercado Bag - Red",
+  "url": "https://www.lacolombe.com/products/finca-mercado-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "67594604281969"
+   }
+  ],
+  "vendor": "La Colombe Coffee Workshop"
+ },
+ {
+  "body_hash": "6344774d362950e4",
+  "first_seen": "2026-10-26",
+  "handle": "finca-mercado-bag-blue",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/2_ba624488-d972-40f7-93ab-3d71002f01cf.png?v=1790783778",
+  "platform": "shopify",
+  "product_id": "15395476963441",
+  "product_type": "Goods",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "MEXICO",
+   "NewArrival",
+   "la colombe mexico coffee",
+   "la colombe mexico mercado",
+   "mexico mercado tote",
+   "mexico tote"
+  ],
+  "title": "Finca Mercado Bag - Blue",
+  "url": "https://www.lacolombe.com/products/finca-mercado-bag-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "67594655498353"
+   }
+  ],
+  "vendor": "La Colombe Coffee Workshop"
+ },
+ {
+  "body_hash": "a1c6e88a678a4d98",
+  "first_seen": "2026-10-26",
+  "handle": "corsica",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_BLUE_12OZ_BOX_CORSICA_v2.png?v=1780583624",
+  "platform": "shopify",
+  "product_id": "23894092",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "BOGO",
+   "Bulk Size",
+   "Corsica",
+   "Dark",
+   "Drip",
+   "French Press",
+   "High Priority",
+   "Light",
+   "Percolator",
+   "Stove Top",
+   "YES",
+   "brew at home",
+   "bulk bag",
+   "bulk bags",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "coffee lover",
+   "cornerstone coffee",
+   "dark roast coffee",
+   "darker",
+   "hot coffee",
+   "la colombe classic dark roast coffee",
+   "la colombe cornerstone",
+   "la colombe corsica coffee",
+   "la colombe corsica coffee beans",
+   "medium roast coffee",
+   "roasted coffee",
+   "top-rated",
+   "traditional coffee beans",
+   "traditional coffee blends",
+   "under-25"
+  ],
+  "title": "Corsica",
+  "url": "https://www.lacolombe.com/products/corsica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Drip",
+    "variant_id": "40409537052785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409537118321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6609401413"
+   }
+  ],
+  "vendor": "La Colombe Wheat"
+ },
+ {
+  "body_hash": "7da10ed9903f86a3",
+  "first_seen": "2026-10-26",
+  "handle": "nizza",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_BLUE_12OZ_BOX_NIZZA_v2.png?v=1780583600",
+  "platform": "shopify",
+  "product_id": "23894362",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "1.5 lb",
+   "1.5 lb (24 oz)",
+   "2.5 lb",
+   "24 oz",
+   "24oz",
+   "5 lb",
+   "Bulk Size",
+   "High Priority",
+   "bulk",
+   "bulk bag",
+   "bulk bags",
+   "coffee blends",
+   "medium",
+   "medium roast coffee"
+  ],
+  "title": "Nizza",
+  "url": "https://www.lacolombe.com/products/nizza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "40409536364657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Drip",
+    "variant_id": "40409536430193"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / French Press",
+    "variant_id": "40409536462961"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 29.0,
+    "title": "1.5 lb (24 oz) / Whole Bean",
+    "variant_id": "40409536495729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409536823409"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40409536921713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41268133462129"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Drip",
+    "variant_id": "41268133494897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6613018629"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "8e137c73fc0905d9",
+  "first_seen": "2026-10-26",
+  "handle": "monte-carlo",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_MONTECARLO.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "23894432",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "2.5 lb",
+   "5 lb",
+   "BOGO",
+   "Bulk Size",
+   "Dark",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "High Priority",
+   "Medium Dark",
+   "Percolator",
+   "Stove Top",
+   "Turkish",
+   "bulk bag",
+   "bulk bags",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "coffee lover",
+   "cornerstone coffee",
+   "dark roast coffee",
+   "decaf",
+   "flashsale",
+   "hot coffee",
+   "la colombe cornerstone",
+   "la colombe decaf coffee",
+   "la colombe monte carlo",
+   "la colombe monte carlo coffee beans",
+   "la colombe monte carlo decaf coffee beans",
+   "medium roast coffee",
+   "monte carlo decaf",
+   "roasted coffee",
+   "top-rated",
+   "traditional coffee beans",
+   "traditional coffee blends",
+   "under-25"
+  ],
+  "title": "Decaf Monte Carlo",
+  "url": "https://www.lacolombe.com/products/monte-carlo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip",
+    "variant_id": "40409535938673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409536168049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41268151582833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "43293487988849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6613004037"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "e15e27e7fb4629a2",
+  "first_seen": "2026-10-26",
+  "handle": "afrique",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_AFRIQUE2.png?v=1792076924",
+  "platform": "shopify",
+  "product_id": "23894502",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "High Priority",
+   "african coffee",
+   "afrique",
+   "bulk bag",
+   "bulk bags",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "coffee lover",
+   "dark roast coffee",
+   "earthy",
+   "flavor",
+   "gift",
+   "history",
+   "hot coffee",
+   "la colombe afrique",
+   "medium",
+   "medium roast coffee",
+   "quality coffee beans",
+   "roasted coffee",
+   "traditional coffee beans",
+   "traditional coffee blends"
+  ],
+  "title": "Afrique",
+  "url": "https://www.lacolombe.com/products/afrique",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6609466437"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "91fa0f2d3870d273",
+  "first_seen": "2026-10-26",
+  "handle": "monaco",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_MONACO.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "23894542",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "5lb",
+   "High Priority",
+   "bulk",
+   "bulk bag",
+   "bulk bags",
+   "medium"
+  ],
+  "title": "Monaco",
+  "url": "https://www.lacolombe.com/products/monaco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip",
+    "variant_id": "40409535119473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409535185009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6609492165"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "058a5b3c924f0e69",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-san-roque",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_TAN_12OZ_BOX_COLOMBIA-SANROQUE.png?v=1761942383",
+  "platform": "shopify",
+  "product_id": "376300820",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "High Priority",
+   "Light",
+   "bright",
+   "cafe coffees",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee brewing",
+   "coffee gift",
+   "coffee grinds",
+   "coffee lover",
+   "coffee roasts",
+   "colombia san roque coffee",
+   "colombia san roque workshop coffee",
+   "gift",
+   "high-quality coffee blends",
+   "la colombe colombia san roque",
+   "la colombe colombia san roque workshop",
+   "la colombe single-origin",
+   "la colombe workshop",
+   "lighter",
+   "lighter roast coffee",
+   "medium roast coffee",
+   "roasted",
+   "seasonal coffees",
+   "single-origin coffee",
+   "workshop coffee"
+  ],
+  "title": "Colombia - San Roque",
+  "url": "https://www.lacolombe.com/products/colombia-san-roque",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6609524997"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "67a41c900550037e",
+  "first_seen": "2026-10-26",
+  "handle": "deep-bleu-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_DEEPBLEU.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "428158824",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "Dark",
+   "Drip",
+   "French Press",
+   "High Priority",
+   "bleu",
+   "bleu coffee",
+   "blue",
+   "brew at home",
+   "bulk bag",
+   "bulk bags",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "coffee lover",
+   "dark roast coffee",
+   "darker",
+   "hot coffee",
+   "la colombe bleu",
+   "la colombe organic",
+   "la colombe organic coffee blends",
+   "medium roast coffee",
+   "organic",
+   "organic coffee",
+   "roasted coffee",
+   "top-rated",
+   "traditional coffee beans",
+   "traditional coffee blends",
+   "under-25"
+  ],
+  "title": "Deep Bleu - Organic",
+  "url": "https://www.lacolombe.com/products/deep-bleu-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409530663025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6612928517"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "bc0fc2a0631c5682",
+  "first_seen": "2026-10-26",
+  "handle": "rouge-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_ROUGE.png?v=1761942405",
+  "platform": "shopify",
+  "product_id": "428159036",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "Bulk Size",
+   "High Priority",
+   "Medium",
+   "Stove Top",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "hot coffee",
+   "la colombe organic",
+   "la colombe organic coffee blends",
+   "la colombe rouge",
+   "medium roast coffee",
+   "organic",
+   "organic coffee",
+   "roasted",
+   "roasted coffee",
+   "rouge",
+   "rouge coffee",
+   "top-rated",
+   "traditional coffee beans",
+   "traditional coffee blends",
+   "under-25"
+  ],
+  "title": "Rouge - Organic",
+  "url": "https://www.lacolombe.com/products/rouge-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40409530171505"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip",
+    "variant_id": "44396464799857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6609494917"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "e1af3a4db44c8edd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-luna-azul-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_HONDURAS-LUNAAZUL.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "4479425249393",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "High Priority",
+   "coffee gift",
+   "coffee lover",
+   "decaf",
+   "decaffeinated coffee",
+   "ground coffee",
+   "honduras luna azul decaf",
+   "la colombe coffee",
+   "la colombe honduras",
+   "lighter roast coffee",
+   "medium",
+   "medium roast coffee",
+   "organic",
+   "roasted",
+   "roasted coffee",
+   "single origin coffee"
+  ],
+  "title": "Honduras - Luna Azul Decaf",
+  "url": "https://www.lacolombe.com/products/honduras-luna-azul-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31678527668337"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "0e5c02ed53393acb",
+  "first_seen": "2026-10-26",
+  "handle": "bowery-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_BOWERY.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "6656318636145",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Coffee",
+   "High Priority",
+   "beans",
+   "bowery",
+   "bowery blend",
+   "brew at home",
+   "coffee blends",
+   "drip grind",
+   "ground coffee",
+   "la colombe bowery",
+   "medium",
+   "medium roast",
+   "organic",
+   "roasted",
+   "top-rated",
+   "under-25",
+   "whole bean",
+   "whole beans"
+  ],
+  "title": "Bowery Blend - Organic",
+  "url": "https://www.lacolombe.com/products/bowery-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39595726864497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip",
+    "variant_id": "67657013198961"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "b4590c17a59d59b0",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/19_PDP_SingleOrigin_PACK_0031.png?v=1779138038",
+  "platform": "shopify",
+  "product_id": "6720818217073",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "2420",
+   "High Priority",
+   "bundle",
+   "coffee bundle",
+   "coffee gift",
+   "coffee pack",
+   "la colombe single origin",
+   "la colombe workshop",
+   "lighter",
+   "medium",
+   "single origin",
+   "single origin coffee",
+   "top-rated"
+  ],
+  "title": "Single Origin Pack",
+  "url": "https://www.lacolombe.com/products/single-origin-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39761569742961"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "d90cdbe408401175",
+  "first_seen": "2026-10-26",
+  "handle": "ultimate-espresso-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/19_PDP_ULTESPRESSO_PACK_003.png?v=1761786333",
+  "platform": "shopify",
+  "product_id": "6772709261425",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "2420",
+   "Coffee",
+   "High Priority",
+   "beans",
+   "brew at home",
+   "bundle",
+   "coffee blends",
+   "coffee bundle",
+   "drip grind",
+   "ground coffee",
+   "medium",
+   "roasted",
+   "top-rated",
+   "whole bean",
+   "whole beans"
+  ],
+  "title": "Ultimate Espresso Pack",
+  "url": "https://www.lacolombe.com/products/ultimate-espresso-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39913308913777"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "b473a7f5e9a8e08d",
+  "first_seen": "2026-10-26",
+  "handle": "all-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_ALLDARK.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "6789593006193",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "5 lb",
+   "5lb",
+   "AllDark",
+   "Dark",
+   "High Priority",
+   "coffee",
+   "darker",
+   "darkestroast",
+   "darkroast",
+   "lacolombe",
+   "lacolombecoffee",
+   "top-rated",
+   "toprated"
+  ],
+  "title": "All Dark",
+  "url": "https://www.lacolombe.com/products/all-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39978360635505"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "a02d6db7b866d9c3",
+  "first_seen": "2026-10-26",
+  "handle": "waymaker",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_WAYMAKER.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "6860423692401",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Dark",
+   "High Priority",
+   "under-25"
+  ],
+  "title": "Waymaker",
+  "url": "https://www.lacolombe.com/products/waymaker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40191534694513"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "1c97e3f1bb532b2d",
+  "first_seen": "2026-10-26",
+  "handle": "fall-favorites-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/Untitleddesign_42.png?v=1789146901",
+  "platform": "shopify",
+  "product_id": "6884096999537",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Coffee",
+   "beans",
+   "brew at home",
+   "drip grind",
+   "ground coffee",
+   "isNew",
+   "roasted",
+   "seasonal",
+   "seasonals",
+   "top-rated",
+   "whole bean",
+   "whole beans"
+  ],
+  "title": "Fall Favorites Pack",
+  "url": "https://www.lacolombe.com/products/fall-favorites-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40253236641905"
+   }
+  ],
+  "vendor": "La Colombe Coffee Roasters"
+ },
+ {
+  "body_hash": "9df484b075655f65",
+  "first_seen": "2026-10-26",
+  "handle": "craft-crewneck",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/74_FULL_BODY_MERCH_SINGLE_031copy2.jpg?v=1762206201",
+  "platform": "shopify",
+  "product_id": "7347822985329",
+  "product_type": "T-shirts",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Medium Priority"
+  ],
+  "title": "Craft Crewneck",
+  "url": "https://www.lacolombe.com/products/craft-crewneck",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 82.0,
+    "title": "Small",
+    "variant_id": "41728073859185"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 82.0,
+    "title": "Medium",
+    "variant_id": "41728073891953"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 82.0,
+    "title": "Large",
+    "variant_id": "41728073924721"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 82.0,
+    "title": "X-Large",
+    "variant_id": "41728074612849"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 82.0,
+    "title": "2X-Large",
+    "variant_id": "41728360349809"
+   }
+  ],
+  "vendor": "La Colombe Coffee Roasters"
+ },
+ {
+  "body_hash": "f7fadbe0fc8250d6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-nossa-mesa",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDPAlt1_TAN_12OZ_BOX_BRAZIL-NOSSAMESA.png?v=1761942406",
+  "platform": "shopify",
+  "product_id": "7366813876337",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "High Priority",
+   "brazil",
+   "chocolatey",
+   "la colombe medium roast",
+   "medium",
+   "medium roast",
+   "medium roast coffee"
+  ],
+  "title": "Brazil Nossa Mesa",
+  "url": "https://www.lacolombe.com/products/brazil-nossa-mesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41864892317809"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41864892350577"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip",
+    "variant_id": "43017167011953"
+   }
+  ],
+  "vendor": "La Colombe Coffee Roasters"
+ },
+ {
+  "body_hash": "b628fb307eb9c5fd",
+  "first_seen": "2026-10-26",
+  "handle": "fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_TAN_12OZ_BOX_FALLBLEND_2.png?v=1789143192",
+  "platform": "shopify",
+  "product_id": "7828227883121",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Coffee",
+   "High Priority",
+   "Light",
+   "NewArrival",
+   "brew at home",
+   "drip grind",
+   "ground coffee",
+   "la colombe light roast",
+   "light roast",
+   "lighter",
+   "lighter roast coffee",
+   "roasted",
+   "whole bean",
+   "whole beans"
+  ],
+  "title": "Fall Blend",
+  "url": "https://www.lacolombe.com/products/fall-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44517561401457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Drip",
+    "variant_id": "44561194090609"
+   }
+  ],
+  "vendor": "La Colombe Coffee Workshop"
+ },
+ {
+  "body_hash": "51032b306bcd9d39",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_TAN_12OZ_BOX_MEXICO-SINGLEORG.png?v=1789147379",
+  "platform": "shopify",
+  "product_id": "7829116846193",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "High Priority",
+   "Light",
+   "MEXICO",
+   "NewArrival",
+   "beans",
+   "brew at home",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee gift",
+   "coffee lover",
+   "high-quality coffee blends",
+   "la colombe mexico coffee",
+   "light roast",
+   "lighter",
+   "lighter roast coffee",
+   "roasted",
+   "single-origin coffee",
+   "whole bean",
+   "whole beans"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://www.lacolombe.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44536055922801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Drip",
+    "variant_id": "44553039806577"
+   }
+  ],
+  "vendor": "La Colombe Coffee Roasters"
+ },
+ {
+  "body_hash": "e13995b077c2d255",
+  "first_seen": "2026-10-26",
+  "handle": "lyon",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/PDP_BLUE_12OZ_BOX_LYON_01_208f3516-d4ec-4151-a257-491f9cc38f2c.png?v=1770042785",
+  "platform": "shopify",
+  "product_id": "81388652",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "Espresso",
+   "High Priority",
+   "Light",
+   "Lyon",
+   "Stove Top",
+   "classic coffee beans",
+   "classic coffee blends",
+   "coffee",
+   "coffee at home",
+   "coffee beans",
+   "coffee blends",
+   "coffee gift",
+   "coffee grounds",
+   "coffee lover",
+   "flavor",
+   "gift",
+   "history",
+   "hot coffee",
+   "la colombe lyon",
+   "medium",
+   "medium roast coffee",
+   "quality coffee beans",
+   "roasted coffee",
+   "top-rated",
+   "traditional coffee beans",
+   "traditional coffee blends",
+   "under-25"
+  ],
+  "title": "Lyon",
+  "url": "https://www.lacolombe.com/products/lyon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6612985349"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ },
+ {
+  "body_hash": "450602c582a5a282",
+  "first_seen": "2026-10-26",
+  "handle": "perfect-pair-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0056/4562/files/19_PDP_CHOCLOVERSPACK_CUP_PACK_003_copy.png?v=1761786333",
+  "platform": "shopify",
+  "product_id": "8786773650",
+  "product_type": "Coffee",
+  "roaster_slug": "lacolombe",
+  "tags": [
+   "2420",
+   "Dark",
+   "High Priority",
+   "bundle",
+   "coffee bundle",
+   "darker",
+   "top-rated"
+  ],
+  "title": "Chocolate Lover's Pack",
+  "url": "https://www.lacolombe.com/products/perfect-pair-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29784191634"
+   }
+  ],
+  "vendor": "La Colombe Frogtown"
+ }
+]

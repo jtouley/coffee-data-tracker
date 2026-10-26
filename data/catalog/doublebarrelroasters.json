@@ -1,0 +1,255 @@
+[
+ {
+  "body_hash": "de6a52e6d4d4a002",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0a6cf125645c",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.doublebarrelroasters.com/product-page/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f18a7491812c4980",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-blend-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "235d737bdfbd",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Jamaican Blend",
+  "url": "https://www.doublebarrelroasters.com/product-page/jamaican-blend-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80666635bc1247de",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5383b4ea6fea",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.doublebarrelroasters.com/product-page/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "540f6c2e15e83375",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "558a220babe4",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Kona Blend",
+  "url": "https://www.doublebarrelroasters.com/product-page/kona-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78f1d74b70f449d7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6786b07fef72",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Kenya",
+  "url": "https://www.doublebarrelroasters.com/product-page/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e78390c49c17b733",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "75f7c9a0b954",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://www.doublebarrelroasters.com/product-page/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a0268fdd91c5a12e",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "793729080754",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Kona Coffee",
+  "url": "https://www.doublebarrelroasters.com/product-page/kona-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75f4e5df718a87f9",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-rfa",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7a01995f10ae",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Organic Peru",
+  "url": "https://www.doublebarrelroasters.com/product-page/organic-peru-rfa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa9a1373539472d8",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ad8aebf98d41",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.doublebarrelroasters.com/product-page/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98ba4fd78516ba01",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bd348395e260",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.doublebarrelroasters.com/product-page/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a1f9c23668d3fb4",
+  "first_seen": "2026-10-26",
+  "handle": "bichester-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f549893f818d",
+  "product_type": "",
+  "roaster_slug": "doublebarrelroasters",
+  "tags": [],
+  "title": "Bestchester Blend",
+  "url": "https://www.doublebarrelroasters.com/product-page/bichester-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

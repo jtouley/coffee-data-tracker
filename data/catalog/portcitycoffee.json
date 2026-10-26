@@ -1,0 +1,462 @@
+[
+ {
+  "body_hash": "4e699ae6c1bbe319",
+  "first_seen": "2026-10-26",
+  "handle": "port-city-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "03fcb5850df5",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Port City French Roast",
+  "url": "https://www.portcitycoffee.com/product-page/port-city-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4be76a05c8d90bf6",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "06a6ae49366a",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Morning Coffee Blend",
+  "url": "https://www.portcitycoffee.com/product-page/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "08f9b5858517",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Hazelnut Decaf Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/hazelnut-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "532b233f683ad6c2",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-segoiva-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0d8ecaed9ca3",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Nicaraguan Segoiva Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/nicaraguan-segoiva-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f77d29fac0f7610",
+  "first_seen": "2026-10-26",
+  "handle": "bed-breakfast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "172f20925ea1",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Bed & Breakfast Coffee Blend",
+  "url": "https://www.portcitycoffee.com/product-page/bed-breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f516d82f060e8cc",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon-certified-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "217537123517253",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Bali Blue Moon Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/bali-blue-moon-certified-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6d3600ca6b36d95",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "251c855793f5",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Colombian Decaf Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a3a54327f19d819b",
+  "first_seen": "2026-10-26",
+  "handle": "capone",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2b81419a3990",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Capone Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/capone",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d90403732e253837",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "404c240daf66",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Sumatran French Roast Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/sumatran-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69a06b1650428270",
+  "first_seen": "2026-10-26",
+  "handle": "peru-norandino-certified-organic-fair-trade-and-shade-grown",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4d8089f971cb",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Peru Norandino (Fair Trade and Shade Grown)",
+  "url": "https://www.portcitycoffee.com/product-page/peru-norandino-certified-organic-fair-trade-and-shade-grown",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b8e0387c84cf1019",
+  "first_seen": "2026-10-26",
+  "handle": "capone-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4f75f5aea0f9",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Capone Decaf Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/capone-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "559c178adfd8",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "French Vanilla Decaf",
+  "url": "https://www.portcitycoffee.com/product-page/french-vanilla-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "521dd7151f7cf159",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5732deb251bc",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Espresso Decaf",
+  "url": "https://www.portcitycoffee.com/product-page/espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b65828c00930bf2c",
+  "first_seen": "2026-10-26",
+  "handle": "indian-malabar-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "63ff36020063",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Indian Malabar French Roast Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/indian-malabar-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd43a6376949b2f8",
+  "first_seen": "2026-10-26",
+  "handle": "milky-way-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7bd048c1b0fa",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Milky Way Decaf",
+  "url": "https://www.portcitycoffee.com/product-page/milky-way-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a6303a49483c1564",
+  "first_seen": "2026-10-26",
+  "handle": "shipwreck-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "97ebdf2c47c5",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Shipwreck Coffee Blend",
+  "url": "https://www.portcitycoffee.com/product-page/shipwreck-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e094590cde46a53e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c00e3eac6776",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.portcitycoffee.com/product-page/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c14904e63d427f0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-mandheling-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d477c66cbc24",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Sumatran Mandheling Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/sumatran-mandheling-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e4ca4eeeffc6f4c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "dac931e9c715",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.portcitycoffee.com/product-page/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f61473bd91d4e6e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e79c50d23c95",
+  "product_type": "",
+  "roaster_slug": "portcitycoffee",
+  "tags": [],
+  "title": "Colombian Excelso Coffee",
+  "url": "https://www.portcitycoffee.com/product-page/colombian-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

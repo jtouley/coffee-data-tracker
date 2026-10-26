@@ -1,0 +1,408 @@
+[
+ {
+  "body_hash": "60baf03a20ba0849",
+  "first_seen": "2026-10-26",
+  "handle": "mums-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/5ca8de9177b9033a1a06cd6d/fb5f15f1-40aa-4e43-99ab-cd67e9e61474/BreakfastBlendFront_SizedforWeb.jpg",
+  "platform": "squarespace",
+  "product_id": "5d4cb29f396cb10001a5dcbe",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Mum’s Dark Roast",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/mums-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "3 Bags Ground",
+    "variant_id": "1a7ea240-5caf-47f0-b8f9-e70db7299ec1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "238e55c4-511a-43cf-b86a-293f96ba00b9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "24c1f80a-8119-42f5-82c1-51262abe08e3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "2 Bags Ground",
+    "variant_id": "26337ef3-1263-4a03-8f37-16555ee2634a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "504fd624-d36f-4b57-80ea-b4eaf0dc1720"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "1 Bag Ground",
+    "variant_id": "fffcaca9-fb26-49c9-8c74-26e41666c964"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20d1717c08bd4526",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://static1.squarespace.com/static/5ca8de9177b9033a1a06cd6d/5d4cb27504b15a0001d4cfd4/5d4cb4f5e4fa4d0001cd8892/1792165929109/",
+  "platform": "squarespace",
+  "product_id": "5d4cb4f5e4fa4d0001cd8892",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Ground",
+    "variant_id": "357fc2ce-19a6-42b0-b024-e511d84d3ea6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Ground",
+    "variant_id": "42907a71-d9aa-4945-92b5-7bdf94df275a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "af1da387-daec-4b3f-8fcb-e82e17ec5747"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "ceb5fe7a-1aa9-40bb-b155-ec9c6b39963e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Ground",
+    "variant_id": "dbbd6363-9a72-4f6d-9467-7107a00fbde6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "fe1a8afc-a1df-4bf0-8cd1-4a5080a925c5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2199599048f6dd6a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/5ca8de9177b9033a1a06cd6d/1722460995168-EFUJ7K0OQFT04FO2FSGQ/Sumatra_WebsiteOptimized.jpg",
+  "platform": "squarespace",
+  "product_id": "5d4cb5296f6b060001a3a0b1",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Sumatra (Organic)",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "25aa30dc-b2c3-4f62-b90c-e0f78d27137c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "3 Bags Ground",
+    "variant_id": "472d2e2e-6efb-4132-9bd5-fe6536b236f9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "8fba51a7-ccf2-4e3f-8d5c-7cb69cb6a8e5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "af0bbd52-8f62-4f14-a5ba-f70fe0406ff5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "1 Bag Ground",
+    "variant_id": "d285f791-05ce-42be-bdbf-df24742e1ace"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2 Bags Ground",
+    "variant_id": "fdc9cb4d-5d2e-4e29-9ddc-c56b52bbc7c5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4134144860b6472",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5ca8de9177b9033a1a06cd6d/eb7aa54c-273a-4eb4-aaea-17bf1163a39f/ColombianDecafNoMedallion.png",
+  "platform": "squarespace",
+  "product_id": "5d4cb5739d461000017e8b6c",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Colombian Decaf",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "4be842bd-2805-42f3-b7f8-072f12f029bd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "3 Bags Ground",
+    "variant_id": "512c004b-7eed-4d9e-9e6f-950eefe35149"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "6d074a5e-8002-4a0f-943c-b68c91557ca1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "90d5d306-e090-479b-b539-affd8ad9236a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "2 Bags Ground",
+    "variant_id": "b326ea44-f119-4cbb-8576-174eff5345f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "1 Bag Ground",
+    "variant_id": "d67d1304-edb2-4662-9047-3f16e95bdba9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "985b4839176ea096",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-spruce",
+  "image": "https://images.squarespace-cdn.com/content/v1/5ca8de9177b9033a1a06cd6d/13fa6003-85a6-4263-b755-88823fa10614/EspressoSpruceFront_WebsiteOptimized.jpg",
+  "platform": "squarespace",
+  "product_id": "5d4cb599e4fa4d0001cd92ee",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Espresso Spruce",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/espresso-spruce",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "1934525e-82ad-413d-bc7c-530c07936eca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "1 Bag Ground",
+    "variant_id": "23e3f061-a7a8-42fa-afe7-a435a50f80d5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "62142091-3974-439e-9135-2cb88bc914c4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "3 Bags Ground",
+    "variant_id": "9ba1e95f-2584-425b-987e-2cbcf24355bc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.0,
+    "title": "2 Bags Ground",
+    "variant_id": "b8eb79e4-b60d-4c6e-9092-80c7976a3ed8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "d92a0347-a06c-44d0-8493-b4777869bace"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "263c9c3beb62e3a1",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://static1.squarespace.com/static/5ca8de9177b9033a1a06cd6d/5d4cb27504b15a0001d4cfd4/67d1979dab754663f48a4048/1792165794305/",
+  "platform": "squarespace",
+  "product_id": "67d1979dab754663f48a4048",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Ground",
+    "variant_id": "163ab5f7-9b03-43c3-8af9-ca15f8853922"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Ground",
+    "variant_id": "3dd55617-ce75-4854-af68-c5b316552fd5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "889dfa21-0e6c-4dc8-80f8-394e50c03174"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "98251b8c-551e-4381-a24d-02bd1fe70af3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Ground",
+    "variant_id": "c49e0799-21b5-47cb-a084-088a8ad57320"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "e19d6682-ab85-4830-9a66-68f9594b91ed"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c72ed4bd25417653",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-df2c9",
+  "image": "https://images.squarespace-cdn.com/content/v1/5ca8de9177b9033a1a06cd6d/32b4a7b4-450a-4c64-ab81-40e18cf38736/PeruFront.png",
+  "platform": "squarespace",
+  "product_id": "6aa03794931b5c74fbc0ac52",
+  "product_type": "",
+  "roaster_slug": "yellowspruceroasters",
+  "tags": [],
+  "title": "Peru",
+  "url": "https://www.yellowspruceroasters.net/coffee-products/p/brazil-df2c9",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Ground",
+    "variant_id": "2da15334-07ce-41c0-96c9-ec41693a200d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Whole Bean",
+    "variant_id": "4fe57609-b2ce-425c-8782-f7d3fed9c5d4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Whole Bean",
+    "variant_id": "6dfbe788-ddfd-4bf5-b926-f9afc1a7393a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "1 Bag Ground",
+    "variant_id": "c31840f3-4ddf-45ac-a95a-9da9180583d2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "2 Bags Whole Bean",
+    "variant_id": "cb930099-5de5-4822-a9e4-36d740b9b323"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "3 Bags Ground",
+    "variant_id": "ef6125b7-fdfd-4b8d-8981-46d5d2764c75"
+   }
+  ],
+  "vendor": ""
+ }
+]

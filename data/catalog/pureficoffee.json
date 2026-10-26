@@ -1,0 +1,634 @@
+[
+ {
+  "body_hash": "e4258c5db2b8b873",
+  "first_seen": "2026-10-26",
+  "handle": "toro-de-oro",
+  "image": "https://pureficoffee.com/wp-content/uploads/Toro-de-Oro-Product-Photo.jpg",
+  "platform": "woocommerce",
+  "product_id": "139112",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Single Origin"
+  ],
+  "title": "Toro de Oro",
+  "url": "https://pureficoffee.com/product/toro-de-oro/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12oz",
+    "variant_id": "139112:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.25,
+    "title": "2lb",
+    "variant_id": "139112:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.25,
+    "title": "5lb",
+    "variant_id": "139112:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f0e32e8c3528924",
+  "first_seen": "2026-10-26",
+  "handle": "arise",
+  "image": "https://pureficoffee.com/wp-content/uploads/Arise_Blue-2.png",
+  "platform": "woocommerce",
+  "product_id": "50349",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Blend",
+   "Bright",
+   "Caramel",
+   "Coffee",
+   "Coffee &gt; Blend",
+   "Floral",
+   "Light Roast",
+   "Nutty"
+  ],
+  "title": "Arise",
+  "url": "https://pureficoffee.com/product/arise/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g)",
+    "variant_id": "50349:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs (907 g)",
+    "variant_id": "50349:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs (2268 g)",
+    "variant_id": "50349:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d601e7bd464550e",
+  "first_seen": "2026-10-26",
+  "handle": "agape",
+  "image": "https://pureficoffee.com/wp-content/uploads/Agape_Blue-2.png",
+  "platform": "woocommerce",
+  "product_id": "50382",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Balanced",
+   "Blend",
+   "Cocoa",
+   "Coffee",
+   "Coffee &gt; Blend",
+   "Dried Fruit",
+   "Juicy",
+   "Nutty",
+   "Sweet"
+  ],
+  "title": "Agape",
+  "url": "https://pureficoffee.com/product/agape/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g)",
+    "variant_id": "50382:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs (907 g)",
+    "variant_id": "50382:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lbs (2268 g)",
+    "variant_id": "50382:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "573994b181380c39",
+  "first_seen": "2026-10-26",
+  "handle": "shift",
+  "image": "https://pureficoffee.com/wp-content/uploads/Shift_Blue-2.png",
+  "platform": "woocommerce",
+  "product_id": "50398",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Baker's Chocolate",
+   "Blend",
+   "Coffee",
+   "Coffee &gt; Blend",
+   "Dark Roast",
+   "Dark Roast Blend",
+   "Deep Development",
+   "Nutty",
+   "Smoky",
+   "Toasted Walnuts"
+  ],
+  "title": "Shift",
+  "url": "https://pureficoffee.com/product/shift/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz (340 g)",
+    "variant_id": "50398:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "2 lbs (907 g)",
+    "variant_id": "50398:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "5 lbs (2268 g)",
+    "variant_id": "50398:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e25b6dc2d091ee29",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://pureficoffee.com/wp-content/uploads/Cold-Brew_Green.png",
+  "platform": "woocommerce",
+  "product_id": "50766",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Balanced",
+   "Blend",
+   "Chocolate",
+   "Coffee",
+   "Coffee &gt; Blend",
+   "Coffee &gt; Blend &gt; Cold Brew Blend",
+   "Cold Brew",
+   "Cold Brew Blend",
+   "Honey",
+   "Smooth"
+  ],
+  "title": "Cold Brew",
+  "url": "https://pureficoffee.com/product/cold-brew/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12 oz (340 g)",
+    "variant_id": "50766:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 18.25,
+    "title": "2 lb (907g)",
+    "variant_id": "50766:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5 lb (2268 g)",
+    "variant_id": "50766:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03c6d806c858b3de",
+  "first_seen": "2026-10-26",
+  "handle": "encounter",
+  "image": "https://pureficoffee.com/wp-content/uploads/Encounter_Blue-1.png",
+  "platform": "woocommerce",
+  "product_id": "59155",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Blend",
+   "Brown Sugar",
+   "Caramel",
+   "Coffee",
+   "Coffee &gt; Blend",
+   "Coffee &gt; Blend &gt; Espresso Blend",
+   "Espresso Blend",
+   "Milk Chocolate",
+   "dried fig"
+  ],
+  "title": "Encounter",
+  "url": "https://pureficoffee.com/product/encounter/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12 oz (340 g)",
+    "variant_id": "59155:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.25,
+    "title": "2 lbs (907 g)",
+    "variant_id": "59155:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5 lbs (2268 g)",
+    "variant_id": "59155:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12b4187fd3f0b85e",
+  "first_seen": "2026-10-26",
+  "handle": "la-casa-de-lico-el-salvador",
+  "image": "https://pureficoffee.com/wp-content/uploads/La-Casa-de-Lico-Product-Photo-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "66217",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Candied Walnut",
+   "Caramel",
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Milk Chocolate"
+  ],
+  "title": "La Casa de Lico El Salvador",
+  "url": "https://pureficoffee.com/product/la-casa-de-lico-el-salvador/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12 oz (340 g)",
+    "variant_id": "66217:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.25,
+    "title": "2 lbs (907 g)",
+    "variant_id": "66217:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5 lbs (2268 g)",
+    "variant_id": "66217:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20e2211e795f62d3",
+  "first_seen": "2026-10-26",
+  "handle": "tapachula-mountain-water-decaf",
+  "image": "https://pureficoffee.com/wp-content/uploads/Product-Photo-Tapachula-MWP-DECAF-Mexico-12oz-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "67862",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Decaf",
+   "Coffee &gt; Single Origin",
+   "Full Body",
+   "Soft Nuttiness",
+   "Sweet Chocolate",
+   "Toffee"
+  ],
+  "title": "Tapachula Mountain Water Decaf",
+  "url": "https://pureficoffee.com/product/tapachula-mountain-water-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g)",
+    "variant_id": "67862:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lb (907g)",
+    "variant_id": "67862:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb (2268 g)",
+    "variant_id": "67862:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbb58fe6b5f31f76",
+  "first_seen": "2026-10-26",
+  "handle": "los-gatos-geisha-honduras",
+  "image": "https://pureficoffee.com/wp-content/uploads/Los-Gatos-Lot-A-26-Product-Photo-copy-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "67914",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Juicy Plum",
+   "Simple Syrup",
+   "Soft Apricot",
+   "Vibrant"
+  ],
+  "title": "Los Gatos Geisha Honduras",
+  "url": "https://pureficoffee.com/product/los-gatos-geisha-honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12 oz (340 g)",
+    "variant_id": "67914:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.25,
+    "title": "2 lb (907g)",
+    "variant_id": "67914:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.25,
+    "title": "5 lb (2268 g)",
+    "variant_id": "67914:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74b09186e3352786",
+  "first_seen": "2026-10-26",
+  "handle": "guava-forest-colombia",
+  "image": "https://pureficoffee.com/wp-content/uploads/Product-Photo-Guava-Forest-12oz-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "68023",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Juicy Plum",
+   "Simple Syrup",
+   "Soft Apricot",
+   "Vibrant"
+  ],
+  "title": "Guava Forest Colombia",
+  "url": "https://pureficoffee.com/product/guava-forest-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "12 oz (340 g)",
+    "variant_id": "68023:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.75,
+    "title": "2 lb (907g)",
+    "variant_id": "68023:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.75,
+    "title": "5 lb (2268 g)",
+    "variant_id": "68023:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a32a749e18d2ed4",
+  "first_seen": "2026-10-26",
+  "handle": "sopacdi-bourbon-congo",
+  "image": "https://pureficoffee.com/wp-content/uploads/Sopacdi-Product-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "68509",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Bold",
+   "Citrus",
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Honduran Coffee",
+   "Milk Chocolate",
+   "San Marcos",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "Sopacdi Bourbon Congo",
+  "url": "https://pureficoffee.com/product/sopacdi-bourbon-congo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz (340 g)",
+    "variant_id": "68509:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 21.5,
+    "title": "2 lb (907g)",
+    "variant_id": "68509:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 21.5,
+    "title": "5 lb (2268 g)",
+    "variant_id": "68509:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3390444ff9915c1d",
+  "first_seen": "2026-10-26",
+  "handle": "santa-barbara-honduras",
+  "image": "https://pureficoffee.com/wp-content/uploads/Santa-Barbara-Product-3.jpg",
+  "platform": "woocommerce",
+  "product_id": "68523",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Buttery",
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Hibiscus",
+   "Mixed Berries",
+   "Passion Fruit",
+   "Sweet"
+  ],
+  "title": "Santa Barbara Honduras",
+  "url": "https://pureficoffee.com/product/santa-barbara-honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g)",
+    "variant_id": "68523:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lb (907g)",
+    "variant_id": "68523:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb (2268 g)",
+    "variant_id": "68523:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "820585afcd4214a9",
+  "first_seen": "2026-10-26",
+  "handle": "amka-red-bourbon-congo",
+  "image": "https://pureficoffee.com/wp-content/uploads/AMKA-Product-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "68537",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Lemon Custard",
+   "Milk Chocolate",
+   "Smooth Body",
+   "Watermelon"
+  ],
+  "title": "AMKA Red Bourbon Congo",
+  "url": "https://pureficoffee.com/product/amka-red-bourbon-congo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz (340 g)",
+    "variant_id": "68537:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 20.5,
+    "title": "2 lb (907g)",
+    "variant_id": "68537:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 20.5,
+    "title": "5 lb (2268 g)",
+    "variant_id": "68537:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "479ffade1bbb40e2",
+  "first_seen": "2026-10-26",
+  "handle": "donas-do-cafe-brazil",
+  "image": "https://pureficoffee.com/wp-content/uploads/Donas-do-Cafe-Product-Photo.jpg",
+  "platform": "woocommerce",
+  "product_id": "68842",
+  "product_type": "variable",
+  "roaster_slug": "pureficoffee",
+  "tags": [
+   "Coffee",
+   "Coffee &gt; Single Origin",
+   "Lemon Custard",
+   "Milk Chocolate",
+   "Smooth Body",
+   "Watermelon"
+  ],
+  "title": "Donas do Cafe Brazil",
+  "url": "https://pureficoffee.com/product/donas-do-cafe-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g)",
+    "variant_id": "68842:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lb (907g)",
+    "variant_id": "68842:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb (2268 g)",
+    "variant_id": "68842:2"
+   }
+  ],
+  "vendor": ""
+ }
+]
