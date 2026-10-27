@@ -6,7 +6,9 @@
 | registry.coffee shows GitHub's 404 | no deploy from `main` yet, or the custom domain isn't set in the repo's Pages settings | [first-run.md](first-run.md), [github-pages.md](github-pages.md) |
 | Pages: "DNS check unsuccessful" | A records wrong, or GitHub cached an old answer | check with `check-dns.sh`, wait 10 min, click "Check again" |
 | Pages: "Enforce HTTPS" greyed out | certificate not issued yet | wait up to an hour; if it stays greyed out, remove and re-add the custom domain |
-| HTTPS certificate fails to issue | the CAA record doesn't allow `letsencrypt.org` | fix the CAA record |
+| HTTPS certificate fails to issue | a CAA record is missing: Pages needs `letsencrypt.org`; Cloud Run needs `pki.goog` (and `letsencrypt.org`) | add both CAA records |
+| Cloud Run: "domain is not verified" | Search Console property missing, or verified by a different Google account | verify `registry.coffee` as a Domain property with the account (or service account) that deploys |
+| app.registry.coffee: certificate stuck "provisioning" | the `app` CNAME isn't resolving yet, or CAA blocks `pki.goog` | `runbook/check-dns.sh`, then wait; it can take up to a day |
 | Domain verification fails | challenge TXT host typed as the full name | the host must be `_github-pages-challenge-jtouley` only |
 | `weekly` fails at "Check lake config" | `LAKE_URL` not set | set the repository variable |
 | `weekly` fails uploading to the lake | `HF_TOKEN` missing, expired or without write access to the dataset | new fine-grained token, update the secret |

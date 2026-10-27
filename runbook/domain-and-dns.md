@@ -14,10 +14,12 @@ These are the records the site needs. Check them any time with `runbook/check-dn
 | A | `@` | `185.199.110.153` | GitHub Pages |
 | A | `@` | `185.199.111.153` | GitHub Pages |
 | CNAME | `www` | `jtouley.github.io.` | `www.registry.coffee` → Pages, which redirects it to the apex |
-| CAA | `@` | `0 issue "letsencrypt.org"` | only Let's Encrypt (which Pages uses) may issue certificates |
+| CAA | `@` | `0 issue "letsencrypt.org"` | Let's Encrypt may issue certificates (GitHub Pages uses it) |
+| CAA | `@` | `0 issue "pki.goog"` | Google Trust Services may issue certificates (Cloud Run's managed certificates can come from either) |
 | TXT | `@` | `v=spf1 -all` | the domain sends no email; receivers should reject mail claiming to be from it |
 | TXT | `_dmarc` | `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s` | same, enforced with DMARC |
-| CNAME | `app` | **TBD** (HF Space or container host) | the shot-logging app at `app.registry.coffee`; add it once the app's host is chosen |
+| CNAME | `app` | `ghs.googlehosted.com.` | the shot-logging app at `app.registry.coffee`, on Cloud Run (see below) |
+| TXT | `@` | `google-site-verification=…` (the code Search Console shows) | proves the domain to Google so Cloud Run can map it; keep it |
 | TXT | `_github-pages-challenge-jtouley` | the code GitHub shows (see [github-pages.md](github-pages.md)) | proves the domain is yours; keep it |
 
 TTL: Automatic (Namecheap shows 30 min for some; either is fine).
@@ -30,6 +32,30 @@ TTL: Automatic (Namecheap shows 30 min for some; either is fine).
 2. **Host records.** Open the **Advanced DNS** tab. Delete the parking records Namecheap adds to a new domain
    (a `CNAME www → parkingpage.namecheap.com` and a `URL Redirect @`), then **Add New Record** for each row above.
 3. Wait 5–30 minutes and run `runbook/check-dns.sh`.
+
+## app.registry.coffee on Cloud Run
+
+The app runs on Google Cloud Run in `us-central1`, with a Cloud Run **domain mapping** for `app.registry.coffee`.
+
+1. **Verify the domain with Google.** Cloud Run only maps domains that the deploying Google account has verified in
+   [Google Search Console](https://search.google.com/search-console). Add a *Domain* property for `registry.coffee`
+   (not a URL prefix), copy the `google-site-verification=…` value, and add it as a TXT record on host `@` in
+   Namecheap → Advanced DNS. It sits next to the SPF TXT record; both are fine on `@`. Click **Verify** in Search
+   Console. `gcloud domains list-user-verified` should then list it. If the Cloud Run deploy uses a service
+   account, add it as an owner of the property too.
+2. **Map the domain.** Cloud Run → the service → **Manage custom domains** → **Add mapping** → `app.registry.coffee`
+   (or `gcloud beta run domain-mappings create --service <service> --domain app.registry.coffee --region us-central1`).
+   Google answers with the record to add, which is a CNAME `app` → `ghs.googlehosted.com.`
+3. **Add the CNAME** in Namecheap: host `app` (just that), value `ghs.googlehosted.com.`
+4. **Wait for the certificate.** Google issues it automatically once the CNAME resolves, usually within 15 minutes,
+   though it can take up to a day. The CAA records must allow `pki.goog` as well as `letsencrypt.org`, or issuance
+   fails.
+
+Domain mappings are only available in some regions, and `us-central1` is one of them. Google still lists the feature
+as preview; if it's ever withdrawn, the fallback is a global external Application Load Balancer, which costs about
+$18 a month. Cloud Run itself bills per request and has a monthly free tier; set a budget alert in Billing.
+
+Mapping `app` doesn't touch the apex: registry.coffee and www stay on GitHub Pages.
 
 ## Gotchas
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Print the DNS records registry.coffee depends on, as Google (8.8.8.8) and Cloudflare (1.1.1.1) see them.
+# Print the DNS records registry.coffee and app.registry.coffee depend on, as Google (8.8.8.8) and Cloudflare (1.1.1.1) see them.
 # Uses DNS-over-HTTPS, so it only needs curl and python3. Usage: runbook/check-dns.sh [domain]
 set -euo pipefail
 domain="${1:-registry.coffee}"
@@ -23,6 +23,9 @@ check() {  # name, type, expected substring
 check "$domain" A 185.199.108.153
 check "www.$domain" CNAME jtouley.github.io
 check "$domain" CAA letsencrypt.org
+check "$domain" CAA pki.goog
+check "app.$domain" CNAME ghs.googlehosted.com
+check "$domain" TXT google-site-verification=
 check "$domain" TXT "v=spf1 -all"
 check "_dmarc.$domain" TXT "p=reject"
 check "_github-pages-challenge-jtouley.$domain" TXT ""

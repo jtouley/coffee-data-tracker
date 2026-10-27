@@ -4,7 +4,7 @@ Step-by-step operations for registry.coffee and the weekly pipeline, including t
 
 | Page | When you need it |
 |---|---|
-| [domain-and-dns.md](domain-and-dns.md) | Setting up or changing DNS for registry.coffee at Namecheap; renewing or moving the domain |
+| [domain-and-dns.md](domain-and-dns.md) | DNS for registry.coffee at Namecheap, app.registry.coffee on Cloud Run, renewing or moving the domain |
 | [github-pages.md](github-pages.md) | Connecting the domain to GitHub Pages, HTTPS, domain verification |
 | [first-run.md](first-run.md) | Secrets and variables, the first deploy, and re-running the weekly job |
 | [cost-and-security.md](cost-and-security.md) | What it costs to run, and how the workflows, site, secrets and domain are locked down |
