@@ -114,8 +114,8 @@ app.
 
 Every way of logging a shot writes it to the lake and matches it to a catalog coffee. The CLI, Claude (MCP) and the
 issue form also reply with advice for the next shot, aiming for about 1:2 in 25–32 s: a sour shot means grind finer
-and a bitter one coarser; with no taste given, a fast shot means finer and a slow one coarser. The advice assumes
-lower numbers are finer and doesn't yet read the direction set for the grinder in Setup.
+and a bitter one coarser; with no taste given, a fast shot means finer and a slow one coarser. Which way is finer
+comes from the Setup of the last shot's grinder, or lower numbers if none is set.
 
 **From the command line:**
 
@@ -211,7 +211,7 @@ you pass `--public`).
 |---|---|---|
 | `make weekly [SAMPLE=N]` | `coffeedata weekly` | The full weekly run (see [How it works](#how-it-works)) |
 | `make app` | `uvicorn app.main:app` | The shot-logging app; `HOST` and `PORT` default to `127.0.0.1` and `8000` |
-| `make init` | `coffeedata init` | Create the lake. For `hf://`, a private dataset, its card and schemas (for a public one, `uv run coffeedata init --public`) |
+| `make init` | `coffeedata init` | Create the lake. For `hf://`, a private dataset, its card and schemas (`make init PUBLIC=1` for a public one) |
 | `make discover` | `coffeedata discover overture`, `discover osm` | Record roasters from open datasets |
 | `make probe` | `coffeedata probe` | Detect the store platform for roasters not checked in 28 days |
 | `make ingest [SAMPLE=N]` | `coffeedata ingest` | Fetch catalogs for today's run, skipping roasters already fetched |
@@ -312,7 +312,7 @@ current state is computed:
 | `probes/…` | probe | store platform checks |
 | `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
 | `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
-| `shots/<id>__<time>.parquet` | app, CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
+| `shots/<id>__<time>-<random>.parquet` | app, CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
 | `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new files |
 | `bags/<id>__<time>.parquet` | app | a bag of coffee in use, matched to the catalog when it can be |
 | `marts/*.parquet` | build | derived, and replaced each run |
