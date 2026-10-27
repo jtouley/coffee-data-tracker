@@ -6,12 +6,14 @@
 A weekly catalog of the coffee that about 3,200 US specialty roasters sell online, plus a phone app for logging
 espresso shots that links each shot to a coffee in that catalog.
 
-<!-- Links: none of these is live yet. Each one stays commented out until its link works. -->
+**Write-ups on Medium:** [From Bean to Byte: Embarking on a Data-Driven Coffee Journey](https://medium.com/@jtouley/from-bean-to-byte-embarking-on-a-data-driven-coffee-journey-8a73e6b70c7f)
+· [Dialing In: The Technical Brew Behind My Coffee Data Journey](https://medium.com/@jtouley/dialing-in-the-technical-brew-behind-my-coffee-data-journey-b0d579bc5b1d)
+
+<!-- More links: each one stays commented out until it works. -->
 <!-- Uncomment once the Pages site is live: **Catalog site:** [jtouley.github.io/coffee-data-tracker](https://jtouley.github.io/coffee-data-tracker/) -->
 <!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
 <!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
 <!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
-<!-- Uncomment once the post is up: **Medium:** [<post title>](<Medium URL>) -->
 <!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 Every roaster runs its own web shop, so there's no single place to compare origins, processes and prices, or to see
