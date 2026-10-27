@@ -1,0 +1,1502 @@
+[
+ {
+  "id": 301,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 302,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 303,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 304,
+  "label": "unsure",
+  "reason": "empty, vague title"
+ },
+ {
+  "id": 305,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 306,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 307,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 308,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 309,
+  "label": "not_coffee",
+  "reason": "ready-to-drink beverage"
+ },
+ {
+  "id": 310,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 311,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 312,
+  "label": "not_coffee",
+  "reason": "candy"
+ },
+ {
+  "id": 313,
+  "label": "not_coffee",
+  "reason": "chai"
+ },
+ {
+  "id": 314,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 315,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 316,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 317,
+  "label": "not_coffee",
+  "reason": "other food"
+ },
+ {
+  "id": 318,
+  "label": "not_coffee",
+  "reason": "chocolate"
+ },
+ {
+  "id": 319,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 320,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 321,
+  "label": "not_coffee",
+  "reason": "placeholder listing"
+ },
+ {
+  "id": 322,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 323,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 324,
+  "label": "not_coffee",
+  "reason": "tea pods"
+ },
+ {
+  "id": 325,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 326,
+  "label": "not_coffee",
+  "reason": "subscription rotation"
+ },
+ {
+  "id": 327,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 328,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 329,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 330,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 331,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 332,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 333,
+  "label": "not_coffee",
+  "reason": "drink"
+ },
+ {
+  "id": 334,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 335,
+  "label": "not_coffee",
+  "reason": "filters"
+ },
+ {
+  "id": 336,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 337,
+  "label": "not_coffee",
+  "reason": "food box"
+ },
+ {
+  "id": 338,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 339,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 340,
+  "label": "not_coffee",
+  "reason": "filters"
+ },
+ {
+  "id": 341,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 342,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 343,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 344,
+  "label": "not_coffee",
+  "reason": "bundle"
+ },
+ {
+  "id": 345,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 346,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 347,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 348,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 349,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 350,
+  "label": "not_coffee",
+  "reason": "soda"
+ },
+ {
+  "id": 351,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 352,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 353,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 354,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 355,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 356,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 357,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 358,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 359,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 360,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 361,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 362,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 363,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 364,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 365,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 366,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 367,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 368,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 369,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 370,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 371,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 372,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 373,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 374,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 375,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 376,
+  "label": "unsure",
+  "reason": "empty; spice or flavor unclear"
+ },
+ {
+  "id": 377,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 378,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 379,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 380,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 381,
+  "label": "not_coffee",
+  "reason": "machine"
+ },
+ {
+  "id": 382,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 383,
+  "label": "not_coffee",
+  "reason": "machine"
+ },
+ {
+  "id": 384,
+  "label": "not_coffee",
+  "reason": "grinder"
+ },
+ {
+  "id": 385,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 386,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 387,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 388,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 389,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 390,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 391,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 392,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 393,
+  "label": "not_coffee",
+  "reason": "botanical"
+ },
+ {
+  "id": 394,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 395,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 396,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 397,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 398,
+  "label": "not_coffee",
+  "reason": "donation"
+ },
+ {
+  "id": 399,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 400,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 401,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 402,
+  "label": "not_coffee",
+  "reason": "gift card"
+ },
+ {
+  "id": 403,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 404,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 405,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 406,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 407,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 408,
+  "label": "not_coffee",
+  "reason": "blend box multi"
+ },
+ {
+  "id": 409,
+  "label": "not_coffee",
+  "reason": "herbs"
+ },
+ {
+  "id": 410,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 411,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 412,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 413,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 414,
+  "label": "not_coffee",
+  "reason": "cutlery"
+ },
+ {
+  "id": 415,
+  "label": "not_coffee",
+  "reason": "k-cups"
+ },
+ {
+  "id": 416,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 417,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 418,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 419,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 420,
+  "label": "not_coffee",
+  "reason": "book"
+ },
+ {
+  "id": 421,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 422,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 423,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 424,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 425,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 426,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 427,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 428,
+  "label": "not_coffee",
+  "reason": "book"
+ },
+ {
+  "id": 429,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 430,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 431,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 432,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 433,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 434,
+  "label": "not_coffee",
+  "reason": "cafe drink"
+ },
+ {
+  "id": 435,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 436,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 437,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 438,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 439,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 440,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 441,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 442,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 443,
+  "label": "not_coffee",
+  "reason": "cafe drink"
+ },
+ {
+  "id": 444,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 445,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 446,
+  "label": "not_coffee",
+  "reason": "single-serve cups"
+ },
+ {
+  "id": 447,
+  "label": "not_coffee",
+  "reason": "book"
+ },
+ {
+  "id": 448,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 449,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 450,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 451,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 452,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 453,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 454,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 455,
+  "label": "not_coffee",
+  "reason": "machine"
+ },
+ {
+  "id": 456,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 457,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 458,
+  "label": "not_coffee",
+  "reason": "pods"
+ },
+ {
+  "id": 459,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 460,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 461,
+  "label": "not_coffee",
+  "reason": "cafe drink"
+ },
+ {
+  "id": 462,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 463,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 464,
+  "label": "not_coffee",
+  "reason": "food"
+ },
+ {
+  "id": 465,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 466,
+  "label": "not_coffee",
+  "reason": "book"
+ },
+ {
+  "id": 467,
+  "label": "not_coffee",
+  "reason": "cups"
+ },
+ {
+  "id": 468,
+  "label": "not_coffee",
+  "reason": "book"
+ },
+ {
+  "id": 469,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 470,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 471,
+  "label": "not_coffee",
+  "reason": "meat"
+ },
+ {
+  "id": 472,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 473,
+  "label": "not_coffee",
+  "reason": "candy"
+ },
+ {
+  "id": 474,
+  "label": "not_coffee",
+  "reason": "tumbler"
+ },
+ {
+  "id": 475,
+  "label": "not_coffee",
+  "reason": "filters"
+ },
+ {
+  "id": 476,
+  "label": "not_coffee",
+  "reason": "filters"
+ },
+ {
+  "id": 477,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 478,
+  "label": "not_coffee",
+  "reason": "cafe drink"
+ },
+ {
+  "id": 479,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 480,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 481,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 482,
+  "label": "not_coffee",
+  "reason": "food"
+ },
+ {
+  "id": 483,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 484,
+  "label": "not_coffee",
+  "reason": "kettle"
+ },
+ {
+  "id": 485,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 486,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 487,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 488,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 489,
+  "label": "not_coffee",
+  "reason": "hot sauce"
+ },
+ {
+  "id": 490,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 491,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 492,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 493,
+  "label": "not_coffee",
+  "reason": "green coffee"
+ },
+ {
+  "id": 494,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 495,
+  "label": "not_coffee",
+  "reason": "parts"
+ },
+ {
+  "id": 496,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 497,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 498,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 499,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 500,
+  "label": "unsure",
+  "reason": "subscription type, no description"
+ },
+ {
+  "id": 501,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 502,
+  "label": "not_coffee",
+  "reason": "green unroasted"
+ },
+ {
+  "id": 503,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 504,
+  "label": "not_coffee",
+  "reason": "juice"
+ },
+ {
+  "id": 505,
+  "label": "not_coffee",
+  "reason": "capsule variety pack"
+ },
+ {
+  "id": 506,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 507,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 508,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 509,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 510,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 511,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 512,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 513,
+  "label": "not_coffee",
+  "reason": "food"
+ },
+ {
+  "id": 514,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 515,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 516,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 517,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 518,
+  "label": "not_coffee",
+  "reason": "spice"
+ },
+ {
+  "id": 519,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 520,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 521,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 522,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 523,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 524,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 525,
+  "label": "not_coffee",
+  "reason": "chocolate"
+ },
+ {
+  "id": 526,
+  "label": "not_coffee",
+  "reason": "equipment"
+ },
+ {
+  "id": 527,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 528,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 529,
+  "label": "not_coffee",
+  "reason": "kettle"
+ },
+ {
+  "id": 530,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 531,
+  "label": "not_coffee",
+  "reason": "brewer"
+ },
+ {
+  "id": 532,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 533,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 534,
+  "label": "not_coffee",
+  "reason": "concentrate"
+ },
+ {
+  "id": 535,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 536,
+  "label": "not_coffee",
+  "reason": "subscription only"
+ },
+ {
+  "id": 537,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 538,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 539,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 540,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 541,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 542,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 543,
+  "label": "not_coffee",
+  "reason": "brewer"
+ },
+ {
+  "id": 544,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 545,
+  "label": "not_coffee",
+  "reason": "gift set"
+ },
+ {
+  "id": 546,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 547,
+  "label": "not_coffee",
+  "reason": "brewer"
+ },
+ {
+  "id": 548,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 549,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 550,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 551,
+  "label": "not_coffee",
+  "reason": "botanical"
+ },
+ {
+  "id": 552,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 553,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 554,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 555,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 556,
+  "label": "not_coffee",
+  "reason": "brewer"
+ },
+ {
+  "id": 557,
+  "label": "not_coffee",
+  "reason": "food"
+ },
+ {
+  "id": 558,
+  "label": "not_coffee",
+  "reason": "drink"
+ },
+ {
+  "id": 559,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 560,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 561,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 562,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 563,
+  "label": "not_coffee",
+  "reason": "herbal tea"
+ },
+ {
+  "id": 564,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 565,
+  "label": "not_coffee",
+  "reason": "food"
+ },
+ {
+  "id": 566,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 567,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 568,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 569,
+  "label": "not_coffee",
+  "reason": "bundle"
+ },
+ {
+  "id": 570,
+  "label": "not_coffee",
+  "reason": "cafe drink"
+ },
+ {
+  "id": 571,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 572,
+  "label": "not_coffee",
+  "reason": "spice"
+ },
+ {
+  "id": 573,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 574,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 575,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 576,
+  "label": "not_coffee",
+  "reason": "grinder"
+ },
+ {
+  "id": 577,
+  "label": "not_coffee",
+  "reason": "water minerals"
+ },
+ {
+  "id": 578,
+  "label": "not_coffee",
+  "reason": "syrup"
+ },
+ {
+  "id": 579,
+  "label": "not_coffee",
+  "reason": "grinder"
+ },
+ {
+  "id": 580,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 581,
+  "label": "not_coffee",
+  "reason": "spice"
+ },
+ {
+  "id": 582,
+  "label": "not_coffee",
+  "reason": "subscription"
+ },
+ {
+  "id": 583,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 584,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 585,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 586,
+  "label": "not_coffee",
+  "reason": "meat"
+ },
+ {
+  "id": 587,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 588,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 589,
+  "label": "not_coffee",
+  "reason": "candy"
+ },
+ {
+  "id": 590,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 591,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 592,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 593,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 594,
+  "label": "not_coffee",
+  "reason": "merch"
+ },
+ {
+  "id": 595,
+  "label": "not_coffee",
+  "reason": "tea"
+ },
+ {
+  "id": 596,
+  "label": "not_coffee",
+  "reason": "nuts"
+ },
+ {
+  "id": 597,
+  "label": "not_coffee",
+  "reason": "brewer"
+ },
+ {
+  "id": 598,
+  "label": "coffee",
+  "reason": ""
+ },
+ {
+  "id": 599,
+  "label": "not_coffee",
+  "reason": "ready-to-drink"
+ },
+ {
+  "id": 600,
+  "label": "not_coffee",
+  "reason": "sampler"
+ }
+]
