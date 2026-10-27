@@ -24,6 +24,12 @@ jobs:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
+      # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
+      PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5

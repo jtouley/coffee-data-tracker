@@ -99,6 +99,21 @@ config/roasters.csv (seed) + lake registry ──probe──▶ platform ──i
 5. Create the `shot` and `roaster` issue labels.
 6. Actions → **weekly** → Run workflow. Try `sample: 50` first, then leave it to the Monday schedule.
 
+## Public release and marketplaces
+
+Four **facts-only** tables (`dbt/models/public/`) are built every week. They contain:
+- coffee names, origin and process attributes, sizes, prices and stock, with a link back to the roaster
+- the weekly change log
+- a market summary by origin and process
+- the roasters covered
+
+A dbt test fails the build if descriptions, images, store ids or shot-log data ever reach them. They also
+exclude opted-out roasters and roasters known only from OpenStreetMap (ODbL).
+
+Set `PUBLIC_EXPORT_URL` and the weekly run exports them to a public Hugging Face dataset, or to S3/GCS for
+Snowflake and Databricks. You can also run `coffeedata export-public --to …` by hand. The marketplace setup
+scripts, the draft listing copy and the open decisions are in [`marketplace/`](marketplace/README.md).
+
 ## Logging shots
 
 Two ways in. Both write a new shot file to the lake, match the coffee to the catalog, and reply with dial-in advice. The advice is rule-based (target about 1:2 in 25–32 s): sour or fast means grind finer, bitter or slow means coarser. To correct a shot, log it again with the same `shot_id`; to retract one, log it with `deleted: true`. The latest record wins.

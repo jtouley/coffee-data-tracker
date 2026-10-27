@@ -21,6 +21,11 @@ def test_cup_of_excellence_and_coffee_and_tea_stores():
     assert not is_coffee(item("Jasmine Green", product_type="Tea"))
 
 
+def test_confectionery_is_not_coffee():
+    assert not is_coffee(item("CHUCULAT Dark Chocolate Covered Maranon Gragee (50g)", product_type="Coffee"))
+    assert not is_coffee(item("Espresso Bean Brittle"))
+
+
 def test_obvious_non_coffees():
     assert not is_coffee(item("Logo Mug"))
     assert not is_coffee(item("Bring Me Coffee coaster"))

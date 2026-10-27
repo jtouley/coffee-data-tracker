@@ -41,6 +41,24 @@ models:
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
 
+  - name: public_coffee
+    description: Facts-only coffee table for public release. No descriptions, images or personal data.
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: source_url
+        data_tests: [not_null]
+  - name: public_roaster
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+  - name: public_price_event
+    columns:
+      - name: coffee_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('public_coffee'), field: coffee_id}
+
 seeds:
   - name: flavor_lexicon
     description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.

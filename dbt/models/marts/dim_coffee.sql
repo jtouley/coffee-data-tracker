@@ -4,9 +4,12 @@ with seen as (
     select coffee_id, min(run_date) as first_seen, max(run_date) as last_seen, count(*) as weeks_listed
     from {{ ref('stg_snapshots') }} where is_coffee group by coffee_id
 ),
+-- The latest record decides: a product the classifier no longer considers coffee drops out entirely.
 latest as (
-    select * from {{ ref('stg_snapshots') }} where is_coffee
-    qualify row_number() over (partition by coffee_id order by run_date desc) = 1
+    select * from (
+        select * from {{ ref('stg_snapshots') }}
+        qualify row_number() over (partition by coffee_id order by run_date desc) = 1
+    ) where is_coffee
 ),
 variants as (
     select coffee_id, v.* from latest, unnest(variants) as t(v)

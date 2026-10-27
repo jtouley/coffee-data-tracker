@@ -82,3 +82,34 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
     assert dbt_status == py_status
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
+
+
+def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
+    from datetime import UTC, datetime
+
+    from coffeedata import public
+
+    now = datetime(2026, 10, 1, tzinfo=UTC)
+    lake.write("registry", "registry/source=osm/x.parquet", [
+        {"added_at": now, "source": "osm", "roaster_id": "osmonly.coffee", "name": "OSM Only"}])
+    lake.write("registry", "registry/source=manual/y.parquet", [
+        {"added_at": now, "source": "manual", "roaster_id": "vividcoffee.com", "opted_out": True}])
+    for rid in ("onyxcoffeelab.com", "osmonly.coffee", "vividcoffee.com"):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A"), product("M", coffee=False)])
+    con = build(lake, tmp_path)
+
+    roasters = {r[0] for r in con.execute("select roaster_id from public_roaster").fetchall()}
+    assert "onyxcoffeelab.com" in roasters
+    assert "osmonly.coffee" not in roasters and "vividcoffee.com" not in roasters  # ODbL-only, opted out
+    assert {r[0] for r in con.execute("select distinct roaster_id from public_coffee").fetchall()} == {"onyxcoffeelab.com"}
+    cols = {r[0] for r in con.execute("select column_name from information_schema.columns "
+                                      "where table_name = 'public_coffee'").fetchall()}
+    assert "source_url" in cols and not cols & {"image", "handle", "product_id", "body_hash", "tags"}
+    con.close()
+
+    out = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "public"))
+    assert out["tables"]["public_coffee"] == 1
+    assert sorted(p.name for p in (tmp_path / "public").iterdir()) == [
+        "manifest.json", "public_coffee.parquet", "public_market_weekly.parquet", "public_price_event.parquet",
+        "public_roaster.parquet"]

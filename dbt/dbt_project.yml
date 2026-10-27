@@ -21,3 +21,6 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    public:
+      # Facts-only tables for public release (Hugging Face public dataset, Snowflake, Databricks).
+      +materialized: table

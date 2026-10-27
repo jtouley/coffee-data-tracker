@@ -124,6 +124,12 @@ def cmd_publish(args: argparse.Namespace) -> None:
           else "local lake; nothing to publish")
 
 
+def cmd_export_public(args: argparse.Namespace) -> None:
+    from . import public
+
+    _print(public.export(Path(args.db), args.to))
+
+
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
     run = args.run_date
@@ -146,6 +152,8 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_build(argparse.Namespace(db=args.db))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}"))
+    if os.environ.get("PUBLIC_EXPORT_URL"):  # facts-only tables for the public dataset / marketplaces
+        cmd_export_public(argparse.Namespace(db=args.db, to=os.environ["PUBLIC_EXPORT_URL"]))
     cmd_site(argparse.Namespace(db=args.db, out=args.out))
 
 
@@ -244,6 +252,10 @@ def main(argv: list[str] | None = None) -> None:
 
     pb = add("publish", cmd_publish, "upload staged lake files to the remote lake")
     pb.add_argument("--message", default=f"publish {_today()}")
+
+    ep = add("export-public", cmd_export_public, "export the facts-only public tables (dir, hf://, s3://, gs://)")
+    ep.add_argument("--db", default="build/coffee.duckdb")
+    ep.add_argument("--to", default=os.environ.get("PUBLIC_EXPORT_URL", "build/public"))
 
     w = add("weekly", cmd_weekly, "the full weekly run")
     w.add_argument("--run-date", default=_today())
