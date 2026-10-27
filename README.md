@@ -3,16 +3,31 @@
 [![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A weekly catalog of the coffee that about 3,200 US specialty roasters sell online, plus a personal espresso log
-that links each shot to a coffee in that catalog.
+A weekly catalog of the coffee that about 3,200 US specialty roasters sell online, plus a phone app for logging
+espresso shots that links each shot to a coffee in that catalog.
+
+<!-- Links: none of these is live yet. Each one stays commented out until its link works. -->
+<!-- Uncomment once the Pages site is live: **Catalog site:** [jtouley.github.io/coffee-data-tracker](https://jtouley.github.io/coffee-data-tracker/) -->
+<!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
+<!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
+<!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
+<!-- Uncomment once the post is up: **Medium:** [<post title>](<Medium URL>) -->
+<!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 Every roaster runs its own web shop, so there's no single place to compare origins, processes and prices, or to see
-when a coffee's price changes or it sells out. Shot notes in a notebook don't know which coffee they were about.
-This project reads each roaster's public storefront once a week, keeps every weekly snapshot, and turns them into
-tables you can query with SQL: what's listed now, what changed, and how your shots of a given coffee went. It runs
-on a GitHub Actions schedule, keeps its data in a Hugging Face dataset (or a local folder), and needs no server.
+when a coffee's price changes or it sells out. Shot notes in a notebook don't know which coffee, or which grinder,
+they were about. This project reads each roaster's public storefront once a week, keeps every weekly snapshot, and
+turns them into tables you can query with SQL: what's listed now, what changed, and how your shots of a given coffee
+went. It runs on a GitHub Actions schedule, keeps its data in a Hugging Face dataset (or a local folder), and the
+weekly run needs no server.
 
-**Status:** personal project, version 0.1.0, US roasters only.
+<p>
+  <img src="docs/app/screenshots/m1/today.png" alt="The app's Today screen: the coffee on the grinder, the last shot and where it landed against the 25–32 s, 1:2 window" width="240">
+  <img src="docs/app/screenshots/m1/log-shot.png" alt="The Log shot screen: dose, yield, a shot timer, grind, taste and rating, prefilled from the last shot" width="240">
+  <img src="docs/app/screenshots/m1/saved.png" alt="The Saved screen: the ratio, this bag's shots in order, and an Undo button" width="240">
+</p>
+
+**Status:** personal project, version 0.1.0, US roasters only. The app runs locally with a sign-in stub.
 
 - **Reads the stores directly.** Adapters for Shopify, WooCommerce, Squarespace and Square Online, with a fallback
   that reads schema.org product markup from a site's sitemap.
@@ -20,9 +35,10 @@ on a GitHub Actions schedule, keeps its data in a Hugging Face dataset (or a loc
   records.
 - **Structured attributes.** Origin, process, varietals, elevation, roast level and tasting notes come from tags and
   text rules. With an Anthropic API key, Claude Haiku fills in what the rules miss.
-- **A shot log that knows the coffee.** Log shots from the CLI, from Claude (over MCP) or from a GitHub issue. Each
-  one is matched to a catalog coffee, and you get grind advice for the next shot.
-- **A static site and facts-only public tables**, which a dbt test keeps free of descriptions, images and shot data.
+- **A shot log that knows the coffee and the grinder.** Log shots from the phone app, the CLI, Claude (over MCP) or
+  a GitHub issue. Each one is matched to a catalog coffee and can name the grinder it was ground on.
+- **A static site and facts-only public tables.** Your shots stay private: the site doesn't show them, and a dbt
+  test keeps descriptions, images and shot and equipment columns out of the public tables.
 
 ## Quick start
 
@@ -36,12 +52,13 @@ cd coffee-data-tracker
 make install                 # uv sync
 make weekly SAMPLE=50        # 50 roasters into ./lake, then the dbt build and the site
 open build/site/index.html   # on Linux: xdg-open build/site/index.html
+make app                     # the shot-logging app on http://127.0.0.1:8000
 ```
 
 Among the other progress output, `make weekly` prints a line like this:
 
 ```text
-built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_price_event to lake/marts
+built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_price_event, fct_shot to lake/marts
 ```
 
 You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.duckdb` (the dbt models),
@@ -52,6 +69,86 @@ You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.d
 > `SAMPLE` doesn't limit that step. Leave out `SAMPLE` to fetch every roaster; the GitHub workflow allows 4 hours.
 
 ## Usage
+
+### Log shots in the app
+
+`app/` is a small FastAPI app with server-rendered pages, made for a phone at the espresso machine. It reads and
+writes the same lake as everything else (`COFFEEDATA_LAKE`, `./lake` by default). `make install` already installs
+what it needs; the `app` extra (`uv sync --extra app`) adds FastAPI and uvicorn on an install without the dev tools.
+
+```bash
+make app                     # http://127.0.0.1:8000, reloads when the code changes
+HOST=0.0.0.0 make app        # reachable from a phone on the same network
+PORT=8080 make app
+```
+
+- **Setup** comes first: your grinder (its dial range and step, and whether lower numbers are finer) and your
+  basket (its nominal dose).
+- **New bag:** type the roaster and coffee as on the bag, plus the roast date. It's matched to the catalog when the
+  match is clear, which needs a built catalog (`make weekly` or `make build`).
+- **Log shot** starts from the last shot of the bag. Time, taste and rating start empty, with a "Same as last"
+  button and a shot timer.
+- **Saved** shows the ratio and where the shot landed against the 25–32 s, 1:2 window, next to the bag's earlier
+  shots, and says how it compares with the last one. For 5 seconds it offers **Undo**, which writes a retraction
+  record; nothing is deleted.
+- **Offline is fine.** Each save waits in the phone's IndexedDB until the server acknowledges it, and a retry never
+  creates a second shot.
+
+> [!WARNING]
+> There is no sign-in yet: every request is treated as the owner (`COFFEEDATA_OWNER`, default `owner`). With
+> `HOST=0.0.0.0`, anyone on your network can log shots. The stub refuses to start on a Hugging Face Space.
+
+The app loads the lake once at start. Shots logged from the CLI, Claude or an issue while it runs show up after a
+restart.
+
+### Log shots elsewhere
+
+Every channel writes the shot to the lake and matches it to a catalog coffee. The CLI, Claude and the issue form
+also reply with advice for the next shot. It aims for about 1:2 in 25–32 s: sour or fast means grind finer, bitter
+or slow means coarser.
+
+**From the command line:**
+
+```bash
+uv run coffeedata shot add --json '{"coffee": "Onyx Geometry", "in": 18, "out": 38, "time": 29, "grind": 15, "rating": 3, "taste": "sour"}'
+```
+
+```text
+Logged shot `<shot id>`.
+
+Last shot: 18 g → 38 g (1:2.1) in 29 s at grind 15. It tasted sour: go finer to 14 to slow the shot and extract more.
+```
+
+Once the catalog is built, the reply also names the matched coffee, or the closest candidates if the match isn't
+certain. Add `"grinder_name": "DF64 V2"` to tie the shot to a grinder from the app's Setup. The key `"grinder"`
+is an alias for `grind`, the grind setting.
+
+To correct a shot, run `shot add` again with its `shot_id` and every field (include `brewed_at`, or it becomes the
+current time); the latest record wins. Add `"deleted": true` to such a full record to retract it.
+
+**From Claude**, register the MCP server once (for a local lake, leave out both `-e` flags):
+
+```bash
+claude mcp add coffee-data -e COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data -e HF_TOKEN=<token> \
+  -- uv run --directory /path/to/coffee-data-tracker coffeedata mcp
+```
+
+Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 15 on the DF64 V2, a bit sour,
+3/5". The server has `log_shot` (with an optional `grinder_name`), `search_coffees`, `shot_history`,
+`suggest_next` and `run_sql` (one read-only `SELECT` against the models in `build/coffee.duckdb`).
+
+**From GitHub**, open an issue with the "Log a shot" form; its optional Grinder field takes a grinder name. The
+`issue-forms` workflow records the shot, replies with the match and advice, and closes the issue. It only acts on
+issues the repo owner opens.
+
+A grinder name is looked up among the grinders in the same lake, so run the app against the lake the workflow and
+the MCP server use. An unknown name fails with the list of known grinders.
+
+| | App | CLI | Claude (MCP) | Issue form |
+|---|---|---|---|---|
+| Advice for the next shot | no | yes | yes | yes |
+| Correct a shot | no | log the full record again with its `shot_id` | no | no |
+| Retract a shot | Undo, for 5 s after saving | the full record plus `"deleted": true` | no | no |
 
 ### Query the data
 
@@ -72,8 +169,8 @@ where origin_country = 'Ethiopia' and in_stock and not is_blend order by price_p
 select run_date, coffee_id, previous_price_usd, price_usd from fct_price_event
 where event = 'price' and run_date >= current_date - 30 order by run_date desc;
 
--- What worked last time, per coffee (needs logged shots)
-select label, best_grind, best_dose_g, best_yield_g, best_time_s, avg_rating, shots
+-- What worked last time, per coffee and grinder (needs logged shots)
+select label, grinder_name, best_grind, best_dose_g, best_yield_g, best_time_s, avg_rating, shots
 from mart_dial_in where grain = 'coffee' order by last_brewed_at desc;
 
 -- Washed vs natural ratings
@@ -89,52 +186,21 @@ where is_listed group by 1 order by 2 desc;
 | `dim_coffee` | coffee ever seen, with attributes, sizes, price per 100 g, `in_stock` and `is_listed` |
 | `dim_roaster` | roaster, with platform and status |
 | `fct_price_event` | change: `new`, `price`, `availability`, `removed` or `relisted` |
-| `fct_shot`, `mart_dial_in` | logged shot joined to its coffee; your best recipe per coffee and per origin and process |
+| `fct_shot` | current shot, with its bag, grinder (`grind_position` compares across grinders) and catalog coffee |
+| `dim_equipment` | grinder, machine or basket, retired ones included |
+| `mart_dial_in` | your best recipe per coffee and grinder, and per origin and process |
 | `mart_market`, `mart_new_arrivals` | market summary by origin and process; coffees new in each roaster's latest run |
 
-`dim_coffee`, `dim_roaster`, `mart_market` and `fct_price_event` are also exported to the lake's `marts/` each run.
-
-### Log a shot
-
-Each shot is written to the lake, matched to a catalog coffee, and answered with advice for the next one. The
-advice aims for about 1:2 in 25–32 s: sour or fast means grind finer, bitter or slow means coarser.
-
-**From the command line:**
-
-```bash
-uv run coffeedata shot add --json '{"coffee": "Onyx Geometry", "in": 18, "out": 38, "time": 29, "grind": 15, "rating": 3, "taste": "sour"}'
-```
-
-```text
-Logged shot `<shot id>`.
-
-Last shot: 18 g → 38 g (1:2.1) in 29 s at grind 15. It tasted sour: go finer to 14 to slow the shot and extract more.
-```
-
-Once the catalog is built, the reply also names the matched coffee, or the closest candidates if the match isn't
-certain. To correct a shot, log it again here with the `shot_id` from the reply; the latest record wins. Add
-`"deleted": true` to retract it. Corrections and retractions only work from the CLI: the MCP tool and the issue
-form always create a new shot.
-
-**From Claude**, register the MCP server once (for a local lake, leave out both `-e` flags):
-
-```bash
-claude mcp add coffee-data -e COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data -e HF_TOKEN=<token> \
-  -- uv run --directory /path/to/coffee-data-tracker coffeedata mcp
-```
-
-Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 15, a bit sour, 3/5". The server
-has `log_shot`, `search_coffees`, `shot_history`, `suggest_next` and `run_sql` (one read-only `SELECT` against the
-models in `build/coffee.duckdb`).
-
-**From your phone**, open an issue with the "Log a shot" form. The `issue-forms` workflow records the shot, replies
-with the match and advice, and closes the issue. It only acts on issues the repo owner opens.
+`dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event` and `fct_shot` are also exported to the lake's
+`marts/` each run. `fct_shot` holds your shots, so keep the lake private (`coffeedata init` makes it private unless
+you pass `--public`).
 
 ### Commands
 
 | `make` target | Runs | What it does |
 |---|---|---|
 | `make weekly [SAMPLE=N]` | `coffeedata weekly` | The full weekly run (see [How it works](#how-it-works)) |
+| `make app` | `uvicorn app.main:app` | The shot-logging app; `HOST` and `PORT` default to `127.0.0.1` and `8000` |
 | `make init` | `coffeedata init` | Create the lake. For `hf://`, the dataset (private unless `--public`), card and schemas |
 | `make discover` | `coffeedata discover overture`, `discover osm` | Record roasters from open datasets |
 | `make probe` | `coffeedata probe` | Detect the store platform for roasters not checked in 28 days |
@@ -157,7 +223,11 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_LAKE` | `lake` | Where the lake lives: a local folder, or `hf://datasets/<owner>/<name>` |
 | `HF_TOKEN` | none | Reading and writing a Hugging Face lake or public export |
 | `COFFEEDATA_STAGING` | `build/lake-staging` | Where new files wait before upload to a remote lake |
-| `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads |
+| `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file dbt builds and the MCP server reads |
+| `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for bag photos. Nothing writes photos yet |
+| `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
+| `COFFEEDATA_OWNER` | `owner` | The owner's display name in the app |
+| `HOST`, `PORT` | `127.0.0.1`, `8000` | Where `make app` listens |
 | `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
 | `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, `weekly` loads Snowflake too |
@@ -166,14 +236,16 @@ Everything is set through environment variables. Nothing is required for a local
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
 
 The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
-list. Roasters added later by discovery (including OpenStreetMap) or the issue form go into the lake, not this file.
+list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
+this file stays as it is.
 
 ## Run it on GitHub
 
 The `weekly` workflow runs every Monday, keeps the data in a Hugging Face dataset and deploys the site to Pages.
 
 1. Create a write token at huggingface.co → Settings → Access Tokens.
-2. Create the dataset once, from any machine. It's private unless you add `--public`.
+2. Create the dataset once, from any machine. It's private unless you add `--public`; keep it private, because
+   the run exports your shots to its `marts/fct_shot.parquet`.
    ```bash
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
@@ -185,16 +257,32 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
 6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
 
+No workflow deploys the app. To log into the same lake from it, start `make app` with `COFFEEDATA_LAKE` and
+`HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
+
 ## How it works
+
+### Key decisions
+
+- **An append-only lake, with history computed from it.** Price changes, delistings and roaster status are derived
+  from the weekly snapshots, so re-running a week or a failed fetch can't corrupt history (details below).
+- **Weekly runs.** Catalogs change slowly, and reading each store once a week keeps the load on small roaster
+  sites low.
+- **Facts-only public tables.** Descriptions and images belong to the roasters, so they stay in the lake; the
+  [public tables](#public-tables) have names, origins, prices and stock, with a link back to each roaster.
+- **No grind advice in the app yet.** Until a model trained on real shots does better than the rule of thumb, the
+  app only describes each shot. The CLI, Claude and the issue form still reply with rule-of-thumb advice.
+
+### The weekly run
 
 ```mermaid
 graph LR
     A[config/roasters.csv<br/>+ lake registry] -->|probe| B[platform per roaster]
     B -->|ingest| C[(lake: snapshots, fetches,<br/>bodies, enrichments)]
     C -->|enrich, optional| C
-    E[shots: CLI / MCP / issue form] --> C
+    E[app, CLI, MCP, issue form] -->|shots, bags, equipment| C
     C -->|dbt + DuckDB| D[dim_coffee, dim_roaster,<br/>fct_price_event, fct_shot, marts]
-    D --> F[static site]
+    D --> F[static site, no shots]
     D --> G[MCP server]
     D --> H[public tables]
 ```
@@ -224,8 +312,13 @@ The derived `marts/` exports are the one exception. Everything that describes th
 | `probes/…` | probe | storefront platform checks |
 | `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
 | `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
-| `shots/<id>__<time>.parquet` | CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
+| `shots/<id>__<time>.parquet` | app, CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
+| `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new files |
+| `bags/<id>__<time>.parquet` | app | a bag of coffee in use, matched to the catalog when it can be |
 | `marts/*.parquet` | build | derived, and replaced each run |
+
+Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
+`Image` layout, so a photo is never in the main lake. The schema is in place; nothing uploads photos yet.
 
 What that gives you:
 
@@ -234,6 +327,9 @@ What that gives you:
 - **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price
   events compare consecutive *successful* fetches.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
+- **Old shots keep their gear.** Each grinder or basket added in Setup is a new record, so a shot keeps the
+  equipment it was pulled with. A grind setting only compares within one grinder; `grind_position` (0 to 1 along
+  the dial) is a rough comparison across grinders.
 - **Past weeks can be re-processed.** Raw records keep non-coffee products and description text, so a better
   classifier or extractor can run over old weeks without fetching again.
 - **Roaster status comes from history:** `active`, `no_coffee`, `no_catalog`, `pending`, `unreachable` or
@@ -253,8 +349,9 @@ in `lake.py`, which is where another object store would plug in.
 Four facts-only tables (`dbt/models/public/`): `public_coffee` (attributes, sizes, prices, stock and a link back to
 the roaster), `public_price_event`, `public_market_weekly` and `public_roaster`. They leave out opted-out roasters
 and roasters known only from OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole
-table. The `public_tables_are_facts_only` dbt test fails the build if descriptions, images, store IDs or shot
-columns appear. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+table. The `public_tables_are_facts_only` dbt test fails the build if descriptions, images, store IDs, or shot,
+bag, equipment, user or photo columns appear. Snowflake and Databricks setup and the listing text are in
+[`marketplace/`](marketplace/README.md).
 
 ### Scraping etiquette
 
@@ -269,7 +366,9 @@ columns appear. Snowflake and Databricks setup and the listing text are in [`mar
 
 ## Limitations
 
-- **US only, one person.** Discovery filters to US places, and the issue forms only act on the repo owner's issues.
+- **US only, one person.** Discovery filters to US places, the issue forms only act on the repo owner's issues,
+  and the app has no sign-in yet, so it's for local use only.
+- **The app is a first version.** It has no photo upload and no way to edit a shot or a bag; bags are typed by hand.
 - **No hosted dataset.** You create and run your own lake; this repo doesn't link to a published copy.
 - **Coverage depends on the stores.** Sites that block bots or publish no machine-readable catalog show up as
   `unreachable`, `no_catalog` or `no_coffee` in `dim_roaster`.
@@ -281,24 +380,26 @@ columns appear. Snowflake and Databricks setup and the listing text are in [`mar
 
 ```bash
 make hooks   # once: install the pre-commit hooks
-make test    # make lint, then pytest: unit tests and dbt builds over synthetic multi-week lakes
-make fmt     # ruff fix and format
+make test    # make lint, then pytest: unit tests, app tests and dbt builds over synthetic multi-week lakes
+make fmt     # ruff fix and format over src, app and tests
 make clean   # remove build/ and dbt artifacts
 ```
 
-The tests run offline, with recorded storefront responses (`tests/fixtures/`), mocked HTTP (`respx`) and
-synthetic lakes. `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and
-private-key checks, `uv.lock` in step with `pyproject.toml`, ruff and mypy); the first run downloads the hook
-repos, so it needs network once. CI (`.github/workflows/ci.yml`) runs `uv sync --locked` and `make test` on every
-pull request and push to `main`. Report bugs and questions on the [issue tracker](../../issues).
+The tests run offline, with recorded storefront responses (`tests/fixtures/`), mocked HTTP (`respx`), synthetic
+lakes and FastAPI's test client. One browser test (`tests/test_app_browser.py`) drives Log shot → Saved → Undo at
+phone width; it needs Node with Playwright and is skipped without it. `make lint` runs the pre-commit hooks on every
+file (whitespace, YAML/TOML, large-file and private-key checks, `uv.lock` in step with `pyproject.toml`, ruff and
+mypy over `src` and `app`); the first run downloads the hook repos, so it needs network once. CI
+(`.github/workflows/ci.yml`) runs `uv sync --locked` and `make test` on every pull request and push to `main`.
+Report bugs and questions on the [issue tracker](../../issues).
 
 ## History
 
 This started in March 2024 as a way to log espresso shots from a Squarespace form into GCP, with a Cloud Function,
 BigQuery and Terraform, alongside a separate repo of per-site Selenium and GPT-3.5 scrapers. The rewrite kept the
 goal and the shot fields and replaced the rest: storefront JSON feeds instead of browser scraping, an open dataset
-of roasters instead of a hand-typed list, a Parquet lake with dbt and DuckDB instead of the cloud stack, and MCP and
-issue forms instead of the web form. The GCP version is commit
+of roasters instead of a hand-typed list, a Parquet lake with dbt and DuckDB instead of the cloud stack, and a phone
+app, MCP and issue forms instead of the web form. The GCP version is commit
 [`92f74da`](../../tree/92f74da332184533e4c10e3dab83c9fb44e0d796).
 
 ## License
