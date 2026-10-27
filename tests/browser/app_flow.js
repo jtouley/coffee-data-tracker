@@ -213,6 +213,53 @@ async function newPage(browser, errors) {
     await page.waitForURL(/\/log\/gear/);
     await shoot(page, "pick-gear");
 
+    // Offline: kept pages still open, a shot and a bag photo wait in the outbox, and both sync on reconnect.
+    const outbox = () => page.evaluate(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
+      };
+    }));
+    await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
+    await page.evaluate(() => navigator.serviceWorker.ready);
+    await page.context().setOffline(true);
+    await page.goto(`${base}/history`);
+    assert.match(await page.textContent("main"), /History/);
+    const offlineShot = async () => {
+      await page.goto(`${base}/log`);
+      await page.getByRole("button", { name: "Type" }).click();
+      await page.fill("#time_s", "30");
+      await page.locator('[data-rating] [data-v="4"]').click();
+      await page.getByRole("button", { name: "Save shot" }).click();
+      await page.waitForSelector("[data-offline-saved]:not([hidden])");
+    };
+    // Undo takes a shot that hasn't left the phone out of the outbox.
+    await offlineShot();
+    await page.getByRole("button", { name: "Undo" }).click();
+    await page.waitForURL(`${base}/`);
+    assert.equal(await outbox(), 0);
+    await offlineShot();
+    assert.equal(await page.isVisible("#shot"), false);
+    assert.match(await page.textContent("[data-offline-saved] [data-sync]"), /1 waiting to sync/);
+    assert.match(await page.textContent("[data-offline-saved]"), /Grind [\d.]+ · DF64 V2/);
+    await shoot(page, "offline-saved");
+    await page.goto(`${base}/bag/new`);
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="queued"]:not([hidden])');
+    assert.match(await page.textContent("main"), /Photo saved on this phone/);
+    await shoot(page, "bag-offline");
+    await page.getByRole("button", { name: "Type the coffee" }).last().click();
+    assert.equal(await page.isVisible("[data-photo-waiting]"), true);
+    await page.fill("#coffee", "the washed one");
+    await page.getByRole("button", { name: "Use this coffee" }).last().click();
+    await page.waitForFunction(() => /Saved on this phone/.test(document.querySelector("#bag [data-hint]").textContent));
+    assert.equal(await outbox(), 3);
+    await page.context().setOffline(false);
+    await page.waitForFunction(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
+      };
+    }), null, { timeout: 15000, polling: 250 });
+
     // The owner invites someone; they join from the link on another phone.
     await page.goto(`${base}/invite`);
     await page.getByRole("button", { name: "Make an invite link" }).click();
@@ -235,11 +282,14 @@ async function newPage(browser, errors) {
     await guest.waitForFunction(() => /Valid until/.test(document.querySelector("[data-code-status]").textContent));
     assert.equal(new URL(guest.url()).hash, ""); // the code left the address bar
     await shoot(guest, "join");
+    // Another person signing in on a phone drops the pages kept for whoever used it before (#20).
+    await guest.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("someone else's"))));
     await guest.fill("#username", "maya");
     await guest.fill("#password", "lantern quarry velvet");
     await guest.getByRole("button", { name: "Create account" }).click();
     await guest.waitForURL(`${base}/`);
     assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);
+    assert.equal(await guest.evaluate(() => caches.has("pages").then(async (has) => has && (await (await caches.open("pages")).match("/history")) ? (await (await caches.open("pages")).match("/history")).text() : null)), null);
     await guest.goto(`${base}/reset`);
     await shoot(guest, "reset");
     await other.close();
@@ -268,6 +318,15 @@ async function newPage(browser, errors) {
     });
     assert.deepEqual(held, ["Held", 1]);
     await page.unroute("**/api/equipment");
+    // A write the server refuses (4xx) is remembered, so the offline saved view says so instead of "Synced" (#20-5).
+    await page.route("**/api/shots", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"Dose is too low."}' }));
+    const no = await page.evaluate(async () => {
+      await send("shot:probe", "/api/shots", {}).catch(() => {});
+      await store("readwrite", (s) => s.delete("shot:probe")); // kept as "couldn't save"; not part of what follows
+      return refused.get("shot:probe");
+    });
+    assert.equal(no, "Dose is too low.");
+    await page.unroute("**/api/shots");
 
     // The outbox only lets go of a write the server acknowledged (#13): every status, what's left of the entry.
     const table = {};

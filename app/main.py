@@ -769,6 +769,9 @@ def create_app(
     reads_today: dict[
         tuple[str, str], int
     ] = {}  # (user, date) -> label reads; in memory, so a restart resets it
+    # photo_id -> (user, matched coffee_id, score, raw read, roast date): in memory, for the offline hand-off
+    photo_reads: dict[str, tuple[str, str | None, int | None, str | None, str | None]] = {}
+    last_reply: dict[str, tuple[str, dict]] = {}  # photo_id -> (owner, reply): a resend isn't read twice
 
     def describe(coffee_id: str | None) -> dict | None:
         c = store.coffee(coffee_id)
@@ -804,16 +807,26 @@ def create_app(
             photo = await run_in_threadpool(photos.normalize, await request.body())
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
+        if photo_id in last_reply:  # a resend from the outbox: the same reply, without a second read
+            owner, reply = last_reply[photo_id]
+            if owner != me.user_id:
+                raise HTTPException(409, "That photo id is taken.")
+            return reply
         key = (me.user_id, datetime.now(UTC).date().isoformat())
         if reads_today.get(key, 0) >= READS_PER_DAY:
             # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
             return {"photo_id": None, "status": "limit", "label": None, "raw": None}
         reads_today[key] = reads_today.get(key, 0) + 1
         # The dataset commit (which can retry for a while) and the label read run side by side.
-        _, result = await asyncio.gather(
+        saved, result = await asyncio.gather(
             run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
             run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
         )
+        if (
+            saved is False
+            and (await run_in_threadpool(photos.load, photo_lake, photo_id) or ("",))[0] != me.user_id
+        ):
+            raise HTTPException(409, "That photo id is taken.")  # someone else's, from before a restart
         photo_misses.pop(photo_id, None)
         out: dict[str, Any] = {
             "photo_id": photo_id,
@@ -823,7 +836,26 @@ def create_app(
         }
         if result.status == "read" and result.label:
             out |= await run_in_threadpool(matched, result)
+            # Kept so a bag that cites this photo can use the read, whichever of the two reaches the server first
+            # (offline, the photo and the bag wait in the outbox together).
+            coffee_id = (out["match"] or {}).get("coffee_id")
+            photo_reads[photo_id] = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
+            await run_in_threadpool(apply_read, me.user_id, photo_id)
+        last_reply[photo_id] = (me.user_id, out)
         return out
+
+    def apply_read(user_id: str, photo_id: str) -> None:
+        """A bag saved before its photo was read (typed while offline) takes the read's match, if there was one
+        and the typed text matched nothing."""
+        hit = photo_reads.get(photo_id)
+        if not hit or hit[0] != user_id or not hit[1]:
+            return
+        for bag in store.bags_of(user_id):
+            if bag.photo_id == photo_id and not bag.coffee_id:
+                update = {"coffee_id": hit[1], "match_score": hit[2], "read_json": bag.read_json or hit[3]}
+                if not bag.roast_date and hit[4]:
+                    update["roast_date"] = hit[4]
+                store.save_bag(user_id, bag.model_dump(exclude={"user_id"}) | update)
 
     def matched(result: labels.Read) -> dict[str, Any]:
         """The catalog match for a read label, described for the screen."""
@@ -840,7 +872,13 @@ def create_app(
 
     @app.post("/api/bags")
     def post_bag(body: dict, me: Writer) -> dict:
+        # Only a bag typed before its photo was read (offline) takes the photo's match. A bag typed after seeing the
+        # read chose not to use it, and keeps what was typed (#20-1).
+        pending = bool(body.pop("read_pending", False))
         bag, matches = run(store.save_bag, me.user_id, body)
+        if pending and bag.photo_id and not bag.coffee_id:
+            apply_read(me.user_id, bag.photo_id)  # the photo got here first and was read
+            bag = store.bag(me.user_id, bag.bag_id) or bag
         return {"bag_id": bag.bag_id, "coffee_id": bag.coffee_id, "matches": matches}
 
     return app

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}Offline · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top"></div>
-  <h1 class="serif title mt24">No connection</h1>
-  <p class="body measure">This page needs the network. Shots you already saved wait on this phone and sync when
-    you’re back online.</p>
+  <div class="top"><a class="back" href="/">‹ Today</a><span class="synced" data-sync data-quiet></span></div>
+  <h1 class="serif title mt8">No connection</h1>
+  <p class="body measure">This page isn’t kept on the phone, so it needs the network. Today, Log shot, New bag,
+    Coffees and History open without one, and shots saved there sync when you’re back online.</p>
   <div class="spacer"></div>
-  <div class="dock"><a class="btn primary" href="/">Try again</a></div>
+  <div class="dock"><button class="btn primary" type="button" data-reload>Try again</button></div>
 {% endblock %}

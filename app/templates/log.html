@@ -2,6 +2,7 @@
 {% block title %}Log shot · registry.coffee{% endblock %}
 {% block main %}
   {% set gr, bk, last = p.grinder, p.basket, p.last %}
+  <div data-online-only>
   <div class="top">{% if fixing %}<a class="back" href="/shot/{{ fixing.shot_id }}">‹ Shot</a>{% else %}<a class="back" href="/">‹ Today</a>{% endif %}{% if fixing %}<span class="meta">{{ gr.name }} · {{ bk.name }}</span>{% else %}<a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}{% if p.machine %}&amp;machine={{ p.machine.equipment_id }}{% endif %}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a>{% endif %}</div>
   <div class="row base mt8">
     <h1 class="serif name">{{ name }}</h1>
@@ -9,6 +10,23 @@
   </div>
   {% if fixing %}<div class="meta mt4">Correcting the {{ fixing_when }} shot. The original stays in history.</div>
   {% else %}<div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>{% endif %}
+  </div>
+  <section class="fill" data-offline-saved data-name="{{ name }}" data-grinder="{{ gr.name }}" hidden>
+    <div class="top"><h1 class="meta" tabindex="-1" data-o="title">Saved on this phone · {{ name }}</h1><span class="synced" data-sync>1 waiting to sync</span></div>
+    <div class="label mt16">Ratio</div>
+    <div class="num n112 mt4" data-o="ratio"></div>
+    <div class="row end mt16">
+      <span class="num n34"><span data-o="dose"></span><span class="u"> g</span></span><span class="num n34"><span data-o="time"></span><span class="u"> s</span></span>
+    </div>
+    <div class="row mt8"><span class="meta" data-o="grind"></span><span data-o="taste"></span></div>
+    <div class="section">Compared with the last shot</div>
+    <p class="body" data-o="summary">Shows once the shot syncs.</p>
+    <div class="spacer"></div>
+    <div class="dock">
+      <div class="undo" data-unqueue><span>Saved on this phone</span><button type="button">Undo<i></i></button></div>
+      <a class="btn primary" href="/">Done</a>
+    </div>
+  </section>
   <form id="shot" novalidate>
     <div class="field">
       <div><label class="l label" for="dose_g">Dose</label><span class="num n56"><input id="dose_g" inputmode="decimal" data-step="0.1" data-min="5" data-max="30" data-digits="1"><span class="u"> g</span></span></div>

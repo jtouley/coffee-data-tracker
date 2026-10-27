@@ -44,11 +44,23 @@ function retryAfter(r) {
   return Number.isFinite(s) ? s * 1000 : Math.max(0, Date.parse(h) - Date.now()) || null;
 }
 
-async function deliver(entry) {
+const sending = new Map(); // key -> the delivery in flight, so Undo can wait for it instead of racing it
+const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
+
+function deliver(entry) {
+  // One delivery per entry at a time: a direct send and a flush on reconnect can reach the same entry together.
+  if (sending.has(entry.key)) return sending.get(entry.key);
+  const p = deliverOnce(entry).finally(() => sending.delete(entry.key));
+  sending.set(entry.key, p);
+  return p;
+}
+
+async function deliverOnce(entry) {
+  // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
   const r = await fetch(entry.url, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
-    body: JSON.stringify(entry.body),
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
+    body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
     await store("readwrite", (s) => s.delete(entry.key));
@@ -64,11 +76,12 @@ async function deliver(entry) {
   }
   // Refused for good: kept, marked, and shown, never silently dropped.
   await store("readwrite", (s) => s.put({ ...entry, failed: reason || `Error ${r.status}` }));
+  refused.set(entry.key, reason);
   throw new Rejected(reason);
 }
 
-async function send(key, url, body) {
-  const entry = { key, url, body, at: Date.now(), user: ME };
+async function send(key, url, body, blob = null) {
+  const entry = { key, url, body, blob, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -88,7 +101,15 @@ function later(wait) {
   setTimeout(() => { if (Date.now() >= retryAt) flush(); }, delay);
 }
 
-async function flush() {
+
+let flushing = null;
+function flush() {
+  // One pass at a time: "online" and a page load can both start one, and two would send each entry twice.
+  flushing ??= flushOnce().finally(() => { flushing = null; });
+  return flushing;
+}
+
+async function flushOnce() {
   if (!ME) return;
   // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot. A retry
   // stops the queue, so nothing passes an earlier write that hasn't landed.
@@ -107,16 +128,21 @@ async function flush() {
   showSync();
 }
 
+const SYNCED = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>Synced';
+
 async function showSync() {
   const all = await mine();
   const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
+    else if ("quiet" in el.dataset) el.textContent = ""; // where nothing was waiting, nothing to say
+    else el.innerHTML = SYNCED;
   }
+  if (!n) document.dispatchEvent(new Event("synced"));
   showFailed(all.filter((e) => e.failed));
 }
 
-const KIND = { shot: "A shot", retract: "Undoing a shot", bag: "A bag", equipment: "Equipment" };
+const KIND = { shot: "A shot", retract: "Undoing a shot", restore: "Bringing a shot back", bag: "A bag", photo: "A bag photo", equipment: "Equipment" };
 
 function showFailed(failed) {
   const box = document.querySelector("[data-failed]");
@@ -348,10 +374,46 @@ function logShot(form) {
       setTimeout(() => tick(8), 60);
       location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, why(err));
-      save.disabled = false;
+      if (err instanceof Rejected) {
+        hint(form, err.message);
+        save.disabled = false;
+        return;
+      }
+      offlineSaved(body); // it's in the outbox: say so, and don't leave the form armed for a second save
     }
   });
+
+  // Saved with no connection: what was saved, described from the form alone (no server logic copied here).
+  function offlineSaved(b) {
+    const view = document.querySelector("[data-offline-saved]");
+    const o = (k) => view.querySelector(`[data-o="${k}"]`);
+    const now = new Date();
+    o("title").textContent = `Saved ${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")} on this phone · ${view.dataset.name}`;
+    o("ratio").textContent = `1:${(b.yield_g / b.dose_g).toFixed(2)}`;
+    o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
+    o("time").textContent = `${b.time_s ?? "–"}`;
+    o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder}`;
+    // The same tag as Saved; with no taste, just the rating.
+    const tag = o("taste");
+    tag.className = b.taste ? `taste ${b.taste}` : "meta";
+    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)} · ${b.rating}` : `Rated ${b.rating}`;
+    form.hidden = true;
+    for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
+    view.hidden = false;
+    view.querySelector("h1").focus({ preventScroll: true });
+    scrollTo(0, 0);
+    // Once it syncs, the comparison is a tap away; if the server refused it, say why instead (#20-5).
+    document.addEventListener("synced", () => {
+      const no = refused.get(`shot:${b.shot_id}`);
+      if (no) return void (o("summary").textContent = `The server didn’t take this shot: ${no}`);
+      const link = Object.assign(document.createElement("a"), { className: "ext", href: p.correct ? `/shot/${b.shot_id}` : `/saved/${b.shot_id}`, textContent: "Synced. See how it compares ›" });
+      o("summary").replaceChildren(link);
+    }, { once: true });
+    // A correction has no Undo, offline as online: undoing it once it synced would retract the shot (#20-4).
+    const strip = view.querySelector("[data-unqueue]");
+    if (p.correct) strip.hidden = true;
+    else unqueue(strip, b.shot_id);
+  }
 
   // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
   const milk = form.querySelector("[data-milk]");
@@ -409,6 +471,26 @@ function undo(strip) {
   });
 }
 
+// Undo for a shot that may still be on the phone: take it out of the outbox; if it already went up, retract it.
+function unqueue(strip, id) {
+  let timer = setTimeout(() => { strip.hidden = true; }, 5000);
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    const key = `shot:${id}`;
+    await sending.get(key)?.catch(() => {}); // a send already under way finishes first; then it's retracted (#20-3)
+    const queued = await store("readonly", (s) => s.get(key));
+    try {
+      if (queued) await store("readwrite", (s) => s.delete(key));
+      else await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+      location.href = "/";
+    } catch (err) {
+      strip.firstChild.textContent = why(err);
+    }
+  });
+}
+
 // --- New bag and equipment ---------------------------------------------------------------------------
 
 // New bag: a photo of the label, read by the server (Claude reads, Python matches), or the coffee typed.
@@ -433,6 +515,7 @@ function newBag(root) {
     for (const b of root.querySelectorAll("button")) b.disabled = true;
     body = { bag_id: uuid(), ...body };
     if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
+    if (read?.pending) body.read_pending = true; // only then may the photo's match fill in the bag (#20-1)
     if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
@@ -440,6 +523,7 @@ function newBag(root) {
       location.href = "/log";
     } catch (err) {
       hint(where, why(err));
+      if (!(err instanceof Rejected)) return; // queued: it stays saved, so another tap would make a second bag
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
@@ -587,7 +671,12 @@ function newBag(root) {
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
       if (mine !== attempt) return;
-      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.", false);
+      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
+      read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
+      showSync();
+      root.querySelector("[data-photo-waiting]").hidden = false;
+      step("queued");
     }
   });
 
@@ -832,6 +921,8 @@ function signIn(form) {
     submit.disabled = true;
     try {
       await post(form.dataset.api || "/api/signin", body);
+      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
+      await caches.delete("pages").catch(() => {});
       location.replace("/");
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
@@ -864,7 +955,10 @@ function account() {
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
-        location.replace("/signin"); // only once the server has signed this phone (or every phone) out
+        // Kept pages hold this person's data: they go with the session, once the server has signed it out.
+        await caches.delete("pages").catch(() => {});
+        navigator.serviceWorker?.controller?.postMessage("signed-out");
+        location.replace("/signin");
       } catch {
         b.textContent = "Couldn’t sign out. Check the connection and try again.";
       }
@@ -891,6 +985,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector("[data-new-invite]")) invites();
   for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  for (const b of document.querySelectorAll("[data-reload]")) b.addEventListener("click", () => location.reload());
   // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
   for (const el of document.querySelectorAll("[data-empty-class]")) {
     const mark = () => el.classList.toggle("empty", !el.value);

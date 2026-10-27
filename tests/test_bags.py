@@ -223,6 +223,62 @@ def test_photo_upload_reads_matches_and_stores_the_photo(catalog, tmp_path):
     assert bag.photo_id == "p1" and json.loads(bag.read_json)["roaster"] == "Larkspur"
 
 
+@pytest.mark.parametrize("photo_first", [True, False])
+def test_a_bag_typed_offline_takes_its_photos_match_whichever_arrives_first(catalog, tmp_path, photo_first):
+    # Offline, the person types something the catalog can't match; the photo and the bag sync later.
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    body = {"bag_id": "b1", "coffee_freetext": "the ethiopian one", "photo_id": "p1", "read_pending": True}
+    if photo_first:
+        upload(c)
+    r = c.post("/api/bags", json=body, headers=W).json()
+    if not photo_first:
+        assert r["coffee_id"] is None
+        upload(c)
+    bag = app.state.store.bag("owner", "b1")
+    assert bag.coffee_id == "larkspur.com:1" and bag.coffee_freetext == "the ethiopian one"
+    assert str(bag.roast_date) == "2026-10-18" and json.loads(bag.read_json)["roaster"] == "Larkspur"
+
+
+def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalog, tmp_path):
+    fake = FakeClient(LABEL)
+    app, _ = app_with(catalog, tmp_path, fake)
+    c = TestClient(app)
+    first = upload(c).json()
+    assert upload(c).json() == first and len(fake.calls) == 1
+    other = c.post(
+        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+    )
+    assert other.status_code == 409
+
+
+def test_a_bag_typed_after_seeing_the_read_keeps_what_was_typed(catalog, tmp_path):
+    # #20-1: the photo matched, the person tapped Type and entered something else; the match mustn't come back.
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    assert upload(c).json()["match"]["coffee_id"] == "larkspur.com:1"
+    body = {"bag_id": "b9", "coffee_freetext": "a coffee from a market stall", "photo_id": "p1"}
+    assert c.post("/api/bags", json=body, headers=W).json()["coffee_id"] is None
+    assert app.state.store.bag("owner", "b9").coffee_id is None
+
+
+def test_a_typed_match_wins_and_another_persons_photo_is_ignored(catalog, tmp_path):
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    upload(c)
+    # Typed text that matches keeps its own match.
+    r = c.post(
+        "/api/bags", json={"bag_id": "b1", "coffee_freetext": "Onyx Geometry", "photo_id": "p1"}, headers=W
+    )
+    assert r.json()["coffee_id"] == "onyx.com:1"
+    # Someone else citing that photo id gets nothing from it.
+    maya = W | {"x-test-user": "maya"}
+    r = c.post(
+        "/api/bags", json={"bag_id": "b2", "coffee_freetext": "something", "photo_id": "p1"}, headers=maya
+    )
+    assert r.json()["coffee_id"] is None
+
+
 def test_an_unclear_read_returns_candidates(catalog, tmp_path):
     app, _ = app_with(catalog, tmp_path, FakeClient(LABEL | {"coffee": "Hambela"}))
     r = upload(TestClient(app)).json()
@@ -310,3 +366,21 @@ def test_comparison_picks_haiku_when_it_is_as_good_and_faster(catalog):
         bag_read.decide(bag_read.evaluate([case], [labels.OPUS, labels.HAIKU], 2, reader, catalog))
         == labels.HAIKU
     )
+
+
+def test_two_uploads_of_one_photo_at_once_save_it_once(catalog, tmp_path):
+    # A resend can race the first upload; both mustn't write the same file.
+    import threading
+
+    p = photos.normalize(jpeg())
+    photos_lake = Lake(str(tmp_path / "photos"), tables=("photos",))
+    results: list[bool] = []
+    threads = [
+        threading.Thread(target=lambda: results.append(photos.save(photos_lake, "p1", "owner", p)))
+        for _ in range(4)
+    ]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert sorted(results) == [False, False, False, True]

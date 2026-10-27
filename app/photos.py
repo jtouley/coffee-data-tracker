@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import io
+import threading
 from dataclasses import dataclass
 from datetime import UTC, datetime
 
@@ -59,9 +60,22 @@ def normalize(data: bytes) -> Photo:
     return Photo(jpeg, upright.width, upright.height, hashlib.sha256(jpeg).hexdigest())
 
 
-def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
-    """One Parquet file per photo, in Hugging Face's Image layout, published before returning."""
+def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> bool:
+    """One Parquet file per photo, in Hugging Face's Image layout, published before returning. False if a photo
+    with this id is already in the lake (files are never replaced)."""
     now = datetime.now(UTC).replace(microsecond=0)
+    with _saving:  # two uploads of one photo (a resend racing the first) mustn't both write it
+        if load(lake, photo_id):
+            return False
+        _write(lake, photo_id, user_id, photo, now)
+    lake.publish(f"app: photo {photo_id}")
+    return True
+
+
+_saving = threading.Lock()
+
+
+def _write(lake: Lake, photo_id: str, user_id: str, photo: Photo, now: datetime) -> None:
     lake.write(
         "photos",
         f"photos/{photo_id}.parquet",
@@ -79,7 +93,6 @@ def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
             }
         ],
     )
-    lake.publish(f"app: photo {photo_id}")
 
 
 def load(lake: Lake, photo_id: str) -> tuple[str, bytes] | None:

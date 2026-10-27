@@ -61,9 +61,9 @@ def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
 def test_app_in_a_browser(lake, tmp_path):
     accounts = _accounts(tmp_path / "users")
     accounts.create_owner("SETUP-CODE-1234", "jtouley", PW)
-    # Label reads answer in turn: a clear match, an unclear one, then an unreadable label.
+    # Label reads answer in turn: a clear match, an unclear one, an unreadable label, then the photo sent offline.
     reader = FakeClient([LABEL | {"roaster": "Larkspur Roasting"}, LABEL | {"roaster": "Larkspur Roasting", "coffee": "Hambela"},
-                         {"legible": False, "roaster": None, "coffee": None}])  # fmt: skip
+                         {"legible": False, "roaster": None, "coffee": None}, LABEL | {"roaster": "Larkspur Roasting"}])  # fmt: skip
     app = create_app(
         lake,
         Sessions(accounts, secure=False),
@@ -179,7 +179,15 @@ def test_app_in_a_browser(lake, tmp_path):
     shot_id = r.stdout.strip()
     # The browser's shot was saved, then retracted by Undo: two records, no current shot.
     assert len(list((lake.root / "shots").glob(f"{shot_id}__*.parquet"))) == 2
-    assert {s.shot_id for s in shots.load_shots(lake)} == {"dial0", "dial1", "dial2", "dial3", "first"}
+    current = {s.shot_id for s in shots.load_shots(lake)}
+    assert (
+        current - {"dial0", "dial1", "dial2", "dial3", "first"} and len(current) == 6
+    )  # plus the offline shot
+    # The bag typed offline matched nothing by its text; the photo, read when it synced, matched it.
+    offline_bag = next(
+        r.item for r in app.state.store.bags.values() if r.item.coffee_freetext == "the washed one"
+    )
+    assert offline_bag.coffee_id == "example.com:1" and offline_bag.photo_id
     screens = ("owner-setup", "first-run", "setup-empty", "new-bag", "offline", "not-found", "sign-in")
     screens += (
         "sign-in-error",
@@ -194,5 +202,5 @@ def test_app_in_a_browser(lake, tmp_path):
         "reset",
     )
     screens += ("bag-start", "bag-match", "bag-pick", "bag-failed")
-    screens += ("coffees", "coffee", "history", "shot", "correct")
+    screens += ("coffees", "coffee", "history", "shot", "correct", "offline-saved", "bag-offline")
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}
