@@ -366,3 +366,21 @@ def test_comparison_picks_haiku_when_it_is_as_good_and_faster(catalog):
         bag_read.decide(bag_read.evaluate([case], [labels.OPUS, labels.HAIKU], 2, reader, catalog))
         == labels.HAIKU
     )
+
+
+def test_two_uploads_of_one_photo_at_once_save_it_once(catalog, tmp_path):
+    # A resend can race the first upload; both mustn't write the same file.
+    import threading
+
+    p = photos.normalize(jpeg())
+    photos_lake = Lake(str(tmp_path / "photos"), tables=("photos",))
+    results: list[bool] = []
+    threads = [
+        threading.Thread(target=lambda: results.append(photos.save(photos_lake, "p1", "owner", p)))
+        for _ in range(4)
+    ]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert sorted(results) == [False, False, False, True]
