@@ -25,8 +25,12 @@ def export(db: Path, dest: str = "build/public") -> dict:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
-    counts = {t: con.execute(f"select count(*) from {t}").fetchone()[0] for t in PUBLIC_TABLES}
-    as_of = con.execute("select max(last_seen) from public_coffee").fetchone()[0]
+    def scalar(sql: str):
+        row = con.execute(sql).fetchone()
+        return row[0] if row else None
+
+    counts = {t: scalar(f"select count(*) from {t}") for t in PUBLIC_TABLES}
+    as_of = scalar("select max(last_seen) from public_coffee")
     manifest = {"as_of_run": str(as_of) if as_of else None, "exported_at": datetime.now(UTC).isoformat(timespec="seconds"),
                 "tables": counts}
 

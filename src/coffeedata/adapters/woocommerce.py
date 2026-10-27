@@ -11,7 +11,8 @@ MAX_VARIATION_LOOKUPS = 150  # per roaster, per run
 
 
 def _price(prices: dict | None) -> float | None:
-    raw = (prices or {}).get("price")
+    prices = prices or {}
+    raw = prices.get("price")
     if raw in (None, ""):
         return None
     return int(raw) / 10 ** int(prices.get("currency_minor_unit", 2))

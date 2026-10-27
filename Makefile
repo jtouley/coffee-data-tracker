@@ -39,6 +39,7 @@ mcp:
 
 lint:
 	uv run ruff check src tests
+	uv run mypy
 
 test: lint  ## offline: unit tests + dbt builds over synthetic lakes
 	uv run pytest -q

@@ -6,6 +6,7 @@ import logging
 import threading
 import time
 import urllib.robotparser
+from typing import Any
 from urllib.parse import urlparse
 
 import httpx
@@ -55,19 +56,20 @@ class PoliteClient:
         with self._lock:
             known = host in self._robots
         if not known:
-            rp: urllib.robotparser.RobotFileParser | None = urllib.robotparser.RobotFileParser()
+            parser = urllib.robotparser.RobotFileParser()
+            rules: urllib.robotparser.RobotFileParser | None = None  # None: no robots.txt, no restrictions
             try:
                 r = self._client.get(f"https://{host}/robots.txt")
                 if r.status_code == 200:
-                    rp.parse(r.text.splitlines())
+                    parser.parse(r.text.splitlines())
+                    rules = parser
                 elif r.status_code in (401, 403):
-                    rp.disallow_all = True  # same convention as urllib.robotparser
-                else:
-                    rp = None  # no robots.txt means no restrictions
+                    parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
+                    rules = parser
             except httpx.HTTPError:
-                rp = None
+                pass
             with self._lock:
-                self._robots[host] = rp
+                self._robots[host] = rules
         rp = self._robots[host]
         return rp is None or rp.can_fetch(USER_AGENT, url)
 
@@ -79,7 +81,7 @@ class PoliteClient:
         if due > now:
             time.sleep(due - now)
 
-    def get(self, url: str, **params: object) -> httpx.Response:
+    def get(self, url: str, **params: str | int | float | bool | None) -> httpx.Response:
         if not self._allowed(url):
             raise Blocked(url)
         host = urlparse(url).netloc
@@ -101,7 +103,7 @@ class PoliteClient:
         assert last_exc is not None
         raise last_exc
 
-    def get_json(self, url: str, **params: object) -> object | None:
+    def get_json(self, url: str, **params: str | int | float | bool | None) -> Any:
         """JSON body on a 200 with a JSON payload, else None (for probing, where a miss is an answer)."""
         r = self.get(url, **params)
         if r.status_code != 200:
@@ -111,7 +113,7 @@ class PoliteClient:
         except ValueError:
             return None
 
-    def catalog_json(self, url: str, **params: object) -> object | None:
+    def catalog_json(self, url: str, **params: str | int | float | bool | None) -> Any:
         """For catalog paths that may or may not exist: None on 404 (try another path); NotCatalog on a 200
         that isn't JSON; FetchError on any other status, a network error or a robots block."""
         try:
@@ -127,7 +129,7 @@ class PoliteClient:
         except ValueError as e:
             raise NotCatalog(f"not JSON: {url}") from e
 
-    def fetch_json(self, url: str, **params: object) -> object:
+    def fetch_json(self, url: str, **params: str | int | float | bool | None) -> Any:
         """JSON body, or FetchError: for catalog pages, where a miss must never look like an empty catalog."""
         try:
             r = self.get(url, **params)

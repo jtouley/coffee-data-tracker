@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import logging
 from datetime import UTC, date, datetime
+from typing import cast
 
 from . import extract
 from .lake import Lake, new_batch_id
@@ -97,8 +98,9 @@ def submit_batch(lake: Lake, client, todo: list[dict], now: datetime) -> dict:
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
 
-    reqs = [Request(custom_id=f"e{i}", params=MessageCreateParamsNonStreaming(
-        **extract.llm_request(p["title"], p["tags"] or [], p["body_text"]))) for i, p in enumerate(todo)]
+    reqs = [Request(custom_id=f"e{i}", params=cast(MessageCreateParamsNonStreaming,
+                                                  extract.llm_request(p["title"], p["tags"] or [], p["body_text"])))
+            for i, p in enumerate(todo)]
     try:
         batch = client.messages.batches.create(requests=reqs)
     except APIError as e:
@@ -141,8 +143,8 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
             if not m or res.result.type != "succeeded":
                 continue  # failed items have no llm row, so they are pending again next run
             key = (m["roaster_id"], m["product_id"], m["body_hash"])
-            if e := extract.parse_llm_message(res.result.message, bases.get(key, Enrichment())):
-                rows.append(_row(m, e, now))
+            if found := extract.parse_llm_message(res.result.message, bases.get(key, Enrichment())):
+                rows.append(_row(m, found, now))
         lake.write_partition("enrichments", run_date, new_batch_id(), rows)
         lake.write("llm_batches", f"llm_batches/state=collected/{batch_id}.parquet",
                    [{"batch_id": batch_id, "state": "collected", "at": now}])

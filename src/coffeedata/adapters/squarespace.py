@@ -16,7 +16,7 @@ MAX_PAGES = 10
 
 def shop_paths(urls: list[str]) -> list[str]:
     """Collection paths ranked by how many sitemap URLs sit beneath them, then common names."""
-    parents = Counter()
+    parents: Counter[str] = Counter()
     for u in urls:
         parts = [p for p in urlparse(u).path.split("/") if p]
         if len(parts) >= 2:
@@ -47,9 +47,9 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
     """Product items in a collection; None when the path doesn't exist (404). A first page that isn't JSON
     raises NotCatalog; any other failure, on any page, raises FetchError."""
     items: list[dict] = []
-    offset: object = None
+    offset: str | int | None = None
     for page in range(MAX_PAGES):
-        params: dict[str, object] = {"format": "json"}
+        params: dict[str, str | int | float | bool | None] = {"format": "json"}
         if offset:
             params["offset"] = offset
         try:

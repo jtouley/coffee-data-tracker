@@ -29,7 +29,7 @@ snowflake = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.6", "respx>=0.21", "anyio>=4", "snowflake-connector-python>=3.12", "cryptography>=42"]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.13", "respx>=0.21", "anyio>=4", "snowflake-connector-python>=3.12", "cryptography>=42"]
 
 [build-system]
 requires = ["hatchling"]
@@ -42,6 +42,15 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM"]
 ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src"]
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["pyarrow", "pyarrow.*"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
