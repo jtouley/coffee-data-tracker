@@ -97,7 +97,7 @@ async function newPage(browser, errors) {
     assert.equal(await page.inputValue("#dose_g"), "18.0");
     assert.equal(await page.inputValue("#yield_g"), "36.4");
     assert.equal(await page.inputValue("#grinder_setting"), "11");
-    assert.equal(await page.locator('[aria-pressed="true"]').count(), 0);
+    assert.equal(await page.locator('[data-taste] [aria-pressed="true"], [data-rating] [aria-pressed="true"]').count(), 0);
     assert.match(await page.textContent("[data-untimed]"), /Not timed · last 29 s/);
     assert.doesNotMatch(await page.textContent("main"), /finer|coarser|Try \d/);
 
@@ -154,6 +154,26 @@ async function newPage(browser, errors) {
     await shoot(page, "bag-failed");
     await page.getByRole("button", { name: "Type the coffee" }).last().click();
     assert.equal(await page.isVisible("#bag"), true);
+
+    // Coffees, one coffee, History, a shot, and correcting it.
+    await page.goto(`${base}/coffees`);
+    await shoot(page, "coffees");
+    await page.goto(`${base}/coffee/bag1`);
+    assert.match(await page.textContent("main"), /Best so far · rated 4/);
+    await shoot(page, "coffee");
+    await page.goto(`${base}/history`);
+    await shoot(page, "history");
+    await page.goto(`${base}/shot/first`);
+    await shoot(page, "shot");
+    await page.getByRole("link", { name: "Correct" }).click();
+    await page.waitForURL(/\/log\?correct=first/);
+    assert.equal(await page.inputValue("#time_s"), "29");
+    await page.getByText("More").click();
+    await page.fill("#notes", "puck was wet");
+    await shoot(page, "correct");
+    await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForURL(`${base}/shot/first`);
+    assert.match(await page.textContent("main"), /puck was wet/);
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");

@@ -24,7 +24,8 @@ log = logging.getLogger(__name__)
 
 
 # What the screens show about a catalog coffee (whatever of it this week's export has).
-FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes",
+FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
+         "elevation_masl_min", "elevation_masl_max",
          "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
 
@@ -167,6 +168,32 @@ class Store:
         # A coffee not in this week's export is asked again after MISS_TTL, not never.
         self._coffees[coffee_id] = (found, time.monotonic())
         return found
+
+    def bags_of(self, user_id: str) -> list[Bag]:
+        """This person's bags, the one used most recently first (a bag with no shots by when it was opened)."""
+        mine = self.shots_of(user_id)
+        last = {s.bag_id: s.brewed_at for s in mine if s.bag_id}
+        recs = self._mine(self.bags, user_id)
+
+        def when(r: Rec) -> datetime:
+            return last.get(r.item.bag_id) or r.logged_at
+
+        return [r.item for r in sorted(recs, key=when, reverse=True)]
+
+    def coffee_shots(self, user_id: str, bag: Bag) -> list[Shot]:
+        """Every shot of this bag's coffee, from any bag, oldest first."""
+        key = coffee_key(bag)
+        bag_ids = {b.bag_id for b in self.bags_of(user_id) if coffee_key(b) == key}
+        return [
+            s
+            for s in self.shots_of(user_id)
+            if s.bag_id in bag_ids or (not s.bag_id and coffee_key(s) == key)
+        ]
+
+    @staticmethod
+    def best(shots_: list[Shot]) -> Shot | None:
+        """Highest rating; the latest wins ties (as in mart_dial_in and mart_bag)."""
+        return max(shots_, key=lambda s: (s.rating, s.brewed_at), default=None)
 
     def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
         """The shots shown together: this bag's, or with no bag, the last shot's coffee."""

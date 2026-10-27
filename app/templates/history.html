@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "_macros.html" import nav, shotrow %}
+{% block title %}History · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/coffees">‹ Coffees</a></div>
+  <h1 class="serif title mt8">History</h1>
+  {% for grp in groups %}
+  <h2 class="section">{% if grp.bag %}<a class="ext" href="/coffee/{{ grp.bag.bag_id }}">{{ grp.name }}</a>{% else %}{{ grp.name }}{% endif %}</h2>
+  <div class="list">{% for s in grp.shots %}{{ shotrow(s, day) }}{% endfor %}</div>
+  {% else %}
+  <p class="body">No shots yet. Log one from Today.</p>
+  {% endfor %}
+  <div class="mt24"></div>
+{% endblock %}
+{% block nav %}{{ nav('coffees') }}{% endblock %}

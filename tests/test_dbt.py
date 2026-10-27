@@ -265,6 +265,11 @@ def test_old_and_new_shots_with_equipment_and_bags(lake, tmp_path):
     ).fetchall()
     assert dial == [("owner", None, 1, 12.0), ("owner", None, 1, 12.0), ("u1", "DF64 V2", 2, 10.0)]
     assert con.execute("select count(*) from dim_equipment").fetchone()[0] == 1
+    # One row per bag: its shots, the best one, and days off roast at the first and last shot.
+    assert con.execute(
+        "select user_id, bag_id, coffee_id, shot_count, best_shot_id, best_rating, days_off_roast_first,"
+        " days_off_roast_last, shots_in_window from mart_bag"
+    ).fetchall() == [("u1", "b1", f"{rid}:A", 2, "new1", 5, 8, 8, 2)]
 
 
 def test_only_old_shot_files_still_build(lake, tmp_path):

@@ -78,3 +78,17 @@ def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
         ],
     )
     lake.publish(f"app: photo {photo_id}")
+
+
+def load(lake: Lake, photo_id: str) -> tuple[str, bytes] | None:
+    """A photo's owner and JPEG, from staging or the dataset (one file read), or None."""
+    con = lake.connect()
+    for src in lake.sources("photos"):
+        path = f"{src.rsplit('/', 1)[0]}/{photo_id}.parquet"
+        try:
+            row = con.execute(f"select user_id, image.bytes from read_parquet('{path}')").fetchone()
+        except Exception:  # noqa: BLE001 - duckdb.IOException: not in this source
+            continue
+        if row:
+            return row[0], row[1]
+    return None

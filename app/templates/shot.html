@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "_macros.html" import taste %}
+{% block title %}Shot · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top">{% if bag %}<a class="back" href="/coffee/{{ bag.bag_id }}">‹ {{ name }}</a>{% else %}<a class="back" href="/history">‹ History</a>{% endif %}</div>
+  <h1 class="label mt8">{{ when }} · {{ name }}</h1>
+  <div class="num n112 mt4">1:{{ "%.2f" | format(ratio(shot)) }}</div>
+  <div class="row end mt16">
+    <span class="num n34">{{ g(shot.dose_g, 1) }} → {{ g(shot.yield_g, 1) }}<span class="u"> g</span></span><span class="num n34">{{ g(shot.time_s) }}<span class="u"> s</span></span>
+  </div>
+  <div class="row mt8"><span class="meta">Grind {{ g(shot.grinder_setting) }}{% if grinder %} · {{ grinder.name }}{% endif %}</span>{{ taste(shot.taste, shot.rating) }}</div>
+  <dl class="spec mt24">
+    {% if basket %}<dt>Basket</dt><dd>{{ basket.name }}</dd>{% endif %}
+    {% if machine %}<dt>Machine</dt><dd>{{ machine.name }}</dd>{% endif %}
+    {% if shot.water_temp_c %}<dt>Water</dt><dd>{{ g(shot.water_temp_c) }} °C</dd>{% endif %}
+    <dt>Drink</dt><dd>{{ shot.brew_method }}{{ ", with milk" if shot.is_milk_drink }}</dd>
+    {% if shot.notes %}<dt>Notes</dt><dd>{{ shot.notes }}</dd>{% endif %}
+  </dl>
+  <div class="hint" data-hint role="alert"></div>
+  <div class="spacer"></div>
+  <div class="dock">
+    <a class="btn secondary" href="/log?correct={{ shot.shot_id }}">Correct</a>
+    <button class="btn text danger" type="button" data-retract="{{ shot.shot_id }}" data-back="{{ '/coffee/' ~ bag.bag_id if bag else '/history' }}" data-confirm="Tap again to retract this shot">Retract</button>
+  </div>
+{% endblock %}

@@ -30,7 +30,7 @@ from coffeedata.models import SAFE_ID
 from . import labels, photos, views, web
 from .accounts import AccountError
 from .auth import COOKIE, Auth, Sessions, User, from_env, missing_secrets
-from .store import Invalid, NotFound, Store
+from .store import Invalid, NotFound, Store, coffee_key
 
 HERE = Path(__file__).parent
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
@@ -461,7 +461,17 @@ def create_app(
         grinder: str | None = None,
         basket: str | None = None,
         machine: str | None = None,
+        correct: str | None = None,
     ) -> HTMLResponse | RedirectResponse:
+        fixing = None
+        if (
+            correct
+        ):  # Correct: the same form, filled from that shot, saved under its id (a new record, latest wins)
+            try:
+                fixing = store.shot(me.user_id, correct)
+            except NotFound:
+                raise HTTPException(404, "no such shot") from None
+            grinder, basket, machine = fixing.grinder_id, fixing.basket_id, fixing.machine_id
         p = store.prefill(me.user_id, grinder, basket, machine)
         if not p["grinder"] or not p["basket"]:
             return RedirectResponse("/setup", 303)
@@ -486,7 +496,29 @@ def create_app(
             "same_as_last": p["same_as_last"],
             "grind": {"min": g.scale_min, "max": g.scale_max, "step": g.scale_step},
         }
-        return page(request, "log.html", me=me, p=p, name=name, form=form)
+        if fixing:
+            form |= {
+                "bag_id": fixing.bag_id,
+                "coffee_id": fixing.coffee_id,
+                "coffee_freetext": fixing.coffee_freetext,
+                "dose_g": fixing.dose_g,
+                "yield_g": fixing.yield_g,
+                "grinder_setting": fixing.grinder_setting,
+                "water_temp_c": fixing.water_temp_c,
+                "brew_method": fixing.brew_method,
+                "is_milk_drink": fixing.is_milk_drink,
+                "correct": {
+                    "shot_id": fixing.shot_id,
+                    "brewed_at": fixing.brewed_at.isoformat(),
+                    "time_s": fixing.time_s,
+                    "taste": fixing.taste,
+                    "rating": fixing.rating,
+                    "notes": fixing.notes,
+                },
+            }
+            bag = store.bag(me.user_id, fixing.bag_id)
+            name, _ = coffee_name(bag, fixing.coffee_id, fixing.coffee_freetext)
+        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing)
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:
@@ -512,6 +544,99 @@ def create_app(
             summary=views.summary(shot, prev, z),
             has_prev=prev is not None,
             clock=views.clock(shot.brewed_at, z),
+        )
+
+    # --- coffees, history, one coffee, one shot -------------------------------------------------------
+
+    def bag_line(bag: Any, shots_: list) -> dict:
+        name, facts = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
+        best = store.best(shots_)
+        return {"bag": bag, "name": name, "facts": facts, "shots": shots_, "best": best}
+
+    @app.get("/coffees", response_class=HTMLResponse)
+    def coffees(request: Request, me: Me) -> HTMLResponse:
+        mine = store.shots_of(me.user_id)
+        lines = [bag_line(b, [s for s in mine if s.bag_id == b.bag_id]) for b in store.bags_of(me.user_id)]
+        z = tz(request)
+        return page(request, "coffees.html", me=me, lines=lines, loose=[s for s in mine if not s.bag_id],
+                    date=lambda d: views.date(d, z))  # fmt: skip
+
+    @app.get("/history", response_class=HTMLResponse)
+    def history(request: Request, me: Me) -> HTMLResponse:
+        """Every shot, newest first, grouped by bag."""
+        mine = store.shots_of(me.user_id)
+        groups: list[dict] = []
+        for sh in reversed(mine):
+            key = sh.bag_id or coffee_key(sh)
+            if not groups or groups[-1]["key"] != key:
+                bag = store.bag(me.user_id, sh.bag_id)
+                name, _ = coffee_name(bag, sh.coffee_id, sh.coffee_freetext)
+                groups.append({"key": key, "bag": bag, "name": name, "shots": []})
+            groups[-1]["shots"].append(sh)
+        z = tz(request)
+        return page(request, "history.html", me=me, groups=groups, day=lambda d: views.day(d, z))
+
+    @app.get("/coffee/{bag_id}", response_class=HTMLResponse)
+    def coffee_page(request: Request, bag_id: str, me: Me) -> HTMLResponse:
+        bag = store.bag(me.user_id, bag_id)
+        if bag is None:
+            raise HTTPException(404, "no such bag")
+        everything = store.coffee_shots(me.user_id, bag)
+        this_bag = [s for s in everything if s.bag_id == bag.bag_id]
+        siblings = [b for b in reversed(store.bags_of(me.user_id)) if coffee_key(b) == coffee_key(bag)]
+        name, facts = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
+        z = tz(request)
+        return page(
+            request,
+            "coffee.html",
+            me=me,
+            bag=bag,
+            name=name,
+            facts=facts,
+            catalog=describe(bag.coffee_id),
+            raw=store.coffee(bag.coffee_id) or {},
+            best=store.best(everything),
+            chart=views.target_svg(everything, 196, label="Every shot of this coffee by time and ratio")
+            if everything
+            else "",
+            n_all=len(everything),
+            shots=list(reversed(this_bag)),
+            siblings=siblings,
+            index=next(i for i, b in enumerate(siblings, 1) if b.bag_id == bag.bag_id),
+            grinder_of=lambda s: store.gear(me.user_id, s.grinder_id),
+            days_off=(datetime.now(z).date() - bag.roast_date).days if bag.roast_date else None,
+            day=lambda d: views.day(d, z),
+            date=lambda d: views.date(d, z),
+        )
+
+    @app.get("/shot/{shot_id}", response_class=HTMLResponse)
+    def shot_page(request: Request, shot_id: str, me: Me) -> HTMLResponse:
+        try:
+            shot = store.shot(me.user_id, shot_id)
+        except NotFound:
+            raise HTTPException(404, "no such shot") from None
+        bag = store.bag(me.user_id, shot.bag_id)
+        name, _ = coffee_name(bag, shot.coffee_id, shot.coffee_freetext)
+        z = tz(request)
+        return page(request, "shot.html", me=me, shot=shot, bag=bag, name=name, grinder=store.gear(me.user_id, shot.grinder_id),
+                    basket=store.gear(me.user_id, shot.basket_id), machine=store.gear(me.user_id, shot.machine_id),
+                    when=f"{views.date(shot.brewed_at, z)}, {views.clock(shot.brewed_at, z)}")  # fmt: skip
+
+    photo_cache: dict[str, tuple[str, bytes]] = {}
+
+    @app.get("/photos/{photo_id}")
+    async def photo(photo_id: str, me: Me) -> Response:
+        """A bag photo, to its owner only. Photos never change, so the browser keeps them (privately)."""
+        if not SAFE_ID.fullmatch(photo_id):
+            raise HTTPException(404, "not found")
+        hit = photo_cache.get(photo_id) or await run_in_threadpool(photos.load, photo_lake, photo_id)
+        if hit is None or hit[0] != me.user_id:
+            raise HTTPException(404, "not found")
+        if len(photo_cache) > 32:
+            photo_cache.pop(next(iter(photo_cache)))
+        photo_cache[photo_id] = hit
+        return Response(
+            hit[1], media_type="image/jpeg", headers={"Cache-Control": "private, max-age=31536000, immutable"}
         )
 
     def counts(user_id: str) -> dict[str, int]:

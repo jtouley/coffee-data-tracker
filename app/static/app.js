@@ -240,9 +240,11 @@ function logShot(form) {
       }
       time = p.last_time_s;
     }
+    const fix = p.correct; // correcting: same id and time, a new record that replaces the old one
+    const temp = num($("water_temp_c"));
     const body = {
-      shot_id: uuid(),
-      brewed_at: new Date().toISOString(),
+      shot_id: fix ? fix.shot_id : uuid(),
+      brewed_at: fix ? fix.brewed_at : new Date().toISOString(),
       bag_id: p.bag_id,
       coffee_id: p.coffee_id,
       coffee_freetext: p.coffee_freetext,
@@ -255,9 +257,10 @@ function logShot(form) {
       grinder_setting: num($("grinder_setting")),
       rating: Number(r),
       taste: pressed(taste),
-      water_temp_c: p.water_temp_c,
+      water_temp_c: temp,
       brew_method: p.brew_method,
-      is_milk_drink: p.is_milk_drink,
+      is_milk_drink: pressed(milk) === "true",
+      notes: $("notes").value.trim() || null,
     };
     for (const k of Object.keys(body)) if (body[k] == null) delete body[k];
     save.disabled = true;
@@ -265,16 +268,40 @@ function logShot(form) {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
       setTimeout(() => tick(8), 60);
-      location.href = `/saved/${body.shot_id}?new=1`;
+      location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : OFFLINE);
       save.disabled = false;
     }
   });
 
+  // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
+  const milk = form.querySelector("[data-milk]");
+  const moreSummary = form.querySelector("[data-more-summary]");
+  const summarize = () => {
+    const parts = [num($("water_temp_c")) != null ? `${num($("water_temp_c"))} °C` : null, pressed(milk) === "true" ? "milk drink" : "no milk", $("notes").value.trim() ? "notes" : null];
+    moreSummary.textContent = parts.filter(Boolean).join(" · ");
+  };
+  milk.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (b) pressOne(milk, b);
+    summarize();
+  });
+  $("water_temp_c").value = p.water_temp_c ?? "";
+  pressOne(milk, milk.querySelector(`[data-v="${p.is_milk_drink ? "true" : "false"}"]`));
+  for (const id of ["water_temp_c", "notes"]) $(id).addEventListener("input", summarize);
+
   show($("dose_g"), p.dose_g);
   show($("yield_g"), p.yield_g);
   show($("grinder_setting"), p.grinder_setting);
+  if (p.correct) {
+    timed();
+    show($("time_s"), p.correct.time_s);
+    if (p.correct.taste) pressOne(taste, taste.querySelector(`[data-v="${p.correct.taste}"]`));
+    pressOne(rating, rating.querySelector(`[data-v="${p.correct.rating}"]`));
+    $("notes").value = p.correct.notes ?? "";
+  }
+  summarize();
   fit($("time_s"));
   update();
 }
@@ -638,6 +665,26 @@ function invites() {
   }
 }
 
+// A shot's Retract: a second tap, then a retraction record (never a delete), queued like any write.
+function retractShot(b) {
+  b.addEventListener("click", async () => {
+    if (b.textContent !== b.dataset.confirm) {
+      const label = b.textContent;
+      b.textContent = b.dataset.confirm;
+      setTimeout(() => { b.textContent = label; }, 4000);
+      return;
+    }
+    b.disabled = true;
+    try {
+      await send(`retract:${b.dataset.retract}`, `/api/shots/${b.dataset.retract}/retract`, {});
+      location.replace(b.dataset.back);
+    } catch (err) {
+      hint(document.querySelector("main"), err instanceof Rejected ? err.message : OFFLINE);
+      b.disabled = false;
+    }
+  });
+}
+
 // The theme lives in a cookie so the server renders the right one; no flash of the other.
 function themeChoice(group) {
   group.addEventListener("click", (e) => {
@@ -751,6 +798,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const join = document.getElementById("join");
   if (join) joinCode(join);
   if (document.querySelector("[data-new-invite]")) invites();
+  for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
   // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
   for (const el of document.querySelectorAll("[data-empty-class]")) {

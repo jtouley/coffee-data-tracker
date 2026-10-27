@@ -130,6 +130,12 @@ def day(d: datetime, tz: tzinfo) -> str:
     return f"{d:%a} {d.hour}:{d:%M}"
 
 
+def date(d: datetime, tz: tzinfo) -> str:
+    """'Oct 21', for when something happened."""
+    d = d.astimezone(tz)
+    return f"{d:%b} {d.day}"
+
+
 def clock(d: datetime, tz: tzinfo) -> str:
     d = d.astimezone(tz)
     return f"{d.hour}:{d:%M}"
