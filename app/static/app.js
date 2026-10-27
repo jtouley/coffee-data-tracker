@@ -27,9 +27,22 @@ function store(mode, fn) {
   }));
 }
 
-class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Rejected extends Error {} // the server said no (a 4xx other than 401/403/408/429): retrying won't help
 class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
 const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
+
+// Only a 2xx removes an entry. No connection, 401 (sign in again), 408, 429 and 5xx keep it and retry later; any
+// other 4xx moves it to the "Couldn't save" list on screen, so a write is never dropped without the person seeing.
+const RETRY = new Set([401, 403, 408, 429]);
+let retryAt = 0; // when the next automatic flush is due (ms), from Retry-After or a doubling backoff
+let backoff = 0;
+
+function retryAfter(r) {
+  const h = r.headers.get("retry-after");
+  if (!h) return null;
+  const s = Number(h);
+  return Number.isFinite(s) ? s * 1000 : Math.max(0, Date.parse(h) - Date.now()) || null;
+}
 
 const sending = new Map(); // key -> the delivery in flight, so Undo can wait for it instead of racing it
 const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
@@ -49,19 +62,22 @@ async function deliverOnce(entry) {
     headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
     body: entry.blob || JSON.stringify(entry.body),
   });
-  // Signed out (401), refused by the origin check (403, which a proxy can trip by mistake) or a server error:
-  // keep it and try again, so a queued shot is never thrown away. Anything else is final.
-  const final = ![401, 403].includes(r.status) && r.status < 500;
-  if (final) await store("readwrite", (s) => s.delete(entry.key));
-  if (r.ok) return r.json();
+  if (r.ok) {
+    await store("readwrite", (s) => s.delete(entry.key));
+    return r.json();
+  }
   const detail = (await r.json().catch(() => ({}))).detail;
-  if (final) {
-    const err = new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
-    refused.set(entry.key, err.message);
+  const reason = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
+  if (RETRY.has(r.status) || r.status >= 500) {
+    // 403 is the origin check, which a proxy can trip by mistake: kept, and the person is told why.
+    const err = r.status === 403 ? new Held("The server refused this for now. It’s kept on this phone and sent again later.") : new Error(reason);
+    err.wait = retryAfter(r);
     throw err;
   }
-  if (r.status === 403) throw new Held("The server refused this for now. It’s kept on this phone and sent again later.");
-  throw new Error(r.statusText);
+  // Refused for good: kept, marked, and shown, never silently dropped.
+  await store("readwrite", (s) => s.put({ ...entry, failed: reason || `Error ${r.status}` }));
+  refused.set(entry.key, reason);
+  throw new Rejected(reason);
 }
 
 async function send(key, url, body, blob = null) {
@@ -78,6 +94,14 @@ async function mine() {
   return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
 }
 
+function later(wait) {
+  backoff = Math.min(backoff ? backoff * 2 : 2000, 5 * 60 * 1000);
+  const delay = wait ?? backoff;
+  retryAt = Date.now() + delay;
+  setTimeout(() => { if (Date.now() >= retryAt) flush(); }, delay);
+}
+
+
 let flushing = null;
 function flush() {
   // One pass at a time: "online" and a page load can both start one, and two would send each entry twice.
@@ -87,13 +111,18 @@ function flush() {
 
 async function flushOnce() {
   if (!ME) return;
-  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
-  const entries = (await mine()).sort((a, b) => a.at - b.at);
+  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot. A retry
+  // stops the queue, so nothing passes an earlier write that hasn't landed.
+  const entries = (await mine()).filter((e) => !e.failed).sort((a, b) => a.at - b.at);
   for (const entry of entries) {
     try {
       await deliver(entry);
+      backoff = 0;
     } catch (e) {
-      if (!(e instanceof Rejected)) break; // offline or server down: try again later
+      if (!(e instanceof Rejected)) {
+        later(e.wait);
+        break;
+      }
     }
   }
   showSync();
@@ -102,13 +131,33 @@ async function flushOnce() {
 const SYNCED = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>Synced';
 
 async function showSync() {
-  const n = (await mine()).length;
+  const all = await mine();
+  const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
     else if ("quiet" in el.dataset) el.textContent = ""; // where nothing was waiting, nothing to say
     else el.innerHTML = SYNCED;
   }
   if (!n) document.dispatchEvent(new Event("synced"));
+  showFailed(all.filter((e) => e.failed));
+}
+
+const KIND = { shot: "A shot", retract: "Undoing a shot", restore: "Bringing a shot back", bag: "A bag", photo: "A bag photo", equipment: "Equipment" };
+
+function showFailed(failed) {
+  const box = document.querySelector("[data-failed]");
+  if (!box) return;
+  box.hidden = !failed.length;
+  const list = box.querySelector("ul");
+  list.replaceChildren(...failed.map((e) => {
+    const li = document.createElement("li");
+    const when = new Date(e.at).toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+    li.append(`${KIND[e.key.split(":")[0]] || "A change"} from ${when}: ${e.failed} `);
+    const b = Object.assign(document.createElement("button"), { type: "button", className: "btn text", textContent: "Dismiss" });
+    b.onclick = async () => { await store("readwrite", (s) => s.delete(e.key)); showSync(); };
+    li.append(b);
+    return li;
+  }));
 }
 
 function uuid() {

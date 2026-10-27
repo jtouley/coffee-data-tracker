@@ -331,3 +331,7 @@ details.disclose[open] [data-more-summary] { display: none; }
 [data-hand="left"] #shot > .row { flex-direction: row-reverse; }
 [data-hand="left"] details.disclose > summary { flex-direction: row-reverse; }
 .gone, .gone * { color: var(--ink-2) !important; } /* a retracted shot, while Undo is still offered: greyed, still legible */
+/* Writes the server refused for good: shown until dismissed, never dropped silently */
+.failed { border: 1px solid var(--danger); border-radius: 8px; padding: 12px 16px; margin: 8px 0 16px; }
+.failed ul { margin: 8px 0 0; padding-left: 18px; font-size: 0.875rem; }
+.failed li .btn { min-height: 56px; padding: 0 8px; }
