@@ -62,7 +62,7 @@ def test_history_groups_shots_by_bag_newest_first(world):
     c, _, _ = world
     html = c.get("/history").text
     assert re.findall(r'href="/shot/(\w+)"', html) == ["m1", "b2", "b1", "a2", "a1"]
-    assert html.count('class="section"') == 3
+    assert html.count('class="group"') == 3  # one heading per bag, each opening the coffee
 
 
 def test_coffee_page_has_the_best_shot_chart_bag_shots_and_catalog(world):
@@ -72,7 +72,7 @@ def test_coffee_page_has_the_best_shot_chart_bag_shots_and_catalog(world):
     assert "Best so far · rated 5, Oct 16" in html
     assert "All 4 shots" in html and 'class="target"' in html
     assert re.findall(r'href="/shot/(\w+)"', html) == ["b2", "b1"]  # this bag only, newest first
-    assert "Bag 2 of 2" in html and 'href="/coffee/g1-bag">earlier' in html
+    assert "Bag 2 of 2" in html and 'href="/coffee/g1-bag">‹ earlier' in html
     for fact in (
         "Ethiopia, Guji, washed",
         "1,900–2,100 m",
@@ -151,3 +151,30 @@ def test_photos_are_served_to_their_owner_only(world):
     assert c.get("/photos/nope").status_code == 404
     assert '<img class="cover mt8" src="/photos/p1"' in c.get("/coffee/g2-bag").text
     assert 'loading="lazy"' in c.get("/coffees").text
+
+
+def test_retract_then_undo_brings_the_shot_back(world):
+    c, app, _ = world
+    assert c.post("/api/shots/b2/retract", json={}, headers=W).json()["written"] is True
+    assert c.get("/shot/b2").status_code == 404
+    assert c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is True
+    assert (
+        c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is False
+    )  # a resend writes nothing
+    assert app.state.store.shot("owner", "b2").time_s == 33
+    maya = W | {"x-test-user": "maya"}
+    assert c.post("/api/shots/b2/restore", json={}, headers=maya).status_code == 404
+
+
+def test_rows_older_than_six_days_carry_the_date_and_the_coffee_chart_is_plain(world):
+    from datetime import UTC, datetime
+
+    from app import views
+
+    now = datetime(2026, 10, 20, 12, tzinfo=UTC)
+    assert views.day(datetime(2026, 10, 18, 7, 2, tzinfo=UTC), UTC, now) == "Sun 7:02"
+    assert views.day(datetime(2026, 10, 11, 7, 2, tzinfo=UTC), UTC, now) == "Oct 11 7:02"
+    c, _, _ = world
+    html = c.get("/coffee/g2-bag").text
+    assert 'class="ord"' not in html and 'class="path"' not in html and 'class="now"' not in html
+    assert 'class="taste' not in html.split('class="legend')[1].split("</div>")[0]

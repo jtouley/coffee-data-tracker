@@ -362,6 +362,16 @@ class Store:
         self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
         return True
 
+    def restore_shot(self, user_id: str, shot_id: str) -> bool:
+        """Undo a retraction: the shot again, as a new record. Restoring a shot that's there writes nothing."""
+        prev = self._owned(self.shots, shot_id, user_id)
+        if prev is None:
+            raise NotFound(shot_id)
+        if not prev.deleted:
+            return False
+        self._commit(self.shots, shot_id, prev.item, "shots")
+        return True
+
     def save_equipment(self, user_id: str, data: dict) -> Equipment:
         """Add or change equipment. One default per kind: making this one the default clears the others."""
         item = Equipment(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)

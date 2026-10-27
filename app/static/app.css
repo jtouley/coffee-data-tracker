@@ -230,9 +230,23 @@ code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color
 .center { text-align: center; }
 a.item { color: inherit; }
 a.item:active { background: var(--panel); }
-.best { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.best { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--rule); padding: 12px 0; }
+.best > div + div { border-left: 1px solid var(--rule); padding-left: 12px; }
 .best .label { display: block; margin-bottom: 4px; }
-.legend { display: flex; gap: 8px; flex-wrap: wrap; }
+/* The chart's key: the marks with plain words, no tint, so it doesn't read as a row of filters */
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.8125rem; color: var(--ink-2); }
+.key { display: inline-flex; align-items: center; gap: 6px; }
+.key::before { content: ""; width: 9px; height: 9px; flex: none; box-sizing: border-box; border-radius: 50%; }
+.key.sour::before { border: 2px solid var(--sour); }
+.key.balanced::before { background: var(--balanced); }
+.key.bitter::before { background: var(--bitter); border-radius: 0; }
+.key.none::before { border: 1.5px solid var(--ink-2); }
+.item svg { width: 8px; height: 14px; color: var(--ink-2); flex: none; }
+h2.group { margin: 32px 0 0; font: inherit; }
+h2.group .link { border-top: 1px solid var(--rule); }
+h2.group + .list .item:first-child { border-top: 0; }
+.ext.tap { display: inline-flex; align-items: center; min-height: 56px; padding: 0 8px; }
+.body, .meta { text-wrap: pretty; }
 .thumb { width: 56px; height: 56px; border-radius: 6px; object-fit: cover; flex: none; background: var(--panel); }
 .bagrow { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 8px 0; border-bottom: 1px solid var(--rule); color: inherit; }
 .bagrow .grow { flex: 1; min-width: 0; }
@@ -287,9 +301,11 @@ fieldset.pick legend { padding: 0; width: 100%; }
 fieldset.pick { margin-top: 24px; }
 .rows > :first-child { border-top: 1px solid var(--rule); }
 fieldset.pick .choice:first-of-type { border-top: 1px solid var(--rule); }
-/* A row that opens in place: its chevron turns down when open */
-details.disclose > summary svg { transition: transform 120ms ease-out; }
-details.disclose[open] > summary svg { transform: rotate(90deg); }
+/* A row that opens in place: its chevron points down while closed and up while open, unlike the right-pointing
+   chevron of a row that opens another screen. The summary line hides once the fields it sums up are showing. */
+details.disclose > summary svg { transform: rotate(90deg); transition: transform 120ms ease-out; }
+details.disclose[open] > summary svg { transform: rotate(-90deg); }
+details.disclose[open] [data-more-summary] { display: none; }
 .choice input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .fill { flex: 1; display: flex; flex-direction: column; } /* a form whose dock sits at the bottom */
 

@@ -518,7 +518,9 @@ def create_app(
             }
             bag = store.bag(me.user_id, fixing.bag_id)
             name, _ = coffee_name(bag, fixing.coffee_id, fixing.coffee_freetext)
-        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing)
+        z = tz(request)
+        when = f"{views.date(fixing.brewed_at, z)}, {views.clock(fixing.brewed_at, z)}" if fixing else None
+        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when)
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:
@@ -585,6 +587,8 @@ def create_app(
         this_bag = [s for s in everything if s.bag_id == bag.bag_id]
         siblings = [b for b in reversed(store.bags_of(me.user_id)) if coffee_key(b) == coffee_key(bag)]
         name, facts = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
+        if c := store.coffee(bag.coffee_id):
+            facts = c.get("roaster_name") or ""  # the origin is under From the catalog
         z = tz(request)
         return page(
             request,
@@ -596,7 +600,9 @@ def create_app(
             catalog=describe(bag.coffee_id),
             raw=store.coffee(bag.coffee_id) or {},
             best=store.best(everything),
-            chart=views.target_svg(everything, 196, label="Every shot of this coffee by time and ratio")
+            chart=views.target_svg(
+                everything, 196, label="Every shot of this coffee by time and ratio", sequence=False
+            )
             if everything
             else "",
             n_all=len(everything),
@@ -715,6 +721,10 @@ def create_app(
     @app.post("/api/shots/{shot_id}/retract")
     def retract(shot_id: str, me: Writer) -> dict:
         return {"shot_id": shot_id, "written": run(store.retract_shot, me.user_id, shot_id)}
+
+    @app.post("/api/shots/{shot_id}/restore")
+    def restore(shot_id: str, me: Writer) -> dict:
+        return {"shot_id": shot_id, "written": run(store.restore_shot, me.user_id, shot_id)}
 
     @app.post("/api/equipment")
     def post_equipment(body: dict, me: Writer) -> dict:
