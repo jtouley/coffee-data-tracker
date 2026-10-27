@@ -16,6 +16,19 @@ from pathlib import Path
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from . import public
+from .discover import US_STATES
+
+# The 50 states; DC and Puerto Rico are named separately on the launch page.
+STATES = [s for s in US_STATES if s not in ("DC", "PR")]
+# Roaster statuses (dim_roaster.status) in reading order, with what each means to a visitor.
+STATUS_LABELS = {
+    "active": "Shop read, coffee found",
+    "no_coffee": "Shop read, no coffee for sale",
+    "no_catalog": "Shop read, nothing listed",
+    "pending": "Not read yet",
+    "unreachable": "Site down, or no shop we can read",
+    "opted_out": "Opted out",
+}
 
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
@@ -158,8 +171,12 @@ def build(db: Path, out: Path) -> Path:
     reach = _q(
         con,
         """
-        select count(distinct origin_country) as origins, count(distinct roaster_state) as states
-        from dim_coffee where is_listed and not is_chain""",
+        select count(distinct origin_country) as origins,
+               count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
+               bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
+        from dim_coffee where is_listed and not is_chain""".format(
+            states=", ".join(f"'{s}'" for s in STATES)
+        ),
     )[0]
     origin_counts = _q(
         con,
@@ -236,6 +253,7 @@ def build(db: Path, out: Path) -> Path:
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
         totals=totals,
+        status_rows=[(label, coverage["registry"].get(k, 0)) for k, label in STATUS_LABELS.items()],
         charts=charts,
         new=new,
         coverage=coverage,

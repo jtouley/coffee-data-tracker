@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catalog · registry.coffee</title>
-<meta name="description" content="A weekly catalog of US specialty coffee roasters, plus a personal espresso log.">
+<meta name="description" content="Every coffee US specialty roasters sell online, updated weekly: origin, process, price per 100 g and stock.">
 <style>
 :root {
   color-scheme: light;
@@ -79,14 +79,14 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <header>
   <button class="theme" id="theme" type="button">Theme</button>
   <a class="crumb" href="../">← registry.coffee</a>
-  <h1>Coffee Data</h1>
+  <h1>The catalog</h1>
   <p>What US specialty roasters are selling this week. Updated {{ generated }}.</p>
 </header>
 
 <div class="tiles">
   <div class="tile"><div class="n">{{ "{:,}".format(totals.coffees) }}</div><div class="l">coffees listed</div></div>
   <div class="tile"><div class="n">{{ "{:,}".format(totals.in_stock) }}</div><div class="l">in stock</div></div>
-  <div class="tile"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with an online catalog</div></div>
+  <div class="tile"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with coffee listed</div></div>
   <div class="tile"><div class="n">{{ "{:,}".format(coverage.get("registry", {}).values() | sum) }}</div><div class="l">roasters in the registry</div></div>
 </div>
 
@@ -121,7 +121,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 </section>
 
 <section>
-  <h2>Catalog</h2>
+  <h2>Browse coffees</h2>
   <div class="filters">
     <input type="search" id="q" placeholder="Search roaster, coffee, notes…" aria-label="Search the catalog">
     <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
@@ -135,9 +135,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 
 <section>
   <h2>Coverage</h2>
-  <p class="note">How many registry roasters yield a catalog, by status. Roasters without an online shop, or whose platform
-    doesn't publish one, show up as <em>no_catalog</em> or <em>no_coffee</em>.</p>
-  <table><tbody>{% for k, v in coverage.get("registry", {}).items() %}<tr><td>{{ k }}</td><td class="num">{{ "{:,}".format(v) }}</td></tr>{% endfor %}</tbody></table>
+  <p class="note">Where each roaster in the registry stands as of the latest weekly run.</p>
+  <table><tbody>{% for label, n in status_rows %}<tr><td>{{ label }}</td><td class="num">{{ "{:,}".format(n) }}</td></tr>{% endfor %}
+    <tr><td><strong>Roasters in the registry</strong></td><td class="num"><strong>{{ "{:,}".format(status_rows | sum(attribute=1)) }}</strong></td></tr></tbody></table>
 </section>
 
 <footer>
