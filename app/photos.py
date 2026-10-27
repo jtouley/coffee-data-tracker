@@ -45,6 +45,8 @@ def normalize(data: bytes) -> Photo:
         with Image.open(io.BytesIO(data)) as im:
             if im.format not in FORMATS:
                 raise BadPhoto("Use a JPEG, PNG or WebP photo.")
+            if im.width * im.height > MAX_PIXELS:  # Pillow itself only refuses at twice its limit
+                raise BadPhoto("That photo is too large. Take it again with the camera.")
             upright = ImageOps.exif_transpose(im).convert(
                 "RGB"
             )  # uses the orientation tag before it's dropped
@@ -78,3 +80,17 @@ def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
         ],
     )
     lake.publish(f"app: photo {photo_id}")
+
+
+def load(lake: Lake, photo_id: str) -> tuple[str, bytes] | None:
+    """A photo's owner and JPEG, from staging or the dataset (one file read), or None."""
+    con = lake.connect()
+    for src in lake.sources("photos"):
+        path = f"{src.rsplit('/', 1)[0]}/{photo_id}.parquet"
+        try:
+            row = con.execute(f"select user_id, image.bytes from read_parquet('{path}')").fetchone()
+        except Exception:  # noqa: BLE001 - duckdb.IOException: not in this source
+            continue
+        if row:
+            return row[0], row[1]
+    return None

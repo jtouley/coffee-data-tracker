@@ -154,6 +154,7 @@ async function newPage(browser, errors) {
     await shoot(page, "bag-failed");
     await page.getByRole("button", { name: "Type the coffee" }).last().click();
     assert.equal(await page.isVisible("#bag"), true);
+    assert.equal(await page.inputValue("#coffee"), ""); // nothing carried over from the photo before
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
