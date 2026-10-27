@@ -4,16 +4,15 @@
 {% block main %}
   <div class="top"><a class="back" href="/setup">‹ Setup</a></div>
   <h1 class="serif title mt8">Invite someone</h1>
-  <p class="body measure" data-code-intro>Make a link to send. It works once and expires after a week. Only a hash of
-    the code is kept, so it can’t be shown again later.</p>
+  <p class="body" data-code-intro>Make a link to send. It works once, for a week, and can’t be shown again once you
+    leave this screen.</p>
   <div class="codebox mt16" data-codebox hidden>
-    <div class="label" data-code-label>Invite link</div>
-    <div class="num n34 code mt8" data-code></div>
+    <div class="label" data-code-label>Invite code</div>
+    <div class="num n34 code mt8" data-code><span></span><span></span></div>
     <div class="meta mt8" data-code-note></div>
-    <button class="btn text start" type="button" data-copy>Copy link</button>
   </div>
   <div class="hint" data-hint role="alert"></div>
-  <h2 class="section group">People</h2>
+  <h2 class="section">People</h2>
   <div class="rows">
     {% for a in people %}
     <div class="gear"><div class="n">{{ a.username }}<em>{{ "turned off" if a.disabled else "member" }}</em></div><div class="d">{{ shots_n(shots_of(a.user_id)) }}</div></div>
@@ -22,11 +21,11 @@
     {% endif %}
     <button class="link{{ '' if a.disabled else ' danger' }}" type="button" data-person="{{ a.user_id }}" data-disabled="{{ 'false' if a.disabled else 'true' }}"{% if not a.disabled %} data-confirm="Tap again to turn off {{ a.username }}’s account"{% endif %}>{{ "Turn " ~ a.username ~ "’s account back on" if a.disabled else "Turn off " ~ a.username ~ "’s account" }}</button>
     {% else %}
-    <p class="body mt8">Nobody else yet. People you invite log their own shots; they can’t see yours.</p>
+    <p class="body mt8">Nobody else yet.</p>
     {% endfor %}
   </div>
   {% if pending %}
-  <h2 class="section group">Links not used yet</h2>
+  <h2 class="section">Links not used yet</h2>
   <div class="rows">
     {% for i in pending %}
     <div class="gear"><div class="n">Invite<em>not used yet</em></div><div class="d">Expires {{ date(i.expires_at) }}</div></div>
@@ -35,8 +34,11 @@
     {% endfor %}
   </div>
   {% endif %}
-  <p class="meta mt24">People you invite keep their shots in your private Hugging Face datasets. The app shows each
-    person only their own; you can read the datasets.</p>
+  <p class="meta mt24">Everyone’s shots live in your private Hugging Face datasets. The app shows each person only
+    their own.</p>
   <div class="spacer"></div>
-  <div class="dock"><button class="btn primary" type="button" data-new-invite>Make an invite link</button></div>
+  <div class="dock">
+    <button class="btn primary" type="button" data-new-invite>Make an invite link</button>
+    <button class="btn text" type="button" data-another hidden data-confirm="Tap again: the code above won’t be shown again">Make another link</button>
+  </div>
 {% endblock %}

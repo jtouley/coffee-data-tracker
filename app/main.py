@@ -448,9 +448,13 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
 
     @app.get("/log", response_class=HTMLResponse, response_model=None)
     def log_shot(
-        request: Request, me: Me, grinder: str | None = None, basket: str | None = None
+        request: Request,
+        me: Me,
+        grinder: str | None = None,
+        basket: str | None = None,
+        machine: str | None = None,
     ) -> HTMLResponse | RedirectResponse:
-        p = store.prefill(me.user_id, grinder, basket)
+        p = store.prefill(me.user_id, grinder, basket, machine)
         if not p["grinder"] or not p["basket"]:
             return RedirectResponse("/setup", 303)
         if not p["bag"] and not p["last"]:
@@ -525,23 +529,33 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             raise HTTPException(404, "no such equipment")
         if kind not in ("grinder", "machine", "basket"):
             kind = "grinder"
-        return page(request, "gear.html", me=me, item=item, kind=item.kind if item else kind,
+        kind = item.kind if item else kind
+        others = [
+            e for e in store.equipment_of(me.user_id, kind) if not item or e.equipment_id != item.equipment_id
+        ]
+        return page(request, "gear.html", me=me, item=item, kind=kind, others=others,
                     shots=counts(me.user_id).get(equipment_id, 0))  # fmt: skip
 
     @app.get("/log/gear", response_class=HTMLResponse)
     def pick_gear(
-        request: Request, me: Me, grinder: str | None = None, basket: str | None = None
+        request: Request,
+        me: Me,
+        grinder: str | None = None,
+        basket: str | None = None,
+        machine: str | None = None,
     ) -> HTMLResponse:
-        """The chip on Log shot: which grinder and basket this shot is on."""
-        p = store.prefill(me.user_id, grinder, basket)
+        """The chip on Log shot: which grinder, machine and basket this shot is on."""
+        p = store.prefill(me.user_id, grinder, basket, machine)
         return page(
             request,
             "pick_gear.html",
             me=me,
             grinders=store.equipment_of(me.user_id, "grinder"),
             baskets=store.equipment_of(me.user_id, "basket"),
+            machines=store.equipment_of(me.user_id, "machine"),
             grinder=p["grinder"],
             basket=p["basket"],
+            machine=p["machine"],
         )
 
     @app.get("/bag/new", response_class=HTMLResponse)

@@ -150,7 +150,8 @@ async function newPage(browser, errors) {
     await page.goto(`${base}/invite`);
     await page.getByRole("button", { name: "Make an invite link" }).click();
     await page.waitForSelector("[data-codebox]:not([hidden])");
-    const code = (await page.textContent("[data-code]")).trim();
+    const code = (await page.$$eval("[data-code] span", (els) => els.map((e) => e.textContent))).join("-");
+    assert.equal(await page.textContent("[data-new-invite]"), "Copy link"); // the filled button now sends this code
     assert.match(code, /^[A-Z2-7]{4}(-[A-Z2-7]{4}){3}$/);
     await shoot(page, "invite");
     const other = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });

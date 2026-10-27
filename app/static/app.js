@@ -390,38 +390,66 @@ async function joinCode(form) {
   input.addEventListener("change", check);
 }
 
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false; // no clipboard API, or not allowed: the code stays on screen to copy by hand
+  }
+}
+
 function invites() {
   const box = document.querySelector("[data-codebox]");
+  const primary = document.querySelector("[data-new-invite]");
+  const another = document.querySelector("[data-another]");
+  const intro = document.querySelector("[data-code-intro]");
+  const say = (text) => hint(document.querySelector("main"), text);
   const show = (r, name) => {
     const link = `${location.origin}/join#${r.code}`;
-    box.hidden = false;
-    box.querySelector("[data-code]").textContent = r.code;
     const join = r.kind === "join";
+    const groups = r.code.split("-");
+    const [a, b] = box.querySelectorAll("[data-code] span");
+    a.textContent = `${groups[0]}-${groups[1]}`; // two groups per line, never broken inside one
+    b.textContent = `${groups[2]}-${groups[3]}`;
     box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
     box.querySelector("[data-code-note]").textContent = join
-      ? `Works once, until ${r.expires}. The link fills it in.`
+      ? `${location.host}/join · until ${r.expires}`
       : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
-    const copy = box.querySelector("[data-copy]");
-    copy.textContent = join ? "Copy link" : "Copy code";
-    copy.onclick = async () => {
-      await navigator.clipboard?.writeText(join ? link : r.code);
-      copy.textContent = "Copied";
+    intro.textContent = join
+      ? `Share the link. It works once and expires ${r.expires}.`
+      : `Give ${name} the code below.`;
+    box.hidden = false;
+    // The one filled button now sends this code; making another one is a text button with a second tap.
+    const share = join && navigator.share;
+    primary.textContent = share ? "Share link" : join ? "Copy link" : "Copy code";
+    primary.onclick = async () => {
+      if (share) return navigator.share({ title: "registry.coffee", url: link }).catch(() => {});
+      say((await copyText(join ? link : r.code)) ? "" : "Couldn’t copy. Press and hold the code to copy it.");
+      if (!share) primary.textContent = "Copied";
     };
-    const share = document.querySelector("[data-new-invite]");
-    if (join && navigator.share) {
-      share.textContent = "Share link";
-      share.onclick = () => navigator.share({ title: "registry.coffee", text: "Log your espresso shots with me:", url: link }).catch(() => {});
-    }
+    another.hidden = !join;
     box.scrollIntoView({ block: "center" });
   };
   const act = async (url, body, after) => {
     try {
       after(await post(url, body));
     } catch (err) {
-      hint(document.querySelector("main"), err.message);
+      say(err.message);
     }
   };
-  document.querySelector("[data-new-invite]").onclick = () => act("/api/invites", {}, (r) => show(r));
+  const makeOne = () => act("/api/invites", {}, (r) => show(r));
+  primary.onclick = makeOne;
+  another.onclick = () => {
+    if (another.textContent !== another.dataset.confirm) {
+      const label = another.textContent;
+      another.textContent = another.dataset.confirm;
+      setTimeout(() => { another.textContent = label; }, 4000);
+      return;
+    }
+    another.textContent = "Make another link";
+    makeOne();
+  };
   for (const b of document.querySelectorAll("[data-reset]")) {
     b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
   }

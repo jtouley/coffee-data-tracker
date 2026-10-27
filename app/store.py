@@ -171,7 +171,13 @@ class Store:
             return [s for s in mine if s.bag_id == bag.bag_id]
         return [s for s in mine if last and coffee_key(s) == coffee_key(last)]
 
-    def prefill(self, user_id: str, grinder_id: str | None = None, basket_id: str | None = None) -> dict:
+    def prefill(
+        self,
+        user_id: str,
+        grinder_id: str | None = None,
+        basket_id: str | None = None,
+        machine_id: str | None = None,
+    ) -> dict:
         """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
         Time, taste and rating are never copied; the last ones are offered, not filled in. A grinder or basket
         picked from the chip replaces the last shot's; the grind then comes from this coffee's last shot on
@@ -227,7 +233,7 @@ class Store:
             "last": last,
             "grinder": grinder,
             "basket": basket,
-            "machine": next(iter(self.equipment_of(user_id, "machine")), None),
+            "machine": self._machine(user_id, machine_id, last),
             "coffee_id": bag.coffee_id if bag else last.coffee_id if last else None,
             "coffee_freetext": bag.coffee_freetext if bag else last.coffee_freetext if last else None,
             "dose_g": dose,
@@ -239,6 +245,14 @@ class Store:
             "last_time_s": last.time_s if last else None,
             "same_as_last": {"taste": last.taste, "rating": last.rating} if last else None,
         }
+
+    def _machine(self, user_id: str, picked: str | None, last: Shot | None) -> Equipment | None:
+        """The picked machine, else the last shot's (unless retired), else the default."""
+        for eid in (picked, last.machine_id if last else None):
+            e = self.gear(user_id, eid)
+            if e and e.kind == "machine" and not e.retired:
+                return e
+        return next(iter(self.equipment_of(user_id, "machine")), None)
 
     # --- writes --------------------------------------------------------------------------------------
 

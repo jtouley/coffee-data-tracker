@@ -34,11 +34,13 @@
     <label class="flabel" for="model">Notes on it (optional)</label>
     <input class="input" id="model" name="model" autocomplete="off" value="{{ item.model or '' if item else '' }}" placeholder="e.g. Dual boiler, flow paddle">
     {% endif %}
-    <div class="flabel" id="def-l">Use for new shots</div>
+    {% if others %}
+    <div class="flabel" id="def-l">New shots start with it</div>
     <div class="seg two" role="group" aria-labelledby="def-l" data-choice="is_default">
       {% set d = item.is_default if item else true %}
-      <button type="button" data-v="true" aria-pressed="{{ 'true' if d else 'false' }}">By default</button><button type="button" data-v="false" aria-pressed="{{ 'false' if d else 'true' }}">Only when picked</button>
+      <button type="button" data-v="true" aria-pressed="{{ 'true' if d else 'false' }}">Yes</button><button type="button" data-v="false" aria-pressed="{{ 'false' if d else 'true' }}">Only if I pick it</button>
     </div>
+    {% else %}<input type="hidden" name="is_default" value="true">{% endif %}
     <div class="hint" data-hint role="alert"></div>
     <div class="spacer"></div>
     <div class="dock">

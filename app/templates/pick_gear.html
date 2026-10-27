@@ -6,11 +6,11 @@
   <p class="body">A grind setting only means something on its own grinder, so switching grinders starts from this
     coffee’s last shot on that one.</p>
   <form class="fill" action="/log" method="get">
-    {% for kind, items, cur in (("grinder", grinders, grinder), ("basket", baskets, basket)) %}
+    {% for kind, items, cur in (("grinder", grinders, grinder), ("machine", machines, machine), ("basket", baskets, basket)) if items %}
     <fieldset class="pick">
-      <legend class="section group">{{ kind | capitalize }}</legend>
+      <legend class="section">{{ kind | capitalize }}</legend>
       {% for e in items %}
-      <label class="choice"><input type="radio" name="{{ kind }}" value="{{ e.equipment_id }}"{% if cur and cur.equipment_id == e.equipment_id %} checked{% endif %}><span>{{ e.name }}<span class="meta">{% if kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }}, step {{ g(e.scale_step) }}{% else %}{{ g(e.basket_dose_g) }} g{% endif %}</span></span></label>
+      <label class="choice"><input type="radio" name="{{ kind }}" value="{{ e.equipment_id }}"{% if cur and cur.equipment_id == e.equipment_id %} checked{% endif %}><span>{{ e.name }}<span class="meta">{% if kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }}, step {{ g(e.scale_step) }}{% elif kind == "basket" %}{{ g(e.basket_dose_g) }} g{% else %}{{ e.model or "Espresso machine" }}{% endif %}</span></span></label>
       {% endfor %}
     </fieldset>
     {% endfor %}
