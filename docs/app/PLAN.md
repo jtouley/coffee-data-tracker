@@ -1,6 +1,7 @@
 # Shot-logging app: plan
 
-Status: draft for discussion. Nothing here is implemented. The design is in [DESIGN.md](DESIGN.md) and the mockups
+Status: draft, updated with the owner's answers of October 27 (see "Decisions" at the end). Nothing here is
+implemented. The design is in [DESIGN.md](DESIGN.md) and the mockups
 are in [mockups/](mockups/).
 
 Today a shot reaches the lake through the MCP server or the "Log a shot" issue form. Both work. Neither is pleasant
@@ -22,10 +23,11 @@ small grind change) three taps, and makes a new bag one photo and one tap.
 
 ## Non-goals
 
-- More than one user. There is one owner; no sign-up, no sharing, no roles.
+- More than one user. There is one owner, and nobody else pulls shots on this machine; no sign-up, no sharing,
+  no roles.
 - A native app or an app store listing. A home-screen web app is enough.
-- Bluetooth scales and machine integrations (Acaia, Decent, Gaggiuino). Web Bluetooth doesn't work in iOS Safari,
-  and typing two numbers is fine. Worth revisiting later.
+- Bluetooth scales and machine integrations (Acaia, Decent, Gaggiuino). Chrome on Android does support Web
+  Bluetooth, so a scale is possible later; for now typing two numbers is fine.
 - Pour-over and filter recipes beyond what `brew_method` already stores. The UI is espresso-first.
 - Editing or deleting lake files. Corrections and retractions stay new records.
 - Buying coffee. The coffee page links to the roaster's product page and stops there.
@@ -62,14 +64,16 @@ finished.
    said "go finer to 11", the grind field shows 12 with a suggested 11 next to it; one tap takes the suggestion.
    The app never changes the value on its own.
 3. Adjust what changed with steppers (dose and yield in 0.1 g, time in 1 s, grind in the grinder's own step size).
-   An optional shot timer: tap the time numeral to start, tap again to stop.
-4. Pick taste (sour, balanced, bitter) and rating (1 to 5). Taste and rating have no default; they are the only
-   new information in a repeat shot.
+   Time has two ways in, both always available: the built-in timer (Start when the pump starts, Stop when it
+   stops) or typing it. "Type" opens a numeric keypad; tapping any numeral does the same for that field.
+4. Pick taste (sour, balanced, bitter) and rating (1 to 5). Both start empty; they are the only new information in
+   a repeat shot. A "Same as last" chip above them ("Same as last: balanced, 4") fills both in one tap when the shot
+   tasted like yesterday's.
 5. "Save shot". The saved screen shows the ratio, the time against the 25 to 32 s window and the next-shot advice,
    with "Undo" for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
 
-Repeat shot with nothing changed but taste and rating: Pull again, taste, rating, Save. Four taps, or three if
-rating defaults to the last value (open question 7).
+Repeat shot with nothing changed: Pull again, "Same as last", Save. Three taps. If the taste or rating differs:
+Pull again, taste, rating, Save. Four taps. Using the timer adds two (Start, Stop).
 
 ### 3. Review a coffee
 
@@ -87,7 +91,11 @@ default. Adding a grinder takes a name and those three numbers. Retiring one hid
 shots pointing at it. Changes are new records, with the latest per `equipment_id` winning.
 
 Most mornings nobody touches this screen. The shot form shows the current grinder and basket as one small chip
-("Niche Zero · 18 g VST"); tapping it switches.
+("DF64 V2 · Pullman"); tapping it switches.
+
+The owner's setup to seed on first run: a DF64 V2 grinder (stepless, numbered dial), a Lelit Bianca, and a Pullman
+basket. The DF64's dial range, the step the stepper should use, which way is finer and the Pullman's nominal dose
+are entered once when the grinder and basket are added (see Decisions).
 
 ## Screens
 
@@ -152,7 +160,8 @@ prefers, make the Space private as well.
 
 Each action is one Hugging Face commit, made by the Space with the existing `Lake.write` and `Lake.publish`:
 
-- New bag: the photo file, the `photos` row and the `bags` row in one commit.
+- New bag: two commits. First the photo's Parquet file to the photo dataset, then the `bags` row to the lake. If
+  the second fails, the photo is orphaned but harmless, and the outbox retries the bag.
 - Shot: one `shots` file.
 - Equipment change: one `equipment` file.
 
@@ -165,16 +174,34 @@ same id; latest-wins collapses it, as for any correction. So retries are safe wi
 
 The weekly run and the Space can commit to the dataset at the same time: they touch different paths, and the
 `concurrency: lake` group in Actions doesn't cover the Space, so this relies on HF commits not conflicting on
-disjoint files. Worth one test before relying on it (open question 9).
+disjoint files. The owner has approved one test during milestone 2: a commit from a throwaway Space to a test path
+while a weekly run is committing.
 
 ### Where the bag photo is read
 
 On the server, with the Anthropic key as a Space secret. One request per photo: the image, a short instruction and
-a JSON schema through structured outputs, so the response always parses. The default model is Claude Opus 5.5
-(`claude-opus-5-5`) at low effort. Bag labels are short but varied (hand-lettered names, stickers on kraft paper,
-dates as "R 10.18" or "Roasted on 18/10"), and one bag a week makes cost a non-issue. If the owner wants it cheaper,
-Claude Haiku 5.5 is a one-line change; test it against a handful of real bags first. The request turns on the API's
-server-side refusal fallback, so a declined read falls back to another model instead of failing.
+a JSON schema through structured outputs, so the response always parses. Bag labels are short but varied
+(hand-lettered names, stickers on kraft paper, dates as "R 10.18" or "Roasted on 18/10").
+
+The model is chosen by measurement, as the owner asked: Claude Opus 5.5 (`claude-opus-5-5`) and Claude Haiku 5.5
+(`claude-haiku-5-5`) are compared on the same set of real bags before either becomes the default.
+
+- The set: 20 to 30 photos of real bags, ideally including a few hard ones (hand lettering, a sticker on kraft
+  paper, a date stamp, a café's own bag). Each has the expected roaster, coffee, roast date and catalog match,
+  filled in by hand.
+- Each model reads every photo three times at low effort, with the same prompt and schema.
+- Scored per field: roaster, coffee name and roast date exact (after normalizing case and date format), plus the
+  end-to-end result that matters: did the Python matcher land on the right `coffee_id`? Also logged: latency and
+  cost per read, and whether the three runs agreed.
+- Rule: use Haiku if it gets the same number of correct end-to-end matches as Opus (or misses only bags that Opus
+  also struggles with) and its median latency is lower. Otherwise use Opus; at one bag a week the cost difference
+  is under a dollar a year, so accuracy decides.
+- The comparison is a script in the repo (`app/eval/bag_read.py`) with the photos in the private photo dataset, so
+  it can be re-run whenever the prompt or the models change.
+
+With Opus, the request turns on the API's server-side refusal fallback, so a declined read falls back to another
+model instead of failing. Haiku 5.5 has no server-side fallback, so with Haiku a declined or failed read drops to
+the manual path ("Type it instead") and is logged.
 
 The model only reads the label. Matching to the catalog stays deterministic, in Python, against `dim_coffee`; the
 model never sees the catalog. That keeps the read cheap and the matching testable.
@@ -235,19 +262,22 @@ schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a ze
 | `match_score` | int | |
 | `deleted` | bool | |
 
-`photos/meta/<photo_id>.parquet` and `photos/img/<photo_id>.jpg`
+`photos/<photo_id>.parquet`, in the separate private photo dataset (see Privacy)
 
 | Column | Type | Notes |
 |---|---|---|
 | `photo_id` | string | UUID |
 | `taken_at` | timestamp | |
-| `path` | string | `photos/img/<photo_id>.jpg` |
+| `image` | binary | the JPEG bytes, EXIF removed, about 1600 px on the long edge |
+| `media_type` | string | `image/jpeg` |
 | `width`, `height`, `bytes` | int | |
-| `sha256` | string | |
+| `sha256` | string | of `image`; the same bag photographed twice is easy to spot |
 
-Photos are the first non-Parquet files in the lake. `Lake.write` is Parquet-only, so this needs a small
-`Lake.write_blob(rel, bytes)` with the same no-overwrite check, and `Lake.publish` already uploads whatever is
-staged. See Privacy for where these files live.
+Photos are Parquet like everything else, one row per file, so `Lake.write` handles them with one new schema entry
+(a `pa.binary()` column) and no new code path. The photo dataset is opened as its own `Lake`
+(`COFFEEDATA_PHOTOS=hf://datasets/jtouley/coffee-data-photos`). The `photo_id` on a `bags` row is the only link
+from the main lake. Parquet's compression won't shrink a JPEG further, so the files are about the size of the
+image.
 
 ### Changes to `shots`
 
@@ -271,27 +301,28 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 
 ### dbt changes
 
-- `stg_equipment`, `stg_bags`, `stg_photos`: latest record per id, without deleted ones, the same shape as
-  `stg_shots`.
+- `stg_equipment`, `stg_bags`: latest record per id, without deleted ones, the same shape as `stg_shots`. Photos are
+  not modelled in dbt; the Space reads them directly from the photo dataset.
 - `dim_equipment`: current equipment.
 - `fct_shot`: join `stg_bags` (`roast_date` falls back to the bag's), `dim_equipment` (grinder name, scale), and add
   `grind_position = (grinder_setting - scale_min) / (scale_max - scale_min)` so shots across grinders can at least
   be compared roughly.
 - `mart_dial_in`: add `grinder_id` to the per-coffee grain.
 - `mart_bag` (new): one row per bag with shot count, best shot, days off roast at first and last shot.
-- `public_tables_are_facts_only.sql`: add `photo_id`, `bag_id`, `grinder_id`, `machine_id`, `basket_id`, `path`,
+- `public_tables_are_facts_only.sql`: add `photo_id`, `image`, `bag_id`, `grinder_id`, `machine_id`, `basket_id`,
   `read_json` and `sha256` to the forbidden columns.
 - The weekly export adds `marts/fct_shot.parquet` (private lake only), which the Space uses as its starting copy.
 
 ## Privacy
 
-- Bag photos go to a separate private dataset, `hf://datasets/jtouley/coffee-data-photos`, not the main lake. The
-  main lake is private too, but a separate dataset means a mistake in the public export can't reach a photo, and
-  the photos could be deleted wholesale without touching the lake's history. The `photos/meta` rows stay in the
-  main lake so dbt can see that a photo exists.
+- Bag photos stay private. They go to a separate private dataset, `hf://datasets/jtouley/coffee-data-photos`, as
+  Parquet files with the image in a binary column. The main lake is private too, but a separate dataset means a
+  mistake in the public export can't reach a photo, and the photos could be deleted wholesale without touching the
+  lake's history. Only the `photo_id` is in the main lake.
 - EXIF is removed on the phone before upload, so GPS coordinates of the kitchen never leave it. The server
-  re-encodes the JPEG as a second check.
-- Photos are served only through the Space, behind the owner check, never by a direct HF URL.
+  re-encodes the JPEG as a second check before writing the bytes into Parquet.
+- Photos are served only through the Space, behind the owner check, never by a direct HF URL. The Space reads the
+  `image` column and returns the bytes.
 - The image goes to the Anthropic API to be read. Under standard API terms it isn't used for training; it is still
   a third party seeing a photo of a kitchen counter. The capture screen frames the bag tightly to keep the
   background small.
@@ -303,9 +334,10 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 
 | Item | Estimate |
 |---|---|
-| Hugging Face Space, CPU basic | free; an always-on upgrade, if wanted, is billed by the hour (check the current HF price list) |
+| Hugging Face Space, CPU basic | free. The owner accepts the cold start after two idle days for now; an always-on upgrade is billed by the hour if that changes |
 | Bag reads, Claude Opus 5.5 ($4 / $20 per million tokens in / out) | ~1,600 image tokens + ~400 prompt + ~300 out ≈ $0.015 per bag. One bag a week ≈ $1 a year |
 | Same with Claude Haiku 5.5 ($0.10 / $0.50) | well under a cent a year |
+| The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.50, almost all of it Opus; once per prompt change |
 | Photo storage | ~300 KB per bag ≈ 15 MB a year, inside the free private storage |
 | Shot and equipment files | a few KB each; negligible next to the weekly catalog snapshots |
 
@@ -319,32 +351,38 @@ Each one is usable on its own and goes through the normal PR and CI process.
    test update, the `fct_shot` mart export. The MCP `log_shot` tool and issue form accept `grinder`. No app yet;
    tests over a synthetic lake with old and new shots mixed.
 2. **App skeleton.** FastAPI on a Space, HF OAuth with the owner allowlist, the deploy workflow, the in-memory shot
-   cache. Today and Log shot with prefill and advice. Online only.
+   cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
+   concurrent-commit test.
 3. **Equipment.** Equipment screen, grinder-aware steppers and advice.
 4. **Bag capture.** Photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
-   the match card and its fallbacks. An offline eval: 20 real bag photos with the expected match, run by hand
-   before changing the model or prompt.
+   the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
 5. **Coffee page.** Catalog facts, best recipe, chart, shot list, correct and retract.
 6. **Offline.** Service worker, outbox, the JavaScript advice port with shared test cases.
-7. **Polish.** Dark mode check in a dark kitchen, haptics where the browser allows, left-hand layout, the shot
-   timer, the empty states.
+7. **Polish.** Dark mode check in a dark kitchen, haptics (Android Chrome supports them), left-hand layout, the
+   empty states.
 
 Milestones 1 and 2 are the minimum that replaces the issue form at the machine. Capture (4) is the reason for the
 app, but it needs the bag and photo tables from 1 first.
 
+## Decisions (October 27)
+
+| Question | Answer | What it changes |
+|---|---|---|
+| Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
+| Equipment | DF64 V2, Lelit Bianca, Pullman basket | Seeded as the defaults. The mockups show them. |
+| Cold start | Fine for now | Free CPU Space. |
+| Photos | Stay private, still Parquet | Separate private dataset, image bytes in a Parquet `binary` column, no new file type in the lake. |
+| Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
+| Rating default | Empty, with a way to say "same as last" | Taste and rating start empty; a "Same as last" chip fills both. |
+| Other users | No, just the owner | One-username allowlist stays. |
+| Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
+| Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
+
 ## Open questions for the owner
 
-1. iPhone or Android? It decides whether haptics work (iOS Safari has no vibration API) and how the home-screen app
-   keeps its login.
-2. Which grinder, machine and basket do you use now? Is the grinder stepped or stepless, and is a lower number
-   finer?
-3. Is a cold start of up to a minute after two days away acceptable, or should the Space be always-on (paid)?
-4. Is a separate private dataset for photos fine, or would you rather keep them in the main lake?
-5. Do you want the built-in shot timer, or does the machine's own timer do the job and you'd rather type the time?
-6. Should shots stay on the public GitHub Pages site once equipment and bags exist, or move entirely into the app?
-7. Should rating default to the last shot's rating, making a repeat shot three taps, or stay empty so every rating
-   is a fresh judgement?
-8. Is anyone else pulling shots on this machine? If so, "one owner" may need to become "one household".
-9. Can we run one test commit to the lake from a throwaway Space while a weekly run is committing, to confirm the
-   two don't conflict? (Nothing would be written outside a test path.)
-10. Is Opus for the bag read fine at about a dollar a year, or do you want to try Haiku first?
+1. Should shots stay on the public GitHub Pages site once equipment and bags exist, or move entirely into the app?
+2. The DF64 V2's dial: what range do you use for espresso, what step should the stepper move in (0.5? 1?), and
+   does a lower number mean finer?
+3. Which Pullman basket size (its nominal dose)? It sets the default dose and the dose hint.
+4. Do you have 20 to 30 bags (or photos of past bags) for the Haiku/Opus comparison, including a couple of hard
+   labels?

@@ -1,8 +1,8 @@
 # Shot-logging app: design
 
-The plan is in [PLAN.md](PLAN.md). Mockups for eight screens are in [mockups/](mockups/), each as a
-self-contained HTML file with light and dark screenshots at 390 px. All coffees, prices and shots in them are
-sample data.
+The plan is in [PLAN.md](PLAN.md). Mockups for eight screens are in [mockups/](mockups/), each a self-contained
+HTML file with light and dark screenshots at 390 px. They show the owner's equipment (DF64 V2, Lelit Bianca,
+Pullman basket); the coffees, prices and shots are sample data.
 
 ## How this was made
 
@@ -69,7 +69,7 @@ All six came to the same handful of conclusions without seeing each other's work
 | Advice applying itself | one tap applies it (MengTo); never edits the value (Owl) | The grind field keeps the last value and shows the suggestion next to it. One tap takes the suggestion. Advice that edits your recipe silently would be wrong at least sometimes. |
 | Motion on save | staggered entrance; spring settle; line draw; none | One movement: the new mark travels from the previous shot's position on the target to its own, 360 ms, then the advice fades in. It shows the change you made. Nothing else on the screen moves. |
 | Dark mode default | follow the system; dark between 5 and 8 am | Follow the system. A clock-based theme surprises people. |
-| Rating prefill | empty (most); last value (one) | Empty, for now. Open question 7 in the plan. |
+| Rating prefill | empty (most); last value (one) | The owner decided: taste and rating start empty, and a "Same as last" chip fills both from the previous shot in one tap. Every rating stays a choice, and a repeat shot is still three taps. |
 
 From apple-design I took the parts that suit a utility: feedback on press rather than on release, sheets that
 follow the finger and settle with a critically damped spring, scroll-edge fades instead of hard rules under
@@ -173,8 +173,9 @@ Both families come from Google Fonts. Load only the axes used (`Archivo:wdth,wgh
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
 `prefers-reduced-motion: reduce`, everything is an instant swap or a plain crossfade. No `transition: all`.
 
-Haptics: one light tick per stepper step and on save, where the browser supports `navigator.vibrate` (Android).
-iOS Safari doesn't, so nothing there depends on it.
+Haptics: the owner uses Android, where Chrome supports `navigator.vibrate`. One 8 ms tick per stepper step, a 12 ms
+tick when the timer starts and stops, and two short ticks on save. They fire on the same frame as the visual change
+(apple-design §13). Nothing depends on them, so the app still works where they're missing.
 
 ## Components
 
@@ -183,13 +184,20 @@ iOS Safari doesn't, so nothing there depends on it.
 on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a numeric keypad for big jumps. A
 left-hand setting mirrors the steppers to the left edge.
 
-**Time field.** The same row, with a Start/Stop button in place of the steppers. While the timer runs, the numeral
-ticks once a second and the button reads Stop. After stopping, the steppers come back for corrections.
+**Time field.** The same row, with two buttons in place of the steppers: Start/Stop (120 px wide) and Type
+(56 px). Start when the pump starts; while the timer runs, the numeral ticks once a second and the button reads
+Stop. Type opens the numeric keypad for anyone reading the time off the Bianca's shot timer. Tapping the numeral
+does the same. Both are always there; the app doesn't make you pick a mode.
+
+**Same as last.** An accent-outlined chip on the Taste row: "Same as last · Balanced, 4". One tap selects that
+taste and that rating; tapping a different segment or pip afterwards overrides either. Hidden when there's no
+previous shot of this coffee.
 
 **Taste segments.** Three equal segments, each with the word and what it means for the grind ("grind finer",
-"keep", "grind coarser"). Selected: tinted background, 2 px inset ring in the taste colour. No default selection.
+"keep", "grind coarser"). Selected: tinted background, 2 px inset ring in the taste colour. No default selection;
+see Same as last.
 
-**Rating pips.** Five squares, 1 to 5. Selected is filled with `--ink`.
+**Rating pips.** Five squares, 1 to 5, none selected by default. Selected is filled with `--ink`.
 
 **Taste tag.** For lists: the word in the taste colour on its tint, with the shape mark. Never colour alone.
 

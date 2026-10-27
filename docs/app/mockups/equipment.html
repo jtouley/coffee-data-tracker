@@ -143,6 +143,9 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
   font-size: 20px; font-stretch: 80%; font-weight: 500; font-variant-numeric: tabular-nums; }
 .pips > div.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
+.same { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--accent);
+  color: var(--accent); border-radius: 8px; font-size: 15px; font-weight: 600; white-space: nowrap; }
+.same b { font-weight: 400; color: var(--ink-2); margin-left: 4px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .list .item { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .list .item:first-child { border-top: 1px solid var(--rule); }
@@ -165,21 +168,17 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
   <div class="top"><h1 style="font-size:28px;font-weight:600;font-stretch:90%">Equipment</h1></div>
   <p class="small muted" style="margin:4px 0 0">Every shot records the grinder and basket it was pulled with. Changes are saved as new records, so old shots keep what they used.</p>
 
-  <h2>Grinders</h2>
-  <div class="gear"><span class="n">Niche Zero</span><span class="tag">Default</span>
-    <span class="d">Stepless, 0 to 50 · step 1 · lower is finer · 23 shots</span></div>
-  <div class="gear"><span class="n">Comandante C40</span><span class="tag off">Retired</span>
-    <span class="d">Clicks, 0 to 40 · step 1 · lower is finer · 61 shots</span></div>
+  <h2>Grinder</h2>
+  <div class="gear"><span class="n">DF64 V2</span><span class="tag">Default</span>
+    <span class="d">Stepless, numbered dial · steps of 0.5 · 23 shots</span></div>
 
   <h2>Machine</h2>
   <div class="gear"><span class="n">Lelit Bianca</span><span class="tag">Default</span>
-    <span class="d">Dual boiler · brew 93 °C · 84 shots</span></div>
+    <span class="d">Dual boiler, flow paddle · brew 93 °C · 23 shots</span></div>
 
-  <h2>Baskets</h2>
-  <div class="gear"><span class="n">VST 18 g</span><span class="tag">Default</span>
-    <span class="d">Nominal 18 g · 70 shots</span></div>
-  <div class="gear"><span class="n">IMS 20 g</span><span></span>
-    <span class="d">Nominal 20 g · 14 shots</span></div>
+  <h2>Basket</h2>
+  <div class="gear"><span class="n">Pullman</span><span class="tag">Default</span>
+    <span class="d">Nominal dose not set yet · 23 shots</span></div>
 
   <div style="margin-top:20px"><div class="btn secondary">Add equipment</div></div>
   <div style="height:24px"></div>

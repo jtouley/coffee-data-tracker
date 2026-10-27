@@ -143,6 +143,9 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
   font-size: 20px; font-stretch: 80%; font-weight: 500; font-variant-numeric: tabular-nums; }
 .pips > div.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
+.same { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--accent);
+  color: var(--accent); border-radius: 8px; font-size: 15px; font-weight: 600; white-space: nowrap; }
+.same b { font-weight: 400; color: var(--ink-2); margin-left: 4px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .list .item { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .list .item:first-child { border-top: 1px solid var(--rule); }
@@ -157,13 +160,13 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
 <main class="screen">
   <div class="top">
     <span class="back">‹ Today</span>
-    <span class="small muted" style="border:1px solid var(--rule-strong);border-radius:4px;padding:4px 8px">Niche Zero · 18 g VST</span>
+    <span class="small muted" style="border:1px solid var(--rule-strong);border-radius:4px;padding:4px 8px">DF64 V2 · Pullman</span>
   </div>
   <div class="row" style="margin:6px 0 4px;align-items:baseline">
     <div class="serif" style="font-size:24px">Hambela Alaka</div>
     <div class="num" style="font-size:28px">1:2.02</div>
   </div>
-  <div class="small muted" style="margin-bottom:8px">Last shot 27 s, balanced, rated 4. Same recipe suggested.</div>
+  <div class="small muted" style="margin-bottom:8px">Last shot 27 s, balanced, rated 4. Same recipe.</div>
 
   <div class="field">
     <div><div class="l label">Dose</div><div class="v"><span class="num">18.0</span><span class="u">g</span></div></div>
@@ -175,21 +178,24 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
   </div>
   <div class="field">
     <div><div class="l label">Time</div><div class="v"><span class="num">29</span><span class="u">s</span></div></div>
-    <div class="steps"><div class="step timer">Start</div></div>
+    <div class="steps"><div class="step timer">Start</div><div class="step" style="font-size:15px;font-weight:600">Type</div></div>
   </div>
   <div class="field">
-    <div><div class="l"><span class="label">Grind</span><span class="hint">was 12</span></div><div class="v"><span class="num">11</span><span class="u">of 50</span></div></div>
+    <div><div class="l"><span class="label">Grind</span><span class="hint">was 12</span></div><div class="v"><span class="num">11</span><span class="u">on the dial</span></div></div>
     <div class="steps"><div class="step">−</div><div class="step">+</div></div>
   </div>
 
-  <div class="label" style="margin:18px 0 8px">Taste</div>
+  <div class="row" style="margin:12px 0 8px">
+    <span class="label">Taste</span>
+    <span class="same">Same as last <b>· Balanced, 4</b></span>
+  </div>
   <div class="seg">
     <div>Sour<small>grind finer</small></div>
-    <div class="on-balanced">Balanced<small>keep</small></div>
+    <div>Balanced<small>keep</small></div>
     <div>Bitter<small>grind coarser</small></div>
   </div>
   <div class="label" style="margin:16px 0 8px">Rating</div>
-  <div class="pips"><div>1</div><div>2</div><div>3</div><div class="on">4</div><div>5</div></div>
+  <div class="pips"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
   <div class="row small muted" style="min-height:48px;margin-top:6px"><span>93 °C · espresso · no milk · no notes</span><span style="color:var(--accent);font-weight:600">More</span></div>
 
   <div class="dock"><div class="btn primary">Save shot</div></div>
