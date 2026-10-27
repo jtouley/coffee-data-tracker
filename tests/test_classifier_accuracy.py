@@ -1,9 +1,10 @@
 """The classifier against products labeled by hand (two independent labels each, disagreements settled).
 
-tests/fixtures/classifier_labels.jsonl holds two samples from the live lake, 600 products each: 250 the classifier
-kept, 250 it dropped and 100 borderline titles. "dev" is the sample the rules were tuned on; "test" was drawn and
-labeled afterwards, so its score is the honest one. Green (unroasted) coffee is labeled not coffee; wholesale
-bags of one coffee are coffee. A rules change must not lower either score.
+tests/fixtures/classifier_labels.jsonl holds samples from the live lake, 600 products each: 250 the classifier kept,
+250 it dropped and 100 borderline titles. "train" is the sample the rules were tuned on. "validation" was drawn and
+labeled afterwards and is used to choose models and prompts, so it has been looked at. A third, sealed test sample is
+scored once, after everything is frozen, and only then added here. Green (unroasted) coffee is labeled not coffee;
+wholesale bags of one coffee are coffee. A rules change must not lower any score.
 """
 
 import json
@@ -16,7 +17,7 @@ from coffeedata.models import CatalogItem, Variant
 
 LABELS = Path(__file__).parent / "fixtures" / "classifier_labels.jsonl"
 # Measured on 2026-10-27; raise these when the classifier improves, never lower them to pass.
-FLOOR = {"dev": 0.985, "test": 0.935}
+FLOOR = {"train": 0.985, "validation": 0.935}
 
 
 def _rows(name):
