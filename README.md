@@ -19,7 +19,7 @@ modeled with dbt and DuckDB.
 ```bash
 make install
 make weekly SAMPLE=50        # 50 roasters into ./lake; leave out SAMPLE for all of them (about an hour)
-open build/site/index.html   # the launch page; the catalog app is build/site/app/
+open build/site/index.html
 ```
 
 `make test` runs the lint checks, the unit tests and dbt builds over synthetic multi-week lakes, all offline.
@@ -85,7 +85,7 @@ config/roasters.csv + lake registry ──probe──▶ platform ──ingest�
                                                                            │
                  dim_coffee, dim_roaster, fct_price_event, fct_shot, mart_dial_in, mart_market, mart_new_arrivals
                                                                            │
-                  static site (registry.coffee on GitHub Pages), marts/ in the lake, MCP server
+                                          static site (GitHub Pages), marts/ in the lake, MCP server
 ```
 
 `coffeedata weekly` (the `weekly.yml` workflow, Mondays) runs:
@@ -119,54 +119,14 @@ Message Batches API, which costs half as much, and are collected on the next run
    - optionally, secret `ANTHROPIC_API_KEY`
    - optionally, for Snowflake: variables `SNOWFLAKE_ACCOUNT` and `SNOWFLAKE_USER`, secret `SNOWFLAKE_PRIVATE_KEY`
      (see `marketplace/README.md`)
-4. Settings → Pages → Source: GitHub Actions. For the custom domain, see [The site](#the-site).
+4. Settings → Pages → Source: GitHub Actions.
 5. Create the `shot` and `roaster` issue labels.
 6. Run the weekly workflow by hand with `sample: 50`. After that it runs every Monday.
 
 ## The site
 
-The weekly run builds a static site and GitHub Pages serves it at [registry.coffee](https://registry.coffee):
-
-- `/` is the launch page: this week's numbers, new arrivals and links to the catalog, the public Hugging Face
-  dataset, the warehouse setup, the MCP server and the "Add a roaster" form.
-- `/app/` is the catalog: search, charts, new arrivals, shots and coverage.
-
-The dataset link and the DuckDB example come from `PUBLIC_EXPORT_URL` when it's an `hf://` dataset. Without one, the
-page points at this repo instead. The private lake is never linked. `SITE_URL` sets the canonical URL; it defaults to
-`https://registry.coffee`.
-
-Hugging Face charges for custom domains on Spaces, but GitHub Pages doesn't, so the data stays on Hugging Face and
-Pages serves the domain. The setup (Namecheap DNS records, GitHub Pages, domain verification, the first deploy) and
-the gotchas are in [`runbook/`](runbook/README.md); `runbook/check-dns.sh` checks the records.
-
-## Cost and security
-
-It runs on free tiers. The only fixed cost is the domain.
-
-| Piece | Cost |
-|---|---|
-| GitHub Actions and Pages | free for a public repo |
-| Hugging Face datasets (lake and public export) | free |
-| registry.coffee | $6.98 the first year; .coffee renewals are much higher (about $48 a year at Namecheap), so compare registrars before it renews |
-| Claude enrichment (optional) | pay as you go; capped by `--enrich-limit`, and new coffees only after the first run |
-| Snowflake, S3 (optional) | only if you turn them on |
-
-How it's locked down:
-
-- **Workflows.** Actions are pinned to commit SHAs, and Dependabot (`.github/dependabot.yml`) opens a monthly PR to
-  update them and the lockfile. The weekly job, which holds the secrets and reads third-party sites, can only read
-  the repo; only the deploy job can publish Pages. Checkouts don't keep the git token. The issue-form workflow only
-  acts on the owner's issues and passes issue text through files and environment variables, never the shell.
-- **The site.** It's static, with no server, cookies or third-party scripts. Each page has a Content-Security-Policy
-  that only allows its own inline script (by hash) and same-origin requests. Product links from roasters' feeds are
-  kept only if they're plain `http(s)` URLs, and all text is escaped.
-- **Secrets.** Use a fine-grained Hugging Face token with write access to only the lake and public datasets. Set a
-  monthly spend limit on the Anthropic key in the Claude Console. Keep the lake dataset private; only the facts-only
-  public export is linked.
-- **The domain.** Turn on two-factor authentication at Namecheap and GitHub, keep the domain locked
-  (Namecheap → Domain → Registrar Lock) with auto-renew on, and verify the domain in your GitHub profile's Pages
-  settings so another account can't serve a site on it. If you ever remove the Pages site, delete its DNS records
-  too.
+The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+`/` and the catalog at `/app/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
 ## Public tables and marketplaces
 
