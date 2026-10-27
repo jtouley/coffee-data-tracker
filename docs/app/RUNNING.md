@@ -58,10 +58,14 @@ Set these in the Space's settings (Variables and secrets → New secret):
 | `ANTHROPIC_API_KEY` | Reads bag labels. Without it, New bag offers "Type it instead" only |
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
-| `OWNER_SETUP_CODE` | Typed once to create the owner's account |
+| `OWNER_SETUP_CODE` | Typed once to create the owner's account; after that it only resets the owner's password. Optional once the owner exists |
 
-`python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until the sign-in
-secrets are set, every page returns 503 and names the missing secrets, never their values.
+`python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER` and
+`SESSION_SECRET` are set, every page returns 503 and names the missing secrets, never their values.
+
+Sign-in limits key on the phone's address. On the Space it's taken from the `X-Forwarded-For` entry the Space's
+proxy appends (`COFFEEDATA_PROXY_HOPS=1`, set in the Dockerfile), never from what the client sent; uvicorn runs
+without `--proxy-headers`.
 
 The dataset locations are set in the Dockerfile and can be overridden as Space variables:
 

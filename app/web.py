@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import mimetypes
 from collections.abc import Awaitable, Callable
 from pathlib import Path
@@ -92,13 +93,85 @@ class Assets:
 Next = Callable[[Request], Awaitable[Response]]
 
 
-def middleware(set_cookie: Callable[[Response, object], None] | None) -> Callable[[Request, Next], Awaitable]:
+def middleware(
+    set_cookie: Callable[[Response, object], None] | None,
+    cookie: str,
+    on_error: Callable[[Request], Awaitable[Response]],
+) -> Callable[[Request, Next], Awaitable]:
+    """The outermost layer: every response, errors included, gets the security headers, and a session due for
+    renewal gets a fresh cookie unless the route already set or cleared one (sign-out, a password change)."""
+
     async def mw(request: Request, call_next: Next) -> Response:
-        response = await call_next(request)
+        try:
+            response = await call_next(request)
+        except Exception:  # noqa: BLE001 - shown as the error screen; logged by on_error
+            response = await on_error(request)
         secure_headers(response, request.url.path)
         acct = getattr(request.state, "renew", None)
-        if acct is not None and set_cookie is not None:
+        already = any(v.startswith(f"{cookie}=") for v in response.headers.getlist("set-cookie"))
+        if acct is not None and set_cookie is not None and not already:
             set_cookie(response, acct)
         return response
 
     return mw
+
+
+class LimitBody:
+    """Refuse request bodies over a size, counting what arrives rather than trusting Content-Length (a chunked
+    body has none). Limits are per path prefix, longest first; anything else gets `default`."""
+
+    def __init__(self, app: Callable, default: int, limits: dict[str, int] | None = None):
+        self.app, self.default = app, default
+        self.limits = sorted((limits or {}).items(), key=lambda kv: -len(kv[0]))
+
+    def limit(self, path: str) -> int:
+        return next((n for prefix, n in self.limits if path.startswith(prefix)), self.default)
+
+    async def __call__(self, scope: dict, receive: Callable, send: Callable) -> None:
+        if scope["type"] != "http":
+            return await self.app(scope, receive, send)
+        limit = self.limit(scope["path"])
+        declared = dict(scope.get("headers") or []).get(b"content-length")
+        if declared is not None and (not declared.isdigit() or int(declared) > limit):
+            status = 400 if not declared.isdigit() else 413
+            return await self._refuse(scope, receive, send, status)
+        body, more = b"", True
+        while more:
+            message = await receive()
+            if message["type"] == "http.disconnect":
+                return
+            body += message.get("body", b"")
+            more = message.get("more_body", False)
+            if len(body) > limit:
+                return await self._refuse(scope, receive, send, 413)
+        sent = False
+
+        async def replay() -> dict:
+            nonlocal sent
+            if sent:
+                return await receive()
+            sent = True
+            return {"type": "http.request", "body": body, "more_body": False}
+
+        await self.app(scope, replay, send)
+
+    async def _refuse(self, scope: dict, receive: Callable, send: Callable, status: int) -> None:
+        detail = "That request is too large." if status == 413 else "Bad Content-Length."
+        response = Response(
+            json.dumps({"detail": detail}),
+            status,
+            media_type="application/json",
+            headers={"Connection": "close"},
+        )
+        secure_headers(response, scope["path"])
+        await response(scope, receive, send)
+
+
+def client_ip(request: Request, hops: int) -> str:
+    """The phone's address for rate limits. Behind `hops` proxies that each append to X-Forwarded-For, it's that
+    many entries from the right; anything further left was sent by the client and can't be trusted."""
+    if hops > 0:
+        chain = [p.strip() for p in request.headers.get("x-forwarded-for", "").split(",") if p.strip()]
+        if len(chain) >= hops:
+            return chain[-hops]
+    return request.client.host if request.client else ""

@@ -2,6 +2,7 @@
 per-user scoping with real accounts, and the headers and static files every response gets."""
 
 import base64
+import contextlib
 import json
 import re
 from datetime import UTC, datetime, timedelta
@@ -347,11 +348,12 @@ def test_cache_starts_from_fct_shot_plus_newer_files(lake, users, monkeypatch):
     con = lake.connect()
     con.execute("create table t (shot_id varchar, logged_at timestamptz, brewed_at timestamptz, dose_g double,"
                 " yield_g double, time_s double, rating int, coffee_freetext varchar, user_id varchar,"
-                " grinder_setting double, brew_ratio double)")  # fmt: skip
+                " grinder_setting double, brew_ratio double, coffee_id varchar, roast_date date,"
+                " shot_coffee_id varchar, shot_coffee_freetext varchar, shot_roast_date date)")  # fmt: skip
     for sid in ("s1", "s2"):
-        con.execute(
-            "insert into t values (?, ?, ?, 18, 36, 28, 4, 'Geometry', 'owner', 11, 2.0)", [sid, old, old]
-        )
+        # fct_shot fills coffee_id and roast_date from the bag; the shot's own values are the shot_* columns.
+        con.execute("insert into t values (?, ?, ?, 18, 36, 28, 4, 'Geometry', 'owner', 11, 2.0, 'bag:coffee',"
+                    " '2026-09-20', null, 'Geometry', null)", [sid, old, old])  # fmt: skip
     lake.write_mart("fct_shot", con, "select * from t")
     # An old file the export already covers is never read; newer files are: s2 retracted, s3 new.
     lake.write("shots", f"shots/s1__{old - timedelta(days=1):%Y%m%dT%H%M%S}.parquet",
@@ -367,6 +369,8 @@ def test_cache_starts_from_fct_shot_plus_newer_files(lake, users, monkeypatch):
     store = Store(lake, "owner")
     assert [s.shot_id for s in store.shots_of("owner")] == ["s1", "s3"]
     assert store.shot("owner", "s1").time_s == 28  # from the export, not the older file
+    # The shot as it was written, without the bag's values fct_shot filled in.
+    assert store.shot("owner", "s1").coffee_id is None and store.shot("owner", "s1").roast_date is None
     assert [p.rsplit("/", 1)[-1] for p in read[0]] == sorted(
         [f"s2__{later:%Y%m%dT%H%M%S}.parquet", f"s3__{later:%Y%m%dT%H%M%S}.parquet"]
     )
@@ -390,5 +394,130 @@ def test_a_space_without_its_secrets_says_which_are_missing(lake, monkeypatch):
         monkeypatch.delenv(k, raising=False)
     r = TestClient(create_app(lake)).get("/")
     assert r.status_code == 503
-    assert "AUTH_PEPPER, OWNER_SETUP_CODE" in r.text and "s" * 40 not in r.text
+    assert "restart it: AUTH_PEPPER." in r.text and "s" * 40 not in r.text  # OWNER_SETUP_CODE is optional
     assert r.headers["x-content-type-options"] == "nosniff"
+
+
+# --- regressions from the review of #15 ----------------------------------------------------------------
+
+
+def _aged(lake, users, days: float = 2) -> TestClient:
+    """Signed in with a cookie old enough to be renewed on the next request."""
+    a = accounts(users)
+    acct = a.by_name("jtouley") or a.create_owner(CODE, "jtouley", PW)
+    c = TestClient(create_app(lake, Sessions(a)), base_url="https://testserver", follow_redirects=False)
+    c.cookies.set(COOKIE, a.issue(acct, now=datetime.now(UTC).timestamp() - days * 86400))
+    return c
+
+
+@pytest.mark.parametrize("path", ["/api/signout", "/api/signout-everywhere"])
+def test_sign_out_sticks_when_the_cookie_was_due_for_renewal(lake, users, path):
+    c = _aged(lake, users)
+    r = c.post(path, headers=W)
+    assert r.status_code == 200
+    sessions = [v for v in r.headers.get_list("set-cookie") if v.startswith(f"{COOKIE}=")]
+    assert len(sessions) == 1 and sessions[0].startswith(f'{COOKIE}=""')  # cleared, not renewed after
+
+
+def test_password_change_keeps_this_phone_signed_in_with_an_old_cookie(lake, users):
+    c = _aged(lake, users)
+    r = c.post("/api/password", json={"current": PW, "new": "a different long password"}, headers=W)
+    assert r.status_code == 200
+    assert c.get("/setup").status_code == 200
+
+
+def test_parallel_guesses_are_counted_before_the_slow_check(users, monkeypatch):
+    import threading
+
+    a = accounts(users)
+    a.create_owner(CODE, "jtouley", PW)
+    checked = []
+    real = a._verify
+
+    def slow(h, p):
+        checked.append(p)
+        threading.Event().wait(0.05)
+        return real(h, p)
+
+    monkeypatch.setattr(a, "_verify", slow)
+
+    def guess(i):
+        with contextlib.suppress(AccountError):
+            a.sign_in("jtouley", f"guess number {i}", f"10.0.0.{i}", now=500)
+
+    threads = [threading.Thread(target=guess, args=(i,)) for i in range(40)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert len(checked) == 5  # the username's limit, not 40
+
+
+def test_setup_code_guesses_are_limited(users):
+    a = accounts(users)
+    for i in range(20):
+        with pytest.raises(AccountError, match="isn’t right"):
+            a.create_owner(f"guess-{i}", "jtouley", PW, ip="7.7.7.7", now=10)
+    with pytest.raises(AccountError, match="Too many"):
+        a.create_owner(CODE, "jtouley", PW, ip="7.7.7.7", now=11)
+    assert a.create_owner(CODE, "jtouley", PW, ip="8.8.8.8", now=11).role == "owner"
+
+
+def test_limiter_forgets_old_keys(monkeypatch):
+    from app.accounts import Limiter
+
+    lim = Limiter()
+    monkeypatch.setattr(Limiter, "SWEEP_AT", 100)
+    for i in range(150):
+        lim.fail(f"ip:{i}", now=0)
+    lim.fail("ip:new", now=10_000)
+    assert len(lim.fails) <= 2
+
+
+def test_client_address_comes_from_the_proxy_not_the_client():
+    from starlette.requests import Request
+
+    from app.web import client_ip
+
+    req = Request(
+        {
+            "type": "http",
+            "headers": [(b"x-forwarded-for", b"6.6.6.6, 203.0.113.9")],
+            "client": ("10.0.0.2", 1),
+        }
+    )
+    assert client_ip(req, 1) == "203.0.113.9"  # the entry the proxy appended, not the spoofed one
+    assert client_ip(req, 0) == "10.0.0.2"
+    bare = Request({"type": "http", "headers": [], "client": ("10.0.0.2", 1)})
+    assert client_ip(bare, 1) == "10.0.0.2"
+
+
+def test_body_limit_counts_chunked_bodies_and_rejects_bad_lengths(lake, users):
+    c = client(lake, users)
+
+    def chunks():
+        for _ in range(70):
+            yield b"x" * 1024
+
+    r = c.post("/api/signin", content=chunks(), headers=W | {"Content-Type": "application/json"})
+    assert r.status_code == 413 and r.headers["x-content-type-options"] == "nosniff"
+    r = c.post(
+        "/api/signin",
+        content=b"{}",
+        headers=W | {"Content-Type": "application/json", "Content-Length": "abc"},
+    )
+    assert r.status_code == 400
+
+
+def test_server_errors_get_the_security_headers(lake, users):
+    app = create_app(lake, Sessions(accounts(users)))
+
+    def boom() -> None:
+        raise RuntimeError("boom")
+
+    app.add_api_route("/boom", boom)
+    c = TestClient(app, base_url="https://testserver", raise_server_exceptions=False)
+    r = c.get("/boom", headers={"Accept": "text/html"})
+    assert r.status_code == 500 and "Something went wrong" in r.text
+    assert r.headers["x-content-type-options"] == "nosniff" and "content-security-policy" in r.headers
+    assert c.get("/boom").json() == {"detail": "Something went wrong on the server."}

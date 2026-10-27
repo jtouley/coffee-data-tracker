@@ -7,6 +7,7 @@ JSON POST that the phone first puts in an IndexedDB outbox, with an id it genera
 import hashlib
 import json
 import logging
+import os
 from datetime import UTC, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
@@ -26,7 +27,7 @@ from coffeedata.lake import Lake
 
 from . import views, web
 from .accounts import AccountError
-from .auth import Auth, Sessions, User, from_env, missing_secrets
+from .auth import COOKIE, Auth, Sessions, User, from_env, missing_secrets
 from .store import Invalid, NotFound, Store
 
 HERE = Path(__file__).parent
@@ -56,6 +57,15 @@ def not_configured(missing: list[str]) -> FastAPI:
     return app
 
 
+def gear_counts(shots_: list) -> dict[str, int]:
+    """Shots per piece of equipment, from one pass over one user's shots."""
+    out: dict[str, int] = {}
+    for sh in shots_:
+        for e in {sh.grinder_id, sh.machine_id, sh.basket_id} - {None}:
+            out[e] = out.get(e, 0) + 1
+    return out
+
+
 def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
     if auth is None:
         missing = missing_secrets()
@@ -72,14 +82,21 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
     assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
-    app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None))  # type: ignore[arg-type]
+    # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
+    app.add_middleware(web.LimitBody, default=MAX_BODY)
     app.add_middleware(GZipMiddleware, minimum_size=500)
 
-    @app.middleware("http")
-    async def limit_body(request: Request, call_next: Any) -> Response:
-        if int(request.headers.get("content-length") or 0) > MAX_BODY:
-            return JSONResponse({"detail": "That request is too large."}, 413)
-        return await call_next(request)
+    async def on_error(request: Request) -> Response:
+        log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
+        if wants_html(request):
+            return page(request, "error.html", status=500, code=500)
+        return JSONResponse({"detail": "Something went wrong on the server."}, 500)
+
+    app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error))  # type: ignore[arg-type]
+    hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)
+
+    def ip(request: Request) -> str:
+        return web.client_ip(request, hops)
 
     def user(request: Request) -> User:
         u = auth.user(request)
@@ -146,13 +163,6 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
     @app.exception_handler(RequestValidationError)
     async def bad_request(request: Request, exc: RequestValidationError) -> Response:
         return JSONResponse({"detail": [e["msg"] for e in exc.errors()]}, 422)
-
-    @app.exception_handler(Exception)
-    async def server_error(request: Request, exc: Exception) -> Response:
-        log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
-        if wants_html(request):
-            return page(request, "error.html", status=500, code=500)
-        return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
     # --- the shell -----------------------------------------------------------------------------------
 
@@ -246,9 +256,11 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         username, password = str(body.get("username") or ""), str(body.get("password") or "")
         try:
             if s.accounts.needs_owner:
-                acct = s.accounts.create_owner(str(body.get("setup_code") or ""), username, password)
+                acct = s.accounts.create_owner(
+                    str(body.get("setup_code") or ""), username, password, ip(request)
+                )
             else:
-                acct = s.accounts.sign_in(username, password, request.client.host if request.client else "")
+                acct = s.accounts.sign_in(username, password, ip(request))
         except AccountError as e:
             raise HTTPException(400, str(e)) from None
         response = JSONResponse({"ok": True})
@@ -291,9 +303,6 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         return freetext or (bag and bag.coffee_freetext) or "Unnamed coffee", "Not matched to the catalog"
 
     # --- invites, joining and resetting --------------------------------------------------------------
-
-    def ip(request: Request) -> str:
-        return request.client.host if request.client else ""
 
     def owner_name(s: Sessions) -> str:
         return next((a.username for a in s.accounts.people() if a.role == "owner"), "the owner")
@@ -494,12 +503,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         )
 
     def counts(user_id: str) -> dict[str, int]:
-        out: dict[str, int] = {}
-        for sh in store.shots_of(user_id):
-            for e in (sh.grinder_id, sh.machine_id, sh.basket_id):
-                if e:
-                    out[e] = out.get(e, 0) + 1
-        return out
+        return gear_counts(store.shots_of(user_id))
 
     @app.get("/setup", response_class=HTMLResponse)
     def setup(request: Request, me: Me) -> HTMLResponse:
