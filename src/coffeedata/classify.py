@@ -21,7 +21,12 @@ _NOT_COFFEE = re.compile(
     r"solenoids?|thermostats?|(machine|grinder|spare|replacement) parts?|lids?|java jackets?|cup sleeves?|"
     r"saucers?|(espresso|lungo|cappuccino|latte|demitasse|dosing|tasting) cups?|brush(es)?|cleaner(?! cup)|"
     r"cleaning|descal\w*|shipping protection|relief donation|gift baskets?|weekend experience|repairs?|"
-    r"warranty)\b",
+    r"warranty|"
+    # Syrups and sauces by brand, brewers, analysers, books, classes, tea and gift subscriptions.
+    r"torani|monin|da ?vinci gourmet|ghirardelli|hollander|syrups|coffee ?makers?|moka pot|stovetop|"
+    r"analy[sz]ers?|mineral drops|paperback|hardcover|handbook|playbook|classes|toll roasting|pekoe|"
+    r"raw (local )?honey|cocoa powder|pur[eé]e|smoothies?( mix)?|coffee server|recurring|installments|"
+    r"\d+[- ]month (email )?gift)\b",
     re.I,
 )
 # Sauces and sweets, unless the title also reads as a coffee: "Ecuador El Sauce" is a farm, "Survival Sauce" a

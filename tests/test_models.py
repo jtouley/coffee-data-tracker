@@ -53,3 +53,17 @@ def test_double_escaped_titles_are_unescaped():
         platform="shopify",
     )
     assert i.title == "Tried & True | House Blend"
+
+
+def test_markup_is_dropped_from_titles():
+    from coffeedata.models import CatalogItem
+
+    i = CatalogItem(
+        roaster_id="r",
+        product_id="1",
+        handle="h",
+        url="u",
+        title="3 Month Gift<br>(Decaf /  Regular)",
+        platform="shopify",
+    )
+    assert i.title == "3 Month Gift (Decaf / Regular)"

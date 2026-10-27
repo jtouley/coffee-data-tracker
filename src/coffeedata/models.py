@@ -59,12 +59,13 @@ class CatalogItem(BaseModel):
     @field_validator("title")
     @classmethod
     def _unescape_title(cls, v: str) -> str:
-        """Some feeds escape titles twice ("Tried &amp;amp; True"); unescape until nothing changes."""
+        """Some feeds escape titles twice ("Tried &amp;amp; True") or leave markup in them ("3 Month Gift<br>"):
+        unescape until nothing changes, then drop tags and extra spaces."""
         for _ in range(3):
             if (u := html.unescape(v)) == v:
                 break
             v = u
-        return v.strip()
+        return " ".join(re.sub(r"<[^>]{0,40}>", " ", v).split())
 
     def model_post_init(self, _ctx: object) -> None:
         if self.body_text and not self.body_hash:

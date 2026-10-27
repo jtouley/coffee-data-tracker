@@ -101,6 +101,8 @@ def test_coffees_that_look_like_parts_or_tests_stay():
         "INDIE COFFEE ROASTERS CIRCLE BLEND WHOLE BEAN 12 OZ - 197644486786",
         "Altura Coffee, Grown at high elevation for a brighter, cleaner cup",
         "Odd and Ends - Donation Coffee",
+        "Espresso Davinci Arabica Blend",
+        "Bookissa, Ethiopia",
     ):
         assert is_coffee(item(title, grams=340, body="A medium roast with notes of cocoa.")), title
 
@@ -127,5 +129,26 @@ def test_flavored_coffees_stay_but_sweets_and_filters_go():
         "Bunn Filter 20115 9 3/4 x 4 1/4 1000/Case",
         "GSI Reusable Pourover Java Filter #4",
         "Brass South Indian Filter Kit",
+    ):
+        assert not is_coffee(item(title, grams=340)), title
+
+
+def test_syrups_brewers_books_and_gifts_are_not_coffee():
+    for title in (
+        "Torani Bourbon Caramel 1L T811",
+        "Monin Sea Salt Caramel 750ml",
+        "OXO 8-CUP COFFEE MAKER",
+        "Bialetti Moka Pot 3 Cup",
+        "Lighttells MD-500 Coffee Moisture And Density Analyser",
+        "Mineral Drops",
+        "The Coffee Roaster's Playbook - Paperback edition",
+        "Coffee Classes - Bean to Brew",
+        "Toll Roasting",
+        "Orange Pekoe (China Black)",
+        "12 Month Gift",
+        "Astro Syrups Vanilla (12oz)",
+        "The Professional Barista's Handbook",
+        "Roasted Coffee - Recurring - 12 Installments",
+        "La Cabra Coffee Server",
     ):
         assert not is_coffee(item(title, grams=340)), title
