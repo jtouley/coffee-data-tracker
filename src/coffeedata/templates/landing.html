@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>registry.coffee</title>
+<meta name="description" content="Every coffee US specialty roasters sell online, tracked weekly: origins, processes, prices and every change. Free to browse, free to query.">
+<link rel="canonical" href="{{ links.site }}/">
+<meta property="og:title" content="registry.coffee">
+<meta property="og:description" content="{{ "{:,}".format(totals.coffees) }} coffees from {{ "{:,}".format(totals.roasters) }} US specialty roasters, tracked weekly. Open data.">
+<meta property="og:url" content="{{ links.site }}/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f4efe6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='10' ry='13' transform='rotate(30 16 16)' fill='%233b2416'/%3E%3Cpath d='M10 7c6 5 6 13 12 18' stroke='%23e9c79c' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+{% include "_brand.css" %}
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center;
+  padding: 48px 0 56px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; color: var(--text-muted); margin: 0 0 16px; }
+.eyebrow .live { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3f9a5b; margin-right: 8px;
+  vertical-align: 1px; box-shadow: 0 0 0 4px rgb(63 154 91 / .18); }
+h1 { font-size: clamp(40px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 20px; font-weight: 600; }
+h1 em { font-style: italic; color: var(--accent); font-weight: 500; }
+.lede { font-size: 19px; color: var(--text-secondary); max-width: 34em; margin: 0 0 28px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600;
+  font-size: 15px; text-decoration: none; border: 1px solid transparent; transition: transform .12s ease, background .12s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { background: var(--series-1-hover); }
+.btn.ghost { border-color: var(--border); color: var(--text-primary); background: var(--surface-1); }
+.btn.ghost:hover { border-color: var(--text-muted); }
+.hf { width: 18px; height: 18px; }
+
+/* Stat card, styled like a cupping sheet */
+.sheet { background: var(--surface-1); border: 1px solid var(--border); border-radius: 18px; padding: 24px;
+  box-shadow: 0 1px 0 var(--border), 0 24px 48px -32px rgb(59 36 22 / .45); position: relative; }
+.sheet h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--text-muted); margin: 0 0 16px;
+  font-weight: 600; display: flex; justify-content: space-between; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden; }
+.stat { background: var(--surface-1); padding: 16px; }
+.stat .n { font-size: clamp(28px, 3.4vw, 38px); font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1.1; }
+.stat .l { color: var(--text-secondary); font-size: 13px; margin-top: 4px; }
+.weekline { margin: 16px 0 0; font-size: 14px; color: var(--text-secondary); }
+.weekline b { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+
+/* Sections */
+section { padding: 56px 0; border-top: 1px solid var(--border); }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+h3 { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; letter-spacing: -0.01em; margin: 0; font-weight: 600; }
+.sec-head p { margin: 0; color: var(--text-secondary); max-width: 36em; }
+.doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.door { display: flex; flex-direction: column; gap: 8px; padding: 22px; border-radius: 16px; background: var(--surface-1);
+  border: 1px solid var(--border); color: inherit; text-decoration: none; transition: border-color .12s ease, transform .12s ease; }
+a.door:hover { border-color: var(--accent); transform: translateY(-2px); }
+.door .k { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; }
+.door .t { font-size: 20px; font-weight: 600; }
+.door .d { color: var(--text-secondary); font-size: 14px; flex: 1; }
+.door .go { font-size: 14px; font-weight: 600; color: var(--accent); }
+.door.off { opacity: .7; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.panel { background: var(--surface-1); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+.panel h4 { margin: 0 0 14px; font-size: 15px; }
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font-size: 12px; fill: var(--text-secondary); }
+.chart .val { fill: var(--text-primary); font-variant-numeric: tabular-nums; }
+.chart .bar { fill: var(--series-1); }
+.chart .hit { fill: transparent; }
+.chart .mark:hover .bar, .chart .mark:focus .bar { fill: var(--series-1-hover); }
+.chart .mark:focus { outline: none; }
+.chart .axis { stroke: var(--border); }
+.empty { color: var(--text-muted); font-size: 14px; }
+.arrivals { list-style: none; margin: 0; padding: 0; }
+.arrivals li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--border); }
+.arrivals li:last-child { border-bottom: 0; }
+.arrivals a { color: var(--text-primary); text-decoration: none; font-weight: 600; }
+.arrivals a:hover { color: var(--accent); }
+.arrivals .meta { font-size: 13px; color: var(--text-secondary); }
+.arrivals .price { font-variant-numeric: tabular-nums; font-size: 14px; white-space: nowrap; color: var(--text-secondary); }
+
+/* Code */
+.code { background: var(--code-bg); color: var(--code-text); border-radius: 16px; padding: 44px 20px 20px; position: relative; overflow: hidden; }
+.code pre { margin: 0; overflow-x: auto; font: 13.5px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+.code .c { color: var(--code-muted); }
+.code .kw { color: var(--crema); }
+.copy { position: absolute; top: 12px; right: 12px; font: inherit; font-size: 12px; border-radius: 999px; padding: 4px 12px;
+  border: 1px solid rgb(255 255 255 / .18); background: rgb(255 255 255 / .06); color: var(--code-text); cursor: pointer; }
+.copy:hover { background: rgb(255 255 255 / .14); }
+.steps { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 12px; }
+.steps li::before { content: counter(s); width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border);
+  display: grid; place-items: center; font-size: 14px; font-weight: 600; color: var(--accent); background: var(--surface-1); }
+.steps b { display: block; }
+.steps span { color: var(--text-secondary); font-size: 14px; }
+
+footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--text-muted); font-size: 13px; }
+footer .row { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+footer p { margin: 0 0 8px; max-width: 46em; }
+
+#tip { position: fixed; pointer-events: none; background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 16px rgb(0 0 0 / .12);
+  display: none; max-width: 280px; z-index: 10; }
+
+@media (max-width: 860px) {
+  .hero, .split { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .hero { padding: 24px 0 40px; }
+  nav .right .hide-sm { display: none; }
+  section { padding: 40px 0; }
+}
+@media (prefers-reduced-motion: reduce) { .btn, .door { transition: none; } .btn:hover, a.door:hover { transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="mark-word serif" href="./">registry<span class="dot">.</span>coffee</a>
+  <div class="right">
+    <a class="hide-sm" href="{{ links.catalog }}">Catalog</a>
+    {% if links.dataset %}<a class="hide-sm" href="{{ links.dataset }}">Dataset</a>{% endif %}
+    <a class="hide-sm" href="{{ links.repo }}">GitHub</a>
+    <button class="theme" id="theme" type="button">Theme</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <p class="eyebrow"><span class="live" aria-hidden="true"></span>Updated weekly · last run {{ generated }}</p>
+    <h1 class="serif">Every coffee on every US roaster's shelf, <em>tracked.</em></h1>
+    <p class="lede">An open registry of what specialty roasters sell online: origin, process, varietal, roast,
+      tasting notes and price per 100&nbsp;g, with every price change, sell-out and new arrival since tracking began.</p>
+    <div class="cta">
+      <a class="btn primary" href="{{ links.catalog }}">Browse the catalog <span aria-hidden="true">→</span></a>
+      {% if links.dataset %}<a class="btn ghost" href="{{ links.dataset }}">
+        <svg class="hf" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#FFD21E"/><circle cx="8.6" cy="10" r="1.3" fill="#3a3b45"/><circle cx="15.4" cy="10" r="1.3" fill="#3a3b45"/><path d="M8 14c1 2 2.4 3 4 3s3-1 4-3" stroke="#3a3b45" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        Get the dataset</a>
+      {% else %}<a class="btn ghost" href="{{ links.repo }}">View on GitHub</a>{% endif %}
+    </div>
+  </div>
+  <div class="sheet" aria-label="This week's numbers">
+    <h2><span>This week</span><span>US specialty</span></h2>
+    <div class="stats">
+      <div class="stat"><div class="n">{{ "{:,}".format(totals.coffees) }}</div><div class="l">coffees listed</div></div>
+      <div class="stat"><div class="n">{{ "{:,}".format(totals.in_stock) }}</div><div class="l">in stock right now</div></div>
+      <div class="stat"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with a shop</div></div>
+      <div class="stat"><div class="n">{{ "{:,}".format(reach.origins) }}</div><div class="l">origin countries</div></div>
+    </div>
+    <p class="weekline"><b>{{ "{:,}".format(week.new) }}</b> new arrivals · <b>{{ "{:,}".format(week.price_changes) }}</b> price changes ·
+      <b>{{ "{:,}".format(week.removed) }}</b> delisted · from <b>{{ "{:,}".format(registry) }}</b> roasters in the registry
+      across {{ reach.states }} states.</p>
+  </div>
+</header>
+
+<section aria-labelledby="doors">
+  <div class="sec-head">
+    <h3 id="doors" class="serif">Four ways in</h3>
+    <p>Browse it, query it, load it into a warehouse, or talk to it.</p>
+  </div>
+  <div class="doors">
+    <a class="door" href="{{ links.catalog }}">
+      <span class="k">Browse</span><span class="t">The catalog</span>
+      <span class="d">Search every listed coffee by roaster, origin, process and tasting notes. Price trends by origin, new arrivals, coverage.</span>
+      <span class="go">Open the catalog →</span>
+    </a>
+    {% if links.dataset %}<a class="door" href="{{ links.dataset }}">{% else %}<div class="door off">{% endif %}
+      <span class="k">Dataset</span><span class="t">Hugging Face</span>
+      <span class="d">{{ public_tables }} Parquet tables, refreshed weekly under CDLA-Permissive-2.0: coffees, the price-event log, the weekly market summary and roasters.</span>
+      <span class="go">{% if links.dataset %}View on Hugging Face →{% else %}Coming soon{% endif %}</span>
+    {% if links.dataset %}</a>{% else %}</div>{% endif %}
+    <a class="door" href="{{ links.marketplace }}">
+      <span class="k">Warehouse</span><span class="t">Snowflake &amp; Databricks</span>
+      <span class="d">Setup scripts load the same public tables into your warehouse every week.</span>
+      <span class="go">Setup guide →</span>
+    </a>
+    <a class="door" href="{{ links.mcp }}">
+      <span class="k">Claude</span><span class="t">MCP server</span>
+      <span class="d">Ask what's new from Ethiopia under $8 per 100 g, or log an espresso shot and get dial-in advice.</span>
+      <span class="go">Connect it →</span>
+    </a>
+  </div>
+</section>
+
+<section aria-labelledby="pulse">
+  <div class="sec-head">
+    <h3 id="pulse" class="serif">On the shelf this week</h3>
+    <p><a href="{{ links.catalog }}">See everything in the catalog →</a></p>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h4>Single-origin coffees in stock, by origin</h4>
+      {{ charts.origins | safe }}
+    </div>
+    <div class="panel">
+      <h4>Just arrived</h4>
+      {% if new %}
+      <ul class="arrivals">
+        {% for c in new %}<li><div>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}<b>{{ c.title }}</b>{% endif %}
+          <div class="meta">{{ c.roaster_name }}{% if c.origin_country %} · {{ c.origin_country }}{% endif %}{% if c.process %} · {{ c.process }}{% endif %}</div></div>
+          <span class="price">{% if c.price_per_100g %}${{ "%.2f"|format(c.price_per_100g) }}/100 g{% endif %}</span></li>{% endfor %}
+      </ul>
+      {% else %}<p class="empty">Nothing new since each roaster's previous run.</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="query">
+  <div class="split">
+    <div>
+      <div class="sec-head" style="display:block">
+        <h3 id="query" class="serif">Query it from anywhere</h3>
+        <p style="margin-top:12px">No account, no download. DuckDB, Polars and pandas read the Parquet straight from
+          Hugging Face. Every coffee links back to the roaster that sells it.</p>
+      </div>
+      <ol class="steps">
+        <li><div><b>Found</b><span>{{ "{:,}".format(registry) }} roasters so far, from Overture Maps, OpenStreetMap and community additions.</span></div></li>
+        <li><div><b>Read</b><span>Each public storefront feed is read once a week, politely, following robots.txt.</span></div></li>
+        <li><div><b>Understood</b><span>Rules, with Claude for what they miss, pull out origin, process, varietal, elevation and notes.</span></div></li>
+        <li><div><b>Published</b><span>dbt builds the history and the public tables are pushed to Hugging Face.</span></div></li>
+      </ol>
+    </div>
+    <div class="code">
+      <button class="copy" type="button" data-copy="sql">Copy</button>
+<pre id="sql"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
+<span class="kw">select</span> roaster_name, title, price_per_100g, url
+<span class="kw">from</span>
+  '{{ links.hf_path or "hf://datasets/<owner>/<name>/data" }}/public_coffee.parquet'
+<span class="kw">where</span> origin_country = 'Ethiopia'
+  <span class="kw">and</span> process = 'washed' <span class="kw">and</span> in_stock
+<span class="kw">order by</span> price_per_100g
+<span class="kw">limit</span> 10;</pre>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="roasters">
+  <div class="split">
+    <div>
+      <h3 id="roasters" class="serif">Roasters</h3>
+    </div>
+    <div>
+      <p style="margin-top:0;color:var(--text-secondary)">Not listed? Add your shop and it's picked up in the next weekly run.
+        Rather not be included? The same form opts you out, and your coffees drop out of every public table.</p>
+      <div class="cta"><a class="btn ghost" href="{{ links.add_roaster }}">Add or opt out a roaster →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="row">
+    <div>
+      <p>Roaster discovery: <a href="https://overturemaps.org">Overture Maps Foundation</a> Places (CDLA-Permissive-2.0) and
+        © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Only what a shopper can see is
+        read, and every coffee links back to the roaster that sells it.</p>
+      <p>Code is MIT-licensed at <a href="{{ links.repo }}">jtouley/coffee-data-tracker</a>.
+        <a href="privacy/">Privacy</a> · <a href="terms/">Terms</a></p>
+    </div>
+    <p class="serif" style="font-size:16px;color:var(--text-secondary)">registry<span style="color:var(--accent)">.</span>coffee</p>
+  </div>
+</footer>
+</div>
+<div id="tip" role="status"></div>
+<script>
+(() => {
+{% include "_common.js" %}
+
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied"; }
+    catch (e) { b.textContent = "Select and copy"; }
+    setTimeout(() => b.textContent = "Copy", 1600);
+  }));
+})();
+</script>
+</body>
+</html>

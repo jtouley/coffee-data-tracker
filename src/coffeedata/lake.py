@@ -452,7 +452,17 @@ class Lake:
     # --- publishing ----------------------------------------------------------------------------------
 
     def staged_files(self) -> list[Path]:
-        return sorted(p for p in self.root.rglob("*.parquet") if p.is_file())
+        """Staged files of this lake's own tables (and its marts) only. Each dataset stages in its own folder, and
+        this makes it structural: even a staging folder set to overlap another can't publish password hashes or
+        photos into the main dataset."""
+        own = {GLOBS[t].split("/")[0] for t in self.tables} | (
+            {"marts"} if self.tables == LAKE_TABLES else set()
+        )
+        return sorted(
+            p
+            for p in self.root.rglob("*.parquet")
+            if p.is_file() and p.relative_to(self.root).parts[0] in own
+        )
 
     def write_mart(self, name: str, con, sql: str) -> Path:
         """Export a derived table (replaced every run; the raw tables are the source of truth)."""
