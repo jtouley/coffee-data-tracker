@@ -28,7 +28,11 @@ create or replace secure view coffee_data.share.roaster as select * from coffee_
 create share if not exists coffee_data_share comment = 'US Specialty Coffee Market (weekly)';
 grant usage on database coffee_data to share coffee_data_share;
 grant usage on schema coffee_data.share to share coffee_data_share;
-grant select on all views in schema coffee_data.share to share coffee_data_share;
+-- One grant per view: Snowflake refuses bulk ("all views") grants to a share.
+grant select on view coffee_data.share.coffee to share coffee_data_share;
+grant select on view coffee_data.share.price_event to share coffee_data_share;
+grant select on view coffee_data.share.market_weekly to share coffee_data_share;
+grant select on view coffee_data.share.roaster to share coffee_data_share;
 
 -- 3. Listing (as ACCOUNTADMIN): Snowsight -> Data Products -> Provider Studio -> create a Marketplace listing from
 --    coffee_data_share, using marketplace/LISTING.md. That needs a provider profile and acceptance of the
