@@ -28,6 +28,8 @@ function store(mode, fn) {
 }
 
 class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
+const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
 
 async function deliver(entry) {
   const r = await fetch(entry.url, {
@@ -35,12 +37,14 @@ async function deliver(entry) {
     headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
     body: JSON.stringify(entry.body),
   });
-  // Signed out (401) or a server error: keep it and try again. Anything else is final.
-  const final = r.status !== 401 && r.status < 500;
+  // Signed out (401), refused by the origin check (403, which a proxy can trip by mistake) or a server error:
+  // keep it and try again, so a queued shot is never thrown away. Anything else is final.
+  const final = ![401, 403].includes(r.status) && r.status < 500;
   if (final) await store("readwrite", (s) => s.delete(entry.key));
   if (r.ok) return r.json();
   const detail = (await r.json().catch(() => ({}))).detail;
   if (final) throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
+  if (r.status === 403) throw new Held("The server refused this for now. It’s kept on this phone and sent again later.");
   throw new Error(r.statusText);
 }
 
@@ -137,6 +141,7 @@ function logShot(form) {
   const taste = form.querySelector("[data-taste]");
   const rating = form.querySelector("[data-rating]");
   const save = form.querySelector("[data-save]");
+  const saveLabel = save.textContent;
   const timerBtn = form.querySelector("[data-timer]");
   let started = null;
   let ticker = null;
@@ -148,7 +153,7 @@ function logShot(form) {
     document.querySelector("[data-ratio]").textContent = d && y ? `1:${(y / d).toFixed(2)}` : "";
     if (confirmLastTime) {
       confirmLastTime = false;
-      save.textContent = "Save shot";
+      save.textContent = saveLabel; // "Save shot" or "Save correction"
     }
   }
 
@@ -251,14 +256,16 @@ function logShot(form) {
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
     let time = form.querySelector("[data-timed]").hidden ? null : num($("time_s"));
+    // Correcting, the fallback is the corrected shot's own time, not the bag's latest (#18-1).
+    const lastTime = p.correct ? p.correct.time_s : p.last_time_s;
     if (time === null) {
-      if (p.last_time_s == null) return hint(form, "Time the shot, or type the time.");
+      if (lastTime == null) return hint(form, "Time the shot, or type the time.");
       if (!confirmLastTime) {
         confirmLastTime = true; // a forgotten timer costs one more tap, never a made-up time
-        save.textContent = `Save with ${p.last_time_s} s?`;
+        save.textContent = `Save with ${lastTime} s?`;
         return;
       }
-      time = p.last_time_s;
+      time = lastTime;
     }
     const fix = p.correct; // correcting: same id and time, a new record that replaces the old one
     const temp = num($("water_temp_c"));
@@ -290,7 +297,7 @@ function logShot(form) {
       setTimeout(() => tick(8), 60);
       location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
       save.disabled = false;
     }
   });
@@ -346,7 +353,7 @@ function undo(strip) {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -381,7 +388,7 @@ function newBag(root) {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(where, err instanceof Rejected ? err.message : OFFLINE);
+      hint(where, why(err));
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
@@ -570,7 +577,7 @@ function equipment(form) {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
       location.href = form.dataset.next || "/setup";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   }
   form.addEventListener("submit", (e) => {
@@ -694,22 +701,30 @@ function retractShot(b) {
     b.disabled = true;
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
-      tick(8);
-      actions.hidden = true;
-      strip.hidden = false;
-      leave();
     } catch (err) {
-      hint(document.querySelector("main"), err instanceof Rejected ? err.message : OFFLINE);
-      b.disabled = false;
+      if (err instanceof Rejected) {
+        hint(document.querySelector("main"), err.message);
+        b.disabled = false;
+        return;
+      }
+      // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
+      // screen goes (#18-3), and Undo can still take it back.
+      strip.firstChild.textContent = "Retracted on this phone. It syncs when you’re back online.";
     }
+    tick(8);
+    actions.hidden = true;
+    strip.hidden = false;
+    leave();
   });
   strip.querySelector("button").addEventListener("click", async () => {
     clearTimeout(timer);
     try {
-      await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
+      // A retraction still on the phone is simply dropped; one that went up is undone on the server.
+      if (await store("readonly", (s) => s.get(`retract:${id}`))) await store("readwrite", (s) => s.delete(`retract:${id}`));
+      else await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
       location.reload();
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -798,8 +813,9 @@ function account() {
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
-      } finally {
-        location.replace("/signin");
+        location.replace("/signin"); // only once the server has signed this phone (or every phone) out
+      } catch {
+        b.textContent = "Couldn’t sign out. Check the connection and try again.";
       }
     }));
   }
