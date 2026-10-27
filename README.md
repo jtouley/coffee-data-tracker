@@ -136,18 +136,8 @@ page points at this repo instead. The private lake is never linked. `SITE_URL` s
 `https://registry.coffee`.
 
 Hugging Face charges for custom domains on Spaces, but GitHub Pages doesn't, so the data stays on Hugging Face and
-Pages serves the domain. Set it up once:
-
-1. At Namecheap → Domain List → registry.coffee → Advanced DNS, remove the parking records and add:
-   - four `A` records for host `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - a `CNAME` record for host `www` pointing at `jtouley.github.io.`
-   - a `CAA` record for host `@`: `0 issue "letsencrypt.org"`, so only GitHub Pages' certificate authority can issue
-     certificates for the domain
-   - two `TXT` records that stop anyone sending email as the domain, which never sends mail: host `@` with
-     `v=spf1 -all`, and host `_dmarc` with `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s`
-2. In GitHub → Settings → Pages, enter `registry.coffee` as the custom domain. When the DNS check passes, tick
-   "Enforce HTTPS".
-3. Optionally, verify the domain under your GitHub profile → Settings → Pages so no other account can claim it.
+Pages serves the domain. The setup (Namecheap DNS records, GitHub Pages, domain verification, the first deploy) and
+the gotchas are in [`runbook/`](runbook/README.md); `runbook/check-dns.sh` checks the records.
 
 ## Cost and security
 
