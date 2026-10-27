@@ -113,7 +113,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <h2>New since last week</h2>
   {% if new %}
   <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
-  {% for c in new %}<tr><td><a href="{{ c.url }}" rel="noopener">{{ c.title }}</a><br><span class="notes">{{ c.roaster_name }}</span></td>
+  {% for c in new %}<tr><td>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}<br><span class="notes">{{ c.roaster_name }}</span></td>
     <td class="hide-sm">{{ c.origin_country or "" }}{% if c.process %} · {{ c.process }}{% endif %}</td>
     <td class="hide-sm notes">{{ (c.tasting_notes or [])|join(", ") }}</td>
     <td class="num">{{ "%.2f"|format(c.price_per_100g) if c.price_per_100g else "" }}</td></tr>{% endfor %}
@@ -196,8 +196,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       (!q || (r[C.title] + " " + r[C.roaster_name] + " " + (r[C.tasting_notes] || []).join(" ")).toLowerCase().includes(q)));
     const body = $("rows"); body.textContent = "";
     for (const r of hits.slice(0, 500)) {
-      const tr = body.insertRow(), td = tr.insertCell(), a = document.createElement("a");
-      a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a);
+      const tr = body.insertRow(), td = tr.insertCell();
+      if (r[C.url]) { const a = document.createElement("a"); a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a); }
+      else td.textContent = r[C.title];
       cell(tr, r[C.roaster_name] + (r[C.roaster_state] ? " (" + r[C.roaster_state] + ")" : ""));
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");

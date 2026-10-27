@@ -141,9 +141,42 @@ Pages serves the domain. Set it up once:
 1. At Namecheap → Domain List → registry.coffee → Advanced DNS, remove the parking records and add:
    - four `A` records for host `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - a `CNAME` record for host `www` pointing at `jtouley.github.io.`
+   - a `CAA` record for host `@`: `0 issue "letsencrypt.org"`, so only GitHub Pages' certificate authority can issue
+     certificates for the domain
+   - two `TXT` records that stop anyone sending email as the domain, which never sends mail: host `@` with
+     `v=spf1 -all`, and host `_dmarc` with `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s`
 2. In GitHub → Settings → Pages, enter `registry.coffee` as the custom domain. When the DNS check passes, tick
    "Enforce HTTPS".
 3. Optionally, verify the domain under your GitHub profile → Settings → Pages so no other account can claim it.
+
+## Cost and security
+
+It runs on free tiers. The only fixed cost is the domain.
+
+| Piece | Cost |
+|---|---|
+| GitHub Actions and Pages | free for a public repo |
+| Hugging Face datasets (lake and public export) | free |
+| registry.coffee | $6.98 the first year; .coffee renewals are much higher (about $48 a year at Namecheap), so compare registrars before it renews |
+| Claude enrichment (optional) | pay as you go; capped by `--enrich-limit`, and new coffees only after the first run |
+| Snowflake, S3 (optional) | only if you turn them on |
+
+How it's locked down:
+
+- **Workflows.** Actions are pinned to commit SHAs, and Dependabot (`.github/dependabot.yml`) opens a monthly PR to
+  update them and the lockfile. The weekly job, which holds the secrets and reads third-party sites, can only read
+  the repo; only the deploy job can publish Pages. Checkouts don't keep the git token. The issue-form workflow only
+  acts on the owner's issues and passes issue text through files and environment variables, never the shell.
+- **The site.** It's static, with no server, cookies or third-party scripts. Each page has a Content-Security-Policy
+  that only allows its own inline script (by hash) and same-origin requests. Product links from roasters' feeds are
+  kept only if they're plain `http(s)` URLs, and all text is escaped.
+- **Secrets.** Use a fine-grained Hugging Face token with write access to only the lake and public datasets. Set a
+  monthly spend limit on the Anthropic key in the Claude Console. Keep the lake dataset private; only the facts-only
+  public export is linked.
+- **The domain.** Turn on two-factor authentication at Namecheap and GitHub, keep the domain locked
+  (Namecheap → Domain → Registrar Lock) with auto-renew on, and verify the domain in your GitHub profile's Pages
+  settings so another account can't serve a site on it. If you ever remove the Pages site, delete its DNS records
+  too.
 
 ## Public tables and marketplaces
 

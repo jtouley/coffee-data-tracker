@@ -3,8 +3,11 @@ to the catalog app (app/index.html + app/catalog.json), the public Hugging Face 
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import json
 import os
+import re
 from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
@@ -96,6 +99,34 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
     }
 
 
+# --- hardening ------------------------------------------------------------------------------------------
+
+
+def safe_url(url: object) -> str | None:
+    """Product links come from roasters' feeds; only plain http(s) links reach the page (no `javascript:`)."""
+    return url if isinstance(url, str) and re.match(r"https?://[^\s\"'<>]+$", url, re.I) else None
+
+
+def with_csp(html: str) -> str:
+    """Add a Content-Security-Policy that allows the page's own inline scripts (by hash) and nothing third-party."""
+    hashes = (
+        " ".join(
+            "'sha256-" + base64.b64encode(hashlib.sha256(js.encode()).digest()).decode() + "'"
+            for js in re.findall(r"<script>(.*?)</script>", html, re.S)
+        )
+        or "'none'"
+    )
+    csp = (
+        f"default-src 'none'; script-src {hashes}; style-src 'unsafe-inline'; img-src 'self' data:; "
+        "connect-src 'self'; base-uri 'none'; form-action 'none'"
+    )
+    meta = (
+        f'<meta http-equiv="Content-Security-Policy" content="{csp}">\n'
+        '<meta name="referrer" content="strict-origin-when-cross-origin">'
+    )
+    return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + meta, 1)
+
+
 # --- build -------------------------------------------------------------------------------------------
 
 
@@ -173,6 +204,8 @@ def build(db: Path, out: Path) -> Path:
                count(*) filter (where event = 'removed') as removed
         from fct_price_event where run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
+    for r in new + catalog:
+        r["url"] = safe_url(r["url"])
     new_count = _q(con, "select count(*) as n from mart_new_arrivals")[0]["n"]
     con.close()
 
@@ -228,7 +261,7 @@ def build(db: Path, out: Path) -> Path:
         links=links(),
         generated=generated.strftime("%B %-d, %Y"),
     )
-    (out / "index.html").write_text(landing)
+    (out / "index.html").write_text(with_csp(landing))
     app = out / "app"
     app.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
@@ -241,7 +274,7 @@ def build(db: Path, out: Path) -> Path:
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
     )
-    (app / "index.html").write_text(html)
+    (app / "index.html").write_text(with_csp(html))
     cols = list(catalog[0]) if catalog else []
     (app / "catalog.json").write_text(
         json.dumps(

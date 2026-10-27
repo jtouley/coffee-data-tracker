@@ -194,7 +194,8 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     monkeypatch.setenv("PUBLIC_EXPORT_URL", "hf://datasets/someone/us-coffee-market")
     probe(lake, "2026-10-11", "onyxcoffeelab.com")
     run(lake, "2026-10-12", "onyxcoffeelab.com", [product("A")])
-    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B")])
+    evil = product("E") | {"url": "javascript:alert(1)"}
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil])
     build(lake, tmp_path).close()
 
     out = tmp_path / "site"
@@ -205,7 +206,31 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B" in landing  # a new arrival
     assert 'href="../"' in (out / "app" / "index.html").read_text()
-    assert json.loads((out / "app" / "catalog.json").read_text())["rows"]
+    catalog = json.loads((out / "app" / "catalog.json").read_text())
+    assert catalog["rows"]
+    app = (out / "app" / "index.html").read_text()
+    for html in (landing, app):
+        assert "javascript:" not in html
+        assert "Content-Security-Policy" in html and "script-src 'sha256-" in html
+    assert None in [r[catalog["columns"].index("url")] for r in catalog["rows"]]  # the javascript: link
+
+
+@pytest.mark.parametrize(
+    "url, ok",
+    [
+        ("https://onyxcoffeelab.com/products/geometry", True),
+        ("http://x.coffee/p?id=1", True),
+        ("javascript:alert(1)", False),
+        ("JAVASCRIPT:alert(1)", False),
+        ("data:text/html,hi", False),
+        ('https://x.com/"><script>', False),
+        (None, False),
+    ],
+)
+def test_safe_url(url, ok):
+    from coffeedata import site
+
+    assert site.safe_url(url) == (url if ok else None)
 
 
 def test_site_links_without_a_public_hf_dataset():
