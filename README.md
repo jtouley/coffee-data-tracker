@@ -15,8 +15,8 @@ espresso shots that links each shot to a coffee in that catalog.
 <!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 Every roaster runs its own web shop, so there's no single place to compare origins, processes and prices, or to see
-when a coffee's price changes or it sells out. Shot notes in a notebook don't know which coffee, or which grinder,
-they were about. This project reads each roaster's public storefront once a week, keeps every weekly snapshot, and
+when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or
+grinder. This project reads each roaster's public storefront once a week, keeps every weekly snapshot, and
 turns them into tables you can query with SQL: what's listed now, what changed, and how your shots of a given coffee
 went. It runs on a GitHub Actions schedule, keeps its data in a Hugging Face dataset (or a local folder), and the
 weekly run needs no server.
@@ -33,9 +33,9 @@ weekly run needs no server.
   that reads schema.org product markup from a site's sitemap.
 - **Keeps full history.** Price changes, new arrivals, delistings and relistings are worked out from the weekly
   records.
-- **Structured attributes.** Origin, process, varietals, elevation, roast level and tasting notes come from tags and
+- **Extracts coffee attributes.** Origin, process, varietals, elevation, roast level and tasting notes come from tags and
   text rules. With an Anthropic API key, Claude Haiku fills in what the rules miss.
-- **A shot log that knows the coffee and the grinder.** Log shots from the phone app, the CLI, Claude (over MCP) or
+- **Shots linked to a catalog coffee and grinder.** Log shots from the phone app, the CLI, Claude (over MCP) or
   a GitHub issue. Each one is matched to a catalog coffee and can name the grinder it was ground on.
 - **A static site and facts-only public tables.** Your shots stay private: the site doesn't show them, and a dbt
   test keeps descriptions, images and shot and equipment columns out of the public tables.
@@ -91,7 +91,7 @@ PORT=8080 make app
 - **Saved** shows the ratio and where the shot landed against the 25–32 s, 1:2 window, next to the bag's earlier
   shots, and says how it compares with the last one. For 5 seconds it offers **Undo**, which writes a retraction
   record; nothing is deleted.
-- **Offline is fine.** Each save waits in the phone's IndexedDB until the server acknowledges it, and a retry never
+- **Saves survive going offline.** Each save waits in the phone's IndexedDB until the server acknowledges it, and a retry never
   creates a second shot.
 
 > [!WARNING]
@@ -265,13 +265,13 @@ No workflow deploys the app. To log into the same lake from it, start `make app`
 ### Key decisions
 
 - **An append-only lake, with history computed from it.** Price changes, delistings and roaster status are derived
-  from the weekly snapshots, so re-running a week or a failed fetch can't corrupt history (details below).
+  from the weekly snapshots, so re-running a week or a failed fetch can't corrupt history.
 - **Weekly runs.** Catalogs change slowly, and reading each store once a week keeps the load on small roaster
   sites low.
 - **Facts-only public tables.** Descriptions and images belong to the roasters, so they stay in the lake; the
   [public tables](#public-tables) have names, origins, prices and stock, with a link back to each roaster.
-- **No grind advice in the app yet.** Until a model trained on real shots does better than the rule of thumb, the
-  app only describes each shot. The CLI, Claude and the issue form still reply with rule-of-thumb advice.
+- **No grind advice in the app yet.** It only describes each shot until a model trained on real shots beats the
+  rule of thumb.
 
 ### The weekly run
 
@@ -319,8 +319,6 @@ The derived `marts/` exports are the one exception. Everything that describes th
 
 Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
 `Image` layout, so a photo is never in the main lake. The schema is in place; nothing uploads photos yet.
-
-What that gives you:
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
