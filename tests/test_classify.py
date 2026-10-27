@@ -3,9 +3,18 @@ from coffeedata.models import CatalogItem, Variant
 
 
 def item(title, product_type="", tags=(), grams=None, body=""):
-    return CatalogItem(roaster_id="r", product_id="1", handle="h", url="u", title=title, platform="shopify",
-                       product_type=product_type, tags=list(tags),
-                       variants=[Variant(variant_id="v", grams=grams)], body_text=body)
+    return CatalogItem(
+        roaster_id="r",
+        product_id="1",
+        handle="h",
+        url="u",
+        title=title,
+        platform="shopify",
+        product_type=product_type,
+        tags=list(tags),
+        variants=[Variant(variant_id="v", grams=grams)],
+        body_text=body,
+    )
 
 
 def test_obvious_coffees():

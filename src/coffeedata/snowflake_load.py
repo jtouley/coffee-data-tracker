@@ -36,18 +36,22 @@ def private_key_der(value: str) -> bytes:
             return decoded  # already DER
         text = decoded.decode()
     key = serialization.load_pem_private_key(text.encode(), password=None)
-    return key.private_bytes(serialization.Encoding.DER, serialization.PrivateFormat.PKCS8,
-                             serialization.NoEncryption())
+    return key.private_bytes(
+        serialization.Encoding.DER, serialization.PrivateFormat.PKCS8, serialization.NoEncryption()
+    )
 
 
 def connect():
     import snowflake.connector
 
-    missing = [v for v in ("SNOWFLAKE_ACCOUNT", "SNOWFLAKE_USER", "SNOWFLAKE_PRIVATE_KEY") if not os.environ.get(v)]
+    missing = [
+        v for v in ("SNOWFLAKE_ACCOUNT", "SNOWFLAKE_USER", "SNOWFLAKE_PRIVATE_KEY") if not os.environ.get(v)
+    ]
     if missing:
         raise SystemExit(f"missing environment: {', '.join(missing)}")
     return snowflake.connector.connect(
-        account=os.environ["SNOWFLAKE_ACCOUNT"], user=os.environ["SNOWFLAKE_USER"],
+        account=os.environ["SNOWFLAKE_ACCOUNT"],
+        user=os.environ["SNOWFLAKE_USER"],
         private_key=private_key_der(os.environ["SNOWFLAKE_PRIVATE_KEY"]),
         role=os.environ.get("SNOWFLAKE_ROLE", "COFFEE_LOADER"),
         warehouse=os.environ.get("SNOWFLAKE_WAREHOUSE", "COFFEE_WH"),
@@ -79,11 +83,15 @@ def load(export_dir: Path, con=None) -> dict:
     try:
         cur.execute(f"create schema if not exists {SCHEMA}")
         cur.execute(f"create file format if not exists {SCHEMA}.PARQUET_FF type = parquet")
-        cur.execute(f"create stage if not exists {SCHEMA}.{STAGE} file_format = {SCHEMA}.PARQUET_FF "
-                    "comment = 'Weekly facts-only exports, one folder per run'")
+        cur.execute(
+            f"create stage if not exists {SCHEMA}.{STAGE} file_format = {SCHEMA}.PARQUET_FF "
+            "comment = 'Weekly facts-only exports, one folder per run'"
+        )
         for table in PUBLIC_TABLES:
             f = (export_dir / f"{table}.parquet").resolve()
-            cur.execute(f"put 'file://{f}' @{SCHEMA}.{STAGE}/{run_path}/ auto_compress = false overwrite = false")
+            cur.execute(
+                f"put 'file://{f}' @{SCHEMA}.{STAGE}/{run_path}/ auto_compress = false overwrite = false"
+            )
         counts = {}
         for table in PUBLIC_TABLES:
             for sql in statements(table, run_path):
@@ -92,7 +100,9 @@ def load(export_dir: Path, con=None) -> dict:
     finally:
         cur.close()
         con.close()
-    mismatched = {t: (counts[t], manifest["tables"][t]) for t in PUBLIC_TABLES if counts[t] != manifest["tables"][t]}
+    mismatched = {
+        t: (counts[t], manifest["tables"][t]) for t in PUBLIC_TABLES if counts[t] != manifest["tables"][t]
+    }
     if mismatched:
         raise RuntimeError(f"row counts differ from the export (snowflake, export): {mismatched}")
     return {"run": manifest["as_of_run"], "tables": counts}

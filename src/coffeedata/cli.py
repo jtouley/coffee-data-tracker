@@ -46,10 +46,17 @@ def cmd_init(args: argparse.Namespace) -> None:
     url = api.create_repo(repo_id, repo_type="dataset", private=not args.public, exist_ok=True)
     card = Path("docs/DATASET_CARD.md")
     if card.exists():
-        api.upload_file(path_or_fileobj=str(card), path_in_repo="README.md", repo_id=repo_id, repo_type="dataset",
-                        commit_message="dataset card")
-    print(f"dataset {url} ready ({'public' if args.public else 'private'}); "
-          f"published {lake.publish('init: table schemas', schemas=True)} schema files")
+        api.upload_file(
+            path_or_fileobj=str(card),
+            path_in_repo="README.md",
+            repo_id=repo_id,
+            repo_type="dataset",
+            commit_message="dataset card",
+        )
+    print(
+        f"dataset {url} ready ({'public' if args.public else 'private'}); "
+        f"published {lake.publish('init: table schemas', schemas=True)} schema files"
+    )
 
 
 def cmd_discover(args: argparse.Namespace) -> None:
@@ -70,11 +77,13 @@ def cmd_probe(args: argparse.Namespace) -> None:
     lake = Lake()
     states = registry.current(lake)
     cutoff = (date.fromisoformat(args.run_date) - timedelta(days=args.stale_days)).isoformat()
-    todo = [s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
+    todo = [
+        s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff
+    ]
     if args.only:
         todo = [args.only]
     if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
-        todo = sorted(todo, key=ingest.sample_key)[:args.sample]
+        todo = sorted(todo, key=ingest.sample_key)[: args.sample]
     rows = discover.probe(todo, workers=args.workers, run_date=args.run_date)
     lake.write_partition("probes", args.run_date, new_batch_id(), rows)
     ok = sum(r["status"] == "ok" for r in rows)
@@ -97,7 +106,12 @@ def cmd_enrich(args: argparse.Namespace) -> None:
         print("no Anthropic credentials; rules-only enrichment")
         return
     lake = Lake()
-    _print({"collect": enrich.collect(lake, args.run_date), "enrich": enrich.run(lake, args.limit, args.run_date)})
+    _print(
+        {
+            "collect": enrich.collect(lake, args.run_date),
+            "enrich": enrich.run(lake, args.limit, args.run_date),
+        }
+    )
 
 
 def dbt_build(lake: Lake, db: Path) -> None:
@@ -106,8 +120,20 @@ def dbt_build(lake: Lake, db: Path) -> None:
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
-    subprocess.run(["dbt", "build", "--project-dir", "dbt", "--profiles-dir", "dbt",
-                    "--vars", json.dumps({"lake_roots": roots, "max_failures": registry.MAX_FAILURES})], check=True, env=env)
+    subprocess.run(
+        [
+            "dbt",
+            "build",
+            "--project-dir",
+            "dbt",
+            "--profiles-dir",
+            "dbt",
+            "--vars",
+            json.dumps({"lake_roots": roots, "max_failures": registry.MAX_FAILURES}),
+        ],
+        check=True,
+        env=env,
+    )
 
 
 def cmd_build(args: argparse.Namespace) -> None:
@@ -127,8 +153,11 @@ def cmd_build(args: argparse.Namespace) -> None:
 
 def cmd_publish(args: argparse.Namespace) -> None:
     lake = Lake()
-    print(f"published {lake.publish(args.message)} files to {lake.url}" if lake.remote
-          else "local lake; nothing to publish")
+    print(
+        f"published {lake.publish(args.message)} files to {lake.url}"
+        if lake.remote
+        else "local lake; nothing to publish"
+    )
 
 
 def cmd_export_public(args: argparse.Namespace) -> None:
@@ -149,9 +178,16 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     if date.fromisoformat(run).day <= 7 or args.discover:
         lake = Lake()
         month = run[:7]
-        done = {r[0] for r in lake.connect().execute(
-            f"select distinct split_part(source, '-', 1) from {lake.scan('registry')} "
-            f"where strftime(added_at, '%Y-%m') = ?", [month]).fetchall()}
+        done = {
+            r[0]
+            for r in lake.connect()
+            .execute(
+                f"select distinct split_part(source, '-', 1) from {lake.scan('registry')} "
+                f"where strftime(added_at, '%Y-%m') = ?",
+                [month],
+            )
+            .fetchall()
+        }
         for src in ("overture", "osm"):
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it
@@ -163,7 +199,9 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     # job timeout never loses what was already fetched or paid for. Re-running the week resumes from the lake.
     cmd_probe(argparse.Namespace(stale_days=28, only=None, sample=args.sample, workers=16, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: discover and probe"))
-    cmd_ingest(argparse.Namespace(run_date=run, only=None, sample=args.sample, retry_failed=False, workers=32))
+    cmd_ingest(
+        argparse.Namespace(run_date=run, only=None, sample=args.sample, retry_failed=False, workers=32)
+    )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: catalogs"))
     cmd_ingest(argparse.Namespace(run_date=run, only=None, sample=None, retry_failed=True, workers=16))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
@@ -205,10 +243,21 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
     opted_out = issueform.checked(fields.get("opt out", ""))
     lake = Lake()
     now = datetime.now(UTC).replace(microsecond=0)
-    lake.write("registry", f"registry/source=manual/{domain}-{new_batch_id()}.parquet", [{
-        "added_at": now, "source": "manual", "roaster_id": domain, "name": fields.get("name") or domain,
-        "state": state.upper()[:2], "tagged_roastery": True,
-        "opted_out": opted_out}])
+    lake.write(
+        "registry",
+        f"registry/source=manual/{domain}-{new_batch_id()}.parquet",
+        [
+            {
+                "added_at": now,
+                "source": "manual",
+                "roaster_id": domain,
+                "name": fields.get("name") or domain,
+                "state": state.upper()[:2],
+                "tagged_roastery": True,
+                "opted_out": opted_out,
+            }
+        ],
+    )
     if opted_out:
         lake.publish(f"opt out {domain}")
         print(f"`{domain}` is opted out and won't be fetched again.")
@@ -217,8 +266,10 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
     lake.write_partition("probes", _today(), new_batch_id(), rows)
     lake.publish(f"add roaster {domain}")
     p = rows[0]
-    print(f"Recorded **{fields.get('name') or domain}** (`{domain}`). Probe: `{p['status']}`, platform "
-          f"`{p['platform'] or 'unknown'}`. Its catalog is fetched in the next weekly run.")
+    print(
+        f"Recorded **{fields.get('name') or domain}** (`{domain}`). Probe: `{p['status']}`, platform "
+        f"`{p['platform'] or 'unknown'}`. Its catalog is fetched in the next weekly run."
+    )
 
 
 def cmd_site(args: argparse.Namespace) -> None:
@@ -275,11 +326,15 @@ def main(argv: list[str] | None = None) -> None:
     pb = add("publish", cmd_publish, "upload staged lake files to the remote lake")
     pb.add_argument("--message", default=f"publish {_today()}")
 
-    ep = add("export-public", cmd_export_public, "export the facts-only public tables (dir, hf://, s3://, gs://)")
+    ep = add(
+        "export-public", cmd_export_public, "export the facts-only public tables (dir, hf://, s3://, gs://)"
+    )
     ep.add_argument("--db", default="build/coffee.duckdb")
     ep.add_argument("--to", default=os.environ.get("PUBLIC_EXPORT_URL", "build/public"))
 
-    sf = add("load-snowflake", cmd_load_snowflake, "load an export-public folder into Snowflake (internal stage)")
+    sf = add(
+        "load-snowflake", cmd_load_snowflake, "load an export-public folder into Snowflake (internal stage)"
+    )
     sf.add_argument("--from", dest="source", default="build/public")
 
     w = add("weekly", cmd_weekly, "the full weekly run")
