@@ -1,5 +1,9 @@
-"""Square Online (editmysite.com) sites load their catalog from a public JSON API keyed by user and site ids,
-which appear in the site's homepage HTML."""
+"""Square Online (editmysite.com) sites load their catalog from a public JSON API keyed by user and site ids.
+
+The ids appear in the homepage in one of three forms: Square Online's own JSON, the variables an older Weebly site
+(Square owns Weebly) sets, or an image upload path. Some roasters' own sites only link to a separate
+<name>.square.site store, so that store's homepage is tried next.
+"""
 
 from __future__ import annotations
 
@@ -11,15 +15,28 @@ from ..text import html_to_text, to_float
 
 API = "https://cdn5.editmysite.com/app/store/api/v28/editor/users/{user}/sites/{site}/products"
 MAX_PAGES = 20
-_USER = re.compile(r'"user":\{"id":"?(\d+)')
-_SITE = re.compile(r'"site_id":"?(\d{6,})')
+_ID_FORMS = [
+    (re.compile(r'"user":\{"id":"?(\d+)'), re.compile(r'"site_id":"?(\d{6,})')),  # Square Online
+    (re.compile(r'com_userID\s*=\s*"?(\d+)'), re.compile(r'com_currentSite\s*=\s*"?(\d{6,})')),  # Weebly
+]
+_UPLOAD_PATH = re.compile(r"/uploads/[0-9a-z]/(\d{5,})-(\d{12,})/")  # Weebly image uploads: <user>-<site>
+_STORE_LINK = re.compile(r"https?://([a-z0-9-]+)\.square\.site\b", re.I)
 
 
-def site_ids(html: str) -> tuple[str, str]:
-    user, site = _USER.search(html), _SITE.search(html)
-    if not (user and site):
-        raise FetchError("no Square Online user/site id in homepage")
-    return user.group(1), site.group(1)
+def site_ids(html: str) -> tuple[str, str] | None:
+    for user_re, site_re in _ID_FORMS:
+        user, site = user_re.search(html), site_re.search(html)
+        if user and site:
+            return user.group(1), site.group(1)
+    if m := _UPLOAD_PATH.search(html):
+        return m.group(1), m.group(2)
+    return None
+
+
+def store_link(html: str) -> str | None:
+    """The first linked <name>.square.site store, if the site points to one."""
+    m = _STORE_LINK.search(html)
+    return f"https://{m.group(1).lower()}.square.site/" if m else None
 
 
 def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
@@ -57,7 +74,15 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     r = client.get(f"https://{roaster.host}/")
     if r.status_code != 200:
         raise FetchError(f"HTTP {r.status_code} homepage")
-    user, site = site_ids(r.text)
+    ids = site_ids(r.text)
+    if ids is None and (store := store_link(r.text)):
+        sr = client.get(store)
+        if sr.status_code != 200:
+            raise FetchError(f"HTTP {sr.status_code} {store}")
+        ids = site_ids(sr.text)
+    if ids is None:
+        raise FetchError("no Square Online store ids on the homepage or a linked square.site store")
+    user, site = ids
     items: list[CatalogItem] = []
     for page in range(1, MAX_PAGES + 1):
         data = client.fetch_json(API.format(user=user, site=site), page=page, per_page=60, include="images")

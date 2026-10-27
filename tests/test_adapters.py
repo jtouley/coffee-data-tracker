@@ -222,3 +222,45 @@ def test_generic_mostly_failing_raises(mock):
     mock.get(url__regex=r"https://x.com/products/p\d").mock(return_value=httpx.Response(500))
     with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(FetchError):
         generic.fetch(c, _r(platform="other"))
+
+
+@pytest.mark.parametrize(
+    "html, ids",
+    [
+        (
+            '<script>{"user":{"id":143063903},"site_id":"480502767511180931"}</script>',
+            ("143063903", "480502767511180931"),
+        ),
+        (
+            '<script>com_userID = "91999742"; com_currentSite = "365034632528666450";</script>',
+            ("91999742", "365034632528666450"),
+        ),
+        (
+            '<div style="background: url(//www.weebly.com/uploads/b/120598593-592781055177749699/a.jpg)">',
+            ("120598593", "592781055177749699"),
+        ),
+        ('<a href="https://app.squareup.com/gift/ML0CVF31XSMZQ/order">Gift cards</a>', None),
+    ],
+)
+def test_square_online_site_ids(html, ids):
+    assert square_online.site_ids(html) == ids
+
+
+def test_square_online_follows_a_linked_square_site_store(mock):
+    home = '<a href="https://airship-coffee.square.site/#T72CBWSPVBS4I3FRZUACDA7W">Shop</a>'
+    mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text=home))
+    mock.get("https://airship-coffee.square.site/").mock(
+        return_value=httpx.Response(200, text='{"user":{"id":130995357},"site_id":804583245133429738}')
+    )
+    mock.get(
+        url__regex=r"https://cdn5.editmysite.com/.*/users/130995357/sites/804583245133429738/products.*"
+    ).mock(return_value=httpx.Response(200, json={"data": [{"id": "A", "name": "Kenya 12oz"}], "meta": {}}))
+    with PoliteClient(min_interval=0) as c:
+        [item] = square_online.fetch(c, _r("sq.com", "square_online?"))
+    assert item.title == "Kenya 12oz"
+
+
+def test_square_online_without_a_store_fails(mock):
+    mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text="<p>Order on Square</p>"))
+    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="no Square Online store ids"):
+        square_online.fetch(c, _r("sq.com", "square_online?"))
