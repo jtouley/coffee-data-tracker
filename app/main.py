@@ -32,7 +32,7 @@ from coffeedata.models import SAFE_ID
 
 from . import labels, logs, photos, views, web
 from .accounts import AccountError
-from .auth import COOKIE, Auth, Sessions, User, from_env, missing_secrets
+from .auth import COOKIE, Auth, Sessions, User, clean_secrets, from_env, missing_secrets
 from .store import Invalid, NotFound, Store, coffee_key
 
 HERE = Path(__file__).parent
@@ -80,6 +80,7 @@ def create_app(
     labels_client: Any = None,
 ) -> FastAPI:
     if auth is None:
+        clean_secrets()
         missing = missing_secrets()
         if missing:
             log.error("not configured; missing secrets: %s", ", ".join(missing))

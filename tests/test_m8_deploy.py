@@ -3,6 +3,7 @@ secrets, and the rate-limit address can't be spoofed behind Cloud Run's front en
 
 import json
 import logging
+import os
 import re
 
 import pytest
@@ -12,6 +13,7 @@ from starlette.requests import Request
 from app import logs, web
 from app.auth import LocalOwner, missing_secrets
 from app.main import create_app
+from coffeedata.lake import Lake
 
 from .test_app import HeaderAuth, W, setup
 from .test_invites import accounts, app, client, owner  # noqa: F401 - fixtures
@@ -106,3 +108,25 @@ def test_cloud_run_counts_as_hosted(monkeypatch):
     assert set(missing_secrets()) == {"AUTH_PEPPER", "SESSION_SECRET", "HF_TOKEN"}
     with pytest.raises(RuntimeError):
         LocalOwner()
+
+
+def test_secrets_stored_with_a_trailing_newline_still_work(monkeypatch, tmp_path):
+    # `gcloud secrets versions add NAME --data-file=-` keeps the newline that ends a pasted or piped value.
+    from app.auth import SECRETS
+
+    values = {"HF_TOKEN": "hf_x", "ANTHROPIC_API_KEY": "sk-x", "AUTH_PEPPER": "p" * 20, "SESSION_SECRET": "s" * 40,
+              "OWNER_SETUP_CODE": "SETUP-CODE-9"}  # fmt: skip
+    for name in SECRETS:
+        monkeypatch.setenv(name, values[name] + "\n")
+    monkeypatch.setenv("K_SERVICE", "registry-coffee")
+    monkeypatch.setenv("COFFEEDATA_USERS", str(tmp_path / "users"))
+    hosted_app = create_app(lake=Lake(str(tmp_path / "lake")))
+
+    assert all(os.environ[name] == values[name] for name in SECRETS)
+    c = TestClient(hosted_app, base_url="https://testserver")
+    r = c.post(
+        "/api/signin",
+        json={"setup_code": "SETUP-CODE-9", "username": "jtouley", "password": "kettle orbit marble"},
+        headers=W,
+    )
+    assert r.status_code == 200, r.text  # the setup code matches as typed

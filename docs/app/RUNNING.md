@@ -88,7 +88,7 @@ Nothing here was created for you. Once, in this order:
 
 5. **Secret values**, one version for each of the five (Terraform only creates the empty secrets; values never go
    through it or its state). Don't put a value on the command line, where it stays in the shell history. Either
-   paste it, then press Enter and Ctrl-D:
+   paste it, then press Ctrl-D twice (no Enter, which would add a newline):
 
    ```bash
    gcloud secrets versions add HF_TOKEN --data-file=-
@@ -98,12 +98,13 @@ Nothing here was created for you. Once, in this order:
    or generate it in place:
 
    ```bash
-   openssl rand -hex 16 | gcloud secrets versions add AUTH_PEPPER --data-file=-
-   openssl rand -hex 32 | gcloud secrets versions add SESSION_SECRET --data-file=-
-   openssl rand -hex 8 | tee /dev/tty | gcloud secrets versions add OWNER_SETUP_CODE --data-file=-   # note it for step 8
+   openssl rand -hex 16 | tr -d '\n' | gcloud secrets versions add AUTH_PEPPER --data-file=-
+   openssl rand -hex 32 | tr -d '\n' | gcloud secrets versions add SESSION_SECRET --data-file=-
+   openssl rand -hex 8 | tr -d '\n' | tee /dev/tty | gcloud secrets versions add OWNER_SETUP_CODE --data-file=-   # note it for step 8
    ```
 
-   Then everything else: `terraform apply`.
+   (The app strips surrounding whitespace from every secret anyway, so a stray newline does no harm.) Then
+   everything else: `terraform apply`.
 6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
    `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
 7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
@@ -172,7 +173,9 @@ The privacy policy promises deletion within 30 days of a request.
    uv run coffeedata delete-user maya
    ```
 
-3. Deploy again (or restart the service), so the app forgets the turned-off account.
+3. Deploy again (or restart the service) right away, so the app forgets the turned-off account. Until then,
+   don't turn the account back on. Don't run `delete-user` while the weekly job is running: it rewrites the
+   same exports.
 
 It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
 private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app

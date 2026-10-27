@@ -80,6 +80,20 @@ class Sessions:
         response.delete_cookie(COOKIE, path="/", secure=self.secure, httponly=True, samesite="lax")
 
 
+SECRETS = ("HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE")
+
+
+def clean_secrets() -> None:
+    """Strip whitespace from the secrets as the environment hands them over. A value stored with a trailing newline
+    (`gcloud secrets versions add … --data-file=-` keeps one) would never match a typed setup code, and an HF token
+    with a newline is an invalid header. Done once, in place, so every reader (huggingface_hub and the Anthropic
+    client included) sees the clean value."""
+    for name in SECRETS:
+        value = os.environ.get(name)
+        if value is not None and value != value.strip():
+            os.environ[name] = value.strip()
+
+
 def hosted() -> bool:
     """On Cloud Run (K_SERVICE is set on every service) or a Hugging Face Space (SPACE_ID)."""
     return bool(os.environ.get("K_SERVICE") or os.environ.get("SPACE_ID"))
