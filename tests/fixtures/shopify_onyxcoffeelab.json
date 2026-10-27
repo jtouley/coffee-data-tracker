@@ -1,0 +1,1035 @@
+{
+ "products": [
+  {
+   "id": 10350562148450,
+   "title": "Opus 2 Conical Burr Grinder",
+   "handle": "opus-2-conical-burr-grinder",
+   "body_html": "<div id=\"summary\" class=\"inline-richtext my-md p text-foreground md:pr-2xl\">\n<p>Perfect for espresso, Opus 2 is a precision electric coffee grinder for every method. It moves seamlessly between brew methods to deliver consistent grind results across the full range. 48 mm conical burrs and a smooth side dial give you the control to fine-tune your coffee with intention, whether you're dialing in espresso, brewing pour-over, or preparing cold brew.</p>\n</div>",
+   "published_at": "2026-10-23T11:51:53-05:00",
+   "created_at": "2026-10-23T11:45:33-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Fellow Wholesale",
+   "product_type": "",
+   "tags": [
+    "Equipment",
+    "EQUIPMENT: All",
+    "Fellow Wholesale",
+    "Shopify Collective"
+   ],
+   "variants": [
+    {
+     "id": 50750025793634,
+     "title": "Matte Black",
+     "option1": "Matte Black",
+     "option2": null,
+     "option3": null,
+     "sku": "1222MB-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325844066,
+      "product_id": 10350562148450,
+      "position": 1,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:37-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_Black_BlackLid_1.png?v=1792773937",
+      "variant_ids": [
+       50750025793634
+      ]
+     },
+     "available": false,
+     "price": "199.95",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10350562148450,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750025826402,
+     "title": "Matte White",
+     "option1": "Matte White",
+     "option2": null,
+     "option3": null,
+     "sku": "1222MW-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325876834,
+      "product_id": 10350562148450,
+      "position": 2,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:37-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_White_1_0d65c90e-887c-41bc-be45-a4a52f129168.png?v=1792773937",
+      "variant_ids": [
+       50750025826402
+      ]
+     },
+     "available": true,
+     "price": "199.95",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10350562148450,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750025859170,
+     "title": "Matte Black + Walnut",
+     "option1": "Matte Black + Walnut",
+     "option2": null,
+     "option3": null,
+     "sku": "1222BA-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325909602,
+      "product_id": 10350562148450,
+      "position": 3,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:36-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_Black_WalnutLid_1.png?v=1792773936",
+      "variant_ids": [
+       50750025859170
+      ]
+     },
+     "available": true,
+     "price": "249.95",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 10350562148450,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750025891938,
+     "title": "Cherry Red + Walnut",
+     "option1": "Cherry Red + Walnut",
+     "option2": null,
+     "option3": null,
+     "sku": "1222CH-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325942370,
+      "product_id": 10350562148450,
+      "position": 4,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:36-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_Red_1.png?v=1792773936",
+      "variant_ids": [
+       50750025891938
+      ]
+     },
+     "available": false,
+     "price": "249.95",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 10350562148450,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750025924706,
+     "title": "Malted Chocolate + Maple",
+     "option1": "Malted Chocolate + Maple",
+     "option2": null,
+     "option3": null,
+     "sku": "1222ML-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325975138,
+      "product_id": 10350562148450,
+      "position": 5,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:37-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_Malt_1.png?v=1792773937",
+      "variant_ids": [
+       50750025924706
+      ]
+     },
+     "available": false,
+     "price": "249.95",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 5,
+     "product_id": 10350562148450,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53018325844066,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "position": 1,
+     "updated_at": "2026-10-23T11:45:37-05:00",
+     "product_id": 10350562148450,
+     "variant_ids": [
+      50750025793634
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Opus2_Black_BlackLid_1.png?v=1792773937",
+     "width": 1560,
+     "height": 1951
+    }
+   ],
+   "options": [
+    {
+     "name": "Color",
+     "position": 1,
+     "values": [
+      "Matte Black",
+      "Matte White",
+      "Matte Black + Walnut",
+      "Cherry Red + Walnut",
+      "Malted Chocolate + Maple"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10350355808354,
+   "title": "Panama Kotowa Las Brujas Washed - Cafe Only",
+   "handle": "panama-kotowa-las-brujas-washed-cafe-only",
+   "body_html": "",
+   "published_at": "2026-10-23T08:30:52-05:00",
+   "created_at": "2026-10-23T08:24:11-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "Coffee",
+   "tags": [
+    "caffeine:full",
+    "coffee",
+    "origin:PA",
+    "profile:traditional",
+    "type:single origin",
+    "utility-sku"
+   ],
+   "variants": [
+    {
+     "id": 50749062316130,
+     "title": "10oz",
+     "option1": "10oz",
+     "option2": null,
+     "option3": null,
+     "sku": "PKLBW-CO-10OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53016674631778,
+      "product_id": 10350355808354,
+      "position": 1,
+      "created_at": "2026-10-23T08:29:25-05:00",
+      "updated_at": "2026-10-23T08:29:25-05:00",
+      "alt": "Panama Kotowa Las Brujas Washed - Cafe Only",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/10-oz_cc0ec5a5-8ae2-41ad-83c6-47aeb7aebe4a.webp?v=1792762165",
+      "variant_ids": [
+       50749062316130
+      ]
+     },
+     "available": true,
+     "price": "60.00",
+     "grams": 312,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10350355808354,
+     "created_at": "2026-10-23T08:29:02-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53016674631778,
+     "created_at": "2026-10-23T08:29:25-05:00",
+     "position": 1,
+     "updated_at": "2026-10-23T08:29:25-05:00",
+     "product_id": 10350355808354,
+     "variant_ids": [
+      50749062316130
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/10-oz_cc0ec5a5-8ae2-41ad-83c6-47aeb7aebe4a.webp?v=1792762165",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "10oz"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10348502974562,
+   "title": "DARK MATTER",
+   "handle": "bf-x-05",
+   "body_html": "",
+   "published_at": "2026-10-21T15:50:01-05:00",
+   "created_at": "2026-10-21T15:50:01-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "bigface",
+    "white-label"
+   ],
+   "variants": [
+    {
+     "id": 50736184262754,
+     "title": "8.8oz",
+     "option1": "8.8oz",
+     "option2": null,
+     "option3": null,
+     "sku": "BF-X-05",
+     "requires_shipping": true,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "3.50",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10348502974562,
+     "created_at": "2026-10-21T15:50:01-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50736184295522,
+     "title": "5lbs",
+     "option1": "5lbs",
+     "option2": null,
+     "option3": null,
+     "sku": "BF-5LB-05",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "30.08",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10348502974562,
+     "created_at": "2026-10-21T15:50:01-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "8.8oz",
+      "5lbs"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10348502810722,
+   "title": "BF-X-ZZZ",
+   "handle": "bf-x-zzz",
+   "body_html": "",
+   "published_at": "2026-10-21T15:48:49-05:00",
+   "created_at": "2026-10-21T15:48:49-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "bigface",
+    "white-label"
+   ],
+   "variants": [
+    {
+     "id": 50736182755426,
+     "title": "8.8oz",
+     "option1": "8.8oz",
+     "option2": null,
+     "option3": null,
+     "sku": "BF-X-ZZZ",
+     "requires_shipping": true,
+     "taxable": false,
+     "featured_image": null,
+     "available": true,
+     "price": "5.14",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10348502810722,
+     "created_at": "2026-10-21T15:48:49-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50736182788194,
+     "title": "5lbs",
+     "option1": "5lbs",
+     "option2": null,
+     "option3": null,
+     "sku": "BF-5LB-ZZZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "46.44",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10348502810722,
+     "created_at": "2026-10-21T15:48:49-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "8.8oz",
+      "5lbs"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7617695547490,
+   "title": "Onyx Delight RTD",
+   "handle": "onyx-delight-rtd",
+   "body_html": "",
+   "published_at": "2026-10-20T16:05:48-05:00",
+   "created_at": "2026-04-27T15:21:21-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "Consumable"
+   ],
+   "variants": [
+    {
+     "id": 42836575420514,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "OD-RTD-12OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "45.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7617695547490,
+     "created_at": "2026-04-27T15:21:21-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 34710728278114,
+     "created_at": "2026-04-27T15:22:23-05:00",
+     "position": 1,
+     "updated_at": "2026-04-27T15:22:25-05:00",
+     "product_id": 7617695547490,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/OnyxDelight_Transparent0001_27fabede-515d-453c-a6bf-0c930afcf0a8.png?v=1777321345",
+     "width": 2160,
+     "height": 3840
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7617696989282,
+   "title": "Salted Mocha RTD",
+   "handle": "salted-mocha-rtd",
+   "body_html": "",
+   "published_at": "2026-10-20T16:05:22-05:00",
+   "created_at": "2026-04-27T15:22:39-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "Consumable"
+   ],
+   "variants": [
+    {
+     "id": 42836576895074,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "SM-RTD-12OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7617696989282,
+     "created_at": "2026-04-27T15:22:39-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 34710731915362,
+     "created_at": "2026-04-27T15:22:51-05:00",
+     "position": 1,
+     "updated_at": "2026-04-27T15:22:53-05:00",
+     "product_id": 7617696989282,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/SaltedMocha_Transparent0001.png?v=1777321373",
+     "width": 2160,
+     "height": 3840
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7617698037858,
+   "title": "Ube Vanilla RTD",
+   "handle": "ube-vanilla-rtd",
+   "body_html": "",
+   "published_at": "2026-10-20T16:05:01-05:00",
+   "created_at": "2026-04-27T15:23:36-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "Consumable"
+   ],
+   "variants": [
+    {
+     "id": 42836577943650,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "UV-RTD-12OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "45.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7617698037858,
+     "created_at": "2026-04-27T15:23:36-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 34710739189858,
+     "created_at": "2026-04-27T15:23:47-05:00",
+     "position": 1,
+     "updated_at": "2026-04-27T15:23:49-05:00",
+     "product_id": 7617698037858,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/UbeVanilla_Transparent0001.png?v=1777321429",
+     "width": 2160,
+     "height": 3840
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7617694269538,
+   "title": "Matcha Latte RTD",
+   "handle": "matcha-latte-rtd",
+   "body_html": "",
+   "published_at": "2026-10-20T16:04:43-05:00",
+   "created_at": "2026-04-27T15:20:12-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "",
+   "tags": [
+    "Consumable"
+   ],
+   "variants": [
+    {
+     "id": 42836573913186,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "ML-RTD-12OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7617694269538,
+     "created_at": "2026-04-27T15:20:12-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 34710714482786,
+     "created_at": "2026-04-27T15:20:37-05:00",
+     "position": 1,
+     "updated_at": "2026-04-27T15:20:39-05:00",
+     "product_id": 7617694269538,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/MatchaLatte_Transparent0001.png?v=1777321239",
+     "width": 2160,
+     "height": 3840
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10350562246754,
+   "title": "Ode Brew Grinder Gen 2",
+   "handle": "ode-brew-grinder-gen-2-white",
+   "body_html": "<p>Fellow spent two years in development to bring you the next generation of their award-winning home brew grinder. From the finest pour-overs to the coarsest cold brews, your coffee will never be the same again.</p>\n<p>Designed by Nick Terzulli, Fellow\u2019s VP of R&amp;D and Certified Q Grader (the highest certification in sensory coffee assessment), Gen 2 Brew Burrs grind finer and with more precision. The broader grind range is exceptional for every brew method except espresso. With new anti-static technology for less grind mess, a redesigned load bin for smoother bean feeding, and an expanded 100 gram catch cup for batch brews, the next generation of grinding is here.</p>\n<p><strong>Features:\u00a0</strong></p>\n<ul class=\"pdp_details__feature_list\">\n<li>New best-in-class Gen 2 Brew Burrs</li>\n<li>New anti-static technology for less grind mess</li>\n<li>New 100 gram capacity</li>\n<li>New load bin design for smoother bean feeding</li>\n<li>31 grind settings and guide</li>\n<li>Quiet grinding and automatic stop</li>\n<li>Single dose loading for maximum freshness</li>\n<li>Low grind retention</li>\n<li>Magnetically aligned catch with easy pour fins</li>\n<li>Grinds knocker</li>\n<li>Compact footprint</li>\n</ul>\n<ul></ul>\n<p>Enjoy either a <a href=\"https://fellowproducts.com/pages/warranty\"><u>2-year standard warranty</u></a>, or a 3-year warranty if customers\u00a0<a href=\"https://register.fellowproducts.com/\">register the grinder</a>.</p>",
+   "published_at": "2026-10-23T11:56:20-05:00",
+   "created_at": "2026-10-23T11:45:41-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Fellow Wholesale",
+   "product_type": "Equipment",
+   "tags": [
+    "Equipment",
+    "EQUIPMENT: All",
+    "Fellow Wholesale",
+    "Shopify Collective"
+   ],
+   "variants": [
+    {
+     "id": 50750026121314,
+     "title": "Matte Black",
+     "option1": "Matte Black",
+     "option2": null,
+     "option3": null,
+     "sku": "D1211MB-US-SB",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018326335586,
+      "product_id": 10350562246754,
+      "position": 1,
+      "created_at": "2026-10-23T11:45:41-05:00",
+      "updated_at": "2026-10-23T11:45:43-05:00",
+      "alt": null,
+      "width": 1350,
+      "height": 1350,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/OdeGen2-Image1_16455222-528d-4f4b-9762-dede183dc173.png?v=1792773943",
+      "variant_ids": [
+       50750026121314
+      ]
+     },
+     "available": true,
+     "price": "399.95",
+     "grams": 6577,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10350562246754,
+     "created_at": "2026-10-23T11:45:41-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750026154082,
+     "title": "Matte White",
+     "option1": "Matte White",
+     "option2": null,
+     "option3": null,
+     "sku": "D1211MW-US-SB",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "399.95",
+     "grams": 6577,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10350562246754,
+     "created_at": "2026-10-23T11:45:41-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53018326335586,
+     "created_at": "2026-10-23T11:45:41-05:00",
+     "position": 1,
+     "updated_at": "2026-10-23T11:45:43-05:00",
+     "product_id": 10350562246754,
+     "variant_ids": [
+      50750026121314
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/OdeGen2-Image1_16455222-528d-4f4b-9762-dede183dc173.png?v=1792773943",
+     "width": 1350,
+     "height": 1350
+    }
+   ],
+   "options": [
+    {
+     "name": "Color",
+     "position": 1,
+     "values": [
+      "Matte Black",
+      "Matte White"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10350562181218,
+   "title": "Aiden Precision Coffee Maker",
+   "handle": "aiden-precision-coffee-maker-1",
+   "body_html": "<p><span style=\"font-weight: 400;\">Meet the machine changing the narrative that automatic drip coffee is synonymous with \u201cbad\u201d coffee. Combining precision, control, and speed, Aiden brews pour-over style coffee with the press of a button. Sip a single serving or brew a 10-cup batch exactly how the roaster intended\u2014or dial in your own recipe.\u00a0</span></p>",
+   "published_at": "2026-10-23T11:46:54-05:00",
+   "created_at": "2026-10-23T11:45:33-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Fellow Wholesale",
+   "product_type": "Brewers",
+   "tags": [
+    "Equipment",
+    "EQUIPMENT: All",
+    "Fellow Wholesale",
+    "Shopify Collective"
+   ],
+   "variants": [
+    {
+     "id": 50750025957474,
+     "title": "Matte Black",
+     "option1": "Matte Black",
+     "option2": null,
+     "option3": null,
+     "sku": "EBRMB-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325483618,
+      "product_id": 10350562181218,
+      "position": 1,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:37-05:00",
+      "alt": null,
+      "width": 3000,
+      "height": 3000,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/AidenBrewer_MB_PDP_Image1.png?v=1792773937",
+      "variant_ids": [
+       50750025957474
+      ]
+     },
+     "available": true,
+     "price": "399.95",
+     "grams": 9979,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10350562181218,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750025990242,
+     "title": "Matte White",
+     "option1": "Matte White",
+     "option2": null,
+     "option3": null,
+     "sku": "EBRMW-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325614690,
+      "product_id": 10350562181218,
+      "position": 2,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:39-05:00",
+      "alt": null,
+      "width": 3000,
+      "height": 3000,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Aiden_Precision_Coffee_Maker_MW_01.png?v=1792773939",
+      "variant_ids": [
+       50750025990242
+      ]
+     },
+     "available": true,
+     "price": "399.95",
+     "grams": 9979,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10350562181218,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750026023010,
+     "title": "Malted Chocolate",
+     "option1": "Malted Chocolate",
+     "option2": null,
+     "option3": null,
+     "sku": "EBR3C-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325778530,
+      "product_id": 10350562181218,
+      "position": 3,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:39-05:00",
+      "alt": null,
+      "width": 3000,
+      "height": 3000,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Aiden_Precision_Coffee_Maker_Malted_Chocolate_01_SCREEN.png?v=1792773939",
+      "variant_ids": [
+       50750026023010
+      ]
+     },
+     "available": true,
+     "price": "399.95",
+     "grams": 9979,
+     "compare_at_price": null,
+     "position": 3,
+     "product_id": 10350562181218,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    },
+    {
+     "id": 50750026055778,
+     "title": "Storm Blue",
+     "option1": "Storm Blue",
+     "option2": null,
+     "option3": null,
+     "sku": "EBRST-NA",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 53018325811298,
+      "product_id": 10350562181218,
+      "position": 4,
+      "created_at": "2026-10-23T11:45:33-05:00",
+      "updated_at": "2026-10-23T11:45:37-05:00",
+      "alt": null,
+      "width": 1560,
+      "height": 1951,
+      "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/Web_PDP_Aiden_StormBlue_1.png?v=1792773937",
+      "variant_ids": [
+       50750026055778
+      ]
+     },
+     "available": true,
+     "price": "399.95",
+     "grams": 9979,
+     "compare_at_price": null,
+     "position": 4,
+     "product_id": 10350562181218,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53018325483618,
+     "created_at": "2026-10-23T11:45:33-05:00",
+     "position": 1,
+     "updated_at": "2026-10-23T11:45:37-05:00",
+     "product_id": 10350562181218,
+     "variant_ids": [
+      50750025957474
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/AidenBrewer_MB_PDP_Image1.png?v=1792773937",
+     "width": 3000,
+     "height": 3000
+    }
+   ],
+   "options": [
+    {
+     "name": "Color",
+     "position": 1,
+     "values": [
+      "Matte Black",
+      "Matte White",
+      "Malted Chocolate",
+      "Storm Blue"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10350419214434,
+   "title": "Coffee, for Here: The Ultimate Handbook for At-Home Coffee Enthusiasts",
+   "handle": "coffee-for-here-the-ultimate-handbook-for-at-home-coffee-enthusiasts",
+   "body_html": "<p>Make caf\u00e9-quality coffee at home with this beautiful, hands-on book from U.S. Barista Champion Morgan Eckroth, the creator behind the popular @morgandrinkscoffee.</p>\n<p>Coffee, for Here is both a practical handbook and a guide to building real coffee skills at home, designed to help you brew with confidence and curiosity. Whether you\u2019re just beginning your coffee journey or ready to refine your technique, Morgan \u2014 your friendly internet barista \u2014 meets you where you are, breaking down each step so even more complex methods feel approachable.</p>\n<p>The book explores coffee from bean to cup, covering origins, flavor profiles, and how coffee is grown, roasted, and tasted. Morgan then walks you through every major brewing method, including pour-over, French press, AeroPress, Moka pot, cold brew, and espresso, with clear instructions, illustrations, and QR-code video walkthroughs. You\u2019ll also learn how to build a streamlined home coffee bar and master espresso fundamentals like shot pulling, milk steaming, and latte art.</p>\n<p>Once you\u2019ve mastered the basics, experiment with 40 inventive, caf\u00e9-style drink recipes that are both impressive and achievable at home \u2014 from a crisp Espresso Tonic to a nostalgic Creamsicle or a floral Limoncello with papaya pur\u00e9e, lime juice, rose water, and espresso.</p>\n<p>Perfect for coffee lovers, fans of non-alcoholic craft beverages, and anyone drawn to the home caf\u00e9 lifestyle, Coffee, for Here is an essential companion for making great coffee, right where you are.</p>",
+   "published_at": "2026-10-23T09:17:06-05:00",
+   "created_at": "2026-10-23T09:17:06-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "Merchandise",
+   "tags": [
+    "accessories",
+    "ACCESSORIES: All"
+   ],
+   "variants": [
+    {
+     "id": 50749373349986,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "CFH-BOOK",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "30.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10350419214434,
+     "created_at": "2026-10-23T09:17:06-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 53017131647074,
+     "created_at": "2026-10-23T09:17:14-05:00",
+     "position": 1,
+     "updated_at": "2026-10-23T09:17:14-05:00",
+     "product_id": 10350419214434,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/1_2d6545ce-9417-4688-aaca-6f1662f9fb0f.webp?v=1792765034",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10347332796514,
+   "title": "Big Takeaway Paper Bag (Preserve)",
+   "handle": "big-takeaway-paper-bag-preserve",
+   "body_html": "",
+   "published_at": "2026-10-20T14:42:15-05:00",
+   "created_at": "2026-10-20T14:42:15-05:00",
+   "updated_at": "2026-10-26T16:46:22-05:00",
+   "vendor": "Onyx Coffee Lab",
+   "product_type": "Warehouse",
+   "tags": [
+    "Cafe-Supplies",
+    "ONYXCAFES",
+    "Single-Use",
+    "Warehouse"
+   ],
+   "variants": [
+    {
+     "id": 50730062577762,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "BTPB-PRES",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "92.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10347332796514,
+     "created_at": "2026-10-20T14:42:16-05:00",
+     "updated_at": "2026-10-26T16:46:22-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 52991889309794,
+     "created_at": "2026-10-20T14:44:06-05:00",
+     "position": 1,
+     "updated_at": "2026-10-20T14:44:07-05:00",
+     "product_id": 10347332796514,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/1707/3261/files/frame-69_3acb7d08-9296-4fe5-aa00-8f9d9d06b709.jpg?v=1792525447",
+     "width": 650,
+     "height": 650
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  }
+ ]
+}

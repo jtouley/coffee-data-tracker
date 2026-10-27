@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: stg_runs
+    description: One row per successful (roaster, run_date); re-runs of a week collapse here.
+  - name: dim_coffee
+    description: Every coffee ever seen, with its latest listing; delisted coffees stay with is_listed = false.
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: process
+        data_tests:
+          - accepted_values: {arguments: {values: [washed, natural, honey, anaerobic, other]}}
+      - name: roast_level
+        data_tests:
+          - accepted_values: {arguments: {values: [light, medium, dark]}}
+  - name: dim_roaster
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+  - name: fct_shot
+    columns:
+      - name: shot_id
+        data_tests: [unique, not_null]
+      - name: coffee_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('dim_coffee'), field: coffee_id}
+              config: {severity: warn}
+      - name: rating
+        data_tests:
+          - accepted_values: {arguments: {values: [1, 2, 3, 4, 5], quote: false}}
+  - name: fct_price_event
+    columns:
+      - name: coffee_id
+        data_tests: [not_null]
+      - name: event
+        data_tests:
+          - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
+
+  - name: public_coffee
+    description: Facts-only coffee table for public release. No descriptions, images or personal data.
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: source_url
+        data_tests: [not_null]
+  - name: public_roaster
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+  - name: public_price_event
+    columns:
+      - name: coffee_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('public_coffee'), field: coffee_id}
+
+seeds:
+  - name: flavor_lexicon
+    description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.
+    columns:
+      - name: note
+        data_tests: [unique]

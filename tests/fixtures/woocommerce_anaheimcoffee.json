@@ -1,0 +1,928 @@
+[
+ {
+  "id": 161,
+  "name": "Mexico",
+  "slug": "mexico",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/mexico/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Dark Chocolate, Marshmallow, Fudge, Sweet, Heavy Body and Low Acidity</p>\n<p>Medium Roast</p>\n<p>Makes a great Espresso</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 441,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/MEX.png?fit=242%2C202&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/MEX.png",
+    "srcset": "",
+    "sizes": "(max-width: 242px) 100vw, 242px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 242px) 100vw, 242px",
+    "name": "MEX",
+    "alt": ""
+   },
+   {
+    "id": 441,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/MEX.png?fit=242%2C202&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/MEX.png",
+    "srcset": "",
+    "sizes": "(max-width: 242px) 100vw, 242px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 242px) 100vw, 242px",
+    "name": "MEX",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Mexico&rdquo;",
+   "url": "https://anaheimcoffee.com/product/mexico/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/161",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=161&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 149,
+  "name": "Guatemala",
+  "slug": "guatemala",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/guatemala/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Bakers Chocolate, Caramel, Mild Citrus Acidity, Lavender Florals with Creamy Mouthfeel</p>\n<p>Medium-Dark Roast</p>\n<p>No milk needed with this cup</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 440,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/GUAT.png?fit=240%2C204&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/GUAT.png",
+    "srcset": "",
+    "sizes": "(max-width: 240px) 100vw, 240px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 240px) 100vw, 240px",
+    "name": "GUAT",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 37,
+    "name": "guatemala",
+    "slug": "guatemala",
+    "link": "https://anaheimcoffee.com/product-tag/guatemala/"
+   },
+   {
+    "id": 38,
+    "name": "guatemalan",
+    "slug": "guatemalan",
+    "link": "https://anaheimcoffee.com/product-tag/guatemalan/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Guatemala&rdquo;",
+   "url": "https://anaheimcoffee.com/product/guatemala/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/149",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=149&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 153,
+  "name": "Costa Rica",
+  "slug": "costa-rica",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/costa-rica/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Molasses, Dark Chocolate, Almonds, Mild Citrus Acidity, Well Balanced and Sweet</p>\n<p>Light-Medium Roast</p>\n<p>I lean to the light side when roasting so you can sip on this all day alone or with company.</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 437,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/COSTA.png?fit=244%2C211&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/COSTA.png",
+    "srcset": "",
+    "sizes": "(max-width: 244px) 100vw, 244px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 244px) 100vw, 244px",
+    "name": "COSTA",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 35,
+    "name": "Costa Rica",
+    "slug": "costa-rica",
+    "link": "https://anaheimcoffee.com/product-tag/costa-rica/"
+   },
+   {
+    "id": 36,
+    "name": "Costa Rican",
+    "slug": "costa-rican",
+    "link": "https://anaheimcoffee.com/product-tag/costa-rican/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Costa Rica&rdquo;",
+   "url": "https://anaheimcoffee.com/product/costa-rica/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/153",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=153&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 140,
+  "name": "Colombian",
+  "slug": "colombian",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/colombian/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Grapefruit Fragrance, Red Apple, Brown Sugar, Floral with Heavy Body</p>\n<p>Dark Roast</p>\n<p>Makes a great cup and an amazing Cold Brew</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 436,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/COLOMBIA.png?fit=244%2C201&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/COLOMBIA.png",
+    "srcset": "",
+    "sizes": "(max-width: 244px) 100vw, 244px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 244px) 100vw, 244px",
+    "name": "COLOMBIA",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 32,
+    "name": "colombia",
+    "slug": "colombia",
+    "link": "https://anaheimcoffee.com/product-tag/colombia/"
+   },
+   {
+    "id": 31,
+    "name": "colombian",
+    "slug": "colombian",
+    "link": "https://anaheimcoffee.com/product-tag/colombian/"
+   },
+   {
+    "id": 33,
+    "name": "columbia",
+    "slug": "columbia",
+    "link": "https://anaheimcoffee.com/product-tag/columbia/"
+   },
+   {
+    "id": 34,
+    "name": "columbian",
+    "slug": "columbian",
+    "link": "https://anaheimcoffee.com/product-tag/columbian/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Colombian&rdquo;",
+   "url": "https://anaheimcoffee.com/product/colombian/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/140",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=140&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 107,
+  "name": "Sample Basket",
+  "slug": "sample-bag",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/sample-bag/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Enjoy our Sample bags which contain Single Origins and/or Blends!<img class=\"size-medium wp-image-108 alignleft\" src=\"http://anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458-223x300.jpg\" alt=\"\" width=\"223\" height=\"300\" /></p>\n<p>&nbsp;</p>\n<p>2.5 oz / 71 grams ea x4</p>\n<p>Whole Bean</p>\n<p>&nbsp;</p>\n<p>(basket not included)</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 108,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?fit=1072%2C1440&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458-300x300.jpg",
+    "srcset": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?w=1072&ssl=1 1072w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=223%2C300&ssl=1 223w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=762%2C1024&ssl=1 762w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=768%2C1032&ssl=1 768w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=600%2C806&ssl=1 600w",
+    "sizes": "(max-width: 1072px) 100vw, 1072px",
+    "thumbnail_srcset": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=300%2C300&ssl=1 300w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=150%2C150&ssl=1 150w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?resize=100%2C100&ssl=1 100w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?zoom=2&resize=300%2C300&ssl=1 600w, https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2020/10/FB_IMG_1604087284458.jpg?zoom=3&resize=300%2C300&ssl=1 900w",
+    "thumbnail_sizes": "(max-width: 300px) 100vw, 300px",
+    "name": "Sample Bag",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 28,
+    "name": "sample",
+    "slug": "sample",
+    "link": "https://anaheimcoffee.com/product-tag/sample/"
+   },
+   {
+    "id": 29,
+    "name": "samples",
+    "slug": "samples",
+    "link": "https://anaheimcoffee.com/product-tag/samples/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Sample Basket&rdquo;",
+   "url": "https://anaheimcoffee.com/product/sample-bag/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/107",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=107&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 96,
+  "name": "El Salvador",
+  "slug": "el-salvador",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/el-salvador/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Caramel Fragrance, Butter Scotch, Caramel, Graham Cracker and Pomegranate</p>\n<p>Medium Roast</p>\n<p>All day sipper!</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 438,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/EL.png?fit=243%2C205&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/EL.png",
+    "srcset": "",
+    "sizes": "(max-width: 243px) 100vw, 243px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 243px) 100vw, 243px",
+    "name": "EL",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 23,
+    "name": "El Salvador",
+    "slug": "el-salvador",
+    "link": "https://anaheimcoffee.com/product-tag/el-salvador/"
+   },
+   {
+    "id": 24,
+    "name": "Salvador",
+    "slug": "salvador",
+    "link": "https://anaheimcoffee.com/product-tag/salvador/"
+   },
+   {
+    "id": 25,
+    "name": "Salvadorian",
+    "slug": "salvadorian",
+    "link": "https://anaheimcoffee.com/product-tag/salvadorian/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;El Salvador&rdquo;",
+   "url": "https://anaheimcoffee.com/product/el-salvador/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/96",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=96&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 87,
+  "name": "Brazil",
+  "slug": "brazil",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/brazil/",
+  "sku": "",
+  "short_description": "",
+  "description": "<p>Milk Chocolate, Hazelnut Nougat, Caramel, Dulce de Leche, Well Balanced with Mild Acidity</p>\n<p>Dark Roast</p>\n<p>The &#8220;Tip-of -the-Spear&#8221; of Black Coffee</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 435,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/BRAZIL.png?fit=243%2C191&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/BRAZIL.png",
+    "srcset": "",
+    "sizes": "(max-width: 243px) 100vw, 243px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 243px) 100vw, 243px",
+    "name": "BRAZIL",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 44,
+    "name": "Brasil",
+    "slug": "brasil",
+    "link": "https://anaheimcoffee.com/product-tag/brasil/"
+   },
+   {
+    "id": 21,
+    "name": "Brazil",
+    "slug": "brazil",
+    "link": "https://anaheimcoffee.com/product-tag/brazil/"
+   },
+   {
+    "id": 22,
+    "name": "Brazillian",
+    "slug": "brazillian",
+    "link": "https://anaheimcoffee.com/product-tag/brazillian/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Brazil&rdquo;",
+   "url": "https://anaheimcoffee.com/product/brazil/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/87",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=87&per_page=10"
+    }
+   ]
+  }
+ },
+ {
+  "id": 86,
+  "name": "Ethiopian",
+  "slug": "ethiopian",
+  "parent": 0,
+  "type": "simple",
+  "variation": "",
+  "permalink": "https://anaheimcoffee.com/product/ethiopian/",
+  "sku": "",
+  "short_description": "<p>Single Origin &#8211; Ethiopian</p>",
+  "description": "<p>Toasted Coconut, Blueberry and Sweet Chocolate</p>\n<p>Light Roast</p>\n<p>The taste and hints of blueberry are awesome!</p>",
+  "on_sale": false,
+  "prices": {
+   "price": "2000",
+   "regular_price": "2000",
+   "sale_price": "2000",
+   "price_range": null,
+   "currency_code": "USD",
+   "currency_symbol": "$",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ".",
+   "currency_thousand_separator": ",",
+   "currency_prefix": "$",
+   "currency_suffix": ""
+  },
+  "price_html": "<span class=\"woocommerce-Price-amount amount\"><span class=\"woocommerce-Price-currencySymbol\" dir=\"auto\">&#036;</span>20.00</span>",
+  "average_rating": "0",
+  "review_count": 0,
+  "images": [
+   {
+    "id": 439,
+    "src": "https://i0.wp.com/anaheimcoffee.com/wp-content/uploads/2021/05/Ethiopia.png?fit=244%2C200&ssl=1",
+    "thumbnail": "https://anaheimcoffee.com/wp-content/uploads/2021/05/Ethiopia.png",
+    "srcset": "",
+    "sizes": "(max-width: 244px) 100vw, 244px",
+    "thumbnail_srcset": "",
+    "thumbnail_sizes": "(max-width: 244px) 100vw, 244px",
+    "name": "Ethiopia",
+    "alt": ""
+   }
+  ],
+  "categories": [],
+  "tags": [
+   {
+    "id": 19,
+    "name": "Ethiopia",
+    "slug": "ethiopia",
+    "link": "https://anaheimcoffee.com/product-tag/ethiopia/"
+   },
+   {
+    "id": 20,
+    "name": "Ethiopian",
+    "slug": "ethiopian",
+    "link": "https://anaheimcoffee.com/product-tag/ethiopian/"
+   }
+  ],
+  "brands": [],
+  "attributes": [],
+  "variations": [],
+  "grouped_products": [],
+  "has_options": false,
+  "is_purchasable": false,
+  "is_in_stock": true,
+  "is_on_backorder": false,
+  "low_stock_remaining": null,
+  "stock_availability": {
+   "text": "",
+   "class": "in-stock"
+  },
+  "sold_individually": false,
+  "weight": "",
+  "dimensions": {
+   "length": "",
+   "width": "",
+   "height": ""
+  },
+  "formatted_weight": "N/A",
+  "formatted_dimensions": "N/A",
+  "add_to_cart": {
+   "text": "Read more",
+   "description": "Read more about &ldquo;Ethiopian&rdquo;",
+   "url": "https://anaheimcoffee.com/product/ethiopian/",
+   "single_text": "Add to cart",
+   "minimum": 1,
+   "maximum": 9999,
+   "multiple_of": 1
+  },
+  "is_password_protected": false,
+  "extensions": {},
+  "_links": {
+   "self": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products/86",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products"
+    }
+   ],
+   "related": [
+    {
+     "embeddable": true,
+     "href": "https://anaheimcoffee.com/wp-json/wc/store/v1/products?related=86&per_page=10"
+    }
+   ]
+  }
+ }
+]

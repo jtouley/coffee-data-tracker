@@ -1,0 +1,826 @@
+{
+ "products": [
+  {
+   "id": 15422020026445,
+   "title": "Laba Gesha - Natural Sundried",
+   "handle": "laba-gesha-natural-sundried",
+   "body_html": "<p>Laba Gesha is a small community on the outskirts of the famed Yirgacheffe district, bordering Ethiopia's Bule mountain range. Because of the area's high altitude and cooler climate, local farmers traditionally relied more on cereal crop production than coffee farming. As the climate has changed, more coffee is being produced here, and two years ago, our exporting partner, GBroad Trading, started working with a small group of farmers in the village. Although this town shares the name \u2018Gesha\u2019 with the famous coffee variety whose origins lie in Western Ethiopia, no Gesha trees grow here. Instead, farmers in the area cultivate Kurume, 74110 and 74112, common across the Yirgacheffe area. In the cup, we find delicate notes of strawberry cream alongside sweet pastry and cocoa.</p>\n<p>Pronunciation: LAH-bah GAY-sha</p>",
+   "published_at": "2026-10-22T16:04:19-04:00",
+   "created_at": "2026-10-16T11:58:32-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "hidden",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 67712506658893,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "LABANAT-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "26.00",
+     "grams": 367,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15422020026445,
+     "created_at": "2026-10-16T11:58:32-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 38137975668813,
+     "created_at": "2026-10-16T13:44:51-04:00",
+     "position": 1,
+     "updated_at": "2026-10-16T13:44:54-04:00",
+     "product_id": 15422020026445,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Laba_Gesha_Nat_Sun-2026-PDP.png?v=1792172694",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 15393862877261,
+   "title": "El Conacaste \u2013 Java Variety",
+   "handle": "el-conacaste-java-variety",
+   "body_html": "<p>Founded in 1996 as a reforestation project, Finca Conacaste transformed 210 hectares of former corn and cattle farmland into a more biodiverse agroforestry system. Its proximity to Montecristo National Park\u2014part of a 460-square-mile transboundary protected cloud forest spanning El Salvador, Honduras and Guatemala\u2014made this mission especially meaningful. For years, the farm cultivated pantry staples before planting its first coffee in 2014. Since then, it has consistently ranked among the top finishers in national quality competitions like the Cup of Excellence. This particular lot, a Java variety separation, was purchased as an exclusive offering for our subscribers for its syrupy sweetness and rich notes of brown sugar and toffee.</p>\n<p>Pronunciation: El koh-nah-KAHS-te<br></p>",
+   "published_at": "2026-10-09T09:43:58-04:00",
+   "created_at": "2026-10-06T08:36:36-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "archive",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 67578675691597,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "ELCONJAVA-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "26.00",
+     "grams": 367,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 15393862877261,
+     "created_at": "2026-10-06T08:36:37-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 37888284917837,
+     "created_at": "2026-10-06T08:44:18-04:00",
+     "position": 1,
+     "updated_at": "2026-10-06T08:44:21-04:00",
+     "product_id": 15393862877261,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/El_Conacaste-Java_Variety-PDP.png?v=1791290661",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7985436819533,
+   "title": "Finca La Hermosa - Orange Bourbon Variety",
+   "handle": "finca-la-hermosa-pink-bourbon-variety-copy",
+   "body_html": "<p>Finca La Hermosa is a long-dreamed-of farm with humble beginnings. In 2010, knowing the potential of Acatenango's volcanic soil, Claudia Abril and Max Perez began transforming an abandoned parcel with no electricity or water into a thriving business. Today, this land produces Cup of Excellence-winning coffees and boasts a small poultry farm and a quality lab as well.\u00a0</p>\n<p>Among the fields of traditional organic coffee, there is a trial plot of over 30 rarer varieties, such as Pacamara and Orange Bourbon. Orange Bourbon is a color mutation of the classic Bourbon variety, producing orange-ripening cherries instead of the typical red. What we love about this cup is the subtle brightness of dark stone fruits like cherry and plum, rounded out by a creamy milk-chocolate sweetness.<br></p>\n<p>Pronunciation: FEENG-kah lah ehr-MOH-sah</p>",
+   "published_at": "2026-09-24T16:09:48-04:00",
+   "created_at": "2026-09-17T12:27:52-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "archive",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 43797544599629,
+     "title": "12 oz",
+     "option1": "12 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "HERMORANGE-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "27.00",
+     "grams": 367,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7985436819533,
+     "created_at": "2026-09-17T12:27:52-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 37217475854413,
+     "created_at": "2026-09-17T12:38:38-04:00",
+     "position": 1,
+     "updated_at": "2026-09-17T12:38:39-04:00",
+     "product_id": 7985436819533,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa_Orange_Bourbon-2026-PDP.png?v=1789663119",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "12 oz"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7965226860621,
+   "title": "Worka Chelbessa",
+   "handle": "worka-chelbessa",
+   "body_html": "<p>The Worka Chelbessa washing station is operated by SNAP, a vertically integrated coffee company with a network of washing stations and a dry mill in Ethiopia. Around 765 smallholder farmers deliver ripe cherries to Worka Chelbessa, where the coffee is washed using the traditional Ethiopian method to reveal its inherent complexity. Worka Chelbessa is the first of several washing stations owned by SNAP to transition to using solar power and just the second solar-powered washing station in the country. Enjoy this beautifully expressive coffee, with sweet melon flavors, crisp tangerine-like acidity, and a jasmine floral finish.</p>\n<p>Pronunciation: WOR-kah chel-BESS-ah<br></p>",
+   "published_at": "2026-09-10T16:08:20-04:00",
+   "created_at": "2026-09-09T13:23:03-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "color__FF8D6B",
+    "hidden",
+    "origin__ethiopia",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 43745038139469,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "WORKO-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "26.00",
+     "grams": 367,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7965226860621,
+     "created_at": "2026-09-09T13:23:03-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36993139867725,
+     "created_at": "2026-09-09T13:28:58-04:00",
+     "position": 1,
+     "updated_at": "2026-09-09T13:29:00-04:00",
+     "product_id": 7965226860621,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Worka_Chelbessa-2026-PDP.png?v=1788974940",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7610173063245,
+   "title": "Finca El Puente - Honey Processed",
+   "handle": "finca-el-puente-honey",
+   "body_html": "<p>We met Marysabel Caballero and Mois\u00e9s Herrera, the owners of Finca El Puente, in 2005. They have become like family to Counter Culture, and their constant pursuit of coffee perfection inspires us year after year. This year\u2019s harvest has rich notes of blackberry and chocolate, accented by an apricot acidity.</p>\n<p>Pronunciation: FEEN-ka el PWEHN-teh</p>",
+   "published_at": "2026-09-03T16:00:17-04:00",
+   "created_at": "2025-11-03T12:46:45-05:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "coffee",
+    "color_3BBFAD",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 42378552311885,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "PUENTEHON-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "25.00",
+     "grams": 367,
+     "compare_at_price": "26.00",
+     "position": 1,
+     "product_id": 7610173063245,
+     "created_at": "2025-11-03T12:46:45-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36780712558669,
+     "created_at": "2026-08-27T11:35:49-04:00",
+     "position": 1,
+     "updated_at": "2026-08-27T11:35:51-04:00",
+     "product_id": 7610173063245,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FincaElPuente_Honey-2026-PDP.png?v=1787844951",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7909135450189,
+   "title": "The Breville Bambino\u2122",
+   "handle": "the-bambino\u2122",
+   "body_html": "<p><meta charset=\"utf-8\"><span>The faster way to professional results at home. Like professional machines, the Bambino can deliver third-wave specialty coffee. This is made possible by the 4-key formula. Delivering barista quality performance using a 54mm portafilter with 18 grams of coffee for full flavor and a powerful steam wand to create microfoam required for latte art. With a proprietary ThermoJet heating system, the machine is ready to start in 3 seconds.\u00a0</span></p>\n<p><span>Special Offer! Buy one Bambino and get the first order free on a Blend Box subscription using code: <strong>Probarista (must add both to cart)</strong></span></p>",
+   "published_at": "2026-08-28T15:27:27-04:00",
+   "created_at": "2026-07-30T12:52:16-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Breville",
+   "product_type": "",
+   "tags": [],
+   "variants": [
+    {
+     "id": 43327660392525,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "BES450BSS1BUS1",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "299.95",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7909135450189,
+     "created_at": "2026-07-30T12:52:16-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36210905514061,
+     "created_at": "2026-07-30T12:57:10-04:00",
+     "position": 1,
+     "updated_at": "2026-07-30T12:57:13-04:00",
+     "product_id": 7909135450189,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/BES450_BSS_APAC_USCM_Product_Front_View_05_RGB_v1.png?v=1785430633",
+     "width": 3000,
+     "height": 3000
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7909133058125,
+   "title": "Baratza Encore ESP Pro Grinder",
+   "handle": "baratza-classic-grinder",
+   "body_html": "<p><meta charset=\"utf-8\"><span>The Baratza Encore ESP Pro Grinder handles every brew method from drip to pour-over and espresso, with consistent, reliable results. Baristas trust it for its straightforward dial adjustment and dependable performance across all grind sizes. Whether you're brewing a quick morning cup or dialing in espresso shots, the Encore delivers the grind quality your brew deserves.</span></p>\n<p><span><meta charset=\"utf-8\">Special Offer! Buy one Baratza and get the first order free on a Blend Box subscription! <meta charset=\"utf-8\">Using code: <strong>Probarista (must add both to cart)</strong></span></p>",
+   "published_at": "2026-08-28T15:26:13-04:00",
+   "created_at": "2026-07-30T12:44:31-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Breville",
+   "product_type": "",
+   "tags": [],
+   "variants": [
+    {
+     "id": 43327649316941,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "ZCG595BLK1AUC1A",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "299.95",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7909133058125,
+     "created_at": "2026-07-30T12:44:31-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36761989021773,
+     "created_at": "2026-08-26T11:27:22-04:00",
+     "position": 1,
+     "updated_at": "2026-08-26T11:27:24-04:00",
+     "product_id": 7909133058125,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Baratza_Grinder_copy.jpg?v=1787758044",
+     "width": 2928,
+     "height": 3013
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7942307840077,
+   "title": "Finca La Hermosa - Pacamara Variety",
+   "handle": "finca-la-hermosa-pacamara-variety-copy",
+   "body_html": "<p>Finca La Hermosa began in 2010 as an abandoned parcel on the slopes of the Acatenango volcano, with no water or electricity. Today it's a thriving family farm run by Claudia and Max, whose resourcefulness and dedication to sustainability and quality have earned them multiple Cup of Excellence placements.\u00a0</p>\n<p>Planted alongside the larger lots that go into our year-round products like Fast Forward are 32 varieties not often seen in Guatemala. Among those is Pacamara, a cross of Pacas and Maragogipe developed in El Salvador, where it dominates the national Cup of Excellence. Grown in Acatenango's volcanic soil, the variety shows similar brilliance here: complex notes of ripe honeydew and bright green apple, carried by a creamy body that ties the cup together.<br></p>\n<p>Pronunciation: FEENG-kah lah ehr-MOH-sah</p>",
+   "published_at": "2026-08-27T15:58:34-04:00",
+   "created_at": "2026-08-24T13:31:24-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Coffee",
+   "tags": [
+    "hidden",
+    "origin__single-origin",
+    "roastlevel__light-roast",
+    "single-origin"
+   ],
+   "variants": [
+    {
+     "id": 43508169932877,
+     "title": "12 oz",
+     "option1": "12 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "HERMPACA-BG",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 36720796434509,
+      "product_id": 7942307840077,
+      "position": 1,
+      "created_at": "2026-08-24T13:36:54-04:00",
+      "updated_at": "2026-08-24T13:36:56-04:00",
+      "alt": null,
+      "width": 2048,
+      "height": 2048,
+      "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa-Pacamara-2026-PDP.png?v=1787593016",
+      "variant_ids": [
+       43508169932877
+      ]
+     },
+     "available": false,
+     "price": "27.00",
+     "grams": 367,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7942307840077,
+     "created_at": "2026-08-24T13:31:25-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36720796434509,
+     "created_at": "2026-08-24T13:36:54-04:00",
+     "position": 1,
+     "updated_at": "2026-08-24T13:36:56-04:00",
+     "product_id": 7942307840077,
+     "variant_ids": [
+      43508169932877
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa-Pacamara-2026-PDP.png?v=1787593016",
+     "width": 2048,
+     "height": 2048
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "12 oz"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7612982231117,
+   "title": "Heavyweight Hoodie",
+   "handle": "bone-heavyweight-hoodie",
+   "body_html": "<p dir=\"ltr\"><span>A clean, modern classic. This heavyweight pullover hoodie features an oversized fit with dropped shoulders and no drawcord for a minimal, deconstructed look. Made from a soft yet durable 10oz fleece, it\u2019s finished with a dark brown embroidered </span><span>Counter Culture</span><span> logo on the chest and a woven logo tag at the front left waist. Super cozy and perfectly suited for slow mornings and chilly days.</span><b></b></p>\n<ul>\n<li>Sizes S - 3XL</li>\n<li dir=\"ltr\" role=\"presentation\"><span>10 oz (330 gm) cotton/polyester blend 3-end fleece</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>70% Ring-spun Cotton / 30% Polyester</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Boxy fit with drop shoulder</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>No drawcord</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Blindstitch sewing on all seams for an understated, simplified design</span></li>\n<li dir=\"ltr\" role=\"presentation\"><span>Sewn woven label on waistband</span></li>\n<li>Hoodie made by Independent Trading Co and embroidered by Durham-based Inkfinity Printing</li>\n</ul>",
+   "published_at": "2026-08-10T11:18:58-04:00",
+   "created_at": "2025-11-04T18:54:58-05:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Merch",
+   "tags": [
+    "active-gift",
+    "gg_merch",
+    "gift",
+    "merch"
+   ],
+   "variants": [
+    {
+     "id": 42383658647629,
+     "title": "Small",
+     "option1": "Small",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(S)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 3,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    },
+    {
+     "id": 42383658680397,
+     "title": "Medium",
+     "option1": "Medium",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(M)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 4,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    },
+    {
+     "id": 42383658713165,
+     "title": "Large",
+     "option1": "Large",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(L)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 5,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    },
+    {
+     "id": 42383658745933,
+     "title": "XL",
+     "option1": "XL",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(XL)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 6,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    },
+    {
+     "id": 42383658778701,
+     "title": "2XL",
+     "option1": "2XL",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(2XL)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 7,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    },
+    {
+     "id": 42383658811469,
+     "title": "3XL",
+     "option1": "3XL",
+     "option2": null,
+     "option3": null,
+     "sku": "HOODIE-WHT-(3XL)",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "45.50",
+     "grams": 272,
+     "compare_at_price": "65.00",
+     "position": 8,
+     "product_id": 7612982231117,
+     "created_at": "2025-11-04T18:54:59-05:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 34176348160077,
+     "created_at": "2025-11-10T14:56:14-05:00",
+     "position": 1,
+     "updated_at": "2025-11-10T14:56:16-05:00",
+     "product_id": 7612982231117,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/HolidayMerch2025_Hoodie_Front.jpg?v=1762804576",
+     "width": 2925,
+     "height": 2925
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "Small",
+      "Medium",
+      "Large",
+      "XL",
+      "2XL",
+      "3XL"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7914248110157,
+   "title": "Skywriter Surf Cap",
+   "handle": "throwback-logo-hat-copy",
+   "body_html": "<p dir=\"ltr\">Get that dang sun out of your eyes with our Skywriter Surf Cap, featuring a charming vintage airplane skywriter, shouting out our favorite summer beverage. The lightweight, quick-dry material makes this hat the perfect companion for floating down the river, avoiding splashes in the pool, or just looking and staying cool all summer.</p>\n<ul>\n<li>\n<span><strong>Color</strong>:</span><span> Hydro blue with white printing</span>\n</li>\n<li>\n<strong>Material:</strong><span> Lightweight 100% recycled nylon, quick-dry fabric</span>\n</li>\n<li>\n<strong>Fit:</strong><span> Mid-profile, single panel on front, slightly curved bill</span>\n</li>\n<li>\n<strong>Details:</strong><span> Plastic adjustable snapback, one size fits most</span>\n</li>\n</ul>",
+   "published_at": "2026-08-10T11:05:45-04:00",
+   "created_at": "2026-08-03T13:10:23-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Merch",
+   "tags": [
+    "gift",
+    "merch"
+   ],
+   "variants": [
+    {
+     "id": 43358244601933,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "HAT-SKY",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "25.00",
+     "grams": 454,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7914248110157,
+     "created_at": "2026-08-03T13:10:23-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36477226090573,
+     "created_at": "2026-08-10T11:00:19-04:00",
+     "position": 1,
+     "updated_at": "2026-08-10T11:00:22-04:00",
+     "product_id": 7914248110157,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Hat2.jpg?v=1786374022",
+     "width": 3200,
+     "height": 3200
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7914249650253,
+   "title": "Coffee Wave Tote",
+   "handle": "coffee-with-friends-tote-copy",
+   "body_html": "<p>Meet your new carry-everything companion. This jumbo 12 oz. cotton canvas tote is roomy, durable, and ready for whatever your day holds. With a generous size and sturdy handles, it\u2019s built to haul groceries, books, gym gear, and those two 5lb bags of whole bean coffee you just picked up for the holidays. Coffee is better with friends, after all.</p>\n<p>Cute and functional\u2014this tote brings a little joy to every outing.</p>\n<ul>\n<li>\n<meta charset=\"utf-8\">Size: 15\u201d x 16\u201d, no gusset, 9.5\u201d handle<br>\n</li>\n<li>Weight: 6 oz</li>\n<li>Color: Yellow</li>\n<li>100% cotton</li>\n<li>Machine wash cold, lay flat to dry</li>\n</ul>",
+   "published_at": "2026-08-10T11:04:25-04:00",
+   "created_at": "2026-08-03T13:17:06-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Merch",
+   "tags": [
+    "gift",
+    "merch"
+   ],
+   "variants": [
+    {
+     "id": 43358250664013,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "TOTE-WAVE",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": false,
+     "price": "15.00",
+     "grams": 170,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7914249650253,
+     "created_at": "2026-08-03T13:17:06-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36477226123341,
+     "created_at": "2026-08-10T11:00:19-04:00",
+     "position": 1,
+     "updated_at": "2026-08-10T11:00:21-04:00",
+     "product_id": 7914249650253,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Tote2.jpg?v=1786374021",
+     "width": 3200,
+     "height": 3200
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7914253746253,
+   "title": "Coffee Wave Glass - 16 oz",
+   "handle": "gemini-milk-glass-mug-copy",
+   "body_html": "<p><meta charset=\"utf-8\">Iced coffee, root beer affogato float, iced americano, cold brew, espresso tonic, whatever you want to put in it, this 16oz glass lets you ride the cold coffee wave with delight.<br></p>\n<ul>\n<li>Size: 16oz</li>\n<li>Care: Top rack dishwasher safe, hand wash recommended to maintain print quality<br>\n</li>\n</ul>\n<!---->",
+   "published_at": "2026-08-10T11:03:16-04:00",
+   "created_at": "2026-08-03T13:23:15-04:00",
+   "updated_at": "2026-10-26T17:43:44-04:00",
+   "vendor": "Counter Culture Coffee - Retail",
+   "product_type": "Merch",
+   "tags": [
+    "gift",
+    "merch"
+   ],
+   "variants": [
+    {
+     "id": 43358270423117,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "GLASS-WAVE-16OZ",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "10.00",
+     "grams": 113,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 7914253746253,
+     "created_at": "2026-08-03T13:23:16-04:00",
+     "updated_at": "2026-10-26T17:43:44-04:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 36477226156109,
+     "created_at": "2026-08-10T11:00:19-04:00",
+     "position": 1,
+     "updated_at": "2026-08-10T11:00:21-04:00",
+     "product_id": 7914253746253,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/glass1.jpg?v=1786374021",
+     "width": 4024,
+     "height": 4024
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  }
+ ]
+}

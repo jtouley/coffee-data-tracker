@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coffee Data</title>
+<meta name="description" content="A daily catalog of US specialty coffee roasters, plus a personal espresso log.">
+<style>
+:root {
+  color-scheme: light;
+  --surface-0: #f6f5f2; --surface-1: #fcfcfb; --border: #e3e1db;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #77756f;
+  --series-1: #2a78d6; --series-1-hover: #1f63b6; --grid: #ebe9e4; --accent: #8a4b1d;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2d2b;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958d;
+    --series-1: #3987e5; --series-1-hover: #62a2ee; --grid: #2a2a28; --accent: #e0a46e;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2d2b;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958d;
+  --series-1: #3987e5; --series-1-hover: #62a2ee; --grid: #2a2a28; --accent: #e0a46e;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); color: var(--text-primary);
+  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
+header h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+header p { margin: 0; color: var(--text-secondary); }
+h2 { font-size: 18px; margin: 0 0 12px; }
+section { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-top: 20px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 20px; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.tile .n { font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.tile .l { color: var(--text-secondary); font-size: 13px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.grid2 section { margin-top: 0; }
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.chart text { font-size: 12px; fill: var(--text-secondary); }
+.chart .val { fill: var(--text-primary); font-variant-numeric: tabular-nums; }
+.chart .bar, .chart .dot { fill: var(--series-1); }
+.chart .dot { stroke: var(--surface-1); stroke-width: 2; }
+.chart .hit { fill: transparent; }
+.chart .mark:hover .bar, .chart .mark:focus .bar, .chart .mark:hover .dot, .chart .mark:focus .dot { fill: var(--series-1-hover); }
+.chart .mark:focus { outline: none; }
+.chart .axis { stroke: var(--border); }
+.chart .grid { stroke: var(--grid); }
+.empty, .note { color: var(--text-muted); font-size: 13px; }
+details { margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; position: sticky; top: 0; background: var(--surface-1); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+a { color: var(--accent); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.filters input, .filters select { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border);
+  background: var(--surface-0); color: var(--text-primary); }
+.filters input[type=search] { flex: 1 1 220px; }
+.filters label { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); font-size: 13px; }
+.scroll { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
+.scroll table th { border-bottom: 1px solid var(--border); }
+#tip { position: fixed; pointer-events: none; background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 16px rgb(0 0 0 / .12);
+  display: none; max-width: 280px; z-index: 10; }
+.notes { color: var(--text-secondary); }
+footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
+.theme { float: right; font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
+  border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+@media (max-width: 600px) { .hide-sm { display: none; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <button class="theme" id="theme" type="button">Theme</button>
+  <h1>Coffee Data</h1>
+  <p>What US specialty roasters are selling this week, and the shots I pull with it. Updated {{ generated }}.</p>
+</header>
+
+<div class="tiles">
+  <div class="tile"><div class="n">{{ "{:,}".format(totals.coffees) }}</div><div class="l">coffees listed</div></div>
+  <div class="tile"><div class="n">{{ "{:,}".format(totals.in_stock) }}</div><div class="l">in stock</div></div>
+  <div class="tile"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with an online catalog</div></div>
+  <div class="tile"><div class="n">{{ "{:,}".format(coverage.get("registry", {}).values() | sum) }}</div><div class="l">roasters in the registry</div></div>
+</div>
+
+<div class="grid2" style="margin-top:20px">
+  <section>
+    <h2>Median price per 100 g, by origin</h2>
+    {{ charts.origin_price | safe }}
+    <p class="note">Single origins in stock, cheapest bag size per coffee; origins with at least 5 coffees.</p>
+    <details><summary>Table</summary><table><thead><tr><th>Origin</th><th class="num">Coffees</th><th class="num">Median $/100 g</th></tr></thead><tbody>
+    {% for r in origin_price %}<tr><td>{{ r.origin_country }}</td><td class="num">{{ r.n }}</td><td class="num">{{ "%.2f"|format(r.med) }}</td></tr>{% endfor %}
+    </tbody></table></details>
+  </section>
+  <section>
+    <h2>Coffees in stock, by process</h2>
+    {{ charts.process | safe }}
+    <details><summary>Table</summary><table><thead><tr><th>Process</th><th class="num">Coffees</th></tr></thead><tbody>
+    {% for r in processes %}<tr><td>{{ r.process }}</td><td class="num">{{ r.n }}</td></tr>{% endfor %}
+    </tbody></table></details>
+  </section>
+</div>
+
+<section>
+  <h2>New since last week</h2>
+  {% if new %}
+  <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
+  {% for c in new %}<tr><td><a href="{{ c.url }}" rel="noopener">{{ c.title }}</a><br><span class="notes">{{ c.roaster_name }}</span></td>
+    <td class="hide-sm">{{ c.origin_country or "" }}{% if c.process %} · {{ c.process }}{% endif %}</td>
+    <td class="hide-sm notes">{{ (c.tasting_notes or [])|join(", ") }}</td>
+    <td class="num">{{ "%.2f"|format(c.price_per_100g) if c.price_per_100g else "" }}</td></tr>{% endfor %}
+  </tbody></table>
+  {% else %}<p class="empty">Nothing new since each roaster's previous run.</p>{% endif %}
+</section>
+
+<section>
+  <h2>Catalog</h2>
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search roaster, coffee, notes…" aria-label="Search the catalog">
+    <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
+    <select id="process" aria-label="Process"><option value="">All processes</option></select>
+    <label><input type="checkbox" id="stock" checked> In stock</label>
+  </div>
+  <p class="note" id="count">Loading…</p>
+  <div class="scroll"><table><thead><tr><th>Coffee</th><th>Roaster</th><th class="hide-sm">Origin</th><th class="hide-sm">Process</th>
+    <th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody id="rows"></tbody></table></div>
+</section>
+
+<div class="grid2" style="margin-top:20px">
+  <section>
+    <h2>My shots: rating by brew ratio</h2>
+    {{ charts.shots | safe }}
+  </section>
+  <section>
+    <h2>Recent shots</h2>
+    {% if shots %}
+    <table><thead><tr><th>Coffee</th><th class="num">Ratio</th><th class="num">Time</th><th class="num">Rating</th></tr></thead><tbody>
+    {% for s in shots %}<tr><td>{{ s.coffee }}</td><td class="num">1:{{ "%.1f"|format(s.brew_ratio) }}</td><td class="num">{{ "%g"|format(s.time_s) }} s</td><td class="num">{{ s.rating }}/5</td></tr>{% endfor %}
+    </tbody></table>
+    {% else %}<p class="empty">No shots logged yet.</p>{% endif %}
+  </section>
+</div>
+
+<section>
+  <h2>Coverage</h2>
+  <p class="note">How many registry roasters yield a catalog, by status. Roasters without an online shop, or whose platform
+    doesn't publish one, show up as <em>no_catalog</em> or <em>no_coffee</em>.</p>
+  <table><tbody>{% for k, v in coverage.get("registry", {}).items() %}<tr><td>{{ k }}</td><td class="num">{{ "{:,}".format(v) }}</td></tr>{% endfor %}</tbody></table>
+</section>
+
+<footer>
+  Roaster discovery: <a href="https://overturemaps.org">Overture Maps Foundation</a> Places (CDLA-Permissive-2.0) and
+  © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Product data is read once a week
+  from each roaster's public storefront feed; every coffee links back to the roaster.
+  Source: <a href="https://github.com/jtouley/coffee-data-tracker">jtouley/coffee-data-tracker</a>.
+</footer>
+</main>
+<div id="tip" role="status"></div>
+<script>
+(() => {
+  // Theme toggle: remembered per viewer; storage may be unavailable.
+  const root = document.documentElement, btn = document.getElementById("theme");
+  try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  btn.addEventListener("click", () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  });
+
+  // Tooltips: hover and keyboard focus, textContent only.
+  const tip = document.getElementById("tip");
+  const show = (el, x, y) => { tip.textContent = el.dataset.tip; tip.style.display = "block";
+    tip.style.left = Math.min(x + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (y + 12) + "px"; };
+  document.querySelectorAll(".mark").forEach(el => {
+    el.addEventListener("pointermove", e => show(el, e.clientX, e.clientY));
+    el.addEventListener("pointerleave", () => tip.style.display = "none");
+    el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); show(el, r.left, r.top); });
+    el.addEventListener("blur", () => tip.style.display = "none");
+  });
+
+  // Catalog: loaded lazily, filtered client-side, rendered with textContent.
+  const $ = id => document.getElementById(id);
+  let rows = [], C = {};
+  const cell = (tr, text, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; td.textContent = text ?? ""; return td; };
+  function render() {
+    const q = $("q").value.trim().toLowerCase(), o = $("origin").value, p = $("process").value, s = $("stock").checked;
+    const hits = rows.filter(r => (!s || r[C.in_stock]) && (!o || r[C.origin_country] === o) && (!p || r[C.process] === p) &&
+      (!q || (r[C.title] + " " + r[C.roaster_name] + " " + (r[C.tasting_notes] || []).join(" ")).toLowerCase().includes(q)));
+    const body = $("rows"); body.textContent = "";
+    for (const r of hits.slice(0, 500)) {
+      const tr = body.insertRow(), td = tr.insertCell(), a = document.createElement("a");
+      a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a);
+      cell(tr, r[C.roaster_name] + (r[C.roaster_state] ? " (" + r[C.roaster_state] + ")" : ""));
+      cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
+      cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");
+      cell(tr, r[C.price_per_100g] != null ? r[C.price_per_100g].toFixed(2) : "", "num");
+    }
+    $("count").textContent = hits.length.toLocaleString() + " coffees" + (hits.length > 500 ? " (showing 500, refine the search)" : "");
+  }
+  fetch("catalog.json").then(r => r.json()).then(d => {
+    d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
+    const fill = (id, col) => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort().forEach(v => {
+      const opt = document.createElement("option"); opt.value = v; opt.textContent = v; $(id).appendChild(opt); });
+    fill("origin", "origin_country"); fill("process", "process");
+    ["q", "origin", "process", "stock"].forEach(id => $(id).addEventListener("input", render));
+    render();
+  }).catch(() => $("count").textContent = "Couldn't load the catalog.");
+})();
+</script>
+</body>
+</html>

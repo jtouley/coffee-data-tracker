@@ -1,0 +1,44 @@
+name: Log a shot
+description: Record an espresso shot. Processed automatically; you'll get dial-in advice back.
+title: "shot"
+labels: [shot]
+body:
+  - type: input
+    id: coffee
+    attributes: {label: Coffee, description: "Roaster + coffee, e.g. Onyx Geometry"}
+    validations: {required: true}
+  - type: input
+    id: grind
+    attributes: {label: Grind setting}
+    validations: {required: true}
+  - type: input
+    id: dose
+    attributes: {label: Dose (g), placeholder: "18"}
+    validations: {required: true}
+  - type: input
+    id: yield
+    attributes: {label: Yield (g), placeholder: "36"}
+    validations: {required: true}
+  - type: input
+    id: time
+    attributes: {label: Time (s), placeholder: "28"}
+    validations: {required: true}
+  - type: dropdown
+    id: rating
+    attributes: {label: Rating, options: ["5 - excellent", "4 - good", "3 - fine", "2 - meh", "1 - bad"]}
+    validations: {required: true}
+  - type: dropdown
+    id: taste
+    attributes: {label: Taste, options: [balanced, sour, bitter]}
+  - type: input
+    id: temp
+    attributes: {label: Water temp (°C)}
+  - type: input
+    id: roast_date
+    attributes: {label: Roast date, placeholder: "2026-10-12"}
+  - type: checkboxes
+    id: milk
+    attributes: {label: Milk drink, options: [{label: This was a milk drink}]}
+  - type: textarea
+    id: notes
+    attributes: {label: Notes}

@@ -1,0 +1,22 @@
+name: Add a roaster
+description: Add a roaster's website to the registry. Processed automatically.
+title: "roaster"
+labels: [roaster]
+body:
+  - type: input
+    id: name
+    attributes: {label: Name}
+    validations: {required: true}
+  - type: input
+    id: website
+    attributes: {label: Website, placeholder: "https://example.coffee"}
+    validations: {required: true}
+  - type: input
+    id: state
+    attributes: {label: State, placeholder: "OR"}
+  - type: checkboxes
+    id: opt_out
+    attributes:
+      label: Opt out
+      description: For roasters who'd rather not be included. Their site is never fetched again.
+      options: [{label: Exclude this roaster}]

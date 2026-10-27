@@ -1,20 +1,17 @@
-# Terraform state files
-*.tfstate
-*.tfplan
-*.tfstate.*
-*.terraform.lock.hcl
-
-# Local Terraform directory
-.terraform/
-
-# Ignore secret files
-*.json
-
-# Compiled Python files
+build/
+.venv/
 __pycache__/
 *.py[cod]
-
-# But not main.tf
-!src/cloud/provider.tf
-!src/cloud/bigquery_dataset.tf
-!src/cloud/bigquery_table.tf
+*.duckdb
+*.duckdb.wal
+.env
+.DS_Store
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+lake/
+data/
+dbt/.user.yml

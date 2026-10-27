@@ -1,0 +1,11 @@
+coffeedata:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('COFFEEDATA_DB', 'build/coffee.duckdb') }}"
+      threads: 4
+      extensions: [httpfs]
+      secrets:
+        - type: huggingface
+          token: "{{ env_var('HF_TOKEN', 'none') }}"

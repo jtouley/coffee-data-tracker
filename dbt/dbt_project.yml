@@ -1,0 +1,28 @@
+name: coffeedata
+version: "0.1.0"
+config-version: 2
+profile: coffeedata
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target"]
+
+vars:
+  # Lake roots to read: the local lake/staging dir, plus the remote dataset when publishing (see lake.py).
+  lake_roots: ["lake"]
+  config_dir: "config"
+  # Failed weekly runs in a row before a roaster is unreachable. The weekly run passes registry.MAX_FAILURES.
+  max_failures: 3
+
+models:
+  coffeedata:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+    public:
+      # Facts-only tables for public release (Hugging Face public dataset, Snowflake, Databricks).
+      +materialized: table

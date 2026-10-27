@@ -1,0 +1,974 @@
+{
+ "products": [
+  {
+   "id": 6792938946620,
+   "title": "Instant Espresso Black Cat Classic",
+   "handle": "5-pack-black-cat-instant-coffee",
+   "body_html": "A new freeze-dried instant coffee with notes of dark chocolate, raw sugar and marshmallow based on our best-selling signature espresso blend. Each box contains five individual servings.",
+   "published_at": "2026-10-08T12:26:12-05:00",
+   "created_at": "2022-02-12T08:14:14-06:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Swift Cup Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Black Cat Bundle: 2",
+    "Black Cat Classic + Instant Latte Bundle: 2",
+    "Coffee Type: Instant",
+    "Nano Foamer Frother + Instant Variety Bundle: 5",
+    "Product Line: Retail Instant",
+    "Subscription: Enabled"
+   ],
+   "variants": [
+    {
+     "id": 39834989592636,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "11014",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "13.00",
+     "grams": 113,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 6792938946620,
+     "created_at": "2022-02-12T08:14:15-06:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 45240882593852,
+     "created_at": "2025-10-27T10:37:48-05:00",
+     "position": 1,
+     "updated_at": "2025-10-27T10:37:50-05:00",
+     "product_id": 6792938946620,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/InstantBC.png?v=1761579470",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 10311386660924,
+   "title": "Colombia Cauca Castillo Single Origin Espresso",
+   "handle": "colombia-cauca-castillo-single-origin-espresso",
+   "body_html": "<p>Introduced to Colombian farmers in 2005, Castillo has since been widely adopted for its resilience against coffee leaf rust, a devastating fungus that affects farms around the world.\u00a0<br><br><b>Dialing In? Start Here:<br>18g in, 30-34s, 44-46g out</b><br><br></p>",
+   "published_at": "2026-09-24T13:31:18-05:00",
+   "created_at": "2026-09-24T13:30:41-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Single Origin",
+    "Finder: Espresso",
+    "How to Brew: Espresso",
+    "Show Upsell"
+   ],
+   "variants": [
+    {
+     "id": 50515305562172,
+     "title": "12 oz",
+     "option1": "12 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "15787",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 55198589583420,
+      "product_id": 10311386660924,
+      "position": 1,
+      "created_at": "2026-09-24T13:50:01-05:00",
+      "updated_at": "2026-09-24T13:50:02-05:00",
+      "alt": "12oz of Colombia Cauca Castillo Single Origin Espresso",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_ColombiaCaucaCastillo.png?v=1790275802",
+      "variant_ids": [
+       50515305562172
+      ]
+     },
+     "available": true,
+     "price": "22.00",
+     "grams": 340,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 10311386660924,
+     "created_at": "2026-09-24T13:30:42-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    },
+    {
+     "id": 50515305594940,
+     "title": "5 lb",
+     "option1": "5 lb",
+     "option2": null,
+     "option3": null,
+     "sku": "15788",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 55198594662460,
+      "product_id": 10311386660924,
+      "position": 2,
+      "created_at": "2026-09-24T13:50:48-05:00",
+      "updated_at": "2026-09-24T13:50:49-05:00",
+      "alt": null,
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_ColombiaCaucaCastillo_5lb.png?v=1790275849",
+      "variant_ids": [
+       50515305594940
+      ]
+     },
+     "available": true,
+     "price": "128.00",
+     "grams": 2268,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 10311386660924,
+     "created_at": "2026-09-24T13:30:42-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 55198589583420,
+     "created_at": "2026-09-24T13:50:01-05:00",
+     "position": 1,
+     "updated_at": "2026-09-24T13:50:02-05:00",
+     "product_id": 10311386660924,
+     "variant_ids": [
+      50515305562172
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_ColombiaCaucaCastillo.png?v=1790275802",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "12 oz",
+      "5 lb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4682571382844,
+   "title": "Instant Coffee House Blend",
+   "handle": "5-pack-house-instant-coffee",
+   "body_html": "We've teamed up with Swift Cup Coffee to bring you an instant coffee with quality in mind. Try our Intelligentsia House Blend instantly with just 8oz of hot or cold water! This 5 pack of single-servings is perfect when traveling or on-the-go.",
+   "published_at": "2026-09-22T15:38:11-05:00",
+   "created_at": "2020-11-20T08:17:38-06:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Swift Cup Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Instant",
+    "Finder: Drip",
+    "Finder: Novice",
+    "Nano Foamer Frother + Instant Variety Bundle: 5",
+    "Product Line: Retail Instant",
+    "Show Upsell",
+    "Subscription: Enabled"
+   ],
+   "variants": [
+    {
+     "id": 32612337811516,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "9787",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "13.00",
+     "grams": 113,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 4682571382844,
+     "created_at": "2020-11-20T08:17:38-06:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 45240883904572,
+     "created_at": "2025-10-27T10:38:44-05:00",
+     "position": 1,
+     "updated_at": "2025-10-27T10:38:46-05:00",
+     "product_id": 4682571382844,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/InstantHouse_1_2edc1fb7-58f3-42a2-8eb2-815491f1291d.png?v=1761579526",
+     "width": 2000,
+     "height": 2000
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8620872269884,
+   "title": "Season's Best Bundle",
+   "handle": "seasons-best-bundle-2",
+   "body_html": "<p><meta charset=\"utf-8\">We've put together three of our favorite coffees into one perfectly packaged bundle, featuring our carefully crafted seasonal blends.</p>\n<br><br>\n<p style=\"font-size: 26px;\">Single Origin bags are 10 oz.<br>Blend bags are 12 oz.</p>",
+   "published_at": "2026-09-22T14:53:23-05:00",
+   "created_at": "2025-08-05T15:02:33-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Badge: 20% OFF",
+    "Coffee Type: Blend",
+    "Related Header: Items in this Bundle",
+    "Related: ethiopia-kirite-washed",
+    "Related: ethiopia-metad-alaka-natural",
+    "Related: otono-blend",
+    "Roast Level: Bright",
+    "Roast Profile: Bright",
+    "Roast Type: Bright",
+    "Show Upsell",
+    "Type: Bundles",
+    "Type: Gifts"
+   ],
+   "variants": [
+    {
+     "id": 43384812666940,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": null,
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "81.00",
+     "grams": 0,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8620872269884,
+     "created_at": "2025-08-05T15:02:33-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 55168666173500,
+     "created_at": "2026-09-22T14:51:55-05:00",
+     "position": 1,
+     "updated_at": "2026-09-22T14:51:57-05:00",
+     "product_id": 8620872269884,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/SBB_Sept26.png?v=1790106717",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 4534612754492,
+   "title": "Oto\u00f1o Blend",
+   "handle": "otono-blend",
+   "body_html": "<p>Oto\u00f1o is inspired by the reflection that autumn brings, when nature reveals its texture and each step outdoors is a chance to slow down and observe a beautiful transition unfold.</p>",
+   "published_at": "2026-09-14T20:37:36-05:00",
+   "created_at": "2020-05-14T11:19:33-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Blend",
+    "Country: Ethiopia",
+    "Country: Guatemala",
+    "Country: Kenya",
+    "Roast Type: Comforting",
+    "Show Upsell"
+   ],
+   "variants": [
+    {
+     "id": 32118901080124,
+     "title": "12 oz",
+     "option1": "12 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "5952",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 49307572011068,
+      "product_id": 4534612754492,
+      "position": 1,
+      "created_at": "2026-09-14T19:54:38-05:00",
+      "updated_at": "2026-09-14T19:54:40-05:00",
+      "alt": "Oto\u00f1o Blend",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/12oz_Otono_Blend_26_1.png?v=1789433680",
+      "variant_ids": [
+       32118901080124
+      ]
+     },
+     "available": true,
+     "price": "30.00",
+     "grams": 340,
+     "compare_at_price": "27.00",
+     "position": 1,
+     "product_id": 4534612754492,
+     "created_at": "2020-05-14T11:19:33-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    },
+    {
+     "id": 32118901112892,
+     "title": "5 lb",
+     "option1": "5 lb",
+     "option2": null,
+     "option3": null,
+     "sku": "6024",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 49316316512316,
+      "product_id": 4534612754492,
+      "position": 2,
+      "created_at": "2026-09-15T12:22:03-05:00",
+      "updated_at": "2026-09-15T12:22:05-05:00",
+      "alt": null,
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/Otono_5lb.png?v=1789492925",
+      "variant_ids": [
+       32118901112892
+      ]
+     },
+     "available": true,
+     "price": "172.00",
+     "grams": 2268,
+     "compare_at_price": "159.00",
+     "position": 2,
+     "product_id": 4534612754492,
+     "created_at": "2020-05-14T11:19:33-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 49307572011068,
+     "created_at": "2026-09-14T19:54:38-05:00",
+     "position": 1,
+     "updated_at": "2026-09-14T19:54:40-05:00",
+     "product_id": 4534612754492,
+     "variant_ids": [
+      32118901080124
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/12oz_Otono_Blend_26_1.png?v=1789433680",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "12 oz",
+      "5 lb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7809343094844,
+   "title": "Guatemala Milder Vel\u00e1squez",
+   "handle": "guatemala-milder-velasquez",
+   "body_html": "<p>From the mountains of Huehuetenango, where small farms produce some of Guatemala\u2019s most celebrated coffees, comes this washed lot from Milder Velasquez. Sweet and balanced, this year\u2019s selection features a field blend of traditional varieties well suited to the region\u2019s high elevations.</p>",
+   "published_at": "2026-09-03T21:12:15-05:00",
+   "created_at": "2024-10-03T01:14:34-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Single Origin",
+    "Country: Guatemala",
+    "How to Brew: Pour Over",
+    "Show Upsell"
+   ],
+   "variants": [
+    {
+     "id": 43757376077884,
+     "title": "10 oz",
+     "option1": "10 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "15184",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 49141523644476,
+      "product_id": 7809343094844,
+      "position": 1,
+      "created_at": "2026-09-03T21:17:14-05:00",
+      "updated_at": "2026-09-03T21:17:15-05:00",
+      "alt": "10oz of Guatemala Milder Vel\u00e1squez",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/GuatemalaMilderVelasquez_2.png?v=1788488235",
+      "variant_ids": [
+       43757376077884
+      ]
+     },
+     "available": true,
+     "price": "24.00",
+     "grams": 283,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 7809343094844,
+     "created_at": "2025-12-16T20:42:26-06:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    },
+    {
+     "id": 42227549077564,
+     "title": "5 lb",
+     "option1": "5 lb",
+     "option2": null,
+     "option3": null,
+     "sku": "14305",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 49141526331452,
+      "product_id": 7809343094844,
+      "position": 2,
+      "created_at": "2026-09-03T21:18:25-05:00",
+      "updated_at": "2026-09-03T21:18:27-05:00",
+      "alt": null,
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/GuatemalaMilderVelasquez_5lb.png?v=1788488307",
+      "variant_ids": [
+       42227549077564
+      ]
+     },
+     "available": true,
+     "price": "168.00",
+     "grams": 2268,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 7809343094844,
+     "created_at": "2024-10-03T01:14:34-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 49141523644476,
+     "created_at": "2026-09-03T21:17:14-05:00",
+     "position": 1,
+     "updated_at": "2026-09-03T21:17:15-05:00",
+     "product_id": 7809343094844,
+     "variant_ids": [
+      43757376077884
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/GuatemalaMilderVelasquez_2.png?v=1788488235",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "10 oz",
+      "5 lb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8994186461244,
+   "title": "Honduras La Tortuga",
+   "handle": "honduras-la-tortuga",
+   "body_html": "This year marks 30 years since Marysabel Caballero and Moises Herrera began their journey together in coffee, building on a legacy defined by perseverance and an unwavering commitment to quality.",
+   "published_at": "2026-08-12T16:27:07-05:00",
+   "created_at": "2026-07-16T05:24:49-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Single Origin",
+    "Country: Honduras",
+    "How to Brew: Pour Over",
+    "Roast Profile: Comforting"
+   ],
+   "variants": [
+    {
+     "id": 45891765993532,
+     "title": "10 oz",
+     "option1": "10 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "15597",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 48436693106748,
+      "product_id": 8994186461244,
+      "position": 1,
+      "created_at": "2026-07-17T02:00:36-05:00",
+      "updated_at": "2026-07-17T02:00:37-05:00",
+      "alt": "Honduras La Tortuga",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/HondurasLaTortuga.png?v=1784271637",
+      "variant_ids": [
+       45891765993532
+      ]
+     },
+     "available": false,
+     "price": "24.00",
+     "grams": 283,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8994186461244,
+     "created_at": "2026-07-16T05:24:49-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    },
+    {
+     "id": 45891766026300,
+     "title": "5 lb",
+     "option1": "5 lb",
+     "option2": null,
+     "option3": null,
+     "sku": "15598",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 48436698644540,
+      "product_id": 8994186461244,
+      "position": 2,
+      "created_at": "2026-07-17T02:01:09-05:00",
+      "updated_at": "2026-07-17T02:01:11-05:00",
+      "alt": null,
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/HondurasLaTortuga_5lb.png?v=1784271671",
+      "variant_ids": [
+       45891766026300
+      ]
+     },
+     "available": false,
+     "price": "163.00",
+     "grams": 2268,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 8994186461244,
+     "created_at": "2026-07-16T05:24:49-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 48436693106748,
+     "created_at": "2026-07-17T02:00:36-05:00",
+     "position": 1,
+     "updated_at": "2026-07-17T02:00:37-05:00",
+     "product_id": 8994186461244,
+     "variant_ids": [
+      45891765993532
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/HondurasLaTortuga.png?v=1784271637",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "10 oz",
+      "5 lb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 9028576247868,
+   "title": "Ethiopia Ayla Bombe Single Origin Espresso",
+   "handle": "ethiopia-ayla-bombe",
+   "body_html": "<p>Ayla Bombe brings together coffees from smallholder farmers surrounding the Ayla washing station in Ethiopia's Sidama region. As espresso, the sweetness and complexity of coffees from this region really shine, with notes of ripe stone fruit and fresh lime zest.</p>\n<p><span>Shot</span><span> </span><span>Specs</span><span>:</span><span> </span><span>18g</span><span> </span><span>in</span><span> </span><span>/</span><span> </span><span>30-34</span><span> </span><span>seconds</span><span> </span><span>/</span><span> </span><span>47-50g</span><span> </span><span>out</span></p>",
+   "published_at": "2026-08-11T05:25:48-05:00",
+   "created_at": "2026-08-11T05:25:35-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Coffee",
+   "tags": [
+    "Coffee Type: Single Origin",
+    "Finder: Espresso",
+    "How to Brew: Espresso",
+    "Show Upsell"
+   ],
+   "variants": [
+    {
+     "id": 45979836809276,
+     "title": "12 oz",
+     "option1": "12 oz",
+     "option2": null,
+     "option3": null,
+     "sku": "15649",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 48786526404668,
+      "product_id": 9028576247868,
+      "position": 1,
+      "created_at": "2026-08-13T16:39:57-05:00",
+      "updated_at": "2026-08-13T16:39:59-05:00",
+      "alt": "12oz of Ethiopia Ayla Bombe SOE",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_EthiopiaAyleBombe.png?v=1786657199",
+      "variant_ids": [
+       45979836809276
+      ]
+     },
+     "available": true,
+     "price": "24.00",
+     "grams": 340,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 9028576247868,
+     "created_at": "2026-08-11T05:25:35-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    },
+    {
+     "id": 45979836842044,
+     "title": "5 lb",
+     "option1": "5 lb",
+     "option2": null,
+     "option3": null,
+     "sku": "15650",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": {
+      "id": 48786582143036,
+      "product_id": 9028576247868,
+      "position": 2,
+      "created_at": "2026-08-13T16:41:01-05:00",
+      "updated_at": "2026-08-13T16:41:03-05:00",
+      "alt": "5lb of Ethiopia Ayla Bombe SOE",
+      "width": 1080,
+      "height": 1080,
+      "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_EthiopiaAyleBombe_5lb.png?v=1786657263",
+      "variant_ids": [
+       45979836842044
+      ]
+     },
+     "available": true,
+     "price": "141.00",
+     "grams": 2268,
+     "compare_at_price": null,
+     "position": 2,
+     "product_id": 9028576247868,
+     "created_at": "2026-08-11T05:25:35-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 48786526404668,
+     "created_at": "2026-08-13T16:39:57-05:00",
+     "position": 1,
+     "updated_at": "2026-08-13T16:39:59-05:00",
+     "product_id": 9028576247868,
+     "variant_ids": [
+      45979836809276
+     ],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/BC_EthiopiaAyleBombe.png?v=1786657199",
+     "width": 1080,
+     "height": 1080
+    }
+   ],
+   "options": [
+    {
+     "name": "Size",
+     "position": 1,
+     "values": [
+      "12 oz",
+      "5 lb"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8632486199356,
+   "title": "Flair 58+2",
+   "handle": "flair-58-2",
+   "body_html": "The Flair 58+2 is a versatile, manual espresso machine that's both simple and effective. It is designed to pull both traditional and modern style espressos, giving you a tactile experience by letting you feel the extraction process. A unique feature is its electronically heated open reservoir, which can hold 90-100 ml of liquid and allows for varying water profiles. The machine uses a professional-grade 58mm portafilter and is designed with stylish walnut accents. The +2 model has been updated with an embedded controller, streamlined wiring, and a smaller power supply.",
+   "published_at": "2026-10-14T15:14:47-05:00",
+   "created_at": "2025-08-19T14:49:01-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Equipment",
+   "tags": [
+    "Type: Brewers",
+    "Type: Gifts"
+   ],
+   "variants": [
+    {
+     "id": 43423159353404,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "14494",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "699.00",
+     "grams": 3175,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8632486199356,
+     "created_at": "2025-08-19T14:49:01-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 44451152298044,
+     "created_at": "2025-08-19T14:57:52-05:00",
+     "position": 1,
+     "updated_at": "2025-08-19T14:57:53-05:00",
+     "product_id": 8632486199356,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/flair_58_2_hero.png?v=1755633473",
+     "width": 1450,
+     "height": 1088
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 6812757819452,
+   "title": "Acaia Pearl Scale White",
+   "handle": "acaia-pearl-scale-white",
+   "body_html": "<p>Acaia produces beautiful scales with modern features, it's no wonder they are considered to be one of the best in the business.\u00a0</p>",
+   "published_at": "2026-10-14T15:12:01-05:00",
+   "created_at": "2022-03-02T15:39:43-06:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Equipment",
+   "tags": [
+    "Product Line: Scales",
+    "Type: Scales"
+   ],
+   "variants": [
+    {
+     "id": 39892435468348,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "10956",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "150.00",
+     "grams": 1361,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 6812757819452,
+     "created_at": "2022-03-02T15:39:43-06:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 38157771538492,
+     "created_at": "2024-10-24T15:32:48-05:00",
+     "position": 1,
+     "updated_at": "2025-11-06T08:34:32-06:00",
+     "product_id": 6812757819452,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/acaia_white_pearl_scale_43641824-49d3-47a4-81df-dbf1bc9b2842.png?v=1762439672",
+     "width": 1450,
+     "height": 1088
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8932262740028,
+   "title": "The Chicago KINTO Mug",
+   "handle": "the-chicago-kinto-mug",
+   "body_html": "An easy everyday diner mug celebrating our Chicago roots. This one is sure to become a quick favorite in your coffee cabinet.",
+   "published_at": "2026-10-09T09:12:25-05:00",
+   "created_at": "2026-05-29T14:31:37-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Drinkware",
+   "tags": [
+    "Product Line: Drinkware",
+    "Show Upsell",
+    "Type: Gifts",
+    "Type: Mug"
+   ],
+   "variants": [
+    {
+     "id": 45453024198716,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "15387",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "20.00",
+     "grams": 454,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8932262740028,
+     "created_at": "2026-05-29T14:31:37-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 47846250643516,
+     "created_at": "2026-05-29T14:38:42-05:00",
+     "position": 1,
+     "updated_at": "2026-05-29T14:38:43-05:00",
+     "product_id": 8932262740028,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/ChicagoMug_Back.png?v=1780083523",
+     "width": 960,
+     "height": 960
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  },
+  {
+   "id": 8932262772796,
+   "title": "The Los Angeles KINTO Mug",
+   "handle": "the-los-angeles-kinto-mug",
+   "body_html": "An easy everyday diner mug celebrating our Los Angeles community. This one is sure to become a quick favorite in your coffee cabinet.",
+   "published_at": "2026-10-09T09:10:48-05:00",
+   "created_at": "2026-05-29T14:31:38-05:00",
+   "updated_at": "2026-10-26T16:46:23-05:00",
+   "vendor": "Intelligentsia Coffee",
+   "product_type": "Drinkware",
+   "tags": [
+    "Show Upsell",
+    "Type: Gifts",
+    "Type: Mug"
+   ],
+   "variants": [
+    {
+     "id": 45453024231484,
+     "title": "Default Title",
+     "option1": "Default Title",
+     "option2": null,
+     "option3": null,
+     "sku": "15388",
+     "requires_shipping": true,
+     "taxable": true,
+     "featured_image": null,
+     "available": true,
+     "price": "20.00",
+     "grams": 454,
+     "compare_at_price": null,
+     "position": 1,
+     "product_id": 8932262772796,
+     "created_at": "2026-05-29T14:31:38-05:00",
+     "updated_at": "2026-10-26T16:46:23-05:00"
+    }
+   ],
+   "images": [
+    {
+     "id": 47846429950012,
+     "created_at": "2026-05-29T14:45:38-05:00",
+     "position": 1,
+     "updated_at": "2026-05-29T14:45:40-05:00",
+     "product_id": 8932262772796,
+     "variant_ids": [],
+     "src": "https://cdn.shopify.com/s/files/1/0084/8802/6172/files/LAMug_Front.png?v=1780083940",
+     "width": 960,
+     "height": 960
+    }
+   ],
+   "options": [
+    {
+     "name": "Title",
+     "position": 1,
+     "values": [
+      "Default Title"
+     ]
+    }
+   ]
+  }
+ ]
+}
