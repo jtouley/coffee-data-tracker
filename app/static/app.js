@@ -20,7 +20,20 @@ function store(mode, fn) {
   }));
 }
 
-class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Rejected extends Error {} // the server said no (a 4xx other than 401/403/408/429): retrying won't help
+
+// Only a 2xx removes an entry. No connection, 401 (sign in again), 408, 429 and 5xx keep it and retry later; any
+// other 4xx moves it to the "Couldn't save" list on screen, so a write is never dropped without the person seeing.
+const RETRY = new Set([401, 403, 408, 429]);
+let retryAt = 0; // when the next automatic flush is due (ms), from Retry-After or a doubling backoff
+let backoff = 0;
+
+function retryAfter(r) {
+  const h = r.headers.get("retry-after");
+  if (!h) return null;
+  const s = Number(h);
+  return Number.isFinite(s) ? s * 1000 : Math.max(0, Date.parse(h) - Date.now()) || null;
+}
 
 async function deliver(entry) {
   const r = await fetch(entry.url, {
@@ -28,13 +41,20 @@ async function deliver(entry) {
     headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
     body: JSON.stringify(entry.body),
   });
-  // Signed out (401) or a server error: keep it and try again. Anything else is final.
-  const final = r.status !== 401 && r.status < 500;
-  if (final) await store("readwrite", (s) => s.delete(entry.key));
-  if (r.ok) return r.json();
+  if (r.ok) {
+    await store("readwrite", (s) => s.delete(entry.key));
+    return r.json();
+  }
   const detail = (await r.json().catch(() => ({}))).detail;
-  if (final) throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
-  throw new Error(r.statusText);
+  const why = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
+  if (RETRY.has(r.status) || r.status >= 500) {
+    const err = new Error(why);
+    err.wait = retryAfter(r);
+    throw err;
+  }
+  // Refused for good: kept, marked, and shown, never silently dropped.
+  await store("readwrite", (s) => s.put({ ...entry, failed: why || `Error ${r.status}` }));
+  throw new Rejected(why);
 }
 
 async function send(key, url, body) {
@@ -47,24 +67,56 @@ async function send(key, url, body) {
   }
 }
 
+function later(wait) {
+  backoff = Math.min(backoff ? backoff * 2 : 2000, 5 * 60 * 1000);
+  const delay = wait ?? backoff;
+  retryAt = Date.now() + delay;
+  setTimeout(() => { if (Date.now() >= retryAt) flush(); }, delay);
+}
+
 async function flush() {
-  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
-  const entries = (await store("readonly", (s) => s.getAll())).sort((a, b) => a.at - b.at);
+  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot. A retry
+  // stops the queue, so nothing passes an earlier write that hasn't landed.
+  const entries = (await store("readonly", (s) => s.getAll())).filter((e) => !e.failed).sort((a, b) => a.at - b.at);
   for (const entry of entries) {
     try {
       await deliver(entry);
+      backoff = 0;
     } catch (e) {
-      if (!(e instanceof Rejected)) break; // offline or server down: try again later
+      if (!(e instanceof Rejected)) {
+        later(e.wait);
+        break;
+      }
     }
   }
   showSync();
 }
 
 async function showSync() {
-  const n = await store("readonly", (s) => s.count());
+  const all = await store("readonly", (s) => s.getAll());
+  const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
   }
+  showFailed(all.filter((e) => e.failed));
+}
+
+const KIND = { shot: "A shot", retract: "Undoing a shot", bag: "A bag", equipment: "Equipment" };
+
+function showFailed(failed) {
+  const box = document.querySelector("[data-failed]");
+  if (!box) return;
+  box.hidden = !failed.length;
+  const list = box.querySelector("ul");
+  list.replaceChildren(...failed.map((e) => {
+    const li = document.createElement("li");
+    const when = new Date(e.at).toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+    li.append(`${KIND[e.key.split(":")[0]] || "A change"} from ${when}: ${e.failed} `);
+    const b = Object.assign(document.createElement("button"), { type: "button", className: "btn text", textContent: "Dismiss" });
+    b.onclick = async () => { await store("readwrite", (s) => s.delete(e.key)); showSync(); };
+    li.append(b);
+    return li;
+  }));
 }
 
 function uuid() {
