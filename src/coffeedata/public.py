@@ -19,6 +19,12 @@ from pathlib import Path
 
 PUBLIC_TABLES = ["public_coffee", "public_roaster", "public_price_event", "public_market_weekly"]
 CARD = Path("docs/PUBLIC_DATASET_CARD.md")
+HF_DATA_DIR = "data"  # where the tables go in a Hugging Face export
+
+
+def hf_repo_id(url: str) -> str:
+    """`hf://datasets/<owner>/<name>[@rev][/path]` -> `<owner>/<name>`."""
+    return "/".join(url.removeprefix("hf://datasets/").split("@")[0].strip("/").split("/")[:2])
 
 
 def export(db: Path, dest: str = "build/public") -> dict:
@@ -69,11 +75,11 @@ def _configure_object_store(con, dest: str) -> None:
 def _upload_hf(local: Path, dest: str, manifest: dict) -> None:
     from huggingface_hub import CommitOperationAdd, HfApi
 
-    repo_id = dest.removeprefix("hf://datasets/").split("@")[0]
+    repo_id = hf_repo_id(dest)
     api = HfApi(token=os.environ.get("HF_TOKEN"))
     api.create_repo(repo_id, repo_type="dataset", private=False, exist_ok=True)
     ops = [
-        CommitOperationAdd(path_in_repo=f"data/{p.name}", path_or_fileobj=str(p))
+        CommitOperationAdd(path_in_repo=f"{HF_DATA_DIR}/{p.name}", path_or_fileobj=str(p))
         for p in sorted(local.glob("*.parquet"))
     ]
     ops.append(CommitOperationAdd(path_in_repo="manifest.json", path_or_fileobj=str(local / "manifest.json")))

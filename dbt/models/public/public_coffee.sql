@@ -11,3 +11,4 @@ select
     c.enrichment_method as attributes_source
 from {{ ref('dim_coffee') }} c
 join {{ ref('public_roaster') }} r using (roaster_id)
+where c.url is not null  -- every published coffee links back to its roaster; dim_coffee drops unsafe links
