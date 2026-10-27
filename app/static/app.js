@@ -35,6 +35,8 @@ const sending = new Map(); // key -> the delivery in flight, so Undo can wait fo
 const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
 
 function deliver(entry) {
+  // One delivery per entry at a time: a direct send and a flush on reconnect can reach the same entry together.
+  if (sending.has(entry.key)) return sending.get(entry.key);
   const p = deliverOnce(entry).finally(() => sending.delete(entry.key));
   sending.set(entry.key, p);
   return p;
