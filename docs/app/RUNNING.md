@@ -116,10 +116,10 @@ Nothing here was created for you. Once, in this order:
 | Secret | What it is |
 |---|---|
 | `HF_TOKEN` | Writes the lake, the users dataset and the photo dataset |
-| `ANTHROPIC_API_KEY` | Reads bag labels (10 reads per person per day). Without it, New bag asks you to type the coffee |
+| `ANTHROPIC_API_KEY` | Reads bag labels (10 reads per person per day). It needs a value for the service to start; with a placeholder instead of a real key, New bag asks you to type the coffee |
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
-| `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. Optional once the owner exists |
+| `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. It needs a value for the service to start, even once the owner exists |
 
 `python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER`,
 `SESSION_SECRET` and `HF_TOKEN` are set, every page returns 503 and names the missing secrets, never their values.
@@ -161,18 +161,24 @@ Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines
 
 ### Deleting a person's data
 
-The privacy policy promises deletion within 30 days of a request. The owner runs, with `HF_TOKEN` and the three
-dataset variables set (as for the weekly run):
+The privacy policy promises deletion within 30 days of a request.
 
-```bash
-uv run coffeedata delete-user maya --dry-run   # lists every file that would go
-uv run coffeedata delete-user maya
-```
+1. In the app, turn the account off: Setup → Invite someone → the person → Turn off account. That ends their
+   sessions and refuses their sign-in, so the running app can't write anything for them while their files go.
+2. With `HF_TOKEN` and the three dataset variables set (as for the weekly run):
 
-It removes that person's shots, bags, equipment, photos, account and invites: one commit per dataset. The owner's
-own account can't be deleted this way. Afterwards, deploy again (or restart the service) so the app drops what it
-has in memory. The weekly run rebuilds `marts/fct_shot.parquet` without their shots. The datasets' version history
-still holds the old commits, as the policy says.
+   ```bash
+   uv run coffeedata delete-user maya --dry-run   # lists every file that would go
+   uv run coffeedata delete-user maya
+   ```
+
+3. Deploy again (or restart the service), so the app forgets the turned-off account.
+
+It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
+private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app
+can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
+isn't turned off (`--force` skips that check when the app isn't running). The datasets' version history still holds
+the old commits, as the policy says.
 
 ## Using it on the phone
 

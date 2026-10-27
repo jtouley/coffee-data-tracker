@@ -104,34 +104,76 @@ def three(tmp_path):
     photos = Lake(str(tmp_path / "photos"), tables=PHOTO_TABLES)
     users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
     t = datetime(2026, 10, 20, 7, tzinfo=UTC)
+    later = datetime(2026, 10, 21, 7, tzinfo=UTC)
     for uid, name, role in (("owner", "jtouley", "owner"), ("u-maya", "maya", "member")):
         users.write("users", f"users/{uid}__20261020T070000.parquet",
                     [{"user_id": uid, "username": name, "role": role, "logged_at": t}])  # fmt: skip
-        main.write("shots", f"shots/s-{uid}__20261020T070000.parquet",
-                   [{"shot_id": f"s-{uid}", "user_id": uid, "logged_at": t, "brewed_at": t}])  # fmt: skip
+        shot = {"shot_id": f"s-{uid}", "user_id": uid, "logged_at": t, "brewed_at": t, "dose_g": 18.0,
+                "yield_g": 36.0, "time_s": 28.0, "grinder_setting": 11.0, "rating": 4}  # fmt: skip
+        main.write("shots", f"shots/s-{uid}__20261020T070000.parquet", [shot])
         main.write(
             "bags",
             f"bags/b-{uid}__20261020T070000.parquet",
             [{"bag_id": f"b-{uid}", "user_id": uid, "logged_at": t}],
         )
         photos.write("photos", f"photos/p-{uid}.parquet", [{"photo_id": f"p-{uid}", "user_id": uid}])
+    # Maya's account is turned off in the app before her data is deleted.
+    users.write("users", "users/u-maya__20261021T070000.parquet",
+                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": True, "logged_at": later}])  # fmt: skip
+    # Her invite: first unused, then used by her. Both versions must go, or it would work again (#24 review 1).
     users.write("invites", "invites/i1__20261020T070000.parquet",
-                [{"invite_id": "i1", "used_by": "u-maya", "created_by": "owner", "logged_at": t}])  # fmt: skip
+                [{"invite_id": "i1", "created_by": "owner", "kind": "join", "logged_at": t,
+                  "expires_at": datetime(2099, 1, 1, tzinfo=UTC)}])  # fmt: skip
+    users.write("invites", "invites/i1__20261021T070000.parquet",
+                [{"invite_id": "i1", "created_by": "owner", "kind": "join", "used_by": "u-maya", "logged_at": later,
+                  "expires_at": datetime(2099, 1, 1, tzinfo=UTC)}])  # fmt: skip
+    # The weekly shot export the app seeds from, built before the deletion (#24 review 3).
+    con = main.connect()
+    main.write_mart(
+        "fct_shot",
+        con,
+        f"""select * from read_parquet('{main.root}/shots/*.parquet', union_by_name = true)
+        cross join (select null::varchar shot_coffee_id, null::varchar shot_coffee_freetext, null::date shot_roast_date)""",
+    )
     return main, photos, users
 
 
-def test_delete_user_removes_their_files_from_every_dataset_and_nobody_elses(three):
+def test_delete_user_removes_every_version_of_their_records_and_nobody_elses(three):
     main, photos, users = three
     p = erase.plan("Maya", main, photos, users)
-    assert p.user_id == "u-maya"
+    assert p.user_id == "u-maya" and p.marts == ["fct_shot"]
     assert p.files == {
         main.url: ["bags/b-u-maya__20261020T070000.parquet", "shots/s-u-maya__20261020T070000.parquet"],
         photos.url: ["photos/p-u-maya.parquet"],
-        users.url: ["invites/i1__20261020T070000.parquet", "users/u-maya__20261020T070000.parquet"],
-    }
+        users.url: ["invites/i1__20261020T070000.parquet", "invites/i1__20261021T070000.parquet",
+                    "users/u-maya__20261020T070000.parquet", "users/u-maya__20261021T070000.parquet"],
+    }  # fmt: skip
     erase.apply(p, main, photos, users)
     left = every_value(main) + every_value(photos) + every_value(users)
     assert "u-maya" not in left and "s-owner" in left and "p-owner" in left
+    assert not any(
+        i["invite_id"] == "i1" for i in users.latest("invites", "invite_id")
+    )  # the invite can't come back
+
+
+def test_the_app_doesnt_load_a_deleted_persons_shots_back_from_the_export(three):
+    from app.store import Store
+
+    main, photos, users = three
+    erase.apply(erase.plan("maya", main, photos, users), main, photos, users)
+    assert set(Store(main, "owner").shots) == {"s-owner"}
+
+
+def test_delete_user_needs_the_account_turned_off_first(three):
+    # A turned-off account can't write (its sessions end, sign-in refuses it), so the running app can't recreate
+    # the files being deleted (#24 review 4).
+    main, photos, users = three
+    users.write("users", "users/u-maya__20261022T070000.parquet",
+                [{"user_id": "u-maya", "username": "maya", "role": "member", "disabled": False,
+                  "logged_at": datetime(2026, 10, 22, 7, tzinfo=UTC)}])  # fmt: skip
+    with pytest.raises(erase.EraseError, match="Turn maya's account off"):
+        erase.plan("maya", main, photos, users)
+    assert erase.plan("maya", main, photos, users, force=True).user_id == "u-maya"
 
 
 def test_delete_user_refuses_the_owner_and_unknown_names(three):
@@ -149,4 +191,5 @@ def test_delete_user_dry_run_deletes_nothing(three, monkeypatch, capsys):
     monkeypatch.setattr(cli.Lake, "users", classmethod(lambda cls: users))
     monkeypatch.setenv("COFFEEDATA_LAKE", main.url)
     cli.main(["delete-user", "maya", "--dry-run"])
-    assert "Dry run" in capsys.readouterr().out and "u-maya" in every_value(main)
+    out = capsys.readouterr().out
+    assert "Dry run" in out and "marts/fct_shot.parquet" in out and "u-maya" in every_value(main)

@@ -63,8 +63,10 @@ def setup() -> None:
 
 
 def wanted() -> bool:
-    """On Cloud Run (K_SERVICE is set there), or when asked for."""
-    return bool(os.environ.get("K_SERVICE") or os.environ.get("COFFEEDATA_JSON_LOGS"))
+    """When hosted (Cloud Run reads JSON lines from stdout), or when asked for."""
+    from .auth import hosted
+
+    return hosted() or bool(os.environ.get("COFFEEDATA_JSON_LOGS"))
 
 
 def trace(header: str | None) -> str | None:
@@ -98,17 +100,18 @@ async def middleware(request: Request, call_next: Callable[[Request], Awaitable[
         return response
     finally:
         route = request.scope.get("route")
+        elapsed = time.perf_counter() - started  # one reading for both latency fields
         fields = {
             "method": request.method,
             "route": getattr(route, "path", None) or "(no route)",
             "status": status,
-            "latency_ms": round((time.perf_counter() - started) * 1000, 1),
+            "latency_ms": round(elapsed * 1000, 1),
             "user_id": ctx.get("user_id"),
             # Cloud Logging's request fields, so the console shows the status and latency (no URL: it has ids).
             "httpRequest": {
                 "requestMethod": request.method,
                 "status": status,
-                "latency": f"{time.perf_counter() - started:.3f}s",
+                "latency": f"{elapsed:.3f}s",
             },
         }
         level = logging.ERROR if status >= 500 else logging.INFO

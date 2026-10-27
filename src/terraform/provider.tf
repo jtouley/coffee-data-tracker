@@ -18,6 +18,9 @@ terraform {
 provider "google" {
   project = var.project_id
   region  = var.region
+  # The billing budget API needs a quota project; with application-default credentials there's none unless set.
+  user_project_override = true
+  billing_project       = var.project_id
 }
 
 locals {
