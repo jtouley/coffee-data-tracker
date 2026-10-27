@@ -150,7 +150,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     </div>
     <p class="weekline"><b>{{ "{:,}".format(week.new) }}</b> new arrivals · <b>{{ "{:,}".format(week.price_changes) }}</b> price changes ·
       <b>{{ "{:,}".format(week.removed) }}</b> delisted · from <b>{{ "{:,}".format(registry) }}</b> roasters in the registry
-      across {{ reach.states }} states.</p>
+      across {{ reach.states }} state{{ 's' if reach.states != 1 }}{% if reach.has_dc %} and DC{% endif %}.</p>
   </div>
 </header>
 

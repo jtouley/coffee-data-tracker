@@ -359,16 +359,16 @@ def test_site_links_without_a_public_hf_dataset():
     assert site.links("hf://datasets/a/b@main")["dataset"] == "https://huggingface.co/datasets/a/b"
 
 
-def test_site_fallback_query_path_is_escaped_once():
+def _landing(**reach) -> str:
     from jinja2 import Environment, PackageLoader, select_autoescape
 
     from coffeedata import site
 
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
-    html = env.get_template("landing.html").render(
+    return env.get_template("landing.html").render(
         totals={"coffees": 1, "in_stock": 1, "roasters": 1},
         registry=1,
-        reach={"origins": 1, "states": 1},
+        reach={"origins": 1, "states": 1, "has_dc": False} | reach,
         week={"new": 0, "price_changes": 0, "removed": 0},
         new=[],
         charts={"origins": ""},
@@ -376,6 +376,18 @@ def test_site_fallback_query_path_is_escaped_once():
         public_tables=4,
         generated="today",
     )
+
+
+@pytest.mark.parametrize(
+    "states, has_dc, text",
+    [(50, True, "across 50 states and DC."), (50, False, "across 50 states."), (1, False, "across 1 state.")],
+)
+def test_landing_counts_dc_apart_from_the_states(states, has_dc, text):
+    assert text in _landing(states=states, has_dc=has_dc)
+
+
+def test_site_fallback_query_path_is_escaped_once():
+    html = _landing()
     assert "hf://datasets/&lt;owner&gt;/&lt;name&gt;/data/public_coffee.parquet" in html
     assert "&amp;lt;" not in html
 

@@ -158,7 +158,9 @@ def build(db: Path, out: Path) -> Path:
     reach = _q(
         con,
         """
-        select count(distinct origin_country) as origins, count(distinct roaster_state) as states
+        select count(distinct origin_country) as origins,
+               count(distinct roaster_state) filter (where roaster_state <> 'DC') as states,  -- DC isn't a state
+               bool_or(roaster_state = 'DC') as has_dc
         from dim_coffee where is_listed and not is_chain""",
     )[0]
     origin_counts = _q(
