@@ -210,6 +210,13 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
+        html = (out / page / "index.html").read_text()
+        assert f'<h1 class="serif">{heading}</h1>' in html and f"Last updated {site.LEGAL_UPDATED}" in html
+        assert "Content-Security-Policy" in html and "support@registry.coffee" in html
+        assert f'href="{page}/"' in landing
+        assert f'href="../{page}/"' in (out / "catalog" / "index.html").read_text()
+    assert "State of [STATE]" in (out / "terms" / "index.html").read_text()
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     assert catalog["rows"]
     app = (out / "catalog" / "index.html").read_text()

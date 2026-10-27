@@ -13,47 +13,7 @@
 <meta name="theme-color" content="#f4efe6">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='10' ry='13' transform='rotate(30 16 16)' fill='%233b2416'/%3E%3Cpath d='M10 7c6 5 6 13 12 18' stroke='%23e9c79c' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
-:root {
-  color-scheme: light;
-  --surface-0: #f4efe6; --surface-1: #fbf8f2; --surface-2: #efe7da; --border: #e1d6c4;
-  --text-primary: #1f140d; --text-secondary: #5b4a3d; --text-muted: #85735f;
-  --accent: #a4531d; --accent-ink: #fbf8f2; --crema: #c98a4b;
-  --series-1: #a4531d; --series-1-hover: #7f3d12; --grid: #e8dfd0;
-  --code-bg: #2a1c13; --code-text: #f1e4d2; --code-muted: #b49a80;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --surface-0: #15100c; --surface-1: #1e1712; --surface-2: #261d17; --border: #392c22;
-    --text-primary: #f3e9dc; --text-secondary: #cdbba6; --text-muted: #9c8a76;
-    --accent: #e39a5c; --accent-ink: #1e1209; --crema: #e7b47f;
-    --series-1: #e39a5c; --series-1-hover: #f2b886; --grid: #2e241c;
-    --code-bg: #0f0b08; --code-text: #f1e4d2; --code-muted: #9c8a76;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --surface-0: #15100c; --surface-1: #1e1712; --surface-2: #261d17; --border: #392c22;
-  --text-primary: #f3e9dc; --text-secondary: #cdbba6; --text-muted: #9c8a76;
-  --accent: #e39a5c; --accent-ink: #1e1209; --crema: #e7b47f;
-  --series-1: #e39a5c; --series-1-hover: #f2b886; --grid: #2e241c;
-  --code-bg: #0f0b08; --code-text: #f1e4d2; --code-muted: #9c8a76;
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--surface-0); color: var(--text-primary);
-  font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-.serif { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-a { color: var(--accent); }
-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0; }
-.mark-word { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; color: var(--text-primary); text-decoration: none; }
-.mark-word .dot { color: var(--accent); }
-nav .right { display: flex; align-items: center; gap: 16px; font-size: 14px; }
-nav .right a { color: var(--text-secondary); text-decoration: none; }
-nav .right a:hover { color: var(--text-primary); }
-.theme { font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
-  border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+{% include "_brand.css" %}
 
 /* Hero */
 .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center;
@@ -294,7 +254,8 @@ footer p { margin: 0 0 8px; max-width: 46em; }
       <p>Roaster discovery: <a href="https://overturemaps.org">Overture Maps Foundation</a> Places (CDLA-Permissive-2.0) and
         © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Only what a shopper can see is
         read, and every coffee links back to the roaster that sells it.</p>
-      <p>Code is MIT-licensed at <a href="{{ links.repo }}">jtouley/coffee-data-tracker</a>.</p>
+      <p>Code is MIT-licensed at <a href="{{ links.repo }}">jtouley/coffee-data-tracker</a>.
+        <a href="privacy/">Privacy</a> · <a href="terms/">Terms</a></p>
     </div>
     <p class="serif" style="font-size:16px;color:var(--text-secondary)">registry<span style="color:var(--accent)">.</span>coffee</p>
   </div>

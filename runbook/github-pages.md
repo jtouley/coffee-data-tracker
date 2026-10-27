@@ -27,6 +27,7 @@ The weekly workflow builds the site and deploys it with `actions/deploy-pages`; 
 | `/` | `src/coffeedata/templates/landing.html` |
 | `/catalog/` | `src/coffeedata/templates/index.html` |
 | `/catalog/catalog.json` | `dim_coffee` (listed coffees) |
+| `/privacy/`, `/terms/` | `templates/privacy.html`, `templates/terms.html` (layout `_legal.html`); bump `LEGAL_UPDATED` in `site.py` when either changes |
 
 Links on the launch page come from repository variables: `PUBLIC_EXPORT_URL` (an `hf://datasets/...` URL gives the
 dataset link and the DuckDB example) and `SITE_URL` (canonical URL, default `https://registry.coffee`).

@@ -16,6 +16,7 @@ These are the records the site needs. Check them any time with `runbook/check-dn
 | CNAME | `www` | `jtouley.github.io.` | `www.registry.coffee` → Pages, which redirects it to the apex |
 | CAA | `@` | `0 issue "letsencrypt.org"` | Let's Encrypt may issue certificates (GitHub Pages uses it) |
 | CAA | `@` | `0 issue "pki.goog"` | Google Trust Services may issue certificates (Cloud Run's managed certificates can come from either) |
+| MX | `@` | `eforward1`–`eforward5.registrar-servers.com` (Namecheap adds these) | receives mail for support@registry.coffee, forwarded to a personal inbox |
 | TXT | `@` | `v=spf1 -all` | the domain sends no email; receivers should reject mail claiming to be from it |
 | TXT | `_dmarc` | `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s` | same, enforced with DMARC |
 | CNAME | `app` | `ghs.googlehosted.com.` | the shot-logging app at `app.registry.coffee`, on Cloud Run (see below) |
@@ -56,6 +57,21 @@ as preview; if it's ever withdrawn, the fallback is a global external Applicatio
 $18 a month. Cloud Run itself bills per request and has a monthly free tier; set a budget alert in Billing.
 
 Mapping `app` doesn't touch the apex: registry.coffee and www stay on GitHub Pages.
+
+## support@registry.coffee
+
+The Privacy Policy and Terms of Use (`/privacy/`, `/terms/`) give support@registry.coffee as the contact, for data
+requests and security reports. Namecheap's free email forwarding receives it:
+
+1. Domain List → **Manage** → **Domain** tab → **Mail Settings**: **Email Forwarding** (this creates the MX records
+   above).
+2. **Add forwarder**: alias `support` → your personal address. Optionally add a catch-all `*`.
+3. Send a test message to support@registry.coffee and check it arrives.
+
+Reply from your personal address, not "as" support@registry.coffee. The domain's SPF (`-all`) and DMARC (`p=reject`)
+records tell receivers to reject anything sent from it, which is what stops spoofing. Sending as support@ would need
+a mail provider and an updated SPF record first. Set `SUPPORT_EMAIL` (repository variable) to change the address on
+the legal pages.
 
 ## Gotchas
 

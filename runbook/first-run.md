@@ -10,6 +10,8 @@ Settings → Secrets and variables → Actions.
 | `HF_TOKEN` | secret | yes | a **fine-grained** Hugging Face token with write access to only the lake and public datasets |
 | `PUBLIC_EXPORT_URL` | variable | for the dataset link | e.g. `hf://datasets/jtouley/us-coffee-market` (public) |
 | `SITE_URL` | variable | no | defaults to `https://registry.coffee` |
+| `GOVERNING_STATE` | variable | yes, before launch | the US state named in the Terms of Use; the page shows `[STATE]` until it's set |
+| `SUPPORT_EMAIL` | variable | no | contact on the legal pages; defaults to `support@registry.coffee` |
 | `ANTHROPIC_API_KEY` | secret | no | enables Claude enrichment; set a monthly spend limit in the Claude Console |
 | `SNOWFLAKE_*`, `AWS_*` | | no | see `marketplace/README.md` |
 

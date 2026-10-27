@@ -8,7 +8,7 @@ ask() {  # resolver url, name, type
   curl -fsS -H 'accept: application/dns-json' "$1?name=$2&type=$3" | python3 -c '
 import json, sys
 d = json.load(sys.stdin)
-ans = [a["data"] for a in d.get("Answer", []) if a.get("type") in (1, 5, 16, 257)]
+ans = [a["data"] for a in d.get("Answer", []) if a.get("type") in (1, 5, 15, 16, 257)]
 st = d.get("Status")
 print(", ".join(sorted(ans)) if ans else {0: "(none)", 3: "NXDOMAIN"}.get(st, "status " + str(st)))'
 }
@@ -26,6 +26,7 @@ check "$domain" CAA letsencrypt.org
 check "$domain" CAA pki.goog
 check "app.$domain" CNAME ghs.googlehosted.com
 check "$domain" TXT google-site-verification=
+check "$domain" MX registrar-servers.com
 check "$domain" TXT "v=spf1 -all"
 check "_dmarc.$domain" TXT "p=reject"
 check "_github-pages-challenge-jtouley.$domain" TXT ""

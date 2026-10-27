@@ -77,6 +77,8 @@ def scatter_chart(points: list[tuple[float, float, str]], width: int = 460, heig
 # --- links ---------------------------------------------------------------------------------------------
 
 REPO = "https://github.com/jtouley/coffee-data-tracker"
+# The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
+LEGAL_UPDATED = "October 27, 2026"
 
 
 def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
@@ -267,6 +269,15 @@ def build(db: Path, out: Path) -> Path:
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",
     )
     (out / "index.html").write_text(with_csp(landing))
+    legal = {
+        "links": links(),
+        "updated": LEGAL_UPDATED,
+        "contact": os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee",
+        "governing_state": os.environ.get("GOVERNING_STATE") or "[STATE]",
+    }
+    for page in ("privacy", "terms"):
+        (out / page).mkdir(exist_ok=True)
+        (out / page / "index.html").write_text(with_csp(env.get_template(f"{page}.html").render(**legal)))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
