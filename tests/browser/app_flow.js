@@ -157,6 +157,13 @@ async function newPage(browser, errors) {
     const other = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
     const guest = await other.newPage();
     guest.on("pageerror", (e) => errors.push(e.message));
+    // A link mangled in the message: no error, the hash leaves the address bar, and the page says what to do.
+    const mangled = await other.newPage();
+    mangled.on("pageerror", (e) => errors.push(e.message));
+    await mangled.goto(`${base}/join#K7QD-%E0`);
+    assert.match(await mangled.textContent("[data-code-status]"), /didn’t come through whole/);
+    assert.equal(new URL(mangled.url()).hash, "");
+    await mangled.close();
     await guest.goto(`${base}/join#${code}`);
     await guest.waitForFunction(() => /Valid until/.test(document.querySelector("[data-code-status]").textContent));
     assert.equal(new URL(guest.url()).hash, ""); // the code left the address bar

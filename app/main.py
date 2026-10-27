@@ -325,7 +325,8 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             inv = s.accounts.lookup(str(body.get("code") or ""), ip(request))
         except AccountError as e:
             raise HTTPException(400, str(e)) from None
-        return {"kind": inv.kind, "expires": f"{inv.expires_at:%B} {inv.expires_at.day}"}
+        exp = inv.expires_at.astimezone(tz(request))  # the viewer's day, as on the invite screen
+        return {"kind": inv.kind, "expires": f"{exp:%B} {exp.day}"}
 
     @app.post("/api/join", dependencies=[Depends(anyone)])
     def post_join(body: dict, request: Request) -> Response:
@@ -518,7 +519,6 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             auth_name=getattr(auth, "name", ""),
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
-            theme=request.cookies.get("theme", "auto"),
         )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
