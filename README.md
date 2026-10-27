@@ -126,7 +126,7 @@ Message Batches API, which costs half as much, and are collected on the next run
 ## The site
 
 The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
-`/` and the catalog at `/app/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
+`/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
 ## Public tables and marketplaces
 

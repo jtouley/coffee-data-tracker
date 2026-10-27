@@ -23,12 +23,12 @@ runbook/check-dns.sh example.coffee  # another domain
 registry.coffee (Namecheap BasicDNS) ──A / CNAME──▶ GitHub Pages ◀──deploy── weekly.yml (Mondays)
                                                          │                       │
                                          /  launch page  │                       ├── reads/writes the lake (private HF dataset)
-                                         /app/ catalog   │                       └── exports the public HF dataset
+                                     /catalog/ catalog   │                       └── exports the public HF dataset
 ```
 
 Everything is on free tiers except the domain ([cost-and-security.md](cost-and-security.md)).
 
-The launch page (`/`) has this week's numbers, new arrivals and links to the catalog app (`/app/`), the public Hugging
+The launch page (`/`) has this week's numbers, new arrivals and links to the catalog (`/catalog/`), the public Hugging
 Face dataset, the warehouse setup, the MCP server and the "Add a roaster" form. The dataset link and the DuckDB
 example come from `PUBLIC_EXPORT_URL` when it's an `hf://` dataset; otherwise the page links to this repo. The
 private lake is never linked. `SITE_URL` sets the canonical URL (default `https://registry.coffee`).

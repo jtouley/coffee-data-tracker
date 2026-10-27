@@ -17,6 +17,7 @@ These are the records the site needs. Check them any time with `runbook/check-dn
 | CAA | `@` | `0 issue "letsencrypt.org"` | only Let's Encrypt (which Pages uses) may issue certificates |
 | TXT | `@` | `v=spf1 -all` | the domain sends no email; receivers should reject mail claiming to be from it |
 | TXT | `_dmarc` | `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s` | same, enforced with DMARC |
+| CNAME | `app` | **TBD** (HF Space or container host) | the shot-logging app at `app.registry.coffee`; add it once the app's host is chosen |
 | TXT | `_github-pages-challenge-jtouley` | the code GitHub shows (see [github-pages.md](github-pages.md)) | proves the domain is yours; keep it |
 
 TTL: Automatic (Namecheap shows 30 min for some; either is fine).

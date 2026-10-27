@@ -22,7 +22,7 @@ Issue labels `shot` and `roaster` must exist for the issue forms.
 
 1. Merge to `main` (Pages deploys only from `main`).
 2. Actions → **weekly** → **Run workflow** → `sample: 50` → Run. It takes about 10 minutes.
-3. When the `deploy` job is green, open https://registry.coffee and https://registry.coffee/app/.
+3. When the `deploy` job is green, open https://registry.coffee and https://registry.coffee/catalog/.
 4. Run it again with `sample` blank for the full registry (about an hour), or leave it to the Monday schedule.
 
 Until the first deploy, registry.coffee shows GitHub's 404 page. That's expected.

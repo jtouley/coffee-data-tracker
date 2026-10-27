@@ -1,5 +1,5 @@
 """Static site rendered from the dbt models in DuckDB: a launch page at the root (registry.coffee) that links out
-to the catalog app (app/index.html + app/catalog.json), the public Hugging Face dataset and the repo."""
+to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo."""
 
 from __future__ import annotations
 
@@ -91,7 +91,7 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         hf_path = f"hf://datasets/{repo_id}/{public.HF_DATA_DIR}"
     return {
         "site": site_url,
-        "app": "app/",
+        "catalog": "catalog/",
         "dataset": dataset,
         "hf_path": hf_path,
         "repo": REPO,
@@ -267,8 +267,8 @@ def build(db: Path, out: Path) -> Path:
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",
     )
     (out / "index.html").write_text(with_csp(landing))
-    app = out / "app"
-    app.mkdir(exist_ok=True)
+    cat = out / "catalog"
+    cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
         totals=totals,
         charts=charts,
@@ -279,9 +279,9 @@ def build(db: Path, out: Path) -> Path:
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
     )
-    (app / "index.html").write_text(with_csp(html))
+    (cat / "index.html").write_text(with_csp(html))
     cols = list(catalog[0]) if catalog else []
-    (app / "catalog.json").write_text(
+    (cat / "catalog.json").write_text(
         json.dumps(
             {"columns": cols, "rows": [[_jsonable(r[c]) for c in cols] for r in catalog]},
             separators=(",", ":"),

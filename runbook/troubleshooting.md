@@ -12,4 +12,4 @@
 | `weekly` fails uploading to the lake | `HF_TOKEN` missing, expired or without write access to the dataset | new fine-grained token, update the secret |
 | `deploy` job fails: "branch is not allowed to deploy" | run from a branch other than `main` | run it from `main` |
 | Launch page "Get the dataset" goes to GitHub | `PUBLIC_EXPORT_URL` isn't an `hf://datasets/...` URL | set it; the next run picks it up |
-| The catalog app says "Couldn't load the catalog" | `app/catalog.json` missing from the deploy | check the `run` job's site step |
+| The catalog says "Couldn't load the catalog" | `catalog/catalog.json` missing from the deploy | check the `run` job's site step |

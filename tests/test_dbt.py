@@ -205,14 +205,14 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     out = tmp_path / "site"
     site.build(tmp_path / "coffee.duckdb", out)
     landing = (out / "index.html").read_text()
-    assert 'href="app/"' in landing
+    assert 'href="catalog/"' in landing
     assert "https://huggingface.co/datasets/someone/us-coffee-market" in landing
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B" in landing  # a new arrival
-    assert 'href="../"' in (out / "app" / "index.html").read_text()
-    catalog = json.loads((out / "app" / "catalog.json").read_text())
+    assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     assert catalog["rows"]
-    app = (out / "app" / "index.html").read_text()
+    app = (out / "catalog" / "index.html").read_text()
     for html in (landing, app):
         assert "javascript:" not in html
         assert "Content-Security-Policy" in html and "script-src 'sha256-" in html
