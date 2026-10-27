@@ -11,17 +11,21 @@
   {% if fixing %}<div class="meta mt4">Correcting the {{ fixing_when }} shot. The original stays in history.</div>
   {% else %}<div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>{% endif %}
   </div>
-  <section class="fill" data-offline-saved hidden>
-    <div class="top"><h1 class="meta" tabindex="-1">Saved on this phone · {{ name }}</h1><span class="meta" data-sync>Waiting to sync</span></div>
+  <section class="fill" data-offline-saved data-name="{{ name }}" data-grinder="{{ gr.name }}" hidden>
+    <div class="top"><h1 class="meta" tabindex="-1" data-o="title">Saved on this phone · {{ name }}</h1><span class="synced" data-sync>1 waiting to sync</span></div>
     <div class="label mt16">Ratio</div>
     <div class="num n112 mt4" data-o="ratio"></div>
     <div class="row end mt16">
       <span class="num n34"><span data-o="dose"></span><span class="u"> g</span></span><span class="num n34"><span data-o="time"></span><span class="u"> s</span></span>
     </div>
-    <div class="row mt8"><span class="meta">No connection</span><span class="meta" data-o="taste"></span></div>
-    <p class="serif advice mt24" data-o="summary"></p>
+    <div class="row mt8"><span class="meta" data-o="grind"></span><span data-o="taste"></span></div>
+    <div class="section">Compared with the last shot</div>
+    <p class="body" data-o="summary">Shows once the shot syncs.</p>
     <div class="spacer"></div>
-    <div class="dock"><a class="btn primary" href="/">Done</a></div>
+    <div class="dock">
+      <div class="undo" data-unqueue><span>Saved on this phone</span><button type="button">Undo<i></i></button></div>
+      <a class="btn primary" href="/">Done</a>
+    </div>
   </section>
   <form id="shot" novalidate>
     <div class="field">

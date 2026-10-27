@@ -80,11 +80,16 @@ async function flushOnce() {
   showSync();
 }
 
+const SYNCED = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>Synced';
+
 async function showSync() {
   const n = (await mine()).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
+    else if ("quiet" in el.dataset) el.textContent = ""; // where nothing was waiting, nothing to say
+    else el.innerHTML = SYNCED;
   }
+  if (!n) document.dispatchEvent(new Event("synced"));
 }
 
 function uuid() {
@@ -293,18 +298,28 @@ function logShot(form) {
   // Saved with no connection: what was saved, described from the form alone (no server logic copied here).
   function offlineSaved(b) {
     const view = document.querySelector("[data-offline-saved]");
-    const fill = (k, v) => { view.querySelector(`[data-o="${k}"]`).textContent = v; };
-    fill("ratio", `1:${(b.yield_g / b.dose_g).toFixed(2)}`);
-    fill("dose", `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`);
-    fill("time", `${b.time_s ?? "–"}`);
-    fill("summary", "How it compares with the last shot shows once it syncs.");
-    fill("taste", [b.taste ? b.taste[0].toUpperCase() + b.taste.slice(1) : "No taste", b.rating].join(" · "));
+    const o = (k) => view.querySelector(`[data-o="${k}"]`);
+    const now = new Date();
+    o("title").textContent = `Saved ${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")} on this phone · ${view.dataset.name}`;
+    o("ratio").textContent = `1:${(b.yield_g / b.dose_g).toFixed(2)}`;
+    o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
+    o("time").textContent = `${b.time_s ?? "–"}`;
+    o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder}`;
+    // The same tag as Saved; with no taste, just the rating.
+    const tag = o("taste");
+    tag.className = b.taste ? `taste ${b.taste}` : "meta";
+    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)} · ${b.rating}` : `Rated ${b.rating}`;
     form.hidden = true;
     for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
     view.hidden = false;
     view.querySelector("h1").focus({ preventScroll: true });
     scrollTo(0, 0);
-    showSync();
+    // Once it syncs, the comparison is a tap away.
+    document.addEventListener("synced", () => {
+      const link = Object.assign(document.createElement("a"), { className: "ext", href: `/saved/${b.shot_id}`, textContent: "Synced. See how it compares ›" });
+      o("summary").replaceChildren(link);
+    }, { once: true });
+    unqueue(view.querySelector("[data-unqueue]"), b.shot_id);
   }
 
   // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
@@ -356,6 +371,25 @@ function undo(strip) {
   strip.querySelector("button").addEventListener("click", async () => {
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+      location.href = "/";
+    } catch (err) {
+      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+    }
+  });
+}
+
+// Undo for a shot that may still be on the phone: take it out of the outbox; if it already went up, retract it.
+function unqueue(strip, id) {
+  let timer = setTimeout(() => { strip.hidden = true; }, 5000);
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    const key = `shot:${id}`;
+    const queued = await store("readonly", (s) => s.get(key));
+    try {
+      if (queued) await store("readwrite", (s) => s.delete(key));
+      else await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
       strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
@@ -538,7 +572,8 @@ function newBag(root) {
       await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
       read = { photo_id: id, raw: null };
       showSync();
-      failed("No connection", "The photo is saved on this phone and is read when you’re back online. Type the coffee for now.", false);
+      root.querySelector("[data-photo-waiting]").hidden = false;
+      step("queued");
     }
   });
 
@@ -858,6 +893,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector("[data-new-invite]")) invites();
   for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  for (const b of document.querySelectorAll("[data-reload]")) b.addEventListener("click", () => location.reload());
   // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
   for (const el of document.querySelectorAll("[data-empty-class]")) {
     const mark = () => el.classList.toggle("empty", !el.value);
