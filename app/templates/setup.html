@@ -25,6 +25,11 @@
     {% for v, l in (("auto", "Auto"), ("light", "Light"), ("dark", "Dark")) %}<button type="button" data-v="{{ v }}" aria-pressed="{{ 'true' if theme == v else 'false' }}">{{ l }}</button>{% endfor %}
   </div>
   <div class="fhint" id="theme-h">Auto follows the phone’s setting.</div>
+  <div class="flabel" id="hand-l">Steppers</div>
+  <div class="seg two" role="group" aria-labelledby="hand-l" aria-describedby="hand-h" data-hand-choice>
+    {% for v, l in (("left", "Left"), ("right", "Right")) %}<button type="button" data-v="{{ v }}" aria-pressed="{{ 'true' if hand == v else 'false' }}">{{ l }}</button>{% endfor %}
+  </div>
+  <div class="fhint" id="hand-h">The side of the screen the − and + buttons sit on, for the hand that holds the phone.</div>
   <h2 class="section" id="account">Account</h2>
   <div class="rows">
     <div class="gear"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>

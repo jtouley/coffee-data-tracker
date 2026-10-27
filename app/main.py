@@ -150,7 +150,11 @@ def create_app(
 
     def page(request: Request, template: str, status: int = 200, **ctx: Any) -> HTMLResponse:
         ctx = (
-            {"me": None, "theme": request.cookies.get("theme", "auto")}
+            {
+                "me": None,
+                "theme": request.cookies.get("theme", "auto"),
+                "hand": request.cookies.get("hand", "right"),
+            }
             | ctx
             | {"now": datetime.now(tz(request))}
         )
@@ -694,7 +698,6 @@ def create_app(
             auth_name=getattr(auth, "name", ""),
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
-            theme=request.cookies.get("theme", "auto"),
         )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)

@@ -203,4 +203,5 @@ def test_app_in_a_browser(lake, tmp_path):
     )
     screens += ("bag-start", "bag-match", "bag-pick", "bag-failed")
     screens += ("coffees", "coffee", "history", "shot", "correct", "offline-saved", "bag-offline")
+    screens += ("coffees-empty", "history-empty", "invite-empty", "log-left")
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}

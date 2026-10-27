@@ -9,7 +9,8 @@
   {% else %}<h2 class="section">{{ grp.name }}</h2>{% endif %}
   <div class="list">{% for s in grp.shots %}{{ shotrow(s, day) }}{% endfor %}</div>
   {% else %}
-  <p class="body">No shots yet. Log one from Today.</p>
+  <p class="body">No shots yet. Each shot you log shows up here, grouped by bag.</p>
+  <a class="btn secondary mt24" href="/log">Log a shot</a>
   {% endfor %}
   <div class="mt24"></div>
 {% endblock %}

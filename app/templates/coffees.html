@@ -17,11 +17,14 @@
     {% endfor %}
   </div>
   {% else %}
-  <p class="body">No bags yet. Open one from Today with New bag, and it shows up here with its shots.</p>
+  <p class="body">No bags yet. Each bag you open shows up here with its shots and its best one so far.</p>
+  <a class="btn primary mt24" href="/bag/new">New bag</a>
   {% endif %}
   {% if loose %}<p class="meta mt16">{{ shots_n(loose | length) }} from before bags were recorded are in History.</p>{% endif %}
+  {% if lines or loose %}
   <h2 class="section">All shots</h2>
   <a class="link ruled" href="/history"><span>History<span class="meta">Every shot, by bag</span></span>{{ chevron() }}</a>
+  {% endif %}
   <div class="mt24"></div>
 {% endblock %}
 {% block nav %}{{ nav('coffees') }}{% endblock %}

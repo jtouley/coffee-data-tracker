@@ -71,6 +71,14 @@ async function newPage(browser, errors) {
     await shoot(first, "new-bag");
     await first.goto(`${fresh}/offline`);
     await shoot(first, "offline");
+    // Empty states: no bags, no shots, nobody invited yet.
+    await first.goto(`${fresh}/coffees`);
+    assert.match(await first.textContent("main"), /No bags yet/);
+    await shoot(first, "coffees-empty");
+    await first.goto(`${fresh}/history`);
+    await shoot(first, "history-empty");
+    await first.goto(`${fresh}/invite`);
+    await shoot(first, "invite-empty");
     await first.goto(`${fresh}/saved/missing`);
     await shoot(first, "not-found");
     await first.close();
@@ -185,6 +193,17 @@ async function newPage(browser, errors) {
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
+    // Left-handed: the steppers move to the left edge.
+    await page.getByRole("button", { name: "Left", exact: true }).click();
+    await page.goto(`${base}/log`);
+    const [stepX, numX] = await page.evaluate(() => [
+      document.querySelector(".field .steps").getBoundingClientRect().left,
+      document.querySelector("#dose_g").getBoundingClientRect().left,
+    ]);
+    assert.ok(stepX < numX, "steppers sit left of the number");
+    await shoot(page, "log-left");
+    await page.goto(`${base}/setup`);
+    await page.getByRole("button", { name: "Right", exact: true }).click();
     await page.goto(`${base}/setup/gear/g1`);
     await shoot(page, "gear");
     await page.goto(`${base}/log`);

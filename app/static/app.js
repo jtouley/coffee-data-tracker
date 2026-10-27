@@ -291,6 +291,8 @@ function logShot(form) {
         save.disabled = false;
         return;
       }
+      tick(8);
+      setTimeout(() => tick(8), 60);
       offlineSaved(body); // it's in the outbox: say so, and don't leave the form armed for a second save
     }
   });
@@ -335,7 +337,7 @@ function logShot(form) {
   };
   milk.addEventListener("click", (e) => {
     const b = e.target.closest("button");
-    if (b) pressOne(milk, b);
+    if (b) { pressOne(milk, b); tick(); }
     summarize();
   });
   $("water_temp_c").value = p.water_temp_c ?? "";
@@ -592,7 +594,7 @@ function equipment(form) {
   for (const choice of choices) {
     choice.addEventListener("click", (e) => {
       const b = e.target.closest("button");
-      if (b) pressOne(choice, b);
+      if (b) { pressOne(choice, b); tick(); }
     });
   }
   // The whole record goes each time: a change is a new record under the same id, latest wins.
@@ -775,16 +777,17 @@ function retractShot(b) {
   });
 }
 
-// The theme lives in a cookie so the server renders the right one; no flash of the other.
-function themeChoice(group) {
+// Theme and hand live in cookies so the server renders them; no flash of the other layout.
+function preference(group, name, plain) {
   group.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(group, b);
+    tick();
     const v = b.dataset.v;
-    document.cookie = `theme=${v}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
-    if (v === "auto") document.documentElement.removeAttribute("data-theme");
-    else document.documentElement.dataset.theme = v;
+    document.cookie = `${name}=${v}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
+    if (v === plain) delete document.documentElement.dataset[name];
+    else document.documentElement.dataset[name] = v;
   });
 }
 
@@ -883,7 +886,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
   const theme = document.querySelector("[data-theme-choice]");
-  if (theme) themeChoice(theme);
+  if (theme) preference(theme, "theme", "auto");
+  const hand = document.querySelector("[data-hand-choice]");
+  if (hand) preference(hand, "hand", "right");
   for (const id of ["signin", "join", "reset"]) {
     const f = document.getElementById(id);
     if (f) signIn(f);

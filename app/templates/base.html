@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"{% if theme in ("light", "dark") %} data-theme="{{ theme }}"{% endif %}>
+<html lang="en"{% if theme in ("light", "dark") %} data-theme="{{ theme }}"{% endif %}{% if hand == "left" %} data-hand="left"{% endif %}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
