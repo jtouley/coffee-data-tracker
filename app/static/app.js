@@ -95,6 +95,23 @@ function hint(form, text) {
   form.querySelector("[data-hint]").textContent = text;
 }
 
+// A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
+// label. Without data-confirm, the action runs at once.
+function confirmTap(b, action) {
+  const restore = () => {
+    if (b.dataset.label === undefined) return;
+    b.textContent = b.dataset.label;
+    delete b.dataset.label;
+  };
+  if (!b.dataset.confirm || b.dataset.label !== undefined) {
+    restore();
+    return action();
+  }
+  b.dataset.label = b.textContent;
+  b.textContent = b.dataset.confirm;
+  setTimeout(restore, 4000);
+}
+
 function pressOne(group, button) {
   for (const b of group.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b === button));
 }
@@ -507,7 +524,7 @@ function equipment(form) {
       el.removeAttribute("aria-invalid");
       const v = el.value.trim();
       if (!v) {
-        if (!el.required) continue;
+        if (!el.required) { body[el.name] = null; continue; } // cleared on purpose; fields not on the form are kept
         el.setAttribute("aria-invalid", "true");
         el.focus();
         return hint(form, "Fill in the fields that aren’t optional.");
@@ -527,15 +544,7 @@ function equipment(form) {
     save({});
   });
   const retire = form.querySelector("[data-retire]");
-  retire?.addEventListener("click", () => {
-    if (retire.textContent !== retire.dataset.confirm) {
-      const label = retire.textContent;
-      retire.textContent = retire.dataset.confirm; // a second tap: retired gear leaves the pickers
-      setTimeout(() => { retire.textContent = label; }, 4000);
-      return;
-    }
-    save({ retired: true });
-  });
+  retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
 }
 
 // --- Joining and inviting -----------------------------------------------------------------------------
@@ -555,7 +564,15 @@ async function joinCode(form) {
       input.setAttribute("aria-invalid", "true");
     }
   };
-  const fromLink = decodeURIComponent(location.hash.slice(1));
+  let fromLink = "";
+  try {
+    fromLink = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    // A link that was cut or mangled in the message: say so, and keep it out of history.
+    history.replaceState(null, "", location.pathname);
+    status.textContent = "That link didn’t come through whole. Type the code from the message.";
+    input.setAttribute("aria-invalid", "true");
+  }
   if (fromLink) {
     input.value = fromLink;
     history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
@@ -614,16 +631,7 @@ function invites() {
   };
   const makeOne = () => act("/api/invites", {}, (r) => show(r));
   primary.onclick = makeOne;
-  another.onclick = () => {
-    if (another.textContent !== another.dataset.confirm) {
-      const label = another.textContent;
-      another.textContent = another.dataset.confirm;
-      setTimeout(() => { another.textContent = label; }, 4000);
-      return;
-    }
-    another.textContent = "Make another link";
-    makeOne();
-  };
+  another.onclick = () => confirmTap(another, makeOne);
   for (const b of document.querySelectorAll("[data-reset]")) {
     b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
   }
@@ -634,15 +642,7 @@ function invites() {
     b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => location.reload());
   }
   for (const b of document.querySelectorAll("[data-person]")) {
-    b.onclick = () => {
-      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
-        const label = b.textContent;
-        b.textContent = b.dataset.confirm;
-        setTimeout(() => { b.textContent = label; }, 4000);
-        return;
-      }
-      act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload());
-    };
+    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload()));
   }
 }
 
@@ -726,19 +726,14 @@ function account() {
     }
   });
   for (const b of document.querySelectorAll("[data-signout]")) {
-    b.addEventListener("click", async () => {
-      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
-        const label = b.textContent;
-        b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
-        setTimeout(() => { b.textContent = label; }, 4000);
-        return;
-      }
+    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
       } finally {
         location.replace("/signin");
       }
-    });
+    }));
   }
 }
 
