@@ -123,6 +123,11 @@ Message Batches API, which costs half as much, and are collected on the next run
 5. Create the `shot` and `roaster` issue labels.
 6. Run the weekly workflow by hand with `sample: 50`. After that it runs every Monday.
 
+## The site
+
+The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+`/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
+
 ## Public tables and marketplaces
 
 Four facts-only tables are built every week (`dbt/models/public/`): coffees with their attributes, sizes, prices,

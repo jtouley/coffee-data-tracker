@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coffee Data</title>
-<meta name="description" content="A daily catalog of US specialty coffee roasters, plus a personal espresso log.">
+<title>Catalog · registry.coffee</title>
+<meta name="description" content="A weekly catalog of US specialty coffee roasters, plus a personal espresso log.">
 <style>
 :root {
   color-scheme: light;
@@ -71,6 +71,7 @@ a { color: var(--accent); }
 footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 .theme { float: right; font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
   border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.crumb { display: inline-block; margin-bottom: 8px; font-size: 13px; text-decoration: none; }
 @media (max-width: 600px) { .hide-sm { display: none; } }
 </style>
 </head>
@@ -78,6 +79,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <main>
 <header>
   <button class="theme" id="theme" type="button">Theme</button>
+  <a class="crumb" href="../">← registry.coffee</a>
   <h1>Coffee Data</h1>
   <p>What US specialty roasters are selling this week, and the shots I pull with it. Updated {{ generated }}.</p>
 </header>
@@ -111,7 +113,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <h2>New since last week</h2>
   {% if new %}
   <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
-  {% for c in new %}<tr><td><a href="{{ c.url }}" rel="noopener">{{ c.title }}</a><br><span class="notes">{{ c.roaster_name }}</span></td>
+  {% for c in new %}<tr><td>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}<br><span class="notes">{{ c.roaster_name }}</span></td>
     <td class="hide-sm">{{ c.origin_country or "" }}{% if c.process %} · {{ c.process }}{% endif %}</td>
     <td class="hide-sm notes">{{ (c.tasting_notes or [])|join(", ") }}</td>
     <td class="num">{{ "%.2f"|format(c.price_per_100g) if c.price_per_100g else "" }}</td></tr>{% endfor %}
@@ -159,30 +161,13 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Product data is read once a week
   from each roaster's public storefront feed; every coffee links back to the roaster.
   Source: <a href="https://github.com/jtouley/coffee-data-tracker">jtouley/coffee-data-tracker</a>.
+  <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a>
 </footer>
 </main>
 <div id="tip" role="status"></div>
 <script>
 (() => {
-  // Theme toggle: remembered per viewer; storage may be unavailable.
-  const root = document.documentElement, btn = document.getElementById("theme");
-  try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
-  btn.addEventListener("click", () => {
-    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark";
-    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-  });
-
-  // Tooltips: hover and keyboard focus, textContent only.
-  const tip = document.getElementById("tip");
-  const show = (el, x, y) => { tip.textContent = el.dataset.tip; tip.style.display = "block";
-    tip.style.left = Math.min(x + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (y + 12) + "px"; };
-  document.querySelectorAll(".mark").forEach(el => {
-    el.addEventListener("pointermove", e => show(el, e.clientX, e.clientY));
-    el.addEventListener("pointerleave", () => tip.style.display = "none");
-    el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); show(el, r.left, r.top); });
-    el.addEventListener("blur", () => tip.style.display = "none");
-  });
+{% include "_common.js" %}
 
   // Catalog: loaded lazily, filtered client-side, rendered with textContent.
   const $ = id => document.getElementById(id);
@@ -194,8 +179,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       (!q || (r[C.title] + " " + r[C.roaster_name] + " " + (r[C.tasting_notes] || []).join(" ")).toLowerCase().includes(q)));
     const body = $("rows"); body.textContent = "";
     for (const r of hits.slice(0, 500)) {
-      const tr = body.insertRow(), td = tr.insertCell(), a = document.createElement("a");
-      a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a);
+      const tr = body.insertRow(), td = tr.insertCell();
+      if (r[C.url]) { const a = document.createElement("a"); a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a); }
+      else td.textContent = r[C.title];
       cell(tr, r[C.roaster_name] + (r[C.roaster_state] ? " (" + r[C.roaster_state] + ")" : ""));
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");

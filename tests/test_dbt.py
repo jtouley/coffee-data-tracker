@@ -186,3 +186,107 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
         "public_price_event.parquet",
         "public_roaster.parquet",
     ]
+
+
+def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch):
+    from coffeedata import site
+
+    monkeypatch.setenv("PUBLIC_EXPORT_URL", "hf://datasets/someone/us-coffee-market")
+    probe(lake, "2026-10-11", "onyxcoffeelab.com")
+    run(lake, "2026-10-12", "onyxcoffeelab.com", [product("A")])
+    evil = product("E") | {"url": "javascript:alert(1)"}
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil])
+    con = build(lake, tmp_path)
+    # The unsafe link is dropped in the model, so the public tables, exports and MCP server never see it.
+    assert con.execute("select url from dim_coffee where title = 'Coffee E'").fetchone() == (None,)
+    assert con.execute("select count(*) from public_coffee where coffee_name = 'Coffee E'").fetchone() == (0,)
+    con.close()
+
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    landing = (out / "index.html").read_text()
+    assert 'href="catalog/"' in landing
+    assert "https://huggingface.co/datasets/someone/us-coffee-market" in landing
+    assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
+    assert "Coffee B" in landing  # a new arrival
+    assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
+        html = (out / page / "index.html").read_text()
+        assert f'<h1 class="serif">{heading}</h1>' in html and f"Last updated {site.LEGAL_UPDATED}" in html
+        assert "Content-Security-Policy" in html and "support@registry.coffee" in html
+        assert f'href="{page}/"' in landing
+        assert f'href="../{page}/"' in (out / "catalog" / "index.html").read_text()
+    assert "State of Michigan" in (out / "terms" / "index.html").read_text()
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert catalog["rows"]
+    app = (out / "catalog" / "index.html").read_text()
+    for html in (landing, app):
+        assert "javascript:" not in html
+        assert "Content-Security-Policy" in html and "script-src 'sha256-" in html
+    assert None in [r[catalog["columns"].index("url")] for r in catalog["rows"]]  # the javascript: link
+
+
+@pytest.mark.parametrize(
+    "url, ok",
+    [
+        ("https://onyxcoffeelab.com/products/geometry", True),
+        ("http://x.coffee/p?id=1", True),
+        ("javascript:alert(1)", False),
+        ("JAVASCRIPT:alert(1)", False),
+        ("data:text/html,hi", False),
+        ('https://x.com/"><script>', False),
+        ("https://x.com/a\n", False),
+        ("https://x.com/farmer's-reserve", True),
+        (None, False),
+    ],
+)
+def test_safe_url(url, ok):
+    from coffeedata import site
+
+    assert site.safe_url(url) == (url if ok else None)
+
+
+def test_site_links_without_a_public_hf_dataset():
+    from coffeedata import site
+
+    assert site.links("s3://bucket/coffee", "https://example.org/")["dataset"] is None
+    assert site.links("hf://datasets/a/b@main")["dataset"] == "https://huggingface.co/datasets/a/b"
+
+
+def test_site_fallback_query_path_is_escaped_once():
+    from jinja2 import Environment, PackageLoader, select_autoescape
+
+    from coffeedata import site
+
+    env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    html = env.get_template("landing.html").render(
+        totals={"coffees": 1, "in_stock": 1, "roasters": 1},
+        registry=1,
+        reach={"origins": 1, "states": 1},
+        week={"new": 0, "price_changes": 0, "removed": 0},
+        new=[],
+        charts={"origins": ""},
+        links=site.links("", None),
+        public_tables=4,
+        generated="today",
+    )
+    assert "hf://datasets/&lt;owner&gt;/&lt;name&gt;/data/public_coffee.parquet" in html
+    assert "&amp;lt;" not in html
+
+
+def test_csp_needs_somewhere_to_go():
+    from coffeedata import site
+
+    assert "Content-Security-Policy" in site.with_csp('<head><meta charset="utf-8"></head><script>x</script>')
+    with pytest.raises(ValueError):
+        site.with_csp("<head><meta charset=utf-8></head>")
+
+
+@pytest.mark.parametrize(
+    "url",
+    ["hf://datasets/a/b", "hf://datasets/a/b@main", "hf://datasets/a/b/data", "hf://datasets/a/b/"],
+)
+def test_hf_repo_id(url):
+    from coffeedata import public
+
+    assert public.hf_repo_id(url) == "a/b"

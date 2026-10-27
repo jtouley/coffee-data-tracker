@@ -1,0 +1,118 @@
+{% extends "_legal.html" %}
+{% block title %}Terms of Use{% endblock %}
+{% block slug %}terms{% endblock %}
+{% block body %}
+<div class="summary">
+  <p><strong>In short:</strong> this is a free, personal project run by one person. It's provided as is, it may change or
+    stop, and data can be lost. Don't misuse it, and only upload what you have the right to share. The public dataset
+    has its own open license.</p>
+</div>
+
+<h2>1. Agreement</h2>
+<p>These terms apply to registry.coffee, its catalog, and the app at app.registry.coffee (together, the "service").
+  The service is run by an individual (the "operator", "we" or "us"). By using the service, you agree to these terms
+  and to the <a href="../privacy/">Privacy Policy</a>. If you don't agree, don't use the service.</p>
+
+<h2>2. Accounts and access</h2>
+<ul>
+  <li>The app is invite-only. You need to be at least 13, and old enough to form a binding contract where you live.</li>
+  <li>Keep your login safe. You're responsible for what happens under your account.</li>
+  <li>We may refuse, suspend or end any account, or any part of the service, at any time, for any reason or none, with
+    or without notice.</li>
+</ul>
+
+<h2>3. Your content</h2>
+<ul>
+  <li>You keep ownership of what you log and upload: shots, bags, equipment, notes and photos.</li>
+  <li>You're responsible for it. Only upload photos you have the right to share, and don't upload other people's
+    personal information.</li>
+  <li>You grant us a worldwide, non-exclusive, royalty-free license to store, copy, process and display your content
+    to run, secure and improve the service. That includes sending a bag photo to a processor to read its label.</li>
+  <li>You also grant us the right to use your content in aggregated or de-identified form, which can't reasonably
+    identify you, including in published statistics. The license for aggregated or de-identified use continues after
+    your account ends.</li>
+  <li>We may remove any content at any time.</li>
+</ul>
+
+<h2>4. The catalog and dataset</h2>
+<ul>
+  <li>The catalog is compiled from facts that roasters publish on their public storefronts.</li>
+  <li>It may be incomplete, out of date or wrong, and we don't guarantee that any coffee is accurate, available or
+    priced as shown.</li>
+  <li>Prices aren't offers. Any purchase is between you and the roaster, on the roaster's own terms.</li>
+  <li>Roasters can be added, or opt out, with the
+    <a href="https://github.com/jtouley/coffee-data-tracker/issues/new?template=add-roaster.yml">"Add a roaster" form</a>.</li>
+  <li>The public dataset is licensed separately under the
+    <a href="https://cdla.dev/permissive-2-0/">Community Data License Agreement – Permissive 2.0</a>. That license, not
+    these terms, governs how you use the dataset. The code is MIT-licensed.</li>
+</ul>
+
+<h2>5. Acceptable use</h2>
+<p>Don't:</p>
+<ul>
+  <li>scrape or bulk-download the app (use the public dataset instead)</li>
+  <li>get around or overload rate limits</li>
+  <li>probe, scan or test the service's security without our written permission (to report a vulnerability, email
+    <a href="mailto:{{ contact }}">{{ contact }}</a>)</li>
+  <li>access accounts or data that aren't yours</li>
+  <li>post or sell invites publicly</li>
+  <li>upload malware, or illegal, infringing or abusive content</li>
+  <li>use the service to break the law</li>
+</ul>
+
+<h2>6. No warranty</h2>
+<p class="caps">The service is provided "as is" and "as available", without warranties of any kind, express or implied,
+  including merchantability, fitness for a particular purpose, accuracy, and non-infringement. We don't promise that
+  the service will be available, uninterrupted, secure or error-free, or that data won't be lost. Keep your own copy
+  of anything you can't afford to lose. Any brewing suggestions are informational only.</p>
+
+<h2>7. Limitation of liability</h2>
+<p class="caps">To the maximum extent permitted by law:</p>
+<ul>
+  <li class="caps">The operator won't be liable for any indirect, incidental, special, consequential, exemplary or
+    punitive damages, or for lost data, profits or goodwill, arising from or related to the service, even if advised
+    they were possible.</li>
+  <li class="caps">The operator's total liability for all claims is limited to the amount you paid for the service in the
+    12 months before the claim. The service is free, so that amount is zero.</li>
+</ul>
+<p>Some places don't allow some of these limits, so they apply to you only as far as the law allows.</p>
+
+<h2>8. Indemnity</h2>
+<p>You'll defend, indemnify and hold harmless the operator against any claims, losses, liabilities and expenses,
+  including reasonable legal fees, that arise from:</p>
+<ul>
+  <li>your content</li>
+  <li>your misuse of the service</li>
+  <li>your breach of these terms</li>
+</ul>
+
+<h2>9. Changes and ending</h2>
+<ul>
+  <li>We may change these terms by posting the new version here with a new date. If you keep using the service after
+    a change, you accept it.</li>
+  <li>We may change, suspend or discontinue the service at any time.</li>
+  <li>You can stop using it at any time, and ask us to delete your account.</li>
+  <li>Sections 3 (the aggregated and de-identified use license), 6, 7, 8 and 10 continue to apply after your use
+    ends.</li>
+</ul>
+
+<h2>10. Law and disputes</h2>
+<ul>
+  <li>The laws of the State of {{ governing_state }}, USA, govern these terms, without regard to conflict-of-law
+    rules.</li>
+  <li>Any dispute goes to the state or federal courts located in {{ governing_state }}, and you consent to their
+    jurisdiction.</li>
+  <li>Any claim must be brought within one year after it arises, as far as the law allows.</li>
+</ul>
+
+<h2>11. General</h2>
+<ul>
+  <li>These terms and the Privacy Policy are the whole agreement between you and us about the service.</li>
+  <li>If any part of them is unenforceable, the rest still applies, and that part is enforced as far as possible.</li>
+  <li>If we don't enforce a term, we haven't waived it.</li>
+  <li>You can't transfer these terms. We can.</li>
+</ul>
+
+<h2>Contact</h2>
+<p><a href="mailto:{{ contact }}">{{ contact }}</a></p>
+{% endblock %}
