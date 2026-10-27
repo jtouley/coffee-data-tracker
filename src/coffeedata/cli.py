@@ -246,7 +246,10 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
     domain = registry.normalize_domain(fields.get("website", ""))
     if not registry.is_storefront_host(domain):
         raise SystemExit(f"not a roaster website: {fields.get('website')!r}")
-    state = fields.get("state", "")
+    try:
+        state = discover.state_code(fields.get("state", ""))
+    except ValueError as e:
+        raise SystemExit(str(e)) from None
     opted_out = issueform.checked(fields.get("opt out", ""))
     lake = Lake()
     now = datetime.now(UTC).replace(microsecond=0)
@@ -259,7 +262,7 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
                 "source": "manual",
                 "roaster_id": domain,
                 "name": fields.get("name") or domain,
-                "state": state.upper()[:2],
+                "state": state,
                 "tagged_roastery": True,
                 "opted_out": opted_out,
             }

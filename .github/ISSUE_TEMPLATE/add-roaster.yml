@@ -13,7 +13,7 @@ body:
     validations: {required: true}
   - type: input
     id: state
-    attributes: {label: State, placeholder: "OR"}
+    attributes: {label: State, description: "Two-letter code or full name, e.g. OR, Oregon, DC or PR.", placeholder: "OR"}
   - type: checkboxes
     id: opt_out
     attributes:

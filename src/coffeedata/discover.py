@@ -71,6 +71,31 @@ US_STATES = [
     "WY",
     "PR",
 ]
+STATE_NAMES = {
+    "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR", "california": "CA", "colorado": "CO",
+    "connecticut": "CT", "delaware": "DE", "district of columbia": "DC", "washington dc": "DC", "florida": "FL",
+    "georgia": "GA", "hawaii": "HI", "idaho": "ID", "illinois": "IL", "indiana": "IN", "iowa": "IA",
+    "kansas": "KS", "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD", "massachusetts": "MA",
+    "michigan": "MI", "minnesota": "MN", "mississippi": "MS", "missouri": "MO", "montana": "MT", "nebraska": "NE",
+    "nevada": "NV", "new hampshire": "NH", "new jersey": "NJ", "new mexico": "NM", "new york": "NY",
+    "north carolina": "NC", "north dakota": "ND", "ohio": "OH", "oklahoma": "OK", "oregon": "OR",
+    "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC", "south dakota": "SD", "tennessee": "TN",
+    "texas": "TX", "utah": "UT", "vermont": "VT", "virginia": "VA", "washington": "WA", "west virginia": "WV",
+    "wisconsin": "WI", "wyoming": "WY", "puerto rico": "PR",
+}  # fmt: skip
+
+
+def state_code(text: str) -> str:
+    """A two-letter code from a code or full name ("OR", "Oregon", "D.C.", "Washington, DC"); "" if blank.
+    Raises ValueError for anything else rather than guessing from the first two letters."""
+    key = " ".join(text.replace(".", "").replace(",", " ").lower().split())
+    if not key:
+        return ""
+    if key.upper() in US_STATES:
+        return key.upper()
+    if key in STATE_NAMES:
+        return STATE_NAMES[key]
+    raise ValueError(f"not a US state: {text!r}. Use the two-letter code, e.g. OR, DC or PR.")
 
 
 # --- Overture Maps Places (CDLA-Permissive-2.0) -------------------------------------------------------

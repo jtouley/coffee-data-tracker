@@ -75,3 +75,20 @@ def test_opt_out_via_lake(lake):
         ],
     )
     assert status(lake, "vividcoffee.com").status == "opted_out"
+
+
+def test_state_codes_from_the_issue_form():
+    import pytest
+
+    from coffeedata.discover import state_code
+
+    assert state_code("or") == "OR"
+    assert state_code("Oregon") == "OR"
+    assert state_code("Washington, DC") == "DC"
+    assert state_code("D.C.") == "DC"
+    assert state_code("Puerto Rico") == "PR"
+    assert state_code("Washington") == "WA"
+    assert state_code("  ") == ""
+    for bad in ("Ontario", "XX", "Pu"):
+        with pytest.raises(ValueError):
+            state_code(bad)
