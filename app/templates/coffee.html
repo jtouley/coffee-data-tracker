@@ -43,7 +43,7 @@
     {% if catalog.notes %}<dt>Notes</dt><dd>{{ catalog.notes }}</dd>{% endif %}
     {% if catalog.price %}<dt>Price</dt><dd>{{ catalog.price }}</dd>{% endif %}
     {% if catalog.in_stock is not none %}<dt>Stock</dt><dd>{{ "In stock" if catalog.in_stock else "Sold out" }}</dd>{% endif %}
-    {% if raw.url %}<dt>Shop</dt><dd><a class="ext" href="{{ raw.url }}" rel="noopener noreferrer" target="_blank">{{ raw.url.split("/")[2] }}</a></dd>{% endif %}
+    {% if raw.url and raw.url.startswith(("https://", "http://")) %}<dt>Shop</dt><dd><a class="ext" href="{{ raw.url }}" rel="noopener noreferrer" target="_blank">{{ raw.url.split("/")[2] }}</a></dd>{% endif %}
   </dl>
   {% endif %}
   <div class="mt24"></div>

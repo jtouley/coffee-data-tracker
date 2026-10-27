@@ -2,7 +2,7 @@
 {% block title %}Log shot · registry.coffee{% endblock %}
 {% block main %}
   {% set gr, bk, last = p.grinder, p.basket, p.last %}
-  <div class="top">{% if fixing %}<a class="back" href="/shot/{{ fixing.shot_id }}">‹ Shot</a>{% else %}<a class="back" href="/">‹ Today</a>{% endif %}<a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}{% if p.machine %}&amp;machine={{ p.machine.equipment_id }}{% endif %}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a></div>
+  <div class="top">{% if fixing %}<a class="back" href="/shot/{{ fixing.shot_id }}">‹ Shot</a>{% else %}<a class="back" href="/">‹ Today</a>{% endif %}{% if fixing %}<span class="meta">{{ gr.name }} · {{ bk.name }}</span>{% else %}<a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}{% if p.machine %}&amp;machine={{ p.machine.equipment_id }}{% endif %}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a>{% endif %}</div>
   <div class="row base mt8">
     <h1 class="serif name">{{ name }}</h1>
     <div class="label">Ratio <span class="num n24 ink" data-ratio></span></div>
@@ -20,8 +20,8 @@
     </div>
     <div class="field">
       <div><label class="l label" for="time_s">Time</label>
-        <span class="num n56" data-timed hidden><input id="time_s" inputmode="numeric" data-step="1" data-min="1" data-max="600"><span class="u"> s</span></span>
-        <span class="num n24 notimed" data-untimed>Not timed{% if last %}<span class="u"> · last {{ g(last.time_s) }} s</span>{% endif %}</span></div>
+        <span class="num n56" data-timed{% if not fixing %} hidden{% endif %}><input id="time_s" inputmode="numeric" data-step="1" data-min="1" data-max="600"><span class="u"> s</span></span>
+        <span class="num n24 notimed" data-untimed{% if fixing %} hidden{% endif %}>Not timed{% if last %}<span class="u"> · last {{ g(last.time_s) }} s</span>{% endif %}</span></div>
       <div class="steps">{% if fixing %}<button type="button" class="step" data-for="time_s" data-dir="-1" aria-label="Less time">−</button><button type="button" class="step" data-for="time_s" data-dir="1" aria-label="More time">+</button>{% else %}<button type="button" class="step wide" data-timer>Start</button><button type="button" class="step type" data-type>Type</button>{% endif %}</div>
     </div>
     <div class="field">

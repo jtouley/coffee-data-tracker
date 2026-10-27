@@ -8,7 +8,9 @@ import hashlib
 import json
 import logging
 import os
-from datetime import UTC, datetime, tzinfo
+import time
+from collections import OrderedDict
+from datetime import UTC, date, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
 from urllib.parse import urlsplit
@@ -35,6 +37,7 @@ from .store import Invalid, NotFound, Store, coffee_key
 HERE = Path(__file__).parent
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
+PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
 log = logging.getLogger(__name__)
 
 
@@ -478,6 +481,14 @@ def create_app(
         if not p["bag"] and not p["last"]:
             return RedirectResponse("/bag/new", 303)
         name, _ = coffee_name(p["bag"], p["coffee_id"], p["coffee_freetext"])
+        if fixing:
+            # The shot's own gear, even retired; prefill would swap in the current defaults.
+            for kind, gid in (
+                ("grinder", fixing.grinder_id),
+                ("basket", fixing.basket_id),
+                ("machine", fixing.machine_id),
+            ):
+                p[kind] = store.gear(me.user_id, gid) or (p[kind] if kind != "machine" else None)
         g = p["grinder"]
         form = {
             "bag_id": p["bag"] and p["bag"].bag_id,
@@ -507,6 +518,9 @@ def create_app(
                 "water_temp_c": fixing.water_temp_c,
                 "brew_method": fixing.brew_method,
                 "is_milk_drink": fixing.is_milk_drink,
+                "grinder_id": fixing.grinder_id,
+                "basket_id": fixing.basket_id,
+                "machine_id": fixing.machine_id,
                 "correct": {
                     "shot_id": fixing.shot_id,
                     "brewed_at": fixing.brewed_at.isoformat(),
@@ -558,7 +572,10 @@ def create_app(
     @app.get("/coffees", response_class=HTMLResponse)
     def coffees(request: Request, me: Me) -> HTMLResponse:
         mine = store.shots_of(me.user_id)
-        lines = [bag_line(b, [s for s in mine if s.bag_id == b.bag_id]) for b in store.bags_of(me.user_id)]
+        per_bag: dict[str | None, list] = {}
+        for s in mine:
+            per_bag.setdefault(s.bag_id, []).append(s)
+        lines = [bag_line(b, per_bag.get(b.bag_id, [])) for b in store.bags_of(me.user_id)]
         z = tz(request)
         return page(request, "coffees.html", me=me, lines=lines, loose=[s for s in mine if not s.bag_id],
                     date=lambda d: views.date(d, z))  # fmt: skip
@@ -567,14 +584,15 @@ def create_app(
     def history(request: Request, me: Me) -> HTMLResponse:
         """Every shot, newest first, grouped by bag."""
         mine = store.shots_of(me.user_id)
-        groups: list[dict] = []
+        by_key: dict[str, dict] = {}  # insertion order: the group whose newest shot is newest comes first
         for sh in reversed(mine):
             key = sh.bag_id or coffee_key(sh)
-            if not groups or groups[-1]["key"] != key:
+            if key not in by_key:
                 bag = store.bag(me.user_id, sh.bag_id)
                 name, _ = coffee_name(bag, sh.coffee_id, sh.coffee_freetext)
-                groups.append({"key": key, "bag": bag, "name": name, "shots": []})
-            groups[-1]["shots"].append(sh)
+                by_key[key] = {"key": key, "bag": bag, "name": name, "shots": []}
+            by_key[key]["shots"].append(sh)
+        groups = list(by_key.values())
         z = tz(request)
         return page(request, "history.html", me=me, groups=groups, day=lambda d: views.day(d, z))
 
@@ -585,7 +603,11 @@ def create_app(
             raise HTTPException(404, "no such bag")
         everything = store.coffee_shots(me.user_id, bag)
         this_bag = [s for s in everything if s.bag_id == bag.bag_id]
-        siblings = [b for b in reversed(store.bags_of(me.user_id)) if coffee_key(b) == coffee_key(bag)]
+        # Numbered in the order they were opened, which doesn't change as you switch between them.
+        siblings = sorted(
+            (b for b in store.bags_of(me.user_id) if coffee_key(b) == coffee_key(bag)),
+            key=lambda b: (b.opened_on or date.min, b.bag_id),
+        )
         name, facts = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
         if c := store.coffee(bag.coffee_id):
             facts = c.get("roaster_name") or ""  # the origin is under From the catalog
@@ -608,9 +630,11 @@ def create_app(
             n_all=len(everything),
             shots=list(reversed(this_bag)),
             siblings=siblings,
-            index=next(i for i, b in enumerate(siblings, 1) if b.bag_id == bag.bag_id),
+            index=next((i for i, b in enumerate(siblings, 1) if b.bag_id == bag.bag_id), 1),
             grinder_of=lambda s: store.gear(me.user_id, s.grinder_id),
-            days_off=(datetime.now(z).date() - bag.roast_date).days if bag.roast_date else None,
+            days_off=((bag.finished_on or datetime.now(z).date()) - bag.roast_date).days
+            if bag.roast_date
+            else None,
             day=lambda d: views.day(d, z),
             date=lambda d: views.date(d, z),
         )
@@ -628,19 +652,32 @@ def create_app(
                     basket=store.gear(me.user_id, shot.basket_id), machine=store.gear(me.user_id, shot.machine_id),
                     when=f"{views.date(shot.brewed_at, z)}, {views.clock(shot.brewed_at, z)}")  # fmt: skip
 
-    photo_cache: dict[str, tuple[str, bytes]] = {}
+    # The most recently viewed photos (least recently used out first), and ids recently found missing, so a bad id
+    # or a long list of thumbnails doesn't mean a remote read per request.
+    photo_cache: OrderedDict[str, tuple[str, bytes]] = OrderedDict()
+    photo_misses: OrderedDict[str, float] = OrderedDict()
 
     @app.get("/photos/{photo_id}")
     async def photo(photo_id: str, me: Me) -> Response:
         """A bag photo, to its owner only. Photos never change, so the browser keeps them (privately)."""
         if not SAFE_ID.fullmatch(photo_id):
             raise HTTPException(404, "not found")
-        hit = photo_cache.get(photo_id) or await run_in_threadpool(photos.load, photo_lake, photo_id)
-        if hit is None or hit[0] != me.user_id:
+        hit = photo_cache.get(photo_id)
+        if hit is None:
+            if time.monotonic() - photo_misses.get(photo_id, -PHOTO_MISS_TTL) < PHOTO_MISS_TTL:
+                raise HTTPException(404, "not found")
+            hit = await run_in_threadpool(photos.load, photo_lake, photo_id)
+            if hit is None:
+                photo_misses[photo_id] = time.monotonic()
+                if len(photo_misses) > 1024:
+                    photo_misses.popitem(last=False)
+                raise HTTPException(404, "not found")
+            photo_cache[photo_id] = hit
+            if len(photo_cache) > 32:
+                photo_cache.popitem(last=False)
+        photo_cache.move_to_end(photo_id)
+        if hit[0] != me.user_id:
             raise HTTPException(404, "not found")
-        if len(photo_cache) > 32:
-            photo_cache.pop(next(iter(photo_cache)))
-        photo_cache[photo_id] = hit
         return Response(
             hit[1], media_type="image/jpeg", headers={"Cache-Control": "private, max-age=31536000, immutable"}
         )
@@ -769,6 +806,7 @@ def create_app(
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
         await run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo)
+        photo_misses.pop(photo_id, None)
         key = (me.user_id, datetime.now(UTC).date().isoformat())
         if reads_today.get(key, 0) >= READS_PER_DAY:
             result = labels.Read("limit")
