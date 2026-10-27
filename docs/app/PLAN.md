@@ -157,6 +157,27 @@ keeps the write in an outbox until it's acknowledged (see Offline). Second, read
 copy of shots, bags and equipment, loaded at start from the weekly `marts/fct_shot.parquet` export plus the files
 newer than it, and updated on every write.
 
+### Domain: registry.coffee
+
+The owner used to own `registry.coffee` and is happy to buy it back. The name fits: the catalog is a registry of
+US roasters and their coffees, and the lake already has a `registry` table. The proposed split:
+
+- `registry.coffee`: the public catalog site that GitHub Pages builds today. Pages supports a custom apex domain
+  with HTTPS for free; it needs the A/AAAA records and a `CNAME` file in the site output.
+- `app.registry.coffee`: the shot-logging app (the Space). Invitees get a short, memorable address, and the app's
+  cookies are scoped to that host, apart from the public site.
+
+Two ways to put the Space on `app.registry.coffee`:
+
+| Option | Cost | Notes |
+|---|---|---|
+| Hugging Face's own custom domains for Spaces | needs an HF PRO account (or a Team/Enterprise org) | A CNAME to `hf.space` set in the Space's settings. Simplest, and HF handles HTTPS. Forum threads report domains stuck on "pending" for a while; HF support sorts those out. |
+| Cloudflare in front of a free Space | free | DNS on Cloudflare and a small Worker that forwards `app.registry.coffee` to `<owner>-<space>.hf.space`. Keeps the free Space, but it's one more piece to own, and the direct `hf.space` address still works (it's behind the same sign-in, so that's fine). |
+
+Recommendation: start with the Cloudflare route, since the owner chose the free Space. Move to HF's own custom
+domain if the owner takes HF PRO for other reasons (PRO also raises Space limits). Either way, the session cookie is
+host-only on `app.registry.coffee`, and links in invites use that address.
+
 ### Accounts and sign-in
 
 The owner asked for a simple sign-up and login of our own, with the hashed credentials kept in a Hugging Face
@@ -461,7 +482,8 @@ Each one is usable on its own and goes through the normal PR and CI process.
 2. **App skeleton.** FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
    (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
    concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
-3. **Equipment and invites.** Setup screen, grinder-aware steppers and advice; invites, sign-up and reset codes.
+3. **Equipment, invites and the domain.** Setup screen, grinder-aware steppers and advice; invites, sign-up and
+   reset codes; `app.registry.coffee` in front of the Space and `registry.coffee` on the Pages site.
 4. **Bag capture.** Photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
 5. **Coffee page.** Catalog facts, best recipe, chart, shot list, correct and retract.
@@ -489,6 +511,7 @@ app, but it needs the bag and photo tables from 1 first.
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
+| Domain | The owner will buy back `registry.coffee` | Public catalog on `registry.coffee` (GitHub Pages), the app on `app.registry.coffee` via Cloudflare in front of the free Space. |
 
 ## Open questions for the owner
 
