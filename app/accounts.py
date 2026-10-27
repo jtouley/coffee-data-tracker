@@ -406,34 +406,40 @@ class Accounts:
         return acct
 
     def people(self) -> list[Account]:
-        return sorted((a for a, _ in self.users.values()), key=lambda a: (a.role != "owner", a.username))
+        # A copy: another thread may add an account meanwhile (and callers may already hold self.lock).
+        return sorted(
+            (a for a, _ in list(self.users.values())), key=lambda a: (a.role != "owner", a.username)
+        )
 
     def pending(self, now: datetime | None = None) -> list[Invite]:
         """Join links not used, revoked or expired, newest first."""
         now = now or _now()
-        open_ = [(i, at) for i, at in self.invites.values() if i.kind == "join" and i.open(now)]
+        open_ = [(i, at) for i, at in list(self.invites.values()) if i.kind == "join" and i.open(now)]
         return [i for i, _ in sorted(open_, key=lambda x: x[1], reverse=True)]
 
     def invite(self, by: str, kind: str = "join", for_user_id: str | None = None) -> tuple[Invite, str]:
         """A new code, shown once. A new reset code for someone replaces any earlier one."""
         with self.lock:
             self._owner(by)
-            if kind == "reset" and (for_user_id is None or self.get(for_user_id) is None):
-                raise AccountError("No such account.")
-            if kind == "reset":
-                for old, _ in list(self.invites.values()):
-                    if old.kind == "reset" and old.for_user_id == for_user_id and old.open(_now()):
-                        self._write_invite(replace(old, revoked=True))
-            code = new_code()
-            inv = Invite(
-                invite_id=str(uuid.uuid4()),
-                code_sha256=code_hash(code),
-                kind=kind,
-                created_by=by,
-                expires_at=_now() + timedelta(days=INVITE_DAYS),
-                for_user_id=for_user_id,
-            )
-            return self._write_invite(inv), code
+            return self._new_invite(by, kind, for_user_id)
+
+    def _new_invite(self, by: str, kind: str, for_user_id: str | None) -> tuple[Invite, str]:
+        if kind == "reset" and (for_user_id is None or self.get(for_user_id) is None):
+            raise AccountError("No such account.")
+        if kind == "reset":
+            for old, _ in list(self.invites.values()):
+                if old.kind == "reset" and old.for_user_id == for_user_id and old.open(_now()):
+                    self._write_invite(replace(old, revoked=True))
+        code = new_code()
+        inv = Invite(
+            invite_id=str(uuid.uuid4()),
+            code_sha256=code_hash(code),
+            kind=kind,
+            created_by=by,
+            expires_at=_now() + timedelta(days=INVITE_DAYS),
+            for_user_id=for_user_id,
+        )
+        return self._write_invite(inv), code
 
     def revoke(self, by: str, invite_id: str) -> None:
         with self.lock:
@@ -445,12 +451,15 @@ class Accounts:
                 self._write_invite(replace(hit[0], revoked=True))
 
     def renew(self, by: str, invite_id: str) -> tuple[Invite, str]:
-        """ "Send a new link": revoke the old code and make a new one of the same kind."""
-        hit = self.invites.get(invite_id)
-        if hit is None:
-            raise AccountError("No such invite.")
-        self.revoke(by, invite_id)
-        return self.invite(by, hit[0].kind, hit[0].for_user_id)
+        """ "Send a new link": revoke the old code and make a new one of the same kind. Owner only, checked first,
+        and only for a link still open, so the replies say nothing about which invite ids exist."""
+        with self.lock:
+            self._owner(by)
+            hit = self.invites.get(invite_id)
+            if hit is None or not hit[0].open(_now()):
+                raise AccountError("That link can’t be renewed. Make a new one instead.")
+            self._write_invite(replace(hit[0], revoked=True))
+            return self._new_invite(by, hit[0].kind, hit[0].for_user_id)
 
     def lookup(self, code: str, ip: str, now: float | None = None) -> Invite:
         """The open invite for a code. Wrong codes count against the address like failed sign-ins."""
@@ -459,7 +468,7 @@ class Accounts:
         if self.limiter.blocked(key, MAX_PER_IP, now):
             raise AccountError("Too many tries. Wait 15 minutes and try again.")
         h = code_hash(code)
-        hit = next((i for i, _ in self.invites.values() if hmac.compare_digest(i.code_sha256, h)), None)
+        hit = next((i for i, _ in list(self.invites.values()) if hmac.compare_digest(i.code_sha256, h)), None)
         if hit is None or not hit.open(_now()):
             self.limiter.fail(key, now)
             raise AccountError("That code isn’t valid. It may have been used, replaced or expired.")
@@ -482,20 +491,25 @@ class Accounts:
             self._write_invite(replace(inv, used_by=acct.user_id, used_at=_now()))
             return acct
 
-    def reset(self, code: str, password: str, ip: str) -> Account:
+    def reset(self, code: str, password: str, ip: str, now: float | None = None) -> Account:
         """A reset code sets a new password and signs out every device. The owner's own account can be reset
-        with OWNER_SETUP_CODE."""
+        with OWNER_SETUP_CODE. A blocked address can't try either; a wrong code counts against it (in lookup)."""
+        now = time.monotonic() if now is None else now
         with self.lock:
+            if self.limiter.blocked(f"ip:{ip}", MAX_PER_IP, now):
+                raise AccountError("Too many tries. Wait 15 minutes and try again.")
             if self.setup_code and hmac.compare_digest(code.strip().encode(), self.setup_code.encode()):
                 acct = next((a for a in self.people() if a.role == "owner"), None)
                 if acct is None:
                     raise AccountError("There’s no owner yet. Create the account first.")
                 inv = None
             else:
-                inv = self.lookup(code, ip)
+                inv = self.lookup(code, ip, now)
                 acct = self.get(inv.for_user_id or "") if inv.kind == "reset" else None
                 if acct is None:
                     raise AccountError("That’s an invite, not a reset code.")
+                if acct.disabled:
+                    raise AccountError("This account is turned off. Ask the owner to turn it back on.")
             check_password(password, acct.username)
             acct = self._write(
                 replace(acct, password_hash=self._hash(password), session_epoch=acct.session_epoch + 1)
@@ -512,6 +526,10 @@ class Accounts:
             acct = self.get(user_id)
             if acct is None or acct.role == "owner":
                 raise AccountError("No such account.")
+            if disabled:  # an outstanding reset code would otherwise still change the password
+                for inv, _ in list(self.invites.values()):
+                    if inv.kind == "reset" and inv.for_user_id == user_id and inv.open(_now()):
+                        self._write_invite(replace(inv, revoked=True))
             return self._write(replace(acct, disabled=disabled, session_epoch=acct.session_epoch + 1))
 
     # --- sessions ------------------------------------------------------------------------------------

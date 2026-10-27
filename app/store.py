@@ -382,9 +382,15 @@ class Store:
         return True
 
     def save_equipment(self, user_id: str, data: dict) -> Equipment:
-        """Add or change equipment. One default per kind: making this one the default clears the others."""
-        item = Equipment(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
-        prev = self._owned(self.equipment, item.equipment_id, user_id)
+        """Add or change equipment. One default per kind: making this one the default clears the others.
+        A change keeps what the body leaves out (notes, a model the form doesn't show, retired), so editing a
+        grinder made elsewhere doesn't erase its notes and saving a retired one doesn't bring it back."""
+        data = {k: v for k, v in data.items() if k != "user_id"}
+        prev = self._owned(self.equipment, str(data.get("equipment_id") or ""), user_id)
+        if prev:
+            kept = prev.item.model_dump(exclude={"user_id"})
+            data = {k: v for k, v in kept.items() if k not in data} | data
+        item = Equipment(**data, user_id=user_id)
         if prev and prev.item.kind != item.kind:
             raise Invalid("Equipment can't change kind. Add a new one instead.")
         if item.retired:
