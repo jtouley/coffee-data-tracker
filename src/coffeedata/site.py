@@ -22,7 +22,7 @@ from .discover import US_STATES
 STATES = [s for s in US_STATES if s not in ("DC", "PR")]
 # Roaster statuses (dim_roaster.status) in reading order, with what each means to a visitor.
 STATUS_LABELS = {
-    "active": "Shop read, coffee listed",
+    "active": "Shop read, coffee found",
     "no_coffee": "Shop read, no coffee for sale",
     "no_catalog": "Shop read, nothing listed",
     "pending": "Not read yet",

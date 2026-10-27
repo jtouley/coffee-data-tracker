@@ -429,4 +429,4 @@ def test_every_roaster_status_has_a_coverage_label():
 def test_states_are_the_fifty():
     from coffeedata import site
 
-    assert len(site.STATES) == 50 and "DC" not in site.STATES
+    assert len(site.STATES) == 50 and "DC" not in site.STATES and "PR" not in site.STATES
