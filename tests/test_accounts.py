@@ -547,3 +547,19 @@ def test_guesses_spread_over_addresses_back_off_per_username(users):
     with pytest.raises(AccountError, match="Wait 3 seconds"):
         a.sign_in("jtouley", PW, "1.2.3.4", now=100)  # the owner waits a moment, never 15 minutes
     assert a.sign_in("jtouley", PW, "1.2.3.4", now=103).username == "jtouley"
+
+
+def test_each_dataset_publishes_only_its_own_files(tmp_path):
+    # #12-3: the users dataset (password hashes) and the main lake must never publish each other's files, even if
+    # their staging folders overlap. By default they don't: build/users-staging, build/photos-staging and the main
+    # lake's own folder.
+    from coffeedata.lake import USER_TABLES, Lake
+
+    shared = tmp_path / "staging"
+    main = Lake("hf://datasets/x/main", staging=shared)
+    users = Lake("hf://datasets/x/users", staging=shared, tables=USER_TABLES)
+    users.write("users", "users/u1__20261027T000000.parquet", [{"user_id": "u1", "username": "a"}])
+    main.write("shots", "shots/s1__20261027T000000.parquet", [{"shot_id": "s1"}])
+    top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
+    assert "users" not in top(main) and "shots" in top(main)
+    assert top(users) <= {"users", "invites"}

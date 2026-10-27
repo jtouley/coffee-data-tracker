@@ -140,6 +140,21 @@ gcloud logging read "$S AND jsonPayload.message=\"saved\"" --freshness=1d       
 A request's trace id is on its access line (`logging.googleapis.com/trace`). Errors also appear in Error
 Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines.
 
+### Deleting a person's data
+
+The privacy policy promises deletion within 30 days of a request. The owner runs, with `HF_TOKEN` and the three
+dataset variables set (as for the weekly run):
+
+```bash
+uv run coffeedata delete-user maya --dry-run   # lists every file that would go
+uv run coffeedata delete-user maya
+```
+
+It removes that person's shots, bags, equipment, photos, account and invites: one commit per dataset. The owner's
+own account can't be deleted this way. Afterwards, deploy again (or restart the service) so the app drops what it
+has in memory. The weekly run rebuilds `marts/fct_shot.parquet` without their shots. The datasets' version history
+still holds the old commits, as the policy says.
+
 ## Using it on the phone
 
 - **Install:** open the app's address in Chrome on Android and use "Add to Home screen". It runs full screen and stays

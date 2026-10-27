@@ -291,6 +291,28 @@ def cmd_mcp(args: argparse.Namespace) -> None:
     mcp.run()
 
 
+def cmd_delete_user(args: argparse.Namespace) -> None:
+    from . import erase
+
+    main, photos, users = Lake(), Lake.photos(), Lake.users()
+    try:
+        p = erase.plan(args.username, main, photos, users)
+    except erase.EraseError as e:
+        sys.exit(str(e))
+    print(f"{p.username} ({p.user_id}):")
+    for url, paths in p.files.items():
+        print(f"  {url}: {len(paths)} files")
+        for rel in paths:
+            print(f"    {rel}")
+    if args.dry_run:
+        print("Dry run: nothing deleted.")
+        return
+    erase.apply(p, main, photos, users)
+    print(
+        "Deleted. Restart the app so it drops what it has in memory; the weekly run rebuilds the shot export."
+    )
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -356,6 +378,10 @@ def main(argv: list[str] | None = None) -> None:
     s.add_argument("action", choices=["add", "from-issue"])
     s.add_argument("--json", help="shot fields as JSON (add)")
     s.add_argument("--file", help="issue body file (from-issue); default stdin")
+
+    du = add("delete-user", cmd_delete_user, "delete one person's shots, bags, gear, photos and account")
+    du.add_argument("username")
+    du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")
     ar.add_argument("--file", help="issue body file; default stdin")
