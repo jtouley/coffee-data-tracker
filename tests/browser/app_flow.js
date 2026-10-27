@@ -202,10 +202,24 @@ async function newPage(browser, errors) {
     // The shell is cached by the service worker.
     const cached = await page.evaluate(async () => {
       await navigator.serviceWorker.ready;
-      const keys = await caches.keys();
-      return keys.length ? (await (await caches.open(keys[0])).keys()).length : 0;
+      return (await (await caches.open("static")).keys()).length; // hashed files, kept across versions
     });
     assert.ok(cached >= 5, `service worker cached ${cached} files`);
+
+    // A 403 (the origin check, which a proxy can trip by mistake) keeps the write on the phone (#15-2).
+    await page.route("**/api/equipment", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"no"}' }));
+    const held = await page.evaluate(async () => {
+      const err = await send("probe:1", "/api/equipment", {}).catch((e) => e);
+      const n = await new Promise((resolve) => {
+        indexedDB.open("registry-coffee").onsuccess = (e) => {
+          e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
+        };
+      });
+      await store("readwrite", (s) => s.delete("probe:1"));
+      return [err.constructor.name, n];
+    });
+    assert.deepEqual(held, ["Held", 1]);
+    await page.unroute("**/api/equipment");
 
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);

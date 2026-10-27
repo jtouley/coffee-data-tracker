@@ -27,6 +27,7 @@ log = logging.getLogger(__name__)
 FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes",
          "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 
 
 class NotFound(KeyError):
@@ -96,18 +97,29 @@ class Store:
             for c in ("coffee_id", "coffee_freetext", "roast_date"):
                 r[c] = r.pop(f"shot_{c}")  # the raw shot, not the bag's values fct_shot fills in
             rows[r["shot_id"]] = r
-        cutoff = max((r["logged_at"] for r in rows.values()), default=None)
-        newer = self.lake.files_after("shots", cutoff) if cutoff else None
-        if newer is None:
+        # File names carry the time a record was made, not when it reached the dataset, and uploads queue. So
+        # the files are read from a day before the export (its snapshot_at, else its newest record): a record made
+        # before the export but uploaded after it is still found. Overlap with the export is harmless: latest wins.
+        if "snapshot_at" in cols:
+            stamp = max((r["snapshot_at"] for r in rows.values() if r.get("snapshot_at")), default=None)
+        else:
+            stamp = max((r["logged_at"] for r in rows.values()), default=None)
+        if stamp is None:
             return None
-        if newer:
-            files = ", ".join(f"'{f}'" for f in newer)
-            cur = con.execute(f"""
-                select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
-                qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
-            cols = [d[0] for d in cur.description]
-            for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
-                rows[r["shot_id"]] = r  # newer than anything in the export: latest wins
+        try:
+            newer = self.lake.files_after("shots", stamp - SEED_SLACK)
+            if newer:
+                files = ", ".join(f"'{f}'" for f in newer)
+                cur = con.execute(f"""
+                    select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
+                    qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
+                cols = [d[0] for d in cur.description]
+                for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
+                    if r["shot_id"] not in rows or r["logged_at"] >= rows[r["shot_id"]]["logged_at"]:
+                        rows[r["shot_id"]] = r
+        except Exception as e:  # noqa: BLE001 - a failed listing (429, timeout): read every file instead
+            log.warning("listing newer shot files failed (%s): reading every file", type(e).__name__)
+            return None
         log.info("shots: %d from fct_shot, %d newer files", len(rows), len(newer))
         return list(rows.values())
 

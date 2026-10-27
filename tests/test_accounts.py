@@ -91,15 +91,17 @@ def test_sign_in_messages_dont_say_whether_the_username_exists(lake, users):
     assert ok.status_code == 200 and c.get("/").status_code == 200
 
 
-def test_lockout_after_five_failures_for_a_username_and_twenty_for_an_ip(users):
+def test_lockout_after_five_failures_for_a_username_from_one_address_and_twenty_for_an_address(users):
     a = accounts(users)
     a.create_owner(CODE, "jtouley", PW)
     for _ in range(5):
         with pytest.raises(AccountError, match="match"):
             a.sign_in("jtouley", "wrong password!", "1.1.1.1", now=100)
     with pytest.raises(AccountError, match="Too many"):
-        a.sign_in("jtouley", PW, "2.2.2.2", now=101)  # even the right password, from elsewhere
-    assert a.sign_in("jtouley", PW, "2.2.2.2", now=100 + 15 * 60 + 1).username == "jtouley"
+        a.sign_in("jtouley", PW, "1.1.1.1", now=101)  # even the right password, from that address
+    # The owner, elsewhere, isn't locked out by someone else's guesses (#15-5, #16-4).
+    assert a.sign_in("jtouley", PW, "2.2.2.2", now=101).username == "jtouley"
+    assert a.sign_in("jtouley", PW, "1.1.1.1", now=100 + 15 * 60 + 1).username == "jtouley"
     for i in range(20):
         with pytest.raises(AccountError, match="match"):
             a.sign_in(f"guess{i}", "wrong password!", "3.3.3.3", now=2000)
@@ -356,8 +358,12 @@ def test_cache_starts_from_fct_shot_plus_newer_files(lake, users, monkeypatch):
                     " '2026-09-20', null, 'Geometry', null)", [sid, old, old])  # fmt: skip
     lake.write_mart("fct_shot", con, "select * from t")
     # An old file the export already covers is never read; newer files are: s2 retracted, s3 new.
-    lake.write("shots", f"shots/s1__{old - timedelta(days=1):%Y%m%dT%H%M%S}.parquet",
-               [base | {"shot_id": "s1", "logged_at": old - timedelta(days=1), "time_s": 99.0}])  # fmt: skip
+    lake.write("shots", f"shots/s1__{old - timedelta(days=2):%Y%m%dT%H%M%S}.parquet",
+               [base | {"shot_id": "s1", "logged_at": old - timedelta(days=2), "time_s": 99.0}])  # fmt: skip
+    # Made before the export but uploaded after it (#15-1): not in the export, and still found.
+    early = old - timedelta(hours=1)
+    lake.write("shots", f"shots/s4__{early:%Y%m%dT%H%M%S}.parquet",
+               [base | {"shot_id": "s4", "logged_at": early, "time_s": 30.0}])  # fmt: skip
     later = old + timedelta(hours=1)
     lake.write("shots", f"shots/s2__{later:%Y%m%dT%H%M%S}.parquet",
                [base | {"shot_id": "s2", "logged_at": later, "deleted": True}])  # fmt: skip
@@ -367,13 +373,20 @@ def test_cache_starts_from_fct_shot_plus_newer_files(lake, users, monkeypatch):
     real = lake.files_after
     monkeypatch.setattr(lake, "files_after", lambda t, a: read.append(real(t, a)) or read[-1])
     store = Store(lake, "owner")
-    assert [s.shot_id for s in store.shots_of("owner")] == ["s1", "s3"]
+    assert sorted(s.shot_id for s in store.shots_of("owner")) == ["s1", "s3", "s4"]
     assert store.shot("owner", "s1").time_s == 28  # from the export, not the older file
     # The shot as it was written, without the bag's values fct_shot filled in.
     assert store.shot("owner", "s1").coffee_id is None and store.shot("owner", "s1").roast_date is None
     assert [p.rsplit("/", 1)[-1] for p in read[0]] == sorted(
-        [f"s2__{later:%Y%m%dT%H%M%S}.parquet", f"s3__{later:%Y%m%dT%H%M%S}.parquet"]
+        [
+            f"s2__{later:%Y%m%dT%H%M%S}.parquet",
+            f"s3__{later:%Y%m%dT%H%M%S}.parquet",
+            f"s4__{early:%Y%m%dT%H%M%S}.parquet",
+        ]
     )
+    # A failed listing (a 429 from the Hub) falls back to reading every file instead of failing to start (#15-7).
+    monkeypatch.setattr(lake, "files_after", lambda t, a: (_ for _ in ()).throw(OSError("429")))
+    assert sorted(s.shot_id for s in Store(lake, "owner").shots_of("owner")) == ["s1", "s3", "s4"]
 
 
 def test_cache_reads_every_file_without_an_export(lake):
@@ -450,7 +463,7 @@ def test_parallel_guesses_are_counted_before_the_slow_check(users, monkeypatch):
         t.start()
     for t in threads:
         t.join()
-    assert len(checked) == 5  # the username's limit, not 40
+    assert len(checked) == 10  # the username's backoff starts after 10, not 40
 
 
 def test_setup_code_guesses_are_limited(users):
@@ -521,3 +534,16 @@ def test_server_errors_get_the_security_headers(lake, users):
     assert r.status_code == 500 and "Something went wrong" in r.text
     assert r.headers["x-content-type-options"] == "nosniff" and "content-security-policy" in r.headers
     assert c.get("/boom").json() == {"detail": "Something went wrong on the server."}
+
+
+def test_guesses_spread_over_addresses_back_off_per_username(users):
+    from app.accounts import BACKOFF_AFTER
+
+    a = accounts(users)
+    a.create_owner(CODE, "jtouley", PW)
+    for i in range(BACKOFF_AFTER):
+        with pytest.raises(AccountError, match="match"):
+            a.sign_in("jtouley", "wrong password!", f"9.9.9.{i}", now=100)
+    with pytest.raises(AccountError, match="Wait 3 seconds"):
+        a.sign_in("jtouley", PW, "1.2.3.4", now=100)  # the owner waits a moment, never 15 minutes
+    assert a.sign_in("jtouley", PW, "1.2.3.4", now=103).username == "jtouley"

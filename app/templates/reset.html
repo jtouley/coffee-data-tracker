@@ -3,7 +3,7 @@
 {% block main %}
   <div class="top"><a class="back" href="/signin">‹ Sign in</a></div>
   <h1 class="serif title mt8">Reset your password</h1>
-  <p class="body">Ask {{ owner }} for a reset code. It works once and signs you out everywhere else.</p>
+  <p class="body">Ask the owner for a reset code. It works once and signs you out everywhere else.</p>
   <form id="reset" class="fill" data-api="/api/reset" novalidate>
     <label class="flabel" for="code">Reset code</label>
     <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
