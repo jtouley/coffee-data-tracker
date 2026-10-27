@@ -2,7 +2,7 @@
 {% block title %}Log shot · registry.coffee{% endblock %}
 {% block main %}
   {% set gr, bk, last = p.grinder, p.basket, p.last %}
-  <div class="top"><a class="back" href="/">‹ Today</a><a class="chip quiet" href="/setup">{{ gr.name }} · {{ bk.name }}</a></div>
+  <div class="top"><a class="back" href="/">‹ Today</a><a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a></div>
   <div class="row base mt8">
     <h1 class="serif name">{{ name }}</h1>
     <div class="label">Ratio <span class="num n24 ink" data-ratio></span></div>

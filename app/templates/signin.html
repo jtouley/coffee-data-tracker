@@ -25,6 +25,10 @@
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="dock flat">
       <button class="btn primary" type="submit">{{ "Create account" if owner_setup else "Sign in" }}</button>
+      {% if not owner_setup %}
+      <a class="btn text" href="/join">Have an invite? Create an account</a>
+      <a class="btn text small" href="/reset">Forgot your password? Ask {{ owner }} for a reset code.</a>
+      {% endif %}
     </div>
   </form>
 {% endblock %}

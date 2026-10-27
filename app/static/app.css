@@ -83,6 +83,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .btn.secondary { color: var(--ink); border-color: var(--control); }
 .btn.text { min-height: 56px; color: var(--accent); }
 .btn.danger { color: var(--danger); }
+.btn.text.small { font-size: 0.8125rem; font-weight: 500; color: var(--ink-2); }
+button.link { width: 100%; text-align: left; }
+.link.danger { color: var(--danger); }
+.codebox { background: var(--panel); border-radius: 14px; padding: 16px; }
+.code { letter-spacing: 0.04em; font-variant-numeric: tabular-nums; word-break: break-all; }
+.input.code { font-stretch: 85%; text-transform: uppercase; }
 /* Text buttons that sit in a list of rows line up with the rows' start edge */
 details > summary.btn.text, .btn.text.start { justify-content: flex-start; }
 .section.group + .gear.first { border-top: 0; }
@@ -220,6 +226,23 @@ code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color
 .mt48 { margin-top: 48px; }
 .dock.flat { margin-top: 16px; }
 .center { text-align: center; }
+.rows .link:first-child { border-top: 1px solid var(--rule); }
+.section.group + .rows .link:first-child { border-top: 0; }
+/* Links laid out as a segmented control (the kind on Add equipment) */
+.seg .segl { min-height: 56px; display: grid; place-items: center; font-weight: 600; font-size: 1.0625rem; border-left: 1px solid var(--control); }
+.seg .segl:first-child { border-left: 0; }
+.seg .segl[aria-current="page"] { background: var(--pick); color: var(--on-pick); box-shadow: inset 0 0 0 2px var(--pick-ring); }
+/* Radio rows */
+fieldset.pick { border: 0; margin: 0; padding: 0; min-width: 0; }
+fieldset.pick legend { padding: 0; width: 100%; }
+.choice { display: flex; align-items: center; gap: 16px; min-height: 64px; padding: 8px 0; border-bottom: 1px solid var(--rule);
+  font-size: 1.0625rem; font-weight: 500; cursor: pointer; }
+.choice .meta { display: block; font-weight: 400; }
+.choice input { appearance: none; margin: 0; width: 24px; height: 24px; flex: none; border: 2px solid var(--control); border-radius: 50%;
+  display: grid; place-items: center; background: var(--sheet); }
+.choice input:checked { border-color: var(--accent-fill); }
+.choice input:checked::after { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--accent-fill); }
+.choice input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .fill { flex: 1; display: flex; flex-direction: column; } /* a form whose dock sits at the bottom */
 
 /* Undo strip: the line under Undo shrinks over 5 s, linearly */

@@ -86,6 +86,12 @@ def test_app_in_a_browser(lake, tmp_path):
             "scale_step": 0.5,
         },
         {"equipment_id": "b1", "kind": "basket", "name": "Pullman 18 g", "basket_dose_g": 18},
+        {
+            "equipment_id": "m1",
+            "kind": "machine",
+            "name": "Lelit Bianca",
+            "model": "Dual boiler, flow paddle",
+        },
     ):
         c.post("/api/equipment", json=body, headers=w)
     c.post(
@@ -163,5 +169,16 @@ def test_app_in_a_browser(lake, tmp_path):
     assert len(list((lake.root / "shots").glob(f"{shot_id}__*.parquet"))) == 2
     assert {s.shot_id for s in shots.load_shots(lake)} == {"dial0", "dial1", "dial2", "dial3", "first"}
     screens = ("owner-setup", "first-run", "setup-empty", "new-bag", "offline", "not-found", "sign-in")
-    screens += ("sign-in-error", "today", "log-shot", "saved", "setup")
+    screens += (
+        "sign-in-error",
+        "today",
+        "log-shot",
+        "saved",
+        "setup",
+        "gear",
+        "pick-gear",
+        "invite",
+        "join",
+        "reset",
+    )
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}

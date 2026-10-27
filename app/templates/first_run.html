@@ -11,8 +11,8 @@
   {% endif %}
   <div class="spacer"></div>
   <div class="dock">
-    {% if not grinder %}<a class="btn primary" href="/setup#grinder">Add your grinder</a>
-    {% elif not basket %}<a class="btn primary" href="/setup#basket">Add your basket</a>
+    {% if not grinder %}<a class="btn primary" href="/setup/gear/new?kind=grinder">Add your grinder</a>
+    {% elif not basket %}<a class="btn primary" href="/setup/gear/new?kind=basket">Add your basket</a>
     {% else %}<a class="btn primary" href="/bag/new">Type the coffee</a>{% endif %}
   </div>
 {% endblock %}

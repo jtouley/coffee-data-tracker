@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ item.name if item else "Add equipment" }} · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/setup">‹ Setup</a></div>
+  <h1 class="serif title mt8">{{ item.name if item else "Add equipment" }}</h1>
+  {% if item %}<p class="body">{{ shots_n(shots) }} so far. Saving keeps those shots as they were.</p>{% endif %}
+  {% if not item %}
+  <div class="flabel" id="kind-l">Kind</div>
+  <nav class="seg" aria-labelledby="kind-l">
+    {% for k, l in (("grinder", "Grinder"), ("machine", "Machine"), ("basket", "Basket")) %}<a class="segl" href="?kind={{ k }}"{% if k == kind %} aria-current="page"{% endif %}>{{ l }}</a>{% endfor %}
+  </nav>
+  {% endif %}
+  <form class="fill" data-equipment="{{ kind }}"{% if item %} data-id="{{ item.equipment_id }}"{% endif %} novalidate>
+    <label class="flabel" for="name">Name</label>
+    <input class="input" id="name" name="name" autocomplete="off" value="{{ item.name if item else '' }}" required
+      placeholder="{{ {'grinder': 'e.g. DF64 V2', 'machine': 'e.g. Lelit Bianca', 'basket': 'e.g. Pullman 18 g'}[kind] }}">
+    {% if kind == "grinder" %}
+    <div class="grid3">
+      <div><label class="flabel" for="scale_min">Dial from</label><input class="input" id="scale_min" name="scale_min" inputmode="decimal" value="{{ g(item.scale_min) if item else '' }}" required></div>
+      <div><label class="flabel" for="scale_max">to</label><input class="input" id="scale_max" name="scale_max" inputmode="decimal" value="{{ g(item.scale_max) if item else '' }}" required></div>
+      <div><label class="flabel" for="scale_step">Step</label><input class="input" id="scale_step" name="scale_step" inputmode="decimal" value="{{ g(item.scale_step) if item else '1' }}" required></div>
+    </div>
+    <div class="fhint">The grind steppers move by the step.</div>
+    {% set lower = item.finer_is_lower if item and item.finer_is_lower is not none else true %}
+    <div class="flabel" id="dir-l">Finer is</div>
+    <div class="seg two" role="group" aria-labelledby="dir-l" data-choice="finer_is_lower">
+      <button type="button" data-v="true" aria-pressed="{{ 'true' if lower else 'false' }}">Lower numbers</button><button type="button" data-v="false" aria-pressed="{{ 'false' if lower else 'true' }}">Higher numbers</button>
+    </div>
+    {% elif kind == "basket" %}
+    <label class="flabel" for="basket_dose_g">Nominal dose (g)</label>
+    <input class="input" id="basket_dose_g" name="basket_dose_g" inputmode="decimal" value="{{ g(item.basket_dose_g) if item else '' }}" aria-describedby="dose-h" required>
+    <div class="fhint" id="dose-h">The first shot of a new coffee starts at this dose.</div>
+    {% else %}
+    <label class="flabel" for="model">Notes on it (optional)</label>
+    <input class="input" id="model" name="model" autocomplete="off" value="{{ item.model or '' if item else '' }}" placeholder="e.g. Dual boiler, flow paddle">
+    {% endif %}
+    <div class="flabel" id="def-l">Use for new shots</div>
+    <div class="seg two" role="group" aria-labelledby="def-l" data-choice="is_default">
+      {% set d = item.is_default if item else true %}
+      <button type="button" data-v="true" aria-pressed="{{ 'true' if d else 'false' }}">By default</button><button type="button" data-v="false" aria-pressed="{{ 'false' if d else 'true' }}">Only when picked</button>
+    </div>
+    <div class="hint" data-hint role="alert"></div>
+    <div class="spacer"></div>
+    <div class="dock">
+      <button class="btn primary" type="submit">{{ "Save" if item else "Add " ~ kind }}</button>
+      {% if item %}<button class="btn text danger" type="button" data-retire data-confirm="Tap again to retire it">Retire {{ item.name }}</button>{% endif %}
+    </div>
+  </form>
+{% endblock %}

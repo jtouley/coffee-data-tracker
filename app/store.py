@@ -26,6 +26,10 @@ class NotFound(KeyError):
     """Missing, or someone else's: the two look the same from outside."""
 
 
+class Invalid(ValueError):
+    """A request that can't be applied, with a message to show."""
+
+
 @dataclass
 class Rec:
     item: Any  # Shot, Bag or Equipment
@@ -151,9 +155,11 @@ class Store:
             return [s for s in mine if s.bag_id == bag.bag_id]
         return [s for s in mine if last and coffee_key(s) == coffee_key(last)]
 
-    def prefill(self, user_id: str) -> dict:
+    def prefill(self, user_id: str, grinder_id: str | None = None, basket_id: str | None = None) -> dict:
         """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
-        Time, taste and rating are never copied; the last ones are offered, not filled in."""
+        Time, taste and rating are never copied; the last ones are offered, not filled in. A grinder or basket
+        picked from the chip replaces the last shot's; the grind then comes from this coffee's last shot on
+        that grinder, since a setting means nothing on another grinder."""
         bag = self.current_bag(user_id)
         mine = self.shots_of(user_id)
         last = None
@@ -164,16 +170,36 @@ class Store:
             last = same[-1] if same else None
         elif mine:
             last = mine[-1]
-        grinder = self.gear(user_id, last.grinder_id if last else None)
+        picked = self.gear(user_id, grinder_id)
+        grinder = (
+            picked
+            if picked and picked.kind == "grinder"
+            else self.gear(user_id, last.grinder_id if last else None)
+        )
         grinders = self.equipment_of(user_id, "grinder")
         if not grinder or grinder.retired:
             grinder = grinders[0] if grinders else None
         baskets = self.equipment_of(user_id, "basket")
-        basket = self.gear(user_id, last.basket_id if last else None) or (baskets[0] if baskets else None)
+        picked = self.gear(user_id, basket_id)
+        basket = (
+            picked
+            if picked and picked.kind == "basket"
+            else self.gear(user_id, last.basket_id if last else None) or (baskets[0] if baskets else None)
+        )
+        if grinder and last and last.grinder_id and last.grinder_id != grinder.equipment_id:
+            # Switched grinders: this coffee's last shot on the new one, if any, gives the grind.
+            on = [
+                s for s in mine if s.grinder_id == grinder.equipment_id and coffee_key(s) == coffee_key(last)
+            ]
+            grind_from = on[-1] if on else None
+        else:
+            grind_from = last
         dose = last.dose_g if last else (basket.basket_dose_g if basket and basket.basket_dose_g else None)
         grind = None
-        if last and (not last.grinder_id or not grinder or last.grinder_id == grinder.equipment_id):
-            grind = last.grinder_setting
+        if grind_from and (
+            not grind_from.grinder_id or not grinder or grind_from.grinder_id == grinder.equipment_id
+        ):
+            grind = grind_from.grinder_setting
         elif grinder and grinder.scale_min is not None and grinder.scale_max is not None:
             # No shot on this grinder yet: the middle of the dial, a starting point to move from, not advice.
             step = grinder.scale_step or 1
@@ -183,6 +209,7 @@ class Store:
             "last": last,
             "grinder": grinder,
             "basket": basket,
+            "machine": next(iter(self.equipment_of(user_id, "machine")), None),
             "coffee_id": bag.coffee_id if bag else last.coffee_id if last else None,
             "coffee_freetext": bag.coffee_freetext if bag else last.coffee_freetext if last else None,
             "dose_g": dose,
@@ -227,6 +254,7 @@ class Store:
         for ref, table in (
             (shot.grinder_id, self.equipment),
             (shot.basket_id, self.equipment),
+            (shot.machine_id, self.equipment),
             (shot.bag_id, self.bags),
         ):
             if ref and self._owned(table, ref, user_id) is None:
@@ -253,10 +281,24 @@ class Store:
         return True
 
     def save_equipment(self, user_id: str, data: dict) -> Equipment:
+        """Add or change equipment. One default per kind: making this one the default clears the others."""
         item = Equipment(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         prev = self._owned(self.equipment, item.equipment_id, user_id)
+        if prev and prev.item.kind != item.kind:
+            raise Invalid("Equipment can't change kind. Add a new one instead.")
+        if item.retired:
+            item = item.model_copy(update={"is_default": False})
         if not (prev and prev.item == item):
             self._commit(self.equipment, item.equipment_id, item, "equipment")
+        if item.is_default:
+            for other in self.equipment_of(user_id, item.kind):
+                if other.equipment_id != item.equipment_id and other.is_default:
+                    self._commit(
+                        self.equipment,
+                        other.equipment_id,
+                        other.model_copy(update={"is_default": False}),
+                        "equipment",
+                    )
         return item
 
     def save_bag(self, user_id: str, data: dict) -> tuple[Bag, list[dict]]:

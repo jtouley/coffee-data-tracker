@@ -139,6 +139,38 @@ async function newPage(browser, errors) {
     assert.match(await page.textContent("main"), /Last shot.*\n?.*29/s);
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
+    await page.goto(`${base}/setup/gear/g1`);
+    await shoot(page, "gear");
+    await page.goto(`${base}/log`);
+    await page.getByRole("link", { name: /Grinder and basket/ }).click();
+    await page.waitForURL(/\/log\/gear/);
+    await shoot(page, "pick-gear");
+
+    // The owner invites someone; they join from the link on another phone.
+    await page.goto(`${base}/invite`);
+    await page.getByRole("button", { name: "Make an invite link" }).click();
+    await page.waitForSelector("[data-codebox]:not([hidden])");
+    const code = (await page.textContent("[data-code]")).trim();
+    assert.match(code, /^[A-Z2-7]{4}(-[A-Z2-7]{4}){3}$/);
+    await shoot(page, "invite");
+    const other = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+    const guest = await other.newPage();
+    guest.on("pageerror", (e) => errors.push(e.message));
+    await guest.goto(`${base}/join#${code}`);
+    await guest.waitForFunction(() => /Valid until/.test(document.querySelector("[data-code-status]").textContent));
+    assert.equal(new URL(guest.url()).hash, ""); // the code left the address bar
+    await shoot(guest, "join");
+    await guest.fill("#username", "maya");
+    await guest.fill("#password", "lantern quarry velvet");
+    await guest.getByRole("button", { name: "Create account" }).click();
+    await guest.waitForURL(`${base}/`);
+    assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);
+    await guest.goto(`${base}/reset`);
+    await shoot(guest, "reset");
+    await other.close();
+    await page.goto(`${base}/invite`);
+    assert.match(await page.textContent("main"), /maya/);
+    await page.goto(`${base}/setup`);
 
     // The shell is cached by the service worker.
     const cached = await page.evaluate(async () => {

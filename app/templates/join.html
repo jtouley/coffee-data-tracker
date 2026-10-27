@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Join · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><span class="meta">registry.coffee</span></div>
+  <h1 class="serif title mt8">{{ owner }} invited you</h1>
+  <p class="body measure">Pick a username and password to start logging your shots.</p>
+  <form id="join" class="fill" data-api="/api/join" novalidate>
+    <label class="flabel" for="code">Invite code</label>
+    <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
+    <div class="fhint" id="code-h" data-code-status role="status">From the link {{ owner }} sent you.</div>
+    <label class="flabel" for="username">Username</label>
+    <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="username-h" required>
+    <div class="fhint" id="username-h">Lower-case letters, digits, - or _. You’ll sign in with it.</div>
+    <label class="flabel" for="password">Password</label>
+    <div class="pw">
+      <input class="input" id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-h" required>
+      <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
+    </div>
+    <div class="fhint" id="password-h">At least 10 characters. A phrase you’ll remember is fine.</div>
+    <p class="meta mt24">Your shots, bags and photos are kept in {{ owner }}’s private Hugging Face datasets. The app
+      shows them only to you; {{ owner }} can read the datasets.</p>
+    <div class="hint" id="signin-hint" data-hint role="alert"></div>
+    <div class="spacer"></div>
+    <div class="dock">
+      <button class="btn primary" type="submit">Create account</button>
+      <a class="btn text" href="/signin">Already have an account? Sign in</a>
+    </div>
+  </form>
+{% endblock %}
