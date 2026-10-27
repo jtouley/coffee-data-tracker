@@ -1,0 +1,112 @@
+{% extends "_legal.html" %}
+{% block title %}Privacy Policy{% endblock %}
+{% block slug %}privacy{% endblock %}
+{% block body %}
+<div class="summary">
+  <p><strong>In short:</strong> the public site doesn't collect anything about you. The invite-only app keeps what you log
+    so it can work. Nothing is sold, there are no ads, and there are no third-party trackers. You can ask for a copy of
+    your data, or for it to be deleted, at <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
+</div>
+
+<h2>Who runs this</h2>
+<p>registry.coffee is run by an individual (the "operator", "we" or "us"), not a company. This policy covers
+  registry.coffee (the launch page and the catalog), the shot-logging app at app.registry.coffee (the "app"), and the
+  public dataset built from the catalog.</p>
+
+<h2>The public site and catalog</h2>
+<ul>
+  <li>The site doesn't set cookies, run analytics, or load scripts, fonts or images from other services.</li>
+  <li>If you switch between light and dark, your choice is saved in your own browser's local storage. It never leaves
+    your device.</li>
+  <li>The site is hosted on GitHub Pages. Like any web host, GitHub receives your IP address and browser details when you
+    load a page, and may log them for security. That's covered by
+    <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>;
+    we don't receive those logs.</li>
+  <li>Catalog links take you to roasters' own websites, whose privacy policies apply there.</li>
+  <li>The catalog lists products and businesses, not people. It holds what roasters publish on their public storefronts:
+    coffee names, prices, stock and the like.</li>
+</ul>
+
+<h2>What the app collects</h2>
+<p>The app is invite-only. When you use it, we keep:</p>
+<ul>
+  <li><strong>Your account:</strong> your username and a hash of your password. We never store the password itself.</li>
+  <li><strong>What you log:</strong> shots, bags, equipment and any notes you write.</li>
+  <li><strong>Bag photos you upload.</strong> Location and other EXIF metadata is removed before the photo is stored.</li>
+  <li><strong>Technical data:</strong>
+    <ul>
+      <li>Your IP address, which the app holds in memory only, to apply rate limits.</li>
+      <li>App logs of each request's route, status, timing and your user id. Request contents aren't logged.</li>
+      <li>Request logs that Google Cloud records automatically for every request: IP address, browser details, the URL
+        requested and the response status. They're kept in Google Cloud Logging for about 30 days by default.</li>
+    </ul>
+  </li>
+  <li><strong>Cookies:</strong> one to keep you signed in, and two that remember your theme and handedness. None are used
+    for tracking or advertising.</li>
+</ul>
+
+<h2>Why we use it</h2>
+<ul>
+  <li>To run the app: show your history, suggest your next shot, and match bags to the catalog.</li>
+  <li>To keep it secure and prevent abuse, for example with rate limits.</li>
+  <li>To find and fix problems.</li>
+</ul>
+<p>We may also use <strong>aggregated or de-identified</strong> data, which can't reasonably identify you, to run and
+  improve the service and to publish statistics about it. For example: "washed Ethiopians are most often brewed at
+  1:2.2".</p>
+
+<h2>Who processes it</h2>
+<p>We use these services to run registry.coffee. Each receives only what it needs for its part:</p>
+<ul>
+  <li><strong>Hugging Face:</strong> stores the app's data and the public dataset.</li>
+  <li><strong>Google Cloud:</strong> hosts the app (Cloud Run, in the United States) and keeps its logs.</li>
+  <li><strong>Anthropic:</strong> reads the label on a bag photo, and only when you upload one, to fill in the coffee's
+    details.</li>
+  <li><strong>GitHub:</strong> hosts the public site and the code.</li>
+</ul>
+<p>Your data is stored and processed in the United States.</p>
+
+<h2>What we don't do</h2>
+<ul>
+  <li>We don't sell or rent your personal data.</li>
+  <li>We don't show ads.</li>
+  <li>We don't use third-party tracking or analytics.</li>
+</ul>
+
+<h2>How long we keep it</h2>
+<p>We keep your data while your account exists. The data store is append-only, meaning records are added rather than
+  overwritten. So when you ask for deletion, we remove your records within <strong>30 days</strong>. Copies may remain
+  in backups or in the data store's version history for a limited time afterwards, until they're overwritten or
+  expire.</p>
+
+<h2>Your choices and rights</h2>
+<p>Email <a href="mailto:{{ contact }}">{{ contact }}</a> from the address on your account (or tell us your username) to:</p>
+<ul>
+  <li>get a copy of your data</li>
+  <li>correct it</li>
+  <li>delete it, along with your account</li>
+</ul>
+<p>We may need to confirm it's you before acting. Depending on where you live, you may have other rights under local
+  law, and we'll honor them where they apply.</p>
+
+<h2>Security</h2>
+<p>We use reasonable measures to protect your data:</p>
+<ul>
+  <li>HTTPS everywhere</li>
+  <li>password hashing</li>
+  <li>secrets kept out of the code</li>
+  <li>access limited to what each part needs</li>
+</ul>
+<p>No system is perfectly secure, and we can't guarantee that yours won't be accessed, disclosed or lost.</p>
+
+<h2>Children</h2>
+<p>registry.coffee isn't meant for children under 13, and we don't knowingly collect their personal information. If you
+  believe a child has given us information, email us and we'll delete it.</p>
+
+<h2>Changes</h2>
+<p>We'll post any changes on this page and update the date at the top. If you keep using registry.coffee or the app
+  after a change, you accept the updated policy.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:{{ contact }}">{{ contact }}</a></p>
+{% endblock %}

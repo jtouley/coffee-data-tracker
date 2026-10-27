@@ -1,14 +1,21 @@
-"""Static site: one index.html (+ catalog.json) rendered from the dbt models in DuckDB. Shots are
+"""Static site rendered from the dbt models in DuckDB: a launch page at the root (registry.coffee) that links out
+to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
 private and never appear here; they are only in the app."""
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import json
+import os
+import re
 from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
 
 from jinja2 import Environment, PackageLoader, select_autoescape
+
+from . import public
 
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
@@ -36,6 +43,65 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
         )
     out.append(f'<line class="axis" x1="{left}" x2="{left}" y1="0" y2="{height}"/></svg>')
     return "".join(out)
+
+
+# --- links ---------------------------------------------------------------------------------------------
+
+REPO = "https://github.com/jtouley/coffee-data-tracker"
+# The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
+LEGAL_UPDATED = "October 27, 2026"
+
+
+def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
+    """Where the launch page points. The dataset is the public export (`PUBLIC_EXPORT_URL`) when it's on Hugging
+    Face; the lake itself is private by default, so it's never linked."""
+    public_export = os.environ.get("PUBLIC_EXPORT_URL", "") if public_export is None else public_export
+    site_url = (site_url or os.environ.get("SITE_URL") or "https://registry.coffee").rstrip("/")
+    dataset = hf_path = None
+    if public_export.startswith("hf://datasets/"):
+        repo_id = public.hf_repo_id(public_export)
+        dataset = f"https://huggingface.co/datasets/{repo_id}"
+        hf_path = f"hf://datasets/{repo_id}/{public.HF_DATA_DIR}"
+    return {
+        "site": site_url,
+        "catalog": "catalog/",
+        "dataset": dataset,
+        "hf_path": hf_path,
+        "repo": REPO,
+        "marketplace": f"{REPO}/blob/main/marketplace/README.md",
+        "mcp": f"{REPO}#logging-shots",
+        "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
+    }
+
+
+# --- hardening ------------------------------------------------------------------------------------------
+
+
+def safe_url(url: object) -> str | None:
+    """Product links come from roasters' feeds; only plain http(s) links reach the page (no `javascript:`)."""
+    return url if isinstance(url, str) and re.fullmatch(r"https?://[^\s\"<>]+", url, re.I) else None
+
+
+def with_csp(html: str) -> str:
+    """Add a Content-Security-Policy that allows the page's own inline scripts (by hash) and nothing third-party."""
+    hashes = (
+        " ".join(
+            "'sha256-" + base64.b64encode(hashlib.sha256(js.encode()).digest()).decode() + "'"
+            for js in re.findall(r"<script>(.*?)</script>", html, re.S)
+        )
+        or "'none'"
+    )
+    csp = (
+        f"default-src 'none'; script-src {hashes}; style-src 'unsafe-inline'; img-src 'self' data:; "
+        "connect-src 'self'; base-uri 'none'; form-action 'none'"
+    )
+    meta = (
+        f'<meta http-equiv="Content-Security-Policy" content="{csp}">\n'
+        '<meta name="referrer" content="strict-origin-when-cross-origin">'
+    )
+    if '<meta charset="utf-8">' not in html:
+        raise ValueError('the page has no <meta charset="utf-8"> to put the Content-Security-Policy after')
+    return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + meta, 1)
 
 
 # --- build -------------------------------------------------------------------------------------------
@@ -89,6 +155,29 @@ def build(db: Path, out: Path) -> Path:
                tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
         from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
     )
+    reach = _q(
+        con,
+        """
+        select count(distinct origin_country) as origins, count(distinct roaster_state) as states
+        from dim_coffee where is_listed and not is_chain""",
+    )[0]
+    origin_counts = _q(
+        con,
+        """
+        select origin_country, count(*) as n from dim_coffee
+        where in_stock and not is_blend and not is_chain and origin_country is not null
+        group by 1 order by n desc, 1 limit 8""",
+    )
+    week = _q(
+        con,
+        """
+        select count(*) filter (where event = 'price') as price_changes,
+               count(*) filter (where event = 'removed') as removed
+        from fct_price_event where run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
+    )[0]
+    for r in new + catalog:
+        r["url"] = safe_url(r["url"])
+    new_count = _q(con, "select count(*) as n from mart_new_arrivals")[0]["n"]
     con.close()
 
     coverage = {"registry": {r["status"]: r["n"] for r in statuses}}
@@ -110,8 +199,41 @@ def build(db: Path, out: Path) -> Path:
             "{:,.0f}",
             "Coffees in stock by process",
         ),
+        "origins": hbar_chart(
+            [
+                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']} coffees in stock")
+                for r in origin_counts
+            ],
+            "{:,.0f}",
+            "Single-origin coffees in stock, by origin",
+        ),
     }
+    generated = datetime.now(UTC)
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    out.mkdir(parents=True, exist_ok=True)
+    landing = env.get_template("landing.html").render(
+        totals=totals,
+        registry=sum(coverage["registry"].values()),
+        reach=reach,
+        week=week | {"new": new_count},
+        new=new[:6],
+        charts=charts,
+        links=links(),
+        public_tables=len(public.PUBLIC_TABLES),
+        generated=f"{generated:%B} {generated.day}, {generated:%Y}",
+    )
+    (out / "index.html").write_text(with_csp(landing))
+    legal = {
+        "links": links(),
+        "updated": LEGAL_UPDATED,
+        "contact": os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee",
+        "governing_state": os.environ.get("GOVERNING_STATE") or "Michigan",
+    }
+    for page in ("privacy", "terms"):
+        (out / page).mkdir(exist_ok=True)
+        (out / page / "index.html").write_text(with_csp(env.get_template(f"{page}.html").render(**legal)))
+    cat = out / "catalog"
+    cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
         totals=totals,
         charts=charts,
@@ -119,12 +241,11 @@ def build(db: Path, out: Path) -> Path:
         coverage=coverage,
         origin_price=origin_price,
         processes=processes,
-        generated=datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
+        generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
     )
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "index.html").write_text(html)
+    (cat / "index.html").write_text(with_csp(html))
     cols = list(catalog[0]) if catalog else []
-    (out / "catalog.json").write_text(
+    (cat / "catalog.json").write_text(
         json.dumps(
             {"columns": cols, "rows": [[_jsonable(r[c]) for c in cols] for r in catalog]},
             separators=(",", ":"),
