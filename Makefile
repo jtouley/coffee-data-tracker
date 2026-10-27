@@ -1,7 +1,7 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
 
-.PHONY: install init weekly ingest probe discover enrich build site publish mcp lint test clean
+.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp lint test clean
 
 install:
 	uv sync
@@ -37,8 +37,15 @@ publish:
 mcp:
 	uv run coffeedata mcp
 
-lint:
-	uv run ruff check src tests
+hooks:  ## install the git pre-commit hooks
+	uv run pre-commit install
+
+fmt:
+	uv run ruff check --fix src tests
+	uv run ruff format src tests
+
+lint:  ## the same checks as the pre-commit hooks, on every file
+	uv run pre-commit run --all-files
 
 test: lint  ## offline: unit tests + dbt builds over synthetic lakes
 	uv run pytest -q

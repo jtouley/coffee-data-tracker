@@ -3,9 +3,18 @@ from coffeedata.models import CatalogItem, Variant
 
 
 def item(title, product_type="", tags=(), grams=None, body=""):
-    return CatalogItem(roaster_id="r", product_id="1", handle="h", url="u", title=title, platform="shopify",
-                       product_type=product_type, tags=list(tags),
-                       variants=[Variant(variant_id="v", grams=grams)], body_text=body)
+    return CatalogItem(
+        roaster_id="r",
+        product_id="1",
+        handle="h",
+        url="u",
+        title=title,
+        platform="shopify",
+        product_type=product_type,
+        tags=list(tags),
+        variants=[Variant(variant_id="v", grams=grams)],
+        body_text=body,
+    )
 
 
 def test_obvious_coffees():
@@ -42,3 +51,9 @@ def test_fixture_mix(fixture_items):
         kept = [i for i in items if is_coffee(i)]
         assert kept, rid
         assert not any("grinder" in i.title.lower() or "mug" in i.title.lower() for i in kept), rid
+
+
+def test_filter_roast_is_coffee_but_filters_are_not():
+    assert is_coffee(item("Ethiopia Guji - Filter Roast", grams=250))
+    assert not is_coffee(item("Kalita Wave 185 Filters"))
+    assert not is_coffee(item("Paper Filter Cones #2"))

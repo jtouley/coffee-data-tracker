@@ -14,8 +14,8 @@ runs as (
     from f group by roaster_id, run_date
 ),
 recent as (
-    select roaster_id, count(*) filter (where rn <= 3) as attempts,
-           count(*) filter (where rn <= 3 and not ok) as errors, max(last_at) as last_fetch
+    select roaster_id, count(*) filter (where rn <= {{ var('max_failures') }}) as attempts,
+           count(*) filter (where rn <= {{ var('max_failures') }} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
 last_ok as (select * from f where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
@@ -32,7 +32,7 @@ select
     lo.run_date as last_ok_run, rc.last_fetch,
     case
         when r.opted_out then 'opted_out'
-        when rc.attempts >= 3 and rc.errors = rc.attempts
+        when rc.attempts >= {{ var('max_failures') }} and rc.errors = rc.attempts
              and (lp.probed_at is null or lp.probed_at < rc.last_fetch or lp.status <> 'ok') then 'unreachable'
         when coalesce(g.platform, r.seed_platform) is null
              or coalesce(g.platform, r.seed_platform) like 'http\_%' escape '\' then 'unreachable'

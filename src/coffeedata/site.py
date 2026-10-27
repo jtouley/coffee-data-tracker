@@ -48,15 +48,21 @@ def scatter_chart(points: list[tuple[float, float, str]], width: int = 460, heig
     sy = lambda y: top + (5.5 - y) / 5 * (height - top - bottom)  # noqa: E731
     out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="Rating by brew ratio">']
     for r in range(1, 6):
-        out.append(f'<line class="grid" x1="{left}" x2="{width - right}" y1="{sy(r):.1f}" y2="{sy(r):.1f}"/>'
-                   f'<text class="tick" x="{left - 8}" y="{sy(r):.1f}" text-anchor="end" dominant-baseline="central">{r}</text>')
+        out.append(
+            f'<line class="grid" x1="{left}" x2="{width - right}" y1="{sy(r):.1f}" y2="{sy(r):.1f}"/>'
+            f'<text class="tick" x="{left - 8}" y="{sy(r):.1f}" text-anchor="end" dominant-baseline="central">{r}</text>'
+        )
     t = x0
     while t <= x1 + 1e-9:
-        out.append(f'<text class="tick" x="{sx(t):.1f}" y="{height - 10}" text-anchor="middle">1:{t:.1f}</text>')
+        out.append(
+            f'<text class="tick" x="{sx(t):.1f}" y="{height - 10}" text-anchor="middle">1:{t:.1f}</text>'
+        )
         t += 0.5
     for x, y, tip in points:
-        out.append(f'<g class="mark" tabindex="0" data-tip="{escape(tip)}"><circle class="hit" cx="{sx(x):.1f}" '
-                   f'cy="{sy(y):.1f}" r="12"/><circle class="dot" cx="{sx(x):.1f}" cy="{sy(y):.1f}" r="5"/></g>')
+        out.append(
+            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}"><circle class="hit" cx="{sx(x):.1f}" '
+            f'cy="{sy(y):.1f}" r="12"/><circle class="dot" cx="{sx(x):.1f}" cy="{sy(y):.1f}" r="5"/></g>'
+        )
     out.append("</svg>")
     return "".join(out)
 
@@ -82,50 +88,93 @@ def build(db: Path, out: Path) -> Path:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
-    origin_price = _q(con, """
+    origin_price = _q(
+        con,
+        """
         select origin_country, count(*) as n, median(price_per_100g) as med
         from dim_coffee where in_stock and not is_blend and not is_chain and price_per_100g is not null
           and origin_country is not null
-        group by 1 having count(*) >= 5 order by n desc limit 12""")
-    processes = _q(con, """
+        group by 1 having count(*) >= 5 order by n desc limit 12""",
+    )
+    processes = _q(
+        con,
+        """
         select coalesce(process, 'not stated') as process, count(*) as n
-        from dim_coffee where in_stock and not is_blend group by 1 order by n desc""")
+        from dim_coffee where in_stock and not is_blend group by 1 order by n desc""",
+    )
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
-    shots = _q(con, """
+    shots = _q(
+        con,
+        """
         select brew_ratio, rating, coalesce(coffee_title, coffee_freetext, '?') as coffee, time_s, brewed_at
-        from fct_shot order by brewed_at desc""")
+        from fct_shot order by brewed_at desc""",
+    )
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     new = _q(con, "select * from mart_new_arrivals limit 25")
-    totals = _q(con, """
+    totals = _q(
+        con,
+        """
         select count(*) filter (where is_listed) as coffees, count(*) filter (where in_stock) as in_stock,
-               count(distinct roaster_id) as roasters from dim_coffee where is_listed""")[0]
-    catalog = _q(con, """
+               count(distinct roaster_id) as roasters from dim_coffee where is_listed""",
+    )[0]
+    catalog = _q(
+        con,
+        """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
                tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
-        from dim_coffee where is_listed and not is_chain order by roaster_name, title""")
+        from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
+    )
     con.close()
 
     coverage = {"registry": {r["status"]: r["n"] for r in statuses}}
     charts = {
         "origin_price": hbar_chart(
-            [(r["origin_country"], round(r["med"], 2), f"{r['origin_country']}: ${r['med']:.2f} per 100 g "
-              f"(median of {r['n']} coffees)") for r in sorted(origin_price, key=lambda r: -r["med"])],
-            "${:.2f}", "Median price per 100 g by origin"),
-        "process": hbar_chart([(r["process"], r["n"], f"{r['process']}: {r['n']} coffees") for r in processes],
-                              "{:,.0f}", "Coffees in stock by process"),
-        "shots": scatter_chart([(r["brew_ratio"], r["rating"],
-                                 f"{r['coffee']}: 1:{r['brew_ratio']:.1f}, {r['time_s']:g} s, rated {r['rating']}/5")
-                                for r in shots if r["brew_ratio"]]),
+            [
+                (
+                    r["origin_country"],
+                    round(r["med"], 2),
+                    f"{r['origin_country']}: ${r['med']:.2f} per 100 g (median of {r['n']} coffees)",
+                )
+                for r in sorted(origin_price, key=lambda r: -r["med"])
+            ],
+            "${:.2f}",
+            "Median price per 100 g by origin",
+        ),
+        "process": hbar_chart(
+            [(r["process"], r["n"], f"{r['process']}: {r['n']} coffees") for r in processes],
+            "{:,.0f}",
+            "Coffees in stock by process",
+        ),
+        "shots": scatter_chart(
+            [
+                (
+                    r["brew_ratio"],
+                    r["rating"],
+                    f"{r['coffee']}: 1:{r['brew_ratio']:.1f}, {r['time_s']:g} s, rated {r['rating']}/5",
+                )
+                for r in shots
+                if r["brew_ratio"]
+            ]
+        ),
     }
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
     html = env.get_template("index.html").render(
-        totals=totals, charts=charts, new=new, shots=shots[:15], coverage=coverage,
-        origin_price=origin_price, processes=processes,
+        totals=totals,
+        charts=charts,
+        new=new,
+        shots=shots[:15],
+        coverage=coverage,
+        origin_price=origin_price,
+        processes=processes,
         generated=datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
     )
     out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(html)
     cols = list(catalog[0]) if catalog else []
-    (out / "catalog.json").write_text(json.dumps(
-        {"columns": cols, "rows": [[_jsonable(r[c]) for c in cols] for r in catalog]}, separators=(",", ":")))
+    (out / "catalog.json").write_text(
+        json.dumps(
+            {"columns": cols, "rows": [[_jsonable(r[c]) for c in cols] for r in catalog]},
+            separators=(",", ":"),
+        )
+    )
     return out / "index.html"

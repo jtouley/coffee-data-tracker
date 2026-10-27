@@ -18,8 +18,12 @@ def load(name: str):
 @pytest.fixture
 def roasters() -> dict[str, Roaster]:
     with (FIX / "roasters.csv").open() as f:
-        return {r["roaster_id"]: Roaster(roaster_id=r["roaster_id"], name=r["name"], host=r["final_host"],
-                                         platform=r["platform"]) for r in csv.DictReader(f)}
+        return {
+            r["roaster_id"]: Roaster(
+                roaster_id=r["roaster_id"], name=r["name"], host=r["final_host"], platform=r["platform"]
+            )
+            for r in csv.DictReader(f)
+        }
 
 
 @pytest.fixture
@@ -35,8 +39,12 @@ def fixture_items(roasters):
     for rid in ("counterculturecoffee.com", "onyxcoffeelab.com", "intelligentsia.com"):
         name = rid.removesuffix(".com")
         out[rid] = [shopify.parse_product(p, roasters[rid]) for p in load(f"shopify_{name}.json")["products"]]
-    out["anaheimcoffee.com"] = [woocommerce.parse_product(p, roasters["anaheimcoffee.com"])
-                                for p in load("woocommerce_anaheimcoffee.json")]
-    out["vividcoffee.com"] = [squarespace.parse_item(i, roasters["vividcoffee.com"])
-                              for i in load("squarespace_vividcoffee.json")["items"]]
+    out["anaheimcoffee.com"] = [
+        woocommerce.parse_product(p, roasters["anaheimcoffee.com"])
+        for p in load("woocommerce_anaheimcoffee.json")
+    ]
+    out["vividcoffee.com"] = [
+        squarespace.parse_item(i, roasters["vividcoffee.com"])
+        for i in load("squarespace_vividcoffee.json")["items"]
+    ]
     return out

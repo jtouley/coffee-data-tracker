@@ -16,15 +16,52 @@ from .lake import Lake
 from .models import Roaster
 
 SEED = Path("config/roasters.csv")
-SEED_FIELDS = ["roaster_id", "name", "city", "state", "sources", "locations", "confidence", "tagged_roastery",
-               "roast_in_name", "is_chain", "opted_out", "final_host", "platform", "last_probed"]
+SEED_FIELDS = [
+    "roaster_id",
+    "name",
+    "city",
+    "state",
+    "sources",
+    "locations",
+    "confidence",
+    "tagged_roastery",
+    "roast_in_name",
+    "is_chain",
+    "opted_out",
+    "final_host",
+    "platform",
+    "last_probed",
+]
 
 # Hosts that are never a roaster's own storefront (full suffixes).
 NOT_A_ROASTER_SITE = (
-    "facebook.com", "instagram.com", "yelp.com", "linktr.ee", "toasttab.com", "google.com", "business.site",
-    "square.site", "squareup.com", "order.online", "doordash.com", "ubereats.com", "grubhub.com", "tiktok.com",
-    "twitter.com", "x.com", "linkedin.com", "tripadvisor.com", "mapquest.com", "youtube.com", "clover.com",
-    "wixsite.com", "godaddysites.com", "weebly.com", "blogspot.com", "wordpress.com", "gmail.com",
+    "facebook.com",
+    "instagram.com",
+    "yelp.com",
+    "linktr.ee",
+    "toasttab.com",
+    "google.com",
+    "business.site",
+    "square.site",
+    "squareup.com",
+    "order.online",
+    "doordash.com",
+    "ubereats.com",
+    "grubhub.com",
+    "tiktok.com",
+    "twitter.com",
+    "x.com",
+    "linkedin.com",
+    "tripadvisor.com",
+    "mapquest.com",
+    "youtube.com",
+    "clover.com",
+    "wixsite.com",
+    "godaddysites.com",
+    "weebly.com",
+    "blogspot.com",
+    "wordpress.com",
+    "gmail.com",
 )
 
 MAX_FAILURES = 3
@@ -113,8 +150,12 @@ left join last_ok lo using (roaster_id)
 
 
 def state_sql(lake: Lake) -> str:
-    return STATE_SQL.format(registry=lake.scan("registry"), probes=lake.scan("probes"),
-                            fetches=lake.scan("fetches"), k=MAX_FAILURES)
+    return STATE_SQL.format(
+        registry=lake.scan("registry"),
+        probes=lake.scan("probes"),
+        fetches=lake.scan("fetches"),
+        k=MAX_FAILURES,
+    )
 
 
 @dataclass
@@ -131,8 +172,14 @@ def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
-        roaster = Roaster(roaster_id=r["roaster_id"], name=r["name"] or r["roaster_id"], city=r["city"] or "",
-                          state=r["state"] or "", host=r["host"], platform=r["platform"] or "",
-                          is_chain=bool(r["is_chain"]))
+        roaster = Roaster(
+            roaster_id=r["roaster_id"],
+            name=r["name"] or r["roaster_id"],
+            city=r["city"] or "",
+            state=r["state"] or "",
+            host=r["host"],
+            platform=r["platform"] or "",
+            is_chain=bool(r["is_chain"]),
+        )
         out.append(RoasterState(roaster, r["status"], str(r["last_probed"]) if r["last_probed"] else None))
     return out

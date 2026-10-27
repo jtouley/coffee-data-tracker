@@ -9,7 +9,7 @@ from .origins import COUNTRIES
 
 _NOT_COFFEE = re.compile(
     r"\b(grinder|kettle|mug|mugs|tumbler|shirt|tee|t-shirt|hoodie|sweatshirt|hat|beanie|cap|tote|bag clip|"
-    r"sticker|poster|gift ?card|e-?gift|subscription|subscribe|filters?|dripper|brewer|chemex|aeropress|"
+    r"sticker|poster|gift ?card|e-?gift|subscription|subscribe|filters|(paper|cone|basket) filter|filter (papers?|holders?|baskets?|cones?)|dripper|brewer|chemex|aeropress|"
     r"french press|v60|scale|machine|espresso machine|tamper|pitcher|carafe|capsules?|pods?|k-?cups?|"
     r"cold brew (can|concentrate)|concentrate|ready to drink|rtd|cans?|matcha|chai|chocolate bar|"
     r"syrup|class|workshop|wholesale|merch|apparel|candle|book|socks|bundle|sampler|variety pack|coaster|"

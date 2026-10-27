@@ -22,7 +22,11 @@ make weekly SAMPLE=50        # 50 roasters into ./lake; leave out SAMPLE for all
 open build/site/index.html
 ```
 
-`make test` runs lint, the unit tests and dbt builds over synthetic multi-week lakes, all offline.
+`make test` runs the lint checks, the unit tests and dbt builds over synthetic multi-week lakes, all offline.
+
+The project uses [uv](https://docs.astral.sh/uv/) and Python 3.12. Run `make hooks` once to install the pre-commit
+hooks: whitespace and YAML/TOML checks, a check that `uv.lock` matches `pyproject.toml`, ruff (lint and format) and
+mypy. `make lint` runs the same hooks on every file, and so does CI.
 
 ## Design
 
