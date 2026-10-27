@@ -14,6 +14,8 @@ from pathlib import Path
 
 from jinja2 import Environment, PackageLoader, select_autoescape
 
+from . import public
+
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
 
@@ -84,9 +86,9 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
     site_url = (site_url or os.environ.get("SITE_URL") or "https://registry.coffee").rstrip("/")
     dataset = hf_path = None
     if public_export.startswith("hf://datasets/"):
-        repo_id = public_export.removeprefix("hf://datasets/").split("@")[0].strip("/")
+        repo_id = public.hf_repo_id(public_export)
         dataset = f"https://huggingface.co/datasets/{repo_id}"
-        hf_path = f"hf://datasets/{repo_id}/data"
+        hf_path = f"hf://datasets/{repo_id}/{public.HF_DATA_DIR}"
     return {
         "site": site_url,
         "app": "app/",
@@ -104,7 +106,7 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
 
 def safe_url(url: object) -> str | None:
     """Product links come from roasters' feeds; only plain http(s) links reach the page (no `javascript:`)."""
-    return url if isinstance(url, str) and re.match(r"https?://[^\s\"'<>]+$", url, re.I) else None
+    return url if isinstance(url, str) and re.fullmatch(r"https?://[^\s\"<>]+", url, re.I) else None
 
 
 def with_csp(html: str) -> str:
@@ -124,6 +126,8 @@ def with_csp(html: str) -> str:
         f'<meta http-equiv="Content-Security-Policy" content="{csp}">\n'
         '<meta name="referrer" content="strict-origin-when-cross-origin">'
     )
+    if '<meta charset="utf-8">' not in html:
+        raise ValueError('the page has no <meta charset="utf-8"> to put the Content-Security-Policy after')
     return html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + meta, 1)
 
 
@@ -259,7 +263,8 @@ def build(db: Path, out: Path) -> Path:
         new=new[:6],
         charts=charts,
         links=links(),
-        generated=generated.strftime("%B %-d, %Y"),
+        public_tables=len(public.PUBLIC_TABLES),
+        generated=f"{generated:%B} {generated.day}, {generated:%Y}",
     )
     (out / "index.html").write_text(with_csp(landing))
     app = out / "app"

@@ -207,7 +207,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     </a>
     {% if links.dataset %}<a class="door" href="{{ links.dataset }}">{% else %}<div class="door off">{% endif %}
       <span class="k">Dataset</span><span class="t">Hugging Face</span>
-      <span class="d">Four Parquet tables, refreshed weekly under CDLA-Permissive-2.0: coffees, the price-event log, the weekly market summary and roasters.</span>
+      <span class="d">{{ public_tables }} Parquet tables, refreshed weekly under CDLA-Permissive-2.0: coffees, the price-event log, the weekly market summary and roasters.</span>
       <span class="go">{% if links.dataset %}View on Hugging Face →{% else %}Coming soon{% endif %}</span>
     {% if links.dataset %}</a>{% else %}</div>{% endif %}
     <a class="door" href="{{ links.marketplace }}">
@@ -255,7 +255,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
           Hugging Face. Every coffee links back to the roaster that sells it.</p>
       </div>
       <ol class="steps">
-        <li><div><b>Found</b><span>About 3,200 roasters from Overture Maps and OpenStreetMap, plus additions from the community.</span></div></li>
+        <li><div><b>Found</b><span>{{ "{:,}".format(registry) }} roasters so far, from Overture Maps, OpenStreetMap and community additions.</span></div></li>
         <li><div><b>Read</b><span>Each public storefront feed is read once a week, politely, following robots.txt.</span></div></li>
         <li><div><b>Understood</b><span>Rules, with Claude for what they miss, pull out origin, process, varietal, elevation and notes.</span></div></li>
         <li><div><b>Published</b><span>dbt builds the history and the public tables are pushed to Hugging Face.</span></div></li>
@@ -266,7 +266,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 <pre id="sql"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
 <span class="kw">select</span> roaster_name, title, price_per_100g, url
 <span class="kw">from</span>
-  '{{ links.hf_path or "hf://datasets/&lt;owner&gt;/&lt;name&gt;/data" }}/public_coffee.parquet'
+  '{{ links.hf_path or "hf://datasets/<owner>/<name>/data" }}/public_coffee.parquet'
 <span class="kw">where</span> origin_country = 'Ethiopia'
   <span class="kw">and</span> process = 'washed' <span class="kw">and</span> in_stock
 <span class="kw">order by</span> price_per_100g
@@ -303,23 +303,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 <div id="tip" role="status"></div>
 <script>
 (() => {
-  const root = document.documentElement, btn = document.getElementById("theme");
-  try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
-  btn.addEventListener("click", () => {
-    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark";
-    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-  });
-
-  const tip = document.getElementById("tip");
-  const show = (el, x, y) => { tip.textContent = el.dataset.tip; tip.style.display = "block";
-    tip.style.left = Math.min(x + 12, innerWidth - tip.offsetWidth - 8) + "px"; tip.style.top = (y + 12) + "px"; };
-  document.querySelectorAll(".mark").forEach(el => {
-    el.addEventListener("pointermove", e => show(el, e.clientX, e.clientY));
-    el.addEventListener("pointerleave", () => tip.style.display = "none");
-    el.addEventListener("focus", () => { const r = el.getBoundingClientRect(); show(el, r.left, r.top); });
-    el.addEventListener("blur", () => tip.style.display = "none");
-  });
+{% include "_common.js" %}
 
   document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
     try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied"; }
