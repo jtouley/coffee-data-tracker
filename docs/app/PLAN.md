@@ -19,7 +19,8 @@ small grind change) three taps, and makes a new bag one photo and one tap.
 - Show dial-in advice the moment a shot is saved, using the same rules as `shots.suggest_next`.
 - Give each coffee a page with its shots, best recipe, and the catalog's current price and stock.
 - Keep the lake append-only. New tables and new nullable columns only; every existing shot stays valid.
-- Keep bag photos private. They never reach the public tables, the public site or git.
+- Keep shots and bag photos private. Neither reaches the public tables, the public site or git. Shots come off
+  the GitHub Pages site (see Privacy).
 
 ## Non-goals
 
@@ -91,11 +92,17 @@ default. Adding a grinder takes a name and those three numbers. Retiring one hid
 shots pointing at it. Changes are new records, with the latest per `equipment_id` winning.
 
 Most mornings nobody touches this screen. The shot form shows the current grinder and basket as one small chip
-("DF64 V2 · Pullman"); tapping it switches.
+("DF64 V2 · Pullman 18 g"); tapping it switches.
 
-The owner's setup to seed on first run: a DF64 V2 grinder (stepless, numbered dial), a Lelit Bianca, and a Pullman
-basket. The DF64's dial range, the step the stepper should use, which way is finer and the Pullman's nominal dose
-are entered once when the grinder and basket are added (see Decisions).
+The owner's setup, seeded on first run:
+
+| Kind | Name | Settings |
+|---|---|---|
+| Grinder | DF64 V2 | stepless dial, `scale_min` 0, `scale_max` 90, `finer_is_lower` true, stepper step 0.5 (changeable) |
+| Machine | Lelit Bianca | default |
+| Basket | Pullman Filtration Basket, 18 g | `model` = `basket17-pullm-v-v`, `basket_dose_g` 18 |
+
+The basket's 18 g becomes the default dose for a coffee's first shot.
 
 ## Screens
 
@@ -186,9 +193,12 @@ a JSON schema through structured outputs, so the response always parses. Bag lab
 The model is chosen by measurement, as the owner asked: Claude Opus 5.5 (`claude-opus-5-5`) and Claude Haiku 5.5
 (`claude-haiku-5-5`) are compared on the same set of real bags before either becomes the default.
 
-- The set: 20 to 30 photos of real bags, ideally including a few hard ones (hand lettering, a sticker on kraft
-  paper, a date stamp, a café's own bag). Each has the expected roaster, coffee, roast date and catalog match,
-  filled in by hand.
+- The set: real bag photos with the right answer attached. The app builds this as it's used: every bag confirmed
+  on the match card (or corrected through "Not this one") is a photo with a known `coffee_id` and roast date. The
+  first comparison runs on whatever bags exist when capture ships, plus any old bags or photos the owner has to
+  hand, and it's re-run once there are 20. Hard labels (hand lettering, a sticker on kraft paper, a date stamp, a
+  café's own bag) are worth adding on purpose.
+- Until the comparison has 20 bags, Opus is the default, since it's the safer reader and costs about a cent a bag.
 - Each model reads every photo three times at low effort, with the same prompt and schema.
 - Scored per field: roaster, coffee name and roast date exact (after normalizing case and date format), plus the
   end-to-end result that matters: did the Python matcher land on the right `coffee_id`? Also logged: latency and
@@ -326,9 +336,12 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 - The image goes to the Anthropic API to be read. Under standard API terms it isn't used for training; it is still
   a third party seeing a photo of a kitchen counter. The capture screen frames the bag tightly to keep the
   background small.
-- The public site already lists recent shots and a rating chart (`site.py`). That's coffee name, ratio, time and
-  rating; it never showed notes, and it won't show equipment or photos. Whether shots should stay on the public
-  site at all is open question 6.
+- Shots leave the public site. Today `site.py` renders "My shots: rating by brew ratio" and "Recent shots" from
+  `fct_shot` on the GitHub Pages site; milestone 1 removes both sections and the scatter chart, and adds a test
+  that the generated site contains no shot fields. Shots are then visible only in the app.
+- The "Log a shot" issue form posts the shot and the reply as a GitHub issue, which is public if the repo is. Once
+  the app works (milestone 2) the form is redundant; the plan is to remove it then and keep the MCP server as the
+  non-app path.
 
 ## Cost
 
@@ -348,11 +361,11 @@ The app adds nothing to the weekly run's cost.
 Each one is usable on its own and goes through the normal PR and CI process.
 
 1. **Data model.** New lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
-   test update, the `fct_shot` mart export. The MCP `log_shot` tool and issue form accept `grinder`. No app yet;
-   tests over a synthetic lake with old and new shots mixed.
+   test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder`. Shot sections removed from
+   the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
 2. **App skeleton.** FastAPI on a Space, HF OAuth with the owner allowlist, the deploy workflow, the in-memory shot
    cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
-   concurrent-commit test.
+   concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
 3. **Equipment.** Equipment screen, grinder-aware steppers and advice.
 4. **Bag capture.** Photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
@@ -369,7 +382,8 @@ app, but it needs the bag and photo tables from 1 first.
 | Question | Answer | What it changes |
 |---|---|---|
 | Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
-| Equipment | DF64 V2, Lelit Bianca, Pullman basket | Seeded as the defaults. The mockups show them. |
+| Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Seeded as the defaults; 18 g is the default first dose. The mockups show them. |
+| Public site | No shots on it | Shot sections leave `site.py` in milestone 1; the issue form goes in milestone 2. |
 | Cold start | Fine for now | Free CPU Space. |
 | Photos | Stay private, still Parquet | Separate private dataset, image bytes in a Parquet `binary` column, no new file type in the lake. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
@@ -377,12 +391,9 @@ app, but it needs the bag and photo tables from 1 first.
 | Other users | No, just the owner | One-username allowlist stays. |
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
+| Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
 
 ## Open questions for the owner
 
-1. Should shots stay on the public GitHub Pages site once equipment and bags exist, or move entirely into the app?
-2. The DF64 V2's dial: what range do you use for espresso, what step should the stepper move in (0.5? 1?), and
-   does a lower number mean finer?
-3. Which Pullman basket size (its nominal dose)? It sets the default dose and the dose hint.
-4. Do you have 20 to 30 bags (or photos of past bags) for the Haiku/Opus comparison, including a couple of hard
-   labels?
+1. Is 0.5 the right stepper step on the DF64's dial, or do you move it in whole numbers?
+2. Remove the "Log a shot" issue form once the app works (the plan's default), or keep it as a fallback?
