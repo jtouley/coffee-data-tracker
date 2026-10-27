@@ -97,7 +97,7 @@ async function newPage(browser, errors) {
     assert.equal(await page.inputValue("#dose_g"), "18.0");
     assert.equal(await page.inputValue("#yield_g"), "36.4");
     assert.equal(await page.inputValue("#grinder_setting"), "11");
-    assert.equal(await page.locator('[aria-pressed="true"]').count(), 0);
+    assert.equal(await page.locator('[data-taste] [aria-pressed="true"], [data-rating] [aria-pressed="true"]').count(), 0);
     assert.match(await page.textContent("[data-untimed]"), /Not timed · last 29 s/);
     assert.doesNotMatch(await page.textContent("main"), /finer|coarser|Try \d/);
 
@@ -155,6 +155,54 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Type the coffee" }).last().click();
     assert.equal(await page.isVisible("#bag"), true);
     assert.equal(await page.inputValue("#coffee"), ""); // nothing carried over from the photo before
+
+    // Coffees, one coffee, History, a shot, and correcting it.
+    await page.goto(`${base}/coffees`);
+    await shoot(page, "coffees");
+    await page.goto(`${base}/coffee/bag1`);
+    assert.match(await page.textContent("main"), /Best so far · rated 4/);
+    await shoot(page, "coffee");
+    await page.goto(`${base}/history`);
+    await shoot(page, "history");
+    await page.goto(`${base}/shot/first`);
+    await shoot(page, "shot");
+    await page.getByRole("link", { name: "Correct" }).click();
+    await page.waitForURL(/\/log\?correct=first/);
+    assert.equal(await page.inputValue("#time_s"), "29");
+    await page.getByText("More").click();
+    await page.fill("#notes", "puck was wet");
+    await shoot(page, "correct");
+    await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForURL(`${base}/shot/first`);
+    assert.match(await page.textContent("main"), /puck was wet/);
+    // Retract goes at once and offers Undo; Undo brings the shot back.
+    await page.getByRole("button", { name: "Retract" }).click();
+    await page.waitForSelector("[data-restore]:not([hidden])");
+    await page.screenshot({ path: `${out}/retracted-light.png` }); // quickly: the strip leaves after 5 s
+    await axe(page, "retracted");
+    await page.getByRole("button", { name: "Undo" }).click();
+    await page.waitForSelector("[data-actions]:not([hidden])");
+    assert.match(await page.textContent("main"), /puck was wet/);
+    // Offline, Retract still acts at once (the retraction waits on the phone), and Undo takes it back (#18-3).
+    await page.context().setOffline(true);
+    await page.getByRole("button", { name: "Retract" }).click();
+    await page.waitForSelector("[data-restore]:not([hidden])");
+    assert.match(await page.textContent("[data-restore]"), /Retracted on this phone/);
+    await page.getByRole("button", { name: "Undo" }).click();
+    await page.waitForFunction(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
+      };
+    }));
+    await page.context().setOffline(false);
+    // Correcting with the time cleared falls back to that shot's own time (27 s), not the bag's latest (#18-1).
+    await page.goto(`${base}/log?correct=dial3`);
+    await page.fill("#time_s", "");
+    await page.locator('[data-rating] [data-v="4"]').click();
+    await page.getByRole("button", { name: "Save correction" }).click();
+    assert.equal((await page.textContent("[data-save]")).trim(), "Save with 27 s?");
+    await page.getByRole("button", { name: "More dose" }).click();
+    assert.equal((await page.textContent("[data-save]")).trim(), "Save correction");
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");

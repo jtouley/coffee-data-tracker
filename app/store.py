@@ -24,7 +24,8 @@ log = logging.getLogger(__name__)
 
 
 # What the screens show about a catalog coffee (whatever of it this week's export has).
-FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes",
+FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
+         "elevation_masl_min", "elevation_masl_max",
          "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
 SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
@@ -154,7 +155,7 @@ class Store:
 
     def bag(self, user_id: str, bag_id: str | None) -> Bag | None:
         r = self.bags.get(bag_id or "")
-        return r.item if r and r.item.user_id == user_id else None
+        return r.item if r and r.item.user_id == user_id and not r.deleted else None
 
     def coffee(self, coffee_id: str | None) -> dict | None:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
@@ -179,6 +180,33 @@ class Store:
         # A coffee not in this week's export is asked again after MISS_TTL, not never.
         self._coffees[coffee_id] = (found, time.monotonic())
         return found
+
+    def bags_of(self, user_id: str) -> list[Bag]:
+        """This person's bags, the one used most recently first (a bag with no shots by when it was opened)."""
+        mine = self.shots_of(user_id)
+        last = {s.bag_id: s.brewed_at for s in mine if s.bag_id}
+        recs = self._mine(self.bags, user_id)
+
+        def when(r: Rec) -> datetime:
+            return last.get(r.item.bag_id) or r.logged_at
+
+        return [r.item for r in sorted(recs, key=when, reverse=True)]
+
+    def coffee_shots(self, user_id: str, bag: Bag) -> list[Shot]:
+        """Every shot of this bag's coffee, from any bag, oldest first."""
+        key = coffee_key(bag)
+        bag_ids = {b.bag_id for b in self.bags_of(user_id) if coffee_key(b) == key}
+        return [
+            s
+            for s in self.shots_of(user_id)
+            if s.bag_id in bag_ids or (not s.bag_id and coffee_key(s) == key)
+        ]
+
+    @staticmethod
+    def best(shots_: list[Shot]) -> Shot | None:
+        """Highest rating; the latest wins ties, as in mart_bag. (mart_dial_in's best_* columns take any one of
+        the tied shots.)"""
+        return max(shots_, key=lambda s: (s.rating, s.brewed_at), default=None)
 
     def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
         """The shots shown together: this bag's, or with no bag, the last shot's coffee."""
@@ -330,10 +358,18 @@ class Store:
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
         prev = self._owned(self.shots, shot.shot_id, user_id)
+        if prev:
+            # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
+            shot = shot.model_copy(
+                update={"source": prev.item.source, "roast_date": shot.roast_date or prev.item.roast_date}
+            )
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend
             # must not bring a retracted shot back.
             return shot, False
+        if prev and prev.deleted:
+            # Only Undo (restore_shot) brings a retracted shot back, not a correction saved in another tab.
+            raise Invalid("That shot was retracted, so it can’t be corrected. Undo the retraction first.")
         self._commit(self.shots, shot.shot_id, shot, "shots")
         return shot, True
 
@@ -345,6 +381,16 @@ class Store:
         if prev.deleted:
             return False
         self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
+        return True
+
+    def restore_shot(self, user_id: str, shot_id: str) -> bool:
+        """Undo a retraction: the shot again, as a new record. Restoring a shot that's there writes nothing."""
+        prev = self._owned(self.shots, shot_id, user_id)
+        if prev is None:
+            raise NotFound(shot_id)
+        if not prev.deleted:
+            return False
+        self._commit(self.shots, shot_id, prev.item, "shots")
         return True
 
     def save_equipment(self, user_id: str, data: dict) -> Equipment:

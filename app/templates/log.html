@@ -2,12 +2,13 @@
 {% block title %}Log shot · registry.coffee{% endblock %}
 {% block main %}
   {% set gr, bk, last = p.grinder, p.basket, p.last %}
-  <div class="top"><a class="back" href="/">‹ Today</a><a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}{% if p.machine %}&amp;machine={{ p.machine.equipment_id }}{% endif %}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a></div>
+  <div class="top">{% if fixing %}<a class="back" href="/shot/{{ fixing.shot_id }}">‹ Shot</a>{% else %}<a class="back" href="/">‹ Today</a>{% endif %}{% if fixing %}<span class="meta">{{ gr.name }} · {{ bk.name }}</span>{% else %}<a class="chip quiet" href="/log/gear?grinder={{ gr.equipment_id }}&amp;basket={{ bk.equipment_id }}{% if p.machine %}&amp;machine={{ p.machine.equipment_id }}{% endif %}" aria-label="Grinder and basket: {{ gr.name }}, {{ bk.name }}. Change">{{ gr.name }} · {{ bk.name }}</a>{% endif %}</div>
   <div class="row base mt8">
     <h1 class="serif name">{{ name }}</h1>
     <div class="label">Ratio <span class="num n24 ink" data-ratio></span></div>
   </div>
-  <div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>
+  {% if fixing %}<div class="meta mt4">Correcting the {{ fixing_when }} shot. The original stays in history.</div>
+  {% else %}<div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>{% endif %}
   <form id="shot" novalidate>
     <div class="field">
       <div><label class="l label" for="dose_g">Dose</label><span class="num n56"><input id="dose_g" inputmode="decimal" data-step="0.1" data-min="5" data-max="30" data-digits="1"><span class="u"> g</span></span></div>
@@ -19,16 +20,16 @@
     </div>
     <div class="field">
       <div><label class="l label" for="time_s">Time</label>
-        <span class="num n56" data-timed hidden><input id="time_s" inputmode="numeric" data-step="1" data-min="1" data-max="600"><span class="u"> s</span></span>
-        <span class="num n24 notimed" data-untimed>Not timed{% if last %}<span class="u"> · last {{ g(last.time_s) }} s</span>{% endif %}</span></div>
-      <div class="steps"><button type="button" class="step wide" data-timer>Start</button><button type="button" class="step type" data-type>Type</button></div>
+        <span class="num n56" data-timed{% if not fixing %} hidden{% endif %}><input id="time_s" inputmode="numeric" data-step="1" data-min="1" data-max="600"><span class="u"> s</span></span>
+        <span class="num n24 notimed" data-untimed{% if fixing %} hidden{% endif %}>Not timed{% if last %}<span class="u"> · last {{ g(last.time_s) }} s</span>{% endif %}</span></div>
+      <div class="steps">{% if fixing %}<button type="button" class="step" data-for="time_s" data-dir="-1" aria-label="Less time">−</button><button type="button" class="step" data-for="time_s" data-dir="1" aria-label="More time">+</button>{% else %}<button type="button" class="step wide" data-timer>Start</button><button type="button" class="step type" data-type>Type</button>{% endif %}</div>
     </div>
     <div class="field">
       <div><label class="l label" for="grinder_setting">Grind</label><span class="num n56"><input id="grinder_setting" inputmode="decimal" data-step="{{ g(gr.scale_step) }}" data-min="{{ g(gr.scale_min) }}" data-max="{{ g(gr.scale_max) }}"><span class="u"> of {{ g(gr.scale_max) }}</span></span></div>
       <div class="steps"><button type="button" class="step" data-for="grinder_setting" data-dir="-1" aria-label="Lower grind number">−</button><button type="button" class="step" data-for="grinder_setting" data-dir="1" aria-label="Higher grind number">+</button></div>
     </div>
     <div class="row mt16 minh44"><span class="label" id="taste-l">Taste</span>
-      {% if last %}<button type="button" class="chip" data-same aria-pressed="false">Same as last <b>· {{ (last.taste or "no taste") | capitalize }}, {{ last.rating }}</b></button>{% endif %}</div>
+      {% if last and not fixing %}<button type="button" class="chip" data-same aria-pressed="false">Same as last <b>· {{ (last.taste or "no taste") | capitalize }}, {{ last.rating }}</b></button>{% endif %}</div>
     <div class="seg mt8" role="group" aria-labelledby="taste-l" data-taste>
       <button type="button" data-v="sour" aria-pressed="false">Sour</button><button type="button" data-v="balanced" aria-pressed="false">Balanced</button><button type="button" data-v="bitter" aria-pressed="false">Bitter</button>
     </div>
@@ -37,9 +38,21 @@
       {% for i in range(1, 6) %}<button type="button" data-v="{{ i }}" aria-pressed="false">{{ i }}</button>{% endfor %}
     </div>
     <div class="anchors"><span>worst</span><span>best</span></div>
+    <details class="disclose mt8"{% if fixing and (fixing.notes or fixing.water_temp_c) %} open{% endif %}>
+      <summary class="link"><span>More<span class="meta" data-more-summary></span></span><svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.75"/></svg></summary>
+      <div class="grid2 mt8">
+        <div><label class="flabel" for="water_temp_c">Water (°C)</label><input class="input" id="water_temp_c" inputmode="decimal" autocomplete="off" placeholder="Not recorded"></div>
+        <div><span class="flabel" id="milk-l">Milk</span>
+          <div class="seg two" role="group" aria-labelledby="milk-l" data-milk>
+            <button type="button" data-v="false" aria-pressed="true">No</button><button type="button" data-v="true" aria-pressed="false">Yes</button>
+          </div></div>
+      </div>
+      <label class="flabel" for="notes">Notes</label>
+      <textarea class="input area" id="notes" rows="3" maxlength="2000" placeholder="e.g. new bag, puck was wet"></textarea>
+    </details>
     <div class="hint" data-hint role="status"></div>
     <div class="spacer"></div>
-    <div class="dock sticky"><button class="btn primary" type="submit" data-save>Save shot</button></div>
+    <div class="dock sticky"><button class="btn primary" type="submit" data-save>{{ "Save correction" if fixing else "Save shot" }}</button></div>
   </form>
   <script id="prefill" type="application/json">{{ form | tojson }}</script>
 {% endblock %}

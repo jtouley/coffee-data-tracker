@@ -68,9 +68,10 @@ def sequence(shots: list[Shot]) -> str:
     return f"This bag, in order: {', '.join(parts)}." if parts else ""
 
 
-def target_svg(shots: list[Shot], height: int = 150, label: str = "") -> str:
+def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: bool = True) -> str:
     """The dial-in target: time across (18–38 s), ratio up (1:1.6–1:2.5), the window shaded, each shot a mark
-    numbered in order and joined oldest to newest, the newest ringed."""
+    numbered in order and joined oldest to newest, the newest ringed. With `sequence=False` (a coffee's page, many
+    shots across bags) the marks are plain: neither numbered nor joined."""
     left, right, top, bottom = 32, 350, 8, height - 24
 
     def x(t: float) -> float:
@@ -98,14 +99,16 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "") -> str:
         f'<text class="wl" x="{x(t1) - 6:.1f}" y="{y(r0) - 6:.1f}" text-anchor="end">window</text>'
         f'<line class="ax" x1="{left}" x2="{right}" y1="{bottom}" y2="{bottom}"/>'
     )
-    pts = [(x(s.time_s), y(ratio(s)), s) for s in shots[-8:]]
-    if len(pts) > 1:
+    pts = [(x(s.time_s), y(ratio(s)), s) for s in (shots[-8:] if sequence else shots)]
+    if sequence and len(pts) > 1:
         out.append(f'<polyline class="path" points="{" ".join(f"{px:.1f},{py:.1f}" for px, py, _ in pts)}"/>')
     for i, (px, py, s) in enumerate(pts, 1):
         if s.taste == "bitter":
             out.append(f'<rect class="s-bitter" x="{px - 4.5:.1f}" y="{py - 4.5:.1f}" width="9" height="9"/>')
         else:
             out.append(f'<circle class="s-{s.taste or "none"}" cx="{px:.1f}" cy="{py:.1f}" r="4.5"/>')
+        if not sequence:
+            continue
         # The order number sits above-right, clear of the newest shot's ring, and flips to above-left when the
         # mark before it is close enough for the two numbers to collide.
         gap = 13 if i == len(pts) else 8
@@ -117,17 +120,26 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "") -> str:
             )
         else:
             out.append(f'<text class="ord" x="{px + gap:.1f}" y="{py - gap:.1f}">{i}</text>')
-    if pts:
+    if sequence and pts:
         px, py, _ = pts[-1]
         out.append(f'<circle class="now" cx="{px:.1f}" cy="{py:.1f}" r="10"/>')
     out.append("</svg>")
     return "".join(out)
 
 
-def day(d: datetime, tz: tzinfo) -> str:
-    """'Mon 7:06', for list rows."""
+def day(d: datetime, tz: tzinfo, now: datetime | None = None) -> str:
+    """'Mon 7:06' for list rows in the last six days; 'Oct 18 7:06' before that, so two Sundays don't look alike."""
     d = d.astimezone(tz)
-    return f"{d:%a} {d.hour}:{d:%M}"
+    today = (now or datetime.now(tz)).astimezone(tz).date()
+    if 0 <= (today - d.date()).days < 6:
+        return f"{d:%a} {d.hour}:{d:%M}"
+    return f"{d:%b} {d.day} {d.hour}:{d:%M}"
+
+
+def date(d: datetime, tz: tzinfo) -> str:
+    """'Oct 21', for when something happened."""
+    d = d.astimezone(tz)
+    return f"{d:%b} {d.day}"
 
 
 def clock(d: datetime, tz: tzinfo) -> str:

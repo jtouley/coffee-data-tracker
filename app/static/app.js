@@ -192,6 +192,7 @@ function logShot(form) {
   const taste = form.querySelector("[data-taste]");
   const rating = form.querySelector("[data-rating]");
   const save = form.querySelector("[data-save]");
+  const saveLabel = save.textContent;
   const timerBtn = form.querySelector("[data-timer]");
   let started = null;
   let ticker = null;
@@ -203,7 +204,7 @@ function logShot(form) {
     document.querySelector("[data-ratio]").textContent = d && y ? `1:${(y / d).toFixed(2)}` : "";
     if (confirmLastTime) {
       confirmLastTime = false;
-      save.textContent = "Save shot";
+      save.textContent = saveLabel; // "Save shot" or "Save correction"
     }
   }
 
@@ -247,23 +248,26 @@ function logShot(form) {
     timerBtn.classList.remove("running");
   }
 
-  timerBtn.addEventListener("click", () => {
-    tick(12);
-    if (started !== null) return stopTimer();
-    started = performance.now();
-    timed();
-    show($("time_s"), 0);
-    // The numeral ticks once a second, and isn't animated.
-    ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
-    timerBtn.textContent = "Stop";
-    timerBtn.classList.add("running");
-    update();
-  });
-  form.querySelector("[data-type]").addEventListener("click", () => {
-    if (started !== null) stopTimer();
-    timed();
-    $("time_s").focus();
-  });
+  // Correcting a past shot has steppers for the time instead of the timer.
+  if (timerBtn) {
+    timerBtn.addEventListener("click", () => {
+      tick(12);
+      if (started !== null) return stopTimer();
+      started = performance.now();
+      timed();
+      show($("time_s"), 0);
+      // The numeral ticks once a second, and isn't animated.
+      ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
+      timerBtn.textContent = "Stop";
+      timerBtn.classList.add("running");
+      update();
+    });
+    form.querySelector("[data-type]").addEventListener("click", () => {
+      if (started !== null) stopTimer();
+      timed();
+      $("time_s").focus();
+    });
+  }
 
   taste.addEventListener("click", (e) => {
     const b = e.target.closest("button");
@@ -303,18 +307,22 @@ function logShot(form) {
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
     let time = form.querySelector("[data-timed]").hidden ? null : num($("time_s"));
+    // Correcting, the fallback is the corrected shot's own time, not the bag's latest (#18-1).
+    const lastTime = p.correct ? p.correct.time_s : p.last_time_s;
     if (time === null) {
-      if (p.last_time_s == null) return hint(form, "Time the shot, or type the time.");
+      if (lastTime == null) return hint(form, "Time the shot, or type the time.");
       if (!confirmLastTime) {
         confirmLastTime = true; // a forgotten timer costs one more tap, never a made-up time
-        save.textContent = `Save with ${p.last_time_s} s?`;
+        save.textContent = `Save with ${lastTime} s?`;
         return;
       }
-      time = p.last_time_s;
+      time = lastTime;
     }
+    const fix = p.correct; // correcting: same id and time, a new record that replaces the old one
+    const temp = num($("water_temp_c"));
     const body = {
-      shot_id: uuid(),
-      brewed_at: new Date().toISOString(),
+      shot_id: fix ? fix.shot_id : uuid(),
+      brewed_at: fix ? fix.brewed_at : new Date().toISOString(),
       bag_id: p.bag_id,
       coffee_id: p.coffee_id,
       coffee_freetext: p.coffee_freetext,
@@ -327,9 +335,10 @@ function logShot(form) {
       grinder_setting: num($("grinder_setting")),
       rating: Number(r),
       taste: pressed(taste),
-      water_temp_c: p.water_temp_c,
+      water_temp_c: temp,
       brew_method: p.brew_method,
-      is_milk_drink: p.is_milk_drink,
+      is_milk_drink: pressed(milk) === "true",
+      notes: $("notes").value.trim() || null,
     };
     for (const k of Object.keys(body)) if (body[k] == null) delete body[k];
     save.disabled = true;
@@ -337,16 +346,44 @@ function logShot(form) {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
       setTimeout(() => tick(8), 60);
-      location.href = `/saved/${body.shot_id}?new=1`;
+      location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
       hint(form, why(err));
       save.disabled = false;
     }
   });
 
+  // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
+  const milk = form.querySelector("[data-milk]");
+  const moreSummary = form.querySelector("[data-more-summary]");
+  const note = () => {
+    const t = $("notes").value.trim();
+    return t.length > 24 ? `${t.slice(0, 23)}…` : t || null;
+  };
+  const summarize = () => {
+    const parts = [num($("water_temp_c")) != null ? `${num($("water_temp_c"))} °C` : null, pressed(milk) === "true" ? "milk drink" : "no milk", note()];
+    moreSummary.textContent = parts.filter(Boolean).join(" · ");
+  };
+  milk.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (b) pressOne(milk, b);
+    summarize();
+  });
+  $("water_temp_c").value = p.water_temp_c ?? "";
+  pressOne(milk, milk.querySelector(`[data-v="${p.is_milk_drink ? "true" : "false"}"]`));
+  for (const id of ["water_temp_c", "notes"]) $(id).addEventListener("input", summarize);
+
   show($("dose_g"), p.dose_g);
   show($("yield_g"), p.yield_g);
   show($("grinder_setting"), p.grinder_setting);
+  if (p.correct) {
+    timed();
+    show($("time_s"), p.correct.time_s);
+    if (p.correct.taste) pressOne(taste, taste.querySelector(`[data-v="${p.correct.taste}"]`));
+    pressOne(rating, rating.querySelector(`[data-v="${p.correct.rating}"]`));
+    $("notes").value = p.correct.notes ?? "";
+  }
+  summarize();
   fit($("time_s"));
   update();
 }
@@ -701,6 +738,48 @@ function invites() {
   }
 }
 
+// A shot's Retract: a second tap, then a retraction record (never a delete), queued like any write.
+// Retract: no confirmation; the shot goes at once and an undo strip stays for 5 s (DESIGN, "Undo").
+function retractShot(b) {
+  const id = b.dataset.retract;
+  const actions = document.querySelector("[data-actions]");
+  const strip = document.querySelector("[data-restore]");
+  let timer = null;
+  const leave = () => { timer = setTimeout(() => location.replace(b.dataset.back), 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer)); // focus on Undo holds it open
+  strip.addEventListener("focusout", leave);
+  b.addEventListener("click", async () => {
+    b.disabled = true;
+    try {
+      await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+    } catch (err) {
+      if (err instanceof Rejected) {
+        hint(document.querySelector("main"), err.message);
+        b.disabled = false;
+        return;
+      }
+      // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
+      // screen goes (#18-3), and Undo can still take it back.
+      strip.firstChild.textContent = "Retracted on this phone. It syncs when you’re back online.";
+    }
+    tick(8);
+    actions.hidden = true;
+    strip.hidden = false;
+    leave();
+  });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    try {
+      // A retraction still on the phone is simply dropped; one that went up is undone on the server.
+      if (await store("readonly", (s) => s.get(`retract:${id}`))) await store("readwrite", (s) => s.delete(`retract:${id}`));
+      else await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
+      location.reload();
+    } catch (err) {
+      strip.firstChild.textContent = why(err);
+    }
+  });
+}
+
 // The theme lives in a cookie so the server renders the right one; no flash of the other.
 function themeChoice(group) {
   group.addEventListener("click", (e) => {
@@ -810,6 +889,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const join = document.getElementById("join");
   if (join) joinCode(join);
   if (document.querySelector("[data-new-invite]")) invites();
+  for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
   // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
   for (const el of document.querySelectorAll("[data-empty-class]")) {
