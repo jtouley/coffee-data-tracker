@@ -875,6 +875,8 @@ function signIn(form) {
     submit.disabled = true;
     try {
       await post(form.dataset.api || "/api/signin", body);
+      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
+      await caches.delete("pages").catch(() => {});
       location.replace("/");
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
