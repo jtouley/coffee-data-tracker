@@ -1,6 +1,6 @@
 # Publishing the public tables
 
-The weekly run builds four **facts-only** dbt models (`dbt/models/public/`). The `public_tables_are_facts_only`
+The weekly run builds four facts-only dbt models (`dbt/models/public/`). The `public_tables_are_facts_only`
 dbt test fails the build if any of them ever exposes descriptions, images, store ids or shot-log columns.
 
 - Product descriptions, images, handles, tags and the shot log are excluded.
@@ -26,20 +26,19 @@ Databricks loads from S3 or GCS.
 
 ## Order of operations
 
-1. **Hugging Face, public.** Publish to a *separate* public dataset (your main lake stays private). This
-   costs nothing and shows whether anyone uses the data.
-2. **Snowflake Marketplace.** Run part 1 of `snowflake/admin_setup.sql` (service user), set the three
+1. Hugging Face. Publish to a separate public dataset, so the main lake stays private. It's free and shows
+   whether anyone uses the data.
+2. Snowflake Marketplace. Run part 1 of `snowflake/admin_setup.sql` (service user), set the three
    `SNOWFLAKE_*` values, run `coffeedata load-snowflake`, then part 2 (share). A free listing needs a full account, a provider
    profile and acceptance of the Provider and Consumer Terms, and Snowflake reviews it before it goes live.
    Running costs are an XS warehouse for a few seconds a week, plus storage.
-3. **Databricks Marketplace.** Run `databricks/setup.sql`. This needs a Premium workspace with Unity
+3. Databricks Marketplace. Run `databricks/setup.sql`. This needs a Premium workspace with Unity
    Catalog. Public listings go through the Data Partner Program application; private exchanges are self-serve.
 
 ## Before going public
 
-- **License.** The dataset card proposes CDLA-Permissive-2.0, matching Overture. Change it if you prefer
+- License: the dataset card proposes CDLA-Permissive-2.0, matching Overture. Change it if you prefer
   CC BY 4.0.
-- **Terms of service.** Some roasters' terms restrict automated collection or commercial reuse. A free
-  listing of facts with links back and an opt-out is the conservative path; get legal advice before
-  charging for it.
-- **Support contact.** Put a support email in `LISTING.md`.
+- Terms of service: some roasters' terms restrict automated collection or commercial reuse. A free
+  listing of facts with links back and an opt-out is the safer option. Get legal advice before charging.
+- Support contact: put a support email in `LISTING.md`.

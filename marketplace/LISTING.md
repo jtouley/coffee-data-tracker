@@ -3,18 +3,18 @@
 Use for the public Hugging Face dataset, the Snowflake Marketplace and the Databricks Marketplace. Keep the
 three in sync.
 
-**Title:** US Specialty Coffee Market — Weekly Prices, Origins & Availability
+**Title:** US Specialty Coffee Market: Weekly Prices, Origins and Availability
 
 **Short description:**
-Weekly prices, stock and attributes for tens of thousands of coffees sold by 1,500+ US specialty roasters, with
-full price and listing history.
+Weekly prices, stock and attributes for about 45,000 coffees from 1,800 US specialty roasters, with price and
+listing history.
 
 **Description:**
-A weekly snapshot of the US specialty coffee retail market, collected from roasters' own online storefronts.
-Every coffee carries origin, process, varietal, roast level, tasting notes, bag sizes, list price and price
+What US specialty roasters sell online, collected every week from their own storefronts. Each coffee has origin, process, varietal, roast level, tasting notes, bag sizes, list price and price
 per 100 g, plus whether it's listed and in stock. A change log records every price change, stock change,
-delisting and relisting week by week. Use it to track green-coffee trends at retail, price positioning by
-origin and process, assortment and freshness of competitors, or tasting-language trends.
+delisting and relisting week by week. It can be used to follow
+retail prices by origin and process, see what competitors carry and how often it changes, or track how coffees
+are described.
 
 **Tables:**
 - `PUBLIC_COFFEE`: one row per coffee ever seen
@@ -42,12 +42,12 @@ select roaster_name, coffee_name, price_per_100g, source_url from public_coffee
 where origin_country = 'Ethiopia' and process = 'natural' and first_seen >= date_trunc('month', current_date);
 ```
 
-**Limitations:** see the dataset card. In short:
+**Limitations** (more in the dataset card):
 - Coverage is roasters with machine-readable storefronts (about half of reachable US roasters).
 - Attributes are extracted, by rules or LLM, and can be wrong.
 - Prices are list prices.
 - No descriptions or images.
 
-**Pricing:** free (recommended at launch).
+**Pricing:** free.
 **License:** CDLA-Permissive-2.0 (see the dataset card for attribution).
 **Support contact:** _your email_.

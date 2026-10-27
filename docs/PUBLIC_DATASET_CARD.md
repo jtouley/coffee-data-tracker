@@ -36,19 +36,19 @@ select origin_country, process, coffees, median_price_per_100g
 from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by coffees desc limit 10;
 ```
 
-## What's deliberately not here
+## Not included
 
-- No product descriptions or images. Those are the roasters' own content; every coffee links back via `source_url`.
-- No store-internal ids. `coffee_id` is `<roaster domain>:<store product id>`, which is stable across weeks.
-- No personal data, and no roasters that opted out.
-- No roasters known only from OpenStreetMap, so this compilation doesn't fall under ODbL share-alike terms.
+- Product descriptions and images. They're the roasters' own content; every coffee links back through `source_url`.
+- Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
+- Personal data, and roasters that opted out.
+- Roasters known only from OpenStreetMap, so ODbL share-alike terms don't apply.
 
 ## Method and caveats
 
-- **Source:** each roaster's own public storefront feed, read once a week (Shopify, WooCommerce, Squarespace, Square Online, or schema.org markup), following robots.txt.
-- **Coverage:** only roasters whose storefront publishes a readable catalog, about half of reachable US roasters. That is not a census, so treat counts as a sample.
-- **Attributes:** origin, process, notes and the rest come from structured tags and text rules, with Claude filling gaps (`attributes_source` = `rules` or `llm`). They can be wrong; the roaster's listing is authoritative.
-- **Prices:** in USD as listed, before discounts and shipping. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
+- Source: each roaster's own public storefront feed, read once a week (Shopify, WooCommerce, Squarespace, Square Online, or schema.org markup), following robots.txt.
+- Coverage: only roasters whose storefront publishes a readable catalog, about half of the US roasters whose sites respond. Treat counts as a sample, not a census.
+- Attributes: origin, process, notes and the rest come from structured tags and text rules, with Claude filling gaps (`attributes_source` = `rules` or `llm`). They can be wrong; the roaster's listing is authoritative.
+- Prices: USD as listed, before discounts and shipping. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
 
 ## License and attribution
 

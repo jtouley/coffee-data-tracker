@@ -1,7 +1,7 @@
 [project]
 name = "coffeedata"
 version = "0.1.0"
-description = "A daily US specialty-coffee catalog plus a personal shot log, modeled with dbt + DuckDB."
+description = "A weekly US specialty-coffee catalog plus a personal shot log, modeled with dbt + DuckDB."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.12"

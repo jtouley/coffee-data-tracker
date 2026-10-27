@@ -1,5 +1,5 @@
 ---
-pretty_name: Coffee Data — US specialty roaster catalog
+pretty_name: Coffee Data, US specialty roaster catalog
 license: other
 license_name: mixed
 license_link: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
@@ -23,12 +23,12 @@ sizes, prices and stock. Built by [coffee-data-tracker](https://github.com/jtoul
 
 ## Layout
 
-- `marts/`: current, query-ready tables, rebuilt every week:
+- `marts/`: tables rebuilt every week from the raw records:
   - `dim_coffee`: every coffee ever seen. `is_listed` says whether it's listed now. The key is `coffee_id = <roaster domain>:<store product id>`.
   - `fct_price_event`: new / price / availability / removed / relisted events between consecutive successful weekly fetches.
   - `mart_market`: listed coffees by origin × process, with price-per-100g distribution and the most common tasting notes.
   - `dim_roaster`: the roaster registry, with platform and status.
-- Raw, append-only weekly records (`snapshots/`, `fetches/`, `probes/`, `enrichments/`, …): every file is immutable, and the marts are derived from them. See the repo README for the full design.
+- The raw weekly records (`snapshots/`, `fetches/`, `probes/`, `enrichments/` and so on). Files are only ever added, never changed. The repo README describes the layout.
 
 ```sql
 -- DuckDB
@@ -39,7 +39,7 @@ where is_listed and not is_blend group by 1 order by 2 desc;
 
 ## Sources, licensing and caveats
 
-- **Roaster discovery:** Overture Maps Places (CDLA-Permissive-2.0) and OpenStreetMap (© OpenStreetMap contributors, ODbL). See [ATTRIBUTION](https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md).
-- **Product data:** read weekly from each roaster's own public storefront feed. Names, descriptions and images belong to the roasters, and every coffee links back to its source. Roasters can opt out via the repo's issue form.
-- **Extracted attributes** (origin, process, notes, …) come from rules or Claude and can be wrong; the roaster's listing is authoritative.
-- **Coverage:** only roasters whose storefront publishes a readable catalog, about half of reachable US roasters.
+- Roaster discovery: Overture Maps Places (CDLA-Permissive-2.0) and OpenStreetMap (© OpenStreetMap contributors, ODbL). See [ATTRIBUTION](https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md).
+- Product data is read weekly from each roaster's own public storefront feed. Names, descriptions and images belong to the roasters, and every coffee links back to its source. Roasters can opt out via the repo's issue form.
+- Extracted attributes (origin, process, notes and so on) come from rules or Claude and can be wrong; the roaster's listing is authoritative.
+- Coverage is limited to roasters whose storefront publishes a readable catalog, about half of the US roasters whose sites respond.
