@@ -182,7 +182,9 @@ def match_bag(
     if not rows or not (roaster or coffee):
         return None, []
     roasters = {r for _, r, _ in rows if r}
-    found = process.extract(roaster, roasters, scorer=fuzz.token_set_ratio, limit=3) if roaster else []
+    # Every roaster that scores 85+, not the top few: names that are token subsets of each other ("Onyx Coffee",
+    # "Coffee Lab", "Onyx Coffee Lab") all score 100, and a cut-off could drop the real one.
+    found = process.extract(roaster, roasters, scorer=fuzz.token_set_ratio, limit=None) if roaster else []
     near = [name for name, score, _ in found if score >= 85]
     if near and coffee:
         pool = [(cid, r, t) for cid, r, t in rows if r in near]

@@ -349,6 +349,7 @@ function newBag(root) {
     root.querySelector(`[data-step="${name}"] h1`)?.focus({ preventScroll: true }); // screen readers hear the step
   };
   let read = null; // what the label said: carried into the bag, whichever way it's chosen
+  let attempt = 0; // which photo the screen is waiting on; replies for any other are dropped
   let saving = false;
 
   const save = async (body, where) => {
@@ -357,7 +358,7 @@ function newBag(root) {
     for (const b of root.querySelectorAll("button")) b.disabled = true;
     body = { bag_id: uuid(), ...body };
     if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
-    if (read?.roast_date && !body.roast_date) body.roast_date = read.roast_date;
+    if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
@@ -390,7 +391,7 @@ function newBag(root) {
     fill("notes", m.notes);
     fill("price", m.price);
     fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
-    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? null }, root.querySelector('[data-step="match"]'));
+    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
     step("match");
     root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
   };
@@ -471,12 +472,17 @@ function newBag(root) {
   const take = () => input?.click();
   for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
   for (const b of root.querySelectorAll("[data-goto]")) {
-    b.onclick = () => (b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto));
+    b.onclick = () => {
+      if (b.dataset.goto === "type") attempt++; // typing instead: a read still on its way is dropped
+      return b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto);
+    };
   }
   input?.addEventListener("change", async () => {
     const file = input.files[0];
     input.value = "";
     if (!file) return;
+    read = null; // a new photo: nothing from the last one carries over, even if this one fails
+    const mine = ++attempt;
     const photo = await shrink(file);
     const url = URL.createObjectURL(photo);
     for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
@@ -491,6 +497,7 @@ function newBag(root) {
         body: photo,
       });
       const body = await r.json().catch(() => ({}));
+      if (mine !== attempt) return;
       if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
@@ -504,6 +511,7 @@ function newBag(root) {
       const canRetake = !["limit", "no_key"].includes(body.status);
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
+      if (mine !== attempt) return;
       failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.", false);
     }
   });

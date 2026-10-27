@@ -4,6 +4,7 @@ Screens are server-rendered HTML with a little JavaScript (static/app.js) and no
 JSON POST that the phone first puts in an IndexedDB outbox, with an id it generated, so a retry is safe.
 """
 
+import asyncio
 import hashlib
 import json
 import logging
@@ -802,17 +803,21 @@ def create_app(
         ):
             raise HTTPException(415, "Send the photo as JPEG, PNG or WebP.")
         try:
-            photo = photos.normalize(await request.body())
+            # Decoding, resizing and encoding take a moment of CPU: off the event loop, like the save and the read.
+            photo = await run_in_threadpool(photos.normalize, await request.body())
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
-        await run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo)
-        photo_misses.pop(photo_id, None)
         key = (me.user_id, datetime.now(UTC).date().isoformat())
         if reads_today.get(key, 0) >= READS_PER_DAY:
-            result = labels.Read("limit")
-        else:
-            reads_today[key] = reads_today.get(key, 0) + 1
-            result = await run_in_threadpool(labels.read, photo.jpeg, None, labels_client)
+            # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
+            return {"photo_id": None, "status": "limit", "label": None, "raw": None}
+        reads_today[key] = reads_today.get(key, 0) + 1
+        # The dataset commit (which can retry for a while) and the label read run side by side.
+        _, result = await asyncio.gather(
+            run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
+            run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
+        )
+        photo_misses.pop(photo_id, None)
         out: dict[str, Any] = {
             "photo_id": photo_id,
             "status": result.status,
@@ -820,17 +825,21 @@ def create_app(
             "raw": result.raw,
         }
         if result.status == "read" and result.label:
-            label = result.label
-            coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
-            described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
-            roast = result.roast_date()
-            out |= {
-                "match": describe(coffee_id),
-                "score": candidates[0]["score"] if coffee_id and candidates else None,
-                "candidates": [d | {"score": score} for d, score in described if d],
-                "roast_date": roast.isoformat() if roast else None,
-            }
+            out |= await run_in_threadpool(matched, result)
         return out
+
+    def matched(result: labels.Read) -> dict[str, Any]:
+        """The catalog match for a read label, described for the screen."""
+        label = result.label or {}
+        coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
+        described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
+        roast = result.roast_date()
+        return {
+            "match": describe(coffee_id),
+            "score": candidates[0]["score"] if coffee_id and candidates else None,
+            "candidates": [d | {"score": score} for d, score in described if d],
+            "roast_date": roast.isoformat() if roast else None,
+        }
 
     @app.post("/api/bags")
     def post_bag(body: dict, me: Writer) -> dict:
