@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import re
 from datetime import date, datetime
 from typing import Literal
@@ -54,6 +55,16 @@ class CatalogItem(BaseModel):
     body_hash: str = ""
     # Body text is used for classification and enrichment but never written to the snapshot.
     body_text: str = Field(default="", exclude=True)
+
+    @field_validator("title")
+    @classmethod
+    def _unescape_title(cls, v: str) -> str:
+        """Some feeds escape titles twice ("Tried &amp;amp; True"); unescape until nothing changes."""
+        for _ in range(3):
+            if (u := html.unescape(v)) == v:
+                break
+            v = u
+        return v.strip()
 
     def model_post_init(self, _ctx: object) -> None:
         if self.body_text and not self.body_hash:

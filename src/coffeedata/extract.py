@@ -6,6 +6,7 @@ import json
 import logging
 import os
 import re
+from datetime import UTC, datetime
 
 from .models import CatalogItem, Enrichment
 from .origins import COUNTRIES, canonical_country
@@ -64,6 +65,9 @@ VARIETALS = [
 ]
 _VARIETAL = re.compile(r"\b(" + "|".join(re.escape(v) for v in VARIETALS) + r")\b", re.I)
 _COUNTRY = re.compile(r"\b(" + "|".join(re.escape(c) for c in COUNTRIES) + r")\b", re.I)
+# When the rules last changed. Ingest re-runs them on any coffee whose rules enrichment is older, so a fix reaches
+# coffees whose description hasn't changed. Bump it with every change to rules().
+RULES_UPDATED = datetime(2026, 10, 27, 20, 0, tzinfo=UTC)
 DEMONYMS = {
     "kenyan": "Kenya",
     "ethiopian": "Ethiopia",
@@ -144,12 +148,30 @@ def _first(kv: dict[str, list[str]], *keys: str) -> str:
     return " ".join(v for k in keys for v in kv.get(k, []))
 
 
+# "Java" is an origin only next to a Javanese place or estate. "Mocha Java" is a blend, and "java" alone is slang
+# for coffee ("Java Chip", "Java Jingle").
+_JAVA_ORIGIN = re.compile(
+    r"\b((west|east|central) java|java (estate|sunda|preanger|ijen|frinsa|kayumas|blawan|jampit|taman|garut|"
+    r"halu|island|arabica)|indonesia)\b",
+    re.I,
+)
+_MOCHA_JAVA = re.compile(r"\bmo[ck]h?a[- ]java\b", re.I)
+# Grab-bag offers name no single origin: "Roaster Dave's Pick (Random Coffee)", "Mystery Coffee".
+_NO_ORIGIN = re.compile(r"\b(random|mystery|surprise|roaster'?s pick|roaster'?s choice)\b", re.I)
+
+
+def _countries(text: str) -> list[str]:
+    if not _JAVA_ORIGIN.search(text):
+        text = re.sub(r"\bjava\b", " ", text, flags=re.I)
+    found = [canonical_country(m.group(1)) for m in _COUNTRY.finditer(text)]
+    if not found and (m := _DEMONYM.search(text)):
+        found = [DEMONYMS[m.group(1).lower()]]
+    return list(dict.fromkeys(found))
+
+
 def _country(text: str) -> str | None:
-    m = _COUNTRY.search(text)
-    if m:
-        return canonical_country(m.group(1))
-    m = _DEMONYM.search(text)
-    return DEMONYMS[m.group(1).lower()] if m else None
+    found = _countries(text)
+    return found[0] if found else None
 
 
 def _process(text: str) -> str | None:
@@ -167,7 +189,11 @@ def rules(item: CatalogItem) -> Enrichment:
     e = Enrichment(body_hash=item.body_hash)
 
     origin_tag = _first(kv, "origin", "country", "region")
-    e.origin_country = _country(origin_tag) or _country(item.title) or _country(body[:1500])
+    # A title naming several countries ("Puerto Rico Supremo, Mexico, or Colombia") is a choice or a blend.
+    no_origin = len(_countries(item.title)) > 1 or bool(_NO_ORIGIN.search(item.title))
+    e.origin_country = _country(origin_tag) or (
+        None if no_origin else _country(item.title) or _country(body[:1500])
+    )
     labelled = re.search(r"process(?:ing)?\s*[:\-–]\s*([^\n]{2,40})", body, re.I)
     e.process = (
         _process(_first(kv, "process", "processing"))
@@ -196,7 +222,9 @@ def rules(item: CatalogItem) -> Enrichment:
     head = f"{item.title} {tags}"
     e.is_decaf = bool(re.search(r"\bdecaf", head, re.I) or "decaf" in _first(kv, "caffeine").lower())
     origin_kind = _first(kv, "origin", "type").lower()
-    e.is_blend = bool(re.search(r"\bblend\b", item.title, re.I) or "blend" in origin_kind)
+    e.is_blend = bool(
+        re.search(r"\bblend\b", item.title, re.I) or _MOCHA_JAVA.search(item.title) or "blend" in origin_kind
+    )
     if e.is_blend and not re.search(r"single", origin_kind):
         e.origin_country = e.origin_country if _country(item.title) else None
     return e
