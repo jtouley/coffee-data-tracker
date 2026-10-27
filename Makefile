@@ -6,8 +6,8 @@ SAMPLE ?=
 install:
 	uv sync
 
-init:  ## create the lake (and publish its schema files to a remote lake)
-	uv run coffeedata init
+init:  ## create the lake (and publish its schema files to a remote lake); make init PUBLIC=1 for a public dataset
+	uv run coffeedata init $(if $(PUBLIC),--public)
 
 weekly:  ## the full weekly run: discover (1st week), probe, ingest, enrich, build, publish, site
 	uv run coffeedata weekly $(if $(SAMPLE),--sample $(SAMPLE))
