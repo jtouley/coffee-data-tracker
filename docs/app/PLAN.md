@@ -379,7 +379,15 @@ Kitchen Wi-Fi is usually fine, but a shot should never be lost to a dropped conn
 
 - The app is a PWA with a service worker that caches the shell, so it opens offline.
 - Every write goes through an outbox in IndexedDB and is retried until the server acknowledges the commit. The
-  Today screen shows a small "2 waiting to sync" line when the outbox isn't empty.
+  Today screen shows a small "2 waiting to sync" line when the outbox isn't empty. What each answer does to an
+  entry:
+  - 2xx: the entry is removed. This is the only answer that removes one silently.
+  - No answer (offline, timeout, dropped connection), 408, 429 and any 5xx: the entry stays and is retried with
+    backoff (from 2 s, doubling, up to 5 minutes), honouring `Retry-After` when the server sends it.
+  - 401: the entry stays, and the app asks the person to sign in again; it's sent once they have.
+  - Any other 4xx (the write can never succeed as sent, such as 400, 403, 404, 409 for a stale `rev`, or 422):
+    the entry moves to a "Couldn't save" list on Today, with the server's message, where it can be fixed and resent
+    or discarded by hand. It's never dropped without the person seeing it.
 - Offline, the form still prefills from the locally cached last shots, and the saved screen draws its summary and
   target from them. That summary (the ratio, the window check, the difference from the last shot) is the one piece
   of the server's logic repeated in the browser. It's a few lines, kept in step with the Python version by shared
@@ -610,6 +618,26 @@ Each one is usable on its own and goes through the normal PR and CI process.
 Milestones 1 and 2 are the minimum that replaces the issue form at the machine, for the owner alone. Invitees can
 join from milestone 3. Capture (4) is the reason for the
 app, but it needs the bag and photo tables from 1 first.
+
+## Rules that need a test
+
+Some rules in this plan only hold if code keeps them, and a later change can break one quietly. Each has a test in
+the milestone that builds it, and the test names the rule. A milestone isn't done until its rules' tests pass.
+
+| Rule | Where in this plan | Test | Milestone |
+|---|---|---|---|
+| An outbox entry is removed only on 2xx; 408, 429, 5xx and network failures are retried; other 4xx go to "Couldn't save" | Offline | browser test: each status code against a stub server, then check the outbox | 2, finished in 6 |
+| A stale resend can't undo a later edit (`rev`) | How writes reach the lake | save, Undo, resend the save; save, Correct, resend the save | 1 |
+| Two records for one id in one second don't collide | How writes reach the lake | Save and Undo in the same second, for shots, bags and equipment | 1 |
+| Each dataset publishes only its own staging | How writes reach the lake | stage a user, a photo and a shot, publish the lake, check nothing else went up | 1 |
+| A copied time is stored as copied | Log a shot | "Save with 29 s?" writes `time_source` = `copied` | 1 |
+| Every write needs a signed-in account and touches only that account's data | Every request is scoped | each write route with no session, an expired and a tampered one; one user against another's records | 2 |
+| Five failures lock a username on one address; failures from many addresses never lock it | Sign-in | five failures from one address, then a right password from another succeeds; many addresses only slow it | 2 |
+| A used setup code is inert | Sign-up, Forgotten passwords | set up, then try the same code for setup and for an owner reset; a new value works once | 2 and 3 |
+| Shots with no `user_id` are the owner's | Data model | log through MCP, then load the app as the owner | 2 |
+| The cache seed misses nothing written during the export | Hosting | a file staged before `snapshot_at` and published after it is in the cache | 2 |
+| The best recipe is one whole shot | dbt changes | two shots with the same rating: the later one's dose, yield and time all come back | 1 |
+| Invite codes are Crockford base32 | Sign-up | generated codes use only the Crockford alphabet; O, I and L typed in are read as 0, 1, 1 | 3 |
 
 ## Later: a dial-in model
 
