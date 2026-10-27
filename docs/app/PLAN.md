@@ -115,7 +115,7 @@ hard-coded. The owner's setup, entered then:
 
 | Kind | Name | Settings |
 |---|---|---|
-| Grinder | DF64 V2 | stepless dial, `scale_min` 0, `scale_max` 90, `finer_is_lower` true, stepper step 0.5 (changeable) |
+| Grinder | DF64 V2 | stepless dial, `scale_min` 0, `scale_max` 90, `finer_is_lower` true, stepper step entered at first run, default 0.5 |
 | Machine | Lelit Bianca | default |
 | Basket | Pullman Filtration Basket, 18 g | `model` = `basket17-pullm-v-v`, `basket_dose_g` 18 |
 
@@ -561,7 +561,8 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
   `fct_shot` on the GitHub Pages site; milestone 1 removes both sections and the scatter chart, and adds a test
   that the generated site contains no shot fields. Shots are then visible only in the app.
 - The "Log a shot" issue form posts the shot and the reply as a GitHub issue, which is public if the repo is. #15
-  kept it, since `suggest_next` still serves its replies. Whether it goes once the app works is open question 2.
+  kept it, since `suggest_next` still serves its replies. It stays until the app is live; then it comes off `main` and
+  is kept on an archive branch, never deleted.
 
 ## Cost
 
@@ -573,7 +574,7 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
 | The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.30, almost all of it Opus; once per prompt change |
 | Photo storage | ~300 KB per bag ≈ 15 MB a year, inside the free private storage |
 | Shot and equipment files | a few KB each; negligible next to the weekly catalog snapshots |
-| Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a service setting). A handful of people logging a bag a week stays at a few dollars a year with Opus |
+| Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a service setting). Under 10 people to start; a handful of people logging a bag a week stays at a few dollars a year with Opus |
 
 The app adds nothing to the weekly run's cost.
 
@@ -621,7 +622,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 |---|---|---|
 | Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
 | Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Entered on first run, which asks for a grinder and a basket (#13); 18 g is the default first dose. The mockups show them. |
-| Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays for now (#15; open question 2). |
+| Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays until the app is live (#15). |
 | Cold start | Fine for now | Cloud Run starts at min instances 0. |
 | Hosting | Google Cloud Run in `us-central1`, Terraform in `infra/`, Secret Manager, keyless deploys through Workload Identity Federation | Replaces the Space (Docker Spaces need PRO, #15). Max instances 1, since the server keeps its state in memory. The data stays on Hugging Face. |
 | Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
@@ -634,11 +635,11 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
 | Domain | The owner will buy back `registry.coffee` | The launch page on `registry.coffee` and the catalog on `registry.coffee/catalog/` (GitHub Pages, #19). The app on `app.registry.coffee` through a Cloud Run domain mapping. |
+| Grinder step | Nothing fixed | The stepper step is entered per grinder at first run, with a default of 0.5. |
+| Issue form | Keep it until the app is live | Then remove it from `main`, kept on an archive branch, never deleted. The original GCP project on `archive/v0-gcp` (`92f74da`) and the `feature/pubsub-dataflow-setup` branch are kept too. |
+| Invites | Under 10 people to start | The cap of 10 label reads a day per account stays. |
+| Name | registry.coffee is the product name | A registry of the coffee that exists, and a ledger of the coffee you've used. Whether to rename the repo is the owner's call (GitHub redirects old URLs); the docs keep the current repo and dataset names until then. |
 
 ## Open questions for the owner
 
-1. Is 0.5 the right stepper step on the DF64's dial, or do you move it in whole numbers?
-2. Remove the "Log a shot" issue form once the app works (the plan's default), or keep it as a fallback?
-3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
-4. Name: the sign-in screen now says "registry.coffee", since that will be the address. Should the project (repo,
-   public dataset, site title) be renamed to match, or keep "Coffee Data"?
+None at the moment. New ones go here.

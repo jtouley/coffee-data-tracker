@@ -128,7 +128,7 @@ notes. They agreed far more than they disagreed. What they found, and what chang
 | The two advice lines said different things in different sizes. | apple-design, Krehel | One string in the serif at 24 px on Today and Saved. It now describes the shot ("Inside the window, two seconds slower than Monday’s shot") since grind suggestions were deferred. |
 | Rating 1 to 5 had no anchor. | Owl-Listener | "worst" and "best" under 1 and 5. |
 | No manual theme switch. | Owl-Listener | Setup has Theme: Same as phone, Light, Dark. |
-| The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". The repo and the public dataset keep "Coffee Data" for now (an open question in the plan). |
+| The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". registry.coffee is the product name; renaming the repo and the public dataset is the owner's call. |
 
 Reviewer suggestions I didn't take:
 
