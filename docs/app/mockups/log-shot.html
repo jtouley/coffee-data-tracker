@@ -42,12 +42,17 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
   font: 400 16px/1.45 "Archivo", system-ui, sans-serif; font-stretch: 100%;
   -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
   display: flex; flex-direction: column; }
-.screen { flex: 1; padding: 54px 16px 0; display: flex; flex-direction: column; }
-.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; line-height: 1; }
+.status { height: 47px; display: flex; align-items: center; padding-top: 12px !important; justify-content: space-between; padding: 0 30px 6px 34px; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.status i { display: inline-block; width: 25px; height: 12px; border: 1.5px solid currentColor; border-radius: 4px; opacity: .8; position: relative; }
+.status i::after { content: ""; position: absolute; inset: 1.5px 6px 1.5px 1.5px; background: currentColor; border-radius: 1.5px; }
+.screen { flex: 1; padding: 7px 16px 0; display: flex; flex-direction: column; }
+.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.015em; line-height: 1; }
+.num.xl { letter-spacing: -0.03em; }
+.serif { text-wrap: balance; }
 .serif { font-family: "Newsreader", Georgia, serif; font-optical-sizing: auto; font-weight: 500; letter-spacing: -0.01em; }
 .muted { color: var(--ink-2); }
 .small { font-size: 13px; line-height: 1.35; }
-.label { font-size: 13px; color: var(--ink-2); font-weight: 500; }
+.label { font-size: 13px; color: var(--ink-2); font-weight: 500; letter-spacing: 0.01em; }
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 
 /* Top bar */
@@ -64,8 +69,8 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .btn.primary { background: var(--accent); color: var(--on-accent); }
 .btn.secondary { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn .sub { font-weight: 400; font-size: 15px; opacity: .82; font-stretch: 85%; font-variant-numeric: tabular-nums; }
-.dock { background: var(--paper); padding: 12px 16px 34px; margin: auto -16px 0;
-  border-top: 1px solid var(--rule); display: grid; gap: 10px; }
+.dock { background: var(--paper); padding: 28px 16px 34px; margin: auto -16px 0; display: grid; gap: 10px; position: relative; }
+.dock::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 20px; background: linear-gradient(to bottom, transparent, var(--paper)); pointer-events: none; }
 
 /* Bottom nav: text tabs with the signal dot */
 .nav { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); background: var(--paper);
@@ -112,7 +117,7 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .target .wl { fill: var(--balanced); font-weight: 600; }
 
 /* Stepper rows on the shot form */
-.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 80px; border-bottom: 1px solid var(--rule); gap: 12px; }
+.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 84px; padding: 10px 0 8px; border-bottom: 1px solid var(--rule); gap: 12px; }
 .field .v { display: flex; align-items: baseline; gap: 6px; }
 .field .v .num { font-size: 56px; }
 .field .v .u { font-size: 18px; color: var(--ink-2); font-stretch: 85%; }
@@ -148,17 +153,17 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
 </style>
 </head>
 <body>
+<div class="status" style=""><span>7:12</span><i></i></div>
 <main class="screen">
   <div class="top">
     <span class="back">‹ Today</span>
     <span class="small muted" style="border:1px solid var(--rule-strong);border-radius:4px;padding:4px 8px">Niche Zero · 18 g VST</span>
   </div>
-  <div class="row" style="margin:4px 0 6px;align-items:baseline">
+  <div class="row" style="margin:6px 0 4px;align-items:baseline">
     <div class="serif" style="font-size:24px">Hambela Alaka</div>
     <div class="num" style="font-size:28px">1:2.02</div>
   </div>
-  <div style="margin:0 0 4px"><svg class="target" viewBox="0 0 358 118" role="img" aria-label="Shots by time and ratio, with the 25 to 32 second, 1:1.8 to 1:2.3 window"><line class="tick" x1="62.2" x2="62.2" y1="8" y2="96"/><text x="62.2" y="112" text-anchor="middle">20 s</text><line class="tick" x1="142.7" x2="142.7" y1="8" y2="96"/><text x="142.7" y="112" text-anchor="middle">25 s</text><line class="tick" x1="223.2" x2="223.2" y1="8" y2="96"/><text x="223.2" y="112" text-anchor="middle">30 s</text><line class="tick" x1="303.7" x2="303.7" y1="8" y2="96"/><text x="303.7" y="112" text-anchor="middle">35 s</text><line class="tick" x1="30" x2="352" y1="88.7" y2="88.7"/><text x="24" y="92.7" text-anchor="end">1:1.6</text><line class="tick" x1="30" x2="352" y1="59.3" y2="59.3"/><text x="24" y="63.3" text-anchor="end">1:2.0</text><line class="tick" x1="30" x2="352" y1="30.0" y2="30.0"/><text x="24" y="34.0" text-anchor="end">1:2.4</text><rect class="win" x="142.7" y="37.3" width="112.7" height="36.7" rx="3"/><text class="wl" x="148.7" y="51.3">window</text><line class="ax" x1="30" x2="352" y1="96" y2="96"/><circle class="s-sour" cx="78.3" cy="62.3" r="4"/><circle class="s-sour" cx="110.5" cy="57.9" r="4"/><rect class="s-bitter" x="283.1" y="54.8" width="9" height="9"/><circle class="s-balanced" cx="174.9" cy="57.1" r="4.5"/><circle class="now" cx="207.1" cy="57.9" r="10"/></svg></div>
-  <div class="small muted" style="margin-bottom:6px">Last: 27 s, balanced. Same recipe.</div>
+  <div class="small muted" style="margin-bottom:8px">Last shot 27 s, balanced, rated 4. Same recipe suggested.</div>
 
   <div class="field">
     <div><div class="l label">Dose</div><div class="v"><span class="num">18.0</span><span class="u">g</span></div></div>
@@ -173,7 +178,7 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
     <div class="steps"><div class="step timer">Start</div></div>
   </div>
   <div class="field">
-    <div><div class="l"><span class="label">Grind</span><span class="hint">was 12</span></div><div class="v"><span class="num">11</span><span class="u">of 50, lower is finer</span></div></div>
+    <div><div class="l"><span class="label">Grind</span><span class="hint">was 12</span></div><div class="v"><span class="num">11</span><span class="u">of 50</span></div></div>
     <div class="steps"><div class="step">−</div><div class="step">+</div></div>
   </div>
 

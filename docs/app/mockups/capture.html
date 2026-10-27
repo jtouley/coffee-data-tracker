@@ -42,12 +42,17 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
   font: 400 16px/1.45 "Archivo", system-ui, sans-serif; font-stretch: 100%;
   -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
   display: flex; flex-direction: column; }
-.screen { flex: 1; padding: 54px 16px 0; display: flex; flex-direction: column; }
-.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; line-height: 1; }
+.status { height: 47px; display: flex; align-items: center; padding-top: 12px !important; justify-content: space-between; padding: 0 30px 6px 34px; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.status i { display: inline-block; width: 25px; height: 12px; border: 1.5px solid currentColor; border-radius: 4px; opacity: .8; position: relative; }
+.status i::after { content: ""; position: absolute; inset: 1.5px 6px 1.5px 1.5px; background: currentColor; border-radius: 1.5px; }
+.screen { flex: 1; padding: 7px 16px 0; display: flex; flex-direction: column; }
+.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.015em; line-height: 1; }
+.num.xl { letter-spacing: -0.03em; }
+.serif { text-wrap: balance; }
 .serif { font-family: "Newsreader", Georgia, serif; font-optical-sizing: auto; font-weight: 500; letter-spacing: -0.01em; }
 .muted { color: var(--ink-2); }
 .small { font-size: 13px; line-height: 1.35; }
-.label { font-size: 13px; color: var(--ink-2); font-weight: 500; }
+.label { font-size: 13px; color: var(--ink-2); font-weight: 500; letter-spacing: 0.01em; }
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 
 /* Top bar */
@@ -64,8 +69,8 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .btn.primary { background: var(--accent); color: var(--on-accent); }
 .btn.secondary { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn .sub { font-weight: 400; font-size: 15px; opacity: .82; font-stretch: 85%; font-variant-numeric: tabular-nums; }
-.dock { background: var(--paper); padding: 12px 16px 34px; margin: auto -16px 0;
-  border-top: 1px solid var(--rule); display: grid; gap: 10px; }
+.dock { background: var(--paper); padding: 28px 16px 34px; margin: auto -16px 0; display: grid; gap: 10px; position: relative; }
+.dock::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 20px; background: linear-gradient(to bottom, transparent, var(--paper)); pointer-events: none; }
 
 /* Bottom nav: text tabs with the signal dot */
 .nav { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); background: var(--paper);
@@ -112,7 +117,7 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .target .wl { fill: var(--balanced); font-weight: 600; }
 
 /* Stepper rows on the shot form */
-.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 80px; border-bottom: 1px solid var(--rule); gap: 12px; }
+.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 84px; padding: 10px 0 8px; border-bottom: 1px solid var(--rule); gap: 12px; }
 .field .v { display: flex; align-items: baseline; gap: 6px; }
 .field .v .num { font-size: 56px; }
 .field .v .u { font-size: 18px; color: var(--ink-2); font-stretch: 85%; }
@@ -152,17 +157,21 @@ h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px
   -webkit-mask: linear-gradient(#000 0 0) top/100% 26px no-repeat, linear-gradient(#000 0 0) bottom/100% 26px no-repeat;
   mask: conic-gradient(at 26px 26px, transparent 75%, #000 0) 0 0/calc(100% - 26px) calc(100% - 26px); }
 .cam .read { position: absolute; left: 16px; bottom: 14px; color: #f2ece4; font-size: 13px; display: flex; gap: 6px; align-items: center; }
+.sheetx .dock::before { background: linear-gradient(to bottom, transparent, var(--sheet)); }
+.grab { width: 36px; height: 5px; border-radius: 3px; background: var(--rule-strong); margin: -8px auto 12px; }
 .sheetx { background: var(--sheet); margin: -14px -16px 0; border-radius: 14px 14px 0 0; padding: 18px 16px 0; position: relative; flex: 1; display: flex; flex-direction: column; border-top: 1px solid var(--rule); }
 </style>
 </head>
 <body>
+<div class="status" style="background:var(--camera);color:#f2ece4"><span>7:12</span><i></i></div>
 <main class="screen" style="padding-top:0">
-  <div class="cam">
+  <div class="cam" style="padding-top:20px">
     <div class="photo"><span>bag photo</span></div>
     <div class="frame"></div>
     <div class="read"><span class="dot ok"></span>Read in 3.2 s · EXIF removed</div>
   </div>
   <div class="sheetx">
+    <div class="grab"></div>
     <div class="row"><span class="label">Matched in the catalog</span><span class="small muted">score 94</span></div>
     <div class="serif" style="font-size:30px;line-height:1.1;margin:6px 0 2px">Hambela Alaka</div>
     <div class="muted" style="font-size:15px;margin-bottom:14px">Larkspur Roasting · Portland, OR</div>

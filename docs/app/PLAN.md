@@ -94,7 +94,9 @@ Most mornings nobody touches this screen. The shot form shows the current grinde
 | Screen | Purpose | Mockup |
 |---|---|---|
 | Today | Current bag, "Pull again", last three shots, "New bag" | `mockups/today.html` |
-| Capture | Camera, reading state, match card | `mockups/capture.html` |
+| First run | No bag yet: photograph one, or add a grinder | `mockups/first-run.html` |
+| Reading | The bag is being read: skeleton card, "Type it instead" | `mockups/reading.html` |
+| Capture | Camera and match card | `mockups/capture.html` |
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
 | Saved | Ratio, time window, advice, undo | `mockups/saved.html` |
 | Coffee | One coffee: catalog facts, best recipe, chart, shots | `mockups/coffee.html` |

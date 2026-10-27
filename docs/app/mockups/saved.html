@@ -42,12 +42,17 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
   font: 400 16px/1.45 "Archivo", system-ui, sans-serif; font-stretch: 100%;
   -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
   display: flex; flex-direction: column; }
-.screen { flex: 1; padding: 54px 16px 0; display: flex; flex-direction: column; }
-.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; line-height: 1; }
+.status { height: 47px; display: flex; align-items: center; padding-top: 12px !important; justify-content: space-between; padding: 0 30px 6px 34px; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.status i { display: inline-block; width: 25px; height: 12px; border: 1.5px solid currentColor; border-radius: 4px; opacity: .8; position: relative; }
+.status i::after { content: ""; position: absolute; inset: 1.5px 6px 1.5px 1.5px; background: currentColor; border-radius: 1.5px; }
+.screen { flex: 1; padding: 7px 16px 0; display: flex; flex-direction: column; }
+.num { font-stretch: 72%; font-weight: 500; font-variant-numeric: tabular-nums; letter-spacing: -0.015em; line-height: 1; }
+.num.xl { letter-spacing: -0.03em; }
+.serif { text-wrap: balance; }
 .serif { font-family: "Newsreader", Georgia, serif; font-optical-sizing: auto; font-weight: 500; letter-spacing: -0.01em; }
 .muted { color: var(--ink-2); }
 .small { font-size: 13px; line-height: 1.35; }
-.label { font-size: 13px; color: var(--ink-2); font-weight: 500; }
+.label { font-size: 13px; color: var(--ink-2); font-weight: 500; letter-spacing: 0.01em; }
 .rule { border: 0; border-top: 1px solid var(--rule); margin: 0; }
 
 /* Top bar */
@@ -64,8 +69,8 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .btn.primary { background: var(--accent); color: var(--on-accent); }
 .btn.secondary { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn .sub { font-weight: 400; font-size: 15px; opacity: .82; font-stretch: 85%; font-variant-numeric: tabular-nums; }
-.dock { background: var(--paper); padding: 12px 16px 34px; margin: auto -16px 0;
-  border-top: 1px solid var(--rule); display: grid; gap: 10px; }
+.dock { background: var(--paper); padding: 28px 16px 34px; margin: auto -16px 0; display: grid; gap: 10px; position: relative; }
+.dock::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 20px; background: linear-gradient(to bottom, transparent, var(--paper)); pointer-events: none; }
 
 /* Bottom nav: text tabs with the signal dot */
 .nav { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); background: var(--paper);
@@ -112,7 +117,7 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .target .wl { fill: var(--balanced); font-weight: 600; }
 
 /* Stepper rows on the shot form */
-.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 80px; border-bottom: 1px solid var(--rule); gap: 12px; }
+.field { display: grid; grid-template-columns: 1fr auto; align-items: center; min-height: 84px; padding: 10px 0 8px; border-bottom: 1px solid var(--rule); gap: 12px; }
 .field .v { display: flex; align-items: baseline; gap: 6px; }
 .field .v .num { font-size: 56px; }
 .field .v .u { font-size: 18px; color: var(--ink-2); font-stretch: 85%; }
@@ -146,17 +151,18 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .list .r .u { font-size: 14px; color: var(--ink-2); }
 h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px; }
 
-.undo { display: flex; align-items: center; justify-content: space-between; background: var(--ink); color: var(--paper);
-  border-radius: 8px; padding: 0 6px 0 14px; min-height: 52px; font-size: 15px; }
-.undo b { color: var(--paper); font-weight: 600; padding: 10px 12px; position: relative; }
+.undo { display: flex; align-items: center; justify-content: space-between; background: var(--sheet); color: var(--ink-2);
+  border: 1px solid var(--rule-strong); border-radius: 8px; padding: 0 4px 0 14px; min-height: 52px; font-size: 15px; }
+.undo b { color: var(--accent); font-weight: 600; padding: 12px 14px; position: relative; }
 .undo i { position: absolute; left: 12px; right: 12px; bottom: 6px; height: 2px; background: currentColor; opacity: .35; font-style: normal; }
 </style>
 </head>
 <body>
+<div class="status" style=""><span>7:12</span><i></i></div>
 <main class="screen">
   <div class="top"><span class="small muted">Saved 7:12 · Hambela Alaka</span><span class="sync"><span class="dot ok"></span>Synced</span></div>
   <div style="margin-top:18px" class="label">Ratio</div>
-  <div class="num" style="font-size:112px;margin-top:4px">1:2.02</div>
+  <div class="num xl" style="font-size:112px;margin-top:4px">1:2.02</div>
   <div class="row" style="margin:14px 0 4px">
     <div class="num" style="font-size:34px">18.0 → 36.4<span class="muted" style="font-size:18px"> g</span></div>
     <div class="num" style="font-size:34px">29<span class="muted" style="font-size:18px"> s</span></div>

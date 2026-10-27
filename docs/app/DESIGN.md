@@ -1,12 +1,14 @@
 # Shot-logging app: design
 
-The plan is in [PLAN.md](PLAN.md). Mockups for the six key screens are in [mockups/](mockups/), each as a
+The plan is in [PLAN.md](PLAN.md). Mockups for eight screens are in [mockups/](mockups/), each as a
 self-contained HTML file with light and dark screenshots at 390 px. All coffees, prices and shots in them are
 sample data.
 
 ## How this was made
 
-Six designers each wrote a direction for the same brief, working independently. Each followed one community
+Six designers each wrote a direction for the same brief, working independently. Five returned a written
+direction. The apple-design designer didn't finish, so I read that skill myself and filled in its row from the
+skill text. It is a motion and interaction skill more than a visual one, so some columns don't apply. Each followed one community
 design skill, read from its repository as reference material. The brief described the app, the owner at the
 machine at 7am with one hand free, the six screens, and the existing site's look (warm off-white, near-black, a
 brown accent). The skills:
@@ -28,7 +30,7 @@ from those instead. All six repositories could be reached.
 
 | Skill | Direction | Type | Surfaces | Taste colours | Signature | Repeat shot |
 |---|---|---|---|---|---|---|
-| apple-design | (still being written; added in the next commit) | | | | | |
+| apple-design | Fluid and physical: respond on press, critically damped springs, sheets you can grab, translucent chrome with scroll-edge fades, system font first, size-specific tracking | system font (SF on iPhone) | translucent bars and sheets over content | not addressed | none; motion that starts from the current value and can be interrupted | not addressed |
 | web-design-engineer | "Group Head": the app as a Braun control panel. Spec sheets, hairlines, uppercase labels, one brown signal dot | Archivo, JetBrains Mono | flat, 2–4 px radius, no shadows | a brown ramp: light brown sour, accent brown balanced, dark brown bitter | an extraction gauge, 15 to 40 s with the window marked and a needle | 3 taps |
 | landing-page-design | "One pull": every screen is a landing page with one conversion | Geist, Geist Mono | flat, 16 px cards, one translucent nav | amber, green, brick red | the advice set large as a two-line tagline that reveals word by word | 3 taps |
 | awwwards + no-slop | "Pull Sheet": a barista's dial-in sheet; four huge numbers, the bag photo as identity | Newsreader, Barlow Condensed, Barlow | flat, proximity instead of cards | ochre, green, rust | a line drawn from dose to yield as the ratio settles, once, on save | 3 to 5 taps |
@@ -69,9 +71,38 @@ All six came to the same handful of conclusions without seeing each other's work
 | Dark mode default | follow the system; dark between 5 and 8 am | Follow the system. A clock-based theme surprises people. |
 | Rating prefill | empty (most); last value (one) | Empty, for now. Open question 7 in the plan. |
 
+From apple-design I took the parts that suit a utility: feedback on press rather than on release, sheets that
+follow the finger and settle with a critically damped spring, scroll-edge fades instead of hard rules under
+floating bars, tracking that tightens as type grows, and undo for slips instead of confirmation dialogs. I left out
+its translucent materials (glass over a paper page in a dark kitchen adds glare and nothing else) and its default
+to the system font (the condensed numeral is doing real work here).
+
 The chosen direction keeps the name two directions picked independently: **Bench Scale**. The app is a counter
 instrument: a paper-coloured page, hairline rules, big condensed numerals, a serif name for the coffee, one brown
 action, and a dial-in target that shows where the shot landed.
+
+## Director pass
+
+After the first set of mockups I went through every screen again, taking from each skill the rule it put best. What
+changed, and which rule drove it:
+
+| Change | Rule | Source |
+|---|---|---|
+| Removed the dial-in target from the log screen. It now appears on Today, Saved and the coffee page only, and it is largest on Saved. On the log screen it cost 118 px and pushed rating below the fold. | "Prefer one strong authored moment over many unrelated effects." | MengTo, no-ai-design-slop |
+| Added the reading state (a skeleton of the match card, "Type it instead") and the first run ("Nothing on the grinder yet"). | Every state is designed; skeletons over spinners; no blank empty states. | elayadesign; Krehel |
+| The undo strip on Saved was an inverted bar, bright in dark mode. It's now a quiet strip in the sheet colour with an accent "Undo". | Avoid abrupt brightness jumps; don't put bright surfaces in a dark kitchen. | apple-design §14; Owl-Listener dark-mode |
+| The dock lost its top hairline and gained a 20 px fade where content scrolls under it. | Scroll-edge effects instead of hard dividers under floating chrome. | apple-design §12 |
+| A grabber on the match sheet, so it reads as something you can pull down. | Familiarity; sheets you can grab. | apple-design §3, §16 |
+| Tracking now changes with size: −0.03em on the 112 px ratio, −0.015em on other numerals, +0.01em on 13 px labels. Serif headings use `text-wrap: balance`. | Tracking is size-specific, never one value. | apple-design §15; Krehel better-typography |
+| Field rows got 10 px of space above the label so the label belongs to its number, not the rule above it. | Proximity implies relationship. | apple-design §16; Owl-Listener |
+| The advice on Today is now set in the serif, like on Saved, so "what to do next" always has the same voice. | Things that look the same behave the same. | apple-design §16 |
+| "11 of 50, lower is finer" became "11 of 50". Direction lives in the grinder profile and the taste segments ("grind finer"). | Concise, specific labels. | Krehel better-writing |
+| Chart text moved from `--ink-3` (3.5:1) to `--ink-2` (6.5:1). | Every text pair meets 4.5:1. | Krehel better-colors; Owl-Listener color-system |
+| Mockups now have a plain status bar so they read as phone screens. | | |
+
+Things I considered and left alone: a scrub strip for values (MengTo, Owl-Listener) is a good later addition, but the
+buttons have to exist anyway; the left-hand mirror (Owl-Listener) is a setting, not a different mockup; Braun-style
+uppercase labels (web-design-engineer) stay out for the reason given above.
 
 ## Tokens
 
@@ -131,10 +162,10 @@ Both families come from Google Fonts. Load only the axes used (`Archivo:wdth,wgh
 
 | What | Duration | Easing |
 |---|---|---|
-| Press (buttons, steppers) | 100 ms, scale 0.97 | ease-out |
+| Press (buttons, steppers) | 100 ms, scale 0.97, on pointer-down | ease-out |
 | Stepper value change | instant | none |
 | Segment selection | 120 ms, background colour only | ease-out |
-| Sheet in / out | 240 ms / 180 ms | `cubic-bezier(0.2, 0, 0, 1)` |
+| Sheet in / out | spring, damping 1.0, response 0.3 s; follows the finger when dragged | critically damped, interruptible |
 | Saved: new mark moves to its place on the target | 360 ms | same curve, no overshoot |
 | Saved: advice fades in | 200 ms, 120 ms after the mark lands | ease-out |
 | Undo bar countdown | 5 s, linear | the only linear motion |
@@ -171,11 +202,18 @@ path is visible. On the coffee page they aren't joined (too many), and a legend 
 **Spec sheet.** Two columns, label 112 px and value, hairline between rows. Used for the match card, the catalog
 facts and equipment. Numbers in values use the condensed numeral.
 
+**Sheet.** Rounded top corners (14 px), a 36 × 5 px grabber, the sheet colour. Opens with a critically damped
+spring (no overshoot) from where the trigger was, follows the finger 1:1 when dragged, and dismisses on a downward
+flick using the release velocity. With reduced motion it crossfades.
+
+**Reading state.** The match card's shape as a skeleton (no spinner, no shimmer), the line "Looking for roaster,
+coffee and roast date", the expected wait, and "Type it instead" so nobody is stuck waiting for the model.
+
 **Bag photo.** 6 px radius with a 1 px inner outline so a pale bag doesn't melt into the paper. In the mockups it's
 an honest hatched placeholder; in the app it's the owner's photo, cropped to the label, dimmed slightly in dark mode.
 
-**Dock.** The bottom area holding the primary button (and on Saved, the undo bar). Paper background, a hairline
-above it, safe-area padding below.
+**Dock.** The bottom area holding the primary button (and on Saved, the undo bar). Paper background, safe-area
+padding below, and a 20 px fade at its top edge that only shows when content scrolls under it. No hairline.
 
 **Navigation.** Three text tabs (Today, Coffees, Equipment) with the accent dot above the active one. No icon set is
 needed, and the words are clearer than pictograms for "equipment".
@@ -183,8 +221,9 @@ needed, and the words are clearer than pictograms for "equipment".
 **Sync status.** Top right: a green dot and "Synced", or the accent dot and "2 waiting to sync". It never blocks
 anything.
 
-**Undo bar.** An inverted strip in the dock: "Shot saved" and "Undo", with a thin line underneath that shrinks over
-5 seconds. Undo writes a retraction record.
+**Undo bar.** A strip in the sheet colour with a hairline border: "Shot saved" and an accent "Undo", with a thin line
+under Undo that shrinks over 5 seconds. Not inverted, so it doesn't flash in a dark kitchen. Undo writes a
+retraction record.
 
 ## Copy
 
@@ -194,5 +233,5 @@ or search by roaster." No exclamation marks, no "Great shot!".
 
 ## What's not designed yet
 
-Search (the fallback from a wrong match), History, the reading skeleton on Capture, empty states (first run, no
-bags yet), the left-hand layout, and the numeric keypad. They use the same components.
+Search (the fallback from a wrong match), History, the left-hand layout, the numeric keypad, and error states
+(camera denied, read failed, offline capture). They use the same components.
