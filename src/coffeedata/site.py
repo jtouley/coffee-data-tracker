@@ -273,7 +273,7 @@ def build(db: Path, out: Path) -> Path:
         "links": links(),
         "updated": LEGAL_UPDATED,
         "contact": os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee",
-        "governing_state": os.environ.get("GOVERNING_STATE") or "[STATE]",
+        "governing_state": os.environ.get("GOVERNING_STATE") or "Michigan",
     }
     for page in ("privacy", "terms"):
         (out / page).mkdir(exist_ok=True)

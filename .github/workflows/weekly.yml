@@ -27,7 +27,7 @@ jobs:
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
       PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
       SITE_URL: ${{ vars.SITE_URL }}                 # canonical URL of the site; unset = https://registry.coffee
-      GOVERNING_STATE: ${{ vars.GOVERNING_STATE }}   # US state named in the Terms of Use; unset = "[STATE]"
+      GOVERNING_STATE: ${{ vars.GOVERNING_STATE }}   # US state named in the Terms of Use; unset = Michigan
       SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}       # contact on the legal pages; unset = support@registry.coffee
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

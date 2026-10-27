@@ -216,7 +216,7 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert "Content-Security-Policy" in html and "support@registry.coffee" in html
         assert f'href="{page}/"' in landing
         assert f'href="../{page}/"' in (out / "catalog" / "index.html").read_text()
-    assert "State of [STATE]" in (out / "terms" / "index.html").read_text()
+    assert "State of Michigan" in (out / "terms" / "index.html").read_text()
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     assert catalog["rows"]
     app = (out / "catalog" / "index.html").read_text()
