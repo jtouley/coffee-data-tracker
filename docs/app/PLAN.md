@@ -626,7 +626,8 @@ the milestone that builds it, and the test names the rule. A milestone isn't don
 
 Where the code doesn't keep a rule yet (per-record `rev`, file-name suffixes on bags and equipment, per-dataset
 staging, `time_source`, null `user_id` as the owner in the app, the whole-shot best recipe, Crockford invite codes),
-the gap is listed in #22, "Deferred review findings from the app milestone PRs".
+the gap is tracked in #22, "Deferred review findings from the app milestone PRs", for after deploy. Per-dataset
+staging is must-fix before deploy rather than deferred; it leaves this list once the code is confirmed.
 
 | Rule | Where in this plan | Test | Milestone |
 |---|---|---|---|
