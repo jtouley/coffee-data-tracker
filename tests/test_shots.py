@@ -122,3 +122,16 @@ def test_index_reads_dim_coffee_export(lake, monkeypatch):
     lake.write_mart("dim_coffee", duckdb.connect(), "select 'a.com:1' as coffee_id, 'A Roasters' as roaster_name, 'Geometry' as title")
     shots._index_cache.clear()
     assert shots._index(lake) == {"a.com:1": "A Roasters Geometry"}
+
+
+@pytest.mark.parametrize("bad", ["../../escaped", "a/b", "..", "x" * 65])
+def test_shot_id_cannot_escape_the_lake(lake, bad):
+    with pytest.raises(ValueError):
+        shots.log_shot({"shot_id": bad, "coffee_id": "o:1", "dose": 18, "yield": 36, "time": 28, "grind": 10,
+                        "rating": 3}, lake)
+    assert not any(lake.root.parent.glob("escaped*"))
+
+
+def test_lake_refuses_paths_outside_root(lake):
+    with pytest.raises(ValueError):
+        lake.write("shots", "shots/../../outside.parquet", [{"shot_id": "x"}])

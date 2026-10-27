@@ -127,6 +127,8 @@ class Lake:
         if not rows:
             return None
         path = self.root / rel
+        if not path.resolve().is_relative_to(self.root.resolve()):
+            raise ValueError(f"path escapes the lake: {rel}")
         if path.exists():
             raise FileExistsError(f"lake files are immutable: {rel}")
         path.parent.mkdir(parents=True, exist_ok=True)

@@ -103,6 +103,14 @@ class Shot(BaseModel):
 
     model_config = {"extra": "forbid"}
 
+    @field_validator("shot_id")
+    @classmethod
+    def _safe_id(cls, v: str) -> str:
+        # Used in a lake file name: anything but a plain id could escape shots/ (e.g. "../../x").
+        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}", v):
+            raise ValueError("shot_id must be 1-64 letters, digits, '-' or '_'")
+        return v
+
     @field_validator("taste", mode="before")
     @classmethod
     def _taste(cls, v: object) -> object:

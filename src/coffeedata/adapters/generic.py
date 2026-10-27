@@ -104,7 +104,8 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         for p in jsonld_products(r.text)[:1]:
             item = parse_jsonld(p, url, roaster)
             items.setdefault(item.product_id, item)
-    if failed and failed >= len(items):
-        # Mostly failures: can't tell "no products" from "couldn't read them", so don't claim either.
-        raise FetchError(f"{failed} product pages failed")
+    if failed:
+        # Any unreadable product page makes this a partial catalog, and the missing products would look
+        # delisted. Fail the fetch; it is retried and never stored as a successful catalog.
+        raise FetchError(f"{failed} of {min(len(urls), MAX_PAGES)} product pages failed")
     return list(items.values())

@@ -21,6 +21,14 @@ def _today() -> str:
     return datetime.now(UTC).date().isoformat()
 
 
+def _run_date(value: str) -> str:
+    """argparse type for --run-date: a clean usage error instead of a traceback."""
+    try:
+        return date.fromisoformat(value).isoformat()
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"not a YYYY-MM-DD date: {value!r}") from None
+
+
 def _print(obj: object) -> None:
     print(json.dumps(obj, indent=1, default=str))
 
@@ -58,9 +66,7 @@ def cmd_discover(args: argparse.Namespace) -> None:
 
 
 def cmd_probe(args: argparse.Namespace) -> None:
-    import random
-
-    from . import discover, registry
+    from . import discover, ingest, registry
 
     lake = Lake()
     states = registry.current(lake)
@@ -68,8 +74,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
     todo = [s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
     if args.only:
         todo = [args.only]
-    if args.sample:
-        todo = random.sample(todo, min(args.sample, len(todo)))
+    if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
+        todo = sorted(todo, key=ingest.sample_key)[:args.sample]
     rows = discover.probe(todo, workers=args.workers, run_date=args.run_date)
     lake.write_partition("probes", args.run_date, new_batch_id(), rows)
     ok = sum(r["status"] == "ok" for r in rows)
@@ -234,10 +240,10 @@ def main(argv: list[str] | None = None) -> None:
     pr.add_argument("--only")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
-    pr.add_argument("--run-date", default=_today())
+    pr.add_argument("--run-date", type=_run_date, default=_today())
 
     i = add("ingest", cmd_ingest, "fetch catalogs for this run (skips roasters already fetched in it)")
-    i.add_argument("--run-date", default=_today())
+    i.add_argument("--run-date", type=_run_date, default=_today())
     i.add_argument("--only", help="one roaster_id (domain)")
     i.add_argument("--sample", type=int)
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
@@ -245,7 +251,7 @@ def main(argv: list[str] | None = None) -> None:
 
     e = add("enrich", cmd_enrich, "Claude enrichment of pending coffees (collects finished batches first)")
     e.add_argument("--limit", type=int, default=2000)
-    e.add_argument("--run-date", default=_today())
+    e.add_argument("--run-date", type=_run_date, default=_today())
 
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
@@ -258,7 +264,7 @@ def main(argv: list[str] | None = None) -> None:
     ep.add_argument("--to", default=os.environ.get("PUBLIC_EXPORT_URL", "build/public"))
 
     w = add("weekly", cmd_weekly, "the full weekly run")
-    w.add_argument("--run-date", default=_today())
+    w.add_argument("--run-date", type=_run_date, default=_today())
     w.add_argument("--sample", type=int, help="only N roasters (for trying it out)")
     w.add_argument("--discover", action="store_true", help="run discovery even if it isn't the first week")
     w.add_argument("--enrich-limit", type=int, default=2000)

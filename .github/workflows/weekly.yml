@@ -38,7 +38,9 @@ jobs:
       - name: Check lake config
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
       - name: Weekly run
-        run: uv run coffeedata weekly ${{ inputs.sample && format('--sample {0}', inputs.sample) || '' }}
+        env:
+          SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
+        run: uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"}
       - uses: actions/upload-pages-artifact@v3
         with: {path: build/site}
   deploy:

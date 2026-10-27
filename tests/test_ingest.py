@@ -21,8 +21,9 @@ def test_run_records_ok_and_failed_fetches(lake):
             return_value=httpx.Response(200, json=load("shopify_onyxcoffeelab.json")))
         m.get("https://broken.com/products.json").mock(return_value=httpx.Response(403))
         out = ingest.run(lake, _roasters(), "2026-10-26", workers=2)
-    assert out["by_adapter"]["shopify"] == {"roasters": 2, "errors": 1, "with_coffee": 1,
-                                            "coffees": out["by_adapter"]["shopify"]["coffees"]}
+    shopify = out["by_adapter"]["shopify"]
+    assert (shopify["roasters"], shopify["errors"], shopify["with_coffee"]) == (2, 1, 1)
+    assert 0 < shopify["coffees"] <= 12
     con = lake.connect()
     fetches = dict(con.execute(f"select roaster_id, status from {lake.scan('fetches')}").fetchall())
     assert fetches == {"onyxcoffeelab.com": "ok", "broken.com": "error"}
@@ -31,7 +32,7 @@ def test_run_records_ok_and_failed_fetches(lake):
     assert snap == {"onyxcoffeelab.com": 12}
     n_bodies = con.execute(f"select count(*) from {lake.scan('bodies')}").fetchone()[0]
     n_enrich = con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchone()[0]
-    assert n_bodies > 0 and n_enrich == out["by_adapter"]["shopify"]["coffees"]
+    assert n_bodies > 0 and n_enrich == shopify["coffees"]
 
 
 def test_odd_payload_is_one_roasters_error_not_the_runs(lake, monkeypatch):
