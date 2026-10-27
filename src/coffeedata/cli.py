@@ -158,12 +158,18 @@ def cmd_weekly(args: argparse.Namespace) -> None:
                 cmd_discover(argparse.Namespace(source=src, release=None, states=None))
             except Exception as e:  # noqa: BLE001 - discovery is best-effort; the catalog run must still happen
                 logging.warning("discover %s failed: %s", src, e)
+    # Publish after every step that records new data, so a later failure (build, export, Snowflake, site) or a
+    # job timeout never loses what was already fetched or paid for. Re-running the week resumes from the lake.
     cmd_probe(argparse.Namespace(stale_days=28, only=None, sample=args.sample, workers=16, run_date=run))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: discover and probe"))
     cmd_ingest(argparse.Namespace(run_date=run, only=None, sample=args.sample, retry_failed=False, workers=32))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: catalogs"))
     cmd_ingest(argparse.Namespace(run_date=run, only=None, sample=None, retry_failed=True, workers=16))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
     cmd_build(argparse.Namespace(db=args.db))
-    cmd_publish(argparse.Namespace(message=f"weekly run {run}"))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: marts"))
     # Facts-only tables: always exported locally; optionally published and loaded into Snowflake.
     cmd_export_public(argparse.Namespace(db=args.db, to="build/public"))
     if os.environ.get("PUBLIC_EXPORT_URL") and os.environ["PUBLIC_EXPORT_URL"] != "build/public":

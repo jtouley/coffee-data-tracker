@@ -95,9 +95,12 @@ config/roasters.csv (seed) + lake registry ──probe──▶ platform ──i
    - **Variables:** `LAKE_URL` = `hf://datasets/<you>/coffee-data`
    - **Secrets:** `HF_TOKEN`
    - **Secrets (optional):** `ANTHROPIC_API_KEY`
+   - **Snowflake (optional):** variables `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`; secret `SNOWFLAKE_PRIVATE_KEY` (see `marketplace/README.md`)
 4. Settings → Pages → Source: **GitHub Actions**.
 5. Create the `shot` and `roaster` issue labels.
 6. Actions → **weekly** → Run workflow. Try `sample: 50` first, then leave it to the Monday schedule.
+
+The weekly run publishes to the lake after every step (probe, catalogs, retries, enrichment, marts), so a failure later in the run, or a timeout, keeps what was already fetched. Re-running the workflow for the same week picks up where it stopped.
 
 ## Public release and marketplaces
 
