@@ -17,19 +17,27 @@ def test_files_are_immutable(lake):
     lake.write_partition("fetches", "2026-10-26", "b1", [row])
     with pytest.raises(FileExistsError):
         lake.write_partition("fetches", "2026-10-26", "b1", [row])
-    assert lake.write_partition("fetches", "2026-10-26", "b2", []) is None  # nothing to write, nothing written
+    assert (
+        lake.write_partition("fetches", "2026-10-26", "b2", []) is None
+    )  # nothing to write, nothing written
 
 
 def test_remote_lake_reads_staging_and_remote(tmp_path, monkeypatch):
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
     lake = Lake("hf://datasets/someone/coffee")
     assert lake.remote and lake.root == tmp_path / "staging"
-    assert lake.sources("shots") == [str(tmp_path / "staging/shots/*.parquet"),
-                                     "hf://datasets/someone/coffee/shots/*.parquet"]
+    assert lake.sources("shots") == [
+        str(tmp_path / "staging/shots/*.parquet"),
+        "hf://datasets/someone/coffee/shots/*.parquet",
+    ]
 
 
 def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypatch):
-    remote = {"fetches/run_date=2026-10-26/batch=b1.parquet", "marts/dim_coffee.parquet", *SCHEMA_FILES.values()}
+    remote = {
+        "fetches/run_date=2026-10-26/batch=b1.parquet",
+        "marts/dim_coffee.parquet",
+        *SCHEMA_FILES.values(),
+    }
     commits = []
 
     class FakeApi:
@@ -43,6 +51,7 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
             commits.append(sorted(op.path_in_repo for op in operations))
 
     import huggingface_hub
+
     monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
     lake = Lake("hf://datasets/someone/coffee")
@@ -52,6 +61,7 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     lake.write_partition("fetches", "2026-10-26", "b1", [row])  # already uploaded: skipped, not replaced
     (lake.root / "marts").mkdir()
     import duckdb
+
     lake.write_mart("dim_coffee", duckdb.connect(), "select 1 as x")
     assert lake.publish("test") == 2
     assert commits == [["fetches/run_date=2026-11-02/batch=b2.parquet", "marts/dim_coffee.parquet"]]
@@ -121,6 +131,7 @@ def test_publish_retries_and_tolerates_a_commit_that_landed(tmp_path, monkeypatc
     import huggingface_hub
 
     from coffeedata import lake as lake_mod
+
     monkeypatch.setattr(huggingface_hub, "HfApi", FlakyApi)
     monkeypatch.setattr(lake_mod.time, "sleep", lambda s: None)
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
@@ -143,6 +154,7 @@ def test_publish_keeps_staged_files_when_every_attempt_fails(tmp_path, monkeypat
     import huggingface_hub
 
     from coffeedata import lake as lake_mod
+
     monkeypatch.setattr(huggingface_hub, "HfApi", DownApi)
     monkeypatch.setattr(lake_mod.time, "sleep", lambda s: None)
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))

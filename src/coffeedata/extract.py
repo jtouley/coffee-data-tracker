@@ -26,26 +26,80 @@ _ROAST = [
     ("medium", r"\b(medium|medium-dark|city)\b[ -]?roast|roast(ed)?[ :-]*medium|roastlevel__medium"),
 ]
 VARIETALS = [
-    "Gesha", "Geisha", "Bourbon", "Pink Bourbon", "Red Bourbon", "Yellow Bourbon", "Typica", "Caturra",
-    "Catuai", "Catuaí", "Pacamara", "Pacas", "SL28", "SL34", "Ruiru 11", "Batian", "Castillo", "Heirloom",
-    "74110", "74112", "74158", "Wush Wush", "Sidra", "Maragogype", "Mundo Novo", "Villa Sarchi",
-    "Java", "Catimor", "Sarchimor", "Parainema", "Obata", "Laurina", "Eugenioides", "Mokka", "Tabi",
+    "Gesha",
+    "Geisha",
+    "Bourbon",
+    "Pink Bourbon",
+    "Red Bourbon",
+    "Yellow Bourbon",
+    "Typica",
+    "Caturra",
+    "Catuai",
+    "Catuaí",
+    "Pacamara",
+    "Pacas",
+    "SL28",
+    "SL34",
+    "Ruiru 11",
+    "Batian",
+    "Castillo",
+    "Heirloom",
+    "74110",
+    "74112",
+    "74158",
+    "Wush Wush",
+    "Sidra",
+    "Maragogype",
+    "Mundo Novo",
+    "Villa Sarchi",
+    "Java",
+    "Catimor",
+    "Sarchimor",
+    "Parainema",
+    "Obata",
+    "Laurina",
+    "Eugenioides",
+    "Mokka",
+    "Tabi",
 ]
 _VARIETAL = re.compile(r"\b(" + "|".join(re.escape(v) for v in VARIETALS) + r")\b", re.I)
 _COUNTRY = re.compile(r"\b(" + "|".join(re.escape(c) for c in COUNTRIES) + r")\b", re.I)
 DEMONYMS = {
-    "kenyan": "Kenya", "ethiopian": "Ethiopia", "colombian": "Colombia", "guatemalan": "Guatemala",
-    "rwandan": "Rwanda", "brazilian": "Brazil", "honduran": "Honduras", "peruvian": "Peru", "mexican": "Mexico",
-    "burundian": "Burundi", "ugandan": "Uganda", "salvadoran": "El Salvador", "costa rican": "Costa Rica",
-    "panamanian": "Panama", "nicaraguan": "Nicaragua", "indonesian": "Indonesia", "tanzanian": "Tanzania",
-    "yemeni": "Yemen", "ecuadorian": "Ecuador", "bolivian": "Bolivia", "congolese": "Democratic Republic of the Congo",
-    "sumatran": "Indonesia", "javanese": "Indonesia", "hawaiian": "United States", "papuan": "Papua New Guinea",
+    "kenyan": "Kenya",
+    "ethiopian": "Ethiopia",
+    "colombian": "Colombia",
+    "guatemalan": "Guatemala",
+    "rwandan": "Rwanda",
+    "brazilian": "Brazil",
+    "honduran": "Honduras",
+    "peruvian": "Peru",
+    "mexican": "Mexico",
+    "burundian": "Burundi",
+    "ugandan": "Uganda",
+    "salvadoran": "El Salvador",
+    "costa rican": "Costa Rica",
+    "panamanian": "Panama",
+    "nicaraguan": "Nicaragua",
+    "indonesian": "Indonesia",
+    "tanzanian": "Tanzania",
+    "yemeni": "Yemen",
+    "ecuadorian": "Ecuador",
+    "bolivian": "Bolivia",
+    "congolese": "Democratic Republic of the Congo",
+    "sumatran": "Indonesia",
+    "javanese": "Indonesia",
+    "hawaiian": "United States",
+    "papuan": "Papua New Guinea",
 }
 _DEMONYM = re.compile(r"\b(" + "|".join(DEMONYMS) + r")\b", re.I)
-_MASL = re.compile(r"(\d[\d,.]{2,5})\s*(?:[-–to]+\s*(\d[\d,.]{2,5}))?\s*(?:masl|m\.?a\.?s\.?l|meters|metres|m\b)",
-                   re.I)
-_NOTES = re.compile(r"(?:tasting notes?|flavor notes?|cup notes?|notes? of|we taste|tastes like|notes?)\s*[:\-–]\s*"
-                    r"([^\n.]{3,160})", re.I)
+_MASL = re.compile(
+    r"(\d[\d,.]{2,5})\s*(?:[-–to]+\s*(\d[\d,.]{2,5}))?\s*(?:masl|m\.?a\.?s\.?l|meters|metres|m\b)", re.I
+)
+_NOTES = re.compile(
+    r"(?:tasting notes?|flavor notes?|cup notes?|notes? of|we taste|tastes like|notes?)\s*[:\-–]\s*"
+    r"([^\n.]{3,160})",
+    re.I,
+)
 
 
 def _int(s: str | None) -> int | None:
@@ -55,8 +109,10 @@ def _int(s: str | None) -> int | None:
     return v if 300 <= v <= 3000 else None
 
 
-_FILLER_LEAD = re.compile(r"^(a|an|the|and|with|hints? of|notes? of|touch of|bit of|some|lots of|lingering|"
-                          r"bright|sweet and|juicy and)\s+")
+_FILLER_LEAD = re.compile(
+    r"^(a|an|the|and|with|hints? of|notes? of|touch of|bit of|some|lots of|lingering|"
+    r"bright|sweet and|juicy and)\s+"
+)
 _FILLER_TAIL = re.compile(r"\s+(notes?|taste|tastes|flavou?rs?|finish|aftertaste|undertones?|tones?|vibes?)$")
 
 
@@ -113,14 +169,24 @@ def rules(item: CatalogItem) -> Enrichment:
     origin_tag = _first(kv, "origin", "country", "region")
     e.origin_country = _country(origin_tag) or _country(item.title) or _country(body[:1500])
     labelled = re.search(r"process(?:ing)?\s*[:\-–]\s*([^\n]{2,40})", body, re.I)
-    e.process = (_process(_first(kv, "process", "processing")) or _process(item.title)  # type: ignore[assignment]
-                 or (_process(labelled.group(1)) if labelled else None))
+    e.process = (
+        _process(_first(kv, "process", "processing"))
+        or _process(item.title)  # type: ignore[assignment]
+        or (_process(labelled.group(1)) if labelled else None)
+    )
     roast_text = _first(kv, "roast", "roastlevel", "roastprofile")
     for name, pat in _ROAST:
-        if re.search(rf"\b{name}\b", roast_text, re.I) or re.search(pat, f"{item.title} {tags}\n{body}", re.I):
+        if re.search(rf"\b{name}\b", roast_text, re.I) or re.search(
+            pat, f"{item.title} {tags}\n{body}", re.I
+        ):
             e.roast_level = name  # type: ignore[assignment]
             break
-    e.varietals = sorted({v.group(1).title() for v in _VARIETAL.finditer(f"{item.title} {_first(kv, 'variety', 'varietal')} {body}")})[:6]
+    e.varietals = sorted(
+        {
+            v.group(1).title()
+            for v in _VARIETAL.finditer(f"{item.title} {_first(kv, 'variety', 'varietal')} {body}")
+        }
+    )[:6]
     if m := _MASL.search(body):
         e.elevation_masl_min, e.elevation_masl_max = _int(m.group(1)), _int(m.group(2) or m.group(1))
     if notes := _first(kv, "notes", "note", "flavor", "flavors", "flavornotes", "tastingnotes", "tasting"):
@@ -151,15 +217,29 @@ SYSTEM = (
 SCHEMA = {
     "type": "object",
     "additionalProperties": False,
-    "required": ["origin_country", "origin_region", "producer", "process", "varietals",
-                 "elevation_masl_min", "elevation_masl_max", "roast_level", "tasting_notes",
-                 "is_blend", "is_decaf"],
+    "required": [
+        "origin_country",
+        "origin_region",
+        "producer",
+        "process",
+        "varietals",
+        "elevation_masl_min",
+        "elevation_masl_max",
+        "roast_level",
+        "tasting_notes",
+        "is_blend",
+        "is_decaf",
+    ],
     "properties": {
         "origin_country": {"type": ["string", "null"]},
         "origin_region": {"type": ["string", "null"]},
         "producer": {"type": ["string", "null"]},
-        "process": {"anyOf": [{"type": "string", "enum": ["washed", "natural", "honey", "anaerobic", "other"]},
-                               {"type": "null"}]},
+        "process": {
+            "anyOf": [
+                {"type": "string", "enum": ["washed", "natural", "honey", "anaerobic", "other"]},
+                {"type": "null"},
+            ]
+        },
         "varietals": {"type": "array", "items": {"type": "string"}},
         "elevation_masl_min": {"type": ["integer", "null"]},
         "elevation_masl_max": {"type": ["integer", "null"]},

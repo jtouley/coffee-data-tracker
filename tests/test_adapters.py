@@ -23,8 +23,13 @@ def test_shopify_parse(fixture_items):
 
 
 def test_shopify_tolerates_odd_payloads():
-    p = {"id": 1, "title": "Kenya", "images": ["https://img/x.jpg"], "tags": "a, b",
-         "variants": [{"id": 2, "title": "12 oz", "price": "20.00", "grams": "oops"}]}
+    p = {
+        "id": 1,
+        "title": "Kenya",
+        "images": ["https://img/x.jpg"],
+        "tags": "a, b",
+        "variants": [{"id": 2, "title": "12 oz", "price": "20.00", "grams": "oops"}],
+    }
     item = shopify.parse_product(p, _r())
     assert item.image == "https://img/x.jpg" and item.tags == ["a", "b"] and item.variants[0].grams == 340
 
@@ -38,12 +43,16 @@ def test_squarespace_parse(fixture_items):
 def test_generic_jsonld():
     products = generic.jsonld_products((FIX / "wix_product_jsonld.html").read_text())
     assert len(products) == 1
-    item = generic.parse_jsonld(products[0], "https://www.1802roasters.com/product-page/x", _r("1802roasters.com"))
+    item = generic.parse_jsonld(
+        products[0], "https://www.1802roasters.com/product-page/x", _r("1802roasters.com")
+    )
     assert item.title and item.variants
 
 
 def test_generic_ignores_malformed_offers():
-    item = generic.parse_jsonld({"name": "X", "offers": ["junk", {"price": "12", "name": "12 oz"}]}, "u", _r())
+    item = generic.parse_jsonld(
+        {"name": "X", "offers": ["junk", {"price": "12", "name": "12 oz"}]}, "u", _r()
+    )
     assert [v.price_usd for v in item.variants] == [12.0]
 
 
@@ -55,13 +64,18 @@ def test_generic_repeated_sku_gives_unique_variant_ids():
 
 
 def test_product_urls_rank_beans_before_merch():
-    urls = ["https://x.com/product-page/logo-mug", "https://x.com/product-page/ethiopia-guji",
-            "https://x.com/about", "https://x.com/product/house-blend/ABCDEFG123"]
+    urls = [
+        "https://x.com/product-page/logo-mug",
+        "https://x.com/product-page/ethiopia-guji",
+        "https://x.com/about",
+        "https://x.com/product/house-blend/ABCDEFG123",
+    ]
     ranked = generic.product_urls(urls)
     assert ranked[-1].endswith("logo-mug") and "https://x.com/about" not in ranked
 
 
 # --- failures must raise, never look like an empty catalog ------------------------------------------
+
 
 @pytest.fixture
 def mock():
@@ -78,7 +92,9 @@ def test_shopify_403_raises(mock):
 
 def test_shopify_later_page_failure_raises(mock):
     full = {"products": [{"id": i, "title": f"P{i}", "handle": f"p{i}", "variants": []} for i in range(250)]}
-    mock.get("https://x.com/products.json", params={"page": "1"}).mock(return_value=httpx.Response(200, json=full))
+    mock.get("https://x.com/products.json", params={"page": "1"}).mock(
+        return_value=httpx.Response(200, json=full)
+    )
     mock.get("https://x.com/products.json", params={"page": "2"}).mock(return_value=httpx.Response(502))
     with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(FetchError):
         shopify.fetch(c, _r())
@@ -93,9 +109,13 @@ def test_shopify_empty_catalog_is_an_answer(mock):
 @respx.mock
 def test_robots_disallow_and_401_robots():
     mock = respx
-    mock.get("https://y.com/robots.txt").mock(return_value=httpx.Response(200, text="User-agent: *\nDisallow: /products.json\n"))
+    mock.get("https://y.com/robots.txt").mock(
+        return_value=httpx.Response(200, text="User-agent: *\nDisallow: /products.json\n")
+    )
     mock.get("https://z.com/robots.txt").mock(return_value=httpx.Response(401))
-    route = mock.get(url__regex=r"https://[yz].com/products.json").mock(return_value=httpx.Response(200, json={}))
+    route = mock.get(url__regex=r"https://[yz].com/products.json").mock(
+        return_value=httpx.Response(200, json={})
+    )
     with PoliteClient(min_interval=0) as c:
         for host in ("y.com", "z.com"):
             with pytest.raises(Blocked):
@@ -104,14 +124,29 @@ def test_robots_disallow_and_401_robots():
 
 
 def test_woocommerce_variation_prices(mock):
-    p = {"id": 10, "name": "Ethiopia", "slug": "ethiopia", "is_in_stock": True,
-         "prices": {"price": "1800", "currency_minor_unit": 2, "price_range": {"min_amount": "1800", "max_amount": "7000"}},
-         "variations": [{"id": 11, "attributes": [{"name": "Size", "value": "12 oz"}]},
-                        {"id": 12, "attributes": [{"name": "Size", "value": "5 lb"}]}]}
+    p = {
+        "id": 10,
+        "name": "Ethiopia",
+        "slug": "ethiopia",
+        "is_in_stock": True,
+        "prices": {
+            "price": "1800",
+            "currency_minor_unit": 2,
+            "price_range": {"min_amount": "1800", "max_amount": "7000"},
+        },
+        "variations": [
+            {"id": 11, "attributes": [{"name": "Size", "value": "12 oz"}]},
+            {"id": 12, "attributes": [{"name": "Size", "value": "5 lb"}]},
+        ],
+    }
     base = "https://x.com/wp-json/wc/store/v1/products"
     mock.get(base).mock(return_value=httpx.Response(200, json=[p]))
-    mock.get(f"{base}/11").mock(return_value=httpx.Response(200, json={"prices": {"price": "1800", "currency_minor_unit": 2}}))
-    mock.get(f"{base}/12").mock(return_value=httpx.Response(200, json={"prices": {"price": "7000", "currency_minor_unit": 2}}))
+    mock.get(f"{base}/11").mock(
+        return_value=httpx.Response(200, json={"prices": {"price": "1800", "currency_minor_unit": 2}})
+    )
+    mock.get(f"{base}/12").mock(
+        return_value=httpx.Response(200, json={"prices": {"price": "7000", "currency_minor_unit": 2}})
+    )
     with PoliteClient(min_interval=0) as c:
         [item] = woocommerce.fetch(c, _r(platform="woocommerce"))
     by_size = {v.grams: v.price_usd for v in item.variants}
@@ -120,20 +155,27 @@ def test_woocommerce_variation_prices(mock):
 
 def test_woocommerce_fixture_fetch(mock, roasters):
     mock.get("https://anaheimcoffee.com/wp-json/wc/store/v1/products").mock(
-        return_value=httpx.Response(200, json=load("woocommerce_anaheimcoffee.json")))
+        return_value=httpx.Response(200, json=load("woocommerce_anaheimcoffee.json"))
+    )
     mock.get(url__regex=r"https://anaheimcoffee.com/wp-json/wc/store/v1/products/\d+").mock(
-        return_value=httpx.Response(200, json={"prices": {"price": "2000", "currency_minor_unit": 2}}))
+        return_value=httpx.Response(200, json={"prices": {"price": "2000", "currency_minor_unit": 2}})
+    )
     with PoliteClient(min_interval=0) as c:
         items = woocommerce.fetch(c, roasters["anaheimcoffee.com"])
     assert len(items) == 8 and all(1 < (v.price_usd or 2) < 500 for i in items for v in i.variants)
 
 
 def test_squarespace_fixture_fetch(mock, roasters):
-    mock.get("https://vividcoffee.com/sitemap.xml").mock(return_value=httpx.Response(
-        200, text="<urlset><url><loc>https://vividcoffee.com/shop/a</loc></url>"
-                  "<url><loc>https://vividcoffee.com/shop/b</loc></url></urlset>"))
+    mock.get("https://vividcoffee.com/sitemap.xml").mock(
+        return_value=httpx.Response(
+            200,
+            text="<urlset><url><loc>https://vividcoffee.com/shop/a</loc></url>"
+            "<url><loc>https://vividcoffee.com/shop/b</loc></url></urlset>",
+        )
+    )
     mock.get("https://vividcoffee.com/shop").mock(
-        return_value=httpx.Response(200, json=load("squarespace_vividcoffee.json")))
+        return_value=httpx.Response(200, json=load("squarespace_vividcoffee.json"))
+    )
     with PoliteClient(min_interval=0) as c:
         assert len(squarespace.fetch(c, roasters["vividcoffee.com"])) == 8
 
@@ -141,12 +183,22 @@ def test_squarespace_fixture_fetch(mock, roasters):
 def test_square_online(mock):
     html = '<script>{"user":{"id":143063903,"properties":{}},"site_id":"480502767511180931"}</script>'
     mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text=html))
-    product = {"id": "ABC", "site_product_id": "142", "name": "Ethiopia Guji 12oz", "site_link": "product/ethiopia/142",
-               "absolute_site_link": "https://sq.com/product/ethiopia/142", "badges": {"out_of_stock": False},
-               "price": {"regular_low": 18, "regular_high": 18}, "short_description": "<p>Washed. Notes: peach</p>",
-               "images": {"data": [{"absolute_url": "https://img/1.jpg"}]}}
-    mock.get(url__regex=r"https://cdn5.editmysite.com/app/store/api/v28/editor/users/143063903/sites/480502767511180931/products.*").mock(
-        return_value=httpx.Response(200, json={"data": [product], "meta": {"pagination": {"total_pages": 1}}}))
+    product = {
+        "id": "ABC",
+        "site_product_id": "142",
+        "name": "Ethiopia Guji 12oz",
+        "site_link": "product/ethiopia/142",
+        "absolute_site_link": "https://sq.com/product/ethiopia/142",
+        "badges": {"out_of_stock": False},
+        "price": {"regular_low": 18, "regular_high": 18},
+        "short_description": "<p>Washed. Notes: peach</p>",
+        "images": {"data": [{"absolute_url": "https://img/1.jpg"}]},
+    }
+    mock.get(
+        url__regex=r"https://cdn5.editmysite.com/app/store/api/v28/editor/users/143063903/sites/480502767511180931/products.*"
+    ).mock(
+        return_value=httpx.Response(200, json={"data": [product], "meta": {"pagination": {"total_pages": 1}}})
+    )
     with PoliteClient(min_interval=0) as c:
         [item] = square_online.fetch(c, _r("sq.com", "square_online?"))
     assert item.product_id == "142" and item.handle == "ethiopia" and item.variants[0].price_usd == 18
@@ -159,8 +211,14 @@ def test_square_online_price_range_is_not_a_price():
 
 
 def test_generic_mostly_failing_raises(mock):
-    mock.get("https://x.com/sitemap.xml").mock(return_value=httpx.Response(
-        200, text="<urlset>" + "".join(f"<url><loc>https://x.com/products/p{i}</loc></url>" for i in range(3)) + "</urlset>"))
+    mock.get("https://x.com/sitemap.xml").mock(
+        return_value=httpx.Response(
+            200,
+            text="<urlset>"
+            + "".join(f"<url><loc>https://x.com/products/p{i}</loc></url>" for i in range(3))
+            + "</urlset>",
+        )
+    )
     mock.get(url__regex=r"https://x.com/products/p\d").mock(return_value=httpx.Response(500))
     with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(FetchError):
         generic.fetch(c, _r(platform="other"))

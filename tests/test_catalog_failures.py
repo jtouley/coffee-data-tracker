@@ -12,8 +12,15 @@ from coffeedata.models import Roaster
 SQ = Roaster(roaster_id="sq.com", name="SQ", host="sq.com", platform="squarespace?")
 GEN = Roaster(roaster_id="gen.com", name="GEN", host="gen.com", platform="other")
 PATHS = squarespace.COMMON_SHOP_PATHS
-ITEM = {"id": "i1", "title": "Ethiopia Guji", "fullUrl": "/shop/p/guji", "productType": 1,
-        "variants": [{"id": "v1", "attributes": {"size": "12oz"}, "priceMoney": {"value": "20.00"}, "unlimited": True}]}
+ITEM = {
+    "id": "i1",
+    "title": "Ethiopia Guji",
+    "fullUrl": "/shop/p/guji",
+    "productType": 1,
+    "variants": [
+        {"id": "v1", "attributes": {"size": "12oz"}, "priceMoney": {"value": "20.00"}, "unlimited": True}
+    ],
+}
 
 
 def collection(items):
@@ -56,7 +63,9 @@ def test_S3_empty_collections_are_an_empty_catalog(mock):
 
 
 def test_S4_later_page_failure_raises(mock):
-    first = httpx.Response(200, json={"items": [ITEM], "pagination": {"nextPage": True, "nextPageOffset": 99}})
+    first = httpx.Response(
+        200, json={"items": [ITEM], "pagination": {"nextPage": True, "nextPageOffset": 99}}
+    )
     route = mock.get("https://sq.com/shop")
     route.side_effect = [first, httpx.Response(403)]
     with pytest.raises(FetchError):
@@ -64,8 +73,11 @@ def test_S4_later_page_failure_raises(mock):
 
 
 def test_S5_html_then_json_collection(mock):
-    sq_paths(mock, {"/shop": httpx.Response(200, text="<html>shop</html>"), "/store": collection([ITEM])},
-             httpx.Response(404))
+    sq_paths(
+        mock,
+        {"/shop": httpx.Response(200, text="<html>shop</html>"), "/store": collection([ITEM])},
+        httpx.Response(404),
+    )
     assert len(fetch_sq()) == 1
 
 
@@ -88,7 +100,9 @@ def test_S8_challenge_html_everywhere_raises(mock):
 
 def test_squarespace_robots_disallow_raises():
     with respx.mock(assert_all_called=False) as m:
-        m.get("https://sq.com/robots.txt").mock(return_value=httpx.Response(200, text="User-agent: *\nDisallow: /\n"))
+        m.get("https://sq.com/robots.txt").mock(
+            return_value=httpx.Response(200, text="User-agent: *\nDisallow: /\n")
+        )
         route = m.get(url__regex=r"https://sq.com/.+").mock(return_value=collection([ITEM]))
         with pytest.raises(FetchError):
             fetch_sq()
@@ -97,14 +111,22 @@ def test_squarespace_robots_disallow_raises():
 
 # --- generic -------------------------------------------------------------------------------------
 
+
 def sitemap(n):
-    return httpx.Response(200, text="<urlset>" + "".join(
-        f"<url><loc>https://gen.com/products/p{i}</loc></url>" for i in range(n)) + "</urlset>")
+    return httpx.Response(
+        200,
+        text="<urlset>"
+        + "".join(f"<url><loc>https://gen.com/products/p{i}</loc></url>" for i in range(n))
+        + "</urlset>",
+    )
 
 
 def page(name):
-    return httpx.Response(200, text=f'<script type="application/ld+json">{{"@type": "Product", "name": "{name} 12oz", '
-                                    f'"sku": "{name}", "offers": {{"price": "20"}}}}</script>')
+    return httpx.Response(
+        200,
+        text=f'<script type="application/ld+json">{{"@type": "Product", "name": "{name} 12oz", '
+        f'"sku": "{name}", "offers": {{"price": "20"}}}}</script>',
+    )
 
 
 def fetch_gen():
@@ -130,14 +152,18 @@ def test_G2_all_pages_fail_raises(mock):
 
 def test_G3_pages_without_markup_are_an_empty_catalog(mock):
     mock.get("https://gen.com/sitemap.xml").mock(return_value=sitemap(12))
-    route = mock.get(url__regex=r"https://gen.com/products/p\d+").mock(return_value=httpx.Response(200, text="<p>hi</p>"))
+    route = mock.get(url__regex=r"https://gen.com/products/p\d+").mock(
+        return_value=httpx.Response(200, text="<p>hi</p>")
+    )
     assert fetch_gen() == []
     assert route.call_count == generic.GIVE_UP_AFTER
 
 
 def test_generic_blocked_sitemap_raises():
     with respx.mock(assert_all_called=False) as m:
-        m.get("https://gen.com/robots.txt").mock(return_value=httpx.Response(200, text="User-agent: *\nDisallow: /\n"))
+        m.get("https://gen.com/robots.txt").mock(
+            return_value=httpx.Response(200, text="User-agent: *\nDisallow: /\n")
+        )
         with pytest.raises(FetchError):
             fetch_gen()
 

@@ -16,13 +16,20 @@ from ..text import html_to_text, to_float
 
 MAX_PAGES = 80
 # Shopify/Woo /product(s)/x, Wix /product-page/x, Square Online /product/x/ID, BigCommerce /x/ under /shop/.
-_PRODUCTISH = re.compile(r"/(product-page|products?|shop|store|coffees?|beans|items?|p)/[^/]+(/[A-Za-z0-9]{6,})?/?$", re.I)
+_PRODUCTISH = re.compile(
+    r"/(product-page|products?|shop|store|coffees?|beans|items?|p)/[^/]+(/[A-Za-z0-9]{6,})?/?$", re.I
+)
 _LD = re.compile(r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', re.S | re.I)
 
 
-_BEANY = re.compile(r"coffee|roast|blend|espresso|decaf|origin|bean|natural|washed|honey|"
-                    r"ethiopia|colombia|kenya|guatemala|brazil|peru|honduras|mexico|sumatra|rwanda|burundi", re.I)
-_MERCHY = re.compile(r"mug|shirt|tee|hat|cap|sticker|tumbler|hoodie|gift|card|grinder|filter|subscription", re.I)
+_BEANY = re.compile(
+    r"coffee|roast|blend|espresso|decaf|origin|bean|natural|washed|honey|"
+    r"ethiopia|colombia|kenya|guatemala|brazil|peru|honduras|mexico|sumatra|rwanda|burundi",
+    re.I,
+)
+_MERCHY = re.compile(
+    r"mug|shirt|tee|hat|cap|sticker|tumbler|hoodie|gift|card|grinder|filter|subscription", re.I
+)
 
 
 def product_urls(urls: list[str]) -> list[str]:
@@ -65,13 +72,20 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
         title = str(o.get("name") or o.get("sku") or "")
         avail = str(o.get("availability") or "")
         vid = str(o.get("sku") or i)
-        if vid in seen:  # some stores repeat one SKU across every offer; variant ids must be unique per product
+        if (
+            vid in seen
+        ):  # some stores repeat one SKU across every offer; variant ids must be unique per product
             vid = f"{vid}#{i}"
         seen.add(vid)
-        variants.append(Variant(variant_id=vid, title=title,
-                                price_usd=to_float(o.get("price") or o.get("lowPrice")),
-                                grams=parse_grams(title) or parse_grams(str(p.get("name"))),
-                                available=("InStock" in avail) if avail else None))
+        variants.append(
+            Variant(
+                variant_id=vid,
+                title=title,
+                price_usd=to_float(o.get("price") or o.get("lowPrice")),
+                grams=parse_grams(title) or parse_grams(str(p.get("name"))),
+                available=("InStock" in avail) if avail else None,
+            )
+        )
     image = p.get("image")
     if isinstance(image, list):
         image = image[0] if image else None
@@ -80,9 +94,15 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
     pid = str(p.get("productID") or p.get("sku") or hashlib.sha1(url.encode()).hexdigest()[:12])
     return CatalogItem(
-        roaster_id=roaster.roaster_id, product_id=pid, handle=handle, url=url,
-        title=html_to_text(str(p.get("name") or handle)), platform="generic",
-        product_type=str(p.get("category") or ""), image=image, variants=variants,
+        roaster_id=roaster.roaster_id,
+        product_id=pid,
+        handle=handle,
+        url=url,
+        title=html_to_text(str(p.get("name") or handle)),
+        platform="generic",
+        product_type=str(p.get("category") or ""),
+        image=image,
+        variants=variants,
         body_text=html_to_text(str(p.get("description") or "")),
     )
 

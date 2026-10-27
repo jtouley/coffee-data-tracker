@@ -25,14 +25,18 @@ def export(db: Path, dest: str = "build/public") -> dict:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
+
     def scalar(sql: str):
         row = con.execute(sql).fetchone()
         return row[0] if row else None
 
     counts = {t: scalar(f"select count(*) from {t}") for t in PUBLIC_TABLES}
     as_of = scalar("select max(last_seen) from public_coffee")
-    manifest = {"as_of_run": str(as_of) if as_of else None, "exported_at": datetime.now(UTC).isoformat(timespec="seconds"),
-                "tables": counts}
+    manifest = {
+        "as_of_run": str(as_of) if as_of else None,
+        "exported_at": datetime.now(UTC).isoformat(timespec="seconds"),
+        "tables": counts,
+    }
 
     if dest.startswith(("s3://", "gs://")):
         _configure_object_store(con, dest)
@@ -56,8 +60,10 @@ def _configure_object_store(con, dest: str) -> None:
         con.execute("INSTALL aws; LOAD aws;")
         con.execute("CREATE OR REPLACE SECRET pub (TYPE s3, PROVIDER credential_chain)")
     else:
-        con.execute("CREATE OR REPLACE SECRET pub (TYPE gcs, KEY_ID ?, SECRET ?)",
-                    [os.environ["GCS_HMAC_KEY_ID"], os.environ["GCS_HMAC_SECRET"]])
+        con.execute(
+            "CREATE OR REPLACE SECRET pub (TYPE gcs, KEY_ID ?, SECRET ?)",
+            [os.environ["GCS_HMAC_KEY_ID"], os.environ["GCS_HMAC_SECRET"]],
+        )
 
 
 def _upload_hf(local: Path, dest: str, manifest: dict) -> None:
@@ -66,10 +72,16 @@ def _upload_hf(local: Path, dest: str, manifest: dict) -> None:
     repo_id = dest.removeprefix("hf://datasets/").split("@")[0]
     api = HfApi(token=os.environ.get("HF_TOKEN"))
     api.create_repo(repo_id, repo_type="dataset", private=False, exist_ok=True)
-    ops = [CommitOperationAdd(path_in_repo=f"data/{p.name}", path_or_fileobj=str(p))
-           for p in sorted(local.glob("*.parquet"))]
+    ops = [
+        CommitOperationAdd(path_in_repo=f"data/{p.name}", path_or_fileobj=str(p))
+        for p in sorted(local.glob("*.parquet"))
+    ]
     ops.append(CommitOperationAdd(path_in_repo="manifest.json", path_or_fileobj=str(local / "manifest.json")))
     if CARD.exists():
         ops.append(CommitOperationAdd(path_in_repo="README.md", path_or_fileobj=str(CARD)))
-    api.create_commit(repo_id=repo_id, repo_type="dataset", operations=ops,
-                      commit_message=f"weekly public export (run {manifest['as_of_run']})")
+    api.create_commit(
+        repo_id=repo_id,
+        repo_type="dataset",
+        operations=ops,
+        commit_message=f"weekly public export (run {manifest['as_of_run']})",
+    )

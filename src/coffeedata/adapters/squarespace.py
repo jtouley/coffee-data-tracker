@@ -30,15 +30,26 @@ def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
     for v in i.get("variants") or []:
         title = " ".join(str(x) for x in (v.get("attributes") or {}).values())
         stock = v.get("unlimited") or (v.get("qtyInStock") or 0) > 0
-        variants.append(Variant(variant_id=str(v.get("id") or v.get("sku")), title=title,
-                                price_usd=to_float((v.get("priceMoney") or {}).get("value")),
-                                grams=parse_grams(title), available=bool(stock)))
+        variants.append(
+            Variant(
+                variant_id=str(v.get("id") or v.get("sku")),
+                title=title,
+                price_usd=to_float((v.get("priceMoney") or {}).get("value")),
+                grams=parse_grams(title),
+                available=bool(stock),
+            )
+        )
     return CatalogItem(
-        roaster_id=roaster.roaster_id, product_id=str(i["id"]), handle=i.get("urlId") or str(i["id"]),
-        url=f"https://{roaster.host}{i.get('fullUrl', '')}", title=(i.get("title") or "").strip(),
-        platform="squarespace", product_type=",".join(i.get("categories") or []),
+        roaster_id=roaster.roaster_id,
+        product_id=str(i["id"]),
+        handle=i.get("urlId") or str(i["id"]),
+        url=f"https://{roaster.host}{i.get('fullUrl', '')}",
+        title=(i.get("title") or "").strip(),
+        platform="squarespace",
+        product_type=",".join(i.get("categories") or []),
         tags=sorted(set(i.get("tags") or []) | set(i.get("categories") or [])),
-        image=i.get("assetUrl"), variants=variants,
+        image=i.get("assetUrl"),
+        variants=variants,
         body_text=html_to_text(i.get("body") or i.get("excerpt")),
     )
 
@@ -64,8 +75,11 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
             return None
         if not isinstance(data, dict) or not isinstance(data.get("items", []), list):
             raise FetchError(f"unexpected Squarespace payload at {path}")
-        items.extend(i for i in data.get("items") or []
-                     if isinstance(i, dict) and ("variants" in i or "productType" in i))
+        items.extend(
+            i
+            for i in data.get("items") or []
+            if isinstance(i, dict) and ("variants" in i or "productType" in i)
+        )
         pagination = data.get("pagination") or {}
         offset = pagination.get("nextPageOffset") if pagination.get("nextPage") else None
         if not offset:

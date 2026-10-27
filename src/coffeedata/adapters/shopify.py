@@ -19,14 +19,29 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
         grams = parse_grams(title)
         if grams is None and isinstance(v.get("grams"), int) and 30 <= v["grams"] <= 25_000:
             grams = v["grams"]
-        variants.append(Variant(variant_id=str(v["id"]), title=str(v.get("title") or ""),
-                                price_usd=to_float(v.get("price")), grams=grams, available=v.get("available")))
+        variants.append(
+            Variant(
+                variant_id=str(v["id"]),
+                title=str(v.get("title") or ""),
+                price_usd=to_float(v.get("price")),
+                grams=grams,
+                available=v.get("available"),
+            )
+        )
     image = next((i.get("src") if isinstance(i, dict) else str(i) for i in p.get("images") or []), None)
     return CatalogItem(
-        roaster_id=roaster.roaster_id, product_id=str(p["id"]), handle=p.get("handle") or str(p["id"]),
-        url=f"https://{roaster.host}/products/{p.get('handle')}", title=(p.get("title") or "").strip(),
-        platform="shopify", vendor=p.get("vendor") or "", product_type=p.get("product_type") or "",
-        tags=sorted(map(str, tags)), image=image, variants=variants, body_text=html_to_text(p.get("body_html")),
+        roaster_id=roaster.roaster_id,
+        product_id=str(p["id"]),
+        handle=p.get("handle") or str(p["id"]),
+        url=f"https://{roaster.host}/products/{p.get('handle')}",
+        title=(p.get("title") or "").strip(),
+        platform="shopify",
+        vendor=p.get("vendor") or "",
+        product_type=p.get("product_type") or "",
+        tags=sorted(map(str, tags)),
+        image=image,
+        variants=variants,
+        body_text=html_to_text(p.get("body_html")),
     )
 
 
