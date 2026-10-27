@@ -216,6 +216,7 @@ async function newPage(browser, errors) {
     await page.setInputFiles("#photo", bagPhoto);
     await page.waitForSelector('[data-step="failed"]:not([hidden])');
     assert.match(await page.textContent('[data-f="failed-body"]'), /saved on this phone/);
+    await shoot(page, "bag-offline");
     await page.getByRole("button", { name: "Type the coffee" }).last().click();
     await page.fill("#coffee", "the washed one");
     await page.getByRole("button", { name: "Use this coffee" }).last().click();
