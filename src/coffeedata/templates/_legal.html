@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{% endblock %} · registry.coffee</title>
+<link rel="canonical" href="{{ links.site }}/{% block slug %}{% endblock %}/">
+<meta name="robots" content="index, follow">
+<style>
+{% include "_brand.css" %}
+main { max-width: 720px; margin: 0 auto; padding: 16px 0 64px; }
+h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.01em; margin: 16px 0 8px; font-weight: 600; }
+.updated { color: var(--text-muted); font-size: 14px; margin: 0 0 32px; }
+h2 { font-size: 20px; margin: 36px 0 8px; }
+p, li { color: var(--text-secondary); }
+li { margin: 6px 0; }
+strong { color: var(--text-primary); }
+.summary { background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; }
+.caps { text-transform: uppercase; font-size: 14px; letter-spacing: .01em; }
+footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(--text-muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <a class="mark-word serif" href="../">registry<span class="dot">.</span>coffee</a>
+  <div class="right">
+    <a href="../catalog/">Catalog</a>
+    <button class="theme" id="theme" type="button">Theme</button>
+  </div>
+</nav>
+<main>
+  <h1 class="serif">{{ self.title() }}</h1>
+  <p class="updated">Last updated {{ updated }}</p>
+  {% block body %}{% endblock %}
+</main>
+<footer>
+  <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · Questions:
+  <a href="mailto:{{ contact }}">{{ contact }}</a>
+</footer>
+</div>
+<div id="tip" role="status"></div>
+<script>
+(() => {
+{% include "_common.js" %}
+})();
+</script>
+</body>
+</html>

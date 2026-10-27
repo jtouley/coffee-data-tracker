@@ -2,4 +2,4 @@
 select e.run_date, e.coffee_id, e.roaster_id, e.variant_id as bag_id, e.event, e.price_usd,
        e.previous_price_usd, e.available
 from {{ ref('fct_price_event') }} e
-join {{ ref('public_roaster') }} using (roaster_id)
+where e.coffee_id in (select coffee_id from {{ ref('public_coffee') }})  -- public roasters, coffees with a safe link
