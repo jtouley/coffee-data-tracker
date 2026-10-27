@@ -326,7 +326,7 @@ keep retries from undoing anything:
   server, but it no longer decides between two versions from the phone.
 - A resend identical to what's stored is acknowledged without writing (#13).
 - File names are `<id>__<logged_at>-<6 random hex>.parquet` for every table, so two records for one id in the same
-  second never collide. #13 does this for shots; equipment and bags need the suffix too.
+  second never collide. #13 does this for shots; equipment and bags need the suffix too (#22).
 
 Each dataset (lake, photos, users) has its own staging folder (`build/lake-staging`, `build/photos-staging`,
 `build/users-staging`), and `Lake.publish` uploads only that dataset's folder, one publish at a time per dataset,
@@ -623,6 +623,10 @@ app, but it needs the bag and photo tables from 1 first.
 
 Some rules in this plan only hold if code keeps them, and a later change can break one quietly. Each has a test in
 the milestone that builds it, and the test names the rule. A milestone isn't done until its rules' tests pass.
+
+Where the code doesn't keep a rule yet (per-record `rev`, file-name suffixes on bags and equipment, per-dataset
+staging, `time_source`, null `user_id` as the owner in the app, the whole-shot best recipe, Crockford invite codes),
+the gap is listed in #22, "Deferred review findings from the app milestone PRs".
 
 | Rule | Where in this plan | Test | Milestone |
 |---|---|---|---|
