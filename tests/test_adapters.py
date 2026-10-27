@@ -222,3 +222,84 @@ def test_generic_mostly_failing_raises(mock):
     mock.get(url__regex=r"https://x.com/products/p\d").mock(return_value=httpx.Response(500))
     with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(FetchError):
         generic.fetch(c, _r(platform="other"))
+
+
+@pytest.mark.parametrize(
+    "html, ids",
+    [
+        (
+            '<script>{"user":{"id":143063903},"site_id":"480502767511180931"}</script>',
+            ("143063903", "480502767511180931"),
+        ),
+        (
+            '<script>com_userID = "91999742"; com_currentSite = "365034632528666450";</script>',
+            ("91999742", "365034632528666450"),
+        ),
+        (
+            "<script>com_userID = '91999742'; com_currentSite = '365034632528666450';</script>",
+            ("91999742", "365034632528666450"),
+        ),
+        ('<a href="https://app.squareup.com/gift/ML0CVF31XSMZQ/order">Gift cards</a>', None),
+    ],
+)
+def test_square_online_site_ids(html, ids):
+    assert square_online.site_ids(html) == ids
+
+
+def test_square_online_upload_path_ids_are_separate():
+    html = '<div style="background: url(//www.weebly.com/uploads/b/120598593-592781055177749699/a.jpg)">'
+    assert square_online.site_ids(html) is None
+    assert square_online.upload_ids(html) == ("120598593", "592781055177749699")
+
+
+def test_square_online_store_links_only_match_square_site_hosts():
+    html = (
+        '<a href="https://shop.square.site.evil.com/">x</a> <a href="https://Airship-Coffee.square.site/#T7">a</a>'
+        ' <a href="https://airship-coffee.square.site/menu">b</a> <a href="https://other.square.site">c</a>'
+    )
+    assert square_online.store_links(html) == [
+        "https://airship-coffee.square.site",
+        "https://other.square.site",
+    ]
+
+
+def test_square_online_follows_a_linked_square_site_store(mock):
+    home = '<a href="https://airship-coffee.square.site/#T72CBWSPVBS4I3FRZUACDA7W">Shop</a>'
+    mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text=home))
+    mock.get("https://airship-coffee.square.site/").mock(
+        return_value=httpx.Response(200, text='{"user":{"id":130995357},"site_id":804583245133429738}')
+    )
+    mock.get(
+        url__regex=r"https://cdn5.editmysite.com/.*/users/130995357/sites/804583245133429738/products.*"
+    ).mock(return_value=httpx.Response(200, json={"data": [{"id": "A", "name": "Kenya 12oz"}], "meta": {}}))
+    with PoliteClient(min_interval=0) as c:
+        [item] = square_online.fetch(c, _r("sq.com", "square_online?"))
+    assert item.title == "Kenya 12oz"
+
+
+def test_square_online_without_a_store_fails(mock):
+    mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text="<p>Order on Square</p>"))
+    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="no Square Online store ids"):
+        square_online.fetch(c, _r("sq.com", "square_online?"))
+
+
+def test_square_online_tries_each_linked_store_and_links_products_to_it(mock):
+    home = (
+        '<img src="//www.weebly.com/uploads/b/111111111-222222222222222222/borrowed.jpg">'
+        '<a href="https://gone.square.site/">old</a> <a href="https://shop-x.square.site/">shop</a>'
+    )
+    mock.get("https://sq.com/").mock(return_value=httpx.Response(200, text=home))
+    mock.get("https://gone.square.site/").mock(return_value=httpx.Response(404))
+    mock.get("https://shop-x.square.site/").mock(
+        return_value=httpx.Response(200, text='{"user":{"id":130995357},"site_id":804583245133429738}')
+    )
+    mock.get(
+        url__regex=r"https://cdn5.editmysite.com/.*/users/130995357/sites/804583245133429738/products.*"
+    ).mock(
+        return_value=httpx.Response(
+            200, json={"data": [{"id": "A", "name": "Kenya", "site_link": "product/kenya/7"}]}
+        )
+    )
+    with PoliteClient(min_interval=0) as c:
+        [item] = square_online.fetch(c, _r("sq.com", "square_online?"))
+    assert item.url == "https://shop-x.square.site/product/kenya/7"  # the store's address, not the roaster's
