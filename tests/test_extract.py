@@ -72,3 +72,23 @@ def test_parse_llm_message_merges_over_rules():
     assert e.tasting_notes == ["blackcurrant", "grapefruit"] and e.method == "llm"
     refused = SimpleNamespace(stop_reason="refusal", content=[])
     assert extract.parse_llm_message(refused, base) is None
+
+
+def test_java_is_an_origin_only_with_a_javanese_place():
+    assert extract.rules(item("Mocha Java Blend")).origin_country is None
+    mocha = extract.rules(item("Moka Java", body="Our take on the oldest blend."))
+    assert mocha.is_blend and mocha.origin_country is None
+    assert extract.rules(item("Java Chip", body="Chocolate and roast.")).origin_country is None
+    assert extract.rules(item("West Java Frinsa Natural")).origin_country == "Indonesia"
+    assert extract.rules(item("Java Estate Kayumas")).origin_country == "Indonesia"
+    assert extract.rules(item("Sumatra Takengon")).origin_country == "Indonesia"
+
+
+def test_grab_bags_and_multi_country_titles_have_no_origin():
+    multi = item("5 lb Single Origin Coffee — Puerto Rico Supremo, Mexico, or Colombia")
+    assert extract.rules(multi).origin_country is None
+    pick = item("Roaster Dave's Pick (Random Coffee)", body="Could be a Kona, could be a Kenya.")
+    assert extract.rules(pick).origin_country is None
+    assert extract.rules(item("Kona Extra Fancy")).origin_country == "United States"
+    tagged = item("Colombia & Ethiopia", tags=["origin:Colombia"])
+    assert extract.rules(tagged).origin_country == "Colombia"

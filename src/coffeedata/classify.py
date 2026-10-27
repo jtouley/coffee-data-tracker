@@ -15,9 +15,34 @@ _NOT_COFFEE = re.compile(
     r"syrup|class|workshop|wholesale|merch|apparel|candle|book|socks|bundle|sampler|variety pack|coaster|"
     r"bottle|strainer|glass|mat|towel|ornament|keychain|chocolate[- ]covered|gragee|dragee|candy|truffles?|"
     r"bonbons?|cookies?|granola|brittle|toffee bar|"
-    r"tasting set|trio|flight|gift box|gift set|\bset\b|instant|steeped|drip bags?|single serve)\b",
+    r"tasting set|trio|flight|gift box|gift set|\bset\b|instant|steeped|drip bags?|single serve|"
+    # Machine parts, cups, cleaning supplies, services and other things sold next to beans.
+    r"screws?|gaskets?|o-?rings?|burrs|burr set|portafilters?|shower screens?|steam (wands?|tips?)|"
+    r"solenoids?|thermostats?|(machine|grinder|spare|replacement) parts?|lids?|java jackets?|cup sleeves?|"
+    r"saucers?|(espresso|lungo|cappuccino|latte|demitasse|dosing|tasting) cups?|brush(es)?|cleaner(?! cup)|"
+    r"cleaning|descal\w*|shipping protection|relief donation|gift baskets?|weekend experience|repairs?|"
+    r"warranty)\b",
     re.I,
 )
+# Sauces, unless the title also reads as a coffee: "Ecuador El Sauce" is a farm, "Survival Sauce" a blend.
+_SAUCE = re.compile(r"\bsauces?\b", re.I)
+# Spare parts and machines: part numbers like "(VITE3X10)", "(T.1.054)", "(62100000093)" or "Ceado (40315)", a
+# "| Fits Linea Mini" suffix, or a machine, grinder or cleaner maker's name first. Part numbers are matched
+# case-sensitively, so bag sizes like "(12oz.)" and "(2-Pack)" don't count.
+_PART_NO = re.compile(
+    r"\(\d{5,}(\.\d+)?\)|\((?=[A-Z0-9./-]*\d)(?=[A-Z0-9./-]*[A-Z])(?![\d.]+(LBS?|OZ|G|KG)\))[A-Z0-9][A-Z0-9./-]{4,}\)"
+)
+_PARTS_SELLER = re.compile(
+    r"\|\s*fits\s|^(BFC|La Marzocco|Mahlk[oö]nig|Mazzer|Ceado|Anfim|Bentwood|Rancilio|Etzinger|PUQ ?Press|Egro|"
+    r"Nuova Simonelli|Victoria Arduino|Baratza|Fiorenzato|Compak|Breville|Lelit|Profitec|La Spaziale|Faema|Gaggia|"
+    r"Bezzera|Synesso|Ditting|Fetco|Urnex|Cafiza|Pallo|Rattleware|Acaia|Hario|Kalita|Comandante|Timemore|"
+    r"1Zpresso|Link Roaster|Modbar)\b",
+    re.I,
+)
+# Test listings: "[Test] Rafael", "Star of the North - TEST", "TEST BATCH 2 LB", "E2E Test". A trailing mixed-case
+# "Test" ("Gold Miners Decaf Test") or a name containing TEST ("NLU THE EYE TEST") stays.
+_TEST = re.compile(r"[\[(]test[\])]|\be2e\b|\btest (coffee|product|batch|item)\b", re.I)
+_TEST_CAPS = re.compile(r"^TEST\b|[-–|:]\s*TEST\s*$")
 # Strong evidence a product is beans. The bare word "coffee" is not (mugs, shirts, "Bring Me Coffee").
 _COFFEE_WORDS = re.compile(
     r"\b(whole bean|single origin|single-origin|blend|espresso|decaf|roast|roasted|washed|natural|honey|"
@@ -42,6 +67,16 @@ def is_coffee(item: CatalogItem) -> bool:
     head = f"{item.title} | {item.product_type}"
     tags = " ".join(item.tags)
     if _NOT_COFFEE.search(head) or _TEA.search(item.title) or _TEA_TYPE.search(item.product_type):
+        return False
+    title = item.title
+    if (
+        _PART_NO.search(title)
+        or _PARTS_SELLER.search(title)
+        or _TEST.search(title)
+        or _TEST_CAPS.search(title)
+    ):
+        return False
+    if _SAUCE.search(title) and not (_COFFEE_WORDS.search(title) or _COUNTRY.search(title)):
         return False
     if _NOT_COFFEE.search(item.product_type) or re.search(r"\b(equipment|merch|gear|apparel)\b", tags, re.I):
         return False

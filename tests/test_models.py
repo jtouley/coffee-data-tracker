@@ -39,3 +39,17 @@ def test_shot_validation_ranges():
         Shot(**base | {"rating": 6})
     with pytest.raises(ValueError):
         Shot(**base | {"bogus": 1})
+
+
+def test_double_escaped_titles_are_unescaped():
+    from coffeedata.models import CatalogItem
+
+    i = CatalogItem(
+        roaster_id="r",
+        product_id="1",
+        handle="h",
+        url="u",
+        title="Tried &amp;amp; True | House Blend",
+        platform="shopify",
+    )
+    assert i.title == "Tried & True | House Blend"

@@ -76,3 +76,27 @@ def test_rerun_skips_done_and_does_not_reenrich(lake, monkeypatch):
         f"from {lake.scan('enrichments')}"
     ).fetchone()[0]
     assert dup == 0
+
+
+def test_changed_rules_reenrich_unchanged_descriptions(lake, monkeypatch):
+    """A rules fix must reach coffees whose description hasn't changed since they were last enriched."""
+    from datetime import UTC, datetime
+
+    from coffeedata import extract
+
+    def week(run_date):
+        with respx.mock(assert_all_called=False) as m:
+            m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+            m.get("https://onyxcoffeelab.com/products.json").mock(
+                return_value=httpx.Response(200, json=load("shopify_onyxcoffeelab.json"))
+            )
+            ingest.run(lake, _roasters()[:1], run_date, workers=1)
+
+    def count():
+        return lake.connect().execute(f"select count(*) from {lake.scan('enrichments')}").fetchone()[0]
+
+    week("2026-10-26")
+    first = count()
+    monkeypatch.setattr(extract, "RULES_UPDATED", datetime(2999, 1, 1, tzinfo=UTC))
+    week("2026-11-02")
+    assert count() == 2 * first

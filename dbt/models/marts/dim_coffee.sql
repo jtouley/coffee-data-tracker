@@ -19,8 +19,11 @@ prices as (
         coffee_id,
         bool_or(coalesce(available, true)) as any_available,
         min(price_usd) filter (where price_usd > 0) as min_price_usd,
+        -- A price outside $0.50-$150 per 100 g is a misread weight or price, not a real bag.
         min(round(price_usd / grams * 100, 2)) filter (where grams between 150 and 2500 and price_usd > 0
-                                                         and coalesce(available, true)) as price_per_100g,
+                                                         and coalesce(available, true)
+                                                         and price_usd / grams * 100 between 0.5 and 150)
+            as price_per_100g,
         list(distinct grams order by grams) filter (where grams is not null) as bag_sizes_g
     from variants group by coffee_id
 ),
