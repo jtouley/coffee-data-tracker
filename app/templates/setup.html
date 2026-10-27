@@ -18,7 +18,7 @@
     {% if not gear[kind] %}<a class="link" href="/setup/gear/new?kind={{ kind }}"><span>Add your {{ kind }}<span class="meta">{% if kind == "grinder" %}So a grind setting means something{% elif kind == "basket" %}Its nominal dose is the first shot’s dose{% else %}Optional{% endif %}</span></span>{{ chevron() }}</a>{% endif %}
   </div>
   {% endfor %}
-  <a class="btn secondary mt24" href="/setup/gear/new">Add equipment</a>
+  {% if gear.grinder and gear.machine and gear.basket %}<a class="btn secondary mt24" href="/setup/gear/new">Add equipment</a>{% endif %}
   <h2 class="section">Appearance</h2>
   <div class="flabel" id="theme-l">Theme</div>
   <div class="seg" role="group" aria-labelledby="theme-l" aria-describedby="theme-h" data-theme-choice>

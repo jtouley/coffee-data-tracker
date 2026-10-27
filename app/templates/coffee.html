@@ -20,7 +20,7 @@
   </div>
   <h2 class="section">All {{ shots_n(n_all) }}</h2>
   <div>{{ chart | safe }}</div>
-  <div class="legend mt8" aria-hidden="true"><span class="key sour">Sour</span><span class="key balanced">Balanced</span><span class="key bitter">Bitter</span><span class="key none">No taste</span></div>
+  <div class="legend mt8" aria-hidden="true">{% for t, l in (("sour", "Sour"), ("balanced", "Balanced"), ("bitter", "Bitter"), ("none", "No taste")) if t in tastes %}<span class="key {{ t }}">{{ l }}</span>{% endfor %}</div>
   {% else %}
   <p class="body mt24 ruled">No shots of this coffee yet.</p>
   {% endif %}

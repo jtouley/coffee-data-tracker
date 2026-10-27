@@ -61,7 +61,7 @@ def test_coffees_empty_state(lake):
 def test_history_groups_shots_by_bag_newest_first(world):
     c, _, _ = world
     html = c.get("/history").text
-    assert re.findall(r'href="/shot/(\w+)"', html) == ["m1", "b2", "b1", "a2", "a1"]
+    assert re.findall(r'href="/shot/(\w+)\?from=history"', html) == ["m1", "b2", "b1", "a2", "a1"]
     assert html.count('class="group"') == 3  # one heading per bag, each opening the coffee
 
 

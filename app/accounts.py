@@ -372,7 +372,9 @@ class Accounts:
         acct = self.by_name(name)
         ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
         if not ok or acct is None or acct.disabled:
-            raise AccountError("That username and password don’t match. Check both and try again.")
+            raise AccountError(
+                "That username and password don’t match. Check them, or ask the owner for a reset code."
+            )
         self.limiter.clear(ukey)
         self.limiter.release(ikey, now)
         if _hasher.check_needs_rehash(acct.password_hash):

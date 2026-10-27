@@ -167,7 +167,7 @@ details + .section.group { margin-top: 24px; }
 .field input::placeholder { color: var(--ink-2); }
 .input::placeholder { color: var(--ink-2); }
 .input.empty, .input.empty::-webkit-datetime-edit { color: var(--ink-2); }
-.field .notimed { color: var(--ink-2); white-space: nowrap; }
+.field .notimed { color: var(--ink-2); white-space: nowrap; display: inline-block; line-height: 3.5rem; } /* as tall as the timed numeral */
 .steps { display: flex; gap: 8px; }
 /* Left-handed: the steppers move to the left edge, the numbers to the right */
 [data-hand="left"] .field { grid-template-columns: auto 1fr; }
@@ -244,7 +244,7 @@ a.item:active { background: var(--panel); }
 .key.sour::before { border: 2px solid var(--sour); }
 .key.balanced::before { background: var(--balanced); }
 .key.bitter::before { background: var(--bitter); border-radius: 0; }
-.key.none::before { border: 1.5px solid var(--ink-2); }
+.key.none::before { border: 1.5px solid var(--ink-2); border-radius: 0; width: 8px; height: 8px; transform: rotate(45deg); }
 .item svg { width: 8px; height: 14px; color: var(--ink-2); flex: none; }
 h2.group { margin: 32px 0 0; font: inherit; }
 h2.group .link { border-top: 1px solid var(--rule); }
@@ -324,3 +324,10 @@ details.disclose[open] [data-more-summary] { display: none; }
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation-duration: 0s !important; } }
 .bagrow .meta { display: block; }
+/* Final review */
+.top > .retake, .top > .synced { margin-left: auto; }
+.top > .retake + .synced { margin-left: 12px; }
+.synced:empty { display: none; }
+[data-hand="left"] #shot > .row { flex-direction: row-reverse; }
+[data-hand="left"] details.disclose > summary { flex-direction: row-reverse; }
+.gone, .gone * { color: var(--ink-2) !important; } /* a retracted shot, while Undo is still offered: greyed, still legible */

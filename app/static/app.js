@@ -319,15 +319,15 @@ function logShot(form) {
     const view = document.querySelector("[data-offline-saved]");
     const o = (k) => view.querySelector(`[data-o="${k}"]`);
     const now = new Date();
-    o("title").textContent = `Saved ${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")} on this phone · ${view.dataset.name}`;
+    o("title").textContent = `Saved ${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")} · ${view.dataset.name}`;
     o("ratio").textContent = `1:${(b.yield_g / b.dose_g).toFixed(2)}`;
     o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
     o("time").textContent = `${b.time_s ?? "–"}`;
-    o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder}`;
-    // The same tag as Saved; with no taste, just the rating.
+    o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder} · rated ${b.rating}`;
+    // The same tag as Saved.
     const tag = o("taste");
-    tag.className = b.taste ? `taste ${b.taste}` : "meta";
-    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)} · ${b.rating}` : `Rated ${b.rating}`;
+    tag.className = `taste ${b.taste || "none"}`;
+    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)}` : "No taste";
     form.hidden = true;
     for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
     view.hidden = false;
@@ -495,6 +495,7 @@ function newBag(root) {
     const list = root.querySelector("[data-candidates]");
     list.replaceChildren();
     const others = (read.candidates || []).filter((c) => !fromMatch || c.coffee_id !== read.match?.coffee_id);
+    const tied = others.length > 1 && Math.abs((others[0].score ?? 0) - (others[1].score ?? 0)) < 5; // a score only helps when it differs
     for (const c of others) {
       const b = document.createElement("button");
       b.type = "button";
@@ -510,7 +511,7 @@ function newBag(root) {
       name.append(meta);
       const score = document.createElement("span");
       score.className = "meta";
-      score.textContent = c.score ? `match ${c.score}` : "";
+      score.textContent = c.score && !tied ? `match ${c.score}` : "";
       b.append(name, score, chevron());
       b.onclick = () => showMatch(c);
       list.append(b);
@@ -710,7 +711,7 @@ function invites() {
     b.textContent = `${groups[2]}-${groups[3]}`;
     box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
     box.querySelector("[data-code-note]").textContent = join
-      ? `${location.host}/join · until ${r.expires}`
+      ? `${location.host}/join · until ${r.expires}. Shown only once: send it before you leave this screen.`
       : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
     intro.textContent = join
       ? `Share the link. It works once and expires ${r.expires}.`
@@ -768,6 +769,7 @@ function retractShot(b) {
       tick(8);
       actions.hidden = true;
       strip.hidden = false;
+      for (const el of document.querySelector("main").children) if (!el.matches(".top, .undo, [data-actions]")) el.classList.add("gone");
       leave();
     } catch (err) {
       hint(document.querySelector("main"), err instanceof Rejected ? err.message : OFFLINE);
