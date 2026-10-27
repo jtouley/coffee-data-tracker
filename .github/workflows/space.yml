@@ -19,8 +19,8 @@ jobs:
       SPACE_ID: ${{ vars.SPACE_ID || 'jtouley/coffee-data-app' }}
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v7
         with: {python-version: "3.12"}
       - name: Assemble the Space
         run: |
