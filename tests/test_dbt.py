@@ -368,7 +368,7 @@ def _landing(**reach) -> str:
     return env.get_template("landing.html").render(
         totals={"coffees": 1, "in_stock": 1, "roasters": 1},
         registry=1,
-        reach={"origins": 1, "states": 1, "has_dc": False} | reach,
+        reach={"origins": 1, "states": 1, "has_dc": False, "has_pr": False} | reach,
         week={"new": 0, "price_changes": 0, "removed": 0},
         new=[],
         charts={"origins": ""},
@@ -379,11 +379,16 @@ def _landing(**reach) -> str:
 
 
 @pytest.mark.parametrize(
-    "states, has_dc, text",
-    [(50, True, "across 50 states and DC."), (50, False, "across 50 states."), (1, False, "across 1 state.")],
+    "states, has_dc, has_pr, text",
+    [
+        (50, True, True, "across 50 states, DC and Puerto Rico."),
+        (50, True, False, "across 50 states and DC."),
+        (50, False, False, "across 50 states."),
+        (1, False, False, "across 1 state."),
+    ],
 )
-def test_landing_counts_dc_apart_from_the_states(states, has_dc, text):
-    assert text in _landing(states=states, has_dc=has_dc)
+def test_landing_counts_dc_and_puerto_rico_apart_from_the_states(states, has_dc, has_pr, text):
+    assert text in _landing(states=states, has_dc=has_dc, has_pr=has_pr)
 
 
 def test_site_fallback_query_path_is_escaped_once():
@@ -408,3 +413,20 @@ def test_hf_repo_id(url):
     from coffeedata import public
 
     assert public.hf_repo_id(url) == "a/b"
+
+
+def test_every_roaster_status_has_a_coverage_label():
+    """A status added to dim_roaster without a label would silently drop out of the coverage table."""
+    import re
+
+    from coffeedata import site
+
+    sql = (ROOT / "dbt" / "models" / "marts" / "dim_roaster.sql").read_text()
+    statuses = set(re.findall(r"(?:then|else) '(\w+)'", sql))
+    assert statuses and statuses == set(site.STATUS_LABELS)
+
+
+def test_states_are_the_fifty():
+    from coffeedata import site
+
+    assert len(site.STATES) == 50 and "DC" not in site.STATES

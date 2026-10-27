@@ -145,12 +145,13 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     <div class="stats">
       <div class="stat"><div class="n">{{ "{:,}".format(totals.coffees) }}</div><div class="l">coffees listed</div></div>
       <div class="stat"><div class="n">{{ "{:,}".format(totals.in_stock) }}</div><div class="l">in stock right now</div></div>
-      <div class="stat"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with a shop</div></div>
+      <div class="stat"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with coffee listed</div></div>
       <div class="stat"><div class="n">{{ "{:,}".format(reach.origins) }}</div><div class="l">origin countries</div></div>
     </div>
     <p class="weekline"><b>{{ "{:,}".format(week.new) }}</b> new arrivals · <b>{{ "{:,}".format(week.price_changes) }}</b> price changes ·
       <b>{{ "{:,}".format(week.removed) }}</b> delisted · from <b>{{ "{:,}".format(registry) }}</b> roasters in the registry
-      across {{ reach.states }} state{{ 's' if reach.states != 1 }}{% if reach.has_dc %} and DC{% endif %}.</p>
+      {% set places = [reach.states ~ (' states' if reach.states != 1 else ' state')] + (['DC'] if reach.has_dc else []) + (['Puerto Rico'] if reach.has_pr else []) %}
+      across {{ places[:-1] | join(', ') ~ ' and ' ~ places[-1] if places | length > 1 else places[0] }}.</p>
   </div>
 </header>
 

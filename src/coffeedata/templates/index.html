@@ -86,7 +86,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <div class="tiles">
   <div class="tile"><div class="n">{{ "{:,}".format(totals.coffees) }}</div><div class="l">coffees listed</div></div>
   <div class="tile"><div class="n">{{ "{:,}".format(totals.in_stock) }}</div><div class="l">in stock</div></div>
-  <div class="tile"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with a shop</div></div>
+  <div class="tile"><div class="n">{{ "{:,}".format(totals.roasters) }}</div><div class="l">roasters with coffee listed</div></div>
   <div class="tile"><div class="n">{{ "{:,}".format(coverage.get("registry", {}).values() | sum) }}</div><div class="l">roasters in the registry</div></div>
 </div>
 
@@ -121,7 +121,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 </section>
 
 <section>
-  <h2>Catalog</h2>
+  <h2>Browse coffees</h2>
   <div class="filters">
     <input type="search" id="q" placeholder="Search roaster, coffee, notes…" aria-label="Search the catalog">
     <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
@@ -135,11 +135,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 
 <section>
   <h2>Coverage</h2>
-  <p class="note">What happened when each roaster in the registry was checked for an online shop this week.</p>
-  {% set status_labels = {"active": "Shop read", "no_coffee": "Shop found, no coffee for sale",
-     "no_catalog": "No readable shop", "pending": "Not checked yet",
-     "unreachable": "Site down for 3 weeks or more", "opted_out": "Opted out"} %}
-  <table><tbody>{% for k, v in coverage.get("registry", {}).items() %}<tr><td>{{ status_labels.get(k, k) }}</td><td class="num">{{ "{:,}".format(v) }}</td></tr>{% endfor %}</tbody></table>
+  <p class="note">Where each roaster in the registry stands as of the latest weekly run.</p>
+  <table><tbody>{% for label, n in status_rows %}<tr><td>{{ label }}</td><td class="num">{{ "{:,}".format(n) }}</td></tr>{% endfor %}
+    <tr><td><strong>Roasters in the registry</strong></td><td class="num"><strong>{{ "{:,}".format(status_rows | sum(attribute=1)) }}</strong></td></tr></tbody></table>
 </section>
 
 <footer>
