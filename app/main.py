@@ -264,7 +264,7 @@ def create_app(
         if auth.user(request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, owner=owner_name(s))
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -320,19 +320,16 @@ def create_app(
 
     # --- invites, joining and resetting --------------------------------------------------------------
 
-    def owner_name(s: Sessions) -> str:
-        return next((a.username for a in s.accounts.people() if a.role == "owner"), "the owner")
-
     @app.get("/join", response_class=HTMLResponse)
     def join_page(request: Request) -> HTMLResponse:
         # The code is after # in the link, so it never reaches the server or its logs; the page's script reads it.
-        s = accounts_only()
-        return page(request, "join.html", owner=owner_name(s))
+        accounts_only()
+        return page(request, "join.html")
 
     @app.get("/reset", response_class=HTMLResponse)
     def reset_page(request: Request) -> HTMLResponse:
-        s = accounts_only()
-        return page(request, "reset.html", owner=owner_name(s))
+        accounts_only()
+        return page(request, "reset.html")
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -390,7 +387,7 @@ def create_app(
 
     def counts_by_user() -> dict[str, int]:
         out: dict[str, int] = {}
-        for r in store.shots.values():
+        for r in list(store.shots.values()):  # a copy: another request may add a shot meanwhile
             if not r.deleted:
                 out[r.item.user_id] = out.get(r.item.user_id, 0) + 1
         return out
@@ -884,8 +881,11 @@ def create_app(
 
     @app.post("/api/bags")
     def post_bag(body: dict, me: Writer) -> dict:
+        # Only a bag typed before its photo was read (offline) takes the photo's match. A bag typed after seeing the
+        # read chose not to use it, and keeps what was typed (#20-1).
+        pending = bool(body.pop("read_pending", False))
         bag, matches = run(store.save_bag, me.user_id, body)
-        if bag.photo_id and not bag.coffee_id:
+        if pending and bag.photo_id and not bag.coffee_id:
             apply_read(me.user_id, bag.photo_id)  # the photo got here first and was read
             bag = store.bag(me.user_id, bag.bag_id) or bag
         return {"bag_id": bag.bag_id, "coffee_id": bag.coffee_id, "matches": matches}

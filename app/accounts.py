@@ -36,7 +36,11 @@ MIN_PASSWORD, MAX_PASSWORD = 10, 256
 SESSION_DAYS = 90
 RENEW_AFTER = timedelta(days=1)  # a cookie used after a day is reissued, so it lasts 90 days from last use
 LOCKOUT = 15 * 60
-MAX_PER_USERNAME, MAX_PER_IP = 5, 20
+MAX_PER_USERNAME, MAX_PER_IP = 5, 20  # per username from one address, per address
+# Per username across all addresses: after BACKOFF_AFTER failures in the window, each further try waits 2, 4, 8 … up to
+# BACKOFF_MAX seconds after the last failure. Usernames are visible to members, so a hard lock on the username alone
+# would let anyone keep its owner out; this only slows a spread-out guesser down.
+BACKOFF_AFTER, BACKOFF_MAX = 10, 30.0
 
 # Long enough to pass the length rule, and still among the first guesses (NIST 800-63B asks for a check like this).
 COMMON = frozenset(
@@ -214,6 +218,20 @@ class Limiter:
             self._sweep(now)
             self._recent(key, now).append(now)
 
+    def reserve_backoff(self, key: str, after: int, cap: float, now: float) -> float:
+        """Count one attempt against a key that backs off instead of locking: once it has `after` attempts in the
+        window, each next one waits 2, 4, 8 … up to `cap` seconds after the last. Returns the wait (nothing counted),
+        or 0 with the attempt counted, under one lock, so parallel tries can't skip the wait."""
+        with self.lock:
+            self._sweep(now)
+            q = self._recent(key, now)
+            if len(q) >= after:
+                wait = q[-1] + min(2.0 ** (len(q) - after + 1), cap) - now
+                if wait > 0:
+                    return wait
+            q.append(now)
+            return 0.0
+
     def clear(self, key: str) -> None:
         with self.lock:
             self.fails.pop(key, None)
@@ -329,7 +347,7 @@ class Accounts:
 
     def by_name(self, username: str) -> Account | None:
         username = username.strip().lower()
-        return next((a for a, _ in self.users.values() if a.username == username), None)
+        return next((a for a, _ in list(self.users.values()) if a.username == username), None)
 
     @property
     def needs_owner(self) -> bool:
@@ -360,14 +378,35 @@ class Accounts:
             check_password(password, username)
             # The owner keeps the id that shots from before accounts already belong to.
             acct = Account(shots.owner_user_id(), username, self._hash(password), role="owner")
-            return self._write(acct)
+            acct = self._write(acct)
+            self._spend_setup_code(acct.user_id)
+            return acct
+
+    def _setup_code_spent(self) -> bool:
+        sha = hashlib.sha256(b"setup\0" + (self.setup_code or "").strip().encode()).hexdigest()
+        return any(i.kind == "setup" and i.code_sha256 == sha for i, _ in list(self.invites.values()))
+
+    def _spend_setup_code(self, user_id: str) -> None:
+        """Each OWNER_SETUP_CODE value works once (#16-3): its hash is kept as a used "setup" record. Using it
+        again needs a new value in the secret."""
+        sha = hashlib.sha256(b"setup\0" + (self.setup_code or "").strip().encode()).hexdigest()
+        at = _now()
+        self._write_invite(
+            Invite(f"setup-{sha[:16]}", sha, "setup", user_id, at, used_by=user_id, used_at=at)
+        )
 
     def sign_in(self, username: str, password: str, ip: str, now: float | None = None) -> Account:
         """The same message whether or not the username exists, and the same work."""
         now = time.monotonic() if now is None else now
         name = username.strip().lower()
-        ukey, ikey = f"u:{name}", f"ip:{ip}"
-        if not self.limiter.reserve({ukey: MAX_PER_USERNAME, ikey: MAX_PER_IP}, now):
+        pkey, ikey, ukey = f"u:{name}|ip:{ip}", f"ip:{ip}", f"u:{name}"
+        wait = self.limiter.reserve_backoff(ukey, BACKOFF_AFTER, BACKOFF_MAX, now)
+        if wait:
+            raise AccountError(
+                f"Too many tries for this username. Wait {int(wait) + 1} seconds and try again."
+            )
+        if not self.limiter.reserve({pkey: MAX_PER_USERNAME, ikey: MAX_PER_IP}, now):
+            self.limiter.release(ukey, now)
             raise AccountError("Too many tries. Wait 15 minutes and try again.")
         acct = self.by_name(name)
         ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
@@ -375,8 +414,9 @@ class Accounts:
             raise AccountError(
                 "That username and password don’t match. Check them, or ask the owner for a reset code."
             )
-        self.limiter.clear(ukey)
+        self.limiter.clear(pkey)
         self.limiter.release(ikey, now)
+        self.limiter.release(ukey, now)
         if _hasher.check_needs_rehash(acct.password_hash):
             with self.lock:
                 acct = self._write(replace(acct, password_hash=self._hash(password)))
@@ -501,6 +541,10 @@ class Accounts:
             if self.limiter.blocked(f"ip:{ip}", MAX_PER_IP, now):
                 raise AccountError("Too many tries. Wait 15 minutes and try again.")
             if self.setup_code and hmac.compare_digest(code.strip().encode(), self.setup_code.encode()):
+                if self._setup_code_spent():
+                    raise AccountError(
+                        "That setup code has been used. Put a new one in OWNER_SETUP_CODE to use it again."
+                    )
                 acct = next((a for a in self.people() if a.role == "owner"), None)
                 if acct is None:
                     raise AccountError("There’s no owner yet. Create the account first.")
@@ -518,6 +562,8 @@ class Accounts:
             )
             if inv:
                 self._write_invite(replace(inv, used_by=acct.user_id, used_at=_now()))
+            else:
+                self._spend_setup_code(acct.user_id)
             self.limiter.clear(f"u:{acct.username}")
             return acct
 

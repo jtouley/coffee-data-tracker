@@ -30,11 +30,14 @@ accepts Secure cookies on `localhost` without it.
   per change, latest wins). dbt, the MCP server and the weekly run never read it.
 - **Passwords** are HMAC-ed with `AUTH_PEPPER`, then hashed with Argon2id (64 MiB, 3 passes, 4 lanes). They need
   at least 10 characters, and common passwords and the username are refused.
-- **The owner** is the first account. Creating it needs `OWNER_SETUP_CODE`; once any account exists, the code
-  does nothing. The owner keeps the id that shots from before accounts belong to.
+- **The owner** is the first account. Creating it needs `OWNER_SETUP_CODE`. Each value of the code works once: it
+  creates the owner, or later, typed on the reset screen, resets the owner's password. To use it again, put a new value
+  in the secret. The owner keeps the id that shots from before accounts belong to.
 - **Sessions** are a signed cookie (`SESSION_SECRET`): HttpOnly, Secure, SameSite=Lax, 90 days, renewed after a
   day of use. "Sign out on all devices" and a password change sign out every other phone.
-- **Lockouts:** five failed sign-ins for a username, or twenty from one address, lock it for 15 minutes.
+- **Lockouts:** five failed sign-ins for a username from one address, or twenty from one address, lock that for 15
+  minutes. Across addresses a username is never locked, only slowed: after ten failures each try waits up to 30 s.
+  Usernames aren't shown to anyone signed out.
 - **Invites and reset codes:** the owner makes a one-time invite link (valid a week) or a reset code under Setup →
   Invite someone. Codes are 80-bit, shown once, and only their SHA-256 is stored.
 
@@ -59,7 +62,7 @@ Set these in the Space's settings (Variables and secrets → New secret):
 | `ANTHROPIC_API_KEY` | Reads bag labels (10 reads per person per day). Without it, New bag asks you to type the coffee |
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
-| `OWNER_SETUP_CODE` | Typed once to create the owner's account; after that it only resets the owner's password. Optional once the owner exists |
+| `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. Optional once the owner exists |
 
 `python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER` and
 `SESSION_SECRET` are set, every page returns 503 and names the missing secrets, never their values.
