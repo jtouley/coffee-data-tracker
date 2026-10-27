@@ -232,7 +232,8 @@ numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 
 Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
 are. While the timer runs, the numeral ticks once a second and the button reads Stop. Saving with no time changes
-the Save button to "Save with 29 s?"; a second tap saves with the last time.
+the Save button to "Save with 29 s?"; a second tap saves with the last time, recorded as copied
+(`time_source` = `copied`) so it never counts as measured.
 
 #### Same as last
 
@@ -293,9 +294,10 @@ stays; hints and errors sit below in 13 px, errors in `--danger`. Focus: accent 
 
 #### Invite code
 
-Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown at 44 px
-across two lines in a dashed box, with the link under it and a "Copy link" text button. The input on Sign up
-accepts it with or without dashes, in any case, and checks it as soon as it's complete.
+Four groups of four in Crockford base32 (the digits and capitals without I, L, O and U, so 16 characters carry
+80 bits), shown at 44 px across two lines in a dashed box, with the link under it and a "Copy link" text button. The
+input on Sign up accepts it with or without dashes, in any case, reads O as 0 and I or L as 1, and checks it as soon
+as it's complete.
 
 #### Match card
 

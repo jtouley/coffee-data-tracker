@@ -7,7 +7,7 @@ are in [mockups/](mockups/).
 Today a shot reaches the lake through the MCP server or the "Log a shot" issue form. Both work. Neither is pleasant
 at the machine at 7am with a portafilter in one hand: the issue form is nine text fields, and the MCP route needs a
 laptop or a chat. This plan describes a small phone web app that makes the common case (same coffee as yesterday,
-small grind change) the timer plus three taps, and makes a new bag one photo and one tap.
+small grind change) the timer plus three taps, and makes a new bag two taps: the photo and a confirm.
 
 ## Goals
 
@@ -88,13 +88,15 @@ finished.
 
 Repeat shot that tasted the same: Pull again, Start, Stop, "Same as last", Save. Three taps plus the timer. If the
 taste or rating differs, it's taste and rating instead of "Same as last": four taps plus the timer. Saving without
-a time turns the button into "Save with 29 s?", so a forgotten timer costs one extra tap and never saves a made-up time.
+a time turns the button into "Save with 29 s?". A second tap saves the last shot's time, recorded as copied
+(`time_source` = `copied`), so it never passes for a measured time and the dial-in model leaves it out.
 
 ### 3. Review a coffee
 
 From Today or from a bag in the history list: the coffee page. Header with the bag photo, roaster and coffee name,
 origin, process and tasting notes from the catalog, plus current price per 100 g, stock and a link to the roaster.
-Below: best recipe so far (highest rating, latest wins ties, same as `mart_dial_in`), a ratio-and-time chart of
+Below: best recipe so far (one whole shot: highest rating, the latest of equal ratings, as `mart_dial_in` will pick
+it; see dbt changes), a ratio-and-time chart of
 every shot of this coffee coloured by taste, and the shot list. Each shot opens a read-only detail with "Correct"
 (writes a new record with the same `shot_id`) and "Retract".
 
@@ -108,7 +110,8 @@ shots pointing at it. Changes are new records, with the latest per `equipment_id
 Most mornings nobody touches this screen. The shot form shows the current grinder and basket as one small chip
 ("DF64 V2 · Pullman 18 g"); tapping it switches.
 
-The owner's setup, seeded on first run:
+First run asks for a grinder (dial range, step, which way is finer) and a basket (nominal dose); nothing is
+hard-coded. The owner's setup, entered then:
 
 | Kind | Name | Settings |
 |---|---|---|
@@ -124,7 +127,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 |---|---|---|
 | Today | Current bag, "Pull again", last three shots, "New bag" | `mockups/today.html` |
 | First run | No bag yet: photograph one, or add a grinder | `mockups/first-run.html` |
-| Reading | The bag is being read: skeleton card, "Type it instead" | `mockups/reading.html` |
+| Reading | The bag is being read: skeleton card, "Type the coffee" | `mockups/reading.html` |
 | Match | Camera and a confident match | `mockups/capture.html` |
 | Which one is it | A weak match: candidates with their scores | `mockups/match-weak.html` |
 | Read failed | The label couldn't be read: Retake, or type the coffee | `mockups/read-failed.html` |
@@ -152,13 +155,15 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 
 | Option | For | Against |
 |---|---|---|
-| A. Hugging Face Space (Docker, FastAPI) | Same account as the lake, so the token never leaves HF. Python, so it imports `coffeedata` directly: `log_shot`, `fuzzy_match_coffee` and the lake writer are reused, not rewritten. Free CPU tier. Secrets in Space settings. | Free Spaces sleep after 48 hours without traffic, so the first shot after a trip waits for a cold start (tens of seconds). The disk is ephemeral, so nothing can wait in local staging. |
+| A. Hugging Face Space (Docker, FastAPI) | Same account as the lake, so the token never leaves HF. Python, so it imports `coffeedata` directly: `log_shot`, `fuzzy_match_coffee` and the lake writer are reused, not rewritten. Secrets in Space settings. | Docker Spaces now need an HF PRO account, even on the free CPU hardware (found in #15). Spaces sleep after 48 hours without traffic, so the first shot after a trip waits for a cold start (tens of seconds). The disk is ephemeral, so nothing can wait in local staging. |
 | B. Cloudflare Workers + Pages | Never sleeps, fast everywhere, free at this volume. | JavaScript. Matching and the Parquet writer would be a second implementation that drifts from the Python one. Parquet writing from a Worker is awkward. |
 | C. Small VM or container host (Fly.io, Render, a home server) | Python reuse, always on if paid. | Another account and bill to look after; a home server isn't reachable without a tunnel. |
 | D. No server: static app that opens GitHub issues | Reuses the existing issue-form workflow. | Needs a GitHub token on the phone, takes a minute per shot through Actions, and can't do photos or show the saved summary right away. |
 
 Recommendation: A, the Space. Code reuse is the deciding factor: the matching rules and the lake writer already have tests,
-and a second implementation would drift. The 48-hour sleep doesn't matter for daily use; if it starts to annoy,
+and a second implementation would drift. Creating the Space in #15 returned 402: Hugging Face now requires PRO for
+Docker Spaces even on free CPU, so this option costs a PRO subscription. If the owner would rather not pay for it,
+C (a small container host) runs the same Docker image with no code change. The 48-hour sleep doesn't matter for daily use; if it starts to annoy,
 upgrading the Space's hardware to an always-on tier is one setting. The Space's own code lives in this repo
 (`app/`) and is pushed to the Space by a workflow, so the Space repo never holds anything hand-edited.
 
@@ -166,16 +171,22 @@ The proposal was a Space with the token server-side. I agree with that part and 
 the Space must not rely on its disk: it publishes each write to the lake before acknowledging it, and the phone
 keeps the write in an outbox until it's acknowledged (see Offline). Second, reading shots by globbing `shots/*.parquet` over
 `hf://` is one HTTP request per file. That's fine at 200 shots and slow at 2,000. The server keeps an in-memory
-copy of shots, bags and equipment, loaded at start from the weekly `marts/fct_shot.parquet` export plus the files
-newer than it, and updated on every write.
+copy of shots, bags and equipment, updated on every write. At start, shots come from the weekly
+`marts/fct_shot.parquet` export, which keeps each shot's own columns (`shot_coffee_id` and so on, beside the values
+`fct_shot` fills in from the bag) and `logged_at` (#15). Then every shot file written since the export's snapshot
+began is read on top, latest wins. The export records `snapshot_at`, the time dbt started reading shots, and the
+seed reads files from that time on, not just files newer than the latest `logged_at` in the export: a file staged
+before the snapshot but published after it would otherwise be missed. Bags and equipment are few, so they're read
+straight from their files. With no export yet, the Space reads every shot file.
 
 ### Domain: registry.coffee
 
 The owner used to own `registry.coffee` and is happy to buy it back. The name fits: the catalog is a registry of
 US roasters and their coffees, and the lake already has a `registry` table. The proposed split:
 
-- `registry.coffee`: the public catalog site that GitHub Pages builds today. Pages supports a custom apex domain
-  with HTTPS for free; it needs the A/AAAA records and a `CNAME` file in the site output.
+- `registry.coffee`: the public site that GitHub Pages builds. Pages supports a custom apex domain with HTTPS for
+  free; it needs the A/AAAA records and a `CNAME` file in the site output. #19 makes its root a launch page and moves
+  the catalog dashboard to `registry.coffee/app/`.
 - `app.registry.coffee`: the shot-logging app (the Space). Invitees get a short, memorable address, and the app's
   cookies are scoped to that host, apart from the public site.
 
@@ -184,10 +195,12 @@ Two ways to put the Space on `app.registry.coffee`:
 | Option | Cost | Notes |
 |---|---|---|
 | Hugging Face's own custom domains for Spaces | needs an HF PRO account (or a Team/Enterprise org) | A CNAME to `hf.space` set in the Space's settings. Simplest, and HF handles HTTPS. Forum threads report domains stuck on "pending" for a while; HF support sorts those out. |
-| Cloudflare in front of a free Space | free | DNS on Cloudflare and a small Worker that forwards `app.registry.coffee` to `<owner>-<space>.hf.space`. Keeps the free Space, but it's one more piece to own, and the direct `hf.space` address still works (it's behind the same sign-in, so that's fine). |
+| Cloudflare in front of the app | free | DNS on Cloudflare and a small Worker that forwards `app.registry.coffee` to the app's own address. Works for any host, but it's one more piece to own, and the direct `hf.space` address still works (it's behind the same sign-in, so that's fine). |
 
-Recommendation: start with the Cloudflare route, since the owner chose the free Space. Move to HF's own custom
-domain if the owner takes HF PRO for other reasons (PRO also raises Space limits). Either way, the session cookie is
+Recommendation: HF's own custom domain. The Space needs PRO anyway (see Hosting), and PRO includes custom domains,
+so Cloudflare would only add a part. Cloudflare stays the route if the app ends up on a container host instead.
+One naming wrinkle: the catalog dashboard at `registry.coffee/app/` (#19) and the shot app at `app.registry.coffee`
+are different things with similar addresses (open question 5). Either way, the session cookie is
 host-only on `app.registry.coffee`, and links in invites use that address.
 
 ### Accounts and sign-in
@@ -215,7 +228,8 @@ password writes a new `users` record.
 
 Only with an invite code.
 
-1. The owner taps "Invite someone" and gets a code like `K7QD-M2XF-9RPA-T4WE` (80 random bits, base32), valid for
+1. The owner taps "Invite someone" and gets a code like `K7QD-M2XF-9RPA-T4WE`: 80 random bits as 16 characters of Crockford base32 (digits
+   and capitals without I, L, O and U; on input O reads as 0, I and L as 1, case and dashes don't matter), valid for
    7 days and usable once, and a link, `app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE`. "Share link" opens
    Android's share sheet. Only the code's SHA-256 is stored, so it can't be shown again later; a pending invite
    offers "Send a new link", which revokes the old code and makes a new one. The code sits after `#`, so it never
@@ -223,14 +237,23 @@ Only with an invite code.
 2. The invitee opens the link, lands on "jtouley invited you" with the code filled in, picks a username and a
    password, and is signed in. Typing the code by hand also works.
 3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a Space
-   secret, and creates the `owner` account. After that the secret does nothing.
+   secret, and creates the `owner` account. Each value of the secret works once: the server stores the SHA-256 of
+   every setup code it has accepted, in the users dataset, and refuses a value it has seen. A setup code that has
+   been used is inert, so leaving it in the Space's settings is no standing way into the owner's account.
 
 #### Sign-in
 
 Username and password. A failed attempt gets the same message whether the username exists or not, and
-an unknown username is still checked against a dummy hash so the timing doesn't tell. Five failures for one
-username, or twenty from one IP, lock that key out for 15 minutes (kept in memory; a restart clears it, which is
-acceptable at this size).
+an unknown username is still checked against a dummy hash so the timing doesn't tell. Usernames are visible to
+anyone who has been invited, so a lockout keyed on the username alone would let anyone keep the owner locked out.
+Instead:
+
+- Five failures for one username from one IP lock that pair for 15 minutes.
+- Twenty failures from one IP lock that IP for 15 minutes.
+- Failures for one username across all IPs only slow it down: each one doubles a delay before the next attempt is
+  checked, from 1 s up to 30 s. They never lock it.
+
+All of this is kept in memory; a restart clears it, which is acceptable at this size.
 
 #### Sessions
 
@@ -244,8 +267,9 @@ as CSRF protection on top of `SameSite`.
 #### Forgotten passwords
 
 There's no email, so the owner issues a reset code from the Invite screen. It works like an
-invite but is tied to an existing account, and using it sets a new password and bumps the epoch. The owner's own
-account can be reset with `OWNER_SETUP_CODE`.
+invite but is tied to an existing account, and using it sets a new password and bumps the epoch. To reset the
+owner's own password, the owner sets a new value of `OWNER_SETUP_CODE` in the Space's settings (which proves control
+of the Space) and uses it once on the reset screen; as with setup, a value that has been used never works again.
 
 #### Every request is scoped
 
@@ -270,8 +294,22 @@ Each action is one Hugging Face commit, made by the Space with the existing `Lak
 takes a second or two. The phone shows the saved screen immediately (the summary needs only the shot and data the server
 already holds) and marks the shot as synced when the commit returns.
 
-The phone generates `shot_id` and `bag_id` (UUIDs) before sending. A retried request writes a second file for the
-same id; latest-wins collapses it, as for any correction. So retries are safe without any locking.
+The phone generates `shot_id` and `bag_id` (UUIDs) before sending, and keeps each write in its outbox until the
+server acknowledges it. The outbox sends a user's entries one at a time, in the order they were made. Three rules
+keep retries from undoing anything:
+
+- Every record carries `rev`, a counter the phone sets to one more than the `rev` of the version it last saw (1 for a
+  new record). The server drops a write whose `rev` isn't greater than the stored one. So a save whose response was
+  lost, resent after an Undo or a Correct, can't bring the old version back. `logged_at` is still stamped by the
+  server, but it no longer decides between two versions from the phone.
+- A resend identical to what's stored is acknowledged without writing (#13).
+- File names are `<id>__<logged_at>-<6 random hex>.parquet` for every table, so two records for one id in the same
+  second never collide. #13 does this for shots; equipment and bags need the suffix too.
+
+Each dataset (lake, photos, users) has its own staging folder (`build/lake-staging`, `build/photos-staging`,
+`build/users-staging`), and `Lake.publish` uploads only that dataset's folder, one publish at a time per dataset,
+under a lock. A shot publish can't carry a password hash or a photo into the main lake. A file that went up in
+another request's commit counts as published, so a request never retries a commit that already succeeded.
 
 The weekly run and the Space can commit to the dataset at the same time: they touch different paths, and the
 `concurrency: lake` group in Actions doesn't cover the Space, so this relies on HF commits not conflicting on
@@ -288,7 +326,7 @@ The model is chosen by measurement, as the owner asked: Claude Opus 5.5 (`claude
 (`claude-haiku-5-5`) are compared on the same set of real bags before either becomes the default.
 
 - The set: real bag photos with the right answer attached. The app builds this as it's used: every bag confirmed
-  on the match card (or corrected through "Not this one") is a photo with a known `coffee_id` and roast date. The
+  on the match card (or corrected through "Pick another match") is a photo with a known `coffee_id` and roast date. The
   first comparison runs on whatever bags exist when capture ships, plus any old bags or photos the owner has to
   hand, and it's re-run once there are 20. Hard labels (hand lettering, a sticker on kraft paper, a date stamp, a
   café's own bag) are worth adding on purpose.
@@ -305,7 +343,7 @@ The model is chosen by measurement, as the owner asked: Claude Opus 5.5 (`claude
 
 With Opus, the request turns on the API's server-side refusal fallback, so a declined read falls back to another
 model instead of failing. Haiku 5.5 has no server-side fallback, so with Haiku a declined or failed read drops to
-the manual path ("Type it instead") and is logged.
+the manual path ("Type the coffee") and is logged.
 
 The model only reads the label. Matching to the catalog stays deterministic, in Python, against `dim_coffee`; the
 model never sees the catalog. That keeps the read cheap and the matching testable.
@@ -321,7 +359,9 @@ Kitchen Wi-Fi is usually fine, but a shot should never be lost to a dropped conn
 - Every write goes through an outbox in IndexedDB and is retried until the server acknowledges the commit. The
   Today screen shows a small "2 waiting to sync" line when the outbox isn't empty.
 - Offline, the form still prefills from the locally cached last shots, and the saved screen draws its summary and
-  target from them. Nothing of the server's logic is duplicated in the browser.
+  target from them. That summary (the ratio, the window check, the difference from the last shot) is the one piece
+  of the server's logic repeated in the browser. It's a few lines, kept in step with the Python version by shared
+  test cases.
 - Bag capture needs the network (the photo has to be read). Offline, "New bag" saves the photo to the outbox and
   lets the owner type the coffee or pick a recent one; the read and match happen when it syncs.
 
@@ -331,7 +371,10 @@ All new tables follow the existing pattern: one immutable Parquet file per recor
 schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a zero-row schema file per table.
 
 Every personal record carries a `user_id`: equipment, bags, photos and shots. Shots logged before accounts existed
-have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`), so they stay the owner's.
+have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`), so they stay the owner's. The
+Space applies the same rule when it loads shots, so a shot logged through the MCP server or the issue form shows up
+for the owner straight away, not after the next weekly run. The MCP server and the issue form write `source` (`mcp`,
+`issue`) and leave `user_id` empty.
 
 ### New lake tables
 
@@ -444,6 +487,8 @@ New nullable columns, appended to the `shots` schema:
 | `basket_id` | string | |
 | `bag_id` | string | gives `roast_date` when the shot doesn't have one |
 | `source` | string | `app`, `mcp` or `issue` |
+| `rev` | int | the phone's version counter for this shot (see How writes reach the lake); `equipment` and `bags` get it too |
+| `time_source` | string | `timer`, `typed` or `copied` ("Save with 29 s?"); null on old shots. Copied times are left out of the dial-in model |
 
 Old shot files don't have these columns. The lake is read with `union_by_name = true`, so they come back as null,
 and nothing about an old shot changes. `Shot` in `models.py` gains the same optional fields; it has
@@ -451,9 +496,9 @@ and nothing about an old shot changes. `Shot` in `models.py` gains the same opti
 optional `grinder_name` argument that resolves to an `equipment_id` by name. (Not `grinder`: `shots.ALIASES`
 already maps `grinder` to `grinder_setting`.)
 
-A grind setting is now only comparable within one grinder. `suggest_next` (still used by the MCP server and the
-issue-form replies) and `mart_dial_in` should group by
-`(coffee, grinder_id)` when `grinder_id` is set, and treat null as "the grinder used before equipment existed".
+A grind setting is now only comparable within one grinder, so `mart_dial_in` groups by user, coffee and
+`grinder_id`, treating null as "the grinder used before equipment existed". `suggest_next` doesn't change: the app
+doesn't use it, and it keeps serving the MCP server and the issue-form replies as it does today.
 
 ### dbt changes
 
@@ -464,11 +509,15 @@ issue-form replies) and `mart_dial_in` should group by
   `grind_position = (grinder_setting - scale_min) / (scale_max - scale_min)` so shots across grinders can at least
   be compared roughly.
 - `mart_dial_in`: add `user_id` and `grinder_id` to the per-coffee grain. Every mart that touches shots is per user.
+  The best recipe is one whole shot, picked by rating and then the latest `brewed_at`
+  (`qualify row_number() over (... order by rating desc, brewed_at desc) = 1`). Today it takes `arg_max(col, rating)`
+  column by column, so ties are arbitrary and the dose, yield and time can come from different shots.
 - `mart_bag` (new): one row per bag with shot count, best shot, days off roast at first and last shot.
-- `public_tables_are_facts_only.sql`: add `user_id`, `photo_id`, `image`, `bag_id`, `grinder_id`, `machine_id`,
+- `public_tables_are_facts_only.sql`: add `user_id`, `photo_id`, `bag_id`, `grinder_id`, `machine_id`,
   `basket_id`, `read_json` and `sha256` to the forbidden columns.
 - The users dataset is never a dbt source.
 - The weekly export adds `marts/fct_shot.parquet` (private lake only), which the Space uses as its starting copy.
+  It keeps each shot's own columns and `logged_at` (#15), and records `snapshot_at`, when dbt started reading shots.
 
 ## Privacy
 
@@ -498,18 +547,17 @@ issue-form replies) and `mart_dial_in` should group by
 - Shots leave the public site. Today `site.py` renders "My shots: rating by brew ratio" and "Recent shots" from
   `fct_shot` on the GitHub Pages site; milestone 1 removes both sections and the scatter chart, and adds a test
   that the generated site contains no shot fields. Shots are then visible only in the app.
-- The "Log a shot" issue form posts the shot and the reply as a GitHub issue, which is public if the repo is. Once
-  the app works (milestone 2) the form is redundant; the plan is to remove it then and keep the MCP server as the
-  non-app path.
+- The "Log a shot" issue form posts the shot and the reply as a GitHub issue, which is public if the repo is. #15
+  kept it, since `suggest_next` still serves its replies. Whether it goes once the app works is open question 2.
 
 ## Cost
 
 | Item | Estimate |
 |---|---|
-| Hugging Face Space, CPU basic | free. The owner accepts the cold start after two idle days for now; an always-on upgrade is billed by the hour if that changes |
-| Bag reads, Claude Opus 5.5 ($4 / $20 per million tokens in / out) | ~1,600 image tokens + ~400 prompt + ~300 out ≈ $0.015 per bag. One bag a week ≈ $1 a year |
-| Same with Claude Haiku 5.5 ($0.10 / $0.50) | well under a cent a year |
-| The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.50, almost all of it Opus; once per prompt change |
+| Hugging Face Space, CPU basic | the hardware is free, but Docker Spaces need an HF PRO subscription (#15); PRO also covers the custom domain. The owner accepts the cold start after two idle days |
+| Bag reads, Claude Opus 5.5 ($4 / $20 per million tokens in / out) | ~1,600 image tokens + ~400 prompt + ~300 out ≈ $0.014 per bag. One bag a week ≈ 75 cents a year |
+| Same with Claude Haiku 5.5 ($0.10 / $0.50) | ≈ $0.00035 per bag, about 2 cents a year |
+| The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.30, almost all of it Opus; once per prompt change |
 | Photo storage | ~300 KB per bag ≈ 15 MB a year, inside the free private storage |
 | Shot and equipment files | a few KB each; negligible next to the weekly catalog snapshots |
 | Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a Space setting). A handful of people logging a bag a week stays at a few dollars a year with Opus |
@@ -525,7 +573,7 @@ Each one is usable on its own and goes through the normal PR and CI process.
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
 2. App skeleton: FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
    (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, the timer and typed time, and the saved summary. Online only. Includes the approved
-   concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
+   concurrent-commit test.
 3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers; invites, sign-up and
    reset codes; `app.registry.coffee` in front of the Space and `registry.coffee` on the Pages site.
 4. Bag capture: photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
@@ -559,9 +607,9 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Question | Answer | What it changes |
 |---|---|---|
 | Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
-| Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Seeded as the defaults; 18 g is the default first dose. The mockups show them. |
-| Public site | No shots on it | Shot sections leave `site.py` in milestone 1; the issue form goes in milestone 2. |
-| Cold start | Fine for now | Free CPU Space. |
+| Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Entered on first run, which asks for a grinder and a basket (#13); 18 g is the default first dose. The mockups show them. |
+| Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays for now (#15; open question 2). |
+| Cold start | Fine for now | Free CPU hardware. Docker Spaces turned out to need PRO (#15); see open question 6. |
 | Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
 | Grind suggestions | Deferred until there's a model trained on the owner's shots | The app describes each shot and suggests nothing. `shots.suggest_next` stays for the MCP and issue-form replies. See Later: a dial-in model. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
@@ -571,7 +619,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
-| Domain | The owner will buy back `registry.coffee` | Public catalog on `registry.coffee` (GitHub Pages), the app on `app.registry.coffee` via Cloudflare in front of the free Space. |
+| Domain | The owner will buy back `registry.coffee` | The launch page and catalog on `registry.coffee` (GitHub Pages, #19), the app on `app.registry.coffee` through HF's custom domain for Spaces. |
 
 ## Open questions for the owner
 
@@ -580,3 +628,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
 4. Name: the sign-in screen now says "registry.coffee", since that will be the address. Should the project (repo,
    public dataset, site title) be renamed to match, or keep "Coffee Data"?
+5. `registry.coffee/app/` is the catalog dashboard (#19) and `app.registry.coffee` is the shot app. Keep both
+   names, or move one (for example the catalog to `registry.coffee/catalog/`)?
+6. Docker Spaces need HF PRO. Take PRO (which also covers the custom domain), or run the same image on a small
+   container host instead?
