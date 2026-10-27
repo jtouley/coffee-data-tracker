@@ -30,10 +30,11 @@ function store(mode, fn) {
 class Rejected extends Error {} // the server said no (4xx): retrying won't help
 
 async function deliver(entry) {
+  // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
   const r = await fetch(entry.url, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
-    body: JSON.stringify(entry.body),
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
+    body: entry.blob || JSON.stringify(entry.body),
   });
   // Signed out (401) or a server error: keep it and try again. Anything else is final.
   const final = r.status !== 401 && r.status < 500;
@@ -44,8 +45,8 @@ async function deliver(entry) {
   throw new Error(r.statusText);
 }
 
-async function send(key, url, body) {
-  const entry = { key, url, body, at: Date.now(), user: ME };
+async function send(key, url, body, blob = null) {
+  const entry = { key, url, body, blob, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -58,7 +59,14 @@ async function mine() {
   return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
 }
 
-async function flush() {
+let flushing = null;
+function flush() {
+  // One pass at a time: "online" and a page load can both start one, and two would send each entry twice.
+  flushing ??= flushOnce().finally(() => { flushing = null; });
+  return flushing;
+}
+
+async function flushOnce() {
   if (!ME) return;
   // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
   const entries = (await mine()).sort((a, b) => a.at - b.at);
@@ -270,10 +278,31 @@ function logShot(form) {
       setTimeout(() => tick(8), 60);
       location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
-      save.disabled = false;
+      if (err instanceof Rejected) {
+        hint(form, err.message);
+        save.disabled = false;
+        return;
+      }
+      offlineSaved(body); // it's in the outbox: say so, and don't leave the form armed for a second save
     }
   });
+
+  // Saved with no connection: what was saved, described from the form alone (no server logic copied here).
+  function offlineSaved(b) {
+    const view = document.querySelector("[data-offline-saved]");
+    const fill = (k, v) => { view.querySelector(`[data-o="${k}"]`).textContent = v; };
+    fill("ratio", `1:${(b.yield_g / b.dose_g).toFixed(2)}`);
+    fill("dose", `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`);
+    fill("time", `${b.time_s ?? "–"}`);
+    fill("summary", "How it compares with the last shot shows once it syncs.");
+    fill("taste", [b.taste ? b.taste[0].toUpperCase() + b.taste.slice(1) : "No taste", b.rating].join(" · "));
+    form.hidden = true;
+    for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
+    view.hidden = false;
+    view.querySelector("h1").focus({ preventScroll: true });
+    scrollTo(0, 0);
+    showSync();
+  }
 
   // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
   const milk = form.querySelector("[data-milk]");
@@ -357,6 +386,7 @@ function newBag(root) {
       location.href = "/log";
     } catch (err) {
       hint(where, err instanceof Rejected ? err.message : OFFLINE);
+      if (!(err instanceof Rejected)) return; // queued: it stays saved, so another tap would make a second bag
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
@@ -497,7 +527,11 @@ function newBag(root) {
       const canRetake = !["limit", "no_key"].includes(body.status);
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
-      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.", false);
+      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
+      read = { photo_id: id, raw: null };
+      showSync();
+      failed("No connection", "The photo is saved on this phone and is read when you’re back online. Type the coffee for now.", false);
     }
   });
 
@@ -775,6 +809,9 @@ function account() {
       try {
         await post(b.dataset.signout, {});
       } finally {
+        // Kept pages hold this person's data: they go with the session.
+        await caches.delete("pages").catch(() => {});
+        navigator.serviceWorker?.controller?.postMessage("signed-out");
         location.replace("/signin");
       }
     });

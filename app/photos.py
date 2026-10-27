@@ -57,9 +57,12 @@ def normalize(data: bytes) -> Photo:
     return Photo(jpeg, upright.width, upright.height, hashlib.sha256(jpeg).hexdigest())
 
 
-def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
-    """One Parquet file per photo, in Hugging Face's Image layout, published before returning."""
+def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> bool:
+    """One Parquet file per photo, in Hugging Face's Image layout, published before returning. False if a photo
+    with this id is already in the lake (files are never replaced)."""
     now = datetime.now(UTC).replace(microsecond=0)
+    if load(lake, photo_id):
+        return False
     lake.write(
         "photos",
         f"photos/{photo_id}.parquet",
@@ -78,6 +81,7 @@ def save(lake: Lake, photo_id: str, user_id: str, photo: Photo) -> None:
         ],
     )
     lake.publish(f"app: photo {photo_id}")
+    return True
 
 
 def load(lake: Lake, photo_id: str) -> tuple[str, bytes] | None:

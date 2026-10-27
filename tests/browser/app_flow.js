@@ -184,6 +184,42 @@ async function newPage(browser, errors) {
     await page.waitForURL(/\/log\/gear/);
     await shoot(page, "pick-gear");
 
+    // Offline: kept pages still open, a shot and a bag photo wait in the outbox, and both sync on reconnect.
+    const outbox = () => page.evaluate(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
+      };
+    }));
+    await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
+    await page.evaluate(() => navigator.serviceWorker.ready);
+    await page.context().setOffline(true);
+    await page.goto(`${base}/history`);
+    assert.match(await page.textContent("main"), /History/);
+    await page.goto(`${base}/log`);
+    await page.getByRole("button", { name: "Type" }).click();
+    await page.fill("#time_s", "30");
+    await page.locator('[data-rating] [data-v="4"]').click();
+    await page.getByRole("button", { name: "Save shot" }).click();
+    await page.waitForSelector("[data-offline-saved]:not([hidden])");
+    assert.equal(await page.isVisible("#shot"), false);
+    assert.match(await page.textContent("[data-offline-saved] [data-sync]"), /1 waiting to sync/);
+    await shoot(page, "offline-saved");
+    await page.goto(`${base}/bag/new`);
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="failed"]:not([hidden])');
+    assert.match(await page.textContent('[data-f="failed-body"]'), /saved on this phone/);
+    await page.getByRole("button", { name: "Type the coffee" }).last().click();
+    await page.fill("#coffee", "the washed one");
+    await page.getByRole("button", { name: "Use this coffee" }).last().click();
+    await page.waitForFunction(() => /Saved on this phone/.test(document.querySelector("#bag [data-hint]").textContent));
+    assert.equal(await outbox(), 3);
+    await page.context().setOffline(false);
+    await page.waitForFunction(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
+      };
+    }), null, { timeout: 15000, polling: 250 });
+
     // The owner invites someone; they join from the link on another phone.
     await page.goto(`${base}/invite`);
     await page.getByRole("button", { name: "Make an invite link" }).click();

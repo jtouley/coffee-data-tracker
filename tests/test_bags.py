@@ -223,6 +223,52 @@ def test_photo_upload_reads_matches_and_stores_the_photo(catalog, tmp_path):
     assert bag.photo_id == "p1" and json.loads(bag.read_json)["roaster"] == "Larkspur"
 
 
+@pytest.mark.parametrize("photo_first", [True, False])
+def test_a_bag_typed_offline_takes_its_photos_match_whichever_arrives_first(catalog, tmp_path, photo_first):
+    # Offline, the person types something the catalog can't match; the photo and the bag sync later.
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    body = {"bag_id": "b1", "coffee_freetext": "the ethiopian one", "photo_id": "p1"}
+    if photo_first:
+        upload(c)
+    r = c.post("/api/bags", json=body, headers=W).json()
+    if not photo_first:
+        assert r["coffee_id"] is None
+        upload(c)
+    bag = app.state.store.bag("owner", "b1")
+    assert bag.coffee_id == "larkspur.com:1" and bag.coffee_freetext == "the ethiopian one"
+    assert str(bag.roast_date) == "2026-10-18" and json.loads(bag.read_json)["roaster"] == "Larkspur"
+
+
+def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalog, tmp_path):
+    fake = FakeClient(LABEL)
+    app, _ = app_with(catalog, tmp_path, fake)
+    c = TestClient(app)
+    first = upload(c).json()
+    assert upload(c).json() == first and len(fake.calls) == 1
+    other = c.post(
+        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+    )
+    assert other.status_code == 409
+
+
+def test_a_typed_match_wins_and_another_persons_photo_is_ignored(catalog, tmp_path):
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    upload(c)
+    # Typed text that matches keeps its own match.
+    r = c.post(
+        "/api/bags", json={"bag_id": "b1", "coffee_freetext": "Onyx Geometry", "photo_id": "p1"}, headers=W
+    )
+    assert r.json()["coffee_id"] == "onyx.com:1"
+    # Someone else citing that photo id gets nothing from it.
+    maya = W | {"x-test-user": "maya"}
+    r = c.post(
+        "/api/bags", json={"bag_id": "b2", "coffee_freetext": "something", "photo_id": "p1"}, headers=maya
+    )
+    assert r.json()["coffee_id"] is None
+
+
 def test_an_unclear_read_returns_candidates(catalog, tmp_path):
     app, _ = app_with(catalog, tmp_path, FakeClient(LABEL | {"coffee": "Hambela"}))
     r = upload(TestClient(app)).json()
