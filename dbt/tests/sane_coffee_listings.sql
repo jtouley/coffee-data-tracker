@@ -1,7 +1,5 @@
--- Listed coffees whose title is still HTML-escaped or reads as a spare part, cup, cleaner or test listing. The
--- classifier drops these at ingest; this catches any that come back. A snapshot keeps its classification until the
--- roaster is fetched again, so this only warns.
-{{ config(severity='warn') }}
+-- Listed coffees whose title is still HTML-escaped or reads as a spare part, cup, cleaner or test listing.
+-- stg_products runs the classifier over every snapshot, so none should get through.
 select coffee_id, title from {{ ref('dim_coffee') }}
 where is_listed and (
     title like '%&amp;%'

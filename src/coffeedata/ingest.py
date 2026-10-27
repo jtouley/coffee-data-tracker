@@ -160,9 +160,7 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
     enriched = {
         tuple(r)
         for r in con.execute(
-            f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')} "
-            "where method = 'llm' or extracted_at >= ?",
-            [extract.RULES_UPDATED],
+            f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
         ).fetchall()
     }
     stats: Counter = Counter()

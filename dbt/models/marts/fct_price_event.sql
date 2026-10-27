@@ -3,8 +3,9 @@
 with obs as (
     select s.coffee_id, s.roaster_id, s.run_date, s.fetched_at, v.variant_id, v.price_usd,
            coalesce(v.available, true) as available
-    from {{ ref('stg_snapshots') }} s, unnest(s.variants) as t(v)
-    where s.is_coffee
+    from {{ ref('stg_snapshots') }} s
+    join {{ ref('stg_products') }} p using (input_hash), unnest(s.variants) as t(v)
+    where p.is_coffee
 ),
 o as (
     select *,

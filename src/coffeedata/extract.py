@@ -6,7 +6,6 @@ import json
 import logging
 import os
 import re
-from datetime import UTC, datetime
 
 from .models import CatalogItem, Enrichment
 from .origins import COUNTRIES, canonical_country
@@ -65,9 +64,6 @@ VARIETALS = [
 ]
 _VARIETAL = re.compile(r"\b(" + "|".join(re.escape(v) for v in VARIETALS) + r")\b", re.I)
 _COUNTRY = re.compile(r"\b(" + "|".join(re.escape(c) for c in COUNTRIES) + r")\b", re.I)
-# When the rules last changed. Ingest re-runs them on any coffee whose rules enrichment is older, so a fix reaches
-# coffees whose description hasn't changed. Bump it with every change to rules().
-RULES_UPDATED = datetime(2026, 10, 27, 20, 0, tzinfo=UTC)
 DEMONYMS = {
     "kenyan": "Kenya",
     "ethiopian": "Ethiopia",

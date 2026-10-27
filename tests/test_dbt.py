@@ -4,7 +4,7 @@ import json
 import os
 import shutil
 import subprocess
-from datetime import date
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 import duckdb
@@ -309,8 +309,10 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B"), evil])
     con = build(lake, tmp_path)
     # The unsafe link is dropped in the model, so the public tables, exports and MCP server never see it.
-    assert con.execute("select url from dim_coffee where title = 'Coffee E'").fetchone() == (None,)
-    assert con.execute("select count(*) from public_coffee where coffee_name = 'Coffee E'").fetchone() == (0,)
+    assert con.execute("select url from dim_coffee where title = 'Coffee E Roast'").fetchone() == (None,)
+    assert con.execute(
+        "select count(*) from public_coffee where coffee_name = 'Coffee E Roast'"
+    ).fetchone() == (0,)
     con.close()
 
     out = tmp_path / "site"
@@ -319,7 +321,7 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert 'href="catalog/"' in landing
     assert "https://huggingface.co/datasets/someone/us-coffee-market" in landing
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
-    assert "Coffee B" in landing  # a new arrival
+    assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
     for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
         html = (out / page / "index.html").read_text()
@@ -435,3 +437,84 @@ def test_states_are_the_fifty():
     from coffeedata import site
 
     assert len(site.STATES) == 50 and "DC" not in site.STATES and "PR" not in site.STATES
+
+
+def _rows(con, table):
+    return con.execute(f"select * from {table} order by all").fetchall()
+
+
+def test_the_same_lake_always_builds_the_same_tables(lake, tmp_path):
+    """Idempotent builds: nothing in the marts depends on when or how often the build runs."""
+    probe(lake, "2026-10-18", "onyxcoffeelab.com")
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A"), product("B", 18.0)])
+    run(lake, "2026-10-26", "onyxcoffeelab.com", [product("A", 22.0)])
+    first = build(lake, tmp_path / "one")
+    second = build(lake, tmp_path / "two")
+    for table in ("dim_coffee", "fct_price_event", "mart_market", "public_coffee", "public_price_event"):
+        assert _rows(first, table) == _rows(second, table), table
+
+
+def test_classification_comes_from_the_current_rules_not_the_stored_flag(lake, tmp_path):
+    """A rules fix reaches every past week: the flag and attributes stored at fetch time are ignored."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    part = product(
+        "P", title="La Marzocco (T.1.054) Tube, Valve To Discharge | Fits Mistral"
+    )  # stored: coffee
+    bean = product("K", coffee=False, title="Kenya Kamwangi AA Washed")  # stored: not coffee
+    mocha = product("M", title="Mocha Java Blend")
+    run(lake, "2026-10-19", rid, [part, bean, mocha])
+    # An enrichment row from older rules said Mocha Java was from Indonesia.
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "old",
+        [
+            {
+                "extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+                "roaster_id": rid,
+                "product_id": "M",
+                "body_hash": "bM",
+                "method": "rules",
+                "needs_llm": False,
+                "origin_country": "Indonesia",
+                "is_blend": False,
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    got = dict(con.execute("select product_id, origin_country from dim_coffee").fetchall())
+    assert got == {"K": "Kenya", "M": None}
+    events = {r[0] for r in con.execute("select coffee_id from fct_price_event").fetchall()}
+    assert events == {f"{rid}:K", f"{rid}:M"}
+    assert con.execute("select is_blend from dim_coffee where product_id = 'M'").fetchone() == (True,)
+
+
+def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    run(lake, "2026-10-19", rid, [product("A", title="House Espresso Roast")])
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "llm1",
+        [
+            {
+                "extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+                "roaster_id": rid,
+                "product_id": "A",
+                "body_hash": "bA",
+                "method": "llm",
+                "needs_llm": False,
+                "origin_country": "Brazil",
+                "process": "natural",
+                "is_blend": False,
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    assert con.execute("select origin_country, process, enrichment_method from dim_coffee").fetchone() == (
+        "Brazil",
+        "natural",
+        "llm",
+    )
