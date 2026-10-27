@@ -22,8 +22,14 @@ dependencies = [
 [project.scripts]
 coffeedata = "coffeedata.cli:main"
 
+[project.optional-dependencies]
+snowflake = [
+    "cryptography>=42",
+    "snowflake-connector-python>=3.12",
+]
+
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.6", "respx>=0.21", "anyio>=4"]
+dev = ["pytest>=8", "ruff>=0.6", "respx>=0.21", "anyio>=4", "snowflake-connector-python>=3.12", "cryptography>=42"]
 
 [build-system]
 requires = ["hatchling"]

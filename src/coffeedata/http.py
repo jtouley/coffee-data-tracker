@@ -23,6 +23,10 @@ class Blocked(FetchError):
     """robots.txt disallows the URL."""
 
 
+class NotCatalog(FetchError):
+    """HTTP 200, but the body isn't the JSON a catalog endpoint returns (e.g. an HTML or challenge page)."""
+
+
 class PoliteClient:
     def __init__(self, min_interval: float = 1.0, timeout: float = 15.0, retries: int = 3,
                  transport: httpx.BaseTransport | None = None):
@@ -106,6 +110,22 @@ class PoliteClient:
             return r.json()
         except ValueError:
             return None
+
+    def catalog_json(self, url: str, **params: object) -> object | None:
+        """For catalog paths that may or may not exist: None on 404 (try another path); NotCatalog on a 200
+        that isn't JSON; FetchError on any other status, a network error or a robots block."""
+        try:
+            r = self.get(url, **params)
+        except httpx.HTTPError as e:
+            raise FetchError(f"{type(e).__name__} {url}") from e
+        if r.status_code == 404:
+            return None
+        if r.status_code != 200:
+            raise FetchError(f"HTTP {r.status_code} {url}")
+        try:
+            return r.json()
+        except ValueError as e:
+            raise NotCatalog(f"not JSON: {url}") from e
 
     def fetch_json(self, url: str, **params: object) -> object:
         """JSON body, or FetchError: for catalog pages, where a miss must never look like an empty catalog."""

@@ -5,7 +5,7 @@ from __future__ import annotations
 from collections import Counter
 from urllib.parse import urlparse
 
-from ..http import Blocked, FetchError, PoliteClient
+from ..http import FetchError, NotCatalog, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
@@ -44,7 +44,8 @@ def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
 
 
 def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict] | None:
-    """Products in a collection; None when the path isn't a collection (404, not JSON)."""
+    """Product items in a collection; None when the path doesn't exist (404). A first page that isn't JSON
+    raises NotCatalog; any other failure, on any page, raises FetchError."""
     items: list[dict] = []
     offset: object = None
     for page in range(MAX_PAGES):
@@ -52,28 +53,54 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
         if offset:
             params["offset"] = offset
         try:
-            data = client.get_json(f"https://{roaster.host}{path}", **params)
-        except Blocked:
+            data = client.catalog_json(f"https://{roaster.host}{path}", **params)
+        except NotCatalog:
+            if page:
+                raise FetchError(f"collection {path} page {page + 1} is not JSON") from None
+            raise
+        if data is None:
+            if page:  # a later page vanishing would silently truncate the catalog
+                raise FetchError(f"collection {path} page {page + 1} returned 404")
             return None
-        if not isinstance(data, dict):
-            if page:  # a later page failing would silently truncate the catalog
-                raise FetchError(f"collection {path} page {page + 1} failed")
-            return None
-        items.extend(i for i in data.get("items") or [] if "variants" in i or "productType" in i)
-        page = data.get("pagination") or {}
-        offset = page.get("nextPageOffset") if page.get("nextPage") else None
+        if not isinstance(data, dict) or not isinstance(data.get("items", []), list):
+            raise FetchError(f"unexpected Squarespace payload at {path}")
+        items.extend(i for i in data.get("items") or []
+                     if isinstance(i, dict) and ("variants" in i or "productType" in i))
+        pagination = data.get("pagination") or {}
+        offset = pagination.get("nextPageOffset") if pagination.get("nextPage") else None
         if not offset:
             break
     return items
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+    """Try likely shop paths until one is a collection with products.
+
+    Returns [] only when every path is missing (404) or a real but empty collection. If no path yields a
+    collection and any path was blocked or answered with a non-JSON page, we can't tell "no shop" from
+    "couldn't read it", so the fetch fails instead of recording an empty catalog."""
+    try:
+        urls = sitemap_urls(client, roaster.host)
+    except FetchError:
+        urls = []  # the common shop paths below are tried anyway, and fail loudly if they can't be read
     seen: dict[str, CatalogItem] = {}
-    for path in shop_paths(sitemap_urls(client, roaster.host))[:6]:
-        for raw in _collection(client, roaster, path) or []:
-            if isinstance(raw, dict) and raw.get("id"):
+    found_collection = False
+    unreadable: list[str] = []
+    for path in shop_paths(urls)[:6]:
+        try:
+            raw_items = _collection(client, roaster, path)
+        except NotCatalog as e:
+            unreadable.append(str(e))
+            continue
+        if raw_items is None:
+            continue
+        found_collection = True
+        for raw in raw_items:
+            if raw.get("id"):
                 item = parse_item(raw, roaster)
                 seen.setdefault(item.product_id, item)
         if seen:
             break
+    if not found_collection and unreadable:
+        raise FetchError(f"no readable shop collection ({len(unreadable)} non-JSON pages)")
     return list(seen.values())

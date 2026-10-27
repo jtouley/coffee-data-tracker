@@ -24,15 +24,27 @@ jobs:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
+      # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
+      PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ${{ vars.AWS_REGION }}
+      # Optional: load the public tables into Snowflake each week (marketplace/snowflake/README.md).
+      SNOWFLAKE_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
+      SNOWFLAKE_USER: ${{ vars.SNOWFLAKE_USER }}
+      SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
         with: {python-version: "3.12"}
-      - run: uv sync
+      - run: uv sync --extra snowflake
       - name: Check lake config
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
       - name: Weekly run
-        run: uv run coffeedata weekly ${{ inputs.sample && format('--sample {0}', inputs.sample) || '' }}
+        env:
+          SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
+        run: uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"}
       - uses: actions/upload-pages-artifact@v3
         with: {path: build/site}
   deploy:

@@ -88,3 +88,11 @@ def test_init_creates_private_dataset_with_card(tmp_path, monkeypatch):
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
     cli.main(["init"])
     assert calls == [("create", "someone/coffee", True), ("card", "README.md"), ("commit", len(SCHEMA_FILES))]
+
+
+def test_bad_run_date_is_a_usage_error(capsys):
+    from coffeedata import cli
+
+    with pytest.raises(SystemExit) as e:
+        cli.main(["ingest", "--run-date", "2026-13-40"])
+    assert e.value.code == 2 and "not a YYYY-MM-DD date" in capsys.readouterr().err

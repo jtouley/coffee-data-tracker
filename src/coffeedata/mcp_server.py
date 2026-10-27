@@ -93,7 +93,10 @@ def run_sql(sql: str, max_rows: int = 200) -> dict:
     import duckdb
 
     stmt = check_sql(sql)
-    con = duckdb.connect(str(DB), read_only=True)
+    # Read-only, no file/network access (read_text, read_csv, httpfs, ATTACH …), and the setting is locked
+    # so the query can't turn it back on. Only the dbt models in the database are reachable.
+    con = duckdb.connect(str(DB), read_only=True,
+                         config={"enable_external_access": False, "lock_configuration": True})
     try:
         cur = con.execute(stmt)
         cols = [d[0] for d in cur.description]

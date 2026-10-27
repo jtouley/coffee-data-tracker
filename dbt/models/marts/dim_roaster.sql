@@ -1,5 +1,5 @@
 -- Current roaster state, derived from probe and fetch history (mirrors registry.STATE_SQL in Python, which
--- picks what to fetch; tests/test_state.py checks the two agree).
+-- picks what to fetch; tests/test_dbt.py::test_python_and_dbt_agree_on_roaster_status checks the two agree).
 with probes as (select * from {{ ref('stg_probes') }}),
 last_probe as (select * from probes qualify row_number() over (partition by roaster_id order by probed_at desc) = 1),
 last_good_probe as (

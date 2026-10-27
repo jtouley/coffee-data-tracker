@@ -49,6 +49,11 @@ def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
     return res
 
 
+def sample_key(roaster_id: str) -> str:
+    """Stable order for --sample: unaffected by roasters being added, shared by probe and ingest."""
+    return hashlib.sha1(roaster_id.encode()).hexdigest()
+
+
 def select(lake: Lake, run_date: str, only: str | None = None, sample: int | None = None,
            retry_failed: bool = False) -> list[Roaster]:
     states = registry.current(lake)
@@ -66,7 +71,7 @@ def select(lake: Lake, run_date: str, only: str | None = None, sample: int | Non
     pool = sorted((s for s in states if s.roaster.platform and s.status != "opted_out"),
                   key=lambda s: s.roaster.roaster_id)
     if sample:  # a hash order is stable as roasters are added, so weekly samples keep the same roasters
-        pool = sorted(pool, key=lambda s: hashlib.sha1(s.roaster.roaster_id.encode()).hexdigest())[:sample]
+        pool = sorted(pool, key=lambda s: sample_key(s.roaster.roaster_id))[:sample]
     todo = [s.roaster for s in pool if (s.status in INGESTABLE or s.roaster.roaster_id in tried)
             and s.roaster.roaster_id not in done]
     if retry_failed:

@@ -13,7 +13,8 @@ _NOT_COFFEE = re.compile(
     r"french press|v60|scale|machine|espresso machine|tamper|pitcher|carafe|capsules?|pods?|k-?cups?|"
     r"cold brew (can|concentrate)|concentrate|ready to drink|rtd|cans?|matcha|chai|chocolate bar|"
     r"syrup|class|workshop|wholesale|merch|apparel|candle|book|socks|bundle|sampler|variety pack|coaster|"
-    r"bottle|strainer|glass|mat|towel|ornament|keychain|"
+    r"bottle|strainer|glass|mat|towel|ornament|keychain|chocolate[- ]covered|gragee|dragee|candy|truffles?|"
+    r"bonbons?|cookies?|granola|brittle|toffee bar|"
     r"tasting set|trio|flight|gift box|gift set|\bset\b|instant|steeped|drip bags?|single serve)\b",
     re.I,
 )

@@ -99,6 +99,21 @@ config/roasters.csv (seed) + lake registry ──probe──▶ platform ──i
 5. Create the `shot` and `roaster` issue labels.
 6. Actions → **weekly** → Run workflow. Try `sample: 50` first, then leave it to the Monday schedule.
 
+## Public release and marketplaces
+
+Four **facts-only** tables (`dbt/models/public/`) are built every week. They contain:
+- coffee names, origin and process attributes, sizes, prices and stock, with a link back to the roaster
+- the weekly change log
+- a market summary by origin and process
+- the roasters covered
+
+A dbt test fails the build if descriptions, images, store ids or shot-log data ever reach them. They also
+exclude opted-out roasters and roasters known only from OpenStreetMap (ODbL).
+
+Set `PUBLIC_EXPORT_URL` and the weekly run exports them to a public Hugging Face dataset, or to S3/GCS for
+Snowflake and Databricks. You can also run `coffeedata export-public --to …` by hand. The marketplace setup
+scripts, the draft listing copy and the open decisions are in [`marketplace/`](marketplace/README.md).
+
 ## Logging shots
 
 Two ways in. Both write a new shot file to the lake, match the coffee to the catalog, and reply with dial-in advice. The advice is rule-based (target about 1:2 in 25–32 s): sour or fast means grind finer, bitter or slow means coarser. To correct a shot, log it again with the same `shot_id`; to retract one, log it with `deleted: true`. The latest record wins.
@@ -160,6 +175,26 @@ See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md):
 - OpenStreetMap: ODbL, © OpenStreetMap contributors
 
 The code is MIT-licensed.
+
+## Design lineage
+
+Almost no code from the original version survives; `git blame` attributes 2 lines of today's tree to it. The
+problem statement and data model do survive. Here is where each original piece went:
+
+| Original (`v0-gcp` / `coffee-scraper`) | Now |
+|---|---|
+| Goal: collect brewing data and analyze it in the cloud ("a data play") | Same goal; the analysis layer is dbt + DuckDB over an immutable lake |
+| Squarespace form fields: roaster, roast, origin, grind setting, dose, yield, shot duration, rating, `is_latte`, notes | `Shot` model and the **Log a shot** issue form: the same fields (`is_latte` became `is_milk_drink`), plus `taste`, `water_temp_c`, `roast_date`, `brew_method` |
+| Form's 59-roaster dropdown | First seeds of the roaster registry (`config/roasters.csv`), now about 3,200 roasters from Overture Maps |
+| Form's 49-country origin dropdown | `origins.py`: the country list used for classifying and extracting origin |
+| BigQuery table + Pub/Sub branch: typed schema, column descriptions, `created_at` vs `received_at` | Typed Parquet schemas in `lake.py`; separate `brewed_at` / `logged_at` on shots and `fetched_at` on catalog records; documented dbt models |
+| Cloud Function receiving form posts | MCP server (`coffeedata mcp`) and GitHub issue forms |
+| Terraform: infrastructure as code | Everything versioned in the repo: dbt models, workflows, the lake layout |
+| `coffee-scraper`: per-site Selenium / ScrapeGraph scrapers for Counter Culture, Intelligentsia, Onyx, Blue Bottle | Storefront adapters reading each roaster's own catalog feed; the first three are covered by the Shopify adapter (Blue Bottle blocks bots and is skipped) |
+| `coffee-scraper` fields: name, price, roast type, tasting notes, origin | `dim_coffee` / `public_coffee`: the same fields plus process, varietals, elevation, bag sizes, price per 100 g, stock and history |
+
+New in the rebuild: open-data roaster discovery, the immutable lake on Hugging Face, history derived in dbt
+(price changes, delistings, status), Claude enrichment, the public facts-only tables and the marketplace kit.
 
 ## History
 

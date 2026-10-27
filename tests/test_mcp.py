@@ -46,3 +46,13 @@ async def test_tools_over_mcp_protocol(lake, tmp_path, monkeypatch):
 
         r = await client.call_tool("run_sql", {"sql": "drop table dim_coffee"})
         assert r.is_error
+
+        # Review SF-2: no file access, even through a single SELECT.
+        secret = tmp_path / "secret.txt"
+        secret.write_text("topsecret-token")
+        for sql in (f"select content from read_text('{secret}')", f"select * from read_csv('{secret}')",
+                    "select current_setting('enable_external_access')"):
+            r = await client.call_tool("run_sql", {"sql": sql})
+            assert r.is_error or "topsecret" not in r.content[0].text
+        r = await client.call_tool("run_sql", {"sql": f"select content from read_text('{secret}')"})
+        assert r.is_error

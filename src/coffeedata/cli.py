@@ -21,6 +21,14 @@ def _today() -> str:
     return datetime.now(UTC).date().isoformat()
 
 
+def _run_date(value: str) -> str:
+    """argparse type for --run-date: a clean usage error instead of a traceback."""
+    try:
+        return date.fromisoformat(value).isoformat()
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"not a YYYY-MM-DD date: {value!r}") from None
+
+
 def _print(obj: object) -> None:
     print(json.dumps(obj, indent=1, default=str))
 
@@ -58,9 +66,7 @@ def cmd_discover(args: argparse.Namespace) -> None:
 
 
 def cmd_probe(args: argparse.Namespace) -> None:
-    import random
-
-    from . import discover, registry
+    from . import discover, ingest, registry
 
     lake = Lake()
     states = registry.current(lake)
@@ -68,8 +74,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
     todo = [s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff]
     if args.only:
         todo = [args.only]
-    if args.sample:
-        todo = random.sample(todo, min(args.sample, len(todo)))
+    if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
+        todo = sorted(todo, key=ingest.sample_key)[:args.sample]
     rows = discover.probe(todo, workers=args.workers, run_date=args.run_date)
     lake.write_partition("probes", args.run_date, new_batch_id(), rows)
     ok = sum(r["status"] == "ok" for r in rows)
@@ -124,6 +130,18 @@ def cmd_publish(args: argparse.Namespace) -> None:
           else "local lake; nothing to publish")
 
 
+def cmd_export_public(args: argparse.Namespace) -> None:
+    from . import public
+
+    _print(public.export(Path(args.db), args.to))
+
+
+def cmd_load_snowflake(args: argparse.Namespace) -> None:
+    from . import snowflake_load
+
+    _print(snowflake_load.load(Path(args.source)))
+
+
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
     run = args.run_date
@@ -146,6 +164,12 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_build(argparse.Namespace(db=args.db))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}"))
+    # Facts-only tables: always exported locally; optionally published and loaded into Snowflake.
+    cmd_export_public(argparse.Namespace(db=args.db, to="build/public"))
+    if os.environ.get("PUBLIC_EXPORT_URL") and os.environ["PUBLIC_EXPORT_URL"] != "build/public":
+        cmd_export_public(argparse.Namespace(db=args.db, to=os.environ["PUBLIC_EXPORT_URL"]))
+    if os.environ.get("SNOWFLAKE_ACCOUNT"):
+        cmd_load_snowflake(argparse.Namespace(source="build/public"))
     cmd_site(argparse.Namespace(db=args.db, out=args.out))
 
 
@@ -226,10 +250,10 @@ def main(argv: list[str] | None = None) -> None:
     pr.add_argument("--only")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
-    pr.add_argument("--run-date", default=_today())
+    pr.add_argument("--run-date", type=_run_date, default=_today())
 
     i = add("ingest", cmd_ingest, "fetch catalogs for this run (skips roasters already fetched in it)")
-    i.add_argument("--run-date", default=_today())
+    i.add_argument("--run-date", type=_run_date, default=_today())
     i.add_argument("--only", help="one roaster_id (domain)")
     i.add_argument("--sample", type=int)
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
@@ -237,7 +261,7 @@ def main(argv: list[str] | None = None) -> None:
 
     e = add("enrich", cmd_enrich, "Claude enrichment of pending coffees (collects finished batches first)")
     e.add_argument("--limit", type=int, default=2000)
-    e.add_argument("--run-date", default=_today())
+    e.add_argument("--run-date", type=_run_date, default=_today())
 
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
@@ -245,8 +269,15 @@ def main(argv: list[str] | None = None) -> None:
     pb = add("publish", cmd_publish, "upload staged lake files to the remote lake")
     pb.add_argument("--message", default=f"publish {_today()}")
 
+    ep = add("export-public", cmd_export_public, "export the facts-only public tables (dir, hf://, s3://, gs://)")
+    ep.add_argument("--db", default="build/coffee.duckdb")
+    ep.add_argument("--to", default=os.environ.get("PUBLIC_EXPORT_URL", "build/public"))
+
+    sf = add("load-snowflake", cmd_load_snowflake, "load an export-public folder into Snowflake (internal stage)")
+    sf.add_argument("--from", dest="source", default="build/public")
+
     w = add("weekly", cmd_weekly, "the full weekly run")
-    w.add_argument("--run-date", default=_today())
+    w.add_argument("--run-date", type=_run_date, default=_today())
     w.add_argument("--sample", type=int, help="only N roasters (for trying it out)")
     w.add_argument("--discover", action="store_true", help="run discovery even if it isn't the first week")
     w.add_argument("--enrich-limit", type=int, default=2000)
