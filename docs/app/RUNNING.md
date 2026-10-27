@@ -45,8 +45,8 @@ Every read and write is scoped to the user in the cookie, never to a `user_id` i
 
 ## On Cloud Run
 
-The app runs on Google Cloud Run in `us-central1` at `app.registry.coffee`. `infra/` (Terraform) describes all of
-it:
+The app runs on Google Cloud Run in `us-central1` at `app.registry.coffee`. Terraform describes all of
+it, in `src/terraform/` (the original GCP setup's place and style):
 
 - an Artifact Registry repository for the image (`app/Dockerfile`, which is a plain container for any host);
 - the Cloud Run service: scales to zero, at most **one** instance, 1 GiB, CPU only during requests, startup CPU
@@ -65,9 +65,12 @@ the image and deploys it, once the variables below are set.
 
 Nothing here was created for you. Once, in this order:
 
-1. **Project:** create a GCP project and link a billing account. The free tier still needs billing linked. Then
-   `gcloud auth application-default login`.
-2. **State bucket:** `gcloud storage buckets create gs://<project>-tfstate --location=us-central1`.
+1. **Project:** the app uses the original `coffee-data-tracker` project. `gcloud projects describe
+   coffee-data-tracker`: reuse it if it exists, or create it with that ID (`gcloud projects create
+   coffee-data-tracker`). Link a billing account; the free tier still needs one. Then `gcloud auth
+   application-default login`. If the old Cloud Function from archive/v0-gcp is still deployed, its `allUsers`
+   invoker can be removed by hand (`gcloud functions remove-iam-policy-binding`), or the function deleted.
+2. **State bucket:** `gcloud storage buckets create gs://coffee-data-tracker-tfstate --location=us-central1`.
 3. **Domain prerequisites** (both before the domain mapping; DNS steps are in `runbook/domain-and-dns.md` from #19):
    - verify `registry.coffee` as a Domain property in Google Search Console, with the account that runs
      Terraform as a verified owner;
@@ -76,9 +79,9 @@ Nothing here was created for you. Once, in this order:
 4. **Apply:**
 
    ```bash
-   cd infra
-   cp terraform.tfvars.example terraform.tfvars   # project_id, billing_account, owner_email
-   terraform init -backend-config="bucket=<project>-tfstate"
+   cd src/terraform
+   cp terraform.tfvars.example terraform.tfvars   # billing_account, owner_email
+   terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
    terraform apply
    ```
 

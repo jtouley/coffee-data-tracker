@@ -1,6 +1,7 @@
 variable "project_id" {
-  description = "The GCP project the app runs in."
+  description = "The GCP project the app runs in: the original coffee-data-tracker project."
   type        = string
+  default     = "coffee-data-tracker"
 }
 
 variable "region" {

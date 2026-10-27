@@ -11,3 +11,4 @@ dbt
 tests
 **/__pycache__
 **/*.pyc
+src/terraform

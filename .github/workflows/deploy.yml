@@ -5,9 +5,9 @@ name: deploy
 on:
   push:
     branches: [main]
-    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "infra/**", ".github/workflows/deploy.yml"]
+    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
   pull_request:
-    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "infra/**", ".github/workflows/deploy.yml"]
+    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -25,7 +25,7 @@ jobs:
       - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd  # v3
         with: {terraform_version: "1.9.8"}
       - name: Check the Terraform
-        working-directory: infra
+        working-directory: src/terraform
         run: |
           terraform fmt -check
           terraform init -backend=false -input=false

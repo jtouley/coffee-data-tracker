@@ -19,7 +19,7 @@ lake-photos/
 lake-users/
 tests/browser/node_modules/
 
-# Terraform (infra/)
-infra/.terraform/
-infra/*.tfstate*
-infra/terraform.tfvars
+# Terraform (src/terraform/)
+src/terraform/.terraform/
+src/terraform/*.tfstate*
+src/terraform/terraform.tfvars
