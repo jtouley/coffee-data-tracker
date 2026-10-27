@@ -153,55 +153,67 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 
 ### Hosting
 
+Decided by the owner: Google Cloud Run in `us-central1`, managed with Terraform in `infra/`. The data stays on
+Hugging Face; only the app moves. This continues the original repo's GCP and Terraform lineage.
+
 | Option | For | Against |
 |---|---|---|
-| A. Hugging Face Space (Docker, FastAPI) | Same account as the lake, so the token never leaves HF. Python, so it imports `coffeedata` directly: `log_shot`, `fuzzy_match_coffee` and the lake writer are reused, not rewritten. Secrets in Space settings. | Docker Spaces now need an HF PRO account, even on the free CPU hardware (found in #15). Spaces sleep after 48 hours without traffic, so the first shot after a trip waits for a cold start (tens of seconds). The disk is ephemeral, so nothing can wait in local staging. |
-| B. Cloudflare Workers + Pages | Never sleeps, fast everywhere, free at this volume. | JavaScript. Matching and the Parquet writer would be a second implementation that drifts from the Python one. Parquet writing from a Worker is awkward. |
-| C. Small VM or container host (Fly.io, Render, a home server) | Python reuse, always on if paid. | Another account and bill to look after; a home server isn't reachable without a tunnel. |
-| D. No server: static app that opens GitHub issues | Reuses the existing issue-form workflow. | Needs a GitHub token on the phone, takes a minute per shot through Actions, and can't do photos or show the saved summary right away. |
+| A. Hugging Face Space (Docker) | Same account as the lake. | Docker Spaces need an HF PRO subscription, even on free CPU (creating one in #15 returned 402). |
+| B. Cloudflare Workers + Pages | Never sleeps, free at this volume. | JavaScript: matching and the Parquet writer would be a second implementation that drifts from the Python one. |
+| C. Google Cloud Run (chosen) | Runs the Docker image #15 already built, so `coffeedata`'s matching and lake writer are reused, not rewritten. Scales to zero, Secret Manager for keys, keyless deploys from GitHub, and Terraform for everything. | A Google Cloud project and billing account to look after. |
+| D. No server: static app that opens GitHub issues | Reuses the issue-form workflow. | A GitHub token on the phone, a minute per shot through Actions, no photos and no saved summary. |
 
-Recommendation: A, the Space. Code reuse is the deciding factor: the matching rules and the lake writer already have tests,
-and a second implementation would drift. Creating the Space in #15 returned 402: Hugging Face now requires PRO for
-Docker Spaces even on free CPU, so this option costs a PRO subscription. If the owner would rather not pay for it,
-C (a small container host) runs the same Docker image with no code change. The 48-hour sleep doesn't matter for daily use; if it starts to annoy,
-upgrading the Space's hardware to an always-on tier is one setting. The Space's own code lives in this repo
-(`app/`) and is pushed to the Space by a workflow, so the Space repo never holds anything hand-edited.
+What Terraform in `infra/` manages:
 
-The proposal was a Space with the token server-side. I agree with that part and push back on two details. First,
-the Space must not rely on its disk: it publishes each write to the lake before acknowledging it, and the phone
-keeps the write in an outbox until it's acknowledged (see Offline). Second, reading shots by globbing `shots/*.parquet` over
-`hf://` is one HTTP request per file. That's fine at 200 shots and slow at 2,000. The server keeps an in-memory
-copy of shots, bags and equipment, updated on every write. At start, shots come from the weekly
-`marts/fct_shot.parquet` export, which keeps each shot's own columns (`shot_coffee_id` and so on, beside the values
-`fct_shot` fills in from the bag) and `logged_at` (#15). Then every shot file written since the export's snapshot
-began is read on top, latest wins. The export records `snapshot_at`, the time dbt started reading shots, and the
-seed reads files from that time on, not just files newer than the latest `logged_at` in the export: a file staged
-before the snapshot but published after it would otherwise be missed. Bags and equipment are few, so they're read
-straight from their files. With no export yet, the Space reads every shot file.
+- The Cloud Run service in `us-central1`, running as its own service account, with the image from an Artifact
+  Registry repository.
+- Secret Manager secrets for `HF_TOKEN`, `ANTHROPIC_API_KEY`, `AUTH_PEPPER`, `SESSION_SECRET` and
+  `OWNER_SETUP_CODE`, exposed to the service as environment variables. Terraform creates the secrets and grants
+  access; the values are added outside it (`gcloud secrets versions add`), so they never sit in Terraform state.
+- The domain mapping for `app.registry.coffee` (see Domain).
+- Workload Identity Federation for GitHub Actions: a pool and provider that trust this repo's workflows, and a deploy
+  service account they can impersonate. Deploys need no JSON key. A workflow on pushes to `main` that touch `app/`
+  or `src/` builds the image, pushes it to Artifact Registry and deploys a new revision.
+- Terraform's own state lives in a GCS bucket, created once before the first `terraform apply`.
+
+How the app runs there:
+
+- Min instances 0 to start. The first request after an idle spell waits for a cold start (a few seconds for this
+  image); the owner accepted cold starts. Raising it to 1 is a one-line change if that starts to annoy.
+- Max instances 1. The server keeps shots, bags, equipment, the sign-in lockout counters and the write lock in
+  memory, and assumes it's the only writer. A second instance would have its own copy and its own lock, so the
+  service must never scale past one. One instance serves many requests at once, which is plenty here.
+- By default Cloud Run gives an instance CPU only while a request is in flight. The app already finishes every
+  lake commit before it answers, so nothing runs after a response.
+- The filesystem is in memory and goes away with the instance, like a Space's disk. Nothing waits in staging: each
+  write is published before it's acknowledged, and the phone's outbox holds it until then (see Offline). Staged
+  files count against the instance's memory, so the service gets 1 GiB.
+
+The original proposal had a Space; the parts of it that mattered carry over. The tokens stay on the server, and the
+server keeps an in-memory copy of shots, bags and equipment, updated on every write, because reading one file per
+shot over `hf://` is one HTTP request per file. At start, shots come from the weekly `marts/fct_shot.parquet`
+export, which keeps each shot's own columns (`shot_coffee_id` and so on, beside the values `fct_shot` fills in from
+the bag) and `logged_at` (#15). Then every shot file written since the export's snapshot began is read on top,
+latest wins. The export records `snapshot_at`, the time dbt started reading shots, and the seed reads files from
+that time on, not just files newer than the latest `logged_at` in the export: a file staged before the snapshot but
+published after it would otherwise be missed. Bags and equipment are few, so they're read straight from their
+files. With no export yet, the server reads every shot file.
 
 ### Domain: registry.coffee
 
-The owner used to own `registry.coffee` and is happy to buy it back. The name fits: the catalog is a registry of
-US roasters and their coffees, and the lake already has a `registry` table. The proposed split:
+The owner is buying back `registry.coffee`. The name fits: the catalog is a registry of US roasters and their
+coffees, and the lake already has a `registry` table. The addresses are decided:
 
-- `registry.coffee`: the public site that GitHub Pages builds. Pages supports a custom apex domain with HTTPS for
-  free; it needs the A/AAAA records and a `CNAME` file in the site output. #19 makes its root a launch page and moves
-  the catalog dashboard to `registry.coffee/catalog/`.
-- `app.registry.coffee`: the shot-logging app (the Space). Invitees get a short, memorable address, and the app's
-  cookies are scoped to that host, apart from the public site.
+- `registry.coffee`: the public launch page, built by GitHub Pages (#19), with the catalog dashboard at
+  `registry.coffee/catalog/`. Pages supports a custom apex domain with HTTPS for free; it needs the A/AAAA records
+  and a `CNAME` file in the site output.
+- `app.registry.coffee`: the shot-logging app on Cloud Run, through a Cloud Run domain mapping. The domain is
+  verified once in Google Search Console, then `app` gets a CNAME to `ghs.googlehosted.com` and Google issues the
+  certificate. If domain mappings ever fall short (they're region-limited, and `us-central1` has them), a global
+  external HTTPS load balancer in front of the service does the same job, in the same Terraform.
 
-Two ways to put the Space on `app.registry.coffee`:
-
-| Option | Cost | Notes |
-|---|---|---|
-| Hugging Face's own custom domains for Spaces | needs an HF PRO account (or a Team/Enterprise org) | A CNAME to `hf.space` set in the Space's settings. Simplest, and HF handles HTTPS. Forum threads report domains stuck on "pending" for a while; HF support sorts those out. |
-| Cloudflare in front of the app | free | DNS on Cloudflare and a small Worker that forwards `app.registry.coffee` to the app's own address. Works for any host, but it's one more piece to own, and the direct `hf.space` address still works (it's behind the same sign-in, so that's fine). |
-
-Recommendation: HF's own custom domain. The Space needs PRO anyway (see Hosting), and PRO includes custom domains,
-so Cloudflare would only add a part. Cloudflare stays the route if the app ends up on a container host instead.
-The owner has settled the addresses: the app is `app.registry.coffee` and the catalog is `registry.coffee/catalog/`.
-Which route serves the app depends on the hosting question (open question 5). Either way, the session cookie is
-host-only on `app.registry.coffee`, and links in invites use that address.
+The session cookie is host-only on `app.registry.coffee`, apart from the public site, and links in invites use that
+address.
 
 ### Accounts and sign-in
 
@@ -213,13 +225,13 @@ dataset, instead of "Sign in with Hugging Face" (most invitees won't have an HF 
 A third private dataset, `hf://datasets/jtouley/coffee-data-users`, holding two
 append-only tables, `users` and `invites` (see Data model). Keeping accounts apart from the lake and the photos
 means nothing that reads the lake (dbt, the MCP server, the weekly run) can see a password hash, and the token
-the weekly run uses doesn't need access to it. The Space loads both tables into memory at start and writes a new
+the weekly run uses doesn't need access to it. The server loads both tables into memory at start and writes a new
 record (one commit) for every change.
 
 #### Passwords
 
 Hashed with Argon2id (`argon2-cffi`, its default RFC 9106 low-memory parameters: 64 MiB, 3 passes,
-4 lanes), with a per-hash random salt. Before hashing, the password is HMAC-ed with a pepper kept as a Space secret
+4 lanes), with a per-hash random salt. Before hashing, the password is HMAC-ed with a pepper kept in Secret Manager
 (`AUTH_PEPPER`), so a copy of the users dataset alone isn't enough to start guessing. Rules follow NIST 800-63B:
 at least 10 characters, no composition rules, and a check against a short list of common passwords. Changing a
 password writes a new `users` record.
@@ -236,10 +248,10 @@ Only with an invite code.
    reaches server logs as part of the URL.
 2. The invitee opens the link, lands on "jtouley invited you" with the code filled in, picks a username and a
    password, and is signed in. Typing the code by hand also works.
-3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a Space
-   secret, and creates the `owner` account. Each value of the secret works once: the server stores the SHA-256 of
+3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a secret in
+   Secret Manager, and creates the `owner` account. Each value of the secret works once: the server stores the SHA-256 of
    every setup code it has accepted, in the users dataset, and refuses a value it has seen. A setup code that has
-   been used is inert, so leaving it in the Space's settings is no standing way into the owner's account.
+   been used is inert, so leaving it in Secret Manager is no standing way into the owner's account.
 
 #### Sign-in
 
@@ -258,7 +270,7 @@ All of this is kept in memory; a restart clears it, which is acceptable at this 
 #### Sessions
 
 No session table in the dataset (that would be a commit per login). The cookie is a signed token
-(HMAC-SHA256 with the `SESSION_SECRET` Space secret) carrying `user_id`, `session_epoch` and the issue time. It is
+(HMAC-SHA256 with the `SESSION_SECRET` secret) carrying `user_id`, `session_epoch` and the issue time. It is
 `HttpOnly`, `Secure` and `SameSite=Lax`, lasts 90 days, and renews itself on use. Each `users` record has a
 `session_epoch`. "Sign out everywhere", a password change and the owner disabling an account all bump it, which
 invalidates every older cookie. Writes also need an `X-Requested-With` header, which a cross-site form can't send,
@@ -268,8 +280,8 @@ as CSRF protection on top of `SameSite`.
 
 There's no email, so the owner issues a reset code from the Invite screen. It works like an
 invite but is tied to an existing account, and using it sets a new password and bumps the epoch. To reset the
-owner's own password, the owner sets a new value of `OWNER_SETUP_CODE` in the Space's settings (which proves control
-of the Space) and uses it once on the reset screen; as with setup, a value that has been used never works again.
+owner's own password, the owner adds a new version of the `OWNER_SETUP_CODE` secret in Secret Manager (which proves
+control of the Google Cloud project) and uses it once on the reset screen; as with setup, a value that has been used never works again.
 
 #### Every request is scoped
 
@@ -277,12 +289,12 @@ The server reads `user_id` from the cookie, never from the request body, and fil
 every read and write by it. The in-memory caches are keyed by user. Tests cover one user trying to read, correct
 or retract another user's shot, bag, photo or equipment.
 
-Rejected: Sign in with Hugging Face (invitees would need HF accounts), a private Space (same problem), passkeys only
+Rejected: Sign in with Hugging Face (invitees would need HF accounts), Identity-Aware Proxy in front of Cloud Run (invitees would need Google accounts), passkeys only
 (good, but more code to get right; worth adding later as a second way in), and magic links (need email).
 
 ### How writes reach the lake
 
-Each action is one Hugging Face commit, made by the Space with the existing `Lake.write` and `Lake.publish`:
+Each action is one Hugging Face commit, made by the server with the existing `Lake.write` and `Lake.publish`:
 
 - Sign-up, password change, invite: one commit each to the users dataset.
 - New bag: two commits. First the photo's Parquet file to the photo dataset, then the `bags` row to the lake. If
@@ -311,14 +323,14 @@ Each dataset (lake, photos, users) has its own staging folder (`build/lake-stagi
 under a lock. A shot publish can't carry a password hash or a photo into the main lake. A file that went up in
 another request's commit counts as published, so a request never retries a commit that already succeeded.
 
-The weekly run and the Space can commit to the dataset at the same time: they touch different paths, and the
-`concurrency: lake` group in Actions doesn't cover the Space, so this relies on HF commits not conflicting on
-disjoint files. The owner has approved one test during milestone 2: a commit from a throwaway Space to a test path
+The weekly run and the app can commit to the dataset at the same time: they touch different paths, and the
+`concurrency: lake` group in Actions doesn't cover the app, so this relies on HF commits not conflicting on
+disjoint files. The owner has approved one test during milestone 2: a commit from a test deployment to a test path
 while a weekly run is committing.
 
 ### Where the bag photo is read
 
-On the server, with the Anthropic key as a Space secret. One request per photo: the image, a short instruction and
+On the server, with the Anthropic key in Secret Manager. One request per photo: the image, a short instruction and
 a JSON schema through structured outputs, so the response always parses. Bag labels are short but varied
 (hand-lettered names, stickers on kraft paper, dates as "R 10.18" or "Roasted on 18/10").
 
@@ -372,7 +384,7 @@ schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a ze
 
 Every personal record carries a `user_id`: equipment, bags, photos and shots. Shots logged before accounts existed
 have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`), so they stay the owner's. The
-Space applies the same rule when it loads shots, so a shot logged through the MCP server or the issue form shows up
+server applies the same rule when it loads shots, so a shot logged through the MCP server or the issue form shows up
 for the owner straight away, not after the next weekly run. The MCP server and the issue form write `source` (`mcp`,
 `issue`) and leave `user_id` empty.
 
@@ -473,7 +485,8 @@ In the users dataset (`hf://datasets/jtouley/coffee-data-users`):
 | `revoked` | bool | |
 
 Usernames are unique "among current records": two people signing up with the same name at the same moment is
-handled by the Space, which is a single process and checks under a lock before writing.
+handled by the server, which runs as a single Cloud Run instance (max instances 1) and checks under a lock before
+writing.
 
 ### Changes to `shots`
 
@@ -503,7 +516,7 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
 ### dbt changes
 
 - `stg_equipment`, `stg_bags`: latest record per id, without deleted ones, the same shape as `stg_shots`. Photos are
-  not modelled in dbt; the Space reads them directly from the photo dataset.
+  not modelled in dbt; the server reads them directly from the photo dataset.
 - `dim_equipment`: current equipment.
 - `fct_shot`: join `stg_bags` (`roast_date` falls back to the bag's), `dim_equipment` (grinder name, scale), and add
   `grind_position = (grinder_setting - scale_min) / (scale_max - scale_min)` so shots across grinders can at least
@@ -516,7 +529,7 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
 - `public_tables_are_facts_only.sql`: add `user_id`, `photo_id`, `bag_id`, `grinder_id`, `machine_id`,
   `basket_id`, `read_json` and `sha256` to the forbidden columns.
 - The users dataset is never a dbt source.
-- The weekly export adds `marts/fct_shot.parquet` (private lake only), which the Space uses as its starting copy.
+- The weekly export adds `marts/fct_shot.parquet` (private lake only), which the server uses as its starting copy.
   It keeps each shot's own columns and `logged_at` (#15), and records `snapshot_at`, when dbt started reading shots.
 
 ## Privacy
@@ -530,7 +543,7 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
   Plain JPEGs would need a second write path for binary files and a separate metadata table kept in step with them.
 - EXIF is removed on the phone before upload, so GPS coordinates of the kitchen never leave it. The server
   re-encodes the JPEG as a second check before writing the bytes into Parquet.
-- Photos are served only through the Space, to the user who took them, never by a direct HF URL. The Space reads
+- Photos are served only through the app, to the user who took them, never by a direct HF URL. The server reads
   the `image` column and returns the bytes.
 - Invited people's data lives in the owner's private datasets, so the owner can read it. The sign-up screen says so
   in one sentence. The app itself never shows one user another's data.
@@ -539,7 +552,7 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
   files from the three datasets and squashes the history (`HfApi.super_squash_history`). It's a manual
   exception to append-only, and it's the reason accounts and photos live in their own datasets: erasing them doesn't
   rewrite the catalog's history.
-- Passwords never leave the Space in plain text and are never logged. Request logging drops the body of the
+- Passwords never leave the server in plain text and are never logged. Request logging drops the body of the
   sign-in, sign-up and reset routes.
 - The image goes to the Anthropic API to be read. Under standard API terms it isn't used for training; it is still
   a third party seeing a photo of a kitchen counter. The capture screen frames the bag tightly to keep the
@@ -554,13 +567,13 @@ doesn't use it, and it keeps serving the MCP server and the issue-form replies a
 
 | Item | Estimate |
 |---|---|
-| Hugging Face Space, CPU basic | the hardware is free, but Docker Spaces need an HF PRO subscription (#15); PRO also covers the custom domain. The owner accepts the cold start after two idle days |
+| Cloud Run, `us-central1`, min 0 / max 1 instance | at a few users' traffic, inside Cloud Run's monthly free tier; a cold start after idle is the trade-off. Artifact Registry, Secret Manager and the Terraform state bucket add cents a month. Keeping one instance warm (min 1) would cost more, billed for idle time |
 | Bag reads, Claude Opus 5.5 ($4 / $20 per million tokens in / out) | ~1,600 image tokens + ~400 prompt + ~300 out ≈ $0.014 per bag. One bag a week ≈ 75 cents a year |
 | Same with Claude Haiku 5.5 ($0.10 / $0.50) | ≈ $0.00035 per bag, about 2 cents a year |
 | The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.30, almost all of it Opus; once per prompt change |
 | Photo storage | ~300 KB per bag ≈ 15 MB a year, inside the free private storage |
 | Shot and equipment files | a few KB each; negligible next to the weekly catalog snapshots |
-| Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a Space setting). A handful of people logging a bag a week stays at a few dollars a year with Opus |
+| Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a service setting). A handful of people logging a bag a week stays at a few dollars a year with Opus |
 
 The app adds nothing to the weekly run's cost.
 
@@ -571,11 +584,11 @@ Each one is usable on its own and goes through the normal PR and CI process.
 1. Data model: new lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
    test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
-2. App skeleton: FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
+2. App skeleton: FastAPI on Cloud Run with Terraform in `infra/` and keyless deploys, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
    (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, the timer and typed time, and the saved summary. Online only. Includes the approved
    concurrent-commit test.
 3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers; invites, sign-up and
-   reset codes; `app.registry.coffee` in front of the Space and `registry.coffee` on the Pages site.
+   reset codes; the `app.registry.coffee` domain mapping and `registry.coffee` on the Pages site.
 4. Bag capture: photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
 5. Coffee page: catalog facts, best recipe, chart, shot list, correct and retract.
@@ -609,7 +622,8 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
 | Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Entered on first run, which asks for a grinder and a basket (#13); 18 g is the default first dose. The mockups show them. |
 | Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays for now (#15; open question 2). |
-| Cold start | Fine for now | Free CPU hardware. Docker Spaces turned out to need PRO (#15); see open question 5. |
+| Cold start | Fine for now | Cloud Run starts at min instances 0. |
+| Hosting | Google Cloud Run in `us-central1`, Terraform in `infra/`, Secret Manager, keyless deploys through Workload Identity Federation | Replaces the Space (Docker Spaces need PRO, #15). Max instances 1, since the server keeps its state in memory. The data stays on Hugging Face. |
 | Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
 | Grind suggestions | Deferred until there's a model trained on the owner's shots | The app describes each shot and suggests nothing. `shots.suggest_next` stays for the MCP and issue-form replies. See Later: a dial-in model. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
@@ -619,7 +633,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
-| Domain | The owner will buy back `registry.coffee` | The launch page on `registry.coffee` and the catalog on `registry.coffee/catalog/` (GitHub Pages, #19). The app on `app.registry.coffee`, decided; through HF's custom domain if the app runs on a Space, or Cloudflare in front of a container host. |
+| Domain | The owner will buy back `registry.coffee` | The launch page on `registry.coffee` and the catalog on `registry.coffee/catalog/` (GitHub Pages, #19). The app on `app.registry.coffee` through a Cloud Run domain mapping. |
 
 ## Open questions for the owner
 
@@ -628,5 +642,3 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
 4. Name: the sign-in screen now says "registry.coffee", since that will be the address. Should the project (repo,
    public dataset, site title) be renamed to match, or keep "Coffee Data"?
-5. Docker Spaces need HF PRO. Take PRO (which also covers the custom domain), or run the same image on a small
-   container host instead?
