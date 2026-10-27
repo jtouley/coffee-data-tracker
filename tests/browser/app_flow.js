@@ -183,6 +183,26 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Undo" }).click();
     await page.waitForSelector("[data-actions]:not([hidden])");
     assert.match(await page.textContent("main"), /puck was wet/);
+    // Offline, Retract still acts at once (the retraction waits on the phone), and Undo takes it back (#18-3).
+    await page.context().setOffline(true);
+    await page.getByRole("button", { name: "Retract" }).click();
+    await page.waitForSelector("[data-restore]:not([hidden])");
+    assert.match(await page.textContent("[data-restore]"), /Retracted on this phone/);
+    await page.getByRole("button", { name: "Undo" }).click();
+    await page.waitForFunction(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
+      };
+    }));
+    await page.context().setOffline(false);
+    // Correcting with the time cleared falls back to that shot's own time (27 s), not the bag's latest (#18-1).
+    await page.goto(`${base}/log?correct=dial3`);
+    await page.fill("#time_s", "");
+    await page.locator('[data-rating] [data-v="4"]').click();
+    await page.getByRole("button", { name: "Save correction" }).click();
+    assert.equal((await page.textContent("[data-save]")).trim(), "Save with 27 s?");
+    await page.getByRole("button", { name: "More dose" }).click();
+    assert.equal((await page.textContent("[data-save]")).trim(), "Save correction");
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
@@ -277,10 +297,32 @@ async function newPage(browser, errors) {
     // The shell is cached by the service worker.
     const cached = await page.evaluate(async () => {
       await navigator.serviceWorker.ready;
-      const keys = await caches.keys();
-      return keys.length ? (await (await caches.open(keys[0])).keys()).length : 0;
+      return (await (await caches.open("static")).keys()).length; // hashed files, kept across versions
     });
     assert.ok(cached >= 5, `service worker cached ${cached} files`);
+
+    // A 403 (the origin check, which a proxy can trip by mistake) keeps the write on the phone (#15-2).
+    await page.route("**/api/equipment", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"no"}' }));
+    const held = await page.evaluate(async () => {
+      const err = await send("probe:1", "/api/equipment", {}).catch((e) => e);
+      const n = await new Promise((resolve) => {
+        indexedDB.open("registry-coffee").onsuccess = (e) => {
+          e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
+        };
+      });
+      await store("readwrite", (s) => s.delete("probe:1"));
+      return [err.constructor.name, n];
+    });
+    assert.deepEqual(held, ["Held", 1]);
+    await page.unroute("**/api/equipment");
+    // A write the server refuses (4xx) is remembered, so the offline saved view says so instead of "Synced" (#20-5).
+    await page.route("**/api/shots", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"Dose is too low."}' }));
+    const no = await page.evaluate(async () => {
+      await send("shot:probe", "/api/shots", {}).catch(() => {});
+      return refused.get("shot:probe");
+    });
+    assert.equal(no, "Dose is too low.");
+    await page.unroute("**/api/shots");
 
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);

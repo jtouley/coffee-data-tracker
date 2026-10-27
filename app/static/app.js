@@ -28,20 +28,37 @@ function store(mode, fn) {
 }
 
 class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
+const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
 
-async function deliver(entry) {
+const sending = new Map(); // key -> the delivery in flight, so Undo can wait for it instead of racing it
+const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
+
+function deliver(entry) {
+  const p = deliverOnce(entry).finally(() => sending.delete(entry.key));
+  sending.set(entry.key, p);
+  return p;
+}
+
+async function deliverOnce(entry) {
   // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
   const r = await fetch(entry.url, {
     method: "POST",
     headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
     body: entry.blob || JSON.stringify(entry.body),
   });
-  // Signed out (401) or a server error: keep it and try again. Anything else is final.
-  const final = r.status !== 401 && r.status < 500;
+  // Signed out (401), refused by the origin check (403, which a proxy can trip by mistake) or a server error:
+  // keep it and try again, so a queued shot is never thrown away. Anything else is final.
+  const final = ![401, 403].includes(r.status) && r.status < 500;
   if (final) await store("readwrite", (s) => s.delete(entry.key));
   if (r.ok) return r.json();
   const detail = (await r.json().catch(() => ({}))).detail;
-  if (final) throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
+  if (final) {
+    const err = new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
+    refused.set(entry.key, err.message);
+    throw err;
+  }
+  if (r.status === 403) throw new Held("The server refused this for now. It’s kept on this phone and sent again later.");
   throw new Error(r.statusText);
 }
 
@@ -150,6 +167,7 @@ function logShot(form) {
   const taste = form.querySelector("[data-taste]");
   const rating = form.querySelector("[data-rating]");
   const save = form.querySelector("[data-save]");
+  const saveLabel = save.textContent;
   const timerBtn = form.querySelector("[data-timer]");
   let started = null;
   let ticker = null;
@@ -161,7 +179,7 @@ function logShot(form) {
     document.querySelector("[data-ratio]").textContent = d && y ? `1:${(y / d).toFixed(2)}` : "";
     if (confirmLastTime) {
       confirmLastTime = false;
-      save.textContent = "Save shot";
+      save.textContent = saveLabel; // "Save shot" or "Save correction"
     }
   }
 
@@ -264,14 +282,16 @@ function logShot(form) {
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
     let time = form.querySelector("[data-timed]").hidden ? null : num($("time_s"));
+    // Correcting, the fallback is the corrected shot's own time, not the bag's latest (#18-1).
+    const lastTime = p.correct ? p.correct.time_s : p.last_time_s;
     if (time === null) {
-      if (p.last_time_s == null) return hint(form, "Time the shot, or type the time.");
+      if (lastTime == null) return hint(form, "Time the shot, or type the time.");
       if (!confirmLastTime) {
         confirmLastTime = true; // a forgotten timer costs one more tap, never a made-up time
-        save.textContent = `Save with ${p.last_time_s} s?`;
+        save.textContent = `Save with ${lastTime} s?`;
         return;
       }
-      time = p.last_time_s;
+      time = lastTime;
     }
     const fix = p.correct; // correcting: same id and time, a new record that replaces the old one
     const temp = num($("water_temp_c"));
@@ -331,12 +351,17 @@ function logShot(form) {
     view.hidden = false;
     view.querySelector("h1").focus({ preventScroll: true });
     scrollTo(0, 0);
-    // Once it syncs, the comparison is a tap away.
+    // Once it syncs, the comparison is a tap away; if the server refused it, say why instead (#20-5).
     document.addEventListener("synced", () => {
-      const link = Object.assign(document.createElement("a"), { className: "ext", href: `/saved/${b.shot_id}`, textContent: "Synced. See how it compares ›" });
+      const no = refused.get(`shot:${b.shot_id}`);
+      if (no) return void (o("summary").textContent = `The server didn’t take this shot: ${no}`);
+      const link = Object.assign(document.createElement("a"), { className: "ext", href: p.correct ? `/shot/${b.shot_id}` : `/saved/${b.shot_id}`, textContent: "Synced. See how it compares ›" });
       o("summary").replaceChildren(link);
     }, { once: true });
-    unqueue(view.querySelector("[data-unqueue]"), b.shot_id);
+    // A correction has no Undo, offline as online: undoing it once it synced would retract the shot (#20-4).
+    const strip = view.querySelector("[data-unqueue]");
+    if (p.correct) strip.hidden = true;
+    else unqueue(strip, b.shot_id);
   }
 
   // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
@@ -390,7 +415,7 @@ function undo(strip) {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -403,13 +428,14 @@ function unqueue(strip, id) {
   strip.querySelector("button").addEventListener("click", async () => {
     clearTimeout(timer);
     const key = `shot:${id}`;
+    await sending.get(key)?.catch(() => {}); // a send already under way finishes first; then it's retracted (#20-3)
     const queued = await store("readonly", (s) => s.get(key));
     try {
       if (queued) await store("readwrite", (s) => s.delete(key));
       else await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -438,13 +464,14 @@ function newBag(root) {
     for (const b of root.querySelectorAll("button")) b.disabled = true;
     body = { bag_id: uuid(), ...body };
     if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
+    if (read?.pending) body.read_pending = true; // only then may the photo's match fill in the bag (#20-1)
     if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(where, err instanceof Rejected ? err.message : OFFLINE);
+      hint(where, why(err));
       if (!(err instanceof Rejected)) return; // queued: it stays saved, so another tap would make a second bag
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
@@ -595,7 +622,7 @@ function newBag(root) {
       if (mine !== attempt) return;
       // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
       await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
-      read = { photo_id: id, raw: null };
+      read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
       showSync();
       root.querySelector("[data-photo-waiting]").hidden = false;
       step("queued");
@@ -639,7 +666,7 @@ function equipment(form) {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
       location.href = form.dataset.next || "/setup";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   }
   form.addEventListener("submit", (e) => {
@@ -763,22 +790,30 @@ function retractShot(b) {
     b.disabled = true;
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
-      tick(8);
-      actions.hidden = true;
-      strip.hidden = false;
-      leave();
     } catch (err) {
-      hint(document.querySelector("main"), err instanceof Rejected ? err.message : OFFLINE);
-      b.disabled = false;
+      if (err instanceof Rejected) {
+        hint(document.querySelector("main"), err.message);
+        b.disabled = false;
+        return;
+      }
+      // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
+      // screen goes (#18-3), and Undo can still take it back.
+      strip.firstChild.textContent = "Retracted on this phone. It syncs when you’re back online.";
     }
+    tick(8);
+    actions.hidden = true;
+    strip.hidden = false;
+    leave();
   });
   strip.querySelector("button").addEventListener("click", async () => {
     clearTimeout(timer);
     try {
-      await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
+      // A retraction still on the phone is simply dropped; one that went up is undone on the server.
+      if (await store("readonly", (s) => s.get(`retract:${id}`))) await store("readwrite", (s) => s.delete(`retract:${id}`));
+      else await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
       location.reload();
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -867,11 +902,12 @@ function account() {
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
-      } finally {
-        // Kept pages hold this person's data: they go with the session.
+        // Kept pages hold this person's data: they go with the session, once the server has signed it out.
         await caches.delete("pages").catch(() => {});
         navigator.serviceWorker?.controller?.postMessage("signed-out");
         location.replace("/signin");
+      } catch {
+        b.textContent = "Couldn’t sign out. Check the connection and try again.";
       }
     }));
   }

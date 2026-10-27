@@ -228,7 +228,7 @@ def test_a_bag_typed_offline_takes_its_photos_match_whichever_arrives_first(cata
     # Offline, the person types something the catalog can't match; the photo and the bag sync later.
     app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
     c = TestClient(app)
-    body = {"bag_id": "b1", "coffee_freetext": "the ethiopian one", "photo_id": "p1"}
+    body = {"bag_id": "b1", "coffee_freetext": "the ethiopian one", "photo_id": "p1", "read_pending": True}
     if photo_first:
         upload(c)
     r = c.post("/api/bags", json=body, headers=W).json()
@@ -250,6 +250,16 @@ def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalo
         "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
     )
     assert other.status_code == 409
+
+
+def test_a_bag_typed_after_seeing_the_read_keeps_what_was_typed(catalog, tmp_path):
+    # #20-1: the photo matched, the person tapped Type and entered something else; the match mustn't come back.
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app)
+    assert upload(c).json()["match"]["coffee_id"] == "larkspur.com:1"
+    body = {"bag_id": "b9", "coffee_freetext": "a coffee from a market stall", "photo_id": "p1"}
+    assert c.post("/api/bags", json=body, headers=W).json()["coffee_id"] is None
+    assert app.state.store.bag("owner", "b9").coffee_id is None
 
 
 def test_a_typed_match_wins_and_another_persons_photo_is_ignored(catalog, tmp_path):

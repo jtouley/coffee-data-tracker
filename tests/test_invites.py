@@ -58,7 +58,10 @@ def test_invite_join_and_sign_in(app, owner, accounts):
     assert len(r["code"]) == 19 and r["code"].count("-") == 3
     # Only the hash is stored, anywhere.
     rows = [
-        row for f in accounts.lake.root.glob("invites/*__*.parquet") for row in pq.read_table(f).to_pylist()
+        row
+        for f in accounts.lake.root.glob("invites/*__*.parquet")
+        for row in pq.read_table(f).to_pylist()
+        if row["kind"] == "join"  # not the spent setup code's record
     ]
     assert rows and all(r["code"] not in str(row) for row in rows)
     assert rows[0]["code_sha256"] == code_hash(r["code"])
@@ -82,7 +85,7 @@ def test_invite_join_and_sign_in(app, owner, accounts):
 def test_join_page_needs_no_sign_in_and_never_sees_the_code(app, owner):
     c = client(app)
     page = c.get("/join")
-    assert page.status_code == 200 and "jtouley invited you" in page.text
+    assert page.status_code == 200 and "You’re invited" in page.text and "jtouley" not in page.text  # #16-4
     code = invite(owner)["code"]
     assert c.post("/api/invites/check", json={"code": code}, headers=W).json()["kind"] == "join"
     assert c.post("/api/invites/check", json={"code": "AAAA-BBBB-CCCC-DDDD"}, headers=W).status_code == 400
@@ -166,12 +169,24 @@ def test_a_new_reset_code_replaces_the_old_one(app, owner, accounts):
     )
 
 
-def test_owner_resets_with_the_setup_code(app, owner):
+def test_owner_resets_with_the_setup_code_once_per_value(app, owner, accounts):
     c = client(app)
+    # Creating the owner used SETUP up (#16-3).
     assert (
         c.post("/api/reset", json={"code": SETUP, "password": "owner new phrase"}, headers=W).status_code
+        == 400
+    )
+    accounts.setup_code = "NEW-SETUP-VALUE-9"  # the owner puts a new value in the secret
+    assert (
+        c.post(
+            "/api/reset", json={"code": "NEW-SETUP-VALUE-9", "password": "owner new phrase"}, headers=W
+        ).status_code
         == 200
     )
+    again = c.post(
+        "/api/reset", json={"code": "NEW-SETUP-VALUE-9", "password": "another phrase 2"}, headers=W
+    )
+    assert again.status_code == 400 and "has been used" in again.text
     assert owner.get("/").status_code == 303
     assert (
         client(app)
