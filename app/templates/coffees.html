@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "_macros.html" import nav, chevron %}
+{% block title %}Coffees · registry.coffee{% endblock %}
+{% block main %}
+  <h1 class="serif title mt16">Coffees</h1>
+  {% if lines %}
+  <p class="body">Every bag you’ve opened, the one in use first.</p>
+  <div class="rows mt16">
+    {% for l in lines %}
+    <a class="bagrow" href="/coffee/{{ l.bag.bag_id }}">
+      {% if l.bag.photo_id %}<img class="thumb" src="/photos/{{ l.bag.photo_id }}" alt="" width="56" height="56" loading="lazy" decoding="async">{% endif %}
+      <span class="grow"><span class="n">{{ l.name }}</span>
+        <span class="meta">{{ l.facts }}</span>
+        <span class="meta">{{ shots_n(l.shots | length) }}{% if l.best %} · best rated {{ l.best.rating }}, {{ date(l.best.brewed_at) }}{% endif %}{% if l.bag.finished_on %} · finished{% endif %}</span></span>
+      {{ chevron() }}
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="body">No bags yet. Each bag you open shows up here with its shots and its best one so far.</p>
+  {% endif %}
+  {% if loose %}<p class="meta mt16">{{ shots_n(loose | length) }} from before bags were recorded are in History.</p>{% endif %}
+  {% if lines or loose %}
+  <h2 class="section">All shots</h2>
+  <a class="link ruled" href="/history"><span>History<span class="meta">Every shot, by bag</span></span>{{ chevron() }}</a>
+  {% endif %}
+  {% if not lines %}<div class="spacer"></div><div class="dock"><a class="btn primary" href="/bag/new">New bag</a></div>
+  {% else %}<div class="mt24"></div>{% endif %}
+{% endblock %}
+{% block nav %}{{ nav('coffees') }}{% endblock %}

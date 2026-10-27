@@ -45,6 +45,7 @@ ALIASES = {
 # --- catalog matching --------------------------------------------------------------------------------
 
 _index_cache: dict[str, tuple[float, dict[str, str]]] = {}
+_rows_cache: dict[str, tuple[float, list[tuple[str, str, str]]]] = {}
 
 
 def _index(lake: Lake | None = None) -> dict[str, str]:
@@ -138,6 +139,68 @@ def match_coffee(text: str, lake: Lake | None = None, min_score: int = 80) -> tu
     matches = fuzzy_match_coffee(text, lake=lake)
     clear_winner = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
     if matches and matches[0]["score"] >= min_score and clear_winner:
+        return matches[0]["coffee_id"], matches
+    return None, matches
+
+
+def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str]]:
+    """(coffee_id, roaster_name, title) for every catalog coffee; cached with the index."""
+    lake = lake or Lake()
+    cached = _rows_cache.get(lake.url)
+    if cached and time.monotonic() - cached[0] < INDEX_TTL_S:
+        return cached[1]
+    rows: list[tuple[str, str, str]] = []
+    try:
+        src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
+        rows = [
+            (cid, roaster or "", title or "")
+            for cid, roaster, title in lake.connect()
+            .execute(
+                f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true)"
+            )
+            .fetchall()
+        ]
+    except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
+        log.info("no catalog rows: %s", e)
+    _rows_cache[lake.url] = (time.monotonic(), rows)
+    return rows
+
+
+def match_bag(
+    roaster: str | None, coffee: str | None, lake: Lake | None = None, min_score: int = 80
+) -> tuple[str | None, list[dict]]:
+    """Match what a bag's label says to the catalog, roaster first, then the coffee among that roaster's.
+
+    Reading the roaster separately is what the photo adds over typed text: a coffee name like "Hambela" is shared
+    by dozens of roasters, but only one of them is on the bag. The roaster is matched by name (token set, so
+    "Larkspur" finds "Larkspur Roasting Co."); its coffees are then scored on the name alone. With no roaster
+    match the whole catalog is searched as for typed text. Same rule as typed text: confident only when the best
+    match is 80+ and 5 clear of the next.
+    """
+    roaster, coffee = (roaster or "").strip(), (coffee or "").strip()
+    rows = _catalog(lake)
+    if not rows or not (roaster or coffee):
+        return None, []
+    roasters = {r for _, r, _ in rows if r}
+    # Every roaster that scores 85+, not the top few: names that are token subsets of each other ("Onyx Coffee",
+    # "Coffee Lab", "Onyx Coffee Lab") all score 100, and a cut-off could drop the real one.
+    found = process.extract(roaster, roasters, scorer=fuzz.token_set_ratio, limit=None) if roaster else []
+    near = [name for name, score, _ in found if score >= 85]
+    if near and coffee:
+        pool = [(cid, r, t) for cid, r, t in rows if r in near]
+        scored = sorted(
+            ((match_score(coffee, t), cid, f"{r} {t}") for cid, r, t in pool),
+            key=lambda x: (-x[0], x[2]),
+        )
+        matches: list[dict] = [
+            {"coffee_id": cid, "label": label, "score": sc} for sc, cid, label in scored[:3]
+        ]
+    elif near:  # the roaster is clear but the coffee's name wasn't read: let the person pick
+        matches = [{"coffee_id": cid, "label": f"{r} {t}", "score": 0} for cid, r, t in rows if r in near][:3]
+    else:
+        matches = fuzzy_match_coffee(f"{roaster} {coffee}".strip(), lake=lake)
+    clear = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
+    if matches and matches[0]["score"] >= min_score and clear:
         return matches[0]["coffee_id"], matches
     return None, matches
 

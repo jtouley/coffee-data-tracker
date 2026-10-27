@@ -13,11 +13,12 @@ every weekly snapshot, and turns them into tables you can query with SQL: what's
 your shots of a given coffee went. The weekly job runs on a GitHub Actions schedule and needs no server. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
 
+**Catalog site:** [registry.coffee](https://registry.coffee/catalog/)
+
 **Write-ups on Medium:** [From Bean to Byte: Embarking on a Data-Driven Coffee Journey](https://medium.com/@jtouley/from-bean-to-byte-embarking-on-a-data-driven-coffee-journey-8a73e6b70c7f)
 · [Dialing In: The Technical Brew Behind My Coffee Data Journey](https://medium.com/@jtouley/dialing-in-the-technical-brew-behind-my-coffee-data-journey-b0d579bc5b1d)
 
 <!-- More links: each one stays commented out until it works. -->
-<!-- Uncomment once the Pages site is live: **Catalog site:** [jtouley.github.io/coffee-data-tracker](https://jtouley.github.io/coffee-data-tracker/) -->
 <!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
 <!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
 <!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
@@ -77,8 +78,6 @@ You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.d
 
 ### Log shots in the app
 
-<!-- Once docs/app/RUNNING.md lands (app-m2), link it here for real sign-in, the Hugging Face Space and its secrets, and keep this section short. -->
-
 `app/` is a small FastAPI app with server-rendered pages, made for a phone at the espresso machine. It reads and
 writes the same lake as everything else (`COFFEEDATA_LAKE`, `./lake` by default). `make install` already installs
 what it needs; `uv sync --no-dev --extra app` installs it without the dev tools.
@@ -104,8 +103,9 @@ later, and a retry never creates a second shot. The app shows where each shot la
 waits until a model trained on logged shots does better than the rule the other tools use (below).
 
 > [!WARNING]
-> The app has no access control: every request is treated as the owner (`COFFEEDATA_OWNER_ID`, default `owner`).
-> With `HOST=0.0.0.0`, anyone on your network can log shots. The app refuses to start on a Hugging Face Space.
+> Without `SESSION_SECRET`, every request is the owner (`COFFEEDATA_OWNER_ID`, default `owner`), so with
+> `HOST=0.0.0.0` anyone on your network can log shots. Real sign-in, invites and deployment are in
+> [`docs/app/RUNNING.md`](docs/app/RUNNING.md).
 
 The app reads the lake only when it starts. To see shots logged from the CLI, Claude (MCP) or an issue, restart the
 app.
@@ -269,6 +269,11 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
 
 No workflow deploys the app. To log shots from the app into the same lake, start `make app` with `COFFEEDATA_LAKE` and
 `HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
+
+## The site
+
+The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+`/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
 ## How it works
 

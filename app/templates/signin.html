@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
+{% block main %}
+  <h1 class="mt48 serif wordmark">registry.coffee</h1>
+  {% if owner_setup %}
+  <p class="body mt12 lede">Create the owner’s account. The setup code is the <code>OWNER_SETUP_CODE</code> secret in your Hugging Face Space’s settings.</p>
+  {% else %}
+  <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
+  {% endif %}
+  <form id="signin" class="fill" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" novalidate>
+    {% if owner_setup %}
+    <label class="flabel" for="setup_code">Setup code</label>
+    <input class="input" id="setup_code" name="setup_code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
+    {% endif %}
+    <label class="flabel" for="username">Username</label>
+    <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+    {% if owner_setup %}<div class="fhint" id="username-h">3 to 32 lower-case letters, digits, - or _.</div>{% endif %}
+    <label class="flabel" for="password">Password</label>
+    <div class="pw">
+      <input class="input" id="password" name="password" type="password" autocomplete="{{ 'new-password' if owner_setup else 'current-password' }}" required{% if owner_setup %} aria-describedby="password-h"{% endif %}>
+      <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
+    </div>
+    {% if owner_setup %}<div class="fhint" id="password-h">At least 10 characters. A few unrelated words work well.</div>{% endif %}
+    <div class="hint" id="signin-hint" data-hint role="alert"></div>
+    <div class="spacer"></div>
+    <div class="dock">
+      <button class="btn primary" type="submit">{{ "Create account" if owner_setup else "Sign in" }}</button>
+      {% if not owner_setup %}
+      <a class="btn text" href="/join">Have an invite? Create an account</a>
+      <a class="btn text" href="/reset">Forgot your password? Use a reset code</a>
+      {% endif %}
+    </div>
+  </form>
+{% endblock %}

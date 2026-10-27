@@ -13,8 +13,8 @@ from pathlib import Path
 
 from .lake import Lake, new_batch_id
 
-# fct_shot is personal: it goes to the private lake's marts/ only, never to the public export.
-MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot"]
+# fct_shot and mart_bag are personal: they go to the private lake's marts/ only, never to the public export.
+MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot", "mart_bag"]
 
 
 def _today() -> str:

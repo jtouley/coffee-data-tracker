@@ -1,0 +1,9 @@
+{
+  "name": "coffee-data-browser-tests",
+  "private": true,
+  "description": "Playwright and axe for tests/test_app_browser.py. CI runs npm ci here; locally a global Playwright works too.",
+  "devDependencies": {
+    "axe-core": "4.14.0",
+    "playwright": "1.63.0"
+  }
+}

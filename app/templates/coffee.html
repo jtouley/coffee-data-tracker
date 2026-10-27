@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "_macros.html" import nav, shotrow %}
+{% block title %}{{ name }} · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/coffees">‹ Coffees</a>
+    {% if siblings | length > 1 %}<span class="meta">Bag {{ index }} of {{ siblings | length }}{% if index > 1 %} <a class="ext tap" href="/coffee/{{ siblings[index - 2].bag_id }}">‹ earlier</a>{% endif %}{% if index < siblings | length %} <a class="ext tap" href="/coffee/{{ siblings[index].bag_id }}">later ›</a>{% endif %}</span>{% endif %}</div>
+  {% if bag.photo_id %}<img class="cover mt8" src="/photos/{{ bag.photo_id }}" alt="The bag" width="358" height="179" fetchpriority="high">{% endif %}
+  <h1 class="serif title mt16">{{ name }}</h1>
+  <div class="body">{{ facts }}</div>
+  {% if bag.roast_date %}<div class="meta mt4">Roasted {{ bag.roast_date.strftime("%b ") ~ bag.roast_date.day }} · day {{ days_off }}{% if bag.finished_on %} · finished {{ bag.finished_on.strftime("%b ") ~ bag.finished_on.day }}{% endif %}</div>{% endif %}
+
+  {% if best %}
+  {% set gr = grinder_of(best) %}
+  <h2 class="section">Best so far · rated {{ best.rating }}, {{ date(best.brewed_at) }}{% if gr %} · {{ gr.name }}{% endif %}</h2>
+  <div class="best">
+    <div><span class="label">Dose</span><span class="num n34">{{ g(best.dose_g, 1) }}<span class="u"> g</span></span></div>
+    <div><span class="label">Yield</span><span class="num n34">{{ g(best.yield_g, 1) }}<span class="u"> g</span></span></div>
+    <div><span class="label">Time</span><span class="num n34">{{ g(best.time_s) }}<span class="u"> s</span></span></div>
+    <div><span class="label">Grind</span><span class="num n34">{{ g(best.grinder_setting) }}</span></div>
+  </div>
+  <h2 class="section">All {{ shots_n(n_all) }}</h2>
+  <div>{{ chart | safe }}</div>
+  <div class="legend mt8" aria-hidden="true">{% for t, l in (("sour", "Sour"), ("balanced", "Balanced"), ("bitter", "Bitter"), ("none", "No taste")) if t in tastes %}<span class="key {{ t }}">{{ l }}</span>{% endfor %}</div>
+  {% else %}
+  <p class="body mt24 ruled">No shots of this coffee yet.</p>
+  {% endif %}
+
+  {% if shots %}
+  <h2 class="section">This bag</h2>
+  <div class="list">{% for s in shots[:5] %}{{ shotrow(s, day) }}{% endfor %}</div>
+  {% if shots | length > 5 %}
+  <details class="disclose"><summary class="btn text start">All {{ shots_n(shots | length) }}</summary>
+    <div class="list">{% for s in shots[5:] %}{{ shotrow(s, day) }}{% endfor %}</div>
+  </details>
+  {% endif %}
+  {% endif %}
+
+  {% if catalog %}
+  <h2 class="section">From the catalog</h2>
+  <dl class="spec">
+    {% if catalog.origin %}<dt>Origin</dt><dd>{{ catalog.origin }}</dd>{% endif %}
+    {% if raw.elevation_masl_min %}<dt>Elevation</dt><dd>{{ "{:,}".format(raw.elevation_masl_min | int) }}{% if raw.elevation_masl_max and raw.elevation_masl_max != raw.elevation_masl_min %}–{{ "{:,}".format(raw.elevation_masl_max | int) }}{% endif %} m</dd>{% endif %}
+    {% if catalog.notes %}<dt>Notes</dt><dd>{{ catalog.notes }}</dd>{% endif %}
+    {% if catalog.price %}<dt>Price</dt><dd>{{ catalog.price }}</dd>{% endif %}
+    {% if catalog.in_stock is not none %}<dt>Stock</dt><dd>{{ "In stock" if catalog.in_stock else "Sold out" }}</dd>{% endif %}
+    {% if raw.url and raw.url.startswith(("https://", "http://")) %}<dt>Shop</dt><dd><a class="ext" href="{{ raw.url }}" rel="noopener noreferrer" target="_blank">{{ raw.url.split("/")[2] }}</a></dd>{% endif %}
+  </dl>
+  {% endif %}
+  <div class="mt24"></div>
+{% endblock %}
+{% block nav %}{{ nav('coffees') }}{% endblock %}

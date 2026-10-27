@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ "Not found" if code == 404 else "Something went wrong" }} · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/">‹ Today</a></div>
+  {% if code == 404 %}
+  <h1 class="serif title mt8">Nothing here</h1>
+  <p class="body">This page doesn’t exist, or it belongs to someone else.</p>
+  {% elif code == 401 or code == 403 %}
+  <h1 class="serif title mt8">Sign in first</h1>
+  <p class="body">This page needs you to be signed in.</p>
+  {% else %}
+  <h1 class="serif title mt8">Something went wrong</h1>
+  <p class="body">The server couldn’t show this page. Shots you saved are kept on this phone until they sync.</p>
+  {% endif %}
+  <div class="spacer"></div>
+  <div class="dock"><a class="btn primary" href="/">Back to Today</a></div>
+{% endblock %}

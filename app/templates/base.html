@@ -1,21 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"{% if theme in ("light", "dark") %} data-theme="{{ theme }}"{% endif %}{% if hand == "left" %} data-hand="left"{% endif %}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f6f5f2">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110f" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Log espresso shots at the machine and see how each bag dials in.">
+{% if me %}<meta name="user" content="{{ me.user_id }}">{% endif %}
 <title>{% block title %}registry.coffee{% endblock %}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Newsreader:opsz,wght@6..72,400..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/static/app.css">
-<script>
-  // Times are shown in the phone's time zone; the server reads it from this cookie.
-  document.cookie = "tz=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone) + "; path=/; max-age=31536000; samesite=lax";
-</script>
-<script src="/static/app.js" defer></script>
+<link rel="preload" href="{{ asset('fonts/archivo.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ asset('fonts/newsreader.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ asset('app.css') }}">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="{{ asset('icons/icon.svg') }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}">
+<script src="{{ asset('app.js') }}" defer></script>
 </head>
 <body>
 <main class="screen">
+<section class="failed" data-failed hidden role="alert"><h2 class="label">Couldn’t save</h2><p class="meta">The server refused these, so they weren’t saved. Fix them and save again, or dismiss them.</p><ul></ul></section>
 {% block main %}{% endblock %}
 </main>
 {% block nav %}{% endblock %}

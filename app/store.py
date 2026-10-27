@@ -23,7 +23,12 @@ from coffeedata.models import Bag, Equipment, Shot
 log = logging.getLogger(__name__)
 
 
+# What the screens show about a catalog coffee (whatever of it this week's export has).
+FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
+         "elevation_masl_min", "elevation_masl_max",
+         "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 
 
 class NotFound(KeyError):
@@ -64,12 +69,60 @@ class Store:
             ("bags", "bag_id", Bag, self.bags),
             ("equipment", "equipment_id", Equipment, self.equipment),
         ):
-            for row in lake.latest(table, key):
+            rows = self._seed_shots() if table == "shots" else None
+            for row in lake.latest(table, key) if rows is None else rows:
                 row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:
                     log.warning("skipping %s %s: %s", table, row[key], e)
+
+    def _seed_shots(self) -> list[dict] | None:
+        """Current shots from the weekly marts/fct_shot.parquet export plus the shot files written after it,
+        instead of one request per shot file. None (read every file) when there's no export yet."""
+        con = self.lake.connect()
+        try:
+            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("fct_shot"))
+            cur = con.execute(f"select * from read_parquet([{src}])")
+        except Exception as e:  # noqa: BLE001 - no export yet, or one from before logged_at was in it
+            log.info("no fct_shot export to start from: %s", e)
+            return None
+        cols = [d[0] for d in cur.description]
+        if "logged_at" not in cols:
+            return None
+        if "shot_coffee_id" not in cols:
+            return None  # an export from before it kept the shot's own values
+        rows = {}
+        for x in cur.fetchall():
+            r = dict(zip(cols, x, strict=True))
+            for c in ("coffee_id", "coffee_freetext", "roast_date"):
+                r[c] = r.pop(f"shot_{c}")  # the raw shot, not the bag's values fct_shot fills in
+            rows[r["shot_id"]] = r
+        # File names carry the time a record was made, not when it reached the dataset, and uploads queue. So
+        # the files are read from a day before the export (its snapshot_at, else its newest record): a record made
+        # before the export but uploaded after it is still found. Overlap with the export is harmless: latest wins.
+        if "snapshot_at" in cols:
+            stamp = max((r["snapshot_at"] for r in rows.values() if r.get("snapshot_at")), default=None)
+        else:
+            stamp = max((r["logged_at"] for r in rows.values()), default=None)
+        if stamp is None:
+            return None
+        try:
+            newer = self.lake.files_after("shots", stamp - SEED_SLACK)
+            if newer:
+                files = ", ".join(f"'{f}'" for f in newer)
+                cur = con.execute(f"""
+                    select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
+                    qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
+                cols = [d[0] for d in cur.description]
+                for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
+                    if r["shot_id"] not in rows or r["logged_at"] >= rows[r["shot_id"]]["logged_at"]:
+                        rows[r["shot_id"]] = r
+        except Exception as e:  # noqa: BLE001 - a failed listing (429, timeout): read every file instead
+            log.warning("listing newer shot files failed (%s): reading every file", type(e).__name__)
+            return None
+        log.info("shots: %d from fct_shot, %d newer files", len(rows), len(newer))
+        return list(rows.values())
 
     # --- reads ---------------------------------------------------------------------------------------
 
@@ -102,7 +155,7 @@ class Store:
 
     def bag(self, user_id: str, bag_id: str | None) -> Bag | None:
         r = self.bags.get(bag_id or "")
-        return r.item if r and r.item.user_id == user_id else None
+        return r.item if r and r.item.user_id == user_id and not r.deleted else None
 
     def coffee(self, coffee_id: str | None) -> dict | None:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
@@ -114,18 +167,46 @@ class Store:
         src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
         try:
             cur = self.lake.connect().execute(
-                f"select title, roaster_name, origin_country, process from read_parquet([{src}]) "
-                "where coffee_id = ?",
+                f"select * from read_parquet([{src}], union_by_name = true) where coffee_id = ?",
                 [coffee_id],
             )
             row = cur.fetchone()
-            found = dict(zip([d[0] for d in cur.description], row, strict=True)) if row else None
+            cols = [d[0] for d in cur.description]
+            keep = set(FACTS) & set(cols)
+            found = {k: v for k, v in zip(cols, row, strict=True) if k in keep} if row else None
         except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
             log.info("no catalog facts for %s: %s", coffee_id, e)
             return None  # not cached: try again next time
         # A coffee not in this week's export is asked again after MISS_TTL, not never.
         self._coffees[coffee_id] = (found, time.monotonic())
         return found
+
+    def bags_of(self, user_id: str) -> list[Bag]:
+        """This person's bags, the one used most recently first (a bag with no shots by when it was opened)."""
+        mine = self.shots_of(user_id)
+        last = {s.bag_id: s.brewed_at for s in mine if s.bag_id}
+        recs = self._mine(self.bags, user_id)
+
+        def when(r: Rec) -> datetime:
+            return last.get(r.item.bag_id) or r.logged_at
+
+        return [r.item for r in sorted(recs, key=when, reverse=True)]
+
+    def coffee_shots(self, user_id: str, bag: Bag) -> list[Shot]:
+        """Every shot of this bag's coffee, from any bag, oldest first."""
+        key = coffee_key(bag)
+        bag_ids = {b.bag_id for b in self.bags_of(user_id) if coffee_key(b) == key}
+        return [
+            s
+            for s in self.shots_of(user_id)
+            if s.bag_id in bag_ids or (not s.bag_id and coffee_key(s) == key)
+        ]
+
+    @staticmethod
+    def best(shots_: list[Shot]) -> Shot | None:
+        """Highest rating; the latest wins ties, as in mart_bag. (mart_dial_in's best_* columns take any one of
+        the tied shots.)"""
+        return max(shots_, key=lambda s: (s.rating, s.brewed_at), default=None)
 
     def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
         """The shots shown together: this bag's, or with no bag, the last shot's coffee."""
@@ -134,9 +215,17 @@ class Store:
             return [s for s in mine if s.bag_id == bag.bag_id]
         return [s for s in mine if last and coffee_key(s) == coffee_key(last)]
 
-    def prefill(self, user_id: str) -> dict:
+    def prefill(
+        self,
+        user_id: str,
+        grinder_id: str | None = None,
+        basket_id: str | None = None,
+        machine_id: str | None = None,
+    ) -> dict:
         """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
-        Time, taste and rating are never copied; the last ones are offered, not filled in."""
+        Time, taste and rating are never copied; the last ones are offered, not filled in. A grinder or basket
+        picked from the chip replaces the last shot's; the grind then comes from this coffee's last shot on
+        that grinder, since a setting means nothing on another grinder."""
         bag = self.current_bag(user_id)
         mine = self.shots_of(user_id)
         last = None
@@ -147,18 +236,38 @@ class Store:
             last = same[-1] if same else None
         elif mine:
             last = mine[-1]
-        grinder = self.gear(user_id, last.grinder_id if last else None)
+        picked = self.gear(user_id, grinder_id)
+        grinder = (
+            picked
+            if picked and picked.kind == "grinder"
+            else self.gear(user_id, last.grinder_id if last else None)
+        )
         grinders = self.equipment_of(user_id, "grinder")
         if not grinder or grinder.retired:
             grinder = grinders[0] if grinders else None
         baskets = self.equipment_of(user_id, "basket")
-        basket = self.gear(user_id, last.basket_id if last else None)
+        picked = self.gear(user_id, basket_id)
+        basket = (
+            picked
+            if picked and picked.kind == "basket"
+            else self.gear(user_id, last.basket_id if last else None)
+        )
         if not basket or basket.retired:  # like the grinder: a retired basket isn't offered again
             basket = baskets[0] if baskets else None
+        if grinder and last and last.grinder_id and last.grinder_id != grinder.equipment_id:
+            # Switched grinders: this coffee's last shot on the new one, if any, gives the grind.
+            on = [
+                s for s in mine if s.grinder_id == grinder.equipment_id and coffee_key(s) == coffee_key(last)
+            ]
+            grind_from = on[-1] if on else None
+        else:
+            grind_from = last
         dose = last.dose_g if last else (basket.basket_dose_g if basket and basket.basket_dose_g else None)
         grind = None
-        if last and (not last.grinder_id or not grinder or last.grinder_id == grinder.equipment_id):
-            grind = last.grinder_setting
+        if grind_from and (
+            not grind_from.grinder_id or not grinder or grind_from.grinder_id == grinder.equipment_id
+        ):
+            grind = grind_from.grinder_setting
         elif grinder and grinder.scale_min is not None and grinder.scale_max is not None:
             # No shot on this grinder yet: the middle of the dial, a starting point to move from, not advice.
             step = grinder.scale_step or 1
@@ -168,6 +277,7 @@ class Store:
             "last": last,
             "grinder": grinder,
             "basket": basket,
+            "machine": self._machine(user_id, machine_id, last),
             "coffee_id": bag.coffee_id if bag else last.coffee_id if last else None,
             "coffee_freetext": bag.coffee_freetext if bag else last.coffee_freetext if last else None,
             "dose_g": dose,
@@ -179,6 +289,14 @@ class Store:
             "last_time_s": last.time_s if last else None,
             "same_as_last": {"taste": last.taste, "rating": last.rating} if last else None,
         }
+
+    def _machine(self, user_id: str, picked: str | None, last: Shot | None) -> Equipment | None:
+        """The picked machine, else the last shot's (unless retired), else the default."""
+        for eid in (picked, last.machine_id if last else None):
+            e = self.gear(user_id, eid)
+            if e and e.kind == "machine" and not e.retired:
+                return e
+        return next(iter(self.equipment_of(user_id, "machine")), None)
 
     # --- writes --------------------------------------------------------------------------------------
 
@@ -222,6 +340,7 @@ class Store:
         for ref, table in (
             (shot.grinder_id, self.equipment),
             (shot.basket_id, self.equipment),
+            (shot.machine_id, self.equipment),
             (shot.bag_id, self.bags),
         ):
             if ref and self._owned(table, ref, user_id) is None:
@@ -239,10 +358,18 @@ class Store:
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
         prev = self._owned(self.shots, shot.shot_id, user_id)
+        if prev:
+            # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
+            shot = shot.model_copy(
+                update={"source": prev.item.source, "roast_date": shot.roast_date or prev.item.roast_date}
+            )
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend
             # must not bring a retracted shot back.
             return shot, False
+        if prev and prev.deleted:
+            # Only Undo (restore_shot) brings a retracted shot back, not a correction saved in another tab.
+            raise Invalid("That shot was retracted, so it can’t be corrected. Undo the retraction first.")
         self._commit(self.shots, shot.shot_id, shot, "shots")
         return shot, True
 
@@ -256,11 +383,41 @@ class Store:
         self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
         return True
 
+    def restore_shot(self, user_id: str, shot_id: str) -> bool:
+        """Undo a retraction: the shot again, as a new record. Restoring a shot that's there writes nothing."""
+        prev = self._owned(self.shots, shot_id, user_id)
+        if prev is None:
+            raise NotFound(shot_id)
+        if not prev.deleted:
+            return False
+        self._commit(self.shots, shot_id, prev.item, "shots")
+        return True
+
     def save_equipment(self, user_id: str, data: dict) -> Equipment:
-        item = Equipment(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
-        prev = self._owned(self.equipment, item.equipment_id, user_id)
+        """Add or change equipment. One default per kind: making this one the default clears the others.
+        A change keeps what the body leaves out (notes, a model the form doesn't show, retired), so editing a
+        grinder made elsewhere doesn't erase its notes and saving a retired one doesn't bring it back."""
+        data = {k: v for k, v in data.items() if k != "user_id"}
+        prev = self._owned(self.equipment, str(data.get("equipment_id") or ""), user_id)
+        if prev:
+            kept = prev.item.model_dump(exclude={"user_id"})
+            data = {k: v for k, v in kept.items() if k not in data} | data
+        item = Equipment(**data, user_id=user_id)
+        if prev and prev.item.kind != item.kind:
+            raise Invalid("Equipment can't change kind. Add a new one instead.")
+        if item.retired:
+            item = item.model_copy(update={"is_default": False})
         if not (prev and prev.item == item):
             self._commit(self.equipment, item.equipment_id, item, "equipment")
+        if item.is_default:
+            for other in self.equipment_of(user_id, item.kind):
+                if other.equipment_id != item.equipment_id and other.is_default:
+                    self._commit(
+                        self.equipment,
+                        other.equipment_id,
+                        other.model_copy(update={"is_default": False}),
+                        "equipment",
+                    )
         return item
 
     def save_bag(self, user_id: str, data: dict) -> tuple[Bag, list[dict]]:

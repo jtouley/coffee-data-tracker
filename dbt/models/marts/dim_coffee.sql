@@ -34,7 +34,8 @@ notes as (
 )
 select
     l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.is_chain, l.product_id, l.handle,
-    l.title, l.url, l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
+    -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
+    l.title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url, l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
     run.is_latest_run as is_listed,
     e.origin_country, e.origin_region, e.producer, e.process, e.varietals, e.elevation_masl_min,
     e.elevation_masl_max, e.roast_level, e.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,

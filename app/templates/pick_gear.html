@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Grinder and basket · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/log">‹ Log shot</a></div>
+  <h1 class="serif title mt8">Grinder and basket</h1>
+  <p class="body">A grind setting only means something on its own grinder, so switching grinders starts from this
+    coffee’s last shot on that one.</p>
+  <form class="fill" action="/log" method="get">
+    {% for kind, items, cur in (("grinder", grinders, grinder), ("machine", machines, machine), ("basket", baskets, basket)) if items %}
+    <fieldset class="pick">
+      <legend class="section">{{ kind | capitalize }}</legend>
+      {% for e in items %}
+      <label class="choice"><input type="radio" name="{{ kind }}" value="{{ e.equipment_id }}"{% if cur and cur.equipment_id == e.equipment_id %} checked{% endif %}><span>{{ e.name }}<span class="meta">{% if kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }}, step {{ g(e.scale_step) }}{% elif kind == "basket" %}{{ g(e.basket_dose_g) }} g{% else %}{{ e.model or "Espresso machine" }}{% endif %}</span></span></label>
+      {% endfor %}
+    </fieldset>
+    {% endfor %}
+    <a class="btn text" href="/setup/gear/new">Add equipment</a>
+    <div class="spacer"></div>
+    <div class="dock"><button class="btn primary" type="submit">Use these</button></div>
+  </form>
+{% endblock %}

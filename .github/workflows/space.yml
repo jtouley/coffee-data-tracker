@@ -1,0 +1,42 @@
+# Push the app to its Hugging Face Space whenever main changes what the app runs. The Space repo only ever holds
+# what this assembles: app/space/{Dockerfile,README.md} at the root, plus app/, src/, pyproject.toml and uv.lock.
+# Needs the HF_TOKEN secret (already used by the weekly run) and, optionally, the SPACE_ID variable.
+name: space
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", ".github/workflows/space.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: space
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SPACE_ID: ${{ vars.SPACE_ID || 'jtouley/coffee-data-app' }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with: {python-version: "3.12"}
+      - name: Assemble the Space
+        run: |
+          mkdir -p build/space
+          cp app/space/Dockerfile app/space/README.md build/space/
+          cp -r src pyproject.toml uv.lock build/space/
+          cp -r app build/space/app
+          rm -r build/space/app/space
+      - name: Upload
+        run: |
+          uvx --from 'huggingface_hub>=0.26' python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(
+              repo_id=os.environ["SPACE_ID"], repo_type="space", folder_path="build/space",
+              commit_message=f"Deploy {os.environ['GITHUB_SHA'][:7]}", delete_patterns="*",
+          )
+          PY

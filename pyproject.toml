@@ -30,7 +30,9 @@ snowflake = [
 
 # The shot-logging app in app/ (a Hugging Face Space later).
 app = [
+    "argon2-cffi>=23.1",
     "fastapi>=0.115",
+    "pillow>=11",
     "uvicorn>=0.30",
 ]
 
@@ -45,6 +47,9 @@ dev = [
     "snowflake-connector-python>=3.12",
     "cryptography>=42",
     "pre-commit>=4.7.0",
+    "argon2-cffi>=23.1",
+    "uvicorn>=0.30",
+    "pillow>=11",
 ]
 
 [build-system]

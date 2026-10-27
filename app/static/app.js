@@ -1,8 +1,15 @@
-// registry.coffee: the outbox, the shot form, undo and the setup forms. No build step.
+// registry.coffee: the outbox, the shot form, undo, sign-in and the setup forms. No build step.
+
+// Times are shown in the phone's time zone; the server reads it from this cookie.
+document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
 
 // --- the outbox --------------------------------------------------------------------------------------
 // Every write waits in IndexedDB until the server acknowledges it, keyed by the id the phone generated, so a
-// dropped connection never loses a shot and a retry never makes a second one.
+// dropped connection never loses a shot and a retry never makes a second one. Each entry carries the id of the
+// person who made it, and only that person's entries are sent, so one phone shared by two people never sends a
+// shot under the wrong account.
+
+const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
@@ -20,25 +27,61 @@ function store(mode, fn) {
   }));
 }
 
-class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Rejected extends Error {} // the server said no (a 4xx other than 401/403/408/429): retrying won't help
+class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
+const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
 
-async function deliver(entry) {
-  const r = await fetch(entry.url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
-    body: JSON.stringify(entry.body),
-  });
-  // Signed out (401) or a server error: keep it and try again. Anything else is final.
-  const final = r.status !== 401 && r.status < 500;
-  if (final) await store("readwrite", (s) => s.delete(entry.key));
-  if (r.ok) return r.json();
-  const detail = (await r.json().catch(() => ({}))).detail;
-  if (final) throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
-  throw new Error(r.statusText);
+// Only a 2xx removes an entry. No connection, 401 (sign in again), 408, 429 and 5xx keep it and retry later; any
+// other 4xx moves it to the "Couldn't save" list on screen, so a write is never dropped without the person seeing.
+const RETRY = new Set([401, 403, 408, 429]);
+let retryAt = 0; // when the next automatic flush is due (ms), from Retry-After or a doubling backoff
+let backoff = 0;
+
+function retryAfter(r) {
+  const h = r.headers.get("retry-after");
+  if (!h) return null;
+  const s = Number(h);
+  return Number.isFinite(s) ? s * 1000 : Math.max(0, Date.parse(h) - Date.now()) || null;
 }
 
-async function send(key, url, body) {
-  const entry = { key, url, body, at: Date.now() };
+const sending = new Map(); // key -> the delivery in flight, so Undo can wait for it instead of racing it
+const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
+
+function deliver(entry) {
+  // One delivery per entry at a time: a direct send and a flush on reconnect can reach the same entry together.
+  if (sending.has(entry.key)) return sending.get(entry.key);
+  const p = deliverOnce(entry).finally(() => sending.delete(entry.key));
+  sending.set(entry.key, p);
+  return p;
+}
+
+async function deliverOnce(entry) {
+  // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
+  const r = await fetch(entry.url, {
+    method: "POST",
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
+    body: entry.blob || JSON.stringify(entry.body),
+  });
+  if (r.ok) {
+    await store("readwrite", (s) => s.delete(entry.key));
+    return r.json();
+  }
+  const detail = (await r.json().catch(() => ({}))).detail;
+  const reason = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
+  if (RETRY.has(r.status) || r.status >= 500) {
+    // 403 is the origin check, which a proxy can trip by mistake: kept, and the person is told why.
+    const err = r.status === 403 ? new Held("The server refused this for now. It’s kept on this phone and sent again later.") : new Error(reason);
+    err.wait = retryAfter(r);
+    throw err;
+  }
+  // Refused for good: kept, marked, and shown, never silently dropped.
+  await store("readwrite", (s) => s.put({ ...entry, failed: reason || `Error ${r.status}` }));
+  refused.set(entry.key, reason);
+  throw new Rejected(reason);
+}
+
+async function send(key, url, body, blob = null) {
+  const entry = { key, url, body, blob, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -47,24 +90,74 @@ async function send(key, url, body) {
   }
 }
 
-async function flush() {
-  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
-  const entries = (await store("readonly", (s) => s.getAll())).sort((a, b) => a.at - b.at);
+async function mine() {
+  return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
+}
+
+function later(wait) {
+  backoff = Math.min(backoff ? backoff * 2 : 2000, 5 * 60 * 1000);
+  const delay = wait ?? backoff;
+  retryAt = Date.now() + delay;
+  setTimeout(() => { if (Date.now() >= retryAt) flush(); }, delay);
+}
+
+
+let flushing = null;
+function flush() {
+  // One pass at a time: "online" and a page load can both start one, and two would send each entry twice.
+  flushing ??= flushOnce().finally(() => { flushing = null; });
+  return flushing;
+}
+
+async function flushOnce() {
+  if (!ME) return;
+  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot. A retry
+  // stops the queue, so nothing passes an earlier write that hasn't landed.
+  const entries = (await mine()).filter((e) => !e.failed).sort((a, b) => a.at - b.at);
   for (const entry of entries) {
     try {
       await deliver(entry);
+      backoff = 0;
     } catch (e) {
-      if (!(e instanceof Rejected)) break; // offline or server down: try again later
+      if (!(e instanceof Rejected)) {
+        later(e.wait);
+        break;
+      }
     }
   }
   showSync();
 }
 
+const SYNCED = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>Synced';
+
 async function showSync() {
-  const n = await store("readonly", (s) => s.count());
+  const all = await mine();
+  const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
+    else if ("quiet" in el.dataset) el.textContent = ""; // where nothing was waiting, nothing to say
+    else el.innerHTML = SYNCED;
   }
+  if (!n) document.dispatchEvent(new Event("synced"));
+  showFailed(all.filter((e) => e.failed));
+}
+
+const KIND = { shot: "A shot", retract: "Undoing a shot", restore: "Bringing a shot back", bag: "A bag", photo: "A bag photo", equipment: "Equipment" };
+
+function showFailed(failed) {
+  const box = document.querySelector("[data-failed]");
+  if (!box) return;
+  box.hidden = !failed.length;
+  const list = box.querySelector("ul");
+  list.replaceChildren(...failed.map((e) => {
+    const li = document.createElement("li");
+    const when = new Date(e.at).toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+    li.append(`${KIND[e.key.split(":")[0]] || "A change"} from ${when}: ${e.failed} `);
+    const b = Object.assign(document.createElement("button"), { type: "button", className: "btn text", textContent: "Dismiss" });
+    b.onclick = async () => { await store("readwrite", (s) => s.delete(e.key)); showSync(); };
+    li.append(b);
+    return li;
+  }));
 }
 
 function uuid() {
@@ -81,6 +174,23 @@ const OFFLINE = "Saved on this phone. It’ll sync when you’re back online.";
 
 function hint(form, text) {
   form.querySelector("[data-hint]").textContent = text;
+}
+
+// A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
+// label. Without data-confirm, the action runs at once.
+function confirmTap(b, action) {
+  const restore = () => {
+    if (b.dataset.label === undefined) return;
+    b.textContent = b.dataset.label;
+    delete b.dataset.label;
+  };
+  if (!b.dataset.confirm || b.dataset.label !== undefined) {
+    restore();
+    return action();
+  }
+  b.dataset.label = b.textContent;
+  b.textContent = b.dataset.confirm;
+  setTimeout(restore, 4000);
 }
 
 function pressOne(group, button) {
@@ -108,6 +218,7 @@ function logShot(form) {
   const taste = form.querySelector("[data-taste]");
   const rating = form.querySelector("[data-rating]");
   const save = form.querySelector("[data-save]");
+  const saveLabel = save.textContent;
   const timerBtn = form.querySelector("[data-timer]");
   let started = null;
   let ticker = null;
@@ -119,7 +230,7 @@ function logShot(form) {
     document.querySelector("[data-ratio]").textContent = d && y ? `1:${(y / d).toFixed(2)}` : "";
     if (confirmLastTime) {
       confirmLastTime = false;
-      save.textContent = "Save shot";
+      save.textContent = saveLabel; // "Save shot" or "Save correction"
     }
   }
 
@@ -163,41 +274,55 @@ function logShot(form) {
     timerBtn.classList.remove("running");
   }
 
-  timerBtn.addEventListener("click", () => {
-    tick(12);
-    if (started !== null) return stopTimer();
-    started = performance.now();
-    timed();
-    show($("time_s"), 0);
-    // The numeral ticks once a second, and isn't animated.
-    ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
-    timerBtn.textContent = "Stop";
-    timerBtn.classList.add("running");
-    update();
-  });
-  form.querySelector("[data-type]").addEventListener("click", () => {
-    if (started !== null) stopTimer();
-    timed();
-    $("time_s").focus();
-  });
+  // Correcting a past shot has steppers for the time instead of the timer.
+  if (timerBtn) {
+    timerBtn.addEventListener("click", () => {
+      tick(12);
+      if (started !== null) return stopTimer();
+      started = performance.now();
+      timed();
+      show($("time_s"), 0);
+      // The numeral ticks once a second, and isn't animated.
+      ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
+      timerBtn.textContent = "Stop";
+      timerBtn.classList.add("running");
+      update();
+    });
+    form.querySelector("[data-type]").addEventListener("click", () => {
+      if (started !== null) stopTimer();
+      timed();
+      $("time_s").focus();
+    });
+  }
 
   taste.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(taste, b.getAttribute("aria-pressed") === "true" ? null : b); // taste can be left empty
+    sameShown();
     tick();
   });
   rating.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(rating, b);
+    sameShown();
     hint(form, "");
     tick();
   });
-  form.querySelector("[data-same]")?.addEventListener("click", () => {
+  // The chip shows as pressed only while taste and rating are exactly the last shot's.
+  const sameChip = form.querySelector("[data-same]");
+  function sameShown() {
+    if (!sameChip) return;
+    const last = p.same_as_last;
+    const on = pressed(taste) === (last.taste ?? null) && pressed(rating) === String(last.rating);
+    sameChip.setAttribute("aria-pressed", String(on));
+  }
+  sameChip?.addEventListener("click", () => {
     const last = p.same_as_last;
     pressOne(taste, last.taste ? taste.querySelector(`[data-v="${last.taste}"]`) : null);
     pressOne(rating, rating.querySelector(`[data-v="${last.rating}"]`));
+    sameShown();
     hint(form, "");
     tick();
   });
@@ -208,32 +333,38 @@ function logShot(form) {
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
     let time = form.querySelector("[data-timed]").hidden ? null : num($("time_s"));
+    // Correcting, the fallback is the corrected shot's own time, not the bag's latest (#18-1).
+    const lastTime = p.correct ? p.correct.time_s : p.last_time_s;
     if (time === null) {
-      if (p.last_time_s == null) return hint(form, "Time the shot, or type the time.");
+      if (lastTime == null) return hint(form, "Time the shot, or type the time.");
       if (!confirmLastTime) {
         confirmLastTime = true; // a forgotten timer costs one more tap, never a made-up time
-        save.textContent = `Save with ${p.last_time_s} s?`;
+        save.textContent = `Save with ${lastTime} s?`;
         return;
       }
-      time = p.last_time_s;
+      time = lastTime;
     }
+    const fix = p.correct; // correcting: same id and time, a new record that replaces the old one
+    const temp = num($("water_temp_c"));
     const body = {
-      shot_id: uuid(),
-      brewed_at: new Date().toISOString(),
+      shot_id: fix ? fix.shot_id : uuid(),
+      brewed_at: fix ? fix.brewed_at : new Date().toISOString(),
       bag_id: p.bag_id,
       coffee_id: p.coffee_id,
       coffee_freetext: p.coffee_freetext,
       grinder_id: p.grinder_id,
       basket_id: p.basket_id,
+      machine_id: p.machine_id,
       dose_g: num($("dose_g")),
       yield_g: num($("yield_g")),
       time_s: time,
       grinder_setting: num($("grinder_setting")),
       rating: Number(r),
       taste: pressed(taste),
-      water_temp_c: p.water_temp_c,
+      water_temp_c: temp,
       brew_method: p.brew_method,
-      is_milk_drink: p.is_milk_drink,
+      is_milk_drink: pressed(milk) === "true",
+      notes: $("notes").value.trim() || null,
     };
     for (const k of Object.keys(body)) if (body[k] == null) delete body[k];
     save.disabled = true;
@@ -241,16 +372,82 @@ function logShot(form) {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
       setTimeout(() => tick(8), 60);
-      location.href = `/saved/${body.shot_id}?new=1`;
+      location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
-      save.disabled = false;
+      if (err instanceof Rejected) {
+        hint(form, err.message);
+        save.disabled = false;
+        return;
+      }
+      tick(8);
+      setTimeout(() => tick(8), 60);
+      offlineSaved(body); // it's in the outbox: say so, and don't leave the form armed for a second save
     }
   });
+
+  // Saved with no connection: what was saved, described from the form alone (no server logic copied here).
+  function offlineSaved(b) {
+    const view = document.querySelector("[data-offline-saved]");
+    const o = (k) => view.querySelector(`[data-o="${k}"]`);
+    const now = new Date();
+    o("title").textContent = `Saved ${now.getHours()}:${String(now.getMinutes()).padStart(2, "0")} · ${view.dataset.name}`;
+    o("ratio").textContent = `1:${(b.yield_g / b.dose_g).toFixed(2)}`;
+    o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
+    o("time").textContent = `${b.time_s ?? "–"}`;
+    o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder} · rated ${b.rating}`;
+    // The same tag as Saved.
+    const tag = o("taste");
+    tag.className = `taste ${b.taste || "none"}`;
+    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)}` : "No taste";
+    form.hidden = true;
+    for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
+    view.hidden = false;
+    view.querySelector("h1").focus({ preventScroll: true });
+    scrollTo(0, 0);
+    // Once it syncs, the comparison is a tap away; if the server refused it, say why instead (#20-5).
+    document.addEventListener("synced", () => {
+      const no = refused.get(`shot:${b.shot_id}`);
+      if (no) return void (o("summary").textContent = `The server didn’t take this shot: ${no}`);
+      const link = Object.assign(document.createElement("a"), { className: "ext", href: p.correct ? `/shot/${b.shot_id}` : `/saved/${b.shot_id}`, textContent: "Synced. See how it compares ›" });
+      o("summary").replaceChildren(link);
+    }, { once: true });
+    // A correction has no Undo, offline as online: undoing it once it synced would retract the shot (#20-4).
+    const strip = view.querySelector("[data-unqueue]");
+    if (p.correct) strip.hidden = true;
+    else unqueue(strip, b.shot_id);
+  }
+
+  // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
+  const milk = form.querySelector("[data-milk]");
+  const moreSummary = form.querySelector("[data-more-summary]");
+  const note = () => {
+    const t = $("notes").value.trim();
+    return t.length > 24 ? `${t.slice(0, 23)}…` : t || null;
+  };
+  const summarize = () => {
+    const parts = [num($("water_temp_c")) != null ? `${num($("water_temp_c"))} °C` : null, pressed(milk) === "true" ? "milk drink" : "no milk", note()];
+    moreSummary.textContent = parts.filter(Boolean).join(" · ");
+  };
+  milk.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (b) { pressOne(milk, b); tick(); }
+    summarize();
+  });
+  $("water_temp_c").value = p.water_temp_c ?? "";
+  pressOne(milk, milk.querySelector(`[data-v="${p.is_milk_drink ? "true" : "false"}"]`));
+  for (const id of ["water_temp_c", "notes"]) $(id).addEventListener("input", summarize);
 
   show($("dose_g"), p.dose_g);
   show($("yield_g"), p.yield_g);
   show($("grinder_setting"), p.grinder_setting);
+  if (p.correct) {
+    timed();
+    show($("time_s"), p.correct.time_s);
+    if (p.correct.taste) pressOne(taste, taste.querySelector(`[data-v="${p.correct.taste}"]`));
+    pressOne(rating, rating.querySelector(`[data-v="${p.correct.rating}"]`));
+    $("notes").value = p.correct.notes ?? "";
+  }
+  summarize();
   fit($("time_s"));
   update();
 }
@@ -259,57 +456,519 @@ function logShot(form) {
 
 function undo(strip) {
   const id = strip.dataset.undo;
-  strip.querySelector("i").addEventListener("animationend", () => { strip.hidden = true; });
+  // Hidden after 5 s by a timer, not the animation: with reduced motion the bar doesn't move, and Undo still shows.
+  // Focus on Undo holds it open.
+  let timer = null;
+  const arm = () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", arm);
+  arm();
   strip.querySelector("button").addEventListener("click", async () => {
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
+    }
+  });
+}
+
+// Undo for a shot that may still be on the phone: take it out of the outbox; if it already went up, retract it.
+function unqueue(strip, id) {
+  let timer = setTimeout(() => { strip.hidden = true; }, 5000);
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    const key = `shot:${id}`;
+    await sending.get(key)?.catch(() => {}); // a send already under way finishes first; then it's retracted (#20-3)
+    const queued = await store("readonly", (s) => s.get(key));
+    try {
+      if (queued) await store("readwrite", (s) => s.delete(key));
+      else await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+      location.href = "/";
+    } catch (err) {
+      strip.firstChild.textContent = why(err);
     }
   });
 }
 
 // --- New bag and equipment ---------------------------------------------------------------------------
 
-function newBag(form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const coffee = form.coffee_freetext.value.trim();
-    if (!coffee) return hint(form, "Type the roaster and coffee.");
-    const body = { bag_id: uuid(), coffee_freetext: coffee };
-    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+// New bag: a photo of the label, read by the server (Claude reads, Python matches), or the coffee typed.
+function newBag(root) {
+  const form = document.getElementById("bag");
+  const input = document.getElementById("photo");
+  const steps = root.querySelectorAll("[data-step]");
+  const retakeTop = document.querySelector("[data-retake]");
+  const step = (name) => {
+    for (const s of steps) s.hidden = s.dataset.step !== name;
+    if (retakeTop) retakeTop.hidden = !["match", "pick"].includes(name);
+    scrollTo(0, 0);
+    root.querySelector(`[data-step="${name}"] h1`)?.focus({ preventScroll: true }); // screen readers hear the step
+  };
+  let read = null; // what the label said: carried into the bag, whichever way it's chosen
+  let attempt = 0; // which photo the screen is waiting on; replies for any other are dropped
+  let saving = false;
+
+  const save = async (body, where) => {
+    if (saving) return; // a second tap mustn't make a second bag
+    saving = true;
+    for (const b of root.querySelectorAll("button")) b.disabled = true;
+    body = { bag_id: uuid(), ...body };
+    if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
+    if (read?.pending) body.read_pending = true; // only then may the photo's match fill in the bag (#20-1)
+    if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
+    if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(where, why(err));
+      if (!(err instanceof Rejected)) return; // queued: it stays saved, so another tap would make a second bag
+      saving = false;
+      for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
+  };
+  const said = () => [read?.label?.roaster, read?.label?.coffee && `“${read.label.coffee}”`].filter(Boolean).join(", ");
+  const typed = () => {
+    if (read?.label) form.coffee_freetext.value = [read.label.roaster, read.label.coffee].filter(Boolean).join(" ");
+    if (read?.roast_date) form.roast_date.value = read.roast_date;
+    form.roast_date.dispatchEvent(new Event("input"));
+    step("type");
+  };
+  const fill = (sel, text) => {
+    const el = root.querySelector(`[data-f="${sel}"]`);
+    el.textContent = text || "";
+    if (el.tagName === "DD") el.hidden = el.previousElementSibling.hidden = !text;
+  };
+  const days = (iso) => Math.round((Date.now() - new Date(`${iso}T12:00:00`)) / 86400000);
+  const showMatch = (m) => {
+    fill("title", m.title);
+    fill("roaster", m.roaster);
+    const d = read.roast_date;
+    fill("roasted", d ? `${new Date(`${d}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })} · day ${days(d)} · read from the bag` : "");
+    fill("origin", m.origin);
+    fill("notes", m.notes);
+    fill("price", m.price);
+    fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
+    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
+    step("match");
+    root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
+  };
+  const chevron = () => {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 8 14");
+    svg.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M1 1l6 6-6 6");
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "currentColor");
+    path.setAttribute("stroke-width", "1.75");
+    svg.append(path);
+    return svg;
+  };
+  // Candidates: tapping one shows its card to confirm, so a slip of the thumb doesn't save the wrong coffee.
+  const showPick = (fromMatch = false) => {
+    const list = root.querySelector("[data-candidates]");
+    list.replaceChildren();
+    const others = (read.candidates || []).filter((c) => !fromMatch || c.coffee_id !== read.match?.coffee_id);
+    const tied = others.length > 1 && Math.abs((others[0].score ?? 0) - (others[1].score ?? 0)) < 5; // a score only helps when it differs
+    for (const c of others) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pickrow";
+      const name = document.createElement("span");
+      name.className = "name";
+      name.textContent = c.title;
+      const meta = document.createElement("span");
+      meta.className = "meta";
+      const sameRoaster = read.label?.roaster && c.roaster?.toLowerCase().includes(read.label.roaster.toLowerCase());
+      meta.textContent = [sameRoaster ? "" : c.roaster, c.origin, c.in_stock == null ? "" : c.in_stock ? "in stock" : "sold out"]
+        .filter(Boolean).join(" · ");
+      name.append(meta);
+      const score = document.createElement("span");
+      score.className = "meta";
+      score.textContent = c.score && !tied ? `match ${c.score}` : "";
+      b.append(name, score, chevron());
+      b.onclick = () => showMatch(c);
+      list.append(b);
+    }
+    const when = read.roast_date ? `, roasted ${new Date(`${read.roast_date}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })}` : "";
+    root.querySelector("[data-said]").textContent = fromMatch
+      ? `Other coffees in the catalog that could be it.`
+      : others.length
+        ? `The bag says ${said()}${when}. These are the closest in the catalog.`
+        : `The bag says ${said()}${when}, but nothing like it is in the catalog. Type it and it’s saved as written.`;
+    const none = root.querySelector("[data-none]");
+    none.className = others.length ? "btn text" : "btn primary";
+    none.textContent = others.length ? "None of these: type the coffee" : "Type the coffee";
+    step("pick");
+  };
+  // Retake leads only where a new photo can help; otherwise typing is the one filled button.
+  const failed = (title, body, retake = true) => {
+    fill("failed-title", title);
+    fill("failed-body", body);
+    const r = root.querySelector("[data-failed-retake]");
+    const t = root.querySelector("[data-failed-type]");
+    r.hidden = !retake;
+    t.className = retake ? "btn text" : "btn primary";
+    step("failed");
+  };
+
+  // The phone shrinks the photo to 1600 px and re-encodes it, which also drops its EXIF (location included).
+  const shrink = async (file) => {
+    try {
+      const bmp = await createImageBitmap(file, { imageOrientation: "from-image" });
+      const scale = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(bmp.width * scale);
+      canvas.height = Math.round(bmp.height * scale);
+      canvas.getContext("2d").drawImage(bmp, 0, 0, canvas.width, canvas.height);
+      return await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.85));
+    } catch {
+      return file; // the server re-encodes it anyway
+    }
+  };
+
+  const take = () => input?.click();
+  for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
+  for (const b of root.querySelectorAll("[data-goto]")) {
+    b.onclick = () => {
+      if (b.dataset.goto === "type") attempt++; // typing instead: a read still on its way is dropped
+      return b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto);
+    };
+  }
+  input?.addEventListener("change", async () => {
+    const file = input.files[0];
+    input.value = "";
+    if (!file) return;
+    read = null; // a new photo: nothing from the last one carries over, even if this one fails
+    const mine = ++attempt;
+    const photo = await shrink(file);
+    const url = URL.createObjectURL(photo);
+    for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
+    step("reading");
+    // Set after the step shows, so a screen reader announces it.
+    setTimeout(() => { root.querySelector("[data-reading-status]").textContent = "Reading the label. Usually 2 to 5 seconds."; }, 50);
+    const id = uuid();
+    try {
+      const r = await fetch(`/api/photos/${id}`, {
+        method: "POST",
+        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch" },
+        body: photo,
+      });
+      const body = await r.json().catch(() => ({}));
+      if (mine !== attempt) return;
+      if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
+      read = body;
+      tick(8);
+      if (body.status === "read" && body.match) return showMatch(body.match);
+      if (body.status === "read") return showPick();
+      const why = {
+        illegible: "The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee.",
+        limit: "That’s today’s limit of label reads. Type the coffee, or try the photo again tomorrow.",
+        no_key: "Reading labels isn’t set up on this server. Type the coffee.",
+      }[body.status] || "The label couldn’t be read just now. Retake it, or type the coffee.";
+      const canRetake = !["limit", "no_key"].includes(body.status);
+      failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
+    } catch {
+      if (mine !== attempt) return;
+      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
+      read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
+      showSync();
+      root.querySelector("[data-photo-waiting]").hidden = false;
+      step("queued");
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const coffee = form.coffee_freetext.value.trim();
+    if (!coffee) return hint(form, "Type the roaster and coffee.");
+    const body = { coffee_freetext: coffee };
+    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+    save(body, form);
   });
 }
 
 function equipment(form) {
-  const choice = form.querySelector("[data-choice]");
-  choice?.addEventListener("click", (e) => {
-    const b = e.target.closest("button");
-    if (b) pressOne(choice, b);
-  });
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const body = { equipment_id: uuid(), kind: form.dataset.equipment };
+  const choices = form.querySelectorAll("[data-choice]");
+  for (const choice of choices) {
+    choice.addEventListener("click", (e) => {
+      const b = e.target.closest("button");
+      if (b) { pressOne(choice, b); tick(); }
+    });
+  }
+  // The whole record goes each time: a change is a new record under the same id, latest wins.
+  async function save(extra) {
+    const body = { equipment_id: form.dataset.id || uuid(), kind: form.dataset.equipment, ...extra };
     for (const el of form.querySelectorAll("input")) {
+      el.removeAttribute("aria-invalid");
       const v = el.value.trim();
-      if (!v) return hint(form, "Fill in every field.");
+      if (!v) {
+        if (!el.required) { body[el.name] = null; continue; } // cleared on purpose; fields not on the form are kept
+        el.setAttribute("aria-invalid", "true");
+        el.focus();
+        return hint(form, "Fill in the fields that aren’t optional.");
+      }
       body[el.name] = el.inputMode === "decimal" ? Number(v.replace(",", ".")) : v;
     }
-    if (choice) body[choice.dataset.choice] = pressed(choice) === "true";
+    for (const choice of choices) body[choice.dataset.choice] = pressed(choice) === "true";
     try {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
+      location.href = form.dataset.next || "/setup";
+    } catch (err) {
+      hint(form, why(err));
+    }
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    save({});
+  });
+  const retire = form.querySelector("[data-retire]");
+  retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
+}
+
+// --- Joining and inviting -----------------------------------------------------------------------------
+
+// The invite link carries its code after #, which never reaches the server; fill it in and say if it's good.
+async function joinCode(form) {
+  const input = form.querySelector("#code");
+  const status = form.querySelector("[data-code-status]");
+  const check = async () => {
+    if (!input.value.trim()) return;
+    try {
+      const r = await post("/api/invites/check", { code: input.value });
+      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
+      input.removeAttribute("aria-invalid");
+    } catch (err) {
+      status.textContent = err.message;
+      input.setAttribute("aria-invalid", "true");
+    }
+  };
+  let fromLink = "";
+  try {
+    fromLink = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    // A link that was cut or mangled in the message: say so, and keep it out of history.
+    history.replaceState(null, "", location.pathname);
+    status.textContent = "That link didn’t come through whole. Type the code from the message.";
+    input.setAttribute("aria-invalid", "true");
+  }
+  if (fromLink) {
+    input.value = fromLink;
+    history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
+    check();
+  }
+  input.addEventListener("change", check);
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false; // no clipboard API, or not allowed: the code stays on screen to copy by hand
+  }
+}
+
+function invites() {
+  const box = document.querySelector("[data-codebox]");
+  const primary = document.querySelector("[data-new-invite]");
+  const another = document.querySelector("[data-another]");
+  const intro = document.querySelector("[data-code-intro]");
+  const say = (text) => hint(document.querySelector("main"), text);
+  const show = (r, name) => {
+    const link = `${location.origin}/join#${r.code}`;
+    const join = r.kind === "join";
+    const groups = r.code.split("-");
+    const [a, b] = box.querySelectorAll("[data-code] span");
+    a.textContent = `${groups[0]}-${groups[1]}`; // two groups per line, never broken inside one
+    b.textContent = `${groups[2]}-${groups[3]}`;
+    box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
+    box.querySelector("[data-code-note]").textContent = join
+      ? `${location.host}/join · until ${r.expires}. Shown only once: send it before you leave this screen.`
+      : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
+    intro.textContent = join
+      ? `Share the link. It works once and expires ${r.expires}.`
+      : `Give ${name} the code below.`;
+    box.hidden = false;
+    // The one filled button now sends this code; making another one is a text button with a second tap.
+    const share = join && navigator.share;
+    primary.textContent = share ? "Share link" : join ? "Copy link" : "Copy code";
+    primary.onclick = async () => {
+      if (share) return navigator.share({ title: "registry.coffee", url: link }).catch(() => {});
+      say((await copyText(join ? link : r.code)) ? "" : "Couldn’t copy. Press and hold the code to copy it.");
+      if (!share) primary.textContent = "Copied";
+    };
+    another.hidden = !join;
+    box.scrollIntoView({ block: "center" });
+  };
+  const act = async (url, body, after) => {
+    try {
+      after(await post(url, body));
+    } catch (err) {
+      say(err.message);
+    }
+  };
+  const makeOne = () => act("/api/invites", {}, (r) => show(r));
+  primary.onclick = makeOne;
+  another.onclick = () => confirmTap(another, makeOne);
+  for (const b of document.querySelectorAll("[data-reset]")) {
+    b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
+  }
+  for (const b of document.querySelectorAll("[data-renew]")) {
+    b.onclick = () => act(`/api/invites/${b.dataset.renew}/renew`, {}, (r) => { b.previousElementSibling.hidden = true; b.nextElementSibling.hidden = true; b.hidden = true; show(r); });
+  }
+  for (const b of document.querySelectorAll("[data-revoke]")) {
+    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => location.reload());
+  }
+  for (const b of document.querySelectorAll("[data-person]")) {
+    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload()));
+  }
+}
+
+// A shot's Retract: a second tap, then a retraction record (never a delete), queued like any write.
+// Retract: no confirmation; the shot goes at once and an undo strip stays for 5 s (DESIGN, "Undo").
+function retractShot(b) {
+  const id = b.dataset.retract;
+  const actions = document.querySelector("[data-actions]");
+  const strip = document.querySelector("[data-restore]");
+  let timer = null;
+  const leave = () => { timer = setTimeout(() => location.replace(b.dataset.back), 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer)); // focus on Undo holds it open
+  strip.addEventListener("focusout", leave);
+  b.addEventListener("click", async () => {
+    b.disabled = true;
+    try {
+      await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+    } catch (err) {
+      if (err instanceof Rejected) {
+        hint(document.querySelector("main"), err.message);
+        b.disabled = false;
+        return;
+      }
+      // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
+      // screen goes (#18-3), and Undo can still take it back.
+      strip.firstChild.textContent = "Retracted on this phone. It syncs when you’re back online.";
+    }
+    tick(8);
+    actions.hidden = true;
+    strip.hidden = false;
+    for (const el of document.querySelector("main").children) if (!el.matches(".top, .undo, [data-actions]")) el.classList.add("gone");
+    leave();
+  });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    try {
+      // A retraction still on the phone is simply dropped; one that went up is undone on the server.
+      if (await store("readonly", (s) => s.get(`retract:${id}`))) await store("readwrite", (s) => s.delete(`retract:${id}`));
+      else await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
       location.reload();
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      strip.firstChild.textContent = why(err);
     }
   });
+}
+
+// Theme and hand live in cookies so the server renders them; no flash of the other layout.
+function preference(group, name, plain) {
+  group.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    pressOne(group, b);
+    tick();
+    const v = b.dataset.v;
+    document.cookie = `${name}=${v}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
+    if (v === plain) delete document.documentElement.dataset[name];
+    else document.documentElement.dataset[name] = v;
+  });
+}
+
+// --- Signing in and the account -----------------------------------------------------------------------
+
+async function post(url, body) {
+  const r = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
+    body: JSON.stringify(body),
+  });
+  if (r.ok) return r.json();
+  const detail = (await r.json().catch(() => ({}))).detail;
+  throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || "Something went wrong. Try again.");
+}
+
+function showPassword(button) {
+  const input = document.getElementById(button.getAttribute("aria-controls"));
+  button.addEventListener("click", () => {
+    const show = input.type === "password";
+    input.type = show ? "text" : "password";
+    button.textContent = show ? "Hide" : "Show";
+    button.setAttribute("aria-pressed", String(show));
+  });
+}
+
+function signIn(form) {
+  const submit = form.querySelector('[type="submit"]');
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const body = {};
+    for (const el of form.querySelectorAll("input")) body[el.name] = el.value;
+    for (const el of form.querySelectorAll("input")) el.removeAttribute("aria-invalid");
+    const empty = [...form.querySelectorAll("input")].find((el) => !el.value.trim());
+    if (empty) {
+      empty.setAttribute("aria-invalid", "true");
+      empty.focus();
+      return hint(form, "Fill in every field.");
+    }
+    submit.disabled = true;
+    try {
+      await post(form.dataset.api || "/api/signin", body);
+      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
+      await caches.delete("pages").catch(() => {});
+      location.replace("/");
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+      if (err instanceof Rejected) {
+        for (const el of form.querySelectorAll("input")) {
+          el.setAttribute("aria-invalid", "true");
+          el.setAttribute("aria-errormessage", "signin-hint");
+        }
+      }
+      submit.disabled = false;
+    }
+  });
+}
+
+function account() {
+  const form = document.getElementById("password-form");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      await post("/api/password", { current: form.current.value, new: form.new.value });
+      form.reset();
+      hint(form, "");
+      form.closest("details").open = false;
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+    }
+  });
+  for (const b of document.querySelectorAll("[data-signout]")) {
+    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    b.addEventListener("click", () => confirmTap(b, async () => {
+      try {
+        await post(b.dataset.signout, {});
+        // Kept pages hold this person's data: they go with the session, once the server has signed it out.
+        await caches.delete("pages").catch(() => {});
+        navigator.serviceWorker?.controller?.postMessage("signed-out");
+        location.replace("/signin");
+      } catch {
+        b.textContent = "Couldn’t sign out. Check the connection and try again.";
+      }
+    }));
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -317,9 +976,31 @@ document.addEventListener("DOMContentLoaded", () => {
   if (shot) logShot(shot);
   const strip = document.querySelector("[data-undo]");
   if (strip) undo(strip);
-  const bag = document.getElementById("bag");
+  const bag = document.getElementById("newbag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
+  const theme = document.querySelector("[data-theme-choice]");
+  if (theme) preference(theme, "theme", "auto");
+  const hand = document.querySelector("[data-hand-choice]");
+  if (hand) preference(hand, "hand", "right");
+  for (const id of ["signin", "join", "reset"]) {
+    const f = document.getElementById(id);
+    if (f) signIn(f);
+  }
+  const join = document.getElementById("join");
+  if (join) joinCode(join);
+  if (document.querySelector("[data-new-invite]")) invites();
+  for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
+  for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  for (const b of document.querySelectorAll("[data-reload]")) b.addEventListener("click", () => location.reload());
+  // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
+  for (const el of document.querySelectorAll("[data-empty-class]")) {
+    const mark = () => el.classList.toggle("empty", !el.value);
+    el.addEventListener("input", mark);
+    mark();
+  }
+  account();
   flush();
 });
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
 addEventListener("online", flush);

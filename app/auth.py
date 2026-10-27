@@ -1,5 +1,5 @@
-"""Who is making a request. The plan's sign-in (username, password, invite codes, signed session cookies) goes
-behind this interface in a later milestone; for now there is only the local-development stub."""
+"""Who is making a request. `Sessions` is the real sign-in (app/accounts.py); `LocalOwner` is a stub for
+`make app` on a laptop, which treats every request as the owner and refuses to run on a Space."""
 
 from __future__ import annotations
 
@@ -7,9 +7,13 @@ import os
 from dataclasses import dataclass
 from typing import Protocol
 
-from fastapi import Request
+from fastapi import Request, Response
 
 from coffeedata import shots
+
+from .accounts import SESSION_DAYS, Account, Accounts
+
+COOKIE = "session"
 
 
 @dataclass(frozen=True)
@@ -29,6 +33,7 @@ class LocalOwner:
     """Every request is the one configured owner (COFFEEDATA_OWNER_ID, COFFEEDATA_OWNER). Local use only."""
 
     name = "local"
+    accounts = None
 
     def __init__(self, user_id: str | None = None, username: str | None = None):
         if os.environ.get("SPACE_ID"):  # set on every Hugging Face Space
@@ -41,3 +46,62 @@ class LocalOwner:
 
     def user(self, request: Request) -> User | None:
         return self.owner
+
+
+class Sessions:
+    """The signed session cookie: HttpOnly, Secure, SameSite=Lax, host-only, 90 days, renewed on use."""
+
+    name = "accounts"
+
+    def __init__(self, accounts: Accounts, secure: bool = True):
+        self.accounts, self.secure = accounts, secure
+
+    def user(self, request: Request) -> User | None:
+        hit = self.accounts.session(request.cookies.get(COOKIE))
+        if hit is None:
+            return None
+        acct, renew = hit
+        if renew:
+            request.state.renew = acct  # the middleware reissues the cookie on the way out
+        return User(acct.user_id, acct.username, acct.role)
+
+    def set_cookie(self, response: Response, acct: Account) -> None:
+        response.set_cookie(
+            COOKIE,
+            self.accounts.issue(acct),
+            max_age=SESSION_DAYS * 86400,
+            path="/",
+            secure=self.secure,
+            httponly=True,
+            samesite="lax",
+        )
+
+    def clear_cookie(self, response: Response) -> None:
+        response.delete_cookie(COOKIE, path="/", secure=self.secure, httponly=True, samesite="lax")
+
+
+def missing_secrets() -> list[str]:
+    """Sign-in secrets a Space needs and doesn't have (names only)."""
+    if not (os.environ.get("SPACE_ID") or os.environ.get("SESSION_SECRET")):
+        return []
+    # OWNER_SETUP_CODE isn't required: without it nobody can create the owner (the screen says so), and once the
+    # owner exists it only resets the owner's password, once per value.
+    need = {"AUTH_PEPPER": 16, "SESSION_SECRET": 32}
+    if os.environ.get("SPACE_ID"):
+        need["HF_TOKEN"] = 1  # a Space writes to Hugging Face datasets
+    return [k for k, n in need.items() if len(os.environ.get(k, "")) < n]
+
+
+def from_env() -> Auth:
+    """Real sign-in on a Space or wherever SESSION_SECRET is set; the local stub otherwise."""
+    if not (os.environ.get("SPACE_ID") or os.environ.get("SESSION_SECRET")):
+        return LocalOwner()
+    from coffeedata.lake import Lake
+
+    accounts = Accounts(
+        Lake.users(),
+        os.environ.get("AUTH_PEPPER", ""),
+        os.environ.get("SESSION_SECRET", ""),
+        os.environ.get("OWNER_SETUP_CODE"),
+    )
+    return Sessions(accounts, secure=os.environ.get("COFFEEDATA_INSECURE_COOKIES") != "1")

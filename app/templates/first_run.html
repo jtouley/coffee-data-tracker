@@ -2,17 +2,18 @@
 {% from "_macros.html" import chevron, nav %}
 {% block main %}
   <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span></div>
-  <div class="serif title mt24">Nothing on the grinder yet</div>
-  <p class="body" style="max-width:34ch">Type the coffee you’re about to open. The app looks for it among the
+  <h1 class="serif title mt8">Nothing on the grinder yet</h1>
+  {% if grinder and basket %}
+  <p class="body">Type the coffee you’re about to open. The app looks for it among the
     coffees US roasters list online, and every shot is saved with it.</p>
-  <div class="mt32" style="border-top:1px solid var(--rule)">
-    {% if not grinder %}<a class="link" href="/setup#grinder"><span>Add your grinder<span class="meta">So a grind setting means something</span></span>{{ chevron() }}</a>{% endif %}
-    {% if not basket %}<a class="link" href="/setup#basket"><span>Add your basket<span class="meta">Its nominal dose is the first shot’s dose</span></span>{{ chevron() }}</a>{% endif %}
-  </div>
+  {% else %}
+  <p class="body">Add your grinder and basket first. Then type the coffee you’re about to open.</p>
+  {% endif %}
   <div class="spacer"></div>
   <div class="dock">
-    {% if grinder and basket %}<a class="btn primary" href="/bag/new">Type the coffee</a>
-    {% else %}<a class="btn primary" href="/setup">Set up your grinder</a>{% endif %}
+    {% if not grinder %}<a class="btn primary" href="/setup/gear/new?kind=grinder">Add your grinder</a>
+    {% elif not basket %}<a class="btn primary" href="/setup/gear/new?kind=basket">Add your basket</a>
+    {% else %}<a class="btn primary" href="/bag/new">Type the coffee</a>{% endif %}
   </div>
 {% endblock %}
 {% block nav %}{{ nav('today') }}{% endblock %}

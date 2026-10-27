@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "_macros.html" import nav, shotrow, chevron %}
+{% block title %}History · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/coffees">‹ Coffees</a></div>
+  <h1 class="serif title mt8">History</h1>
+  {% for grp in groups %}
+  {% if grp.bag %}<h2 class="group"><a class="link" href="/coffee/{{ grp.bag.bag_id }}"><span>{{ grp.name }}<span class="meta">{{ shots_n(grp.shots | length) }}</span></span>{{ chevron() }}</a></h2>
+  {% else %}<h2 class="section">{{ grp.name }}</h2>{% endif %}
+  <div class="list">{% for s in grp.shots %}{{ shotrow(s, day, "?from=history") }}{% endfor %}</div>
+  {% else %}
+  <p class="body">No shots yet. Each shot you log shows up here, grouped by bag.</p>
+  <div class="spacer"></div>
+  <div class="dock"><a class="btn primary" href="/log">Log a shot</a></div>
+  {% endfor %}
+  <div class="mt24"></div>
+{% endblock %}
+{% block nav %}{{ nav('coffees') }}{% endblock %}
