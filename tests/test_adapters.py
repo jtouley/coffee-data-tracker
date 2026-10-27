@@ -47,6 +47,13 @@ def test_generic_ignores_malformed_offers():
     assert [v.price_usd for v in item.variants] == [12.0]
 
 
+def test_generic_repeated_sku_gives_unique_variant_ids():
+    # Seen live (ikoncoffee.com): every offer carries the product's SKU, which duplicated price events.
+    offers = [{"sku": "WB-12oz", "name": n, "price": "18"} for n in ("Whole bean", "Drip", "Espresso")]
+    item = generic.parse_jsonld({"name": "X", "offers": offers}, "u", _r())
+    assert [v.variant_id for v in item.variants] == ["WB-12oz", "WB-12oz#1", "WB-12oz#2"]
+
+
 def test_product_urls_rank_beans_before_merch():
     urls = ["https://x.com/product-page/logo-mug", "https://x.com/product-page/ethiopia-guji",
             "https://x.com/about", "https://x.com/product/house-blend/ABCDEFG123"]

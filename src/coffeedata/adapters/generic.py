@@ -60,11 +60,15 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     offers = p.get("offers") or []
     if isinstance(offers, dict):
         offers = offers.get("offers") or [offers]
-    variants = []
+    variants, seen = [], set()
     for i, o in enumerate(o for o in offers if isinstance(o, dict)):
         title = str(o.get("name") or o.get("sku") or "")
         avail = str(o.get("availability") or "")
-        variants.append(Variant(variant_id=str(o.get("sku") or i), title=title,
+        vid = str(o.get("sku") or i)
+        if vid in seen:  # some stores repeat one SKU across every offer; variant ids must be unique per product
+            vid = f"{vid}#{i}"
+        seen.add(vid)
+        variants.append(Variant(variant_id=vid, title=title,
                                 price_usd=to_float(o.get("price") or o.get("lowPrice")),
                                 grams=parse_grams(title) or parse_grams(str(p.get("name"))),
                                 available=("InStock" in avail) if avail else None))

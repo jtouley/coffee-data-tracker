@@ -70,6 +70,16 @@ def test_relisting(lake, tmp_path):
     assert b == [(date(2026, 10, 19), "new"), (date(2026, 10, 26), "removed"), (date(2026, 11, 2), "relisted")]
 
 
+def test_repeated_variant_ids_in_raw_snapshots(lake, tmp_path):
+    # Raw snapshots written before the generic adapter de-duplicated SKUs: same variant_id on every offer.
+    p = product("A")
+    p["variants"] = [p["variants"][0] | {"variant_id": "SKU", "title": t} for t in ("Whole bean", "Drip", "Espresso")]
+    run(lake, "2026-10-26", "ikoncoffee.com", [p])
+    con = build(lake, tmp_path)  # unique_price_events would fail without the staging fix
+    assert sorted(con.execute("select variant_id, event from fct_price_event").fetchall()) == [
+        ("SKU", "new"), ("SKU#1", "new"), ("SKU#2", "new")]
+
+
 def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     a, b, c = "onyxcoffeelab.com", "intelligentsia.com", "vividcoffee.com"
     run(lake, "2026-10-19", a, [product("1")])
