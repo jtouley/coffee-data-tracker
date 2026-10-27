@@ -84,7 +84,7 @@ async function newPage(browser, errors) {
     await page.fill("#password", "not the password");
     await page.getByRole("button", { name: "Sign in" }).click();
     await page.waitForFunction(() => document.querySelector("[data-hint]").textContent !== "");
-    assert.equal(await page.textContent("[data-hint]"), "That username and password don’t match.");
+    assert.equal(await page.textContent("[data-hint]"), "That username and password don’t match. Check both and try again.");
     await shoot(page, "sign-in-error");
     await page.fill("#password", "kettle orbit marble");
     await page.getByRole("button", { name: "Sign in" }).click();

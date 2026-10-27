@@ -280,7 +280,13 @@ function logShot(form) {
 
 function undo(strip) {
   const id = strip.dataset.undo;
-  strip.querySelector("i").addEventListener("animationend", () => { strip.hidden = true; });
+  // Hidden after 5 s by a timer, not the animation: with reduced motion the bar doesn't move, and Undo still shows.
+  // Focus on Undo holds it open.
+  let timer = null;
+  const arm = () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", arm);
+  arm();
   strip.querySelector("button").addEventListener("click", async () => {
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
@@ -376,7 +382,10 @@ function signIn(form) {
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
       if (err instanceof Rejected) {
-        for (const el of form.querySelectorAll("input")) el.setAttribute("aria-invalid", "true");
+        for (const el of form.querySelectorAll("input")) {
+          el.setAttribute("aria-invalid", "true");
+          el.setAttribute("aria-errormessage", "signin-hint");
+        }
       }
       submit.disabled = false;
     }
@@ -399,7 +408,9 @@ function account() {
   for (const b of document.querySelectorAll("[data-signout]")) {
     b.addEventListener("click", async () => {
       if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
+        const label = b.textContent;
         b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
+        setTimeout(() => { b.textContent = label; }, 4000);
         return;
       }
       try {
@@ -422,6 +433,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const signin = document.getElementById("signin");
   if (signin) signIn(signin);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
+  for (const el of document.querySelectorAll("[data-empty-class]")) {
+    const mark = () => el.classList.toggle("empty", !el.value);
+    el.addEventListener("input", mark);
+    mark();
+  }
   account();
   flush();
 });

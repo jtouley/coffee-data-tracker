@@ -53,8 +53,10 @@
       <button class="btn secondary mt8" type="submit">Change password</button>
     </form>
   </details>
-  <button class="btn text" type="button" data-signout="/api/signout">Sign out</button>
-  <button class="btn text danger mt24 topline" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
+  <button class="btn text start" type="button" data-signout="/api/signout">Sign out</button>
+  <div class="mt24 topline">
+    <button class="btn text danger start" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
+  </div>
   {% endif %}
   <div class="mt24"></div>
 {% endblock %}

@@ -262,7 +262,7 @@ class Accounts:
         if not ok or acct is None or acct.disabled:
             self.limiter.fail(ukey, now)
             self.limiter.fail(ikey, now)
-            raise AccountError("That username and password don’t match.")
+            raise AccountError("That username and password don’t match. Check both and try again.")
         self.limiter.clear(ukey)
         if _hasher.check_needs_rehash(acct.password_hash):
             with self.lock:

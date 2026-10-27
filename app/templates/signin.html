@@ -3,7 +3,7 @@
 {% block main %}
   <h1 class="mt48 serif wordmark">registry.coffee</h1>
   {% if owner_setup %}
-  <p class="body mt12 lede">Create the owner’s account. The setup code is the OWNER_SETUP_CODE secret in the Space’s settings.</p>
+  <p class="body mt12 lede">Create the owner’s account. The setup code is the <code>OWNER_SETUP_CODE</code> secret in your Hugging Face Space’s settings.</p>
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
@@ -22,7 +22,7 @@
       <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
     </div>
     {% if owner_setup %}<div class="fhint" id="password-h">At least 10 characters. A few unrelated words work well.</div>{% endif %}
-    <div class="hint" data-hint role="alert"></div>
+    <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="dock flat">
       <button class="btn primary" type="submit">{{ "Create account" if owner_setup else "Sign in" }}</button>
     </div>

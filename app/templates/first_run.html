@@ -9,12 +9,6 @@
   {% else %}
   <p class="body measure">Add your grinder and basket first. Then type the coffee you’re about to open.</p>
   {% endif %}
-  {% if not grinder and not basket %}
-  {# The button adds the grinder; the row shows what comes after it. #}
-  <div class="mt32 topline">
-    <a class="link" href="/setup#basket"><span>Then your basket<span class="meta">Its nominal dose is the first shot’s dose</span></span>{{ chevron() }}</a>
-  </div>
-  {% endif %}
   <div class="spacer"></div>
   <div class="dock">
     {% if not grinder %}<a class="btn primary" href="/setup#grinder">Add your grinder</a>

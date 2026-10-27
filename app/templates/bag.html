@@ -8,7 +8,7 @@
     <label class="flabel" for="coffee">Coffee</label>
     <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="e.g. Onyx Geometry" required>
     <label class="flabel" for="roast_date">Roast date (optional)</label>
-    <input class="input" id="roast_date" name="roast_date" type="date" max="{{ now.date().isoformat() }}">
+    <input class="input" id="roast_date" name="roast_date" type="date" data-empty-class max="{{ now.date().isoformat() }}">
     <div class="hint" data-hint role="status"></div>
     <div class="spacer"></div>
     <div class="dock sticky"><button class="btn primary" type="submit">Use this coffee</button></div>
