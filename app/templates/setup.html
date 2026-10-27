@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import nav, chevron %}
+{% from "_macros.html" import nav, chevron, legal %}
 {% block title %}Setup · registry.coffee{% endblock %}
 {% macro describe(e) -%}
   {%- if e.kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer
@@ -50,6 +50,7 @@
     <button class="link danger" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
     {% endif %}
   </div>
+  {{ legal() }}
   <div class="mt24"></div>
 {% endblock %}
 {% block nav %}{{ nav('setup') }}{% endblock %}

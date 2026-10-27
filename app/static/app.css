@@ -331,3 +331,4 @@ details.disclose[open] [data-more-summary] { display: none; }
 [data-hand="left"] #shot > .row { flex-direction: row-reverse; }
 [data-hand="left"] details.disclose > summary { flex-direction: row-reverse; }
 .gone, .gone * { color: var(--ink-2) !important; } /* a retracted shot, while Undo is still offered: greyed, still legible */
+.legal { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }

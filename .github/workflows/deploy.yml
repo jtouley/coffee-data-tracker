@@ -1,0 +1,59 @@
+# Build the app's image and deploy it to Cloud Run on every push to main that changes what the app runs. Pull
+# requests only build the image and check the Terraform. Authentication is Workload Identity Federation (no keys);
+# the variables come from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy job is skipped.
+name: deploy
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "infra/**", ".github/workflows/deploy.yml"]
+  pull_request:
+    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "infra/**", ".github/workflows/deploy.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - name: Build the image
+        run: docker build -f app/Dockerfile -t registry-coffee:check .
+      - uses: hashicorp/setup-terraform@v3
+        with: {terraform_version: "1.9.8"}
+      - name: Check the Terraform
+        working-directory: infra
+        run: |
+          terraform fmt -check
+          terraform init -backend=false -input=false
+          terraform validate
+
+  deploy:
+    needs: check
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.GCP_WIF_PROVIDER != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write  # for Workload Identity Federation
+    env:
+      REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      SERVICE: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
+      IMAGE: ${{ vars.GCP_IMAGE }}:${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false}
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
+      - uses: google-github-actions/setup-gcloud@v2
+      - name: Build and push
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          docker build -f app/Dockerfile -t "$IMAGE" .
+          docker push "$IMAGE"
+      - name: Deploy
+        run: gcloud run deploy "$SERVICE" --image "$IMAGE" --region "$REGION" --quiet

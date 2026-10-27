@@ -30,7 +30,7 @@ from coffeedata import shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
 
-from . import labels, photos, views, web
+from . import labels, logs, photos, views, web
 from .accounts import AccountError
 from .auth import COOKIE, Auth, Sessions, User, from_env, missing_secrets
 from .store import Invalid, NotFound, Store, coffee_key
@@ -47,10 +47,10 @@ class SignIn(Exception):
 
 
 def not_configured(missing: list[str]) -> FastAPI:
-    """What a Space shows until its sign-in secrets are set: their names, never their values."""
+    """What the hosted app shows until its secrets are set: their names, never their values."""
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     text = (
-        "This app isn't set up yet. Add these secrets in the Space's settings, then restart it: "
+        "This app isn't set up yet. Add these secrets (Secret Manager, see RUNNING.md), then deploy again: "
         + ", ".join(missing)
         + "."
     )
@@ -88,6 +88,8 @@ def create_app(
     lake = lake or Lake()
     # Records from before accounts (user_id null) belong to the owner.
     store = Store(lake, shots.owner_user_id())
+    logs.event("started", shots=len(store.shots), bags=len(store.bags), equipment=len(store.equipment),
+               lake=lake.url, auth=getattr(auth, "name", type(auth).__name__))  # fmt: skip
     sessions = auth if isinstance(auth, Sessions) else None
     app = FastAPI(title="registry.coffee", docs_url=None, redoc_url=None, openapi_url=None)
     app.state.store = store
@@ -105,6 +107,7 @@ def create_app(
         return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
     app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error))  # type: ignore[arg-type]
+    app.middleware("http")(logs.middleware)  # outermost: it sees the final status, error pages included
     hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)
 
     def ip(request: Request) -> str:
@@ -114,12 +117,14 @@ def create_app(
         u = auth.user(request)
         if u is None:
             raise HTTPException(401, "sign in first")
+        logs.set_user(u.user_id)
         return u
 
     def screen_user(request: Request) -> User:
         u = auth.user(request)
         if u is None:
             raise SignIn()
+        logs.set_user(u.user_id)
         return u
 
     def same_origin(request: Request, x_requested_with: str | None) -> None:
@@ -896,6 +901,8 @@ def create_app(
 def __getattr__(name: str) -> FastAPI:
     # `uvicorn app.main:app` builds the app on first use, so importing this module (tests) has no side effects.
     if name == "app":
+        if logs.wanted():
+            logs.setup()
         globals()["app"] = a = create_app()
         return a
     raise AttributeError(name)

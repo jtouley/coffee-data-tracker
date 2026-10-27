@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% from "_macros.html" import legal %}
 {% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
 {% block main %}
   <h1 class="mt48 serif wordmark">registry.coffee</h1>
   {% if owner_setup %}
-  <p class="body mt12 lede">Create the owner’s account. The setup code is the <code>OWNER_SETUP_CODE</code> secret in your Hugging Face Space’s settings.</p>
+  <p class="body mt12 lede">Create the owner’s account. The setup code is the <code>OWNER_SETUP_CODE</code> secret you set for the app.</p>
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
@@ -30,5 +31,6 @@
       <a class="btn text" href="/reset">Forgot your password? Use a reset code</a>
       {% endif %}
     </div>
+    {{ legal() }}
   </form>
 {% endblock %}

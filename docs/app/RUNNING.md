@@ -1,6 +1,6 @@
 # Running the app
 
-The shot-logging app in `app/`: how to run it locally, how sign-in works, and how it's deployed. The plan and
+The shot-logging app in `app/`: how to run it locally, how sign-in works, and how it's deployed on Cloud Run. The plan and
 design are in `PLAN.md` and `DESIGN.md` (branch `app-plan`).
 
 ## Locally
@@ -12,7 +12,7 @@ HOST=0.0.0.0 make app        # reachable from a phone on the same network
 
 Without `SESSION_SECRET` the app uses a stub that treats every request as the owner (`COFFEEDATA_OWNER_ID`,
 default `owner`). Anyone who can reach it can log shots, so keep it on your own network. The stub refuses to start on
-a Hugging Face Space.
+Cloud Run (or a Hugging Face Space).
 
 To try real sign-in locally, with accounts in `./lake-users`:
 
@@ -43,18 +43,56 @@ accepts Secure cookies on `localhost` without it.
 
 Every read and write is scoped to the user in the cookie, never to a `user_id` in the request.
 
-## On a Hugging Face Space
+## On Cloud Run
 
-`app/space/` holds the Space's `Dockerfile` and `README.md`, the latter with the Space metadata.
-`.github/workflows/space.yml` assembles `app/`, `src/`, `pyproject.toml` and `uv.lock` with those two files at the
-root, and uploads them to the Space (`SPACE_ID` variable, default `jtouley/coffee-data-app`) on every push to main
-that touches them. The workflow uses the repo's existing `HF_TOKEN` secret.
+The app runs on Google Cloud Run in `us-central1` at `app.registry.coffee`. `infra/` (Terraform) describes all of
+it:
 
-Docker Spaces need a Hugging Face PRO account, even on the free CPU hardware.
+- an Artifact Registry repository for the image (`app/Dockerfile`, which is a plain container for any host);
+- the Cloud Run service: scales to zero, at most **one** instance, 1 GiB, CPU only during requests, startup CPU
+  boost. One instance because shots, the write lock and the sign-in limits live in memory;
+- Secret Manager secrets for the five app secrets, mounted as environment variables, readable only by the
+  service's own runtime account;
+- Workload Identity Federation, so GitHub Actions on `main` can deploy without a JSON key;
+- the domain mapping for `app.registry.coffee`;
+- a $5 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/healthz` every
+  15 minutes, all emailed to the owner.
+
+`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it pushes
+the image and deploys it, once the variables below are set.
+
+### Owner's steps
+
+Nothing here was created for you. Once, in this order:
+
+1. **Project:** create a GCP project and link a billing account. The free tier still needs billing linked. Then
+   `gcloud auth application-default login`.
+2. **State bucket:** `gcloud storage buckets create gs://<project>-tfstate --location=us-central1`.
+3. **Domain prerequisites** (both before the domain mapping; DNS steps are in `runbook/domain-and-dns.md` from #19):
+   - verify `registry.coffee` as a Domain property in Google Search Console, with the account that runs
+     Terraform as a verified owner;
+   - add a CAA record `0 issue "pki.goog"` next to the existing Let's Encrypt one, or Google's managed certificate
+     can't be issued.
+4. **Apply:**
+
+   ```bash
+   cd infra
+   cp terraform.tfvars.example terraform.tfvars   # project_id, billing_account, owner_email
+   terraform init -backend-config="bucket=<project>-tfstate"
+   terraform apply
+   ```
+
+5. **Secret values:** for each of `HF_TOKEN`, `ANTHROPIC_API_KEY`, `AUTH_PEPPER`, `SESSION_SECRET` and
+   `OWNER_SETUP_CODE`: `printf %s '<value>' | gcloud secrets versions add <NAME> --data-file=-`. Terraform
+   only creates the empty secrets; values never go through it or its state.
+6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
+   `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
+7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
+   certificate follows within about an hour.
+8. Open `https://app.registry.coffee`, create the owner's account with the setup code, then add your grinder and
+   basket in Setup.
 
 ### Secrets
-
-Set these in the Space's settings (Variables and secrets → New secret):
 
 | Secret | What it is |
 |---|---|
@@ -64,26 +102,43 @@ Set these in the Space's settings (Variables and secrets → New secret):
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
 | `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. Optional once the owner exists |
 
-`python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER` and
-`SESSION_SECRET` are set, every page returns 503 and names the missing secrets, never their values.
+`python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER`,
+`SESSION_SECRET` and `HF_TOKEN` are set, every page returns 503 and names the missing secrets, never their values.
 
-Sign-in limits key on the phone's address. On the Space it's taken from the `X-Forwarded-For` entry the Space's
-proxy appends (`COFFEEDATA_PROXY_HOPS=1`, set in the Dockerfile), never from what the client sent; uvicorn runs
-without `--proxy-headers`.
+Sign-in limits key on the phone's address: the `X-Forwarded-For` entry Cloud Run's front end appends
+(`COFFEEDATA_PROXY_HOPS=1`, set in the Dockerfile), never what the client sent. Uvicorn runs without
+`--proxy-headers`.
 
-The dataset locations are set in the Dockerfile and can be overridden as Space variables:
+The dataset locations are set in the Dockerfile:
 
 - `COFFEEDATA_LAKE`: `hf://datasets/jtouley/coffee-data`
 - `COFFEEDATA_USERS`: `hf://datasets/jtouley/coffee-data-users`
 - `COFFEEDATA_PHOTOS`: `hf://datasets/jtouley/coffee-data-photos`
 
-Open the app at its own address, `https://<owner>-<space>.hf.space`, not inside the Hugging Face page. The app
-refuses to be framed, and its cookie isn't sent inside another site's frame.
-
 ### Starting up
 
-The Space loads shots from the weekly `marts/fct_shot.parquet` export, then reads only the shot files written after
-it: one directory listing instead of one request per shot file. Without an export it reads every shot file.
+The app loads shots from the weekly `marts/fct_shot.parquet` export, then reads the shot files written from a day
+before it: one directory listing instead of one request per shot file. Without an export, or if the listing fails,
+it reads every shot file.
+
+### Debugging
+
+Logs are JSON lines with `severity` and a trace id, so each request's lines group together in the Logs Explorer.
+Each request writes one access line with the method, the route template (`/shot/{shot_id}`, never the ids),
+status, `latency_ms` and `user_id`. Saves log the table, the id and how long publishing took. Headers, bodies,
+query strings and tokens are never logged.
+
+```bash
+S='resource.type="cloud_run_revision" AND resource.labels.service_name="registry-coffee"'
+gcloud logging read "$S" --freshness=1h --limit=50                                   # the last hour
+gcloud logging read "$S AND severity>=ERROR" --freshness=1d                          # errors, with stack traces
+gcloud logging read "$S AND jsonPayload.user_id=\"<user_id>\"" --freshness=1d        # one person's requests
+gcloud logging read "$S AND trace=\"projects/<project>/traces/<trace_id>\""          # every line of one request
+gcloud logging read "$S AND jsonPayload.message=\"saved\"" --freshness=1d            # writes and publish times
+```
+
+A request's trace id is on its access line (`logging.googleapis.com/trace`). Errors also appear in Error
+Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines.
 
 ## Using it on the phone
 
