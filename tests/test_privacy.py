@@ -61,10 +61,8 @@ def test_passwords_are_stored_only_as_a_hash(owner, accounts):  # noqa: F811
     assert PW not in stored and "$argon2id$" in stored
 
 
-def test_the_app_uses_four_cookies(app, owner):  # noqa: F811
-    # The server sets one cookie, the session. The page script sets three: theme and handedness (from Setup) and
-    # the time zone, so times show in the phone's own. (The policy lists the first three; the time zone is the
-    # fourth.)
+def test_the_app_uses_exactly_the_four_cookies_the_policy_lists(app, owner):  # noqa: F811
+    # The server sets the session cookie; the page script sets theme, hand and tz.
     names = set()
     c = client(app)
     for r in (
@@ -74,11 +72,13 @@ def test_the_app_uses_four_cookies(app, owner):  # noqa: F811
         c.post("/api/signout", json={}, headers=W),
     ):
         names |= {h.split("=", 1)[0] for h in r.headers.get_list("set-cookie")}
-    assert names == {"session"}
     js = (ROOT / "app/static/app.js").read_text()
-    assert set(re.findall(r"document\.cookie = `(\w+)=", js)) == {"tz"}
-    assert set(re.findall(r'preference\(\w+, "(\w+)"', js)) == {"theme", "hand"}
     assert js.count("document.cookie =") == 2  # tz, and the one in preference()
+    names |= set(re.findall(r"document\.cookie = `(\w+)=", js))
+    names |= set(re.findall(r'preference\(\w+, "(\w+)"', js))
+    assert names == {"session", "theme", "hand", "tz"}
+    policy = (ROOT / "src/coffeedata/templates/privacy.html").read_text()
+    assert set(re.findall(r"<li><code>(\w+)</code>", policy)) == names
 
 
 def test_anthropic_receives_only_the_photo_and_the_fixed_prompt():
