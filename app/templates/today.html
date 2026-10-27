@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% from "_macros.html" import synced, taste, nav %}
+{% block main %}
+  {% set last = shots[-1] if shots else None %}
+  <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span>{{ synced() }}</div>
+  <section class="mt8">
+    <div class="label">{{ "On the grinder" if p.bag else "Last coffee" }}</div>
+    <div class="serif name mt4">{{ name }}</div>
+    <div class="meta mt4">{{ facts }}</div>
+    {% if p.bag %}<div class="meta mt4">{% if p.bag.roast_date %}Roasted {{ p.bag.roast_date.strftime("%b ") ~ p.bag.roast_date.day }} · day {{ days_off }} · {% endif %}{{ shots_n(shots | length) }}</div>{% endif %}
+  </section>
+  {% if last %}
+  <section class="mt24 ruled">
+    <div class="row"><span class="label">Last shot, {{ clock(last.brewed_at) }}</span>{{ taste(last.taste) }}</div>
+    <div class="row end mt8">
+      <span class="num n44">{{ g(last.dose_g, 1) }} → {{ g(last.yield_g, 1) }}<span class="u"> g</span></span><span class="num n44">{{ g(last.time_s) }}<span class="u"> s</span></span>
+    </div>
+    {% set gr = grinder_of(last) %}
+    <div class="meta mt8">Grind {{ g(last.grinder_setting) }}{% if gr %} on {{ gr.name }}{% endif %} · 1:{{ "%.2f" | format(ratio(last)) }} · rated {{ last.rating }}</div>
+    <div class="mt16">{{ target | safe }}</div>
+    <p class="serif advice mt12">{{ summary }}</p>
+  </section>
+  {% if earlier %}
+  <div class="section">Earlier with this {{ "bag" if p.bag else "coffee" }}</div>
+  <div class="list">
+    {% for s in earlier %}<div class="item"><span class="t">{{ day(s.brewed_at) }}</span><span class="num n20 grow">{{ g(s.time_s) }}<span class="u"> s</span> · 1:{{ "%.2f" | format(ratio(s)) }}</span>{{ taste(s.taste) }}</div>{% endfor %}
+  </div>
+  {% endif %}
+  {% else %}
+  <p class="body mt24 ruled">No shots of this bag yet.</p>
+  {% endif %}
+  <div class="spacer"></div>
+  <div class="dock">
+    <a class="btn primary" href="/log">{% if p.last %}Pull again <span class="sub">{{ g(p.dose_g, 1) }} → {{ g(p.yield_g, 1) }} g · grind {{ g(p.grinder_setting) }}</span>{% else %}Log a shot{% endif %}</a>
+    <a class="btn text" href="/bag/new">New bag</a>
+  </div>
+{% endblock %}
+{% block nav %}{{ nav('today') }}{% endblock %}

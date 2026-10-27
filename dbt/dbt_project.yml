@@ -16,6 +16,8 @@ vars:
   config_dir: "config"
   # Failed weekly runs in a row before a roaster is unreachable. The weekly run passes registry.MAX_FAILURES.
   max_failures: 3
+  # Who owns shots logged before accounts existed (their user_id is null). The build passes the real id.
+  owner_user_id: "owner"
 
 models:
   coffeedata:

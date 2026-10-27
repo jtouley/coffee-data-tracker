@@ -33,6 +33,25 @@ models:
       - name: rating
         data_tests:
           - accepted_values: {arguments: {values: [1, 2, 3, 4, 5], quote: false}}
+      - name: user_id
+        data_tests: [not_null]
+      - name: grinder_id
+        data_tests:
+          - relationships:
+              arguments: {to: ref('dim_equipment'), field: equipment_id}
+              config: {severity: warn}
+  - name: dim_equipment
+    description: Current grinders, machines and baskets per user; retired ones are kept so old shots resolve.
+    columns:
+      - name: equipment_id
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - accepted_values: {arguments: {values: [grinder, machine, basket]}}
+  - name: stg_bags
+    columns:
+      - name: bag_id
+        data_tests: [unique, not_null]
   - name: fct_price_event
     columns:
       - name: coffee_id

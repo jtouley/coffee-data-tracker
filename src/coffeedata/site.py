@@ -1,5 +1,6 @@
 """Static site rendered from the dbt models in DuckDB: a launch page at the root (registry.coffee) that links out
-to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo."""
+to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
+private and never appear here; they are only in the app."""
 
 from __future__ import annotations
 
@@ -41,36 +42,6 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
             "</g>"
         )
     out.append(f'<line class="axis" x1="{left}" x2="{left}" y1="0" y2="{height}"/></svg>')
-    return "".join(out)
-
-
-def scatter_chart(points: list[tuple[float, float, str]], width: int = 460, height: int = 240) -> str:
-    """Brew ratio (x) vs rating (y)."""
-    if len(points) < 2:
-        return '<p class="empty">Log a few shots to see how ratio relates to your ratings.</p>'
-    left, bottom, top, right = 40, 32, 12, 16
-    xs = [p[0] for p in points]
-    x0, x1 = min(1.0, min(xs)), max(3.5, max(xs))
-    sx = lambda x: left + (x - x0) / (x1 - x0) * (width - left - right)  # noqa: E731
-    sy = lambda y: top + (5.5 - y) / 5 * (height - top - bottom)  # noqa: E731
-    out = [f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-label="Rating by brew ratio">']
-    for r in range(1, 6):
-        out.append(
-            f'<line class="grid" x1="{left}" x2="{width - right}" y1="{sy(r):.1f}" y2="{sy(r):.1f}"/>'
-            f'<text class="tick" x="{left - 8}" y="{sy(r):.1f}" text-anchor="end" dominant-baseline="central">{r}</text>'
-        )
-    t = x0
-    while t <= x1 + 1e-9:
-        out.append(
-            f'<text class="tick" x="{sx(t):.1f}" y="{height - 10}" text-anchor="middle">1:{t:.1f}</text>'
-        )
-        t += 0.5
-    for x, y, tip in points:
-        out.append(
-            f'<g class="mark" tabindex="0" data-tip="{escape(tip)}"><circle class="hit" cx="{sx(x):.1f}" '
-            f'cy="{sy(y):.1f}" r="12"/><circle class="dot" cx="{sx(x):.1f}" cy="{sy(y):.1f}" r="5"/></g>'
-        )
-    out.append("</svg>")
     return "".join(out)
 
 
@@ -169,12 +140,6 @@ def build(db: Path, out: Path) -> Path:
         from dim_coffee where in_stock and not is_blend group by 1 order by n desc""",
     )
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
-    shots = _q(
-        con,
-        """
-        select brew_ratio, rating, coalesce(coffee_title, coffee_freetext, '?') as coffee, time_s, brewed_at
-        from fct_shot order by brewed_at desc""",
-    )
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
     new = _q(con, "select * from mart_new_arrivals limit 25")
     totals = _q(
@@ -234,17 +199,6 @@ def build(db: Path, out: Path) -> Path:
             "{:,.0f}",
             "Coffees in stock by process",
         ),
-        "shots": scatter_chart(
-            [
-                (
-                    r["brew_ratio"],
-                    r["rating"],
-                    f"{r['coffee']}: 1:{r['brew_ratio']:.1f}, {r['time_s']:g} s, rated {r['rating']}/5",
-                )
-                for r in shots
-                if r["brew_ratio"]
-            ]
-        ),
         "origins": hbar_chart(
             [
                 (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']} coffees in stock")
@@ -284,7 +238,6 @@ def build(db: Path, out: Path) -> Path:
         totals=totals,
         charts=charts,
         new=new,
-        shots=shots[:15],
         coverage=coverage,
         origin_price=origin_price,
         processes=processes,

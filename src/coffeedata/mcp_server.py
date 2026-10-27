@@ -29,10 +29,12 @@ def log_shot(
     notes: str | None = None,
     water_temp_c: float | None = None,
     roast_date: str | None = None,
+    grinder_name: str | None = None,
 ) -> str:
     """Log an espresso shot. `coffee` is free text ("Onyx Geometry") or a coffee_id ("onyxcoffeelab.com:123");
-    taste is sour, balanced or bitter. Returns the matched catalog coffee and advice for the next shot."""
-    payload = {k: v for k, v in locals().items() if v is not None}
+    taste is sour, balanced or bitter; grinder_name is a grinder from the app's Setup ("DF64 V2"). Returns the
+    matched catalog coffee and advice for the next shot."""
+    payload = {k: v for k, v in locals().items() if v is not None} | {"source": "mcp"}
     is_id = ":" in coffee and " " not in coffee
     payload["coffee_id" if is_id else "coffee_freetext"] = payload.pop("coffee")
     lake = Lake()
@@ -108,8 +110,8 @@ def check_sql(sql: str) -> str:
 
 @mcp.tool()
 def run_sql(sql: str, max_rows: int = 200) -> dict:
-    """Read-only SQL over the dbt models in DuckDB: dim_roaster, dim_coffee, fct_price_event, fct_shot,
-    mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh."""
+    """Read-only SQL over the dbt models in DuckDB: dim_roaster, dim_coffee, dim_equipment, fct_price_event,
+    fct_shot, mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh."""
     import duckdb
 
     stmt = check_sql(sql)

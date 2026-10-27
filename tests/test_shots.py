@@ -280,3 +280,55 @@ def test_balanced_but_slow_shot_is_not_called_fine(lake):
     )
     advice = shots.suggest_next("o:1", lake)
     assert "45 s" in advice and "Timing is fine" not in advice and "window. Keep" not in advice
+
+
+def test_grinder_by_name(lake):
+    from datetime import UTC, datetime
+
+    now = datetime(2026, 10, 27, tzinfo=UTC)
+    lake.write(
+        "equipment",
+        "equipment/g1__20261027T000000.parquet",
+        [
+            {
+                "equipment_id": "g1",
+                "logged_at": now,
+                "kind": "grinder",
+                "name": "DF64 V2",
+                "scale_min": 0.0,
+                "scale_max": 90.0,
+                "scale_step": 0.5,
+            }
+        ],
+    )
+    shot, _ = shots.log_shot(
+        {
+            "coffee_id": "o:1",
+            "dose": 18,
+            "yield": 36,
+            "time": 28,
+            "grind": 10,
+            "rating": 3,
+            "grinder_name": "df64 v2",
+        },
+        lake,
+    )
+    assert shot.grinder_id == "g1"
+    with pytest.raises(ValueError, match="known: DF64 V2"):
+        shots.log_shot(
+            {
+                "coffee_id": "o:1",
+                "dose": 18,
+                "yield": 36,
+                "time": 28,
+                "grind": 10,
+                "rating": 3,
+                "grinder_name": "EK43",
+            },
+            lake,
+        )
+
+
+def test_issue_form_grinder_field():
+    body = ISSUE.replace("### Dose (g)", "### Grinder\n\nDF64 V2\n\n### Dose (g)")
+    assert shots.parse_issue_body(body)["grinder_name"] == "DF64 V2"

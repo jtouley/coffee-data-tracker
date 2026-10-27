@@ -9,7 +9,13 @@ Every pipeline step *adds* files and never rewrites another run's files:
     registry/source=<s>/<key>.parquet                     roasters added by discovery or by hand
     enrichments/method=<m>/run_date=.../batch=<id>.parquet extracted attributes, keyed by body_hash
     llm_batches/state=<submitted|collected>/<id>.parquet  Claude Message Batches bookkeeping
-    shots/shot_id=<uuid>.parquet                          one file per logged shot (or correction)
+    shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
+    equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
+    bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+
+Bag photos go to their own private dataset (`Lake.photos()`), one photo per file:
+
+    photos/<photo_id>.parquet                             the image, in Hugging Face's Image layout
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -20,9 +26,11 @@ checkpoint (each ingest chunk and each weekly step).
 
 from __future__ import annotations
 
+import json
 import logging
 import os
 import secrets
+import threading
 import time
 from datetime import UTC, datetime
 from pathlib import Path
@@ -43,6 +51,19 @@ VARIANT = pa.struct(
         ("available", pa.bool_()),
     ]
 )
+
+# Hugging Face's Image feature: the dataset viewer shows a thumbnail for a struct of bytes and path.
+IMAGE = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
+
+
+def hf_features(schema: pa.Schema) -> str:
+    """The `huggingface` Parquet metadata that tells the dataset viewer which column is an image."""
+    feats = {
+        f.name: {"_type": "Image"} if f.type == IMAGE else {"dtype": str(f.type), "_type": "Value"}
+        for f in schema
+    }
+    return json.dumps({"info": {"features": feats}})
+
 
 SCHEMAS: dict[str, pa.Schema] = {
     "snapshots": pa.schema(
@@ -159,9 +180,68 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("taste", pa.string()),
             ("is_milk_drink", pa.bool_()),
             ("notes", pa.string()),
+            # Added with the app. Old shot files don't have these; they read back as null.
+            ("user_id", pa.string()),
+            ("grinder_id", pa.string()),
+            ("machine_id", pa.string()),
+            ("basket_id", pa.string()),
+            ("bag_id", pa.string()),
+            ("source", pa.string()),
+        ]
+    ),
+    "equipment": pa.schema(
+        [
+            ("equipment_id", pa.string()),
+            ("user_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("kind", pa.string()),
+            ("name", pa.string()),
+            ("model", pa.string()),
+            ("scale_min", pa.float64()),
+            ("scale_max", pa.float64()),
+            ("scale_step", pa.float64()),
+            ("finer_is_lower", pa.bool_()),
+            ("basket_dose_g", pa.float64()),
+            ("is_default", pa.bool_()),
+            ("retired", pa.bool_()),
+            ("notes", pa.string()),
+        ]
+    ),
+    "bags": pa.schema(
+        [
+            ("bag_id", pa.string()),
+            ("user_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("coffee_id", pa.string()),
+            ("coffee_freetext", pa.string()),
+            ("roast_date", pa.date32()),
+            ("opened_on", pa.date32()),
+            ("finished_on", pa.date32()),
+            ("weight_g", pa.int32()),
+            ("photo_id", pa.string()),
+            ("read_json", pa.string()),
+            ("match_score", pa.int32()),
+            ("deleted", pa.bool_()),
+        ]
+    ),
+    "photos": pa.schema(
+        [
+            ("photo_id", pa.string()),
+            ("user_id", pa.string()),
+            ("taken_at", pa.timestamp("s", tz="UTC")),
+            ("image", IMAGE),
+            ("media_type", pa.string()),
+            ("width", pa.int32()),
+            ("height", pa.int32()),
+            ("bytes", pa.int32()),
+            ("sha256", pa.string()),
         ]
     ),
 }
+SCHEMAS["photos"] = SCHEMAS["photos"].with_metadata({"huggingface": hf_features(SCHEMAS["photos"])})
+
+# Tables that live in the photo dataset rather than the main lake.
+PHOTO_TABLES = ("photos",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -173,6 +253,9 @@ GLOBS = {
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "shots": "shots/*.parquet",
+    "equipment": "equipment/*.parquet",
+    "bags": "bags/*.parquet",
+    "photos": "photos/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -183,8 +266,14 @@ SCHEMA_FILES = {
     "registry": "registry/source=schema/schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
-    "shots": "shots/shot_id=schema.parquet",
+    # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
+    # only old shot files still has every column.
+    "shots": "shots/shot_id=schema-v2.parquet",
+    "equipment": "equipment/equipment_id=schema.parquet",
+    "bags": "bags/bag_id=schema.parquet",
+    "photos": "photos/photo_id=schema.parquet",
 }
+LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES)
 
 
 def new_batch_id(now: datetime | None = None) -> str:
@@ -194,21 +283,32 @@ def new_batch_id(now: datetime | None = None) -> str:
 
 
 class Lake:
-    def __init__(self, url: str | None = None, staging: str | Path | None = None):
+    def __init__(
+        self, url: str | None = None, staging: str | Path | None = None, tables: tuple[str, ...] | None = None
+    ):
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
+        self.tables = tables or LAKE_TABLES
         self.remote = self.url.startswith("hf://")
         self.root = (
             Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
             if self.remote
             else Path(self.url)
         )
+        self._publishing = threading.Lock()
+        self._schemas_checked = False
         self.ensure_schemas()
+
+    @classmethod
+    def photos(cls) -> Lake:
+        """The private photo dataset: COFFEEDATA_PHOTOS, or ./lake-photos."""
+        url = os.environ.get("COFFEEDATA_PHOTOS") or "lake-photos"
+        return cls(url, staging="build/photos-staging", tables=PHOTO_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 
     def ensure_schemas(self) -> None:
-        for table, rel in SCHEMA_FILES.items():
-            p = self.root / rel
+        for table in self.tables:
+            p = self.root / SCHEMA_FILES[table]
             if not p.exists():
                 p.parent.mkdir(parents=True, exist_ok=True)
                 pq.write_table(SCHEMAS[table].empty_table(), p)
@@ -250,6 +350,22 @@ class Lake:
         files = ", ".join(f"'{s}'" for s in self.sources(table))
         return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
 
+    def latest(self, table: str, key: str) -> list[dict]:
+        """The latest record per key (by logged_at): corrections are new records, so this is current state.
+
+        A remote lake made before a table existed has no file for it until the next publish adds the schema
+        file; until then the table is read from staging alone rather than failing."""
+        sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
+        try:
+            cur = self.connect().execute(sql.format(self.scan(table), key, key))
+        except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
+            if not (self.remote and "No files found" in str(e)):
+                raise
+            local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
+            cur = self.connect().execute(sql.format(local, key, key))
+        cols = [d[0] for d in cur.description]
+        return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
     def mart_sources(self, name: str) -> list[str]:
         """The weekly derived export of a dbt mart (marts/<name>.parquet), local first."""
         local = self.root / "marts" / f"{name}.parquet"
@@ -287,15 +403,24 @@ class Lake:
         id unique to the run that wrote them, so one that's already there is this run's own upload, from a
         commit whose response was lost or a process that died before clearing staging, and it's skipped.
         Retries use exponential backoff (2, 4, 8, 16 s). If every attempt fails, the staged files stay on disk
-        and the next publish sends them. Schema files are only sent when `schemas` is set (by `init`).
+        and the next publish sends them.
+
+        A table's zero-row schema file is sent when the dataset doesn't have it yet (a table added after the lake
+        was created), so a glob over that table resolves; this is checked once per process, or every time with
+        `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
         if not self.remote:
             return 0
-        schema_paths = set(SCHEMA_FILES.values())
+        with self._publishing:
+            return self._publish(message, attempts, schemas)
+
+    def _publish(self, message: str, attempts: int, schemas: bool) -> int:
+        schema_paths = {SCHEMA_FILES[t] for t in self.tables}
+        check_schemas = schemas or not self._schemas_checked
         files = [
             p
             for p in self.staged_files()
-            if schemas or p.relative_to(self.root).as_posix() not in schema_paths
+            if check_schemas or p.relative_to(self.root).as_posix() not in schema_paths
         ]
         if not files:
             return 0  # nothing new: no API calls
@@ -327,6 +452,7 @@ class Lake:
                     raise
                 log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
                 time.sleep(2 ** (attempt + 1))
+        self._schemas_checked = True
         for p, rel in zip(files, rels, strict=True):
             if rel not in schema_paths:
                 p.unlink()

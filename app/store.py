@@ -1,0 +1,285 @@
+"""Each user's shots, bags and equipment, in memory: loaded from the lake at start and updated on every write.
+
+Every write is one new lake file through `Lake.write`, published with `Lake.publish` before it is acknowledged.
+Ids come from the phone, so a retried request carries the same id: an identical copy of what's already stored is
+acknowledged without writing; anything else is a correction (a new record, latest wins).
+"""
+
+from __future__ import annotations
+
+import logging
+import threading
+import time
+from dataclasses import dataclass
+from datetime import UTC, date, datetime, timedelta
+from typing import Any
+
+from pydantic import BaseModel, ValidationError
+
+from coffeedata import shots
+from coffeedata.lake import Lake
+from coffeedata.models import Bag, Equipment, Shot
+
+log = logging.getLogger(__name__)
+
+
+MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+
+
+class NotFound(KeyError):
+    """Missing, or someone else's: the two look the same from outside."""
+
+
+class Invalid(ValueError):
+    """A request that can't be applied, with a message to show."""
+
+
+@dataclass
+class Rec:
+    item: Any  # Shot, Bag or Equipment
+    logged_at: datetime
+    deleted: bool = False
+
+
+def _model[M: BaseModel](cls: type[M], row: dict) -> M:
+    return cls(**{k: v for k, v in row.items() if k in cls.model_fields and v is not None})
+
+
+def coffee_key(x: Shot | Bag) -> str:
+    """Same grouping as mart_dial_in: the catalog coffee, else the typed name."""
+    return x.coffee_id or f"freetext:{(x.coffee_freetext or '').strip().lower()}"
+
+
+class Store:
+    def __init__(self, lake: Lake, owner_id: str):
+        self.lake, self.owner_id = lake, owner_id
+        self.lock = threading.Lock()
+        self.shots: dict[str, Rec] = {}
+        self.bags: dict[str, Rec] = {}
+        self.equipment: dict[str, Rec] = {}
+        self._coffees: dict[str, tuple[dict | None, float]] = {}
+        self._staged: dict[str, datetime] = {}
+        for table, key, cls, into in (
+            ("shots", "shot_id", Shot, self.shots),
+            ("bags", "bag_id", Bag, self.bags),
+            ("equipment", "equipment_id", Equipment, self.equipment),
+        ):
+            for row in lake.latest(table, key):
+                row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
+                try:
+                    into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
+                except ValidationError as e:
+                    log.warning("skipping %s %s: %s", table, row[key], e)
+
+    # --- reads ---------------------------------------------------------------------------------------
+
+    def _mine(self, recs: dict[str, Rec], user_id: str) -> list[Rec]:
+        # list() copies the values in one step, so a write from another request thread can't change the dict
+        # while this iterates.
+        return [r for r in list(recs.values()) if r.item.user_id == user_id and not r.deleted]
+
+    def shots_of(self, user_id: str) -> list[Shot]:
+        return sorted((r.item for r in self._mine(self.shots, user_id)), key=lambda s: s.brewed_at)
+
+    def shot(self, user_id: str, shot_id: str) -> Shot:
+        r = self.shots.get(shot_id)
+        if not r or r.item.user_id != user_id or r.deleted:
+            raise NotFound(shot_id)
+        return r.item
+
+    def equipment_of(self, user_id: str, kind: str) -> list[Equipment]:
+        """Current equipment of a kind, default first, then newest."""
+        recs = [r for r in self._mine(self.equipment, user_id) if r.item.kind == kind and not r.item.retired]
+        return [r.item for r in sorted(recs, key=lambda r: (r.item.is_default, r.logged_at), reverse=True)]
+
+    def gear(self, user_id: str, equipment_id: str | None) -> Equipment | None:
+        r = self.equipment.get(equipment_id or "")
+        return r.item if r and r.item.user_id == user_id else None
+
+    def current_bag(self, user_id: str) -> Bag | None:
+        open_ = [r for r in self._mine(self.bags, user_id) if not r.item.finished_on]
+        return sorted(open_, key=lambda r: r.logged_at)[-1].item if open_ else None  # ties: the last written
+
+    def bag(self, user_id: str, bag_id: str | None) -> Bag | None:
+        r = self.bags.get(bag_id or "")
+        return r.item if r and r.item.user_id == user_id else None
+
+    def coffee(self, coffee_id: str | None) -> dict | None:
+        """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
+        if not coffee_id:
+            return None
+        hit = self._coffees.get(coffee_id)
+        if hit and (hit[0] is not None or time.monotonic() - hit[1] < MISS_TTL):
+            return hit[0]
+        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
+        try:
+            cur = self.lake.connect().execute(
+                f"select title, roaster_name, origin_country, process from read_parquet([{src}]) "
+                "where coffee_id = ?",
+                [coffee_id],
+            )
+            row = cur.fetchone()
+            found = dict(zip([d[0] for d in cur.description], row, strict=True)) if row else None
+        except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
+            log.info("no catalog facts for %s: %s", coffee_id, e)
+            return None  # not cached: try again next time
+        # A coffee not in this week's export is asked again after MISS_TTL, not never.
+        self._coffees[coffee_id] = (found, time.monotonic())
+        return found
+
+    def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
+        """The shots shown together: this bag's, or with no bag, the last shot's coffee."""
+        mine = self.shots_of(user_id)
+        if bag:
+            return [s for s in mine if s.bag_id == bag.bag_id]
+        return [s for s in mine if last and coffee_key(s) == coffee_key(last)]
+
+    def prefill(self, user_id: str) -> dict:
+        """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
+        Time, taste and rating are never copied; the last ones are offered, not filled in."""
+        bag = self.current_bag(user_id)
+        mine = self.shots_of(user_id)
+        last = None
+        if bag:
+            same = [s for s in mine if s.bag_id == bag.bag_id] or [
+                s for s in mine if coffee_key(s) == coffee_key(bag)
+            ]
+            last = same[-1] if same else None
+        elif mine:
+            last = mine[-1]
+        grinder = self.gear(user_id, last.grinder_id if last else None)
+        grinders = self.equipment_of(user_id, "grinder")
+        if not grinder or grinder.retired:
+            grinder = grinders[0] if grinders else None
+        baskets = self.equipment_of(user_id, "basket")
+        basket = self.gear(user_id, last.basket_id if last else None)
+        if not basket or basket.retired:  # like the grinder: a retired basket isn't offered again
+            basket = baskets[0] if baskets else None
+        dose = last.dose_g if last else (basket.basket_dose_g if basket and basket.basket_dose_g else None)
+        grind = None
+        if last and (not last.grinder_id or not grinder or last.grinder_id == grinder.equipment_id):
+            grind = last.grinder_setting
+        elif grinder and grinder.scale_min is not None and grinder.scale_max is not None:
+            # No shot on this grinder yet: the middle of the dial, a starting point to move from, not advice.
+            step = grinder.scale_step or 1
+            grind = grinder.scale_min + round((grinder.scale_max - grinder.scale_min) / 2 / step) * step
+        return {
+            "bag": bag,
+            "last": last,
+            "grinder": grinder,
+            "basket": basket,
+            "coffee_id": bag.coffee_id if bag else last.coffee_id if last else None,
+            "coffee_freetext": bag.coffee_freetext if bag else last.coffee_freetext if last else None,
+            "dose_g": dose,
+            "yield_g": last.yield_g if last else (round(dose * 2, 1) if dose else None),
+            "grinder_setting": grind,
+            "water_temp_c": last.water_temp_c if last else None,
+            "brew_method": last.brew_method if last else "espresso",
+            "is_milk_drink": bool(last and last.is_milk_drink),
+            "last_time_s": last.time_s if last else None,
+            "same_as_last": {"taste": last.taste, "rating": last.rating} if last else None,
+        }
+
+    # --- writes --------------------------------------------------------------------------------------
+
+    def _commit(self, recs: dict[str, Rec], key: str, item: Any, table: str, deleted: bool = False) -> Rec:
+        """One lake file for one record, published before returning; the cache changes only after that.
+
+        The lock covers staging the file, which fixes its logged_at, not the upload, so a slow commit to Hugging
+        Face doesn't hold up everyone else's writes. Lake.publish runs one upload at a time and sends whatever is
+        staged, so a request's file may go up in another request's commit."""
+        with self.lock:
+            prev = recs.get(key)
+            after = max((t for t in (prev and prev.logged_at, self._staged.get(key)) if t), default=None)
+            if table == "shots":
+                at = shots.record(item, self.lake, deleted, after=after)
+            else:
+                at = datetime.now(UTC).replace(microsecond=0)
+                if after and at <= after:
+                    at = after + timedelta(seconds=1)
+                row = item.model_dump() | {"logged_at": at, "deleted": deleted}
+                self.lake.write(table, f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet", [row])
+            self._staged[key] = at  # the next record for this key sorts after this one, published or not
+        self.lake.publish(f"app: {table} {key}")
+        rec = Rec(item, at, deleted)
+        with self.lock:
+            current = recs.get(key)
+            if current is None or current.logged_at <= at:  # a later record may have landed meanwhile
+                recs[key] = rec
+        return rec
+
+    def _owned(self, recs: dict[str, Rec], key: str, user_id: str) -> Rec | None:
+        prev = recs.get(key)
+        if prev and prev.item.user_id != user_id:
+            raise NotFound(key)
+        return prev
+
+    def save_shot(self, user_id: str, data: dict) -> tuple[Shot, bool]:
+        """Record a shot from the app. Returns the shot and whether a new record was written."""
+        data = {k: v for k, v in data.items() if k not in ("user_id", "source")}
+        shot = Shot(**data, user_id=user_id, source="app")
+        shot = shot.model_copy(update={"brewed_at": shot.brewed_at.astimezone(UTC).replace(microsecond=0)})
+        for ref, table in (
+            (shot.grinder_id, self.equipment),
+            (shot.basket_id, self.equipment),
+            (shot.bag_id, self.bags),
+        ):
+            if ref and self._owned(table, ref, user_id) is None:
+                raise NotFound(ref)
+        grinder = self.gear(user_id, shot.grinder_id)
+        lo, hi = (grinder.scale_min, grinder.scale_max) if grinder else (None, None)
+        if lo is not None and hi is not None and not lo <= shot.grinder_setting <= hi:
+            raise Invalid(
+                f"Grind {shot.grinder_setting:g} is outside {grinder.name if grinder else 'the grinder'}'s dial "
+                f"({lo:g} to {hi:g})."
+            )
+        bag = self.bag(user_id, shot.bag_id)
+        if bag and not shot.coffee_id and not shot.coffee_freetext:  # the bag says which coffee it is
+            shot = shot.model_copy(
+                update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
+            )
+        prev = self._owned(self.shots, shot.shot_id, user_id)
+        if prev and prev.item == shot:
+            # A retry of a write that already landed, including one that arrives after Undo: a late resend
+            # must not bring a retracted shot back.
+            return shot, False
+        self._commit(self.shots, shot.shot_id, shot, "shots")
+        return shot, True
+
+    def retract_shot(self, user_id: str, shot_id: str) -> bool:
+        """Undo: a retraction record (deleted = true), never a delete. Retracting twice writes once."""
+        prev = self._owned(self.shots, shot_id, user_id)
+        if prev is None:
+            raise NotFound(shot_id)
+        if prev.deleted:
+            return False
+        self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
+        return True
+
+    def save_equipment(self, user_id: str, data: dict) -> Equipment:
+        item = Equipment(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
+        prev = self._owned(self.equipment, item.equipment_id, user_id)
+        if not (prev and prev.item == item):
+            self._commit(self.equipment, item.equipment_id, item, "equipment")
+        return item
+
+    def save_bag(self, user_id: str, data: dict) -> tuple[Bag, list[dict]]:
+        """A bag typed by hand: matched to the catalog the same way a typed shot is."""
+        bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
+        prev = self._owned(self.bags, bag.bag_id, user_id)
+        same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
+        if prev and same_text and not bag.coffee_id:
+            # A resend or an edit of something else keeps the match; changed text is matched again below.
+            bag = bag.model_copy(
+                update={"coffee_id": prev.item.coffee_id, "match_score": prev.item.match_score}
+            )
+        matches: list[dict] = []
+        if not bag.coffee_id and bag.coffee_freetext:
+            coffee_id, matches = shots.match_coffee(bag.coffee_freetext, self.lake)
+            score = matches[0]["score"] if coffee_id else None
+            bag = bag.model_copy(update={"coffee_id": coffee_id, "match_score": score})
+        opened = bag.opened_on or (prev.item.opened_on if prev else None) or date.today()
+        bag = bag.model_copy(update={"opened_on": opened})
+        if not (prev and prev.item == bag):
+            self._commit(self.bags, bag.bag_id, bag, "bags")
+        return bag, matches

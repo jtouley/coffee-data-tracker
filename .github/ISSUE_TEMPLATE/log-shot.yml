@@ -12,6 +12,9 @@ body:
     attributes: {label: Grind setting}
     validations: {required: true}
   - type: input
+    id: grinder
+    attributes: {label: Grinder, description: "A grinder from the app's Setup, by name, e.g. DF64 V2. Optional."}
+  - type: input
     id: dose
     attributes: {label: Dose (g), placeholder: "18"}
     validations: {required: true}

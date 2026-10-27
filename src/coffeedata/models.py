@@ -82,6 +82,14 @@ class Enrichment(BaseModel):
 
 
 Taste = Literal["sour", "balanced", "bitter"]
+_ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}")
+
+
+def _safe_id(v: str) -> str:
+    # Used in a lake file name: anything but a plain id could escape its table (e.g. "../../x").
+    if not _ID.fullmatch(v):
+        raise ValueError("ids must be 1-64 letters, digits, '-' or '_'")
+    return v
 
 
 class Shot(BaseModel):
@@ -90,7 +98,8 @@ class Shot(BaseModel):
     coffee_id: str | None = None
     coffee_freetext: str | None = None
     roast_date: date | None = None
-    grinder_setting: float = Field(ge=0, le=100)
+    # Checked against the grinder's own dial where the grinder is known (the app); this only bounds nonsense.
+    grinder_setting: float = Field(ge=-1000, le=10000)
     dose_g: float = Field(ge=5, le=30)
     yield_g: float = Field(ge=5, le=500)
     time_s: float = Field(ge=1, le=600)
@@ -100,16 +109,17 @@ class Shot(BaseModel):
     taste: Taste | None = None
     is_milk_drink: bool = False
     notes: str | None = Field(default=None, max_length=2000)
+    # Added with the app; all optional, so every older shot stays valid. user_id None means the owner.
+    user_id: str | None = None
+    grinder_id: str | None = None
+    machine_id: str | None = None
+    basket_id: str | None = None
+    bag_id: str | None = None
+    source: Literal["app", "mcp", "issue"] | None = None
 
     model_config = {"extra": "forbid"}
 
-    @field_validator("shot_id")
-    @classmethod
-    def _safe_id(cls, v: str) -> str:
-        # Used in a lake file name: anything but a plain id could escape shots/ (e.g. "../../x").
-        if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}", v):
-            raise ValueError("shot_id must be 1-64 letters, digits, '-' or '_'")
-        return v
+    _id = field_validator("shot_id")(_safe_id)
 
     @field_validator("taste", mode="before")
     @classmethod
@@ -117,6 +127,59 @@ class Shot(BaseModel):
         if isinstance(v, str):
             v = v.strip().lower() or None
         return v
+
+
+class Equipment(BaseModel):
+    """A grinder, machine or basket. Changes are new records; the latest per equipment_id wins."""
+
+    equipment_id: str
+    user_id: str | None = None
+    kind: Literal["grinder", "machine", "basket"]
+    name: str = Field(min_length=1, max_length=80)
+    model: str | None = None
+    scale_min: float | None = None
+    scale_max: float | None = None
+    scale_step: float | None = Field(default=None, gt=0)
+    finer_is_lower: bool | None = None
+    basket_dose_g: float | None = Field(default=None, ge=5, le=30)
+    is_default: bool = False
+    retired: bool = False
+    notes: str | None = Field(default=None, max_length=2000)
+
+    model_config = {"extra": "forbid"}
+
+    _id = field_validator("equipment_id")(_safe_id)
+
+    def model_post_init(self, _ctx: object) -> None:
+        if self.kind == "grinder":
+            if self.scale_min is None or self.scale_max is None or self.scale_step is None:
+                raise ValueError("a grinder needs scale_min, scale_max and scale_step")
+            if self.scale_min >= self.scale_max:
+                raise ValueError("scale_min must be below scale_max")
+            if self.finer_is_lower is None:
+                self.finer_is_lower = True
+        if self.kind == "basket" and self.basket_dose_g is None:
+            raise ValueError("a basket needs basket_dose_g")
+
+
+class Bag(BaseModel):
+    """A bag of coffee being used. Finishing or correcting one is a new record with the same bag_id."""
+
+    bag_id: str
+    user_id: str | None = None
+    coffee_id: str | None = None
+    coffee_freetext: str | None = Field(default=None, max_length=200)
+    roast_date: date | None = None
+    opened_on: date | None = None
+    finished_on: date | None = None
+    weight_g: int | None = None
+    photo_id: str | None = None
+    read_json: str | None = None
+    match_score: int | None = None
+
+    model_config = {"extra": "forbid"}
+
+    _id = field_validator("bag_id")(_safe_id)
 
 
 _GRAMS = [

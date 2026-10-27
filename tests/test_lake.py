@@ -3,12 +3,12 @@ from datetime import date
 
 import pytest
 
-from coffeedata.lake import SCHEMA_FILES, Lake
+from coffeedata.lake import LAKE_TABLES, SCHEMA_FILES, Lake
 
 
 def test_empty_lake_is_queryable(lake):
     con = lake.connect()
-    for table in SCHEMA_FILES:
+    for table in lake.tables:
         assert con.execute(f"select count(*) from {lake.scan(table)}").fetchone()[0] == 0
 
 
@@ -36,7 +36,7 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     remote = {
         "fetches/run_date=2026-10-26/batch=b1.parquet",
         "marts/dim_coffee.parquet",
-        *SCHEMA_FILES.values(),
+        *(SCHEMA_FILES[t] for t in LAKE_TABLES),
     }
     commits = []
 
@@ -65,7 +65,7 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     lake.write_mart("dim_coffee", duckdb.connect(), "select 1 as x")
     assert lake.publish("test") == 2
     assert commits == [["fetches/run_date=2026-11-02/batch=b2.parquet", "marts/dim_coffee.parquet"]]
-    assert lake.staged_files() == sorted(lake.root / p for p in SCHEMA_FILES.values())  # staging cleared
+    assert lake.staged_files() == sorted(lake.root / SCHEMA_FILES[t] for t in LAKE_TABLES)  # staging cleared
 
 
 def test_init_creates_private_dataset_with_card(tmp_path, monkeypatch):
@@ -96,7 +96,7 @@ def test_init_creates_private_dataset_with_card(tmp_path, monkeypatch):
     monkeypatch.setenv("COFFEEDATA_LAKE", "hf://datasets/someone/coffee")
     monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
     cli.main(["init"])
-    assert calls == [("create", "someone/coffee", True), ("card", "README.md"), ("commit", len(SCHEMA_FILES))]
+    assert calls == [("create", "someone/coffee", True), ("card", "README.md"), ("commit", len(LAKE_TABLES))]
 
 
 def test_bad_run_date_is_a_usage_error(capsys):
@@ -140,7 +140,7 @@ def test_publish_retries_and_tolerates_a_commit_that_landed(tmp_path, monkeypatc
     lake.write_partition("fetches", "2026-11-02", "b3", [row])
     assert lake.publish("test") == 0  # the third attempt finds the file already there
     assert len(commits) == 2 and "fetches/run_date=2026-11-02/batch=b3.parquet" in remote
-    assert lake.staged_files() == sorted(lake.root / p for p in SCHEMA_FILES.values())
+    assert lake.staged_files() == sorted(lake.root / SCHEMA_FILES[t] for t in LAKE_TABLES)
 
 
 def test_publish_keeps_staged_files_when_every_attempt_fails(tmp_path, monkeypatch):
@@ -164,3 +164,35 @@ def test_publish_keeps_staged_files_when_every_attempt_fails(tmp_path, monkeypat
     with pytest.raises(ConnectionError):
         lake.publish("test")
     assert lake.root / "fetches/run_date=2026-11-02/batch=b4.parquet" in lake.staged_files()
+
+
+def test_photos_live_in_their_own_dataset_in_hf_image_layout(tmp_path, monkeypatch):
+    import json
+    from datetime import UTC, datetime
+
+    import pyarrow.parquet as pq
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_PHOTOS", str(tmp_path / "photos"))
+    main, photos = Lake(), Lake.photos()
+    assert not (main.root / "photos").exists()  # no photo table in the main lake, ever
+    jpeg = b"\xff\xd8\xff\xe0fake-jpeg\xff\xd9"
+    p = photos.write(
+        "photos",
+        "photos/p1.parquet",
+        [
+            {
+                "photo_id": "p1",
+                "user_id": "owner",
+                "taken_at": datetime(2026, 10, 27, tzinfo=UTC),
+                "image": {"bytes": jpeg, "path": "p1.jpg"},
+                "media_type": "image/jpeg",
+                "bytes": len(jpeg),
+            }
+        ],
+    )
+    assert p is not None
+    t = pq.read_table(p)
+    assert t.column("image")[0].as_py() == {"bytes": jpeg, "path": "p1.jpg"}
+    features = json.loads(t.schema.metadata[b"huggingface"])["info"]["features"]
+    assert features["image"] == {"_type": "Image"} and features["photo_id"]["dtype"] == "string"

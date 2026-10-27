@@ -1,0 +1,4 @@
+{% macro synced() %}<span class="synced" data-sync><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>Synced</span>{% endmacro %}
+{% macro taste(t, rating=None) %}<span class="taste {{ t or 'none' }}">{{ (t or 'no taste') | capitalize }}{% if rating %} · {{ rating }}{% endif %}</span>{% endmacro %}
+{% macro chevron() %}<svg viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.75"/></svg>{% endmacro %}
+{% macro nav(on) %}<nav class="nav"><a class="{{ 'on' if on == 'today' }}" href="/">Today</a><a class="{{ 'on' if on == 'setup' }}" href="/setup">Setup</a></nav>{% endmacro %}
