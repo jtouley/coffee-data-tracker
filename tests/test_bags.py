@@ -266,7 +266,7 @@ def test_without_a_key_the_photo_is_kept_and_the_person_types(catalog, tmp_path,
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     photos_lake = Lake(str(tmp_path / "photos"), tables=("photos",))
     c = TestClient(create_app(catalog, HeaderAuth(), photos_lake=photos_lake))
-    assert "isn’t set up on this server" in c.get("/bag/new").text
+    assert "Photo reading is off" in c.get("/bag/new").text
     assert upload(c).json()["status"] == "no_key"
     assert (photos_lake.root / "photos" / "p1.parquet").exists()
 

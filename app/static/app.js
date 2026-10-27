@@ -307,14 +307,20 @@ function newBag(root) {
   const form = document.getElementById("bag");
   const input = document.getElementById("photo");
   const steps = root.querySelectorAll("[data-step]");
+  const retakeTop = document.querySelector("[data-retake]");
   const step = (name) => {
     for (const s of steps) s.hidden = s.dataset.step !== name;
+    if (retakeTop) retakeTop.hidden = !["match", "pick"].includes(name);
     scrollTo(0, 0);
-    root.querySelector(`[data-step="${name}"] h1, [data-step="${name}"] .title`)?.focus?.();
+    root.querySelector(`[data-step="${name}"] h1`)?.focus({ preventScroll: true }); // screen readers hear the step
   };
   let read = null; // what the label said: carried into the bag, whichever way it's chosen
+  let saving = false;
 
   const save = async (body, where) => {
+    if (saving) return; // a second tap mustn't make a second bag
+    saving = true;
+    for (const b of root.querySelectorAll("button")) b.disabled = true;
     body = { bag_id: uuid(), ...body };
     if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
     if (read?.roast_date && !body.roast_date) body.roast_date = read.roast_date;
@@ -324,6 +330,8 @@ function newBag(root) {
       location.href = "/log";
     } catch (err) {
       hint(where, err instanceof Rejected ? err.message : OFFLINE);
+      saving = false;
+      for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
   };
   const said = () => [read?.label?.roaster, read?.label?.coffee && `“${read.label.coffee}”`].filter(Boolean).join(", ");
@@ -350,33 +358,64 @@ function newBag(root) {
     fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
     root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? null }, root.querySelector('[data-step="match"]'));
     step("match");
+    root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
   };
-  const showPick = () => {
+  const chevron = () => {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 8 14");
+    svg.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M1 1l6 6-6 6");
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "currentColor");
+    path.setAttribute("stroke-width", "1.75");
+    svg.append(path);
+    return svg;
+  };
+  // Candidates: tapping one shows its card to confirm, so a slip of the thumb doesn't save the wrong coffee.
+  const showPick = (fromMatch = false) => {
     const list = root.querySelector("[data-candidates]");
     list.replaceChildren();
-    for (const c of read.candidates || []) {
+    const others = (read.candidates || []).filter((c) => !fromMatch || c.coffee_id !== read.match?.coffee_id);
+    for (const c of others) {
       const b = document.createElement("button");
       b.type = "button";
       b.className = "pickrow";
       const name = document.createElement("span");
+      name.className = "name";
       name.textContent = c.title;
       const meta = document.createElement("span");
       meta.className = "meta";
-      meta.textContent = [c.roaster, c.origin, c.in_stock === false ? "sold out" : ""].filter(Boolean).join(" · ");
+      const sameRoaster = read.label?.roaster && c.roaster?.toLowerCase().includes(read.label.roaster.toLowerCase());
+      meta.textContent = [sameRoaster ? "" : c.roaster, c.origin, c.in_stock == null ? "" : c.in_stock ? "in stock" : "sold out"]
+        .filter(Boolean).join(" · ");
       name.append(meta);
-      b.append(name);
-      b.onclick = () => save({ coffee_id: c.coffee_id, coffee_freetext: c.title, match_score: c.score }, root.querySelector('[data-step="pick"]'));
+      const score = document.createElement("span");
+      score.className = "meta";
+      score.textContent = c.score ? `match ${c.score}` : "";
+      b.append(name, score, chevron());
+      b.onclick = () => showMatch(c);
       list.append(b);
     }
     const when = read.roast_date ? `, roasted ${new Date(`${read.roast_date}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })}` : "";
-    root.querySelector("[data-said]").textContent = read.candidates?.length
-      ? `The bag says ${said()}${when}. None of these is a close match, so pick the right one.`
-      : `The bag says ${said()}${when}, but nothing like it is in the catalog. Type it and it’s saved as written.`;
+    root.querySelector("[data-said]").textContent = fromMatch
+      ? `Other coffees in the catalog that could be it.`
+      : others.length
+        ? `The bag says ${said()}${when}. These are the closest in the catalog.`
+        : `The bag says ${said()}${when}, but nothing like it is in the catalog. Type it and it’s saved as written.`;
+    const none = root.querySelector("[data-none]");
+    none.className = others.length ? "btn text" : "btn primary";
+    none.textContent = others.length ? "None of these: type the coffee" : "Type the coffee";
     step("pick");
   };
-  const failed = (title, body) => {
+  // Retake leads only where a new photo can help; otherwise typing is the one filled button.
+  const failed = (title, body, retake = true) => {
     fill("failed-title", title);
     fill("failed-body", body);
+    const r = root.querySelector("[data-failed-retake]");
+    const t = root.querySelector("[data-failed-type]");
+    r.hidden = !retake;
+    t.className = retake ? "btn text" : "btn primary";
     step("failed");
   };
 
@@ -398,7 +437,7 @@ function newBag(root) {
   const take = () => input?.click();
   for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
   for (const b of root.querySelectorAll("[data-goto]")) {
-    b.onclick = () => (b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick() : step(b.dataset.goto));
+    b.onclick = () => (b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto));
   }
   input?.addEventListener("change", async () => {
     const file = input.files[0];
@@ -408,6 +447,8 @@ function newBag(root) {
     const url = URL.createObjectURL(photo);
     for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
     step("reading");
+    // Set after the step shows, so a screen reader announces it.
+    setTimeout(() => { root.querySelector("[data-reading-status]").textContent = "Reading the label. Usually 2 to 5 seconds."; }, 50);
     const id = uuid();
     try {
       const r = await fetch(`/api/photos/${id}`, {
@@ -416,7 +457,7 @@ function newBag(root) {
         body: photo,
       });
       const body = await r.json().catch(() => ({}));
-      if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.");
+      if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
       if (body.status === "read" && body.match) return showMatch(body.match);
@@ -426,9 +467,10 @@ function newBag(root) {
         limit: "That’s today’s limit of label reads. Type the coffee, or try the photo again tomorrow.",
         no_key: "Reading labels isn’t set up on this server. Type the coffee.",
       }[body.status] || "The label couldn’t be read just now. Retake it, or type the coffee.";
-      failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why);
+      const canRetake = !["limit", "no_key"].includes(body.status);
+      failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
-      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.");
+      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.", false);
     }
   });
 

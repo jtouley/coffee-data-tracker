@@ -230,9 +230,15 @@ code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color
 .center { text-align: center; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 /* New bag: the photo keeps its box before it loads (no layout shift); skeletons hold the text's place */
-.shot { aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; background: var(--panel); margin: 0 -16px; border-radius: 0; }
+.shot { position: relative; aspect-ratio: 3 / 2; max-height: min(30svh, 220px); width: 100%; border-radius: 6px; overflow: hidden;
+  background: var(--panel); }
+.shot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--rule); }
 .shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .shot.dim img { opacity: .55; }
+:root[data-theme="dark"] .shot img { filter: brightness(.9); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .shot img { filter: brightness(.9); } }
+h1:focus:not(:focus-visible) { outline: none; }
+.btn.text.retake { width: auto; padding: 0 4px; }
 .sk { height: 16px; border-radius: 4px; background: var(--panel); }
 .sk.tall { height: 32px; }
 .w46 { width: 46%; } .w55 { width: 55%; } .w70 { width: 70%; } .w82 { width: 82%; }
@@ -244,8 +250,11 @@ dl.spec { display: grid; grid-template-columns: 112px 1fr; margin: 16px 0 0; fon
 dl.spec dt, dl.spec dd { padding: 12px 0; border-bottom: 1px solid var(--rule); margin: 0; }
 dl.spec dt { color: var(--ink-2); }
 .pickrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 64px; padding: 8px 0;
-  border-bottom: 1px solid var(--rule); text-align: left; }
-.pickrow .meta { display: block; }
+  border-bottom: 1px solid var(--rule); text-align: left; transition: background-color 120ms ease-out; }
+.pickrow:active { background: var(--panel); }
+.pickrow .name { flex: 1; font-size: 1.0625rem; font-weight: 600; }
+.pickrow .name .meta { display: block; font-weight: 400; }
+.pickrow svg { width: 8px; height: 14px; color: var(--ink-2); flex: none; }
 /* Links laid out as a segmented control (the kind on Add equipment) */
 .seg .segl { min-height: 56px; display: grid; place-items: center; font-weight: 600; font-size: 1.0625rem; border-left: 1px solid var(--control); }
 .seg .segl:first-child { border-left: 0; }
