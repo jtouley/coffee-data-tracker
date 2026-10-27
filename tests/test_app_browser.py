@@ -67,8 +67,15 @@ def test_app_in_a_browser(lake, tmp_path):
     c = TestClient(app)
     w = {"X-Requested-With": "test"}
     assert c.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=w).status_code == 200
-    # A shot two days ago, so the saved screen has something to compare with.
+    # A bag matched to a (one-row) catalog, with a few days of shots, so the screenshots look like real use. The
+    # latest, two days ago, is what the saved screen compares with.
     earlier = datetime.now(UTC).date() - timedelta(days=2)
+    con = lake.connect()
+    con.execute(
+        "create table c as select 'example.com:1' coffee_id, 'Hambela Alaka' title, 'Larkspur Roasting' roaster_name,"
+        " 'Ethiopia' origin_country, 'washed' process"
+    )
+    lake.write_mart("dim_coffee", con, "select * from c")
     for body in (
         {
             "equipment_id": "g1",
@@ -85,11 +92,33 @@ def test_app_in_a_browser(lake, tmp_path):
         "/api/bags",
         json={
             "bag_id": "bag1",
+            "coffee_id": "example.com:1",
             "coffee_freetext": "Hambela Alaka",
             "roast_date": str(earlier - timedelta(days=5)),
         },
         headers=w,
     )
+    for i, (t, taste, grind, rating) in enumerate(
+        [(21, "sour", 12, 2), (24, "sour", 11.5, 3), (34, "bitter", 10, 2), (27, "balanced", 10.5, 4)]
+    ):
+        day = earlier - timedelta(days=2 - i // 2)
+        c.post(
+            "/api/shots",
+            json={
+                "shot_id": f"dial{i}",
+                "brewed_at": f"{day}T{7 + i % 2 * 7:02d}:0{i}:00Z",
+                "bag_id": "bag1",
+                "grinder_id": "g1",
+                "basket_id": "b1",
+                "dose_g": 18,
+                "yield_g": [35.0, 39.0, 41.0, 36.8][i],
+                "time_s": t,
+                "grinder_setting": grind,
+                "rating": rating,
+                "taste": taste,
+            },
+            headers=w,
+        )
     c.post(
         "/api/shots",
         json={
@@ -132,7 +161,8 @@ def test_app_in_a_browser(lake, tmp_path):
     shot_id = r.stdout.strip()
     # The browser's shot was saved, then retracted by Undo: two records, no current shot.
     assert len(list((lake.root / "shots").glob(f"{shot_id}__*.parquet"))) == 2
-    assert [s.shot_id for s in shots.load_shots(lake)] == ["first"]
+    assert [s.shot_id for s in shots.load_shots(lake)][-1] == "first"
+    assert all(s.shot_id != shot_id for s in shots.load_shots(lake))
     screens = ("owner-setup", "first-run", "setup-empty", "new-bag", "offline", "not-found", "sign-in")
     screens += ("sign-in-error", "today", "log-shot", "saved", "setup")
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}
