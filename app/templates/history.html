@@ -7,9 +7,11 @@
   {% for grp in groups %}
   {% if grp.bag %}<h2 class="group"><a class="link" href="/coffee/{{ grp.bag.bag_id }}"><span>{{ grp.name }}<span class="meta">{{ shots_n(grp.shots | length) }}</span></span>{{ chevron() }}</a></h2>
   {% else %}<h2 class="section">{{ grp.name }}</h2>{% endif %}
-  <div class="list">{% for s in grp.shots %}{{ shotrow(s, day) }}{% endfor %}</div>
+  <div class="list">{% for s in grp.shots %}{{ shotrow(s, day, "?from=history") }}{% endfor %}</div>
   {% else %}
-  <p class="body">No shots yet. Log one from Today.</p>
+  <p class="body">No shots yet. Each shot you log shows up here, grouped by bag.</p>
+  <div class="spacer"></div>
+  <div class="dock"><a class="btn primary" href="/log">Log a shot</a></div>
   {% endfor %}
   <div class="mt24"></div>
 {% endblock %}

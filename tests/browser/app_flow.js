@@ -71,6 +71,14 @@ async function newPage(browser, errors) {
     await shoot(first, "new-bag");
     await first.goto(`${fresh}/offline`);
     await shoot(first, "offline");
+    // Empty states: no bags, no shots, nobody invited yet.
+    await first.goto(`${fresh}/coffees`);
+    assert.match(await first.textContent("main"), /No bags yet/);
+    await shoot(first, "coffees-empty");
+    await first.goto(`${fresh}/history`);
+    await shoot(first, "history-empty");
+    await first.goto(`${fresh}/invite`);
+    await shoot(first, "invite-empty");
     await first.goto(`${fresh}/saved/missing`);
     await shoot(first, "not-found");
     await first.close();
@@ -84,7 +92,7 @@ async function newPage(browser, errors) {
     await page.fill("#password", "not the password");
     await page.getByRole("button", { name: "Sign in" }).click();
     await page.waitForFunction(() => document.querySelector("[data-hint]").textContent !== "");
-    assert.equal(await page.textContent("[data-hint]"), "That username and password don’t match. Check both and try again.");
+    assert.equal(await page.textContent("[data-hint]"), "That username and password don’t match. Check them, or ask the owner for a reset code.");
     await shoot(page, "sign-in-error");
     await page.fill("#password", "kettle orbit marble");
     await page.getByRole("button", { name: "Sign in" }).click();
@@ -122,7 +130,8 @@ async function newPage(browser, errors) {
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
-    assert.match(saved, /Balanced · 5/);
+    assert.match(saved, /rated 5/);
+    assert.match(saved, /Balanced/);
     await shoot(page, "saved");
 
     // Nothing left waiting in the outbox once the server has acknowledged the shot.
@@ -178,7 +187,11 @@ async function newPage(browser, errors) {
     // Retract goes at once and offers Undo; Undo brings the shot back.
     await page.getByRole("button", { name: "Retract" }).click();
     await page.waitForSelector("[data-restore]:not([hidden])");
-    await page.screenshot({ path: `${out}/retracted-light.png` }); // quickly: the strip leaves after 5 s
+    // Quickly, in both themes: the strip leaves after 5 s.
+    await page.screenshot({ path: `${out}/retracted-light.png` });
+    await page.emulateMedia({ colorScheme: "dark" });
+    await page.screenshot({ path: `${out}/retracted-dark.png` });
+    await page.emulateMedia({ colorScheme: "light" });
     await axe(page, "retracted");
     await page.getByRole("button", { name: "Undo" }).click();
     await page.waitForSelector("[data-actions]:not([hidden])");
@@ -206,6 +219,17 @@ async function newPage(browser, errors) {
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
+    // Left-handed: the steppers move to the left edge.
+    await page.getByRole("button", { name: "Left", exact: true }).click();
+    await page.goto(`${base}/log`);
+    const [stepX, numX] = await page.evaluate(() => [
+      document.querySelector(".field .steps").getBoundingClientRect().left,
+      document.querySelector("#dose_g").getBoundingClientRect().left,
+    ]);
+    assert.ok(stepX < numX, "steppers sit left of the number");
+    await shoot(page, "log-left");
+    await page.goto(`${base}/setup`);
+    await page.getByRole("button", { name: "Right", exact: true }).click();
     await page.goto(`${base}/setup/gear/g1`);
     await shoot(page, "gear");
     await page.goto(`${base}/log`);

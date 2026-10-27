@@ -102,29 +102,62 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
     pts = [(x(s.time_s), y(ratio(s)), s) for s in (shots[-8:] if sequence else shots)]
     if sequence and len(pts) > 1:
         out.append(f'<polyline class="path" points="{" ".join(f"{px:.1f},{py:.1f}" for px, py, _ in pts)}"/>')
+    placed: list[tuple[float, float, float, float]] = []  # label boxes so far: x0, y0, x1, y1
     for i, (px, py, s) in enumerate(pts, 1):
         if s.taste == "bitter":
             out.append(f'<rect class="s-bitter" x="{px - 4.5:.1f}" y="{py - 4.5:.1f}" width="9" height="9"/>')
-        else:
-            out.append(f'<circle class="s-{s.taste or "none"}" cx="{px:.1f}" cy="{py:.1f}" r="4.5"/>')
+        elif s.taste:
+            out.append(f'<circle class="s-{s.taste}" cx="{px:.1f}" cy="{py:.1f}" r="4.5"/>')
+        else:  # no taste: a diamond, so it differs from sour's ring by shape, not only colour
+            out.append(f'<path class="s-none" d="M{px:.1f} {py - 5.5:.1f}l5.5 5.5-5.5 5.5-5.5-5.5z"/>')
         if not sequence:
             continue
-        # The order number sits above-right, clear of the newest shot's ring, and flips to above-left when the
-        # mark before it is close enough for the two numbers to collide.
+        # The order number goes in the first corner (above-right, above-left, below-right, below-left) where it
+        # clears every mark, the newest shot's ring and the numbers already placed; failing that, the clearest.
         gap = 13 if i == len(pts) else 8
-        prev = pts[i - 2] if i > 1 else None
-        left = prev is not None and abs(prev[0] - px) < 18 and abs(prev[1] - py) < 18 and prev[0] >= px - 1
-        if left:
-            out.append(
-                f'<text class="ord" x="{px - gap:.1f}" y="{py - gap:.1f}" text-anchor="end">{i}</text>'
+        w = 7 * len(str(i))
+        best = None
+        for dx, dy, anchor in (
+            (gap, -gap, "start"),
+            (-gap, -gap, "end"),
+            (gap, gap + 8, "start"),
+            (-gap, gap + 8, "end"),
+        ):
+            tx, ty = px + dx, py + dy
+            box = (tx, ty - 9, tx + w, ty + 1) if anchor == "start" else (tx - w, ty - 9, tx, ty + 1)
+            if box[0] < left or box[2] > right or box[1] < top - 4 or box[3] > bottom:
+                continue
+            clear = min(
+                [
+                    _gap(box, (qx, qy, qx, qy)) - (10 if j == len(pts) else 5)
+                    for j, (qx, qy, _) in enumerate(pts, 1)
+                    if j != i
+                ]
+                + [_gap(box, other) for other in placed]
+                + [99.0]
             )
-        else:
-            out.append(f'<text class="ord" x="{px + gap:.1f}" y="{py - gap:.1f}">{i}</text>')
+            if best is None or clear > best[0] + 0.5:
+                best = (clear, tx, ty, anchor, box)
+            if clear >= 3:
+                break
+        if best is None:
+            best = (0.0, px + gap, py - gap, "start", (px + gap, py - gap - 9, px + gap + w, py - gap + 1))
+        _, tx, ty, anchor, box = best
+        placed.append(box)
+        end = ' text-anchor="end"' if anchor == "end" else ""
+        out.append(f'<text class="ord" x="{tx:.1f}" y="{ty:.1f}"{end}>{i}</text>')
     if sequence and pts:
         px, py, _ = pts[-1]
         out.append(f'<circle class="now" cx="{px:.1f}" cy="{py:.1f}" r="10"/>')
     out.append("</svg>")
     return "".join(out)
+
+
+def _gap(a: tuple[float, float, float, float], b: tuple[float, float, float, float]) -> float:
+    """The distance between two boxes (0 when they touch or overlap)."""
+    dx = max(b[0] - a[2], a[0] - b[2], 0.0)
+    dy = max(b[1] - a[3], a[1] - b[3], 0.0)
+    return float((dx * dx + dy * dy) ** 0.5)
 
 
 def day(d: datetime, tz: tzinfo, now: datetime | None = None) -> str:

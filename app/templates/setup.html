@@ -18,13 +18,18 @@
     {% if not gear[kind] %}<a class="link" href="/setup/gear/new?kind={{ kind }}"><span>Add your {{ kind }}<span class="meta">{% if kind == "grinder" %}So a grind setting means something{% elif kind == "basket" %}Its nominal dose is the first shot’s dose{% else %}Optional{% endif %}</span></span>{{ chevron() }}</a>{% endif %}
   </div>
   {% endfor %}
-  <a class="btn secondary mt24" href="/setup/gear/new">Add equipment</a>
+  {% if gear.grinder and gear.machine and gear.basket %}<a class="btn secondary mt24" href="/setup/gear/new">Add equipment</a>{% endif %}
   <h2 class="section">Appearance</h2>
   <div class="flabel" id="theme-l">Theme</div>
   <div class="seg" role="group" aria-labelledby="theme-l" aria-describedby="theme-h" data-theme-choice>
     {% for v, l in (("auto", "Auto"), ("light", "Light"), ("dark", "Dark")) %}<button type="button" data-v="{{ v }}" aria-pressed="{{ 'true' if theme == v else 'false' }}">{{ l }}</button>{% endfor %}
   </div>
   <div class="fhint" id="theme-h">Auto follows the phone’s setting.</div>
+  <div class="flabel" id="hand-l">Steppers</div>
+  <div class="seg two" role="group" aria-labelledby="hand-l" aria-describedby="hand-h" data-hand-choice>
+    {% for v, l in (("left", "Left"), ("right", "Right")) %}<button type="button" data-v="{{ v }}" aria-pressed="{{ 'true' if hand == v else 'false' }}">{{ l }}</button>{% endfor %}
+  </div>
+  <div class="fhint" id="hand-h">The side of the screen the − and + buttons sit on, for the hand that holds the phone.</div>
   <h2 class="section" id="account">Account</h2>
   <div class="rows">
     <div class="gear"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>

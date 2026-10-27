@@ -2,7 +2,7 @@
 {% from "_macros.html" import nav, taste %}
 {% block title %}Shot · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top">{% if bag %}<a class="back" href="/coffee/{{ bag.bag_id }}">‹ {{ name }}</a>{% else %}<a class="back" href="/history">‹ History</a>{% endif %}</div>
+  <div class="top"><a class="back" href="{{ back[0] }}">‹ {{ back[1] }}</a></div>
   <h1 class="serif title mt8">{{ when }}</h1>
   <div class="label mt16">Ratio</div>
   <div class="num n112 mt4">1:{{ "%.2f" | format(ratio(shot)) }}</div>
@@ -20,7 +20,7 @@
   <div class="hint" data-hint role="alert"></div>
   <div class="dock flat" data-actions>
     <a class="btn secondary" href="/log?correct={{ shot.shot_id }}">Correct</a>
-    <button class="btn text danger" type="button" data-retract="{{ shot.shot_id }}" data-back="{{ '/coffee/' ~ bag.bag_id if bag else '/history' }}">Retract</button>
+    <button class="btn text danger" type="button" data-retract="{{ shot.shot_id }}" data-back="{{ back[0] }}">Retract</button>
   </div>
   <div class="undo mt16" data-restore="{{ shot.shot_id }}" role="status" hidden><span>Shot retracted</span><button type="button">Undo<i></i></button></div>
   <div class="mt24"></div>

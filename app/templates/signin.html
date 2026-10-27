@@ -7,8 +7,7 @@
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
-  <div class="spacer"></div>
-  <form id="signin" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" novalidate>
+  <form id="signin" class="fill" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" novalidate>
     {% if owner_setup %}
     <label class="flabel" for="setup_code">Setup code</label>
     <input class="input" id="setup_code" name="setup_code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required>
@@ -23,7 +22,8 @@
     </div>
     {% if owner_setup %}<div class="fhint" id="password-h">At least 10 characters. A few unrelated words work well.</div>{% endif %}
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
-    <div class="dock flat">
+    <div class="spacer"></div>
+    <div class="dock">
       <button class="btn primary" type="submit">{{ "Create account" if owner_setup else "Sign in" }}</button>
       {% if not owner_setup %}
       <a class="btn text" href="/join">Have an invite? Create an account</a>

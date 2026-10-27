@@ -17,7 +17,7 @@ from typing import Annotated, Any
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response
+from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request, Response
 from fastapi.concurrency import run_in_threadpool
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.gzip import GZipMiddleware
@@ -151,7 +151,11 @@ def create_app(
 
     def page(request: Request, template: str, status: int = 200, **ctx: Any) -> HTMLResponse:
         ctx = (
-            {"me": None, "theme": request.cookies.get("theme", "auto")}
+            {
+                "me": None,
+                "theme": request.cookies.get("theme", "auto"),
+                "hand": request.cookies.get("hand", "right"),
+            }
             | ctx
             | {"now": datetime.now(tz(request))}
         )
@@ -627,6 +631,7 @@ def create_app(
             if everything
             else "",
             n_all=len(everything),
+            tastes={s.taste or "none" for s in everything},  # the key shows only the marks on the chart
             shots=list(reversed(this_bag)),
             siblings=siblings,
             index=next((i for i, b in enumerate(siblings, 1) if b.bag_id == bag.bag_id), 1),
@@ -639,7 +644,9 @@ def create_app(
         )
 
     @app.get("/shot/{shot_id}", response_class=HTMLResponse)
-    def shot_page(request: Request, shot_id: str, me: Me) -> HTMLResponse:
+    def shot_page(
+        request: Request, shot_id: str, me: Me, from_: str = Query("", alias="from")
+    ) -> HTMLResponse:
         try:
             shot = store.shot(me.user_id, shot_id)
         except NotFound:
@@ -647,7 +654,9 @@ def create_app(
         bag = store.bag(me.user_id, shot.bag_id)
         name, _ = coffee_name(bag, shot.coffee_id, shot.coffee_freetext)
         z = tz(request)
-        return page(request, "shot.html", me=me, shot=shot, bag=bag, name=name, grinder=store.gear(me.user_id, shot.grinder_id),
+        # Back to where it was opened from: History, else the bag's coffee page.
+        back = ("/history", "History") if from_ == "history" or not bag else (f"/coffee/{bag.bag_id}", name)
+        return page(request, "shot.html", me=me, shot=shot, bag=bag, name=name, back=back, grinder=store.gear(me.user_id, shot.grinder_id),
                     basket=store.gear(me.user_id, shot.basket_id), machine=store.gear(me.user_id, shot.machine_id),
                     when=f"{views.date(shot.brewed_at, z)}, {views.clock(shot.brewed_at, z)}")  # fmt: skip
 

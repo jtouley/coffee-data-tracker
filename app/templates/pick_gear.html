@@ -2,7 +2,7 @@
 {% block title %}Grinder and basket · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="back" href="/log">‹ Log shot</a></div>
-  <h1 class="serif title mt8">This shot is on</h1>
+  <h1 class="serif title mt8">Grinder and basket</h1>
   <p class="body">A grind setting only means something on its own grinder, so switching grinders starts from this
     coffee’s last shot on that one.</p>
   <form class="fill" action="/log" method="get">
@@ -14,7 +14,7 @@
       {% endfor %}
     </fieldset>
     {% endfor %}
-    <a class="btn text start" href="/setup/gear/new">Add equipment</a>
+    <a class="btn text" href="/setup/gear/new">Add equipment</a>
     <div class="spacer"></div>
     <div class="dock"><button class="btn primary" type="submit">Use these</button></div>
   </form>

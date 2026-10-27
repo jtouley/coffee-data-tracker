@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import synced, taste, nav %}
+{% from "_macros.html" import synced, taste, nav, shotrow %}
 {% block main %}
   {% set last = shots[-1] if shots else None %}
   <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span>{{ synced() }}</div>
@@ -23,7 +23,7 @@
   {% if earlier %}
   <div class="section">Earlier with this {{ "bag" if p.bag else "coffee" }}</div>
   <div class="list">
-    {% for s in earlier %}<div class="item"><span class="t">{{ day(s.brewed_at) }}</span><span class="num n20 grow">{{ g(s.time_s) }}<span class="u"> s</span> · 1:{{ "%.2f" | format(ratio(s)) }}</span>{{ taste(s.taste) }}</div>{% endfor %}
+    {% for s in earlier %}{{ shotrow(s, day) }}{% endfor %}
   </div>
   {% endif %}
   {% else %}
