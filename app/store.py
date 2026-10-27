@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import logging
 import threading
+import time
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 from typing import Any
@@ -22,8 +23,15 @@ from coffeedata.models import Bag, Equipment, Shot
 log = logging.getLogger(__name__)
 
 
+MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+
+
 class NotFound(KeyError):
     """Missing, or someone else's: the two look the same from outside."""
+
+
+class Invalid(ValueError):
+    """A request that can't be applied, with a message to show."""
 
 
 @dataclass
@@ -49,7 +57,8 @@ class Store:
         self.shots: dict[str, Rec] = {}
         self.bags: dict[str, Rec] = {}
         self.equipment: dict[str, Rec] = {}
-        self._coffees: dict[str, dict | None] = {}
+        self._coffees: dict[str, tuple[dict | None, float]] = {}
+        self._staged: dict[str, datetime] = {}
         for table, key, cls, into in (
             ("shots", "shot_id", Shot, self.shots),
             ("bags", "bag_id", Bag, self.bags),
@@ -102,7 +111,9 @@ class Store:
     # --- reads ---------------------------------------------------------------------------------------
 
     def _mine(self, recs: dict[str, Rec], user_id: str) -> list[Rec]:
-        return [r for r in recs.values() if r.item.user_id == user_id and not r.deleted]
+        # list() copies the values in one step, so a write from another request thread can't change the dict
+        # while this iterates.
+        return [r for r in list(recs.values()) if r.item.user_id == user_id and not r.deleted]
 
     def shots_of(self, user_id: str) -> list[Shot]:
         return sorted((r.item for r in self._mine(self.shots, user_id)), key=lambda s: s.brewed_at)
@@ -134,22 +145,24 @@ class Store:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
         if not coffee_id:
             return None
-        if coffee_id not in self._coffees:
-            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
-            try:
-                cur = self.lake.connect().execute(
-                    f"select title, roaster_name, origin_country, process from read_parquet([{src}]) "
-                    "where coffee_id = ?",
-                    [coffee_id],
-                )
-                row = cur.fetchone()
-                self._coffees[coffee_id] = (
-                    dict(zip([d[0] for d in cur.description], row, strict=True)) if row else None
-                )
-            except Exception as e:  # noqa: BLE001 - no catalog export yet
-                log.info("no catalog facts for %s: %s", coffee_id, e)
-                self._coffees[coffee_id] = None
-        return self._coffees[coffee_id]
+        hit = self._coffees.get(coffee_id)
+        if hit and (hit[0] is not None or time.monotonic() - hit[1] < MISS_TTL):
+            return hit[0]
+        src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
+        try:
+            cur = self.lake.connect().execute(
+                f"select title, roaster_name, origin_country, process from read_parquet([{src}]) "
+                "where coffee_id = ?",
+                [coffee_id],
+            )
+            row = cur.fetchone()
+            found = dict(zip([d[0] for d in cur.description], row, strict=True)) if row else None
+        except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
+            log.info("no catalog facts for %s: %s", coffee_id, e)
+            return None  # not cached: try again next time
+        # A coffee not in this week's export is asked again after MISS_TTL, not never.
+        self._coffees[coffee_id] = (found, time.monotonic())
+        return found
 
     def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
         """The shots shown together: this bag's, or with no bag, the last shot's coffee."""
@@ -176,7 +189,9 @@ class Store:
         if not grinder or grinder.retired:
             grinder = grinders[0] if grinders else None
         baskets = self.equipment_of(user_id, "basket")
-        basket = self.gear(user_id, last.basket_id if last else None) or (baskets[0] if baskets else None)
+        basket = self.gear(user_id, last.basket_id if last else None)
+        if not basket or basket.retired:  # like the grinder: a retired basket isn't offered again
+            basket = baskets[0] if baskets else None
         dose = last.dose_g if last else (basket.basket_dose_g if basket and basket.basket_dose_g else None)
         grind = None
         if last and (not last.grinder_id or not grinder or last.grinder_id == grinder.equipment_id):
@@ -205,19 +220,29 @@ class Store:
     # --- writes --------------------------------------------------------------------------------------
 
     def _commit(self, recs: dict[str, Rec], key: str, item: Any, table: str, deleted: bool = False) -> Rec:
-        """One lake file for one record, published before returning; the cache changes only after that."""
+        """One lake file for one record, published before returning; the cache changes only after that.
+
+        The lock covers staging the file, which fixes its logged_at, not the upload, so a slow commit to Hugging
+        Face doesn't hold up everyone else's writes. Lake.publish runs one upload at a time and sends whatever is
+        staged, so a request's file may go up in another request's commit."""
         with self.lock:
             prev = recs.get(key)
+            after = max((t for t in (prev and prev.logged_at, self._staged.get(key)) if t), default=None)
             if table == "shots":
-                at = shots.record(item, self.lake, deleted, after=prev.logged_at if prev else None)
+                at = shots.record(item, self.lake, deleted, after=after)
             else:
                 at = datetime.now(UTC).replace(microsecond=0)
-                if prev and at <= prev.logged_at:
-                    at = prev.logged_at + timedelta(seconds=1)
+                if after and at <= after:
+                    at = after + timedelta(seconds=1)
                 row = item.model_dump() | {"logged_at": at, "deleted": deleted}
                 self.lake.write(table, f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet", [row])
-            self.lake.publish(f"app: {table} {key}")
-            recs[key] = rec = Rec(item, at, deleted)
+            self._staged[key] = at  # the next record for this key sorts after this one, published or not
+        self.lake.publish(f"app: {table} {key}")
+        rec = Rec(item, at, deleted)
+        with self.lock:
+            current = recs.get(key)
+            if current is None or current.logged_at <= at:  # a later record may have landed meanwhile
+                recs[key] = rec
         return rec
 
     def _owned(self, recs: dict[str, Rec], key: str, user_id: str) -> Rec | None:
@@ -238,14 +263,23 @@ class Store:
         ):
             if ref and self._owned(table, ref, user_id) is None:
                 raise NotFound(ref)
+        grinder = self.gear(user_id, shot.grinder_id)
+        lo, hi = (grinder.scale_min, grinder.scale_max) if grinder else (None, None)
+        if lo is not None and hi is not None and not lo <= shot.grinder_setting <= hi:
+            raise Invalid(
+                f"Grind {shot.grinder_setting:g} is outside {grinder.name if grinder else 'the grinder'}'s dial "
+                f"({lo:g} to {hi:g})."
+            )
         bag = self.bag(user_id, shot.bag_id)
         if bag and not shot.coffee_id and not shot.coffee_freetext:  # the bag says which coffee it is
             shot = shot.model_copy(
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
         prev = self._owned(self.shots, shot.shot_id, user_id)
-        if prev and not prev.deleted and prev.item == shot:
-            return shot, False  # a retry of a write that already landed
+        if prev and prev.item == shot:
+            # A retry of a write that already landed, including one that arrives after Undo: a late resend
+            # must not bring a retracted shot back.
+            return shot, False
         self._commit(self.shots, shot.shot_id, shot, "shots")
         return shot, True
 
@@ -270,7 +304,9 @@ class Store:
         """A bag typed by hand: matched to the catalog the same way a typed shot is."""
         bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         prev = self._owned(self.bags, bag.bag_id, user_id)
-        if prev:
+        same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
+        if prev and same_text and not bag.coffee_id:
+            # A resend or an edit of something else keeps the match; changed text is matched again below.
             bag = bag.model_copy(
                 update={"coffee_id": prev.item.coffee_id, "match_score": prev.item.match_score}
             )

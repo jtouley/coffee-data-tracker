@@ -98,7 +98,8 @@ class Shot(BaseModel):
     coffee_id: str | None = None
     coffee_freetext: str | None = None
     roast_date: date | None = None
-    grinder_setting: float = Field(ge=0, le=100)
+    # Checked against the grinder's own dial where the grinder is known (the app); this only bounds nonsense.
+    grinder_setting: float = Field(ge=-1000, le=10000)
     dose_g: float = Field(ge=5, le=30)
     yield_g: float = Field(ge=5, le=500)
     time_s: float = Field(ge=1, le=600)

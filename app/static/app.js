@@ -60,7 +60,9 @@ async function mine() {
 
 async function flush() {
   if (!ME) return;
-  for (const entry of await mine()) {
+  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
+  const entries = (await mine()).sort((a, b) => a.at - b.at);
+  for (const entry of entries) {
     try {
       await deliver(entry);
     } catch (e) {
