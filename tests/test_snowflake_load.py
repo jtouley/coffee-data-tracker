@@ -68,8 +68,14 @@ def test_private_key_pem_to_der():
     key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
     pem = key.private_bytes(serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8,
                             serialization.NoEncryption()).decode()
-    der = snowflake_load.private_key_der(pem)
-    assert serialization.load_der_private_key(der, password=None).key_size == 2048
+    import base64
+
+    expected = snowflake_load.private_key_der(pem)
+    assert serialization.load_der_private_key(expected, password=None).key_size == 2048
+    one_line = base64.b64encode(pem.encode()).decode()  # base64 -w0 coffee_rsa.p8
+    escaped = pem.replace("\n", "\\n")                 # pasted with literal \n
+    for variant in (one_line, escaped, "  " + pem + "\n"):
+        assert snowflake_load.private_key_der(variant) == expected
 
 
 def test_missing_credentials_is_a_clear_error(monkeypatch):

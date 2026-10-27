@@ -21,10 +21,20 @@ SCHEMA = "MARKET"
 STAGE = "PUBLIC_EXPORT"
 
 
-def private_key_der(pem: str) -> bytes:
+def private_key_der(value: str) -> bytes:
+    """Accepts the .p8 file as PEM (with real or literal "\\n" line breaks) or as one base64 line of the
+    whole file (`base64 -w0 coffee_rsa.p8`), since some secret fields don't keep line breaks."""
+    import base64
+
     from cryptography.hazmat.primitives import serialization
 
-    key = serialization.load_pem_private_key(pem.encode(), password=None)
+    text = value.strip().replace("\\n", "\n")
+    if not text.startswith("-----BEGIN"):
+        decoded = base64.b64decode("".join(text.split()))
+        if not decoded.startswith(b"-----BEGIN"):
+            return decoded  # already DER
+        text = decoded.decode()
+    key = serialization.load_pem_private_key(text.encode(), password=None)
     return key.private_bytes(serialization.Encoding.DER, serialization.PrivateFormat.PKCS8,
                              serialization.NoEncryption())
 
