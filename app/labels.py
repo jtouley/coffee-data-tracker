@@ -127,9 +127,10 @@ def read(jpeg: bytes, model_id: str | None = None, client: Any = None) -> Read:
         return Read("failed", model=model_id, latency_s=time.monotonic() - started)
     latency = time.monotonic() - started
     usage = {"input_tokens": msg.usage.input_tokens, "output_tokens": msg.usage.output_tokens}
-    price_in, price_out = PRICES.get(model_id, (0.0, 0.0))
+    served = getattr(msg, "model", None) or model_id  # a server-side fallback may have served another model
+    price_in, price_out = PRICES.get(served, PRICES.get(model_id, (0.0, 0.0)))
     cost = (usage["input_tokens"] * price_in + usage["output_tokens"] * price_out) / 1e6
-    base = {"model": getattr(msg, "model", model_id), "latency_s": latency, "cost_usd": cost, "usage": usage}
+    base = {"model": served, "latency_s": latency, "cost_usd": cost, "usage": usage}
     if msg.stop_reason == "refusal":
         log.info("label read refused (%s)", getattr(getattr(msg, "stop_details", None), "category", None))
         return Read("refused", **base)

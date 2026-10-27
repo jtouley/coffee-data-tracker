@@ -4,6 +4,7 @@ Screens are server-rendered HTML with a little JavaScript (static/app.js) and no
 JSON POST that the phone first puts in an IndexedDB outbox, with an id it generated, so a retry is safe.
 """
 
+import asyncio
 import hashlib
 import json
 import logging
@@ -773,7 +774,7 @@ def create_app(
     ] = {}  # (user, date) -> label reads; in memory, so a restart resets it
     # photo_id -> (user, matched coffee_id, score, raw read, roast date): in memory, for the offline hand-off
     photo_reads: dict[str, tuple[str, str | None, int | None, str | None, str | None]] = {}
-    last_reply: dict[str, dict] = {}  # photo_id -> the reply, so a resend isn't read (and counted) twice
+    last_reply: dict[str, tuple[str, dict]] = {}  # photo_id -> (owner, reply): a resend isn't read twice
 
     def describe(coffee_id: str | None) -> dict | None:
         c = store.coffee(coffee_id)
@@ -805,22 +806,31 @@ def create_app(
         ):
             raise HTTPException(415, "Send the photo as JPEG, PNG or WebP.")
         try:
-            photo = photos.normalize(await request.body())
+            # Decoding, resizing and encoding take a moment of CPU: off the event loop, like the save and the read.
+            photo = await run_in_threadpool(photos.normalize, await request.body())
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
-        if await run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo) is False:
-            # Already here: a resend from the outbox. Someone else's id is refused; ours answers from the last read.
-            if (await run_in_threadpool(photos.load, photo_lake, photo_id) or ("",))[0] != me.user_id:
+        if photo_id in last_reply:  # a resend from the outbox: the same reply, without a second read
+            owner, reply = last_reply[photo_id]
+            if owner != me.user_id:
                 raise HTTPException(409, "That photo id is taken.")
-            if photo_id in last_reply:
-                return last_reply[photo_id]
-        photo_misses.pop(photo_id, None)
+            return reply
         key = (me.user_id, datetime.now(UTC).date().isoformat())
         if reads_today.get(key, 0) >= READS_PER_DAY:
-            result = labels.Read("limit")
-        else:
-            reads_today[key] = reads_today.get(key, 0) + 1
-            result = await run_in_threadpool(labels.read, photo.jpeg, None, labels_client)
+            # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
+            return {"photo_id": None, "status": "limit", "label": None, "raw": None}
+        reads_today[key] = reads_today.get(key, 0) + 1
+        # The dataset commit (which can retry for a while) and the label read run side by side.
+        saved, result = await asyncio.gather(
+            run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
+            run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
+        )
+        if (
+            saved is False
+            and (await run_in_threadpool(photos.load, photo_lake, photo_id) or ("",))[0] != me.user_id
+        ):
+            raise HTTPException(409, "That photo id is taken.")  # someone else's, from before a restart
+        photo_misses.pop(photo_id, None)
         out: dict[str, Any] = {
             "photo_id": photo_id,
             "status": result.status,
@@ -828,21 +838,13 @@ def create_app(
             "raw": result.raw,
         }
         if result.status == "read" and result.label:
-            label = result.label
-            coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
-            described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
-            roast = result.roast_date()
-            out |= {
-                "match": describe(coffee_id),
-                "score": candidates[0]["score"] if coffee_id and candidates else None,
-                "candidates": [d | {"score": score} for d, score in described if d],
-                "roast_date": roast.isoformat() if roast else None,
-            }
+            out |= await run_in_threadpool(matched, result)
             # Kept so a bag that cites this photo can use the read, whichever of the two reaches the server first
             # (offline, the photo and the bag wait in the outbox together).
+            coffee_id = (out["match"] or {}).get("coffee_id")
             photo_reads[photo_id] = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
             await run_in_threadpool(apply_read, me.user_id, photo_id)
-        last_reply[photo_id] = out
+        last_reply[photo_id] = (me.user_id, out)
         return out
 
     def apply_read(user_id: str, photo_id: str) -> None:
@@ -857,6 +859,19 @@ def create_app(
                 if not bag.roast_date and hit[4]:
                     update["roast_date"] = hit[4]
                 store.save_bag(user_id, bag.model_dump(exclude={"user_id"}) | update)
+
+    def matched(result: labels.Read) -> dict[str, Any]:
+        """The catalog match for a read label, described for the screen."""
+        label = result.label or {}
+        coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
+        described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
+        roast = result.roast_date()
+        return {
+            "match": describe(coffee_id),
+            "score": candidates[0]["score"] if coffee_id and candidates else None,
+            "candidates": [d | {"score": score} for d, score in described if d],
+            "roast_date": roast.isoformat() if roast else None,
+        }
 
     @app.post("/api/bags")
     def post_bag(body: dict, me: Writer) -> dict:
