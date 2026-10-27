@@ -1,6 +1,6 @@
 # Shot-logging app: design
 
-The plan is in [PLAN.md](PLAN.md). Mockups for eight screens are in [mockups/](mockups/), each a self-contained
+The plan is in [PLAN.md](PLAN.md). Mockups for eleven screens are in [mockups/](mockups/), each a self-contained
 HTML file with light and dark screenshots at 390 px. They show the owner's equipment (DF64 V2, Lelit Bianca,
 Pullman basket); the coffees, prices and shots are sample data.
 
@@ -223,8 +223,24 @@ an honest hatched placeholder; in the app it's the owner's photo, cropped to the
 **Dock.** The bottom area holding the primary button (and on Saved, the undo bar). Paper background, safe-area
 padding below, and a 20 px fade at its top edge that only shows when content scrolls under it. No hairline.
 
-**Navigation.** Three text tabs (Today, Coffees, Equipment) with the accent dot above the active one. No icon set is
-needed, and the words are clearer than pictograms for "equipment".
+**Navigation.** Three text tabs (Today, Coffees, Setup) with the accent dot above the active one. No icon set is
+needed, and the words are clearer than pictograms. Setup holds equipment and, below it, the account: who you're
+signed in as, "Invite someone" (owner only), "Sign out everywhere" and "Sign out".
+
+**Text input.** 56 px tall, 17 px text (never under 16, so Android doesn't zoom), sheet background, 1 px
+`--rule-strong` border, 8 px radius. The label sits above it, always visible; hints and errors sit below in 13 px.
+Focus: an accent border plus a 3 px accent ring at 22% opacity. Username fields use `autocapitalize="none"`,
+`autocomplete="username"`; password fields `autocomplete="current-password"` or `"new-password"`, so Android's
+password manager fills and saves them.
+
+**Invite code.** Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown in the
+condensed numeral at 40 px across two lines in a dashed box, with Copy and Share (Android's share sheet) under it.
+The input on Sign up accepts it with or without dashes, in any case, and validates as soon as it's complete
+("Valid · expires Nov 3" in the balanced colour, or "This code has been used" in the bitter colour).
+
+**Sign in and Sign up.** The only screens with no navigation. The wordmark is "Coffee Data" in the serif. Errors
+never say which half was wrong ("That username and password don't match"). Sign up states plainly, above the
+button, that the owner can read the datasets the account's data lives in.
 
 **Sync status.** Top right: a green dot and "Synced", or the accent dot and "2 waiting to sync". It never blocks
 anything.

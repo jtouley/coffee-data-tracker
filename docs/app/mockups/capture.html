@@ -146,12 +146,28 @@ body { margin: 0 auto; max-width: 390px; min-height: 844px; background: var(--pa
 .same { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--accent);
   color: var(--accent); border-radius: 8px; font-size: 15px; font-weight: 600; white-space: nowrap; }
 .same b { font-weight: 400; color: var(--ink-2); margin-left: 4px; }
+.input { min-height: 56px; border: 1px solid var(--rule-strong); border-radius: 8px; background: var(--sheet);
+  display: flex; align-items: center; padding: 0 14px; font-size: 17px; color: var(--ink); }
+.input.ph { color: var(--ink-3); }
+.input.focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.input.code { font-stretch: 80%; font-variant-numeric: tabular-nums; letter-spacing: 0.06em; font-size: 20px; font-weight: 500; }
+.flabel { display: block; font-size: 13px; color: var(--ink-2); font-weight: 500; margin: 18px 0 8px; }
+.fhint { font-size: 13px; color: var(--ink-2); margin-top: 6px; }
+.link-row { display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid var(--rule);
+  font-size: 17px; font-weight: 500; color: var(--accent); }
+.link-row span { color: var(--ink-3); font-size: 20px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .list .item { display: grid; grid-template-columns: 76px 1fr auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .list .item:first-child { border-top: 1px solid var(--rule); }
 .list .t { font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .list .r { font-size: 20px; }
 .list .r .u { font-size: 14px; color: var(--ink-2); }
+.gear { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.gear:first-of-type { border-top: 1px solid var(--rule); }
+.gear .n { font-size: 18px; font-weight: 600; }
+.gear .d { grid-column: 1 / -1; font-size: 14px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.tag { font-size: 12px; font-weight: 600; color: var(--accent); border: 1px solid currentColor; border-radius: 4px; padding: 1px 6px; }
+.tag.off { color: var(--ink-3); }
 h2 { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 28px 0 10px; }
 
 .cam { background: var(--camera); margin: 0 -16px; height: 320px; padding-bottom: 26px; position: relative; display: grid; place-items: center; }

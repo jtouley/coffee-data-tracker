@@ -21,11 +21,15 @@ small grind change) three taps, and makes a new bag one photo and one tap.
 - Keep the lake append-only. New tables and new nullable columns only; every existing shot stays valid.
 - Keep shots and bag photos private. Neither reaches the public tables, the public site or git. Shots come off
   the GitHub Pages site (see Privacy).
+- Let the owner invite a few people. Each person has their own account, equipment, bags and shots, and sees only
+  their own. Accounts are a username and a password, stored as salted hashes in a private Hugging Face dataset.
 
 ## Non-goals
 
-- More than one user. There is one owner, and nobody else pulls shots on this machine; no sign-up, no sharing,
-  no roles.
+- Open sign-up. People join only with an invite code from the owner. No sharing between accounts, no teams, and
+  only two roles (owner, member).
+- Shared machines. Nobody else pulls shots on the owner's machine; each account describes its own setup.
+- Email. No addresses are collected, so there are no emails and no self-service password reset (see Accounts).
 - A native app or an app store listing. A home-screen web app is enough.
 - Bluetooth scales and machine integrations (Acaia, Decent, Gaggiuino). Chrome on Android does support Web
   Bluetooth, so a scale is possible later; for now typing two numbers is fine.
@@ -115,7 +119,10 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
 | Saved | Ratio, time window, advice, undo | `mockups/saved.html` |
 | Coffee | One coffee: catalog facts, best recipe, chart, shots | `mockups/coffee.html` |
-| Equipment | Grinders, machines, baskets | `mockups/equipment.html` |
+| Setup | Equipment, plus the account: invite someone, sign out | `mockups/equipment.html` |
+| Sign in | Username and password | `mockups/sign-in.html` |
+| Sign up | Invite code, username, password | `mockups/sign-up.html` |
+| Invite | Owner only: a new single-use code to send | `mockups/invite.html` |
 | Search | Fallback when the photo match is wrong | not mocked; a search field over the match card list |
 | History | All shots, newest first, grouped by bag | not mocked; same row component as Today |
 
@@ -124,7 +131,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 ### What has to be decided
 
 - Where the app runs, so the Hugging Face write token and the Anthropic key stay on a server.
-- How the single owner signs in.
+- How people sign up and sign in, and where their accounts live.
 - How a shot gets from the phone into the lake.
 - Where the bag photo is read.
 - What happens with no network.
@@ -150,23 +157,59 @@ keeps the write in an outbox until it's acknowledged (see Offline). Second, read
 copy of shots, bags and equipment, loaded at start from the weekly `marts/fct_shot.parquet` export plus the files
 newer than it, and updated on every write.
 
-### Auth for one owner
+### Accounts and sign-in
 
-| Option | Notes |
-|---|---|
-| Sign in with Hugging Face (OAuth for Spaces) plus an allowlist of one username | Built into Spaces, no passwords to store. The session cookie lasts weeks. Recommended. |
-| Private Space | Only the owner's HF account can open it. Simple, but iOS home-screen apps keep their own cookie jar, so the HF login can drop out of the standalone app. Fine as an extra layer, not as the only one. |
-| Passkey (WebAuthn) set up once | Nice on a phone, but it's code we'd own and get wrong. |
-| A long secret in the URL or a cookie | Easy to leak through browser history or a screenshot. No. |
+The owner asked for a simple sign-up and login of our own, with the hashed credentials kept in a Hugging Face
+dataset, rather than "Sign in with Hugging Face" (most invitees won't have an HF account). So:
 
-Recommendation: a public Space whose every route except `/login` requires an HF OAuth session whose username equals
-`OWNER` (a Space variable). The app's code is public anyway (this repo); the data and the keys aren't. If the owner
-prefers, make the Space private as well.
+**Where accounts live.** A third private dataset, `hf://datasets/jtouley/coffee-data-users`, holding two
+append-only tables, `users` and `invites` (see Data model). Keeping accounts apart from the lake and the photos
+means nothing that reads the lake (dbt, the MCP server, the weekly run) can see a password hash, and the token
+the weekly run uses doesn't need access to it. The Space loads both tables into memory at start and writes a new
+record (one commit) for every change.
+
+**Passwords.** Hashed with Argon2id (`argon2-cffi`, its default RFC 9106 low-memory parameters: 64 MiB, 3 passes,
+4 lanes), with a per-hash random salt. Before hashing, the password is HMAC-ed with a pepper kept as a Space secret
+(`AUTH_PEPPER`), so a copy of the users dataset alone isn't enough to start guessing. Rules follow NIST 800-63B:
+at least 10 characters, no composition rules, and a check against a short list of common passwords. Changing a
+password writes a new `users` record.
+
+**Sign-up.** Only with an invite code.
+
+1. The owner taps "Invite someone" and gets a code like `K7QD-M2XF-9RPA-T4WE` (80 random bits, base32), valid for
+   7 days and usable once. Only its SHA-256 is stored; the plain code is shown once, to copy and send.
+2. The invitee opens the app, enters the code, picks a username and a password, and is signed in.
+3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a Space
+   secret, and creates the `owner` account. After that the secret does nothing.
+
+**Sign-in.** Username and password. A failed attempt gets the same message whether the username exists or not, and
+an unknown username is still checked against a dummy hash so the timing doesn't tell. Five failures for one
+username, or twenty from one IP, lock that key out for 15 minutes (kept in memory; a restart clears it, which is
+acceptable at this size).
+
+**Sessions.** No session table in the dataset (that would be a commit per login). The cookie is a signed token
+(HMAC-SHA256 with the `SESSION_SECRET` Space secret) carrying `user_id`, `session_epoch` and the issue time. It is
+`HttpOnly`, `Secure` and `SameSite=Lax`, lasts 90 days, and renews itself on use. Each `users` record has a
+`session_epoch`. "Sign out everywhere", a password change and the owner disabling an account all bump it, which
+invalidates every older cookie. Writes also need an `X-Requested-With` header, which a cross-site form can't send,
+as CSRF protection on top of `SameSite`.
+
+**Forgotten passwords.** There's no email, so the owner issues a reset code from the Invite screen. It works like an
+invite but is tied to an existing account, and using it sets a new password and bumps the epoch. The owner's own
+account can be reset with `OWNER_SETUP_CODE`.
+
+**Every request is scoped.** The server reads `user_id` from the cookie, never from the request body, and filters
+every read and write by it. The in-memory caches are keyed by user. Tests cover one user trying to read, correct
+or retract another user's shot, bag, photo or equipment.
+
+Rejected: Sign in with Hugging Face (invitees would need HF accounts), a private Space (same problem), passkeys only
+(good, but more code to get right; worth adding later as a second way in), and magic links (need email).
 
 ### How writes reach the lake
 
 Each action is one Hugging Face commit, made by the Space with the existing `Lake.write` and `Lake.publish`:
 
+- Sign-up, password change, invite: one commit each to the users dataset.
 - New bag: two commits. First the photo's Parquet file to the photo dataset, then the `bags` row to the lake. If
   the second fails, the photo is orphaned but harmless, and the outbox retries the bag.
 - Shot: one `shots` file.
@@ -237,6 +280,9 @@ Kitchen Wi-Fi is usually fine, but a shot should never be lost to a dropped conn
 All new tables follow the existing pattern: one immutable Parquet file per record, latest record per id wins,
 schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a zero-row schema file per table.
 
+Every personal record carries a `user_id`: equipment, bags, photos and shots. Shots logged before accounts existed
+have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`), so they stay the owner's.
+
 ### New lake tables
 
 `equipment/<equipment_id>__<logged_at>.parquet`
@@ -244,9 +290,10 @@ schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a ze
 | Column | Type | Notes |
 |---|---|---|
 | `equipment_id` | string | UUID |
+| `user_id` | string | whose equipment |
 | `logged_at` | timestamp | latest per id wins |
 | `kind` | string | `grinder`, `machine` or `basket` |
-| `name` | string | "Niche Zero" |
+| `name` | string | "DF64 V2" |
 | `model` | string | optional |
 | `scale_min`, `scale_max`, `scale_step` | double | grinders only; the step feeds the stepper and the advice |
 | `finer_is_lower` | bool | grinders only; `suggest_next` already takes this argument |
@@ -260,6 +307,7 @@ schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a ze
 | Column | Type | Notes |
 |---|---|---|
 | `bag_id` | string | UUID |
+| `user_id` | string | |
 | `logged_at` | timestamp | |
 | `coffee_id` | string | null when unmatched |
 | `coffee_freetext` | string | what was read or typed |
@@ -277,6 +325,7 @@ schemas in `lake.SCHEMAS`, globs in `lake.GLOBS` and `dbt/macros/lake.sql`, a ze
 | Column | Type | Notes |
 |---|---|---|
 | `photo_id` | string | UUID |
+| `user_id` | string | |
 | `taken_at` | timestamp | |
 | `image` | binary | the JPEG bytes, EXIF removed, about 1600 px on the long edge |
 | `media_type` | string | `image/jpeg` |
@@ -289,12 +338,46 @@ Photos are Parquet like everything else, one row per file, so `Lake.write` handl
 from the main lake. Parquet's compression won't shrink a JPEG further, so the files are about the size of the
 image.
 
+In the users dataset (`hf://datasets/jtouley/coffee-data-users`):
+
+`users/<user_id>__<logged_at>.parquet`
+
+| Column | Type | Notes |
+|---|---|---|
+| `user_id` | string | UUID |
+| `logged_at` | timestamp | latest per id wins |
+| `username` | string | lower-cased, 3 to 32 letters, digits, `-` or `_`; unique among current records |
+| `display_name` | string | optional |
+| `password_hash` | string | the Argon2id PHC string (`$argon2id$v=19$m=65536,t=3,p=4$…`), which includes its salt |
+| `role` | string | `owner` or `member` |
+| `session_epoch` | int | bumped to sign out everywhere |
+| `invite_id` | string | the invite used to join; null for the owner |
+| `disabled` | bool | set by the owner; disabled users can't sign in |
+
+`invites/<invite_id>__<logged_at>.parquet`
+
+| Column | Type | Notes |
+|---|---|---|
+| `invite_id` | string | UUID |
+| `logged_at` | timestamp | |
+| `code_sha256` | string | the code itself is never stored |
+| `kind` | string | `join` or `reset` |
+| `for_user_id` | string | `reset` only |
+| `created_by` | string | the owner's `user_id` |
+| `expires_at` | timestamp | 7 days after creation |
+| `used_by`, `used_at` | string, timestamp | set by a later record when redeemed; a used invite can't be used again |
+| `revoked` | bool | |
+
+Usernames are unique "among current records": two people signing up with the same name at the same moment is
+handled by the Space, which is a single process and checks under a lock before writing.
+
 ### Changes to `shots`
 
 New nullable columns, appended to the `shots` schema:
 
 | Column | Type | Notes |
 |---|---|---|
+| `user_id` | string | whose shot; null on old shots means the owner |
 | `grinder_id` | string | `equipment_id` of the grinder |
 | `machine_id` | string | |
 | `basket_id` | string | |
@@ -318,10 +401,11 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 - `fct_shot`: join `stg_bags` (`roast_date` falls back to the bag's), `dim_equipment` (grinder name, scale), and add
   `grind_position = (grinder_setting - scale_min) / (scale_max - scale_min)` so shots across grinders can at least
   be compared roughly.
-- `mart_dial_in`: add `grinder_id` to the per-coffee grain.
+- `mart_dial_in`: add `user_id` and `grinder_id` to the per-coffee grain. Every mart that touches shots is per user.
 - `mart_bag` (new): one row per bag with shot count, best shot, days off roast at first and last shot.
-- `public_tables_are_facts_only.sql`: add `photo_id`, `image`, `bag_id`, `grinder_id`, `machine_id`, `basket_id`,
-  `read_json` and `sha256` to the forbidden columns.
+- `public_tables_are_facts_only.sql`: add `user_id`, `photo_id`, `image`, `bag_id`, `grinder_id`, `machine_id`,
+  `basket_id`, `read_json` and `sha256` to the forbidden columns.
+- The users dataset is never a dbt source.
 - The weekly export adds `marts/fct_shot.parquet` (private lake only), which the Space uses as its starting copy.
 
 ## Privacy
@@ -332,8 +416,17 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
   lake's history. Only the `photo_id` is in the main lake.
 - EXIF is removed on the phone before upload, so GPS coordinates of the kitchen never leave it. The server
   re-encodes the JPEG as a second check before writing the bytes into Parquet.
-- Photos are served only through the Space, behind the owner check, never by a direct HF URL. The Space reads the
-  `image` column and returns the bytes.
+- Photos are served only through the Space, to the user who took them, never by a direct HF URL. The Space reads
+  the `image` column and returns the bytes.
+- Invited people's data lives in the owner's private datasets, so the owner can read it. The sign-up screen says so
+  in one sentence. The app itself never shows one user another's data.
+- Leaving. Retracting records hides them in the app and in dbt, but the lake is append-only and HF keeps file
+  history, so a retraction isn't erasure. If an invitee asks for their data to be erased, the owner deletes their
+  files from the three datasets and squashes the history (`HfApi.super_squash_history`). That's a deliberate, manual
+  exception to append-only, and it's the reason accounts and photos live in their own datasets: erasing them doesn't
+  rewrite the catalog's history.
+- Passwords never leave the Space in plain text and are never logged. Request logging drops the body of the
+  sign-in, sign-up and reset routes.
 - The image goes to the Anthropic API to be read. Under standard API terms it isn't used for training; it is still
   a third party seeing a photo of a kitchen counter. The capture screen frames the bag tightly to keep the
   background small.
@@ -354,6 +447,7 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 | The Opus/Haiku comparison | 30 photos × 3 runs × 2 models ≈ $1.50, almost all of it Opus; once per prompt change |
 | Photo storage | ~300 KB per bag ≈ 15 MB a year, inside the free private storage |
 | Shot and equipment files | a few KB each; negligible next to the weekly catalog snapshots |
+| Invited users | their bag reads go through the owner's Anthropic key, so each account is capped at 10 reads a day (a Space setting). A handful of people logging a bag a week stays at a few dollars a year with Opus |
 
 The app adds nothing to the weekly run's cost.
 
@@ -364,10 +458,10 @@ Each one is usable on its own and goes through the normal PR and CI process.
 1. **Data model.** New lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
    test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
-2. **App skeleton.** FastAPI on a Space, HF OAuth with the owner allowlist, the deploy workflow, the in-memory shot
-   cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
+2. **App skeleton.** FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
+   (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
    concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
-3. **Equipment.** Equipment screen, grinder-aware steppers and advice.
+3. **Equipment and invites.** Setup screen, grinder-aware steppers and advice; invites, sign-up and reset codes.
 4. **Bag capture.** Photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
 5. **Coffee page.** Catalog facts, best recipe, chart, shot list, correct and retract.
@@ -375,7 +469,8 @@ Each one is usable on its own and goes through the normal PR and CI process.
 7. **Polish.** Dark mode check in a dark kitchen, haptics (Android Chrome supports them), left-hand layout, the
    empty states.
 
-Milestones 1 and 2 are the minimum that replaces the issue form at the machine. Capture (4) is the reason for the
+Milestones 1 and 2 are the minimum that replaces the issue form at the machine, for the owner alone. Invitees can
+join from milestone 3. Capture (4) is the reason for the
 app, but it needs the bag and photo tables from 1 first.
 
 ## Decisions (October 27)
@@ -389,7 +484,8 @@ app, but it needs the bag and photo tables from 1 first.
 | Photos | Stay private, still Parquet | Separate private dataset, image bytes in a Parquet `binary` column, no new file type in the lake. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
 | Rating default | Empty, with a way to say "same as last" | Taste and rating start empty; a "Same as last" chip fills both. |
-| Other users | No, just the owner | One-username allowlist stays. |
+| Other users | The owner plus people they invite; nobody else uses the owner's machine | Invite-only sign-up, per-user data, a `user_id` on every personal record. |
+| Sign-in | A simple sign-up and login of our own, hashes stored in an HF dataset | Username and password, Argon2id with a pepper, in a private `coffee-data-users` dataset. Replaces Sign in with Hugging Face. |
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
@@ -398,3 +494,4 @@ app, but it needs the bag and photo tables from 1 first.
 
 1. Is 0.5 the right stepper step on the DF64's dial, or do you move it in whole numbers?
 2. Remove the "Log a shot" issue form once the app works (the plan's default), or keep it as a fallback?
+3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
