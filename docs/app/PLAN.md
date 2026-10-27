@@ -42,8 +42,8 @@ small grind change) the timer plus three taps, and makes a new bag one photo and
 
 ### 1. Capture a bag
 
-1. Today screen → "New bag". The camera opens (a file input with `capture="environment"`, so no camera permission
-   prompt on iOS).
+1. Today screen → "New bag". The camera opens (a file input with `capture="environment"`, which opens Android's
+   camera without the app asking for camera permission).
 2. Take the photo. The phone downsizes it to about 1600 px on the long edge and removes EXIF (GPS included) before
    upload.
 3. The server sends the image to Claude with a fixed JSON schema: `roaster`, `coffee_name`, `roast_date`,
@@ -51,14 +51,20 @@ small grind change) the timer plus three taps, and makes a new bag one photo and
    skeleton of the match card meanwhile.
 4. The server matches roaster first (against `dim_roaster` names and domains), then the coffee within that
    roaster's catalog, using `shots.fuzzy_match_coffee`'s scorer. Listed coffees rank above delisted ones.
-5. The match card shows the catalog title, roaster, origin, process, tasting notes, the catalog image, price per
-   100 g and stock, and the roast date that was read ("Roasted Oct 18, 9 days ago").
-6. One tap on "Use this coffee" writes a `bags` record and opens the shot form. If the match is wrong: up to three
-   alternatives as big rows, then "Search" as a fallback. If nothing matches (a café bag, a roaster not in the
-   registry), the bag is saved with free text, the same way `coffee_freetext` works today.
-7. If the roast date couldn't be read, a date picker defaults to 7 days ago.
+5. A confident match uses the rule `shots.log_shot` already applies: the top score is at least 80 and at least 5
+   ahead of the next one. The match card then shows the catalog title, roaster, origin, process, tasting notes,
+   price per 100 g and stock, and the roast date that was read ("Oct 18 · day 9"). It shows no score; the
+   number would only be noise when the answer is clear.
+6. One tap on "Use this coffee" writes a `bags` record and opens the shot form. "Pick another match" opens the same
+   list as a weak match.
+7. A weak match (below 80, or two candidates within 5 points) skips the card. The sheet asks "Which one is it?",
+   says what was read from the bag, and lists up to three candidates as rows, each with its score ("match 68") so
+   the owner can see how close they are. Tapping a row picks it. "None of these: type the coffee" opens search; if
+   nothing matches (a café bag, a roaster not in the registry), the bag is saved with free text, the same way
+   `coffee_freetext` works today.
+8. If the roast date couldn't be read, a date picker defaults to 7 days ago.
 
-Two taps when the read is right. The bag becomes the "current bag" until another one is started or it's marked
+Two taps when the match is confident, three when it's weak. The bag becomes the "current bag" until another one is started or it's marked
 finished.
 
 ### 2. Log a shot
@@ -80,7 +86,7 @@ finished.
 
 Repeat shot that tasted the same: Pull again, Start, Stop, "Same as last", Save. Three taps plus the timer. If the
 taste or rating differs, it's taste and rating instead of "Same as last": four taps plus the timer. Saving without
-a time turns the button into "Save with 29 s?", so a forgotten timer costs one extra tap rather than a wrong record.
+a time turns the button into "Save with 29 s?", so a forgotten timer costs one extra tap and never saves a made-up time.
 
 ### 3. Review a coffee
 
@@ -117,7 +123,8 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 | Today | Current bag, "Pull again", last three shots, "New bag" | `mockups/today.html` |
 | First run | No bag yet: photograph one, or add a grinder | `mockups/first-run.html` |
 | Reading | The bag is being read: skeleton card, "Type it instead" | `mockups/reading.html` |
-| Capture | Camera and match card | `mockups/capture.html` |
+| Match | Camera and a confident match | `mockups/capture.html` |
+| Which one is it | A weak match: candidates with their scores | `mockups/match-weak.html` |
 | Read failed | The label couldn't be read: Retake, or type the coffee | `mockups/read-failed.html` |
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
 | Saved | Ratio, time window, advice, undo | `mockups/saved.html` |
@@ -184,21 +191,27 @@ host-only on `app.registry.coffee`, and links in invites use that address.
 ### Accounts and sign-in
 
 The owner asked for a simple sign-up and login of our own, with the hashed credentials kept in a Hugging Face
-dataset, rather than "Sign in with Hugging Face" (most invitees won't have an HF account). So:
+dataset, instead of "Sign in with Hugging Face" (most invitees won't have an HF account). So:
 
-**Where accounts live.** A third private dataset, `hf://datasets/jtouley/coffee-data-users`, holding two
+#### Where accounts live
+
+A third private dataset, `hf://datasets/jtouley/coffee-data-users`, holding two
 append-only tables, `users` and `invites` (see Data model). Keeping accounts apart from the lake and the photos
 means nothing that reads the lake (dbt, the MCP server, the weekly run) can see a password hash, and the token
 the weekly run uses doesn't need access to it. The Space loads both tables into memory at start and writes a new
 record (one commit) for every change.
 
-**Passwords.** Hashed with Argon2id (`argon2-cffi`, its default RFC 9106 low-memory parameters: 64 MiB, 3 passes,
+#### Passwords
+
+Hashed with Argon2id (`argon2-cffi`, its default RFC 9106 low-memory parameters: 64 MiB, 3 passes,
 4 lanes), with a per-hash random salt. Before hashing, the password is HMAC-ed with a pepper kept as a Space secret
 (`AUTH_PEPPER`), so a copy of the users dataset alone isn't enough to start guessing. Rules follow NIST 800-63B:
 at least 10 characters, no composition rules, and a check against a short list of common passwords. Changing a
 password writes a new `users` record.
 
-**Sign-up.** Only with an invite code.
+#### Sign-up
+
+Only with an invite code.
 
 1. The owner taps "Invite someone" and gets a code like `K7QD-M2XF-9RPA-T4WE` (80 random bits, base32), valid for
    7 days and usable once, and a link, `app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE`. "Share link" opens
@@ -210,23 +223,31 @@ password writes a new `users` record.
 3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a Space
    secret, and creates the `owner` account. After that the secret does nothing.
 
-**Sign-in.** Username and password. A failed attempt gets the same message whether the username exists or not, and
+#### Sign-in
+
+Username and password. A failed attempt gets the same message whether the username exists or not, and
 an unknown username is still checked against a dummy hash so the timing doesn't tell. Five failures for one
 username, or twenty from one IP, lock that key out for 15 minutes (kept in memory; a restart clears it, which is
 acceptable at this size).
 
-**Sessions.** No session table in the dataset (that would be a commit per login). The cookie is a signed token
+#### Sessions
+
+No session table in the dataset (that would be a commit per login). The cookie is a signed token
 (HMAC-SHA256 with the `SESSION_SECRET` Space secret) carrying `user_id`, `session_epoch` and the issue time. It is
 `HttpOnly`, `Secure` and `SameSite=Lax`, lasts 90 days, and renews itself on use. Each `users` record has a
 `session_epoch`. "Sign out everywhere", a password change and the owner disabling an account all bump it, which
 invalidates every older cookie. Writes also need an `X-Requested-With` header, which a cross-site form can't send,
 as CSRF protection on top of `SameSite`.
 
-**Forgotten passwords.** There's no email, so the owner issues a reset code from the Invite screen. It works like an
+#### Forgotten passwords
+
+There's no email, so the owner issues a reset code from the Invite screen. It works like an
 invite but is tied to an existing account, and using it sets a new password and bumps the epoch. The owner's own
 account can be reset with `OWNER_SETUP_CODE`.
 
-**Every request is scoped.** The server reads `user_id` from the cookie, never from the request body, and filters
+#### Every request is scoped
+
+The server reads `user_id` from the cookie, never from the request body, and filters
 every read and write by it. The in-memory caches are keyed by user. Tests cover one user trying to read, correct
 or retract another user's shot, bag, photo or equipment.
 
@@ -450,7 +471,7 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
   in one sentence. The app itself never shows one user another's data.
 - Leaving. Retracting records hides them in the app and in dbt, but the lake is append-only and HF keeps file
   history, so a retraction isn't erasure. If an invitee asks for their data to be erased, the owner deletes their
-  files from the three datasets and squashes the history (`HfApi.super_squash_history`). That's a deliberate, manual
+  files from the three datasets and squashes the history (`HfApi.super_squash_history`). It's a manual
   exception to append-only, and it's the reason accounts and photos live in their own datasets: erasing them doesn't
   rewrite the catalog's history.
 - Passwords never leave the Space in plain text and are never logged. Request logging drops the body of the
@@ -483,19 +504,19 @@ The app adds nothing to the weekly run's cost.
 
 Each one is usable on its own and goes through the normal PR and CI process.
 
-1. **Data model.** New lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
+1. Data model: new lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
    test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
-2. **App skeleton.** FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
+2. App skeleton: FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
    (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
    concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
-3. **Equipment, invites and the domain.** Setup screen, grinder-aware steppers and advice; invites, sign-up and
+3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers and advice; invites, sign-up and
    reset codes; `app.registry.coffee` in front of the Space and `registry.coffee` on the Pages site.
-4. **Bag capture.** Photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
+4. Bag capture: photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
-5. **Coffee page.** Catalog facts, best recipe, chart, shot list, correct and retract.
-6. **Offline.** Service worker, outbox, the JavaScript advice port with shared test cases.
-7. **Polish.** Dark mode check in a dark kitchen, haptics (Android Chrome supports them), left-hand layout, the
+5. Coffee page: catalog facts, best recipe, chart, shot list, correct and retract.
+6. Offline: service worker, outbox, the JavaScript advice port with shared test cases.
+7. Polish: dark mode check in a dark kitchen, haptics (Android Chrome supports them), left-hand layout, the
    empty states.
 
 Milestones 1 and 2 are the minimum that replaces the issue form at the machine, for the owner alone. Invitees can

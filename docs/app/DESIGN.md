@@ -1,6 +1,6 @@
 # Shot-logging app: design
 
-The plan is in [PLAN.md](PLAN.md). Mockups for twelve screens are in [mockups/](mockups/), each a self-contained
+The plan is in [PLAN.md](PLAN.md). Mockups for thirteen screens are in [mockups/](mockups/), each a self-contained
 HTML file with light and dark screenshots at 390 px. They show the owner's equipment (DF64 V2, Lelit Bianca,
 Pullman basket); the coffees, prices and shots are sample data.
 
@@ -41,11 +41,11 @@ from those instead. All six repositories could be reached.
 
 All six came to the same handful of conclusions without seeing each other's work:
 
-- The numbers are the hero. Dose, yield, time and ratio are set very large in tabular figures, like an instrument
-  readout. Nothing decorative competes with them.
-- Keep the warm paper ground and the brown accent from the site, and make dark mode a warm near-black, not grey.
+- Dose, yield, time and ratio are the largest things on screen, set in tabular figures like an instrument readout.
+  Nothing decorative competes with them.
+- Keep the warm paper ground and the brown accent from the site, and make dark mode a warm near-black.
 - The only image is the owner's own bag photo. No stock beans, no illustrated cups, no emoji.
-- Steppers, not dials or sliders. Free-spinning dials and precision sliders are hard with a wet thumb, and a
+- Steppers for every number. Free-spinning dials and precision sliders are hard with a wet thumb, and a
   gesture-only control has no fallback.
 - Numerals change instantly when stepped. "An instrument doesn't lag."
 - One primary action per screen, full width, in the thumb zone. Targets of 56 px or more.
@@ -53,7 +53,7 @@ All six came to the same handful of conclusions without seeing each other's work
   taps.
 - Taste is never shown by colour alone. Each state carries a word, and most added a shape or an arrow.
 - Capture is a full-bleed camera, then a match sheet with one confirm button and a quiet "not this one".
-- Corrections are new records, shown honestly. Undo writes a retraction.
+- Corrections are new records and are shown as corrections. Undo writes a retraction.
 
 ### Where they disagree, and what I chose
 
@@ -71,13 +71,13 @@ All six came to the same handful of conclusions without seeing each other's work
 | Dark mode default | follow the system; dark between 5 and 8 am | Follow the system. A clock-based theme surprises people. |
 | Rating prefill | empty (most); last value (one) | The owner decided: taste and rating start empty, and a "Same as last" chip fills both from the previous shot in one tap. Every rating stays a choice, and a repeat shot is still three taps. |
 
-From apple-design I took the parts that suit a utility: feedback on press rather than on release, sheets that
+From apple-design I took the parts that suit a utility: feedback on press instead of on release, sheets that
 follow the finger and settle with a critically damped spring, scroll-edge fades instead of hard rules under
 floating bars, tracking that tightens as type grows, and undo for slips instead of confirmation dialogs. I left out
 its translucent materials (glass over a paper page in a dark kitchen adds glare and nothing else) and its default
 to the system font (the condensed numeral is doing real work here).
 
-The chosen direction keeps the name two directions picked independently: **Bench Scale**. The app is a counter
+The chosen direction keeps the name two directions picked independently: Bench Scale. The app is a counter
 instrument: a paper-coloured page, hairline rules, big condensed numerals, a serif name for the coffee, one brown
 action, and a dial-in target that shows where the shot landed.
 
@@ -101,7 +101,7 @@ changed, and which rule drove it:
 | Mockups now have a plain status bar so they read as phone screens. | | |
 
 Things I considered and left alone: a scrub strip for values (MengTo, Owl-Listener) is a good later addition, but the
-buttons have to exist anyway; the left-hand mirror (Owl-Listener) is a setting, not a different mockup; Braun-style
+buttons have to exist anyway; the left-hand mirror (Owl-Listener) is a setting and needs no mockup of its own; Braun-style
 uppercase labels (web-design-engineer) stay out for the reason given above.
 
 ## Re-review
@@ -123,21 +123,22 @@ notes. They agreed far more than they disagreed. What they found, and what chang
 | No way out of the camera; no read-failed state; no password recovery, no Show toggle, no error copy on sign-in. | apple-design, Owl-Listener, landing-page-design | × and Retake on the camera, a read-failed screen, Show in password fields, "Ask jtouley for a reset code" on sign-in, and error copy in Components below. |
 | An invitee landed on the owner's sign-in screen; Copy and Share competed as equal buttons. | landing-page-design | Share sends `app.registry.coffee/join#<code>`, which opens "jtouley invited you" with the code filled in. Share link is the one primary action; Copy link is a text button inside the code box. |
 | The dotted path on the target ran back over itself along one line, so the order couldn't be read. | Owl-Listener, Krehel, landing-page-design | Marks are numbered in order, with a paper halo behind each number; the path is 1.5 px `--ink-2`. The sample shots spread in ratio as real ones would. |
-| Jargon: "score 94", "EXIF removed", the basket's SKU, "1 bag read today of 10". The Reading screen said "only the label text is used", which wasn't true: the image goes to Claude. | four | "Read in 3.2 s · location removed"; no score; no SKU; "1 of 10 bag reads used today"; "The photo is sent to Claude to read the label, with its location removed." |
+| Jargon: "score 94", "EXIF removed", the basket's SKU, "1 bag read today of 10". The Reading screen said "only the label text is used", which wasn't true: the image goes to Claude. | four | A confident match shows no score; a weak one asks "Which one is it?" and shows each candidate's score ("match 68"), where the number helps. No read time and no "EXIF" on the camera; the Reading screen says once, in plain words, that the photo goes to Claude with its location removed. No SKU; "1 of 10 bag reads used today". |
 | The scroll-edge fade sat inside the opaque dock, so it could never show, and the tab bar still had a hairline. | apple-design | The fade sits 20 px above the dock and the tab bar, over the content; no hairline. Sign in turns it off because the button follows the field directly. |
 | The two advice lines said different things in different sizes. | apple-design, Krehel | One string, "In the window. Keep grind 11.", in the serif at 24 px on Today and Saved. |
 | Rating 1 to 5 had no anchor. | Owl-Listener | "worst" and "best" under 1 and 5. |
 | No manual theme switch. | Owl-Listener | Setup has Theme: Same as phone, Light, Dark. |
 | The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". The repo and the public dataset keep "Coffee Data" for now (an open question in the plan). |
 
-Deliberate deviations the reviewers pointed out and that stay:
+Reviewer suggestions I didn't take:
 
 - Two typefaces (landing-page-design allows one). The condensed numeral and the serif name do different jobs.
 - Sizes and radii aren't Tailwind's scale (landing-page-design). They're this app's own declared scale.
 - No word-by-word reveal (landing-page-design calls it mandatory). It delays the one thing you want to read.
-- The undo countdown is linear (landing-page-design forbids default curves). A countdown that eases misreports the
+- The undo countdown is linear (landing-page-design forbids default curves). An eased countdown would misstate the
   time left.
-- Press feedback is 100 ms at 0.97 (apple-design) rather than 150 ms at 0.96 (Krehel). At 7am, shorter wins.
+- Press feedback stays at 100 ms and 0.97 (apple-design) instead of Krehel's 150 ms and 0.96; the shorter press feels
+  quicker.
 - No Braun-style uppercase labels (web-design-engineer's Rams recipe). Sentence case reads better half awake.
 
 ## Tokens
@@ -211,7 +212,7 @@ stacks its steppers under the numeral instead of beside it.
 | Sheet in / out | spring, damping 1.0, response 0.3 s; rises from and returns to the bottom edge; follows the finger when dragged |
 | Saved: the new mark moves to its place on the target | spring, damping 1.0, response 0.36 s |
 | Saved: advice fades in | 200 ms ease-out, after the mark settles |
-| Undo countdown | 5 s, linear (a countdown should be honest about time) |
+| Undo countdown | 5 s, linear (an eased countdown would misstate the time left) |
 
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
 `prefers-reduced-motion: reduce`, every movement becomes an instant swap or a short crossfade. No `transition: all`.
@@ -221,78 +222,134 @@ short ticks on save, fired on the same frame as the visual change.
 
 ## Components
 
-**Field row.** Label above, numeral and unit below, steppers on the right. When the last shot's advice suggests a
+#### Field row
+
+Label above, numeral and unit below, steppers on the right. When the last shot's advice suggests a
 change, the label carries an accent chip with the suggestion ("Try 11"); tapping it sets the value. The app never
 changes a value on its own. Long-press on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a
 numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 
-**Time field.** Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
+#### Time field
+
+Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
 are. While the timer runs, the numeral ticks once a second and the button reads Stop. Saving with no time changes
 the Save button to "Save with 29 s?"; a second tap saves with the last time.
 
-**Same as last.** An accent chip on the Taste row: "Same as last · Balanced, 4". One tap fills the taste segment and
+#### Same as last
+
+An accent chip on the Taste row: "Same as last · Balanced, 4". One tap fills the taste segment and
 the rating pip, visibly, with a tick. Tapping another segment or pip afterwards overrides it. Hidden when there's no
 earlier shot of this coffee.
 
-**Taste segments.** Three equal segments with the word and what it means for the grind ("grind finer", "keep",
+#### Taste segments
+
+Three equal segments with the word and what it means for the grind ("grind finer", "keep",
 "grind coarser"). Selected: tinted background and a 2 px inset ring in the taste colour. No default.
 
-**Rating pips.** Five squares, 1 to 5, "worst" and "best" under the ends. None selected by default; selected is
+#### Rating pips
+
+Five squares, 1 to 5, "worst" and "best" under the ends. None selected by default; selected is
 filled with `--ink`.
 
-**Taste tag.** In lists: the word on its tint with the shape mark (hollow circle sour, filled circle balanced, square
+#### Taste tag
+
+In lists: the word on its tint with the shape mark (hollow circle sour, filled circle balanced, square
 bitter). On the coffee page's chart legend, the same marks with plain `--ink-2` words and no tint, so the legend
 doesn't look like a row of filters.
 
-**Dial-in target.** SVG, 18 to 38 s across, 1:1.6 to 1:2.5 up, gridlines at 20/25/30/35 s and 1:1.8/2.0/2.2/2.4. The
+#### Dial-in target
+
+SVG, 18 to 38 s across, 1:1.6 to 1:2.5 up, gridlines at 20/25/30/35 s and 1:1.8/2.0/2.2/2.4. The
 window is a dashed rectangle with a light fill and the word "window" inside its lower-right corner. On Today and
 Saved, the marks are numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a
 ring. On the coffee page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it
 says the same thing in words.
 
-**Chips.** Outlined, 44 tall, 8 radius. Accent outline for actions ("Same as last", "Try 11"); `--control` outline
+#### Chips
+
+Outlined, 44 tall, 8 radius. Accent outline for actions ("Same as last", "Try 11"); `--control` outline
 with ink text for a picker (the grinder and basket chip). Never used for status.
 
-**Status text.** Role or state after a name, in 13 px `--ink-2` with no border: "jtouley owner", "Invite from Oct
+#### Status text
+
+Role or state after a name, in 13 px `--ink-2` with no border: "jtouley owner", "Invite from Oct
 24 not used yet".
 
-**List link.** A 56-tall row with a hairline below, 17 px ink text and an ink-2 chevron when it opens something.
-Actions that happen in place (Sign out) have no chevron. Destructive ones are `--danger`, have no chevron, and give
-a 5 s undo strip rather than a confirmation dialog.
+#### List link
 
-**Spec sheet.** Two columns, label 112 px wide in `--ink-2` and value, hairline between rows. For the match card,
+A 56-tall row with a hairline below, 17 px ink text and an ink-2 chevron when it opens something.
+Actions that happen in place (Sign out) have no chevron. Destructive ones are `--danger`, have no chevron, and give
+a 5 s undo strip instead of a confirmation dialog.
+
+#### Spec sheet
+
+Two columns, label 112 px wide in `--ink-2` and value, hairline between rows. For the match card,
 catalog facts and nothing else.
 
-**Text input.** 56 tall, 17 px text, `--sheet` background, `--control` border, 8 radius. The label sits above it and
+#### Text input
+
+56 tall, 17 px text, `--sheet` background, `--control` border, 8 radius. The label sits above it and
 stays; hints and errors sit below in 13 px, errors in `--danger`. Focus: accent border plus a 3 px accent ring at
 22%. Password fields have a 48-wide "Show" button inside. `autocomplete` is `username`, `current-password` or
 `new-password`, so Android's password manager fills and saves them. Errors never clear what was typed.
 
-**Invite code.** Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown at 44 px
+#### Invite code
+
+Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown at 44 px
 across two lines in a dashed box, with the link under it and a "Copy link" text button. The input on Sign up
 accepts it with or without dashes, in any case, and checks it as soon as it's complete.
 
-**Camera.** Full-bleed, `--camera` background, a corner-bracket frame for the bag, × at top left and Retake at top
-right (both 48 × 48, `--on-camera`), and one status line at the bottom left.
+#### Match card
 
-**Sheet.** 14 px top corners, a 36 × 5 grabber, `--sheet` background. Dragging down past a third of its height
+The sheet after a confident read (top score at least 80 and at least 5 ahead of the next, the rule `shots.log_shot`
+already uses): "Found in the catalog", the coffee name as the title, roaster, then a spec sheet of roast date (marked
+"read from the bag"), origin, notes, price and stock. No score, no read time. "Use this coffee" and "Pick another
+match".
+
+#### Weak match
+
+When the read isn't confident: the title "Which one is it?", one sentence saying what the bag said, and up to three
+candidate rows with name, origin, process, stock and the score as "match 68" in `--ink-2`. The score appears only
+here, where it helps choose. Rows are the actions; the dock holds "None of these: type the coffee".
+
+#### Camera
+
+Full-bleed, `--camera` background, a corner-bracket frame for the bag, × at top left and Retake at top
+right (both 48 × 48, `--on-camera`). A status line at the bottom left appears only while reading ("Reading the
+label") or after a failed read.
+
+#### Sheet
+
+14 px top corners, a 36 × 5 grabber, `--sheet` background. Dragging down past a third of its height
 dismisses it back to the camera (Retake).
 
-**Reading state.** The match card's shape as skeleton blocks (no spinner, no shimmer), "Looking for roaster, coffee
+#### Reading state
+
+The match card's shape as skeleton blocks (no spinner, no shimmer), "Looking for roaster, coffee
 and roast date", the expected wait, the privacy line, and "Type the coffee" so nobody waits on the model.
 
-**Bag photo.** 6 radius with a 1 px inner outline so a pale bag doesn't melt into the paper. Dimmed slightly in dark
+#### Bag photo
+
+6 radius with a 1 px inner outline so a pale bag doesn't melt into the paper. Dimmed slightly in dark
 mode. In the mockups it's a hatched placeholder.
 
-**Dock.** The bottom area holding the primary button and at most one text button under it. Paper (or sheet)
+#### Dock
+
+The bottom area holding the primary button and at most one text button under it. Paper (or sheet)
 background, a 20 px fade above it where content scrolls under, safe-area padding below, no hairline.
 
-**Navigation.** Three text tabs, Today, Coffees and Setup. The active one is ink, weight 600, with the accent dot
+#### Navigation
+
+Three text tabs, Today, Coffees and Setup. The active one is ink, weight 600, with the accent dot
 above it; the others are `--ink-2`. A 20 px fade above, no hairline. Sign in, Sign up and the camera have no tabs.
 
-**Sync status.** Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never blocks anything.
+#### Sync status
 
-**Undo strip.** `--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
+Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never blocks anything.
+
+#### Undo strip
+
+`--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
 that shrinks over 5 s. Undo writes a retraction record.
 
 ## Copy
@@ -310,6 +367,7 @@ Errors say what happened and what to do next, and keep what was typed:
 | Sign up, code used or expired | This invite has already been used. Ask jtouley for a new one. / This invite expired on November 3. |
 | Sign up, username taken | Someone already has that username. Try another. |
 | Sign up, short password | Use at least 10 characters. |
+| Weak match | The bag says Larkspur, “Hambela”, roasted Oct 18. None of these is a close match, so pick the right one. |
 | Reading failed | The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee. |
 | Daily read limit | You’ve used today’s 10 bag reads. Type the coffee, or try again tomorrow. |
 | Offline save | Saved on this phone. It’ll sync when you’re back online. |
