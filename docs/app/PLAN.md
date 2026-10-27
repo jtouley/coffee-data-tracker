@@ -16,7 +16,8 @@ small grind change) the timer plus three taps, and makes a new bag one photo and
   with one tap.
 - Record equipment once (grinder, machine, basket) and have every shot point at the grinder it was ground on, so a
   grind setting means something across grinders.
-- Show dial-in advice the moment a shot is saved, using the same rules as `shots.suggest_next`.
+- Show what a shot did the moment it's saved: ratio, time against the 25 to 32 s window, taste, and where it sits
+  among this bag's shots. The app doesn't suggest grind changes yet (see Later: a dial-in model).
 - Give each coffee a page with its shots, best recipe, and the catalog's current price and stock.
 - Keep the lake append-only. New tables and new nullable columns only; every existing shot stays valid.
 - Keep shots and bag photos private. Neither reaches the public tables, the public site or git. Shots come off
@@ -72,17 +73,18 @@ finished.
 1. Today shows the current bag and a "Pull again" button with the last recipe ("18.0 → 36.4 g · grind 11").
 2. "Pull again" opens the shot form prefilled from the last shot of this bag (or of this coffee, if the bag is
    new): dose, yield, grind, water temp, grinder, basket, brew method, milk drink. Time is not prefilled: it starts
-   as "Not timed · last 29 s", because a copied time would be saved as if it were measured and would feed the
-   advice. If the last shot's advice said "go finer to 11", the grind field shows 12 with a "Try 11" chip; one tap
-   takes the suggestion. The app never changes a value on its own.
+   as "Not timed · last 29 s", because a copied time would be saved as if it were measured. The grind field shows
+   the last shot's grind and nothing else; the app doesn't suggest a different one.
 3. Adjust what changed with steppers (dose and yield in 0.1 g, time in 1 s, grind in the grinder's own step size).
    Time has two ways in, both always available: the built-in timer (Start when the pump starts, Stop when it
    stops) or typing it. "Type" opens a numeric keypad; tapping any numeral does the same for that field.
 4. Pick taste (sour, balanced, bitter) and rating (1 to 5). Both start empty; they are the only new information in
    a repeat shot. A "Same as last" chip above them ("Same as last: balanced, 4") fills both in one tap when the shot
    tasted like yesterday's.
-5. "Save shot". The saved screen shows the ratio, the time against the 25 to 32 s window and the next-shot advice,
-   with "Undo" for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
+5. "Save shot". The saved screen shows the ratio, the time against the 25 to 32 s window, the taste, the shot's
+   place on the dial-in target among this bag's shots, and one line comparing it with the last shot ("Inside the
+   window, two seconds slower than Monday's shot"; "Ran fast at 22 s, outside the window"). It describes what
+   happened and doesn't say what to change. "Undo" stays for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
 
 Repeat shot that tasted the same: Pull again, Start, Stop, "Same as last", Save. Three taps plus the timer. If the
 taste or rating differs, it's taste and rating instead of "Same as last": four taps plus the timer. Saving without
@@ -99,7 +101,7 @@ every shot of this coffee coloured by taste, and the shot list. Each shot opens 
 ### 4. Manage equipment
 
 Settings → Equipment. A list of grinders, machines and baskets. Each has a name and a few fields that matter for
-advice: a grinder's scale (min, max, step) and which way is finer, a basket's nominal dose. One of each is marked
+the steppers and, later, the dial-in model: a grinder's scale (min, max, step) and which way is finer, a basket's nominal dose. One of each is marked
 default. Adding a grinder takes a name and those three numbers. Retiring one hides it from pickers but keeps old
 shots pointing at it. Changes are new records, with the latest per `equipment_id` winning.
 
@@ -127,7 +129,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 | Which one is it | A weak match: candidates with their scores | `mockups/match-weak.html` |
 | Read failed | The label couldn't be read: Retake, or type the coffee | `mockups/read-failed.html` |
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
-| Saved | Ratio, time window, advice, undo | `mockups/saved.html` |
+| Saved | Ratio, time against the window, taste, the target, a one-line comparison, undo | `mockups/saved.html` |
 | Coffee | One coffee: catalog facts, best recipe, chart, shots | `mockups/coffee.html` |
 | Setup | Equipment, plus the account: invite someone, sign out | `mockups/equipment.html` |
 | Sign in | Username and password | `mockups/sign-in.html` |
@@ -150,12 +152,12 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 
 | Option | For | Against |
 |---|---|---|
-| A. Hugging Face Space (Docker, FastAPI) | Same account as the lake, so the token never leaves HF. Python, so it imports `coffeedata` directly: `log_shot`, `fuzzy_match_coffee`, `suggest_next` and the lake writer are reused, not rewritten. Free CPU tier. Secrets in Space settings. | Free Spaces sleep after 48 hours without traffic, so the first shot after a trip waits for a cold start (tens of seconds). The disk is ephemeral, so nothing can wait in local staging. |
-| B. Cloudflare Workers + Pages | Never sleeps, fast everywhere, free at this volume. | JavaScript. Matching, advice and the Parquet writer would be a second implementation that drifts from the Python one. Parquet writing from a Worker is awkward. |
+| A. Hugging Face Space (Docker, FastAPI) | Same account as the lake, so the token never leaves HF. Python, so it imports `coffeedata` directly: `log_shot`, `fuzzy_match_coffee` and the lake writer are reused, not rewritten. Free CPU tier. Secrets in Space settings. | Free Spaces sleep after 48 hours without traffic, so the first shot after a trip waits for a cold start (tens of seconds). The disk is ephemeral, so nothing can wait in local staging. |
+| B. Cloudflare Workers + Pages | Never sleeps, fast everywhere, free at this volume. | JavaScript. Matching and the Parquet writer would be a second implementation that drifts from the Python one. Parquet writing from a Worker is awkward. |
 | C. Small VM or container host (Fly.io, Render, a home server) | Python reuse, always on if paid. | Another account and bill to look after; a home server isn't reachable without a tunnel. |
-| D. No server: static app that opens GitHub issues | Reuses the existing issue-form workflow. | Needs a GitHub token on the phone, takes a minute per shot through Actions, and can't do photos or instant advice. |
+| D. No server: static app that opens GitHub issues | Reuses the existing issue-form workflow. | Needs a GitHub token on the phone, takes a minute per shot through Actions, and can't do photos or show the saved summary right away. |
 
-Recommendation: A, the Space. Code reuse is the deciding factor: the matching and advice rules already have tests,
+Recommendation: A, the Space. Code reuse is the deciding factor: the matching rules and the lake writer already have tests,
 and a second implementation would drift. The 48-hour sleep doesn't matter for daily use; if it starts to annoy,
 upgrading the Space's hardware to an always-on tier is one setting. The Space's own code lives in this repo
 (`app/`) and is pushed to the Space by a workflow, so the Space repo never holds anything hand-edited.
@@ -265,7 +267,7 @@ Each action is one Hugging Face commit, made by the Space with the existing `Lak
 - Equipment change: one `equipment` file.
 
 `Lake.publish` already retries with backoff and treats files that landed on a lost response as uploaded. A commit
-takes a second or two. The phone shows the saved screen immediately (the advice is computed from data the server
+takes a second or two. The phone shows the saved screen immediately (the summary needs only the shot and data the server
 already holds) and marks the shot as synced when the commit returns.
 
 The phone generates `shot_id` and `bag_id` (UUIDs) before sending. A retried request writes a second file for the
@@ -318,9 +320,8 @@ Kitchen Wi-Fi is usually fine, but a shot should never be lost to a dropped conn
 - The app is a PWA with a service worker that caches the shell, so it opens offline.
 - Every write goes through an outbox in IndexedDB and is retried until the server acknowledges the commit. The
   Today screen shows a small "2 waiting to sync" line when the outbox isn't empty.
-- Offline, the form still prefills from the locally cached last shots, and advice is computed in the browser with
-  a short JavaScript port of `suggest_next`'s rules. That's the one piece of duplicated logic, kept small and
-  checked against the Python version with shared test cases.
+- Offline, the form still prefills from the locally cached last shots, and the saved screen draws its summary and
+  target from them. Nothing of the server's logic is duplicated in the browser.
 - Bag capture needs the network (the photo has to be read). Offline, "New bag" saves the photo to the outbox and
   lets the owner type the coffee or pick a recent one; the read and match happen when it syncs.
 
@@ -344,8 +345,8 @@ have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`)
 | `kind` | string | `grinder`, `machine` or `basket` |
 | `name` | string | "DF64 V2" |
 | `model` | string | optional |
-| `scale_min`, `scale_max`, `scale_step` | double | grinders only; the step feeds the stepper and the advice |
-| `finer_is_lower` | bool | grinders only; `suggest_next` already takes this argument |
+| `scale_min`, `scale_max`, `scale_step` | double | grinders only; the step feeds the stepper |
+| `finer_is_lower` | bool | grinders only; `suggest_next` takes it, and the dial-in model will need it |
 | `basket_dose_g` | double | baskets only |
 | `is_default` | bool | |
 | `retired` | bool | hidden from pickers, kept for history |
@@ -376,13 +377,24 @@ have no `user_id`; dbt fills it with the owner's id (a dbt var, `owner_user_id`)
 | `photo_id` | string | UUID |
 | `user_id` | string | |
 | `taken_at` | timestamp | |
-| `image` | binary | the JPEG bytes, EXIF removed, about 1600 px on the long edge |
+| `image` | struct<`bytes`: binary, `path`: string> | Hugging Face's `Image` layout: the JPEG bytes (EXIF removed, about 1600 px on the long edge) and a file name, `<photo_id>.jpg` |
 | `media_type` | string | `image/jpeg` |
 | `width`, `height`, `bytes` | int | |
 | `sha256` | string | of `image`; the same bag photographed twice is easy to spot |
 
-Photos are Parquet like everything else, one row per file, so `Lake.write` handles them with one new schema entry
-(a `pa.binary()` column) and no new code path. The photo dataset is opened as its own `Lake`
+Photos are Parquet like everything else, one photo per file, so `Lake.write` handles them with one new schema
+entry and no new code path. The `image` column uses the same layout as the `datasets` library's `Image` feature, and
+the schema carries the same metadata it writes, under the `huggingface` key:
+
+```json
+{"info": {"features": {"photo_id": {"dtype": "string", "_type": "Value"}, "image": {"_type": "Image"}, ...}}}
+```
+
+`Lake.write` builds the table against the schema in `SCHEMAS`, so putting this metadata on the `photos` schema is
+enough for every file to carry it. With it, `datasets.load_dataset` returns the column as images, and the Hub's
+dataset viewer shows thumbnails. (The viewer works on private datasets only for a PRO account or a Team or
+Enterprise organization, so on the free tier the thumbnails won't appear in the browser; the files are the same
+either way.) The photo dataset is opened as its own `Lake`
 (`COFFEEDATA_PHOTOS=hf://datasets/jtouley/coffee-data-photos`). The `photo_id` on a `bags` row is the only link
 from the main lake. Parquet's compression won't shrink a JPEG further, so the files are about the size of the
 image.
@@ -439,7 +451,8 @@ and nothing about an old shot changes. `Shot` in `models.py` gains the same opti
 optional `grinder_name` argument that resolves to an `equipment_id` by name. (Not `grinder`: `shots.ALIASES`
 already maps `grinder` to `grinder_setting`.)
 
-A grind setting is now only comparable within one grinder. `suggest_next` and `mart_dial_in` should group by
+A grind setting is now only comparable within one grinder. `suggest_next` (still used by the MCP server and the
+issue-form replies) and `mart_dial_in` should group by
 `(coffee, grinder_id)` when `grinder_id` is set, and treat null as "the grinder used before equipment existed".
 
 ### dbt changes
@@ -460,9 +473,12 @@ A grind setting is now only comparable within one grinder. `suggest_next` and `m
 ## Privacy
 
 - Bag photos stay private. They go to a separate private dataset, `hf://datasets/jtouley/coffee-data-photos`, as
-  Parquet files with the image in a binary column. The main lake is private too, but a separate dataset means a
+  Parquet files in Hugging Face's `Image` layout, one photo per file. The main lake is private too, but a separate dataset means a
   mistake in the public export can't reach a photo, and the photos could be deleted wholesale without touching the
   lake's history. Only the `photo_id` is in the main lake.
+- Why Parquet and not plain JPEG files: a Parquet photo goes through the same `Lake.write` and `Lake.publish` as every
+  other record, and the image and its metadata (who, when, size, hash) are one immutable file that can't drift apart.
+  Plain JPEGs would need a second write path for binary files and a separate metadata table kept in step with them.
 - EXIF is removed on the phone before upload, so GPS coordinates of the kitchen never leave it. The server
   re-encodes the JPEG as a second check before writing the bytes into Parquet.
 - Photos are served only through the Space, to the user who took them, never by a direct HF URL. The Space reads
@@ -508,20 +524,35 @@ Each one is usable on its own and goes through the normal PR and CI process.
    test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
 2. App skeleton: FastAPI on a Space, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
-   (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
+   (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, the timer and typed time, and the saved summary. Online only. Includes the approved
    concurrent-commit test. The "Log a shot" issue form is removed at the end of this milestone.
-3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers and advice; invites, sign-up and
+3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers; invites, sign-up and
    reset codes; `app.registry.coffee` in front of the Space and `registry.coffee` on the Pages site.
 4. Bag capture: photo upload, EXIF stripping, the photo dataset, the Claude read, roaster-then-coffee matching,
    the match card and its fallbacks. The Opus/Haiku comparison on real bags decides the default model.
 5. Coffee page: catalog facts, best recipe, chart, shot list, correct and retract.
-6. Offline: service worker, outbox, the JavaScript advice port with shared test cases.
+6. Offline: service worker and outbox.
 7. Polish: dark mode check in a dark kitchen, haptics (Android Chrome supports them), left-hand layout, the
    empty states.
 
 Milestones 1 and 2 are the minimum that replaces the issue form at the machine, for the owner alone. Invitees can
 join from milestone 3. Capture (4) is the reason for the
 app, but it needs the bag and photo tables from 1 first.
+
+## Later: a dial-in model
+
+The app doesn't suggest grind changes. The current rule ("sour or fast, go finer") is a rule of thumb, not something
+learned from these shots, and a confident-looking suggestion from it would be wrong often enough to mislead. The
+data the app collects is what a better suggestion needs: grind, dose, yield, time, taste, rating, grinder and the
+bag's roast date.
+
+Once a coffee has enough shots on one grinder (about 20), fit a small per-bag model of time and taste against grind,
+dose and days off roast; a regression with a term per bag is enough to start. Compare it with the rule of thumb on
+held-out shots: for each held-out shot, which one better predicted the time and taste of the next one? Show a
+suggestion in the app only when the model reports its confidence and beats the rule of thumb on that test, and say
+how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer.
+
+`shots.suggest_next` stays as it is for the MCP server and the issue-form replies.
 
 ## Decisions (October 27)
 
@@ -531,7 +562,8 @@ app, but it needs the bag and photo tables from 1 first.
 | Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Seeded as the defaults; 18 g is the default first dose. The mockups show them. |
 | Public site | No shots on it | Shot sections leave `site.py` in milestone 1; the issue form goes in milestone 2. |
 | Cold start | Fine for now | Free CPU Space. |
-| Photos | Stay private, still Parquet | Separate private dataset, image bytes in a Parquet `binary` column, no new file type in the lake. |
+| Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
+| Grind suggestions | Deferred until there's a model trained on the owner's shots | The app describes each shot and suggests nothing. `shots.suggest_next` stays for the MCP and issue-form replies. See Later: a dial-in model. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
 | Rating default | Empty, with a way to say "same as last" | Taste and rating start empty; a "Same as last" chip fills both. |
 | Other users | The owner plus people they invite; nobody else uses the owner's machine | Invite-only sign-up, per-user data, a `user_id` on every personal record. |

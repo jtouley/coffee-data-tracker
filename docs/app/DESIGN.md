@@ -59,15 +59,15 @@ All six came to the same handful of conclusions without seeing each other's work
 
 | Question | Positions | Choice and why |
 |---|---|---|
-| Typeface | Geist; Atkinson + Plex Mono; Newsreader + Barlow Condensed; system-ui + Newsreader; Archivo + JetBrains Mono | Archivo for everything functional, using its width axis: 100% for labels, 72% for numerals, so four-digit values fit beside 56 px buttons. Newsreader only for coffee names and the advice sentence. A condensed numeral is what lets the log screen keep big numbers and big buttons on one row. The serif makes the coffee the subject and the numbers the tool, as two directions argued independently. |
+| Typeface | Geist; Atkinson + Plex Mono; Newsreader + Barlow Condensed; system-ui + Newsreader; Archivo + JetBrains Mono | Archivo for everything functional, using its width axis: 100% for labels, 72% for numerals, so four-digit values fit beside 56 px buttons. Newsreader only for coffee names and the shot summary. A condensed numeral is what lets the log screen keep big numbers and big buttons on one row. The serif makes the coffee the subject and the numbers the tool, as two directions argued independently. |
 | Depth | shadow rings (Krehel); flat with hairlines (the other five) | Flat with hairlines. Shadows on a phone in a dim kitchen read as smudges, and spec rows don't need cards. |
 | Radius | 2–4 px (Rams); 10 px (site); 16–20 px | 8 px on controls and buttons, 6 px on photos, 14 px on the top of a sheet. Squarer than the soft-app default but less cold than the Rams recipe. |
 | Taste colours | traffic-light; brown ramp; slate-blue bitter | Citrus for sour, sage green for balanced, a plum for bitter. A brown ramp is clever but puts "balanced" on the accent colour, so the Save button and a tag would look alike. Red would read as an error. Plum stays clear of both and still reads as "too far". Each tag also has a mark: a hollow circle for sour, a filled circle for balanced, a square for bitter. |
 | Labels | sentence case (three); tracked uppercase (two) | Sentence case at 13 px. Tracked uppercase eyebrows are one of the tells the no-slop skill names, and they're harder to read half awake. |
-| Signature element | ratio bar; extraction gauge; dose-to-yield line; word-by-word tagline; none | The dial-in target: time across, ratio up, the 25–32 s × 1:1.8–2.3 window shaded, each shot of the bag as a mark, joined oldest to newest. It merges the ratio bar and the extraction gauge into the one picture that explains the advice, and it's real data, so it repeats on Today, the log screen, the saved screen and the coffee page. The word-by-word reveal is cut: it delays the one thing you want to read. |
+| Signature element | ratio bar; extraction gauge; dose-to-yield line; word-by-word tagline; none | The dial-in target: time across, ratio up, the 25–32 s × 1:1.8–2.3 window shaded, each shot of the bag as a mark, joined oldest to newest. It merges the ratio bar and the extraction gauge into the one picture that shows how a bag is dialing in, and it's real data, so it repeats on Today, the log screen, the saved screen and the coffee page. The word-by-word reveal is cut: it delays the one thing you want to read. |
 | Shot form layout | chips select one big active value (Owl); 2×2 grid plus a scrub strip (MengTo); stacked rows (Krehel, Rams, landing) | Stacked rows: dose, yield, time, grind, each with its numeral and its own − and + on the right. Everything is visible at once, and a repeat shot is mostly reading. The scrub strip is a nice extra for later but needs the buttons anyway. |
-| Advice applying itself | one tap applies it (MengTo); never edits the value (Owl) | The grind field keeps the last value and shows the suggestion next to it. One tap takes the suggestion. Advice that edits your recipe silently would be wrong at least sometimes. |
-| Motion on save | staggered entrance; spring settle; line draw; none | One movement: the new mark travels from the previous shot's position on the target to its own, 360 ms, then the advice fades in. It shows the change you made. Nothing else on the screen moves. |
+| Advice applying itself | one tap applies it (MengTo); never edits the value (Owl) | Moot for now: the owner deferred all grind suggestions until a model trained on their shots exists (PLAN, "Later: a dial-in model"). The grind field shows the last shot's value and nothing else. |
+| Motion on save | staggered entrance; spring settle; line draw; none | One movement: the new mark travels from the previous shot's position on the target to its own, 360 ms, then the summary line fades in. It shows the change you made. Nothing else on the screen moves. |
 | Dark mode default | follow the system; dark between 5 and 8 am | Follow the system. A clock-based theme surprises people. |
 | Rating prefill | empty (most); last value (one) | The owner decided: taste and rating start empty, and a "Same as last" chip fills both from the previous shot in one tap. Every rating stays a choice, and a repeat shot is still three taps. |
 
@@ -95,8 +95,8 @@ changed, and which rule drove it:
 | A grabber on the match sheet, so it reads as something you can pull down. | Familiarity; sheets you can grab. | apple-design §3, §16 |
 | Tracking now changes with size: −0.03em on the 112 px ratio, −0.015em on other numerals, +0.01em on 13 px labels. Serif headings use `text-wrap: balance`. | Tracking is size-specific, never one value. | apple-design §15; Krehel better-typography |
 | Field rows got 10 px of space above the label so the label belongs to its number, not the rule above it. | Proximity implies relationship. | apple-design §16; Owl-Listener |
-| The advice on Today is now set in the serif, like on Saved, so "what to do next" always has the same voice. | Things that look the same behave the same. | apple-design §16 |
-| "11, lower is finer" became "11 of 90". Direction lives in the grinder profile and the taste segments ("grind finer"). | Concise, specific labels. | Krehel better-writing |
+| The line under the target on Today is now set in the serif, like on Saved, so the shot summary always has the same voice. | Things that look the same behave the same. | apple-design §16 |
+| "11, lower is finer" became "11 of 90". Direction lives in the grinder profile. | Concise, specific labels. | Krehel better-writing |
 | Chart text moved from `--ink-3` (3.5:1) to `--ink-2` (6.5:1). | Every text pair meets 4.5:1. | Krehel better-colors; Owl-Listener color-system |
 | Mockups now have a plain status bar so they read as phone screens. | | |
 
@@ -125,7 +125,7 @@ notes. They agreed far more than they disagreed. What they found, and what chang
 | The dotted path on the target ran back over itself along one line, so the order couldn't be read. | Owl-Listener, Krehel, landing-page-design | Marks are numbered in order, with a paper halo behind each number; the path is 1.5 px `--ink-2`. The sample shots spread in ratio as real ones would. |
 | Jargon: "score 94", "EXIF removed", the basket's SKU, "1 bag read today of 10". The Reading screen said "only the label text is used", which wasn't true: the image goes to Claude. | four | A confident match shows no score; a weak one asks "Which one is it?" and shows each candidate's score ("match 68"), where the number helps. No read time and no "EXIF" on the camera; the Reading screen says once, in plain words, that the photo goes to Claude with its location removed. No SKU; "1 of 10 bag reads used today". |
 | The scroll-edge fade sat inside the opaque dock, so it could never show, and the tab bar still had a hairline. | apple-design | The fade sits 20 px above the dock and the tab bar, over the content; no hairline. Sign in turns it off because the button follows the field directly. |
-| The two advice lines said different things in different sizes. | apple-design, Krehel | One string, "In the window. Keep grind 11.", in the serif at 24 px on Today and Saved. |
+| The two advice lines said different things in different sizes. | apple-design, Krehel | One string in the serif at 24 px on Today and Saved. It now describes the shot ("Inside the window, two seconds slower than Monday’s shot") since grind suggestions were deferred. |
 | Rating 1 to 5 had no anchor. | Owl-Listener | "worst" and "best" under 1 and 5. |
 | No manual theme switch. | Owl-Listener | Setup has Theme: Same as phone, Light, Dark. |
 | The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". The repo and the public dataset keep "Coffee Data" for now (an open question in the plan). |
@@ -183,7 +183,7 @@ The scale is 12, 13, 15, 17, 20, 24, 34, 44, 56 and 112 px. Nothing else.
 | Units | Archivo, width 85% | 20 beside 56 and 44, 17 beside 34 and 24, 13 beside 20 | `--ink-2`, on the baseline |
 | Wordmark | Newsreader | 44 / 500 | −0.02em, 1 |
 | Page title | Newsreader | 34 / 500 | −0.02em, 1.1 |
-| Coffee name, advice | Newsreader | 24 / 500 | 0, 1.15 to 1.25 |
+| Coffee name, shot summary | Newsreader | 24 / 500 | 0, 1.15 to 1.25 |
 | Row title, button, input | Archivo | 17 / 600 (inputs 400) | 0 |
 | Body | Archivo | 15 / 400 | 0, 1.45 |
 | Label | Archivo | 13 / 500 | +0.01em |
@@ -211,7 +211,7 @@ stacks its steppers under the numeral instead of beside it.
 | Segment and pip selection, including "Same as last" filling them | background colour, 120 ms ease-out, with the 8 ms haptic tick |
 | Sheet in / out | spring, damping 1.0, response 0.3 s; rises from and returns to the bottom edge; follows the finger when dragged |
 | Saved: the new mark moves to its place on the target | spring, damping 1.0, response 0.36 s |
-| Saved: advice fades in | 200 ms ease-out, after the mark settles |
+| Saved: the summary line fades in | 200 ms ease-out, after the mark settles |
 | Undo countdown | 5 s, linear (an eased countdown would misstate the time left) |
 
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
@@ -224,9 +224,8 @@ short ticks on save, fired on the same frame as the visual change.
 
 #### Field row
 
-Label above, numeral and unit below, steppers on the right. When the last shot's advice suggests a
-change, the label carries an accent chip with the suggestion ("Try 11"); tapping it sets the value. The app never
-changes a value on its own. Long-press on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a
+Label above, numeral and unit below, steppers on the right. Values come from the last shot of the bag; the app never
+changes one on its own and doesn't suggest a different grind. Long-press on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a
 numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 
 #### Time field
@@ -243,8 +242,7 @@ earlier shot of this coffee.
 
 #### Taste segments
 
-Three equal segments with the word and what it means for the grind ("grind finer", "keep",
-"grind coarser"). Selected: tinted background and a 2 px inset ring in the taste colour. No default.
+Three equal segments: Sour, Balanced, Bitter. No sublabels about grind. Selected: tinted background and a 2 px inset ring in the taste colour. No default.
 
 #### Rating pips
 
@@ -267,7 +265,7 @@ says the same thing in words.
 
 #### Chips
 
-Outlined, 44 tall, 8 radius. Accent outline for actions ("Same as last", "Try 11"); `--control` outline
+Outlined, 44 tall, 8 radius. Accent outline for actions ("Same as last"); `--control` outline
 with ink text for a picker (the grinder and basket chip). Never used for status.
 
 #### Status text
@@ -355,8 +353,9 @@ that shrinks over 5 s. Undo writes a retraction record.
 ## Copy
 
 Short, plain and specific, in sentence case, with real apostrophes (’). Buttons start with a verb. The same action
-has the same words everywhere ("Type the coffee", never "Type it instead"). Advice says what happened and what to
-do: "Ran fast at 22 s. Go finer: 12 → 11." "In the window. Keep grind 11."
+has the same words everywhere ("Type the coffee", never "Type it instead"). The app says what happened and leaves
+the next move to the owner: "Ran fast at 22 s, outside the window." "Inside the window, two seconds slower than
+Monday’s shot." No "go finer" or "try 11" until the dial-in model in the plan exists.
 
 Errors say what happened and what to do next, and keep what was typed:
 
