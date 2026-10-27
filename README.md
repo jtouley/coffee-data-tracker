@@ -72,6 +72,8 @@ You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.d
 
 ### Log shots in the app
 
+<!-- Once docs/app/RUNNING.md lands (app-m2), link it here for real sign-in, the Hugging Face Space and its secrets, and keep this section short. -->
+
 `app/` is a small FastAPI app with server-rendered pages, made for a phone at the espresso machine. It reads and
 writes the same lake as everything else (`COFFEEDATA_LAKE`, `./lake` by default). `make install` already installs
 what it needs; the `app` extra (`uv sync --extra app`) adds FastAPI and uvicorn on an install without the dev tools.
