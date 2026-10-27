@@ -10,6 +10,7 @@ from datetime import UTC, datetime
 
 from rapidfuzz import fuzz, process
 
+from . import issueform
 from .lake import Lake
 from .models import Shot
 
@@ -78,6 +79,22 @@ def fuzzy_match_coffee(text: str, limit: int = 3, lake: Lake | None = None) -> l
 
 # --- logging -----------------------------------------------------------------------------------------
 
+_NUMBER = re.compile(r"(-?\d+(?:[.,]\d+)?)\s*(g|grams?|s|secs?|seconds?|°?c)?", re.I)
+
+
+def _number(text: str) -> str:
+    """'18.5 g' -> '18.5', '2,5' -> '2.5'. Anything else ('18-19', 'fine') is passed on as-is, so validation
+    rejects it with a clear message instead of silently reading a different number."""
+    m = _NUMBER.fullmatch(text)
+    return m.group(1).replace(",", ".") if m else text
+
+
+def _yes(value: object) -> bool:
+    if isinstance(value, str):
+        return value.strip().lower() in ("true", "yes", "y", "1", "x", "on", "milk")
+    return bool(value)
+
+
 def normalize(payload: dict) -> dict:
     out: dict = {}
     for k, v in payload.items():
@@ -87,9 +104,9 @@ def normalize(payload: dict) -> dict:
             if v in ("", "_No response_", "None"):
                 continue
             if key in ("dose_g", "yield_g", "time_s", "grinder_setting", "water_temp_c"):
-                v = re.sub(r"[^\d.]", "", v) or None
-            elif key == "is_milk_drink":
-                v = v.lower() in ("true", "yes", "y", "1", "x", "on", "milk")
+                v = _number(v)
+            elif key in ("is_milk_drink", "deleted"):
+                v = _yes(v)
         out[key] = v
     return out
 
@@ -99,7 +116,7 @@ def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tu
     To correct a shot, log it again with the same shot_id (latest wins); add deleted=True to retract it."""
     lake = lake or Lake()
     data = normalize(payload)
-    deleted = bool(data.pop("deleted", False))
+    deleted = _yes(data.pop("deleted", False))
     data.setdefault("shot_id", str(uuid.uuid4()))
     data.setdefault("brewed_at", datetime.now(UTC).isoformat(timespec="seconds"))
     matches: list[dict] = []
@@ -161,6 +178,10 @@ def suggest_next(ref: str, lake: Lake | None = None, finer_is_lower: bool = True
     elif last.taste == "bitter" or (last.taste is None and last.time_s > TARGET_TIME[1]):
         why = "tasted bitter" if last.taste == "bitter" else f"ran slow ({last.time_s:g} s)"
         advice = f"It {why}: go coarser to {coarser:g}."
+    elif not TARGET_TIME[0] <= last.time_s <= TARGET_TIME[1]:  # tasted balanced, but outside the time window
+        advice = (f"It tasted balanced at {last.time_s:g} s, outside the usual 25–32 s. Keep the grind if you "
+                  f"liked the cup; go {'finer' if last.time_s < TARGET_TIME[0] else 'coarser'} if you want to "
+                  "bring the time back into the window.")
     elif not TARGET_RATIO[0] <= ratio <= TARGET_RATIO[1]:
         target = round(last.dose_g * 2)
         advice = f"Timing is fine; pull to about {target} g out to get closer to 1:2."
@@ -185,13 +206,12 @@ ISSUE_FIELDS = {
 def parse_issue_body(body: str) -> dict:
     """Parse a GitHub issue-form body ('### Label' sections) into shot fields."""
     out: dict = {}
-    for m in re.finditer(r"^###\s+(.+?)\s*\n(.*?)(?=^###\s|\Z)", body, re.S | re.M):
-        label, value = m.group(1).strip().lower(), m.group(2).strip()
+    for label, value in issueform.parse(body).items():
         if label == "milk drink":
-            out["is_milk_drink"] = bool(re.search(r"-\s*\[x\]", value, re.I))
+            out["is_milk_drink"] = issueform.checked(value)
             continue
         key = ISSUE_FIELDS.get(label)
-        if key and value and value != "_No response_":
+        if key and value:
             out[key] = value.split(" ")[0] if key == "rating" else value
     return out
 

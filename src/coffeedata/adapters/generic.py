@@ -102,6 +102,8 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         except (Blocked, httpx.HTTPError):
             failed += 1
             continue
+        if r.status_code in (404, 410):
+            continue  # a sitemap entry for a product that's gone: it's delisted, not unreadable
         if r.status_code != 200:
             failed += 1
             continue

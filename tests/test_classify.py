@@ -42,3 +42,9 @@ def test_fixture_mix(fixture_items):
         kept = [i for i in items if is_coffee(i)]
         assert kept, rid
         assert not any("grinder" in i.title.lower() or "mug" in i.title.lower() for i in kept), rid
+
+
+def test_filter_roast_is_coffee_but_filters_are_not():
+    assert is_coffee(item("Ethiopia Guji - Filter Roast", grams=250))
+    assert not is_coffee(item("Kalita Wave 185 Filters"))
+    assert not is_coffee(item("Paper Filter Cones #2"))

@@ -6,7 +6,6 @@ import argparse
 import json
 import logging
 import os
-import re
 import subprocess
 import sys
 from datetime import UTC, date, datetime, timedelta
@@ -50,7 +49,7 @@ def cmd_init(args: argparse.Namespace) -> None:
         api.upload_file(path_or_fileobj=str(card), path_in_repo="README.md", repo_id=repo_id, repo_type="dataset",
                         commit_message="dataset card")
     print(f"dataset {url} ready ({'public' if args.public else 'private'}); "
-          f"published {lake.publish('init: table schemas')} schema files")
+          f"published {lake.publish('init: table schemas', schemas=True)} schema files")
 
 
 def cmd_discover(args: argparse.Namespace) -> None:
@@ -102,11 +101,13 @@ def cmd_enrich(args: argparse.Namespace) -> None:
 
 
 def dbt_build(lake: Lake, db: Path) -> None:
+    from . import registry
+
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
     subprocess.run(["dbt", "build", "--project-dir", "dbt", "--profiles-dir", "dbt",
-                    "--vars", json.dumps({"lake_roots": roots})], check=True, env=env)
+                    "--vars", json.dumps({"lake_roots": roots, "max_failures": registry.MAX_FAILURES})], check=True, env=env)
 
 
 def cmd_build(args: argparse.Namespace) -> None:
@@ -193,21 +194,20 @@ def cmd_shot(args: argparse.Namespace) -> None:
 
 
 def cmd_add_roaster(args: argparse.Namespace) -> None:
-    from . import discover, registry
+    from . import discover, issueform, registry
 
     body = Path(args.file).read_text() if args.file else sys.stdin.read()
-    fields = {m.group(1).strip().lower(): m.group(2).strip()
-              for m in re.finditer(r"^###\s+(.+?)\s*\n(.*?)(?=^###\s|\Z)", body, re.S | re.M)}
+    fields = issueform.parse(body)
     domain = registry.normalize_domain(fields.get("website", ""))
     if not registry.is_storefront_host(domain):
         raise SystemExit(f"not a roaster website: {fields.get('website')!r}")
     state = fields.get("state", "")
-    opted_out = bool(re.search(r"-\s*\[x\]", fields.get("opt out", ""), re.I))
+    opted_out = issueform.checked(fields.get("opt out", ""))
     lake = Lake()
     now = datetime.now(UTC).replace(microsecond=0)
     lake.write("registry", f"registry/source=manual/{domain}-{new_batch_id()}.parquet", [{
         "added_at": now, "source": "manual", "roaster_id": domain, "name": fields.get("name") or domain,
-        "state": "" if state == "_No response_" else state.upper()[:2], "tagged_roastery": True,
+        "state": state.upper()[:2], "tagged_roastery": True,
         "opted_out": opted_out}])
     if opted_out:
         lake.publish(f"opt out {domain}")

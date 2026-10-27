@@ -160,3 +160,11 @@ def test_squarespace_403_week_is_an_error_not_an_empty_catalog(lake, mock):
     con = lake.connect()
     assert con.execute(f"select status from {lake.scan('fetches')}").fetchall() == [("error",)]
     assert con.execute(f"select count(*) from {lake.scan('snapshots')}").fetchone()[0] == 0
+
+
+def test_generic_404_page_is_a_delisted_product(mock):  # G4: a stale sitemap entry isn't a failed fetch
+    mock.get("https://gen.com/sitemap.xml").mock(return_value=sitemap(3))
+    mock.get("https://gen.com/products/p0").mock(return_value=page("A"))
+    mock.get("https://gen.com/products/p1").mock(return_value=httpx.Response(404))
+    mock.get("https://gen.com/products/p2").mock(return_value=page("C"))
+    assert sorted(i.title for i in fetch_gen()) == ["A 12oz", "C 12oz"]

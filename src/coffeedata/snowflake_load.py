@@ -4,8 +4,8 @@ Credentials come from the environment, for a key-pair service user:
     SNOWFLAKE_ACCOUNT, SNOWFLAKE_USER, SNOWFLAKE_PRIVATE_KEY (PEM, unencrypted PKCS#8)
     optional: SNOWFLAKE_ROLE (COFFEE_LOADER), SNOWFLAKE_WAREHOUSE (COFFEE_WH), SNOWFLAKE_DATABASE (COFFEE_DATA)
 
-Each run uploads the export to @<schema>.public_export/run=<as_of_run>/. Those files are never overwritten, so
-the stage keeps every weekly export. Then each table is replaced in one transaction, and row counts are checked
+Each export is uploaded to @<schema>.public_export/run=<as_of_run>/exported=<time>/. Those files are never
+overwritten, so the stage keeps every export, and re-exporting the same week loads the new files, not the old. Then each table is replaced in one transaction, and row counts are checked
 against the export manifest.
 """
 
@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 from .public import PUBLIC_TABLES
@@ -71,7 +72,8 @@ def statements(table: str, run_path: str) -> list[str]:
 
 def load(export_dir: Path, con=None) -> dict:
     manifest = json.loads((export_dir / "manifest.json").read_text())
-    run_path = f"run={manifest['as_of_run']}"
+    exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
+    run_path = f"run={manifest['as_of_run']}/exported={exported}"
     con = con or connect()
     cur = con.cursor()
     try:

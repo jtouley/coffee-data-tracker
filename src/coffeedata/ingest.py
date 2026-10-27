@@ -10,7 +10,7 @@ from __future__ import annotations
 import hashlib
 import logging
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 
@@ -113,25 +113,35 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
+    def flush(chunk: list[Result]) -> None:
+        batch = new_batch_id()
+        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched).items():
+            lake.write_partition(table, run_date, batch, rows)
+        # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
+        # chunk, and re-running the week skips the roasters already fetched.
+        lake.publish(f"ingest {run_date} batch {batch}")
+        for res in chunk:
+            a = by_adapter.setdefault(res.roaster.adapter, Counter())
+            a["roasters"] += 1
+            a["errors"] += bool(res.error)
+            a["with_coffee"] += bool(res.coffees)
+            a["coffees"] += len(res.coffees)
+            stats["products"] += len(res.items)
+            if res.error:
+                failures.append(f"{res.roaster.roaster_id}: {res.error}")
+            log.info("%-36s %-13s products=%-4d coffees=%-4d %s", res.roaster.roaster_id, res.roaster.adapter,
+                     len(res.items), len(res.coffees), res.error or "")
+
+    # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
+    # never leaves the other workers idle.
     with PoliteClient() as client, ThreadPoolExecutor(workers) as ex:
-        for start in range(0, len(roasters), CHUNK):
-            chunk = list(ex.map(lambda r: ingest_one(client, r), roasters[start:start + CHUNK]))
-            batch = new_batch_id()
-            for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched).items():
-                lake.write_partition(table, run_date, batch, rows)
-            # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
-            # chunk, and re-running the week skips the roasters already fetched.
-            lake.publish(f"ingest {run_date} batch {batch}")
-            for res in chunk:
-                a = by_adapter.setdefault(res.roaster.adapter, Counter())
-                a["roasters"] += 1
-                a["errors"] += bool(res.error)
-                a["with_coffee"] += bool(res.coffees)
-                a["coffees"] += len(res.coffees)
-                stats["products"] += len(res.items)
-                if res.error:
-                    failures.append(f"{res.roaster.roaster_id}: {res.error}")
-                log.info("%-36s %-13s products=%-4d coffees=%-4d %s", res.roaster.roaster_id, res.roaster.adapter,
-                         len(res.items), len(res.coffees), res.error or "")
+        done: list[Result] = []
+        for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
+            done.append(fut.result())
+            if len(done) == CHUNK:
+                flush(done)
+                done = []
+        if done:
+            flush(done)
     return {"run_date": run_date, "roasters": len(roasters), "products": stats["products"],
             "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())}, "failures": failures[:50]}

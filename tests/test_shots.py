@@ -135,3 +135,25 @@ def test_shot_id_cannot_escape_the_lake(lake, bad):
 def test_lake_refuses_paths_outside_root(lake):
     with pytest.raises(ValueError):
         lake.write("shots", "shots/../../outside.parquet", [{"shot_id": "x"}])
+
+
+def test_numbers_and_flags_from_loose_input():
+    out = shots.normalize({"grind": "2,5", "dose": "18.5 g", "time": "28s", "deleted": "false", "milk": "no"})
+    assert out["grinder_setting"] == "2.5" and out["dose_g"] == "18.5" and out["time_s"] == "28"
+    assert out["deleted"] is False
+    with pytest.raises(ValueError):  # a range is rejected, not read as 1819
+        shots.Shot(**shots.normalize({"dose": "18-19", "yield": 36, "time": 28, "grind": 10, "rating": 4})
+                   | {"shot_id": "x", "brewed_at": "2026-10-26T00:00:00Z"})
+
+
+def test_retraction_flag_false_keeps_the_shot(lake):
+    shots.log_shot({"coffee_id": "o:1", "dose": 18, "yield": 36, "time": 28, "grind": 10, "rating": 4,
+                    "deleted": "false"}, lake)
+    assert len(shots.load_shots(lake)) == 1
+
+
+def test_balanced_but_slow_shot_is_not_called_fine(lake):
+    shots.log_shot({"coffee_id": "o:1", "dose": 18, "yield": 36, "time": 45, "grind": 10, "rating": 4,
+                    "taste": "balanced", "brewed_at": "2026-10-26T08:00:00Z"}, lake)
+    advice = shots.suggest_next("o:1", lake)
+    assert "45 s" in advice and "Timing is fine" not in advice and "window. Keep" not in advice

@@ -194,43 +194,45 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def publish(self, message: str, attempts: int = 5) -> int:
+    def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
         """Upload staged files to the remote lake in one commit, then clear the staging area.
 
-        Retries with exponential backoff (2, 4, 8, 16 s). A commit is atomic, so a failed attempt uploaded
-        nothing; if one landed but its response was lost, the retry finds those files (whose batch ids are
-        unique to this run) already in the dataset and counts them as uploaded instead of refusing.
+        A file already in the dataset is never replaced (except the derived marts/). Staged paths carry a batch
+        id unique to the run that wrote them, so one that's already there is this run's own upload, from a
+        commit whose response was lost or a process that died before clearing staging, and it's skipped.
+        Retries use exponential backoff (2, 4, 8, 16 s). If every attempt fails, the staged files stay on disk
+        and the next publish sends them. Schema files are only sent when `schemas` is set (by `init`).
         """
         if not self.remote:
             return 0
+        schema_paths = set(SCHEMA_FILES.values())
+        files = [p for p in self.staged_files()
+                 if schemas or p.relative_to(self.root).as_posix() not in schema_paths]
+        if not files:
+            return 0  # nothing new: no API calls
         from huggingface_hub import CommitOperationAdd, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
-        files = self.staged_files()
+        rels = [p.relative_to(self.root).as_posix() for p in files]
         for attempt in range(attempts):
             try:
-                existing = set(api.list_repo_files(repo_id, repo_type="dataset"))
-                ops = []
-                for p in files:
-                    rel = p.relative_to(self.root).as_posix()
-                    if rel in existing and not rel.startswith("marts/"):  # marts/ are derived, replaced weekly
-                        if rel in SCHEMA_FILES.values() or attempt > 0:
-                            continue
-                        raise FileExistsError(f"lake files are immutable; {rel} already exists in {repo_id}")
-                    ops.append(CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p)))
+                # Only the staged paths are looked up, so the cost doesn't grow with the dataset.
+                existing = {f.path for i in range(0, len(rels), 500)
+                            for f in api.get_paths_info(repo_id, rels[i:i + 500], repo_type="dataset")}
+                ops = [CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
+                       for p, rel in zip(files, rels, strict=True)
+                       if rel not in existing or rel.startswith("marts/")]
                 if ops:
                     api.create_commit(repo_id=repo_id, repo_type="dataset", operations=ops,
                                       commit_message=message)
                 break
-            except FileExistsError:
-                raise
             except Exception as e:  # noqa: BLE001 - network, rate limit or server error: try again
                 if attempt == attempts - 1:
-                    raise  # staged files stay on disk, so a re-run publishes them
+                    raise
                 log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
                 time.sleep(2 ** (attempt + 1))
-        for p in files:
-            if p.relative_to(self.root).as_posix() not in SCHEMA_FILES.values():
+        for p, rel in zip(files, rels, strict=True):
+            if rel not in schema_paths:
                 p.unlink()
         return len(ops)
