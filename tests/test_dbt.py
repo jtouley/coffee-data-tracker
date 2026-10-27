@@ -186,3 +186,30 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
         "public_price_event.parquet",
         "public_roaster.parquet",
     ]
+
+
+def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch):
+    from coffeedata import site
+
+    monkeypatch.setenv("PUBLIC_EXPORT_URL", "hf://datasets/someone/us-coffee-market")
+    probe(lake, "2026-10-11", "onyxcoffeelab.com")
+    run(lake, "2026-10-12", "onyxcoffeelab.com", [product("A")])
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A", price=22.0), product("B")])
+    build(lake, tmp_path).close()
+
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    landing = (out / "index.html").read_text()
+    assert 'href="app/"' in landing
+    assert "https://huggingface.co/datasets/someone/us-coffee-market" in landing
+    assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
+    assert "Coffee B" in landing  # a new arrival
+    assert 'href="../"' in (out / "app" / "index.html").read_text()
+    assert json.loads((out / "app" / "catalog.json").read_text())["rows"]
+
+
+def test_site_links_without_a_public_hf_dataset():
+    from coffeedata import site
+
+    assert site.links("s3://bucket/coffee", "https://example.org/")["dataset"] is None
+    assert site.links("hf://datasets/a/b@main")["dataset"] == "https://huggingface.co/datasets/a/b"

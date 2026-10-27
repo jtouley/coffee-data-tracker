@@ -1,8 +1,10 @@
-"""Static site: one index.html (+ catalog.json) rendered from the dbt models in DuckDB."""
+"""Static site rendered from the dbt models in DuckDB: a launch page at the root (registry.coffee) that links out
+to the catalog app (app/index.html + app/catalog.json), the public Hugging Face dataset and the repo."""
 
 from __future__ import annotations
 
 import json
+import os
 from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
@@ -67,6 +69,33 @@ def scatter_chart(points: list[tuple[float, float, str]], width: int = 460, heig
     return "".join(out)
 
 
+# --- links ---------------------------------------------------------------------------------------------
+
+REPO = "https://github.com/jtouley/coffee-data-tracker"
+
+
+def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
+    """Where the launch page points. The dataset is the public export (`PUBLIC_EXPORT_URL`) when it's on Hugging
+    Face; the lake itself is private by default, so it's never linked."""
+    public_export = os.environ.get("PUBLIC_EXPORT_URL", "") if public_export is None else public_export
+    site_url = (site_url or os.environ.get("SITE_URL") or "https://registry.coffee").rstrip("/")
+    dataset = hf_path = None
+    if public_export.startswith("hf://datasets/"):
+        repo_id = public_export.removeprefix("hf://datasets/").split("@")[0].strip("/")
+        dataset = f"https://huggingface.co/datasets/{repo_id}"
+        hf_path = f"hf://datasets/{repo_id}/data"
+    return {
+        "site": site_url,
+        "app": "app/",
+        "dataset": dataset,
+        "hf_path": hf_path,
+        "repo": REPO,
+        "marketplace": f"{REPO}/blob/main/marketplace/README.md",
+        "mcp": f"{REPO}#logging-shots",
+        "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
+    }
+
+
 # --- build -------------------------------------------------------------------------------------------
 
 
@@ -124,6 +153,27 @@ def build(db: Path, out: Path) -> Path:
                tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
         from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
     )
+    reach = _q(
+        con,
+        """
+        select count(distinct origin_country) as origins, count(distinct roaster_state) as states
+        from dim_coffee where is_listed and not is_chain""",
+    )[0]
+    origin_counts = _q(
+        con,
+        """
+        select origin_country, count(*) as n from dim_coffee
+        where in_stock and not is_blend and not is_chain and origin_country is not null
+        group by 1 order by n desc, 1 limit 8""",
+    )
+    week = _q(
+        con,
+        """
+        select count(*) filter (where event = 'price') as price_changes,
+               count(*) filter (where event = 'removed') as removed
+        from fct_price_event where run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
+    )[0]
+    new_count = _q(con, "select count(*) as n from mart_new_arrivals")[0]["n"]
     con.close()
 
     coverage = {"registry": {r["status"]: r["n"] for r in statuses}}
@@ -156,8 +206,31 @@ def build(db: Path, out: Path) -> Path:
                 if r["brew_ratio"]
             ]
         ),
+        "origins": hbar_chart(
+            [
+                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']} coffees in stock")
+                for r in origin_counts
+            ],
+            "{:,.0f}",
+            "Single-origin coffees in stock, by origin",
+        ),
     }
+    generated = datetime.now(UTC)
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
+    out.mkdir(parents=True, exist_ok=True)
+    landing = env.get_template("landing.html").render(
+        totals=totals,
+        registry=sum(coverage["registry"].values()),
+        reach=reach,
+        week=week | {"new": new_count},
+        new=new[:6],
+        charts=charts,
+        links=links(),
+        generated=generated.strftime("%B %-d, %Y"),
+    )
+    (out / "index.html").write_text(landing)
+    app = out / "app"
+    app.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
         totals=totals,
         charts=charts,
@@ -166,12 +239,11 @@ def build(db: Path, out: Path) -> Path:
         coverage=coverage,
         origin_price=origin_price,
         processes=processes,
-        generated=datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC"),
+        generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
     )
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "index.html").write_text(html)
+    (app / "index.html").write_text(html)
     cols = list(catalog[0]) if catalog else []
-    (out / "catalog.json").write_text(
+    (app / "catalog.json").write_text(
         json.dumps(
             {"columns": cols, "rows": [[_jsonable(r[c]) for c in cols] for r in catalog]},
             separators=(",", ":"),

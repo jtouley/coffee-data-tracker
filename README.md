@@ -19,7 +19,7 @@ modeled with dbt and DuckDB.
 ```bash
 make install
 make weekly SAMPLE=50        # 50 roasters into ./lake; leave out SAMPLE for all of them (about an hour)
-open build/site/index.html
+open build/site/index.html   # the launch page; the catalog app is build/site/app/
 ```
 
 `make test` runs the lint checks, the unit tests and dbt builds over synthetic multi-week lakes, all offline.
@@ -85,7 +85,7 @@ config/roasters.csv + lake registry ──probe──▶ platform ──ingest�
                                                                            │
                  dim_coffee, dim_roaster, fct_price_event, fct_shot, mart_dial_in, mart_market, mart_new_arrivals
                                                                            │
-                                          static site (GitHub Pages), marts/ in the lake, MCP server
+                  static site (registry.coffee on GitHub Pages), marts/ in the lake, MCP server
 ```
 
 `coffeedata weekly` (the `weekly.yml` workflow, Mondays) runs:
@@ -119,9 +119,31 @@ Message Batches API, which costs half as much, and are collected on the next run
    - optionally, secret `ANTHROPIC_API_KEY`
    - optionally, for Snowflake: variables `SNOWFLAKE_ACCOUNT` and `SNOWFLAKE_USER`, secret `SNOWFLAKE_PRIVATE_KEY`
      (see `marketplace/README.md`)
-4. Settings → Pages → Source: GitHub Actions.
+4. Settings → Pages → Source: GitHub Actions. For the custom domain, see [The site](#the-site).
 5. Create the `shot` and `roaster` issue labels.
 6. Run the weekly workflow by hand with `sample: 50`. After that it runs every Monday.
+
+## The site
+
+The weekly run builds a static site and GitHub Pages serves it at [registry.coffee](https://registry.coffee):
+
+- `/` is the launch page: this week's numbers, new arrivals and links to the catalog, the public Hugging Face
+  dataset, the warehouse setup, the MCP server and the "Add a roaster" form.
+- `/app/` is the catalog: search, charts, new arrivals, shots and coverage.
+
+The dataset link and the DuckDB example come from `PUBLIC_EXPORT_URL` when it's an `hf://` dataset. Without one, the
+page points at this repo instead. The private lake is never linked. `SITE_URL` sets the canonical URL; it defaults to
+`https://registry.coffee`.
+
+Hugging Face charges for custom domains on Spaces, but GitHub Pages doesn't, so the data stays on Hugging Face and
+Pages serves the domain. Set it up once:
+
+1. At Namecheap → Domain List → registry.coffee → Advanced DNS, remove the parking records and add:
+   - four `A` records for host `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - a `CNAME` record for host `www` pointing at `jtouley.github.io.`
+2. In GitHub → Settings → Pages, enter `registry.coffee` as the custom domain. When the DNS check passes, tick
+   "Enforce HTTPS".
+3. Optionally, verify the domain under your GitHub profile → Settings → Pages so no other account can claim it.
 
 ## Public tables and marketplaces
 

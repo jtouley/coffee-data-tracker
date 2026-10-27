@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coffee Data</title>
-<meta name="description" content="A daily catalog of US specialty coffee roasters, plus a personal espresso log.">
+<title>Catalog · registry.coffee</title>
+<meta name="description" content="A weekly catalog of US specialty coffee roasters, plus a personal espresso log.">
 <style>
 :root {
   color-scheme: light;
@@ -71,6 +71,7 @@ a { color: var(--accent); }
 footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 .theme { float: right; font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
   border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+.crumb { display: inline-block; margin-bottom: 8px; font-size: 13px; text-decoration: none; }
 @media (max-width: 600px) { .hide-sm { display: none; } }
 </style>
 </head>
@@ -78,6 +79,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <main>
 <header>
   <button class="theme" id="theme" type="button">Theme</button>
+  <a class="crumb" href="../">← registry.coffee</a>
   <h1>Coffee Data</h1>
   <p>What US specialty roasters are selling this week, and the shots I pull with it. Updated {{ generated }}.</p>
 </header>
