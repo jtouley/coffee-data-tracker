@@ -9,12 +9,12 @@ from .origins import COUNTRIES
 
 _NOT_COFFEE = re.compile(
     r"\b(grinder|kettle|mug|mugs|tumbler|shirt|tee|t-shirt|hoodie|sweatshirt|hat|beanie|cap|tote|bag clip|"
-    r"sticker|poster|gift ?card|e-?gift|subscription|subscribe|filters|(paper|cone|basket) filter|filter (papers?|holders?|baskets?|cones?)|dripper|brewer|chemex|aeropress|"
+    r"sticker|poster|gift ?card|e-?gift|subscription|subscribe|filters|coffee filter|filter bags?|kone|(paper|cone|basket) filter|filter (papers?|holders?|baskets?|cones?)|dripper|brewer|chemex|aeropress|"
     r"french press|v60|scale|machine|espresso machine|tamper|pitcher|carafe|capsules?|pods?|k-?cups?|"
     r"cold brew (can|concentrate)|concentrate|ready to drink|rtd|cans?|matcha|chai|chocolate bar|"
     r"syrup|class|workshop|wholesale|merch|apparel|candle|book|socks|bundle|sampler|variety pack|coaster|"
-    r"bottle|strainer|glass|mat|towel|ornament|keychain|chocolate[- ]covered|gragee|dragee|candy|truffles?|"
-    r"bonbons?|cookies?|granola|brittle|toffee bar|"
+    r"bottle|strainer|glass|mat|towel|ornament|keychain|chocolate[- ]covered|gragee|dragee|"
+    r"bonbons?|granola|brittle|toffee bar|"
     r"tasting set|trio|flight|gift box|gift set|\bset\b|instant|steeped|drip bags?|single serve|"
     # Machine parts, cups, cleaning supplies, services and other things sold next to beans.
     r"screws?|gaskets?|o-?rings?|burrs|burr set|portafilters?|shower screens?|steam (wands?|tips?)|"
@@ -24,8 +24,20 @@ _NOT_COFFEE = re.compile(
     r"warranty)\b",
     re.I,
 )
-# Sauces, unless the title also reads as a coffee: "Ecuador El Sauce" is a farm, "Survival Sauce" a blend.
+# Sauces and sweets, unless the title also reads as a coffee: "Ecuador El Sauce" is a farm, "Survival Sauce" a
+# blend, "Sugar Cookie Decaf" a flavored coffee and "Candy-Natural-Processed Catuai" a lot.
 _SAUCE = re.compile(r"\bsauces?\b", re.I)
+# Paper and reusable filters, filter kits and case packs; "Filter Blend" and "Filter Packs" of coffee stay.
+_FILTER_GEAR = re.compile(
+    r"\b(reusable|paper|cellulose|cloth)\b(\W+\w+){0,2}\W+filters?\b|\bfilters? (kit|tool)s?\b|"
+    r"\bfilters?,? \d+\s*(vnt|ct|count|pcs)\b|\d+/case\b|\bburlap sacks?\b|\bstarter kit\b",
+    re.I,
+)
+_SWEETS = re.compile(r"\b(cand(y|ies)|truffles?|cookies?)\b", re.I)
+_SWEET_COFFEE = re.compile(
+    r"\b(flavou?red|coffee|roast(ed)?|decaf|blend|espresso|single[- ]origin|washed|natural|anaerobic|processed)\b",
+    re.I,
+)
 # Spare parts and machines: part numbers like "(VITE3X10)", "(T.1.054)", "(62100000093)" or "Ceado (40315)", a
 # "| Fits Linea Mini" suffix, or a machine, grinder or cleaner maker's name first. Part numbers are matched
 # case-sensitively, so bag sizes like "(12oz.)" and "(2-Pack)" don't count.
@@ -47,7 +59,7 @@ _TEST_CAPS = re.compile(r"^TEST\b|[-–|:]\s*TEST\s*$")
 _COFFEE_WORDS = re.compile(
     r"\b(whole bean|single origin|single-origin|blend|espresso|decaf|roast|roasted|washed|natural|honey|"
     r"anaerobic|gesha|geisha|bourbon|typica|caturra|catuai|heirloom|sl28|pacamara|microlot|micro-lot|"
-    r"tasting notes?|elevation|masl|varietal|process)\b",
+    r"tasting notes?|elevation|masl|varietal|process|flavou?red coffee)\b",
     re.I,
 )
 # "Tea" only counts against a product named or typed as tea, so "Coffee & Tea" stores and "Cup of Excellence"
@@ -74,9 +86,12 @@ def is_coffee(item: CatalogItem) -> bool:
         or _PARTS_SELLER.search(title)
         or _TEST.search(title)
         or _TEST_CAPS.search(title)
+        or _FILTER_GEAR.search(title)
     ):
         return False
     if _SAUCE.search(title) and not (_COFFEE_WORDS.search(title) or _COUNTRY.search(title)):
+        return False
+    if _SWEETS.search(title) and not (_SWEET_COFFEE.search(title) or _COUNTRY.search(title)):
         return False
     if _NOT_COFFEE.search(item.product_type) or re.search(r"\b(equipment|merch|gear|apparel)\b", tags, re.I):
         return False

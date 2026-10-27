@@ -103,3 +103,29 @@ def test_coffees_that_look_like_parts_or_tests_stay():
         "Odd and Ends - Donation Coffee",
     ):
         assert is_coffee(item(title, grams=340, body="A medium roast with notes of cocoa.")), title
+
+
+def test_flavored_coffees_stay_but_sweets_and_filters_go():
+    for title in (
+        "Sugar Cookie Decaf",
+        "Candy Bones || Halloween Blend",
+        "Ivan Solis • Candy-Natural-Processed Catuai",
+        "Turtle Sundae Truffle Flavored Coffee",
+        "Cold Brew Filter Packs — Colombia",
+        "Luxe Filter Blend - 5lb",
+        "Folgers Coffee – Classic Roast Filter Pack – 40 – .9 ounce",
+    ):
+        assert is_coffee(item(title, grams=340)), title
+    for title in (
+        "Maple Walnut Truffle",
+        "Big Train Powdered Beverage Mix - Cookies N Cream",
+        "Bit O' Honey Classic Candy - 20 Sticks",
+        "Chocolate Covered Espresso Beans",
+        "Toddy OS Paper Coffee Filter Bags - 20ct",
+        "Able Kone Coffee Filter 4th Generation",
+        "Cafec Light Roast Filter, 100 vnt.",
+        "Bunn Filter 20115 9 3/4 x 4 1/4 1000/Case",
+        "GSI Reusable Pourover Java Filter #4",
+        "Brass South Indian Filter Kit",
+    ):
+        assert not is_coffee(item(title, grams=340)), title
