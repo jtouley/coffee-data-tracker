@@ -16,3 +16,5 @@ lake/
 data/
 dbt/.user.yml
 lake-photos/
+lake-users/
+tests/browser/node_modules/

@@ -24,6 +24,7 @@ log = logging.getLogger(__name__)
 
 
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 
 
 class NotFound(KeyError):
@@ -64,12 +65,60 @@ class Store:
             ("bags", "bag_id", Bag, self.bags),
             ("equipment", "equipment_id", Equipment, self.equipment),
         ):
-            for row in lake.latest(table, key):
+            rows = self._seed_shots() if table == "shots" else None
+            for row in lake.latest(table, key) if rows is None else rows:
                 row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:
                     log.warning("skipping %s %s: %s", table, row[key], e)
+
+    def _seed_shots(self) -> list[dict] | None:
+        """Current shots from the weekly marts/fct_shot.parquet export plus the shot files written after it,
+        instead of one request per shot file. None (read every file) when there's no export yet."""
+        con = self.lake.connect()
+        try:
+            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("fct_shot"))
+            cur = con.execute(f"select * from read_parquet([{src}])")
+        except Exception as e:  # noqa: BLE001 - no export yet, or one from before logged_at was in it
+            log.info("no fct_shot export to start from: %s", e)
+            return None
+        cols = [d[0] for d in cur.description]
+        if "logged_at" not in cols:
+            return None
+        if "shot_coffee_id" not in cols:
+            return None  # an export from before it kept the shot's own values
+        rows = {}
+        for x in cur.fetchall():
+            r = dict(zip(cols, x, strict=True))
+            for c in ("coffee_id", "coffee_freetext", "roast_date"):
+                r[c] = r.pop(f"shot_{c}")  # the raw shot, not the bag's values fct_shot fills in
+            rows[r["shot_id"]] = r
+        # File names carry the time a record was made, not when it reached the dataset, and uploads queue. So
+        # the files are read from a day before the export (its snapshot_at, else its newest record): a record made
+        # before the export but uploaded after it is still found. Overlap with the export is harmless: latest wins.
+        if "snapshot_at" in cols:
+            stamp = max((r["snapshot_at"] for r in rows.values() if r.get("snapshot_at")), default=None)
+        else:
+            stamp = max((r["logged_at"] for r in rows.values()), default=None)
+        if stamp is None:
+            return None
+        try:
+            newer = self.lake.files_after("shots", stamp - SEED_SLACK)
+            if newer:
+                files = ", ".join(f"'{f}'" for f in newer)
+                cur = con.execute(f"""
+                    select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
+                    qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
+                cols = [d[0] for d in cur.description]
+                for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
+                    if r["shot_id"] not in rows or r["logged_at"] >= rows[r["shot_id"]]["logged_at"]:
+                        rows[r["shot_id"]] = r
+        except Exception as e:  # noqa: BLE001 - a failed listing (429, timeout): read every file instead
+            log.warning("listing newer shot files failed (%s): reading every file", type(e).__name__)
+            return None
+        log.info("shots: %d from fct_shot, %d newer files", len(rows), len(newer))
+        return list(rows.values())
 
     # --- reads ---------------------------------------------------------------------------------------
 

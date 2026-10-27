@@ -37,7 +37,7 @@ publish:
 mcp:
 	uv run coffeedata mcp
 
-app:  ## the shot-logging app on http://localhost:8000, over the local lake (signed in as the owner)
+app:  ## the shot-logging app on http://localhost:8000, over the local lake (signed in as the owner unless SESSION_SECRET is set)
 	uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
 
 hooks:  ## install the git pre-commit hooks

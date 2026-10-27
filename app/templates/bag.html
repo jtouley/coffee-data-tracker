@@ -2,13 +2,13 @@
 {% block title %}New bag · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="back" href="/">‹ Today</a></div>
-  <div class="serif title mt8">Type the coffee</div>
+  <h1 class="serif title mt8">Type the coffee</h1>
   <p class="body">Roaster and coffee, as on the bag. It’s matched to the catalog when the match is clear.</p>
-  <form id="bag" novalidate>
+  <form id="bag" class="fill" novalidate>
     <label class="flabel" for="coffee">Coffee</label>
-    <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="Onyx Geometry" required>
-    <label class="flabel" for="roast_date">Roast date</label>
-    <input class="input" id="roast_date" name="roast_date" type="date">
+    <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="e.g. Onyx Geometry" required>
+    <label class="flabel" for="roast_date">Roast date (optional)</label>
+    <input class="input" id="roast_date" name="roast_date" type="date" data-empty-class max="{{ now.date().isoformat() }}">
     <div class="hint" data-hint role="status"></div>
     <div class="spacer"></div>
     <div class="dock sticky"><button class="btn primary" type="submit">Use this coffee</button></div>

@@ -5,13 +5,13 @@
   <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span>{{ synced() }}</div>
   <section class="mt8">
     <div class="label">{{ "On the grinder" if p.bag else "Last coffee" }}</div>
-    <div class="serif name mt4">{{ name }}</div>
+    <h1 class="serif name mt4">{{ name }}</h1>
     <div class="meta mt4">{{ facts }}</div>
     {% if p.bag %}<div class="meta mt4">{% if p.bag.roast_date %}Roasted {{ p.bag.roast_date.strftime("%b ") ~ p.bag.roast_date.day }} · day {{ days_off }} · {% endif %}{{ shots_n(shots | length) }}</div>{% endif %}
   </section>
   {% if last %}
   <section class="mt24 ruled">
-    <div class="row"><span class="label">Last shot, {{ clock(last.brewed_at) }}</span>{{ taste(last.taste) }}</div>
+    <div class="row"><span class="label">Last shot, {{ when(last.brewed_at) }}</span>{{ taste(last.taste) }}</div>
     <div class="row end mt8">
       <span class="num n44">{{ g(last.dose_g, 1) }} → {{ g(last.yield_g, 1) }}<span class="u"> g</span></span><span class="num n44">{{ g(last.time_s) }}<span class="u"> s</span></span>
     </div>

@@ -2,7 +2,7 @@
 {% from "_macros.html" import synced, taste %}
 {% block title %}Saved · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top"><span class="meta">Saved {{ clock }} · {{ name }}</span>{{ synced() }}</div>
+  <div class="top"><h1 class="meta">Saved {{ clock }} · {{ name }}</h1>{{ synced() }}</div>
   <div class="label mt16">Ratio</div>
   <div class="num n112 mt4">1:{{ "%.2f" | format(ratio(shot)) }}</div>
   <div class="row end mt16">

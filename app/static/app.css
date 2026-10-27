@@ -5,22 +5,41 @@
   --ink: #1b1714; --ink-2: #5f574e; --ink-3: #8a8075;
   --accent: #8a4b1d; --accent-fill: #8a4b1d; --on-accent: #fff8f0; --danger: #b3261e;
   --sour: #7a5a00; --sour-bg: #f5eac6; --balanced: #2d6a45; --balanced-bg: #e0ede3;
-  --bitter: #7f2f4c; --bitter-bg: #f3e0e7; --window: rgba(45, 106, 69, .10); }
+  --bitter: #7f2f4c; --bitter-bg: #f3e0e7; --window: rgba(45, 106, 69, .10);
+  --pick: var(--ink); --on-pick: var(--paper); --pick-ring: var(--ink); }
 @media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) { color-scheme: dark;
   --paper: #14110f; --panel: #1d1916; --sheet: #221e1a; --rule: #342e28; --control: #7a6f63;
   --ink: #efe8de; --ink-2: #a99e91; --ink-3: #7c7166;
   --accent: #e0a46e; --accent-fill: #9a5524; --on-accent: #fff8f0; --danger: #f2836f;
   --sour: #e6c45c; --sour-bg: #2c2511; --balanced: #86c79c; --balanced-bg: #15261b;
-  --bitter: #e99ab4; --bitter-bg: #2f1820; --window: rgba(134, 199, 156, .10); } }
+  --bitter: #e99ab4; --bitter-bg: #2f1820; --window: rgba(134, 199, 156, .10);
+  --pick: #453c34; --on-pick: var(--ink); --pick-ring: var(--ink-2); } }
 :root[data-theme="dark"] { color-scheme: dark;
   --paper: #14110f; --panel: #1d1916; --sheet: #221e1a; --rule: #342e28; --control: #7a6f63;
   --ink: #efe8de; --ink-2: #a99e91; --ink-3: #7c7166;
   --accent: #e0a46e; --accent-fill: #9a5524; --on-accent: #fff8f0; --danger: #f2836f;
   --sour: #e6c45c; --sour-bg: #2c2511; --balanced: #86c79c; --balanced-bg: #15261b;
-  --bitter: #e99ab4; --bitter-bg: #2f1820; --window: rgba(134, 199, 156, .10); }
+  --bitter: #e99ab4; --bitter-bg: #2f1820; --window: rgba(134, 199, 156, .10);
+  --pick: #453c34; --on-pick: var(--ink); --pick-ring: var(--ink-2); }
 @media (prefers-contrast: more) { :root { --rule: var(--control); } }
 
+/* Self-hosted and subset (see fonts/LICENSE.md): Archivo keeps wdth 72–100 and wght 400–600; Newsreader is weight 500
+   at one optical size. Each is split in two: the core file (ASCII, the punctuation and arrows the app writes) is
+   preloaded; the accented-Latin file is fetched only by a page that shows an accented name. */
+@font-face { font-family: "Archivo"; src: url(/static/fonts/archivo.woff2) format("woff2"); font-weight: 400 600;
+  font-stretch: 72% 100%; font-display: swap; unicode-range: U+20-7E, U+B0, U+B7, U+D7, U+2013-2014, U+2018-2019,
+  U+201C-201D, U+2022, U+2026, U+2192, U+2212; }
+@font-face { font-family: "Archivo"; src: url(/static/fonts/archivo-ext.woff2) format("woff2"); font-weight: 400 600;
+  font-stretch: 72% 100%; font-display: swap; unicode-range: U+A0-AF, U+B1-B6, U+B8-D6, U+D8-FF; }
+@font-face { font-family: "Newsreader"; src: url(/static/fonts/newsreader.woff2) format("woff2"); font-weight: 500;
+  font-display: swap; unicode-range: U+20-7E, U+B0, U+B7, U+D7, U+2013-2014, U+2018-2019, U+201C-201D, U+2022,
+  U+2026, U+2192, U+2212; }
+@font-face { font-family: "Newsreader"; src: url(/static/fonts/newsreader-ext.woff2) format("woff2"); font-weight: 500;
+  font-display: swap; unicode-range: U+A0-AF, U+B1-B6, U+B8-D6, U+D8-FF; }
+
 * { box-sizing: border-box; }
+h1, h2 { margin: 0; font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 html { background: var(--paper); }
 body { margin: 0 auto; max-width: 480px; min-height: 100dvh; background: var(--paper); color: var(--ink);
   font: 400 0.9375rem/1.45 "Archivo", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
@@ -43,6 +62,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .meta { font-size: 0.8125rem; line-height: 1.4; color: var(--ink-2); }
 .body { font-size: 0.9375rem; color: var(--ink-2); margin: 0; }
 .section { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); margin: 32px 0 12px; }
+/* A section that holds forms: bigger than a field label, with a rule, so each form reads as one group */
+.section.group { font-size: 1.0625rem; color: var(--ink); border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 40px; }
 .mt4 { margin-top: 4px; } .mt8 { margin-top: 8px; } .mt12 { margin-top: 12px; } .mt16 { margin-top: 16px; }
 .mt24 { margin-top: 24px; } .mt32 { margin-top: 32px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
@@ -52,7 +73,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 /* Top bar */
 .top { display: flex; align-items: center; justify-content: space-between; min-height: 48px; }
-.back { font-size: 1.0625rem; color: var(--accent); font-weight: 500; min-height: 48px; min-width: 48px; display: flex; align-items: center; }
+.back { font-size: 1.0625rem; color: var(--accent); font-weight: 500; min-height: 56px; min-width: 56px; display: flex; align-items: center; }
 .synced { font-size: 0.8125rem; color: var(--ink-2); display: flex; align-items: center; gap: 4px; }
 
 /* Buttons. Accent fill marks the one primary action; accent text marks other things you can tap. */
@@ -60,17 +81,23 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-size: 1.0625rem; font-weight: 600; border: 1px solid transparent; width: 100%; }
 .btn.primary { background: var(--accent-fill); color: var(--on-accent); }
 .btn.secondary { color: var(--ink); border-color: var(--control); }
-.btn.text { min-height: 48px; color: var(--accent); }
+.btn.text { min-height: 56px; color: var(--accent); }
+.btn.danger { color: var(--danger); }
+/* Text buttons that sit in a list of rows line up with the rows' start edge */
+details > summary.btn.text, .btn.text.start { justify-content: flex-start; }
+.section.group + .gear.first { border-top: 0; }
+details + .section.group { margin-top: 24px; }
 .btn .sub { font-weight: 400; font-size: 0.9375rem; opacity: .85; font-stretch: 85%; font-variant-numeric: tabular-nums; }
 .btn, .step, .chip, .seg button, .pips button { transition: transform 100ms ease-out, background-color 120ms ease-out; }
 .btn:active:not(:disabled), .step:active, .chip:active { transform: scale(.97); }
 .dock { background: var(--paper); padding: 12px 16px calc(16px + env(safe-area-inset-bottom)); margin: 0 -16px;
   display: grid; gap: 4px; position: relative; }
 .dock.sticky { position: sticky; bottom: 0; }
-.dock::before, .nav::before { content: ""; position: absolute; left: 0; right: 0; top: -20px; height: 20px;
+.dock::before { content: ""; position: absolute; left: 0; right: 0; top: -20px; height: 20px;
   background: linear-gradient(to bottom, transparent, var(--paper)); pointer-events: none; }
 .chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border: 1px solid var(--accent);
-  color: var(--accent); border-radius: 8px; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; }
+  color: var(--accent); border-radius: 8px; font-size: 0.9375rem; font-weight: 600; white-space: nowrap; position: relative; }
+.chip::after { content: ""; position: absolute; inset: -6px 0; } /* 56 px to tap, 44 px to look at */
 .chip b { font-weight: 400; color: var(--ink-2); margin-left: 4px; }
 .chip.quiet { border-color: var(--control); color: var(--ink); font-weight: 500; }
 
@@ -78,7 +105,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .nav { display: grid; grid-template-columns: repeat(2, 1fr); background: var(--paper);
   padding: 8px 0 calc(8px + env(safe-area-inset-bottom)); position: relative; }
 .nav a { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 0.8125rem; color: var(--ink-2);
-  min-height: 48px; justify-content: center; font-weight: 500; }
+  min-height: 56px; justify-content: center; font-weight: 500; }
 .nav a::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
 .nav a.on { color: var(--ink); font-weight: 600; }
 .nav a.on::before { background: var(--accent); }
@@ -130,6 +157,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   field-sizing: content; min-width: 1ch; height: 1em; line-height: 1; border-bottom: 2px solid transparent; }
 .field input:focus { border-bottom-color: var(--accent); }
 .field input::placeholder { color: var(--ink-2); }
+.input::placeholder { color: var(--ink-2); }
+.input.empty, .input.empty::-webkit-datetime-edit { color: var(--ink-2); }
 .field .notimed { color: var(--ink-2); white-space: nowrap; }
 .steps { display: flex; gap: 8px; }
 .step { width: 56px; height: 56px; border-radius: 8px; border: 1px solid var(--control); background: var(--sheet);
@@ -138,20 +167,26 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .step.wide::before { content: ""; border-left: 11px solid currentColor; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
 .step.wide.running::before { border: 0; width: 12px; height: 12px; background: currentColor; }
 .step.type { font-size: 0.9375rem; font-weight: 600; }
-.seg { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--control); border-radius: 8px; overflow: hidden; }
+.seg { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--control); border-radius: 8px; overflow: hidden;
+  background: var(--sheet); }
 .seg button { min-height: 56px; font-weight: 600; font-size: 1.0625rem; border-left: 1px solid var(--control); }
-.seg button:first-child { border-left: 0; }
+.seg button:first-child { border-left: 0; border-radius: 7px 0 0 7px; }
+.seg button:last-child { border-radius: 0 7px 7px 0; } /* the selected ring follows the rounded ends */
 .seg [aria-pressed="true"][data-v="sour"] { background: var(--sour-bg); color: var(--sour); box-shadow: inset 0 0 0 2px var(--sour); }
 .seg [aria-pressed="true"][data-v="balanced"] { background: var(--balanced-bg); color: var(--balanced); box-shadow: inset 0 0 0 2px var(--balanced); }
 .seg [aria-pressed="true"][data-v="bitter"] { background: var(--bitter-bg); color: var(--bitter); box-shadow: inset 0 0 0 2px var(--bitter); }
 .seg.two { grid-template-columns: repeat(2, 1fr); }
-.seg.two [aria-pressed="true"] { background: var(--ink); color: var(--paper); }
 .pips { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
-.pips button { min-height: 52px; border-radius: 8px; border: 1px solid var(--control); font-size: 1.25rem;
+.pips button { min-height: 56px; border-radius: 8px; border: 1px solid var(--control); font-size: 1.25rem;
   font-stretch: 80%; font-weight: 500; font-variant-numeric: tabular-nums; }
-.pips [aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pips button { background: var(--sheet); }
+/* Rating and two-way choices: filled when picked. Ink in light; in dark a muted fill with a ring, since a solid
+   near-white block glares in a dark kitchen. */
+.pips [aria-pressed="true"], .seg.two [aria-pressed="true"] { background: var(--pick); color: var(--on-pick);
+  border-color: var(--pick); box-shadow: inset 0 0 0 2px var(--pick-ring); }
+.chip[aria-pressed="true"] { background: var(--panel); box-shadow: inset 0 0 0 1px var(--accent); } /* a ring: Save keeps the only fill */
 .anchors { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--ink-2); padding: 4px 8px 0; }
-.hint { font-size: 0.8125rem; color: var(--danger); min-height: 1.2em; margin-top: 8px; }
+.hint { font-size: 0.8125rem; color: var(--danger); min-height: 1.45em; margin-top: 8px; } /* room for one line: no jump */
 
 /* Inputs */
 .flabel { display: block; font-size: 0.8125rem; color: var(--ink-2); font-weight: 500; margin: 16px 0 8px; }
@@ -160,6 +195,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
 .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .fhint { font-size: 0.8125rem; color: var(--ink-2); margin-top: 8px; }
+.pw { position: relative; }
+.pw .input { padding-right: 80px; }
+.pw button { position: absolute; right: 0; top: 0; height: 56px; min-width: 72px; color: var(--accent); font-weight: 600; }
+.input[aria-invalid="true"] { border-color: var(--danger); }
 
 /* Equipment rows */
 .gear { padding: 16px 0; border-bottom: 1px solid var(--rule); }
@@ -170,10 +209,23 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 details > summary { list-style: none; cursor: pointer; }
 details > summary::-webkit-details-marker { display: none; }
 
+/* One-offs that would otherwise be inline styles (the CSP allows no inline style) */
+.measure { max-width: 34ch; }
+.lede { font-size: 1.0625rem; max-width: 34ch; }
+code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color: var(--ink); }
+.wordmark { font-size: 2.75rem; letter-spacing: -0.02em; line-height: 1; }
+.ink { color: var(--ink); }
+.minh44 { min-height: 44px; }
+.topline { border-top: 1px solid var(--rule); }
+.mt48 { margin-top: 48px; }
+.dock.flat { margin-top: 16px; }
+.center { text-align: center; }
+.fill { flex: 1; display: flex; flex-direction: column; } /* a form whose dock sits at the bottom */
+
 /* Undo strip: the line under Undo shrinks over 5 s, linearly */
-.undo { display: flex; align-items: center; justify-content: space-between; background: var(--sheet); color: var(--ink-2);
-  border: 1px solid var(--control); border-radius: 8px; padding: 0 4px 0 16px; min-height: 56px; font-size: 0.9375rem; margin-bottom: 8px; }
-.undo button { color: var(--accent); font-weight: 600; padding: 12px 16px; position: relative; min-height: 48px; }
+.undo { display: flex; align-items: center; justify-content: space-between; background: var(--panel); color: var(--ink);
+  border: 1px solid transparent; border-radius: 8px; padding: 0 4px 0 16px; min-height: 56px; font-size: 0.9375rem; margin-bottom: 8px; }
+.undo button { color: var(--accent); font-weight: 600; padding: 12px 16px; position: relative; min-height: 56px; }
 .undo i { position: absolute; left: 16px; right: 16px; bottom: 8px; height: 2px; background: currentColor; opacity: .35;
   transform-origin: left; animation: undo 5s linear forwards; }
 @keyframes undo { to { transform: scaleX(0); } }

@@ -1,8 +1,15 @@
-// registry.coffee: the outbox, the shot form, undo and the setup forms. No build step.
+// registry.coffee: the outbox, the shot form, undo, sign-in and the setup forms. No build step.
+
+// Times are shown in the phone's time zone; the server reads it from this cookie.
+document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
 
 // --- the outbox --------------------------------------------------------------------------------------
 // Every write waits in IndexedDB until the server acknowledges it, keyed by the id the phone generated, so a
-// dropped connection never loses a shot and a retry never makes a second one.
+// dropped connection never loses a shot and a retry never makes a second one. Each entry carries the id of the
+// person who made it, and only that person's entries are sent, so one phone shared by two people never sends a
+// shot under the wrong account.
+
+const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
@@ -21,6 +28,8 @@ function store(mode, fn) {
 }
 
 class Rejected extends Error {} // the server said no (a 4xx other than 401/403/408/429): retrying won't help
+class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
+const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
 
 // Only a 2xx removes an entry. No connection, 401 (sign in again), 408, 429 and 5xx keep it and retry later; any
 // other 4xx moves it to the "Couldn't save" list on screen, so a write is never dropped without the person seeing.
@@ -46,25 +55,30 @@ async function deliver(entry) {
     return r.json();
   }
   const detail = (await r.json().catch(() => ({}))).detail;
-  const why = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
+  const reason = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
   if (RETRY.has(r.status) || r.status >= 500) {
-    const err = new Error(why);
+    // 403 is the origin check, which a proxy can trip by mistake: kept, and the person is told why.
+    const err = r.status === 403 ? new Held("The server refused this for now. It’s kept on this phone and sent again later.") : new Error(reason);
     err.wait = retryAfter(r);
     throw err;
   }
   // Refused for good: kept, marked, and shown, never silently dropped.
-  await store("readwrite", (s) => s.put({ ...entry, failed: why || `Error ${r.status}` }));
-  throw new Rejected(why);
+  await store("readwrite", (s) => s.put({ ...entry, failed: reason || `Error ${r.status}` }));
+  throw new Rejected(reason);
 }
 
 async function send(key, url, body) {
-  const entry = { key, url, body, at: Date.now() };
+  const entry = { key, url, body, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
   } finally {
     showSync();
   }
+}
+
+async function mine() {
+  return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
 }
 
 function later(wait) {
@@ -75,9 +89,10 @@ function later(wait) {
 }
 
 async function flush() {
+  if (!ME) return;
   // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot. A retry
   // stops the queue, so nothing passes an earlier write that hasn't landed.
-  const entries = (await store("readonly", (s) => s.getAll())).filter((e) => !e.failed).sort((a, b) => a.at - b.at);
+  const entries = (await mine()).filter((e) => !e.failed).sort((a, b) => a.at - b.at);
   for (const entry of entries) {
     try {
       await deliver(entry);
@@ -93,7 +108,7 @@ async function flush() {
 }
 
 async function showSync() {
-  const all = await store("readonly", (s) => s.getAll());
+  const all = await mine();
   const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
@@ -237,19 +252,30 @@ function logShot(form) {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(taste, b.getAttribute("aria-pressed") === "true" ? null : b); // taste can be left empty
+    sameShown();
     tick();
   });
   rating.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(rating, b);
+    sameShown();
     hint(form, "");
     tick();
   });
-  form.querySelector("[data-same]")?.addEventListener("click", () => {
+  // The chip shows as pressed only while taste and rating are exactly the last shot's.
+  const sameChip = form.querySelector("[data-same]");
+  function sameShown() {
+    if (!sameChip) return;
+    const last = p.same_as_last;
+    const on = pressed(taste) === (last.taste ?? null) && pressed(rating) === String(last.rating);
+    sameChip.setAttribute("aria-pressed", String(on));
+  }
+  sameChip?.addEventListener("click", () => {
     const last = p.same_as_last;
     pressOne(taste, last.taste ? taste.querySelector(`[data-v="${last.taste}"]`) : null);
     pressOne(rating, rating.querySelector(`[data-v="${last.rating}"]`));
+    sameShown();
     hint(form, "");
     tick();
   });
@@ -295,7 +321,7 @@ function logShot(form) {
       setTimeout(() => tick(8), 60);
       location.href = `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
       save.disabled = false;
     }
   });
@@ -311,13 +337,19 @@ function logShot(form) {
 
 function undo(strip) {
   const id = strip.dataset.undo;
-  strip.querySelector("i").addEventListener("animationend", () => { strip.hidden = true; });
+  // Hidden after 5 s by a timer, not the animation: with reduced motion the bar doesn't move, and Undo still shows.
+  // Focus on Undo holds it open.
+  let timer = null;
+  const arm = () => { timer = setTimeout(() => { strip.hidden = true; }, 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer));
+  strip.addEventListener("focusout", arm);
+  arm();
   strip.querySelector("button").addEventListener("click", async () => {
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -335,7 +367,7 @@ function newBag(form) {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   });
 }
@@ -359,9 +391,93 @@ function equipment(form) {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
       location.reload();
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   });
+}
+
+// --- Signing in and the account -----------------------------------------------------------------------
+
+async function post(url, body) {
+  const r = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
+    body: JSON.stringify(body),
+  });
+  if (r.ok) return r.json();
+  const detail = (await r.json().catch(() => ({}))).detail;
+  throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || "Something went wrong. Try again.");
+}
+
+function showPassword(button) {
+  const input = document.getElementById(button.getAttribute("aria-controls"));
+  button.addEventListener("click", () => {
+    const show = input.type === "password";
+    input.type = show ? "text" : "password";
+    button.textContent = show ? "Hide" : "Show";
+    button.setAttribute("aria-pressed", String(show));
+  });
+}
+
+function signIn(form) {
+  const submit = form.querySelector('[type="submit"]');
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const body = {};
+    for (const el of form.querySelectorAll("input")) body[el.name] = el.value;
+    for (const el of form.querySelectorAll("input")) el.removeAttribute("aria-invalid");
+    const empty = [...form.querySelectorAll("input")].find((el) => !el.value.trim());
+    if (empty) {
+      empty.setAttribute("aria-invalid", "true");
+      empty.focus();
+      return hint(form, "Fill in every field.");
+    }
+    submit.disabled = true;
+    try {
+      await post("/api/signin", body);
+      location.replace("/");
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+      if (err instanceof Rejected) {
+        for (const el of form.querySelectorAll("input")) {
+          el.setAttribute("aria-invalid", "true");
+          el.setAttribute("aria-errormessage", "signin-hint");
+        }
+      }
+      submit.disabled = false;
+    }
+  });
+}
+
+function account() {
+  const form = document.getElementById("password-form");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      await post("/api/password", { current: form.current.value, new: form.new.value });
+      form.reset();
+      hint(form, "");
+      form.closest("details").open = false;
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+    }
+  });
+  for (const b of document.querySelectorAll("[data-signout]")) {
+    b.addEventListener("click", async () => {
+      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
+        const label = b.textContent;
+        b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
+        setTimeout(() => { b.textContent = label; }, 4000);
+        return;
+      }
+      try {
+        await post(b.dataset.signout, {});
+        location.replace("/signin"); // only once the server has signed this phone (or every phone) out
+      } catch {
+        b.textContent = "Couldn’t sign out. Check the connection and try again.";
+      }
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -372,6 +488,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const bag = document.getElementById("bag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
+  const signin = document.getElementById("signin");
+  if (signin) signIn(signin);
+  for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
+  for (const el of document.querySelectorAll("[data-empty-class]")) {
+    const mark = () => el.classList.toggle("empty", !el.value);
+    el.addEventListener("input", mark);
+    mark();
+  }
+  account();
   flush();
 });
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
 addEventListener("online", flush);
