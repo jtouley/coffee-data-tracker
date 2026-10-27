@@ -28,8 +28,15 @@ snowflake = [
     "snowflake-connector-python>=3.12",
 ]
 
+# The shot-logging app in app/ (a Hugging Face Space later).
+app = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+]
+
 [dependency-groups]
 dev = [
+    "fastapi>=0.115",
     "pytest>=8",
     "ruff>=0.6",
     "mypy>=1.13",
@@ -54,7 +61,7 @@ ignore = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"
-files = ["src"]
+files = ["src", "app"]
 warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
@@ -63,3 +70,4 @@ ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]

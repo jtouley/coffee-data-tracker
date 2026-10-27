@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}New bag · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="/">‹ Today</a></div>
+  <div class="serif title mt8">Type the coffee</div>
+  <p class="body">Roaster and coffee, as on the bag. It’s matched to the catalog when the match is clear.</p>
+  <form id="bag" novalidate>
+    <label class="flabel" for="coffee">Coffee</label>
+    <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="Onyx Geometry" required>
+    <label class="flabel" for="roast_date">Roast date</label>
+    <input class="input" id="roast_date" name="roast_date" type="date">
+    <div class="hint" data-hint role="status"></div>
+    <div class="spacer"></div>
+    <div class="dock sticky"><button class="btn primary" type="submit">Use this coffee</button></div>
+  </form>
+{% endblock %}

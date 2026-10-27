@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "_macros.html" import nav %}
+{% block title %}Setup · registry.coffee{% endblock %}
+{% macro grinder_form() %}
+  <form data-equipment="grinder" novalidate>
+    <label class="flabel" for="g-name">Name</label>
+    <input class="input" id="g-name" name="name" autocomplete="off" required>
+    <div class="grid3">
+      <div><label class="flabel" for="g-min">Dial from</label><input class="input" id="g-min" name="scale_min" inputmode="decimal" required></div>
+      <div><label class="flabel" for="g-max">to</label><input class="input" id="g-max" name="scale_max" inputmode="decimal" required></div>
+      <div><label class="flabel" for="g-step">Step</label><input class="input" id="g-step" name="scale_step" inputmode="decimal" value="1" required></div>
+    </div>
+    <div class="flabel" id="g-dir">Finer is</div>
+    <div class="seg two" role="group" aria-labelledby="g-dir" data-choice="finer_is_lower">
+      <button type="button" data-v="true" aria-pressed="true">Lower numbers</button><button type="button" data-v="false" aria-pressed="false">Higher numbers</button>
+    </div>
+    <div class="hint" data-hint role="status"></div>
+    <button class="btn secondary mt8" type="submit">Save grinder</button>
+  </form>
+{% endmacro %}
+{% macro basket_form() %}
+  <form data-equipment="basket" novalidate>
+    <label class="flabel" for="b-name">Name</label>
+    <input class="input" id="b-name" name="name" autocomplete="off" required>
+    <label class="flabel" for="b-dose">Nominal dose (g)</label>
+    <input class="input" id="b-dose" name="basket_dose_g" inputmode="decimal" required>
+    <div class="fhint">The first shot of a new coffee starts at this dose.</div>
+    <div class="hint" data-hint role="status"></div>
+    <button class="btn secondary mt8" type="submit">Save basket</button>
+  </form>
+{% endmacro %}
+{% block main %}
+  <div class="serif title mt16">Setup</div>
+  <p class="body">Each shot records the grinder and basket it was pulled with. Changes are saved as new records, so
+    old shots keep what they used.</p>
+  <div class="section" id="grinder">Grinder</div>
+  {% for e in grinders %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
+  {% if grinders %}<details class="mt8"><summary class="btn text">Add another grinder</summary>{{ grinder_form() }}</details>{% else %}{{ grinder_form() }}{% endif %}
+  <div class="section" id="basket">Basket</div>
+  {% for e in baskets %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.basket_dose_g) }} g · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
+  {% if baskets %}<details class="mt8"><summary class="btn text">Add another basket</summary>{{ basket_form() }}</details>{% else %}{{ basket_form() }}{% endif %}
+  <div class="section">Account</div>
+  <div class="gear first"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in{% endif %}</div></div>
+  <div class="mt24"></div>
+{% endblock %}
+{% block nav %}{{ nav('setup') }}{% endblock %}

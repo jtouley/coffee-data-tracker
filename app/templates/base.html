@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f5f2">
+<title>{% block title %}registry.coffee{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Newsreader:opsz,wght@6..72,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css">
+<script>
+  // Times are shown in the phone's time zone; the server reads it from this cookie.
+  document.cookie = "tz=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone) + "; path=/; max-age=31536000; samesite=lax";
+</script>
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<main class="screen">
+{% block main %}{% endblock %}
+</main>
+{% block nav %}{% endblock %}
+</body>
+</html>

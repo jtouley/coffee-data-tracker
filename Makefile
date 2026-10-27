@@ -1,7 +1,7 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
 
-.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp lint test clean
+.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app lint test clean
 
 install:
 	uv sync
@@ -37,12 +37,15 @@ publish:
 mcp:
 	uv run coffeedata mcp
 
+app:  ## the shot-logging app on http://localhost:8000, over the local lake (signed in as the owner)
+	uv run uvicorn app.main:app --reload --host $${HOST:-127.0.0.1} --port $${PORT:-8000}
+
 hooks:  ## install the git pre-commit hooks
 	uv run pre-commit install
 
 fmt:
-	uv run ruff check --fix src tests
-	uv run ruff format src tests
+	uv run ruff check --fix src app tests
+	uv run ruff format src app tests
 
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files

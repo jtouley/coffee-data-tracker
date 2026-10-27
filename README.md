@@ -42,8 +42,13 @@ Anything that describes the current state is computed from those files.
 | `probes/…` | probe | storefront platform checks |
 | `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
 | `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
-| `shots/<id>__<time>.parquet` | MCP, issue form | one logged shot; corrections and retractions are new records |
-| `marts/*.parquet` | build | derived and replaced weekly: `dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event` |
+| `shots/<id>__<time>.parquet` | app, MCP, issue form | one logged shot; corrections and retractions are new records |
+| `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new records |
+| `bags/<id>__<time>.parquet` | app | a bag of coffee being used, matched to the catalog when it can be |
+| `marts/*.parquet` | build | derived and replaced weekly: `dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event`, and the private `fct_shot` |
+
+Bag photos go to a separate private dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo, with the
+image in Hugging Face's `Image` layout so the dataset viewer can show it.
 
 Some consequences:
 
@@ -153,9 +158,28 @@ Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 1
 has `log_shot`, `search_coffees`, `shot_history`, `suggest_next` and `run_sql` (one read-only SELECT against the
 dbt models in `build/coffee.duckdb`).
 
+`log_shot` takes an optional `grinder_name` ("DF64 V2"), a grinder added in the app's Setup, so the grind setting
+is tied to the grinder it was ground on.
+
 From your phone, open an issue with the "Log a shot" form. The `issue-forms` workflow only acts on the repo
 owner's issues: it records the shot, replies with the match and advice, and closes the issue. "Add a roaster"
 works the same way and has a checkbox for roasters who want to be left out.
+
+## The app
+
+`app/` is a small phone web app for logging shots at the machine (plan and design in `docs/app/`). It's FastAPI
+with server-rendered pages and a little JavaScript, imports `coffeedata`, and writes through `Lake.write` and
+`Lake.publish` like everything else. Today it has Today, Log shot, Saved, Setup (grinder and basket) and a typed
+"New bag"; sign-in is a local stub that treats every request as the owner.
+
+```bash
+make app                     # http://localhost:8000, over ./lake
+HOST=0.0.0.0 make app        # to try it from a phone on the same network
+```
+
+On first run it asks for your grinder (its dial range and step, and which way is finer) and basket (nominal dose),
+then the coffee. Each shot prefills from the last shot of the bag; time, taste and rating start empty. Saved shows
+what the shot did, not what to change, and Undo writes a retraction.
 
 ## Example queries
 
