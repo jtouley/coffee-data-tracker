@@ -161,8 +161,7 @@ def test_app_in_a_browser(lake, tmp_path):
     shot_id = r.stdout.strip()
     # The browser's shot was saved, then retracted by Undo: two records, no current shot.
     assert len(list((lake.root / "shots").glob(f"{shot_id}__*.parquet"))) == 2
-    assert [s.shot_id for s in shots.load_shots(lake)][-1] == "first"
-    assert all(s.shot_id != shot_id for s in shots.load_shots(lake))
+    assert {s.shot_id for s in shots.load_shots(lake)} == {"dial0", "dial1", "dial2", "dial3", "first"}
     screens = ("owner-setup", "first-run", "setup-empty", "new-bag", "offline", "not-found", "sign-in")
     screens += ("sign-in-error", "today", "log-shot", "saved", "setup")
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}
