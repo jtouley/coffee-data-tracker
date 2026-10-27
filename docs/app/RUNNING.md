@@ -35,7 +35,8 @@ accepts Secure cookies on `localhost` without it.
 - **Sessions** are a signed cookie (`SESSION_SECRET`): HttpOnly, Secure, SameSite=Lax, 90 days, renewed after a
   day of use. "Sign out on all devices" and a password change sign out every other phone.
 - **Lockouts:** five failed sign-ins for a username, or twenty from one address, lock it for 15 minutes.
-- **Invites and reset codes** come in milestone 3. Until then the owner is the only account.
+- **Invites and reset codes:** the owner makes a one-time invite link (valid a week) or a reset code under Setup →
+  Invite someone. Codes are 80-bit, shown once, and only their SHA-256 is stored.
 
 Every read and write is scoped to the user in the cookie, never to a `user_id` in the request.
 
@@ -55,7 +56,7 @@ Set these in the Space's settings (Variables and secrets → New secret):
 | Secret | What it is |
 |---|---|
 | `HF_TOKEN` | Writes the lake, the users dataset and the photo dataset |
-| `ANTHROPIC_API_KEY` | Reads bag labels. Without it, New bag offers "Type it instead" only |
+| `ANTHROPIC_API_KEY` | Reads bag labels (10 reads per person per day). Without it, New bag asks you to type the coffee |
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
 | `OWNER_SETUP_CODE` | Typed once to create the owner's account; after that it only resets the owner's password. Optional once the owner exists |
@@ -80,3 +81,15 @@ refuses to be framed, and its cookie isn't sent inside another site's frame.
 
 The Space loads shots from the weekly `marts/fct_shot.parquet` export, then reads only the shot files written after
 it: one directory listing instead of one request per shot file. Without an export it reads every shot file.
+
+## Using it on the phone
+
+- **Install:** open the app's address in Chrome on Android and use "Add to Home screen". It runs full screen and stays
+  signed in like a normal tab.
+- **Offline:** every write waits in the phone's outbox (IndexedDB) until the server acknowledges it, so a shot saved
+  with no signal syncs later. The service worker keeps the last copy of Today, Log shot, New bag, Coffees, a coffee
+  and History, so those open offline; other pages show "No connection". A bag photo taken offline waits too and is
+  read when it syncs. Signing out deletes the kept pages.
+- **Left-handed:** Setup → Steppers → Left moves the − and + buttons to the left edge.
+- **Bag photos** are shrunk to 1600 px with their EXIF removed, then kept, one Parquet file each, in the private
+  `COFFEEDATA_PHOTOS` dataset. Only their owner can see them.
