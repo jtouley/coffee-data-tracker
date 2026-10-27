@@ -14,6 +14,7 @@ SCHEMA = pa.schema(
     [
         ("input_hash", pa.string()),
         ("is_coffee", pa.bool_()),
+        ("is_wholesale", pa.bool_()),
         ("clean_title", pa.string()),
         ("origin_country", pa.string()),
         ("origin_region", pa.string()),
@@ -28,7 +29,7 @@ SCHEMA = pa.schema(
         ("is_decaf", pa.bool_()),
     ]
 )
-ATTRS = [f.name for f in SCHEMA][3:]
+ATTRS = [f.name for f in SCHEMA][4:]
 
 
 def row(r: dict) -> dict:
@@ -45,7 +46,12 @@ def row(r: dict) -> dict:
         body_hash=r["body_hash"] or "",
         body_text=r["body_text"] or "",
     )
-    out = {"input_hash": r["input_hash"], "is_coffee": classify.is_coffee(item), "clean_title": item.title}
+    out = {
+        "input_hash": r["input_hash"],
+        "is_coffee": classify.is_coffee(item),
+        "is_wholesale": classify.is_wholesale(item),
+        "clean_title": item.title,
+    }
     e = extract.rules(item) if out["is_coffee"] else None
     return out | {a: getattr(e, a) if e else None for a in ATTRS}
 

@@ -152,3 +152,28 @@ def test_syrups_brewers_books_and_gifts_are_not_coffee():
         "La Cabra Coffee Server",
     ):
         assert not is_coffee(item(title, grams=340)), title
+
+
+def test_green_coffee_is_not_listed_but_wholesale_is_and_is_flagged():
+    from coffeedata.classify import is_wholesale
+
+    assert not is_coffee(item("Tanzanian Peaberry - Unroasted Coffee", grams=454))
+    assert not is_coffee(item("Brazil: Oberon, Cerrado", product_type="Bulk Green - Conventional", grams=454))
+    assert not is_coffee(item("Rwanda Nyabumera", tags=["Unroasted"], grams=454))
+    for title in (
+        "Company Blend - Wholesale",
+        "Papua New Guinea Dark — 12oz Case (6)",
+        "Slightly Dangerous (WHOLESALE)",
+    ):
+        it = item(title, grams=340, body="A dark roast coffee.")
+        assert is_coffee(it) and is_wholesale(it), title
+    assert not is_wholesale(item("Ethiopia Guji Natural", grams=340))
+
+
+def test_origin_adjectives_and_subscribable_coffees_are_coffee():
+    assert is_coffee(item("Ethiopian Sidamo"))
+    assert is_coffee(item("El Salvadorian"))
+    assert is_coffee(
+        item("Decaf Sumatra", product_type="variable-subscription", tags=["Coffee Subscriptions"])
+    )
+    assert not is_coffee(item("Four Bags", product_type="subscriptions", grams=1270))

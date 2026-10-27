@@ -77,6 +77,8 @@ DEMONYMS = {
     "burundian": "Burundi",
     "ugandan": "Uganda",
     "salvadoran": "El Salvador",
+    "salvadorian": "El Salvador",
+    "salvadorean": "El Salvador",
     "costa rican": "Costa Rica",
     "panamanian": "Panama",
     "nicaraguan": "Nicaragua",

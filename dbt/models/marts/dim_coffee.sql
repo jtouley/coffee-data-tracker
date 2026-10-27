@@ -19,7 +19,7 @@ latest as (
 llm as (select * from {{ ref('stg_enrichments') }} where method = 'llm'),
 attrs as (
     select
-        l.coffee_id, p.clean_title,
+        l.coffee_id, p.clean_title, p.is_wholesale,
         if(e.roaster_id is null, p.origin_country, e.origin_country) as origin_country,
         if(e.roaster_id is null, p.origin_region, e.origin_region) as origin_region,
         if(e.roaster_id is null, p.producer, e.producer) as producer,
@@ -37,15 +37,17 @@ attrs as (
     left join llm e using (roaster_id, product_id, body_hash)
 ),
 variants as (
-    select coffee_id, v.* from latest, unnest(variants) as t(v)
+    select coffee_id, a.is_wholesale, v.* from latest join attrs a using (coffee_id), unnest(variants) as t(v)
 ),
 prices as (
     select
         coffee_id,
         bool_or(coalesce(available, true)) as any_available,
         min(price_usd) filter (where price_usd > 0) as min_price_usd,
-        -- A price outside $0.50-$100 per 100 g is a misread weight or price, not a real bag.
-        min(round(price_usd / grams * 100, 2)) filter (where grams between 150 and 2500 and price_usd > 0
+        -- A price outside $0.50-$100 per 100 g is a misread weight or price, not a real bag. Wholesale bags and
+        -- cases get no per-weight price, so they stay out of medians and price sorting.
+        min(round(price_usd / grams * 100, 2)) filter (where not is_wholesale and grams between 150 and 2500
+                                                         and price_usd > 0
                                                          and coalesce(available, true)
                                                          and price_usd / grams * 100 between 0.5 and 100)
             as price_per_100g,
@@ -69,7 +71,7 @@ select
     a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
-    a.enrichment_method,
+    a.enrichment_method, a.is_wholesale,
     run.is_latest_run and coalesce(p.any_available, false) as in_stock,
     p.min_price_usd, p.price_per_100g, p.bag_sizes_g
 from latest l
