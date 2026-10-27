@@ -57,6 +57,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.ruff]
+extend-exclude = ["eval/sealed"]  # sealed test set: kept byte-for-byte (SHA256SUMS)
 line-length = 110
 target-version = "py312"
 
