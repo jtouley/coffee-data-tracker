@@ -108,6 +108,23 @@ function hint(form, text) {
   form.querySelector("[data-hint]").textContent = text;
 }
 
+// A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
+// label. Without data-confirm, the action runs at once.
+function confirmTap(b, action) {
+  const restore = () => {
+    if (b.dataset.label === undefined) return;
+    b.textContent = b.dataset.label;
+    delete b.dataset.label;
+  };
+  if (!b.dataset.confirm || b.dataset.label !== undefined) {
+    restore();
+    return action();
+  }
+  b.dataset.label = b.textContent;
+  b.textContent = b.dataset.confirm;
+  setTimeout(restore, 4000);
+}
+
 function pressOne(group, button) {
   for (const b of group.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b === button));
 }
@@ -414,6 +431,7 @@ function newBag(root) {
     root.querySelector(`[data-step="${name}"] h1`)?.focus({ preventScroll: true }); // screen readers hear the step
   };
   let read = null; // what the label said: carried into the bag, whichever way it's chosen
+  let attempt = 0; // which photo the screen is waiting on; replies for any other are dropped
   let saving = false;
 
   const save = async (body, where) => {
@@ -422,7 +440,7 @@ function newBag(root) {
     for (const b of root.querySelectorAll("button")) b.disabled = true;
     body = { bag_id: uuid(), ...body };
     if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
-    if (read?.roast_date && !body.roast_date) body.roast_date = read.roast_date;
+    if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
@@ -456,7 +474,7 @@ function newBag(root) {
     fill("notes", m.notes);
     fill("price", m.price);
     fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
-    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? null }, root.querySelector('[data-step="match"]'));
+    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
     step("match");
     root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
   };
@@ -537,12 +555,17 @@ function newBag(root) {
   const take = () => input?.click();
   for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
   for (const b of root.querySelectorAll("[data-goto]")) {
-    b.onclick = () => (b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto));
+    b.onclick = () => {
+      if (b.dataset.goto === "type") attempt++; // typing instead: a read still on its way is dropped
+      return b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto);
+    };
   }
   input?.addEventListener("change", async () => {
     const file = input.files[0];
     input.value = "";
     if (!file) return;
+    read = null; // a new photo: nothing from the last one carries over, even if this one fails
+    const mine = ++attempt;
     const photo = await shrink(file);
     const url = URL.createObjectURL(photo);
     for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
@@ -557,6 +580,7 @@ function newBag(root) {
         body: photo,
       });
       const body = await r.json().catch(() => ({}));
+      if (mine !== attempt) return;
       if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
@@ -570,6 +594,7 @@ function newBag(root) {
       const canRetake = !["limit", "no_key"].includes(body.status);
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
+      if (mine !== attempt) return;
       // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
       await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
       read = { photo_id: id, raw: null };
@@ -604,7 +629,7 @@ function equipment(form) {
       el.removeAttribute("aria-invalid");
       const v = el.value.trim();
       if (!v) {
-        if (!el.required) continue;
+        if (!el.required) { body[el.name] = null; continue; } // cleared on purpose; fields not on the form are kept
         el.setAttribute("aria-invalid", "true");
         el.focus();
         return hint(form, "Fill in the fields that aren’t optional.");
@@ -624,15 +649,7 @@ function equipment(form) {
     save({});
   });
   const retire = form.querySelector("[data-retire]");
-  retire?.addEventListener("click", () => {
-    if (retire.textContent !== retire.dataset.confirm) {
-      const label = retire.textContent;
-      retire.textContent = retire.dataset.confirm; // a second tap: retired gear leaves the pickers
-      setTimeout(() => { retire.textContent = label; }, 4000);
-      return;
-    }
-    save({ retired: true });
-  });
+  retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
 }
 
 // --- Joining and inviting -----------------------------------------------------------------------------
@@ -652,7 +669,15 @@ async function joinCode(form) {
       input.setAttribute("aria-invalid", "true");
     }
   };
-  const fromLink = decodeURIComponent(location.hash.slice(1));
+  let fromLink = "";
+  try {
+    fromLink = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    // A link that was cut or mangled in the message: say so, and keep it out of history.
+    history.replaceState(null, "", location.pathname);
+    status.textContent = "That link didn’t come through whole. Type the code from the message.";
+    input.setAttribute("aria-invalid", "true");
+  }
   if (fromLink) {
     input.value = fromLink;
     history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
@@ -711,16 +736,7 @@ function invites() {
   };
   const makeOne = () => act("/api/invites", {}, (r) => show(r));
   primary.onclick = makeOne;
-  another.onclick = () => {
-    if (another.textContent !== another.dataset.confirm) {
-      const label = another.textContent;
-      another.textContent = another.dataset.confirm;
-      setTimeout(() => { another.textContent = label; }, 4000);
-      return;
-    }
-    another.textContent = "Make another link";
-    makeOne();
-  };
+  another.onclick = () => confirmTap(another, makeOne);
   for (const b of document.querySelectorAll("[data-reset]")) {
     b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
   }
@@ -731,15 +747,7 @@ function invites() {
     b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => location.reload());
   }
   for (const b of document.querySelectorAll("[data-person]")) {
-    b.onclick = () => {
-      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
-        const label = b.textContent;
-        b.textContent = b.dataset.confirm;
-        setTimeout(() => { b.textContent = label; }, 4000);
-        return;
-      }
-      act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload());
-    };
+    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload()));
   }
 }
 
@@ -858,13 +866,8 @@ function account() {
     }
   });
   for (const b of document.querySelectorAll("[data-signout]")) {
-    b.addEventListener("click", async () => {
-      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
-        const label = b.textContent;
-        b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
-        setTimeout(() => { b.textContent = label; }, 4000);
-        return;
-      }
+    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
       } finally {
@@ -873,7 +876,7 @@ function account() {
         navigator.serviceWorker?.controller?.postMessage("signed-out");
         location.replace("/signin");
       }
-    });
+    }));
   }
 }
 

@@ -26,6 +26,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from app import labels
+from app.photos import load as load_photo
 from coffeedata import shots
 from coffeedata.lake import Lake
 
@@ -88,15 +89,12 @@ def cases(lake: Lake, photos: Lake, limit: int | None = None) -> list[Case]:
         if b["photo_id"] and b["coffee_id"] in catalog and not b["deleted"]
     ]
     out = []
-    pcon = photos.connect()
     for b in bags[:limit]:
-        files = ", ".join(
-            f"'{s.rsplit('/', 1)[0]}/{b['photo_id']}.parquet'" for s in photos.sources("photos")
-        )
-        try:
-            (img,) = pcon.execute(f"select image.bytes from read_parquet([{files}])").fetchone()
-        except Exception:  # noqa: BLE001 - the photo is missing from the dataset: skip the bag
-            continue
+        # Staging and the dataset are tried one at a time: a photo is in one or the other, never both.
+        hit = load_photo(photos, b["photo_id"])
+        if hit is None:
+            continue  # the photo is missing from the dataset: skip the bag
+        img = hit[1]
         roaster, title = catalog[b["coffee_id"]]
         rd = b["roast_date"].isoformat() if b["roast_date"] else None
         out.append(Case(b["bag_id"], b["coffee_id"], roaster, title, rd, img))
@@ -114,7 +112,7 @@ def evaluate(
                 r = reader(case.jpeg, m)
                 sc.reads += 1
                 sc.cost += r.cost_usd
-                if r.latency_s:
+                if r.latency_s and r.status == "read":  # a timeout says nothing about a normal read's speed
                     sc.latencies.append(r.latency_s)
                 label = r.label or {}
                 seen.append((norm(label.get("roaster")), norm(label.get("coffee")), label.get("roast_date")))

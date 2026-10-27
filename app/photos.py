@@ -45,6 +45,8 @@ def normalize(data: bytes) -> Photo:
         with Image.open(io.BytesIO(data)) as im:
             if im.format not in FORMATS:
                 raise BadPhoto("Use a JPEG, PNG or WebP photo.")
+            if im.width * im.height > MAX_PIXELS:  # Pillow itself only refuses at twice its limit
+                raise BadPhoto("That photo is too large. Take it again with the camera.")
             upright = ImageOps.exif_transpose(im).convert(
                 "RGB"
             )  # uses the orientation tag before it's dropped
