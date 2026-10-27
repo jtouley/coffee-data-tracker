@@ -16,7 +16,8 @@ ENV HOME=/home/user \
     COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data \
     COFFEEDATA_USERS=hf://datasets/jtouley/coffee-data-users \
     COFFEEDATA_PHOTOS=hf://datasets/jtouley/coffee-data-photos \
-    COFFEEDATA_STAGING=/home/user/app/build/lake-staging
+    COFFEEDATA_STAGING=/home/user/app/build/lake-staging \
+    COFFEEDATA_PROXY_HOPS=1
 
 COPY --chown=user pyproject.toml uv.lock README.md ./
 COPY --chown=user src ./src
@@ -25,5 +26,6 @@ COPY --chown=user app ./app
 
 EXPOSE 7860
 # One process: accounts and the shot cache live in memory, and usernames are checked under its lock.
-# --proxy-headers so sign-in lockouts see the phone's address, not the Space's proxy.
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860", "--proxy-headers", "--forwarded-allow-ips", "*"]
+# No --proxy-headers: the app reads the phone's address for its sign-in limits from the X-Forwarded-For entry the
+# Space's proxy appended (COFFEEDATA_PROXY_HOPS from the right), never from what the client sent.
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860", "--no-proxy-headers"]

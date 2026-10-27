@@ -76,7 +76,14 @@ class Store:
         cols = [d[0] for d in cur.description]
         if "logged_at" not in cols:
             return None
-        rows = {r["shot_id"]: r for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall())}
+        if "shot_coffee_id" not in cols:
+            return None  # an export from before it kept the shot's own values
+        rows = {}
+        for x in cur.fetchall():
+            r = dict(zip(cols, x, strict=True))
+            for c in ("coffee_id", "coffee_freetext", "roast_date"):
+                r[c] = r.pop(f"shot_{c}")  # the raw shot, not the bag's values fct_shot fills in
+            rows[r["shot_id"]] = r
         cutoff = max((r["logged_at"] for r in rows.values()), default=None)
         newer = self.lake.files_after("shots", cutoff) if cutoff else None
         if newer is None:

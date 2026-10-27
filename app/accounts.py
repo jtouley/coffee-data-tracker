@@ -132,10 +132,16 @@ def check_password(password: str, username: str = "") -> None:
 
 
 class Limiter:
-    """Failed sign-ins per key within LOCKOUT seconds, in memory (a restart clears it)."""
+    """Failed attempts per key within LOCKOUT seconds, in memory (a restart clears it).
+
+    An attempt is reserved before the slow password check and released if it succeeds, under one lock, so a burst
+    of parallel guesses can't all pass the check before any of them is counted."""
+
+    SWEEP_AT = 10_000
 
     def __init__(self) -> None:
         self.fails: dict[str, deque[float]] = defaultdict(deque)
+        self.lock = threading.Lock()
 
     def _recent(self, key: str, now: float) -> deque[float]:
         q = self.fails[key]
@@ -143,14 +149,40 @@ class Limiter:
             q.popleft()
         return q
 
+    def _sweep(self, now: float) -> None:
+        if len(self.fails) > self.SWEEP_AT:
+            for key in [k for k, q in self.fails.items() if not q or q[-1] <= now - LOCKOUT]:
+                del self.fails[key]
+
+    def reserve(self, limits: dict[str, int], now: float) -> bool:
+        """Count one attempt against every key, unless any key is already at its limit."""
+        with self.lock:
+            self._sweep(now)
+            if any(len(self._recent(k, now)) >= n for k, n in limits.items()):
+                return False
+            for k in limits:
+                self.fails[k].append(now)
+            return True
+
+    def release(self, key: str, now: float) -> None:
+        """Take back one reserved attempt (it succeeded)."""
+        with self.lock:
+            q = self.fails.get(key)
+            if q and now in q:
+                q.remove(now)
+
     def blocked(self, key: str, limit: int, now: float) -> bool:
-        return len(self._recent(key, now)) >= limit
+        with self.lock:
+            return len(self._recent(key, now)) >= limit
 
     def fail(self, key: str, now: float) -> None:
-        self._recent(key, now).append(now)
+        with self.lock:
+            self._sweep(now)
+            self._recent(key, now).append(now)
 
     def clear(self, key: str) -> None:
-        self.fails.pop(key, None)
+        with self.lock:
+            self.fails.pop(key, None)
 
 
 class Accounts:
@@ -233,16 +265,24 @@ class Accounts:
 
     # --- sign-up and sign-in -------------------------------------------------------------------------
 
-    def create_owner(self, setup_code: str, username: str, password: str) -> Account:
-        """The first account, with OWNER_SETUP_CODE. Once anyone exists, the code does nothing."""
+    def create_owner(
+        self, setup_code: str, username: str, password: str, ip: str = "", now: float | None = None
+    ) -> Account:
+        """The first account, with OWNER_SETUP_CODE. Once anyone exists, the code does nothing. Wrong codes count
+        against the address like failed sign-ins."""
         username = username.strip().lower()
+        now = time.monotonic() if now is None else now
         with self.lock:
             if not self.needs_owner:
                 raise AccountError("This app already has an owner. Sign in instead.")
             if not self.setup_code:
                 raise AccountError("OWNER_SETUP_CODE isn’t set on the server.")
+            key = f"ip:{ip}"
+            if not self.limiter.reserve({key: MAX_PER_IP}, now):
+                raise AccountError("Too many tries. Wait 15 minutes and try again.")
             if not hmac.compare_digest(setup_code.strip().encode(), self.setup_code.encode()):
                 raise AccountError("That setup code isn’t right.")
+            self.limiter.release(key, now)
             if not USERNAME.fullmatch(username):
                 raise AccountError("Use 3 to 32 lower-case letters, digits, - or _.")
             check_password(password, username)
@@ -255,15 +295,14 @@ class Accounts:
         now = time.monotonic() if now is None else now
         name = username.strip().lower()
         ukey, ikey = f"u:{name}", f"ip:{ip}"
-        if self.limiter.blocked(ukey, MAX_PER_USERNAME, now) or self.limiter.blocked(ikey, MAX_PER_IP, now):
+        if not self.limiter.reserve({ukey: MAX_PER_USERNAME, ikey: MAX_PER_IP}, now):
             raise AccountError("Too many tries. Wait 15 minutes and try again.")
         acct = self.by_name(name)
         ok = self._verify(acct.password_hash if acct else self._dummy, password) and acct is not None
         if not ok or acct is None or acct.disabled:
-            self.limiter.fail(ukey, now)
-            self.limiter.fail(ikey, now)
             raise AccountError("That username and password don’t match. Check both and try again.")
         self.limiter.clear(ukey)
+        self.limiter.release(ikey, now)
         if _hasher.check_needs_rehash(acct.password_hash):
             with self.lock:
                 acct = self._write(replace(acct, password_hash=self._hash(password)))
