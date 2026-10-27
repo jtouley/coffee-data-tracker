@@ -150,6 +150,23 @@ function hint(form, text) {
   form.querySelector("[data-hint]").textContent = text;
 }
 
+// A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
+// label. Without data-confirm, the action runs at once.
+function confirmTap(b, action) {
+  const restore = () => {
+    if (b.dataset.label === undefined) return;
+    b.textContent = b.dataset.label;
+    delete b.dataset.label;
+  };
+  if (!b.dataset.confirm || b.dataset.label !== undefined) {
+    restore();
+    return action();
+  }
+  b.dataset.label = b.textContent;
+  b.textContent = b.dataset.confirm;
+  setTimeout(restore, 4000);
+}
+
 function pressOne(group, button) {
   for (const b of group.querySelectorAll("button")) b.setAttribute("aria-pressed", String(b === button));
 }
@@ -303,6 +320,7 @@ function logShot(form) {
       coffee_freetext: p.coffee_freetext,
       grinder_id: p.grinder_id,
       basket_id: p.basket_id,
+      machine_id: p.machine_id,
       dose_g: num($("dose_g")),
       yield_g: num($("yield_g")),
       time_s: time,
@@ -373,26 +391,152 @@ function newBag(form) {
 }
 
 function equipment(form) {
-  const choice = form.querySelector("[data-choice]");
-  choice?.addEventListener("click", (e) => {
-    const b = e.target.closest("button");
-    if (b) pressOne(choice, b);
-  });
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const body = { equipment_id: uuid(), kind: form.dataset.equipment };
+  const choices = form.querySelectorAll("[data-choice]");
+  for (const choice of choices) {
+    choice.addEventListener("click", (e) => {
+      const b = e.target.closest("button");
+      if (b) pressOne(choice, b);
+    });
+  }
+  // The whole record goes each time: a change is a new record under the same id, latest wins.
+  async function save(extra) {
+    const body = { equipment_id: form.dataset.id || uuid(), kind: form.dataset.equipment, ...extra };
     for (const el of form.querySelectorAll("input")) {
+      el.removeAttribute("aria-invalid");
       const v = el.value.trim();
-      if (!v) return hint(form, "Fill in every field.");
+      if (!v) {
+        if (!el.required) { body[el.name] = null; continue; } // cleared on purpose; fields not on the form are kept
+        el.setAttribute("aria-invalid", "true");
+        el.focus();
+        return hint(form, "Fill in the fields that aren’t optional.");
+      }
       body[el.name] = el.inputMode === "decimal" ? Number(v.replace(",", ".")) : v;
     }
-    if (choice) body[choice.dataset.choice] = pressed(choice) === "true";
+    for (const choice of choices) body[choice.dataset.choice] = pressed(choice) === "true";
     try {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
-      location.reload();
+      location.href = form.dataset.next || "/setup";
     } catch (err) {
       hint(form, why(err));
     }
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    save({});
+  });
+  const retire = form.querySelector("[data-retire]");
+  retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
+}
+
+// --- Joining and inviting -----------------------------------------------------------------------------
+
+// The invite link carries its code after #, which never reaches the server; fill it in and say if it's good.
+async function joinCode(form) {
+  const input = form.querySelector("#code");
+  const status = form.querySelector("[data-code-status]");
+  const check = async () => {
+    if (!input.value.trim()) return;
+    try {
+      const r = await post("/api/invites/check", { code: input.value });
+      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
+      input.removeAttribute("aria-invalid");
+    } catch (err) {
+      status.textContent = err.message;
+      input.setAttribute("aria-invalid", "true");
+    }
+  };
+  let fromLink = "";
+  try {
+    fromLink = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    // A link that was cut or mangled in the message: say so, and keep it out of history.
+    history.replaceState(null, "", location.pathname);
+    status.textContent = "That link didn’t come through whole. Type the code from the message.";
+    input.setAttribute("aria-invalid", "true");
+  }
+  if (fromLink) {
+    input.value = fromLink;
+    history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
+    check();
+  }
+  input.addEventListener("change", check);
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false; // no clipboard API, or not allowed: the code stays on screen to copy by hand
+  }
+}
+
+function invites() {
+  const box = document.querySelector("[data-codebox]");
+  const primary = document.querySelector("[data-new-invite]");
+  const another = document.querySelector("[data-another]");
+  const intro = document.querySelector("[data-code-intro]");
+  const say = (text) => hint(document.querySelector("main"), text);
+  const show = (r, name) => {
+    const link = `${location.origin}/join#${r.code}`;
+    const join = r.kind === "join";
+    const groups = r.code.split("-");
+    const [a, b] = box.querySelectorAll("[data-code] span");
+    a.textContent = `${groups[0]}-${groups[1]}`; // two groups per line, never broken inside one
+    b.textContent = `${groups[2]}-${groups[3]}`;
+    box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
+    box.querySelector("[data-code-note]").textContent = join
+      ? `${location.host}/join · until ${r.expires}`
+      : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
+    intro.textContent = join
+      ? `Share the link. It works once and expires ${r.expires}.`
+      : `Give ${name} the code below.`;
+    box.hidden = false;
+    // The one filled button now sends this code; making another one is a text button with a second tap.
+    const share = join && navigator.share;
+    primary.textContent = share ? "Share link" : join ? "Copy link" : "Copy code";
+    primary.onclick = async () => {
+      if (share) return navigator.share({ title: "registry.coffee", url: link }).catch(() => {});
+      say((await copyText(join ? link : r.code)) ? "" : "Couldn’t copy. Press and hold the code to copy it.");
+      if (!share) primary.textContent = "Copied";
+    };
+    another.hidden = !join;
+    box.scrollIntoView({ block: "center" });
+  };
+  const act = async (url, body, after) => {
+    try {
+      after(await post(url, body));
+    } catch (err) {
+      say(err.message);
+    }
+  };
+  const makeOne = () => act("/api/invites", {}, (r) => show(r));
+  primary.onclick = makeOne;
+  another.onclick = () => confirmTap(another, makeOne);
+  for (const b of document.querySelectorAll("[data-reset]")) {
+    b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
+  }
+  for (const b of document.querySelectorAll("[data-renew]")) {
+    b.onclick = () => act(`/api/invites/${b.dataset.renew}/renew`, {}, (r) => { b.previousElementSibling.hidden = true; b.nextElementSibling.hidden = true; b.hidden = true; show(r); });
+  }
+  for (const b of document.querySelectorAll("[data-revoke]")) {
+    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => location.reload());
+  }
+  for (const b of document.querySelectorAll("[data-person]")) {
+    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload()));
+  }
+}
+
+// The theme lives in a cookie so the server renders the right one; no flash of the other.
+function themeChoice(group) {
+  group.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    pressOne(group, b);
+    const v = b.dataset.v;
+    document.cookie = `theme=${v}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
+    if (v === "auto") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.dataset.theme = v;
   });
 }
 
@@ -434,7 +578,7 @@ function signIn(form) {
     }
     submit.disabled = true;
     try {
-      await post("/api/signin", body);
+      await post(form.dataset.api || "/api/signin", body);
       location.replace("/");
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
@@ -463,20 +607,15 @@ function account() {
     }
   });
   for (const b of document.querySelectorAll("[data-signout]")) {
-    b.addEventListener("click", async () => {
-      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
-        const label = b.textContent;
-        b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
-        setTimeout(() => { b.textContent = label; }, 4000);
-        return;
-      }
+    // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
+    b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
         location.replace("/signin"); // only once the server has signed this phone (or every phone) out
       } catch {
         b.textContent = "Couldn’t sign out. Check the connection and try again.";
       }
-    });
+    }));
   }
 }
 
@@ -488,8 +627,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const bag = document.getElementById("bag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
-  const signin = document.getElementById("signin");
-  if (signin) signIn(signin);
+  const theme = document.querySelector("[data-theme-choice]");
+  if (theme) themeChoice(theme);
+  for (const id of ["signin", "join", "reset"]) {
+    const f = document.getElementById(id);
+    if (f) signIn(f);
+  }
+  const join = document.getElementById("join");
+  if (join) joinCode(join);
+  if (document.querySelector("[data-new-invite]")) invites();
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
   // A date input shows "mm/dd/yyyy" in full ink while empty; mark it so it reads as a placeholder.
   for (const el of document.querySelectorAll("[data-empty-class]")) {

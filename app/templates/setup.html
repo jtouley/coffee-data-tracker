@@ -1,63 +1,50 @@
 {% extends "base.html" %}
-{% from "_macros.html" import nav %}
+{% from "_macros.html" import nav, chevron %}
 {% block title %}Setup · registry.coffee{% endblock %}
-{% macro grinder_form() %}
-  <form data-equipment="grinder" novalidate>
-    <label class="flabel" for="g-name">Name</label>
-    <input class="input" id="g-name" name="name" autocomplete="off" required>
-    <div class="grid3">
-      <div><label class="flabel" for="g-min">Dial from</label><input class="input" id="g-min" name="scale_min" inputmode="decimal" required></div>
-      <div><label class="flabel" for="g-max">to</label><input class="input" id="g-max" name="scale_max" inputmode="decimal" required></div>
-      <div><label class="flabel" for="g-step">Step</label><input class="input" id="g-step" name="scale_step" inputmode="decimal" value="1" required></div>
-    </div>
-    <div class="flabel" id="g-dir">Finer is</div>
-    <div class="seg two" role="group" aria-labelledby="g-dir" data-choice="finer_is_lower">
-      <button type="button" data-v="true" aria-pressed="true">Lower numbers</button><button type="button" data-v="false" aria-pressed="false">Higher numbers</button>
-    </div>
-    <div class="hint" data-hint role="status"></div>
-    <button class="btn secondary mt8" type="submit">Save grinder</button>
-  </form>
-{% endmacro %}
-{% macro basket_form() %}
-  <form data-equipment="basket" novalidate>
-    <label class="flabel" for="b-name">Name</label>
-    <input class="input" id="b-name" name="name" autocomplete="off" required>
-    <label class="flabel" for="b-dose">Nominal dose (g)</label>
-    <input class="input" id="b-dose" name="basket_dose_g" inputmode="decimal" required>
-    <div class="fhint">The first shot of a new coffee starts at this dose.</div>
-    <div class="hint" data-hint role="status"></div>
-    <button class="btn secondary mt8" type="submit">Save basket</button>
-  </form>
-{% endmacro %}
+{% macro describe(e) -%}
+  {%- if e.kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer
+  {%- elif e.kind == "basket" %}{{ g(e.basket_dose_g) }} g
+  {%- else %}{{ e.model or "Espresso machine" }}{% endif %}
+  {%- if e.is_default %} · default{% endif %} · {{ shots_n(counts.get(e.equipment_id, 0)) }}
+{%- endmacro %}
 {% block main %}
   <h1 class="serif title mt16">Setup</h1>
-  <p class="body">Each shot records the grinder and basket it was pulled with. Changes are saved as new records, so
-    old shots keep what they used.</p>
-  <h2 class="section group" id="grinder">Grinder</h2>
-  {% for e in grinders %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
-  {% if grinders %}<details class="mt8"><summary class="btn text">Add another grinder</summary>{{ grinder_form() }}</details>{% else %}{{ grinder_form() }}{% endif %}
-  <h2 class="section group" id="basket">Basket</h2>
-  {% for e in baskets %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.basket_dose_g) }} g · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
-  {% if baskets %}<details class="mt8"><summary class="btn text">Add another basket</summary>{{ basket_form() }}</details>{% else %}{{ basket_form() }}{% endif %}
-  <h2 class="section group" id="account">Account</h2>
-  <div class="gear first"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
-  {% if auth_name != "local" %}
-  <details class="mt8"><summary class="btn text">Change password</summary>
-    <form id="password-form" novalidate>
-      <label class="flabel" for="current">Current password</label>
-      <input class="input" id="current" name="current" type="password" autocomplete="current-password" required>
-      <label class="flabel" for="new">New password</label>
-      <input class="input" id="new" name="new" type="password" autocomplete="new-password" aria-describedby="new-h" required>
-      <div class="fhint" id="new-h">At least 10 characters. Changing it signs you out on your other devices.</div>
-      <div class="hint" data-hint role="alert"></div>
-      <button class="btn secondary mt8" type="submit">Change password</button>
-    </form>
-  </details>
-  <button class="btn text start" type="button" data-signout="/api/signout">Sign out</button>
-  <div class="mt24 topline">
-    <button class="btn text danger start" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
+  <p class="body">Each shot records the grinder, machine and basket it was pulled with. Changes are saved as new
+    records, so old shots keep what they used.</p>
+  {% for kind, label in (("grinder", "Grinder"), ("machine", "Machine"), ("basket", "Basket")) %}
+  <h2 class="section" id="{{ kind }}">{{ label }}{{ "s" if gear[kind] | length > 1 }}</h2>
+  <div class="rows">
+    {% for e in gear[kind] %}<a class="link" href="/setup/gear/{{ e.equipment_id }}"><span>{{ e.name }}<span class="meta">{{ describe(e) }}</span></span>{{ chevron() }}</a>{% endfor %}
+    {% if not gear[kind] %}<a class="link" href="/setup/gear/new?kind={{ kind }}"><span>Add your {{ kind }}<span class="meta">{% if kind == "grinder" %}So a grind setting means something{% elif kind == "basket" %}Its nominal dose is the first shot’s dose{% else %}Optional{% endif %}</span></span>{{ chevron() }}</a>{% endif %}
   </div>
-  {% endif %}
+  {% endfor %}
+  <a class="btn secondary mt24" href="/setup/gear/new">Add equipment</a>
+  <h2 class="section">Appearance</h2>
+  <div class="flabel" id="theme-l">Theme</div>
+  <div class="seg" role="group" aria-labelledby="theme-l" aria-describedby="theme-h" data-theme-choice>
+    {% for v, l in (("auto", "Auto"), ("light", "Light"), ("dark", "Dark")) %}<button type="button" data-v="{{ v }}" aria-pressed="{{ 'true' if theme == v else 'false' }}">{{ l }}</button>{% endfor %}
+  </div>
+  <div class="fhint" id="theme-h">Auto follows the phone’s setting.</div>
+  <h2 class="section" id="account">Account</h2>
+  <div class="rows">
+    <div class="gear"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
+    {% if auth_name != "local" %}
+    {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
+    <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
+      <form id="password-form" class="mt8" novalidate>
+        <label class="flabel" for="current">Current password</label>
+        <input class="input" id="current" name="current" type="password" autocomplete="current-password" required>
+        <label class="flabel" for="new">New password</label>
+        <input class="input" id="new" name="new" type="password" autocomplete="new-password" aria-describedby="new-h" required>
+        <div class="fhint" id="new-h">At least 10 characters. Changing it signs you out on your other devices.</div>
+        <div class="hint" data-hint role="alert"></div>
+        <button class="btn secondary mt8" type="submit">Change password</button>
+      </form>
+    </details>
+    <button class="link" type="button" data-signout="/api/signout">Sign out</button>
+    <button class="link danger" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
+    {% endif %}
+  </div>
   <div class="mt24"></div>
 {% endblock %}
 {% block nav %}{{ nav('setup') }}{% endblock %}

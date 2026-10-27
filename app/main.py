@@ -138,7 +138,11 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             return UTC
 
     def page(request: Request, template: str, status: int = 200, **ctx: Any) -> HTMLResponse:
-        ctx = {"me": None} | ctx | {"now": datetime.now(tz(request))}
+        ctx = (
+            {"me": None, "theme": request.cookies.get("theme", "auto")}
+            | ctx
+            | {"now": datetime.now(tz(request))}
+        )
         return templates.TemplateResponse(request, template, ctx, status_code=status)
 
     # --- errors --------------------------------------------------------------------------------------
@@ -298,6 +302,115 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             return c["title"], " · ".join(x for x in (c["roaster_name"], facts) if x)
         return freetext or (bag and bag.coffee_freetext) or "Unnamed coffee", "Not matched to the catalog"
 
+    # --- invites, joining and resetting --------------------------------------------------------------
+
+    @app.get("/join", response_class=HTMLResponse)
+    def join_page(request: Request) -> HTMLResponse:
+        # The code is after # in the link, so it never reaches the server or its logs; the page's script reads it.
+        accounts_only()
+        return page(request, "join.html")
+
+    @app.get("/reset", response_class=HTMLResponse)
+    def reset_page(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "reset.html")
+
+    @app.post("/api/invites/check", dependencies=[Depends(anyone)])
+    def check_invite(body: dict, request: Request) -> dict:
+        s = accounts_only()
+        try:
+            inv = s.accounts.lookup(str(body.get("code") or ""), ip(request))
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+        exp = inv.expires_at.astimezone(tz(request))  # the viewer's day, as on the invite screen
+        return {"kind": inv.kind, "expires": f"{exp:%B} {exp.day}"}
+
+    @app.post("/api/join", dependencies=[Depends(anyone)])
+    def post_join(body: dict, request: Request) -> Response:
+        s = accounts_only()
+        try:
+            acct = s.accounts.join(
+                str(body.get("code") or ""),
+                str(body.get("username") or ""),
+                str(body.get("password") or ""),
+                ip(request),
+            )
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+        response = JSONResponse({"ok": True})
+        s.set_cookie(response, acct)
+        return response
+
+    @app.post("/api/reset", dependencies=[Depends(anyone)])
+    def post_reset(body: dict, request: Request) -> Response:
+        s = accounts_only()
+        try:
+            acct = s.accounts.reset(str(body.get("code") or ""), str(body.get("password") or ""), ip(request))
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+        response = JSONResponse({"ok": True})
+        s.set_cookie(response, acct)
+        return response
+
+    @app.get("/invite", response_class=HTMLResponse)
+    def invite_page(request: Request, me: Me) -> HTMLResponse:
+        s = accounts_only()
+        if me.role != "owner":
+            raise HTTPException(404, "not found")
+        z = tz(request)
+        mine = counts_by_user()
+        return page(
+            request,
+            "invite.html",
+            me=me,
+            people=[a for a in s.accounts.people() if a.role != "owner"],
+            pending=s.accounts.pending(),
+            shots_of=lambda uid: mine.get(uid, 0),
+            date=lambda d: f"{d.astimezone(z):%A, %B} {d.astimezone(z).day}",
+        )
+
+    def counts_by_user() -> dict[str, int]:
+        out: dict[str, int] = {}
+        for r in list(store.shots.values()):  # a copy: another request may add a shot meanwhile
+            if not r.deleted:
+                out[r.item.user_id] = out.get(r.item.user_id, 0) + 1
+        return out
+
+    def owner_call(fn: Any, *args: Any) -> Any:
+        try:
+            return fn(*args)
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+
+    def code_reply(request: Request, inv: Any, code: str) -> dict:
+        z = tz(request)
+        e = inv.expires_at.astimezone(z)
+        return {"invite_id": inv.invite_id, "kind": inv.kind, "code": code, "expires": f"{e:%A, %B} {e.day}"}
+
+    @app.post("/api/invites")
+    def post_invite(body: dict, request: Request, me: Writer) -> dict:
+        s = accounts_only()
+        kind = "reset" if body.get("kind") == "reset" else "join"
+        inv, code = owner_call(s.accounts.invite, me.user_id, kind, body.get("for_user_id"))
+        return code_reply(request, inv, code)
+
+    @app.post("/api/invites/{invite_id}/renew")
+    def renew_invite(invite_id: str, request: Request, me: Writer) -> dict:
+        inv, code = owner_call(accounts_only().accounts.renew, me.user_id, invite_id)
+        return code_reply(request, inv, code)
+
+    @app.post("/api/invites/{invite_id}/revoke")
+    def revoke_invite(invite_id: str, me: Writer) -> dict:
+        owner_call(accounts_only().accounts.revoke, me.user_id, invite_id)
+        return {"ok": True}
+
+    @app.post("/api/people/{user_id}")
+    def set_person(user_id: str, body: dict, me: Writer) -> dict:
+        acct = owner_call(
+            accounts_only().accounts.set_disabled, me.user_id, user_id, bool(body.get("disabled"))
+        )
+        return {"user_id": acct.user_id, "disabled": acct.disabled}
+
     # --- screens -------------------------------------------------------------------------------------
 
     @app.get("/", response_class=HTMLResponse)
@@ -332,8 +445,14 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         )
 
     @app.get("/log", response_class=HTMLResponse, response_model=None)
-    def log_shot(request: Request, me: Me) -> HTMLResponse | RedirectResponse:
-        p = store.prefill(me.user_id)
+    def log_shot(
+        request: Request,
+        me: Me,
+        grinder: str | None = None,
+        basket: str | None = None,
+        machine: str | None = None,
+    ) -> HTMLResponse | RedirectResponse:
+        p = store.prefill(me.user_id, grinder, basket, machine)
         if not p["grinder"] or not p["basket"]:
             return RedirectResponse("/setup", 303)
         if not p["bag"] and not p["last"]:
@@ -346,6 +465,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             "coffee_freetext": p["coffee_freetext"],
             "grinder_id": g.equipment_id,
             "basket_id": p["basket"].equipment_id,
+            "machine_id": p["machine"] and p["machine"].equipment_id,
             "dose_g": p["dose_g"],
             "yield_g": p["yield_g"],
             "grinder_setting": p["grinder_setting"],
@@ -384,6 +504,9 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             clock=views.clock(shot.brewed_at, z),
         )
 
+    def counts(user_id: str) -> dict[str, int]:
+        return gear_counts(store.shots_of(user_id))
+
     @app.get("/setup", response_class=HTMLResponse)
     def setup(request: Request, me: Me) -> HTMLResponse:
         return page(
@@ -391,9 +514,45 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             "setup.html",
             me=me,
             auth_name=getattr(auth, "name", ""),
+            gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
+            counts=counts(me.user_id),
+        )
+
+    @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
+    def gear_page(request: Request, equipment_id: str, me: Me, kind: str = "grinder") -> HTMLResponse:
+        """Add (`new`) or change one grinder, machine or basket."""
+        item = None if equipment_id == "new" else store.gear(me.user_id, equipment_id)
+        if equipment_id != "new" and item is None:
+            raise HTTPException(404, "no such equipment")
+        if kind not in ("grinder", "machine", "basket"):
+            kind = "grinder"
+        kind = item.kind if item else kind
+        others = [
+            e for e in store.equipment_of(me.user_id, kind) if not item or e.equipment_id != item.equipment_id
+        ]
+        return page(request, "gear.html", me=me, item=item, kind=kind, others=others,
+                    shots=counts(me.user_id).get(equipment_id, 0))  # fmt: skip
+
+    @app.get("/log/gear", response_class=HTMLResponse)
+    def pick_gear(
+        request: Request,
+        me: Me,
+        grinder: str | None = None,
+        basket: str | None = None,
+        machine: str | None = None,
+    ) -> HTMLResponse:
+        """The chip on Log shot: which grinder, machine and basket this shot is on."""
+        p = store.prefill(me.user_id, grinder, basket, machine)
+        return page(
+            request,
+            "pick_gear.html",
+            me=me,
             grinders=store.equipment_of(me.user_id, "grinder"),
             baskets=store.equipment_of(me.user_id, "basket"),
-            counts=gear_counts(store.shots_of(me.user_id)),
+            machines=store.equipment_of(me.user_id, "machine"),
+            grinder=p["grinder"],
+            basket=p["basket"],
+            machine=p["machine"],
         )
 
     @app.get("/bag/new", response_class=HTMLResponse)
