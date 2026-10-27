@@ -186,7 +186,7 @@ US roasters and their coffees, and the lake already has a `registry` table. The 
 
 - `registry.coffee`: the public site that GitHub Pages builds. Pages supports a custom apex domain with HTTPS for
   free; it needs the A/AAAA records and a `CNAME` file in the site output. #19 makes its root a launch page and moves
-  the catalog dashboard to `registry.coffee/app/`.
+  the catalog dashboard to `registry.coffee/catalog/`.
 - `app.registry.coffee`: the shot-logging app (the Space). Invitees get a short, memorable address, and the app's
   cookies are scoped to that host, apart from the public site.
 
@@ -199,8 +199,8 @@ Two ways to put the Space on `app.registry.coffee`:
 
 Recommendation: HF's own custom domain. The Space needs PRO anyway (see Hosting), and PRO includes custom domains,
 so Cloudflare would only add a part. Cloudflare stays the route if the app ends up on a container host instead.
-One naming wrinkle: the catalog dashboard at `registry.coffee/app/` (#19) and the shot app at `app.registry.coffee`
-are different things with similar addresses (open question 5). Either way, the session cookie is
+The owner has settled the addresses: the app is `app.registry.coffee` and the catalog is `registry.coffee/catalog/`.
+Which route serves the app depends on the hosting question (open question 5). Either way, the session cookie is
 host-only on `app.registry.coffee`, and links in invites use that address.
 
 ### Accounts and sign-in
@@ -609,7 +609,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Phone | Android | Haptics work through `navigator.vibrate`. The PWA installs from Chrome and keeps its login like a normal tab. Web Bluetooth is available if a scale is wanted later. |
 | Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Entered on first run, which asks for a grinder and a basket (#13); 18 g is the default first dose. The mockups show them. |
 | Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays for now (#15; open question 2). |
-| Cold start | Fine for now | Free CPU hardware. Docker Spaces turned out to need PRO (#15); see open question 6. |
+| Cold start | Fine for now | Free CPU hardware. Docker Spaces turned out to need PRO (#15); see open question 5. |
 | Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
 | Grind suggestions | Deferred until there's a model trained on the owner's shots | The app describes each shot and suggests nothing. `shots.suggest_next` stays for the MCP and issue-form replies. See Later: a dial-in model. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |
@@ -619,7 +619,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Concurrent-commit test | Yes | Runs in milestone 2, to a test path only. |
 | Bag-read model | Compare Haiku and Opus | The comparison in "Where the bag photo is read" picks the default. |
 | Bags for the comparison | Maybe some | The set grows from confirmed captures; Opus is the default until it has 20. |
-| Domain | The owner will buy back `registry.coffee` | The launch page and catalog on `registry.coffee` (GitHub Pages, #19), the app on `app.registry.coffee` through HF's custom domain for Spaces. |
+| Domain | The owner will buy back `registry.coffee` | The launch page on `registry.coffee` and the catalog on `registry.coffee/catalog/` (GitHub Pages, #19). The app on `app.registry.coffee`, decided; through HF's custom domain if the app runs on a Space, or Cloudflare in front of a container host. |
 
 ## Open questions for the owner
 
@@ -628,7 +628,5 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
 4. Name: the sign-in screen now says "registry.coffee", since that will be the address. Should the project (repo,
    public dataset, site title) be renamed to match, or keep "Coffee Data"?
-5. `registry.coffee/app/` is the catalog dashboard (#19) and `app.registry.coffee` is the shot app. Keep both
-   names, or move one (for example the catalog to `registry.coffee/catalog/`)?
-6. Docker Spaces need HF PRO. Take PRO (which also covers the custom domain), or run the same image on a small
+5. Docker Spaces need HF PRO. Take PRO (which also covers the custom domain), or run the same image on a small
    container host instead?
