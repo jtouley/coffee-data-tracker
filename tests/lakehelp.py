@@ -99,3 +99,55 @@ def probe(lake: Lake, run_date: str, roaster: str, status: str = "ok", platform:
             }
         ],
     )
+
+
+# The shots schema before the app's columns, as files written by older versions have it.
+OLD_SHOT_COLUMNS = [
+    "shot_id",
+    "logged_at",
+    "deleted",
+    "brewed_at",
+    "coffee_id",
+    "coffee_freetext",
+    "roast_date",
+    "grinder_setting",
+    "dose_g",
+    "yield_g",
+    "time_s",
+    "water_temp_c",
+    "brew_method",
+    "rating",
+    "taste",
+    "is_milk_drink",
+    "notes",
+]
+
+
+def old_shot(lake: Lake, shot_id: str, brewed: str, **fields) -> None:
+    """Write a shot file exactly as the pre-app code did: v1 columns only, v1 schema file beside it."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    schema = pa.schema([SCHEMAS["shots"].field(c) for c in OLD_SHOT_COLUMNS])
+    v1 = lake.root / "shots/shot_id=schema.parquet"
+    if not v1.exists():
+        pq.write_table(schema.empty_table(), v1)
+    row = {
+        "shot_id": shot_id,
+        "logged_at": at(brewed),
+        "deleted": False,
+        "brewed_at": at(brewed, 7),
+        "grinder_setting": 12.0,
+        "dose_g": 18.0,
+        "yield_g": 36.0,
+        "time_s": 28.0,
+        "brew_method": "espresso",
+        "rating": 3,
+        "is_milk_drink": False,
+    } | fields
+    pq.write_table(
+        pa.Table.from_pylist([{c: row.get(c) for c in OLD_SHOT_COLUMNS}], schema=schema),
+        lake.root / f"shots/{shot_id}__{brewed.replace('-', '')}T120000.parquet",
+    )

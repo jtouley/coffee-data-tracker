@@ -13,7 +13,8 @@ from pathlib import Path
 
 from .lake import Lake, new_batch_id
 
-MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"]
+# fct_shot is personal: it goes to the private lake's marts/ only, never to the public export.
+MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot"]
 
 
 def _today() -> str:
@@ -115,7 +116,7 @@ def cmd_enrich(args: argparse.Namespace) -> None:
 
 
 def dbt_build(lake: Lake, db: Path) -> None:
-    from . import registry
+    from . import registry, shots
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
     db.parent.mkdir(parents=True, exist_ok=True)
@@ -129,7 +130,13 @@ def dbt_build(lake: Lake, db: Path) -> None:
             "--profiles-dir",
             "dbt",
             "--vars",
-            json.dumps({"lake_roots": roots, "max_failures": registry.MAX_FAILURES}),
+            json.dumps(
+                {
+                    "lake_roots": roots,
+                    "max_failures": registry.MAX_FAILURES,
+                    "owner_user_id": shots.owner_user_id(),
+                }
+            ),
         ],
         check=True,
         env=env,
@@ -226,7 +233,7 @@ def cmd_shot(args: argparse.Namespace) -> None:
         shot, matches = shots.log_shot(json.loads(args.json), lake)
     else:
         body = Path(args.file).read_text() if args.file else sys.stdin.read()
-        shot, matches = shots.log_shot(shots.parse_issue_body(body), lake)
+        shot, matches = shots.log_shot(shots.parse_issue_body(body) | {"source": "issue"}, lake)
     lake.publish(f"shot {shot.shot_id}")
     print(shots.issue_reply(shot, matches, lake))
 

@@ -186,3 +186,106 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
         "public_price_event.parquet",
         "public_roaster.parquet",
     ]
+
+
+def test_old_and_new_shots_with_equipment_and_bags(lake, tmp_path):
+    from datetime import datetime
+
+    from coffeedata.lake import SCHEMAS
+    from coffeedata.models import Bag, Equipment, Shot
+    from coffeedata.shots import record
+
+    from .lakehelp import at, old_shot
+
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A", title="Geometry")])
+    old_shot(lake, "old1", "2026-10-20", coffee_id=f"{rid}:A", rating=4)
+    old_shot(lake, "old2", "2026-10-21", coffee_freetext="Cafe bag", time_s=22.0)
+
+    def equip(e: Equipment, when: datetime) -> None:
+        lake.write(
+            "equipment",
+            f"equipment/{e.equipment_id}__{when:%Y%m%dT%H%M%S}.parquet",
+            [e.model_dump() | {"logged_at": when}],
+        )
+
+    g = Equipment(
+        equipment_id="g1",
+        user_id="u1",
+        kind="grinder",
+        name="Grinder",
+        scale_min=0,
+        scale_max=90,
+        scale_step=0.5,
+    )
+    equip(g, at("2026-10-22", 6))
+    equip(g.model_copy(update={"name": "DF64 V2"}), at("2026-10-22", 7))  # a correction: latest wins
+    bag = Bag(
+        bag_id="b1",
+        user_id="u1",
+        coffee_id=f"{rid}:A",
+        coffee_freetext="Onyx Geometry",
+        roast_date="2026-10-15",
+    )
+    lake.write(
+        "bags", "bags/b1__20261022T060000.parquet", [bag.model_dump() | {"logged_at": at("2026-10-22", 6)}]
+    )
+    for i, (grind, rating) in enumerate([(11.0, 3), (10.0, 5)]):
+        record(
+            Shot(
+                shot_id=f"new{i}",
+                brewed_at=at("2026-10-23", 7 + i),
+                grinder_setting=grind,
+                dose_g=18,
+                yield_g=36,
+                time_s=29,
+                rating=rating,
+                user_id="u1",
+                grinder_id="g1",
+                bag_id="b1",
+                source="app",
+            ),
+            lake,
+        )
+    assert set(SCHEMAS["shots"].names) - {"logged_at", "deleted"} <= set(Shot.model_fields) | {"logged_at"}
+
+    con = build(lake, tmp_path)
+    rows = {
+        r[0]: r[1:]
+        for r in con.execute(
+            "select shot_id, user_id, coffee_id, roast_date, grinder_name, grind_position, source from fct_shot"
+        ).fetchall()
+    }
+    assert rows["old1"] == ("owner", f"{rid}:A", None, None, None, None)  # unchanged; the owner's
+    assert rows["old2"][:2] == ("owner", None)
+    # The bag supplies the roast date; the grinder its name and scale.
+    assert rows["new1"] == ("u1", f"{rid}:A", date(2026, 10, 15), "DF64 V2", round(10 / 90, 3), "app")
+    dial = con.execute(
+        "select user_id, grinder_name, shots, best_grind from mart_dial_in where grain = 'coffee' order by 1, 2"
+    ).fetchall()
+    assert dial == [("owner", None, 1, 12.0), ("owner", None, 1, 12.0), ("u1", "DF64 V2", 2, 10.0)]
+    assert con.execute("select count(*) from dim_equipment").fetchone()[0] == 1
+
+
+def test_only_old_shot_files_still_build(lake, tmp_path):
+    """A lake whose shots all predate the app's columns: the v2 schema file supplies them as null."""
+    from .lakehelp import old_shot
+
+    old_shot(lake, "old1", "2026-10-20", coffee_freetext="x")
+    con = build(lake, tmp_path)
+    assert con.execute("select shot_id, user_id, grinder_id, bag_id from fct_shot").fetchall() == [
+        ("old1", "owner", None, None)
+    ]
+
+
+def test_site_has_no_shots(lake, tmp_path):
+    from coffeedata import site
+
+    from .lakehelp import old_shot
+
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    old_shot(lake, "secretshot", "2026-10-20", coffee_freetext="Private Blend", notes="kitchen notes")
+    build(lake, tmp_path).close()
+    out = site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
+    text = "".join(p.read_text() for p in out.parent.iterdir() if p.is_file()).lower()
+    assert not any(w in text for w in ("shot", "private blend", "kitchen notes", "rating"))

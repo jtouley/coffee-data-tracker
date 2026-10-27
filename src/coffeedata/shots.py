@@ -1,12 +1,13 @@
-"""The personal shot log (data/shots.jsonl): logging, catalog matching, and dial-in advice."""
+"""The personal shot log (shots/ in the lake): logging, catalog matching, and dial-in advice."""
 
 from __future__ import annotations
 
 import logging
+import os
 import re
 import time
 import uuid
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 
 from rapidfuzz import fuzz, process
 
@@ -81,6 +82,11 @@ def match_score(query: str, label: str) -> int:
     return round(70 * covered + 0.3 * fuzz.WRatio(query, label))
 
 
+def owner_user_id() -> str:
+    """The owner's user_id. Shots logged before accounts existed (user_id null) are the owner's."""
+    return os.environ.get("COFFEEDATA_OWNER_ID") or "owner"
+
+
 def fuzzy_match_coffee(text: str, limit: int = 3, lake: Lake | None = None) -> list[dict]:
     idx = _index(lake)
     if not text or not idx:
@@ -126,6 +132,44 @@ def normalize(payload: dict) -> dict:
     return out
 
 
+def match_coffee(text: str, lake: Lake | None = None, min_score: int = 80) -> tuple[str | None, list[dict]]:
+    """The catalog coffee_id for free text, when the best match is confident and clearly ahead."""
+    matches = fuzzy_match_coffee(text, lake=lake)
+    clear_winner = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
+    if matches and matches[0]["score"] >= min_score and clear_winner:
+        return matches[0]["coffee_id"], matches
+    return None, matches
+
+
+def grinder_id(name: str, lake: Lake | None = None, user_id: str | None = None) -> str:
+    """The equipment_id of the user's (default: the owner's) current grinder with this name."""
+    user_id = user_id or owner_user_id()
+    grinders = [
+        e
+        for e in (lake or Lake()).latest("equipment", "equipment_id")
+        if e["kind"] == "grinder" and (e["user_id"] or owner_user_id()) == user_id
+    ]
+    for e in grinders:
+        if (e["name"] or "").strip().lower() == name.strip().lower():
+            return e["equipment_id"]
+    known = ", ".join(sorted(e["name"] for e in grinders if not e["retired"])) or "none yet"
+    raise ValueError(f"no grinder named {name!r} (known: {known})")
+
+
+def record(shot: Shot, lake: Lake, deleted: bool = False, after: datetime | None = None) -> datetime:
+    """Write one shot record. `after` is the shot's previous logged_at: the new record must sort after it,
+    and a second record in the same second would otherwise collide on the file name."""
+    now = datetime.now(UTC).replace(microsecond=0)
+    if after and now <= after:
+        now = after + timedelta(seconds=1)
+    lake.write(
+        "shots",
+        f"shots/{shot.shot_id}__{now:%Y%m%dT%H%M%S}.parquet",
+        [shot.model_dump() | {"logged_at": now, "deleted": deleted}],
+    )
+    return now
+
+
 def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tuple[Shot, list[dict]]:
     """Validate and record a shot as its own immutable lake file. Free-text coffee is matched to the catalog.
     To correct a shot, log it again with the same shot_id (latest wins); add deleted=True to retract it."""
@@ -134,19 +178,13 @@ def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tu
     deleted = _yes(data.pop("deleted", False))
     data.setdefault("shot_id", str(uuid.uuid4()))
     data.setdefault("brewed_at", datetime.now(UTC).isoformat(timespec="seconds"))
+    if name := data.pop("grinder_name", None):
+        data["grinder_id"] = grinder_id(name, lake)
     matches: list[dict] = []
     if not data.get("coffee_id") and data.get("coffee_freetext"):
-        matches = fuzzy_match_coffee(data["coffee_freetext"], lake=lake)
-        clear_winner = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
-        if matches and matches[0]["score"] >= min_score and clear_winner:
-            data["coffee_id"] = matches[0]["coffee_id"]
+        data["coffee_id"], matches = match_coffee(data["coffee_freetext"], lake, min_score)
     shot = Shot(**data)
-    now = datetime.now(UTC).replace(microsecond=0)
-    lake.write(
-        "shots",
-        f"shots/{shot.shot_id}__{now:%Y%m%dT%H%M%S}.parquet",
-        [shot.model_dump() | {"logged_at": now, "deleted": deleted}],
-    )
+    record(shot, lake, deleted)
     return shot, matches
 
 
@@ -235,6 +273,7 @@ ISSUE_FIELDS = {
     "water temp (°c)": "water_temp_c",
     "roast date": "roast_date",
     "brew method": "brew_method",
+    "grinder": "grinder_name",
     "notes": "notes",
 }
 

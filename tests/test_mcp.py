@@ -54,6 +54,20 @@ async def test_tools_over_mcp_protocol(lake, tmp_path, monkeypatch):
         )
         assert "onyxcoffeelab.com:1" in r.content[0].text and "finer" in r.content[0].text
 
+        r = await client.call_tool(
+            "log_shot",
+            {
+                "coffee": "onyx geometry",
+                "dose_g": 18,
+                "yield_g": 36,
+                "time_s": 28,
+                "grinder_setting": 15,
+                "rating": 3,
+                "grinder_name": "EK43",
+            },
+        )
+        assert r.is_error
+
         r = await client.call_tool("search_coffees", {"query": "geometry", "process": "washed"})
         assert "Geometry" in r.content[0].text
 

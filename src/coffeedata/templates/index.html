@@ -43,10 +43,9 @@ section { background: var(--surface-1); border: 1px solid var(--border); border-
 .chart { width: 100%; height: auto; display: block; overflow: visible; }
 .chart text { font-size: 12px; fill: var(--text-secondary); }
 .chart .val { fill: var(--text-primary); font-variant-numeric: tabular-nums; }
-.chart .bar, .chart .dot { fill: var(--series-1); }
-.chart .dot { stroke: var(--surface-1); stroke-width: 2; }
+.chart .bar { fill: var(--series-1); }
 .chart .hit { fill: transparent; }
-.chart .mark:hover .bar, .chart .mark:focus .bar, .chart .mark:hover .dot, .chart .mark:focus .dot { fill: var(--series-1-hover); }
+.chart .mark:hover .bar, .chart .mark:focus .bar { fill: var(--series-1-hover); }
 .chart .mark:focus { outline: none; }
 .chart .axis { stroke: var(--border); }
 .chart .grid { stroke: var(--grid); }
@@ -79,7 +78,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 <header>
   <button class="theme" id="theme" type="button">Theme</button>
   <h1>Coffee Data</h1>
-  <p>What US specialty roasters are selling this week, and the shots I pull with it. Updated {{ generated }}.</p>
+  <p>What US specialty roasters are selling this week. Updated {{ generated }}.</p>
 </header>
 
 <div class="tiles">
@@ -131,21 +130,6 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <div class="scroll"><table><thead><tr><th>Coffee</th><th>Roaster</th><th class="hide-sm">Origin</th><th class="hide-sm">Process</th>
     <th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody id="rows"></tbody></table></div>
 </section>
-
-<div class="grid2" style="margin-top:20px">
-  <section>
-    <h2>My shots: rating by brew ratio</h2>
-    {{ charts.shots | safe }}
-  </section>
-  <section>
-    <h2>Recent shots</h2>
-    {% if shots %}
-    <table><thead><tr><th>Coffee</th><th class="num">Ratio</th><th class="num">Time</th><th class="num">Rating</th></tr></thead><tbody>
-    {% for s in shots %}<tr><td>{{ s.coffee }}</td><td class="num">1:{{ "%.1f"|format(s.brew_ratio) }}</td><td class="num">{{ "%g"|format(s.time_s) }} s</td><td class="num">{{ s.rating }}/5</td></tr>{% endfor %}
-    </tbody></table>
-    {% else %}<p class="empty">No shots logged yet.</p>{% endif %}
-  </section>
-</div>
 
 <section>
   <h2>Coverage</h2>
