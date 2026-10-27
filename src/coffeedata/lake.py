@@ -30,6 +30,7 @@ import json
 import logging
 import os
 import secrets
+import threading
 import time
 from datetime import UTC, datetime
 from pathlib import Path
@@ -293,6 +294,8 @@ class Lake:
             if self.remote
             else Path(self.url)
         )
+        self._publishing = threading.Lock()
+        self._schemas_checked = False
         self.ensure_schemas()
 
     @classmethod
@@ -348,10 +351,18 @@ class Lake:
         return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
 
     def latest(self, table: str, key: str) -> list[dict]:
-        """The latest record per key (by logged_at): corrections are new records, so this is current state."""
-        cur = self.connect().execute(f"""
-            select * from {self.scan(table)} where {key} is not null
-            qualify row_number() over (partition by {key} order by logged_at desc) = 1""")
+        """The latest record per key (by logged_at): corrections are new records, so this is current state.
+
+        A remote lake made before a table existed has no file for it until the next publish adds the schema
+        file; until then the table is read from staging alone rather than failing."""
+        sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
+        try:
+            cur = self.connect().execute(sql.format(self.scan(table), key, key))
+        except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
+            if not (self.remote and "No files found" in str(e)):
+                raise
+            local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
+            cur = self.connect().execute(sql.format(local, key, key))
         cols = [d[0] for d in cur.description]
         return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
 
@@ -392,15 +403,24 @@ class Lake:
         id unique to the run that wrote them, so one that's already there is this run's own upload, from a
         commit whose response was lost or a process that died before clearing staging, and it's skipped.
         Retries use exponential backoff (2, 4, 8, 16 s). If every attempt fails, the staged files stay on disk
-        and the next publish sends them. Schema files are only sent when `schemas` is set (by `init`).
+        and the next publish sends them.
+
+        A table's zero-row schema file is sent when the dataset doesn't have it yet (a table added after the lake
+        was created), so a glob over that table resolves; this is checked once per process, or every time with
+        `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
         if not self.remote:
             return 0
+        with self._publishing:
+            return self._publish(message, attempts, schemas)
+
+    def _publish(self, message: str, attempts: int, schemas: bool) -> int:
         schema_paths = {SCHEMA_FILES[t] for t in self.tables}
+        check_schemas = schemas or not self._schemas_checked
         files = [
             p
             for p in self.staged_files()
-            if schemas or p.relative_to(self.root).as_posix() not in schema_paths
+            if check_schemas or p.relative_to(self.root).as_posix() not in schema_paths
         ]
         if not files:
             return 0  # nothing new: no API calls
@@ -432,6 +452,7 @@ class Lake:
                     raise
                 log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
                 time.sleep(2 ** (attempt + 1))
+        self._schemas_checked = True
         for p, rel in zip(files, rels, strict=True):
             if rel not in schema_paths:
                 p.unlink()

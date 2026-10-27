@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import os
 import re
+import secrets
 import time
 import uuid
 from datetime import UTC, datetime, timedelta
@@ -149,25 +150,44 @@ def grinder_id(name: str, lake: Lake | None = None, user_id: str | None = None) 
         for e in (lake or Lake()).latest("equipment", "equipment_id")
         if e["kind"] == "grinder" and (e["user_id"] or owner_user_id()) == user_id
     ]
-    for e in grinders:
-        if (e["name"] or "").strip().lower() == name.strip().lower():
-            return e["equipment_id"]
+    # A retired grinder only if no current one has the name; among several, the most recently changed.
+    named = [e for e in grinders if (e["name"] or "").strip().lower() == name.strip().lower()]
+    for e in sorted(named, key=lambda e: (not e["retired"], e["logged_at"]), reverse=True):
+        return e["equipment_id"]
     known = ", ".join(sorted(e["name"] for e in grinders if not e["retired"])) or "none yet"
     raise ValueError(f"no grinder named {name!r} (known: {known})")
 
 
 def record(shot: Shot, lake: Lake, deleted: bool = False, after: datetime | None = None) -> datetime:
-    """Write one shot record. `after` is the shot's previous logged_at: the new record must sort after it,
-    and a second record in the same second would otherwise collide on the file name."""
+    """Write one shot record. `after` is the shot's previous logged_at: the new record must sort after it
+    (logged_at has whole seconds). The file name also carries a random suffix, so two records in the same
+    second never collide."""
     now = datetime.now(UTC).replace(microsecond=0)
     if after and now <= after:
         now = after + timedelta(seconds=1)
     lake.write(
         "shots",
-        f"shots/{shot.shot_id}__{now:%Y%m%dT%H%M%S}.parquet",
+        f"shots/{shot.shot_id}__{now:%Y%m%dT%H%M%S}-{secrets.token_hex(3)}.parquet",
         [shot.model_dump() | {"logged_at": now, "deleted": deleted}],
     )
     return now
+
+
+def last_logged(shot_id: str, lake: Lake) -> datetime | None:
+    """When this shot was last recorded, from its own files only (one glob), so a correction sorts after it."""
+    con = lake.connect()
+    found = []
+    for src in lake.sources("shots"):  # staging, then the remote lake: each may have none
+        glob = f"{src.rsplit('/', 1)[0]}/{shot_id}__*.parquet"
+        try:
+            row = con.execute(
+                f"select max(logged_at) from read_parquet('{glob}', union_by_name = true)"
+            ).fetchone()
+        except Exception:  # noqa: BLE001 - duckdb.IOException: no file for this shot there
+            continue
+        if row and row[0]:
+            found.append(row[0])
+    return max(found, default=None)
 
 
 def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tuple[Shot, list[dict]]:
@@ -184,7 +204,13 @@ def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tu
     if not data.get("coffee_id") and data.get("coffee_freetext"):
         data["coffee_id"], matches = match_coffee(data["coffee_freetext"], lake, min_score)
     shot = Shot(**data)
-    record(shot, lake, deleted)
+    # A correction (an explicit shot_id) must sort after the record it corrects, even within the same second.
+    record(
+        shot,
+        lake,
+        deleted,
+        after=last_logged(shot.shot_id, lake) if "shot_id" in normalize(payload) else None,
+    )
     return shot, matches
 
 
@@ -220,12 +246,20 @@ def _step(shots: list[Shot]) -> float:
     return min(diffs) if diffs else 1.0
 
 
-def suggest_next(ref: str, lake: Lake | None = None, finer_is_lower: bool = True) -> str:
-    """Deterministic espresso dial-in advice from the last shot of this coffee (target ~1:2 in 25-32 s)."""
+def suggest_next(ref: str, lake: Lake | None = None, finer_is_lower: bool | None = None) -> str:
+    """Deterministic espresso dial-in advice from the last shot of this coffee (target ~1:2 in 25-32 s). Which way
+    is finer comes from the last shot's grinder in Setup, unless given; lower numbers if neither says."""
+    lake = lake or Lake()
     shots = history(ref, lake)
     if not shots:
         return "No shots logged for this coffee yet. Start around 1:2 (e.g. 18 g in, 36 g out) in 25–32 s."
     last = shots[-1]
+    if finer_is_lower is None:
+        grinder = next(
+            (e for e in lake.latest("equipment", "equipment_id") if e["equipment_id"] == last.grinder_id),
+            None,
+        )
+        finer_is_lower = grinder is None or grinder["finer_is_lower"] is not False
     ratio = last.yield_g / last.dose_g
     step = _step(shots)
     finer = last.grinder_setting - step if finer_is_lower else last.grinder_setting + step

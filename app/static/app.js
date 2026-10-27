@@ -48,7 +48,9 @@ async function send(key, url, body) {
 }
 
 async function flush() {
-  for (const entry of await store("readonly", (s) => s.getAll())) {
+  // In the order they were made: keys sort "retract:" before "shot:", and an undo must follow its shot.
+  const entries = (await store("readonly", (s) => s.getAll())).sort((a, b) => a.at - b.at);
+  for (const entry of entries) {
     try {
       await deliver(entry);
     } catch (e) {

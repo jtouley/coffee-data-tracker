@@ -20,9 +20,18 @@ from coffeedata.lake import Lake
 
 from . import views
 from .auth import Auth, LocalOwner, User
-from .store import NotFound, Store
+from .store import Invalid, NotFound, Store
 
 HERE = Path(__file__).parent
+
+
+def gear_counts(shots_: list) -> dict[str, int]:
+    """Shots per piece of equipment, from one pass over one user's shots."""
+    out: dict[str, int] = {}
+    for sh in shots_:
+        for e in {sh.grinder_id, sh.machine_id, sh.basket_id} - {None}:
+            out[e] = out.get(e, 0) + 1
+    return out
 
 
 def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
@@ -157,10 +166,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             auth_name=getattr(auth, "name", ""),
             grinders=store.equipment_of(me.user_id, "grinder"),
             baskets=store.equipment_of(me.user_id, "basket"),
-            counts={
-                e: sum(1 for s in store.shots_of(me.user_id) if e in (s.grinder_id, s.basket_id))
-                for e in (r.item.equipment_id for r in store.equipment.values())
-            },
+            counts=gear_counts(store.shots_of(me.user_id)),
         )
 
     @app.get("/bag/new", response_class=HTMLResponse)
@@ -176,6 +182,8 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             raise HTTPException(422, [err["msg"] for err in e.errors()]) from None
         except NotFound:
             raise HTTPException(404, "not found") from None
+        except Invalid as e:
+            raise HTTPException(422, str(e)) from None
 
     @app.post("/api/shots")
     def post_shot(body: dict, me: Writer) -> dict:
