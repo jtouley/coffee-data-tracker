@@ -174,6 +174,8 @@ What Terraform in `infra/` manages:
 - Workload Identity Federation for GitHub Actions: a pool and provider that trust this repo's workflows, and a deploy
   service account they can impersonate. Deploys need no JSON key. A workflow on pushes to `main` that touch `app/`
   or `src/` builds the image, pushes it to Artifact Registry and deploys a new revision.
+- A budget of $5 a month on the project, with alert emails at 50%, 90% and 100%. A budget only warns; it doesn't
+  stop spending. Max instances 1 is what keeps a runaway bill unlikely.
 - Terraform's own state lives in a GCS bucket, created once before the first `terraform apply`.
 
 How the app runs there:
@@ -207,9 +209,16 @@ coffees, and the lake already has a `registry` table. The addresses are decided:
 - `registry.coffee`: the public launch page, built by GitHub Pages (#19), with the catalog dashboard at
   `registry.coffee/catalog/`. Pages supports a custom apex domain with HTTPS for free; it needs the A/AAAA records
   and a `CNAME` file in the site output.
-- `app.registry.coffee`: the shot-logging app on Cloud Run, through a Cloud Run domain mapping. The domain is
-  verified once in Google Search Console, then `app` gets a CNAME to `ghs.googlehosted.com` and Google issues the
-  certificate. If domain mappings ever fall short (they're region-limited, and `us-central1` has them), a global
+- `app.registry.coffee`: the shot-logging app on Cloud Run, through a Cloud Run domain mapping. Set up in this
+  order:
+  1. Verify `registry.coffee` in Google Search Console (a TXT record at Namecheap).
+  2. Add a CAA record at Namecheap allowing `pki.goog`, so Google can issue the certificate. Without it, a CAA
+     record that names only another authority would block issuance.
+  3. Create the domain mapping (in Terraform).
+  4. Add the CNAME `app` → `ghs.googlehosted.com` at Namecheap. Google then issues the certificate, which can take
+     a while after DNS settles.
+
+  If domain mappings ever fall short (they're region-limited, and `us-central1` has them), a global
   external HTTPS load balancer in front of the service does the same job, in the same Terraform.
 
 The session cookie is host-only on `app.registry.coffee`, apart from the public site, and links in invites use that
@@ -285,9 +294,10 @@ control of the Google Cloud project) and uses it once on the reset screen; as wi
 
 #### Every request is scoped
 
-The server reads `user_id` from the cookie, never from the request body, and filters
-every read and write by it. The in-memory caches are keyed by user. Tests cover one user trying to read, correct
-or retract another user's shot, bag, photo or equipment.
+Every write needs a signed-in account and touches only that account's data. The server reads `user_id` from the
+cookie, never from the request body, and filters every read and write by it. The in-memory caches are keyed by
+user. Tests cover a request with no session, or an expired or tampered one, trying each write route (rejected with
+nothing written), and one user trying to read, correct or retract another user's shot, bag, photo or equipment.
 
 Rejected: Sign in with Hugging Face (invitees would need HF accounts), Identity-Aware Proxy in front of Cloud Run (invitees would need Google accounts), passkeys only
 (good, but more code to get right; worth adding later as a second way in), and magic links (need email).
