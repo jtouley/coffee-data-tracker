@@ -14,18 +14,23 @@ Every pipeline step *adds* files and never rewrites another run's files:
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
 
-For a remote lake (``hf://datasets/<owner>/<name>``) files are staged locally and published in one commit.
+For a remote lake (``hf://datasets/<owner>/<name>``) files are staged locally and published in one commit per
+checkpoint (each ingest chunk and each weekly step).
 """
 
 from __future__ import annotations
 
+import logging
 import os
 import secrets
+import time
 from datetime import UTC, datetime
 from pathlib import Path
 
 import pyarrow as pa
 import pyarrow.parquet as pq
+
+log = logging.getLogger(__name__)
 
 DEFAULT_URL = "lake"
 
@@ -189,26 +194,42 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def publish(self, message: str) -> int:
-        """Upload staged files to the remote lake in one commit, then clear the staging area."""
+    def publish(self, message: str, attempts: int = 5) -> int:
+        """Upload staged files to the remote lake in one commit, then clear the staging area.
+
+        Retries with exponential backoff (2, 4, 8, 16 s). A commit is atomic, so a failed attempt uploaded
+        nothing; if one landed but its response was lost, the retry finds those files (whose batch ids are
+        unique to this run) already in the dataset and counts them as uploaded instead of refusing.
+        """
         if not self.remote:
             return 0
         from huggingface_hub import CommitOperationAdd, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
-        existing = set(api.list_repo_files(repo_id, repo_type="dataset"))
         files = self.staged_files()
-        ops = []
-        for p in files:
-            rel = p.relative_to(self.root).as_posix()
-            if rel in existing and not rel.startswith("marts/"):  # marts/ are derived and replaced weekly
-                if rel in SCHEMA_FILES.values():
-                    continue
-                raise FileExistsError(f"lake files are immutable; {rel} already exists in {repo_id}")
-            ops.append(CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p)))
-        if ops:
-            api.create_commit(repo_id=repo_id, repo_type="dataset", operations=ops, commit_message=message)
+        for attempt in range(attempts):
+            try:
+                existing = set(api.list_repo_files(repo_id, repo_type="dataset"))
+                ops = []
+                for p in files:
+                    rel = p.relative_to(self.root).as_posix()
+                    if rel in existing and not rel.startswith("marts/"):  # marts/ are derived, replaced weekly
+                        if rel in SCHEMA_FILES.values() or attempt > 0:
+                            continue
+                        raise FileExistsError(f"lake files are immutable; {rel} already exists in {repo_id}")
+                    ops.append(CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p)))
+                if ops:
+                    api.create_commit(repo_id=repo_id, repo_type="dataset", operations=ops,
+                                      commit_message=message)
+                break
+            except FileExistsError:
+                raise
+            except Exception as e:  # noqa: BLE001 - network, rate limit or server error: try again
+                if attempt == attempts - 1:
+                    raise  # staged files stay on disk, so a re-run publishes them
+                log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
+                time.sleep(2 ** (attempt + 1))
         for p in files:
             if p.relative_to(self.root).as_posix() not in SCHEMA_FILES.values():
                 p.unlink()

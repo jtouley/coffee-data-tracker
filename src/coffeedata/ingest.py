@@ -24,7 +24,7 @@ from .models import CatalogItem, Roaster
 log = logging.getLogger(__name__)
 
 INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
-CHUNK = 200  # roasters per written batch: a crash loses at most one chunk
+CHUNK = 200  # roasters per written and published batch: a crash loses at most one chunk
 
 
 @dataclass
@@ -119,6 +119,9 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
             batch = new_batch_id()
             for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched).items():
                 lake.write_partition(table, run_date, batch, rows)
+            # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
+            # chunk, and re-running the week skips the roasters already fetched.
+            lake.publish(f"ingest {run_date} batch {batch}")
             for res in chunk:
                 a = by_adapter.setdefault(res.roaster.adapter, Counter())
                 a["roasters"] += 1

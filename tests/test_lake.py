@@ -96,3 +96,60 @@ def test_bad_run_date_is_a_usage_error(capsys):
     with pytest.raises(SystemExit) as e:
         cli.main(["ingest", "--run-date", "2026-13-40"])
     assert e.value.code == 2 and "not a YYYY-MM-DD date" in capsys.readouterr().err
+
+
+def test_publish_retries_and_tolerates_a_commit_that_landed(tmp_path, monkeypatch):
+    """A transient error is retried; a commit whose response was lost isn't re-sent or refused."""
+    remote = set(SCHEMA_FILES.values())
+    commits = []
+
+    class FlakyApi:
+        def __init__(self, token=None):
+            pass
+
+        def list_repo_files(self, repo_id, repo_type):
+            return sorted(remote)
+
+        def create_commit(self, repo_id, repo_type, operations, commit_message):
+            paths = [op.path_in_repo for op in operations]
+            commits.append(paths)
+            if len(commits) == 1:
+                raise ConnectionError("reset by peer")  # nothing landed
+            remote.update(paths)
+            if len(commits) == 2:
+                raise TimeoutError("response lost")  # landed, but the client never heard
+
+    import huggingface_hub
+
+    from coffeedata import lake as lake_mod
+    monkeypatch.setattr(huggingface_hub, "HfApi", FlakyApi)
+    monkeypatch.setattr(lake_mod.time, "sleep", lambda s: None)
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    row = {"run_date": date(2026, 11, 2), "batch_id": "b3", "roaster_id": "x.com", "status": "ok"}
+    lake.write_partition("fetches", "2026-11-02", "b3", [row])
+    assert lake.publish("test") == 0  # the third attempt finds the file already there
+    assert len(commits) == 2 and "fetches/run_date=2026-11-02/batch=b3.parquet" in remote
+    assert lake.staged_files() == sorted(lake.root / p for p in SCHEMA_FILES.values())
+
+
+def test_publish_keeps_staged_files_when_every_attempt_fails(tmp_path, monkeypatch):
+    class DownApi:
+        def __init__(self, token=None):
+            pass
+
+        def list_repo_files(self, repo_id, repo_type):
+            raise ConnectionError("down")
+
+    import huggingface_hub
+
+    from coffeedata import lake as lake_mod
+    monkeypatch.setattr(huggingface_hub, "HfApi", DownApi)
+    monkeypatch.setattr(lake_mod.time, "sleep", lambda s: None)
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    row = {"run_date": date(2026, 11, 2), "batch_id": "b4", "roaster_id": "x.com", "status": "ok"}
+    lake.write_partition("fetches", "2026-11-02", "b4", [row])
+    with pytest.raises(ConnectionError):
+        lake.publish("test")
+    assert lake.root / "fetches/run_date=2026-11-02/batch=b4.parquet" in lake.staged_files()
