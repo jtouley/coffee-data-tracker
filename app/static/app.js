@@ -302,19 +302,143 @@ function undo(strip) {
 
 // --- New bag and equipment ---------------------------------------------------------------------------
 
-function newBag(form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const coffee = form.coffee_freetext.value.trim();
-    if (!coffee) return hint(form, "Type the roaster and coffee.");
-    const body = { bag_id: uuid(), coffee_freetext: coffee };
-    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+// New bag: a photo of the label, read by the server (Claude reads, Python matches), or the coffee typed.
+function newBag(root) {
+  const form = document.getElementById("bag");
+  const input = document.getElementById("photo");
+  const steps = root.querySelectorAll("[data-step]");
+  const step = (name) => {
+    for (const s of steps) s.hidden = s.dataset.step !== name;
+    scrollTo(0, 0);
+    root.querySelector(`[data-step="${name}"] h1, [data-step="${name}"] .title`)?.focus?.();
+  };
+  let read = null; // what the label said: carried into the bag, whichever way it's chosen
+
+  const save = async (body, where) => {
+    body = { bag_id: uuid(), ...body };
+    if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
+    if (read?.roast_date && !body.roast_date) body.roast_date = read.roast_date;
+    if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(where, err instanceof Rejected ? err.message : OFFLINE);
     }
+  };
+  const said = () => [read?.label?.roaster, read?.label?.coffee && `“${read.label.coffee}”`].filter(Boolean).join(", ");
+  const typed = () => {
+    if (read?.label) form.coffee_freetext.value = [read.label.roaster, read.label.coffee].filter(Boolean).join(" ");
+    if (read?.roast_date) form.roast_date.value = read.roast_date;
+    form.roast_date.dispatchEvent(new Event("input"));
+    step("type");
+  };
+  const fill = (sel, text) => {
+    const el = root.querySelector(`[data-f="${sel}"]`);
+    el.textContent = text || "";
+    if (el.tagName === "DD") el.hidden = el.previousElementSibling.hidden = !text;
+  };
+  const days = (iso) => Math.round((Date.now() - new Date(`${iso}T12:00:00`)) / 86400000);
+  const showMatch = (m) => {
+    fill("title", m.title);
+    fill("roaster", m.roaster);
+    const d = read.roast_date;
+    fill("roasted", d ? `${new Date(`${d}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })} · day ${days(d)} · read from the bag` : "");
+    fill("origin", m.origin);
+    fill("notes", m.notes);
+    fill("price", m.price);
+    fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
+    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? null }, root.querySelector('[data-step="match"]'));
+    step("match");
+  };
+  const showPick = () => {
+    const list = root.querySelector("[data-candidates]");
+    list.replaceChildren();
+    for (const c of read.candidates || []) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pickrow";
+      const name = document.createElement("span");
+      name.textContent = c.title;
+      const meta = document.createElement("span");
+      meta.className = "meta";
+      meta.textContent = [c.roaster, c.origin, c.in_stock === false ? "sold out" : ""].filter(Boolean).join(" · ");
+      name.append(meta);
+      b.append(name);
+      b.onclick = () => save({ coffee_id: c.coffee_id, coffee_freetext: c.title, match_score: c.score }, root.querySelector('[data-step="pick"]'));
+      list.append(b);
+    }
+    const when = read.roast_date ? `, roasted ${new Date(`${read.roast_date}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })}` : "";
+    root.querySelector("[data-said]").textContent = read.candidates?.length
+      ? `The bag says ${said()}${when}. None of these is a close match, so pick the right one.`
+      : `The bag says ${said()}${when}, but nothing like it is in the catalog. Type it and it’s saved as written.`;
+    step("pick");
+  };
+  const failed = (title, body) => {
+    fill("failed-title", title);
+    fill("failed-body", body);
+    step("failed");
+  };
+
+  // The phone shrinks the photo to 1600 px and re-encodes it, which also drops its EXIF (location included).
+  const shrink = async (file) => {
+    try {
+      const bmp = await createImageBitmap(file, { imageOrientation: "from-image" });
+      const scale = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(bmp.width * scale);
+      canvas.height = Math.round(bmp.height * scale);
+      canvas.getContext("2d").drawImage(bmp, 0, 0, canvas.width, canvas.height);
+      return await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.85));
+    } catch {
+      return file; // the server re-encodes it anyway
+    }
+  };
+
+  const take = () => input?.click();
+  for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
+  for (const b of root.querySelectorAll("[data-goto]")) {
+    b.onclick = () => (b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick() : step(b.dataset.goto));
+  }
+  input?.addEventListener("change", async () => {
+    const file = input.files[0];
+    input.value = "";
+    if (!file) return;
+    const photo = await shrink(file);
+    const url = URL.createObjectURL(photo);
+    for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
+    step("reading");
+    const id = uuid();
+    try {
+      const r = await fetch(`/api/photos/${id}`, {
+        method: "POST",
+        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch" },
+        body: photo,
+      });
+      const body = await r.json().catch(() => ({}));
+      if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.");
+      read = body;
+      tick(8);
+      if (body.status === "read" && body.match) return showMatch(body.match);
+      if (body.status === "read") return showPick();
+      const why = {
+        illegible: "The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee.",
+        limit: "That’s today’s limit of label reads. Type the coffee, or try the photo again tomorrow.",
+        no_key: "Reading labels isn’t set up on this server. Type the coffee.",
+      }[body.status] || "The label couldn’t be read just now. Retake it, or type the coffee.";
+      failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why);
+    } catch {
+      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.");
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const coffee = form.coffee_freetext.value.trim();
+    if (!coffee) return hint(form, "Type the roaster and coffee.");
+    const body = { coffee_freetext: coffee };
+    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+    save(body, form);
   });
 }
 
@@ -573,7 +697,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (shot) logShot(shot);
   const strip = document.querySelector("[data-undo]");
   if (strip) undo(strip);
-  const bag = document.getElementById("bag");
+  const bag = document.getElementById("newbag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
   const theme = document.querySelector("[data-theme-choice]");

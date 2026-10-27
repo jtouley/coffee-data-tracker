@@ -2,15 +2,84 @@
 {% block title %}New bag · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="back" href="/">‹ Today</a></div>
-  <h1 class="serif title mt8">Type the coffee</h1>
-  <p class="body">Roaster and coffee, as on the bag. It’s matched to the catalog when the match is clear.</p>
-  <form id="bag" class="fill" novalidate>
-    <label class="flabel" for="coffee">Coffee</label>
-    <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="e.g. Onyx Geometry" required>
-    <label class="flabel" for="roast_date">Roast date (optional)</label>
-    <input class="input" id="roast_date" name="roast_date" type="date" data-empty-class max="{{ now.date().isoformat() }}">
-    <div class="hint" data-hint role="status"></div>
-    <div class="spacer"></div>
-    <div class="dock sticky"><button class="btn primary" type="submit">Use this coffee</button></div>
-  </form>
+  <div id="newbag" class="fill">
+    {% if reading %}<input class="visually-hidden" id="photo" type="file" accept="image/jpeg,image/png,image/webp" capture="environment" tabindex="-1" aria-label="Photo of the bag">{% endif %}
+
+    <section class="fill" data-step="start"{% if not reading %} hidden{% endif %}>
+      <h1 class="serif title mt8">New bag</h1>
+      <p class="body">Take a photo of the label. The roaster, coffee and roast date are read from it and looked up in
+        the catalog.</p>
+      <div class="spacer"></div>
+      <div class="dock">
+        <button class="btn primary" type="button" data-take>Take a photo of the bag</button>
+        <button class="btn text" type="button" data-goto="type">Type it instead</button>
+      </div>
+    </section>
+
+    <section class="fill" data-step="reading" hidden aria-busy="true">
+      <div class="shot"><img alt="The bag you photographed" data-preview width="358" height="268"></div>
+      <h1 class="label mt16">Looking for roaster, coffee and roast date</h1>
+      <div class="sk mt12 w70 tall"></div>
+      <div class="sk mt8 w46"></div>
+      <div class="sk mt16 w55"></div>
+      <div class="sk mt8 w82"></div>
+      <p class="meta mt16" role="status">Reading the label. Usually 2 to 5 seconds. The photo goes to Claude without its
+        location.</p>
+      <div class="spacer"></div>
+      <div class="dock"><button class="btn text" type="button" data-goto="type">Type the coffee</button></div>
+    </section>
+
+    <section class="fill" data-step="match" hidden>
+      <div class="shot"><img alt="The bag you photographed" data-preview width="358" height="268"></div>
+      <div class="label mt16">Found in the catalog</div>
+      <h1 class="serif title" data-f="title"></h1>
+      <div class="body" data-f="roaster"></div>
+      <dl class="spec mt16">
+        <dt>Roasted</dt><dd data-f="roasted"></dd>
+        <dt>Origin</dt><dd data-f="origin"></dd>
+        <dt>Notes</dt><dd data-f="notes"></dd>
+        <dt>Price</dt><dd data-f="price"></dd>
+        <dt>Stock</dt><dd data-f="stock"></dd>
+      </dl>
+      <div class="hint" data-hint role="alert"></div>
+      <div class="spacer"></div>
+      <div class="dock">
+        <button class="btn primary" type="button" data-use>Use this coffee</button>
+        <button class="btn text" type="button" data-goto="pick">Pick another match</button>
+      </div>
+    </section>
+
+    <section class="fill" data-step="pick" hidden>
+      <h1 class="serif title mt8">Which one is it?</h1>
+      <p class="body" data-said></p>
+      <div class="rows mt16" data-candidates></div>
+      <div class="hint" data-hint role="alert"></div>
+      <div class="spacer"></div>
+      <div class="dock"><button class="btn text" type="button" data-goto="type">None of these: type the coffee</button></div>
+    </section>
+
+    <section class="fill" data-step="failed" hidden>
+      <div class="shot dim"><img alt="The bag you photographed" data-preview width="358" height="268"></div>
+      <h1 class="serif title mt16" data-f="failed-title">Couldn’t read the bag</h1>
+      <p class="body" data-f="failed-body"></p>
+      <div class="spacer"></div>
+      <div class="dock">
+        <button class="btn primary" type="button" data-take>Retake</button>
+        <button class="btn text" type="button" data-goto="type">Type the coffee</button>
+      </div>
+    </section>
+
+    <form class="fill" id="bag" data-step="type" {% if reading %}hidden{% endif %} novalidate>
+      <h1 class="serif title mt8">Type the coffee</h1>
+      <p class="body">Roaster and coffee, as on the bag. It’s matched to the catalog when the match is clear.{% if not reading %}
+        Reading labels from a photo isn’t set up on this server.{% endif %}</p>
+      <label class="flabel" for="coffee">Coffee</label>
+      <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" placeholder="e.g. Onyx Geometry" required>
+      <label class="flabel" for="roast_date">Roast date (optional)</label>
+      <input class="input" id="roast_date" name="roast_date" type="date" max="{{ now.date().isoformat() }}" data-empty-class>
+      <div class="hint" data-hint role="status"></div>
+      <div class="spacer"></div>
+      <div class="dock sticky"><button class="btn primary" type="submit">Use this coffee</button></div>
+    </form>
+  </div>
 {% endblock %}

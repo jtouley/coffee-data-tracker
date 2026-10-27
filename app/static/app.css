@@ -228,6 +228,24 @@ code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color
 .mt48 { margin-top: 48px; }
 .dock.flat { margin-top: 16px; }
 .center { text-align: center; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+/* New bag: the photo keeps its box before it loads (no layout shift); skeletons hold the text's place */
+.shot { aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; background: var(--panel); margin: 0 -16px; border-radius: 0; }
+.shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shot.dim img { opacity: .55; }
+.sk { height: 16px; border-radius: 4px; background: var(--panel); }
+.sk.tall { height: 32px; }
+.w46 { width: 46%; } .w55 { width: 55%; } .w70 { width: 70%; } .w82 { width: 82%; }
+@media (prefers-reduced-motion: no-preference) {
+  .sk { animation: pulse 1.2s ease-in-out infinite alternate; }
+  @keyframes pulse { to { opacity: .45; } }
+}
+dl.spec { display: grid; grid-template-columns: 112px 1fr; margin: 16px 0 0; font-size: 0.9375rem; border-top: 1px solid var(--rule); }
+dl.spec dt, dl.spec dd { padding: 12px 0; border-bottom: 1px solid var(--rule); margin: 0; }
+dl.spec dt { color: var(--ink-2); }
+.pickrow { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 64px; padding: 8px 0;
+  border-bottom: 1px solid var(--rule); text-align: left; }
+.pickrow .meta { display: block; }
 /* Links laid out as a segmented control (the kind on Add equipment) */
 .seg .segl { min-height: 56px; display: grid; place-items: center; font-weight: 600; font-size: 1.0625rem; border-left: 1px solid var(--control); }
 .seg .segl:first-child { border-left: 0; }

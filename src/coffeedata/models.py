@@ -83,6 +83,7 @@ class Enrichment(BaseModel):
 
 Taste = Literal["sour", "balanced", "bitter"]
 _ID = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,63}")
+SAFE_ID = _ID  # ids that are safe in a lake file name
 
 
 def _safe_id(v: str) -> str:
