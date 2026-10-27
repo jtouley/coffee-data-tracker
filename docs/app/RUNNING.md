@@ -76,18 +76,34 @@ Nothing here was created for you. Once, in this order:
      Terraform as a verified owner;
    - add a CAA record `0 issue "pki.goog"` next to the existing Let's Encrypt one, or Google's managed certificate
      can't be issued.
-4. **Apply:**
+4. **Apply, in two parts.** The service reads every secret at version `latest`, so the secrets need values
+   before the service can be created. First the APIs and the empty secrets:
 
    ```bash
    cd src/terraform
    cp terraform.tfvars.example terraform.tfvars   # billing_account, owner_email
    terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
-   terraform apply
+   terraform apply -target=google_project_service.apis -target=google_secret_manager_secret.app
    ```
 
-5. **Secret values:** for each of `HF_TOKEN`, `ANTHROPIC_API_KEY`, `AUTH_PEPPER`, `SESSION_SECRET` and
-   `OWNER_SETUP_CODE`: `printf %s '<value>' | gcloud secrets versions add <NAME> --data-file=-`. Terraform
-   only creates the empty secrets; values never go through it or its state.
+5. **Secret values**, one version for each of the five (Terraform only creates the empty secrets; values never go
+   through it or its state). Don't put a value on the command line, where it stays in the shell history. Either
+   paste it, then press Enter and Ctrl-D:
+
+   ```bash
+   gcloud secrets versions add HF_TOKEN --data-file=-
+   gcloud secrets versions add ANTHROPIC_API_KEY --data-file=-   # without a real key, New bag falls back to typing
+   ```
+
+   or generate it in place:
+
+   ```bash
+   openssl rand -hex 16 | gcloud secrets versions add AUTH_PEPPER --data-file=-
+   openssl rand -hex 32 | gcloud secrets versions add SESSION_SECRET --data-file=-
+   openssl rand -hex 8 | tee /dev/tty | gcloud secrets versions add OWNER_SETUP_CODE --data-file=-   # note it for step 8
+   ```
+
+   Then everything else: `terraform apply`.
 6. **GitHub variables** (Settings → Secrets and variables → Actions → Variables), from `terraform output`:
    `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE`. Then run the deploy workflow once, or push to main.
 7. **DNS:** add `CNAME app -> ghs.googlehosted.com.` at Namecheap (`runbook/check-dns.sh` checks it). The
