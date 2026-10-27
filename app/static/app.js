@@ -28,6 +28,8 @@ function store(mode, fn) {
 }
 
 class Rejected extends Error {} // the server said no (4xx): retrying won't help
+class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
+const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
 
 async function deliver(entry) {
   const r = await fetch(entry.url, {
@@ -35,12 +37,14 @@ async function deliver(entry) {
     headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
     body: JSON.stringify(entry.body),
   });
-  // Signed out (401) or a server error: keep it and try again. Anything else is final.
-  const final = r.status !== 401 && r.status < 500;
+  // Signed out (401), refused by the origin check (403, which a proxy can trip by mistake) or a server error:
+  // keep it and try again, so a queued shot is never thrown away. Anything else is final.
+  const final = ![401, 403].includes(r.status) && r.status < 500;
   if (final) await store("readwrite", (s) => s.delete(entry.key));
   if (r.ok) return r.json();
   const detail = (await r.json().catch(() => ({}))).detail;
   if (final) throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || r.statusText);
+  if (r.status === 403) throw new Held("The server refused this for now. It’s kept on this phone and sent again later.");
   throw new Error(r.statusText);
 }
 
@@ -284,7 +288,7 @@ function logShot(form) {
       setTimeout(() => tick(8), 60);
       location.href = `/saved/${body.shot_id}?new=1`;
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
       save.disabled = false;
     }
   });
@@ -312,7 +316,7 @@ function undo(strip) {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
       location.href = "/";
     } catch (err) {
-      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
+      strip.firstChild.textContent = why(err);
     }
   });
 }
@@ -330,7 +334,7 @@ function newBag(form) {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   });
 }
@@ -362,7 +366,7 @@ function equipment(form) {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
       location.href = form.dataset.next || "/setup";
     } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : OFFLINE);
+      hint(form, why(err));
     }
   }
   form.addEventListener("submit", (e) => {
@@ -556,8 +560,9 @@ function account() {
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
-      } finally {
-        location.replace("/signin");
+        location.replace("/signin"); // only once the server has signed this phone (or every phone) out
+      } catch {
+        b.textContent = "Couldn’t sign out. Check the connection and try again.";
       }
     }));
   }

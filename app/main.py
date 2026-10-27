@@ -248,7 +248,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         if auth.user(request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, owner=owner_name(s))
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -304,19 +304,16 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
 
     # --- invites, joining and resetting --------------------------------------------------------------
 
-    def owner_name(s: Sessions) -> str:
-        return next((a.username for a in s.accounts.people() if a.role == "owner"), "the owner")
-
     @app.get("/join", response_class=HTMLResponse)
     def join_page(request: Request) -> HTMLResponse:
         # The code is after # in the link, so it never reaches the server or its logs; the page's script reads it.
-        s = accounts_only()
-        return page(request, "join.html", owner=owner_name(s))
+        accounts_only()
+        return page(request, "join.html")
 
     @app.get("/reset", response_class=HTMLResponse)
     def reset_page(request: Request) -> HTMLResponse:
-        s = accounts_only()
-        return page(request, "reset.html", owner=owner_name(s))
+        accounts_only()
+        return page(request, "reset.html")
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -374,7 +371,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
 
     def counts_by_user() -> dict[str, int]:
         out: dict[str, int] = {}
-        for r in store.shots.values():
+        for r in list(store.shots.values()):  # a copy: another request may add a shot meanwhile
             if not r.deleted:
                 out[r.item.user_id] = out.get(r.item.user_id, 0) + 1
         return out

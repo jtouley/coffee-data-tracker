@@ -85,7 +85,7 @@ def missing_secrets() -> list[str]:
     if not (os.environ.get("SPACE_ID") or os.environ.get("SESSION_SECRET")):
         return []
     # OWNER_SETUP_CODE isn't required: without it nobody can create the owner (the screen says so), and once the
-    # owner exists it only resets the owner's password.
+    # owner exists it only resets the owner's password, once per value.
     need = {"AUTH_PEPPER": 16, "SESSION_SECRET": 32}
     if os.environ.get("SPACE_ID"):
         need["HF_TOKEN"] = 1  # a Space writes to Hugging Face datasets
