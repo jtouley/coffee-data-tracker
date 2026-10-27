@@ -67,12 +67,13 @@ make app                     # the shot-logging app on http://127.0.0.1:8000
 Among the other progress output, `make weekly` prints a line like this:
 
 ```text
-built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_price_event, fct_shot to lake/marts
+built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_price_event, fct_shot, mart_bag to lake/marts
 ```
 
 You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.duckdb` (the dbt models),
-`build/site/index.html` (with `catalog.json` next to it) and `build/public/` (the public tables). Open
-`build/site/index.html` in a browser (`open` on macOS, `xdg-open` on Linux).
+`build/site/` (the launch page `index.html`, the catalog in `catalog/index.html` with `catalog/catalog.json`, and
+the `privacy/` and `terms/` pages) and `build/public/` (the public tables). Open `build/site/catalog/index.html` in
+a browser (`open` on macOS, `xdg-open` on Linux).
 
 ## Usage
 
@@ -90,13 +91,16 @@ PORT=8080 make app
 
 - **Setup:** your grinder (its dial range and step, and whether lower numbers are finer) and your basket (its
   nominal dose). Do this first.
-- **New bag:** type the roaster and coffee as on the bag, plus the roast date. It's matched to the catalog when the
-  match is clear, which needs a built catalog (`make weekly` or `make build`).
+- **New bag:** take a photo of the label and Claude reads the roaster, coffee and roast date (needs
+  `ANTHROPIC_API_KEY`, up to 10 reads per person per day), or type them as on the bag. It's matched to the catalog
+  when the match is clear, which needs a built catalog (`make weekly` or `make build`).
 - **Log shot:** starts from the last shot of the bag. Time, taste and rating start empty, with a "Same as last"
   button and a shot timer.
 - **Saved:** shows the ratio and where the shot landed against the 25–32 s, 1:2 window, next to the bag's earlier
   shots, and says how it compares with the last one. For 5 seconds it offers **Undo**, which writes a retraction
   record; nothing is deleted.
+- **Coffees and History:** every bag and every shot. A shot's page has **Correct** (the same form, saved under the
+  shot's id) and **Retract**.
 
 Each save waits in the phone's IndexedDB until the server acknowledges it, so a save made offline goes through
 later, and a retry never creates a second shot. The app shows where each shot landed but gives no grind advice; that
@@ -107,8 +111,10 @@ waits until a model trained on logged shots does better than the rule the other 
 > `HOST=0.0.0.0` anyone on your network can log shots. Real sign-in, invites and deployment are in
 > [`docs/app/RUNNING.md`](docs/app/RUNNING.md).
 
-The app reads the lake only when it starts. To see shots logged from the CLI, Claude (MCP) or an issue, restart the
-app.
+The app reads shots, bags and equipment from the lake only when it starts. To see shots logged from the CLI,
+Claude (MCP) or an issue, restart the app.
+
+<a id="logging-shots"></a>
 
 ### Log shots elsewhere
 
@@ -151,14 +157,14 @@ Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 1
 `issue-forms` workflow records the shot, replies with the match and advice, and closes the issue. It only acts on
 issues the repo owner opens.
 
-A grinder name is looked up among the grinders in the same lake, so run the app against the lake the workflow and
+A grinder name is looked up among the owner's grinders in the same lake, so run the app against the lake the workflow and
 the MCP server use. An unknown name fails with the list of known grinders.
 
 | | App | CLI | Claude (MCP) | Issue form |
 |---|---|---|---|---|
 | Advice for the next shot | no | yes | yes | yes |
-| Correct a shot | no | log the full record again with its `shot_id` | no | no |
-| Retract a shot | Undo, for 5 s after saving | the full record plus `"deleted": true` | no | no |
+| Correct a shot | Correct, on the shot's page | log the full record again with its `shot_id` | no | no |
+| Retract a shot | Undo, for 5 s after saving, or Retract on the shot's page | the full record plus `"deleted": true` | no | no |
 
 ### Query the data
 
@@ -199,10 +205,11 @@ where is_listed group by 1 order by 2 desc;
 | `fct_shot` | current shot, with its bag, grinder (`grind_position` compares across grinders) and catalog coffee |
 | `dim_equipment` | grinder, machine or basket, retired ones included |
 | `mart_dial_in` | your best recipe per coffee and grinder, and per origin and process |
+| `mart_bag` | bag, with its shot count, best shot and days off roast |
 | `mart_market`, `mart_new_arrivals` | market summary by origin and process; coffees new in each roaster's latest run |
 
-`dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event` and `fct_shot` are also exported to the lake's
-`marts/` each run. `fct_shot` holds your shots, so keep the lake private (`coffeedata init` makes it private unless
+`dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event`, `fct_shot` and `mart_bag` are also exported to the
+lake's `marts/` each run. `fct_shot` and `mart_bag` hold your shots and bags, so keep the lake private (`coffeedata init` makes it private unless
 you pass `--public`).
 
 ### Commands
@@ -234,11 +241,15 @@ Everything is set through environment variables. Nothing is required for a local
 | `HF_TOKEN` | none | Reading and writing a Hugging Face lake or public export |
 | `COFFEEDATA_STAGING` | `build/lake-staging` | Where new files wait before upload to a remote lake |
 | `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads. `build`, `weekly`, `site` and `export-public` take `--db` instead (same default) |
-| `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for bag photos. Nothing writes photos yet |
+| `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
+| `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
+| `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
+| `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
 | `COFFEEDATA_OWNER` | `owner` | The owner's display name in the app |
 | `HOST`, `PORT` | `127.0.0.1`, `8000` | Where `make app` listens |
-| `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only |
+| `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only. The app's bag-label reading needs `ANTHROPIC_API_KEY` |
+| `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
 | `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, `weekly` loads Snowflake too |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
@@ -262,13 +273,16 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
    `HF_TOKEN`. Optionally add the secret `ANTHROPIC_API_KEY`; the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
-   `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md)).
+   `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
+   and for the site the variables `SITE_URL`, `SUPPORT_EMAIL` and `GOVERNING_STATE`.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
 6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
 
-No workflow deploys the app. To log shots from the app into the same lake, start `make app` with `COFFEEDATA_LAKE` and
-`HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
+The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
+`jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
+secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
+`make app` with `COFFEEDATA_LAKE` and `HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
 
 ## The site
 
@@ -323,7 +337,8 @@ current state is computed:
 | `marts/*.parquet` | build | derived, and replaced each run |
 
 Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
-`Image` layout, so a photo is never in the main lake. The schema is in place; nothing uploads photos yet.
+`Image` layout, so a photo is never in the main lake. The app writes one when a bag's label is photographed.
+Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
@@ -371,9 +386,9 @@ IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`]
 
 ## Limitations
 
-- **US only, one person.** Discovery filters to US places, and the issue forms only act on the repo owner's
-  issues.
-- **The app is a first version.** It has no photo upload and no way to edit a shot or a bag; bags are typed by hand.
+- **US only, one owner.** Discovery filters to US places. The CLI, MCP server and issue forms log shots as the
+  owner, and the issue forms only act on the repo owner's issues. Other people use the app, by invite.
+- **The app is a first version.** It has no screen to edit or finish a bag.
 - **No hosted dataset.** You create and run your own lake; this repo doesn't link to a published copy.
 - **Coverage depends on the stores.** Sites that block bots or publish no machine-readable catalog show up as
   `unreachable`, `no_catalog` or `no_coffee` in `dim_roaster`.
@@ -392,12 +407,14 @@ make clean   # remove build/ and dbt artifacts
 
 - The tests run offline, with recorded store responses (`tests/fixtures/`), mocked HTTP (`respx`), synthetic lakes
   and FastAPI's test client.
-- One browser test (`tests/test_app_browser.py`) drives Log shot → Saved → Undo at phone width; it needs Node with
-  Playwright and is skipped without it.
+- One browser test (`tests/test_app_browser.py`) drives owner setup, sign-in and Log shot → Saved → Undo at phone
+  width and runs axe on each screen; it needs Node with Playwright and axe-core (`npm ci` in `tests/browser`) and is
+  skipped without them, except in CI.
 - `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and private-key checks,
   `uv.lock` in step with `pyproject.toml`, ruff and mypy over `src` and `app`); the first run downloads the hook
   repos, so it needs network once.
-- CI (`.github/workflows/ci.yml`) runs `uv sync --locked` and `make test` on every pull request and push to `main`.
+- CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
+  with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
 Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues).
 
