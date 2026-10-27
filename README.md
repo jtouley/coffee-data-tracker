@@ -1,175 +1,70 @@
-# Coffee Data
+# coffee-data-tracker
 
-A weekly catalog of what US specialty coffee roasters sell online, and an espresso log that links each shot to a
-coffee in that catalog. It runs on GitHub Actions. The data lives in a Hugging Face dataset, not in git, and is
-modeled with dbt and DuckDB.
+[![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-- About 3,200 US roaster websites, found in Overture Maps and OpenStreetMap.
-- Each site is checked for a storefront that publishes its catalog (Shopify, WooCommerce, Squarespace, Square
-  Online), with schema.org product markup as a fallback.
-- Every week each roaster's full catalog is saved as-is. Price changes, delistings and new arrivals are computed
-  from those weekly records.
-- Origin, process, varietal, elevation, roast level and tasting notes come from tags and text rules. If you add an
-  Anthropic key, Claude Haiku fills in what the rules miss.
-- Shots are linked to catalog coffees, so you can ask "what grind works for washed Ethiopians?" or "do I rate
-  naturals higher?"
+A weekly catalog of the coffee that about 3,200 US specialty roasters sell online, plus a personal espresso log
+that links each shot to a coffee in that catalog.
 
-## Quickstart
+Every roaster runs its own web shop, so there's no single place to compare origins, processes and prices, or to see
+when a coffee's price changes or it sells out. Shot notes in a notebook don't know which coffee they were about.
+This project reads each roaster's public storefront once a week, keeps every weekly snapshot, and turns them into
+tables you can query with SQL: what's listed now, what changed, and how your shots of a given coffee went. It runs
+on a GitHub Actions schedule, keeps its data in a Hugging Face dataset (or a local folder), and needs no server.
 
-```bash
-make install
-make weekly SAMPLE=50        # 50 roasters into ./lake; leave out SAMPLE for all of them (about an hour)
-open build/site/index.html
-```
+**Status:** personal project, version 0.1.0, US roasters only.
 
-`make test` runs the lint checks, the unit tests and dbt builds over synthetic multi-week lakes, all offline.
+- **Reads the stores directly.** Adapters for Shopify, WooCommerce, Squarespace and Square Online, with a fallback
+  that reads schema.org product markup from a site's sitemap.
+- **Keeps full history.** Price changes, new arrivals, delistings and relistings are worked out from the weekly
+  records.
+- **Structured attributes.** Origin, process, varietals, elevation, roast level and tasting notes come from tags and
+  text rules. With an Anthropic API key, Claude Haiku fills in what the rules miss.
+- **A shot log that knows the coffee.** Log shots from the CLI, from Claude (over MCP) or from a GitHub issue. Each
+  one is matched to a catalog coffee, and you get grind advice for the next shot.
+- **A static site and facts-only public tables**, which a dbt test keeps free of descriptions, images and shot data.
 
-The project uses [uv](https://docs.astral.sh/uv/) and Python 3.12. Run `make hooks` once to install the pre-commit
-hooks: whitespace and YAML/TOML checks, a check that `uv.lock` matches `pyproject.toml`, ruff (lint and format) and
-mypy. `make lint` runs the same hooks on every file, and so does CI.
+## Quick start
 
-## Design
-
-Each step adds files to the lake and never edits or deletes one; `src/coffeedata/lake.py` refuses to overwrite.
-Anything that describes the current state is computed from those files.
-
-| Lake table | Written by | One file per |
-|---|---|---|
-| `snapshots/run_date=…/batch=…` | ingest | fetch batch: every product seen (coffee or not), with variants and prices |
-| `fetches/…` | ingest | fetch batch: one row per roaster attempt, `ok` or `error` |
-| `bodies/…` | ingest | product description text, stored once per new description |
-| `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
-| `probes/…` | probe | storefront platform checks |
-| `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
-| `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
-| `shots/<id>__<time>.parquet` | MCP, issue form | one logged shot; corrections and retractions are new records |
-| `marts/*.parquet` | build | derived and replaced weekly: `dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event` |
-
-Some consequences:
-
-- Re-running a week only fetches roasters that don't have a successful fetch for it yet. `stg_runs` keeps the
-  latest successful batch per roaster and week, so duplicate batches don't change the history. `tests/test_dbt.py`
-  checks this.
-- A failed fetch is recorded as an error with no products. Price events compare consecutive successful fetches, so
-  a site being down never shows up as a delisting.
-- `coffee_id` is `<roaster domain>:<store product id>`, which doesn't change when a coffee is renamed. `dim_coffee`
-  keeps every coffee ever seen, with `is_listed`.
-- The raw records keep non-coffee products and description text, so a better classifier or extractor can be
-  re-run over past weeks without fetching anything again.
-- A roaster's status (`active`, `no_coffee`, `no_catalog`, `pending`, `unreachable`, `opted_out`) comes from its
-  probe and fetch history. It only becomes `unreachable` after 3 failed weekly runs, and a failed probe never
-  erases a platform that was already known.
-
-### Where the lake lives
-
-`COFFEEDATA_LAKE` sets it. Unset, it's `./lake` (ignored by git). Set to `hf://datasets/<owner>/<name>`, new files
-are staged under `build/lake-staging` and uploaded in a commit at each checkpoint: every 200 roasters during ingest,
-and after each step of the weekly run. Uploads retry with backoff, and a commit can't replace an existing file
-other than the derived `marts/`. DuckDB and dbt read the dataset directly over `hf://`.
-
-Hugging Face datasets are free, versioned and built for Parquet, and anyone with DuckDB can query them. Git isn't a
-good home for this data: the history only grows, every Actions checkout downloads it, and data commits bury code
-changes. An S3, R2 or GCS backend would be a small change to `lake.py`.
-
-Product rows are about 140 bytes each in zstd Parquet. A weekly run of about 80k products is 10–12 MB, or roughly
-600 MB a year. Descriptions add about 10 MB up front, then only when one changes.
-
-## How it works
-
-```
-config/roasters.csv + lake registry ──probe──▶ platform ──ingest──▶ snapshots, fetches, bodies, enrichments
-                                                                           │
-                                   Claude Haiku (optional) ──enrich──▶ enrichments (llm)
-                                                                           │
-                                                      dbt + DuckDB over the lake
-                                                                           │
-                 dim_coffee, dim_roaster, fct_price_event, fct_shot, mart_dial_in, mart_market, mart_new_arrivals
-                                                                           │
-                                          static site (GitHub Pages), marts/ in the lake, MCP server
-```
-
-`coffeedata weekly` (the `weekly.yml` workflow, Mondays) runs:
-
-1. Discovery from Overture and OSM, in the first week of each month only.
-2. Platform checks for roasters not checked in 28 days.
-3. Ingest of every roaster with a usable platform, then one retry of that week's failures.
-4. Claude enrichment, if a key is set: collect finished batches, then submit pending coffees.
-5. The dbt build, and export of the marts.
-6. The public tables, plus the Snowflake load if it's configured.
-7. The site.
-
-It uploads to the lake after steps 2 through 5, so a failure in a later step or a timeout keeps what was already
-fetched. Running the workflow again for the same week picks up where it stopped.
-
-Enrichment works out what still needs Claude each time: coffees the rules couldn't fully read that have no `llm`
-row and aren't in a pending batch. Anything over the cap (`--limit`, default 2000), any API error and any failed
-batch item gets picked up the following week. Up to 100 coffees go through the API directly; more go through the
-Message Batches API, which costs half as much, and are collected on the next run.
-
-## Setup on GitHub
-
-1. Create a write token at huggingface.co → Settings → Access Tokens.
-2. Create the dataset once, from any machine. It's private unless you add `--public`.
-   ```bash
-   COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
-   ```
-3. In the repo's Actions settings, add:
-   - variable `LAKE_URL` = `hf://datasets/<you>/coffee-data`
-   - secret `HF_TOKEN`
-   - optionally, secret `ANTHROPIC_API_KEY`
-   - optionally, for Snowflake: variables `SNOWFLAKE_ACCOUNT` and `SNOWFLAKE_USER`, secret `SNOWFLAKE_PRIVATE_KEY`
-     (see `marketplace/README.md`)
-4. Settings → Pages → Source: GitHub Actions.
-5. Create the `shot` and `roaster` issue labels.
-6. Run the weekly workflow by hand with `sample: 50`. After that it runs every Monday.
-
-## Public tables and marketplaces
-
-Four facts-only tables are built every week (`dbt/models/public/`): coffees with their attributes, sizes, prices,
-stock and a link back to the roaster; the weekly change log; a market summary by origin and process; and the
-roasters covered. A dbt test fails the build if descriptions, images, store ids or shot data ever get into them.
-They also leave out opted-out roasters and roasters known only from OpenStreetMap, whose ODbL license would
-otherwise apply to the whole table.
-
-With `PUBLIC_EXPORT_URL` set, the weekly run exports them to a public Hugging Face dataset or to S3/GCS.
-`coffeedata export-public --to …` does the same by hand. Setup scripts for Snowflake and Databricks, and the
-listing text, are in [`marketplace/`](marketplace/README.md).
-
-## Logging shots
-
-Shots can come from Claude or from a GitHub issue. Either way the shot is written to the lake, matched to a catalog
-coffee, and you get advice for the next one. The advice is simple: aim for about 1:2 in 25–32 s; sour or fast
-means grind finer, bitter or slow means coarser. To correct a shot, log it again with the same `shot_id`. To remove
-one, log it with `deleted: true`. The latest record wins.
-
-From Claude, register the MCP server once:
+You need [uv](https://docs.astral.sh/uv/) (it installs Python 3.12 if you don't have it), `git` and network access:
+the run fetches live roaster sites. Run every command from the repo root, because `config/`, `dbt/` and `docs/` are
+read through relative paths.
 
 ```bash
-claude mcp add coffee-data -e COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data -e HF_TOKEN=… \
-  -- uv run --directory /path/to/coffee-data-tracker coffeedata mcp
+git clone https://github.com/jtouley/coffee-data-tracker.git
+cd coffee-data-tracker
+make install                 # uv sync
+make weekly SAMPLE=50        # 50 roasters into ./lake, then the dbt build and the site
+open build/site/index.html   # on Linux: xdg-open build/site/index.html
 ```
 
-Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 15, a bit sour, 3/5". The server
-has `log_shot`, `search_coffees`, `shot_history`, `suggest_next` and `run_sql` (one read-only SELECT against the
-dbt models in `build/coffee.duckdb`).
+Among the other progress output, `make weekly` prints a line like this:
 
-From your phone, open an issue with the "Log a shot" form. The `issue-forms` workflow only acts on the repo
-owner's issues: it records the shot, replies with the match and advice, and closes the issue. "Add a roaster"
-works the same way and has a checkbox for roasters who want to be left out.
+```text
+built build/coffee.duckdb; exported dim_coffee, dim_roaster, mart_market, fct_price_event to lake/marts
+```
 
-## Example queries
+You then have `lake/` (the raw Parquet records, ignored by git), `build/coffee.duckdb` (the dbt models),
+`build/site/index.html` (with `catalog.json` next to it) and `build/public/` (the public tables).
 
-Against `build/coffee.duckdb`, or the lake's `marts/`:
+> [!NOTE]
+> On days 1–7 of a month, `weekly` first runs roaster discovery against Overture Maps and OpenStreetMap, and
+> `SAMPLE` doesn't limit that step. Leave out `SAMPLE` to fetch every roaster; the GitHub workflow allows 4 hours.
+
+## Usage
+
+### Query the data
+
+DuckDB comes with the project's dependencies, so you can query the models without installing anything else:
+
+```bash
+uv run python -c "import duckdb; duckdb.connect('build/coffee.duckdb', read_only=True).sql(\"
+  select origin_country, count(*) as coffees from dim_coffee
+  where is_listed group by 1 order by 2 desc limit 10\").show()"
+```
 
 ```sql
--- What worked last time, per coffee
-select label, best_grind, best_dose_g, best_yield_g, best_time_s, avg_rating, shots
-from mart_dial_in where grain = 'coffee' order by last_brewed_at desc;
-
--- Washed vs natural ratings
-select process, count(*) shots, round(avg(rating), 2) avg_rating from fct_shot group by 1 order by 3 desc;
-
--- Cheapest in-stock single-origin Ethiopian per 100 g
+-- Cheapest in-stock single-origin Ethiopians per 100 g
 select roaster_name, title, price_per_100g, url from dim_coffee
 where origin_country = 'Ethiopia' and in_stock and not is_blend order by price_per_100g limit 10;
 
@@ -177,49 +72,237 @@ where origin_country = 'Ethiopia' and in_stock and not is_blend order by price_p
 select run_date, coffee_id, previous_price_usd, price_usd from fct_price_event
 where event = 'price' and run_date >= current_date - 30 order by run_date desc;
 
--- Straight from the lake
+-- What worked last time, per coffee (needs logged shots)
+select label, best_grind, best_dose_g, best_yield_g, best_time_s, avg_rating, shots
+from mart_dial_in where grain = 'coffee' order by last_brewed_at desc;
+
+-- Washed vs natural ratings
+select process, count(*) shots, round(avg(rating), 2) avg_rating from fct_shot group by 1 order by 3 desc;
+
+-- Straight from a Hugging Face lake
 select origin_country, count(*) from 'hf://datasets/<you>/coffee-data/marts/dim_coffee.parquet'
 where is_listed group by 1 order by 2 desc;
 ```
 
-## Scraping etiquette
-
-- Each roaster's public storefront feed is read once a week, with a User-Agent that names this project.
-- `robots.txt` is followed (a 401 or 403 on it counts as "disallow everything"), and requests to a host are at
-  least a second apart.
-- Only what a shopper can see is stored: titles, prices, stock and descriptions. Every coffee links back to the
-  roaster, and roasters can opt out.
-- Directories whose terms forbid scraping (Roast Local), sources whose terms forbid storing their data (Google
-  Places, Yelp) and sites that block bots aren't used.
-
-## Data sources and licenses
-
-Roasters come from Overture Maps Places (CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap
-contributors). Details are in [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md). The code is MIT-licensed.
-
-## Design lineage
-
-Almost none of the original code is left (`git blame` puts 2 lines of the current tree on it), but the goal and
-the data model carried over:
-
-| Original (`v0-gcp`, `coffee-scraper`) | Now |
+| Model | One row per |
 |---|---|
-| Collect brewing data and analyze it in the cloud | Same goal, analyzed with dbt and DuckDB over the lake |
-| Squarespace form: roaster, roast, origin, grind, dose, yield, time, rating, `is_latte`, notes | The `Shot` model and "Log a shot" form, with the same fields (`is_latte` is now `is_milk_drink`) plus taste, water temperature, roast date and brew method |
-| The form's 59-roaster dropdown | The first entries in `config/roasters.csv`, which now has about 3,200 roasters |
-| The form's 49-country origin dropdown | The country list in `origins.py` |
-| BigQuery table with a typed schema, column descriptions, `created_at` and `received_at` | Typed Parquet schemas in `lake.py`, `brewed_at` and `logged_at` on shots, `fetched_at` on catalog records, documented dbt models |
-| Cloud Function receiving form posts | The MCP server and GitHub issue forms |
-| Terraform | The dbt models, workflows and lake layout, all in the repo |
-| `coffee-scraper`'s Selenium and ScrapeGraph scrapers for Counter Culture, Intelligentsia, Onyx and Blue Bottle | Storefront adapters; the Shopify one covers the first three, and Blue Bottle blocks bots |
-| `coffee-scraper`'s fields: name, price, roast, tasting notes, origin | `dim_coffee` and `public_coffee`, which add process, varietals, elevation, bag sizes, price per 100 g, stock and history |
+| `dim_coffee` | coffee ever seen, with attributes, sizes, price per 100 g, `in_stock` and `is_listed` |
+| `dim_roaster` | roaster, with platform and status |
+| `fct_price_event` | change: `new`, `price`, `availability`, `removed` or `relisted` |
+| `fct_shot`, `mart_dial_in` | logged shot joined to its coffee; your best recipe per coffee and per origin and process |
+| `mart_market`, `mart_new_arrivals` | market summary by origin and process; coffees new in each roaster's latest run |
+
+`dim_coffee`, `dim_roaster`, `mart_market` and `fct_price_event` are also exported to the lake's `marts/` each run.
+
+### Log a shot
+
+Each shot is written to the lake, matched to a catalog coffee, and answered with advice for the next one. The
+advice aims for about 1:2 in 25–32 s: sour or fast means grind finer, bitter or slow means coarser.
+
+**From the command line:**
+
+```bash
+uv run coffeedata shot add --json '{"coffee": "Onyx Geometry", "in": 18, "out": 38, "time": 29, "grind": 15, "rating": 3, "taste": "sour"}'
+```
+
+```text
+Logged shot `<shot id>`.
+
+Last shot: 18 g → 38 g (1:2.1) in 29 s at grind 15. It tasted sour: go finer to 14 to slow the shot and extract more.
+```
+
+Once the catalog is built, the reply also names the matched coffee, or the closest candidates if the match isn't
+certain. To correct a shot, log it again here with the `shot_id` from the reply; the latest record wins. Add
+`"deleted": true` to retract it. Corrections and retractions only work from the CLI: the MCP tool and the issue
+form always create a new shot.
+
+**From Claude**, register the MCP server once (for a local lake, leave out both `-e` flags):
+
+```bash
+claude mcp add coffee-data -e COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data -e HF_TOKEN=<token> \
+  -- uv run --directory /path/to/coffee-data-tracker coffeedata mcp
+```
+
+Then say something like "log a shot: Onyx Geometry, 18 in, 38 out, 29 s, grind 15, a bit sour, 3/5". The server
+has `log_shot`, `search_coffees`, `shot_history`, `suggest_next` and `run_sql` (one read-only `SELECT` against the
+models in `build/coffee.duckdb`).
+
+**From your phone**, open an issue with the "Log a shot" form. The `issue-forms` workflow records the shot, replies
+with the match and advice, and closes the issue. It only acts on issues the repo owner opens.
+
+### Commands
+
+| `make` target | Runs | What it does |
+|---|---|---|
+| `make weekly [SAMPLE=N]` | `coffeedata weekly` | The full weekly run (see [How it works](#how-it-works)) |
+| `make init` | `coffeedata init` | Create the lake. For `hf://`, the dataset (private unless `--public`), card and schemas |
+| `make discover` | `coffeedata discover overture`, `discover osm` | Record roasters from open datasets |
+| `make probe` | `coffeedata probe` | Detect the store platform for roasters not checked in 28 days |
+| `make ingest [SAMPLE=N]` | `coffeedata ingest` | Fetch catalogs for today's run, skipping roasters already fetched |
+| `make enrich` | `coffeedata enrich` | Claude enrichment (needs `ANTHROPIC_API_KEY`) |
+| `make build` / `make site` | `coffeedata build` / `site` | dbt build and mart export / the static site (runs `build` first) |
+| `make publish` | `coffeedata publish` | Upload staged files to a remote lake |
+| `make mcp` | `coffeedata mcp` | Run the MCP server over stdio |
+
+The CLI also has `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (needs
+`uv sync --extra snowflake`), `shot add|from-issue` and `add-roaster`. `uv run coffeedata <command> --help` lists
+each command's flags.
+
+## Configuration
+
+Everything is set through environment variables. Nothing is required for a local run.
+
+| Variable | Default | Used for |
+|---|---|---|
+| `COFFEEDATA_LAKE` | `lake` | Where the lake lives: a local folder, or `hf://datasets/<owner>/<name>` |
+| `HF_TOKEN` | none | Reading and writing a Hugging Face lake or public export |
+| `COFFEEDATA_STAGING` | `build/lake-staging` | Where new files wait before upload to a remote lake |
+| `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads |
+| `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only |
+| `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
+| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, `weekly` loads Snowflake too |
+| `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
+| `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
+| `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
+
+The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
+list. Roasters added later by discovery (including OpenStreetMap) or the issue form go into the lake, not this file.
+
+## Run it on GitHub
+
+The `weekly` workflow runs every Monday, keeps the data in a Hugging Face dataset and deploys the site to Pages.
+
+1. Create a write token at huggingface.co → Settings → Access Tokens.
+2. Create the dataset once, from any machine. It's private unless you add `--public`.
+   ```bash
+   COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
+   ```
+3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
+   `HF_TOKEN`. Optionally add the secret `ANTHROPIC_API_KEY`; the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
+   `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md)).
+4. Under Settings → Pages, set Source to GitHub Actions.
+5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
+6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
+
+## How it works
+
+```mermaid
+graph LR
+    A[config/roasters.csv<br/>+ lake registry] -->|probe| B[platform per roaster]
+    B -->|ingest| C[(lake: snapshots, fetches,<br/>bodies, enrichments)]
+    C -->|enrich, optional| C
+    E[shots: CLI / MCP / issue form] --> C
+    C -->|dbt + DuckDB| D[dim_coffee, dim_roaster,<br/>fct_price_event, fct_shot, marts]
+    D --> F[static site]
+    D --> G[MCP server]
+    D --> H[public tables]
+```
+
+`coffeedata weekly` runs these steps in order:
+
+1. Discovery from Overture and OSM, once in the first week of each month (or with `--discover`).
+2. Platform checks for roasters not checked in 28 days.
+3. Ingest of every roaster with a usable platform, then one retry of that run's failures.
+4. Claude enrichment, if a key is set: collect finished batches, then submit pending coffees.
+5. The dbt build, and export of the marts.
+6. The public tables, plus the Snowflake load if it's configured.
+7. The site.
+
+With a remote lake, the run uploads after steps 2 through 5, and every 200 roasters during ingest, so a later
+failure or a timeout keeps what was already fetched. Running the same week again picks up where it stopped.
+
+**The lake only grows.** Each step adds files and never edits or deletes one; `Lake.write` refuses to overwrite.
+The derived `marts/` exports are the one exception. Everything that describes the current state is computed:
+
+| Lake path | Written by | Holds |
+|---|---|---|
+| `snapshots/run_date=…/batch=…` | ingest | every product seen (coffee or not), with variants and prices |
+| `fetches/…` | ingest | one row per roaster attempt, `ok` or `error` |
+| `bodies/…` | ingest | product description text, stored once per new description |
+| `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
+| `probes/…` | probe | storefront platform checks |
+| `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
+| `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
+| `shots/<id>__<time>.parquet` | CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
+| `marts/*.parquet` | build | derived, and replaced each run |
+
+What that gives you:
+
+- **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
+  `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
+- **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price
+  events compare consecutive *successful* fetches.
+- **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
+- **Past weeks can be re-processed.** Raw records keep non-coffee products and description text, so a better
+  classifier or extractor can run over old weeks without fetching again.
+- **Roaster status comes from history:** `active`, `no_coffee`, `no_catalog`, `pending`, `unreachable` or
+  `opted_out`. A roaster with a known platform becomes `unreachable` after its last 3 weekly runs all failed, and a
+  failed probe never erases a known platform. A roaster with no usable platform (none found yet, or an HTTP error
+  such as `http_403`) is `unreachable` straight away.
+- **Enrichment cost is capped.** Claude only sees coffees the rules couldn't fully read that have no `llm` result
+  and aren't in a pending batch, up to `--limit` (default 2000). Up to 100 go through the API directly; more go
+  through the Message Batches API and are collected next run. Anything skipped is picked up the following week.
+
+Hugging Face datasets are versioned, handle Parquet well and can be queried by anyone with DuckDB. Git would be a
+poor home for this data: its history only grows and every Actions checkout would download it. Lake storage lives
+in `lake.py`, which is where another object store would plug in.
+
+### Public tables
+
+Four facts-only tables (`dbt/models/public/`): `public_coffee` (attributes, sizes, prices, stock and a link back to
+the roaster), `public_price_event`, `public_market_weekly` and `public_roaster`. They leave out opted-out roasters
+and roasters known only from OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole
+table. The `public_tables_are_facts_only` dbt test fails the build if descriptions, images, store IDs or shot
+columns appear. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+
+### Scraping etiquette
+
+- Each storefront feed is read once a week, with a User-Agent that names this project and links to this repo.
+- `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Catalog requests to a host are
+  at least 1 second apart, platform probes at least 0.5 seconds apart.
+- Only what a shopper can see is stored, and every coffee links back to its roaster.
+- Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
+  roaster" box on the "Add a roaster" form, and the site is never fetched again.
+- By design, the project doesn't use directories whose terms forbid scraping, sources whose terms forbid storing
+  their data, or sites that block bots.
+
+## Limitations
+
+- **US only, one person.** Discovery filters to US places, and the issue forms only act on the repo owner's issues.
+- **No hosted dataset.** You create and run your own lake; this repo doesn't link to a published copy.
+- **Coverage depends on the stores.** Sites that block bots or publish no machine-readable catalog show up as
+  `unreachable`, `no_catalog` or `no_coffee` in `dim_roaster`.
+- **Attributes are a best guess,** by rules or by Claude. The roaster's own listing is authoritative.
+- **Marketplace listings** on Snowflake and Databricks need their own accounts and reviews. See
+  [`marketplace/README.md`](marketplace/README.md).
+
+## Development
+
+```bash
+make hooks   # once: install the pre-commit hooks
+make test    # make lint, then pytest: unit tests and dbt builds over synthetic multi-week lakes
+make fmt     # ruff fix and format
+make clean   # remove build/ and dbt artifacts
+```
+
+The tests run offline, with recorded storefront responses (`tests/fixtures/`), mocked HTTP (`respx`) and
+synthetic lakes. `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and
+private-key checks, `uv.lock` in step with `pyproject.toml`, ruff and mypy); the first run downloads the hook
+repos, so it needs network once. CI (`.github/workflows/ci.yml`) runs `uv sync --locked` and `make test` on every
+pull request and push to `main`. Report bugs and questions on the [issue tracker](../../issues).
 
 ## History
 
-This started in March 2024 as a way to log espresso shots from a form on a Squarespace site into GCP, using a Cloud
-Function, BigQuery and Terraform, alongside a separate repo of per-site Selenium and GPT-3.5 scrapers. The
-architecture was mostly for fun and the pieces were never fully connected. The rewrite kept the idea and replaced
-the parts: storefront JSON feeds instead of browser scraping, an open dataset of roasters instead of a hand-typed
-list, a Parquet lake with dbt and DuckDB instead of the cloud stack, and MCP and issue forms instead of the web form.
+This started in March 2024 as a way to log espresso shots from a Squarespace form into GCP, with a Cloud Function,
+BigQuery and Terraform, alongside a separate repo of per-site Selenium and GPT-3.5 scrapers. The rewrite kept the
+goal and the shot fields and replaced the rest: storefront JSON feeds instead of browser scraping, an open dataset
+of roasters instead of a hand-typed list, a Parquet lake with dbt and DuckDB instead of the cloud stack, and MCP and
+issue forms instead of the web form. The GCP version is commit
+[`92f74da`](../../tree/92f74da332184533e4c10e3dab83c9fb44e0d796).
 
-The GCP version is commit [`92f74da`](../../tree/92f74da332184533e4c10e3dab83c9fb44e0d796).
+## License
+
+The code is released under the [MIT License](LICENSE). Roaster data comes from Overture Maps Places
+(CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap contributors); product names, descriptions and
+images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
