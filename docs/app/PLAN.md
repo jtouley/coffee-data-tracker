@@ -303,8 +303,9 @@ New nullable columns, appended to the `shots` schema:
 
 Old shot files don't have these columns. The lake is read with `union_by_name = true`, so they come back as null,
 and nothing about an old shot changes. `Shot` in `models.py` gains the same optional fields; it has
-`extra = "forbid"`, so this has to land before the app sends them. The MCP `log_shot` tool and the issue form gain
-an optional `grinder` argument that resolves by name.
+`extra = "forbid"`, so this has to land before the app sends them. The MCP `log_shot` tool gains an
+optional `grinder_name` argument that resolves to an `equipment_id` by name. (Not `grinder`: `shots.ALIASES`
+already maps `grinder` to `grinder_setting`.)
 
 A grind setting is now only comparable within one grinder. `suggest_next` and `mart_dial_in` should group by
 `(coffee, grinder_id)` when `grinder_id` is set, and treat null as "the grinder used before equipment existed".
@@ -361,7 +362,7 @@ The app adds nothing to the weekly run's cost.
 Each one is usable on its own and goes through the normal PR and CI process.
 
 1. **Data model.** New lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
-   test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder`. Shot sections removed from
+   test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
 2. **App skeleton.** FastAPI on a Space, HF OAuth with the owner allowlist, the deploy workflow, the in-memory shot
    cache. Today and Log shot with prefill, advice, the timer and typed time. Online only. Includes the approved
