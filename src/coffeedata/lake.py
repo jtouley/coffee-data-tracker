@@ -34,62 +34,145 @@ log = logging.getLogger(__name__)
 
 DEFAULT_URL = "lake"
 
-VARIANT = pa.struct([("variant_id", pa.string()), ("title", pa.string()), ("price_usd", pa.float64()),
-                     ("grams", pa.int32()), ("available", pa.bool_())])
+VARIANT = pa.struct(
+    [
+        ("variant_id", pa.string()),
+        ("title", pa.string()),
+        ("price_usd", pa.float64()),
+        ("grams", pa.int32()),
+        ("available", pa.bool_()),
+    ]
+)
 
 SCHEMAS: dict[str, pa.Schema] = {
-    "snapshots": pa.schema([
-        ("run_date", pa.date32()), ("batch_id", pa.string()), ("fetched_at", pa.timestamp("s", tz="UTC")),
-        ("roaster_id", pa.string()), ("product_id", pa.string()), ("handle", pa.string()), ("url", pa.string()),
-        ("title", pa.string()), ("platform", pa.string()), ("vendor", pa.string()), ("product_type", pa.string()),
-        ("tags", pa.list_(pa.string())), ("image", pa.string()), ("body_hash", pa.string()),
-        ("variants", pa.list_(VARIANT)), ("is_coffee", pa.bool_()),
-    ]),
-    "bodies": pa.schema([("body_hash", pa.string()), ("body_text", pa.string()), ("first_seen_run", pa.date32())]),
-    "fetches": pa.schema([
-        ("run_date", pa.date32()), ("batch_id", pa.string()), ("fetched_at", pa.timestamp("s", tz="UTC")),
-        ("roaster_id", pa.string()), ("adapter", pa.string()), ("status", pa.string()), ("error", pa.string()),
-        ("products", pa.int32()), ("coffees", pa.int32()),
-    ]),
-    "probes": pa.schema([
-        ("run_date", pa.date32()), ("batch_id", pa.string()), ("probed_at", pa.timestamp("s", tz="UTC")),
-        ("roaster_id", pa.string()), ("status", pa.string()), ("http_status", pa.int32()),
-        ("final_host", pa.string()), ("platform", pa.string()),
-    ]),
-    "registry": pa.schema([
-        ("added_at", pa.timestamp("s", tz="UTC")), ("source", pa.string()), ("roaster_id", pa.string()),
-        ("name", pa.string()), ("city", pa.string()), ("state", pa.string()), ("locations", pa.int32()),
-        ("confidence", pa.float64()), ("tagged_roastery", pa.bool_()), ("roast_in_name", pa.bool_()),
-        ("opted_out", pa.bool_()),
-    ]),
-    "enrichments": pa.schema([
-        ("extracted_at", pa.timestamp("s", tz="UTC")), ("roaster_id", pa.string()), ("product_id", pa.string()),
-        ("body_hash", pa.string()), ("method", pa.string()), ("needs_llm", pa.bool_()),
-        ("origin_country", pa.string()), ("origin_region", pa.string()), ("producer", pa.string()),
-        ("process", pa.string()), ("varietals", pa.list_(pa.string())), ("elevation_masl_min", pa.int32()),
-        ("elevation_masl_max", pa.int32()), ("roast_level", pa.string()), ("tasting_notes", pa.list_(pa.string())),
-        ("is_blend", pa.bool_()), ("is_decaf", pa.bool_()),
-    ]),
-    "llm_batches": pa.schema([
-        ("batch_id", pa.string()), ("state", pa.string()), ("at", pa.timestamp("s", tz="UTC")),
-        ("custom_id", pa.string()), ("roaster_id", pa.string()), ("product_id", pa.string()),
-        ("body_hash", pa.string()),
-    ]),
-    "shots": pa.schema([
-        ("shot_id", pa.string()), ("logged_at", pa.timestamp("s", tz="UTC")), ("deleted", pa.bool_()),
-        ("brewed_at", pa.timestamp("s", tz="UTC")), ("coffee_id", pa.string()), ("coffee_freetext", pa.string()),
-        ("roast_date", pa.date32()), ("grinder_setting", pa.float64()), ("dose_g", pa.float64()),
-        ("yield_g", pa.float64()), ("time_s", pa.float64()), ("water_temp_c", pa.float64()),
-        ("brew_method", pa.string()), ("rating", pa.int32()), ("taste", pa.string()), ("is_milk_drink", pa.bool_()),
-        ("notes", pa.string()),
-    ]),
+    "snapshots": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("batch_id", pa.string()),
+            ("fetched_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("handle", pa.string()),
+            ("url", pa.string()),
+            ("title", pa.string()),
+            ("platform", pa.string()),
+            ("vendor", pa.string()),
+            ("product_type", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            ("image", pa.string()),
+            ("body_hash", pa.string()),
+            ("variants", pa.list_(VARIANT)),
+            ("is_coffee", pa.bool_()),
+        ]
+    ),
+    "bodies": pa.schema(
+        [("body_hash", pa.string()), ("body_text", pa.string()), ("first_seen_run", pa.date32())]
+    ),
+    "fetches": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("batch_id", pa.string()),
+            ("fetched_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("adapter", pa.string()),
+            ("status", pa.string()),
+            ("error", pa.string()),
+            ("products", pa.int32()),
+            ("coffees", pa.int32()),
+        ]
+    ),
+    "probes": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("batch_id", pa.string()),
+            ("probed_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("status", pa.string()),
+            ("http_status", pa.int32()),
+            ("final_host", pa.string()),
+            ("platform", pa.string()),
+        ]
+    ),
+    "registry": pa.schema(
+        [
+            ("added_at", pa.timestamp("s", tz="UTC")),
+            ("source", pa.string()),
+            ("roaster_id", pa.string()),
+            ("name", pa.string()),
+            ("city", pa.string()),
+            ("state", pa.string()),
+            ("locations", pa.int32()),
+            ("confidence", pa.float64()),
+            ("tagged_roastery", pa.bool_()),
+            ("roast_in_name", pa.bool_()),
+            ("opted_out", pa.bool_()),
+        ]
+    ),
+    "enrichments": pa.schema(
+        [
+            ("extracted_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("body_hash", pa.string()),
+            ("method", pa.string()),
+            ("needs_llm", pa.bool_()),
+            ("origin_country", pa.string()),
+            ("origin_region", pa.string()),
+            ("producer", pa.string()),
+            ("process", pa.string()),
+            ("varietals", pa.list_(pa.string())),
+            ("elevation_masl_min", pa.int32()),
+            ("elevation_masl_max", pa.int32()),
+            ("roast_level", pa.string()),
+            ("tasting_notes", pa.list_(pa.string())),
+            ("is_blend", pa.bool_()),
+            ("is_decaf", pa.bool_()),
+        ]
+    ),
+    "llm_batches": pa.schema(
+        [
+            ("batch_id", pa.string()),
+            ("state", pa.string()),
+            ("at", pa.timestamp("s", tz="UTC")),
+            ("custom_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("body_hash", pa.string()),
+        ]
+    ),
+    "shots": pa.schema(
+        [
+            ("shot_id", pa.string()),
+            ("logged_at", pa.timestamp("s", tz="UTC")),
+            ("deleted", pa.bool_()),
+            ("brewed_at", pa.timestamp("s", tz="UTC")),
+            ("coffee_id", pa.string()),
+            ("coffee_freetext", pa.string()),
+            ("roast_date", pa.date32()),
+            ("grinder_setting", pa.float64()),
+            ("dose_g", pa.float64()),
+            ("yield_g", pa.float64()),
+            ("time_s", pa.float64()),
+            ("water_temp_c", pa.float64()),
+            ("brew_method", pa.string()),
+            ("rating", pa.int32()),
+            ("taste", pa.string()),
+            ("is_milk_drink", pa.bool_()),
+            ("notes", pa.string()),
+        ]
+    ),
 }
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
-    "snapshots": "snapshots/*/*.parquet", "bodies": "bodies/*/*.parquet", "fetches": "fetches/*/*.parquet",
-    "probes": "probes/*/*.parquet", "registry": "registry/*/*.parquet", "enrichments": "enrichments/*/*/*.parquet",
-    "llm_batches": "llm_batches/*/*.parquet", "shots": "shots/*.parquet",
+    "snapshots": "snapshots/*/*.parquet",
+    "bodies": "bodies/*/*.parquet",
+    "fetches": "fetches/*/*.parquet",
+    "probes": "probes/*/*.parquet",
+    "registry": "registry/*/*.parquet",
+    "enrichments": "enrichments/*/*/*.parquet",
+    "llm_batches": "llm_batches/*/*.parquet",
+    "shots": "shots/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -114,8 +197,11 @@ class Lake:
     def __init__(self, url: str | None = None, staging: str | Path | None = None):
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.remote = self.url.startswith("hf://")
-        self.root = Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging")) if self.remote \
+        self.root = (
+            Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
+            if self.remote
             else Path(self.url)
+        )
         self.ensure_schemas()
 
     # --- writing -------------------------------------------------------------------------------------
@@ -194,43 +280,54 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def publish(self, message: str, attempts: int = 5) -> int:
+    def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
         """Upload staged files to the remote lake in one commit, then clear the staging area.
 
-        Retries with exponential backoff (2, 4, 8, 16 s). A commit is atomic, so a failed attempt uploaded
-        nothing; if one landed but its response was lost, the retry finds those files (whose batch ids are
-        unique to this run) already in the dataset and counts them as uploaded instead of refusing.
+        A file already in the dataset is never replaced (except the derived marts/). Staged paths carry a batch
+        id unique to the run that wrote them, so one that's already there is this run's own upload, from a
+        commit whose response was lost or a process that died before clearing staging, and it's skipped.
+        Retries use exponential backoff (2, 4, 8, 16 s). If every attempt fails, the staged files stay on disk
+        and the next publish sends them. Schema files are only sent when `schemas` is set (by `init`).
         """
         if not self.remote:
             return 0
+        schema_paths = set(SCHEMA_FILES.values())
+        files = [
+            p
+            for p in self.staged_files()
+            if schemas or p.relative_to(self.root).as_posix() not in schema_paths
+        ]
+        if not files:
+            return 0  # nothing new: no API calls
         from huggingface_hub import CommitOperationAdd, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
-        files = self.staged_files()
+        rels = [p.relative_to(self.root).as_posix() for p in files]
         for attempt in range(attempts):
             try:
-                existing = set(api.list_repo_files(repo_id, repo_type="dataset"))
-                ops = []
-                for p in files:
-                    rel = p.relative_to(self.root).as_posix()
-                    if rel in existing and not rel.startswith("marts/"):  # marts/ are derived, replaced weekly
-                        if rel in SCHEMA_FILES.values() or attempt > 0:
-                            continue
-                        raise FileExistsError(f"lake files are immutable; {rel} already exists in {repo_id}")
-                    ops.append(CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p)))
+                # Only the staged paths are looked up, so the cost doesn't grow with the dataset.
+                existing = {
+                    f.path
+                    for i in range(0, len(rels), 500)
+                    for f in api.get_paths_info(repo_id, rels[i : i + 500], repo_type="dataset")
+                }
+                ops = [
+                    CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
+                    for p, rel in zip(files, rels, strict=True)
+                    if rel not in existing or rel.startswith("marts/")
+                ]
                 if ops:
-                    api.create_commit(repo_id=repo_id, repo_type="dataset", operations=ops,
-                                      commit_message=message)
+                    api.create_commit(
+                        repo_id=repo_id, repo_type="dataset", operations=ops, commit_message=message
+                    )
                 break
-            except FileExistsError:
-                raise
             except Exception as e:  # noqa: BLE001 - network, rate limit or server error: try again
                 if attempt == attempts - 1:
-                    raise  # staged files stay on disk, so a re-run publishes them
+                    raise
                 log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
                 time.sleep(2 ** (attempt + 1))
-        for p in files:
-            if p.relative_to(self.root).as_posix() not in SCHEMA_FILES.values():
+        for p, rel in zip(files, rels, strict=True):
+            if rel not in schema_paths:
                 p.unlink()
         return len(ops)

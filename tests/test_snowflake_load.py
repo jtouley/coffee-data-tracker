@@ -34,11 +34,28 @@ class FakeConn:
         pass
 
 
-def export_dir(tmp_path, counts):
+def export_dir(tmp_path, counts, exported_at="2026-10-27T02:01:48+00:00"):
     for t in PUBLIC_TABLES:
         (tmp_path / f"{t}.parquet").write_bytes(b"PAR1")
-    (tmp_path / "manifest.json").write_text(json.dumps({"as_of_run": "2026-10-26", "tables": counts}))
+    (tmp_path / "manifest.json").write_text(
+        json.dumps({"as_of_run": "2026-10-26", "exported_at": exported_at, "tables": counts})
+    )
     return tmp_path
+
+
+def test_reexporting_a_week_loads_the_new_files(tmp_path):
+    """A second export of the same week goes to its own folder, so COPY can't pick up the first one's files."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    paths = []
+    for when in ("2026-10-27T02:01:48+00:00", "2026-10-27T09:30:00+00:00"):
+        con = FakeConn(counts)
+        snowflake_load.load(export_dir(tmp_path, counts, when), con)
+        copy = next(s for s in con.cur.sql if s.startswith("copy into MARKET.public_coffee"))
+        paths.append(copy.split(" from ")[1].split(" ")[0])
+    assert paths == [
+        "@MARKET.PUBLIC_EXPORT/run=2026-10-26/exported=20261027T020148Z/public_coffee.parquet",
+        "@MARKET.PUBLIC_EXPORT/run=2026-10-26/exported=20261027T093000Z/public_coffee.parquet",
+    ]
 
 
 def test_load_stages_per_run_and_reloads_each_table(tmp_path):
@@ -48,10 +65,16 @@ def test_load_stages_per_run_and_reloads_each_table(tmp_path):
     assert out == {"run": "2026-10-26", "tables": counts}
     sql = con.cur.sql
     puts = [s for s in sql if s.startswith("put ")]
-    assert len(puts) == 4 and all("@MARKET.PUBLIC_EXPORT/run=2026-10-26/" in p and "overwrite = false" in p for p in puts)
+    assert len(puts) == 4 and all(
+        "@MARKET.PUBLIC_EXPORT/run=2026-10-26/exported=" in p and "overwrite = false" in p for p in puts
+    )
     for t in PUBLIC_TABLES:  # truncate + copy inside one transaction per table
         i = sql.index(f"truncate table MARKET.{t}")
-        assert sql[i - 1] == "begin" and sql[i + 1].startswith(f"copy into MARKET.{t}") and sql[i + 2] == "commit"
+        assert (
+            sql[i - 1] == "begin"
+            and sql[i + 1].startswith(f"copy into MARKET.{t}")
+            and sql[i + 2] == "commit"
+        )
 
 
 def test_row_count_mismatch_fails(tmp_path):
@@ -66,14 +89,15 @@ def test_private_key_pem_to_der():
     from cryptography.hazmat.primitives.asymmetric import rsa
 
     key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
-    pem = key.private_bytes(serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8,
-                            serialization.NoEncryption()).decode()
+    pem = key.private_bytes(
+        serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8, serialization.NoEncryption()
+    ).decode()
     import base64
 
     expected = snowflake_load.private_key_der(pem)
     assert serialization.load_der_private_key(expected, password=None).key_size == 2048
     one_line = base64.b64encode(pem.encode()).decode()  # base64 -w0 coffee_rsa.p8
-    escaped = pem.replace("\n", "\\n")                 # pasted with literal \n
+    escaped = pem.replace("\n", "\\n")  # pasted with literal \n
     for variant in (one_line, escaped, "  " + pem + "\n"):
         assert snowflake_load.private_key_der(variant) == expected
 

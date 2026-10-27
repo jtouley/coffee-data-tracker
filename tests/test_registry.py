@@ -14,10 +14,19 @@ def test_normalize_domain():
     assert registry.normalize_domain("locations.dutchbros.com") == "dutchbros.com"
 
 
-@pytest.mark.parametrize("host,ok", [
-    ("joes.business.site", False), ("shop.square.site", False), ("x.order.online", False), ("instagram.com", False),
-    ("linktr.ee", False), ("onyxcoffeelab.com", True), ("squareonecoffee.com", True), ("nodot", False),
-])
+@pytest.mark.parametrize(
+    "host,ok",
+    [
+        ("joes.business.site", False),
+        ("shop.square.site", False),
+        ("x.order.online", False),
+        ("instagram.com", False),
+        ("linktr.ee", False),
+        ("onyxcoffeelab.com", True),
+        ("squareonecoffee.com", True),
+        ("nodot", False),
+    ],
+)
 def test_storefront_hosts(host, ok):
     assert registry.is_storefront_host(host) is ok
 
@@ -53,6 +62,16 @@ def test_state_from_history(lake):
 def test_opt_out_via_lake(lake):
     from datetime import UTC, datetime
 
-    lake.write("registry", "registry/source=manual/x.parquet", [{
-        "added_at": datetime.now(UTC), "source": "manual", "roaster_id": "vividcoffee.com", "opted_out": True}])
+    lake.write(
+        "registry",
+        "registry/source=manual/x.parquet",
+        [
+            {
+                "added_at": datetime.now(UTC),
+                "source": "manual",
+                "roaster_id": "vividcoffee.com",
+                "opted_out": True,
+            }
+        ],
+    )
     assert status(lake, "vividcoffee.com").status == "opted_out"

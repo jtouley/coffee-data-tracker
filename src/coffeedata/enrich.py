@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import logging
 from datetime import UTC, date, datetime
+from typing import cast
 
 from . import extract
 from .lake import Lake, new_batch_id
@@ -48,8 +49,9 @@ BASE_FIELDS = list(Enrichment.model_fields)
 
 
 def pending(lake: Lake, limit: int) -> list[dict]:
-    sql = PENDING_SQL.format(**{t: lake.scan(t) for t in ("enrichments", "llm_batches", "snapshots", "bodies")},
-                             limit=int(limit))
+    sql = PENDING_SQL.format(
+        **{t: lake.scan(t) for t in ("enrichments", "llm_batches", "snapshots", "bodies")}, limit=int(limit)
+    )
     cur = lake.connect().execute(sql)
     cols = [d[0] for d in cur.description]
     out = []
@@ -62,8 +64,13 @@ def pending(lake: Lake, limit: int) -> list[dict]:
 
 
 def _row(p: dict, e: Enrichment, at: datetime) -> dict:
-    return e.model_dump() | {"extracted_at": at, "roaster_id": p["roaster_id"], "product_id": p["product_id"],
-                             "body_hash": p["body_hash"], "needs_llm": False}
+    return e.model_dump() | {
+        "extracted_at": at,
+        "roaster_id": p["roaster_id"],
+        "product_id": p["product_id"],
+        "body_hash": p["body_hash"],
+        "needs_llm": False,
+    }
 
 
 def run(lake: Lake, limit: int = 2000, run_date: str | None = None) -> dict:
@@ -80,7 +87,9 @@ def run(lake: Lake, limit: int = 2000, run_date: str | None = None) -> dict:
         rows, errors = [], 0
         for p in todo:
             try:
-                msg = client.messages.create(**extract.llm_request(p["title"], p["tags"] or [], p["body_text"]))
+                msg = client.messages.create(
+                    **extract.llm_request(p["title"], p["tags"] or [], p["body_text"])
+                )
             except anthropic.APIError as e:  # status, connection and timeout errors alike
                 errors += 1
                 log.warning("enrich %s:%s failed: %s", p["roaster_id"], p["product_id"], e)
@@ -97,16 +106,37 @@ def submit_batch(lake: Lake, client, todo: list[dict], now: datetime) -> dict:
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
 
-    reqs = [Request(custom_id=f"e{i}", params=MessageCreateParamsNonStreaming(
-        **extract.llm_request(p["title"], p["tags"] or [], p["body_text"]))) for i, p in enumerate(todo)]
+    reqs = [
+        Request(
+            custom_id=f"e{i}",
+            params=cast(
+                MessageCreateParamsNonStreaming,
+                extract.llm_request(p["title"], p["tags"] or [], p["body_text"]),
+            ),
+        )
+        for i, p in enumerate(todo)
+    ]
     try:
         batch = client.messages.batches.create(requests=reqs)
     except APIError as e:
         log.warning("batch submit failed: %s", e)
         return {"pending": len(todo), "submitted": 0, "error": str(e)}
-    lake.write("llm_batches", f"llm_batches/state=submitted/{batch.id}.parquet", [
-        {"batch_id": batch.id, "state": "submitted", "at": now, "custom_id": f"e{i}", "roaster_id": p["roaster_id"],
-         "product_id": p["product_id"], "body_hash": p["body_hash"]} for i, p in enumerate(todo)])
+    lake.write(
+        "llm_batches",
+        f"llm_batches/state=submitted/{batch.id}.parquet",
+        [
+            {
+                "batch_id": batch.id,
+                "state": "submitted",
+                "at": now,
+                "custom_id": f"e{i}",
+                "roaster_id": p["roaster_id"],
+                "product_id": p["product_id"],
+                "body_hash": p["body_hash"],
+            }
+            for i, p in enumerate(todo)
+        ],
+    )
     return {"pending": len(todo), "submitted": len(reqs), "batch_id": batch.id}
 
 
@@ -115,10 +145,13 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
     import anthropic
 
     con = lake.connect()
-    open_batches = [r[0] for r in con.execute(
-        f"""select distinct batch_id from {lake.scan('llm_batches')} where state = 'submitted'
-            and batch_id not in (select batch_id from {lake.scan('llm_batches')} where state = 'collected')"""
-    ).fetchall()]
+    open_batches = [
+        r[0]
+        for r in con.execute(
+            f"""select distinct batch_id from {lake.scan("llm_batches")} where state = 'submitted'
+            and batch_id not in (select batch_id from {lake.scan("llm_batches")} where state = 'collected')"""
+        ).fetchall()
+    ]
     if not open_batches:
         return {"collected": 0}
     client = anthropic.Anthropic()
@@ -141,28 +174,38 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
             if not m or res.result.type != "succeeded":
                 continue  # failed items have no llm row, so they are pending again next run
             key = (m["roaster_id"], m["product_id"], m["body_hash"])
-            if e := extract.parse_llm_message(res.result.message, bases.get(key, Enrichment())):
-                rows.append(_row(m, e, now))
+            if found := extract.parse_llm_message(res.result.message, bases.get(key, Enrichment())):
+                rows.append(_row(m, found, now))
         lake.write_partition("enrichments", run_date, new_batch_id(), rows)
-        lake.write("llm_batches", f"llm_batches/state=collected/{batch_id}.parquet",
-                   [{"batch_id": batch_id, "state": "collected", "at": now}])
+        lake.write(
+            "llm_batches",
+            f"llm_batches/state=collected/{batch_id}.parquet",
+            [{"batch_id": batch_id, "state": "collected", "at": now}],
+        )
         merged += len(rows)
     return {"collected": merged}
 
 
 def _batch_meta(con, lake: Lake, batch_id: str) -> dict[str, dict]:
-    cur = con.execute(f"select custom_id, roaster_id, product_id, body_hash from {lake.scan('llm_batches')} "
-                      "where batch_id = ? and state = 'submitted'", [batch_id])
+    cur = con.execute(
+        f"select custom_id, roaster_id, product_id, body_hash from {lake.scan('llm_batches')} "
+        "where batch_id = ? and state = 'submitted'",
+        [batch_id],
+    )
     return {r[0]: {"roaster_id": r[1], "product_id": r[2], "body_hash": r[3]} for r in cur.fetchall()}
 
 
 def _bases(con, lake: Lake, keys: list[dict]) -> dict[tuple, Enrichment]:
-    cur = con.execute(f"select roaster_id, product_id, body_hash, to_json(e) from {lake.scan('enrichments')} e "
-                      "where method = 'rules'")
+    cur = con.execute(
+        f"select roaster_id, product_id, body_hash, to_json(e) from {lake.scan('enrichments')} e "
+        "where method = 'rules'"
+    )
     wanted = {(k["roaster_id"], k["product_id"], k["body_hash"]) for k in keys}
     out = {}
     for rid, pid, bh, j in cur.fetchall():
         if (rid, pid, bh) in wanted:
             base = json.loads(j)
-            out[(rid, pid, bh)] = Enrichment(**{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None})
+            out[(rid, pid, bh)] = Enrichment(
+                **{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None}
+            )
     return out

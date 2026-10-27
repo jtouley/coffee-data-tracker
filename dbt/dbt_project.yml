@@ -14,6 +14,8 @@ vars:
   # Lake roots to read: the local lake/staging dir, plus the remote dataset when publishing (see lake.py).
   lake_roots: ["lake"]
   config_dir: "config"
+  # Failed weekly runs in a row before a roaster is unreachable. The weekly run passes registry.MAX_FAILURES.
+  max_failures: 3
 
 models:
   coffeedata:

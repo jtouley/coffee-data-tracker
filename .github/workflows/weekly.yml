@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
         with: {python-version: "3.12"}
-      - run: uv sync --extra snowflake
+      - run: uv sync --locked --extra snowflake
       - name: Check lake config
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
       - name: Weekly run

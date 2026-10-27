@@ -11,6 +11,7 @@ dbt/logs/
 dbt/dbt_packages/
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
 lake/
 data/
 dbt/.user.yml
