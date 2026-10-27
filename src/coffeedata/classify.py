@@ -110,15 +110,16 @@ def is_wholesale(item: CatalogItem) -> bool:
     return bool(_WHOLESALE.search(f"{item.title} | {item.product_type} | {' '.join(item.tags)}"))
 
 
-def is_coffee(item: CatalogItem) -> bool:
+def excluded(item: CatalogItem) -> bool:
+    """Never a coffee, whatever else the listing says: gear, parts, merch, tea, green coffee, subscriptions,
+    test listings. These skip Claude's verdict (verdict.py)."""
     title, ptype = item.title, item.product_type
-    head = f"{title} | {ptype}"
-    tags = " ".join(item.tags)
-    meta = f"{ptype} | {tags}"
-    if _NOT_COFFEE.search(head) or _TEA.search(title) or _TEA_TYPE.search(ptype):
-        return False
-    if (
-        _PART_NO.search(title)
+    meta = f"{ptype} | {' '.join(item.tags)}"
+    return bool(
+        _NOT_COFFEE.search(f"{title} | {ptype}")
+        or _TEA.search(title)
+        or _TEA_TYPE.search(ptype)
+        or _PART_NO.search(title)
         or _PARTS_SELLER.search(title)
         or _TEST.search(title)
         or _TEST_CAPS.search(title)
@@ -129,8 +130,21 @@ def is_coffee(item: CatalogItem) -> bool:
         or _GREEN_META.search(meta)
         or _NOT_COFFEE_TYPE.search(ptype)
         or (_TEA_META.search(meta) and not re.search(r"\bcoffee\b", meta, re.I))
-    ):
+        or _NOT_COFFEE.search(ptype)
+        or re.search(
+            r"\b(equipment|merch|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?)\b", meta, re.I
+        )
+    )
+
+
+def is_coffee(item: CatalogItem) -> bool:
+    """The rules' answer: used where Claude has no verdict, and as the floor the labeled sets hold it to."""
+    if excluded(item):
         return False
+    title, ptype = item.title, item.product_type
+    head = f"{title} | {ptype}"
+    tags = " ".join(item.tags)
+    meta = f"{ptype} | {tags}"
     if _SAUCE.search(title) and not (_COFFEE_WORDS.search(title) or _COUNTRY.search(title)):
         return False
     if _SWEETS.search(title) and not (
@@ -138,10 +152,6 @@ def is_coffee(item: CatalogItem) -> bool:
     ):
         return False
     if _DRINKS.search(title) and not _BEANS.search(title):
-        return False
-    if _NOT_COFFEE.search(ptype) or re.search(
-        r"\b(equipment|merch|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?)\b", tags, re.I
-    ):
         return False
     if (
         _COFFEE_WORDS.search(head)

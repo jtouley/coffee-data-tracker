@@ -115,8 +115,48 @@ def cmd_enrich(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_classify(args: argparse.Namespace) -> None:
+    """Claude's verdicts (verdict.py): collect finished batches, submit what's pending, optionally wait for it."""
+    import time
+
+    from . import extract, verdict
+
+    if not (verdict.model() and extract.llm_enabled()):
+        print("no COFFEEDATA_VERDICT_MODEL or Anthropic credentials; the rules classify alone")
+        return
+    lake = Lake()
+    out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+    deadline = time.monotonic() + args.wait * 60
+    while out["submit"].get("submitted") and time.monotonic() < deadline:
+        time.sleep(60)
+        if (got := verdict.collect(lake, args.run_date))["collected"]:
+            out["collect_after_wait"] = got
+            break
+    _print(out)
+
+
+def cmd_eval_classifier(args: argparse.Namespace) -> None:
+    """Score a verdict model on the labeled sets in tests/fixtures (synchronous calls), or write its predictions
+    for a sealed set without seeing any labels."""
+    from . import verdict
+
+    if args.predict:
+        rows = json.loads(Path(args.predict).read_text())
+        preds = verdict.judge(rows, args.model)
+        Path(args.out).write_text(json.dumps({r["id"]: preds[i] for i, r in enumerate(rows)}))
+        print(f"wrote {len(preds)} predictions to {args.out}")
+        return
+    labeled = [json.loads(line) for line in Path(args.labels).read_text().splitlines()]
+    for name in args.sets.split(","):
+        rows = [r for r in labeled if r["set"] == name]
+        rows = [r | {"body_text": r["body"]} for r in rows]
+        preds = verdict.judge(rows, args.model)
+        wrong = sum(preds[i] != (r["label"] == "coffee") for i, r in enumerate(rows))
+        print(f"{name}: {1 - wrong / len(rows):.1%} ({wrong} wrong of {len(rows)}) with {args.model}")
+
+
 def dbt_build(lake: Lake, db: Path) -> None:
-    from . import registry, shots
+    from . import registry, shots, verdict
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
     db.parent.mkdir(parents=True, exist_ok=True)
@@ -135,6 +175,8 @@ def dbt_build(lake: Lake, db: Path) -> None:
                     "lake_roots": roots,
                     "max_failures": registry.MAX_FAILURES,
                     "owner_user_id": shots.owner_user_id(),
+                    "verdict_model": verdict.model() or "",
+                    "verdict_definition": verdict.DEFINITION_VERSION,
                 }
             ),
         ],
@@ -214,6 +256,8 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
+    cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45))
+    cmd_publish(argparse.Namespace(message=f"weekly run {run}: verdicts"))
     cmd_build(argparse.Namespace(db=args.db))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: marts"))
     # Facts-only tables: always exported locally; optionally published and loaded into Snowflake.
@@ -326,6 +370,16 @@ def main(argv: list[str] | None = None) -> None:
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
     i.add_argument("--workers", type=int, default=32)
 
+    c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
+    c.add_argument("--limit", type=int, default=100_000)
+    c.add_argument("--run-date", default=None)
+    c.add_argument("--wait", type=int, default=0, help="minutes to wait for the new batch")
+    ev = add("eval-classifier", cmd_eval_classifier, "score a verdict model on the labeled sets")
+    ev.add_argument("--model", required=True)
+    ev.add_argument("--labels", default="tests/fixtures/classifier_labels.jsonl")
+    ev.add_argument("--sets", default="train,validation")
+    ev.add_argument("--predict", help="JSON list of products to predict (a sealed set); writes --out")
+    ev.add_argument("--out", default="predictions.json")
     e = add("enrich", cmd_enrich, "Claude enrichment of pending coffees (collects finished batches first)")
     e.add_argument("--limit", type=int, default=2000)
     e.add_argument("--run-date", type=_run_date, default=_today())

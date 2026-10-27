@@ -18,6 +18,9 @@ vars:
   max_failures: 3
   # Who owns shots logged before accounts existed (their user_id is null). The build passes the real id.
   owner_user_id: "owner"
+  # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.
+  verdict_model: ""
+  verdict_definition: ""
 
 models:
   coffeedata:

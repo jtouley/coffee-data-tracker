@@ -3,7 +3,7 @@
 {%- set globs = {
     'snapshots': 'snapshots/*/*.parquet', 'bodies': 'bodies/*/*.parquet', 'fetches': 'fetches/*/*.parquet',
     'probes': 'probes/*/*.parquet', 'registry': 'registry/*/*.parquet', 'enrichments': 'enrichments/*/*/*.parquet',
-    'llm_batches': 'llm_batches/*/*.parquet', 'shots': 'shots/*.parquet', 'equipment': 'equipment/*.parquet',
+    'llm_batches': 'llm_batches/*/*.parquet', 'verdicts': 'verdicts/*/*.parquet', 'shots': 'shots/*.parquet', 'equipment': 'equipment/*.parquet',
     'bags': 'bags/*.parquet', 'photos': 'photos/*.parquet'} -%}
 read_parquet([
   {%- for root in var('lake_roots') -%}'{{ root }}/{{ globs[table] }}'{% if not loop.last %}, {% endif %}{%- endfor -%}

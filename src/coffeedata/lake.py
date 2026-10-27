@@ -166,6 +166,27 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("body_hash", pa.string()),
         ]
     ),
+    # Claude's verdict on whether a product version (stg_snapshots.input_hash) is a coffee, per model and
+    # definition version. Stored like any other fetched fact, so builds stay reproducible.
+    "verdicts": pa.schema(
+        [
+            ("decided_at", pa.timestamp("s", tz="UTC")),
+            ("input_hash", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+            ("label", pa.string()),
+        ]
+    ),
+    "verdict_batches": pa.schema(
+        [
+            ("batch_id", pa.string()),
+            ("state", pa.string()),
+            ("at", pa.timestamp("s", tz="UTC")),
+            ("custom_id", pa.string()),
+            ("model", pa.string()),
+            ("definition", pa.string()),
+        ]
+    ),
     "shots": pa.schema(
         [
             ("shot_id", pa.string()),
@@ -286,6 +307,8 @@ GLOBS = {
     "registry": "registry/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
+    "verdicts": "verdicts/*/*.parquet",
+    "verdict_batches": "verdict_batches/*/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -302,6 +325,8 @@ SCHEMA_FILES = {
     "registry": "registry/source=schema/schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
+    "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",
+    "verdict_batches": "verdict_batches/state=schema/schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.
     "shots": "shots/shot_id=schema-v2.parquet",

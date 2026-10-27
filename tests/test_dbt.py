@@ -19,7 +19,7 @@ FIX = Path(__file__).parent / "fixtures"
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 
 
-def build(lake, tmp_path):
+def build(lake, tmp_path, **extra_vars):
     db = tmp_path / "coffee.duckdb"
     if db.exists():
         db.unlink()
@@ -32,7 +32,7 @@ def build(lake, tmp_path):
             "--profiles-dir",
             "dbt",
             "--vars",
-            json.dumps({"lake_roots": [str(lake.root)], "config_dir": str(FIX)}),
+            json.dumps({"lake_roots": [str(lake.root)], "config_dir": str(FIX)} | extra_vars),
             "--target-path",
             str(tmp_path / "target"),
             "--log-path",
