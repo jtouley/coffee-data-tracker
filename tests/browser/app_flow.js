@@ -282,11 +282,14 @@ async function newPage(browser, errors) {
     await guest.waitForFunction(() => /Valid until/.test(document.querySelector("[data-code-status]").textContent));
     assert.equal(new URL(guest.url()).hash, ""); // the code left the address bar
     await shoot(guest, "join");
+    // Another person signing in on a phone drops the pages kept for whoever used it before (#20).
+    await guest.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("someone else's"))));
     await guest.fill("#username", "maya");
     await guest.fill("#password", "lantern quarry velvet");
     await guest.getByRole("button", { name: "Create account" }).click();
     await guest.waitForURL(`${base}/`);
     assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);
+    assert.equal(await guest.evaluate(() => caches.has("pages").then(async (has) => has && (await (await caches.open("pages")).match("/history")) ? (await (await caches.open("pages")).match("/history")).text() : null)), null);
     await guest.goto(`${base}/reset`);
     await shoot(guest, "reset");
     await other.close();
