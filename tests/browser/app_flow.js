@@ -269,6 +269,32 @@ async function newPage(browser, errors) {
     assert.deepEqual(held, ["Held", 1]);
     await page.unroute("**/api/equipment");
 
+    // The outbox only lets go of a write the server acknowledged (#13): every status, what's left of the entry.
+    const table = {};
+    for (const status of [200, 400, 401, 403, 404, 408, 409, 422, 429, 500, 503]) {
+      await page.route("**/api/probe", (r) => r.fulfill({ status, contentType: "application/json", headers: { "Retry-After": "120" }, body: status === 200 ? "{}" : '{"detail":"no"}' }));
+      table[status] = await page.evaluate(async (st) => {
+        await send(`probe:${st}`, "/api/probe", {}).catch(() => {});
+        const e = await store("readonly", (s) => s.get(`probe:${st}`));
+        await store("readwrite", (s) => s.delete(`probe:${st}`));
+        return e ? (e.failed ? "shown as couldn't save" : "kept to retry") : "removed";
+      }, status);
+      await page.unroute("**/api/probe");
+    }
+    assert.deepEqual(table, {
+      200: "removed", 400: "shown as couldn't save", 401: "kept to retry", 403: "kept to retry",
+      404: "shown as couldn't save", 408: "kept to retry", 409: "shown as couldn't save",
+      422: "shown as couldn't save", 429: "kept to retry", 500: "kept to retry", 503: "kept to retry",
+    });
+    // A refused write is listed on screen until dismissed.
+    await page.route("**/api/probe", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"Dose is too low."}' }));
+    await page.evaluate(() => send("shot:probe", "/api/probe", {}).catch(() => {}));
+    await page.waitForSelector("[data-failed]:not([hidden])");
+    assert.match(await page.textContent("[data-failed]"), /A shot from .*: Dose is too low\./);
+    await page.locator("[data-failed]").getByRole("button", { name: "Dismiss" }).click();
+    await page.waitForSelector("[data-failed]", { state: "hidden" });
+    await page.unroute("**/api/probe");
+
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);
     assert.deepEqual(errors, []);
