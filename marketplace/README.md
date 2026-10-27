@@ -13,16 +13,23 @@ it automatically.
 | Destination | `--to` / `PUBLIC_EXPORT_URL` | Credentials |
 |---|---|---|
 | Public Hugging Face dataset | `hf://datasets/<you>/us-coffee-market` | `HF_TOKEN` (write) |
-| Snowflake / Databricks (via S3) | `s3://<bucket>/coffee-data/` | AWS credentials (env, profile or role) |
+| Snowflake (direct) | `coffeedata load-snowflake` (internal stage, no S3) | `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` |
+| Databricks (via S3) | `s3://<bucket>/coffee-data/` | AWS credentials (env, profile or role) |
 | … via GCS | `gs://<bucket>/coffee-data/` | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` |
 
-Snowflake can't read `hf://`, so both marketplaces load from S3 or GCS.
+Snowflake loads straight from the weekly job:
+- The job uploads the export to an internal stage, one folder per run, never overwritten.
+- It replaces each table in one transaction.
+- It fails if the row counts differ from the export.
+
+Databricks loads from S3 or GCS.
 
 ## Order of operations
 
 1. **Hugging Face, public.** Publish to a *separate* public dataset (your main lake stays private). This
    costs nothing and shows whether anyone uses the data.
-2. **Snowflake Marketplace.** Run `snowflake/setup.sql`. A free listing needs a full account, a provider
+2. **Snowflake Marketplace.** Run part 1 of `snowflake/admin_setup.sql` (service user), set the three
+   `SNOWFLAKE_*` values, run `coffeedata load-snowflake`, then part 2 (share). A free listing needs a full account, a provider
    profile and acceptance of the Provider and Consumer Terms, and Snowflake reviews it before it goes live.
    Running costs are an XS warehouse for a few seconds a week, plus storage.
 3. **Databricks Marketplace.** Run `databricks/setup.sql`. This needs a Premium workspace with Unity
