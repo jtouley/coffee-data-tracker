@@ -313,6 +313,10 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             days_off=(datetime.now(z).date() - bag.roast_date).days if bag and bag.roast_date else None,
             day=lambda d: views.day(d, z),
             clock=lambda d: views.clock(d, z),
+            # "7:06" today, "Sun 14:04" on an earlier day
+            when=lambda d: (
+                views.clock(d, z) if d.astimezone(z).date() == datetime.now(z).date() else views.day(d, z)
+            ),
         )
 
     @app.get("/log", response_class=HTMLResponse, response_model=None)

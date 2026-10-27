@@ -195,19 +195,30 @@ function logShot(form) {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(taste, b.getAttribute("aria-pressed") === "true" ? null : b); // taste can be left empty
+    sameShown();
     tick();
   });
   rating.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
     pressOne(rating, b);
+    sameShown();
     hint(form, "");
     tick();
   });
-  form.querySelector("[data-same]")?.addEventListener("click", () => {
+  // The chip shows as pressed only while taste and rating are exactly the last shot's.
+  const sameChip = form.querySelector("[data-same]");
+  function sameShown() {
+    if (!sameChip) return;
+    const last = p.same_as_last;
+    const on = pressed(taste) === (last.taste ?? null) && pressed(rating) === String(last.rating);
+    sameChip.setAttribute("aria-pressed", String(on));
+  }
+  sameChip?.addEventListener("click", () => {
     const last = p.same_as_last;
     pressOne(taste, last.taste ? taste.querySelector(`[data-v="${last.taste}"]`) : null);
     pressOne(rating, rating.querySelector(`[data-v="${last.rating}"]`));
+    sameShown();
     hint(form, "");
     tick();
   });
@@ -364,6 +375,9 @@ function signIn(form) {
       location.replace("/");
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+      if (err instanceof Rejected) {
+        for (const el of form.querySelectorAll("input")) el.setAttribute("aria-invalid", "true");
+      }
       submit.disabled = false;
     }
   });
@@ -384,6 +398,10 @@ function account() {
   });
   for (const b of document.querySelectorAll("[data-signout]")) {
     b.addEventListener("click", async () => {
+      if (b.dataset.confirm && b.textContent !== b.dataset.confirm) {
+        b.textContent = b.dataset.confirm; // a second tap, since it signs out every device
+        return;
+      }
       try {
         await post(b.dataset.signout, {});
       } finally {

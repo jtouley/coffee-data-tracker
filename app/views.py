@@ -106,7 +106,17 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "") -> str:
             out.append(f'<rect class="s-bitter" x="{px - 4.5:.1f}" y="{py - 4.5:.1f}" width="9" height="9"/>')
         else:
             out.append(f'<circle class="s-{s.taste or "none"}" cx="{px:.1f}" cy="{py:.1f}" r="4.5"/>')
-        out.append(f'<text class="ord" x="{px + 8:.1f}" y="{py - 8:.1f}">{i}</text>')
+        # The order number sits above-right, clear of the newest shot's ring, and flips to above-left when the
+        # mark before it is close enough for the two numbers to collide.
+        gap = 13 if i == len(pts) else 8
+        prev = pts[i - 2] if i > 1 else None
+        left = prev is not None and abs(prev[0] - px) < 18 and abs(prev[1] - py) < 18 and prev[0] >= px - 1
+        if left:
+            out.append(
+                f'<text class="ord" x="{px - gap:.1f}" y="{py - gap:.1f}" text-anchor="end">{i}</text>'
+            )
+        else:
+            out.append(f'<text class="ord" x="{px + gap:.1f}" y="{py - gap:.1f}">{i}</text>')
     if pts:
         px, py, _ = pts[-1]
         out.append(f'<circle class="now" cx="{px:.1f}" cy="{py:.1f}" r="10"/>')

@@ -33,13 +33,13 @@
   <h1 class="serif title mt16">Setup</h1>
   <p class="body">Each shot records the grinder and basket it was pulled with. Changes are saved as new records, so
     old shots keep what they used.</p>
-  <div class="section" id="grinder">Grinder</div>
+  <h2 class="section group" id="grinder">Grinder</h2>
   {% for e in grinders %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
   {% if grinders %}<details class="mt8"><summary class="btn text">Add another grinder</summary>{{ grinder_form() }}</details>{% else %}{{ grinder_form() }}{% endif %}
-  <div class="section" id="basket">Basket</div>
+  <h2 class="section group" id="basket">Basket</h2>
   {% for e in baskets %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.basket_dose_g) }} g · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
   {% if baskets %}<details class="mt8"><summary class="btn text">Add another basket</summary>{{ basket_form() }}</details>{% else %}{{ basket_form() }}{% endif %}
-  <div class="section" id="account">Account</div>
+  <h2 class="section group" id="account">Account</h2>
   <div class="gear first"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
   {% if auth_name != "local" %}
   <details class="mt8"><summary class="btn text">Change password</summary>
@@ -54,7 +54,7 @@
     </form>
   </details>
   <button class="btn text" type="button" data-signout="/api/signout">Sign out</button>
-  <button class="btn text" type="button" data-signout="/api/signout-everywhere">Sign out everywhere</button>
+  <button class="btn text danger mt24 topline" type="button" data-signout="/api/signout-everywhere" data-confirm="Tap again to sign out on all devices">Sign out on all devices</button>
   {% endif %}
   <div class="mt24"></div>
 {% endblock %}

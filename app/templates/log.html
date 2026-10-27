@@ -7,7 +7,7 @@
     <h1 class="serif name">{{ name }}</h1>
     <div class="label">Ratio <span class="num n24 ink" data-ratio></span></div>
   </div>
-  <div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %}</div>
+  <div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>
   <form id="shot" novalidate>
     <div class="field">
       <div><label class="l label" for="dose_g">Dose</label><span class="num n56"><input id="dose_g" inputmode="decimal" data-step="0.1" data-min="5" data-max="30" data-digits="1"><span class="u"> g</span></span></div>
@@ -28,7 +28,7 @@
       <div class="steps"><button type="button" class="step" data-for="grinder_setting" data-dir="-1" aria-label="Lower grind number">−</button><button type="button" class="step" data-for="grinder_setting" data-dir="1" aria-label="Higher grind number">+</button></div>
     </div>
     <div class="row mt16 minh44"><span class="label" id="taste-l">Taste</span>
-      {% if last %}<button type="button" class="chip" data-same>Same as last <b>· {{ (last.taste or "no taste") | capitalize }}, {{ last.rating }}</b></button>{% endif %}</div>
+      {% if last %}<button type="button" class="chip" data-same aria-pressed="false">Same as last <b>· {{ (last.taste or "no taste") | capitalize }}, {{ last.rating }}</b></button>{% endif %}</div>
     <div class="seg mt8" role="group" aria-labelledby="taste-l" data-taste>
       <button type="button" data-v="sour" aria-pressed="false">Sour</button><button type="button" data-v="balanced" aria-pressed="false">Balanced</button><button type="button" data-v="bitter" aria-pressed="false">Bitter</button>
     </div>
@@ -38,7 +38,6 @@
     </div>
     <div class="anchors"><span>worst</span><span>best</span></div>
     <div class="hint" data-hint role="status"></div>
-    <div class="meta mt8">{% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C · {% endif %}{{ p.brew_method }} · {{ "milk drink" if p.is_milk_drink else "no milk" }}</div>
     <div class="spacer"></div>
     <div class="dock sticky"><button class="btn primary" type="submit" data-save>Save shot</button></div>
   </form>

@@ -11,7 +11,7 @@
   </section>
   {% if last %}
   <section class="mt24 ruled">
-    <div class="row"><span class="label">Last shot, {{ clock(last.brewed_at) }}</span>{{ taste(last.taste) }}</div>
+    <div class="row"><span class="label">Last shot, {{ when(last.brewed_at) }}</span>{{ taste(last.taste) }}</div>
     <div class="row end mt8">
       <span class="num n44">{{ g(last.dose_g, 1) }} → {{ g(last.yield_g, 1) }}<span class="u"> g</span></span><span class="num n44">{{ g(last.time_s) }}<span class="u"> s</span></span>
     </div>
