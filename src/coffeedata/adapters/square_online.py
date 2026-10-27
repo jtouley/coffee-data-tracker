@@ -17,29 +17,38 @@ API = "https://cdn5.editmysite.com/app/store/api/v28/editor/users/{user}/sites/{
 MAX_PAGES = 20
 _ID_FORMS = [
     (re.compile(r'"user":\{"id":"?(\d+)'), re.compile(r'"site_id":"?(\d{6,})')),  # Square Online
-    (re.compile(r'com_userID\s*=\s*"?(\d+)'), re.compile(r'com_currentSite\s*=\s*"?(\d{6,})')),  # Weebly
+    (
+        re.compile(r"com_userID\s*=\s*[\"']?(\d+)"),
+        re.compile(r"com_currentSite\s*=\s*[\"']?(\d{6,})"),
+    ),  # Weebly
 ]
 _UPLOAD_PATH = re.compile(r"/uploads/[0-9a-z]/(\d{5,})-(\d{12,})/")  # Weebly image uploads: <user>-<site>
-_STORE_LINK = re.compile(r"https?://([a-z0-9-]+)\.square\.site\b", re.I)
+# The host must end at square.site, so "x.square.site.example.com" doesn't count.
+_STORE_LINK = re.compile(r"https?://([a-z0-9-]+)\.square\.site(?=[/:?#\"'\s<>]|$)", re.I)
 
 
 def site_ids(html: str) -> tuple[str, str] | None:
+    """Ids the page declares for its own store."""
     for user_re, site_re in _ID_FORMS:
         user, site = user_re.search(html), site_re.search(html)
         if user and site:
             return user.group(1), site.group(1)
-    if m := _UPLOAD_PATH.search(html):
-        return m.group(1), m.group(2)
     return None
 
 
-def store_link(html: str) -> str | None:
-    """The first linked <name>.square.site store, if the site points to one."""
-    m = _STORE_LINK.search(html)
-    return f"https://{m.group(1).lower()}.square.site/" if m else None
+def upload_ids(html: str) -> tuple[str, str] | None:
+    """Ids from a Weebly image path. Weaker evidence (an image can come from another account), so last resort."""
+    m = _UPLOAD_PATH.search(html)
+    return (m.group(1), m.group(2)) if m else None
 
 
-def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
+def store_links(html: str) -> list[str]:
+    """Every distinct <name>.square.site store the page links to, in page order."""
+    names = dict.fromkeys(m.group(1).lower() for m in _STORE_LINK.finditer(html))
+    return [f"https://{n}.square.site" for n in names]
+
+
+def parse_product(p: dict, roaster: Roaster, base: str | None = None) -> CatalogItem:
     price = p.get("price") or {}
     low, high = to_float(price.get("regular_low")), to_float(price.get("regular_high"))
     name = (p.get("name") or "").strip()
@@ -51,7 +60,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
         handle=(p.get("site_link") or "").split("/")[1]
         if "/" in (p.get("site_link") or "")
         else str(p["id"]),
-        url=p.get("absolute_site_link") or f"https://{roaster.host}/{p.get('site_link', '')}",
+        url=p.get("absolute_site_link") or f"{base or 'https://' + roaster.host}/{p.get('site_link', '')}",
         title=name,
         platform="square_online",
         product_type=p.get("product_type") or "",
@@ -74,12 +83,13 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     r = client.get(f"https://{roaster.host}/")
     if r.status_code != 200:
         raise FetchError(f"HTTP {r.status_code} homepage")
-    ids = site_ids(r.text)
-    if ids is None and (store := store_link(r.text)):
-        sr = client.get(store)
-        if sr.status_code != 200:
-            raise FetchError(f"HTTP {sr.status_code} {store}")
-        ids = site_ids(sr.text)
+    base, ids = f"https://{roaster.host}", site_ids(r.text)
+    for store in [] if ids else store_links(r.text):
+        sr = client.get(f"{store}/")
+        if sr.status_code == 200 and (ids := site_ids(sr.text)):
+            base = store  # product links fall back to the store that serves them
+            break
+    ids = ids or upload_ids(r.text)
     if ids is None:
         raise FetchError("no Square Online store ids on the homepage or a linked square.site store")
     user, site = ids
@@ -88,7 +98,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         data = client.fetch_json(API.format(user=user, site=site), page=page, per_page=60, include="images")
         if not isinstance(data, dict) or not isinstance(data.get("data"), list):
             raise FetchError("unexpected Square Online payload")
-        items.extend(parse_product(p, roaster) for p in data["data"] if isinstance(p, dict))
+        items.extend(parse_product(p, roaster, base) for p in data["data"] if isinstance(p, dict))
         pages = ((data.get("meta") or {}).get("pagination") or {}).get("total_pages") or 1
         if page >= pages:
             break
