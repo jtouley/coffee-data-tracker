@@ -20,7 +20,8 @@
   <p class="body">No bags yet. Open one from Today with New bag, and it shows up here with its shots.</p>
   {% endif %}
   {% if loose %}<p class="meta mt16">{{ shots_n(loose | length) }} from before bags were recorded are in History.</p>{% endif %}
-  <a class="link mt24" href="/history"><span>History<span class="meta">Every shot, newest first</span></span>{{ chevron() }}</a>
+  <h2 class="section">All shots</h2>
+  <a class="link ruled" href="/history"><span>History<span class="meta">Every shot, by bag</span></span>{{ chevron() }}</a>
   <div class="mt24"></div>
 {% endblock %}
 {% block nav %}{{ nav('coffees') }}{% endblock %}

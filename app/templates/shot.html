@@ -1,14 +1,15 @@
 {% extends "base.html" %}
-{% from "_macros.html" import taste %}
+{% from "_macros.html" import nav, taste %}
 {% block title %}Shot · registry.coffee{% endblock %}
 {% block main %}
   <div class="top">{% if bag %}<a class="back" href="/coffee/{{ bag.bag_id }}">‹ {{ name }}</a>{% else %}<a class="back" href="/history">‹ History</a>{% endif %}</div>
-  <h1 class="label mt8">{{ when }} · {{ name }}</h1>
+  <h1 class="serif title mt8">{{ when }}</h1>
+  <div class="label mt16">Ratio</div>
   <div class="num n112 mt4">1:{{ "%.2f" | format(ratio(shot)) }}</div>
   <div class="row end mt16">
     <span class="num n34">{{ g(shot.dose_g, 1) }} → {{ g(shot.yield_g, 1) }}<span class="u"> g</span></span><span class="num n34">{{ g(shot.time_s) }}<span class="u"> s</span></span>
   </div>
-  <div class="row mt8"><span class="meta">Grind {{ g(shot.grinder_setting) }}{% if grinder %} · {{ grinder.name }}{% endif %}</span>{{ taste(shot.taste, shot.rating) }}</div>
+  <div class="row mt8"><span class="meta">Grind {{ g(shot.grinder_setting) }}{% if grinder %} · {{ grinder.name }}{% endif %} · rated {{ shot.rating }}</span>{{ taste(shot.taste) }}</div>
   <dl class="spec mt24">
     {% if basket %}<dt>Basket</dt><dd>{{ basket.name }}</dd>{% endif %}
     {% if machine %}<dt>Machine</dt><dd>{{ machine.name }}</dd>{% endif %}
@@ -17,9 +18,11 @@
     {% if shot.notes %}<dt>Notes</dt><dd>{{ shot.notes }}</dd>{% endif %}
   </dl>
   <div class="hint" data-hint role="alert"></div>
-  <div class="spacer"></div>
-  <div class="dock">
+  <div class="dock flat" data-actions>
     <a class="btn secondary" href="/log?correct={{ shot.shot_id }}">Correct</a>
-    <button class="btn text danger" type="button" data-retract="{{ shot.shot_id }}" data-back="{{ '/coffee/' ~ bag.bag_id if bag else '/history' }}" data-confirm="Tap again to retract this shot">Retract</button>
+    <button class="btn text danger" type="button" data-retract="{{ shot.shot_id }}" data-back="{{ '/coffee/' ~ bag.bag_id if bag else '/history' }}">Retract</button>
   </div>
+  <div class="undo mt16" data-restore="{{ shot.shot_id }}" role="status" hidden><span>Shot retracted</span><button type="button">Undo<i></i></button></div>
+  <div class="mt24"></div>
 {% endblock %}
+{% block nav %}{{ nav('coffees') }}{% endblock %}

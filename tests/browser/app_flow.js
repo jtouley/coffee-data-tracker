@@ -174,6 +174,14 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Save correction" }).click();
     await page.waitForURL(`${base}/shot/first`);
     assert.match(await page.textContent("main"), /puck was wet/);
+    // Retract goes at once and offers Undo; Undo brings the shot back.
+    await page.getByRole("button", { name: "Retract" }).click();
+    await page.waitForSelector("[data-restore]:not([hidden])");
+    await page.screenshot({ path: `${out}/retracted-light.png` }); // quickly: the strip leaves after 5 s
+    await axe(page, "retracted");
+    await page.getByRole("button", { name: "Undo" }).click();
+    await page.waitForSelector("[data-actions]:not([hidden])");
+    assert.match(await page.textContent("main"), /puck was wet/);
 
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");

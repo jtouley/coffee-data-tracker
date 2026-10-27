@@ -183,23 +183,26 @@ function logShot(form) {
     timerBtn.classList.remove("running");
   }
 
-  timerBtn.addEventListener("click", () => {
-    tick(12);
-    if (started !== null) return stopTimer();
-    started = performance.now();
-    timed();
-    show($("time_s"), 0);
-    // The numeral ticks once a second, and isn't animated.
-    ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
-    timerBtn.textContent = "Stop";
-    timerBtn.classList.add("running");
-    update();
-  });
-  form.querySelector("[data-type]").addEventListener("click", () => {
-    if (started !== null) stopTimer();
-    timed();
-    $("time_s").focus();
-  });
+  // Correcting a past shot has steppers for the time instead of the timer.
+  if (timerBtn) {
+    timerBtn.addEventListener("click", () => {
+      tick(12);
+      if (started !== null) return stopTimer();
+      started = performance.now();
+      timed();
+      show($("time_s"), 0);
+      // The numeral ticks once a second, and isn't animated.
+      ticker = setInterval(() => show($("time_s"), Math.floor((performance.now() - started) / 1000)), 200);
+      timerBtn.textContent = "Stop";
+      timerBtn.classList.add("running");
+      update();
+    });
+    form.querySelector("[data-type]").addEventListener("click", () => {
+      if (started !== null) stopTimer();
+      timed();
+      $("time_s").focus();
+    });
+  }
 
   taste.addEventListener("click", (e) => {
     const b = e.target.closest("button");
@@ -307,8 +310,12 @@ function logShot(form) {
   // More: water, milk and notes. Water and milk carry over from the last shot; notes start empty.
   const milk = form.querySelector("[data-milk]");
   const moreSummary = form.querySelector("[data-more-summary]");
+  const note = () => {
+    const t = $("notes").value.trim();
+    return t.length > 24 ? `${t.slice(0, 23)}…` : t || null;
+  };
   const summarize = () => {
-    const parts = [num($("water_temp_c")) != null ? `${num($("water_temp_c"))} °C` : null, pressed(milk) === "true" ? "milk drink" : "no milk", $("notes").value.trim() ? "notes" : null];
+    const parts = [num($("water_temp_c")) != null ? `${num($("water_temp_c"))} °C` : null, pressed(milk) === "true" ? "milk drink" : "no milk", note()];
     moreSummary.textContent = parts.filter(Boolean).join(" · ");
   };
   milk.addEventListener("click", (e) => {
@@ -700,21 +707,35 @@ function invites() {
 }
 
 // A shot's Retract: a second tap, then a retraction record (never a delete), queued like any write.
+// Retract: no confirmation; the shot goes at once and an undo strip stays for 5 s (DESIGN, "Undo").
 function retractShot(b) {
+  const id = b.dataset.retract;
+  const actions = document.querySelector("[data-actions]");
+  const strip = document.querySelector("[data-restore]");
+  let timer = null;
+  const leave = () => { timer = setTimeout(() => location.replace(b.dataset.back), 5000); };
+  strip.addEventListener("focusin", () => clearTimeout(timer)); // focus on Undo holds it open
+  strip.addEventListener("focusout", leave);
   b.addEventListener("click", async () => {
-    if (b.textContent !== b.dataset.confirm) {
-      const label = b.textContent;
-      b.textContent = b.dataset.confirm;
-      setTimeout(() => { b.textContent = label; }, 4000);
-      return;
-    }
     b.disabled = true;
     try {
-      await send(`retract:${b.dataset.retract}`, `/api/shots/${b.dataset.retract}/retract`, {});
-      location.replace(b.dataset.back);
+      await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
+      tick(8);
+      actions.hidden = true;
+      strip.hidden = false;
+      leave();
     } catch (err) {
       hint(document.querySelector("main"), err instanceof Rejected ? err.message : OFFLINE);
       b.disabled = false;
+    }
+  });
+  strip.querySelector("button").addEventListener("click", async () => {
+    clearTimeout(timer);
+    try {
+      await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
+      location.reload();
+    } catch (err) {
+      strip.firstChild.textContent = err instanceof Rejected ? err.message : OFFLINE;
     }
   });
 }

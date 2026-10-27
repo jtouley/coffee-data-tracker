@@ -143,7 +143,7 @@ class Store:
 
     def bag(self, user_id: str, bag_id: str | None) -> Bag | None:
         r = self.bags.get(bag_id or "")
-        return r.item if r and r.item.user_id == user_id else None
+        return r.item if r and r.item.user_id == user_id and not r.deleted else None
 
     def coffee(self, coffee_id: str | None) -> dict | None:
         """Catalog facts for a coffee from the weekly dim_coffee export, if there is one."""
@@ -192,7 +192,8 @@ class Store:
 
     @staticmethod
     def best(shots_: list[Shot]) -> Shot | None:
-        """Highest rating; the latest wins ties (as in mart_dial_in and mart_bag)."""
+        """Highest rating; the latest wins ties, as in mart_bag. (mart_dial_in's best_* columns take any one of
+        the tied shots.)"""
         return max(shots_, key=lambda s: (s.rating, s.brewed_at), default=None)
 
     def bag_shots(self, user_id: str, bag: Bag | None, last: Shot | None) -> list[Shot]:
@@ -345,10 +346,18 @@ class Store:
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
         prev = self._owned(self.shots, shot.shot_id, user_id)
+        if prev:
+            # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
+            shot = shot.model_copy(
+                update={"source": prev.item.source, "roast_date": shot.roast_date or prev.item.roast_date}
+            )
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend
             # must not bring a retracted shot back.
             return shot, False
+        if prev and prev.deleted:
+            # Only Undo (restore_shot) brings a retracted shot back, not a correction saved in another tab.
+            raise Invalid("That shot was retracted, so it can’t be corrected. Undo the retraction first.")
         self._commit(self.shots, shot.shot_id, shot, "shots")
         return shot, True
 
@@ -360,6 +369,16 @@ class Store:
         if prev.deleted:
             return False
         self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
+        return True
+
+    def restore_shot(self, user_id: str, shot_id: str) -> bool:
+        """Undo a retraction: the shot again, as a new record. Restoring a shot that's there writes nothing."""
+        prev = self._owned(self.shots, shot_id, user_id)
+        if prev is None:
+            raise NotFound(shot_id)
+        if not prev.deleted:
+            return False
+        self._commit(self.shots, shot_id, prev.item, "shots")
         return True
 
     def save_equipment(self, user_id: str, data: dict) -> Equipment:

@@ -62,7 +62,7 @@ def test_history_groups_shots_by_bag_newest_first(world):
     c, _, _ = world
     html = c.get("/history").text
     assert re.findall(r'href="/shot/(\w+)"', html) == ["m1", "b2", "b1", "a2", "a1"]
-    assert html.count('class="section"') == 3
+    assert html.count('class="group"') == 3  # one heading per bag, each opening the coffee
 
 
 def test_coffee_page_has_the_best_shot_chart_bag_shots_and_catalog(world):
@@ -72,7 +72,7 @@ def test_coffee_page_has_the_best_shot_chart_bag_shots_and_catalog(world):
     assert "Best so far · rated 5, Oct 16" in html
     assert "All 4 shots" in html and 'class="target"' in html
     assert re.findall(r'href="/shot/(\w+)"', html) == ["b2", "b1"]  # this bag only, newest first
-    assert "Bag 2 of 2" in html and 'href="/coffee/g1-bag">earlier' in html
+    assert "Bag 2 of 2" in html and 'href="/coffee/g1-bag">‹ earlier' in html
     for fact in (
         "Ethiopia, Guji, washed",
         "1,900–2,100 m",
@@ -151,3 +151,113 @@ def test_photos_are_served_to_their_owner_only(world):
     assert c.get("/photos/nope").status_code == 404
     assert '<img class="cover mt8" src="/photos/p1"' in c.get("/coffee/g2-bag").text
     assert 'loading="lazy"' in c.get("/coffees").text
+
+
+def test_retract_then_undo_brings_the_shot_back(world):
+    c, app, _ = world
+    assert c.post("/api/shots/b2/retract", json={}, headers=W).json()["written"] is True
+    assert c.get("/shot/b2").status_code == 404
+    assert c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is True
+    assert (
+        c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is False
+    )  # a resend writes nothing
+    assert app.state.store.shot("owner", "b2").time_s == 33
+    maya = W | {"x-test-user": "maya"}
+    assert c.post("/api/shots/b2/restore", json={}, headers=maya).status_code == 404
+
+
+def test_rows_older_than_six_days_carry_the_date_and_the_coffee_chart_is_plain(world):
+    from datetime import UTC, datetime
+
+    from app import views
+
+    now = datetime(2026, 10, 20, 12, tzinfo=UTC)
+    assert views.day(datetime(2026, 10, 18, 7, 2, tzinfo=UTC), UTC, now) == "Sun 7:02"
+    assert views.day(datetime(2026, 10, 11, 7, 2, tzinfo=UTC), UTC, now) == "Oct 11 7:02"
+    c, _, _ = world
+    html = c.get("/coffee/g2-bag").text
+    assert 'class="ord"' not in html and 'class="path"' not in html and 'class="now"' not in html
+    assert 'class="taste' not in html.split('class="legend')[1].split("</div>")[0]
+
+
+def test_a_correction_keeps_the_shots_own_gear_roast_date_and_retraction(world):
+    c, app, _ = world
+    shot = {"shot_id": "r1", "bag_id": "g2-bag", "brewed_at": "2026-10-18T07:00:00Z", "grinder_id": "g1",
+            "basket_id": "g1-basket", "dose_g": 18, "yield_g": 36, "time_s": 28, "grinder_setting": 11, "rating": 3,
+            "roast_date": "2026-10-15"}  # fmt: skip
+    assert c.post("/api/shots", json=shot, headers=W).status_code == 200
+    # Another grinder becomes the default; the correction form still names the shot's own.
+    new = {
+        "equipment_id": "g2",
+        "kind": "grinder",
+        "name": "Niche",
+        "scale_min": 0,
+        "scale_max": 50,
+        "scale_step": 1,
+        "is_default": True,
+    }
+    assert c.post("/api/equipment", json=new, headers=W).status_code == 200
+    page = c.get("/log?correct=r1").text
+    form = json.loads(
+        re.search(r'<script id="prefill" type="application/json">(.*?)</script>', page, re.S).group(1)
+    )
+    assert form["grinder_id"] == "g1" and "/log/gear" not in page  # no gear chip while correcting
+    # The form doesn't carry the roast date; the correction keeps it.
+    fixed = {k: v for k, v in shot.items() if k != "roast_date"} | {"rating": 4}
+    assert c.post("/api/shots", json=fixed, headers=W).status_code == 200
+    assert str(app.state.store.shot("owner", "r1").roast_date) == "2026-10-15"
+    # Retracted elsewhere while the form was open: the correction doesn't bring it back.
+    c.post("/api/shots/r1/retract", json={}, headers=W)
+    r = c.post("/api/shots", json=fixed | {"rating": 5}, headers=W)
+    assert r.status_code in (400, 409, 422) and "retracted" in r.text
+    assert c.get("/shot/r1").status_code == 404
+
+
+def test_history_keeps_one_group_per_bag_when_bags_alternate(world):
+    c, _, _ = world
+    base = {"grinder_id": "g1", "basket_id": "g1-basket", "dose_g": 18, "yield_g": 36, "grinder_setting": 11,
+            "time_s": 28, "rating": 3}  # fmt: skip
+    for sid, bag, day in (("x1", "g1-bag", 19), ("x2", "g2-bag", 20), ("x3", "g1-bag", 21)):
+        c.post("/api/shots", json=base | {"shot_id": sid, "bag_id": bag, "brewed_at": f"2026-10-{day}T07:00:00Z"},
+               headers=W)  # fmt: skip
+    html = c.get("/history").text
+    assert html.count('class="group"') == 3
+    assert re.findall(r'href="/coffee/([\w-]+)"', html) == ["g1-bag", "g2-bag", "other"]
+
+
+def test_bag_numbers_follow_opening_order_and_a_gone_bag_is_not_found(world):
+    c, app, _ = world
+    store = app.state.store
+    first = store.bag("owner", "g1-bag")
+    store._commit(
+        store.bags, "g1-bag", first.model_copy(update={"opened_on": first.opened_on.replace(day=1)}), "bags"
+    )
+    # Using the first bag again doesn't renumber the two.
+    c.post("/api/shots", json={"shot_id": "y1", "bag_id": "g1-bag", "brewed_at": "2026-10-25T07:00:00Z",
+           "grinder_id": "g1", "basket_id": "g1-basket", "dose_g": 18, "yield_g": 36, "grinder_setting": 11,
+           "time_s": 28, "rating": 3}, headers=W)  # fmt: skip
+    assert "Bag 1 of 2" in c.get("/coffee/g1-bag").text and "Bag 2 of 2" in c.get("/coffee/g2-bag").text
+    store._commit(store.bags, "g2-bag", store.bag("owner", "g2-bag"), "bags", deleted=True)
+    assert c.get("/coffee/g2-bag", headers={"Accept": "text/html"}).status_code == 404
+
+
+def test_a_shop_link_must_be_a_web_address(lake, tmp_path):
+    con = lake.connect()
+    con.execute("create table c as select 'x.com:1' coffee_id, 'X' title, 'javascript:alert(1)' url")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    setup(c)
+    c.post("/api/bags", json={"bag_id": "b", "coffee_id": "x.com:1", "coffee_freetext": "X"}, headers=W)
+    html = c.get("/coffee/b").text
+    assert "javascript:" not in html and "Shop" not in html
+
+
+def test_unknown_photo_ids_are_not_looked_up_again_and_again(world, monkeypatch):
+    from app import photos
+
+    c, _, _ = world
+    calls = []
+    real = photos.load
+    monkeypatch.setattr(photos, "load", lambda *a: calls.append(a) or real(*a))
+    assert c.get("/photos/nope").status_code == 404 and c.get("/photos/nope").status_code == 404
+    assert len(calls) == 1
