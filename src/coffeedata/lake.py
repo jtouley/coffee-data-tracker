@@ -17,6 +17,11 @@ Bag photos go to their own private dataset (`Lake.photos()`), one photo per file
 
     photos/<photo_id>.parquet                             the image, in Hugging Face's Image layout
 
+The app's accounts go to a third private dataset (`Lake.users()`), never read by dbt:
+
+    users/<user_id>__<time>.parquet                       one file per sign-up or account change
+    invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
+
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
 
@@ -238,9 +243,38 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
 }
 SCHEMAS["photos"] = SCHEMAS["photos"].with_metadata({"huggingface": hf_features(SCHEMAS["photos"])})
+# The app's accounts, in their own private dataset: nothing that reads the lake can see a password hash.
+SCHEMAS["users"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("username", pa.string()),
+        ("display_name", pa.string()),
+        ("password_hash", pa.string()),  # Argon2id PHC string, salt included
+        ("role", pa.string()),
+        ("session_epoch", pa.int32()),
+        ("invite_id", pa.string()),
+        ("disabled", pa.bool_()),
+    ]
+)
+SCHEMAS["invites"] = pa.schema(
+    [
+        ("invite_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("code_sha256", pa.string()),
+        ("kind", pa.string()),  # join or reset
+        ("for_user_id", pa.string()),
+        ("created_by", pa.string()),
+        ("expires_at", pa.timestamp("s", tz="UTC")),
+        ("used_by", pa.string()),
+        ("used_at", pa.timestamp("s", tz="UTC")),
+        ("revoked", pa.bool_()),
+    ]
+)
 
-# Tables that live in the photo dataset rather than the main lake.
+# Tables that live in the photo dataset or the users dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
+USER_TABLES = ("users", "invites")
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -255,6 +289,8 @@ GLOBS = {
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
     "photos": "photos/*.parquet",
+    "users": "users/*.parquet",
+    "invites": "invites/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -271,8 +307,10 @@ SCHEMA_FILES = {
     "equipment": "equipment/equipment_id=schema.parquet",
     "bags": "bags/bag_id=schema.parquet",
     "photos": "photos/photo_id=schema.parquet",
+    "users": "users/user_id=schema.parquet",
+    "invites": "invites/invite_id=schema.parquet",
 }
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES)
+LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
 
 def new_batch_id(now: datetime | None = None) -> str:
@@ -300,6 +338,12 @@ class Lake:
         """The private photo dataset: COFFEEDATA_PHOTOS, or ./lake-photos."""
         url = os.environ.get("COFFEEDATA_PHOTOS") or "lake-photos"
         return cls(url, staging="build/photos-staging", tables=PHOTO_TABLES)
+
+    @classmethod
+    def users(cls) -> Lake:
+        """The private users dataset: COFFEEDATA_USERS, or ./lake-users. Never a dbt source."""
+        url = os.environ.get("COFFEEDATA_USERS") or "lake-users"
+        return cls(url, staging="build/users-staging", tables=USER_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 
@@ -354,6 +398,27 @@ class Lake:
             qualify row_number() over (partition by {key} order by logged_at desc) = 1""")
         cols = [d[0] for d in cur.description]
         return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def files_after(self, table: str, after: datetime) -> list[str]:
+        """Files of a per-record table (`<id>__<YYYYmmddTHHMMSS>.parquet`) written after a time, from the
+        file names alone: one directory listing instead of one request per file."""
+        stamp = f"{after.astimezone(UTC):%Y%m%dT%H%M%S}"
+        prefix = GLOBS[table].split("/")[0]
+
+        def newer(name: str) -> bool:
+            _, sep, at = name.removesuffix(".parquet").rpartition("__")
+            return bool(sep) and at > stamp
+
+        out = sorted(str(p) for p in (self.root / prefix).glob("*.parquet") if newer(p.name))
+        if self.remote:
+            from huggingface_hub import HfApi
+
+            repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
+            api = HfApi(token=os.environ.get("HF_TOKEN"))
+            for f in api.list_repo_tree(repo_id, path_in_repo=prefix, repo_type="dataset"):
+                if f.path.endswith(".parquet") and newer(f.path.rsplit("/", 1)[-1]):
+                    out.append(f"{self.url}/{f.path}")
+        return out
 
     def mart_sources(self, name: str) -> list[str]:
         """The weekly derived export of a dbt mart (marts/<name>.parquet), local first."""

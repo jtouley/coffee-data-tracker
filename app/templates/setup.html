@@ -30,7 +30,7 @@
   </form>
 {% endmacro %}
 {% block main %}
-  <div class="serif title mt16">Setup</div>
+  <h1 class="serif title mt16">Setup</h1>
   <p class="body">Each shot records the grinder and basket it was pulled with. Changes are saved as new records, so
     old shots keep what they used.</p>
   <div class="section" id="grinder">Grinder</div>
@@ -39,8 +39,23 @@
   <div class="section" id="basket">Basket</div>
   {% for e in baskets %}<div class="gear{{ ' first' if loop.first }}"><div class="n">{{ e.name }}</div><div class="d">{{ g(e.basket_dose_g) }} g · {{ shots_n(counts.get(e.equipment_id, 0)) }}</div></div>{% endfor %}
   {% if baskets %}<details class="mt8"><summary class="btn text">Add another basket</summary>{{ basket_form() }}</details>{% else %}{{ basket_form() }}{% endif %}
-  <div class="section">Account</div>
-  <div class="gear first"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in{% endif %}</div></div>
+  <div class="section" id="account">Account</div>
+  <div class="gear first"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
+  {% if auth_name != "local" %}
+  <details class="mt8"><summary class="btn text">Change password</summary>
+    <form id="password-form" novalidate>
+      <label class="flabel" for="current">Current password</label>
+      <input class="input" id="current" name="current" type="password" autocomplete="current-password" required>
+      <label class="flabel" for="new">New password</label>
+      <input class="input" id="new" name="new" type="password" autocomplete="new-password" aria-describedby="new-h" required>
+      <div class="fhint" id="new-h">At least 10 characters. Changing it signs you out on your other devices.</div>
+      <div class="hint" data-hint role="alert"></div>
+      <button class="btn secondary mt8" type="submit">Change password</button>
+    </form>
+  </details>
+  <button class="btn text" type="button" data-signout="/api/signout">Sign out</button>
+  <button class="btn text" type="button" data-signout="/api/signout-everywhere">Sign out everywhere</button>
+  {% endif %}
   <div class="mt24"></div>
 {% endblock %}
 {% block nav %}{{ nav('setup') }}{% endblock %}

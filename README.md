@@ -48,7 +48,8 @@ Anything that describes the current state is computed from those files.
 | `marts/*.parquet` | build | derived and replaced weekly: `dim_coffee`, `dim_roaster`, `mart_market`, `fct_price_event`, and the private `fct_shot` |
 
 Bag photos go to a separate private dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo, with the
-image in Hugging Face's `Image` layout so the dataset viewer can show it.
+image in Hugging Face's `Image` layout so the dataset viewer can show it. The app's accounts go to a third private
+dataset (`COFFEEDATA_USERS`): `users/<id>__<time>.parquet` and `invites/<id>__<time>.parquet`, never read by dbt.
 
 Some consequences:
 
@@ -169,13 +170,26 @@ works the same way and has a checkbox for roasters who want to be left out.
 
 `app/` is a small phone web app for logging shots at the machine (plan and design in `docs/app/`). It's FastAPI
 with server-rendered pages and a little JavaScript, imports `coffeedata`, and writes through `Lake.write` and
-`Lake.publish` like everything else. Today it has Today, Log shot, Saved, Setup (grinder and basket) and a typed
-"New bag"; sign-in is a local stub that treats every request as the owner.
+`Lake.publish` like everything else. Today it has sign-in, Today, Log shot, Saved, Setup (grinder, basket and
+account) and a typed "New bag".
 
 ```bash
-make app                     # http://localhost:8000, over ./lake
+make app                     # http://localhost:8000, over ./lake, signed in as the owner without a password
 HOST=0.0.0.0 make app        # to try it from a phone on the same network
+# Real sign-in locally (accounts in ./lake-users; plain http, so the cookie can't be Secure):
+SESSION_SECRET=$(openssl rand -hex 32) AUTH_PEPPER=$(openssl rand -hex 16) OWNER_SETUP_CODE=pick-one \
+  COFFEEDATA_INSECURE_COOKIES=1 make app
 ```
+
+Sign-in is username and password. The first account is the owner's and needs `OWNER_SETUP_CODE`; after that the
+code does nothing. Passwords are HMAC-ed with `AUTH_PEPPER` and hashed with Argon2id. The session cookie is signed
+with `SESSION_SECRET` and carries an epoch that "Sign out everywhere" and a password change bump. Every read and
+write is scoped to the user in the cookie.
+
+The app runs on a Hugging Face Space (Docker). `.github/workflows/space.yml` pushes `app/` (with `src/`, the lock
+file and `app/space/`'s Dockerfile and README) to the Space when main changes; the secrets it needs are listed in
+`app/space/README.md`. When the Space starts, it loads shots from the weekly `marts/fct_shot.parquet` export plus
+the shot files written after it, instead of reading every shot file over the network.
 
 On first run it asks for your grinder (its dial range and step, and which way is finer) and basket (nominal dose),
 then the coffee. Each shot prefills from the last shot of the bag; time, taste and rating start empty. Saved shows

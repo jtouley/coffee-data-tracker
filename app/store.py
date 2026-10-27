@@ -55,12 +55,42 @@ class Store:
             ("bags", "bag_id", Bag, self.bags),
             ("equipment", "equipment_id", Equipment, self.equipment),
         ):
-            for row in lake.latest(table, key):
+            rows = self._seed_shots() if table == "shots" else None
+            for row in lake.latest(table, key) if rows is None else rows:
                 row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
                 except ValidationError as e:
                     log.warning("skipping %s %s: %s", table, row[key], e)
+
+    def _seed_shots(self) -> list[dict] | None:
+        """Current shots from the weekly marts/fct_shot.parquet export plus the shot files written after it,
+        instead of one request per shot file. None (read every file) when there's no export yet."""
+        con = self.lake.connect()
+        try:
+            src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("fct_shot"))
+            cur = con.execute(f"select * from read_parquet([{src}])")
+        except Exception as e:  # noqa: BLE001 - no export yet, or one from before logged_at was in it
+            log.info("no fct_shot export to start from: %s", e)
+            return None
+        cols = [d[0] for d in cur.description]
+        if "logged_at" not in cols:
+            return None
+        rows = {r["shot_id"]: r for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall())}
+        cutoff = max((r["logged_at"] for r in rows.values()), default=None)
+        newer = self.lake.files_after("shots", cutoff) if cutoff else None
+        if newer is None:
+            return None
+        if newer:
+            files = ", ".join(f"'{f}'" for f in newer)
+            cur = con.execute(f"""
+                select * from read_parquet([{files}], union_by_name = true, hive_partitioning = false)
+                qualify row_number() over (partition by shot_id order by logged_at desc) = 1""")
+            cols = [d[0] for d in cur.description]
+            for r in (dict(zip(cols, x, strict=True)) for x in cur.fetchall()):
+                rows[r["shot_id"]] = r  # newer than anything in the export: latest wins
+        log.info("shots: %d from fct_shot, %d newer files", len(rows), len(newer))
+        return list(rows.values())
 
     # --- reads ---------------------------------------------------------------------------------------
 

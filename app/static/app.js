@@ -1,8 +1,15 @@
-// registry.coffee: the outbox, the shot form, undo and the setup forms. No build step.
+// registry.coffee: the outbox, the shot form, undo, sign-in and the setup forms. No build step.
+
+// Times are shown in the phone's time zone; the server reads it from this cookie.
+document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)}; path=/; max-age=31536000; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
 
 // --- the outbox --------------------------------------------------------------------------------------
 // Every write waits in IndexedDB until the server acknowledges it, keyed by the id the phone generated, so a
-// dropped connection never loses a shot and a retry never makes a second one.
+// dropped connection never loses a shot and a retry never makes a second one. Each entry carries the id of the
+// person who made it, and only that person's entries are sent, so one phone shared by two people never sends a
+// shot under the wrong account.
+
+const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
@@ -38,7 +45,7 @@ async function deliver(entry) {
 }
 
 async function send(key, url, body) {
-  const entry = { key, url, body, at: Date.now() };
+  const entry = { key, url, body, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -47,8 +54,13 @@ async function send(key, url, body) {
   }
 }
 
+async function mine() {
+  return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
+}
+
 async function flush() {
-  for (const entry of await store("readonly", (s) => s.getAll())) {
+  if (!ME) return;
+  for (const entry of await mine()) {
     try {
       await deliver(entry);
     } catch (e) {
@@ -59,7 +71,7 @@ async function flush() {
 }
 
 async function showSync() {
-  const n = await store("readonly", (s) => s.count());
+  const n = (await mine()).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
   }
@@ -310,6 +322,77 @@ function equipment(form) {
   });
 }
 
+// --- Signing in and the account -----------------------------------------------------------------------
+
+async function post(url, body) {
+  const r = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
+    body: JSON.stringify(body),
+  });
+  if (r.ok) return r.json();
+  const detail = (await r.json().catch(() => ({}))).detail;
+  throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || "Something went wrong. Try again.");
+}
+
+function showPassword(button) {
+  const input = document.getElementById(button.getAttribute("aria-controls"));
+  button.addEventListener("click", () => {
+    const show = input.type === "password";
+    input.type = show ? "text" : "password";
+    button.textContent = show ? "Hide" : "Show";
+    button.setAttribute("aria-pressed", String(show));
+  });
+}
+
+function signIn(form) {
+  const submit = form.querySelector('[type="submit"]');
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const body = {};
+    for (const el of form.querySelectorAll("input")) body[el.name] = el.value;
+    for (const el of form.querySelectorAll("input")) el.removeAttribute("aria-invalid");
+    const empty = [...form.querySelectorAll("input")].find((el) => !el.value.trim());
+    if (empty) {
+      empty.setAttribute("aria-invalid", "true");
+      empty.focus();
+      return hint(form, "Fill in every field.");
+    }
+    submit.disabled = true;
+    try {
+      await post("/api/signin", body);
+      location.replace("/");
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+      submit.disabled = false;
+    }
+  });
+}
+
+function account() {
+  const form = document.getElementById("password-form");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    try {
+      await post("/api/password", { current: form.current.value, new: form.new.value });
+      form.reset();
+      hint(form, "");
+      form.closest("details").open = false;
+    } catch (err) {
+      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
+    }
+  });
+  for (const b of document.querySelectorAll("[data-signout]")) {
+    b.addEventListener("click", async () => {
+      try {
+        await post(b.dataset.signout, {});
+      } finally {
+        location.replace("/signin");
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const shot = document.getElementById("shot");
   if (shot) logShot(shot);
@@ -318,6 +401,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const bag = document.getElementById("bag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
+  const signin = document.getElementById("signin");
+  if (signin) signIn(signin);
+  for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
+  account();
   flush();
 });
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});
 addEventListener("online", flush);

@@ -4,37 +4,82 @@ Screens are server-rendered HTML with a little JavaScript (static/app.js) and no
 JSON POST that the phone first puts in an IndexedDB outbox, with an id it generated, so a retry is safe.
 """
 
+import hashlib
+import json
+import logging
 from datetime import UTC, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from fastapi import Depends, FastAPI, Header, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
-from fastapi.staticfiles import StaticFiles
+from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response
+from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import ValidationError
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from coffeedata import shots
 from coffeedata.lake import Lake
 
-from . import views
-from .auth import Auth, LocalOwner, User
+from . import views, web
+from .accounts import AccountError
+from .auth import Auth, Sessions, User, from_env, missing_secrets
 from .store import NotFound, Store
 
 HERE = Path(__file__).parent
+MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
+log = logging.getLogger(__name__)
+
+
+class SignIn(Exception):
+    """A screen asked for while signed out: go to the sign-in screen."""
+
+
+def not_configured(missing: list[str]) -> FastAPI:
+    """What a Space shows until its sign-in secrets are set: their names, never their values."""
+    app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+    text = (
+        "This app isn't set up yet. Add these secrets in the Space's settings, then restart it: "
+        + ", ".join(missing)
+        + "."
+    )
+
+    @app.middleware("http")
+    async def everything(request: Request, call_next: Any) -> Response:
+        response = PlainTextResponse(text, 503)
+        web.secure_headers(response, request.url.path)
+        return response
+
+    return app
 
 
 def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
-    auth = auth or LocalOwner()
+    if auth is None:
+        missing = missing_secrets()
+        if missing:
+            log.error("not configured; missing secrets: %s", ", ".join(missing))
+            return not_configured(missing)
+        auth = from_env()
     lake = lake or Lake()
     # Records from before accounts (user_id null) belong to the owner.
     store = Store(lake, shots.owner_user_id())
+    sessions = auth if isinstance(auth, Sessions) else None
     app = FastAPI(title="registry.coffee", docs_url=None, redoc_url=None, openapi_url=None)
     app.state.store = store
-    app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
+    assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
-    templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots)
+    templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
+    app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None))  # type: ignore[arg-type]
+    app.add_middleware(GZipMiddleware, minimum_size=500)
+
+    @app.middleware("http")
+    async def limit_body(request: Request, call_next: Any) -> Response:
+        if int(request.headers.get("content-length") or 0) > MAX_BODY:
+            return JSONResponse({"detail": "That request is too large."}, 413)
+        return await call_next(request)
 
     def user(request: Request) -> User:
         u = auth.user(request)
@@ -42,13 +87,31 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             raise HTTPException(401, "sign in first")
         return u
 
-    def writer(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> User:
-        # A cross-site form can't set this header; on top of SameSite cookies once real sessions exist.
+    def screen_user(request: Request) -> User:
+        u = auth.user(request)
+        if u is None:
+            raise SignIn()
+        return u
+
+    def same_origin(request: Request, x_requested_with: str | None) -> None:
+        """CSRF: a cross-site form can't set X-Requested-With, and the browser says where a request came from.
+        On top of SameSite=Lax cookies."""
         if not x_requested_with:
             raise HTTPException(403, "missing X-Requested-With")
+        if request.headers.get("sec-fetch-site") not in (None, "same-origin", "none"):
+            raise HTTPException(403, "cross-site request")
+        origin = request.headers.get("origin")
+        if origin and urlsplit(origin).netloc != request.headers.get("host"):
+            raise HTTPException(403, "cross-site request")
+
+    def writer(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> User:
+        same_origin(request, x_requested_with)
         return user(request)
 
-    Me = Annotated[User, Depends(user)]
+    def anyone(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> None:
+        same_origin(request, x_requested_with)
+
+    Me = Annotated[User, Depends(screen_user)]
     Writer = Annotated[User, Depends(writer)]
 
     def tz(request: Request) -> tzinfo:
@@ -57,8 +120,163 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         except (ZoneInfoNotFoundError, ValueError):
             return UTC
 
-    def page(request: Request, template: str, **ctx: Any) -> HTMLResponse:
-        return templates.TemplateResponse(request, template, ctx | {"now": datetime.now(tz(request))})
+    def page(request: Request, template: str, status: int = 200, **ctx: Any) -> HTMLResponse:
+        ctx = {"me": None} | ctx | {"now": datetime.now(tz(request))}
+        return templates.TemplateResponse(request, template, ctx, status_code=status)
+
+    # --- errors --------------------------------------------------------------------------------------
+
+    def wants_html(request: Request) -> bool:
+        return not request.url.path.startswith("/api/") and "text/html" in request.headers.get("accept", "")
+
+    @app.exception_handler(SignIn)
+    async def to_sign_in(request: Request, exc: SignIn) -> Response:
+        return RedirectResponse("/signin", 303)
+
+    @app.exception_handler(StarletteHTTPException)
+    async def http_error(request: Request, exc: StarletteHTTPException) -> Response:
+        if wants_html(request):
+            return page(request, "error.html", status=exc.status_code, code=exc.status_code)
+        return JSONResponse({"detail": exc.detail}, exc.status_code, headers=getattr(exc, "headers", None))
+
+    @app.exception_handler(RequestValidationError)
+    async def bad_request(request: Request, exc: RequestValidationError) -> Response:
+        return JSONResponse({"detail": [e["msg"] for e in exc.errors()]}, 422)
+
+    @app.exception_handler(Exception)
+    async def server_error(request: Request, exc: Exception) -> Response:
+        log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
+        if wants_html(request):
+            return page(request, "error.html", status=500, code=500)
+        return JSONResponse({"detail": "Something went wrong on the server."}, 500)
+
+    # --- the shell -----------------------------------------------------------------------------------
+
+    @app.get("/static/{path:path}")
+    def static(path: str) -> Response:
+        return assets.response(f"/static/{path}")
+
+    fonts = ("archivo", "archivo-ext", "newsreader", "newsreader-ext")
+    shell = [assets(f) for f in ("app.css", "app.js", *(f"fonts/{f}.woff2" for f in fonts))]
+    sw = (
+        (HERE / "sw.js")
+        .read_text()
+        .replace("__SHELL__", json.dumps(shell + ["/offline"]))
+        .replace("__VERSION__", hashlib.sha256("|".join(shell).encode()).hexdigest()[:10])
+    )
+
+    @app.get("/sw.js")
+    def service_worker() -> Response:
+        # Unhashed and never cached, so a new deploy's worker (with the new asset names) is picked up.
+        return Response(sw, media_type="text/javascript", headers={"Cache-Control": "no-cache"})
+
+    manifest = json.dumps(
+        {
+            "name": "registry.coffee",
+            "short_name": "Coffee",
+            "description": "Log espresso shots at the machine and see how each bag dials in.",
+            "id": "/",
+            "start_url": "/",
+            "scope": "/",
+            "display": "standalone",
+            "orientation": "portrait",
+            "background_color": "#f6f5f2",
+            "theme_color": "#f6f5f2",
+            "icons": [
+                {
+                    "src": assets("icons/icon-192.png"),
+                    "sizes": "192x192",
+                    "type": "image/png",
+                    "purpose": "any",
+                },
+                {
+                    "src": assets("icons/icon-512.png"),
+                    "sizes": "512x512",
+                    "type": "image/png",
+                    "purpose": "any",
+                },
+                {
+                    "src": assets("icons/icon-512.png"),
+                    "sizes": "512x512",
+                    "type": "image/png",
+                    "purpose": "maskable",
+                },
+            ],
+        }
+    )
+
+    @app.get("/manifest.webmanifest")
+    def web_manifest() -> Response:
+        return Response(manifest, media_type="application/manifest+json")
+
+    @app.get("/robots.txt")
+    def robots() -> PlainTextResponse:
+        # Crawlers may look: every page but sign-in needs an account, so there's nothing for them to see.
+        return PlainTextResponse("User-agent: *\nAllow: /\n")
+
+    @app.get("/healthz")
+    def healthz() -> dict:
+        return {"ok": True}
+
+    @app.get("/offline", response_class=HTMLResponse)
+    def offline(request: Request) -> HTMLResponse:
+        return page(request, "offline.html")
+
+    # --- signing in ----------------------------------------------------------------------------------
+
+    def accounts_only() -> Sessions:
+        if sessions is None:
+            raise HTTPException(404, "sign-in is off in local development")
+        return sessions
+
+    @app.get("/signin", response_class=HTMLResponse, response_model=None)
+    def signin(request: Request) -> HTMLResponse | RedirectResponse:
+        if auth.user(request):
+            return RedirectResponse("/", 303)
+        s = accounts_only()
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
+
+    @app.post("/api/signin", dependencies=[Depends(anyone)])
+    def post_signin(body: dict, request: Request) -> Response:
+        s = accounts_only()
+        username, password = str(body.get("username") or ""), str(body.get("password") or "")
+        try:
+            if s.accounts.needs_owner:
+                acct = s.accounts.create_owner(str(body.get("setup_code") or ""), username, password)
+            else:
+                acct = s.accounts.sign_in(username, password, request.client.host if request.client else "")
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+        response = JSONResponse({"ok": True})
+        s.set_cookie(response, acct)
+        return response
+
+    @app.post("/api/signout")
+    def post_signout(me: Writer) -> Response:
+        response = JSONResponse({"ok": True})
+        accounts_only().clear_cookie(response)
+        return response
+
+    @app.post("/api/signout-everywhere")
+    def post_signout_everywhere(me: Writer) -> Response:
+        s = accounts_only()
+        s.accounts.sign_out_everywhere(me.user_id)
+        response = JSONResponse({"ok": True})
+        s.clear_cookie(response)
+        return response
+
+    @app.post("/api/password")
+    def post_password(body: dict, me: Writer) -> Response:
+        s = accounts_only()
+        try:
+            acct = s.accounts.change_password(
+                me.user_id, str(body.get("current") or ""), str(body.get("new") or "")
+            )
+        except AccountError as e:
+            raise HTTPException(400, str(e)) from None
+        response = JSONResponse({"ok": True})
+        s.set_cookie(response, acct)  # this phone stays signed in; the others don't
+        return response
 
     def coffee_name(bag: Any, coffee_id: str | None, freetext: str | None) -> tuple[str, str]:
         """The serif name and the line under it."""
@@ -75,7 +293,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         p = store.prefill(me.user_id)
         bag, last = p["bag"], p["last"]
         if not bag and not last:
-            return page(request, "first_run.html", grinder=p["grinder"], basket=p["basket"])
+            return page(request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"])
         name, facts = coffee_name(bag, p["coffee_id"], p["coffee_freetext"])
         pulled = store.bag_shots(me.user_id, bag, last)
         z = tz(request)
@@ -90,6 +308,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             earlier=list(reversed(pulled[:-1]))[:3],
             target=views.target_svg(pulled) if pulled else "",
             summary=views.summary(pulled[-1], prev, z) if pulled else "",
+            me=me,
             grinder_of=lambda s: store.gear(me.user_id, s.grinder_id),
             days_off=(datetime.now(z).date() - bag.roast_date).days if bag and bag.roast_date else None,
             day=lambda d: views.day(d, z),
@@ -121,7 +340,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
             "same_as_last": p["same_as_last"],
             "grind": {"min": g.scale_min, "max": g.scale_max, "step": g.scale_step},
         }
-        return page(request, "log.html", p=p, name=name, form=form)
+        return page(request, "log.html", me=me, p=p, name=name, form=form)
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:
@@ -137,6 +356,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         return page(
             request,
             "saved.html",
+            me=me,
             shot=shot,
             name=name,
             new=new,
@@ -165,7 +385,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
 
     @app.get("/bag/new", response_class=HTMLResponse)
     def new_bag(request: Request, me: Me) -> HTMLResponse:
-        return page(request, "bag.html")
+        return page(request, "bag.html", me=me)
 
     # --- writes --------------------------------------------------------------------------------------
 

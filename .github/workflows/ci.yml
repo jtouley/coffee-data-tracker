@@ -13,4 +13,14 @@ jobs:
       - uses: astral-sh/setup-uv@v5
         with: {python-version: "3.12"}
       - run: uv sync --locked  # fails if uv.lock is out of date
+      # Playwright and axe for the browser test (tests/test_app_browser.py), which must run here, not skip.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tests/browser/package-lock.json
+      - run: npm ci && npx playwright install --with-deps chromium
+        working-directory: tests/browser
       - run: make test           # pre-commit hooks on every file, then the tests
+        env:
+          REQUIRE_BROWSER: "1"
