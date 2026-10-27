@@ -6,7 +6,7 @@ const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 
-const [fresh, base, out] = process.argv.slice(2);
+const [fresh, base, out, bagPhoto] = process.argv.slice(2);
 const AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 const problems = [];
 
@@ -137,6 +137,25 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Undo" }).click();
     await page.waitForURL(`${base}/`);
     assert.match(await page.textContent("main"), /Last shot.*\n?.*29/s);
+    // New bag from a photo: a clear match, an unclear one, an unreadable label.
+    await page.goto(`${base}/bag/new`);
+    await shoot(page, "bag-start");
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="match"]:not([hidden])');
+    assert.equal((await page.textContent('[data-f="title"]')).trim(), "Hambela Alaka");
+    assert.match(await page.textContent('[data-f="roasted"]'), /read from the bag/);
+    await shoot(page, "bag-match");
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="pick"]:not([hidden])');
+    assert.equal(await page.locator(".pickrow").count(), 2);
+    await shoot(page, "bag-pick");
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="failed"]:not([hidden])');
+    await shoot(page, "bag-failed");
+    await page.getByRole("button", { name: "Type the coffee" }).last().click();
+    assert.equal(await page.isVisible("#bag"), true);
+    assert.equal(await page.inputValue("#coffee"), ""); // nothing carried over from the photo before
+
     await page.goto(`${base}/setup`);
     await shoot(page, "setup");
     await page.goto(`${base}/setup/gear/g1`);

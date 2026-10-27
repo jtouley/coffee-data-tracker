@@ -23,6 +23,9 @@ from coffeedata.models import Bag, Equipment, Shot
 log = logging.getLogger(__name__)
 
 
+# What the screens show about a catalog coffee (whatever of it this week's export has).
+FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes",
+         "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
 SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 
@@ -163,12 +166,13 @@ class Store:
         src = ", ".join(f"'{s}'" for s in self.lake.mart_sources("dim_coffee"))
         try:
             cur = self.lake.connect().execute(
-                f"select title, roaster_name, origin_country, process from read_parquet([{src}]) "
-                "where coffee_id = ?",
+                f"select * from read_parquet([{src}], union_by_name = true) where coffee_id = ?",
                 [coffee_id],
             )
             row = cur.fetchone()
-            found = dict(zip([d[0] for d in cur.description], row, strict=True)) if row else None
+            cols = [d[0] for d in cur.description]
+            keep = set(FACTS) & set(cols)
+            found = {k: v for k, v in zip(cols, row, strict=True) if k in keep} if row else None
         except Exception as e:  # noqa: BLE001 - no catalog export yet, or the network
             log.info("no catalog facts for %s: %s", coffee_id, e)
             return None  # not cached: try again next time

@@ -21,6 +21,7 @@ from app.auth import Sessions
 from app.main import create_app
 from coffeedata import shots
 from coffeedata.lake import Lake
+from tests.test_bags import LABEL, FakeClient, jpeg
 
 HERE = Path(__file__).parent
 BROWSER = HERE / "browser"
@@ -60,7 +61,15 @@ def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
 def test_app_in_a_browser(lake, tmp_path):
     accounts = _accounts(tmp_path / "users")
     accounts.create_owner("SETUP-CODE-1234", "jtouley", PW)
-    app = create_app(lake, Sessions(accounts, secure=False))  # plain http on 127.0.0.1
+    # Label reads answer in turn: a clear match, an unclear one, then an unreadable label.
+    reader = FakeClient([LABEL | {"roaster": "Larkspur Roasting"}, LABEL | {"roaster": "Larkspur Roasting", "coffee": "Hambela"},
+                         {"legible": False, "roaster": None, "coffee": None}])  # fmt: skip
+    app = create_app(
+        lake,
+        Sessions(accounts, secure=False),
+        photos_lake=Lake(str(tmp_path / "photos"), tables=("photos",)),
+        labels_client=reader,
+    )  # plain http on 127.0.0.1
     fresh = create_app(
         Lake(str(tmp_path / "fresh-lake")), Sessions(_accounts(tmp_path / "fresh-users"), secure=False)
     )
@@ -72,8 +81,9 @@ def test_app_in_a_browser(lake, tmp_path):
     earlier = datetime.now(UTC).date() - timedelta(days=2)
     con = lake.connect()
     con.execute(
-        "create table c as select 'example.com:1' coffee_id, 'Hambela Alaka' title, 'Larkspur Roasting' roaster_name,"
-        " 'Ethiopia' origin_country, 'washed' process"
+        "create table c as select * from (values ('example.com:1', 'Hambela Alaka', 'Larkspur Roasting', 'Ethiopia',"
+        " 'washed', 6.47, true), ('example.com:2', 'Hambela Natural', 'Larkspur Roasting', 'Ethiopia', 'natural', 6.10,"
+        " true)) t(coffee_id, title, roaster_name, origin_country, process, price_per_100g, in_stock)"
     )
     lake.write_mart("dim_coffee", con, "select * from c")
     for body in (
@@ -143,6 +153,7 @@ def test_app_in_a_browser(lake, tmp_path):
         headers=w,
     )
 
+    (tmp_path / "bag.jpg").write_bytes(jpeg(2400, 1800, exif=True))
     servers = [_serve(fresh), _serve(app)]
     out = Path(os.environ.get("APP_SCREENSHOTS") or tmp_path / "shots")
     out.mkdir(parents=True, exist_ok=True)
@@ -153,6 +164,7 @@ def test_app_in_a_browser(lake, tmp_path):
                 str(BROWSER / "app_flow.js"),
                 *(f"http://127.0.0.1:{p}" for _, _, p in servers),
                 str(out),
+                str(tmp_path / "bag.jpg"),
             ],
             capture_output=True,
             text=True,
@@ -181,4 +193,5 @@ def test_app_in_a_browser(lake, tmp_path):
         "join",
         "reset",
     )
+    screens += ("bag-start", "bag-match", "bag-pick", "bag-failed")
     assert {p.name for p in out.iterdir()} >= {f"{n}-{m}.png" for n in screens for m in ("light", "dark")}

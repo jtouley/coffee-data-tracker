@@ -4,6 +4,7 @@ Screens are server-rendered HTML with a little JavaScript (static/app.js) and no
 JSON POST that the phone first puts in an IndexedDB outbox, with an id it generated, so a retry is safe.
 """
 
+import asyncio
 import hashlib
 import json
 import logging
@@ -15,6 +16,7 @@ from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response
+from fastapi.concurrency import run_in_threadpool
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import HTMLResponse, JSONResponse, PlainTextResponse, RedirectResponse
@@ -24,14 +26,16 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from coffeedata import shots
 from coffeedata.lake import Lake
+from coffeedata.models import SAFE_ID
 
-from . import views, web
+from . import labels, photos, views, web
 from .accounts import AccountError
 from .auth import COOKIE, Auth, Sessions, User, from_env, missing_secrets
 from .store import Invalid, NotFound, Store
 
 HERE = Path(__file__).parent
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
+READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 log = logging.getLogger(__name__)
 
 
@@ -66,7 +70,12 @@ def gear_counts(shots_: list) -> dict[str, int]:
     return out
 
 
-def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
+def create_app(
+    lake: Lake | None = None,
+    auth: Auth | None = None,
+    photos_lake: Lake | None = None,
+    labels_client: Any = None,
+) -> FastAPI:
     if auth is None:
         missing = missing_secrets()
         if missing:
@@ -83,7 +92,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
-    app.add_middleware(web.LimitBody, default=MAX_BODY)
+    app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
 
     async def on_error(request: Request) -> Response:
@@ -298,8 +307,8 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
         """The serif name and the line under it."""
         c = store.coffee(coffee_id)
         if c:
-            facts = ", ".join(x for x in (c["origin_country"], c["process"]) if x)
-            return c["title"], " · ".join(x for x in (c["roaster_name"], facts) if x)
+            facts = ", ".join(x for x in (c.get("origin_country"), c.get("process")) if x)
+            return c.get("title") or "", " · ".join(x for x in (c.get("roaster_name"), facts) if x)
         return freetext or (bag and bag.coffee_freetext) or "Unnamed coffee", "Not matched to the catalog"
 
     # --- invites, joining and resetting --------------------------------------------------------------
@@ -557,7 +566,7 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
 
     @app.get("/bag/new", response_class=HTMLResponse)
     def new_bag(request: Request, me: Me) -> HTMLResponse:
-        return page(request, "bag.html", me=me)
+        return page(request, "bag.html", me=me, reading=labels_client is not None or labels.available())
 
     # --- writes --------------------------------------------------------------------------------------
 
@@ -583,6 +592,78 @@ def create_app(lake: Lake | None = None, auth: Auth | None = None) -> FastAPI:
     @app.post("/api/equipment")
     def post_equipment(body: dict, me: Writer) -> dict:
         return {"equipment_id": run(store.save_equipment, me.user_id, body).equipment_id}
+
+    photo_lake = photos_lake or Lake.photos()
+    reads_today: dict[
+        tuple[str, str], int
+    ] = {}  # (user, date) -> label reads; in memory, so a restart resets it
+
+    def describe(coffee_id: str | None) -> dict | None:
+        c = store.coffee(coffee_id)
+        if not c:
+            return None
+        notes = c.get("tasting_notes")
+        return {
+            "coffee_id": coffee_id,
+            "title": c.get("title"),
+            "roaster": " · ".join(x for x in (c.get("roaster_name"), c.get("roaster_state")) if x),
+            "origin": ", ".join(
+                x for x in (c.get("origin_country"), c.get("origin_region"), c.get("process")) if x
+            ),
+            "notes": ", ".join(str(n) for n in notes) if notes is not None and len(notes) else None,
+            "price": f"${c['price_per_100g']:.2f} / 100 g" if c.get("price_per_100g") else None,
+            "in_stock": c.get("in_stock"),
+        }
+
+    @app.post("/api/photos/{photo_id}")
+    async def post_photo(photo_id: str, request: Request, me: Writer) -> dict:
+        """A bag photo: checked, re-encoded without metadata, saved, then read by Claude and matched in Python.
+        Reading needs ANTHROPIC_API_KEY and is capped per account per day; without either, the person types it."""
+        if not SAFE_ID.fullmatch(photo_id):
+            raise HTTPException(422, "bad photo id")
+        if request.headers.get("content-type", "").split(";")[0] not in (
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+        ):
+            raise HTTPException(415, "Send the photo as JPEG, PNG or WebP.")
+        try:
+            # Decoding, resizing and encoding take a moment of CPU: off the event loop, like the save and the read.
+            photo = await run_in_threadpool(photos.normalize, await request.body())
+        except photos.BadPhoto as e:
+            raise HTTPException(422, str(e)) from None
+        key = (me.user_id, datetime.now(UTC).date().isoformat())
+        if reads_today.get(key, 0) >= READS_PER_DAY:
+            # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
+            return {"photo_id": None, "status": "limit", "label": None, "raw": None}
+        reads_today[key] = reads_today.get(key, 0) + 1
+        # The dataset commit (which can retry for a while) and the label read run side by side.
+        _, result = await asyncio.gather(
+            run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
+            run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
+        )
+        out: dict[str, Any] = {
+            "photo_id": photo_id,
+            "status": result.status,
+            "label": result.label,
+            "raw": result.raw,
+        }
+        if result.status == "read" and result.label:
+            out |= await run_in_threadpool(matched, result)
+        return out
+
+    def matched(result: labels.Read) -> dict[str, Any]:
+        """The catalog match for a read label, described for the screen."""
+        label = result.label or {}
+        coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
+        described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
+        roast = result.roast_date()
+        return {
+            "match": describe(coffee_id),
+            "score": candidates[0]["score"] if coffee_id and candidates else None,
+            "candidates": [d | {"score": score} for d, score in described if d],
+            "roast_date": roast.isoformat() if roast else None,
+        }
 
     @app.post("/api/bags")
     def post_bag(body: dict, me: Writer) -> dict:

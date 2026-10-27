@@ -374,19 +374,193 @@ function undo(strip) {
 
 // --- New bag and equipment ---------------------------------------------------------------------------
 
-function newBag(form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const coffee = form.coffee_freetext.value.trim();
-    if (!coffee) return hint(form, "Type the roaster and coffee.");
-    const body = { bag_id: uuid(), coffee_freetext: coffee };
-    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+// New bag: a photo of the label, read by the server (Claude reads, Python matches), or the coffee typed.
+function newBag(root) {
+  const form = document.getElementById("bag");
+  const input = document.getElementById("photo");
+  const steps = root.querySelectorAll("[data-step]");
+  const retakeTop = document.querySelector("[data-retake]");
+  const step = (name) => {
+    for (const s of steps) s.hidden = s.dataset.step !== name;
+    if (retakeTop) retakeTop.hidden = !["match", "pick"].includes(name);
+    scrollTo(0, 0);
+    root.querySelector(`[data-step="${name}"] h1`)?.focus({ preventScroll: true }); // screen readers hear the step
+  };
+  let read = null; // what the label said: carried into the bag, whichever way it's chosen
+  let attempt = 0; // which photo the screen is waiting on; replies for any other are dropped
+  let saving = false;
+
+  const save = async (body, where) => {
+    if (saving) return; // a second tap mustn't make a second bag
+    saving = true;
+    for (const b of root.querySelectorAll("button")) b.disabled = true;
+    body = { bag_id: uuid(), ...body };
+    if (read) Object.assign(body, { photo_id: read.photo_id, read_json: read.raw });
+    if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
+    if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
       location.href = "/log";
     } catch (err) {
-      hint(form, why(err));
+      hint(where, why(err));
+      saving = false;
+      for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
+  };
+  const said = () => [read?.label?.roaster, read?.label?.coffee && `“${read.label.coffee}”`].filter(Boolean).join(", ");
+  const typed = () => {
+    if (read?.label) form.coffee_freetext.value = [read.label.roaster, read.label.coffee].filter(Boolean).join(" ");
+    if (read?.roast_date) form.roast_date.value = read.roast_date;
+    form.roast_date.dispatchEvent(new Event("input"));
+    step("type");
+  };
+  const fill = (sel, text) => {
+    const el = root.querySelector(`[data-f="${sel}"]`);
+    el.textContent = text || "";
+    if (el.tagName === "DD") el.hidden = el.previousElementSibling.hidden = !text;
+  };
+  const days = (iso) => Math.round((Date.now() - new Date(`${iso}T12:00:00`)) / 86400000);
+  const showMatch = (m) => {
+    fill("title", m.title);
+    fill("roaster", m.roaster);
+    const d = read.roast_date;
+    fill("roasted", d ? `${new Date(`${d}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })} · day ${days(d)} · read from the bag` : "");
+    fill("origin", m.origin);
+    fill("notes", m.notes);
+    fill("price", m.price);
+    fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
+    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
+    step("match");
+    root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
+  };
+  const chevron = () => {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 8 14");
+    svg.setAttribute("aria-hidden", "true");
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M1 1l6 6-6 6");
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", "currentColor");
+    path.setAttribute("stroke-width", "1.75");
+    svg.append(path);
+    return svg;
+  };
+  // Candidates: tapping one shows its card to confirm, so a slip of the thumb doesn't save the wrong coffee.
+  const showPick = (fromMatch = false) => {
+    const list = root.querySelector("[data-candidates]");
+    list.replaceChildren();
+    const others = (read.candidates || []).filter((c) => !fromMatch || c.coffee_id !== read.match?.coffee_id);
+    for (const c of others) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "pickrow";
+      const name = document.createElement("span");
+      name.className = "name";
+      name.textContent = c.title;
+      const meta = document.createElement("span");
+      meta.className = "meta";
+      const sameRoaster = read.label?.roaster && c.roaster?.toLowerCase().includes(read.label.roaster.toLowerCase());
+      meta.textContent = [sameRoaster ? "" : c.roaster, c.origin, c.in_stock == null ? "" : c.in_stock ? "in stock" : "sold out"]
+        .filter(Boolean).join(" · ");
+      name.append(meta);
+      const score = document.createElement("span");
+      score.className = "meta";
+      score.textContent = c.score ? `match ${c.score}` : "";
+      b.append(name, score, chevron());
+      b.onclick = () => showMatch(c);
+      list.append(b);
+    }
+    const when = read.roast_date ? `, roasted ${new Date(`${read.roast_date}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })}` : "";
+    root.querySelector("[data-said]").textContent = fromMatch
+      ? `Other coffees in the catalog that could be it.`
+      : others.length
+        ? `The bag says ${said()}${when}. These are the closest in the catalog.`
+        : `The bag says ${said()}${when}, but nothing like it is in the catalog. Type it and it’s saved as written.`;
+    const none = root.querySelector("[data-none]");
+    none.className = others.length ? "btn text" : "btn primary";
+    none.textContent = others.length ? "None of these: type the coffee" : "Type the coffee";
+    step("pick");
+  };
+  // Retake leads only where a new photo can help; otherwise typing is the one filled button.
+  const failed = (title, body, retake = true) => {
+    fill("failed-title", title);
+    fill("failed-body", body);
+    const r = root.querySelector("[data-failed-retake]");
+    const t = root.querySelector("[data-failed-type]");
+    r.hidden = !retake;
+    t.className = retake ? "btn text" : "btn primary";
+    step("failed");
+  };
+
+  // The phone shrinks the photo to 1600 px and re-encodes it, which also drops its EXIF (location included).
+  const shrink = async (file) => {
+    try {
+      const bmp = await createImageBitmap(file, { imageOrientation: "from-image" });
+      const scale = Math.min(1, 1600 / Math.max(bmp.width, bmp.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.round(bmp.width * scale);
+      canvas.height = Math.round(bmp.height * scale);
+      canvas.getContext("2d").drawImage(bmp, 0, 0, canvas.width, canvas.height);
+      return await new Promise((resolve) => canvas.toBlob(resolve, "image/jpeg", 0.85));
+    } catch {
+      return file; // the server re-encodes it anyway
+    }
+  };
+
+  const take = () => input?.click();
+  for (const b of root.querySelectorAll("[data-take]")) b.onclick = take;
+  for (const b of root.querySelectorAll("[data-goto]")) {
+    b.onclick = () => {
+      if (b.dataset.goto === "type") attempt++; // typing instead: a read still on its way is dropped
+      return b.dataset.goto === "type" ? typed() : b.dataset.goto === "pick" ? showPick(Boolean(read?.match)) : step(b.dataset.goto);
+    };
+  }
+  input?.addEventListener("change", async () => {
+    const file = input.files[0];
+    input.value = "";
+    if (!file) return;
+    read = null; // a new photo: nothing from the last one carries over, even if this one fails
+    const mine = ++attempt;
+    const photo = await shrink(file);
+    const url = URL.createObjectURL(photo);
+    for (const img of root.querySelectorAll("[data-preview]")) img.src = url;
+    step("reading");
+    // Set after the step shows, so a screen reader announces it.
+    setTimeout(() => { root.querySelector("[data-reading-status]").textContent = "Reading the label. Usually 2 to 5 seconds."; }, 50);
+    const id = uuid();
+    try {
+      const r = await fetch(`/api/photos/${id}`, {
+        method: "POST",
+        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch" },
+        body: photo,
+      });
+      const body = await r.json().catch(() => ({}));
+      if (mine !== attempt) return;
+      if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
+      read = body;
+      tick(8);
+      if (body.status === "read" && body.match) return showMatch(body.match);
+      if (body.status === "read") return showPick();
+      const why = {
+        illegible: "The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee.",
+        limit: "That’s today’s limit of label reads. Type the coffee, or try the photo again tomorrow.",
+        no_key: "Reading labels isn’t set up on this server. Type the coffee.",
+      }[body.status] || "The label couldn’t be read just now. Retake it, or type the coffee.";
+      const canRetake = !["limit", "no_key"].includes(body.status);
+      failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
+    } catch {
+      if (mine !== attempt) return;
+      failed("No connection", "Reading the label needs the network. Type the coffee, and it’s saved once you’re back online.", false);
+    }
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const coffee = form.coffee_freetext.value.trim();
+    if (!coffee) return hint(form, "Type the roaster and coffee.");
+    const body = { coffee_freetext: coffee };
+    if (form.roast_date.value) body.roast_date = form.roast_date.value;
+    save(body, form);
   });
 }
 
@@ -624,7 +798,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (shot) logShot(shot);
   const strip = document.querySelector("[data-undo]");
   if (strip) undo(strip);
-  const bag = document.getElementById("bag");
+  const bag = document.getElementById("newbag");
   if (bag) newBag(bag);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
   const theme = document.querySelector("[data-theme-choice]");
