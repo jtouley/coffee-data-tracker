@@ -7,11 +7,11 @@ are in [mockups/](mockups/).
 Today a shot reaches the lake through the MCP server or the "Log a shot" issue form. Both work. Neither is pleasant
 at the machine at 7am with a portafilter in one hand: the issue form is nine text fields, and the MCP route needs a
 laptop or a chat. This plan describes a small phone web app that makes the common case (same coffee as yesterday,
-small grind change) three taps, and makes a new bag one photo and one tap.
+small grind change) the timer plus three taps, and makes a new bag one photo and one tap.
 
 ## Goals
 
-- Log a repeat shot in three taps, one-handed, without typing.
+- Log a repeat shot one-handed, without typing: start and stop the timer, then three taps.
 - Start a new bag from a photo of it: read the roaster, coffee and roast date, match it to `dim_coffee`, confirm
   with one tap.
 - Record equipment once (grinder, machine, basket) and have every shot point at the grinder it was ground on, so a
@@ -63,11 +63,12 @@ finished.
 
 ### 2. Log a shot
 
-1. Today shows the current bag and a "Pull again" card with the last recipe ("18.0 → 36.4 g · 28 s · grind 12").
+1. Today shows the current bag and a "Pull again" button with the last recipe ("18.0 → 36.4 g · grind 11").
 2. "Pull again" opens the shot form prefilled from the last shot of this bag (or of this coffee, if the bag is
-   new): dose, yield, time, grind, water temp, grinder, basket, brew method, milk drink. If the last shot's advice
-   said "go finer to 11", the grind field shows 12 with a suggested 11 next to it; one tap takes the suggestion.
-   The app never changes the value on its own.
+   new): dose, yield, grind, water temp, grinder, basket, brew method, milk drink. Time is not prefilled: it starts
+   as "Not timed · last 29 s", because a copied time would be saved as if it were measured and would feed the
+   advice. If the last shot's advice said "go finer to 11", the grind field shows 12 with a "Try 11" chip; one tap
+   takes the suggestion. The app never changes a value on its own.
 3. Adjust what changed with steppers (dose and yield in 0.1 g, time in 1 s, grind in the grinder's own step size).
    Time has two ways in, both always available: the built-in timer (Start when the pump starts, Stop when it
    stops) or typing it. "Type" opens a numeric keypad; tapping any numeral does the same for that field.
@@ -77,8 +78,9 @@ finished.
 5. "Save shot". The saved screen shows the ratio, the time against the 25 to 32 s window and the next-shot advice,
    with "Undo" for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
 
-Repeat shot with nothing changed: Pull again, "Same as last", Save. Three taps. If the taste or rating differs:
-Pull again, taste, rating, Save. Four taps. Using the timer adds two (Start, Stop).
+Repeat shot that tasted the same: Pull again, Start, Stop, "Same as last", Save. Three taps plus the timer. If the
+taste or rating differs, it's taste and rating instead of "Same as last": four taps plus the timer. Saving without
+a time turns the button into "Save with 29 s?", so a forgotten timer costs one extra tap rather than a wrong record.
 
 ### 3. Review a coffee
 
@@ -116,6 +118,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 | First run | No bag yet: photograph one, or add a grinder | `mockups/first-run.html` |
 | Reading | The bag is being read: skeleton card, "Type it instead" | `mockups/reading.html` |
 | Capture | Camera and match card | `mockups/capture.html` |
+| Read failed | The label couldn't be read: Retake, or type the coffee | `mockups/read-failed.html` |
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
 | Saved | Ratio, time window, advice, undo | `mockups/saved.html` |
 | Coffee | One coffee: catalog facts, best recipe, chart, shots | `mockups/coffee.html` |
@@ -198,8 +201,12 @@ password writes a new `users` record.
 **Sign-up.** Only with an invite code.
 
 1. The owner taps "Invite someone" and gets a code like `K7QD-M2XF-9RPA-T4WE` (80 random bits, base32), valid for
-   7 days and usable once. Only its SHA-256 is stored; the plain code is shown once, to copy and send.
-2. The invitee opens the app, enters the code, picks a username and a password, and is signed in.
+   7 days and usable once, and a link, `app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE`. "Share link" opens
+   Android's share sheet. Only the code's SHA-256 is stored, so it can't be shown again later; a pending invite
+   offers "Send a new link", which revokes the old code and makes a new one. The code sits after `#`, so it never
+   reaches server logs as part of the URL.
+2. The invitee opens the link, lands on "jtouley invited you" with the code filled in, picks a username and a
+   password, and is signed in. Typing the code by hand also works.
 3. Bootstrapping the owner: when the `users` table is empty, the first sign-up needs `OWNER_SETUP_CODE`, a Space
    secret, and creates the `owner` account. After that the secret does nothing.
 
@@ -518,3 +525,5 @@ app, but it needs the bag and photo tables from 1 first.
 1. Is 0.5 the right stepper step on the DF64's dial, or do you move it in whole numbers?
 2. Remove the "Log a shot" issue form once the app works (the plan's default), or keep it as a fallback?
 3. How many people do you expect to invite? It decides whether the 10-reads-a-day cap is about right.
+4. Name: the sign-in screen now says "registry.coffee", since that will be the address. Should the project (repo,
+   public dataset, site title) be renamed to match, or keep "Coffee Data"?

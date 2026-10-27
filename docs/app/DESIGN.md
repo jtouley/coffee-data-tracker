@@ -1,6 +1,6 @@
 # Shot-logging app: design
 
-The plan is in [PLAN.md](PLAN.md). Mockups for eleven screens are in [mockups/](mockups/), each a self-contained
+The plan is in [PLAN.md](PLAN.md). Mockups for twelve screens are in [mockups/](mockups/), each a self-contained
 HTML file with light and dark screenshots at 390 px. They show the owner's equipment (DF64 V2, Lelit Bianca,
 Pullman basket); the coffees, prices and shots are sample data.
 
@@ -96,13 +96,49 @@ changed, and which rule drove it:
 | Tracking now changes with size: −0.03em on the 112 px ratio, −0.015em on other numerals, +0.01em on 13 px labels. Serif headings use `text-wrap: balance`. | Tracking is size-specific, never one value. | apple-design §15; Krehel better-typography |
 | Field rows got 10 px of space above the label so the label belongs to its number, not the rule above it. | Proximity implies relationship. | apple-design §16; Owl-Listener |
 | The advice on Today is now set in the serif, like on Saved, so "what to do next" always has the same voice. | Things that look the same behave the same. | apple-design §16 |
-| "11 of 50, lower is finer" became "11 of 50". Direction lives in the grinder profile and the taste segments ("grind finer"). | Concise, specific labels. | Krehel better-writing |
+| "11, lower is finer" became "11 of 90". Direction lives in the grinder profile and the taste segments ("grind finer"). | Concise, specific labels. | Krehel better-writing |
 | Chart text moved from `--ink-3` (3.5:1) to `--ink-2` (6.5:1). | Every text pair meets 4.5:1. | Krehel better-colors; Owl-Listener color-system |
 | Mockups now have a plain status bar so they read as phone screens. | | |
 
 Things I considered and left alone: a scrub strip for values (MengTo, Owl-Listener) is a good later addition, but the
 buttons have to exist anyway; the left-hand mirror (Owl-Listener) is a setting, not a different mockup; Braun-style
 uppercase labels (web-design-engineer) stay out for the reason given above.
+
+## Re-review
+
+After accounts, invites and the domain were added, six reviewers each went over all eleven screens of the time and this
+document against one skill: apple-design, Krehel's skills, MengTo's no-slop audit, Owl-Listener's heuristic
+evaluation, web-design-engineer and landing-page-design. They worked independently and didn't see each other's
+notes. They agreed far more than they disagreed. What they found, and what changed:
+
+| Finding | Raised by | Change |
+|---|---|---|
+| The sample data contradicted itself. Log shot said the last shot was 27 s with a "was 12" chip while Today said 29 s at grind 11; "Pull again" said 36 g against 36.4 g elsewhere; "$2.62 / 100 g" for a 340 g bag at $22 is wrong by 2.5×. | all six | One dataset across every screen (listed at the top of the generator). The price is $6.47 / 100 g. No hint chip when nothing changed. |
+| The time was prefilled from the last shot, so skipping the timer saved a stale time and fed it to the advice. | Owl-Listener (severity 4) | Time starts as "Not timed · last 29 s". Saving without a time turns the button into "Save with 29 s?" for one more tap. |
+| Destructive actions looked routine: "Sign out everywhere" in the accent like "Invite someone", "Revoke" in the bitter plum. | five | A `--danger` token, used only for destructive actions and errors. "Sign out on all devices" and "Revoke invite" use it, without a chevron, and are undoable. Taste colours mean taste only. |
+| Outlined pills meant "tap me" on Log shot and "status" on Setup and Invite. | four | Outlined chips are always tappable. Status ("owner", "member", "not used yet") is plain 13 px text after the name. "Default" is gone until there are two of a kind. |
+| In dark mode the full-width `#e0a46e` button was the brightest thing on screen, after the director pass had removed the bright undo bar for that reason. | apple-design, Owl-Listener, web-design-engineer | A separate `--accent-fill` (`#9a5524` in dark, 5.4:1 with its text). `#e0a46e` stays for text links. |
+| Twenty-two font sizes, spacing off the grid, four radii nobody declared, about a hundred inline styles. Page titles were serif on three screens and sans on Setup. | web-design-engineer, apple-design, MengTo, Krehel | The scale is 12 13 15 17 20 24 34 44 56 112; spacing 4 8 12 16 24 32 48; radii 4 6 8 14. Every page title is the serif at 34 px. The generator uses classes, not inline sizes. |
+| Control borders (`#c4bcb0`) were 1.7:1 against the paper, below the 3:1 non-text minimum. `--ink-3` was used for text in tags and placeholders. | Owl-Listener, Krehel, web-design-engineer | `--control` (3.3:1 or better) for every control border. `--ink-3` appears nowhere as text. Chart text is 12 px. |
+| No way out of the camera; no read-failed state; no password recovery, no Show toggle, no error copy on sign-in. | apple-design, Owl-Listener, landing-page-design | × and Retake on the camera, a read-failed screen, Show in password fields, "Ask jtouley for a reset code" on sign-in, and error copy in Components below. |
+| An invitee landed on the owner's sign-in screen; Copy and Share competed as equal buttons. | landing-page-design | Share sends `app.registry.coffee/join#<code>`, which opens "jtouley invited you" with the code filled in. Share link is the one primary action; Copy link is a text button inside the code box. |
+| The dotted path on the target ran back over itself along one line, so the order couldn't be read. | Owl-Listener, Krehel, landing-page-design | Marks are numbered in order, with a paper halo behind each number; the path is 1.5 px `--ink-2`. The sample shots spread in ratio as real ones would. |
+| Jargon: "score 94", "EXIF removed", the basket's SKU, "1 bag read today of 10". The Reading screen said "only the label text is used", which wasn't true: the image goes to Claude. | four | "Read in 3.2 s · location removed"; no score; no SKU; "1 of 10 bag reads used today"; "The photo is sent to Claude to read the label, with its location removed." |
+| The scroll-edge fade sat inside the opaque dock, so it could never show, and the tab bar still had a hairline. | apple-design | The fade sits 20 px above the dock and the tab bar, over the content; no hairline. Sign in turns it off because the button follows the field directly. |
+| The two advice lines said different things in different sizes. | apple-design, Krehel | One string, "In the window. Keep grind 11.", in the serif at 24 px on Today and Saved. |
+| Rating 1 to 5 had no anchor. | Owl-Listener | "worst" and "best" under 1 and 5. |
+| No manual theme switch. | Owl-Listener | Setup has Theme: Same as phone, Light, Dark. |
+| The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". The repo and the public dataset keep "Coffee Data" for now (an open question in the plan). |
+
+Deliberate deviations the reviewers pointed out and that stay:
+
+- Two typefaces (landing-page-design allows one). The condensed numeral and the serif name do different jobs.
+- Sizes and radii aren't Tailwind's scale (landing-page-design). They're this app's own declared scale.
+- No word-by-word reveal (landing-page-design calls it mandatory). It delays the one thing you want to read.
+- The undo countdown is linear (landing-page-design forbids default curves). A countdown that eases misreports the
+  time left.
+- Press feedback is 100 ms at 0.97 (apple-design) rather than 150 ms at 0.96 (Krehel). At 7am, shorter wins.
+- No Braun-style uppercase labels (web-design-engineer's Rams recipe). Sentence case reads better half awake.
 
 ## Tokens
 
@@ -111,151 +147,177 @@ uppercase labels (web-design-engineer) stay out for the reason given above.
 | Token | Light | Dark | Use |
 |---|---|---|---|
 | `--paper` | `#f6f5f2` | `#14110f` | page |
-| `--panel` | `#ece9e2` | `#1d1916` | grouped background, rarely used |
-| `--sheet` | `#fffdf9` | `#221e1a` | bottom sheets, stepper buttons |
-| `--rule` | `#dcd6cc` | `#342e28` | hairlines |
-| `--rule-strong` | `#c4bcb0` | `#4a423a` | control borders, axes |
+| `--panel` | `#ece9e2` | `#1d1916` | skeleton blocks |
+| `--sheet` | `#fffdf9` | `#221e1a` | sheets, inputs, stepper buttons |
+| `--rule` | `#dcd6cc` | `#342e28` | hairlines between rows (not control edges) |
+| `--control` | `#8f8578` | `#7a6f63` | every control's border, the chart axis (≥ 3.3:1 on paper and sheet) |
 | `--ink` | `#1b1714` | `#efe8de` | text, numerals |
-| `--ink-2` | `#5f574e` | `#a99e91` | labels, secondary text (≥ 6:1 on paper) |
-| `--ink-3` | `#8a8075` | `#7c7166` | gridlines and the dotted shot path; never text (3.5:1) |
-| `--accent` | `#8a4b1d` | `#e0a46e` | the one primary action, links, the signal dot |
-| `--accent-press` | `#6f3c17` | `#c98d58` | pressed primary |
-| `--on-accent` | `#fff8f0` | `#1c1208` | text on accent |
-| `--sour` / `--sour-bg` | `#7a5a00` / `#f5eac6` | `#e6c45c` / `#2c2511` | sour tag and segment |
+| `--ink-2` | `#5f574e` | `#a99e91` | labels, secondary text, chart text (≥ 6.3:1) |
+| `--ink-3` | `#8a8075` | `#7c7166` | nothing that has to be read; reserved |
+| `--accent` | `#8a4b1d` | `#e0a46e` | text you can tap: back links, text buttons, chips; the active-tab dot |
+| `--accent-fill` | `#8a4b1d` | `#9a5524` | the one primary button per screen |
+| `--on-accent` | `#fff8f0` | `#fff8f0` | text on `--accent-fill` (6.4:1 light, 5.4:1 dark) |
+| `--danger` | `#b3261e` | `#f2836f` | destructive actions and errors only (6.0:1, 7.4:1) |
+| `--sour` / `--sour-bg` | `#7a5a00` / `#f5eac6` | `#e6c45c` / `#2c2511` | sour |
 | `--balanced` / `--balanced-bg` | `#2d6a45` / `#e0ede3` | `#86c79c` / `#15261b` | balanced; the target window |
 | `--bitter` / `--bitter-bg` | `#7f2f4c` / `#f3e0e7` | `#e99ab4` / `#2f1820` | bitter |
 | `--window` | `rgba(45,106,69,.10)` | `rgba(134,199,156,.10)` | target window fill |
+| `--camera` / `--on-camera` | `#1a1714` / `#f2ece4` | `#0b0a09` / `#f2ece4` | the camera view and its controls |
+| `--photo-a` / `--photo-b` | `#d9cfc0` / `#cfc3b2` | `#2b2621` / `#26211c` | the photo placeholder in mockups only |
 
-Light keeps the site's paper and accent exactly, so the app and the public site look related. Dark is warm and a
-step less contrasty than pure white on black, for a dark kitchen. Every text pair is at least 4.5:1; the taste
-text-on-tint pairs are at least 5.3:1 in light and 7.6:1 in dark.
+One colour, one meaning. Taste colours appear only on taste. Green isn't used for "synced" or "valid" (those are a
+check mark in ink). The accent marks what you can tap; nothing static uses it. With `prefers-contrast: more`,
+`--rule` takes the value of `--control`.
 
 ### Type
 
-| Role | Family | Size / weight | Notes |
+The scale is 12, 13, 15, 17, 20, 24, 34, 44, 56 and 112 px. Nothing else.
+
+| Role | Family | Size / weight | Tracking, leading |
 |---|---|---|---|
-| Hero numeral (saved ratio) | Archivo, width 72% | 112 / 500 | tabular figures, tracking −0.01em, line height 1 |
-| Field numeral | Archivo, width 72% | 56 / 500 | |
-| Summary numerals | Archivo, width 72% | 34–44 / 500 | |
-| Units | Archivo, width 85% | 18–20 / 400 | `--ink-2`, sits on the numeral's baseline |
-| Coffee name | Newsreader | 24–34 / 500 | optical sizing on |
-| Advice sentence | Newsreader | 24 / 500, line height 1.25 | |
-| Body | Archivo | 16 / 400 | inputs never below 16 px, so iOS doesn't zoom |
-| Button | Archivo | 17 / 600 | |
-| Label | Archivo | 13 / 500, sentence case | `--ink-2` |
-| Chart text | Archivo, width 85% | 11 / 500 | `--ink-2` |
+| Hero numeral (Saved ratio) | Archivo, width 72% | 112 / 500 | −0.03em, 1 |
+| Field numeral | Archivo, width 72% | 56 / 500 | −0.015em, 1 |
+| Summary numerals, invite code | Archivo, width 72% | 44 or 34 / 500 | −0.015em, 1 |
+| List numerals | Archivo, width 72% | 20 / 500 | −0.015em |
+| Units | Archivo, width 85% | 20 beside 56 and 44, 17 beside 34 and 24, 13 beside 20 | `--ink-2`, on the baseline |
+| Wordmark | Newsreader | 44 / 500 | −0.02em, 1 |
+| Page title | Newsreader | 34 / 500 | −0.02em, 1.1 |
+| Coffee name, advice | Newsreader | 24 / 500 | 0, 1.15 to 1.25 |
+| Row title, button, input | Archivo | 17 / 600 (inputs 400) | 0 |
+| Body | Archivo | 15 / 400 | 0, 1.45 |
+| Label | Archivo | 13 / 500 | +0.01em |
+| Section label | Archivo | 13 / 600 | 0 |
+| Chart text, anchors, photo caption | Archivo | 12 / 500 | 0 |
 
-Both families come from Google Fonts. Load only the axes used (`Archivo:wdth,wght@62..125,400..700`,
-`Newsreader:opsz,wght@6..72,400..600`).
+In the app, sizes are written in rem so they follow Android's font-size setting. At 130% and above, the field row
+stacks its steppers under the numeral instead of beside it.
 
-### Spacing and size
+### Spacing, size and shape
 
-- 4 px base. Steps used: 4, 8, 12, 16, 24, 32.
-- 16 px side gutter.
-- Field rows are at least 80 px tall. Stepper buttons are 56 × 56 with an 8 px gap. Primary buttons are 60 px tall
-  and full width.
-- Rating pips are 52 px tall. Taste segments are 56 px.
-- The bottom dock respects the home-indicator safe area (`env(safe-area-inset-bottom)`; 34 px in the mockups).
-- Use `100dvh`, not `100vh`, so the dock doesn't hide behind the browser bar.
+- Spacing steps: 4, 8, 12, 16, 24, 32, 48. Side gutter 16.
+- Radii: 4 for chips and taste tags, 6 for photos, 8 for buttons, inputs and controls, 14 for the top of a sheet.
+- Tap targets: at least 48 × 48, including back links and text buttons. Field rows at least 88 tall; stepper buttons
+  56 × 56 with 8 between; primary buttons 60 tall and full width; taste segments 56; rating pips 52.
+- The dock and the tab bar respect the gesture-bar safe area (`env(safe-area-inset-bottom)`; 32 in the mockups).
+  Use `100dvh`, not `100vh`.
 
 ### Motion
 
-| What | Duration | Easing |
-|---|---|---|
-| Press (buttons, steppers) | 100 ms, scale 0.97, on pointer-down | ease-out |
-| Stepper value change | instant | none |
-| Segment selection | 120 ms, background colour only | ease-out |
-| Sheet in / out | spring, damping 1.0, response 0.3 s; follows the finger when dragged | critically damped, interruptible |
-| Saved: new mark moves to its place on the target | 360 ms | same curve, no overshoot |
-| Saved: advice fades in | 200 ms, 120 ms after the mark lands | ease-out |
-| Undo bar countdown | 5 s, linear | the only linear motion |
+| What | How |
+|---|---|
+| Press (buttons, steppers) | on pointer-down, scale 0.97, 100 ms ease-out; not on disabled buttons |
+| Stepper value change | instant |
+| Segment and pip selection, including "Same as last" filling them | background colour, 120 ms ease-out, with the 8 ms haptic tick |
+| Sheet in / out | spring, damping 1.0, response 0.3 s; rises from and returns to the bottom edge; follows the finger when dragged |
+| Saved: the new mark moves to its place on the target | spring, damping 1.0, response 0.36 s |
+| Saved: advice fades in | 200 ms ease-out, after the mark settles |
+| Undo countdown | 5 s, linear (a countdown should be honest about time) |
 
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
-`prefers-reduced-motion: reduce`, everything is an instant swap or a plain crossfade. No `transition: all`.
+`prefers-reduced-motion: reduce`, every movement becomes an instant swap or a short crossfade. No `transition: all`.
 
-Haptics: the owner uses Android, where Chrome supports `navigator.vibrate`. One 8 ms tick per stepper step, a 12 ms
-tick when the timer starts and stops, and two short ticks on save. They fire on the same frame as the visual change
-(apple-design §13). Nothing depends on them, so the app still works where they're missing.
+Haptics (Android Chrome): an 8 ms tick per stepper step and selection, 12 ms when the timer starts and stops, two
+short ticks on save, fired on the same frame as the visual change.
 
 ## Components
 
-**Field row.** Label above, numeral with unit below, steppers on the right. The label can carry a hint chip ("was
-12") when the value differs from the last shot or advice suggests a change; tapping the chip applies it. Long-press
-on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a numeric keypad for big jumps. A
-left-hand setting mirrors the steppers to the left edge.
+**Field row.** Label above, numeral and unit below, steppers on the right. When the last shot's advice suggests a
+change, the label carries an accent chip with the suggestion ("Try 11"); tapping it sets the value. The app never
+changes a value on its own. Long-press on a stepper repeats after 400 ms, every 80 ms. Tapping the numeral opens a
+numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 
-**Time field.** The same row, with two buttons in place of the steppers: Start/Stop (120 px wide) and Type
-(56 px). Start when the pump starts; while the timer runs, the numeral ticks once a second and the button reads
-Stop. Type opens the numeric keypad for anyone reading the time off the Bianca's shot timer. Tapping the numeral
-does the same. Both are always there; the app doesn't make you pick a mode.
+**Time field.** Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
+are. While the timer runs, the numeral ticks once a second and the button reads Stop. Saving with no time changes
+the Save button to "Save with 29 s?"; a second tap saves with the last time.
 
-**Same as last.** An accent-outlined chip on the Taste row: "Same as last · Balanced, 4". One tap selects that
-taste and that rating; tapping a different segment or pip afterwards overrides either. Hidden when there's no
-previous shot of this coffee.
+**Same as last.** An accent chip on the Taste row: "Same as last · Balanced, 4". One tap fills the taste segment and
+the rating pip, visibly, with a tick. Tapping another segment or pip afterwards overrides it. Hidden when there's no
+earlier shot of this coffee.
 
-**Taste segments.** Three equal segments, each with the word and what it means for the grind ("grind finer",
-"keep", "grind coarser"). Selected: tinted background, 2 px inset ring in the taste colour. No default selection;
-see Same as last.
+**Taste segments.** Three equal segments with the word and what it means for the grind ("grind finer", "keep",
+"grind coarser"). Selected: tinted background and a 2 px inset ring in the taste colour. No default.
 
-**Rating pips.** Five squares, 1 to 5, none selected by default. Selected is filled with `--ink`.
+**Rating pips.** Five squares, 1 to 5, "worst" and "best" under the ends. None selected by default; selected is
+filled with `--ink`.
 
-**Taste tag.** For lists: the word in the taste colour on its tint, with the shape mark. Never colour alone.
+**Taste tag.** In lists: the word on its tint with the shape mark (hollow circle sour, filled circle balanced, square
+bitter). On the coffee page's chart legend, the same marks with plain `--ink-2` words and no tint, so the legend
+doesn't look like a row of filters.
 
-**Dial-in target.** An SVG, x from 18 to 38 s, y from 1:1.5 to 1:2.7, gridlines at 20/25/30/35 s and 1:1.6/2.0/2.4.
-The window is a dashed rectangle with a light fill and the word "window". Marks per shot by taste shape; the
-newest shot gets a ring. On Today and Saved the marks are joined oldest to newest with a dotted line, so the dial-in
-path is visible. On the coffee page they aren't joined (too many), and a legend sits under it. It has an
-`aria-label`, and the text under it says the same thing in words.
+**Dial-in target.** SVG, 18 to 38 s across, 1:1.6 to 1:2.5 up, gridlines at 20/25/30/35 s and 1:1.8/2.0/2.2/2.4. The
+window is a dashed rectangle with a light fill and the word "window" inside its lower-right corner. On Today and
+Saved, the marks are numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a
+ring. On the coffee page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it
+says the same thing in words.
 
-**Spec sheet.** Two columns, label 112 px and value, hairline between rows. Used for the match card, the catalog
-facts and equipment. Numbers in values use the condensed numeral.
+**Chips.** Outlined, 44 tall, 8 radius. Accent outline for actions ("Same as last", "Try 11"); `--control` outline
+with ink text for a picker (the grinder and basket chip). Never used for status.
 
-**Sheet.** Rounded top corners (14 px), a 36 × 5 px grabber, the sheet colour. Opens with a critically damped
-spring (no overshoot) from where the trigger was, follows the finger 1:1 when dragged, and dismisses on a downward
-flick using the release velocity. With reduced motion it crossfades.
+**Status text.** Role or state after a name, in 13 px `--ink-2` with no border: "jtouley owner", "Invite from Oct
+24 not used yet".
 
-**Reading state.** The match card's shape as a skeleton (no spinner, no shimmer), the line "Looking for roaster,
-coffee and roast date", the expected wait, and "Type it instead" so nobody is stuck waiting for the model.
+**List link.** A 56-tall row with a hairline below, 17 px ink text and an ink-2 chevron when it opens something.
+Actions that happen in place (Sign out) have no chevron. Destructive ones are `--danger`, have no chevron, and give
+a 5 s undo strip rather than a confirmation dialog.
 
-**Bag photo.** 6 px radius with a 1 px inner outline so a pale bag doesn't melt into the paper. In the mockups it's
-an honest hatched placeholder; in the app it's the owner's photo, cropped to the label, dimmed slightly in dark mode.
+**Spec sheet.** Two columns, label 112 px wide in `--ink-2` and value, hairline between rows. For the match card,
+catalog facts and nothing else.
 
-**Dock.** The bottom area holding the primary button (and on Saved, the undo bar). Paper background, safe-area
-padding below, and a 20 px fade at its top edge that only shows when content scrolls under it. No hairline.
+**Text input.** 56 tall, 17 px text, `--sheet` background, `--control` border, 8 radius. The label sits above it and
+stays; hints and errors sit below in 13 px, errors in `--danger`. Focus: accent border plus a 3 px accent ring at
+22%. Password fields have a 48-wide "Show" button inside. `autocomplete` is `username`, `current-password` or
+`new-password`, so Android's password manager fills and saves them. Errors never clear what was typed.
 
-**Navigation.** Three text tabs (Today, Coffees, Setup) with the accent dot above the active one. No icon set is
-needed, and the words are clearer than pictograms. Setup holds equipment and, below it, the account: who you're
-signed in as, "Invite someone" (owner only), "Sign out everywhere" and "Sign out".
+**Invite code.** Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown at 44 px
+across two lines in a dashed box, with the link under it and a "Copy link" text button. The input on Sign up
+accepts it with or without dashes, in any case, and checks it as soon as it's complete.
 
-**Text input.** 56 px tall, 17 px text (never under 16, so Android doesn't zoom), sheet background, 1 px
-`--rule-strong` border, 8 px radius. The label sits above it, always visible; hints and errors sit below in 13 px.
-Focus: an accent border plus a 3 px accent ring at 22% opacity. Username fields use `autocapitalize="none"`,
-`autocomplete="username"`; password fields `autocomplete="current-password"` or `"new-password"`, so Android's
-password manager fills and saves them.
+**Camera.** Full-bleed, `--camera` background, a corner-bracket frame for the bag, × at top left and Retake at top
+right (both 48 × 48, `--on-camera`), and one status line at the bottom left.
 
-**Invite code.** Four groups of four from a base32 alphabet without look-alikes (no 0/O, 1/I/L), shown in the
-condensed numeral at 40 px across two lines in a dashed box, with Copy and Share (Android's share sheet) under it.
-The input on Sign up accepts it with or without dashes, in any case, and validates as soon as it's complete
-("Valid · expires Nov 3" in the balanced colour, or "This code has been used" in the bitter colour).
+**Sheet.** 14 px top corners, a 36 × 5 grabber, `--sheet` background. Dragging down past a third of its height
+dismisses it back to the camera (Retake).
 
-**Sign in and Sign up.** The only screens with no navigation. The wordmark is "Coffee Data" in the serif. Errors
-never say which half was wrong ("That username and password don't match"). Sign up states plainly, above the
-button, that the owner can read the datasets the account's data lives in.
+**Reading state.** The match card's shape as skeleton blocks (no spinner, no shimmer), "Looking for roaster, coffee
+and roast date", the expected wait, the privacy line, and "Type the coffee" so nobody waits on the model.
 
-**Sync status.** Top right: a green dot and "Synced", or the accent dot and "2 waiting to sync". It never blocks
-anything.
+**Bag photo.** 6 radius with a 1 px inner outline so a pale bag doesn't melt into the paper. Dimmed slightly in dark
+mode. In the mockups it's a hatched placeholder.
 
-**Undo bar.** A strip in the sheet colour with a hairline border: "Shot saved" and an accent "Undo", with a thin line
-under Undo that shrinks over 5 seconds. Not inverted, so it doesn't flash in a dark kitchen. Undo writes a
-retraction record.
+**Dock.** The bottom area holding the primary button and at most one text button under it. Paper (or sheet)
+background, a 20 px fade above it where content scrolls under, safe-area padding below, no hairline.
+
+**Navigation.** Three text tabs, Today, Coffees and Setup. The active one is ink, weight 600, with the accent dot
+above it; the others are `--ink-2`. A 20 px fade above, no hairline. Sign in, Sign up and the camera have no tabs.
+
+**Sync status.** Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never blocks anything.
+
+**Undo strip.** `--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
+that shrinks over 5 s. Undo writes a retraction record.
 
 ## Copy
 
-Short, plain and specific. Buttons start with a verb. Advice says what happened and what to do: "Ran fast at 22 s.
-Go finer: 12 → 11." Errors give a way forward: "Couldn't read the bag. Retake it with the label facing the light,
-or search by roaster." No exclamation marks, no "Great shot!".
+Short, plain and specific, in sentence case, with real apostrophes (’). Buttons start with a verb. The same action
+has the same words everywhere ("Type the coffee", never "Type it instead"). Advice says what happened and what to
+do: "Ran fast at 22 s. Go finer: 12 → 11." "In the window. Keep grind 11."
+
+Errors say what happened and what to do next, and keep what was typed:
+
+| Where | Copy |
+|---|---|
+| Sign in, wrong password or username | That username and password don’t match. Check them, or ask jtouley for a reset code. |
+| Sign in, locked | Too many tries. Try again in 15 minutes, or ask jtouley for a reset code. |
+| Sign up, code used or expired | This invite has already been used. Ask jtouley for a new one. / This invite expired on November 3. |
+| Sign up, username taken | Someone already has that username. Try another. |
+| Sign up, short password | Use at least 10 characters. |
+| Reading failed | The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee. |
+| Daily read limit | You’ve used today’s 10 bag reads. Type the coffee, or try again tomorrow. |
+| Offline save | Saved on this phone. It’ll sync when you’re back online. |
+
+The share text for an invite: "Log your espresso shots with me on registry.coffee: app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE
+(works once, until November 3)."
 
 ## What's not designed yet
 
-Search (the fallback from a wrong match), History, the left-hand layout, the numeric keypad, and error states
-(camera denied, read failed, offline capture). They use the same components.
+Search (from "Pick another match" and "Type the coffee"), History, the reset-code entry screen, the left-hand
+layout, the numeric keypad, and the offline and camera-denied states. They use the components above.
