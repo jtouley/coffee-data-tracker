@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 import httpx
 
 from .http import Blocked, PoliteClient
+from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
 
@@ -184,7 +185,7 @@ def osm(states: list[str] | None = None) -> list[dict]:
             try:
                 r = client.post(OVERPASS, data={"data": q})
                 r.raise_for_status()
-                elements = r.json().get("elements", [])
+                elements = scrub_surrogates(r.json()).get("elements", [])
             except (httpx.HTTPError, ValueError) as e:
                 log.warning("overpass %s failed: %s", st, e)
                 continue

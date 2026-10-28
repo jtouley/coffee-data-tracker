@@ -18,6 +18,7 @@ from coffeedata.http import PoliteClient
 from coffeedata.lake import GLOBS, SCHEMA_FILES, SCHEMAS, Lake
 from coffeedata.models import Roaster, payload_hash
 from coffeedata.registry import RoasterState
+from coffeedata.text import scrub_surrogates
 
 from .conftest import load
 from .lakehelp import old_file
@@ -114,13 +115,26 @@ def test_the_manifest_is_published_before_the_first_request(lake, monkeypatch):
     assert [r["mode"] for r in _rows(lake, "run_manifests", "and roaster_id = 'slow.com'")] == [None]
 
 
-def test_a_lone_surrogate_hashes_instead_of_failing_the_roaster():
-    # json.loads accepts a truncated emoji escape; the store's whole catalog must not fail over it.
-    r = Roaster(roaster_id="x.com", name="X", host="x.com", platform="shopify")
-    p = json.loads('{"id": 1, "title": "Kenya \\ud83d", "variants": [{"id": 9, "price": "20.00"}]}')
-    assert re.fullmatch(r"[0-9a-f]{32}", shopify.parse_product(p, r).payload_hash)
-    # Ordinary non-ASCII text hashes exactly as plain UTF-8 did before (surrogatepass changes nothing there).
-    q = {"title": "Café Ñandú 咖啡 ☕"}
+def test_a_lone_surrogate_from_a_store_is_ingested_not_fatal(lake):
+    # json accepts a truncated emoji escape ("\\ud83d"), which can't be encoded as UTF-8: unscrubbed, it failed the
+    # chunk's lake write and stopped the whole ingest. It is replaced with U+FFFD where the JSON is decoded.
+    body = (b'{"products": [{"id": 1, "title": "Kenya \\ud83d", "handle": "kenya", "tags": ["\\udc00x"],'
+            b' "body_html": "<p>Bright \\ud83d</p>", "product_type": "Coffee",'
+            b' "variants": [{"id": 9, "title": "12 oz", "price": "20.00", "grams": 340, "available": true}]}]}')  # fmt: skip
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get("https://onyxcoffeelab.com/products.json").mock(
+            side_effect=[httpx.Response(200, content=body), httpx.Response(200, json={"products": []})]
+        )
+        out = ingest.run(lake, [ONYX], "2026-10-26", workers=1, mode="full")
+    assert out["failures"] == [] and out["products"] == 1
+    [fetch] = _rows(lake, "fetches")
+    [snap] = _rows(lake, "snapshots")
+    assert fetch["status"] == "ok" and snap["title"] == "Kenya \ufffd" and snap["tags"] == ["\ufffdx"]
+    assert re.fullmatch(r"[0-9a-f]{32}", snap["payload_hash"])
+    # Ordinary non-ASCII text is left as it is, and hashes exactly as plain UTF-8 did before.
+    q = {"title": "Café Ñandú 咖啡 ☕", "tags": ["naïve"]}
+    assert scrub_surrogates(q) == q
     raw = json.dumps(q, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
     assert payload_hash(q) == hashlib.sha256(raw.encode()).hexdigest()[:32]
 

@@ -280,7 +280,12 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     current = lake.root / "marts" / "dim_coffee.parquet"
     run(lake, "2026-10-19", RID, FULL[:30])
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-19")  # each build on its run's day: fresh
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert cli.cmd_build(args("2026-10-19")) is True
+    assert len(reads) == 1  # nothing served yet is an answer too: serve doesn't read it again
+    monkeypatch.setattr(quality, "served", real_served)
     first_release = current.read_bytes()
     # What's served has exactly the built columns: a release's path (run_date=.../build=...) must not add any.
     import duckdb

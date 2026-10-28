@@ -15,6 +15,8 @@ from urllib.parse import urlparse
 
 import httpx
 
+from .text import scrub_surrogates
+
 log = logging.getLogger(__name__)
 
 USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
@@ -150,13 +152,14 @@ class PoliteClient:
         assert last_exc is not None
         raise last_exc
 
+    # Every JSON body is decoded with scrub_surrogates, so a store's lone surrogate never reaches a stored row.
     def get_json(self, url: str, **params: str | int | float | bool | None) -> Any:
         """JSON body on a 200 with a JSON payload, else None (for probing, where a miss is an answer)."""
         r = self.get(url, **params)
         if r.status_code != 200:
             return None
         try:
-            return r.json()
+            return scrub_surrogates(r.json())
         except ValueError:
             return None
 
@@ -172,7 +175,7 @@ class PoliteClient:
         if r.status_code != 200:
             raise FetchError(f"HTTP {r.status_code} {url}")
         try:
-            return r.json()
+            return scrub_surrogates(r.json())
         except ValueError as e:
             raise NotCatalog(f"not JSON: {url}") from e
 
@@ -185,6 +188,6 @@ class PoliteClient:
         if r.status_code != 200:
             raise FetchError(f"HTTP {r.status_code} {url}")
         try:
-            return r.json()
+            return scrub_surrogates(r.json())
         except ValueError as e:
             raise FetchError(f"not JSON: {url}") from e

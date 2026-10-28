@@ -38,6 +38,7 @@ RELEASE_TABLES = (
     "public_market_weekly",
 )
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
+_UNREAD = object()  # serve()'s `previous` when the caller hasn't read the served release
 
 
 def _read_json(path: Path) -> dict:
@@ -287,11 +288,11 @@ def serve(
     reason: str,
     db: Path = Path("build/served.duckdb"),
     action: str = "serve",
-    previous: str | None = None,
+    previous: str | None | object = _UNREAD,
 ) -> Path:
     """Make a release the one customers get: its catalog marts replace marts/, marts/release.parquet records it,
     serving_log gets a row for it (`action`: serve or rollback; `previous`: the release it replaces, read from
-    marts/release.parquet when not given), and `db` gets every release table, for the public export and the site.
+    marts/release.parquet when not given; None: nothing was served), and `db` gets every release table, for the public export and the site.
     Returns `db`."""
     import duckdb
     import pyarrow as pa
@@ -307,7 +308,8 @@ def serve(
     missing = [t for t in RELEASE_TABLES if t not in files]
     if missing:
         raise FileNotFoundError(f"release {build_id} is missing {', '.join(missing)}")
-    previous = previous or (served(lake) or {}).get("build_id")
+    if previous is _UNREAD:  # None is an answer (nothing served yet), not a reason to read again
+        previous = (served(lake) or {}).get("build_id")
     if db.exists():
         db.unlink()
     db.parent.mkdir(parents=True, exist_ok=True)

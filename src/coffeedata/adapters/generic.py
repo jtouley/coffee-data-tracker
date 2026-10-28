@@ -12,7 +12,7 @@ import httpx
 from ..http import Blocked, FetchError, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
-from ..text import html_to_text, to_float
+from ..text import html_to_text, scrub_surrogates, to_float
 
 MAX_PAGES = 80
 # Shopify/Woo /product(s)/x, Wix /product-page/x, Square Online /product/x/ID, BigCommerce /x/ under /shop/.
@@ -57,7 +57,7 @@ def jsonld_products(html: str) -> list[dict]:
     out = []
     for block in _LD.findall(html):
         try:
-            out.extend(_walk(json.loads(block.strip())))
+            out.extend(_walk(scrub_surrogates(json.loads(block.strip()))))
         except ValueError:
             continue
     return out
