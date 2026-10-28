@@ -21,6 +21,20 @@ vars:
   # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.
   verdict_model: ""
   verdict_definition: ""
+  # Data quality. A roaster-week whose product count falls below suspect_drop_ratio x the median of its previous
+  # 4 weeks (when that median is at least suspect_min_products) is held out of history until accepted.
+  suspect_drop_ratio: 0.5
+  suspect_min_products: 20
+  # The build fails if listed coffees, in-stock coffees or roasters move more than this from the last passing
+  # build (`coffeedata build --accept-volume-change` lets one build through and makes it the new baseline).
+  volume_tolerance: 0.2
+  # The build fails if the newest counted run is older than this many days before as_of_run (empty: no check).
+  as_of_run: ""
+  max_run_age_days: 8
+  # Completeness of the as_of_run run (checked only when as_of_run is set): the share of expected roasters it
+  # tried (a skipped roaster is a hole, not a failure) and the share it fetched successfully.
+  min_attempted_share: 1.0
+  min_ok_share: 0.9
 
 models:
   coffeedata:

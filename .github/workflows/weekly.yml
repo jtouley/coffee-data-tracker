@@ -9,6 +9,13 @@ on:
       sample:
         description: "Only N roasters (blank = all)"
         required: false
+      rollback_to:
+        description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff)"
+        required: false
+      accept_volume_change:
+        description: "Let this run through the catalog volume check (after reviewing `coffeedata build-diff`)"
+        type: boolean
+        default: false
 # The run job handles the secrets and third-party pages, so it gets read-only access; only deploy can publish.
 permissions:
   contents: read
@@ -48,7 +55,15 @@ jobs:
       - name: Weekly run
         env:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
-        run: uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"}
+          ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
+          ROLLBACK_TO: ${{ inputs.rollback_to }}
+        run: |
+          if [ -n "$ROLLBACK_TO" ]; then
+            if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
+            else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
+          else
+            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
+          fi
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
         with: {path: build/site}
   deploy:

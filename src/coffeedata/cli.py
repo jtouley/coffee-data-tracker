@@ -14,6 +14,8 @@ from pathlib import Path
 from .lake import Lake, new_batch_id
 
 # fct_shot and mart_bag are personal: they go to the private lake's marts/ only, never to the public export.
+DBT_TARGET = Path("dbt/target")
+SERVED_DB = Path("build/served.duckdb")  # the served release's tables, for the public export and the site
 MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot", "mart_bag"]
 
 
@@ -161,49 +163,105 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
         )
 
 
-def dbt_build(lake: Lake, db: Path) -> None:
+def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[bool, list[dict]]:
+    """Build every model and seed, then run every test, so a failed check never stops a model from being built.
+    Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command)."""
     from . import registry, shots, verdict
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
-    subprocess.run(
-        [
-            "dbt",
-            "build",
-            "--project-dir",
-            "dbt",
-            "--profiles-dir",
-            "dbt",
-            "--vars",
-            json.dumps(
-                {
-                    "lake_roots": roots,
-                    "max_failures": registry.MAX_FAILURES,
-                    "owner_user_id": shots.owner_user_id(),
-                    "verdict_model": verdict.model() or "",
-                    "verdict_definition": verdict.DEFINITION_VERSION,
-                }
-            ),
-        ],
-        check=True,
-        env=env,
+    dbt_vars = json.dumps(
+        {
+            "lake_roots": roots,
+            "max_failures": registry.MAX_FAILURES,
+            "owner_user_id": shots.owner_user_id(),
+            "verdict_model": verdict.model() or "",
+            "verdict_definition": verdict.DEFINITION_VERSION,
+        }
+        | (extra_vars or {})
     )
+    passed, results = True, []
+    for step in (["build", "--exclude", "resource_type:test"], ["test"]):
+        r = subprocess.run(
+            ["dbt", *step, "--project-dir", "dbt", "--profiles-dir", "dbt", "--vars", dbt_vars], env=env
+        )
+        passed = passed and r.returncode == 0
+        try:
+            results.append(json.loads((DBT_TARGET / "run_results.json").read_text()))
+        except (OSError, ValueError):
+            results.append({})
+    return passed, results
 
 
-def cmd_build(args: argparse.Namespace) -> None:
+def cmd_build(args: argparse.Namespace) -> bool:
+    """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
+    marts (what the site, MCP, app and public export read); a failing one is still kept, with its results and a
+    copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
     import duckdb
+
+    from . import quality
 
     lake = Lake()
     db = Path(args.db)
     if db.exists():
         db.unlink()  # derived: always rebuilt from the lake
-    dbt_build(lake, db)
+    run_date = getattr(args, "run_date", None) or _today()
+    extra: dict = {"as_of_run": run_date}
+    if getattr(args, "accept_volume_change", False):
+        extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
+    passed, results = dbt_build(lake, db, extra)
+    build_id = quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed)
+    if not passed:
+        print(
+            f"build {build_id} failed its checks: its release is recorded, the served release is unchanged "
+            "(`coffeedata build-diff` shows what it would have changed)",
+            file=sys.stderr,
+        )
+        return False
+    quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB)
     con = duckdb.connect(str(db), read_only=True)
-    for m in MARTS:
+    for m in (m for m in MARTS if m not in quality.SERVED_MARTS):  # personal marts: not part of a release
         lake.write_mart(m, con, f"select * from {m}")
     con.close()
-    print(f"built {db}; exported {', '.join(MARTS)} to {lake.root / 'marts'}")
+    print(f"built {db}; serving release {build_id}")
+    return True
+
+
+def cmd_rollback(args: argparse.Namespace) -> None:
+    """Serve an earlier passing release, then re-export the public tables and rebuild the site from it."""
+    from . import quality
+
+    lake = Lake()
+    to = quality.rollback(lake, args.to, args.reason)
+    cmd_publish(argparse.Namespace(message=f"rollback to release {to}"))
+    _export_and_site(SERVED_DB, args.out)
+    print(f"serving release {to}")
+
+
+def _export_and_site(db: Path, out: str) -> None:
+    """Everything customers see outside the dataset, from the served release."""
+    cmd_export_public(argparse.Namespace(db=str(db), to="build/public"))
+    if os.environ.get("PUBLIC_EXPORT_URL") and os.environ["PUBLIC_EXPORT_URL"] != "build/public":
+        cmd_export_public(argparse.Namespace(db=str(db), to=os.environ["PUBLIC_EXPORT_URL"]))
+    if os.environ.get("SNOWFLAKE_ACCOUNT"):
+        cmd_load_snowflake(argparse.Namespace(source="build/public"))
+    cmd_site(argparse.Namespace(db=str(db), out=out))
+
+
+def cmd_build_diff(args: argparse.Namespace) -> None:
+    from . import quality
+
+    _print(quality.build_diff(Lake(), args.old, args.new))
+
+
+def cmd_override(args: argparse.Namespace) -> None:
+    from . import quality
+
+    path = quality.add_override(Lake(), args.roaster, args.run_date, args.action, args.reason, args.batch)
+    print(
+        f"recorded {args.action} for {args.roaster} {args.run_date} ({path.name}); the next build applies it"
+    )
 
 
 def cmd_publish(args: argparse.Namespace) -> None:
@@ -264,15 +322,17 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
     cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: verdicts"))
-    cmd_build(argparse.Namespace(db=args.db))
-    cmd_publish(argparse.Namespace(message=f"weekly run {run}: marts"))
-    # Facts-only tables: always exported locally; optionally published and loaded into Snowflake.
-    cmd_export_public(argparse.Namespace(db=args.db, to="build/public"))
-    if os.environ.get("PUBLIC_EXPORT_URL") and os.environ["PUBLIC_EXPORT_URL"] != "build/public":
-        cmd_export_public(argparse.Namespace(db=args.db, to=os.environ["PUBLIC_EXPORT_URL"]))
-    if os.environ.get("SNOWFLAKE_ACCOUNT"):
-        cmd_load_snowflake(argparse.Namespace(source="build/public"))
-    cmd_site(argparse.Namespace(db=args.db, out=args.out))
+    # The checks gate publishing, not the run: the build is recorded and published either way (its results and a
+    # copy of its catalog marts), but only a passing build replaces the current marts, public tables and site.
+    accept = getattr(args, "accept_volume_change", False)
+    passed = cmd_build(argparse.Namespace(db=args.db, run_date=run, accept_volume_change=accept)) is not False
+    cmd_publish(
+        argparse.Namespace(message=f"weekly run {run}: {'marts' if passed else 'failed build record'}")
+    )
+    if not passed:
+        raise SystemExit(f"weekly run {run}: the build failed its data checks; nothing derived was published")
+    # Facts-only tables and the site come from the served release (this build's, since it passed).
+    _export_and_site(SERVED_DB, args.out)
 
 
 def cmd_shot(args: argparse.Namespace) -> None:
@@ -392,6 +452,32 @@ def main(argv: list[str] | None = None) -> None:
 
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
+    b.add_argument("--run-date", type=_run_date, default=_today(), help="the run this build is for")
+    b.add_argument(
+        "--accept-volume-change",
+        action="store_true",
+        help="let one build through the volume check (it becomes the next baseline)",
+    )
+
+    bd = add(
+        "build-diff", cmd_build_diff, "what changed between two builds (default: the last two that passed)"
+    )
+    bd.add_argument("--old")
+    bd.add_argument("--new")
+
+    rb = add(
+        "rollback", cmd_rollback, "serve an earlier passing release (default: the one before the current)"
+    )
+    rb.add_argument("--to", help="build id of the release to serve")
+    rb.add_argument("--reason", default="", help="recorded in marts/release.parquet")
+    rb.add_argument("--out", default="build/site")
+
+    ov = add("override", cmd_override, "accept, reject or pin one roaster-week's fetch for the history")
+    ov.add_argument("--roaster", required=True)
+    ov.add_argument("--run-date", type=_run_date, required=True)
+    ov.add_argument("--action", choices=["accept", "reject", "use_batch"], required=True)
+    ov.add_argument("--batch", help="the batch to count (use_batch)")
+    ov.add_argument("--reason", required=True)
 
     pb = add("publish", cmd_publish, "upload staged lake files to the remote lake")
     pb.add_argument("--message", default=f"publish {_today()}")
@@ -414,6 +500,7 @@ def main(argv: list[str] | None = None) -> None:
     w.add_argument("--enrich-limit", type=int, default=2000)
     w.add_argument("--db", default="build/coffee.duckdb")
     w.add_argument("--out", default="build/site")
+    w.add_argument("--accept-volume-change", action="store_true", help="see build --accept-volume-change")
 
     s = add("shot", cmd_shot, "log a shot")
     s.add_argument("action", choices=["add", "from-issue"])
@@ -430,7 +517,8 @@ def main(argv: list[str] | None = None) -> None:
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 
     args = p.parse_args(argv)
-    args.fn(args)
+    if args.fn(args) is False:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

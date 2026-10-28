@@ -178,6 +178,40 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("label", pa.string()),
         ]
     ),
+    # A person's call on one roaster-week's fetch: accept a run the quality checks flagged, reject one, or pin
+    # which batch counts (use_batch). The latest override for a roaster-week wins; nothing is ever edited.
+    "run_overrides": pa.schema(
+        [
+            ("added_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("run_date", pa.date32()),
+            ("action", pa.string()),
+            ("batch_id", pa.string()),
+            ("reason", pa.string()),
+        ]
+    ),
+    # One file per dbt build: a row per dbt node (its manifest checksum and test result, so two builds' code
+    # and test outcomes can be compared), a row per catalog metric (the baseline the next build's volume check
+    # reads), and the build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
+    "builds": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("built_at", pa.timestamp("s", tz="UTC")),
+            ("run_date", pa.date32()),
+            ("git_sha", pa.string()),
+            ("invocation_id", pa.string()),
+            ("kind", pa.string()),
+            ("unique_id", pa.string()),
+            ("resource_type", pa.string()),
+            ("checksum", pa.string()),
+            ("status", pa.string()),
+            ("failures", pa.int64()),
+            ("rows", pa.int64()),
+            ("execution_s", pa.float64()),
+            ("value", pa.float64()),
+            ("payload", pa.string()),
+        ]
+    ),
     "verdict_batches": pa.schema(
         [
             ("batch_id", pa.string()),
@@ -310,6 +344,8 @@ GLOBS = {
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
     "verdict_batches": "verdict_batches/*/*.parquet",
+    "run_overrides": "run_overrides/*.parquet",
+    "builds": "builds/*/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -328,6 +364,8 @@ SCHEMA_FILES = {
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",
     "verdict_batches": "verdict_batches/state=schema/schema.parquet",
+    "run_overrides": "run_overrides/override_id=schema.parquet",
+    "builds": "builds/run_date=0000-00-00/build=schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.
     "shots": "shots/shot_id=schema-v2.parquet",
@@ -486,7 +524,7 @@ class Lake:
         this makes it structural: even a staging folder set to overlap another can't publish password hashes or
         photos into the main dataset."""
         own = {GLOBS[t].split("/")[0] for t in self.tables} | (
-            {"marts"} if self.tables == LAKE_TABLES else set()
+            {"marts", "releases"} if self.tables == LAKE_TABLES else set()
         )
         return sorted(
             p
@@ -497,6 +535,15 @@ class Lake:
     def write_mart(self, name: str, con, sql: str) -> Path:
         """Export a derived table (replaced every run; the raw tables are the source of truth)."""
         path = self.root / "marts" / f"{name}.parquet"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
+        return path
+
+    def write_release(self, name: str, run_date: str, build_id: str, con, sql: str) -> Path:
+        """One table of a build's release: immutable, so any release can be served again or diffed later."""
+        path = self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / f"{name}.parquet"
+        if path.exists():
+            raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
         path.parent.mkdir(parents=True, exist_ok=True)
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path

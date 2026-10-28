@@ -2,7 +2,35 @@ version: 2
 
 models:
   - name: stg_runs
-    description: One row per successful (roaster, run_date); re-runs of a week collapse here.
+    description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
+  - name: stg_run_quality
+    description: Every roaster-week with a successful fetch, the batch that counts, and whether it looks broken.
+    data_tests:
+      - unique:
+          arguments: {column_name: "roaster_id || '|' || run_date"}
+    columns:
+      - name: override_action
+        data_tests:
+          - accepted_values: {arguments: {values: [accept, reject, use_batch]}}
+  - name: stg_products
+    description: The classifier and extraction rules, run once per distinct product version (input_hash).
+    columns:
+      - name: input_hash
+        data_tests: [unique, not_null]
+  - name: mart_market
+    data_tests:
+      - unique:
+          arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
+  - name: run_completeness
+    description: One row per roaster the latest (or as_of_run) run should have tried, and whether it did.
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+  - name: mart_build_profile
+    description: This build's catalog metrics; appended to the lake's builds table as the next build's baseline.
+    columns:
+      - name: metric
+        data_tests: [unique, not_null]
   - name: dim_coffee
     description: Every coffee ever seen, with its latest listing; delisted coffees stay with is_listed = false.
     columns:
@@ -18,6 +46,9 @@ models:
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
+      - name: enrichment_method
+        data_tests:
+          - accepted_values: {arguments: {values: [rules, llm]}}
   - name: dim_roaster
     columns:
       - name: roaster_id
@@ -63,28 +94,166 @@ models:
   - name: fct_price_event
     columns:
       - name: coffee_id
-        data_tests: [not_null]
+        data_tests:
+          - not_null
+          # A product later reclassified as not coffee leaves dim_coffee but keeps its past events.
+          - relationships:
+              arguments: {to: ref('dim_coffee'), field: coffee_id}
+              config: {severity: warn}
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
 
   - name: public_coffee
-    description: Facts-only coffee table for public release. No descriptions, images or personal data.
+    description: "Facts-only coffee table for public release. No descriptions, images or personal data."
+    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
+    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    config:
+      contract: {enforced: true}
     columns:
       - name: coffee_id
+        data_type: varchar
         data_tests: [unique, not_null]
+      - name: roaster_id
+        data_type: varchar
+      - name: roaster_name
+        data_type: varchar
+      - name: roaster_state
+        data_type: varchar
+      - name: coffee_name
+        data_type: varchar
       - name: source_url
+        data_type: varchar
         data_tests: [not_null]
+      - name: is_listed
+        data_type: boolean
+      - name: in_stock
+        data_type: boolean
+      - name: catalog_status
+        data_type: varchar
+        data_tests:
+          - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
+      - name: published_at
+        data_type: timestamp with time zone
+      - name: first_seen
+        data_type: date
+      - name: last_seen
+        data_type: date
+      - name: weeks_listed
+        data_type: bigint
+      - name: origin_country
+        data_type: varchar
+      - name: origin_region
+        data_type: varchar
+      - name: process
+        data_type: varchar
+      - name: varietals
+        data_type: varchar[]
+      - name: elevation_masl_min
+        data_type: integer
+      - name: elevation_masl_max
+        data_type: integer
+      - name: roast_level
+        data_type: varchar
+      - name: tasting_notes
+        data_type: varchar[]
+      - name: flavor_categories
+        data_type: varchar[]
+      - name: is_blend
+        data_type: boolean
+      - name: is_decaf
+        data_type: boolean
+      - name: min_price_usd
+        data_type: double
+      - name: price_per_100g
+        data_type: double
+      - name: bag_sizes_g
+        data_type: integer[]
+      - name: attributes_source
+        data_type: varchar
   - name: public_roaster
+    description: "Facts-only roaster table for public release."
+    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
+    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    config:
+      contract: {enforced: true}
     columns:
       - name: roaster_id
+        data_type: varchar
         data_tests: [unique, not_null]
+      - name: roaster_name
+        data_type: varchar
+      - name: city
+        data_type: varchar
+      - name: state
+        data_type: varchar
+      - name: platform
+        data_type: varchar
+      - name: status
+        data_type: varchar
+      - name: coffees_listed
+        data_type: bigint
+      - name: coffees_in_stock
+        data_type: bigint
+      - name: last_ok_run
+        data_type: date
   - name: public_price_event
+    description: "Facts-only price history for public release: one row per coffee, bag size, run and event."
+    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
+    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    config:
+      contract: {enforced: true}
+    data_tests:
+      - unique:
+          arguments: {column_name: "coffee_id || '|' || bag_id || '|' || run_date || '|' || event"}
     columns:
+      - name: run_date
+        data_type: date
       - name: coffee_id
+        data_type: varchar
         data_tests:
           - relationships:
               arguments: {to: ref('public_coffee'), field: coffee_id}
+      - name: roaster_id
+        data_type: varchar
+      - name: bag_id
+        data_type: varchar
+      - name: event
+        data_type: varchar
+      - name: price_usd
+        data_type: double
+      - name: previous_price_usd
+        data_type: double
+      - name: available
+        data_type: boolean
+  - name: public_market_weekly
+    description: "Facts-only market summary for public release: one row per origin and process."
+    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
+    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    config:
+      contract: {enforced: true}
+    data_tests:
+      - unique:
+          arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
+    columns:
+      - name: as_of_run
+        data_type: date
+      - name: origin_country
+        data_type: varchar
+      - name: process
+        data_type: varchar
+      - name: coffees
+        data_type: bigint
+      - name: roasters
+        data_type: bigint
+      - name: in_stock
+        data_type: bigint
+      - name: median_price_per_100g
+        data_type: double
+      - name: p10_price_per_100g
+        data_type: double
+      - name: p90_price_per_100g
+        data_type: double
 
 seeds:
   - name: flavor_lexicon
