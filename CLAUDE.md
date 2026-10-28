@@ -28,10 +28,13 @@ where a rule can break; they don't show how often it does.
    meaningful rise in confidently wrong answers. Where rules can't tell, abstaining (leaving the value for Claude) is
    better than guessing.
 8. **Keep the bar:** unit tests keep the reproduced cases, and accuracy floors are only ever raised.
-9. **Scale the effort to the change.** A change whose output differs on fewer than about 50 products (about 0.1% of
-   the catalog) needs unit tests for the specific cases plus a before/after count of what changed, run on the whole
-   catalog. It doesn't need a new split, labels or a results write-up. Steps 1–7 are for changes that move more than
-   that, or that change how a rule decides rather than one case it gets wrong.
+9. **Scale the effort to the change.** If, compared with `main`, a change alters the output of 50 products or fewer,
+   and fewer than 50 have changed for that field since it was last fully evaluated, steps 2–7 can be skipped. Instead:
+   - add unit tests for the specific cases;
+   - list the changed products and check each by hand (for sealed-test products, show only a count);
+   - keep the existing floors and regression fixtures passing.
+
+   Over 50, or a change to how a rule decides rather than one case it gets wrong, needs the full process.
 
 ### The coffee classifier's evaluation
 
