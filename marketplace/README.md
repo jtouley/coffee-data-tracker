@@ -30,9 +30,8 @@ never holds the site back):
 - A migration first checks, before changing anything, that the loader's role (COFFEE_LOADER) owns the share
   views, from the views' own grants (`show grants on view`, which needs no account privilege). It uploads the
   files, drops and reloads the changed tables, then recreates every share view with `copy grants`, so each
-  stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`) whoever owns the share, e.g.
-  ACCOUNTADMIN after a listing. Only a view missing from the share is granted, first, and that one grant needs
-  the share's owner. A migration that fails partway is finished by running it again; until then the weekly
+  stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`). Only a view missing from the share is
+  granted, first, and that one grant needs the share's owner. A migration that fails partway is finished by running it again; until then the weekly
   load refuses to run.
 - Migrate as COFFEE_LOADER, not ACCOUNTADMIN: a role that recreates a table or view owns it afterwards, and the
   weekly load and later migrations, run as COFFEE_LOADER, would then fail. If that happened, give each one back

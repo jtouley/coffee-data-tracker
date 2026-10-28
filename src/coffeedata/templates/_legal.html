@@ -22,13 +22,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
 </head>
 <body>
 <div class="wrap">
-<nav>
-  <a class="mark-word serif" href="../">registry<span class="dot">.</span>coffee</a>
-  <div class="right">
-    <a href="../catalog/">Catalog</a>
-    <button class="theme" id="theme" type="button">Theme</button>
-  </div>
-</nav>
+{% set root, page = "../", "legal" %}{% include "_nav.html" %}
 <main>
   <h1 class="serif">{{ self.title() }}</h1>
   <p class="updated">Last updated {{ updated }}</p>

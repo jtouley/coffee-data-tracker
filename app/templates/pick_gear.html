@@ -14,7 +14,7 @@
       {% endfor %}
     </fieldset>
     {% endfor %}
-    <a class="btn text" href="/setup/gear/new">Add equipment</a>
+    <a class="btn text" href="/setup/gear/new?kind=grinder&amp;next={{ here | urlencode }}">Add equipment</a>
     <div class="spacer"></div>
     <div class="dock"><button class="btn primary" type="submit">Use these</button></div>
   </form>

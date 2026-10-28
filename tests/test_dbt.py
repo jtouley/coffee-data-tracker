@@ -434,6 +434,16 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # The app's beta: sign in and request an invite from the launch page and the catalog; requests are an email,
+    # since the static site collects nothing.
+    for html in (landing, (out / "catalog" / "index.html").read_text()):
+        assert 'href="https://app.registry.coffee/signin"' in html
+        assert 'href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite"' in html
+        assert "<form" not in html
+        assert "Nothing you log appears on this site." in html  # and no promise beyond that
+    assert '<a class="mark-word serif" href="./" aria-current="page">' in landing
+    # "Updated" is the last fetch, not the build time, so a template-only redeploy doesn't freshen it.
+    assert "Updated 2026-10-19 12:00 UTC" in (out / "catalog" / "index.html").read_text()
     for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
         html = (out / page / "index.html").read_text()
         assert f'<h1 class="serif">{heading}</h1>' in html and f"Last updated {site.LEGAL_UPDATED}" in html
@@ -470,11 +480,13 @@ def test_safe_url(url, ok):
     assert site.safe_url(url) == (url if ok else None)
 
 
-def test_site_links_without_a_public_hf_dataset():
+def test_site_links_without_a_public_hf_dataset(monkeypatch):
     from coffeedata import site
 
     assert site.links("s3://bucket/coffee", "https://example.org/")["dataset"] is None
     assert site.links("hf://datasets/a/b@main")["dataset"] == "https://huggingface.co/datasets/a/b"
+    monkeypatch.setenv("APP_URL", "https://app.staging.example/")
+    assert site.links()["signin"] == "https://app.staging.example/signin"
 
 
 def _landing(**reach) -> str:

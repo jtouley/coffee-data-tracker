@@ -5,9 +5,26 @@ from __future__ import annotations
 
 from datetime import datetime, tzinfo
 from html import escape
+from urllib.parse import parse_qsl, urlencode, urlsplit
 
-from coffeedata.models import Shot
+from coffeedata.models import SAFE_ID, Shot
 from coffeedata.shots import TARGET_RATIO, TARGET_TIME
+
+# Where a gear screen may send you back to, and what its back link says. Anything else goes to Setup, so a crafted
+# link can't send a save anywhere off the app.
+_BACK = {"/": "Today", "/setup": "Setup", "/log/gear": "Grinder and basket"}
+_GEAR_PICKS = ("grinder", "basket", "machine")
+
+
+def back_to(next_: str) -> tuple[str, str]:
+    """The `next` of a gear screen as (path, back label): Today, Setup or the Log shot gear picker (with the
+    grinder, basket and machine it had picked); anything else is Setup."""
+    u = urlsplit(next_)
+    if u.scheme or u.netloc or u.path not in _BACK:
+        return "/setup", "Setup"
+    picks = [(k, v) for k, v in parse_qsl(u.query) if k in _GEAR_PICKS and SAFE_ID.fullmatch(v)]
+    return (u.path + ("?" + urlencode(picks) if picks and u.path == "/log/gear" else ""), _BACK[u.path])
+
 
 _WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 

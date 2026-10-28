@@ -36,7 +36,10 @@ grant select on view coffee_data.share.roaster to share coffee_data_share;
 
 -- 3. Listing (as ACCOUNTADMIN): Snowsight -> Data Products -> Provider Studio -> create a Marketplace listing from
 --    coffee_data_share, using marketplace/LISTING.md. That needs a provider profile and acceptance of the
---    Provider and Consumer Terms, and Snowflake reviews the listing before it goes live. If Provider Studio
---    doesn't offer the share, run as COFFEE_LOADER: grant ownership on share coffee_data_share to role accountadmin;
+--    Provider and Consumer Terms, and Snowflake reviews the listing before it goes live. Provider Studio offers
+--    only shares the current role owns, and a share's ownership can't be transferred, so if it doesn't offer
+--    coffee_data_share, let COFFEE_LOADER create the listing (as ACCOUNTADMIN):
+--      grant create data exchange listing on account to role coffee_loader;
+--    then create it in Provider Studio with the role COFFEE_LOADER.
 --    The views stay owned by COFFEE_LOADER, so `coffeedata load-snowflake --migrate` (run as COFFEE_LOADER) can
 --    still recreate them after a public contract change; `copy grants` keeps them in the share.

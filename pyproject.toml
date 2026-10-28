@@ -17,6 +17,7 @@ dependencies = [
     "rapidfuzz>=3.9",
     "pyarrow>=17",
     "huggingface_hub>=0.26",
+    "tzdata>=2026.5",
 ]
 
 [project.scripts]

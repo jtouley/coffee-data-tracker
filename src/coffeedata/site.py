@@ -61,15 +61,18 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 # --- links ---------------------------------------------------------------------------------------------
 
 REPO = "https://github.com/jtouley/coffee-data-tracker"
+APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
 LEGAL_UPDATED = "October 27, 2026"
 
 
 def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
     """Where the launch page points. The dataset is the public export (`PUBLIC_EXPORT_URL`) when it's on Hugging
-    Face; the lake itself is private by default, so it's never linked."""
+    Face; the lake itself is private by default, so it's never linked. Beta requests are an email to the support
+    address: the static site collects nothing itself."""
     public_export = os.environ.get("PUBLIC_EXPORT_URL", "") if public_export is None else public_export
     site_url = (site_url or os.environ.get("SITE_URL") or "https://registry.coffee").rstrip("/")
+    app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
     dataset = hf_path = None
     if public_export.startswith("hf://datasets/"):
         repo_id = public.hf_repo_id(public_export)
@@ -84,7 +87,13 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         "marketplace": f"{REPO}/blob/main/marketplace/README.md",
         "mcp": f"{REPO}#logging-shots",
         "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
+        "signin": f"{app_url}/signin",
+        "beta": f"mailto:{support_email()}?subject=registry.coffee%20beta%20invite",
     }
+
+
+def support_email() -> str:
+    return os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee"
 
 
 # --- hardening ------------------------------------------------------------------------------------------
@@ -200,6 +209,7 @@ def build(db: Path, out: Path) -> Path:
     for r in new + catalog:
         r["url"] = safe_url(r["url"])
     new_count = _q(con, "select count(*) as n from mart_new_arrivals")[0]["n"]
+    last_fetch = _q(con, "select max(last_fetch) as t from dim_roaster")[0]["t"]
     con.close()
 
     coverage = {"registry": {r["status"]: r["n"] for r in statuses}}
@@ -230,7 +240,9 @@ def build(db: Path, out: Path) -> Path:
             "Single-origin coffees in stock, by origin",
         ),
     }
-    generated = datetime.now(UTC)
+    # "Updated" is when the data was last read, not when the pages were rendered: a template-only redeploy
+    # (.github/workflows/site.yml) mustn't make the catalog look fresher than it is.
+    generated = last_fetch.astimezone(UTC) if last_fetch else datetime.now(UTC)
     env = Environment(loader=PackageLoader("coffeedata", "templates"), autoescape=select_autoescape())
     out.mkdir(parents=True, exist_ok=True)
     landing = env.get_template("landing.html").render(
@@ -248,7 +260,7 @@ def build(db: Path, out: Path) -> Path:
     legal = {
         "links": links(),
         "updated": LEGAL_UPDATED,
-        "contact": os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee",
+        "contact": support_email(),
         "governing_state": os.environ.get("GOVERNING_STATE") or "Michigan",
     }
     for page in ("privacy", "terms"):
@@ -257,6 +269,7 @@ def build(db: Path, out: Path) -> Path:
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
+        links=links(),
         totals=totals,
         status_rows=[(label, coverage["registry"].get(k, 0)) for k, label in STATUS_LABELS.items()],
         charts=charts,
