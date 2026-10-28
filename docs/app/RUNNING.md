@@ -50,7 +50,8 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 
 - an Artifact Registry repository for the image (`app/Dockerfile`, which is a plain container for any host);
 - the Cloud Run service: scales to zero, at most **one** instance, 1 GiB, CPU only during requests, startup CPU
-  boost. One instance because shots, the write lock and the sign-in limits live in memory;
+  boost, up to 250 requests at once, a 120 s request timeout, and a startup probe that allows about two minutes.
+  One instance because shots, accounts, the write lock and the sign-in limits live in memory;
 - Secret Manager secrets for the five app secrets, mounted as environment variables, readable only by the
   service's own runtime account;
 - Workload Identity Federation, so GitHub Actions on `main` can deploy without a JSON key;

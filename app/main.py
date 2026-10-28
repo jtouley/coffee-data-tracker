@@ -108,7 +108,8 @@ def create_app(
         return JSONResponse({"detail": "Something went wrong on the server."}, 500)
 
     app.middleware("http")(web.middleware(sessions.set_cookie if sessions else None, COOKIE, on_error))  # type: ignore[arg-type]
-    app.middleware("http")(logs.middleware)  # outermost: it sees the final status, error pages included
+    app.middleware("http")(logs.middleware)  # it sees the final status, error pages included
+    app.add_middleware(web.RejectProbes)  # outermost: scanner paths stop here, unlogged
     hops = int(os.environ.get("COFFEEDATA_PROXY_HOPS") or 0)
 
     def ip(request: Request) -> str:

@@ -30,6 +30,9 @@ FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_reg
          "elevation_masl_min", "elevation_masl_max",
          "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
+# Tries for each table read at start: a Hugging Face hiccup (429, timeout) waits 2 then 4 seconds rather than
+# crashing the only instance, which Cloud Run would answer with "no available instance" until another starts.
+STARTUP_READS = 3
 SEED_SLACK = timedelta(days=1)  # how far before the shot export the newer shot files are read from
 
 
@@ -72,7 +75,7 @@ class Store:
             ("equipment", "equipment_id", Equipment, self.equipment),
         ):
             rows = self._seed_shots() if table == "shots" else None
-            for row in lake.latest(table, key) if rows is None else rows:
+            for row in lake.latest(table, key, attempts=STARTUP_READS) if rows is None else rows:
                 row["user_id"] = row["user_id"] or owner_id  # records from before accounts are the owner's
                 try:
                     into[row[key]] = Rec(_model(cls, row), row["logged_at"], bool(row.get("deleted")))
