@@ -58,11 +58,11 @@ resource "google_monitoring_alert_policy" "errors" {
 }
 
 resource "google_monitoring_uptime_check_config" "healthz" {
-  display_name = "registry.coffee /healthz"
+  display_name = "registry.coffee /health"
   timeout      = "10s"
   period       = "900s" # every 15 minutes: each check wakes the service from zero, so not more often
   http_check {
-    path         = "/healthz"
+    path         = "/health" # not /healthz: Google's front end answers paths ending in "z" itself
     port         = 443
     use_ssl      = true
     validate_ssl = true
@@ -80,7 +80,7 @@ resource "google_monitoring_alert_policy" "down" {
   display_name = "registry.coffee: down"
   combiner     = "OR"
   conditions {
-    display_name = "/healthz failing"
+    display_name = "/health failing"
     condition_threshold {
       filter          = "metric.type=\"monitoring.googleapis.com/uptime_check/check_passed\" AND resource.type=\"uptime_url\" AND metric.label.check_id=\"${google_monitoring_uptime_check_config.healthz.uptime_check_id}\""
       comparison      = "COMPARISON_GT"

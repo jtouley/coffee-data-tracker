@@ -5,6 +5,7 @@ import json
 import logging
 import os
 import re
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
@@ -36,6 +37,17 @@ def test_every_write_route_refuses_a_request_without_an_account(app):  # noqa: F
         url = re.sub(r"\{[^}]+\}", "x1", path)
         r = c.request(method, url, json={}, headers=W)
         assert r.status_code in (401, 403), f"{method} {path} answered {r.status_code} without an account"
+
+
+def test_health_answers_on_a_path_googles_front_end_passes_through(app):  # noqa: F811
+    # The uptime check goes through Google's front end, which answers any path ending in "z" itself; the startup
+    # probe calls the container directly and keeps /healthz.
+    c = client(app)
+    for path in ("/health", "/healthz"):
+        r = c.get(path)
+        assert r.status_code == 200 and r.json() == {"ok": True}, path
+    tf = (Path(__file__).parents[1] / "src/terraform/alerts.tf").read_text()
+    assert re.search(r'path\s*=\s*"/health"', tf) and not re.search(r'path\s*=\s*"[^"]*z"', tf)
 
 
 def test_signed_in_writes_only_reach_the_writers_own_data(lake):
