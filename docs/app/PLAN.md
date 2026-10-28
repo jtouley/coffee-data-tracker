@@ -153,7 +153,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 
 ### Hosting
 
-Decided by the owner: Google Cloud Run in `us-central1`, managed with Terraform in `infra/`. The data stays on
+Decided by the owner: Google Cloud Run in `us-central1`, managed with Terraform in `src/terraform/`. The data stays on
 Hugging Face; only the app moves. This continues the original repo's GCP and Terraform lineage.
 
 | Option | For | Against |
@@ -163,7 +163,7 @@ Hugging Face; only the app moves. This continues the original repo's GCP and Ter
 | C. Google Cloud Run (chosen) | Runs the Docker image #15 already built, so `coffeedata`'s matching and lake writer are reused, not rewritten. Scales to zero, Secret Manager for keys, keyless deploys from GitHub, and Terraform for everything. | A Google Cloud project and billing account to look after. |
 | D. No server: static app that opens GitHub issues | Reuses the issue-form workflow. | A GitHub token on the phone, a minute per shot through Actions, no photos and no saved summary. |
 
-What Terraform in `infra/` manages:
+What Terraform in `src/terraform/` manages:
 
 - The Cloud Run service in `us-central1`, running as its own service account, with the image from an Artifact
   Registry repository.
@@ -603,7 +603,7 @@ Each one is usable on its own and goes through the normal PR and CI process.
 1. Data model: new lake tables and shot columns, `Shot` model fields, `stg_`/`dim_` models, the public-table
    test update, the `fct_shot` mart export. The MCP `log_shot` tool accepts `grinder_name`. Shot sections removed from
    the public site. No app yet; tests over a synthetic lake with old and new shots mixed.
-2. App skeleton: FastAPI on Cloud Run with Terraform in `infra/` and keyless deploys, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
+2. App skeleton: FastAPI on Cloud Run with Terraform in `src/terraform/` and keyless deploys, the users dataset, owner bootstrap, sign-in, sessions and per-user scoping
    (with the cross-user tests), the deploy workflow, the in-memory shot cache. Today and Log shot with prefill, the timer and typed time, and the saved summary. Online only. Includes the approved
    concurrent-commit test.
 3. Equipment, invites and the domain: the Setup screen, grinder-aware steppers; invites, sign-up and
@@ -667,7 +667,7 @@ how sure it is ("Try 11. Likely 26 to 30 s.") instead of stating a single answer
 | Equipment | DF64 V2 (dial 0 to 90, lower is finer), Lelit Bianca, 18 g Pullman Filtration Basket (`basket17-pullm-v-v`) | Entered on first run, which asks for a grinder and a basket (#13); 18 g is the default first dose. The mockups show them. |
 | Public site | No shots on it | Shot sections left `site.py` in milestone 1 (#13). The issue form stays until the app is live (#15). |
 | Cold start | Fine for now | Cloud Run starts at min instances 0. |
-| Hosting | Google Cloud Run in `us-central1`, Terraform in `infra/`, Secret Manager, keyless deploys through Workload Identity Federation | Replaces the Space (Docker Spaces need PRO, #15). Max instances 1, since the server keeps its state in memory. The data stays on Hugging Face. |
+| Hosting | Google Cloud Run in `us-central1`, Terraform in `src/terraform/`, Secret Manager, keyless deploys through Workload Identity Federation | Replaces the Space (Docker Spaces need PRO, #15). Max instances 1, since the server keeps its state in memory. The data stays on Hugging Face. |
 | Photos | Stay private, still Parquet, in Hugging Face's image layout | Separate private dataset, one photo per Parquet file, the `image` column as `struct<bytes, path>` with the `Image` feature metadata. One write path, and the photo and its metadata stay together in one immutable file; plain JPEGs would need a separate metadata table kept in step. |
 | Grind suggestions | Deferred until there's a model trained on the owner's shots | The app describes each shot and suggests nothing. `shots.suggest_next` stays for the MCP and issue-form replies. See Later: a dial-in model. |
 | Shot timer | Built in, but typing must also work | The time row has Start/Stop and Type side by side. |

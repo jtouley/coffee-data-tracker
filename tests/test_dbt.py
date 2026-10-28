@@ -166,6 +166,7 @@ def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
             tagged("PASTA", ["Pasta"], available=False),
             tagged("SLUG", ["past_offering"], available=False),
             tagged("SOON2", ["coming-soon"]),
+            tagged("SHIPPED", ["preorder-ship-date:2026-10-01"]),  # ship date before this run: a leftover tag
         ],
     )
     con = build(lake, tmp_path)
@@ -181,7 +182,29 @@ def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
         "PASTA": "sold_out",
         "SLUG": "archived",
         "SOON2": "preorder",
+        "SHIPPED": "available",
     }
+    # Counts describe the current catalog; the archived back catalog is counted on its own.
+    listed, archived = con.execute(
+        "select coffees_listed, coffees_archived from dim_roaster where roaster_id = ?", [rid]
+    ).fetchone()
+    assert (listed, archived) == (7, 3)  # 10 listed this run, less OLD, OLD2 and SLUG
+
+
+def test_new_arrivals_are_newly_published_not_newly_fetched(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A")])
+    old, new = datetime(2024, 3, 1, tzinfo=UTC), datetime(2026, 10, 22, tzinfo=UTC)
+    run(lake, "2026-10-26", rid, [
+        product("A"),
+        product("BACKLIST") | {"published_at": old},  # first fetched now (pagination), published long ago
+        product("FRESH") | {"published_at": new},  # published after the previous run
+        product("UNKNOWN"),  # no publish time (not Shopify): still counts
+    ])  # fmt: skip
+    con = build(lake, tmp_path)
+    assert sorted(r[0] for r in con.execute("select coffee_id from mart_new_arrivals").fetchall()) == [
+        f"{rid}:FRESH", f"{rid}:UNKNOWN",
+    ]  # fmt: skip
 
 
 def test_relisting(lake, tmp_path):

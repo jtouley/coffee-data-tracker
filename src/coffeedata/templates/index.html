@@ -61,7 +61,7 @@ a { color: var(--accent); }
   background: var(--surface-0); color: var(--text-primary); }
 .filters input[type=search] { flex: 1 1 220px; }
 .status { font-size: 12px; white-space: nowrap; }
-.status::before { content: " · "; }
+.status::before { content: " · " / ""; }  /* decorative: empty alt text keeps screen readers from reading it */
 .filters label { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); font-size: 13px; }
 .scroll { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
 .scroll table th { border-bottom: 1px solid var(--border); }

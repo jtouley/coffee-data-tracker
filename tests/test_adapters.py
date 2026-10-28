@@ -135,6 +135,16 @@ def test_shopify_store_that_ignores_page_stops(mock):
     assert route.call_count == 2
 
 
+def test_shopify_page_limit_without_an_empty_page_is_an_error(mock, monkeypatch):
+    monkeypatch.setattr(shopify, "MAX_PAGES", 2)
+    for n in (1, 2):
+        mock.get("https://x.com/products.json", params={"page": str(n)}).mock(
+            return_value=_page(range(n * 100, n * 100 + 50))
+        )
+    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="after 2 pages"):
+        shopify.fetch(c, _r())  # never a silently truncated catalog
+
+
 def test_shopify_empty_catalog_is_an_answer(mock):
     mock.get("https://x.com/products.json").mock(return_value=httpx.Response(200, json={"products": []}))
     with PoliteClient(min_interval=0) as c:

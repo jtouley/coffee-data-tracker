@@ -35,6 +35,7 @@ import json
 import logging
 import os
 import secrets
+import tempfile
 import threading
 import time
 from datetime import UTC, datetime
@@ -378,6 +379,13 @@ SCHEMA_FILES = {
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
 
+def no_files(e: Exception) -> bool:
+    """A read failed only because a table has no files yet: DuckDB's own "No files found", or, on a Hugging Face
+    dataset, a 404 listing a folder no file was ever published to (a table added after the dataset was made)."""
+    msg = str(e)
+    return "No files found" in msg or ("error listing" in msg and "404" in msg)
+
+
 def new_batch_id(now: datetime | None = None) -> str:
     """Sortable and unique: re-running a step adds a new batch instead of rewriting an old one."""
     now = now or datetime.now(UTC)
@@ -417,13 +425,18 @@ class Lake:
     def ensure_schemas(self) -> None:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
-            # A zero-row schema file from before a column was added is refreshed, so globs always see every column.
-            # Names only: Parquet stores timestamp[s] as [ms], so a full schema compare would never match.
+            # A zero-row schema file from before a column was added is refreshed in place, so globs always see
+            # every column. That is the pattern for added columns; a changed type or meaning still gets a new schema
+            # file beside the old one (like shots' schema-v2), since names are all this compares (Parquet stores
+            # timestamp[s] as [ms], so comparing full schemas would never match).
             if not p.exists() or pq.read_schema(p).names != SCHEMAS[table].names:
                 p.parent.mkdir(parents=True, exist_ok=True)
-                tmp = p.with_suffix(".tmp")  # readers globbing *.parquet never see a half-written file
+                # A unique temp file in the same folder: two Lake()s refreshing at once never share one, and a
+                # reader globbing *.parquet never sees a half-written file.
+                fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".schema-", suffix=".tmp")
+                os.close(fd)
                 pq.write_table(SCHEMAS[table].empty_table(), tmp)
-                tmp.replace(p)
+                os.replace(tmp, p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
         """Write rows as a new Parquet file. Refuses to replace an existing file (immutability)."""
@@ -465,13 +478,13 @@ class Lake:
     def latest(self, table: str, key: str) -> list[dict]:
         """The latest record per key (by logged_at): corrections are new records, so this is current state.
 
-        A remote lake made before a table existed has no file for it until the next publish adds the schema
+        A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing."""
         sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
         try:
             cur = self.connect().execute(sql.format(self.scan(table), key, key))
         except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-            if not (self.remote and "No files found" in str(e)):
+            if not (self.remote and no_files(e)):
                 raise
             local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
             cur = self.connect().execute(sql.format(local, key, key))

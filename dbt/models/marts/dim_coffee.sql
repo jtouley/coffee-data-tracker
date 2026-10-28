@@ -77,8 +77,12 @@ select
     -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".
     case
         when not run.is_latest_run then 'delisted'
+        -- A preorder tag whose ship date (e.g. preorder-ship-date:2026-11-05) has passed is left over: available.
         when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
-            regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon'))) then 'preorder'
+            regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon')))
+            and not coalesce(list_bool_or(list_transform(l.tags, lambda t: try_cast(nullif(regexp_extract(
+                lower(t), 'ship[-_ ]?date\W*(\d{4}-\d{2}-\d{2})', 1), '') as date) < l.run_date)), false)
+            then 'preorder'
         when coalesce(p.any_available, false) then 'available'
         when list_bool_or(list_transform(l.tags, lambda t:
             regexp_matches(lower(t), 'archive|discontinued|past[-_ ]offering'))) then 'archived'

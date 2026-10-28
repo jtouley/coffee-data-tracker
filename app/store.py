@@ -20,6 +20,8 @@ from coffeedata import shots
 from coffeedata.lake import Lake
 from coffeedata.models import Bag, Equipment, Shot
 
+from . import logs
+
 log = logging.getLogger(__name__)
 
 
@@ -318,7 +320,15 @@ class Store:
                 row = item.model_dump() | {"logged_at": at, "deleted": deleted}
                 self.lake.write(table, f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet", [row])
             self._staged[key] = at  # the next record for this key sorts after this one, published or not
+        started = time.perf_counter()
         self.lake.publish(f"app: {table} {key}")
+        logs.event(
+            "saved",
+            table=table,
+            id=key,
+            deleted=deleted,
+            publish_ms=round((time.perf_counter() - started) * 1000),
+        )
         rec = Rec(item, at, deleted)
         with self.lock:
             current = recs.get(key)

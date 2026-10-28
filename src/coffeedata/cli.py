@@ -404,6 +404,28 @@ def cmd_mcp(args: argparse.Namespace) -> None:
     mcp.run()
 
 
+def cmd_delete_user(args: argparse.Namespace) -> None:
+    from . import erase
+
+    main, photos, users = Lake(), Lake.photos(), Lake.users()
+    try:
+        p = erase.plan(args.username, main, photos, users, force=args.force)
+    except erase.EraseError as e:
+        sys.exit(str(e))
+    print(f"{p.username} ({p.user_id}):")
+    for url, paths in p.files.items():
+        print(f"  {url}: {len(paths)} files")
+        for rel in paths:
+            print(f"    {rel}")
+    for m in p.marts:
+        print(f"  marts/{m}.parquet: rewritten without their rows")
+    if args.dry_run:
+        print("Dry run: nothing deleted.")
+        return
+    erase.apply(p, main, photos, users)
+    print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -506,6 +528,13 @@ def main(argv: list[str] | None = None) -> None:
     s.add_argument("action", choices=["add", "from-issue"])
     s.add_argument("--json", help="shot fields as JSON (add)")
     s.add_argument("--file", help="issue body file (from-issue); default stdin")
+
+    du = add("delete-user", cmd_delete_user, "delete one person's shots, bags, gear, photos and account")
+    du.add_argument("username")
+    du.add_argument("--dry-run", action="store_true", help="list the files, delete nothing")
+    du.add_argument(
+        "--force", action="store_true", help="even if the account isn't turned off (the app isn't running)"
+    )
 
     ar = add("add-roaster", cmd_add_roaster, "add (or opt out) a roaster from an issue-form body")
     ar.add_argument("--file", help="issue body file; default stdin")

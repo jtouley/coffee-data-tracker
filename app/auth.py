@@ -1,5 +1,5 @@
 """Who is making a request. `Sessions` is the real sign-in (app/accounts.py); `LocalOwner` is a stub for
-`make app` on a laptop, which treats every request as the owner and refuses to run on a Space."""
+`make app` on a laptop, which treats every request as the owner and refuses to run when hosted."""
 
 from __future__ import annotations
 
@@ -36,8 +36,8 @@ class LocalOwner:
     accounts = None
 
     def __init__(self, user_id: str | None = None, username: str | None = None):
-        if os.environ.get("SPACE_ID"):  # set on every Hugging Face Space
-            raise RuntimeError("the local sign-in stub must not run on a Space")
+        if hosted():
+            raise RuntimeError("the local sign-in stub must not run on a public host")
         self.owner = User(
             user_id or shots.owner_user_id(),
             username or os.environ.get("COFFEEDATA_OWNER") or "owner",
@@ -80,21 +80,40 @@ class Sessions:
         response.delete_cookie(COOKIE, path="/", secure=self.secure, httponly=True, samesite="lax")
 
 
+SECRETS = ("HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE")
+
+
+def clean_secrets() -> None:
+    """Strip whitespace from the secrets as the environment hands them over. A value stored with a trailing newline
+    (`gcloud secrets versions add … --data-file=-` keeps one) would never match a typed setup code, and an HF token
+    with a newline is an invalid header. Done once, in place, so every reader (huggingface_hub and the Anthropic
+    client included) sees the clean value."""
+    for name in SECRETS:
+        value = os.environ.get(name)
+        if value is not None and value != value.strip():
+            os.environ[name] = value.strip()
+
+
+def hosted() -> bool:
+    """On Cloud Run (K_SERVICE is set on every service) or a Hugging Face Space (SPACE_ID)."""
+    return bool(os.environ.get("K_SERVICE") or os.environ.get("SPACE_ID"))
+
+
 def missing_secrets() -> list[str]:
-    """Sign-in secrets a Space needs and doesn't have (names only)."""
-    if not (os.environ.get("SPACE_ID") or os.environ.get("SESSION_SECRET")):
+    """Sign-in secrets a hosted app needs and doesn't have (names only)."""
+    if not (hosted() or os.environ.get("SESSION_SECRET")):
         return []
     # OWNER_SETUP_CODE isn't required: without it nobody can create the owner (the screen says so), and once the
     # owner exists it only resets the owner's password, once per value.
     need = {"AUTH_PEPPER": 16, "SESSION_SECRET": 32}
-    if os.environ.get("SPACE_ID"):
-        need["HF_TOKEN"] = 1  # a Space writes to Hugging Face datasets
+    if hosted():
+        need["HF_TOKEN"] = 1  # the hosted app writes to Hugging Face datasets
     return [k for k, n in need.items() if len(os.environ.get(k, "")) < n]
 
 
 def from_env() -> Auth:
-    """Real sign-in on a Space or wherever SESSION_SECRET is set; the local stub otherwise."""
-    if not (os.environ.get("SPACE_ID") or os.environ.get("SESSION_SECRET")):
+    """Real sign-in when hosted or wherever SESSION_SECRET is set; the local stub otherwise."""
+    if not (hosted() or os.environ.get("SESSION_SECRET")):
         return LocalOwner()
     from coffeedata.lake import Lake
 
