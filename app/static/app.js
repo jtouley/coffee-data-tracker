@@ -536,8 +536,6 @@ function unqueue(strip, id) {
 
 // --- New bag and equipment ---------------------------------------------------------------------------
 
-// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
-// than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
 // Days from a roast date to today on this phone.
 function roastDays(iso) {
   const today = new Date();
@@ -545,13 +543,16 @@ function roastDays(iso) {
   return Math.round((today - new Date(`${iso}T12:00:00`)) / 86400000);
 }
 
+// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
+// than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
 // `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or Finished can
-// change on a bag whose date predates this check. The day of grace is the server's: its "today" (UTC) can be ahead.
+// change on a bag whose date predates this check. "Future" is the server's rule, past tomorrow in UTC, so a phone
+// ahead of UTC or behind it never offers a date the server then refuses.
 function roastCheck(form, save, label, kept = null) {
   const v = form.roast_date.value;
   if (!v || v === kept) return "";
+  if (v > new Date(Date.now() + 86400000).toISOString().slice(0, 10)) return "That roast date is in the future. Check the year.";
   const days = roastDays(v);
-  if (days < -1) return "That roast date is in the future. Check the year.";
   if (days > 90 && save.textContent === label) {
     save.textContent = `Save with day ${days}?`; // like "Save with 29 s?" on Log shot
     return " "; // not an error: the button asks
@@ -657,12 +658,11 @@ function newBag(root) {
     el.textContent = text || "";
     if (el.tagName === "DD") el.hidden = el.previousElementSibling.hidden = !text;
   };
-  const days = (iso) => Math.round((Date.now() - new Date(`${iso}T12:00:00`)) / 86400000);
   const showMatch = (m) => {
     fill("title", m.title);
     fill("roaster", m.roaster);
     const d = read.roast_date;
-    fill("roasted", d ? `${new Date(`${d}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })} · day ${days(d)} · read from the bag` : "");
+    fill("roasted", d ? `${new Date(`${d}T12:00:00`).toLocaleDateString(undefined, { month: "short", day: "numeric" })} · day ${roastDays(d)} · read from the bag` : "");
     fill("origin", m.origin);
     fill("notes", m.notes);
     fill("price", m.price);
