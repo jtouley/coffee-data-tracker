@@ -33,6 +33,9 @@ never holds the site back):
   stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`). Only a view missing from the share is
   granted, first, and that one grant needs the share's owner. A migration that fails partway is finished by running it again; until then the weekly
   load refuses to run.
+- Snowflake shows a role only the objects it has a privilege on, so a share view another role owns is invisible
+  to COFFEE_LOADER. While the other share views are visible, both the weekly load and a migration stop before
+  changing anything and name the missing view, rather than skip it and leave it stale.
 - Migrate as COFFEE_LOADER, not ACCOUNTADMIN: a role that recreates a table or view owns it afterwards, and the
   weekly load and later migrations, run as COFFEE_LOADER, would then fail. If that happened, give each one back
   as ACCOUNTADMIN with `grant ownership on view coffee_data.share.<view> to role coffee_loader copy current

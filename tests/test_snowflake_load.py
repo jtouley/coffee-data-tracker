@@ -148,6 +148,8 @@ class FakeSnowflake:
         self.description, self._rows = None, []
         if m := re.search(r"table_schema = '(\w+)' and table_name = '(\w+)'", sql):
             have = (self.tables if m[1] == "MARKET" else self.views).get(m[2].lower(), [])
+            if m[1] == "SHARE" and self.view_owner.get(m[2].lower(), self.role) != self.role:
+                have = []  # information_schema lists only what the role has a privilege on
             self._rows = [(c,) for c in have]
         elif sql.startswith("show shares"):
             raise AssertionError("show shares lists nothing without IMPORT SHARE")
@@ -268,13 +270,27 @@ def test_migrate_works_when_another_role_owns_the_share(tmp_path):
     assert healthy(sf)
 
 
-def test_migrate_stops_before_changing_anything_if_another_role_owns_a_view(tmp_path):
-    """E.g. after a migration run as ACCOUNTADMIN, which then owns the views it recreated."""
+@pytest.mark.parametrize("migrate", [True, False])
+def test_a_share_view_another_role_owns_stops_the_load_before_anything_changes(tmp_path, migrate):
+    """E.g. after a migration run as ACCOUNTADMIN: COFFEE_LOADER can't even see the view it recreated, so a
+    migration that skipped it would report success and leave its `select *` stale."""
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts)
-    sf.view_owner["roaster"] = "ACCOUNTADMIN"  # COFFEE_LOADER then can't even list the view's grants
-    with pytest.raises(RuntimeError, match="SHARE.roaster is owned by another role, not COFFEE_LOADER.*Nothing was"
-                                           ".*grant ownership on view SHARE.roaster to role COFFEE_LOADER copy"):  # fmt: skip
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    with pytest.raises(RuntimeError, match="SHARE.roaster can't be seen by COFFEE_LOADER.*Nothing was"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=migrate)
+    assert unchanged(sf)
+
+    sf.view_owner["roaster"] = "COFFEE_LOADER"  # given back
+    snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert healthy(sf)
+
+
+def test_a_view_missing_while_the_others_exist_stops_the_load(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = old_snowflake(counts)
+    del sf.views["roaster"], sf.view_owner["roaster"]
+    with pytest.raises(RuntimeError, match="never created .*admin_setup.sql part 2"):
         snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     assert unchanged(sf)
 

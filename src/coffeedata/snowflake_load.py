@@ -93,21 +93,26 @@ def _view_grants(cur, view: str) -> tuple[str, set[str]]:
     return owner, shares
 
 
-def stale(cur, export_dir: Path) -> tuple[list[str], list[str]]:
-    """Tables and share views whose columns differ from the export. COPY ... match_by_column_name silently loads
-    NULL into a column the file no longer has, and a `select *` secure view keeps the columns it was created
-    with, so neither can be used as is after a public contract change. One that doesn't exist yet doesn't
-    differ: the load creates the table, and admin_setup.sql part 2 the view."""
+def stale(cur, export_dir: Path) -> tuple[list[str], list[str], list[str]]:
+    """Tables and share views whose columns differ from the export, and share views this role can't see.
+    COPY ... match_by_column_name silently loads NULL into a column the file no longer has, and a `select *` secure
+    view keeps the columns it was created with, so neither can be used as is after a public contract change. One
+    that doesn't exist yet doesn't differ: the load creates the table, and admin_setup.sql part 2 the view.
+    information_schema lists only objects the role has a privilege on, so while some share views are visible, one
+    that isn't was either never created or recreated by another role (ACCOUNTADMIN), and can't be checked."""
     import pyarrow.parquet as pq
 
-    tables, views = [], []
+    tables, views, seen = [], [], []
     for t in PUBLIC_TABLES:
         want = sorted(c.upper() for c in pq.read_schema(export_dir / f"{t}.parquet").names)
         if (have := _columns(cur, SCHEMA, t)) and have != want:
             tables.append(t)
-        if (have := _columns(cur, "SHARE", SHARE_VIEWS[t])) and have != want:
-            views.append(t)
-    return tables, views
+        if have := _columns(cur, "SHARE", SHARE_VIEWS[t]):
+            seen.append(t)
+            if have != want:
+                views.append(t)
+    hidden = [t for t in PUBLIC_TABLES if seen and t not in seen]
+    return tables, views, hidden
 
 
 def statements(table: str, run_path: str) -> list[str]:
@@ -144,7 +149,16 @@ def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
             "comment = 'Weekly facts-only exports, one folder per run'"
         )
         # Everything is checked before anything changes, so a mismatch never leaves Snowflake half on the new export.
-        tables, views = stale(cur, export_dir)
+        tables, views, hidden = stale(cur, export_dir)
+        if hidden:
+            role = str(cur.execute("select current_role()").fetchone()[0]).upper()
+            names = ", ".join(f"SHARE.{SHARE_VIEWS[t]}" for t in hidden)
+            raise RuntimeError(
+                f"{names} can't be seen by {role}: either it was never created (run admin_setup.sql part 2) or "
+                f"another role owns it, so its columns can't be checked. Nothing was loaded or changed. Its owner (or "
+                f"ACCOUNTADMIN) can give it back, keeping its grants: grant ownership on view <view> to role {role} "
+                "copy current grants"
+            )
         if (tables or views) and not migrate:
             raise RuntimeError(
                 f"{', '.join(dict.fromkeys(tables + views))} in Snowflake have different columns from the export: "
