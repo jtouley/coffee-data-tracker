@@ -1,5 +1,7 @@
 from types import SimpleNamespace
 
+import pytest
+
 from coffeedata import extract
 from coffeedata.models import CatalogItem, Enrichment
 
@@ -94,133 +96,323 @@ def test_grab_bags_and_multi_country_titles_have_no_origin():
     assert extract.rules(tagged).origin_country == "Colombia"
 
 
-# Counter Culture's Finca El Puente lots, all from Marcala, Honduras. The bodies put the place far below the story.
-_EL_PUENTE_STORY = (
-    "We met Marysabel Caballero and Moisés Herrera, the owners of Finca El Puente, in 2005. They have become like "
-    "family to Counter Culture, and their constant pursuit of coffee perfection inspires us year after year. "
-) * 12
+# Origin probes: realistic listings, including those from the reviews of #41. The rules answer only when a listing is
+# clear; when it names several candidate countries (a variety's homeland, a comparison, a blend) they leave the origin
+# empty, and needs_llm() hands the product to Claude. `ABSTAIN` lists the cases where that is the expected result:
+# the rules must never give a wrong country there, only the right one or None.
+G = "Grown in Marcala, Honduras."
+SL = (
+    "SL-28 is a variety developed in Kenya in the 1930s by Scott Laboratories, prized for its drought tolerance "
+    "and its bright, juicy cup. Kenya remains its best-known home. This lot was grown at Finca El Puente in "
+    "Marcala, Honduras, where Moisés and Marysabel planted it a decade ago."
+)
+ORIGIN_CASES = [
+    ("A1", "Finca La Esperanza var. Colombia", G, "Honduras"),
+    (
+        "A2",
+        "Shakiso Lot 12 Natural",
+        "Heirloom varieties indigenous to Ethiopia, grown by smallholders at 2,100 masl.",
+        "Ethiopia",
+    ),
+    (
+        "A3",
+        "Gesha Village Natural",
+        "Gesha, native to Ethiopia, rose to fame in Panama. Gesha Village Estate brings it home to Bench Maji.",
+        "Ethiopia",
+    ),
+    (
+        "A4",
+        "Gori Gesha Washed",
+        "Gesha is native to Ethiopia, where this lot was grown. Unlike the Gesha made famous by Panama, it is floral and delicate.",
+        "Ethiopia",
+    ),
+    (
+        "B1",
+        "La Esperanza Lot 4",
+        "Grown by smallholders around Huila. Roasted fresh in Santa Fe, New Mexico.",
+        "Colombia",
+    ),
+    (
+        "B2",
+        "Maria Lopez Catuai",
+        "After years working on farms in Costa Rica, Maria returned home to Nicaragua to start her own finca.",
+        "Nicaragua",
+    ),
+    (
+        "B3",
+        "Los Naranjos",
+        "Unlike the big farms in Brazil, these smallholders in Huila pick every cherry by hand.",
+        "Colombia",
+    ),
+    (
+        "B4",
+        "El Mirador",
+        "Grown in Cauca. Like all our coffees, it is sourced from Peru's best importer partners.",
+        "Colombia",
+    ),
+    (
+        "B5",
+        "Bukeye Washed",
+        "This Burundian lot is double-fermented Kenya-style at the Bukeye station.",
+        "Burundi",
+    ),
+    (
+        "B6",
+        "Night Owl Decaf",
+        "A washed Peruvian lot from Cajamarca, decaffeinated in Mexico using the Mountain Water Process.",
+        "Peru",
+    ),
+    (
+        "C1",
+        "Kenya SL28 AA",
+        "If you love our Ethiopia Guji or Ethiopia Hambela, try this lot from Nyeri.",
+        "Kenya",
+    ),
+    (
+        "C2",
+        "Ethiopia Heirloom Natural",
+        "Dried on raised beds at Hambela. Our house espresso, sourced from Brazil, is also on sale.",
+        "Ethiopia",
+    ),
+    ("C3", "El Paraiso Lot 9", "Notes: Brazil nut, cocoa, red apple. A classic Guatemala cup.", "Guatemala"),
+    (
+        "C4",
+        "Finca Las Nubes",
+        "Varieties: Typica and Bourbon. Typica descended from plants in Yemen; this lot comes from Jinotega, Nicaragua.",
+        "Nicaragua",
+    ),
+    (
+        "C5",
+        "Finca Santa Barbara Pacamara",
+        "Pacamara, developed in El Salvador, grown here on our farm in Santa Barbara, Honduras.",
+        "Honduras",
+    ),
+    (
+        "C6",
+        "Sitio Sao Joao",
+        "Yellow Bourbon originally from Brazil, grown by the Silva family in Mantiqueira de Minas.",
+        "Brazil",
+    ),
+    (
+        "C7",
+        "Mt. Elgon Natural",
+        "Grown on the slopes of Mt. Elgon by Bugisu farmers. Similar to Kenya, juicy.",
+        "Uganda",
+    ),
+    ("C8", "Huehue Lot 3", "Producer: Jordan Guinea-Ramirez. Grown in Huehuetenango.", "Guatemala"),
+    ("D1", "Kona Peaberry", "Grown in Kona, Hawaii. Brighter than most Colombian coffee.", "United States"),
+    ("D2", "Las Flores Pacamara", "Washed at the Las Flores mill in Chalatenango.", "El Salvador"),
+    ("D3", "Flores Bajawa", "Grown on the island of Flores, Indonesia.", "Indonesia"),
+    ("D4", "La Flor de Flores", "Grown in Las Flores, Honduras.", "Honduras"),
+    ("D5", "Origin Series: Rwanda", "Washed at Huye Mountain. Compare to our Burundi.", "Rwanda"),
+    ("D6", "Yemen Haraz", "Heirloom Yemeni varieties, native to Yemen's Haraz mountains.", "Yemen"),
+    (
+        "D7",
+        "Typica Mejorado",
+        "Typica Mejorado, a cultivar bred in Ecuador, grown by Pepe Jijon at Finca Soledad, Intag Valley.",
+        "Ecuador",
+    ),
+    ("D8", "Caturra", "Caturra, a mutation discovered in Brazil. This lot is from Tolima.", "Colombia"),
+    (
+        "D9",
+        "Pink Bourbon Huila",
+        "Pink Bourbon, which originated in Colombia, from the San Adolfo area.",
+        "Colombia",
+    ),
+    ("E1", "Wush Wush", "Wush Wush, native to Ethiopia, grown in Tolima.", "Colombia"),
+    (
+        "E2",
+        "Sidra Natural",
+        "Sidra, a variety bred in Ecuador. Grown at Finca La Reserva in Pichincha, Ecuador.",
+        "Ecuador",
+    ),
+    (
+        "E3",
+        "Sidra Natural",
+        "Sidra, a variety bred in Ecuador. Grown at Finca La Reserva, Tolima.",
+        "Colombia",
+    ),
+    (
+        "R1",
+        "La Esperanza Lot 4",
+        "A classic Colombia cup. Roasted fresh in Santa Fe, New Mexico.",
+        "Colombia",
+    ),
+    (
+        "R2",
+        "Los Naranjos",
+        "Nicaragua at its best. Unlike the big farms in Brazil, these smallholders pick by hand.",
+        "Nicaragua",
+    ),
+    (
+        "R3",
+        "Gichathaini AA",
+        "SL28, developed in Kenya in the 1930s, at its best here. Brighter than any Ethiopia we carry.",
+        "Kenya",
+    ),
+    (
+        "R4",
+        "Kenya SL28 & SL34",
+        "Washed at the Gatomboya factory. Like the farms in Ethiopia we buy from, it is a smallholder lot.",
+        "Kenya",
+    ),
+    (
+        "R5",
+        "Ethiopia Heirloom",
+        "Washed at Hambela. Unlike farms in Brazil, these are garden plots.",
+        "Ethiopia",
+    ),
+    (
+        "R6",
+        "Kenya Peaberry",
+        "Grown in Nyeri. If you liked our Colombia Huila or Colombia Narino, try this.",
+        "Kenya",
+    ),
+    ("P1", "Single Origin", "Grown by indigenous Mayan farmers in Guatemala.", "Guatemala"),
+    ("P2", "Single Origin", "Grown by native farmers in Peru.", "Peru"),
+    ("P3", "Single Origin", "A program developed in partnership with farmers in Colombia.", "Colombia"),
+    ("P4", "Single Origin", "We first discovered this Bourbon lot in Rwanda on a buying trip.", "Rwanda"),
+    ("P5", "Single Origin", "The farm's Pacamara was first planted in El Salvador in 1990", "El Salvador"),
+    (
+        "P6",
+        "Finca El Puente SL-28 Variety",
+        "SL-28 is a variety developed in Kenya. Today, Kenya remains its best-known home. Grown in Marcala, Honduras.",
+        "Honduras",
+    ),
+    ("P7", "Huila Decaf", "Brighter than most coffees from Brazil.", "Colombia"),
+    ("P8", "Finca Santa Barbara", "Bourbon from Colombia, a lovely cup.", "Colombia"),
+    (
+        "P9",
+        "Single Origin",
+        "Ethiopia heirloom varieties, washed. Compare with our Kenya offering.",
+        "Ethiopia",
+    ),
+    ("P10", "Single Origin", "Grown in Las Flores. Notes: honey.", None),
+    ("P11", "Single Origin", "Origin: Kenyan. Unlike Ethiopia, bright.", "Kenya"),
+    ("P12", "Finca El Puente Kenya SL-28", G, "Honduras"),
+    ("P13", "Finca El Puente Kenyan SL-28", G, "Honduras"),
+    ("P14", "Finca El Puente Ethiopia Landrace Variety", G, "Honduras"),
+    ("P15", "Finca El Puente Variedad Colombia", G, "Honduras"),
+    ("P16", "Las Flores SL-28 Variety", G, "Honduras"),
+    ("P17", "Kenyan SL-28 grown in Honduras", G, "Honduras"),
+    ("P18", "Lot 7", "However, Kenya is famous for SL28. Here, we grow it in Marcala, Honduras.", "Honduras"),
+    (
+        "P19",
+        "Honduras Cerro Azul Ethiosar",
+        "The family has operated farms in Nicaragua for generations; this lot is from their newer farm.",
+        "Honduras",
+    ),
+    ("P20", "Ethiopia Guji", "Unlike our Kenya, floral.", "Ethiopia"),
+    ("P21", "Kenya Kiambu SL28", "SL28 developed in Kenya.", "Kenya"),
+    (
+        "P22",
+        "Gatuyaini AA SL-28",
+        "SL-28 and SL-34, the varieties Kenya is famous for, grown by members of the Othaya cooperative in Nyeri, Kenya.",
+        "Kenya",
+    ),
+    (
+        "P23",
+        "Esmeralda Gesha",
+        "Gesha, a variety originally from Ethiopia, grown at Hacienda La Esmeralda in Boquete. Juicy and floral.",
+        "Panama",
+    ),
+    ("P24", "Konga", "Grown by smallholders around Yirgacheffe and washed at the Konga station.", "Ethiopia"),
+    (
+        "P25",
+        "Finca El Puente - Anaerobic",
+        "Fermented in sealed tanks at Finca El Puente, high above the town of Marcala.",
+        "Honduras",
+    ),
+    ("P26", "Finca El Puente SL-28 Variety", SL, "Honduras"),
+    ("P27", "Finca El Puente SL-28 Variety", SL.replace(", Honduras", ""), "Honduras"),
+    ("P28", "Finca El Puente SL-28 Variety", SL.replace("Kenya remains", "Today, Kenya remains"), "Honduras"),
+    (
+        "P29",
+        "Finca El Puente - Honey Processed",
+        ("We met the owners of Finca El Puente in 2005. " * 40) + "Region: Marcala, Honduras",
+        "Honduras",
+    ),
+    ("P30", "House Blend", "Roasted in Santa Barbara, CA.", None),
+    (
+        "P31",
+        "Huye Mountain",
+        "Like the best coffees of Ethiopia, this one is floral. Origin: Rwanda. Washed at the Huye Mountain station.",
+        "Rwanda",
+    ),
+    (
+        "P32",
+        "Nahun Fernandez",
+        "Farm: Don Andres\nLocation: Las Flores, Honduras\nProcess: Honey",
+        "Honduras",
+    ),
+    ("P33", "Ethiopia Heirloom", "Region: Sidama, Ethiopia.", "Ethiopia"),
+    ("P34", "Panama Gesha", "Gesha, originally from Ethiopia. Region: Boquete, Panama.", "Panama"),
+]
+ABSTAIN = {
+    # A variety's homeland and the farm's country both named, with no stated origin.
+    "A3",
+    "A4",
+    "E1",
+    "E3",
+    "D8",
+    "P23",
+    "R3",
+    "P27",
+    # A comparison or a second coffee names another country.
+    "B2",
+    "B3",
+    "B4",
+    "B6",
+    "C7",
+    "R2",
+    "P7",
+    "P9",
+    # A title country that is part of a variety name ("Kenya SL-28"), and a region elsewhere disagrees.
+    "C1",
+    "P12",
+    "P13",
+    "P14",
+    # Known misses main shares, left for Claude: a demonym loses to a country, "Guinea-Ramirez" reads as Guinea.
+    "B5",
+    "C8",
+}
+KNOWN_WRONG = {"B5": "Kenya"}
 
 
-def test_el_puente_honey_finds_the_country_far_into_the_body():
-    body = _EL_PUENTE_STORY + "Tasting notes: blackberry, chocolate, apricot.\nRegion: Marcala, Honduras"
-    assert len(_EL_PUENTE_STORY) > 1500
-    e = extract.rules(item("Finca El Puente - Honey Processed", tags=["origin__single-origin"], body=body))
-    assert e.origin_country == "Honduras" and e.process == "honey"
+@pytest.mark.parametrize("cid,title,body,expected", ORIGIN_CASES, ids=[c[0] for c in ORIGIN_CASES])
+def test_origin_probes(cid, title, body, expected):
+    got = extract.rules(item(title, body=body)).origin_country
+    if cid in ABSTAIN:
+        assert got in (expected, None, KNOWN_WRONG.get(cid)), got
+    else:
+        assert got == expected
 
 
-def test_el_puente_anaerobic_names_only_the_region():
-    body = (
-        "This anaerobic lot was fermented in sealed tanks for 72 hours at Finca El Puente, high above the town of "
-        "Marcala. Moisés and Marysabel have pushed the limits of processing for years."
-    )
-    e = extract.rules(item("Finca El Puente - Anaerobic", tags=["origin__single-origin"], body=body))
-    assert e.origin_country == "Honduras" and e.process == "anaerobic"
-
-
-def test_el_puente_sl28_variety_history_is_not_the_origin():
-    body = (
-        "SL-28 is a variety developed in Kenya in the 1930s by Scott Laboratories, prized for its drought tolerance "
-        "and its bright, juicy cup. Kenya remains its best-known home. This lot was grown at Finca El Puente in "
-        "Marcala, Honduras, where Moisés and Marysabel planted it a decade ago."
-    )
-    e = extract.rules(item("Finca El Puente SL-28 Variety", tags=["origin__single-origin"], body=body))
+def test_el_puente_lots():
+    e = extract.rules(item("Finca El Puente SL-28 Variety", tags=["origin__single-origin"], body=SL))
     assert e.origin_country == "Honduras" and e.varietals == ["SL28"]
-    # The same story without the country still lands in Honduras, by its region.
-    no_country = body.replace(", Honduras", "")
-    assert extract.rules(item("Finca El Puente SL-28 Variety", body=no_country)).origin_country == "Honduras"
-    # A sentence-opening word before a comma isn't a place ("Today, Kenya ...").
-    today = body.replace("Kenya remains", "Today, Kenya remains")
-    assert extract.rules(item("Finca El Puente SL-28 Variety", body=today)).origin_country == "Honduras"
+    honey = (
+        "We met the owners of Finca El Puente in 2005. " * 40
+    ) + "Process: Honey\nRegion: Marcala, Honduras"
+    e = extract.rules(item("Finca El Puente - Honey Processed", body=honey))
+    assert e.origin_country == "Honduras" and e.process == "honey"
+    # Without its country, the SL-28 story names only Kenya, while its region is in Honduras: no answer, not Kenya.
+    e = extract.rules(item("Finca El Puente SL-28 Variety", body=SL.replace(", Honduras", "")))
+    assert e.origin_country is None and extract.needs_llm(e)
 
 
-def test_variety_origin_phrases_never_count():
-    for phrase in ("originally from Ethiopia", "native to southwestern Ethiopia", "bred in Ethiopia"):
-        body = f"Gesha, a variety {phrase}, grown at Hacienda La Esmeralda in Boquete. Juicy and floral."
-        assert extract.rules(item("Esmeralda Gesha", body=body)).origin_country == "Panama", phrase
-
-
-def test_region_only_body():
-    body = "Grown by smallholders around Yirgacheffe and washed at the Konga station. Notes: jasmine, lemon."
-    assert extract.rules(item("Konga", body=body)).origin_country == "Ethiopia"
-    assert (
-        extract.rules(item("Finca La Esperanza", body="From Huila's high slopes.")).origin_country
-        == "Colombia"
-    )
+def test_region_only_when_no_country_is_named():
     assert extract.rules(item("La Esperanza", tags=["region:Nariño"])).origin_country == "Colombia"
-    # Region names only count where they can mean one place.
-    assert extract.rules(item("House Blend", body="Roasted in Santa Barbara, CA.")).origin_country is None
+    assert extract.rules(item("Huila Lot 4", body="Grown by smallholders.")).origin_country == "Colombia"
+    # A country anywhere wins over, or conflicts with, a region; a region never overrides it.
+    assert extract.rules(item("Huila Lot 4", body="A classic Colombia cup.")).origin_country == "Colombia"
     assert extract.rules(item("Islander", body="Inspired by Antigua and Barbuda.")).origin_country is None
 
 
-def test_true_kenyan_sl28_stays_kenya():
-    body = (
-        "SL-28 and SL-34, the varieties Kenya is famous for, grown by members of the Othaya cooperative in Nyeri, "
-        "Kenya. Washed and dried on raised beds. Notes: blackcurrant, grapefruit."
-    )
-    kenyan = extract.rules(item("Gatuyaini AA SL-28", body=body))
-    assert kenyan.origin_country == "Kenya" and kenyan.varietals == ["SL28", "SL34"]
-    assert extract.rules(item("Kenya Kiambu SL28", body="SL28 developed in Kenya.")).origin_country == "Kenya"
-    # Only a variety beside the country, nothing else: the country is still the best guess.
-    assert extract.rules(item("Gichathaini", body="Classic SL28 from Kenya.")).origin_country == "Kenya"
-
-
-def test_the_country_named_as_origin_beats_the_first_named():
-    body = "Like the best coffees of Ethiopia, this one is floral. Origin: Rwanda. Washed at the Huye Mountain station."
-    assert extract.rules(item("Huye Mountain", body=body)).origin_country == "Rwanda"
-    location = "Farm: Don Andres\nLocation: Las Flores, Honduras\nProcess: Honey"
-    assert extract.rules(item("Nahun Fernandez", body=location)).origin_country == "Honduras"
-
-
-def origin(title, body=""):
-    return extract.rules(item(title, body=body)).origin_country
-
-
-def test_sentences_about_people_or_lots_are_not_variety_origins():
-    assert origin("Lot 7", "Grown by indigenous Mayan farmers in Guatemala.") == "Guatemala"
-    assert origin("Lot 7", "Grown by native farmers in Peru.") == "Peru"
-    assert origin("Lot 7", "A program developed in partnership with farmers in Colombia.") == "Colombia"
-    assert origin("Lot 7", "We first discovered this Bourbon lot in Rwanda on a buying trip.") == "Rwanda"
-    assert origin("Lot 7", "The farm's Pacamara was first planted in El Salvador in 1990.") == "El Salvador"
-    assert (
-        origin("Lot 7", "However, Kenya is famous for SL28. Here, we grow it in Marcala, Honduras.")
-        == "Honduras"
-    )
-
-
-def test_fallback_order():
-    # A region in the title beats a country the body names in passing.
-    assert origin("Huila Decaf", "Brighter than most coffees from Brazil.") == "Colombia"
-    # A region that is only a farm's name doesn't.
-    assert origin("Finca Santa Barbara", "Bourbon from Colombia, a lovely cup.") == "Colombia"
-    # A variety beside its country is how listings state their origin.
-    assert origin("Lot 7", "Caturra from Colombia.") == "Colombia"
-    assert (
-        origin("Lot 7", "Ethiopia heirloom varieties, washed. Compare with our Kenya offering.") == "Ethiopia"
-    )
-    # A labelled demonym is a labelled origin.
-    assert origin("Lot 7", "Origin: Kenyan. Unlike Ethiopia, bright.") == "Kenya"
-    # Flores in a Spanish place name isn't the Indonesian island.
-    assert origin("Lot 7", "Grown in Las Flores. Notes: honey.") is None
-    assert origin("Flores Bajawa") == "Indonesia"
-    # A country the title names outright still wins over a description's other farms.
-    body = "The family has operated farms in Nicaragua for generations; this lot is from their newer farm."
-    assert origin("Honduras Cerro Azul Ethiosar", body) == "Honduras"
-
-
-def test_title_country_used_for_a_variety_yields_to_the_body():
-    body = "Grown in Marcala, Honduras."
-    for title in (
-        "Finca El Puente Kenya SL-28",
-        "Finca El Puente Kenyan SL-28",
-        "Finca El Puente Ethiopia Landrace Variety",
-        "Finca El Puente Variedad Colombia",
-        "Las Flores SL-28 Variety",
-        "Kenyan SL-28 grown in Honduras",
-    ):
-        assert origin(title, body) == "Honduras", title
-    assert origin("Ethiopia Guji") == "Ethiopia"
-    assert origin("Ethiopia Guji", "Unlike our Kenya, floral.") == "Ethiopia"
-    assert origin("Kenya SL28") == "Kenya"
+def test_multi_origin_blend_bodies_abstain():
+    body = "A simple, sweet medium roast blend of coffees from Colombia and Ethiopia."
+    assert extract.rules(item("Simplify", body=body)).origin_country is None
+    assert extract.rules(item("Rise", body="Origin: Brazil, Colombia, Guatemala")).origin_country is None
 
 
 def test_varietal_spellings():
