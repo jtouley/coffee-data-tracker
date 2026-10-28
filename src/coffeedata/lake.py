@@ -12,6 +12,8 @@ Every pipeline step *adds* files and never rewrites another run's files:
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+    run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
+    serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
 
 Bag photos go to their own private dataset (`Lake.photos()`), one photo per file:
 
@@ -31,6 +33,7 @@ checkpoint (each ingest chunk and each weekly step).
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import os
@@ -57,6 +60,9 @@ VARIANT = pa.struct(
         ("available", pa.bool_()),
     ]
 )
+
+# One HTTP status a fetch saw, and how many responses had it.
+HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
 
 # Hugging Face's Image feature: the dataset viewer shows a thumbnail for a struct of bytes and path.
 IMAGE = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
@@ -91,6 +97,9 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("variants", pa.list_(VARIANT)),
             ("is_coffee", pa.bool_()),
             ("published_at", pa.timestamp("s", tz="UTC")),
+            # Added later; older files read back as null. A hash of the store's raw product payload, so a
+            # product that really changed, and a fetch that repeated an earlier one, can be told apart.
+            ("payload_hash", pa.string()),
         ]
     ),
     "bodies": pa.schema(
@@ -107,6 +116,15 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("error", pa.string()),
             ("products", pa.int32()),
             ("coffees", pa.int32()),
+            # Fetch diagnostics, added later (older files read back as null): what the fetch asked of the
+            # store (http.RequestStats), how long it took, and the code that did it.
+            ("pages", pa.int32()),
+            ("requests", pa.int32()),
+            ("http_statuses", pa.list_(HTTP_STATUS)),
+            ("retries", pa.int32()),
+            ("rate_limited", pa.int32()),
+            ("duration_s", pa.float64()),
+            ("code_version", pa.string()),
         ]
     ),
     "probes": pa.schema(
@@ -211,6 +229,43 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("execution_s", pa.float64()),
             ("value", pa.float64()),
             ("payload", pa.string()),
+            # The build's environment, added later (older files read back as null): the CI run, dbt's and the
+            # key packages' versions (a JSON object) and how long dbt took.
+            ("ci_run_id", pa.string()),
+            ("ci_run_url", pa.string()),
+            ("dbt_version", pa.string()),
+            ("package_versions", pa.string()),
+            ("duration_s", pa.float64()),
+        ]
+    ),
+    # What an ingest set out to fetch, written before its first request: one row per roaster it intends to
+    # fetch, with that roaster's status at that moment. run_completeness reads it as the run's expected set.
+    "run_manifests": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("manifest_id", pa.string()),
+            ("started_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("status", pa.string()),
+            ("platform", pa.string()),
+            ("adapter", pa.string()),
+            ("mode", pa.string()),  # full, sample, only or retry_failed
+            ("code_version", pa.string()),
+        ]
+    ),
+    # One row per serve and rollback: which release customers got, when, why, from whom, and what it replaced.
+    # marts/release.parquet holds only the current one.
+    "serving_log": pa.schema(
+        [
+            ("served_at", pa.timestamp("s", tz="UTC")),
+            ("action", pa.string()),  # serve or rollback
+            ("build_id", pa.string()),
+            ("run_date", pa.date32()),
+            ("reason", pa.string()),
+            ("actor", pa.string()),
+            ("previous_build_id", pa.string()),
+            ("ci_run_id", pa.string()),
+            ("ci_run_url", pa.string()),
         ]
     ),
     "verdict_batches": pa.schema(
@@ -347,6 +402,8 @@ GLOBS = {
     "verdict_batches": "verdict_batches/*/*.parquet",
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
+    "run_manifests": "run_manifests/*/*.parquet",
+    "serving_log": "serving_log/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -367,6 +424,8 @@ SCHEMA_FILES = {
     "verdict_batches": "verdict_batches/state=schema/schema.parquet",
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
+    "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",
+    "serving_log": "serving_log/serve_id=schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.
     "shots": "shots/shot_id=schema-v2.parquet",
@@ -384,6 +443,26 @@ def no_files(e: Exception) -> bool:
     dataset, a 404 listing a folder no file was ever published to (a table added after the dataset was made)."""
     msg = str(e)
     return "No files found" in msg or ("error listing" in msg and "404" in msg)
+
+
+def _same_file(info, path: Path) -> bool:
+    """Whether a dataset file (a get_paths_info entry) has a local file's content: by its LFS sha256, or else its
+    git blob id. A file whose hash isn't known counts as the same, so it's never replaced on a guess."""
+    data = path.read_bytes()
+    lfs = getattr(info, "lfs", None)
+    if lfs:
+        return lfs["sha256"] == hashlib.sha256(data).hexdigest()
+    blob_id = getattr(info, "blob_id", None)
+    return blob_id is None or blob_id == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
+
+
+def _stale_schema(api, repo_id: str, rel: str, info, path: Path) -> bool:
+    """Whether the dataset's schema file at `rel` has fewer columns than the staged one at `path`: only then is it
+    replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by) compare by name."""
+    if _same_file(info, path):
+        return False
+    remote = pq.read_schema(api.hf_hub_download(repo_id, rel, repo_type="dataset"))
+    return set(remote.names) < set(pq.read_schema(path).names)
 
 
 def new_batch_id(now: datetime | None = None) -> str:
@@ -579,8 +658,11 @@ class Lake:
         and the next publish sends them.
 
         A table's zero-row schema file is sent when the dataset doesn't have it yet (a table added after the lake
-        was created), so a glob over that table resolves; this is checked once per process, or every time with
-        `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+        was created), so a glob over that table resolves, and replaced when the dataset's copy lacks columns the
+        staged one has (one from before a column was added, which ensure_schemas refreshed in staging), so a
+        reader of the dataset alone sees every column. Like ensure_schemas, that compares column names, so a
+        process running older code (fewer columns) never replaces a newer schema file. This is checked once per
+        process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
         if not self.remote:
             return 0
@@ -606,14 +688,16 @@ class Lake:
             try:
                 # Only the staged paths are looked up, so the cost doesn't grow with the dataset.
                 existing = {
-                    f.path
+                    f.path: f
                     for i in range(0, len(rels), 500)
                     for f in api.get_paths_info(repo_id, rels[i : i + 500], repo_type="dataset")
                 }
                 ops = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
-                    if rel not in existing or rel.startswith("marts/")
+                    if rel not in existing
+                    or rel.startswith("marts/")
+                    or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
                 ]
                 if ops:
                     api.create_commit(

@@ -96,6 +96,57 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     assert lake.staged_files() == sorted(lake.root / SCHEMA_FILES[t] for t in LAKE_TABLES)  # staging cleared
 
 
+def test_publish_replaces_a_stale_remote_schema_file(tmp_path, monkeypatch):
+    # The dataset's snapshots schema file is from before payload_hash; ensure_schemas refreshed only staging's.
+    import hashlib
+
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+
+    def schema_file(schema, name, **meta):
+        pq.write_table(schema.with_metadata(meta).empty_table(), tmp_path / name)
+        return (tmp_path / name).read_bytes()
+
+    def info(path, data):
+        return types.SimpleNamespace(path=path, blob_id="x", lfs={"sha256": hashlib.sha256(data).hexdigest()})
+
+    remote = {SCHEMA_FILES[t]: (lake.root / SCHEMA_FILES[t]).read_bytes() for t in LAKE_TABLES}
+    # Older: no payload_hash. Replaced.
+    older = pa.schema([f for f in SCHEMAS["snapshots"] if f.name != "payload_hash"])
+    remote[SCHEMA_FILES["snapshots"]] = schema_file(older, "s.parquet")
+    # The same columns, other bytes (another pyarrow's created_by): left alone.
+    remote[SCHEMA_FILES["fetches"]] = schema_file(SCHEMAS["fetches"], "f.parquet", writer="other")
+    # Newer: a column this code doesn't know yet. Older code's file never replaces it.
+    newer = SCHEMAS["builds"].append(pa.field("later", pa.string()))
+    remote[SCHEMA_FILES["builds"]] = schema_file(newer, "b.parquet")
+    commits = []
+
+    class FakeApi:
+        def __init__(self, token=None):
+            pass
+
+        def get_paths_info(self, repo_id, paths, repo_type):
+            return [info(p, remote[p]) for p in paths if p in remote]
+
+        def hf_hub_download(self, repo_id, filename, repo_type):
+            (tmp_path / "dl.parquet").write_bytes(remote[filename])
+            return str(tmp_path / "dl.parquet")
+
+        def create_commit(self, repo_id, repo_type, operations, commit_message):
+            commits.append(sorted(op.path_in_repo for op in operations))
+
+    import huggingface_hub
+
+    monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    assert lake.publish("schemas") == 1
+    assert commits == [[SCHEMA_FILES["snapshots"]]]  # the up-to-date and newer ones are left alone
+
+
 def test_init_creates_private_dataset_with_card(tmp_path, monkeypatch):
     import huggingface_hub
 
