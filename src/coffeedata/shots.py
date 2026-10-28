@@ -51,10 +51,7 @@ _rows_cache: dict[str, tuple[float, list[tuple[str, str, str]]]] = {}
 def retail_only(con, src: str) -> str:
     """WHERE clause that leaves out wholesale listings (a roaster's wholesale twin of a retail coffee), for what
     people browse and pick from. A dim_coffee exported before is_wholesale existed has no such column: no filter."""
-    cols = [
-        r[0]
-        for r in con.execute(f"describe select * from read_parquet([{src}], union_by_name = true)").fetchall()
-    ]
+    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}], union_by_name = true)").fetchall()]
     return "where not coalesce(is_wholesale, false)" if "is_wholesale" in cols else ""
 
 
