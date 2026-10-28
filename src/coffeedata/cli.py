@@ -326,7 +326,13 @@ def cmd_export_public(args: argparse.Namespace) -> None:
 def cmd_load_snowflake(args: argparse.Namespace) -> None:
     from . import snowflake_load
 
-    _print(snowflake_load.load(Path(args.source), migrate=getattr(args, "migrate", False)))
+    _print(
+        snowflake_load.load(
+            Path(args.source),
+            migrate=getattr(args, "migrate", False),
+            dry_run=getattr(args, "dry_run", False),
+        )
+    )
 
 
 def cmd_weekly(args: argparse.Namespace) -> None:
@@ -585,6 +591,11 @@ def main(argv: list[str] | None = None) -> None:
         "--migrate",
         action="store_true",
         help="after a public contract change: recreate changed tables and their share views, then load",
+    )
+    sf.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="change nothing: print the checks (tables, share views, owners, share grants) and the statements",
     )
 
     w = add("weekly", cmd_weekly, "the full weekly run")

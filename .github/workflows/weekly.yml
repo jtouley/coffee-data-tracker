@@ -16,6 +16,10 @@ on:
         description: "After a public contract change: migrate Snowflake (alone: no crawl, re-exports the served release)"
         type: boolean
         default: false
+      snowflake_dry_run:
+        description: "With snowflake_migrate (or alone): only print what the Snowflake load would do; change nothing"
+        type: boolean
+        default: false
       accept_volume_change:
         description: "Let this run through the catalog volume check (after reviewing `coffeedata build-diff`)"
         type: boolean
@@ -66,9 +70,10 @@ jobs:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
           ROLLBACK_TO: ${{ inputs.rollback_to }}
-          MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
+          MIGRATE: ${{ (inputs.snowflake_migrate || inputs.snowflake_dry_run) && '1' || '' }}
+          DRY: ${{ inputs.snowflake_dry_run && '1' || '' }}
         run: |
-          # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
+          # snowflake_migrate (or a Snowflake dry run) on its own re-exports the served release, without a crawl.
           if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then
             if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE" ]; then
               echo "snowflake_migrate runs no crawl, so sample and accept_volume_change would be ignored: unset them"
@@ -77,7 +82,8 @@ jobs:
             ROLLBACK_TO=served
           fi
           if [ "$ROLLBACK_TO" = served ]; then
-            uv run coffeedata rollback --to served --reason "re-export for Snowflake migration ($GITHUB_ACTOR)"
+            if [ -n "$DRY" ]; then KIND="dry run"; else KIND=migration; fi
+            uv run coffeedata rollback --to served --reason "re-export for Snowflake $KIND ($GITHUB_ACTOR)"
           elif [ -n "$ROLLBACK_TO" ]; then
             if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
             else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
@@ -96,7 +102,8 @@ jobs:
         timeout-minutes: 30  # the deploy job waits for this one, so a hung load mustn't hold the site for hours
         env:
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
-        run: uv run coffeedata load-snowflake ${MIGRATE:+--migrate}
+          DRY_RUN: ${{ inputs.snowflake_dry_run && '1' || '' }}
+        run: uv run coffeedata load-snowflake ${MIGRATE:+--migrate} ${DRY_RUN:+--dry-run}
   deploy:
     needs: run
     if: ${{ !cancelled() && needs.run.outputs.site == 'true' }}

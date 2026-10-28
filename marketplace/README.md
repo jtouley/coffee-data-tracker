@@ -27,17 +27,26 @@ never holds the site back):
   checked: that doesn't crawl, it re-exports the served release (`coffeedata rollback --to served`) and runs
   `coffeedata load-snowflake --migrate`. Locally: `coffeedata rollback --to served`, then
   `coffeedata load-snowflake --migrate`.
-- A migration first checks, before changing anything, that the loader's role (COFFEE_LOADER) owns the share
-  views, from the views' own grants (`show grants on view`, which needs no account privilege). It uploads the
-  files, drops and reloads the changed tables, then recreates every share view with `copy grants`, so each
-  stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`). Only a view missing from the share is
-  granted, first, and that one grant needs the share's owner. A migration that fails partway is finished by running it again; until then the weekly
-  load refuses to run.
-- Snowflake shows a role only the objects it has a privilege on, so a share view another role owns is invisible
-  to COFFEE_LOADER. While the other share views are visible, both the weekly load and a migration stop before
-  changing anything and name the missing view, rather than skip it and leave it stale.
+- **Before the first real migration, do a dry run:** run the weekly workflow with `snowflake_migrate` and
+  `snowflake_dry_run` checked (locally: `coffeedata load-snowflake --migrate --dry-run`). It changes nothing in
+  Snowflake (the workflow re-serves the same release to export it, recorded as a Snowflake dry run), and prints the role, the share, the tables whose columns changed, each share view's state (ok, stale, new or
+  hidden), the grants it would add, every reason it would refuse, and the statements it would run.
+- Every load checks first, with read-only queries, and changes nothing if a check fails:
+  - Snowflake shows a role only the objects it owns or was granted, so a table or view another role owns
+    (one recreated as ACCOUNTADMIN) is invisible to COFFEE_LOADER. A migration reads which views are in the
+    share from the share's own grants (`show grants to share`; COFFEE_LOADER created the share in part 2 and
+    can always list it), so a view that's in the share but invisible stops it, with the `grant ownership`
+    command to give it back. A table or view another role owns stops it the same way.
+  - A view that doesn't exist and isn't in the share is new (a public table added since part 2): the migration
+    creates it and grants it to the share.
+  - Every table is created before any is dropped or truncated, so a table that exists but is invisible fails
+    before anything is loaded.
+- A migration uploads the files, drops and reloads the changed tables, then recreates every share view with
+  `copy grants`, so each stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`). A view missing
+  from the share is granted first. A migration that fails partway is finished by running it again; until then
+  the weekly load refuses to run.
 - Migrate as COFFEE_LOADER, not ACCOUNTADMIN: a role that recreates a table or view owns it afterwards, and the
-  weekly load and later migrations, run as COFFEE_LOADER, would then fail. If that happened, give each one back
+  weekly load and later migrations, run as COFFEE_LOADER, would then stop. If that happened, give each one back
   as ACCOUNTADMIN with `grant ownership on view coffee_data.share.<view> to role coffee_loader copy current
   grants` (and `grant ownership on table coffee_data.market.<table> to role coffee_loader copy current grants`).
 - It replaces each table in one transaction.
