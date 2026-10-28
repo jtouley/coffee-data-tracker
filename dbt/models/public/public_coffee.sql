@@ -9,7 +9,6 @@ select
     c.roast_level, c.tasting_notes, c.flavor_categories, c.is_blend, c.is_decaf,
     c.min_price_usd, c.price_per_100g, c.bag_sizes_g,
     c.enrichment_method as attributes_source,
-    c.is_wholesale,
     {{ release_columns() }}
 from {{ ref('dim_coffee') }} c
 join {{ ref('public_roaster') }} r using (roaster_id)

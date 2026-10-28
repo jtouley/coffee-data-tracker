@@ -2,8 +2,7 @@
 -- catalog): breadth, price and flavor language.
 with c as (
     select * from {{ ref('dim_coffee') }}
-    where is_listed and catalog_status <> 'archived' and not is_wholesale and not is_blend and origin_country is not null
-      and not is_chain
+    where is_listed and catalog_status <> 'archived' and not is_blend and origin_country is not null and not is_chain
 ),
 notes as (
     select origin_country, note, count(*) as n

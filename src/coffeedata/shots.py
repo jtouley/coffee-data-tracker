@@ -48,13 +48,6 @@ _index_cache: dict[str, tuple[float, dict[str, str]]] = {}
 _rows_cache: dict[str, tuple[float, list[tuple[str, str, str]]]] = {}
 
 
-def retail_only(con, src: str) -> str:
-    """WHERE clause that leaves out wholesale listings (a roaster's wholesale twin of a retail coffee), for what
-    people browse and pick from. A dim_coffee exported before is_wholesale existed has no such column: no filter."""
-    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}], union_by_name = true)").fetchall()]
-    return "where not coalesce(is_wholesale, false)" if "is_wholesale" in cols else ""
-
-
 def _index(lake: Lake | None = None) -> dict[str, str]:
     """coffee_id -> 'Roaster Name Coffee Title', from the weekly dim_coffee export; refreshed hourly so a
     long-running MCP server picks up new catalog weeks."""
@@ -67,8 +60,7 @@ def _index(lake: Lake | None = None) -> dict[str, str]:
         con = lake.connect()
         src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
         for cid, roaster, title in con.execute(
-            f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true) "
-            + retail_only(con, src)
+            f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true)"
         ).fetchall():
             idx[cid] = f"{roaster or ''} {title or ''}"
     except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
@@ -160,13 +152,13 @@ def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str]]:
     rows: list[tuple[str, str, str]] = []
     try:
         src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
-        con = lake.connect()
         rows = [
             (cid, roaster or "", title or "")
-            for cid, roaster, title in con.execute(
-                f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true) "
-                + retail_only(con, src)
-            ).fetchall()
+            for cid, roaster, title in lake.connect()
+            .execute(
+                f"select coffee_id, roaster_name, title from read_parquet([{src}], union_by_name = true)"
+            )
+            .fetchall()
         ]
     except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
         log.info("no catalog rows: %s", e)

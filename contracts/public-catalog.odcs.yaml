@@ -162,13 +162,6 @@ schema:
     enum:
     - value: rules
     - value: llm
-  - name: is_wholesale
-    logicalType: boolean
-    physicalType: boolean
-    description: >-
-      A wholesale listing: a bulk bag or case the roaster sells to cafes, often the twin of one of its retail
-      coffees. Kept here, flagged; left out of the site, the app's picker, market counts and new arrivals.
-    required: true
   - name: release_build_id
     logicalType: string
     physicalType: varchar

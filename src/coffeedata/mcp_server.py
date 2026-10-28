@@ -50,7 +50,6 @@ def search_coffees(
     process: str | None = None,
     origin: str | None = None,
     in_stock_only: bool = True,
-    include_wholesale: bool = False,
     limit: int = 20,
 ) -> list[dict]:
     """Search the current roaster catalog by free text, roaster domain, process (washed/natural/honey/anaerobic)
@@ -72,8 +71,6 @@ def search_coffees(
     con = lake.connect()
     # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
     # exported before it existed has no such column, so it reads as unknown rather than failing the search.
-    if not include_wholesale and (retail := shots.retail_only(con, src)):
-        where.append(retail.removeprefix("where "))  # a roaster's wholesale twin isn't a second coffee
     has_status = "catalog_status" in [
         r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()
     ]
