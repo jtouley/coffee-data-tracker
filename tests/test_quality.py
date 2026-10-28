@@ -4,6 +4,7 @@ the build records and mart history that `coffeedata build-diff` compares."""
 import argparse
 import shutil
 from datetime import UTC, date, datetime
+from pathlib import Path
 
 import pytest
 
@@ -40,6 +41,26 @@ def test_a_truncated_week_is_held_out_not_read_as_removals(lake, tmp_path):
     assert _events(con) == [(date(2026, 10, 5), "new", 40)]  # no false "removed", no false "relisted"
 
 
+def test_a_store_that_stays_broken_stays_flagged(lake, tmp_path):
+    # The baseline learns only from counted weeks, so five broken weeks in a row never become the new normal.
+    dates = ["2026-09-28", "2026-10-05", "2026-10-12", "2026-10-19", "2026-10-26", "2026-11-02", "2026-11-09"]
+    for d, cat in zip(dates, [FULL, FULL] + [FULL[:12]] * 5, strict=True):
+        run(lake, d, RID, cat)
+    con = build(lake, tmp_path)
+    q = con.execute("select suspect, counted from stg_run_quality order by run_date").fetchall()
+    assert q == [(False, True)] * 2 + [(True, False)] * 5
+
+
+def test_use_batch_with_a_batch_that_does_not_exist_is_no_override(lake, tmp_path):
+    _weeks(lake, FULL, FULL, FULL[:12])
+    lake.write("run_overrides", "run_overrides/override_id=manual.parquet", [{
+        "added_at": datetime(2026, 10, 20, tzinfo=UTC), "roaster_id": RID, "run_date": date(2026, 10, 19),
+        "action": "use_batch", "batch_id": "no-such-batch", "reason": "typo"}])  # fmt: skip
+    con = build(lake, tmp_path)
+    assert con.execute("select suspect, counted from stg_run_quality where run_date = '2026-10-19'").fetchone() == (
+        True, False)  # fmt: skip
+
+
 def test_overrides_accept_reject_and_pin_a_batch(lake, tmp_path):
     _weeks(lake, FULL, FULL, FULL[:12])
     quality.add_override(lake, RID, "2026-10-19", "accept", "roaster really cut its catalog", None)
@@ -59,6 +80,11 @@ def test_overrides_accept_reject_and_pin_a_batch(lake, tmp_path):
         quality.add_override(lake, RID, "2026-10-26", "use_batch", "x", None)
     with pytest.raises(ValueError, match="say why"):
         quality.add_override(lake, RID, "2026-10-26", "reject", " ", None)
+    with pytest.raises(ValueError, match="no fetch of"):  # pin only a batch that exists for that roaster-week
+        quality.add_override(lake, RID, "2026-10-26", "use_batch", "x", "no-such-batch")
+    failed = run(lake, "2026-11-02", RID, None)
+    with pytest.raises(ValueError, match="only a successful fetch"):
+        quality.add_override(lake, RID, "2026-11-02", "use_batch", "x", failed)
 
 
 def _baseline(lake, listed: float):
@@ -90,8 +116,8 @@ def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
 
 def test_freshness_fails_on_a_stale_catalog(lake, tmp_path):
     run(lake, "2026-10-05", RID, FULL)
-    assert build(lake, tmp_path, as_of_run="2026-10-10", min_attempted_share=0, min_ok_share=0)
-    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert build(lake, tmp_path, today="2026-10-10", min_attempted_share=0, min_ok_share=0)
+    r = build(lake, tmp_path, check=False, today="2026-10-26")
     assert r.returncode != 0 and "latest_run_is_fresh" in r.stdout
 
 
@@ -130,7 +156,14 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
         lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0}))  # fmt: skip
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
-    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(
+        cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot"]
+    )
+    passed_vars = []
+    real_dbt = cli.dbt_build
+    monkeypatch.setattr(
+        cli, "dbt_build", lambda lk, db, extra=None: passed_vars.append(extra) or real_dbt(lk, db, extra)
+    )
     monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
 
     def args(d):
@@ -138,17 +171,46 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
 
     current = lake.root / "marts" / "dim_coffee.parquet"
     run(lake, "2026-10-19", RID, FULL[:30])
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-19")  # each build on its run's day: fresh
     assert cli.cmd_build(args("2026-10-19")) is True
     first_release = current.read_bytes()
+    # What's served has exactly the built columns: a release's path (run_date=.../build=...) must not add any.
+    import duckdb
+    import yaml
+
+    built = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    cols = lambda c, t: [r[0] for r in c.execute(f"describe {t}").fetchall()]  # noqa: E731
+    assert cols(duckdb.connect(), f"select * from '{current}'") == cols(built, "dim_coffee")
+    served_db = duckdb.connect(str(cli.SERVED_DB), read_only=True)
+    contract = yaml.safe_load(Path("contracts/public-catalog.odcs.yaml").read_text())
+    for obj in contract["schema"]:
+        assert cols(served_db, obj["name"]) == [p["name"] for p in obj["properties"]], obj["name"]
+    served_db.close()
+    built.close()
     run(lake, "2026-10-26", RID, FULL[5:32])  # 5 gone, 2 new: within tolerance
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
     assert cli.cmd_build(args("2026-10-26")) is True
     second_release = current.read_bytes()
     b1, b2 = (b for b, _, _ in quality.builds(Lake()))
+    # Every served row says which build and which run it came from.
+    lineage = (
+        duckdb.connect()
+        .execute(f"select distinct release_build_id, release_run_date::varchar from '{current}'")
+        .fetchall()
+    )
+    assert lineage == [(b2, "2026-10-26")]
 
-    # No fetch for weeks: every model and check still runs and the release is kept, but it fails
-    # latest_run_is_fresh, so customers keep getting the second release (the automatic rollback).
-    assert cli.cmd_build(args("2026-11-30")) is False
+    # No fetch for weeks (a stopped weekly job): a rebuild on 2026-11-30 still runs every model and check and
+    # keeps its release, but fails latest_run_is_fresh, so customers keep the second release (automatic rollback).
+    monkeypatch.setattr(cli, "_today", lambda: "2026-11-30")
+    shots_mart = lake.root / "marts" / "fct_shot.parquet"
+    shots_mart.unlink()
+    assert cli.cmd_build(args(None)) is False
     assert current.read_bytes() == second_release and quality.served(Lake())["build_id"] == b2
+    assert (
+        passed_vars[-1]["as_of_run"] == "2026-10-26"
+    )  # no --run-date: the latest run in the lake, not "today"
+    assert shots_mart.exists()  # personal marts don't wait on catalog checks
     b3 = quality.builds(Lake())[-1][0]
     assert [ok for _, _, ok in quality.builds(Lake())] == [True, True, False]
     for b in (b1, b2, b3):  # every build's release, passing or not, with every table customers read
@@ -175,3 +237,22 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"
+    # The next build is compared with what customers get now (b1), not the newest passing build (b2).
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    cli.cmd_build(args("2026-10-26"))
+    assert passed_vars[-1]["baseline_build"] == b1
+    # Diffing the first build has nothing before it to compare with, never a later build.
+    assert "error" in quality.build_diff(Lake(), new=b1)
+
+
+def test_a_crashed_dbt_step_is_not_recorded_with_old_results(monkeypatch, tmp_path):
+    from coffeedata import cli
+
+    monkeypatch.setattr(cli, "DBT_TARGET", tmp_path)
+    (tmp_path / "run_results.json").write_text('{"results": [{"unique_id": "test.x", "status": "pass"}]}')
+    (tmp_path / "manifest.json").write_text("{}")
+    monkeypatch.setattr(
+        cli.subprocess, "run", lambda *a, **k: argparse.Namespace(returncode=2)
+    )  # crashes early
+    passed, results = cli.dbt_build(Lake(str(tmp_path / "lake")), tmp_path / "c.duckdb")
+    assert passed is False and results == [{}, {}] and not (tmp_path / "manifest.json").exists()

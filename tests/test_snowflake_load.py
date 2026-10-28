@@ -7,8 +7,8 @@ from coffeedata.public import PUBLIC_TABLES
 
 
 class FakeCursor:
-    def __init__(self, counts):
-        self.sql, self.counts, self._last = [], counts, None
+    def __init__(self, counts, columns=None):
+        self.sql, self.counts, self._last, self.columns = [], counts, None, columns or {}
 
     def execute(self, sql):
         self.sql.append(sql)
@@ -19,13 +19,17 @@ class FakeCursor:
         table = self._last.rsplit(".", 1)[-1]
         return (self.counts[table],)
 
+    def fetchall(self):  # information_schema.columns: the table's existing columns (none: not created yet)
+        table = self._last.rsplit("table_name = '", 1)[-1].rstrip("'").lower()
+        return [(c,) for c in self.columns.get(table, [])]
+
     def close(self):
         pass
 
 
 class FakeConn:
-    def __init__(self, counts):
-        self.cur = FakeCursor(counts)
+    def __init__(self, counts, columns=None):
+        self.cur = FakeCursor(counts, columns)
 
     def cursor(self):
         return self.cur
@@ -35,8 +39,11 @@ class FakeConn:
 
 
 def export_dir(tmp_path, counts, exported_at="2026-10-27T02:01:48+00:00"):
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
     for t in PUBLIC_TABLES:
-        (tmp_path / f"{t}.parquet").write_bytes(b"PAR1")
+        pq.write_table(pa.table({"coffee_id": ["x"], "variant_id": ["v"]}), tmp_path / f"{t}.parquet")
     (tmp_path / "manifest.json").write_text(
         json.dumps({"as_of_run": "2026-10-26", "exported_at": exported_at, "tables": counts})
     )
@@ -107,3 +114,13 @@ def test_missing_credentials_is_a_clear_error(monkeypatch):
         monkeypatch.delenv(v, raising=False)
     with pytest.raises(SystemExit, match="SNOWFLAKE_ACCOUNT"):
         snowflake_load.connect()
+
+
+def test_a_changed_public_contract_stops_the_load_instead_of_loading_nulls(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    con = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "BAG_ID"]})  # loaded before the rename
+    with pytest.raises(RuntimeError, match="contract changed"):
+        snowflake_load.load(export_dir(tmp_path, counts), con)
+    assert not any(s.startswith("copy into MARKET.public_coffee") for s in con.cur.sql)
+    ok = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "VARIANT_ID"]})  # same columns: loads
+    assert snowflake_load.load(export_dir(tmp_path, counts), ok)["tables"] == counts

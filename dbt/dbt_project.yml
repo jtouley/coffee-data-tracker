@@ -31,6 +31,11 @@ vars:
   # The build fails if the newest counted run is older than this many days before as_of_run (empty: no check).
   as_of_run: ""
   max_run_age_days: 8
+  # The day of the build, for freshness (empty: no check), and the served release the volume check compares with.
+  today: ""
+  baseline_build: ""
+  # The build this run is (release_build_id on every release table); set by `coffeedata build`.
+  build_id: ""
   # Completeness of the as_of_run run (checked only when as_of_run is set): the share of expected roasters it
   # tried (a skipped roaster is a hole, not a failure) and the share it fetched successfully.
   min_attempted_share: 1.0

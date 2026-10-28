@@ -182,7 +182,10 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
         | (extra_vars or {})
     )
     passed, results = True, []
+    (DBT_TARGET / "manifest.json").unlink(missing_ok=True)
     for step in (["build", "--exclude", "resource_type:test"], ["test"]):
+        # A step that crashes before writing its results must not be recorded with the previous step's.
+        (DBT_TARGET / "run_results.json").unlink(missing_ok=True)
         r = subprocess.run(
             ["dbt", *step, "--project-dir", "dbt", "--profiles-dir", "dbt", "--vars", dbt_vars], env=env
         )
@@ -198,20 +201,27 @@ def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
     marts (what the site, MCP, app and public export read); a failing one is still kept, with its results and a
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
-    import duckdb
-
     from . import quality
 
     lake = Lake()
     db = Path(args.db)
     if db.exists():
         db.unlink()  # derived: always rebuilt from the lake
-    run_date = getattr(args, "run_date", None) or _today()
-    extra: dict = {"as_of_run": run_date}
+    # The run the checks judge: the one named, or the latest in the lake, so a rebuild between weekly runs (the
+    # site, the app) checks the last real run instead of an empty "today". Freshness is measured against today.
+    run_date = getattr(args, "run_date", None) or quality.latest_run(lake) or _today()
+    build_id = new_batch_id()  # every release table carries it as release_build_id
+    extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
+    served = (quality.served(lake) or {}).get("build_id")
+    if (
+        served
+    ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
+        extra["baseline_build"] = served
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
     passed, results = dbt_build(lake, db, extra)
-    build_id = quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed)
+    quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id)
+    _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
             f"build {build_id} failed its checks: its release is recorded, the served release is unchanged "
@@ -220,12 +230,24 @@ def cmd_build(args: argparse.Namespace) -> bool:
         )
         return False
     quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB)
-    con = duckdb.connect(str(db), read_only=True)
-    for m in (m for m in MARTS if m not in quality.SERVED_MARTS):  # personal marts: not part of a release
-        lake.write_mart(m, con, f"select * from {m}")
-    con.close()
     print(f"built {db}; serving release {build_id}")
     return True
+
+
+def _write_personal_marts(lake: Lake, db: Path, catalog: tuple[str, ...]) -> None:
+    """Shots and bags are personal, not part of a catalog release, so catalog checks don't hold them back: each is
+    exported whenever its own model built."""
+    import duckdb
+
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        for m in (m for m in MARTS if m not in catalog):
+            try:
+                lake.write_mart(m, con, f"select * from {m}")
+            except duckdb.Error as e:
+                logging.warning("mart %s not exported: %s", m, e)
+    finally:
+        con.close()
 
 
 def cmd_rollback(args: argparse.Namespace) -> None:
@@ -474,7 +496,9 @@ def main(argv: list[str] | None = None) -> None:
 
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
-    b.add_argument("--run-date", type=_run_date, default=_today(), help="the run this build is for")
+    b.add_argument(
+        "--run-date", type=_run_date, help="the run this build checks (default: the latest in the lake)"
+    )
     b.add_argument(
         "--accept-volume-change",
         action="store_true",

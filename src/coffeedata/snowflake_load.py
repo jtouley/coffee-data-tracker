@@ -60,6 +60,26 @@ def connect():
     )
 
 
+def _check_columns(cur, table: str, parquet: Path) -> None:
+    """COPY ... match_by_column_name silently loads NULL into a column the file no longer has, so a table whose
+    columns differ from the export (a renamed public column, a new contract version) stops the load instead."""
+    import pyarrow.parquet as pq
+
+    want = sorted(c.upper() for c in pq.read_schema(parquet).names)
+    have = sorted(
+        r[0].upper()
+        for r in cur.execute(
+            f"select column_name from information_schema.columns "
+            f"where table_schema = '{SCHEMA}' and table_name = '{table.upper()}'"
+        ).fetchall()
+    )
+    if have and have != want:
+        raise RuntimeError(
+            f"{SCHEMA}.{table} has columns {have} but the export has {want}: the public contract changed. "
+            f"Drop {SCHEMA}.{table} (and re-grant its views) and load again; it is rebuilt from the export."
+        )
+
+
 def statements(table: str, run_path: str) -> list[str]:
     """SQL to (create and) reload one table from this run's staged file, as one transaction."""
     src = f"@{SCHEMA}.{STAGE}/{run_path}/{table}.parquet"
@@ -94,6 +114,7 @@ def load(export_dir: Path, con=None) -> dict:
             )
         counts = {}
         for table in PUBLIC_TABLES:
+            _check_columns(cur, table, export_dir / f"{table}.parquet")
             for sql in statements(table, run_path):
                 cur.execute(sql)
             counts[table] = cur.execute(f"select count(*) from {SCHEMA}.{table}").fetchone()[0]

@@ -13,6 +13,7 @@ Raw lake files are never touched here, and no release is ever edited.
 from __future__ import annotations
 
 import contextlib
+import functools
 import json
 import os
 import subprocess
@@ -53,13 +54,19 @@ def _read_json(path: Path) -> dict:
 
 
 def record_build(
-    lake: Lake, db: Path, run_date: str, manifest_path: Path, results: list[dict], passed: bool
+    lake: Lake,
+    db: Path,
+    run_date: str,
+    manifest_path: Path,
+    results: list[dict],
+    passed: bool,
+    build_id: str | None = None,
 ) -> str:
     """Append this build's record, and a copy of its catalog marts, to the lake: passing or not, nothing is lost.
     `results` holds one run_results.json per dbt step (models, then tests)."""
     import duckdb
 
-    build_id = new_batch_id()
+    build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
     manifest = _read_json(manifest_path)
     nodes = manifest.get("nodes") or {}
     base = {
@@ -133,6 +140,20 @@ def add_override(
         raise ValueError("use_batch needs --batch, and only use_batch takes one")
     if not reason.strip():
         raise ValueError("say why (--reason): overrides are the audit trail for changed history")
+    if batch_id:  # pin only a batch that exists for this roaster and week, and succeeded
+        ok = (
+            lake.connect()
+            .execute(
+                f"select bool_or(status = 'ok') from {lake.scan('fetches')} "
+                "where roaster_id = ? and run_date = ? and batch_id = ?",
+                [roaster_id, date.fromisoformat(run_date), batch_id],
+            )
+            .fetchone()
+        )
+        if not ok or ok[0] is None:
+            raise ValueError(f"no fetch of {roaster_id} in batch {batch_id} for {run_date}")
+        if not ok[0]:
+            raise ValueError(f"batch {batch_id} failed for {roaster_id}: only a successful fetch can count")
     row = {
         "added_at": datetime.now(UTC).replace(microsecond=0),
         "roaster_id": roaster_id,
@@ -151,22 +172,34 @@ def release_files(lake: Lake, build_id: str) -> dict[str, str]:
     local = {p.stem: str(p) for p in lake.root.glob(f"releases/*/build={build_id}/*.parquet")}
     if local or not lake.remote:
         return local
+    return {Path(f).stem: f"{lake.url}/{f}" for f in _remote_releases(lake.url) if f"/build={build_id}/" in f}
+
+
+@functools.lru_cache(maxsize=8)
+def _remote_releases(url: str) -> tuple[str, ...]:
+    """Every release file in a remote lake: listed once per process (and per lake), not once per table."""
     from huggingface_hub import HfApi
 
-    repo = lake.url.removeprefix("hf://datasets/").split("@")[0]
+    repo = url.removeprefix("hf://datasets/").split("@")[0]
     files = HfApi(token=os.environ.get("HF_TOKEN")).list_repo_files(repo, repo_type="dataset")
-    return {
-        Path(f).stem: f"{lake.url}/{f}"
-        for f in files
-        if f.startswith("releases/") and f"/build={build_id}/" in f
-    }
+    return tuple(f for f in files if f.startswith("releases/"))
 
 
 def _release(lake: Lake, build_id: str, table: str) -> str:
     files = release_files(lake, build_id)
     if table not in files:
         raise FileNotFoundError(f"release {build_id} has no {table}")
-    return f"read_parquet('{files[table]}')"
+    return f"read_parquet('{files[table]}', hive_partitioning = false)"
+
+
+def latest_run(lake: Lake) -> str | None:
+    """The newest run_date with any fetch attempt in the lake."""
+    row = (
+        lake.connect()
+        .execute(f"select max(run_date)::varchar from {lake.scan('fetches')} where roaster_id is not null")
+        .fetchone()
+    )
+    return row[0] if row else None
 
 
 def builds(lake: Lake) -> list[tuple[str, str, bool]]:
@@ -217,7 +250,10 @@ def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.
     db.parent.mkdir(parents=True, exist_ok=True)
     con = lake.connect(str(db))
     for t in RELEASE_TABLES:
-        con.execute(f"create table {t} as select * from read_parquet('{files[t]}')")
+        # hive_partitioning off: the release's path (run_date=.../build=...) must not become columns.
+        con.execute(
+            f"create table {t} as select * from read_parquet('{files[t]}', hive_partitioning = false)"
+        )
     for t in SERVED_MARTS:
         lake.write_mart(t, con, f"select * from {t}")
     pointer = lake.root / "marts" / "release.parquet"
@@ -253,8 +289,10 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
     ).fetchall()
     if new is None:
         new = builds[-1][0] if builds else None
-    if old is None:
-        before = [bid for bid, ok in builds if ok and bid != new]
+    if old is None:  # the last passing build before `new`, never a later one
+        order = [bid for bid, _ in builds]
+        cut = order.index(new) if new in order else len(order)
+        before = [bid for bid, ok in builds[:cut] if ok]
         old = before[-1] if before else None
     if not (old and new):
         return {"error": "need two builds to compare", "builds": [bid for bid, _ in builds]}

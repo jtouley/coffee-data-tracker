@@ -162,6 +162,14 @@ schema:
     enum:
     - value: rules
     - value: llm
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
   quality:
   - type: custom
     engine: dbt
@@ -246,6 +254,14 @@ schema:
     logicalType: date
     physicalType: date
     description: Latest weekly run with a successful catalog fetch.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
 - name: public_price_event
   physicalName: public_price_event
   physicalType: table
@@ -304,6 +320,14 @@ schema:
     logicalType: boolean
     physicalType: boolean
     description: Availability after the change.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
 - name: public_market_weekly
   physicalName: public_market_weekly
   physicalType: table
@@ -353,6 +377,14 @@ schema:
     logicalType: number
     physicalType: double
     description: 90th percentile price per 100 g, USD.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
 slaProperties:
 - property: frequency
   value: 7

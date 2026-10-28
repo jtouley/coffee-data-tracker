@@ -336,7 +336,7 @@ current state is computed:
 | `bags/<id>__<time>.parquet` | app | a bag of coffee in use, matched to the catalog when it can be |
 | `run_overrides/override_id=….parquet` | `coffeedata override` | a person's call on one roaster-week: accept, reject or pin a batch |
 | `builds/run_date=…/build=…` | build | one file per dbt build: node checksums and test results, catalog metrics, manifest and run results |
-| `mart_history/<mart>/run_date=…/build=…` | build | an immutable copy of `dim_coffee`, `dim_roaster` and `mart_market` from each passing build |
+| `releases/run_date=…/build=…/<table>.parquet` | build | every build's release: the catalog marts, `mart_new_arrivals` and the four public tables, each row stamped with `release_build_id` and `release_run_date`. Only a passing release is served (`marts/` and `marts/release.parquet`) |
 | `marts/*.parquet` | build | derived, and replaced each run |
 
 Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
@@ -352,14 +352,23 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   below half the median of its previous 4 weeks. The build warns (`suspect_runs_need_review`); review it, then
   `coffeedata override --roaster … --run-date … --action accept|reject --reason …`. `--action use_batch --batch …`
   pins which of a week's batches counts. Overrides are appended, so the history of every call is kept.
-- **Every build is checked against the last good one, and recorded.** The build fails, and nothing derived is
-  published, if listed coffees, in-stock coffees or roasters move more than 20% from the last build whose tests
-  all passed (`catalog_volume_vs_last_build`), or if the newest run is over 8 days old (`latest_run_is_fresh`).
-  The public tables have enforced dbt contracts, so a new, renamed or retyped column fails the build. Each build
-  appends its record to `builds/` and, if it passed, copies the catalog marts to `mart_history/`.
-  `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test results, row counts,
-  metrics and the coffees added, delisted or out of stock. After reviewing a real change, run the weekly
-  workflow with `accept_volume_change` (or `build --accept-volume-change`) to make it the new baseline.
+- **Only a release that passes every check is served, and every build is recorded.** dbt builds every model, then
+  runs every test, so a failed check never stops a model from being built. The checks that gate serving:
+  - `run_is_complete`: every roaster the run should have tried was tried (an error counts as tried);
+  - `run_ok_rate`: at least 90% of them succeeded;
+  - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
+    release being served;
+  - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - the facts-only guardrail and the enforced dbt contracts on the public tables.
+
+  Every build appends its record to `builds/` (each dbt node's checksum and test result, metrics, manifest and
+  run results) and writes its release to `releases/`, passing or not. A passing release replaces `marts/`, the
+  public export and the site. A failing one leaves the served release in place (the automatic rollback) and the
+  weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
+  earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
+  results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
+  against the last passing one before it. After reviewing a real change, run the weekly workflow with
+  `accept_volume_change` (or `build --accept-volume-change`) to let it through and make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
 - **Old shots keep their gear.** Each grinder or basket added in Setup is a new record, so a shot keeps the
   equipment it was pulled with. A grind setting only compares within one grinder; `grind_position` (0 to 1 along

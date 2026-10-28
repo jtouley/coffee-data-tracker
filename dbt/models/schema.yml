@@ -178,6 +178,10 @@ models:
         data_type: varchar
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: release_build_id
+        data_type: varchar
+      - name: release_run_date
+        data_type: date
   - name: public_roaster
     description: "One row per roaster in the registry."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
@@ -204,6 +208,10 @@ models:
       - name: coffees_in_stock
         data_type: bigint
       - name: last_ok_run
+        data_type: date
+      - name: release_build_id
+        data_type: varchar
+      - name: release_run_date
         data_type: date
   - name: public_price_event
     description: "Price, availability and listing changes between consecutive successful weekly fetches, per bag size."
@@ -240,6 +248,10 @@ models:
         data_type: double
       - name: available
         data_type: boolean
+      - name: release_build_id
+        data_type: varchar
+      - name: release_run_date
+        data_type: date
   - name: public_market_weekly
     description: "The current catalog by origin and process: breadth and price spread."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
@@ -271,6 +283,10 @@ models:
         data_type: double
       - name: p90_price_per_100g
         data_type: double
+      - name: release_build_id
+        data_type: varchar
+      - name: release_run_date
+        data_type: date
 
 seeds:
   - name: flavor_lexicon
