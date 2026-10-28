@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from ..http import FetchError, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
 MAX_PAGES = 20
@@ -73,6 +73,9 @@ def parse_product(
         image=images[0].get("src") if images else None,
         variants=variants,
         body_text=body,
+        # The listing payload only: variation_prices depend on how the fetch went (a failed lookup, the lookup
+        # budget), so hashing them would change the hash of an unchanged product on a repeated fetch.
+        payload_hash=payload_hash(p),
     )
 
 
