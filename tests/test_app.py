@@ -6,6 +6,7 @@ import pytest
 from fastapi import Request
 from fastapi.testclient import TestClient
 
+from app import views
 from app.auth import LocalOwner, User
 from app.main import create_app
 from coffeedata import shots
@@ -203,3 +204,55 @@ def test_local_sign_in_stub_refuses_to_run_on_a_space(monkeypatch):
     monkeypatch.setenv("SPACE_ID", "someone/registry-coffee")
     with pytest.raises(RuntimeError):
         LocalOwner()
+
+
+def test_saves_go_back_to_where_they_were_opened(lake, client):
+    """Gear screens return to the screen that opened them (first run, the Log shot gear picker, Setup), and only
+    to those: a crafted `next` goes to Setup."""
+    fresh = TestClient(create_app(Lake(str(lake.root.parent / "fresh")), HeaderAuth()))
+    assert 'href="/setup/gear/new?kind=grinder&amp;next=/"' in fresh.get("/").text
+
+    picker = client.get("/log/gear?grinder=g1&basket=b1").text
+    assert 'href="/setup/gear/new?kind=grinder&amp;next=/log/gear%3Fgrinder%3Dg1%26basket%3Db1"' in picker
+    gear = client.get(
+        "/setup/gear/new", params={"kind": "basket", "next": "/log/gear?grinder=g1&basket=b1"}
+    ).text
+    assert 'data-next="/log/gear?grinder=g1&amp;basket=b1"' in gear and "‹ Grinder and basket" in gear
+    assert "next=/log/gear%3Fgrinder%3Dg1%26basket%3Db1" in gear  # switching kind keeps where it returns to
+    for crafted in ("//evil.example/x", "https://evil.example/", "/history", "javascript:alert(1)"):
+        page = client.get("/setup/gear/new", params={"next": crafted}).text
+        assert 'data-next="/setup"' in page and "‹ Setup" in page
+    assert 'data-next="/setup"' in client.get("/setup/gear/g1").text
+
+
+def test_a_shot_opened_from_today_goes_back_to_today(client):
+    client.post("/api/shots", json=shot(1), headers=W)
+    client.post("/api/shots", json=shot(2), headers=W)
+    assert 'href="/shot/s1?from=today"' in client.get("/").text
+    page = client.get("/shot/s1?from=today").text
+    assert '<a class="back" href="/">‹ Today</a>' in page
+    assert 'class="on" href="/" aria-current="page">Today' in page
+    assert 'class="on" href="/coffees" aria-current="page">Coffees' in client.get("/shot/s1").text
+
+
+def test_every_page_has_a_place_for_what_the_last_save_did(client):
+    for url in ("/", "/log", "/bag/new", "/setup", "/setup/gear/g1", "/coffees", "/offline"):
+        assert '<p class="notice" data-notice role="status" hidden></p>' in client.get(url).text, url
+
+
+@pytest.mark.parametrize(
+    "next_, want",
+    [
+        ("/", ("/", "Today")),
+        ("/setup", ("/setup", "Setup")),
+        ("/log/gear?grinder=g1&basket=b1&x=1", ("/log/gear?grinder=g1&basket=b1", "Grinder and basket")),
+        ("/log/gear?grinder=../../x", ("/log/gear", "Grinder and basket")),
+        ("//evil.example", ("/setup", "Setup")),
+        ("https://evil.example/", ("/setup", "Setup")),
+        ("/\\evil.example", ("/setup", "Setup")),
+        ("/history", ("/setup", "Setup")),
+        ("", ("/setup", "Setup")),
+    ],
+)
+def test_back_to(next_, want):
+    assert views.back_to(next_) == want

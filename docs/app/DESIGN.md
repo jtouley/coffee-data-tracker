@@ -352,6 +352,16 @@ Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never b
 `--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
 that shrinks over 5 s. Undo writes a retraction record.
 
+#### Notice
+
+What the last save did, at the top of the screen it lands on: "Bag saved: Onyx Geometry", "DF64 V2 saved",
+"Correction saved", "Shot undone", "Password changed". `--panel`, radius 8, with the accent dot the active tab
+carries; `role="status"`, so it's read out. A save queued offline says so: "Saved on this phone. It syncs when
+you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
+
+Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
+on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.
+
 ## Copy
 
 Short, plain and specific, in sentence case, with real apostrophes (’). Buttons start with a verb. The same action

@@ -176,6 +176,41 @@ function hint(form, text) {
   form.querySelector("[data-hint]").textContent = text;
 }
 
+// After a save: say what happened on the screen it lands on, and take the form out of the way, so Back doesn't
+// reopen what was just saved (and a second Save make a second record). Going back to the screen it was opened from
+// steps back in history; anywhere else replaces the form. The notice waits in sessionStorage, which works offline.
+function go(url, notice) {
+  try {
+    if (notice) sessionStorage.setItem("notice", notice);
+  } catch {
+    // storage blocked: the move still happens, without the notice
+  }
+  const here = location.pathname + location.search;
+  const from = document.referrer ? new URL(document.referrer) : null;
+  const opener = from && from.origin === location.origin && from.pathname + from.search;
+  if (url !== here && opener === url && history.length > 1) history.back();
+  else location.replace(url); // also this same screen again, after a change on it
+}
+
+// Stepping back to the screen a save came from, the browser shows its copy from before the save (from memory, or
+// from its cache, which Back doesn't check): load it again, so it shows the change, and the notice with it.
+function stale(persisted) {
+  try {
+    const back = persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward";
+    return Boolean(back && sessionStorage.getItem("notice"));
+  } catch {
+    return false; // storage blocked: nothing waiting
+  }
+}
+addEventListener("pageshow", (e) => { if (e.persisted && stale(true)) location.reload(); });
+
+function notify(text) {
+  const el = document.querySelector("[data-notice]");
+  if (!el) return;
+  el.textContent = text;
+  el.hidden = !text;
+}
+
 // A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
 // label. Without data-confirm, the action runs at once.
 function confirmTap(b, action) {
@@ -372,7 +407,8 @@ function logShot(form) {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
       setTimeout(() => tick(8), 60);
-      location.href = fix ? `/shot/${body.shot_id}` : `/saved/${body.shot_id}?new=1`;
+      if (fix) go(`/shot/${body.shot_id}`, "Correction saved");
+      else location.replace(`/saved/${body.shot_id}?new=1`); // Saved is the confirmation, with its Undo
     } catch (err) {
       if (err instanceof Rejected) {
         hint(form, err.message);
@@ -466,7 +502,7 @@ function undo(strip) {
   strip.querySelector("button").addEventListener("click", async () => {
     try {
       await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
-      location.href = "/";
+      go("/", "Shot undone");
     } catch (err) {
       strip.firstChild.textContent = why(err);
     }
@@ -486,7 +522,7 @@ function unqueue(strip, id) {
     try {
       if (queued) await store("readwrite", (s) => s.delete(key));
       else await send(`retract:${id}`, `/api/shots/${id}/retract`, {});
-      location.href = "/";
+      go("/", "Shot undone");
     } catch (err) {
       strip.firstChild.textContent = why(err);
     }
@@ -520,12 +556,15 @@ function newBag(root) {
     if (read?.pending) body.read_pending = true; // only then may the photo's match fill in the bag (#20-1)
     if (read?.roast_date && !body.roast_date && where !== form) body.roast_date = read.roast_date; // typed: as typed, even cleared
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
+    const name = body.coffee_freetext;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
-      location.href = "/log";
+      go("/log", `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
+      // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
+      // bag on it, so it isn't where to go until this one syncs.
+      if (!(err instanceof Rejected)) return go("/", `Bag saved on this phone: ${name}. It syncs when you’re back online.`);
       hint(where, why(err));
-      if (!(err instanceof Rejected)) return; // queued: it stays saved, so another tap would make a second bag
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
     }
@@ -716,11 +755,14 @@ function equipment(form) {
       body[el.name] = el.inputMode === "decimal" ? Number(v.replace(",", ".")) : v;
     }
     for (const choice of choices) body[choice.dataset.choice] = pressed(choice) === "true";
+    const next = form.dataset.next || "/setup"; // back where it was opened from: Setup, first run, the gear picker
+    const did = extra.retired ? "retired" : form.dataset.id ? "saved" : "added";
     try {
       await send(`equipment:${body.equipment_id}`, "/api/equipment", body);
-      location.href = form.dataset.next || "/setup";
+      go(next, `${body.name} ${did}`);
     } catch (err) {
-      hint(form, why(err));
+      if (err instanceof Rejected) return hint(form, why(err));
+      go(next, `${body.name} ${did} on this phone. It syncs when you’re back online.`);
     }
   }
   form.addEventListener("submit", (e) => {
@@ -823,10 +865,12 @@ function invites() {
     b.onclick = () => act(`/api/invites/${b.dataset.renew}/renew`, {}, (r) => { b.previousElementSibling.hidden = true; b.nextElementSibling.hidden = true; b.hidden = true; show(r); });
   }
   for (const b of document.querySelectorAll("[data-revoke]")) {
-    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => location.reload());
+    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
   }
   for (const b of document.querySelectorAll("[data-person]")) {
-    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: b.dataset.disabled === "true" }, () => location.reload()));
+    const off = b.dataset.disabled === "true";
+    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: off },
+      () => go(location.pathname, off ? `${b.dataset.name}’s account is turned off` : `${b.dataset.name}’s account is back on`)));
   }
 }
 
@@ -837,7 +881,8 @@ function retractShot(b) {
   const actions = document.querySelector("[data-actions]");
   const strip = document.querySelector("[data-restore]");
   let timer = null;
-  const leave = () => { timer = setTimeout(() => location.replace(b.dataset.back), 5000); };
+  let gone = "Shot retracted";
+  const leave = () => { timer = setTimeout(() => go(b.dataset.back, gone), 5000); };
   strip.addEventListener("focusin", () => clearTimeout(timer)); // focus on Undo holds it open
   strip.addEventListener("focusout", leave);
   b.addEventListener("click", async () => {
@@ -852,7 +897,7 @@ function retractShot(b) {
       }
       // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
       // screen goes (#18-3), and Undo can still take it back.
-      strip.firstChild.textContent = "Retracted on this phone. It syncs when you’re back online.";
+      strip.firstChild.textContent = gone = "Retracted on this phone. It syncs when you’re back online.";
     }
     tick(8);
     actions.hidden = true;
@@ -866,7 +911,7 @@ function retractShot(b) {
       // A retraction still on the phone is simply dropped; one that went up is undone on the server.
       if (await store("readonly", (s) => s.get(`retract:${id}`))) await store("readwrite", (s) => s.delete(`retract:${id}`));
       else await send(`restore:${id}`, `/api/shots/${id}/restore`, {});
-      location.reload();
+      go(location.pathname + location.search, "Shot restored");
     } catch (err) {
       strip.firstChild.textContent = why(err);
     }
@@ -951,6 +996,8 @@ function account() {
       form.reset();
       hint(form, "");
       form.closest("details").open = false;
+      notify("Password changed. You’re signed out on your other devices.");
+      scrollTo(0, 0);
     } catch (err) {
       hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
     }
@@ -972,6 +1019,14 @@ function account() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  if (stale(false)) return location.reload();
+  try {
+    const notice = sessionStorage.getItem("notice"); // left by the save that led here
+    sessionStorage.removeItem("notice");
+    if (notice) notify(notice);
+  } catch {
+    // storage blocked: no notice
+  }
   const shot = document.getElementById("shot");
   if (shot) logShot(shot);
   const strip = document.querySelector("[data-undo]");

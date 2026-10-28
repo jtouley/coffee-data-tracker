@@ -23,7 +23,7 @@
   {% if earlier %}
   <div class="section">Earlier with this {{ "bag" if p.bag else "coffee" }}</div>
   <div class="list">
-    {% for s in earlier %}{{ shotrow(s, day) }}{% endfor %}
+    {% for s in earlier %}{{ shotrow(s, day, "?from=today") }}{% endfor %}
   </div>
   {% endif %}
   {% else %}

@@ -12,7 +12,7 @@ const SHELL = __SHELL__;
 const STATIC = "static";
 const CACHE = "shell-__VERSION__"; // the unhashed shell (the offline page) for this version
 const PAGES = "pages";
-const KEEP = [/^\/$/, /^\/log$/, /^\/bag\/new$/, /^\/coffees$/, /^\/history$/, /^\/coffee\/[\w-]+$/];
+const KEEP = [/^\/$/, /^\/log$/, /^\/bag\/new$/, /^\/coffees$/, /^\/history$/, /^\/coffee\/[\w-]+$/, /^\/setup$/];
 
 self.addEventListener("install", (e) => {
   const hashed = SHELL.filter((u) => u.startsWith("/static/"));
