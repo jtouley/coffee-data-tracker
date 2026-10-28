@@ -6,7 +6,7 @@ from collections import Counter
 from urllib.parse import urlparse
 
 from ..http import FetchError, NotCatalog, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
 
@@ -51,6 +51,7 @@ def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
         image=i.get("assetUrl"),
         variants=variants,
         body_text=html_to_text(i.get("body") or i.get("excerpt")),
+        payload_hash=payload_hash(i),
     )
 
 

@@ -7,7 +7,11 @@
   {% if bag.photo_id %}<img class="cover mt8" src="/photos/{{ bag.photo_id }}" alt="The bag" width="358" height="179" fetchpriority="high">{% endif %}
   <h1 class="serif title mt16">{{ name }}</h1>
   <div class="body">{{ facts }}</div>
-  <div class="row"><span class="meta">{{ ([("Roasted " ~ bag.roast_date.strftime("%b ") ~ bag.roast_date.day ~ " · day " ~ days_off) if bag.roast_date else ""] + [(("finished " if bag.roast_date else "Finished ") ~ bag.finished_on.strftime("%b ") ~ bag.finished_on.day) if bag.finished_on else ""]) | select | join(" · ") }}</span><a class="ext tap" href="/bag/{{ bag.bag_id }}/edit">Edit bag</a></div>
+  <div class="row"><span class="meta">
+    {%- if bag.roast_date %}Roasted {{ bag.roast_date.strftime("%b ") ~ bag.roast_date.day }} · day {{ days_off }}{% endif %}
+    {%- if bag.roast_date and bag.finished_on %} · {% endif %}
+    {%- if bag.finished_on %}{{ "finished" if bag.roast_date else "Finished" }} {{ bag.finished_on.strftime("%b ") ~ bag.finished_on.day }}{% endif -%}
+  </span><a class="ext tap" href="/bag/{{ bag.bag_id }}/edit">Edit bag</a></div>
 
   {% if best %}
   {% set gr = grinder_of(best) %}

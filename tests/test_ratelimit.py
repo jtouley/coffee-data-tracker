@@ -412,9 +412,9 @@ def test_cli_shopify_rps_reaches_the_run(lake, monkeypatch):
     from coffeedata import cli
 
     seen = {}
-    monkeypatch.setattr(ingest, "select", lambda *a, **k: [])
+    monkeypatch.setattr(ingest, "select_states", lambda *a, **k: ([], "full"))
     monkeypatch.setattr(
-        ingest, "run", lambda lake, todo, rd, workers, shopify_rps: seen.update(rps=shopify_rps)
+        ingest, "run", lambda lake, todo, rd, workers, mode, shopify_rps: seen.update(rps=shopify_rps)
     )
     monkeypatch.setattr(cli, "_print", lambda x: None)
     cli.main(["ingest", "--shopify-rps", "1.5"])
