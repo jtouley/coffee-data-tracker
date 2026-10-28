@@ -38,6 +38,12 @@ async function shoot(page, name) {
   await page.emulateMedia({ colorScheme: "light" });
 }
 
+// The notice appears empty and fills a moment later (so screen readers announce it): wait for its words.
+async function noticeOf(page) {
+  await page.waitForFunction(() => document.querySelector("[data-notice]")?.textContent);
+  return page.textContent("[data-notice]");
+}
+
 async function newPage(browser, errors) {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
   page.on("pageerror", (e) => errors.push(e.message));
@@ -146,6 +152,29 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Undo" }).click();
     await page.waitForURL(`${base}/`);
     assert.match(await page.textContent("main"), /Last shot.*\n?.*29/s);
+    assert.equal(await noticeOf(page), "Shot undone");
+    // A bag can be changed after it's saved, from Today's "On the grinder": a roast date in the future isn't
+    // saved, one with the wrong year asks again, and the change lands back on Today, saying so.
+    const iso = (days) => new Date(Date.now() + days * 86400000).toISOString().slice(0, 10);
+    await page.getByRole("link", { name: "Edit bag" }).click();
+    await page.waitForURL(`${base}/bag/bag1/edit?from=today`);
+    await shoot(page, "bag-edit");
+    await page.fill("#roast_date", iso(5));
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");
+    await page.fill("#roast_date", "2016-10-15");
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.match(await page.textContent("#bagedit [type=submit]"), /^Save with day \d{4}\?$/);
+    assert.equal(new URL(page.url()).pathname, "/bag/bag1/edit");
+    await page.fill("#roast_date", iso(-6));
+    assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
+    await page.getByRole("button", { name: "Save bag" }).click();
+    await page.waitForURL(`${base}/`);
+    assert.equal(await noticeOf(page), "Bag saved: Hambela Alaka");
+    assert.match(await page.textContent("main"), /Roasted \w{3} \d+ · day 6 ·/);
+    // Back from Today doesn't reopen Saved or the form: the save replaced them in history.
+    await page.goBack();
+    assert.notEqual(new URL(page.url()).pathname, "/log");
     // New bag from a photo: a clear match, an unclear one, an unreadable label.
     await page.goto(`${base}/bag/new`);
     await shoot(page, "bag-start");
@@ -184,6 +213,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Save correction" }).click();
     await page.waitForURL(`${base}/shot/first`);
     assert.match(await page.textContent("main"), /puck was wet/);
+    assert.equal(await noticeOf(page), "Correction saved");
     // Retract goes at once and offers Undo; Undo brings the shot back.
     await page.getByRole("button", { name: "Retract" }).click();
     await page.waitForSelector("[data-restore]:not([hidden])");
@@ -202,12 +232,23 @@ async function newPage(browser, errors) {
     await page.waitForSelector("[data-restore]:not([hidden])");
     assert.match(await page.textContent("[data-restore]"), /Retracted on this phone/);
     await page.getByRole("button", { name: "Undo" }).click();
+    // The retraction is taken off the phone, and the shot's screen opens again (offline: the no-connection page),
+    // saying so.
+    await page.waitForFunction(() => document.querySelector("[data-notice]")?.textContent === "Shot restored");
     await page.waitForFunction(() => new Promise((resolve) => {
       indexedDB.open("registry-coffee").onsuccess = (e) => {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
       };
     }));
     await page.context().setOffline(false);
+    // A correction made from a shot opened on Today goes back to it as opened, Back link and all.
+    await page.goto(`${base}/shot/first?from=today`);
+    await page.getByRole("link", { name: "Correct" }).click();
+    await page.waitForURL(/\/log\?correct=first/);
+    await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForURL(`${base}/shot/first?from=today`);
+    assert.equal(await page.textContent("a.back"), "‹ Today");
+    assert.equal(await noticeOf(page), "Correction saved");
     // Correcting with the time cleared falls back to that shot's own time (27 s), not the bag's latest (#18-1).
     await page.goto(`${base}/log?correct=dial3`);
     await page.fill("#time_s", "");
@@ -230,8 +271,30 @@ async function newPage(browser, errors) {
     await shoot(page, "log-left");
     await page.goto(`${base}/setup`);
     await page.getByRole("button", { name: "Right", exact: true }).click();
-    await page.goto(`${base}/setup/gear/g1`);
+    await page.goto(`${base}/setup`);
+    await page.getByRole("link", { name: /DF64 V2/ }).click();
+    await page.waitForURL(`${base}/setup/gear/g1`);
     await shoot(page, "gear");
+    // Saving returns to Setup, saying so; Back from there doesn't land on the form again.
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await page.waitForURL(`${base}/setup`);
+    assert.equal(await noticeOf(page), "DF64 V2 saved");
+    await shoot(page, "gear-saved");
+    // Equipment added from the gear picker on Log shot goes back to the picker.
+    await page.goto(`${base}/log`);
+    await page.getByRole("link", { name: /Grinder and basket/ }).click();
+    await page.waitForURL(/\/log\/gear/);
+    await page.getByRole("link", { name: "Add equipment" }).click();
+    await page.getByRole("link", { name: "Basket", exact: true }).click();
+    await page.waitForURL(/kind=basket/);
+    assert.equal(await page.textContent("a.back"), "‹ Grinder and basket");
+    await page.fill("#name", "VST 20 g");
+    await page.fill("#basket_dose_g", "20");
+    await page.getByRole("button", { name: "Only if I pick it" }).click(); // the shots below stay on the Pullman
+    await page.getByRole("button", { name: "Add basket" }).click();
+    await page.waitForURL(/\/log\/gear\?grinder=g1/);
+    assert.equal(await noticeOf(page), "VST 20 g added");
+    assert.match(await page.textContent("main"), /VST 20 g/);
     await page.goto(`${base}/log`);
     await page.getByRole("link", { name: /Grinder and basket/ }).click();
     await page.waitForURL(/\/log\/gear/);
@@ -275,7 +338,10 @@ async function newPage(browser, errors) {
     assert.equal(await page.isVisible("[data-photo-waiting]"), true);
     await page.fill("#coffee", "the washed one");
     await page.getByRole("button", { name: "Use this coffee" }).last().click();
-    await page.waitForFunction(() => /Saved on this phone/.test(document.querySelector("#bag [data-hint]").textContent));
+    // Saved on the phone: on to Today, saying so, instead of waiting on the form.
+    await page.waitForURL(`${base}/`);
+    assert.equal(await noticeOf(page), "Bag saved on this phone: the washed one. It’ll sync when you’re back online.");
+    await shoot(page, "bag-offline-saved");
     assert.equal(await outbox(), 3);
     await page.context().setOffline(false);
     await page.waitForFunction(() => new Promise((resolve) => {
@@ -377,6 +443,19 @@ async function newPage(browser, errors) {
     await page.locator("[data-failed]").getByRole("button", { name: "Dismiss" }).click();
     await page.waitForSelector("[data-failed]", { state: "hidden" });
     await page.unroute("**/api/probe");
+
+    // Times show in the phone's zone: the zone cookie arrives URL-encoded ("Asia%2FKolkata"), and read as is it
+    // was UTC everywhere. Kolkata is UTC+5:30 all year.
+    const clockIn = async (timezoneId) => {
+      const ctx = await browser.newContext({ storageState: await page.context().storageState(), timezoneId });
+      const p = await ctx.newPage();
+      await p.goto(`${base}/setup`); // the first page sets the zone cookie
+      await p.goto(`${base}/shot/first`);
+      const [h, m] = (await p.textContent("h1")).match(/(\d{1,2}):(\d{2})$/).slice(1).map(Number);
+      await ctx.close();
+      return h * 60 + m;
+    };
+    assert.equal(((await clockIn("Asia/Kolkata")) - (await clockIn("UTC")) + 1440) % 1440, 330);
 
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);

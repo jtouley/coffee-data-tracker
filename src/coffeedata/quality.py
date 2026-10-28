@@ -253,13 +253,13 @@ def latest_run(lake: Lake) -> str | None:
 
 
 def builds(lake: Lake) -> list[tuple[str, str, bool]]:
-    """(build_id, run_date, passed) for every build, oldest first."""
+    """(build_id, run_date, passed) for every build, oldest first (builds in the same second by build_id)."""
     rows = (
         lake.connect()
         .execute(
             f"select build_id, any_value(run_date)::varchar, "
             f"bool_or(kind = 'build' and status = 'pass') and not bool_or(coalesce(status, '') in ('error', 'fail')) "
-            f"from {lake.scan('builds')} where build_id is not null group by build_id order by max(built_at)"
+            f"from {lake.scan('builds')} where build_id is not null group by build_id order by max(built_at), build_id"
         )
         .fetchall()
     )

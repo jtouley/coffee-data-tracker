@@ -43,6 +43,7 @@ jobs:
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
       PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
       SITE_URL: ${{ vars.SITE_URL }}                 # canonical URL of the site; unset = https://registry.coffee
+      APP_URL: ${{ vars.APP_URL }}                   # the app the site's Sign in links point to; unset = https://app.registry.coffee
       GOVERNING_STATE: ${{ vars.GOVERNING_STATE }}   # US state named in the Terms of Use; unset = Michigan
       SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}       # contact on the legal pages; unset = support@registry.coffee
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -53,9 +54,9 @@ jobs:
       SNOWFLAKE_USER: ${{ vars.SNOWFLAKE_USER }}
       SNOWFLAKE_PRIVATE_KEY: ${{ secrets.SNOWFLAKE_PRIVATE_KEY }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4.4.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
-      - uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86  # v5.4.2
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
         with: {python-version: "3.12"}
       - run: uv sync --locked --extra snowflake
       - name: Check lake config
@@ -68,7 +69,13 @@ jobs:
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
           # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
-          if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then ROLLBACK_TO=served; fi
+          if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then
+            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE" ]; then
+              echo "snowflake_migrate runs no crawl, so sample and accept_volume_change would be ignored: unset them"
+              exit 1
+            fi
+            ROLLBACK_TO=served
+          fi
           if [ "$ROLLBACK_TO" = served ]; then
             uv run coffeedata rollback --to served --reason "re-export for Snowflake migration ($GITHUB_ACTOR)"
           elif [ -n "$ROLLBACK_TO" ]; then
@@ -80,7 +87,7 @@ jobs:
       - name: Site built
         id: site
         run: test -f build/site/index.html && echo "built=true" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         with: {path: build/site}
       # Last, so a Snowflake problem (a contract change needing --migrate) turns the run red without holding back
       # the site. It loads the export of the served release that the weekly run just wrote to build/public.
@@ -100,4 +107,4 @@ jobs:
     environment: {name: github-pages, url: "${{ steps.deployment.outputs.page_url }}"}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e  # v4.0.5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1
