@@ -8,6 +8,7 @@ import logging
 import os
 import subprocess
 import sys
+import time
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -109,9 +110,11 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     from . import ingest
 
     lake = Lake()
-    todo = ingest.select(lake, args.run_date, args.only, args.sample, args.retry_failed)
-    print(f"ingesting {len(todo)} roasters for run {args.run_date}", file=sys.stderr)
-    _print(ingest.run(lake, todo, args.run_date, workers=args.workers, shopify_rps=args.shopify_rps))
+    states, mode = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
+    print(f"ingesting {len(states)} roasters for run {args.run_date}", file=sys.stderr)
+    _print(
+        ingest.run(lake, states, args.run_date, workers=args.workers, mode=mode, shopify_rps=args.shopify_rps)
+    )
 
 
 def cmd_enrich(args: argparse.Namespace) -> None:
@@ -234,9 +237,13 @@ def cmd_build(args: argparse.Namespace) -> bool:
         extra["baseline_build"] = served
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
+    started = time.monotonic()
     passed, results = dbt_build(lake, db, extra)
+    took = time.monotonic() - started
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
-    passed = quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id)
+    passed = quality.record_build(
+        lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
+    )
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
@@ -245,7 +252,9 @@ def cmd_build(args: argparse.Namespace) -> bool:
             file=sys.stderr,
         )
         return False
-    quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB)
+    # The release read above is the one this replaces: serve doesn't read it again (a 429 there would leave a
+    # passing release recorded but unserved).
+    quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB, previous=served)
     print(f"built {db}; serving release {build_id}")
     return True
 

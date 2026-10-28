@@ -5,7 +5,8 @@
     'probes': 'probes/*/*.parquet', 'registry': 'registry/*/*.parquet', 'enrichments': 'enrichments/*/*/*.parquet',
     'llm_batches': 'llm_batches/*/*.parquet', 'verdicts': 'verdicts/*/*.parquet', 'shots': 'shots/*.parquet', 'equipment': 'equipment/*.parquet',
     'bags': 'bags/*.parquet', 'photos': 'photos/*.parquet',
-    'run_overrides': 'run_overrides/*.parquet', 'builds': 'builds/*/*.parquet'} -%}
+    'run_overrides': 'run_overrides/*.parquet', 'builds': 'builds/*/*.parquet',
+    'run_manifests': 'run_manifests/*/*.parquet', 'serving_log': 'serving_log/*.parquet'} -%}
 {#- A remote root is read only for folders it has (var('remote_folders'); none: all of them), since DuckDB fails on a
     glob over a Hugging Face folder that doesn't exist yet. The local root always has the table's schema file. -#}
 {%- set folders = var('remote_folders', none) -%}

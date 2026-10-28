@@ -2,6 +2,8 @@
 the build records and mart history that `coffeedata build-diff` compares."""
 
 import argparse
+import json
+import re
 import shutil
 from datetime import UTC, date, datetime
 from pathlib import Path
@@ -11,7 +13,7 @@ import pytest
 from coffeedata import quality
 from coffeedata.lake import Lake
 
-from .lakehelp import product, run
+from .lakehelp import manifest, old_file, product, run
 from .test_dbt import build
 
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
@@ -148,6 +150,107 @@ def test_completeness_catches_a_skipped_roaster_and_a_mostly_failed_run(lake, tm
     metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
     assert metrics["run_roasters_expected"] == 6 and metrics["run_attempted_share"] == 1.0
     assert round(metrics["run_ok_share"], 3) == 0.833
+    # No run manifest (a run from before them): the expected set is reconstructed.
+    assert con.execute("select distinct expected_from from run_completeness").fetchall() == [
+        ("reconstructed",)
+    ]
+
+
+def test_completeness_expects_what_the_run_manifest_says(lake, tmp_path):
+    # The run set out to fetch three seed roasters and one added since; the other seed roasters weren't in it.
+    manifest(lake, "2026-10-26", ["anaheimcoffee.com", "onyxcoffeelab.com"])
+    manifest(lake, "2026-10-26", ["vividcoffee.com", "new-roaster.com"], mode="retry_failed")  # unioned
+    manifest(lake, "2026-10-19", list(SEED))  # another run's manifest doesn't count
+    for rid in ("anaheimcoffee.com", "onyxcoffeelab.com", "vividcoffee.com"):
+        run(lake, "2026-10-26", rid, FULL[:5])
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert r.returncode != 0 and "run_is_complete" in r.stdout  # new-roaster.com was intended, never tried
+    con = build(lake, tmp_path, min_attempted_share=0.5, min_ok_share=0, as_of_run="2026-10-26")
+    got = con.execute(
+        "select roaster_id, attempted, expected_from from run_completeness order by 1"
+    ).fetchall()
+    assert got == [
+        ("anaheimcoffee.com", True, "manifest"), ("new-roaster.com", False, "manifest"),
+        ("onyxcoffeelab.com", True, "manifest"), ("vividcoffee.com", True, "manifest"),
+    ]  # fmt: skip
+    con.close()
+    run(lake, "2026-10-26", "new-roaster.com", None)  # tried (and failed): complete by the manifest's account
+    build(lake, tmp_path, as_of_run="2026-10-26", min_ok_share=0.7).close()
+
+
+def test_a_partial_ingests_manifest_never_shrinks_the_expected_set(lake, tmp_path):
+    # `weekly --sample 2`: the sample's manifest lists only what it fetched, but the run is not the full week.
+    manifest(lake, "2026-10-26", ["anaheimcoffee.com", "onyxcoffeelab.com"], mode="sample")
+    for rid in ("anaheimcoffee.com", "onyxcoffeelab.com"):
+        run(lake, "2026-10-26", rid, FULL[:5])
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    con = build(lake, tmp_path, min_attempted_share=0, min_ok_share=0, as_of_run="2026-10-26")
+    got = con.execute("select count(*), sum(attempted::int), any_value(expected_from) from run_completeness")
+    assert got.fetchone() == (len(SEED), 2, "reconstructed")
+    con.close()
+    # A mixed week: a full run from before manifests crashed after two roasters, then `ingest --only` (new code)
+    # fetched a third. Its one-row manifest doesn't switch off the reconstruction either.
+    manifest(lake, "2026-10-26", ["vividcoffee.com"], mode="only")
+    run(lake, "2026-10-26", "vividcoffee.com", FULL[:5])
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    # A full ingest's manifest is the expected set; the earlier partial ones still only add to it.
+    manifest(lake, "2026-10-26", ["anaheimcoffee.com", "onyxcoffeelab.com"], mode="full")
+    con = build(lake, tmp_path, as_of_run="2026-10-26")
+    got = con.execute("select roaster_id, expected_from from run_completeness order by 1").fetchall()
+    assert got == [(r, "manifest") for r in ("anaheimcoffee.com", "onyxcoffeelab.com", "vividcoffee.com")]
+    con.close()
+
+
+def test_a_run_killed_after_its_manifest_is_still_the_run_judged(lake, tmp_path):
+    for rid in SEED:  # last week: complete
+        run(lake, "2026-10-19", rid, FULL[:5])
+    manifest(lake, "2026-10-26", list(SEED))  # this week's full ingest died before its first fetch
+    assert quality.latest_run(lake) == "2026-10-26"
+    r = build(lake, tmp_path, check=False, as_of_run=quality.latest_run(lake))
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    con = build(lake, tmp_path, min_attempted_share=0, min_ok_share=0)  # no as_of_run: the default run CTE
+    got = con.execute("select distinct run_date::varchar, attempted from run_completeness").fetchall()
+    assert got == [("2026-10-26", False)]
+    con.close()
+
+
+def test_served_is_none_only_when_nothing_is_served(lake, monkeypatch):
+    assert quality.served(lake) is None  # a new lake: no marts/release.parquet
+
+    def fail(self, *a, **k):
+        raise OSError("HTTP Error: HTTP GET error on 'https://huggingface.co/x' (HTTP 429 Too Many Requests)")
+
+    monkeypatch.setattr(Lake, "connect", fail)
+    with pytest.raises(OSError, match="429"):  # never recorded as "nothing served before"
+        quality.served(lake)
+
+
+def test_older_raw_files_without_the_new_columns_build_the_same_tables(lake, tmp_path):
+    # Week 1 as older code wrote it (no fetch diagnostics, no payload hashes); week 2 with them.
+    old_fetch = [
+        "pages",
+        "requests",
+        "http_statuses",
+        "retries",
+        "rate_limited",
+        "duration_s",
+        "code_version",
+    ]
+    week1 = date(2026, 10, 19)
+    old_file(lake.root, "fetches", "fetches/run_date=2026-10-19/batch=old.parquet", old_fetch, {
+        "run_date": week1, "batch_id": "old", "fetched_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+        "roaster_id": RID, "adapter": "shopify", "status": "ok", "products": 2, "coffees": 2})  # fmt: skip
+    old_file(lake.root, "snapshots", "snapshots/run_date=2026-10-19/batch=old.parquet", ["payload_hash"], *(
+        p | {"run_date": week1, "batch_id": "old", "fetched_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+             "roaster_id": RID} for p in FULL[:2]))  # fmt: skip
+    run(lake, "2026-10-26", RID, [p | {"payload_hash": f"h{p['product_id']}"} for p in FULL[:2]])
+    con = build(lake, tmp_path, as_of_run="2026-10-26", min_attempted_share=0, min_ok_share=0)
+    assert con.execute("select count(*) from stg_runs").fetchone()[0] == 2
+    assert _events(con) == [(date(2026, 10, 19), "new", 2)]  # the same products both weeks: no change
+    for t in ("stg_snapshots", "dim_coffee", "fct_price_event"):  # lake metadata, never in a mart
+        assert "payload_hash" not in [c[0] for c in con.execute(f"describe {t}").fetchall()], t
 
 
 def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, tmp_path):
@@ -167,6 +270,9 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
         cli, "dbt_build", lambda lk, db, extra=None: passed_vars.append(extra) or real_dbt(lk, db, extra)
     )
     monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    for k, v in {"GITHUB_RUN_ID": "77", "GITHUB_SERVER_URL": "https://github.com",
+                 "GITHUB_REPOSITORY": "me/coffee", "GITHUB_ACTOR": "weekly-bot"}.items():  # fmt: skip
+        monkeypatch.setenv(k, v)
 
     def args(d):
         return argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date=d, accept_volume_change=False)
@@ -174,7 +280,12 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     current = lake.root / "marts" / "dim_coffee.parquet"
     run(lake, "2026-10-19", RID, FULL[:30])
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-19")  # each build on its run's day: fresh
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert cli.cmd_build(args("2026-10-19")) is True
+    assert len(reads) == 1  # nothing served yet is an answer too: serve doesn't read it again
+    monkeypatch.setattr(quality, "served", real_served)
     first_release = current.read_bytes()
     # What's served has exactly the built columns: a release's path (run_date=.../build=...) must not add any.
     import duckdb
@@ -191,7 +302,12 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     built.close()
     run(lake, "2026-10-26", RID, FULL[5:32])  # 5 gone, 2 new: within tolerance
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert cli.cmd_build(args("2026-10-26")) is True
+    assert len(reads) == 1  # serve logs the release the build already read, without reading it again
+    monkeypatch.setattr(quality, "served", real_served)
     second_release = current.read_bytes()
     b1, b2 = (b for b, _, _ in quality.builds(Lake()))
     # Every served row says which build and which run it came from.
@@ -235,10 +351,38 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert d["roasters_most_changed"] == [(RID, 30, 27)]
 
     # A problem found later: roll back to the release before the served one, with the reason on record.
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert quality.rollback(Lake(), reason="bad prices from one roaster") == b1
+    assert len(reads) == 1  # serve logs the release rollback replaced, without reading it again
+    monkeypatch.setattr(quality, "served", real_served)
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"
+    # marts/release.parquet holds only the current release; the serving log keeps every serve and rollback.
+    log = (
+        Lake().connect()
+        .execute(f"select action, build_id, run_date::varchar, reason, actor, previous_build_id, ci_run_url "
+                 f"from {Lake().scan('serving_log')} where build_id is not null order by served_at, action desc")
+        .fetchall()
+    )  # fmt: skip
+    url = "https://github.com/me/coffee/actions/runs/77"
+    assert log == [
+        ("serve", b1, "2026-10-19", "build for 2026-10-19", "weekly-bot", None, url),
+        ("serve", b2, "2026-10-26", "build for 2026-10-26", "weekly-bot", b1, url),
+        ("rollback", b1, "2026-10-19", "bad prices from one roaster", "weekly-bot", b2, url),
+    ]
+    # Every build row carries the build's environment.
+    env = (
+        Lake().connect()
+        .execute(f"select build_id, ci_run_id, ci_run_url, dbt_version, package_versions, duration_s "
+                 f"from {Lake().scan('builds')} where kind = 'build' order by built_at")
+        .fetchall()
+    )  # fmt: skip
+    assert [(b, rid, u) for b, rid, u, *_ in env] == [(b, "77", url) for b in (b1, b2, b3)]
+    for *_, dbt_version, versions, took in env:
+        assert dbt_version and json.loads(versions)["dbt-core"] == dbt_version and took > 0
     # 'served' serves the same release again (the Snowflake migration re-exports it without a crawl).
     assert quality.rollback(Lake(), "served", "re-export for Snowflake migration") == b1
     assert current.read_bytes() == first_release
