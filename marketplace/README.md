@@ -37,6 +37,9 @@ never holds the site back):
   weekly load and later migrations, run as COFFEE_LOADER, would then fail. If that happened, give each one back
   as ACCOUNTADMIN with `grant ownership on view coffee_data.share.<view> to role coffee_loader copy current
   grants` (and `grant ownership on table coffee_data.market.<table> to role coffee_loader copy current grants`).
+- Before the first real migration, run `coffeedata load-snowflake --migrate --dry-run`: it changes nothing and
+  prints what the checks read (tables, share views, owners, grants), whether it would refuse, and every
+  statement it would run.
 - It replaces each table in one transaction.
 - It fails if the row counts differ from the export.
 

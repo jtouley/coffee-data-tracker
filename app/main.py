@@ -5,12 +5,14 @@ JSON POST that the phone first puts in an IndexedDB outbox, with an id it genera
 """
 
 import asyncio
+import contextlib
 import hashlib
 import json
 import logging
 import os
 import time
 from collections import OrderedDict
+from collections.abc import AsyncIterator
 from datetime import UTC, date, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
@@ -818,8 +820,24 @@ def create_app(
     photo_reads: dict[str, tuple[str, str | None, int | None, str | None, str | None]] = {}
     last_reply: dict[str, tuple[str, dict]] = {}  # photo_id -> (owner, reply): a resend isn't read twice
     # One upload of a photo at a time: two copies in flight together (the outbox resending one still on its way)
-    # would both miss last_reply and pay for two reads. The second waits, then gets the first's reply.
-    reading: dict[str, asyncio.Lock] = {}
+    # would both miss last_reply and pay for two reads. The second waits, then gets the first's reply. A photo's
+    # lock goes once no upload of it is in flight, whichever way the last one ended (reply, limit, 409, error).
+    reading: dict[str, tuple[asyncio.Lock, int]] = {}  # photo_id -> (lock, uploads holding or waiting on it)
+    app.state.photo_locks = reading
+
+    @contextlib.asynccontextmanager
+    async def one_at_a_time(photo_id: str) -> AsyncIterator[None]:
+        lock, n = reading.get(photo_id) or (asyncio.Lock(), 0)
+        reading[photo_id] = (lock, n + 1)
+        try:
+            async with lock:
+                yield
+        finally:
+            lock, n = reading[photo_id]
+            if n == 1:
+                del reading[photo_id]
+            else:
+                reading[photo_id] = (lock, n - 1)
 
     def describe(coffee_id: str | None) -> dict | None:
         c = store.coffee(coffee_id)
@@ -857,7 +875,7 @@ def create_app(
             photo = await run_in_threadpool(photos.normalize, await request.body())
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
-        async with reading.setdefault(photo_id, asyncio.Lock()):
+        async with one_at_a_time(photo_id):
             if photo_id in last_reply:  # a resend from the outbox: the same reply, without a second read
                 owner, reply = last_reply[photo_id]
                 if owner != me.user_id:
