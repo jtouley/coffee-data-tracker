@@ -100,6 +100,28 @@ def test_shopify_later_page_failure_raises(mock):
         shopify.fetch(c, _r())
 
 
+def _page(ids):
+    return httpx.Response(
+        200, json={"products": [{"id": i, "title": f"P{i}", "handle": f"p{i}", "variants": []} for i in ids]}
+    )
+
+
+def test_shopify_short_pages_are_not_the_end(mock):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first.
+    pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
+    for n, ids in pages.items():
+        mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
+    with PoliteClient(min_interval=0) as c:
+        assert len(shopify.fetch(c, _r())) == 249 + 247  # an empty page ends it
+
+
+def test_shopify_store_that_ignores_page_stops(mock):
+    route = mock.get("https://x.com/products.json").mock(return_value=_page(range(10)))
+    with PoliteClient(min_interval=0) as c:
+        assert len(shopify.fetch(c, _r())) == 10
+    assert route.call_count == 2
+
+
 def test_shopify_empty_catalog_is_an_answer(mock):
     mock.get("https://x.com/products.json").mock(return_value=httpx.Response(200, json={"products": []}))
     with PoliteClient(min_interval=0) as c:

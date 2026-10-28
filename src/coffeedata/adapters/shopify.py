@@ -46,13 +46,16 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
-    items: list[CatalogItem] = []
+    items: dict[str, CatalogItem] = {}
     for page in range(1, MAX_PAGES + 1):
         data = client.fetch_json(f"https://{roaster.host}/products.json", limit=250, page=page)
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
-        products = data["products"]
-        items.extend(parse_product(p, roaster) for p in products)
-        if len(products) < 250:
+        # A full page can hold fewer than 250 products (Shopify drops some after paging; onyxcoffeelab.com's pages
+        # hold 249, 247, 234, 242), so only an empty page ends the catalog. A store that ignores `page` and
+        # repeats itself ends it too.
+        new = {i.product_id: i for i in (parse_product(p, roaster) for p in data["products"])}
+        if not new.keys() - items.keys():
             break
-    return items
+        items |= new
+    return list(items.values())
