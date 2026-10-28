@@ -107,6 +107,7 @@ def test_completeness_catches_a_skipped_roaster_and_a_mostly_failed_run(lake, tm
     con = build(lake, tmp_path, min_attempted_share=0.5)  # (as_of_run unset: the latest run, no gate)
     got = con.execute("select roaster_id, attempted, ok from run_completeness order by 1").fetchall()
     assert got[0] == ("1802roasters.com", False, False) and all(a and o for _, a, o in got[1:])
+    con.close()  # DuckDB reuses an open database for the same path, so a later build() would read this one
 
     run(lake, "2026-10-26", SEED[0], None)  # tried, and failed: complete, but 5 of 6 ok
     r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
