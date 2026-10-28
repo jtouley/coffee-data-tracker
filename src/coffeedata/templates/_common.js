@@ -1,10 +1,15 @@
   // Theme toggle: remembered per viewer; storage may be unavailable.
   const root = document.documentElement, btn = document.getElementById("theme");
+  // The button reads "Dark" and is pressed while the page is dark, whichever way it got there.
+  const isDark = () => root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  const sync = () => btn.setAttribute("aria-pressed", isDark());
   try { const t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  sync();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", sync);
   btn.addEventListener("click", () => {
-    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    root.dataset.theme = dark ? "light" : "dark";
+    root.dataset.theme = isDark() ? "light" : "dark";
     try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    sync();
   });
 
   // Tooltips: hover and keyboard focus, textContent only.

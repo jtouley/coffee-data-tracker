@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Join · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top"><span class="meta">registry.coffee</span></div>
+  <div class="top"><a class="meta home" href="https://registry.coffee/">registry.coffee</a></div>
   <h1 class="serif title mt8">You’re invited</h1>
   <p class="body">Pick a username and password to start logging your shots.</p>
   <form id="join" class="fill" data-api="/api/join" novalidate>
@@ -26,6 +26,7 @@
     <div class="dock">
       <button class="btn primary" type="submit">Create account</button>
       <a class="btn text" href="/signin">Already have an account? Sign in</a>
+      <a class="btn text small" href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite">No invite? Ask for one</a>
     </div>
   </form>
 {% endblock %}

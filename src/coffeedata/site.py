@@ -61,13 +61,15 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 # --- links ---------------------------------------------------------------------------------------------
 
 REPO = "https://github.com/jtouley/coffee-data-tracker"
+APP = "https://app.registry.coffee"
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
 LEGAL_UPDATED = "October 27, 2026"
 
 
 def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
     """Where the launch page points. The dataset is the public export (`PUBLIC_EXPORT_URL`) when it's on Hugging
-    Face; the lake itself is private by default, so it's never linked."""
+    Face; the lake itself is private by default, so it's never linked. Beta requests are an email to the support
+    address: the static site collects nothing itself."""
     public_export = os.environ.get("PUBLIC_EXPORT_URL", "") if public_export is None else public_export
     site_url = (site_url or os.environ.get("SITE_URL") or "https://registry.coffee").rstrip("/")
     dataset = hf_path = None
@@ -84,7 +86,13 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         "marketplace": f"{REPO}/blob/main/marketplace/README.md",
         "mcp": f"{REPO}#logging-shots",
         "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
+        "signin": f"{APP}/signin",
+        "beta": f"mailto:{support_email()}?subject=registry.coffee%20beta%20invite",
     }
+
+
+def support_email() -> str:
+    return os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee"
 
 
 # --- hardening ------------------------------------------------------------------------------------------
@@ -244,7 +252,7 @@ def build(db: Path, out: Path) -> Path:
     legal = {
         "links": links(),
         "updated": LEGAL_UPDATED,
-        "contact": os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee",
+        "contact": support_email(),
         "governing_state": os.environ.get("GOVERNING_STATE") or "Michigan",
     }
     for page in ("privacy", "terms"):
@@ -253,6 +261,7 @@ def build(db: Path, out: Path) -> Path:
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
+        links=links(),
         totals=totals,
         status_rows=[(label, coverage["registry"].get(k, 0)) for k, label in STATUS_LABELS.items()],
         charts=charts,

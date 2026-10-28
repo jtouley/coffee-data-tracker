@@ -432,6 +432,12 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # The app's beta: sign in and request an invite from the launch page and the catalog; requests are an email,
+    # since the static site collects nothing.
+    for html in (landing, (out / "catalog" / "index.html").read_text()):
+        assert 'href="https://app.registry.coffee/signin"' in html
+        assert 'href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite"' in html
+        assert "<form" not in html
     for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
         html = (out / page / "index.html").read_text()
         assert f'<h1 class="serif">{heading}</h1>' in html and f"Last updated {site.LEGAL_UPDATED}" in html

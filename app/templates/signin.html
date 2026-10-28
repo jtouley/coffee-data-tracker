@@ -2,7 +2,7 @@
 {% from "_macros.html" import legal %}
 {% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
 {% block main %}
-  <h1 class="mt48 serif wordmark">registry.coffee</h1>
+  <h1 class="mt48 serif wordmark"><a class="home" href="https://registry.coffee/">registry.coffee</a></h1>
   {% if owner_setup %}
   <p class="body mt12 lede">Create the owner’s account. The setup code is the <code>OWNER_SETUP_CODE</code> secret you set for the app.</p>
   {% else %}
@@ -29,6 +29,7 @@
       {% if not owner_setup %}
       <a class="btn text" href="/join">Have an invite? Create an account</a>
       <a class="btn text" href="/reset">Forgot your password? Use a reset code</a>
+      <a class="btn text small" href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite">No invite? Ask for one</a>
       {% endif %}
     </div>
     {{ legal() }}
