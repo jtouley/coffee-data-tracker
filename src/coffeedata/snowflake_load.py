@@ -156,6 +156,14 @@ def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
                     f"it. Nothing was changed. Run the migration as {owner}, or give the share back: "
                     f"grant ownership on share {share} to role {role}"
                 )
+        elif migrate and any(_columns(cur, "SHARE", v) for v in SHARE_VIEWS.values()):
+            # A role sees only the shares it owns, so share views with no visible share most likely mean another
+            # role (ACCOUNTADMIN, after a listing) owns it: recreating them here could take them out of it.
+            raise RuntimeError(
+                f"the share views exist but this role can't see share {share}: another role (ACCOUNTADMIN after a "
+                f"listing?) probably owns it. Nothing was changed. Run the migration as the share's owner, or set "
+                "SNOWFLAKE_SHARE if it has another name."
+            )
         for table in PUBLIC_TABLES:  # uploaded before anything is dropped
             f = (export_dir / f"{table}.parquet").resolve()
             cur.execute(
@@ -170,11 +178,10 @@ def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
             counts[table] = cur.execute(f"select count(*) from {SCHEMA}.{table}").fetchone()[0]
         if migrate:
             # All four views, not only the changed ones: one left over from a failed migration is rebuilt too.
-            # Without a share (admin_setup.sql part 2 not run yet), only views that already exist are rebuilt.
             for table in PUBLIC_TABLES:
                 view = f"SHARE.{SHARE_VIEWS[table]}"
-                if owner is None and not _columns(cur, "SHARE", SHARE_VIEWS[table]):
-                    continue
+                if owner is None:  # no share and no views yet: admin_setup.sql part 2 creates them
+                    break
                 cur.execute(
                     f"create or replace secure view {view} copy grants as select * from {SCHEMA}.{table}"
                 )

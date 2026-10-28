@@ -124,7 +124,7 @@ class FakeSnowflake:
         self.counts, self.tables, self.views = counts, dict(tables or {}), dict(views or {})
         self.owner, self.role, self.grants = owner, role, set(self.views) if owner else set()
         self.sql, self.fail_on, self.description, self._rows = [], None, None, []
-        self.export_cols = ["COFFEE_ID", "VARIANT_ID"]
+        self.export_cols, self.owner_visible_to_all = ["COFFEE_ID", "VARIANT_ID"], False
 
     def cursor(self):
         return self
@@ -145,7 +145,9 @@ class FakeSnowflake:
             self._rows = [(c,) for c in have]
         elif sql.startswith("show shares"):
             self.description = [("created_on",), ("kind",), ("name",), ("owner",)]
-            self._rows = [("t", "OUTBOUND", "ORG.ACCT.COFFEE_DATA_SHARE", self.owner)] if self.owner else []
+            # A role sees only the shares it owns; ACCOUNTADMIN (owner_visible_to_all) sees every share.
+            visible = self.owner and (self.owner == self.role or self.owner_visible_to_all)
+            self._rows = [("t", "OUTBOUND", "ORG.ACCT.COFFEE_DATA_SHARE", self.owner)] if visible else []
         elif sql == "select current_role()":
             self._rows = [(self.role,)]
         elif m := re.match(r"drop table if exists MARKET\.(\w+)", sql):
@@ -234,22 +236,25 @@ def test_a_migration_that_failed_partway_is_finished_by_running_it_again(tmp_pat
     assert healthy(sf)
 
 
-def test_migrate_stops_before_changing_anything_if_the_role_does_not_own_the_share(tmp_path):
-    """After part 3 of admin_setup.sql the share may belong to ACCOUNTADMIN; the loader then can't grant to it."""
+@pytest.mark.parametrize("role", ["COFFEE_LOADER", "ACCOUNTADMIN"])
+def test_migrate_stops_before_changing_anything_if_the_role_does_not_own_the_share(tmp_path, role):
+    """After part 3 of admin_setup.sql the share may belong to ACCOUNTADMIN. COFFEE_LOADER then can't see it at
+    all; a role that can see it but doesn't own it can't grant to it either."""
     counts = {t: 1 for t in PUBLIC_TABLES}
-    sf = old_snowflake(counts, owner="ACCOUNTADMIN")
-    with pytest.raises(RuntimeError, match="owned by ACCOUNTADMIN, not COFFEE_LOADER.*Nothing was changed"):
+    sf = old_snowflake(counts, owner="SHARE_ADMIN" if role == "ACCOUNTADMIN" else "ACCOUNTADMIN", role=role)
+    sf.owner_visible_to_all = role == "ACCOUNTADMIN"
+    with pytest.raises(RuntimeError, match="Nothing was changed"):
         snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     assert not any(s.startswith(("put ", "drop", "truncate", "create or replace")) for s in sf.sql)
     assert sf.tables["public_coffee"] == OLD and sf.views["coffee"] == OLD
 
 
-def test_migrate_before_the_share_exists_rebuilds_only_existing_views(tmp_path):
+def test_migrate_before_the_share_and_its_views_exist_only_reloads_the_tables(tmp_path):
     counts = {t: 1 for t in PUBLIC_TABLES}
-    sf = FakeSnowflake(counts, tables={t: OLD for t in PUBLIC_TABLES}, views={"coffee": OLD}, owner=None)
+    sf = FakeSnowflake(counts, tables={t: OLD for t in PUBLIC_TABLES}, owner=None)
     snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
-    assert set(sf.views) == {"coffee"} and sf.views["coffee"] == ["COFFEE_ID", "VARIANT_ID"]
-    assert not any(s.startswith("grant") for s in sf.sql)
+    assert all(sf.tables[t] == ["COFFEE_ID", "VARIANT_ID"] for t in PUBLIC_TABLES) and sf.views == {}
+    assert not any(s.startswith(("grant", "create or replace secure view")) for s in sf.sql)
 
 
 def test_same_columns_load_as_usual(tmp_path):

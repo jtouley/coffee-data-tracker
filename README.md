@@ -313,7 +313,7 @@ graph LR
 3. Ingest of every roaster with a usable platform, then one retry of that run's failures.
 4. Claude enrichment, if a key is set: collect finished batches, then submit pending coffees.
 5. The dbt build, and export of the marts.
-6. The public tables, plus the Snowflake load if it's configured.
+6. The public tables (the weekly workflow then loads Snowflake in its own step, if configured).
 7. The site.
 
 With a remote lake, the run uploads after steps 2 through 5, and every 200 roasters during ingest, so a later
