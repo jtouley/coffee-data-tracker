@@ -19,7 +19,7 @@ FIX = Path(__file__).parent / "fixtures"
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 
 
-def build(lake, tmp_path, **extra_vars):
+def build(lake, tmp_path, check=True, **extra_vars):
     db = tmp_path / "coffee.duckdb"
     if db.exists():
         db.unlink()
@@ -43,6 +43,8 @@ def build(lake, tmp_path, **extra_vars):
         capture_output=True,
         text=True,
     )
+    if not check:
+        return r
     assert r.returncode == 0, r.stdout[-4000:]
     return duckdb.connect(str(db), read_only=True)
 

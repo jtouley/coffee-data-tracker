@@ -13,6 +13,22 @@ from . import shots
 from .lake import Lake
 
 DB = Path(os.environ.get("COFFEEDATA_DB", "build/coffee.duckdb"))
+_columns_cache: dict[str, tuple[float, list[str]]] = {}
+
+
+def _mart_columns(con, src: str) -> list[str]:
+    """The exported dim_coffee's columns: a remote read each, so asked once an hour (they change only with the
+    contract), not on every search."""
+    import time
+
+    cached = _columns_cache.get(src)
+    if cached and time.monotonic() - cached[0] < shots.INDEX_TTL_S:
+        return cached[1]
+    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()]
+    _columns_cache[src] = (time.monotonic(), cols)
+    return cols
+
+
 mcp = MCPServer("coffee-data")
 
 
@@ -68,9 +84,14 @@ def search_coffees(
     if origin:
         where.append("origin_country ilike ?")
         params.append(f"%{origin}%")
-    cur = lake.connect().execute(
+    con = lake.connect()
+    # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
+    # exported before it existed has no such column, so it reads as unknown rather than failing the search.
+    has_status = "catalog_status" in _mart_columns(con, src)
+    status = "catalog_status" if has_status else "null::varchar as catalog_status"
+    cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
-                   in_stock, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
+                   in_stock, {status}, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
         params,
     )
     cols = [d[0] for d in cur.description]
@@ -111,7 +132,8 @@ def check_sql(sql: str) -> str:
 @mcp.tool()
 def run_sql(sql: str, max_rows: int = 200) -> dict:
     """Read-only SQL over the dbt models in DuckDB: dim_roaster, dim_coffee, dim_equipment, fct_price_event,
-    fct_shot, mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh."""
+    fct_shot, mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh. This reads the latest
+    local build (COFFEEDATA_DB), whether or not it passed its checks; the other tools read the served marts."""
     import duckdb
 
     stmt = check_sql(sql)

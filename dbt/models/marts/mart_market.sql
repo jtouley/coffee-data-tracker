@@ -17,7 +17,8 @@ select
     round(median(c.price_per_100g), 2) as median_price_per_100g,
     round(quantile_cont(c.price_per_100g, 0.1), 2) as p10_price_per_100g,
     round(quantile_cont(c.price_per_100g, 0.9), 2) as p90_price_per_100g,
-    (select list(note order by n desc, note) from notes n where n.origin_country = c.origin_country) as top_notes_for_origin
+    (select list(note order by n desc, note) from notes n where n.origin_country = c.origin_country) as top_notes_for_origin,
+    {{ release_columns() }}
 from c
 group by all
 order by coffees desc

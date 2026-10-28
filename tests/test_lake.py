@@ -264,3 +264,4 @@ def test_schema_refresh_uses_a_unique_temp_file(lake, monkeypatch):
     Lake()
     assert made and made[0]["dir"] == p.parent and pq.read_schema(p).names == SCHEMAS["snapshots"].names
     assert not list(p.parent.glob("*.tmp"))
+    assert p.stat().st_mode & 0o777 == 0o644  # readable like any other lake file, not mkstemp's 0600

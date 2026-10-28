@@ -20,6 +20,13 @@ from .public import PUBLIC_TABLES
 
 SCHEMA = "MARKET"
 STAGE = "PUBLIC_EXPORT"
+# The share's secure views over the loaded tables (marketplace/snowflake/admin_setup.sql, part 2).
+SHARE_VIEWS = {
+    "public_coffee": "coffee",
+    "public_price_event": "price_event",
+    "public_market_weekly": "market_weekly",
+    "public_roaster": "roaster",
+}
 
 
 def private_key_der(value: str) -> bytes:
@@ -60,6 +67,49 @@ def connect():
     )
 
 
+def _columns(cur, schema: str, name: str) -> list[str]:
+    """A table's or view's columns, sorted and upper case; [] if it doesn't exist."""
+    return sorted(
+        r[0].upper()
+        for r in cur.execute(
+            f"select column_name from information_schema.columns "
+            f"where table_schema = '{schema}' and table_name = '{name.upper()}'"
+        ).fetchall()
+    )
+
+
+def _view_grants(cur, view: str) -> tuple[str, set[str]]:
+    """A view's owning role and the shares it's granted to. `show grants on view` works for the view's owner
+    without any account privilege, unlike `show shares` (which needs IMPORT SHARE to list anything)."""
+    rows = cur.execute(f"show grants on view {view}").fetchall()
+    cols = [d[0].lower() for d in cur.description or []]
+    owner, shares = "", set()
+    for r in rows:
+        g = {k: str(v).upper() for k, v in zip(cols, r, strict=False)}
+        if g.get("privilege") == "OWNERSHIP":
+            owner = g.get("grantee_name", "")
+        elif g.get("granted_to") == "SHARE":
+            shares.add(g.get("grantee_name", "").rsplit(".", 1)[-1])  # ORG.ACCOUNT.SHARE -> SHARE
+    return owner, shares
+
+
+def stale(cur, export_dir: Path) -> tuple[list[str], list[str]]:
+    """Tables and share views whose columns differ from the export. COPY ... match_by_column_name silently loads
+    NULL into a column the file no longer has, and a `select *` secure view keeps the columns it was created
+    with, so neither can be used as is after a public contract change. One that doesn't exist yet doesn't
+    differ: the load creates the table, and admin_setup.sql part 2 the view."""
+    import pyarrow.parquet as pq
+
+    tables, views = [], []
+    for t in PUBLIC_TABLES:
+        want = sorted(c.upper() for c in pq.read_schema(export_dir / f"{t}.parquet").names)
+        if (have := _columns(cur, SCHEMA, t)) and have != want:
+            tables.append(t)
+        if (have := _columns(cur, "SHARE", SHARE_VIEWS[t])) and have != want:
+            views.append(t)
+    return tables, views
+
+
 def statements(table: str, run_path: str) -> list[str]:
     """SQL to (create and) reload one table from this run's staged file, as one transaction."""
     src = f"@{SCHEMA}.{STAGE}/{run_path}/{table}.parquet"
@@ -74,10 +124,16 @@ def statements(table: str, run_path: str) -> list[str]:
     ]
 
 
-def load(export_dir: Path, con=None) -> dict:
+def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
+    """Load one export. If any table's or share view's columns differ from the export (a new public contract
+    version), nothing is loaded unless `migrate`. Then the role must own the share views; the files are uploaded
+    first, the differing tables are dropped and loaded fresh, and every share view is recreated with `copy grants`,
+    so the share never loses one. Each step can be repeated, so a migration that failed partway is finished by
+    running it again."""
     manifest = json.loads((export_dir / "manifest.json").read_text())
     exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
     run_path = f"run={manifest['as_of_run']}/exported={exported}"
+    share = os.environ.get("SNOWFLAKE_SHARE", "COFFEE_DATA_SHARE").upper()
     con = con or connect()
     cur = con.cursor()
     try:
@@ -87,16 +143,71 @@ def load(export_dir: Path, con=None) -> dict:
             f"create stage if not exists {SCHEMA}.{STAGE} file_format = {SCHEMA}.PARQUET_FF "
             "comment = 'Weekly facts-only exports, one folder per run'"
         )
-        for table in PUBLIC_TABLES:
+        # Everything is checked before anything changes, so a mismatch never leaves Snowflake half on the new export.
+        tables, views = stale(cur, export_dir)
+        if (tables or views) and not migrate:
+            raise RuntimeError(
+                f"{', '.join(dict.fromkeys(tables + views))} in Snowflake have different columns from the export: "
+                "the public contract changed. Nothing was loaded. Run `coffeedata load-snowflake --migrate` (or "
+                "the weekly workflow with only `snowflake_migrate` set) to recreate those tables and the share views."
+            )
+        present = [t for t in PUBLIC_TABLES if migrate and _columns(cur, "SHARE", SHARE_VIEWS[t])]
+        if present:  # checked first, so a migration that can't finish changes nothing
+            role = str(cur.execute("select current_role()").fetchone()[0]).upper()
+            grants = {}
+            for t in present:
+                view = f"SHARE.{SHARE_VIEWS[t]}"
+                try:
+                    grants[t] = _view_grants(cur, view)
+                except Exception as e:  # noqa: BLE001 - snowflake.connector's ProgrammingError
+                    if "privilege" not in str(e).lower() and "not authorized" not in str(e).lower():
+                        raise
+                    grants[t] = (
+                        "another role",
+                        set(),
+                    )  # only a role with rights on the view can list its grants
+            for t, (owner, _) in grants.items():
+                if owner != role:
+                    raise RuntimeError(
+                        f"SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so {role} can't recreate it. "
+                        f"Nothing was changed. Its owner (or ACCOUNTADMIN) can give it back, keeping its grants: "
+                        f"grant ownership on view SHARE.{SHARE_VIEWS[t]} to role {role} copy current grants"
+                    )
+            # `copy grants` keeps each view's grant to the share, so only a view the share is missing (and the
+            # share exists: another view is in it) is granted, before anything else changes. That grant needs the
+            # share's owner, which is COFFEE_LOADER under admin_setup.sql (a share's ownership can't be moved).
+            granted: list[str] = []
+            if any(share in shares for _, shares in grants.values()):
+                for t in (t for t, (_, shares) in grants.items() if share not in shares):
+                    try:
+                        cur.execute(f"grant select on view SHARE.{SHARE_VIEWS[t]} to share {share}")
+                        granted.append(f"SHARE.{SHARE_VIEWS[t]}")
+                    except Exception as e:  # noqa: BLE001 - snowflake.connector's ProgrammingError
+                        kept = f" (granted to it so far: {', '.join(granted)})" if granted else ""
+                        raise RuntimeError(
+                            f"SHARE.{SHARE_VIEWS[t]} is missing from share {share}, and {role} can't grant it "
+                            f"({e}): that needs the share's owner. No table or view was changed{kept}. Grant it "
+                            f"as the share's owner: grant select on view SHARE.{SHARE_VIEWS[t]} to share {share}"
+                        ) from e
+        for table in PUBLIC_TABLES:  # uploaded before anything is dropped
             f = (export_dir / f"{table}.parquet").resolve()
             cur.execute(
                 f"put 'file://{f}' @{SCHEMA}.{STAGE}/{run_path}/ auto_compress = false overwrite = false"
             )
+        for table in tables:
+            cur.execute(f"drop table if exists {SCHEMA}.{table}")
         counts = {}
         for table in PUBLIC_TABLES:
             for sql in statements(table, run_path):
                 cur.execute(sql)
             counts[table] = cur.execute(f"select count(*) from {SCHEMA}.{table}").fetchone()[0]
+        # Every existing view, not only the changed ones: one left over from a failed migration is rebuilt too.
+        # Views that don't exist yet are left to admin_setup.sql part 2.
+        for table in present:
+            cur.execute(
+                f"create or replace secure view SHARE.{SHARE_VIEWS[table]} copy grants as "
+                f"select * from {SCHEMA}.{table}"
+            )
     finally:
         cur.close()
         con.close()
