@@ -156,6 +156,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   // Catalog: loaded lazily, filtered client-side, rendered with textContent.
   const $ = id => document.getElementById(id);
   let rows = [], C = {};
+  const STATUS = {preorder: "preorder", sold_out: "sold out", archived: "past offering"};
   const cell = (tr, text, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; td.textContent = text ?? ""; return td; };
   function render() {
     const q = $("q").value.trim().toLowerCase(), o = $("origin").value, p = $("process").value, s = $("stock").checked;
@@ -166,6 +167,8 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       const tr = body.insertRow(), td = tr.insertCell();
       if (r[C.url]) { const a = document.createElement("a"); a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a); }
       else td.textContent = r[C.title];
+      const st = STATUS[r[C.catalog_status]];  // the roaster's back catalog is kept, and marked as such
+      if (st) { const n = document.createElement("span"); n.className = "notes"; n.textContent = " · " + st; td.appendChild(n); }
       cell(tr, r[C.roaster_name] + (r[C.roaster_state] ? " (" + r[C.roaster_state] + ")" : ""));
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");

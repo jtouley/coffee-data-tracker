@@ -89,6 +89,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("body_hash", pa.string()),
             ("variants", pa.list_(VARIANT)),
             ("is_coffee", pa.bool_()),
+            ("published_at", pa.timestamp("s", tz="UTC")),
         ]
     ),
     "bodies": pa.schema(
@@ -378,7 +379,8 @@ class Lake:
     def ensure_schemas(self) -> None:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
-            if not p.exists():
+            # A zero-row schema file from before a column was added is refreshed, so globs always see every column.
+            if not p.exists() or not pq.read_schema(p).equals(SCHEMAS[table], check_metadata=False):
                 p.parent.mkdir(parents=True, exist_ok=True)
                 pq.write_table(SCHEMAS[table].empty_table(), p)
 

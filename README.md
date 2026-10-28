@@ -199,7 +199,7 @@ where is_listed group by 1 order by 2 desc;
 
 | Model | One row per |
 |---|---|
-| `dim_coffee` | coffee ever seen, with attributes, sizes, price per 100 g, `in_stock` and `is_listed` |
+| `dim_coffee` | coffee ever seen, with attributes, sizes, price per 100 g, `in_stock`, `is_listed` and `catalog_status` (available / preorder / sold_out / archived / delisted) |
 | `dim_roaster` | roaster, with platform and status |
 | `fct_price_event` | change: `new`, `price`, `availability`, `removed` or `relisted` |
 | `fct_shot` | current shot, with its bag, grinder (`grind_position` compares across grinders) and catalog coffee |

@@ -2,11 +2,20 @@
 
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
 from ..http import FetchError, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams
 from ..text import html_to_text, to_float
 
 MAX_PAGES = 20
+
+
+def _published_at(value: object) -> datetime | None:
+    try:
+        return datetime.fromisoformat(str(value)).astimezone(UTC).replace(microsecond=0) if value else None
+    except ValueError:
+        return None
 
 
 def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
@@ -42,6 +51,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
         image=image,
         variants=variants,
         body_text=html_to_text(p.get("body_html")),
+        published_at=_published_at(p.get("published_at")),
     )
 
 

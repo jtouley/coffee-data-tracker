@@ -96,6 +96,40 @@ def test_history_is_derived_from_successful_runs(lake, tmp_path):
     )
 
 
+def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    tagged = lambda pid, tags, **kw: product(pid, **kw) | {"tags": tags}  # noqa: E731
+    run(lake, "2026-10-19", rid, [product("GONE")])
+    run(
+        lake,
+        "2026-10-26",
+        rid,
+        [
+            product("NOW"),
+            product("OUT", available=False),
+            tagged("OLD", ["Archived"], available=False),
+            tagged("OLD2", ["past-offering"], available=False),
+            tagged("SOON", ["preorder-ship-date:2026-11-05"]),
+            tagged(
+                "BACK", ["archive"]
+            ),  # archived, but buyable again: what matters now is that it's in stock
+            tagged("PASTA", ["Pasta"], available=False),
+        ],
+    )
+    con = build(lake, tmp_path)
+    got = dict(con.execute("select product_id, catalog_status from dim_coffee").fetchall())
+    assert got == {
+        "GONE": "delisted",
+        "NOW": "available",
+        "OUT": "sold_out",
+        "OLD": "archived",
+        "OLD2": "archived",
+        "SOON": "preorder",
+        "BACK": "available",
+        "PASTA": "sold_out",
+    }
+
+
 def test_relisting(lake, tmp_path):
     rid = "onyxcoffeelab.com"
     run(lake, "2026-10-19", rid, [product("A"), product("B")])

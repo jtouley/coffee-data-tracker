@@ -22,6 +22,14 @@ def test_shopify_parse(fixture_items):
     assert first.body_hash and first.variants and first.variants[0].price_usd
 
 
+def test_shopify_published_at_is_utc():
+    from datetime import UTC, datetime
+
+    item = shopify.parse_product({"id": 1, "title": "K", "published_at": "2024-03-01T09:30:00-05:00"}, _r())
+    assert item.published_at == datetime(2024, 3, 1, 14, 30, tzinfo=UTC)
+    assert shopify.parse_product({"id": 2, "title": "K", "published_at": "soon"}, _r()).published_at is None
+
+
 def test_shopify_tolerates_odd_payloads():
     p = {
         "id": 1,

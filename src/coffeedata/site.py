@@ -165,7 +165,7 @@ def build(db: Path, out: Path) -> Path:
         con,
         """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
-               tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
+               tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
         from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
     )
     reach = _q(

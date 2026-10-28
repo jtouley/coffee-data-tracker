@@ -73,6 +73,18 @@ select
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
     run.is_latest_run and coalesce(p.any_available, false) as in_stock,
+    -- What a shopper can get now versus the roaster's back catalog. Every coffee is kept either way; a sold-out
+    -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".
+    case
+        when not run.is_latest_run then 'delisted'
+        when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
+            regexp_matches(lower(t), '\bpre[- ]?(order|sale)|\bupcoming\b|coming soon'))) then 'preorder'
+        when coalesce(p.any_available, false) then 'available'
+        when list_bool_or(list_transform(l.tags, lambda t:
+            regexp_matches(lower(t), 'archive|discontinued|past[- ]offering'))) then 'archived'
+        else 'sold_out'
+    end as catalog_status,
+    l.published_at,
     p.min_price_usd, p.price_per_100g, p.bag_sizes_g
 from latest l
 join seen s using (coffee_id)

@@ -196,3 +196,19 @@ def test_photos_live_in_their_own_dataset_in_hf_image_layout(tmp_path, monkeypat
     assert t.column("image")[0].as_py() == {"bytes": jpeg, "path": "p1.jpg"}
     features = json.loads(t.schema.metadata[b"huggingface"])["info"]["features"]
     assert features["image"] == {"_type": "Image"} and features["photo_id"]["dtype"] == "string"
+
+
+def test_schema_file_from_before_a_new_column_is_refreshed(tmp_path, monkeypatch):
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    p = Lake().root / SCHEMA_FILES["snapshots"]
+    pq.write_table(
+        SCHEMAS["snapshots"].remove(SCHEMAS["snapshots"].get_field_index("published_at")).empty_table(), p
+    )
+    con = Lake().connect()
+    assert "published_at" in [
+        d[0] for d in con.execute(f"describe select * from {Lake().scan('snapshots')}").fetchall()
+    ]
