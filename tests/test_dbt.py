@@ -96,6 +96,115 @@ def test_history_is_derived_from_successful_runs(lake, tmp_path):
     )
 
 
+def test_new_snapshot_column_keeps_raw_immutable_and_builds_idempotent(lake, tmp_path, monkeypatch):
+    import hashlib
+
+    from coffeedata import lake as lake_mod
+
+    rid = "onyxcoffeelab.com"
+    # Week 1 written before snapshots had published_at; week 2 after.
+    old = lake_mod.SCHEMAS["snapshots"]
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", old.remove(old.get_field_index("published_at")))
+    run(lake, "2026-10-19", rid, [product("A"), product("B", available=False) | {"tags": ["Archived"]}])
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", old)
+    pub = datetime(2024, 3, 1, 14, 30, tzinfo=UTC)
+    run(lake, "2026-10-26", rid, [product("A") | {"published_at": pub}, product("C") | {"published_at": pub}])
+
+    def raw() -> dict[str, str]:  # every data file in the lake, by content (schema files are zero-row)
+        return {str(p.relative_to(lake.root)): hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in lake.root.rglob("*.parquet") if "schema" not in p.name}  # fmt: skip
+
+    def marts(con, observed: bool = True) -> dict[str, list]:
+        cols = {m: "*" for m in ("dim_coffee", "public_coffee")}
+        cols["fct_price_event"] = "*" if observed else "* exclude (fetched_at)"
+        return {m: con.execute(f"select {c} from {m} order by all").fetchall() for m, c in cols.items()}
+
+    before = raw()
+    con = build(lake, tmp_path)
+    first, first_unobserved = marts(con), marts(con, observed=False)
+    lake_mod.Lake()  # refreshes the local schema file only
+    second = marts(build(lake, tmp_path))
+    assert raw() == before and first == second  # raw untouched; same lake, same tables
+
+    got = {r[0]: r[1:] for r in build(lake, tmp_path).execute(
+        "select product_id, catalog_status, published_at from dim_coffee").fetchall()}  # fmt: skip
+    assert got == {"A": ("available", pub), "B": ("delisted", None), "C": ("available", pub)}
+
+    # Re-running the week adds a batch (never rewrites one) and changes nothing downstream.
+    run(
+        lake,
+        "2026-10-26",
+        rid,
+        [product("A") | {"published_at": pub}, product("C") | {"published_at": pub}],
+        hour=18,
+    )
+    assert set(before) < set(raw()) and all(raw()[k] == v for k, v in before.items())
+    # The latest successful batch of a week wins (a forced re-fetch replaces bad data), so only the time its
+    # events were observed moves; every coffee, status, price and event is the same.
+    assert marts(build(lake, tmp_path), observed=False) == first_unobserved
+
+
+def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    tagged = lambda pid, tags, **kw: product(pid, **kw) | {"tags": tags}  # noqa: E731
+    run(lake, "2026-10-19", rid, [product("GONE")])
+    run(
+        lake,
+        "2026-10-26",
+        rid,
+        [
+            product("NOW"),
+            product("OUT", available=False),
+            tagged("OLD", ["Archived"], available=False),
+            tagged("OLD2", ["past-offering"], available=False),
+            tagged("SOON", ["preorder-ship-date:2026-11-05"]),
+            tagged(
+                "BACK", ["archive"]
+            ),  # archived, but buyable again: what matters now is that it's in stock
+            tagged("PASTA", ["Pasta"], available=False),
+            tagged("SLUG", ["past_offering"], available=False),
+            tagged("SOON2", ["coming-soon"]),
+            tagged("SHIPPED", ["preorder-ship-date:2026-10-01"]),  # ship date before this run: a leftover tag
+        ],
+    )
+    con = build(lake, tmp_path)
+    got = dict(con.execute("select product_id, catalog_status from dim_coffee").fetchall())
+    assert got == {
+        "GONE": "delisted",
+        "NOW": "available",
+        "OUT": "sold_out",
+        "OLD": "archived",
+        "OLD2": "archived",
+        "SOON": "preorder",
+        "BACK": "available",
+        "PASTA": "sold_out",
+        "SLUG": "archived",
+        "SOON2": "preorder",
+        "SHIPPED": "available",
+    }
+    # Counts describe the current catalog; the archived back catalog is counted on its own.
+    listed, archived = con.execute(
+        "select coffees_listed, coffees_archived from dim_roaster where roaster_id = ?", [rid]
+    ).fetchone()
+    assert (listed, archived) == (7, 3)  # 10 listed this run, less OLD, OLD2 and SLUG
+
+
+def test_new_arrivals_are_newly_published_not_newly_fetched(lake, tmp_path):
+    rid = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", rid, [product("A")])
+    old, new = datetime(2024, 3, 1, tzinfo=UTC), datetime(2026, 10, 22, tzinfo=UTC)
+    run(lake, "2026-10-26", rid, [
+        product("A"),
+        product("BACKLIST") | {"published_at": old},  # first fetched now (pagination), published long ago
+        product("FRESH") | {"published_at": new},  # published after the previous run
+        product("UNKNOWN"),  # no publish time (not Shopify): still counts
+    ])  # fmt: skip
+    con = build(lake, tmp_path)
+    assert sorted(r[0] for r in con.execute("select coffee_id from mart_new_arrivals").fetchall()) == [
+        f"{rid}:FRESH", f"{rid}:UNKNOWN",
+    ]  # fmt: skip
+
+
 def test_relisting(lake, tmp_path):
     rid = "onyxcoffeelab.com"
     run(lake, "2026-10-19", rid, [product("A"), product("B")])

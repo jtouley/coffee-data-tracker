@@ -2,11 +2,24 @@
 
 from __future__ import annotations
 
+from datetime import UTC, datetime
+
 from ..http import FetchError, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams
 from ..text import html_to_text, to_float
 
 MAX_PAGES = 20
+
+
+def _published_at(value: object) -> datetime | None:
+    """One odd date must never cost a roaster its catalog: anything unreadable is None. No offset means UTC."""
+    try:
+        t = datetime.fromisoformat(str(value)) if value else None
+        if t is None:
+            return None
+        return (t if t.tzinfo else t.replace(tzinfo=UTC)).astimezone(UTC).replace(microsecond=0)
+    except (ValueError, OverflowError):
+        return None
 
 
 def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
@@ -42,17 +55,23 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
         image=image,
         variants=variants,
         body_text=html_to_text(p.get("body_html")),
+        published_at=_published_at(p.get("published_at")),
     )
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
-    items: list[CatalogItem] = []
+    items: dict[str, CatalogItem] = {}
     for page in range(1, MAX_PAGES + 1):
         data = client.fetch_json(f"https://{roaster.host}/products.json", limit=250, page=page)
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
-        products = data["products"]
-        items.extend(parse_product(p, roaster) for p in products)
-        if len(products) < 250:
+        # A full page can hold fewer than 250 products (Shopify drops some after paging; onyxcoffeelab.com's pages
+        # hold 249, 247, 234, 242), so only an empty page ends the catalog. A store that ignores `page` and
+        # repeats itself ends it too.
+        new = {i.product_id: i for i in (parse_product(p, roaster) for p in data["products"])}
+        if not new.keys() - items.keys():
             break
-    return items
+        items |= new
+    else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
+        raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
+    return list(items.values())

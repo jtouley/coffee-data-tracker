@@ -224,3 +224,43 @@ def test_photos_live_in_their_own_dataset_in_hf_image_layout(tmp_path, monkeypat
     assert t.column("image")[0].as_py() == {"bytes": jpeg, "path": "p1.jpg"}
     features = json.loads(t.schema.metadata[b"huggingface"])["info"]["features"]
     assert features["image"] == {"_type": "Image"} and features["photo_id"]["dtype"] == "string"
+
+
+def test_schema_file_from_before_a_new_column_is_refreshed(tmp_path, monkeypatch):
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    p = Lake().root / SCHEMA_FILES["snapshots"]
+    pq.write_table(
+        SCHEMAS["snapshots"].remove(SCHEMAS["snapshots"].get_field_index("published_at")).empty_table(), p
+    )
+    con = Lake().connect()
+    assert "published_at" in [
+        d[0] for d in con.execute(f"describe select * from {Lake().scan('snapshots')}").fetchall()
+    ]
+
+
+def test_up_to_date_schema_files_are_left_alone(lake):
+    p = lake.root / SCHEMA_FILES["snapshots"]  # has timestamp[s] columns, which Parquet stores as [ms]
+    before = p.stat().st_mtime_ns, p.stat().st_ino
+    Lake()
+    assert (p.stat().st_mtime_ns, p.stat().st_ino) == before
+
+
+def test_schema_refresh_uses_a_unique_temp_file(lake, monkeypatch):
+    import tempfile as tf
+
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    p = lake.root / SCHEMA_FILES["snapshots"]
+    pq.write_table(SCHEMAS["snapshots"].remove(0).empty_table(), p)  # stale: a column short
+    made = []
+    real = tf.mkstemp
+    monkeypatch.setattr(tf, "mkstemp", lambda **kw: made.append(kw) or real(**kw))
+    Lake()
+    assert made and made[0]["dir"] == p.parent and pq.read_schema(p).names == SCHEMAS["snapshots"].names
+    assert not list(p.parent.glob("*.tmp"))

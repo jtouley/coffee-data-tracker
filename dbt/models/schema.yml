@@ -14,6 +14,10 @@ models:
       - name: roast_level
         data_tests:
           - accepted_values: {arguments: {values: [light, medium, dark]}}
+      - name: catalog_status
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
   - name: dim_roaster
     columns:
       - name: roaster_id

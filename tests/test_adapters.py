@@ -22,6 +22,19 @@ def test_shopify_parse(fixture_items):
     assert first.body_hash and first.variants and first.variants[0].price_usd
 
 
+def test_shopify_published_at_is_utc():
+    from datetime import UTC, datetime
+
+    item = shopify.parse_product({"id": 1, "title": "K", "published_at": "2024-03-01T09:30:00-05:00"}, _r())
+    assert item.published_at == datetime(2024, 3, 1, 14, 30, tzinfo=UTC)
+    for odd in ("soon", "0001-01-01T00:00:00+05:00"):  # unreadable, and out of range once moved to UTC
+        assert shopify.parse_product({"id": 2, "title": "K", "published_at": odd}, _r()).published_at is None
+    naive = shopify.parse_product({"id": 3, "title": "K", "published_at": "2024-03-01T09:30:00"}, _r())
+    assert naive.published_at == datetime(
+        2024, 3, 1, 9, 30, tzinfo=UTC
+    )  # no offset: UTC, not the host's zone
+
+
 def test_shopify_tolerates_odd_payloads():
     p = {
         "id": 1,
@@ -98,6 +111,38 @@ def test_shopify_later_page_failure_raises(mock):
     mock.get("https://x.com/products.json", params={"page": "2"}).mock(return_value=httpx.Response(502))
     with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(FetchError):
         shopify.fetch(c, _r())
+
+
+def _page(ids):
+    return httpx.Response(
+        200, json={"products": [{"id": i, "title": f"P{i}", "handle": f"p{i}", "variants": []} for i in ids]}
+    )
+
+
+def test_shopify_short_pages_are_not_the_end(mock):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first.
+    pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
+    for n, ids in pages.items():
+        mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
+    with PoliteClient(min_interval=0) as c:
+        assert len(shopify.fetch(c, _r())) == 249 + 247  # an empty page ends it
+
+
+def test_shopify_store_that_ignores_page_stops(mock):
+    route = mock.get("https://x.com/products.json").mock(return_value=_page(range(10)))
+    with PoliteClient(min_interval=0) as c:
+        assert len(shopify.fetch(c, _r())) == 10
+    assert route.call_count == 2
+
+
+def test_shopify_page_limit_without_an_empty_page_is_an_error(mock, monkeypatch):
+    monkeypatch.setattr(shopify, "MAX_PAGES", 2)
+    for n in (1, 2):
+        mock.get("https://x.com/products.json", params={"page": str(n)}).mock(
+            return_value=_page(range(n * 100, n * 100 + 50))
+        )
+    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="after 2 pages"):
+        shopify.fetch(c, _r())  # never a silently truncated catalog
 
 
 def test_shopify_empty_catalog_is_an_answer(mock):

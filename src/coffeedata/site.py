@@ -158,14 +158,15 @@ def build(db: Path, out: Path) -> Path:
     totals = _q(
         con,
         """
-        select count(*) filter (where is_listed) as coffees, count(*) filter (where in_stock) as in_stock,
+        select count(*) filter (where catalog_status <> 'archived') as coffees,
+               count(*) filter (where in_stock) as in_stock,
                count(distinct roaster_id) as roasters from dim_coffee where is_listed""",
     )[0]
     catalog = _q(
         con,
         """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
-               tasting_notes, price_per_100g, min_price_usd, in_stock, first_seen
+               tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
         from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
     )
     reach = _q(

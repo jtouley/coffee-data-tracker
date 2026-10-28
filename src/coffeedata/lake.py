@@ -35,6 +35,7 @@ import json
 import logging
 import os
 import secrets
+import tempfile
 import threading
 import time
 from datetime import UTC, datetime
@@ -89,6 +90,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("body_hash", pa.string()),
             ("variants", pa.list_(VARIANT)),
             ("is_coffee", pa.bool_()),
+            ("published_at", pa.timestamp("s", tz="UTC")),
         ]
     ),
     "bodies": pa.schema(
@@ -385,9 +387,18 @@ class Lake:
     def ensure_schemas(self) -> None:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
-            if not p.exists():
+            # A zero-row schema file from before a column was added is refreshed in place, so globs always see
+            # every column. That is the pattern for added columns; a changed type or meaning still gets a new schema
+            # file beside the old one (like shots' schema-v2), since names are all this compares (Parquet stores
+            # timestamp[s] as [ms], so comparing full schemas would never match).
+            if not p.exists() or pq.read_schema(p).names != SCHEMAS[table].names:
                 p.parent.mkdir(parents=True, exist_ok=True)
-                pq.write_table(SCHEMAS[table].empty_table(), p)
+                # A unique temp file in the same folder: two Lake()s refreshing at once never share one, and a
+                # reader globbing *.parquet never sees a half-written file.
+                fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".schema-", suffix=".tmp")
+                os.close(fd)
+                pq.write_table(SCHEMAS[table].empty_table(), tmp)
+                os.replace(tmp, p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
         """Write rows as a new Parquet file. Refuses to replace an existing file (immutability)."""
