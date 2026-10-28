@@ -119,23 +119,23 @@ def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
     build(lake, tmp_path)  # compared with b1 (40), not the failed b2 (5)
 
 
-def test_one_odd_build_does_not_move_the_volume_baseline(lake, tmp_path):
-    # The baseline is the median of the last 4 passing builds up to the served one, so one odd build (a big week let
-    # through with --accept-volume-change) joins it without becoming it, and older builds drop out.
+def test_an_accepted_volume_change_is_the_next_baseline(lake, tmp_path):
+    # A real drop from 100 to 40, let through with --accept-volume-change and served: the next week at 40 compares
+    # with 40 and passes, so one accept is enough.
     run(lake, "2026-10-26", RID, FULL)  # lists 40
-    for i, listed in enumerate((10.0, 10.0, 10.0, 10.0, 40.0, 41.0, 39.0, 120.0)):
-        _baseline(lake, listed, f"b{i}", day=10 + i)
-    # Median 40.5: not the served 120, nor 25 over all eight.
-    build(lake, tmp_path, baseline_build="b7").close()
+    _baseline(lake, 100.0, "b0", day=10)
+    _baseline(lake, 40.0, "b1", day=11)  # the accepted build
+    build(lake, tmp_path, baseline_build="b1").close()
+    build(lake, tmp_path).close()  # nothing served yet: the newest passing build, b1
 
 
-def test_the_volume_baseline_ends_with_the_served_build(lake, tmp_path):
+def test_the_volume_check_compares_with_the_served_build(lake, tmp_path):
     run(lake, "2026-10-26", RID, FULL)
     _baseline(lake, 40.0, "b1", day=20)
     for i in range(3):  # passing builds that were rolled back from: customers still get b1
         _baseline(lake, 100.0, f"later{i}", day=21 + i)
     build(lake, tmp_path, baseline_build="b1").close()  # 40 against b1's 40; the later builds don't count
-    r = build(lake, tmp_path, check=False)  # nothing served: the newest passing builds, median 100
+    r = build(lake, tmp_path, check=False)  # nothing served: the newest passing build, at 100
     assert r.returncode != 0 and "catalog_volume_vs_last_build" in r.stdout
 
 

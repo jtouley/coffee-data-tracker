@@ -176,8 +176,8 @@ schema:
     implementation: tests/catalog_volume_vs_last_build.sql
     dimension: consistency
     severity: error
-    description: Listed coffees, in-stock coffees and roasters move at most volume_tolerance from the median of the
-      last 4 passing releases up to the one served now.
+    description: Listed coffees, in-stock coffees and roasters move at most volume_tolerance from the last passing
+      release.
   - type: custom
     engine: dbt
     implementation: tests/run_is_complete.sql

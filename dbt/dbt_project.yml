@@ -25,15 +25,13 @@ vars:
   # 4 weeks (when that median is at least suspect_min_products) is held out of history until accepted.
   suspect_drop_ratio: 0.5
   suspect_min_products: 20
-  # The build fails if listed coffees, in-stock coffees or roasters move more than this from the median of the last
-  # 4 passing builds up to the served one (`coffeedata build --accept-volume-change` lets one build through, and
-  # it joins that median).
+  # The build fails if listed coffees, in-stock coffees or roasters move more than this from the last passing
+  # build (`coffeedata build --accept-volume-change` lets one build through and makes it the new baseline).
   volume_tolerance: 0.2
   # The build fails if the newest counted run is older than this many days before as_of_run (empty: no check).
   as_of_run: ""
   max_run_age_days: 8
-  # The day of the build, for freshness (empty: no check), and the served release: the newest build the volume
-  # baseline counts (empty: the newest passing build).
+  # The day of the build, for freshness (empty: no check), and the served release the volume check compares with.
   today: ""
   baseline_build: ""
   # The build this run is (release_build_id on every release table); set by `coffeedata build`.

@@ -234,10 +234,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     served = (quality.served(lake) or {}).get("build_id")
     if (
         served
-    ):  # the volume baseline ends with what customers get now, which after a rollback isn't the newest
+    ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
         extra["baseline_build"] = served
     if getattr(args, "accept_volume_change", False):
-        extra["volume_tolerance"] = 1e9  # this build passes and joins the next one's baseline
+        extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
     started = time.monotonic()
     passed, results = dbt_build(lake, db, extra)
     took = time.monotonic() - started
@@ -545,7 +545,7 @@ def main(argv: list[str] | None = None) -> None:
     b.add_argument(
         "--accept-volume-change",
         action="store_true",
-        help="let one build through the volume check (it joins the next builds' baseline)",
+        help="let one build through the volume check (it becomes the next baseline)",
     )
 
     bd = add(
