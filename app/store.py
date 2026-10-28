@@ -437,10 +437,11 @@ class Store:
         """A bag typed by hand: matched to the catalog the same way a typed shot is."""
         bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         prev = self._owned(self.bags, bag.bag_id, user_id)
-        # A day's grace: the phone's date can be ahead of the server's. Only a date being set now is refused, so a
-        # bag stored before this check (with a future date) can still take its photo's match.
+        # Today in UTC plus a day's grace (the phone checks the same), so no zone's "today" is refused. Only a date
+        # being set now is refused, so a bag stored before this check (with a future date) can still take its photo's
+        # match.
         new_date = not (prev and prev.item.roast_date == bag.roast_date)
-        if new_date and bag.roast_date and bag.roast_date > date.today() + timedelta(days=1):
+        if new_date and bag.roast_date and bag.roast_date > datetime.now(UTC).date() + timedelta(days=1):
             raise Invalid("That roast date is in the future. Check the year.")
         same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
         if prev and same_text and not bag.coffee_id:

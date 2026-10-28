@@ -17,7 +17,7 @@ import logging
 import os
 import time
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
 log = logging.getLogger(__name__)
@@ -75,7 +75,7 @@ class Read:
             read = date.fromisoformat((self.label or {}).get("roast_date") or "")
         except ValueError:
             return None
-        return latest_past(read, today or date.today())
+        return latest_past(read, today or datetime.now(UTC).date())  # the server's "today", as save_bag's
 
 
 def latest_past(d: date, today: date) -> date | None:
