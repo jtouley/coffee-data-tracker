@@ -124,10 +124,13 @@ def test_el_puente_sl28_variety_history_is_not_the_origin():
         "Marcala, Honduras, where Moisés and Marysabel planted it a decade ago."
     )
     e = extract.rules(item("Finca El Puente SL-28 Variety", tags=["origin__single-origin"], body=body))
-    assert e.origin_country == "Honduras"
+    assert e.origin_country == "Honduras" and e.varietals == ["SL28"]
     # The same story without the country still lands in Honduras, by its region.
     no_country = body.replace(", Honduras", "")
     assert extract.rules(item("Finca El Puente SL-28 Variety", body=no_country)).origin_country == "Honduras"
+    # A sentence-opening word before a comma isn't a place ("Today, Kenya ...").
+    today = body.replace("Kenya remains", "Today, Kenya remains")
+    assert extract.rules(item("Finca El Puente SL-28 Variety", body=today)).origin_country == "Honduras"
 
 
 def test_variety_origin_phrases_never_count():
@@ -154,7 +157,8 @@ def test_true_kenyan_sl28_stays_kenya():
         "SL-28 and SL-34, the varieties Kenya is famous for, grown by members of the Othaya cooperative in Nyeri, "
         "Kenya. Washed and dried on raised beds. Notes: blackcurrant, grapefruit."
     )
-    assert extract.rules(item("Gatuyaini AA SL-28", body=body)).origin_country == "Kenya"
+    kenyan = extract.rules(item("Gatuyaini AA SL-28", body=body))
+    assert kenyan.origin_country == "Kenya" and kenyan.varietals == ["SL28", "SL34"]
     assert extract.rules(item("Kenya Kiambu SL28", body="SL28 developed in Kenya.")).origin_country == "Kenya"
     # Only a variety beside the country, nothing else: the country is still the best guess.
     assert extract.rules(item("Gichathaini", body="Classic SL28 from Kenya.")).origin_country == "Kenya"
@@ -165,3 +169,60 @@ def test_the_country_named_as_origin_beats_the_first_named():
     assert extract.rules(item("Huye Mountain", body=body)).origin_country == "Rwanda"
     location = "Farm: Don Andres\nLocation: Las Flores, Honduras\nProcess: Honey"
     assert extract.rules(item("Nahun Fernandez", body=location)).origin_country == "Honduras"
+
+
+def origin(title, body=""):
+    return extract.rules(item(title, body=body)).origin_country
+
+
+def test_sentences_about_people_or_lots_are_not_variety_origins():
+    assert origin("Lot 7", "Grown by indigenous Mayan farmers in Guatemala.") == "Guatemala"
+    assert origin("Lot 7", "Grown by native farmers in Peru.") == "Peru"
+    assert origin("Lot 7", "A program developed in partnership with farmers in Colombia.") == "Colombia"
+    assert origin("Lot 7", "We first discovered this Bourbon lot in Rwanda on a buying trip.") == "Rwanda"
+    assert origin("Lot 7", "The farm's Pacamara was first planted in El Salvador in 1990.") == "El Salvador"
+    assert (
+        origin("Lot 7", "However, Kenya is famous for SL28. Here, we grow it in Marcala, Honduras.")
+        == "Honduras"
+    )
+
+
+def test_fallback_order():
+    # A region in the title beats a country the body names in passing.
+    assert origin("Huila Decaf", "Brighter than most coffees from Brazil.") == "Colombia"
+    # A region that is only a farm's name doesn't.
+    assert origin("Finca Santa Barbara", "Bourbon from Colombia, a lovely cup.") == "Colombia"
+    # A variety beside its country is how listings state their origin.
+    assert origin("Lot 7", "Caturra from Colombia.") == "Colombia"
+    assert (
+        origin("Lot 7", "Ethiopia heirloom varieties, washed. Compare with our Kenya offering.") == "Ethiopia"
+    )
+    # A labelled demonym is a labelled origin.
+    assert origin("Lot 7", "Origin: Kenyan. Unlike Ethiopia, bright.") == "Kenya"
+    # Flores in a Spanish place name isn't the Indonesian island.
+    assert origin("Lot 7", "Grown in Las Flores. Notes: honey.") is None
+    assert origin("Flores Bajawa") == "Indonesia"
+    # A country the title names outright still wins over a description's other farms.
+    body = "The family has operated farms in Nicaragua for generations; this lot is from their newer farm."
+    assert origin("Honduras Cerro Azul Ethiosar", body) == "Honduras"
+
+
+def test_title_country_used_for_a_variety_yields_to_the_body():
+    body = "Grown in Marcala, Honduras."
+    for title in (
+        "Finca El Puente Kenya SL-28",
+        "Finca El Puente Kenyan SL-28",
+        "Finca El Puente Ethiopia Landrace Variety",
+        "Finca El Puente Variedad Colombia",
+        "Las Flores SL-28 Variety",
+        "Kenyan SL-28 grown in Honduras",
+    ):
+        assert origin(title, body) == "Honduras", title
+    assert origin("Ethiopia Guji") == "Ethiopia"
+    assert origin("Ethiopia Guji", "Unlike our Kenya, floral.") == "Ethiopia"
+    assert origin("Kenya SL28") == "Kenya"
+
+
+def test_varietal_spellings():
+    e = extract.rules(item("Kiambu", body="SL-28, SL 34, Ruiru11 and Batian."))
+    assert e.varietals == ["Batian", "Ruiru 11", "SL28", "SL34"]
