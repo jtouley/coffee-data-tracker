@@ -44,7 +44,7 @@ All six came to the same handful of conclusions without seeing each other's work
 - Dose, yield, time and ratio are the largest things on screen, set in tabular figures like an instrument readout.
   Nothing decorative competes with them.
 - Keep the warm paper ground and the brown accent from the site, and make dark mode a warm near-black.
-- The only image is the owner's own bag photo. No stock beans, no illustrated cups, no emoji.
+- The only image is the owner's own bag photo. No stock beans, no illustrated cups, no emoji. One exception the owner asked for: the line-drawn cup on the Reading state.
 - Steppers for every number. Free-spinning dials and precision sliders are hard with a wet thumb, and a
   gesture-only control has no fallback.
 - Numerals change instantly when stepped. "An instrument doesn't lag."
@@ -213,6 +213,7 @@ stacks its steppers under the numeral instead of beside it.
 | Saved: the new mark moves to its place on the target | spring, damping 1.0, response 0.36 s |
 | Saved: the summary line fades in | 200 ms ease-out, after the mark settles |
 | Undo countdown | 5 s, linear (an eased countdown would misstate the time left) |
+| Reading: the cup fills | 5 s ease-out to 85%, then holds; the stream drips every 0.5 s, linear, until the read ends. Reduced motion: still, half full |
 
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
 `prefers-reduced-motion: reduce`, every movement becomes an instant swap or a short crossfade. No `transition: all`.
@@ -327,6 +328,9 @@ dismisses it back to the camera (Retake).
 
 The match card's shape as skeleton blocks (no spinner, no shimmer), "Looking for roaster, coffee
 and roast date", the expected wait, the privacy line, and "Type the coffee" so nobody waits on the model.
+Beside the wait, a 40 px line-drawn cup in `--ink-2` fills over the expected 5 s and holds at 85% (never "done"
+before the read is), with a dripping stream: transforms only. Reduced motion: a still, half-full cup. The owner
+asked for it after first use, when the pulsing skeleton alone didn't read as working.
 
 #### Bag photo
 

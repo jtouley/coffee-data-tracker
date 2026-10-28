@@ -188,7 +188,9 @@ function go(url, notice) {
   const here = location.pathname + location.search;
   const from = document.referrer ? new URL(document.referrer) : null;
   const opener = from && from.origin === location.origin && from.pathname + from.search;
-  if (url !== here && opener === url && history.length > 1) history.back();
+  // "/shot/ID" is also the "/shot/ID?from=today" it was opened as: step back to that, keeping its back link.
+  const same = opener === url || (from && !url.includes("?") && from.origin === location.origin && from.pathname === url);
+  if (url !== here.split("?")[0] && url !== here && same && history.length > 1) history.back();
   else location.replace(url); // also this same screen again, after a change on it
 }
 
@@ -654,7 +656,7 @@ function newBag(root) {
     fill("origin", m.origin);
     fill("notes", m.notes);
     fill("price", m.price);
-    fill("stock", m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
+    fill("stock", m.past ? "Past offering" : m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
     root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
     step("match");
     root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
@@ -687,7 +689,7 @@ function newBag(root) {
       const meta = document.createElement("span");
       meta.className = "meta";
       const sameRoaster = read.label?.roaster && c.roaster?.toLowerCase().includes(read.label.roaster.toLowerCase());
-      meta.textContent = [sameRoaster ? "" : c.roaster, c.origin, c.in_stock == null ? "" : c.in_stock ? "in stock" : "sold out"]
+      meta.textContent = [sameRoaster ? "" : c.roaster, c.origin, c.past ? "past offering" : c.in_stock == null ? "" : c.in_stock ? "in stock" : "sold out"]
         .filter(Boolean).join(" · ");
       name.append(meta);
       const score = document.createElement("span");

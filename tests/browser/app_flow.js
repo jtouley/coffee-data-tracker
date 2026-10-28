@@ -235,6 +235,14 @@ async function newPage(browser, errors) {
       };
     }));
     await page.context().setOffline(false);
+    // A correction made from a shot opened on Today goes back to it as opened, Back link and all.
+    await page.goto(`${base}/shot/first?from=today`);
+    await page.getByRole("link", { name: "Correct" }).click();
+    await page.waitForURL(/\/log\?correct=first/);
+    await page.getByRole("button", { name: "Save correction" }).click();
+    await page.waitForURL(`${base}/shot/first?from=today`);
+    assert.equal(await page.textContent("a.back"), "‹ Today");
+    assert.equal(await page.textContent("[data-notice]"), "Correction saved");
     // Correcting with the time cleared falls back to that shot's own time (27 s), not the bag's latest (#18-1).
     await page.goto(`${base}/log?correct=dial3`);
     await page.fill("#time_s", "");

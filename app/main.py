@@ -823,13 +823,15 @@ def create_app(
         if not c:
             return None
         notes = c.get("tasting_notes")
+        # "Ethiopia, washed": the process rides along with a place, never stands in for one (a catalog row with no
+        # country showed "Origin: honey").
+        place = [x for x in (c.get("origin_country"), c.get("origin_region")) if x]
         return {
             "coffee_id": coffee_id,
             "title": c.get("title"),
             "roaster": " · ".join(x for x in (c.get("roaster_name"), c.get("roaster_state")) if x),
-            "origin": ", ".join(
-                x for x in (c.get("origin_country"), c.get("origin_region"), c.get("process")) if x
-            ),
+            "origin": ", ".join(place + [c["process"]] if place and c.get("process") else place),
+            "past": c.get("catalog_status") == "archived",  # no longer listed by the roaster
             "notes": ", ".join(str(n) for n in notes) if notes is not None and len(notes) else None,
             "price": f"${c['price_per_100g']:.2f} / 100 g" if c.get("price_per_100g") else None,
             "in_stock": c.get("in_stock"),
@@ -907,6 +909,11 @@ def create_app(
         label = result.label or {}
         coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
         described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
+        # Equal scores (one farm's lots, "Finca El Puente - Honey Processed" and "- Gesha Variety"): what the
+        # roaster sells now first, past offerings last.
+        described.sort(
+            key=lambda d: (-(d[1] or 0), bool(d[0] and d[0]["past"]), not (d[0] and d[0]["in_stock"]))
+        )
         roast = result.roast_date()
         return {
             "match": describe(coffee_id),

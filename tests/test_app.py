@@ -313,3 +313,28 @@ def test_a_saved_bag_can_be_edited_as_a_new_record(client, lake):
     assert "Roasted Oct 15" in client.get("/").text
     # Another person's bag isn't theirs to open.
     assert client.get("/bag/bag1/edit", headers={"x-test-user": "maya"}).status_code == 404
+
+
+def test_the_coffee_page_line_reads_well_without_a_roast_date(client):
+    client.post(
+        "/api/bags", json={"bag_id": "bag2", "coffee_freetext": "x", "finished_on": "2026-10-03"}, headers=W
+    )
+    assert '<span class="meta">Finished Oct 3</span>' in client.get("/coffee/bag2").text
+
+
+def test_a_bag_stored_with_a_future_date_can_still_be_saved_unchanged(client, lake):
+    """Bags saved before the check may carry a future date: resaving one as it is (a photo's late match does)
+    isn't refused; changing it to another future date is."""
+    from datetime import date, timedelta
+
+    from app.store import Bag
+
+    store = client.app.state.store
+    future = date.today() + timedelta(days=30)
+    store._commit(
+        store.bags, "old", Bag(bag_id="old", user_id="owner", coffee_freetext="x", roast_date=future), "bags"
+    )
+    same = {"bag_id": "old", "coffee_freetext": "x", "roast_date": future.isoformat()}
+    assert client.post("/api/bags", json=same, headers=W).status_code == 200
+    later = same | {"roast_date": (future + timedelta(days=1)).isoformat()}
+    assert client.post("/api/bags", json=later, headers=W).status_code == 422

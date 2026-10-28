@@ -79,15 +79,15 @@ class Read:
 
 
 def latest_past(d: date, today: date) -> date | None:
-    """Labels seldom print the year, so a read date in the future or more than a year old has the year wrong: it
-    becomes the latest date with that month and day that isn't in the future."""
-    if today - timedelta(days=366) <= d <= today:
+    """Labels seldom print the year, so a read date in the future (past tomorrow) or more than a year old has the
+    year wrong: it becomes the latest date with that month and day that isn't in the future."""
+    if today - timedelta(days=366) <= d <= today + timedelta(days=1):  # the server's day of grace, too
         return d
     for year in (today.year, today.year - 1):
         try:
             candidate = d.replace(year=year)
         except ValueError:
-            continue  # February 29
+            candidate = date(year, 2, 28)  # February 29 in a year without one
         if candidate <= today:
             return candidate
     return None

@@ -388,15 +388,70 @@ def test_two_uploads_of_one_photo_at_once_save_it_once(catalog, tmp_path):
 
 
 @pytest.mark.parametrize(
-    "read, want",
+    "read, today, want",
     [
-        ("2026-10-15", "2026-10-15"),  # within the year: as read
-        ("2016-10-15", "2026-10-15"),  # the wrong year: this year's
-        ("2026-11-02", "2025-11-02"),  # in the future: last year's
-        ("2016-02-29", None),  # no February 29 this year or last
-        ("2025-10-28", "2025-10-28"),  # a year ago today: as read
+        ("2026-10-15", "2026-10-28", "2026-10-15"),  # within the year: as read
+        ("2016-10-15", "2026-10-28", "2026-10-15"),  # the wrong year: this year's
+        ("2026-11-02", "2026-10-28", "2025-11-02"),  # in the future: last year's
+        ("2026-10-29", "2026-10-28", "2026-10-29"),  # tomorrow: the server's day of grace, not "day 364"
+        ("2025-10-28", "2026-10-28", "2025-10-28"),  # a year ago today: as read
+        ("2016-02-29", "2026-10-28", "2026-02-28"),  # February 29 in a year without one: the 28th
+        ("2024-02-29", "2026-03-01", "2026-02-28"),
     ],
 )
-def test_a_read_roast_date_with_the_wrong_year_takes_the_latest_past_one(read, want):
-    got = labels.latest_past(date.fromisoformat(read), date(2026, 10, 28))
+def test_a_read_roast_date_with_the_wrong_year_takes_the_latest_past_one(read, today, want):
+    got = labels.latest_past(date.fromisoformat(read), date.fromisoformat(today))
     assert (got.isoformat() if got else None) == want
+
+
+def test_one_farms_lots_show_their_process_and_status_and_the_current_one_first(lake, tmp_path):
+    """The owner's bag, Counter Culture's "Finca El Puente - Honey Processed": the catalog row has no country, and
+    the card showed "Origin: honey"; the past "Gesha Variety" lot then looked like the right one."""
+    shots._index_cache.clear()
+    shots._rows_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:honey', 'Counter Culture Coffee', 'NC', 'Finca El Puente - Honey Processed', null, null, 'honey', true, 'available'),
+        ('cc:gesha', 'Counter Culture Coffee', 'NC', 'Finca El Puente - Gesha Variety', 'Honduras', 'Marcala', null, false, 'archived'),
+        ('cc:anaerobic', 'Counter Culture Coffee', 'NC', 'Finca El Puente – Anaerobic Washed', 'Honduras', null, 'anaerobic', false, 'archived')
+    ) t(coffee_id, roaster_name, roaster_state, title, origin_country, origin_region, process, in_stock, catalog_status)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select *, 5.0 as price_per_100g from c")
+    app, _ = app_with(
+        lake, tmp_path, FakeClient(LABEL | {"roaster": "Counter Culture", "coffee": "Finca El Puente"})
+    )
+    r = upload(TestClient(app)).json()
+    by_id = {m["coffee_id"]: m for m in r["candidates"]}
+    assert by_id["cc:honey"]["origin"] == ""  # not "honey": the process isn't a place
+    assert by_id["cc:gesha"]["origin"] == "Honduras, Marcala" and by_id["cc:gesha"]["past"] is True
+    assert by_id["cc:anaerobic"]["origin"] == "Honduras, anaerobic"
+    assert r["candidates"][0]["coffee_id"] == "cc:honey"  # tied on the name: what's sold now comes first
+    shots._index_cache.clear()
+    shots._rows_cache.clear()
+
+
+def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
+    """The owner's fix for a bag saved as the wrong lot: Edit bag with the right name looks it up again."""
+    shots._index_cache.clear()
+    shots._rows_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false),
+        ('cc:sl28', 'Counter Culture Coffee', 'Finca El Puente SL-28 Variety', false),
+        ('cc:plain', 'Counter Culture Coffee', 'Finca El Puente', false),
+        ('st:1', 'Stumptown', 'Honduras El Puente', false),
+        ('nj:1', 'Naomi Joe Coffee Roasters', 'El Puente Natural', false)
+    ) t(coffee_id, roaster_name, title, in_stock)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    wrong = {"bag_id": "b1", "coffee_id": "cc:gesha", "coffee_freetext": "Finca El Puente - Gesha Variety"}
+    assert c.post("/api/bags", json=wrong, headers=W).status_code == 200
+    # What Edit bag sends: the whole record, with the name changed and the old match dropped.
+    fixed = wrong | {
+        "coffee_freetext": "Finca El Puente - Honey Processed",
+        "coffee_id": None,
+        "match_score": None,
+    }
+    assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
+    shots._index_cache.clear()
+    shots._rows_cache.clear()
