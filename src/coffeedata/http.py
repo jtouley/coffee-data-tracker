@@ -31,6 +31,11 @@ class Blocked(FetchError):
     """robots.txt disallows the URL."""
 
 
+class RobotsUnavailable(FetchError, httpx.HTTPError):
+    """robots.txt didn't answer (429, 430, 5xx), so nothing on that host is fetched for now. Callers treat it like
+    a network error: this fetch fails and a later one asks again."""
+
+
 class NotCatalog(FetchError):
     """HTTP 200, but the body isn't the JSON a catalog endpoint returns (e.g. an HTML or challenge page)."""
 
@@ -103,7 +108,13 @@ class PoliteClient:
                     parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
                     rules = parser
                 elif r.status_code in BLOCK_STATUSES or r.status_code >= 500:
-                    return True  # not an answer about robots.txt: leave the host unknown, ask again next time
+                    # Not an answer about robots.txt, so nothing is fetched without it: this fetch fails (the
+                    # retry pass tries again) and the host stays unknown, so the next call asks again.
+                    raise RobotsUnavailable(
+                        f"robots.txt for {host} answered {r.status_code}; not fetching without it"
+                    )
+            except RobotsUnavailable:
+                raise
             except httpx.HTTPError:
                 pass
             with self._lock:

@@ -297,13 +297,17 @@ def test_robots_txt_is_not_cached_from_a_429(no_retry_sleep):
             resp(429, "5"),
             httpx.Response(200, text="User-agent: *\nDisallow: /products.json"),
         ]
-        m.get("https://a.com/products.json").mock(return_value=_page([]))
+        products = m.get("https://a.com/products.json").mock(return_value=_page([]))
         with PoliteClient(min_interval=0, limiters={"shopify": lim}) as base:
             c = base.for_platform("shopify")
-            assert c.get("https://a.com/products.json").status_code == 200  # no answer yet: not blocked
+            with pytest.raises(http.RobotsUnavailable, match="robots.txt for a.com answered 429") as e:
+                c.get("https://a.com/products.json")  # no answer yet: nothing fetched without the rules
+            assert isinstance(e.value, httpx.HTTPError) and not isinstance(
+                e.value, http.Blocked
+            )  # retried later
             with pytest.raises(http.Blocked):  # asked again, and this time the rules apply
                 c.get("https://a.com/products.json")
-        assert robots.call_count == 2
+        assert robots.call_count == 2 and products.call_count == 0
 
 
 def test_store_cooldown_blocks_another_store_mid_cooldown(mock, no_retry_sleep):
