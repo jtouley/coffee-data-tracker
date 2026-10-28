@@ -1,10 +1,10 @@
-# The Space's image. The build context is the bundle the `space` workflow assembles: app/, src/, pyproject.toml,
-# uv.lock, and this file and README.md at the root.
+# The app's image, for any container host (Cloud Run today). Build from the repository root:
+#   docker build -f app/Dockerfile .
+# Nothing in it is specific to one host: the port comes from $PORT, secrets from the environment.
 FROM python:3.12-slim
 
 COPY --from=ghcr.io/astral-sh/uv:0.11.32 /uv /usr/local/bin/uv
 
-# Spaces run as user 1000.
 RUN useradd -m -u 1000 user
 USER user
 WORKDIR /home/user/app
@@ -13,6 +13,7 @@ ENV HOME=/home/user \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     PYTHONUNBUFFERED=1 \
+    PORT=8080 \
     COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data \
     COFFEEDATA_USERS=hf://datasets/jtouley/coffee-data-users \
     COFFEEDATA_PHOTOS=hf://datasets/jtouley/coffee-data-photos \
@@ -24,8 +25,8 @@ COPY --chown=user src ./src
 RUN uv sync --locked --no-dev --extra app
 COPY --chown=user app ./app
 
-EXPOSE 7860
-# One process: accounts and the shot cache live in memory, and usernames are checked under its lock.
-# No --proxy-headers: the app reads the phone's address for its sign-in limits from the X-Forwarded-For entry the
-# Space's proxy appended (COFFEEDATA_PROXY_HOPS from the right), never from what the client sent.
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "7860", "--no-proxy-headers"]
+EXPOSE 8080
+# One process: accounts, the shot cache and the sign-in limits live in memory (so the host runs one instance).
+# No --proxy-headers: the app takes the phone's address for its sign-in limits from the X-Forwarded-For entry the
+# host's front end appended (COFFEEDATA_PROXY_HOPS from the right), never from what the client sent.
+CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port \"$PORT\" --no-proxy-headers"]

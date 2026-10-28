@@ -407,7 +407,7 @@ def test_a_space_without_its_secrets_says_which_are_missing(lake, monkeypatch):
         monkeypatch.delenv(k, raising=False)
     r = TestClient(create_app(lake)).get("/")
     assert r.status_code == 503
-    assert "restart it: AUTH_PEPPER." in r.text and "s" * 40 not in r.text  # OWNER_SETUP_CODE is optional
+    assert "deploy again: AUTH_PEPPER." in r.text and "s" * 40 not in r.text  # OWNER_SETUP_CODE is optional
     assert r.headers["x-content-type-options"] == "nosniff"
 
 

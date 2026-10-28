@@ -1,0 +1,14 @@
+# The image takes only pyproject.toml, uv.lock, README.md, src/ and app/ (app/Dockerfile); keep the rest out of the
+# build context.
+.git
+.venv
+.claude
+build
+lake
+lake-*
+docs
+dbt
+tests
+**/__pycache__
+**/*.pyc
+src/terraform

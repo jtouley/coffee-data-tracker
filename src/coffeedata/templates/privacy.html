@@ -41,8 +41,14 @@
         requested and the response status. They're kept in Google Cloud Logging for about 30 days by default.</li>
     </ul>
   </li>
-  <li><strong>Cookies:</strong> one to keep you signed in, and two that remember your theme and handedness. None are used
-    for tracking or advertising.</li>
+  <li><strong>Cookies:</strong> four, none used for tracking or advertising:
+    <ul>
+      <li><code>session</code> keeps you signed in;</li>
+      <li><code>theme</code> remembers light, dark or automatic;</li>
+      <li><code>hand</code> remembers which side the &minus; and + buttons go on;</li>
+      <li><code>tz</code> holds your phone's time zone, so times show in your local time.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>Why we use it</h2>
