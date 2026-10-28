@@ -250,6 +250,9 @@ def create_app(
         # Crawlers may look: every page but sign-in needs an account, so there's nothing for them to see.
         return PlainTextResponse("User-agent: *\nAllow: /\n")
 
+    # /health for the uptime check: Google's front end answers any path ending in "z" itself (a 404 that never reaches
+    # the app). /healthz stays for Cloud Run's startup probe, which calls the container directly.
+    @app.get("/health")
     @app.get("/healthz")
     def healthz() -> dict:
         return {"ok": True}
