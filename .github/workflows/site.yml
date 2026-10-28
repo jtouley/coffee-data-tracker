@@ -1,6 +1,7 @@
 # Rebuild and deploy the public site when its templates or site.py change on main, so a copy or layout change
 # doesn't wait for Monday's weekly run. It reads the lake (dbt build) but never publishes to it: the marts it
-# writes stay on the runner. Shares the weekly run's concurrency group, so the two never deploy over each other.
+# writes stay on the runner. Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a
+# queued site build there would cancel a queued shot log or weekly run. A newer push supersedes an older site build.
 name: site
 on:
   push:
@@ -10,8 +11,8 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: lake
-  cancel-in-progress: false
+  group: site
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
