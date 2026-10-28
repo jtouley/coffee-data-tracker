@@ -1,0 +1,415 @@
+# ODCS data contract for the public catalog tables. dbt enforces it: tests/test_contracts.py fails when
+# dbt's contracts, tests or thresholds disagree with this file, so change this file first.
+apiVersion: v3.2.0
+kind: DataContract
+id: coffee-data-public-catalog
+name: Coffee Data public catalog
+version: 2.0.0
+status: active
+domain: coffee
+dataProduct: coffee-data
+description:
+  purpose: 'Weekly facts about US specialty coffee roasters'' catalogs: what is listed, in stock, at what price,
+    and how that changes.'
+  usage: Analysis of the specialty coffee market. Every coffee links back to its roaster.
+  limitations: Weekly snapshots. Attributes come from rules and an LLM over roasters' own text. catalog_status 'archived'
+    relies on roasters' tags; untagged back catalog shows as sold_out.
+schema:
+- name: public_coffee
+  physicalName: public_coffee
+  physicalType: table
+  description: One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived
+    coffees stay, marked by catalog_status.
+  properties:
+  - name: coffee_id
+    logicalType: string
+    physicalType: varchar
+    description: <roaster domain>:<store product id>; stable across runs and renames.
+    primaryKey: true
+    primaryKeyPosition: 1
+    unique: true
+    required: true
+  - name: roaster_id
+    logicalType: string
+    physicalType: varchar
+    description: The roaster's normalized domain.
+    required: true
+  - name: roaster_name
+    logicalType: string
+    physicalType: varchar
+    description: Roaster name.
+  - name: roaster_state
+    logicalType: string
+    physicalType: varchar
+    description: US state code of the roaster, where known.
+  - name: coffee_name
+    logicalType: string
+    physicalType: varchar
+    description: The coffee's name as the roaster lists it, cleaned of markup.
+  - name: source_url
+    logicalType: string
+    physicalType: varchar
+    description: The coffee's page on the roaster's own store (http or https only).
+    required: true
+  - name: is_listed
+    logicalType: boolean
+    physicalType: boolean
+    description: In the roaster's latest successful catalog fetch.
+    required: true
+  - name: in_stock
+    logicalType: boolean
+    physicalType: boolean
+    description: Listed, with at least one bag size available.
+    required: true
+  - name: catalog_status
+    logicalType: string
+    physicalType: varchar
+    description: available or preorder (buyable now), sold_out, archived (the roaster's own back-catalog tag), or
+      delisted.
+    required: true
+    enum:
+    - value: available
+    - value: preorder
+    - value: sold_out
+    - value: archived
+    - value: delisted
+  - name: published_at
+    logicalType: timestamp
+    physicalType: timestamp with time zone
+    description: The store's latest publish time for the product (Shopify stores only).
+  - name: first_seen
+    logicalType: date
+    physicalType: date
+    description: First weekly run that listed it.
+    required: true
+  - name: last_seen
+    logicalType: date
+    physicalType: date
+    description: Latest weekly run that listed it.
+    required: true
+  - name: weeks_listed
+    logicalType: integer
+    physicalType: bigint
+    description: Weekly runs that listed it.
+  - name: origin_country
+    logicalType: string
+    physicalType: varchar
+    description: Origin country, from the rules or Claude's extraction.
+  - name: origin_region
+    logicalType: string
+    physicalType: varchar
+    description: Origin region.
+  - name: process
+    logicalType: string
+    physicalType: varchar
+    description: washed, natural, honey, anaerobic or other.
+  - name: varietals
+    logicalType: array
+    physicalType: varchar[]
+    description: Coffee varietals.
+    items:
+      logicalType: string
+  - name: elevation_masl_min
+    logicalType: integer
+    physicalType: integer
+    description: Lowest growing elevation, metres above sea level.
+  - name: elevation_masl_max
+    logicalType: integer
+    physicalType: integer
+    description: Highest growing elevation, metres above sea level.
+  - name: roast_level
+    logicalType: string
+    physicalType: varchar
+    description: light, medium or dark.
+  - name: tasting_notes
+    logicalType: array
+    physicalType: varchar[]
+    description: Tasting notes as the roaster words them.
+    items:
+      logicalType: string
+  - name: flavor_categories
+    logicalType: array
+    physicalType: varchar[]
+    description: Flavor-wheel categories of the tasting notes.
+    items:
+      logicalType: string
+  - name: is_blend
+    logicalType: boolean
+    physicalType: boolean
+    description: A blend of origins.
+  - name: is_decaf
+    logicalType: boolean
+    physicalType: boolean
+    description: Decaffeinated.
+  - name: min_price_usd
+    logicalType: number
+    physicalType: double
+    description: Cheapest listed bag, USD.
+  - name: price_per_100g
+    logicalType: number
+    physicalType: double
+    description: Cheapest available retail bag (150 g to 2.5 kg) per 100 g, USD.
+  - name: bag_sizes_g
+    logicalType: array
+    physicalType: integer[]
+    description: Bag sizes on offer, grams.
+    items:
+      logicalType: integer
+  - name: attributes_source
+    logicalType: string
+    physicalType: varchar
+    description: 'Where origin, process and notes came from: rules, or llm (Claude).'
+    enum:
+    - value: rules
+    - value: llm
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
+  quality:
+  - type: custom
+    engine: dbt
+    implementation: tests/catalog_volume_vs_last_build.sql
+    dimension: consistency
+    severity: error
+    description: Listed coffees, in-stock coffees and roasters move at most volume_tolerance from the last passing
+      release.
+  - type: custom
+    engine: dbt
+    implementation: tests/run_is_complete.sql
+    dimension: completeness
+    severity: error
+    description: Every roaster the weekly run should have tried has an attempt (share >= min_attempted_share).
+  - type: custom
+    engine: dbt
+    implementation: tests/run_ok_rate.sql
+    dimension: completeness
+    severity: error
+    description: At least min_ok_share of expected roasters fetched successfully.
+  - type: custom
+    engine: dbt
+    implementation: tests/latest_run_is_fresh.sql
+    dimension: timeliness
+    severity: error
+    description: The newest counted run is at most max_run_age_days old.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_are_facts_only.sql
+    dimension: conformity
+    severity: error
+    description: No descriptions, images, store handles or personal data in any public table.
+- name: public_roaster
+  physicalName: public_roaster
+  physicalType: table
+  description: One row per roaster in the registry.
+  properties:
+  - name: roaster_id
+    logicalType: string
+    physicalType: varchar
+    description: The roaster's normalized domain.
+    primaryKey: true
+    primaryKeyPosition: 1
+    unique: true
+    required: true
+  - name: roaster_name
+    logicalType: string
+    physicalType: varchar
+    description: Roaster name.
+  - name: city
+    logicalType: string
+    physicalType: varchar
+    description: City.
+  - name: state
+    logicalType: string
+    physicalType: varchar
+    description: US state code.
+  - name: platform
+    logicalType: string
+    physicalType: varchar
+    description: Store platform (shopify, woocommerce, squarespace, square_online, generic).
+  - name: status
+    logicalType: string
+    physicalType: varchar
+    description: Derived from probe and fetch history.
+    enum:
+    - value: opted_out
+    - value: unreachable
+    - value: pending
+    - value: active
+    - value: no_coffee
+    - value: no_catalog
+  - name: coffees_listed
+    logicalType: integer
+    physicalType: bigint
+    description: Coffees in its current catalog (listed, not archived).
+  - name: coffees_in_stock
+    logicalType: integer
+    physicalType: bigint
+    description: Coffees in stock.
+  - name: last_ok_run
+    logicalType: date
+    physicalType: date
+    description: Latest weekly run with a successful catalog fetch.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
+- name: public_price_event
+  physicalName: public_price_event
+  physicalType: table
+  description: Price, availability and listing changes between consecutive successful weekly fetches, per bag size.
+  properties:
+  - name: run_date
+    logicalType: date
+    physicalType: date
+    description: Weekly run in which the change was seen.
+    primaryKey: true
+    primaryKeyPosition: 3
+    required: true
+  - name: coffee_id
+    logicalType: string
+    physicalType: varchar
+    description: The coffee (public_coffee.coffee_id).
+    primaryKey: true
+    primaryKeyPosition: 1
+    required: true
+  - name: roaster_id
+    logicalType: string
+    physicalType: varchar
+    description: The roaster.
+    required: true
+  - name: variant_id
+    logicalType: string
+    physicalType: varchar
+    description: >-
+      The store's own id for one bag size of the coffee (its Shopify or WooCommerce "variant" id), so price changes
+      to the 10 oz and the 2 lb bag are told apart. A store fact, not personal data.
+    primaryKey: true
+    primaryKeyPosition: 2
+    required: true
+  - name: event
+    logicalType: string
+    physicalType: varchar
+    description: new, relisted, price, availability or removed.
+    primaryKey: true
+    primaryKeyPosition: 4
+    required: true
+    enum:
+    - value: new
+    - value: relisted
+    - value: price
+    - value: availability
+    - value: removed
+  - name: price_usd
+    logicalType: number
+    physicalType: double
+    description: Price after the change, USD.
+  - name: previous_price_usd
+    logicalType: number
+    physicalType: double
+    description: Price before the change, USD.
+  - name: available
+    logicalType: boolean
+    physicalType: boolean
+    description: Availability after the change.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
+- name: public_market_weekly
+  physicalName: public_market_weekly
+  physicalType: table
+  description: 'The current catalog by origin and process: breadth and price spread.'
+  properties:
+  - name: as_of_run
+    logicalType: date
+    physicalType: date
+    description: Weekly run the summary describes.
+    required: true
+  - name: origin_country
+    logicalType: string
+    physicalType: varchar
+    description: Origin country.
+    primaryKey: true
+    primaryKeyPosition: 1
+    required: true
+  - name: process
+    logicalType: string
+    physicalType: varchar
+    description: Process, or unknown.
+    primaryKey: true
+    primaryKeyPosition: 2
+    required: true
+  - name: coffees
+    logicalType: integer
+    physicalType: bigint
+    description: Coffees in the current catalog (single origins, not archived).
+    required: true
+  - name: roasters
+    logicalType: integer
+    physicalType: bigint
+    description: Roasters offering them.
+  - name: in_stock
+    logicalType: integer
+    physicalType: bigint
+    description: Of which in stock.
+  - name: median_price_per_100g
+    logicalType: number
+    physicalType: double
+    description: Median price per 100 g, USD.
+  - name: p10_price_per_100g
+    logicalType: number
+    physicalType: double
+    description: 10th percentile price per 100 g, USD.
+  - name: p90_price_per_100g
+    logicalType: number
+    physicalType: double
+    description: 90th percentile price per 100 g, USD.
+  - name: release_build_id
+    logicalType: string
+    physicalType: varchar
+    description: The build that produced this row (coffeedata build-diff and rollback refer to it).
+  - name: release_run_date
+    logicalType: date
+    physicalType: date
+    description: The weekly run that build checked; every row of a release has the same value.
+slaProperties:
+- property: frequency
+  value: 7
+  unit: d
+  description: A weekly run (Mondays).
+- property: latency
+  value: 8
+  unit: d
+  description: Served data comes from a run at most this old (max_run_age_days).
+- property: retention
+  value: 4
+  unit: w
+  description: 'Rollback window: the last 4 weekly releases can be served again (coffeedata rollback).'
+customProperties:
+- property: volume_tolerance
+  value: 0.2
+- property: min_attempted_share
+  value: 1.0
+- property: min_ok_share
+  value: 0.9
+- property: max_run_age_days
+  value: 8
+- property: servingPolicy
+  value: A release is served only when every quality rule passes; otherwise the previous release stays served.
+support:
+- channel: issues
+  url: https://github.com/jtouley/coffee-data-tracker/issues
+  description: Questions and data issues

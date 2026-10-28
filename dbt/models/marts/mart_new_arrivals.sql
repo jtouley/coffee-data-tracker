@@ -2,9 +2,10 @@
 -- published since that run (or doesn't say when). A product we only now see because we fetch more of a catalog
 -- (Onyx's back catalog after the pagination fix) is new to us, not a new arrival.
 select c.coffee_id, c.roaster_name, c.title, c.origin_country, c.process, c.tasting_notes, c.price_per_100g,
-       c.min_price_usd, c.url, c.first_seen
+       c.min_price_usd, c.url, c.first_seen, {{ release_columns() }}
 from {{ ref('dim_coffee') }} c
 join {{ ref('stg_runs') }} r on r.roaster_id = c.roaster_id and r.is_latest_run
 where c.in_stock and c.first_seen = r.run_date and r.prev_run is not null
-  and (c.published_at is null or c.published_at >= r.prev_run)
+  -- prev_run is a date: midnight UTC, stated explicitly so the session's time zone can't move the cutoff
+  and (c.published_at is null or c.published_at >= (r.prev_run::timestamp at time zone 'UTC'))
 order by c.first_seen desc, c.roaster_name, c.title

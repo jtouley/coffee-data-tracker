@@ -32,4 +32,4 @@ events as (
     join {{ ref('stg_runs') }} r on r.roaster_id = j.roaster_id and r.run_date = j.next_run
     where j.next_run is not null and (j.next_obs_run is null or j.next_obs_run > j.next_run)
 )
-select * from events where event is not null
+select *, {{ release_columns() }} from events where event is not null

@@ -89,3 +89,22 @@ async def test_tools_over_mcp_protocol(lake, tmp_path, monkeypatch):
             assert r.is_error or "topsecret" not in r.content[0].text
         r = await client.call_tool("run_sql", {"sql": f"select content from read_text('{secret}')"})
         assert r.is_error
+
+
+@pytest.mark.parametrize(
+    "with_status", [True, False], ids=["current export", "export from before catalog_status"]
+)
+def test_search_labels_the_back_catalog(lake, with_status):
+    import duckdb
+
+    status = ", 'archived' as catalog_status" if with_status else ""
+    con = duckdb.connect()
+    con.execute(f"""create table dim_coffee as select 'onyxcoffeelab.com:9' as coffee_id, 'Onyx Coffee Lab' as roaster_name,
+                    'Kenya Kamavindi' as title, 'u' as url, 'Kenya' as origin_country, 'washed' as process,
+                    ['plum'] as tasting_notes, false as in_stock, true as is_listed, null::double as price_per_100g,
+                    'onyxcoffeelab.com' as roaster_id{status}""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from dim_coffee")
+    search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
+    [row] = search(in_stock_only=False)
+    assert row["catalog_status"] == ("archived" if with_status else None)
+    assert search() == []  # in stock only, by default

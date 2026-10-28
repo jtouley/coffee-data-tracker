@@ -17,8 +17,26 @@ it automatically.
 | Databricks (via S3) | `s3://<bucket>/coffee-data/` | AWS credentials (env, profile or role) |
 | … via GCS | `gs://<bucket>/coffee-data/` | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` |
 
-Snowflake loads straight from the weekly job:
-- The job uploads the export to an internal stage, one folder per run, never overwritten.
+Snowflake loads straight from the weekly job, in its own step after the site is built (so a Snowflake problem
+never holds the site back):
+- The job uploads the export of the served release to an internal stage, one folder per run, never overwritten.
+- It checks every table's and share view's columns against the export before loading any. If the public
+  contract changed (`contracts/public-catalog.odcs.yaml`, a new major version), it loads nothing and the step
+  fails. **Every scheduled run then stays red on this step until someone migrates**; the site and the Hugging
+  Face export still publish meanwhile. To migrate, run the weekly workflow by hand with only `snowflake_migrate`
+  checked: that doesn't crawl, it re-exports the served release (`coffeedata rollback --to served`) and runs
+  `coffeedata load-snowflake --migrate`. Locally: `coffeedata rollback --to served`, then
+  `coffeedata load-snowflake --migrate`.
+- A migration first checks, before changing anything, that the loader's role (COFFEE_LOADER) owns the share
+  views, from the views' own grants (`show grants on view`, which needs no account privilege). It uploads the
+  files, drops and reloads the changed tables, then recreates every share view with `copy grants`, so each
+  stays in the share (`SNOWFLAKE_SHARE`, default `COFFEE_DATA_SHARE`). Only a view missing from the share is
+  granted, first, and that one grant needs the share's owner. A migration that fails partway is finished by running it again; until then the weekly
+  load refuses to run.
+- Migrate as COFFEE_LOADER, not ACCOUNTADMIN: a role that recreates a table or view owns it afterwards, and the
+  weekly load and later migrations, run as COFFEE_LOADER, would then fail. If that happened, give each one back
+  as ACCOUNTADMIN with `grant ownership on view coffee_data.share.<view> to role coffee_loader copy current
+  grants` (and `grant ownership on table coffee_data.market.<table> to role coffee_loader copy current grants`).
 - It replaces each table in one transaction.
 - It fails if the row counts differ from the export.
 

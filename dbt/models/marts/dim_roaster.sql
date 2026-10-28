@@ -44,7 +44,8 @@ select
         else 'no_catalog'
     end as status,
     coalesce(c.coffees_listed, 0) as coffees_listed, coalesce(c.coffees_in_stock, 0) as coffees_in_stock,
-    coalesce(c.coffees_archived, 0) as coffees_archived
+    coalesce(c.coffees_archived, 0) as coffees_archived,
+    {{ release_columns() }}
 from {{ ref('stg_registry') }} r
 left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)

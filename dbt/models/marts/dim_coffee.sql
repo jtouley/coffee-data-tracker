@@ -89,7 +89,8 @@ select
         else 'sold_out'
     end as catalog_status,
     l.published_at,
-    p.min_price_usd, p.price_per_100g, p.bag_sizes_g
+    p.min_price_usd, p.price_per_100g, p.bag_sizes_g,
+    {{ release_columns() }}
 from latest l
 join seen s using (coffee_id)
 join attrs a using (coffee_id)
