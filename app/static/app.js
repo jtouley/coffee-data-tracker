@@ -431,10 +431,10 @@ function logShot(form) {
     o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
     o("time").textContent = `${b.time_s ?? "–"}`;
     o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder} · rated ${b.rating}`;
-    // The same tag as Saved: what was tasted, so it doesn't read as a verdict on the numbers.
+    // The same tag as Saved.
     const tag = o("taste");
     tag.className = `taste ${b.taste || "none"}`;
-    tag.textContent = b.taste ? `Tasted ${b.taste}` : "No taste noted";
+    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)}` : "No taste";
     form.hidden = true;
     for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
     view.hidden = false;
@@ -541,7 +541,7 @@ function roastCheck(form, save, label) {
   const days = Math.round((today - new Date(`${v}T12:00:00`)) / 86400000);
   if (days < 0) return "That roast date is in the future. Check the year.";
   if (days > 90 && save.textContent === label) {
-    save.textContent = `Roasted ${days} days ago? Save anyway`;
+    save.textContent = `Save with day ${days}?`; // like "Save with 29 s?" on Log shot
     return " "; // not an error: the button asks
   }
   return "";
@@ -588,7 +588,7 @@ function bagEdit(form) {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);
       go(form.dataset.next, `Bag saved: ${coffee}`);
     } catch (err) {
-      if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It syncs when you’re back online.`);
+      if (!(err instanceof Rejected)) return go(form.dataset.next, OFFLINE);
       hint(form, err.message);
       save.disabled = false;
     }
@@ -627,7 +627,7 @@ function newBag(root) {
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
       // bag on it, so it isn't where to go until this one syncs.
-      if (!(err instanceof Rejected)) return go("/", `Bag saved on this phone: ${name}. It syncs when you’re back online.`);
+      if (!(err instanceof Rejected)) return go("/", OFFLINE);
       hint(where, why(err));
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
@@ -831,7 +831,7 @@ function equipment(form) {
       go(next, `${body.name} ${did}`);
     } catch (err) {
       if (err instanceof Rejected) return hint(form, why(err));
-      go(next, `${body.name} ${did} on this phone. It syncs when you’re back online.`);
+      go(next, OFFLINE);
     }
   }
   form.addEventListener("submit", (e) => {

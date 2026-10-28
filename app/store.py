@@ -438,7 +438,7 @@ class Store:
         bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         # A day's grace: the phone's date can be ahead of the server's.
         if bag.roast_date and bag.roast_date > date.today() + timedelta(days=1):
-            raise Invalid("The roast date is in the future. Check the year.")
+            raise Invalid("That roast date is in the future. Check the year.")
         prev = self._owned(self.bags, bag.bag_id, user_id)
         same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
         if prev and same_text and not bag.coffee_id:

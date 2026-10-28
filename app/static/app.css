@@ -324,10 +324,9 @@ details.disclose[open] [data-more-summary] { display: none; }
   transform-origin: left; animation: undo 5s linear forwards; }
 @keyframes undo { to { transform: scaleX(0); } }
 /* Notice: what the last save did, on the screen it landed on ("Bag saved", "Saved on this phone"). The same
-   quiet sheet as the undo strip, with the accent dot the active tab carries. */
-.notice { display: flex; align-items: center; gap: 12px; background: var(--panel); color: var(--ink); border-radius: 8px;
+   quiet strip as Undo; static, so no accent. */
+.notice { display: flex; align-items: center; background: var(--panel); color: var(--ink); border-radius: 8px;
   padding: 12px 16px; min-height: 48px; font-size: 0.9375rem; margin: 8px 0; }
-.notice::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation-duration: 0s !important; } }
 .bagrow .meta { display: block; }

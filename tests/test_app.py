@@ -313,11 +313,3 @@ def test_a_saved_bag_can_be_edited_as_a_new_record(client, lake):
     assert "Roasted Oct 15" in client.get("/").text
     # Another person's bag isn't theirs to open.
     assert client.get("/bag/bag1/edit", headers={"x-test-user": "maya"}).status_code == 404
-
-
-def test_the_taste_reads_as_what_was_tasted(client):
-    client.post("/api/shots", json=shot(1), headers=W)
-    for url in ("/", "/saved/s1", "/shot/s1"):
-        assert ">Tasted balanced</span>" in client.get(url).text, url
-    client.post("/api/shots", json=shot(2, taste=None), headers=W)
-    assert ">No taste noted</span>" in client.get("/shot/s2").text

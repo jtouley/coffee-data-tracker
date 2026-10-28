@@ -249,7 +249,8 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_OWNER` | `owner` | The owner's display name in the app |
 | `HOST`, `PORT` | `127.0.0.1`, `8000` | Where `make app` listens |
 | `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only. The app's bag-label reading needs `ANTHROPIC_API_KEY` |
-| `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages |
+| `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages. The app links to the same `SITE_URL` and sends beta-invite requests to `SUPPORT_EMAIL` (set on Cloud Run by Terraform, `site_url` and `support_email`) |
+| `APP_URL` | `https://app.registry.coffee` | The app the site's Sign in links point to (a fork or a staging build) |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
 | `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, `weekly` loads Snowflake too |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
@@ -274,7 +275,7 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
    `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
-   and for the site the variables `SITE_URL`, `SUPPORT_EMAIL` and `GOVERNING_STATE`.
+   and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
 6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.

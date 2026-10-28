@@ -131,7 +131,7 @@ async function newPage(browser, errors) {
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
     assert.match(saved, /rated 5/);
-    assert.match(saved, /Tasted balanced/); // the taste entered, not a verdict on the shot
+    assert.match(saved, /Balanced/);
     await shoot(page, "saved");
 
     // Nothing left waiting in the outbox once the server has acknowledged the shot.
@@ -158,7 +158,7 @@ async function newPage(browser, errors) {
     assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");
     await page.fill("#roast_date", "2016-10-15");
     await page.getByRole("button", { name: "Save bag" }).click();
-    assert.match(await page.textContent("#bagedit [type=submit]"), /^Roasted \d{4} days ago\? Save anyway$/);
+    assert.match(await page.textContent("#bagedit [type=submit]"), /^Save with day \d{4}\?$/);
     assert.equal(new URL(page.url()).pathname, "/bag/bag1/edit");
     await page.fill("#roast_date", iso(-6));
     assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
@@ -326,7 +326,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Use this coffee" }).last().click();
     // Saved on the phone: on to Today, saying so, instead of waiting on the form.
     await page.waitForURL(`${base}/`);
-    assert.match(await page.textContent("[data-notice]"), /^Bag saved on this phone: the washed one\. It syncs when you’re back online\.$/);
+    assert.equal(await page.textContent("[data-notice]"), "Saved on this phone. It’ll sync when you’re back online.");
     await shoot(page, "bag-offline-saved");
     assert.equal(await outbox(), 3);
     await page.context().setOffline(false);
