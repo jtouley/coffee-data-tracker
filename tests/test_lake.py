@@ -3,7 +3,7 @@ from datetime import date
 
 import pytest
 
-from coffeedata.lake import LAKE_TABLES, SCHEMA_FILES, Lake
+from coffeedata.lake import LAKE_TABLES, SCHEMA_FILES, Lake, no_files
 
 
 def test_empty_lake_is_queryable(lake):
@@ -30,6 +30,34 @@ def test_remote_lake_reads_staging_and_remote(tmp_path, monkeypatch):
         str(tmp_path / "staging/shots/*.parquet"),
         "hf://datasets/someone/coffee/shots/*.parquet",
     ]
+
+
+def test_remote_table_without_a_folder_reads_from_staging(tmp_path, monkeypatch):
+    # The first Cloud Run deploy crashed here: the dataset had shots/ but no bags/ yet, and Hugging Face answers a
+    # listing of a missing folder with a 404 rather than DuckDB's "No files found".
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    real = Lake.connect
+
+    def connect(self, *a, **k):
+        con = real(Lake(str(tmp_path / "staging")), *a, **k)  # local DuckDB, no httpfs
+
+        class Con:
+            def execute(self, sql, *args):
+                if "hf://" in sql:
+                    raise OSError(
+                        "HTTP Error: HTTP GET error listing 'https://huggingface.co/api/datasets/someone/coffee/"
+                        "tree/main/bags' (HTTP 404 Not Found)"
+                    )
+                return con.execute(sql, *args)
+
+        return Con()
+
+    monkeypatch.setattr(Lake, "connect", connect)
+    assert lake.latest("bags", "bag_id") == []
+    assert not no_files(
+        OSError("HTTP Error: HTTP GET error on 'https://huggingface.co/x' (HTTP 401 Unauthorized)")
+    )
 
 
 def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypatch):
