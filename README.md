@@ -251,7 +251,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `ANTHROPIC_API_KEY` or `ANTHROPIC_AUTH_TOKEN` | none | Claude enrichment. Without it, attributes come from the rules only. The app's bag-label reading needs `ANTHROPIC_API_KEY` |
 | `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
-| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, `weekly` loads Snowflake too |
+| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the weekly workflow loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change) |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |

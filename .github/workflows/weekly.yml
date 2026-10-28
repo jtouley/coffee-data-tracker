@@ -12,6 +12,10 @@ on:
       rollback_to:
         description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff)"
         required: false
+      snowflake_migrate:
+        description: "After a public contract change: recreate the changed Snowflake tables and share views"
+        type: boolean
+        default: false
       accept_volume_change:
         description: "Let this run through the catalog volume check (after reviewing `coffeedata build-diff`)"
         type: boolean
@@ -26,6 +30,10 @@ jobs:
   run:
     runs-on: ubuntu-latest
     timeout-minutes: 240
+    # The site deploys whenever this job built it, even if a later step (Snowflake) fails; a run whose release
+    # failed its checks builds no site, so the served one stays up.
+    outputs:
+      site: ${{ steps.site.outputs.built }}
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
@@ -64,10 +72,21 @@ jobs:
           else
             uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
           fi
+      - name: Site built
+        id: site
+        run: test -f build/site/index.html && echo "built=true" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa  # v3.0.1
         with: {path: build/site}
+      # Last, so a Snowflake problem (a contract change needing --migrate) turns the run red without holding back
+      # the site. It loads the export of the served release that the weekly run just wrote to build/public.
+      - name: Load Snowflake
+        if: env.SNOWFLAKE_ACCOUNT != ''
+        env:
+          MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
+        run: uv run coffeedata load-snowflake ${MIGRATE:+--migrate}
   deploy:
     needs: run
+    if: ${{ !cancelled() && needs.run.outputs.site == 'true' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write

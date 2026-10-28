@@ -116,11 +116,32 @@ def test_missing_credentials_is_a_clear_error(monkeypatch):
         snowflake_load.connect()
 
 
-def test_a_changed_public_contract_stops_the_load_instead_of_loading_nulls(tmp_path):
+def test_a_changed_public_contract_loads_nothing_until_migrated(tmp_path):
     counts = {t: 1 for t in PUBLIC_TABLES}
-    con = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "BAG_ID"]})  # loaded before the rename
-    with pytest.raises(RuntimeError, match="contract changed"):
+    old = {
+        "public_price_event": ["COFFEE_ID", "BAG_ID"]
+    }  # loaded before the rename; the others are new tables
+    con = FakeConn(counts, columns=old)
+    with pytest.raises(RuntimeError, match="contract changed. Nothing was loaded"):
         snowflake_load.load(export_dir(tmp_path, counts), con)
-    assert not any(s.startswith("copy into MARKET.public_coffee") for s in con.cur.sql)
-    ok = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "VARIANT_ID"]})  # same columns: loads
-    assert snowflake_load.load(export_dir(tmp_path, counts), ok)["tables"] == counts
+    # All tables are checked first: none was truncated or copied, so Snowflake isn't left half on the new export.
+    assert not any(s.startswith(("truncate", "copy into")) for s in con.cur.sql)
+
+    con = FakeConn(counts, columns=old)
+    assert snowflake_load.load(export_dir(tmp_path, counts), con, migrate=True)["tables"] == counts
+    sql = con.cur.sql
+    assert "drop table if exists MARKET.public_price_event" in sql
+    assert not any(s.startswith("drop table") and "public_coffee" in s for s in sql)  # unchanged tables stay
+    i = sql.index(
+        "create or replace secure view SHARE.price_event as select * from MARKET.public_price_event"
+    )
+    assert sql[i + 1] == "grant select on view SHARE.price_event to share COFFEE_DATA_SHARE"
+    first_put = next(n for n, s in enumerate(sql) if s.startswith("put "))
+    assert sql.index("drop table if exists MARKET.public_price_event") < first_put  # dropped before loading
+
+
+def test_same_columns_load_as_usual(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    con = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "VARIANT_ID"]})
+    assert snowflake_load.load(export_dir(tmp_path, counts), con)["tables"] == counts
+    assert not any(s.startswith(("drop table", "create or replace secure view")) for s in con.cur.sql)

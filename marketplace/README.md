@@ -17,8 +17,14 @@ it automatically.
 | Databricks (via S3) | `s3://<bucket>/coffee-data/` | AWS credentials (env, profile or role) |
 | … via GCS | `gs://<bucket>/coffee-data/` | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` |
 
-Snowflake loads straight from the weekly job:
-- The job uploads the export to an internal stage, one folder per run, never overwritten.
+Snowflake loads straight from the weekly job, in its own step after the site is built (so a Snowflake problem
+never holds the site back):
+- The job uploads the export of the served release to an internal stage, one folder per run, never overwritten.
+- It checks every table's columns against the export before loading any. If the public contract changed
+  (`contracts/public-catalog.odcs.yaml`, a new major version), it loads nothing and the step fails. Run the
+  weekly workflow with `snowflake_migrate` (or `coffeedata load-snowflake --migrate`): it drops the changed
+  tables, loads them fresh, and recreates and re-grants their share views, since a `select *` secure view keeps
+  the columns it was created with.
 - It replaces each table in one transaction.
 - It fails if the row counts differ from the export.
 

@@ -20,6 +20,13 @@ from .public import PUBLIC_TABLES
 
 SCHEMA = "MARKET"
 STAGE = "PUBLIC_EXPORT"
+# The share's secure views over the loaded tables (marketplace/snowflake/admin_setup.sql, part 2).
+SHARE_VIEWS = {
+    "public_coffee": "coffee",
+    "public_price_event": "price_event",
+    "public_market_weekly": "market_weekly",
+    "public_roaster": "roaster",
+}
 
 
 def private_key_der(value: str) -> bytes:
@@ -60,9 +67,10 @@ def connect():
     )
 
 
-def _check_columns(cur, table: str, parquet: Path) -> None:
+def _columns_differ(cur, table: str, parquet: Path) -> bool:
     """COPY ... match_by_column_name silently loads NULL into a column the file no longer has, so a table whose
-    columns differ from the export (a renamed public column, a new contract version) stops the load instead."""
+    columns differ from the export (a renamed public column, a new contract version) must not be loaded as is.
+    A table that doesn't exist yet doesn't differ: the load creates it."""
     import pyarrow.parquet as pq
 
     want = sorted(c.upper() for c in pq.read_schema(parquet).names)
@@ -73,11 +81,7 @@ def _check_columns(cur, table: str, parquet: Path) -> None:
             f"where table_schema = '{SCHEMA}' and table_name = '{table.upper()}'"
         ).fetchall()
     )
-    if have and have != want:
-        raise RuntimeError(
-            f"{SCHEMA}.{table} has columns {have} but the export has {want}: the public contract changed. "
-            f"Drop {SCHEMA}.{table} (and re-grant its views) and load again; it is rebuilt from the export."
-        )
+    return bool(have) and have != want
 
 
 def statements(table: str, run_path: str) -> list[str]:
@@ -94,7 +98,10 @@ def statements(table: str, run_path: str) -> list[str]:
     ]
 
 
-def load(export_dir: Path, con=None) -> dict:
+def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
+    """Load one export. If any table's columns differ from the export (a new public contract version), nothing is
+    loaded unless `migrate`: then those tables are dropped, recreated from the export, and their share views are
+    recreated and re-granted, since a `select *` secure view keeps the columns it was created with."""
     manifest = json.loads((export_dir / "manifest.json").read_text())
     exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
     run_path = f"run={manifest['as_of_run']}/exported={exported}"
@@ -107,6 +114,16 @@ def load(export_dir: Path, con=None) -> dict:
             f"create stage if not exists {SCHEMA}.{STAGE} file_format = {SCHEMA}.PARQUET_FF "
             "comment = 'Weekly facts-only exports, one folder per run'"
         )
+        # Every table is checked before any is loaded, so a mismatch never leaves Snowflake half on the new export.
+        changed = [t for t in PUBLIC_TABLES if _columns_differ(cur, t, export_dir / f"{t}.parquet")]
+        if changed and not migrate:
+            raise RuntimeError(
+                f"{', '.join(changed)} in Snowflake have different columns from the export: the public contract "
+                "changed. Nothing was loaded. Run `coffeedata load-snowflake --migrate` to recreate those tables "
+                "and their share views."
+            )
+        for table in changed:
+            cur.execute(f"drop table if exists {SCHEMA}.{table}")
         for table in PUBLIC_TABLES:
             f = (export_dir / f"{table}.parquet").resolve()
             cur.execute(
@@ -114,10 +131,14 @@ def load(export_dir: Path, con=None) -> dict:
             )
         counts = {}
         for table in PUBLIC_TABLES:
-            _check_columns(cur, table, export_dir / f"{table}.parquet")
             for sql in statements(table, run_path):
                 cur.execute(sql)
             counts[table] = cur.execute(f"select count(*) from {SCHEMA}.{table}").fetchone()[0]
+        share = os.environ.get("SNOWFLAKE_SHARE", "COFFEE_DATA_SHARE")
+        for table in changed:
+            view = f"SHARE.{SHARE_VIEWS[table]}"
+            cur.execute(f"create or replace secure view {view} as select * from {SCHEMA}.{table}")
+            cur.execute(f"grant select on view {view} to share {share}")
     finally:
         cur.close()
         con.close()

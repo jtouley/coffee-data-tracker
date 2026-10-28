@@ -2,10 +2,11 @@
 -- volume_tolerance from the release customers get now (var baseline_build; after a rollback that is not the newest
 -- passing build), or else the last build whose tests all passed. The first build has nothing to compare with.
 with b as (select * from {{ lake('builds') }} where build_id is not null),
+-- A passing build, as quality.builds() defines it: a 'pass' verdict and no failed or errored node.
 passing as (
     select build_id, max(built_at) as built_at
     from b group by build_id
-    having not bool_or(coalesce(status, '') in ('error', 'fail'))
+    having bool_or(kind = 'build' and status = 'pass') and not bool_or(coalesce(status, '') in ('error', 'fail'))
 ),
 last_build as (
     {% if var('baseline_build') %}

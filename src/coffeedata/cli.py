@@ -220,7 +220,8 @@ def cmd_build(args: argparse.Namespace) -> bool:
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
     passed, results = dbt_build(lake, db, extra)
-    quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id)
+    # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
+    passed = quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id)
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
     if not passed:
         print(
@@ -266,8 +267,8 @@ def _export_and_site(db: Path, out: str) -> None:
     cmd_export_public(argparse.Namespace(db=str(db), to="build/public"))
     if os.environ.get("PUBLIC_EXPORT_URL") and os.environ["PUBLIC_EXPORT_URL"] != "build/public":
         cmd_export_public(argparse.Namespace(db=str(db), to=os.environ["PUBLIC_EXPORT_URL"]))
-    if os.environ.get("SNOWFLAKE_ACCOUNT"):
-        cmd_load_snowflake(argparse.Namespace(source="build/public"))
+    # Snowflake is loaded by its own workflow step after the site is built, so a Snowflake problem (such as a
+    # contract change that needs `load-snowflake --migrate`) never holds back the site.
     cmd_site(argparse.Namespace(db=str(db), out=out))
 
 
@@ -304,7 +305,7 @@ def cmd_export_public(args: argparse.Namespace) -> None:
 def cmd_load_snowflake(args: argparse.Namespace) -> None:
     from . import snowflake_load
 
-    _print(snowflake_load.load(Path(args.source)))
+    _print(snowflake_load.load(Path(args.source), migrate=getattr(args, "migrate", False)))
 
 
 def cmd_weekly(args: argparse.Namespace) -> None:
@@ -531,13 +532,20 @@ def main(argv: list[str] | None = None) -> None:
     ep = add(
         "export-public", cmd_export_public, "export the facts-only public tables (dir, hf://, s3://, gs://)"
     )
-    ep.add_argument("--db", default="build/coffee.duckdb")
+    ep.add_argument(
+        "--db", default=str(SERVED_DB), help="default: the served release, never an unchecked build"
+    )
     ep.add_argument("--to", default=os.environ.get("PUBLIC_EXPORT_URL", "build/public"))
 
     sf = add(
         "load-snowflake", cmd_load_snowflake, "load an export-public folder into Snowflake (internal stage)"
     )
     sf.add_argument("--from", dest="source", default="build/public")
+    sf.add_argument(
+        "--migrate",
+        action="store_true",
+        help="after a public contract change: recreate changed tables and their share views, then load",
+    )
 
     w = add("weekly", cmd_weekly, "the full weekly run")
     w.add_argument("--run-date", type=_run_date, default=_today())
@@ -564,7 +572,9 @@ def main(argv: list[str] | None = None) -> None:
     ar.add_argument("--file", help="issue body file; default stdin")
 
     st = add("site", cmd_site, "build the static site")
-    st.add_argument("--db", default="build/coffee.duckdb")
+    st.add_argument(
+        "--db", default=str(SERVED_DB), help="default: the served release, never an unchecked build"
+    )
     st.add_argument("--out", default="build/site")
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
