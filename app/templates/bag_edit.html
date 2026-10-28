@@ -11,8 +11,7 @@
     <input class="input" id="roast_date" name="roast_date" type="date" max="{{ now.date().isoformat() }}" value="{{ bag.roast_date.isoformat() if bag.roast_date else '' }}" data-empty-class>
     <label class="flabel" for="weight_g">Weight in grams (optional)</label>
     <input class="input" id="weight_g" name="weight_g" inputmode="numeric" autocomplete="off" value="{{ bag.weight_g or '' }}">
-    <div class="flabel" id="done-l">Finished</div>
-    <div class="seg two" role="group" aria-labelledby="done-l" data-finished>
+    <div class="seg two mt24" role="group" aria-label="This bag" data-finished>
       <button type="button" data-v="false" aria-pressed="{{ 'false' if bag.finished_on else 'true' }}">Still using it</button><button type="button" data-v="true" aria-pressed="{{ 'true' if bag.finished_on else 'false' }}">Finished</button>
     </div>
     <div class="hint" data-hint role="status"></div>

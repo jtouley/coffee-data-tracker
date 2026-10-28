@@ -38,6 +38,12 @@ async function shoot(page, name) {
   await page.emulateMedia({ colorScheme: "light" });
 }
 
+// The notice appears empty and fills a moment later (so screen readers announce it): wait for its words.
+async function noticeOf(page) {
+  await page.waitForFunction(() => document.querySelector("[data-notice]")?.textContent);
+  return page.textContent("[data-notice]");
+}
+
 async function newPage(browser, errors) {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
   page.on("pageerror", (e) => errors.push(e.message));
@@ -146,7 +152,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Undo" }).click();
     await page.waitForURL(`${base}/`);
     assert.match(await page.textContent("main"), /Last shot.*\n?.*29/s);
-    assert.equal(await page.textContent("[data-notice]"), "Shot undone");
+    assert.equal(await noticeOf(page), "Shot undone");
     // A bag can be changed after it's saved, from Today's "On the grinder": a roast date in the future isn't
     // saved, one with the wrong year asks again, and the change lands back on Today, saying so.
     const iso = (days) => new Date(Date.now() + days * 86400000).toISOString().slice(0, 10);
@@ -164,7 +170,7 @@ async function newPage(browser, errors) {
     assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
     await page.getByRole("button", { name: "Save bag" }).click();
     await page.waitForURL(`${base}/`);
-    assert.equal(await page.textContent("[data-notice]"), "Bag saved: Hambela Alaka");
+    assert.equal(await noticeOf(page), "Bag saved: Hambela Alaka");
     assert.match(await page.textContent("main"), /Roasted \w{3} \d+ · day 6 ·/);
     // Back from Today doesn't reopen Saved or the form: the save replaced them in history.
     await page.goBack();
@@ -207,7 +213,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Save correction" }).click();
     await page.waitForURL(`${base}/shot/first`);
     assert.match(await page.textContent("main"), /puck was wet/);
-    assert.equal(await page.textContent("[data-notice]"), "Correction saved");
+    assert.equal(await noticeOf(page), "Correction saved");
     // Retract goes at once and offers Undo; Undo brings the shot back.
     await page.getByRole("button", { name: "Retract" }).click();
     await page.waitForSelector("[data-restore]:not([hidden])");
@@ -242,7 +248,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Save correction" }).click();
     await page.waitForURL(`${base}/shot/first?from=today`);
     assert.equal(await page.textContent("a.back"), "‹ Today");
-    assert.equal(await page.textContent("[data-notice]"), "Correction saved");
+    assert.equal(await noticeOf(page), "Correction saved");
     // Correcting with the time cleared falls back to that shot's own time (27 s), not the bag's latest (#18-1).
     await page.goto(`${base}/log?correct=dial3`);
     await page.fill("#time_s", "");
@@ -272,7 +278,7 @@ async function newPage(browser, errors) {
     // Saving returns to Setup, saying so; Back from there doesn't land on the form again.
     await page.getByRole("button", { name: "Save", exact: true }).click();
     await page.waitForURL(`${base}/setup`);
-    assert.equal(await page.textContent("[data-notice]"), "DF64 V2 saved");
+    assert.equal(await noticeOf(page), "DF64 V2 saved");
     await shoot(page, "gear-saved");
     // Equipment added from the gear picker on Log shot goes back to the picker.
     await page.goto(`${base}/log`);
@@ -287,7 +293,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Only if I pick it" }).click(); // the shots below stay on the Pullman
     await page.getByRole("button", { name: "Add basket" }).click();
     await page.waitForURL(/\/log\/gear\?grinder=g1/);
-    assert.equal(await page.textContent("[data-notice]"), "VST 20 g added");
+    assert.equal(await noticeOf(page), "VST 20 g added");
     assert.match(await page.textContent("main"), /VST 20 g/);
     await page.goto(`${base}/log`);
     await page.getByRole("link", { name: /Grinder and basket/ }).click();
@@ -334,7 +340,7 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Use this coffee" }).last().click();
     // Saved on the phone: on to Today, saying so, instead of waiting on the form.
     await page.waitForURL(`${base}/`);
-    assert.equal(await page.textContent("[data-notice]"), "Saved on this phone. It’ll sync when you’re back online.");
+    assert.equal(await noticeOf(page), "Bag saved on this phone: the washed one. It’ll sync when you’re back online.");
     await shoot(page, "bag-offline-saved");
     assert.equal(await outbox(), 3);
     await page.context().setOffline(false);

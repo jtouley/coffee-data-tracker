@@ -353,14 +353,23 @@ Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never b
 
 #### Undo strip
 
-`--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
+`--panel`, radius 8, no border: "Shot saved" and an accent "Undo", with a thin line under Undo
 that shrinks over 5 s. Undo writes a retraction record.
+
+#### Edit bag
+
+An accent "Edit bag" text link (56 px tall, ending on the gutter) after the roast line on Today and on the coffee
+page. The form: roaster and coffee, roast date, weight, and "Still using it" / "Finished". Saving writes a new record
+under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. A roast date
+in the future isn't saved; one more than 90 days old asks "Save with day N?".
 
 #### Notice
 
 What the last save did, at the top of the screen it lands on: "Bag saved: Onyx Geometry", "DF64 V2 saved",
 "Correction saved", "Shot undone", "Password changed". `--panel`, radius 8, like the Undo strip; `role="status"`,
-so it's read out. A save queued offline says so: "Saved on this phone. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
+so it's read out (shown empty, then filled, so screen readers announce it). A save queued offline says so: "Saved on
+this phone. It’ll sync when you’re back online."; a bag names itself, since Today may still show the last one until
+it syncs: "Bag saved on this phone: Onyx Geometry. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
 
 Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
 on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.

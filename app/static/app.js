@@ -209,8 +209,11 @@ addEventListener("pageshow", (e) => { if (e.persisted && stale(true)) location.r
 function notify(text) {
   const el = document.querySelector("[data-notice]");
   if (!el) return;
-  el.textContent = text;
+  // Shown empty, then filled a moment later: a live region that appears with its text already in it (or changes
+  // as the page loads) is often not read out.
+  el.textContent = "";
   el.hidden = !text;
+  if (text) setTimeout(() => { el.textContent = text; }, 100);
 }
 
 // A button with data-confirm asks for a second tap within 4 s: the first shows the confirm text in place of its
@@ -590,7 +593,7 @@ function bagEdit(form) {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);
       go(form.dataset.next, `Bag saved: ${coffee}`);
     } catch (err) {
-      if (!(err instanceof Rejected)) return go(form.dataset.next, OFFLINE);
+      if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It’ll sync when you’re back online.`);
       hint(form, err.message);
       save.disabled = false;
     }
@@ -629,7 +632,7 @@ function newBag(root) {
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
       // bag on it, so it isn't where to go until this one syncs.
-      if (!(err instanceof Rejected)) return go("/", OFFLINE);
+      if (!(err instanceof Rejected)) return go("/", `Bag saved on this phone: ${name}. It’ll sync when you’re back online.`);
       hint(where, why(err));
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;

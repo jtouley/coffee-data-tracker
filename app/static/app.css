@@ -252,6 +252,7 @@ h2.group { margin: 32px 0 0; font: inherit; }
 h2.group .link { border-top: 1px solid var(--rule); }
 h2.group + .list .item:first-child { border-top: 0; }
 .ext.tap { display: inline-flex; align-items: center; min-height: 56px; padding: 0 8px; }
+.row > .ext.tap:last-child { margin-right: -8px; } /* the text ends on the gutter, like Synced and the taste tag */
 .body, .meta { text-wrap: pretty; }
 .thumb { width: 56px; height: 56px; border-radius: 6px; object-fit: cover; flex: none; background: var(--panel); }
 .bagrow { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 8px 0; border-bottom: 1px solid var(--rule); color: inherit; }
@@ -339,7 +340,7 @@ details.disclose[open] [data-more-summary] { display: none; }
 /* Notice: what the last save did, on the screen it landed on ("Bag saved", "Saved on this phone"). The same
    quiet strip as Undo; static, so no accent. */
 .notice { display: flex; align-items: center; background: var(--panel); color: var(--ink); border-radius: 8px;
-  padding: 12px 16px; min-height: 48px; font-size: 0.9375rem; margin: 8px 0; }
+  padding: 12px 16px; min-height: 48px; font-size: 0.9375rem; margin: 8px 0; text-wrap: pretty; }
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation-duration: 0s !important; } }
 .bagrow .meta { display: block; }
