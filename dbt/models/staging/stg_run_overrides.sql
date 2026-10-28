@@ -2,4 +2,7 @@
 select roaster_id, run_date, action, batch_id, reason, added_at
 from {{ lake('run_overrides') }}
 where roaster_id is not null
-qualify row_number() over (partition by roaster_id, run_date order by added_at desc) = 1
+-- add_override keeps added_at increasing per roaster-week; the rest only makes the pick deterministic.
+qualify row_number() over (
+    partition by roaster_id, run_date order by added_at desc, action, batch_id nulls last, reason
+) = 1

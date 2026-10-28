@@ -29,8 +29,9 @@ walk as (
     select roaster_id, rn, null::double as baseline_products, false as suspect, counted,
         case when counted then [products] else []::bigint[] end as history
     from (
-        select *, coalesce(override_action, '') <> 'reject'
-            and not coalesce(override_action = 'use_batch' and not pinned, false) as counted
+        -- A first week has no baseline, so it is never suspect: it counts unless rejected. (A use_batch whose
+        -- batch wasn't picked is no override, here as in later weeks.)
+        select *, coalesce(override_action, '') <> 'reject' as counted
         from seq where rn = 1
     )
     union all

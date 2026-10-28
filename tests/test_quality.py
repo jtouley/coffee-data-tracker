@@ -91,6 +91,7 @@ def test_overrides_accept_reject_and_pin_a_batch(lake, tmp_path):
 def _baseline(lake, listed: float):
     now = datetime(2026, 10, 20, tzinfo=UTC)
     lake.write("builds", "builds/run_date=2026-10-19/build=b1.parquet", [
+        {"build_id": "b1", "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
         {"build_id": "b1", "built_at": now, "kind": "node", "unique_id": "test.x", "status": "pass"},
         {"build_id": "b1", "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": listed},
     ])  # fmt: skip
@@ -109,6 +110,7 @@ def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
     _baseline(lake, 40.0)
     later = datetime(2026, 10, 27, tzinfo=UTC)
     lake.write("builds", "builds/run_date=2026-10-26/build=b2.parquet", [
+        {"build_id": "b2", "built_at": later, "kind": "build", "unique_id": "build", "status": "fail"},
         {"build_id": "b2", "built_at": later, "kind": "node", "unique_id": "test.y", "status": "fail"},
         {"build_id": "b2", "built_at": later, "kind": "metric", "unique_id": "listed_coffees", "value": 5.0},
     ])  # fmt: skip
@@ -316,6 +318,9 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert [(b, rid, u) for b, rid, u, *_ in env] == [(b, "77", url) for b in (b1, b2, b3)]
     for *_, dbt_version, versions, took in env:
         assert dbt_version and json.loads(versions)["dbt-core"] == dbt_version and took > 0
+    # 'served' serves the same release again (the Snowflake migration re-exports it without a crawl).
+    assert quality.rollback(Lake(), "served", "re-export for Snowflake migration") == b1
+    assert current.read_bytes() == first_release
     # The next build is compared with what customers get now (b1), not the newest passing build (b2).
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
     cli.cmd_build(args("2026-10-26"))
@@ -335,3 +340,119 @@ def test_a_crashed_dbt_step_is_not_recorded_with_old_results(monkeypatch, tmp_pa
     )  # crashes early
     passed, results = cli.dbt_build(Lake(str(tmp_path / "lake")), tmp_path / "c.duckdb")
     assert passed is False and results == [{}, {}] and not (tmp_path / "manifest.json").exists()
+
+
+def test_a_build_with_no_pass_verdict_is_never_a_baseline(lake, tmp_path):
+    # One definition of passing everywhere (quality.builds, build-diff, the volume check): a build needs its "pass"
+    # verdict row, so one whose record is incomplete never becomes the baseline.
+    run(lake, "2026-10-26", RID, FULL)
+    lake.write("builds", "builds/run_date=2026-10-19/build=b0.parquet", [
+        {"build_id": "b0", "built_at": datetime(2026, 10, 20, tzinfo=UTC), "kind": "metric",
+         "unique_id": "listed_coffees", "value": 400.0}])  # fmt: skip
+    build(lake, tmp_path)  # 40 vs 400 would fail; b0 has no verdict, so there is no baseline
+    assert [ok for _, _, ok in quality.builds(lake)] == [False]
+
+
+def test_volume_metrics_count_the_current_catalog(lake, tmp_path):
+    archived = [product(f"OLD{i}", available=False) | {"tags": ["Archived"]} for i in range(30)]
+    run(lake, "2026-10-26", RID, FULL[:10] + archived)
+    con = build(lake, tmp_path)
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert metrics["listed_coffees"] == 10  # a back catalog appearing isn't a swing in the market
+
+
+def test_a_first_week_use_batch_that_does_not_pin_is_no_override(lake, tmp_path):
+    run(lake, "2026-10-19", RID, FULL)
+    lake.write("run_overrides", "run_overrides/override_id=manual.parquet", [{
+        "added_at": datetime(2026, 10, 20, tzinfo=UTC), "roaster_id": RID, "run_date": date(2026, 10, 19),
+        "action": "use_batch", "batch_id": "no-such-batch", "reason": "typo"}])  # fmt: skip
+    con = build(lake, tmp_path)  # same as in later weeks: the week counts as if there were no override
+    assert con.execute("select counted from stg_run_quality").fetchone() == (True,)
+
+
+def test_overrides_given_in_the_same_second_resolve_in_order(lake, tmp_path):
+    run(lake, "2026-10-19", RID, FULL)
+    run(lake, "2026-10-26", RID, FULL[:12])  # suspect
+    quality.add_override(lake, RID, "2026-10-26", "reject", "first look: bad", None)
+    quality.add_override(lake, RID, "2026-10-26", "accept", "second look: real", None)
+    times = [
+        r[0]
+        for r in lake.connect()
+        .execute(
+            f"select added_at from {lake.scan('run_overrides')} where roaster_id is not null order by added_at"
+        )
+        .fetchall()
+    ]
+    assert len(times) == 2 and times[0] < times[1]
+    con = build(lake, tmp_path)
+    assert con.execute("select override_action, counted from stg_run_quality where run_date = '2026-10-26'"
+                       ).fetchone() == ("accept", True)  # fmt: skip
+
+
+def test_an_override_reaches_a_remote_lake(tmp_path, monkeypatch):
+    from huggingface_hub import HfApi
+
+    sent = []
+    monkeypatch.setattr(HfApi, "upload_file", lambda self, **kw: sent.append(kw))
+    remote = Lake("hf://datasets/someone/coffee", staging=tmp_path / "staging")
+    from coffeedata.lake import GLOBS
+
+    monkeypatch.setattr(remote, "sources", lambda table: [str(remote.root / GLOBS[table])])  # no network
+    path = quality.add_override(remote, RID, "2026-10-26", "reject", "bad scrape", None)
+    assert [s["path_in_repo"] for s in sent] == [path.relative_to(remote.root).as_posix()]
+    assert sent[0]["repo_id"] == "someone/coffee" and not path.exists()  # sent alone, not via a full publish
+
+
+def test_the_first_override_on_a_remote_lake_works_before_run_overrides_exists(tmp_path, monkeypatch):
+    """Until a publish uploads its schema file, the remote lake has no run_overrides/ folder at all."""
+    from huggingface_hub import HfApi
+
+    sent = []
+    monkeypatch.setattr(HfApi, "upload_file", lambda self, **kw: sent.append(kw))
+    remote = Lake("hf://datasets/someone/coffee", staging=tmp_path / "staging")
+    nowhere = str(tmp_path / "no-such-folder" / "*.parquet")  # stands in for the missing remote folder
+    monkeypatch.setattr(remote, "sources", lambda table: [nowhere])
+    path = quality.add_override(remote, RID, "2026-10-26", "reject", "bad scrape", None)
+    assert [s["path_in_repo"] for s in sent] == [path.relative_to(remote.root).as_posix()]
+
+
+def test_remote_releases_are_found_by_listing_only_the_releases_folder(monkeypatch):
+    from huggingface_hub import HfApi
+    from huggingface_hub.hf_api import RepoFile, RepoFolder
+
+    asked = []
+
+    def tree(self, repo_id, path_in_repo=None, recursive=False, repo_type=None):
+        asked.append(path_in_repo)
+        return [RepoFolder(path="releases/run_date=2026-10-26", oid="d"),
+                RepoFile(path="releases/run_date=2026-10-26/build=b1/dim_coffee.parquet", size=1, oid="x")]  # fmt: skip
+
+    monkeypatch.setattr(HfApi, "list_repo_tree", tree)
+    quality._remote_releases.cache_clear()
+    lake = Lake("hf://datasets/someone/coffee-x")
+    assert quality.release_files(lake, "b1") == {
+        "dim_coffee": "hf://datasets/someone/coffee-x/releases/run_date=2026-10-26/build=b1/dim_coffee.parquet"
+    }
+    assert asked == ["releases"]
+
+
+def test_a_release_that_could_not_be_written_in_full_is_recorded_as_failed(lake, tmp_path):
+    import duckdb
+
+    db = tmp_path / "partial.duckdb"
+    con = duckdb.connect(str(db))
+    con.execute("create table dim_coffee as select 1 as x")  # every other release table is missing
+    con.close()
+    assert quality.record_build(lake, db, "2026-10-26", tmp_path / "none.json", [{}, {}], True, "bx") is False
+    assert [ok for b, _, ok in quality.builds(lake) if b == "bx"] == [False]
+
+
+def test_export_and_site_default_to_the_served_release(monkeypatch):
+    from coffeedata import cli
+
+    seen = {}
+    monkeypatch.setattr(cli, "cmd_export_public", lambda a: seen.update({"export-public": a.db}))
+    monkeypatch.setattr(cli, "cmd_site", lambda a: seen.update({"site": a.db}))
+    cli.main(["export-public"])
+    cli.main(["site"])
+    assert seen == {"export-public": str(cli.SERVED_DB), "site": str(cli.SERVED_DB)}
