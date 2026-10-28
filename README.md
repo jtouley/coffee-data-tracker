@@ -271,7 +271,7 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Optionally add the secret `ANTHROPIC_API_KEY`; the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL` and `GOVERNING_STATE`.

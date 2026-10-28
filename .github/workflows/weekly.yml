@@ -22,7 +22,7 @@ jobs:
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      COFFEEDATA_ANTHROPIC_API_KEY: ${{ secrets.COFFEEDATA_ANTHROPIC_API_KEY }}
       COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}  # Claude model for coffee-or-not verdicts; unset = rules only
       # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
