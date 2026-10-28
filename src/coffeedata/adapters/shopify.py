@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 
 from ..http import FetchError, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text, to_float
 
 MAX_PAGES = 20
@@ -56,6 +56,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
         variants=variants,
         body_text=html_to_text(p.get("body_html")),
         published_at=_published_at(p.get("published_at")),
+        payload_hash=payload_hash(p),
     )
 
 
