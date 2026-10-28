@@ -6,6 +6,7 @@ rules don't exclude outright is shown to Claude with the same written definition
 (coffee_definition.md), and the answer is stored like any fetched fact. stg_products uses it when present, the rules
 otherwise, so a build stays a pure function of the lake.
 
+Model: claude-haiku-5-5, chosen as the cheapest model at or above 98% on the validation set (eval/validation/).
 Opt-in: nothing runs unless COFFEEDATA_VERDICT_MODEL names a model. Work is derived, not tracked: a product version
 is pending when it has no verdict for this model and definition and isn't in an open batch.
 """
