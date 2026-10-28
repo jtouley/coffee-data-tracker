@@ -36,8 +36,13 @@ class Blocked(FetchError):
 
 
 class RobotsUnavailable(FetchError, httpx.HTTPError):
-    """robots.txt didn't answer (429, 430, 5xx) after the client's retries, so nothing on that host is fetched for
-    ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one asks again."""
+    """robots.txt didn't answer (429, 430, 5xx, or a network error) after the client's retries, so nothing on that
+    host is fetched for ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one
+    asks again. unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt."""
+
+    def __init__(self, message: str, unreachable: bool = False) -> None:
+        super().__init__(message)
+        self.unreachable = unreachable
 
 
 class NotCatalog(FetchError):
@@ -67,6 +72,8 @@ class PoliteClient:
         )
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
         self._robots_down: dict[str, float] = {}  # host -> when to ask its robots.txt again
+        self._robots_down_why: dict[str, RobotsUnavailable] = {}
+        self._robots_locks: dict[str, threading.Lock] = {}  # one robots.txt request per host at a time
         self._last: dict[str, float] = {}
         self._lock = threading.Lock()
 
@@ -100,39 +107,47 @@ class PoliteClient:
     def _allowed(self, url: str) -> bool:
         host = urlparse(url).netloc
         with self._lock:
-            known = host in self._robots
-            down_until = self._robots_down.get(host, 0.0)
-        if not known:
-            if time.monotonic() < down_until:
-                raise RobotsUnavailable(
-                    f"robots.txt for {host} didn't answer recently; not fetching without it"
-                )
-            parser = urllib.robotparser.RobotFileParser()
-            rules: urllib.robotparser.RobotFileParser | None = None  # None: no robots.txt, no restrictions
-            try:
-                r = self._send_retrying(f"https://{host}/robots.txt", spaced=False)
-                if r.status_code == 200:
-                    parser.parse(r.text.splitlines())
-                    rules = parser
-                elif r.status_code in (401, 403):
-                    parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
-                    rules = parser
-                elif r.status_code in BLOCK_STATUSES or r.status_code >= 500:
-                    # Not an answer about robots.txt, so nothing is fetched without it: this fetch fails (the
-                    # retry pass tries again) and the host stays unknown, asked again after ROBOTS_RETRY_AFTER.
-                    with self._lock:
-                        self._robots_down[host] = time.monotonic() + ROBOTS_RETRY_AFTER
-                    raise RobotsUnavailable(
-                        f"robots.txt for {host} answered {r.status_code}; not fetching without it"
-                    )
-            except RobotsUnavailable:
-                raise
-            except httpx.HTTPError:
-                pass
+            host_lock = self._robots_locks.setdefault(host, threading.Lock())
+        with host_lock:  # concurrent first requests to a host share one robots.txt request
             with self._lock:
-                self._robots[host] = rules
+                known = host in self._robots
+                down_until = self._robots_down.get(host, 0.0)
+                why = self._robots_down_why.get(host)
+            if not known:
+                if time.monotonic() < down_until and why is not None:
+                    raise RobotsUnavailable(f"{why} (recently); not fetching without it", why.unreachable)
+                self._robots[host] = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
         rp = self._robots[host]
         return rp is None or rp.can_fetch(USER_AGENT, url)
+
+    def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
+        """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an
+        answer about robots.txt, a 429, 430, 5xx or a network error, raises RobotsUnavailable and is remembered for
+        ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
+        parser = urllib.robotparser.RobotFileParser()
+        try:
+            r = self._send_retrying(f"https://{host}/robots.txt", spaced=False)
+        except httpx.HTTPError as e:
+            unreachable = isinstance(
+                e, httpx.ConnectError
+            )  # DNS failure or refused connection: the host is down
+            err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__})", unreachable)
+        else:
+            if r.status_code == 200:
+                parser.parse(r.text.splitlines())
+                return parser
+            if r.status_code in (401, 403):
+                parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
+                return parser
+            if r.status_code not in BLOCK_STATUSES and r.status_code < 500:
+                return None
+            err = RobotsUnavailable(f"robots.txt for {host} answered {r.status_code}")
+        # This fetch fails (the retry pass tries again) and the host stays unknown, asked again after
+        # ROBOTS_RETRY_AFTER, so a site whose robots.txt never answers is never crawled.
+        with self._lock:
+            self._robots_down[host] = time.monotonic() + ROBOTS_RETRY_AFTER
+            self._robots_down_why[host] = err
+        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable)
 
     def _wait_turn(self, host: str) -> None:
         with self._lock:

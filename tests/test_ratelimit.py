@@ -343,7 +343,7 @@ def test_robots_txt_that_never_answers_fails_fast_then_is_asked_again(monkeypatc
             assert isinstance(e.value, httpx.HTTPError) and not isinstance(e.value, http.Blocked)
             assert robots.call_count == 3  # the client's retries
             now[0] += 60
-            with pytest.raises(http.RobotsUnavailable, match="didn't answer recently"):
+            with pytest.raises(http.RobotsUnavailable, match=r"answered 500 \(recently\)"):
                 c.get("https://a.com/products.json")  # remembered: no new robots.txt request
             assert robots.call_count == 3 and products.call_count == 0  # nothing fetched without the rules
             now[0] += http.ROBOTS_RETRY_AFTER
@@ -424,3 +424,49 @@ def test_cli_shopify_rps_reaches_the_run(lake, monkeypatch):
     for bad in ("0", "-1", "fast"):
         with pytest.raises(SystemExit):  # a usage error before anything runs, not a quiet fallback
             cli.main(["ingest", "--shopify-rps", bad])
+
+
+def test_robots_txt_that_cannot_be_fetched_stops_the_crawl_too(no_retry_sleep):
+    """A timeout or other network error on robots.txt is no answer about the rules either."""
+    with respx.mock as m:
+        m.get("https://a.com/robots.txt").mock(side_effect=httpx.ReadTimeout("slow"))
+        products = m.get("https://a.com/products.json").mock(return_value=_page([]))
+        with (
+            PoliteClient(min_interval=0) as c,
+            pytest.raises(http.RobotsUnavailable, match="ReadTimeout") as e,
+        ):
+            c.get("https://a.com/products.json")
+        assert not e.value.unreachable and products.call_count == 0
+
+
+def test_a_probe_of_a_host_that_is_down_is_unreachable_not_robots_unavailable(no_retry_sleep):
+    with respx.mock as m:
+        m.get(url__regex=r"https://(www\.)?a\.com/robots.txt").mock(side_effect=httpx.ConnectError("refused"))
+        with PoliteClient(min_interval=0) as c:
+            assert discover.probe_one(c, "a.com")["status"] == "unreachable"
+
+
+def test_concurrent_first_requests_to_a_host_share_one_robots_txt_request(no_retry_sleep):
+    import threading
+
+    with respx.mock as m:
+
+        def slow_robots(request):
+            threading.Event().wait(0.1)  # a slow robots.txt: the other requests arrive while it's in flight
+            return httpx.Response(404)
+
+        robots = m.get("https://a.com/robots.txt").mock(side_effect=slow_robots)
+        m.get("https://a.com/products.json").mock(return_value=_page([]))
+        with PoliteClient(min_interval=0) as c:
+            go = threading.Barrier(8)
+
+            def fetch():
+                go.wait()
+                c.get("https://a.com/products.json")
+
+            threads = [threading.Thread(target=fetch) for _ in range(8)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+        assert robots.call_count == 1

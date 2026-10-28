@@ -231,7 +231,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             break
         except Blocked:
             return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
-        except RobotsUnavailable:
+        except RobotsUnavailable as e:
+            if e.unreachable:  # the host itself is down, not just its robots.txt
+                continue
             no_robots = True
         except httpx.HTTPError:
             continue
