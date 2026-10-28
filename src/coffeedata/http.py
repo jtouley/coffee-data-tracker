@@ -18,6 +18,9 @@ if TYPE_CHECKING:
 log = logging.getLogger(__name__)
 
 USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
+# "Slow down": 429, Shopify's 430 (an IP-wide security block), and a 503 that can mean the same.
+BLOCK_STATUSES = (429, 430, 503)
+RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 
 
 class FetchError(Exception):
@@ -99,6 +102,8 @@ class PoliteClient:
                 elif r.status_code in (401, 403):
                     parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
                     rules = parser
+                elif r.status_code in BLOCK_STATUSES or r.status_code >= 500:
+                    return True  # not an answer about robots.txt: leave the host unknown, ask again next time
             except httpx.HTTPError:
                 pass
             with self._lock:
@@ -127,9 +132,11 @@ class PoliteClient:
             except httpx.HTTPError as e:
                 last_exc = e
             else:
-                if r.status_code not in (429, 500, 502, 503, 504):
+                if r.status_code not in RETRY_STATUSES:
                     return r
                 last_exc = httpx.HTTPStatusError(f"{r.status_code}", request=r.request, response=r)
+                if self._limiter is not None and r.status_code in BLOCK_STATUSES:
+                    continue  # the limiter's platform-wide cooldown is the wait; don't idle this worker too
                 retry_after = r.headers.get("retry-after", "")
             if attempt < self.retries - 1:  # no pointless sleep after the final attempt
                 time.sleep(min(int(retry_after), 30) if retry_after.isdigit() else 2**attempt)

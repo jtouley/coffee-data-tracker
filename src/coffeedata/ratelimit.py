@@ -3,8 +3,8 @@
 PoliteClient spaces requests per host, which is polite to each store but not to a platform: 1,100 Shopify
 stores are one rate limiter to Shopify, and 32 workers each politely visiting a different store add up to a
 burst it answers with 429s for everyone (run 2026-10-28: 14% of Shopify fetches ok). A PlatformLimiter
-caps that platform's whole request rate and concurrency, and a 429 from any of its stores pauses all of
-them (honoring Retry-After) and halves the rate until requests succeed again.
+caps that platform's whole request rate and concurrency, and a block (429, or Shopify's 430 and 503) from
+any of its stores pauses all of them (honoring Retry-After) and halves the rate until requests succeed again.
 """
 
 from __future__ import annotations
@@ -19,7 +19,7 @@ from datetime import UTC, datetime
 
 import httpx
 
-from .http import FetchError
+from .http import BLOCK_STATUSES, FetchError
 
 log = logging.getLogger(__name__)
 
@@ -32,7 +32,7 @@ SHOPIFY_CONCURRENCY = 8
 
 
 class RateLimited(FetchError):
-    """The platform kept answering 429 for longer than the limiter waits: fail fast, retry in a later pass."""
+    """The platform kept blocking for longer than the limiter waits: fail fast, retry in a later pass."""
 
 
 def retry_after_seconds(value: str | None, now: datetime | None = None) -> float | None:
@@ -69,7 +69,8 @@ class PlatformLimiter:
         default_cooldown: float = 20.0,  # a 429 without Retry-After
         max_cooldown: float = 120.0,
         max_slowdown: float = 8.0,  # after 429s the rate drops to as little as rate / max_slowdown
-        give_up_after: float = 900.0,  # only 429s for this long (Retry-After can understate a block): stop
+        give_up_after: float = 900.0,  # only blocks for this long (Retry-After can understate a block): stop
+        probe_every: float = 60.0,  # once stopped, let one request through this often to see if it lifted
         clock: Callable[[], float] = time.monotonic,
         sleep: Callable[[float], None] = time.sleep,
     ):
@@ -82,18 +83,33 @@ class PlatformLimiter:
         self.max_cooldown = max_cooldown
         self.max_interval = self.base_interval * max_slowdown
         self.give_up_after = give_up_after
+        self.probe_every = probe_every
         self._clock = clock
         self._sleep = sleep
         self._lock = threading.Lock()
         self._sem = threading.BoundedSemaphore(max_concurrent)
         self._next = 0.0  # earliest start of the next request
         self.cooldown_until = 0.0
-        self._blocked_since: float | None = None  # first 429 since the last success
+        self._cooldowns_set = (
+            0  # bumped when cooldown_until moves: a waiter's reservation from before is void
+        )
+        self._blocked_since: float | None = None  # first block since the last success
+        self._probe_at: float | None = None  # once given up: when the next probe request may go
         self.stats = {"requests": 0, "rate_limited": 0, "cooldowns": 0}
 
     def _check_blocked(self, now: float) -> None:
-        if self._blocked_since is not None and now - self._blocked_since >= self.give_up_after:
-            raise RateLimited(f"{self.name}: only 429s for {now - self._blocked_since:.0f}s, giving up")
+        """Past give_up_after, fail fast, except for one probe request every probe_every (half-open)."""
+        if self._blocked_since is None or now - self._blocked_since < self.give_up_after:
+            return
+        if self._probe_at is None:
+            self._probe_at = now + self.probe_every
+        if now < self._probe_at:
+            raise RateLimited(f"{self.name}: only blocks for {now - self._blocked_since:.0f}s, giving up")
+
+    def _admit(self, now: float) -> None:
+        self.stats["requests"] += 1
+        if self._probe_at is not None:  # this is the probe: the next one waits its turn
+            self._probe_at = now + self.probe_every
 
     def _wait_for_slot(self) -> None:
         """Sleep until this caller may start a request: past any cooldown and one interval after the last."""
@@ -104,54 +120,65 @@ class PlatformLimiter:
                 start = max(now, self._next, self.cooldown_until)
                 if start <= now:
                     self._next = now + self.interval
+                    self._admit(now)
                     return
                 self._next = start + self.interval  # reserve; re-checked on waking (a cooldown may begin)
+                cooldowns_set = self._cooldowns_set
             self._sleep(start - now)
             with self._lock:
                 now = self._clock()
-                if now >= self.cooldown_until:
+                if self._cooldowns_set == cooldowns_set:  # no cooldown began, so the reservation stands
                     self._check_blocked(now)
+                    self._admit(now)
                     return
 
     @contextmanager
     def slot(self) -> Iterator[None]:
         """Hold one of the platform's request slots for the duration of one request."""
-        while True:
+        # The slot first, then the time: callers queued for a slot can't bank rate-spacing time and then all
+        # start at once when slots free up together.
+        self._sem.acquire()
+        try:
             self._wait_for_slot()
-            self._sem.acquire()
-            with self._lock:
-                if self._clock() >= self.cooldown_until:  # no cooldown began while we queued
-                    self.stats["requests"] += 1
-                    break
+        except BaseException:
             self._sem.release()
+            raise
         try:
             yield
         finally:
             self._sem.release()
 
     def record(self, response: httpx.Response) -> None:
-        """Learn from a response: a 429 pauses the whole platform and slows it; anything else speeds it up."""
+        """Learn from a response: a block pauses the whole platform and slows it; a 2xx or 404 speeds it up;
+        any other status (a 403, a 500) says nothing about the platform's limit."""
+        status = response.status_code
         with self._lock:
             now = self._clock()
-            if response.status_code != 429:
+            if 200 <= status < 300 or status in (404, 410):
                 self._blocked_since = None
+                self._probe_at = None
                 self.interval = max(self.base_interval, self.interval * 0.97)
+                return
+            if status not in BLOCK_STATUSES:
                 return
             self.stats["rate_limited"] += 1
             if self._blocked_since is None:
                 self._blocked_since = now
             wait = retry_after_seconds(response.headers.get("retry-after"))
             wait = min(self.max_cooldown, self.default_cooldown if wait is None else wait)
-            self.interval = min(self.max_interval, self.interval * 2)
             if now + wait > self.cooldown_until:
-                if now >= self.cooldown_until:
+                if now >= self.cooldown_until:  # a new block, not another request that was in flight with it
+                    self.interval = min(self.max_interval, self.interval * 2)
                     self.stats["cooldowns"] += 1
                     log.warning(
-                        "%s: 429 from %s; pausing all %s requests %.0fs, then %.2f requests/s",
+                        "%s: %d from %s; pausing all %s requests %.0fs, then %.2f requests/s",
                         self.name,
+                        status,
                         _host(response),
                         self.name,
                         wait,
                         1 / self.interval,
                     )
                 self.cooldown_until = now + wait
+                self._next = self.cooldown_until  # reservations made before the cooldown are void
+                self._cooldowns_set += 1

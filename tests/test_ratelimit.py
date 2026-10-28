@@ -100,7 +100,7 @@ def test_cooldown_without_retry_after_is_the_default_and_is_capped():
     assert lim.cooldown_until == pytest.approx(clock.t + 120)
     lim.record(resp(429, "1"))  # a shorter Retry-After never cuts a cooldown short
     assert lim.cooldown_until == pytest.approx(clock.t + 120)
-    assert lim.stats["cooldowns"] == 1 and lim.interval == lim.max_interval == 2.0  # 4 rps / 8
+    assert lim.stats["cooldowns"] == 1 and lim.interval == 0.5  # one cooldown, one halving
 
 
 def test_retry_after_forms():
@@ -138,6 +138,96 @@ def test_a_success_resets_the_give_up_timer():
         with lim.slot():
             lim.record(resp(200))
     assert clock.t - 1000 > 60
+
+
+def test_simultaneous_429s_are_one_block_and_halve_the_rate_once():
+    clock = FakeClock()
+    lim = limiter(clock, rate=4.0)
+    for _ in range(8):  # every request in flight answered 429 together
+        lim.record(resp(429, "5"))
+    assert lim.interval == 0.5
+    assert lim.stats == {"requests": 0, "rate_limited": 8, "cooldowns": 1}
+    with lim.slot():
+        assert clock.t == pytest.approx(1005.0)
+        lim.record(resp(429, "5"))  # the next block, after the cooldown, halves it again
+    assert lim.interval == 1.0 and lim.stats["cooldowns"] == 2
+
+
+def test_a_cooldown_voids_reservations_made_before_it():
+    clock = FakeClock()
+    lim = limiter(clock, rate=4.0)
+    lim._next = clock.t + 30  # as if a queue of waiters had reserved the next 30s
+    lim.record(resp(429, "5"))
+    with lim.slot():
+        assert clock.t == pytest.approx(1005.0)
+
+
+def test_430_and_503_block_like_429_and_other_errors_are_neutral():
+    clock = FakeClock()
+    lim = limiter(clock, rate=4.0)
+    lim.record(resp(430))  # Shopify's IP-wide security block
+    assert lim.cooldown_until == pytest.approx(1020.0) and lim.interval == 0.5
+    lim.record(resp(403))
+    lim.record(resp(500))
+    assert lim.interval == 0.5 and lim._blocked_since == 1000.0  # neither counts as a success
+    clock.t = 1020.0
+    lim.record(resp(503, "4"))
+    assert lim.cooldown_until == pytest.approx(1024.0)
+    assert lim.stats == {"requests": 0, "rate_limited": 2, "cooldowns": 2}
+    lim.record(resp(404))  # a missing page is a real answer: the platform let it through
+    assert lim._blocked_since is None and lim.interval < 1.0
+
+
+def test_given_up_platform_probes_and_recovers():
+    clock = FakeClock()
+    lim = limiter(clock, give_up_after=60, probe_every=30)
+    lim.record(resp(429, "10"))
+    clock.t += 61
+    with pytest.raises(RateLimited), lim.slot():  # tripped: fail fast
+        pass
+    clock.t += 10
+    with pytest.raises(RateLimited), lim.slot():
+        pass
+    clock.t += 20
+    with lim.slot():  # the probe
+        lim.record(resp(429, "10"))  # still blocked
+    with pytest.raises(RateLimited), lim.slot():  # still open: no second request
+        pass
+    clock.t += 30
+    with lim.slot():  # the next probe
+        lim.record(resp(200))
+    for _ in range(3):  # closed again: everyone goes, at the platform rate
+        with lim.slot():
+            lim.record(resp(200))
+    assert lim.stats["requests"] == 5
+
+
+def test_slots_freed_together_do_not_release_a_burst():
+    lim = PlatformLimiter("shopify", rate=10, max_concurrent=2)
+    release, lock = threading.Event(), threading.Lock()
+    starts: list[float] = []
+
+    def hold():
+        with lim.slot():
+            release.wait()
+
+    def one():
+        with lim.slot(), lock:
+            starts.append(time.monotonic())
+
+    holders = [threading.Thread(target=hold) for _ in range(2)]
+    for t in holders:
+        t.start()
+    time.sleep(0.3)  # both slots held
+    queued = [threading.Thread(target=one) for _ in range(4)]
+    for t in queued:
+        t.start()
+    time.sleep(0.6)  # long enough to bank several intervals, had the queue passed the rate gate first
+    release.set()
+    for t in holders + queued:
+        t.join()
+    starts.sort()
+    assert min(b - a for a, b in zip(starts, starts[1:], strict=False)) >= 0.08  # 1/rate, give or take
 
 
 def test_concurrent_requests_are_capped():
@@ -181,6 +271,39 @@ def test_a_429_on_one_store_pauses_the_others_and_both_catalogs_complete(mock, n
     assert lim.stats["rate_limited"] == 1 and lim.stats["cooldowns"] == 1
     # robots.txt for both stores, a.com's two tries at page 1, page 2, and b.com's two pages
     assert lim.stats["requests"] == 2 + 2 + 1 + 2
+
+
+def test_a_430_pauses_the_platform_without_the_client_sleeping_too(mock, monkeypatch):
+    slept: list[float] = []
+    monkeypatch.setattr(http.time, "sleep", slept.append)
+    clock = FakeClock()
+    lim = limiter(clock, rate=1000)
+    a = mock.get("https://a.com/products.json", params={"page": "1"})
+    a.side_effect = [resp(430, "9"), _page(range(3))]
+    mock.get("https://a.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
+    with PoliteClient(min_interval=0, limiters={"shopify": lim}) as c:
+        assert len(fetch_catalog(c, _r("a.com"))) == 3
+    assert clock.t >= 1009  # the retry waited out the platform cooldown
+    assert slept == []  # and only there: the worker didn't also sleep its own backoff
+    assert lim.stats["rate_limited"] == 1 and lim.stats["cooldowns"] == 1
+
+
+def test_robots_txt_is_not_cached_from_a_429(no_retry_sleep):
+    clock = FakeClock()
+    lim = limiter(clock, rate=1000)
+    with respx.mock as m:
+        robots = m.get("https://a.com/robots.txt")
+        robots.side_effect = [
+            resp(429, "5"),
+            httpx.Response(200, text="User-agent: *\nDisallow: /products.json"),
+        ]
+        m.get("https://a.com/products.json").mock(return_value=_page([]))
+        with PoliteClient(min_interval=0, limiters={"shopify": lim}) as base:
+            c = base.for_platform("shopify")
+            assert c.get("https://a.com/products.json").status_code == 200  # no answer yet: not blocked
+            with pytest.raises(http.Blocked):  # asked again, and this time the rules apply
+                c.get("https://a.com/products.json")
+        assert robots.call_count == 2
 
 
 def test_store_cooldown_blocks_another_store_mid_cooldown(mock, no_retry_sleep):
@@ -244,3 +367,6 @@ def test_cli_shopify_rps_reaches_the_run(lake, monkeypatch):
     assert seen == {"rps": 1.5}
     cli.main(["ingest"])
     assert seen == {"rps": ingest.SHOPIFY_RPS}  # the weekly run's ingests use the default
+    for bad in ("0", "-1", "fast"):
+        with pytest.raises(SystemExit):  # a usage error before anything runs, not a quiet fallback
+            cli.main(["ingest", "--shopify-rps", bad])
