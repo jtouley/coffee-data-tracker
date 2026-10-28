@@ -12,15 +12,17 @@ Raw lake files are never touched here, and no release is ever edited.
 
 from __future__ import annotations
 
-import contextlib
 import functools
 import json
+import logging
 import os
 import subprocess
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
-from .lake import Lake, new_batch_id
+from .lake import Lake, new_batch_id, no_files
+
+log = logging.getLogger(__name__)
 
 # What customers read: the catalog marts (dataset, MCP, app, site) and the public tables. Shots and bags are
 # personal and not part of a weekly release.
@@ -61,9 +63,10 @@ def record_build(
     results: list[dict],
     passed: bool,
     build_id: str | None = None,
-) -> str:
-    """Append this build's record, and a copy of its catalog marts, to the lake: passing or not, nothing is lost.
-    `results` holds one run_results.json per dbt step (models, then tests)."""
+) -> bool:
+    """Append this build's release and record to the lake: passing or not, nothing is lost. `results` holds one
+    run_results.json per dbt step (models, then tests). Returns the recorded verdict: `passed`, and only if every
+    release table was written, since a release missing a table can't be served."""
     import duckdb
 
     build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
@@ -79,6 +82,16 @@ def record_build(
         ),
     }
     con = duckdb.connect(str(db), read_only=True) if db.exists() else None
+    written = set()
+    for t in RELEASE_TABLES if con else ():
+        try:
+            lake.write_release(t, run_date, build_id, con, f"select * from {t}")
+            written.add(t)
+        except (
+            duckdb.Error
+        ) as e:  # a model that failed to build, or a failed write: the release is incomplete
+            log.warning("release %s has no %s: %s", build_id, t, e)
+    passed = passed and written == set(RELEASE_TABLES)
 
     def count(name: str | None) -> int | None:
         if con is None or not name:
@@ -123,12 +136,8 @@ def record_build(
             )
     lake.write("builds", f"builds/run_date={run_date}/build={build_id}.parquet", rows)
     if con:
-        for t in RELEASE_TABLES:
-            # A model that failed to build is simply missing from this (failed) release.
-            with contextlib.suppress(duckdb.Error):
-                lake.write_release(t, run_date, build_id, con, f"select * from {t}")
         con.close()
-    return build_id
+    return passed
 
 
 def add_override(
@@ -154,16 +163,46 @@ def add_override(
             raise ValueError(f"no fetch of {roaster_id} in batch {batch_id} for {run_date}")
         if not ok[0]:
             raise ValueError(f"batch {batch_id} failed for {roaster_id}: only a successful fetch can count")
+    # added_at decides which override wins, at one-second resolution: always after the last one for this
+    # roaster-week, so two given in the same second still resolve in the order they were given.
+    added_at = datetime.now(UTC).replace(microsecond=0)
+    try:
+        last = (
+            lake.connect()
+            .execute(
+                f"select max(added_at) from {lake.scan('run_overrides')} where roaster_id = ? and run_date = ?",
+                [roaster_id, date.fromisoformat(run_date)],
+            )
+            .fetchone()
+        )
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
+        if not no_files(e):  # the first override: no run_overrides/ files anywhere yet
+            raise
+        last = None
+    if last and last[0] is not None and last[0] >= added_at:
+        added_at = last[0] + timedelta(seconds=1)
     row = {
-        "added_at": datetime.now(UTC).replace(microsecond=0),
+        "added_at": added_at,
         "roaster_id": roaster_id,
         "run_date": date.fromisoformat(run_date),
         "action": action,
         "batch_id": batch_id,
         "reason": reason.strip(),
     }
-    path = lake.write("run_overrides", f"run_overrides/override_id={new_batch_id()}.parquet", [row])
+    rel = f"run_overrides/override_id={new_batch_id()}.parquet"
+    path = lake.write("run_overrides", rel, [row])
     assert path is not None
+    if (
+        lake.remote
+    ):  # the build reads the remote lake: send just this file (a full publish would also send marts/)
+        from huggingface_hub import HfApi
+
+        repo = lake.url.removeprefix("hf://datasets/").split("@")[0]
+        HfApi(token=os.environ.get("HF_TOKEN")).upload_file(
+            path_or_fileobj=str(path), path_in_repo=rel, repo_id=repo, repo_type="dataset",
+            commit_message=f"override: {action} {roaster_id} {run_date}",
+        )  # fmt: skip
+        path.unlink()  # published, like any staged file after publish
     return path
 
 
@@ -177,12 +216,15 @@ def release_files(lake: Lake, build_id: str) -> dict[str, str]:
 
 @functools.lru_cache(maxsize=8)
 def _remote_releases(url: str) -> tuple[str, ...]:
-    """Every release file in a remote lake: listed once per process (and per lake), not once per table."""
+    """Every release file in a remote lake: only the releases/ folder is listed, once per process (and per lake)."""
     from huggingface_hub import HfApi
+    from huggingface_hub.hf_api import RepoFile
 
     repo = url.removeprefix("hf://datasets/").split("@")[0]
-    files = HfApi(token=os.environ.get("HF_TOKEN")).list_repo_files(repo, repo_type="dataset")
-    return tuple(f for f in files if f.startswith("releases/"))
+    tree = HfApi(token=os.environ.get("HF_TOKEN")).list_repo_tree(
+        repo, path_in_repo="releases", recursive=True, repo_type="dataset"
+    )
+    return tuple(f.path for f in tree if isinstance(f, RepoFile))
 
 
 def _release(lake: Lake, build_id: str, table: str) -> str:
@@ -266,9 +308,14 @@ def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.
 
 
 def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
-    """Serve an earlier passing release: `to`, or the passing release before the one served now."""
+    """Serve an earlier passing release: `to` ('served': the one served now), or the passing release before the one
+    served now."""
     now = (served(lake) or {}).get("build_id")
     passing = [b for b, _, ok in builds(lake) if ok]
+    if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
+        if not now:
+            raise ValueError("no release is served yet")
+        to = now
     if to is None:
         earlier = passing[: passing.index(now)] if now in passing else passing[:-1]
         if not earlier:
@@ -283,19 +330,16 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
     build before it, i.e. after a failed weekly run, what the held-back build would have published."""
     con = lake.connect()
     b = f"(select * from {lake.scan('builds')} where build_id is not null)"
-    builds = con.execute(
-        f"select build_id, not bool_or(coalesce(status, '') in ('error', 'fail')) as passed from {b} "
-        "group by build_id order by max(built_at)"
-    ).fetchall()
+    history = [(bid, ok) for bid, _, ok in builds(lake)]  # the one definition of a passing build
     if new is None:
-        new = builds[-1][0] if builds else None
+        new = history[-1][0] if history else None
     if old is None:  # the last passing build before `new`, never a later one
-        order = [bid for bid, _ in builds]
+        order = [bid for bid, _ in history]
         cut = order.index(new) if new in order else len(order)
-        before = [bid for bid, ok in builds[:cut] if ok]
+        before = [bid for bid, ok in history[:cut] if ok]
         old = before[-1] if before else None
     if not (old and new):
-        return {"error": "need two builds to compare", "builds": [bid for bid, _ in builds]}
+        return {"error": "need two builds to compare", "builds": [bid for bid, _ in history]}
 
     def nodes(build: str) -> dict[str, tuple]:
         return {
@@ -334,7 +378,7 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
     out: dict = {
         "old": old,
         "new": new,
-        "new_passed": dict(builds).get(new),
+        "new_passed": dict(history).get(new),
         "failing": sorted(k for k, v in z.items() if v[2] in ("error", "fail")),
         "code": code,
         "tests": tests,

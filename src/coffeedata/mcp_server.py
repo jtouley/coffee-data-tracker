@@ -13,6 +13,22 @@ from . import shots
 from .lake import Lake
 
 DB = Path(os.environ.get("COFFEEDATA_DB", "build/coffee.duckdb"))
+_columns_cache: dict[str, tuple[float, list[str]]] = {}
+
+
+def _mart_columns(con, src: str) -> list[str]:
+    """The exported dim_coffee's columns: a remote read each, so asked once an hour (they change only with the
+    contract), not on every search."""
+    import time
+
+    cached = _columns_cache.get(src)
+    if cached and time.monotonic() - cached[0] < shots.INDEX_TTL_S:
+        return cached[1]
+    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()]
+    _columns_cache[src] = (time.monotonic(), cols)
+    return cols
+
+
 mcp = MCPServer("coffee-data")
 
 
@@ -74,9 +90,7 @@ def search_coffees(
     # exported before it existed has no such column, so it reads as unknown rather than failing the search.
     if not include_wholesale and (retail := shots.retail_only(con, src)):
         where.append(retail.removeprefix("where "))  # a roaster's wholesale twin isn't a second coffee
-    has_status = "catalog_status" in [
-        r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()
-    ]
+    has_status = "catalog_status" in _mart_columns(con, src)
     status = "catalog_status" if has_status else "null::varchar as catalog_status"
     cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
