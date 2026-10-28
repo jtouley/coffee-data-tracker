@@ -667,21 +667,28 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
     mart = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
     lake.write_mart("dim_coffee", mart, "select * from dim_coffee")
     mart.close()
-    shots._rows_cache.clear()
-    shots._index_cache.clear()
+    shots._catalog_cache.clear()
     retail = sorted(t for _, _, t, is_retail in shots._catalog(lake) if is_retail)
     assert retail == ["Colombia Supremo", "Ethiopia Guji"]
-    # Matching still sees the twin, so a bag that says wholesale gets the wholesale coffee_id (review #3).
+    # Matching still sees the twin, so a bag that says wholesale gets the wholesale coffee_id (review #3). Any
+    # other bag is decided among retail coffees: the twin ties with its retail coffee, and mustn't make it unclear.
     assert shots.match_bag(None, "Wholesale - 5LB Ethiopia Guji", lake)[0] == f"{rid}:WGUJI"
-    assert f"{rid}:WGUJI" not in {m["coffee_id"] for m in shots.match_bag(None, "Ethiopia Guji", lake)[1]}
+    coffee_id, offered = shots.match_bag(None, "Ethiopia Guji", lake)
+    assert coffee_id == f"{rid}:GUJI" and f"{rid}:WGUJI" not in {m["coffee_id"] for m in offered}
+    assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == f"{rid}:GUJI"
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
     search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
     assert sorted(r["title"] for r in search()) == ["Colombia Supremo", "Ethiopia Guji"]
-    assert "Wholesale - 5LB Ethiopia Guji" in [r["title"] for r in search(include_wholesale=True)]
+    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)} == {
+        "Colombia Supremo": False,
+        "Ethiopia Guji": False,
+        "Wholesale - 5LB Ethiopia Guji": True,
+    }
 
 
 def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
-    # Review #2 and #5: the week's price changes and removals, and the archived count, leave wholesale out too.
+    # Review #2 and #5: the week's price changes and removals, and the archived count, leave wholesale out too
+    # (and only wholesale: an event of a coffee dim_coffee no longer keeps still counts).
     from coffeedata import site
 
     rid = "onyxcoffeelab.com"
@@ -690,8 +697,10 @@ def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
         product("GUJI", title="Ethiopia Guji"),
         product("WGUJI", title="Wholesale - 5LB Ethiopia Guji"),
         product("WKEN", title="Wholesale - 5LB Kenya Kiambu"),
+        product("GONE"),
     ])  # fmt: skip
     run(lake, "2026-10-26", rid, [  # WKEN is gone
+        product("GONE", coffee=False),  # no longer coffee: out of dim_coffee, but its removal still counts
         product("GUJI", price=22.0, title="Ethiopia Guji"),
         product("WGUJI", price=99.0, title="Wholesale - 5LB Ethiopia Guji"),  # repriced
         tagged("OLD", ["Archived"], available=False, title="Colombia Supremo"),
@@ -705,4 +714,4 @@ def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
     con.close()
     site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
     landing = " ".join((tmp_path / "site" / "index.html").read_text().split())
-    assert "<b>1</b> price changes · <b>0</b> delisted" in landing
+    assert "<b>1</b> price changes · <b>1</b> delisted" in landing

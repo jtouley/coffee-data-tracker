@@ -151,8 +151,7 @@ def test_no_key_means_type_it(monkeypatch):
 
 @pytest.fixture
 def catalog(lake):
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('larkspur.com:1', 'Larkspur Roasting Co.', 'OR', 'Hambela Alaka', 'Ethiopia', 'Guji', 'washed', 6.47, true),
@@ -162,8 +161,7 @@ def catalog(lake):
     ) t(coffee_id, roaster_name, roaster_state, title, origin_country, origin_region, process, price_per_100g, in_stock)""")
     lake.write_mart("dim_coffee", con, "select *, ['bergamot', 'peach'] as tasting_notes from c")
     yield lake
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_the_roaster_on_the_bag_decides_between_same_named_coffees(catalog):
@@ -184,9 +182,8 @@ def test_no_roaster_falls_back_to_the_whole_catalog(catalog):
 
 
 def test_a_wholesale_bag_matches_its_wholesale_listing_but_twins_are_never_offered(lake):
-    # Review #3: matching sees the whole catalog; only what's offered to pick from leaves wholesale out.
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    # Review #3: only a bag that says wholesale is matched among, and offered, wholesale listings.
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
@@ -204,9 +201,11 @@ def test_a_wholesale_bag_matches_its_wholesale_listing_but_twins_are_never_offer
         # The roaster only: pick from its retail coffees.
         coffee_id, offered = shots.match_bag("Onyx", None, lake)
         assert coffee_id is None and {m["coffee_id"] for m in offered} == {"onyx.com:1", "onyx.com:3"}
+        # A bag that says wholesale but isn't clear: its wholesale listings are among the options.
+        coffee_id, offered = shots.match_bag("Onyx", "Wholesale", lake)
+        assert coffee_id is None and {"onyx.com:2", "onyx.com:4"} <= {m["coffee_id"] for m in offered}
     finally:
-        shots._index_cache.clear()
-        shots._rows_cache.clear()
+        shots._catalog_cache.clear()
 
 
 # --- the route -----------------------------------------------------------------------------------------

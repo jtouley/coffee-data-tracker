@@ -119,9 +119,14 @@ def _bag_sized(item: CatalogItem) -> bool:
 
 def is_wholesale(item: CatalogItem) -> bool:
     return bool(
-        _WHOLESALE.search(f"{item.title} | {item.product_type}")
+        says_wholesale(f"{item.title} | {item.product_type}")
         or any(_WHOLESALE_TAG.fullmatch(t.strip()) for t in item.tags)
     )
+
+
+def says_wholesale(text: str) -> bool:
+    """Whether a listing's title, or a bag's label, reads as wholesale ("Wholesale - 5LB", "Case of 6")."""
+    return bool(_WHOLESALE.search(text))
 
 
 def excluded(item: CatalogItem) -> bool:

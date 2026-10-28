@@ -192,8 +192,10 @@ def build(db: Path, out: Path) -> Path:
         """
         select count(*) filter (where event = 'price') as price_changes,
                count(*) filter (where event = 'removed') as removed
-        from fct_price_event join dim_coffee using (coffee_id)
-        where not is_wholesale and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
+        -- A left join: a product no longer classed as coffee has left dim_coffee, but its events still count.
+        from fct_price_event left join dim_coffee using (coffee_id)
+        where not coalesce(is_wholesale, false)
+          and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])

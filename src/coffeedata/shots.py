@@ -8,11 +8,12 @@ import re
 import secrets
 import time
 import uuid
+from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 
 from rapidfuzz import fuzz, process
 
-from . import issueform
+from . import classify, issueform
 from .lake import Lake
 from .models import Shot
 
@@ -44,24 +45,19 @@ ALIASES = {
 
 # --- catalog matching --------------------------------------------------------------------------------
 
-_index_cache: dict[str, tuple[float, dict[str, str]]] = {}
-_rows_cache: dict[str, tuple[float, list[tuple[str, str, str, bool]]]] = {}
-_columns_cache: dict[str, tuple[float, list[str]]] = {}
+
+@dataclass(frozen=True)
+class _Catalog:
+    """One read of the dim_coffee export: its columns and every coffee in it, wholesale listings included."""
+
+    columns: list[str] = field(default_factory=list)
+    # (coffee_id, roaster_name, title, is_retail)
+    rows: list[tuple[str, str, str, bool]] = field(default_factory=list)
+    index: dict[str, str] = field(default_factory=dict)  # coffee_id -> 'Roaster Name Coffee Title'
+    wholesale: frozenset[str] = frozenset()
 
 
-def mart_columns(con, src: str) -> list[str]:
-    """The exported dim_coffee's columns, read the way every query of it reads the files (union_by_name, so a
-    column only some weeks' files have is there, null for the rest). A remote read each, so asked once an hour
-    (they change only with the contract), not on every search."""
-    cached = _columns_cache.get(src)
-    if cached and time.monotonic() - cached[0] < INDEX_TTL_S:
-        return cached[1]
-    cols = [
-        r[0]
-        for r in con.execute(f"describe select * from read_parquet([{src}], union_by_name = true)").fetchall()
-    ]
-    _columns_cache[src] = (time.monotonic(), cols)
-    return cols
+_catalog_cache: dict[str, tuple[float, _Catalog]] = {}
 
 
 def retail_only(cols: list[str]) -> str:
@@ -71,16 +67,53 @@ def retail_only(cols: list[str]) -> str:
     return "not coalesce(is_wholesale, false)" if "is_wholesale" in cols else "true"
 
 
-def _index(lake: Lake | None = None) -> dict[str, str]:
-    """coffee_id -> 'Roaster Name Coffee Title', from the weekly dim_coffee export; refreshed hourly so a
-    long-running MCP server picks up new catalog weeks."""
+def _load(lake: Lake | None = None) -> _Catalog:
+    """The weekly dim_coffee export, read the way every query of it reads the files (union_by_name, so a column
+    only some weeks' files have is there, null for the rest). Its columns, rows, index and wholesale set are read
+    together and refreshed together, hourly, so a long-running MCP server picks up new catalog weeks and never
+    pairs one week's columns with another's rows."""
     lake = lake or Lake()
-    cached = _index_cache.get(lake.url)
+    cached = _catalog_cache.get(lake.url)
     if cached and time.monotonic() - cached[0] < INDEX_TTL_S:
         return cached[1]
-    idx = {cid: f"{roaster} {title}" for cid, roaster, title, _ in _catalog(lake)}
-    _index_cache[lake.url] = (time.monotonic(), idx)
-    return idx
+    cat = _Catalog()
+    try:
+        src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
+        con = lake.connect()
+        scan = f"read_parquet([{src}], union_by_name = true)"
+        cols = [r[0] for r in con.execute(f"describe select * from {scan}").fetchall()]
+        rows = [
+            (cid, roaster or "", title or "", bool(retail))
+            for cid, roaster, title, retail in con.execute(
+                f"select coffee_id, roaster_name, title, {retail_only(cols)} from {scan}"
+            ).fetchall()
+        ]
+        cat = _Catalog(
+            cols,
+            rows,
+            {cid: f"{roaster} {title}" for cid, roaster, title, _ in rows},
+            frozenset(cid for cid, _, _, retail in rows if not retail),
+        )
+    except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
+        log.info("no catalog rows: %s", e)
+    _catalog_cache[lake.url] = (time.monotonic(), cat)
+    return cat
+
+
+def mart_columns(lake: Lake | None = None) -> list[str]:
+    """The exported dim_coffee's columns: a remote read, so asked with the catalog's hourly refresh (they change
+    only with the contract), not on every search."""
+    return _load(lake).columns
+
+
+def _index(lake: Lake | None = None) -> dict[str, str]:
+    """coffee_id -> 'Roaster Name Coffee Title', from the weekly dim_coffee export."""
+    return _load(lake).index
+
+
+def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str, bool]]:
+    """(coffee_id, roaster_name, title, is_retail) for every catalog coffee, wholesale listings included."""
+    return _load(lake).rows
 
 
 def _tokens(s: str) -> list[str]:
@@ -114,18 +147,20 @@ def fuzzy_match_coffee(text: str, limit: int | None = 3, lake: Lake | None = Non
     ]
 
 
-def _pick(ranked: list[dict], lake: Lake | None, min_score: int) -> tuple[str | None, list[dict]]:
+def _pick(text: str, ranked: list[dict], lake: Lake | None, min_score: int) -> tuple[str | None, list[dict]]:
     """The confident match among candidates ranked over the whole catalog, and the three to offer.
 
-    Matching sees wholesale listings, so a bag that says "Wholesale - 5LB Ethiopia Guji" gets that coffee_id. A
-    wholesale twin is never offered to pick from, nor counted as a rival that makes the retail match unclear.
+    Only a bag whose own text says wholesale ("Wholesale - 5LB Ethiopia Guji") is matched among wholesale
+    listings, and then they're offered too. Any other bag is decided, and offered, among retail coffees only: a
+    wholesale twin's title contains its retail coffee's, so it would tie with it and make the match unclear.
     Confident: the best is 80+ and 5 clear of the next."""
-    wholesale = {cid for cid, _, _, retail in _catalog(lake) if not retail}
-    rest = [m for m in ranked[1:] if m["coffee_id"] not in wholesale]
-    clear = not rest or ranked[0]["score"] - rest[0]["score"] >= 5
+    if not classify.says_wholesale(text):
+        wholesale = _load(lake).wholesale
+        ranked = [m for m in ranked if m["coffee_id"] not in wholesale]
+    clear = len(ranked) < 2 or ranked[0]["score"] - ranked[1]["score"] >= 5
     if ranked and ranked[0]["score"] >= min_score and clear:
-        return ranked[0]["coffee_id"], (ranked[:1] + rest)[:3]
-    return None, [m for m in ranked if m["coffee_id"] not in wholesale][:3]
+        return ranked[0]["coffee_id"], ranked[:3]
+    return None, ranked[:3]
 
 
 # --- logging -----------------------------------------------------------------------------------------
@@ -164,31 +199,7 @@ def normalize(payload: dict) -> dict:
 
 def match_coffee(text: str, lake: Lake | None = None, min_score: int = 80) -> tuple[str | None, list[dict]]:
     """The catalog coffee_id for free text, when the best match is confident and clearly ahead."""
-    return _pick(fuzzy_match_coffee(text, limit=None, lake=lake), lake, min_score)
-
-
-def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str, bool]]:
-    """(coffee_id, roaster_name, title, is_retail) for every catalog coffee, wholesale listings included; one
-    read (and one schema check) per hourly refresh, shared with the index."""
-    lake = lake or Lake()
-    cached = _rows_cache.get(lake.url)
-    if cached and time.monotonic() - cached[0] < INDEX_TTL_S:
-        return cached[1]
-    rows: list[tuple[str, str, str, bool]] = []
-    try:
-        src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
-        con = lake.connect()
-        rows = [
-            (cid, roaster or "", title or "", bool(retail))
-            for cid, roaster, title, retail in con.execute(
-                f"select coffee_id, roaster_name, title, {retail_only(mart_columns(con, src))} "
-                f"from read_parquet([{src}], union_by_name = true)"
-            ).fetchall()
-        ]
-    except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
-        log.info("no catalog rows: %s", e)
-    _rows_cache[lake.url] = (time.monotonic(), rows)
-    return rows
+    return _pick(text, fuzzy_match_coffee(text, limit=None, lake=lake), lake, min_score)
 
 
 def match_bag(
@@ -222,7 +233,7 @@ def match_bag(
         matches = [{"coffee_id": cid, "label": f"{r} {t}", "score": 0} for cid, r, t, _ in rows if r in near]
     else:
         matches = fuzzy_match_coffee(f"{roaster} {coffee}".strip(), limit=None, lake=lake)
-    return _pick(matches, lake, min_score)
+    return _pick(f"{roaster} {coffee}", matches, lake, min_score)
 
 
 def grinder_id(name: str, lake: Lake | None = None, user_id: str | None = None) -> str:

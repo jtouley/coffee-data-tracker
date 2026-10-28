@@ -56,7 +56,9 @@ def search_coffees(
     limit: int = 20,
 ) -> list[dict]:
     """Search the current roaster catalog by free text, roaster domain, process (washed/natural/honey/anaerobic)
-    or origin country. Uses the same weekly dim_coffee export as the site, so stock status matches it."""
+    or origin country. Uses the same weekly dim_coffee export as the site, so stock status matches it.
+    Wholesale listings (a roaster's bulk or cafe bag, often the twin of one of its retail coffees) are left out
+    unless include_wholesale is true; each result's is_wholesale says which kind it is."""
     lake = Lake()
     src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
     where, params = ["is_listed"], []
@@ -72,16 +74,17 @@ def search_coffees(
         where.append("origin_country ilike ?")
         params.append(f"%{origin}%")
     con = lake.connect()
+    have = shots.mart_columns(lake)
+    retail = shots.retail_only(have)
+    if not include_wholesale:
+        where.append(retail)  # a roaster's wholesale twin isn't a second coffee
     # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
     # exported before it existed has no such column, so it reads as unknown rather than failing the search.
-    have = shots.mart_columns(con, src)
-    if not include_wholesale:
-        where.append(shots.retail_only(have))  # a roaster's wholesale twin isn't a second coffee
     has_status = "catalog_status" in have
     status = "catalog_status" if has_status else "null::varchar as catalog_status"
     cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
-                   in_stock, {status}, price_per_100g
+                   in_stock, {status}, not ({retail}) as is_wholesale, price_per_100g
                    from read_parquet([{src}], union_by_name = true) where {" and ".join(where)}""",
         params,
     )
