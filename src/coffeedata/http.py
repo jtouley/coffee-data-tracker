@@ -71,9 +71,11 @@ class PoliteClient:
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
-        self._robots_down: dict[str, float] = {}  # host -> when to ask its robots.txt again
-        self._robots_down_why: dict[str, RobotsUnavailable] = {}
-        self._robots_locks: dict[str, threading.Lock] = {}  # one robots.txt request per host at a time
+        # host -> (when to ask its robots.txt again, why it didn't answer)
+        self._robots_down: dict[str, tuple[float, RobotsUnavailable]] = {}
+        self._robots_locks: dict[
+            str, threading.Lock
+        ] = {}  # one robots.txt request per unknown host at a time
         self._last: dict[str, float] = {}
         self._lock = threading.Lock()
 
@@ -107,16 +109,25 @@ class PoliteClient:
     def _allowed(self, url: str) -> bool:
         host = urlparse(url).netloc
         with self._lock:
-            host_lock = self._robots_locks.setdefault(host, threading.Lock())
-        with host_lock:  # concurrent first requests to a host share one robots.txt request
-            with self._lock:
-                known = host in self._robots
-                down_until = self._robots_down.get(host, 0.0)
-                why = self._robots_down_why.get(host)
-            if not known:
-                if time.monotonic() < down_until and why is not None:
-                    raise RobotsUnavailable(f"{why} (recently); not fetching without it", why.unreachable)
-                self._robots[host] = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+            known = host in self._robots
+            host_lock = None if known else self._robots_locks.setdefault(host, threading.Lock())
+        if host_lock is not None:
+            with host_lock:  # concurrent first requests to a host share one robots.txt request
+                with self._lock:
+                    known = host in self._robots
+                    down = self._robots_down.get(host)
+                if not known:
+                    if down is not None and time.monotonic() < down[0]:
+                        raise RobotsUnavailable(
+                            f"{down[1]} (recently); not fetching without it", down[1].unreachable
+                        )
+                    rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+                    with self._lock:
+                        self._robots[host] = rules
+                        self._robots_down.pop(host, None)
+                        self._robots_locks.pop(
+                            host, None
+                        )  # known from now on: no robots.txt request to share
         rp = self._robots[host]
         return rp is None or rp.can_fetch(USER_AGENT, url)
 
@@ -127,11 +138,18 @@ class PoliteClient:
         parser = urllib.robotparser.RobotFileParser()
         try:
             r = self._send_retrying(f"https://{host}/robots.txt", spaced=False)
+        except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
+            raise RobotsUnavailable(f"robots.txt for {host} not sent ({type(e).__name__}: {e})") from e
         except httpx.HTTPError as e:
-            unreachable = isinstance(
-                e, httpx.ConnectError
-            )  # DNS failure or refused connection: the host is down
-            err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__})", unreachable)
+            # DNS failure, refused or timed-out connection to this host itself (not a host it redirected to): down.
+            hostname = urlparse(f"https://{host}").hostname
+            try:
+                failed_host: str | None = e.request.url.host
+            except RuntimeError:  # raised without a request attached
+                failed_host = hostname
+            unreachable = isinstance(e, httpx.ConnectError | httpx.ConnectTimeout) and failed_host == hostname
+            err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__}: {e})", unreachable)
+            cause: Exception | None = e
         else:
             if r.status_code == 200:
                 parser.parse(r.text.splitlines())
@@ -141,13 +159,12 @@ class PoliteClient:
                 return parser
             if r.status_code not in BLOCK_STATUSES and r.status_code < 500:
                 return None
-            err = RobotsUnavailable(f"robots.txt for {host} answered {r.status_code}")
+            err, cause = RobotsUnavailable(f"robots.txt for {host} answered {r.status_code}"), None
         # This fetch fails (the retry pass tries again) and the host stays unknown, asked again after
         # ROBOTS_RETRY_AFTER, so a site whose robots.txt never answers is never crawled.
         with self._lock:
-            self._robots_down[host] = time.monotonic() + ROBOTS_RETRY_AFTER
-            self._robots_down_why[host] = err
-        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable)
+            self._robots_down[host] = (time.monotonic() + ROBOTS_RETRY_AFTER, err)
+        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable) from cause
 
     def _wait_turn(self, host: str) -> None:
         with self._lock:

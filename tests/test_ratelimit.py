@@ -433,17 +433,41 @@ def test_robots_txt_that_cannot_be_fetched_stops_the_crawl_too(no_retry_sleep):
         products = m.get("https://a.com/products.json").mock(return_value=_page([]))
         with (
             PoliteClient(min_interval=0) as c,
-            pytest.raises(http.RobotsUnavailable, match="ReadTimeout") as e,
+            pytest.raises(http.RobotsUnavailable, match="ReadTimeout: slow") as e,
         ):
             c.get("https://a.com/products.json")
         assert not e.value.unreachable and products.call_count == 0
+        assert isinstance(e.value.__cause__, httpx.ReadTimeout)  # the original error is kept
 
 
-def test_a_probe_of_a_host_that_is_down_is_unreachable_not_robots_unavailable(no_retry_sleep):
+@pytest.mark.parametrize("error", [httpx.ConnectError("refused"), httpx.ConnectTimeout("blackholed")])
+def test_a_probe_of_a_host_that_is_down_is_unreachable_not_robots_unavailable(no_retry_sleep, error):
     with respx.mock as m:
-        m.get(url__regex=r"https://(www\.)?a\.com/robots.txt").mock(side_effect=httpx.ConnectError("refused"))
+        m.get(url__regex=r"https://(www\.)?a\.com/robots\.txt").mock(side_effect=error)
         with PoliteClient(min_interval=0) as c:
             assert discover.probe_one(c, "a.com")["status"] == "unreachable"
+
+
+def test_a_robots_txt_redirect_to_a_dead_host_does_not_make_the_site_unreachable(no_retry_sleep):
+    with respx.mock as m:
+        m.get(url__regex=r"https://(www\.)?a\.com/robots\.txt").mock(
+            return_value=httpx.Response(301, headers={"location": "https://cdn.dead.example/robots.txt"})
+        )
+        m.get("https://cdn.dead.example/robots.txt").mock(side_effect=httpx.ConnectError("refused"))
+        with PoliteClient(min_interval=0) as c:
+            assert discover.probe_one(c, "a.com")["status"] == "robots_unavailable"  # asked again next run
+
+
+def test_our_own_pool_timing_out_is_not_remembered_against_the_host(no_retry_sleep):
+    with respx.mock as m:
+        robots = m.get("https://a.com/robots.txt")
+        robots.side_effect = [httpx.PoolTimeout("busy")] * 3 + [httpx.Response(404)]
+        m.get("https://a.com/products.json").mock(return_value=_page([]))
+        with PoliteClient(min_interval=0) as c:
+            with pytest.raises(http.RobotsUnavailable, match="not sent") as e:
+                c.get("https://a.com/products.json")
+            assert not e.value.unreachable
+            assert c.get("https://a.com/products.json").status_code == 200  # asked again at once
 
 
 def test_concurrent_first_requests_to_a_host_share_one_robots_txt_request(no_retry_sleep):
@@ -457,16 +481,20 @@ def test_concurrent_first_requests_to_a_host_share_one_robots_txt_request(no_ret
 
         robots = m.get("https://a.com/robots.txt").mock(side_effect=slow_robots)
         m.get("https://a.com/products.json").mock(return_value=_page([]))
+        errors: list[BaseException] = []
         with PoliteClient(min_interval=0) as c:
             go = threading.Barrier(8)
 
             def fetch():
-                go.wait()
-                c.get("https://a.com/products.json")
+                try:
+                    go.wait()
+                    c.get("https://a.com/products.json")
+                except BaseException as e:  # noqa: BLE001 - reported below; a thread's own exception is lost
+                    errors.append(e)
 
             threads = [threading.Thread(target=fetch) for _ in range(8)]
             for t in threads:
                 t.start()
             for t in threads:
                 t.join()
-        assert robots.call_count == 1
+        assert errors == [] and robots.call_count == 1
