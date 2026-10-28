@@ -9,7 +9,7 @@ import httpx
 import pytest
 import respx
 
-from coffeedata import http, ingest
+from coffeedata import discover, http, ingest
 from coffeedata.adapters import fetch_catalog
 from coffeedata.http import FetchError, PoliteClient
 from coffeedata.models import Roaster
@@ -230,6 +230,32 @@ def test_slots_freed_together_do_not_release_a_burst():
     assert min(b - a for a, b in zip(starts, starts[1:], strict=False)) >= 0.08  # 1/rate, give or take
 
 
+def test_a_due_probe_during_a_cooldown_is_claimed_by_one_caller_and_the_rest_fail_fast():
+    lim = PlatformLimiter("shopify", rate=100, max_concurrent=8, give_up_after=0, probe_every=0.01)
+    lim.record(resp(429, "0.5"))  # tripped at once, with a cooldown still running when the probe is due
+    with pytest.raises(RateLimited), lim.slot():  # the first caller after the trip schedules the probe
+        pass
+    time.sleep(0.05)  # the probe is due; the cooldown has ~0.45s left
+    sent, failed, lock = [], [], threading.Lock()
+
+    def one():
+        try:
+            with lim.slot(), lock:
+                sent.append(time.monotonic())
+        except RateLimited:
+            with lock:
+                failed.append(time.monotonic())
+
+    threads = [threading.Thread(target=one) for _ in range(32)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert len(sent) == 1 and len(failed) == 31
+    assert sent[0] >= lim.cooldown_until  # the probe waited out the cooldown
+    assert max(failed) < lim.cooldown_until  # nobody else did, holding a slot, only to fail after it
+
+
 def test_concurrent_requests_are_capped():
     lim = PlatformLimiter("shopify", rate=10_000, max_concurrent=3)
     active, peak, lock = 0, 0, threading.Lock()
@@ -288,26 +314,50 @@ def test_a_430_pauses_the_platform_without_the_client_sleeping_too(mock, monkeyp
     assert lim.stats["rate_limited"] == 1 and lim.stats["cooldowns"] == 1
 
 
-def test_robots_txt_is_not_cached_from_a_429(no_retry_sleep):
+def test_robots_txt_gets_the_retries_and_a_429_waits_out_the_cooldown(no_retry_sleep):
     clock = FakeClock()
     lim = limiter(clock, rate=1000)
     with respx.mock as m:
         robots = m.get("https://a.com/robots.txt")
-        robots.side_effect = [
-            resp(429, "5"),
-            httpx.Response(200, text="User-agent: *\nDisallow: /products.json"),
-        ]
+        robots.side_effect = [resp(429, "5"), httpx.Response(200, text="User-agent: *\nDisallow: /cart")]
         products = m.get("https://a.com/products.json").mock(return_value=_page([]))
         with PoliteClient(min_interval=0, limiters={"shopify": lim}) as base:
             c = base.for_platform("shopify")
-            with pytest.raises(http.RobotsUnavailable, match="robots.txt for a.com answered 429") as e:
-                c.get("https://a.com/products.json")  # no answer yet: nothing fetched without the rules
-            assert isinstance(e.value, httpx.HTTPError) and not isinstance(
-                e.value, http.Blocked
-            )  # retried later
-            with pytest.raises(http.Blocked):  # asked again, and this time the rules apply
+            assert c.get("https://a.com/products.json").status_code == 200  # within one get()
+            with pytest.raises(http.Blocked):  # the rules it got apply
+                c.get("https://a.com/cart")
+        assert robots.call_count == 2 and products.call_count == 1
+    assert clock.t >= 1005  # the retry waited out the cooldown the 429 started
+
+
+def test_robots_txt_that_never_answers_fails_fast_then_is_asked_again(monkeypatch, no_retry_sleep):
+    now = [5000.0]
+    monkeypatch.setattr(http.time, "monotonic", lambda: now[0])
+    with respx.mock as m:
+        robots = m.get("https://a.com/robots.txt")
+        robots.side_effect = [resp(500)] * 3 + [httpx.Response(404)]
+        products = m.get("https://a.com/products.json").mock(return_value=_page([]))
+        with PoliteClient(min_interval=0) as c:  # any client, not only a limited one
+            with pytest.raises(http.RobotsUnavailable, match="answered 500") as e:
                 c.get("https://a.com/products.json")
-        assert robots.call_count == 2 and products.call_count == 0
+            assert isinstance(e.value, httpx.HTTPError) and not isinstance(e.value, http.Blocked)
+            assert robots.call_count == 3  # the client's retries
+            now[0] += 60
+            with pytest.raises(http.RobotsUnavailable, match="didn't answer recently"):
+                c.get("https://a.com/products.json")  # remembered: no new robots.txt request
+            assert robots.call_count == 3 and products.call_count == 0  # nothing fetched without the rules
+            now[0] += http.ROBOTS_RETRY_AFTER
+            assert c.get("https://a.com/products.json").status_code == 200  # asked again: now no robots.txt
+        assert robots.call_count == 4 and products.call_count == 1
+
+
+def test_a_probe_without_robots_txt_records_a_status_the_next_run_retries(no_retry_sleep):
+    with respx.mock as m:
+        m.get(url__regex=r"https://(www\.)?a\.com/robots.txt").mock(return_value=resp(503))
+        home = m.get(url__regex=r"https://(www\.)?a\.com/$").mock(return_value=httpx.Response(200))
+        with PoliteClient(min_interval=0, retries=2) as c:
+            assert discover.probe_one(c, "a.com")["status"] == "robots_unavailable"  # not "unreachable"
+        assert home.call_count == 0
 
 
 def test_store_cooldown_blocks_another_store_mid_cooldown(mock, no_retry_sleep):

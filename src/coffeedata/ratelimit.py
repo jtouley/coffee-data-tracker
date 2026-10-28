@@ -27,6 +27,7 @@ log = logging.getLogger(__name__)
 # about 3 requests/s) with 99% ok; the 2026-10-28 run, with one more page per store and 32 workers, went past
 # 4/s plus retries and was blocked. ~1,100 stores x ~3.3 requests (robots.txt, ~2.3 pages) is ~3,600
 # requests: about 20 minutes at 3/s, alongside the other platforms.
+# A redirect (apex to www, http to https) is more than one request to Shopify but counts once: fine at 3/s.
 SHOPIFY_RPS = 3.0
 SHOPIFY_CONCURRENCY = 8
 
@@ -90,37 +91,40 @@ class PlatformLimiter:
         self._sem = threading.BoundedSemaphore(max_concurrent)
         self._next = 0.0  # earliest start of the next request
         self.cooldown_until = 0.0
-        self._cooldowns_set = (
-            0  # bumped when cooldown_until moves: a waiter's reservation from before is void
-        )
+        # Bumped when cooldown_until moves: a waiter's reservation from before is void.
+        self._cooldowns_set = 0
         self._blocked_since: float | None = None  # first block since the last success
         self._probe_at: float | None = None  # once given up: when the next probe request may go
         self.stats = {"requests": 0, "rate_limited": 0, "cooldowns": 0}
 
-    def _check_blocked(self, now: float) -> None:
-        """Past give_up_after, fail fast, except for one probe request every probe_every (half-open)."""
+    def _check_blocked(self, now: float) -> bool:
+        """Past give_up_after, fail fast, except for one probe request every probe_every (half-open). True when
+        this caller is the probe: it is claimed here, under the lock, so callers that come while it waits out a
+        cooldown fail fast instead of each holding a slot through the cooldown and failing after it."""
         if self._blocked_since is None or now - self._blocked_since < self.give_up_after:
-            return
+            return False
         if self._probe_at is None:
             self._probe_at = now + self.probe_every
         if now < self._probe_at:
             raise RateLimited(f"{self.name}: only blocks for {now - self._blocked_since:.0f}s, giving up")
-
-    def _admit(self, now: float) -> None:
-        self.stats["requests"] += 1
-        if self._probe_at is not None:  # this is the probe: the next one waits its turn
-            self._probe_at = now + self.probe_every
+        self._probe_at = now + self.probe_every
+        return True
 
     def _wait_for_slot(self) -> None:
         """Sleep until this caller may start a request: past any cooldown and one interval after the last."""
+        probe = False
         while True:
             with self._lock:
                 now = self._clock()
-                self._check_blocked(now)
+                probe = probe or self._check_blocked(now)
                 start = max(now, self._next, self.cooldown_until)
+                if (
+                    probe
+                ):  # the next probe is due probe_every after this one is sent, not after it was claimed
+                    self._probe_at = start + self.probe_every
                 if start <= now:
                     self._next = now + self.interval
-                    self._admit(now)
+                    self.stats["requests"] += 1
                     return
                 self._next = start + self.interval  # reserve; re-checked on waking (a cooldown may begin)
                 cooldowns_set = self._cooldowns_set
@@ -128,8 +132,9 @@ class PlatformLimiter:
             with self._lock:
                 now = self._clock()
                 if self._cooldowns_set == cooldowns_set:  # no cooldown began, so the reservation stands
-                    self._check_blocked(now)
-                    self._admit(now)
+                    if not probe:
+                        self._check_blocked(now)
+                    self.stats["requests"] += 1
                     return
 
     @contextmanager
