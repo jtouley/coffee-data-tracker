@@ -15,7 +15,7 @@ import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from .lake import Lake
+from .lake import Lake, no_files
 
 log = logging.getLogger(__name__)
 
@@ -62,7 +62,7 @@ def _rows(lake: Lake, src: str, sql: str, params: dict) -> list[tuple]:
     try:
         return lake.connect().execute(sql.format(src=src), params).fetchall()
     except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
-        if "No files found" in str(e):
+        if no_files(e):
             return []
         raise
 

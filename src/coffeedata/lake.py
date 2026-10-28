@@ -314,6 +314,13 @@ SCHEMA_FILES = {
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
 
+def no_files(e: Exception) -> bool:
+    """A read failed only because a table has no files yet: DuckDB's own "No files found", or, on a Hugging Face
+    dataset, a 404 listing a folder no file was ever published to (a table added after the dataset was made)."""
+    msg = str(e)
+    return "No files found" in msg or ("error listing" in msg and "404" in msg)
+
+
 def new_batch_id(now: datetime | None = None) -> str:
     """Sortable and unique: re-running a step adds a new batch instead of rewriting an old one."""
     now = now or datetime.now(UTC)
@@ -397,13 +404,13 @@ class Lake:
     def latest(self, table: str, key: str) -> list[dict]:
         """The latest record per key (by logged_at): corrections are new records, so this is current state.
 
-        A remote lake made before a table existed has no file for it until the next publish adds the schema
+        A remote lake made before a table existed has no folder for it until the next publish adds the schema
         file; until then the table is read from staging alone rather than failing."""
         sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
         try:
             cur = self.connect().execute(sql.format(self.scan(table), key, key))
         except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-            if not (self.remote and "No files found" in str(e)):
+            if not (self.remote and no_files(e)):
                 raise
             local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
             cur = self.connect().execute(sql.format(local, key, key))
