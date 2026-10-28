@@ -307,5 +307,22 @@ def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
         return None
 
 
+# Claude Code cloud sessions don't pass ANTHROPIC_API_KEY through (it would take over the session's own model
+# access), so the pipeline also reads its key under its own name. GitHub Actions sets ANTHROPIC_API_KEY.
+KEY_VAR = "COFFEEDATA_ANTHROPIC_API_KEY"
+
+
 def llm_enabled() -> bool:
-    return bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"))
+    return bool(
+        os.environ.get(KEY_VAR)
+        or os.environ.get("ANTHROPIC_API_KEY")
+        or os.environ.get("ANTHROPIC_AUTH_TOKEN")
+    )
+
+
+def client():
+    """An Anthropic client from COFFEEDATA_ANTHROPIC_API_KEY if set, else the SDK's own credential lookup."""
+    import anthropic
+
+    key = os.environ.get(KEY_VAR)
+    return anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()

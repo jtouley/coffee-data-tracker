@@ -21,6 +21,7 @@ from datetime import UTC, date, datetime
 from importlib import resources
 from typing import cast
 
+from . import extract
 from .classify import excluded
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Variant
@@ -166,7 +167,7 @@ def submit(lake: Lake, limit: int = 100_000) -> dict:
         for r in todo
     ]
     try:
-        batch = anthropic.Anthropic().messages.batches.create(requests=reqs)
+        batch = extract.client().messages.batches.create(requests=reqs)
     except anthropic.APIError as e:
         log.warning("verdict batch submit failed: %s", e)
         return {"pending": len(todo), "submitted": 0, "error": str(e)}
@@ -194,7 +195,7 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
     ).fetchall()
     if not open_batches:
         return {"collected": 0}
-    client = anthropic.Anthropic()
+    client = extract.client()
     run_date = run_date or date.today().isoformat()
     stored = 0
     usage: dict[str, int] = {}
@@ -247,7 +248,7 @@ def judge(
 
     from .classify import is_coffee
 
-    client = anthropic.Anthropic()
+    client = extract.client()
     total = usage if usage is not None else {}
     lock = threading.Lock()
 
