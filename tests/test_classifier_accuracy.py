@@ -1,4 +1,5 @@
-"""The classifier against products labeled by hand (two independent labels each, disagreements settled).
+"""The classifier against labeled products: two independent labels each, made by Claude subagents against
+eval/sealed/GUIDE.md, with disagreements settled by a third.
 
 tests/fixtures/classifier_labels.jsonl holds samples from the live lake, 600 products each: 250 the classifier kept,
 250 it dropped and 100 borderline titles. "train" is the sample the rules were tuned on. "validation" was drawn and

@@ -15,7 +15,7 @@ where a rule can break; they don't show how often it does.
    the salt in the eval's README.
 3. **Train:** the only set whose examples you read and tune against.
 4. **Validation:** choose between candidates on aggregates only, never example by example.
-5. **Test (sealed):** scored once, after the change is frozen. Score `main` and the change on it in the same run.
+5. **Test (sealed):** scored once, after the change is frozen. Score `main` and the change on the same frozen set.
    Write a `SHA256SUMS` over its files when you make them. Don't read its examples while developing. Keep its
    scoring command in the eval's README; it prints only totals and intervals. After the final score the set can
    join the regression fixtures, and a new test set is drawn for the next change.
@@ -33,9 +33,10 @@ where a rule can break; they don't show how often it does.
 
 It's the working example of sealed scoring, labeling and floors:
 - `eval/sealed/README.md` covers the procedure;
-- `score_sealed.py` covers agreement and final scoring;
-- `GUIDE.md` is the labeling definition;
+- `eval/sealed/score_sealed.py` covers agreement and final scoring;
+- `eval/sealed/GUIDE.md` is the labeling definition;
 - `tests/test_classifier_accuracy.py` holds the floors.
 
 It predates this file, so its sets were drawn one after another as fixed-size samples (about 600 each), not by a
-salted hash, and they aren't grouped by roaster. New evaluations follow the steps above.
+salted hash, and they aren't grouped by roaster. Its labels were made by Claude subagents; a spot-check by a person
+is still to come. New evaluations follow the steps above.
