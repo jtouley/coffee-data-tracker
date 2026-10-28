@@ -23,6 +23,7 @@ from .classify import is_coffee
 from .http import PoliteClient, RequestStats
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter
 
 log = logging.getLogger(__name__)
 
@@ -209,6 +210,7 @@ def run(
     run_date: str,
     workers: int = 32,
     mode: str | None = None,
+    shopify_rps: float = SHOPIFY_RPS,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
@@ -264,7 +266,9 @@ def run(
 
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
-    with PoliteClient() as client, ThreadPoolExecutor(workers) as ex:
+    # Shopify limits by client IP across all its stores, so its stores share one request budget.
+    shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
+    with PoliteClient(limiters={"shopify": shopify}) as client, ThreadPoolExecutor(workers) as ex:
         done: list[Result] = []
         for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
             done.append(fut.result())
@@ -279,4 +283,5 @@ def run(
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
+        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses
     }

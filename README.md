@@ -420,8 +420,10 @@ disagree with the contract. So a change to a public table starts in the contract
 
 - Each store feed is read once a week, because catalogs change slowly and that keeps the load on small roaster
   sites low. Requests use a User-Agent that names this project and links to this repo.
-- `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Catalog requests to a host are
-  at least 1 second apart, platform probes at least 0.5 seconds apart.
+- `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
+  without its rules: if `robots.txt` answers 429, 430 or 5xx even after retries, the site is skipped and asked
+  again 15 minutes later, so a site whose `robots.txt` always answers 5xx is never crawled. Catalog requests to a
+  host are at least 1 second apart, platform probes at least 0.5 seconds apart.
 - Only what a shopper can see is stored, and every coffee links back to its roaster.
 - Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
   roaster" box on the "Add a roaster" form, and the site is never fetched again.

@@ -86,10 +86,13 @@ def test_the_cli_records_each_roasters_status_and_the_mode(lake, monkeypatch):
 
     monkeypatch.setattr(registry, "current", lambda lake: [RoasterState(ONYX, "pending", None)])
     got = {}
-    monkeypatch.setattr(ingest, "run", lambda lk, r, d, w, mode: got.update(r=r, m=mode) or {})
+    monkeypatch.setattr(
+        ingest, "run", lambda lk, r, d, workers, mode, shopify_rps: got.update(r=r, m=mode) or {}
+    )
     for flags, mode in (({"sample": 5}, "sample"), ({"only": ONYX.roaster_id}, "only"),
                         ({"retry_failed": True}, "retry_failed"), ({}, "full")):  # fmt: skip
-        ns = argparse.Namespace(run_date="2026-10-26", only=None, sample=None, retry_failed=False, workers=1)
+        ns = argparse.Namespace(run_date="2026-10-26", only=None, sample=None, retry_failed=False, workers=1,
+                                shopify_rps=2.0)  # fmt: skip
         cli.cmd_ingest(argparse.Namespace(**vars(ns) | flags))
         assert got["m"] == mode
     # The states themselves go to ingest.run, so each roaster's status can't come apart from the roaster.

@@ -13,6 +13,7 @@ from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 from .lake import Lake, new_batch_id
+from .ratelimit import SHOPIFY_RPS
 
 # fct_shot and mart_bag are personal: they go to the private lake's marts/ only, never to the public export.
 DBT_TARGET = Path("dbt/target")
@@ -30,6 +31,17 @@ def _run_date(value: str) -> str:
         return date.fromisoformat(value).isoformat()
     except ValueError:
         raise argparse.ArgumentTypeError(f"not a YYYY-MM-DD date: {value!r}") from None
+
+
+def _positive_float(value: str) -> float:
+    """argparse type for a rate: a usage error up front, not a ValueError after the lake is opened."""
+    try:
+        x = float(value)
+    except ValueError:
+        x = 0.0
+    if not x > 0:
+        raise argparse.ArgumentTypeError(f"not a positive number: {value!r}")
+    return x
 
 
 def _print(obj: object) -> None:
@@ -100,7 +112,9 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     lake = Lake()
     states, mode = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
     print(f"ingesting {len(states)} roasters for run {args.run_date}", file=sys.stderr)
-    _print(ingest.run(lake, states, args.run_date, args.workers, mode))
+    _print(
+        ingest.run(lake, states, args.run_date, workers=args.workers, mode=mode, shopify_rps=args.shopify_rps)
+    )
 
 
 def cmd_enrich(args: argparse.Namespace) -> None:
@@ -343,10 +357,21 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_probe(argparse.Namespace(stale_days=28, only=None, sample=args.sample, workers=16, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: discover and probe"))
     cmd_ingest(
-        argparse.Namespace(run_date=run, only=None, sample=args.sample, retry_failed=False, workers=32)
+        argparse.Namespace(
+            run_date=run,
+            only=None,
+            sample=args.sample,
+            retry_failed=False,
+            workers=32,
+            shopify_rps=SHOPIFY_RPS,
+        )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: catalogs"))
-    cmd_ingest(argparse.Namespace(run_date=run, only=None, sample=None, retry_failed=True, workers=16))
+    cmd_ingest(
+        argparse.Namespace(
+            run_date=run, only=None, sample=None, retry_failed=True, workers=16, shopify_rps=SHOPIFY_RPS
+        )
+    )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
@@ -487,6 +512,12 @@ def main(argv: list[str] | None = None) -> None:
     i.add_argument("--sample", type=int)
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
     i.add_argument("--workers", type=int, default=32)
+    i.add_argument(
+        "--shopify-rps",
+        type=_positive_float,
+        default=SHOPIFY_RPS,
+        help="requests/s across all Shopify stores together (default %(default)s; halves itself on 429s)",
+    )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
     c.add_argument("--limit", type=int, default=100_000)
