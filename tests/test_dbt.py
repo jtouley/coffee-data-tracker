@@ -438,6 +438,8 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert 'href="https://app.registry.coffee/signin"' in html
         assert 'href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite"' in html
         assert "<form" not in html
+    # "Updated" is the last fetch, not the build time, so a template-only redeploy doesn't freshen it.
+    assert "Updated 2026-10-19 12:00 UTC" in (out / "catalog" / "index.html").read_text()
     for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):
         html = (out / page / "index.html").read_text()
         assert f'<h1 class="serif">{heading}</h1>' in html and f"Last updated {site.LEGAL_UPDATED}" in html
@@ -474,11 +476,13 @@ def test_safe_url(url, ok):
     assert site.safe_url(url) == (url if ok else None)
 
 
-def test_site_links_without_a_public_hf_dataset():
+def test_site_links_without_a_public_hf_dataset(monkeypatch):
     from coffeedata import site
 
     assert site.links("s3://bucket/coffee", "https://example.org/")["dataset"] is None
     assert site.links("hf://datasets/a/b@main")["dataset"] == "https://huggingface.co/datasets/a/b"
+    monkeypatch.setenv("APP_URL", "https://app.staging.example/")
+    assert site.links()["signin"] == "https://app.staging.example/signin"
 
 
 def _landing(**reach) -> str:

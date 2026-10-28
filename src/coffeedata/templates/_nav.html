@@ -3,7 +3,7 @@
 <nav aria-label="registry.coffee">
   <a class="mark-word serif" href="{{ root or './' }}">registry<span class="dot">.</span>coffee</a>
   <div class="right">
-    <a href="{{ root }}catalog/"{% if page == "catalog" %} aria-current="page"{% endif %}>Catalog</a>
+    <a href="{{ root }}{{ links.catalog }}"{% if page == "catalog" %} aria-current="page"{% endif %}>Catalog</a>
     {% if links.dataset %}<a class="hide-sm" href="{{ links.dataset }}">Dataset</a>{% endif %}
     <a class="hide-sm" href="{{ links.repo }}">GitHub</a>
     <a href="{{ links.signin }}">Sign in</a>

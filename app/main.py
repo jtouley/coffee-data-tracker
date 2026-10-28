@@ -29,6 +29,7 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from coffeedata import shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
+from coffeedata.site import links as site_links
 
 from . import labels, logs, photos, views, web
 from .accounts import AccountError
@@ -97,6 +98,8 @@ def create_app(
     assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
+    # The public site's address and the beta-invite email, from the same settings the site is built with.
+    templates.env.globals.update(site=site_links())
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
