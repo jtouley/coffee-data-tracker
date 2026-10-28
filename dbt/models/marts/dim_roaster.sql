@@ -21,8 +21,10 @@ recent as (
 last_ok as (select * from f where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
 coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
-    select roaster_id, count(*) filter (where is_listed and catalog_status <> 'archived') as coffees_listed,
-           count(*) filter (where in_stock) as coffees_in_stock,
+    -- Wholesale listings (a roaster's wholesale twin of a retail coffee) aren't counted as more coffees.
+    select roaster_id,
+           count(*) filter (where is_listed and catalog_status <> 'archived' and not is_wholesale) as coffees_listed,
+           count(*) filter (where in_stock and not is_wholesale) as coffees_in_stock,
            count(*) filter (where catalog_status = 'archived') as coffees_archived
     from {{ ref('dim_coffee') }} group by roaster_id
 )
