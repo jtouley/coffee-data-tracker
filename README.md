@@ -327,7 +327,7 @@ current state is computed:
 |---|---|---|
 | `run_manifests/run_date=…/batch=…` | ingest | written before the first request: the roasters an ingest sets out to fetch, each one's status then, and the mode (`full`, `sample`, `only`, `retry_failed`) |
 | `snapshots/run_date=…/batch=…` | ingest | every product seen (coffee or not), with variants and prices, and a `payload_hash` of the store's raw product payload (a real change, or a repeated fetch; WooCommerce's separately fetched size prices aren't in it, since they depend on how the fetch went) |
-| `fetches/…` | ingest | one row per roaster attempt, `ok` or `error`, with diagnostics: pages, requests, HTTP statuses, retries, 429s, duration and code version |
+| `fetches/…` | ingest | one row per roaster attempt, `ok` or `error`, with diagnostics: pages (200 responses other than robots.txt, so per-size and sitemap fetches count), requests, HTTP statuses, retries, 429s, duration and code version |
 | `bodies/…` | ingest | product description text, stored once per new description |
 | `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
 | `probes/…` | probe | store platform checks |

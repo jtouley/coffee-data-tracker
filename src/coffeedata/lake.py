@@ -456,6 +456,15 @@ def _same_file(info, path: Path) -> bool:
     return blob_id is None or blob_id == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
+def _stale_schema(api, repo_id: str, rel: str, info, path: Path) -> bool:
+    """Whether the dataset's schema file at `rel` has fewer columns than the staged one at `path`: only then is it
+    replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by) compare by name."""
+    if _same_file(info, path):
+        return False
+    remote = pq.read_schema(api.hf_hub_download(repo_id, rel, repo_type="dataset"))
+    return set(remote.names) < set(pq.read_schema(path).names)
+
+
 def new_batch_id(now: datetime | None = None) -> str:
     """Sortable and unique: re-running a step adds a new batch instead of rewriting an old one."""
     now = now or datetime.now(UTC)
@@ -649,9 +658,11 @@ class Lake:
         and the next publish sends them.
 
         A table's zero-row schema file is sent when the dataset doesn't have it yet (a table added after the lake
-        was created), so a glob over that table resolves, and replaced when the dataset's copy differs (one from
-        before a column was added, which ensure_schemas refreshed in staging), so a reader of the dataset alone
-        sees every column; this is checked once per process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+        was created), so a glob over that table resolves, and replaced when the dataset's copy lacks columns the
+        staged one has (one from before a column was added, which ensure_schemas refreshed in staging), so a
+        reader of the dataset alone sees every column. Like ensure_schemas, that compares column names, so a
+        process running older code (fewer columns) never replaces a newer schema file. This is checked once per
+        process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
         if not self.remote:
             return 0
@@ -686,7 +697,7 @@ class Lake:
                     for p, rel in zip(files, rels, strict=True)
                     if rel not in existing
                     or rel.startswith("marts/")
-                    or (rel in schema_paths and not _same_file(existing[rel], p))
+                    or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
                 ]
                 if ops:
                     api.create_commit(

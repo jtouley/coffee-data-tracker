@@ -10,7 +10,12 @@ with run as (
     {% if var('as_of_run') %}
     select cast('{{ var("as_of_run") }}' as date) as run_date
     {% else %}
-    select max(run_date) as run_date from {{ ref('stg_fetches') }}
+    -- A run with a manifest and no fetch yet (killed before its first chunk) is still the latest run.
+    select max(run_date) as run_date from (
+        select run_date from {{ ref('stg_fetches') }}
+        union all
+        select run_date from {{ lake('run_manifests') }} where roaster_id is not null
+    )
     {% endif %}
 ),
 this_run as (select f.* from {{ ref('stg_fetches') }} f join run using (run_date)),

@@ -42,9 +42,11 @@ class Variant(BaseModel):
 
 
 def payload_hash(payload: object) -> str:
-    """A stable hash of a raw store payload: canonical JSON (sorted keys), so key order never changes it."""
+    """A stable hash of a raw store payload: canonical JSON (sorted keys), so key order never changes it.
+    surrogatepass: a lone surrogate (a truncated emoji escape, which json.loads accepts) hashes instead of failing
+    the roaster's whole fetch; every other string encodes as plain UTF-8, so its hash is unchanged."""
     raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False, default=str)
-    return hashlib.sha256(raw.encode()).hexdigest()[:32]
+    return hashlib.sha256(raw.encode("utf-8", "surrogatepass")).hexdigest()[:32]
 
 
 class CatalogItem(BaseModel):

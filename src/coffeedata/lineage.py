@@ -12,16 +12,21 @@ import os
 import platform
 import subprocess
 from importlib import metadata
+from pathlib import Path
 
 # The packages whose versions decide what a build produces.
 KEY_PACKAGES = ("coffeedata", "dbt-core", "dbt-duckdb", "duckdb", "pyarrow", "pydantic", "httpx")
 
 
 def git_sha() -> str | None:
+    """GITHUB_SHA, else the sha of the checkout this package runs from (never the cwd's repo), else None."""
     if os.environ.get("GITHUB_SHA"):
         return os.environ["GITHUB_SHA"]
     try:
-        r = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True)
+        here = Path(__file__).resolve().parent
+        r = subprocess.run(
+            ["git", "-C", str(here), "rev-parse", "HEAD"], capture_output=True, text=True, check=True
+        )
         return r.stdout.strip() or None
     except (OSError, subprocess.CalledProcessError):
         return None

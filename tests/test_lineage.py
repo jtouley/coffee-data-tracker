@@ -1,6 +1,7 @@
 """Operational metadata kept in the lake and build records (never served): fetch diagnostics, run manifests,
 payload hashes, and how older files without these columns still read."""
 
+import hashlib
 import json
 import re
 from datetime import date
@@ -111,6 +112,30 @@ def test_the_manifest_is_published_before_the_first_request(lake, monkeypatch):
     # Without a mode (a caller other than the CLI), the manifest says so instead of claiming a full run.
     ingest.run(lake, [SLOW], "2026-11-02", workers=1)
     assert [r["mode"] for r in _rows(lake, "run_manifests", "and roaster_id = 'slow.com'")] == [None]
+
+
+def test_a_lone_surrogate_hashes_instead_of_failing_the_roaster():
+    # json.loads accepts a truncated emoji escape; the store's whole catalog must not fail over it.
+    r = Roaster(roaster_id="x.com", name="X", host="x.com", platform="shopify")
+    p = json.loads('{"id": 1, "title": "Kenya \\ud83d", "variants": [{"id": 9, "price": "20.00"}]}')
+    assert re.fullmatch(r"[0-9a-f]{32}", shopify.parse_product(p, r).payload_hash)
+    # Ordinary non-ASCII text hashes exactly as plain UTF-8 did before (surrogatepass changes nothing there).
+    q = {"title": "Café Ñandú 咖啡 ☕"}
+    raw = json.dumps(q, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    assert payload_hash(q) == hashlib.sha256(raw.encode()).hexdigest()[:32]
+
+
+def test_git_sha_is_the_packages_checkout_not_the_cwds(tmp_path, monkeypatch):
+    import subprocess
+
+    monkeypatch.delenv("GITHUB_SHA", raising=False)
+    here = Path(lineage.__file__).resolve().parent
+    mine = subprocess.run(["git", "-C", str(here), "rev-parse", "HEAD"], capture_output=True, text=True)
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    subprocess.run(["git", "-C", str(tmp_path), "-c", "user.email=a@b", "-c", "user.name=a", "commit", "-q",
+                    "--allow-empty", "-m", "other repo"], check=True)  # fmt: skip
+    monkeypatch.chdir(tmp_path)  # run from inside another repo
+    assert lineage.git_sha() == (mine.stdout.strip() or None)
 
 
 def test_code_version_falls_back_to_the_package_version(monkeypatch):

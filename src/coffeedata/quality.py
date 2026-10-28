@@ -238,10 +238,15 @@ def _release(lake: Lake, build_id: str, table: str) -> str:
 
 
 def latest_run(lake: Lake) -> str | None:
-    """The newest run_date with any fetch attempt in the lake."""
+    """The newest run_date with any fetch attempt, or any run manifest, in the lake: a run that died after
+    publishing its manifest but before its first fetch is still the run a build judges (and fails as incomplete)."""
     row = (
         lake.connect()
-        .execute(f"select max(run_date)::varchar from {lake.scan('fetches')} where roaster_id is not null")
+        .execute(
+            f"select max(run_date)::varchar from (select run_date from {lake.scan('fetches')} "
+            f"where roaster_id is not null union all select run_date from {lake.scan('run_manifests')} "
+            "where roaster_id is not null)"
+        )
         .fetchone()
     )
     return row[0] if row else None

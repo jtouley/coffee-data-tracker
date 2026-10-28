@@ -235,7 +235,9 @@ def cmd_build(args: argparse.Namespace) -> bool:
             file=sys.stderr,
         )
         return False
-    quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB)
+    # The release read above is the one this replaces: serve doesn't read it again (a 429 there would leave a
+    # passing release recorded but unserved).
+    quality.serve(lake, build_id, f"build for {run_date}", SERVED_DB, previous=served)
     print(f"built {db}; serving release {build_id}")
     return True
 

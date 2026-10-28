@@ -203,6 +203,19 @@ def test_a_partial_ingests_manifest_never_shrinks_the_expected_set(lake, tmp_pat
     con.close()
 
 
+def test_a_run_killed_after_its_manifest_is_still_the_run_judged(lake, tmp_path):
+    for rid in SEED:  # last week: complete
+        run(lake, "2026-10-19", rid, FULL[:5])
+    manifest(lake, "2026-10-26", list(SEED))  # this week's full ingest died before its first fetch
+    assert quality.latest_run(lake) == "2026-10-26"
+    r = build(lake, tmp_path, check=False, as_of_run=quality.latest_run(lake))
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    con = build(lake, tmp_path, min_attempted_share=0, min_ok_share=0)  # no as_of_run: the default run CTE
+    got = con.execute("select distinct run_date::varchar, attempted from run_completeness").fetchall()
+    assert got == [("2026-10-26", False)]
+    con.close()
+
+
 def test_served_is_none_only_when_nothing_is_served(lake, monkeypatch):
     assert quality.served(lake) is None  # a new lake: no marts/release.parquet
 
@@ -284,7 +297,12 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     built.close()
     run(lake, "2026-10-26", RID, FULL[5:32])  # 5 gone, 2 new: within tolerance
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert cli.cmd_build(args("2026-10-26")) is True
+    assert len(reads) == 1  # serve logs the release the build already read, without reading it again
+    monkeypatch.setattr(quality, "served", real_served)
     second_release = current.read_bytes()
     b1, b2 = (b for b, _, _ in quality.builds(Lake()))
     # Every served row says which build and which run it came from.

@@ -37,7 +37,7 @@ class RequestStats:
     """What one tracked unit of work (a roaster's fetch) asked of the network: kept per thread by `track()`."""
 
     requests: int = 0  # every HTTP attempt, retries and robots.txt included
-    pages: int = 0  # 200 responses to page requests (robots.txt isn't one)
+    pages: int = 0  # 200 responses other than robots.txt: listing pages, and any per-product or sitemap fetch
     retries: int = 0  # attempts after the first for one URL
     rate_limited: int = 0  # 429 responses
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
