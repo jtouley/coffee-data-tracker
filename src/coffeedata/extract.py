@@ -6,9 +6,10 @@ import json
 import logging
 import os
 import re
+from collections import Counter
 
 from .models import CatalogItem, Enrichment
-from .origins import COUNTRIES, canonical_country
+from .origins import COUNTRIES, REGIONS, canonical_country
 
 log = logging.getLogger(__name__)
 
@@ -158,9 +159,15 @@ _MOCHA_JAVA = re.compile(r"\bmo[ck]h?a[- ]java\b", re.I)
 _NO_ORIGIN = re.compile(r"\b(random|mystery|surprise|roaster'?s pick|roaster'?s choice)\b", re.I)
 
 
+def _strip_java(text: str) -> str:
+    """Blank out "java" (keeping offsets) unless the text names a Javanese place."""
+    if _JAVA_ORIGIN.search(text):
+        return text
+    return re.sub(r"\bjava\b", lambda m: " " * len(m.group()), text, flags=re.I)
+
+
 def _countries(text: str) -> list[str]:
-    if not _JAVA_ORIGIN.search(text):
-        text = re.sub(r"\bjava\b", " ", text, flags=re.I)
+    text = _strip_java(text)
     found = [canonical_country(m.group(1)) for m in _COUNTRY.finditer(text)]
     if not found and (m := _DEMONYM.search(text)):
         found = [DEMONYMS[m.group(1).lower()]]
@@ -170,6 +177,124 @@ def _countries(text: str) -> list[str]:
 def _country(text: str) -> str | None:
     found = _countries(text)
     return found[0] if found else None
+
+
+# --- Origin in a description ------------------------------------------------------------------------
+# A description names countries for reasons other than where the coffee grew: where its variety was bred ("SL-28, a
+# variety developed in Kenya"), or another coffee. Each mention is weighed by its context, and the country the
+# description names as the origin wins over the first one it names.
+_REGION = re.compile(
+    r"\b(" + "|".join(re.escape(r) for r in sorted(REGIONS, key=len, reverse=True)) + r")\b"
+    # Antigua and Barbuda grows no coffee to speak of; Santa Barbara, California is a roaster's home, not a farm's.
+    r"(?!\s*(?:and|&)\s+barbuda|,?\s+(?:ca|california)\b)",
+    re.I,
+)
+_VARIETY_NAME = re.compile(_VARIETAL.pattern + r"|\bsl[- ]?\d\d\b|\bruiru\b", re.I)
+# Where a variety comes from: "developed in Kenya", "bred by Scott Labs in Kenya", "native to southwestern Ethiopia".
+_BRED_IN = re.compile(
+    r"\b(?:developed|bred|native|indigenous|descend(?:s|ed|ing|ant)?)\b(?:\s+[\w'’.-]+){0,4}?\s+(?:in|to|from|of)\s+"
+    r"(?:[\w'’-]+\s+){0,3}$",
+    re.I,
+)
+# The same with words a coffee's own origin uses too ("originates in Huila"): only when the sentence names a variety.
+_FROM_ORIGINALLY = re.compile(
+    r"\b(?:originally|originat(?:ed|es|ing)|discovered|first (?:found|grown|planted|identified|selected))\b"
+    r"(?:\s+[\w'’.-]+){0,4}?\s+(?:in|to|from|of)\s+(?:[\w'’-]+\s+){0,3}$",
+    re.I,
+)
+# "a Kenyan variety", "Kenya-bred"
+_VARIETY_AFTER = re.compile(
+    r"^(?:[- ]?(?:bred|developed)\b|\s+(?:[\w-]+\s+)?(?:variet(?:y|al|ies)|cultivars?|landraces?)\b)", re.I
+)
+# "Origin: Honduras", "Region: Marcala, Honduras"
+_LABEL = re.compile(r"\b(?:origin|country|region|location)\s*[:\-–]\s*(?:[^\n,:;]{1,40},\s*)?$", re.I)
+# "Marcala, Honduras", "Finca El Puente, Honduras" (case-sensitive: a place name before the comma)
+_PLACE_COMMA = re.compile(r"\b([A-Z][\w'’.-]*(?:\s+(?:de|del|la|el)?\s*[A-Z][\w'’.-]*){0,3}),\s*$")
+# "a farm in Honduras", "grown at 1,600 masl in Honduras", "cultivated in Honduras"
+_LOCATED = re.compile(
+    r"\b(?:farms?|fincas?|estates?|stations?|cooperatives?|co-?ops?|located|grow(?:n|s|ing)?|produced|cultivat\w*|"
+    r"harvested|sourced)\b[^.;!?\n]{0,50}?\b(?:in|at|from)\s+(?:the\s+)?(?:[\w'’-]+\s+){0,2}$",
+    re.I,
+)
+ORIGIN, PLAIN, WEAK, BRED = "origin", "plain", "weak", "bred"
+
+
+def _mention_kind(text: str, start: int, end: int) -> str:
+    """How a country (or demonym) at text[start:end] relates to the coffee: its origin, a plain mention, a weak one
+    (next to a variety name), or where a variety was bred (which never counts)."""
+    before = re.split(r"[.!?;\n]", text[max(0, start - 120) : start])[-1]
+    after = re.split(r"[.!?;\n]", text[end : end + 60])[0]
+    near_variety = bool(_VARIETY_NAME.search(before[-40:]) or _VARIETY_NAME.search(after[:30]))
+    if _BRED_IN.search(before) or (
+        _FROM_ORIGINALLY.search(before) and (near_variety or _VARIETY_NAME.search(before + after))
+    ):
+        return BRED
+    if _LABEL.search(before):
+        return ORIGIN
+    if (m := _PLACE_COMMA.search(before)) and not (
+        _COUNTRY.search(m.group(1)) or _DEMONYM.search(m.group(1)) or _VARIETY_NAME.search(m.group(1))
+    ):
+        return ORIGIN
+    if near_variety or _VARIETY_AFTER.search(after):
+        return WEAK
+    return ORIGIN if _LOCATED.search(before) else PLAIN
+
+
+def _top(names: list[str]) -> str | None:
+    """The most-named country, the first named on a tie."""
+    if not names:
+        return None
+    counts = Counter(names)
+    return max(dict.fromkeys(names), key=lambda n: counts[n])
+
+
+def _region(text: str) -> str | None:
+    m = _REGION.search(text)
+    return REGIONS[m.group(1).lower()] if m else None
+
+
+def _body_mentions(body: str) -> dict[str, list[str]]:
+    text = _strip_java(body)
+    out: dict[str, list[str]] = {ORIGIN: [], PLAIN: [], WEAK: [], "demonym": [], "weak_demonym": []}
+    mentions: list[tuple[str, str, int]] = []
+    for m in _COUNTRY.finditer(text):
+        kind = _mention_kind(text, m.start(), m.end())
+        mentions.append((kind, canonical_country(m.group(1)), m.start()))
+    for m in _DEMONYM.finditer(text[:1500]):
+        kind = _mention_kind(text, m.start(), m.end())
+        mentions.append((kind, DEMONYMS[m.group(1).lower()], -1))
+    bred = {c for kind, c, _ in mentions if kind == BRED}
+    for kind, c, start in mentions:
+        if kind == BRED:
+            continue
+        # Once a country is where the variety was bred, its other passing mentions are that story too ("Kenya
+        # remains its best-known home"); only a labelled or located origin still counts for it.
+        if kind == PLAIN and c in bred:
+            kind = WEAK
+        if start < 0:
+            out["weak_demonym" if kind == WEAK else "demonym"].append(c)
+        # A labelled or located origin counts anywhere in the description; other mentions only near its top.
+        elif kind == ORIGIN or start < 1500:
+            out[kind].append(c)
+    return out
+
+
+def origin_country(title: str, body: str) -> str | None:
+    """The origin a listing names: a country in the title; else the country the description names as the origin,
+    else the one it names most; else a growing region that belongs to one country; else, as a last resort, a country
+    named only beside a variety. A country named only as where a variety was bred is never the origin."""
+    if c := _country(title):
+        return c
+    found = _body_mentions(body)
+    return (
+        _top(found[ORIGIN])
+        or _top(found[PLAIN])
+        or _top(found["demonym"])
+        or _region(title)
+        or _region(body)
+        or _top(found[WEAK])
+        or _top(found["weak_demonym"])
+    )
 
 
 def _process(text: str) -> str | None:
@@ -189,8 +314,10 @@ def rules(item: CatalogItem) -> Enrichment:
     origin_tag = _first(kv, "origin", "country", "region")
     # A title naming several countries ("Puerto Rico Supremo, Mexico, or Colombia") is a choice or a blend.
     no_origin = len(_countries(item.title)) > 1 or bool(_NO_ORIGIN.search(item.title))
-    e.origin_country = _country(origin_tag) or (
-        None if no_origin else _country(item.title) or _country(body[:1500])
+    e.origin_country = (
+        _country(origin_tag)
+        or _region(origin_tag)
+        or (None if no_origin else origin_country(item.title, body))
     )
     labelled = re.search(r"process(?:ing)?\s*[:\-–]\s*([^\n]{2,40})", body, re.I)
     e.process = (
