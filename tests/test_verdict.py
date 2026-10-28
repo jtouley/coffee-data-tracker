@@ -74,15 +74,15 @@ def test_submit_then_collect_stores_verdicts_once(lake, monkeypatch):
 
     class Batches:
         def create(self, requests):
-            sent["reqs"] = requests
-            return SimpleNamespace(id="batch1")
+            sent[f"batch{len(sent)}"] = requests
+            return SimpleNamespace(id=f"batch{len(sent) - 1}")
 
         def retrieve(self, batch_id):
             return SimpleNamespace(processing_status="ended")
 
         def results(self, batch_id):
             labels = {"Ethiopia Guji Natural": "coffee", "Roasted Sunflower Seeds": "not_coffee"}
-            for r in sent["reqs"]:
+            for r in sent[batch_id]:
                 title = r["params"]["messages"][0]["content"].split("\n")[0].removeprefix("Title: ")
                 yield SimpleNamespace(
                     custom_id=r["custom_id"],
@@ -92,11 +92,15 @@ def test_submit_then_collect_stores_verdicts_once(lake, monkeypatch):
     import anthropic
 
     monkeypatch.setattr(
-        anthropic, "Anthropic", lambda: SimpleNamespace(messages=SimpleNamespace(batches=Batches()))
+        anthropic, "Anthropic", lambda **_: SimpleNamespace(messages=SimpleNamespace(batches=Batches()))
     )
-    assert verdict.submit(lake)["submitted"] == 2
+    monkeypatch.setattr(verdict, "BATCH_SIZE", 1)  # large runs are split into several batches
+    out = verdict.submit(lake)
+    assert out["submitted"] == 2 and len(out["batch_ids"]) == 2
     assert verdict.pending(lake, "m", 100) == []  # in flight
+    assert verdict.open_batch_ids(lake) == set(out["batch_ids"])
     assert verdict.collect(lake, "2026-10-20") == {"collected": 2}
+    assert verdict.open_batch_ids(lake) == set()
     assert verdict.collect(lake, "2026-10-20") == {"collected": 0}  # collected batches aren't read again
     con = lake.connect()
     assert con.execute(f"select count(*) from {lake.scan('verdicts')}").fetchone() == (2,)
@@ -156,7 +160,7 @@ def test_judge_warms_the_cache_with_one_request_before_running_in_parallel(monke
                 content=[SimpleNamespace(type="text", text=json.dumps({"label": "coffee"}))],
             )
 
-    monkeypatch.setattr(anthropic, "Anthropic", lambda: SimpleNamespace(messages=Messages()))
+    monkeypatch.setattr(anthropic, "Anthropic", lambda **_: SimpleNamespace(messages=Messages()))
     rows = [{"title": f"Kenya {i}", "product_type": "", "tags": [], "grams": [340]} for i in range(5)]
     usage = {}
     assert set(verdict.judge(rows, "m", usage=usage).values()) == {True}

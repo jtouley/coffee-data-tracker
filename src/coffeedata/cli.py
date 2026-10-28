@@ -127,11 +127,13 @@ def cmd_classify(args: argparse.Namespace) -> None:
     lake = Lake()
     out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
     deadline = time.monotonic() + args.wait * 60
-    while out["submit"].get("submitted") and time.monotonic() < deadline:
+    # Wait for this run's batches only; whatever is still running is collected by the next run.
+    waiting = set(out["submit"].get("batch_ids", []))
+    while waiting and time.monotonic() < deadline:
         time.sleep(60)
-        if (got := verdict.collect(lake, args.run_date))["collected"]:
-            out["collect_after_wait"] = got
-            break
+        got = verdict.collect(lake, args.run_date)
+        out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+        waiting &= verdict.open_batch_ids(lake)
     _print(out)
 
 

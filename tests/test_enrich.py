@@ -69,7 +69,7 @@ def test_pending_is_derived_and_failures_retry(lake, monkeypatch):
     assert len(enrich.pending(lake, 10)) == 3
     assert len(enrich.pending(lake, 2)) == 2  # the cap leaves the rest pending, not "done"
     client = FakeClient(fail_ids={1})
-    monkeypatch.setattr(anthropic, "Anthropic", lambda: client)
+    monkeypatch.setattr(anthropic, "Anthropic", lambda **_: client)
     out = enrich.run(lake, limit=10, run_date="2026-10-26")
     assert out == {"pending": 3, "enriched": 2, "errors": 1}  # connection error didn't abort the run
     left = enrich.pending(lake, 10)
@@ -106,7 +106,7 @@ def test_batches_in_flight_are_not_resubmitted_and_collect(lake, monkeypatch):
             return ok + [SimpleNamespace(custom_id=results["ids"][2], result=SimpleNamespace(type="errored"))]
 
     client = SimpleNamespace(messages=SimpleNamespace(batches=Batches()))
-    monkeypatch.setattr(anthropic, "Anthropic", lambda: client)
+    monkeypatch.setattr(anthropic, "Anthropic", lambda **_: client)
     assert enrich.run(lake, 10, "2026-10-26")["submitted"] == 3
     assert enrich.pending(lake, 10) == []  # in flight
     assert enrich.collect(lake, "2026-10-26") == {"collected": 2}

@@ -147,8 +147,13 @@ def pending(lake: Lake, model_id: str, limit: int) -> list[dict]:
     return out
 
 
+# The Batches API takes at most 100,000 requests or 256 MB per batch; each request repeats the definition and up
+# to 1,500 characters of description (about 5 KB), so 10,000 keeps a batch near 50 MB.
+BATCH_SIZE = 10_000
+
+
 def submit(lake: Lake, limit: int = 100_000) -> dict:
-    """Send pending product versions to Claude in one Message Batch (half price; results within a day)."""
+    """Send pending product versions to Claude in Message Batches (half price; results within a day)."""
     import anthropic
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
@@ -159,29 +164,50 @@ def submit(lake: Lake, limit: int = 100_000) -> dict:
     todo = pending(lake, model_id, limit)
     if not todo:
         return {"pending": 0}
-    reqs = [
-        Request(
-            custom_id=r["input_hash"],
-            params=cast(MessageCreateParamsNonStreaming, request(item(r), model_id, ttl="1h")),
+    client = extract.client()
+    out: dict = {"pending": len(todo), "submitted": 0, "batch_ids": []}
+    for start in range(0, len(todo), BATCH_SIZE):
+        chunk = todo[start : start + BATCH_SIZE]
+        reqs = [
+            Request(
+                custom_id=r["input_hash"],
+                params=cast(MessageCreateParamsNonStreaming, request(item(r), model_id, ttl="1h")),
+            )
+            for r in chunk
+        ]
+        try:
+            batch = client.messages.batches.create(requests=reqs)
+        except anthropic.APIError as e:
+            log.warning("verdict batch submit failed: %s", e)
+            out["error"] = str(e)
+            break
+        now = datetime.now(UTC).replace(microsecond=0)
+        lake.write(
+            "verdict_batches",
+            f"verdict_batches/state=submitted/{batch.id}.parquet",
+            [
+                {"batch_id": batch.id, "state": "submitted", "at": now, "custom_id": r["input_hash"],
+                 "model": model_id, "definition": DEFINITION_VERSION}
+                for r in chunk
+            ],
+        )  # fmt: skip
+        out["submitted"] += len(reqs)
+        out["batch_ids"].append(batch.id)
+    return out
+
+
+def open_batch_ids(lake: Lake) -> set[str]:
+    """Batches submitted but not yet collected."""
+    vb = lake.scan("verdict_batches")
+    return {
+        r[0]
+        for r in lake.connect()
+        .execute(
+            f"""select distinct batch_id from {vb} where state = 'submitted'
+            and batch_id not in (select batch_id from {vb} where state = 'collected')"""
         )
-        for r in todo
-    ]
-    try:
-        batch = extract.client().messages.batches.create(requests=reqs)
-    except anthropic.APIError as e:
-        log.warning("verdict batch submit failed: %s", e)
-        return {"pending": len(todo), "submitted": 0, "error": str(e)}
-    now = datetime.now(UTC).replace(microsecond=0)
-    lake.write(
-        "verdict_batches",
-        f"verdict_batches/state=submitted/{batch.id}.parquet",
-        [
-            {"batch_id": batch.id, "state": "submitted", "at": now, "custom_id": r["input_hash"],
-             "model": model_id, "definition": DEFINITION_VERSION}
-            for r in todo
-        ],
-    )  # fmt: skip
-    return {"pending": len(todo), "submitted": len(reqs), "batch_id": batch.id}
+        .fetchall()
+    }
 
 
 def collect(lake: Lake, run_date: str | None = None) -> dict:

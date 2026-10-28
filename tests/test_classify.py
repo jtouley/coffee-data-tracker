@@ -177,3 +177,15 @@ def test_origin_adjectives_and_subscribable_coffees_are_coffee():
         item("Decaf Sumatra", product_type="variable-subscription", tags=["Coffee Subscriptions"])
     )
     assert not is_coffee(item("Four Bags", product_type="subscriptions", grams=1270))
+
+
+def test_tasting_note_and_marketing_tags_dont_exclude_a_coffee():
+    from coffeedata.classify import is_wholesale
+
+    for tags in (["Green Apple"], ["tea-like"], ["herbal"], ["Instant Gratification"], ["bundle-flat-discount:1.25"],
+                 ["Coffee Bundles & Gifts"]):  # fmt: skip
+        assert is_coffee(item("Kenya AA", tags=tags, grams=340)), tags
+    for tags in (["Green Coffee"], ["Tea"], ["Brewing Equipment"], ["Samplers"]):
+        assert not is_coffee(item("Kenya AA", tags=tags, grams=340)), tags
+    assert not is_wholesale(item("Kenya AA", tags=["wholesale-available"], grams=340))
+    assert is_wholesale(item("Kenya AA", tags=["Wholesale"], grams=2268))

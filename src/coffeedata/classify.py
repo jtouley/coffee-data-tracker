@@ -65,6 +65,17 @@ _DEMONYM = re.compile(r"\b(" + "|".join(DEMONYMS) + r")\b", re.I)
 _WHOLESALE = re.compile(
     r"\b(wholesale|resale|b2b|food ?service)\b|\bcase (of )?\(?\d+\)?|\bcases? of \d+", re.I
 )
+_WHOLESALE_TAG = re.compile(r"wholesale|resale|b2b|food ?service", re.I)
+_OTHER_META = re.compile(
+    r"\b(equipment|merch|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?)\b", re.I
+)
+# A tag counts only when it is the whole tag, with at most one word in front ("Brewing Equipment", "Green Coffee"):
+# stores tag real coffees "Green Apple", "tea-like", "herbal", "Instant Gratification" or "bundle-flat-discount:1.25".
+_TAG = re.compile(
+    r"(\w+ )?(equipment|merch(andise)?|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?|"
+    r"green( coffee| beans?)?|unroasted|(loose[- ]leaf )?teas?|herbal teas?|tisanes?)",
+    re.I,
+)
 _SWEET_COFFEE = re.compile(
     r"\b(flavou?red|coffee|roast(ed)?|decaf|blend|espresso|single[- ]origin|washed|natural|anaerobic|processed)\b",
     re.I,
@@ -107,14 +118,16 @@ def _bag_sized(item: CatalogItem) -> bool:
 
 
 def is_wholesale(item: CatalogItem) -> bool:
-    return bool(_WHOLESALE.search(f"{item.title} | {item.product_type} | {' '.join(item.tags)}"))
+    return bool(
+        _WHOLESALE.search(f"{item.title} | {item.product_type}")
+        or any(_WHOLESALE_TAG.fullmatch(t.strip()) for t in item.tags)
+    )
 
 
 def excluded(item: CatalogItem) -> bool:
     """Never a coffee, whatever else the listing says: gear, parts, merch, tea, green coffee, subscriptions,
     test listings. These skip Claude's verdict (verdict.py)."""
     title, ptype = item.title, item.product_type
-    meta = f"{ptype} | {' '.join(item.tags)}"
     return bool(
         _NOT_COFFEE.search(f"{title} | {ptype}")
         or _TEA.search(title)
@@ -127,13 +140,11 @@ def excluded(item: CatalogItem) -> bool:
         or _SUBSCRIPTION.search(title)
         or _SUBSCRIPTION_TYPE.search(ptype)
         or _GREEN_TITLE.search(title)
-        or _GREEN_META.search(meta)
+        or _GREEN_META.search(ptype)
         or _NOT_COFFEE_TYPE.search(ptype)
-        or (_TEA_META.search(meta) and not re.search(r"\bcoffee\b", meta, re.I))
-        or _NOT_COFFEE.search(ptype)
-        or re.search(
-            r"\b(equipment|merch|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?)\b", meta, re.I
-        )
+        or (_TEA_META.search(ptype) and not re.search(r"\bcoffee\b", ptype, re.I))
+        or _OTHER_META.search(ptype)
+        or any(_TAG.fullmatch(t.strip()) for t in item.tags)
     )
 
 
