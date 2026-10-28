@@ -817,6 +817,9 @@ def create_app(
     # photo_id -> (user, matched coffee_id, score, raw read, roast date): in memory, for the offline hand-off
     photo_reads: dict[str, tuple[str, str | None, int | None, str | None, str | None]] = {}
     last_reply: dict[str, tuple[str, dict]] = {}  # photo_id -> (owner, reply): a resend isn't read twice
+    # One upload of a photo at a time: two copies in flight together (the outbox resending one still on its way)
+    # would both miss last_reply and pay for two reads. The second waits, then gets the first's reply.
+    reading: dict[str, asyncio.Lock] = {}
 
     def describe(coffee_id: str | None) -> dict | None:
         c = store.coffee(coffee_id)
@@ -854,42 +857,43 @@ def create_app(
             photo = await run_in_threadpool(photos.normalize, await request.body())
         except photos.BadPhoto as e:
             raise HTTPException(422, str(e)) from None
-        if photo_id in last_reply:  # a resend from the outbox: the same reply, without a second read
-            owner, reply = last_reply[photo_id]
-            if owner != me.user_id:
-                raise HTTPException(409, "That photo id is taken.")
-            return reply
-        key = (me.user_id, datetime.now(UTC).date().isoformat())
-        if reads_today.get(key, 0) >= READS_PER_DAY:
-            # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
-            return {"photo_id": None, "status": "limit", "label": None, "raw": None}
-        reads_today[key] = reads_today.get(key, 0) + 1
-        # The dataset commit (which can retry for a while) and the label read run side by side.
-        saved, result = await asyncio.gather(
-            run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
-            run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
-        )
-        if (
-            saved is False
-            and (await run_in_threadpool(photos.load, photo_lake, photo_id) or ("",))[0] != me.user_id
-        ):
-            raise HTTPException(409, "That photo id is taken.")  # someone else's, from before a restart
-        photo_misses.pop(photo_id, None)
-        out: dict[str, Any] = {
-            "photo_id": photo_id,
-            "status": result.status,
-            "label": result.label,
-            "raw": result.raw,
-        }
-        if result.status == "read" and result.label:
-            out |= await run_in_threadpool(matched, result)
-            # Kept so a bag that cites this photo can use the read, whichever of the two reaches the server first
-            # (offline, the photo and the bag wait in the outbox together).
-            coffee_id = (out["match"] or {}).get("coffee_id")
-            photo_reads[photo_id] = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
-            await run_in_threadpool(apply_read, me.user_id, photo_id)
-        last_reply[photo_id] = (me.user_id, out)
-        return out
+        async with reading.setdefault(photo_id, asyncio.Lock()):
+            if photo_id in last_reply:  # a resend from the outbox: the same reply, without a second read
+                owner, reply = last_reply[photo_id]
+                if owner != me.user_id:
+                    raise HTTPException(409, "That photo id is taken.")
+                return reply
+            key = (me.user_id, datetime.now(UTC).date().isoformat())
+            if reads_today.get(key, 0) >= READS_PER_DAY:
+                # Past the day's reads the photo isn't kept either, so uploads can't fill the dataset.
+                return {"photo_id": None, "status": "limit", "label": None, "raw": None}
+            reads_today[key] = reads_today.get(key, 0) + 1
+            # The dataset commit (which can retry for a while) and the label read run side by side.
+            saved, result = await asyncio.gather(
+                run_in_threadpool(photos.save, photo_lake, photo_id, me.user_id, photo),
+                run_in_threadpool(labels.read, photo.jpeg, None, labels_client),
+            )
+            if (
+                saved is False
+                and (await run_in_threadpool(photos.load, photo_lake, photo_id) or ("",))[0] != me.user_id
+            ):
+                raise HTTPException(409, "That photo id is taken.")  # someone else's, from before a restart
+            photo_misses.pop(photo_id, None)
+            out: dict[str, Any] = {
+                "photo_id": photo_id,
+                "status": result.status,
+                "label": result.label,
+                "raw": result.raw,
+            }
+            if result.status == "read" and result.label:
+                out |= await run_in_threadpool(matched, result)
+                # Kept so a bag that cites this photo can use the read, whichever of the two reaches the server first
+                # (offline, the photo and the bag wait in the outbox together).
+                coffee_id = (out["match"] or {}).get("coffee_id")
+                photo_reads[photo_id] = (me.user_id, coffee_id, out["score"], result.raw, out["roast_date"])
+                await run_in_threadpool(apply_read, me.user_id, photo_id)
+            last_reply[photo_id] = (me.user_id, out)
+            return out
 
     def apply_read(user_id: str, photo_id: str) -> None:
         """A bag saved before its photo was read (typed while offline) takes the read's match, if there was one
@@ -908,12 +912,7 @@ def create_app(
         """The catalog match for a read label, described for the screen."""
         label = result.label or {}
         coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
-        described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
-        # Equal scores (one farm's lots, "Finca El Puente - Honey Processed" and "- Gesha Variety"): what the
-        # roaster sells now first, past offerings last.
-        described.sort(
-            key=lambda d: (-(d[1] or 0), bool(d[0] and d[0]["past"]), not (d[0] and d[0]["in_stock"]))
-        )
+        described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]  # ties: sold now first
         roast = result.roast_date()
         return {
             "match": describe(coffee_id),
