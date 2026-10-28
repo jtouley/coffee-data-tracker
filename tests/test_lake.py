@@ -247,3 +247,20 @@ def test_up_to_date_schema_files_are_left_alone(lake):
     before = p.stat().st_mtime_ns, p.stat().st_ino
     Lake()
     assert (p.stat().st_mtime_ns, p.stat().st_ino) == before
+
+
+def test_schema_refresh_uses_a_unique_temp_file(lake, monkeypatch):
+    import tempfile as tf
+
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    p = lake.root / SCHEMA_FILES["snapshots"]
+    pq.write_table(SCHEMAS["snapshots"].remove(0).empty_table(), p)  # stale: a column short
+    made = []
+    real = tf.mkstemp
+    monkeypatch.setattr(tf, "mkstemp", lambda **kw: made.append(kw) or real(**kw))
+    Lake()
+    assert made and made[0]["dir"] == p.parent and pq.read_schema(p).names == SCHEMAS["snapshots"].names
+    assert not list(p.parent.glob("*.tmp"))

@@ -158,7 +158,8 @@ def build(db: Path, out: Path) -> Path:
     totals = _q(
         con,
         """
-        select count(*) filter (where is_listed) as coffees, count(*) filter (where in_stock) as in_stock,
+        select count(*) filter (where catalog_status <> 'archived') as coffees,
+               count(*) filter (where in_stock) as in_stock,
                count(distinct roaster_id) as roasters from dim_coffee where is_listed""",
     )[0]
     catalog = _q(

@@ -1,5 +1,5 @@
 -- Market summary by origin x process for coffees listed now (public coffees only).
-with c as (select * from {{ ref('public_coffee') }} where is_listed and not is_blend and origin_country is not null)
+with c as (select * from {{ ref('public_coffee') }} where is_listed and catalog_status <> 'archived' and not is_blend and origin_country is not null)
 select
     (select max(last_seen) from {{ ref('public_coffee') }}) as as_of_run,
     origin_country, coalesce(process, 'unknown') as process,

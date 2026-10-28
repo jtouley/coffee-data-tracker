@@ -20,8 +20,10 @@ recent as (
 ),
 last_ok as (select * from f where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
 coffees as (
-    select roaster_id, count(*) filter (where is_listed) as coffees_listed,
-           count(*) filter (where in_stock) as coffees_in_stock
+    -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
+    select roaster_id, count(*) filter (where is_listed and catalog_status <> 'archived') as coffees_listed,
+           count(*) filter (where in_stock) as coffees_in_stock,
+           count(*) filter (where catalog_status = 'archived') as coffees_archived
     from {{ ref('dim_coffee') }} group by roaster_id
 )
 select
@@ -41,7 +43,8 @@ select
         when lo.products > 0 then 'no_coffee'
         else 'no_catalog'
     end as status,
-    coalesce(c.coffees_listed, 0) as coffees_listed, coalesce(c.coffees_in_stock, 0) as coffees_in_stock
+    coalesce(c.coffees_listed, 0) as coffees_listed, coalesce(c.coffees_in_stock, 0) as coffees_in_stock,
+    coalesce(c.coffees_archived, 0) as coffees_archived
 from {{ ref('stg_registry') }} r
 left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)

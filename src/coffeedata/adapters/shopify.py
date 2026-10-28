@@ -72,4 +72,6 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         if not new.keys() - items.keys():
             break
         items |= new
+    else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
+        raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
     return list(items.values())

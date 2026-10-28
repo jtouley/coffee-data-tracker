@@ -53,7 +53,7 @@ class CatalogItem(BaseModel):
     image: str | None = None
     variants: list[Variant] = Field(default_factory=list)
     body_hash: str = ""
-    # When the store first published the product (Shopify only); old sold-out coffees are its back catalog.
+    # When the store last published the product (Shopify only; a republished product gets a new time).
     published_at: datetime | None = None
     # Body text is used for classification and enrichment but never written to the snapshot.
     body_text: str = Field(default="", exclude=True)
