@@ -99,7 +99,8 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     lake = Lake()
     todo = ingest.select(lake, args.run_date, args.only, args.sample, args.retry_failed)
     print(f"ingesting {len(todo)} roasters for run {args.run_date}", file=sys.stderr)
-    _print(ingest.run(lake, todo, args.run_date, workers=args.workers))
+    rps = getattr(args, "shopify_rps", None) or ingest.SHOPIFY_RPS
+    _print(ingest.run(lake, todo, args.run_date, workers=args.workers, shopify_rps=rps))
 
 
 def cmd_enrich(args: argparse.Namespace) -> None:
@@ -479,6 +480,12 @@ def main(argv: list[str] | None = None) -> None:
     i.add_argument("--sample", type=int)
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
     i.add_argument("--workers", type=int, default=32)
+    i.add_argument(
+        "--shopify-rps",
+        type=float,
+        default=None,
+        help="requests/s across all Shopify stores together (default 3; halves itself on 429s)",
+    )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
     c.add_argument("--limit", type=int, default=100_000)

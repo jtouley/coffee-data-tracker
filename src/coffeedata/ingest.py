@@ -20,6 +20,7 @@ from .classify import is_coffee
 from .http import PoliteClient
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter
 
 log = logging.getLogger(__name__)
 
@@ -151,7 +152,9 @@ def rows_for(
     return {"snapshots": snaps, "fetches": fetches, "bodies": bodies, "enrichments": enrich}
 
 
-def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -> dict:
+def run(
+    lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32, shopify_rps: float = SHOPIFY_RPS
+) -> dict:
     rd = date.fromisoformat(run_date)
     con = lake.connect()
     known_bodies = {
@@ -194,7 +197,9 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
 
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
-    with PoliteClient() as client, ThreadPoolExecutor(workers) as ex:
+    # Shopify limits by client IP across all its stores, so its stores share one request budget.
+    shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
+    with PoliteClient(limiters={"shopify": shopify}) as client, ThreadPoolExecutor(workers) as ex:
         done: list[Result] = []
         for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
             done.append(fut.result())
@@ -209,4 +214,5 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
+        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses
     }

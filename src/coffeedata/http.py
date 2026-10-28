@@ -2,14 +2,18 @@
 
 from __future__ import annotations
 
+import copy
 import logging
 import threading
 import time
 import urllib.robotparser
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from urllib.parse import urlparse
 
 import httpx
+
+if TYPE_CHECKING:
+    from .ratelimit import PlatformLimiter
 
 log = logging.getLogger(__name__)
 
@@ -35,8 +39,12 @@ class PoliteClient:
         timeout: float = 15.0,
         retries: int = 3,
         transport: httpx.BaseTransport | None = None,
+        limiters: dict[str, PlatformLimiter] | None = None,
     ):
         self.min_interval = min_interval
+        # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
+        self.limiters = limiters or {}
+        self._limiter: PlatformLimiter | None = None
         self.retries = retries
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
@@ -58,6 +66,24 @@ class PoliteClient:
     def __exit__(self, *exc: object) -> None:
         self.close()
 
+    def for_platform(self, name: str) -> PoliteClient:
+        """This client with `name`'s platform-wide limiter applied to every request it sends (robots.txt too),
+        on top of per-host spacing. A view sharing the connection pool and state: close the original, not it."""
+        limiter = self.limiters.get(name)
+        if limiter is None or limiter is self._limiter:
+            return self
+        view = copy.copy(self)
+        view._limiter = limiter
+        return view
+
+    def _send(self, url: str, params: dict | None = None) -> httpx.Response:
+        if self._limiter is None:
+            return self._client.get(url, params=params)
+        with self._limiter.slot():
+            r = self._client.get(url, params=params)
+            self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
+        return r
+
     def _allowed(self, url: str) -> bool:
         host = urlparse(url).netloc
         with self._lock:
@@ -66,7 +92,7 @@ class PoliteClient:
             parser = urllib.robotparser.RobotFileParser()
             rules: urllib.robotparser.RobotFileParser | None = None  # None: no robots.txt, no restrictions
             try:
-                r = self._client.get(f"https://{host}/robots.txt")
+                r = self._send(f"https://{host}/robots.txt")
                 if r.status_code == 200:
                     parser.parse(r.text.splitlines())
                     rules = parser
@@ -97,7 +123,7 @@ class PoliteClient:
             self._wait_turn(host)
             retry_after = ""
             try:
-                r = self._client.get(url, params=params or None)
+                r = self._send(url, params or None)
             except httpx.HTTPError as e:
                 last_exc = e
             else:
