@@ -199,7 +199,7 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
 
 def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
-    marts (what the site, MCP, app and public export read); a failing one is still kept, with its results and a
+    marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
     copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
     from . import quality
 

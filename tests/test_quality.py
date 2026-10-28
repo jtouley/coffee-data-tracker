@@ -377,3 +377,30 @@ def test_export_and_site_default_to_the_served_release(monkeypatch):
     cli.main(["export-public"])
     cli.main(["site"])
     assert seen == {"export-public": str(cli.SERVED_DB), "site": str(cli.SERVED_DB)}
+
+
+def test_served_is_none_only_when_nothing_was_ever_served(tmp_path):
+    lake = Lake(str(tmp_path / "lake"))
+    assert quality.served(lake) is None  # no marts/release.parquet yet
+    (tmp_path / "lake" / "marts").mkdir(parents=True)
+    (tmp_path / "lake" / "marts" / "release.parquet").write_bytes(b"not parquet")
+    with pytest.raises(
+        Exception, match="(?i)parquet"
+    ):  # any other failed read is raised, not "nothing served"
+        quality.served(lake)
+
+
+def test_builds_in_the_same_second_are_ordered_by_build_id(tmp_path):
+    lake = Lake(str(tmp_path / "lake"))
+    lake.ensure_schemas()
+    at = datetime(2026, 10, 26, 12, tzinfo=UTC)
+    for b in ("20261026T120000-bbbbbb", "20261026T120000-aaaaaa"):
+        row = {
+            "build_id": b,
+            "run_date": date(2026, 10, 26),
+            "built_at": at,
+            "kind": "build",
+            "status": "pass",
+        }
+        lake.write("builds", f"builds/run_date=2026-10-26/build={b}.parquet", [row])
+    assert [b for b, _, _ in quality.builds(lake)] == ["20261026T120000-aaaaaa", "20261026T120000-bbbbbb"]
