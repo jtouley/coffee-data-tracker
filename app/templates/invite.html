@@ -19,7 +19,7 @@
     {% if not a.disabled %}
     <button class="link" type="button" data-reset="{{ a.user_id }}" data-name="{{ a.username }}">Reset {{ a.username }}’s password{{ chevron() }}</button>
     {% endif %}
-    <button class="link{{ '' if a.disabled else ' danger' }}" type="button" data-person="{{ a.user_id }}" data-disabled="{{ 'false' if a.disabled else 'true' }}"{% if not a.disabled %} data-confirm="Tap again to turn off {{ a.username }}’s account"{% endif %}>{{ "Turn " ~ a.username ~ "’s account back on" if a.disabled else "Turn off " ~ a.username ~ "’s account" }}</button>
+    <button class="link{{ '' if a.disabled else ' danger' }}" type="button" data-person="{{ a.user_id }}" data-name="{{ a.username }}" data-disabled="{{ 'false' if a.disabled else 'true' }}"{% if not a.disabled %} data-confirm="Tap again to turn off {{ a.username }}’s account"{% endif %}>{{ "Turn " ~ a.username ~ "’s account back on" if a.disabled else "Turn off " ~ a.username ~ "’s account" }}</button>
     {% else %}
     <p class="body mt8">Nobody else yet.</p>
     {% endfor %}

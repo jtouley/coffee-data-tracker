@@ -226,6 +226,8 @@ details > summary::-webkit-details-marker { display: none; }
 .lede { font-size: 1.0625rem; max-width: 34ch; }
 code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color: var(--ink); }
 .wordmark { font-size: 2.75rem; letter-spacing: -0.02em; line-height: 1; }
+/* The wordmark leads back to the public site; 48 px tall so it's a fair tap target. */
+.home { display: inline-flex; align-items: center; min-height: 48px; }
 .ink { color: var(--ink); }
 .minh44 { min-height: 44px; }
 .topline { border-top: 1px solid var(--rule); }
@@ -250,6 +252,7 @@ h2.group { margin: 32px 0 0; font: inherit; }
 h2.group .link { border-top: 1px solid var(--rule); }
 h2.group + .list .item:first-child { border-top: 0; }
 .ext.tap { display: inline-flex; align-items: center; min-height: 56px; padding: 0 8px; }
+.row > .ext.tap:last-child { margin-right: -8px; } /* the text ends on the gutter, like Synced and the taste tag */
 .body, .meta { text-wrap: pretty; }
 .thumb { width: 56px; height: 56px; border-radius: 6px; object-fit: cover; flex: none; background: var(--panel); }
 .bagrow { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 8px 0; border-bottom: 1px solid var(--rule); color: inherit; }
@@ -275,9 +278,22 @@ h1:focus:not(:focus-visible) { outline: none; }
 .sk { height: 16px; border-radius: 4px; background: var(--panel); }
 .sk.tall { height: 32px; }
 .w46 { width: 46%; } .w55 { width: 55%; } .w70 { width: 70%; } .w82 { width: 82%; }
+/* Reading a label: a cup fills while the label is read (the expected 2 to 5 s), in ink, no accent: it isn't
+   tappable. Transforms only, so it stays on the compositor. Reduced motion: a still, half-full cup. */
+.brewing { display: flex; align-items: center; gap: 12px; }
+.cup { flex: none; overflow: visible; }
+.cup .rim { fill: none; stroke: var(--ink-2); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cup .stream rect, .cup .pour { fill: var(--ink-2); }
+.cup .pour { transform-box: fill-box; transform-origin: bottom; transform: scaleY(.5); }
+.cup .stream { opacity: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .sk { animation: pulse 1.2s ease-in-out infinite alternate; }
   @keyframes pulse { to { opacity: .45; } }
+  /* Fills to 85% over 5 s and holds there: never "done" before the read is. */
+  .cup .pour { transform: scaleY(.85); animation: pour 5s cubic-bezier(.2, .6, .35, 1) both; }
+  @keyframes pour { from { transform: scaleY(.04); } }
+  .cup .stream { opacity: 1; animation: drip .5s linear infinite; }
+  @keyframes drip { from { transform: translateY(-9px); } to { transform: translateY(0); } }
 }
 dl.spec { display: grid; grid-template-columns: 112px 1fr; margin: 16px 0 0; font-size: 0.9375rem; border-top: 1px solid var(--rule); }
 dl.spec dt, dl.spec dd { padding: 12px 0; border-bottom: 1px solid var(--rule); margin: 0; }
@@ -321,6 +337,10 @@ details.disclose[open] [data-more-summary] { display: none; }
 .undo i { position: absolute; left: 16px; right: 16px; bottom: 8px; height: 2px; background: currentColor; opacity: .35;
   transform-origin: left; animation: undo 5s linear forwards; }
 @keyframes undo { to { transform: scaleX(0); } }
+/* Notice: what the last save did, on the screen it landed on ("Bag saved", "Saved on this phone"). The same
+   quiet strip as Undo; static, so no accent. */
+.notice { display: flex; align-items: center; background: var(--panel); color: var(--ink); border-radius: 8px;
+  padding: 12px 16px; min-height: 48px; font-size: 0.9375rem; margin: 8px 0; text-wrap: pretty; }
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation-duration: 0s !important; } }
 .bagrow .meta { display: block; }

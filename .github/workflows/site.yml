@@ -1,0 +1,50 @@
+# Rebuild and deploy the public site when its templates or site.py change on main, so a copy or layout change
+# doesn't wait for Monday's weekly run. It reads the lake (dbt build) but never publishes to it: the marts it
+# writes stay on the runner. Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a
+# queued site build there would cancel a queued shot log or weekly run. A newer push supersedes an older site build.
+name: site
+on:
+  push:
+    branches: [main]
+    paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: site
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}
+      PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+      SITE_URL: ${{ vars.SITE_URL }}
+      APP_URL: ${{ vars.APP_URL }}
+      GOVERNING_STATE: ${{ vars.GOVERNING_STATE }}
+      SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: Check lake config
+        run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
+      - name: Build the site from the lake
+        run: uv run coffeedata build && uv run coffeedata site
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
+        with: {path: build/site}
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment: {name: github-pages, url: "${{ steps.deployment.outputs.page_url }}"}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346  # v5.0.1

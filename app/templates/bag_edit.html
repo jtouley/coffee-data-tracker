@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Edit bag · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="back" href="{{ back[0] }}">‹ {{ back[1] }}</a></div>
+  <h1 class="serif title mt8">Edit bag</h1>
+  <p class="body">Saving keeps its shots as they were.</p>
+  <form class="fill" id="bagedit" data-next="{{ back[0] }}" novalidate>
+    <label class="flabel" for="coffee">Roaster and coffee</label>
+    <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" value="{{ bag.coffee_freetext or '' }}" required>
+    <label class="flabel" for="roast_date">Roast date (optional)</label>
+    <input class="input" id="roast_date" name="roast_date" type="date" max="{{ now.date().isoformat() }}" value="{{ bag.roast_date.isoformat() if bag.roast_date else '' }}" data-empty-class>
+    <label class="flabel" for="weight_g">Weight in grams (optional)</label>
+    <input class="input" id="weight_g" name="weight_g" inputmode="numeric" autocomplete="off" value="{{ bag.weight_g or '' }}">
+    <div class="seg two mt24" role="group" aria-label="This bag" data-finished>
+      <button type="button" data-v="false" aria-pressed="{{ 'false' if bag.finished_on else 'true' }}">Still using it</button><button type="button" data-v="true" aria-pressed="{{ 'true' if bag.finished_on else 'false' }}">Finished</button>
+    </div>
+    <div class="hint" data-hint role="status"></div>
+    <div class="spacer"></div>
+    <div class="dock sticky"><button class="btn primary" type="submit">Save bag</button></div>
+  </form>
+  <script id="bag-record" type="application/json">{{ record | tojson }}</script>
+{% endblock %}

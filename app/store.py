@@ -28,7 +28,7 @@ log = logging.getLogger(__name__)
 # What the screens show about a catalog coffee (whatever of it this week's export has).
 FACTS = ("title", "roaster_name", "roaster_state", "origin_country", "origin_region", "process", "tasting_notes", "url",
          "elevation_masl_min", "elevation_masl_max",
-         "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock")  # fmt: skip
+         "price_per_100g", "min_price_usd", "bag_sizes_g", "in_stock", "catalog_status")  # fmt: skip
 MISS_TTL = 3600  # seconds before a coffee missing from the catalog export is looked up again
 # Tries for each table read at start: a Hugging Face hiccup (429, timeout) waits 2 then 4 seconds rather than
 # crashing the only instance, which Cloud Run would answer with "no available instance" until another starts.
@@ -437,6 +437,11 @@ class Store:
         """A bag typed by hand: matched to the catalog the same way a typed shot is."""
         bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         prev = self._owned(self.bags, bag.bag_id, user_id)
+        # A day's grace: the phone's date can be ahead of the server's. Only a date being set now is refused, so a
+        # bag stored before this check (with a future date) can still take its photo's match.
+        new_date = not (prev and prev.item.roast_date == bag.roast_date)
+        if new_date and bag.roast_date and bag.roast_date > date.today() + timedelta(days=1):
+            raise Invalid("That roast date is in the future. Check the year.")
         same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
         if prev and same_text and not bag.coffee_id:
             # A resend or an edit of something else keeps the match; changed text is matched again below.
