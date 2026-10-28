@@ -1,6 +1,7 @@
 -- Current roaster state, derived from probe and fetch history (mirrors registry.STATE_SQL in Python, which
 -- picks what to fetch; tests/test_dbt.py::test_python_and_dbt_agree_on_roaster_status checks the two agree).
-with probes as (select * from {{ ref('stg_probes') }}),
+-- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed (as in Python).
+with probes as (select * from {{ ref('stg_probes') }} where status <> 'robots_unavailable'),
 last_probe as (select * from probes qualify row_number() over (partition by roaster_id order by probed_at desc) = 1),
 last_good_probe as (
     select * from probes where status = 'ok'

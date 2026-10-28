@@ -63,7 +63,8 @@ def test_app_in_a_browser(lake, tmp_path):
     accounts.create_owner("SETUP-CODE-1234", "jtouley", PW)
     # Label reads answer in turn: a clear match, an unclear one, an unreadable label, then the photo sent offline.
     reader = FakeClient([LABEL | {"roaster": "Larkspur Roasting"}, LABEL | {"roaster": "Larkspur Roasting", "coffee": "Hambela"},
-                         {"legible": False, "roaster": None, "coffee": None}, LABEL | {"roaster": "Larkspur Roasting"}])  # fmt: skip
+                         {"legible": False, "roaster": None, "coffee": None}, LABEL | {"roaster": "Larkspur Roasting"},
+                         LABEL | {"roaster": "Larkspur Roasting", "roast_date": "2016-03-10"}])  # a misread year  # fmt: skip
     app = create_app(
         lake,
         Sessions(accounts, secure=False),

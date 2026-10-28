@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import Blocked, PoliteClient
+from .http import Blocked, PoliteClient, RobotsUnavailable
 
 log = logging.getLogger(__name__)
 
@@ -221,18 +221,23 @@ HTML_MARKERS = [
 
 
 def probe_one(client: PoliteClient, domain: str) -> dict:
-    """Which platform serves this roaster's catalog? status: ok | blocked | unreachable | http_<code>."""
+    """Which platform serves this roaster's catalog? status: ok | blocked | unreachable | http_<code> |
+    robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
     home = None
+    no_robots = False
     for host in (domain, f"www.{domain}"):
         try:
             home = client.get(f"https://{host}/")
             break
         except Blocked:
             return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
+        except RobotsUnavailable:
+            no_robots = True
         except httpx.HTTPError:
             continue
     if home is None:
-        return {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}
+        status = "robots_unavailable" if no_robots else "unreachable"
+        return {"status": status, "final_host": "", "platform": "", "http_status": None}
     if home.status_code != 200:
         return {
             "status": f"http_{home.status_code}",
@@ -247,6 +252,8 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     ]:
         try:
             data = client.get_json(f"https://{host}{path}", **params)
+        except RobotsUnavailable:  # the home page redirected to a host whose robots.txt didn't answer
+            return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
         except (Blocked, httpx.HTTPError):
             data = None
         if isinstance(data, kind) and (kind is list or "products" in data):
