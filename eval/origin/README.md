@@ -72,7 +72,19 @@ once on a sealed test set. The results are in `RESULTS.md`.
 - The test set here was scored for #41 and is now spent. It may join the regression fixtures.
   - The next sealed evaluation of origin extraction needs a fresh test set: re-split with a new salt over products
     that weren't in these sets (for example, lots first seen after 2026-10-28), and record that salt here.
-  - Follow-ups until then are measured on train and validation only.
+  - Until then, small follow-ups use CLAUDE.md rule 9: each changed product is listed and checked by hand (test
+    products as a count only), and the running total below is kept.
+
+## Changed products since the last full evaluation (CLAUDE.md rule 9)
+
+The last full evaluation is #41: rules frozen at 9c2c98c, test set scored once. When this total goes over 50, or a
+change alters how a rule decides rather than one case it gets wrong, the next change needs the full process and a
+fresh test set.
+
+| change | products changed vs main | train | validation | test (count only) | checked by hand |
+|---|---:|---:|---:|---:|---|
+| #46: region names after "roasted in" or in business names; label fields that end at a country | 5 | 3 | 1 | 1 | 4 of 4 train/validation correct: blends that named one country, now None |
+| **running total** | **5** | | | | |
 
 ## Commands
 

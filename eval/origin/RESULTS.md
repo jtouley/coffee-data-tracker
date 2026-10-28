@@ -78,8 +78,9 @@ same products, so unchanged products add nothing, and it is much tighter.
 - Its wrong-country rate is lower overall.
 - The one new kind of wrong-country error is in None → country, where a region name gives a country.
   - test: 1 of 25 (about 1.5 of the set's 38). It is not a blend: a roaster's service page names
-    "Copan Coffee Roasters LLC", and the Copán region table read the company name as Honduras. The follow-up below
-    fixes this class (region names in business names and after "roasted in").
+    "Copan Coffee Roasters LLC", and the Copán region table read the company name as Honduras. #46 stops region
+    names inside business names and after "roasted in" from counting. That rule was prompted by this test example,
+    which is acceptable only because the test set is now retired (see README.md).
   - train: 2 of 25
   - Main's errors are much larger: 22 of 25 in country → None and 7 of 7 in country → other on test.
 
@@ -109,7 +110,8 @@ El Puente lots.
   double-fermented Kenya-style", Kenya).
 - No case gets a different wrong country.
 - Main gets 34 of the 70 right.
-- The El Puente SL-28 lot gives Honduras ("Marcala, Honduras"). Without that country it gives None, never Kenya.
+- The El Puente SL-28 lot gives Honduras ("Marcala, Honduras"). Without that country it gives None, also when the
+  title says "Kenya SL-28" (`test_a_variety_name_is_not_an_origin`).
 
 ## Limits
 
@@ -126,35 +128,3 @@ El Puente lots.
 - The cost of abstaining is 1,000 fewer rules origins (1,207 out, 207 in). With Claude enrichment enabled,
   `needs_llm()` sends those products to Claude; without it they stay empty, where main had a guess that the labels
   show was wrong about 88% of the time (test, country → None).
-
-## Follow-up: region context, "Colombia Varietal", title varietals (after #41)
-
-These are rule fixes from the review of #41, measured on **train and validation only**. The test set was scored
-once for #41 and isn't re-used to tune or to choose; the next sealed evaluation needs a fresh test set (see
-`README.md`).
-
-- **Region context:** a region counts only where coffee grew. Not after "roasted in", "based in", "our cafe in", and
-  not inside a business name ("Copan Coffee Roasters LLC").
-- **"Colombia Varietal"** is no longer blanked; only "Variedad/var./variety Colombia" are.
-- **Title varietals:** a title country followed by a varietal ("Colombia Caturra", "Kenya SL28 AA") yields only to a
-  stated origin elsewhere, not to a region mentioned in passing.
-- **Label fields:** a field no longer ends at a country that looks like the next "Label:". In "Origin: Peru, Colombia
-  Varieties: …", both countries are in the field.
-- **Place, Country:** reads "in Las Flores, Honduras" from the original text, so the blanked Flores doesn't hide it.
-
-Every product whose origin changes from #41 ("v2") to the follow-up ("v3") was labelled, so the v3 − v2 difference
-is exact (no sampling error). Main − v3 is the #41 paired estimate plus that difference.
-
-| set | v3 ≠ v2 | v3 − v2: agree | v3 − v2: wrong-country | paired v3 − main: agree | paired v3 − main: wrong-country |
-|---|---:|---:|---:|---:|---:|
-| train (28,001) | 6 | +6 (+0.02%) | −5 (−0.02%) | +2.8% ± 0.2 | −2.5% |
-| validation (7,879) | 1 | +1 (+0.01%) | −1 (−0.01%) | +3.6% ± 0.7 | −3.2% ± 0.3 |
-
-The 7 changes:
-- 5 labelled blends, where v2 kept one component: "Origin: Peru, Colombia …", "Region: Guatemala & Sumatra Blend",
-  "Region: Kenya & Ethiopia", "Origin: Rwanda & Colombia".
-- 1 labelled origin v2 had lost: "Origin: Planadas, Tolima, Colombia Variety: Geisha".
-- None became a different wrong country.
-
-The roaster-town and business-name cases don't occur in train or validation. They are covered by unit tests
-(`test_region_only_where_coffee_grew`).

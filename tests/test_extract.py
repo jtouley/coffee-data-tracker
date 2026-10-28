@@ -439,30 +439,46 @@ def test_region_only_where_coffee_grew():
     )
 
 
-def test_colombia_varietal_is_still_colombia():
-    assert extract.rules(item("Colombia Varietal Series Pink Bourbon")).origin_country == "Colombia"
-    body = "Origin: Colombia Varietal: Castillo Process: Washed"
-    assert extract.rules(item("Lot 7", body=body)).origin_country == "Colombia"
-    # A labelled blend of two origins is no answer, not the first one.
-    body = "Origin: Peru, Colombia Varieties : South and Central American Coffees Type: Blend"
-    assert extract.rules(item("Adirondack", body=body)).origin_country is None
-    # Colombia as the variety's name is still not an origin.
-    assert extract.rules(
-        item("Finca La Esperanza var. Colombia", body="Grown in Marcala, Honduras.")
-    ).origin_country == ("Honduras")
+def test_label_field_names_every_country():
+    # A label field doesn't end at a country that looks like the next "Label:" (review of #41's follow-up).
+    body = "Rift Valley Blend Region: Kenya & Ethiopia Roast Level: Medium Tasting Notes: Blueberry"
+    assert extract.rules(item("Roast-To-Order", body=body)).origin_country is None
+    body = "Region: Guatemala & Sumatra BlendAltitude: 1200-1700MProcess: Washed"
+    assert extract.rules(item("Autumn Harvest", body=body)).origin_country is None
 
 
-def test_title_country_with_a_varietal_keeps_its_country():
-    # A region named in passing doesn't overrule "Colombia Caturra"; a stated origin elsewhere still does.
-    assert (
-        extract.rules(item("Colombia Caturra", body="Roast like our Antigua favorite.")).origin_country
-        == "Colombia"
-    )
-    assert extract.rules(
-        item("Kenya SL28 AA", body="If you love our Ethiopia Guji, try this lot from Nyeri.")
-    ).origin_country == ("Kenya")
-    assert (
-        extract.rules(item("Finca El Puente Kenya SL-28", body="Grown in Marcala, Honduras.")).origin_country
-        is None
-    )
-    assert extract.rules(item("Lot 7", body="Grown in Las Flores, Honduras.")).origin_country == "Honduras"
+# Review of #46: listings where the title or a "Colombia variety" mention names a variety, not where the coffee grew.
+# Each must give the right country or None, never the variety's country.
+VARIETY_NAME_CASES = [
+    ("Finca El Puente Kenya SL-28", SL.replace(", Honduras", ""), "Honduras"),
+    (
+        "El Puente - Kenya Variety",
+        "Moisés and Marysabel grow this Kenya variety in Marcala, La Paz.",
+        "Honduras",
+    ),
+    ("Kenya SL28 Microlot", "From Finca Monteblanco in Huila.", "Colombia"),
+    ("Kenyan SL-28 | Finca La Riviera", "SL-28 planted at 1,900 masl in Pitalito, Huila.", "Colombia"),
+    (
+        "Ethiopia Landrace - Finca Inmaculada",
+        "Ethiopian landraces planted in Valle del Cauca, near Cali.",
+        "Colombia",
+    ),
+    ("Kenya Batian", "Grown by smallholders in Marcala.", "Honduras"),
+    (
+        "Las Lajas Colombia Variety",
+        "The Chacón family grow the Colombia variety in the West Valley of Costa Rica, Sabanilla de Alajuela.",
+        "Costa Rica",
+    ),
+    ("Finca Santa Lucia - Colombia Variety", "From the highlands of northern Peru, near Jaen.", "Peru"),
+    ("Colombia Variety", "A Castillo-family cultivar planted across Costa Rica's West Valley.", "Costa Rica"),
+    (
+        "Finca Kilimanjaro - Colombia Varietal",
+        "Aida Batlle's lot of the Colombia variety from Santa Ana.",
+        "El Salvador",
+    ),
+]
+
+
+@pytest.mark.parametrize("title,body,truth", VARIETY_NAME_CASES, ids=[c[0] for c in VARIETY_NAME_CASES])
+def test_a_variety_name_is_not_an_origin(title, body, truth):
+    assert extract.rules(item(title, body=body)).origin_country in (truth, None)
