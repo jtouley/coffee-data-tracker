@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 1.0.0
+version: 2.0.0
 status: active
 domain: coffee
 dataProduct: coffee-data
@@ -270,19 +270,12 @@ schema:
     physicalType: varchar
     description: The roaster.
     required: true
-  - name: bag_id
+  - name: variant_id
     logicalType: string
     physicalType: varchar
     description: >-
       The store's own id for one bag size of the coffee (its Shopify or WooCommerce "variant" id), so price changes
-      to the 10 oz and the 2 lb bag are told apart. A store fact, not personal data: it has nothing to do with the
-      bags logged in the shot app, which never reach a public table.
-    customProperties:
-    - property: openDecision
-      value: >-
-        The facts-only guardrail (dbt/tests/public_tables_are_facts_only.sql) bans any public column named bag_id,
-        because in the shot app a bag is a person's purchase. This column only shares the name. Pending the
-        owner: keep bag_id with an explicit exception in the guardrail, or rename it variant_id (contract 2.0.0).
+      to the 10 oz and the 2 lb bag are told apart. A store fact, not personal data.
     primaryKey: true
     primaryKeyPosition: 2
     required: true

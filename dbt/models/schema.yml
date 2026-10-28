@@ -212,7 +212,7 @@ models:
       contract: {enforced: true}
     data_tests:
       - unique:
-          arguments: {column_name: "coffee_id || '|' || bag_id || '|' || run_date || '|' || event"}
+          arguments: {column_name: "coffee_id || '|' || variant_id || '|' || run_date || '|' || event"}
     columns:
       - name: run_date
         data_type: date
@@ -226,7 +226,7 @@ models:
       - name: roaster_id
         data_type: varchar
         data_tests: [not_null]
-      - name: bag_id
+      - name: variant_id
         data_type: varchar
         data_tests: [not_null]
       - name: event

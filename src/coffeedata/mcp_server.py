@@ -68,9 +68,16 @@ def search_coffees(
     if origin:
         where.append("origin_country ilike ?")
         params.append(f"%{origin}%")
-    cur = lake.connect().execute(
+    con = lake.connect()
+    # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
+    # exported before it existed has no such column, so it reads as unknown rather than failing the search.
+    has_status = "catalog_status" in [
+        r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()
+    ]
+    status = "catalog_status" if has_status else "null::varchar as catalog_status"
+    cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
-                   in_stock, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
+                   in_stock, {status}, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
         params,
     )
     cols = [d[0] for d in cur.description]

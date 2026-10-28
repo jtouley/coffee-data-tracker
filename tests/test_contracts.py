@@ -39,6 +39,7 @@ def test_documents_follow_the_bitol_standards(doc, schema):
 
 def test_the_product_serves_this_contract():
     assert [p["contractId"] for p in ODPS["outputPorts"]] == [ODCS["id"]]
+    assert [p["version"] for p in ODPS["outputPorts"]] == [ODCS["version"]]  # a breaking change bumps both
     assert ODCS["dataProduct"] == ODPS["id"]
 
 
@@ -58,7 +59,9 @@ def test_dbt_enforces_each_table_as_contracted(obj):
     assert dbt_cols == [(p["name"], p["physicalType"]) for p in obj["properties"]], "columns or types differ"
 
     tests = _tests(model["columns"])
-    keys = sorted((p for p in obj["properties"] if p.get("primaryKey")), key=lambda p: p["primaryKeyPosition"])
+    keys = sorted(
+        (p for p in obj["properties"] if p.get("primaryKey")), key=lambda p: p["primaryKeyPosition"]
+    )
     for p in obj["properties"]:
         if p.get("required"):
             assert "not_null" in tests[p["name"]], f"{p['name']} is required by the contract"

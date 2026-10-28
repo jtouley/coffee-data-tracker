@@ -436,6 +436,7 @@ class Lake:
                 fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".schema-", suffix=".tmp")
                 os.close(fd)
                 pq.write_table(SCHEMAS[table].empty_table(), tmp)
+                os.chmod(tmp, 0o644)  # mkstemp makes it owner-only; schema files are read like any lake file
                 os.replace(tmp, p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:

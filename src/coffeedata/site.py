@@ -160,7 +160,8 @@ def build(db: Path, out: Path) -> Path:
         """
         select count(*) filter (where catalog_status <> 'archived') as coffees,
                count(*) filter (where in_stock) as in_stock,
-               count(distinct roaster_id) as roasters from dim_coffee where is_listed""",
+               count(distinct roaster_id) as roasters
+        from dim_coffee where is_listed and catalog_status <> 'archived'""",
     )[0]
     catalog = _q(
         con,
@@ -175,7 +176,7 @@ def build(db: Path, out: Path) -> Path:
         select count(distinct origin_country) as origins,
                count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
                bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
-        from dim_coffee where is_listed and not is_chain""".format(
+        from dim_coffee where is_listed and catalog_status <> 'archived' and not is_chain""".format(
             states=", ".join(f"'{s}'" for s in STATES)
         ),
     )[0]

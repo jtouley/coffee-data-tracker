@@ -1,4 +1,7 @@
 -- Guardrail: the public tables must never expose these columns. Returns a row per offending column.
+-- The refs make dbt run this after every public table exists; without them it could run first and check nothing.
+-- depends_on: {{ ref('public_coffee') }}, {{ ref('public_roaster') }}, {{ ref('public_price_event') }}
+-- depends_on: {{ ref('public_market_weekly') }}
 select table_name, column_name
 from information_schema.columns
 where table_name like 'public\_%' escape '\'
