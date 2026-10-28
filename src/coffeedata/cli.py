@@ -142,17 +142,21 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
 
     if args.predict:
         rows = json.loads(Path(args.predict).read_text())
-        preds = verdict.judge(rows, args.model)
+        usage: dict[str, int] = {}
+        preds = verdict.judge(rows, args.model, usage=usage)
         Path(args.out).write_text(json.dumps({r["id"]: preds[i] for i, r in enumerate(rows)}))
-        print(f"wrote {len(preds)} predictions to {args.out}")
+        print(f"wrote {len(preds)} predictions to {args.out}; token usage {usage}")
         return
     labeled = [json.loads(line) for line in Path(args.labels).read_text().splitlines()]
     for name in args.sets.split(","):
         rows = [r for r in labeled if r["set"] == name]
         rows = [r | {"body_text": r["body"]} for r in rows]
-        preds = verdict.judge(rows, args.model)
+        usage = {}
+        preds = verdict.judge(rows, args.model, usage=usage)
         wrong = sum(preds[i] != (r["label"] == "coffee") for i, r in enumerate(rows))
-        print(f"{name}: {1 - wrong / len(rows):.1%} ({wrong} wrong of {len(rows)}) with {args.model}")
+        print(
+            f"{name}: {1 - wrong / len(rows):.1%} ({wrong} wrong of {len(rows)}) with {args.model}; tokens {usage}"
+        )
 
 
 def dbt_build(lake: Lake, db: Path) -> None:

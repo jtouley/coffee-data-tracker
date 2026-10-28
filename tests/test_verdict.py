@@ -35,7 +35,7 @@ def test_request_carries_the_definition_and_the_listing():
                        "body_text": "Salted."})  # fmt: skip
     req = verdict.request(it, "claude-haiku-5-5")
     assert "Green (unroasted) coffee" in req["system"][0]["text"]
-    assert req["system"][0]["cache_control"] == {"type": "ephemeral"}
+    assert req["system"][0]["cache_control"] == {"type": "ephemeral", "ttl": "5m"}
     assert (
         "Roasted Sunflower Seeds" in req["messages"][0]["content"] and "454" in req["messages"][0]["content"]
     )
@@ -123,3 +123,42 @@ def test_the_build_takes_claudes_verdict_over_the_rules(lake, tmp_path):
     }
     by = dict(with_claude.execute("select classified_by, count(*) from stg_products group by 1").fetchall())
     assert by["claude"] == 1
+
+
+def test_requests_cache_the_definition_and_batches_keep_it_an_hour():
+    it = verdict.item({"title": "Kenya AA", "product_type": "", "tags": [], "grams": [340]})
+    assert verdict.request(it, "m")["system"][0]["cache_control"] == {"type": "ephemeral", "ttl": "5m"}
+    assert verdict.request(it, "m", ttl="1h")["system"][0]["cache_control"]["ttl"] == "1h"
+    # The cached prefix must stay above the 512-token minimum for current models (about 4 characters a token);
+    # a shorter one is silently not cached.
+    assert len(verdict.SYSTEM) >= 4 * 512
+
+
+def test_judge_warms_the_cache_with_one_request_before_running_in_parallel(monkeypatch):
+    import threading
+
+    import anthropic
+
+    calls, first_done = [], threading.Event()
+
+    class Messages:
+        def create(self, **req):
+            calls.append(first_done.is_set())
+            first_done.set()
+            return SimpleNamespace(
+                stop_reason="end_turn",
+                usage=SimpleNamespace(
+                    input_tokens=10,
+                    cache_read_input_tokens=500,
+                    cache_creation_input_tokens=0,
+                    output_tokens=5,
+                ),
+                content=[SimpleNamespace(type="text", text=json.dumps({"label": "coffee"}))],
+            )
+
+    monkeypatch.setattr(anthropic, "Anthropic", lambda: SimpleNamespace(messages=Messages()))
+    rows = [{"title": f"Kenya {i}", "product_type": "", "tags": [], "grams": [340]} for i in range(5)]
+    usage = {}
+    assert set(verdict.judge(rows, "m", usage=usage).values()) == {True}
+    assert calls[0] is False and all(calls[1:])  # one request ran before any other started
+    assert usage["cache_read_input_tokens"] == 2500

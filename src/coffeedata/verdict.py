@@ -95,14 +95,27 @@ def listing(it: CatalogItem) -> str:
     )
 
 
-def request(it: CatalogItem, model_id: str) -> dict:
+def request(it: CatalogItem, model_id: str, ttl: str = "5m") -> dict:
+    """The definition is a fixed system prefix with a cache breakpoint, so every request after the first reads it
+    from the prompt cache; only the listing is new input. Batches use a 1-hour TTL because a batch can take longer
+    than five minutes to work through; one 2x write is shared by the whole batch."""
     return {
         "model": model_id,
         "max_tokens": 1024,
-        "system": [{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        "system": [{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral", "ttl": ttl}}],
         "output_config": {"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
         "messages": [{"role": "user", "content": listing(it)}],
     }
+
+
+USAGE_FIELDS = ("input_tokens", "cache_read_input_tokens", "cache_creation_input_tokens", "output_tokens")
+
+
+def _add_usage(total: dict[str, int], msg: object) -> None:
+    """Sum token usage, so a run's log shows whether the definition was read from the cache."""
+    u = getattr(msg, "usage", None)
+    for f in USAGE_FIELDS:
+        total[f] = total.get(f, 0) + (getattr(u, f, 0) or 0)
 
 
 def parse(msg: object) -> str | None:
@@ -148,7 +161,7 @@ def submit(lake: Lake, limit: int = 100_000) -> dict:
     reqs = [
         Request(
             custom_id=r["input_hash"],
-            params=cast(MessageCreateParamsNonStreaming, request(item(r), model_id)),
+            params=cast(MessageCreateParamsNonStreaming, request(item(r), model_id, ttl="1h")),
         )
         for r in todo
     ]
@@ -184,6 +197,7 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
     client = anthropic.Anthropic()
     run_date = run_date or date.today().isoformat()
     stored = 0
+    usage: dict[str, int] = {}
     for batch_id, model_id, definition in open_batches:
         try:
             if client.messages.batches.retrieve(batch_id).processing_status != "ended":
@@ -193,6 +207,9 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
             log.warning("verdict batch %s: %s", batch_id, e)
             continue
         now = datetime.now(UTC).replace(microsecond=0)
+        for res in results:
+            if res.result.type == "succeeded":
+                _add_usage(usage, res.result.message)
         rows = [
             {"decided_at": now, "input_hash": res.custom_id, "model": model_id, "definition": definition,
              "label": label}
@@ -214,12 +231,16 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
             ],
         )
         stored += len(rows)
-    return {"collected": stored}
+    return {"collected": stored} | ({"usage": usage} if any(usage.values()) else {})
 
 
-def judge(rows: list[dict], model_id: str, workers: int = 8) -> dict[int, bool]:
+def judge(
+    rows: list[dict], model_id: str, workers: int = 8, usage: dict[str, int] | None = None
+) -> dict[int, bool]:
     """Synchronous verdicts for an evaluation set: {row index: is coffee}. Excluded rows and failed calls fall
-    back to the rules, exactly as the build does."""
+    back to the rules, exactly as the build does. The first request runs alone so it writes the cache that the
+    parallel ones then read; token usage is summed into `usage`."""
+    import threading
     from concurrent.futures import ThreadPoolExecutor
 
     import anthropic
@@ -227,6 +248,8 @@ def judge(rows: list[dict], model_id: str, workers: int = 8) -> dict[int, bool]:
     from .classify import is_coffee
 
     client = anthropic.Anthropic()
+    total = usage if usage is not None else {}
+    lock = threading.Lock()
 
     def one(i_r: tuple[int, dict]) -> tuple[int, bool]:
         i, r = i_r
@@ -234,11 +257,18 @@ def judge(rows: list[dict], model_id: str, workers: int = 8) -> dict[int, bool]:
         if excluded(it):
             return i, False
         try:
-            label = parse(client.messages.create(**request(it, model_id)))
+            msg = client.messages.create(**request(it, model_id))
+            with lock:
+                _add_usage(total, msg)
+            label = parse(msg)
         except anthropic.APIError as e:
             log.warning("judge %d failed: %s", i, e)
             label = None
         return i, label == "coffee" if label in ("coffee", "not_coffee") else is_coffee(it)
 
+    indexed = list(enumerate(rows))
+    first = next((k for k, (_, r) in enumerate(indexed) if not excluded(item(r))), None)
+    out = dict([one(indexed.pop(first))]) if first is not None else {}
     with ThreadPoolExecutor(workers) as pool:
-        return dict(pool.map(one, enumerate(rows)))
+        out |= dict(pool.map(one, indexed))
+    return out
