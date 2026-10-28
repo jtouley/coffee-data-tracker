@@ -438,6 +438,29 @@ SCHEMA_FILES = {
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
 
+_REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
+
+
+def remote_folders(url: str) -> frozenset[str] | None:
+    """The top-level folders of a Hugging Face lake, listed once per process and again after each publish; None if
+    they couldn't be listed. A table added after the dataset was made has no folder until a publish sends its schema
+    file, and DuckDB fails with a 404 on a glob over a folder that doesn't exist."""
+    if url not in _REMOTE_FOLDERS:
+        from huggingface_hub import HfApi
+        from huggingface_hub.hf_api import RepoFolder
+
+        repo, _, revision = url.removeprefix("hf://datasets/").partition("@")
+        try:
+            tree = HfApi(token=os.environ.get("HF_TOKEN")).list_repo_tree(
+                repo, repo_type="dataset", revision=revision or None
+            )
+            _REMOTE_FOLDERS[url] = frozenset(f.path for f in tree if isinstance(f, RepoFolder))
+        except Exception as e:  # noqa: BLE001 - unknown: read every remote glob, as before
+            log.warning("listing %s failed (%s); reading every table remotely", url, e)
+            return None
+    return _REMOTE_FOLDERS[url]
+
+
 def no_files(e: Exception) -> bool:
     """A read failed only because a table has no files yet: DuckDB's own "No files found", or, on a Hugging Face
     dataset, a 404 listing a folder no file was ever published to (a table added after the dataset was made)."""
@@ -546,9 +569,14 @@ class Lake:
     def sources(self, table: str) -> list[str]:
         """Globs DuckDB should read for a table: local (staged) files, plus the remote lake if there is one."""
         out = [str(self.root / GLOBS[table])]
-        if self.remote:
+        if self.remote and self.remote_has(table):
             out.append(f"{self.url}/{GLOBS[table]}")
         return out
+
+    def remote_has(self, table: str) -> bool:
+        """Whether the remote lake has this table's folder yet (assumed so if that can't be listed)."""
+        folders = remote_folders(self.url)
+        return folders is None or GLOBS[table].split("/")[0] in folders
 
     def scan(self, table: str) -> str:
         """SQL table expression over every file of a table."""
@@ -710,6 +738,7 @@ class Lake:
                 log.warning("publish attempt %d failed (%s); retrying", attempt + 1, e)
                 time.sleep(2 ** (attempt + 1))
         self._schemas_checked = True
+        _REMOTE_FOLDERS.pop(self.url, None)  # new folders may exist now
         for p, rel in zip(files, rels, strict=True):
             if rel not in schema_paths:
                 p.unlink()

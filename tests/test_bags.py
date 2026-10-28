@@ -617,3 +617,27 @@ def test_two_uploads_of_one_photo_at_once_read_it_once(catalog, tmp_path):
     first, second = asyncio.run(both())
     assert first.status_code == second.status_code == 200 and first.json() == second.json()
     assert len(fake.calls) == 1
+
+
+def test_a_photo_lock_goes_when_its_uploads_end(catalog, tmp_path, monkeypatch):
+    """The per-photo locks don't pile up: none is left after a read, a resend, a 409, the day's limit or an error."""
+    app, _ = app_with(catalog, tmp_path, FakeClient(LABEL))
+    c = TestClient(app, raise_server_exceptions=False)
+    assert upload(c).status_code == upload(c).status_code == 200  # a read, then a resend from last_reply
+    other = c.post(
+        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+    )
+    assert other.status_code == 409
+    for i in range(10):
+        upload(c, pid=f"q{i}")
+    assert upload(c, pid="over").json()["status"] == "limit"
+    assert app.state.photo_locks == {}
+
+    def broken(*a, **k):
+        raise RuntimeError("the dataset is down")
+
+    monkeypatch.setattr(photos, "save", broken)
+    app, _ = app_with(catalog, tmp_path / "2", FakeClient(LABEL))
+    c = TestClient(app, raise_server_exceptions=False)
+    assert upload(c).status_code == 500
+    assert app.state.photo_locks == {}

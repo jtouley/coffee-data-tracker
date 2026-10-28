@@ -727,3 +727,11 @@ def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
     site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
     landing = " ".join((tmp_path / "site" / "index.html").read_text().split())
     assert "<b>1</b> price changes · <b>1</b> delisted" in landing
+
+
+def test_a_remote_root_is_read_only_for_folders_it_has(lake, tmp_path):
+    """A table added after a Hugging Face lake was made has no folder there until a publish sends its schema file,
+    and DuckDB fails on a glob over it. With remote_folders listing none, the build never touches the remote."""
+    r = build(lake, tmp_path, check=False, lake_roots=[str(lake.root), "hf://datasets/nobody/missing"],
+              remote_folders=[])  # fmt: skip
+    assert r.returncode == 0, r.stdout[-3000:]

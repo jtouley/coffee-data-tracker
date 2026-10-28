@@ -12,7 +12,7 @@ import time
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
-from .lake import Lake, new_batch_id
+from .lake import Lake, new_batch_id, remote_folders
 from .ratelimit import SHOPIFY_RPS
 
 # fct_shot and mart_bag are personal: they go to the private lake's marts/ only, never to the public export.
@@ -184,11 +184,14 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
     from . import registry, shots, verdict
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
+    folders = remote_folders(lake.url) if lake.remote else None
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
     dbt_vars = json.dumps(
         {
             "lake_roots": roots,
+            # Remote folders that exist: a table with none yet is read from staging alone (a 404 otherwise).
+            "remote_folders": sorted(folders) if folders is not None else None,
             "max_failures": registry.MAX_FAILURES,
             "owner_user_id": shots.owner_user_id(),
             "verdict_model": verdict.model() or "",

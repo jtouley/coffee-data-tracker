@@ -557,3 +557,14 @@ def test_builds_in_the_same_second_are_ordered_by_build_id(tmp_path):
         }
         lake.write("builds", f"builds/run_date=2026-10-26/build={b}.parquet", [row])
     assert [b for b, _, _ in quality.builds(lake)] == ["20261026T120000-aaaaaa", "20261026T120000-bbbbbb"]
+
+
+def test_remote_globs_only_for_folders_the_dataset_has(tmp_path, monkeypatch):
+    from coffeedata import lake as lake_mod
+
+    remote = Lake("hf://datasets/someone/coffee", staging=tmp_path / "staging")
+    monkeypatch.setitem(lake_mod._REMOTE_FOLDERS, remote.url, frozenset({"fetches"}))
+    assert any(s.startswith("hf://") for s in remote.sources("fetches"))
+    assert not any(s.startswith("hf://") for s in remote.sources("builds"))  # not published yet: staging only
+    monkeypatch.setitem(lake_mod._REMOTE_FOLDERS, remote.url, None)  # unknown: read it remotely, as before
+    assert any(s.startswith("hf://") for s in remote.sources("builds"))
