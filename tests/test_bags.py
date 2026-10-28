@@ -183,6 +183,32 @@ def test_no_roaster_falls_back_to_the_whole_catalog(catalog):
     assert shots.match_bag("", "", catalog) == (None, [])
 
 
+def test_a_wholesale_bag_matches_its_wholesale_listing_but_twins_are_never_offered(lake):
+    # Review #3: matching sees the whole catalog; only what's offered to pick from leaves wholesale out.
+    shots._index_cache.clear()
+    shots._rows_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true),
+        ('onyx.com:3', 'Onyx Coffee Lab', 'Kenya Kiambu', false),
+        ('onyx.com:4', 'Onyx Coffee Lab', 'Wholesale - 5LB Kenya Kiambu', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    try:
+        assert shots.match_bag("Onyx", "Wholesale - 5LB Ethiopia Guji", lake)[0] == "onyx.com:2"
+        assert shots.match_coffee("Onyx Wholesale 5LB Ethiopia Guji", lake)[0] == "onyx.com:2"
+        coffee_id, offered = shots.match_bag("Onyx", "Ethiopia Guji", lake)
+        assert coffee_id == "onyx.com:1"  # its wholesale twin is no rival
+        assert "onyx.com:2" not in {m["coffee_id"] for m in offered}
+        # The roaster only: pick from its retail coffees.
+        coffee_id, offered = shots.match_bag("Onyx", None, lake)
+        assert coffee_id is None and {m["coffee_id"] for m in offered} == {"onyx.com:1", "onyx.com:3"}
+    finally:
+        shots._index_cache.clear()
+        shots._rows_cache.clear()
+
+
 # --- the route -----------------------------------------------------------------------------------------
 
 

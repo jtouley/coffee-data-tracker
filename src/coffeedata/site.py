@@ -192,7 +192,8 @@ def build(db: Path, out: Path) -> Path:
         """
         select count(*) filter (where event = 'price') as price_changes,
                count(*) filter (where event = 'removed') as removed
-        from fct_price_event where run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
+        from fct_price_event join dim_coffee using (coffee_id)
+        where not is_wholesale and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])

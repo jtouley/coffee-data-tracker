@@ -13,20 +13,6 @@ from . import shots
 from .lake import Lake
 
 DB = Path(os.environ.get("COFFEEDATA_DB", "build/coffee.duckdb"))
-_columns_cache: dict[str, tuple[float, list[str]]] = {}
-
-
-def _mart_columns(con, src: str) -> list[str]:
-    """The exported dim_coffee's columns: a remote read each, so asked once an hour (they change only with the
-    contract), not on every search."""
-    import time
-
-    cached = _columns_cache.get(src)
-    if cached and time.monotonic() - cached[0] < shots.INDEX_TTL_S:
-        return cached[1]
-    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()]
-    _columns_cache[src] = (time.monotonic(), cols)
-    return cols
 
 
 mcp = MCPServer("coffee-data")
@@ -88,13 +74,15 @@ def search_coffees(
     con = lake.connect()
     # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
     # exported before it existed has no such column, so it reads as unknown rather than failing the search.
-    if not include_wholesale and (retail := shots.retail_only(con, src)):
-        where.append(retail.removeprefix("where "))  # a roaster's wholesale twin isn't a second coffee
-    has_status = "catalog_status" in _mart_columns(con, src)
+    have = shots.mart_columns(con, src)
+    if not include_wholesale:
+        where.append(shots.retail_only(have))  # a roaster's wholesale twin isn't a second coffee
+    has_status = "catalog_status" in have
     status = "catalog_status" if has_status else "null::varchar as catalog_status"
     cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
-                   in_stock, {status}, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
+                   in_stock, {status}, price_per_100g
+                   from read_parquet([{src}], union_by_name = true) where {" and ".join(where)}""",
         params,
     )
     cols = [d[0] for d in cur.description]

@@ -27,7 +27,7 @@ sizes, prices and stock. Built by [coffee-data-tracker](https://github.com/jtoul
   - `dim_coffee`: every coffee ever seen. `is_listed` says whether it's listed now; `catalog_status` says whether you can buy it now (`available`, `preorder`) or it's sold out, the roaster's back catalog (`archived`) or gone (`delisted`); `published_at` is the store's latest publish time (Shopify only); `is_wholesale` marks bulk or cafe listings, often a retail coffee's wholesale twin, which the site, app and market counts leave out. The key is `coffee_id = <roaster domain>:<store product id>`.
   - `fct_price_event`: new / price / availability / removed / relisted events between consecutive successful weekly fetches.
   - `mart_market`: the current retail catalog (listed, not archived, not wholesale) by origin × process, with price-per-100g distribution and the most common tasting notes.
-  - `dim_roaster`: the roaster registry, with platform and status. `coffees_listed` counts its current retail catalog (listed, not archived, not wholesale); `coffees_archived` counts its archived back catalog.
+  - `dim_roaster`: the roaster registry, with platform and status. `coffees_listed` counts its current retail catalog (listed, not archived, not wholesale); `coffees_archived` counts its archived back catalog, also leaving wholesale out.
 - The raw weekly records (`snapshots/`, `fetches/`, `probes/`, `enrichments/` and so on). Files are only ever added, never changed. The repo README describes the layout.
 
 ```sql

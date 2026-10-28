@@ -25,7 +25,7 @@ coffees as (
     select roaster_id,
            count(*) filter (where is_listed and catalog_status <> 'archived' and not is_wholesale) as coffees_listed,
            count(*) filter (where in_stock and not is_wholesale) as coffees_in_stock,
-           count(*) filter (where catalog_status = 'archived') as coffees_archived
+           count(*) filter (where catalog_status = 'archived' and not is_wholesale) as coffees_archived
     from {{ ref('dim_coffee') }} group by roaster_id
 )
 select

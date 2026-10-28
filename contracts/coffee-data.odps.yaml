@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.0.0
+version: 2.1.0
 status: active
 domain: coffee
 description:
@@ -20,7 +20,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.0.0
+    version: 2.1.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: glossary
@@ -39,6 +39,13 @@ customProperties:
           Renamed bag_id to variant_id (public-catalog contract 2.0.0). It is a store's bag-size variant id; the
           name bag_id stays reserved for the shot app's personal bags, which the facts-only guardrail keeps out of
           every public table. Changed before anyone used the public tables, so no reader breaks.
+      - topic: public_coffee wholesale listings
+        decided: "2026-10-28"
+        outcome: >-
+          Added is_wholesale to public_coffee (public-catalog contract 2.1.0; adding a column is additive). Wholesale
+          listings stay in the public data, flagged, rather than filtered out upstream, so readers can count them or
+          leave them out; public_market_weekly leaves them out. Snowflake's PUBLIC_COFFEE gets the column through
+          the one-time snowflake_migrate run (marketplace/README.md).
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

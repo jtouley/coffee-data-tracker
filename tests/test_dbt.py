@@ -669,8 +669,40 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
     mart.close()
     shots._rows_cache.clear()
     shots._index_cache.clear()
-    assert sorted(t for _, _, t in shots._catalog(lake)) == ["Colombia Supremo", "Ethiopia Guji"]
+    retail = sorted(t for _, _, t, is_retail in shots._catalog(lake) if is_retail)
+    assert retail == ["Colombia Supremo", "Ethiopia Guji"]
+    # Matching still sees the twin, so a bag that says wholesale gets the wholesale coffee_id (review #3).
+    assert shots.match_bag(None, "Wholesale - 5LB Ethiopia Guji", lake)[0] == f"{rid}:WGUJI"
+    assert f"{rid}:WGUJI" not in {m["coffee_id"] for m in shots.match_bag(None, "Ethiopia Guji", lake)[1]}
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
     search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
     assert sorted(r["title"] for r in search()) == ["Colombia Supremo", "Ethiopia Guji"]
     assert "Wholesale - 5LB Ethiopia Guji" in [r["title"] for r in search(include_wholesale=True)]
+
+
+def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
+    # Review #2 and #5: the week's price changes and removals, and the archived count, leave wholesale out too.
+    from coffeedata import site
+
+    rid = "onyxcoffeelab.com"
+    tagged = lambda pid, tags, **kw: product(pid, **kw) | {"tags": tags}  # noqa: E731
+    run(lake, "2026-10-19", rid, [
+        product("GUJI", title="Ethiopia Guji"),
+        product("WGUJI", title="Wholesale - 5LB Ethiopia Guji"),
+        product("WKEN", title="Wholesale - 5LB Kenya Kiambu"),
+    ])  # fmt: skip
+    run(lake, "2026-10-26", rid, [  # WKEN is gone
+        product("GUJI", price=22.0, title="Ethiopia Guji"),
+        product("WGUJI", price=99.0, title="Wholesale - 5LB Ethiopia Guji"),  # repriced
+        tagged("OLD", ["Archived"], available=False, title="Colombia Supremo"),
+        tagged("WOLD", ["Archived"], available=False, title="Wholesale - 5LB Colombia Supremo"),
+    ])  # fmt: skip
+    con = build(lake, tmp_path)
+    [archived] = con.execute(
+        "select coffees_archived from dim_roaster where roaster_id = ?", [rid]
+    ).fetchone()
+    assert archived == 1  # OLD; its wholesale twin WOLD isn't counted
+    con.close()
+    site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
+    landing = " ".join((tmp_path / "site" / "index.html").read_text().split())
+    assert "<b>1</b> price changes · <b>0</b> delisted" in landing
