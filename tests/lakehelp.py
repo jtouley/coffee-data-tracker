@@ -23,7 +23,8 @@ def product(
         "product_id": pid,
         "handle": f"h{pid}",
         "url": f"https://x/{pid}",
-        "title": title or f"Coffee {pid}",
+        # The build classifies from the title, so the default title has to read as coffee (or not).
+        "title": title or (f"Coffee {pid} Roast" if coffee else f"Mug {pid}"),
         "platform": "shopify",
         "tags": [],
         "body_hash": f"b{pid}",

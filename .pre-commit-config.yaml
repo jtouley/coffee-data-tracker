@@ -1,6 +1,6 @@
 # Install once with `make hooks`. CI runs the same hooks on every file.
 # Recorded storefront responses stay byte-for-byte as captured.
-exclude: ^tests/fixtures/
+exclude: ^(tests/fixtures/|eval/sealed/)
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0

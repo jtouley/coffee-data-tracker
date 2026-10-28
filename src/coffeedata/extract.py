@@ -6,7 +6,6 @@ import json
 import logging
 import os
 import re
-from datetime import UTC, datetime
 
 from .models import CatalogItem, Enrichment
 from .origins import COUNTRIES, canonical_country
@@ -65,9 +64,6 @@ VARIETALS = [
 ]
 _VARIETAL = re.compile(r"\b(" + "|".join(re.escape(v) for v in VARIETALS) + r")\b", re.I)
 _COUNTRY = re.compile(r"\b(" + "|".join(re.escape(c) for c in COUNTRIES) + r")\b", re.I)
-# When the rules last changed. Ingest re-runs them on any coffee whose rules enrichment is older, so a fix reaches
-# coffees whose description hasn't changed. Bump it with every change to rules().
-RULES_UPDATED = datetime(2026, 10, 27, 20, 0, tzinfo=UTC)
 DEMONYMS = {
     "kenyan": "Kenya",
     "ethiopian": "Ethiopia",
@@ -81,6 +77,8 @@ DEMONYMS = {
     "burundian": "Burundi",
     "ugandan": "Uganda",
     "salvadoran": "El Salvador",
+    "salvadorian": "El Salvador",
+    "salvadorean": "El Salvador",
     "costa rican": "Costa Rica",
     "panamanian": "Panama",
     "nicaraguan": "Nicaragua",
@@ -309,5 +307,22 @@ def parse_llm_message(msg: object, base: Enrichment) -> Enrichment | None:
         return None
 
 
+# Claude Code cloud sessions don't pass ANTHROPIC_API_KEY through (it would take over the session's own model
+# access), so the pipeline also reads its key under its own name. GitHub Actions sets ANTHROPIC_API_KEY.
+KEY_VAR = "COFFEEDATA_ANTHROPIC_API_KEY"
+
+
 def llm_enabled() -> bool:
-    return bool(os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN"))
+    return bool(
+        os.environ.get(KEY_VAR)
+        or os.environ.get("ANTHROPIC_API_KEY")
+        or os.environ.get("ANTHROPIC_AUTH_TOKEN")
+    )
+
+
+def client():
+    """An Anthropic client from COFFEEDATA_ANTHROPIC_API_KEY if set, else the SDK's own credential lookup."""
+    import anthropic
+
+    key = os.environ.get(KEY_VAR)
+    return anthropic.Anthropic(api_key=key) if key else anthropic.Anthropic()

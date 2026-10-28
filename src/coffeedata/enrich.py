@@ -81,7 +81,7 @@ def run(lake: Lake, limit: int = 2000, run_date: str | None = None) -> dict:
     if not todo:
         return {"pending": 0}
     run_date = run_date or date.today().isoformat()
-    client = anthropic.Anthropic()
+    client = extract.client()
     now = datetime.now(UTC).replace(microsecond=0)
     if len(todo) <= SYNC_LIMIT:
         rows, errors = [], 0
@@ -154,7 +154,7 @@ def collect(lake: Lake, run_date: str | None = None) -> dict:
     ]
     if not open_batches:
         return {"collected": 0}
-    client = anthropic.Anthropic()
+    client = extract.client()
     run_date = run_date or date.today().isoformat()
     merged = 0
     for batch_id in open_batches:

@@ -1,0 +1,16 @@
+[
+{"id": 8, "label": "not_coffee", "reason": "two distinct lots in one product"},
+{"id": 27, "label": "unsure", "reason": "vague title, no details"},
+{"id": 48, "label": "coffee", "reason": "single origin roasted coffee described"},
+{"id": 110, "label": "unsure", "reason": "flavor mix, coffee not stated"},
+{"id": 134, "label": "unsure", "reason": "cold brew format unknown"},
+{"id": 262, "label": "not_coffee", "reason": "single-serve cup format"},
+{"id": 273, "label": "unsure", "reason": "no info, could be coffee or other"},
+{"id": 291, "label": "not_coffee", "reason": "subscription-type product"},
+{"id": 293, "label": "coffee", "reason": "house coffee, nothing contrary"},
+{"id": 304, "label": "unsure", "reason": "vague title, no details"},
+{"id": 337, "label": "unsure", "reason": "box contents unclear"},
+{"id": 376, "label": "not_coffee", "reason": "spice, not coffee"},
+{"id": 482, "label": "unsure", "reason": "custom listing, contents unknown"},
+{"id": 500, "label": "unsure", "reason": "subscription type, unclear if one-time"}
+]
