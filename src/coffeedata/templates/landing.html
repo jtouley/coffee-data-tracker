@@ -60,7 +60,6 @@ a.door:hover { border-color: var(--accent); transform: translateY(-2px); }
 .door .t { font-size: 20px; font-weight: 600; }
 .door .d { color: var(--text-secondary); font-size: 14px; flex: 1; }
 .door .go { font-size: 14px; font-weight: 600; color: var(--accent); }
-.door.off { opacity: .7; }
 
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: start; }
 .panel { background: var(--surface-1); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
@@ -81,6 +80,13 @@ a.door:hover { border-color: var(--accent); transform: translateY(-2px); }
 .arrivals a:hover { color: var(--accent); }
 .arrivals .meta { font-size: 13px; color: var(--text-secondary); }
 .arrivals .price { font-variant-numeric: tabular-nums; font-size: 14px; white-space: nowrap; color: var(--text-secondary); }
+
+/* The app's beta: one panel after the public proof, never above the fold. */
+.beta .panel { padding: 28px; }
+.beta .k { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+.beta p { color: var(--text-secondary); margin: 0 0 20px; max-width: 36em; }
+.beta .cta { align-items: center; }
+.beta .signin { font-weight: 600; font-size: 15px; text-decoration: none; padding: 12px 4px; }
 
 /* Code */
 .code { background: var(--code-bg); color: var(--code-text); border-radius: 16px; padding: 44px 20px 20px; position: relative; overflow: hidden; }
@@ -108,23 +114,15 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 @media (max-width: 860px) {
   .hero, .split { grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .hero { padding: 24px 0 40px; }
-  nav .right .hide-sm { display: none; }
   section { padding: 40px 0; }
 }
+@media (max-width: 520px) { .cta .btn { flex: 1 1 100%; justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .btn, .door { transition: none; } .btn:hover, a.door:hover { transform: none; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav>
-  <a class="mark-word serif" href="./">registry<span class="dot">.</span>coffee</a>
-  <div class="right">
-    <a class="hide-sm" href="{{ links.catalog }}">Catalog</a>
-    {% if links.dataset %}<a class="hide-sm" href="{{ links.dataset }}">Dataset</a>{% endif %}
-    <a class="hide-sm" href="{{ links.repo }}">GitHub</a>
-    <button class="theme" id="theme" type="button">Theme</button>
-  </div>
-</nav>
+{% set root, page = "", "home" %}{% include "_nav.html" %}
 
 <header class="hero">
   <div>
@@ -157,8 +155,8 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 
 <section aria-labelledby="doors">
   <div class="sec-head">
-    <h3 id="doors" class="serif">Four ways in</h3>
-    <p>Browse it, query it, load it into a warehouse, or talk to it.</p>
+    <h3 id="doors" class="serif">{{ "Four" if links.dataset else "Three" }} ways in</h3>
+    <p>Browse it, {% if links.dataset %}query it, {% endif %}load it into a warehouse, or talk to it.</p>
   </div>
   <div class="doors">
     <a class="door" href="{{ links.catalog }}">
@@ -166,11 +164,11 @@ footer p { margin: 0 0 8px; max-width: 46em; }
       <span class="d">Search every listed coffee by roaster, origin, process and tasting notes. Price trends by origin, new arrivals, coverage.</span>
       <span class="go">Open the catalog →</span>
     </a>
-    {% if links.dataset %}<a class="door" href="{{ links.dataset }}">{% else %}<div class="door off">{% endif %}
+    {% if links.dataset %}<a class="door" href="{{ links.dataset }}">
       <span class="k">Dataset</span><span class="t">Hugging Face</span>
       <span class="d">{{ public_tables }} Parquet tables, refreshed weekly under CDLA-Permissive-2.0: coffees, the price-event log, the weekly market summary and roasters.</span>
-      <span class="go">{% if links.dataset %}View on Hugging Face →{% else %}Coming soon{% endif %}</span>
-    {% if links.dataset %}</a>{% else %}</div>{% endif %}
+      <span class="go">View on Hugging Face →</span>
+    </a>{% endif %}
     <a class="door" href="{{ links.marketplace }}">
       <span class="k">Warehouse</span><span class="t">Snowflake &amp; Databricks</span>
       <span class="d">Setup scripts load the same public tables into your warehouse every week.</span>
@@ -207,6 +205,23 @@ footer p { margin: 0 0 8px; max-width: 46em; }
   </div>
 </section>
 
+<section class="beta" aria-labelledby="app">
+  <div class="panel split">
+    <div>
+      <p class="k">Invite-only beta</p>
+      <h3 id="app" class="serif">Log your shots at the machine</h3>
+    </div>
+    <div>
+      <p>A private app for dialing in espresso: log each shot as you pull it and see how every bag dials in.
+        Your shots stay yours. Nothing you log appears on this site.</p>
+      <div class="cta">
+        <a class="btn primary" href="{{ links.beta }}">Request a beta invite</a>
+        <a class="signin" href="{{ links.signin }}">Have an invite? Sign in →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section aria-labelledby="query">
   <div class="split">
     <div>
@@ -224,7 +239,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     </div>
     <div class="code">
       <button class="copy" type="button" data-copy="sql">Copy</button>
-<pre id="sql"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
+<pre id="sql" tabindex="0" aria-label="Example DuckDB query"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
 <span class="kw">select</span> roaster_name, title, price_per_100g, url
 <span class="kw">from</span>
   '{{ links.hf_path or "hf://datasets/<owner>/<name>/data" }}/public_coffee.parquet'

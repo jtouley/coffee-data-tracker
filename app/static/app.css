@@ -226,6 +226,8 @@ details > summary::-webkit-details-marker { display: none; }
 .lede { font-size: 1.0625rem; max-width: 34ch; }
 code { font: 500 0.875em ui-monospace, monospace; overflow-wrap: anywhere; color: var(--ink); }
 .wordmark { font-size: 2.75rem; letter-spacing: -0.02em; line-height: 1; }
+/* The wordmark leads back to the public site; 48 px tall so it's a fair tap target. */
+.home { display: inline-flex; align-items: center; min-height: 48px; }
 .ink { color: var(--ink); }
 .minh44 { min-height: 44px; }
 .topline { border-top: 1px solid var(--rule); }

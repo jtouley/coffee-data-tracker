@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Join · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top"><span class="meta">registry.coffee</span></div>
+  <div class="top"><a class="meta home" href="{{ site.site }}/">registry.coffee</a></div>
   <h1 class="serif title mt8">You’re invited</h1>
   <p class="body">Pick a username and password to start logging your shots.</p>
   <form id="join" class="fill" data-api="/api/join" novalidate>
@@ -19,13 +19,14 @@
     <div class="fhint" id="password-h">At least 10 characters. A phrase you’ll remember is fine.</div>
     <p class="meta mt24">Your shots, bags and photos are kept in the owner’s private Hugging Face datasets. The app
       shows them only to you; the owner can read the datasets. By joining you agree to the
-      <a class="ext" href="https://registry.coffee/terms/">Terms</a> and
-      <a class="ext" href="https://registry.coffee/privacy/">Privacy Policy</a>.</p>
+      <a class="ext" href="{{ site.site }}/terms/">Terms</a> and
+      <a class="ext" href="{{ site.site }}/privacy/">Privacy Policy</a>.</p>
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="spacer"></div>
     <div class="dock">
       <button class="btn primary" type="submit">Create account</button>
       <a class="btn text" href="/signin">Already have an account? Sign in</a>
+      <a class="btn text small" href="{{ site.beta }}">No invite? Ask for one</a>
     </div>
   </form>
 {% endblock %}
