@@ -173,7 +173,7 @@ def wilson(k: int, n: int) -> tuple[float, float]:
     d = 1 + z * z / n
     c = p + z * z / (2 * n)
     h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return ((c - h) / d, (c + h) / d)
+    return (max(0.0, (c - h) / d), min(1.0, (c + h) / d))
 
 
 def score(data: Path, set_name: str, labels_file: Path, names: list[str], final: bool) -> None:
