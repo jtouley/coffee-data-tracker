@@ -6,20 +6,15 @@ with run as (
     {% if var('as_of_run') %}
     select cast('{{ var("as_of_run") }}' as date) as run_date
     {% else %}
-    select max(run_date) as run_date from {{ ref('stg_fetches') }}
+    select max(run_date) as run_date from {{ ref('int_roaster_runs') }}
     {% endif %}
 ),
-this_run as (select f.* from {{ ref('stg_fetches') }} f join run using (run_date)),
-started as (select min(fetched_at) as started_at from this_run),
-added as (
-    select roaster_id, min(added_at) as first_added
-    from {{ lake('registry') }} where roaster_id is not null group by roaster_id
-),
-attempts as (select roaster_id, bool_or(status = 'ok') as ok from this_run group by roaster_id),
+attempts as (select r.* from {{ ref('int_roaster_runs') }} r join run using (run_date)),
+started as (select min(first_at) as started_at from attempts),
 expected as (
     select r.roaster_id
     from {{ ref('dim_roaster') }} r
-    left join added a using (roaster_id)
+    left join {{ ref('stg_registry') }} a using (roaster_id)
     cross join started
     where r.status in ('pending', 'active', 'no_coffee', 'no_catalog')
       and (a.first_added is null or a.first_added < coalesce(started.started_at, now()))

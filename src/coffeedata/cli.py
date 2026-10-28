@@ -165,7 +165,8 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
 
 def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[bool, list[dict]]:
     """Build every model and seed, then run every test, so a failed check never stops a model from being built.
-    Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command)."""
+    Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command).
+    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`."""
     from . import registry, shots, verdict
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
@@ -183,7 +184,10 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
     )
     passed, results = True, []
     (DBT_TARGET / "manifest.json").unlink(missing_ok=True)
-    for step in (["build", "--exclude", "resource_type:test"], ["test"]):
+    for step in (
+        ["build", "--exclude", "resource_type:test", "resource_type:unit_test"],
+        ["test", "--exclude", "resource_type:unit_test"],
+    ):
         # A step that crashes before writing its results must not be recorded with the previous step's.
         (DBT_TARGET / "run_results.json").unlink(missing_ok=True)
         r = subprocess.run(
@@ -215,10 +219,10 @@ def cmd_build(args: argparse.Namespace) -> bool:
     served = (quality.served(lake) or {}).get("build_id")
     if (
         served
-    ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
+    ):  # the volume baseline ends with what customers get now, which after a rollback isn't the newest
         extra["baseline_build"] = served
     if getattr(args, "accept_volume_change", False):
-        extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
+        extra["volume_tolerance"] = 1e9  # this build passes and joins the next one's baseline
     passed, results = dbt_build(lake, db, extra)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id)
@@ -503,7 +507,7 @@ def main(argv: list[str] | None = None) -> None:
     b.add_argument(
         "--accept-volume-change",
         action="store_true",
-        help="let one build through the volume check (it becomes the next baseline)",
+        help="let one build through the volume check (it joins the next builds' baseline)",
     )
 
     bd = add(

@@ -10,7 +10,7 @@ with seed as (
 added as (
     select roaster_id, arg_max(name, added_at) as name, arg_max(city, added_at) as city,
            arg_max(state, added_at) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
-           string_agg(distinct source, '+') as sources
+           string_agg(distinct source, '+') as sources, min(added_at) as first_added
     from {{ lake('registry') }}
     where roaster_id is not null
     group by roaster_id
@@ -20,6 +20,7 @@ select
     coalesce(a.city, s.city) as city, coalesce(a.state, s.state) as state,
     coalesce(s.locations, a.locations, 1) as locations, coalesce(s.is_chain, false) as is_chain,
     coalesce(a.opted_out, false) or coalesce(s.opted_out, false) as opted_out,
-    concat_ws('+', s.sources, a.sources) as sources, s.seed_host, s.seed_platform, s.seed_probed
+    concat_ws('+', s.sources, a.sources) as sources, s.seed_host, s.seed_platform, s.seed_probed,
+    a.first_added  -- when the lake first listed it (null: from the seed list alone)
 from seed s
 full outer join added a using (roaster_id)

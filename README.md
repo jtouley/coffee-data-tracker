@@ -359,7 +359,7 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   - `run_is_complete`: every roaster the run should have tried was tried (an error counts as tried);
   - `run_ok_rate`: at least 90% of them succeeded;
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
-    release being served;
+    median of the last 4 passing releases up to the one being served, so one odd week doesn't move the baseline;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 
@@ -370,7 +370,7 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
   against the last passing one before it. After reviewing a real change, run the weekly workflow with
-  `accept_volume_change` (or `build --accept-volume-change`) to let it through and make it the new baseline.
+  `accept_volume_change` (or `build --accept-volume-change`) to let it through; it then joins the baseline median.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
 - **Old shots keep their gear.** Each grinder or basket added in Setup is a new record, so a shot keeps the
   equipment it was pulled with. A grind setting only compares within one grinder; `grind_position` (0 to 1 along
@@ -435,7 +435,7 @@ disagree with the contract. So a change to a public table starts in the contract
 
 ```bash
 make hooks   # once: install the pre-commit hooks
-make test    # make lint, then pytest: unit tests, app tests and dbt builds over synthetic multi-week lakes
+make test    # make lint, then pytest: unit tests (Python and dbt), app tests and dbt builds over synthetic multi-week lakes
 make fmt     # ruff fix and format over src, app and tests
 make clean   # remove build/ and dbt artifacts
 ```

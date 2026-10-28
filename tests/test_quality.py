@@ -87,12 +87,13 @@ def test_overrides_accept_reject_and_pin_a_batch(lake, tmp_path):
         quality.add_override(lake, RID, "2026-11-02", "use_batch", "x", failed)
 
 
-def _baseline(lake, listed: float):
-    now = datetime(2026, 10, 20, tzinfo=UTC)
-    lake.write("builds", "builds/run_date=2026-10-19/build=b1.parquet", [
-        {"build_id": "b1", "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
-        {"build_id": "b1", "built_at": now, "kind": "node", "unique_id": "test.x", "status": "pass"},
-        {"build_id": "b1", "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": listed},
+def _baseline(lake, listed: float, build: str = "b1", day: int = 20):
+    """A passing build that listed `listed` coffees, built on 2026-10-<day>."""
+    now = datetime(2026, 10, day, tzinfo=UTC)
+    lake.write("builds", f"builds/run_date=2026-10-19/build={build}.parquet", [
+        {"build_id": build, "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
+        {"build_id": build, "built_at": now, "kind": "node", "unique_id": "test.x", "status": "pass"},
+        {"build_id": build, "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": listed},
     ])  # fmt: skip
 
 
@@ -114,6 +115,50 @@ def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
         {"build_id": "b2", "built_at": later, "kind": "metric", "unique_id": "listed_coffees", "value": 5.0},
     ])  # fmt: skip
     build(lake, tmp_path)  # compared with b1 (40), not the failed b2 (5)
+
+
+def test_one_odd_build_does_not_move_the_volume_baseline(lake, tmp_path):
+    # The baseline is the median of the last 4 passing builds up to the served one, so one odd build (a big week let
+    # through with --accept-volume-change) joins it without becoming it, and older builds drop out.
+    run(lake, "2026-10-26", RID, FULL)  # lists 40
+    for i, listed in enumerate((10.0, 10.0, 10.0, 10.0, 40.0, 41.0, 39.0, 120.0)):
+        _baseline(lake, listed, f"b{i}", day=10 + i)
+    # Median 40.5: not the served 120, nor 25 over all eight.
+    build(lake, tmp_path, baseline_build="b7").close()
+
+
+def test_the_volume_baseline_ends_with_the_served_build(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)
+    _baseline(lake, 40.0, "b1", day=20)
+    for i in range(3):  # passing builds that were rolled back from: customers still get b1
+        _baseline(lake, 100.0, f"later{i}", day=21 + i)
+    build(lake, tmp_path, baseline_build="b1").close()  # 40 against b1's 40; the later builds don't count
+    r = build(lake, tmp_path, check=False)  # nothing served: the newest passing builds, median 100
+    assert r.returncode != 0 and "catalog_volume_vs_last_build" in r.stdout
+
+
+def test_dbt_and_quality_builds_agree_on_which_builds_passed(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)
+    records = {  # build -> its (kind, status) rows
+        "passed": [("build", "pass"), ("node", "pass"), ("metric", None)],
+        "warned": [("build", "pass"), ("node", "warn")],
+        "failed": [("build", "fail"), ("node", "pass")],
+        "failed_test": [("build", "pass"), ("node", "fail")],
+        "errored_model": [("build", "pass"), ("node", "error")],
+        "no_verdict": [("node", "pass")],
+    }
+    for day, (b, rows) in enumerate(records.items(), start=10):
+        lake.write("builds", f"builds/run_date=2026-10-19/build={b}.parquet", [
+            {"build_id": b, "run_date": date(2026, 10, 19), "built_at": datetime(2026, 10, day, tzinfo=UTC),
+             "kind": kind, "unique_id": f"{kind}.{i}", "status": status} for i, (kind, status) in enumerate(rows)
+        ])  # fmt: skip
+    con = build(lake, tmp_path)
+    in_dbt = con.execute(
+        "select build_id, run_date::varchar, passed from stg_builds order by built_at, build_id"
+    )
+    assert in_dbt.fetchall() == quality.builds(lake)
+    assert [b for b, _, ok in quality.builds(lake) if ok] == ["passed", "warned"]
+    con.close()
 
 
 def test_freshness_fails_on_a_stale_catalog(lake, tmp_path):

@@ -16,13 +16,7 @@ o as (
 ),
 j as (select o.*, r.prev_run, r.next_run from o join {{ ref('stg_runs') }} r using (roaster_id, run_date)),
 events as (
-    select run_date, fetched_at, coffee_id, roaster_id, variant_id,
-        case
-            when prev_obs_run is null then 'new'
-            when prev_obs_run is distinct from prev_run then 'relisted'
-            when price_usd is distinct from prev_price then 'price'
-            when available is distinct from prev_available then 'availability'
-        end as event,
+    select run_date, fetched_at, coffee_id, roaster_id, variant_id, {{ price_event() }} as event,
         price_usd, prev_price as previous_price_usd, available
     from j
     union all
