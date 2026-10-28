@@ -28,6 +28,10 @@ where a rule can break; they don't show how often it does.
    meaningful rise in confidently wrong answers. Where rules can't tell, abstaining (leaving the value for Claude) is
    better than guessing.
 8. **Keep the bar:** unit tests keep the reproduced cases, and accuracy floors are only ever raised.
+9. **Scale the effort to the change.** A change whose output differs on fewer than about 50 products (about 0.1% of
+   the catalog) needs unit tests for the specific cases plus a before/after count of what changed, run on the whole
+   catalog. It doesn't need a new split, labels or a results write-up. Steps 1–7 are for changes that move more than
+   that, or that change how a rule decides rather than one case it gets wrong.
 
 ### The coffee classifier's evaluation
 
