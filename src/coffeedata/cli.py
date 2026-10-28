@@ -595,7 +595,7 @@ def main(argv: list[str] | None = None) -> None:
     sf.add_argument(
         "--dry-run",
         action="store_true",
-        help="change nothing: print the checks (tables, share views, owners, share grants) and the statements",
+        help="change nothing: print the checks' reads and the statements it would run",
     )
 
     w = add("weekly", cmd_weekly, "the full weekly run")
