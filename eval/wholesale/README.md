@@ -8,6 +8,9 @@ rule on `main`; `C1` is this change: "whole sale", fraction packs, and tags such
 **Read the results as weaker evidence than a sealed test.** The steps weren't done in the order `CLAUDE.md`
 requires, and the test set was scored twice. Both are explained below.
 
+**Running total (CLAUDE.md step 9):** 0 products changed since the last full evaluation, which is this one
+(snapshot df57f62). Add each later change's count here.
+
 ## Data
 
 - **Lake snapshot:** `hf://datasets/jtouley/coffee-data` at revision `df57f62`, copied into a local, read-only

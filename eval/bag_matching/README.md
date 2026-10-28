@@ -11,6 +11,9 @@ label) picks the coffee a person's bag is saved under. The cases are the lake's 
 - The reference is the saved `coffee_id`. That is what the person kept, but it isn't independently labeled. A bag
   saved under a wrong lot counts as truth until it's edited.
 
+**Running total (CLAUDE.md step 9):** there's been no full evaluation yet, since there are too few bags. The latest
+change (an outscoring wholesale listing makes the match unclear) changes 0 of the 3 real inputs.
+
 ## Status (snapshot df57f62, 2026-10-28)
 
 There are 2 bags with a `coffee_id`: 1 in train, 0 in validation and 1 in test. That makes 3 inputs: 2 typed
