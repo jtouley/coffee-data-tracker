@@ -437,19 +437,26 @@ class Lake:
         files = ", ".join(f"'{s}'" for s in self.sources(table))
         return f"read_parquet([{files}], union_by_name = true, hive_partitioning = false)"
 
-    def latest(self, table: str, key: str) -> list[dict]:
+    def latest(self, table: str, key: str, attempts: int = 1) -> list[dict]:
         """The latest record per key (by logged_at): corrections are new records, so this is current state.
 
         A remote lake made before a table existed has no folder for it until the next publish adds the schema
-        file; until then the table is read from staging alone rather than failing."""
+        file; until then the table is read from staging alone rather than failing. Any other failed read (a 429,
+        a timeout) is tried `attempts` times in all, 2, 4 … seconds apart, before it's raised."""
         sql = "select * from {} where {} is not null qualify row_number() over (partition by {} order by logged_at desc) = 1"
-        try:
-            cur = self.connect().execute(sql.format(self.scan(table), key, key))
-        except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-            if not (self.remote and no_files(e)):
-                raise
-            local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
-            cur = self.connect().execute(sql.format(local, key, key))
+        for attempt in range(attempts):
+            try:
+                cur = self.connect().execute(sql.format(self.scan(table), key, key))
+                break
+            except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
+                if self.remote and no_files(e):
+                    local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
+                    cur = self.connect().execute(sql.format(local, key, key))
+                    break
+                if attempt == attempts - 1:
+                    raise
+                log.warning("reading %s failed (%s); retrying", table, type(e).__name__)
+                time.sleep(2 ** (attempt + 1))
         cols = [d[0] for d in cur.description]
         return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
 
