@@ -25,7 +25,15 @@
       <div class="sk mt8 w46"></div>
       <div class="sk mt16 w55"></div>
       <div class="sk mt8 w82"></div>
-      <p class="meta mt16" role="status" data-reading-status></p>
+      <div class="brewing mt16">
+        <svg class="cup" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+          <clipPath id="cup-inside"><path d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9z"/></clipPath>
+          <g class="stream"><rect x="22" y="1" width="2.5" height="5" rx="1.25"/><rect x="22" y="10" width="2.5" height="5" rx="1.25"/></g>
+          <g clip-path="url(#cup-inside)"><rect class="pour" x="10" y="19" width="26" height="22"/></g>
+          <path class="rim" d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9zM35 23h2.5a4 4 0 0 1 0 8H35M8 44h30"/>
+        </svg>
+        <p class="meta" role="status" data-reading-status></p>
+      </div>
       <div class="spacer"></div>
       <div class="dock"><button class="btn text" type="button" data-goto="type">Type the coffee</button></div>
     </section>

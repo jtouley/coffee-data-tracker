@@ -14,7 +14,7 @@ from collections import OrderedDict
 from datetime import UTC, date, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request, Response
@@ -154,8 +154,9 @@ def create_app(
     Writer = Annotated[User, Depends(writer)]
 
     def tz(request: Request) -> tzinfo:
+        # The phone writes its zone URL-encoded ("America%2FNew_York"), and cookies arrive as written.
         try:
-            return ZoneInfo(request.cookies.get("tz") or "UTC")
+            return ZoneInfo(unquote(request.cookies.get("tz") or "") or "UTC")
         except (ZoneInfoNotFoundError, ValueError):
             return UTC
 
@@ -667,9 +668,14 @@ def create_app(
         bag = store.bag(me.user_id, shot.bag_id)
         name, _ = coffee_name(bag, shot.coffee_id, shot.coffee_freetext)
         z = tz(request)
-        # Back to where it was opened from: History, else the bag's coffee page.
-        back = ("/history", "History") if from_ == "history" or not bag else (f"/coffee/{bag.bag_id}", name)
-        return page(request, "shot.html", me=me, shot=shot, bag=bag, name=name, back=back, grinder=store.gear(me.user_id, shot.grinder_id),
+        # Back to where it was opened from: Today, History, else the bag's coffee page; the tab it sits under.
+        if from_ == "today":
+            back, tab = ("/", "Today"), "today"
+        elif from_ == "history" or not bag:
+            back, tab = ("/history", "History"), "coffees"
+        else:
+            back, tab = (f"/coffee/{bag.bag_id}", name), "coffees"
+        return page(request, "shot.html", me=me, shot=shot, bag=bag, name=name, back=back, tab=tab, grinder=store.gear(me.user_id, shot.grinder_id),
                     basket=store.gear(me.user_id, shot.basket_id), machine=store.gear(me.user_id, shot.machine_id),
                     when=f"{views.date(shot.brewed_at, z)}, {views.clock(shot.brewed_at, z)}")  # fmt: skip
 
@@ -718,8 +724,12 @@ def create_app(
         )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
-    def gear_page(request: Request, equipment_id: str, me: Me, kind: str = "grinder") -> HTMLResponse:
-        """Add (`new`) or change one grinder, machine or basket."""
+    def gear_page(
+        request: Request, equipment_id: str, me: Me, kind: str = "grinder", next: str = "/setup"
+    ) -> HTMLResponse:
+        """Add (`new`) or change one grinder, machine or basket; saving returns to `next`, the screen it was
+        opened from (Setup, first run, the gear picker on Log shot)."""
+        back = views.back_to(next)
         item = None if equipment_id == "new" else store.gear(me.user_id, equipment_id)
         if equipment_id != "new" and item is None:
             raise HTTPException(404, "no such equipment")
@@ -729,7 +739,7 @@ def create_app(
         others = [
             e for e in store.equipment_of(me.user_id, kind) if not item or e.equipment_id != item.equipment_id
         ]
-        return page(request, "gear.html", me=me, item=item, kind=kind, others=others,
+        return page(request, "gear.html", me=me, item=item, kind=kind, others=others, back=back,
                     shots=counts(me.user_id).get(equipment_id, 0))  # fmt: skip
 
     @app.get("/log/gear", response_class=HTMLResponse)
@@ -752,7 +762,20 @@ def create_app(
             grinder=p["grinder"],
             basket=p["basket"],
             machine=p["machine"],
+            here=request.url.path
+            + (f"?{request.url.query}" if request.url.query else ""),  # gear added here returns here
         )
+
+    @app.get("/bag/{bag_id}/edit", response_class=HTMLResponse)
+    def edit_bag(request: Request, bag_id: str, me: Me, from_: str = Query("", alias="from")) -> HTMLResponse:
+        """Change a saved bag: coffee, roast date, weight, finished. Saved as a new record under the same id."""
+        bag = store.bag(me.user_id, bag_id)
+        if bag is None:
+            raise HTTPException(404, "no such bag")
+        name, _ = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
+        back = ("/", "Today") if from_ == "today" else (f"/coffee/{bag.bag_id}", name)
+        record = bag.model_dump(mode="json", exclude={"user_id"})
+        return page(request, "bag_edit.html", me=me, bag=bag, name=name, back=back, record=record)
 
     @app.get("/bag/new", response_class=HTMLResponse)
     def new_bag(request: Request, me: Me) -> HTMLResponse:
@@ -800,13 +823,15 @@ def create_app(
         if not c:
             return None
         notes = c.get("tasting_notes")
+        # "Ethiopia, washed": the process rides along with a place, never stands in for one (a catalog row with no
+        # country showed "Origin: honey").
+        place = [x for x in (c.get("origin_country"), c.get("origin_region")) if x]
         return {
             "coffee_id": coffee_id,
             "title": c.get("title"),
             "roaster": " · ".join(x for x in (c.get("roaster_name"), c.get("roaster_state")) if x),
-            "origin": ", ".join(
-                x for x in (c.get("origin_country"), c.get("origin_region"), c.get("process")) if x
-            ),
+            "origin": ", ".join(place + [c["process"]] if place and c.get("process") else place),
+            "past": c.get("catalog_status") == "archived",  # no longer listed by the roaster
             "notes": ", ".join(str(n) for n in notes) if notes is not None and len(notes) else None,
             "price": f"${c['price_per_100g']:.2f} / 100 g" if c.get("price_per_100g") else None,
             "in_stock": c.get("in_stock"),
@@ -884,6 +909,11 @@ def create_app(
         label = result.label or {}
         coffee_id, candidates = shots.match_bag(label.get("roaster"), label.get("coffee"), lake)
         described = [(describe(m["coffee_id"]), m["score"]) for m in candidates]
+        # Equal scores (one farm's lots, "Finca El Puente - Honey Processed" and "- Gesha Variety"): what the
+        # roaster sells now first, past offerings last.
+        described.sort(
+            key=lambda d: (-(d[1] or 0), bool(d[0] and d[0]["past"]), not (d[0] and d[0]["in_stock"]))
+        )
         roast = result.roast_date()
         return {
             "match": describe(coffee_id),

@@ -1,3 +1,6 @@
 # Copy to terraform.tfvars (gitignored) and fill in.
 billing_account = "XXXXXX-XXXXXX-XXXXXX"
 owner_email     = "you@example.com"
+# Optional: what the app links to. Match the SITE_URL and SUPPORT_EMAIL repository variables.
+# site_url      = "https://registry.coffee"
+# support_email = "support@registry.coffee"

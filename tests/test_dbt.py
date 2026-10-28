@@ -438,6 +438,8 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert 'href="https://app.registry.coffee/signin"' in html
         assert 'href="mailto:support@registry.coffee?subject=registry.coffee%20beta%20invite"' in html
         assert "<form" not in html
+        assert "Nothing you log appears on this site." in html  # and no promise beyond that
+    assert '<a class="mark-word serif" href="./" aria-current="page">' in landing
     # "Updated" is the last fetch, not the build time, so a template-only redeploy doesn't freshen it.
     assert "Updated 2026-10-19 12:00 UTC" in (out / "catalog" / "index.html").read_text()
     for page, heading in (("privacy", "Privacy Policy"), ("terms", "Terms of Use")):

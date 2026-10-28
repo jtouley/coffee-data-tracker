@@ -11,7 +11,8 @@ Settings → Secrets and variables → Actions.
 | `PUBLIC_EXPORT_URL` | variable | for the dataset link | e.g. `hf://datasets/jtouley/us-coffee-market` (public) |
 | `SITE_URL` | variable | no | defaults to `https://registry.coffee` |
 | `GOVERNING_STATE` | variable | no | the US state whose law governs the Terms of Use; defaults to Michigan |
-| `SUPPORT_EMAIL` | variable | no | contact on the legal pages; defaults to `support@registry.coffee` |
+| `SUPPORT_EMAIL` | variable | no | contact on the legal pages, and where beta-invite requests go; defaults to `support@registry.coffee` |
+| `APP_URL` | variable | no | the app the site's Sign in links point to; defaults to `https://app.registry.coffee` |
 | `ANTHROPIC_API_KEY` | secret | no | enables Claude enrichment; set a monthly spend limit in the Claude Console |
 | `SNOWFLAKE_*`, `AWS_*` | | no | see `marketplace/README.md` |
 

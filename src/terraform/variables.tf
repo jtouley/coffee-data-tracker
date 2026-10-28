@@ -22,6 +22,18 @@ variable "domain" {
   default     = "app.registry.coffee"
 }
 
+variable "site_url" {
+  description = "The public site the app links to; match the SITE_URL repository variable."
+  type        = string
+  default     = "https://registry.coffee"
+}
+
+variable "support_email" {
+  description = "Where the app's beta-invite requests go; match the SUPPORT_EMAIL repository variable."
+  type        = string
+  default     = "support@registry.coffee"
+}
+
 variable "billing_account" {
   description = "Billing account id (XXXXXX-XXXXXX-XXXXXX) for the monthly budget alert."
   type        = string

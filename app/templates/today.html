@@ -7,7 +7,7 @@
     <div class="label">{{ "On the grinder" if p.bag else "Last coffee" }}</div>
     <h1 class="serif name mt4">{% if p.bag %}<a href="/coffee/{{ p.bag.bag_id }}">{{ name }}</a>{% else %}{{ name }}{% endif %}</h1>
     <div class="meta mt4">{{ facts }}</div>
-    {% if p.bag %}<div class="meta mt4">{% if p.bag.roast_date %}Roasted {{ p.bag.roast_date.strftime("%b ") ~ p.bag.roast_date.day }} · day {{ days_off }} · {% endif %}{{ shots_n(shots | length) }}</div>{% endif %}
+    {% if p.bag %}<div class="row"><span class="meta">{% if p.bag.roast_date %}Roasted {{ p.bag.roast_date.strftime("%b ") ~ p.bag.roast_date.day }} · day {{ days_off }} · {% endif %}{{ shots_n(shots | length) }}</span><a class="ext tap" href="/bag/{{ p.bag.bag_id }}/edit?from=today">Edit bag</a></div>{% endif %}
   </section>
   {% if last %}
   <section class="mt24 ruled">
@@ -23,7 +23,7 @@
   {% if earlier %}
   <div class="section">Earlier with this {{ "bag" if p.bag else "coffee" }}</div>
   <div class="list">
-    {% for s in earlier %}{{ shotrow(s, day) }}{% endfor %}
+    {% for s in earlier %}{{ shotrow(s, day, "?from=today") }}{% endfor %}
   </div>
   {% endif %}
   {% else %}

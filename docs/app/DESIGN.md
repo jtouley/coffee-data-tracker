@@ -44,7 +44,7 @@ All six came to the same handful of conclusions without seeing each other's work
 - Dose, yield, time and ratio are the largest things on screen, set in tabular figures like an instrument readout.
   Nothing decorative competes with them.
 - Keep the warm paper ground and the brown accent from the site, and make dark mode a warm near-black.
-- The only image is the owner's own bag photo. No stock beans, no illustrated cups, no emoji.
+- The only image is the owner's own bag photo. No stock beans, no illustrated cups, no emoji. One exception the owner asked for: the line-drawn cup on the Reading state.
 - Steppers for every number. Free-spinning dials and precision sliders are hard with a wet thumb, and a
   gesture-only control has no fallback.
 - Numerals change instantly when stepped. "An instrument doesn't lag."
@@ -213,6 +213,7 @@ stacks its steppers under the numeral instead of beside it.
 | Saved: the new mark moves to its place on the target | spring, damping 1.0, response 0.36 s |
 | Saved: the summary line fades in | 200 ms ease-out, after the mark settles |
 | Undo countdown | 5 s, linear (an eased countdown would misstate the time left) |
+| Reading: the cup fills | 5 s ease-out to 85%, then holds; the stream drips every 0.5 s, linear, until the read ends. Reduced motion: still, half full |
 
 Never animated: numerals, lists, navigation, the running timer (it ticks), first render. With
 `prefers-reduced-motion: reduce`, every movement becomes an instant swap or a short crossfade. No `transition: all`.
@@ -327,6 +328,9 @@ dismisses it back to the camera (Retake).
 
 The match card's shape as skeleton blocks (no spinner, no shimmer), "Looking for roaster, coffee
 and roast date", the expected wait, the privacy line, and "Type the coffee" so nobody waits on the model.
+Beside the wait, a 40 px line-drawn cup in `--ink-2` fills over the expected 5 s and holds at 85% (never "done"
+before the read is), with a dripping stream: transforms only. Reduced motion: a still, half-full cup. The owner
+asked for it after first use, when the pulsing skeleton alone didn't read as working.
 
 #### Bag photo
 
@@ -349,8 +353,26 @@ Top right: a check and "Synced", or "2 waiting to sync" in `--ink-2`. It never b
 
 #### Undo strip
 
-`--sheet` with a `--control` border: "Shot saved" and an accent "Undo", with a thin line under Undo
+`--panel`, radius 8, no border: "Shot saved" and an accent "Undo", with a thin line under Undo
 that shrinks over 5 s. Undo writes a retraction record.
+
+#### Edit bag
+
+An accent "Edit bag" text link (56 px tall, ending on the gutter) after the roast line on Today and on the coffee
+page. The form: roaster and coffee, roast date, weight, and "Still using it" / "Finished". Saving writes a new record
+under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. A roast date
+in the future isn't saved; one more than 90 days old asks "Save with day N?".
+
+#### Notice
+
+What the last save did, at the top of the screen it lands on: "Bag saved: Onyx Geometry", "DF64 V2 saved",
+"Correction saved", "Shot undone", "Password changed". `--panel`, radius 8, like the Undo strip; `role="status"`,
+so it's read out (shown empty, then filled, so screen readers announce it). A save queued offline says so: "Saved on
+this phone. It’ll sync when you’re back online."; a bag names itself, since Today may still show the last one until
+it syncs: "Bag saved on this phone: Onyx Geometry. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
+
+Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
+on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.
 
 ## Copy
 

@@ -34,6 +34,16 @@ resource "google_cloud_run_v2_service" "app" {
         name  = "GOOGLE_CLOUD_PROJECT"
         value = var.project_id # for the trace field in the JSON logs
       }
+      # The public site and the support address the app links to (wordmark, legal pages, "No invite? Ask for
+      # one"), the same values the site is built with (SITE_URL and SUPPORT_EMAIL repository variables).
+      env {
+        name  = "SITE_URL"
+        value = var.site_url
+      }
+      env {
+        name  = "SUPPORT_EMAIL"
+        value = var.support_email
+      }
       dynamic "env" {
         for_each = google_secret_manager_secret.app
         content {
