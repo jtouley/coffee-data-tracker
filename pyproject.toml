@@ -50,6 +50,7 @@ dev = [
     "argon2-cffi>=23.1",
     "uvicorn>=0.30",
     "pillow>=11",
+    "jsonschema>=4.20",
 ]
 
 [build-system]

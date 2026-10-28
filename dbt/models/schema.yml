@@ -105,9 +105,8 @@ models:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
 
   - name: public_coffee
-    description: "Facts-only coffee table for public release. No descriptions, images or personal data."
-    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
-    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     columns:
@@ -116,6 +115,7 @@ models:
         data_tests: [unique, not_null]
       - name: roaster_id
         data_type: varchar
+        data_tests: [not_null]
       - name: roaster_name
         data_type: varchar
       - name: roaster_state
@@ -127,18 +127,23 @@ models:
         data_tests: [not_null]
       - name: is_listed
         data_type: boolean
+        data_tests: [not_null]
       - name: in_stock
         data_type: boolean
+        data_tests: [not_null]
       - name: catalog_status
         data_type: varchar
         data_tests:
+          - not_null
           - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
       - name: published_at
         data_type: timestamp with time zone
       - name: first_seen
         data_type: date
+        data_tests: [not_null]
       - name: last_seen
         data_type: date
+        data_tests: [not_null]
       - name: weeks_listed
         data_type: bigint
       - name: origin_country
@@ -171,10 +176,11 @@ models:
         data_type: integer[]
       - name: attributes_source
         data_type: varchar
+        data_tests:
+          - accepted_values: {arguments: {values: [rules, llm]}}
   - name: public_roaster
-    description: "Facts-only roaster table for public release."
-    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
-    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    description: "One row per roaster in the registry."
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     columns:
@@ -191,6 +197,8 @@ models:
         data_type: varchar
       - name: status
         data_type: varchar
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
       - name: coffees_listed
         data_type: bigint
       - name: coffees_in_stock
@@ -198,9 +206,8 @@ models:
       - name: last_ok_run
         data_type: date
   - name: public_price_event
-    description: "Facts-only price history for public release: one row per coffee, bag size, run and event."
-    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
-    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    description: "Price, availability and listing changes between consecutive successful weekly fetches, per bag size."
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     data_tests:
@@ -209,17 +216,24 @@ models:
     columns:
       - name: run_date
         data_type: date
+        data_tests: [not_null]
       - name: coffee_id
         data_type: varchar
         data_tests:
+          - not_null
           - relationships:
               arguments: {to: ref('public_coffee'), field: coffee_id}
       - name: roaster_id
         data_type: varchar
+        data_tests: [not_null]
       - name: bag_id
         data_type: varchar
+        data_tests: [not_null]
       - name: event
         data_type: varchar
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
       - name: price_usd
         data_type: double
       - name: previous_price_usd
@@ -227,9 +241,8 @@ models:
       - name: available
         data_type: boolean
   - name: public_market_weekly
-    description: "Facts-only market summary for public release: one row per origin and process."
-    # Published to Hugging Face, Snowflake and Databricks: the column list and types are an enforced
-    # contract, so a new, renamed or retyped column fails the build instead of shipping.
+    description: "The current catalog by origin and process: breadth and price spread."
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
     data_tests:
@@ -238,12 +251,16 @@ models:
     columns:
       - name: as_of_run
         data_type: date
+        data_tests: [not_null]
       - name: origin_country
         data_type: varchar
+        data_tests: [not_null]
       - name: process
         data_type: varchar
+        data_tests: [not_null]
       - name: coffees
         data_type: bigint
+        data_tests: [not_null]
       - name: roasters
         data_type: bigint
       - name: in_stock

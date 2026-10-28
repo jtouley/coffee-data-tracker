@@ -1,0 +1,28 @@
+# ODPS data product: Coffee Data, and the output ports it serves. Each port's contract is an ODCS file in this
+# folder (contractId = that file's id); tests/test_contracts.py checks both against Bitol's schemas.
+apiVersion: v1.1.0
+kind: DataProduct
+id: coffee-data
+name: Coffee Data
+version: 1.0.0
+status: active
+domain: coffee
+description:
+  purpose: A weekly, trustworthy record of US specialty coffee roasters' catalogs and how they change.
+  usage: >-
+    Read the public tables from the public dataset, Snowflake or Databricks. Each weekly release is served only
+    when every quality rule in its contract passes; otherwise the previous release stays served.
+  limitations: >-
+    Built from roasters' public stores, weekly. The raw lake is append-only and every table is derived from it,
+    so any past release can be rebuilt.
+tags: [coffee, specialty-coffee, prices, weekly]
+outputPorts:
+  - name: public-catalog
+    description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
+    type: tables
+    version: 1.0.0
+    contractId: coffee-data-public-catalog
+support:
+  - channel: issues
+    url: https://github.com/jtouley/coffee-data-tracker/issues
+    description: Questions and data issues

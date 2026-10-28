@@ -388,6 +388,14 @@ OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole
 descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder and photo
 IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
 
+The tables are a data product with a contract, in the Bitol open standards:
+[`contracts/coffee-data.odps.yaml`](contracts/coffee-data.odps.yaml) (ODPS v1.1.0) describes the product and its
+output port, and [`contracts/public-catalog.odcs.yaml`](contracts/public-catalog.odcs.yaml) (ODCS v3.2.0) defines
+the four tables: columns and types, keys, required columns, allowed values, quality rules and SLAs (weekly, at most
+8 days old, a 4-week rollback window). The contract is the definition and dbt enforces it: `tests/test_contracts.py`
+validates both files against Bitol's JSON schemas and fails if dbt's enforced contracts, tests or thresholds
+disagree with the contract. So a change to a public table starts in the contract.
+
 ### Scraping etiquette
 
 - Each store feed is read once a week, because catalogs change slowly and that keeps the load on small roaster
