@@ -172,6 +172,17 @@ async function newPage(browser, errors) {
     await page.waitForURL(`${base}/`);
     assert.equal(await noticeOf(page), "Bag saved: Hambela Alaka");
     assert.match(await page.textContent("main"), /Roasted \w{3} \d+ · day 6 ·/);
+    // A bag whose saved date is old keeps it without asking again when only the weight changes.
+    await page.getByRole("link", { name: "Edit bag" }).click();
+    await page.fill("#roast_date", iso(-200));
+    await page.getByRole("button", { name: "Save bag" }).click();
+    await page.getByRole("button", { name: /^Save with day \d+\?$/ }).click();
+    await page.waitForURL(`${base}/`);
+    await page.getByRole("link", { name: "Edit bag" }).click();
+    await page.fill("#weight_g", "340");
+    await page.getByRole("button", { name: "Save bag" }).click();
+    await page.waitForURL(`${base}/`);
+    assert.equal(await noticeOf(page), "Bag saved: Hambela Alaka");
     // Back from Today doesn't reopen Saved or the form: the save replaced them in history.
     await page.goBack();
     assert.notEqual(new URL(page.url()).pathname, "/log");
@@ -231,9 +242,10 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Retract" }).click();
     await page.waitForSelector("[data-restore]:not([hidden])");
     assert.match(await page.textContent("[data-restore]"), /Retracted on this phone/);
-    await page.getByRole("button", { name: "Undo" }).click();
     // The retraction is taken off the phone, and the shot's screen opens again (offline: the no-connection page),
-    // saying so.
+    // saying so. Wait for that page, not just the words: the online Undo above left "Shot restored" showing, and a
+    // goto racing the late navigation was interrupted.
+    await Promise.all([page.waitForEvent("load"), page.getByRole("button", { name: "Undo" }).click()]);
     await page.waitForFunction(() => document.querySelector("[data-notice]")?.textContent === "Shot restored");
     await page.waitForFunction(() => new Promise((resolve) => {
       indexedDB.open("registry-coffee").onsuccess = (e) => {
@@ -349,6 +361,14 @@ async function newPage(browser, errors) {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
       };
     }), null, { timeout: 15000, polling: 250 });
+
+    // A date read off the label with the year wrong moves to the latest past one, and asks once before saving.
+    await page.goto(`${base}/bag/new`);
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="match"]:not([hidden])');
+    await page.getByRole("button", { name: "Use this coffee" }).click();
+    assert.match(await page.textContent("[data-use]"), /^Save with day \d+\?$/);
+    assert.equal(new URL(page.url()).pathname, "/bag/new"); // not saved yet
 
     // The owner invites someone; they join from the link on another phone.
     await page.goto(`${base}/invite`);
