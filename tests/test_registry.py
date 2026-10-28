@@ -92,3 +92,12 @@ def test_state_codes_from_the_issue_form():
     for bad in ("Ontario", "XX", "Pu"):
         with pytest.raises(ValueError):
             state_code(bad)
+
+
+def test_a_probe_without_robots_txt_is_not_an_answer(lake):
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-11-01", rid)
+    probe(lake, "2026-11-08", rid, status="robots_unavailable", platform="")
+    s = status(lake, rid)
+    # last_probed is what stale-probe selection reads: the roaster is probed again next run, not in 28 days
+    assert s.last_probed == "2026-11-01" and s.roaster.platform == "shopify"

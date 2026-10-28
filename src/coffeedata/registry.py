@@ -105,7 +105,9 @@ roasters as (
            s.final_host as seed_host, s.platform as seed_platform, s.last_probed as seed_probed
     from seed s full outer join added a using (roaster_id)
 ),
-probes as (select * from {probes} where roaster_id is not null),
+-- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed, so the next
+-- probe run (stale-probe selection reads last_probed) tries the roaster again.
+probes as (select * from {probes} where roaster_id is not null and status <> 'robots_unavailable'),
 last_probe as (select * from probes qualify row_number() over (partition by roaster_id order by probed_at desc) = 1),
 last_good_probe as (
     select * from probes where status = 'ok'
