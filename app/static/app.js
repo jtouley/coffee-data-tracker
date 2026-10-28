@@ -431,10 +431,10 @@ function logShot(form) {
     o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
     o("time").textContent = `${b.time_s ?? "–"}`;
     o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder} · rated ${b.rating}`;
-    // The same tag as Saved.
+    // The same tag as Saved: what was tasted, so it doesn't read as a verdict on the numbers.
     const tag = o("taste");
     tag.className = `taste ${b.taste || "none"}`;
-    tag.textContent = b.taste ? `${b.taste[0].toUpperCase()}${b.taste.slice(1)}` : "No taste";
+    tag.textContent = b.taste ? `Tasted ${b.taste}` : "No taste noted";
     form.hidden = true;
     for (const el of document.querySelectorAll("[data-online-only]")) el.hidden = true;
     view.hidden = false;
@@ -530,6 +530,70 @@ function unqueue(strip, id) {
 }
 
 // --- New bag and equipment ---------------------------------------------------------------------------
+
+// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
+// than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
+function roastCheck(form, save, label) {
+  const v = form.roast_date.value;
+  if (!v) return "";
+  const today = new Date();
+  today.setHours(12, 0, 0, 0);
+  const days = Math.round((today - new Date(`${v}T12:00:00`)) / 86400000);
+  if (days < 0) return "That roast date is in the future. Check the year.";
+  if (days > 90 && save.textContent === label) {
+    save.textContent = `Roasted ${days} days ago? Save anyway`;
+    return " "; // not an error: the button asks
+  }
+  return "";
+}
+
+function armRoastCheck(form, save) {
+  const label = save.textContent;
+  form.roast_date.addEventListener("input", () => { save.textContent = label; });
+  return label;
+}
+
+// Edit a saved bag: the whole record again under the same id, so the change is a new record (latest wins) and a
+// resend is harmless. Changing the coffee's name looks it up in the catalog again.
+function bagEdit(form) {
+  const rec = JSON.parse(document.getElementById("bag-record").textContent);
+  const save = form.querySelector('[type="submit"]');
+  const label = armRoastCheck(form, save);
+  const finished = form.querySelector("[data-finished]");
+  finished.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (b) { pressOne(finished, b); tick(); }
+  });
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const coffee = form.coffee_freetext.value.trim();
+    if (!coffee) return hint(form, "Type the roaster and coffee.");
+    const said = roastCheck(form, save, label);
+    if (said) return hint(form, said.trim());
+    hint(form, "");
+    const weight = form.weight_g.value.trim();
+    if (weight && !(Number(weight) > 0)) return hint(form, "The weight is a number of grams, like 340.");
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+    const body = {
+      ...rec,
+      coffee_freetext: coffee,
+      roast_date: form.roast_date.value || null,
+      weight_g: weight ? Math.round(Number(weight)) : null,
+      finished_on: pressed(finished) === "true" ? rec.finished_on || today : null,
+    };
+    if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
+    save.disabled = true;
+    try {
+      await send(`bag:${rec.bag_id}`, "/api/bags", body);
+      go(form.dataset.next, `Bag saved: ${coffee}`);
+    } catch (err) {
+      if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It syncs when you’re back online.`);
+      hint(form, err.message);
+      save.disabled = false;
+    }
+  });
+}
 
 // New bag: a photo of the label, read by the server (Claude reads, Python matches), or the coffee typed.
 function newBag(root) {
@@ -722,10 +786,15 @@ function newBag(root) {
     }
   });
 
+  const typedSave = form.querySelector('[type="submit"]');
+  const typedLabel = armRoastCheck(form, typedSave);
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const coffee = form.coffee_freetext.value.trim();
     if (!coffee) return hint(form, "Type the roaster and coffee.");
+    const said = roastCheck(form, typedSave, typedLabel);
+    if (said) return hint(form, said.trim());
+    hint(form, "");
     const body = { coffee_freetext: coffee };
     if (form.roast_date.value) body.roast_date = form.roast_date.value;
     save(body, form);
@@ -1033,6 +1102,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (strip) undo(strip);
   const bag = document.getElementById("newbag");
   if (bag) newBag(bag);
+  const bagForm = document.getElementById("bagedit");
+  if (bagForm) bagEdit(bagForm);
   for (const f of document.querySelectorAll("[data-equipment]")) equipment(f);
   const theme = document.querySelector("[data-theme-choice]");
   if (theme) preference(theme, "theme", "auto");

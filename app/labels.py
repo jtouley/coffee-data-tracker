@@ -17,7 +17,7 @@ import logging
 import os
 import time
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, timedelta
 from typing import Any
 
 log = logging.getLogger(__name__)
@@ -70,11 +70,27 @@ class Read:
     cost_usd: float = 0.0
     usage: dict = field(default_factory=dict)
 
-    def roast_date(self) -> date | None:
+    def roast_date(self, today: date | None = None) -> date | None:
         try:
-            return date.fromisoformat((self.label or {}).get("roast_date") or "")
+            read = date.fromisoformat((self.label or {}).get("roast_date") or "")
         except ValueError:
             return None
+        return latest_past(read, today or date.today())
+
+
+def latest_past(d: date, today: date) -> date | None:
+    """Labels seldom print the year, so a read date in the future or more than a year old has the year wrong: it
+    becomes the latest date with that month and day that isn't in the future."""
+    if today - timedelta(days=366) <= d <= today:
+        return d
+    for year in (today.year, today.year - 1):
+        try:
+            candidate = d.replace(year=year)
+        except ValueError:
+            continue  # February 29
+        if candidate <= today:
+            return candidate
+    return None
 
 
 def available() -> bool:

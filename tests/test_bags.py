@@ -3,6 +3,7 @@ the upload route, and the Opus/Haiku comparison's scoring."""
 
 import io
 import json
+from datetime import date, timedelta
 from types import SimpleNamespace
 
 import pyarrow.parquet as pq
@@ -101,7 +102,9 @@ class FakeClient:
         self.beta = SimpleNamespace(messages=SimpleNamespace(create=create("beta")))
 
 
-LABEL = {"legible": True, "roaster": "Larkspur", "coffee": "Hambela Alaka", "roast_date": "2026-10-18",
+# Ten days ago: a read date over a year old is taken to have the wrong year (labels.latest_past).
+ROASTED = (date.today() - timedelta(days=10)).isoformat()
+LABEL = {"legible": True, "roaster": "Larkspur", "coffee": "Hambela Alaka", "roast_date": ROASTED,
          "origin": "Ethiopia", "process": "washed", "weight_g": 340}  # fmt: skip
 
 
@@ -109,9 +112,7 @@ def test_opus_reads_with_structured_output_and_the_refusal_fallback():
     fake = FakeClient(LABEL)
     r = labels.read(b"jpeg", labels.OPUS, fake)
     assert (
-        r.status == "read"
-        and r.label["coffee"] == "Hambela Alaka"
-        and r.roast_date().isoformat() == "2026-10-18"
+        r.status == "read" and r.label["coffee"] == "Hambela Alaka" and r.roast_date().isoformat() == ROASTED
     )
     kind, kw = fake.calls[0]
     assert (
@@ -202,7 +203,7 @@ def test_photo_upload_reads_matches_and_stores_the_photo(catalog, tmp_path):
     r = upload(c).json()
     assert r["status"] == "read" and r["match"]["coffee_id"] == "larkspur.com:1"
     assert r["match"]["notes"] == "bergamot, peach" and r["match"]["price"] == "$6.47 / 100 g"
-    assert r["roast_date"] == "2026-10-18"
+    assert r["roast_date"] == ROASTED
     # What Claude saw had no metadata either.
     sent = fake.calls[0][1]["messages"][0]["content"][0]["source"]["data"]
     import base64
@@ -237,7 +238,7 @@ def test_a_bag_typed_offline_takes_its_photos_match_whichever_arrives_first(cata
         upload(c)
     bag = app.state.store.bag("owner", "b1")
     assert bag.coffee_id == "larkspur.com:1" and bag.coffee_freetext == "the ethiopian one"
-    assert str(bag.roast_date) == "2026-10-18" and json.loads(bag.read_json)["roaster"] == "Larkspur"
+    assert str(bag.roast_date) == ROASTED and json.loads(bag.read_json)["roaster"] == "Larkspur"
 
 
 def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalog, tmp_path):
@@ -384,3 +385,18 @@ def test_two_uploads_of_one_photo_at_once_save_it_once(catalog, tmp_path):
     for t in threads:
         t.join()
     assert sorted(results) == [False, False, False, True]
+
+
+@pytest.mark.parametrize(
+    "read, want",
+    [
+        ("2026-10-15", "2026-10-15"),  # within the year: as read
+        ("2016-10-15", "2026-10-15"),  # the wrong year: this year's
+        ("2026-11-02", "2025-11-02"),  # in the future: last year's
+        ("2016-02-29", None),  # no February 29 this year or last
+        ("2025-10-28", "2025-10-28"),  # a year ago today: as read
+    ],
+)
+def test_a_read_roast_date_with_the_wrong_year_takes_the_latest_past_one(read, want):
+    got = labels.latest_past(date.fromisoformat(read), date(2026, 10, 28))
+    assert (got.isoformat() if got else None) == want

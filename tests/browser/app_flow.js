@@ -131,7 +131,7 @@ async function newPage(browser, errors) {
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
     assert.match(saved, /rated 5/);
-    assert.match(saved, /Balanced/);
+    assert.match(saved, /Tasted balanced/); // the taste entered, not a verdict on the shot
     await shoot(page, "saved");
 
     // Nothing left waiting in the outbox once the server has acknowledged the shot.
@@ -147,6 +147,25 @@ async function newPage(browser, errors) {
     await page.waitForURL(`${base}/`);
     assert.match(await page.textContent("main"), /Last shot.*\n?.*29/s);
     assert.equal(await page.textContent("[data-notice]"), "Shot undone");
+    // A bag can be changed after it's saved, from Today's "On the grinder": a roast date in the future isn't
+    // saved, one with the wrong year asks again, and the change lands back on Today, saying so.
+    const iso = (days) => new Date(Date.now() + days * 86400000).toISOString().slice(0, 10);
+    await page.getByRole("link", { name: "Edit bag" }).click();
+    await page.waitForURL(`${base}/bag/bag1/edit?from=today`);
+    await shoot(page, "bag-edit");
+    await page.fill("#roast_date", iso(5));
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");
+    await page.fill("#roast_date", "2016-10-15");
+    await page.getByRole("button", { name: "Save bag" }).click();
+    assert.match(await page.textContent("#bagedit [type=submit]"), /^Roasted \d{4} days ago\? Save anyway$/);
+    assert.equal(new URL(page.url()).pathname, "/bag/bag1/edit");
+    await page.fill("#roast_date", iso(-6));
+    assert.equal(await page.textContent("#bagedit [type=submit]"), "Save bag");
+    await page.getByRole("button", { name: "Save bag" }).click();
+    await page.waitForURL(`${base}/`);
+    assert.equal(await page.textContent("[data-notice]"), "Bag saved: Hambela Alaka");
+    assert.match(await page.textContent("main"), /Roasted \w{3} \d+ · day 6 ·/);
     // Back from Today doesn't reopen Saved or the form: the save replaced them in history.
     await page.goBack();
     assert.notEqual(new URL(page.url()).pathname, "/log");
@@ -207,6 +226,9 @@ async function newPage(browser, errors) {
     await page.waitForSelector("[data-restore]:not([hidden])");
     assert.match(await page.textContent("[data-restore]"), /Retracted on this phone/);
     await page.getByRole("button", { name: "Undo" }).click();
+    // The retraction is taken off the phone, and the shot's screen opens again (offline: the no-connection page),
+    // saying so.
+    await page.waitForFunction(() => document.querySelector("[data-notice]")?.textContent === "Shot restored");
     await page.waitForFunction(() => new Promise((resolve) => {
       indexedDB.open("registry-coffee").onsuccess = (e) => {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
@@ -407,6 +429,19 @@ async function newPage(browser, errors) {
     await page.locator("[data-failed]").getByRole("button", { name: "Dismiss" }).click();
     await page.waitForSelector("[data-failed]", { state: "hidden" });
     await page.unroute("**/api/probe");
+
+    // Times show in the phone's zone: the zone cookie arrives URL-encoded ("Asia%2FKolkata"), and read as is it
+    // was UTC everywhere. Kolkata is UTC+5:30 all year.
+    const clockIn = async (timezoneId) => {
+      const ctx = await browser.newContext({ storageState: await page.context().storageState(), timezoneId });
+      const p = await ctx.newPage();
+      await p.goto(`${base}/setup`); // the first page sets the zone cookie
+      await p.goto(`${base}/shot/first`);
+      const [h, m] = (await p.textContent("h1")).match(/(\d{1,2}):(\d{2})$/).slice(1).map(Number);
+      await ctx.close();
+      return h * 60 + m;
+    };
+    assert.equal(((await clockIn("Asia/Kolkata")) - (await clockIn("UTC")) + 1440) % 1440, 330);
 
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);

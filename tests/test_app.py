@@ -256,3 +256,68 @@ def test_every_page_has_a_place_for_what_the_last_save_did(client):
 )
 def test_back_to(next_, want):
     assert views.back_to(next_) == want
+
+
+def test_times_are_shown_in_the_phones_time_zone(client):
+    """The phone writes its zone URL-encoded; read as written, every zone with a "/" fell back to UTC (18:03 shown
+    at 14:15 in New York)."""
+    client.post("/api/shots", json=shot(1, brewed_at="2026-10-27T18:03:00Z"), headers=W)
+    assert "Oct 27, 18:03" in client.get("/shot/s1").text  # no zone yet: UTC
+    client.cookies.set("tz", "America%2FNew_York")
+    assert "Oct 27, 14:03" in client.get("/shot/s1").text
+    assert "14:03" in client.get("/saved/s1").text
+    client.cookies.set(
+        "tz", "Asia%2FCalcutta"
+    )  # Chrome's name for India's zone: an alias, needs the tzdata package
+    assert "Oct 27, 23:33" in client.get("/shot/s1").text
+    client.cookies.set("tz", "Not%2FA_Zone")
+    assert "Oct 27, 18:03" in client.get("/shot/s1").text
+
+
+def test_a_roast_date_in_the_future_is_refused(client):
+    from datetime import date, timedelta
+
+    soon = (date.today() + timedelta(days=3)).isoformat()
+    r = client.post(
+        "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": soon}, headers=W
+    )
+    assert r.status_code == 422 and "future" in r.text
+    tomorrow = (date.today() + timedelta(days=1)).isoformat()  # the phone's date can be a day ahead
+    assert (
+        client.post(
+            "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": tomorrow}, headers=W
+        ).status_code
+        == 200
+    )
+
+
+def test_a_saved_bag_can_be_edited_as_a_new_record(client, lake):
+    today, coffee = client.get("/").text, client.get("/coffee/bag1").text
+    assert 'href="/bag/bag1/edit?from=today">Edit bag</a>' in today
+    assert 'href="/bag/bag1/edit">Edit bag</a>' in coffee
+    page = client.get("/bag/bag1/edit?from=today").text
+    assert 'value="2026-10-18"' in page and '<a class="back" href="/">‹ Today</a>' in page
+    assert 'data-next="/"' in page and "‹ Onyx Geometry" in client.get("/bag/bag1/edit").text
+    assert client.get("/bag/nope/edit").status_code == 404
+    before = len(files(lake, "bags"))
+    record = {
+        "bag_id": "bag1",
+        "coffee_freetext": "Onyx Geometry",
+        "roast_date": "2026-10-15",
+        "weight_g": 340,
+    }
+    assert client.post("/api/bags", json=record, headers=W).status_code == 200
+    assert len(files(lake, "bags")) == before + 1  # appended, not rewritten
+    assert client.post("/api/bags", json=record, headers=W).status_code == 200  # the outbox resends it
+    assert len(files(lake, "bags")) == before + 1
+    assert "Roasted Oct 15" in client.get("/").text
+    # Another person's bag isn't theirs to open.
+    assert client.get("/bag/bag1/edit", headers={"x-test-user": "maya"}).status_code == 404
+
+
+def test_the_taste_reads_as_what_was_tasted(client):
+    client.post("/api/shots", json=shot(1), headers=W)
+    for url in ("/", "/saved/s1", "/shot/s1"):
+        assert ">Tasted balanced</span>" in client.get(url).text, url
+    client.post("/api/shots", json=shot(2, taste=None), headers=W)
+    assert ">No taste noted</span>" in client.get("/shot/s2").text

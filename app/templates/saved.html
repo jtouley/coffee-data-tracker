@@ -8,7 +8,7 @@
   <div class="row end mt16">
     <span class="num n34">{{ g(shot.dose_g, 1) }} → {{ g(shot.yield_g, 1) }}<span class="u"> g</span></span><span class="num n34">{{ g(shot.time_s) }}<span class="u"> s</span></span>
   </div>
-  <div class="row mt8"><span class="meta">Grind {{ g(shot.grinder_setting) }}{% if grinder %} · {{ grinder.name }}{% endif %} · rated {{ shot.rating }}</span>{{ taste(shot.taste) }}</div>
+  <div class="row mt8"><span class="meta">Grind {{ g(shot.grinder_setting) }}{% if grinder %} · {{ grinder.name }}{% endif %} · rated {{ shot.rating }}</span>{{ taste(shot.taste, said=True) }}</div>
   <div class="mt24">{{ target | safe }}</div>
   <div class="meta mt8">{{ sequence }}</div>
   <div class="section">{{ "Compared with the last shot" if has_prev else "This shot" }}</div>

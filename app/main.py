@@ -14,7 +14,7 @@ from collections import OrderedDict
 from datetime import UTC, date, datetime, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request, Response
@@ -154,8 +154,9 @@ def create_app(
     Writer = Annotated[User, Depends(writer)]
 
     def tz(request: Request) -> tzinfo:
+        # The phone writes its zone URL-encoded ("America%2FNew_York"), and cookies arrive as written.
         try:
-            return ZoneInfo(request.cookies.get("tz") or "UTC")
+            return ZoneInfo(unquote(request.cookies.get("tz") or "") or "UTC")
         except (ZoneInfoNotFoundError, ValueError):
             return UTC
 
@@ -764,6 +765,17 @@ def create_app(
             here=request.url.path
             + (f"?{request.url.query}" if request.url.query else ""),  # gear added here returns here
         )
+
+    @app.get("/bag/{bag_id}/edit", response_class=HTMLResponse)
+    def edit_bag(request: Request, bag_id: str, me: Me, from_: str = Query("", alias="from")) -> HTMLResponse:
+        """Change a saved bag: coffee, roast date, weight, finished. Saved as a new record under the same id."""
+        bag = store.bag(me.user_id, bag_id)
+        if bag is None:
+            raise HTTPException(404, "no such bag")
+        name, _ = coffee_name(bag, bag.coffee_id, bag.coffee_freetext)
+        back = ("/", "Today") if from_ == "today" else (f"/coffee/{bag.bag_id}", name)
+        record = bag.model_dump(mode="json", exclude={"user_id"})
+        return page(request, "bag_edit.html", me=me, bag=bag, name=name, back=back, record=record)
 
     @app.get("/bag/new", response_class=HTMLResponse)
     def new_bag(request: Request, me: Me) -> HTMLResponse:
