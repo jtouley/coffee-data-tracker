@@ -8,10 +8,15 @@ resource "google_cloud_run_v2_service" "app" {
 
   template {
     service_account = google_service_account.runtime.email
+    # One instance takes bursts of cheap requests (a scanner's 404s) rather than Cloud Run queueing them; the
+    # default is 80. Sign-ins hash a few at a time (accounts.HASHES_AT_ONCE), so this doesn't multiply memory.
+    max_instance_request_concurrency = 250
+    # Default 300s. Room for a publish's retries (lake.py, up to ~30s of backoff) and a label read.
+    timeout = "120s"
     scaling {
       min_instance_count = 0 # scale to zero between uses
-      # One instance only. Shots, the write lock and the sign-in limits live in the process's memory, so a second
-      # instance would serve stale shots and double the guess limits.
+      # One instance only. Shots, accounts, the write lock and the sign-in limits live in the process's memory, so a
+      # second instance would serve stale shots, double the guess limits and miss sign-outs made on the other one.
       max_instance_count = 1
     }
     containers {
@@ -41,7 +46,11 @@ resource "google_cloud_run_v2_service" "app" {
           }
         }
       }
+      # Start-up reads the lake from Hugging Face before the port opens, so allow up to ~2 minutes, not ~30s.
       startup_probe {
+        period_seconds    = 5
+        timeout_seconds   = 3
+        failure_threshold = 24
         http_get {
           path = "/healthz"
         }
