@@ -96,6 +96,54 @@ def test_history_is_derived_from_successful_runs(lake, tmp_path):
     )
 
 
+def test_new_snapshot_column_keeps_raw_immutable_and_builds_idempotent(lake, tmp_path, monkeypatch):
+    import hashlib
+
+    from coffeedata import lake as lake_mod
+
+    rid = "onyxcoffeelab.com"
+    # Week 1 written before snapshots had published_at; week 2 after.
+    old = lake_mod.SCHEMAS["snapshots"]
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", old.remove(old.get_field_index("published_at")))
+    run(lake, "2026-10-19", rid, [product("A"), product("B", available=False) | {"tags": ["Archived"]}])
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", old)
+    pub = datetime(2024, 3, 1, 14, 30, tzinfo=UTC)
+    run(lake, "2026-10-26", rid, [product("A") | {"published_at": pub}, product("C") | {"published_at": pub}])
+
+    def raw() -> dict[str, str]:  # every data file in the lake, by content (schema files are zero-row)
+        return {str(p.relative_to(lake.root)): hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in lake.root.rglob("*.parquet") if "schema" not in p.name}  # fmt: skip
+
+    def marts(con, observed: bool = True) -> dict[str, list]:
+        cols = {m: "*" for m in ("dim_coffee", "public_coffee")}
+        cols["fct_price_event"] = "*" if observed else "* exclude (fetched_at)"
+        return {m: con.execute(f"select {c} from {m} order by all").fetchall() for m, c in cols.items()}
+
+    before = raw()
+    con = build(lake, tmp_path)
+    first, first_unobserved = marts(con), marts(con, observed=False)
+    lake_mod.Lake()  # refreshes the local schema file only
+    second = marts(build(lake, tmp_path))
+    assert raw() == before and first == second  # raw untouched; same lake, same tables
+
+    got = {r[0]: r[1:] for r in build(lake, tmp_path).execute(
+        "select product_id, catalog_status, published_at from dim_coffee").fetchall()}  # fmt: skip
+    assert got == {"A": ("available", pub), "B": ("delisted", None), "C": ("available", pub)}
+
+    # Re-running the week adds a batch (never rewrites one) and changes nothing downstream.
+    run(
+        lake,
+        "2026-10-26",
+        rid,
+        [product("A") | {"published_at": pub}, product("C") | {"published_at": pub}],
+        hour=18,
+    )
+    assert set(before) < set(raw()) and all(raw()[k] == v for k, v in before.items())
+    # The latest successful batch of a week wins (a forced re-fetch replaces bad data), so only the time its
+    # events were observed moves; every coffee, status, price and event is the same.
+    assert marts(build(lake, tmp_path), observed=False) == first_unobserved
+
+
 def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
     rid = "onyxcoffeelab.com"
     tagged = lambda pid, tags, **kw: product(pid, **kw) | {"tags": tags}  # noqa: E731
@@ -114,6 +162,8 @@ def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
                 "BACK", ["archive"]
             ),  # archived, but buyable again: what matters now is that it's in stock
             tagged("PASTA", ["Pasta"], available=False),
+            tagged("SLUG", ["past_offering"], available=False),
+            tagged("SOON2", ["coming-soon"]),
         ],
     )
     con = build(lake, tmp_path)
@@ -127,6 +177,8 @@ def test_catalog_status_separates_current_from_back_catalog(lake, tmp_path):
         "SOON": "preorder",
         "BACK": "available",
         "PASTA": "sold_out",
+        "SLUG": "archived",
+        "SOON2": "preorder",
     }
 
 

@@ -12,9 +12,13 @@ MAX_PAGES = 20
 
 
 def _published_at(value: object) -> datetime | None:
+    """One odd date must never cost a roaster its catalog: anything unreadable is None. No offset means UTC."""
     try:
-        return datetime.fromisoformat(str(value)).astimezone(UTC).replace(microsecond=0) if value else None
-    except ValueError:
+        t = datetime.fromisoformat(str(value)) if value else None
+        if t is None:
+            return None
+        return (t if t.tzinfo else t.replace(tzinfo=UTC)).astimezone(UTC).replace(microsecond=0)
+    except (ValueError, OverflowError):
         return None
 
 

@@ -27,7 +27,12 @@ def test_shopify_published_at_is_utc():
 
     item = shopify.parse_product({"id": 1, "title": "K", "published_at": "2024-03-01T09:30:00-05:00"}, _r())
     assert item.published_at == datetime(2024, 3, 1, 14, 30, tzinfo=UTC)
-    assert shopify.parse_product({"id": 2, "title": "K", "published_at": "soon"}, _r()).published_at is None
+    for odd in ("soon", "0001-01-01T00:00:00+05:00"):  # unreadable, and out of range once moved to UTC
+        assert shopify.parse_product({"id": 2, "title": "K", "published_at": odd}, _r()).published_at is None
+    naive = shopify.parse_product({"id": 3, "title": "K", "published_at": "2024-03-01T09:30:00"}, _r())
+    assert naive.published_at == datetime(
+        2024, 3, 1, 9, 30, tzinfo=UTC
+    )  # no offset: UTC, not the host's zone
 
 
 def test_shopify_tolerates_odd_payloads():

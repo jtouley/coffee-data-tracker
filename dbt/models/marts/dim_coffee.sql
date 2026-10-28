@@ -78,10 +78,10 @@ select
     case
         when not run.is_latest_run then 'delisted'
         when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
-            regexp_matches(lower(t), '\bpre[- ]?(order|sale)|\bupcoming\b|coming soon'))) then 'preorder'
+            regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon'))) then 'preorder'
         when coalesce(p.any_available, false) then 'available'
         when list_bool_or(list_transform(l.tags, lambda t:
-            regexp_matches(lower(t), 'archive|discontinued|past[- ]offering'))) then 'archived'
+            regexp_matches(lower(t), 'archive|discontinued|past[-_ ]offering'))) then 'archived'
         else 'sold_out'
     end as catalog_status,
     l.published_at,

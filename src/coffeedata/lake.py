@@ -380,9 +380,12 @@ class Lake:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
             # A zero-row schema file from before a column was added is refreshed, so globs always see every column.
-            if not p.exists() or not pq.read_schema(p).equals(SCHEMAS[table], check_metadata=False):
+            # Names only: Parquet stores timestamp[s] as [ms], so a full schema compare would never match.
+            if not p.exists() or pq.read_schema(p).names != SCHEMAS[table].names:
                 p.parent.mkdir(parents=True, exist_ok=True)
-                pq.write_table(SCHEMAS[table].empty_table(), p)
+                tmp = p.with_suffix(".tmp")  # readers globbing *.parquet never see a half-written file
+                pq.write_table(SCHEMAS[table].empty_table(), tmp)
+                tmp.replace(p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
         """Write rows as a new Parquet file. Refuses to replace an existing file (immutability)."""

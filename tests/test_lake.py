@@ -212,3 +212,10 @@ def test_schema_file_from_before_a_new_column_is_refreshed(tmp_path, monkeypatch
     assert "published_at" in [
         d[0] for d in con.execute(f"describe select * from {Lake().scan('snapshots')}").fetchall()
     ]
+
+
+def test_up_to_date_schema_files_are_left_alone(lake):
+    p = lake.root / SCHEMA_FILES["snapshots"]  # has timestamp[s] columns, which Parquet stores as [ms]
+    before = p.stat().st_mtime_ns, p.stat().st_ino
+    Lake()
+    assert (p.stat().st_mtime_ns, p.stat().st_ino) == before
