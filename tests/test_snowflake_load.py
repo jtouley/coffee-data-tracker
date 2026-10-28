@@ -117,12 +117,18 @@ def test_missing_credentials_is_a_clear_error(monkeypatch):
 
 
 class FakeSnowflake:
-    """Enough of Snowflake to follow a migration: tables and views with their columns, and the share's owner and
-    grants. `fail_on` makes the first statement containing it raise, as a failure partway through would."""
+    """Enough of Snowflake to follow a migration: tables and views with their columns, who owns the views and the
+    share, and which views are in the share. `fail_on` makes the first statement containing it raise, as a failure
+    partway through would. There is no `show shares`: without IMPORT SHARE (which admin_setup.sql doesn't grant)
+    it lists nothing."""
 
-    def __init__(self, counts, tables=None, views=None, owner="COFFEE_LOADER", role="COFFEE_LOADER"):
+    def __init__(
+        self, counts, tables=None, views=None, owner="COFFEE_LOADER", role="COFFEE_LOADER", shared=None
+    ):
         self.counts, self.tables, self.views = counts, dict(tables or {}), dict(views or {})
-        self.owner, self.role, self.grants = owner, role, set(self.views) if owner else set()
+        self.owner, self.role = owner, role  # owner: the share's owning role, None if there is no share
+        self.grants = set(self.views if shared is None else shared) if owner else set()
+        self.view_owner = {v: "COFFEE_LOADER" for v in self.views}
         self.sql, self.fail_on, self.description, self._rows = [], None, None, []
         self.export_cols = ["COFFEE_ID", "VARIANT_ID"]
 
@@ -144,8 +150,13 @@ class FakeSnowflake:
             have = (self.tables if m[1] == "MARKET" else self.views).get(m[2].lower(), [])
             self._rows = [(c,) for c in have]
         elif sql.startswith("show shares"):
-            self.description = [("created_on",), ("kind",), ("name",), ("owner",)]
-            self._rows = [("t", "OUTBOUND", "ORG.ACCT.COFFEE_DATA_SHARE", self.owner)] if self.owner else []
+            raise AssertionError("show shares lists nothing without IMPORT SHARE")
+        elif m := re.match(r"show grants on view SHARE\.(\w+)", sql):
+            self.description = [("created_on",), ("privilege",), ("granted_on",), ("name",), ("granted_to",),
+                                ("grantee_name",)]  # fmt: skip
+            self._rows = [("t", "OWNERSHIP", "VIEW", m[1], "ROLE", self.view_owner[m[1]])]
+            if m[1] in self.grants:
+                self._rows.append(("t", "SELECT", "VIEW", m[1], "SHARE", "ORG.ACCT.COFFEE_DATA_SHARE"))
         elif sql == "select current_role()":
             self._rows = [(self.role,)]
         elif m := re.match(r"drop table if exists MARKET\.(\w+)", sql):
@@ -157,6 +168,8 @@ class FakeSnowflake:
         elif m := re.match(
             r"create or replace secure view SHARE\.(\w+) (copy grants )?as select \* from MARKET\.(\w+)", sql
         ):
+            if self.view_owner.setdefault(m[1], self.role) != self.role:
+                raise RuntimeError("insufficient privileges to operate on view")
             self.views[m[1]] = self.tables[m[3]]
             if not m[2]:
                 self.grants.discard(m[1])  # create or replace without copy grants drops the view's grants
@@ -175,6 +188,7 @@ class FakeSnowflake:
 
 OLD = ["COFFEE_ID", "BAG_ID"]  # loaded before the rename
 VIEWS = {"coffee": OLD, "price_event": OLD, "market_weekly": OLD, "roaster": OLD}
+NEW = ["COFFEE_ID", "VARIANT_ID"]
 
 
 def old_snowflake(counts, **kw):
@@ -182,11 +196,16 @@ def old_snowflake(counts, **kw):
 
 
 def healthy(sf):
-    new = ["COFFEE_ID", "VARIANT_ID"]
     return (
-        all(sf.tables.get(t) == new for t in PUBLIC_TABLES)
-        and all(sf.views.get(v) == new for v in VIEWS)
+        all(sf.tables.get(t) == NEW for t in PUBLIC_TABLES)
+        and all(sf.views.get(v) == NEW for v in VIEWS)
         and sf.grants == set(VIEWS)
+    )
+
+
+def unchanged(sf):
+    return not any(s.startswith(("put ", "drop", "truncate", "create or replace")) for s in sf.sql) and all(
+        sf.tables[t] == OLD for t in PUBLIC_TABLES
     )
 
 
@@ -199,23 +218,27 @@ def test_a_changed_public_contract_loads_nothing_until_migrated(tmp_path):
     assert not any(s.startswith(("put ", "drop", "truncate", "copy into")) for s in sf.sql)
 
 
-def test_migrate_uploads_before_dropping_and_rebuilds_every_view_with_its_grants(tmp_path):
+def test_migrate_uploads_before_dropping_and_rebuilds_every_view_keeping_its_grants(tmp_path):
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts)
     assert snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)["tables"] == counts
     assert healthy(sf)
     sql = sf.sql
+    last_check = max(n for n, s in enumerate(sql) if s.startswith("show grants on view"))
     last_put = max(n for n, s in enumerate(sql) if s.startswith("put "))
     first_drop = min(n for n, s in enumerate(sql) if s.startswith("drop table"))
-    assert sql.index("select current_role()") < last_put < first_drop  # owner checked, files up, then drops
+    assert last_check < last_put < first_drop  # grants checked, files up, then drops
     views = [s for s in sql if s.startswith("create or replace secure view")]
     assert len(views) == 4 and all(" copy grants as select * from MARKET." in v for v in views)
+    assert not any(
+        s.startswith("grant") for s in sql
+    )  # copy grants kept them: nothing needed the share's owner
 
 
 @pytest.mark.parametrize(
     "fail_on",
     ["put 'file://", "drop table if exists MARKET.public_roaster", "copy into MARKET.public_price_event",
-     "create or replace secure view SHARE.market_weekly", "grant select on view SHARE.roaster"],
+     "create or replace secure view SHARE.market_weekly"],
 )  # fmt: skip
 def test_a_migration_that_failed_partway_is_finished_by_running_it_again(tmp_path, fail_on):
     counts = {t: 1 for t in PUBLIC_TABLES}
@@ -234,22 +257,49 @@ def test_a_migration_that_failed_partway_is_finished_by_running_it_again(tmp_pat
     assert healthy(sf)
 
 
-def test_migrate_stops_before_changing_anything_if_the_role_does_not_own_the_share(tmp_path):
-    """After part 3 of admin_setup.sql the share may belong to ACCOUNTADMIN; the loader then can't grant to it."""
+def test_migrate_works_when_another_role_owns_the_share(tmp_path):
+    """The documented setup: COFFEE_LOADER has no IMPORT SHARE, and after a listing ACCOUNTADMIN owns the share.
+    Every view is already in it, and copy grants keeps it there."""
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts, owner="ACCOUNTADMIN")
-    with pytest.raises(RuntimeError, match="owned by ACCOUNTADMIN, not COFFEE_LOADER.*Nothing was changed"):
-        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
-    assert not any(s.startswith(("put ", "drop", "truncate", "create or replace")) for s in sf.sql)
-    assert sf.tables["public_coffee"] == OLD and sf.views["coffee"] == OLD
-
-
-def test_migrate_before_the_share_exists_rebuilds_only_existing_views(tmp_path):
-    counts = {t: 1 for t in PUBLIC_TABLES}
-    sf = FakeSnowflake(counts, tables={t: OLD for t in PUBLIC_TABLES}, views={"coffee": OLD}, owner=None)
     snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
-    assert set(sf.views) == {"coffee"} and sf.views["coffee"] == ["COFFEE_ID", "VARIANT_ID"]
-    assert not any(s.startswith("grant") for s in sf.sql)
+    assert healthy(sf)
+
+
+def test_migrate_stops_before_changing_anything_if_another_role_owns_a_view(tmp_path):
+    """E.g. after a migration run as ACCOUNTADMIN, which then owns the views it recreated."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = old_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    with pytest.raises(RuntimeError, match="SHARE.roaster is owned by ACCOUNTADMIN, not COFFEE_LOADER.*Nothing was"
+                                           ".*grant ownership on view SHARE.roaster to role COFFEE_LOADER copy"):  # fmt: skip
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert unchanged(sf)
+
+
+def test_a_view_missing_from_the_share_is_granted_first(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = old_snowflake(counts, shared={"coffee", "price_event", "market_weekly"})
+    snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert healthy(sf)
+    grant = sf.sql.index("grant select on view SHARE.roaster to share COFFEE_DATA_SHARE")
+    assert grant < min(n for n, s in enumerate(sf.sql) if s.startswith("put "))
+
+    # Granting it needs the share's owner: without that, the migration stops before changing anything.
+    sf = old_snowflake(counts, owner="ACCOUNTADMIN", shared={"coffee", "price_event", "market_weekly"})
+    with pytest.raises(
+        RuntimeError, match="SHARE.roaster is missing from share COFFEE_DATA_SHARE.*Nothing was"
+    ):
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert unchanged(sf)
+
+
+def test_migrate_before_the_share_and_its_views_exist_only_reloads_the_tables(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = FakeSnowflake(counts, tables={t: OLD for t in PUBLIC_TABLES}, owner=None)
+    snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert all(sf.tables[t] == NEW for t in PUBLIC_TABLES) and sf.views == {}
+    assert not any(s.startswith(("grant", "create or replace secure view", "show")) for s in sf.sql)
 
 
 def test_same_columns_load_as_usual(tmp_path):

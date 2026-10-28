@@ -38,3 +38,5 @@ grant select on view coffee_data.share.roaster to share coffee_data_share;
 --    coffee_data_share, using marketplace/LISTING.md. That needs a provider profile and acceptance of the
 --    Provider and Consumer Terms, and Snowflake reviews the listing before it goes live. If Provider Studio
 --    doesn't offer the share, run as COFFEE_LOADER: grant ownership on share coffee_data_share to role accountadmin;
+--    The views stay owned by COFFEE_LOADER, so `coffeedata load-snowflake --migrate` (run as COFFEE_LOADER) can
+--    still recreate them after a public contract change; `copy grants` keeps them in the share.

@@ -68,7 +68,13 @@ jobs:
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
           # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
-          if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then ROLLBACK_TO=served; fi
+          if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then
+            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE" ]; then
+              echo "snowflake_migrate runs no crawl, so sample and accept_volume_change would be ignored: unset them"
+              exit 1
+            fi
+            ROLLBACK_TO=served
+          fi
           if [ "$ROLLBACK_TO" = served ]; then
             uv run coffeedata rollback --to served --reason "re-export for Snowflake migration ($GITHUB_ACTOR)"
           elif [ -n "$ROLLBACK_TO" ]; then
