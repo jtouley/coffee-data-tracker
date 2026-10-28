@@ -29,6 +29,8 @@ from argon2.profiles import RFC_9106_LOW_MEMORY
 from coffeedata import shots
 from coffeedata.lake import Lake
 
+from .store import STARTUP_READS
+
 log = logging.getLogger(__name__)
 
 USERNAME = re.compile(r"[a-z0-9_-]{3,32}")
@@ -36,7 +38,6 @@ MIN_PASSWORD, MAX_PASSWORD = 10, 256
 SESSION_DAYS = 90
 RENEW_AFTER = timedelta(days=1)  # a cookie used after a day is reissued, so it lasts 90 days from last use
 LOCKOUT = 15 * 60
-STARTUP_READS = 3  # tries per table read at start, as in store.STARTUP_READS
 MAX_PER_USERNAME, MAX_PER_IP = 5, 20  # per username from one address, per address
 # Per username across all addresses: after BACKOFF_AFTER failures in the window, each further try waits 2, 4, 8 … up to
 # BACKOFF_MAX seconds after the last failure. Usernames are visible to members, so a hard lock on the username alone
