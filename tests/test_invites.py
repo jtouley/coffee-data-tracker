@@ -323,3 +323,30 @@ def test_theme_cookie_sets_the_page_theme(owner):
     assert '<html lang="en" data-theme="dark">' in owner.get("/setup").text
     owner.cookies.set("theme", "auto")
     assert '<html lang="en">' in owner.get("/setup").text
+
+
+@pytest.mark.parametrize(
+    "env, site, mail",
+    [
+        ({}, "https://registry.coffee", "support@registry.coffee"),
+        ({"SITE_URL": "https://staging.example/", "SUPPORT_EMAIL": "beta@example.test"}, "https://staging.example", "beta@example.test"),
+    ],
+)  # fmt: skip
+def test_sign_in_and_join_link_to_the_site_and_the_beta_address(lake, accounts, monkeypatch, env, site, mail):
+    """The wordmark, the legal links and "No invite? Ask for one" follow SITE_URL and SUPPORT_EMAIL, the same
+    settings the public site is built with."""
+    for k in ("SITE_URL", "SUPPORT_EMAIL"):
+        monkeypatch.delenv(k, raising=False)
+    for k, v in env.items():
+        monkeypatch.setenv(k, v)
+    app = create_app(lake, Sessions(accounts))
+    accounts.create_owner(SETUP, "jtouley", PW)  # past owner setup: the ordinary sign-in screen
+    beta = f'href="mailto:{mail}?subject=registry.coffee%20beta%20invite">No invite? Ask for one</a>'
+    for url, wordmark in (
+        ("/signin", '<a class="home" href="{}/">'),
+        ("/join", '<a class="meta home" href="{}/">'),
+    ):
+        page = client(app).get(url).text
+        assert beta in page, url
+        assert wordmark.format(site) in page, url
+        assert f'href="{site}/privacy/"' in page and f'href="{site}/terms/"' in page, url

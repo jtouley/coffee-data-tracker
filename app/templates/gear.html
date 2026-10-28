@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block title %}{{ item.name if item else "Add equipment" }} · registry.coffee{% endblock %}
 {% block main %}
-  <div class="top"><a class="back" href="/setup">‹ Setup</a></div>
+  <div class="top"><a class="back" href="{{ back[0] }}">‹ {{ back[1] }}</a></div>
   <h1 class="serif title mt8">{{ item.name if item else "Add equipment" }}</h1>
   {% if item %}<p class="body">{{ shots_n(shots) }} so far. Saving keeps those shots as they were.</p>{% endif %}
   {% if not item %}
   <div class="flabel" id="kind-l">Kind</div>
   <nav class="seg" aria-labelledby="kind-l">
-    {% for k, l in (("grinder", "Grinder"), ("machine", "Machine"), ("basket", "Basket")) %}<a class="segl" href="?kind={{ k }}"{% if k == kind %} aria-current="page"{% endif %}>{{ l }}</a>{% endfor %}
+    {% for k, l in (("grinder", "Grinder"), ("machine", "Machine"), ("basket", "Basket")) %}<a class="segl" href="?kind={{ k }}{% if back[0] != '/setup' %}&amp;next={{ back[0] | urlencode }}{% endif %}"{% if k == kind %} aria-current="page"{% endif %}>{{ l }}</a>{% endfor %}
   </nav>
   {% endif %}
-  <form class="fill" data-equipment="{{ kind }}"{% if item %} data-id="{{ item.equipment_id }}"{% endif %} novalidate>
+  <form class="fill" data-equipment="{{ kind }}"{% if item %} data-id="{{ item.equipment_id }}"{% endif %} data-next="{{ back[0] }}" novalidate>
     <label class="flabel" for="name">Name</label>
     <input class="input" id="name" name="name" autocomplete="off" value="{{ item.name if item else '' }}" required
       placeholder="{{ {'grinder': 'e.g. DF64 V2', 'machine': 'e.g. Lelit Bianca', 'basket': 'e.g. Pullman 18 g'}[kind] }}">

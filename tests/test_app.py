@@ -6,6 +6,7 @@ import pytest
 from fastapi import Request
 from fastapi.testclient import TestClient
 
+from app import views
 from app.auth import LocalOwner, User
 from app.main import create_app
 from coffeedata import shots
@@ -203,3 +204,137 @@ def test_local_sign_in_stub_refuses_to_run_on_a_space(monkeypatch):
     monkeypatch.setenv("SPACE_ID", "someone/registry-coffee")
     with pytest.raises(RuntimeError):
         LocalOwner()
+
+
+def test_saves_go_back_to_where_they_were_opened(lake, client):
+    """Gear screens return to the screen that opened them (first run, the Log shot gear picker, Setup), and only
+    to those: a crafted `next` goes to Setup."""
+    fresh = TestClient(create_app(Lake(str(lake.root.parent / "fresh")), HeaderAuth()))
+    assert 'href="/setup/gear/new?kind=grinder&amp;next=/"' in fresh.get("/").text
+
+    picker = client.get("/log/gear?grinder=g1&basket=b1").text
+    assert 'href="/setup/gear/new?kind=grinder&amp;next=/log/gear%3Fgrinder%3Dg1%26basket%3Db1"' in picker
+    gear = client.get(
+        "/setup/gear/new", params={"kind": "basket", "next": "/log/gear?grinder=g1&basket=b1"}
+    ).text
+    assert 'data-next="/log/gear?grinder=g1&amp;basket=b1"' in gear and "‹ Grinder and basket" in gear
+    assert "next=/log/gear%3Fgrinder%3Dg1%26basket%3Db1" in gear  # switching kind keeps where it returns to
+    for crafted in ("//evil.example/x", "https://evil.example/", "/history", "javascript:alert(1)"):
+        page = client.get("/setup/gear/new", params={"next": crafted}).text
+        assert 'data-next="/setup"' in page and "‹ Setup" in page
+    assert 'data-next="/setup"' in client.get("/setup/gear/g1").text
+
+
+def test_a_shot_opened_from_today_goes_back_to_today(client):
+    client.post("/api/shots", json=shot(1), headers=W)
+    client.post("/api/shots", json=shot(2), headers=W)
+    assert 'href="/shot/s1?from=today"' in client.get("/").text
+    page = client.get("/shot/s1?from=today").text
+    assert '<a class="back" href="/">‹ Today</a>' in page
+    assert 'class="on" href="/" aria-current="page">Today' in page
+    assert 'class="on" href="/coffees" aria-current="page">Coffees' in client.get("/shot/s1").text
+
+
+def test_every_page_has_a_place_for_what_the_last_save_did(client):
+    for url in ("/", "/log", "/bag/new", "/setup", "/setup/gear/g1", "/coffees", "/offline"):
+        assert '<p class="notice" data-notice role="status" hidden></p>' in client.get(url).text, url
+
+
+@pytest.mark.parametrize(
+    "next_, want",
+    [
+        ("/", ("/", "Today")),
+        ("/setup", ("/setup", "Setup")),
+        ("/log/gear?grinder=g1&basket=b1&x=1", ("/log/gear?grinder=g1&basket=b1", "Grinder and basket")),
+        ("/log/gear?grinder=../../x", ("/log/gear", "Grinder and basket")),
+        ("//evil.example", ("/setup", "Setup")),
+        ("https://evil.example/", ("/setup", "Setup")),
+        ("/\\evil.example", ("/setup", "Setup")),
+        ("/history", ("/setup", "Setup")),
+        ("", ("/setup", "Setup")),
+    ],
+)
+def test_back_to(next_, want):
+    assert views.back_to(next_) == want
+
+
+def test_times_are_shown_in_the_phones_time_zone(client):
+    """The phone writes its zone URL-encoded; read as written, every zone with a "/" fell back to UTC (18:03 shown
+    at 14:15 in New York)."""
+    client.post("/api/shots", json=shot(1, brewed_at="2026-10-27T18:03:00Z"), headers=W)
+    assert "Oct 27, 18:03" in client.get("/shot/s1").text  # no zone yet: UTC
+    client.cookies.set("tz", "America%2FNew_York")
+    assert "Oct 27, 14:03" in client.get("/shot/s1").text
+    assert "14:03" in client.get("/saved/s1").text
+    client.cookies.set(
+        "tz", "Asia%2FCalcutta"
+    )  # Chrome's name for India's zone: an alias, needs the tzdata package
+    assert "Oct 27, 23:33" in client.get("/shot/s1").text
+    client.cookies.set("tz", "Not%2FA_Zone")
+    assert "Oct 27, 18:03" in client.get("/shot/s1").text
+
+
+def test_a_roast_date_in_the_future_is_refused(client):
+    from datetime import date, timedelta
+
+    soon = (date.today() + timedelta(days=3)).isoformat()
+    r = client.post(
+        "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": soon}, headers=W
+    )
+    assert r.status_code == 422 and "future" in r.text
+    tomorrow = (date.today() + timedelta(days=1)).isoformat()  # the phone's date can be a day ahead
+    assert (
+        client.post(
+            "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": tomorrow}, headers=W
+        ).status_code
+        == 200
+    )
+
+
+def test_a_saved_bag_can_be_edited_as_a_new_record(client, lake):
+    today, coffee = client.get("/").text, client.get("/coffee/bag1").text
+    assert 'href="/bag/bag1/edit?from=today">Edit bag</a>' in today
+    assert 'href="/bag/bag1/edit">Edit bag</a>' in coffee
+    page = client.get("/bag/bag1/edit?from=today").text
+    assert 'value="2026-10-18"' in page and '<a class="back" href="/">‹ Today</a>' in page
+    assert 'data-next="/"' in page and "‹ Onyx Geometry" in client.get("/bag/bag1/edit").text
+    assert client.get("/bag/nope/edit").status_code == 404
+    before = len(files(lake, "bags"))
+    record = {
+        "bag_id": "bag1",
+        "coffee_freetext": "Onyx Geometry",
+        "roast_date": "2026-10-15",
+        "weight_g": 340,
+    }
+    assert client.post("/api/bags", json=record, headers=W).status_code == 200
+    assert len(files(lake, "bags")) == before + 1  # appended, not rewritten
+    assert client.post("/api/bags", json=record, headers=W).status_code == 200  # the outbox resends it
+    assert len(files(lake, "bags")) == before + 1
+    assert "Roasted Oct 15" in client.get("/").text
+    # Another person's bag isn't theirs to open.
+    assert client.get("/bag/bag1/edit", headers={"x-test-user": "maya"}).status_code == 404
+
+
+def test_the_coffee_page_line_reads_well_without_a_roast_date(client):
+    client.post(
+        "/api/bags", json={"bag_id": "bag2", "coffee_freetext": "x", "finished_on": "2026-10-03"}, headers=W
+    )
+    assert '<span class="meta">Finished Oct 3</span>' in client.get("/coffee/bag2").text
+
+
+def test_a_bag_stored_with_a_future_date_can_still_be_saved_unchanged(client, lake):
+    """Bags saved before the check may carry a future date: resaving one as it is (a photo's late match does)
+    isn't refused; changing it to another future date is."""
+    from datetime import date, timedelta
+
+    from app.store import Bag
+
+    store = client.app.state.store
+    future = date.today() + timedelta(days=30)
+    store._commit(
+        store.bags, "old", Bag(bag_id="old", user_id="owner", coffee_freetext="x", roast_date=future), "bags"
+    )
+    same = {"bag_id": "old", "coffee_freetext": "x", "roast_date": future.isoformat()}
+    assert client.post("/api/bags", json=same, headers=W).status_code == 200
+    later = same | {"roast_date": (future + timedelta(days=1)).isoformat()}
+    assert client.post("/api/bags", json=later, headers=W).status_code == 422

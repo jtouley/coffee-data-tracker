@@ -1,8 +1,8 @@
-/* Colors, type and the nav shared by the launch page and the legal pages. */
+/* Colors, type and the nav shared by every page of the public site: the launch page, the catalog and the legal pages. */
 :root {
   color-scheme: light;
   --surface-0: #f4efe6; --surface-1: #fbf8f2; --surface-2: #efe7da; --border: #e1d6c4;
-  --text-primary: #1f140d; --text-secondary: #5b4a3d; --text-muted: #85735f;
+  --text-primary: #1f140d; --text-secondary: #5b4a3d; --text-muted: #72614c;
   --accent: #a4531d; --accent-ink: #fbf8f2; --crema: #c98a4b;
   --series-1: #a4531d; --series-1-hover: #7f3d12; --grid: #e8dfd0;
   --code-bg: #2a1c13; --code-text: #f1e4d2; --code-muted: #b49a80;
@@ -38,5 +38,8 @@ nav { display: flex; align-items: center; justify-content: space-between; gap: 1
 nav .right { display: flex; align-items: center; gap: 16px; font-size: 14px; }
 nav .right a { color: var(--text-secondary); text-decoration: none; }
 nav .right a:hover { color: var(--text-primary); }
+nav .right a[aria-current] { color: var(--text-primary); font-weight: 600; }
 .theme { font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
   border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.theme[aria-pressed="true"] { background: var(--surface-2); color: var(--text-primary); }
+@media (max-width: 860px) { nav .right .hide-sm { display: none; } }

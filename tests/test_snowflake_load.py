@@ -151,6 +151,8 @@ class FakeSnowflake:
             self._rows = [(c,) for c in have]
         elif sql.startswith("show shares"):
             raise AssertionError("show shares lists nothing without IMPORT SHARE")
+        elif (m := re.match(r"show grants on view SHARE\.(\w+)", sql)) and self.view_owner[m[1]] != self.role:
+            raise RuntimeError("SQL access control error: Insufficient privileges to operate on view")
         elif m := re.match(r"show grants on view SHARE\.(\w+)", sql):
             self.description = [("created_on",), ("privilege",), ("granted_on",), ("name",), ("granted_to",),
                                 ("grantee_name",)]  # fmt: skip
@@ -270,8 +272,8 @@ def test_migrate_stops_before_changing_anything_if_another_role_owns_a_view(tmp_
     """E.g. after a migration run as ACCOUNTADMIN, which then owns the views it recreated."""
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts)
-    sf.view_owner["roaster"] = "ACCOUNTADMIN"
-    with pytest.raises(RuntimeError, match="SHARE.roaster is owned by ACCOUNTADMIN, not COFFEE_LOADER.*Nothing was"
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"  # COFFEE_LOADER then can't even list the view's grants
+    with pytest.raises(RuntimeError, match="SHARE.roaster is owned by another role, not COFFEE_LOADER.*Nothing was"
                                            ".*grant ownership on view SHARE.roaster to role COFFEE_LOADER copy"):  # fmt: skip
         snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     assert unchanged(sf)
@@ -288,7 +290,7 @@ def test_a_view_missing_from_the_share_is_granted_first(tmp_path):
     # Granting it needs the share's owner: without that, the migration stops before changing anything.
     sf = old_snowflake(counts, owner="ACCOUNTADMIN", shared={"coffee", "price_event", "market_weekly"})
     with pytest.raises(
-        RuntimeError, match="SHARE.roaster is missing from share COFFEE_DATA_SHARE.*Nothing was"
+        RuntimeError, match="SHARE.roaster is missing from share COFFEE_DATA_SHARE.*No table or view was"
     ):
         snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     assert unchanged(sf)

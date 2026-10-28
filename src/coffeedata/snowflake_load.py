@@ -154,26 +154,40 @@ def load(export_dir: Path, con=None, migrate: bool = False) -> dict:
         present = [t for t in PUBLIC_TABLES if migrate and _columns(cur, "SHARE", SHARE_VIEWS[t])]
         if present:  # checked first, so a migration that can't finish changes nothing
             role = str(cur.execute("select current_role()").fetchone()[0]).upper()
-            grants = {t: _view_grants(cur, f"SHARE.{SHARE_VIEWS[t]}") for t in present}
+            grants = {}
+            for t in present:
+                view = f"SHARE.{SHARE_VIEWS[t]}"
+                try:
+                    grants[t] = _view_grants(cur, view)
+                except Exception as e:  # noqa: BLE001 - snowflake.connector's ProgrammingError
+                    if "privilege" not in str(e).lower() and "not authorized" not in str(e).lower():
+                        raise
+                    grants[t] = (
+                        "another role",
+                        set(),
+                    )  # only a role with rights on the view can list its grants
             for t, (owner, _) in grants.items():
                 if owner != role:
                     raise RuntimeError(
                         f"SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so {role} can't recreate it. "
-                        f"Nothing was changed. Give it back, keeping its grants: grant ownership on view "
-                        f"SHARE.{SHARE_VIEWS[t]} to role {role} copy current grants"
+                        f"Nothing was changed. Its owner (or ACCOUNTADMIN) can give it back, keeping its grants: "
+                        f"grant ownership on view SHARE.{SHARE_VIEWS[t]} to role {role} copy current grants"
                     )
             # `copy grants` keeps each view's grant to the share, so only a view the share is missing (and the
-            # share exists: another view is in it) is granted, before anything changes. That one grant needs the
-            # share's owner; nothing else does, so a share handed to ACCOUNTADMIN for a listing is fine.
+            # share exists: another view is in it) is granted, before anything else changes. That grant needs the
+            # share's owner, which is COFFEE_LOADER under admin_setup.sql (a share's ownership can't be moved).
+            granted: list[str] = []
             if any(share in shares for _, shares in grants.values()):
                 for t in (t for t, (_, shares) in grants.items() if share not in shares):
                     try:
                         cur.execute(f"grant select on view SHARE.{SHARE_VIEWS[t]} to share {share}")
+                        granted.append(f"SHARE.{SHARE_VIEWS[t]}")
                     except Exception as e:  # noqa: BLE001 - snowflake.connector's ProgrammingError
+                        kept = f" (granted to it so far: {', '.join(granted)})" if granted else ""
                         raise RuntimeError(
                             f"SHARE.{SHARE_VIEWS[t]} is missing from share {share}, and {role} can't grant it "
-                            f"({e}): that needs the share's owner. Nothing was changed. Grant it as the owner: "
-                            f"grant select on view SHARE.{SHARE_VIEWS[t]} to share {share}"
+                            f"({e}): that needs the share's owner. No table or view was changed{kept}. Grant it "
+                            f"as the share's owner: grant select on view SHARE.{SHARE_VIEWS[t]} to share {share}"
                         ) from e
         for table in PUBLIC_TABLES:  # uploaded before anything is dropped
             f = (export_dir / f"{table}.parquet").resolve()

@@ -245,13 +245,13 @@ def latest_run(lake: Lake) -> str | None:
 
 
 def builds(lake: Lake) -> list[tuple[str, str, bool]]:
-    """(build_id, run_date, passed) for every build, oldest first."""
+    """(build_id, run_date, passed) for every build, oldest first (builds in the same second by build_id)."""
     rows = (
         lake.connect()
         .execute(
             f"select build_id, any_value(run_date)::varchar, "
             f"bool_or(kind = 'build' and status = 'pass') and not bool_or(coalesce(status, '') in ('error', 'fail')) "
-            f"from {lake.scan('builds')} where build_id is not null group by build_id order by max(built_at)"
+            f"from {lake.scan('builds')} where build_id is not null group by build_id order by max(built_at), build_id"
         )
         .fetchall()
     )
@@ -259,14 +259,17 @@ def builds(lake: Lake) -> list[tuple[str, str, bool]]:
 
 
 def served(lake: Lake) -> dict | None:
-    """The release customers are getting now (marts/release.parquet), if any."""
+    """The release customers are getting now (marts/release.parquet), if any. Only a missing file means nothing
+    is served; any other failed read (a 429, a timeout) is raised, so it is never recorded as "nothing served"."""
     try:
         src = ", ".join(f"'{s}'" for s in lake.mart_sources("release"))
         cur = lake.connect().execute(f"select * from read_parquet([{src}])")
         cols = [d[0] for d in cur.description]
         row = cur.fetchone()
-    except Exception:  # noqa: BLE001 - nothing served yet (a new lake, or one from before releases)
-        return None
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException / HTTPException; duckdb is imported lazily
+        if no_files(e) or "HTTP 404" in str(e):  # a new lake, or one from before releases
+            return None
+        raise
     return dict(zip(cols, row, strict=True)) if row else None
 
 

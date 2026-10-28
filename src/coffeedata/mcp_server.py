@@ -132,7 +132,8 @@ def check_sql(sql: str) -> str:
 @mcp.tool()
 def run_sql(sql: str, max_rows: int = 200) -> dict:
     """Read-only SQL over the dbt models in DuckDB: dim_roaster, dim_coffee, dim_equipment, fct_price_event,
-    fct_shot, mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh."""
+    fct_shot, mart_dial_in, mart_market, mart_new_arrivals. Run `make build` first to refresh. This reads the latest
+    local build (COFFEEDATA_DB), whether or not it passed its checks; the other tools read the served marts."""
     import duckdb
 
     stmt = check_sql(sql)

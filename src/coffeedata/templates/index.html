@@ -6,37 +6,15 @@
 <title>Catalog · registry.coffee</title>
 <meta name="description" content="Every coffee US specialty roasters sell online, updated weekly: origin, process, price per 100 g and stock.">
 <style>
-:root {
-  color-scheme: light;
-  --surface-0: #f6f5f2; --surface-1: #fcfcfb; --border: #e3e1db;
-  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #77756f;
-  --series-1: #2a78d6; --series-1-hover: #1f63b6; --grid: #ebe9e4; --accent: #8a4b1d;
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2d2b;
-    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958d;
-    --series-1: #3987e5; --series-1-hover: #62a2ee; --grid: #2a2a28; --accent: #e0a46e;
-  }
-}
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --surface-0: #121211; --surface-1: #1a1a19; --border: #2e2d2b;
-  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #96958d;
-  --series-1: #3987e5; --series-1-hover: #62a2ee; --grid: #2a2a28; --accent: #e0a46e;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--surface-0); color: var(--text-primary);
-  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
-main { max-width: 1080px; margin: 0 auto; padding: 24px 16px 64px; }
-header h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.01em; }
+{% include "_brand.css" %}
+main { padding: 8px 0 64px; }
+header h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.1; margin: 8px 0 8px; letter-spacing: -0.01em; font-weight: 600; }
 header p { margin: 0; color: var(--text-secondary); }
-h2 { font-size: 18px; margin: 0 0 12px; }
-section { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-top: 20px; }
+h2 { font-size: 22px; line-height: 1.2; margin: 0 0 12px; font-weight: 600; }
+section { background: var(--surface-1); border: 1px solid var(--border); border-radius: 16px; padding: 20px; margin-top: 20px; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 20px; }
-.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
-.tile .n { font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.tile .n { font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .tile .l { color: var(--text-secondary); font-size: 13px; }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
 .grid2 section { margin-top: 0; }
@@ -55,7 +33,7 @@ table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
 th { color: var(--text-secondary); font-weight: 600; position: sticky; top: 0; background: var(--surface-1); }
 td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
-a { color: var(--accent); }
+th.num { white-space: nowrap; }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .filters input, .filters select { font: inherit; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border);
   background: var(--surface-0); color: var(--text-primary); }
@@ -70,18 +48,21 @@ a { color: var(--accent); }
   display: none; max-width: 280px; z-index: 10; }
 .notes { color: var(--text-secondary); }
 footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
-.theme { float: right; font: inherit; font-size: 13px; background: none; border: 1px solid var(--border); color: var(--text-secondary);
-  border-radius: 6px; padding: 4px 10px; cursor: pointer; }
-.crumb { display: inline-block; margin-bottom: 8px; font-size: 13px; text-decoration: none; }
+/* The app's beta, where a dialing-in reader is: one line, not a section. */
+.beta-note { margin-top: 20px; padding: 14px 20px; border-radius: 16px; background: var(--surface-1); border: 1px dashed var(--accent);
+  color: var(--text-secondary); font-size: 14px; }
+.beta-note p { margin: 0; }
+.beta-note b { color: var(--text-primary); }
+.beta-note a { font-weight: 600; white-space: nowrap; }
 @media (max-width: 600px) { .hide-sm { display: none; } }
 </style>
 </head>
 <body>
+<div class="wrap">
+{% set root, page = "../", "catalog" %}{% include "_nav.html" %}
 <main>
 <header>
-  <button class="theme" id="theme" type="button">Theme</button>
-  <a class="crumb" href="../">← registry.coffee</a>
-  <h1>The catalog</h1>
+  <h1 class="serif">The catalog</h1>
   <p>What US specialty roasters are selling this week. Updated {{ generated }}.</p>
 </header>
 
@@ -94,7 +75,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 
 <div class="grid2" style="margin-top:20px">
   <section>
-    <h2>Median price per 100 g, by origin</h2>
+    <h2 class="serif">Median price per 100 g, by origin</h2>
     {{ charts.origin_price | safe }}
     <p class="note">Single origins in stock, cheapest bag size per coffee; origins with at least 5 coffees.</p>
     <details><summary>Table</summary><table><thead><tr><th>Origin</th><th class="num">Coffees</th><th class="num">Median $/100 g</th></tr></thead><tbody>
@@ -102,7 +83,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     </tbody></table></details>
   </section>
   <section>
-    <h2>Coffees in stock, by process</h2>
+    <h2 class="serif">Coffees in stock, by process</h2>
     {{ charts.process | safe }}
     <details><summary>Table</summary><table><thead><tr><th>Process</th><th class="num">Coffees</th></tr></thead><tbody>
     {% for r in processes %}<tr><td>{{ r.process }}</td><td class="num">{{ r.n }}</td></tr>{% endfor %}
@@ -111,7 +92,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 </div>
 
 <section>
-  <h2>New since last week</h2>
+  <h2 class="serif">New since last week</h2>
   {% if new %}
   <table><thead><tr><th>Coffee</th><th class="hide-sm">Origin</th><th class="hide-sm">Notes</th><th class="num">$/100 g</th></tr></thead><tbody>
   {% for c in new %}<tr><td>{% if c.url %}<a href="{{ c.url }}" rel="noopener">{{ c.title }}</a>{% else %}{{ c.title }}{% endif %}<br><span class="notes">{{ c.roaster_name }}</span></td>
@@ -121,9 +102,13 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   </tbody></table>
   {% else %}<p class="empty">Nothing new since each roaster's previous run.</p>{% endif %}
 </section>
+<aside class="beta-note" aria-label="The shot log app">
+  <p><b>Dialing in one of these?</b> Log each shot in the registry.coffee app, in an invite-only beta.
+    Nothing you log appears on this site. <a href="{{ links.beta }}">Request an invite →</a></p>
+</aside>
 
 <section>
-  <h2>Browse coffees</h2>
+  <h2 class="serif">Browse coffees</h2>
   <div class="filters">
     <input type="search" id="q" placeholder="Search roaster, coffee, notes…" aria-label="Search the catalog">
     <select id="origin" aria-label="Origin"><option value="">All origins</option></select>
@@ -136,7 +121,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
 </section>
 
 <section>
-  <h2>Coverage</h2>
+  <h2 class="serif">Coverage</h2>
   <p class="note">Where each roaster in the registry stands as of the latest weekly run.</p>
   <table><tbody>{% for label, n in status_rows %}<tr><td>{{ label }}</td><td class="num">{{ "{:,}".format(n) }}</td></tr>{% endfor %}
     <tr><td><strong>Roasters in the registry</strong></td><td class="num"><strong>{{ "{:,}".format(status_rows | sum(attribute=1)) }}</strong></td></tr></tbody></table>
@@ -150,6 +135,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a>
 </footer>
 </main>
+</div>
 <div id="tip" role="status"></div>
 <script>
 (() => {
