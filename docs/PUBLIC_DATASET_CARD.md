@@ -23,10 +23,10 @@ began. Built by [coffee-data-tracker](https://github.com/jtouley/coffee-data-tra
 
 | Table | Grain | What's in it |
 |---|---|---|
-| `coffee` | one row per coffee ever seen | name, roaster, link, origin, process, varietals, elevation, roast level, tasting notes, flavor categories, blend/decaf, bag sizes, min price, price per 100 g, `is_listed`, `in_stock`, `catalog_status` (available, preorder, sold_out, archived, delisted), `published_at` (the store's latest publish time; Shopify only), first/last seen |
+| `coffee` | one row per coffee ever seen | name, roaster, link, origin, process, varietals, elevation, roast level, tasting notes, flavor categories, blend/decaf, bag sizes, min price, price per 100 g, `is_listed`, `in_stock`, `catalog_status` (available, preorder, sold_out, archived, delisted), `published_at` (the store's latest publish time; Shopify only), `is_wholesale` (a bulk or cafe listing, often a retail coffee's wholesale twin), first/last seen |
 | `price_events` | coffee × bag × week × event | `new`, `price`, `availability`, `removed`, `relisted` with old and new price |
 | `market_weekly` | origin × process | coffees, roasters, in stock, median / p10 / p90 price per 100 g |
-| `roasters` | one row per roaster | name, city, state, storefront platform, status, coffees listed (its current catalog: listed, not archived), coffees in stock |
+| `roasters` | one row per roaster | name, city, state, storefront platform, status, coffees listed (its current retail catalog: listed, not archived, not wholesale), coffees in stock |
 
 `manifest.json` gives the run date and row counts of the current export.
 

@@ -178,6 +178,9 @@ models:
         data_type: varchar
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: is_wholesale
+        data_type: boolean
+        data_tests: [not_null]
       - name: release_build_id
         data_type: varchar
       - name: release_run_date
