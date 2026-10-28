@@ -1,8 +1,8 @@
 # Sealed test set for the coffee classifier
 
 600 products drawn from the live lake on 2026-10-27 (300 the rules kept, 300 they dropped), none of them in the
-train or validation sets in `tests/fixtures/classifier_labels.jsonl`. Each was labeled twice, independently, against
-`GUIDE.md`, without seeing any prediction; a third labeler settled the 14 disagreements (`settled.json`).
+train or validation sets in `tests/fixtures/classifier_labels.jsonl`. Each was labeled twice, independently, by Claude subagents
+against `GUIDE.md`, without seeing any prediction; a third labeler settled the 14 disagreements (`settled.json`).
 
 Rules for using it:
 
