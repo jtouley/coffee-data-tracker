@@ -2,7 +2,8 @@
 set's name, shuffled together and printed with no stratum or prediction, for labelers to label blind.
 
 Usage: python sample.py <EVAL_DIR> <train|validation|test> <K>. Writes <EVAL_DIR>/work/<set>_sample.json.
-The sets in this eval were drawn with K=120 (train, F and B only, plus 40 from N), 50 (validation) and 50 (test).
+The sets scored in README.md were drawn before the population had a fixed order, so they can't be drawn again;
+their ids are committed in samples_<set>.txt instead. Draws from now on repeat.
 """
 
 import json
@@ -16,7 +17,10 @@ from rules import stratum  # noqa: E402
 
 def main(eval_dir: str, name: str, k: str) -> None:
     work = Path(eval_dir) / "work"
-    pop = [r for r in json.loads(Path(work / "population.json").read_text()) if r["set"] == name]
+    pop = sorted(
+        (r for r in json.loads(Path(work / "population.json").read_text()) if r["set"] == name),
+        key=lambda r: r["coffee_id"],
+    )  # the draw mustn't depend on the file's row order
     out = []
     for s in "FBN":
         group = [r for r in pop if stratum(r) == s]

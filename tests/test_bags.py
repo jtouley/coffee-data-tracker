@@ -232,9 +232,35 @@ def test_a_coffee_sold_only_as_wholesale_matches_a_bag_that_doesnt_say_so(lake):
         assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == "onyx.com:1"
         # A roaster whose name reads as wholesale doesn't make its bags wholesale.
         assert shots.match_bag("Wholesale Coffee Co", "Ethiopia Guji", lake)[0] == "ws.com:1"
-        # Unclear: retail candidates first, then the wholesale one that outscores them.
+        # Unclear: the wholesale one that outscores the retail candidates is offered, best first.
         coffee_id, offered = shots.match_bag("Onyx", "Sidama", lake, min_score=101)
-        assert coffee_id is None and [m["coffee_id"] for m in offered][-1] == "onyx.com:5"
+        assert coffee_id is None and offered[0]["coffee_id"] == "onyx.com:5"
+    finally:
+        shots._catalog_cache.clear()
+
+
+def test_a_wholesale_listing_that_outscores_the_retail_pick_makes_the_match_unclear(lake):
+    # Re-review at 6cd500b, #1: a tag-only wholesale listing titled exactly as the bag reads (100) against a retail
+    # "Ethiopia Sidama Natural" (97). Retail first used to return the 97 confidently and never offer the 100.
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Sidama Natural', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Ethiopia Sidama', true),
+        ('onyx.com:3', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:4', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    try:
+        for coffee_id, offered in (
+            shots.match_bag("Onyx", "Ethiopia Sidama", lake),
+            shots.match_coffee("Onyx Ethiopia Sidama", lake),
+        ):
+            assert coffee_id is None
+            assert [m["coffee_id"] for m in offered][:2] == ["onyx.com:2", "onyx.com:1"]  # both, best first
+        # A twin that only adds words to its retail coffee's title still loses to it.
+        assert shots.match_bag("Onyx", "Ethiopia Guji", lake)[0] == "onyx.com:3"
+        assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == "onyx.com:3"
     finally:
         shots._catalog_cache.clear()
 

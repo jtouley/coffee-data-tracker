@@ -16,9 +16,14 @@ label) picks the coffee a person's bag is saved under. The cases are the lake's 
 There are 2 bags with a `coffee_id`: 1 in train, 0 in validation and 1 in test. That makes 3 inputs: 2 typed
 texts and 1 read label. This is too few to score or to choose between matchers.
 
-On all of them, `main`, a1733aa and this change score the same: 1 of 2 typed texts and 0 of 1 read labels, using
-the snapshot's own export. With a rebuilt export that has the same rows in another order, all three get 0 of 2.
-The 300-candidate prefilter breaks ties by row order, which is worth fixing on its own.
+All matcher versions score the same on these inputs, using the snapshot's own export: 1 of 2 typed texts and 0
+of 1 read labels. That covers `main` (b309ad0), a1733aa, 6cd500b, and this change (a wholesale candidate that
+outscores the retail pick makes the match unclear). Neither bag involves a wholesale listing, so the change can't show
+on them.
+
+With a rebuilt export that has the same rows in another order, the versions measured then (`main` at 7ecc1a6,
+a1733aa, and this branch before its later merges) all get 0 of 2 typed texts. The 300-candidate prefilter breaks ties by row order, which is worth fixing
+on its own.
 
 To be meaningful, this needs:
 - at least 30 inputs per set, and about 150 bags overall, from many roasters;

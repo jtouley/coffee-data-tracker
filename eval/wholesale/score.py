@@ -2,6 +2,9 @@
 
 Usage: python score.py <EVAL_DIR> <train|validation|test> [labels file, default labels_ref.json]
 
+The drawn ids (samples_<set>.txt) and the labels (labels_*.json) are in this folder; EVAL_DIR/work/population.json
+is rebuilt from the lake with population.py (its listings' text is private, so it isn't committed).
+
 Precision and recall are weighted by stratum size (F, B, N in rules.stratum), since each stratum is sampled at a
 different rate; the unweighted sample counts and their intervals are printed beside them. Stratum R (no rule flags
 it and it doesn't look bulk) isn't sampled, so recall says nothing about wholesale listings there."""
@@ -27,10 +30,12 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float, float]:
 
 def measure(eval_dir: str, name: str, rule: str, labels: str = "labels_ref.json") -> dict:
     """Weighted precision and recall, and the sample counts behind them, for one rule on one set."""
-    work = Path(eval_dir) / "work"
-    pop = [r for r in json.loads(Path(work / "population.json").read_text()) if r["set"] == name]
-    sample = set(json.loads(Path(work / f"labels_{name}.json").read_text()))  # the ids drawn for this set
-    lab = {k: v for k, v in json.loads(Path(work / labels).read_text()).items() if k in sample}
+    here = Path(__file__).parent
+    pop = [
+        r for r in json.loads((Path(eval_dir) / "work" / "population.json").read_text()) if r["set"] == name
+    ]
+    sample = set((here / f"samples_{name}.txt").read_text().splitlines())  # the ids drawn for this set
+    lab = {k: v for k, v in json.loads((here / labels).read_text()).items() if k in sample}
     size = {k: sum(stratum(r) == k for r in pop) for k in "FBN"}
     est = {"tp": 0.0, "fp": 0.0, "fn": 0.0}
     raw = {"tp": 0, "fp": 0, "fn": 0, "unclear_flagged": 0}

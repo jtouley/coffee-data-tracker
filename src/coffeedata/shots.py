@@ -174,21 +174,30 @@ def _pick(said: str, ranked: list[dict], lake: Lake | None, min_score: int) -> t
 
     `said` is the coffee's own text. When it says wholesale ("Wholesale - 5LB Ethiopia Guji"), every listing
     competes. Otherwise retail coffees are tried first: a wholesale twin's title contains its retail coffee's, so
-    it would tie with it and make the match unclear. Only if no retail coffee is confident does the whole catalog
-    decide, so a coffee sold only as wholesale (or flagged wholesale only by a tag) is still matched from a bag
-    that doesn't say so. Unclear: the retail candidates are offered, with a wholesale one that outscores them."""
+    it would tie with it and make the match unclear. The retail pick stands only if no wholesale listing outscores
+    it (or ties with fewer words the text didn't say); then the whole catalog decides, so a coffee sold only as
+    wholesale (or flagged wholesale only by a tag) is still matched from a bag that doesn't say so. Unclear: the
+    wholesale listing that beats the retail candidates is offered first, then the retail candidates."""
     if classify.says_wholesale(said):
         return _confident(ranked, min_score), ranked[:3]
     wholesale = _load(lake).wholesale
+    asked = set(_tokens(said))
+
+    def key(m: dict) -> tuple[int, int]:
+        # On a tie, the label with fewer words the text didn't say is the closer one: a twin "Wholesale - 5LB
+        # Ethiopia Guji" adds words to "Ethiopia Guji", while a wholesale "Ethiopia Sidama" is closer to a bag
+        # reading "Ethiopia Sidama" than the retail "Ethiopia Sidama Natural" is.
+        return m["score"], -len(set(_tokens(m["label"])) - asked)
+
     retail = [m for m in ranked if m["coffee_id"] not in wholesale]
-    if best := _confident(retail, min_score):
+    top = key(retail[0]) if retail else (-1, 0)
+    above = [m for m in ranked if m["coffee_id"] in wholesale and key(m) > top]
+    if not above and (best := _confident(retail, min_score)):
         return best, retail[:3]
     # Adding rivals can't make a retail coffee clear, so a match here is a wholesale listing.
     if best := _confident(ranked, min_score):
         return best, ranked[:3]
-    top = retail[0]["score"] if retail else -1
-    above = [m for m in ranked if m["coffee_id"] in wholesale and m["score"] > top]
-    return None, (retail[:2] + above[:1]) if above else retail[:3]
+    return None, (above[:1] + retail + above[1:])[:3]
 
 
 # --- logging -----------------------------------------------------------------------------------------

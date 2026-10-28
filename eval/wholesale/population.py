@@ -29,7 +29,8 @@ def main(lake: str, out: str) -> None:
            list_transform(s.variants, lambda v: v.grams)
     from '{lake}/marts/dim_coffee.parquet' c
     join s on s.roaster_id = c.roaster_id and c.coffee_id = s.roaster_id || ':' || s.product_id
-    where c.is_listed""")
+    where c.is_listed
+    order by c.coffee_id""")  # a fixed order, so the seeded draws in sample.py repeat
         .fetchall()
     )
     pop = []
