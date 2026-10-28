@@ -51,12 +51,28 @@ once on a sealed test set. The results are in `RESULTS.md`.
 
 ## Limits
 
-- The labels are one labeller's. That is Claude (the agent that wrote the rules), not a human and not two
-  independent labellers as in `eval/sealed`. It labelled blind to predictions, but a human pass over
-  `labels_test.json` would make the reference stronger.
+- Labellers:
+  - All sets were labelled by Claude Opus 5.5 (`claude-opus-5-5`), the agent that wrote the rules, blind to
+    predictions.
+  - The sealed test set was labelled a second time, independently and blind, by Claude in the PR review. The two
+    agreed on 82 of 82, so no third labeller was needed.
+  - Both are Claude, so a person's spot-check is still worth doing.
 - At 25 per stratum, per-stratum intervals are wide. The paired difference is tight because unchanged products
   contribute nothing to it.
 - Hand-written probe listings (`tests/test_extract.py::test_origin_probes`) are regression tests, not evaluation.
+
+## Sealing, next time
+
+- Commit `pred_main_test.json`, `pred_branch_test.json` and `SHA256SUMS` in a commit of their own, and push it,
+  before any test label exists. Commit the labels and the score afterwards.
+  - In #41 the predictions, labels and hashes all arrived in one commit (3950ef9). Git couldn't show the order.
+  - The review closed that gap by rebuilding the predictions exactly from the frozen code, and by a blind second
+    label.
+- Run pre-commit on the sealed files before hashing them, so a hook can't change them afterwards.
+- The test set here was scored for #41 and is now spent. It may join the regression fixtures.
+  - The next sealed evaluation of origin extraction needs a fresh test set: re-split with a new salt over products
+    that weren't in these sets (for example, lots first seen after 2026-10-28), and record that salt here.
+  - Follow-ups until then are measured on train and validation only.
 
 ## Commands
 

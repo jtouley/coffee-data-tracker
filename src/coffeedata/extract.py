@@ -171,10 +171,11 @@ _NO_ORIGIN = re.compile(r"\b(random|mystery|surprise|roaster'?s pick|roaster'?s 
 
 # Names that look like an origin but aren't: the Flores in Spanish place names ("Las Flores, Honduras") isn't the
 # Indonesian island, New Mexico isn't Mexico, a Brazil nut is a tasting note, and Colombia is also a variety
-# ("Variedad Colombia", "var. Colombia").
+# ("Variedad Colombia", "var. Colombia"). Not "Colombia Varietal": listings write "Origin: Colombia Varietal: Castillo"
+# and "Colombia Varietal Series", where Colombia is the origin.
 _FALSE_PLACES = re.compile(
     r"\b(?:(?:las|los|de)\s+(flores)|new\s+(mexico)|(brazil)\s+nuts?|(?:variedad|var\.?|variety|varietal|cultivar)\s+"
-    r"(colombia)|(colombia)\s+(?:variet(?:y|al|ies)|cultivar))\b",
+    r"(colombia))\b",
     re.I,
 )
 
@@ -185,7 +186,7 @@ def _strip_false_places(text: str) -> str:
         text = re.sub(r"\bjava\b", lambda m: " " * len(m.group()), text, flags=re.I)
 
     def blank(m: re.Match[str]) -> str:
-        g = next(i for i in range(1, 6) if m.group(i))
+        g = next(i for i in range(1, m.re.groups + 1) if m.group(i))
         s, e = m.start(g) - m.start(), m.end(g) - m.start()
         return m.group()[:s] + " " * (e - s) + m.group()[e:]
 
@@ -220,8 +221,10 @@ _FARM_NAME = re.compile(r"\b(?:finca|hacienda|fazenda|s[ií]tio|beneficio|estate
 # A labelled origin field: "Origin: Honduras", "ORIGIN | Ethiopia & Colombia", "Region: Marcala, Honduras". Every
 # country in the field counts, so "Origin: Brazil/Honduras" names two. The field ends at the line, the sentence or
 # the next "Label:".
+# A following label can't start with a country: in "Origin: Peru, Colombia Varieties: …", Colombia is in the field.
 _LABEL_FIELD = re.compile(
-    r"\b(?:origins?|country(?: of origin)?|region|location)\s*[:|\-–]\s*(.{1,100}?)(?=\n|\.\s|;|\s[A-Z][\w ]{1,20}:|$)",
+    r"\b(?:origins?|country(?: of origin)?|region|location)\s*[:|\-–]\s*(.{1,100}?)"
+    r"(?=\n|\.\s|;|\s(?!" + _COUNTRY.pattern + r")[A-Z][\w ]{1,20}:|$)",
     re.I,
 )
 # "Marcala, Honduras": a region followed by its own country (not "Chiapas, Brazil", a list). "in Las Flores,
@@ -249,21 +252,44 @@ def _stated_origins(body: str) -> list[str]:
     out = [c for m in _LABEL_FIELD.finditer(text) for c in _named(m.group(1))]
     for m in _COUNTRY.finditer(text):
         country = canonical_country(m.group(1))
-        before = text[max(0, m.start() - 80) : m.start()].rsplit("\n", 1)[-1]
+        start = max(0, m.start() - 80)
+        before = text[start : m.start()].rsplit("\n", 1)[-1]
         region = _REGION_COMMA.search(before)
-        place = _PLACE_COMMA.search(before)
-        if (region and REGIONS[region.group(1).lower()] == country) or (place and not _named(place.group(1))):
+        # The place name is read from the original text, so a blanked "Las Flores" still reads as a place; it must
+        # not itself name a country once blanked ("in Ethiopia, Kenya" is a list).
+        offset = m.start() - len(before)
+        place = _PLACE_COMMA.search(body[offset : m.start()])
+        if (region and REGIONS[region.group(1).lower()] == country) or (
+            place and not _named(text[offset + place.start(1) : offset + place.end(1)])
+        ):
             out.append(country)
     return list(dict.fromkeys(out))
 
 
+# A region name that is where the roaster or shop is, not where the coffee grew: "roasted in Santa Barbara", "our cafe
+# in Antigua". And one inside a business name: "Copan Coffee Roasters LLC", "Huila Trading".
+_ROASTER_PLACE = re.compile(
+    r"\b(?:roast(?:ed|s|ing|ery|eries|ers?)?|based|headquartered|caf[eé]s?|shops?|stores?|offices?)\b[^.;\n]{0,25}?"
+    r"\b(?:in|at|from|out\s+of)\s+(?:(?:beautiful|sunny|downtown|historic)\s+)?$",
+    re.I,
+)
+_BUSINESS_NAME = re.compile(
+    r"^\s+(?:coffee\s+(?:roasters?|roasting|roastery|company|co\b|trading|traders|importers?|house|shop|bar)|"
+    r"roasters?\b|roastery\b|roasting\b|llc\b|inc\b|trading\b|imports?\b)",
+    re.I,
+)
+
+
 def _regions(text: str) -> list[str]:
-    """Countries of the one-country growing regions a text names, leaving out farms named after one."""
+    """Countries of the one-country growing regions a text names as where coffee grew: not a farm named after one
+    ("Finca Santa Barbara"), not the roaster's town, not a business name."""
     return list(
         dict.fromkeys(
             REGIONS[m.group(1).lower()]
             for m in _REGION.finditer(text)
             if not _FARM_NAME.search(text[max(0, m.start() - 20) : m.start()])
+            and not _ROASTER_PLACE.search(text[max(0, m.start() - 60) : m.start()])
+            and not _BUSINESS_NAME.search(text[m.end() : m.end() + 40])
         )
     )
 
@@ -288,7 +314,7 @@ def origin_country(title: str, in_title: list[str], body: str, tag_region: str =
     """Where the coffee grew, or None when the listing doesn't say clearly.
 
     A country in the title wins, unless it is part of a variety's name ("Kenya SL-28") and the description states a
-    different origin or region. Otherwise the description's stated origin ("Origin:", "Marcala, Honduras"), else the
+    different origin. (A region mentioned in passing doesn't overrule the title: "Colombia Caturra" stays Colombia.) Otherwise the description's stated origin ("Origin:", "Marcala, Honduras"), else the
     one country the top of the description names. Several candidates is no answer. A growing region only counts when
     no country is named anywhere, and a region that disagrees with the description's one country is no answer either.
     """
@@ -296,7 +322,7 @@ def origin_country(title: str, in_title: list[str], body: str, tag_region: str =
     regions = list(dict.fromkeys(_regions(title) + _regions(tag_region) + _regions(body)))
     if in_title:
         c = in_title[0]
-        if _title_is_variety(title, c) and set(stated + regions) - {c}:
+        if _title_is_variety(title, c) and set(stated) - {c}:
             return None
         return c
     if stated:

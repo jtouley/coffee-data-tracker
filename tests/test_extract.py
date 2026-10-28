@@ -418,3 +418,51 @@ def test_multi_origin_blend_bodies_abstain():
 def test_varietal_spellings():
     e = extract.rules(item("Kiambu", body="SL-28, SL 34, Ruiru11 and Batian."))
     assert e.varietals == ["Batian", "Ruiru 11", "SL28", "SL34"]
+
+
+def test_region_only_where_coffee_grew():
+    # The roaster's town and business names aren't origins (review of #41).
+    assert (
+        extract.rules(
+            item("House Blend", body="Small-batch roasted in Santa Barbara by our team.")
+        ).origin_country
+        is None
+    )
+    body = "Copan Coffee Roasters LLC roasts every order by hand. Choose light, medium or dark."
+    assert extract.rules(item("ROAST LEVEL & GRIND TYPE", body=body)).origin_country is None
+    assert extract.rules(item("Lot 9", body="Visit our cafe in Antigua for a cup.")).origin_country is None
+    # A region where the coffee grew still counts.
+    body = "Maikon's grandfather moved to Santa Barbara and planted a few coffee trees in 1970."
+    assert extract.rules(item("Maikon Fernandez - Natural", body=body)).origin_country == "Honduras"
+    assert (
+        extract.rules(item("Copan Lot", body="Grown by smallholders in Copán.")).origin_country == "Honduras"
+    )
+
+
+def test_colombia_varietal_is_still_colombia():
+    assert extract.rules(item("Colombia Varietal Series Pink Bourbon")).origin_country == "Colombia"
+    body = "Origin: Colombia Varietal: Castillo Process: Washed"
+    assert extract.rules(item("Lot 7", body=body)).origin_country == "Colombia"
+    # A labelled blend of two origins is no answer, not the first one.
+    body = "Origin: Peru, Colombia Varieties : South and Central American Coffees Type: Blend"
+    assert extract.rules(item("Adirondack", body=body)).origin_country is None
+    # Colombia as the variety's name is still not an origin.
+    assert extract.rules(
+        item("Finca La Esperanza var. Colombia", body="Grown in Marcala, Honduras.")
+    ).origin_country == ("Honduras")
+
+
+def test_title_country_with_a_varietal_keeps_its_country():
+    # A region named in passing doesn't overrule "Colombia Caturra"; a stated origin elsewhere still does.
+    assert (
+        extract.rules(item("Colombia Caturra", body="Roast like our Antigua favorite.")).origin_country
+        == "Colombia"
+    )
+    assert extract.rules(
+        item("Kenya SL28 AA", body="If you love our Ethiopia Guji, try this lot from Nyeri.")
+    ).origin_country == ("Kenya")
+    assert (
+        extract.rules(item("Finca El Puente Kenya SL-28", body="Grown in Marcala, Honduras.")).origin_country
+        is None
+    )
+    assert extract.rules(item("Lot 7", body="Grown in Las Flores, Honduras.")).origin_country == "Honduras"
