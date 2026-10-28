@@ -198,13 +198,15 @@ def match_bag(
         matches: list[dict] = [
             {"coffee_id": cid, "label": label, "score": sc} for sc, _, cid, label in scored[:3]
         ]
-    elif (
-        near
-    ):  # the roaster is clear but the coffee's name wasn't read: let the person pick, current lots first
+    elif near:
+        # The roaster is clear but the coffee's name wasn't read: let the person pick, current lots first.
         pick = sorted((rank, f"{r} {t}", cid) for cid, r, t, rank in rows if r in near)
         matches = [{"coffee_id": cid, "label": label, "score": 0} for _, label, cid in pick[:3]]
     else:
-        matches = fuzzy_match_coffee(f"{roaster} {coffee}".strip(), lake=lake)
+        # No roaster scored 85+: the whole catalog, as for typed text, with the same tie-break before the cut to 3.
+        rank = {cid: r for cid, _, _, r in rows}
+        pool = fuzzy_match_coffee(f"{roaster} {coffee}".strip(), limit=20, lake=lake)
+        matches = sorted(pool, key=lambda m: (-m["score"], rank.get(m["coffee_id"], 0), m["label"]))[:3]
     clear = len(matches) < 2 or matches[0]["score"] - matches[1]["score"] >= 5
     if matches and matches[0]["score"] >= min_score and clear:
         return matches[0]["coffee_id"], matches
