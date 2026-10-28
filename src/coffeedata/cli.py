@@ -515,7 +515,9 @@ def main(argv: list[str] | None = None) -> None:
     rb = add(
         "rollback", cmd_rollback, "serve an earlier passing release (default: the one before the current)"
     )
-    rb.add_argument("--to", help="build id of the release to serve")
+    rb.add_argument(
+        "--to", help="build id of the release to serve, or 'served' to re-export the served one (no crawl)"
+    )
     rb.add_argument("--reason", default="", help="recorded in marts/release.parquet")
     rb.add_argument("--out", default="build/site")
 

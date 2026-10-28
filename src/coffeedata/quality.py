@@ -20,7 +20,7 @@ import subprocess
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
-from .lake import Lake, new_batch_id
+from .lake import Lake, new_batch_id, no_files
 
 log = logging.getLogger(__name__)
 
@@ -166,14 +166,19 @@ def add_override(
     # added_at decides which override wins, at one-second resolution: always after the last one for this
     # roaster-week, so two given in the same second still resolve in the order they were given.
     added_at = datetime.now(UTC).replace(microsecond=0)
-    last = (
-        lake.connect()
-        .execute(
-            f"select max(added_at) from {lake.scan('run_overrides')} where roaster_id = ? and run_date = ?",
-            [roaster_id, date.fromisoformat(run_date)],
+    try:
+        last = (
+            lake.connect()
+            .execute(
+                f"select max(added_at) from {lake.scan('run_overrides')} where roaster_id = ? and run_date = ?",
+                [roaster_id, date.fromisoformat(run_date)],
+            )
+            .fetchone()
         )
-        .fetchone()
-    )
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
+        if not no_files(e):  # the first override: no run_overrides/ files anywhere yet
+            raise
+        last = None
     if last and last[0] is not None and last[0] >= added_at:
         added_at = last[0] + timedelta(seconds=1)
     row = {
@@ -303,9 +308,14 @@ def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.
 
 
 def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
-    """Serve an earlier passing release: `to`, or the passing release before the one served now."""
+    """Serve an earlier passing release: `to` ('served': the one served now), or the passing release before the one
+    served now."""
     now = (served(lake) or {}).get("build_id")
     passing = [b for b, _, ok in builds(lake) if ok]
+    if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
+        if not now:
+            raise ValueError("no release is served yet")
+        to = now
     if to is None:
         earlier = passing[: passing.index(now)] if now in passing else passing[:-1]
         if not earlier:

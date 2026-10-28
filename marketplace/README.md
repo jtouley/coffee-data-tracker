@@ -20,11 +20,19 @@ it automatically.
 Snowflake loads straight from the weekly job, in its own step after the site is built (so a Snowflake problem
 never holds the site back):
 - The job uploads the export of the served release to an internal stage, one folder per run, never overwritten.
-- It checks every table's columns against the export before loading any. If the public contract changed
-  (`contracts/public-catalog.odcs.yaml`, a new major version), it loads nothing and the step fails. Run the
-  weekly workflow with `snowflake_migrate` (or `coffeedata load-snowflake --migrate`): it drops the changed
-  tables, loads them fresh, and recreates and re-grants their share views, since a `select *` secure view keeps
-  the columns it was created with.
+- It checks every table's and share view's columns against the export before loading any. If the public
+  contract changed (`contracts/public-catalog.odcs.yaml`, a new major version), it loads nothing and the step
+  fails. **Every scheduled run then stays red on this step until someone migrates**; the site and the Hugging
+  Face export still publish meanwhile. To migrate, run the weekly workflow by hand with only `snowflake_migrate`
+  checked: that doesn't crawl, it re-exports the served release (`coffeedata rollback --to served`) and runs
+  `coffeedata load-snowflake --migrate`. Locally: `coffeedata rollback --to served`, then
+  `coffeedata load-snowflake --migrate`.
+- A migration first checks that the loader's role owns the share (`SNOWFLAKE_SHARE`, default
+  `COFFEE_DATA_SHARE`), and stops before changing anything if it doesn't, e.g. after the share was handed to
+  ACCOUNTADMIN for a listing; run it as the owner then. It uploads the files, drops and reloads the changed
+  tables, then recreates all four share views with `copy grants` (so none leaves the share) and grants them
+  again. A migration that fails partway is finished by running it again; until then the weekly load refuses to
+  run.
 - It replaces each table in one transaction.
 - It fails if the row counts differ from the export.
 

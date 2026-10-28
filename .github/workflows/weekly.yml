@@ -10,10 +10,10 @@ on:
         description: "Only N roasters (blank = all)"
         required: false
       rollback_to:
-        description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff)"
+        description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff); 'served' re-exports the current one"
         required: false
       snowflake_migrate:
-        description: "After a public contract change: recreate the changed Snowflake tables and share views"
+        description: "After a public contract change: migrate Snowflake (alone: no crawl, re-exports the served release)"
         type: boolean
         default: false
       accept_volume_change:
@@ -65,8 +65,13 @@ jobs:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
           ROLLBACK_TO: ${{ inputs.rollback_to }}
+          MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
-          if [ -n "$ROLLBACK_TO" ]; then
+          # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
+          if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then ROLLBACK_TO=served; fi
+          if [ "$ROLLBACK_TO" = served ]; then
+            uv run coffeedata rollback --to served --reason "re-export for Snowflake migration ($GITHUB_ACTOR)"
+          elif [ -n "$ROLLBACK_TO" ]; then
             if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
             else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
           else
@@ -81,6 +86,7 @@ jobs:
       # the site. It loads the export of the served release that the weekly run just wrote to build/public.
       - name: Load Snowflake
         if: env.SNOWFLAKE_ACCOUNT != ''
+        timeout-minutes: 30  # the deploy job waits for this one, so a hung load mustn't hold the site for hours
         env:
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: uv run coffeedata load-snowflake ${MIGRATE:+--migrate}

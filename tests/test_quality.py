@@ -239,6 +239,9 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"
+    # 'served' serves the same release again (the Snowflake migration re-exports it without a crawl).
+    assert quality.rollback(Lake(), "served", "re-export for Snowflake migration") == b1
+    assert current.read_bytes() == first_release
     # The next build is compared with what customers get now (b1), not the newest passing build (b2).
     monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
     cli.cmd_build(args("2026-10-26"))
@@ -319,6 +322,19 @@ def test_an_override_reaches_a_remote_lake(tmp_path, monkeypatch):
     path = quality.add_override(remote, RID, "2026-10-26", "reject", "bad scrape", None)
     assert [s["path_in_repo"] for s in sent] == [path.relative_to(remote.root).as_posix()]
     assert sent[0]["repo_id"] == "someone/coffee" and not path.exists()  # sent alone, not via a full publish
+
+
+def test_the_first_override_on_a_remote_lake_works_before_run_overrides_exists(tmp_path, monkeypatch):
+    """Until a publish uploads its schema file, the remote lake has no run_overrides/ folder at all."""
+    from huggingface_hub import HfApi
+
+    sent = []
+    monkeypatch.setattr(HfApi, "upload_file", lambda self, **kw: sent.append(kw))
+    remote = Lake("hf://datasets/someone/coffee", staging=tmp_path / "staging")
+    nowhere = str(tmp_path / "no-such-folder" / "*.parquet")  # stands in for the missing remote folder
+    monkeypatch.setattr(remote, "sources", lambda table: [nowhere])
+    path = quality.add_override(remote, RID, "2026-10-26", "reject", "bad scrape", None)
+    assert [s["path_in_repo"] for s in sent] == [path.relative_to(remote.root).as_posix()]
 
 
 def test_remote_releases_are_found_by_listing_only_the_releases_folder(monkeypatch):
