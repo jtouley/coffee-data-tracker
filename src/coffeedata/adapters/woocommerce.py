@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from ..http import FetchError, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
 MAX_PAGES = 20
@@ -73,6 +73,9 @@ def parse_product(
         image=images[0].get("src") if images else None,
         variants=variants,
         body_text=body,
+        payload_hash=payload_hash(
+            {"product": p, "variation_prices": variation_prices} if variation_prices else p
+        ),
     )
 
 

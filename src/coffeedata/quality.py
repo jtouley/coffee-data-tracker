@@ -7,6 +7,8 @@ customers read (RELEASE_TABLES) under releases/run_date=.../build=.../. Only a p
 `serve` copies it to marts/ (what the app, MCP and dataset readers use) and records which release that is in
 marts/release.parquet. A failed build leaves the served release as it was, which is the automatic rollback;
 `rollback` serves an earlier release by hand. `build-diff` compares any two builds down to individual coffees.
+Every serve and rollback also appends a row to serving_log (which release, when, why, who, and the one it
+replaced), so the history of what customers got survives marts/release.parquet being replaced.
 Raw lake files are never touched here, and no release is ever edited.
 """
 
@@ -16,10 +18,10 @@ import contextlib
 import functools
 import json
 import os
-import subprocess
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+from . import lineage
 from .lake import Lake, new_batch_id
 
 # What customers read: the catalog marts (dataset, MCP, app, site) and the public tables. Shots and bags are
@@ -34,16 +36,6 @@ RELEASE_TABLES = (
     "public_market_weekly",
 )
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
-
-
-def _git_sha() -> str | None:
-    if os.environ.get("GITHUB_SHA"):
-        return os.environ["GITHUB_SHA"]
-    try:
-        r = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True, check=True)
-        return r.stdout.strip() or None
-    except (OSError, subprocess.CalledProcessError):
-        return None
 
 
 def _read_json(path: Path) -> dict:
@@ -61,22 +53,33 @@ def record_build(
     results: list[dict],
     passed: bool,
     build_id: str | None = None,
+    duration_s: float | None = None,
 ) -> str:
     """Append this build's record, and a copy of its catalog marts, to the lake: passing or not, nothing is lost.
-    `results` holds one run_results.json per dbt step (models, then tests)."""
+    `results` holds one run_results.json per dbt step (models, then tests); `duration_s` is how long they took.
+    Every row carries the build's environment: the CI run, dbt's and the key packages' versions."""
     import duckdb
 
     build_id = build_id or new_batch_id()  # the one the tables carry as release_build_id, when given
     manifest = _read_json(manifest_path)
     nodes = manifest.get("nodes") or {}
+    ci_run_id, ci_run_url = lineage.ci_run()
+    dbt_version = next(
+        (v for r in results if (v := (r.get("metadata") or {}).get("dbt_version"))), None
+    ) or lineage.package_version("dbt-core")
     base = {
         "build_id": build_id,
         "built_at": datetime.now(UTC).replace(microsecond=0),
         "run_date": date.fromisoformat(run_date),
-        "git_sha": _git_sha(),
+        "git_sha": lineage.git_sha(),
         "invocation_id": ",".join(
             i for r in results if (i := (r.get("metadata") or {}).get("invocation_id"))
         ),
+        "ci_run_id": ci_run_id,
+        "ci_run_url": ci_run_url,
+        "dbt_version": dbt_version,
+        "package_versions": lineage.package_versions(),
+        "duration_s": None if duration_s is None else round(duration_s, 3),
     }
     con = duckdb.connect(str(db), read_only=True) if db.exists() else None
 
@@ -228,9 +231,12 @@ def served(lake: Lake) -> dict | None:
     return dict(zip(cols, row, strict=True)) if row else None
 
 
-def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.duckdb")) -> Path:
+def serve(
+    lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.duckdb"), action: str = "serve"
+) -> Path:
     """Make a release the one customers get: its catalog marts replace marts/, marts/release.parquet records it,
-    and `db` gets every release table, for the public export and the site. Returns `db`."""
+    serving_log gets a row for it (`action`: serve or rollback), and `db` gets every release table, for the
+    public export and the site. Returns `db`."""
     import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
@@ -245,6 +251,7 @@ def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.
     missing = [t for t in RELEASE_TABLES if t not in files]
     if missing:
         raise FileNotFoundError(f"release {build_id} is missing {', '.join(missing)}")
+    previous = (served(lake) or {}).get("build_id")
     if db.exists():
         db.unlink()
     db.parent.mkdir(parents=True, exist_ok=True)
@@ -257,9 +264,14 @@ def serve(lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.
     for t in SERVED_MARTS:
         lake.write_mart(t, con, f"select * from {t}")
     pointer = lake.root / "marts" / "release.parquet"
-    row = {"build_id": build_id, "run_date": run_date, "served_at": datetime.now(UTC).replace(microsecond=0),
-           "reason": reason}  # fmt: skip
+    now = datetime.now(UTC).replace(microsecond=0)
+    row = {"build_id": build_id, "run_date": run_date, "served_at": now, "reason": reason}
     pq.write_table(pa.Table.from_pylist([row]), pointer)
+    ci_run_id, ci_run_url = lineage.ci_run()
+    lake.write("serving_log", f"serving_log/serve_id={new_batch_id(now)}.parquet", [{
+        "served_at": now, "action": action, "build_id": build_id, "run_date": date.fromisoformat(run_date),
+        "reason": reason, "actor": lineage.actor(), "previous_build_id": previous,
+        "ci_run_id": ci_run_id, "ci_run_url": ci_run_url}])  # fmt: skip
     con.close()
     duckdb.connect(str(db), read_only=True).close()  # flushed and readable
     return db
@@ -274,7 +286,7 @@ def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
         if not earlier:
             raise ValueError("no earlier passing release to roll back to")
         to = earlier[-1]
-    serve(lake, to, reason or f"rollback from {now}")
+    serve(lake, to, reason or f"rollback from {now}", action="rollback")
     return to
 
 

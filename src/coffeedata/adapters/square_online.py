@@ -10,7 +10,7 @@ from __future__ import annotations
 import re
 
 from ..http import FetchError, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text, to_float
 
 API = "https://cdn5.editmysite.com/app/store/api/v28/editor/users/{user}/sites/{site}/products"
@@ -76,6 +76,7 @@ def parse_product(p: dict, roaster: Roaster, base: str | None = None) -> Catalog
             )
         ],
         body_text=html_to_text(p.get("short_description")),
+        payload_hash=payload_hash(p),
     )
 
 

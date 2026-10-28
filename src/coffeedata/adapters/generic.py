@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 import httpx
 
 from ..http import Blocked, FetchError, PoliteClient
-from ..models import CatalogItem, Roaster, Variant, parse_grams
+from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
 
@@ -104,6 +104,7 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
         image=image,
         variants=variants,
         body_text=html_to_text(str(p.get("description") or "")),
+        payload_hash=payload_hash(p),
     )
 
 

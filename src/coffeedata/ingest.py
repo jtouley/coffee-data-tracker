@@ -1,7 +1,8 @@
 """Weekly pipeline: fetch every roaster with a usable storefront, append the raw results to the lake.
 
-Writes (never rewrites): snapshots (every product, coffee or not), fetches (one row per roaster attempt,
-ok or error), bodies (description text, once per new body_hash) and rule-based enrichments (once per new
+Writes (never rewrites): a run manifest (the roasters this ingest sets out to fetch, before the first request),
+snapshots (every product, coffee or not), fetches (one row per roaster attempt, ok or error, with its request
+diagnostics), bodies (description text, once per new body_hash) and rule-based enrichments (once per new
 body_hash). Re-running for the same run date only fetches roasters without a successful fetch that day.
 """
 
@@ -9,15 +10,16 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 
-from . import extract, registry
+from . import extract, lineage, registry
 from .adapters import fetch_catalog
 from .classify import is_coffee
-from .http import PoliteClient
+from .http import PoliteClient, RequestStats
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
 
@@ -33,6 +35,8 @@ class Result:
     fetched_at: datetime
     items: list[CatalogItem] = field(default_factory=list)
     error: str | None = None
+    stats: RequestStats = field(default_factory=RequestStats)
+    duration_s: float | None = None
 
     @property
     def coffees(self) -> list[CatalogItem]:
@@ -41,13 +45,16 @@ class Result:
 
 def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
     res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
-    try:
-        res.items = list(
-            {i.product_id: i for i in fetch_catalog(client, roaster)}.values()
-        )  # feeds repeat items
-    except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
-        res.error = f"{type(e).__name__}: {e}"[:300]
-        res.items = []
+    start = time.monotonic()
+    with client.track() as res.stats:
+        try:
+            res.items = list(
+                {i.product_id: i for i in fetch_catalog(client, roaster)}.values()
+            )  # feeds repeat items
+        except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
+            res.error = f"{type(e).__name__}: {e}"[:300]
+            res.items = []
+    res.duration_s = round(time.monotonic() - start, 3)
     return res
 
 
@@ -59,9 +66,16 @@ def sample_key(roaster_id: str) -> str:
 def select(
     lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False
 ) -> list[Roaster]:
+    return [s.roaster for s in select_states(lake, run_date, only, sample, retry_failed)]
+
+
+def select_states(
+    lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False
+) -> list[registry.RoasterState]:
+    """`select`, with each roaster's status now (what the run manifest records)."""
     states = registry.current(lake)
     if only:
-        return [s.roaster for s in states if s.roaster.roaster_id == only]
+        return [s for s in states if s.roaster.roaster_id == only]
     con = lake.connect()
     done = {
         r[0]
@@ -86,13 +100,38 @@ def select(
     if sample:  # a hash order is stable as roasters are added, so weekly samples keep the same roasters
         pool = sorted(pool, key=lambda s: sample_key(s.roaster.roaster_id))[:sample]
     todo = [
-        s.roaster
+        s
         for s in pool
         if (s.status in INGESTABLE or s.roaster.roaster_id in tried) and s.roaster.roaster_id not in done
     ]
     if retry_failed:
-        todo = [r for r in todo if r.roaster_id in tried]
+        todo = [s for s in todo if s.roaster.roaster_id in tried]
     return todo
+
+
+def manifest_rows(
+    roasters: list[Roaster],
+    run_date: date,
+    manifest_id: str,
+    statuses: dict[str, str] | None = None,
+    mode: str = "full",
+    code_version: str | None = None,
+) -> list[dict]:
+    started = datetime.now(UTC).replace(microsecond=0)
+    return [
+        {
+            "run_date": run_date,
+            "manifest_id": manifest_id,
+            "started_at": started,
+            "roaster_id": r.roaster_id,
+            "status": (statuses or {}).get(r.roaster_id),
+            "platform": r.platform,
+            "adapter": r.adapter,
+            "mode": mode,
+            "code_version": code_version,
+        }
+        for r in roasters
+    ]
 
 
 def rows_for(
@@ -101,6 +140,7 @@ def rows_for(
     batch_id: str,
     known_bodies: set[str],
     enriched: set[tuple[str, str, str]],
+    code_version: str | None = None,
 ) -> dict[str, list[dict]]:
     snaps, fetches, bodies, enrich = [], [], [], []
     for res in results:
@@ -117,6 +157,15 @@ def rows_for(
                 "error": res.error,
                 "products": len(res.items),
                 "coffees": len(coffee_ids),
+                "pages": res.stats.pages,
+                "requests": res.stats.requests,
+                "http_statuses": [
+                    {"status": s, "responses": n} for s, n in sorted(res.stats.statuses.items())
+                ],
+                "retries": res.stats.retries,
+                "rate_limited": res.stats.rate_limited,
+                "duration_s": res.duration_s,
+                "code_version": code_version,
             }
         )
         for it in res.items:
@@ -151,8 +200,22 @@ def rows_for(
     return {"snapshots": snaps, "fetches": fetches, "bodies": bodies, "enrichments": enrich}
 
 
-def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -> dict:
+def run(
+    lake: Lake,
+    roasters: list[Roaster],
+    run_date: str,
+    workers: int = 32,
+    statuses: dict[str, str] | None = None,
+    mode: str = "full",
+) -> dict:
+    """Fetch `roasters` for the run. `statuses` (roaster id -> status now) and `mode` (full, sample, only or
+    retry_failed) go in the run manifest, which is written before the first request."""
     rd = date.fromisoformat(run_date)
+    version = lineage.code_version()
+    manifest = new_batch_id()
+    lake.write_partition(
+        "run_manifests", run_date, manifest, manifest_rows(roasters, rd, manifest, statuses, mode, version)
+    )
     con = lake.connect()
     known_bodies = {
         r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()
@@ -169,7 +232,7 @@ def run(lake: Lake, roasters: list[Roaster], run_date: str, workers: int = 32) -
 
     def flush(chunk: list[Result]) -> None:
         batch = new_batch_id()
-        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched).items():
+        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched, version).items():
             lake.write_partition(table, run_date, batch, rows)
         # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
         # chunk, and re-running the week skips the roasters already fetched.

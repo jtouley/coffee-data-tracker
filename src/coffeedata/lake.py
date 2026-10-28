@@ -12,6 +12,8 @@ Every pipeline step *adds* files and never rewrites another run's files:
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
+    run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
+    serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
 
 Bag photos go to their own private dataset (`Lake.photos()`), one photo per file:
 
@@ -58,6 +60,9 @@ VARIANT = pa.struct(
     ]
 )
 
+# One HTTP status a fetch saw, and how many responses had it.
+HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
+
 # Hugging Face's Image feature: the dataset viewer shows a thumbnail for a struct of bytes and path.
 IMAGE = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
 
@@ -91,6 +96,9 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("variants", pa.list_(VARIANT)),
             ("is_coffee", pa.bool_()),
             ("published_at", pa.timestamp("s", tz="UTC")),
+            # Added later; older files read back as null. A hash of the store's raw product payload, so a
+            # product that really changed, and a fetch that repeated an earlier one, can be told apart.
+            ("payload_hash", pa.string()),
         ]
     ),
     "bodies": pa.schema(
@@ -107,6 +115,15 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("error", pa.string()),
             ("products", pa.int32()),
             ("coffees", pa.int32()),
+            # Fetch diagnostics, added later (older files read back as null): what the fetch asked of the
+            # store (http.RequestStats), how long it took, and the code that did it.
+            ("pages", pa.int32()),
+            ("requests", pa.int32()),
+            ("http_statuses", pa.list_(HTTP_STATUS)),
+            ("retries", pa.int32()),
+            ("rate_limited", pa.int32()),
+            ("duration_s", pa.float64()),
+            ("code_version", pa.string()),
         ]
     ),
     "probes": pa.schema(
@@ -211,6 +228,43 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("execution_s", pa.float64()),
             ("value", pa.float64()),
             ("payload", pa.string()),
+            # The build's environment, added later (older files read back as null): the CI run, dbt's and the
+            # key packages' versions (a JSON object) and how long dbt took.
+            ("ci_run_id", pa.string()),
+            ("ci_run_url", pa.string()),
+            ("dbt_version", pa.string()),
+            ("package_versions", pa.string()),
+            ("duration_s", pa.float64()),
+        ]
+    ),
+    # What an ingest set out to fetch, written before its first request: one row per roaster it intends to
+    # fetch, with that roaster's status at that moment. run_completeness reads it as the run's expected set.
+    "run_manifests": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("manifest_id", pa.string()),
+            ("started_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("status", pa.string()),
+            ("platform", pa.string()),
+            ("adapter", pa.string()),
+            ("mode", pa.string()),  # full, sample, only or retry_failed
+            ("code_version", pa.string()),
+        ]
+    ),
+    # One row per serve and rollback: which release customers got, when, why, from whom, and what it replaced.
+    # marts/release.parquet holds only the current one.
+    "serving_log": pa.schema(
+        [
+            ("served_at", pa.timestamp("s", tz="UTC")),
+            ("action", pa.string()),  # serve or rollback
+            ("build_id", pa.string()),
+            ("run_date", pa.date32()),
+            ("reason", pa.string()),
+            ("actor", pa.string()),
+            ("previous_build_id", pa.string()),
+            ("ci_run_id", pa.string()),
+            ("ci_run_url", pa.string()),
         ]
     ),
     "verdict_batches": pa.schema(
@@ -347,6 +401,8 @@ GLOBS = {
     "verdict_batches": "verdict_batches/*/*.parquet",
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
+    "run_manifests": "run_manifests/*/*.parquet",
+    "serving_log": "serving_log/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -367,6 +423,8 @@ SCHEMA_FILES = {
     "verdict_batches": "verdict_batches/state=schema/schema.parquet",
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
+    "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",
+    "serving_log": "serving_log/serve_id=schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.
     "shots": "shots/shot_id=schema-v2.parquet",

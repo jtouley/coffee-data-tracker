@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import json
 import re
 from datetime import date, datetime
 from typing import Literal
@@ -40,6 +41,12 @@ class Variant(BaseModel):
     available: bool | None = None
 
 
+def payload_hash(payload: object) -> str:
+    """A stable hash of a raw store payload: canonical JSON (sorted keys), so key order never changes it."""
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False, default=str)
+    return hashlib.sha256(raw.encode()).hexdigest()[:32]
+
+
 class CatalogItem(BaseModel):
     roaster_id: str
     product_id: str
@@ -55,6 +62,9 @@ class CatalogItem(BaseModel):
     body_hash: str = ""
     # When the store last published the product (Shopify only; a republished product gets a new time).
     published_at: datetime | None = None
+    # A hash of the store's raw product payload (payload_hash()), so a real change and a repeated fetch can be told
+    # apart. Any change the store makes changes it, even one nothing parsed here reads.
+    payload_hash: str = ""
     # Body text is used for classification and enrichment but never written to the snapshot.
     body_text: str = Field(default="", exclude=True)
 

@@ -324,8 +324,9 @@ current state is computed:
 
 | Lake path | Written by | Holds |
 |---|---|---|
-| `snapshots/run_date=…/batch=…` | ingest | every product seen (coffee or not), with variants and prices |
-| `fetches/…` | ingest | one row per roaster attempt, `ok` or `error` |
+| `run_manifests/run_date=…/batch=…` | ingest | written before the first request: the roasters an ingest sets out to fetch, each one's status then, and the mode (`full`, `sample`, `only`, `retry_failed`) |
+| `snapshots/run_date=…/batch=…` | ingest | every product seen (coffee or not), with variants and prices, and a `payload_hash` of the store's raw product payload (a real change, or a repeated fetch) |
+| `fetches/…` | ingest | one row per roaster attempt, `ok` or `error`, with diagnostics: pages, requests, HTTP statuses, retries, 429s, duration and code version |
 | `bodies/…` | ingest | product description text, stored once per new description |
 | `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
 | `probes/…` | probe | store platform checks |
@@ -335,9 +336,14 @@ current state is computed:
 | `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new files |
 | `bags/<id>__<time>.parquet` | app | a bag of coffee in use, matched to the catalog when it can be |
 | `run_overrides/override_id=….parquet` | `coffeedata override` | a person's call on one roaster-week: accept, reject or pin a batch |
-| `builds/run_date=…/build=…` | build | one file per dbt build: node checksums and test results, catalog metrics, manifest and run results |
+| `builds/run_date=…/build=…` | build | one file per dbt build: node checksums and test results, catalog metrics, manifest and run results, and its environment (CI run id and URL, dbt and key package versions, duration) |
 | `releases/run_date=…/build=…/<table>.parquet` | build | every build's release: the catalog marts, `mart_new_arrivals` and the four public tables, each row stamped with `release_build_id` and `release_run_date`. Only a passing release is served (`marts/` and `marts/release.parquet`) |
+| `serving_log/serve_id=….parquet` | build, rollback | one row per serve or rollback: build, run, time, reason, actor and the release it replaced (`marts/release.parquet` holds only the current one) |
 | `marts/*.parquet` | build | derived, and replaced each run |
+
+The diagnostics, manifests, payload hashes, build environment and serving log are operational metadata: they
+stay in the lake and the build records and never reach a served mart or a public table. Files written before a
+column existed read it as null.
 
 Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
 `Image` layout, so a photo is never in the main lake. The app writes one when a bag's label is photographed.
@@ -354,7 +360,9 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   pins which of a week's batches counts. Overrides are appended, so the history of every call is kept.
 - **Only a release that passes every check is served, and every build is recorded.** dbt builds every model, then
   runs every test, so a failed check never stops a model from being built. The checks that gate serving:
-  - `run_is_complete`: every roaster the run should have tried was tried (an error counts as tried);
+  - `run_is_complete`: every roaster the run should have tried was tried (an error counts as tried). "Should
+    have tried" is the run's manifests; a run from before manifests falls back to every roaster that is
+    ingestable and was known when the run started;
   - `run_ok_rate`: at least 90% of them succeeded;
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;

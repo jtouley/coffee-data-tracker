@@ -152,3 +152,26 @@ def old_shot(lake: Lake, shot_id: str, brewed: str, **fields) -> None:
         pa.Table.from_pylist([{c: row.get(c) for c in OLD_SHOT_COLUMNS}], schema=schema),
         lake.root / f"shots/{shot_id}__{brewed.replace('-', '')}T120000.parquet",
     )
+
+
+def old_file(root, table: str, rel: str, missing: list[str], *rows: dict) -> None:
+    """Write a file under the lake `root` as older code did: without the columns in `missing`, which it didn't
+    know about yet."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from coffeedata.lake import SCHEMAS
+
+    schema = pa.schema([f for f in SCHEMAS[table] if f.name not in missing])
+    path = root / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    table_ = pa.Table.from_pylist([{f.name: r.get(f.name) for f in schema} for r in rows], schema=schema)
+    pq.write_table(table_, path)
+
+
+def manifest(lake: Lake, run_date: str, roasters: list[str], mode: str = "full") -> None:
+    """Record that an ingest of `run_date` set out to fetch `roasters` (what ingest.run writes first)."""
+    b = batch()
+    lake.write_partition("run_manifests", run_date, b, [
+        {"run_date": date.fromisoformat(run_date), "manifest_id": b, "started_at": at(run_date, 6),
+         "roaster_id": r, "status": "active", "adapter": "shopify", "mode": mode} for r in roasters])  # fmt: skip
