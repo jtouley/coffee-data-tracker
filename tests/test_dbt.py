@@ -641,3 +641,11 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
         "natural",
         "llm",
     )
+
+
+def test_a_remote_root_is_read_only_for_folders_it_has(lake, tmp_path):
+    """A table added after a Hugging Face lake was made has no folder there until a publish sends its schema file,
+    and DuckDB fails on a glob over it. With remote_folders listing none, the build never touches the remote."""
+    r = build(lake, tmp_path, check=False, lake_roots=[str(lake.root), "hf://datasets/nobody/missing"],
+              remote_folders=[])  # fmt: skip
+    assert r.returncode == 0, r.stdout[-3000:]
