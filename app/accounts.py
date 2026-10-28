@@ -36,6 +36,7 @@ MIN_PASSWORD, MAX_PASSWORD = 10, 256
 SESSION_DAYS = 90
 RENEW_AFTER = timedelta(days=1)  # a cookie used after a day is reissued, so it lasts 90 days from last use
 LOCKOUT = 15 * 60
+STARTUP_READS = 3  # tries per table read at start, as in store.STARTUP_READS
 MAX_PER_USERNAME, MAX_PER_IP = 5, 20  # per username from one address, per address
 # Per username across all addresses: after BACKOFF_AFTER failures in the window, each further try waits 2, 4, 8 … up to
 # BACKOFF_MAX seconds after the last failure. Usernames are visible to members, so a hard lock on the username alone
@@ -96,6 +97,10 @@ COMMON = frozenset(
 )
 
 _hasher = PasswordHasher.from_parameters(RFC_9106_LOW_MEMORY)  # Argon2id, 64 MiB, 3 passes, 4 lanes
+# Each hash or verify takes 64 MiB while it runs, and requests run in a thread pool of up to 40. A burst of sign-ins
+# could take more memory than the 1 GiB instance has, so at most this many run at once; the rest wait their turn.
+HASHES_AT_ONCE = 4
+_hashing = threading.BoundedSemaphore(HASHES_AT_ONCE)
 
 
 @dataclass(frozen=True)
@@ -248,7 +253,7 @@ class Accounts:
         self.lock = threading.Lock()
         self.limiter = Limiter()
         self.users: dict[str, tuple[Account, datetime]] = {}
-        for row in lake.latest("users", "user_id"):
+        for row in lake.latest("users", "user_id", attempts=STARTUP_READS):
             self.users[row["user_id"]] = (
                 Account(
                     user_id=row["user_id"],
@@ -263,7 +268,7 @@ class Accounts:
                 row["logged_at"],
             )
         self.invites: dict[str, tuple[Invite, datetime]] = {}
-        for row in lake.latest("invites", "invite_id"):
+        for row in lake.latest("invites", "invite_id", attempts=STARTUP_READS):
             self.invites[row["invite_id"]] = (
                 Invite(
                     invite_id=row["invite_id"],
@@ -279,7 +284,7 @@ class Accounts:
                 row["logged_at"],
             )
         # A hash to verify against when the username doesn't exist, so a miss takes as long as a wrong password.
-        self._dummy = _hasher.hash(self._peppered(secrets.token_urlsafe(16)))
+        self._dummy = self._hash(secrets.token_urlsafe(16))
 
     # --- passwords -----------------------------------------------------------------------------------
 
@@ -287,11 +292,13 @@ class Accounts:
         return hmac.new(self.pepper, password.encode(), hashlib.sha256).hexdigest()
 
     def _hash(self, password: str) -> str:
-        return _hasher.hash(self._peppered(password))
+        with _hashing:
+            return _hasher.hash(self._peppered(password))
 
     def _verify(self, password_hash: str, password: str) -> bool:
         try:
-            return _hasher.verify(password_hash, self._peppered(password))
+            with _hashing:
+                return _hasher.verify(password_hash, self._peppered(password))
         except (VerificationError, InvalidHashError):
             return False
 

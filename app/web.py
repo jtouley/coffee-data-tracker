@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import mimetypes
+import re
 from collections.abc import Awaitable, Callable
 from pathlib import Path
 
@@ -165,6 +166,32 @@ class LimitBody:
         )
         secure_headers(response, scope["path"])
         await response(scope, receive, send)
+
+
+# What vulnerability scanners ask for: dotfiles and dot-folders (.env, .git/config, .aws/credentials), other stacks'
+# scripts and config files, and WordPress or PHP admin paths. The app serves none of these: its own files are
+# /static/<name>.<hash>.<ext>, /sw.js, /manifest.webmanifest and /robots.txt. /.well-known/ stays open.
+PROBE = re.compile(
+    r"(^|/)\.(?!well-known/)"
+    r"|\.(php\d?|aspx?|jsp|cgi|env|bak|sql|ini|ya?ml|cfg)$"
+    r"|^/(wp-|cgi-bin/|vendor/|phpmyadmin)",
+    re.IGNORECASE,
+)
+
+
+class RejectProbes:
+    """Answer scanner paths with an empty 404 before any other layer runs: no logging, routing or template.
+    Outermost, so a burst of them costs as little as possible (it can't stop them reaching the instance)."""
+
+    def __init__(self, app: Callable):
+        self.app = app
+
+    async def __call__(self, scope: dict, receive: Callable, send: Callable) -> None:
+        if scope["type"] == "http" and PROBE.search(scope["path"]):
+            response = Response(b"", 404, headers={"Cache-Control": "no-store", "Connection": "close"})
+            secure_headers(response, scope["path"])
+            return await response(scope, receive, send)
+        await self.app(scope, receive, send)
 
 
 def client_ip(request: Request, hops: int) -> str:

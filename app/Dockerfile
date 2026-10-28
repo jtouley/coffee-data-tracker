@@ -23,6 +23,8 @@ ENV HOME=/home/user \
 COPY --chown=user pyproject.toml uv.lock README.md ./
 COPY --chown=user src ./src
 RUN uv sync --locked --no-dev --extra app
+# DuckDB's httpfs extension (reading the lake over hf://), installed now rather than downloaded on every cold start.
+RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user app ./app
 
 EXPOSE 8080
