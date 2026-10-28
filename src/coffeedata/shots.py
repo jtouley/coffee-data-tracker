@@ -51,8 +51,9 @@ class _Catalog:
     """One read of the dim_coffee export: its columns and every coffee in it, wholesale listings included."""
 
     columns: list[str] = field(default_factory=list)
-    # (coffee_id, roaster_name, title, is_retail)
-    rows: list[tuple[str, str, str, bool]] = field(default_factory=list)
+    # (coffee_id, roaster_name, title, is_retail, rank): the rank orders lots that tie on the name, 0 sold now,
+    # 1 sold out, 2 a past offering (an export without the columns: all 0)
+    rows: list[tuple[str, str, str, bool, int]] = field(default_factory=list)
     index: dict[str, str] = field(default_factory=dict)  # coffee_id -> 'Roaster Name Coffee Title'
     wholesale: frozenset[str] = frozenset()
     ok: bool = False  # the read succeeded
@@ -84,17 +85,25 @@ def _load(lake: Lake | None = None) -> _Catalog:
         con = lake.connect()
         scan = f"read_parquet([{src}], union_by_name = true)"
         cols = [r[0] for r in con.execute(f"describe select * from {scan}").fetchall()]
+        stock = "in_stock" if "in_stock" in cols else "true"
+        status = "catalog_status" if "catalog_status" in cols else "null"
         rows = [
-            (cid, roaster or "", title or "", bool(retail))
-            for cid, roaster, title, retail in con.execute(
-                f"select coffee_id, roaster_name, title, {retail_only(cols)} from {scan}"
+            (
+                cid,
+                roaster or "",
+                title or "",
+                bool(retail),
+                2 if state == "archived" else 0 if in_stock is not False else 1,
+            )
+            for cid, roaster, title, retail, in_stock, state in con.execute(
+                f"select coffee_id, roaster_name, title, {retail_only(cols)}, {stock}, {status} from {scan}"
             ).fetchall()
         ]
         cat = _Catalog(
             cols,
             rows,
-            {cid: f"{roaster} {title}" for cid, roaster, title, _ in rows},
-            frozenset(cid for cid, _, _, retail in rows if not retail),
+            {cid: f"{roaster} {title}" for cid, roaster, title, _, _ in rows},
+            frozenset(cid for cid, _, _, retail, _ in rows if not retail),
             ok=True,
         )
     except Exception as e:  # noqa: BLE001 - no catalog yet just means no matches
@@ -118,8 +127,8 @@ def _index(lake: Lake | None = None) -> dict[str, str]:
     return _load(lake).index
 
 
-def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str, bool]]:
-    """(coffee_id, roaster_name, title, is_retail) for every catalog coffee, wholesale listings included."""
+def _catalog(lake: Lake | None = None) -> list[tuple[str, str, str, bool, int]]:
+    """(coffee_id, roaster_name, title, is_retail, rank) for every catalog coffee, wholesale listings included."""
     return _load(lake).rows
 
 
@@ -236,20 +245,25 @@ def match_bag(
     rows = _catalog(lake)
     if not rows or not (roaster or coffee):
         return None, []
-    roasters = {r for _, r, _, _ in rows if r}
+    roasters = {r for _, r, _, _, _ in rows if r}
     # Every roaster that scores 85+, not the top few: names that are token subsets of each other ("Onyx Coffee",
     # "Coffee Lab", "Onyx Coffee Lab") all score 100, and a cut-off could drop the real one.
     found = process.extract(roaster, roasters, scorer=fuzz.token_set_ratio, limit=None) if roaster else []
     near = [name for name, score, _ in found if score >= 85]
     if near and coffee:
-        pool = [(cid, r, t) for cid, r, t, _ in rows if r in near]
+        # Ties ("Finca El Puente" against four of one farm's lots) go to what's sold now.
         scored = sorted(
-            ((match_score(coffee, t), cid, f"{r} {t}") for cid, r, t in pool),
-            key=lambda x: (-x[0], x[2]),
+            ((match_score(coffee, t), rank, cid, f"{r} {t}") for cid, r, t, _, rank in rows if r in near),
+            key=lambda x: (-x[0], x[1], x[3]),
         )
-        matches: list[dict] = [{"coffee_id": cid, "label": label, "score": sc} for sc, cid, label in scored]
-    elif near:  # the roaster is clear but the coffee's name wasn't read: let the person pick
-        matches = [{"coffee_id": cid, "label": f"{r} {t}", "score": 0} for cid, r, t, _ in rows if r in near]
+        matches: list[dict] = [
+            {"coffee_id": cid, "label": label, "score": sc} for sc, _, cid, label in scored
+        ]
+    elif (
+        near
+    ):  # the roaster is clear but the coffee's name wasn't read: let the person pick, current lots first
+        pick = sorted((rank, f"{r} {t}", cid) for cid, r, t, _, rank in rows if r in near)
+        matches = [{"coffee_id": cid, "label": label, "score": 0} for _, label, cid in pick]
     else:
         matches = fuzzy_match_coffee(f"{roaster} {coffee}".strip(), limit=None, lake=lake)
     # Only the coffee's text says whether the bag is wholesale: a roaster's name can read as wholesale.

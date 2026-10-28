@@ -538,13 +538,20 @@ function unqueue(strip, id) {
 
 // A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
 // than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
-function roastCheck(form, save, label) {
-  const v = form.roast_date.value;
-  if (!v) return "";
+// Days from a roast date to today on this phone.
+function roastDays(iso) {
   const today = new Date();
   today.setHours(12, 0, 0, 0);
-  const days = Math.round((today - new Date(`${v}T12:00:00`)) / 86400000);
-  if (days < 0) return "That roast date is in the future. Check the year.";
+  return Math.round((today - new Date(`${iso}T12:00:00`)) / 86400000);
+}
+
+// `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or Finished can
+// change on a bag whose date predates this check. The day of grace is the server's: its "today" (UTC) can be ahead.
+function roastCheck(form, save, label, kept = null) {
+  const v = form.roast_date.value;
+  if (!v || v === kept) return "";
+  const days = roastDays(v);
+  if (days < -1) return "That roast date is in the future. Check the year.";
   if (days > 90 && save.textContent === label) {
     save.textContent = `Save with day ${days}?`; // like "Save with 29 s?" on Log shot
     return " "; // not an error: the button asks
@@ -573,7 +580,7 @@ function bagEdit(form) {
     e.preventDefault();
     const coffee = form.coffee_freetext.value.trim();
     if (!coffee) return hint(form, "Type the roaster and coffee.");
-    const said = roastCheck(form, save, label);
+    const said = roastCheck(form, save, label, rec.roast_date);
     if (said) return hint(form, said.trim());
     hint(form, "");
     const weight = form.weight_g.value.trim();
@@ -660,7 +667,14 @@ function newBag(root) {
     fill("notes", m.notes);
     fill("price", m.price);
     fill("stock", m.past ? "Past offering" : m.in_stock == null ? "" : m.in_stock ? "In stock" : "Sold out");
-    root.querySelector("[data-use]").onclick = () => save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
+    // A date read off the label more than 90 days back (a misread year) asks once, as a typed one does.
+    const use = root.querySelector("[data-use]");
+    use.textContent = "Use this coffee";
+    const old = d && roastDays(d) > 90 ? roastDays(d) : 0;
+    use.onclick = () => {
+      if (old && use.textContent === "Use this coffee") return void (use.textContent = `Save with day ${old}?`);
+      save({ coffee_id: m.coffee_id, coffee_freetext: m.title, match_score: m.score ?? (m.coffee_id === read?.match?.coffee_id ? read.score : null) }, root.querySelector('[data-step="match"]'));
+    };
     step("match");
     root.querySelector('[data-goto="pick"]').hidden = !(read.candidates || []).some((c) => c.coffee_id !== m.coffee_id);
   };

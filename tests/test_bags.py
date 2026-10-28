@@ -262,7 +262,7 @@ def test_a_failed_catalog_read_is_retried_after_a_minute_not_trusted_for_the_hou
         assert shots._catalog(lake) == []  # retried after a minute, not on every call
         now = time.monotonic()
         monkeypatch.setattr(shots.time, "monotonic", lambda: now + shots.FAILED_READ_TTL_S + 1)
-        assert {cid for cid, _, _, retail in shots._catalog(lake) if not retail} == {"onyx.com:2"}
+        assert {cid for cid, _, _, retail, _ in shots._catalog(lake) if not retail} == {"onyx.com:2"}
         assert "is_wholesale" in shots.mart_columns(lake)
     finally:
         shots._catalog_cache.clear()
@@ -535,3 +535,59 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     }
     assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
     shots._catalog_cache.clear()
+
+
+def test_the_lot_sold_now_survives_the_cut_to_three(lake):
+    """Counter Culture's five El Puente lots as in the live catalog: four tie at 97 under the plain (archived)
+    "Finca El Puente". Sorted by name, the cut to 3 dropped the one lot still sold."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:plain', 'Counter Culture Coffee', 'Finca El Puente', false, 'archived'),
+        ('cc:anaerobic', 'Counter Culture Coffee', 'Finca El Puente – Anaerobic Washed', false, 'archived'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived'),
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:sl28', 'Counter Culture Coffee', 'Finca El Puente SL-28 Variety', false, 'archived')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    coffee_id, matches = shots.match_bag("Counter Culture", "Finca El Puente", lake)
+    assert coffee_id is None  # 100 against 97 isn't clear: the person picks
+    assert [m["coffee_id"] for m in matches][:2] == ["cc:plain", "cc:honey"]  # then a past lot, by name
+    # The roaster read but not the coffee: its lots, the one sold now first.
+    assert shots.match_bag("Counter Culture", None, lake)[1][0]["coffee_id"] == "cc:honey"
+    shots._catalog_cache.clear()
+
+
+def test_a_catalog_without_stock_columns_still_matches(lake):
+    """An export from before catalog_status: every lot ranks the same, matching works as before."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute(
+        "create table c as select * from (values ('x:1', 'Onyx Coffee Lab', 'Geometry')) t(coffee_id, roaster_name, title)"
+    )
+    lake.write_mart("dim_coffee", con, "select * from c")
+    assert shots.match_bag("Onyx", "Geometry", lake)[0] == "x:1"
+    shots._catalog_cache.clear()
+
+
+def test_two_uploads_of_one_photo_at_once_read_it_once(catalog, tmp_path):
+    """The outbox can resend a photo still on its way (a reconnect and a page load both flushing): the copies
+    wait for each other, so the label is read, and counted against the day's reads, once."""
+    import asyncio
+
+    import httpx
+
+    fake = FakeClient([LABEL, LABEL])
+    app, _ = app_with(catalog, tmp_path, fake)
+
+    async def both():
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+
+            def send():
+                return c.post("/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg"})
+
+            return await asyncio.gather(send(), send())
+
+    first, second = asyncio.run(both())
+    assert first.status_code == second.status_code == 200 and first.json() == second.json()
+    assert len(fake.calls) == 1

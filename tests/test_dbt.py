@@ -680,7 +680,7 @@ def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tm
     lake.write_mart("dim_coffee", mart, "select * from dim_coffee")
     mart.close()
     shots._catalog_cache.clear()
-    retail = sorted(t for _, _, t, is_retail in shots._catalog(lake) if is_retail)
+    retail = sorted(t for _, _, t, is_retail, _ in shots._catalog(lake) if is_retail)
     assert retail == ["Colombia Supremo", "Ethiopia Guji"]
     # Matching still sees the twin, so a bag that says wholesale gets the wholesale coffee_id (review #3). Any
     # other bag is decided among retail coffees: the twin ties with its retail coffee, and mustn't make it unclear.
