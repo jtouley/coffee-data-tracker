@@ -28,6 +28,14 @@ where a rule can break; they don't show how often it does.
    meaningful rise in confidently wrong answers. Where rules can't tell, abstaining (leaving the value for Claude) is
    better than guessing.
 8. **Keep the bar:** unit tests keep the reproduced cases, and accuracy floors are only ever raised.
+9. **Scale the effort to the change.** Keep a running total of products whose output has changed for each field
+   since its last full evaluation, in that field's eval README. If, compared with `main`, the total including this
+   change stays at 50 or fewer, steps 2–7 can be skipped. Instead:
+   - add unit tests for the specific cases;
+   - list the changed products and check each by hand (for sealed-test products, show only a count);
+   - keep the existing floors and regression fixtures passing.
+
+   A total over 50, or a change to how a rule decides rather than one case it gets wrong, needs the full process.
 
 ### The coffee classifier's evaluation
 

@@ -309,3 +309,22 @@ def test_same_columns_load_as_usual(tmp_path):
     con = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "VARIANT_ID"]})
     assert snowflake_load.load(export_dir(tmp_path, counts), con)["tables"] == counts
     assert not any(s.startswith(("drop table", "create or replace secure view", "show")) for s in con.cur.sql)
+
+
+def test_dry_run_changes_nothing_and_shows_the_plan(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = old_snowflake(counts)
+    out = snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True, dry_run=True)
+    writes = ("create", "put ", "drop", "truncate", "copy into", "grant", "begin", "commit")
+    assert not any(s.lower().startswith(writes) for s in sf.sql)  # only reads reached Snowflake
+    assert sf.tables["public_coffee"] == OLD and sf.views["coffee"] == OLD
+    assert out["dry_run"] and out["refused"] is None
+    assert any(s.startswith("drop table if exists MARKET.public_coffee") for s in out["statements"])
+    assert any(s.startswith("create or replace secure view SHARE.coffee") for s in out["statements"])
+    assert any(
+        "show grants on view SHARE.coffee" in r["sql"] for r in out["reads"]
+    )  # owners and grants shown
+
+    sf = old_snowflake(counts)
+    refused = snowflake_load.load(export_dir(tmp_path, counts), sf, dry_run=True)  # without --migrate
+    assert "contract changed" in refused["refused"] and not any(s.lower().startswith(writes) for s in sf.sql)
