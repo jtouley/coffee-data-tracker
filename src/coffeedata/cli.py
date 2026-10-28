@@ -98,13 +98,9 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     from . import ingest
 
     lake = Lake()
-    states = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
+    states, mode = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
     print(f"ingesting {len(states)} roasters for run {args.run_date}", file=sys.stderr)
-    mode = (
-        "only" if args.only else "retry_failed" if args.retry_failed else "sample" if args.sample else "full"
-    )
-    statuses = {s.roaster.roaster_id: s.status for s in states}
-    _print(ingest.run(lake, [s.roaster for s in states], args.run_date, args.workers, statuses, mode))
+    _print(ingest.run(lake, states, args.run_date, args.workers, mode))
 
 
 def cmd_enrich(args: argparse.Namespace) -> None:

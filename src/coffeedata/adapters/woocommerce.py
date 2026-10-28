@@ -73,9 +73,9 @@ def parse_product(
         image=images[0].get("src") if images else None,
         variants=variants,
         body_text=body,
-        payload_hash=payload_hash(
-            {"product": p, "variation_prices": variation_prices} if variation_prices else p
-        ),
+        # The listing payload only: variation_prices depend on how the fetch went (a failed lookup, the lookup
+        # budget), so hashing them would change the hash of an unchanged product on a repeated fetch.
+        payload_hash=payload_hash(p),
     )
 
 

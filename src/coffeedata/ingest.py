@@ -12,6 +12,7 @@ import hashlib
 import logging
 import time
 from collections import Counter
+from collections.abc import Sequence
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
@@ -66,16 +67,18 @@ def sample_key(roaster_id: str) -> str:
 def select(
     lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False
 ) -> list[Roaster]:
-    return [s.roaster for s in select_states(lake, run_date, only, sample, retry_failed)]
+    return [s.roaster for s in select_states(lake, run_date, only, sample, retry_failed)[0]]
 
 
 def select_states(
     lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False
-) -> list[registry.RoasterState]:
-    """`select`, with each roaster's status now (what the run manifest records)."""
+) -> tuple[list[registry.RoasterState], str]:
+    """`select`, with each roaster's status now and the run's mode (full, sample, only or retry_failed): what the
+    run manifest records."""
+    mode = "only" if only else "retry_failed" if retry_failed else "sample" if sample else "full"
     states = registry.current(lake)
     if only:
-        return [s for s in states if s.roaster.roaster_id == only]
+        return [s for s in states if s.roaster.roaster_id == only], mode
     con = lake.connect()
     done = {
         r[0]
@@ -106,7 +109,7 @@ def select_states(
     ]
     if retry_failed:
         todo = [s for s in todo if s.roaster.roaster_id in tried]
-    return todo
+    return todo, mode
 
 
 def manifest_rows(
@@ -114,7 +117,7 @@ def manifest_rows(
     run_date: date,
     manifest_id: str,
     statuses: dict[str, str] | None = None,
-    mode: str = "full",
+    mode: str | None = None,
     code_version: str | None = None,
 ) -> list[dict]:
     started = datetime.now(UTC).replace(microsecond=0)
@@ -202,20 +205,24 @@ def rows_for(
 
 def run(
     lake: Lake,
-    roasters: list[Roaster],
+    todo: Sequence[Roaster | registry.RoasterState],
     run_date: str,
     workers: int = 32,
-    statuses: dict[str, str] | None = None,
-    mode: str = "full",
+    mode: str | None = None,
 ) -> dict:
-    """Fetch `roasters` for the run. `statuses` (roaster id -> status now) and `mode` (full, sample, only or
-    retry_failed) go in the run manifest, which is written before the first request."""
+    """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
+    only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
+    a remote lake, before the first request. Only a 'full' manifest is the run's expected set (run_completeness);
+    without a mode it is recorded as null, which only adds to that set."""
+    statuses = {r.roaster.roaster_id: r.status for r in todo if isinstance(r, registry.RoasterState)}
+    roasters = [r.roaster if isinstance(r, registry.RoasterState) else r for r in todo]
     rd = date.fromisoformat(run_date)
     version = lineage.code_version()
     manifest = new_batch_id()
     lake.write_partition(
         "run_manifests", run_date, manifest, manifest_rows(roasters, rd, manifest, statuses, mode, version)
     )
+    lake.publish(f"ingest {run_date} manifest {manifest}")  # kept even if the job dies before its first chunk
     con = lake.connect()
     known_bodies = {
         r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()

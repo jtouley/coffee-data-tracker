@@ -3,6 +3,7 @@ the build records and mart history that `coffeedata build-diff` compares."""
 
 import argparse
 import json
+import re
 import shutil
 from datetime import UTC, date, datetime
 from pathlib import Path
@@ -177,6 +178,42 @@ def test_completeness_expects_what_the_run_manifest_says(lake, tmp_path):
     build(lake, tmp_path, as_of_run="2026-10-26", min_ok_share=0.7).close()
 
 
+def test_a_partial_ingests_manifest_never_shrinks_the_expected_set(lake, tmp_path):
+    # `weekly --sample 2`: the sample's manifest lists only what it fetched, but the run is not the full week.
+    manifest(lake, "2026-10-26", ["anaheimcoffee.com", "onyxcoffeelab.com"], mode="sample")
+    for rid in ("anaheimcoffee.com", "onyxcoffeelab.com"):
+        run(lake, "2026-10-26", rid, FULL[:5])
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    con = build(lake, tmp_path, min_attempted_share=0, min_ok_share=0, as_of_run="2026-10-26")
+    got = con.execute("select count(*), sum(attempted::int), any_value(expected_from) from run_completeness")
+    assert got.fetchone() == (len(SEED), 2, "reconstructed")
+    con.close()
+    # A mixed week: a full run from before manifests crashed after two roasters, then `ingest --only` (new code)
+    # fetched a third. Its one-row manifest doesn't switch off the reconstruction either.
+    manifest(lake, "2026-10-26", ["vividcoffee.com"], mode="only")
+    run(lake, "2026-10-26", "vividcoffee.com", FULL[:5])
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26")
+    assert r.returncode != 0 and re.search(r"FAIL \d+ run_is_complete", r.stdout)
+    # A full ingest's manifest is the expected set; the earlier partial ones still only add to it.
+    manifest(lake, "2026-10-26", ["anaheimcoffee.com", "onyxcoffeelab.com"], mode="full")
+    con = build(lake, tmp_path, as_of_run="2026-10-26")
+    got = con.execute("select roaster_id, expected_from from run_completeness order by 1").fetchall()
+    assert got == [(r, "manifest") for r in ("anaheimcoffee.com", "onyxcoffeelab.com", "vividcoffee.com")]
+    con.close()
+
+
+def test_served_is_none_only_when_nothing_is_served(lake, monkeypatch):
+    assert quality.served(lake) is None  # a new lake: no marts/release.parquet
+
+    def fail(self, *a, **k):
+        raise OSError("HTTP Error: HTTP GET error on 'https://huggingface.co/x' (HTTP 429 Too Many Requests)")
+
+    monkeypatch.setattr(Lake, "connect", fail)
+    with pytest.raises(OSError, match="429"):  # never recorded as "nothing served before"
+        quality.served(lake)
+
+
 def test_older_raw_files_without_the_new_columns_build_the_same_tables(lake, tmp_path):
     # Week 1 as older code wrote it (no fetch diagnostics, no payload hashes); week 2 with them.
     old_fetch = [
@@ -291,7 +328,12 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert d["roasters_most_changed"] == [(RID, 30, 27)]
 
     # A problem found later: roll back to the release before the served one, with the reason on record.
+    reads = []
+    real_served = quality.served
+    monkeypatch.setattr(quality, "served", lambda lk: reads.append(1) or real_served(lk))
     assert quality.rollback(Lake(), reason="bad prices from one roaster") == b1
+    assert len(reads) == 1  # serve logs the release rollback replaced, without reading it again
+    monkeypatch.setattr(quality, "served", real_served)
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"

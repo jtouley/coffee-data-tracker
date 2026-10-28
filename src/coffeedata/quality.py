@@ -262,23 +262,32 @@ def builds(lake: Lake) -> list[tuple[str, str, bool]]:
 
 
 def served(lake: Lake) -> dict | None:
-    """The release customers are getting now (marts/release.parquet), if any."""
+    """The release customers are getting now (marts/release.parquet), if any. Only a missing file means nothing
+    is served; any other failed read (a 429, a timeout) is raised, so it is never recorded as "nothing served"."""
     try:
         src = ", ".join(f"'{s}'" for s in lake.mart_sources("release"))
         cur = lake.connect().execute(f"select * from read_parquet([{src}])")
         cols = [d[0] for d in cur.description]
         row = cur.fetchone()
-    except Exception:  # noqa: BLE001 - nothing served yet (a new lake, or one from before releases)
-        return None
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException / HTTPException; duckdb is imported lazily
+        if no_files(e) or "HTTP 404" in str(e):  # a new lake, or one from before releases
+            return None
+        raise
     return dict(zip(cols, row, strict=True)) if row else None
 
 
 def serve(
-    lake: Lake, build_id: str, reason: str, db: Path = Path("build/served.duckdb"), action: str = "serve"
+    lake: Lake,
+    build_id: str,
+    reason: str,
+    db: Path = Path("build/served.duckdb"),
+    action: str = "serve",
+    previous: str | None = None,
 ) -> Path:
     """Make a release the one customers get: its catalog marts replace marts/, marts/release.parquet records it,
-    serving_log gets a row for it (`action`: serve or rollback), and `db` gets every release table, for the
-    public export and the site. Returns `db`."""
+    serving_log gets a row for it (`action`: serve or rollback; `previous`: the release it replaces, read from
+    marts/release.parquet when not given), and `db` gets every release table, for the public export and the site.
+    Returns `db`."""
     import duckdb
     import pyarrow as pa
     import pyarrow.parquet as pq
@@ -293,7 +302,7 @@ def serve(
     missing = [t for t in RELEASE_TABLES if t not in files]
     if missing:
         raise FileNotFoundError(f"release {build_id} is missing {', '.join(missing)}")
-    previous = (served(lake) or {}).get("build_id")
+    previous = previous or (served(lake) or {}).get("build_id")
     if db.exists():
         db.unlink()
     db.parent.mkdir(parents=True, exist_ok=True)
@@ -333,7 +342,7 @@ def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
         if not earlier:
             raise ValueError("no earlier passing release to roll back to")
         to = earlier[-1]
-    serve(lake, to, reason or f"rollback from {now}", action="rollback")
+    serve(lake, to, reason or f"rollback from {now}", action="rollback", previous=now)
     return to
 
 

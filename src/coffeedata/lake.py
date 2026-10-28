@@ -33,6 +33,7 @@ checkpoint (each ingest chunk and each weekly step).
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import os
@@ -444,6 +445,17 @@ def no_files(e: Exception) -> bool:
     return "No files found" in msg or ("error listing" in msg and "404" in msg)
 
 
+def _same_file(info, path: Path) -> bool:
+    """Whether a dataset file (a get_paths_info entry) has a local file's content: by its LFS sha256, or else its
+    git blob id. A file whose hash isn't known counts as the same, so it's never replaced on a guess."""
+    data = path.read_bytes()
+    lfs = getattr(info, "lfs", None)
+    if lfs:
+        return lfs["sha256"] == hashlib.sha256(data).hexdigest()
+    blob_id = getattr(info, "blob_id", None)
+    return blob_id is None or blob_id == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
+
+
 def new_batch_id(now: datetime | None = None) -> str:
     """Sortable and unique: re-running a step adds a new batch instead of rewriting an old one."""
     now = now or datetime.now(UTC)
@@ -637,8 +649,9 @@ class Lake:
         and the next publish sends them.
 
         A table's zero-row schema file is sent when the dataset doesn't have it yet (a table added after the lake
-        was created), so a glob over that table resolves; this is checked once per process, or every time with
-        `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+        was created), so a glob over that table resolves, and replaced when the dataset's copy differs (one from
+        before a column was added, which ensure_schemas refreshed in staging), so a reader of the dataset alone
+        sees every column; this is checked once per process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
         if not self.remote:
             return 0
@@ -664,14 +677,16 @@ class Lake:
             try:
                 # Only the staged paths are looked up, so the cost doesn't grow with the dataset.
                 existing = {
-                    f.path
+                    f.path: f
                     for i in range(0, len(rels), 500)
                     for f in api.get_paths_info(repo_id, rels[i : i + 500], repo_type="dataset")
                 }
                 ops = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
-                    if rel not in existing or rel.startswith("marts/")
+                    if rel not in existing
+                    or rel.startswith("marts/")
+                    or (rel in schema_paths and not _same_file(existing[rel], p))
                 ]
                 if ops:
                     api.create_commit(

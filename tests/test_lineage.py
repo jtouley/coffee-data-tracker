@@ -16,6 +16,7 @@ from coffeedata.adapters import shopify, woocommerce
 from coffeedata.http import PoliteClient
 from coffeedata.lake import GLOBS, SCHEMA_FILES, SCHEMAS, Lake
 from coffeedata.models import Roaster, payload_hash
+from coffeedata.registry import RoasterState
 
 from .conftest import load
 from .lakehelp import old_file
@@ -55,7 +56,7 @@ def test_fetches_record_diagnostics_and_the_run_manifest_comes_first(lake, monke
         m.get("https://slow.com/products.json").mock(
             side_effect=[httpx.Response(429, headers={"retry-after": "0"})] * 3
         )
-        ingest.run(lake, [ONYX, SLOW], "2026-10-26", workers=2, statuses={ONYX.roaster_id: "active"})
+        ingest.run(lake, [RoasterState(ONYX, "active", None), SLOW], "2026-10-26", workers=2, mode="full")
     f = {r["roaster_id"]: r for r in _rows(lake, "fetches")}
     onyx, slow = f["onyxcoffeelab.com"], f["slow.com"]
     # Page 2 repeats page 1, which ends the catalog: robots.txt plus two pages.
@@ -80,16 +81,36 @@ def test_the_cli_records_each_roasters_status_and_the_mode(lake, monkeypatch):
     import argparse
 
     from coffeedata import cli, registry
-    from coffeedata.registry import RoasterState
 
     monkeypatch.setattr(registry, "current", lambda lake: [RoasterState(ONYX, "pending", None)])
     got = {}
-    monkeypatch.setattr(
-        ingest, "run", lambda lk, r, d, w, statuses, mode: got.update(s=statuses, m=mode) or {}
+    monkeypatch.setattr(ingest, "run", lambda lk, r, d, w, mode: got.update(r=r, m=mode) or {})
+    for flags, mode in (({"sample": 5}, "sample"), ({"only": ONYX.roaster_id}, "only"),
+                        ({"retry_failed": True}, "retry_failed"), ({}, "full")):  # fmt: skip
+        ns = argparse.Namespace(run_date="2026-10-26", only=None, sample=None, retry_failed=False, workers=1)
+        cli.cmd_ingest(argparse.Namespace(**vars(ns) | flags))
+        assert got["m"] == mode
+    # The states themselves go to ingest.run, so each roaster's status can't come apart from the roaster.
+    assert ingest.select_states(Lake(), "2026-10-26", sample=5) == (
+        [RoasterState(ONYX, "pending", None)],
+        "sample",
     )
-    ns = argparse.Namespace(run_date="2026-10-26", only=None, sample=5, retry_failed=False, workers=1)
-    cli.cmd_ingest(ns)
-    assert got == {"s": {"onyxcoffeelab.com": "pending"}, "m": "sample"}
+
+
+def test_the_manifest_is_published_before_the_first_request(lake, monkeypatch):
+    # On a remote lake, staged files reach the dataset only when published: a job killed before its first chunk
+    # must still leave the manifest behind.
+    events = []
+    staged = lambda t: any(lake.root.glob(f"{t}/run_date=2026-10-26/*.parquet"))  # noqa: E731
+    monkeypatch.setattr(lake, "publish", lambda *a, **k: events.append(
+        ("publish", staged("run_manifests"), staged("fetches"))))  # fmt: skip
+    monkeypatch.setattr(ingest, "ingest_one", lambda c, r: events.append(("fetch", r.roaster_id)) or ingest.Result(
+        r, ingest.datetime.now(ingest.UTC).replace(microsecond=0), error="boom"))  # fmt: skip
+    ingest.run(lake, [ONYX], "2026-10-26", workers=1, mode="full")
+    assert events == [("publish", True, False), ("fetch", ONYX.roaster_id), ("publish", True, True)]
+    # Without a mode (a caller other than the CLI), the manifest says so instead of claiming a full run.
+    ingest.run(lake, [SLOW], "2026-11-02", workers=1)
+    assert [r["mode"] for r in _rows(lake, "run_manifests", "and roaster_id = 'slow.com'")] == [None]
 
 
 def test_code_version_falls_back_to_the_package_version(monkeypatch):
@@ -119,10 +140,14 @@ def test_payload_hash_sees_any_change_but_not_key_order():
     assert payload_hash(p) == payload_hash(same)
     # A change nothing here parses (updated_at) is still a change in what the store sent.
     assert shopify.parse_product(p | {"updated_at": "2026-10-08"}, r).payload_hash != payload_hash(p)
-    # WooCommerce prices sizes from separate requests, so those are part of what was fetched.
+    # WooCommerce prices sizes from separate requests, which depend on how the fetch went (a failed lookup, the
+    # lookup budget running out): the hash is of the product's own payload, so a repeated fetch keeps it.
     w = {"id": 5, "name": "Kenya", "variations": [{"id": 6, "attributes": []}]}
-    assert woocommerce.parse_product(w, r, {"6": 20.0}).payload_hash != woocommerce.parse_product(
-        w, r, {"6": 22.0}).payload_hash  # fmt: skip
+    hashes = {
+        woocommerce.parse_product(w, r, prices).payload_hash for prices in ({"6": 20.0}, {"6": None}, {})
+    }
+    assert hashes == {payload_hash(w)}
+    assert woocommerce.parse_product(w | {"name": "Kenya AA"}, r, {}).payload_hash != payload_hash(w)
 
 
 def test_new_tables_have_schema_files_globs_and_dbt_sources():
