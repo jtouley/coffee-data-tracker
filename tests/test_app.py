@@ -338,3 +338,21 @@ def test_a_bag_stored_with_a_future_date_can_still_be_saved_unchanged(client, la
     assert client.post("/api/bags", json=same, headers=W).status_code == 200
     later = same | {"roast_date": (future + timedelta(days=1)).isoformat()}
     assert client.post("/api/bags", json=later, headers=W).status_code == 422
+
+
+def test_switch_open_bag_uses_its_own_shots_and_stays_selected(client):
+    client.post("/api/shots", json=shot(1, grinder_setting=12), headers=W)
+    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee"}, headers=W)
+    client.post("/api/shots", json=shot(2, bag_id="bag2", grinder_setting=20), headers=W)
+    assert "Switch coffee" in client.get("/").text
+    assert "Onyx Geometry" in client.get("/bags/switch").text
+    assert client.get("/bag/bag1/use", follow_redirects=False).status_code == 303
+    assert "Onyx Geometry" in client.get("/").text
+    p = prefill(client)
+    assert p["bag_id"] == "bag1" and p["grinder_setting"] == 12
+    client.get("/bag/bag2/use")
+    assert prefill(client)["bag_id"] == "bag2" and prefill(client)["grinder_setting"] == 20
+    assert client.get("/bag/bag1/use", headers={"x-test-user": "bob"}).status_code == 404
+    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"}, headers=W)
+    assert prefill(client)["bag_id"] == "bag1"
+    assert client.get("/bag/bag2/use").status_code == 404

@@ -636,7 +636,7 @@ function newBag(root) {
     const name = body.coffee_freetext;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
-      go("/log", `Bag saved: ${name}`); // on to the first shot of it
+      go(`/bag/${encodeURIComponent(body.bag_id)}/use?next=log`, `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
       // bag on it, so it isn't where to go until this one syncs.

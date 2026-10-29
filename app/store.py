@@ -226,12 +226,14 @@ class Store:
         grinder_id: str | None = None,
         basket_id: str | None = None,
         machine_id: str | None = None,
+        bag_id: str | None = None,
     ) -> dict:
         """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
         Time, taste and rating are never copied; the last ones are offered, not filled in. A grinder or basket
         picked from the chip replaces the last shot's; the grind then comes from this coffee's last shot on
         that grinder, since a setting means nothing on another grinder."""
-        bag = self.current_bag(user_id)
+        selected = self.bag(user_id, bag_id)
+        bag = selected if selected and not selected.finished_on else self.current_bag(user_id)
         mine = self.shots_of(user_id)
         last = None
         if bag:
