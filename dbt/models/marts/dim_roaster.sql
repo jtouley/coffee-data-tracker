@@ -7,19 +7,17 @@ last_good_probe as (
     select * from probes where status = 'ok'
     qualify row_number() over (partition by roaster_id order by probed_at desc) = 1
 ),
-f as (select *, row_number() over (partition by roaster_id order by fetched_at desc) as rn from {{ ref('stg_fetches') }}),
--- Failure streaks count runs, not attempts: a run is ok if any attempt in it succeeded.
+-- Failure streaks count runs, not attempts.
 runs as (
-    select roaster_id, run_date, bool_or(status = 'ok') as ok, max(fetched_at) as last_at,
-           row_number() over (partition by roaster_id order by run_date desc) as rn
-    from f group by roaster_id, run_date
+    select *, row_number() over (partition by roaster_id order by run_date desc) as rn
+    from {{ ref('int_roaster_runs') }}
 ),
 recent as (
     select roaster_id, count(*) filter (where rn <= {{ var('max_failures') }}) as attempts,
            count(*) filter (where rn <= {{ var('max_failures') }} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
-last_ok as (select * from f where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
+last_ok as (select * from {{ ref('stg_fetches') }} where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
 coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
     select roaster_id, count(*) filter (where is_listed and catalog_status <> 'archived') as coffees_listed,

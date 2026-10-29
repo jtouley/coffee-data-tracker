@@ -446,7 +446,7 @@ disagree with the contract. So a change to a public table starts in the contract
 
 ```bash
 make hooks   # once: install the pre-commit hooks
-make test    # make lint, then pytest: unit tests, app tests and dbt builds over synthetic multi-week lakes
+make test    # make lint, then pytest: unit tests (Python and dbt), app tests and dbt builds over synthetic multi-week lakes
 make fmt     # ruff fix and format over src, app and tests
 make clean   # remove build/ and dbt artifacts
 ```
