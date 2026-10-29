@@ -355,12 +355,23 @@ async function newPage(browser, errors) {
     assert.equal(await noticeOf(page), "Bag saved on this phone: the washed one. It’ll sync when you’re back online.");
     await shoot(page, "bag-offline-saved");
     assert.equal(await outbox(), 3);
+    const queuedBag = await page.evaluate(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").getAll().onsuccess = (r) =>
+          resolve(r.target.result.find((entry) => entry.selectBag)?.selectBag);
+      };
+    }));
+    assert.ok(queuedBag);
     await page.context().setOffline(false);
     await page.waitForFunction(() => new Promise((resolve) => {
       indexedDB.open("registry-coffee").onsuccess = (e) => {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
       };
     }), null, { timeout: 15000, polling: 250 });
+
+    // The queued bag becomes the selected bag once it syncs, even when another bag was selected earlier.
+    await page.goto(`${base}/log`);
+    assert.equal(await page.locator("#prefill").evaluate((el) => JSON.parse(el.textContent).bag_id), queuedBag);
 
     // A date read off the label with the year wrong moves to the latest past one, and asks once before saving.
     await page.goto(`${base}/bag/new`);
