@@ -189,7 +189,23 @@ schema:
     implementation: tests/run_ok_rate.sql
     dimension: completeness
     severity: error
-    description: At least min_ok_share of expected roasters fetched successfully.
+    description: At least min_ok_share of the expected roasters that have a catalog were fetched with products
+      (no_catalog stores are not counted).
+  - type: custom
+    engine: dbt
+    implementation: tests/adapter_ok_rate.sql
+    dimension: completeness
+    severity: error
+    description: Each adapter with at least min_adapter_roasters roasters that have a catalog fetched at least
+      min_adapter_ok_share of them, so one platform's outage fails the run.
+  - type: custom
+    engine: dbt
+    implementation: tests/build_metrics_in_band.sql
+    dimension: consistency
+    severity: error
+    description: The ok shares (overall and per adapter, low side) and the volume metrics lie within median +/-
+      band_k x 1.4826 x MAD of the recent passing builds since the last accepted change; active per metric once it
+      has band_min_builds builds of history, with the fixed thresholds as hard floors either way.
   - type: custom
     engine: dbt
     implementation: tests/latest_run_is_fresh.sql
@@ -405,6 +421,14 @@ customProperties:
   value: 1.0
 - property: min_ok_share
   value: 0.9
+- property: min_adapter_ok_share
+  value: 0.5
+- property: min_adapter_roasters
+  value: 20
+- property: band_k
+  value: 1.5
+- property: band_min_builds
+  value: 6
 - property: max_run_age_days
   value: 8
 - property: servingPolicy

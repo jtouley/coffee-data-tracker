@@ -366,7 +366,14 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     have tried" is the run's full-run manifests; a run without one (from before manifests, or only `--sample`,
     `--only` or `--retry-failed` ingests) falls back to every roaster that is ingestable and was known when the
     run started. Other manifests only add to that set, so a partial ingest is never served as a full week;
-  - `run_ok_rate`: at least 90% of them succeeded;
+  - `run_ok_rate`: at least 90% of those with a catalog were fetched with products (`no_catalog` stores, which
+    "succeed" with nothing, aren't counted);
+  - `adapter_ok_rate`: each adapter with at least 20 such roasters fetched at least half of them, so one
+    platform's outage fails the run;
+  - `build_metrics_in_band`: those ok shares (overall and per adapter, low side only) and the three volume
+    metrics lie within median ± 1.5 × 1.4826 × MAD of the recent passing builds. A metric is banded only once it
+    has 6 passing builds in its window; until then only the fixed thresholds apply, and they stay hard floors.
+    `--accept-volume-change`, or a new accept override, starts the window again at that build;
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
@@ -379,7 +386,8 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
   against the last passing one before it. After reviewing a real change, run the weekly workflow with
-  `accept_volume_change` (or `build --accept-volume-change`) to let it through and make it the new baseline.
+  `accept_volume_change` (or `build --accept-volume-change`) to let it through the volume check and the bands and
+  make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.
 - **Old shots keep their gear.** Each grinder or basket added in Setup is a new record, so a shot keeps the
   equipment it was pulled with. A grind setting only compares within one grinder; `grind_position` (0 to 1 along

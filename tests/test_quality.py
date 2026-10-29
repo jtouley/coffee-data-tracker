@@ -5,7 +5,7 @@ import argparse
 import json
 import re
 import shutil
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import pytest
@@ -246,6 +246,141 @@ def test_a_partial_ingests_manifest_never_shrinks_the_expected_set(lake, tmp_pat
     got = con.execute("select roaster_id, expected_from from run_completeness order by 1").fetchall()
     assert got == [(r, "manifest") for r in ("anaheimcoffee.com", "onyxcoffeelab.com", "vividcoffee.com")]
     con.close()
+
+
+def test_no_catalog_stores_do_not_pad_the_ok_share(lake, tmp_path):
+    # The gap the real runs showed: ~600 no_catalog stores "succeed" with 0 products and padded the share.
+    for rid in SEED[:3] + ("empty-store.com",):
+        run(lake, "2026-10-19", rid, [])
+    for rid in SEED[3:] + ("emptied.com",):
+        run(lake, "2026-10-19", rid, FULL[:5])
+    run(lake, "2026-10-19", "never-ok.com", None)
+    manifest(lake, "2026-10-26", [*SEED, "empty-store.com", "emptied.com", "never-ok.com"])
+    for rid in SEED[:3]:
+        run(lake, "2026-10-26", rid, [])  # still no catalog: not counted
+    run(lake, "2026-10-26", "empty-store.com", None)  # failed after only empty successes: not counted
+    run(lake, "2026-10-26", SEED[3], FULL[:5])
+    run(lake, "2026-10-26", SEED[4], FULL[:5])
+    run(lake, "2026-10-26", SEED[5], None)
+    run(lake, "2026-10-26", "emptied.com", [])  # had products: counted, and 0 products isn't a success
+    run(lake, "2026-10-26", "never-ok.com", None)  # unknown: counted
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26", min_ok_share=0.6)
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_ok_rate", r.stdout)  # 2 of 5, though 6 of 9 "ok"
+    con = build(lake, tmp_path, as_of_run="2026-10-26", min_ok_share=0.4)
+    got = con.execute(
+        "select roaster_id, has_catalog, catalog_ok from run_completeness order by 1"
+    ).fetchall()
+    assert got == [
+        ("1802roasters.com", False, False), ("anaheimcoffee.com", False, False),
+        ("counterculturecoffee.com", False, False), ("emptied.com", True, False), ("empty-store.com", False, False),
+        ("intelligentsia.com", True, True), ("never-ok.com", True, False), ("onyxcoffeelab.com", True, True),
+        ("vividcoffee.com", True, False),
+    ]  # fmt: skip
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert round(metrics["run_ok_share"], 3) == 0.667 and metrics["run_catalog_roasters"] == 5
+    assert metrics["run_catalog_ok_share"] == 0.4
+    assert metrics["adapter_ok_share:shopify"] == 0.4 and metrics["adapter_roasters:shopify"] == 5
+    con.close()
+
+
+def test_one_adapters_total_outage_fails_the_run(lake, tmp_path):
+    shops, squares = [f"shop{i}.com" for i in range(4)], ["sq0.com", "sq1.com"]
+    manifest(lake, "2026-10-26", [*shops, *squares, "woo.com"])
+    for rid in shops:
+        run(lake, "2026-10-26", rid, FULL[:5])
+    for rid in squares:
+        run(lake, "2026-10-26", rid, None, adapter="squarespace")
+    run(lake, "2026-10-26", "woo.com", None, adapter="woocommerce")  # one roaster: too few to judge alone
+    gate = {"as_of_run": "2026-10-26", "min_ok_share": 0.5, "min_adapter_roasters": 2}
+    r = build(lake, tmp_path, check=False, **gate)  # 4 of 7 overall clears 0.5; squarespace is 0 of 2
+    assert r.returncode != 0 and re.search(r"FAIL 1 adapter_ok_rate", r.stdout)
+    run(lake, "2026-10-26", "sq0.com", FULL[:5], hour=14, adapter="squarespace")  # the retry got one back
+    build(lake, tmp_path, **gate).close()  # squarespace 1 of 2 is at the floor; woocommerce isn't judged
+
+
+def _passing_builds(lake, metrics: list[dict], first: str = "2026-09-07"):
+    """One passing build per weekly run from `first` on, recording each dict of metrics."""
+    for i, m in enumerate(metrics):
+        d = date.fromisoformat(first) + timedelta(weeks=i)
+        b, now = f"h{d:%m%d}", datetime(d.year, d.month, d.day, 20, tzinfo=UTC)
+        base = {"build_id": b, "run_date": d, "built_at": now}
+        lake.write("builds", f"builds/run_date={d}/build={b}.parquet", [
+            base | {"kind": "build", "unique_id": "build", "status": "pass"},
+            *(base | {"kind": "metric", "unique_id": k, "value": float(v)} for k, v in m.items()),
+        ])  # fmt: skip
+
+
+def test_bands_pass_normal_noise(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)  # 40 listed, every roaster with a catalog fetched
+    manifest(lake, "2026-10-26", [RID])
+    listed, ok = [41, 39, 40, 42, 38, 40], [0.97, 0.95, 0.96, 0.97, 0.96, 0.95]
+    _passing_builds(
+        lake, [{"listed_coffees": n, "run_catalog_ok_share": s} for n, s in zip(listed, ok, strict=True)]
+    )
+    # Within the band; an ok share above the band is no problem.
+    build(lake, tmp_path, as_of_run="2026-10-26").close()
+
+
+def test_bands_flag_an_outlier_once_there_is_enough_history(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)  # 40 listed
+    run(lake, "2026-10-26", "down.com", None)  # and half the run failed: ok share 0.5
+    manifest(lake, "2026-10-26", [RID, "down.com"])
+    history = [{"listed_coffees": n, "run_catalog_ok_share": 0.97} for n in (100, 104, 98, 101, 97)]
+    _passing_builds(lake, history)
+    # The fixed checks pass.
+    floors = {"as_of_run": "2026-10-26", "volume_tolerance": 1e9, "min_ok_share": 0.4}
+    build(lake, tmp_path, **floors).close()  # 5 builds of history: not banded yet, only the fixed thresholds
+    _passing_builds(lake, [{"listed_coffees": 103, "run_catalog_ok_share": 0.97}], first="2026-10-12")
+    r = build(lake, tmp_path, check=False, **floors)  # 6: banded, and 40 and 0.5 are far out
+    assert r.returncode != 0 and re.search(r"FAIL 2 build_metrics_in_band", r.stdout)
+    # The band is k x 1.4826 x MAD wide: a huge k lets 40 through, but the ok share's history is flat (MAD 0), so
+    # its band is the minimum half-width, and 0.5 is still out of it.
+    r = build(lake, tmp_path, check=False, **floors, band_k=1000)
+    assert r.returncode != 0 and re.search(r"FAIL 1 build_metrics_in_band", r.stdout)
+
+
+def test_a_new_accept_override_restarts_the_bands(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)  # 40 listed, after a level of 100
+    manifest(lake, "2026-10-26", [RID])
+    _passing_builds(
+        lake, [{"listed_coffees": n, "accepted_overrides": 0} for n in (100, 104, 98, 101, 97, 103)]
+    )
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26", volume_tolerance=1e9)
+    assert r.returncode != 0 and "build_metrics_in_band" in r.stdout
+    quality.add_override(lake, RID, "2026-10-26", "accept", "the roaster cut its range", None)
+    build(lake, tmp_path, as_of_run="2026-10-26", volume_tolerance=1e9).close()
+
+
+def test_an_accepted_drop_restarts_the_bands_so_the_new_level_passes(lake, monkeypatch, tmp_path):
+    from coffeedata import cli
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    # Six weeks around 100 listed coffees: the bands are active.
+    _passing_builds(
+        lake, [{"listed_coffees": n, "in_stock_coffees": n} for n in (100, 104, 98, 101, 97, 103)]
+    )
+
+    def week(d, products, accept=False):
+        if products is not None:
+            run(lake, d, RID, products)
+            manifest(lake, d, [RID])
+        monkeypatch.setattr(cli, "_today", lambda: d)
+        args = argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date=d, accept_volume_change=accept)
+        return cli.cmd_build(args)
+
+    assert week("2026-10-19", FULL) is False  # a real drop to 40: out of band, and more than volume_tolerance
+    assert "test.coffeedata.build_metrics_in_band" in quality.build_diff(Lake())["failing"]
+    assert week("2026-10-19", None, accept=True) is True  # reviewed: let through once
+    accepted = quality.builds(Lake())[-1][0]
+    metrics = dict(Lake().connect().execute(
+        f"select unique_id, value from {Lake().scan('builds')} where build_id = ? and kind = 'metric'", [accepted]
+    ).fetchall())  # fmt: skip
+    assert metrics["accepted_volume_change"] == 1.0
+    # The next week at the new level passes: the bands' history starts at the accepted build (one build: not
+    # banded yet), where without the reset its median would still be 100.
+    assert week("2026-10-26", FULL[:39]) is True
 
 
 def test_a_run_killed_after_its_manifest_is_still_the_run_judged(lake, tmp_path):

@@ -31,7 +31,8 @@ models:
       - name: roaster_id
         data_tests: [unique, not_null]
   - name: mart_build_profile
-    description: This build's catalog metrics; appended to the lake's builds table as the next build's baseline.
+    description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
+      volume check and anomaly bands read them.
     columns:
       - name: metric
         data_tests: [unique, not_null]
