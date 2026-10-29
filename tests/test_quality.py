@@ -439,7 +439,7 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     real_dbt_build = cli.dbt_build
     # The real seed list has ~2,700 roasters this lake never fetches; completeness has its own test above.
     monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
-        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0}))  # fmt: skip
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
     monkeypatch.setattr(
         cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot"]
