@@ -108,3 +108,25 @@ def test_search_labels_the_back_catalog(lake, with_status):
     [row] = search(in_stock_only=False)
     assert row["catalog_status"] == ("archived" if with_status else None)
     assert search() == []  # in stock only, by default
+
+
+def test_search_reads_old_and_new_exports_together(lake, monkeypatch):
+    # Review #4: the schema check and the query read the files the same way (union_by_name), so a mix of exports
+    # from before and after is_wholesale filters the new ones' wholesale rows and keeps every old row.
+    import duckdb
+
+    from coffeedata.lake import Lake
+
+    row = """select 'onyxcoffeelab.com:{n}' as coffee_id, 'Onyx Coffee Lab' as roaster_name, '{title}' as title,
+             'u' as url, 'Ethiopia' as origin_country, 'washed' as process, ['plum'] as tasting_notes,
+             true as in_stock, true as is_listed, 3.0 as price_per_100g, 'onyxcoffeelab.com' as roaster_id"""
+    con = duckdb.connect()
+    old, new = lake.root / "marts" / "old.parquet", lake.root / "marts" / "new.parquet"
+    old.parent.mkdir(parents=True, exist_ok=True)
+    con.execute(f"copy ({row.format(n=1, title='Kenya Kiambu')}) to '{old}'")
+    con.execute(f"""copy ({row.format(n=2, title="Ethiopia Guji")}, false as is_wholesale
+                    union all {row.format(n=3, title="Wholesale - 5LB Ethiopia Guji")}, true) to '{new}'""")
+    monkeypatch.setattr(Lake, "mart_sources", lambda self, name: [str(old), str(new)])
+    search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
+    assert sorted(r["title"] for r in search()) == ["Ethiopia Guji", "Kenya Kiambu"]
+    assert len(search(include_wholesale=True)) == 3

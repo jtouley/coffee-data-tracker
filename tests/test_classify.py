@@ -189,3 +189,21 @@ def test_tasting_note_and_marketing_tags_dont_exclude_a_coffee():
         assert not is_coffee(item("Kenya AA", tags=tags, grams=340)), tags
     assert not is_wholesale(item("Kenya AA", tags=["wholesale-available"], grams=340))
     assert is_wholesale(item("Kenya AA", tags=["Wholesale"], grams=2268))
+
+
+def test_wholesale_patterns_found_on_the_real_catalog():
+    # Patterns the wholesale eval (eval/wholesale/) found the rule missing, rewritten as made-up listings.
+    from coffeedata.classify import is_wholesale, says_wholesale
+
+    for tags in (["wholesale-only"], ["Wholesale Only"], ["B2B-only"], ["B2B Exclusive"], ["b2b_only"]):
+        assert is_wholesale(item("House Blend", tags=tags, grams=340)), tags
+    for title in (
+        "Espresso Blend Whole Sale",
+        "Breakfast Blend Frac Pack (40ct)",
+        "Dark Roast Fraction Packs",
+    ):
+        assert is_wholesale(item(title, grams=340)), title
+    # Still retail: a tag saying it's *also* sold to wholesale accounts, or only for sale to consumers.
+    for tags in (["wholesale-available"], ["B2B Available"], ["retail-only"]):
+        assert not is_wholesale(item("House Blend", tags=tags, grams=340)), tags
+    assert says_wholesale("Wholesale - 5LB Ethiopia Guji") and not says_wholesale("Ethiopia Guji 5lb")

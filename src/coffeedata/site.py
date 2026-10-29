@@ -151,7 +151,7 @@ def build(db: Path, out: Path) -> Path:
         con,
         """
         select origin_country, count(*) as n, median(price_per_100g) as med
-        from dim_coffee where in_stock and not is_blend and not is_chain and price_per_100g is not null
+        from dim_coffee where in_stock and not is_wholesale and not is_blend and not is_chain and price_per_100g is not null
           and origin_country is not null
         group by 1 having count(*) >= 5 order by n desc limit 12""",
     )
@@ -159,7 +159,7 @@ def build(db: Path, out: Path) -> Path:
         con,
         """
         select coalesce(process, 'not stated') as process, count(*) as n
-        from dim_coffee where in_stock and not is_blend group by 1 order by n desc""",
+        from dim_coffee where in_stock and not is_wholesale and not is_blend group by 1 order by n desc""",
     )
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
@@ -170,14 +170,14 @@ def build(db: Path, out: Path) -> Path:
         select count(*) as coffees,
                count(*) filter (where in_stock) as in_stock,
                count(distinct roaster_id) as roasters
-        from dim_coffee where is_listed and catalog_status <> 'archived'""",
+        from dim_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale""",
     )[0]
     catalog = _q(
         con,
         """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
                tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
-        from dim_coffee where is_listed and not is_chain order by roaster_name, title""",
+        from dim_coffee where is_listed and not is_wholesale and not is_chain order by roaster_name, title""",
     )
     reach = _q(
         con,
@@ -185,7 +185,7 @@ def build(db: Path, out: Path) -> Path:
         select count(distinct origin_country) as origins,
                count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
                bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
-        from dim_coffee where is_listed and catalog_status <> 'archived' and not is_chain""".format(
+        from dim_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale and not is_chain""".format(
             states=", ".join(f"'{s}'" for s in STATES)
         ),
     )[0]
@@ -193,7 +193,7 @@ def build(db: Path, out: Path) -> Path:
         con,
         """
         select origin_country, count(*) as n from dim_coffee
-        where in_stock and not is_blend and not is_chain and origin_country is not null
+        where in_stock and not is_wholesale and not is_blend and not is_chain and origin_country is not null
         group by 1 order by n desc, 1 limit 8""",
     )
     week = _q(
@@ -201,7 +201,10 @@ def build(db: Path, out: Path) -> Path:
         """
         select count(*) filter (where event = 'price') as price_changes,
                count(*) filter (where event = 'removed') as removed
-        from fct_price_event where run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
+        -- A left join: a product no longer classed as coffee has left dim_coffee, but its events still count.
+        from fct_price_event left join dim_coffee using (coffee_id)
+        where not coalesce(is_wholesale, false)
+          and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
     for r in new + catalog:
         r["url"] = safe_url(r["url"])

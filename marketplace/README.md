@@ -21,9 +21,9 @@ Snowflake loads straight from the weekly job, in its own step after the site is 
 never holds the site back):
 - The job uploads the export of the served release to an internal stage, one folder per run, never overwritten.
 - It checks every table's and share view's columns against the export before loading any. If the public
-  contract changed (`contracts/public-catalog.odcs.yaml`, a new major version), it loads nothing and the step
-  fails. **Every scheduled run then stays red on this step until someone migrates**; the site and the Hugging
-  Face export still publish meanwhile. To migrate, run the weekly workflow by hand with only `snowflake_migrate`
+  contract changed (`contracts/public-catalog.odcs.yaml`, a new version, even one that only adds a column),
+  it loads nothing and the step fails. **Every scheduled run then stays red on this step until someone
+  migrates**; the site and the Hugging Face export still publish meanwhile. To migrate, run the weekly workflow by hand with only `snowflake_migrate`
   checked: that doesn't crawl, it re-exports the served release (`coffeedata rollback --to served`) and runs
   `coffeedata load-snowflake --migrate`. Locally: `coffeedata rollback --to served`, then
   `coffeedata load-snowflake --migrate`.

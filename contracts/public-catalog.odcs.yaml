@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.0.0
+version: 2.1.0
 status: active
 domain: coffee
 dataProduct: coffee-data
@@ -162,6 +162,13 @@ schema:
     enum:
     - value: rules
     - value: llm
+  - name: is_wholesale
+    logicalType: boolean
+    physicalType: boolean
+    description: >-
+      A wholesale listing: a bulk bag or case the roaster sells to cafes, often the twin of one of its retail
+      coffees. Kept here, flagged; left out of the site, the app's picker, market counts and new arrivals.
+    required: true
   - name: release_build_id
     logicalType: string
     physicalType: varchar
