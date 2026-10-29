@@ -210,6 +210,25 @@ def test_woocommerce_fixture_fetch(mock, roasters):
     assert len(items) == 8 and all(1 < (v.price_usd or 2) < 500 for i in items for v in i.variants)
 
 
+def test_woocommerce_page_cap_rejects_a_full_final_page(mock):
+    base = "https://x.com/wp-json/wc/store/v1/products"
+    route = mock.get(base).mock(return_value=httpx.Response(200, json=[{"id": i} for i in range(100)]))
+    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="still more products"):
+        woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert route.call_count == woocommerce.MAX_PAGES
+
+
+def test_woocommerce_short_final_page_at_cap_is_complete(mock):
+    base = "https://x.com/wp-json/wc/store/v1/products"
+    route = mock.get(base)
+    full = httpx.Response(200, json=[{"id": i} for i in range(100)])
+    route.side_effect = [full] * (woocommerce.MAX_PAGES - 1) + [httpx.Response(200, json=[{"id": 100}])]
+    with PoliteClient(min_interval=0) as c:
+        items = woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert len(items) == 100 * (woocommerce.MAX_PAGES - 1) + 1
+    assert route.call_count == woocommerce.MAX_PAGES
+
+
 def test_squarespace_fixture_fetch(mock, roasters):
     mock.get("https://vividcoffee.com/sitemap.xml").mock(
         return_value=httpx.Response(
