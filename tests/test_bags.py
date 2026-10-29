@@ -561,6 +561,13 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     shots._catalog_cache.clear()
 
 
+def test_catalog_search_reports_unavailable(lake, monkeypatch):
+    c = TestClient(create_app(lake, HeaderAuth()))
+    monkeypatch.setattr(shots, "_load", lambda lake=None: shots._Catalog(ok=False))
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    assert c.get("/api/coffees/search", params={"q": "coffee"}).status_code == 503
+
+
 def test_search_and_explicitly_relink_a_bag_keeps_its_shots(lake):
     from .test_app import setup, shot
 

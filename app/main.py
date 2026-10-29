@@ -865,6 +865,7 @@ def create_app(
         if len(query) < 2:
             return {"coffees": []}
         try:
+            shots.mart_columns(lake)  # Fail closed if the catalog could not be read.
             candidates = shots.fuzzy_match_coffee(query, limit=12, lake=lake)
         except RuntimeError:
             raise HTTPException(503, "The catalog is unavailable. Try again when you’re online.") from None
