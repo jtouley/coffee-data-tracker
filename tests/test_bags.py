@@ -561,6 +561,35 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     shots._catalog_cache.clear()
 
 
+def test_search_and_explicitly_relink_a_bag_keeps_its_shots(lake):
+    from .test_app import setup, shot
+
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    setup(c)
+    bag = {"bag_id": "bag1", "coffee_id": "cc:gesha", "coffee_freetext": "Finca El Puente - Gesha Variety"}
+    assert c.post("/api/bags", json=bag, headers=W).status_code == 200
+    assert c.post("/api/shots", json=shot(1), headers=W).status_code == 200
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    hits = c.get("/api/coffees/search", params={"q": "Counter Culture Finca El Puente"}).json()["coffees"]
+    assert {hit["coffee_id"] for hit in hits} == {"cc:honey", "cc:gesha"}
+    assert next(hit for hit in hits if hit["coffee_id"] == "cc:gesha")["past"] is True
+    edit = c.get("/bag/bag1/edit")
+    assert "Search catalog" in edit.text
+    fixed = bag | {"coffee_id": "cc:honey", "coffee_freetext": "Finca El Puente - Honey Processed"}
+    assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
+    detail = c.get("/coffee/bag1").text
+    assert "Finca El Puente - Honey Processed" in detail
+    assert "This bag" in detail and "/shot/s1" in detail
+    shots._catalog_cache.clear()
+
+
 def test_the_lot_sold_now_survives_the_cut_to_three(lake):
     """Counter Culture's five El Puente lots as in the live catalog: four tie at 97 under the plain (archived)
     "Finca El Puente". Sorted by name, the cut to 3 dropped the one lot still sold."""

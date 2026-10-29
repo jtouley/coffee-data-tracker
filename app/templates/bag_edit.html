@@ -7,6 +7,15 @@
   <form class="fill" id="bagedit" data-next="{{ back[0] }}" novalidate>
     <label class="flabel" for="coffee">Roaster and coffee</label>
     <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" value="{{ bag.coffee_freetext or '' }}" required>
+    <p class="meta mt8" data-match>{% if bag.coffee_id %}Linked to the catalog: {{ name }}{% else %}Not linked to the catalog{% endif %}</p>
+    <button class="btn text start" type="button" data-search-open>Search catalog</button>
+    <div data-search hidden>
+      <label class="flabel" for="catalog-query">Search by roaster or coffee</label>
+      <input class="input" id="catalog-query" type="search" autocomplete="off" maxlength="120">
+      <button class="btn text start" type="button" data-search-submit>Search</button>
+      <p class="meta" data-search-status role="status"></p>
+      <div class="rows" data-search-results></div>
+    </div>
     <label class="flabel" for="roast_date">Roast date (optional)</label>
     <input class="input" id="roast_date" name="roast_date" type="date" max="{{ now.date().isoformat() }}" value="{{ bag.roast_date.isoformat() if bag.roast_date else '' }}" data-empty-class>
     <label class="flabel" for="weight_g">Weight in grams (optional)</label>

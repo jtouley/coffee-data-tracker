@@ -858,6 +858,18 @@ def create_app(
             "in_stock": c.get("in_stock"),
         }
 
+    @app.get("/api/coffees/search")
+    def search_coffees(me: Me, q: str = Query("", max_length=120)) -> dict:
+        """Offer catalog candidates for an explicit choice; never silently change a bag's match."""
+        query = q.strip()
+        if len(query) < 2:
+            return {"coffees": []}
+        try:
+            candidates = shots.fuzzy_match_coffee(query, limit=12, lake=lake)
+        except RuntimeError:
+            raise HTTPException(503, "The catalog is unavailable. Try again when you’re online.") from None
+        return {"coffees": [d for m in candidates if (d := describe(m["coffee_id"]))]}
+
     @app.post("/api/photos/{photo_id}")
     async def post_photo(photo_id: str, request: Request, me: Writer) -> dict:
         """A bag photo: checked, re-encoded without metadata, saved, then read by Claude and matched in Python.
