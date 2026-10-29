@@ -17,8 +17,15 @@ async function clearBagPages() {
   const cache = await caches.open("pages");
   await Promise.all([cache.delete("/"), cache.delete("/log")]);
 }
-function rememberBag(id) {
-  try { localStorage.setItem(`selected-bag:${ME}`, id); } catch { /* storage is optional */ }
+function selectedBag() {
+  try {
+    const value = localStorage.getItem(`selected-bag:${ME}`);
+    if (!value) return null;
+    try { return JSON.parse(value); } catch { return { id: value, at: 0 }; }
+  } catch { return null; }
+}
+function rememberBag(id, at = Date.now()) {
+  try { localStorage.setItem(`selected-bag:${ME}`, JSON.stringify({ id, at })); } catch { /* storage is optional */ }
 }
 document.addEventListener("click", (event) => {
   const link = event.target.closest("[data-select-bag]");
@@ -79,17 +86,17 @@ async function deliverOnce(entry) {
   if (r.ok) {
     if (entry.url === "/api/bags" && entry.body?.finished_on) {
       try {
-        if (localStorage.getItem(`selected-bag:${ME}`) === entry.body.bag_id) {
+        if (selectedBag()?.id === entry.body.bag_id) {
           localStorage.removeItem(`selected-bag:${ME}`);
           await clearBagPages();
         }
       } catch { /* storage is optional */ }
     }
-    if (entry.selectBag) {
+    if (entry.selectBag && (selectedBag()?.at ?? 0) <= entry.at) {
       const selected = await fetch(`/bag/${encodeURIComponent(entry.selectBag)}/use`);
       if (!selected.ok) throw new Error("Could not select the bag yet.");
       await clearBagPages();
-      rememberBag(entry.selectBag);
+      rememberBag(entry.selectBag, entry.at);
     }
     await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
@@ -397,9 +404,8 @@ function logShot(form) {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    let selected = null;
-    try { selected = localStorage.getItem(`selected-bag:${ME}`); } catch { /* storage is optional */ }
-    if (!p.correct && selected && selected !== p.bag_id) {
+    const selected = selectedBag();
+    if (!p.correct && selected && selected.id !== p.bag_id) {
       return hint(form, "The coffee changed. Reopen Log shot to continue.");
     }
     if (started !== null) stopTimer();
