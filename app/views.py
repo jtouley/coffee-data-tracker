@@ -92,10 +92,11 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
             f'<line class="tick" x1="{x(t):.1f}" x2="{x(t):.1f}" y1="{top}" y2="{bottom}"/>'
             f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{g(t)} s</text>'
         )
-    for r in ((1.8, 2.0, 2.2, 2.4) if (rmin, rmax) == (1.6, 2.5) else _ticks(rmin, rmax)):
+    default_ratio = (rmin, rmax) == (1.6, 2.5)
+    for r in ((1.8, 2.0, 2.2, 2.4) if default_ratio else _ticks(rmin, rmax)):
         out.append(
             f'<line class="tick" x1="{left}" x2="{right}" y1="{y(r):.1f}" y2="{y(r):.1f}"/>'
-            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{g(r)}</text>'
+            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{f"{r:.1f}" if default_ratio else g(r)}</text>'
         )
     (t0, t1), (r0, r1) = TARGET_TIME, TARGET_RATIO
     out.append(

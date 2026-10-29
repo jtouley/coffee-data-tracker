@@ -131,6 +131,10 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
     assert (s.user_id, s.source, s.grinder_id, s.bag_id) == ("owner", "app", "g1", "bag1")
 
 
+def test_default_chart_keeps_one_decimal_on_ratio_ticks():
+    assert '>1:2.0</text>' in views.target_svg([])
+
+
 def test_long_ratio_shots_are_shown_without_espresso_time_judgment(client):
     client.post("/api/shots", json=shot(1, yield_g=54, time_s=15), headers=W)
     client.post("/api/shots", json=shot(2, yield_g=72, time_s=12), headers=W)
