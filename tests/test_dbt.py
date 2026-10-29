@@ -19,14 +19,11 @@ FIX = Path(__file__).parent / "fixtures"
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 
 
-def build(lake, tmp_path, check=True, **extra_vars):
-    db = tmp_path / "coffee.duckdb"
-    if db.exists():
-        db.unlink()
-    r = subprocess.run(
+def run_dbt(lake, tmp_path, *args, **extra_vars):
+    return subprocess.run(
         [
             "dbt",
-            "build",
+            *args,
             "--project-dir",
             "dbt",
             "--profiles-dir",
@@ -39,10 +36,18 @@ def build(lake, tmp_path, check=True, **extra_vars):
             str(tmp_path / "logs"),
         ],
         cwd=ROOT,
-        env=os.environ | {"COFFEEDATA_DB": str(db)},
+        env=os.environ | {"COFFEEDATA_DB": str(tmp_path / "coffee.duckdb")},
         capture_output=True,
         text=True,
     )
+
+
+def build(lake, tmp_path, check=True, **extra_vars):
+    db = tmp_path / "coffee.duckdb"
+    if db.exists():
+        db.unlink()
+    # Like the weekly build, without dbt's unit tests: test_dbt_unit_tests runs those.
+    r = run_dbt(lake, tmp_path, "build", "--exclude", "resource_type:unit_test", **extra_vars)
     if not check:
         return r
     assert r.returncode == 0, r.stdout[-4000:]
@@ -560,6 +565,35 @@ def test_states_are_the_fifty():
     from coffeedata import site
 
     assert len(site.STATES) == 50 and "DC" not in site.STATES and "PR" not in site.STATES
+
+
+def test_dbt_unit_tests(lake, tmp_path):
+    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule and each kind of price event. They read
+    hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
+    first."""
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    build(lake, tmp_path).close()
+    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
+    assert r.returncode == 0, r.stdout[-4000:]
+    assert "PASS=2 " in r.stdout
+
+
+def test_public_files_are_written_in_key_order(lake, tmp_path):
+    from coffeedata import public
+
+    for rid in ("onyxcoffeelab.com", "counterculturecoffee.com"):
+        run(lake, "2026-10-19", rid, [product("B", 18.0), product("A"), product("C")])
+        run(lake, "2026-10-26", rid, [product("C", 25.0), product("A", 22.0), product("D")])
+    build(lake, tmp_path).close()
+    first = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "one"))
+    public.export(tmp_path / "coffee.duckdb", str(tmp_path / "two"))
+    for t in public.PUBLIC_TABLES:
+        a, b = (tmp_path / d / f"{t}.parquet" for d in ("one", "two"))
+        assert a.read_bytes() == b.read_bytes(), t  # the same release, the same file
+    path = tmp_path / "one" / "public_price_event.parquet"
+    cur = duckdb.connect().execute(f"select run_date, coffee_id, variant_id, event from '{path}'")
+    events = cur.fetchall()
+    assert len(events) == first["tables"]["public_price_event"] > 4 and events == sorted(events)
 
 
 def _rows(con, table):

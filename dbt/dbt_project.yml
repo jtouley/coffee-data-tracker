@@ -45,6 +45,18 @@ models:
   coffeedata:
     staging:
       +materialized: view
+      # Tables for staging read more than once, so each build reads the lake for them once (every read sees the
+      # same lake) and stg_run_quality's walk runs once.
+      stg_fetches: {+materialized: table}
+      stg_snapshots: {+materialized: table}
+      stg_run_quality: {+materialized: table}
+      stg_runs: {+materialized: table}
+      stg_run_overrides: {+materialized: table}
+      stg_registry: {+materialized: table}
+      stg_bags: {+materialized: table}
+    intermediate:
+      # Results more than one model reads, computed once.
+      +materialized: table
     marts:
       +materialized: table
     public:

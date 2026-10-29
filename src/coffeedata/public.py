@@ -18,6 +18,14 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 PUBLIC_TABLES = ["public_coffee", "public_roaster", "public_price_event", "public_market_weekly"]
+# The order each file is written in, ending in the table's key so it is total: the same release always gives the
+# same file, and readers of public_price_event can skip row groups by run_date.
+ORDER = {
+    "public_coffee": "coffee_id",
+    "public_roaster": "roaster_id",
+    "public_price_event": "run_date, coffee_id, variant_id, event",
+    "public_market_weekly": "coffees desc, origin_country, process",  # the biggest markets first, as the model
+}
 CARD = Path("docs/PUBLIC_DATASET_CARD.md")
 HF_DATA_DIR = "data"  # where the tables go in a Hugging Face export
 
@@ -47,13 +55,19 @@ def export(db: Path, dest: str = "build/public") -> dict:
     if dest.startswith(("s3://", "gs://")):
         _configure_object_store(con, dest)
         for t in PUBLIC_TABLES:
-            con.execute(f"COPY {t} TO '{dest.rstrip('/')}/{t}.parquet' (FORMAT parquet, COMPRESSION zstd)")
+            con.execute(
+                f"COPY (select * from {t} order by {ORDER[t]}) TO '{dest.rstrip('/')}/{t}.parquet' "
+                "(FORMAT parquet, COMPRESSION zstd)"
+            )
         return manifest | {"dest": dest}
 
     local = Path("build/public") if dest.startswith("hf://") else Path(dest)
     local.mkdir(parents=True, exist_ok=True)
     for t in PUBLIC_TABLES:
-        con.execute(f"COPY {t} TO '{local / (t + '.parquet')}' (FORMAT parquet, COMPRESSION zstd)")
+        con.execute(
+            f"COPY (select * from {t} order by {ORDER[t]}) TO '{local / (t + '.parquet')}' "
+            "(FORMAT parquet, COMPRESSION zstd)"
+        )
     (local / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     if dest.startswith("hf://"):
         _upload_hf(local, dest, manifest)

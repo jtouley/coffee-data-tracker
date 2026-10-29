@@ -12,6 +12,10 @@ models:
       - name: override_action
         data_tests:
           - accepted_values: {arguments: {values: [accept, reject, use_batch]}}
+  - name: stg_run_walk
+    description: Each roaster-week in order, whether it counts, and the counted weeks it was judged against.
+  - name: stg_builds
+    description: One row per recorded build and whether it passed; the one definition of a passing build.
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
@@ -106,15 +110,18 @@ models:
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
-    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
+    # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step). A required
+    # column is a not_null constraint too, so DuckDB refuses a null while building the table.
     config:
       contract: {enforced: true}
     columns:
       - name: coffee_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [unique, not_null]
       - name: roaster_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: roaster_name
         data_type: varchar
@@ -124,15 +131,19 @@ models:
         data_type: varchar
       - name: source_url
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: is_listed
         data_type: boolean
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: in_stock
         data_type: boolean
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: catalog_status
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [available, preorder, sold_out, archived, delisted]}}
@@ -140,9 +151,11 @@ models:
         data_type: timestamp with time zone
       - name: first_seen
         data_type: date
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: last_seen
         data_type: date
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: weeks_listed
         data_type: bigint
@@ -193,6 +206,7 @@ models:
     columns:
       - name: roaster_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [unique, not_null]
       - name: roaster_name
         data_type: varchar
@@ -227,21 +241,26 @@ models:
     columns:
       - name: run_date
         data_type: date
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: coffee_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests:
           - not_null
           - relationships:
               arguments: {to: ref('public_coffee'), field: coffee_id}
       - name: roaster_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: variant_id
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: event
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests:
           - not_null
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
@@ -266,15 +285,19 @@ models:
     columns:
       - name: as_of_run
         data_type: date
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: origin_country
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: process
         data_type: varchar
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: coffees
         data_type: bigint
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: roasters
         data_type: bigint
