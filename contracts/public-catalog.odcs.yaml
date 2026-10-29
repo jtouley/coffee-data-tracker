@@ -202,10 +202,11 @@ schema:
     engine: dbt
     implementation: tests/build_metrics_in_band.sql
     dimension: consistency
-    severity: error
+    severity: warning
     description: The ok shares (overall and per adapter, low side) and the volume metrics lie within median +/-
       band_k x 1.4826 x MAD of the recent passing builds since the last accepted change; active per metric once it
-      has band_min_builds builds of history, with the fixed thresholds as hard floors either way.
+      has band_min_builds builds of history, with the fixed thresholds as hard floors either way. Warns only;
+      band_k is recalibrated on 8-12 weeks of real history before a band can block a release.
   - type: custom
     engine: dbt
     implementation: tests/latest_run_is_fresh.sql

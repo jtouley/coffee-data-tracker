@@ -332,11 +332,12 @@ def test_bands_flag_an_outlier_once_there_is_enough_history(lake, tmp_path):
     build(lake, tmp_path, **floors).close()  # 5 builds of history: not banded yet, only the fixed thresholds
     _passing_builds(lake, [{"listed_coffees": 103, "run_catalog_ok_share": 0.97}], first="2026-10-12")
     r = build(lake, tmp_path, check=False, **floors)  # 6: banded, and 40 and 0.5 are far out
-    assert r.returncode != 0 and re.search(r"FAIL 2 build_metrics_in_band", r.stdout)
+    # Flagged, but only a warning for now: the fixed floors decide, so the build still passes.
+    assert r.returncode == 0 and re.search(r"WARN 2 build_metrics_in_band", r.stdout)
     # The band is k x 1.4826 x MAD wide: a huge k lets 40 through, but the ok share's history is flat (MAD 0), so
     # its band is the minimum half-width, and 0.5 is still out of it.
     r = build(lake, tmp_path, check=False, **floors, band_k=1000)
-    assert r.returncode != 0 and re.search(r"FAIL 1 build_metrics_in_band", r.stdout)
+    assert r.returncode == 0 and re.search(r"WARN 1 build_metrics_in_band", r.stdout)
 
 
 def test_a_new_accept_override_restarts_the_bands(lake, tmp_path):
@@ -346,9 +347,10 @@ def test_a_new_accept_override_restarts_the_bands(lake, tmp_path):
         lake, [{"listed_coffees": n, "accepted_overrides": 0} for n in (100, 104, 98, 101, 97, 103)]
     )
     r = build(lake, tmp_path, check=False, as_of_run="2026-10-26", volume_tolerance=1e9)
-    assert r.returncode != 0 and "build_metrics_in_band" in r.stdout
+    assert re.search(r"WARN \d+ build_metrics_in_band", r.stdout)
     quality.add_override(lake, RID, "2026-10-26", "accept", "the roaster cut its range", None)
-    build(lake, tmp_path, as_of_run="2026-10-26", volume_tolerance=1e9).close()
+    r = build(lake, tmp_path, check=False, as_of_run="2026-10-26", volume_tolerance=1e9)
+    assert r.returncode == 0 and not re.search(r"WARN \d+ build_metrics_in_band", r.stdout)
 
 
 def test_an_accepted_drop_restarts_the_bands_so_the_new_level_passes(lake, monkeypatch, tmp_path):
@@ -371,7 +373,16 @@ def test_an_accepted_drop_restarts_the_bands_so_the_new_level_passes(lake, monke
         return cli.cmd_build(args)
 
     assert week("2026-10-19", FULL) is False  # a real drop to 40: out of band, and more than volume_tolerance
-    assert "test.coffeedata.build_metrics_in_band" in quality.build_diff(Lake())["failing"]
+    band = (
+        Lake()
+        .connect()
+        .execute(  # out of band too, reported as a warning (the volume check is what fails)
+            f"select status from {Lake().scan('builds')} where build_id = ? and unique_id = ?",
+            [quality.builds(Lake())[-1][0], "test.coffeedata.build_metrics_in_band"],
+        )
+        .fetchone()
+    )
+    assert band == ("warn",)
     assert week("2026-10-19", None, accept=True) is True  # reviewed: let through once
     accepted = quality.builds(Lake())[-1][0]
     metrics = dict(Lake().connect().execute(

@@ -59,7 +59,8 @@ vars:
   # volume: a fraction of the median). CUTOVER: a metric is banded only once it has band_min_builds passing builds
   # in its window; until then only the fixed thresholds above apply, and they stay hard floors after. As of
   # 2026-10-28 the lake has 1 passing real build, so the bands are not active on real data yet. band_k 1.5 is the
-  # owner's starting value: it is tight (under a normal model, about 13% of normal builds fall outside on each
+  # owner's starting value, and the band test only warns (severity warn) until band_k is recalibrated on 8-12
+  # weeks of real history; only then may it block. 1.5 is tight (under a normal model, about 13% of normal builds fall outside on each
   # two-sided metric), so expect to revisit it once the history exists. The minimum half-widths (for a flat
   # history, MAD 0): 0.05 for a share, as at the smallest judged adapter (20 roasters) one roaster is 5 points;
   # 5% of the median for a volume, as the one real change between full runs (2026-10-26 to 10-28) was about +2%.

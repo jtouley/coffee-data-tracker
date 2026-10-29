@@ -373,7 +373,8 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   - `build_metrics_in_band`: those ok shares (overall and per adapter, low side only) and the three volume
     metrics lie within median ± 1.5 × 1.4826 × MAD of the recent passing builds. A metric is banded only once it
     has 6 passing builds in its window; until then only the fixed thresholds apply, and they stay hard floors.
-    `--accept-volume-change`, or a new accept override, starts the window again at that build;
+    `--accept-volume-change`, or a new accept override, starts the window again at that build. For now this
+    check only warns: `band_k` is recalibrated on 8–12 weeks of real history before a band can block a release;
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;

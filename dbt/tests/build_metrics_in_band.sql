@@ -1,4 +1,8 @@
--- A build unlike the recent ones must not be published even when it clears the fixed floors: each banded metric
+-- Warn-only for now (the owner's call): a band out of range is reported, not blocking, until band_k is
+-- recalibrated on 8-12 weeks of real history. The fixed floors (run_ok_rate, adapter_ok_rate,
+-- catalog_volume_vs_last_build) block.
+{{ config(severity='warn') }}
+-- A build unlike the recent ones is flagged even when it clears the fixed floors: each banded metric
 -- must lie within median +/- band_k x 1.4826 x MAD of its values in the recent passing builds (the history), or
 -- band_min_*_halfwidth when that is wider (a flat history has MAD 0). Volume metrics fail either way; ok shares
 -- only below (a platform getting better is not a problem). Lists each metric out of band.
