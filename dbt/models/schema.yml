@@ -193,6 +193,7 @@ models:
           - accepted_values: {arguments: {values: [rules, llm]}}
       - name: is_wholesale
         data_type: boolean
+        constraints: [{type: not_null}]
         data_tests: [not_null]
       - name: release_build_id
         data_type: varchar
