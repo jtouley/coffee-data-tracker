@@ -283,6 +283,33 @@ def served(lake: Lake) -> dict | None:
     return dict(zip(cols, row, strict=True)) if row else None
 
 
+def materialize(lake: Lake, build_id: str, db: Path = Path("build/served.duckdb")) -> Path:
+    """Copy a release's tables into `db` (for the site or a public export) and change nothing else: no lake file,
+    marts/ or serving_log is written. Returns `db`."""
+    import duckdb
+
+    _materialize(lake, build_id, db).close()
+    duckdb.connect(str(db), read_only=True).close()  # flushed and readable
+    return db
+
+
+def _materialize(lake: Lake, build_id: str, db: Path):
+    files = release_files(lake, build_id)
+    missing = [t for t in RELEASE_TABLES if t not in files]
+    if missing:
+        raise FileNotFoundError(f"release {build_id} is missing {', '.join(missing)}")
+    if db.exists():
+        db.unlink()
+    db.parent.mkdir(parents=True, exist_ok=True)
+    con = lake.connect(str(db))
+    for t in RELEASE_TABLES:
+        # hive_partitioning off: the release's path (run_date=.../build=...) must not become columns.
+        con.execute(
+            f"create table {t} as select * from read_parquet('{files[t]}', hive_partitioning = false)"
+        )
+    return con
+
+
 def serve(
     lake: Lake,
     build_id: str,
@@ -305,21 +332,9 @@ def serve(
     run_date, ok = passed[build_id]
     if not ok:
         raise ValueError(f"build {build_id} failed its checks; only a passing release can be served")
-    files = release_files(lake, build_id)
-    missing = [t for t in RELEASE_TABLES if t not in files]
-    if missing:
-        raise FileNotFoundError(f"release {build_id} is missing {', '.join(missing)}")
     if previous is _UNREAD:  # None is an answer (nothing served yet), not a reason to read again
         previous = (served(lake) or {}).get("build_id")
-    if db.exists():
-        db.unlink()
-    db.parent.mkdir(parents=True, exist_ok=True)
-    con = lake.connect(str(db))
-    for t in RELEASE_TABLES:
-        # hive_partitioning off: the release's path (run_date=.../build=...) must not become columns.
-        con.execute(
-            f"create table {t} as select * from read_parquet('{files[t]}', hive_partitioning = false)"
-        )
+    con = _materialize(lake, build_id, db)
     for t in SERVED_MARTS:
         lake.write_mart(t, con, f"select * from {t}")
     pointer = lake.root / "marts" / "release.parquet"

@@ -463,6 +463,18 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
 def cmd_site(args: argparse.Namespace) -> None:
     from . import site
 
+    if getattr(
+        args, "served", False
+    ):  # the release customers get now, read from the lake; nothing is written to it
+        from . import quality
+
+        release = quality.served(Lake())
+        if release is None:
+            raise SystemExit(
+                "nothing is served yet: the site is built from the served release, which the first weekly run "
+                "whose checks pass creates (or `coffeedata rollback --to <build>`)"
+            )
+        quality.materialize(Lake(), release["build_id"], Path(args.db))
     print(site.build(Path(args.db), Path(args.out)))
 
 
@@ -634,6 +646,11 @@ def main(argv: list[str] | None = None) -> None:
         "--db", default=str(SERVED_DB), help="default: the served release, never an unchecked build"
     )
     st.add_argument("--out", default="build/site")
+    st.add_argument(
+        "--served",
+        action="store_true",
+        help="first fetch the served release from the lake into --db (read-only)",
+    )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 

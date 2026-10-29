@@ -405,6 +405,14 @@ def test_releases_are_recorded_served_gated_and_rolled_back(lake, monkeypatch, t
     assert current.read_bytes() == first_release
     assert quality.served(Lake())["build_id"] == b1
     assert quality.served(Lake())["reason"] == "bad prices from one roaster"
+    # The site workflow renders the served release and writes nothing to the lake.
+    before = sorted((p.as_posix(), p.stat().st_mtime_ns) for p in lake.root.rglob("*") if p.is_file())
+    site_db, site_out = tmp_path / "site.duckdb", tmp_path / "site"
+    cli.main(["site", "--served", "--db", str(site_db), "--out", str(site_out)])
+    assert (site_out / "index.html").exists()
+    assert {r[0] for r in duckdb.connect(str(site_db), read_only=True).execute(
+        "select distinct release_build_id from public_coffee").fetchall()} == {b1}  # fmt: skip
+    assert sorted((p.as_posix(), p.stat().st_mtime_ns) for p in lake.root.rglob("*") if p.is_file()) == before
     # marts/release.parquet holds only the current release; the serving log keeps every serve and rollback.
     log = (
         Lake().connect()
@@ -613,3 +621,11 @@ def test_remote_globs_only_for_folders_the_dataset_has(tmp_path, monkeypatch):
     assert not any(s.startswith("hf://") for s in remote.sources("builds"))  # not published yet: staging only
     monkeypatch.setitem(lake_mod._REMOTE_FOLDERS, remote.url, None)  # unknown: read it remotely, as before
     assert any(s.startswith("hf://") for s in remote.sources("builds"))
+
+
+def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch):
+    from coffeedata import cli
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    with pytest.raises(SystemExit, match="nothing is served yet"):
+        cli.main(["site", "--served", "--db", str(tmp_path / "s.duckdb"), "--out", str(tmp_path / "site")])
