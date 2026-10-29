@@ -241,6 +241,8 @@ def cmd_build(args: argparse.Namespace) -> bool:
         extra["baseline_build"] = served
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
+        # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
+        extra["accept_volume_change"] = True
     started = time.monotonic()
     passed, results = dbt_build(lake, db, extra)
     took = time.monotonic() - started
@@ -554,7 +556,8 @@ def main(argv: list[str] | None = None) -> None:
     b.add_argument(
         "--accept-volume-change",
         action="store_true",
-        help="let one build through the volume check (it becomes the next baseline)",
+        help="let one build through the volume check and the anomaly bands (it becomes the next baseline, and "
+        "the bands' history starts again at it); the fixed floors still apply",
     )
 
     bd = add(

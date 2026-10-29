@@ -41,7 +41,14 @@ def product(
     }
 
 
-def run(lake: Lake, run_date: str, roaster: str, products: list[dict] | None, hour: int = 12) -> str:
+def run(
+    lake: Lake,
+    run_date: str,
+    roaster: str,
+    products: list[dict] | None,
+    hour: int = 12,
+    adapter: str = "shopify",
+) -> str:
     """Record one fetch attempt: products=None means the fetch failed."""
     b = batch()
     fetched = at(run_date, hour)
@@ -55,7 +62,7 @@ def run(lake: Lake, run_date: str, roaster: str, products: list[dict] | None, ho
                 "batch_id": b,
                 "fetched_at": fetched,
                 "roaster_id": roaster,
-                "adapter": "shopify",
+                "adapter": adapter,
                 "status": "error" if products is None else "ok",
                 "error": "boom" if products is None else None,
                 "products": len(products or []),
