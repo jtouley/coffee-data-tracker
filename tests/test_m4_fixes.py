@@ -48,8 +48,7 @@ def test_past_the_days_reads_photos_are_not_kept(catalog, tmp_path):  # noqa: F8
 
 def test_a_roaster_named_inside_other_roasters_names_is_still_searched(lake):
     # Finding 10: "Onyx Coffee", "Coffee Lab" and "Onyx Coffee Lab" all score 100 against "Onyx Coffee Lab".
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('a:1', 'Onyx Coffee', 'Other'), ('b:1', 'Coffee Lab', 'Other'), ('c:1', 'Coffee', 'Other'),
@@ -59,8 +58,7 @@ def test_a_roaster_named_inside_other_roasters_names_is_still_searched(lake):
     try:
         assert shots.match_bag("Onyx Coffee Lab", "Geometry", lake)[0] == "e:1"
     finally:
-        shots._index_cache.clear()
-        shots._rows_cache.clear()
+        shots._catalog_cache.clear()
 
 
 def test_failed_reads_dont_count_toward_latency():

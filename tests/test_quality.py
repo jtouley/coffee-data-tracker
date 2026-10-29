@@ -471,6 +471,15 @@ def test_volume_metrics_count_the_current_catalog(lake, tmp_path):
     assert metrics["listed_coffees"] == 10  # a back catalog appearing isn't a swing in the market
 
 
+def test_volume_metrics_leave_wholesale_out_like_the_site(lake, tmp_path):
+    # The volume check's baseline counts what customers see: a roaster's wholesale twins aren't more coffees.
+    wholesale = [product(f"W{i}", title=f"Wholesale - 5LB Coffee {i} Roast") for i in range(5)]
+    run(lake, "2026-10-26", RID, FULL[:10] + wholesale)
+    con = build(lake, tmp_path)
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert (metrics["listed_coffees"], metrics["in_stock_coffees"]) == (10, 10)
+
+
 def test_a_first_week_use_batch_that_does_not_pin_is_no_override(lake, tmp_path):
     run(lake, "2026-10-19", RID, FULL)
     lake.write("run_overrides", "run_overrides/override_id=manual.parquet", [{

@@ -13,20 +13,6 @@ from . import shots
 from .lake import Lake
 
 DB = Path(os.environ.get("COFFEEDATA_DB", "build/coffee.duckdb"))
-_columns_cache: dict[str, tuple[float, list[str]]] = {}
-
-
-def _mart_columns(con, src: str) -> list[str]:
-    """The exported dim_coffee's columns: a remote read each, so asked once an hour (they change only with the
-    contract), not on every search."""
-    import time
-
-    cached = _columns_cache.get(src)
-    if cached and time.monotonic() - cached[0] < shots.INDEX_TTL_S:
-        return cached[1]
-    cols = [r[0] for r in con.execute(f"describe select * from read_parquet([{src}])").fetchall()]
-    _columns_cache[src] = (time.monotonic(), cols)
-    return cols
 
 
 mcp = MCPServer("coffee-data")
@@ -66,10 +52,13 @@ def search_coffees(
     process: str | None = None,
     origin: str | None = None,
     in_stock_only: bool = True,
+    include_wholesale: bool = False,
     limit: int = 20,
 ) -> list[dict]:
     """Search the current roaster catalog by free text, roaster domain, process (washed/natural/honey/anaerobic)
-    or origin country. Uses the same weekly dim_coffee export as the site, so stock status matches it."""
+    or origin country. Uses the same weekly dim_coffee export as the site, so stock status matches it.
+    Wholesale listings (a roaster's bulk or cafe bag, often the twin of one of its retail coffees) are left out
+    unless include_wholesale is true; each result's is_wholesale says which kind it is."""
     lake = Lake()
     src = ", ".join(f"'{s}'" for s in lake.mart_sources("dim_coffee"))
     where, params = ["is_listed"], []
@@ -85,13 +74,18 @@ def search_coffees(
         where.append("origin_country ilike ?")
         params.append(f"%{origin}%")
     con = lake.connect()
+    have = shots.mart_columns(lake)
+    retail = shots.retail_only(have)
+    if not include_wholesale:
+        where.append(retail)  # a roaster's wholesale twin isn't a second coffee
     # catalog_status says whether a listed coffee can be bought now or is the roaster's back catalog. A dim_coffee
     # exported before it existed has no such column, so it reads as unknown rather than failing the search.
-    has_status = "catalog_status" in _mart_columns(con, src)
+    has_status = "catalog_status" in have
     status = "catalog_status" if has_status else "null::varchar as catalog_status"
     cur = con.execute(
         f"""select coffee_id, roaster_name, title, url, origin_country as origin, process, tasting_notes as notes,
-                   in_stock, {status}, price_per_100g from read_parquet([{src}]) where {" and ".join(where)}""",
+                   in_stock, {status}, not ({retail}) as is_wholesale, price_per_100g
+                   from read_parquet([{src}], union_by_name = true) where {" and ".join(where)}""",
         params,
     )
     cols = [d[0] for d in cur.description]

@@ -62,10 +62,15 @@ _TEA_META = re.compile(r"\b(teas?|herbal|tisane)\b", re.I)
 _NOT_COFFEE_TYPE = re.compile(r"\b(merchandise|drinkware|training|events?|powders?|accessor(y|ies))\b", re.I)
 _DEMONYM = re.compile(r"\b(" + "|".join(DEMONYMS) + r")\b", re.I)
 # Wholesale bags and case packs are coffee, but their prices aren't comparable with retail bags.
+# Wholesale: sold to cafes, offices and resellers. "Whole sale" and fraction packs (portion packs for commercial
+# brewers) were measured on the real catalog: eval/wholesale/README.md.
 _WHOLESALE = re.compile(
-    r"\b(wholesale|resale|b2b|food ?service)\b|\bcase (of )?\(?\d+\)?|\bcases? of \d+", re.I
+    r"\b(wholesale|whole sale|resale|b2b|food ?service|frac(tion)?[- ]?packs?)\b|\bcase (of )?\(?\d+\)?"
+    r"|\bcases? of \d+",
+    re.I,
 )
-_WHOLESALE_TAG = re.compile(r"wholesale|resale|b2b|food ?service", re.I)
+# A tag marks the listing itself ("Wholesale", "wholesale-only", "B2B Exclusive"), not "wholesale-available".
+_WHOLESALE_TAG = re.compile(r"(wholesale|resale|b2b|food ?service)([-_ ](only|exclusive))?", re.I)
 _OTHER_META = re.compile(
     r"\b(equipment|merch|gear|apparel|parts|gift sets?|instants?|samplers?|bundles?)\b", re.I
 )
@@ -119,9 +124,14 @@ def _bag_sized(item: CatalogItem) -> bool:
 
 def is_wholesale(item: CatalogItem) -> bool:
     return bool(
-        _WHOLESALE.search(f"{item.title} | {item.product_type}")
+        says_wholesale(f"{item.title} | {item.product_type}")
         or any(_WHOLESALE_TAG.fullmatch(t.strip()) for t in item.tags)
     )
+
+
+def says_wholesale(text: str) -> bool:
+    """Whether a listing's title, or a bag's label, reads as wholesale ("Wholesale - 5LB", "Case of 6")."""
+    return bool(_WHOLESALE.search(text))
 
 
 def excluded(item: CatalogItem) -> bool:

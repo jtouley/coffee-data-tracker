@@ -210,7 +210,7 @@ def test_index_reads_dim_coffee_export(lake, monkeypatch):
         duckdb.connect(),
         "select 'a.com:1' as coffee_id, 'A Roasters' as roaster_name, 'Geometry' as title",
     )
-    shots._index_cache.clear()
+    shots._catalog_cache.clear()
     assert shots._index(lake) == {"a.com:1": "A Roasters Geometry"}
 
 
