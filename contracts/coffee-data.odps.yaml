@@ -11,7 +11,8 @@ description:
   purpose: A weekly, trustworthy record of US specialty coffee roasters' catalogs and how they change.
   usage: >-
     Read the public tables from the public dataset, Snowflake or Databricks. Each weekly release is served only
-    when every quality rule in its contract passes; otherwise the previous release stays served.
+    when every error-severity quality rule in its contract passes; warnings do not block serving. Otherwise the
+    previous release stays served.
   limitations: >-
     Built from roasters' public stores, weekly. The raw lake is append-only and every table is derived from it,
     so any past release can be rebuilt.
@@ -29,8 +30,8 @@ customProperties:
         each its own variant id.
       bag (shot app): A bag of coffee a person bought and logs shots against. Personal; never in a public table.
       coffee_id: <roaster domain>:<store product id>, stable across runs and renames.
-      release: The tables one weekly build produced. Only a release whose quality rules all pass is served; the
-        last 4 can be served again (rollback).
+      release: The tables one weekly build produced. Only a release whose error-severity quality rules all pass is
+        served; the last 4 can be served again (rollback).
   - property: decisions
     value:
       - topic: public_price_event bag-size column
