@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from datetime import datetime, tzinfo
 from html import escape
+from math import ceil, floor, log10
 from urllib.parse import parse_qsl, urlencode, urlsplit
 
 from coffeedata.models import SAFE_ID, Shot
@@ -26,9 +27,6 @@ def back_to(next_: str) -> tuple[str, str]:
     return (u.path + ("?" + urlencode(picks) if picks and u.path == "/log/gear" else ""), _BACK[u.path])
 
 
-_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-
-
 def g(x: float | None, digits: int | None = None) -> str:
     if x is None:
         return ""
@@ -43,17 +41,6 @@ def ratio(s: Shot) -> float:
     return s.yield_g / s.dose_g
 
 
-def window(s: Shot) -> str:
-    if s.time_s < TARGET_TIME[0]:
-        return "fast"
-    return "slow" if s.time_s > TARGET_TIME[1] else "in"
-
-
-def _seconds(n: int) -> str:
-    word = _WORDS[n] if n < 10 else str(n)
-    return f"{word} second{'s' if n != 1 else ''}"
-
-
 def _when(prev: Shot, now: Shot, tz: tzinfo) -> str:
     a, b = prev.brewed_at.astimezone(tz), now.brewed_at.astimezone(tz)
     if a.date() == b.date():
@@ -64,18 +51,10 @@ def _when(prev: Shot, now: Shot, tz: tzinfo) -> str:
 
 
 def summary(s: Shot, prev: Shot | None, tz: tzinfo) -> str:
-    """'Inside the window, two seconds slower than Monday’s shot.' What happened, not what to change."""
-    w = window(s)
-    out = "Inside the window" if w == "in" else f"Ran {w} at {g(s.time_s)} s, outside the window"
+    """Describe the shot without judging it against one recipe's time or ratio."""
+    out = f"1:{ratio(s):.2f} in {g(s.time_s)} s"
     if prev:
-        d = round(s.time_s - prev.time_s)
-        when = _when(prev, s, tz)
-        if d == 0:
-            out += f", the same time as {when}"
-        elif w == "in":
-            out += f", {_seconds(abs(d))} {'slower' if d > 0 else 'faster'} than {when}"
-        else:
-            out += f"; {when} was {g(prev.time_s)} s"
+        out += f"; {_when(prev, s, tz)} was 1:{ratio(prev):.2f} in {g(prev.time_s)} s"
     return out + "."
 
 
@@ -86,37 +65,46 @@ def sequence(shots: list[Shot]) -> str:
 
 
 def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: bool = True) -> str:
-    """The dial-in target: time across (18–38 s), ratio up (1:1.6–1:2.5), the window shaded, each shot a mark
+    """Time across, ratio up, and the traditional espresso window shaded. The axes expand to include all shown shots,
     numbered in order and joined oldest to newest, the newest ringed. With `sequence=False` (a coffee's page, many
     shots across bags) the marks are plain: neither numbered nor joined."""
     left, right, top, bottom = 32, 350, 8, height - 24
+    shown = shots[-8:] if sequence else shots
+    times = [s.time_s for s in shown]
+    ratios = [ratio(s) for s in shown]
+    tmin = min(18.0, min(times, default=18.0) - 2) if times and min(times) < 18 else 18.0
+    tmax = max(38.0, max(times, default=38.0) + 2) if times and max(times) > 38 else 38.0
+    rmin = max(0.0, min(1.6, min(ratios) - 0.1)) if ratios and min(ratios) < 1.6 else 1.6
+    rmax = max(2.5, max(ratios) + 0.1) if ratios and max(ratios) > 2.5 else 2.5
 
     def x(t: float) -> float:
-        return left + (min(max(t, 18), 38) - 18) / 20 * (right - left)
+        return left + (t - tmin) / (tmax - tmin) * (right - left)
 
     def y(r: float) -> float:
-        return top + (2.5 - min(max(r, 1.6), 2.5)) / 0.9 * (bottom - top)
+        return top + (rmax - r) / (rmax - rmin) * (bottom - top)
 
-    aria = label or "Shots by time and ratio against the 25 to 32 second, 1:1.8 to 1:2.3 window"
+    aria = (label + ". " if label else "Shots by time and ratio. ") + (
+        "Shaded area is the traditional espresso reference: 25 to 32 seconds and 1:1.8 to 1:2.3"
+    )
     out = [f'<svg class="target" viewBox="0 0 358 {height}" role="img" aria-label="{escape(aria)}">']
-    for t in (20, 25, 30, 35):
+    for t in ((20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax)):
         out.append(
             f'<line class="tick" x1="{x(t):.1f}" x2="{x(t):.1f}" y1="{top}" y2="{bottom}"/>'
-            f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{t} s</text>'
+            f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{g(t)} s</text>'
         )
-    for r in (1.8, 2.0, 2.2, 2.4):
+    for r in ((1.8, 2.0, 2.2, 2.4) if (rmin, rmax) == (1.6, 2.5) else _ticks(rmin, rmax)):
         out.append(
             f'<line class="tick" x1="{left}" x2="{right}" y1="{y(r):.1f}" y2="{y(r):.1f}"/>'
-            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{r:.1f}</text>'
+            f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{g(r)}</text>'
         )
     (t0, t1), (r0, r1) = TARGET_TIME, TARGET_RATIO
     out.append(
         f'<rect class="win" x="{x(t0):.1f}" y="{y(r1):.1f}" width="{x(t1) - x(t0):.1f}" '
         f'height="{y(r0) - y(r1):.1f}" rx="4"/>'
-        f'<text class="wl" x="{x(t1) - 6:.1f}" y="{y(r0) - 6:.1f}" text-anchor="end">window</text>'
+        f'<text class="wl" x="{x(t1) - 6:.1f}" y="{y(r0) - 6:.1f}" text-anchor="end">espresso</text>'
         f'<line class="ax" x1="{left}" x2="{right}" y1="{bottom}" y2="{bottom}"/>'
     )
-    pts = [(x(s.time_s), y(ratio(s)), s) for s in (shots[-8:] if sequence else shots)]
+    pts = [(x(s.time_s), y(ratio(s)), s) for s in shown]
     if sequence and len(pts) > 1:
         out.append(f'<polyline class="path" points="{" ".join(f"{px:.1f},{py:.1f}" for px, py, _ in pts)}"/>')
     placed: list[tuple[float, float, float, float]] = []  # label boxes so far: x0, y0, x1, y1
@@ -168,6 +156,14 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
         out.append(f'<circle class="now" cx="{px:.1f}" cy="{py:.1f}" r="10"/>')
     out.append("</svg>")
     return "".join(out)
+
+
+def _ticks(low: float, high: float) -> list[float]:
+    """At most five readable grid labels, with round steps, on an expanded axis."""
+    raw = (high - low) / 4
+    magnitude = 10 ** floor(log10(raw))
+    step = next(n * magnitude for n in (1, 2, 5, 10) if n * magnitude >= raw)
+    return [round(i * step, 6) for i in range(ceil(low / step), floor(high / step) + 1)]
 
 
 def _gap(a: tuple[float, float, float, float], b: tuple[float, float, float, float]) -> float:

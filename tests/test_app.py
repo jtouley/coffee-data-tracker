@@ -122,13 +122,28 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
     assert r.json() == {"shot_id": "s2", "written": True}
     saved = client.get("/saved/s2?new=1").text
     assert "1:2.02" in saved and "Compared with the last shot" in saved and "data-undo" in saved
-    assert "Inside the window, two seconds slower than Wednesday’s shot." in saved
+    assert "1:2.02 in 29 s; Wednesday’s shot was 1:2.02 in 27 s." in saved
     today = client.get("/").text
     assert "Pull again" in today and "18.0 → 36.4 g · grind 11" in today
     for page in (saved, today, client.get("/log").text):
         assert not re.search(r"finer|coarser|Try \d", page)
     [s] = [s for s in shots.load_shots(lake) if s.shot_id == "s2"]
     assert (s.user_id, s.source, s.grinder_id, s.bag_id) == ("owner", "app", "g1", "bag1")
+
+
+def test_long_ratio_shots_are_shown_without_espresso_time_judgment(client):
+    client.post("/api/shots", json=shot(1, yield_g=54, time_s=15), headers=W)
+    client.post("/api/shots", json=shot(2, yield_g=72, time_s=12), headers=W)
+    for path in ("/", "/saved/s2", "/coffee/bag1"):
+        page = client.get(path).text
+        assert "traditional espresso reference" in page
+        # Both times and both ratios must get distinct positions instead of being clamped together.
+        marks = re.findall(r'<circle class="s-balanced" cx="([\d.]+)" cy="([\d.]+)"', page)
+        assert len(marks) == 2 and marks[0][0] != marks[1][0] and marks[0][1] != marks[1][1]
+    for path in ("/", "/saved/s2"):
+        page = client.get(path).text
+        assert "1:4.00 in 12 s" in page and "1:3.00 in 15 s" in page
+        assert "Ran fast" not in page and "outside the window" not in page
 
 
 def test_same_shot_id_twice_writes_once(client, lake):
