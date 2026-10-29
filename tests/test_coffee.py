@@ -147,7 +147,7 @@ def test_photos_are_served_to_their_owner_only(world):
         and got.content[:2] == b"\xff\xd8"
     )
     assert got.headers["cache-control"].startswith("private")
-    assert c.get("/photos/p1", headers={"x-test-user": "maya"}).status_code == 404
+    assert c.get("/photos/p1", headers={"x-test-user": "maya", "X-Expected-User": "maya"}).status_code == 404
     assert c.get("/photos/nope").status_code == 404
     assert '<img class="cover mt8" src="/photos/p1"' in c.get("/coffee/g2-bag").text
     assert 'loading="lazy"' in c.get("/coffees").text
@@ -162,7 +162,7 @@ def test_retract_then_undo_brings_the_shot_back(world):
         c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is False
     )  # a resend writes nothing
     assert app.state.store.shot("owner", "b2").time_s == 33
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     assert c.post("/api/shots/b2/restore", json={}, headers=maya).status_code == 404
 
 

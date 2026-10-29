@@ -358,7 +358,9 @@ def test_a_resent_photo_is_not_read_twice_and_its_id_stays_with_its_owner(catalo
     first = upload(c).json()
     assert upload(c).json() == first and len(fake.calls) == 1
     other = c.post(
-        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/p1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert other.status_code == 409
 
@@ -383,7 +385,7 @@ def test_a_typed_match_wins_and_another_persons_photo_is_ignored(catalog, tmp_pa
     )
     assert r.json()["coffee_id"] == "onyx.com:1"
     # Someone else citing that photo id gets nothing from it.
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     r = c.post(
         "/api/bags", json={"bag_id": "b2", "coffee_freetext": "something", "photo_id": "p1"}, headers=maya
     )
@@ -424,7 +426,9 @@ def test_reads_are_capped_per_day(catalog, tmp_path):
     assert statuses[:10] == ["read"] * 10 and statuses[10] == "limit" and len(fake.calls) == 10
     # Another person has their own allowance.
     r = c.post(
-        "/api/photos/q1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/q1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert r.json()["status"] == "read"
 
@@ -623,7 +627,9 @@ def test_a_photo_lock_goes_when_its_uploads_end(catalog, tmp_path, monkeypatch):
     c = TestClient(app, raise_server_exceptions=False)
     assert upload(c).status_code == upload(c).status_code == 200  # a read, then a resend from last_reply
     other = c.post(
-        "/api/photos/p1", content=jpeg(), headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya"}
+        "/api/photos/p1",
+        content=jpeg(),
+        headers=W | {"Content-Type": "image/jpeg", "x-test-user": "maya", "X-Expected-User": "maya"},
     )
     assert other.status_code == 409
     for i in range(10):

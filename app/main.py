@@ -149,11 +149,23 @@ def create_app(
         same_origin(request, x_requested_with)
         return user(request)
 
+    def outbox_writer(
+        request: Request,
+        x_requested_with: Annotated[str | None, Header()] = None,
+        x_expected_user: Annotated[str | None, Header()] = None,
+    ) -> User:
+        """Bind a phone's queued write to the account that created it, including across browser tabs."""
+        me = writer(request, x_requested_with)
+        if not x_expected_user or x_expected_user != me.user_id:
+            raise HTTPException(403, "Sign in as the person who made this save to sync it.")
+        return me
+
     def anyone(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> None:
         same_origin(request, x_requested_with)
 
     Me = Annotated[User, Depends(screen_user)]
     Writer = Annotated[User, Depends(writer)]
+    OutboxWriter = Annotated[User, Depends(outbox_writer)]
 
     def tz(request: Request) -> tzinfo:
         # The phone writes its zone URL-encoded ("America%2FNew_York"), and cookies arrive as written.
@@ -796,20 +808,20 @@ def create_app(
             raise HTTPException(422, str(e)) from None
 
     @app.post("/api/shots")
-    def post_shot(body: dict, me: Writer) -> dict:
+    def post_shot(body: dict, me: OutboxWriter) -> dict:
         shot, written = run(store.save_shot, me.user_id, body)
         return {"shot_id": shot.shot_id, "written": written}
 
     @app.post("/api/shots/{shot_id}/retract")
-    def retract(shot_id: str, me: Writer) -> dict:
+    def retract(shot_id: str, me: OutboxWriter) -> dict:
         return {"shot_id": shot_id, "written": run(store.retract_shot, me.user_id, shot_id)}
 
     @app.post("/api/shots/{shot_id}/restore")
-    def restore(shot_id: str, me: Writer) -> dict:
+    def restore(shot_id: str, me: OutboxWriter) -> dict:
         return {"shot_id": shot_id, "written": run(store.restore_shot, me.user_id, shot_id)}
 
     @app.post("/api/equipment")
-    def post_equipment(body: dict, me: Writer) -> dict:
+    def post_equipment(body: dict, me: OutboxWriter) -> dict:
         return {"equipment_id": run(store.save_equipment, me.user_id, body).equipment_id}
 
     photo_lake = photos_lake or Lake.photos()
@@ -859,7 +871,7 @@ def create_app(
         }
 
     @app.post("/api/photos/{photo_id}")
-    async def post_photo(photo_id: str, request: Request, me: Writer) -> dict:
+    async def post_photo(photo_id: str, request: Request, me: OutboxWriter) -> dict:
         """A bag photo: checked, re-encoded without metadata, saved, then read by Claude and matched in Python.
         Reading needs ANTHROPIC_API_KEY and is capped per account per day; without either, the person types it."""
         if not SAFE_ID.fullmatch(photo_id):
@@ -940,7 +952,7 @@ def create_app(
         }
 
     @app.post("/api/bags")
-    def post_bag(body: dict, me: Writer) -> dict:
+    def post_bag(body: dict, me: OutboxWriter) -> dict:
         # Only a bag typed before its photo was read (offline) takes the photo's match. A bag typed after seeing the
         # read chose not to use it, and keeps what was typed (#20-1).
         pending = bool(body.pop("read_pending", False))

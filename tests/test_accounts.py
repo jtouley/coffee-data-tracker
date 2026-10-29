@@ -17,7 +17,7 @@ from app.main import create_app
 from coffeedata import shots
 from coffeedata.lake import Lake
 
-W = {"X-Requested-With": "test"}
+W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 CODE = "K7QD-M2XF-9RPA-T4WE"
 PW = "correct horse battery"
 
@@ -246,6 +246,7 @@ def test_two_real_accounts_cant_see_each_others_shots(lake, users):
     a._write(Account("u2", "maria", a._hash(PW)))
     other = TestClient(app, base_url="https://testserver", follow_redirects=False)
     other.post("/api/signin", json={"username": "maria", "password": PW}, headers=W)
+    maria = W | {"X-Expected-User": "u2"}
     own.post(
         "/api/equipment",
         json={"equipment_id": "b1", "kind": "basket", "name": "P", "basket_dose_g": 18},
@@ -254,14 +255,22 @@ def test_two_real_accounts_cant_see_each_others_shots(lake, users):
     shot = {"shot_id": "s1", "brewed_at": "2026-10-27T07:00:00Z", "coffee_freetext": "Geometry",
             "dose_g": 18, "yield_g": 36, "time_s": 28, "rating": 4, "grinder_setting": 11}  # fmt: skip
     assert own.post("/api/shots", json=shot, headers=W).status_code == 200
+    # An old tab still identifies its outbox as the owner after the browser signs in as Maria.
+    queued = shot | {"shot_id": "queued"}
+    assert other.post("/api/shots", json=queued, headers=W).status_code == 403
+    assert other.post("/api/shots", json=queued, headers={"X-Requested-With": "test"}).status_code == 403
+    assert "queued" not in app.state.store.shots
+    assert other.post("/api/shots", json=queued, headers=maria).status_code == 200
     assert own.get("/saved/s1").status_code == 200
     assert other.get("/saved/s1", headers={"Accept": "text/html"}).status_code == 404
-    assert other.post("/api/shots/s1/retract", headers=W).status_code == 404
-    assert other.post("/api/shots", json=shot | {"rating": 1}, headers=W).status_code == 404
+    assert other.post("/api/shots/s1/retract", headers=maria).status_code == 404
+    assert other.post("/api/shots", json=shot | {"rating": 1}, headers=maria).status_code == 404
     assert other.post("/api/equipment", json={"equipment_id": "b1", "kind": "basket", "name": "Mine", "basket_dose_g": 20},
-                      headers=W).status_code == 404  # fmt: skip
+                      headers=maria).status_code == 404  # fmt: skip
     # The user comes from the cookie; a user_id in the body is ignored.
-    r = other.post("/api/shots", json=shot | {"shot_id": "s2", "user_id": shots.owner_user_id()}, headers=W)
+    r = other.post(
+        "/api/shots", json=shot | {"shot_id": "s2", "user_id": shots.owner_user_id()}, headers=maria
+    )
     assert r.status_code == 200
     assert app.state.store.shot("u2", "s2").user_id == "u2"
 

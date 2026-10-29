@@ -12,7 +12,7 @@ from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 import httpx
 
@@ -31,6 +31,7 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # again. A site whose robots.txt always answers 5xx is never crawled: by design (RFC 9309 allows a 5xx to mean
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
+MAX_REDIRECTS = 20
 
 
 class FetchError(Exception):
@@ -91,16 +92,16 @@ class PoliteClient:
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
             timeout=httpx.Timeout(timeout, pool=120.0),
-            follow_redirects=True,
+            follow_redirects=False,
             transport=transport,
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
         self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
-        # host -> (when to ask its robots.txt again, why it didn't answer)
+        # origin -> (when to ask its robots.txt again, why it didn't answer)
         self._robots_down: dict[str, tuple[float, RobotsUnavailable]] = {}
         self._robots_locks: dict[
             str, threading.Lock
-        ] = {}  # one robots.txt request per unknown host at a time
+        ] = {}  # one robots.txt request per unknown origin at a time
         self._last: dict[str, float] = {}
         self._lock = threading.Lock()
         self._local = threading.local()  # shared by for_platform() views, so their requests are counted too
@@ -146,47 +147,48 @@ class PoliteClient:
         return r
 
     def _allowed(self, url: str) -> bool:
-        host = urlparse(url).netloc
+        parsed = urlparse(url)
+        origin = f"{parsed.scheme}://{parsed.netloc}"
         with self._lock:
-            known = host in self._robots
-            host_lock = None if known else self._robots_locks.setdefault(host, threading.Lock())
+            known = origin in self._robots
+            host_lock = None if known else self._robots_locks.setdefault(origin, threading.Lock())
         if host_lock is not None:
             with host_lock:  # concurrent first requests to a host share one robots.txt request
                 with self._lock:
-                    known = host in self._robots
-                    down = self._robots_down.get(host)
+                    known = origin in self._robots
+                    down = self._robots_down.get(origin)
                 if not known:
                     if down is not None and time.monotonic() < down[0]:
                         raise RobotsUnavailable(
                             f"{down[1]} (recently); not fetching without it", down[1].unreachable
                         )
-                    rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+                    rules = self._fetch_robots(origin)  # raises RobotsUnavailable: nothing is fetched
                     with self._lock:
-                        self._robots[host] = rules
-                        self._robots_down.pop(host, None)
+                        self._robots[origin] = rules
+                        self._robots_down.pop(origin, None)
                         # Known from now on: no robots.txt request left to share.
-                        self._robots_locks.pop(host, None)
-        rp = self._robots[host]
+                        self._robots_locks.pop(origin, None)
+        rp = self._robots[origin]
         return rp is None or rp.can_fetch(USER_AGENT, url)
 
-    def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
+    def _fetch_robots(self, origin: str) -> urllib.robotparser.RobotFileParser | None:
         """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an
         answer about robots.txt, a 429, 430, 5xx or a network error, raises RobotsUnavailable and is remembered for
         ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
         parser = urllib.robotparser.RobotFileParser()
         try:
-            r = self._send_retrying(f"https://{host}/robots.txt", spaced=False, page=False)
+            r = self._follow(f"{origin}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
-            raise RobotsUnavailable(f"robots.txt for {host} not sent ({type(e).__name__}: {e})") from e
+            raise RobotsUnavailable(f"robots.txt for {origin} not sent ({type(e).__name__}: {e})") from e
         except httpx.HTTPError as e:
             # DNS failure, refused or timed-out connection to this host itself (not a host it redirected to): down.
-            hostname = urlparse(f"https://{host}").hostname
+            hostname = urlparse(origin).hostname
             try:
                 failed_host: str | None = e.request.url.host
             except RuntimeError:  # raised without a request attached
                 failed_host = hostname
             unreachable = isinstance(e, httpx.ConnectError | httpx.ConnectTimeout) and failed_host == hostname
-            err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__}: {e})", unreachable)
+            err = RobotsUnavailable(f"robots.txt for {origin} failed ({type(e).__name__}: {e})", unreachable)
             cause: Exception | None = e
         else:
             if r.status_code == 200:
@@ -195,13 +197,13 @@ class PoliteClient:
             if r.status_code in (401, 403):
                 parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
                 return parser
-            if r.status_code not in BLOCK_STATUSES and r.status_code < 500:
+            if r.status_code not in BLOCK_STATUSES and 400 <= r.status_code < 500:
                 return None
-            err, cause = RobotsUnavailable(f"robots.txt for {host} answered {r.status_code}"), None
+            err, cause = RobotsUnavailable(f"robots.txt for {origin} answered {r.status_code}"), None
         # This fetch fails (the retry pass tries again) and the host stays unknown, asked again after
         # ROBOTS_RETRY_AFTER, so a site whose robots.txt never answers is never crawled.
         with self._lock:
-            self._robots_down[host] = (time.monotonic() + ROBOTS_RETRY_AFTER, err)
+            self._robots_down[origin] = (time.monotonic() + ROBOTS_RETRY_AFTER, err)
         raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable) from cause
 
     def _wait_turn(self, host: str) -> None:
@@ -240,10 +242,32 @@ class PoliteClient:
             time.sleep(min(int(retry_after), 30) if retry_after.isdigit() else 2**attempt)
         raise ValueError("retries must be >= 1")
 
+    def _follow(self, url: str, params: dict | None = None, robots: bool = False) -> httpx.Response:
+        """Follow redirects ourselves so each catalog hop checks its own robots rules and host budget.
+
+        Robots redirects are the bootstrap exception: the redirected resource supplies the original host's rules,
+        so consulting those rules before fetching it would recurse. They are still spaced and limited per host.
+        """
+        history: list[httpx.Response] = []
+        for hop in range(MAX_REDIRECTS + 1):
+            if not robots and not self._allowed(url):
+                raise Blocked(url)
+            r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
+            params = None  # the first request's query is already in the redirect location, if applicable
+            if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
+                r.history = history
+                return r
+            if hop == MAX_REDIRECTS:
+                raise httpx.TooManyRedirects(f"too many redirects for {url}", request=r.request)
+            target = urljoin(str(r.url), r.headers["location"])
+            if urlparse(target).scheme not in ("http", "https"):
+                raise httpx.UnsupportedProtocol(f"unsupported redirect URL {target}", request=r.request)
+            history.append(r)
+            url = target
+        raise AssertionError("unreachable")
+
     def get(self, url: str, **params: str | int | float | bool | None) -> httpx.Response:
-        if not self._allowed(url):
-            raise Blocked(url)
-        r = self._send_retrying(url, params or None)
+        r = self._follow(url, params or None)
         if r.status_code in RETRY_STATUSES:
             raise httpx.HTTPStatusError(f"{r.status_code}", request=r.request, response=r)
         return r

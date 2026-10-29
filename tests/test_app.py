@@ -14,7 +14,7 @@ from coffeedata.lake import Lake
 
 from .lakehelp import old_shot
 
-W = {"X-Requested-With": "test"}
+W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 
 
 class HeaderAuth:
@@ -29,6 +29,8 @@ class HeaderAuth:
 
 def setup(c: TestClient, headers: dict | None = None, grinder: str = "g1") -> None:
     h = W | (headers or {})
+    if headers and "x-test-user" in headers:
+        h["X-Expected-User"] = headers["x-test-user"]
     for body in (
         {
             "equipment_id": grinder,
@@ -169,7 +171,7 @@ def test_cache_is_seeded_from_the_lake(client, lake, monkeypatch):
 
 
 def test_users_see_and_change_only_their_own(client, lake):
-    bob = W | {"x-test-user": "bob"}
+    bob = W | {"x-test-user": "bob", "X-Expected-User": "bob"}
     client.post("/api/shots", json=shot(1), headers=W)
     assert client.post("/api/shots/s1/retract", headers=bob).status_code == 404
     assert client.post("/api/shots", json=shot(1, rating=1), headers=bob).status_code == 404  # no takeover

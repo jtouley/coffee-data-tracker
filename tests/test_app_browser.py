@@ -75,7 +75,7 @@ def test_app_in_a_browser(lake, tmp_path):
         Lake(str(tmp_path / "fresh-lake")), Sessions(_accounts(tmp_path / "fresh-users"), secure=False)
     )
     c = TestClient(app)
-    w = {"X-Requested-With": "test"}
+    w = {"X-Requested-With": "test", "X-Expected-User": "owner"}
     assert c.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=w).status_code == 200
     # A bag matched to a (one-row) catalog, with a few days of shots, so the screenshots look like real use. The
     # latest, two days ago, is what the saved screen compares with.

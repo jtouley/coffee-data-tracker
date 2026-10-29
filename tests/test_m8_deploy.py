@@ -53,7 +53,7 @@ def test_health_answers_on_a_path_googles_front_end_passes_through(app):  # noqa
 def test_signed_in_writes_only_reach_the_writers_own_data(lake):
     c = TestClient(create_app(lake, HeaderAuth()))
     setup(c)
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     # Maya can't log a shot with the owner's grinder, or retract the owner's shot.
     body = {"shot_id": "s1", "brewed_at": "2026-10-20T07:00:00Z", "grinder_id": "g1", "basket_id": "g1-basket",
             "dose_g": 18, "yield_g": 36, "time_s": 28, "grinder_setting": 11, "rating": 4}  # fmt: skip
