@@ -89,12 +89,13 @@ def test_overrides_accept_reject_and_pin_a_batch(lake, tmp_path):
         quality.add_override(lake, RID, "2026-11-02", "use_batch", "x", failed)
 
 
-def _baseline(lake, listed: float):
-    now = datetime(2026, 10, 20, tzinfo=UTC)
-    lake.write("builds", "builds/run_date=2026-10-19/build=b1.parquet", [
-        {"build_id": "b1", "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
-        {"build_id": "b1", "built_at": now, "kind": "node", "unique_id": "test.x", "status": "pass"},
-        {"build_id": "b1", "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": listed},
+def _baseline(lake, listed: float, build: str = "b1", day: int = 20):
+    """A passing build that listed `listed` coffees, built on 2026-10-<day>."""
+    now = datetime(2026, 10, day, tzinfo=UTC)
+    lake.write("builds", f"builds/run_date=2026-10-19/build={build}.parquet", [
+        {"build_id": build, "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
+        {"build_id": build, "built_at": now, "kind": "node", "unique_id": "test.x", "status": "pass"},
+        {"build_id": build, "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": listed},
     ])  # fmt: skip
 
 
@@ -116,6 +117,50 @@ def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
         {"build_id": "b2", "built_at": later, "kind": "metric", "unique_id": "listed_coffees", "value": 5.0},
     ])  # fmt: skip
     build(lake, tmp_path)  # compared with b1 (40), not the failed b2 (5)
+
+
+def test_an_accepted_volume_change_is_the_next_baseline(lake, tmp_path):
+    # A real drop from 100 to 40, let through with --accept-volume-change and served: the next week at 40 compares
+    # with 40 and passes, so one accept is enough.
+    run(lake, "2026-10-26", RID, FULL)  # lists 40
+    _baseline(lake, 100.0, "b0", day=10)
+    _baseline(lake, 40.0, "b1", day=11)  # the accepted build
+    build(lake, tmp_path, baseline_build="b1").close()
+    build(lake, tmp_path).close()  # nothing served yet: the newest passing build, b1
+
+
+def test_the_volume_check_compares_with_the_served_build(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)
+    _baseline(lake, 40.0, "b1", day=20)
+    for i in range(3):  # passing builds that were rolled back from: customers still get b1
+        _baseline(lake, 100.0, f"later{i}", day=21 + i)
+    build(lake, tmp_path, baseline_build="b1").close()  # 40 against b1's 40; the later builds don't count
+    r = build(lake, tmp_path, check=False)  # nothing served: the newest passing build, at 100
+    assert r.returncode != 0 and "catalog_volume_vs_last_build" in r.stdout
+
+
+def test_dbt_and_quality_builds_agree_on_which_builds_passed(lake, tmp_path):
+    run(lake, "2026-10-26", RID, FULL)
+    records = {  # build -> its (kind, status) rows
+        "passed": [("build", "pass"), ("node", "pass"), ("metric", None)],
+        "warned": [("build", "pass"), ("node", "warn")],
+        "failed": [("build", "fail"), ("node", "pass")],
+        "failed_test": [("build", "pass"), ("node", "fail")],
+        "errored_model": [("build", "pass"), ("node", "error")],
+        "no_verdict": [("node", "pass")],
+    }
+    for day, (b, rows) in enumerate(records.items(), start=10):
+        lake.write("builds", f"builds/run_date=2026-10-19/build={b}.parquet", [
+            {"build_id": b, "run_date": date(2026, 10, 19), "built_at": datetime(2026, 10, day, tzinfo=UTC),
+             "kind": kind, "unique_id": f"{kind}.{i}", "status": status} for i, (kind, status) in enumerate(rows)
+        ])  # fmt: skip
+    con = build(lake, tmp_path)
+    in_dbt = con.execute(
+        "select build_id, run_date::varchar, passed from stg_builds order by built_at, build_id"
+    )
+    assert in_dbt.fetchall() == quality.builds(lake)
+    assert [b for b, _, ok in quality.builds(lake) if ok] == ["passed", "warned"]
+    con.close()
 
 
 def test_freshness_fails_on_a_stale_catalog(lake, tmp_path):
@@ -424,6 +469,15 @@ def test_volume_metrics_count_the_current_catalog(lake, tmp_path):
     con = build(lake, tmp_path)
     metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
     assert metrics["listed_coffees"] == 10  # a back catalog appearing isn't a swing in the market
+
+
+def test_volume_metrics_leave_wholesale_out_like_the_site(lake, tmp_path):
+    # The volume check's baseline counts what customers see: a roaster's wholesale twins aren't more coffees.
+    wholesale = [product(f"W{i}", title=f"Wholesale - 5LB Coffee {i} Roast") for i in range(5)]
+    run(lake, "2026-10-26", RID, FULL[:10] + wholesale)
+    con = build(lake, tmp_path)
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert (metrics["listed_coffees"], metrics["in_stock_coffees"]) == (10, 10)
 
 
 def test_a_first_week_use_batch_that_does_not_pin_is_no_override(lake, tmp_path):

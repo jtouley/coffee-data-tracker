@@ -19,14 +19,11 @@ FIX = Path(__file__).parent / "fixtures"
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 
 
-def build(lake, tmp_path, check=True, **extra_vars):
-    db = tmp_path / "coffee.duckdb"
-    if db.exists():
-        db.unlink()
-    r = subprocess.run(
+def run_dbt(lake, tmp_path, *args, **extra_vars):
+    return subprocess.run(
         [
             "dbt",
-            "build",
+            *args,
             "--project-dir",
             "dbt",
             "--profiles-dir",
@@ -39,10 +36,18 @@ def build(lake, tmp_path, check=True, **extra_vars):
             str(tmp_path / "logs"),
         ],
         cwd=ROOT,
-        env=os.environ | {"COFFEEDATA_DB": str(db)},
+        env=os.environ | {"COFFEEDATA_DB": str(tmp_path / "coffee.duckdb")},
         capture_output=True,
         text=True,
     )
+
+
+def build(lake, tmp_path, check=True, **extra_vars):
+    db = tmp_path / "coffee.duckdb"
+    if db.exists():
+        db.unlink()
+    # Like the weekly build, without dbt's unit tests: test_dbt_unit_tests runs those.
+    r = run_dbt(lake, tmp_path, "build", "--exclude", "resource_type:unit_test", **extra_vars)
     if not check:
         return r
     assert r.returncode == 0, r.stdout[-4000:]
@@ -562,6 +567,35 @@ def test_states_are_the_fifty():
     assert len(site.STATES) == 50 and "DC" not in site.STATES and "PR" not in site.STATES
 
 
+def test_dbt_unit_tests(lake, tmp_path):
+    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule and each kind of price event. They read
+    hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
+    first."""
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    build(lake, tmp_path).close()
+    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
+    assert r.returncode == 0, r.stdout[-4000:]
+    assert "PASS=2 " in r.stdout
+
+
+def test_public_files_are_written_in_key_order(lake, tmp_path):
+    from coffeedata import public
+
+    for rid in ("onyxcoffeelab.com", "counterculturecoffee.com"):
+        run(lake, "2026-10-19", rid, [product("B", 18.0), product("A"), product("C")])
+        run(lake, "2026-10-26", rid, [product("C", 25.0), product("A", 22.0), product("D")])
+    build(lake, tmp_path).close()
+    first = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "one"))
+    public.export(tmp_path / "coffee.duckdb", str(tmp_path / "two"))
+    for t in public.PUBLIC_TABLES:
+        a, b = (tmp_path / d / f"{t}.parquet" for d in ("one", "two"))
+        assert a.read_bytes() == b.read_bytes(), t  # the same release, the same file
+    path = tmp_path / "one" / "public_price_event.parquet"
+    cur = duckdb.connect().execute(f"select run_date, coffee_id, variant_id, event from '{path}'")
+    events = cur.fetchall()
+    assert len(events) == first["tables"]["public_price_event"] > 4 and events == sorted(events)
+
+
 def _rows(con, table):
     return con.execute(f"select * from {table} order by all").fetchall()
 
@@ -641,6 +675,92 @@ def test_claudes_extraction_still_overrides_the_rules(lake, tmp_path):
         "natural",
         "llm",
     )
+
+
+def test_wholesale_twins_stay_in_the_data_but_out_of_what_people_browse(lake, tmp_path, monkeypatch):
+    from coffeedata import mcp_server, shots, site
+
+    rid = "onyxcoffeelab.com"  # in the test seed list, so its coffees reach the public tables
+    run(lake, "2026-10-19", rid, [product("OLD", title="Colombia Supremo")])
+    run(lake, "2026-10-26", rid, [
+        product("OLD", title="Colombia Supremo"),
+        product("GUJI", title="Ethiopia Guji"),
+        product("WGUJI", title="Wholesale - 5LB Ethiopia Guji"),  # the same coffee, sold to cafes
+    ])  # fmt: skip
+    con = build(lake, tmp_path)
+    wholesale = dict(
+        con.execute("select split_part(coffee_id, ':', 2), is_wholesale from public_coffee").fetchall()
+    )
+    assert wholesale == {"OLD": False, "GUJI": False, "WGUJI": True}  # kept, flagged
+    assert [r[0] for r in con.execute("select coffee_id from mart_new_arrivals").fetchall()] == [
+        f"{rid}:GUJI"
+    ]
+    assert (
+        con.execute("select sum(coffees) from mart_market where origin_country = 'Ethiopia'").fetchone()[0]
+        == 1
+    )
+    assert (
+        con.execute("select coffees_listed from dim_roaster where roaster_id = ?", [rid]).fetchone()[0] == 2
+    )
+    con.close()
+
+    site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
+    catalog = json.loads((tmp_path / "site" / "catalog" / "catalog.json").read_text())
+    titles = [r[catalog["columns"].index("title")] for r in catalog["rows"]]
+    assert "Wholesale - 5LB Ethiopia Guji" not in titles and "Ethiopia Guji" in titles
+
+    # The app's picker and Claude's search read the exported mart; neither offers the wholesale twin by default.
+    mart = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    lake.write_mart("dim_coffee", mart, "select * from dim_coffee")
+    mart.close()
+    shots._catalog_cache.clear()
+    retail = sorted(t for _, _, t, is_retail, _ in shots._catalog(lake) if is_retail)
+    assert retail == ["Colombia Supremo", "Ethiopia Guji"]
+    # Matching still sees the twin, so a bag that says wholesale gets the wholesale coffee_id (review #3). Any
+    # other bag is decided among retail coffees: the twin ties with its retail coffee, and mustn't make it unclear.
+    assert shots.match_bag(None, "Wholesale - 5LB Ethiopia Guji", lake)[0] == f"{rid}:WGUJI"
+    coffee_id, offered = shots.match_bag(None, "Ethiopia Guji", lake)
+    assert coffee_id == f"{rid}:GUJI" and f"{rid}:WGUJI" not in {m["coffee_id"] for m in offered}
+    assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == f"{rid}:GUJI"
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    search = getattr(mcp_server.search_coffees, "fn", mcp_server.search_coffees)
+    assert sorted(r["title"] for r in search()) == ["Colombia Supremo", "Ethiopia Guji"]
+    assert {r["title"]: r["is_wholesale"] for r in search(include_wholesale=True)} == {
+        "Colombia Supremo": False,
+        "Ethiopia Guji": False,
+        "Wholesale - 5LB Ethiopia Guji": True,
+    }
+
+
+def test_wholesale_twins_count_in_no_weekly_or_roaster_number(lake, tmp_path):
+    # Review #2 and #5: the week's price changes and removals, and the archived count, leave wholesale out too
+    # (and only wholesale: an event of a coffee dim_coffee no longer keeps still counts).
+    from coffeedata import site
+
+    rid = "onyxcoffeelab.com"
+    tagged = lambda pid, tags, **kw: product(pid, **kw) | {"tags": tags}  # noqa: E731
+    run(lake, "2026-10-19", rid, [
+        product("GUJI", title="Ethiopia Guji"),
+        product("WGUJI", title="Wholesale - 5LB Ethiopia Guji"),
+        product("WKEN", title="Wholesale - 5LB Kenya Kiambu"),
+        product("GONE"),
+    ])  # fmt: skip
+    run(lake, "2026-10-26", rid, [  # WKEN is gone
+        product("GONE", coffee=False),  # no longer coffee: out of dim_coffee, but its removal still counts
+        product("GUJI", price=22.0, title="Ethiopia Guji"),
+        product("WGUJI", price=99.0, title="Wholesale - 5LB Ethiopia Guji"),  # repriced
+        tagged("OLD", ["Archived"], available=False, title="Colombia Supremo"),
+        tagged("WOLD", ["Archived"], available=False, title="Wholesale - 5LB Colombia Supremo"),
+    ])  # fmt: skip
+    con = build(lake, tmp_path)
+    [archived] = con.execute(
+        "select coffees_archived from dim_roaster where roaster_id = ?", [rid]
+    ).fetchone()
+    assert archived == 1  # OLD; its wholesale twin WOLD isn't counted
+    con.close()
+    site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
+    landing = " ".join((tmp_path / "site" / "index.html").read_text().split())
+    assert "<b>1</b> price changes · <b>1</b> delisted" in landing
 
 
 def test_a_remote_root_is_read_only_for_folders_it_has(lake, tmp_path):

@@ -12,29 +12,24 @@ with run as (
     {% else %}
     -- A run with a manifest and no fetch yet (killed before its first chunk) is still the latest run.
     select max(run_date) as run_date from (
-        select run_date from {{ ref('stg_fetches') }}
+        select run_date from {{ ref('int_roaster_runs') }}
         union all
         select run_date from {{ lake('run_manifests') }} where roaster_id is not null
     )
     {% endif %}
 ),
-this_run as (select f.* from {{ ref('stg_fetches') }} f join run using (run_date)),
-started as (select min(fetched_at) as started_at from this_run),
+attempts as (select r.* from {{ ref('int_roaster_runs') }} r join run using (run_date)),
+started as (select min(first_at) as started_at from attempts),
 manifest as (
     select m.roaster_id, bool_or(m.mode = 'full') as full_run
     from {{ lake('run_manifests') }} m join run using (run_date)
     where m.roaster_id is not null
     group by m.roaster_id
 ),
-added as (
-    select roaster_id, min(added_at) as first_added
-    from {{ lake('registry') }} where roaster_id is not null group by roaster_id
-),
-attempts as (select roaster_id, bool_or(status = 'ok') as ok from this_run group by roaster_id),
 reconstructed as (
     select r.roaster_id
     from {{ ref('dim_roaster') }} r
-    left join added a using (roaster_id)
+    left join {{ ref('stg_registry') }} a using (roaster_id)
     cross join started
     where r.status in ('pending', 'active', 'no_coffee', 'no_catalog')
       and (a.first_added is null or a.first_added < coalesce(started.started_at, now()))

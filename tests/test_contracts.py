@@ -1,7 +1,7 @@
 """The ODCS contract (contracts/public-catalog.odcs.yaml) is the definition of the public tables; dbt enforces it.
 
 These tests fail when the two disagree, so a change to a public table starts in the contract: columns and types
-(dbt's enforced contract), required and key columns (not_null and unique tests), allowed values
+(dbt's enforced contract), required and key columns (not_null constraints and tests, unique tests), allowed values
 (accepted_values), the quality rules (each names the dbt test that enforces it) and the thresholds (dbt vars).
 Both the contract and the ODPS product file must also be valid against Bitol's published JSON schemas.
 """
@@ -59,12 +59,15 @@ def test_dbt_enforces_each_table_as_contracted(obj):
     assert dbt_cols == [(p["name"], p["physicalType"]) for p in obj["properties"]], "columns or types differ"
 
     tests = _tests(model["columns"])
+    constraints = {c["name"]: [k["type"] for k in c.get("constraints") or []] for c in model["columns"]}
     keys = sorted(
         (p for p in obj["properties"] if p.get("primaryKey")), key=lambda p: p["primaryKeyPosition"]
     )
     for p in obj["properties"]:
         if p.get("required"):
             assert "not_null" in tests[p["name"]], f"{p['name']} is required by the contract"
+        # A required column is also NOT NULL in the table, so DuckDB refuses a null while building it.
+        assert ("not_null" in constraints[p["name"]]) == bool(p.get("required")), p["name"]
         if p.get("unique"):
             assert "unique" in tests[p["name"]], f"{p['name']} is unique by the contract"
         if p.get("enum"):

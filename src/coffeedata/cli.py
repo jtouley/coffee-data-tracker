@@ -180,7 +180,8 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
 
 def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[bool, list[dict]]:
     """Build every model and seed, then run every test, so a failed check never stops a model from being built.
-    Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command)."""
+    Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command).
+    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`."""
     from . import registry, shots, verdict
 
     roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
@@ -201,7 +202,10 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
     )
     passed, results = True, []
     (DBT_TARGET / "manifest.json").unlink(missing_ok=True)
-    for step in (["build", "--exclude", "resource_type:test"], ["test"]):
+    for step in (
+        ["build", "--exclude", "resource_type:test", "resource_type:unit_test"],
+        ["test", "--exclude", "resource_type:unit_test"],
+    ):
         # A step that crashes before writing its results must not be recorded with the previous step's.
         (DBT_TARGET / "run_results.json").unlink(missing_ok=True)
         r = subprocess.run(

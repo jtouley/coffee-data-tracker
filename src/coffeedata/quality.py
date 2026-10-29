@@ -254,7 +254,8 @@ def latest_run(lake: Lake) -> str | None:
 
 
 def builds(lake: Lake) -> list[tuple[str, str, bool]]:
-    """(build_id, run_date, passed) for every build, oldest first (builds in the same second by build_id)."""
+    """(build_id, run_date, passed) for every build, oldest first (builds in the same second by build_id). Passed
+    is the rule of dbt's stg_builds, which the volume check reads (tests/test_quality.py checks the two agree)."""
     rows = (
         lake.connect()
         .execute(

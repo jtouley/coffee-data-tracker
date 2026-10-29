@@ -1,0 +1,76 @@
+# dbt unit tests: the suspect-run rule and each kind of price event, over hand-written rows shaped like the real lake
+# (a store that came back with under 40% of its products, catalogs that grew severalfold, bags listed without a
+# price) and on the rules' boundaries. Weekly builds skip them (`--exclude resource_type:unit_test`); `make test`
+# runs them (tests/test_dbt.py).
+unit_tests:
+  - name: suspect_run_boundaries
+    description: >-
+      Suspect means below suspect_drop_ratio (0.5) of the median of the last counted weeks, once that median is at
+      least suspect_min_products (20). No history is never suspect.
+    model: stg_run_quality
+    given:
+      - input: ref('stg_run_walk')
+        rows:
+          - {run_date: 2026-10-05, products: 0, history: "[]"}
+          - {run_date: 2026-10-06, products: 20, history: "[52]"}  # one counted week before it, as most have
+          - {run_date: 2026-10-07, products: 118, history: "[30]"}  # a catalog that grew: never suspect
+          - {run_date: 2026-10-12, products: 20, history: "[40, 40, 40, 40]"}  # exactly half: not below it
+          - {run_date: 2026-10-19, products: 19, history: "[40, 40, 40, 40]"}
+          - {run_date: 2026-10-26, products: 0, history: "[19, 19, 19, 19]"}  # too small a store to judge
+          - {run_date: 2026-11-02, products: 9, history: "[20, 20, 20, 20]"}  # the minimum median is enough
+          - {run_date: 2026-11-09, products: 17, history: "[10, 30, 40, 100]"}  # median 35, not the mean (45)
+          - {run_date: 2026-11-16, products: 18, history: "[10, 30, 40, 100]"}
+    expect:
+      rows:
+        - {run_date: 2026-10-05, baseline_products: null, suspect: false}
+        - {run_date: 2026-10-06, baseline_products: 52, suspect: true}
+        - {run_date: 2026-10-07, baseline_products: 30, suspect: false}
+        - {run_date: 2026-10-12, baseline_products: 40, suspect: false}
+        - {run_date: 2026-10-19, baseline_products: 40, suspect: true}
+        - {run_date: 2026-10-26, baseline_products: 19, suspect: false}
+        - {run_date: 2026-11-02, baseline_products: 20, suspect: true}
+        - {run_date: 2026-11-09, baseline_products: 35, suspect: true}
+        - {run_date: 2026-11-16, baseline_products: 35, suspect: false}
+
+  - name: price_event_types
+    description: >-
+      Over three counted runs: a new bag, a price change, an availability change, a bag gone from the next run
+      (removed) and back the run after (relisted), an unchanged bag (no event), and a bag first listed without a
+      price that then gets one.
+    model: fct_price_event
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true}]),
+              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true}]),
+              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false}]),
+              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
+              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
+              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
+              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
+              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true}]),
+              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true}])
+          ) t(coffee_id, roaster_id, run_date, input_hash, variants)
+          cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true}
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-05, prev_run: null, next_run: 2026-10-12}
+          - {roaster_id: r, run_date: 2026-10-12, prev_run: 2026-10-05, next_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-19, prev_run: 2026-10-12, next_run: null}
+    expect:
+      rows:
+        - {run_date: 2026-10-05, coffee_id: "r:A", event: new, price_usd: 20.0, previous_price_usd: null}
+        - {run_date: 2026-10-12, coffee_id: "r:A", event: price, price_usd: 22.0, previous_price_usd: 20.0}
+        - {run_date: 2026-10-19, coffee_id: "r:A", event: availability, price_usd: 22.0, previous_price_usd: 22.0}
+        - {run_date: 2026-10-05, coffee_id: "r:B", event: new, price_usd: 18.0, previous_price_usd: null}
+        - {run_date: 2026-10-12, coffee_id: "r:B", event: removed, price_usd: null, previous_price_usd: 18.0}
+        - {run_date: 2026-10-19, coffee_id: "r:B", event: relisted, price_usd: 18.0, previous_price_usd: 18.0}
+        - {run_date: 2026-10-05, coffee_id: "r:C", event: new, price_usd: 15.0, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:C", event: removed, price_usd: null, previous_price_usd: 15.0}
+        - {run_date: 2026-10-12, coffee_id: "r:D", event: new, price_usd: null, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:D", event: price, price_usd: 16.0, previous_price_usd: null}

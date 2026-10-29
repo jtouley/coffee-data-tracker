@@ -1,22 +1,17 @@
 -- A pipeline-wide break must not be published: listed coffees, in-stock coffees and roasters may move at most
 -- volume_tolerance from the release customers get now (var baseline_build; after a rollback that is not the newest
 -- passing build), or else the last build whose tests all passed. The first build has nothing to compare with.
-with b as (select * from {{ lake('builds') }} where build_id is not null),
--- A passing build, as quality.builds() defines it: a 'pass' verdict and no failed or errored node.
-passing as (
-    select build_id, max(built_at) as built_at
-    from b group by build_id
-    having bool_or(kind = 'build' and status = 'pass') and not bool_or(coalesce(status, '') in ('error', 'fail'))
-),
-last_build as (
+with last_build as (
     {% if var('baseline_build') %}
     select '{{ var("baseline_build") }}' as build_id
     {% else %}
-    select build_id from passing order by built_at desc limit 1
+    select build_id from {{ ref('stg_builds') }} where passed order by built_at desc, build_id desc limit 1
     {% endif %}
 ),
 previous as (
-    select unique_id as metric, value from b join last_build using (build_id) where kind = 'metric'
+    select unique_id as metric, value
+    from {{ lake('builds') }} join last_build using (build_id)
+    where kind = 'metric'
 )
 select p.metric, previous.value as previous_value, p.value as current_value
 from {{ ref('mart_build_profile') }} p

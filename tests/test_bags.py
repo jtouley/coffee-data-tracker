@@ -3,6 +3,7 @@ the upload route, and the Opus/Haiku comparison's scoring."""
 
 import io
 import json
+import time
 from datetime import date, timedelta
 from types import SimpleNamespace
 
@@ -152,8 +153,7 @@ def test_no_key_means_type_it(monkeypatch):
 
 @pytest.fixture
 def catalog(lake):
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('larkspur.com:1', 'Larkspur Roasting Co.', 'OR', 'Hambela Alaka', 'Ethiopia', 'Guji', 'washed', 6.47, true),
@@ -163,8 +163,7 @@ def catalog(lake):
     ) t(coffee_id, roaster_name, roaster_state, title, origin_country, origin_region, process, price_per_100g, in_stock)""")
     lake.write_mart("dim_coffee", con, "select *, ['bergamot', 'peach'] as tasting_notes from c")
     yield lake
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_the_roaster_on_the_bag_decides_between_same_named_coffees(catalog):
@@ -182,6 +181,117 @@ def test_an_unclear_coffee_name_offers_candidates(catalog):
 def test_no_roaster_falls_back_to_the_whole_catalog(catalog):
     assert shots.match_bag(None, "Geometry", catalog)[0] == "onyx.com:1"
     assert shots.match_bag("", "", catalog) == (None, [])
+
+
+def test_a_wholesale_bag_matches_its_wholesale_listing_but_twins_are_never_offered(lake):
+    # Review #3: only a bag that says wholesale is matched among, and offered, wholesale listings.
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true),
+        ('onyx.com:3', 'Onyx Coffee Lab', 'Kenya Kiambu', false),
+        ('onyx.com:4', 'Onyx Coffee Lab', 'Wholesale - 5LB Kenya Kiambu', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    try:
+        assert shots.match_bag("Onyx", "Wholesale - 5LB Ethiopia Guji", lake)[0] == "onyx.com:2"
+        assert shots.match_coffee("Onyx Wholesale 5LB Ethiopia Guji", lake)[0] == "onyx.com:2"
+        coffee_id, offered = shots.match_bag("Onyx", "Ethiopia Guji", lake)
+        assert coffee_id == "onyx.com:1"  # its wholesale twin is no rival
+        assert "onyx.com:2" not in {m["coffee_id"] for m in offered}
+        # The roaster only: pick from its retail coffees.
+        coffee_id, offered = shots.match_bag("Onyx", None, lake)
+        assert coffee_id is None and {m["coffee_id"] for m in offered} == {"onyx.com:1", "onyx.com:3"}
+        # A bag that says wholesale but isn't clear: its wholesale listings are among the options.
+        coffee_id, offered = shots.match_bag("Onyx", "Wholesale", lake)
+        assert coffee_id is None and {"onyx.com:2", "onyx.com:4"} <= {m["coffee_id"] for m in offered}
+    finally:
+        shots._catalog_cache.clear()
+
+
+def test_a_coffee_sold_only_as_wholesale_matches_a_bag_that_doesnt_say_so(lake):
+    # Re-review #1 and #3: retail is tried first, then the whole catalog. A 5LB cafe bag often says only the
+    # coffee's name, and some listings are flagged wholesale only by a tag, so their titles look retail.
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true),
+        ('onyx.com:5', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Sidama', true),
+        ('onyx.com:6', 'Onyx Coffee Lab', 'Colombia Huila', true),
+        ('ws.com:1', 'Wholesale Coffee Co', 'Ethiopia Guji', false),
+        ('ws.com:2', 'Wholesale Coffee Co', 'Ethiopia Guji 5LB', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    try:
+        assert shots.match_bag("Onyx", "Ethiopia Sidama", lake)[0] == "onyx.com:5"  # wholesale only
+        assert shots.match_coffee("Onyx Ethiopia Sidama", lake)[0] == "onyx.com:5"
+        assert shots.match_bag("Onyx", "Colombia Huila", lake)[0] == "onyx.com:6"  # flagged by a tag only
+        assert shots.match_bag("Onyx", "Ethiopia Guji", lake)[0] == "onyx.com:1"  # retail still wins the tie
+        assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == "onyx.com:1"
+        # A roaster whose name reads as wholesale doesn't make its bags wholesale.
+        assert shots.match_bag("Wholesale Coffee Co", "Ethiopia Guji", lake)[0] == "ws.com:1"
+        # Unclear: the wholesale one that outscores the retail candidates is offered, best first.
+        coffee_id, offered = shots.match_bag("Onyx", "Sidama", lake, min_score=101)
+        assert coffee_id is None and offered[0]["coffee_id"] == "onyx.com:5"
+    finally:
+        shots._catalog_cache.clear()
+
+
+def test_a_wholesale_listing_that_outscores_the_retail_pick_makes_the_match_unclear(lake):
+    # Re-review at 6cd500b, #1: a tag-only wholesale listing titled exactly as the bag reads (100) against a retail
+    # "Ethiopia Sidama Natural" (97). Retail first used to return the 97 confidently and never offer the 100.
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Sidama Natural', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Ethiopia Sidama', true),
+        ('onyx.com:3', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:4', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    try:
+        for coffee_id, offered in (
+            shots.match_bag("Onyx", "Ethiopia Sidama", lake),
+            shots.match_coffee("Onyx Ethiopia Sidama", lake),
+        ):
+            assert coffee_id is None
+            assert [m["coffee_id"] for m in offered][:2] == ["onyx.com:2", "onyx.com:1"]  # both, best first
+        # A twin that only adds words to its retail coffee's title still loses to it.
+        assert shots.match_bag("Onyx", "Ethiopia Guji", lake)[0] == "onyx.com:3"
+        assert shots.match_coffee("Onyx Ethiopia Guji", lake)[0] == "onyx.com:3"
+    finally:
+        shots._catalog_cache.clear()
+
+
+def test_a_failed_catalog_read_is_retried_after_a_minute_not_trusted_for_the_hour(lake, monkeypatch):
+    # Re-review #2: a failed read used to stand for the hour, and MCP search then showed wholesale as retail.
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('onyx.com:1', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('onyx.com:2', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    connect = Lake.connect
+
+    def down(self, *a, **k):
+        raise OSError("HF is down")
+
+    try:
+        monkeypatch.setattr(Lake, "connect", down)
+        assert shots._catalog(lake) == []
+        with pytest.raises(RuntimeError):
+            shots.mart_columns(lake)  # MCP search fails for now rather than quietly dropping the filter
+        monkeypatch.setattr(Lake, "connect", connect)
+        assert shots._catalog(lake) == []  # retried after a minute, not on every call
+        now = time.monotonic()
+        monkeypatch.setattr(shots.time, "monotonic", lambda: now + shots.FAILED_READ_TTL_S + 1)
+        assert {cid for cid, _, _, retail, _ in shots._catalog(lake) if not retail} == {"onyx.com:2"}
+        assert "is_wholesale" in shots.mart_columns(lake)
+    finally:
+        shots._catalog_cache.clear()
 
 
 # --- the route -----------------------------------------------------------------------------------------
@@ -339,9 +449,7 @@ def test_camera_is_allowed_only_on_new_bag(catalog, tmp_path):
 
 
 def test_comparison_scores_and_picks_by_the_rule(catalog):
-    case = bag_read.Case(
-        "b1", "larkspur.com:1", "Larkspur Roasting Co.", "Hambela Alaka", "2026-10-18", b"jpeg"
-    )
+    case = bag_read.Case("b1", "larkspur.com:1", "Larkspur Roasting Co.", "Hambela Alaka", ROASTED, b"jpeg")
 
     def reader(jpeg_, model):
         if model == labels.OPUS:
@@ -407,8 +515,7 @@ def test_a_read_roast_date_with_the_wrong_year_takes_the_latest_past_one(read, t
 def test_one_farms_lots_show_their_process_and_status_and_the_current_one_first(lake, tmp_path):
     """The owner's bag, Counter Culture's "Finca El Puente - Honey Processed": the catalog row has no country, and
     the card showed "Origin: honey"; the past "Gesha Variety" lot then looked like the right one."""
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('cc:honey', 'Counter Culture Coffee', 'NC', 'Finca El Puente - Honey Processed', null, null, 'honey', true, 'available'),
@@ -425,14 +532,12 @@ def test_one_farms_lots_show_their_process_and_status_and_the_current_one_first(
     assert by_id["cc:gesha"]["origin"] == "Honduras, Marcala" and by_id["cc:gesha"]["past"] is True
     assert by_id["cc:anaerobic"]["origin"] == "Honduras, anaerobic"
     assert r["candidates"][0]["coffee_id"] == "cc:honey"  # tied on the name: what's sold now comes first
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     """The owner's fix for a bag saved as the wrong lot: Edit bag with the right name looks it up again."""
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true),
@@ -453,15 +558,13 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
         "match_score": None,
     }
     assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_the_lot_sold_now_survives_the_cut_to_three(lake):
     """Counter Culture's five El Puente lots as in the live catalog: four tie at 97 under the plain (archived)
     "Finca El Puente". Sorted by name, the cut to 3 dropped the one lot still sold."""
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute("""create table c as select * from (values
         ('cc:plain', 'Counter Culture Coffee', 'Finca El Puente', false, 'archived'),
@@ -476,22 +579,19 @@ def test_the_lot_sold_now_survives_the_cut_to_three(lake):
     assert [m["coffee_id"] for m in matches][:2] == ["cc:plain", "cc:honey"]  # then a past lot, by name
     # The roaster read but not the coffee: its lots, the one sold now first.
     assert shots.match_bag("Counter Culture", None, lake)[1][0]["coffee_id"] == "cc:honey"
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_a_catalog_without_stock_columns_still_matches(lake):
     """An export from before catalog_status: every lot ranks the same, matching works as before."""
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
     con = lake.connect()
     con.execute(
         "create table c as select * from (values ('x:1', 'Onyx Coffee Lab', 'Geometry')) t(coffee_id, roaster_name, title)"
     )
     lake.write_mart("dim_coffee", con, "select * from c")
     assert shots.match_bag("Onyx", "Geometry", lake)[0] == "x:1"
-    shots._index_cache.clear()
-    shots._rows_cache.clear()
+    shots._catalog_cache.clear()
 
 
 def test_two_uploads_of_one_photo_at_once_read_it_once(catalog, tmp_path):
