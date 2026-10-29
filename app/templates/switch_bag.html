@@ -7,7 +7,7 @@
   <p class="body">Choose the open bag you’re pulling now.</p>
   <div class="rows mt16">
     {% for l in lines %}
-    <a class="bagrow" href="/bag/{{ l.bag.bag_id }}/use"{% if selected and selected.bag_id == l.bag.bag_id %} aria-current="true"{% endif %}>
+    <a class="bagrow" href="/bag/{{ l.bag.bag_id }}/use" data-select-bag="{{ l.bag.bag_id }}"{% if selected and selected.bag_id == l.bag.bag_id %} aria-current="true"{% endif %}>
       {% if l.bag.photo_id %}<img class="thumb" src="/photos/{{ l.bag.photo_id }}" alt="" width="56" height="56" loading="lazy" decoding="async">{% endif %}
       <span class="grow"><span class="n">{{ l.name }}</span><span class="meta">{{ l.facts }}{% if selected and selected.bag_id == l.bag.bag_id %} · on the grinder{% endif %}</span></span>
       {{ chevron() }}

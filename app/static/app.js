@@ -11,6 +11,20 @@ document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions
 
 const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
+// Cached Today and Log pages contain a specific bag. Never reuse them after a selection changes.
+async function clearBagPages() {
+  if (!("caches" in window)) return;
+  const cache = await caches.open("pages");
+  await Promise.all([cache.delete("/"), cache.delete("/log")]);
+}
+function rememberBag(id) {
+  try { localStorage.setItem(`selected-bag:${ME}`, id); } catch { /* storage is optional */ }
+}
+document.addEventListener("click", (event) => {
+  const link = event.target.closest("[data-select-bag]");
+  if (link) rememberBag(link.dataset.selectBag);
+});
+
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
   r.onupgradeneeded = () => r.result.createObjectStore("outbox", { keyPath: "key" });
@@ -63,6 +77,20 @@ async function deliverOnce(entry) {
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
+    if (entry.url === "/api/bags" && entry.body?.finished_on) {
+      try {
+        if (localStorage.getItem(`selected-bag:${ME}`) === entry.body.bag_id) {
+          localStorage.removeItem(`selected-bag:${ME}`);
+          await clearBagPages();
+        }
+      } catch { /* storage is optional */ }
+    }
+    if (entry.selectBag) {
+      const selected = await fetch(`/bag/${encodeURIComponent(entry.selectBag)}/use`);
+      if (!selected.ok) throw new Error("Could not select the bag yet.");
+      await clearBagPages();
+      rememberBag(entry.selectBag);
+    }
     await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
   }
@@ -80,8 +108,8 @@ async function deliverOnce(entry) {
   throw new Rejected(reason);
 }
 
-async function send(key, url, body, blob = null) {
-  const entry = { key, url, body, blob, at: Date.now(), user: ME };
+async function send(key, url, body, blob = null, selectBag = null) {
+  const entry = { key, url, body, blob, selectBag, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -369,6 +397,11 @@ function logShot(form) {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    let selected = null;
+    try { selected = localStorage.getItem(`selected-bag:${ME}`); } catch { /* storage is optional */ }
+    if (!p.correct && selected && selected !== p.bag_id) {
+      return hint(form, "The coffee changed. Reopen Log shot to continue.");
+    }
     if (started !== null) stopTimer();
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
@@ -635,8 +668,8 @@ function newBag(root) {
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     const name = body.coffee_freetext;
     try {
-      await send(`bag:${body.bag_id}`, "/api/bags", body);
-      go(`/bag/${encodeURIComponent(body.bag_id)}/use?next=log`, `Bag saved: ${name}`); // on to the first shot of it
+      await send(`bag:${body.bag_id}`, "/api/bags", body, null, body.bag_id);
+      go("/log", `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
       // bag on it, so it isn't where to go until this one syncs.
