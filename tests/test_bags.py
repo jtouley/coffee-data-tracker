@@ -339,9 +339,7 @@ def test_camera_is_allowed_only_on_new_bag(catalog, tmp_path):
 
 
 def test_comparison_scores_and_picks_by_the_rule(catalog):
-    case = bag_read.Case(
-        "b1", "larkspur.com:1", "Larkspur Roasting Co.", "Hambela Alaka", "2026-10-18", b"jpeg"
-    )
+    case = bag_read.Case("b1", "larkspur.com:1", "Larkspur Roasting Co.", "Hambela Alaka", ROASTED, b"jpeg")
 
     def reader(jpeg_, model):
         if model == labels.OPUS:
