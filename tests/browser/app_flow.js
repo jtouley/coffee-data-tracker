@@ -159,6 +159,17 @@ async function newPage(browser, errors) {
     await page.getByRole("link", { name: "Edit bag" }).click();
     await page.waitForURL(`${base}/bag/bag1/edit?from=today`);
     await shoot(page, "bag-edit");
+    // Searching the catalog for a coffee it doesn't have says so, rather than offering unrelated coffees.
+    await page.getByRole("button", { name: "Search catalog" }).click();
+    await page.fill("#catalog-query", "zzzzqq");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForFunction(() => document.querySelector("[data-search-status]").textContent !== "Searching the catalog…");
+    assert.equal(await page.textContent("[data-search-status]"), "No coffees found. Try another search.");
+    assert.equal(await page.locator("[data-search-results] .pickrow").count(), 0);
+    await page.fill("#catalog-query", "Hambela");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForSelector("[data-search-results] .pickrow");
+    assert.equal(await page.textContent("[data-search-status]"), "Choose the coffee on your bag.");
     await page.fill("#roast_date", iso(5));
     await page.getByRole("button", { name: "Save bag" }).click();
     assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");

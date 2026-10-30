@@ -864,12 +864,15 @@ def create_app(
         query = q.strip()
         if len(query) < 2:
             return {"coffees": []}
+        unavailable = "The catalog isn’t available right now. Try again shortly."
         try:
-            shots.mart_columns(lake)  # Fail closed if the catalog could not be read.
-            candidates = shots.fuzzy_match_coffee(query, limit=12, lake=lake)
+            candidates = shots.search_catalog(query, limit=12, lake=lake)
         except RuntimeError:
-            raise HTTPException(503, "The catalog is unavailable. Try again when you’re online.") from None
-        return {"coffees": [d for m in candidates if (d := describe(m["coffee_id"]))]}
+            raise HTTPException(503, unavailable) from None
+        coffees = [describe(m["coffee_id"]) for m in candidates]
+        if None in coffees:  # in the catalog's index, but its facts couldn't be read
+            raise HTTPException(503, unavailable)
+        return {"coffees": coffees}
 
     @app.post("/api/photos/{photo_id}")
     async def post_photo(photo_id: str, request: Request, me: Writer) -> dict:

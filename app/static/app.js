@@ -591,7 +591,7 @@ function bagEdit(form) {
   form.coffee_freetext.addEventListener("input", () => {
     selected = null;
     match.textContent = form.coffee_freetext.value.trim() === (rec.coffee_freetext || "").trim()
-      ? (rec.coffee_id ? "The existing catalog link will be kept." : "Not linked to the catalog")
+      ? (rec.coffee_id ? "The existing catalog match will be kept." : "Not matched to the catalog")
       : "The name will be matched when you save, unless you select a catalog result.";
   });
   form.querySelector("[data-search-submit]").addEventListener("click", async () => {
@@ -602,6 +602,10 @@ function bagEdit(form) {
     status.textContent = "Searching the catalog…";
     try {
       const response = await fetch(`/api/coffees/search?q=${encodeURIComponent(term)}`);
+      if (response.status === 503) {
+        if (id === request) status.textContent = "The catalog isn’t available right now. Try again shortly.";
+        return;
+      }
       if (!response.ok) throw new Error();
       const data = await response.json();
       if (id !== request) return;
@@ -622,7 +626,7 @@ function bagEdit(form) {
           request++;
           selected = coffee;
           form.coffee_freetext.value = coffee.title;
-          match.textContent = `Selected: ${[coffee.roaster, coffee.title].filter(Boolean).join(" · ")}. Save the bag to link it.`;
+          match.textContent = `Selected: ${[coffee.roaster, coffee.title].filter(Boolean).join(" · ")}. Save the bag to match it.`;
           search.hidden = true;
           results.replaceChildren();
           status.textContent = "";

@@ -7,7 +7,7 @@
   <form class="fill" id="bagedit" data-next="{{ back[0] }}" novalidate>
     <label class="flabel" for="coffee">Roaster and coffee</label>
     <input class="input" id="coffee" name="coffee_freetext" autocomplete="off" value="{{ bag.coffee_freetext or '' }}" required>
-    <p class="meta mt8" data-match>{% if bag.coffee_id %}Linked to the catalog: {{ name }}{% else %}Not linked to the catalog{% endif %}</p>
+    <p class="meta mt8" data-match>{% if bag.coffee_id %}Matched to the catalog: {{ name }}{% else %}Not matched to the catalog{% endif %}</p>
     <button class="btn text start" type="button" data-search-open>Search catalog</button>
     <div data-search hidden>
       <label class="flabel" for="catalog-query">Search by roaster or coffee</label>
