@@ -51,12 +51,13 @@ async function page(request) {
   const url = new URL(request.url);
   const keep = !url.search && KEEP.some((re) => re.test(url.pathname));
   try {
-    // A selected bag changes both pages. A redirect response is not cached, so remove the old copies first.
-    if (/^\/bag\/[\w-]+\/use$/.test(url.pathname)) {
+    const response = await fetch(request);
+    // A selected bag changes both pages, so their kept copies go, but only once the switch succeeded (a redirect,
+    // opaque to a navigation): offline or refused (a bag finished on another phone), the old copies still open.
+    if (/^\/bag\/[\w-]+\/use$/.test(url.pathname) && (response.ok || response.type === "opaqueredirect")) {
       const pages = await caches.open(PAGES);
       await Promise.all([pages.delete("/"), pages.delete("/log")]);
     }
-    const response = await fetch(request);
     // Only a finished, signed-in page is kept: a redirect (to sign-in) or an error isn't.
     if (keep && response.ok && !response.redirected) {
       const copy = response.clone();

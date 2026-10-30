@@ -366,6 +366,20 @@ async function newPage(browser, errors) {
       };
     }), null, { timeout: 15000, polling: 250 });
 
+    // Switching bags offline fails, and the kept Today and Log shot pages still open afterwards.
+    await page.goto(`${base}/log`);
+    await page.goto(`${base}/`);
+    await page.goto(`${base}/bags/switch`);
+    await page.context().setOffline(true);
+    await page.locator("a.bagrow").first().click();
+    await page.waitForURL(/\/bag\/[\w-]+\/use$/);
+    assert.match(await page.textContent("h1"), /No connection/);
+    await page.goto(`${base}/log`);
+    assert.equal(await page.isVisible("#shot"), true);
+    await page.goto(`${base}/`);
+    assert.doesNotMatch(await page.textContent("h1"), /No connection/);
+    await page.context().setOffline(false);
+
     // A date read off the label with the year wrong moves to the latest past one, and asks once before saving.
     await page.goto(`${base}/bag/new`);
     await page.setInputFiles("#photo", bagPhoto);

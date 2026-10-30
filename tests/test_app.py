@@ -389,7 +389,7 @@ def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selecte
     r = client.post("/api/shots", json=shot(1, bag_id="bag1", coffee_freetext="Other coffee"), headers=W)
     assert r.status_code == 200 and r.json()["written"]
     s1 = store.shot("owner", "s1")
-    assert (s1.bag_id, s1.coffee_freetext) == ("bag1", "Onyx Geometry")
+    assert (s1.bag_id, s1.coffee_freetext, str(s1.roast_date)) == ("bag1", "Onyx Geometry", "2026-10-18")
     bag_a, bag_b = store.bag("owner", "bag1"), store.bag("owner", "bagB")
     assert [s.shot_id for s in store.bag_shots("owner", bag_a, None)] == ["s1"]
     assert [s.shot_id for s in store.bag_shots("owner", bag_b, None)] == ["s2"]

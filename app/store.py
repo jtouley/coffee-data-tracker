@@ -380,7 +380,10 @@ class Store:
         if prev:
             # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
             shot = shot.model_copy(
-                update={"source": prev.item.source, "roast_date": shot.roast_date or prev.item.roast_date}
+                update={
+                    "source": prev.item.source,
+                    "roast_date": shot.roast_date or (bag.roast_date if moved else prev.item.roast_date),
+                }
             )
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend
