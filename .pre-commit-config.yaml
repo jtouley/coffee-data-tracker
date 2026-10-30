@@ -1,7 +1,6 @@
 # Install once with `make hooks`. CI runs the same hooks on every file.
 # Recorded storefront responses stay byte-for-byte as captured.
-# .context/ holds pasted review notes, kept as written.
-exclude: ^(tests/fixtures/|eval/sealed/|contracts/schemas/|\.context/)
+exclude: ^(tests/fixtures/|eval/sealed/|contracts/schemas/)
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
