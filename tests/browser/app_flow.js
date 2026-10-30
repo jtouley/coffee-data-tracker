@@ -132,6 +132,10 @@ async function newPage(browser, errors) {
     await page.locator('[data-rating] [data-v="5"]').click();
     await shoot(page, "log-shot");
 
+    // A bag remembered on this phone that the server no longer selects (finished on another device, a cleared
+    // cookie, a failed switch) never blocks the save: the server's bag wins.
+    await page.evaluate(() => localStorage.setItem(`selected-bag:${document.querySelector('meta[name="user"]').content}`,
+      JSON.stringify({ id: "finished-elsewhere", at: Date.now() })));
     // A slow save (the lake commit) shows at once: the button reads Saving… until the Saved page.
     let release;
     const slowSave = new Promise((ok) => { release = ok; });
@@ -382,6 +386,20 @@ async function newPage(browser, errors) {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
       };
     }), null, { timeout: 15000, polling: 250 });
+
+    // Switching bags offline fails, and the kept Today and Log shot pages still open afterwards.
+    await page.goto(`${base}/log`);
+    await page.goto(`${base}/`);
+    await page.goto(`${base}/bags/switch`);
+    await page.context().setOffline(true);
+    await page.locator("a.bagrow").first().click();
+    await page.waitForURL(/\/bag\/[\w-]+\/use$/);
+    assert.match(await page.textContent("h1"), /No connection/);
+    await page.goto(`${base}/log`);
+    assert.equal(await page.isVisible("#shot"), true);
+    await page.goto(`${base}/`);
+    assert.doesNotMatch(await page.textContent("h1"), /No connection/);
+    await page.context().setOffline(false);
 
     // A date read off the label with the year wrong moves to the latest past one, and asks once before saving.
     await page.goto(`${base}/bag/new`);

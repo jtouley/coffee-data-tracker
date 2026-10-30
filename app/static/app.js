@@ -11,6 +11,36 @@ document.cookie = `tz=${encodeURIComponent(Intl.DateTimeFormat().resolvedOptions
 
 const ME = document.querySelector('meta[name="user"]')?.content ?? null;
 
+// Cached Today and Log pages contain a specific bag. Never reuse them after a selection changes.
+async function clearBagPages() {
+  if (!("caches" in window)) return;
+  const cache = await caches.open("pages");
+  await Promise.all([cache.delete("/"), cache.delete("/log")]);
+}
+function selectedBag() {
+  try {
+    const value = localStorage.getItem(`selected-bag:${ME}`);
+    if (!value) return null;
+    try { return JSON.parse(value); } catch { return { id: value, at: 0 }; }
+  } catch { return null; }
+}
+function rememberBag(id, at = Date.now()) {
+  try { localStorage.setItem(`selected-bag:${ME}`, JSON.stringify({ id, at })); } catch { /* storage is optional */ }
+}
+// Choosing a bag is remembered on this phone only once the server has accepted it: a failed /use (offline, a bag
+// finished elsewhere) leaves the old value, and the server's selection is what Log shot uses either way.
+document.addEventListener("click", async (event) => {
+  const link = event.target.closest("[data-select-bag]");
+  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  let r = null;
+  try { r = await fetch(link.href, { headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
+  if (!r || !r.ok) return location.assign(link.href);
+  rememberBag(link.dataset.selectBag);
+  await clearBagPages().catch(() => {});
+  location.assign(r.url);
+});
+
 const DB = new Promise((resolve, reject) => {
   const r = indexedDB.open("registry-coffee", 1);
   r.onupgradeneeded = () => r.result.createObjectStore("outbox", { keyPath: "key" });
@@ -66,6 +96,14 @@ async function deliverOnce(entry) {
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
+    if (entry.url === "/api/bags" && entry.body?.finished_on) {
+      try {
+        if (selectedBag()?.id === entry.body.bag_id) {
+          localStorage.removeItem(`selected-bag:${ME}`);
+          await clearBagPages();
+        }
+      } catch { /* storage is optional */ }
+    }
     await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
   }
@@ -708,6 +746,13 @@ function newBag(root) {
     const name = body.coffee_freetext;
     try {
       await send(`bag:${body.bag_id}`, "/api/bags", body);
+      // Saved online: it's the bag on the grinder now. A bag saved offline is picked with Switch once it syncs.
+      try {
+        if ((await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`)).ok) {
+          rememberBag(body.bag_id);
+          await clearBagPages();
+        }
+      } catch { /* the server's bag stays selected */ }
       go("/log", `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last

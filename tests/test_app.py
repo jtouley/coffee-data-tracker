@@ -1,5 +1,6 @@
 """The app over a synthetic local lake: prefill, save, undo, retries, the cache and per-user scoping."""
 
+import json
 import re
 from datetime import UTC, datetime, timedelta
 
@@ -407,3 +408,71 @@ def test_a_bag_stored_with_a_future_date_can_still_be_saved_unchanged(client, la
     assert client.post("/api/bags", json=same, headers=W).status_code == 200
     later = same | {"roast_date": (future + timedelta(days=1)).isoformat()}
     assert client.post("/api/bags", json=later, headers=W).status_code == 422
+
+
+def test_switch_open_bag_uses_its_own_shots_and_stays_selected(client):
+    client.post("/api/shots", json=shot(1, grinder_setting=12), headers=W)
+    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee"}, headers=W)
+    client.post("/api/shots", json=shot(2, bag_id="bag2", grinder_setting=20), headers=W)
+    assert "Switch coffee" in client.get("/").text
+    assert "Onyx Geometry" in client.get("/bags/switch").text
+    assert client.get("/bag/bag1/use", follow_redirects=False).status_code == 303
+    assert "Onyx Geometry" in client.get("/").text
+    p = prefill(client)
+    assert p["bag_id"] == "bag1" and p["grinder_setting"] == 12
+    client.get("/bag/bag2/use")
+    assert prefill(client)["bag_id"] == "bag2" and prefill(client)["grinder_setting"] == 20
+    assert client.get("/bag/bag1/use", headers={"x-test-user": "bob"}).status_code == 404
+    client.post(
+        "/api/bags",
+        json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"},
+        headers=W,
+    )
+    assert prefill(client)["bag_id"] == "bag1"
+    assert client.get("/bag/bag2/use").status_code == 404
+
+
+def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selected_one(client):
+    # Before bags could be switched, shots went to the newest bag (B) even when pulled from A.
+    client.post("/api/bags", json={"bag_id": "bagB", "coffee_freetext": "Other coffee"}, headers=W)
+    for i in (1, 2):
+        client.post("/api/shots", json=shot(i, bag_id="bagB", coffee_freetext="Other coffee"), headers=W)
+    client.get("/bag/bagB/use")
+    store = client.app.state.store
+    assert prefill(client)["bag_id"] == "bagB"
+
+    # The correct form lists the open bags with the shot's own one current; picking one only reloads the form.
+    log = client.get("/log?correct=s1").text
+    assert 'href="/log?correct=s1&amp;bag=bag1"' in log and "data-select-bag" not in log
+    assert 'href="/log?correct=s1&amp;bag=bagB" aria-current="true"' in log
+
+    moved = client.get("/log?correct=s1&bag=bag1")
+    assert "Onyx Geometry" in moved.text
+    form = json.loads(
+        re.search(r'<script id="prefill" type="application/json">(.*?)</script>', moved.text, re.S)[1]
+    )
+    assert (form["bag_id"], form["coffee_freetext"]) == ("bag1", "Onyx Geometry")
+    assert "selected_bag" not in moved.headers.get("set-cookie", "")
+
+    # Saved with the old coffee still in the body: the server takes the new bag's coffee.
+    r = client.post("/api/shots", json=shot(1, bag_id="bag1", coffee_freetext="Other coffee"), headers=W)
+    assert r.status_code == 200 and r.json()["written"]
+    s1 = store.shot("owner", "s1")
+    assert (s1.bag_id, s1.coffee_freetext, str(s1.roast_date)) == ("bag1", "Onyx Geometry", "2026-10-18")
+    bag_a, bag_b = store.bag("owner", "bag1"), store.bag("owner", "bagB")
+    assert [s.shot_id for s in store.bag_shots("owner", bag_a, None)] == ["s1"]
+    assert [s.shot_id for s in store.bag_shots("owner", bag_b, None)] == ["s2"]
+    assert [s.shot_id for s in store.coffee_shots("owner", bag_a)] == ["s1"]
+    assert [s.shot_id for s in store.coffee_shots("owner", bag_b)] == ["s2"]
+    assert "/shot/s1" in client.get("/coffee/bag1").text and "/shot/s1" not in client.get("/coffee/bagB").text
+    assert "/shot/s2" in client.get("/coffee/bagB").text
+    assert prefill(client)["bag_id"] == "bagB"  # the bag on the grinder didn't change
+
+    # Only the person's own bags.
+    assert client.get("/log?correct=s1&bag=nope").status_code == 404
+    assert client.post("/api/shots", json=shot(1, bag_id="nope"), headers=W).status_code == 404
+    bob = {"x-test-user": "bob"} | W
+    client.post("/api/bags", json={"bag_id": "bobs", "coffee_freetext": "Bob's"}, headers=bob)
+    assert client.get("/log?correct=s1&bag=bobs").status_code == 404
+    assert client.post("/api/shots", json=shot(1, bag_id="bobs"), headers=W).status_code == 404
+    assert store.shot("owner", "s1").bag_id == "bag1"

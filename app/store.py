@@ -226,12 +226,14 @@ class Store:
         grinder_id: str | None = None,
         basket_id: str | None = None,
         machine_id: str | None = None,
+        bag_id: str | None = None,
     ) -> dict:
         """What the Log shot form starts from: the last shot of the current bag, else of the same coffee.
         Time, taste and rating are never copied; the last ones are offered, not filled in. A grinder or basket
         picked from the chip replaces the last shot's; the grind then comes from this coffee's last shot on
         that grinder, since a setting means nothing on another grinder."""
-        bag = self.current_bag(user_id)
+        selected = self.bag(user_id, bag_id)
+        bag = selected if selected and not selected.finished_on else self.current_bag(user_id)
         mine = self.shots_of(user_id)
         last = None
         if bag:
@@ -366,15 +368,23 @@ class Store:
                 f"({lo:g} to {hi:g})."
             )
         bag = self.bag(user_id, shot.bag_id)
-        if bag and not shot.coffee_id and not shot.coffee_freetext:  # the bag says which coffee it is
+        if shot.bag_id and bag is None:
+            raise NotFound(shot.bag_id)
+        prev = self._owned(self.shots, shot.shot_id, user_id)
+        moved = prev is not None and bag is not None and prev.item.bag_id != bag.bag_id
+        if bag and (moved or (not shot.coffee_id and not shot.coffee_freetext)):
+            # The bag says which coffee it is; a correction that moves the shot to another bag takes that bag's.
             shot = shot.model_copy(
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
-        prev = self._owned(self.shots, shot.shot_id, user_id)
         if prev:
             # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
             shot = shot.model_copy(
-                update={"source": prev.item.source, "roast_date": shot.roast_date or prev.item.roast_date}
+                update={
+                    "source": prev.item.source,
+                    "roast_date": shot.roast_date
+                    or (bag.roast_date if moved and bag else prev.item.roast_date),
+                }
             )
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend

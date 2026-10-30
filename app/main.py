@@ -459,7 +459,7 @@ def create_app(
 
     @app.get("/", response_class=HTMLResponse)
     def today(request: Request, me: Me) -> HTMLResponse:
-        p = store.prefill(me.user_id)
+        p = store.prefill(me.user_id, bag_id=request.cookies.get("selected_bag"))
         bag, last = p["bag"], p["last"]
         if not bag and not last:
             return page(request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"])
@@ -470,6 +470,7 @@ def create_app(
         return page(
             request,
             "today.html",
+            open_bags=[b for b in store.bags_of(me.user_id) if not b.finished_on],
             p=p,
             name=name,
             facts=facts,
@@ -488,6 +489,29 @@ def create_app(
             ),
         )
 
+    @app.get("/bags/switch", response_class=HTMLResponse)
+    def switch_bag(request: Request, me: Me) -> HTMLResponse:
+        bags = [b for b in store.bags_of(me.user_id) if not b.finished_on]
+        selected = store.prefill(me.user_id, bag_id=request.cookies.get("selected_bag"))["bag"]
+        lines = [bag_line(b, []) for b in bags]
+        return page(request, "switch_bag.html", me=me, lines=lines, selected=selected)
+
+    @app.get("/bag/{bag_id}/use")
+    def use_bag(request: Request, bag_id: str, me: Me, next: str = "today") -> RedirectResponse:
+        bag = store.bag(me.user_id, bag_id)
+        if not bag or bag.finished_on:
+            raise HTTPException(404, "no such open bag")
+        response = RedirectResponse("/log" if next == "log" else "/", status_code=303)
+        response.set_cookie(
+            "selected_bag",
+            bag.bag_id,
+            max_age=365 * 24 * 3600,
+            httponly=True,
+            samesite="lax",
+            secure=request.url.scheme == "https",
+        )
+        return response
+
     @app.get("/log", response_class=HTMLResponse, response_model=None)
     def log_shot(
         request: Request,
@@ -496,8 +520,9 @@ def create_app(
         basket: str | None = None,
         machine: str | None = None,
         correct: str | None = None,
+        bag: str | None = None,
     ) -> HTMLResponse | RedirectResponse:
-        fixing = None
+        fixing = fixing_bag = None
         if (
             correct
         ):  # Correct: the same form, filled from that shot, saved under its id (a new record, latest wins)
@@ -506,7 +531,7 @@ def create_app(
             except NotFound:
                 raise HTTPException(404, "no such shot") from None
             grinder, basket, machine = fixing.grinder_id, fixing.basket_id, fixing.machine_id
-        p = store.prefill(me.user_id, grinder, basket, machine)
+        p = store.prefill(me.user_id, grinder, basket, machine, request.cookies.get("selected_bag"))
         if not p["grinder"] or not p["basket"]:
             return RedirectResponse("/setup", 303)
         if not p["bag"] and not p["last"]:
@@ -561,11 +586,31 @@ def create_app(
                     "notes": fixing.notes,
                 },
             }
-            bag = store.bag(me.user_id, fixing.bag_id)
-            name, _ = coffee_name(bag, fixing.coffee_id, fixing.coffee_freetext)
+            fixing_bag = store.bag(me.user_id, fixing.bag_id)
+            name, _ = coffee_name(fixing_bag, fixing.coffee_id, fixing.coffee_freetext)
+            if bag and bag != fixing.bag_id:  # moved to another bag: its coffee follows the bag
+                fixing_bag = store.bag(me.user_id, bag)
+                if fixing_bag is None:
+                    raise HTTPException(404, "no such bag")
+                form |= {
+                    "bag_id": bag,
+                    "coffee_id": fixing_bag.coffee_id,
+                    "coffee_freetext": fixing_bag.coffee_freetext,
+                }
+                name, _ = coffee_name(fixing_bag, fixing_bag.coffee_id, fixing_bag.coffee_freetext)
         z = tz(request)
         when = f"{views.date(fixing.brewed_at, z)}, {views.clock(fixing.brewed_at, z)}" if fixing else None
-        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when)
+        return page(
+            request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when,
+            fixing_bag=fixing_bag,
+            bag_lines=[
+                bag_line(b, [])
+                for b in store.bags_of(me.user_id)
+                if not b.finished_on or b.bag_id in (fixing.bag_id, fixing_bag and fixing_bag.bag_id)
+            ]
+            if fixing
+            else [],
+        )  # fmt: skip
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:
@@ -765,7 +810,7 @@ def create_app(
         machine: str | None = None,
     ) -> HTMLResponse:
         """The chip on Log shot: which grinder, machine and basket this shot is on."""
-        p = store.prefill(me.user_id, grinder, basket, machine)
+        p = store.prefill(me.user_id, grinder, basket, machine, request.cookies.get("selected_bag"))
         return page(
             request,
             "pick_gear.html",
