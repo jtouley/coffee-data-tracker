@@ -28,6 +28,9 @@ vars:
   # The build fails if listed coffees, in-stock coffees or roasters move more than this from the last passing
   # build (`coffeedata build --accept-volume-change` lets one build through and makes it the new baseline).
   volume_tolerance: 0.2
+  # Set by `coffeedata build --accept-volume-change`: this build skips the anomaly bands (below) and their history
+  # starts again at it (the volume check gets volume_tolerance 1e9 for it).
+  accept_volume_change: false
   # The build fails if the newest counted run is older than this many days before as_of_run (empty: no check).
   as_of_run: ""
   max_run_age_days: 8
@@ -38,8 +41,34 @@ vars:
   build_id: ""
   # Completeness of the as_of_run run (checked only when as_of_run is set): the share of expected roasters it
   # tried (a skipped roaster is a hole, not a failure) and the share it fetched successfully.
+  # The ok share counts only roasters that have a catalog (run_completeness has_catalog: no_catalog stores, which
+  # "succeed" with 0 products, are left out), and a success must bring back products. On the real runs: 2026-10-26
+  # (a full run that should pass) 96.5% of 1,923; 2026-10-28 (mass Shopify 429s) 50.0%.
   min_attempted_share: 1.0
   min_ok_share: 0.9
+  # Per adapter, over its roasters with a catalog, for adapters with at least min_adapter_roasters of them: one
+  # platform's total outage fails the run. 0.5 sits between the worst healthy adapter seen (Square Online 71.7%
+  # of 205 on 2026-10-26, Wilson 95% 65.2-77.4%) and the outages seen (Shopify 14.1% of 1,062 on 2026-10-28; a
+  # total outage is 0%). The smallest real adapter had 168 such roasters; under 20 one roaster moves the share 5+
+  # points, so those are left to run_ok_rate.
+  min_adapter_ok_share: 0.5
+  min_adapter_roasters: 20
+  # Anomaly bands (build_metrics_in_band) on the ok shares (overall and per adapter, low side only) and the three
+  # volume metrics (both sides): median +/- band_k x 1.4826 x MAD over the latest passing build of each of the last
+  # band_window runs since the last accepted change, or band_min_*_halfwidth when that is wider (share: absolute;
+  # volume: a fraction of the median). CUTOVER: a metric is banded only once it has band_min_builds passing builds
+  # in its window; until then only the fixed thresholds above apply, and they stay hard floors after. As of
+  # 2026-10-28 the lake has 1 passing real build, so the bands are not active on real data yet. band_k 1.5 is the
+  # owner's starting value, and the band test only warns (severity warn) until band_k is recalibrated on 8-12
+  # weeks of real history; only then may it block. 1.5 is tight (under a normal model, about 13% of normal builds fall outside on each
+  # two-sided metric), so expect to revisit it once the history exists. The minimum half-widths (for a flat
+  # history, MAD 0): 0.05 for a share, as at the smallest judged adapter (20 roasters) one roaster is 5 points;
+  # 5% of the median for a volume, as the one real change between full runs (2026-10-26 to 10-28) was about +2%.
+  band_k: 1.5
+  band_min_builds: 6
+  band_window: 12
+  band_min_share_halfwidth: 0.05
+  band_min_volume_halfwidth: 0.05
 
 models:
   coffeedata:
