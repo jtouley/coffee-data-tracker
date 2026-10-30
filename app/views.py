@@ -72,7 +72,7 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
     shown = shots[-8:] if sequence else shots
     times = [s.time_s for s in shown]
     ratios = [ratio(s) for s in shown]
-    tmin = min(18.0, min(times, default=18.0) - 2) if times and min(times) < 18 else 18.0
+    tmin = max(0.0, min(18.0, min(times, default=18.0) - 2)) if times and min(times) < 18 else 18.0
     tmax = max(38.0, max(times, default=38.0) + 2) if times and max(times) > 38 else 38.0
     rmin = max(0.0, min(1.6, min(ratios) - 0.1)) if ratios and min(ratios) < 1.6 else 1.6
     rmax = max(2.5, max(ratios) + 0.1) if ratios and max(ratios) > 2.5 else 2.5
@@ -87,13 +87,13 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
         "Shaded area is the traditional espresso reference: 25 to 32 seconds and 1:1.8 to 1:2.3"
     )
     out = [f'<svg class="target" viewBox="0 0 358 {height}" role="img" aria-label="{escape(aria)}">']
-    for t in ((20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax)):
+    for t in (20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax):
         out.append(
             f'<line class="tick" x1="{x(t):.1f}" x2="{x(t):.1f}" y1="{top}" y2="{bottom}"/>'
             f'<text x="{x(t):.1f}" y="{height - 6}" text-anchor="middle">{g(t)} s</text>'
         )
     default_ratio = (rmin, rmax) == (1.6, 2.5)
-    for r in ((1.8, 2.0, 2.2, 2.4) if default_ratio else _ticks(rmin, rmax)):
+    for r in (1.8, 2.0, 2.2, 2.4) if default_ratio else _ticks(rmin, rmax):
         out.append(
             f'<line class="tick" x1="{left}" x2="{right}" y1="{y(r):.1f}" y2="{y(r):.1f}"/>'
             f'<text x="{left - 6}" y="{y(r) + 4:.1f}" text-anchor="end">1:{f"{r:.1f}" if default_ratio else g(r)}</text>'

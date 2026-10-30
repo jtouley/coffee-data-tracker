@@ -132,7 +132,7 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
 
 
 def test_default_chart_keeps_one_decimal_on_ratio_ticks():
-    assert '>1:2.0</text>' in views.target_svg([])
+    assert ">1:2.0</text>" in views.target_svg([])
 
 
 def test_long_ratio_shots_are_shown_without_espresso_time_judgment(client):
