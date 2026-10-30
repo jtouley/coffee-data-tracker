@@ -1,6 +1,7 @@
 """The app over a synthetic local lake: prefill, save, undo, retries, the cache and per-user scoping."""
 
 import re
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from fastapi import Request
@@ -11,6 +12,7 @@ from app.auth import LocalOwner, User
 from app.main import create_app
 from coffeedata import shots
 from coffeedata.lake import Lake
+from coffeedata.models import Shot
 
 from .lakehelp import old_shot
 
@@ -133,6 +135,63 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
 
 def test_default_chart_keeps_one_decimal_on_ratio_ticks():
     assert ">1:2.0</text>" in views.target_svg([])
+
+
+def _bag(spec: list[tuple[float, float, str | None]]) -> list[Shot]:
+    t0 = datetime(2026, 10, 26, 7, 0, tzinfo=UTC)
+    return [
+        Shot(
+            shot_id=f"s{i}",
+            brewed_at=t0 + timedelta(days=i),
+            grinder_setting=11,
+            dose_g=18,
+            yield_g=y,
+            time_s=t,
+            rating=4,
+            taste=taste,
+        )
+        for i, (y, t, taste) in enumerate(spec)
+    ]
+
+
+@pytest.mark.parametrize(
+    "spec",
+    [
+        [
+            (36, 26, "sour"),
+            (36.4, 28, "balanced"),
+            (90, 16, "sour"),
+            (90, 18, "balanced"),
+            (90, 20, "balanced"),
+        ],
+        [(36, 28, "balanced"), (144, 20, "balanced")],
+        [(36 + i * 0.3, 24 + i, "balanced") for i in range(7)] + [(90, 18, "balanced")],
+        [(36, 24, "sour"), (36.5, 27, "balanced"), (36, 29, "balanced")],
+    ],
+)
+@pytest.mark.parametrize(("height", "joined"), [(150, True), (196, True), (196, False)])
+def test_reference_label_never_sits_on_a_mark_or_the_path(spec, height, joined):
+    svg = views.target_svg(_bag(spec), height, sequence=joined)
+    m = re.search(r'<text class="wl" x="([\d.]+)" y="([\d.]+)" text-anchor="(\w+)"', svg)
+    assert m, "the label is shown in every case here"
+    box = views.label_box(float(m[1]), float(m[2]), m[3])
+    marks = [
+        (float(a), float(b)) for a, b in re.findall(r'class="s-[a-z]+" c?x="([\d.]+)" c?y="([\d.]+)"', svg)
+    ]
+    assert len(marks) == len(spec[-8:])
+    for mx, my in marks:  # squares give their corner; allow for it
+        assert views._gap(box, (mx, my, mx + 9, my + 9)) >= 2
+    path = re.search(r'<polyline class="path" points="([^"]+)"', svg)
+    if path:
+        pts = [tuple(map(float, p.split(","))) for p in path[1].split()]
+        for a, b in zip(pts, pts[1:], strict=False):
+            assert views._seg_gap(box, a, b) >= 3
+
+
+def test_sequence_names_each_shots_ratio():
+    assert views.sequence(_bag([(36, 26, "sour"), (90, 16, None)])) == (
+        "This bag, in order: 1:2.0 in 26 s sour, 1:5.0 in 16 s."
+    )
 
 
 def test_long_ratio_shots_are_shown_without_espresso_time_judgment(client):
