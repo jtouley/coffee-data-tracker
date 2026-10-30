@@ -299,7 +299,7 @@ def _export_and_site(db: Path, out: str) -> None:
         cmd_export_public(argparse.Namespace(db=str(db), to=os.environ["PUBLIC_EXPORT_URL"]))
     # Snowflake is loaded by its own workflow step after the site is built, so a Snowflake problem (such as a
     # contract change that needs `load-snowflake --migrate`) never holds back the site.
-    cmd_site(argparse.Namespace(db=str(db), out=out))
+    cmd_site(argparse.Namespace(db=str(db), out=out, served=False))
 
 
 def cmd_build_diff(args: argparse.Namespace) -> None:
@@ -465,6 +465,17 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
 def cmd_site(args: argparse.Namespace) -> None:
     from . import site
 
+    # The release customers get now, read from the lake; nothing is written to it.
+    if args.served:
+        from . import quality
+
+        release = quality.served(Lake())
+        if release is None:
+            raise SystemExit(
+                "nothing is served yet: the site is built from the served release, which the first weekly run "
+                "whose checks pass creates (or `coffeedata rollback --to <build>`)"
+            )
+        quality.materialize(Lake(), release["build_id"], Path(args.db))
     print(site.build(Path(args.db), Path(args.out)))
 
 
@@ -637,6 +648,11 @@ def main(argv: list[str] | None = None) -> None:
         "--db", default=str(SERVED_DB), help="default: the served release, never an unchecked build"
     )
     st.add_argument("--out", default="build/site")
+    st.add_argument(
+        "--served",
+        action="store_true",
+        help="first fetch the served release from the lake into --db (read-only)",
+    )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 

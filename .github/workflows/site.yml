@@ -1,6 +1,7 @@
 # Rebuild and deploy the public site when its templates or site.py change on main, so a copy or layout change
-# doesn't wait for Monday's weekly run. It reads the lake (dbt build) but never publishes to it: the marts it
-# writes stay on the runner. Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a
+# doesn't wait for Monday's weekly run. It renders the release customers get now (the served release), never a
+# fresh build of the lake: that would re-run the release checks on the newest run, which may have failed them. It
+# reads the lake but never writes to it. Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a
 # queued site build there would cancel a queued shot log or weekly run. A newer push supersedes an older site build.
 name: site
 on:
@@ -34,8 +35,8 @@ jobs:
       - run: uv sync --locked
       - name: Check lake config
         run: test -n "$COFFEEDATA_LAKE" || { echo "Set the LAKE_URL repository variable (see README)"; exit 1; }
-      - name: Build the site from the lake
-        run: uv run coffeedata build && uv run coffeedata site
+      - name: Build the site from the served release
+        run: uv run coffeedata site --served
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         with: {path: build/site}
   deploy:
