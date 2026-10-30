@@ -135,8 +135,17 @@ async function newPage(browser, errors) {
     // cookie, a failed switch) never blocks the save: the server's bag wins.
     await page.evaluate(() => localStorage.setItem(`selected-bag:${document.querySelector('meta[name="user"]').content}`,
       JSON.stringify({ id: "finished-elsewhere", at: Date.now() })));
+    // A slow save (the lake commit) shows at once: the button reads Saving… until the Saved page.
+    let release;
+    const slowSave = new Promise((ok) => { release = ok; });
+    await page.route("**/api/shots", async (route) => { await slowSave; await route.continue(); });
     await page.getByRole("button", { name: "Save shot" }).click();
+    const busy = page.locator("[data-save]");
+    assert.equal(await busy.textContent(), "Saving…");
+    assert.equal(await busy.isDisabled(), true);
+    release();
     await page.waitForURL(/\/saved\/.+\?new=1$/);
+    await page.unroute("**/api/shots");
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);

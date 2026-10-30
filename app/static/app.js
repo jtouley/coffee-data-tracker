@@ -445,7 +445,9 @@ function logShot(form) {
       notes: $("notes").value.trim() || null,
     };
     for (const k of Object.keys(body)) if (body[k] == null) delete body[k];
+    const label = save.textContent;
     save.disabled = true;
+    save.textContent = "Saving…"; // the lake commit can take seconds: the tap shows at once
     try {
       await send(`shot:${body.shot_id}`, "/api/shots", body);
       tick(8);
@@ -456,6 +458,7 @@ function logShot(form) {
       if (err instanceof Rejected) {
         hint(form, err.message);
         save.disabled = false;
+        save.textContent = label;
         return;
       }
       tick(8);
