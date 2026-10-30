@@ -732,3 +732,44 @@ def test_a_photo_lock_goes_when_its_uploads_end(catalog, tmp_path, monkeypatch):
     c = TestClient(app, raise_server_exceptions=False)
     assert upload(c).status_code == 500
     assert app.state.photo_locks == {}
+
+
+@pytest.fixture
+def uncached():
+    """The catalog cache emptied before and after, even when the test fails."""
+    shots._catalog_cache.clear()
+    yield
+    shots._catalog_cache.clear()
+
+
+def test_a_coffee_crowded_by_shared_words_is_still_matched(lake, uncached):
+    """The owner's photo-matched "Finca El Puente - Gesha Variety", edited to "- Honey Processed". In the real
+    catalog (about 40k coffees) that matched nothing, with or without the roaster typed: hundreds of other
+    roasters' lots share a word with it, and they crowded it out of the candidates scored."""
+    con = lake.connect()
+    countries = ["Colombia", "Honduras", "Costa Rica", "Brazil", "Peru", "El Salvador", "Guatemala", "Panama"]
+    rows = [(f"r{i}:1", f"Roaster {i}", f"{countries[i % 8]} Honey Process", True) for i in range(400)]
+    rows += [
+        ("onyx:1", "Onyx Coffee Lab", "Geometry", True),
+        ("cc:honey", "Counter Culture Coffee", "Finca El Puente - Honey Processed", True),
+        ("cc:gesha", "Counter Culture Coffee", "Finca El Puente - Gesha Variety", False),
+        ("cc:plain", "Counter Culture Coffee", "Finca El Puente", False),
+    ]
+    con.execute("create table c (coffee_id varchar, roaster_name varchar, title varchar, in_stock boolean)")
+    con.executemany("insert into c values (?, ?, ?, ?)", rows)
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    bag = {"bag_id": "b1", "coffee_id": "cc:gesha", "coffee_freetext": "Finca El Puente - Gesha Variety"}
+    assert c.post("/api/bags", json=bag, headers=W).status_code == 200
+    edited = bag | {
+        "coffee_freetext": "Finca El Puente - Honey Processed",
+        "coffee_id": None,
+        "match_score": None,
+    }
+    assert c.post("/api/bags", json=edited, headers=W).json()["coffee_id"] == "cc:honey"
+    # The owner's workaround, typed with the roaster on a bag that had no match: the whole catalog finds it too.
+    typed = {"bag_id": "b2", "coffee_freetext": "Counter Culture Finca El Puente - Honey Processed"}
+    assert c.post("/api/bags", json=typed, headers=W).json()["coffee_id"] == "cc:honey"
+    # Text that names another roaster is matched across the catalog, as before.
+    other = edited | {"coffee_freetext": "Onyx Geometry", "coffee_id": None, "match_score": None}
+    assert c.post("/api/bags", json=other, headers=W).json()["coffee_id"] == "onyx:1"
