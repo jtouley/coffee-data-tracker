@@ -131,8 +131,17 @@ async function newPage(browser, errors) {
     await page.locator('[data-rating] [data-v="5"]').click();
     await shoot(page, "log-shot");
 
+    // A slow save (the lake commit) shows at once: the button reads Saving… until the Saved page.
+    let release;
+    const slowSave = new Promise((ok) => { release = ok; });
+    await page.route("**/api/shots", async (route) => { await slowSave; await route.continue(); });
     await page.getByRole("button", { name: "Save shot" }).click();
+    const busy = page.locator("[data-save]");
+    assert.equal(await busy.textContent(), "Saving…");
+    assert.equal(await busy.isDisabled(), true);
+    release();
     await page.waitForURL(/\/saved\/.+\?new=1$/);
+    await page.unroute("**/api/shots");
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
@@ -159,6 +168,17 @@ async function newPage(browser, errors) {
     await page.getByRole("link", { name: "Edit bag" }).click();
     await page.waitForURL(`${base}/bag/bag1/edit?from=today`);
     await shoot(page, "bag-edit");
+    // Searching the catalog for a coffee it doesn't have says so, rather than offering unrelated coffees.
+    await page.getByRole("button", { name: "Search catalog" }).click();
+    await page.fill("#catalog-query", "zzzzqq");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForFunction(() => document.querySelector("[data-search-status]").textContent !== "Searching the catalog…");
+    assert.equal(await page.textContent("[data-search-status]"), "No coffees found. Try another search.");
+    assert.equal(await page.locator("[data-search-results] .pickrow").count(), 0);
+    await page.fill("#catalog-query", "Hambela");
+    await page.getByRole("button", { name: "Search", exact: true }).click();
+    await page.waitForSelector("[data-search-results] .pickrow");
+    assert.equal(await page.textContent("[data-search-status]"), "Choose the coffee on your bag.");
     await page.fill("#roast_date", iso(5));
     await page.getByRole("button", { name: "Save bag" }).click();
     assert.equal(await page.textContent("#bagedit [data-hint]"), "That roast date is in the future. Check the year.");

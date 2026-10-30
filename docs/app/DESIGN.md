@@ -234,7 +234,8 @@ numeric keypad. A left-hand setting mirrors the steppers to the left edge.
 Starts empty: "Not timed · last 29 s". Start/Stop (120 wide) and Type (56) sit where the steppers
 are. While the timer runs, the numeral ticks once a second and the button reads Stop. Saving with no time changes
 the Save button to "Save with 29 s?"; a second tap saves with the last time, recorded as copied
-(`time_source` = `copied`) so it never counts as measured.
+(`time_source` = `copied`) so it never counts as measured. Once tapped, Save reads "Saving…" until the server
+replies (the shot is committed to the lake first, which can take seconds); a refusal puts the label back.
 
 #### Same as last
 
