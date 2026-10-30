@@ -101,12 +101,6 @@ async function deliverOnce(entry) {
         }
       } catch { /* storage is optional */ }
     }
-    if (entry.selectBag && (selectedBag()?.at ?? 0) <= entry.at) {
-      const selected = await fetch(`/bag/${encodeURIComponent(entry.selectBag)}/use`);
-      if (!selected.ok) throw new Error("Could not select the bag yet.");
-      await clearBagPages();
-      rememberBag(entry.selectBag, entry.at);
-    }
     await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
   }
@@ -124,8 +118,8 @@ async function deliverOnce(entry) {
   throw new Rejected(reason);
 }
 
-async function send(key, url, body, blob = null, selectBag = null) {
-  const entry = { key, url, body, blob, selectBag, at: Date.now(), user: ME };
+async function send(key, url, body, blob = null) {
+  const entry = { key, url, body, blob, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -679,7 +673,14 @@ function newBag(root) {
     if (read?.label?.weight_g && !body.weight_g) body.weight_g = read.label.weight_g;
     const name = body.coffee_freetext;
     try {
-      await send(`bag:${body.bag_id}`, "/api/bags", body, null, body.bag_id);
+      await send(`bag:${body.bag_id}`, "/api/bags", body);
+      // Saved online: it's the bag on the grinder now. A bag saved offline is picked with Switch once it syncs.
+      try {
+        if ((await fetch(`/bag/${encodeURIComponent(body.bag_id)}/use`)).ok) {
+          rememberBag(body.bag_id);
+          await clearBagPages();
+        }
+      } catch { /* the server's bag stays selected */ }
       go("/log", `Bag saved: ${name}`); // on to the first shot of it
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
