@@ -65,7 +65,7 @@ def sequence(shots: list[Shot]) -> str:
 
 
 def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: bool = True) -> str:
-    """Time across, ratio up, and the traditional espresso reference shaded. The axes expand to include all shown
+    """Time across, ratio up, and the 25–32 s, 1:1.8–2.3 window shaded. The axes expand to include all shown
     shots, numbered in order and joined oldest to newest, the newest ringed. With `sequence=False` (a coffee's page,
     many shots across bags) the marks are plain: neither numbered nor joined."""
     left, right, top, bottom = 32, 350, 8, height - 24
@@ -84,7 +84,7 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
         return top + (rmax - r) / (rmax - rmin) * (bottom - top)
 
     aria = (label + ". " if label else "Shots by time and ratio. ") + (
-        "Shaded area is the traditional espresso reference: 25 to 32 seconds and 1:1.8 to 1:2.3"
+        "Shaded area is the window: 25 to 32 seconds and 1:1.8 to 1:2.3"
     )
     out = [f'<svg class="target" viewBox="0 0 358 {height}" role="img" aria-label="{escape(aria)}">']
     for t in (20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax):
@@ -105,7 +105,7 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
         f'<line class="ax" x1="{left}" x2="{right}" y1="{bottom}" y2="{bottom}"/>'
     )
     pts = [(x(s.time_s), y(ratio(s)), s) for s in shown]
-    label_at = len(out)  # the reference's label goes under the marks, once its place is known
+    label_at = len(out)  # the window's label goes under the marks, once its place is known
     if sequence and len(pts) > 1:
         out.append(f'<polyline class="path" points="{" ".join(f"{px:.1f},{py:.1f}" for px, py, _ in pts)}"/>')
     placed: list[tuple[float, float, float, float]] = []  # label boxes so far: x0, y0, x1, y1
@@ -159,17 +159,17 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
     if spot:
         tx, ty, anchor = spot
         out.insert(
-            label_at, f'<text class="wl" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}">espresso</text>'
+            label_at, f'<text class="wl" x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}">window</text>'
         )
     out.append("</svg>")
     return "".join(out)
 
 
-_LABEL_W = 50  # "espresso" in the chart's 12 px semibold, with a little room
+_LABEL_W = 42  # "window" in the chart's 12 px semibold, with a little room
 
 
 def label_box(tx: float, ty: float, anchor: str) -> tuple[float, float, float, float]:
-    """The box the reference's label covers, from its text position and anchor."""
+    """The box the window's label covers, from its text position and anchor."""
     x0 = tx - _LABEL_W if anchor == "end" else tx
     return (x0, ty - 10, x0 + _LABEL_W, ty + 2)
 
@@ -181,7 +181,7 @@ def _label_spot(
     joined: bool,
     numbers: list[tuple[float, float, float, float]],
 ) -> tuple[float, float, str] | None:
-    """Where the reference's label goes: inside the box's lower-right corner when the box is tall enough, else just
+    """Where the window's label goes: inside the box's lower-right corner when the box is tall enough, else just
     outside it (above, below, right, left), in the first spot clear of every mark, the newest shot's ring, the path
     and the order numbers. None when no spot is clear; the label is then left out (the aria-label names it)."""
     wx0, wy0, wx1, wy1 = win

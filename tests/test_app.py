@@ -170,7 +170,7 @@ def _bag(spec: list[tuple[float, float, str | None]]) -> list[Shot]:
     ],
 )
 @pytest.mark.parametrize(("height", "joined"), [(150, True), (196, True), (196, False)])
-def test_reference_label_never_sits_on_a_mark_or_the_path(spec, height, joined):
+def test_window_label_never_sits_on_a_mark_or_the_path(spec, height, joined):
     svg = views.target_svg(_bag(spec), height, sequence=joined)
     m = re.search(r'<text class="wl" x="([\d.]+)" y="([\d.]+)" text-anchor="(\w+)"', svg)
     assert m, "the label is shown in every case here"
@@ -194,12 +194,12 @@ def test_sequence_names_each_shots_ratio():
     )
 
 
-def test_long_ratio_shots_are_shown_without_espresso_time_judgment(client):
+def test_long_ratio_shots_are_shown_without_time_judgment(client):
     client.post("/api/shots", json=shot(1, yield_g=54, time_s=15), headers=W)
     client.post("/api/shots", json=shot(2, yield_g=72, time_s=12), headers=W)
     for path in ("/", "/saved/s2", "/coffee/bag1"):
         page = client.get(path).text
-        assert "traditional espresso reference" in page
+        assert "Shaded area is the window" in page
         # Both times and both ratios must get distinct positions instead of being clamped together.
         marks = re.findall(r'<circle class="s-balanced" cx="([\d.]+)" cy="([\d.]+)"', page)
         assert len(marks) == 2 and marks[0][0] != marks[1][0] and marks[0][1] != marks[1][1]

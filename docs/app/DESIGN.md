@@ -64,7 +64,7 @@ All six came to the same handful of conclusions without seeing each other's work
 | Radius | 2–4 px (Rams); 10 px (site); 16–20 px | 8 px on controls and buttons, 6 px on photos, 14 px on the top of a sheet. Squarer than the soft-app default but less cold than the Rams recipe. |
 | Taste colours | traffic-light; brown ramp; slate-blue bitter | Citrus for sour, sage green for balanced, a plum for bitter. A brown ramp is clever but puts "balanced" on the accent colour, so the Save button and a tag would look alike. Red would read as an error. Plum stays clear of both and still reads as "too far". Each tag also has a mark: a hollow circle for sour, a filled circle for balanced, a square for bitter. |
 | Labels | sentence case (three); tracked uppercase (two) | Sentence case at 13 px. Tracked uppercase eyebrows are one of the tells the no-slop skill names, and they're harder to read half awake. |
-| Signature element | ratio bar; extraction gauge; dose-to-yield line; word-by-word tagline; none | The dial-in target: time across, ratio up, the traditional 25–32 s × 1:1.8–2.3 espresso range shaded as a reference, each shot of the bag as a mark, joined oldest to newest. It merges the ratio bar and the extraction gauge into the one picture that shows how a bag is dialing in, and it's real data, so it repeats on Today, the log screen, the saved screen and the coffee page. The word-by-word reveal is cut: it delays the one thing you want to read. |
+| Signature element | ratio bar; extraction gauge; dose-to-yield line; word-by-word tagline; none | The dial-in target: time across, ratio up, the 25–32 s × 1:1.8–2.3 window shaded, each shot of the bag as a mark, joined oldest to newest. It merges the ratio bar and the extraction gauge into the one picture that shows how a bag is dialing in, and it's real data, so it repeats on Today, the log screen, the saved screen and the coffee page. The word-by-word reveal is cut: it delays the one thing you want to read. |
 | Shot form layout | chips select one big active value (Owl); 2×2 grid plus a scrub strip (MengTo); stacked rows (Krehel, Rams, landing) | Stacked rows: dose, yield, time, grind, each with its numeral and its own − and + on the right. Everything is visible at once, and a repeat shot is mostly reading. The scrub strip is a nice extra for later but needs the buttons anyway. |
 | Advice applying itself | one tap applies it (MengTo); never edits the value (Owl) | Moot for now: the owner deferred all grind suggestions until a model trained on their shots exists (PLAN, "Later: a dial-in model"). The grind field shows the last shot's value and nothing else. |
 | Motion on save | staggered entrance; spring settle; line draw; none | One movement: the new mark travels from the previous shot's position on the target to its own, 360 ms, then the summary line fades in. It shows the change you made. Nothing else on the screen moves. |
@@ -160,9 +160,9 @@ Reviewer suggestions I didn't take:
 | `--on-accent` | `#fff8f0` | `#fff8f0` | text on `--accent-fill` (6.4:1 light, 5.4:1 dark) |
 | `--danger` | `#b3261e` | `#f2836f` | destructive actions and errors only (6.0:1, 7.4:1) |
 | `--sour` / `--sour-bg` | `#7a5a00` / `#f5eac6` | `#e6c45c` / `#2c2511` | sour |
-| `--balanced` / `--balanced-bg` | `#2d6a45` / `#e0ede3` | `#86c79c` / `#15261b` | balanced; the espresso reference |
+| `--balanced` / `--balanced-bg` | `#2d6a45` / `#e0ede3` | `#86c79c` / `#15261b` | balanced; the target window |
 | `--bitter` / `--bitter-bg` | `#7f2f4c` / `#f3e0e7` | `#e99ab4` / `#2f1820` | bitter |
-| `--window` | `rgba(45,106,69,.10)` | `rgba(134,199,156,.10)` | espresso reference fill |
+| `--window` | `rgba(45,106,69,.10)` | `rgba(134,199,156,.10)` | target window fill |
 | `--camera` / `--on-camera` | `#1a1714` / `#f2ece4` | `#0b0a09` / `#f2ece4` | the camera view and its controls |
 | `--photo-a` / `--photo-b` | `#d9cfc0` / `#cfc3b2` | `#2b2621` / `#26211c` | the photo placeholder in mockups only |
 
@@ -259,17 +259,17 @@ doesn't look like a row of filters.
 
 #### Dial-in target
 
-SVG, time across and ratio up. By default it runs 18 to 38 s and 1:1.6 to 1:2.5, with gridlines at 20/25/30/35 s
-and 1:1.8/2.0/2.2/2.4. When a shown shot falls outside that range (a 1:5 shot, a 60 s shot, a 1:1 ristretto), the
-axes grow to include it, never below 0 s, with at most five round gridlines on each grown axis; a shot is plotted
-where it was pulled, never pinned to the edge. The traditional espresso range, 25–32 s and 1:1.8–2.3, is a dashed
-rectangle with a light fill: a reference, not a target, since a long-ratio shot is pulled that way on purpose. It's
-labelled "espresso" inside its lower-right corner when the box is at least 24 px tall and that corner is clear;
-otherwise above, below, right or left of the box, in the first spot clear of every mark, the newest shot's ring, the
-path and the order numbers. If none is clear the label is left out; the `aria-label` still names the reference.
-On Today and Saved, the marks are numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the
-newest has a ring. On the coffee page they're neither numbered nor joined. It has an `aria-label`, and the sentence
-under it says the same thing in words, with each shot's ratio, time and taste.
+SVG, time across and ratio up. By default it runs 18 to 38 s and 1:1.6 to 1:2.5, with gridlines at 20/25/30/35 s and
+1:1.8/2.0/2.2/2.4. When a shown shot falls outside that range (a 1:5 shot, a 60 s shot, a 1:1 ristretto), the axes
+grow to include it, never below 0 s, with at most five round gridlines on each grown axis; a shot is plotted where it
+was pulled, never pinned to the edge. The window, 25–32 s and 1:1.8–2.3, is a dashed rectangle with a light fill.
+It's a reference, not a verdict: a long-ratio shot is pulled that way on purpose. It's labelled "window" inside its
+lower-right corner when the box is at least 24 px tall and that corner is clear; otherwise above, below, right or
+left of the box, in the first spot clear of every mark, the newest shot's ring, the path and the order numbers. If
+none is clear the label is left out; the `aria-label` still names the window. On Today and Saved, the marks are
+numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a ring. On the coffee
+page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it says the same thing in
+words, with each shot's ratio, time and taste.
 
 #### Chips
 
@@ -385,7 +385,7 @@ on Log shot), stepping back in history, or else replaces the form, so Back never
 Short, plain and specific, in sentence case, with real apostrophes (’). Buttons start with a verb. The same action
 has the same words everywhere ("Type the coffee", never "Type it instead"). The app says what happened and leaves
 the next move to the owner: "1:2.02 in 29 s; Monday’s shot was 1:2.02 in 27 s." It gives the ratio and time and
-doesn't judge them against the traditional espresso range, since a 1:5 shot is meant to run long and fast. The
+doesn't judge them against the window, since a 1:5 shot is meant to run long and fast. The
 sentence under the target names each shot's ratio, time and taste in order: "This bag, in order: 1:2.0 in 26 s sour,
 1:5.0 in 18 s balanced." No "go finer" or "try 11" until the dial-in model in the plan exists.
 

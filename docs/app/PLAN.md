@@ -16,9 +16,9 @@ small grind change) the timer plus three taps, and makes a new bag two taps: the
   with one tap.
 - Record equipment once (grinder, machine, basket) and have every shot point at the grinder it was ground on, so a
   grind setting means something across grinders.
-- Show what a shot did the moment it's saved: ratio, time, taste, and where it sits among this bag's shots, with
-  the traditional 25 to 32 s, 1:1.8 to 2.3 espresso range shown as a reference. The app doesn't suggest grind
-  changes yet (see Later: a dial-in model).
+- Show what a shot did the moment it's saved: ratio, time, taste, and where it sits among this bag's shots, with the
+  25 to 32 s, 1:1.8 to 2.3 window shown for reference. The app doesn't suggest grind changes yet (see Later: a
+  dial-in model).
 - Give each coffee a page with its shots, best recipe, and the catalog's current price and stock.
 - Keep the lake append-only. New tables and new nullable columns only; every existing shot stays valid.
 - Keep shots and bag photos private. Neither reaches the public tables, the public site or git. Shots come off
@@ -36,6 +36,8 @@ small grind change) the timer plus three taps, and makes a new bag two taps: the
 - Bluetooth scales and machine integrations (Acaia, Decent, Gaggiuino). Chrome on Android does support Web
   Bluetooth, so a scale is possible later; for now typing two numbers is fine.
 - Pour-over and filter recipes beyond what `brew_method` already stores. The UI is espresso-first.
+- A reference per drink type. Lungo, Lance Hedrick's "soup" shot and pour-over such as V60 may later get their own;
+  for now there's one window.
 - Editing or deleting lake files. Corrections and retractions stay new records.
 - Buying coffee. The coffee page links to the roaster's product page and stops there.
 - Replacing the MCP server or the issue form. They keep working and gain the new fields where it's cheap.
@@ -83,7 +85,7 @@ finished.
    a repeat shot. A "Same as last" chip above them ("Same as last: balanced, 4") fills both in one tap when the shot
    tasted like yesterday's.
 5. "Save shot". The saved screen shows the ratio, the time, the taste, the shot's place on the dial-in target among
-   this bag's shots (the axes grow to fit shots outside the traditional espresso range), and one line comparing it
+   this bag's shots (the axes grow to fit shots outside the window), and one line comparing it
    with the last shot ("1:2.02 in 29 s; Monday's shot was 1:2.02 in 27 s"). It describes what
    happened and doesn't say what to change. "Undo" stays for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
 
