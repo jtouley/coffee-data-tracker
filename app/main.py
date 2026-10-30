@@ -508,8 +508,9 @@ def create_app(
         basket: str | None = None,
         machine: str | None = None,
         correct: str | None = None,
+        bag: str | None = None,
     ) -> HTMLResponse | RedirectResponse:
-        fixing = None
+        fixing = fixing_bag = None
         if (
             correct
         ):  # Correct: the same form, filled from that shot, saved under its id (a new record, latest wins)
@@ -573,11 +574,31 @@ def create_app(
                     "notes": fixing.notes,
                 },
             }
-            bag = store.bag(me.user_id, fixing.bag_id)
-            name, _ = coffee_name(bag, fixing.coffee_id, fixing.coffee_freetext)
+            fixing_bag = store.bag(me.user_id, fixing.bag_id)
+            name, _ = coffee_name(fixing_bag, fixing.coffee_id, fixing.coffee_freetext)
+            if bag and bag != fixing.bag_id:  # moved to another bag: its coffee follows the bag
+                fixing_bag = store.bag(me.user_id, bag)
+                if fixing_bag is None:
+                    raise HTTPException(404, "no such bag")
+                form |= {
+                    "bag_id": bag,
+                    "coffee_id": fixing_bag.coffee_id,
+                    "coffee_freetext": fixing_bag.coffee_freetext,
+                }
+                name, _ = coffee_name(fixing_bag, fixing_bag.coffee_id, fixing_bag.coffee_freetext)
         z = tz(request)
         when = f"{views.date(fixing.brewed_at, z)}, {views.clock(fixing.brewed_at, z)}" if fixing else None
-        return page(request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when)
+        return page(
+            request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when,
+            fixing_bag=fixing_bag,
+            bag_lines=[
+                bag_line(b, [])
+                for b in store.bags_of(me.user_id)
+                if not b.finished_on or b.bag_id in (fixing.bag_id, fixing_bag and fixing_bag.bag_id)
+            ]
+            if fixing
+            else [],
+        )  # fmt: skip
 
     @app.get("/saved/{shot_id}", response_class=HTMLResponse)
     def saved(request: Request, shot_id: str, me: Me, new: bool = False) -> HTMLResponse:

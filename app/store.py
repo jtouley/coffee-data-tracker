@@ -368,11 +368,15 @@ class Store:
                 f"({lo:g} to {hi:g})."
             )
         bag = self.bag(user_id, shot.bag_id)
-        if bag and not shot.coffee_id and not shot.coffee_freetext:  # the bag says which coffee it is
+        if shot.bag_id and bag is None:
+            raise NotFound(shot.bag_id)
+        prev = self._owned(self.shots, shot.shot_id, user_id)
+        moved = prev is not None and bag is not None and prev.item.bag_id != bag.bag_id
+        if bag and (moved or (not shot.coffee_id and not shot.coffee_freetext)):
+            # The bag says which coffee it is; a correction that moves the shot to another bag takes that bag's.
             shot = shot.model_copy(
                 update={"coffee_id": bag.coffee_id, "coffee_freetext": bag.coffee_freetext}
             )
-        prev = self._owned(self.shots, shot.shot_id, user_id)
         if prev:
             # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
             shot = shot.model_copy(

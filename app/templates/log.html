@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_macros.html" import chevron %}
 {% block title %}Log shot · registry.coffee{% endblock %}
 {% block main %}
   {% set gr, bk, last = p.grinder, p.basket, p.last %}
@@ -9,6 +10,16 @@
     <div class="label">Ratio <span class="num n24 ink" data-ratio></span></div>
   </div>
   {% if fixing %}<div class="meta mt4">Correcting the {{ fixing_when }} shot. The original stays in history.</div>
+  {% if bag_lines | length > 1 %}<h2 class="section">This bag</h2>
+  <div class="rows">
+    {% for l in bag_lines %}
+    <a class="bagrow" href="/log?correct={{ fixing.shot_id }}&amp;bag={{ l.bag.bag_id }}"{% if fixing_bag and fixing_bag.bag_id == l.bag.bag_id %} aria-current="true"{% endif %}>
+      {% if l.bag.photo_id %}<img class="thumb" src="/photos/{{ l.bag.photo_id }}" alt="" width="56" height="56" loading="lazy" decoding="async">{% endif %}
+      <span class="grow"><span class="n">{{ l.name }}</span><span class="meta">{{ l.facts }}</span></span>
+      {{ chevron() }}
+    </a>
+    {% endfor %}
+  </div>{% endif %}
   {% else %}<div class="meta mt4">{% if last %}Last shot {{ g(last.time_s) }} s{% if last.taste %} · {{ last.taste }}{% endif %} · rated {{ last.rating }}{% else %}First shot of this {{ "bag" if p.bag else "coffee" }}{% endif %} · {% if p.water_temp_c %}{{ g(p.water_temp_c) }} °C, {% endif %}{{ p.brew_method }}{{ ", milk drink" if p.is_milk_drink }}</div>{% endif %}
   </div>
   <section class="fill" data-offline-saved data-name="{{ name }}" data-grinder="{{ gr.name }}" hidden>
