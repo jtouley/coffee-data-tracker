@@ -20,8 +20,23 @@ The results are in `RESULTS.md`.
   `n < 80` is validation, and the rest is test. Salt: `coffeedata-match-eval-2026-10-30`.
 - It's grouped by roaster, so one roaster's coffees never sit on both sides. The one coffee with no title is left out.
 - Result: train 26,319 coffees (1,085 roasters), validation 9,367 (368), test 8,606 (395).
-- Each set's first 1,000 coffees by `sha256(salt + ":" + coffee_id)` are drawn. That's a uniform sample within
-  the set, not a stratified one, so no stratum weights apply.
+- The draw, as `split` actually ran it: each set's coffees are sorted by
+  `b = int(sha256(salt + ":" + coffee_id)[:8], 16) % 100` alone (the same bucket function, applied to the
+  coffee_id), and the first 1,000 are kept. Python's sort is stable, so coffees with the same `b` stay in
+  `dim_coffee`'s duckdb row order.
+  - Every bucket below the boundary bucket is drawn in full. Only part of the boundary bucket is drawn:
+    - test: buckets 0–10 (959 coffees), plus 41 of the 105 in bucket 11;
+    - validation: buckets 0–9 (981), plus 19 of the 80 in bucket 10;
+    - train: buckets 0–2 (817), plus 183 of the 291 in bucket 3.
+  - Which boundary-bucket coffees were drawn fell to row order. So the draw can't be reproduced from the rule
+    alone, and the full-sha256 ordering this line first described selects a different set (125 of the 1,000
+    test coffees overlap).
+- **`test_keys.txt` is the authoritative test list.** It's covered by the sealed commit `4d04daa`'s
+  `SHA256SUMS`, which the predictions were written against. The train and validation lists are the data dir's
+  `split.json`, which stays out of git.
+- The buckets hash coffee_ids, and row order doesn't depend on any result. So the draw is still independent of
+  the matcher. It's close to uniform within each set, but not exactly: the boundary bucket's part is by row
+  order. It isn't stratified, so no stratum weights apply.
 - The split was made before any prediction was read.
 
 ## Queries
