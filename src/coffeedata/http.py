@@ -248,6 +248,9 @@ class PoliteClient:
         so consulting those rules before fetching it would recurse. They are still spaced and limited per host.
         """
         history: list[httpx.Response] = []
+        bare = lambda u: urlparse(u)._replace(query="", fragment="").geturl()  # noqa: E731
+        # URLs (without query) that redirected us away while carrying our params.
+        sent_params: set[str] = set()
         for hop in range(MAX_REDIRECTS + 1):
             if not robots and not self._allowed(url):
                 raise Blocked(url)
@@ -261,8 +264,11 @@ class PoliteClient:
             if urlparse(target).scheme not in ("http", "https"):
                 raise httpx.UnsupportedProtocol(f"unsupported redirect URL {target}", request=r.request)
             # A location with its own query replaces ours; one without keeps ours, so a redirect that drops
-            # page/per_page doesn't silently shrink a paged catalog.
-            if urlparse(target).query:
+            # page/per_page doesn't silently shrink a paged catalog. But never send our params back to a URL that
+            # redirected us away with them: a site that only strips the query would loop.
+            if params:
+                sent_params.add(bare(str(r.url)))
+            if urlparse(target).query or bare(target) in sent_params:
                 params = None
             history.append(r)
             url = target

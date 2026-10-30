@@ -513,6 +513,22 @@ def test_a_redirect_with_its_own_query_replaces_ours():
     assert seen[-1] == "https://a.com/shop?per_page=100&page=2"
 
 
+def test_a_redirect_that_only_strips_the_query_does_not_loop():
+    seen = []
+
+    def respond(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        seen.append(str(request.url))
+        if request.url.query:
+            return httpx.Response(301, headers={"location": request.url.path})
+        return httpx.Response(200, json={"ok": 1})
+
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get_json("https://a.com/products.json", limit=1) == {"ok": 1}
+    assert seen == ["https://a.com/products.json?limit=1", "https://a.com/products.json"]
+
+
 def test_redirect_hops_are_spaced_and_counted(monkeypatch):
     clock = FakeClock()
     monkeypatch.setattr(http.time, "monotonic", clock)
