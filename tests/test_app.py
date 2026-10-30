@@ -1,6 +1,7 @@
 """The app over a synthetic local lake: prefill, save, undo, retries, the cache and per-user scoping."""
 
 import re
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from fastapi import Request
@@ -11,6 +12,7 @@ from app.auth import LocalOwner, User
 from app.main import create_app
 from coffeedata import shots
 from coffeedata.lake import Lake
+from coffeedata.models import Shot
 
 from .lakehelp import old_shot
 
@@ -129,6 +131,71 @@ def test_save_shows_saved_and_today_without_grind_advice(client, lake):
         assert not re.search(r"finer|coarser|Try \d", page)
     [s] = [s for s in shots.load_shots(lake) if s.shot_id == "s2"]
     assert (s.user_id, s.source, s.grinder_id, s.bag_id) == ("owner", "app", "g1", "bag1")
+
+
+def test_default_chart_keeps_one_decimal_on_ratio_ticks():
+    assert ">1:2.0</text>" in views.target_svg([])
+
+
+def _bag(spec: list[tuple[float, float, str | None]]) -> list[Shot]:
+    t0 = datetime(2026, 10, 26, 7, 0, tzinfo=UTC)
+    return [
+        Shot(
+            shot_id=f"s{i}",
+            brewed_at=t0 + timedelta(days=i),
+            grinder_setting=11,
+            dose_g=18,
+            yield_g=y,
+            time_s=t,
+            rating=4,
+            taste=taste,
+        )
+        for i, (y, t, taste) in enumerate(spec)
+    ]
+
+
+@pytest.mark.parametrize(
+    "spec",
+    [
+        [
+            (36, 26, "sour"),
+            (36.4, 28, "balanced"),
+            (90, 16, "sour"),
+            (90, 18, "balanced"),
+            (90, 20, "balanced"),
+        ],
+        [(36, 28, "balanced"), (144, 20, "balanced")],
+        [(36 + i * 0.3, 24 + i, "balanced") for i in range(7)] + [(90, 18, "balanced")],
+        [(36, 24, "sour"), (36.5, 27, "balanced"), (36, 29, "balanced")],
+    ],
+)
+@pytest.mark.parametrize(("height", "joined"), [(150, True), (196, True), (196, False)])
+def test_window_label_never_sits_on_a_mark_or_the_path(spec, height, joined):
+    svg = views.target_svg(_bag(spec), height, sequence=joined)
+    m = re.search(r'<text class="wl" x="([\d.]+)" y="([\d.]+)" text-anchor="(\w+)"', svg)
+    assert m, "the label is shown in every case here"
+    box = views.label_box(float(m[1]), float(m[2]), m[3])
+    marks = [
+        (float(a), float(b)) for a, b in re.findall(r'class="s-[a-z]+" c?x="([\d.]+)" c?y="([\d.]+)"', svg)
+    ]
+    assert len(marks) == len(spec[-8:])
+    for mx, my in marks:  # squares give their corner; allow for it
+        assert views._gap(box, (mx, my, mx + 9, my + 9)) >= 2
+    path = re.search(r'<polyline class="path" points="([^"]+)"', svg)
+    if path:
+        pts = [tuple(map(float, p.split(","))) for p in path[1].split()]
+        for a, b in zip(pts, pts[1:], strict=False):
+            assert views._seg_gap(box, a, b) >= 3
+
+
+def test_shots_outside_the_default_range_are_plotted_where_they_were_pulled(client):
+    client.post("/api/shots", json=shot(1, yield_g=54, time_s=15), headers=W)
+    client.post("/api/shots", json=shot(2, yield_g=72, time_s=12), headers=W)
+    for path in ("/", "/saved/s2", "/coffee/bag1"):
+        page = client.get(path).text
+        # Both times and both ratios must get distinct positions instead of being clamped together.
+        marks = re.findall(r'<circle class="s-balanced" cx="([\d.]+)" cy="([\d.]+)"', page)
+        assert len(marks) == 2 and marks[0][0] != marks[1][0] and marks[0][1] != marks[1][1]
 
 
 def test_same_shot_id_twice_writes_once(client, lake):

@@ -260,11 +260,15 @@ doesn't look like a row of filters.
 
 #### Dial-in target
 
-SVG, 18 to 38 s across, 1:1.6 to 1:2.5 up, gridlines at 20/25/30/35 s and 1:1.8/2.0/2.2/2.4. The
-window is a dashed rectangle with a light fill and the word "window" inside its lower-right corner. On Today and
-Saved, the marks are numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a
-ring. On the coffee page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it
-says the same thing in words.
+SVG, time across and ratio up. By default it runs 18 to 38 s and 1:1.6 to 1:2.5, with gridlines at 20/25/30/35 s and
+1:1.8/2.0/2.2/2.4. When a shown shot falls outside that range (a 1:5 shot, a 60 s shot, a 1:1 ristretto), the axes
+grow to include it, never below 0 s, with at most five round gridlines on each grown axis; a shot is plotted where it
+was pulled, never pinned to the edge. The window is a dashed rectangle with a light fill and the word "window" inside
+its lower-right corner when the box is at least 24 px tall and that corner is clear; otherwise above, below, right or
+left of the box, in the first spot clear of every mark, the newest shot's ring, the path and the order numbers, and
+left out if none is clear. On Today and Saved, the marks are numbered in the order pulled and joined by a dashed 1.5
+px `--ink-2` line, and the newest has a ring. On the coffee page they're neither numbered nor joined. It has an
+`aria-label`, and the sentence under it says the same thing in words.
 
 #### Chips
 
