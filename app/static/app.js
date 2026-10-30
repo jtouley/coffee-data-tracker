@@ -575,6 +575,71 @@ function bagEdit(form) {
   const rec = JSON.parse(document.getElementById("bag-record").textContent);
   const save = form.querySelector('[type="submit"]');
   const label = armRoastCheck(form, save);
+  const search = form.querySelector("[data-search]");
+  const query = form.querySelector("#catalog-query");
+  const results = form.querySelector("[data-search-results]");
+  const status = form.querySelector("[data-search-status]");
+  const match = form.querySelector("[data-match]");
+  let selected = null;
+  let request = 0;
+  form.querySelector("[data-search-open]").addEventListener("click", () => {
+    search.hidden = false;
+    query.value = form.coffee_freetext.value;
+    query.focus();
+  });
+  query.addEventListener("input", () => { request++; results.replaceChildren(); status.textContent = ""; });
+  query.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); form.querySelector("[data-search-submit]").click(); }
+  });
+  form.coffee_freetext.addEventListener("input", () => {
+    selected = null;
+    match.textContent = form.coffee_freetext.value.trim() === (rec.coffee_freetext || "").trim()
+      ? (rec.coffee_id ? "The existing catalog match will be kept." : "Not matched to the catalog")
+      : "The name will be matched when you save, unless you select a catalog result.";
+  });
+  form.querySelector("[data-search-submit]").addEventListener("click", async () => {
+    const term = query.value.trim();
+    const id = ++request;
+    results.replaceChildren();
+    if (term.length < 2) { status.textContent = "Type at least two characters."; return; }
+    status.textContent = "Searching the catalog…";
+    try {
+      const response = await fetch(`/api/coffees/search?q=${encodeURIComponent(term)}`);
+      if (response.status === 503) {
+        if (id === request) status.textContent = "The catalog isn’t available right now. Try again shortly.";
+        return;
+      }
+      if (!response.ok) throw new Error();
+      const data = await response.json();
+      if (id !== request) return;
+      status.textContent = data.coffees.length ? "Choose the coffee on your bag." : "No coffees found. Try another search.";
+      for (const coffee of data.coffees) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "pickrow";
+        const name = document.createElement("span");
+        name.className = "name";
+        name.textContent = coffee.title;
+        const detail = document.createElement("span");
+        detail.className = "meta";
+        detail.textContent = [coffee.roaster, coffee.origin, coffee.past ? "past offering" : coffee.in_stock == null ? "" : coffee.in_stock ? "in stock" : "sold out"].filter(Boolean).join(" · ");
+        name.append(detail);
+        button.append(name);
+        button.addEventListener("click", () => {
+          request++;
+          selected = coffee;
+          form.coffee_freetext.value = coffee.title;
+          match.textContent = `Selected: ${[coffee.roaster, coffee.title].filter(Boolean).join(" · ")}. Save the bag to match it.`;
+          search.hidden = true;
+          results.replaceChildren();
+          status.textContent = "";
+        });
+        results.append(button);
+      }
+    } catch {
+      if (id === request) status.textContent = "Couldn’t search the catalog. Check your connection and try again.";
+    }
+  });
   const finished = form.querySelector("[data-finished]");
   finished.addEventListener("click", (e) => {
     const b = e.target.closest("button");
@@ -598,7 +663,8 @@ function bagEdit(form) {
       weight_g: weight ? Math.round(Number(weight)) : null,
       finished_on: pressed(finished) === "true" ? rec.finished_on || today : null,
     };
-    if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
+    if (selected) Object.assign(body, { coffee_id: selected.coffee_id, match_score: null });
+    else if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
     save.disabled = true;
     try {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);

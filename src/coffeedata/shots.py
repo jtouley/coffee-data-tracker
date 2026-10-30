@@ -138,6 +138,10 @@ def _tokens(s: str) -> list[str]:
     ]
 
 
+CONFIDENT_SCORE = 80  # a match made without asking: 80+ and 5 clear of the next
+CANDIDATE_SCORE = 50  # offered to pick from: about half the query's words found, or more
+
+
 def match_score(query: str, label: str) -> int:
     """Mostly: what share of the query's words appear (fuzzily) in the label; WRatio breaks ties."""
     q, lab = _tokens(query), _tokens(label)
@@ -161,6 +165,22 @@ def fuzzy_match_coffee(text: str, limit: int | None = 3, lake: Lake | None = Non
     return [
         {"coffee_id": key, "label": label.strip(), "score": score} for score, key, label in scored[:limit]
     ]
+
+
+def search_catalog(text: str, limit: int = 12, lake: Lake | None = None) -> list[dict]:
+    """Coffees for a person to pick from: CANDIDATE_SCORE or better, ties sold now first as in match_bag, and no
+    wholesale listings unless the text says wholesale (a twin outscores its retail coffee). Raises if the catalog
+    couldn't be read, so a failed read isn't shown as no results."""
+    mart_columns(lake)
+    cat = _load(lake)
+    skip = frozenset() if classify.says_wholesale(text) else cat.wholesale
+    rank = {cid: r for cid, _, _, _, r in cat.rows}
+    found = [
+        m
+        for m in fuzzy_match_coffee(text, limit=None, lake=lake)
+        if m["score"] >= CANDIDATE_SCORE and m["coffee_id"] not in skip
+    ]
+    return sorted(found, key=lambda m: (-m["score"], rank.get(m["coffee_id"], 0), m["label"]))[:limit]
 
 
 def _confident(ranked: list[dict], min_score: int) -> str | None:
@@ -234,13 +254,15 @@ def normalize(payload: dict) -> dict:
     return out
 
 
-def match_coffee(text: str, lake: Lake | None = None, min_score: int = 80) -> tuple[str | None, list[dict]]:
+def match_coffee(
+    text: str, lake: Lake | None = None, min_score: int = CONFIDENT_SCORE
+) -> tuple[str | None, list[dict]]:
     """The catalog coffee_id for free text, when the best match is confident and clearly ahead."""
     return _pick(text, fuzzy_match_coffee(text, limit=None, lake=lake), lake, min_score)
 
 
 def match_bag(
-    roaster: str | None, coffee: str | None, lake: Lake | None = None, min_score: int = 80
+    roaster: str | None, coffee: str | None, lake: Lake | None = None, min_score: int = CONFIDENT_SCORE
 ) -> tuple[str | None, list[dict]]:
     """Match what a bag's label says to the catalog, roaster first, then the coffee among that roaster's.
 
@@ -327,7 +349,9 @@ def last_logged(shot_id: str, lake: Lake) -> datetime | None:
     return max(found, default=None)
 
 
-def log_shot(payload: dict, lake: Lake | None = None, min_score: int = 80) -> tuple[Shot, list[dict]]:
+def log_shot(
+    payload: dict, lake: Lake | None = None, min_score: int = CONFIDENT_SCORE
+) -> tuple[Shot, list[dict]]:
     """Validate and record a shot as its own immutable lake file. Free-text coffee is matched to the catalog.
     To correct a shot, log it again with the same shot_id (latest wins); add deleted=True to retract it."""
     lake = lake or Lake()
