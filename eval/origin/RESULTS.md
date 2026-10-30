@@ -78,8 +78,8 @@ same products, so unchanged products add nothing, and it is much tighter.
 - Its wrong-country rate is lower overall.
 - The one new kind of wrong-country error is in None → country, where a region name gives a country.
   - test: 1 of 25 (about 1.5 of the set's 38). It is not a blend: a roaster's service page names
-    "Copan Coffee Roasters LLC", and the Copán region table read the company name as Honduras. #46 stops region
-    names inside business names and after "roasted in" from counting. That rule was prompted by this test example,
+    "Copan Coffee Roasters LLC", and the Copán region table read the company name as Honduras. #46 stops a region
+    right before a roaster's name ("Roasters", "LLC") or right after "roasted in" from counting as a region-only origin. That rule was prompted by this test example,
     which is acceptable only because the test set is now retired (see README.md).
   - train: 2 of 25
   - Main's errors are much larger: 22 of 25 in country → None and 7 of 7 in country → other on test.

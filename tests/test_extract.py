@@ -430,7 +430,6 @@ def test_region_only_where_coffee_grew():
     )
     body = "Copan Coffee Roasters LLC roasts every order by hand. Choose light, medium or dark."
     assert extract.rules(item("ROAST LEVEL & GRIND TYPE", body=body)).origin_country is None
-    assert extract.rules(item("Lot 9", body="Visit our cafe in Antigua for a cup.")).origin_country is None
     # A region where the coffee grew still counts.
     body = "Maikon's grandfather moved to Santa Barbara and planted a few coffee trees in 1970."
     assert extract.rules(item("Maikon Fernandez - Natural", body=body)).origin_country == "Honduras"
@@ -439,16 +438,9 @@ def test_region_only_where_coffee_grew():
     )
 
 
-def test_label_field_names_every_country():
-    # A label field doesn't end at a country that looks like the next "Label:" (review of #41's follow-up).
-    body = "Rift Valley Blend Region: Kenya & Ethiopia Roast Level: Medium Tasting Notes: Blueberry"
-    assert extract.rules(item("Roast-To-Order", body=body)).origin_country is None
-    body = "Region: Guatemala & Sumatra BlendAltitude: 1200-1700MProcess: Washed"
-    assert extract.rules(item("Autumn Harvest", body=body)).origin_country is None
-
-
 # Review of #46: listings where the title or a "Colombia variety" mention names a variety, not where the coffee grew.
-# Each must give the right country or None, never the variety's country.
+# The rules give the right country or abstain (None, for Claude), never the variety's country. `expected` is what they
+# give today; a change may turn a None into the truth, never into another country.
 VARIETY_NAME_CASES = [
     ("Finca El Puente Kenya SL-28", SL.replace(", Honduras", ""), "Honduras"),
     (
@@ -479,6 +471,35 @@ VARIETY_NAME_CASES = [
 ]
 
 
+# Where the rules give the truth rather than None.
+VARIETY_NAME_ANSWERED = {
+    "Las Lajas Colombia Variety",
+    "Finca Santa Lucia - Colombia Variety",
+    "Colombia Variety",
+}
+
+
 @pytest.mark.parametrize("title,body,truth", VARIETY_NAME_CASES, ids=[c[0] for c in VARIETY_NAME_CASES])
 def test_a_variety_name_is_not_an_origin(title, body, truth):
-    assert extract.rules(item(title, body=body)).origin_country in (truth, None)
+    expected = truth if title in VARIETY_NAME_ANSWERED else None
+    assert extract.rules(item(title, body=body)).origin_country == expected
+
+
+# Lean review of #46: a region in ordinary product copy is still the origin. Only "roasted in <region>" and a roaster's
+# name ("<region> Coffee Roasters", "LLC", "Inc") are left out of the region-only fallback. Each gives main's answer.
+REGION_COPY_CASES = [
+    ("A medium roast from Huila, sweet and round.", "Colombia"),
+    ("Light roasted, grown in Huila.", "Colombia"),
+    ("We roast coffee grown in Copán.", "Honduras"),
+    ("From a producer group based in Marcala.", "Honduras"),
+    ("Shade-grown at a farm based in Nyeri.", "Kenya"),
+    ("Our shop's favorite from Yirgacheffe.", "Ethiopia"),
+    ("Huila Coffee Co-op members grow this lot.", "Colombia"),
+    ("Copan Coffee Company smallholders.", "Honduras"),
+    ("Region: Huila Kenya Roast Level: medium", None),
+]
+
+
+@pytest.mark.parametrize("body,expected", REGION_COPY_CASES, ids=[c[0] for c in REGION_COPY_CASES])
+def test_a_region_in_product_copy_still_counts(body, expected):
+    assert extract.rules(item("Lot 7", body=body)).origin_country == expected

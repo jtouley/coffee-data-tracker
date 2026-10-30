@@ -219,11 +219,9 @@ _REGION = re.compile(
 _FARM_NAME = re.compile(r"\b(?:finca|hacienda|fazenda|s[ií]tio|beneficio|estate|farm)\s+$", re.I)
 # A labelled origin field: "Origin: Honduras", "ORIGIN | Ethiopia & Colombia", "Region: Marcala, Honduras". Every
 # country in the field counts, so "Origin: Brazil/Honduras" names two. The field ends at the line, the sentence or
-# the next "Label:", which can't start with a country: in "Origin: Peru, Colombia Varieties: …", Colombia is in the
-# field.
+# the next "Label:".
 _LABEL_FIELD = re.compile(
-    r"\b(?:origins?|country(?: of origin)?|region|location)\s*[:|\-–]\s*(.{1,100}?)"
-    r"(?=\n|\.\s|;|\s(?!" + _COUNTRY.pattern + r")[A-Z][\w ]{1,20}:|$)",
+    r"\b(?:origins?|country(?: of origin)?|region|location)\s*[:|\-–]\s*(.{1,100}?)(?=\n|\.\s|;|\s[A-Z][\w ]{1,20}:|$)",
     re.I,
 )
 # "Marcala, Honduras": a region followed by its own country (not "Chiapas, Brazil", a list). "in Las Flores,
@@ -259,31 +257,28 @@ def _stated_origins(body: str) -> list[str]:
     return list(dict.fromkeys(out))
 
 
-# A region name that is the roaster's town, not where the coffee grew ("roasted in Santa Barbara"), or part of a
-# business name ("Copan Coffee Roasters LLC"). Applied to region fallbacks only: "Region, Country" in a stated origin
-# is unaffected.
-_ROASTER_PLACE = re.compile(
-    r"\b(?:roast(?:ed|s|ing|ery|eries|ers?)?|based|headquartered|caf[eé]s?|shops?|stores?|offices?)\b[^.;\n]{0,25}?"
-    r"\b(?:in|at|from|out\s+of)\s+(?:(?:beautiful|sunny|downtown|historic)\s+)?$",
-    re.I,
-)
-_BUSINESS_NAME = re.compile(
-    r"^\s+(?:coffee\s+(?:roasters?|roasting|roastery|company|co\b|trading|traders|importers?|house|shop|bar)|"
-    r"roasters?\b|roastery\b|roasting\b|llc\b|inc\b|trading\b|imports?\b)",
-    re.I,
-)
+# A region name that is the roaster's town, not where the coffee grew: a roasting word right before it ("roasted in
+# Santa Barbara"), or a roaster's name after it ("Copan Coffee Roasters LLC"). Only the region-only fallback leaves
+# these out; the checks for a region that disagrees with a country see every region, as before.
+_ROASTER_PLACE = re.compile(r"\b(?:roasted|roasting|roastery|roasters?)\s+(?:in|at|out\s+of)\s+$", re.I)
+_ROASTER_NAME = re.compile(r"^\s+(?:coffee\s+)?(?:roasters?|roastery|llc|inc)\b", re.I)
 
 
-def _regions(text: str) -> list[str]:
+def _regions(text: str, roaster_places: bool = True) -> list[str]:
     """Countries of the one-country growing regions a text names, leaving out farms named after one ("Finca Santa
-    Barbara"), the roaster's town and business names."""
+    Barbara") and, with roaster_places=False, the roaster's town and name."""
     return list(
         dict.fromkeys(
             REGIONS[m.group(1).lower()]
             for m in _REGION.finditer(text)
             if not _FARM_NAME.search(text[max(0, m.start() - 20) : m.start()])
-            and not _ROASTER_PLACE.search(text[max(0, m.start() - 60) : m.start()])
-            and not _BUSINESS_NAME.search(text[m.end() : m.end() + 40])
+            and (
+                roaster_places
+                or not (
+                    _ROASTER_PLACE.search(text[max(0, m.start() - 40) : m.start()])
+                    or _ROASTER_NAME.search(text[m.end() : m.end() + 30])
+                )
+            )
         )
     )
 
@@ -325,7 +320,8 @@ def origin_country(title: str, in_title: list[str], body: str, tag_region: str =
         return _one(named) if not set(regions) - set(named) else None
     if _countries(body):
         return None
-    return _one(regions)
+    texts = (title, tag_region, body)
+    return _one(list(dict.fromkeys(r for t in texts for r in _regions(t, roaster_places=False))))
 
 
 def _process(text: str) -> str | None:

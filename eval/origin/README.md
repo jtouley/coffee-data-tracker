@@ -83,8 +83,8 @@ fresh test set.
 
 | change | products changed vs main | train | validation | test (count only) | checked by hand |
 |---|---:|---:|---:|---:|---|
-| #46: region names after "roasted in" or in business names; label fields that end at a country | 5 | 3 | 1 | 1 | 4 of 4 train/validation correct: blends that named one country, now None |
-| **running total** | **5** | | | | |
+| #46: in the region-only fallback, a region right after "roasted in/at" or right before a roaster's name ("Roasters", "Roastery", "LLC", "Inc") doesn't count | 1 | 0 | 0 | 1 | no train or validation product changes; the test product is a count only |
+| **running total** | **1** | | | | |
 
 ## Commands
 
