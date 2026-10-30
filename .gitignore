@@ -23,3 +23,6 @@ tests/browser/node_modules/
 src/terraform/.terraform/
 src/terraform/*.tfstate*
 src/terraform/terraform.tfvars
+
+# Local PR review notes; never committed.
+.context/
