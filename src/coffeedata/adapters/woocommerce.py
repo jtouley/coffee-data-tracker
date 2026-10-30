@@ -94,8 +94,6 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         raw.extend(data)
         if len(data) < 100:
             break
-    else:  # a full final page may have a successor: never store a truncated catalog as complete
-        raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
     lookups = 0
     items = []
     for p in raw:

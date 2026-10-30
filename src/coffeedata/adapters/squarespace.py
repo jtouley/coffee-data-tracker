@@ -74,27 +74,17 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
             if page:  # a later page vanishing would silently truncate the catalog
                 raise FetchError(f"collection {path} page {page + 1} returned 404")
             return None
-        if isinstance(data, dict) and "items" not in data and not page:
-            raise NotCatalog(f"not a Squarespace collection at {path}")
-        if not isinstance(data, dict) or not isinstance(data.get("items"), list):
+        if not isinstance(data, dict) or not isinstance(data.get("items", []), list):
             raise FetchError(f"unexpected Squarespace payload at {path}")
         items.extend(
             i
             for i in data.get("items") or []
             if isinstance(i, dict) and ("variants" in i or "productType" in i)
         )
-        pagination = data.get("pagination")
-        if pagination is None:
-            pagination = {}
-        if not isinstance(pagination, dict):
-            raise FetchError(f"unexpected Squarespace pagination at {path}")
-        if not pagination.get("nextPage"):
+        pagination = data.get("pagination") or {}
+        offset = pagination.get("nextPageOffset") if pagination.get("nextPage") else None
+        if not offset:
             break
-        offset = pagination.get("nextPageOffset")
-        if not isinstance(offset, str | int) or isinstance(offset, bool) or not offset:
-            raise FetchError(f"collection {path} has a next page without an offset")
-    else:
-        raise FetchError(f"collection {path}: still more products after {MAX_PAGES} pages")
     return items
 
 

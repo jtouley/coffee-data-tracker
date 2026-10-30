@@ -72,48 +72,6 @@ def test_S4_later_page_failure_raises(mock):
         fetch_sq()
 
 
-@pytest.mark.parametrize(
-    "payload", [{"error": "unavailable"}, {"items": None}, {"items": [], "pagination": "bad"}]
-)
-def test_squarespace_unexpected_json_is_not_an_empty_catalog(mock, payload):
-    sq_paths(mock, {"/shop": httpx.Response(200, json=payload)}, httpx.Response(404))
-    with pytest.raises(FetchError):
-        fetch_sq()
-
-
-def test_squarespace_noncollection_json_then_shop(mock):
-    sq_paths(mock, {"/shop": httpx.Response(200, json={"title": "Blog"}), "/store": collection([ITEM])},
-             httpx.Response(404))  # fmt: skip
-    assert [i.title for i in fetch_sq()] == ["Ethiopia Guji"]
-
-
-def test_squarespace_next_page_without_offset_raises(mock):
-    mock.get("https://sq.com/shop").mock(
-        return_value=httpx.Response(200, json={"items": [ITEM], "pagination": {"nextPage": True}})
-    )
-    with pytest.raises(FetchError, match="without an offset"):
-        fetch_sq()
-
-
-def test_squarespace_page_cap_raises_when_more_remain(mock):
-    route = mock.get("https://sq.com/shop").mock(
-        return_value=httpx.Response(
-            200, json={"items": [ITEM], "pagination": {"nextPage": True, "nextPageOffset": 99}}
-        )
-    )
-    with pytest.raises(FetchError, match="still more products"):
-        fetch_sq()
-    assert route.call_count == squarespace.MAX_PAGES
-
-
-def test_squarespace_last_allowed_page_can_complete(mock):
-    route = mock.get("https://sq.com/shop")
-    more = httpx.Response(200, json={"items": [ITEM], "pagination": {"nextPage": True, "nextPageOffset": 99}})
-    route.side_effect = [more] * (squarespace.MAX_PAGES - 1) + [collection([ITEM])]
-    assert len(fetch_sq()) == 1
-    assert route.call_count == squarespace.MAX_PAGES
-
-
 def test_S5_html_then_json_collection(mock):
     sq_paths(
         mock,

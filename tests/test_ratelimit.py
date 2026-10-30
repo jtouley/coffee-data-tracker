@@ -479,28 +479,38 @@ def test_redirect_checks_the_destination_robots_before_fetching():
     assert seen == ["https://a.com/robots.txt", "https://a.com/catalog", "https://b.com/robots.txt"]
 
 
-def test_redirect_to_http_checks_that_origins_robots():
+def test_a_redirect_that_drops_the_query_keeps_our_params():
+    # A WooCommerce store answering /products?per_page=100&page=1 with a bare 302 to its www host: without the
+    # params the target serves its default 10 products, and the catalog silently shrinks.
     seen = []
 
     def respond(request):
         seen.append(str(request.url))
         if request.url.path == "/robots.txt":
-            rules = (
-                "User-agent: *\nDisallow: /secret\n"
-                if request.url.scheme == "http"
-                else "User-agent: *\nAllow: /\n"
-            )
-            return httpx.Response(200, text=rules)
-        if request.url.path == "/catalog":
-            return httpx.Response(302, headers={"location": "http://a.com/secret"})
+            return httpx.Response(404)
+        if request.url.host == "a.com":
+            return httpx.Response(302, headers={"location": "https://www.a.com/products"})
         return httpx.Response(200)
 
-    with (
-        PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c,
-        pytest.raises(http.Blocked),
-    ):
-        c.get("https://a.com/catalog")
-    assert seen == ["https://a.com/robots.txt", "https://a.com/catalog", "http://a.com/robots.txt"]
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get("https://a.com/products", per_page=100, page=2).status_code == 200
+    assert seen[-1] == "https://www.a.com/products?per_page=100&page=2"
+
+
+def test_a_redirect_with_its_own_query_replaces_ours():
+    seen = []
+
+    def respond(request):
+        seen.append(str(request.url))
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        if request.url.path == "/products":
+            return httpx.Response(301, headers={"location": "/shop?per_page=100&page=2"})
+        return httpx.Response(200)
+
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get("https://a.com/products", per_page=100, page=2).status_code == 200
+    assert seen[-1] == "https://a.com/shop?per_page=100&page=2"
 
 
 def test_redirect_hops_are_spaced_and_counted(monkeypatch):

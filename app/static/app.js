@@ -30,7 +30,6 @@ function store(mode, fn) {
 class Rejected extends Error {} // the server said no (a 4xx other than 401/403/408/429): retrying won't help
 class Held extends Error {} // the server refused for now (403): the entry stays on the phone and is sent again
 const why = (err) => (err instanceof Rejected || err instanceof Held ? err.message : OFFLINE);
-const queuedReason = (err) => err instanceof Held ? err.message : "It’ll sync when you’re back online.";
 
 // Only a 2xx removes an entry. No connection, 401 (sign in again), 408, 429 and 5xx keep it and retry later; any
 // other 4xx moves it to the "Couldn't save" list on screen, so a write is never dropped without the person seeing.
@@ -48,86 +47,44 @@ function retryAfter(r) {
 const sending = new Map(); // key -> the delivery in flight, so Undo can wait for it instead of racing it
 const refused = new Map(); // key -> why the server refused it (4xx), so a view doesn't then say "Synced"
 
-// Another tab may replace or remove an entry while this request is in flight. Only change the version sent.
-async function settle(entry, change) {
-  let changed = false;
-  await store("readwrite", (s) => {
-    const req = s.get(entry.key);
-    req.onsuccess = () => {
-      const current = req.result;
-      if (!current || (current.version ?? null) !== (entry.version ?? null)) return;
-      if (change === null) s.delete(entry.key);
-      else s.put({ ...current, ...change });
-      changed = true;
-    };
-    return req;
-  });
-  return changed;
-}
-
-async function prepare(entry) {
-  let ready = null;
-  await store("readwrite", (s) => {
-    const req = s.get(entry.key);
-    req.onsuccess = () => {
-      const current = req.result;
-      if (!current) return;
-      if (entry.version) {
-        if (current.version !== entry.version) return;
-      } else {
-        // Entries from an older app have no version. Verify what we read is still there, then give it one.
-        if (current.version || current.at !== entry.at || current.user !== entry.user || current.url !== entry.url ||
-            JSON.stringify(current.body) !== JSON.stringify(entry.body)) return;
-        current.version = uuid();
-        s.put(current);
-      }
-      ready = current;
-    };
-    return req;
-  });
-  return ready;
-}
-
 function deliver(entry) {
-  // Serialize same-key writes, but never return an earlier write's result to a newer save.
-  const previous = sending.get(entry.key);
-  const p = (async () => {
-    if (previous) await previous.catch(() => {});
-    const ready = await prepare(entry);
-    if (!ready) throw new Error("This save changed while it was waiting.");
-    return deliverOnce(ready);
-  })().finally(() => { if (sending.get(entry.key) === p) sending.delete(entry.key); });
+  // One delivery per entry at a time: a direct send and a flush on reconnect can reach the same entry together.
+  if (sending.has(entry.key)) return sending.get(entry.key);
+  const p = deliverOnce(entry).finally(() => sending.delete(entry.key));
   sending.set(entry.key, p);
   return p;
 }
 
 async function deliverOnce(entry) {
   // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
+  // X-Expected-User binds the write to the account that made it: after an account switch (another tab, a sign-out)
+  // the server answers 403 and the entry is held until that person signs in again. An entry from before entries
+  // carried an account goes as the signed-in person, as it always did (mine() already counts it as theirs).
   const r = await fetch(entry.url, {
     method: "POST",
-    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch", "X-Expected-User": entry.user },
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch", "X-Expected-User": entry.user ?? ME },
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
-    await settle(entry, null);
+    await store("readwrite", (s) => s.delete(entry.key));
     return r.json();
   }
   const detail = (await r.json().catch(() => ({}))).detail;
   const reason = Array.isArray(detail) ? detail.join(" ") : detail || r.statusText;
   if (RETRY.has(r.status) || r.status >= 500) {
-    // A 403 may be an account mismatch or an origin check. Keep the reason with the entry across pages.
-    if (r.status === 403) await settle(entry, { held: reason });
-    const err = r.status === 403 ? new Held(reason || "The server refused this for now.") : new Error(reason);
+    // 403 is the origin check, which a proxy can trip by mistake: kept, and the person is told why.
+    const err = r.status === 403 ? new Held("The server refused this for now. It’s kept on this phone and sent again later.") : new Error(reason);
     err.wait = retryAfter(r);
     throw err;
   }
   // Refused for good: kept, marked, and shown, never silently dropped.
-  if (await settle(entry, { failed: reason || `Error ${r.status}` })) refused.set(entry.key, reason);
+  await store("readwrite", (s) => s.put({ ...entry, failed: reason || `Error ${r.status}` }));
+  refused.set(entry.key, reason);
   throw new Rejected(reason);
 }
 
 async function send(key, url, body, blob = null) {
-  const entry = { key, url, body, blob, at: Date.now(), user: ME, version: uuid() };
+  const entry = { key, url, body, blob, at: Date.now(), user: ME };
   await store("readwrite", (s) => s.put(entry));
   try {
     return await deliver(entry);
@@ -137,7 +94,7 @@ async function send(key, url, body, blob = null) {
 }
 
 async function mine() {
-  return (await store("readonly", (s) => s.getAll())).filter((e) => ME && e.user === ME);
+  return (await store("readonly", (s) => s.getAll())).filter((e) => ME && (e.user ?? ME) === ME);
 }
 
 function later(wait) {
@@ -178,41 +135,15 @@ const SYNCED = '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="tru
 
 async function showSync() {
   const all = await mine();
-  const unassigned = ME && (await store("readonly", (s) => s.getAll())).some((e) => e.user == null);
-  const box = document.querySelector("[data-unassigned]");
-  if (box) box.hidden = !unassigned;
-  const held = all.find((e) => e.held);
-  const heldBox = document.querySelector("[data-held]");
-  if (heldBox) {
-    heldBox.hidden = !held;
-    heldBox.querySelector("p").textContent = held ? `A save is kept on this phone. ${held.held}` : "";
-  }
   const n = all.filter((e) => !e.failed).length;
   for (const el of document.querySelectorAll("[data-sync]")) {
     if (n) el.textContent = `${n} waiting to sync`;
-    else if (unassigned) el.textContent = "Older saves need an account";
     else if ("quiet" in el.dataset) el.textContent = ""; // where nothing was waiting, nothing to say
     else el.innerHTML = SYNCED;
   }
-  if (!n && !unassigned) document.dispatchEvent(new Event("synced"));
+  if (!n) document.dispatchEvent(new Event("synced"));
   showFailed(all.filter((e) => e.failed));
 }
-
-document.querySelector("[data-assign]")?.addEventListener("click", (e) => confirmTap(e.currentTarget, async () => {
-  // Claim only entries still unassigned inside one transaction: another tab may have claimed them already.
-  await store("readwrite", (s) => {
-    const cursor = s.openCursor();
-    cursor.onsuccess = () => {
-      const row = cursor.result;
-      if (!row) return;
-      if (row.value.user == null) row.update({ ...row.value, user: ME, version: uuid() });
-      row.continue();
-    };
-    return cursor;
-  });
-  await showSync();
-  flush();
-}));
 
 const KIND = { shot: "A shot", retract: "Undoing a shot", restore: "Bringing a shot back", bag: "A bag", photo: "A bag photo", equipment: "Equipment" };
 
@@ -494,12 +425,12 @@ function logShot(form) {
       }
       tick(8);
       setTimeout(() => tick(8), 60);
-      offlineSaved(body, err); // it's in the outbox: say so, and don't leave the form armed for a second save
+      offlineSaved(body); // it's in the outbox: say so, and don't leave the form armed for a second save
     }
   });
 
   // Saved with no connection: what was saved, described from the form alone (no server logic copied here).
-  function offlineSaved(b, err) {
+  function offlineSaved(b) {
     const view = document.querySelector("[data-offline-saved]");
     const o = (k) => view.querySelector(`[data-o="${k}"]`);
     const now = new Date();
@@ -508,7 +439,6 @@ function logShot(form) {
     o("dose").textContent = `${b.dose_g.toFixed(1)} → ${b.yield_g.toFixed(1)}`;
     o("time").textContent = `${b.time_s ?? "–"}`;
     o("grind").textContent = `Grind ${b.grinder_setting} · ${view.dataset.grinder} · rated ${b.rating}`;
-    if (err instanceof Held) o("summary").textContent = `Saved on this phone. ${err.message}`;
     // The same tag as Saved.
     const tag = o("taste");
     tag.className = `taste ${b.taste || "none"}`;
@@ -674,7 +604,7 @@ function bagEdit(form) {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);
       go(form.dataset.next, `Bag saved: ${coffee}`);
     } catch (err) {
-      if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. ${queuedReason(err)}`);
+      if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It’ll sync when you’re back online.`);
       hint(form, err.message);
       save.disabled = false;
     }
@@ -713,7 +643,7 @@ function newBag(root) {
     } catch (err) {
       // Queued: it's saved on the phone, so on to Today, saying so. The kept Log shot page still has the last
       // bag on it, so it isn't where to go until this one syncs.
-      if (!(err instanceof Rejected)) return go("/", `Bag saved on this phone: ${name}. ${queuedReason(err)}`);
+      if (!(err instanceof Rejected)) return go("/", `Bag saved on this phone: ${name}. It’ll sync when you’re back online.`);
       hint(where, why(err));
       saving = false;
       for (const b of root.querySelectorAll("button")) b.disabled = false;
@@ -855,6 +785,8 @@ function newBag(root) {
       });
       const body = await r.json().catch(() => ({}));
       if (mine !== attempt) return;
+      // 403 (another account signed in meanwhile, or the origin check): held in the outbox like an offline photo.
+      if (r.status === 403) throw new Held(body.detail || "The server refused this for now.");
       if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
@@ -869,8 +801,8 @@ function newBag(root) {
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
       if (mine !== attempt) return;
-      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
-      await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME, version: uuid() }));
+      // Offline (or held): the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
       read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
       showSync();
       root.querySelector("[data-photo-waiting]").hidden = false;
@@ -923,7 +855,7 @@ function equipment(form) {
       go(next, `${body.name} ${did}`);
     } catch (err) {
       if (err instanceof Rejected) return hint(form, why(err));
-      go(next, why(err));
+      go(next, OFFLINE);
     }
   }
   form.addEventListener("submit", (e) => {
@@ -1058,7 +990,7 @@ function retractShot(b) {
       }
       // No connection: the retraction waits in the outbox and goes through later, so it's done as far as this
       // screen goes (#18-3), and Undo can still take it back.
-      strip.firstChild.textContent = gone = `Retracted on this phone. ${err instanceof Held ? err.message : "It syncs when you’re back online."}`;
+      strip.firstChild.textContent = gone = "Retracted on this phone. It syncs when you’re back online.";
     }
     tick(8);
     actions.hidden = true;

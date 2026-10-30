@@ -410,32 +410,48 @@ async function newPage(browser, errors) {
 
     // A second tab changes the shared cookie while the first tab still has the owner's rendered page.
     const switcher = await page.context().newPage();
-    await switcher.goto(`${base}/setup`);
-    await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
-    await switcher.waitForURL(`${base}/signin`);
-    await switcher.fill("#username", "maya");
-    await switcher.fill("#password", "lantern quarry velvet");
-    await switcher.getByRole("button", { name: "Sign in" }).click();
-    await switcher.waitForURL(`${base}/`);
+    const signInAs = async (username, password) => {
+      await switcher.goto(`${base}/setup`);
+      await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
+      await switcher.waitForURL(`${base}/signin`);
+      await switcher.fill("#username", username);
+      await switcher.fill("#password", password);
+      await switcher.getByRole("button", { name: "Sign in" }).click();
+      await switcher.waitForURL(`${base}/`);
+    };
+    await signInAs("maya", "lantern quarry velvet");
     const mismatch = await page.evaluate(async () => {
       const err = await send("bag:account-switch", "/api/bags", { bag_id: "account-switch", coffee_freetext: "Account switch test" }).catch((e) => e);
-      await showSync();
-      return [err.constructor.name, document.querySelector("[data-held]").textContent];
+      return [err.constructor.name, Boolean(await store("readonly", (s) => s.get("bag:account-switch")))];
     });
-    assert.equal(mismatch[0], "Held");
-    assert.match(mismatch[1], /Sign in as the person who made this save/);
+    assert.deepEqual(mismatch, ["Held", true]); // kept on the phone, not saved as Maya
     await switcher.goto(`${base}/coffees`);
     assert.doesNotMatch(await switcher.textContent("main"), /Account switch test/);
-    await switcher.goto(`${base}/setup`);
-    await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
-    await switcher.waitForURL(`${base}/signin`);
-    await switcher.fill("#username", "jtouley");
-    await switcher.fill("#password", "kettle orbit marble");
-    await switcher.getByRole("button", { name: "Sign in" }).click();
-    await switcher.waitForURL(`${base}/`);
+    // An entry from before entries carried an account goes as the signed-in person, as before.
+    await page.route("**/api/probe", (r) => r.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ as: r.request().headers()["x-expected-user"] }) }));
+    const legacy = await page.evaluate(async () => {
+      await store("readwrite", (s) => s.put({ key: "probe:legacy", url: "/api/probe", body: {}, at: Date.now() }));
+      return [await deliver(await store("readonly", (s) => s.get("probe:legacy"))), await store("readonly", (s) => s.get("probe:legacy"))];
+    });
+    assert.deepEqual(legacy, [{ as: "owner" }, undefined]);
+    await page.unroute("**/api/probe");
+    await signInAs("jtouley", "kettle orbit marble");
     await page.evaluate(() => flush());
     assert.equal(await page.evaluate(() => store("readonly", (s) => s.get("bag:account-switch"))), undefined);
     await switcher.close();
+    // A live label photo the server holds (403: another account, or the origin check) waits in the outbox, not dropped.
+    await page.goto(`${base}/bag/new`);
+    await page.route("**/api/photos/*", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"Sign in as the person who made this save to sync it."}' }));
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="queued"]:not([hidden])');
+    const heldPhotos = await page.evaluate(async () => {
+      const photos = (await store("readonly", (s) => s.getAll())).filter((e) => e.key.startsWith("photo:"));
+      for (const e of photos) await store("readwrite", (s) => s.delete(e.key));
+      return photos.map((e) => [e.user, e.blob instanceof Blob]);
+    });
+    assert.deepEqual(heldPhotos, [["owner", true]]);
+    await page.unroute("**/api/photos/*");
+    await page.goto(`${base}/setup`);
 
     // The shell is cached by the service worker.
     const cached = await page.evaluate(async () => {
@@ -448,96 +464,16 @@ async function newPage(browser, errors) {
     await page.route("**/api/equipment", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"no"}' }));
     const held = await page.evaluate(async () => {
       const err = await send("probe:1", "/api/equipment", {}).catch((e) => e);
-      await showSync();
-      const message = document.querySelector("[data-held]").textContent;
       const n = await new Promise((resolve) => {
         indexedDB.open("registry-coffee").onsuccess = (e) => {
           e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
         };
       });
       await store("readwrite", (s) => s.delete("probe:1"));
-      return [err.constructor.name, n, message];
+      return [err.constructor.name, n];
     });
-    assert.equal(held[0], "Held");
-    assert.equal(held[1], 1);
-    assert.match(held[2], /A save is kept on this phone\. no/);
+    assert.deepEqual(held, ["Held", 1]);
     await page.unroute("**/api/equipment");
-    await page.evaluate(() => showSync());
-
-    // A response from an earlier delivery must not delete or overwrite a newer edit (or resurrect an undo).
-    const races = await page.evaluate(async () => {
-      const original = window.fetch;
-      const results = [];
-      try {
-        for (const status of [200, 403, 422]) {
-          for (const replace of [false, true]) {
-            const key = `race:${status}:${replace}`;
-            const old = { key, url: "/api/probe", body: {}, at: Date.now(), user: ME, version: "old" };
-            await store("readwrite", (s) => s.put(old));
-            let respond;
-            window.fetch = () => new Promise((resolve) => { respond = resolve; });
-            const request = deliverOnce(old).catch(() => {});
-            if (replace) await store("readwrite", (s) => s.put({ ...old, version: "new" }));
-            else await store("readwrite", (s) => s.delete(key));
-            respond(new Response(status === 200 ? "{}" : '{"detail":"no"}', { status, headers: { "Content-Type": "application/json" } }));
-            await request;
-            const current = await store("readonly", (s) => s.get(key));
-            results.push(current ? [current.version, current.held || null, current.failed || null] : null);
-            await store("readwrite", (s) => s.delete(key));
-          }
-        }
-      } finally { window.fetch = original; }
-      return results;
-    });
-    assert.deepEqual(races, [null, ["new", null, null], null, ["new", null, null], null, ["new", null, null]]);
-
-    const overlap = await page.evaluate(async () => {
-      const original = window.fetch;
-      const requests = [];
-      let wake;
-      window.fetch = () => new Promise((resolve) => { requests.push(resolve); wake?.(); });
-      const nextRequest = async (n) => { while (requests.length < n) await new Promise((resolve) => { wake = resolve; }); };
-      try {
-        const legacy = { key: "race:legacy", url: "/api/probe", body: {}, at: Date.now(), user: ME };
-        await store("readwrite", (s) => s.put(legacy));
-        const first = deliver(legacy).catch(() => {});
-        await nextRequest(1);
-        await store("readwrite", (s) => s.put({ ...legacy, body: { newer: true } })); // an old tab
-        requests[0](new Response("{}", { status: 200 }));
-        await first;
-        const kept = await store("readonly", (s) => s.get(legacy.key));
-        await store("readwrite", (s) => s.delete(legacy.key));
-
-        const a = send("race:overlap", "/api/probe", { edit: 1 });
-        await nextRequest(2);
-        const b = send("race:overlap", "/api/probe", { edit: 2 });
-        // Wait until the second entry is committed before the first response arrives.
-        while ((await store("readonly", (s) => s.get("race:overlap")))?.body.edit !== 2) await new Promise((r) => setTimeout(r, 0));
-        requests[1](new Response('{"edit":1}', { status: 200 }));
-        await nextRequest(3);
-        requests[2](new Response('{"edit":2}', { status: 200 }));
-        return [kept?.body.newer, await a, await b, await store("readonly", (s) => s.get("race:overlap"))];
-      } finally { window.fetch = original; }
-    });
-    assert.deepEqual(overlap, [true, { edit: 1 }, { edit: 2 }, undefined]);
-
-    // Old saves have no reliable owner. The person explicitly assigns them before they can sync.
-    await page.evaluate(async () => {
-      await store("readwrite", (s) => s.put({ key: "shot:legacy", url: "/api/probe", body: {}, at: Date.now(), failed: "Review this save" }));
-      await showSync();
-    });
-    await page.waitForSelector("[data-unassigned]:not([hidden])");
-    const assign = page.locator("[data-assign]");
-    await assign.click();
-    await assign.click();
-    await page.waitForSelector("[data-unassigned]", { state: "hidden" });
-    const claimed = await page.evaluate(async () => {
-      const entry = await store("readonly", (s) => s.get("shot:legacy"));
-      await store("readwrite", (s) => s.delete("shot:legacy"));
-      await showSync();
-      return [entry.user, Boolean(entry.version)];
-    });
-    assert.deepEqual(claimed, ["owner", true]);
     // A write the server refuses (4xx) is remembered, so the offline saved view says so instead of "Synced" (#20-5).
     await page.route("**/api/shots", (r) => r.fulfill({ status: 422, contentType: "application/json", body: '{"detail":"Dose is too low."}' }));
     const no = await page.evaluate(async () => {

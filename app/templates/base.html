@@ -18,8 +18,6 @@
 </head>
 <body>
 <main class="screen">
-{% if me %}<section class="failed" data-unassigned hidden role="alert"><h2 class="label">Older saves on this phone</h2><p class="meta">These saves have no account recorded, so they can’t sync yet. Sign in as the person who made them before assigning them to this account.</p><button class="btn text" type="button" data-assign data-confirm="Tap again to assign these saves to this account">Assign saves to this account</button></section>{% endif %}
-<section class="failed" data-held hidden role="alert"><h2 class="label">Waiting to sync</h2><p class="meta"></p></section>
 <section class="failed" data-failed hidden role="alert"><h2 class="label">Couldn’t save</h2><p class="meta">The server refused these, so they weren’t saved. Fix them and save again, or dismiss them.</p><ul></ul></section>
 <p class="notice" data-notice role="status" hidden></p>
 {% block main %}{% endblock %}

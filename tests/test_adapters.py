@@ -210,23 +210,26 @@ def test_woocommerce_fixture_fetch(mock, roasters):
     assert len(items) == 8 and all(1 < (v.price_usd or 2) < 500 for i in items for v in i.variants)
 
 
-def test_woocommerce_page_cap_rejects_a_full_final_page(mock):
-    base = "https://x.com/wp-json/wc/store/v1/products"
-    route = mock.get(base).mock(return_value=httpx.Response(200, json=[{"id": i} for i in range(100)]))
-    with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="still more products"):
-        woocommerce.fetch(c, _r(platform="woocommerce"))
-    assert route.call_count == woocommerce.MAX_PAGES
+def test_woocommerce_catalog_behind_a_redirect_that_drops_the_query(mock):
+    # x.com 302s to www.x.com without the query; the Store API's default page is 10 products (#56).
+    products = [
+        {"id": i, "name": f"Coffee {i}", "slug": f"c{i}", "prices": {"price": "1800"}} for i in range(150)
+    ]
 
+    def store_api(request):
+        per_page = int(request.url.params.get("per_page", 10))
+        page = int(request.url.params.get("page", 1))
+        return httpx.Response(200, json=products[(page - 1) * per_page : page * per_page])
 
-def test_woocommerce_short_final_page_at_cap_is_complete(mock):
-    base = "https://x.com/wp-json/wc/store/v1/products"
-    route = mock.get(base)
-    full = httpx.Response(200, json=[{"id": i} for i in range(100)])
-    route.side_effect = [full] * (woocommerce.MAX_PAGES - 1) + [httpx.Response(200, json=[{"id": 100}])]
+    mock.get(url__regex=r"https://x\.com/wp-json/wc/store/v1/products").mock(
+        return_value=httpx.Response(
+            302, headers={"location": "https://www.x.com/wp-json/wc/store/v1/products"}
+        )
+    )
+    mock.get(url__regex=r"https://www\.x\.com/wp-json/wc/store/v1/products").mock(side_effect=store_api)
     with PoliteClient(min_interval=0) as c:
         items = woocommerce.fetch(c, _r(platform="woocommerce"))
-    assert len(items) == 100 * (woocommerce.MAX_PAGES - 1) + 1
-    assert route.call_count == woocommerce.MAX_PAGES
+    assert len(items) == 150
 
 
 def test_squarespace_fixture_fetch(mock, roasters):

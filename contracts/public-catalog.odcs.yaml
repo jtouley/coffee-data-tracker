@@ -440,8 +440,7 @@ customProperties:
 - property: max_run_age_days
   value: 8
 - property: servingPolicy
-  value: A release is served only when every error-severity quality rule passes; warnings do not block serving.
-    Otherwise the previous release stays served.
+  value: A release is served only when every quality rule passes; otherwise the previous release stays served.
 support:
 - channel: issues
   url: https://github.com/jtouley/coffee-data-tracker/issues
