@@ -158,7 +158,8 @@ def fuzzy_match_coffee(text: str, limit: int | None = 3, lake: Lake | None = Non
         return []
     # partial_token_set_ratio gives 100 to any title sharing one word with the text, so in a ~40k catalog its 300
     # are an arbitrary few of thousands of ties ("Finca El Puente - Honey Processed" lost to other roasters'
-    # "Honey Process"). token_set_ratio's 300 are added, so the coffee the text names is always scored.
+    # "Honey Process"). token_set_ratio's 300 are added: it ties far less on text that names a coffee, but short,
+    # generic text ("Ethiopia Guji") still ties across many labels, so even this pool can miss the coffee meant.
     pool = {
         key: label
         for scorer in (fuzz.partial_token_set_ratio, fuzz.token_set_ratio)

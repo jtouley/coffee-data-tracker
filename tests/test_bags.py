@@ -641,11 +641,18 @@ def test_a_photo_lock_goes_when_its_uploads_end(catalog, tmp_path, monkeypatch):
     assert app.state.photo_locks == {}
 
 
-def test_a_coffee_crowded_by_shared_words_is_still_matched(lake):
+@pytest.fixture
+def uncached():
+    """The catalog cache emptied before and after, even when the test fails."""
+    shots._catalog_cache.clear()
+    yield
+    shots._catalog_cache.clear()
+
+
+def test_a_coffee_crowded_by_shared_words_is_still_matched(lake, uncached):
     """The owner's photo-matched "Finca El Puente - Gesha Variety", edited to "- Honey Processed". In the real
     catalog (about 40k coffees) that matched nothing, with or without the roaster typed: hundreds of other
     roasters' lots share a word with it, and they crowded it out of the candidates scored."""
-    shots._catalog_cache.clear()
     con = lake.connect()
     countries = ["Colombia", "Honduras", "Costa Rica", "Brazil", "Peru", "El Salvador", "Guatemala", "Panama"]
     rows = [(f"r{i}:1", f"Roaster {i}", f"{countries[i % 8]} Honey Process", True) for i in range(400)]
@@ -673,4 +680,3 @@ def test_a_coffee_crowded_by_shared_words_is_still_matched(lake):
     # Text that names another roaster is matched across the catalog, as before.
     other = edited | {"coffee_freetext": "Onyx Geometry", "coffee_id": None, "match_score": None}
     assert c.post("/api/bags", json=other, headers=W).json()["coffee_id"] == "onyx:1"
-    shots._catalog_cache.clear()
