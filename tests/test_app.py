@@ -353,6 +353,10 @@ def test_switch_open_bag_uses_its_own_shots_and_stays_selected(client):
     client.get("/bag/bag2/use")
     assert prefill(client)["bag_id"] == "bag2" and prefill(client)["grinder_setting"] == 20
     assert client.get("/bag/bag1/use", headers={"x-test-user": "bob"}).status_code == 404
-    client.post("/api/bags", json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"}, headers=W)
+    client.post(
+        "/api/bags",
+        json={"bag_id": "bag2", "coffee_freetext": "Other coffee", "finished_on": "2026-10-28"},
+        headers=W,
+    )
     assert prefill(client)["bag_id"] == "bag1"
     assert client.get("/bag/bag2/use").status_code == 404

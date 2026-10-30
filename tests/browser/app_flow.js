@@ -131,6 +131,10 @@ async function newPage(browser, errors) {
     await page.locator('[data-rating] [data-v="5"]').click();
     await shoot(page, "log-shot");
 
+    // A bag remembered on this phone that the server no longer selects (finished on another device, a cleared
+    // cookie, a failed switch) never blocks the save: the server's bag wins.
+    await page.evaluate(() => localStorage.setItem(`selected-bag:${document.querySelector('meta[name="user"]').content}`,
+      JSON.stringify({ id: "finished-elsewhere", at: Date.now() })));
     await page.getByRole("button", { name: "Save shot" }).click();
     await page.waitForURL(/\/saved\/.+\?new=1$/);
     const saved = await page.textContent("main");

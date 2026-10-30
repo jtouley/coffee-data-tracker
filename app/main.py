@@ -491,8 +491,12 @@ def create_app(
             raise HTTPException(404, "no such open bag")
         response = RedirectResponse("/log" if next == "log" else "/", status_code=303)
         response.set_cookie(
-            "selected_bag", bag.bag_id, max_age=365 * 24 * 3600, httponly=True,
-            samesite="lax", secure=request.url.scheme == "https",
+            "selected_bag",
+            bag.bag_id,
+            max_age=365 * 24 * 3600,
+            httponly=True,
+            samesite="lax",
+            secure=request.url.scheme == "https",
         )
         return response
 

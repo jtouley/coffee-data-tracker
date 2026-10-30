@@ -27,9 +27,18 @@ function selectedBag() {
 function rememberBag(id, at = Date.now()) {
   try { localStorage.setItem(`selected-bag:${ME}`, JSON.stringify({ id, at })); } catch { /* storage is optional */ }
 }
-document.addEventListener("click", (event) => {
+// Choosing a bag is remembered on this phone only once the server has accepted it: a failed /use (offline, a bag
+// finished elsewhere) leaves the old value, and the server's selection is what Log shot uses either way.
+document.addEventListener("click", async (event) => {
   const link = event.target.closest("[data-select-bag]");
-  if (link) rememberBag(link.dataset.selectBag);
+  if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  let r = null;
+  try { r = await fetch(link.href, { headers: { "X-Requested-With": "fetch" } }); } catch { /* offline: navigate below */ }
+  if (!r || !r.ok) return location.assign(link.href);
+  rememberBag(link.dataset.selectBag);
+  await clearBagPages().catch(() => {});
+  location.assign(r.url);
 });
 
 const DB = new Promise((resolve, reject) => {
@@ -404,10 +413,6 @@ function logShot(form) {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const selected = selectedBag();
-    if (!p.correct && selected && selected.id !== p.bag_id) {
-      return hint(form, "The coffee changed. Reopen Log shot to continue.");
-    }
     if (started !== null) stopTimer();
     const r = pressed(rating);
     if (!r) return hint(form, "Pick a rating to save.");
