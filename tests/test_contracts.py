@@ -93,7 +93,10 @@ def test_quality_rules_name_dbt_tests_that_exist():
 
 def test_thresholds_are_the_ones_dbt_uses():
     custom = {p["property"]: p["value"] for p in ODCS["customProperties"]}
-    for var in ("volume_tolerance", "min_attempted_share", "min_ok_share", "max_run_age_days"):
+    for var in (
+        "volume_tolerance", "min_attempted_share", "min_ok_share", "max_run_age_days", "min_adapter_ok_share",
+        "min_adapter_roasters", "band_k", "band_min_builds",
+    ):  # fmt: skip
         assert custom[var] == DBT_VARS[var], var
     sla = {p["property"]: p for p in ODCS["slaProperties"]}
     assert (sla["latency"]["value"], sla["latency"]["unit"]) == (DBT_VARS["max_run_age_days"], "d")
