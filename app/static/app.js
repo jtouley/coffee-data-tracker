@@ -57,9 +57,12 @@ function deliver(entry) {
 
 async function deliverOnce(entry) {
   // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
+  // X-Expected-User binds the write to the account that made it: after an account switch (another tab, a sign-out)
+  // the server answers 403 and the entry is held until that person signs in again. An entry from before entries
+  // carried an account goes as the signed-in person, as it always did (mine() already counts it as theirs).
   const r = await fetch(entry.url, {
     method: "POST",
-    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch" },
+    headers: { "Content-Type": entry.blob ? entry.blob.type || "image/jpeg" : "application/json", "X-Requested-With": "fetch", "X-Expected-User": entry.user ?? ME },
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
@@ -846,11 +849,13 @@ function newBag(root) {
     try {
       const r = await fetch(`/api/photos/${id}`, {
         method: "POST",
-        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch" },
+        headers: { "Content-Type": photo.type || "image/jpeg", "X-Requested-With": "fetch", "X-Expected-User": ME },
         body: photo,
       });
       const body = await r.json().catch(() => ({}));
       if (mine !== attempt) return;
+      // 403 (another account signed in meanwhile, or the origin check): held in the outbox like an offline photo.
+      if (r.status === 403) throw new Held(body.detail || "The server refused this for now.");
       if (!r.ok) return failed("Couldn’t use that photo", body.detail || "Try again, or type the coffee.", r.status < 500);
       read = body;
       tick(8);
@@ -865,7 +870,7 @@ function newBag(root) {
       failed(body.status === "limit" ? "No more reads today" : "Couldn’t read the bag", why, canRetake);
     } catch {
       if (mine !== attempt) return;
-      // Offline: the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
+      // Offline (or held): the photo waits in the outbox and goes up with the bag; the server reads it when it arrives.
       await store("readwrite", (s) => s.put({ key: `photo:${id}`, url: `/api/photos/${id}`, body: null, blob: photo, at: Date.now(), user: ME }));
       read = { photo_id: id, raw: null, pending: true }; // not read yet: the server may match it later
       showSync();

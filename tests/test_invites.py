@@ -12,7 +12,7 @@ from app.auth import Sessions
 from app.main import create_app
 from coffeedata.lake import Lake
 
-W = {"X-Requested-With": "test"}
+W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 SETUP = "SETUP-CODE-1234"
 PW = "correct horse battery"
 
@@ -231,11 +231,12 @@ def test_invites_survive_a_restart(app, owner, accounts, lake):
     join(create_app(lake, Sessions(again)), code)
 
 
-def test_member_data_is_their_own(app, owner):
+def test_member_data_is_their_own(app, owner, accounts):
     maya = join(app, invite(owner)["code"])
-    for c, gid in ((owner, "g-own"), (maya, "g-maya")):
+    maya_id = next(a.user_id for a, _ in accounts.users.values() if a.username == "maya")
+    for c, gid, user_id in ((owner, "g-own", "owner"), (maya, "g-maya", maya_id)):
         r = c.post("/api/equipment", json={"equipment_id": gid, "kind": "grinder", "name": gid, "scale_min": 0,
-                                           "scale_max": 50, "scale_step": 1}, headers=W)  # fmt: skip
+                                           "scale_max": 50, "scale_step": 1}, headers=W | {"X-Expected-User": user_id})  # fmt: skip
         assert r.status_code == 200
     assert "g-maya" not in owner.get("/setup").text and "g-own" not in maya.get("/setup").text
     assert maya.get("/setup/gear/g-own", headers={"Accept": "text/html"}).status_code == 404

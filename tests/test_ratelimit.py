@@ -458,6 +458,108 @@ def test_a_robots_txt_redirect_to_a_dead_host_does_not_make_the_site_unreachable
             assert discover.probe_one(c, "a.com")["status"] == "robots_unavailable"  # asked again next run
 
 
+def test_redirect_checks_the_destination_robots_before_fetching():
+    seen = []
+
+    def respond(request):
+        seen.append(str(request.url))
+        if request.url.host == "a.com" and request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        if request.url.host == "a.com":
+            return httpx.Response(302, headers={"location": "https://b.com/secret"})
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nDisallow: /secret\n")
+        return httpx.Response(200)
+
+    with (
+        PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c,
+        pytest.raises(http.Blocked),
+    ):
+        c.get("https://a.com/catalog")
+    assert seen == ["https://a.com/robots.txt", "https://a.com/catalog", "https://b.com/robots.txt"]
+
+
+def test_a_redirect_that_drops_the_query_keeps_our_params():
+    # A WooCommerce store answering /products?per_page=100&page=1 with a bare 302 to its www host: without the
+    # params the target serves its default 10 products, and the catalog silently shrinks.
+    seen = []
+
+    def respond(request):
+        seen.append(str(request.url))
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        if request.url.host == "a.com":
+            return httpx.Response(302, headers={"location": "https://www.a.com/products"})
+        return httpx.Response(200)
+
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get("https://a.com/products", per_page=100, page=2).status_code == 200
+    assert seen[-1] == "https://www.a.com/products?per_page=100&page=2"
+
+
+def test_a_redirect_with_its_own_query_replaces_ours():
+    seen = []
+
+    def respond(request):
+        seen.append(str(request.url))
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        if request.url.path == "/products":
+            return httpx.Response(301, headers={"location": "/shop?per_page=100&page=2"})
+        return httpx.Response(200)
+
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get("https://a.com/products", per_page=100, page=2).status_code == 200
+    assert seen[-1] == "https://a.com/shop?per_page=100&page=2"
+
+
+def test_a_redirect_that_only_strips_the_query_does_not_loop():
+    seen = []
+
+    def respond(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        seen.append(str(request.url))
+        if request.url.query:
+            return httpx.Response(301, headers={"location": request.url.path})
+        return httpx.Response(200, json={"ok": 1})
+
+    with PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c:
+        assert c.get_json("https://a.com/products.json", limit=1) == {"ok": 1}
+    assert seen == ["https://a.com/products.json?limit=1", "https://a.com/products.json"]
+
+
+def test_redirect_hops_are_spaced_and_counted(monkeypatch):
+    clock = FakeClock()
+    monkeypatch.setattr(http.time, "monotonic", clock)
+    monkeypatch.setattr(http.time, "sleep", clock.sleep)
+    starts = []
+
+    def respond(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        starts.append(clock.t)
+        if request.url.path == "/one":
+            return httpx.Response(302, headers={"location": "/two"})
+        return httpx.Response(200)
+
+    with PoliteClient(transport=httpx.MockTransport(respond)) as c, c.track() as stats:
+        assert c.get("https://a.com/one").status_code == 200
+    assert starts == [1000.0, 1001.0]
+    assert stats.requests == 3 and stats.statuses[302] == 1 and stats.pages == 1
+
+
+def test_robots_redirect_loop_fails_closed(no_retry_sleep):
+    def respond(request):
+        return httpx.Response(302, headers={"location": "/robots.txt"})
+
+    with (
+        PoliteClient(min_interval=0, transport=httpx.MockTransport(respond)) as c,
+        pytest.raises(http.RobotsUnavailable, match="TooManyRedirects"),
+    ):
+        c.get("https://a.com/catalog")
+
+
 def test_our_own_pool_timing_out_is_not_remembered_against_the_host(no_retry_sleep):
     with respx.mock as m:
         robots = m.get("https://a.com/robots.txt")

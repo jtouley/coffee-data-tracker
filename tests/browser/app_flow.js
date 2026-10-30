@@ -45,7 +45,8 @@ async function noticeOf(page) {
 }
 
 async function newPage(browser, errors) {
-  const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
+  const page = await context.newPage();
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => { if (/Content Security Policy|Refused to/.test(m.text())) errors.push(m.text()); });
   return page;
@@ -425,6 +426,51 @@ async function newPage(browser, errors) {
     await other.close();
     await page.goto(`${base}/invite`);
     assert.match(await page.textContent("main"), /maya/);
+    await page.goto(`${base}/setup`);
+
+    // A second tab changes the shared cookie while the first tab still has the owner's rendered page.
+    const switcher = await page.context().newPage();
+    const signInAs = async (username, password) => {
+      await switcher.goto(`${base}/setup`);
+      await switcher.getByRole("button", { name: "Sign out", exact: true }).click();
+      await switcher.waitForURL(`${base}/signin`);
+      await switcher.fill("#username", username);
+      await switcher.fill("#password", password);
+      await switcher.getByRole("button", { name: "Sign in" }).click();
+      await switcher.waitForURL(`${base}/`);
+    };
+    await signInAs("maya", "lantern quarry velvet");
+    const mismatch = await page.evaluate(async () => {
+      const err = await send("bag:account-switch", "/api/bags", { bag_id: "account-switch", coffee_freetext: "Account switch test" }).catch((e) => e);
+      return [err.constructor.name, Boolean(await store("readonly", (s) => s.get("bag:account-switch")))];
+    });
+    assert.deepEqual(mismatch, ["Held", true]); // kept on the phone, not saved as Maya
+    await switcher.goto(`${base}/coffees`);
+    assert.doesNotMatch(await switcher.textContent("main"), /Account switch test/);
+    // An entry from before entries carried an account goes as the signed-in person, as before.
+    await page.route("**/api/probe", (r) => r.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ as: r.request().headers()["x-expected-user"] }) }));
+    const legacy = await page.evaluate(async () => {
+      await store("readwrite", (s) => s.put({ key: "probe:legacy", url: "/api/probe", body: {}, at: Date.now() }));
+      return [await deliver(await store("readonly", (s) => s.get("probe:legacy"))), await store("readonly", (s) => s.get("probe:legacy"))];
+    });
+    assert.deepEqual(legacy, [{ as: "owner" }, undefined]);
+    await page.unroute("**/api/probe");
+    await signInAs("jtouley", "kettle orbit marble");
+    await page.evaluate(() => flush());
+    assert.equal(await page.evaluate(() => store("readonly", (s) => s.get("bag:account-switch"))), undefined);
+    await switcher.close();
+    // A live label photo the server holds (403: another account, or the origin check) waits in the outbox, not dropped.
+    await page.goto(`${base}/bag/new`);
+    await page.route("**/api/photos/*", (r) => r.fulfill({ status: 403, contentType: "application/json", body: '{"detail":"Sign in as the person who made this save to sync it."}' }));
+    await page.setInputFiles("#photo", bagPhoto);
+    await page.waitForSelector('[data-step="queued"]:not([hidden])');
+    const heldPhotos = await page.evaluate(async () => {
+      const photos = (await store("readonly", (s) => s.getAll())).filter((e) => e.key.startsWith("photo:"));
+      for (const e of photos) await store("readwrite", (s) => s.delete(e.key));
+      return photos.map((e) => [e.user, e.blob instanceof Blob]);
+    });
+    assert.deepEqual(heldPhotos, [["owner", true]]);
+    await page.unroute("**/api/photos/*");
     await page.goto(`${base}/setup`);
 
     // The shell is cached by the service worker.

@@ -27,7 +27,7 @@ log = logging.getLogger(__name__)
 # about 3 requests/s) with 99% ok; the 2026-10-28 run, with one more page per store and 32 workers, went past
 # 4/s plus retries and was blocked. ~1,100 stores x ~3.3 requests (robots.txt, ~2.3 pages) is ~3,600
 # requests: about 20 minutes at 3/s, alongside the other platforms.
-# A redirect (apex to www, http to https) is more than one request to Shopify but counts once: fine at 3/s.
+# Every redirect hop uses the same platform budget, alongside per-host spacing.
 SHOPIFY_RPS = 3.0
 SHOPIFY_CONCURRENCY = 8
 

@@ -162,7 +162,7 @@ def test_retract_then_undo_brings_the_shot_back(world):
         c.post("/api/shots/b2/restore", json={}, headers=W).json()["written"] is False
     )  # a resend writes nothing
     assert app.state.store.shot("owner", "b2").time_s == 33
-    maya = W | {"x-test-user": "maya"}
+    maya = W | {"x-test-user": "maya", "X-Expected-User": "maya"}
     assert c.post("/api/shots/b2/restore", json={}, headers=maya).status_code == 404
 
 

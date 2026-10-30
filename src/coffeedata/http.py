@@ -12,7 +12,7 @@ from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING, Any
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 import httpx
 
@@ -31,6 +31,7 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # again. A site whose robots.txt always answers 5xx is never crawled: by design (RFC 9309 allows a 5xx to mean
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
+MAX_REDIRECTS = 20
 
 
 class FetchError(Exception):
@@ -91,7 +92,7 @@ class PoliteClient:
         self._client = httpx.Client(
             headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
             timeout=httpx.Timeout(timeout, pool=120.0),
-            follow_redirects=True,
+            follow_redirects=False,
             transport=transport,
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
@@ -175,7 +176,7 @@ class PoliteClient:
         ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
         parser = urllib.robotparser.RobotFileParser()
         try:
-            r = self._send_retrying(f"https://{host}/robots.txt", spaced=False, page=False)
+            r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
             raise RobotsUnavailable(f"robots.txt for {host} not sent ({type(e).__name__}: {e})") from e
         except httpx.HTTPError as e:
@@ -240,10 +241,41 @@ class PoliteClient:
             time.sleep(min(int(retry_after), 30) if retry_after.isdigit() else 2**attempt)
         raise ValueError("retries must be >= 1")
 
+    def _follow(self, url: str, params: dict | None = None, robots: bool = False) -> httpx.Response:
+        """Follow redirects ourselves so each catalog hop checks its own robots rules and host budget.
+
+        Robots redirects are the bootstrap exception: the redirected resource supplies the original host's rules,
+        so consulting those rules before fetching it would recurse. They are still spaced and limited per host.
+        """
+        history: list[httpx.Response] = []
+        bare = lambda u: urlparse(u)._replace(query="", fragment="").geturl()  # noqa: E731
+        # URLs (without query) that redirected us away while carrying our params.
+        sent_params: set[str] = set()
+        for hop in range(MAX_REDIRECTS + 1):
+            if not robots and not self._allowed(url):
+                raise Blocked(url)
+            r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
+            if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
+                r.history = history
+                return r
+            if hop == MAX_REDIRECTS:
+                raise httpx.TooManyRedirects(f"too many redirects for {url}", request=r.request)
+            target = urljoin(str(r.url), r.headers["location"])
+            if urlparse(target).scheme not in ("http", "https"):
+                raise httpx.UnsupportedProtocol(f"unsupported redirect URL {target}", request=r.request)
+            # A location with its own query replaces ours; one without keeps ours, so a redirect that drops
+            # page/per_page doesn't silently shrink a paged catalog. But never send our params back to a URL that
+            # redirected us away with them: a site that only strips the query would loop.
+            if params:
+                sent_params.add(bare(str(r.url)))
+            if urlparse(target).query or bare(target) in sent_params:
+                params = None
+            history.append(r)
+            url = target
+        raise AssertionError("unreachable")
+
     def get(self, url: str, **params: str | int | float | bool | None) -> httpx.Response:
-        if not self._allowed(url):
-            raise Blocked(url)
-        r = self._send_retrying(url, params or None)
+        r = self._follow(url, params or None)
         if r.status_code in RETRY_STATUSES:
             raise httpx.HTTPStatusError(f"{r.status_code}", request=r.request, response=r)
         return r

@@ -210,6 +210,28 @@ def test_woocommerce_fixture_fetch(mock, roasters):
     assert len(items) == 8 and all(1 < (v.price_usd or 2) < 500 for i in items for v in i.variants)
 
 
+def test_woocommerce_catalog_behind_a_redirect_that_drops_the_query(mock):
+    # x.com 302s to www.x.com without the query; the Store API's default page is 10 products (#56).
+    products = [
+        {"id": i, "name": f"Coffee {i}", "slug": f"c{i}", "prices": {"price": "1800"}} for i in range(150)
+    ]
+
+    def store_api(request):
+        per_page = int(request.url.params.get("per_page", 10))
+        page = int(request.url.params.get("page", 1))
+        return httpx.Response(200, json=products[(page - 1) * per_page : page * per_page])
+
+    mock.get(url__regex=r"https://x\.com/wp-json/wc/store/v1/products").mock(
+        return_value=httpx.Response(
+            302, headers={"location": "https://www.x.com/wp-json/wc/store/v1/products"}
+        )
+    )
+    mock.get(url__regex=r"https://www\.x\.com/wp-json/wc/store/v1/products").mock(side_effect=store_api)
+    with PoliteClient(min_interval=0) as c:
+        items = woocommerce.fetch(c, _r(platform="woocommerce"))
+    assert len(items) == 150
+
+
 def test_squarespace_fixture_fetch(mock, roasters):
     mock.get("https://vividcoffee.com/sitemap.xml").mock(
         return_value=httpx.Response(
