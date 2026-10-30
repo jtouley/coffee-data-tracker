@@ -27,6 +27,9 @@ def back_to(next_: str) -> tuple[str, str]:
     return (u.path + ("?" + urlencode(picks) if picks and u.path == "/log/gear" else ""), _BACK[u.path])
 
 
+_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+
+
 def g(x: float | None, digits: int | None = None) -> str:
     if x is None:
         return ""
@@ -41,6 +44,17 @@ def ratio(s: Shot) -> float:
     return s.yield_g / s.dose_g
 
 
+def window(s: Shot) -> str:
+    if s.time_s < TARGET_TIME[0]:
+        return "fast"
+    return "slow" if s.time_s > TARGET_TIME[1] else "in"
+
+
+def _seconds(n: int) -> str:
+    word = _WORDS[n] if n < 10 else str(n)
+    return f"{word} second{'s' if n != 1 else ''}"
+
+
 def _when(prev: Shot, now: Shot, tz: tzinfo) -> str:
     a, b = prev.brewed_at.astimezone(tz), now.brewed_at.astimezone(tz)
     if a.date() == b.date():
@@ -51,16 +65,24 @@ def _when(prev: Shot, now: Shot, tz: tzinfo) -> str:
 
 
 def summary(s: Shot, prev: Shot | None, tz: tzinfo) -> str:
-    """Describe the shot without judging it against one recipe's time or ratio."""
-    out = f"1:{ratio(s):.2f} in {g(s.time_s)} s"
+    """'Inside the window, two seconds slower than Monday’s shot.' What happened, not what to change."""
+    w = window(s)
+    out = "Inside the window" if w == "in" else f"Ran {w} at {g(s.time_s)} s, outside the window"
     if prev:
-        out += f"; {_when(prev, s, tz)} was 1:{ratio(prev):.2f} in {g(prev.time_s)} s"
+        d = round(s.time_s - prev.time_s)
+        when = _when(prev, s, tz)
+        if d == 0:
+            out += f", the same time as {when}"
+        elif w == "in":
+            out += f", {_seconds(abs(d))} {'slower' if d > 0 else 'faster'} than {when}"
+        else:
+            out += f"; {when} was {g(prev.time_s)} s"
     return out + "."
 
 
 def sequence(shots: list[Shot]) -> str:
     """The target's marks in words, for the sentence under it."""
-    parts = [f"1:{ratio(s):.1f} in {g(s.time_s)} s{' ' + s.taste if s.taste else ''}" for s in shots[-8:]]
+    parts = [f"{g(s.time_s)} s{' ' + s.taste if s.taste else ''}" for s in shots[-8:]]
     return f"This bag, in order: {', '.join(parts)}." if parts else ""
 
 
@@ -83,9 +105,7 @@ def target_svg(shots: list[Shot], height: int = 150, label: str = "", sequence: 
     def y(r: float) -> float:
         return top + (rmax - r) / (rmax - rmin) * (bottom - top)
 
-    aria = (label + ". " if label else "Shots by time and ratio. ") + (
-        "Shaded area is the window: 25 to 32 seconds and 1:1.8 to 1:2.3"
-    )
+    aria = label or "Shots by time and ratio against the 25 to 32 second, 1:1.8 to 1:2.3 window"
     out = [f'<svg class="target" viewBox="0 0 358 {height}" role="img" aria-label="{escape(aria)}">']
     for t in (20, 25, 30, 35) if (tmin, tmax) == (18, 38) else _ticks(tmin, tmax):
         out.append(
@@ -183,7 +203,7 @@ def _label_spot(
 ) -> tuple[float, float, str] | None:
     """Where the window's label goes: inside the box's lower-right corner when the box is tall enough, else just
     outside it (above, below, right, left), in the first spot clear of every mark, the newest shot's ring, the path
-    and the order numbers. None when no spot is clear; the label is then left out (the aria-label names it)."""
+    and the order numbers. None when no spot is clear; the label is then left out."""
     wx0, wy0, wx1, wy1 = win
     spots = [(wx1 - 6, wy1 - 6, "end")] if wy1 - wy0 >= 24 else []
     spots += [

@@ -125,7 +125,7 @@ notes. They agreed far more than they disagreed. What they found, and what chang
 | The dotted path on the target ran back over itself along one line, so the order couldn't be read. | Owl-Listener, Krehel, landing-page-design | Marks are numbered in order, with a paper halo behind each number; the path is 1.5 px `--ink-2`. The sample shots spread in ratio as real ones would. |
 | Jargon: "score 94", "EXIF removed", the basket's SKU, "1 bag read today of 10". The Reading screen said "only the label text is used", which wasn't true: the image goes to Claude. | four | A confident match shows no score; a weak one asks "Which one is it?" and shows each candidate's score ("match 68"), where the number helps. No read time and no "EXIF" on the camera; the Reading screen says once, in plain words, that the photo goes to Claude with its location removed. No SKU; "1 of 10 bag reads used today". |
 | The scroll-edge fade sat inside the opaque dock, so it could never show, and the tab bar still had a hairline. | apple-design | The fade sits 20 px above the dock and the tab bar, over the content; no hairline. Sign in turns it off because the button follows the field directly. |
-| The two advice lines said different things in different sizes. | apple-design, Krehel | One string in the serif at 24 px on Today and Saved. It now describes the shot ("1:2.02 in 29 s; Monday’s shot was 1:2.02 in 27 s") since grind suggestions were deferred. |
+| The two advice lines said different things in different sizes. | apple-design, Krehel | One string in the serif at 24 px on Today and Saved. It now describes the shot ("Inside the window, two seconds slower than Monday’s shot") since grind suggestions were deferred. |
 | Rating 1 to 5 had no anchor. | Owl-Listener | "worst" and "best" under 1 and 5. |
 | No manual theme switch. | Owl-Listener | Setup has Theme: Same as phone, Light, Dark. |
 | The wordmark said "Coffee Data" while the address will be registry.coffee. | landing-page-design | Sign in and Sign up use "registry.coffee". registry.coffee is the product name; renaming the repo and the public dataset is the owner's call. |
@@ -262,14 +262,12 @@ doesn't look like a row of filters.
 SVG, time across and ratio up. By default it runs 18 to 38 s and 1:1.6 to 1:2.5, with gridlines at 20/25/30/35 s and
 1:1.8/2.0/2.2/2.4. When a shown shot falls outside that range (a 1:5 shot, a 60 s shot, a 1:1 ristretto), the axes
 grow to include it, never below 0 s, with at most five round gridlines on each grown axis; a shot is plotted where it
-was pulled, never pinned to the edge. The window, 25–32 s and 1:1.8–2.3, is a dashed rectangle with a light fill.
-It's a reference, not a verdict: a long-ratio shot is pulled that way on purpose. It's labelled "window" inside its
-lower-right corner when the box is at least 24 px tall and that corner is clear; otherwise above, below, right or
-left of the box, in the first spot clear of every mark, the newest shot's ring, the path and the order numbers. If
-none is clear the label is left out; the `aria-label` still names the window. On Today and Saved, the marks are
-numbered in the order pulled and joined by a dashed 1.5 px `--ink-2` line, and the newest has a ring. On the coffee
-page they're neither numbered nor joined. It has an `aria-label`, and the sentence under it says the same thing in
-words, with each shot's ratio, time and taste.
+was pulled, never pinned to the edge. The window is a dashed rectangle with a light fill and the word "window" inside
+its lower-right corner when the box is at least 24 px tall and that corner is clear; otherwise above, below, right or
+left of the box, in the first spot clear of every mark, the newest shot's ring, the path and the order numbers, and
+left out if none is clear. On Today and Saved, the marks are numbered in the order pulled and joined by a dashed 1.5
+px `--ink-2` line, and the newest has a ring. On the coffee page they're neither numbered nor joined. It has an
+`aria-label`, and the sentence under it says the same thing in words.
 
 #### Chips
 
@@ -384,10 +382,8 @@ on Log shot), stepping back in history, or else replaces the form, so Back never
 
 Short, plain and specific, in sentence case, with real apostrophes (’). Buttons start with a verb. The same action
 has the same words everywhere ("Type the coffee", never "Type it instead"). The app says what happened and leaves
-the next move to the owner: "1:2.02 in 29 s; Monday’s shot was 1:2.02 in 27 s." It gives the ratio and time and
-doesn't judge them against the window, since a 1:5 shot is meant to run long and fast. The
-sentence under the target names each shot's ratio, time and taste in order: "This bag, in order: 1:2.0 in 26 s sour,
-1:5.0 in 18 s balanced." No "go finer" or "try 11" until the dial-in model in the plan exists.
+the next move to the owner: "Ran fast at 22 s, outside the window." "Inside the window, two seconds slower than
+Monday’s shot." No "go finer" or "try 11" until the dial-in model in the plan exists.
 
 Errors say what happened and what to do next, and keep what was typed:
 

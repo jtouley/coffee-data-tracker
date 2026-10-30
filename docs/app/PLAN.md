@@ -16,9 +16,8 @@ small grind change) the timer plus three taps, and makes a new bag two taps: the
   with one tap.
 - Record equipment once (grinder, machine, basket) and have every shot point at the grinder it was ground on, so a
   grind setting means something across grinders.
-- Show what a shot did the moment it's saved: ratio, time, taste, and where it sits among this bag's shots, with the
-  25 to 32 s, 1:1.8 to 2.3 window shown for reference. The app doesn't suggest grind changes yet (see Later: a
-  dial-in model).
+- Show what a shot did the moment it's saved: ratio, time against the 25 to 32 s window, taste, and where it sits
+  among this bag's shots. The app doesn't suggest grind changes yet (see Later: a dial-in model).
 - Give each coffee a page with its shots, best recipe, and the catalog's current price and stock.
 - Keep the lake append-only. New tables and new nullable columns only; every existing shot stays valid.
 - Keep shots and bag photos private. Neither reaches the public tables, the public site or git. Shots come off
@@ -84,9 +83,9 @@ finished.
 4. Pick taste (sour, balanced, bitter) and rating (1 to 5). Both start empty; they are the only new information in
    a repeat shot. A "Same as last" chip above them ("Same as last: balanced, 4") fills both in one tap when the shot
    tasted like yesterday's.
-5. "Save shot". The saved screen shows the ratio, the time, the taste, the shot's place on the dial-in target among
-   this bag's shots (the axes grow to fit shots outside the window), and one line comparing it
-   with the last shot ("1:2.02 in 29 s; Monday's shot was 1:2.02 in 27 s"). It describes what
+5. "Save shot". The saved screen shows the ratio, the time against the 25 to 32 s window, the taste, the shot's
+   place on the dial-in target among this bag's shots, and one line comparing it with the last shot ("Inside the
+   window, two seconds slower than Monday's shot"; "Ran fast at 22 s, outside the window"). It describes what
    happened and doesn't say what to change. "Undo" stays for 5 s. Undo writes a retraction record (`deleted: true`), not a delete.
 
 Repeat shot that tasted the same: Pull again, Start, Stop, "Same as last", Save. Three taps plus the timer. If the
@@ -135,7 +134,7 @@ The basket's 18 g becomes the default dose for a coffee's first shot.
 | Which one is it | A weak match: candidates with their scores | `mockups/match-weak.html` |
 | Read failed | The label couldn't be read: Retake, or type the coffee | `mockups/read-failed.html` |
 | Log shot | The prefilled form; the one screen that has to be fast | `mockups/log-shot.html` |
-| Saved | Ratio, time, taste, the target, a one-line comparison, undo | `mockups/saved.html` |
+| Saved | Ratio, time against the window, taste, the target, a one-line comparison, undo | `mockups/saved.html` |
 | Coffee | One coffee: catalog facts, best recipe, chart, shots | `mockups/coffee.html` |
 | Setup | Equipment, plus the account: invite someone, sign out | `mockups/equipment.html` |
 | Sign in | Username and password | `mockups/sign-in.html` |
@@ -392,8 +391,9 @@ Kitchen Wi-Fi is usually fine, but a shot should never be lost to a dropped conn
     the entry moves to a "Couldn't save" list on Today, with the server's message, where it can be fixed and resent
     or discarded by hand. It's never dropped without the person seeing it.
 - Offline, the form still prefills from the locally cached last shots, and the saved screen draws its summary and
-  target from them. That summary (the ratio and time, and the last shot's) is the one piece of the server's logic
-  repeated in the browser. It's a few lines, kept in step with the Python version by shared test cases.
+  target from them. That summary (the ratio, the window check, the difference from the last shot) is the one piece
+  of the server's logic repeated in the browser. It's a few lines, kept in step with the Python version by shared
+  test cases.
 - Bag capture needs the network (the photo has to be read). Offline, "New bag" saves the photo to the outbox and
   lets the owner type the coffee or pick a recent one; the read and match happen when it syncs.
 

@@ -135,7 +135,7 @@ async function newPage(browser, errors) {
     await page.waitForURL(/\/saved\/.+\?new=1$/);
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
-    assert.match(saved, /1:[\d.]+ in \d+ s; .* shot was 1:[\d.]+ in \d+ s\./);
+    assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
     assert.match(saved, /rated 5/);
     assert.match(saved, /Balanced/);
     await shoot(page, "saved");
