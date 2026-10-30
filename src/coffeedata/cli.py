@@ -299,7 +299,7 @@ def _export_and_site(db: Path, out: str) -> None:
         cmd_export_public(argparse.Namespace(db=str(db), to=os.environ["PUBLIC_EXPORT_URL"]))
     # Snowflake is loaded by its own workflow step after the site is built, so a Snowflake problem (such as a
     # contract change that needs `load-snowflake --migrate`) never holds back the site.
-    cmd_site(argparse.Namespace(db=str(db), out=out))
+    cmd_site(argparse.Namespace(db=str(db), out=out, served=False))
 
 
 def cmd_build_diff(args: argparse.Namespace) -> None:
@@ -465,9 +465,8 @@ def cmd_add_roaster(args: argparse.Namespace) -> None:
 def cmd_site(args: argparse.Namespace) -> None:
     from . import site
 
-    if getattr(
-        args, "served", False
-    ):  # the release customers get now, read from the lake; nothing is written to it
+    # The release customers get now, read from the lake; nothing is written to it.
+    if args.served:
         from . import quality
 
         release = quality.served(Lake())
