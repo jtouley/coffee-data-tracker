@@ -131,8 +131,17 @@ async function newPage(browser, errors) {
     await page.locator('[data-rating] [data-v="5"]').click();
     await shoot(page, "log-shot");
 
+    // A slow save (the lake commit) shows at once: the button reads Saving… until the Saved page.
+    let release;
+    const slowSave = new Promise((ok) => { release = ok; });
+    await page.route("**/api/shots", async (route) => { await slowSave; await route.continue(); });
     await page.getByRole("button", { name: "Save shot" }).click();
+    const busy = page.locator("[data-save]");
+    assert.equal(await busy.textContent(), "Saving…");
+    assert.equal(await busy.isDisabled(), true);
+    release();
     await page.waitForURL(/\/saved\/.+\?new=1$/);
+    await page.unroute("**/api/shots");
     const saved = await page.textContent("main");
     assert.match(saved, /1:2\.03/);
     assert.match(saved, /Inside the window, one second faster than \w+day’s shot\./);
