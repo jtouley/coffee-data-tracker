@@ -870,6 +870,22 @@ def create_app(
             "in_stock": c.get("in_stock"),
         }
 
+    @app.get("/api/coffees/search")
+    def search_coffees(me: Me, q: str = Query("", max_length=120)) -> dict:
+        """Offer catalog candidates for an explicit choice; never silently change a bag's match."""
+        query = q.strip()
+        if len(query) < 2:
+            return {"coffees": []}
+        unavailable = "The catalog isn’t available right now. Try again shortly."
+        try:
+            candidates = shots.search_catalog(query, limit=12, lake=lake)
+        except RuntimeError:
+            raise HTTPException(503, unavailable) from None
+        coffees = [describe(m["coffee_id"]) for m in candidates]
+        if None in coffees:  # in the catalog's index, but its facts couldn't be read
+            raise HTTPException(503, unavailable)
+        return {"coffees": coffees}
+
     @app.post("/api/photos/{photo_id}")
     async def post_photo(photo_id: str, request: Request, me: OutboxWriter) -> dict:
         """A bag photo: checked, re-encoded without metadata, saved, then read by Claude and matched in Python.

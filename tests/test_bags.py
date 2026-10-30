@@ -565,6 +565,99 @@ def test_editing_a_bag_to_the_right_lot_matches_it_again(lake):
     shots._catalog_cache.clear()
 
 
+def test_catalog_search_reports_unavailable(lake, monkeypatch):
+    c = TestClient(create_app(lake, HeaderAuth()))
+    monkeypatch.setattr(shots, "_load", lambda lake=None: shots._Catalog(ok=False))
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    r = c.get("/api/coffees/search", params={"q": "coffee"})
+    assert r.status_code == 503
+    assert r.json()["detail"] == "The catalog isn’t available right now. Try again shortly."
+
+
+def test_search_and_explicitly_relink_a_bag_keeps_its_shots(lake):
+    from .test_app import setup, shot
+
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    setup(c)
+    bag = {"bag_id": "bag1", "coffee_id": "cc:gesha", "coffee_freetext": "Finca El Puente - Gesha Variety"}
+    assert c.post("/api/bags", json=bag, headers=W).status_code == 200
+    assert c.post("/api/shots", json=shot(1), headers=W).status_code == 200
+    assert c.get("/api/coffees/search", params={"q": "x"}).json() == {"coffees": []}
+    hits = c.get("/api/coffees/search", params={"q": "Counter Culture Finca El Puente"}).json()["coffees"]
+    assert {hit["coffee_id"] for hit in hits} == {"cc:honey", "cc:gesha"}
+    assert next(hit for hit in hits if hit["coffee_id"] == "cc:gesha")["past"] is True
+    edit = c.get("/bag/bag1/edit")
+    assert "Search catalog" in edit.text
+    fixed = bag | {"coffee_id": "cc:honey", "coffee_freetext": "Finca El Puente - Honey Processed"}
+    assert c.post("/api/bags", json=fixed, headers=W).json()["coffee_id"] == "cc:honey"
+    detail = c.get("/coffee/bag1").text
+    assert "Finca El Puente - Honey Processed" in detail
+    assert "This bag" in detail and "/shot/s1" in detail
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_offers_only_real_candidates_sold_now_first(lake):
+    """A query that matches nothing offers nothing, so the screen says so instead of listing unrelated coffees;
+    lots that tie come in stock first, then sold out, then past, as match_bag orders them."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('cc:anaerobic', 'Counter Culture Coffee', 'Finca El Puente – Anaerobic Washed', false, 'archived'),
+        ('cc:gesha', 'Counter Culture Coffee', 'Finca El Puente - Gesha Variety', false, 'archived'),
+        ('cc:honey', 'Counter Culture Coffee', 'Finca El Puente - Honey Processed', true, 'available'),
+        ('cc:natural', 'Counter Culture Coffee', 'Finca El Puente - Natural', false, 'available'),
+        ('onyx:sw', 'Onyx Coffee Lab', 'Southern Weather', true, 'available'),
+        ('onyx:geo', 'Onyx Coffee Lab', 'Geometry', true, 'available')
+    ) t(coffee_id, roaster_name, title, in_stock, catalog_status)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    assert c.get("/api/coffees/search", params={"q": "zzzzqq"}).json() == {"coffees": []}
+    hits = c.get("/api/coffees/search", params={"q": "El Puente"}).json()["coffees"]
+    assert [h["coffee_id"] for h in hits][:2] == ["cc:honey", "cc:natural"]
+    assert {h["coffee_id"] for h in hits[2:]} == {"cc:anaerobic", "cc:gesha"}
+    assert all(m["score"] >= shots.CANDIDATE_SCORE for m in shots.search_catalog("El Puente", lake=lake))
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_leaves_out_wholesale_twins(lake):
+    """A wholesale twin's title contains its retail coffee's, so it outscored it and was offered first."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute("""create table c as select * from (values
+        ('o:guji', 'Onyx Coffee Lab', 'Ethiopia Guji', false),
+        ('o:guji-w', 'Onyx Coffee Lab', 'Wholesale - 5LB Ethiopia Guji', true)
+    ) t(coffee_id, roaster_name, title, is_wholesale)""")  # fmt: skip
+    lake.write_mart("dim_coffee", con, "select * from c")
+    c = TestClient(create_app(lake, HeaderAuth()))
+    hits = c.get("/api/coffees/search", params={"q": "Onyx Ethiopia Guji"}).json()["coffees"]
+    assert [h["coffee_id"] for h in hits] == ["o:guji"]
+    asked = c.get("/api/coffees/search", params={"q": "Onyx Wholesale Ethiopia Guji"}).json()["coffees"]
+    assert asked[0]["coffee_id"] == "o:guji-w"
+    shots._catalog_cache.clear()
+
+
+def test_catalog_search_reports_unavailable_facts(lake, monkeypatch):
+    """The index read but a coffee's facts didn't: unavailable, not "No coffees found"."""
+    shots._catalog_cache.clear()
+    con = lake.connect()
+    con.execute(
+        "create table c as select * from (values ('o:guji', 'Onyx Coffee Lab', 'Ethiopia Guji')) t(coffee_id, roaster_name, title)"
+    )
+    lake.write_mart("dim_coffee", con, "select * from c")
+    app = create_app(lake, HeaderAuth())
+    monkeypatch.setattr(app.state.store, "coffee", lambda coffee_id: None)
+    c = TestClient(app)
+    assert c.get("/api/coffees/search", params={"q": "Ethiopia Guji"}).status_code == 503
+    shots._catalog_cache.clear()
+
+
 def test_the_lot_sold_now_survives_the_cut_to_three(lake):
     """Counter Culture's five El Puente lots as in the live catalog: four tie at 97 under the plain (archived)
     "Finca El Puente". Sorted by name, the cut to 3 dropped the one lot still sold."""
