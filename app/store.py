@@ -382,7 +382,8 @@ class Store:
             shot = shot.model_copy(
                 update={
                     "source": prev.item.source,
-                    "roast_date": shot.roast_date or (bag.roast_date if moved else prev.item.roast_date),
+                    "roast_date": shot.roast_date
+                    or (bag.roast_date if moved and bag else prev.item.roast_date),
                 }
             )
         if prev and prev.item == shot:
