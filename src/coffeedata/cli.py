@@ -470,6 +470,9 @@ def cmd_site(args: argparse.Namespace) -> None:
         from . import quality
 
         release = quality.served(Lake())
+        if release is None and args.skip_if_unserved:
+            print("nothing is served yet: the site isn't built", file=sys.stderr)
+            return
         if release is None:
             raise SystemExit(
                 "nothing is served yet: the site is built from the served release, which the first weekly run "
@@ -652,6 +655,11 @@ def main(argv: list[str] | None = None) -> None:
         "--served",
         action="store_true",
         help="first fetch the served release from the lake into --db (read-only)",
+    )
+    st.add_argument(
+        "--skip-if-unserved",
+        action="store_true",
+        help="with --served: build nothing and exit 0 when no release is served yet (the site workflow)",
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
