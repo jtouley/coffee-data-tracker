@@ -117,6 +117,15 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_crawl_retry(args: argparse.Namespace) -> None:
+    from . import ingest
+
+    lake = Lake()
+    states, resume = ingest.select_parked(lake, args.run_date)
+    print(f"resuming {len(states)} parked stores for run {args.run_date}", file=sys.stderr)
+    _print(ingest.run(lake, states, args.run_date, workers=args.workers, mode="retry_failed", resume=resume))
+
+
 def cmd_enrich(args: argparse.Namespace) -> None:
     from . import enrich, extract
 
@@ -547,6 +556,10 @@ def main(argv: list[str] | None = None) -> None:
         default=SHOPIFY_RPS,
         help="requests/s across all Shopify stores together (default %(default)s; halves itself on 429s)",
     )
+
+    cr = add("crawl-retry", cmd_crawl_retry, "resume the run's parked stores from their blocked page")
+    cr.add_argument("--run-date", type=_run_date, default=_today())
+    cr.add_argument("--workers", type=int, default=8)
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
     c.add_argument("--limit", type=int, default=100_000)

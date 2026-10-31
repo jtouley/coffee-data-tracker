@@ -19,6 +19,10 @@ ADAPTERS: dict[str, Adapter] = {
 }
 
 
-def fetch_catalog(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+def fetch_catalog(client: PoliteClient, roaster: Roaster, resume: dict | None = None) -> list[CatalogItem]:
+    """resume: a Shopify catalog's progress when it was blocked mid-way (shopify.PageBlocked): its next page."""
     # The adapter, not the hostname, says which platform's shared rate limit (if any) the requests count against.
-    return ADAPTERS[roaster.adapter](client.for_platform(roaster.adapter), roaster)
+    view = client.for_platform(roaster.adapter)
+    if resume is not None and roaster.adapter == "shopify":
+        return shopify.fetch(view, roaster, resume=resume)
+    return ADAPTERS[roaster.adapter](view, roaster)

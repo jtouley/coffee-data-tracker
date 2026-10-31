@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import logging
-import time
 from datetime import UTC, datetime
 
 import httpx
@@ -15,51 +14,74 @@ from ..text import html_to_text, to_float
 
 log = logging.getLogger(__name__)
 
-MAX_PAGES = 20
+# 60 pages of 250: kaldi.com lists more than 20 x 250 products (it failed the old cap of 20 on 2026-10-31).
+MAX_PAGES = 60
 PAGE_LIMIT = 250  # the most /products.json returns per page
-# A store that serves page 1 and then answers 429 (Retry-After 60) for the next page: wait it out and ask for that
-# page again, keeping the pages already fetched. Restarting from page 1 hits the same wall every time (A's real crawl,
-# 2026-10-31: 11 large stores failed that way). At most this many waits per page, each at most MAX_PAGE_WAIT s.
-PAGE_WAITS = 3
-MAX_PAGE_WAIT = 120.0
+# A page with fewer than PAGE_LIMIT products is the last one: the empty page after it is never asked for. That empty
+# page was the request that got the 429s (B's retest, 2026-10-31: every "page 2" failure had its whole catalog on
+# page 1). The cost: a store whose pages come back short with more behind them (Shopify drops hidden products after
+# paging) is cut at the first short page. In A's real crawl that was 3 of 1,034 stores (portlandcoffeeroasters.com,
+# talitha.com, onyxcoffeelab.com). Exactly PAGE_LIMIT products on the last page costs one more request.
+SHORT_PAGE_ENDS = True
+# A store that answers a page with 429 (Retry-After 60) is not restarted from page 1: restarting hits the same wall
+# every time (A's real crawl, 2026-10-31: 11 large stores served page 1, then 429 on page 2, and failed). The page
+# raises PageBlocked with the products fetched so far; ingest.run backs off (max(Retry-After, 60 s), 120 s, 240 s)
+# without holding a worker, then asks for that same page again (fetch(..., resume=...)).
+#
+# No sitemap pre-read: a Shopify sitemap index only lists product sitemaps of up to 5,000 URLs each, so the page
+# count would need those child sitemaps too: more requests to the same per-store budget that answers 429.
 BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
+HARD_BLOCK_STATUSES = (401, 403, 430)  # refusals, not pauses: recorded as blocked, never backed off
+
+
+class PageBlocked(RateLimited):
+    """The store paused us on `page`: `items` are the products from the pages before it, `wait` its Retry-After."""
+
+    def __init__(self, message: str, page: int, items: list[CatalogItem], wait: float, host: str) -> None:
+        super().__init__(message)
+        self.page = page
+        self.items = items
+        self.wait = wait
+        self.host = host  # the host that blocked (after redirects)
+
+
+class StoreBlocked(FetchError):
+    """A 401, 403 or 430: the store (or Shopify, for this IP) refuses. Never backed off or deferred."""
+
+
+def _causes(e: BaseException | None):
+    while e is not None:
+        yield e
+        e = e.__cause__
+
+
+def _hard_block(e: FetchError) -> int | None:
+    for c in _causes(e):
+        if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in HARD_BLOCK_STATUSES:
+            return c.response.status_code
+    return next((s for s in HARD_BLOCK_STATUSES if str(e).startswith(f"HTTP {s} ")), None)
+
+
+def _blocked_host(e: FetchError, default: str) -> str:
+    for c in _causes(e):
+        if isinstance(c, HostRateLimited):
+            return c.host
+        if isinstance(c, httpx.HTTPStatusError):
+            return c.request.url.host
+    return default
 
 
 def _block_wait(e: FetchError) -> float | None:
-    """Seconds to wait before asking for the same page again, or None if this failure isn't a store's pause."""
+    """The store's Retry-After for this block, or None if this failure isn't a store's pause."""
     if isinstance(e, HostRateLimited):
-        return min(MAX_PAGE_WAIT, max(1.0, e.wait))
-    if isinstance(e, RateLimited):  # the platform as a whole gave up: don't hold a worker
+        return max(0.0, e.wait)
+    if isinstance(e, RateLimited):  # the platform as a whole gave up: not this store's pause
         return None
-    c: BaseException | None = e
-    while c is not None:  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
+    for c in _causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
             wait = retry_after_seconds(c.response.headers.get("retry-after"))
-            return min(MAX_PAGE_WAIT, BLOCK_DEFAULT_WAIT if wait is None else max(1.0, wait))
-        c = c.__cause__
-    if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")):
-        return BLOCK_DEFAULT_WAIT
-    return None
-
-
-def _page(client: PoliteClient, roaster: Roaster, page: int) -> object:
-    for attempt in range(PAGE_WAITS + 1):
-        try:
-            return client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
-        except FetchError as e:
-            # Page 1 fails as before: a store that never serves a page is parked or refused by ingest.run.
-            wait = _block_wait(e) if page > 1 else None
-            if wait is None or attempt == PAGE_WAITS:
-                raise
-            log.info(
-                "%s: blocked on page %d (%s); waiting %.0fs, then that page again",
-                roaster.host,
-                page,
-                e,
-                wait,
-            )
-            time.sleep(wait)
-    raise AssertionError("unreachable")
+            return BLOCK_DEFAULT_WAIT if wait is None else wait
+    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 503 ")) else None
 
 
 def _published_at(value: object) -> datetime | None:
@@ -111,19 +133,29 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
     )
 
 
-def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
-    items: dict[str, CatalogItem] = {}
-    for page in range(1, MAX_PAGES + 1):
-        data = _page(client, roaster, page)
+def fetch(client: PoliteClient, roaster: Roaster, resume: dict | None = None) -> list[CatalogItem]:
+    """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n."""
+    items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
+    for page in range((resume or {}).get("page", 1), MAX_PAGES + 1):
+        try:
+            data = client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
+        except FetchError as e:
+            if (status := _hard_block(e)) is not None:
+                raise StoreBlocked(f"blocked: HTTP {status} on page {page} of {roaster.host}") from e
+            if (wait := _block_wait(e)) is None:
+                raise
+            msg = f"{roaster.host} blocked on page {page}: {e}"
+            raise PageBlocked(msg, page, list(items.values()), wait, _blocked_host(e, roaster.host)) from e
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
-        # A full page can hold fewer than 250 products (Shopify drops some after paging; onyxcoffeelab.com's pages
-        # hold 249, 247, 234, 242), so only an empty page ends the catalog. A store that ignores `page` and
-        # repeats itself ends it too.
+        # An empty page ends the catalog, and so does a store that ignores `page` and repeats itself, or (with
+        # SHORT_PAGE_ENDS) a page shorter than the limit.
         new = {i.product_id: i for i in (parse_product(p, roaster) for p in data["products"])}
         if not new.keys() - items.keys():
             break
         items |= new
+        if SHORT_PAGE_ENDS and len(data["products"]) < PAGE_LIMIT:
+            break
     else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
         raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
     return list(items.values())

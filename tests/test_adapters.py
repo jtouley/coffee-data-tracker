@@ -119,19 +119,25 @@ def _page(ids):
     )
 
 
-def test_shopify_short_pages_are_not_the_end(mock):
-    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first.
+@pytest.mark.parametrize("short_ends, expected", [(True, 249), (False, 249 + 247)])
+def test_shopify_short_pages(mock, monkeypatch, short_ends, expected):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages. With SHORT_PAGE_ENDS (the default, so
+    # the empty end page that drew the 429s is never asked for) such a store is cut at its first short page: the
+    # known cost (3 of 1,034 stores in A's real crawl). Without it, only an empty page ends the catalog.
+    monkeypatch.setattr(shopify, "SHORT_PAGE_ENDS", short_ends)
     pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
     for n, ids in pages.items():
         mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 249 + 247  # an empty page ends it
+        assert len(shopify.fetch(c, _r())) == expected
 
 
 def test_shopify_store_that_ignores_page_stops(mock):
-    route = mock.get("https://x.com/products.json").mock(return_value=_page(range(10)))
+    route = mock.get("https://x.com/products.json").mock(
+        return_value=_page(range(250))
+    )  # full, so not the last
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 10
+        assert len(shopify.fetch(c, _r())) == 250
     assert route.call_count == 2
 
 
@@ -139,7 +145,7 @@ def test_shopify_page_limit_without_an_empty_page_is_an_error(mock, monkeypatch)
     monkeypatch.setattr(shopify, "MAX_PAGES", 2)
     for n in (1, 2):
         mock.get("https://x.com/products.json", params={"page": str(n)}).mock(
-            return_value=_page(range(n * 100, n * 100 + 50))
+            return_value=_page(range(n * 1000, n * 1000 + 250))
         )
     with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="after 2 pages"):
         shopify.fetch(c, _r())  # never a silently truncated catalog
