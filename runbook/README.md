@@ -8,6 +8,7 @@ Step-by-step operations for registry.coffee and the weekly pipeline, including t
 | [github-pages.md](github-pages.md) | Connecting the domain to GitHub Pages, HTTPS, domain verification |
 | [first-run.md](first-run.md) | Secrets and variables, the first deploy, and re-running the weekly job |
 | [cost-and-security.md](cost-and-security.md) | What it costs to run, and how the workflows, site, secrets and domain are locked down |
+| [crawler-runner.md](crawler-runner.md) | Proof of concept: a GCP VM with a fixed egress IP as the crawl's self-hosted runner, its security model, cost and `live-test.yml` |
 | [troubleshooting.md](troubleshooting.md) | The site is down, the DNS check fails, a run failed |
 
 `check-dns.sh` prints every record the site depends on, as the public resolvers see it:

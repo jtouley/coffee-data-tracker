@@ -5,6 +5,8 @@ from __future__ import annotations
 import contextlib
 import copy
 import logging
+import os
+import re
 import threading
 import time
 import urllib.robotparser
@@ -24,6 +26,26 @@ if TYPE_CHECKING:
 log = logging.getLogger(__name__)
 
 USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
+# A contact for site and platform operators (an email address or URL), added to the User-Agent when set. robots.txt
+# rules still match on the product token, "coffee-data", so setting it changes no robots decision.
+CONTACT_ENV = "COFFEEDATA_CONTACT"
+_CONTACT_OK = re.compile(r"[A-Za-z0-9@.+:/_~%=?&#-]{3,200}")
+
+
+def user_agent() -> str:
+    """USER_AGENT, plus `; <contact>` inside its comment when COFFEEDATA_CONTACT is set. Unset or blank: USER_AGENT
+    exactly. A value that isn't one plain token (spaces, parentheses, semicolons, newlines) is refused, so it can
+    never break the header or the comment."""
+    contact = os.environ.get(CONTACT_ENV, "").strip()
+    if not contact:
+        return USER_AGENT
+    if not _CONTACT_OK.fullmatch(contact):
+        raise ValueError(
+            f"{CONTACT_ENV} must be one email address or URL, without spaces, parentheses or ';'"
+        )
+    return f"{USER_AGENT[:-1]}; {contact})"
+
+
 # "Slow down": 429, Shopify's 430 (an IP-wide security block), and a 503 that can mean the same.
 BLOCK_STATUSES = (429, 430, 503)
 RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
@@ -90,7 +112,7 @@ class PoliteClient:
         self._limiter: PlatformLimiter | None = None
         self.retries = retries
         self._client = httpx.Client(
-            headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
+            headers={"User-Agent": user_agent(), "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
             timeout=httpx.Timeout(timeout, pool=120.0),
             follow_redirects=False,
             transport=transport,

@@ -1,0 +1,41 @@
+# The live 429 test (build/crawl-plan/live.md) from the crawler VM's fixed IP: 200 Shopify stores, at most 700
+# requests, publishing off. Dispatch only: the self-hosted `crawler` runner never takes a pull_request job, and its
+# own pre-job hook refuses anything but workflow_dispatch/schedule of an allowed workflow on main
+# (src/terraform/crawler/scripts/job-started.sh). The repo is public, so are these logs: the script prints
+# aggregates only, and nothing is uploaded (no artifact, no cache, no lake).
+name: live-test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: crawler  # one job at a time on the one VM; never in the `lake` group, since it never touches the lake
+  cancel-in-progress: false
+jobs:
+  live429:
+    runs-on: [self-hosted, crawler]
+    timeout-minutes: 60
+    # No secrets and no HF token: the job couldn't publish if it tried. COFFEEDATA_LAKE is a throwaway folder.
+    env:
+      COFFEEDATA_CONTACT: ${{ vars.CRAWLER_CONTACT }}  # e.g. crawler@registry.coffee; unset = the usual User-Agent
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e  # v10.3.2
+        with: {python-version: "3.12", enable-cache: false}
+      - run: uv sync --locked
+      - name: Live 429 test (aggregates only)
+        run: |
+          unset HF_TOKEN HUGGING_FACE_HUB_TOKEN
+          lake="$RUNNER_TEMP/live-lake"
+          rm -rf "$lake"
+          uv run python -m coffeedata.livetest --lake "$lake"
+      - name: Machine
+        if: always()
+        run: |
+          free -m | sed -n 1,3p
+          swapon --show
+          nproc
+      - name: Remove the local lake
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/live-lake"

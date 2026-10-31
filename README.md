@@ -257,6 +257,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `SNOWFLAKE_SHARE` | `COFFEE_DATA_SHARE` | The share whose views `load-snowflake --migrate` recreates and grants again |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
+| `COFFEEDATA_CONTACT` | none | A contact (email address or URL) added to the crawler's User-Agent: `coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker; <contact>)`. Unset, the User-Agent is unchanged. robots.txt rules match on `coffee-data` either way |
 
 The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
 list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
@@ -431,7 +432,8 @@ disagree with the contract. So a change to a public table starts in the contract
 ### Scraping etiquette
 
 - Each store feed is read once a week, because catalogs change slowly and that keeps the load on small roaster
-  sites low. Requests use a User-Agent that names this project and links to this repo.
+  sites low. Requests use a User-Agent that names this project and links to this repo, plus a contact address when
+  `COFFEEDATA_CONTACT` is set.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
   without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
   site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.

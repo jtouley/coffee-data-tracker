@@ -25,11 +25,13 @@ jobs:
       - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e  # v4.0.1
         with: {terraform_version: "1.9.8"}
       - name: Check the Terraform
-        working-directory: src/terraform
         run: |
-          terraform fmt -check
-          terraform init -backend=false -input=false
-          terraform validate
+          for dir in src/terraform src/terraform/crawler; do  # the app, and the crawler VM (its own state)
+            terraform -chdir="$dir" fmt -check
+            terraform -chdir="$dir" init -backend=false -input=false
+            terraform -chdir="$dir" validate
+          done
+          terraform -chdir=src/terraform/crawler test  # a plan against a mock provider: no credentials needed
 
   deploy:
     needs: check

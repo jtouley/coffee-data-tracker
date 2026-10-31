@@ -20,9 +20,9 @@ lake-users/
 tests/browser/node_modules/
 
 # Terraform (src/terraform/)
-src/terraform/.terraform/
-src/terraform/*.tfstate*
-src/terraform/terraform.tfvars
+src/terraform/**/.terraform/
+src/terraform/**/*.tfstate*
+src/terraform/**/terraform.tfvars
 
 # Local PR review notes; never committed.
 .context/
