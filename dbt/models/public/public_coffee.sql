@@ -10,6 +10,7 @@ select
     c.min_price_usd, c.price_per_100g, c.bag_sizes_g,
     c.enrichment_method as attributes_source,
     c.is_wholesale,
+    c.carried_forward,
     {{ release_columns() }}
 from {{ ref('dim_coffee') }} c
 join {{ ref('public_roaster') }} r using (roaster_id)

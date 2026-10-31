@@ -4,6 +4,9 @@
 -- their history accumulates). Listed means the current catalog, as on the site: a roaster's archived back catalog
 -- appearing or growing is not a swing in the market, and wholesale listings (a roaster's wholesale twin of a
 -- retail coffee) aren't counted as more coffees.
+--   fresh_listed_coffees: listed coffees from this run's own fetches (listed_coffees less the carried-forward ones),
+--     so a mass fetch failure moves a volume metric even though carry-forward keeps listed_coffees steady;
+--     carried_forward_coffees and carried_forward_roasters: what is listed from an earlier run (dim_coffee).
 --   run_catalog_ok_share: the share of the run's expected roasters that have a catalog (run_completeness
 --     has_catalog) that it fetched with products; adapter_ok_share:<adapter> is the same per adapter, and
 --     adapter_roasters:<adapter> how many such roasters each adapter has.
@@ -13,6 +16,15 @@ with q as (select * from {{ ref('stg_run_quality') }}),
 latest as (select max(run_date) as run_date from q),
 catalog as (select * from {{ ref('run_completeness') }} where has_catalog)
 select 'listed_coffees' as metric, count(*)::double as value from {{ ref('int_current_catalog') }} where not is_wholesale
+union all
+select 'fresh_listed_coffees', count(*)::double from {{ ref('int_current_catalog') }}
+where not is_wholesale and not carried_forward
+union all
+select 'carried_forward_coffees', count(*)::double from {{ ref('int_current_catalog') }}
+where not is_wholesale and carried_forward
+union all
+select 'carried_forward_roasters', count(distinct roaster_id)::double from {{ ref('int_current_catalog') }}
+where not is_wholesale and carried_forward
 union all
 select 'in_stock_coffees', count(*)::double from {{ ref('dim_coffee') }} where in_stock and not is_wholesale
 union all
