@@ -334,7 +334,8 @@ def test_challenge_detection_ignores_product_pages_that_load_a_captcha():
     assert pages.is_challenge("<html><title>Access Denied</title><body>Reference #18.abc</body></html>")
 
 
-def test_run_writes_the_json_adapters_shape(store, lake):
+def test_run_writes_raw_records_only(store, lake):
+    """ELT: snapshots, bodies and fetches only. Coffee-or-not and attributes are left to the build (stg_products)."""
     summary, out = pages.run(lake, [CCC], "2026-11-02", interval=0)
     assert summary["ok"] == 1 and summary["products"] == 7
     con = lake.connect()
@@ -342,14 +343,26 @@ def test_run_writes_the_json_adapters_shape(store, lake):
     cols = [d[0] for d in snap.description]
     rows = [dict(zip(cols, r, strict=True)) for r in snap.fetchall()]
     assert set(cols) >= {"roaster_id", "product_id", "variants", "payload_hash", "is_coffee"}
-    assert all(r["image"] is None for r in rows) and sum(r["is_coffee"] for r in rows) == 6
-    fetch = con.execute(f"select status, requests, run_date from {lake.scan('fetches')}").fetchall()
+    assert all(r["image"] is None and r["is_coffee"] is None for r in rows)
+    fetch = con.execute(f"select status, requests, coffees, run_date from {lake.scan('fetches')}").fetchall()
     # robots.txt, two sitemaps, and per product a .js (404 here) and then its page.
-    assert fetch == [("ok", 17, date(2026, 11, 2))]
-    # Descriptions go to the private lake's bodies, as the JSON path's do; attributes to enrichments.
+    assert fetch == [("ok", 17, None, date(2026, 11, 2))]
     hashes = {r["body_hash"] for r in rows if r["body_hash"]}
     assert con.execute(f"select count(*) from {lake.scan('bodies')}").fetchall() == [(len(hashes),)]
-    assert con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchall() == [(6,)]
+    assert con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchall() == [(0,)]
+
+
+def test_raw_rows_are_ingests_rows_without_the_derived_fields():
+    items = [shopify.parse_product(p, CCC) for p in FEED]
+    res = ingest.Result(CCC, datetime(2026, 11, 2, tzinfo=UTC), items=items, stats=RequestStats())
+    raw = pages.raw_rows([res], date(2026, 11, 2), "b", set())
+    feed = ingest.rows_for([res], date(2026, 11, 2), "b", set(), set())
+    assert raw.keys() == {"snapshots", "bodies", "fetches"}
+    assert [r | {"is_coffee": None} for r in feed["snapshots"]] == raw["snapshots"]
+    assert raw["bodies"] == feed["bodies"]
+    assert [r | {"coffees": None, "code_version": None} for r in feed["fetches"]] == [
+        r | {"code_version": None} for r in raw["fetches"]
+    ]
 
 
 def test_only_rate_limited_stores_are_selected_never_blocked_ones(lake, monkeypatch):

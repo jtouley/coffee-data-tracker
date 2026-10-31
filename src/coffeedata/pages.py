@@ -39,7 +39,7 @@ from urllib.parse import parse_qs, urljoin, urlparse
 
 import httpx
 
-from . import ingest
+from . import ingest, lineage
 from .adapters import generic, shopify
 from .adapters.generic import _PRODUCTISH, jsonld_products
 from .classify import excluded, is_coffee
@@ -549,12 +549,61 @@ def rate_limited(lake: Lake, run_date: str) -> list[Roaster]:
     return [s.roaster for s in registry.current(lake) if s.roaster.roaster_id in want]
 
 
+def raw_rows(
+    results: list[ingest.Result], run_date: date, batch_id: str, known_bodies: set[str]
+) -> dict[str, list[dict]]:
+    """The raw records, in the shape ingest writes for a feed, with nothing derived: snapshots (every product read;
+    is_coffee null), bodies (each new description, in the private lake) and one fetches row per store (coffees null).
+    No enrichment rows: dbt's stg_products and the post-load steps derive coffee-or-not and attributes from these."""
+    snaps, bodies, fetches = [], [], []
+    version = lineage.code_version()
+    for res in results:
+        fetches.append(
+            {
+                "run_date": run_date,
+                "batch_id": batch_id,
+                "fetched_at": res.fetched_at,
+                "roaster_id": res.roaster.roaster_id,
+                "adapter": res.roaster.adapter,
+                "status": "error" if res.error else "ok",
+                "error": res.error,
+                "products": len(res.items),
+                "coffees": None,
+                "pages": res.stats.pages,
+                "requests": res.stats.requests,
+                "http_statuses": [
+                    {"status": s, "responses": n} for s, n in sorted(res.stats.statuses.items())
+                ],
+                "retries": res.stats.retries,
+                "rate_limited": res.stats.rate_limited,
+                "duration_s": res.duration_s,
+                "code_version": version,
+            }
+        )
+        for it in res.items:
+            snaps.append(
+                it.model_dump()
+                | {
+                    "run_date": run_date,
+                    "batch_id": batch_id,
+                    "fetched_at": res.fetched_at,
+                    "is_coffee": None,
+                }
+            )
+            if it.body_hash and it.body_hash not in known_bodies:
+                known_bodies.add(it.body_hash)
+                bodies.append(
+                    {"body_hash": it.body_hash, "body_text": it.body_text, "first_seen_run": run_date}
+                )
+    return {"snapshots": snaps, "bodies": bodies, "fetches": fetches}
+
+
 def run(
     lake: Lake, roasters: list[Roaster], run_date: str, render: bool = False, interval: float = PAGE_INTERVAL
 ) -> tuple[dict, list[tuple[Roaster, Report, ingest.Result]]]:
     """Crawl `roasters` one after another (each store's own spacing; never two stores' pages at once) and append
-    their records to the lake in the JSON adapters' shape: snapshots, fetches, enrichments. The fetches row is a
-    second attempt for the run, so a store reads ok if either path succeeded. Bodies are the facts lines only."""
+    their raw records to the lake (raw_rows). The fetches row is a second attempt for the run, so a store reads ok
+    if either path succeeded."""
     rd = date.fromisoformat(run_date)
     out: list[tuple[Roaster, Report, ingest.Result]] = []
     with client(interval) as c:
@@ -575,16 +624,12 @@ def run(
         finally:
             if renderer is not None:
                 renderer.close()  # type: ignore[attr-defined]
-    con = lake.connect()
-    known = {r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()}
-    enriched = {
-        tuple(r)
-        for r in con.execute(
-            f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
-        ).fetchall()
+    known = {
+        r[0]
+        for r in lake.connect().execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()
     }
     batch = new_batch_id()
-    for table, rows in ingest.rows_for([r for *_, r in out], rd, batch, known, enriched).items():
+    for table, rows in raw_rows([r for *_, r in out], rd, batch, known).items():
         lake.write_partition(table, run_date, batch, rows)
     summary = {
         "run_date": run_date,
