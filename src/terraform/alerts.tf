@@ -99,8 +99,8 @@ resource "google_monitoring_alert_policy" "down" {
 
 # Each saved shot, bag or equipment change is one Hugging Face commit (app/store.py `_commit` logs a `saved` event
 # with `publish_ms`), and HF repos slow down after a few thousand commits. These count the saves and time them, so
-# the owner hears before that matters (docs/app/WRITE_PATH.md). A save whose file went up in another request's
-# commit still counts, so the count is an upper bound on commits.
+# the owner hears before that matters (docs/app/WRITE_PATH.md). They count app writes (shots, bags and equipment)
+# only: photo, account and pipeline commits don't log `saved`.
 locals {
   saved_filter = join(" AND ", [
     "resource.type=\"cloud_run_revision\"",
@@ -134,7 +134,7 @@ resource "google_logging_metric" "save_publish_ms" {
     exponential_buckets {
       num_finite_buckets = 40
       growth_factor      = 1.3
-      scale              = 10 # 10 ms up to about 36 minutes
+      scale              = 10 # 10 ms up to about 6 minutes
     }
   }
   depends_on = [google_project_service.apis]
