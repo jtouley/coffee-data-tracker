@@ -10,7 +10,7 @@ from __future__ import annotations
 import logging
 import threading
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
@@ -51,6 +51,14 @@ class Rec:
     deleted: bool = False
 
 
+@dataclass
+class _Pending:
+    item: Any
+    deleted: bool
+    ok: bool = False
+    done: threading.Event = field(default_factory=threading.Event)
+
+
 def _model[M: BaseModel](cls: type[M], row: dict) -> M:
     return cls(**{k: v for k, v in row.items() if k in cls.model_fields and v is not None})
 
@@ -69,6 +77,7 @@ class Store:
         self.equipment: dict[str, Rec] = {}
         self._coffees: dict[str, tuple[dict | None, float]] = {}
         self._staged: dict[str, datetime] = {}
+        self._pending: dict[tuple[str, str], _Pending] = {}  # the latest record per key still being published
         for table, key, cls, into in (
             ("shots", "shot_id", Shot, self.shots),
             ("bags", "bag_id", Bag, self.bags),
@@ -307,12 +316,30 @@ class Store:
 
     # --- writes --------------------------------------------------------------------------------------
 
-    def _commit(self, recs: dict[str, Rec], key: str, item: Any, table: str, deleted: bool = False) -> Rec:
-        """One lake file for one record, published before returning; the cache changes only after that.
+    def _commit(self, recs: dict[str, Rec], key: str, item: Any, table: str, deleted: bool = False) -> bool:
+        """One lake file for one record, published before returning; the cache changes only after that. Returns
+        whether a record was written: one identical to the latest, stored or still being published, isn't.
 
         The lock covers staging the file, which fixes its logged_at, not the upload, so a slow commit to Hugging
         Face doesn't hold up everyone else's writes. Lake.publish runs one upload at a time and sends whatever is
-        staged, so a request's file may go up in another request's commit."""
+        staged, so a request's file may go up in another request's commit. While it uploads, the record is kept as
+        pending: the outbox resends a write whose page was left mid-save, and that resend waits for the first
+        upload instead of writing the same record again. A failed upload drops the mark, so a retry writes."""
+        mark = (table, key)
+        while True:
+            with self.lock:
+                busy = self._pending.get(mark)
+                if busy is None:
+                    current = recs.get(key)
+                    if current and current.item == item and current.deleted == deleted:
+                        return False  # already stored
+                    break
+                if busy.item != item or busy.deleted != deleted:
+                    break  # a different record: a correction, written after the one in flight
+            busy.done.wait()
+            if busy.ok:
+                return False  # the same record, now published
+            # It failed to publish: look again, and write it if nothing else has.
         with self.lock:
             prev = recs.get(key)
             after = max((t for t in (prev and prev.logged_at, self._staged.get(key)) if t), default=None)
@@ -325,8 +352,16 @@ class Store:
                 row = item.model_dump() | {"logged_at": at, "deleted": deleted}
                 self.lake.write(table, f"{table}/{key}__{at:%Y%m%dT%H%M%S}.parquet", [row])
             self._staged[key] = at  # the next record for this key sorts after this one, published or not
+            mine = self._pending[mark] = _Pending(item, deleted)
         started = time.perf_counter()
-        self.lake.publish(f"app: {table} {key}")
+        try:
+            self.lake.publish(f"app: {table} {key}")
+        except BaseException:
+            with self.lock:
+                if self._pending.get(mark) is mine:
+                    del self._pending[mark]
+            mine.done.set()  # ok stays False: whoever waited writes it themselves
+            raise
         logs.event(
             "saved",
             table=table,
@@ -339,7 +374,11 @@ class Store:
             current = recs.get(key)
             if current is None or current.logged_at <= at:  # a later record may have landed meanwhile
                 recs[key] = rec
-        return rec
+            if self._pending.get(mark) is mine:
+                del self._pending[mark]
+            mine.ok = True
+        mine.done.set()
+        return True
 
     def _owned(self, recs: dict[str, Rec], key: str, user_id: str) -> Rec | None:
         prev = recs.get(key)
@@ -379,13 +418,14 @@ class Store:
             )
         if prev:
             # A correction keeps what the Log shot form doesn't carry: where the shot came from and its roast date.
-            shot = shot.model_copy(
-                update={
-                    "source": prev.item.source,
-                    "roast_date": shot.roast_date
-                    or (bag.roast_date if moved and bag else prev.item.roast_date),
-                }
-            )
+            # A shot's own date is one entered with it (an import); without one, fct_shot takes its bag's. Moved, a
+            # date that is only the old bag's (copied in by an earlier move) is dropped, so the shot follows its new
+            # bag's date, and a later fix to that bag's date, rather than keeping a copy of either.
+            roast = shot.roast_date or prev.item.roast_date
+            old_bag = self.bag(user_id, prev.item.bag_id)
+            if moved and not shot.roast_date and old_bag and roast == old_bag.roast_date:
+                roast = None
+            shot = shot.model_copy(update={"source": prev.item.source, "roast_date": roast})
         if prev and prev.item == shot:
             # A retry of a write that already landed, including one that arrives after Undo: a late resend
             # must not bring a retracted shot back.
@@ -393,8 +433,7 @@ class Store:
         if prev and prev.deleted:
             # Only Undo (restore_shot) brings a retracted shot back, not a correction saved in another tab.
             raise Invalid("That shot was retracted, so it can’t be corrected. Undo the retraction first.")
-        self._commit(self.shots, shot.shot_id, shot, "shots")
-        return shot, True
+        return shot, self._commit(self.shots, shot.shot_id, shot, "shots")
 
     def retract_shot(self, user_id: str, shot_id: str) -> bool:
         """Undo: a retraction record (deleted = true), never a delete. Retracting twice writes once."""
@@ -403,8 +442,7 @@ class Store:
             raise NotFound(shot_id)
         if prev.deleted:
             return False
-        self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
-        return True
+        return self._commit(self.shots, shot_id, prev.item, "shots", deleted=True)
 
     def restore_shot(self, user_id: str, shot_id: str) -> bool:
         """Undo a retraction: the shot again, as a new record. Restoring a shot that's there writes nothing."""
@@ -413,8 +451,7 @@ class Store:
             raise NotFound(shot_id)
         if not prev.deleted:
             return False
-        self._commit(self.shots, shot_id, prev.item, "shots")
-        return True
+        return self._commit(self.shots, shot_id, prev.item, "shots")
 
     def save_equipment(self, user_id: str, data: dict) -> Equipment:
         """Add or change equipment. One default per kind: making this one the default clears the others.
@@ -448,11 +485,15 @@ class Store:
         bag = Bag(**{k: v for k, v in data.items() if k != "user_id"}, user_id=user_id)
         prev = self._owned(self.bags, bag.bag_id, user_id)
         # Today in UTC plus a day's grace (the phone checks the same), so no zone's "today" is refused. Only a date
-        # being set now is refused, so a bag stored before this check (with a future date) can still take its photo's
-        # match.
+        # being set now is refused, so a bag stored before these checks (with a future or old date) can still take its
+        # photo's match.
         new_date = not (prev and prev.item.roast_date == bag.roast_date)
-        if new_date and bag.roast_date and bag.roast_date > datetime.now(UTC).date() + timedelta(days=1):
+        today = datetime.now(UTC).date()
+        if new_date and bag.roast_date and bag.roast_date > today + timedelta(days=1):
             raise Invalid("That roast date is in the future. Check the year.")
+        # Over a year old (with the same day of grace, as labels.latest_past): the year is almost surely wrong.
+        if new_date and bag.roast_date and bag.roast_date < today - timedelta(days=366):
+            raise Invalid("That roast date is over a year ago. Check the year.")
         same_text = prev and (prev.item.coffee_freetext or "").strip() == (bag.coffee_freetext or "").strip()
         if prev and same_text and not bag.coffee_id:
             # A resend or an edit of something else keeps the match; changed text is matched again below.
