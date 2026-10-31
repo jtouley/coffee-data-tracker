@@ -769,9 +769,14 @@ def test_remote_globs_only_for_folders_the_dataset_has(tmp_path, monkeypatch):
     assert any(s.startswith("hf://") for s in remote.sources("builds"))
 
 
-def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch):
+def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch, capsys):
     from coffeedata import cli
 
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    site = ["site", "--served", "--db", str(tmp_path / "s.duckdb"), "--out", str(tmp_path / "site")]
     with pytest.raises(SystemExit, match="nothing is served yet"):
-        cli.main(["site", "--served", "--db", str(tmp_path / "s.duckdb"), "--out", str(tmp_path / "site")])
+        cli.main(site)
+    # The site workflow asks to skip instead: it says why, exits 0 and builds nothing (so nothing is deployed).
+    cli.main([*site, "--skip-if-unserved"])
+    assert "nothing is served yet" in capsys.readouterr().err
+    assert not (tmp_path / "site").exists() and not (tmp_path / "s.duckdb").exists()
