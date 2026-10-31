@@ -118,8 +118,11 @@ def main(argv: list[str] | None = None) -> int:
     chosen = pick(states, registry)
     g1, g2 = chosen[:100], chosen[100:]
     print(f"eligible shopify roasters: {len(states)}; picked {len(chosen)} on distinct hosts (salt {SALT})")
-    if args.dry_run or len(chosen) < STORES:
-        return 0 if args.dry_run else 1
+    if len(chosen) < STORES:
+        print(f"only {len(chosen)} eligible stores on distinct hosts; the experiment needs {STORES}")
+        return 1
+    if args.dry_run:
+        return 0
 
     lock = threading.Lock()
     state: dict[str, Any] = {"phase": "A", "phase_n": 0, "total": 0, "cut": 0}

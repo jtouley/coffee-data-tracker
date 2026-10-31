@@ -32,7 +32,8 @@ def _runs_on(job: dict) -> set[str]:
     r = job.get("runs-on", [])
     if isinstance(r, dict):
         r = r.get("labels", [])
-    return {r} if isinstance(r, str) else set(r)
+    assert "${{" not in str(r), "runs-on is an expression: it could pick the crawler label at run time"
+    return {str(x).lower() for x in ([r] if isinstance(r, str) else r)}  # labels are case-insensitive
 
 
 def _crawler_workflows() -> dict[str, set[str]]:
@@ -99,7 +100,11 @@ def test_the_vm_scripts_parse(script):
 def test_the_job_user_can_change_neither_the_runner_nor_its_hook():
     s = STARTUP.read_text()
     assert "sha256sum -c" in s and "--disableupdate" in s
-    assert 'chown -R root:root "$DIR"' in s  # the install, .env and credentials: root's
+    # The install, .env and credentials are root's; _work and _diag stay the runner's, also after a reboot.
+    assert re.search(
+        r'find "\$DIR" .*-path "\$DIR/_work" -o -path "\$DIR/_diag" .*-prune -o -exec chown root:root', s
+    )
+    assert not re.search(r"(chown|chmod) (-\w*R|--recursive)", s), "a recursive chown/chmod would reach _work"
     assert "ReadOnlyPaths=$DIR" in s and "ReadWritePaths=$DIR/_work $DIR/_diag" in s
     assert "ACTIONS_RUNNER_HOOK_JOB_STARTED=$HOOK" in s and "LIB=/usr/local/lib/crawler-runner" in s
     assert "ExecStartPre=$LIB/check-hook.sh" in s  # no hook, no runner
@@ -251,3 +256,18 @@ def test_the_units_hook_check_script_refuses_an_empty_hook(tmp_path):
     assert subprocess.run([str(check)]).returncode != 0
     hook.write_text(HOOK.read_text())
     assert subprocess.run([str(check)]).returncode == 0
+
+
+def test_the_ownership_reset_skips_the_runners_folders(tmp_path):
+    """Run startup.sh's find with echo in place of chown/chmod: nothing under _work or _diag is touched."""
+    line = next(x for x in STARTUP.read_text().splitlines() if x.strip().startswith('find "$DIR"'))
+    for d in ("_work/_temp", "_work/repo/repo", "_diag", "bin"):
+        (tmp_path / d).mkdir(parents=True)
+    (tmp_path / ".env").write_text("")
+    cmd = line.replace("chown root:root", "echo").replace("chmod go-w", "echo")
+    out = subprocess.run(
+        ["bash", "-c", f"DIR={tmp_path}; {cmd}"], capture_output=True, text=True, check=True
+    ).stdout
+    touched = set(out.split())
+    assert str(tmp_path / "bin") in touched and str(tmp_path / ".env") in touched
+    assert not [t for t in touched if "/_work" in t or "/_diag" in t]

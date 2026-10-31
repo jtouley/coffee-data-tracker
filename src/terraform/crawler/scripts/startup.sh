@@ -118,8 +118,8 @@ main() {
   # Root owns the install, its config and the .env the runner loads; the job user writes only _work and _diag.
   { grep -v '^ACTIONS_RUNNER_HOOK' "$DIR/.env" 2>/dev/null || true; echo "ACTIONS_RUNNER_HOOK_JOB_STARTED=$HOOK"; } > "$DIR/.env.tmp"
   mv -f "$DIR/.env.tmp" "$DIR/.env"
-  chown -R root:root "$DIR"
-  chmod -R go-w "$DIR"
+  # Everything but _work and _diag, which the runner writes (a recursive chown would lock it out of _work on reboot).
+  find "$DIR" \( -path "$DIR/_work" -o -path "$DIR/_diag" \) -prune -o -exec chown root:root {} + -exec chmod go-w {} +
   for f in .runner .credentials .credentials_rsaparams; do
     [ -e "$DIR/$f" ] && chgrp runner "$DIR/$f" && chmod 0640 "$DIR/$f"
   done
@@ -161,6 +161,10 @@ EOF
   systemctl daemon-reload
   systemctl enable actions-runner.service
   systemctl restart actions-runner.service
+  if ! hook_ok "$HOOK"; then
+    echo "crawler: no good pre-job hook, so the runner won't start; fix the metadata, then: sudo google_metadata_script_runner startup" >&2
+    exit 1
+  fi
   echo "crawler: runner running"
 }
 

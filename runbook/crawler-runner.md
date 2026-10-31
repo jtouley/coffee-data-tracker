@@ -43,7 +43,11 @@ the live test's crawl, which peaks at about 370 MB. Before `weekly.yml` moves he
   - They run as `runner`: no sudo, no docker.
   - They can reach the metadata server only for DNS (port 53), so they can't use the VM's service account.
   - `KillMode=control-group` stops every process a job leaves behind.
-- **CI** (`tests/test_crawler_runner.py`) fails if a workflow that targets the label has any trigger other than
+  - Still possible for an accepted job (main's code, or a compromised dependency it installs): reading the runner's
+    key (`.credentials*`; the Listener and steps share a uid; removing the runner in GitHub revokes it), and leaving
+    state for later accepted jobs in `_work/_actions` or `~` (it can't change the hook or let a refused job run).
+    With the install read-only, a server-sent config migration only logs a warning; re-register as root if one comes.
+- **CI** (`tests/test_crawler_runner.py`, a consistency check; the hook is the boundary) fails if a workflow that targets the label has any trigger other than
   dispatch or schedule, or if the hook's allow list doesn't match those workflows. It also runs the hook against
   the cases it must refuse.
 - **Repository settings: set these first** (Settings → Actions → General):
