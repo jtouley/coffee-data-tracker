@@ -9,8 +9,7 @@ result from the same lake, and a fix to the rules applies to every past week wit
 
 import pyarrow as pa
 
-from coffeedata import classify, extract
-from coffeedata.models import CatalogItem, Variant
+from coffeedata import products
 
 SCHEMA = pa.schema(
     [
@@ -32,34 +31,12 @@ SCHEMA = pa.schema(
         ("is_decaf", pa.bool_()),
     ]
 )
-ATTRS = [f.name for f in SCHEMA][5:]
+assert [f.name for f in SCHEMA][5:] == products.ATTRS
 
 
 def row(r: dict, verdicts: dict[str, str]) -> dict:
-    item = CatalogItem(
-        roaster_id="",
-        product_id="",
-        handle="",
-        url="",
-        title=r["title"] or "",
-        platform="",
-        product_type=r["product_type"] or "",
-        tags=r["tags"] or [],
-        variants=[Variant(variant_id=str(i), grams=g) for i, g in enumerate(r["grams"] or [])],
-        body_hash=r["body_hash"] or "",
-        body_text=r["body_text"] or "",
-    )
-    label = verdicts.get(r["input_hash"])
-    by_claude = label in ("coffee", "not_coffee") and not classify.excluded(item)
-    out = {
-        "input_hash": r["input_hash"],
-        "is_coffee": label == "coffee" if by_claude else classify.is_coffee(item),
-        "classified_by": "claude" if by_claude else "rules",
-        "is_wholesale": classify.is_wholesale(item),
-        "clean_title": item.title,
-    }
-    e = extract.rules(item) if out["is_coffee"] else None
-    return out | {a: getattr(e, a) if e else None for a in ATTRS}
+    """The logic lives in coffeedata.products (shared with registry.STATE_SQL and enrich.pending)."""
+    return products.derive(r, verdicts)[0]
 
 
 def model(dbt, session):

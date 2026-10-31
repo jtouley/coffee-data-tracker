@@ -2,8 +2,9 @@
 
 Writes (never rewrites): a run manifest (the roasters this ingest sets out to fetch, before the first request),
 snapshots (every product, coffee or not), fetches (one row per roaster attempt, ok or error, with its request
-diagnostics), bodies (description text, once per new body_hash) and rule-based enrichments (once per new
-body_hash). Re-running for the same run date only fetches roasters without a successful fetch that day.
+diagnostics) and bodies (description text, once per new body_hash). Extract and load only (ELT): what a product is
+(coffee, its attributes, whether Claude should enrich it) is derived after load, by the build (stg_products) and
+the post-load enrichment step (`coffeedata enrich-pending`). Re-running for the same run date only fetches roasters without a successful fetch that day.
 """
 
 from __future__ import annotations
@@ -23,7 +24,7 @@ from pathlib import Path
 
 import httpx
 
-from . import extract, lineage, registry
+from . import lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
 from .classify import is_coffee
@@ -81,7 +82,9 @@ def parked_path(lake: Lake, run_date: str, roaster_id: str) -> Path:
 def save_parked(lake: Lake, run_date: str, roaster_id: str, progress: dict) -> None:
     p = parked_path(lake, run_date, roaster_id)
     p.parent.mkdir(parents=True, exist_ok=True)
-    doc = {"page": progress["page"], "items": [i.model_dump(mode="json") for i in progress["items"]]}
+    # body_text is excluded from a CatalogItem's dump; the parked pages' descriptions are kept with them
+    items = [i.model_dump(mode="json") | {"body_text": i.body_text} for i in progress["items"]]
+    doc = {"page": progress["page"], "items": items}
     tmp = p.with_suffix(".tmp")
     tmp.write_text(json.dumps(doc))
     tmp.replace(p)
@@ -113,7 +116,9 @@ class Result:
         return [i for i in self.items if is_coffee(i)]
 
 
-def ingest_one(client: PoliteClient, roaster: Roaster, resume: dict | None = None) -> Result:
+def ingest_one(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> Result:
     res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
     start = time.monotonic()
     with client.track() as res.stats:
@@ -122,7 +127,9 @@ def ingest_one(client: PoliteClient, roaster: Roaster, resume: dict | None = Non
                 {
                     i.product_id: i
                     for i in (
-                        fetch_catalog(client, roaster, resume) if resume else fetch_catalog(client, roaster)
+                        fetch_catalog(client, roaster, resume, known_products)
+                        if resume is not None or known_products is not None
+                        else fetch_catalog(client, roaster)
                     )
                 }.values()
             )  # feeds repeat items
@@ -140,8 +147,18 @@ def ingest_one(client: PoliteClient, roaster: Roaster, resume: dict | None = Non
     return res
 
 
-def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None) -> Result:
-    return ingest_one(client, roaster, resume) if resume is not None else ingest_one(client, roaster)
+def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None, known: int | None) -> Result:
+    if resume is None and known is None:
+        return ingest_one(client, roaster)
+    return ingest_one(client, roaster, resume, known)
+
+
+def known_products(lake: Lake) -> dict[str, int]:
+    """Each roaster's product count at its latest ok fetch with products: lets a Shopify short page end a catalog
+    that has reached its known size, and never one known to be bigger."""
+    q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
+            where status = 'ok' and products > 0 and roaster_id is not null group by 1"""
+    return dict(lake.connect().execute(q).fetchall())
 
 
 def sample_key(roaster_id: str) -> str:
@@ -195,6 +212,18 @@ def select_states(
     if retry_failed:
         todo = [s for s in todo if s.roaster.roaster_id in tried]
     return todo, mode
+
+
+def latest_run(lake: Lake) -> str | None:
+    """The latest run with a full manifest: what the enrich and build jobs of a run work on."""
+    row = (
+        lake.connect()
+        .execute(
+            f"select max(run_date) from {lake.scan('run_manifests')} where mode = 'full' and roaster_id is not null"
+        )
+        .fetchone()
+    )
+    return row[0].isoformat() if row and row[0] else None
 
 
 def open_run(lake: Lake, today: str, max_age_days: int = 6) -> str | None:
@@ -271,10 +300,9 @@ def rows_for(
     run_date: date,
     batch_id: str,
     known_bodies: set[str],
-    enriched: set[tuple[str, str, str]],
     code_version: str | None = None,
 ) -> dict[str, list[dict]]:
-    snaps, fetches, bodies, enrich = [], [], [], []
+    snaps, fetches, bodies = [], [], []
     for res in results:
         r = res.roaster
         coffee_ids = {i.product_id for i in res.coffees}
@@ -316,20 +344,7 @@ def rows_for(
                 bodies.append(
                     {"body_hash": it.body_hash, "body_text": it.body_text, "first_seen_run": run_date}
                 )
-            key = (r.roaster_id, it.product_id, it.body_hash)
-            if it.product_id in coffee_ids and key not in enriched:
-                enriched.add(key)
-                e = extract.rules(it)
-                enrich.append(
-                    e.model_dump()
-                    | {
-                        "extracted_at": res.fetched_at,
-                        "roaster_id": r.roaster_id,
-                        "product_id": it.product_id,
-                        "needs_llm": extract.needs_llm(e),
-                    }
-                )
-    return {"snapshots": snaps, "fetches": fetches, "bodies": bodies, "enrichments": enrich}
+    return {"snapshots": snaps, "fetches": fetches, "bodies": bodies}
 
 
 def run(
@@ -366,19 +381,14 @@ def run(
     known_bodies = {
         r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()
     }
-    enriched = {
-        tuple(r)
-        for r in con.execute(
-            f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
-        ).fetchall()
-    }
+    known = known_products(lake)
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
 
     def flush(chunk: list[Result]) -> None:
         batch = new_batch_id()
-        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched, version).items():
+        for table, rows in rows_for(chunk, rd, batch, known_bodies, version).items():
             lake.write_partition(table, run_date, batch, rows)
         # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
         # chunk, and re-running the week skips the roasters already fetched.
@@ -475,9 +485,8 @@ def run(
                         flush(done)
                         done, last_flush = [], time.monotonic()
                     p = progress.get(r.roaster_id)
-                    running.add(
-                        ex.submit(_attempt, client, r, p and {"page": p["page"], "items": p["items"]})
-                    )
+                    resume_at = p and {"page": p["page"], "items": p["items"]}
+                    running.add(ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id)))
                 # Wake for the next start, and also to flush a chunk that is old and to stop at the deadline.
                 wake = [t for t in (
                     pending[0][0] if pending else None,

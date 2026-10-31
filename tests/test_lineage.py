@@ -64,9 +64,10 @@ def test_fetches_record_diagnostics_and_the_run_manifest_comes_first(lake, monke
     rows = _rows(lake, "fetches")
     onyx = next(r for r in rows if r["roaster_id"] == "onyxcoffeelab.com")
     slow = next(r for r in rows if r["roaster_id"] == "slow.com")  # its first attempt; backoffs add rows
-    # 12 products, fewer than the page limit, so that page is the last: robots.txt plus one page.
-    assert (onyx["requests"], onyx["pages"], onyx["retries"], onyx["rate_limited"]) == (2, 1, 0, 0)
-    assert onyx["http_statuses"] == [{"status": 200, "responses": 1}, {"status": 404, "responses": 1}]
+    # Page 2 repeats page 1, which ends the catalog: robots.txt plus two pages (no history, so a short page alone
+    # doesn't end it).
+    assert (onyx["requests"], onyx["pages"], onyx["retries"], onyx["rate_limited"]) == (3, 2, 0, 0)
+    assert onyx["http_statuses"] == [{"status": 200, "responses": 2}, {"status": 404, "responses": 1}]
     assert (slow["status"], slow["requests"], slow["pages"], slow["retries"], slow["rate_limited"]) == (
         "error", 4, 0, 2, 3)  # fmt: skip
     assert all(r["duration_s"] >= 0 and r["code_version"] == "abc123" for r in rows)

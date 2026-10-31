@@ -139,7 +139,7 @@ select
         when coalesce(g.platform, r.seed_platform) is null
              or coalesce(g.platform, r.seed_platform) like 'http\_%' escape '\' then 'unreachable'
         when lo.roaster_id is null then 'pending'
-        when lo.coffees > 0 then 'active'
+        when coalesce(hc.has_coffee, false) then 'active'
         when lo.products > 0 then 'no_coffee'
         else 'no_catalog'
     end as status
@@ -148,6 +148,7 @@ left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
+left join roaster_has_coffee hc using (roaster_id)
 """
 
 
@@ -167,8 +168,56 @@ class RoasterState:
     last_probed: str | None
 
 
+LAST_OK_VERSIONS_SQL = """
+with last_ok as (
+    select roaster_id, run_date, batch_id from {fetches} where roaster_id is not null and status = 'ok'
+    qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1
+),
+v as (
+    select distinct s.roaster_id, {input_hash} as input_hash, s.title, s.product_type, s.tags, s.body_hash,
+           list_transform(s.variants, lambda v: v.grams) as grams
+    from {snapshots} s join last_ok using (roaster_id, run_date, batch_id)
+)
+select v.*, b.body_text
+from v left join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) b using (body_hash)
+"""
+
+
+def has_coffee(lake: Lake) -> dict[str, bool]:
+    """dim_roaster's last_ok_coffee in Python: whether the build's classification (products.derive, with stored
+    verdicts) finds a coffee among the products of each roaster's latest successful fetch."""
+    from . import products, verdict
+
+    known = products.verdicts(lake, verdict.model(), verdict.DEFINITION_VERSION)
+    sql = LAST_OK_VERSIONS_SQL.format(
+        input_hash=verdict.INPUT_HASH, **{t: lake.scan(t) for t in ("fetches", "snapshots", "bodies")}
+    )
+    cur = lake.connect().execute(sql)
+    cols = [d[0] for d in cur.description]
+    seen: dict[str, bool] = {}
+    out: dict[str, bool] = {}
+    for row in cur.fetchall():
+        r = dict(zip(cols, row, strict=True))
+        if r["input_hash"] not in seen:
+            seen[r["input_hash"]] = products.derive(r, known)[0]["is_coffee"]
+        out[r["roaster_id"]] = out.get(r["roaster_id"], False) or seen[r["input_hash"]]
+    return out
+
+
 def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
+    import pyarrow as pa
+
     con = lake.connect()
+    hc = has_coffee(lake)
+    con.register(
+        "roaster_has_coffee",
+        pa.table(
+            {
+                "roaster_id": pa.array(list(hc), pa.string()),
+                "has_coffee": pa.array(list(hc.values()), pa.bool_()),
+            }
+        ),
+    )
     cur = con.execute(state_sql(lake) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []

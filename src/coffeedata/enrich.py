@@ -1,18 +1,20 @@
-"""Claude enrichment for coffees the rules couldn't fully describe.
+"""Claude enrichment for coffees the rules couldn't fully describe: the post-load step (`coffeedata enrich-pending`).
 
-Work is derived, not tracked: a (roaster, product, body_hash) needs Claude when its rules row says so and
-no llm row exists yet, and it isn't in a submitted-but-uncollected batch. Anything skipped (over the cap,
-API error, failed batch item) is simply picked up again next run.
+ELT: ingestion only loads snapshots, bodies and fetches. This step reads them back from the lake and derives the
+candidates the way the build does (products.derive, stg_products' logic, with stored verdicts): a (roaster,
+product, body_hash) needs Claude when its latest version is coffee, the rules leave attributes missing
+(extract.needs_llm), it has a description, no llm row exists yet, and it isn't in a submitted-but-uncollected
+batch. Work is derived, not tracked: anything skipped (over the cap, API error, failed batch item) is simply
+picked up again next run.
 """
 
 from __future__ import annotations
 
-import json
 import logging
 from datetime import UTC, date, datetime
 from typing import cast
 
-from . import extract
+from . import extract, products
 from .lake import Lake, new_batch_id
 from .models import Enrichment
 
@@ -20,46 +22,65 @@ log = logging.getLogger(__name__)
 
 SYNC_LIMIT = 100
 
-PENDING_SQL = """
-with e as (select * from {enrichments}),
-rules as (select * from e where method = 'rules' and needs_llm),
-llm as (select distinct roaster_id, product_id, body_hash from e where method = 'llm'),
+VERSIONS_SQL = """
+with latest as (
+    select s.roaster_id, s.product_id, s.body_hash, s.title, s.product_type, s.tags,
+           list_transform(s.variants, lambda v: v.grams) as grams, {input_hash} as input_hash,
+           min(s.fetched_at) over (partition by s.roaster_id, s.product_id, s.body_hash) as first_seen
+    from {snapshots} s
+    where s.roaster_id is not null
+    qualify row_number() over (partition by s.roaster_id, s.product_id, s.body_hash order by s.fetched_at desc) = 1
+),
+llm as (select distinct roaster_id, product_id, body_hash from {enrichments} where method = 'llm'),
 b as (select * from {llm_batches}),
 in_flight as (
     select distinct roaster_id, product_id, body_hash from b where state = 'submitted'
       and batch_id not in (select batch_id from b where state = 'collected')
-),
-latest as (
-    select roaster_id, product_id, body_hash, title, tags from {snapshots}
-    qualify row_number() over (partition by roaster_id, product_id, body_hash order by fetched_at desc) = 1
 )
-select r.roaster_id, r.product_id, r.body_hash, l.title, l.tags, bo.body_text,
-       to_json(r) as base
-from rules r
-join latest l using (roaster_id, product_id, body_hash)
+select l.*, bo.body_text
+from latest l
 join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) bo using (body_hash)
-anti join llm using (roaster_id, product_id, body_hash)
-anti join in_flight using (roaster_id, product_id, body_hash)
+{anti}
 where coalesce(bo.body_text, '') <> ''
-order by r.extracted_at, r.roaster_id, r.product_id
-limit {limit}
+order by l.first_seen, l.roaster_id, l.product_id
 """
 
-BASE_FIELDS = list(Enrichment.model_fields)
 
+def _versions(lake: Lake, pending_only: bool = True) -> list[dict]:
+    from .verdict import INPUT_HASH
 
-def pending(lake: Lake, limit: int) -> list[dict]:
-    sql = PENDING_SQL.format(
-        **{t: lake.scan(t) for t in ("enrichments", "llm_batches", "snapshots", "bodies")}, limit=int(limit)
+    anti = (
+        "anti join llm using (roaster_id, product_id, body_hash)\n"
+        "anti join in_flight using (roaster_id, product_id, body_hash)"
+        if pending_only
+        else ""
+    )
+    sql = VERSIONS_SQL.format(
+        input_hash=INPUT_HASH,
+        anti=anti,
+        **{t: lake.scan(t) for t in ("enrichments", "llm_batches", "snapshots", "bodies")},
     )
     cur = lake.connect().execute(sql)
     cols = [d[0] for d in cur.description]
+    return [dict(zip(cols, row, strict=True)) for row in cur.fetchall()]
+
+
+def pending(lake: Lake, limit: int) -> list[dict]:
+    """The Claude candidates, oldest first: each with its title, tags, body_text and the rules' Enrichment (base)."""
+    from . import verdict
+
+    known = products.verdicts(lake, verdict.model(), verdict.DEFINITION_VERSION)
     out = []
-    for row in cur.fetchall():
-        r = dict(zip(cols, row, strict=True))
-        base = json.loads(r.pop("base"))
-        r["base"] = Enrichment(**{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None})
-        out.append(r)
+    for r in _versions(lake):
+        derived, base = products.derive(r, known)
+        if not derived["is_coffee"] or base is None or not extract.needs_llm(base):
+            continue
+        out.append(
+            {k: r[k] for k in ("roaster_id", "product_id", "body_hash", "title", "tags", "body_text")}
+            | {"base": base}
+        )
+        if len(out) >= limit:
+            break
     return out
 
 
@@ -196,16 +217,11 @@ def _batch_meta(con, lake: Lake, batch_id: str) -> dict[str, dict]:
 
 
 def _bases(con, lake: Lake, keys: list[dict]) -> dict[tuple, Enrichment]:
-    cur = con.execute(
-        f"select roaster_id, product_id, body_hash, to_json(e) from {lake.scan('enrichments')} e "
-        "where method = 'rules'"
-    )
+    """The rules' attributes for each key's latest version, derived again (no rules rows are stored)."""
     wanted = {(k["roaster_id"], k["product_id"], k["body_hash"]) for k in keys}
     out = {}
-    for rid, pid, bh, j in cur.fetchall():
-        if (rid, pid, bh) in wanted:
-            base = json.loads(j)
-            out[(rid, pid, bh)] = Enrichment(
-                **{k: base.get(k) for k in BASE_FIELDS if base.get(k) is not None}
-            )
+    for r in _versions(lake, pending_only=False):
+        key = (r["roaster_id"], r["product_id"], r["body_hash"])
+        if key in wanted:
+            out[key] = extract.rules(products.item(r))
     return out

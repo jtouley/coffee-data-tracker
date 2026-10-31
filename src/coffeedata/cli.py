@@ -378,6 +378,13 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     from . import ingest
 
     started = time.monotonic()
+    stage = getattr(args, "stage", None) or "all"
+    if stage in ("enrich", "build"):  # a later job of the same run: the latest run with a full manifest
+        run = args.run_date or ingest.latest_run(Lake())
+        if not run:
+            raise SystemExit("no run to continue")
+        (_weekly_enrich if stage == "enrich" else _weekly_build)(args, run)
+        return
     open_run = None if args.run_date else ingest.open_run(Lake(), _today())
     if getattr(args, "resume_only", False) and not open_run:
         print("no unfinished run to resume", file=sys.stderr)
@@ -442,10 +449,21 @@ def cmd_weekly(args: argparse.Namespace) -> None:
         )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
+    if stage == "ingest":
+        return
+    _weekly_enrich(args, run)
+    _weekly_build(args, run)
+
+
+def _weekly_enrich(args: argparse.Namespace, run: str) -> None:
+    """Post-load enrichment (ELT): Claude candidates derived from the loaded snapshots and bodies, and verdicts."""
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
     cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: verdicts"))
+
+
+def _weekly_build(args: argparse.Namespace, run: str) -> None:
     # The checks gate publishing, not the run: the build is recorded and published either way (its results and a
     # copy of its catalog marts), but only a passing build replaces the current marts, public tables and site.
     accept = getattr(args, "accept_volume_change", False)
@@ -618,9 +636,14 @@ def main(argv: list[str] | None = None) -> None:
     ev.add_argument("--sets", default="train,validation")
     ev.add_argument("--predict", help="JSON list of products to predict (a sealed set); writes --out")
     ev.add_argument("--out", default="predictions.json")
-    e = add("enrich", cmd_enrich, "Claude enrichment of pending coffees (collects finished batches first)")
-    e.add_argument("--limit", type=int, default=2000)
-    e.add_argument("--run-date", type=_run_date, default=_today())
+    for name in ("enrich", "enrich-pending"):  # enrich-pending: the post-load step's name (ELT)
+        e = add(
+            name,
+            cmd_enrich,
+            "post-load Claude enrichment of pending coffees (collects finished batches first)",
+        )
+        e.add_argument("--limit", type=int, default=2000)
+        e.add_argument("--run-date", type=_run_date, default=_today())
 
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
@@ -694,6 +717,12 @@ def main(argv: list[str] | None = None) -> None:
         type=_positive_float,
         default=None,
         help="stop fetching this long after the start, publish, and exit (re-run to continue)",
+    )
+    w.add_argument(
+        "--stage",
+        choices=("all", "ingest", "enrich", "build"),
+        default="all",
+        help="one job of the run: ingest (extract + load), enrich (post-load enrichment), build; default all",
     )
     w.add_argument("--sample", type=int, help="only N roasters (for trying it out)")
     w.add_argument("--discover", action="store_true", help="run discovery even if it isn't the first week")

@@ -295,8 +295,9 @@ def test_a_429_on_one_store_pauses_the_others_and_both_catalogs_complete(mock, n
         assert t >= 1009  # a.com's retry waited out the cooldown its 429 started
         assert len(fetch_catalog(c, _r("b.com"))) == 5
     assert lim.stats["rate_limited"] == 1 and lim.stats["cooldowns"] == 1
-    # robots.txt for both stores, a.com's two tries at page 1 and b.com's page (short pages are the last)
-    assert lim.stats["requests"] == 2 + 2 + 1
+    # robots.txt for both stores, a.com's two tries at page 1, page 2, and b.com's two pages (no history: a short
+    # page doesn't end the catalog)
+    assert lim.stats["requests"] == 2 + 2 + 1 + 2
 
 
 def test_a_430_pauses_the_platform_without_the_client_sleeping_too(mock, monkeypatch):
@@ -753,7 +754,9 @@ def _fetch_rows(lake):
 def test_a_rate_limited_store_is_backed_off_recorded_and_recovered(lake, mock, quick_defer):
     page1 = mock.get("https://slow.com/products.json", params={"page": "1"})
     page1.side_effect = [resp(429, "0.05"), _page(range(3))]
+    mock.get("https://slow.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     mock.get("https://ok.com/products.json", params={"page": "1"}).mock(return_value=_page(range(10, 12)))
+    mock.get("https://ok.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     out = ingest.run(lake, [_r("slow.com"), _r("ok.com")], "2026-10-26", workers=2, shopify_rps=1000)
     assert out["deferred"] == {"page_backoffs": 1}  # a page block is backed off, not sent to a deferred round
     rows = _fetch_rows(lake)
@@ -766,6 +769,7 @@ def test_a_backed_off_stores_failure_row_is_written_before_its_retry(lake, mock,
     waits out its backoff must not leave it looking untried."""
     page1 = mock.get("https://slow.com/products.json", params={"page": "1"})
     page1.side_effect = [resp(429, "0.05"), _page(range(3))]
+    mock.get("https://slow.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     seen_at_retry, calls, real = [], [], ingest.ingest_one
 
     def spy(client, roaster, *a):
@@ -783,6 +787,7 @@ def test_a_backed_off_stores_failure_row_is_written_before_its_retry(lake, mock,
 def test_a_store_that_blocks_every_attempt_ends_the_run_refused_and_parked(lake, mock, quick_defer):
     mock.get("https://bad.com/products.json").mock(return_value=resp(429, "0.05"))
     mock.get("https://ok.com/products.json", params={"page": "1"}).mock(return_value=_page(range(2)))
+    mock.get("https://ok.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     out = ingest.run(lake, [_r("bad.com"), _r("ok.com")], "2026-10-26", workers=2, shopify_rps=1000)
     assert out["deferred"] == {"page_backoffs": 3, "page_parked": 1, "page_parked_never_served": 1}
     errors = [e for r, s, e in _fetch_rows(lake) if r == "bad.com"]
@@ -820,8 +825,10 @@ def test_backoff_retries_are_not_read_as_a_platform_block(lake, mock, quick_defe
     for i in range(6):
         m = mock.get(f"https://p{i}.com/products.json", params={"page": "1"})
         m.side_effect = [resp(429, "0.4"), resp(429, "0.05"), _page(range(2))]
+        mock.get(f"https://p{i}.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     for i in range(10):
         mock.get(f"https://ok{i}.com/products.json", params={"page": "1"}).mock(return_value=_page(range(2)))
+        mock.get(f"https://ok{i}.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     stores = [_r(f"ok{i}.com") for i in range(10)] + [_r(f"p{i}.com") for i in range(6)]
     out = ingest.run(lake, stores, "2026-10-26", workers=16, shopify_rps=1000)
     assert out["deferred"] == {"page_backoffs": 12}
@@ -841,6 +848,7 @@ def test_deferred_retries_are_spread_over_the_wait_window_without_holding_worker
             httpx.ReadTimeout("slow"),
             _page(range(2)),
         ]
+        mock.get(f"https://p{i}.com/products.json", params={"page": "2"}).mock(return_value=_page([]))
     clock = FakeTime()
     monkeypatch.setattr(ingest, "time", clock)
     monkeypatch.setattr(ingest, "DEFERRED_SPREAD", 60.0)
@@ -981,16 +989,33 @@ def test_products_json_asks_for_the_shopify_maximum_page_size(mock):
     )
 
 
-def test_a_short_page_is_the_last_one_and_the_empty_page_is_never_asked_for(mock):
+@pytest.mark.parametrize(
+    "known, asks_page_2",
+    [(None, True), (41, True), (40, False), (12, False)],
+)
+def test_a_short_page_ends_the_catalog_only_once_its_known_size_is_reached(mock, known, asks_page_2):
+    """No history, or fewer products so far than the store's latest ok fetch had: keep paginating to the empty page
+    (Shopify's short pages can have more behind them). At or past its known size: the short page is the last."""
     p1 = mock.get("https://small.example/products.json", params={"page": "1"}).mock(
         return_value=_page(range(40))
     )
-    p2 = mock.get("https://small.example/products.json", params={"page": "2"}).mock(
-        return_value=resp(429, "60")
-    )
+    p2 = mock.get("https://small.example/products.json", params={"page": "2"}).mock(return_value=_page([]))
     with PoliteClient(min_interval=0) as c:
-        assert len(fetch_catalog(c, _r("small.example"))) == 40
-    assert p1.call_count == 1 and p2.call_count == 0
+        assert len(fetch_catalog(c, _r("small.example"), known_products=known)) == 40
+    assert p1.call_count == 1 and p2.call_count == int(asks_page_2)
+
+
+def test_ingest_passes_each_stores_last_known_product_count(lake, mock):
+    """ingest.run reads it from the store's latest ok fetch: the second week skips the empty end page."""
+    p1 = mock.get("https://small.example/products.json", params={"page": "1"}).mock(
+        return_value=_page(range(40))
+    )
+    p2 = mock.get("https://small.example/products.json", params={"page": "2"}).mock(return_value=_page([]))
+    ingest.run(lake, [_r("small.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST)
+    assert (p1.call_count, p2.call_count) == (1, 1)  # no history: to the empty page
+    assert ingest.known_products(lake) == {"small.example": 40}
+    ingest.run(lake, [_r("small.example")], "2026-11-02", workers=1, shopify_rps=1000, client_kw=FAST)
+    assert (p1.call_count, p2.call_count) == (2, 1)  # 40 known, 40 fetched: page 1 was the last
 
 
 def test_exactly_250_on_the_last_page_costs_one_more_request(mock):
@@ -1011,3 +1036,13 @@ def test_shopify_page_cap_is_high_enough_for_big_catalogs():
     from coffeedata.adapters import shopify
 
     assert shopify.MAX_PAGES * shopify.PAGE_LIMIT >= 15_000  # kaldi.com: more than 20 pages of 250
+
+
+def test_a_parked_stores_progress_keeps_its_descriptions(lake):
+    from coffeedata.models import CatalogItem
+
+    it = CatalogItem(roaster_id="x.com", product_id="1", handle="h", url="u", title="C", platform="shopify",
+                     body_text="Washed, 1,900 m.")  # fmt: skip
+    ingest.save_parked(lake, "2026-10-26", "x.com", {"page": 2, "items": [it]})
+    back = ingest.load_parked(lake, "2026-10-26")["x.com"]["items"][0]
+    assert back.body_text == "Washed, 1,900 m." and back.body_hash == it.body_hash

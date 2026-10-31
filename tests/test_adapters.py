@@ -119,17 +119,18 @@ def _page(ids):
     )
 
 
-@pytest.mark.parametrize("short_ends, expected", [(True, 249), (False, 249 + 247)])
-def test_shopify_short_pages(mock, monkeypatch, short_ends, expected):
-    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages. With SHORT_PAGE_ENDS (the default, so
-    # the empty end page that drew the 429s is never asked for) such a store is cut at its first short page: the
-    # known cost (3 of 1,034 stores in A's real crawl). Without it, only an empty page ends the catalog.
-    monkeypatch.setattr(shopify, "SHORT_PAGE_ENDS", short_ends)
+@pytest.mark.parametrize("known, asks_page_3", [(None, True), (991, True), (496, False)])
+def test_shopify_short_pages_end_the_catalog_only_at_its_known_size(mock, known, asks_page_3):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first. A short
+    # page ends the catalog only once the products so far reach the store's last known count, so a store known to
+    # be bigger (991), or with no history, is never cut short.
     pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
+    routes = {}
     for n, ids in pages.items():
-        mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
+        routes[n] = mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == expected
+        assert len(shopify.fetch(c, _r(), known_products=known)) == 249 + 247  # an empty page ends it
+    assert routes["3"].call_count == int(asks_page_3)
 
 
 def test_shopify_store_that_ignores_page_stops(mock):

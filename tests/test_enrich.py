@@ -1,4 +1,4 @@
-from datetime import UTC, date, datetime
+from datetime import date
 from types import SimpleNamespace
 
 import anthropic
@@ -22,7 +22,6 @@ def msg(text=LLM_JSON, stop="end_turn"):
 def seed(lake, n=3):
     rid = "x.com"
     run(lake, "2026-10-26", rid, [product(str(i)) for i in range(n)])
-    now = datetime(2026, 10, 26, 12, tzinfo=UTC)
     lake.write_partition(
         "bodies",
         "2026-10-26",
@@ -32,23 +31,7 @@ def seed(lake, n=3):
             for i in range(n)
         ],
     )
-    lake.write_partition(
-        "enrichments",
-        "2026-10-26",
-        "r",
-        [
-            {
-                "extracted_at": now,
-                "roaster_id": rid,
-                "product_id": str(i),
-                "body_hash": f"b{i}",
-                "method": "rules",
-                "needs_llm": True,
-                "origin_country": "Kenya" if i == 0 else None,
-            }
-            for i in range(n)
-        ],
-    )
+    # No rules rows: ingestion only loads (ELT); pending() derives the candidates from snapshots and bodies.
 
 
 class FakeClient:

@@ -37,7 +37,9 @@ def test_run_records_ok_and_failed_fetches(lake):
     assert snap == {"onyxcoffeelab.com": 12}
     n_bodies = con.execute(f"select count(*) from {lake.scan('bodies')}").fetchone()[0]
     n_enrich = con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchone()[0]
-    assert n_bodies > 0 and n_enrich == shopify["coffees"]
+    assert (
+        n_bodies > 0 and n_enrich == 0
+    )  # ELT: ingestion writes no enrichment rows (enrich-pending derives them)
 
 
 def test_odd_payload_is_one_roasters_error_not_the_runs(lake, monkeypatch):
@@ -49,7 +51,7 @@ def test_odd_payload_is_one_roasters_error_not_the_runs(lake, monkeypatch):
     assert out["by_adapter"]["shopify"]["errors"] == 1 and "TypeError" in out["failures"][0]
 
 
-def test_rerun_skips_done_and_does_not_reenrich(lake, monkeypatch):
+def test_rerun_skips_done_and_loads_each_week(lake, monkeypatch):
     from coffeedata import registry
     from coffeedata.registry import RoasterState
 
@@ -71,8 +73,6 @@ def test_rerun_skips_done_and_does_not_reenrich(lake, monkeypatch):
         con.execute(f"select run_date, count(*) from {lake.scan('snapshots')} group by 1").fetchall()
     )
     assert per_run == {date(2026, 10, 26): 12, date(2026, 11, 2): 12}
-    dup = con.execute(
-        f"select count(*) - count(distinct (roaster_id, product_id, body_hash)) "
-        f"from {lake.scan('enrichments')}"
-    ).fetchone()[0]
-    assert dup == 0
+    assert con.execute(f"select count(*) from {lake.scan('bodies')}").fetchone()[0] == len(
+        {r[0] for r in con.execute(f"select body_hash from {lake.scan('bodies')}").fetchall()}
+    )  # next week's same bodies aren't loaded twice

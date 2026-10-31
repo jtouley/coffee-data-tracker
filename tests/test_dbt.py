@@ -257,6 +257,33 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
 
 
+def test_roaster_status_follows_the_builds_classification_not_the_load_time_count(
+    lake, tmp_path, monkeypatch
+):
+    """ELT: "has coffee" is derived after load (products.derive, with stored verdicts), in dbt and Python alike.
+    fetches.coffees, counted at load time, is no longer read: a Claude verdict that a product is coffee makes its
+    roaster active even though the load-time rules counted none."""
+    from datetime import UTC, datetime
+
+    from coffeedata import verdict
+
+    a = "onyxcoffeelab.com"
+    run(lake, "2026-10-19", a, [product("1", coffee=False, title="Monthly Surprise")])
+    con = lake.connect()
+    ih = con.execute(f"select {verdict.INPUT_HASH} from {lake.scan('snapshots')} s").fetchone()[0]
+    when = datetime(2026, 10, 20, tzinfo=UTC)
+    lake.write_partition("verdicts", "2026-10-20", "v1", [
+        {"decided_at": when, "input_hash": ih, "model": "m1", "definition": verdict.DEFINITION_VERSION,
+         "label": "coffee"}])  # fmt: skip
+    assert {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}[
+        a
+    ] == "no_coffee"
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m1")
+    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    db = build(lake, tmp_path, verdict_model="m1", verdict_definition=verdict.DEFINITION_VERSION)
+    assert dict(db.execute("select roaster_id, status from dim_roaster").fetchall())[a] == py[a] == "active"
+
+
 def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
     from datetime import UTC, datetime
 
