@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: ambiguous-grind-advice-in-app
+expected_outcome: |
+  The run acts as a TPM. Before asking the user anything, it reads (or has a subagent read) the repo's docs. They
+  record that the app deliberately gives no grind advice until a dial-in model trained on logged shots beats the rule
+  the CLI/MCP use (README, docs/app/PLAN.md: "Later: a dial-in model" and the October 27 decisions). It tells the user
+  about that decision, citing the file, and asks only the real fork, e.g. whether to override it and show the rule's
+  suggestion now, or to work toward the model. It doesn't ask questions the docs already answer. It does no building
+  itself and doesn't start a build before the fork is settled. Any claim about the code or docs comes with
+  file:line evidence or is marked unproven. Nothing is pushed and no PR is opened. The user-facing messages and every
+  brief sent are written to the outputs folder.

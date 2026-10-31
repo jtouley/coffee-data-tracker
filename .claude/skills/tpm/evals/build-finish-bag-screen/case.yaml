@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: build-finish-bag-screen
+expected_outcome: |
+  The run acts as a TPM rather than the builder. The scope is clear, so it asks the user no questions, or only a
+  real fork the repo's docs don't settle. Investigation, implementation and review all go to subagents or existing
+  skills, and the orchestrator does not edit app code itself. Its briefs are short and neutral and don't dictate the
+  answer. A reviewer independent of the builder checks the change. The final message to the user reports what was
+  built, with evidence (a commit SHA or diff path, test command output, file:line), and marks anything it couldn't
+  prove as unproven. Nothing is pushed and no PR is opened. The user-facing messages and every brief sent are written
+  to the outputs folder.
