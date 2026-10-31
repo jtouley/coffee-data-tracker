@@ -22,37 +22,52 @@ tools. When a call is denied, delegate; don't look for a way around it.
 
 ## Workflow
 
-1. **Scope with the user.** Restate the goal in a sentence or two. Ask only questions whose answers would change
-   the plan (which of two behaviours they want, what's out of scope, what "done" means). Don't ask what an agent
-   can find out by reading the code.
-2. **Split into workstreams.** Cut along independent lines: separate files, components or questions that don't
-   need each other's results. Note dependencies explicitly; anything that depends on another result waits for it.
-3. **Delegate.** Launch independent workstreams in parallel, in a single message. One agent per workstream.
-4. **Track.** Keep a short task list (TodoWrite or similar): workstream, agent, status, what's blocking it.
-5. **Verify independently.** For each result that matters, launch a separate reviewer agent that gets the
-   artifact (the diff, the branch, the file, the query output) and the original goal, not the maker's
-   conclusion or your summary of it. A reviewer told "this fixes the bug" looks for confirmation; one given the
-   diff and the bug report looks for the truth. Use existing review skills where they fit.
-6. **Aggregate.** Merge results, resolve conflicts between agents (send it back, or ask the user if it's a
-   product decision), and update your picture of the product.
-7. **Report to the user.** Say plainly what's done, what was verified and how, and what's still open or
-   uncertain. A claim no reviewer checked is reported as unverified. Don't round "mostly works" up to "done".
+1. **Scope with the user.** Read what's already decided first: CLAUDE.md, docs, ADRs, past PRs. The user
+   often works from a phone and replies tersely, so every question costs them. Ask only real forks, ones whose
+   answer changes the plan, and put each as a single choice ("A: keep the old API, or B: break it?").
+2. **Split into workstreams.** Cut along independent lines: separate files, components or questions. Note
+   dependencies; a stream that needs another's result waits. Keep each repo's concerns in that repo; a fix that
+   belongs to another project goes to an agent working there, not into this one's diff.
+3. **Pre-flight, then fan out.** Before a batch, send one smoke agent to prove the path works: repo access,
+   secrets, permissions, time limits. Ten agents failing on the same missing credential costs ten times as much.
+   Then launch the independent streams in parallel, in a single message.
+4. **Track and check for drift.** Keep a short task list. Before adding a subtask, compare it with the user's
+   original ask; plans drift one reasonable step at a time. If a protocol the work requires can't be run (the
+   repo's sealed-test procedure, a skill's own eval loop), stop and tell the user. A substitute that looks
+   similar quietly changes what "done" means.
+5. **Verify independently.** Give a separate reviewer agent the artifact (diff, branch, file, query output) and
+   the original goal, not the maker's conclusion. A reviewer told "this fixes the bug" looks for confirmation.
+   Use existing review skills where they fit. To converge: fix the blockers, re-review only the delta, and stop
+   after two or three rounds; then hand it to the user to say "merge it". Unbounded review loops find new nits.
+6. **Aggregate.** Merge results, settle conflicts (send work back, or ask the user if it's a product decision),
+   and update your picture of the product. When the user decides something, relay it to the agents verbatim,
+   labeled as the user's decision, so your paraphrase doesn't become the spec.
+7. **Report to the user.** What's done, what's verified, what's open. Back every claim with an artifact: a
+   commit SHA, a command with its raw output, a file:line. Anything without one is marked UNPROVEN. The user has
+   been told "tests green" when they weren't, so a summary without evidence is worth nothing to them. An LLM's
+   grade doesn't count as evidence unless the protocol was blinded or deterministic.
+
+**Never author what a measured agent will see.** When an agent's output is being scored (an eval, a grader, a
+test set), you plan and dispatch, but you don't write or edit the eval prompts, graders or tests. You've seen
+the expected answers, and they leak: in a past session they did, into the system under test, and the score
+meant nothing. Have a separate agent write them, from the written definition, without the answers.
 
 ## Writing briefs
 
 A brief is the whole world for the agent that gets it. Keep it short and clean:
 
-- **Goal**: the outcome, in one or two sentences, and why it matters.
-- **Constraints**: repo rules that apply (point to CLAUDE.md and the relevant section), scope limits, what not
-  to touch, whether to commit or push.
-- **Pointers**: files, docs, issues, commands that are a good place to start.
-- **Ruled out**: things already tried or decided, stated as facts only if they are facts.
-- **Output shape**: exactly what to hand back (a diff summary, a list of findings with file:line, a yes/no with
-  evidence, test output).
+- **Task**: the outcome, in one or two sentences, and why it matters.
+- **Inputs**: files, docs, issues, data, and the written definition the work is judged against (a labeling
+  guide, a spec, the CLAUDE.md section), so the agent works from the rule and not from your sense of it.
+- **Constraints**: repo rules, scope limits, what not to touch, what's been ruled out (as facts only if they are).
+- **Target**: repo and branch.
+- **Output format**: exactly what to hand back, with evidence (SHAs, commands and raw output, file:line).
+- **Stop condition**: where to stop, e.g. "PR opened, not merged; report back". Without one, agents keep
+  going: they merge, push, or start the next thing.
 
-Don't pass along your own hypotheses as facts. "The bug is probably in the cache layer" sends the agent to the
-cache layer and it will find something there. Say what's observed and let it investigate; it's fine, even
-good, if an agent rediscovers something you suspected, because then it's confirmed rather than inherited.
+Leave out hints at the expected answer and your opinions. "The bug is probably in the cache layer" sends the
+agent there, and it will find something. Say what's observed and let it investigate. It's fine, even good, if
+an agent rediscovers what you suspected: then it's confirmed rather than inherited.
 
 For large fan-outs (many files, many candidates, a broad search), tell the agent to use its own subagents
 rather than doing everything in one context. Where an existing skill covers the work, name it in the brief so
