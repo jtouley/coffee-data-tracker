@@ -12,16 +12,13 @@ from coffeedata.adapters import shopify
 from coffeedata.classify import is_coffee
 from coffeedata.http import RequestStats
 from coffeedata.lake import new_batch_id
-from coffeedata.models import CatalogItem, Roaster
+from coffeedata.models import Roaster
 
 from .conftest import FIX, load
 
 PAGES = FIX / "pages"
 HOST = "counterculturecoffee.com"
 CCC = Roaster(roaster_id=HOST, name="Counter Culture", host=HOST, platform="shopify")
-CCC_ITEM = CatalogItem(
-    roaster_id=HOST, product_id="1", handle="x", url="u", title="Nueva Llusta", platform="shopify"
-)
 
 
 def _store(request: httpx.Request) -> httpx.Response:
@@ -64,12 +61,16 @@ def test_same_records_as_the_json_adapter(store):
     by_id = {i.product_id: i for i in items}
     coffees = {pid for pid, i in json_items.items() if is_coffee(i)}
     assert coffees and coffees <= by_id.keys()
+    # Not on a product page: the photo (never stored here) and the publish time; tags and per-variant grams only
+    # when the theme embeds its product JSON.
+    unread = {"image", "payload_hash", "body_hash", "published_at"}
     for pid in coffees:
-        a, b = json_items[pid], by_id[pid]
-        assert (b.coffee_id, b.title, b.url, b.platform) == (a.coffee_id, a.title, a.url, a.platform)
-        assert [(v.variant_id, v.price_usd, v.available) for v in b.variants] == [
-            (v.variant_id, v.price_usd, v.available) for v in a.variants
-        ]
+        a, b = json_items[pid].model_dump(exclude=unread), by_id[pid].model_dump(exclude=unread)
+        if b["tags"] == []:
+            a["tags"] = []
+            a["variants"] = [v | {"grams": None} for v in a["variants"]]
+            b["variants"] = [v | {"grams": None} for v in b["variants"]]
+        assert a == b, pid
     assert rep.source == "sitemap" and rep.listed == 12
     # Merch and gear named in the sitemap's image titles are never fetched (mug, hat, tote, hoodie, grinder).
     assert rep.skipped_not_coffee == 5 and rep.fetched == 7
@@ -103,42 +104,6 @@ def test_facts_only_no_description_or_image(store):
     assert "Catuai" in e.varietals
     # A page without spec lines keeps no text at all, even though its description is on the page.
     assert items["laba-gesha-natural-sundried"].body_text == ""
-
-
-def test_onyx_style_stat_blocks():
-    """The layout the owner's old Onyx scraper read (coffee-scraper, onyx_selenium_scraper.py): label/value stat
-    blocks, "Cup" for tasting notes, the roast level inline."""
-    stat = '<div class="a-feature"><div class="label">{}</div><div class="value">{}</div></div>'
-    html = (
-        '<div class="m-coffee-stats">'
-        + "".join(
-            stat.format(k, v)
-            for k, v in [
-                ("Origin", "Caranavi, Bolivia"),
-                ("Process", "Washed"),
-                ("Elevation", "1,600 MASL"),
-                ("Cup", "black cherry | hazelnut | creamy"),
-            ]
-        )
-        + '</div><div class="roast-l">Roast Profile <strong>Light</strong></div>'
-    )
-    facts = pages.facts_text(html)
-    assert facts.splitlines() == [
-        "Origin: Caranavi, Bolivia",
-        "Process: Washed",
-        "Elevation: 1,600 MASL",
-        "Tasting Notes: black cherry | hazelnut | creamy",
-        "Roast: Light",
-    ]
-    item = CCC_ITEM.model_copy(update={"body_text": facts, "body_hash": ""})
-    e = extract.rules(item)
-    assert (e.origin_country, e.process, e.roast_level, e.elevation_masl_min) == (
-        "Bolivia",
-        "washed",
-        "light",
-        1600,
-    )
-    assert e.tasting_notes == ["black cherry", "hazelnut", "creamy"]
 
 
 def test_theme_product_json_brings_tags_and_type(store):

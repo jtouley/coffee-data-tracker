@@ -36,11 +36,13 @@ from urllib.parse import parse_qs, urljoin, urlparse
 import httpx
 
 from . import ingest
+from .adapters import generic, shopify
 from .adapters.generic import _PRODUCTISH, jsonld_products
 from .classify import excluded
 from .http import USER_AGENT, Blocked, FetchError, PoliteClient
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from .sitemap import Entry, entries, product_sitemaps
 from .text import html_to_text, scrub_surrogates, to_float
 
 log = logging.getLogger(__name__)
@@ -81,19 +83,6 @@ def client(interval: float = PAGE_INTERVAL, **kw: object) -> PoliteClient:
 
 # --- 1. sitemap ------------------------------------------------------------------------------------------------
 
-_URL = re.compile(r"<url>(.*?)</url>", re.S | re.I)
-_SITEMAP = re.compile(r"<sitemap>(.*?)</sitemap>", re.S | re.I)
-_LOC = re.compile(r"<loc>\s*(?:<!\[CDATA\[)?\s*([^<\s\]]+)", re.I)
-_LASTMOD = re.compile(r"<lastmod>\s*([^<\s]+)", re.I)
-_IMAGE_TITLE = re.compile(r"<image:title>\s*(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?\s*</image:title>", re.S | re.I)
-
-
-@dataclass
-class Entry:
-    url: str
-    lastmod: str = ""
-    title: str = ""  # from the sitemap (Shopify's image:title), when it has one
-
 
 def _page(c: PoliteClient, url: str) -> httpx.Response | None:
     """A 200 response; None for 404/410 (gone); Refused on a block or challenge; FetchError otherwise."""
@@ -126,25 +115,11 @@ def sitemap_entries(c: PoliteClient, host: str) -> list[Entry]:
     r = _page(c, f"https://{host}/sitemap.xml")
     if r is None:
         return []
-    text = r.text
-    if "<sitemapindex" in text:
-        subs = [m for b in _SITEMAP.findall(text) if (m := _LOC.search(b))]
-        product_maps = [unescape(m.group(1)) for m in subs if "product" in m.group(1).lower()][:MAX_SITEMAPS]
-        text = ""
-        for sm in product_maps:
-            if (sub := _page(c, sm)) is not None:
-                text += sub.text
-    out: dict[str, Entry] = {}
-    for block in _URL.findall(text):
-        if not (loc := _LOC.search(block)) or not _PRODUCTISH.search(urlparse(loc.group(1)).path):
-            continue
-        lastmod, title = _LASTMOD.search(block), _IMAGE_TITLE.search(block)
-        url = unescape(loc.group(1))
-        out.setdefault(
-            url,
-            Entry(url, lastmod.group(1) if lastmod else "", html_to_text(title.group(1)) if title else ""),
-        )
-    return list(out.values())
+    xml = r.text
+    if "<sitemapindex" in xml:
+        subs = [_page(c, u) for u in product_sitemaps(xml)[:MAX_SITEMAPS]]
+        xml = "".join(sub.text for sub in subs if sub is not None)
+    return [e for e in entries(xml) if _PRODUCTISH.search(urlparse(e.url).path)]
 
 
 _HREF = re.compile(r'href="([^"#?]+)"', re.I)
@@ -196,28 +171,13 @@ _SHOPIFY_META = re.compile(r"var meta\s*=\s*(\{.*?\});\s*(?:\n|for|window|var|$)
 _WOO_VARIATIONS = re.compile(r'data-product_variations="([^"]*)"')
 _WOO_ID = re.compile(r"\bpostid-(\d+)\b|[?&]p=(\d+)['\"]")
 _FACT_LABEL = (
-    r"origin|country|region|process(?:ing)?|method|variet(?:y|ies|als?)|cultivars?|roast(?: level| profile)?|"
-    r"(?:tasting |flavou?r |cup(?:ping)? )?notes|cup|we taste|tastes? like|elevation|altitude|producers?|farm|"
+    r"origin|country|region|process(?:ing)?|method|variet(?:y|ies|als?)|cultivars?|roast(?: level)?|"
+    r"(?:tasting |flavou?r |cup(?:ping)? )?notes|we taste|tastes? like|elevation|altitude|producers?|farm|"
     r"washing station|harvest"
 )
-_FACT_LINE = re.compile(rf"^\s*({_FACT_LABEL})\s*[:\-–]\s*(\S.{{0,150}})$", re.I)
+_FACT_LINE = re.compile(rf"^\s*({_FACT_LABEL})\s*[:\-–]\s*\S.{{0,150}}$", re.I)
 _FACT_HEADING = re.compile(rf"^\s*({_FACT_LABEL})\s*:?\s*$", re.I)
-_ROAST_INLINE = re.compile(
-    r"^\s*roast(?: level| profile)?\s+(light|medium|dark)\w*\s*$", re.I
-)  # "Roast Profile Light"
-# Labels whose value extract.rules reads under another name: Onyx's "Cup" and similar are tasting notes.
-_CANONICAL = {
-    "cup": "Tasting Notes",
-    "we taste": "Tasting Notes",
-    "roast profile": "Roast",
-    "roast level": "Roast",
-}
 _BLOCK = re.compile(r"<\s*/?(?:dt|dd|tr|td|th|li|p|div|h\d|br|dl|ul|ol|table|section)\b[^>]*>", re.I)
-
-
-def _fact(label: str, value: str) -> str:
-    label = label.strip()
-    return f"{_CANONICAL.get(label.lower(), label)}: {value.strip()}"
 
 
 def _loads(s: str) -> object:
@@ -254,12 +214,9 @@ def _shopify_meta(html: str) -> dict | None:
     return None
 
 
-def _grams(v: object) -> int | None:
-    return v if isinstance(v, int) and 30 <= v <= 25_000 else None
-
-
-def _cents(v: object) -> float | None:
-    return v / 100 if isinstance(v, int) and not isinstance(v, bool) else to_float(v)
+def _dollars(cents: object) -> str | None:
+    """Page JSON prices are integer cents; /products.json's are dollar strings."""
+    return f"{cents / 100:.2f}" if isinstance(cents, int) and not isinstance(cents, bool) else None
 
 
 def facts_text(html: str) -> str:
@@ -267,15 +224,13 @@ def facts_text(html: str) -> str:
     reads. The description itself is never kept."""
     page = re.sub(r"<(script|style|noscript|svg)\b.*?</\1>", " ", html, flags=re.S | re.I)
     page = _BLOCK.sub("\n", page)  # spec tables and lists: one cell per line
-    lines_ = html_to_text(page).splitlines()
+    lines = html_to_text(page).splitlines()
     out: list[str] = []
-    for i, line in enumerate(lines_):
-        if m := _FACT_LINE.match(line):
-            out.append(_fact(m.group(1), m.group(2)))
-        elif (m := _FACT_HEADING.match(line)) and i + 1 < len(lines_) and len(lines_[i + 1]) <= 120:
-            out.append(_fact(m.group(1), lines_[i + 1]))
-        elif m := _ROAST_INLINE.match(line):
-            out.append(_fact("Roast", m.group(1)))
+    for i, line in enumerate(lines):
+        if _FACT_LINE.match(line):
+            out.append(line.strip())
+        elif _FACT_HEADING.match(line) and i + 1 < len(lines) and len(lines[i + 1]) <= 120:
+            out.append(f"{line.strip().rstrip(':')}: {lines[i + 1].strip()}")
     return "\n".join(dict.fromkeys(out))  # each fact once, in page order
 
 
@@ -291,93 +246,88 @@ def _offer_available(o: dict) -> bool | None:
     return ("InStock" in a or "PreOrder" in a or "LimitedAvailability" in a) if a else None
 
 
-def _offer_variant_id(o: dict) -> str:
-    q = parse_qs(urlparse(str(o.get("url") or "")).query)
-    return q.get("variant", [""])[0]
+def _as_products_json(full: dict | None, meta: dict | None, ld: dict, handle: str) -> dict:
+    """A Shopify page's product data in /products.json's shape, so shopify.parse_product reads it exactly as it
+    reads the feed. From a theme's product JSON when there is one; otherwise from `meta` (ids, prices) with each
+    variant's stock from the JSON-LD offer that links to it (?variant=<id>) or shares its SKU."""
+    if full:
+        variants = [
+            v | {"price": _dollars(v.get("price")) or v.get("price"), "option1": v.get("public_title")}
+            for v in full["variants"]
+            if isinstance(v, dict)
+        ]
+        return {
+            "id": full["id"],
+            "handle": full.get("handle") or handle,
+            "title": full.get("title") or ld.get("name") or handle,
+            "vendor": full.get("vendor"),
+            "product_type": full.get("type") or full.get("product_type"),
+            "tags": full.get("tags") or [],
+            "published_at": full.get("published_at"),
+            "variants": variants,
+        }
+    assert meta is not None
+    offers = _offers(ld)
+    by_vid = {parse_qs(urlparse(str(o.get("url") or "")).query).get("variant", [""])[0]: o for o in offers}
+    by_sku = {str(o["sku"]): o for o in offers if o.get("sku")}
+    variants = []
+    for v in meta.get("variants") or []:
+        if not isinstance(v, dict):
+            continue
+        o = (
+            by_vid.get(str(v.get("id")))
+            or by_sku.get(str(v.get("sku") or ""))
+            or (offers[0] if len(offers) == 1 else {})
+        )
+        title = v.get("public_title") or "Default Title"
+        variants.append(
+            {
+                "id": v.get("id"),
+                "title": title,
+                "option1": title,
+                "price": _dollars(v.get("price")),
+                "available": _offer_available(o),
+            }
+        )
+    return {
+        "id": meta["id"],
+        "handle": meta.get("handle") or handle,
+        "title": ld.get("name") or handle,
+        "vendor": meta.get("vendor"),
+        "product_type": meta.get("type"),
+        "variants": variants,
+    }
 
 
 def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
-    """One product page as a CatalogItem, or None if it carries no product data."""
+    """One product page as a CatalogItem, or None if it carries no product data. Shopify pages go through
+    shopify.parse_product and everything else through generic.parse_jsonld, the parsers the JSON and sitemap
+    adapters use; only the stored text (facts only) and the image (none) differ."""
     full, meta = _product_json(html), _shopify_meta(html)
     lds = jsonld_products(html)
     ld = lds[0] if lds else {}
     if not (full or meta or ld):
         return None
-    facts = facts_text(html)
     handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
-    offers = _offers(ld)
-    by_vid = {v: o for o in offers if (v := _offer_variant_id(o))}
-    by_sku = {str(o["sku"]): o for o in offers if o.get("sku")}
-
-    def from_offer(vid: str, sku: object) -> dict:
-        return by_vid.get(vid) or by_sku.get(str(sku or "")) or (offers[0] if len(offers) == 1 else {})
-
-    variants: list[Variant] = []
-    tags: list[str] = []
-    platform, product_type, vendor = roaster.adapter, "", ""
-    if full:  # the richest source: same fields as the JSON feed, prices in cents
-        pid = str(full["id"])
-        title = str(full.get("title") or ld.get("name") or handle)
-        tags = full.get("tags") or []
-        tags = sorted(str(t) for t in (tags.split(",") if isinstance(tags, str) else tags) if str(t).strip())
-        product_type, vendor = str(full.get("type") or ""), str(full.get("vendor") or "")
-        for v in full["variants"]:
-            label = str(v.get("title") or v.get("public_title") or "")
-            variants.append(
-                Variant(
-                    variant_id=str(v["id"]),
-                    title=label,
-                    price_usd=_cents(v.get("price")),
-                    grams=parse_grams(label) or _grams(v.get("grams")),
-                    available=v.get("available"),
-                )
-            )
-        platform = "shopify"
-    elif meta:  # Shopify without a theme product JSON: ids and prices from meta, stock from JSON-LD offers
-        pid = str(meta["id"])
-        title = str(ld.get("name") or handle)
-        product_type, vendor = str(meta.get("type") or ""), str(meta.get("vendor") or "")
-        for v in meta.get("variants") or []:
-            vid = str(v.get("id"))
-            label = str(v.get("public_title") or "Default Title")
-            variants.append(
-                Variant(
-                    variant_id=vid,
-                    title=label,
-                    price_usd=_cents(v.get("price")),
-                    grams=parse_grams(label) or parse_grams(title),
-                    available=_offer_available(from_offer(vid, v.get("sku"))),
-                )
-            )
-        platform = "shopify"
-    else:  # JSON-LD only (WooCommerce and others)
-        woo = _WOO_ID.search(html)
-        pid = str((woo and (woo.group(1) or woo.group(2))) or ld.get("productID") or ld.get("sku") or handle)
-        title = str(ld.get("name") or handle)
-        variants = _woo_variations(html) or [
-            Variant(
-                variant_id=str(o.get("sku") or pid) + (f"#{i}" if i else ""),
-                title=str(o.get("name") or ""),
-                price_usd=to_float(o.get("price") or o.get("lowPrice")),
-                grams=parse_grams(str(o.get("name") or "")) or parse_grams(title),
-                available=_offer_available(o),
-            )
-            for i, o in enumerate(offers)
-        ]
+    if full or meta:
+        raw: dict = _as_products_json(full, meta, ld, handle)
+        item = shopify.parse_product(raw, roaster)
+    else:
+        raw = ld
+        item = generic.parse_jsonld(ld, url, roaster)
+        update: dict = {"platform": roaster.adapter}
+        # WooCommerce: the post id and variation ids the Store API uses, so a coffee keeps its coffee_id.
+        if woo := _WOO_ID.search(html):
+            update["product_id"] = woo.group(1) or woo.group(2)
+        if variations := _woo_variations(html):
+            update["variants"] = variations
+        item = item.model_copy(update=update)
+    facts = facts_text(html)
     return CatalogItem(
-        roaster_id=roaster.roaster_id,
-        product_id=pid,
-        handle=str((full or {}).get("handle") or handle),
-        url=url,
-        title=html_to_text(title),
-        platform=platform,
-        vendor=vendor,
-        product_type=product_type,
-        tags=tags,
+        **item.model_dump(exclude={"body_hash", "image", "payload_hash"}),
         image=None,  # no photos
-        variants=variants,
         body_text=facts,  # labelled facts only, never the description
-        payload_hash=payload_hash({"ld": ld.get("offers"), "product": full or meta, "facts": facts}),
+        payload_hash=payload_hash({"product": raw, "facts": facts}),
     )
 
 

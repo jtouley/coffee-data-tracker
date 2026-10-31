@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import re
+from dataclasses import dataclass
+from html import unescape
 
 import httpx
 
@@ -39,3 +41,39 @@ def sitemap_urls(client: PoliteClient, host: str, limit: int = 5000) -> list[str
         if len(urls) >= limit:
             break
     return urls[:limit]
+
+
+_URL = re.compile(r"<url>(.*?)</url>", re.S | re.I)
+_SITEMAP = re.compile(r"<sitemap>(.*?)</sitemap>", re.S | re.I)
+_LASTMOD = re.compile(r"<lastmod>\s*([^<\s]+)", re.I)
+_IMAGE_TITLE = re.compile(r"<image:title>\s*(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?\s*</image:title>", re.S | re.I)
+
+
+@dataclass
+class Entry:
+    url: str
+    lastmod: str = ""
+    title: str = ""  # the product's title, where the sitemap carries one (Shopify's image:title)
+
+
+def product_sitemaps(xml: str) -> list[str]:
+    """The product sitemaps a sitemap index lists (Shopify's sitemap_products_N, Yoast's product-sitemap)."""
+    locs = [unescape(m.group(1)) for b in _SITEMAP.findall(xml) if (m := _LOC.search(b))]
+    return [u for u in locs if "product" in u.lower()]
+
+
+def entries(xml: str) -> list[Entry]:
+    """Each <url> of a urlset, with its lastmod and image title, in order and once each."""
+    out: dict[str, Entry] = {}
+    for block in _URL.findall(xml):
+        if not (loc := _LOC.search(block)):
+            continue
+        url = unescape(loc.group(1))
+        lastmod, title = _LASTMOD.search(block), _IMAGE_TITLE.search(block)
+        out.setdefault(
+            url,
+            Entry(
+                url, lastmod.group(1) if lastmod else "", unescape(title.group(1)).strip() if title else ""
+            ),
+        )
+    return list(out.values())
