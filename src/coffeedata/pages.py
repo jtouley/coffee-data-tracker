@@ -17,8 +17,9 @@ Rules: the crawler's own User-Agent with a contact address; robots.txt is honore
 PAGE_INTERVAL apart; nothing is retried after a block. A 401, 403, 429, 430 or 503, or a page that reads as a
 CAPTCHA or bot challenge, stops the store at once (Refused): it is never solved, waited out or worked around.
 
-Facts only: the stored body text is the product's labelled fact lines (origin, process, variety, roast, notes,
-elevation, producer), never its description; no images.
+Facts only: the description (and the page's labelled fact lines) are read in memory, so the same extraction rules
+see the same text the JSON adapters give them; only the extracted attributes are stored, never the description
+text (run() writes no bodies rows) and no images.
 """
 
 from __future__ import annotations
@@ -324,10 +325,13 @@ def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
             update["variants"] = variations
         item = item.model_copy(update=update)
     facts = facts_text(html)
+    description = html_to_text(str((full or {}).get("description") or ld.get("description") or ""))
+    extra = [f for f in facts.splitlines() if f not in description]
     return CatalogItem(
         **item.model_dump(exclude={"body_hash", "image", "payload_hash"}),
         image=None,  # no photos
-        body_text=facts,  # labelled facts only, never the description
+        # Read in memory for the rules, as the JSON adapters read body_html; run() never stores it (no bodies rows).
+        body_text="\n".join(filter(None, [description, *extra])),
         payload_hash=payload_hash({"product": raw, "facts": facts}),
     )
 
@@ -405,15 +409,15 @@ def fetch(
         item = parse_page(r.text, e.url, roaster)
         # Scripts can build what the server HTML lacks: the product data itself, or a coffee's spec panel (origin,
         # process...). Only then, and only when asked, the page is rendered.
-        if render is not None and (item is None or (not item.body_text and is_coffee(item))):
+        if render is not None and (item is None or (not facts_text(r.text) and is_coffee(item))):
             rep.rendered += 1
             html = render(e.url)
             if is_challenge(html):
                 raise Refused(f"challenge page (rendered) {e.url}")
             rendered = parse_page(html, e.url, roaster)
-            if rendered is not None and (item is None or rendered.body_text):
+            if rendered is not None and (item is None or facts_text(html)):
                 item = rendered
-                rep.facts_from_render += bool(rendered.body_text)
+                rep.facts_from_render += bool(facts_text(html))
         if item is None:
             failed += 1
             continue
@@ -529,6 +533,8 @@ def run(
     }
     batch = new_batch_id()
     for table, rows in ingest.rows_for([r for *_, r in out], rd, batch, known, enriched).items():
+        if table == "bodies":
+            continue  # facts only: the extracted attributes (enrichments) are kept, the description text never
         lake.write_partition(table, run_date, batch, rows)
     summary = {
         "run_date": run_date,

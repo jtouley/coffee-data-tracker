@@ -91,19 +91,24 @@ def test_requests_are_sitemap_then_pages_only(store):
     assert "@" in pages.PAGES_USER_AGENT or "support" in pages.PAGES_USER_AGENT  # a contact, no disguise
 
 
-def test_facts_only_no_description_or_image(store):
+def test_description_read_in_memory_never_an_image(store):
     with _crawl() as c:
         items = {i.handle: i for i in pages.fetch(c, CCC)}
     honey = items["finca-el-puente-honey"]
     assert honey.image is None
-    assert honey.body_text == (
+    # The page's spec lines join the description the rules read (as the JSON adapter reads body_html).
+    assert honey.body_text.endswith(
         "Origin: Marcala, Honduras\nProcess: Honey\nVariety: Catuai, Lempira\nTasting Notes: Peach, Honey, Black Tea"
     )
     e = extract.rules(honey)
     assert (e.origin_country, e.process, e.tasting_notes[:1]) == ("Honduras", "honey", ["peach"])
     assert "Catuai" in e.varietals
-    # A page without spec lines keeps no text at all, even though its description is on the page.
-    assert items["laba-gesha-natural-sundried"].body_text == ""
+    # The theme's product JSON carries the full description: the same text, so the same hash, as the feed.
+    worka = items["worka-chelbessa"]
+    feed = next(
+        p for p in load("shopify_counterculturecoffee.json")["products"] if p["handle"] == "worka-chelbessa"
+    )
+    assert worka.body_text.startswith(shopify.parse_product(feed, CCC).body_text)
 
 
 def test_theme_product_json_brings_tags_and_type(store):
@@ -219,7 +224,7 @@ def test_renderer_for_a_coffee_whose_facts_scripts_build(store):
     # Coffee pages without spec lines are rendered; ones with spec lines, and non-coffee (the Bambino), are not.
     assert f"https://{HOST}/products/finca-el-puente-honey" not in rendered
     assert f"https://{HOST}/products/the-bambino%E2%84%A2" not in rendered and len(rendered) == 3
-    assert items["laba-gesha-natural-sundried"].body_text == "Process: Natural"
+    assert items["laba-gesha-natural-sundried"].body_text.endswith("\nProcess: Natural")
     assert rep.facts_from_render == 3
 
 
@@ -233,7 +238,7 @@ def test_woocommerce_pages():
     woo_json = load("woocommerce_anaheimcoffee.json")[0]
     assert simple.product_id == str(woo_json["id"]) and simple.platform == "woocommerce"
     assert simple.variants[0].price_usd == int(woo_json["prices"]["price"]) / 100
-    assert simple.body_text == "Origin: Chiapas, Mexico\nRoast: Medium"
+    assert simple.body_text == "A long description.\nOrigin: Chiapas, Mexico\nRoast: Medium"
     var = pages.parse_page(
         (PAGES / "woo_variable.html").read_text(), "https://x.com/product/guji/", backstage
     )
@@ -263,6 +268,9 @@ def test_run_writes_the_json_adapters_shape(store, lake):
     assert all(r["image"] is None for r in rows) and sum(r["is_coffee"] for r in rows) == 6
     fetch = con.execute(f"select status, requests, run_date from {lake.scan('fetches')}").fetchall()
     assert fetch == [("ok", 10, date(2026, 11, 2))]
+    # Facts only: attributes are stored, the description text never is.
+    assert con.execute(f"select count(*) from {lake.scan('bodies')}").fetchall() == [(0,)]
+    assert con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchall() == [(6,)]
 
 
 def test_only_rate_limited_stores_are_selected_never_blocked_ones(lake, monkeypatch):
