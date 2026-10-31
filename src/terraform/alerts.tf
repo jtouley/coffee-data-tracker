@@ -1,4 +1,4 @@
-# Email the owner about money, errors and downtime.
+# Email the owner about money, errors, downtime and write volume.
 
 resource "google_monitoring_notification_channel" "owner" {
   display_name = "registry.coffee owner"
@@ -93,6 +93,87 @@ resource "google_monitoring_alert_policy" "down" {
         group_by_fields      = ["resource.label.*"]
       }
     }
+  }
+  notification_channels = [google_monitoring_notification_channel.owner.id]
+}
+
+# Each saved shot, bag or equipment change is one Hugging Face commit (app/store.py `_commit` logs a `saved` event
+# with `publish_ms`), and HF repos slow down after a few thousand commits. These count the saves and time them, so
+# the owner hears before that matters (docs/app/WRITE_PATH.md). A save whose file went up in another request's
+# commit still counts, so the count is an upper bound on commits.
+locals {
+  saved_filter = join(" AND ", [
+    "resource.type=\"cloud_run_revision\"",
+    "resource.labels.service_name=\"${google_cloud_run_v2_service.app.name}\"",
+    "jsonPayload.logger=\"app.events\"",
+    "jsonPayload.message=\"saved\"",
+  ])
+}
+
+resource "google_logging_metric" "saves" {
+  name   = "${var.service}-saves"
+  filter = local.saved_filter
+  metric_descriptor {
+    metric_kind = "DELTA"
+    value_type  = "INT64"
+    unit        = "1"
+  }
+  depends_on = [google_project_service.apis]
+}
+
+resource "google_logging_metric" "save_publish_ms" {
+  name            = "${var.service}-save-publish-ms"
+  filter          = local.saved_filter
+  value_extractor = "EXTRACT(jsonPayload.publish_ms)"
+  metric_descriptor {
+    metric_kind = "DELTA"
+    value_type  = "DISTRIBUTION"
+    unit        = "ms"
+  }
+  bucket_options {
+    exponential_buckets {
+      num_finite_buckets = 40
+      growth_factor      = 1.3
+      scale              = 10 # 10 ms up to about 36 minutes
+    }
+  }
+  depends_on = [google_project_service.apis]
+}
+
+resource "google_monitoring_alert_policy" "write_volume" {
+  display_name = "registry.coffee: write volume"
+  combiner     = "OR"
+  conditions {
+    display_name = "Over ${var.saves_per_day_alert} saves in 24 h"
+    condition_threshold {
+      filter          = "metric.type=\"logging.googleapis.com/user/${google_logging_metric.saves.name}\" AND resource.type=\"cloud_run_revision\""
+      comparison      = "COMPARISON_GT"
+      threshold_value = var.saves_per_day_alert
+      duration        = "0s"
+      aggregations {
+        alignment_period     = "86400s" # a rolling 24 hours
+        per_series_aligner   = "ALIGN_SUM"
+        cross_series_reducer = "REDUCE_SUM" # across revisions
+      }
+    }
+  }
+  conditions {
+    display_name = "p95 save publish over 5 s in 24 h"
+    condition_threshold {
+      filter          = "metric.type=\"logging.googleapis.com/user/${google_logging_metric.save_publish_ms.name}\" AND resource.type=\"cloud_run_revision\""
+      comparison      = "COMPARISON_GT"
+      threshold_value = 5000
+      duration        = "0s"
+      aggregations {
+        alignment_period     = "86400s"
+        per_series_aligner   = "ALIGN_DELTA"
+        cross_series_reducer = "REDUCE_PERCENTILE_95"
+      }
+    }
+  }
+  documentation {
+    content   = "One Hugging Face commit per save is reaching its limit. See docs/app/WRITE_PATH.md."
+    mime_type = "text/markdown"
   }
   notification_channels = [google_monitoring_notification_channel.owner.id]
 }

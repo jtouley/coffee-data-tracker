@@ -50,6 +50,12 @@ variable "budget_usd" {
   default     = 5
 }
 
+variable "saves_per_day_alert" {
+  description = "Alert when the app saves more than this many records (one Hugging Face commit each) in 24 hours."
+  type        = number
+  default     = 2000
+}
+
 variable "service" {
   description = "Name of the Cloud Run service and its Artifact Registry repository."
   type        = string

@@ -56,8 +56,9 @@ it, in `src/terraform/` (the original GCP setup's place and style):
   service's own runtime account;
 - Workload Identity Federation, so GitHub Actions on `main` can deploy without a JSON key;
 - the domain mapping for `app.registry.coffee`;
-- a $5 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
-  15 minutes, all emailed to the owner.
+- a $5 monthly budget alert, an alert on any ERROR log line or 5xx, an uptime check on `/health` every
+  15 minutes, and a write-volume alert (over 2,000 saves in 24 h, or a p95 save publish over 5 s; see
+  `WRITE_PATH.md`), all emailed to the owner.
 
 `.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it pushes
 the image and deploys it, once the variables below are set.
