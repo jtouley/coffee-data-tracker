@@ -89,6 +89,8 @@ jobs:
             # run (the catch-up schedule, or a manual one) continues the same run_date.
             uv run coffeedata weekly --ingest-deadline-minutes 170 ${RESUME_ONLY:+--resume-only} \
               ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
+            # Tuesday: also resume Monday's parked stores (blocked mid-catalog) from their blocked page.
+            if [ -n "$RESUME_ONLY" ]; then uv run coffeedata crawl-retry; fi
           fi
       - name: Site built
         id: site

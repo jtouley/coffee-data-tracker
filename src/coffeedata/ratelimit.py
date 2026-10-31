@@ -137,6 +137,9 @@ class PlatformLimiter:
         # Stores that have blocked before in this run: a later block from one (the next page after a wait, a
         # parked store's retry) is that store's own limit again, and never counts towards a platform-wide pause.
         self._ever_blocked: set[str] = set()
+        # Stores ingest.run is backing off on a blocked page: their retries' blocks are expected, so (like a deferred
+        # round's) they pause only that store and never count towards a platform-wide pause.
+        self.quiet_hosts: set[str] = set()
         self.host_until: dict[str, float] = {}
         self._blocked: dict[str, float] = {}  # host -> when it last blocked, for burst detection
         self.stats = {"requests": 0, "rate_limited": 0, "cooldowns": 0}
@@ -237,8 +240,9 @@ class PlatformLimiter:
                 self.host_until[host] = max(self.host_until.get(host, 0.0), now + wait)
                 known = host in self._ever_blocked
                 self._ever_blocked.add(host)
-                if not self.defer or not self.count_bursts or known:
-                    # A deferred round, a retry pass, or a store that blocked before: its own pause only.
+                if not self.defer or not self.count_bursts or known or host in self.quiet_hosts:
+                    # A deferred round, a retry pass, a page backoff, or a store that blocked before: its own
+                    # pause only.
                     self.stats["host_pauses"] += 1
                     return
                 self._blocked[host] = now
