@@ -205,9 +205,37 @@ def test_delegation_tools_allowed_and_documented():
 
 
 def test_tail_follow_denied():
-    for cmd in ("tail -f log", "tail -F log", "tail --follow=name log", "tail -nf 5 log"):
+    for cmd in ("tail -f log", "tail -F log", "tail --follow=name log", "tail -fn 5 log", "tail --fo f", "tail -s 1 f"):
         assert bash(cmd) == DENY, cmd
     assert bash("tail -n 5 log") == ALLOW
+
+
+def test_abbreviated_and_unlisted_long_options_denied():
+    # Reproduced bypasses from the second review: abbreviations of dangerous options.
+    for cmd in ("git grep --open=rm a", "git grep --open-files-in-pager=rm a",
+                "sort --out=/tmp/pw f", "sort --compress=sh -S 1 f", "tail --fo f",
+                "rg --hostname=x a", "rg --pr=sh a", "grep --unknown x f", "ls --zzz",
+                "git diff --out=p", "git log --ext=x", "git show --textconv HEAD",
+                "git status --unknown", "git rev-parse --git-path x", "find . -newerXY x",
+                "head --foo f", "cat --zzz f", "wc --files0-from=f"):
+        assert bash(cmd) == DENY, cmd
+
+
+def test_uniq_counts_dash_as_a_file():
+    for cmd in ("cat f | uniq - /tmp/pw", "uniq - out", "uniq -c in out", "uniq -f 2 a b"):
+        assert bash(cmd) == DENY, cmd
+    for cmd in ("cat f | uniq", "cat f | uniq -", "uniq -c f", "uniq -f 2 f", "sort f | uniq -c"):
+        assert bash(cmd) == ALLOW, cmd
+
+
+def test_common_read_options_still_allowed():
+    for cmd in ("ls -la --color=auto src", "grep -rn --include='*.py' -A 3 foo src",
+                "grep -C2 -e x f", "rg -n -g '*.py' --hidden foo", "sort -k2,2 -t: -rn f",
+                "head -n 20 f", "tail -20 f", "wc -l f", "git log --oneline --graph -n 5",
+                "git diff --stat --cached -- src", "git status --short --branch",
+                "git grep -n -e foo -- '*.py'", "git rev-parse --abbrev-ref HEAD",
+                "find . -maxdepth 2 -type f -name '*.md' -print"):
+        assert bash(cmd) == ALLOW, cmd
 
 
 if __name__ == "__main__":

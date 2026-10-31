@@ -112,10 +112,11 @@ sessions `mcp__claude-code-remote__create_session`, `mcp__claude-code-remote__se
 `mcp__claude-code-remote__unsubscribe_pr_activity`. Also any MCP tool whose last name segment starts with
 `get`, `list`, `read`, `search`, `describe`, `view`, `whoami` or `guide`.
 
-`Bash` passes only when every segment of a pipe or chain is one of: `ls`, `cat`, `head`, `wc`, `grep`, `pwd`,
-`cd`, `tail` (not `-f`/`-F`/`--follow`), `find` (no `-exec`/`-ok`/`-delete`/`-fprint*`/`-fls`), `rg` (no
-`--pre*`/`--hostname-bin`), `sort` (no `-o`/`--output`/`--compress-program`), `uniq` (one file at most),
-`sed -n <address>p <files>`, and `git status/diff/log/show/grep/rev-parse` plus listing-only `git branch`.
+`Bash` passes only when every segment of a pipe or chain is one of `ls`, `cat`, `head`, `tail`, `wc`, `grep`,
+`rg`, `sort`, `uniq` (one input at most, `-` included), `find`, `pwd`, `cd`, `sed -n <address>p <files>`, or
+`git status/diff/log/show/grep/rev-parse` and listing-only `git branch`. Each command has its own option
+allowlist in `guard.py` (`SPECS`, `GIT_LONG`, `FIND_PREDICATES`); long options must match exactly, because
+GNU tools and git accept abbreviations, and anything off the list is denied.
 Redirection is allowed only to `/dev/null`, as `2>&1`, or as `< file` input; quoted text never counts as an
 operator. Everything else is denied, including Edit, Write, NotebookEdit, MultiEdit and unknown tools. Calls
 from subagents pass. Malformed hook input, or a missing guard script, is allowed with a note on stderr, so a

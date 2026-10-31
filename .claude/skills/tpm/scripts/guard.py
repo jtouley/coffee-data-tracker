@@ -48,10 +48,106 @@ MCP_READ_VERB = re.compile(r"^(get|list|read|search|describe|view|whoami|guide)(
 # Read-only tools a subagent may use even when the input mentions the off switch.
 READ_TOOLS = {"Read", "Grep", "Glob", "LS"}
 
-PLAIN_READERS = {"ls", "cat", "head", "wc", "grep", "pwd", "cd"}
-FIND_BANNED = {"-exec", "-execdir", "-ok", "-okdir", "-delete",
-               "-fprint", "-fprint0", "-fprintf", "-fls"}
+# Per-command option allowlists. Long options must match exactly (GNU tools and git
+# accept abbreviations like `--out` for `--output`, so a denylist can't work).
+# `flags`: short options without a value; `values`: short options that take one;
+# "*" in flags allows any short letter (for commands with no dangerous short options);
+# `numeric`: allow `-20` style counts; `max_pos`: most positional args allowed.
+SPECS = {
+    "ls": dict(flags="*", long={
+        "--all", "--almost-all", "--author", "--block-size", "--classify", "--color",
+        "--dereference", "--directory", "--file-type", "--format", "--full-time",
+        "--group-directories-first", "--hide", "--human-readable", "--ignore", "--inode",
+        "--indicator-style", "--literal", "--no-group", "--numeric-uid-gid", "--quoting-style",
+        "--recursive", "--reverse", "--size", "--sort", "--time", "--time-style", "--width"}),
+    "cat": dict(flags="AbeEnstTuv", long={
+        "--show-all", "--number-nonblank", "--show-ends", "--number", "--squeeze-blank",
+        "--show-tabs", "--show-nonprinting"}),
+    "head": dict(flags="qvz", values="nc", numeric=True, long={
+        "--lines", "--bytes", "--quiet", "--silent", "--verbose", "--zero-terminated"}),
+    # No -f/-F/--follow/-s: following never ends.
+    "tail": dict(flags="qvz", values="nc", numeric=True, long={
+        "--lines", "--bytes", "--quiet", "--silent", "--verbose", "--zero-terminated"}),
+    "wc": dict(flags="cmlLw", long={
+        "--bytes", "--chars", "--lines", "--max-line-length", "--words"}),
+    "pwd": dict(flags="LP", long={"--logical", "--physical"}),
+    "cd": dict(flags="LP", long=set()),
+    "grep": dict(flags="EFGPiyvwxcoqsbHhnTZzlLrRaIU", values="ABCmefdD", numeric=True, long={
+        "--extended-regexp", "--fixed-strings", "--basic-regexp", "--perl-regexp", "--regexp",
+        "--file", "--ignore-case", "--no-ignore-case", "--word-regexp", "--line-regexp",
+        "--invert-match", "--count", "--color", "--colour", "--files-with-matches",
+        "--files-without-match", "--max-count", "--only-matching", "--quiet", "--silent",
+        "--no-messages", "--byte-offset", "--with-filename", "--no-filename", "--label",
+        "--line-number", "--initial-tab", "--null", "--null-data", "--after-context",
+        "--before-context", "--context", "--text", "--binary-files", "--devices",
+        "--directories", "--exclude", "--exclude-dir", "--include", "--recursive",
+        "--dereference-recursive", "--line-buffered", "--binary"}),
+    # No --pre, --hostname-bin or other options that run programs.
+    "rg": dict(flags="iSswxvclnNoqFPUuLHhpaz0.", values="ABCmMegtTfrjd", long={
+        "--ignore-case", "--smart-case", "--case-sensitive", "--word-regexp", "--line-regexp",
+        "--invert-match", "--count", "--count-matches", "--files-with-matches",
+        "--files-without-match", "--files", "--line-number", "--no-line-number",
+        "--only-matching", "--quiet", "--replace", "--regexp", "--file", "--glob", "--iglob",
+        "--type", "--type-not", "--type-list", "--after-context", "--before-context",
+        "--context", "--max-count", "--max-depth", "--max-columns", "--hidden", "--no-ignore",
+        "--no-ignore-vcs", "--follow", "--heading", "--no-heading", "--with-filename",
+        "--no-filename", "--color", "--colors", "--column", "--json", "--stats", "--sort",
+        "--sortr", "--fixed-strings", "--multiline", "--multiline-dotall", "--pcre2",
+        "--text", "--null", "--vimgrep", "--trim", "--unrestricted", "--search-zip"}),
+    # No -o/--output (writes a file) or --compress-program (runs one).
+    "sort": dict(flags="bdfghiMnRrsuVzcC", values="ktS", long={
+        "--ignore-leading-blanks", "--dictionary-order", "--ignore-case",
+        "--general-numeric-sort", "--human-numeric-sort", "--ignore-nonprinting",
+        "--month-sort", "--numeric-sort", "--random-sort", "--reverse", "--version-sort",
+        "--check", "--key", "--field-separator", "--stable", "--unique", "--zero-terminated",
+        "--buffer-size", "--parallel"}),
+    # A second positional is an output file; `-` counts as a positional.
+    "uniq": dict(flags="cdDuiz", values="fsw", max_pos=1, long={
+        "--count", "--repeated", "--all-repeated", "--unique", "--ignore-case",
+        "--zero-terminated", "--skip-fields", "--skip-chars", "--check-chars", "--group"}),
+}
+# find's options are single-dash predicates; only these are allowed.
+FIND_PREDICATES = {
+    "-name", "-iname", "-path", "-ipath", "-wholename", "-iwholename", "-regex", "-iregex",
+    "-type", "-xtype", "-maxdepth", "-mindepth", "-mtime", "-mmin", "-atime", "-amin",
+    "-ctime", "-cmin", "-newer", "-size", "-empty", "-perm", "-user", "-group", "-links",
+    "-readable", "-writable", "-executable", "-print", "-print0", "-printf", "-prune",
+    "-not", "-o", "-or", "-a", "-and", "-true", "-false", "-depth", "-xdev", "-mount",
+    "-follow", "-L", "-H", "-P"}
 GIT_READ_SUBCOMMANDS = {"status", "diff", "log", "show", "branch", "grep", "rev-parse"}
+GIT_DIFF_LOG_LONG = {
+    "--stat", "--shortstat", "--numstat", "--name-only", "--name-status", "--summary",
+    "--patch", "--no-patch", "--unified", "--cached", "--staged", "--color", "--no-color",
+    "--color-words", "--word-diff", "--ignore-all-space", "--ignore-space-change",
+    "--ignore-blank-lines", "--minimal", "--patience", "--histogram", "--diff-filter",
+    "--find-renames", "--find-copies", "--no-renames", "--relative", "--abbrev",
+    "--full-index", "--raw", "--dirstat", "--compact-summary", "--check", "--exit-code",
+    "--quiet", "--merge-base", "--oneline", "--graph", "--decorate", "--no-decorate",
+    "--all", "--branches", "--tags", "--remotes", "--author", "--committer", "--grep",
+    "--since", "--until", "--after", "--before", "--max-count", "--skip", "--reverse",
+    "--first-parent", "--merges", "--no-merges", "--format", "--pretty", "--date",
+    "--follow", "--source", "--left-right", "--cherry-pick", "--ancestry-path",
+    "--topo-order", "--date-order", "--no-walk", "--boundary", "--simplify-by-decoration"}
+GIT_LONG = {
+    "status": {"--short", "--branch", "--porcelain", "--long", "--untracked-files",
+               "--ignored", "--ignore-submodules", "--show-stash", "--ahead-behind",
+               "--no-ahead-behind", "--renames", "--no-renames", "--column", "--no-column",
+               "--verbose"},
+    "diff": GIT_DIFF_LOG_LONG, "log": GIT_DIFF_LOG_LONG, "show": GIT_DIFF_LOG_LONG,
+    "rev-parse": {"--abbrev-ref", "--short", "--verify", "--show-toplevel", "--git-dir",
+                  "--is-inside-work-tree", "--show-prefix", "--symbolic-full-name",
+                  "--quiet", "--absolute-git-dir", "--git-common-dir", "--show-cdup"},
+    "grep": {"--line-number", "--count", "--ignore-case", "--word-regexp", "--invert-match",
+             "--files-with-matches", "--files-without-match", "--name-only",
+             "--extended-regexp", "--fixed-strings", "--perl-regexp", "--basic-regexp",
+             "--cached", "--untracked", "--heading", "--break", "--show-function",
+             "--function-context", "--context", "--after-context", "--before-context",
+             "--max-depth", "--all-match", "--and", "--or", "--not", "--color", "--no-color",
+             "--full-name", "--null", "--column", "--only-matching", "--quiet",
+             "--exclude-standard"},
+}
+# Short letters refused per git subcommand (git grep -O opens files in a program).
+GIT_SHORT_BANNED = {"grep": "O"}
 GIT_BRANCH_FLAGS = {"-a", "--all", "-r", "--remotes", "-v", "-vv", "--verbose",
                     "-l", "--list", "--show-current", "--no-color", "--color",
                     "--contains", "--no-contains", "--merged", "--no-merged",
@@ -185,9 +281,38 @@ def bash_is_read_only(command: str) -> tuple[bool, str]:
     return True, ""
 
 
-def short_flags(args: list[str]) -> str:
-    """All letters in short-option clusters, e.g. ['-nf', '-x'] -> 'nfx'."""
-    return "".join(a[1:] for a in args if a.startswith("-") and not a.startswith("--"))
+def check_options(cmd: str, args: list[str], spec: dict) -> list[str]:
+    """Validate options against an allowlist; return the positional args."""
+    flags, values = spec.get("flags", ""), spec.get("values", "")
+    positionals: list[str] = []
+    i = 0
+    while i < len(args):
+        a = args[i]
+        i += 1
+        if a == "--":
+            positionals.extend(args[i:])
+            break
+        if a.startswith("--"):
+            if a.split("=", 1)[0] not in spec["long"]:
+                raise Unsafe(f"`{cmd} {a}` is not an allowed option")
+        elif a.startswith("-") and a != "-":
+            body = a[1:]
+            if spec.get("numeric") and body.isdigit():
+                continue
+            for j, c in enumerate(body):
+                if c in values:
+                    if j == len(body) - 1:
+                        i += 1  # value is the next argument
+                    break  # the rest of the cluster is the value
+                if flags != "*" and c not in flags:
+                    raise Unsafe(f"`{cmd} -{c}` is not an allowed option")
+                if flags == "*" and not c.isalnum():
+                    raise Unsafe(f"`{cmd} {a}` is not an allowed option")
+        else:
+            positionals.append(a)
+    if len(positionals) > spec.get("max_pos", 10**9):
+        raise Unsafe(f"`{cmd}` with more than {spec['max_pos']} file argument(s)")
+    return positionals
 
 
 def check_segment(seg: list[str]) -> None:
@@ -196,28 +321,13 @@ def check_segment(seg: list[str]) -> None:
         raise Unsafe("environment assignment")
     if cmd == "git":
         return check_git(args)
-    if cmd in PLAIN_READERS:
-        return
-    if cmd == "tail":
-        if any(a.startswith("--follow") for a in args) or set(short_flags(args)) & {"f", "F"}:
-            raise Unsafe("tail --follow never ends")
+    if cmd in SPECS:
+        check_options(cmd, args, SPECS[cmd])
         return
     if cmd == "find":
-        if any(a in FIND_BANNED for a in args):
-            raise Unsafe("find with an action that writes or runs commands")
-        return
-    if cmd == "rg":
-        if any(a.startswith(("--pre", "--hostname-bin")) for a in args):
-            raise Unsafe("rg option that runs a program")
-        return
-    if cmd == "sort":
-        if any(a.startswith(("--output", "--compress-program")) for a in args) \
-                or "o" in short_flags(args):
-            raise Unsafe("sort option that writes a file or runs a program")
-        return
-    if cmd == "uniq":
-        if len([a for a in args if not a.startswith("-")]) > 1:
-            raise Unsafe("uniq with an output file")  # also catches `-f N`: deny when unsure
+        for a in args:
+            if a.startswith("-") and a not in FIND_PREDICATES:
+                raise Unsafe(f"`find {a}` is not an allowed predicate")
         return
     if cmd == "sed":
         if len(args) >= 2 and args[0] == "-n" and SED_PRINT_SCRIPT.match(args[1]) \
@@ -237,24 +347,33 @@ def check_git(args: list[str]) -> None:
     sub, rest = args[0], args[1:]
     if sub not in GIT_READ_SUBCOMMANDS:
         raise Unsafe(f"`git {sub}` is not read-only")
-    for a in rest:
-        if a.startswith(("--output", "--ext-diff", "--open-files-in-pager")) or a == "-o" \
-                or (sub == "grep" and a.startswith("-O")):
-            raise Unsafe(f"`git {sub} {a}` writes or runs programs")
     if sub == "branch":
-        skip = False
-        for a in rest:
-            if skip:
-                skip = False
-                continue
-            name = a.split("=", 1)[0]
-            if name in GIT_BRANCH_FLAGS:
-                skip = name in GIT_BRANCH_TAKES_VALUE and "=" not in a
-                continue
-            if a.startswith("-"):
-                raise Unsafe(f"`git branch {a}` changes branches")
-            if "--list" not in rest and "-l" not in rest:
-                raise Unsafe("`git branch <name>` creates a branch")
+        return check_git_branch(rest)
+    banned = GIT_SHORT_BANNED.get(sub, "")
+    for a in rest:
+        if a == "--":
+            break
+        if a.startswith("--"):
+            if a.split("=", 1)[0] not in GIT_LONG[sub]:
+                raise Unsafe(f"`git {sub} {a}` is not an allowed option")
+        elif a.startswith("-") and any(c in banned for c in a[1:]):
+            raise Unsafe(f"`git {sub} {a}` runs a program")
+
+
+def check_git_branch(rest: list[str]) -> None:
+    skip = False
+    for a in rest:
+        if skip:
+            skip = False
+            continue
+        name = a.split("=", 1)[0]
+        if name in GIT_BRANCH_FLAGS:
+            skip = name in GIT_BRANCH_TAKES_VALUE and "=" not in a
+            continue
+        if a.startswith("-"):
+            raise Unsafe(f"`git branch {a}` is not a listing option")
+        if "--list" not in rest and "-l" not in rest:
+            raise Unsafe("`git branch <name>` creates a branch")
 
 
 def main_thread_decision(tool: str, tool_input: dict) -> tuple[bool, str]:
