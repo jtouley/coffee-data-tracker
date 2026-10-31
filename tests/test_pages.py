@@ -199,8 +199,28 @@ def test_renderer_only_for_pages_without_product_data(store):
     rendered = []
     with _crawl() as c:
         items = pages.fetch(c, CCC, render=lambda url: rendered.append(url) or worka)
-    assert rendered == [f"https://{HOST}/products/worka-chelbessa"]
+    assert f"https://{HOST}/products/worka-chelbessa" in rendered  # no product data in its server HTML
     assert "worka-chelbessa" in {i.handle for i in items}
+
+
+def test_renderer_for_a_coffee_whose_facts_scripts_build(store):
+    """Price and stock are in the server HTML, but the spec panel isn't: only the rendered page has the facts."""
+    m, route = store
+    rendered = []
+
+    def render(url):
+        rendered.append(url)
+        page = _store(httpx.Request("GET", url)).text
+        return page.replace("<main", '<div class="stats"><div>Process</div><div>Natural</div></div><main')
+
+    with _crawl() as c:
+        rep = pages.Report()
+        items = {i.handle: i for i in pages.fetch(c, CCC, render=render, report=rep)}
+    # Coffee pages without spec lines are rendered; ones with spec lines, and non-coffee (the Bambino), are not.
+    assert f"https://{HOST}/products/finca-el-puente-honey" not in rendered
+    assert f"https://{HOST}/products/the-bambino%E2%84%A2" not in rendered and len(rendered) == 3
+    assert items["laba-gesha-natural-sundried"].body_text == "Process: Natural"
+    assert rep.facts_from_render == 3
 
 
 def test_woocommerce_pages():

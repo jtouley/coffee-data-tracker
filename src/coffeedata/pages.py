@@ -10,7 +10,8 @@ Cheapest source first, per store:
 2. Each remaining product page, once: schema.org Product JSON-LD, and the product JSON the platform embeds
    (Shopify's analytics `meta`, a theme's product JSON, WooCommerce's variation form).
 3. Collection pages, only when the sitemap lists no products.
-4. A headless browser, only when asked (`render=True`) and only for a page that loaded but carried no product data.
+4. A headless browser, only when asked (`render=True`), for a page that loaded but carried no product data, or a
+   coffee whose page showed no fact lines (a spec panel that scripts build).
 
 Rules: the crawler's own User-Agent with a contact address; robots.txt is honored; requests to a store are spaced
 PAGE_INTERVAL apart; nothing is retried after a block. A 401, 403, 429, 430 or 503, or a page that reads as a
@@ -38,7 +39,7 @@ import httpx
 from . import ingest
 from .adapters import generic, shopify
 from .adapters.generic import _PRODUCTISH, jsonld_products
-from .classify import excluded
+from .classify import excluded, is_coffee
 from .http import USER_AGENT, Blocked, FetchError, PoliteClient
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
@@ -366,7 +367,8 @@ class Report:
     skipped_not_coffee: int = 0  # skipped on the sitemap title alone
     fetched: int = 0  # product pages requested
     parsed: int = 0  # pages that yielded a product
-    rendered: int = 0  # pages that needed the browser
+    rendered: int = 0  # pages sent to the browser
+    facts_from_render: int = 0  # of those, coffees whose fact lines only the rendered page had
 
 
 def fetch(
@@ -401,12 +403,17 @@ def fetch(
         if r is None:
             continue  # listed but gone: delisted, not unreadable
         item = parse_page(r.text, e.url, roaster)
-        if item is None and render is not None:
+        # Scripts can build what the server HTML lacks: the product data itself, or a coffee's spec panel (origin,
+        # process...). Only then, and only when asked, the page is rendered.
+        if render is not None and (item is None or (not item.body_text and is_coffee(item))):
             rep.rendered += 1
             html = render(e.url)
             if is_challenge(html):
                 raise Refused(f"challenge page (rendered) {e.url}")
-            item = parse_page(html, e.url, roaster)
+            rendered = parse_page(html, e.url, roaster)
+            if rendered is not None and (item is None or rendered.body_text):
+                item = rendered
+                rep.facts_from_render += bool(rendered.body_text)
         if item is None:
             failed += 1
             continue
