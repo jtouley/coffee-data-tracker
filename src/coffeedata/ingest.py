@@ -12,7 +12,7 @@ import hashlib
 import logging
 import time
 from collections import Counter
-from collections.abc import Iterator, Sequence
+from collections.abc import Iterable, Iterator, Sequence
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import ExitStack
 from dataclasses import dataclass, field
@@ -65,6 +65,28 @@ def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
             res.items = []
     res.duration_s = round(time.monotonic() - start, 3)
     return res
+
+
+def pool_sizes(workers: int, adapters: Iterable[str]) -> dict[str, int]:
+    """Split a total of `workers` across the pools of the adapters in this run, summing to exactly `workers`.
+
+    The rule: each pool gets a floor first (Shopify the limiter's SHOPIFY_CONCURRENCY slots, every other pool 1),
+    then the rest goes to each pool in proportion to how far POOLS puts it above its floor (largest remainder,
+    ties by adapter name). Shopify's floor shrinks only when `workers` can't otherwise give every other pool 1."""
+    names = sorted(set(adapters))
+    if workers < len(names):
+        raise ValueError(f"{workers} workers can't give each of {len(names)} adapter pools one")
+    floor = {a: 1 for a in names}
+    if "shopify" in floor:
+        floor["shopify"] = min(SHOPIFY_CONCURRENCY, workers - (len(names) - 1))
+    rest = workers - sum(floor.values())
+    want = {a: max(0, POOLS.get(a, 4) - floor[a]) for a in names}
+    total = sum(want.values()) or len(names)
+    share = {a: rest * (want[a] if sum(want.values()) else 1) / total for a in names}
+    sizes = {a: floor[a] + int(share[a]) for a in names}
+    for a in sorted(names, key=lambda a: (-(share[a] - int(share[a])), a))[: workers - sum(sizes.values())]:
+        sizes[a] += 1
+    return sizes
 
 
 def crawl(
@@ -297,9 +319,8 @@ def run(
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget.
     shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
-    if workers is not None and pools is None:  # a total (the retry pass's 16): scale every pool to it
-        total = sum(POOLS.values())
-        pools = {a: max(1, round(n * workers / total)) for a, n in POOLS.items()}
+    if workers is not None and pools is None:  # a total (the retry pass's 16), split by pool_sizes' rule
+        pools = pool_sizes(workers, {r.adapter for r in roasters})
     with PoliteClient(limiters={"shopify": shopify}) as client:
         done: list[Result] = []
         for res in crawl(client, roasters, pools):
