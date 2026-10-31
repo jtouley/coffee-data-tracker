@@ -12,8 +12,9 @@ import hashlib
 import logging
 import time
 from collections import Counter
-from collections.abc import Sequence
+from collections.abc import Iterator, Sequence
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextlib import ExitStack
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 
@@ -29,6 +30,12 @@ log = logging.getLogger(__name__)
 
 INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
 CHUNK = 200  # roasters per written and published batch: a crash loses at most one chunk
+# One worker pool per adapter, sized to what limits that platform, so one platform's waits (Shopify's shared
+# limiter pausing on 429s) can't occupy the workers of another. Shopify: the limiter (8 in flight, 3/s) is the
+# cap; more threads than 8 only cover per-host spacing, which is waited outside a limiter slot. Square Online's
+# catalog API is one host (cdn5.editmysite.com), spaced 1/s across all its roasters, so a few workers suffice.
+# Self-hosted platforms (WooCommerce, generic) are only bound by per-host spacing: more workers, more parallel.
+POOLS = {"shopify": 16, "woocommerce": 12, "squarespace": 6, "square_online": 4, "generic": 16}
 
 
 @dataclass
@@ -58,6 +65,27 @@ def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
             res.items = []
     res.duration_s = round(time.monotonic() - start, 3)
     return res
+
+
+def crawl(
+    client: PoliteClient, roasters: Sequence[Roaster], pools: dict[str, int] | None = None
+) -> Iterator[Result]:
+    """Every roaster's Result as it finishes, each adapter's roasters fetched by its own pool, all pools at once."""
+    pools = POOLS if pools is None else pools
+    by_adapter: dict[str, list[Roaster]] = {}
+    for r in roasters:
+        by_adapter.setdefault(r.adapter, []).append(r)
+    with ExitStack() as stack:
+        exs = {
+            a: stack.enter_context(ThreadPoolExecutor(pools.get(a, 4), thread_name_prefix=a))
+            for a in by_adapter
+        }
+        # No list of the futures kept here: as_completed drops each one as it's yielded, so a finished
+        # roaster's Result is freed once its chunk is written, not held until the whole run ends.
+        for fut in as_completed(
+            [exs[a].submit(ingest_one, client, r) for a, rs in by_adapter.items() for r in rs]
+        ):
+            yield fut.result()
 
 
 def sample_key(roaster_id: str) -> str:
@@ -208,9 +236,10 @@ def run(
     lake: Lake,
     todo: Sequence[Roaster | registry.RoasterState],
     run_date: str,
-    workers: int = 32,
+    workers: int | None = None,
     mode: str | None = None,
     shopify_rps: float = SHOPIFY_RPS,
+    pools: dict[str, int] | None = None,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
@@ -268,10 +297,13 @@ def run(
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget.
     shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
-    with PoliteClient(limiters={"shopify": shopify}) as client, ThreadPoolExecutor(workers) as ex:
+    if workers is not None and pools is None:  # a total (the retry pass's 16): scale every pool to it
+        total = sum(POOLS.values())
+        pools = {a: max(1, round(n * workers / total)) for a, n in POOLS.items()}
+    with PoliteClient(limiters={"shopify": shopify}) as client:
         done: list[Result] = []
-        for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
-            done.append(fut.result())
+        for res in crawl(client, roasters, pools):
+            done.append(res)
             if len(done) == CHUNK:
                 flush(done)
                 done = []

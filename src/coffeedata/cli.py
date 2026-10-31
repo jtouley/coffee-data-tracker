@@ -377,7 +377,7 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             only=None,
             sample=args.sample,
             retry_failed=False,
-            workers=32,
+            workers=None,
             shopify_rps=SHOPIFY_RPS,
         )
     )
@@ -537,7 +537,12 @@ def main(argv: list[str] | None = None) -> None:
     i.add_argument("--only", help="one roaster_id (domain)")
     i.add_argument("--sample", type=int)
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
-    i.add_argument("--workers", type=int, default=32)
+    i.add_argument(
+        "--workers",
+        type=int,
+        default=None,
+        help="total workers, split across the per-adapter pools (default: ingest.POOLS)",
+    )
     i.add_argument(
         "--shopify-rps",
         type=_positive_float,
