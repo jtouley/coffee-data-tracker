@@ -26,3 +26,6 @@ src/terraform/terraform.tfvars
 
 # Local PR review notes; never committed.
 .context/
+
+# tpm skill off switch; user-local.
+.claude/tpm.off
