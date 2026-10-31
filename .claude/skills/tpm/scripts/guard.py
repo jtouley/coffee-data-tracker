@@ -23,8 +23,9 @@ OFF_FILE = os.path.join(".claude", "tpm.off")
 
 DENY_MESSAGE = (
     "TPM mode is on: the main thread doesn't do core work ({what}). "
-    "Delegate it with the Agent tool and a tight brief (task, inputs, constraints, "
-    "target, output format, stop condition), then review what comes back. "
+    "Delegate it with the Agent tool: a one- or two-line prompt (skill or verb, target, where the "
+    "result goes) that points to the workstream doc on the orchestration branch. Workstream docs "
+    "are written by a scribe agent, not by you. "
     "Only the user can lift this guard; do not create .claude/tpm.off or ask an agent to."
 )
 

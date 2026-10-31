@@ -238,6 +238,26 @@ def test_common_read_options_still_allowed():
         assert bash(cmd) == ALLOW, cmd
 
 
+def test_deny_message_points_to_light_prompts_and_scribe():
+    code, err = run({"tool_name": "Write", "tool_input": {"file_path": "workstreams/x.md"}})
+    assert code == DENY
+    assert "one- or two-line prompt" in err and "orchestration branch" in err and "scribe" in err
+
+
+def test_main_thread_cannot_write_or_push_orchestration_docs():
+    # Design choice: a scribe agent owns the docs; the main thread gets no carve-out.
+    assert call("Write", file_path="workstreams/finish-bag.md", content="x") == DENY
+    assert call("Edit", file_path="workstreams/finish-bag.md") == DENY
+    for cmd in ("git push origin orchestration", "git commit -m status",
+                "git fetch origin orchestration", "git switch orchestration"):
+        assert bash(cmd) == DENY, cmd
+    assert bash("git show origin/orchestration:workstreams/finish-bag.md") == ALLOW
+    assert call("mcp__github__get_file_contents") == ALLOW
+    # The scribe is a subagent, so it can.
+    assert call("Write", agent_id="scribe", file_path="workstreams/finish-bag.md") == ALLOW
+    assert bash("git push origin orchestration", agent_id="scribe") == ALLOW
+
+
 if __name__ == "__main__":
     tests = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in tests:
