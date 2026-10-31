@@ -103,6 +103,53 @@ def test_history_is_derived_from_successful_runs(lake, tmp_path):
     )
 
 
+def test_a_failed_fetch_carries_the_last_good_catalog_forward_for_n_weeks(lake, tmp_path):
+    rid, other = "onyxcoffeelab.com", "counterculturecoffee.com"
+    run(lake, "2026-10-05", rid, [product("A", 20.0), product("B", 18.0, available=False)])
+    run(lake, "2026-10-12", rid, None)  # refused this week (a 429): its catalog must not vanish
+    for d in ("2026-10-05", "2026-10-12"):
+        run(lake, d, other, [product("X", 10.0)])
+
+    def listing(con):
+        return {r[0]: r[1:] for r in con.execute(
+            "select product_id, is_listed, in_stock, catalog_status, last_seen, carried_forward from dim_coffee"
+        ).fetchall()}  # fmt: skip
+
+    d1 = date(2026, 10, 5)
+    con = build(lake, tmp_path)
+    assert listing(con) == {
+        "A": (True, True, "available", d1, True),  # stock and price as of last_seen
+        "B": (True, False, "sold_out", d1, True),
+        "X": (True, True, "available", date(2026, 10, 12), False),
+    }
+    assert con.execute("select count(*) from public_coffee where carried_forward").fetchone()[0] == 2
+    # No observation is made up for the week it wasn't fetched: no events, and its failure still counts.
+    assert con.execute(
+        "select distinct run_date from fct_price_event where roaster_id = ?", [rid]
+    ).fetchall() == [(d1,)]
+    assert con.execute("select ok from int_roaster_runs where roaster_id = ? and run_date = '2026-10-12'",
+                       [rid]).fetchone() == (False,)  # fmt: skip
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert (metrics["listed_coffees"], metrics["fresh_listed_coffees"]) == (3, 1)
+    assert (metrics["carried_forward_coffees"], metrics["carried_forward_roasters"]) == (2, 1)
+    con.close()  # DuckDB reuses an open database for the same path, so a later build() would read this one
+
+    assert listing(build(lake, tmp_path, carry_forward_weeks=0))["A"][:2] == (False, False)  # 0: no carry
+
+    # Up to 4 weeks (28 days) old it stays; one more failed week and it is no longer listed, with no "removed"
+    # event, since nothing was seen removed.
+    for d in ("2026-11-02", "2026-11-09"):
+        run(lake, d, rid, None)
+        run(lake, d, other, [product("X", 10.0)])
+        con = build(lake, tmp_path, as_of_run=d, min_ok_share=0, min_attempted_share=0)
+        got = listing(con)["A"]
+        assert got == ((True, True, "available", d1, True) if d == "2026-11-02"
+                       else (False, False, "delisted", d1, False)), d  # fmt: skip
+        assert con.execute("select count(*) from fct_price_event where roaster_id = ? and event = 'removed'",
+                           [rid]).fetchone()[0] == 0  # fmt: skip
+        con.close()
+
+
 def test_new_snapshot_column_keeps_raw_immutable_and_builds_idempotent(lake, tmp_path, monkeypatch):
     import hashlib
 

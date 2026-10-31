@@ -354,7 +354,10 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
 - **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price
-  events compare consecutive *successful* fetches.
+  events compare consecutive *successful* fetches. The roaster's last good catalog stays listed, flagged
+  `carried_forward` with `last_seen` as its date, for up to `carry_forward_weeks` (4) weeks; after that its
+  coffees are no longer listed. Carried coffees add no price events, and the checks below still count the failed
+  fetch.
 - **Neither does a broken catalog.** A fetch can succeed and still be wrong (a store that cut its listing short, an
   adapter bug). `stg_run_quality` holds a roaster-week out of history, like an outage, when its product count falls
   below half the median of its previous 4 weeks. The build warns (`suspect_runs_need_review`); review it, then
@@ -370,7 +373,7 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     "succeed" with nothing, aren't counted);
   - `adapter_ok_rate`: each adapter with at least 20 such roasters fetched at least half of them, so one
     platform's outage fails the run;
-  - `build_metrics_in_band`: those ok shares (overall and per adapter, low side only) and the three volume
+  - `build_metrics_in_band`: those ok shares (overall and per adapter, low side only) and the four volume
     metrics lie within median ± 1.5 × 1.4826 × MAD of the recent passing builds. A metric is banded only once it
     has 6 passing builds in its window; until then only the fixed thresholds apply, and they stay hard floors.
     `--accept-volume-change`, or a new accept override, starts the window again at that build. For now this
@@ -378,8 +381,8 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     TODO, at that point (about 8 weeks of history): replace the fixed suspect-week rule (below half the median of
     the last 4 counted weeks) with per-roaster MAD bands, both sides, warn-only, active once a roaster has 6 or
     more counted weeks and reset on accept or override, the same pattern as these bands;
-  - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
-    release being served;
+  - `catalog_volume_vs_last_build`: listed coffees, listed coffees this run fetched itself (not carried
+    forward), in-stock coffees and roasters moved at most 20% from the release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 

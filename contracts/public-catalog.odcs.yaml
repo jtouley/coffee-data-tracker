@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.1.0
+version: 2.2.0
 status: active
 domain: coffee
 dataProduct: coffee-data
@@ -13,7 +13,9 @@ description:
     and how that changes.'
   usage: Analysis of the specialty coffee market. Every coffee links back to its roaster.
   limitations: Weekly snapshots. Attributes come from rules and an LLM over roasters' own text. catalog_status 'archived'
-    relies on roasters' tags; untagged back catalog shows as sold_out.
+    relies on roasters' tags; untagged back catalog shows as sold_out. A roaster whose fetch failed keeps its last
+    good catalog listed for up to carry_forward_weeks weeks, flagged carried_forward, with stock and prices as of
+    last_seen.
 schema:
 - name: public_coffee
   physicalName: public_coffee
@@ -54,12 +56,13 @@ schema:
   - name: is_listed
     logicalType: boolean
     physicalType: boolean
-    description: In the roaster's latest successful catalog fetch.
+    description: In the roaster's latest successful catalog fetch, when that fetch is at most carry_forward_weeks
+      weeks older than the release's run.
     required: true
   - name: in_stock
     logicalType: boolean
     physicalType: boolean
-    description: Listed, with at least one bag size available.
+    description: Listed, with at least one bag size available (as of last_seen).
     required: true
   - name: catalog_status
     logicalType: string
@@ -85,7 +88,7 @@ schema:
   - name: last_seen
     logicalType: date
     physicalType: date
-    description: Latest weekly run that listed it.
+    description: Latest weekly run that listed it; for a carried_forward coffee, the run its listing is from.
     required: true
   - name: weeks_listed
     logicalType: integer
@@ -169,6 +172,14 @@ schema:
       A wholesale listing: a bulk bag or case the roaster sells to cafes, often the twin of one of its retail
       coffees. Kept here, flagged; left out of the site, the app's picker, market counts and new arrivals.
     required: true
+  - name: carried_forward
+    logicalType: boolean
+    physicalType: boolean
+    description: >-
+      Listed from the roaster's last good catalog because this release's run didn't fetch it (the fetch failed or
+      wasn't tried). Its stock and prices are as of last_seen, at most carry_forward_weeks weeks old. It adds no
+      price events.
+    required: true
   - name: release_build_id
     logicalType: string
     physicalType: varchar
@@ -183,8 +194,8 @@ schema:
     implementation: tests/catalog_volume_vs_last_build.sql
     dimension: consistency
     severity: error
-    description: Listed coffees, in-stock coffees and roasters move at most volume_tolerance from the last passing
-      release.
+    description: Listed coffees, listed coffees fetched in this run (not carried forward), in-stock coffees and
+      roasters move at most volume_tolerance from the last passing release.
   - type: custom
     engine: dbt
     implementation: tests/run_is_complete.sql
@@ -427,6 +438,8 @@ customProperties:
   value: 0.2
 - property: min_attempted_share
   value: 1.0
+- property: carry_forward_weeks
+  value: 4
 - property: min_ok_share
   value: 0.9
 - property: min_adapter_ok_share

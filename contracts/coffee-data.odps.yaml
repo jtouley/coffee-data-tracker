@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.1.0
+version: 2.2.0
 status: active
 domain: coffee
 description:
@@ -20,7 +20,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.1.0
+    version: 2.2.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: glossary
@@ -46,6 +46,14 @@ customProperties:
           listings stay in the public data, flagged, rather than filtered out upstream, so readers can count them or
           leave them out; public_market_weekly leaves them out. Snowflake's PUBLIC_COFFEE gets the column through
           the one-time snowflake_migrate run (marketplace/README.md).
+      - topic: public_coffee carried-forward catalogs
+        decided: "2026-10-31"
+        outcome: >-
+          Added carried_forward to public_coffee (public-catalog contract 2.2.0; adding a column is additive). A
+          roaster whose fetch failed already kept its last good catalog listed, unmarked and without limit; now it
+          is flagged and kept for at most carry_forward_weeks (4) weeks, after which is_listed turns false. Carried
+          rows add no price events, and the ok-rate, completeness and freshness checks still count the failed
+          fetch. Snowflake's PUBLIC_COFFEE needs the column added (snowflake_migrate, marketplace/README.md).
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

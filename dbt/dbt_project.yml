@@ -45,6 +45,11 @@ vars:
   # "succeed" with 0 products, are left out), and a success must bring back products. On the real runs: 2026-10-26
   # (a full run that should pass) 96.5% of 1,923; 2026-10-28 (mass Shopify 429s) 50.0%.
   min_attempted_share: 1.0
+  # A roaster whose fetch failed (or wasn't tried) this run keeps its latest counted catalog listed, flagged
+  # carried_forward, while that catalog is at most this many weeks older than the run (dim_coffee). 0: no carry.
+  # The refusers seen so far (build/crawl-plan) answer on some weeks or IPs and not others; 4 weeks keeps a store
+  # through a month of refusals without serving a catalog older than that as current.
+  carry_forward_weeks: 4
   min_ok_share: 0.9
   # Per adapter, over its roasters with a catalog, for adapters with at least min_adapter_roasters of them: one
   # platform's total outage fails the run. 0.5 sits between the worst healthy adapter seen (Square Online 71.7%

@@ -107,6 +107,33 @@ def test_volume_check_fails_a_collapsed_build_unless_accepted(lake, tmp_path):
     build(lake, tmp_path, volume_tolerance=1e9)  # --accept-volume-change
 
 
+def test_carried_forward_catalogs_do_not_hide_an_outage(lake, tmp_path):
+    # Last week 6 roasters listed 60 coffees; this week 4 of them refuse. Their catalogs stay listed (carried
+    # forward), so listed_coffees holds at 60, but the coffees this run fetched fall to 20: the volume check fails
+    # on that metric, and the ok rate and freshness still count the failed fetches.
+    for rid in SEED:
+        run(lake, "2026-10-19", rid, FULL[:10])
+        run(lake, "2026-10-26", rid, FULL[:10] if rid in SEED[:2] else None)
+    now = datetime(2026, 10, 20, tzinfo=UTC)
+    lake.write("builds", "builds/run_date=2026-10-19/build=b1.parquet", [
+        {"build_id": "b1", "built_at": now, "kind": "build", "unique_id": "build", "status": "pass"},
+        {"build_id": "b1", "built_at": now, "kind": "metric", "unique_id": "listed_coffees", "value": 60.0},
+        {"build_id": "b1", "built_at": now, "kind": "metric", "unique_id": "fresh_listed_coffees", "value": 60.0},
+    ])  # fmt: skip
+    gate = {"as_of_run": "2026-10-26", "min_ok_share": 0.3}  # each check alone (a failure skips what follows)
+    r = build(lake, tmp_path, check=False, **gate)
+    assert r.returncode != 0 and re.search(r"FAIL 1 catalog_volume_vs_last_build", r.stdout)  # fresh only
+    r = build(lake, tmp_path, check=False, **gate | {"min_ok_share": 0.9, "volume_tolerance": 1e9})
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_ok_rate", r.stdout)
+    r = build(lake, tmp_path, check=False, **gate | {"volume_tolerance": 1e9, "today": "2026-11-20"})
+    assert r.returncode != 0 and re.search(r"FAIL 1 latest_run_is_fresh", r.stdout)
+    con = build(lake, tmp_path, **gate | {"volume_tolerance": 1e9})
+    metrics = dict(con.execute("select metric, value from mart_build_profile").fetchall())
+    assert (metrics["listed_coffees"], metrics["fresh_listed_coffees"]) == (60, 20)
+    assert (metrics["carried_forward_coffees"], metrics["carried_forward_roasters"]) == (40, 4)
+    assert round(metrics["run_catalog_ok_share"], 3) == 0.333
+
+
 def test_volume_check_ignores_failed_builds_as_baselines(lake, tmp_path):
     run(lake, "2026-10-26", RID, FULL)
     _baseline(lake, 40.0)

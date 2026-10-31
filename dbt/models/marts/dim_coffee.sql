@@ -2,6 +2,12 @@
 -- history and shots that reference them keep resolving. Whether a product is coffee, and its attributes, come
 -- from stg_products (the current rules over the raw snapshots), so rebuilding from the same lake gives the same
 -- table.
+--
+-- Carry forward: a roaster whose fetch failed (or wasn't tried) in this release's run keeps its latest counted
+-- catalog listed, flagged carried_forward, for at most carry_forward_weeks weeks before that run; last_seen says
+-- which run it is from. Older than that, its coffees are no longer listed. This only decides what is listed:
+-- carried-forward coffees are never written as observations, so fct_price_event and the failure counts
+-- (int_roaster_runs, run_completeness) still see only real fetches.
 with s as (
     select s.*, p.is_coffee from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
@@ -54,6 +60,18 @@ prices as (
         list(distinct grams order by grams) filter (where grams is not null) as bag_sizes_g
     from variants group by coffee_id
 ),
+-- This release's run (as_of_run, else the latest run any fetch was attempted in), and each roaster's latest
+-- counted run: listed if it is at most carry_forward_weeks weeks older, carried forward if it is older at all.
+release_run as (
+    select coalesce(cast(nullif('{{ var("as_of_run") }}', '') as date),
+                    (select max(run_date) from {{ ref('int_roaster_runs') }})) as run_date
+),
+listing as (
+    select r.roaster_id, r.run_date,
+           r.is_latest_run and r.run_date >= rr.run_date - {{ 7 * var('carry_forward_weeks') }} as listed,
+           r.is_latest_run and r.run_date < rr.run_date as carried
+    from {{ ref('stg_runs') }} r, release_run rr
+),
 notes as (
     select a.coffee_id,
            list(distinct f.category order by f.category) filter (where f.category is not null) as flavor_categories
@@ -67,16 +85,16 @@ select
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
-    run.is_latest_run as is_listed,
+    run.listed as is_listed, run.listed and run.carried as carried_forward,
     a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
-    run.is_latest_run and coalesce(p.any_available, false) as in_stock,
+    run.listed and coalesce(p.any_available, false) as in_stock,
     -- What a shopper can get now versus the roaster's back catalog. Every coffee is kept either way; a sold-out
     -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".
     case
-        when not run.is_latest_run then 'delisted'
+        when not run.listed then 'delisted'
         -- A preorder tag whose ship date (e.g. preorder-ship-date:2026-11-05) has passed is left over: available.
         when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
             regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon')))
@@ -94,7 +112,7 @@ select
 from latest l
 join seen s using (coffee_id)
 join attrs a using (coffee_id)
-join {{ ref('stg_runs') }} run using (roaster_id, run_date)
+join listing run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)

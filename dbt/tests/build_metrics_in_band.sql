@@ -14,7 +14,7 @@
 -- Until a metric has band_min_builds builds of history, it is not banded: only the fixed thresholds apply
 -- (run_ok_rate, adapter_ok_rate, catalog_volume_vs_last_build), and they apply as hard floors either way.
 {% if var('as_of_run') %}
-{%- set volume = ['listed_coffees', 'in_stock_coffees', 'roasters_with_coffee'] %}
+{%- set volume = ['listed_coffees', 'fresh_listed_coffees', 'in_stock_coffees', 'roasters_with_coffee'] %}
 with this_run as (select cast('{{ var("as_of_run") }}' as date) as run_date),
 passing as (
     select b.build_id, b.run_date, b.built_at

@@ -39,6 +39,10 @@ models:
   - name: dim_coffee
     description: Every coffee ever seen, with its latest listing; delisted coffees stay with is_listed = false.
     columns:
+      - name: carried_forward
+        description: Listed from the roaster's latest counted run, older than this release's run (its fetch failed or
+          wasn't tried); at most carry_forward_weeks old. last_seen is that run.
+        data_tests: [not_null]
       - name: coffee_id
         data_tests: [unique, not_null]
       - name: process
@@ -193,6 +197,10 @@ models:
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
       - name: is_wholesale
+        data_type: boolean
+        constraints: [{type: not_null}]
+        data_tests: [not_null]
+      - name: carried_forward
         data_type: boolean
         constraints: [{type: not_null}]
         data_tests: [not_null]

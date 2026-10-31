@@ -95,7 +95,7 @@ def test_thresholds_are_the_ones_dbt_uses():
     custom = {p["property"]: p["value"] for p in ODCS["customProperties"]}
     for var in (
         "volume_tolerance", "min_attempted_share", "min_ok_share", "max_run_age_days", "min_adapter_ok_share",
-        "min_adapter_roasters", "band_k", "band_min_builds",
+        "min_adapter_roasters", "band_k", "band_min_builds", "carry_forward_weeks",
     ):  # fmt: skip
         assert custom[var] == DBT_VARS[var], var
     sla = {p["property"]: p for p in ODCS["slaProperties"]}
