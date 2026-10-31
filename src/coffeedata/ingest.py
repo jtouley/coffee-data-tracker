@@ -10,12 +10,13 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import queue
 import time
 from collections import Counter
 from collections.abc import Iterator, Sequence
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 
 import httpx
 
@@ -31,6 +32,9 @@ log = logging.getLogger(__name__)
 
 INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
 CHUNK = 200  # roasters per written and published batch: a crash loses at most one chunk
+# ...or less: a chunk is also flushed once it is this old, so a slow crawl (Shopify 429 pauses made one chunk take
+# 40 minutes on 2026-10-30) still checkpoints often. ~13-25 commits a run, far from the Hub's commit quota.
+FLUSH_EVERY_S = 600
 DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters are retried this many times
 # A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
 # don't all wake and ask at the same instant.
@@ -150,6 +154,35 @@ def select_states(
     return todo, mode
 
 
+def open_run(lake: Lake, today: str, max_age_days: int = 6) -> str | None:
+    """The run a re-run of the week should continue: the latest run with a full manifest that still has roasters it
+    never tried (a timeout or crash), started at most `max_age_days` before `today`. None: start a new run.
+
+    Continuing it under its own run_date, rather than starting today's, is what keeps one week one run: the gate
+    (run_completeness) judges a run by its run_date, and a second, partial run_date would leave two half-weeks in
+    every roaster's history."""
+    rd = date.fromisoformat(today)
+    row = (
+        lake.connect()
+        .execute(
+            f"""
+            with m as (
+                select distinct run_date, roaster_id from {lake.scan("run_manifests")}
+                where mode = 'full' and roaster_id is not null and run_date between ? and ?
+            ),
+            latest as (select max(run_date) as run_date from m)
+            select run_date, count(*) filter (where f.roaster_id is null) as untried
+            from m join latest using (run_date)
+            left join (select distinct run_date, roaster_id from {lake.scan("fetches")}) f using (run_date, roaster_id)
+            group by run_date
+            """,
+            [rd - timedelta(days=max_age_days), rd],
+        )
+        .fetchone()
+    )
+    return row[0].isoformat() if row and row[1] else None
+
+
 def manifest_rows(
     roasters: list[Roaster],
     run_date: date,
@@ -250,11 +283,16 @@ def run(
     shopify_rps: float = SHOPIFY_RPS,
     per_host: bool = True,
     client_kw: dict | None = None,
+    deadline: float | None = None,
+    flush_every_s: float = FLUSH_EVERY_S,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
     a remote lake, before the first request. Only a 'full' manifest is the run's expected set (run_completeness);
-    without a mode it is recorded as null, which only adds to that set."""
+    without a mode it is recorded as null, which only adds to that set.
+
+    `deadline` (a time.monotonic() value): stop starting fetches then, flush what finished, and return with
+    complete False, so a job about to time out ends cleanly and a re-run continues the same run."""
     statuses = {r.roaster.roaster_id: r.status for r in todo if isinstance(r, registry.RoasterState)}
     roasters = [r.roaster if isinstance(r, registry.RoasterState) else r for r in todo]
     rd = date.fromisoformat(run_date)
@@ -309,10 +347,12 @@ def run(
     shopify = PlatformLimiter(
         "shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host
     )
+    shopify.count_bursts = mode != "retry_failed"  # a retry pass asks only stores that already failed
     deferred: dict[str, int] = {}
     retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
+    received, stopped, cut_short = 0, False, False
     with (
         PoliteClient(limiters={"shopify": shopify}, **(client_kw or {})) as client,
         ThreadPoolExecutor(workers) as ex,
@@ -321,20 +361,27 @@ def run(
         # is written before the next round starts: a parked roaster's error row is in the lake before it is
         # retried, so a run that dies during the deferred rounds still shows it attempted (run_is_complete).
         # Its retry is another fetches row; the run counts it ok if any attempt was (int_roaster_runs).
+        # Results come through a queue, so the loop also wakes on a timer: to flush a chunk that is old, and to
+        # stop at the deadline.
         rounds = DEFERRED_ROUNDS + 1 if per_host else 1
-        queue = roasters
+        pending = roasters
+        done: list[Result] = []
+        last_flush = time.monotonic()
         for round_ in range(rounds):
             if round_:
                 shopify.defer = False  # nothing left to overtake: wait out a store's pause in the worker
-                deferred[f"round_{round_}"] = len(queue)
+                deferred[f"round_{round_}"] = len(pending)
             t0, spread = time.monotonic(), DEFERRED_SPREAD if round_ else 0.0
-            futures = [
-                ex.submit(_staggered, client, r, t0 + spread * i / len(queue)) for i, r in enumerate(queue)
-            ]
+            results: queue.Queue[Result] = queue.Queue()
+
+            def work(r: Roaster, at: float, out: queue.Queue = results) -> None:
+                out.put(_staggered(client, r, at))
+
+            futs = [ex.submit(work, r, t0 + spread * i / len(pending)) for i, r in enumerate(pending)]
             parked: list[Roaster] = []
-            done: list[Result] = []
-            for fut in as_completed(futures):
-                res = fut.result()
+            got = 0
+
+            def take(res: Result, round_: int = round_, parked: list = parked) -> Result:
                 rid = res.roaster.roaster_id
                 if round_:
                     retried_ok[rid] = not res.error
@@ -350,14 +397,40 @@ def run(
                     )[:300]
                 if not last:
                     parked.append(res.roaster)
-                done.append(res)
-                if len(done) == CHUNK:
+                return res
+
+            while got < len(pending):
+                try:
+                    done.append(take(results.get(timeout=1.0)))
+                    got += 1
+                except queue.Empty:
+                    if all(f.done() for f in futs) and results.empty():
+                        for f in futs:
+                            f.result()  # a worker died outside ingest_one's own handling: raise it
+                now = time.monotonic()
+                if len(done) >= CHUNK or (done and now - last_flush >= flush_every_s):
                     flush(done)
-                    done = []
+                    done, last_flush = [], now
+                if deadline is not None and now >= deadline and got < len(pending):
+                    # The main pass unfinished: the run is incomplete and a re-run continues it. In a deferred
+                    # round every roaster already has a row, so the run is complete; only the retries stop.
+                    stopped, cut_short = not round_, True
+                    for f in futs:
+                        f.cancel()  # queued fetches never start; running ones finish
+                    for f in futs:
+                        if not f.cancelled():
+                            f.exception()  # wait
+                    while not results.empty():
+                        done.append(take(results.get()))
+                        got += 1
+                    break
+            if not round_:
+                received = got
             if done:
                 flush(done)
-            queue = parked
-            if not queue:
+                done, last_flush = [], time.monotonic()
+            pending = parked
+            if not pending or cut_short:
                 break
         if retried_ok:
             deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
@@ -365,9 +438,13 @@ def run(
     return {
         "run_date": run_date,
         "roasters": len(roasters),
+        "fetched": received,
+        "complete": not stopped,
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
         "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
         "deferred": deferred,  # roasters per deferred round, and those still failing after them
+        "refused": sorted(rid for rid, ok in retried_ok.items() if not ok and rid in refusing),
+        "stopped_at_deadline": cut_short,
     }

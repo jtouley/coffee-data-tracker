@@ -416,7 +416,9 @@ def test_cli_shopify_rps_reaches_the_run(lake, monkeypatch):
     seen = {}
     monkeypatch.setattr(ingest, "select_states", lambda *a, **k: ([], "full"))
     monkeypatch.setattr(
-        ingest, "run", lambda lake, todo, rd, workers, mode, shopify_rps: seen.update(rps=shopify_rps)
+        ingest,
+        "run",
+        lambda lake, todo, rd, workers, mode, shopify_rps, deadline=None: seen.update(rps=shopify_rps),
     )
     monkeypatch.setattr(cli, "_print", lambda x: None)
     cli.main(["ingest", "--shopify-rps", "1.5"])
@@ -686,6 +688,46 @@ def test_deferred_round_blocks_never_pause_the_platform():
     for i in range(5):
         lim.record(_from(f"main{i}.com"))
     assert lim.stats["cooldowns"] == 1
+
+
+def test_retry_pass_and_repeat_blocks_never_pause_the_platform():
+    """A's real crawl 2026-10-31: the --retry-failed pass asks only stores that already failed, and all 5 platform
+    pauses of the run came from it ("10 of 19 stores blocked within 30s"), down to 0.38 req/s. A store's second
+    block in a run (the next page after a wait, a parked store's retry) is its own limit again, too."""
+    clock = FakeClock()
+    lim = limiter(clock, per_host=True, burst_hosts=5, burst_window=30)
+    lim.count_bursts = False  # what ingest sets for mode="retry_failed"
+    for i in range(10):
+        lim.record(_from(f"failed{i}.com"))
+    assert lim.stats["cooldowns"] == 0 and lim.host_until["failed0.com"] == clock.t + 60
+    lim = limiter(clock, per_host=True, burst_hosts=5, burst_window=30)
+    for i in range(4):
+        lim.record(_from(f"s{i}.com"))
+    clock.t += 31  # their first blocks leave the window
+    for i in range(4):
+        lim.record(_from(f"s{i}.com"))  # the same stores again, each on its next page
+    lim.record(_from("new.com"))
+    assert lim.stats["cooldowns"] == 0
+    for i in range(4):
+        lim.record(
+            _from(f"fresh{i}.com")
+        )  # five stores blocking for the first time, nobody answering: platform
+    assert lim.stats["cooldowns"] == 1
+
+
+def test_ingest_turns_burst_counting_off_for_a_retry_pass(lake, monkeypatch):
+    seen = []
+    orig = ingest.PlatformLimiter
+
+    def spy(*a, **k):
+        lim = orig(*a, **k)
+        seen.append(lim)
+        return lim
+
+    monkeypatch.setattr(ingest, "PlatformLimiter", spy)
+    ingest.run(lake, [], "2026-10-26", mode="retry_failed")
+    ingest.run(lake, [], "2026-10-26", mode="full")
+    assert [lim.count_bursts for lim in seen] == [False, True]
 
 
 @pytest.fixture

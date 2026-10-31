@@ -106,15 +106,23 @@ def cmd_probe(args: argparse.Namespace) -> None:
     print(f"probed {len(rows)} roasters ({ok} reachable)")
 
 
-def cmd_ingest(args: argparse.Namespace) -> None:
+def cmd_ingest(args: argparse.Namespace) -> dict:
     from . import ingest
 
     lake = Lake()
     states, mode = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
     print(f"ingesting {len(states)} roasters for run {args.run_date}", file=sys.stderr)
-    _print(
-        ingest.run(lake, states, args.run_date, workers=args.workers, mode=mode, shopify_rps=args.shopify_rps)
+    out = ingest.run(
+        lake,
+        states,
+        args.run_date,
+        workers=args.workers,
+        mode=mode,
+        shopify_rps=args.shopify_rps,
+        deadline=getattr(args, "deadline", None),
     )
+    _print(out)
+    return out
 
 
 def cmd_enrich(args: argparse.Namespace) -> None:
@@ -345,8 +353,23 @@ def cmd_load_snowflake(args: argparse.Namespace) -> None:
 
 
 def cmd_weekly(args: argparse.Namespace) -> None:
-    """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
-    run = args.run_date
+    """The whole weekly run, in order. Safe to re-run: each step skips what this run already has.
+
+    Without --run-date, a run of the last 6 days that a timeout or crash left with untried roasters is continued
+    under its own run_date (ingest.open_run); otherwise today's run starts. With --resume-only, nothing happens
+    unless there is such a run (for a second, catch-up schedule)."""
+    from . import ingest
+
+    started = time.monotonic()
+    open_run = None if args.run_date else ingest.open_run(Lake(), _today())
+    if getattr(args, "resume_only", False) and not open_run:
+        print("no unfinished run to resume", file=sys.stderr)
+        return
+    run = args.run_date = args.run_date or open_run or _today()
+    if open_run:
+        print(f"resuming run {run}: fetching only the roasters it hasn't tried", file=sys.stderr)
+    minutes = getattr(args, "ingest_deadline_minutes", None)
+    deadline = started + minutes * 60 if minutes else None
     if date.fromisoformat(run).day <= 7 or args.discover:
         lake = Lake()
         month = run[:7]
@@ -371,7 +394,7 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     # job timeout never loses what was already fetched or paid for. Re-running the week resumes from the lake.
     cmd_probe(argparse.Namespace(stale_days=28, only=None, sample=args.sample, workers=16, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: discover and probe"))
-    cmd_ingest(
+    out = cmd_ingest(
         argparse.Namespace(
             run_date=run,
             only=None,
@@ -379,12 +402,26 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             retry_failed=False,
             workers=32,
             shopify_rps=SHOPIFY_RPS,
+            deadline=deadline,
         )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: catalogs"))
+    if out and not out.get("complete", True):
+        # The gate would fail an incomplete run anyway (run_is_complete); stopping here leaves the job's remaining
+        # time unused rather than spent on a build that can't be served, and a re-run continues this run_date.
+        raise SystemExit(
+            f"weekly run {run}: stopped at the ingest deadline with {out['roasters'] - out['fetched']} roasters "
+            "untried; everything fetched is published. Re-run `coffeedata weekly` to continue this run."
+        )
     cmd_ingest(
         argparse.Namespace(
-            run_date=run, only=None, sample=None, retry_failed=True, workers=16, shopify_rps=SHOPIFY_RPS
+            run_date=run,
+            only=None,
+            sample=None,
+            retry_failed=True,
+            workers=16,
+            shopify_rps=SHOPIFY_RPS,
+            deadline=deadline,
         )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
@@ -623,7 +660,18 @@ def main(argv: list[str] | None = None) -> None:
     )
 
     w = add("weekly", cmd_weekly, "the full weekly run")
-    w.add_argument("--run-date", type=_run_date, default=_today())
+    w.add_argument(
+        "--run-date", type=_run_date, default=None, help="default: continue an unfinished run, else today"
+    )
+    w.add_argument(
+        "--resume-only", action="store_true", help="only continue an unfinished run; else do nothing"
+    )
+    w.add_argument(
+        "--ingest-deadline-minutes",
+        type=_positive_float,
+        default=None,
+        help="stop fetching this long after the start, publish, and exit (re-run to continue)",
+    )
     w.add_argument("--sample", type=int, help="only N roasters (for trying it out)")
     w.add_argument("--discover", action="store_true", help="run discovery even if it isn't the first week")
     w.add_argument("--enrich-limit", type=int, default=2000)

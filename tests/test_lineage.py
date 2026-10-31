@@ -59,7 +59,8 @@ def test_fetches_record_diagnostics_and_the_run_manifest_comes_first(lake, monke
             side_effect=[httpx.Response(429, headers={"retry-after": "0"})] * 3
         )
         ingest.run(lake, [RoasterState(ONYX, "active", None), SLOW], "2026-10-26", workers=2, mode="full")
-    f = {r["roaster_id"]: r for r in _rows(lake, "fetches")}
+    # The main pass's row (a deferred retry adds another, made without requests while the store is paused).
+    f = {r["roaster_id"]: r for r in sorted(_rows(lake, "fetches"), key=lambda r: r["requests"])}
     onyx, slow = f["onyxcoffeelab.com"], f["slow.com"]
     # Page 2 repeats page 1, which ends the catalog: robots.txt plus two pages.
     assert (onyx["requests"], onyx["pages"], onyx["retries"], onyx["rate_limited"]) == (3, 2, 0, 0)
@@ -87,7 +88,9 @@ def test_the_cli_records_each_roasters_status_and_the_mode(lake, monkeypatch):
     monkeypatch.setattr(registry, "current", lambda lake: [RoasterState(ONYX, "pending", None)])
     got = {}
     monkeypatch.setattr(
-        ingest, "run", lambda lk, r, d, workers, mode, shopify_rps: got.update(r=r, m=mode) or {}
+        ingest,
+        "run",
+        lambda lk, r, d, workers, mode, shopify_rps, deadline=None: got.update(r=r, m=mode) or {},
     )
     for flags, mode in (({"sample": 5}, "sample"), ({"only": ONYX.roaster_id}, "only"),
                         ({"retry_failed": True}, "retry_failed"), ({}, "full")):  # fmt: skip

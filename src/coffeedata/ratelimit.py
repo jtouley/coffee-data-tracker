@@ -130,6 +130,13 @@ class PlatformLimiter:
         # retry only stores already known to block, so their 429s say nothing about the platform: they never
         # count towards a platform-wide pause (live test 2026-10-31: 6 false pauses, down to 0.25 req/s).
         self.defer = True
+        # A retry pass (weekly's --retry-failed) asks again only stores that already failed, mostly on blocks: their
+        # 429s say nothing about the platform either (A's real crawl 2026-10-31: all 5 platform pauses came from
+        # that pass, down to 0.38 req/s). ingest.run turns this off for it.
+        self.count_bursts = True
+        # Stores that have blocked before in this run: a later block from one (the next page after a wait, a
+        # parked store's retry) is that store's own limit again, and never counts towards a platform-wide pause.
+        self._ever_blocked: set[str] = set()
         self.host_until: dict[str, float] = {}
         self._blocked: dict[str, float] = {}  # host -> when it last blocked, for burst detection
         self.stats = {"requests": 0, "rate_limited": 0, "cooldowns": 0}
@@ -228,7 +235,10 @@ class PlatformLimiter:
             if self.per_host and status != 430:
                 host = _host(response)
                 self.host_until[host] = max(self.host_until.get(host, 0.0), now + wait)
-                if not self.defer:  # a deferred round: this store's own pause only
+                known = host in self._ever_blocked
+                self._ever_blocked.add(host)
+                if not self.defer or not self.count_bursts or known:
+                    # A deferred round, a retry pass, or a store that blocked before: its own pause only.
                     self.stats["host_pauses"] += 1
                     return
                 self._blocked[host] = now

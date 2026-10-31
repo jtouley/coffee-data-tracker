@@ -4,6 +4,8 @@ name: weekly
 on:
   schedule:
     - cron: "17 9 * * 1"   # Mondays
+    # Catch-up: continues a run that Monday's job didn't finish (timeout), else does nothing (weekly --resume-only).
+    - cron: "17 9 * * 2"
   workflow_dispatch:
     inputs:
       sample:
@@ -66,6 +68,7 @@ jobs:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
           ROLLBACK_TO: ${{ inputs.rollback_to }}
+          RESUME_ONLY: ${{ github.event.schedule == '17 9 * * 2' && '1' || '' }}
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
           # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
@@ -82,7 +85,10 @@ jobs:
             if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
             else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
           else
-            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
+            # Fetching stops at 170 of the job's 240 minutes, publishes, and exits, leaving time to publish; the next
+            # run (the catch-up schedule, or a manual one) continues the same run_date.
+            uv run coffeedata weekly --ingest-deadline-minutes 170 ${RESUME_ONLY:+--resume-only} \
+              ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
           fi
       - name: Site built
         id: site
