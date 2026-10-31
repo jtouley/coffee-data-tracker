@@ -21,8 +21,39 @@ HOST = "counterculturecoffee.com"
 CCC = Roaster(roaster_id=HOST, name="Counter Culture", host=HOST, platform="shopify")
 
 
+def _product_js(p: dict) -> dict:
+    """A recorded /products.json entry in Shopify's /products/<handle>.js shape."""
+    return {
+        "id": p["id"],
+        "title": p["title"],
+        "handle": p["handle"],
+        "description": p["body_html"],
+        "published_at": p["published_at"],
+        "vendor": p["vendor"],
+        "type": p["product_type"],
+        "tags": p["tags"],
+        "variants": [
+            {
+                "id": v["id"],
+                "title": v["title"],
+                "public_title": None if v["title"] == "Default Title" else v["title"],
+                "option1": v["option1"],
+                "price": round(float(v["price"]) * 100),
+                "available": v["available"],
+                "weight": v["grams"],
+                "sku": v["sku"],
+            }
+            for v in p["variants"]
+        ],
+    }
+
+
+FEED = load("shopify_counterculturecoffee.json")["products"]
+JS = {p["handle"]: _product_js(p) for p in FEED}
+
+
 def _store(request: httpx.Request) -> httpx.Response:
-    """counterculturecoffee.com, served from the fixtures: sitemap, product sitemap and product pages."""
+    """counterculturecoffee.com, served from the fixtures: sitemap, product sitemap and product pages (no .js)."""
     path = unquote(urlparse(str(request.url)).path)
     if path == "/sitemap.xml":
         return httpx.Response(200, text=(PAGES / "ccc_sitemap.xml").read_text())
@@ -57,7 +88,7 @@ def test_same_records_as_the_json_adapter(store):
     }
     with _crawl() as c:
         rep = pages.Report()
-        items = pages.fetch(c, CCC, report=rep)
+        items = pages.fetch(c, CCC, product_js=False, report=rep)
     by_id = {i.product_id: i for i in items}
     coffees = {pid for pid, i in json_items.items() if is_coffee(i)}
     assert coffees and coffees <= by_id.keys()
@@ -76,10 +107,56 @@ def test_same_records_as_the_json_adapter(store):
     assert rep.skipped_not_coffee == 5 and rep.fetched == 7
 
 
+def _with_js(request: httpx.Request) -> httpx.Response:
+    path = unquote(urlparse(str(request.url)).path)
+    if path.endswith(".js") and (p := JS.get(path.rsplit("/", 1)[-1].removesuffix(".js"))):
+        return httpx.Response(200, json=p)
+    return _store(request)
+
+
+def test_product_js_gives_the_feeds_records_exactly(store):
+    """Shopify's .js is the feed entry in another shape: every field matches, tags and description included."""
+    m, route = store
+    route.side_effect = _with_js
+    with _crawl() as c, c.track() as stats:
+        rep = pages.Report()
+        items = {i.product_id: i for i in pages.fetch(c, CCC, report=rep)}
+    feed = {i.product_id: i for i in (shopify.parse_product(p, CCC) for p in FEED)}
+    for pid, item in items.items():
+        a = feed[pid].model_dump(exclude={"image", "payload_hash"})
+        assert item.model_dump(exclude={"image", "payload_hash"}) == a, pid
+        assert item.body_text == feed[pid].body_text and item.image is None
+    assert rep.from_js == 7 and rep.fetched == 0  # no HTML page needed
+    assert stats.requests == 1 + 2 + 7
+
+
+def test_product_js_429_parks_it_and_the_pages_carry_on(store):
+    m, route = store
+    calls = []
+
+    def limited(request):
+        calls.append(str(request.url))
+        return httpx.Response(429) if str(request.url).endswith(".js") else _store(request)
+
+    route.side_effect = limited
+    with _crawl() as c:
+        rep = pages.Report()
+        items = pages.fetch(c, CCC, report=rep)
+    assert rep.js_parked and rep.from_js == 0 and len(items) == 7
+    assert sum(u.endswith(".js") for u in calls) == 1  # one 429, then no more .js
+
+
+def test_product_js_403_is_a_block(store):
+    m, route = store
+    route.side_effect = lambda r: httpx.Response(403) if str(r.url).endswith(".js") else _store(r)
+    with _crawl() as c, pytest.raises(pages.Refused):
+        pages.fetch(c, CCC)
+
+
 def test_requests_are_sitemap_then_pages_only(store):
     m, route = store
     with _crawl() as c, c.track() as stats:
-        pages.fetch(c, CCC)
+        pages.fetch(c, CCC, product_js=False)
     paths = [urlparse(str(call.request.url)).path for call in route.calls]
     assert paths[:2] == [
         "/sitemap.xml",
@@ -93,7 +170,7 @@ def test_requests_are_sitemap_then_pages_only(store):
 
 def test_description_read_in_memory_never_an_image(store):
     with _crawl() as c:
-        items = {i.handle: i for i in pages.fetch(c, CCC)}
+        items = {i.handle: i for i in pages.fetch(c, CCC, product_js=False)}
     honey = items["finca-el-puente-honey"]
     assert honey.image is None
     # The page's spec lines join the description the rules read (as the JSON adapter reads body_html).
@@ -113,7 +190,7 @@ def test_description_read_in_memory_never_an_image(store):
 
 def test_theme_product_json_brings_tags_and_type(store):
     with _crawl() as c:
-        worka = next(i for i in pages.fetch(c, CCC) if i.handle == "worka-chelbessa")
+        worka = next(i for i in pages.fetch(c, CCC, product_js=False) if i.handle == "worka-chelbessa")
     assert "roastlevel__light-roast" in worka.tags and worka.product_type == "Coffee"
     assert extract.rules(worka).roast_level == "light"
 
@@ -137,7 +214,7 @@ def test_a_block_stops_the_store_at_once(store, response):
 
     route.side_effect = blocked_on_pages
     with _crawl() as c, pytest.raises(pages.Refused):
-        pages.fetch(c, CCC)
+        pages.fetch(c, CCC, product_js=False)
     product_calls = [call for call in route.calls if "/products/" in str(call.request.url)]
     assert len(product_calls) == 1  # no retry, no next page
 
@@ -148,7 +225,7 @@ def test_robots_disallow_is_honored(store):
         return_value=httpx.Response(200, text="User-agent: coffee-data\nDisallow: /\n")
     )
     with _crawl() as c, pytest.raises(pages.FetchError):
-        pages.fetch(c, CCC)
+        pages.fetch(c, CCC, product_js=False)
     assert not route.calls
 
 
@@ -160,14 +237,14 @@ def test_a_missing_page_is_delisted_but_an_unreadable_one_fails_the_store(store)
 
     route.side_effect = gone
     with _crawl() as c:
-        assert "worka-chelbessa" not in {i.handle for i in pages.fetch(c, CCC)}
+        assert "worka-chelbessa" not in {i.handle for i in pages.fetch(c, CCC, product_js=False)}
 
     def broken(request):
         return httpx.Response(500) if "worka" in str(request.url) else _store(request)
 
     route.side_effect = broken
     with _crawl() as c, pytest.raises(pages.FetchError, match="1 of 7"):
-        pages.fetch(c, CCC)
+        pages.fetch(c, CCC, product_js=False)
 
 
 def test_collection_pages_when_the_sitemap_has_no_products(store):
@@ -185,7 +262,7 @@ def test_collection_pages_when_the_sitemap_has_no_products(store):
     route.side_effect = no_sitemap
     with _crawl() as c:
         rep = pages.Report()
-        items = pages.fetch(c, CCC, report=rep)
+        items = pages.fetch(c, CCC, product_js=False, report=rep)
     assert rep.source == "collections" and len(items) == 2
 
 
@@ -203,7 +280,7 @@ def test_renderer_only_for_pages_without_product_data(store):
     route.side_effect = bare
     rendered = []
     with _crawl() as c:
-        items = pages.fetch(c, CCC, render=lambda url: rendered.append(url) or worka)
+        items = pages.fetch(c, CCC, product_js=False, render=lambda url: rendered.append(url) or worka)
     assert f"https://{HOST}/products/worka-chelbessa" in rendered  # no product data in its server HTML
     assert "worka-chelbessa" in {i.handle for i in items}
 
@@ -220,7 +297,7 @@ def test_renderer_for_a_coffee_whose_facts_scripts_build(store):
 
     with _crawl() as c:
         rep = pages.Report()
-        items = {i.handle: i for i in pages.fetch(c, CCC, render=render, report=rep)}
+        items = {i.handle: i for i in pages.fetch(c, CCC, product_js=False, render=render, report=rep)}
     # Coffee pages without spec lines are rendered; ones with spec lines, and non-coffee (the Bambino), are not.
     assert f"https://{HOST}/products/finca-el-puente-honey" not in rendered
     assert f"https://{HOST}/products/the-bambino%E2%84%A2" not in rendered and len(rendered) == 3
@@ -267,9 +344,11 @@ def test_run_writes_the_json_adapters_shape(store, lake):
     assert set(cols) >= {"roaster_id", "product_id", "variants", "payload_hash", "is_coffee"}
     assert all(r["image"] is None for r in rows) and sum(r["is_coffee"] for r in rows) == 6
     fetch = con.execute(f"select status, requests, run_date from {lake.scan('fetches')}").fetchall()
-    assert fetch == [("ok", 10, date(2026, 11, 2))]
-    # Facts only: attributes are stored, the description text never is.
-    assert con.execute(f"select count(*) from {lake.scan('bodies')}").fetchall() == [(0,)]
+    # robots.txt, two sitemaps, and per product a .js (404 here) and then its page.
+    assert fetch == [("ok", 17, date(2026, 11, 2))]
+    # Descriptions go to the private lake's bodies, as the JSON path's do; attributes to enrichments.
+    hashes = {r["body_hash"] for r in rows if r["body_hash"]}
+    assert con.execute(f"select count(*) from {lake.scan('bodies')}").fetchall() == [(len(hashes),)]
     assert con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchall() == [(6,)]
 
 

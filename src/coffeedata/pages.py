@@ -7,8 +7,10 @@ the same product and variant ids, so a coffee keeps its coffee_id whichever path
 Cheapest source first, per store:
 1. robots.txt, then sitemap.xml and its product sitemaps: what exists, with each product's title where the
    sitemap carries one (Shopify's image:title), so merch and gear are skipped without fetching their pages.
-2. Each remaining product page, once: schema.org Product JSON-LD, and the product JSON the platform embeds
-   (Shopify's analytics `meta`, a theme's product JSON, WooCommerce's variation form).
+2. Each remaining product, once. On Shopify, its /products/<handle>.js first: the product's feed entry (tags, type,
+   stock, description), read exactly as the feed is. The first 429 there parks .js for the rest of the store's
+   crawl; then, and on other platforms, the product page: schema.org Product JSON-LD and the product JSON the
+   platform embeds (Shopify's analytics `meta`, a theme's product JSON, WooCommerce's variation form).
 3. Collection pages, only when the sitemap lists no products.
 4. A headless browser, only when asked (`render=True`), for a page that loaded but carried no product data, or a
    coffee whose page showed no fact lines (a spec panel that scripts build).
@@ -17,9 +19,9 @@ Rules: the crawler's own User-Agent with a contact address; robots.txt is honore
 PAGE_INTERVAL apart; nothing is retried after a block. A 401, 403, 429, 430 or 503, or a page that reads as a
 CAPTCHA or bot challenge, stops the store at once (Refused): it is never solved, waited out or worked around.
 
-Facts only: the description (and the page's labelled fact lines) are read in memory, so the same extraction rules
-see the same text the JSON adapters give them; only the extracted attributes are stored, never the description
-text (run() writes no bodies rows) and no images.
+Records are the JSON path's: the description (plus a page's labelled fact lines) goes to the private lake's bodies
+table, so the extraction rules and Claude enrichment see what they see for a feed; public outputs carry facts only,
+as for every source. No images are stored.
 """
 
 from __future__ import annotations
@@ -77,6 +79,11 @@ class Refused(FetchError):
     """The store refused or challenged us. The store's crawl stops here; nothing is retried or bypassed."""
 
 
+class RateLimited(Refused):
+    """A 429. On a product page it stops the store like any refusal; on Shopify's per-product .js it parks that
+    endpoint for the rest of the store's crawl, which carries on with the HTML pages."""
+
+
 def client(interval: float = PAGE_INTERVAL, **kw: object) -> PoliteClient:
     """A PoliteClient for page crawling: its own User-Agent with a contact address, store-level spacing, no retries
     (a block is an answer, not something to wait out)."""
@@ -96,6 +103,8 @@ def _page(c: PoliteClient, url: str) -> httpx.Response | None:
         r = e.response
     except httpx.HTTPError as e:
         raise FetchError(f"{type(e).__name__} {url}") from e
+    if r.status_code == 429:
+        raise RateLimited(f"HTTP 429 {url}")
     if r.status_code in REFUSAL_STATUSES:
         raise Refused(f"HTTP {r.status_code} {url}")
     if r.status_code in (404, 410):
@@ -254,7 +263,12 @@ def _as_products_json(full: dict | None, meta: dict | None, ld: dict, handle: st
     variant's stock from the JSON-LD offer that links to it (?variant=<id>) or shares its SKU."""
     if full:
         variants = [
-            v | {"price": _dollars(v.get("price")) or v.get("price"), "option1": v.get("public_title")}
+            v
+            | {
+                "price": _dollars(v.get("price")) or v.get("price"),
+                "option1": v.get("public_title"),
+                "grams": v.get("grams", v.get("weight")),  # .js calls it weight (grams)
+            }
             for v in full["variants"]
             if isinstance(v, dict)
         ]
@@ -327,12 +341,28 @@ def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
     facts = facts_text(html)
     description = html_to_text(str((full or {}).get("description") or ld.get("description") or ""))
     extra = [f for f in facts.splitlines() if f not in description]
+    return _without_image(
+        item, "\n".join(filter(None, [description, *extra])), {"product": raw, "facts": facts}
+    )
+
+
+def parse_product_js(data: object, url: str, roaster: Roaster) -> CatalogItem | None:
+    """Shopify's /products/<handle>.js: the product's /products.json entry in another shape (tags, type, stock per
+    variant, the description), read by shopify.parse_product as the feed is."""
+    if not isinstance(data, dict) or not data.get("id") or not isinstance(data.get("variants"), list):
+        return None
+    handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1].removesuffix(".js")
+    item = shopify.parse_product(_as_products_json(data, None, {}, handle), roaster)
+    return _without_image(item, html_to_text(str(data.get("description") or "")), data)
+
+
+def _without_image(item: CatalogItem, body_text: str, raw: object) -> CatalogItem:
+    """The record as stored: no photo; the description goes to the private lake's bodies, as the JSON path's does."""
     return CatalogItem(
         **item.model_dump(exclude={"body_hash", "image", "payload_hash"}),
-        image=None,  # no photos
-        # Read in memory for the rules, as the JSON adapters read body_html; run() never stores it (no bodies rows).
-        body_text="\n".join(filter(None, [description, *extra])),
-        payload_hash=payload_hash({"product": raw, "facts": facts}),
+        image=None,
+        body_text=body_text,
+        payload_hash=payload_hash(raw),
     )
 
 
@@ -371,15 +401,22 @@ class Report:
     skipped_not_coffee: int = 0  # skipped on the sitemap title alone
     fetched: int = 0  # product pages requested
     parsed: int = 0  # pages that yielded a product
+    from_js: int = 0  # Shopify products read from their /products/<handle>.js
+    js_parked: bool = False  # .js answered 429 once: the rest of the store's products came from their pages
     rendered: int = 0  # pages sent to the browser
     facts_from_render: int = 0  # of those, coffees whose fact lines only the rendered page had
 
 
 def fetch(
-    c: PoliteClient, roaster: Roaster, render: Renderer | None = None, report: Report | None = None
+    c: PoliteClient,
+    roaster: Roaster,
+    render: Renderer | None = None,
+    report: Report | None = None,
+    product_js: bool = True,
 ) -> list[CatalogItem]:
-    """The store's catalog from its product pages. Raises Refused on any block (stop the store), FetchError when any
-    page couldn't be read (a partial catalog would make the missing products look delisted)."""
+    """The store's catalog from its products' .js (Shopify, product_js) or pages. Raises Refused on any block (stop
+    the store), FetchError when any page couldn't be read (a partial catalog would make the missing products look
+    delisted)."""
     rep = report if report is not None else Report()
     entries = sitemap_entries(c, roaster.host)
     rep.source = "sitemap"
@@ -395,7 +432,22 @@ def fetch(
         raise FetchError(f"{roaster.host}: {len(todo)} product pages, more than MAX_PAGES={MAX_PAGES}")
     items: dict[str, CatalogItem] = {}
     failed = 0
+    use_js = product_js and roaster.adapter == "shopify"
     for e in todo:
+        if use_js and "/products/" in e.url:
+            try:
+                js = _page(c, e.url.rstrip("/") + ".js")
+            except RateLimited:  # don't push harder: no more .js for this store this run
+                use_js, rep.js_parked = False, True
+            except Refused:
+                raise
+            except FetchError:
+                js = None
+            else:  # a 404 or anything unreadable falls through to the page, which says whether it's gone
+                if js is not None and (item := parse_product_js(_loads(js.text), e.url, roaster)):
+                    rep.from_js += 1
+                    items.setdefault(item.product_id, item)
+                    continue
         rep.fetched += 1
         try:
             r = _page(c, e.url)
@@ -533,8 +585,6 @@ def run(
     }
     batch = new_batch_id()
     for table, rows in ingest.rows_for([r for *_, r in out], rd, batch, known, enriched).items():
-        if table == "bodies":
-            continue  # facts only: the extracted attributes (enrichments) are kept, the description text never
         lake.write_partition(table, run_date, batch, rows)
     summary = {
         "run_date": run_date,
