@@ -315,6 +315,26 @@ def _as_products_json(full: dict | None, meta: dict | None, ld: dict, handle: st
     }
 
 
+_OG_TITLE = re.compile(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)', re.I)
+_TITLE = re.compile(r"<title[^>]*>([^<]+)</title>", re.I)
+
+
+_SEPARATOR = re.compile(r"\s+[–—|-]\s+")
+
+
+def page_title(html: str, store_name: str = "") -> str:
+    """The product's title from the page head (og:title, else <title>), without a trailing " – <store>" segment
+    that names the store ("Worka Chelbessa – Counter Culture Coffee" for Counter Culture)."""
+    m = _OG_TITLE.search(html) or _TITLE.search(html)
+    if not m:
+        return ""
+    title = html_to_text(m.group(1)).strip()
+    seps = list(_SEPARATOR.finditer(title))
+    if seps and store_name and store_name.lower() in title[seps[-1].end() :].lower():
+        return title[: seps[-1].start()].strip()
+    return title
+
+
 def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
     """One product page as a CatalogItem, or None if it carries no product data. Shopify pages go through
     shopify.parse_product and everything else through generic.parse_jsonld, the parsers the JSON and sitemap
@@ -325,6 +345,8 @@ def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
     if not (full or meta or ld):
         return None
     handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
+    if not ld.get("name") and (name := page_title(html, roaster.name)):
+        ld = ld | {"name": name}  # a theme without JSON-LD: the page's own title, never the URL handle
     if full or meta:
         raw: dict = _as_products_json(full, meta, ld, handle)
         item = shopify.parse_product(raw, roaster)

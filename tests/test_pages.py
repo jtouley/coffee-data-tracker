@@ -1,5 +1,6 @@
 """The secondary crawler (pages.py), offline against saved page fixtures (tests/fixtures/pages/README.md)."""
 
+import re
 from datetime import UTC, date, datetime
 from urllib.parse import unquote, urlparse
 
@@ -303,6 +304,20 @@ def test_renderer_for_a_coffee_whose_facts_scripts_build(store):
     assert f"https://{HOST}/products/the-bambino%E2%84%A2" not in rendered and len(rendered) == 3
     assert items["laba-gesha-natural-sundried"].body_text.endswith("\nProcess: Natural")
     assert rep.facts_from_render == 3
+
+
+def test_page_without_jsonld_takes_its_title_from_the_head_not_the_url():
+    """Seen live (atlascoffeeclub.com): a product page with Shopify's meta but no JSON-LD name."""
+    page = (PAGES / "ccc_worka-chelbessa.html").read_text()
+    page = re.sub(r'<script type="application/(ld\+)?json".*?</script>', "", page, flags=re.S)
+    item = pages.parse_page(page, f"https://{HOST}/products/worka-chelbessa", CCC)
+    assert item.title == "Worka Chelbessa"
+    head = "<title>KENYA RIOKI AB – Counter Culture</title>"
+    assert pages.page_title(head, "Counter Culture") == "KENYA RIOKI AB"
+    assert (
+        pages.page_title("<title>Finca La Hermosa - Pacamara</title>", "Counter Culture")
+        == "Finca La Hermosa - Pacamara"
+    )
 
 
 def test_woocommerce_pages():
