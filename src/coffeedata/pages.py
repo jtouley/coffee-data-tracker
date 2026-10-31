@@ -1,0 +1,577 @@
+"""Secondary crawler for stores that refuse the JSON catalog: the sitemap first, then product pages.
+
+Used for stores whose /products.json (or Store API) answers a block to every request (`refused` in the fetches
+table), and for stores with no JSON feed. It yields the same CatalogItem records the JSON adapters do: for Shopify
+the same product and variant ids, so a coffee keeps its coffee_id whichever path read it.
+
+Cheapest source first, per store:
+1. robots.txt, then sitemap.xml and its product sitemaps: what exists, with each product's title where the
+   sitemap carries one (Shopify's image:title), so merch and gear are skipped without fetching their pages.
+2. Each remaining product page, once: schema.org Product JSON-LD, and the product JSON the platform embeds
+   (Shopify's analytics `meta`, a theme's product JSON, WooCommerce's variation form).
+3. Collection pages, only when the sitemap lists no products.
+4. A headless browser, only when asked (`render=True`) and only for a page that loaded but carried no product data.
+
+Rules: the crawler's own User-Agent with a contact address; robots.txt is honored; requests to a store are spaced
+PAGE_INTERVAL apart; nothing is retried after a block. A 401, 403, 429, 430 or 503, or a page that reads as a
+CAPTCHA or bot challenge, stops the store at once (Refused): it is never solved, waited out or worked around.
+
+Facts only: the stored body text is the product's labelled fact lines (origin, process, variety, roast, notes,
+elevation, producer), never its description; no images.
+"""
+
+from __future__ import annotations
+
+import json
+import logging
+import os
+import re
+import time
+from collections.abc import Callable
+from dataclasses import dataclass
+from datetime import UTC, date, datetime
+from html import unescape
+from urllib.parse import parse_qs, urljoin, urlparse
+
+import httpx
+
+from . import ingest
+from .adapters.generic import _PRODUCTISH, jsonld_products
+from .classify import excluded
+from .http import USER_AGENT, Blocked, FetchError, PoliteClient
+from .lake import Lake, new_batch_id
+from .models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from .text import html_to_text, scrub_surrogates, to_float
+
+log = logging.getLogger(__name__)
+
+CONTACT = os.environ.get("SUPPORT_EMAIL", "support@registry.coffee")
+PAGES_USER_AGENT = f"{USER_AGENT.rstrip(')')}; {CONTACT})"
+PAGE_INTERVAL = 3.0  # seconds between requests to one store: product pages are heavier than a JSON page
+MAX_PAGES = (
+    150  # product pages per store per run; more candidates than this fails the store (no silent truncation)
+)
+MAX_SITEMAPS = 5
+COLLECTION_PATHS = ("/collections/all", "/shop/")
+COLLECTION_PAGES = 5
+
+REFUSAL_STATUSES = (401, 403, 429, 430, 503)
+# Markers of a bot challenge, CAPTCHA or block page served with a 200. Matched on the raw HTML.
+_CHALLENGE = re.compile(
+    r"/cdn-cgi/challenge-platform|cf-chl|cf-browser-verification|<title>\s*(just a moment|attention required|"
+    r"access denied|are you a robot)|captcha-delivery\.com|px-captcha|perimeterx|_incapsula_resource|"
+    r"hcaptcha\.com/1/api|verify you are (a )?human",
+    re.I,
+)
+# A page with any of these carries product data, so it isn't a block page (whatever its newsletter form loads).
+_PRODUCT_MARKUP = re.compile(
+    r"application/ld\+json|var meta\s*=|data-product-json|data-product_variations", re.I
+)
+
+
+class Refused(FetchError):
+    """The store refused or challenged us. The store's crawl stops here; nothing is retried or bypassed."""
+
+
+def client(interval: float = PAGE_INTERVAL, **kw: object) -> PoliteClient:
+    """A PoliteClient for page crawling: its own User-Agent with a contact address, store-level spacing, no retries
+    (a block is an answer, not something to wait out)."""
+    return PoliteClient(min_interval=interval, retries=1, user_agent=PAGES_USER_AGENT, **kw)  # type: ignore[arg-type]
+
+
+# --- 1. sitemap ------------------------------------------------------------------------------------------------
+
+_URL = re.compile(r"<url>(.*?)</url>", re.S | re.I)
+_SITEMAP = re.compile(r"<sitemap>(.*?)</sitemap>", re.S | re.I)
+_LOC = re.compile(r"<loc>\s*(?:<!\[CDATA\[)?\s*([^<\s\]]+)", re.I)
+_LASTMOD = re.compile(r"<lastmod>\s*([^<\s]+)", re.I)
+_IMAGE_TITLE = re.compile(r"<image:title>\s*(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?\s*</image:title>", re.S | re.I)
+
+
+@dataclass
+class Entry:
+    url: str
+    lastmod: str = ""
+    title: str = ""  # from the sitemap (Shopify's image:title), when it has one
+
+
+def _page(c: PoliteClient, url: str) -> httpx.Response | None:
+    """A 200 response; None for 404/410 (gone); Refused on a block or challenge; FetchError otherwise."""
+    try:
+        r = c.get(url)
+    except Blocked:
+        raise
+    except httpx.HTTPStatusError as e:  # PoliteClient raises for retry statuses (429, 430, 5xx)
+        r = e.response
+    except httpx.HTTPError as e:
+        raise FetchError(f"{type(e).__name__} {url}") from e
+    if r.status_code in REFUSAL_STATUSES:
+        raise Refused(f"HTTP {r.status_code} {url}")
+    if r.status_code in (404, 410):
+        return None
+    if r.status_code != 200:
+        raise FetchError(f"HTTP {r.status_code} {url}")
+    if is_challenge(r.text):
+        raise Refused(f"challenge page {url}")
+    return r
+
+
+def is_challenge(html: str) -> bool:
+    """A block page, bot challenge or CAPTCHA served in place of the page: a challenge marker and no product data."""
+    return bool(_CHALLENGE.search(html)) and not _PRODUCT_MARKUP.search(html)
+
+
+def sitemap_entries(c: PoliteClient, host: str) -> list[Entry]:
+    """Product-looking URLs from sitemap.xml, following its product sitemaps. [] if the site has none."""
+    r = _page(c, f"https://{host}/sitemap.xml")
+    if r is None:
+        return []
+    text = r.text
+    if "<sitemapindex" in text:
+        subs = [m for b in _SITEMAP.findall(text) if (m := _LOC.search(b))]
+        product_maps = [unescape(m.group(1)) for m in subs if "product" in m.group(1).lower()][:MAX_SITEMAPS]
+        text = ""
+        for sm in product_maps:
+            if (sub := _page(c, sm)) is not None:
+                text += sub.text
+    out: dict[str, Entry] = {}
+    for block in _URL.findall(text):
+        if not (loc := _LOC.search(block)) or not _PRODUCTISH.search(urlparse(loc.group(1)).path):
+            continue
+        lastmod, title = _LASTMOD.search(block), _IMAGE_TITLE.search(block)
+        url = unescape(loc.group(1))
+        out.setdefault(
+            url,
+            Entry(url, lastmod.group(1) if lastmod else "", html_to_text(title.group(1)) if title else ""),
+        )
+    return list(out.values())
+
+
+_HREF = re.compile(r'href="([^"#?]+)"', re.I)
+
+
+def collection_entries(c: PoliteClient, host: str) -> list[Entry]:
+    """Fallback when the sitemap lists no products: product links from the store's all-products listing."""
+    for path in COLLECTION_PATHS:
+        found: dict[str, Entry] = {}
+        for n in range(1, COLLECTION_PAGES + 1):
+            url = f"https://{host}{path}"
+            if n > 1:
+                url += f"?page={n}" if path.startswith("/collections") else f"page/{n}/"
+            try:
+                r = _page(c, url)
+            except Blocked:
+                break
+            if r is None:
+                break
+            new = {
+                u: Entry(u)
+                for h in _HREF.findall(r.text)
+                if urlparse(u := urljoin(url, h)).netloc == host and _PRODUCTISH.search(urlparse(u).path)
+            }
+            if not new.keys() - found.keys():
+                break
+            found |= new
+        if found:
+            return list(found.values())
+    return []
+
+
+def candidates(entries: list[Entry]) -> list[Entry]:
+    """The entries worth a page fetch: everything except products whose sitemap title already says they aren't
+    coffee (gear, merch, subscriptions...). Untitled entries are always kept."""
+    keep = []
+    for e in entries:
+        stub = CatalogItem(roaster_id="", product_id="", handle="", url=e.url, title=e.title, platform="")
+        if e.title and excluded(stub):
+            continue
+        keep.append(e)
+    return keep
+
+
+# --- 2. product pages ------------------------------------------------------------------------------------------
+
+_JSON_SCRIPT = re.compile(r'<script[^>]+type=["\']application/json["\'][^>]*>(.*?)</script>', re.S | re.I)
+_SHOPIFY_META = re.compile(r"var meta\s*=\s*(\{.*?\});\s*(?:\n|for|window|var|$)", re.S)
+_WOO_VARIATIONS = re.compile(r'data-product_variations="([^"]*)"')
+_WOO_ID = re.compile(r"\bpostid-(\d+)\b|[?&]p=(\d+)['\"]")
+_FACT_LABEL = (
+    r"origin|country|region|process(?:ing)?|method|variet(?:y|ies|als?)|cultivars?|roast(?: level| profile)?|"
+    r"(?:tasting |flavou?r |cup(?:ping)? )?notes|cup|we taste|tastes? like|elevation|altitude|producers?|farm|"
+    r"washing station|harvest"
+)
+_FACT_LINE = re.compile(rf"^\s*({_FACT_LABEL})\s*[:\-–]\s*(\S.{{0,150}})$", re.I)
+_FACT_HEADING = re.compile(rf"^\s*({_FACT_LABEL})\s*:?\s*$", re.I)
+_ROAST_INLINE = re.compile(
+    r"^\s*roast(?: level| profile)?\s+(light|medium|dark)\w*\s*$", re.I
+)  # "Roast Profile Light"
+# Labels whose value extract.rules reads under another name: Onyx's "Cup" and similar are tasting notes.
+_CANONICAL = {
+    "cup": "Tasting Notes",
+    "we taste": "Tasting Notes",
+    "roast profile": "Roast",
+    "roast level": "Roast",
+}
+_BLOCK = re.compile(r"<\s*/?(?:dt|dd|tr|td|th|li|p|div|h\d|br|dl|ul|ol|table|section)\b[^>]*>", re.I)
+
+
+def _fact(label: str, value: str) -> str:
+    label = label.strip()
+    return f"{_CANONICAL.get(label.lower(), label)}: {value.strip()}"
+
+
+def _loads(s: str) -> object:
+    try:
+        return scrub_surrogates(json.loads(s))
+    except ValueError:
+        return None
+
+
+def _product_json(html: str) -> dict | None:
+    """A full product object a theme embeds (Shopify's /products/<handle>.js shape: id, handle, variants with
+    `available`, tags, type, vendor), if the page has one."""
+    for block in _JSON_SCRIPT.findall(html):
+        d = _loads(block.strip())
+        for p in (d, d.get("product") if isinstance(d, dict) else None):
+            if (
+                isinstance(p, dict)
+                and p.get("id")
+                and p.get("handle")
+                and isinstance(p.get("variants"), list)
+            ):
+                return p
+    return None
+
+
+def _shopify_meta(html: str) -> dict | None:
+    """Shopify's analytics object, on every Shopify storefront page: product id, type, vendor and each variant's id,
+    price (in cents), title and SKU. It has no stock."""
+    if m := _SHOPIFY_META.search(html):
+        d = _loads(m.group(1))
+        p = d.get("product") if isinstance(d, dict) else None
+        if isinstance(p, dict) and p.get("id"):
+            return p
+    return None
+
+
+def _grams(v: object) -> int | None:
+    return v if isinstance(v, int) and 30 <= v <= 25_000 else None
+
+
+def _cents(v: object) -> float | None:
+    return v / 100 if isinstance(v, int) and not isinstance(v, bool) else to_float(v)
+
+
+def facts_text(html: str) -> str:
+    """Only the labelled fact lines of a page ("Origin: Huila, Colombia", "Process" then "Washed"): what extract.rules
+    reads. The description itself is never kept."""
+    page = re.sub(r"<(script|style|noscript|svg)\b.*?</\1>", " ", html, flags=re.S | re.I)
+    page = _BLOCK.sub("\n", page)  # spec tables and lists: one cell per line
+    lines_ = html_to_text(page).splitlines()
+    out: list[str] = []
+    for i, line in enumerate(lines_):
+        if m := _FACT_LINE.match(line):
+            out.append(_fact(m.group(1), m.group(2)))
+        elif (m := _FACT_HEADING.match(line)) and i + 1 < len(lines_) and len(lines_[i + 1]) <= 120:
+            out.append(_fact(m.group(1), lines_[i + 1]))
+        elif m := _ROAST_INLINE.match(line):
+            out.append(_fact("Roast", m.group(1)))
+    return "\n".join(dict.fromkeys(out))  # each fact once, in page order
+
+
+def _offers(ld: dict) -> list[dict]:
+    offers = ld.get("offers") or []
+    if isinstance(offers, dict):
+        offers = offers.get("offers") or [offers]
+    return [o for o in offers if isinstance(o, dict)]
+
+
+def _offer_available(o: dict) -> bool | None:
+    a = str(o.get("availability") or "")
+    return ("InStock" in a or "PreOrder" in a or "LimitedAvailability" in a) if a else None
+
+
+def _offer_variant_id(o: dict) -> str:
+    q = parse_qs(urlparse(str(o.get("url") or "")).query)
+    return q.get("variant", [""])[0]
+
+
+def parse_page(html: str, url: str, roaster: Roaster) -> CatalogItem | None:
+    """One product page as a CatalogItem, or None if it carries no product data."""
+    full, meta = _product_json(html), _shopify_meta(html)
+    lds = jsonld_products(html)
+    ld = lds[0] if lds else {}
+    if not (full or meta or ld):
+        return None
+    facts = facts_text(html)
+    handle = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
+    offers = _offers(ld)
+    by_vid = {v: o for o in offers if (v := _offer_variant_id(o))}
+    by_sku = {str(o["sku"]): o for o in offers if o.get("sku")}
+
+    def from_offer(vid: str, sku: object) -> dict:
+        return by_vid.get(vid) or by_sku.get(str(sku or "")) or (offers[0] if len(offers) == 1 else {})
+
+    variants: list[Variant] = []
+    tags: list[str] = []
+    platform, product_type, vendor = roaster.adapter, "", ""
+    if full:  # the richest source: same fields as the JSON feed, prices in cents
+        pid = str(full["id"])
+        title = str(full.get("title") or ld.get("name") or handle)
+        tags = full.get("tags") or []
+        tags = sorted(str(t) for t in (tags.split(",") if isinstance(tags, str) else tags) if str(t).strip())
+        product_type, vendor = str(full.get("type") or ""), str(full.get("vendor") or "")
+        for v in full["variants"]:
+            label = str(v.get("title") or v.get("public_title") or "")
+            variants.append(
+                Variant(
+                    variant_id=str(v["id"]),
+                    title=label,
+                    price_usd=_cents(v.get("price")),
+                    grams=parse_grams(label) or _grams(v.get("grams")),
+                    available=v.get("available"),
+                )
+            )
+        platform = "shopify"
+    elif meta:  # Shopify without a theme product JSON: ids and prices from meta, stock from JSON-LD offers
+        pid = str(meta["id"])
+        title = str(ld.get("name") or handle)
+        product_type, vendor = str(meta.get("type") or ""), str(meta.get("vendor") or "")
+        for v in meta.get("variants") or []:
+            vid = str(v.get("id"))
+            label = str(v.get("public_title") or "Default Title")
+            variants.append(
+                Variant(
+                    variant_id=vid,
+                    title=label,
+                    price_usd=_cents(v.get("price")),
+                    grams=parse_grams(label) or parse_grams(title),
+                    available=_offer_available(from_offer(vid, v.get("sku"))),
+                )
+            )
+        platform = "shopify"
+    else:  # JSON-LD only (WooCommerce and others)
+        woo = _WOO_ID.search(html)
+        pid = str((woo and (woo.group(1) or woo.group(2))) or ld.get("productID") or ld.get("sku") or handle)
+        title = str(ld.get("name") or handle)
+        variants = _woo_variations(html) or [
+            Variant(
+                variant_id=str(o.get("sku") or pid) + (f"#{i}" if i else ""),
+                title=str(o.get("name") or ""),
+                price_usd=to_float(o.get("price") or o.get("lowPrice")),
+                grams=parse_grams(str(o.get("name") or "")) or parse_grams(title),
+                available=_offer_available(o),
+            )
+            for i, o in enumerate(offers)
+        ]
+    return CatalogItem(
+        roaster_id=roaster.roaster_id,
+        product_id=pid,
+        handle=str((full or {}).get("handle") or handle),
+        url=url,
+        title=html_to_text(title),
+        platform=platform,
+        vendor=vendor,
+        product_type=product_type,
+        tags=tags,
+        image=None,  # no photos
+        variants=variants,
+        body_text=facts,  # labelled facts only, never the description
+        payload_hash=payload_hash({"ld": ld.get("offers"), "product": full or meta, "facts": facts}),
+    )
+
+
+def _woo_variations(page: str) -> list[Variant]:
+    """WooCommerce's variation form: each variation's id (the Store API's variation id), price, stock and size."""
+    m = _WOO_VARIATIONS.search(page)
+    data = _loads(unescape(m.group(1))) if m else None  # the attribute is HTML-escaped JSON
+    out = []
+    for v in data if isinstance(data, list) else []:
+        if not isinstance(v, dict) or not v.get("variation_id"):
+            continue
+        label = " ".join(str(a) for a in (v.get("attributes") or {}).values() if a)
+        out.append(
+            Variant(
+                variant_id=str(v["variation_id"]),
+                title=label,
+                price_usd=to_float(v.get("display_price")),
+                grams=parse_grams(label),
+                available=v.get("is_in_stock"),
+            )
+        )
+    return out
+
+
+# --- 3. the store ----------------------------------------------------------------------------------------------
+
+Renderer = Callable[[str], str]
+
+
+@dataclass
+class Report:
+    """What one store's page crawl did, for the POC's live table."""
+
+    source: str = ""  # sitemap, collections or none
+    listed: int = 0  # product URLs found
+    skipped_not_coffee: int = 0  # skipped on the sitemap title alone
+    fetched: int = 0  # product pages requested
+    parsed: int = 0  # pages that yielded a product
+    rendered: int = 0  # pages that needed the browser
+
+
+def fetch(
+    c: PoliteClient, roaster: Roaster, render: Renderer | None = None, report: Report | None = None
+) -> list[CatalogItem]:
+    """The store's catalog from its product pages. Raises Refused on any block (stop the store), FetchError when any
+    page couldn't be read (a partial catalog would make the missing products look delisted)."""
+    rep = report if report is not None else Report()
+    entries = sitemap_entries(c, roaster.host)
+    rep.source = "sitemap"
+    if not entries:
+        entries, rep.source = collection_entries(c, roaster.host), "collections"
+    if not entries:
+        rep.source = "none"
+        raise FetchError(f"{roaster.host}: no product URLs in the sitemap or collection pages")
+    rep.listed = len(entries)
+    todo = candidates(entries)
+    rep.skipped_not_coffee = len(entries) - len(todo)
+    if len(todo) > MAX_PAGES:
+        raise FetchError(f"{roaster.host}: {len(todo)} product pages, more than MAX_PAGES={MAX_PAGES}")
+    items: dict[str, CatalogItem] = {}
+    failed = 0
+    for e in todo:
+        rep.fetched += 1
+        try:
+            r = _page(c, e.url)
+        except Refused:
+            raise
+        except FetchError:  # a robots block on one product or a network error: this page only
+            failed += 1
+            continue
+        if r is None:
+            continue  # listed but gone: delisted, not unreadable
+        item = parse_page(r.text, e.url, roaster)
+        if item is None and render is not None:
+            rep.rendered += 1
+            html = render(e.url)
+            if is_challenge(html):
+                raise Refused(f"challenge page (rendered) {e.url}")
+            item = parse_page(html, e.url, roaster)
+        if item is None:
+            failed += 1
+            continue
+        rep.parsed += 1
+        items.setdefault(item.product_id, item)
+    if failed:
+        raise FetchError(f"{failed} of {len(todo)} product pages unreadable")
+    return list(items.values())
+
+
+def browser_renderer(c: PoliteClient) -> Renderer:
+    """A Playwright renderer for pages whose product data only appears after scripts run. Same User-Agent (no
+    disguise), robots.txt checked through the client first, images, media and fonts not loaded. Lazily started."""
+    state: dict = {}
+
+    def render(url: str) -> str:
+        if not c._allowed(url):
+            raise Blocked(url)
+        if "page" not in state:
+            from playwright.sync_api import sync_playwright  # type: ignore[import-not-found]
+
+            state["pw"] = sync_playwright().start()
+            state["browser"] = state["pw"].chromium.launch()
+            ctx = state["browser"].new_context(user_agent=c.user_agent)
+            ctx.route(
+                "**/*",
+                lambda route: (
+                    route.abort()
+                    if route.request.resource_type in ("image", "media", "font")
+                    else route.continue_()
+                ),
+            )
+            state["page"] = ctx.new_page()
+        c._wait_turn(urlparse(url).netloc)
+        resp = state["page"].goto(url, wait_until="networkidle", timeout=30_000)
+        if resp is not None and resp.status in REFUSAL_STATUSES:
+            raise Refused(f"HTTP {resp.status} {url} (rendered)")
+        return str(state["page"].content())
+
+    def close() -> None:
+        if "browser" in state:
+            state["browser"].close()
+            state["pw"].stop()
+
+    render.close = close  # type: ignore[attr-defined]
+    return render
+
+
+# --- 4. a run over the lake ------------------------------------------------------------------------------------
+
+
+def refused(lake: Lake, run_date: str) -> list[Roaster]:
+    """Roasters this run's JSON crawl couldn't read because the store refused it, and that have no ok fetch in the
+    run: an error recorded as `refused: ...` (ingest's deferred rounds), or one where every response was a block
+    (429/430/403) and no page came back. Stores with no JSON feed already go through the generic adapter."""
+    from . import registry
+
+    con = lake.connect()
+    rows = con.execute(
+        f"""
+        select roaster_id from {lake.scan("fetches")} where run_date = ?
+        group by roaster_id
+        having count(*) filter (where status = 'ok') = 0
+           and bool_or(error like 'refused:%' or (pages = 0 and rate_limited > 0)
+                       or error like '%HTTP 403%' or error like '%HTTP 430%')
+        """,
+        [date.fromisoformat(run_date)],
+    ).fetchall()
+    want = {r[0] for r in rows}
+    return [s.roaster for s in registry.current(lake) if s.roaster.roaster_id in want]
+
+
+def run(
+    lake: Lake, roasters: list[Roaster], run_date: str, render: bool = False, interval: float = PAGE_INTERVAL
+) -> tuple[dict, list[tuple[Roaster, Report, ingest.Result]]]:
+    """Crawl `roasters` one after another (each store's own spacing; never two stores' pages at once) and append
+    their records to the lake in the JSON adapters' shape: snapshots, fetches, enrichments. The fetches row is a
+    second attempt for the run, so a store reads ok if either path succeeded. Bodies are the facts lines only."""
+    rd = date.fromisoformat(run_date)
+    out: list[tuple[Roaster, Report, ingest.Result]] = []
+    with client(interval) as c:
+        renderer = browser_renderer(c) if render else None
+        try:
+            for roaster in roasters:
+                res = ingest.Result(roaster, datetime.now(UTC).replace(microsecond=0))
+                rep = Report()
+                start = time.monotonic()
+                with c.track() as res.stats:
+                    try:
+                        res.items = fetch(c, roaster, renderer, rep)
+                    except Exception as e:  # noqa: BLE001 - this store's error, never the run's
+                        res.error = f"pages: {type(e).__name__}: {e}"[:300]
+                res.duration_s = round(time.monotonic() - start, 3)
+                log.info("%-32s %s", roaster.roaster_id, res.error or f"{len(res.items)} products")
+                out.append((roaster, rep, res))
+        finally:
+            if renderer is not None:
+                renderer.close()  # type: ignore[attr-defined]
+    con = lake.connect()
+    known = {r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()}
+    enriched = {
+        tuple(r)
+        for r in con.execute(
+            f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
+        ).fetchall()
+    }
+    batch = new_batch_id()
+    for table, rows in ingest.rows_for([r for *_, r in out], rd, batch, known, enriched).items():
+        lake.write_partition(table, run_date, batch, rows)
+    summary = {
+        "run_date": run_date,
+        "batch_id": batch,
+        "stores": len(out),
+        "ok": sum(not r.error for *_, r in out),
+        "products": sum(len(r.items) for *_, r in out),
+        "requests": sum(r.stats.requests for *_, r in out),
+    }
+    return summary, out

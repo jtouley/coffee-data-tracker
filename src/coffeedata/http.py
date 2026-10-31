@@ -83,14 +83,16 @@ class PoliteClient:
         retries: int = 3,
         transport: httpx.BaseTransport | None = None,
         limiters: dict[str, PlatformLimiter] | None = None,
+        user_agent: str = USER_AGENT,
     ):
+        self.user_agent = user_agent
         self.min_interval = min_interval
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
         self.limiters = limiters or {}
         self._limiter: PlatformLimiter | None = None
         self.retries = retries
         self._client = httpx.Client(
-            headers={"User-Agent": USER_AGENT, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
+            headers={"User-Agent": user_agent, "Accept": "application/json, text/html;q=0.9, */*;q=0.5"},
             timeout=httpx.Timeout(timeout, pool=120.0),
             follow_redirects=False,
             transport=transport,
@@ -168,7 +170,7 @@ class PoliteClient:
                         # Known from now on: no robots.txt request left to share.
                         self._robots_locks.pop(host, None)
         rp = self._robots[host]
-        return rp is None or rp.can_fetch(USER_AGENT, url)
+        return rp is None or rp.can_fetch(self.user_agent, url)
 
     def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
         """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an

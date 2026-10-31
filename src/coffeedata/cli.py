@@ -117,6 +117,30 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_pages(args: argparse.Namespace) -> None:
+    from . import pages, registry
+
+    lake = Lake()
+    if args.only:
+        known = {s.roaster.roaster_id: s.roaster for s in registry.current(lake)}
+        todo = [known[r] for r in args.only]
+    else:
+        todo = pages.refused(lake, args.run_date)
+    print(f"reading product pages of {len(todo)} roasters for run {args.run_date}", file=sys.stderr)
+    summary, out = pages.run(lake, todo, args.run_date, render=args.render)
+    summary["stores"] = [
+        {
+            "roaster_id": r.roaster_id,
+            "error": res.error,
+            "products": len(res.items),
+            "requests": res.stats.requests,
+        }
+        | vars(rep)
+        for r, rep, res in out
+    ]
+    _print(summary)
+
+
 def cmd_enrich(args: argparse.Namespace) -> None:
     from . import enrich, extract
 
@@ -547,6 +571,15 @@ def main(argv: list[str] | None = None) -> None:
         default=SHOPIFY_RPS,
         help="requests/s across all Shopify stores together (default %(default)s; halves itself on 429s)",
     )
+
+    pg = add(
+        "pages",
+        cmd_pages,
+        "read product pages of stores that refused their JSON catalog this run (secondary crawl)",
+    )
+    pg.add_argument("--run-date", type=_run_date, default=_today())
+    pg.add_argument("--only", nargs="+", help="these roaster_ids instead of this run's refusers")
+    pg.add_argument("--render", action="store_true", help="a headless browser for pages with no product data")
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
     c.add_argument("--limit", type=int, default=100_000)
