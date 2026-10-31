@@ -2,13 +2,64 @@
 
 from __future__ import annotations
 
+import logging
+import time
 from datetime import UTC, datetime
 
-from ..http import FetchError, PoliteClient
+import httpx
+
+from ..http import BLOCK_STATUSES, FetchError, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..ratelimit import HostRateLimited, RateLimited, retry_after_seconds
 from ..text import html_to_text, to_float
 
+log = logging.getLogger(__name__)
+
 MAX_PAGES = 20
+PAGE_LIMIT = 250  # the most /products.json returns per page
+# A store that serves page 1 and then answers 429 (Retry-After 60) for the next page: wait it out and ask for that
+# page again, keeping the pages already fetched. Restarting from page 1 hits the same wall every time (A's real crawl,
+# 2026-10-31: 11 large stores failed that way). At most this many waits per page, each at most MAX_PAGE_WAIT s.
+PAGE_WAITS = 3
+MAX_PAGE_WAIT = 120.0
+BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
+
+
+def _block_wait(e: FetchError) -> float | None:
+    """Seconds to wait before asking for the same page again, or None if this failure isn't a store's pause."""
+    if isinstance(e, HostRateLimited):
+        return min(MAX_PAGE_WAIT, max(1.0, e.wait))
+    if isinstance(e, RateLimited):  # the platform as a whole gave up: don't hold a worker
+        return None
+    c: BaseException | None = e
+    while c is not None:  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
+        if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
+            wait = retry_after_seconds(c.response.headers.get("retry-after"))
+            return min(MAX_PAGE_WAIT, BLOCK_DEFAULT_WAIT if wait is None else max(1.0, wait))
+        c = c.__cause__
+    if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")):
+        return BLOCK_DEFAULT_WAIT
+    return None
+
+
+def _page(client: PoliteClient, roaster: Roaster, page: int) -> object:
+    for attempt in range(PAGE_WAITS + 1):
+        try:
+            return client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
+        except FetchError as e:
+            # Page 1 fails as before: a store that never serves a page is parked or refused by ingest.run.
+            wait = _block_wait(e) if page > 1 else None
+            if wait is None or attempt == PAGE_WAITS:
+                raise
+            log.info(
+                "%s: blocked on page %d (%s); waiting %.0fs, then that page again",
+                roaster.host,
+                page,
+                e,
+                wait,
+            )
+            time.sleep(wait)
+    raise AssertionError("unreachable")
 
 
 def _published_at(value: object) -> datetime | None:
@@ -63,7 +114,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
     for page in range(1, MAX_PAGES + 1):
-        data = client.fetch_json(f"https://{roaster.host}/products.json", limit=250, page=page)
+        data = _page(client, roaster, page)
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
         # A full page can hold fewer than 250 products (Shopify drops some after paging; onyxcoffeelab.com's pages

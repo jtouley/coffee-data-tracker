@@ -12,23 +12,49 @@ import hashlib
 import logging
 import time
 from collections import Counter
-from collections.abc import Sequence
+from collections.abc import Iterator, Sequence
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
 
+import httpx
+
 from . import extract, lineage, registry
 from .adapters import fetch_catalog
 from .classify import is_coffee
-from .http import PoliteClient, RequestStats
+from .http import BLOCK_STATUSES, PoliteClient, RequestStats
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
 
 log = logging.getLogger(__name__)
 
 INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
 CHUNK = 200  # roasters per written and published batch: a crash loses at most one chunk
+DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters are retried this many times
+# A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
+# don't all wake and ask at the same instant.
+DEFERRED_SPREAD = 60.0
+
+
+def _causes(e: BaseException | None) -> Iterator[BaseException]:
+    while e is not None:
+        yield e
+        e = e.__cause__
+
+
+def blocked(e: BaseException) -> bool:
+    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal."""
+    return any(
+        isinstance(c, RateLimited)
+        or (isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES)
+        for c in _causes(e)
+    )
+
+
+def deferrable(e: BaseException) -> bool:
+    """A failure worth another try once the rest of the run is done: rate limiting or a timeout."""
+    return blocked(e) or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
 
 
 @dataclass
@@ -39,6 +65,8 @@ class Result:
     error: str | None = None
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
+    deferrable: bool = False
+    blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
 
     @property
     def coffees(self) -> list[CatalogItem]:
@@ -56,8 +84,17 @@ def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
         except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
             res.error = f"{type(e).__name__}: {e}"[:300]
             res.items = []
+            res.deferrable = deferrable(e)
+            res.blocked = blocked(e)
     res.duration_s = round(time.monotonic() - start, 3)
     return res
+
+
+def _staggered(client: PoliteClient, roaster: Roaster, start_at: float) -> Result:
+    """ingest_one, not before start_at (time.monotonic)."""
+    if (wait := start_at - time.monotonic()) > 0:
+        time.sleep(wait)
+    return ingest_one(client, roaster)
 
 
 def sample_key(roaster_id: str) -> str:
@@ -211,6 +248,8 @@ def run(
     workers: int = 32,
     mode: str | None = None,
     shopify_rps: float = SHOPIFY_RPS,
+    per_host: bool = True,
+    client_kw: dict | None = None,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
@@ -267,21 +306,68 @@ def run(
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget.
-    shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
-    with PoliteClient(limiters={"shopify": shopify}) as client, ThreadPoolExecutor(workers) as ex:
-        done: list[Result] = []
-        for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
-            done.append(fut.result())
-            if len(done) == CHUNK:
+    shopify = PlatformLimiter(
+        "shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host
+    )
+    deferred: dict[str, int] = {}
+    retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
+    # Roasters that have answered every attempt this run with a block and never served a catalog page.
+    refusing: dict[str, int] = {}  # roaster -> attempts so far
+    with (
+        PoliteClient(limiters={"shopify": shopify}, **(client_kw or {})) as client,
+        ThreadPoolExecutor(workers) as ex,
+    ):
+        # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round
+        # is written before the next round starts: a parked roaster's error row is in the lake before it is
+        # retried, so a run that dies during the deferred rounds still shows it attempted (run_is_complete).
+        # Its retry is another fetches row; the run counts it ok if any attempt was (int_roaster_runs).
+        rounds = DEFERRED_ROUNDS + 1 if per_host else 1
+        queue = roasters
+        for round_ in range(rounds):
+            if round_:
+                shopify.defer = False  # nothing left to overtake: wait out a store's pause in the worker
+                deferred[f"round_{round_}"] = len(queue)
+            t0, spread = time.monotonic(), DEFERRED_SPREAD if round_ else 0.0
+            futures = [
+                ex.submit(_staggered, client, r, t0 + spread * i / len(queue)) for i, r in enumerate(queue)
+            ]
+            parked: list[Roaster] = []
+            done: list[Result] = []
+            for fut in as_completed(futures):
+                res = fut.result()
+                rid = res.roaster.roaster_id
+                if round_:
+                    retried_ok[rid] = not res.error
+                if res.error and res.blocked and not res.stats.pages and (not round_ or rid in refusing):
+                    refusing[rid] = refusing.get(rid, 0) + 1
+                else:
+                    refusing.pop(rid, None)
+                last = not (res.error and res.deferrable) or round_ == rounds - 1
+                if last and rid in refusing and round_:
+                    res.error = (
+                        f"refused: answered a block to every catalog request in this run "
+                        f"({refusing[rid]} attempts); last {res.error}"
+                    )[:300]
+                if not last:
+                    parked.append(res.roaster)
+                done.append(res)
+                if len(done) == CHUNK:
+                    flush(done)
+                    done = []
+            if done:
                 flush(done)
-                done = []
-        if done:
-            flush(done)
+            queue = parked
+            if not queue:
+                break
+        if retried_ok:
+            deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
+            deferred["refused"] = sum(1 for rid, ok in retried_ok.items() if not ok and rid in refusing)
     return {
         "run_date": run_date,
         "roasters": len(roasters),
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
-        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses
+        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
+        "deferred": deferred,  # roasters per deferred round, and those still failing after them
     }
