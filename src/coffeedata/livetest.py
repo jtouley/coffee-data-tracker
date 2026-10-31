@@ -2,7 +2,8 @@
 
 200 Shopify storefronts on distinct hosts, picked by sha256("<salt>:" + roaster_id), are fetched in two groups of
 100: group 1 at 1 request/s (phase A), group 2 at 3 requests/s (phase B). Then the group-1 stores that got a 429 are
-asked again at 1 request/s (phase C). At most 700 requests in all. robots.txt, the User-Agent and per-host spacing are
+asked again at 1 request/s (phase C). At most 700 requests in all (main's limiter waits instead of parking stores,
+so unlike the prototype run there are no limiter-parked attempts to exclude). robots.txt, the User-Agent and per-host spacing are
 the crawler's own, unchanged.
 
 Publishing is off, and this refuses to start otherwise: the lake must be a local folder, no Hugging Face token may be
@@ -106,7 +107,7 @@ def main(argv: list[str] | None = None) -> int:
     logging.disable(logging.CRITICAL)  # the crawler's own log lines name roasters and hosts: keep them out
 
     from . import ingest, registry
-    from .http import USER_AGENT, FetchError, PoliteClient, user_agent
+    from .http import FetchError, PoliteClient
     from .lake import Lake
 
     lake = Lake()
@@ -117,7 +118,6 @@ def main(argv: list[str] | None = None) -> int:
     chosen = pick(states, registry)
     g1, g2 = chosen[:100], chosen[100:]
     print(f"eligible shopify roasters: {len(states)}; picked {len(chosen)} on distinct hosts (salt {SALT})")
-    print(f"user agent has a contact: {'yes' if user_agent() != USER_AGENT else 'no'}")
     if args.dry_run or len(chosen) < STORES:
         return 0 if args.dry_run else 1
 
@@ -163,12 +163,15 @@ def main(argv: list[str] | None = None) -> int:
         a = s["by_adapter"].get("shopify", {})
         n429 = sum(r["status"] == 429 for r in rs)
         n430 = sum(r["status"] == 430 for r in rs)
-        ok = a.get("roasters", 0) - a.get("errors", 0)
+        # live.md's definitions, so the numbers compare directly: every share of stores is over the phase's stores
+        # (100 in A and B), "stores with a 429" counts a store once however many 429s it got, and "stores ok" is a
+        # store whose fetch ended without an error. 429s are over every request sent, robots.txt included.
+        ok = len(todo) - a.get("errors", 0)
         ra = Counter(r["retry_after"] for r in rs if r["status"] == 429)
         print(
             f"phase {name}: {len(todo)} stores at {rps} req/s, wall {time.time() - t:.0f} s\n"
             f"  requests {len(rs)}; 429s {share(n429, len(rs))}; 430s {n430}\n"
-            f"  stores with a 429 {share(len(hit & hosts), len(hosts))}; stores ok {share(ok, a.get('roasters', 0))}\n"
+            f"  stores with a 429 {share(len(hit & hosts), len(hosts))}; stores ok {share(ok, len(todo))}\n"
             f"  limiter {json.dumps(s['shopify_limiter'], sort_keys=True)}; Retry-After values {dict(ra)}"
         )
 

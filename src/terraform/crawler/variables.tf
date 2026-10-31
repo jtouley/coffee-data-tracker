@@ -23,9 +23,9 @@ variable "github_repo" {
 }
 
 variable "machine_type" {
-  description = "e2-small (2 GB) fits the weekly run: crawl ~370 MB plus dbt 0.7-1.0 GB plus the runner. e2-micro (1 GB, free tier) fits live-test.yml's crawl alone, with the swap file."
+  description = "e2-micro (1 GB, free tier) runs live-test.yml's crawl (~370 MB peak) with the swap file. Use e2-small (2 GB) before weekly.yml moves here: its dbt build alone peaks at 0.7-1.0 GB."
   type        = string
-  default     = "e2-small"
+  default     = "e2-micro"
 }
 
 variable "disk_gb" {
@@ -41,7 +41,7 @@ variable "runner_name" {
 }
 
 variable "runner_version" {
-  description = "actions/runner release to install. Must match runner_sha256."
+  description = "actions/runner release to install (self-update is off: bump this and runner_sha256, then rebuild the VM)."
   type        = string
   default     = "2.338.2"
 }
@@ -50,28 +50,4 @@ variable "runner_sha256" {
   description = "SHA-256 of actions-runner-linux-x64-<runner_version>.tar.gz, from the release notes."
   type        = string
   default     = "baebf204307bac6193480852732f0aba2ae97b6c5597c244f4d5558390147c40"
-}
-
-# The runner's pre-job hook refuses every job outside these. Keep allowed_workflows equal to the set of workflows
-# whose jobs target the `crawler` label (tests/test_crawler_runner.py checks it).
-variable "allowed_events" {
-  description = "Events whose jobs the runner accepts. Never pull_request or pull_request_target."
-  type        = list(string)
-  default     = ["workflow_dispatch", "schedule"]
-  validation {
-    condition     = length(setintersection(var.allowed_events, ["pull_request", "pull_request_target", "pull_request_review", "pull_request_review_comment", "issue_comment", "workflow_run", "push"])) == 0
-    error_message = "The crawler runner accepts only workflow_dispatch and schedule jobs."
-  }
-}
-
-variable "allowed_refs" {
-  description = "Git refs the runner accepts jobs for. A dispatch on another branch is refused."
-  type        = list(string)
-  default     = ["refs/heads/main"]
-}
-
-variable "allowed_workflows" {
-  description = "Workflow files (repository paths) the runner accepts jobs from."
-  type        = list(string)
-  default     = [".github/workflows/live-test.yml"]
 }

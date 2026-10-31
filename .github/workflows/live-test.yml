@@ -15,9 +15,7 @@ jobs:
   live429:
     runs-on: [self-hosted, crawler]
     timeout-minutes: 60
-    # No secrets and no HF token: the job couldn't publish if it tried. COFFEEDATA_LAKE is a throwaway folder.
-    env:
-      COFFEEDATA_CONTACT: ${{ vars.CRAWLER_CONTACT }}  # e.g. crawler@registry.coffee; unset = the usual User-Agent
+    # No secrets and no HF token: the job couldn't publish if it tried. The lake is a throwaway folder.
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}

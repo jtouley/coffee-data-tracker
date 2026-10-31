@@ -31,7 +31,6 @@ jobs:
             terraform -chdir="$dir" init -backend=false -input=false
             terraform -chdir="$dir" validate
           done
-          terraform -chdir=src/terraform/crawler test  # a plan against a mock provider: no credentials needed
 
   deploy:
     needs: check

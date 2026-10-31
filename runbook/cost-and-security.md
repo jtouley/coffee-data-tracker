@@ -9,7 +9,7 @@ It runs on free tiers. The only fixed cost is the domain.
 | registry.coffee | $6.98 the first year; .coffee renewals are much higher (about $48 a year at Namecheap), so compare registrars before it renews |
 | Claude enrichment (optional) | pay as you go; capped by `--enrich-limit`, and new coffees only after the first run |
 | Snowflake, S3 (optional) | only if you turn them on |
-| Crawler VM with a fixed IP (proof of concept, optional) | about $16 a month on `e2-small`, about $4 on a free-tier `e2-micro` ([crawler-runner.md](crawler-runner.md)) |
+| Crawler VM with a fixed IP (proof of concept, optional) | about $3.65 a month for the IP on a free-tier `e2-micro` ([crawler-runner.md](crawler-runner.md)) |
 
 How it's locked down:
 
@@ -21,7 +21,7 @@ How it's locked down:
   that only allows its own inline script (by hash) and same-origin requests. Product links from roasters' feeds are
   kept only if they're plain `http(s)` URLs, and all text is escaped.
 - **The crawler runner** (if applied). A self-hosted runner on a public repo: its pre-job hook refuses everything but
-  dispatched and scheduled jobs of allowed workflows on `main`, and fork PR workflows need approval. See
+  dispatched and scheduled jobs of `live-test.yml` on `main`, and fork PR workflows need approval. See
   [crawler-runner.md](crawler-runner.md#security-model-public-repo).
 - **Secrets.** Use a fine-grained Hugging Face token with write access to only the lake and public datasets. Set a
   monthly spend limit on the Anthropic key in the Claude Console. Keep the lake dataset private; only the facts-only

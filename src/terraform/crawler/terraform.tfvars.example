@@ -1,3 +1,0 @@
-# Optional: copy to terraform.tfvars (gitignored). Every variable has a default.
-# machine_type = "e2-micro"   # free tier; fits live-test.yml's crawl, not the weekly run's dbt build
-# allowed_workflows = [".github/workflows/live-test.yml", ".github/workflows/weekly.yml"]   # when weekly moves

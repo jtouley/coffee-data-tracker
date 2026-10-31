@@ -63,15 +63,11 @@ resource "google_compute_instance" "crawler" {
     serial-port-enable     = "FALSE"
     startup-script         = file("${path.module}/scripts/startup.sh")
     crawler-job-started    = file("${path.module}/scripts/job-started.sh")
-    crawler-job-completed  = file("${path.module}/scripts/job-completed.sh")
     crawler-repo           = var.github_repo
     crawler-runner-name    = var.runner_name
     crawler-runner-version = var.runner_version
     crawler-runner-sha256  = var.runner_sha256
     crawler-token-secret   = google_secret_manager_secret.runner_token.secret_id
-    crawler-allowed-events = join(" ", var.allowed_events)
-    crawler-allowed-refs   = join(" ", var.allowed_refs)
-    crawler-allowed-wfs    = join(" ", var.allowed_workflows)
   }
 
   # The startup script reads the token secret on first boot, so the binding must exist first.

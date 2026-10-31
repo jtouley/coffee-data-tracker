@@ -1,8 +1,8 @@
 # A fixed, identifiable egress IP for the crawl: one small VM that runs a GitHub Actions self-hosted runner (label
 # `crawler`), behind a reserved static address. Its own root module and state prefix, so planning or destroying it
-# never touches the app's resources in ../. Proof of concept: see runbook/crawler-runner.md before applying.
+# never touches the app's resources in ../. Proof of concept: see runbook/crawler-runner.md.
 terraform {
-  required_version = ">= 1.6"
+  required_version = ">= 1.7"
   required_providers {
     google = {
       source  = "hashicorp/google"
