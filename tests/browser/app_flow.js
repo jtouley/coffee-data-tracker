@@ -384,6 +384,16 @@ async function newPage(browser, errors) {
     await page.goto(`${base}/setup/gear/g1`);
     await page.getByRole("button", { name: "Save", exact: true }).click();
     await page.waitForURL(`${base}/setup`);
+    // Offline, Back after an online save shows the page as the browser kept it, not "No connection" from a reload.
+    await page.goto(`${base}/shot/first`); // not kept by the service worker: only the browser's copy can show it
+    await page.goto(`${base}/history`);
+    await page.evaluate(() => send("equipment:g1", "/api/equipment", { equipment_id: "g1", kind: "grinder", name: "DF64 V2" }));
+    await page.context().setOffline(true);
+    await page.goBack();
+    await page.waitForTimeout(500); // a reload, if one started, has replaced the page by now
+    assert.equal(new URL(page.url()).pathname, "/shot/first");
+    assert.doesNotMatch(await page.textContent("h1"), /No connection/);
+    await page.context().setOffline(false);
     await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
     await page.evaluate(() => navigator.serviceWorker.ready);
     await page.context().setOffline(true);

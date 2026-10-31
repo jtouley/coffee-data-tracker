@@ -252,6 +252,7 @@ function stale(persisted) {
   try {
     const back = persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward";
     if (!back) return false;
+    if (!navigator.onLine) return false; // offline, a reload would only find "No connection": keep what's shown
     if (sessionStorage.getItem("notice")) return true;
     const at = Number(localStorage.getItem("wrote-at"));
     const made = Number(document.querySelector('meta[name="rendered"]')?.content) * 1000;
