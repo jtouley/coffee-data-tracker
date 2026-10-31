@@ -85,13 +85,13 @@ function deliver(entry) {
   return p;
 }
 
-// A write that landed makes the pages shown before it out of date: the copies kept for offline use go, and a page
-// the browser brings back from history (Back) loads again if it was made before the write (stale(), below). The
-// time is the server's (its Date header), as the page's own (meta "rendered"), so the phone's clock doesn't matter.
-async function wrote(r) {
+// A write that landed makes the pages shown before it out of date: a page the browser brings back from history
+// (Back) loads again if it was made before the write (stale(), below). The time is the server's (its Date header),
+// as the page's own (meta "rendered"), so the phone's clock doesn't matter. The pages kept for offline use stay:
+// online, the service worker fetches pages from the network first, so they're only shown offline.
+function wrote(r) {
   const at = Date.parse(r.headers.get("date") || "") || Date.now();
   try { localStorage.setItem("wrote-at", String(at)); } catch { /* storage is optional */ }
-  if ("caches" in window) await caches.delete("pages").catch(() => {});
 }
 
 async function deliverOnce(entry) {
@@ -105,7 +105,7 @@ async function deliverOnce(entry) {
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
-    await wrote(r);
+    wrote(r);
     if (entry.url === "/api/bags" && entry.body?.finished_on) {
       try {
         if (selectedBag()?.id === entry.body.bag_id) {

@@ -4,7 +4,7 @@
 // Pages go to the network first; the last good copy of the screens used at the machine (Today, Log shot, New bag,
 // Coffees, a coffee, History) is kept, so they still open offline. Writes never go through here: they wait in the
 // page's IndexedDB outbox until the server acknowledges them. Signing out clears the kept pages, which hold that
-// person's data, and so does every acknowledged write (app.js), which makes them out of date.
+// person's data.
 //
 // Hashed files never change, so they live in one cache that a new version adds to rather than replaces: a page
 // still open from the last version, or kept for offline use, keeps finding its own styles and script.

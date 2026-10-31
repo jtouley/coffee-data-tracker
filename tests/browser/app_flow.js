@@ -379,12 +379,18 @@ async function newPage(browser, errors) {
         e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result);
       };
     }));
-    // Kept for later, like the screens visited since the last write (each write drops the kept copies).
-    for (const kept of ["/", "/history", "/bag/new"]) await page.goto(`${base}${kept}`);
+    // An online save doesn't drop the kept pages: Log shot, kept before it, still opens offline.
+    await page.goto(`${base}/log`);
+    await page.goto(`${base}/setup/gear/g1`);
+    await page.getByRole("button", { name: "Save", exact: true }).click();
+    await page.waitForURL(`${base}/setup`);
+    await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
     await page.evaluate(() => navigator.serviceWorker.ready);
     await page.context().setOffline(true);
     await page.goto(`${base}/history`);
     assert.match(await page.textContent("main"), /History/);
+    await page.goto(`${base}/log`);
+    assert.equal(await page.isVisible("#shot"), true);
     const offlineShot = async () => {
       await page.goto(`${base}/log`);
       await page.getByRole("button", { name: "Type" }).click();
@@ -418,12 +424,11 @@ async function newPage(browser, errors) {
     await shoot(page, "bag-offline-saved");
     assert.equal(await outbox(), 3);
     await page.context().setOffline(false);
-    // Sent now (Playwright's reconnect doesn't always fire "online", and the next page's flush would send it in the
-    // middle of what follows), and polled: waitForFunction took the predicate's promise as a truthy answer. Each
-    // landed write drops the kept pages, so the pages below are kept only once the outbox is empty.
-    await page.evaluate(() => flush());
-    for (let i = 0; i < 60 && (await outbox()) !== 0; i++) await page.waitForTimeout(250);
-    assert.equal(await outbox(), 0);
+    await page.waitForFunction(() => new Promise((resolve) => {
+      indexedDB.open("registry-coffee").onsuccess = (e) => {
+        e.target.result.transaction("outbox").objectStore("outbox").count().onsuccess = (c) => resolve(c.target.result === 0);
+      };
+    }), null, { timeout: 15000, polling: 250 });
 
     // Switching bags offline fails, and the kept Today and Log shot pages still open afterwards.
     await page.goto(`${base}/log`);
@@ -587,7 +592,7 @@ async function newPage(browser, errors) {
     await page.unroute("**/api/probe");
 
     // A shot moved to a bag finished lately (the correct form offers those too): Back to its old bag's page shows
-    // it gone, not the copy from before the move, and the kept offline copy of that page went with the write.
+    // it gone, not the copy from before the move.
     const finished = new Date(Date.now() - 5 * 86400000).toISOString().slice(0, 10);
     await page.evaluate((day) => send("bag:moveto", "/api/bags", { bag_id: "moveto", coffee_freetext: "Move target", finished_on: day }), finished);
     await page.goto(`${base}/coffee/bag1`);
@@ -599,7 +604,6 @@ async function newPage(browser, errors) {
     await page.getByRole("button", { name: "Save correction" }).click();
     await page.waitForURL(`${base}/shot/dial0`);
     assert.equal(await page.textContent("a.back"), "‹ Move target");
-    assert.equal(await page.evaluate(async () => Boolean(await caches.match("/coffee/bag1", { cacheName: "pages" }))), false);
     // Back past the correct form to the bag's page: a copy from before the move is loaded again, whether the browser
     // kept it in memory or in its cache. Polled: the reload replaces the page a wait would run in.
     await page.evaluate(() => history.go(-2));
