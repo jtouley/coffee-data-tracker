@@ -13,7 +13,7 @@ import os
 import time
 from collections import OrderedDict
 from collections.abc import AsyncIterator
-from datetime import UTC, date, datetime, tzinfo
+from datetime import UTC, date, datetime, timedelta, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
 from urllib.parse import unquote, urlsplit
@@ -42,6 +42,7 @@ HERE = Path(__file__).parent
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
+RECENTLY_FINISHED_DAYS = 30  # a correction can move a shot to a bag finished this recently
 log = logging.getLogger(__name__)
 
 
@@ -600,13 +601,17 @@ def create_app(
                 name, _ = coffee_name(fixing_bag, fixing_bag.coffee_id, fixing_bag.coffee_freetext)
         z = tz(request)
         when = f"{views.date(fixing.brewed_at, z)}, {views.clock(fixing.brewed_at, z)}" if fixing else None
+        # A shot can move to an open bag or one finished lately: the shot was often pulled before it ran out.
+        recent = datetime.now(z).date() - timedelta(days=RECENTLY_FINISHED_DAYS)
         return page(
             request, "log.html", me=me, p=p, name=name, form=form, fixing=fixing, fixing_when=when,
             fixing_bag=fixing_bag,
             bag_lines=[
                 bag_line(b, [])
                 for b in store.bags_of(me.user_id)
-                if not b.finished_on or b.bag_id in (fixing.bag_id, fixing_bag and fixing_bag.bag_id)
+                if not b.finished_on
+                or b.finished_on >= recent
+                or b.bag_id in (fixing.bag_id, fixing_bag and fixing_bag.bag_id)
             ]
             if fixing
             else [],

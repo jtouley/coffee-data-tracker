@@ -458,7 +458,9 @@ def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selecte
     r = client.post("/api/shots", json=shot(1, bag_id="bag1", coffee_freetext="Other coffee"), headers=W)
     assert r.status_code == 200 and r.json()["written"]
     s1 = store.shot("owner", "s1")
-    assert (s1.bag_id, s1.coffee_freetext, str(s1.roast_date)) == ("bag1", "Onyx Geometry", "2026-10-18")
+    # No roast date of its own: fct_shot takes the bag's (coalesce(s.roast_date, b.roast_date)), so a bag's date
+    # isn't copied into the shot, where a later fix to the bag's date wouldn't reach it.
+    assert (s1.bag_id, s1.coffee_freetext, s1.roast_date) == ("bag1", "Onyx Geometry", None)
     bag_a, bag_b = store.bag("owner", "bag1"), store.bag("owner", "bagB")
     assert [s.shot_id for s in store.bag_shots("owner", bag_a, None)] == ["s1"]
     assert [s.shot_id for s in store.bag_shots("owner", bag_b, None)] == ["s2"]
@@ -476,3 +478,156 @@ def test_correcting_a_shot_moves_it_to_another_bag_without_switching_the_selecte
     assert client.get("/log?correct=s1&bag=bobs").status_code == 404
     assert client.post("/api/shots", json=shot(1, bag_id="bobs"), headers=W).status_code == 404
     assert store.shot("owner", "s1").bag_id == "bag1"
+
+
+def test_a_moved_shot_keeps_its_own_roast_date_and_drops_only_a_copy_of_its_old_bags(client):
+    """An earlier move copied the bag's date into the shot; moving it again drops that copy. A date entered with
+    the shot (an import) isn't the bag's, and stays."""
+    from datetime import date
+
+    store = client.app.state.store
+    client.post(
+        "/api/bags", json={"bag_id": "bagB", "coffee_freetext": "B", "roast_date": "2026-10-01"}, headers=W
+    )
+    client.post("/api/shots", json=shot(1), headers=W)
+    client.post("/api/shots", json=shot(2), headers=W)
+    for sid, roast in (("s1", date(2026, 10, 18)), ("s2", date(2026, 9, 30))):  # bag1's date, then its own
+        store._commit(
+            store.shots, sid, store.shot("owner", sid).model_copy(update={"roast_date": roast}), "shots"
+        )
+    for i in (1, 2):
+        assert client.post("/api/shots", json=shot(i, bag_id="bagB"), headers=W).json()["written"]
+    assert store.shot("owner", "s1").roast_date is None  # follows bagB's
+    assert store.shot("owner", "s2").roast_date == date(2026, 9, 30)
+
+
+def test_a_roast_date_over_a_year_ago_is_refused(client):
+    from datetime import date, timedelta
+
+    today = date.today()
+    old = (today - timedelta(days=400)).isoformat()
+    r = client.post(
+        "/api/bags", json={"bag_id": "bag9", "coffee_freetext": "x", "roast_date": old}, headers=W
+    )
+    assert (
+        r.status_code == 422 and r.json()["detail"] == "That roast date is over a year ago. Check the year."
+    )
+    edit = {"bag_id": "bag1", "coffee_freetext": "Onyx Geometry", "roast_date": old}
+    assert client.post("/api/bags", json=edit, headers=W).status_code == 422
+    year = (today - timedelta(days=365)).isoformat()  # a year ago, and a day's grace for the phone's zone
+    ok = {"bag_id": "bag9", "coffee_freetext": "x", "roast_date": year}
+    assert client.post("/api/bags", json=ok, headers=W).status_code == 200
+
+
+def test_a_bag_stored_with_an_old_date_can_still_be_saved_unchanged(client):
+    from datetime import date, timedelta
+
+    from app.store import Bag
+
+    store = client.app.state.store
+    old = date.today() - timedelta(days=900)
+    store._commit(
+        store.bags, "old", Bag(bag_id="old", user_id="owner", coffee_freetext="x", roast_date=old), "bags"
+    )
+    same = {"bag_id": "old", "coffee_freetext": "x", "roast_date": old.isoformat(), "weight_g": 340}
+    assert client.post("/api/bags", json=same, headers=W).status_code == 200
+
+
+def test_the_correct_form_offers_bags_finished_in_the_last_30_days(client):
+    from datetime import date, timedelta
+
+    client.post("/api/shots", json=shot(1), headers=W)
+    lately = (date.today() - timedelta(days=10)).isoformat()
+    long_ago = (date.today() - timedelta(days=60)).isoformat()
+    for bid, finished in (("lately", lately), ("long-ago", long_ago)):
+        body = {"bag_id": bid, "coffee_freetext": f"Bag {bid}", "finished_on": finished}
+        assert client.post("/api/bags", json=body, headers=W).status_code == 200
+    log = client.get("/log?correct=s1").text
+    assert 'href="/log?correct=s1&amp;bag=lately"' in log
+    assert 'href="/log?correct=s1&amp;bag=long-ago"' not in log
+    # Moved to the finished bag: it takes that bag's coffee.
+    assert client.post("/api/shots", json=shot(1, bag_id="lately"), headers=W).json()["written"]
+    assert client.app.state.store.shot("owner", "s1").coffee_freetext == "Bag lately"
+
+
+def _slow_publish(store, monkeypatch, fail_first: bool = False):
+    """The lake commit held open until released, so a resend arrives while it's in flight."""
+    import threading
+
+    started, release, calls = threading.Event(), threading.Event(), []
+    real = store.lake.publish
+
+    def publish(*a, **kw):
+        calls.append(a)
+        if len(calls) == 1:
+            started.set()
+            release.wait(5)
+            if fail_first:
+                raise RuntimeError("Hugging Face said no")
+        return real(*a, **kw)
+
+    monkeypatch.setattr(store.lake, "publish", publish)
+    return started, release, calls
+
+
+def test_a_resend_while_the_first_save_is_publishing_writes_one_record(client, lake, monkeypatch):
+    """Leaving a page mid-save, the next page resends the write. The first is still uploading, so the stored
+    record is the old one: the resend must wait for it, not write the same record again (#7x duplicates)."""
+    import threading
+
+    store = client.app.state.store
+    started, release, _ = _slow_publish(store, monkeypatch)
+    before = len(files(lake, "shots"))
+    out = []
+    first = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    first.start()
+    assert started.wait(5)
+    second = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    second.start()
+    second.join(0.3)
+    assert second.is_alive()  # waiting on the first upload, not writing
+    release.set()
+    first.join(5)
+    second.join(5)
+    assert sorted(out) == [False, True]
+    assert len(files(lake, "shots")) == before + 1
+    assert store._pending == {}
+    # A resend after it landed is a no-op too, through the API as the outbox sends it.
+    r = client.post("/api/shots", json=shot(1), headers=W)
+    assert r.status_code == 200 and not r.json()["written"]
+    assert len(files(lake, "shots")) == before + 1
+    # A different record for the same id while one is in flight is a correction, and is written.
+    started, release, _ = _slow_publish(store, monkeypatch)
+    first = threading.Thread(target=lambda: store.save_shot("owner", shot(1, rating=2)))
+    first.start()
+    assert started.wait(5)
+    assert store.save_shot("owner", shot(1, rating=3))[1]
+    release.set()
+    first.join(5)
+    assert store.shot("owner", "s1").rating == 3
+
+
+def test_a_failed_publish_doesnt_leave_the_record_marked(client, lake, monkeypatch):
+    import threading
+
+    store = client.app.state.store
+    started, release, calls = _slow_publish(store, monkeypatch, fail_first=True)
+    errors, out = [], []
+
+    def first():
+        try:
+            store.save_shot("owner", shot(1))
+        except RuntimeError as e:
+            errors.append(e)
+
+    t1 = threading.Thread(target=first)
+    t1.start()
+    assert started.wait(5)
+    t2 = threading.Thread(target=lambda: out.append(store.save_shot("owner", shot(1))[1]))
+    t2.start()
+    release.set()
+    t1.join(5)
+    t2.join(5)
+    # The first upload failed: the resend waiting on it writes the record itself, and it's stored.
+    assert errors and out == [True] and len(calls) == 2
+    assert store.shot("owner", "s1").shot_id == "s1" and store._pending == {}

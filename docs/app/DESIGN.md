@@ -365,8 +365,9 @@ that shrinks over 5 s. Undo writes a retraction record.
 
 An accent "Edit bag" text link (56 px tall, ending on the gutter) after the roast line on Today and on the coffee
 page. The form: roaster and coffee, roast date, weight, and "Still using it" / "Finished". Saving writes a new record
-under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. A roast date
-in the future isn't saved; one more than 90 days old asks "Save with day N?".
+under the same id (the shots stay with it) and returns to the screen it was opened from, with a notice. Once tapped,
+Save reads "Saving…" until the server replies, as on Log shot; a refusal puts the label back. A roast date in the
+future or over a year ago isn't saved; one more than 90 days old asks "Save with day N?".
 
 #### Notice
 

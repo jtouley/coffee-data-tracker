@@ -85,6 +85,15 @@ function deliver(entry) {
   return p;
 }
 
+// A write that landed makes the pages shown before it out of date: the copies kept for offline use go, and a page
+// the browser brings back from history (Back) loads again if it was made before the write (stale(), below). The
+// time is the server's (its Date header), as the page's own (meta "rendered"), so the phone's clock doesn't matter.
+async function wrote(r) {
+  const at = Date.parse(r.headers.get("date") || "") || Date.now();
+  try { localStorage.setItem("wrote-at", String(at)); } catch { /* storage is optional */ }
+  if ("caches" in window) await caches.delete("pages").catch(() => {});
+}
+
 async function deliverOnce(entry) {
   // A photo waits as a Blob (IndexedDB keeps those); everything else is JSON.
   // X-Expected-User binds the write to the account that made it: after an account switch (another tab, a sign-out)
@@ -96,6 +105,7 @@ async function deliverOnce(entry) {
     body: entry.blob || JSON.stringify(entry.body),
   });
   if (r.ok) {
+    await wrote(r);
     if (entry.url === "/api/bags" && entry.body?.finished_on) {
       try {
         if (selectedBag()?.id === entry.body.bag_id) {
@@ -235,12 +245,19 @@ function go(url, notice) {
   else location.replace(url); // also this same screen again, after a change on it
 }
 
-// Stepping back to the screen a save came from, the browser shows its copy from before the save (from memory, or
-// from its cache, which Back doesn't check): load it again, so it shows the change, and the notice with it.
+// Stepping back to a screen, the browser shows its copy from before (from memory, or from its cache, which Back
+// doesn't check): if a save is waiting to be announced on it, or any write landed after the copy was made (a shot
+// moved to another bag, from a screen further on), load it again, so it shows the change, and the notice with it.
 function stale(persisted) {
   try {
     const back = persisted || performance.getEntriesByType("navigation")[0]?.type === "back_forward";
-    return Boolean(back && sessionStorage.getItem("notice"));
+    if (!back) return false;
+    if (sessionStorage.getItem("notice")) return true;
+    const at = Number(localStorage.getItem("wrote-at"));
+    const made = Number(document.querySelector('meta[name="rendered"]')?.content) * 1000;
+    // Both in whole seconds, and a server's Date header can lag its clock by a second (uvicorn's is set once a
+    // second), so a page made up to 2 s after the write is loaded again too: one reload too many, never one too few.
+    return Boolean(at && made && at + 2000 >= made);
   } catch {
     return false; // storage blocked: nothing waiting
   }
@@ -587,15 +604,17 @@ function roastDays(iso) {
   return Math.round((today - new Date(`${iso}T12:00:00`)) / 86400000);
 }
 
-// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future isn't saved, and one more
-// than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say, or "" to save.
-// `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or Finished can
-// change on a bag whose date predates this check. "Future" is the server's rule, past tomorrow in UTC, so a phone
-// ahead of UTC or behind it never offers a date the server then refuses.
+// A roast date typed with the wrong year is easy to miss ("day 3665"): one in the future or over a year ago isn't
+// saved, and one more than 90 days old asks for a second tap on Save, which says how old it is. Returns what to say,
+// or "" to save. `kept` is the date the bag already has: it's saved as it is, like the server does, so the weight or
+// Finished can change on a bag whose date predates this check. "Future" and "over a year" are the server's rules,
+// past tomorrow or before 366 days ago in UTC, so a phone ahead of UTC or behind it never offers a date the server
+// then refuses.
 function roastCheck(form, save, label, kept = null) {
   const v = form.roast_date.value;
   if (!v || v === kept) return "";
   if (v > new Date(Date.now() + 86400000).toISOString().slice(0, 10)) return "That roast date is in the future. Check the year.";
+  if (v < new Date(Date.now() - 366 * 86400000).toISOString().slice(0, 10)) return "That roast date is over a year ago. Check the year.";
   const days = roastDays(v);
   if (days > 90 && save.textContent === label) {
     save.textContent = `Save with day ${days}?`; // like "Save with 29 s?" on Log shot
@@ -706,7 +725,9 @@ function bagEdit(form) {
     };
     if (selected) Object.assign(body, { coffee_id: selected.coffee_id, match_score: null });
     else if (coffee !== (rec.coffee_freetext || "")) Object.assign(body, { coffee_id: null, match_score: null });
+    const shown = save.textContent;
     save.disabled = true;
+    save.textContent = "Saving…"; // as on Log shot: the lake commit can take seconds
     try {
       await send(`bag:${rec.bag_id}`, "/api/bags", body);
       go(form.dataset.next, `Bag saved: ${coffee}`);
@@ -714,6 +735,7 @@ function bagEdit(form) {
       if (!(err instanceof Rejected)) return go(form.dataset.next, `Bag saved on this phone: ${coffee}. It’ll sync when you’re back online.`);
       hint(form, err.message);
       save.disabled = false;
+      save.textContent = shown;
     }
   });
 }
