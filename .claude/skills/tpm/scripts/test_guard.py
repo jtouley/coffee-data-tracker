@@ -1,13 +1,34 @@
 """Tests for guard.py. Run with `python3 test_guard.py` or `pytest test_guard.py`."""
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
 
-GUARD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "guard.py")
+HERE = os.path.dirname(os.path.abspath(__file__))
+GUARD = os.path.join(HERE, "guard.py")
+SKILL_DIR = os.path.dirname(HERE)
+SKILL_MD = os.path.join(SKILL_DIR, "SKILL.md")
+
+
+def load_guard():
+    spec = importlib.util.spec_from_file_location("tpm_guard", GUARD)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def frontmatter():
+    return open(SKILL_MD).read().split("\n---\n", 1)[0]
+
+
+def hook_command():
+    m = re.search(r"^\s*command: '(.*)'$", frontmatter(), re.M)
+    return m.group(1).replace("''", "'")
 
 
 def run(payload, project_dir=None):
@@ -102,6 +123,91 @@ def test_malformed_input_fails_open():
     code, err = run("not json{")
     assert code == ALLOW and "could not parse" in err
     assert run("[1, 2]")[0] == ALLOW
+
+
+# Regression tests for the independent review's findings.
+
+def test_hash_is_not_a_comment_escape():
+    for cmd in ("ls x#; touch /tmp/pwned", "cat a#b\nrm -rf z", "ls # note", "ls x#\nrm z"):
+        assert bash(cmd) == DENY, repr(cmd)
+    for cmd in ("cat a#b", "grep -n '#include' f.c", 'grep "#" f'):
+        assert bash(cmd) == ALLOW, repr(cmd)
+
+
+def test_hook_wrapper_fails_open_when_script_missing():
+    empty = tempfile.mkdtemp()
+    env = {"PATH": os.environ["PATH"], "CLAUDE_PROJECT_DIR": empty, "HOME": empty}
+    payload = json.dumps({"tool_name": "Write", "tool_input": {}})
+    proc = subprocess.run(["bash", "-c", hook_command()], input=payload, capture_output=True,
+                          text=True, env=env)
+    assert proc.returncode == 0 and "not found" in proc.stderr
+    env["CLAUDE_PROJECT_DIR"] = ""
+    assert subprocess.run(["bash", "-c", hook_command()], input=payload,
+                          capture_output=True, text=True, env=env).returncode == 0
+
+
+def test_hook_wrapper_finds_project_then_home_install():
+    payload = json.dumps({"tool_name": "Write", "tool_input": {}})
+    project = os.path.dirname(os.path.dirname(os.path.dirname(SKILL_DIR)))  # repo root
+    empty = tempfile.mkdtemp()
+    env = {"PATH": os.environ["PATH"], "CLAUDE_PROJECT_DIR": project, "HOME": empty}
+    assert subprocess.run(["bash", "-c", hook_command()], input=payload,
+                          capture_output=True, text=True, env=env).returncode == DENY
+    home = tempfile.mkdtemp()
+    os.makedirs(os.path.join(home, ".claude", "skills"))
+    os.symlink(SKILL_DIR, os.path.join(home, ".claude", "skills", "tpm"))
+    env.update(CLAUDE_PROJECT_DIR=empty, HOME=home)
+    assert subprocess.run(["bash", "-c", hook_command()], input=payload,
+                          capture_output=True, text=True, env=env).returncode == DENY
+
+
+def test_off_switch_match_survives_quoting():
+    for cmd in ('touch .claude/tpm.of""f', "touch .claude/tpm.of\\f", "touch '.claude/tpm.'off",
+                "touch .claude/tpm .off"):
+        assert bash(cmd, agent_id="a1") == DENY, cmd
+
+
+def test_rg_options_that_run_programs():
+    for cmd in ("rg --hostname-bin=/tmp/x foo", "rg --hostname-bin /tmp/x foo",
+                "rg --pre-glob '*.gz' --pre zcat x", "rg --pre=sh x"):
+        assert bash(cmd) == DENY, cmd
+
+
+def test_user_invocation_only():
+    assert re.search(r"^disable-model-invocation: true$", frontmatter(), re.M)
+
+
+def test_quoted_operators_and_new_readers_allowed():
+    for cmd in ('grep -rn "def main(" src', "grep -n '|' f", "grep -E 'a>b|c<d' f",
+                "sort f | uniq -c", "uniq f", "git grep -n foo", "git rev-parse HEAD",
+                "cat < f", "sed -n 1,20p f.py", "sed -n '$p' f", "sed -n 5p a b",
+                "git log --format='%h (%an)'"):
+        assert bash(cmd) == ALLOW, cmd
+    for cmd in ("sort -o out f", "sort --output=out f", "sort -ro out f",
+                "sort --compress-program=sh f", "uniq in out", "sed -n '1,5w out' f",
+                "sed -n 1p -i f", "sed 1,20p f", "sed -n '/x/e rm z' f", "git grep -O vim x",
+                "git grep --open-files-in-pager=vim x", "cat <<< x", "cat <(ls)",
+                "cat $'\\x3b'", "ls >| f"):
+        assert bash(cmd) == DENY, cmd
+
+
+def test_delegation_tools_allowed_and_documented():
+    for tool in ("Workflow", "mcp__claude-code-remote__create_session",
+                 "mcp__claude-code-remote__send_message", "mcp__claude-code-remote__send_later",
+                 "mcp__claude-code-remote__subscribe_pr_activity",
+                 "mcp__claude-code-remote__unsubscribe_pr_activity"):
+        assert call(tool) == ALLOW, tool
+    assert call("mcp__claude-code-remote__archive_session") == DENY
+    section = open(SKILL_MD).read().split("## The guard", 1)[1].split("`Bash` passes", 1)[0]
+    documented = {n for n in re.findall(r"`([A-Za-z_][\w-]*)`", section)
+                  if n[0].isupper() or n.startswith("mcp__")}
+    assert documented == load_guard().SAFE_TOOLS, documented ^ load_guard().SAFE_TOOLS
+
+
+def test_tail_follow_denied():
+    for cmd in ("tail -f log", "tail -F log", "tail --follow=name log", "tail -nf 5 log"):
+        assert bash(cmd) == DENY, cmd
+    assert bash("tail -n 5 log") == ALLOW
 
 
 if __name__ == "__main__":
