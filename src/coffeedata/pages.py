@@ -1,7 +1,7 @@
-"""Secondary crawler for stores that refuse the JSON catalog: the sitemap first, then product pages.
+"""Secondary crawler for stores whose JSON feed rate-limits us: the sitemap first, then product pages.
 
-Used for stores whose /products.json (or Store API) answers a block to every request (`refused` in the fetches
-table), and for stores with no JSON feed. It yields the same CatalogItem records the JSON adapters do: for Shopify
+Used for stores whose JSON feed (/products.json, the Store API) answered this run only with rate limiting (429s),
+never a block (401, 403, 430): see rate_limited(). It yields the same CatalogItem records the JSON adapters do: for Shopify
 the same product and variant ids, so a coffee keeps its coffee_id whichever path read it.
 
 Cheapest source first, per store:
@@ -458,10 +458,16 @@ def browser_renderer(c: PoliteClient) -> Renderer:
 # --- 4. a run over the lake ------------------------------------------------------------------------------------
 
 
-def refused(lake: Lake, run_date: str) -> list[Roaster]:
-    """Roasters this run's JSON crawl couldn't read because the store refused it, and that have no ok fetch in the
-    run: an error recorded as `refused: ...` (ingest's deferred rounds), or one where every response was a block
-    (429/430/403) and no page came back. Stores with no JSON feed already go through the generic adapter."""
+BLOCK_SIGNS = (
+    401,
+    403,
+    430,
+)  # on the JSON feed: a block, not rate limiting. Such a store is never page-crawled.
+
+
+def rate_limited(lake: Lake, run_date: str) -> list[Roaster]:
+    """Roasters whose JSON feed this run answered only with rate limiting: at least one 429, no catalog page, no ok
+    fetch, and never a 401, 403 or 430 (those are blocks, and a blocked store is left alone)."""
     from . import registry
 
     con = lake.connect()
@@ -470,10 +476,11 @@ def refused(lake: Lake, run_date: str) -> list[Roaster]:
         select roaster_id from {lake.scan("fetches")} where run_date = ?
         group by roaster_id
         having count(*) filter (where status = 'ok') = 0
-           and bool_or(error like 'refused:%' or (pages = 0 and rate_limited > 0)
-                       or error like '%HTTP 403%' or error like '%HTTP 430%')
+           and sum(rate_limited) > 0
+           and sum(pages) = 0
+           and not bool_or(list_has_any([s.status for s in coalesce(http_statuses, [])], ?))
         """,
-        [date.fromisoformat(run_date)],
+        [date.fromisoformat(run_date), list(BLOCK_SIGNS)],
     ).fetchall()
     want = {r[0] for r in rows}
     return [s.roaster for s in registry.current(lake) if s.roaster.roaster_id in want]

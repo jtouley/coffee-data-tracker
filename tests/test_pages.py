@@ -245,24 +245,27 @@ def test_run_writes_the_json_adapters_shape(store, lake):
     assert fetch == [("ok", 10, date(2026, 11, 2))]
 
 
-def test_refused_selects_only_stores_that_refused_and_never_succeeded(lake, monkeypatch):
+def test_only_rate_limited_stores_are_selected_never_blocked_ones(lake, monkeypatch):
+    from collections import Counter
+
     now = datetime.now(UTC)
-    a = Roaster(roaster_id="a.com", name="A", host="a.com", platform="shopify")
-    b = Roaster(roaster_id="b.com", name="B", host="b.com", platform="shopify")
-    rows = ingest.rows_for(
-        [
-            ingest.Result(
-                a, now, error="refused: answered a block to every catalog request", stats=RequestStats()
-            ),
-            ingest.Result(b, now, error="refused: ...", stats=RequestStats()),
-            ingest.Result(b, now, stats=RequestStats()),  # b recovered later in the run
-        ],
-        date(2026, 11, 2),
-        new_batch_id(),
-        set(),
-        set(),
-    )
+
+    def res(rid, statuses=(), error="refused: answered a block to every catalog request"):
+        r = Roaster(roaster_id=rid, name=rid, host=rid, platform="shopify")
+        stats = RequestStats(statuses=Counter(statuses), rate_limited=list(statuses).count(429))
+        return ingest.Result(r, now, error=error, stats=stats)
+
+    results = [
+        res("limited.com", [429, 429, 429]),
+        res("recovered.com", [429]),
+        res("recovered.com", [200], error=None),  # ok later in the run
+        res("blocked430.com", [430, 430]),  # Shopify's security block
+        res("forbidden.com", [403]),
+        res("mixed.com", [429, 403]),
+        res("down.com", [], error="ConnectError"),
+    ]
+    rows = ingest.rows_for(results, date(2026, 11, 2), new_batch_id(), set(), set())
     lake.write_partition("fetches", "2026-11-02", new_batch_id(), rows["fetches"])
-    states = [registry.RoasterState(roaster=r, status="active", last_probed=None) for r in (a, b)]
+    states = [registry.RoasterState(roaster=r.roaster, status="active", last_probed=None) for r in results]
     monkeypatch.setattr(registry, "current", lambda _lake: states)
-    assert [r.roaster_id for r in pages.refused(lake, "2026-11-02")] == ["a.com"]
+    assert [r.roaster_id for r in pages.rate_limited(lake, "2026-11-02")] == ["limited.com"]

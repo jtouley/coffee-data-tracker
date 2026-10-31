@@ -125,7 +125,7 @@ def cmd_pages(args: argparse.Namespace) -> None:
         known = {s.roaster.roaster_id: s.roaster for s in registry.current(lake)}
         todo = [known[r] for r in args.only]
     else:
-        todo = pages.refused(lake, args.run_date)
+        todo = pages.rate_limited(lake, args.run_date)
     print(f"reading product pages of {len(todo)} roasters for run {args.run_date}", file=sys.stderr)
     summary, out = pages.run(lake, todo, args.run_date, render=args.render)
     summary["stores"] = [
@@ -575,10 +575,10 @@ def main(argv: list[str] | None = None) -> None:
     pg = add(
         "pages",
         cmd_pages,
-        "read product pages of stores that refused their JSON catalog this run (secondary crawl)",
+        "read product pages of stores whose JSON feed rate-limited every request this run (secondary crawl)",
     )
     pg.add_argument("--run-date", type=_run_date, default=_today())
-    pg.add_argument("--only", nargs="+", help="these roaster_ids instead of this run's refusers")
+    pg.add_argument("--only", nargs="+", help="these roaster_ids instead of this run's rate-limited stores")
     pg.add_argument("--render", action="store_true", help="a headless browser for pages with no product data")
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")

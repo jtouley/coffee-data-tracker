@@ -439,8 +439,8 @@ disagree with the contract. So a change to a public table starts in the contract
 - Only what a shopper can see is stored, and every coffee links back to its roaster.
 - Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
   roaster" box on the "Add a roaster" form, and the site is never fetched again.
-- When a store's JSON feed refuses every request in a run (a 429, 430 or 403 each time), its public product pages
-  are read instead (`coffeedata pages`): the sitemap first, then each product page once, collection pages only if
+- When a store's JSON feed rate-limits every request in a run (429s on `/products.json`, and never a 401, 403 or
+  430), its public product pages are read instead (`coffeedata pages`): the sitemap first, then each product page once, collection pages only if
   the sitemap lists no products. The same rules apply, and more strictly. The User-Agent also gives a contact
   address, requests to the store are at least 3 seconds apart and never retried, and the first 401, 403, 429,
   430 or 503, or a CAPTCHA, bot-challenge or block page, stops that store for the week. Nothing is solved, logged
