@@ -474,7 +474,9 @@ make clean   # remove build/ and dbt artifacts
 - CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
   with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
-Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues).
+Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues), and
+vulnerabilities privately, as [SECURITY.md](SECURITY.md) describes. Before opening a pull
+request, read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## History
 
