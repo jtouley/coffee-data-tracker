@@ -5,12 +5,14 @@ from __future__ import annotations
 import contextlib
 import copy
 import logging
+import os
 import threading
 import time
 import urllib.robotparser
 from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
 from urllib.parse import urljoin, urlparse
 
@@ -32,6 +34,46 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
 MAX_REDIRECTS = 20
+
+
+# A refusal or block. Each one is recorded with the headers Shopify Support asks for (and that tell a Cloudflare
+# challenge, `cf-mitigated: challenge` with an HTML body, from a rate limit), plus the egress IP it was sent from.
+LOGGED_BLOCK_STATUSES = (403, 429, 430, 503)
+BLOCK_HEADERS = ("server", "cf-mitigated", "content-type", "retry-after", "cf-ray", "x-request-id")
+MAX_BLOCKS_PER_FETCH = 20  # a store that refuses every try doesn't fill its fetch row with copies
+EGRESS_TTL = 60.0  # seconds an egress-IP lookup is reused (default egress can change IP between connections)
+_egress_lock = threading.Lock()
+_egress: dict[str, Any] = {"ip": None, "at": None}
+
+
+def egress_ip() -> str | None:
+    """The public IP this process's requests leave from, as best known: COFFEEDATA_EGRESS_IP if the job sets it
+    (a dedicated NAT IP is known in advance), else a lookup at COFFEEDATA_EGRESS_ECHO_URL (a plain-text "what is
+    my IP" endpoint, not a store), reused for EGRESS_TTL; None when neither is configured or the lookup fails."""
+    if fixed := os.environ.get("COFFEEDATA_EGRESS_IP"):
+        return fixed
+    url = os.environ.get("COFFEEDATA_EGRESS_ECHO_URL")
+    if not url:
+        return None
+    with _egress_lock:
+        if _egress["at"] is not None and time.monotonic() - _egress["at"] < EGRESS_TTL:
+            return _egress["ip"]
+        try:
+            r = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=5.0)
+            text = r.text.strip()
+            ip = text if r.status_code == 200 and 0 < len(text) <= 45 and " " not in text else None
+        except httpx.HTTPError:
+            ip = None
+        _egress.update(ip=ip, at=time.monotonic())
+        return ip
+
+
+def block_record(r: httpx.Response) -> dict:
+    """What one refused or blocked response said about itself (raw.fetches.blocks)."""
+    h = r.headers
+    return {"at": datetime.now(UTC).replace(microsecond=0), "status": r.status_code, "host": r.url.host,
+            "path": r.url.path, **{k.replace("-", "_"): h.get(k) for k in BLOCK_HEADERS},
+            "egress_ip": egress_ip()}  # fmt: skip
 
 
 class FetchError(Exception):
@@ -65,8 +107,21 @@ class RequestStats:
     retries: int = 0  # attempts after the first for one URL
     rate_limited: int = 0  # 429 responses
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
+    blocks: list[dict] = field(default_factory=list)  # block_record() of each 403/429/430/503, the first 20
 
-    def note(self, status: int | None, retry: bool = False, page: bool = True) -> None:
+    def note(
+        self,
+        status: int | None,
+        retry: bool = False,
+        page: bool = True,
+        response: httpx.Response | None = None,
+    ) -> None:
+        if (
+            response is not None
+            and status in LOGGED_BLOCK_STATUSES
+            and len(self.blocks) < MAX_BLOCKS_PER_FETCH
+        ):
+            self.blocks.append(block_record(response))
         self.requests += 1
         self.retries += retry
         if status is not None:
@@ -115,9 +170,15 @@ class PoliteClient:
         finally:
             self._local.stats = prev
 
-    def _note(self, status: int | None, retry: bool = False, page: bool = True) -> None:
+    def _note(
+        self,
+        status: int | None,
+        retry: bool = False,
+        page: bool = True,
+        response: httpx.Response | None = None,
+    ) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:
-            stats.note(status, retry, page)
+            stats.note(status, retry, page, response)
 
     def close(self) -> None:
         self._client.close()
@@ -141,7 +202,7 @@ class PoliteClient:
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
             return self._client.get(url, params=params)
-        with self._limiter.slot():
+        with self._limiter.slot(urlparse(url).hostname):
             r = self._client.get(url, params=params)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
         return r
@@ -232,7 +293,7 @@ class PoliteClient:
                 if last:
                     raise
             else:
-                self._note(r.status_code, retry=attempt > 0, page=page)
+                self._note(r.status_code, retry=attempt > 0, page=page, response=r)
                 if r.status_code not in RETRY_STATUSES or last:
                     return r
                 if self._limiter is not None and r.status_code in BLOCK_STATUSES:

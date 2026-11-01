@@ -63,6 +63,23 @@ VARIANT = pa.struct(
 
 # One HTTP status a fetch saw, and how many responses had it.
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
+# One refused or blocked response (403/429/430/503), with the headers that tell a rate limit from an edge challenge
+# and that Shopify Support asks for, and the egress IP it left from (http.block_record).
+BLOCK = pa.struct(
+    [
+        ("at", pa.timestamp("s", tz="UTC")),
+        ("status", pa.int32()),
+        ("host", pa.string()),
+        ("path", pa.string()),
+        ("server", pa.string()),
+        ("cf_mitigated", pa.string()),
+        ("content_type", pa.string()),
+        ("retry_after", pa.string()),
+        ("cf_ray", pa.string()),
+        ("x_request_id", pa.string()),
+        ("egress_ip", pa.string()),
+    ]
+)
 
 # Hugging Face's Image feature: the dataset viewer shows a thumbnail for a struct of bytes and path.
 IMAGE = pa.struct([("bytes", pa.binary()), ("path", pa.string())])
@@ -125,6 +142,8 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("rate_limited", pa.int32()),
             ("duration_s", pa.float64()),
             ("code_version", pa.string()),
+            # Added with raw contract 1.1.0 (older files read back as null): each refused or blocked response.
+            ("blocks", pa.list_(BLOCK)),
         ]
     ),
     "probes": pa.schema(
@@ -240,6 +259,37 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     # What an ingest set out to fetch, written before its first request: one row per roaster it intends to
     # fetch, with that roaster's status at that moment. run_completeness reads it as the run's expected set.
+    # The control plane (design B): one row when a job starts and one when it ends: crawl, crawl-retry, merge or
+    # enrich, per connector and week. Services read it instead of calling each other; the weekly merge rolls a
+    # week's rows into one file. Never read by dbt.
+    "job_manifests": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("job", pa.string()),
+            ("connector", pa.string()),
+            ("shard", pa.string()),
+            ("attempt_id", pa.string()),
+            ("started_at", pa.timestamp("s", tz="UTC")),
+            ("ended_at", pa.timestamp("s", tz="UTC")),
+            ("status", pa.string()),  # running, done, deadline, failed
+            ("todo", pa.int32()),
+            ("ok", pa.int32()),
+            ("errors", pa.int32()),
+            ("parked", pa.int32()),
+            ("skipped", pa.int32()),
+            ("requests", pa.int32()),
+            ("http_429", pa.int32()),
+            ("http_430", pa.int32()),
+            ("egress_ips", pa.list_(pa.string())),
+            # per egress IP: stores contacted, and those that refused (429/430) their first catalog request
+            (
+                "refusals",
+                pa.list_(pa.struct([("ip", pa.string()), ("stores", pa.int32()), ("refused", pa.int32())])),
+            ),
+            ("code_version", pa.string()),
+            ("detail", pa.string()),  # JSON: the job's own summary
+        ]
+    ),
     "run_manifests": pa.schema(
         [
             ("run_date", pa.date32()),
@@ -403,6 +453,7 @@ GLOBS = {
     "run_overrides": "run_overrides/*.parquet",
     "builds": "builds/*/*.parquet",
     "run_manifests": "run_manifests/*/*.parquet",
+    "job_manifests": "job_manifests/*/*.parquet",
     "serving_log": "serving_log/*.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
@@ -425,6 +476,7 @@ SCHEMA_FILES = {
     "run_overrides": "run_overrides/override_id=schema.parquet",
     "builds": "builds/run_date=0000-00-00/build=schema.parquet",
     "run_manifests": "run_manifests/run_date=0000-00-00/batch=schema.parquet",
+    "job_manifests": "job_manifests/run_date=0000-00-00/attempt=schema.parquet",
     "serving_log": "serving_log/serve_id=schema.parquet",
     # v2 adds the app's columns. Old lakes keep their v1 file; this one is added beside it, so a glob over
     # only old shot files still has every column.

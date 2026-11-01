@@ -1,0 +1,231 @@
+{
+ "contract": "raw",
+ "version": "1.1.0",
+ "fingerprint": "f7c5827e88b84667",
+ "producer": "connector ingest jobs (crawl, crawl-retry), via the weekly merge",
+ "consumers": [
+  "dbt (stg_snapshots, stg_product_inputs, stg_fetches)",
+  "enrichment job",
+  "registry"
+ ],
+ "tables": {
+  "snapshots": [
+   {
+    "name": "run_date",
+    "type": "date32[day]",
+    "nullable": true
+   },
+   {
+    "name": "batch_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "fetched_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "roaster_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "product_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "handle",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "url",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "title",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "platform",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "vendor",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "product_type",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "tags",
+    "type": "list<item: string>",
+    "nullable": true
+   },
+   {
+    "name": "image",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "body_hash",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "variants",
+    "type": "list<item: struct<variant_id: string, title: string, price_usd: double, grams: int32, available: bool>>",
+    "nullable": true
+   },
+   {
+    "name": "is_coffee",
+    "type": "bool",
+    "nullable": true
+   },
+   {
+    "name": "published_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "payload_hash",
+    "type": "string",
+    "nullable": true
+   }
+  ],
+  "bodies": [
+   {
+    "name": "body_hash",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "body_text",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "first_seen_run",
+    "type": "date32[day]",
+    "nullable": true
+   }
+  ],
+  "fetches": [
+   {
+    "name": "run_date",
+    "type": "date32[day]",
+    "nullable": true
+   },
+   {
+    "name": "batch_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "fetched_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "roaster_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "adapter",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "status",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "products",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "coffees",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "pages",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "requests",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "http_statuses",
+    "type": "list<item: struct<status: int32, responses: int32>>",
+    "nullable": true
+   },
+   {
+    "name": "retries",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "rate_limited",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "duration_s",
+    "type": "double",
+    "nullable": true
+   },
+   {
+    "name": "code_version",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "blocks",
+    "type": "list<item: struct<at: timestamp[s, tz=UTC], status: int32, host: string, path: string, server: string, cf_mitigated: string, content_type: string, retry_after: string, cf_ray: string, x_request_id: string, egress_ip: string>>",
+    "nullable": true
+   }
+  ]
+ },
+ "files": {
+  "parked/run_date=<date>/<roaster_id>.json": {
+   "page": "int: the catalog page that stayed blocked",
+   "items": [
+    "body_hash",
+    "body_text",
+    "handle",
+    "image",
+    "payload_hash",
+    "platform",
+    "product_id",
+    "product_type",
+    "published_at",
+    "roaster_id",
+    "tags",
+    "title",
+    "url",
+    "variants",
+    "vendor"
+   ]
+  }
+ }
+}

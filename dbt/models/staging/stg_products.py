@@ -9,8 +9,7 @@ result from the same lake, and a fix to the rules applies to every past week wit
 
 import pyarrow as pa
 
-from coffeedata import classify, extract
-from coffeedata.models import CatalogItem, Variant
+from coffeedata import classify, extract, products
 
 SCHEMA = pa.schema(
     [
@@ -36,25 +35,14 @@ ATTRS = [f.name for f in SCHEMA][5:]
 
 
 def row(r: dict, verdicts: dict[str, str]) -> dict:
-    item = CatalogItem(
-        roaster_id="",
-        product_id="",
-        handle="",
-        url="",
-        title=r["title"] or "",
-        platform="",
-        product_type=r["product_type"] or "",
-        tags=r["tags"] or [],
-        variants=[Variant(variant_id=str(i), grams=g) for i, g in enumerate(r["grams"] or [])],
-        body_hash=r["body_hash"] or "",
-        body_text=r["body_text"] or "",
-    )
+    # The decisions live in coffeedata.products, shared with the enrichment job and the registry.
+    item = products.item(r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"])
     label = verdicts.get(r["input_hash"])
-    by_claude = label in ("coffee", "not_coffee") and not classify.excluded(item)
+    is_coffee, classified_by = products.decide(item, label)
     out = {
         "input_hash": r["input_hash"],
-        "is_coffee": label == "coffee" if by_claude else classify.is_coffee(item),
-        "classified_by": "claude" if by_claude else "rules",
+        "is_coffee": is_coffee,
+        "classified_by": classified_by,
         "is_wholesale": classify.is_wholesale(item),
         "clean_title": item.title,
     }
