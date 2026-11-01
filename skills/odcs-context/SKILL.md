@@ -74,7 +74,8 @@ more than about five rounds: a smaller context the user stands behind beats a lo
 - you ran the query against the data (the user gave access) and the user agreed with the result.
 
 Otherwise record the question alone (it still primes text-to-SQL) and list it in your report as "needs an
-answer". If the user wants guidance on how to answer without a verified result, write it as a query recipe
+answer". If you can't reach the data, say so when you ask about answers, so the user knows the choice is
+between giving an answer themselves and recording the question alone. If the user wants guidance on how to answer without a verified result, write it as a query recipe
 in `instructions` for that object, not as an `answer`.
 
 ### 4. Draft, confirm, write

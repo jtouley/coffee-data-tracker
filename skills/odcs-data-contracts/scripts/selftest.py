@@ -23,8 +23,11 @@ VALIDATOR = Path(__file__).with_name("validate_contract.py")
 
 
 def run(schema: Path, files: list[Path]) -> list[dict]:
-    out = subprocess.run([sys.executable, str(VALIDATOR), "--json", "--schema", str(schema), *map(str, files)],
-                         capture_output=True, text=True)
+    out = subprocess.run(
+        [sys.executable, str(VALIDATOR), "--json", "--schema", str(schema), *map(str, files)],
+        capture_output=True,
+        text=True,
+    )
     if out.returncode == 2:
         sys.exit(out.stderr)
     return json.loads(out.stdout)

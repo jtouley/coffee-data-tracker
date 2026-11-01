@@ -41,23 +41,29 @@ contract = yaml.safe_load(Path("contracts/orders.odcs.yaml").read_text())
 models = {m["name"]: m for m in yaml.safe_load(Path("dbt/models/schema.yml").read_text())["models"]}
 schema = json.loads(Path("contracts/schemas/odcs-json-schema-v3.2.0.json").read_text())
 
+
 def test_contract_is_valid_odcs():
     v = jsonschema.validators.validator_for(schema)(schema)
     assert [e.message for e in v.iter_errors(contract)] == []
+
 
 def test_dbt_enforces_the_contract():
     for obj in contract["schema"]:
         model = models[obj["name"]]
         assert model["config"]["contract"] == {"enforced": True}
-        assert [(c["name"], c["data_type"]) for c in model["columns"]] == \
-               [(p["name"], p["physicalType"]) for p in obj["properties"]]
-        tests = {c["name"]: [t if isinstance(t, str) else next(iter(t)) for t in c.get("data_tests") or []]
-                 for c in model["columns"]}
+        assert [(c["name"], c["data_type"]) for c in model["columns"]] == [
+            (p["name"], p["physicalType"]) for p in obj["properties"]
+        ]
+        tests = {
+            c["name"]: [t if isinstance(t, str) else next(iter(t)) for t in c.get("data_tests") or []]
+            for c in model["columns"]
+        }
         for p in obj["properties"]:
             if p.get("required"):
                 assert "not_null" in tests[p["name"]], p["name"]
             if p.get("unique"):
                 assert "unique" in tests[p["name"]], p["name"]
+
 
 def test_quality_rules_point_at_real_dbt_tests():
     for obj in contract["schema"]:

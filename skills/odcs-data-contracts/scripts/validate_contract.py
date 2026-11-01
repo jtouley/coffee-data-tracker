@@ -47,8 +47,14 @@ CACHE = Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "odcs-s
 
 # Fields the standard keeps valid but has deprecated. (path regex, message)
 DEPRECATIONS = [
-    (r"^\$\.dataProduct$", "`dataProduct` is deprecated since v3.1.0; link the contract from the data product (ODPS) instead."),
-    (r"^\$\.slaDefaultElement$", "`slaDefaultElement` is deprecated since v3.1.0 and removed in v4.0.0; set `element` on each slaProperties entry."),
+    (
+        r"^\$\.dataProduct$",
+        "`dataProduct` is deprecated since v3.1.0; link the contract from the data product (ODPS) instead.",
+    ),
+    (
+        r"^\$\.slaDefaultElement$",
+        "`slaDefaultElement` is deprecated since v3.1.0 and removed in v4.0.0; set `element` on each slaProperties entry.",
+    ),
     (r"\.quality\[\d+\]\.rule$", "`quality[].rule` is deprecated; use `metric`."),
 ]
 # Keys that look plausible but are not ODCS fields, and what to use instead.
@@ -63,16 +69,31 @@ NOT_ODCS = {
     "rule": "deprecated; use `metric` (with `type: library`), or `type: sql` + `query`, or `type: custom` + `implementation`.",
     "pii": "use `classification` (e.g. `restricted`) and/or `tags`, or a customProperty.",
 }
-SPECIFIC = {"type": 0, "enum": 0, "const": 0, "pattern": 0, "required": 1, "minItems": 1, "maxItems": 1,
-            "uniqueItems": 1, "minimum": 1, "maximum": 1, "format": 1, "not": 2, "additionalProperties": 3,
-            "unevaluatedProperties": 4}
+SPECIFIC = {
+    "type": 0,
+    "enum": 0,
+    "const": 0,
+    "pattern": 0,
+    "required": 1,
+    "minItems": 1,
+    "maxItems": 1,
+    "uniqueItems": 1,
+    "minimum": 1,
+    "maximum": 1,
+    "format": 1,
+    "not": 2,
+    "additionalProperties": 3,
+    "unevaluatedProperties": 4,
+}
 
 
 def load_yaml(path: Path):
     text = path.read_text(encoding="utf-8")
+
     # ODCS dates are strings; keep YAML from turning 2024-01-01 into a date object.
     class Loader(yaml.SafeLoader):
         pass
+
     Loader.yaml_implicit_resolvers = {
         k: [(tag, rx) for tag, rx in v if tag != "tag:yaml.org,2002:timestamp"]
         for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()
@@ -100,8 +121,10 @@ def find_schema(version: str, starts: list[Path], ref: str) -> Path:
             with urllib.request.urlopen(url, timeout=30) as r:
                 cached.write_bytes(r.read())
         except Exception as e:  # noqa: BLE001
-            raise SystemExit(f"error: no local {name} and could not download {url}: {e}\n"
-                             f"Pass --schema PATH to a copy of the schema.") from e
+            raise SystemExit(
+                f"error: no local {name} and could not download {url}: {e}\n"
+                f"Pass --schema PATH to a copy of the schema."
+            ) from e
     return cached
 
 
@@ -130,6 +153,7 @@ def key_definitions(schema) -> dict[str, list]:
         elif isinstance(node, list):
             for v in node:
                 walk(v)
+
     walk(schema)
     return defs
 
@@ -153,7 +177,9 @@ def readable(e) -> str:
         keys = ", ".join(f"'{k}'" for k in e.validator_value["required"])
         return f"must not set {keys} here"
     if e.validator in ("oneOf", "anyOf"):
-        return f"matches {'more than one' if 'valid under each' in e.message else 'none'} of the allowed shapes"
+        return (
+            f"matches {'more than one' if 'valid under each' in e.message else 'none'} of the allowed shapes"
+        )
     return e.message
 
 
@@ -161,16 +187,30 @@ def diagnose(doc, validator, defs) -> list[tuple[str, str]]:
     raw = [leaf for top in validator.iter_errors(doc) for leaf in leaves(top)]
     specific = [e for e in raw if e.validator not in ("unevaluatedProperties", "additionalProperties")]
     # A "matches more than one shape" error is a side effect when the same object has a real error.
-    specific = [e for e in specific if not (e.validator in ("oneOf", "anyOf") and any(
-        o is not e and o.json_path == e.json_path and o.validator not in ("oneOf", "anyOf") for o in specific))]
+    specific = [
+        e
+        for e in specific
+        if not (
+            e.validator in ("oneOf", "anyOf")
+            and any(
+                o is not e and o.json_path == e.json_path and o.validator not in ("oneOf", "anyOf")
+                for o in specific
+            )
+        )
+    ]
     out: dict[tuple[str, str], object] = {}  # (path, message) -> the `required` list it came from
 
     # Alternatives of an anyOf/oneOf that each want a different key ("mustBe is required",
     # "mustNotBe is required", ...) are noise when a more specific error sits deeper.
     deepest = max((depth(e) for e in specific), default=-1)
     for e in sorted(specific, key=lambda e: (-depth(e), SPECIFIC.get(e.validator, 2))):
-        if e.validator == "required" and depth(e) < deepest and any(
-            depth(o) > depth(e) and list(o.absolute_path)[: depth(e)] == list(e.absolute_path) for o in specific
+        if (
+            e.validator == "required"
+            and depth(e) < deepest
+            and any(
+                depth(o) > depth(e) and list(o.absolute_path)[: depth(e)] == list(e.absolute_path)
+                for o in specific
+            )
         ):
             continue
         out[(e.json_path, readable(e))] = tuple(e.validator_value) if e.validator == "required" else None
@@ -179,8 +219,10 @@ def diagnose(doc, validator, defs) -> list[tuple[str, str]]:
         if e.validator not in ("unevaluatedProperties", "additionalProperties"):
             continue
         extra = re.findall(r"'([^']+)'", e.message.split("(")[-1]) if "(" in e.message else []
-        explained_below = any(p == e.json_path or p.startswith(e.json_path + ".") or p.startswith(e.json_path + "[")
-                              for p, _ in out)
+        explained_below = any(
+            p == e.json_path or p.startswith(e.json_path + ".") or p.startswith(e.json_path + "[")
+            for p, _ in out
+        )
         for key in extra:
             if not isinstance(e.instance, dict) or key not in e.instance:
                 continue
@@ -233,12 +275,20 @@ def warnings(doc, path: Path) -> list[tuple[str, str]]:
         elif isinstance(node, list):
             for i, v in enumerate(node):
                 walk(v, f"{jp}[{i}]")
+
     walk(doc, "$")
     if isinstance(doc, dict) and isinstance(doc.get("team"), list):
-        found.append(("$.team", "a list under `team` is the pre-v3.1 structure, deprecated and removed in v4; "
-                                "use `team: {name, members: [...]}`."))
+        found.append(
+            (
+                "$.team",
+                "a list under `team` is the pre-v3.1 structure, deprecated and removed in v4; "
+                "use `team: {name, members: [...]}`.",
+            )
+        )
     if not path.name.endswith(".odcs.yaml"):
-        found.append(("file", f"name it *.odcs.yaml so editors and tools recognise it as ODCS ({path.name})."))
+        found.append(
+            ("file", f"name it *.odcs.yaml so editors and tools recognise it as ODCS ({path.name}).")
+        )
     return found
 
 
@@ -246,7 +296,9 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("contracts", nargs="+", type=Path)
     ap.add_argument("--schema", type=Path, default=os.environ.get("ODCS_SCHEMA"))
-    ap.add_argument("--ref", default="main", help="git ref of bitol-io/open-data-contract-standard to download from")
+    ap.add_argument(
+        "--ref", default="main", help="git ref of bitol-io/open-data-contract-standard to download from"
+    )
     ap.add_argument("--json", action="store_true", help="machine-readable output")
     a = ap.parse_args(argv)
 
@@ -263,24 +315,35 @@ def main(argv=None) -> int:
         version = doc.get("apiVersion") if isinstance(doc, dict) else None
         schema_path = a.schema or find_schema(
             version if isinstance(version, str) and re.fullmatch(r"v\d+\.\d+\.\d+", version) else "latest",
-            [path.resolve().parent, Path.cwd()], a.ref)
+            [path.resolve().parent, Path.cwd()],
+            a.ref,
+        )
         data = Path(schema_path).read_bytes()
         schema = json.loads(data)
         validator = jsonschema.validators.validator_for(schema)(schema)
         errors = diagnose(doc, validator, key_definitions(schema))
         warns = warnings(doc, path)
         status = status or (1 if errors else 0)
-        report.append({"file": str(path), "apiVersion": version, "schema": str(schema_path),
-                       "schemaSha256": hashlib.sha256(data).hexdigest()[:12], "valid": not errors,
-                       "errors": [{"path": p, "message": m} for p, m in errors],
-                       "warnings": [{"path": p, "message": m} for p, m in warns]})
+        report.append(
+            {
+                "file": str(path),
+                "apiVersion": version,
+                "schema": str(schema_path),
+                "schemaSha256": hashlib.sha256(data).hexdigest()[:12],
+                "valid": not errors,
+                "errors": [{"path": p, "message": m} for p, m in errors],
+                "warnings": [{"path": p, "message": m} for p, m in warns],
+            }
+        )
 
     if a.json:
         print(json.dumps(report, indent=2))
         return status
     for r in report:
         head = "VALID" if r["valid"] else f"INVALID ({len(r['errors'])} error{'s' * (len(r['errors']) != 1)})"
-        print(f"{r['file']}: {head}  [apiVersion {r['apiVersion']}; schema {r['schema']} sha256:{r['schemaSha256']}]")
+        print(
+            f"{r['file']}: {head}  [apiVersion {r['apiVersion']}; schema {r['schema']} sha256:{r['schemaSha256']}]"
+        )
         for e in r["errors"]:
             print(f"  ERROR   {e['path']}: {e['message']}")
         for w in r["warnings"]:
