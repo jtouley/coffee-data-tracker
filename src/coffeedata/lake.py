@@ -789,9 +789,11 @@ class Lake:
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
                     if p.exists()
-                    and rel not in existing
-                    or rel.startswith("marts/")
-                    or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
+                    and (
+                        rel not in existing
+                        or rel.startswith("marts/")
+                        or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
+                    )
                 ]
                 if ops:
                     api.create_commit(

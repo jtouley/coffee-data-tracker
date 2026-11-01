@@ -44,28 +44,28 @@ models:
       with the same rule. dim_roaster's status reads it.
     columns:
       - name: run_date
-        description: As in stg_fetches.
+        description: The weekly run's date (stg_fetches.run_date).
       - name: batch_id
-        description: As in stg_fetches.
+        description: The write batch that holds the attempt (stg_fetches.batch_id).
       - name: fetched_at
-        description: As in stg_fetches.
+        description: When the attempt started, UTC (stg_fetches.fetched_at).
       - name: roaster_id
-        description: As in stg_fetches.
+        description: The roaster's normalized domain (stg_fetches.roaster_id).
         data_tests: [not_null]
       - name: adapter
-        description: As in stg_fetches.
+        description: The catalog adapter used (stg_fetches.adapter).
       - name: status
-        description: As in stg_fetches.
+        description: ok, error or unavailable (stg_fetches.status).
       - name: error
-        description: As in stg_fetches.
+        description: The failure message, for a status other than ok (stg_fetches.error).
       - name: products
-        description: As in stg_fetches.
+        description: Products the attempt read (stg_fetches.products).
       - name: coffees
         description: >-
           stg_fetches.coffees where the crawl recorded it, else int_fetch_coffees.coffees (null only for a fetch
           that isn't ok, or an ok fetch with no snapshots).
       - name: partial
-        description: As in stg_fetches.
+        description: An ok fetch that read only part of the catalog (stg_fetches.partial).
         data_tests: [not_null]
   - name: int_fetch_product_inputs
     description: >-
@@ -76,10 +76,10 @@ models:
           arguments: {column_name: "roaster_id || '|' || batch_id || '|' || product_id"}
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
         data_tests: [not_null]
       - name: batch_id
-        description: The fetch's batch.
+        description: The ingest batch that wrote the fetch (fetches.batch_id; one per chunk of up to 200 roasters).
         data_tests: [not_null]
       - name: product_id
         description: The product within the roaster's catalog.
@@ -108,10 +108,10 @@ models:
           arguments: {column_name: "roaster_id || '|' || batch_id"}
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
         data_tests: [not_null]
       - name: batch_id
-        description: The fetch's batch.
+        description: The ingest batch that wrote the fetch (fetches.batch_id; one per chunk of up to 200 roasters).
         data_tests: [not_null]
       - name: coffees
         description: Distinct products in the fetch that the rule calls coffee.
@@ -123,10 +123,10 @@ models:
           arguments: {column_name: "roaster_id || '|' || run_date"}
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
         data_tests: [not_null]
       - name: run_date
-        description: The run.
+        description: The weekly run's date (the Monday of its week).
         data_tests: [not_null]
       - name: ok
         description: Any attempt in the run was ok.
@@ -151,10 +151,10 @@ models:
           arguments: {column_name: "roaster_id || '|' || run_date"}
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
         data_tests: [not_null]
       - name: run_date
-        description: The run.
+        description: The weekly run's date (the Monday of its week).
         data_tests: [not_null]
       - name: batch_id
         description: The batch that counts for the run.
@@ -168,13 +168,22 @@ models:
         description: The roaster's previous counted run.
       - name: next_run
         description: The roaster's next counted run.
+      - name: prev_complete_run
+        description: >-
+          The roaster's previous counted run that wasn't partial (equals prev_run without partial runs).
+          fct_price_event reads relistings against it.
+      - name: next_complete_run
+        description: >-
+          The roaster's next counted run that wasn't partial (equals next_run without partial runs). fct_price_event
+          reads removals at it, so a partial run never removes a bag.
       - name: is_latest_run
         description: The roaster's latest counted run.
         data_tests: [not_null]
       - name: is_current
         description: >-
           A product seen in this run is listed now: the latest run, or any run since the latest complete
-          (non-partial) one. Equals is_latest_run when the roaster has no partial runs.
+          (non-partial) one. Equals is_latest_run when the roaster has no partial runs. A roaster whose counted runs
+          are all partial has every run current, so nothing it ever listed is delisted until a complete run lands.
         data_tests: [not_null]
   - name: stg_run_quality
     description: Every roaster-week with a successful fetch, the batch that counts, and whether it looks broken.
@@ -183,9 +192,9 @@ models:
           arguments: {column_name: "roaster_id || '|' || run_date"}
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
       - name: run_date
-        description: The run.
+        description: The weekly run's date (the Monday of its week).
       - name: batch_id
         description: The batch that counts for the week (the latest ok one, or the one an override pins).
       - name: fetched_at
@@ -201,21 +210,24 @@ models:
         description: The median product count of the roaster's last 4 counted, complete weeks.
       - name: suspect
         description: The product count fell far below the baseline (suspect_run), and the week isn't partial.
+        data_tests: [not_null]
       - name: override_action
         description: A person's decision on the week, if any.
         data_tests:
           - accepted_values: {arguments: {values: [accept, reject, use_batch]}}
       - name: override_reason
-        description: Why.
+        description: The free-text reason the person gave with `coffeedata override`.
       - name: counted
-        description: The week counts in history.
+        description: >-
+          The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
+        data_tests: [not_null]
   - name: stg_run_walk
     description: Each roaster-week in order, whether it counts, and the counted weeks it was judged against.
     columns:
       - name: roaster_id
-        description: The roaster.
+        description: The roaster's normalized domain (registry roaster_id).
       - name: run_date
-        description: The run.
+        description: The weekly run's date (the Monday of its week).
       - name: batch_id
         description: The batch that counts for the week.
       - name: fetched_at
@@ -232,9 +244,10 @@ models:
       - name: override_action
         description: A person's decision on the week, if any.
       - name: override_reason
-        description: Why.
+        description: The free-text reason the person gave with `coffeedata override`.
       - name: counted
-        description: The week counts in history.
+        description: >-
+          The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
   - name: stg_products
@@ -250,7 +263,7 @@ models:
     description: One row per roaster the latest (or as_of_run) run should have tried, and whether it did.
     columns:
       - name: run_date
-        description: The run judged.
+        description: "The run being judged: as_of_run, else the latest run with a fetch or a manifest."
       - name: roaster_id
         description: A roaster the run should have tried.
         data_tests: [unique, not_null]
@@ -316,11 +329,11 @@ models:
       - name: origin_country
         description: "Origin country (Claude's extraction where there is one, else the rules)."
       - name: origin_region
-        description: "Origin region."
+        description: "The region within the origin country (Claude's extraction where there is one, else the rules)."
       - name: producer
         description: "Farm, washing station or producer."
       - name: varietals
-        description: "Varietals."
+        description: "The coffee plant varieties named in the listing (e.g. Bourbon, Gesha)."
       - name: elevation_masl_min
         description: "Lowest growing elevation (m)."
       - name: elevation_masl_max
@@ -330,9 +343,9 @@ models:
       - name: flavor_categories
         description: "The tasting notes' flavor-wheel categories (flavor_lexicon)."
       - name: is_blend
-        description: "A blend."
+        description: "The coffee is a blend of several origins (rules or Claude, per enrichment_method)."
       - name: is_decaf
-        description: "Decaffeinated."
+        description: "The coffee is decaffeinated (rules or Claude, per enrichment_method)."
       - name: is_wholesale
         description: "A wholesale listing (a bulk twin of a retail coffee)."
       - name: published_at
@@ -387,7 +400,7 @@ models:
       - name: locations
         description: "Number of locations."
       - name: is_chain
-        description: "A chain."
+        description: "The roaster runs multiple retail locations (the registry's is_chain)."
       - name: opted_out
         description: "The roaster asked not to be crawled."
       - name: sources

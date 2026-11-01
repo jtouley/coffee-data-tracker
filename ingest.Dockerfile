@@ -1,6 +1,6 @@
 # The ingestion jobs' image (src/terraform/ingestion.tf): the coffeedata CLI, the dbt project and the registry seed,
-# without the app. Build from the repository root and push to the app's Artifact Registry repository:
-#   docker build -f ingest.Dockerfile -t "$IMAGE" . && docker push "$IMAGE"
+# without the app. Built from the repository root by Cloud Build into the app's Artifact Registry repository
+# (docs/ingestion/RUNBOOK.md §1: `gcloud builds submit`, with BuildKit so ingest.Dockerfile.dockerignore applies).
 # Each Cloud Run job sets its own command (coffeedata crawl / crawl-retry / merge / enrich-week / build).
 FROM python:3.12-slim
 

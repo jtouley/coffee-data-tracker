@@ -13,6 +13,10 @@ export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
 
 - `gcloud auth login` and `gcloud auth application-default login`, as an account that can apply the app's Terraform.
 - Terraform ≥ 1.6. No local Docker is needed: Cloud Build builds the image (§1).
+- A checkout of this repository with [`uv`](https://docs.astral.sh/uv/) and `uv sync` run once: the results script
+  in §3 runs with `uv run`. `jq` for the network check in §2 (Cloud Shell has it).
+- Secret Manager read access for your account on `HF_TOKEN` (`roles/secretmanager.secretAccessor`): §3 reads it with
+  `gcloud secrets versions access` to query the lake.
 - `HF_TOKEN` and `ANTHROPIC_API_KEY` already hold values in Secret Manager: they are the app's secrets
   (`secrets.tf`). Terraform only references them by name and never sets a value.
 - `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`). For verdicts in the build job, add
@@ -45,8 +49,12 @@ The jobs run `:latest`, so every execution started after a build uses it; nothin
 ## 2. Init, plan, apply
 
 **Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
-job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches:
-`terraform plan -var ingest_schedule_enabled=false` should change nothing.
+job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches.
+
+- **In production**, `terraform plan -var ingest_schedule_enabled=false` should show only `max_retries` going from 1
+  to 0 on the `crawl-*` jobs that don't have it yet (this commit sets it; the two Shopify crawl jobs may already have
+  it from `gcloud run jobs update --max-retries 0`). Anything else: stop.
+- **In a fresh project**, expect the plan below.
 
 ```sh
 cd src/terraform
@@ -54,7 +62,7 @@ terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
 terraform plan -var ingest_schedule_enabled=false -out ingest.plan
 ```
 
-**Expected plan: 38 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
+**Expected plan in a fresh project: 38 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
 
 | Resources | Count |
 |---|---|
@@ -76,18 +84,29 @@ terraform output ingest_jobs
 cd ../..
 ```
 
-Check that only crawl-shopify and crawl-retry leave through the NAT:
+Check that only crawl-shopify and crawl-retry leave through the NAT. `gcloud run jobs describe` returns the v1 (Knative)
+form of the job, where Direct VPC egress is the `run.googleapis.com/vpc-access-egress` annotation on the execution
+template (`spec.template.metadata.annotations`, as in Google's
+[Direct VPC egress for jobs](https://cloud.google.com/run/docs/configuring/vpc-direct-vpc) page), not a
+`vpcAccess` field:
 
 ```sh
 for j in crawl-shopify crawl-retry crawl-shopify-default-egress; do
-  echo "$j: $(gcloud run jobs describe $j --region $REGION --format='value(template.template.vpcAccess.egress)')"
-done   # ALL_TRAFFIC, ALL_TRAFFIC, (empty)
+  echo "$j: $(gcloud run jobs describe $j --region $REGION --format=json \
+    | jq -r '.spec.template.metadata.annotations["run.googleapis.com/vpc-access-egress"] // "(none)"')"
+done   # all-traffic, all-traffic, (none)
 ```
+
+If the first two print `(none)` as well, look at the whole template before trusting either answer:
+`gcloud run jobs describe crawl-shopify --region $REGION --format=yaml | grep -i -A2 vpc`.
 
 ## 3. Confirmation run: Shopify, three arms (today)
 
-Each arm crawls one third of the Shopify roasters, chosen by a salted hash of `roaster_id`, so no store is in two
-arms. Per-store windows can't carry over from one arm to another; only a shared egress IP can. So:
+Each arm crawls one third of the Shopify roasters, chosen by a salted hash, so the arms' stores don't overlap. From
+this commit on, the hash is of the roaster's **host**, so roaster_ids that share one store (24 hosts serve 49 of the
+1,070 Shopify roaster_ids) are always in the same arm. An image built before it (79464cd) hashes `roaster_id`: with
+`confirm-2026-11a`, 15 shared hosts fall in two arms, a small overlap to note with today's results. Never resume or
+re-run one salt's arms on a different image: the thirds differ. Per-store windows can't carry over from one arm to another; only a shared egress IP can. So:
 - **arms 1 and 2 run at the same time**: default egress and the NAT IP are different IPs;
 - **arm 3 starts 30 min after arm 2 ends**: it shares arm 2's NAT IP (34.172.156.113), and the gap lets an IP-wide
   window from arm 2 reset. Arm 1 may still be running then, on another IP.
@@ -95,14 +114,29 @@ arms. Per-store windows can't carry over from one arm to another; only a shared 
 All three run today, once the image from §1 is built. The lake already has history (product counts), so v2's
 short-page stop works in every arm.
 
+**Before the first arm, turn retries off** for the two jobs (Terraform sets `max_retries = 0` for every crawl job from
+this commit on; this is the same setting, by hand, for an image built earlier):
+
+```sh
+for j in crawl-shopify crawl-shopify-default-egress; do
+  gcloud run jobs update $j --region $REGION --max-retries 0
+done
+```
+
+A second attempt would re-ask the stores that already refused, in a new 225-min window, and add a second end row
+with the same `detail.arm`.
+
 **Pass `--run-date $WEEK` (2026-11-02), not today's date.** A crawl works on the week of its run date, and skips
-every store the lake already has an ok fetch for that week. Today's week (2026-10-26) is already crawled, so without
+every store the lake already has an ok fetch for under that run_date (an exact match on the Monday, not any day of
+the week). Today's week (2026-10-26) is already crawled, so without
 it an arm would find almost nothing to do. 2026-11-02 has no fetches in the lake yet. Each arm writes only to its own
 sub-partition in the staging bucket, `raw/connector=shopify/run_date=2026-11-02/slice=k-of-3/`: concurrent arms never
 compact each other's files, and the weekly merge never reads a slice. The arms' `job_manifests` rows go to the lake
-under 2026-11-02; Monday's GitHub weekly run doesn't read them. Don't run merge or crawl-retry during the
-confirmation run. **Monday's GitHub Actions weekly run stays as the
-fallback.** It crawls from runner IPs after every arm has ended, and nothing here changes it.
+under 2026-11-02; Monday's GitHub weekly run doesn't read them, and from this commit on an arm's row (one with
+`detail.slice` or `detail.arm`, from any image) never counts as the week's Shopify crawl in `merge` and never feeds
+`egress-check`. Don't run merge or crawl-retry during the confirmation run. **Monday's GitHub Actions weekly run
+stays as the fallback** (09:17 UTC on 2026-11-02). Nothing enforces that it starts after the arms end, so keep to the
+latest start time below.
 
 Choose a salt and keep it with the results, e.g. `SALT=confirm-2026-11a`.
 
@@ -110,10 +144,24 @@ Choose a salt and keep it with the results, e.g. `SALT=confirm-2026-11a`.
 |---|---|---|---|---|
 | 1 | with arm 2 | `crawl-shopify-default-egress` (default egress) | 0/3 | full (`SHOPIFY_RPS`) |
 | 2 | with arm 1 | `crawl-shopify` (NAT, 34.172.156.113) | 1/3 | full |
-| 3 | 30 min after arm 2 ends | `crawl-shopify` (NAT, 34.172.156.113) | 2/3 | 0.5 req/s, a 225-min window |
+| 3 | 30 min after arm 2 ends | `crawl-shopify` (NAT, 34.172.156.113) | 2/3 | **low rate**: 0.5 req/s |
+
+Arm 3 tests a **low rate**, not a crawl spread over hours. The 225-min window (`deadline_min`, the default) only caps
+how long the job may start stores; the main pass starts each store as soon as the rate allows, so at 0.5 req/s a third
+of the stores (about 1,400 requests) takes roughly 45–60 min plus backoffs. Only the deferred rounds are spread out.
+A main pass spread over the window is a follow-up (DESIGN.md, Next), worth building only if the low rate wins.
+
+**Run the sequence detached, and start it by 00:45 UTC on Monday 2026-11-02.** In the worst case arm 2 runs its full
+240 min, then the 30-min gap, then arm 3 its 240 min: 8.5 h, which must end before the 09:17 UTC GitHub run. Cloud
+Shell ends idle sessions, so don't leave the sequence in an interactive shell: put it in a script and run it under
+`tmux` (or `nohup`), which survive a disconnect:
 
 ```sh
-SALT=confirm-2026-11a WEEK=2026-11-02
+cat > arms.sh <<'SH'
+#!/bin/sh
+set -u
+SALT=confirm-2026-11a WEEK=2026-11-02 REGION=us-central1
+date -u   # the start: no later than 00:45 UTC on 2026-11-02
 
 # Arm 1: default egress, full rate (in the background)
 gcloud run jobs execute crawl-shopify-default-egress --region $REGION --wait \
@@ -126,17 +174,38 @@ gcloud run jobs execute crawl-shopify --region $REGION --wait \
   --update-env-vars="COFFEEDATA_ARM=2-dedicated-full" > arm2.log 2>&1
 date -u   # arm 2 has ended
 
-# Arm 3: the same NAT IP at a low, spread-out rate, 30 min after arm 2 ended
+# Arm 3: the same NAT IP at a low rate, 30 min after arm 2 ended
 sleep 1800
 gcloud run jobs execute crawl-shopify --region $REGION --wait \
-  --args="crawl,--connector,shopify,--run-date,$WEEK,--slice,2/3,--salt,$SALT,--rps,0.5,--deadline-min,225" \
+  --args="crawl,--connector,shopify,--run-date,$WEEK,--slice,2/3,--salt,$SALT,--rps,0.5" \
   --update-env-vars="COFFEEDATA_ARM=3-dedicated-low" > arm3.log 2>&1
+date -u   # arm 3 has ended
 wait   # for arm 1
+SH
+tmux new-session -d -s arms 'sh arms.sh > arms.log 2>&1'   # or: nohup sh arms.sh > arms.log 2>&1 &
+tmux attach -t arms   # to watch; detach with Ctrl-b d, and the sequence keeps running
 ```
 
-An arm that reaches its deadline exits non-zero (`crawl shopify: deadline reached, N roasters left`). Its
-`job_manifests` end row says `deadline`, and its results still count. A repeat on another day rotates the slices so
-each third sees each arm: arm 1 takes 1/3, arm 2 takes 2/3 and arm 3 takes 0/3, with the same salt.
+Each `gcloud run jobs execute --wait` also shows up in `gcloud run jobs executions list --region $REGION`, so you can
+check progress from anywhere.
+
+An arm that reaches its deadline is a finished arm: from this commit on it exits 0 and prints `crawl shopify:
+deadline reached, N roasters left` to stderr. Its `job_manifests` end row says `deadline`, with `skipped` = N, and its
+results count. (The 79464cd image still exits 1 on a deadline; with `--max-retries 0` nothing is retried, and the
+execution just shows as failed.)
+
+**A repeat on another day needs a week of its own.** A crawl skips every store with an ok fetch under its run_date,
+and Monday's GitHub run writes 2026-11-02 fetches, so repeating with `WEEK=2026-11-02` would crawl almost nothing,
+and a later real week would collide with that week's crawl. Pass `--run-date` a Monday with **no fetches in the lake
+and no real crawl ahead of it**: a Monday before the lake's first run. Check with:
+
+```sh
+uv run python -c "from coffeedata.lake import Lake; l = Lake(); print(l.connect().sql(f\"select min(run_date) from {l.scan('fetches')}\"))"
+```
+
+and use a Monday at least one week before that date (as `WEEK`). An arm's rows never land or merge, so an old
+run_date is safe. Use a new salt for a repeat on an image built from this commit (the thirds are drawn by host now):
+each arm gets a fresh random third, which balances stores across arms as well as rotating the old thirds would.
 
 ### Reading the results
 
@@ -159,13 +228,16 @@ con = lake.connect()
 con.sql("create macro wilson(k, n, s) as "
         "(k/n + 1.9208/n + s * 1.96 * sqrt(k/n * (1 - k/n) / n + 0.9604 / n^2)) / (1 + 3.8416/n)")
 print(con.sql(f"""
-  select json_extract_string(detail, '$.arm') as arm, json_extract_string(detail, '$.egress') as egress,
-         r.ip, ended_at - started_at as wall, ok, errors, parked, requests, http_429, http_430,
+  select json_extract_string(detail, '$.arm') as arm, attempt_id, started_at, status,
+         json_extract_string(detail, '$.egress') as egress, r.ip, ended_at - started_at as wall,
+         todo, ok, errors, parked, skipped, requests, http_429, http_430,
+         round(ok / todo, 3) as ok_share,
+         round(wilson(ok, todo, -1), 3) as ok_lo, round(wilson(ok, todo, 1), 3) as ok_hi,
          r.refused, r.stores, round(r.refused / r.stores, 3) as refused_share,
          round(wilson(r.refused, r.stores, -1), 3) as lo, round(wilson(r.refused, r.stores, 1), 3) as hi
   from (select *, unnest(refusals) as r from {lake.scan('job_manifests')}
         where job = 'crawl' and connector = 'shopify' and status <> 'running')
-  where json_extract_string(detail, '$.arm') is not null order by arm"""))
+  where json_extract_string(detail, '$.arm') is not null order by arm, started_at"""))
 print(con.sql("""
   select b.egress_ip, b.status, count(*) as blocks,
          count(*) filter (where b.cf_mitigated = 'challenge') as challenges,
@@ -176,18 +248,24 @@ print(con.sql("""
 EOF
 ```
 
+- One row per arm and egress IP. More than one row for an arm with different `attempt_id`s means the arm ran twice
+  (a retry): count only its first attempt.
+- `ok_share` with `ok_lo`–`ok_hi` is the arm's ok stores over the stores in its slice (`todo`), with Wilson 95%. The
+  slices differ in size (about 357 ± 15), so compare shares, never counts.
 - `refused_share` with `lo`–`hi` is the first-contact refusal share per egress IP, with Wilson 95%.
 - The second table says whether blocks were challenges (`cf-mitigated: challenge`, HTML, often no Retry-After) or
   rate limits (JSON, `retry-after: 60`).
 
-**Decision** (DESIGN.md §10):
-- **Dedicated egress stays** if arm 2's refusal share is below arm 1's with intervals that don't overlap, or if they
-  are equal while arm 1's blocks are challenges.
-- **Arm 3 becomes the config** (`rps` and `deadline_min` in `connectors.py`) if it gets more ok stores than arm 2
-  inside 240 min.
-- **Revisit C** if arm 3 gets materially more data but its pacing can't fit one job's 240-min limit.
+**Decision** (the same rules as DESIGN.md §10):
+- **Dedicated egress stays** if arm 2's first-contact refusal share is below arm 1's with Wilson intervals that don't
+  overlap, or if they overlap while arm 1's blocks are challenges and arm 2's aren't.
+- **The low rate becomes the config** (`rps` in `connectors.py`) if arm 3's ok share is above arm 2's with Wilson
+  intervals that don't overlap, and arm 3 ended inside 240 min.
+- **Otherwise full rate stays.** Overlapping ok-share intervals are no evidence for either rate.
+- **Revisit C** only if the low rate wins and can't fit one job's 240-min limit for a whole week's Shopify crawl.
 
-Afterwards, clear the confirmation run's partition so a later merge doesn't pick it up:
+Afterwards, clear the confirmation run's partition and parked progress (the arms' `job_manifests` rows stay, and are
+never read as a crawl):
 
 ```sh
 gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=$WEEK" \
@@ -205,7 +283,8 @@ scheduled job.
    - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 0"` (Sunday, after the 09:17 build), plus the
      facts-only public export and the Snowflake load from the **served** release (moved from `weekly.yml`). The
      site deploy stays on Actions and never contacts a roaster.
-2. Push the image from the merged main (step 1). Then turn the schedule on:
+2. Rebuild the image from the merged main with Cloud Build (§1; pushes from Cloud Shell are refused). Then turn the
+   schedule on:
    ```sh
    cd src/terraform
    terraform plan -var ingest_schedule_enabled=true -out ingest.plan   # 16 to add (google_cloud_scheduler_job.ingest), 0 to change, 0 to destroy
@@ -218,7 +297,8 @@ scheduled job.
    - the `job_manifests` rows: an attempt with only a `running` row died;
    - Sunday's merge `detail.missing`: it should be empty;
    - the build's gate;
-   - `egress-check`: the build job fails, and the owner is emailed, if an IP stays above 8% for two runs in a row;
+   - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row. No alert policy
+     watches job failures yet (DESIGN.md, Next), so nobody is emailed: check the build execution's exit code;
    - Sunday's site deploy.
 4. **After one good week**, a follow-up PR removes `weekly.yml`'s crawl. Its rollback and Snowflake-migrate inputs
    move to a small manual workflow, or to `coffeedata rollback` run from the build image.

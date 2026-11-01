@@ -11,3 +11,5 @@ select distinct on (s.roaster_id, s.batch_id, s.product_id)
 from {{ lake('snapshots') }} s
 join fetches f on s.roaster_id = f.roaster_id and s.batch_id = f.batch_id
 left join b using (body_hash)
+-- a batch holds one row per product; the order only makes a repeat (none in the lake so far) pick the same row
+order by s.roaster_id, s.batch_id, s.product_id, s.fetched_at desc

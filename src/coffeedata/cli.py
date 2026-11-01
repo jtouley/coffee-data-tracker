@@ -130,8 +130,14 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         salt=args.salt,
     )
     _print(out)
+    # A crawl stopped by its deadline is a finished job, not a failed one: it exits 0, and its job_manifests end row
+    # says `deadline` with the count left (a resume slot or crawl-retry picks them up). A non-zero exit would make
+    # Cloud Run start another attempt that re-asks the stores that already refused.
     if out.get("skipped_deadline"):
-        raise SystemExit(f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left")
+        print(
+            f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left",
+            file=sys.stderr,
+        )
 
 
 def cmd_merge(args: argparse.Namespace) -> None:

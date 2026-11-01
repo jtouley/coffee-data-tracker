@@ -10,12 +10,13 @@ with recursive ok as (
     where status = 'ok'
 ),
 o as (select * from {{ ref('stg_run_overrides') }}),
--- The latest successful batch of the week, unless an override pins another of that week's batches.
+-- The latest successful batch of the week, unless an override pins another of that week's batches. A complete
+-- batch wins over a partial one (a secondary crawler's later, partial read never replaces a complete one).
 picked as (
     select ok.*, coalesce(o.action = 'use_batch' and ok.batch_id = o.batch_id, false) as pinned
     from ok left join o using (roaster_id, run_date)
     qualify row_number() over (
-        partition by ok.roaster_id, ok.run_date order by pinned desc, ok.fetched_at desc
+        partition by ok.roaster_id, ok.run_date order by pinned desc, ok.partial, ok.fetched_at desc
     ) = 1
 ),
 seq as (

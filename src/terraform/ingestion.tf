@@ -64,7 +64,8 @@ locals {
     "merge"                        = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi" }
     "enrich-week"                  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi" }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution and emails the owner.
+    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution. No alert policy
+    # watches job failures yet (DESIGN.md, Next): check the executions' exit codes.
     "build" = {
       command = ["sh", "-c"]
       args    = ["coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
@@ -197,7 +198,9 @@ resource "google_cloud_run_v2_job" "ingest" {
     template {
       service_account = google_service_account.ingest.email
       timeout         = "14400s" # 240 min, the limit every design was held to
-      max_retries     = 1        # a killed or failed attempt resumes from its checkpoints
+      # A crawl never retries in place: a deadline exits 0, and a second attempt would re-ask the stores that already
+      # refused in the same window. Its resume slot (or crawl-retry) picks up what is left. Other jobs retry once.
+      max_retries = startswith(each.key, "crawl") ? 0 : 1
 
       dynamic "vpc_access" {
         for_each = each.value.nat ? [1] : []

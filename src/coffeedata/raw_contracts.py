@@ -27,7 +27,11 @@ CONTRACTS: dict[str, dict[str, Any]] = {
     "raw": {
         "tables": ["snapshots", "bodies", "fetches"],
         "producer": "connector ingest jobs (crawl, crawl-retry), via the weekly merge",
-        "consumers": ["dbt (stg_snapshots, stg_product_inputs, stg_fetches)", "enrichment job", "registry"],
+        "consumers": [
+            "dbt (stg_snapshots, stg_product_inputs, stg_fetches, int_fetch_product_inputs)",
+            "enrichment job",
+            "registry",
+        ],
         # The values a column may take, versioned with the columns (1.2.0 added unavailable).
         "values": {"fetches.status": list(FETCH_STATUSES)},
         "files": {

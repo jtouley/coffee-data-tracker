@@ -973,6 +973,23 @@ def test_page_backoffs_are_max_of_retry_after_and_60_120_240_then_the_store_is_p
     assert out["deferred"]["page_parked"] == 1
 
 
+def test_a_store_in_page_backoff_at_the_deadline_is_parked_not_dropped(lake, mock, monkeypatch):
+    """Its next try would come due after the deadline: it is parked with its pages for crawl-retry (not counted as
+    never started), and the run stops at the deadline instead of waiting out the backoff."""
+    clock = fake_time(monkeypatch)
+    mock.get("https://wall.example/products.json", params={"page": "1"}).mock(return_value=_page(range(250)))
+    mock.get("https://wall.example/products.json", params={"page": "2"}).mock(return_value=resp(429, "60"))
+    out = ingest.run(
+        lake, [_r("wall.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST | {"retries": 1},
+        deadline_s=90,
+    )  # fmt: skip
+    assert clock.sleeps == [60, 30]  # the first backoff, then only up to the deadline (not the 120 s backoff)
+    assert out["skipped_deadline"] == 0
+    assert out["deferred"] == {"page_backoffs": 2, "page_parked": 1, "page_parked_at_deadline": 1}
+    parked = ingest.load_parked(lake, "2026-10-26")
+    assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
+
+
 def test_crawl_retry_resumes_a_parked_store_from_its_page(lake, mock, monkeypatch):
     fake_time(monkeypatch)
     p1 = mock.get("https://wall.example/products.json", params={"page": "1"}).mock(

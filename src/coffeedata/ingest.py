@@ -28,7 +28,7 @@ import httpx
 from . import lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
-from .http import BLOCK_STATUSES, PoliteClient, RequestStats, Unavailable, egress_ip
+from .http import BLOCK_STATUSES, FetchError, PoliteClient, RequestStats, Unavailable, egress_ip
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
 from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
@@ -54,10 +54,12 @@ def _causes(e: BaseException | None) -> Iterator[BaseException]:
 
 
 def blocked(e: BaseException) -> bool:
-    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal."""
+    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal. The
+    status may come wrapped (an HTTPStatusError cause) or bare (a FetchError from fetch_json or catalog_json)."""
     return any(
         isinstance(c, RateLimited)
         or (isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES)
+        or (isinstance(c, FetchError) and c.status in BLOCK_STATUSES)
         for c in _causes(e)
     )
 
@@ -142,10 +144,12 @@ def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None, known:
 
 
 def known_products(lake: Lake) -> dict[str, int]:
-    """Each roaster's product count at its latest ok fetch with products: lets a Shopify short page end a catalog
-    that has reached its known size, and never one known to be bigger."""
+    """Each roaster's product count at its latest complete ok fetch with products: lets a Shopify short page end a
+    catalog that has reached its known size, and never one known to be bigger. A partial fetch (a catalog read only
+    in part) is never the known size."""
     q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
-            where status = 'ok' and products > 0 and roaster_id is not null group by 1"""
+            where status = 'ok' and products > 0 and not coalesce(partial, false) and roaster_id is not null
+            group by 1"""
     return dict(lake.connect().execute(q).fetchall())
 
 
@@ -431,11 +435,20 @@ def run(
             done: list[Result] = []
             while pending or running:
                 now = time.monotonic()
+                if deadline is not None and now >= deadline and pending:
+                    # Past the deadline nothing new starts. A store waiting out a page backoff is parked with its
+                    # pages (crawl-retry resumes it); one never started is left without a fetches row.
+                    for _, _, r in pending:
+                        p = progress.get(r.roaster_id)
+                        if p and p.get("backoffs"):
+                            save_parked(lake, run_date, r.roaster_id, p)
+                            page_stats["parked"] += 1
+                            page_stats["parked_at_deadline"] += 1
+                        else:
+                            skipped += 1
+                    pending = []
                 while pending and pending[0][0] <= now:
                     r = heapq.heappop(pending)[2]
-                    if deadline is not None and now >= deadline:  # past the deadline: not started
-                        skipped += 1
-                        continue
                     if any(d.roaster.roaster_id == r.roaster_id for d in done):
                         # its blocked try's error row goes to the lake before the retry, so a job that dies
                         # meanwhile still shows the store attempted (run_is_complete)
@@ -445,6 +458,9 @@ def run(
                     resume_at = p and {"page": p["page"], "items": p["items"]}
                     running.add(ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id)))
                 timeout = max(0.0, pending[0][0] - now) if pending else None
+                # wake at the deadline, not after a long backoff
+                if timeout is not None and deadline is not None:
+                    timeout = min(timeout, max(0.0, deadline - now))
                 if not running:
                     time.sleep(timeout or 0.0)
                     continue

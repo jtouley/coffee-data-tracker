@@ -96,6 +96,39 @@ def test_publish_never_replaces_lake_files_but_replaces_marts(tmp_path, monkeypa
     assert lake.staged_files() == sorted(lake.root / SCHEMA_FILES[t] for t in LAKE_TABLES)  # staging cleared
 
 
+def test_publish_skips_a_staged_mart_another_job_already_sent_and_removed(tmp_path, monkeypatch):
+    """Concurrent jobs share one staging folder: a marts/ file listed for this commit may be gone by commit time.
+    It isn't added (a missing file would fail the commit on every retry)."""
+    commits = []
+    lake = None
+
+    class FakeApi:
+        def __init__(self, token=None):
+            pass
+
+        def get_paths_info(self, repo_id, paths, repo_type):
+            (lake.root / "marts" / "dim_coffee.parquet").unlink()  # the other job's publish, meanwhile
+            return [
+                types.SimpleNamespace(path=p) for p in paths if p in {SCHEMA_FILES[t] for t in LAKE_TABLES}
+            ]
+
+        def create_commit(self, repo_id, repo_type, operations, commit_message):
+            commits.append(sorted(op.path_in_repo for op in operations))
+
+    import duckdb
+    import huggingface_hub
+
+    monkeypatch.setattr(huggingface_hub, "HfApi", FakeApi)
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    row = {"run_date": date(2026, 11, 2), "batch_id": "b2", "roaster_id": "x.com", "status": "ok"}
+    lake.write_partition("fetches", "2026-11-02", "b2", [row])
+    (lake.root / "marts").mkdir()
+    lake.write_mart("dim_coffee", duckdb.connect(), "select 1 as x")
+    lake.publish("test")
+    assert commits == [["fetches/run_date=2026-11-02/batch=b2.parquet"]]
+
+
 def test_publish_replaces_a_stale_remote_schema_file(tmp_path, monkeypatch):
     # The dataset's snapshots schema file is from before payload_hash; ensure_schemas refreshed only staging's.
     import hashlib

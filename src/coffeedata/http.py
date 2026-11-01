@@ -77,7 +77,12 @@ def block_record(r: httpx.Response) -> dict:
 
 
 class FetchError(Exception):
-    """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error."""
+    """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error. status:
+    the HTTP status, when the failure was a non-200 answer (ingest.blocked reads it)."""
+
+    def __init__(self, *args: object, status: int | None = None) -> None:
+        super().__init__(*args)
+        self.status = status
 
 
 class Blocked(FetchError):
@@ -95,7 +100,10 @@ class SiteDisallowed(Unavailable, Blocked):
     deactivated, 2026-10-31). Still a Blocked, so callers that try another path on a block keep doing so."""
 
 
-# What a closed or deactivated storefront says, in any status (Shopify's own page, lowercased).
+# What Shopify's closed or deactivated storefront page says (lowercased). Read only on a non-200, non-JSON answer
+# to Shopify's catalog path (SHOPIFY_CATALOG_PATH): another platform's page with the same words (a Squarespace
+# shop "currently unavailable until Monday") is not this signature, and neither is any 200 page.
+SHOPIFY_CATALOG_PATH = "/products.json"
 UNAVAILABLE_MARKERS = (
     "this store is unavailable",
     "store is currently unavailable",
@@ -105,10 +113,16 @@ UNAVAILABLE_MARKERS = (
 
 
 def unavailable_reason(r: httpx.Response) -> str | None:
-    """Why this response says the store is closed, if it does: a password page or a closed-store page."""
+    """Why this response says the store is closed, if it does: a redirect to a password page, or Shopify's
+    closed-store page (a non-200 HTML answer to /products.json with its wording)."""
     if r.url.path.rstrip("/") == "/password" or any(h.url.path.rstrip("/") == "/password" for h in r.history):
         return f"password-protected: {r.url.host}"
-    if r.status_code != 200 or "json" not in r.headers.get("content-type", ""):
+    closed_page = (
+        r.status_code != 200
+        and "json" not in r.headers.get("content-type", "")
+        and (r.history[0] if r.history else r).request.url.path.rstrip("/") == SHOPIFY_CATALOG_PATH
+    )
+    if closed_page:
         text = r.text[:20_000].lower() if r.content else ""
         if any(m in text for m in UNAVAILABLE_MARKERS):
             return f"store unavailable (HTTP {r.status_code}): {r.url.host}"
@@ -403,7 +417,7 @@ class PoliteClient:
         if r.status_code == 404:
             return None
         if r.status_code != 200:
-            raise FetchError(f"HTTP {r.status_code} {url}")
+            raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
         try:
             return scrub_surrogates(r.json())
         except ValueError as e:
@@ -418,7 +432,7 @@ class PoliteClient:
         if why := unavailable_reason(r):
             raise Unavailable(why)
         if r.status_code != 200:
-            raise FetchError(f"HTTP {r.status_code} {url}")
+            raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
         try:
             return scrub_surrogates(r.json())
         except ValueError as e:

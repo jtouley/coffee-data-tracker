@@ -4,7 +4,7 @@
  "fingerprint": "a42f571f09719202",
  "producer": "connector ingest jobs (crawl, crawl-retry), via the weekly merge",
  "consumers": [
-  "dbt (stg_snapshots, stg_product_inputs, stg_fetches)",
+  "dbt (stg_snapshots, stg_product_inputs, stg_fetches, int_fetch_product_inputs)",
   "enrichment job",
   "registry"
  ],

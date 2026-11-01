@@ -1,6 +1,21 @@
 # Ingestion: design (Shopify first)
 
-Status: POC (draft PR). Nothing here is deployed. The confirmation run on Cloud Run decides whether it ships.
+Status: POC (draft PR). The Cloud Run jobs, the NAT and its egress IP (34.172.156.113) are applied in production
+with the schedule off (RUNBOOK.md §2); nothing crawls on a schedule from Cloud Run yet. The confirmation run on Cloud
+Run decides whether the cutover ships.
+
+**Terms used below.**
+- **A, B, C**: the three designs compared. **A** = one omnibus job for every connector. **B** = one job per connector,
+  then a weekly merge. **C** = Shopify split into 7 daily shards, plus retry sweeps.
+- **S1, S2**: the two simulation scenarios. S1 = per-store limits only. S2 = S1 plus an IP-wide limit of 2 req/s.
+- **v1, v2**: the Shopify pagination fixes. v1 = resumable pagination (a 429 mid-catalog continues from that page);
+  v2 = v1 plus the conditional short-page stop (section 6).
+- **Pooled egress**: an outbound IP shared with other tenants (this research environment's egress, Cloud Run's
+  default egress, GitHub-hosted runners), as opposed to one dedicated NAT IP only we use.
+- **The owner**: the repository's maintainer, who runs the runbook. **#62, #67**: earlier and companion PRs
+  (#62 per-store backoff and deferred rounds; #67 the secondary crawler). "Research §n" is a section of
+  [`evidence/research/shopify-503.md`](https://github.com/jtouley/coffee-data-tracker/blob/archive/shopify-arch-evidence/evidence/research/shopify-503.md)
+  on the evidence branch.
 
 ## 1. Decision
 
@@ -29,7 +44,7 @@ inside its time limit, the quality gate passing, and room to extend without over
      96.3% [94.9, 97.2]. The intervals overlap, and A's run had two advantages that come from conditions and shared
      code, not from its design.
 - **What B costs over A:** one Cloud Run job per connector instead of one omnibus job, more Scheduler entries
-  (section 7), and a merge step. Anything more is listed under "add when metric X says so" (section 12).
+  (section 7), and a merge step. Anything more waits for a metric that calls for it (the "Next" list, section 13).
 
 ## 2. Comparison
 
@@ -42,7 +57,7 @@ The evidence is archived on pushed branches, not copied into this repo's docs:
   [`-c`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-c) hold each design's code as it
   ran.
 
-### Real crawls: all 1,070 ingestable Shopify roasters (1,058 hosts), 2026-10-31, this environment's pooled egress
+### Real crawls: all 1,070 ingestable Shopify roasters (1,045 hosts), 2026-10-31, this environment's pooled egress
 
 | | A (run 2, final) | B | C (7 shards + sweep) |
 |---|---|---|---|
@@ -114,13 +129,13 @@ It ran in 4 waves (+0, 15, 60 and 120 min, each after the stores' Retry-After):
 | 2 | 18 | 2 | 5 | 90 | 67 |
 | 3 | 8 | 0 | 6 | 44 | 28 |
 
-- **Recovered:** 16 of 57 (28%). 13 are still parked, and 27 were routed to the HTML stub as refused (2 jobs ≥ 1 h
-  apart).
+- **Recovered:** 16 of 57 (28%). 13 are still parked, 27 were routed to the HTML stub as refused (2 jobs ≥ 1 h
+  apart), and 1 failed with another error: 16 + 13 + 27 + 1 = 57.
 - **The rate didn't help.** The sweep sent 462 requests and got 275 429s (60%), 0 430s and 6 503s. Its first
   contacts were refused on 45 of 57 stores (79%), at 0.39–0.75 req/s after its platform-wide pauses.
 - **C's final result for all 1,070 stores: 1,027 ok = 96.0% [94.6, 97.0]**, with 27 refused, 13 parked and 3 other
-  errors. Of A's 11 page-2 stores, 6 are ok. Of A's 22 refused, 3 are ok, 6 parked and 13 refused. C's 27 refused
-  overlap 13 of A's 22 and 9 of B's 20.
+  errors. Of A's 11 page-2 stores (from A's run 1), 6 are ok. Of the 22 stores A's run 1 refused (the table shows A's
+  run 2, with 14), 3 are ok, 6 parked and 13 refused. C's 27 refused overlap 13 of those 22 and 9 of B's 20.
 
 ## Deferred: daily shards (C)
 
@@ -143,18 +158,23 @@ evidence says the IP is the lever now, not the schedule. One signal says pacing 
 **Why it is deferred, not rejected.** The first-contact 429 rate fell from 16–27% on shards 0–4 to ~4.5% on shards
 5–6 (7 of 159 and 7 of 153), after 32-minute gaps. It is confounded with the time since A's and B's crawls ended
 (shards 5–6 started 2.5–3 h after B), so it could be per-store windows closing rather than C's spacing. But it's
-the one signal that pacing might matter, and the confirmation run's low-rate arm tests it (section 10).
+the one signal that pacing might matter. The confirmation run's arm 3 tests only part of it: a **low rate** on the
+dedicated IP, not stores spread over hours (section 10).
 
 Once Shopify is on a dedicated IP, our own rate decides that IP's reputation, and C
 becomes a candidate again. Until then its pacing lives as per-connector config in B (rps, a shuffled order, a
 crawl window, section 8).
 
-**The trigger to revisit C:** in the confirmation run (section 10), the low, spread-out rate on the dedicated IP gets
-materially more data than full rate (more ok stores, with intervals that don't overlap), **and** B can't fit that
-pacing inside one job's 240-min limit. If the low rate fits in one job, it stays a config change in B.
+**The trigger to revisit C:** in the confirmation run (section 10), the low rate on the dedicated IP gets a higher ok
+share than full rate, with Wilson intervals that don't overlap, **and** B can't fit that pacing for a whole week's
+Shopify crawl inside one job's 240-min limit. If the low rate fits in one job, it stays a config change in B. Testing
+C's spacing itself (stores spread over hours) needs a main-pass spread in B first (Next).
 
-C's code and results stay in build/arch-compare/C as evidence: the worktree, real/ (logs, jobs/, control
-manifests) and the sim. C never had a PR.
+C's code and results are on the archive branches: its code on
+[`archive/shopify-arch-c`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-c), and its real
+crawl (logs, jobs, control manifests) and sim under `evidence/arch-compare/C` on
+[`archive/shopify-arch-evidence`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-evidence/evidence).
+C never had a PR.
 
 ## 3. Services (one job, one responsibility)
 
@@ -166,8 +186,8 @@ manifests) and the sim. C never had a PR.
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
 | Post-load enrichment | `coffeedata enrich-week [--submit]` | `job_manifests` (merge done), raw rows | `enrichments`, `llm_batches` |
 | Build + gate, publish | `coffeedata build`, `coffeedata publish` | the lake | marts, release, `builds` |
-| Egress check | `coffeedata egress-check` | `job_manifests` | exit code, then an email to the owner |
-| Secondary crawler (deferred) | `coffeedata pages` (#67) | refused stores | the same raw shape |
+| Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (no alert policy yet: Next) |
+| Secondary crawler (deferred) | `coffeedata pages` (#67, not in this branch) | refused stores | the same raw shape |
 
 The shared code is the HTTP client (`http.py`), lake I/O and `SCHEMAS` (`lake.py`), the adapter interface,
 `ingest.run`, the control plane (`control.py`) and the coffee decision (`products.py`, used by dbt, enrichment and
@@ -195,7 +215,8 @@ the registry). There is no per-service copy.
 - **Checked on a local, read-only copy of the lake** (runs 10-26 to 10-30), with `coffeedata build` on `main` and on
   this branch, for run dates 10-26 and 10-30:
   - every table both builds share is identical row for row, on every column they share (build ids aside);
-  - the branch only adds columns (`stg_fetches.partial`, `stg_runs.partial`/`is_current`, `stg_run_walk.partial`,
+  - the branch only adds columns (`stg_fetches.partial`, `stg_runs.partial`/`is_current`/`prev_complete_run`/
+    `next_complete_run`, `stg_run_walk.partial`,
     `stg_run_quality.partial`, `int_roaster_runs.unavailable`, `run_completeness.unavailable`) and the three
     intermediate models above, which are empty on this lake (every fetch in it recorded its count);
   - the gate outcome is the same on both: 10-26 passes; 10-30 fails the same completeness and ok-rate checks,
@@ -255,11 +276,15 @@ egress. The Terraform is `src/terraform/ingestion.tf`, and the owner's steps are
 
 Why:
 - **One runtime** for the weekly pipeline, with one scheduler, one secrets store (Secret Manager, the app's own
-  secrets by name) and one log and alert path (Cloud Logging and Monitoring, the app's notification channel).
+  secrets by name) and one log path (Cloud Logging). Alerting on a failed job is not set up yet: `alerts.tf` covers
+  only the app service, so a job-failure alert policy is in Next.
 - **Actions minutes saved.** The weekly run took most of its 240 min.
-- **Every connector is covered** by the per-connector egress logging and the 8% alert, not just Shopify.
-- **Runner IPs are the most-blocked range we've seen**: 29% of stores answered 429 from GitHub-hosted runners,
-  against 5–8% (live test) and ~20% (these runs) from other pooled egress.
+- **Every connector is covered** by the per-connector egress logging and the 8% check, not just Shopify. A bare
+  429 or 503 from any adapter counts as a block (`ingest.blocked`), so non-Shopify stores get refusal counts too.
+- **Runner IPs aren't shown to be better or worse than other pooled egress.** On the same metric, stores that
+  answered any 429: 29% from GitHub-hosted runners (`crawl-plan/backoff.md`) and 37% in A's run 1 from this
+  environment's pooled egress (`A/real.md`). (The ~20% in section 2 is another metric: the store's *first* catalog
+  request answered 429.) The reasons to move are one runtime and per-connector egress, not the runners' IPs.
 - **Cost:** about +$1–2/month for the non-Shopify jobs, and about $4–6/month for the NAT, mostly the static IP.
 
 **Stays on GitHub Actions:** CI, the site deploy and issue-form handling. None of them contacts a roaster.
@@ -270,7 +295,10 @@ Why:
   facts-only public export and the Snowflake load from `weekly.yml`. None of these contacts a roaster.
 
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
-repository). Each job's task timeout is 240 min (the strict limit used in every sim), and maxRetries is 1.
+repository, built with Cloud Build). Each job's task timeout is 240 min (the strict limit used in every sim).
+maxRetries is 0 for every crawl job and 1 for the rest: a crawl that stops at its deadline exits 0 and reports
+`deadline` in `job_manifests`, and a second attempt of a failed crawl would only re-ask the stores that just
+refused; its resume slot (or crawl-retry) picks up the rest.
 
 | Job | Command | Network | Scheduler (UTC) |
 |---|---|---|---|
@@ -306,13 +334,16 @@ cutover and rollback steps are in the runbook.
 - `shuffle`: stores in a shuffled order, seeded by connector and week, so the same stores aren't always the last
   ones asked (new in this PR);
 - `deadline_min`: the crawl window, i.e. how long one job may start new stores, up to its time limit (225 of 240 min).
+  It is a cap, not a spread: the main pass starts stores as fast as `rps` allows, and only the deferred rounds are
+  spread out. A store still in a page backoff when the window closes is parked for crawl-retry.
 
 "Spread the crawl over hours" is **anecdotal forum advice, not Shopify's** (research §3: Shopify publishes no
 numbers). On shared egress, C's spread-out crawl at half the rate showed no drop in 429s: shards 0–4 had 19.4%
 first-contact 429s, against 19.6% for A and 22.0% for B. Shards 5–6 dropped to 4.5%, but with a later hour and
 longer gaps (section 2), so that is unexplained, not evidence for spreading. On a **dedicated IP**, our own rate
-decides that IP's reputation. So the confirmation run tests full speed against a low, spread-out rate on the
-dedicated IP (section 10). If the low rate wins, it's a config change: `rps` and `deadline_min`.
+decides that IP's reputation. So the confirmation run tests full speed against a low rate on the dedicated IP
+(section 10). If the low rate wins, it's a config change (`rps`), and a main pass spread over the window is the next
+thing to test (Next).
 
 ## 9. Egress
 
@@ -326,9 +357,9 @@ dedicated IP (section 10). If the low rate wins, it's a config change: `rps` and
   IP is known in advance) or from `COFFEEDATA_EGRESS_ECHO_URL`, a plain "what is my IP" endpoint, never a store. That
   lookup is cached 60 s, since default egress can change IP between connections. With neither set, the IP is
   recorded as unknown.
-- **The 8% alert**: `coffeedata egress-check` flags an IP with more than 8% first-contact refusals on two runs in a
-  row. The owner is emailed (the job exits non-zero, and a Cloud Monitoring alert on the job's failure sends the
-  mail). There is no automatic action.
+- **The 8% check**: `coffeedata egress-check` flags an IP with more than 8% first-contact refusals on two production
+  crawls in a row (confirmation-run arms are left out), and the build job's execution exits non-zero. Nobody is
+  emailed yet: there is no alert policy on job failures (Next). There is no automatic action.
 - **Escalation, only if the data says so**: Cloud NAT with 1 IP, then N IPs, then a separate egress-swap job. Never
   rotate IPs to dodge limits.
 
@@ -353,29 +384,35 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
 |---|---|---|
 | 1 | Cloud Run default | full (`SHOPIFY_RPS`, as today) |
 | 2 | one dedicated NAT IP | full |
-| 3 | one dedicated NAT IP | low and spread out (e.g. 0.5 req/s over a longer `deadline_min`) |
+| 3 | one dedicated NAT IP | low (0.5 req/s); not spread over the window (section 8) |
 
-- **The same stores in every arm.** Split all Shopify roasters deterministically: a salted hash of `roaster_id`
-  into thirds (`crawl --slice k/3 --salt <salt>`), one per arm. Record the salt. Rotate the arms across runs so each
-  third sees each arm. `COFFEEDATA_ARM`, the network, the rps and the slice are recorded in
+- **Comparable stores in every arm.** Split all Shopify roasters deterministically: a salted hash of the roaster's
+  host into thirds (`crawl --slice k/3 --salt <salt>`), one per arm, so roaster_ids sharing a store stay in one arm.
+  (Images before this commit hashed `roaster_id`; with today's salt 15 shared hosts fall in two arms.) Record the
+  salt. A repeat draws new thirds with a new salt and a run_date of its own (RUNBOOK §3). `COFFEEDATA_ARM`, the network, the rps and the slice are recorded in
   `job_manifests.detail`. The exact commands are in the runbook.
 - **The same conditions.** Lake history present in every arm. The slices are disjoint by store, so only a shared
   egress IP can couple two arms: arms 1 and 2 (different IPs) run at the same time, and arm 3 starts 30 min after
-  arm 2 ends (the same NAT IP). Each arm writes to its own `slice=k-of-n` sub-partition, which the merge never reads.
+  arm 2 ends (the same NAT IP). Each arm writes to its own `slice=k-of-n` sub-partition, which the merge never reads,
+  and an arm's `job_manifests` row never counts as the week's crawl (`control.landed`) or in `egress-check`.
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
   - first-contact refusal share per IP, with Wilson 95% intervals;
-  - ok share, refused, parked and wall time;
+  - ok share (ok stores over the slice's stores) with Wilson 95% intervals, refused, parked and wall time;
   - the share of blocks that are challenges (`cf_mitigated`) and that carry Retry-After.
-- **Decision.** Dedicated egress stays if arm 2's refusal share is lower than arm 1's with intervals that don't
-  overlap, or if it is equal while arm 1 shows challenges. Arm 3 becomes the config (`rps`, `deadline_min`) if it
-  beats arm 2 inside the time limit. If it beats arm 2 but can't fit one job's limit, that is the trigger to revisit
-  C.
+- **Decision** (the same rules as RUNBOOK §3; shares, never counts, since the slices differ in size):
+  - dedicated egress stays if arm 2's first-contact refusal share is below arm 1's with Wilson intervals that don't
+    overlap, or if they overlap while arm 1's blocks are challenges and arm 2's aren't;
+  - the low rate becomes the config (`rps`) if arm 3's ok share is above arm 2's with Wilson intervals that don't
+    overlap, and arm 3 ended inside 240 min; otherwise full rate stays;
+  - if the low rate wins but a whole week's Shopify crawl at that rate can't fit one job's limit, that is the trigger
+    to revisit C.
 
 ## 11. Closed and unavailable stores (this PR)
 
 A closed store gets a fetch status of its own, `unavailable`, which is neither `error` nor a block (raw contract
 1.2.0 lists the statuses: ok, error, unavailable). `http.Unavailable` is raised on:
-- Shopify's closed-store page ("This store is unavailable", in any HTTP status);
+- Shopify's closed-store page: a non-200, non-JSON answer to `/products.json` whose text says "This store is
+  unavailable" or similar. The same words on a 200 page, or on another platform's page, are not that signature;
 - a password-protected storefront (a redirect to `/password`);
 - a robots.txt that disallows the whole site, not just the feed. Example: Big Guns, deactivated, 2026-10-31. A
   robots.txt that disallows only `/products.json` is still a robots block (`error`), and so is a robots.txt answered
@@ -390,6 +427,9 @@ An `unavailable` store:
 A 404 or a DNS failure for the whole domain is left as `error` for now. One failed lookup can be transient, so it
 should become `unavailable` only after two runs at least a day apart (follow-up 2). Tests: `tests/test_unavailable.py`,
 and `test_unavailable_stores_do_not_count_against_the_ok_rates`.
+
+No store in the local lake copy is `unavailable` yet (every fetch there predates the status), so the rule has no
+held-out evaluation (CLAUDE.md): that is in Next, once weekly crawls have marked some stores.
 
 ## 12. Next steps from the research, and the secondary crawler
 
@@ -409,8 +449,11 @@ and `test_unavailable_stores_do_not_count_against_the_ok_rates`.
     read only part of a catalog. dbt lists what it read and keeps the products it didn't read as they were
     (`stg_runs.is_current`). A partial week is never suspect and never enters the baseline. Before this, a secondary
     crawl cut off by a 503 (Coffee King 60 of 74, Artizan 61 of 160) could only be dropped. Tested by the dbt unit
-    test `partial_runs_keep_unread_products_listed` and `test_a_partial_fetch_keeps_unread_products_listed`. Still
-    open: `fct_price_event` reads a partial week's unread bags as `removed` (follow-up 15).
+    test `partial_runs_keep_unread_products_listed` and `test_a_partial_fetch_keeps_unread_products_listed`.
+    `fct_price_event` reads removals and relistings against complete runs only (`stg_runs.prev_complete_run`,
+    `next_complete_run`), so it agrees with `dim_coffee.is_listed` (unit test `price_events_skip_partial_runs`), and a
+    week's complete batch wins over a later partial one (`stg_run_walk`). `known_products` ignores partial fetches,
+    so a partial read never becomes a store's known size.
   - **Designed and approved for #67 (head `d7a671e`, which holds all of its code), but never built.** These are
     follow-ups (16–18), with no code here:
     - a 503 on `.js` parks `.js` like a 429, and the store continues on its pages;
@@ -452,6 +495,12 @@ Done in this PR:
 - **Enrichment never submits without `--submit`**, even with `ANTHROPIC_API_KEY` and `COFFEEDATA_ANTHROPIC_API_KEY`
   set, via the CLI (`test_enrich_week_never_submits_without_the_flag_even_with_keys_set`).
 
+- **Review fixes before the confirmation run** (PR #68's two reviews): a crawl stopped by its deadline exits 0
+  and crawl jobs never retry in place (`max_retries = 0`); a store still in a page backoff at the deadline is
+  parked, not dropped; `compact` is idempotent after a kill between write and unlink; arm crawls never land or feed
+  `egress-check`; the arms split by host; bare 429/503 `FetchError`s count as blocks; only Shopify's closed-store
+  page reads as `unavailable`; `fct_price_event` and `stg_run_walk` handle partial runs.
+
 Next:
 1. **Confirmation run** (section 10) on Cloud Run: default egress against one dedicated NAT IP, and full speed
    against a low rate (`src/terraform/ingestion.tf`, `docs/ingestion/RUNBOOK.md`).
@@ -471,7 +520,7 @@ Next:
 11. **Cutover PR** (RUNBOOK.md): disable `weekly.yml`'s schedule, keeping `workflow_dispatch`, and give `site.yml` a
     Sunday schedule plus the public export and Snowflake load. After one good week, remove `weekly.yml`'s crawl.
 12. **Revisit C** only on its trigger ("Deferred: daily shards (C)").
-13. **Roaster status as facts (Kimball).** `dim_roaster` keeps descriptive attributes only: who the roaster is
+13. **Roaster status as facts (Kimball; dbt review M3).** `dim_roaster` keeps descriptive attributes only: who the roaster is
     (name, site, platform, location). Status is business logic over run-dated outcomes, so it moves to facts
     downstream of the dims:
     - `fct_roaster_run`, grain roaster × run_date: ok, partial or unavailable, products, coffees, and whether the
@@ -484,8 +533,18 @@ Next:
     `dim_roaster`'s status logic moves out in that PR, with its own real-lake comparison (it would change
     kaldi.com, steamshovelcoffee.com and sumerce.coffee, section 4).
 14. **Internal contracts as ODCS YAML**, generated from `lake.SCHEMAS` and `contract_docs.py` so they can't drift.
-15. **`fct_price_event` and partial weeks**: don't read a partial week's unread bags as `removed`.
+15. **Job-failure alert policy**: a Cloud Monitoring alert on `cloud_run_job` failed executions (egress-check,
+    build gate, a crashed crawl) to the app's notification channel. Until then nobody is emailed.
 16. **#67: a 503 on `.js` parks `.js` like a 429**, and the store continues on its pages.
 17. **#67: `/collections/all` unioned with the sitemap** for every store (Atlas: 39 of 41 coffees missing from its
     sitemap).
 18. **#67: a store that stops mid-crawl lands as a flagged partial catalog** (`partial = true`) instead of an error.
+19. **Main-pass spread** for a low-rate connector: schedule store *i* at `t0 + window·i/n`, as the deferred rounds do,
+    so a crawl can actually spread over its window. Only if the confirmation run's low rate wins.
+20. **History cost of `int_fetch_product_inputs`** (dbt review M1): classify only each roaster's last ok fetch, as
+    `registry.LAST_OK_PRODUCTS_SQL` does, instead of every ELT fetch in history. It grows weekly once ELT crawls land.
+21. **`enrich.candidates` efficiency**: push the `keys` filter and the `limit` into SQL and stream rows, instead of
+    reading every product version and classifying in Python.
+22. **Held-out evaluation of the `unavailable` rule** (CLAUDE.md): count the stores it marks on the real lake and
+    check each by hand while there are 50 or fewer; a full split-and-score if more. It waits for data: no store in the
+    lake is marked `unavailable` yet.

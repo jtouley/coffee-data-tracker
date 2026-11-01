@@ -325,9 +325,11 @@ def test_a_confirmation_arm_crawls_its_slice_into_its_own_sub_partition(tmp_path
         5.0,
         "2-dedicated-full",
     )
-    assert control.landed(lk, WEEK) == {"shopify"} and not connectors.merge(lk, WEEK)["written"].get(
-        "fetches"
-    )
+    # An arm never lands: a merge that week treats Shopify as missing instead of reading no files as its crawl.
+    assert control.landed(lk, WEEK) == set()
+    out = connectors.merge(lk, WEEK)
+    assert not out["written"].get("fetches") and "shopify" in out["missing"]
+    assert (part / "slice=1-of-3" / "fetches.parquet").exists()  # the arm's rows stay for its results
 
 
 def _no_fuse_metadata_calls(monkeypatch) -> None:
@@ -384,3 +386,73 @@ def test_crawl_park_and_merge_work_without_fuse_metadata_calls(tmp_path, monkeyp
     out = connectors.merge(lake, WEEK)
     assert out["missing"] == [] and out["written"]["fetches"] == 3
     assert not list(lake.root.rglob("*.tmp"))
+
+
+def test_arm_rows_never_land_or_feed_the_egress_flag(tmp_path, monkeypatch):
+    """Arms from any image (detail.slice or detail.arm, job still `crawl`) are experiments: they don't make a
+    connector landed for the week, and their refusals never pair with a production run in egress-check."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_EGRESS_IP", "34.1.2.3")
+    for detail in ({"slice": "2/3", "arm": "3-dedicated-low"}, {"slice": None, "arm": "1-default-full"}):
+        job = control.start(lk, "crawl", WEEK, "shopify")
+        control.finish(lk, job, "done", first_contact={"stores": 100, "refused": 50}, detail=detail)
+    assert control.landed(lk, WEEK) == set()
+    job = control.start(lk, "crawl", "2026-11-09", "shopify")  # the first production run after cutover
+    control.finish(
+        lk, job, "done", first_contact={"stores": 100, "refused": 9}, detail={"slice": None, "arm": None}
+    )
+    assert control.landed(lk, "2026-11-09") == {"shopify"}
+    assert control.egress_flags(lk) == []  # one production run above 8% isn't two
+    job = control.start(lk, "crawl", "2026-11-16", "shopify")
+    control.finish(lk, job, "done", first_contact={"stores": 100, "refused": 10})
+    assert control.egress_flags(lk) == [{"ip": "34.1.2.3", "shares": [0.09, 0.1]}]
+
+
+def test_roasters_on_one_host_are_always_in_the_same_arm(tmp_path, monkeypatch):
+    """The split hashes the host: two roaster_ids served by one store never end up in two arms."""
+    lk = Lake(str(tmp_path / "lake"))
+    stores = [Roaster(roaster_id=f"d{i}.com", name="r", host=f"shop{i % 10}.example", platform="shopify")
+              for i in range(40)]  # fmt: skip
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "active", None) for r in stores]
+    )
+    seen = []
+    monkeypatch.setattr(connectors.ingest, "run", lambda plake, states, *a, **k: seen.append(states) or
+                        {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}})  # fmt: skip
+    monkeypatch.setattr(lk, "publish", lambda *a, **k: None)
+    for k in range(3):
+        connectors.crawl(lk, "shopify", WEEK, part=f"{k}/3", salt="s")
+    arms = [{s.roaster.host for s in states} for states in seen]
+    assert sum(len(a) for a in arms) == 10 and set().union(*arms) == {f"shop{i}.example" for i in range(10)}
+    assert all(len(states) == 4 * len(a) for states, a in zip(seen, arms, strict=True))  # all 4 per host
+
+
+def test_compact_is_idempotent_after_a_kill_between_write_and_unlink(tmp_path):
+    """Killed after the compacted file was written but before its parts were removed: the next compact (a resume)
+    keeps each row once."""
+    import shutil
+
+    lk = Lake(str(tmp_path / "lake"))
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    run(part, WEEK, "a.com", [product("A"), product("B")])
+    connectors.compact(part.part)
+    run(part, WEEK, "b.com", [product("C")])
+    saved = tmp_path / "saved"
+    shutil.copytree(part.part / "_parts", saved)
+    first = connectors.compact(part.part)
+    shutil.copytree(saved, part.part / "_parts")  # as if the unlinks never happened
+    assert connectors.compact(part.part) == first
+    assert first["fetches"] == 2 and first["snapshots"] == 3
+    got = pq.read_table(part.part / "snapshots.parquet").column("product_id").to_pylist()
+    assert sorted(got) == ["A", "B", "C"]
+
+
+def test_a_crawl_stopped_by_its_deadline_exits_0(tmp_path, monkeypatch, capsys):
+    """Cloud Run retries a non-zero exit, and the retry would re-ask the stores that already refused. The deadline
+    is reported in job_manifests (status deadline) and on stderr instead."""
+    from coffeedata import cli
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(connectors, "crawl", lambda *a, **k: {"status": "deadline", "skipped_deadline": 3})
+    cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK])  # no SystemExit
+    assert "deadline reached, 3 roasters left" in capsys.readouterr().err

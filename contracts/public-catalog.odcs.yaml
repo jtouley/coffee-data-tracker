@@ -54,7 +54,8 @@ schema:
     logicalType: boolean
     physicalType: boolean
     description: In the roaster's latest successful catalog fetch, or, when the fetches since then read only part
-      of the catalog (partial), in one of those or in the latest complete fetch before them.
+      of the catalog (partial), in one of those or in the latest complete fetch before them. A roaster whose
+      fetches have all been partial keeps every coffee it ever listed until a complete fetch lands.
     required: true
   - name: in_stock
     logicalType: boolean
@@ -290,6 +291,8 @@ schema:
   physicalName: public_price_event
   physicalType: table
   description: Price, availability and listing changes between consecutive successful weekly fetches, per bag size.
+    A fetch that read only part of a catalog (partial) never removes a bag; removals and relistings are read
+    against complete fetches, so they agree with public_coffee.is_listed.
   properties:
   - name: run_date
     logicalType: date

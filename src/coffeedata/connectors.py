@@ -141,27 +141,47 @@ def _read(files: list[Path], table: str) -> pa.Table:
     return pa.concat_tables(tbls) if tbls else schema.empty_table()
 
 
+# The column a checkpoint file's rows all carry its batch id in (write_partition's batch=<id>.parquet). bodies has
+# none: its rows are keyed by body_hash.
+BATCH_KEYS = {"run_manifests": "manifest_id", "fetches": "batch_id", "snapshots": "batch_id"}
+
+
+def _not_yet_compacted(one: Path, parts: list[Path], table: str) -> pa.Table:
+    """The rows of `parts` that the compacted file `one` doesn't already hold. A job killed after writing `one` but
+    before removing its parts leaves both, and the next compact must not add those rows twice."""
+    done = pq.read_table(one, columns=[BATCH_KEYS.get(table, "body_hash")]).column(0)
+    seen = set(done.to_pylist())
+    if table in BATCH_KEYS:
+        return _read([f for f in parts if f.stem.removeprefix("batch=") not in seen], table)
+    new = _read(parts, table)
+    return new.take([i for i, h in enumerate(new.column("body_hash").to_pylist()) if h not in seen])
+
+
 def compact(part: Path) -> dict[str, int]:
-    """Fold the partition's checkpoint files into one file per table (rows kept as they are)."""
+    """Fold the partition's checkpoint files into one file per table (rows kept as they are). Idempotent: if a run
+    dies between writing the compacted file and removing the parts, the next one skips the parts already in it."""
     out = {}
     for table in RAW_TABLES:
         files = _partition_files(part, table)
         if not files:
             continue
-        if len(files) > 1 or files[0].parent != part:
-            _write_table(part / f"{table}.parquet", _read(files, table))
-            for f in files:
-                if f.parent != part:
-                    f.unlink()
-        out[table] = pq.read_metadata(part / f"{table}.parquet").num_rows
+        one = part / f"{table}.parquet"
+        parts = [f for f in files if f.parent != part]
+        if parts:
+            tbl = _not_yet_compacted(one, parts, table) if one.exists() else _read(parts, table)
+            _write_table(one, pa.concat_tables([_read([one], table), tbl]) if one.exists() else tbl)
+            for f in parts:
+                f.unlink()
+        out[table] = pq.read_metadata(one).num_rows
     shutil.rmtree(part / "_parts", ignore_errors=True)
     return out
 
 
-def in_slice(roaster_id: str, part: str, salt: str) -> bool:
-    """Whether a roaster falls in slice "k/n" of a salted-hash split (the confirmation run's arms)."""
+def in_slice(key: str, part: str, salt: str) -> bool:
+    """Whether a key falls in slice "k/n" of a salted-hash split (the confirmation run's arms). crawl passes the
+    roaster's host, so roasters that share a host (one store under several domains) are always in the same arm."""
     k, n = (int(x) for x in part.split("/"))
-    return int(hashlib.sha256(f"{salt}:{roaster_id}".encode()).hexdigest(), 16) % n == k
+    return int(hashlib.sha256(f"{salt}:{key}".encode()).hexdigest(), 16) % n == k
 
 
 def crawl(
@@ -186,7 +206,7 @@ def crawl(
     states, _ = ingest.select_states(plake, week)
     states = [s for s in states if s.roaster.adapter == connector]
     if part:
-        states = [s for s in states if in_slice(s.roaster.roaster_id, part, salt)]
+        states = [s for s in states if in_slice(s.roaster.host.lower() or s.roaster.roaster_id, part, salt)]
     if c.shuffle:
         random.Random(f"{connector}:{week}").shuffle(states)
     todo_ids = {s.roaster.roaster_id for s in states}

@@ -98,3 +98,19 @@ def test_unavailable_reason_reads_only_what_the_store_says():
     sorry = "<p>Sorry, this shop is currently unavailable.</p>"
     gone = httpx.Response(404, headers={"content-type": "text/html"}, text=sorry, request=req)
     assert "unavailable" in http.unavailable_reason(gone)
+
+
+def test_only_shopifys_closed_store_page_reads_as_unavailable():
+    """The wording alone isn't the signature: a 200 page, or another platform's page, saying a shop is
+    "currently unavailable" is a normal answer (an error at most), never a closed store."""
+    words = "<p>Our online shop is currently unavailable until Monday.</p>"
+    html = {"content-type": "text/html"}
+    shop = httpx.Request("GET", "https://x.com/products.json")
+    assert http.unavailable_reason(httpx.Response(200, headers=html, text=words, request=shop)) is None
+    sqsp = httpx.Request("GET", "https://x.com/shop?format=json")
+    assert http.unavailable_reason(httpx.Response(503, headers=html, text=words, request=sqsp)) is None
+    woo = httpx.Request("GET", "https://x.com/wp-json/wc/store/v1/products")
+    assert http.unavailable_reason(httpx.Response(404, headers=html, text=CLOSED_PAGE, request=woo)) is None
+    assert "unavailable" in http.unavailable_reason(
+        httpx.Response(402, headers=html, text=CLOSED_PAGE, request=shop)
+    )

@@ -89,12 +89,26 @@ def rows(lake: Lake, run_date: str | None = None) -> list[dict]:
     return [dict(zip(cols, r, strict=True)) for r in cur.fetchall() if r[cols.index("attempt_id")]]
 
 
+def is_arm(row: dict) -> bool:
+    """A confirmation-run arm's crawl (`crawl --slice`, or COFFEEDATA_ARM set): its detail records the slice or the
+    arm. It writes to a slice sub-partition the merge never reads, so it never counts as the week's crawl, and its
+    refusals never count towards the egress flag of production runs."""
+    detail = row.get("detail")
+    if isinstance(detail, str):
+        try:
+            detail = json.loads(detail)
+        except ValueError:
+            detail = None
+    return isinstance(detail, dict) and bool(detail.get("slice") or detail.get("arm"))
+
+
 def landed(lake: Lake, run_date: str, job: str = "crawl") -> set[str]:
-    """Connectors with a finished `job` this week (done or deadline: their rows are in their partition)."""
+    """Connectors with a finished `job` this week (done or deadline: their rows are in their partition). A
+    confirmation-run arm (is_arm) never lands: its rows are in a slice sub-partition, not the connector's."""
     return {
         r["connector"]
         for r in rows(lake, run_date)
-        if r["job"] == job and r["status"] in ("done", "deadline")
+        if r["job"] == job and r["status"] in ("done", "deadline") and not is_arm(r)
     }
 
 
@@ -116,11 +130,12 @@ def rollup(lake: Lake, run_date: str) -> int:
 
 
 def egress_flags(lake: Lake, job: str = "crawl") -> list[dict]:
-    """IPs whose first-contact refusal share was above REFUSAL_FLAG on each of their last two runs of `job`
-    (the owner is emailed; no automatic action)."""
+    """IPs whose first-contact refusal share was above REFUSAL_FLAG on each of their last two runs of `job` (the
+    egress-check job exits non-zero; no automatic action). Confirmation-run arms (is_arm) are left out: they are
+    experiments, not production runs."""
     by_ip: dict[str, list[tuple]] = {}
     for r in rows(lake):
-        if r["job"] != job or r["status"] == "running":
+        if r["job"] != job or r["status"] == "running" or is_arm(r):
             continue
         for x in r["refusals"] or []:
             by_ip.setdefault(x["ip"], []).append((r["started_at"], x["stores"], x["refused"]))

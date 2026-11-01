@@ -358,6 +358,30 @@ def test_a_partial_fetch_keeps_unread_products_listed(lake, tmp_path):
     con.close()
 
 
+def test_partial_weeks_never_remove_or_relist_and_a_complete_batch_wins_its_week(lake, tmp_path):
+    """fct_price_event agrees with dim_coffee across a partial week: complete, partial (3 of 30), complete reads no
+    bag as removed and then relisted. And a week with a complete batch and a later partial one (a secondary crawler)
+    counts the complete one (stg_run_walk), so the products only it saw keep their weeks."""
+    run(lake, "2026-10-19", "p.com", FULL[:30])
+    run(lake, "2026-10-26", "p.com", FULL[:3], partial=True)
+    run(lake, "2026-11-02", "p.com", FULL[:30])
+    run(lake, "2026-10-19", "h.com", FULL[:30])
+    complete = run(lake, "2026-10-26", "h.com", FULL[:30], hour=9)
+    run(lake, "2026-10-26", "h.com", FULL[:3], hour=18, partial=True)
+    con = build(lake, tmp_path)
+    events = con.execute(
+        "select roaster_id, event, count(*) from fct_price_event group by all order by all"
+    ).fetchall()
+    assert events == [("h.com", "new", 30), ("p.com", "new", 30)]
+    assert con.execute(
+        "select batch_id from stg_runs where roaster_id = 'h.com' and run_date = '2026-10-26'"
+    ).fetchone() == (complete,)
+    weeks = con.execute("select roaster_id, min(weeks_listed), count(*) filter (where is_listed) from dim_coffee "
+                        "group by 1 order by 1").fetchall()  # fmt: skip
+    assert weeks == [("h.com", 2, 30), ("p.com", 2, 30)]
+    con.close()
+
+
 def _passing_builds(lake, metrics: list[dict], first: str = "2026-09-07"):
     """One passing build per weekly run from `first` on, recording each dict of metrics."""
     for i, m in enumerate(metrics):
