@@ -74,8 +74,8 @@ C's final numbers include its retry sweep (section 2.1).
   Coffee AM were served page 1 and parked on page 2). This favours A, and is shared code.
 - **Burst rule.** A's run carried a fix that B and C don't have: only a store's first block in a run counts towards
   platform-wide detection. C's logs show the old rule tripping a 60 s pause of all Shopify and a cut to 0.38–0.75
-  req/s in most shards and in the sweep. B tripped 7 pauses in crawl-retry. This is shared code (ratelimit.py) and
-  can go to any design (follow-up 3).
+  req/s in most shards and in the sweep. B tripped 7 pauses in crawl-retry. This is shared code (ratelimit.py), and
+  this PR now carries A's fix (section 6).
 - **Time of day and earlier traffic.** The runs were 1–8 h apart, against the same stores from the same egress, so
   per-store windows from the earlier runs may still have been open. C's shards 5–6 (22:29 and 23:13) saw 4.5%
   first-contact 429s against 19.4% in shards 0–4. Shards 0–4 ran at half A's and B's rate and still matched their
@@ -186,18 +186,27 @@ the registry). There is no per-service copy.
 - **Enrichment submits to Claude only with an explicit `--submit`**, and only with credentials. Without it, it
   counts candidates and sends nothing. Sims and tests never pass it. (One sim sent two real batches before this guard
   existed; the owner let them run.)
-- **dbt stays the place where rules run.** Roaster status is derived in the build (`dim_roaster.sql`,
-  `registry.STATE_SQL`, both via `products.py`), not from `fetches.coffees`. That is the only dbt change, and it
-  is owner-approved; app/ and contracts/ are unchanged.
-- **Checked on a local copy of the lake** (runs 10-26 to 10-30), with `coffeedata build` on `main` and on this
-  branch:
-  - 34 models and 76 tests each, with the same gate outcome for every run date: 10-26 passes, and 10-27, 10-28 and
-    10-30 fail the same completeness and ok-rate checks on both, because those runs are partial in the lake;
-  - 32 of the 34 built tables are identical;
-  - the other two, `dim_roaster` and `public_roaster`, differ only in the status of 4 roasters. Each new status now
-    agrees with the roaster's listed coffees. steamshovelcoffee.com (1 coffee listed) and sumerce.coffee (4) go
-    from `no_coffee` to `active`. kaldi.com and hiker.coffee (0 listed on `main` too) go from `active` to
-    `no_coffee`.
+- **Roaster status is unchanged from `main`.** `main` reads the coffee count each crawl recorded
+  (`fetches.coffees`), which an ELT crawl no longer fills. dbt now recreates that count for such a fetch in
+  intermediate models, with the crawl's own rule (`classify.is_coffee`, the rules alone: no verdicts, not the
+  listed count, no suspect-run filter): `int_fetch_product_inputs` → `int_fetch_coffees` → `int_fetches`
+  (`coalesce(recorded, counted)`). `dim_roaster.sql` is `main`'s, except that it reads `int_fetches` instead of
+  `stg_fetches`; `registry.STATE_SQL` counts the same way. Moving status out of the dim is a follow-up (section 13).
+- **Checked on a local, read-only copy of the lake** (runs 10-26 to 10-30), with `coffeedata build` on `main` and on
+  this branch, for run dates 10-26 and 10-30:
+  - every table both builds share is identical row for row, on every column they share (build ids aside);
+  - the branch only adds columns (`stg_fetches.partial`, `stg_runs.partial`/`is_current`, `stg_run_walk.partial`,
+    `stg_run_quality.partial`, `int_roaster_runs.unavailable`, `run_completeness.unavailable`) and the three
+    intermediate models above, which are empty on this lake (every fetch in it recorded its count);
+  - the gate outcome is the same on both: 10-26 passes; 10-30 fails the same completeness and ok-rate checks,
+    because that run is partial in the lake.
+  - Roaster status is `main`'s, including kaldi.com and hikersbrewcoffee.com (hiker.coffee): both `active`.
+    kaldi.com's 10-26 fetch hit the old 20-page cap (5,000 products, all equipment parts such as BUNN kits; its
+    coffees come later in the catalog). The crawl's rules then counted 3,459 of them as coffee; today's rules count 0,
+    so it lists 0 coffees while its status, from the recorded count, is `active`. The live store sells coffee
+    (24 products in /collections/latin-american-gourmet-coffee). steamshovelcoffee.com and sumerce.coffee stay
+    `no_coffee` as on `main`, though their live stores sell coffee and the build lists 1 and 4: the status
+    follow-up fixes both kinds of mismatch.
 
 ## 5. Contracts (versioned and tested)
 
@@ -208,13 +217,15 @@ that each producer writes exactly its contract's columns.
 
 | Contract | Version | Tables / files | Producer → consumers |
 |---|---|---|---|
-| **raw** | **1.1.0** (this PR adds `fetches.blocks`) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**); `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
-| **manifest / control** | 1.0.0 | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
-| **enrichment** | 1.0.0 | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | as today | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `contracts/test_contracts.py`, unchanged |
+| **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
+| **manifest / control** | 1.1.0 (descriptions and quality rules) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
+| **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
+| **public** | 2.2.0 (`is_listed` keeps a partial catalog's unread coffees listed; no column or enum change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `contracts/test_contracts.py` |
 
-`fetches.blocks` is new and nullable, so older files read back as null. `stg_fetches` selects named columns, so dbt
-is unaffected.
+`fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
+checkpoint from an older image the same way. Each internal contract now carries a description of every table and
+column and its quality rules, each naming what enforces it (`contract_docs.py`; a test fails on an undescribed
+column). They stay JSON; emitting them as ODCS YAML from `lake.SCHEMAS` is a follow-up.
 
 **Control plane.** `job_manifests` is the source of truth for what ran, what landed and what's parked. Each job writes
 a row when it starts (`running`) and one when it ends (`done`, `deadline`, `failed`). An attempt with only the first
@@ -232,6 +243,8 @@ Every design got the same fixes, and they are in this PR:
 - **the conditional short-page stop**: a short page ends the catalog only once the store's last known product count
   is reached (onyxcoffeelab.com: all 991 products);
 - per-store backoff and deferred rounds (#62). A store refused on every try is labelled `refused`.
+- **A's burst rule**: only a store's first block in a run counts towards a platform-wide pause, and a 430 still
+  pauses the platform (section 13).
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 
@@ -346,8 +359,9 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
   into thirds (`crawl --slice k/3 --salt <salt>`), one per arm. Record the salt. Rotate the arms across runs so each
   third sees each arm. `COFFEEDATA_ARM`, the network, the rps and the slice are recorded in
   `job_manifests.detail`. The exact commands are in the runbook.
-- **The same conditions.** Lake history present in every arm. Each arm a day apart, at the same hour, so per-store
-  windows have reset.
+- **The same conditions.** Lake history present in every arm. The slices are disjoint by store, so only a shared
+  egress IP can couple two arms: arms 1 and 2 (different IPs) run at the same time, and arm 3 starts 30 min after
+  arm 2 ends (the same NAT IP). Each arm writes to its own `slice=k-of-n` sub-partition, which the merge never reads.
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
   - first-contact refusal share per IP, with Wilson 95% intervals;
   - ok share, refused, parked and wall time;
@@ -357,17 +371,25 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
   beats arm 2 inside the time limit. If it beats arm 2 but can't fit one job's limit, that is the trigger to revisit
   C.
 
-## 11. Closed and unavailable stores
+## 11. Closed and unavailable stores (this PR)
 
-A closed store is a distinct status, `unavailable`, not `failed` or `blocked`. Signals:
-- Shopify's "This store is currently unavailable" page;
+A closed store gets a fetch status of its own, `unavailable`, which is neither `error` nor a block (raw contract
+1.2.0 lists the statuses: ok, error, unavailable). `http.Unavailable` is raised on:
+- Shopify's closed-store page ("This store is unavailable", in any HTTP status);
 - a password-protected storefront (a redirect to `/password`);
-- a 404 for the whole domain, or a DNS failure for the host.
+- a robots.txt that disallows the whole site, not just the feed. Example: Big Guns, deactivated, 2026-10-31. A
+  robots.txt that disallows only `/products.json` is still a robots block (`error`), and so is a robots.txt answered
+  with 401 or 403 (often an edge challenge), which is retried, never `unavailable`.
 
-The status is set only if the signal repeats on two runs at least a day apart. Example: Big Guns is deactivated, and
-its robots.txt now disallows the feed. With #63, a store's last catalog shows for up to 4 weeks, then drops off.
-`unavailable` stores are excluded from the egress refusal rate and from the gate's ok-rate denominator. The
-detection is a follow-up (follow-up 2); this PR doesn't change status labels.
+An `unavailable` store:
+- is done for the run: resumes and retry passes don't ask it again that week;
+- counts as attempted, but `run_completeness` leaves it out of `run_ok_rate` and `adapter_ok_rate`, so closed stores
+  don't fail the gate;
+- is shown with its last catalog for up to 4 weeks with #63, then drops off.
+
+A 404 or a DNS failure for the whole domain is left as `error` for now. One failed lookup can be transient, so it
+should become `unavailable` only after two runs at least a day apart (follow-up 2). Tests: `tests/test_unavailable.py`,
+and `test_unavailable_stores_do_not_count_against_the_ok_rates`.
 
 ## 12. Next steps from the research, and the secondary crawler
 
@@ -383,10 +405,19 @@ detection is a follow-up (follow-up 2); this PR doesn't change status labels.
   per-product `.js` into the same raw shape, plus bodies. Its first pass found 255 of 926 best-run coffees (28%)
   across 14 stores. 4 stores passed with every field, and 503s stopped 6 of them. Those 14 stores were development
   data, so it needs a held-out, roaster-grouped score before it ships.
-  - **The dbt `partial` gap**: a fetch is either complete or an error. A secondary crawl cut off by a 503 (Coffee
-    King 60 of 74, Artizan 61 of 160) can only be dropped, since landing it as ok would make the missing products
-    look delisted. dbt needs a `partial` fetch status, meaning these products were seen and absence means nothing,
-    before partial catalogs can land.
+  - **The dbt `partial` gap, closed in this PR.** `fetches.partial` (nullable, raw 1.2.0) marks an ok fetch that
+    read only part of a catalog. dbt lists what it read and keeps the products it didn't read as they were
+    (`stg_runs.is_current`). A partial week is never suspect and never enters the baseline. Before this, a secondary
+    crawl cut off by a 503 (Coffee King 60 of 74, Artizan 61 of 160) could only be dropped. Tested by the dbt unit
+    test `partial_runs_keep_unread_products_listed` and `test_a_partial_fetch_keeps_unread_products_listed`. Still
+    open: `fct_price_event` reads a partial week's unread bags as `removed` (follow-up 15).
+  - **Designed and approved for #67 (head `d7a671e`, which holds all of its code), but never built.** These are
+    follow-ups (16–18), with no code here:
+    - a 503 on `.js` parks `.js` like a 429, and the store continues on its pages;
+    - `/collections/all` unioned with the sitemap for every store. Atlas was missing 39 of 41 coffees from its
+      sitemap;
+    - a store that stops mid-crawl lands as a flagged partial catalog (`partial = true`) instead of an error. That
+      needs the `partial` status above.
   - The hook in B: refused stores are labelled in `fetches` and visible in `job_manifests`. The secondary crawler is
     one more connector job that reads them.
 - **The Shopify API terms need a legal read.** The Shopify API Terms (updated 2026-10-07) bar using the API "to build
@@ -397,20 +428,64 @@ detection is a follow-up (follow-up 2); this PR doesn't change status labels.
 
 ## 13. Follow-ups
 
+Done in this PR:
+- **Burst rule (A's fix).** Only a store's first block in a run counts towards a platform-wide pause. Retries, page
+  backoffs, deferred rounds, parked stores and the retry pass (`crawl-retry`) never count, and a 430 still pauses
+  the platform. C's alternative passed known blockers in as `quiet_hosts` for its sweep. A's rule is simpler and
+  covers both cases: the in-run repeats, and a retry pass, because `mode="retry_failed"` turns burst counting off.
+  A store that blocked in an earlier job of the same run (a resume, crawl-retry) is read from `fetches.blocks` at
+  the start, so its block is a repeat too; that replaces C's hand-passed `quiet_hosts`. A's real crawl went from 5
+  false platform pauses to 0 with it. **It doesn't fix B's S2 weakness.** B's S2 sim
+  (Shopify jobs only, one run each), before and after the fix:
+  - parked by the first job: 429 → 468; ok after the first job and its resume: 929 → 927 of 1,070;
+  - cooldowns: 17 → 16.
+
+  The S2 losses come from a true IP-wide limit, not false trips. On a dedicated IP that limit is our own rate,
+  which the confirmation run's low-rate arm tests.
+- **`unavailable` status** (section 11) and **`partial`** (section 12), raw contract 1.2.0.
+- **A first-ever run on an empty lake**, through the CLI: crawl → merge → build, with no history and no served
+  release (`test_a_first_ever_run_on_an_empty_lake_crawls_merges_and_builds`).
+- **Concurrent jobs on one staging bucket** (the confirmation run's arms): each arm compacts only its own slice
+  sub-partition, and a publish skips a staged file another job already sent.
+- **Cloud Run app service**: the service-level `scaling` block is in `ignore_changes` (a perpetual
+  `manual_instance_count 0 -> null` diff on the live service).
+- **Enrichment never submits without `--submit`**, even with `ANTHROPIC_API_KEY` and `COFFEEDATA_ANTHROPIC_API_KEY`
+  set, via the CLI (`test_enrich_week_never_submits_without_the_flag_even_with_keys_set`).
+
+Next:
 1. **Confirmation run** (section 10) on Cloud Run: default egress against one dedicated NAT IP, and full speed
    against a low rate (`src/terraform/ingestion.tf`, `docs/ingestion/RUNBOOK.md`).
-2. **`unavailable` status** (section 11), with tests.
-3. **Burst rule from A**: only a store's first block counts towards platform-wide detection, and a 430 still pauses
-   the platform. Also, distinct stores blocking together should count even while in page backoff (B's S2 weakness).
-   Shared ratelimit.py, measured in the S2 sim before and after.
+2. **`unavailable` for a dead domain** (a 404 or DNS failure for the whole domain) after two runs at least a day
+   apart.
+3. **Under a true IP-wide limit**, count distinct stores blocking together even while they are in page backoff (B's
+   S2 weakness). Measure it in the S2 sim, and only if the confirmation run shows an IP-wide limit on the dedicated
+   IP.
 4. **Refused stores skip to crawl-retry** once refused this week, instead of 3 backoffs per job (7 min each).
 5. **Web Bot Auth + the higher-limits form**, once the owner supplies the operator details.
-6. **Secondary crawler** (#67) as its own connector job, after the dbt `partial` status and a held-out score.
+6. **Secondary crawler** (#67) as its own connector job, after a held-out, roaster-grouped score.
 7. **The API terms legal read**, before any `.js`, Storefront API or Catalog MCP use.
 8. **Conditional requests**: send `If-None-Match` and `If-Modified-Since` where an ETag is known, and log the share
    of 304s.
-9. **Lock the control writes** with GCS generation preconditions, so two attempts can't race on `job_manifests`.
+9. **Lock the control writes**, so two attempts can't race on `job_manifests`.
 10. **Same-day connector schedule** (section 7), if the confirmation run shows the jobs don't interfere.
 11. **Cutover PR** (RUNBOOK.md): disable `weekly.yml`'s schedule, keeping `workflow_dispatch`, and give `site.yml` a
     Sunday schedule plus the public export and Snowflake load. After one good week, remove `weekly.yml`'s crawl.
 12. **Revisit C** only on its trigger ("Deferred: daily shards (C)").
+13. **Roaster status as facts (Kimball).** `dim_roaster` keeps descriptive attributes only: who the roaster is
+    (name, site, platform, location). Status is business logic over run-dated outcomes, so it moves to facts
+    downstream of the dims:
+    - `fct_roaster_run`, grain roaster × run_date: ok, partial or unavailable, products, coffees, and whether the
+      catalog was complete and accepted (not failed, truncated, suspect, partial or missing);
+    - a status-history model derived from it (`valid_from`, `valid_to`, `is_current` per roaster), where `no_coffee`
+      only follows a complete, accepted fetch with 0 coffees;
+    - `public_roaster` keeps its public `status` column, sourced from that model instead of the dim, so the public
+      contract doesn't change.
+
+    `dim_roaster`'s status logic moves out in that PR, with its own real-lake comparison (it would change
+    kaldi.com, steamshovelcoffee.com and sumerce.coffee, section 4).
+14. **Internal contracts as ODCS YAML**, generated from `lake.SCHEMAS` and `contract_docs.py` so they can't drift.
+15. **`fct_price_event` and partial weeks**: don't read a partial week's unread bags as `removed`.
+16. **#67: a 503 on `.js` parks `.js` like a 429**, and the store continues on its pages.
+17. **#67: `/collections/all` unioned with the sitemap** for every store (Atlas: 39 of 41 coffees missing from its
+    sitemap).
+18. **#67: a store that stops mid-crawl lands as a flagged partial catalog** (`partial = true`) instead of an error.

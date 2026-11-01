@@ -12,25 +12,41 @@ export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
 ## 0. Before you start
 
 - `gcloud auth login` and `gcloud auth application-default login`, as an account that can apply the app's Terraform.
-- Terraform ≥ 1.6, and Docker with BuildKit (the default in current Docker). BuildKit reads
-  `ingest.Dockerfile.dockerignore`, which keeps dbt/ and config/ in the image.
+- Terraform ≥ 1.6. No local Docker is needed: Cloud Build builds the image (§1).
 - `HF_TOKEN` and `ANTHROPIC_API_KEY` already hold values in Secret Manager: they are the app's secrets
   (`secrets.tf`). Terraform only references them by name and never sets a value.
 - `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`). For verdicts in the build job, add
   `verdict_model = "<the VERDICT_MODEL repository variable's value>"`. Leave it out for rules only.
 
-## 1. Push the image
+## 1. Build the image
 
-The jobs reference the image, so push it before the first apply. The app's Artifact Registry repository already
-exists.
+The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`), so **the image must exist before the first
+apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
+
+Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
+with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
+contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
+lake and build/ stay behind.
 
 ```sh
-gcloud auth configure-docker $REGION-docker.pkg.dev
-docker build -f ingest.Dockerfile -t "$IMAGE" .
-docker push "$IMAGE"
+cat > /tmp/ingest-build.yaml <<'YAML'
+steps:
+  - name: gcr.io/cloud-builders/docker
+    env: ["DOCKER_BUILDKIT=1"]
+    args: ["build", "-f", "ingest.Dockerfile", "-t", "$_IMAGE", "."]
+images: ["$_IMAGE"]
+YAML
+gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml --substitutions "_IMAGE=$IMAGE" .
+gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
 ```
 
+The jobs run `:latest`, so every execution started after a build uses it; nothing needs re-applying.
+
 ## 2. Init, plan, apply
+
+**Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
+job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches:
+`terraform plan -var ingest_schedule_enabled=false` should change nothing.
 
 ```sh
 cd src/terraform
@@ -68,50 +84,66 @@ for j in crawl-shopify crawl-retry crawl-shopify-default-egress; do
 done   # ALL_TRAFFIC, ALL_TRAFFIC, (empty)
 ```
 
-## 3. Confirmation run: Shopify, three arms
+## 3. Confirmation run: Shopify, three arms (today)
 
 Each arm crawls one third of the Shopify roasters, chosen by a salted hash of `roaster_id`, so no store is in two
-arms. The arms run on consecutive days at the same hour (09:17 UTC), so per-store windows reset between them.
-The lake already has history (product counts), so v2's short-page stop works in every arm. Don't run merge or
-crawl-retry during the confirmation run.
+arms. Per-store windows can't carry over from one arm to another; only a shared egress IP can. So:
+- **arms 1 and 2 run at the same time**: default egress and the NAT IP are different IPs;
+- **arm 3 starts 30 min after arm 2 ends**: it shares arm 2's NAT IP (34.172.156.113), and the gap lets an IP-wide
+  window from arm 2 reset. Arm 1 may still be running then, on another IP.
+
+All three run today, once the image from §1 is built. The lake already has history (product counts), so v2's
+short-page stop works in every arm.
+
+**Pass `--run-date $WEEK` (2026-11-02), not today's date.** A crawl works on the week of its run date, and skips
+every store the lake already has an ok fetch for that week. Today's week (2026-10-26) is already crawled, so without
+it an arm would find almost nothing to do. 2026-11-02 has no fetches in the lake yet. Each arm writes only to its own
+sub-partition in the staging bucket, `raw/connector=shopify/run_date=2026-11-02/slice=k-of-3/`: concurrent arms never
+compact each other's files, and the weekly merge never reads a slice. The arms' `job_manifests` rows go to the lake
+under 2026-11-02; Monday's GitHub weekly run doesn't read them. Don't run merge or crawl-retry during the
+confirmation run. **Monday's GitHub Actions weekly run stays as the
+fallback.** It crawls from runner IPs after every arm has ended, and nothing here changes it.
 
 Choose a salt and keep it with the results, e.g. `SALT=confirm-2026-11a`.
 
-| Day | Arm | Job (network) | Slice | Rate |
+| Arm | Starts | Job (network) | Slice | Rate |
 |---|---|---|---|---|
-| Tue | 1 | `crawl-shopify-default-egress` (default egress) | 0/3 | full (`SHOPIFY_RPS`) |
-| Wed | 2 | `crawl-shopify` (NAT, one static IP) | 1/3 | full |
-| Thu | 3 | `crawl-shopify` (NAT, one static IP) | 2/3 | 0.5 req/s, a 225-min window |
+| 1 | with arm 2 | `crawl-shopify-default-egress` (default egress) | 0/3 | full (`SHOPIFY_RPS`) |
+| 2 | with arm 1 | `crawl-shopify` (NAT, 34.172.156.113) | 1/3 | full |
+| 3 | 30 min after arm 2 ends | `crawl-shopify` (NAT, 34.172.156.113) | 2/3 | 0.5 req/s, a 225-min window |
 
 ```sh
-SALT=confirm-2026-11a
+SALT=confirm-2026-11a WEEK=2026-11-02
 
-# Arm 1: default egress, full rate
+# Arm 1: default egress, full rate (in the background)
 gcloud run jobs execute crawl-shopify-default-egress --region $REGION --wait \
-  --args="crawl,--connector,shopify,--slice,0/3,--salt,$SALT" \
-  --update-env-vars="COFFEEDATA_ARM=1-default-full"
+  --args="crawl,--connector,shopify,--run-date,$WEEK,--slice,0/3,--salt,$SALT" \
+  --update-env-vars="COFFEEDATA_ARM=1-default-full" > arm1.log 2>&1 &
 
-# Arm 2: the dedicated NAT IP, full rate
+# Arm 2: the dedicated NAT IP, full rate, at the same time
 gcloud run jobs execute crawl-shopify --region $REGION --wait \
-  --args="crawl,--connector,shopify,--slice,1/3,--salt,$SALT" \
-  --update-env-vars="COFFEEDATA_ARM=2-dedicated-full"
+  --args="crawl,--connector,shopify,--run-date,$WEEK,--slice,1/3,--salt,$SALT" \
+  --update-env-vars="COFFEEDATA_ARM=2-dedicated-full" > arm2.log 2>&1
+date -u   # arm 2 has ended
 
-# Arm 3: the dedicated NAT IP, a low spread-out rate
+# Arm 3: the same NAT IP at a low, spread-out rate, 30 min after arm 2 ended
+sleep 1800
 gcloud run jobs execute crawl-shopify --region $REGION --wait \
-  --args="crawl,--connector,shopify,--slice,2/3,--salt,$SALT,--rps,0.5,--deadline-min,225" \
-  --update-env-vars="COFFEEDATA_ARM=3-dedicated-low"
+  --args="crawl,--connector,shopify,--run-date,$WEEK,--slice,2/3,--salt,$SALT,--rps,0.5,--deadline-min,225" \
+  --update-env-vars="COFFEEDATA_ARM=3-dedicated-low" > arm3.log 2>&1
+wait   # for arm 1
 ```
 
-The next week, rotate the slices so each third sees each arm: arm 1 takes 1/3, arm 2 takes 2/3 and arm 3 takes
-0/3, with the same salt. While the confirmation run lasts, the GitHub weekly workflow still crawls on Monday from
-runner IPs. Tuesday's arm comes a day later, so per-store windows have reset by then.
+An arm that reaches its deadline exits non-zero (`crawl shopify: deadline reached, N roasters left`). Its
+`job_manifests` end row says `deadline`, and its results still count. A repeat on another day rotates the slices so
+each third sees each arm: arm 1 takes 1/3, arm 2 takes 2/3 and arm 3 takes 0/3, with the same salt.
 
 ### Reading the results
 
 Each arm writes:
 - one `job_manifests` row at its start and one at its end. These are published to the lake, and the end row holds
   counts, `egress_ips`, `refusals` per IP, and `detail` (arm, egress, rps, slice, salt);
-- its fetch rows, including `blocks`, in the GCS partition `raw/connector=shopify/run_date=<Monday>/`.
+- its fetch rows, including `blocks`, in its GCS sub-partition `raw/connector=shopify/run_date=$WEEK/slice=k-of-3/`.
 
 ```sh
 mkdir -p build/confirm && gcloud storage cp -r \
@@ -139,7 +171,7 @@ print(con.sql("""
          count(*) filter (where b.cf_mitigated = 'challenge') as challenges,
          count(*) filter (where b.content_type like 'text/html%') as html,
          count(*) filter (where b.retry_after is not null) as with_retry_after
-  from (select unnest(blocks) as b from 'build/confirm/connector=shopify/*/fetches.parquet')
+  from (select unnest(blocks) as b from 'build/confirm/connector=shopify/run_date=*/slice=*/fetches.parquet')
   group by all order by all"""))
 EOF
 ```
@@ -158,9 +190,8 @@ EOF
 Afterwards, clear the confirmation run's partition so a later merge doesn't pick it up:
 
 ```sh
-MONDAY=<the run_date folder you copied>
-gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=$MONDAY" \
-  "gs://$PROJECT-ingest-staging/parked/run_date=$MONDAY"
+gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=$WEEK" \
+  "gs://$PROJECT-ingest-staging/parked/run_date=$WEEK"
 ```
 
 ## 4. Cutover: Monday's ship moves every connector at once
