@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: ddl-to-contract
+expected_outcome: |
+  sales.odcs.yaml is an ODCS v3.2.0 contract that validates, with customers and orders as schema objects,
+  every column carried over with its Postgres type verbatim in physicalType, keys, NOT NULL, UNIQUE, the
+  status CHECK list as an enum, the customer foreign key as a relationship, and no invented SLAs, owners
+  or servers.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,52 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: payments.v1
+version: 1.0.0
+status: active
+dataProduct: payments
+description:
+  purpose: Settled card payments for the finance team.
+schema:
+  - id: fin.payments
+    name: payments
+    physicalType: table
+    quality:
+      - metric: rowCount
+        mustBeBetween: [1000]
+    properties:
+      - name: payment_id
+        logicalType: string
+        physicalType: varchar(36)
+        primaryKey: true
+        primaryKeyPosition: 1
+        required: true
+      - name: merchant_id
+        logicalType: string
+        physicalType: varchar(36)
+        relationships:
+          - from: payments.merchant_id
+            to: merchants.merchant_id
+      - name: amount
+        logicalType: decimal
+        physicalType: numeric(12,2)
+        quality:
+          - metric: invalidValues
+            mustBe: 0
+            arguments:
+              validValues: ['>= 0']
+      - name: method
+        logicalType: string
+        physicalType: varchar(10)
+        enum: [card, wallet, bank_transfer]
+      - name: settled_at
+        logicalType: timestamp
+        physicalType: timestamptz
+        quality:
+          - type: sql
+            query: SELECT COUNT(*) FROM {object} WHERE {property} > now()
+            mustBe: zero
+servers:
+  - server: prod
+    type: postgresql
+    host: db.internal.example.com
+    database: finance

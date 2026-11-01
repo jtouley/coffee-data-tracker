@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: fix-invalid-contract
+expected_outcome: |
+  payments.odcs.yaml validates against the ODCS v3.2.0 schema; every planted error is fixed in a way that
+  keeps the original intent; the reply explains each problem; facts the file doesn't contain (the server's
+  port and schema, the upper row-count bound) are not invented without saying so.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: add-ai-context
+expected_outcome: |
+  public-catalog.odcs.yaml gains a v3.2.0 context block at the contract level and on schema objects
+  (instructions, constraints, verifiedStatements), grounded in what the contract already says, possibly
+  with synonyms; it still validates, and nothing else in the file changes meaning.
+context:
+  scaffold_script: place-files.sh
