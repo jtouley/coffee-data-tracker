@@ -1,0 +1,174 @@
+diff --git a/src/coffeedata/adapters/shopify.py b/src/coffeedata/adapters/shopify.py
+index d8ae77a..aef7261 100644
+--- a/src/coffeedata/adapters/shopify.py
++++ b/src/coffeedata/adapters/shopify.py
+@@ -2,13 +2,64 @@
+ 
+ from __future__ import annotations
+ 
++import logging
++import time
+ from datetime import UTC, datetime
+ 
+-from ..http import FetchError, PoliteClient
++import httpx
++
++from ..http import BLOCK_STATUSES, FetchError, PoliteClient
+ from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
++from ..ratelimit import HostRateLimited, RateLimited, retry_after_seconds
+ from ..text import html_to_text, to_float
+ 
++log = logging.getLogger(__name__)
++
+ MAX_PAGES = 20
++PAGE_LIMIT = 250  # the most /products.json returns per page
++# A store that serves page 1 and then answers 429 (Retry-After 60) for the next page: wait it out and ask for that
++# page again, keeping the pages already fetched. Restarting from page 1 hits the same wall every time (A's real crawl,
++# 2026-10-31: 11 large stores failed that way). At most this many waits per page, each at most MAX_PAGE_WAIT s.
++PAGE_WAITS = 3
++MAX_PAGE_WAIT = 120.0
++BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
++
++
++def _block_wait(e: FetchError) -> float | None:
++    """Seconds to wait before asking for the same page again, or None if this failure isn't a store's pause."""
++    if isinstance(e, HostRateLimited):
++        return min(MAX_PAGE_WAIT, max(1.0, e.wait))
++    if isinstance(e, RateLimited):  # the platform as a whole gave up: don't hold a worker
++        return None
++    c: BaseException | None = e
++    while c is not None:  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
++        if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
++            wait = retry_after_seconds(c.response.headers.get("retry-after"))
++            return min(MAX_PAGE_WAIT, BLOCK_DEFAULT_WAIT if wait is None else max(1.0, wait))
++        c = c.__cause__
++    if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")):
++        return BLOCK_DEFAULT_WAIT
++    return None
++
++
++def _page(client: PoliteClient, roaster: Roaster, page: int) -> object:
++    for attempt in range(PAGE_WAITS + 1):
++        try:
++            return client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
++        except FetchError as e:
++            # Page 1 fails as before: a store that never serves a page is parked or refused by ingest.run.
++            wait = _block_wait(e) if page > 1 else None
++            if wait is None or attempt == PAGE_WAITS:
++                raise
++            log.info(
++                "%s: blocked on page %d (%s); waiting %.0fs, then that page again",
++                roaster.host,
++                page,
++                e,
++                wait,
++            )
++            time.sleep(wait)
++    raise AssertionError("unreachable")
+ 
+ 
+ def _published_at(value: object) -> datetime | None:
+@@ -63,7 +114,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
+ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
+     items: dict[str, CatalogItem] = {}
+     for page in range(1, MAX_PAGES + 1):
+-        data = client.fetch_json(f"https://{roaster.host}/products.json", limit=250, page=page)
++        data = _page(client, roaster, page)
+         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
+             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
+         # A full page can hold fewer than 250 products (Shopify drops some after paging; onyxcoffeelab.com's pages
+diff --git a/tests/test_ratelimit.py b/tests/test_ratelimit.py
+index aeb729e..7898895 100644
+--- a/tests/test_ratelimit.py
++++ b/tests/test_ratelimit.py
+@@ -383,14 +383,20 @@ def test_other_platforms_keep_per_host_politeness_only(mock, no_retry_sleep):
+     assert clock.t == 1000 and lim.stats["requests"] == 0
+ 
+ 
+-def test_persistent_429_is_a_fetch_error_and_no_partial_catalog_is_stored(lake, mock):
++def test_persistent_429_is_a_fetch_error_and_no_partial_catalog_is_stored(lake, mock, monkeypatch):
++    from coffeedata.adapters import shopify
++
++    monkeypatch.setattr(
++        shopify.time, "sleep", lambda s: None
++    )  # the adapter's waits before asking page 2 again
+     mock.get("https://onyx.com/products.json", params={"page": "1"}).mock(return_value=_page(range(250)))
+     mock.get("https://onyx.com/products.json", params={"page": "2"}).mock(return_value=resp(429, "0"))
+     out = ingest.run(lake, [_r("onyx.com")], "2026-10-26", workers=1, shopify_rps=1000)
+     # the main pass and both deferred rounds: one error row each, none of them "refused" (page 1 was served)
+     assert out["by_adapter"]["shopify"]["errors"] == 3
+     assert all(f.startswith("onyx.com: FetchError: HTTPStatusError") for f in out["failures"])
+-    assert out["shopify_limiter"]["rate_limited"] == 9  # every retry of page 2, in every round
++    # every retry of page 2, for page 2 and its PAGE_WAITS re-asks, in every round
++    assert out["shopify_limiter"]["rate_limited"] == 3 * (shopify.PAGE_WAITS + 1) * 3
+     assert out["deferred"] == {"round_1": 1, "round_2": 1, "still_failing": 1, "refused": 0}
+     con = lake.connect()
+     assert con.execute(f"select status from {lake.scan('fetches')}").fetchall() == [("error",)] * 3
+@@ -792,3 +798,67 @@ def test_deferred_retries_are_spread_over_the_wait_window(lake, mock, quick_defe
+     monkeypatch.setattr(ingest, "DEFERRED_SPREAD", 60.0)
+     ingest.run(lake, [_r(f"p{i}.com") for i in range(4)], "2026-10-26", workers=4, shopify_rps=1000)
+     assert sorted(sleeps) == [15.0, 30.0, 45.0]  # the first retry at once, the rest a quarter-window apart
++
++
++# --- resumable Shopify pagination (A's real crawl: page 1 200, page 2 429 Retry-After 60, retries restart) -------
++
++
++def test_a_429_mid_catalog_waits_and_resumes_at_that_page(mock, no_retry_sleep, monkeypatch):
++    from coffeedata.adapters import shopify
++
++    clock = FakeClock()
++    waits: list[float] = []
++    monkeypatch.setattr(shopify.time, "sleep", lambda s: (waits.append(s), clock.sleep(s)))
++    lim = limiter(clock, per_host=True)
++    p1 = mock.get("https://big.example/products.json", params={"limit": "250", "page": "1"}).mock(
++        return_value=_page(range(250))
++    )
++    p2 = mock.get("https://big.example/products.json", params={"limit": "250", "page": "2"}).mock(
++        side_effect=[resp(429, "60"), _page(range(250, 300))]
++    )
++    mock.get("https://big.example/products.json", params={"limit": "250", "page": "3"}).mock(
++        return_value=_page([])
++    )
++    with PoliteClient(min_interval=0, limiters={"shopify": lim}) as c:
++        items = fetch_catalog(c, _r("big.example"))
++    assert len(items) == 300  # page 1's products kept, page 2 fetched after the wait
++    assert p1.call_count == 1 and p2.call_count == 2  # never restarted from page 1
++    assert waits and 59 <= waits[0] <= 60
++
++
++def test_a_429_on_page_one_still_fails_fast(mock, no_retry_sleep, monkeypatch):
++    from coffeedata.adapters import shopify
++
++    clock = FakeClock()
++    monkeypatch.setattr(shopify.time, "sleep", lambda s: pytest.fail("page 1 must not wait in the adapter"))
++    lim = limiter(clock, per_host=True)
++    mock.get("https://refuser.example/products.json").mock(return_value=resp(429, "60"))
++    with PoliteClient(min_interval=0, limiters={"shopify": lim}) as c, pytest.raises(RateLimited):
++        fetch_catalog(c, _r("refuser.example"))
++
++
++def test_products_json_asks_for_the_shopify_maximum_page_size():
++    from coffeedata.adapters import shopify
++
++    assert shopify.PAGE_LIMIT == 250
++
++
++def test_a_mid_catalog_block_after_the_clients_retries_also_resumes(mock, no_retry_sleep, monkeypatch):
++    """No limiter pause in the way (a deferred round, or retries used up): the wrapped HTTPStatusError's Retry-After
++    is the wait, and the same page is asked again."""
++    from coffeedata.adapters import shopify
++
++    waits: list[float] = []
++    monkeypatch.setattr(shopify.time, "sleep", waits.append)
++    p1 = mock.get("https://big.example/products.json", params={"limit": "250", "page": "1"}).mock(
++        return_value=_page(range(250))
++    )
++    mock.get("https://big.example/products.json", params={"limit": "250", "page": "2"}).mock(
++        side_effect=[resp(429, "45"), _page(range(250, 260))]
++    )
++    mock.get("https://big.example/products.json", params={"limit": "250", "page": "3"}).mock(
++        return_value=_page([])
++    )
++    with PoliteClient(min_interval=0, retries=1) as c:
++        items = fetch_catalog(c, _r("big.example"))
++    assert len(items) == 260 and p1.call_count == 1 and waits == [45.0]

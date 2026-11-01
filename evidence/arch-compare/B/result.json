@@ -1,0 +1,1087 @@
+{
+ "design": "B: one weekly job per connector (coffeedata crawl --connector X) into raw/connector=X/run_date=W, weekly merge into the run shape dbt reads",
+ "worktree": "build/arch-compare/B/wt: detached at origin/main 6bda240 + PR #62 (a local commit) + PAGINATION.patch + PAGINATION.v2.patch + design B (ELT, control table, contracts); nothing pushed",
+ "sim": {
+  "scale": 10,
+  "clock": "sim seconds; latencies and Retry-After scaled; idle time between jobs skipped",
+  "mock": "B/sim/mock.py (copy of crawl-plan/sim/mockserver.py): refusers sha256('refuse:'+roaster_id)%100<6 -> 66 of 1,070 Shopify; S2 IP limit >120 Shopify req in trailing 60 s -> 429 RA 60; Woo 503 2026-11-04 02:00-04:00 UTC",
+  "schedule": "Mon shopify, Tue squarespace, Wed woocommerce, Thu square_online, Fri generic, each 02:00 + resume slot 08:00; merge Sun 06:00; Fri 02:00 job SIGKILLed at 50% of roasters done",
+  "caveat": "4-core box shared with designs A and C running at the same time; wall minutes include some CPU contention",
+  "code": "final: v2 pagination + ELT (crawl writes snapshots, bodies, fetches only) + control table + enrichment job"
+ },
+ "dbt_unchanged": {
+  "equivalence": true,
+  "equivalence_detail": "sim/dbt_equiv.py: fixture JSON (3 Shopify + 1 WooCommerce, 2 weeks). main's ingest + dbt vs B's crawl jobs + merge (ELT) + B's dbt. All 17 marts/public/int tables are identical (non-timestamp columns): runs/dbt_equiv/report.json",
+  "dbt_files_changed": {
+   "dbt/models/marts/dim_roaster.sql": "+11/-1: status from the build (stg_products), not fetches.coffees (owner)",
+   "dbt/models/staging/stg_products.py": "+6/-18: calls the shared coffeedata.products",
+   "dbt/models/staging/stg_snapshots.sql": "+1/-2: product_input_hash macro",
+   "dbt/macros/products.sql": "+6 (new)"
+  },
+  "app_changed": 0,
+  "public_contracts_changed": 0,
+  "shape": "merge writes run_manifests/, fetches/, snapshots/, bodies/run_date=W/batch=<id>.parquet: the globs dbt reads. No crawl-time enrichments; raw/ and job_manifests/ are outside every dbt glob"
+ },
+ "code": {
+  "base": "6bda240 (origin/main at start; it has since moved to f4392b3, PR #66, app only)",
+  "numstat_vs_base": [
+   "6\t0\tdbt/macros/products.sql",
+   "11\t1\tdbt/models/marts/dim_roaster.sql",
+   "6\t18\tdbt/models/staging/stg_products.py",
+   "1\t2\tdbt/models/staging/stg_snapshots.sql",
+   "9\t2\tsrc/coffeedata/adapters/__init__.py",
+   "102\t9\tsrc/coffeedata/adapters/shopify.py",
+   "69\t0\tsrc/coffeedata/cli.py",
+   "260\t0\tsrc/coffeedata/connectors.py",
+   "99\t0\tsrc/coffeedata/contracts/enrichment.contract.json",
+   "164\t0\tsrc/coffeedata/contracts/manifest.contract.json",
+   "226\t0\tsrc/coffeedata/contracts/raw.contract.json",
+   "125\t0\tsrc/coffeedata/control.py",
+   "56\t37\tsrc/coffeedata/enrich.py",
+   "1\t1\tsrc/coffeedata/http.py",
+   "268\t55\tsrc/coffeedata/ingest.py",
+   "33\t0\tsrc/coffeedata/lake.py",
+   "57\t0\tsrc/coffeedata/products.py",
+   "87\t3\tsrc/coffeedata/ratelimit.py",
+   "72\t0\tsrc/coffeedata/raw_contracts.py",
+   "57\t2\tsrc/coffeedata/registry.py",
+   "14\t7\ttests/test_adapters.py",
+   "187\t0\ttests/test_connectors.py",
+   "13\t3\ttests/test_ingest.py",
+   "10\t6\ttests/test_lineage.py",
+   "412\t8\ttests/test_ratelimit.py",
+   "69\t0\ttests/test_raw_contracts.py"
+  ],
+  "groups": {
+   "PR #62": "+180/-13 src",
+   "PAGINATION v1+v2": "+257/-19 src",
+   "design B (ELT, control, contracts, connectors, enrichment job)": "about +759/-77 src (total src code +1196/-109 vs 6bda240, excluding 489 lines of generated contract JSON)",
+   "dbt (owner-requested status change)": "+24/-21"
+  },
+  "tests": "682 passed, 3 skipped in B/wt (full suite, no Claude credentials)"
+ },
+ "extensibility_bigcartel": {
+  "files": 4,
+  "touch_points": [
+   "adapters/bigcartel.py: new adapter (fetch(client, roaster) -> list[CatalogItem])",
+   "adapters/__init__.py: +2 lines (import, ADAPTERS entry)",
+   "models.py: +2 lines (Platform literal, adapter() mapping)",
+   "connectors.py CONNECTORS: +1 line Connector('bigcartel', weekday, hour, rps=1.0); its rate limit is now built from config (ingest.run platform_rps)",
+   "deploy: 1 Cloud Run job execution override + 2 Scheduler entries; no change to merge, enrichment, build or publish",
+   "dbt run_completeness maps platform->adapter only for never-attempted roasters (would read 'generic' until the first attempt)"
+  ]
+ },
+ "operational_surface": {
+  "scheduled_entries": 13,
+  "detail": "5 connectors x (first + resume) + merge Sun 06:00 + enrich-week --submit Sun 07:00 + build/gate/publish Sun 09:00. One image; Cloud Run jobs: crawl (--connector per execution), merge, enrich, build",
+  "owner_watches": [
+   "job_manifests: an attempt with only a 'running' row (killed or timed out), status deadline",
+   "merge detail.missing",
+   "egress-check (IP > 8% first-contact refusals two runs in a row)",
+   "parked/refused counts per connector",
+   "0 files under raw/ after the merge"
+  ]
+ },
+ "weaknesses": [
+  "Killed job loses up to one CHUNK (200 roasters) of work: the day-5 kill at 349 done kept 200, so 149 were refetched",
+  "WooCommerce outage: robots.txt 503 -> RobotsUnavailable, which PR62 does not defer, so the first slot failed all 233; recovery depends on the resume slot being after the outage (fixed 6 h here)",
+  "S2 IP limit: limiter at 3 req/s trips 16 platform cooldowns and 741 IP 429s; Shopify job 33 -> 56 min. A per-connector rps (e.g. 1.8) would avoid it; the limiter recovers but halving + 0.97x speed-up oscillates",
+  "raw/ compaction rewrites and deletes files: fine on GCS, but HF commits need delete operations; the lake's 'never rewrite' rule holds only outside raw/",
+  "A week's data is spread over 5 days of fetched_at under one run_date; price changes between Mon and Fri land in the same week",
+  "11 schedule entries instead of 1; a connector job that silently never runs is caught only at merge",
+  "S2 (IP-wide limit) got worse with v2: backed-off stores are 'quiet hosts', so their 429s never trip the platform pause. The first Shopify job parked 433 and the end-of-week Shopify ok fell to 86.7% (v0: 93.1%). Quiet hosts should still count when many distinct stores block together",
+  "Refusers cost 3 backoffs (7 min) in each Shopify job and its resume; they could skip to crawl-retry once refused this week",
+  "The conditional short-page stop needs history: on a fresh lake (the real run) every store still asks for the empty page",
+  "registry.current classifies the last ok batch in Python on every call (one duckdb read of snapshots + bodies)"
+ ],
+ "sim_v0_before_pagination": {
+  "S1": {
+   "all_jobs_within_limit": true,
+   "longest_job_min": 33.4,
+   "end_of_week": {
+    "roasters": 2545,
+    "ok_share_7d": 0.9635,
+    "catalog_ok_share_7d": 0.7226,
+    "per_connector": {
+     "generic": {
+      "roasters": 697,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.2353,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "shopify": {
+      "roasters": 1070,
+      "ok_share": 0.9308,
+      "catalog_ok_share": 0.9308,
+      "never_fetched": 0,
+      "refused": 66
+     },
+     "square_online": {
+      "roasters": 206,
+      "ok_share": 0.9369,
+      "catalog_ok_share": 0.9369,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "squarespace": {
+      "roasters": 339,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.764,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "ok_share": 0.9742,
+      "catalog_ok_share": 0.9742,
+      "never_fetched": 0,
+      "refused": 0
+     }
+    },
+    "refused": 66,
+    "never_fetched": 0,
+    "never_ok": 93
+   },
+   "weekly_release": {
+    "run_date": "2026-11-02",
+    "tables": {
+     "run_manifests": {
+      "files": 1,
+      "rows": 3362
+     },
+     "fetches": {
+      "files": 1,
+      "rows": 3129
+     },
+     "snapshots": {
+      "files": 1,
+      "rows": 80722
+     },
+     "bodies": {
+      "files": 1,
+      "rows": 5
+     },
+     "enrichments": {
+      "files": 1,
+      "rows": 52075
+     }
+    },
+    "merge": {
+     "run_date": "2026-11-02",
+     "batch": "20261031T144032-7109f2",
+     "written": {
+      "run_manifests": 3362,
+      "fetches": 3129,
+      "snapshots": 80722,
+      "bodies": 5,
+      "enrichments": 52075
+     },
+     "missing": [],
+     "connectors": [
+      "generic",
+      "shopify",
+      "square_online",
+      "squarespace",
+      "woocommerce"
+     ]
+    },
+    "raw_parquet_left_after_merge": 0,
+    "rollup_manifests": 1
+   }
+  },
+  "S2": {
+   "all_jobs_within_limit": true,
+   "longest_job_min": 56.3,
+   "end_of_week": {
+    "roasters": 2545,
+    "ok_share_7d": 0.9635,
+    "catalog_ok_share_7d": 0.7226,
+    "per_connector": {
+     "generic": {
+      "roasters": 697,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.2353,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "shopify": {
+      "roasters": 1070,
+      "ok_share": 0.9308,
+      "catalog_ok_share": 0.9308,
+      "never_fetched": 0,
+      "refused": 66
+     },
+     "square_online": {
+      "roasters": 206,
+      "ok_share": 0.9369,
+      "catalog_ok_share": 0.9369,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "squarespace": {
+      "roasters": 339,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.764,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "ok_share": 0.9742,
+      "catalog_ok_share": 0.9742,
+      "never_fetched": 0,
+      "refused": 0
+     }
+    },
+    "refused": 66,
+    "never_fetched": 0,
+    "never_ok": 93
+   },
+   "weekly_release": {
+    "run_date": "2026-11-02",
+    "tables": {
+     "run_manifests": {
+      "files": 1,
+      "rows": 3365
+     },
+     "fetches": {
+      "files": 1,
+      "rows": 3546
+     },
+     "snapshots": {
+      "files": 1,
+      "rows": 80722
+     },
+     "bodies": {
+      "files": 1,
+      "rows": 5
+     },
+     "enrichments": {
+      "files": 1,
+      "rows": 52075
+     }
+    },
+    "merge": {
+     "run_date": "2026-11-02",
+     "batch": "20261031T150523-4e6ab7",
+     "written": {
+      "run_manifests": 3365,
+      "fetches": 3546,
+      "snapshots": 80722,
+      "bodies": 5,
+      "enrichments": 52075
+     },
+     "missing": [],
+     "connectors": [
+      "generic",
+      "shopify",
+      "square_online",
+      "squarespace",
+      "woocommerce"
+     ]
+    },
+    "raw_parquet_left_after_merge": 0,
+    "rollup_manifests": 1
+   }
+  }
+ },
+ "scenarios": {
+  "S1": {
+   "jobs": [
+    {
+     "slot": "Mon 2026-11-02 02:00",
+     "job": "shopify",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 24.2,
+     "requests": 3380,
+     "http_429": 258,
+     "http_503": 0,
+     "todo": 1070,
+     "roasters_written": 1070,
+     "ok": 997,
+     "ok_rate": 0.9318,
+     "deferred": {
+      "page_backoffs": 198,
+      "page_parked": 66,
+      "page_parked_never_served": 66
+     },
+     "cooldowns": 0,
+     "ip_429": 0
+    },
+    {
+     "slot": "Mon 2026-11-02 08:00",
+     "job": "shopify",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 26.7,
+     "requests": 337,
+     "http_429": 259,
+     "http_503": 0,
+     "todo": 73,
+     "roasters_written": 73,
+     "ok": 0,
+     "ok_rate": 0.0,
+     "deferred": {
+      "page_backoffs": 198,
+      "page_parked": 66,
+      "page_parked_never_served": 66
+     },
+     "cooldowns": 10,
+     "ip_429": 0
+    },
+    {
+     "slot": "Tue 2026-11-03 02:00",
+     "job": "squarespace",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.9,
+     "requests": 1563,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 339,
+     "roasters_written": 339,
+     "ok": 339,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Tue 2026-11-03 08:00",
+     "job": "squarespace",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.1,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 0,
+     "roasters_written": 0,
+     "ok": 0,
+     "ok_rate": null
+    },
+    {
+     "slot": "Wed 2026-11-04 02:00",
+     "job": "woocommerce",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.7,
+     "requests": 693,
+     "http_429": 0,
+     "http_503": 1386,
+     "todo": 233,
+     "roasters_written": 233,
+     "ok": 0,
+     "ok_rate": 0.0
+    },
+    {
+     "slot": "Wed 2026-11-04 08:00",
+     "job": "woocommerce",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 6.8,
+     "requests": 9019,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 233,
+     "roasters_written": 233,
+     "ok": 227,
+     "ok_rate": 0.9742
+    },
+    {
+     "slot": "Thu 2026-11-05 02:00",
+     "job": "square_online",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 3.6,
+     "requests": 622,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 206,
+     "roasters_written": 206,
+     "ok": 193,
+     "ok_rate": 0.9369
+    },
+    {
+     "slot": "Thu 2026-11-05 08:00",
+     "job": "square_online",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.1,
+     "requests": 26,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 13,
+     "roasters_written": 13,
+     "ok": 0,
+     "ok_rate": 0.0
+    },
+    {
+     "slot": "Fri 2026-11-06 02:00",
+     "job": "generic",
+     "kind": "first",
+     "exit": -9,
+     "killed": true,
+     "timed_out": false,
+     "wall_min": 2.0,
+     "requests": 3929,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": 200,
+     "ok": 200,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Fri 2026-11-06 08:00",
+     "job": "generic",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 4.3,
+     "requests": 6175,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 497,
+     "roasters_written": 497,
+     "ok": 497,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Sun 2026-11-08 06:00",
+     "job": "merge",
+     "kind": "merge",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.2,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": null,
+     "ok": null,
+     "ok_rate": null
+    },
+    {
+     "slot": "Sun 2026-11-08 07:00",
+     "job": "enrich",
+     "kind": "enrich",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 1.2,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": null,
+     "ok": null,
+     "ok_rate": null
+    }
+   ],
+   "all_jobs_within_limit": true,
+   "longest_job_min": 26.7,
+   "end_of_week": {
+    "roasters": 2545,
+    "ok_share_7d": 0.9639,
+    "catalog_ok_share_7d": 0.723,
+    "per_connector": {
+     "generic": {
+      "roasters": 697,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.2353,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "shopify": {
+      "roasters": 1070,
+      "ok_share": 0.9318,
+      "catalog_ok_share": 0.9318,
+      "never_fetched": 0,
+      "refused": 66
+     },
+     "square_online": {
+      "roasters": 206,
+      "ok_share": 0.9369,
+      "catalog_ok_share": 0.9369,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "squarespace": {
+      "roasters": 339,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.764,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "ok_share": 0.9742,
+      "catalog_ok_share": 0.9742,
+      "never_fetched": 0,
+      "refused": 0
+     }
+    },
+    "refused": 66,
+    "never_fetched": 0,
+    "never_ok": 92
+   },
+   "weekly_release": {
+    "run_date": "2026-11-02",
+    "tables": {
+     "run_manifests": {
+      "files": 1,
+      "rows": 3361
+     },
+     "fetches": {
+      "files": 1,
+      "rows": 3260
+     },
+     "snapshots": {
+      "files": 1,
+      "rows": 87640
+     },
+     "bodies": {
+      "files": 1,
+      "rows": 5
+     },
+     "enrichments": {
+      "files": 0,
+      "rows": 0
+     }
+    },
+    "merge": {
+     "run_date": "2026-11-02",
+     "batch": "20261031T193307-099e6d",
+     "written": {
+      "run_manifests": 3361,
+      "fetches": 3260,
+      "snapshots": 87640,
+      "bodies": 5
+     },
+     "missing": [],
+     "connectors": [
+      "generic",
+      "shopify",
+      "square_online",
+      "squarespace",
+      "woocommerce"
+     ]
+    },
+    "raw_parquet_left_after_merge": 0,
+    "rollup_manifests": 0
+   },
+   "enrich_job": "ran Sun 07:00 after the merge; this sim run predates the --submit guard and submitted a real Claude batch (owner: let it run); now dry unless --submit"
+  },
+  "S2": {
+   "jobs": [
+    {
+     "slot": "Mon 2026-11-02 02:00",
+     "job": "shopify",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 43.9,
+     "requests": 3903,
+     "http_429": 1809,
+     "http_503": 0,
+     "todo": 1070,
+     "roasters_written": 1070,
+     "ok": 632,
+     "ok_rate": 0.5907,
+     "deferred": {
+      "page_backoffs": 1403,
+      "page_parked": 433,
+      "page_parked_never_served": 382
+     },
+     "cooldowns": 17,
+     "ip_429": 1739
+    },
+    {
+     "slot": "Mon 2026-11-02 08:00",
+     "job": "shopify",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 21.5,
+     "requests": 1677,
+     "http_429": 664,
+     "http_503": 0,
+     "todo": 438,
+     "roasters_written": 438,
+     "ok": 296,
+     "ok_rate": 0.6758,
+     "deferred": {
+      "page_backoffs": 539,
+      "page_parked": 135,
+      "page_parked_never_served": 104
+     },
+     "cooldowns": 8,
+     "ip_429": 539
+    },
+    {
+     "slot": "Tue 2026-11-03 02:00",
+     "job": "squarespace",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 1.0,
+     "requests": 1563,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 339,
+     "roasters_written": 339,
+     "ok": 339,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Tue 2026-11-03 08:00",
+     "job": "squarespace",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.1,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 0,
+     "roasters_written": 0,
+     "ok": 0,
+     "ok_rate": null
+    },
+    {
+     "slot": "Wed 2026-11-04 02:00",
+     "job": "woocommerce",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.7,
+     "requests": 693,
+     "http_429": 0,
+     "http_503": 1386,
+     "todo": 233,
+     "roasters_written": 233,
+     "ok": 0,
+     "ok_rate": 0.0
+    },
+    {
+     "slot": "Wed 2026-11-04 08:00",
+     "job": "woocommerce",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 6.8,
+     "requests": 9019,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 233,
+     "roasters_written": 233,
+     "ok": 227,
+     "ok_rate": 0.9742
+    },
+    {
+     "slot": "Thu 2026-11-05 02:00",
+     "job": "square_online",
+     "kind": "first",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 3.7,
+     "requests": 622,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 206,
+     "roasters_written": 206,
+     "ok": 193,
+     "ok_rate": 0.9369
+    },
+    {
+     "slot": "Thu 2026-11-05 08:00",
+     "job": "square_online",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.2,
+     "requests": 26,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 13,
+     "roasters_written": 13,
+     "ok": 0,
+     "ok_rate": 0.0
+    },
+    {
+     "slot": "Fri 2026-11-06 02:00",
+     "job": "generic",
+     "kind": "first",
+     "exit": -9,
+     "killed": true,
+     "timed_out": false,
+     "wall_min": 2.0,
+     "requests": 3927,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": 200,
+     "ok": 200,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Fri 2026-11-06 08:00",
+     "job": "generic",
+     "kind": "resume",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 4.3,
+     "requests": 6175,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": 497,
+     "roasters_written": 497,
+     "ok": 497,
+     "ok_rate": 1.0
+    },
+    {
+     "slot": "Sun 2026-11-08 06:00",
+     "job": "merge",
+     "kind": "merge",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 0.2,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": null,
+     "ok": null,
+     "ok_rate": null
+    },
+    {
+     "slot": "Sun 2026-11-08 07:00",
+     "job": "enrich",
+     "kind": "enrich",
+     "exit": 0,
+     "killed": false,
+     "timed_out": false,
+     "wall_min": 1.3,
+     "requests": 0,
+     "http_429": 0,
+     "http_503": 0,
+     "todo": null,
+     "roasters_written": null,
+     "ok": null,
+     "ok_rate": null
+    }
+   ],
+   "all_jobs_within_limit": true,
+   "longest_job_min": 43.9,
+   "end_of_week": {
+    "roasters": 2545,
+    "ok_share_7d": 0.9367,
+    "catalog_ok_share_7d": 0.6959,
+    "per_connector": {
+     "generic": {
+      "roasters": 697,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.2353,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "shopify": {
+      "roasters": 1070,
+      "ok_share": 0.8673,
+      "catalog_ok_share": 0.8673,
+      "never_fetched": 0,
+      "refused": 104
+     },
+     "square_online": {
+      "roasters": 206,
+      "ok_share": 0.9369,
+      "catalog_ok_share": 0.9369,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "squarespace": {
+      "roasters": 339,
+      "ok_share": 1.0,
+      "catalog_ok_share": 0.764,
+      "never_fetched": 0,
+      "refused": 0
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "ok_share": 0.9742,
+      "catalog_ok_share": 0.9742,
+      "never_fetched": 0,
+      "refused": 0
+     }
+    },
+    "refused": 104,
+    "never_fetched": 0,
+    "never_ok": 161
+   },
+   "weekly_release": {
+    "run_date": "2026-11-02",
+    "tables": {
+     "run_manifests": {
+      "files": 1,
+      "rows": 3726
+     },
+     "fetches": {
+      "files": 1,
+      "rows": 5171
+     },
+     "snapshots": {
+      "files": 1,
+      "rows": 79982
+     },
+     "bodies": {
+      "files": 1,
+      "rows": 5
+     },
+     "enrichments": {
+      "files": 0,
+      "rows": 0
+     }
+    },
+    "merge": {
+     "run_date": "2026-11-02",
+     "batch": "20261031T194144-0dff81",
+     "written": {
+      "run_manifests": 3726,
+      "fetches": 5171,
+      "snapshots": 79982,
+      "bodies": 5
+     },
+     "missing": [],
+     "connectors": [
+      "generic",
+      "shopify",
+      "square_online",
+      "squarespace",
+      "woocommerce"
+     ]
+    },
+    "raw_parquet_left_after_merge": 0,
+    "rollup_manifests": 0
+   },
+   "enrich_job": "ran Sun 07:00 after the merge; this sim run predates the --submit guard and submitted a real Claude batch (owner: let it run); now dry unless --submit"
+  }
+ },
+ "real_shopify_run": {
+  "wall_min": 26.0,
+  "finished_inside_240": true,
+  "requests": 4101,
+  "limiter_refusals_not_sent": 837,
+  "status": {
+   "200": 3239,
+   "429": 816,
+   "301": 24,
+   "503": 17,
+   "None": 2,
+   "302": 2,
+   "404": 1
+  },
+  "429": 816,
+  "430": 0,
+  "hosts_with_429": 371,
+  "hosts": 1058,
+  "hosts_whose_first_products_json_was_429": 230,
+  "next_status_after_429_same_host": {
+   "200": 415,
+   "429": 352,
+   "301": 10,
+   "302": 1
+  },
+  "retry_after": {
+   "60": 816
+  },
+  "top_429_hosts": [
+   [
+    "aromaroasters.com",
+    8
+   ],
+   [
+    "www.birdrockcoffee.com",
+    8
+   ],
+   [
+    "artizancoffee.com",
+    8
+   ],
+   [
+    "www.bongojava.com",
+    8
+   ],
+   [
+    "catandcloud.com",
+    8
+   ],
+   [
+    "www.coffeeam.com",
+    8
+   ],
+   [
+    "colectivo.com",
+    8
+   ],
+   [
+    "www.chromaticcoffee.com",
+    8
+   ],
+   [
+    "copperdoorcoffee.com",
+    8
+   ],
+   [
+    "counterculturecoffee.com",
+    8
+   ]
+  ],
+  "roasters": 1070,
+  "todo": 1070,
+  "ok": 1030,
+  "catalog_ok": 1021,
+  "failed": 40,
+  "refused": 20,
+  "failure_kinds": [
+   [
+    "refused",
+    20
+   ],
+   [
+    "parked",
+    18
+   ],
+   [
+    "Blocked",
+    1
+   ],
+   [
+    "FetchError",
+    1
+   ]
+  ],
+  "limiter": {
+   "requests": 3816,
+   "rate_limited": 665,
+   "cooldowns": 0,
+   "host_pauses": 665,
+   "deferred": 669
+  },
+  "deferred": {
+   "page_backoffs": 611,
+   "page_parked": 58,
+   "page_parked_never_served": 40
+  },
+  "retry_job": {
+   "parked_in": 58,
+   "wall_s": 1084.4,
+   "deferred": {
+    "page_backoffs": 130,
+    "page_parked": 38,
+    "page_parked_never_served": 20
+   },
+   "shopify_limiter": {
+    "requests": 285,
+    "rate_limited": 168,
+    "cooldowns": 7,
+    "host_pauses": 161,
+    "deferred": 168
+   },
+   "by_adapter": {
+    "shopify": {
+     "roasters": 188,
+     "errors": 168,
+     "with_coffee": 19,
+     "coffees": 1065
+    }
+   }
+  },
+  "by_phase": {
+   "crawl": {
+    "200": 3133,
+    "301": 13,
+    "429": 649,
+    "503": 16,
+    "404": 1,
+    "None": 2,
+    "302": 2
+   },
+   "crawl-retry": {
+    "301": 11,
+    "200": 106,
+    "429": 167,
+    "503": 1
+   }
+  },
+  "page2_11": {
+   "stores": 11,
+   "ok": 4,
+   "refused_again": 4,
+   "ok_ids": [
+    "andytownsf.com",
+    "deathwishcoffee.com",
+    "redbaycoffee.com",
+    "winanschocolate.com"
+   ]
+  },
+  "A_refused_22": {
+   "stores": 22,
+   "ok": 8,
+   "refused_again": 5,
+   "ok_ids": [
+    "alanascoffeeroasters.com",
+    "caffevita.com",
+    "goodcitizencoffee.com",
+    "highbankcoffeeroasters.com",
+    "javacity.com",
+    "sparrowscoffee.com",
+    "templecoffee.com",
+    "vulcanroastery.com"
+   ]
+  },
+  "A_refused": 22,
+  "A_refused_refused_again_in_B": 5,
+  "A_refused_ok_in_B": 8,
+  "report": "B/real.md"
+ },
+ "retest_33": {
+  "report": "B/retest.md",
+  "page2_ok": "4/11",
+  "refused_ok": "11/22"
+ },
+ "contracts": {
+  "raw": "src/coffeedata/contracts/raw.contract.json v1.0.0 (snapshots, bodies, fetches, parked/*.json); tests/test_raw_contracts.py",
+  "manifest/control": "src/coffeedata/contracts/manifest.contract.json v1.0.0 (run_manifests, job_manifests); tests/test_raw_contracts.py + tests/test_connectors.py",
+  "enrichment": "src/coffeedata/contracts/enrichment.contract.json v1.0.0 (enrichments); tests/test_raw_contracts.py",
+  "public": "contracts/public-catalog.odcs.yaml + coffee-data.odps.yaml (unchanged); contracts/test_contracts.py",
+  "rule": "generated from lake.SCHEMAS (python -m coffeedata.raw_contracts --write <name> <version>); a column change fails the test until regenerated with a new version"
+ }
+}

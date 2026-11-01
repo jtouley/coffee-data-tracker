@@ -1,0 +1,206 @@
+{
+ "jobs": {
+  "shard0": {
+   "stores": 152,
+   "wall_min": 12.8,
+   "requests": 530,
+   "limiter_refusals_not_sent": 75,
+   "429": 75,
+   "hosts_429": 48,
+   "outcomes": {
+    "ok": 146,
+    "refused_attempt": 5,
+    "parked": 1
+   },
+   "within_240": true
+  },
+  "shard1": {
+   "stores": 143,
+   "wall_min": 12.4,
+   "requests": 516,
+   "limiter_refusals_not_sent": 99,
+   "429": 98,
+   "hosts_429": 57,
+   "outcomes": {
+    "ok": 133,
+    "refused_attempt": 6,
+    "parked": 4
+   },
+   "within_240": true
+  },
+  "shard2": {
+   "stores": 154,
+   "wall_min": 12.7,
+   "requests": 537,
+   "limiter_refusals_not_sent": 88,
+   "429": 88,
+   "hosts_429": 47,
+   "outcomes": {
+    "ok": 145,
+    "parked": 3,
+    "refused_attempt": 6
+   },
+   "within_240": true
+  },
+  "shard3": {
+   "stores": 151,
+   "wall_min": 11.5,
+   "requests": 533,
+   "limiter_refusals_not_sent": 86,
+   "429": 85,
+   "hosts_429": 47,
+   "outcomes": {
+    "ok": 142,
+    "refused_attempt": 4,
+    "parked": 4,
+    "error": 1
+   },
+   "within_240": true
+  },
+  "shard4": {
+   "stores": 157,
+   "wall_min": 13.0,
+   "requests": 556,
+   "limiter_refusals_not_sent": 87,
+   "429": 87,
+   "hosts_429": 49,
+   "outcomes": {
+    "ok": 150,
+    "parked": 5,
+    "refused_attempt": 2
+   },
+   "within_240": true
+  },
+  "shard5": {
+   "stores": 159,
+   "wall_min": 11.9,
+   "requests": 516,
+   "limiter_refusals_not_sent": 41,
+   "429": 39,
+   "hosts_429": 10,
+   "outcomes": {
+    "refused_attempt": 6,
+    "ok": 150,
+    "parked": 3
+   },
+   "within_240": true
+  },
+  "shard6": {
+   "stores": 154,
+   "wall_min": 12.2,
+   "requests": 485,
+   "limiter_refusals_not_sent": 32,
+   "429": 32,
+   "hosts_429": 8,
+   "outcomes": {
+    "ok": 145,
+    "error": 1,
+    "refused_attempt": 7,
+    "parked": 1
+   },
+   "within_240": true
+  },
+  "sweep": {
+   "stores": 57,
+   "wall_min": 128.3,
+   "requests": 462,
+   "limiter_refusals_not_sent": 279,
+   "429": 275,
+   "hosts_429": 47,
+   "outcomes": {
+    "refused": 27,
+    "ok": 16,
+    "parked": 30,
+    "refused_attempt": 9,
+    "error": 1
+   },
+   "within_240": true
+  }
+ },
+ "final": {
+  "ok": 1027,
+  "refused": 27,
+  "parked": 13,
+  "error": 3
+ },
+ "stores": 1070,
+ "sweep_recovered": 16,
+ "routed": 27,
+ "pattern": {
+  "responses": 4135,
+  "429": 779,
+  "hosts_429": 266,
+  "first_is_429": 160,
+  "only_429": 24,
+  "robots_429": 0,
+  "page2plus_429": 321,
+  "hosts": 1058,
+  "later_200": 242,
+  "retry_after": {
+   "60": 779
+  },
+  "statuses": {
+   "200": 3319,
+   "429": 779,
+   "301": 28,
+   "302": 2,
+   "404": 1,
+   "503": 6
+  },
+  "430": 0
+ },
+ "overlap_A": {
+  "both": 13,
+  "ours": 27,
+  "theirs": 22
+ },
+ "overlap_B": {
+  "both": 9,
+  "ours": 27,
+  "theirs": 20
+ },
+ "pagination_11": {
+  "andytownsf.com": "ok",
+  "catandcloud.com": "refused",
+  "coffeeam.com": "parked",
+  "colectivocoffee.com": "ok",
+  "counterculturecoffee.com": "refused",
+  "cuveecoffee.com": "ok",
+  "deathwishcoffee.com": "ok",
+  "fourbarrelcoffee.com": "parked",
+  "groundworkcoffee.com": "refused",
+  "redbaycoffee.com": "ok",
+  "winanschocolate.com": "ok"
+ },
+ "A_refused_22": {
+  "outcomes": {
+   "parked": 6,
+   "refused": 13,
+   "ok": 3
+  },
+  "per_store": {
+   "alanascoffeeroasters.com": "parked",
+   "artizancoffee.com": "refused",
+   "birdrockcoffee.com": "ok",
+   "caffevita.com": "refused",
+   "chromaticcoffee.com": "refused",
+   "copperdoorcoffee.com": "refused",
+   "domacoffee.com": "parked",
+   "dunecoffee.com": "refused",
+   "goodcitizencoffee.com": "refused",
+   "highbankcoffeeroasters.com": "parked",
+   "javabeanroast.com": "refused",
+   "javacity.com": "refused",
+   "lancastercountycoffee.com": "refused",
+   "lavelacoffee.com": "parked",
+   "puroast.com": "parked",
+   "socoffee.co": "refused",
+   "sparrowscoffee.com": "refused",
+   "templecoffee.com": "ok",
+   "terranovacoffee.net": "ok",
+   "ticoroasters.com": "refused",
+   "toastique.com": "parked",
+   "vulcanroastery.com": "refused"
+  }
+ }
+}

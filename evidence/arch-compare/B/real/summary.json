@@ -1,0 +1,209 @@
+{
+ "wall_min": 26.0,
+ "finished_inside_240": true,
+ "requests": 4101,
+ "limiter_refusals_not_sent": 837,
+ "status": {
+  "200": 3239,
+  "429": 816,
+  "301": 24,
+  "503": 17,
+  "None": 2,
+  "302": 2,
+  "404": 1
+ },
+ "429": 816,
+ "430": 0,
+ "hosts_with_429": 371,
+ "hosts": 1058,
+ "hosts_whose_first_products_json_was_429": 230,
+ "next_status_after_429_same_host": {
+  "200": 415,
+  "429": 352,
+  "301": 10,
+  "302": 1
+ },
+ "retry_after": {
+  "60": 816
+ },
+ "top_429_hosts": [
+  [
+   "aromaroasters.com",
+   8
+  ],
+  [
+   "www.birdrockcoffee.com",
+   8
+  ],
+  [
+   "artizancoffee.com",
+   8
+  ],
+  [
+   "www.bongojava.com",
+   8
+  ],
+  [
+   "catandcloud.com",
+   8
+  ],
+  [
+   "www.coffeeam.com",
+   8
+  ],
+  [
+   "colectivo.com",
+   8
+  ],
+  [
+   "www.chromaticcoffee.com",
+   8
+  ],
+  [
+   "copperdoorcoffee.com",
+   8
+  ],
+  [
+   "counterculturecoffee.com",
+   8
+  ]
+ ],
+ "per_10min": [
+  [
+   0,
+   1801,
+   221,
+   220
+  ],
+  [
+   1,
+   1799,
+   319,
+   231
+  ],
+  [
+   2,
+   295,
+   131,
+   76
+  ],
+  [
+   3,
+   159,
+   105,
+   44
+  ],
+  [
+   4,
+   47,
+   40,
+   38
+  ]
+ ],
+ "roasters": 1070,
+ "todo": 1070,
+ "ok": 1030,
+ "catalog_ok": 1021,
+ "failed": 40,
+ "refused": 20,
+ "failure_kinds": [
+  [
+   "refused",
+   20
+  ],
+  [
+   "parked",
+   18
+  ],
+  [
+   "Blocked",
+   1
+  ],
+  [
+   "FetchError",
+   1
+  ]
+ ],
+ "limiter": {
+  "requests": 3816,
+  "rate_limited": 665,
+  "cooldowns": 0,
+  "host_pauses": 665,
+  "deferred": 669
+ },
+ "deferred": {
+  "page_backoffs": 611,
+  "page_parked": 58,
+  "page_parked_never_served": 40
+ },
+ "retry_job": {
+  "parked_in": 58,
+  "wall_s": 1084.4,
+  "deferred": {
+   "page_backoffs": 130,
+   "page_parked": 38,
+   "page_parked_never_served": 20
+  },
+  "shopify_limiter": {
+   "requests": 285,
+   "rate_limited": 168,
+   "cooldowns": 7,
+   "host_pauses": 161,
+   "deferred": 168
+  },
+  "by_adapter": {
+   "shopify": {
+    "roasters": 188,
+    "errors": 168,
+    "with_coffee": 19,
+    "coffees": 1065
+   }
+  }
+ },
+ "by_phase": {
+  "crawl": {
+   "200": 3133,
+   "301": 13,
+   "429": 649,
+   "503": 16,
+   "404": 1,
+   "None": 2,
+   "302": 2
+  },
+  "crawl-retry": {
+   "301": 11,
+   "200": 106,
+   "429": 167,
+   "503": 1
+  }
+ },
+ "page2_11": {
+  "stores": 11,
+  "ok": 4,
+  "refused_again": 4,
+  "ok_ids": [
+   "andytownsf.com",
+   "deathwishcoffee.com",
+   "redbaycoffee.com",
+   "winanschocolate.com"
+  ]
+ },
+ "A_refused_22": {
+  "stores": 22,
+  "ok": 8,
+  "refused_again": 5,
+  "ok_ids": [
+   "alanascoffeeroasters.com",
+   "caffevita.com",
+   "goodcitizencoffee.com",
+   "highbankcoffeeroasters.com",
+   "javacity.com",
+   "sparrowscoffee.com",
+   "templecoffee.com",
+   "vulcanroastery.com"
+  ]
+ },
+ "A_refused": 22,
+ "A_refused_refused_again_in_B": 5,
+ "A_refused_ok_in_B": 8
+}

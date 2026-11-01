@@ -1,0 +1,20 @@
+# Per-adapter worker pools: prototype and measurements (2026-10-31)
+**Measurements** (the real `ingest.run()` against localhost mocks; 2,545 roasters from the `dim_roaster` statuses the code would select: shopify 1,070, generic 697, squarespace 339, woo 233, square_online 206; ~22.6k requests; time compressed 4x; client pinned to 2 cores). Times are from the start of ingest, in minutes:
+| scenario | code | ingest wall | non-Shopify wait to start p50/p95 | non-Shopify done p50/p95/last | Shopify last |
+|---|---|---|---|---|---|
+| Shopify normal (4 req/s allowed, 0 429s) | main (32 shared workers) | 21.5 | 9.8 / 18.0 | 10.1 / 18.4 / 21.2 | 19.1 |
+| | pools | 19.5 | 3.4 / 10.3 | 3.5 / 11.0 / 16.5 | 18.8 |
+| Shopify heavy (1 req/s, 30 s IP block per breach: ~150 429s) | main | 104.4 | 52.4 / 96.8 | 52.5 / 97.1 / 102.2 | 103.8 |
+| | pools | 104.4 | 3.1 / 9.4 | 3.2 / 10.1 / 15.3 | 103.6 |
+- Pools fix the head-of-line blocking: under throttling, the last non-Shopify roaster finishes at 15 min instead of 102. **Total wall time doesn't change** (104 vs 104 min). The Shopify limiter is the long pole either way, so this alone won't stop a 240-min timeout.
+- Error counts were identical in all four runs (only the profiles with no catalog failed). Shopify throughput is bound by the limiter (3,245 requests in 18.8 min, about 2.9/s), not by the threads.
+- Runner (2 vCPU, ~7 GB): the whole crawl used about 145 CPU-s, about 12% of one core over 20 min, with 54 threads instead of 32. Peak RSS: 306–366 MB for both designs. A held result costs about 5.3 KB per product (measured), so holding all ~92k products would be about 0.5 GB. My first prototype did that by mistake (a kept list of futures; peak 1,029 MB), so results must stay streamed per 200-roaster chunk, as on main. The `known_bodies`/`enriched` sets cost about 460 B per entry (about 90 MB at 200k). Memory is not a constraint.
+**Design** (worktree `build/crawl-plan/wt-pools`, uncommitted): `ingest.POOLS = {shopify:16, woocommerce:12, squarespace:6, square_online:4, generic:16}`. `crawl()` groups roasters by `Roaster.adapter` and gives each group its own `ThreadPoolExecutor` (all started at once, under one `ExitStack`). `as_completed` runs over every pool, and results are written per chunk as before. Shopify gets 16 threads for the limiter's 8 slots because per-host waits happen outside a slot. Square Online gets 4 because its API is one shared host (`cdn5.editmysite.com`) spaced 1/s. `--workers N` scales every pool to a total of N, so the retry pass's 16 still works.
+**Code size**: `ingest.py` +32/−5, `cli.py` 2 lines, a new 32-line test (a stuck Shopify pool doesn't delay WooCommerce). About 70 lines in all; 68 existing ingest/limiter/lineage tests pass.
+**Per-host backoff**: unchanged, because every pool shares one `PoliteClient`. Per-host spacing (`_last`), the robots cache and `_robots_down` stay global, so a host shared across pools is never doubled up (40 hosts serve more than one roaster; 2 of them serve different adapters). The Shopify limiter stays one IP-wide budget. A 429 cooldown now parks only Shopify threads, and 5xx retry sleeps occupy only their own pool. `give_up_after` (900 s) is no longer what frees non-Shopify workers.
+**Risks**:
+- The timeout isn't fixed. The weekly job still waits on the slowest pool, and the retry pass hits the same throttled Shopify. It needs a Shopify time budget or deadline so the later steps still run.
+- More parallel connections: 54 instead of 32.
+- 85 `shopify?`/`woocommerce?` roasters run in the generic pool with no limiter, though they still hit Shopify's IP limit (same as on main).
+- Other hosted platforms (Squarespace, Wix) may limit by IP too. Pools make room for a limiter per platform but don't add one.
+**Caveats**: the remote lake gave 401, so per-roaster request counts were modelled from `coffees_listed` (assuming as many products as coffees again), with lognormal latencies. Last night's actual throttle was harsher than the heavy scenario. At 10x compression the client was CPU-bound and gave distorted results; only the 4x runs are reported. Scripts: `build/crawl-plan/sim/`.

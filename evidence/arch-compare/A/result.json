@@ -1,0 +1,4200 @@
+{
+ "design": "A: one weekly omnibus crawl (Mon) + resume-only catch-up of the same workflow (Tue); per-store Shopify backoff + deferred rounds (#62), 170-min fetch deadline, open_run resume, refused labelling.",
+ "simulation": {
+  "how": "build/arch-compare/A/sim: mockweek.py (copy of crawl-plan mockserver + SCENARIO faults), weekjob.py runs the worktree's ingest.open_run/select_states/run(deadline)/retry-failed pass, runweek.py drives the week, analyze.py computes metrics. 2,545 profiles, clock x10, 32 workers. Probe, enrich, dbt build not simulated; gates approximated in SQL (run_is_complete, run_ok_rate 0.9, adapter_ok_rate 0.5).",
+  "placements": {
+   "calendar": "faults on the SCENARIO days: day-3 Woo outage and day-5 kill find no A job running",
+   "drill": "same faults moved onto A's Monday job: Woo 503 for its first 2 h, SIGKILL at 50%; Tuesday resumes"
+  },
+  "caveats": [
+   "4 cores shared with other agents' sims: scaled wall times are upper-ish estimates",
+   "job wall = ingest only (main + deferred rounds + retry-failed pass); discovery/probe/enrich/dbt add time",
+   "S2 bucket counts every Shopify request (429s too) over a trailing 60 s"
+  ],
+  "weeks": {
+   "s1_calendar": {
+    "scenario": "s1",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 85.7,
+      "main_pass_min": 48.1,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 23492,
+      "429s": 910,
+      "server": {
+       "shopify_req": 4124,
+       "shopify_429": 910,
+       "shopify_429_refuser": 910,
+       "shopify_429_ip": 0,
+       "req": 23492,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 3569,
+       "rate_limited": 455,
+       "cooldowns": 0,
+       "host_pauses": 455,
+       "deferred": 65
+      },
+      "deferred": {
+       "round_1": 65,
+       "round_2": 65,
+       "still_failing": 65,
+       "refused": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 997,
+         "n": 1070,
+         "share": 0.9318,
+         "wilson95": [
+          0.9151,
+          0.9454
+         ]
+        },
+        "fetch_rows": 1403,
+        "requests": 4122,
+        "429s": 910,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 0,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 0,
+      "429s": 0,
+      "server": {
+       "shopify_req": 0,
+       "shopify_429": 0,
+       "shopify_429_refuser": 0,
+       "shopify_429_ip": 0,
+       "req": 0,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {}
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 997,
+       "n": 1070,
+       "share": 0.9318,
+       "wilson95": [
+        0.9151,
+        0.9454
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2453,
+       "n": 2545,
+       "share": 0.9639,
+       "wilson95": [
+        0.9559,
+        0.9704
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1840,
+       "n": 1907,
+       "share": 0.9649,
+       "wilson95": [
+        0.9556,
+        0.9722
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1840,
+      "n": 1907,
+      "share": 0.9649,
+      "wilson95": [
+       0.9556,
+       0.9722
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s1_drill": {
+    "scenario": "s1",
+    "placement": "drill",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": {
+       "done": 1278,
+       "of": 2545,
+       "sim_min": 13.763872105333425
+      },
+      "wall_min": 13.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 5429,
+      "429s": 24,
+      "server": {
+       "shopify_req": 1660,
+       "shopify_429": 35,
+       "shopify_429_refuser": 35,
+       "shopify_429_ip": 0,
+       "req": 6924,
+       "woo_503": 378,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "generic": {
+        "roasters": 274,
+        "ok": {
+         "k": 274,
+         "n": 274,
+         "share": 1.0,
+         "wilson95": [
+          0.9862,
+          1.0
+         ]
+        },
+        "fetch_rows": 274,
+        "requests": 3046,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 408,
+        "ok": {
+         "k": 382,
+         "n": 408,
+         "share": 0.9363,
+         "wilson95": [
+          0.9083,
+          0.9561
+         ]
+        },
+        "fetch_rows": 408,
+        "requests": 1204,
+        "429s": 24,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 73,
+        "ok": {
+         "k": 69,
+         "n": 73,
+         "share": 0.9452,
+         "wilson95": [
+          0.8674,
+          0.9785
+         ]
+        },
+        "fetch_rows": 73,
+        "requests": 223,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 147,
+        "ok": {
+         "k": 147,
+         "n": 147,
+         "share": 1.0,
+         "wilson95": [
+          0.9745,
+          1.0
+         ]
+        },
+        "fetch_rows": 147,
+        "requests": 665,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 98,
+        "ok": {
+         "k": 0,
+         "n": 98,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0377
+         ]
+        },
+        "fetch_rows": 98,
+        "requests": 291,
+        "429s": 0,
+        "503s": 291
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 77.8,
+      "main_pass_min": 39.0,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 18422,
+      "429s": 910,
+      "server": {
+       "shopify_req": 2973,
+       "shopify_429": 910,
+       "shopify_429_refuser": 910,
+       "shopify_429_ip": 0,
+       "req": 18422,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 2420,
+       "rate_limited": 455,
+       "cooldowns": 3,
+       "host_pauses": 452,
+       "deferred": 65
+      },
+      "deferred": {
+       "round_1": 65,
+       "round_2": 65,
+       "still_failing": 65,
+       "refused": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 423,
+        "ok": {
+         "k": 423,
+         "n": 423,
+         "share": 1.0,
+         "wilson95": [
+          0.991,
+          1.0
+         ]
+        },
+        "fetch_rows": 423,
+        "requests": 5083,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 688,
+        "ok": {
+         "k": 615,
+         "n": 688,
+         "share": 0.8939,
+         "wilson95": [
+          0.8687,
+          0.9148
+         ]
+        },
+        "fetch_rows": 1021,
+        "requests": 2973,
+        "429s": 910,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 137,
+        "ok": {
+         "k": 124,
+         "n": 137,
+         "share": 0.9051,
+         "wilson95": [
+          0.8444,
+          0.9437
+         ]
+        },
+        "fetch_rows": 150,
+        "requests": 434,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 192,
+        "ok": {
+         "k": 192,
+         "n": 192,
+         "share": 1.0,
+         "wilson95": [
+          0.9804,
+          1.0
+         ]
+        },
+        "fetch_rows": 192,
+        "requests": 899,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 997,
+       "n": 1070,
+       "share": 0.9318,
+       "wilson95": [
+        0.9151,
+        0.9454
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2453,
+       "n": 2545,
+       "share": 0.9639,
+       "wilson95": [
+        0.9559,
+        0.9704
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1840,
+       "n": 1907,
+       "share": 0.9649,
+       "wilson95": [
+        0.9556,
+        0.9722
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1840,
+      "n": 1907,
+      "share": 0.9649,
+      "wilson95": [
+       0.9556,
+       0.9722
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s2_calendar": {
+    "scenario": "s2",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 99.1,
+      "main_pass_min": 61.6,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 24276,
+      "429s": 1546,
+      "server": {
+       "shopify_req": 4908,
+       "shopify_429": 1546,
+       "shopify_429_refuser": 821,
+       "shopify_429_ip": 725,
+       "req": 24276,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 4353,
+       "rate_limited": 1091,
+       "cooldowns": 18,
+       "host_pauses": 1073,
+       "deferred": 481
+      },
+      "deferred": {
+       "round_1": 481,
+       "round_2": 68,
+       "still_failing": 69,
+       "refused": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 997,
+         "n": 1070,
+         "share": 0.9318,
+         "wilson95": [
+          0.9151,
+          0.9454
+         ]
+        },
+        "fetch_rows": 1822,
+        "requests": 4906,
+        "429s": 1546,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 0,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 0,
+      "429s": 0,
+      "server": {
+       "shopify_req": 0,
+       "shopify_429": 0,
+       "shopify_429_refuser": 0,
+       "shopify_429_ip": 0,
+       "req": 0,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {}
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 997,
+       "n": 1070,
+       "share": 0.9318,
+       "wilson95": [
+        0.9151,
+        0.9454
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2453,
+       "n": 2545,
+       "share": 0.9639,
+       "wilson95": [
+        0.9559,
+        0.9704
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1840,
+       "n": 1907,
+       "share": 0.9649,
+       "wilson95": [
+        0.9556,
+        0.9722
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1840,
+      "n": 1907,
+      "share": 0.9649,
+      "wilson95": [
+       0.9556,
+       0.9722
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s2_drill": {
+    "scenario": "s2",
+    "placement": "drill",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": {
+       "done": 1277,
+       "of": 2545,
+       "sim_min": 17.528377141333447
+      },
+      "wall_min": 17.5,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 6293,
+      "429s": 209,
+      "server": {
+       "shopify_req": 1298,
+       "shopify_429": 236,
+       "shopify_429_refuser": 18,
+       "shopify_429_ip": 218,
+       "req": 6711,
+       "woo_503": 384,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "generic": {
+        "roasters": 321,
+        "ok": {
+         "k": 321,
+         "n": 321,
+         "share": 1.0,
+         "wilson95": [
+          0.9882,
+          1.0
+         ]
+        },
+        "fetch_rows": 321,
+        "requests": 3663,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 507,
+        "ok": {
+         "k": 294,
+         "n": 507,
+         "share": 0.5799,
+         "wilson95": [
+          0.5365,
+          0.6221
+         ]
+        },
+        "fetch_rows": 507,
+        "requests": 1250,
+        "429s": 209,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 87,
+        "ok": {
+         "k": 82,
+         "n": 87,
+         "share": 0.9425,
+         "wilson95": [
+          0.8724,
+          0.9752
+         ]
+        },
+        "fetch_rows": 87,
+        "requests": 264,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 169,
+        "ok": {
+         "k": 169,
+         "n": 169,
+         "share": 1.0,
+         "wilson95": [
+          0.9778,
+          1.0
+         ]
+        },
+        "fetch_rows": 169,
+        "requests": 771,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 116,
+        "ok": {
+         "k": 0,
+         "n": 116,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0321
+         ]
+        },
+        "fetch_rows": 116,
+        "requests": 345,
+        "429s": 0,
+        "503s": 345
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 82.5,
+      "main_pass_min": 44.7,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 18295,
+      "429s": 1207,
+      "server": {
+       "shopify_req": 3608,
+       "shopify_429": 1207,
+       "shopify_429_refuser": 848,
+       "shopify_429_ip": 359,
+       "req": 18295,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 3049,
+       "rate_limited": 752,
+       "cooldowns": 11,
+       "host_pauses": 741,
+       "deferred": 281
+      },
+      "deferred": {
+       "round_1": 281,
+       "round_2": 69,
+       "still_failing": 68,
+       "refused": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 376,
+        "ok": {
+         "k": 376,
+         "n": 376,
+         "share": 1.0,
+         "wilson95": [
+          0.9899,
+          1.0
+         ]
+        },
+        "fetch_rows": 376,
+        "requests": 4466,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 776,
+        "ok": {
+         "k": 703,
+         "n": 776,
+         "share": 0.9059,
+         "wilson95": [
+          0.8833,
+          0.9245
+         ]
+        },
+        "fetch_rows": 1331,
+        "requests": 3608,
+        "429s": 1207,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 124,
+        "ok": {
+         "k": 111,
+         "n": 124,
+         "share": 0.8952,
+         "wilson95": [
+          0.8289,
+          0.9377
+         ]
+        },
+        "fetch_rows": 137,
+        "requests": 395,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 170,
+        "ok": {
+         "k": 170,
+         "n": 170,
+         "share": 1.0,
+         "wilson95": [
+          0.9779,
+          1.0
+         ]
+        },
+        "fetch_rows": 170,
+        "requests": 793,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 997,
+       "n": 1070,
+       "share": 0.9318,
+       "wilson95": [
+        0.9151,
+        0.9454
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2453,
+       "n": 2545,
+       "share": 0.9639,
+       "wilson95": [
+        0.9559,
+        0.9704
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1840,
+       "n": 1907,
+       "share": 0.9649,
+       "wilson95": [
+        0.9556,
+        0.9722
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1840,
+      "n": 1907,
+      "share": 0.9649,
+      "wilson95": [
+       0.9556,
+       0.9722
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 997,
+       "n": 1062,
+       "share": 0.9388,
+       "wilson95": [
+        0.9227,
+        0.9517
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   }
+  }
+ },
+ "real_crawl": {
+  "started": "2026-10-31T15:16:26+00:00",
+  "finished": "2026-10-31T16:11:59+00:00",
+  "wall_min": 55.56,
+  "main_pass_min": 35.4,
+  "inside_240_min": true,
+  "stopped_at_deadline": false,
+  "roasters": 1070,
+  "distinct_hosts_contacted": 1058,
+  "requests": 4676,
+  "limiter_refusals_not_sent": 449,
+  "statuses": {
+   "200": 3462,
+   "429": 1166,
+   "301": 22,
+   "503": 19,
+   "302": 3,
+   "None": 2,
+   "404": 2
+  },
+  "429s": 1166,
+  "430s": 0,
+  "network_errors": 2,
+  "stores": {
+   "attempted": 1070,
+   "ok": 1034,
+   "ok_with_products": 1026,
+   "refused": 24,
+   "failed_other": 14,
+   "ok_share": 0.9664,
+   "ok_wilson95_pct": [
+    95.4,
+    97.6
+   ],
+   "failure_kinds": {
+    "refused": 22,
+    "FetchError": 13,
+    "Blocked": 1
+   }
+  },
+  "limiter": {
+   "requests": 4281,
+   "rate_limited": 911,
+   "cooldowns": 0,
+   "host_pauses": 911,
+   "deferred": 407
+  },
+  "deferred": {
+   "round_1": 407,
+   "round_2": 58,
+   "still_failing": 45,
+   "refused": 24
+  },
+  "retry_pass": {
+   "roasters": 47,
+   "fetched": 47,
+   "shopify_limiter": {
+    "requests": 395,
+    "rate_limited": 274,
+    "cooldowns": 5,
+    "host_pauses": 269,
+    "deferred": 42
+   },
+   "deferred": {
+    "round_1": 42,
+    "round_2": 36,
+    "still_failing": 34,
+    "refused": 22
+   },
+   "todo": 47
+  },
+  "pattern_429": {
+   "hosts_with_429": 393,
+   "hosts_contacted": 1058,
+   "share_hosts_with_429": 0.3715,
+   "share_hosts_wilson95_pct": [
+    34.3,
+    40.1
+   ],
+   "top_hosts_share_of_429s": 0.635,
+   "first_catalog_request_429": [
+    217,
+    1044
+   ],
+   "next_request_same_host_after_429_is_429": [
+    617,
+    1133
+   ],
+   "p429_after_other_hosts_429_in_30s": [
+    1152,
+    3511
+   ],
+   "p429_otherwise": [
+    13,
+    38
+   ],
+   "retry_after_values": {
+    "60": 1166
+   },
+   "max_429s_in_one_minute": 49,
+   "minutes": 56,
+   "median_req_per_min": 41
+  }
+ },
+ "code": {
+  "src_lines_changed": "+318 / -27 (ingest.py, ratelimit.py, cli.py, http.py); .github weekly.yml +8 / -2",
+  "tests": "+444 lines (test_ratelimit, test_resume, test_lineage); full suite 656 passed, 3 skipped",
+  "dbt_changes": 0,
+  "app_changes": 0,
+  "contracts_changes": 0,
+  "worktree": "build/arch-compare/A/wt, branch arch-a (local, not pushed)"
+ },
+ "extensibility_bigcartel": {
+  "files": [
+   "src/coffeedata/adapters/bigcartel.py (new, ~60-100 lines)",
+   "adapters/__init__.py ADAPTERS (+2)",
+   "models.py Platform literal + Roaster.adapter mapping (+2)",
+   "discover.py signature + probe endpoint (+2-3)",
+   "ratelimit.py BIGCARTEL_RPS/CONCURRENCY (+2)",
+   "ingest.run: second PlatformLimiter + limiters dict (+4)"
+  ],
+  "config_touch_points": 2,
+  "dbt": "none needed (adapter comes from fetch rows; run_completeness's fallback mapping would label never-fetched bigcartel roasters 'generic' until first fetch)",
+  "note": "the new limiter shares the one job's 32 workers and 170-min budget with every other connector"
+ },
+ "operational_surface": {
+  "scheduled_entries": 2,
+  "jobs": 3,
+  "entries": [
+   "Mon: ingest -> enrich -> build",
+   "Tue: ingest --resume-only -> crawl-retry -> enrich -> build"
+  ],
+  "owner_watches": [
+   "weekly job exit status (non-zero = stopped at deadline or gate failed)",
+   "Tuesday catch-up outcome (if it also stops, the week is unserved)",
+   "refused count and Shopify ok-share in the run summary",
+   "freshness: no passing run in 8 days"
+  ]
+ },
+ "retest_2026_10_31": {
+  "code": "+ PAGINATION.patch + PAGINATION.v2.patch (final 18:06) + burst fix (first block per store only; count_bursts off for retry passes) + ELT",
+  "sim_with_history": {
+   "s1_calendar": {
+    "scenario": "s1",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 48.5,
+      "main_pass_min": 40.6,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 22082,
+      "429s": 510,
+      "server": {
+       "shopify_req": 2714,
+       "shopify_429": 510,
+       "shopify_429_refuser": 510,
+       "shopify_429_ip": 0,
+       "req": 22082,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 2381,
+       "rate_limited": 256,
+       "cooldowns": 0,
+       "host_pauses": 256,
+       "deferred": 260
+      },
+      "deferred": {
+       "page_backoffs": 195,
+       "page_parked": 65,
+       "page_parked_never_served": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 998,
+         "n": 1070,
+         "share": 0.9327,
+         "wilson95": [
+          0.9161,
+          0.9462
+         ]
+        },
+        "fetch_rows": 1532,
+        "requests": 2712,
+        "429s": 510,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 7.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 317,
+      "429s": 254,
+      "server": {
+       "shopify_req": 317,
+       "shopify_429": 254,
+       "shopify_429_refuser": 254,
+       "shopify_429_ip": 0,
+       "req": 317,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 65,
+        "ok": {
+         "k": 0,
+         "n": 65,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0558
+         ]
+        },
+        "fetch_rows": 260,
+        "requests": 317,
+        "429s": 254,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 998,
+       "n": 1070,
+       "share": 0.9327,
+       "wilson95": [
+        0.9161,
+        0.9462
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2454,
+       "n": 2545,
+       "share": 0.9642,
+       "wilson95": [
+        0.9563,
+        0.9708
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1841,
+       "n": 1907,
+       "share": 0.9654,
+       "wilson95": [
+        0.9562,
+        0.9727
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1841,
+      "n": 1907,
+      "share": 0.9654,
+      "wilson95": [
+       0.9562,
+       0.9727
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s2_calendar": {
+    "scenario": "s2",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 48.4,
+      "main_pass_min": 38.1,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 22733,
+      "429s": 1142,
+      "server": {
+       "shopify_req": 3364,
+       "shopify_429": 1142,
+       "shopify_429_refuser": 319,
+       "shopify_429_ip": 823,
+       "req": 22732,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 2835,
+       "rate_limited": 835,
+       "cooldowns": 9,
+       "host_pauses": 826,
+       "deferred": 851
+      },
+      "deferred": {
+       "page_backoffs": 729,
+       "page_parked": 122,
+       "page_parked_never_served": 116
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8127,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 998,
+         "n": 1070,
+         "share": 0.9327,
+         "wilson95": [
+          0.9161,
+          0.9462
+         ]
+        },
+        "fetch_rows": 2176,
+        "requests": 3362,
+        "429s": 1142,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 7.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 319,
+      "429s": 254,
+      "server": {
+       "shopify_req": 319,
+       "shopify_429": 254,
+       "shopify_429_refuser": 246,
+       "shopify_429_ip": 8,
+       "req": 319,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 66,
+        "ok": {
+         "k": 0,
+         "n": 66,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.055
+         ]
+        },
+        "fetch_rows": 261,
+        "requests": 319,
+        "429s": 254,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 998,
+       "n": 1070,
+       "share": 0.9327,
+       "wilson95": [
+        0.9161,
+        0.9462
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 85,
+      "catalog_ok_of_has_catalog": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2454,
+       "n": 2545,
+       "share": 0.9642,
+       "wilson95": [
+        0.9563,
+        0.9708
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 85,
+      "catalog_ok_of_has_catalog": {
+       "k": 1841,
+       "n": 1907,
+       "share": 0.9654,
+       "wilson95": [
+        0.9562,
+        0.9727
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1841,
+      "n": 1907,
+      "share": 0.9654,
+      "wilson95": [
+       0.9562,
+       0.9727
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   }
+  },
+  "sim_first_run_no_history": {
+   "s1_calendar": {
+    "scenario": "s1",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 48.7,
+      "main_pass_min": 40.8,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 23081,
+      "429s": 511,
+      "server": {
+       "shopify_req": 3713,
+       "shopify_429": 511,
+       "shopify_429_refuser": 511,
+       "shopify_429_ip": 0,
+       "req": 23081,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 3380,
+       "rate_limited": 257,
+       "cooldowns": 0,
+       "host_pauses": 257,
+       "deferred": 260
+      },
+      "deferred": {
+       "page_backoffs": 195,
+       "page_parked": 65,
+       "page_parked_never_served": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 998,
+         "n": 1070,
+         "share": 0.9327,
+         "wilson95": [
+          0.9161,
+          0.9462
+         ]
+        },
+        "fetch_rows": 1532,
+        "requests": 3711,
+        "429s": 511,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 7.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 317,
+      "429s": 254,
+      "server": {
+       "shopify_req": 317,
+       "shopify_429": 254,
+       "shopify_429_refuser": 254,
+       "shopify_429_ip": 0,
+       "req": 317,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 65,
+        "ok": {
+         "k": 0,
+         "n": 65,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0558
+         ]
+        },
+        "fetch_rows": 260,
+        "requests": 317,
+        "429s": 254,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 998,
+       "n": 1070,
+       "share": 0.9327,
+       "wilson95": [
+        0.9161,
+        0.9462
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2454,
+       "n": 2545,
+       "share": 0.9642,
+       "wilson95": [
+        0.9563,
+        0.9708
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1841,
+       "n": 1907,
+       "share": 0.9654,
+       "wilson95": [
+        0.9562,
+        0.9727
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1841,
+      "n": 1907,
+      "share": 0.9654,
+      "wilson95": [
+       0.9562,
+       0.9727
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s2_calendar": {
+    "scenario": "s2",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 60.5,
+      "main_pass_min": 47.7,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 25151,
+      "429s": 3227,
+      "server": {
+       "shopify_req": 5783,
+       "shopify_429": 3227,
+       "shopify_429_refuser": 105,
+       "shopify_429_ip": 3122,
+       "req": 25151,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 4098,
+       "rate_limited": 1756,
+       "cooldowns": 18,
+       "host_pauses": 1738,
+       "deferred": 1770
+      },
+      "deferred": {
+       "page_backoffs": 1373,
+       "page_parked": 397,
+       "page_parked_never_served": 277
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 716,
+         "n": 1070,
+         "share": 0.6692,
+         "wilson95": [
+          0.6404,
+          0.6967
+         ]
+        },
+        "fetch_rows": 3990,
+        "requests": 5781,
+        "429s": 3227,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 11.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 1526,
+      "429s": 1220,
+      "server": {
+       "shopify_req": 1526,
+       "shopify_429": 1220,
+       "shopify_429_refuser": 54,
+       "shopify_429_ip": 1166,
+       "req": 1526,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 352,
+        "ok": {
+         "k": 89,
+         "n": 352,
+         "share": 0.2528,
+         "wilson95": [
+          0.2103,
+          0.3007
+         ]
+        },
+        "fetch_rows": 1330,
+        "requests": 1526,
+        "429s": 1220,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 805,
+       "n": 1070,
+       "share": 0.7523,
+       "wilson95": [
+        0.7256,
+        0.7773
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 273,
+      "catalog_ok_of_has_catalog": {
+       "k": 805,
+       "n": 1062,
+       "share": 0.758,
+       "wilson95": [
+        0.7313,
+        0.7828
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2261,
+       "n": 2545,
+       "share": 0.8884,
+       "wilson95": [
+        0.8756,
+        0.9001
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 273,
+      "catalog_ok_of_has_catalog": {
+       "k": 1648,
+       "n": 1907,
+       "share": 0.8642,
+       "wilson95": [
+        0.8481,
+        0.8788
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1648,
+      "n": 1907,
+      "share": 0.8642,
+      "wilson95": [
+       0.8481,
+       0.8788
+      ]
+     },
+     "run_ok_rate_pass": false,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 805,
+       "n": 1062,
+       "share": 0.758,
+       "wilson95": [
+        0.7313,
+        0.7828
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "no new release: the gate fails and the previous release stays"
+    }
+   }
+  },
+  "sim_v2_first_cut": {
+   "s1_calendar": {
+    "scenario": "s1",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 49.9,
+      "main_pass_min": 42.0,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 22084,
+      "429s": 511,
+      "server": {
+       "shopify_req": 2715,
+       "shopify_429": 511,
+       "shopify_429_refuser": 511,
+       "shopify_429_ip": 0,
+       "req": 22083,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 2382,
+       "rate_limited": 257,
+       "cooldowns": 0,
+       "host_pauses": 257,
+       "deferred": 260
+      },
+      "deferred": {
+       "page_backoffs": 195,
+       "page_parked": 65,
+       "page_parked_never_served": 65
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 998,
+         "n": 1070,
+         "share": 0.9327,
+         "wilson95": [
+          0.9161,
+          0.9462
+         ]
+        },
+        "fetch_rows": 1532,
+        "requests": 2713,
+        "429s": 511,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9034,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 7.8,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 317,
+      "429s": 254,
+      "server": {
+       "shopify_req": 317,
+       "shopify_429": 254,
+       "shopify_429_refuser": 254,
+       "shopify_429_ip": 0,
+       "req": 317,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 65,
+        "ok": {
+         "k": 0,
+         "n": 65,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0558
+         ]
+        },
+        "fetch_rows": 260,
+        "requests": 317,
+        "429s": 254,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 998,
+       "n": 1070,
+       "share": 0.9327,
+       "wilson95": [
+        0.9161,
+        0.9462
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2454,
+       "n": 2545,
+       "share": 0.9642,
+       "wilson95": [
+        0.9563,
+        0.9708
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1841,
+       "n": 1907,
+       "share": 0.9654,
+       "wilson95": [
+        0.9562,
+        0.9727
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1841,
+      "n": 1907,
+      "share": 0.9654,
+      "wilson95": [
+       0.9562,
+       0.9727
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   },
+   "s2_calendar": {
+    "scenario": "s2",
+    "placement": "calendar",
+    "scale": 10.0,
+    "jobs": [
+     {
+      "job": "mon_weekly",
+      "day": "2026-11-02",
+      "skipped": null,
+      "killed_at": null,
+      "wall_min": 49.2,
+      "main_pass_min": 39.9,
+      "inside_240_min": true,
+      "stopped_at_deadline": false,
+      "requests": 22437,
+      "429s": 844,
+      "server": {
+       "shopify_req": 3069,
+       "shopify_429": 844,
+       "shopify_429_refuser": 414,
+       "shopify_429_ip": 430,
+       "req": 22437,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": {
+       "requests": 2670,
+       "rate_limited": 577,
+       "cooldowns": 7,
+       "host_pauses": 570,
+       "deferred": 582
+      },
+      "deferred": {
+       "page_backoffs": 508,
+       "page_parked": 74,
+       "page_parked_never_served": 71
+      },
+      "per_connector": {
+       "generic": {
+        "roasters": 697,
+        "ok": {
+         "k": 697,
+         "n": 697,
+         "share": 1.0,
+         "wilson95": [
+          0.9945,
+          1.0
+         ]
+        },
+        "fetch_rows": 697,
+        "requests": 8126,
+        "429s": 0,
+        "503s": 0
+       },
+       "shopify": {
+        "roasters": 1070,
+        "ok": {
+         "k": 998,
+         "n": 1070,
+         "share": 0.9327,
+         "wilson95": [
+          0.9161,
+          0.9462
+         ]
+        },
+        "fetch_rows": 1864,
+        "requests": 3067,
+        "429s": 844,
+        "503s": 0
+       },
+       "square_online": {
+        "roasters": 206,
+        "ok": {
+         "k": 193,
+         "n": 206,
+         "share": 0.9369,
+         "wilson95": [
+          0.895,
+          0.9628
+         ]
+        },
+        "fetch_rows": 219,
+        "requests": 648,
+        "429s": 0,
+        "503s": 0
+       },
+       "squarespace": {
+        "roasters": 339,
+        "ok": {
+         "k": 339,
+         "n": 339,
+         "share": 1.0,
+         "wilson95": [
+          0.9888,
+          1.0
+         ]
+        },
+        "fetch_rows": 339,
+        "requests": 1563,
+        "429s": 0,
+        "503s": 0
+       },
+       "woocommerce": {
+        "roasters": 233,
+        "ok": {
+         "k": 227,
+         "n": 233,
+         "share": 0.9742,
+         "wilson95": [
+          0.945,
+          0.9881
+         ]
+        },
+        "fetch_rows": 239,
+        "requests": 9033,
+        "429s": 0,
+        "503s": 0
+       }
+      }
+     },
+     {
+      "job": "tue_catchup",
+      "day": "2026-11-03",
+      "skipped": "no unfinished run to resume",
+      "killed_at": null,
+      "wall_min": 7.9,
+      "main_pass_min": null,
+      "inside_240_min": true,
+      "stopped_at_deadline": null,
+      "requests": 318,
+      "429s": 255,
+      "server": {
+       "shopify_req": 318,
+       "shopify_429": 255,
+       "shopify_429_refuser": 248,
+       "shopify_429_ip": 7,
+       "req": 318,
+       "woo_503": 0,
+       "refusers": 63
+      },
+      "shopify_limiter": null,
+      "deferred": null,
+      "per_connector": {
+       "shopify": {
+        "roasters": 65,
+        "ok": {
+         "k": 0,
+         "n": 65,
+         "share": 0.0,
+         "wilson95": [
+          0.0,
+          0.0558
+         ]
+        },
+        "fetch_rows": 260,
+        "requests": 318,
+        "429s": 255,
+        "503s": 0
+       }
+      }
+     }
+    ],
+    "all_jobs_inside_limit": true,
+    "end_of_week": {
+     "generic": {
+      "roasters": 697,
+      "fetched_ok_7d": {
+       "k": 697,
+       "n": 697,
+       "share": 1.0,
+       "wilson95": [
+        0.9945,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      }
+     },
+     "shopify": {
+      "roasters": 1070,
+      "fetched_ok_7d": {
+       "k": 998,
+       "n": 1070,
+       "share": 0.9327,
+       "wilson95": [
+        0.9161,
+        0.9462
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      }
+     },
+     "square_online": {
+      "roasters": 206,
+      "fetched_ok_7d": {
+       "k": 193,
+       "n": 206,
+       "share": 0.9369,
+       "wilson95": [
+        0.895,
+        0.9628
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      }
+     },
+     "squarespace": {
+      "roasters": 339,
+      "fetched_ok_7d": {
+       "k": 339,
+       "n": 339,
+       "share": 1.0,
+       "wilson95": [
+        0.9888,
+        1.0
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      }
+     },
+     "woocommerce": {
+      "roasters": 233,
+      "fetched_ok_7d": {
+       "k": 227,
+       "n": 233,
+       "share": 0.9742,
+       "wilson95": [
+        0.945,
+        0.9881
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 0,
+      "catalog_ok_of_has_catalog": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "all": {
+      "roasters": 2545,
+      "fetched_ok_7d": {
+       "k": 2454,
+       "n": 2545,
+       "share": 0.9642,
+       "wilson95": [
+        0.9563,
+        0.9708
+       ]
+      },
+      "never_fetched": 0,
+      "refused": 65,
+      "catalog_ok_of_has_catalog": {
+       "k": 1841,
+       "n": 1907,
+       "share": 0.9654,
+       "wilson95": [
+        0.9562,
+        0.9727
+       ]
+      }
+     }
+    },
+    "release": {
+     "run_date": "2026-11-02",
+     "run_dates_in_lake": [
+      "2026-11-02"
+     ],
+     "attempted": {
+      "k": 2545,
+      "n": 2545,
+      "share": 1.0,
+      "wilson95": [
+       0.9985,
+       1.0
+      ]
+     },
+     "run_is_complete": true,
+     "ok_share_has_catalog": {
+      "k": 1841,
+      "n": 1907,
+      "share": 0.9654,
+      "wilson95": [
+       0.9562,
+       0.9727
+      ]
+     },
+     "run_ok_rate_pass": true,
+     "adapter_ok": {
+      "generic": {
+       "k": 164,
+       "n": 165,
+       "share": 0.9939,
+       "wilson95": [
+        0.9665,
+        0.9989
+       ]
+      },
+      "shopify": {
+       "k": 998,
+       "n": 1062,
+       "share": 0.9397,
+       "wilson95": [
+        0.9238,
+        0.9525
+       ]
+      },
+      "square_online": {
+       "k": 193,
+       "n": 193,
+       "share": 1.0,
+       "wilson95": [
+        0.9805,
+        1.0
+       ]
+      },
+      "squarespace": {
+       "k": 259,
+       "n": 259,
+       "share": 1.0,
+       "wilson95": [
+        0.9854,
+        1.0
+       ]
+      },
+      "woocommerce": {
+       "k": 227,
+       "n": 228,
+       "share": 0.9956,
+       "wilson95": [
+        0.9756,
+        0.9992
+       ]
+      }
+     },
+     "adapter_ok_rate_pass": true,
+     "release": "run 2026-11-02 served (all 2545 roasters attempted, one run_date)"
+    }
+   }
+  },
+  "real_crawl_2": {
+   "started": "2026-10-31T18:26:17+00:00",
+   "finished": "2026-10-31T19:01:07+00:00",
+   "wall_min": 34.84,
+   "main_pass_min": 19.41,
+   "inside_240_min": true,
+   "stopped_at_deadline": false,
+   "roasters": 1070,
+   "distinct_hosts_contacted": 1058,
+   "requests": 3005,
+   "limiter_refusals_not_sent": 670,
+   "statuses": {
+    "200": 2299,
+    "429": 670,
+    "301": 31,
+    "404": 2,
+    "None": 2,
+    "302": 1
+   },
+   "429s": 670,
+   "430s": 0,
+   "network_errors": 2,
+   "stores": {
+    "attempted": 1070,
+    "ok": 1042,
+    "ok_with_products": 1034,
+    "refused": 18,
+    "failed_other": 14,
+    "ok_share": 0.9738,
+    "ok_wilson95_pct": [
+     96.2,
+     98.2
+    ],
+    "failure_kinds": {
+     "refused": 14,
+     "parked": 12,
+     "FetchError": 1,
+     "Blocked": 1
+    }
+   },
+   "limiter": {
+    "requests": 2565,
+    "rate_limited": 404,
+    "cooldowns": 0,
+    "host_pauses": 404,
+    "deferred": 404
+   },
+   "deferred": {
+    "page_backoffs": 357,
+    "page_parked": 47,
+    "page_parked_never_served": 34
+   },
+   "crawl_retry": {
+    "roasters": 33,
+    "shopify_limiter": {
+     "requests": 195,
+     "rate_limited": 114,
+     "cooldowns": 0,
+     "host_pauses": 114,
+     "deferred": 114
+    },
+    "deferred": {
+     "page_backoffs": 88,
+     "page_parked": 26,
+     "page_parked_never_served": 14
+    },
+    "todo": 33,
+    "wall_min": 7.71
+   },
+   "job1_wall_min": 27.13,
+   "retry_pass": {
+    "roasters": 49,
+    "fetched": 49,
+    "shopify_limiter": {
+     "requests": 245,
+     "rate_limited": 152,
+     "cooldowns": 0,
+     "host_pauses": 152,
+     "deferred": 152
+    },
+    "deferred": {
+     "page_backoffs": 119,
+     "page_parked": 33,
+     "page_parked_never_served": 26
+    },
+    "todo": 49
+   },
+   "pattern_429": {
+    "hosts_with_429": 219,
+    "hosts_contacted": 1058,
+    "share_hosts_with_429": 0.207,
+    "share_hosts_wilson95_pct": [
+     18.4,
+     23.2
+    ],
+    "top_hosts_share_of_429s": 0.654,
+    "first_catalog_request_429": [
+     205,
+     1044
+    ],
+    "next_request_same_host_after_429_is_429": [
+     347,
+     644
+    ],
+    "p429_after_other_hosts_429_in_30s": [
+     662,
+     1829
+    ],
+    "p429_otherwise": [
+     8,
+     14
+    ],
+    "retry_after_values": {
+     "60": 670
+    },
+    "max_429s_in_one_minute": 59,
+    "minutes": 27,
+    "median_req_per_min": 133
+   }
+  },
+  "elt": {
+   "ingest_writes": [
+    "run_manifests",
+    "fetches",
+    "snapshots",
+    "bodies"
+   ],
+   "post_load_enrichment": "coffeedata enrich-pending (alias of enrich): candidates from products.derive over loaded snapshots+bodies",
+   "roaster_has_coffee": "dim_roaster.last_ok_coffee (stg_products) and registry.has_coffee (products.derive)",
+   "build_diff": "102-store mock lake: 34 models, 85,623 rows identical; only stg_enrichments differs (no rules rows; unused by marts)"
+  },
+  "code_lines_vs_6bda240": {
+   "src": "+832/-112",
+   "dbt": "+22/-30",
+   "app": 0,
+   "contracts": 0,
+   "tests": "+741/-49",
+   ".github": "+12/-1"
+  }
+ }
+}

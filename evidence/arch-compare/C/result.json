@@ -1,0 +1,1760 @@
+{
+ "design": "C",
+ "scale": "fetch jobs 10x; the sweep's idle waits between waves jump the clock",
+ "scenarios": {
+  "S1": {
+   "jobs": [
+    {
+     "job": "d1-connector-squarespace",
+     "sim_start_h": 1.0,
+     "wall_min": 2.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "squarespace": 1563
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "squarespace": {
+       "ok": 339,
+       "of": 339,
+       "pct": 100.0,
+       "outcomes": {
+        "ok": 339
+       }
+      }
+     }
+    },
+    {
+     "job": "d1-connector-shopify",
+     "sim_start_h": 3.0,
+     "wall_min": 11.9,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 472
+     },
+     "http_429": {
+      "shopify": 48
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 139,
+       "of": 152,
+       "pct": 91.4,
+       "outcomes": {
+        "ok": 139,
+        "refused_attempt": 12,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d1-sweep",
+     "sim_start_h": 9.0,
+     "wall_min": 9.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 48
+     },
+     "http_429": {
+      "shopify": 48
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 12,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 12
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 12,
+       "ok": 0,
+       "routed_refused": 12,
+       "requests": 48,
+       "rate_limited": 48
+      }
+     ]
+    },
+    {
+     "job": "d1-html",
+     "sim_start_h": 13.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 12
+    },
+    {
+     "job": "d2-connector-square_online",
+     "sim_start_h": 25.0,
+     "wall_min": 4.2,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "square_online": 622
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "square_online": {
+       "ok": 193,
+       "of": 206,
+       "pct": 93.7,
+       "outcomes": {
+        "error": 13,
+        "ok": 193
+       }
+      }
+     }
+    },
+    {
+     "job": "d2-connector-shopify",
+     "sim_start_h": 27.0,
+     "wall_min": 12.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 443
+     },
+     "http_429": {
+      "shopify": 20
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 138,
+       "of": 143,
+       "pct": 96.5,
+       "outcomes": {
+        "ok": 138,
+        "refused_attempt": 5
+       }
+      }
+     }
+    },
+    {
+     "job": "d2-sweep",
+     "sim_start_h": 33.0,
+     "wall_min": 7.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 20
+     },
+     "http_429": {
+      "shopify": 20
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 5,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 5
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 5,
+       "ok": 0,
+       "routed_refused": 5,
+       "requests": 20,
+       "rate_limited": 20
+      }
+     ]
+    },
+    {
+     "job": "d2-html",
+     "sim_start_h": 37.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 17
+    },
+    {
+     "job": "d3-connector-woocommerce",
+     "sim_start_h": 49.0,
+     "wall_min": 2.6,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "woocommerce": 693,
+      "generic": 2
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 693,
+     "ok_rate_per_connector": {
+      "woocommerce": {
+       "ok": 0,
+       "of": 233,
+       "pct": 0.0,
+       "outcomes": {
+        "parked": 232,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d3-connector-shopify",
+     "sim_start_h": 51.0,
+     "wall_min": 11.6,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 471
+     },
+     "http_429": {
+      "shopify": 32
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 144,
+       "of": 154,
+       "pct": 93.5,
+       "outcomes": {
+        "ok": 144,
+        "refused_attempt": 8,
+        "error": 2
+       }
+      }
+     }
+    },
+    {
+     "job": "d3-sweep",
+     "sim_start_h": 57.0,
+     "wall_min": 12.4,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 32,
+      "woocommerce": 9019
+     },
+     "http_429": {
+      "shopify": 32
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 8,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 8
+       }
+      },
+      "woocommerce": {
+       "ok": 227,
+       "of": 232,
+       "pct": 97.8,
+       "outcomes": {
+        "ok": 227,
+        "error": 5
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 240,
+       "ok": 227,
+       "routed_refused": 8,
+       "requests": 9051,
+       "rate_limited": 32
+      }
+     ]
+    },
+    {
+     "job": "d3-html",
+     "sim_start_h": 61.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 25
+    },
+    {
+     "job": "d4-connector-generic",
+     "sim_start_h": 73.0,
+     "wall_min": 6.2,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 2,
+      "generic": 8125
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "generic": {
+       "ok": 697,
+       "of": 697,
+       "pct": 100.0,
+       "outcomes": {
+        "ok": 697
+       }
+      }
+     }
+    },
+    {
+     "job": "d4-connector-shopify",
+     "sim_start_h": 75.0,
+     "wall_min": 12.8,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 493
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 139,
+       "of": 151,
+       "pct": 92.1,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 139,
+        "error": 2
+       }
+      }
+     }
+    },
+    {
+     "job": "d4-sweep",
+     "sim_start_h": 81.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d4-html",
+     "sim_start_h": 85.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 35
+    },
+    {
+     "job": "d5-connector-shopify-killed",
+     "sim_start_h": 99.0,
+     "wall_min": 2.8,
+     "finished": false,
+     "killed_at_50pct": true,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 236
+     },
+     "http_429": {
+      "shopify": 5
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "resumed_skipped": null,
+     "todo": null
+    },
+    {
+     "job": "d5-connector-shopify-resume",
+     "sim_start_h": 99.06,
+     "wall_min": 10.0,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 342
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 99,
+       "of": 109,
+       "pct": 90.8,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 99
+       }
+      }
+     },
+     "resumed_skipped": 48,
+     "todo": 109
+    },
+    {
+     "job": "d5-sweep",
+     "sim_start_h": 105.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d5-html",
+     "sim_start_h": 109.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 45
+    },
+    {
+     "job": "d6-connector-shopify",
+     "sim_start_h": 123.0,
+     "wall_min": 11.8,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 497
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 149,
+       "of": 159,
+       "pct": 93.7,
+       "outcomes": {
+        "ok": 149,
+        "refused_attempt": 10
+       }
+      }
+     }
+    },
+    {
+     "job": "d6-sweep",
+     "sim_start_h": 129.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d6-html",
+     "sim_start_h": 133.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 55
+    },
+    {
+     "job": "d7-connector-shopify",
+     "sim_start_h": 147.0,
+     "wall_min": 11.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 480
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 143,
+       "of": 154,
+       "pct": 92.9,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 143,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d7-sweep",
+     "sim_start_h": 153.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d7-html",
+     "sim_start_h": 157.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 65
+    },
+    {
+     "job": "d7-merge",
+     "sim_start_h": 167.0,
+     "wall_min": 2.0,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {}
+    }
+   ],
+   "all_jobs_finished_inside_limit": true,
+   "end_of_week": {
+    "roasters_expected": 2545,
+    "ok_in_last_7_days": {
+     "n": 2455,
+     "pct": 96.46,
+     "wilson95": [
+      95.7,
+      97.1
+     ]
+    },
+    "per_connector": {
+     "generic": {
+      "expected": 697,
+      "ok": 697,
+      "pct": 100.0,
+      "wilson95": [
+       99.5,
+       100.0
+      ]
+     },
+     "shopify": {
+      "expected": 1070,
+      "ok": 999,
+      "pct": 93.4,
+      "wilson95": [
+       91.7,
+       94.7
+      ]
+     },
+     "square_online": {
+      "expected": 206,
+      "ok": 193,
+      "pct": 93.7,
+      "wilson95": [
+       89.5,
+       96.3
+      ]
+     },
+     "squarespace": {
+      "expected": 339,
+      "ok": 339,
+      "pct": 100.0,
+      "wilson95": [
+       98.9,
+       100.0
+      ]
+     },
+     "woocommerce": {
+      "expected": 233,
+      "ok": 227,
+      "pct": 97.4,
+      "wilson95": [
+       94.5,
+       98.8
+      ]
+     }
+    },
+    "refused_stores": 65,
+    "never_fetched": 0,
+    "attempted_not_ok": 90
+   },
+   "weekly_release": {
+    "run_date": "2026-11-08",
+    "lake_files_written": [
+     "bodies/run_date=2026-11-08/batch=20261031T184946-195045.parquet",
+     "enrichments/method=rules/run_date=2026-11-08/batch=20261031T184946-195045.parquet",
+     "fetches/run_date=2026-11-08/batch=20261031T184946-195045.parquet",
+     "run_manifests/run_date=2026-11-08/batch=20261031T184946-8322c8.parquet",
+     "snapshots/run_date=2026-11-08/batch=20261031T184946-195045.parquet"
+    ],
+    "rows": {
+     "snapshots": 88352,
+     "bodies": 1,
+     "enrichments": 56843
+    },
+    "fetches_rows": 2545,
+    "run_manifest_rows": 2545,
+    "raw_partitions_read": 19
+   },
+   "files": {
+    "raw_partition_files": 19,
+    "raw_unsealed_parts_left": 0,
+    "control_files_after_rollup": 1,
+    "manifests_rolled_up": 25
+   },
+   "mock_totals": {
+    "by_adapter": {
+     "squarespace": {
+      "req": 1563,
+      "429": 0,
+      "503": 0
+     },
+     "shopify": {
+      "req": 3696,
+      "429": 525,
+      "503": 0
+     },
+     "square_online": {
+      "req": 622,
+      "429": 0,
+      "503": 0
+     },
+     "woocommerce": {
+      "req": 9712,
+      "429": 0,
+      "503": 693
+     },
+     "generic": {
+      "req": 8127,
+      "429": 0,
+      "503": 0
+     }
+    },
+    "429_refuser": 525,
+    "429_ip": 0,
+    "503_woo": 693
+   }
+  },
+  "S2": {
+   "jobs": [
+    {
+     "job": "d1-connector-squarespace",
+     "sim_start_h": 1.0,
+     "wall_min": 2.4,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "squarespace": 1563
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "squarespace": {
+       "ok": 339,
+       "of": 339,
+       "pct": 100.0,
+       "outcomes": {
+        "ok": 339
+       }
+      }
+     }
+    },
+    {
+     "job": "d1-connector-shopify",
+     "sim_start_h": 3.0,
+     "wall_min": 11.8,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 472
+     },
+     "http_429": {
+      "shopify": 48
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 139,
+       "of": 152,
+       "pct": 91.4,
+       "outcomes": {
+        "ok": 139,
+        "refused_attempt": 12,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d1-sweep",
+     "sim_start_h": 9.0,
+     "wall_min": 9.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 48
+     },
+     "http_429": {
+      "shopify": 48
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 12,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 12
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 12,
+       "ok": 0,
+       "routed_refused": 12,
+       "requests": 48,
+       "rate_limited": 48
+      }
+     ]
+    },
+    {
+     "job": "d1-html",
+     "sim_start_h": 13.0,
+     "wall_min": 0.2,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 12
+    },
+    {
+     "job": "d2-connector-square_online",
+     "sim_start_h": 25.0,
+     "wall_min": 4.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "square_online": 622
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "square_online": {
+       "ok": 193,
+       "of": 206,
+       "pct": 93.7,
+       "outcomes": {
+        "error": 13,
+        "ok": 193
+       }
+      }
+     }
+    },
+    {
+     "job": "d2-connector-shopify",
+     "sim_start_h": 27.0,
+     "wall_min": 12.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 443
+     },
+     "http_429": {
+      "shopify": 20
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 138,
+       "of": 143,
+       "pct": 96.5,
+       "outcomes": {
+        "ok": 138,
+        "refused_attempt": 5
+       }
+      }
+     }
+    },
+    {
+     "job": "d2-sweep",
+     "sim_start_h": 33.0,
+     "wall_min": 7.3,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 20
+     },
+     "http_429": {
+      "shopify": 20
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 5,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 5
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 5,
+       "ok": 0,
+       "routed_refused": 5,
+       "requests": 20,
+       "rate_limited": 20
+      }
+     ]
+    },
+    {
+     "job": "d2-html",
+     "sim_start_h": 37.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 17
+    },
+    {
+     "job": "d3-connector-woocommerce",
+     "sim_start_h": 49.0,
+     "wall_min": 2.6,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "woocommerce": 693,
+      "generic": 2
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 693,
+     "ok_rate_per_connector": {
+      "woocommerce": {
+       "ok": 0,
+       "of": 233,
+       "pct": 0.0,
+       "outcomes": {
+        "parked": 232,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d3-connector-shopify",
+     "sim_start_h": 51.0,
+     "wall_min": 11.6,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 471
+     },
+     "http_429": {
+      "shopify": 32
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 144,
+       "of": 154,
+       "pct": 93.5,
+       "outcomes": {
+        "ok": 144,
+        "refused_attempt": 8,
+        "error": 2
+       }
+      }
+     }
+    },
+    {
+     "job": "d3-sweep",
+     "sim_start_h": 57.0,
+     "wall_min": 12.5,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 32,
+      "woocommerce": 9019
+     },
+     "http_429": {
+      "shopify": 32
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 8,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 8
+       }
+      },
+      "woocommerce": {
+       "ok": 227,
+       "of": 232,
+       "pct": 97.8,
+       "outcomes": {
+        "ok": 227,
+        "error": 5
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 240,
+       "ok": 227,
+       "routed_refused": 8,
+       "requests": 9051,
+       "rate_limited": 32
+      }
+     ]
+    },
+    {
+     "job": "d3-html",
+     "sim_start_h": 61.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 25
+    },
+    {
+     "job": "d4-connector-generic",
+     "sim_start_h": 73.0,
+     "wall_min": 6.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 2,
+      "generic": 8125
+     },
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "generic": {
+       "ok": 697,
+       "of": 697,
+       "pct": 100.0,
+       "outcomes": {
+        "ok": 697
+       }
+      }
+     }
+    },
+    {
+     "job": "d4-connector-shopify",
+     "sim_start_h": 75.0,
+     "wall_min": 12.9,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 493
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 139,
+       "of": 151,
+       "pct": 92.1,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 139,
+        "error": 2
+       }
+      }
+     }
+    },
+    {
+     "job": "d4-sweep",
+     "sim_start_h": 81.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d4-html",
+     "sim_start_h": 85.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 35
+    },
+    {
+     "job": "d5-connector-shopify-killed",
+     "sim_start_h": 99.0,
+     "wall_min": 2.8,
+     "finished": false,
+     "killed_at_50pct": true,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 237
+     },
+     "http_429": {
+      "shopify": 5
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "resumed_skipped": null,
+     "todo": null
+    },
+    {
+     "job": "d5-connector-shopify-resume",
+     "sim_start_h": 99.06,
+     "wall_min": 10.0,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 342
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 99,
+       "of": 109,
+       "pct": 90.8,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 99
+       }
+      }
+     },
+     "resumed_skipped": 48,
+     "todo": 109
+    },
+    {
+     "job": "d5-sweep",
+     "sim_start_h": 105.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d5-html",
+     "sim_start_h": 109.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 45
+    },
+    {
+     "job": "d6-connector-shopify",
+     "sim_start_h": 123.0,
+     "wall_min": 11.8,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 497
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 149,
+       "of": 159,
+       "pct": 93.7,
+       "outcomes": {
+        "ok": 149,
+        "refused_attempt": 10
+       }
+      }
+     }
+    },
+    {
+     "job": "d6-sweep",
+     "sim_start_h": 129.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d6-html",
+     "sim_start_h": 133.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 55
+    },
+    {
+     "job": "d7-connector-shopify",
+     "sim_start_h": 147.0,
+     "wall_min": 11.6,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 480
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 143,
+       "of": 154,
+       "pct": 92.9,
+       "outcomes": {
+        "refused_attempt": 10,
+        "ok": 143,
+        "error": 1
+       }
+      }
+     }
+    },
+    {
+     "job": "d7-sweep",
+     "sim_start_h": 153.0,
+     "wall_min": 8.7,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {
+      "shopify": 40
+     },
+     "http_429": {
+      "shopify": 40
+     },
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {
+      "shopify": {
+       "ok": 0,
+       "of": 10,
+       "pct": 0.0,
+       "outcomes": {
+        "refused": 10
+       }
+      }
+     },
+     "waves": [
+      {
+       "wave": 0,
+       "due": 10,
+       "ok": 0,
+       "routed_refused": 10,
+       "requests": 40,
+       "rate_limited": 40
+      }
+     ]
+    },
+    {
+     "job": "d7-html",
+     "sim_start_h": 157.0,
+     "wall_min": 0.1,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {},
+     "routed_to_html_stub": 65
+    },
+    {
+     "job": "d7-merge",
+     "sim_start_h": 167.0,
+     "wall_min": 2.0,
+     "finished": true,
+     "killed_at_50pct": false,
+     "within_240_min": true,
+     "requests": {},
+     "http_429": {},
+     "ip_wide_429": 0,
+     "woo_503": 0,
+     "ok_rate_per_connector": {}
+    }
+   ],
+   "all_jobs_finished_inside_limit": true,
+   "end_of_week": {
+    "roasters_expected": 2545,
+    "ok_in_last_7_days": {
+     "n": 2455,
+     "pct": 96.46,
+     "wilson95": [
+      95.7,
+      97.1
+     ]
+    },
+    "per_connector": {
+     "generic": {
+      "expected": 697,
+      "ok": 697,
+      "pct": 100.0,
+      "wilson95": [
+       99.5,
+       100.0
+      ]
+     },
+     "shopify": {
+      "expected": 1070,
+      "ok": 999,
+      "pct": 93.4,
+      "wilson95": [
+       91.7,
+       94.7
+      ]
+     },
+     "square_online": {
+      "expected": 206,
+      "ok": 193,
+      "pct": 93.7,
+      "wilson95": [
+       89.5,
+       96.3
+      ]
+     },
+     "squarespace": {
+      "expected": 339,
+      "ok": 339,
+      "pct": 100.0,
+      "wilson95": [
+       98.9,
+       100.0
+      ]
+     },
+     "woocommerce": {
+      "expected": 233,
+      "ok": 227,
+      "pct": 97.4,
+      "wilson95": [
+       94.5,
+       98.8
+      ]
+     }
+    },
+    "refused_stores": 65,
+    "never_fetched": 0,
+    "attempted_not_ok": 90
+   },
+   "weekly_release": {
+    "run_date": "2026-11-08",
+    "lake_files_written": [
+     "bodies/run_date=2026-11-08/batch=20261031T184948-3622a7.parquet",
+     "enrichments/method=rules/run_date=2026-11-08/batch=20261031T184948-3622a7.parquet",
+     "fetches/run_date=2026-11-08/batch=20261031T184948-3622a7.parquet",
+     "run_manifests/run_date=2026-11-08/batch=20261031T184948-99fac6.parquet",
+     "snapshots/run_date=2026-11-08/batch=20261031T184948-3622a7.parquet"
+    ],
+    "rows": {
+     "snapshots": 88352,
+     "bodies": 1,
+     "enrichments": 56843
+    },
+    "fetches_rows": 2545,
+    "run_manifest_rows": 2545,
+    "raw_partitions_read": 19
+   },
+   "files": {
+    "raw_partition_files": 19,
+    "raw_unsealed_parts_left": 0,
+    "control_files_after_rollup": 1,
+    "manifests_rolled_up": 25
+   },
+   "mock_totals": {
+    "by_adapter": {
+     "squarespace": {
+      "req": 1563,
+      "429": 0,
+      "503": 0
+     },
+     "shopify": {
+      "req": 3697,
+      "429": 525,
+      "503": 0
+     },
+     "square_online": {
+      "req": 622,
+      "429": 0,
+      "503": 0
+     },
+     "woocommerce": {
+      "req": 9712,
+      "429": 0,
+      "503": 693
+     },
+     "generic": {
+      "req": 8127,
+      "429": 0,
+      "503": 0
+     }
+    },
+    "429_refuser": 525,
+    "429_ip": 0,
+    "503_woo": 693
+   }
+  }
+ },
+ "schedule": {
+  "shopify": "daily 03:00, shard = sha256(roaster_id) mod 7 == weekday (143-159 stores/day), 1.5 req/s, 4 concurrent",
+  "squarespace": "weekly Mon 01:00",
+  "square_online": "weekly Tue 01:00",
+  "woocommerce": "weekly Wed 01:00 (inside the 01:00-03:00 503 outage)",
+  "generic": "weekly Thu 01:00",
+  "retry_sweep": "daily 09:00, waves at +0/15/60/120 min, each store only after its Retry-After",
+  "html_fallback_stub": "daily 13:00, refused stores only (routing + hook, no fetching)",
+  "weekly_merge": "Sun 21:00, window 7 days, then manifest rollup",
+  "enrich": "Sun 22:00 post-load enrichment",
+  "build_gate": "Sun 23:00 coffeedata build (dbt build + tests)",
+  "publish": "Mon 00:00 coffeedata publish"
+ },
+ "s2_note": "Shopify never exceeds the 1.5 req/s budget (a limiter budget of 90 req per 60 s against the 120 limit), so S2 = S1: 0 IP-wide 429s. All 525 Shopify 429s are the 65 refusers.",
+ "extensibility_bigcartel": {
+  "files": [
+   "src/coffeedata/adapters/bigcartel.py (new, ~80-120 lines like the others)",
+   "src/coffeedata/adapters/__init__.py (+2: import, ADAPTERS entry)",
+   "src/coffeedata/models.py (+2: Platform literal, Roaster.adapter)",
+   "config/connectors.toml (+7: schedule, weekday, hour, rps, concurrency, workers, chunk)",
+   "src/coffeedata/discover.py (+1 detection pattern)",
+   "dbt/models/marts/run_completeness.sql (+1 adapter mapping; pre-existing coupling, not C's)"
+  ],
+  "own_rate_limit": "rps/concurrency in connectors.toml become a PlatformLimiter via ingest.run(limits=...); no pipeline code change",
+  "new_schedule_entries": 1
+ },
+ "operational_surface": {
+  "scheduled_entries": "11 Cloud Scheduler entries: 5 connector jobs (1 daily, 4 weekly), daily sweep, daily html stub, weekly merge, enrich, build, publish = ~26 runs/week",
+  "watch": [
+   "merge's never_fetched and ok share per connector (dbt floors still gate the release)",
+   "sweep still_parked and refused counts (growth = IP trouble)",
+   "any raw partition with _parts left (a job that died and was not retried)",
+   "control table write races if two jobs run at once (single writer per file, but read-modify-write of state is not locked)"
+  ]
+ },
+ "code_under_test": "origin/main 6bda240 + PR #62 (d3c4903) + PAGINATION.patch v1.1 + PAGINATION.v2.patch as of 18:24 UTC (short-page stop only at a known product count) (resumable pages, 60/120/240 s page backoffs, parking, quiet_hosts so retries never trip the burst detector) + Design C",
+ "faults": {
+  "woo_503_day3": "woocommerce job: 0/233 ok (232 parked, robots.txt 503); 09:00 sweep wave 0: 227/232 ok (the other 5 have no catalog, error as on main); no other connector affected",
+  "kill_day5": "shopify shard 4 SIGKILLed at 79/157 attempts; restarted 1 min later: 48 skipped (checkpointed in parts of 25), 109 fetched; one data.parquet after seal"
+ },
+ "dbt_unchanged_check": "coffeedata build (dbt/ untouched) over the S1 merged lake, --run-date 2026-11-08: 34 models PASS, 76 tests PASS incl. run_is_complete, run_ok_rate, adapter_ok_rate",
+ "before_v2_pagination": {
+  "S1_and_S2": "ok 2,454/2,545 (96.4%), shopify 93.3%, 23,712 requests, 525 429s, longest job 12.7 min (C/sim/runs/S*-week.json)",
+  "v2_first_version": "ok 2,455 (96.5%), 22,693 requests (an unconditional short-page stop) (C/sim/runs/S*-v2-week.json)"
+ },
+ "code": {
+  "src_lines_vs_main": {
+   "added": 1023,
+   "removed": 32,
+   "by_file": {
+    "pipelines.py (new)": "+584",
+    "ingest.py": "+231/-17",
+    "ratelimit.py": "+87/-3",
+    "adapters/shopify.py": "+92/-9",
+    "adapters/__init__.py": "+6/-2",
+    "http.py": "+1/-1",
+    "cli.py": "+22"
+   }
+  },
+  "of_which_pr62_and_pagination_v2": "ratelimit, http, adapters, most of ingest (~+400)",
+  "design_c_own": "~+620: pipelines.py, cli +22, ingest (limits from config, chunk, on_result hook, robots 429/5xx deferrable)",
+  "config": "config/connectors.toml +65",
+  "tests": "tests/test_pipelines.py, 6 tests: merge gives the same rows as a direct ingest, latest ok wins, one file per partition plus resume, shard balance, the refusal rule, parked progress",
+  "dbt_app_contracts_changes": "dbt: 1 file (dim_roaster.sql); app/, contracts/: 0",
+  "test_suite": "before v2: 645 passed, 1 failed (test_lineage diagnostics; it fails the same way on PR #62 alone). After v2: test_ratelimit, test_pipelines, test_adapters, test_ingest and test_lineage, 110 passed (test_lineage fixed by v2)",
+  "src_lines_vs_6bda240": {
+   "added": 1111,
+   "removed": 46
+  },
+  "dbt_change": "dim_roaster.sql +8/-1 (owner decision: status from the build); outputs unchanged (dbt_equivalence)"
+ },
+ "weekly_release_contents": "One weekly run (run_date 2026-11-08) in today's raw-run shape: run_manifests (2,545 rows, mode full), fetches (2,545: the latest ok per roaster in 7 days, else the latest error), snapshots, bodies and enrichments, one file per table. dbt reads only these; raw/, control/ and parked/ sit outside the dbt globs.",
+ "sim_note": "This run shared the CPU with another design's test suite, so the shard walls (10.0-12.9 sim min) are a little inflated.",
+ "elt": {
+  "fetch_jobs_write": "run_manifests, fetches, snapshots, bodies only (enrich_rules=False); raw/v1 contract forbids enrichments",
+  "enrichment_job": "pipelines.run_enrich, weekly Sun 22:00 after the 21:00 merge: rules rows for coffees without them (ingest.rules_row, same as ingest wrote), then enrich.collect + enrich.run (Claude Batches) from enrich.pending",
+  "why_weekly": "the lake receives the week's snapshots/bodies only at the merge (raw/ is outside dbt and lake globs); one Batches submission per week matches the weekly build",
+  "roaster_status": "dim_roaster.sql and registry.STATE_SQL count is_coffee snapshots of the last ok fetch's batch instead of fetches.coffees; test_dbt (42) incl. test_python_and_dbt_agree_on_roaster_status passes",
+  "dbt_equivalence": "sim raw -> new merge + run_enrich (56,843 rules rows, same set as ingest-time) built with C's dbt vs old lake built with main 6bda240's dbt: all 26 built tables identical (release_*/batch_id excluded); both 34 models / 76 tests PASS",
+  "incident": "the first equivalence run called run_enrich with this environment's Anthropic credentials present and submitted one real Claude batch of 2,000 requests built from mock data (msgbatch_01473iSwL5QdGQpcAfmCJUSs); it was cancelled within ~2 minutes: 2,000 canceled, 0 succeeded. sim/job.py now forces llm_enabled() False, and later runs unset the keys."
+ },
+ "contracts": {
+  "raw/v1": "pipelines.RAW + RAW_KINDS, version in Parquet metadata; tests/test_pipeline_contracts.py::test_raw_contract_v1",
+  "control/v1": "pipelines.CONTROL + OUTCOMES; ::test_control_contract_v1",
+  "enrichment": "lake.SCHEMAS['enrichments'] + ingest.rules_row; ::test_enrichment_contract",
+  "public": "contracts/public-catalog.odcs.yaml; tests/test_contracts.py (unchanged)"
+ },
+ "real_condensed_week": {
+  "report": "C/real.md",
+  "window": "2026-10-31 20:25 - 11-01 01:34 UTC",
+  "stores": 1070,
+  "ok": 1027,
+  "ok_pct": "96.0% [94.6, 97.0]",
+  "refused_routed": 27,
+  "still_parked": 13,
+  "other_errors": 3,
+  "requests_sent": 4135,
+  "429": 779,
+  "430": 0,
+  "all_jobs_inside_240": true,
+  "shard_wall_min": [
+   12.8,
+   12.4,
+   12.7,
+   11.5,
+   13.0,
+   11.9,
+   12.2
+  ],
+  "sweep": {
+   "candidates": 57,
+   "recovered": 16,
+   "wall_min": 128.3
+  },
+  "page2_eleven_ok": "6 of 11",
+  "A_refused_22": {
+   "parked": 6,
+   "refused": 13,
+   "ok": 3
+  },
+  "overlap": {
+   "C_A": 13,
+   "C_B": 9,
+   "all_three": 4
+  },
+  "first_contact_429_by_shard": [
+   "15.8%",
+   "27.0%",
+   "16.2%",
+   "20.8%",
+   "17.8%",
+   "4.4%",
+   "4.6%"
+  ],
+  "fixed_after": "sweep retries tripped the burst detector 7 times; ingest.run(quiet_hosts=...) now keeps them out"
+ }
+}
