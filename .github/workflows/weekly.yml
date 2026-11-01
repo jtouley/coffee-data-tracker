@@ -12,6 +12,9 @@ on:
       sample:
         description: "Only N roasters (blank = all)"
         required: false
+      run_date:
+        description: "Run date YYYY-MM-DD (blank = today, UTC). To resume a week, give its Monday"
+        required: false
       rollback_to:
         description: "Instead of a weekly run: serve an earlier release ('previous', or a build id from build-diff); 'served' re-exports the current one"
         required: false
@@ -67,14 +70,15 @@ jobs:
       - name: Weekly run
         env:
           SAMPLE: ${{ inputs.sample }}  # passed via env, never interpolated into the script
+          RUN_DATE: ${{ inputs.run_date }}  # validated by the CLI's --run-date
           ACCEPT_VOLUME_CHANGE: ${{ inputs.accept_volume_change && '1' || '' }}
           ROLLBACK_TO: ${{ inputs.rollback_to }}
           MIGRATE: ${{ inputs.snowflake_migrate && '1' || '' }}
         run: |
           # snowflake_migrate on its own re-exports the served release for the Snowflake step, without a crawl.
           if [ -n "$MIGRATE" ] && [ -z "$ROLLBACK_TO" ]; then
-            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE" ]; then
-              echo "snowflake_migrate runs no crawl, so sample and accept_volume_change would be ignored: unset them"
+            if [ -n "$SAMPLE$ACCEPT_VOLUME_CHANGE$RUN_DATE" ]; then
+              echo "snowflake_migrate runs no crawl, so sample, run_date and accept_volume_change would be ignored: unset them"
               exit 1
             fi
             ROLLBACK_TO=served
@@ -85,7 +89,8 @@ jobs:
             if [ "$ROLLBACK_TO" = previous ]; then uv run coffeedata rollback --reason "manual rollback ($GITHUB_ACTOR)"
             else uv run coffeedata rollback --to "$ROLLBACK_TO" --reason "manual rollback ($GITHUB_ACTOR)"; fi
           else
-            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
+            uv run coffeedata weekly ${SAMPLE:+--sample "$SAMPLE"} ${RUN_DATE:+--run-date "$RUN_DATE"} \
+              ${ACCEPT_VOLUME_CHANGE:+--accept-volume-change}
           fi
       - name: Site built
         id: site

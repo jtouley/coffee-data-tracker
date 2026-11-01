@@ -1,22 +1,23 @@
-# Rebuild and deploy the public site: each Sunday after the Cloud Run build, and when its templates or site.py change
+# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates or site.py change
 # on main, so a copy or layout change doesn't wait for the week. It renders the release customers get now (the served
 # release), never a fresh build of the lake: that would re-run the release checks on the newest run, which may have
 # failed them. It reads the lake but never writes to it, and never contacts a roaster.
 #
-# The Sunday run also does what weekly.yml did after a passing build, from the same served release: the facts-only
+# The Tuesday run also does what weekly.yml did after a passing build, from the same served release: the facts-only
 # public export (PUBLIC_EXPORT_URL, a separate dataset or bucket, not the lake) and the Snowflake load. The weekly
-# pipeline, crawl to release, runs on Cloud Run (docs/ingestion/RUNBOOK.md); its `build` job is scheduled for
-# Sunday 09:17 UTC (src/terraform/ingestion.tf) and takes minutes, so 11:17 leaves two hours. If that build hasn't
-# passed by then, this renders and exports the release served before it (last week's): never an unchecked one.
+# pipeline, crawl to release, runs on Cloud Run (docs/ingestion/RUNBOOK.md): every connector crawls on Monday, and
+# its `build` job is scheduled for Tuesday 06:17 UTC (src/terraform/ingestion.tf), so 08:17 leaves two hours. The
+# Tuesday run fails, without exporting, if no release is served or the served one is older than this week's Monday
+# run: it never re-exports last week's release in silence. Push and manual runs only render and deploy.
 #
 # Its own concurrency group, not `lake`: GitHub keeps one pending run per group, so a queued site build there would
-# cancel a queued shot log or weekly run. A newer push supersedes an older site build. The Sunday run has a group of
+# cancel a queued shot log or weekly run. A newer push supersedes an older site build. The Tuesday run has a group of
 # its own, so a push can't cancel its export or Snowflake load halfway; a push run at the same time renders the same
 # served release.
 name: site
 on:
   schedule:
-    - cron: "17 11 * * 0"   # Sundays, two hours after the Cloud Run build (09:17)
+    - cron: "17 8 * * 2"   # Tuesdays, two hours after the Cloud Run build (06:17)
   push:
     branches: [main]
     paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
@@ -29,12 +30,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # the Sunday run's export and Snowflake load have their own limits below
+    timeout-minutes: 60  # the Tuesday run's export and Snowflake load have their own limits below
     outputs:
       served: ${{ steps.site.outputs.served }}
     env:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
-      HF_TOKEN: ${{ secrets.HF_TOKEN }}
       COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}
       # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
@@ -55,6 +55,8 @@ jobs:
       # deploying. Any other failure still fails the job.
       - name: Build the site from the served release
         id: site
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # on the steps that read the lake or write an hf:// export only
         run: |
           uv run coffeedata site --served --skip-if-unserved
           if [ -f build/site/index.html ]; then
@@ -66,12 +68,43 @@ jobs:
       - if: steps.site.outputs.served == 'true'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9  # v5.0.0
         with: {path: build/site}
-      # Sunday only, after the site artifact is uploaded, so neither step holds back the site. Both read the served
-      # release that the site step just materialized (build/served.duckdb); nothing is crawled or rebuilt.
+      # Tuesday only: fail loudly, and export nothing, if this week's release isn't served. The served release's
+      # run_date (marts/release.parquet) must be this week's Monday or later, the run Cloud Run crawled. The site
+      # artifact is already uploaded, so deploy still runs (it re-deploys the release customers already get).
+      - name: Check the served release is this week's
+        if: github.event_name == 'schedule'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          uv run python - <<'EOF'
+          import sys
+          from datetime import UTC, date, datetime, timedelta
+
+          from coffeedata import quality
+          from coffeedata.lake import Lake
+
+          today = datetime.now(UTC).date()
+          monday = today - timedelta(days=today.weekday())
+          release = quality.served(Lake())
+          if release is None:
+              print(f"::error::No release is served: this week's run ({monday}) has no passing build. Nothing exported.")
+              sys.exit(1)
+          run = date.fromisoformat(str(release["run_date"])[:10])
+          if run < monday:
+              print(
+                  f"::error::The served release {release['build_id']} is from run {run}, older than this week's "
+                  f"Monday ({monday}): this week's build is late or failed its checks. Nothing exported."
+              )
+              sys.exit(1)
+          print(f"served release {release['build_id']} is from run {run} (this week: {monday})")
+          EOF
+      # After the site artifact is uploaded and the check passes, so neither step holds back the site. Both read the
+      # served release that the site step just materialized (build/served.duckdb); nothing is crawled or rebuilt.
       - name: Export the public tables from the served release
         if: github.event_name == 'schedule' && steps.site.outputs.served == 'true'
         timeout-minutes: 20
         env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # for an hf:// PUBLIC_EXPORT_URL
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ vars.AWS_REGION }}
