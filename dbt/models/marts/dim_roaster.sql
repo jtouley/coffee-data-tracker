@@ -17,7 +17,7 @@ recent as (
            count(*) filter (where rn <= {{ var('max_failures') }} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
-last_ok as (select * from {{ ref('stg_fetches') }} where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
+last_ok as (select * from {{ ref('int_fetches') }} where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
 coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
     -- Wholesale listings (a roaster's wholesale twin of a retail coffee) aren't counted as more coffees.

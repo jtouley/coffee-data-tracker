@@ -1,0 +1,129 @@
+{
+ "contract": "enrichment",
+ "version": "1.1.0",
+ "fingerprint": "b49406121d9a5471",
+ "producer": "post-load enrichment job (enrich-week)",
+ "consumers": [
+  "dbt (stg_enrichments, dim_coffee)"
+ ],
+ "descriptions": {
+  "enrichments": "Claude's extracted attributes per product description (llm rows; older lakes also hold rules rows)."
+ },
+ "tables": {
+  "enrichments": [
+   {
+    "name": "extracted_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true,
+    "description": "When it was extracted."
+   },
+   {
+    "name": "roaster_id",
+    "type": "string",
+    "nullable": true,
+    "description": "The roaster's normalized domain."
+   },
+   {
+    "name": "product_id",
+    "type": "string",
+    "nullable": true,
+    "description": "The store's product id."
+   },
+   {
+    "name": "body_hash",
+    "type": "string",
+    "nullable": true,
+    "description": "The description it was extracted from."
+   },
+   {
+    "name": "method",
+    "type": "string",
+    "nullable": true,
+    "description": "llm (Claude), or rules in older lakes."
+   },
+   {
+    "name": "needs_llm",
+    "type": "bool",
+    "nullable": true,
+    "description": "The rules left the coffee incompletely described."
+   },
+   {
+    "name": "origin_country",
+    "type": "string",
+    "nullable": true,
+    "description": "Origin country."
+   },
+   {
+    "name": "origin_region",
+    "type": "string",
+    "nullable": true,
+    "description": "Origin region."
+   },
+   {
+    "name": "producer",
+    "type": "string",
+    "nullable": true,
+    "description": "Farm, washing station or producer."
+   },
+   {
+    "name": "process",
+    "type": "string",
+    "nullable": true,
+    "description": "washed, natural, honey, anaerobic or other."
+   },
+   {
+    "name": "varietals",
+    "type": "list<item: string>",
+    "nullable": true,
+    "description": "Varietals."
+   },
+   {
+    "name": "elevation_masl_min",
+    "type": "int32",
+    "nullable": true,
+    "description": "Lowest growing elevation (m)."
+   },
+   {
+    "name": "elevation_masl_max",
+    "type": "int32",
+    "nullable": true,
+    "description": "Highest growing elevation (m)."
+   },
+   {
+    "name": "roast_level",
+    "type": "string",
+    "nullable": true,
+    "description": "light, medium or dark."
+   },
+   {
+    "name": "tasting_notes",
+    "type": "list<item: string>",
+    "nullable": true,
+    "description": "The roaster's tasting notes."
+   },
+   {
+    "name": "is_blend",
+    "type": "bool",
+    "nullable": true,
+    "description": "A blend."
+   },
+   {
+    "name": "is_decaf",
+    "type": "bool",
+    "nullable": true,
+    "description": "Decaffeinated."
+   }
+  ]
+ },
+ "files": {},
+ "quality": [
+  {
+   "rule": "rows have exactly the contract's columns",
+   "enforced_by": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract"
+  },
+  {
+   "rule": "process and roast_level take the dbt-accepted values",
+   "enforced_by": "dbt dim_coffee accepted_values"
+  }
+ ]
+}

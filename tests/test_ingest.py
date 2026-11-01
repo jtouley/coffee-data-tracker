@@ -7,6 +7,7 @@ from coffeedata import ingest
 from coffeedata.models import Roaster
 
 from .conftest import load
+from .lakehelp import product, run
 
 
 def _roasters():
@@ -25,8 +26,7 @@ def test_run_records_ok_and_failed_fetches(lake):
         m.get("https://broken.com/products.json").mock(return_value=httpx.Response(403))
         out = ingest.run(lake, _roasters(), "2026-10-26", workers=2)
     shopify = out["by_adapter"]["shopify"]
-    assert (shopify["roasters"], shopify["errors"], shopify["with_coffee"]) == (2, 1, 1)
-    assert 0 < shopify["coffees"] <= 12
+    assert (shopify["roasters"], shopify["errors"], shopify["with_products"]) == (2, 1, 1)
     con = lake.connect()
     fetches = dict(con.execute(f"select roaster_id, status from {lake.scan('fetches')}").fetchall())
     assert fetches == {"onyxcoffeelab.com": "ok", "broken.com": "error"}
@@ -37,7 +37,18 @@ def test_run_records_ok_and_failed_fetches(lake):
     assert snap == {"onyxcoffeelab.com": 12}
     n_bodies = con.execute(f"select count(*) from {lake.scan('bodies')}").fetchone()[0]
     n_enrich = con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchone()[0]
-    assert n_bodies > 0 and n_enrich == shopify["coffees"]
+    # ELT: extract and load only. No enrichment rows, and no crawl-time coffee judgement in the raw rows.
+    assert n_bodies > 0 and n_enrich == 0
+    assert (
+        con.execute(f"select count(*) from {lake.scan('snapshots')} where is_coffee is not null").fetchone()[
+            0
+        ]
+        == 0
+    )
+    assert (
+        con.execute(f"select count(*) from {lake.scan('fetches')} where coffees is not null").fetchone()[0]
+        == 0
+    )
 
 
 def test_odd_payload_is_one_roasters_error_not_the_runs(lake, monkeypatch):
@@ -76,3 +87,23 @@ def test_rerun_skips_done_and_does_not_reenrich(lake, monkeypatch):
         f"from {lake.scan('enrichments')}"
     ).fetchone()[0]
     assert dup == 0
+
+
+def test_a_bare_429_or_503_fetch_error_is_a_block_and_deferrable():
+    """fetch_json and catalog_json raise FetchError("HTTP 429 ...") with no HTTPStatusError cause (WooCommerce,
+    Squarespace, Square Online): still a block, retried in the deferred rounds and counted in first contacts."""
+    from coffeedata.http import FetchError
+
+    for status in (429, 503):
+        e = FetchError(f"HTTP {status} https://x.com/wp-json/wc/store/v1/products", status=status)
+        assert ingest.blocked(e) and ingest.deferrable(e)
+    e = FetchError("HTTP 500 https://x.com/wp-json/wc/store/v1/products", status=500)
+    assert not ingest.blocked(e) and not ingest.deferrable(e)
+    assert not ingest.blocked(FetchError("not JSON: https://x.com/shop?format=json"))
+
+
+def test_a_partial_fetch_is_never_a_stores_known_size(lake):
+    """known_products lets a short page end a catalog; a partial read (120 of 991) must not become that size."""
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product(str(i)) for i in range(5)])
+    run(lake, "2026-10-26", "onyxcoffeelab.com", [product("0"), product("1")], partial=True)
+    assert ingest.known_products(lake) == {"onyxcoffeelab.com": 5}

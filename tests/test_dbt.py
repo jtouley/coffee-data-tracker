@@ -257,6 +257,40 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
 
 
+def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
+    """Status is decided as on main, from the last ok fetch's coffee count. A fetch from before ELT keeps the count
+    its crawl recorded, even where today's rules see no coffee (kaldi.com 2026-10-26: 3,459 recorded, while its
+    first 5,000 products, cut at the page cap, are equipment parts; hikersbrewcoffee.com: 6). A fetch whose crawl
+    recorded none (ELT) is counted with the crawl's rule, classify.is_coffee (int_fetch_coffees)."""
+    # The fixture registry's roasters, standing in for: kaldi.com, hikersbrewcoffee.com, an ELT fetch with a
+    # coffee, and an ELT fetch with only gear.
+    KALDI, HIKER, ELT, GEAR = (
+        "counterculturecoffee.com",
+        "intelligentsia.com",
+        "onyxcoffeelab.com",
+        "anaheimcoffee.com",
+    )
+    gear = [product("P1", coffee=False), product("P2", coffee=False)]
+    run(lake, "2026-10-26", KALDI, gear, coffees=3459)
+    run(lake, "2026-10-28", KALDI, None)  # a later failure doesn't change the last ok fetch
+    run(lake, "2026-10-26", HIKER, [product("1"), product("M", coffee=False)], coffees=6)
+    run(lake, "2026-11-02", ELT, [product("1"), product("M", coffee=False)], coffees=None)
+    run(lake, "2026-11-02", GEAR, gear, coffees=None, adapter="woocommerce")
+    con = build(lake, tmp_path)
+    dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
+    counted = dict(con.execute("select roaster_id, coffees from int_fetch_coffees").fetchall())
+    con.close()
+    py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    want = {
+        KALDI: "active",
+        HIKER: "active",
+        ELT: "active",
+        GEAR: "no_coffee",
+    }
+    assert {k: dbt_status[k] for k in want} == want == {k: py_status[k] for k in want}
+    assert counted == {ELT: 1, GEAR: 0}  # only the fetches without a recorded count
+
+
 def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
     from datetime import UTC, datetime
 
@@ -575,7 +609,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=2 " in r.stdout
+    assert "PASS=7 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):

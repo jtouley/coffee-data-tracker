@@ -69,7 +69,10 @@ resource "google_cloud_run_v2_service" "app" {
   }
 
   lifecycle {
-    ignore_changes = [template[0].containers[0].image, client, client_version] # set by each deploy
+    # image, client, client_version: set by each deploy. scaling: the service-level block, which the API reports as
+    # zeros while the config leaves it unset (a perpetual `manual_instance_count 0 -> null` diff); template.scaling
+    # still holds the app's instance limits.
+    ignore_changes = [template[0].containers[0].image, client, client_version, scaling]
   }
   depends_on = [google_secret_manager_secret_iam_member.runtime]
 }

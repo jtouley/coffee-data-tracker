@@ -6,7 +6,8 @@ unit_tests:
   - name: suspect_run_boundaries
     description: >-
       Suspect means below suspect_drop_ratio (0.5) of the median of the last counted weeks, once that median is at
-      least suspect_min_products (20). No history is never suspect.
+      least suspect_min_products (20). No history is never suspect, and neither is a partial run (a catalog read only
+      in part is short by design).
     model: stg_run_quality
     given:
       - input: ref('stg_run_walk')
@@ -20,6 +21,7 @@ unit_tests:
           - {run_date: 2026-11-02, products: 9, history: "[20, 20, 20, 20]"}  # the minimum median is enough
           - {run_date: 2026-11-09, products: 17, history: "[10, 30, 40, 100]"}  # median 35, not the mean (45)
           - {run_date: 2026-11-16, products: 18, history: "[10, 30, 40, 100]"}
+          - {run_date: 2026-11-23, products: 1, history: "[40, 40, 40, 40]", partial: true}  # partial: never suspect
     expect:
       rows:
         - {run_date: 2026-10-05, baseline_products: null, suspect: false}
@@ -31,6 +33,7 @@ unit_tests:
         - {run_date: 2026-11-02, baseline_products: 20, suspect: true}
         - {run_date: 2026-11-09, baseline_products: 35, suspect: true}
         - {run_date: 2026-11-16, baseline_products: 35, suspect: false}
+        - {run_date: 2026-11-23, baseline_products: 40, suspect: false}
 
   - name: price_event_types
     description: >-
@@ -59,9 +62,9 @@ unit_tests:
           - {input_hash: h, is_coffee: true}
       - input: ref('stg_runs')
         rows:
-          - {roaster_id: r, run_date: 2026-10-05, prev_run: null, next_run: 2026-10-12}
-          - {roaster_id: r, run_date: 2026-10-12, prev_run: 2026-10-05, next_run: 2026-10-19}
-          - {roaster_id: r, run_date: 2026-10-19, prev_run: 2026-10-12, next_run: null}
+          - {roaster_id: r, run_date: 2026-10-05, prev_complete_run: null, next_complete_run: 2026-10-12}
+          - {roaster_id: r, run_date: 2026-10-12, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-19, prev_complete_run: 2026-10-12, next_complete_run: null}
     expect:
       rows:
         - {run_date: 2026-10-05, coffee_id: "r:A", event: new, price_usd: 20.0, previous_price_usd: null}
@@ -74,3 +77,147 @@ unit_tests:
         - {run_date: 2026-10-19, coffee_id: "r:C", event: removed, price_usd: null, previous_price_usd: 15.0}
         - {run_date: 2026-10-12, coffee_id: "r:D", event: new, price_usd: null, previous_price_usd: null}
         - {run_date: 2026-10-19, coffee_id: "r:D", event: price, price_usd: 16.0, previous_price_usd: null}
+
+  - name: price_events_skip_partial_runs
+    description: >-
+      Complete 10-05, partial 10-12, complete 10-19, partial 10-26. A partial run can't show a bag is gone: P, unread
+      in the partial 10-12 and back on 10-19, gets no removed and no relisted event. Q, gone from both later runs, is
+      removed at the next complete run (10-19), not at the partial one. R, gone from the complete 10-19 and read
+      again in the partial 10-26, is relisted there. S, first read in a partial run, is new.
+    model: fct_price_event
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
+              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
+              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true}]),
+              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
+              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
+              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true}]),
+              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}]),
+              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}])
+          ) t(coffee_id, roaster_id, run_date, input_hash, variants)
+          cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true}
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-05, prev_complete_run: null, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-12, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+          - {roaster_id: r, run_date: 2026-10-19, prev_complete_run: 2026-10-05, next_complete_run: null}
+          - {roaster_id: r, run_date: 2026-10-26, prev_complete_run: 2026-10-19, next_complete_run: null}
+    expect:
+      rows:
+        - {run_date: 2026-10-05, coffee_id: "r:P", event: new, price_usd: 20.0, previous_price_usd: null}
+        - {run_date: 2026-10-05, coffee_id: "r:Q", event: new, price_usd: 18.0, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:Q", event: removed, price_usd: null, previous_price_usd: 18.0}
+        - {run_date: 2026-10-05, coffee_id: "r:R", event: new, price_usd: 15.0, previous_price_usd: null}
+        - {run_date: 2026-10-19, coffee_id: "r:R", event: removed, price_usd: null, previous_price_usd: 15.0}
+        - {run_date: 2026-10-26, coffee_id: "r:R", event: relisted, price_usd: 16.0, previous_price_usd: 15.0}
+        - {run_date: 2026-10-12, coffee_id: "r:S", event: new, price_usd: 12.0, previous_price_usd: null}
+
+  - name: run_sequence_skips_partial_runs_for_complete_neighbours
+    description: >-
+      prev/next_complete_run are the roaster's nearest counted runs that weren't partial (stg_runs). Roaster q has no
+      partial run: they equal prev/next_run.
+    model: stg_runs
+    given:
+      - input: ref('stg_run_quality')
+        rows:
+          - {roaster_id: p, run_date: 2026-10-05, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-12, partial: true, counted: true}
+          - {roaster_id: p, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-26, partial: true, counted: true}
+          - {roaster_id: q, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: q, run_date: 2026-10-26, partial: false, counted: true}
+    expect:
+      rows:
+        - {roaster_id: p, run_date: 2026-10-05, prev_run: null, next_run: 2026-10-12, prev_complete_run: null, next_complete_run: 2026-10-19}
+        - {roaster_id: p, run_date: 2026-10-12, prev_run: 2026-10-05, next_run: 2026-10-19, prev_complete_run: 2026-10-05, next_complete_run: 2026-10-19}
+        - {roaster_id: p, run_date: 2026-10-19, prev_run: 2026-10-12, next_run: 2026-10-26, prev_complete_run: 2026-10-05, next_complete_run: null}
+        - {roaster_id: p, run_date: 2026-10-26, prev_run: 2026-10-19, next_run: null, prev_complete_run: 2026-10-19, next_complete_run: null}
+        - {roaster_id: q, run_date: 2026-10-19, prev_run: null, next_run: 2026-10-26, prev_complete_run: null, next_complete_run: 2026-10-26}
+        - {roaster_id: q, run_date: 2026-10-26, prev_run: 2026-10-19, next_run: null, prev_complete_run: 2026-10-19, next_complete_run: null}
+
+  - name: partial_runs_keep_unread_products_listed
+    description: >-
+      A partial run (a catalog read only in part, fetches.partial) lists what it read and leaves the products it
+      didn't read as they were. Roaster p: complete 10-05, complete 10-12, then partial 10-19 and 10-26, so every run
+      since 10-12 is current (a product last seen on 10-12 stays listed). Roaster q has no partial run: only its
+      latest run is current, as before. Roaster s has only partial runs: all of them are current.
+    model: stg_runs
+    given:
+      - input: ref('stg_run_quality')
+        rows:
+          - {roaster_id: p, run_date: 2026-10-05, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-12, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: p, run_date: 2026-10-26, partial: true, counted: true}
+          - {roaster_id: q, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: q, run_date: 2026-10-26, partial: false, counted: true}
+          - {roaster_id: s, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: s, run_date: 2026-10-26, partial: true, counted: true}
+    expect:
+      rows:
+        - {roaster_id: p, run_date: 2026-10-05, is_latest_run: false, is_current: false}
+        - {roaster_id: p, run_date: 2026-10-12, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: q, run_date: 2026-10-19, is_latest_run: false, is_current: false}
+        - {roaster_id: q, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+
+  - name: fetch_coffees_are_recorded_else_counted
+    description: >-
+      dim_roaster's status reads int_fetches.coffees: the count the crawl recorded (kaldi.com 10-26: 3,459, though
+      today's rules call its capped first 5,000 products equipment), else, for an ELT fetch with no recorded count,
+      the count int_fetch_coffees makes with the crawl's rule. A failed fetch keeps its own value.
+    model: int_fetches
+    given:
+      - input: ref('stg_fetches')
+        rows:
+          - {roaster_id: kaldi.com, batch_id: k1, status: ok, products: 5000, coffees: 3459}
+          - {roaster_id: kaldi.com, batch_id: k2, status: error, products: 0, coffees: 0}
+          - {roaster_id: elt.com, batch_id: e1, status: ok, products: 2, coffees: null}
+          - {roaster_id: gear.com, batch_id: g1, status: ok, products: 2, coffees: null}
+      - input: ref('int_fetch_coffees')
+        rows:
+          - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+          - {roaster_id: gear.com, batch_id: g1, coffees: 0}
+    expect:
+      rows:
+        - {roaster_id: kaldi.com, batch_id: k1, coffees: 3459}
+        - {roaster_id: kaldi.com, batch_id: k2, coffees: 0}
+        - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+        - {roaster_id: gear.com, batch_id: g1, coffees: 0}
+
+  - name: unavailable_stores_have_no_catalog_this_run
+    description: >-
+      run_completeness.has_catalog, its first branch: a store found closed this run (unavailable) is left out of the
+      ok rates even though earlier runs read products from it. A store that failed the same way without being
+      closed still counts against the run.
+    model: run_completeness
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: closed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, adapter: shopify, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: closed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: true, adapter: shopify, first_at: "2026-11-02 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, adapter: shopify, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, adapter: shopify, first_at: "2026-11-02 09:00:00+00"}
+      - input: ref('dim_roaster')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::varchar as platform where false
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as first_added where false
+    expect:
+      rows:
+        - {roaster_id: closed.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, unavailable: true}
+        - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, unavailable: false}
