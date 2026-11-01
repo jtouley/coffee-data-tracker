@@ -192,3 +192,37 @@ def test_egress_and_pacing_are_per_connector_config():
     assert connectors.CONNECTORS["shopify"].egress == "dedicated"  # the confirmation run's arm
     assert all(c.egress == "default" for n, c in connectors.CONNECTORS.items() if n != "shopify")
     assert all(c.deadline_min < 240 and c.shuffle for c in connectors.CONNECTORS.values())
+
+
+def test_the_confirmation_arms_split_the_roasters_into_disjoint_slices():
+    ids = [f"r{i}.com" for i in range(300)]
+    arms = [{r for r in ids if connectors.in_slice(r, f"{k}/3", "c1")} for k in range(3)]
+    assert set().union(*arms) == set(ids) and sum(map(len, arms)) == len(ids)
+    assert all(70 < len(a) < 130 for a in arms)
+    assert arms[0] != {r for r in ids if connectors.in_slice(r, "0/3", "c2")}  # the salt changes the split
+
+
+def test_enrich_week_never_submits_without_the_flag_even_with_keys_set(tmp_path, monkeypatch, capsys):
+    """Real keys in the environment (both names) and the CLI path: nothing reaches Claude without --submit."""
+    import anthropic
+
+    from coffeedata import cli, enrich, extract
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-test-not-real")
+    monkeypatch.setenv("COFFEEDATA_ANTHROPIC_API_KEY", "sk-test-not-real")
+    assert extract.llm_enabled()
+    run(lk, WEEK, "s.com", [product("A", title="Ethiopia Guji Coffee Roast")])
+    control.finish(lk, control.start(lk, "merge", WEEK), "done")
+
+    def boom(*a, **k):
+        raise AssertionError("tried to reach Claude without --submit")
+
+    monkeypatch.setattr(anthropic, "Anthropic", boom)
+    monkeypatch.setattr(extract, "client", boom)
+    for name in ("run", "collect", "submit"):
+        if hasattr(enrich, name):
+            monkeypatch.setattr(enrich, name, boom)
+    cli.main(["enrich-week", "--run-date", WEEK])
+    assert '"submitted": 0' in capsys.readouterr().out

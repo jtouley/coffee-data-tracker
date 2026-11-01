@@ -19,8 +19,11 @@ Services, one job each, timed by Cloud Scheduler and coordinated only through th
 
 from __future__ import annotations
 
+import dataclasses
+import hashlib
 import json
 import logging
+import os
 import random
 import shutil
 from dataclasses import dataclass
@@ -64,17 +67,18 @@ EGRESS_MODES = ("default", "dedicated")
 CONNECTORS: dict[str, Connector] = {
     c.name: c
     for c in (
-        Connector("shopify", 0, 2, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
-        Connector("squarespace", 1, 2),
-        Connector("woocommerce", 2, 2),
-        Connector("square_online", 3, 2),
-        Connector("generic", 4, 2),
+        Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
+        Connector("squarespace", 1, 9),
+        Connector("woocommerce", 2, 9),
+        Connector("square_online", 3, 9),
+        Connector("generic", 4, 9),
     )
 }
-MERGE_WEEKDAY, MERGE_HOUR = 6, 6  # Sunday 06:00 UTC, after every connector's resume slot
+# The slots Cloud Scheduler runs (src/terraform/ingestion.tf, at minute :17; the weekly baseline is Monday 09:17 UTC).
+MERGE_WEEKDAY, MERGE_HOUR = 6, 6  # Sunday 06:17 UTC, after every connector's resume slot
 # The rest of the week, one job each, timed by Cloud Scheduler and gated by the control table:
-ENRICH_HOUR = 7  # Sunday 07:00: post-load enrichment (Claude candidates from raw), after the merge
-BUILD_HOUR = 9  # Sunday 09:00: classify verdicts, dbt build + gate, then publish (cli weekly's last steps)
+ENRICH_HOUR = 7  # Sunday 07:17: post-load enrichment (Claude candidates from raw), after the merge
+BUILD_HOUR = 9  # Sunday 09:17: classify verdicts, dbt build + gate, then publish (cli weekly's last steps)
 
 
 def week_of(day: str) -> str:
@@ -140,16 +144,35 @@ def compact(part: Path) -> dict[str, int]:
     return out
 
 
-def crawl(lake: Lake, connector: str, day: str, deadline_min: float | None = None) -> dict:
+def in_slice(roaster_id: str, part: str, salt: str) -> bool:
+    """Whether a roaster falls in slice "k/n" of a salted-hash split (the confirmation run's arms)."""
+    k, n = (int(x) for x in part.split("/"))
+    return int(hashlib.sha256(f"{salt}:{roaster_id}".encode()).hexdigest(), 16) % n == k
+
+
+def crawl(
+    lake: Lake,
+    connector: str,
+    day: str,
+    deadline_min: float | None = None,
+    rps: float | None = None,
+    part: str | None = None,
+    salt: str = "arm",
+) -> dict:
     """One connector's weekly job, or its resume: fetch its roasters without an ok fetch this week (parked stores
     continue from their blocked page), then compact. Extract and load only. A job_manifests row marks its start
-    and its end: an attempt with only the first one died (killed or timed out)."""
+    and its end: an attempt with only the first one died (killed or timed out). rps overrides the connector's
+    budget, and part ("k/n", with salt) crawls one slice of its roasters: both for the confirmation run's arms."""
     c = CONNECTORS[connector]
+    if rps is not None:
+        c = dataclasses.replace(c, rps=rps)
     week = week_of(day)
     plake = PartitionLake(lake, connector, week)
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, _ = ingest.select_states(plake, week)
     states = [s for s in states if s.roaster.adapter == connector]
+    if part:
+        states = [s for s in states if in_slice(s.roaster.roaster_id, part, salt)]
     if c.shuffle:
         random.Random(f"{connector}:{week}").shuffle(states)
     todo_ids = {s.roaster.roaster_id for s in states}
@@ -174,7 +197,11 @@ def crawl(lake: Lake, connector: str, day: str, deadline_min: float | None = Non
     tried = sum(a.get("roasters", 0) for a in out["by_adapter"].values())
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
               "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
-              "egress": c.egress}  # fmt: skip
+              # the network the job actually ran on (set by the deploy), else the connector's config
+              "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
+              # the confirmation run's arm (COFFEEDATA_ARM), budget and slice, if any
+              "rps": c.rps, "slice": part, "salt": salt if part else None,
+              "arm": os.environ.get("COFFEEDATA_ARM")}  # fmt: skip
     end = control.finish(
         lake, job, "deadline" if out.get("skipped_deadline") else "done",
         ok=tried - errors, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),

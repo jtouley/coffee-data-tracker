@@ -1,4 +1,4 @@
-# Shopify ingestion: design
+# Ingestion: design (Shopify first)
 
 Status: POC (draft PR). Nothing here is deployed. The confirmation run on Cloud Run decides whether it ships.
 
@@ -11,9 +11,9 @@ is per-connector config too: a request budget, a shuffled store order and a craw
 The owner's rule is that the simplest design that meets the bar wins. The bar: the big stores complete, every job
 inside its time limit, the quality gate passing, and room to extend without overbuilding.
 
-- **C is dropped.** The owner's call: the IP is the lever, not the schedule. C's daily Shopify shards, its retry
-  sweep jobs and its extra Scheduler entries cost more and gave no better data (section 2). Its pacing idea stays,
-  as per-connector config in B: max requests/s, a shuffled store order, and a crawl window.
+- **C is deferred, not rejected** ("Deferred: daily shards (C)" below). On shared egress the IP is the lever, not
+  the schedule. Its pacing idea stays, as per-connector config in B: max requests/s, a shuffled store order and a
+  crawl window. C becomes a candidate again once Shopify is on a dedicated IP.
 - **Between A and B, B wins**, because only B meets the bar on Cloud Run:
   1. **Per-connector egress needs per-connector jobs.** On Cloud Run, egress (default, or Direct VPC through Cloud
      NAT) is set per job. A runs every connector in one job, so Shopify can't get a dedicated IP while the others
@@ -28,26 +28,35 @@ inside its time limit, the quality gate passing, and room to extend without over
   4. **The real data doesn't separate them** (section 2): A had 97.4% [96.2, 98.2] ok and B had
      96.3% [94.9, 97.2]. The intervals overlap, and A's run had two advantages that come from conditions and shared
      code, not from its design.
-- **What B costs over A:** 4 Cloud Run job definitions instead of 3, more Scheduler entries (section 7), and a merge
-  step. Anything more is listed under "add when metric X says so" (section 12).
+- **What B costs over A:** one Cloud Run job per connector instead of one omnibus job, more Scheduler entries
+  (section 7), and a merge step. Anything more is listed under "add when metric X says so" (section 12).
 
 ## 2. Comparison
+
+The evidence is archived on pushed branches, not copied into this repo's docs:
+- [`archive/shopify-arch-evidence`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-evidence/evidence)
+  holds each design's notes, sim and real-crawl results, the response logs (no page bodies), the analysis scripts,
+  and the research. Start at its `evidence/README.md`.
+- [`archive/shopify-arch-a`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-a),
+  [`-b`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-b) and
+  [`-c`](https://github.com/jtouley/coffee-data-tracker/tree/archive/shopify-arch-c) hold each design's code as it
+  ran.
 
 ### Real crawls: all 1,070 ingestable Shopify roasters (1,058 hosts), 2026-10-31, this environment's pooled egress
 
 | | A (run 2, final) | B | C (7 shards + sweep) |
 |---|---|---|---|
-| When (UTC) | 18:26–19:01 | 19:21–20:05 | shards 20:25–23:25, sweep from 23:25 (see note) |
+| When (UTC) | 18:26–19:01 | 19:21–20:05 | shards 20:25–23:25, sweep 23:25–01:34 |
 | Lake history (last known product counts) | **yes**: seeded with A's run 1 | none | none |
 | Shopify rate | 3 req/s, 32 workers | 3 req/s, 32 workers | 1.5 req/s per shard |
 | Code | #62 + v1 + v2 (18:06) + A's burst fix | #62 + v1 + v2, frozen before ELT | #62 + v2 (18:24), old burst rule |
-| Wall | 34.8 min (job 27.1 + crawl-retry 7.7) | 44.1 min (job 26.0 + crawl-retry 18.1) | 7 × 11.5–13.0 min (86.5 min of jobs over 3 h), plus the sweep |
-| Requests sent | 3,005 | 4,101 | 3,673 (shards) + sweep |
-| 429 / 430 / 503 | 670 / 0 / – | 816 / 0 / 17 | 504 / 0 / 2 (shards) + sweep |
+| Wall | 34.8 min (job 27.1 + crawl-retry 7.7) | 44.1 min (job 26.0 + crawl-retry 18.1) | 7 × 11.5–13.0 min (86.5 min of jobs over 3 h) + sweep 128.3 min |
+| Requests sent | 3,005 | 4,101 | 4,135 (shards 3,673 + sweep 462) |
+| 429 / 430 / 503 | 670 / 0 / – | 816 / 0 / 17 | 779 (shards 504 + sweep 275) / 0 / 6 |
 | First catalog request answered 429 | 205 of 1,044 = 19.6% [17.3, 22.2] | 230 of 1,044 = 22.0% [19.6, 24.6] | shards 0–4: 146 of 753 = 19.4%; shards 5–6: 14 of 312 = 4.5% |
-| **ok** | **1,042 = 97.4% [96.2, 98.2]** | **1,030 = 96.3% [94.9, 97.2]** | **1,027 = 96.0% [94.6, 97.0]** before the sweep ends |
-| Refused (page 1 never served) | 14 | 20 | 26 |
-| Parked mid-catalog (pages kept) | 12 | 18 | 14 |
+| **ok** | **1,042 = 97.4% [96.2, 98.2]** | **1,030 = 96.3% [94.9, 97.2]** | **1,027 = 96.0% [94.6, 97.0]** |
+| Refused (page 1 never served) | 14 | 20 | 27 (routed to the HTML stub) |
+| Parked mid-catalog (pages kept) | 12 | 18 | 13 |
 | Other failures | 2 (javamasters 404, biggunscoffee robots) | 2 | 3 |
 | Platform-wide pauses | 0 | 0 in the job, 7 in crawl-retry | 1 per shard in 0–2 and 4, several in the sweep |
 | Every job inside 240 min | yes | yes | yes |
@@ -56,7 +65,7 @@ inside its time limit, the quality gate passing, and room to extend without over
 All three runs were per-store in pattern: every Retry-After was 60, robots.txt never got a 429, and there were no
 430s. The pooled egress IP wasn't logged in any run, which is why this PR adds IP logging.
 
-The C sweep is still running. Its final numbers are added in section 2.1 when it ends.
+C's final numbers include its retry sweep (section 2.1).
 
 **Where the differences come from (not the design):**
 - **History.** v2's short-page stop ends a catalog at a short page only once the store's last known product count is
@@ -95,12 +104,63 @@ own rate, so it is set by B's per-connector `rps` (section 8).
 
 ### 2.1 C sweep: final numbers
 
-_Pending: the sweep ends at about 03:25 UTC; this section is updated then._
+The sweep ran 23:25–01:34 UTC (128.3 min, inside its limit) over the 57 stores the shards had parked or refused.
+It ran in 4 waves (+0, 15, 60 and 120 min, each after the stores' Retry-After):
+
+| wave | due | ok | routed as refused | requests | rate-limited |
+|---|---|---|---|---|---|
+| 0 | 49 | 14 | 16 | 283 | 148 |
+| 1 | 8 | 0 | 0 | 45 | 32 |
+| 2 | 18 | 2 | 5 | 90 | 67 |
+| 3 | 8 | 0 | 6 | 44 | 28 |
+
+- **Recovered:** 16 of 57 (28%). 13 are still parked, and 27 were routed to the HTML stub as refused (2 jobs ≥ 1 h
+  apart).
+- **The rate didn't help.** The sweep sent 462 requests and got 275 429s (60%), 0 430s and 6 503s. Its first
+  contacts were refused on 45 of 57 stores (79%), at 0.39–0.75 req/s after its platform-wide pauses.
+- **C's final result for all 1,070 stores: 1,027 ok = 96.0% [94.6, 97.0]**, with 27 refused, 13 parked and 3 other
+  errors. Of A's 11 page-2 stores, 6 are ok. Of A's 22 refused, 3 are ok, 6 parked and 13 refused. C's 27 refused
+  overlap 13 of A's 22 and 9 of B's 20.
+
+## Deferred: daily shards (C)
+
+Design C splits Shopify into 7 daily shards (sha256(id) mod 7, one per weekday), each at 1.5 req/s, with retry-sweep
+jobs and an HTML hook: 11 Scheduler entries. **It is deferred, not rejected: it's premature.** On shared egress, the
+evidence says the IP is the lever now, not the schedule. One signal says pacing might still matter.
+- **First-contact 429s ran at about 20% in all three designs on shared egress**: A 19.6%, B 22.0%, and C's shards
+  0–4 19.4%, even at C's half rate. C's shards 5–6 dropped to 4.5%, but they ran once, later, and after longer gaps,
+  so they don't show that spreading works (section 2).
+- **Retrying on shared egress yields little.** C's sweep covered 57 candidates in 4 waves over 128 min:
+  - 16 recovered (ok), 27 were routed as refused, and 13 are still parked;
+  - 275 of its 462 requests (60%) were rate-limited;
+  - its first contacts were refused on 45 of 57 stores (79%) at 0.39–0.75 req/s (section 2.1).
+
+  Those stores had already refused, so the 79% isn't comparable to the population's 20%. It shows that a low rate
+  didn't clear their refusals.
+- **Shopify staff tie challenges to shared-IP reputation, not to request rate** (research §1, thread 39056: "the
+  bot's request rate did not cause the challenge"; dedicated egress is "the safest workaround").
+
+**Why it is deferred, not rejected.** The first-contact 429 rate fell from 16–27% on shards 0–4 to ~4.5% on shards
+5–6 (7 of 159 and 7 of 153), after 32-minute gaps. It is confounded with the time since A's and B's crawls ended
+(shards 5–6 started 2.5–3 h after B), so it could be per-store windows closing rather than C's spacing. But it's
+the one signal that pacing might matter, and the confirmation run's low-rate arm tests it (section 10).
+
+Once Shopify is on a dedicated IP, our own rate decides that IP's reputation, and C
+becomes a candidate again. Until then its pacing lives as per-connector config in B (rps, a shuffled order, a
+crawl window, section 8).
+
+**The trigger to revisit C:** in the confirmation run (section 10), the low, spread-out rate on the dedicated IP gets
+materially more data than full rate (more ok stores, with intervals that don't overlap), **and** B can't fit that
+pacing inside one job's 240-min limit. If the low rate fits in one job, it stays a config change in B.
+
+C's code and results stay in build/arch-compare/C as evidence: the worktree, real/ (logs, jobs/, control
+manifests) and the sim. C never had a PR.
 
 ## 3. Services (one job, one responsibility)
 
 | Service | Command | Reads | Writes |
 |---|---|---|---|
+| Discovery, probing | `coffeedata discover overture\|osm`, `coffeedata probe` | open datasets, stale roasters' sites | `registry`, `probes` |
 | Connector ingest | `coffeedata crawl --connector X` | registry, lake history, its partition | `raw/connector=X/run_date=W/` (snapshots, bodies, fetches, run_manifests), parked progress, `job_manifests` |
 | Parked-store retry | `coffeedata crawl-retry --connector X` | its parked progress | the same partition |
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
@@ -175,23 +235,56 @@ Every design got the same fixes, and they are in this PR:
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 
-One image. Four job definitions; the task timeout is 240 min (the strict limit used in every sim) and maxRetries is 1.
+**All crawling moves off GitHub Actions to Cloud Run, not just Shopify.** Every request to a roaster, from
+discovery, probing, every connector's crawl and crawl-retry, runs as a Cloud Run Job on Cloud Scheduler. So do the
+merge, enrichment and the build + gate + publish. Only Shopify's jobs use the dedicated NAT IP; the rest use default
+egress. The Terraform is `src/terraform/ingestion.tf`, and the owner's steps are in `docs/ingestion/RUNBOOK.md`.
 
-| Job | Args | Network | Scheduler (UTC) |
+Why:
+- **One runtime** for the weekly pipeline, with one scheduler, one secrets store (Secret Manager, the app's own
+  secrets by name) and one log and alert path (Cloud Logging and Monitoring, the app's notification channel).
+- **Actions minutes saved.** The weekly run took most of its 240 min.
+- **Every connector is covered** by the per-connector egress logging and the 8% alert, not just Shopify.
+- **Runner IPs are the most-blocked range we've seen**: 29% of stores answered 429 from GitHub-hosted runners,
+  against 5–8% (live test) and ~20% (these runs) from other pooled egress.
+- **Cost:** about +$1–2/month for the non-Shopify jobs, and about $4–6/month for the NAT, mostly the static IP.
+
+**Stays on GitHub Actions:** CI, the site deploy and issue-form handling. None of them contacts a roaster.
+- **Build + gate + publish moves to Cloud Run** (the `build` job: verdicts, `coffeedata build`, `publish`, then
+  `egress-check`). That keeps the weekly pipeline in one runtime, from crawl to the release in the lake.
+- **The site deploy stays on Actions**, since GitHub Pages deploys from Actions. At cutover, `site.yml` gets a Sunday
+  schedule after the build. It renders the **served** release (it already reads only that), and takes over the
+  facts-only public export and the Snowflake load from `weekly.yml`. None of these contacts a roaster.
+
+One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
+repository). Each job's task timeout is 240 min (the strict limit used in every sim), and maxRetries is 1.
+
+| Job | Command | Network | Scheduler (UTC) |
 |---|---|---|---|
-| `crawl-shopify` | `crawl --connector shopify`, then `crawl-retry --connector shopify` 6 h later | **Direct VPC egress → Cloud NAT, one reserved IP** (`egress="dedicated"`) | Mon 02:00, Mon 08:00 |
-| `crawl` (other connectors) | `crawl --connector X` (args overridden per execution), resume 6 h later | default egress | B's tested slots: Tue–Fri 02:00 + 08:00 |
-| `merge` | `merge` | default | Sun 06:00 |
-| `enrich` | `enrich-week --submit` | default | Sun 07:00 |
-| `build` | `build` then `publish`, then `egress-check` | default | Sun 09:00 |
+| `discover` | `discover overture`, `discover osm`, `publish` | default | 1st of the month 03:17 |
+| `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
+| `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
+| `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
+| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` | default | Tue / Wed / Thu / Fri 09:17, resume 15:17 |
+| `merge` | `merge` | default | Sun 06:17 |
+| `enrich-week` | `enrich-week --submit` | default | Sun 07:17 |
+| `build` | `classify`, `build`, `publish`, `egress-check` | default | Sun 09:17 |
+| `crawl-shopify-default-egress` | `crawl --connector shopify` | default | never: the confirmation run's control arm |
 
-That is 13 Scheduler entries, as B was simulated. Every connector has its own job, so the other connectors could
-run on Monday alongside Shopify. That would put a week's fetches closer together under one run_date. It's a
-schedule change with no code change; make it if the confirmation run shows the jobs don't interfere.
+That is 16 Scheduler entries. They are anchored at the weekly baseline (Monday 09:17 UTC, as `weekly.yml` today),
+in B's slots, and `ingest_schedule_enabled` switches all of them off for the confirmation run. Every connector has
+its own job, so the others could run on Monday alongside Shopify. That would put a week's fetches closer together
+under one run_date. It's a schedule change with no code change; make it if the jobs don't interfere.
 
-raw/ and parked/ live in GCS (mounted or `COFFEEDATA_RAW`), so parked progress survives between jobs. The merge
-publishes one file per raw table to HF in one commit. Prefect is out for now: the jobs are containers, so adding it
-later is a wrapper. Add it only if the dependencies outgrow time-based triggers plus the manifest table.
+raw/ and parked/ live in a GCS bucket mounted at `COFFEEDATA_STAGING`. They are never published to HF (they aren't
+lake tables), so parked progress survives between jobs and the merge empties raw/. Prefect is out for now: the jobs
+are containers, so adding it later is a wrapper. Add it only if the dependencies outgrow time-based triggers plus
+the manifest table.
+
+**Rollout.** The confirmation run tests Shopify first (section 10). If it passes, Monday's ship moves all connectors
+at once. The Actions weekly workflow is then turned off: its schedule is disabled and `workflow_dispatch` is kept,
+including the rollback input. It stays in place for one week as a fallback, and a follow-up removes its crawl. The
+cutover and rollback steps are in the runbook.
 
 ## 8. Pacing (per-connector config, from C)
 
@@ -250,7 +343,9 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
 | 3 | one dedicated NAT IP | low and spread out (e.g. 0.5 req/s over a longer `deadline_min`) |
 
 - **The same stores in every arm.** Split all Shopify roasters deterministically: a salted hash of `roaster_id`
-  into thirds, one per arm. Record the salt. Rotate the arms across runs so each third sees each arm.
+  into thirds (`crawl --slice k/3 --salt <salt>`), one per arm. Record the salt. Rotate the arms across runs so each
+  third sees each arm. `COFFEEDATA_ARM`, the network, the rps and the slice are recorded in
+  `job_manifests.detail`. The exact commands are in the runbook.
 - **The same conditions.** Lake history present in every arm. Each arm a day apart, at the same hour, so per-store
   windows have reset.
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
@@ -258,8 +353,9 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
   - ok share, refused, parked and wall time;
   - the share of blocks that are challenges (`cf_mitigated`) and that carry Retry-After.
 - **Decision.** Dedicated egress stays if arm 2's refusal share is lower than arm 1's with intervals that don't
-  overlap, or if it is equal while arm 1 shows challenges. Arm 3 becomes the config if it beats arm 2 inside the
-  time limit.
+  overlap, or if it is equal while arm 1 shows challenges. Arm 3 becomes the config (`rps`, `deadline_min`) if it
+  beats arm 2 inside the time limit. If it beats arm 2 but can't fit one job's limit, that is the trigger to revisit
+  C.
 
 ## 11. Closed and unavailable stores
 
@@ -302,7 +398,7 @@ detection is a follow-up (follow-up 2); this PR doesn't change status labels.
 ## 13. Follow-ups
 
 1. **Confirmation run** (section 10) on Cloud Run: default egress against one dedicated NAT IP, and full speed
-   against a low rate. Deploy the 4 jobs and the Scheduler entries.
+   against a low rate (`src/terraform/ingestion.tf`, `docs/ingestion/RUNBOOK.md`).
 2. **`unavailable` status** (section 11), with tests.
 3. **Burst rule from A**: only a store's first block counts towards platform-wide detection, and a 430 still pauses
    the platform. Also, distinct stores blocking together should count even while in page backoff (B's S2 weakness).
@@ -315,3 +411,6 @@ detection is a follow-up (follow-up 2); this PR doesn't change status labels.
    of 304s.
 9. **Lock the control writes** with GCS generation preconditions, so two attempts can't race on `job_manifests`.
 10. **Same-day connector schedule** (section 7), if the confirmation run shows the jobs don't interfere.
+11. **Cutover PR** (RUNBOOK.md): disable `weekly.yml`'s schedule, keeping `workflow_dispatch`, and give `site.yml` a
+    Sunday schedule plus the public export and Snowflake load. After one good week, remove `weekly.yml`'s crawl.
+12. **Revisit C** only on its trigger ("Deferred: daily shards (C)").

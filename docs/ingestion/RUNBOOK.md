@@ -1,0 +1,214 @@
+# Ingestion on Cloud Run: runbook
+
+The owner's steps for the confirmation run, the cutover and a rollback. The design is in `DESIGN.md`, and the
+infrastructure is in `src/terraform/ingestion.tf`. Every command runs from the repository root unless it says
+otherwise.
+
+```sh
+export PROJECT=coffee-data-tracker REGION=us-central1
+export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
+```
+
+## 0. Before you start
+
+- `gcloud auth login` and `gcloud auth application-default login`, as an account that can apply the app's Terraform.
+- Terraform ≥ 1.6, and Docker with BuildKit (the default in current Docker). BuildKit reads
+  `ingest.Dockerfile.dockerignore`, which keeps dbt/ and config/ in the image.
+- `HF_TOKEN` and `ANTHROPIC_API_KEY` already hold values in Secret Manager: they are the app's secrets
+  (`secrets.tf`). Terraform only references them by name and never sets a value.
+- `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`). For verdicts in the build job, add
+  `verdict_model = "<the VERDICT_MODEL repository variable's value>"`. Leave it out for rules only.
+
+## 1. Push the image
+
+The jobs reference the image, so push it before the first apply. The app's Artifact Registry repository already
+exists.
+
+```sh
+gcloud auth configure-docker $REGION-docker.pkg.dev
+docker build -f ingest.Dockerfile -t "$IMAGE" .
+docker push "$IMAGE"
+```
+
+## 2. Init, plan, apply
+
+```sh
+cd src/terraform
+terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
+terraform plan -var ingest_schedule_enabled=false -out ingest.plan
+```
+
+**Expected plan: 38 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
+
+| Resources | Count |
+|---|---|
+| `google_project_service.ingest_apis` (compute, cloudscheduler, storage) | 3 |
+| `google_compute_network.ingest`, `google_compute_subnetwork.shopify_egress`, `google_compute_router.ingest`, `google_compute_address.shopify_egress`, `google_compute_router_nat.shopify_egress` | 5 |
+| `google_storage_bucket.ingest_staging` + `google_storage_bucket_iam_member.ingest_staging` | 2 |
+| `google_service_account.ingest`, `google_service_account.ingest_scheduler` | 2 |
+| `google_secret_manager_secret_iam_member.ingest` (HF_TOKEN, ANTHROPIC_API_KEY) | 2 |
+| `google_cloud_run_v2_job.ingest`: discover, probe, crawl-shopify, crawl-shopify-default-egress, crawl-retry, crawl-squarespace, crawl-woocommerce, crawl-square-online, crawl-generic, merge, enrich-week, build | 12 |
+| `google_cloud_run_v2_job_iam_member.scheduler` (one per job) | 12 |
+| `google_cloud_scheduler_job.ingest` | **0** (the schedule is off) |
+
+Stop if the plan changes or destroys anything else, or creates a secret version.
+
+```sh
+terraform apply ingest.plan
+terraform output shopify_egress_ip       # the one IP Shopify sees: keep it for Shopify's form and Support
+terraform output ingest_jobs
+cd ../..
+```
+
+Check that only crawl-shopify and crawl-retry leave through the NAT:
+
+```sh
+for j in crawl-shopify crawl-retry crawl-shopify-default-egress; do
+  echo "$j: $(gcloud run jobs describe $j --region $REGION --format='value(template.template.vpcAccess.egress)')"
+done   # ALL_TRAFFIC, ALL_TRAFFIC, (empty)
+```
+
+## 3. Confirmation run: Shopify, three arms
+
+Each arm crawls one third of the Shopify roasters, chosen by a salted hash of `roaster_id`, so no store is in two
+arms. The arms run on consecutive days at the same hour (09:17 UTC), so per-store windows reset between them.
+The lake already has history (product counts), so v2's short-page stop works in every arm. Don't run merge or
+crawl-retry during the confirmation run.
+
+Choose a salt and keep it with the results, e.g. `SALT=confirm-2026-11a`.
+
+| Day | Arm | Job (network) | Slice | Rate |
+|---|---|---|---|---|
+| Tue | 1 | `crawl-shopify-default-egress` (default egress) | 0/3 | full (`SHOPIFY_RPS`) |
+| Wed | 2 | `crawl-shopify` (NAT, one static IP) | 1/3 | full |
+| Thu | 3 | `crawl-shopify` (NAT, one static IP) | 2/3 | 0.5 req/s, a 225-min window |
+
+```sh
+SALT=confirm-2026-11a
+
+# Arm 1: default egress, full rate
+gcloud run jobs execute crawl-shopify-default-egress --region $REGION --wait \
+  --args="crawl,--connector,shopify,--slice,0/3,--salt,$SALT" \
+  --update-env-vars="COFFEEDATA_ARM=1-default-full"
+
+# Arm 2: the dedicated NAT IP, full rate
+gcloud run jobs execute crawl-shopify --region $REGION --wait \
+  --args="crawl,--connector,shopify,--slice,1/3,--salt,$SALT" \
+  --update-env-vars="COFFEEDATA_ARM=2-dedicated-full"
+
+# Arm 3: the dedicated NAT IP, a low spread-out rate
+gcloud run jobs execute crawl-shopify --region $REGION --wait \
+  --args="crawl,--connector,shopify,--slice,2/3,--salt,$SALT,--rps,0.5,--deadline-min,225" \
+  --update-env-vars="COFFEEDATA_ARM=3-dedicated-low"
+```
+
+The next week, rotate the slices so each third sees each arm: arm 1 takes 1/3, arm 2 takes 2/3 and arm 3 takes
+0/3, with the same salt. While the confirmation run lasts, the GitHub weekly workflow still crawls on Monday from
+runner IPs. Tuesday's arm comes a day later, so per-store windows have reset by then.
+
+### Reading the results
+
+Each arm writes:
+- one `job_manifests` row at its start and one at its end. These are published to the lake, and the end row holds
+  counts, `egress_ips`, `refusals` per IP, and `detail` (arm, egress, rps, slice, salt);
+- its fetch rows, including `blocks`, in the GCS partition `raw/connector=shopify/run_date=<Monday>/`.
+
+```sh
+mkdir -p build/confirm && gcloud storage cp -r \
+  "gs://$PROJECT-ingest-staging/raw/connector=shopify" build/confirm/
+export COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data
+export HF_TOKEN="$(gcloud secrets versions access latest --secret HF_TOKEN)"   # read access; never echo it
+uv run python - <<'EOF'
+from coffeedata.lake import Lake
+
+lake = Lake()
+con = lake.connect()
+# Wilson 95% bounds for k of n (s = -1 lower, +1 upper)
+con.sql("create macro wilson(k, n, s) as "
+        "(k/n + 1.9208/n + s * 1.96 * sqrt(k/n * (1 - k/n) / n + 0.9604 / n^2)) / (1 + 3.8416/n)")
+print(con.sql(f"""
+  select json_extract_string(detail, '$.arm') as arm, json_extract_string(detail, '$.egress') as egress,
+         r.ip, ended_at - started_at as wall, ok, errors, parked, requests, http_429, http_430,
+         r.refused, r.stores, round(r.refused / r.stores, 3) as refused_share,
+         round(wilson(r.refused, r.stores, -1), 3) as lo, round(wilson(r.refused, r.stores, 1), 3) as hi
+  from (select *, unnest(refusals) as r from {lake.scan('job_manifests')}
+        where job = 'crawl' and connector = 'shopify' and status <> 'running')
+  where json_extract_string(detail, '$.arm') is not null order by arm"""))
+print(con.sql("""
+  select b.egress_ip, b.status, count(*) as blocks,
+         count(*) filter (where b.cf_mitigated = 'challenge') as challenges,
+         count(*) filter (where b.content_type like 'text/html%') as html,
+         count(*) filter (where b.retry_after is not null) as with_retry_after
+  from (select unnest(blocks) as b from 'build/confirm/connector=shopify/*/fetches.parquet')
+  group by all order by all"""))
+EOF
+```
+
+- `refused_share` with `lo`–`hi` is the first-contact refusal share per egress IP, with Wilson 95%.
+- The second table says whether blocks were challenges (`cf-mitigated: challenge`, HTML, often no Retry-After) or
+  rate limits (JSON, `retry-after: 60`).
+
+**Decision** (DESIGN.md §10):
+- **Dedicated egress stays** if arm 2's refusal share is below arm 1's with intervals that don't overlap, or if they
+  are equal while arm 1's blocks are challenges.
+- **Arm 3 becomes the config** (`rps` and `deadline_min` in `connectors.py`) if it gets more ok stores than arm 2
+  inside 240 min.
+- **Revisit C** if arm 3 gets materially more data but its pacing can't fit one job's 240-min limit.
+
+Afterwards, clear the confirmation run's partition so a later merge doesn't pick it up:
+
+```sh
+MONDAY=<the run_date folder you copied>
+gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=$MONDAY" \
+  "gs://$PROJECT-ingest-staging/parked/run_date=$MONDAY"
+```
+
+## 4. Cutover: Monday's ship moves every connector at once
+
+Do this only after the confirmation run passes, and finish it by Sunday so Monday's 07:17 probe is the first
+scheduled job.
+
+1. **Merge the cutover PR.** It does two things:
+   - `.github/workflows/weekly.yml`: remove the `schedule:` block and keep `workflow_dispatch`, with its inputs
+     (`sample`, `rollback_to`, `snowflake_migrate`, `accept_volume_change`), as the one-week fallback;
+   - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 0"` (Sunday, after the 09:17 build), plus the
+     facts-only public export and the Snowflake load from the **served** release (moved from `weekly.yml`). The
+     site deploy stays on Actions and never contacts a roaster.
+2. Push the image from the merged main (step 1). Then turn the schedule on:
+   ```sh
+   cd src/terraform
+   terraform plan -var ingest_schedule_enabled=true -out ingest.plan   # 16 to add (google_cloud_scheduler_job.ingest), 0 to change, 0 to destroy
+   terraform apply ingest.plan
+   gcloud scheduler jobs list --location $REGION --filter="name~registry-coffee-" --format="table(name,schedule,state)"
+   ```
+   Set `ingest_schedule_enabled = true` in `terraform.tfvars`, so a later plan doesn't remove it.
+3. **The first week to watch:**
+   - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
+   - the `job_manifests` rows: an attempt with only a `running` row died;
+   - Sunday's merge `detail.missing`: it should be empty;
+   - the build's gate;
+   - `egress-check`: the build job fails, and the owner is emailed, if an IP stays above 8% for two runs in a row;
+   - Sunday's site deploy.
+4. **After one good week**, a follow-up PR removes `weekly.yml`'s crawl. Its rollback and Snowflake-migrate inputs
+   move to a small manual workflow, or to `coffeedata rollback` run from the build image.
+
+## 5. Rollback
+
+- **Stop the Cloud Run schedule** (the jobs and data stay):
+  ```sh
+  cd src/terraform && terraform apply -var ingest_schedule_enabled=false
+  ```
+  For an urgent stop of a single entry: `gcloud scheduler jobs pause registry-coffee-<entry> --location $REGION`.
+- **Run the old weekly pipeline from Actions** (kept for one week):
+  `gh workflow run weekly`. To restore its Monday schedule, revert the cutover PR.
+- **Serve the previous release** if a bad one went out: `gh workflow run weekly -f rollback_to=previous`.
+- **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
+  the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
+- **Shopify only, back to default egress:** run `crawl-shopify-default-egress` instead of `crawl-shopify`. To make it
+  permanent, set `nat = false` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP stays
+  reserved until the address resource is removed.
+
+## Cost
+
+About +$1–2/month for the non-Shopify jobs, and about $4–6/month for Cloud NAT, mostly the reserved static IP. The
+staging bucket holds one week of raw/ at most, a few hundred MB.

@@ -1,0 +1,336 @@
+# The weekly pipeline (docs/ingestion/DESIGN.md, design B) on Cloud Run Jobs and Cloud Scheduler: every request to a
+# roaster runs here, not on GitHub Actions. Discovery and probing, one crawl job per connector, the Shopify
+# parked-store retry, the weekly merge, post-load enrichment, and the build + gate + publish to the lake. GitHub
+# Actions keeps CI, the site deploy (from the served release) and issue forms, none of which contacts a roaster.
+# Egress is per connector: crawl-shopify and crawl-retry leave through Cloud NAT with ONE reserved static IP (Direct
+# VPC egress, all traffic); every other job uses Cloud Run's default egress. crawl-shopify-default-egress is the
+# confirmation run's control arm (default egress, never scheduled). Steps: docs/ingestion/RUNBOOK.md.
+
+variable "ingest_schedule_enabled" {
+  description = "Create the weekly Cloud Scheduler entries. Leave false for the confirmation run (jobs run by hand) and until the GitHub weekly workflow is switched off."
+  type        = bool
+  default     = false
+}
+
+variable "ingest_image_tag" {
+  description = "Tag of the ingest image (ingest.Dockerfile) in the app's Artifact Registry repository."
+  type        = string
+  default     = "latest"
+}
+
+variable "egress_echo_url" {
+  description = "A plain-text \"what is my IP\" endpoint the default-egress jobs ask (cached 60 s) to log their egress IP. Never a store."
+  type        = string
+  default     = "https://api.ipify.org"
+}
+
+variable "verdict_model" {
+  description = "COFFEEDATA_VERDICT_MODEL for the build job's verdicts: the same value as the VERDICT_MODEL repository variable. Empty = rules only."
+  type        = string
+  default     = ""
+}
+
+variable "ingest_subnet_cidr" {
+  description = "The Shopify egress subnet (Direct VPC egress needs at least a /26)."
+  type        = string
+  default     = "10.8.0.0/26"
+}
+
+locals {
+  ingest_image = "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
+  staging      = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
+
+  # name => what it runs, whether it leaves through the NAT IP, whether it needs the Claude key, its size.
+  ingest_jobs = {
+    # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
+    # run, weekly before the crawls. Both publish what they recorded.
+    "discover" = {
+      command = ["sh", "-c"]
+      args    = ["coffeedata discover overture; coffeedata discover osm; coffeedata publish --message \"discover\""]
+      nat     = false, claude = false, memory = "4Gi"
+    }
+    "probe" = {
+      command = ["sh", "-c"]
+      args    = ["coffeedata probe --stale-days 28 && coffeedata publish --message \"probe\""]
+      nat     = false, claude = false, memory = "2Gi"
+    }
+    "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi" }
+    "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = false, claude = false, memory = "2Gi" }
+    "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi" }
+    "crawl-squarespace"            = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], nat = false, claude = false, memory = "2Gi" }
+    "crawl-woocommerce"            = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], nat = false, claude = false, memory = "2Gi" }
+    "crawl-square-online"          = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi" }
+    "crawl-generic"                = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "2Gi" }
+    "merge"                        = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi" }
+    "enrich-week"                  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi" }
+    # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
+    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution and emails the owner.
+    "build" = {
+      command = ["sh", "-c"]
+      args    = ["coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
+      nat     = false, claude = true, memory = "8Gi"
+    }
+  }
+
+  # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): each connector's
+  # job, then its resume 6 h later; the Shopify parked-store retry that evening; Sunday merge, enrichment, build.
+  ingest_schedule = {
+    "discover"                   = { job = "discover", cron = "17 3 1 * *" } # the 1st of each month
+    "probe"                      = { job = "probe", cron = "17 7 * * 1" }
+    "crawl-shopify"              = { job = "crawl-shopify", cron = "17 9 * * 1" }
+    "crawl-shopify-resume"       = { job = "crawl-shopify", cron = "17 15 * * 1" }
+    "crawl-retry"                = { job = "crawl-retry", cron = "47 21 * * 1" }
+    "crawl-squarespace"          = { job = "crawl-squarespace", cron = "17 9 * * 2" }
+    "crawl-squarespace-resume"   = { job = "crawl-squarespace", cron = "17 15 * * 2" }
+    "crawl-woocommerce"          = { job = "crawl-woocommerce", cron = "17 9 * * 3" }
+    "crawl-woocommerce-resume"   = { job = "crawl-woocommerce", cron = "17 15 * * 3" }
+    "crawl-square-online"        = { job = "crawl-square-online", cron = "17 9 * * 4" }
+    "crawl-square-online-resume" = { job = "crawl-square-online", cron = "17 15 * * 4" }
+    "crawl-generic"              = { job = "crawl-generic", cron = "17 9 * * 5" }
+    "crawl-generic-resume"       = { job = "crawl-generic", cron = "17 15 * * 5" }
+    "merge"                      = { job = "merge", cron = "17 6 * * 0" }
+    "enrich-week"                = { job = "enrich-week", cron = "17 7 * * 0" }
+    "build"                      = { job = "build", cron = "17 9 * * 0" }
+  }
+}
+
+resource "google_project_service" "ingest_apis" {
+  for_each           = toset(["compute.googleapis.com", "cloudscheduler.googleapis.com", "storage.googleapis.com"])
+  service            = each.value
+  disable_on_destroy = false
+}
+
+# --- Shopify's dedicated egress: a subnet for Direct VPC egress, a router, and Cloud NAT with one static IP ---------
+
+resource "google_compute_network" "ingest" {
+  name                    = "${var.service}-ingest"
+  auto_create_subnetworks = false
+  depends_on              = [google_project_service.ingest_apis]
+}
+
+resource "google_compute_subnetwork" "shopify_egress" {
+  name          = "${var.service}-shopify-egress"
+  network       = google_compute_network.ingest.id
+  region        = var.region
+  ip_cidr_range = var.ingest_subnet_cidr
+}
+
+resource "google_compute_router" "ingest" {
+  name    = "${var.service}-ingest"
+  network = google_compute_network.ingest.id
+  region  = var.region
+}
+
+# The one IP Shopify sees from us: a stable identity, never rotated to dodge limits.
+resource "google_compute_address" "shopify_egress" {
+  name         = "${var.service}-shopify-egress"
+  region       = var.region
+  address_type = "EXTERNAL"
+  depends_on   = [google_project_service.ingest_apis]
+}
+
+resource "google_compute_router_nat" "shopify_egress" {
+  name                               = "${var.service}-shopify-egress"
+  router                             = google_compute_router.ingest.name
+  region                             = var.region
+  nat_ip_allocate_option             = "MANUAL_ONLY"
+  nat_ips                            = [google_compute_address.shopify_egress.self_link]
+  source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS"
+  subnetwork {
+    name                    = google_compute_subnetwork.shopify_egress.id
+    source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
+  }
+  log_config {
+    enable = true
+    filter = "ERRORS_ONLY" # port exhaustion and dropped connections
+  }
+}
+
+# --- Where raw/ and parked/ live between jobs (never published to HF; the merge empties raw/) ----------------------
+
+resource "google_storage_bucket" "ingest_staging" {
+  name                        = "${var.project_id}-ingest-staging"
+  location                    = var.region
+  uniform_bucket_level_access = true
+  public_access_prevention    = "enforced"
+  force_destroy               = false
+  depends_on                  = [google_project_service.ingest_apis]
+}
+
+# --- The account the jobs run as, and the one Cloud Scheduler calls them with --------------------------------------
+
+resource "google_service_account" "ingest" {
+  account_id   = "${var.service}-ingest"
+  display_name = "registry.coffee ingestion jobs (runtime)"
+}
+
+resource "google_service_account" "ingest_scheduler" {
+  account_id   = "${var.service}-ingest-sched"
+  display_name = "registry.coffee ingestion schedule (runs the jobs)"
+}
+
+resource "google_storage_bucket_iam_member" "ingest_staging" {
+  bucket = google_storage_bucket.ingest_staging.name
+  role   = "roles/storage.objectUser"
+  member = "serviceAccount:${google_service_account.ingest.email}"
+}
+
+# The existing secrets (secrets.tf), by name; Terraform never holds their values. Least privilege: HF_TOKEN and
+# ANTHROPIC_API_KEY only.
+resource "google_secret_manager_secret_iam_member" "ingest" {
+  for_each  = toset(["HF_TOKEN", "ANTHROPIC_API_KEY"])
+  secret_id = google_secret_manager_secret.app[each.value].id
+  role      = "roles/secretmanager.secretAccessor"
+  member    = "serviceAccount:${google_service_account.ingest.email}"
+}
+
+# --- The jobs ----------------------------------------------------------------------------------------------------
+
+resource "google_cloud_run_v2_job" "ingest" {
+  for_each            = local.ingest_jobs
+  name                = each.key
+  location            = var.region
+  deletion_protection = false
+
+  template {
+    task_count = 1
+    template {
+      service_account = google_service_account.ingest.email
+      timeout         = "14400s" # 240 min, the limit every design was held to
+      max_retries     = 1        # a killed or failed attempt resumes from its checkpoints
+
+      dynamic "vpc_access" {
+        for_each = each.value.nat ? [1] : []
+        content {
+          network_interfaces {
+            network    = google_compute_network.ingest.id
+            subnetwork = google_compute_subnetwork.shopify_egress.id
+          }
+          egress = "ALL_TRAFFIC" # every request, robots.txt included, leaves from the NAT IP
+        }
+      }
+
+      volumes {
+        name = "staging"
+        gcs {
+          bucket    = google_storage_bucket.ingest_staging.name
+          read_only = false
+        }
+      }
+
+      containers {
+        image   = local.ingest_image
+        command = each.value.command
+        args    = each.value.args
+        resources {
+          limits = {
+            cpu    = "2"
+            memory = each.value.memory
+          }
+        }
+        volume_mounts {
+          name       = "staging"
+          mount_path = local.staging
+        }
+        env {
+          name  = "COFFEEDATA_STAGING"
+          value = local.staging
+        }
+        env {
+          name  = "COFFEEDATA_EGRESS_MODE" # recorded in job_manifests.detail.egress
+          value = each.value.nat ? "dedicated" : "default"
+        }
+        # The NAT IP is known in advance; default egress is looked up (and may change between connections).
+        env {
+          name  = each.value.nat ? "COFFEEDATA_EGRESS_IP" : "COFFEEDATA_EGRESS_ECHO_URL"
+          value = each.value.nat ? google_compute_address.shopify_egress.address : var.egress_echo_url
+        }
+        env {
+          name = "HF_TOKEN"
+          value_source {
+            secret_key_ref {
+              secret  = google_secret_manager_secret.app["HF_TOKEN"].secret_id
+              version = "latest"
+            }
+          }
+        }
+        dynamic "env" {
+          for_each = each.value.claude && var.verdict_model != "" ? [var.verdict_model] : []
+          content {
+            name  = "COFFEEDATA_VERDICT_MODEL"
+            value = env.value
+          }
+        }
+        dynamic "env" {
+          for_each = each.value.claude ? ["ANTHROPIC_API_KEY"] : []
+          content {
+            name = env.value
+            value_source {
+              secret_key_ref {
+                secret  = google_secret_manager_secret.app[env.value].secret_id
+                version = "latest"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  depends_on = [
+    google_secret_manager_secret_iam_member.ingest,
+    google_storage_bucket_iam_member.ingest_staging,
+    google_compute_router_nat.shopify_egress,
+  ]
+}
+
+resource "google_cloud_run_v2_job_iam_member" "scheduler" {
+  for_each = google_cloud_run_v2_job.ingest
+  name     = each.value.name
+  location = var.region
+  role     = "roles/run.invoker"
+  member   = "serviceAccount:${google_service_account.ingest_scheduler.email}"
+}
+
+# --- The weekly schedule (off for the confirmation run) ----------------------------------------------------------
+
+resource "google_cloud_scheduler_job" "ingest" {
+  for_each         = { for k, v in local.ingest_schedule : k => v if var.ingest_schedule_enabled }
+  name             = "${var.service}-${each.key}"
+  region           = var.region
+  schedule         = each.value.cron
+  time_zone        = "Etc/UTC"
+  attempt_deadline = "60s"
+
+  http_target {
+    http_method = "POST"
+    uri         = "https://run.googleapis.com/v2/projects/${var.project_id}/locations/${var.region}/jobs/${google_cloud_run_v2_job.ingest[each.value.job].name}:run"
+    oauth_token {
+      service_account_email = google_service_account.ingest_scheduler.email
+      scope                 = "https://www.googleapis.com/auth/cloud-platform"
+    }
+  }
+  depends_on = [google_cloud_run_v2_job_iam_member.scheduler]
+}
+
+# --- Outputs -----------------------------------------------------------------------------------------------------
+
+output "shopify_egress_ip" {
+  description = "The one static IP crawl-shopify and crawl-retry leave from (for Shopify's form and Support)."
+  value       = google_compute_address.shopify_egress.address
+}
+
+output "ingest_jobs" {
+  description = "The ingestion Cloud Run job names."
+  value       = sort([for j in google_cloud_run_v2_job.ingest : j.name])
+}
+
+output "ingest_image" {
+  description = "Where to push ingest.Dockerfile's image."
+  value       = local.ingest_image
+}
+
+output "ingest_staging_bucket" {
+  description = "The bucket mounted at COFFEEDATA_STAGING (raw/ and parked/ between jobs)."
+  value       = google_storage_bucket.ingest_staging.name
+}

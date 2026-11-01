@@ -120,7 +120,15 @@ def cmd_ingest(args: argparse.Namespace) -> None:
 def cmd_crawl(args: argparse.Namespace) -> None:
     from . import connectors
 
-    out = connectors.crawl(Lake(), args.connector, args.run_date, args.deadline_min)
+    out = connectors.crawl(
+        Lake(),
+        args.connector,
+        args.run_date,
+        args.deadline_min,
+        rps=args.rps,
+        part=args.slice,
+        salt=args.salt,
+    )
     _print(out)
     if out.get("skipped_deadline"):
         raise SystemExit(f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left")
@@ -600,6 +608,9 @@ def main(argv: list[str] | None = None) -> None:
     cr.add_argument(
         "--deadline-min", type=_positive_float, help="stop starting roasters after this many minutes"
     )
+    cr.add_argument("--rps", type=_positive_float, help="override the connector's request budget (req/s)")
+    cr.add_argument("--slice", help="crawl one slice k/n of a salted-hash split of its roasters, e.g. 0/3")
+    cr.add_argument("--salt", default="arm", help="the split's salt (record it with the results)")
     mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")
     mg.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to merge")
     rr = add("crawl-retry", cmd_crawl_retry, "resume the run's parked stores from their blocked page")
