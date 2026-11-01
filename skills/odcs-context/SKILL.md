@@ -1,6 +1,18 @@
 ---
 name: odcs-context
-description: Build the AI and semantic layer of an ODCS data contract (v3.2.0 `context` block with instructions, constraints and verifiedStatements, plus `synonyms` and `semanticType` measures/dimensions) by interviewing the people who know the data, then writing it into the contract. Use it whenever someone wants a data contract to steer a text-to-SQL agent, an LLM, a chatbot, a BI or semantic-layer tool; asks how agents should query a dataset or what they must not do with it; wants verified questions and answers, business synonyms, or measures and dimensions in a contract; or says their AI tool keeps querying a table wrong. Use it even if they don't say "context block".
+description: >-
+  Build the AI and semantic layer of an ODCS data contract (v3.2.0 `context` block with
+  instructions, constraints and verifiedStatements, plus `synonyms` and `semanticType`
+  measures/dimensions) by interviewing the people who know the data, then writing it into the
+  contract. Use it whenever someone wants a data contract to steer a text-to-SQL agent, an LLM, a
+  chatbot, a BI or semantic-layer tool; asks how agents should query a dataset or what they must not
+  do with it; wants verified questions and answers, business synonyms, or measures and dimensions in
+  a contract; or says their AI tool keeps querying a table wrong. Use it even if they don't say
+  "context block".
+license: Apache-2.0
+metadata:
+  version: "0.1.0"
+  odcs-version: "v3.2.0"
 ---
 
 <!--
@@ -37,8 +49,8 @@ layer), because that decides how much to say about SQL versus business meaning.
 ### 2. Interview in rounds
 
 Ask in small rounds (two to four questions at a time), each with a proposed answer drawn from the
-contract so the user can confirm or correct rather than write from scratch. Use a structured question tool
-if one is available; otherwise ask in plain text. Go in this order, because each round shapes the next:
+contract so the user can confirm or correct rather than write from scratch. If your environment offers a
+structured way to ask the user questions, use it; otherwise ask in plain text. Go in this order, because each round shapes the next:
 
 1. **Purpose and audience:** who asks questions of this data, through what tool, and what they mostly want.
 2. **Per table, the traps:** what "current" or "active" means, the time column to filter on, the joins and
@@ -79,10 +91,11 @@ write it into the contract:
   a missing relationship, an SLA), list it as a suggestion instead of editing it, and bump the contract
   `version` only if the user asks.
 
-Then validate. If the `odcs-data-contracts` skill is available, use its validator:
+Then validate. If the `odcs-data-contracts` skill is installed alongside this one, use its validator
+(`scripts/validate_contract.py` in that skill's folder):
 
 ```bash
-python <odcs-data-contracts-dir>/scripts/validate_contract.py path/to/contract.odcs.yaml
+python ../odcs-data-contracts/scripts/validate_contract.py path/to/contract.odcs.yaml
 ```
 
 Otherwise validate against the ODCS JSON schema for the contract's `apiVersion` with any draft 2019-09
@@ -95,7 +108,7 @@ Summarise what was added per level, the questions still without answers, the sug
 
 ## When nobody can answer
 
-If you're running without a user to ask (a batch job, a subagent, CI), don't invent the interview. Write
+If you're running without a user to ask (a batch job, an automated agent, CI), don't invent the interview. Write
 only what the contract itself supports (grain, the meaning of enum values it documents, its stated
 limitations as constraints, questions without answers), and put the questions you would have asked in your
 report so a person can finish the job.
