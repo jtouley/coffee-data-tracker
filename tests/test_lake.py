@@ -349,3 +349,36 @@ def test_schema_refresh_uses_a_unique_temp_file(lake, monkeypatch):
     assert made and made[0]["dir"] == p.parent and pq.read_schema(p).names == SCHEMAS["snapshots"].names
     assert not list(p.parent.glob("*.tmp"))
     assert p.stat().st_mode & 0o777 == 0o644  # readable like any other lake file, not mkstemp's 0600
+
+
+def test_a_dropped_connection_at_a_jobs_first_lake_read_is_retried(monkeypatch):
+    """Arm 2 crashed on its first hf:// read ("Could not connect to server", the NAT out of ports): the registry
+    state and this run's done/tried reads retry a transient connection error, never a missing file or a bad query."""
+    import duckdb
+
+    from coffeedata import lake as lake_mod
+
+    waits = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    calls = []
+
+    def flaky():
+        calls.append(1)
+        if len(calls) < 3:
+            raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+        return "rows"
+
+    assert lake_mod.retry_transient(flaky) == "rows" and waits == list(lake_mod.RETRY_WAITS[:2])
+    with pytest.raises(duckdb.BinderException):
+        lake_mod.retry_transient(lambda: (_ for _ in ()).throw(duckdb.BinderException("no column x")))
+    with pytest.raises(
+        duckdb.IOException
+    ):  # a table with no files yet is an answer, not a dropped connection
+        lake_mod.retry_transient(
+            lambda: (_ for _ in ()).throw(duckdb.IOException("No files found that match"))
+        )
+    always = lambda: (_ for _ in ()).throw(duckdb.IOException("Could not connect to server"))  # noqa: E731
+    waits.clear()
+    with pytest.raises(duckdb.IOException):
+        lake_mod.retry_transient(always)
+    assert waits == list(lake_mod.RETRY_WAITS)

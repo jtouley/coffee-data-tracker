@@ -137,6 +137,15 @@ resource "google_compute_router_nat" "shopify_egress" {
   nat_ip_allocate_option             = "MANUAL_ONLY"
   nat_ips                            = [google_compute_address.shopify_egress.self_link]
   source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS"
+  # The default (64 ports per VM, static) most likely ran out during arm 2: DuckDB's parallel range reads of the hf:// lake go
+  # through this NAT too (Direct VPC egress, all traffic), and the job crashed with "Could not connect to server".
+  # Dynamic allocation needs endpoint-independent mapping off. Mirrors the owner's
+  # `gcloud compute routers nats update --enable-dynamic-port-allocation --min-ports-per-vm=1024
+  # --max-ports-per-vm=8192`, so an apply doesn't revert it.
+  enable_dynamic_port_allocation      = true
+  enable_endpoint_independent_mapping = false
+  min_ports_per_vm                    = 1024
+  max_ports_per_vm                    = 8192
   subnetwork {
     name                    = google_compute_subnetwork.shopify_egress.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]

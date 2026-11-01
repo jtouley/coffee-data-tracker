@@ -126,6 +126,22 @@ done
 A second attempt would re-ask the stores that already refused, in a new 225-min window, and add a second end row
 with the same `detail.arm`.
 
+**Give the NAT enough ports.** On the first try arm 2 crashed reading the hf:// lake ("Could not connect to server"
+on a HEAD to huggingface.co): its egress is all traffic through the NAT, DuckDB's parallel range reads of the lake go
+through it too, and the default of 64 static ports per VM most likely ran out. Terraform now sets dynamic port
+allocation (1,024 to 8,192 ports per VM, endpoint-independent mapping off, which dynamic allocation requires); by hand,
+for a NAT applied earlier:
+
+```sh
+gcloud compute routers nats update registry-coffee-shopify-egress --router registry-coffee-ingest \
+  --region $REGION --enable-dynamic-port-allocation --min-ports-per-vm=1024 --max-ports-per-vm=8192 \
+  --no-enable-endpoint-independent-mapping
+```
+
+(Check the router and NAT names with `gcloud compute routers list` and `gcloud compute routers nats list --router
+<router> --region $REGION`.) From this commit on, a job's first reads of the lake (the registry state, and what this
+run already fetched) also retry a dropped connection three times (after 2, 6 and 18 s) before failing.
+
 **Pass `--run-date $WEEK` (2026-11-02), not today's date.** A crawl works on the week of its run date, and skips
 every store the lake already has an ok fetch for under that run_date (an exact match on the Monday, not any day of
 the week). Today's week (2026-10-26) is already crawled, so without

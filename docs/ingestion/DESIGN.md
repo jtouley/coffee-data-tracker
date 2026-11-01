@@ -317,6 +317,15 @@ in B's slots, and `ingest_schedule_enabled` switches all of them off for the con
 its own job, so the others could run on Monday alongside Shopify. That would put a week's fetches closer together
 under one run_date. It's a schedule change with no code change; make it if the jobs don't interfere.
 
+**The NAT's ports.** Shopify's jobs send all their traffic through the NAT, the lake reads too: DuckDB reads the hf://
+lake with parallel range requests. The default of 64 static ports per VM most likely ran out in the confirmation run's
+arm 2 ("Could not connect to server" on its first lake read), so the NAT uses dynamic port allocation, 1,024 to 8,192
+ports per VM (endpoint-independent mapping off, as dynamic allocation requires). A job's first lake reads (the
+registry state, this run's done and tried roasters, known product counts, blocked hosts) also retry a transient
+connection error three times (`lake.retry_transient`, 2/6/18 s), never a missing file or a bad query. Keeping the
+lake reads off the NAT would need a split egress (`PRIVATE_RANGES_ONLY` would move the store requests off the dedicated
+IP too); not worth it unless ports run out again.
+
 raw/ and parked/ live in a GCS bucket mounted at `COFFEEDATA_STAGING`. They are never published to HF (they aren't
 lake tables), so parked progress survives between jobs and the merge empties raw/. Prefect is out for now: the jobs
 are containers, so adding it later is a wrapper. Add it only if the dependencies outgrow time-based triggers plus
@@ -499,7 +508,9 @@ Done in this PR:
   and crawl jobs never retry in place (`max_retries = 0`); a store still in a page backoff at the deadline is
   parked, not dropped; `compact` is idempotent after a kill between write and unlink; arm crawls never land or feed
   `egress-check`; the arms split by host; bare 429/503 `FetchError`s count as blocks; only Shopify's closed-store
-  page reads as `unavailable`; `fct_price_event` and `stg_run_walk` handle partial runs.
+  page reads as `unavailable`; `fct_price_event` and `stg_run_walk` handle partial runs. After arm 2's crash on
+  its first lake read: NAT dynamic port allocation (1,024–8,192 ports per VM) and a short retry of a job's first
+  lake reads on a dropped connection (section 7).
 
 Next:
 1. **Confirmation run** (section 10) on Cloud Run: default egress against one dedicated NAT IP, and full speed

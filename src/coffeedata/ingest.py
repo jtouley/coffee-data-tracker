@@ -29,7 +29,7 @@ from . import lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
 from .http import BLOCK_STATUSES, FetchError, PoliteClient, RequestStats, Unavailable, egress_ip
-from .lake import Lake, new_batch_id
+from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
 from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
 
@@ -150,7 +150,7 @@ def known_products(lake: Lake) -> dict[str, int]:
     q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
             where status = 'ok' and products > 0 and not coalesce(partial, false) and roaster_id is not null
             group by 1"""
-    return dict(lake.connect().execute(q).fetchall())
+    return dict(retry_transient(lambda: lake.connect().execute(q).fetchall()))
 
 
 def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
@@ -158,7 +158,8 @@ def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
     same run_date. Another block from one is a repeat, never that store's first block in the run."""
     q = f"""select distinct b.host from (select unnest(blocks) as b from {lake.scan("fetches")} where run_date = ?)
             where b.host is not null"""
-    return {r[0] for r in lake.connect().execute(q, [date.fromisoformat(run_date)]).fetchall()}
+    rows = retry_transient(lambda: lake.connect().execute(q, [date.fromisoformat(run_date)]).fetchall())
+    return {r[0] for r in rows}
 
 
 def sample_key(roaster_id: str) -> str:
@@ -181,23 +182,7 @@ def select_states(
     states = registry.current(lake)
     if only:
         return [s for s in states if s.roaster.roaster_id == only], mode
-    con = lake.connect()
-    # Done this run: fetched, or found closed (unavailable: asking again won't help until next week).
-    done = {
-        r[0]
-        for r in con.execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? "
-            "and status in ('ok', 'unavailable')",
-            [date.fromisoformat(run_date)],
-        ).fetchall()
-    }
-    tried = {
-        r[0]
-        for r in con.execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ?",
-            [date.fromisoformat(run_date)],
-        ).fetchall()
-    }
+    done, tried = retry_transient(_done_and_tried, lake, run_date)
     # Draw a sample from a population that doesn't change as the run progresses, so re-running the same
     # command picks the same roasters (and then skips the ones already done).
     pool = sorted(
@@ -214,6 +199,17 @@ def select_states(
     if retry_failed:
         todo = [s for s in todo if s.roaster.roaster_id in tried]
     return todo, mode
+
+
+def _done_and_tried(lake: Lake, run_date: str) -> tuple[set[str], set[str]]:
+    """This run's roasters done (fetched, or found closed: unavailable, so asking again won't help until next week)
+    and tried at all."""
+    con = lake.connect()
+    q = f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ?"
+    d = [date.fromisoformat(run_date)]
+    done = {r[0] for r in con.execute(q + " and status in ('ok', 'unavailable')", d).fetchall()}
+    tried = {r[0] for r in con.execute(q, d).fetchall()}
+    return done, tried
 
 
 def select_parked(lake: Lake, run_date: str) -> tuple[list[registry.RoasterState], dict[str, dict]]:

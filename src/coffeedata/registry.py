@@ -13,7 +13,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from . import classify, products
-from .lake import Lake
+from .lake import Lake, retry_transient
 from .models import Roaster
 
 SEED = Path("config/roasters.csv")
@@ -207,6 +207,12 @@ class RoasterState:
 
 
 def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
+    """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
+    it is each crawl job's first read of the hf:// lake."""
+    return retry_transient(_current, lake, seed)
+
+
+def _current(lake: Lake, seed: Path) -> list[RoasterState]:
     con = connect_for_state(lake)
     cur = con.execute(state_sql(lake) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]

@@ -528,6 +528,35 @@ def no_files(e: Exception) -> bool:
     return "No files found" in msg or ("error listing" in msg and "404" in msg)
 
 
+# What a dropped connection to the remote lake looks like in DuckDB's httpfs error text (a NAT out of ports, a
+# connection reset, a timeout, a 5xx). A missing file or a 4xx is never transient.
+TRANSIENT_MARKERS = ("could not connect", "connection", "timed out", "timeout", "reset by peer", "http 5")
+RETRY_WAITS = (2.0, 6.0, 18.0)  # seconds before each retry of a remote read at a job's start
+
+
+def transient(e: Exception) -> bool:
+    """A remote read failed on the connection, not on the data: worth a short retry."""
+    msg = str(e).lower()
+    return not no_files(e) and any(m in msg for m in TRANSIENT_MARKERS)
+
+
+def retry_transient(fn, *args, **kwargs):
+    """fn(*args, **kwargs), retried after RETRY_WAITS on a transient connection error (`transient`). The jobs'
+    first reads of the hf:// lake (the registry state, what this run already fetched) go through it, so one dropped
+    connection doesn't fail a whole crawl before its first request."""
+    for i, wait in enumerate((*RETRY_WAITS, None)):
+        try:
+            return fn(*args, **kwargs)
+        except Exception as e:
+            if wait is None or not transient(e):
+                raise
+            log.warning(
+                "remote lake read failed (%s); retry %d of %d in %.0fs", e, i + 1, len(RETRY_WAITS), wait
+            )
+            time.sleep(wait)
+    raise AssertionError("unreachable")
+
+
 def _same_file(info, path: Path) -> bool:
     """Whether a dataset file (a get_paths_info entry) has a local file's content: by its LFS sha256, or else its
     git blob id. A file whose hash isn't known counts as the same, so it's never replaced on a guess."""
