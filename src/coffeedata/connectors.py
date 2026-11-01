@@ -92,11 +92,17 @@ def partition(lake: Lake, connector: str, week: str) -> Path:
 
 
 class PartitionLake(Lake):
-    """The lake, as one connector job sees it: reads the lake plus its own partition, writes only the partition."""
+    """The lake, as one connector job sees it: reads the lake plus its own partition, writes only the partition.
 
-    def __init__(self, base: Lake, connector: str, week: str):
+    slice ("k/n", the confirmation run's arms): the arm gets a sub-partition of its own, slice=k-of-n, so arms that
+    run at the same time never compact each other's checkpoints. The weekly merge reads only the partition's own
+    files, so an arm's rows are never merged."""
+
+    def __init__(self, base: Lake, connector: str, week: str, slice: str | None = None):
         super().__init__(base.url, staging=base.root if base.remote else None, tables=base.tables)
         self.part = partition(self, connector, week_of(week))
+        if slice:
+            self.part = self.part / f"slice={slice.replace('/', '-of-')}"
 
     def write_partition(self, table: str, run_date: str, batch_id: str, rows: list[dict]) -> Path | None:
         rel = self.part.relative_to(self.root) / "_parts" / table / f"batch={batch_id}.parquet"
@@ -122,8 +128,16 @@ def _write_table(path: Path, tbl: pa.Table) -> None:
 
 
 def _read(files: list[Path], table: str) -> pa.Table:
+    """The files' rows in the table's current schema. A file written before a column was added (an image from an
+    older raw contract, e.g. without fetches.partial) reads that column as null."""
     schema = SCHEMAS[table]
-    tbls = [pq.read_table(f).select([n for n in schema.names]).cast(schema) for f in files]
+    tbls = []
+    for f in files:
+        t = pq.read_table(f)
+        for col in schema:
+            if col.name not in t.column_names:
+                t = t.append_column(col.name, pa.nulls(len(t), col.type))
+        tbls.append(t.select(schema.names).cast(schema))
     return pa.concat_tables(tbls) if tbls else schema.empty_table()
 
 
@@ -167,7 +181,7 @@ def crawl(
     if rps is not None:
         c = dataclasses.replace(c, rps=rps)
     week = week_of(day)
-    plake = PartitionLake(lake, connector, week)
+    plake = PartitionLake(lake, connector, week, slice=part)
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, _ = ingest.select_states(plake, week)
     states = [s for s in states if s.roaster.adapter == connector]

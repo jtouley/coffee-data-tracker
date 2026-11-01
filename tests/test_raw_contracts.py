@@ -67,3 +67,28 @@ def test_enrichment_rows_follow_the_enrichment_contract():
     row = enrich._row({"roaster_id": "x.com", "product_id": "1", "body_hash": "b"}, Enrichment(method="llm"),
                       datetime(2026, 11, 2, tzinfo=UTC))  # fmt: skip
     assert set(row) == set(_cols("enrichment", "enrichments"))
+
+
+def test_fetch_statuses_are_the_raw_contracts():
+    """ok, error and unavailable (raw 1.2.0): every status a crawl writes is in the contract."""
+    assert raw_contracts.load("raw")["values"]["fetches.status"] == ["ok", "error", "unavailable"]
+    r = Roaster(roaster_id="x.com", name="X", host="x.com", platform="shopify")
+    now = datetime(2026, 11, 2, tzinfo=UTC)
+    results = [ingest.Result(r, now, stats=RequestStats()), ingest.Result(r, now, error="boom", stats=RequestStats()),
+               ingest.Result(r, now, error="Unavailable: closed", unavailable=True, stats=RequestStats())]  # fmt: skip
+    rows = ingest.rows_for(results, date(2026, 11, 2), "b", set())["fetches"]
+    assert [x["status"] for x in rows] == ["ok", "error", "unavailable"]
+    assert all(x["partial"] is None for x in rows)
+
+
+@pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))
+def test_every_contracted_table_and_column_is_described_and_has_quality_rules(name):
+    from coffeedata import contract_docs
+    from coffeedata.lake import SCHEMAS
+
+    doc = raw_contracts.load(name)
+    for table, cols in doc["tables"].items():
+        assert doc["descriptions"][table]
+        assert all(c["description"] for c in cols), table
+        assert set(contract_docs.COLUMNS[table]) == set(SCHEMAS[table].names), f"{table}: described != lake"
+    assert doc["quality"] and all(q["rule"] and q["enforced_by"] for q in doc["quality"])

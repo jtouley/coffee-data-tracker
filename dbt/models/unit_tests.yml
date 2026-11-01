@@ -74,3 +74,56 @@ unit_tests:
         - {run_date: 2026-10-19, coffee_id: "r:C", event: removed, price_usd: null, previous_price_usd: 15.0}
         - {run_date: 2026-10-12, coffee_id: "r:D", event: new, price_usd: null, previous_price_usd: null}
         - {run_date: 2026-10-19, coffee_id: "r:D", event: price, price_usd: 16.0, previous_price_usd: null}
+
+  - name: partial_runs_keep_unread_products_listed
+    description: >-
+      A partial run (a catalog read only in part, fetches.partial) lists what it read and leaves the products it
+      didn't read as they were. Roaster p: complete 10-05, complete 10-12, then partial 10-19 and 10-26, so every run
+      since 10-12 is current (a product last seen on 10-12 stays listed). Roaster q has no partial run: only its
+      latest run is current, as before. Roaster s has only partial runs: all of them are current.
+    model: stg_runs
+    given:
+      - input: ref('stg_run_quality')
+        rows:
+          - {roaster_id: p, run_date: 2026-10-05, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-12, partial: false, counted: true}
+          - {roaster_id: p, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: p, run_date: 2026-10-26, partial: true, counted: true}
+          - {roaster_id: q, run_date: 2026-10-19, partial: false, counted: true}
+          - {roaster_id: q, run_date: 2026-10-26, partial: false, counted: true}
+          - {roaster_id: s, run_date: 2026-10-19, partial: true, counted: true}
+          - {roaster_id: s, run_date: 2026-10-26, partial: true, counted: true}
+    expect:
+      rows:
+        - {roaster_id: p, run_date: 2026-10-05, is_latest_run: false, is_current: false}
+        - {roaster_id: p, run_date: 2026-10-12, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: p, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: q, run_date: 2026-10-19, is_latest_run: false, is_current: false}
+        - {roaster_id: q, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-19, is_latest_run: false, is_current: true}
+        - {roaster_id: s, run_date: 2026-10-26, is_latest_run: true, is_current: true}
+
+  - name: fetch_coffees_are_recorded_else_counted
+    description: >-
+      dim_roaster's status reads int_fetches.coffees: the count the crawl recorded (kaldi.com 10-26: 3,459, though
+      today's rules call its capped first 5,000 products equipment), else, for an ELT fetch with no recorded count,
+      the count int_fetch_coffees makes with the crawl's rule. A failed fetch keeps its own value.
+    model: int_fetches
+    given:
+      - input: ref('stg_fetches')
+        rows:
+          - {roaster_id: kaldi.com, batch_id: k1, status: ok, products: 5000, coffees: 3459}
+          - {roaster_id: kaldi.com, batch_id: k2, status: error, products: 0, coffees: 0}
+          - {roaster_id: elt.com, batch_id: e1, status: ok, products: 2, coffees: null}
+          - {roaster_id: gear.com, batch_id: g1, status: ok, products: 2, coffees: null}
+      - input: ref('int_fetch_coffees')
+        rows:
+          - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+          - {roaster_id: gear.com, batch_id: g1, coffees: 0}
+    expect:
+      rows:
+        - {roaster_id: kaldi.com, batch_id: k1, coffees: 3459}
+        - {roaster_id: kaldi.com, batch_id: k2, coffees: 0}
+        - {roaster_id: elt.com, batch_id: e1, coffees: 1}
+        - {roaster_id: gear.com, batch_id: g1, coffees: 0}

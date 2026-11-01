@@ -84,6 +84,37 @@ class Blocked(FetchError):
     """robots.txt disallows the URL."""
 
 
+class Unavailable(FetchError):
+    """The store is closed, deactivated or password-protected: Shopify's "This store is unavailable" page, a redirect
+    to /password, or a robots.txt that disallows the whole site. A fetch status of its own (`unavailable`), not an
+    error or a block: retrying won't help, and it doesn't count against the run's ok rate."""
+
+
+class SiteDisallowed(Unavailable, Blocked):
+    """robots.txt disallows the whole site (/), not just the catalog path: the store is closed to us (Big Guns,
+    deactivated, 2026-10-31). Still a Blocked, so callers that try another path on a block keep doing so."""
+
+
+# What a closed or deactivated storefront says, in any status (Shopify's own page, lowercased).
+UNAVAILABLE_MARKERS = (
+    "this store is unavailable",
+    "store is currently unavailable",
+    "this shop is unavailable",
+    "shop is currently unavailable",
+)
+
+
+def unavailable_reason(r: httpx.Response) -> str | None:
+    """Why this response says the store is closed, if it does: a password page or a closed-store page."""
+    if r.url.path.rstrip("/") == "/password" or any(h.url.path.rstrip("/") == "/password" for h in r.history):
+        return f"password-protected: {r.url.host}"
+    if r.status_code != 200 or "json" not in r.headers.get("content-type", ""):
+        text = r.text[:20_000].lower() if r.content else ""
+        if any(m in text for m in UNAVAILABLE_MARKERS):
+            return f"store unavailable (HTTP {r.status_code}): {r.url.host}"
+    return None
+
+
 class RobotsUnavailable(FetchError, httpx.HTTPError):
     """robots.txt didn't answer (429, 430, 5xx, or a network error) after the client's retries, so nothing on that
     host is fetched for ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one
@@ -231,6 +262,14 @@ class PoliteClient:
         rp = self._robots[host]
         return rp is None or rp.can_fetch(USER_AGENT, url)
 
+    def _disallows_site(self, url: str) -> bool:
+        """The host's robots.txt file disallows the whole site (/) to us: a closed store (SiteDisallowed). Not a
+        robots.txt answered with 401 or 403, which is a refusal (often an edge challenge), not the store's rules."""
+        rp = self._robots.get(urlparse(url).netloc)
+        if rp is None or getattr(rp, "disallow_all", False):
+            return False
+        return not rp.can_fetch(USER_AGENT, urlparse(url)._replace(path="/", query="", fragment="").geturl())
+
     def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
         """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an
         answer about robots.txt, a 429, 430, 5xx or a network error, raises RobotsUnavailable and is remembered for
@@ -314,7 +353,7 @@ class PoliteClient:
         sent_params: set[str] = set()
         for hop in range(MAX_REDIRECTS + 1):
             if not robots and not self._allowed(url):
-                raise Blocked(url)
+                raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
                 r.history = history
@@ -359,6 +398,8 @@ class PoliteClient:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if why := unavailable_reason(r):
+            raise Unavailable(why)
         if r.status_code == 404:
             return None
         if r.status_code != 200:
@@ -374,6 +415,8 @@ class PoliteClient:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if why := unavailable_reason(r):
+            raise Unavailable(why)
         if r.status_code != 200:
             raise FetchError(f"HTTP {r.status_code} {url}")
         try:

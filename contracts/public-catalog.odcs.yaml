@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.1.0
+version: 2.2.0
 status: active
 domain: coffee
 dataProduct: coffee-data
@@ -54,7 +54,8 @@ schema:
   - name: is_listed
     logicalType: boolean
     physicalType: boolean
-    description: In the roaster's latest successful catalog fetch.
+    description: In the roaster's latest successful catalog fetch, or, when the fetches since then read only part
+      of the catalog (partial), in one of those or in the latest complete fetch before them.
     required: true
   - name: in_stock
     logicalType: boolean

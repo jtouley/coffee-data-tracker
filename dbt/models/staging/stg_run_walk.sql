@@ -5,7 +5,7 @@
 -- counted weeks, so a store that stays broken stays flagged instead of becoming its own new normal. Raw batches are
 -- never touched; this only decides which batch counts. stg_run_quality reports the result.
 with recursive ok as (
-    select roaster_id, run_date, batch_id, fetched_at, products, coffees
+    select roaster_id, run_date, batch_id, fetched_at, products, coffees, partial
     from {{ ref('stg_fetches') }}
     where status = 'ok'
 ),
@@ -26,7 +26,7 @@ seq as (
 -- Walk each roaster's weeks in order, carrying the product counts of its last 4 counted weeks.
 walk as (
     select roaster_id, rn, []::bigint[] as prior, counted,
-        case when counted then [products] else []::bigint[] end as history
+        case when counted and not partial then [products] else []::bigint[] end as history
     from (
         -- A first week has no baseline, so it is never suspect: it counts unless rejected. (A use_batch whose
         -- batch wasn't picked is no override, here as in later weeks.)
@@ -35,12 +35,14 @@ walk as (
     )
     union all
     select roaster_id, rn, prior, counted,
-        case when counted then list_concat(prior, [products])[-4:] else prior end as history
+        -- A partial catalog (partial) is short by design: never suspect, and never part of the baseline.
+        case when counted and not partial then list_concat(prior, [products])[-4:] else prior end as history
     from (
         select *,
             case
                 when override_action = 'reject' then false
                 when override_action = 'accept' or (override_action = 'use_batch' and pinned) then true
+                when partial then true
                 else not suspect  -- a use_batch whose batch doesn't exist or failed is no override at all
             end as counted
         from (
@@ -51,7 +53,7 @@ walk as (
 )
 -- history: the product counts of the counted weeks before this one, the baseline it was judged against.
 select
-    s.roaster_id, s.run_date, s.batch_id, s.fetched_at, s.products, s.coffees, w.prior as history,
+    s.roaster_id, s.run_date, s.batch_id, s.fetched_at, s.products, s.coffees, s.partial, w.prior as history,
     s.override_action, s.override_reason, w.counted
 from seq s
 join walk w using (roaster_id, rn)

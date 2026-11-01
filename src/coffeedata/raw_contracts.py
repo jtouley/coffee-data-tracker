@@ -18,7 +18,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from .lake import SCHEMAS
+from . import contract_docs
+from .lake import FETCH_STATUSES, SCHEMAS
 from .models import CatalogItem
 
 DIR = Path(__file__).parent / "contracts"
@@ -27,6 +28,8 @@ CONTRACTS: dict[str, dict[str, Any]] = {
         "tables": ["snapshots", "bodies", "fetches"],
         "producer": "connector ingest jobs (crawl, crawl-retry), via the weekly merge",
         "consumers": ["dbt (stg_snapshots, stg_product_inputs, stg_fetches)", "enrichment job", "registry"],
+        # The values a column may take, versioned with the columns (1.2.0 added unavailable).
+        "values": {"fetches.status": list(FETCH_STATUSES)},
         "files": {
             "parked/run_date=<date>/<roaster_id>.json": {
                 "page": "int: the catalog page that stayed blocked",
@@ -49,9 +52,15 @@ CONTRACTS: dict[str, dict[str, Any]] = {
 
 def generate(name: str, version: str) -> dict:
     spec = CONTRACTS[name]
-    tables = {t: [{"name": f.name, "type": str(f.type), "nullable": f.nullable} for f in SCHEMAS[t]]
+    tables = {t: [{"name": f.name, "type": str(f.type), "nullable": f.nullable,
+                   "description": contract_docs.COLUMNS[t][f.name]} for f in SCHEMAS[t]]
               for t in spec["tables"]}  # fmt: skip
-    body = {"tables": tables, "files": spec.get("files", {})}
+    body = {
+        "descriptions": {t: contract_docs.TABLES[t] for t in spec["tables"]},
+        "tables": tables,
+        "files": spec.get("files", {}),
+        "quality": contract_docs.QUALITY[name],
+    } | ({"values": spec["values"]} if "values" in spec else {})
     fingerprint = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()[:16]
     return {"contract": name, "version": version, "fingerprint": fingerprint, "producer": spec["producer"],
             "consumers": spec["consumers"], **body}  # fmt: skip

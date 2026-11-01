@@ -67,16 +67,16 @@ select
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,
-    run.is_latest_run as is_listed,
+    run.is_current as is_listed,
     a.origin_country, a.origin_region, a.producer, a.process, a.varietals, a.elevation_masl_min,
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
-    run.is_latest_run and coalesce(p.any_available, false) as in_stock,
+    run.is_current and coalesce(p.any_available, false) as in_stock,
     -- What a shopper can get now versus the roaster's back catalog. Every coffee is kept either way; a sold-out
     -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".
     case
-        when not run.is_latest_run then 'delisted'
+        when not run.is_current then 'delisted'
         -- A preorder tag whose ship date (e.g. preorder-ship-date:2026-11-05) has passed is left over: available.
         when coalesce(p.any_available, false) and list_bool_or(list_transform(l.tags, lambda t:
             regexp_matches(lower(t), '\bpre[-_ ]?(order|sale)|\bupcoming\b|coming[-_ ]soon')))

@@ -298,6 +298,66 @@ def test_one_adapters_total_outage_fails_the_run(lake, tmp_path):
     build(lake, tmp_path, **gate).close()  # squarespace 1 of 2 is at the floor; woocommerce isn't judged
 
 
+def test_unavailable_stores_do_not_count_against_the_ok_rates(lake, tmp_path):
+    """A closed or deactivated store (fetch status unavailable: Big Guns, 2026-10-31) is attempted, but it says
+    nothing about whether the run worked: run_ok_rate and adapter_ok_rate leave it out. As errors, the same
+    stores fail both gates."""
+    shops, closed = [f"shop{i}.com" for i in range(3)], [f"closed{i}.com" for i in range(3)]
+    manifest(lake, "2026-10-26", [*shops, *closed])
+    for rid in shops + closed:
+        run(lake, "2026-10-19", rid, FULL[:5])  # all had catalogs a week ago
+    for rid in shops:
+        run(lake, "2026-10-26", rid, FULL[:5])
+    for rid in closed:
+        run(lake, "2026-10-26", rid, None, status="unavailable")
+    gate = {
+        "as_of_run": "2026-10-26",
+        "min_ok_share": 0.9,
+        "min_adapter_roasters": 2,
+        "min_adapter_ok_share": 0.9,
+    }
+    con = build(lake, tmp_path, **gate)
+    got = con.execute(
+        "select roaster_id, attempted, has_catalog, unavailable from run_completeness order by 1"
+    )
+    assert got.fetchall() == [(r, True, r in shops, r in closed) for r in sorted(shops + closed)]
+    con.close()
+    lake2 = Lake(str(tmp_path / "lake2"))  # the same stores as plain errors: half the run failed
+    manifest(lake2, "2026-10-26", [*shops, *closed])
+    for rid in shops + closed:
+        run(lake2, "2026-10-19", rid, FULL[:5])
+    for rid in shops:
+        run(lake2, "2026-10-26", rid, FULL[:5])
+    for rid in closed:
+        run(lake2, "2026-10-26", rid, None)
+    r = build(lake2, tmp_path / "b2", check=False, **gate)
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_ok_rate", r.stdout)
+    assert re.search(r"FAIL 1 adapter_ok_rate", r.stdout)
+
+
+def test_a_partial_fetch_keeps_unread_products_listed(lake, tmp_path):
+    """A partial catalog (fetches.partial: the secondary crawler stopped mid-way) lists what it read and leaves the
+    products it didn't read as they were. The same short catalog as a complete fetch delists them."""
+    run(lake, "2026-10-19", "p.com", FULL[:30])
+    run(lake, "2026-10-26", "p.com", FULL[:3], partial=True)  # 3 of 30 read before the store stopped us
+    run(lake, "2026-10-19", "c.com", FULL[:30])
+    run(lake, "2026-10-26", "c.com", FULL[:20])  # complete: 10 delisted
+    con = build(lake, tmp_path)
+    listed = dict(
+        con.execute(
+            "select roaster_id, count(*) filter (where is_listed) from dim_coffee group by 1"
+        ).fetchall()
+    )
+    assert listed == {"p.com": 30, "c.com": 20}
+    q = con.execute(
+        "select run_date, partial, suspect, counted from stg_run_quality where roaster_id = 'p.com' order by 1"
+    )
+    assert [(str(d), p, s, c) for d, p, s, c in q.fetchall()] == [
+        ("2026-10-19", False, False, True), ("2026-10-26", True, False, True),
+    ]  # fmt: skip  # a partial week is short by design: never suspect
+    con.close()
+
+
 def _passing_builds(lake, metrics: list[dict], first: str = "2026-09-07"):
     """One passing build per weekly run from `first` on, recording each dict of metrics."""
     for i, m in enumerate(metrics):

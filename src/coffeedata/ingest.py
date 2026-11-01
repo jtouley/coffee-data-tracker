@@ -28,7 +28,7 @@ import httpx
 from . import lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
-from .http import BLOCK_STATUSES, PoliteClient, RequestStats, egress_ip
+from .http import BLOCK_STATUSES, PoliteClient, RequestStats, Unavailable, egress_ip
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
 from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
@@ -106,6 +106,7 @@ class Result:
     duration_s: float | None = None
     deferrable: bool = False
     blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
+    unavailable: bool = False  # the store is closed, deactivated or password-protected (http.Unavailable)
     progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
 
 
@@ -129,6 +130,7 @@ def ingest_one(
             res.items = []
             res.deferrable = deferrable(e)
             res.blocked = blocked(e)
+            res.unavailable = any(isinstance(c, Unavailable) for c in _causes(e))
     res.duration_s = round(time.monotonic() - start, 3)
     return res
 
@@ -145,6 +147,14 @@ def known_products(lake: Lake) -> dict[str, int]:
     q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
             where status = 'ok' and products > 0 and roaster_id is not null group by 1"""
     return dict(lake.connect().execute(q).fetchall())
+
+
+def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
+    """The hosts that answered a block (fetches.blocks) earlier in this run: an earlier job, attempt or pass of the
+    same run_date. Another block from one is a repeat, never that store's first block in the run."""
+    q = f"""select distinct b.host from (select unnest(blocks) as b from {lake.scan("fetches")} where run_date = ?)
+            where b.host is not null"""
+    return {r[0] for r in lake.connect().execute(q, [date.fromisoformat(run_date)]).fetchall()}
 
 
 def sample_key(roaster_id: str) -> str:
@@ -168,10 +178,12 @@ def select_states(
     if only:
         return [s for s in states if s.roaster.roaster_id == only], mode
     con = lake.connect()
+    # Done this run: fetched, or found closed (unavailable: asking again won't help until next week).
     done = {
         r[0]
         for r in con.execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and status = 'ok'",
+            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? "
+            "and status in ('ok', 'unavailable')",
             [date.fromisoformat(run_date)],
         ).fetchall()
     }
@@ -207,7 +219,8 @@ def select_parked(lake: Lake, run_date: str) -> tuple[list[registry.RoasterState
     done = {
         r[0]
         for r in con.execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and status = 'ok'",
+            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? "
+            "and status in ('ok', 'unavailable')",
             [date.fromisoformat(run_date)],
         ).fetchall()
     }
@@ -260,7 +273,7 @@ def rows_for(
                 "fetched_at": res.fetched_at,
                 "roaster_id": r.roaster_id,
                 "adapter": r.adapter,
-                "status": "error" if res.error else "ok",
+                "status": "unavailable" if res.unavailable else "error" if res.error else "ok",
                 "error": res.error,
                 "products": len(res.items),
                 "coffees": None,
@@ -274,6 +287,7 @@ def rows_for(
                 "duration_s": res.duration_s,
                 "code_version": code_version,
                 "blocks": res.stats.blocks or None,
+                "partial": None,  # set by a source that can land a partial catalog (the secondary crawler, #67)
             }
         )
         for it in res.items:
@@ -376,6 +390,10 @@ def run(
     shopify = PlatformLimiter(
         "shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host
     )
+    # Only a store's first block in a run counts towards a platform-wide pause: a retry pass asks only stores that
+    # already failed, and a store that blocked in an earlier job of this run (a resume, crawl-retry) is a repeat.
+    shopify.count_bursts = mode != "retry_failed"
+    shopify.ever_blocked |= blocked_hosts(lake, run_date)
     # Any other platform with a shared budget (a connector's config: connectors.Connector.rps) gets its own.
     limiters = {"shopify": shopify} | {
         name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)

@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.1.0
+version: 2.2.0
 status: active
 domain: coffee
 description:
@@ -20,7 +20,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.1.0
+    version: 2.2.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: glossary
@@ -46,6 +46,13 @@ customProperties:
           listings stay in the public data, flagged, rather than filtered out upstream, so readers can count them or
           leave them out; public_market_weekly leaves them out. Snowflake's PUBLIC_COFFEE gets the column through
           the one-time snowflake_migrate run (marketplace/README.md).
+      - topic: public_coffee is_listed and partial catalogs
+        decided: "2026-11-01"
+        outcome: >-
+          is_listed now also holds for a coffee from the latest complete fetch when the fetches after it read only
+          part of the catalog (raw fetches.partial; public-catalog contract 2.2.0). A partial catalog lists what it
+          read and doesn't delist what it didn't read. No column, type or enum changes, and nothing changes until a
+          source lands partial catalogs. public_roaster.status is unchanged.
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

@@ -122,7 +122,17 @@ def test_compact_folds_checkpoints_into_one_file(tmp_path):
     assert pq.read_metadata(part.part / "fetches.parquet").num_rows == 3
 
 
-def test_week_of():
+def test_compact_reads_a_checkpoint_from_before_a_column_was_added(tmp_path):
+    """A checkpoint written by an older image (raw 1.1.0: no fetches.partial) still compacts and merges, as null."""
+    lk = Lake(str(tmp_path / "lake"))
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    run(part, WEEK, "new.com", [product("A")])
+    run(part, WEEK, "old.com", [product("B")])
+    old = sorted(part.part.glob("_parts/fetches/*.parquet"))[-1]
+    pq.write_table(pq.read_table(old).drop(["partial"]), old)
+    assert connectors.compact(part.part)["fetches"] == 2
+    assert pq.read_table(part.part / "fetches.parquet").column("partial").to_pylist() == [None, None]
+
     assert connectors.week_of("2026-11-08") == connectors.week_of("2026-11-02") == "2026-11-02"
 
 
@@ -226,3 +236,95 @@ def test_enrich_week_never_submits_without_the_flag_even_with_keys_set(tmp_path,
             monkeypatch.setattr(enrich, name, boom)
     cli.main(["enrich-week", "--run-date", WEEK])
     assert '"submitted": 0' in capsys.readouterr().out
+
+
+def test_a_first_ever_run_on_an_empty_lake_crawls_merges_and_builds(tmp_path, monkeypatch):
+    """The postmortem's gap: the weekly path with no history at all (no known product counts, no earlier run, no
+    served release), through the CLI: crawl, merge, build. It must land, pass the gate and serve."""
+    import httpx
+    import respx
+
+    from coffeedata import cli, http, quality
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    monkeypatch.setattr(connectors, "CONNECTORS", {"shopify": connectors.CONNECTORS["shopify"]})
+    week = connectors.week_of(cli._today())
+    stores = [Roaster(roaster_id=h, name=h, host=h, platform="shopify") for h in ("a.com", "b.com")]
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "pending", None) for r in stores]
+    )
+
+    def page(req):
+        p = int(req.url.params.get("page", "1"))
+        host = req.url.host
+        items = [{"id": i, "title": f"Ethiopia Guji {host} {i} Coffee", "handle": f"c{i}", "body_html": "Washed.",
+                  "variants": [{"id": i * 10, "title": "12 oz", "price": "20.00", "grams": 340, "available": True}]}
+                 for i in range(1, 4)] if p == 1 else []  # fmt: skip
+        return httpx.Response(200, json={"products": items})
+
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get(url__regex=r"https://[^/]+/products.json").mock(side_effect=page)
+        cli.main(["crawl", "--connector", "shopify", "--run-date", week])
+    assert control.landed(lk, week) == {"shopify"}
+    cli.main(["merge", "--run-date", week])
+    con = lk.connect()
+    assert (
+        con.execute(
+            f"select count(*) from {lk.scan('snapshots')} where run_date = ?", [date.fromisoformat(week)]
+        ).fetchone()[0]
+        == 6
+    )
+    cli.main(["build", "--db", str(tmp_path / "coffee.duckdb"), "--run-date", week])
+    assert quality.served(lk) is not None  # the gate passed and the release is served
+    db = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert db.execute("select count(*) from dim_coffee where is_listed").fetchone()[0] == 6
+    db.close()
+
+
+def test_a_confirmation_arm_crawls_its_slice_into_its_own_sub_partition(tmp_path, monkeypatch):
+    """The runbook's arm command: crawl --run-date --slice --salt --rps --deadline-min. Each arm writes to its own
+    slice=k-of-n folder (arms run at the same time), which the weekly merge never reads."""
+    import json
+
+    import httpx
+    import respx
+
+    from coffeedata import cli, http
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_ARM", "2-dedicated-full")
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    hosts = [f"s{i}.com" for i in range(8)]
+    stores = [Roaster(roaster_id=h, name=h, host=h, platform="shopify") for h in hosts]
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "active", None) for r in stores]
+    )
+    mine = {h for h in hosts if connectors.in_slice(h, "1/3", "salt-x")}
+    assert mine and mine != set(hosts)
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get(url__regex=r"https://[^/]+/products.json").mock(
+            side_effect=lambda req: httpx.Response(200, json={"products": []})
+        )
+        cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK, "--slice", "1/3", "--salt", "salt-x",
+                  "--rps", "5", "--deadline-min", "10"])  # fmt: skip
+    part = connectors.partition(lk, "shopify", WEEK)
+    assert [p.name for p in part.iterdir()] == ["slice=1-of-3"]
+    got = pq.read_table(part / "slice=1-of-3" / "fetches.parquet").column("roaster_id").to_pylist()
+    assert set(got) == mine
+    end = [r for r in control.rows(lk, WEEK) if r["status"] != "running"]
+    detail = json.loads(end[0]["detail"])
+    assert (detail["slice"], detail["salt"], detail["rps"], detail["arm"]) == (
+        "1/3",
+        "salt-x",
+        5.0,
+        "2-dedicated-full",
+    )
+    assert control.landed(lk, WEEK) == {"shopify"} and not connectors.merge(lk, WEEK)["written"].get(
+        "fetches"
+    )

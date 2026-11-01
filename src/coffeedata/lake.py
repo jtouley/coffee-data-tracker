@@ -62,6 +62,9 @@ VARIANT = pa.struct(
 )
 
 # One HTTP status a fetch saw, and how many responses had it.
+# fetches.status: fetched; failed (any error or block, retried in later passes); or the store is closed, deactivated or
+# password-protected (http.Unavailable: not retried this run, and left out of the run's ok rates).
+FETCH_STATUSES = ("ok", "error", "unavailable")
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
 # One refused or blocked response (403/429/430/503), with the headers that tell a rate limit from an edge challenge
 # and that Shopify Support asks for, and the egress IP it left from (http.block_record).
@@ -144,6 +147,10 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("code_version", pa.string()),
             # Added with raw contract 1.1.0 (older files read back as null): each refused or blocked response.
             ("blocks", pa.list_(BLOCK)),
+            # Added with raw contract 1.2.0 (older files read back as null): true when the fetch read only part of
+            # the catalog (a secondary crawl stopped mid-way). Its products are listed; the products it didn't
+            # read keep their listing (dbt stg_runs.is_current), instead of reading as delisted.
+            ("partial", pa.bool_()),
         ]
     ),
     "probes": pa.schema(
@@ -772,10 +779,13 @@ class Lake:
                     for i in range(0, len(rels), 500)
                     for f in api.get_paths_info(repo_id, rels[i : i + 500], repo_type="dataset")
                 }
+                # A job sharing this staging folder (the confirmation run's concurrent arms) may have sent and
+                # removed a file since it was listed: it is in the dataset now, or goes with that job's commit.
                 ops = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
-                    if rel not in existing
+                    if p.exists()
+                    and rel not in existing
                     or rel.startswith("marts/")
                     or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
                 ]
@@ -793,5 +803,5 @@ class Lake:
         _REMOTE_FOLDERS.pop(self.url, None)  # new folders may exist now
         for p, rel in zip(files, rels, strict=True):
             if rel not in schema_paths:
-                p.unlink()
+                p.unlink(missing_ok=True)
         return len(ops)

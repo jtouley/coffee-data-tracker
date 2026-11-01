@@ -692,6 +692,87 @@ def test_deferred_round_blocks_never_pause_the_platform():
     assert lim.stats["cooldowns"] == 1
 
 
+def test_retry_pass_and_repeat_blocks_never_pause_the_platform():
+    """A's real crawl 2026-10-31: the --retry-failed pass asks only stores that already failed, and all 5 platform
+    pauses of the run came from it ("10 of 19 stores blocked within 30s"), down to 0.38 req/s. A store's second
+    block in a run (the next page after a wait, a parked store's retry) is its own limit again, too."""
+    clock = FakeClock()
+    lim = limiter(clock, per_host=True, burst_hosts=5, burst_window=30)
+    lim.count_bursts = False  # what ingest sets for mode="retry_failed"
+    for i in range(10):
+        lim.record(_from(f"failed{i}.com"))
+    assert lim.stats["cooldowns"] == 0 and lim.host_until["failed0.com"] == clock.t + 60
+    lim.record(_from("failed0.com", 430))  # a 430 is Shopify's IP-wide block: it still pauses the platform
+    assert lim.stats["cooldowns"] == 1
+    clock.t += 61
+    lim = limiter(clock, per_host=True, burst_hosts=5, burst_window=30)
+    for i in range(4):
+        lim.record(_from(f"s{i}.com"))
+    clock.t += 31  # their first blocks leave the window
+    for i in range(4):
+        lim.record(_from(f"s{i}.com"))  # the same stores again, each on its next page
+    lim.record(_from("new.com"))
+    assert lim.stats["cooldowns"] == 0
+    for i in range(4):
+        lim.record(
+            _from(f"fresh{i}.com")
+        )  # five stores blocking for the first time, nobody answering: platform
+    assert lim.stats["cooldowns"] == 1
+
+
+def test_ingest_turns_burst_counting_off_for_a_retry_pass(lake, monkeypatch):
+    seen = []
+    orig = ingest.PlatformLimiter
+
+    def spy(*a, **k):
+        lim = orig(*a, **k)
+        seen.append(lim)
+        return lim
+
+    monkeypatch.setattr(ingest, "PlatformLimiter", spy)
+    ingest.run(lake, [], "2026-10-26", mode="retry_failed")
+    ingest.run(lake, [], "2026-10-26", mode="full")
+    assert [lim.count_bursts for lim in seen] == [False, True]
+
+
+def test_a_later_job_of_the_run_never_counts_a_store_that_blocked_earlier(lake, monkeypatch):
+    """A resume (the crawl job run again the same week) or crawl-retry is a new process: the stores that blocked in
+    an earlier job of the run are read from fetches.blocks, so their blocks now are repeats, not first blocks. A
+    store blocking for the first time still counts, and another week's blocks don't carry over."""
+    now = datetime(2026, 11, 2, tzinfo=UTC)
+
+    def blocked_once(host: str) -> ingest.Result:
+        st = http.RequestStats()
+        st.blocks.append(http.block_record(_from(host)))
+        return ingest.Result(Roaster(roaster_id=host, name="R", host=host, platform="shopify"), now, error="429",
+                             stats=st)  # fmt: skip
+
+    for week, hosts in (("2026-11-02", [f"s{i}.com" for i in range(5)]), ("2026-10-26", ["old.com"])):
+        rows = ingest.rows_for(
+            [blocked_once(h) for h in hosts], datetime.fromisoformat(week).date(), "b", set()
+        )
+        lake.write_partition("fetches", week, f"b{week}", rows["fetches"])
+    assert ingest.blocked_hosts(lake, "2026-11-02") == {f"s{i}.com" for i in range(5)}
+    seen = []
+    orig = ingest.PlatformLimiter
+
+    def spy(*a, **k):
+        seen.append(orig(*a, **k))
+        return seen[-1]
+
+    monkeypatch.setattr(ingest, "PlatformLimiter", spy)
+    ingest.run(lake, [], "2026-11-02", mode="full")
+    lim = seen[0]
+    clock = FakeClock()
+    lim._clock, lim._sleep = clock, clock.sleep
+    for i in range(5):
+        lim.record(_from(f"s{i}.com"))  # the same five stores again, in the resume
+    assert lim.stats["cooldowns"] == 0
+    for h in ["old.com", "n1.com", "n2.com", "n3.com", "n4.com"]:
+        lim.record(_from(h))  # five stores blocking for the first time this run: platform
+    assert lim.stats["cooldowns"] == 1
+
+
 @pytest.fixture
 def quick_defer(monkeypatch):
     """Defer any store pause over 10 ms and back off a blocked page for 10-40 ms, so Retry-After 0.05 exercises
