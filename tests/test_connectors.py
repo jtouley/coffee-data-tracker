@@ -328,3 +328,59 @@ def test_a_confirmation_arm_crawls_its_slice_into_its_own_sub_partition(tmp_path
     assert control.landed(lk, WEEK) == {"shopify"} and not connectors.merge(lk, WEEK)["written"].get(
         "fetches"
     )
+
+
+def _no_fuse_metadata_calls(monkeypatch) -> None:
+    """What GCSFuse (Cloud Run's /mnt/staging) refuses: chmod, chown, utime, links and file locks."""
+    import fcntl
+    import os
+
+    def refuse(*a, **k):
+        raise PermissionError(1, "Operation not permitted")
+
+    for name in ("chmod", "fchmod", "lchmod", "chown", "fchown", "lchown", "utime", "link", "symlink"):
+        if hasattr(os, name):
+            monkeypatch.setattr(os, name, refuse)
+    for name in ("flock", "lockf"):
+        monkeypatch.setattr(fcntl, name, refuse)
+
+
+def test_lake_init_works_where_chmod_is_refused(tmp_path, monkeypatch):
+    # The Cloud Run crash: ensure_schemas' chmod of its temp file on the GCSFuse mount (Errno 1).
+    _no_fuse_metadata_calls(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lake = Lake("hf://datasets/someone/coffee")
+    from coffeedata.lake import SCHEMA_FILES
+
+    for table in lake.tables:
+        assert (lake.root / SCHEMA_FILES[table]).exists()
+    assert not list(lake.root.rglob("*.tmp"))
+    # A stale schema file is refreshed too (the chmod sits on that path).
+    from coffeedata.lake import SCHEMAS
+
+    p = lake.root / SCHEMA_FILES["snapshots"]
+    pq.write_table(SCHEMAS["snapshots"].remove(0).empty_table(), p)
+    Lake("hf://datasets/someone/coffee")
+    assert pq.read_schema(p).names == SCHEMAS["snapshots"].names and not list(p.parent.glob("*.tmp"))
+
+
+def test_crawl_park_and_merge_work_without_fuse_metadata_calls(tmp_path, monkeypatch):
+    # crawl, crawl-retry and merge write only through create/write/rename/unlink/rmdir, which GCSFuse supports.
+    from coffeedata import ingest
+
+    monkeypatch.setattr(
+        connectors, "CONNECTORS", {k: connectors.CONNECTORS[k] for k in ("shopify", "woocommerce")}
+    )
+    _no_fuse_metadata_calls(monkeypatch)
+    lake = _lake(tmp_path, "fuse")
+    for rid, prods, adapter, hour in THIS_WEEK:
+        part = connectors.PartitionLake(lake, adapter, WEEK)
+        run(part, WEEK, rid, prods, hour=hour, adapter=adapter)
+    shop = connectors.PartitionLake(lake, "shopify", WEEK)
+    ingest.save_parked(shop, WEEK, "parked.example", {"page": 3, "items": []})
+    assert ingest.load_parked(shop, WEEK) == {"parked.example": {"page": 3, "items": []}}
+    for adapter in ("shopify", "woocommerce"):
+        control.finish(lake, control.start(lake, "crawl", WEEK, adapter), "done")
+    out = connectors.merge(lake, WEEK)
+    assert out["missing"] == [] and out["written"]["fetches"] == 3
+    assert not list(lake.root.rglob("*.tmp"))

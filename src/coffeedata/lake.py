@@ -33,6 +33,7 @@ checkpoint (each ingest chunk and each weekly step).
 
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import json
 import logging
@@ -597,7 +598,10 @@ class Lake:
                 fd, tmp = tempfile.mkstemp(dir=p.parent, prefix=".schema-", suffix=".tmp")
                 os.close(fd)
                 pq.write_table(SCHEMAS[table].empty_table(), tmp)
-                os.chmod(tmp, 0o644)  # mkstemp makes it owner-only; schema files are read like any lake file
+                # mkstemp makes it owner-only; schema files are read like any lake file. GCSFuse (Cloud Run's
+                # /mnt/staging) refuses chmod, and its mount's file-mode applies there instead.
+                with contextlib.suppress(OSError):
+                    os.chmod(tmp, 0o644)
                 os.replace(tmp, p)
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
