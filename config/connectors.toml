@@ -1,0 +1,76 @@
+# One ingestion pipeline per connector (src/coffeedata/pipelines.py). Each entry is one scheduled job.
+#   schedule  "weekly" (on `weekday`, 0 = Monday) or "daily_shard" (shard = sha256(roaster_id) mod `shards`,
+#             run on the weekday equal to its shard, so a store is fetched the same day every week)
+#   rps, concurrency  a request budget shared by every store of the platform (omit: per-host spacing only)
+#   workers, chunk    worker threads; roasters per checkpointed part file
+#   deadline_min      the job's hard limit (Cloud Run task timeout); the runner kills it there
+# A connector's jobs write raw/connector=<name>/run_date=<d>/shard=<s>/data.parquet and a control manifest; the
+# weekly merge turns the latest good fetch per roaster into the lake's usual run.
+
+[connectors.shopify]
+schedule = "daily_shard"
+shards = 7
+rps = 1.5            # under 2 req/s even with the sweep: Shopify's IP-wide bucket is never approached
+concurrency = 4
+workers = 8
+chunk = 25
+hour = 3
+deadline_min = 240
+
+[connectors.woocommerce]
+schedule = "weekly"
+weekday = 2
+hour = 1
+workers = 32
+chunk = 50
+deadline_min = 240
+
+[connectors.squarespace]
+schedule = "weekly"
+weekday = 0
+hour = 1
+workers = 32
+chunk = 50
+deadline_min = 240
+
+[connectors.square_online]
+schedule = "weekly"
+weekday = 1
+hour = 1
+workers = 32
+chunk = 50
+deadline_min = 240
+
+[connectors.generic]
+schedule = "weekly"
+weekday = 3
+hour = 1
+workers = 32
+chunk = 50
+deadline_min = 240
+
+[sweep]
+hour = 9             # daily; retries parked stores from the control manifests
+waves_min = [0, 15, 60, 120]   # offsets of retry waves after Retry-After has passed ("over hours")
+refuse_after_jobs = 2           # refused in this many jobs at least refuse_gap_h apart: route to the HTML crawler
+refuse_gap_h = 1.0
+deadline_min = 240
+
+[html_fallback]
+hour = 13            # daily, after the sweep: refused stores only (stub: routing and hook, no parsing)
+
+[merge]
+weekday = 6
+hour = 21
+window_days = 7
+
+# Post-load jobs, each reading what the one before wrote (no calls between them):
+[enrich]             # rules for coffees that landed without them, then Claude's candidates (enrich.pending)
+weekday = 6
+hour = 22
+[build]              # `coffeedata build`: dbt build + tests (the gate)
+weekday = 6
+hour = 23
+[publish]            # `coffeedata publish`: upload the staged lake files
+weekday = 0
+hour = 0

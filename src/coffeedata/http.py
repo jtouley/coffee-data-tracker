@@ -141,7 +141,7 @@ class PoliteClient:
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
             return self._client.get(url, params=params)
-        with self._limiter.slot():
+        with self._limiter.slot(urlparse(url).hostname):
             r = self._client.get(url, params=params)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
         return r

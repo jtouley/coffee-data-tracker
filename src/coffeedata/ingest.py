@@ -9,26 +9,94 @@ body_hash). Re-running for the same run date only fetches roasters without a suc
 from __future__ import annotations
 
 import hashlib
+import heapq
+import json
 import logging
 import time
 from collections import Counter
-from collections.abc import Sequence
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from collections.abc import Callable, Iterator, Sequence
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor
+from concurrent.futures import wait as wait_any
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
+from pathlib import Path
+
+import httpx
 
 from . import extract, lineage, registry
 from .adapters import fetch_catalog
+from .adapters.shopify import PageBlocked, StoreBlocked
 from .classify import is_coffee
-from .http import PoliteClient, RequestStats
+from .http import BLOCK_STATUSES, PoliteClient, RequestStats, RobotsUnavailable
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
 
 log = logging.getLogger(__name__)
 
 INGESTABLE = {"pending", "active", "no_coffee", "no_catalog"}
 CHUNK = 200  # roasters per written and published batch: a crash loses at most one chunk
+DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters are retried this many times
+# A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
+# don't all wake and ask at the same instant.
+DEFERRED_SPREAD = 60.0
+# A store that pauses us on a catalog page (shopify.PageBlocked) is asked for that same page again after each of
+# these waits (at least its Retry-After), without holding a worker meanwhile; the pages it already served are kept.
+# After the last one it is parked, with its progress, for `coffeedata crawl-retry`.
+PAGE_BACKOFFS = (60.0, 120.0, 240.0)
+
+
+def _causes(e: BaseException | None) -> Iterator[BaseException]:
+    while e is not None:
+        yield e
+        e = e.__cause__
+
+
+def blocked(e: BaseException) -> bool:
+    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal."""
+    return any(
+        isinstance(c, RateLimited)
+        or (isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES)
+        for c in _causes(e)
+    )
+
+
+def deferrable(e: BaseException) -> bool:
+    """A failure worth another try once the rest of the run is done: rate limiting or a timeout. Never a refusal
+    (401, 403, 430: shopify.StoreBlocked), and never a page block, which ingest.run backs off itself. A robots.txt
+    that answered 429/5xx (not an unreachable host) is a store that is down for now, not gone."""
+    if any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
+        return False
+    return blocked(e) or any(
+        isinstance(c, httpx.TimeoutException) or (isinstance(c, RobotsUnavailable) and not c.unreachable)
+        for c in _causes(e)
+    )
+
+
+def parked_path(lake: Lake, run_date: str, roaster_id: str) -> Path:
+    """Where a parked store's progress (its blocked page and the products before it) waits for crawl-retry.
+    Outside every lake table's glob: dbt never reads it."""
+    return lake.root / "parked" / f"run_date={run_date}" / f"{roaster_id}.json"
+
+
+def save_parked(lake: Lake, run_date: str, roaster_id: str, progress: dict) -> None:
+    p = parked_path(lake, run_date, roaster_id)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    # body_text is excluded from a CatalogItem's dump; the parked pages' descriptions are kept with them
+    items = [i.model_dump(mode="json") | {"body_text": i.body_text} for i in progress["items"]]
+    doc = {"page": progress["page"], "items": items}
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(json.dumps(doc))
+    tmp.replace(p)
+
+
+def load_parked(lake: Lake, run_date: str) -> dict[str, dict]:
+    """Every parked store of the run: roaster_id -> {"page", "items"}, ready to pass to run(resume=...)."""
+    out = {}
+    for p in sorted((lake.root / "parked" / f"run_date={run_date}").glob("*.json")):
+        doc = json.loads(p.read_text())
+        out[p.stem] = {"page": doc["page"], "items": [CatalogItem.model_validate(i) for i in doc["items"]]}
+    return out
 
 
 @dataclass
@@ -39,25 +107,51 @@ class Result:
     error: str | None = None
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
+    deferrable: bool = False
+    blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
+    progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
 
     @property
     def coffees(self) -> list[CatalogItem]:
         return [i for i in self.items if is_coffee(i)]
 
 
-def ingest_one(client: PoliteClient, roaster: Roaster) -> Result:
+def ingest_one(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> Result:
     res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
     start = time.monotonic()
     with client.track() as res.stats:
         try:
             res.items = list(
-                {i.product_id: i for i in fetch_catalog(client, roaster)}.values()
+                {i.product_id: i for i in fetch_catalog(client, roaster, resume, known_products)}.values()
             )  # feeds repeat items
+        except PageBlocked as e:
+            res.error = f"{type(e).__name__}: {e}"[:300]
+            res.items = []  # never a partial catalog in the lake: the pages so far wait in `progress`
+            res.blocked = True
+            res.progress = {"page": e.page, "items": e.items, "wait": e.wait, "host": e.host}
         except Exception as e:  # noqa: BLE001 - any failure is this roaster's error, never the run's
             res.error = f"{type(e).__name__}: {e}"[:300]
             res.items = []
+            res.deferrable = deferrable(e)
+            res.blocked = blocked(e)
     res.duration_s = round(time.monotonic() - start, 3)
     return res
+
+
+def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None, known: int | None) -> Result:
+    if resume is None and known is None:
+        return ingest_one(client, roaster)
+    return ingest_one(client, roaster, resume, known)
+
+
+def known_products(lake: Lake) -> dict[str, int]:
+    """Each roaster's product count at its latest ok fetch with products: lets a Shopify short page end a catalog
+    that has reached its known size, and never one known to be bigger."""
+    q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
+            where status = 'ok' and products > 0 and roaster_id is not null group by 1"""
+    return dict(lake.connect().execute(q).fetchall())
 
 
 def sample_key(roaster_id: str) -> str:
@@ -113,6 +207,21 @@ def select_states(
     return todo, mode
 
 
+def select_parked(lake: Lake, run_date: str) -> tuple[list[registry.RoasterState], dict[str, dict]]:
+    """crawl-retry's work: the run's parked stores still without an ok fetch, and their progress."""
+    resume = load_parked(lake, run_date)
+    con = lake.connect()
+    done = {
+        r[0]
+        for r in con.execute(
+            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and status = 'ok'",
+            [date.fromisoformat(run_date)],
+        ).fetchall()
+    }
+    states = [s for s in registry.current(lake) if s.roaster.roaster_id in resume.keys() - done]
+    return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
+
+
 def manifest_rows(
     roasters: list[Roaster],
     run_date: date,
@@ -145,6 +254,7 @@ def rows_for(
     known_bodies: set[str],
     enriched: set[tuple[str, str, str]],
     code_version: str | None = None,
+    enrich_rules: bool = True,
 ) -> dict[str, list[dict]]:
     snaps, fetches, bodies, enrich = [], [], [], []
     for res in results:
@@ -189,19 +299,21 @@ def rows_for(
                     {"body_hash": it.body_hash, "body_text": it.body_text, "first_seen_run": run_date}
                 )
             key = (r.roaster_id, it.product_id, it.body_hash)
-            if it.product_id in coffee_ids and key not in enriched:
+            if enrich_rules and it.product_id in coffee_ids and key not in enriched:
                 enriched.add(key)
-                e = extract.rules(it)
-                enrich.append(
-                    e.model_dump()
-                    | {
-                        "extracted_at": res.fetched_at,
-                        "roaster_id": r.roaster_id,
-                        "product_id": it.product_id,
-                        "needs_llm": extract.needs_llm(e),
-                    }
-                )
+                enrich.append(rules_row(it, r.roaster_id, res.fetched_at))
     return {"snapshots": snaps, "fetches": fetches, "bodies": bodies, "enrichments": enrich}
+
+
+def rules_row(item: CatalogItem, roaster_id: str, at: datetime) -> dict:
+    """The rules enrichment of one coffee (method 'rules'): written by ingest, or post-load (pipelines.run_enrich)."""
+    e = extract.rules(item)
+    return e.model_dump() | {
+        "extracted_at": at,
+        "roaster_id": roaster_id,
+        "product_id": item.product_id,
+        "needs_llm": extract.needs_llm(e),
+    }
 
 
 def run(
@@ -211,11 +323,24 @@ def run(
     workers: int = 32,
     mode: str | None = None,
     shopify_rps: float = SHOPIFY_RPS,
+    per_host: bool = True,
+    client_kw: dict | None = None,
+    limits: dict[str, tuple[float, int]] | None = None,
+    chunk: int = CHUNK,
+    on_result: Callable[[Result], None] | None = None,
+    enrich_rules: bool = True,
+    quiet_hosts: Sequence[str] = (),
+    resume: dict[str, dict] | None = None,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
     a remote lake, before the first request. Only a 'full' manifest is the run's expected set (run_completeness);
-    without a mode it is recorded as null, which only adds to that set."""
+    without a mode it is recorded as null, which only adds to that set. resume: parked stores' progress
+    (load_parked), so a retry continues each from its blocked page. limits: more platforms that share one
+    request budget, adapter -> (requests/s, concurrency), as config/connectors.toml declares them. on_result: called
+    with every attempt's Result as it is collected. enrich_rules=False: extract and load only (ELT), no enrichments
+    rows; pipelines.run_enrich writes them after the load. quiet_hosts: hosts already known to block (a retry
+    sweep's), kept out of the burst detector."""
     statuses = {r.roaster.roaster_id: r.status for r in todo if isinstance(r, registry.RoasterState)}
     roasters = [r.roaster if isinstance(r, registry.RoasterState) else r for r in todo]
     rd = date.fromisoformat(run_date)
@@ -235,13 +360,14 @@ def run(
             f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
         ).fetchall()
     }
+    known = known_products(lake)
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
 
     def flush(chunk: list[Result]) -> None:
         batch = new_batch_id()
-        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched, version).items():
+        for table, rows in rows_for(chunk, rd, batch, known_bodies, enriched, version, enrich_rules).items():
             lake.write_partition(table, run_date, batch, rows)
         # Checkpoint: a remote lake gets each chunk as it's done, so a crash or timeout loses at most one
         # chunk, and re-running the week skips the roasters already fetched.
@@ -267,21 +393,132 @@ def run(
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
     # Shopify limits by client IP across all its stores, so its stores share one request budget.
-    shopify = PlatformLimiter("shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY)
-    with PoliteClient(limiters={"shopify": shopify}) as client, ThreadPoolExecutor(workers) as ex:
-        done: list[Result] = []
-        for fut in as_completed([ex.submit(ingest_one, client, r) for r in roasters]):
-            done.append(fut.result())
-            if len(done) == CHUNK:
+    budgets = {"shopify": (shopify_rps, SHOPIFY_CONCURRENCY)} | (limits or {})
+    limiters = {
+        name: PlatformLimiter(name, rate=rps, max_concurrent=conc, per_host=per_host)
+        for name, (rps, conc) in budgets.items()
+    }
+    shopify = limiters["shopify"]
+    # Known blockers being retried (a retry sweep's stores): their 429s pause only themselves, never the platform.
+    shopify.quiet_hosts |= set(quiet_hosts)
+    deferred: dict[str, int] = {}
+    retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
+    # Roasters that have answered every attempt this run with a block and never served a catalog page.
+    refusing: dict[str, int] = {}  # roaster -> attempts so far
+    with (
+        PoliteClient(limiters=limiters, **(client_kw or {})) as client,
+        ThreadPoolExecutor(workers) as ex,
+    ):
+        # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round
+        # is written before the next round starts: a parked roaster's error row is in the lake before it is
+        # retried, so a run that dies during the deferred rounds still shows it attempted (run_is_complete).
+        # Its retry is another fetches row; the run counts it ok if any attempt was (int_roaster_runs).
+        rounds = DEFERRED_ROUNDS + 1 if per_host else 1
+        progress: dict[str, dict] = {k: v | {"backoffs": 0} for k, v in (resume or {}).items()}
+        page_stats: Counter = Counter()
+        queue = roasters
+        for round_ in range(rounds):
+            if round_:
+                for (
+                    lim
+                ) in limiters.values():  # nothing left to overtake: wait out a store's pause in the worker
+                    lim.defer = False
+                deferred[f"round_{round_}"] = len(queue)
+            t0, spread = time.monotonic(), DEFERRED_SPREAD if round_ else 0.0
+            # (start time, order, roaster): a store is submitted when its time comes, so neither a deferred round's
+            # spread nor a page backoff holds a worker while it waits.
+            pending = [(t0 + spread * i / len(queue), i, r) for i, r in enumerate(queue)]
+            heapq.heapify(pending)
+            order = len(pending)
+            running: set = set()
+            parked: list[Roaster] = []
+            done: list[Result] = []
+            while pending or running:
+                now = time.monotonic()
+                while pending and pending[0][0] <= now:
+                    r = heapq.heappop(pending)[2]
+                    if any(d.roaster.roaster_id == r.roaster_id for d in done):
+                        # its blocked try's error row goes to the lake before the retry, so a job that dies
+                        # meanwhile still shows the store attempted (run_is_complete)
+                        flush(done)
+                        done = []
+                    p = progress.get(r.roaster_id)
+                    resume_at = p and {"page": p["page"], "items": p["items"]}
+                    running.add(ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id)))
+                timeout = max(0.0, pending[0][0] - now) if pending else None
+                if not running:
+                    time.sleep(timeout or 0.0)
+                    continue
+                finished, running = wait_any(running, timeout=timeout, return_when=FIRST_COMPLETED)
+                for fut in finished:
+                    res = fut.result()
+                    rid = res.roaster.roaster_id
+                    if round_:
+                        retried_ok[rid] = not res.error
+                    if res.error and res.blocked and not res.stats.pages and (not round_ or rid in refusing):
+                        refusing[rid] = refusing.get(rid, 0) + 1
+                    else:
+                        refusing.pop(rid, None)
+                    if res.progress is not None:  # blocked on a page: back off, then that page again
+                        p = progress.setdefault(rid, {"backoffs": 0})
+                        p |= {k: res.progress[k] for k in ("page", "items", "host")}
+                        if p["backoffs"] < len(PAGE_BACKOFFS):
+                            wait = max(res.progress["wait"], PAGE_BACKOFFS[p["backoffs"]])
+                            p["backoffs"] += 1
+                            page_stats["backoffs"] += 1
+                            res.error = (
+                                f"backoff {p['backoffs']} of {len(PAGE_BACKOFFS)} ({wait:.0f}s, then page "
+                                f"{p['page']} again): {res.error}"
+                            )[:300]
+                            shopify.quiet_hosts.add(res.progress["host"])
+                            heapq.heappush(pending, (time.monotonic() + wait, order, res.roaster))
+                            order += 1
+                        else:
+                            save_parked(lake, run_date, rid, p)
+                            page_stats["parked"] += 1
+                            never = p["page"] == 1 and not p["items"]
+                            res.error = (
+                                f"{'refused' if never else 'parked'}: page {p['page']} still blocked after "
+                                f"{len(PAGE_BACKOFFS)} backoffs; crawl-retry resumes it; last {res.error}"
+                            )[:300]
+                            if never:
+                                page_stats["parked_never_served"] += 1
+                    else:
+                        if not res.error:
+                            shopify.quiet_hosts.discard(progress.pop(rid, {}).get("host", ""))
+                            parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
+                        last = not (res.error and res.deferrable) or round_ == rounds - 1
+                        if last and rid in refusing and round_:
+                            res.error = (
+                                f"refused: answered a block to every catalog request in this run "
+                                f"({refusing[rid]} attempts); last {res.error}"
+                            )[:300]
+                        if not last:
+                            parked.append(res.roaster)
+                    if (
+                        on_result is not None
+                    ):  # every attempt, in order: a pipeline keeps the last per roaster
+                        on_result(res)
+                    done.append(res)
+                    if len(done) == chunk:
+                        flush(done)
+                        done = []
+            if done:
                 flush(done)
-                done = []
-        if done:
-            flush(done)
+            queue = parked
+            if not queue:
+                break
+        if retried_ok:
+            deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
+            deferred["refused"] = sum(1 for rid, ok in retried_ok.items() if not ok and rid in refusing)
+        deferred |= {f"page_{k}": v for k, v in page_stats.items()}
     return {
         "run_date": run_date,
         "roasters": len(roasters),
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
-        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses
+        "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
+        "deferred": deferred,  # roasters per deferred round, and those still failing after them
+        "limiters": {name: dict(lim.stats) for name, lim in limiters.items()},
     }

@@ -18,6 +18,12 @@ recent as (
     from runs group by roaster_id
 ),
 last_ok as (select * from {{ ref('stg_fetches') }} where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
+-- Coffees in that fetch, from the loaded snapshots rather than the fetch row's own count (ELT: ingestion only loads).
+last_ok_coffees as (
+    select s.roaster_id, count(*) filter (where s.is_coffee) as coffees
+    from {{ lake('snapshots') }} s join last_ok lo on s.roaster_id = lo.roaster_id and s.batch_id = lo.batch_id
+    group by 1
+),
 coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
     -- Wholesale listings (a roaster's wholesale twin of a retail coffee) aren't counted as more coffees.
@@ -40,7 +46,7 @@ select
         when coalesce(g.platform, r.seed_platform) is null
              or coalesce(g.platform, r.seed_platform) like 'http\_%' escape '\' then 'unreachable'
         when lo.roaster_id is null then 'pending'
-        when lo.coffees > 0 then 'active'
+        when coalesce(lc.coffees, 0) > 0 then 'active'
         when lo.products > 0 then 'no_coffee'
         else 'no_catalog'
     end as status,
@@ -52,4 +58,5 @@ left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
+left join last_ok_coffees lc using (roaster_id)
 left join coffees c using (roaster_id)

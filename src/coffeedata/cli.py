@@ -117,6 +117,23 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_pipeline(args: argparse.Namespace) -> None:
+    """One scheduled job of the per-connector pipelines (pipelines.py): what Cloud Scheduler would start."""
+    from . import pipelines
+
+    lake = Lake()
+    if args.step == "connector":
+        _print(pipelines.run_connector(lake, args.connector, args.run_date, shard_k=args.shard))
+    else:
+        step = {
+            "sweep": pipelines.run_sweep,
+            "html": pipelines.run_html_fallback,
+            "merge": pipelines.run_merge,
+            "enrich": pipelines.run_enrich,
+        }
+        _print(step[args.step](lake, args.run_date))
+
+
 def cmd_enrich(args: argparse.Namespace) -> None:
     from . import enrich, extract
 
@@ -547,6 +564,12 @@ def main(argv: list[str] | None = None) -> None:
         default=SHOPIFY_RPS,
         help="requests/s across all Shopify stores together (default %(default)s; halves itself on 429s)",
     )
+
+    pl = add("pipeline", cmd_pipeline, "one per-connector pipeline job (config/connectors.toml)")
+    pl.add_argument("step", choices=["connector", "sweep", "html", "merge", "enrich"])
+    pl.add_argument("--connector", help="for step connector: shopify, woocommerce, ...")
+    pl.add_argument("--run-date", type=_run_date, default=_today())
+    pl.add_argument("--shard", type=int, help="for a sharded connector: this shard instead of today's")
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
     c.add_argument("--limit", type=int, default=100_000)

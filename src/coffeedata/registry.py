@@ -125,7 +125,13 @@ recent as (
            count(*) filter (where rn <= {k} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
-last_ok as (select * from fetches where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1)
+last_ok as (select * from fetches where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
+-- Coffees in that fetch, from the loaded snapshots (not the fetch row's own count), as dim_roaster does.
+last_ok_coffees as (
+    select s.roaster_id, count(*) filter (where s.is_coffee) as coffees
+    from {snapshots} s join last_ok lo on s.roaster_id = lo.roaster_id and s.batch_id = lo.batch_id
+    group by 1
+)
 select
     r.roaster_id, r.name, r.city, r.state, r.locations, r.is_chain, r.opted_out,
     coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
@@ -139,7 +145,7 @@ select
         when coalesce(g.platform, r.seed_platform) is null
              or coalesce(g.platform, r.seed_platform) like 'http\_%' escape '\' then 'unreachable'
         when lo.roaster_id is null then 'pending'
-        when lo.coffees > 0 then 'active'
+        when coalesce(lc.coffees, 0) > 0 then 'active'
         when lo.products > 0 then 'no_coffee'
         else 'no_catalog'
     end as status
@@ -148,6 +154,7 @@ left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
+left join last_ok_coffees lc using (roaster_id)
 """
 
 
@@ -156,6 +163,7 @@ def state_sql(lake: Lake) -> str:
         registry=lake.scan("registry"),
         probes=lake.scan("probes"),
         fetches=lake.scan("fetches"),
+        snapshots=lake.scan("snapshots"),
         k=MAX_FAILURES,
     )
 
