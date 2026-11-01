@@ -6,7 +6,7 @@
 # The Tuesday run also does what weekly.yml did after a passing build, from the same served release: the facts-only
 # public export (PUBLIC_EXPORT_URL, a separate dataset or bucket, not the lake) and the Snowflake load. The weekly
 # pipeline, crawl to release, runs on Cloud Run (docs/ingestion/RUNBOOK.md): every connector crawls on Monday, and
-# its `build` job is scheduled for Tuesday 06:17 UTC (src/terraform/ingestion.tf), so 08:17 leaves two hours. The
+# its `build` job is scheduled for Tuesday 06:17 UTC (src/terraform/ingestion.tf) and must end by 10:17 (240-minute limit), so 11:17 runs after it. The
 # Tuesday run fails, without exporting, if no release is served or the served one is older than this week's Monday
 # run: it never re-exports last week's release in silence. Push and manual runs only render and deploy.
 #
@@ -17,7 +17,7 @@
 name: site
 on:
   schedule:
-    - cron: "17 8 * * 2"   # Tuesdays, two hours after the Cloud Run build (06:17)
+    - cron: "17 11 * * 2"  # Tuesdays, after the Cloud Run build (06:17, ends by 10:17)
   push:
     branches: [main]
     paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
