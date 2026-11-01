@@ -213,8 +213,8 @@ servers:
     schema: public
 ```
 
-Variables are allowed in string fields only; an integer field such as `port` or `primaryKeyPosition`
-can't hold `${...}`.
+Variables are allowed in string fields. `port` accepts an integer or a string, so `port: ${DB_PORT}` is
+fine; integer-only fields such as `primaryKeyPosition` or `partitionKeyPosition` can't hold `${...}`.
 
 ## Team, support, roles
 
