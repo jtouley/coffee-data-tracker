@@ -342,7 +342,7 @@ scheduled job.
 1. **Merge the cutover PR.** It does two things:
    - `.github/workflows/weekly.yml`: remove the `schedule:` block and keep `workflow_dispatch`, with its inputs
      (`sample`, `rollback_to`, `snowflake_migrate`, `accept_volume_change`), as the one-week fallback;
-   - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 0"` (Sunday, after the 09:17 build), plus the
+   - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 2"` (Tuesday, after the 06:17 build), plus the
      facts-only public export and the Snowflake load from the **served** release (moved from `weekly.yml`). The
      site deploy stays on Actions and never contacts a roaster.
 2. **Turn the schedule on only when both hold:** the cutover PR has merged, so `weekly.yml` on main has no
@@ -377,14 +377,16 @@ scheduled job.
    ```
    Any `MISMATCH`: stop and pause the schedule (§5). Set `ingest_schedule_enabled = true` and
    `ingest_image = "<the pinned image>"` in `terraform.tfvars`, so a later plan doesn't revert either.
-3. **The first week to watch:**
+3. **The first week to watch** (all UTC; DESIGN.md section 7 has the table): Mon 07:17 probe; Mon 09:17 all five
+   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 crawl-retry; Tue 03:17 merge;
+   Tue 04:17 enrich-week; Tue 06:17 build; Tue 11:17 the site deploy. Monday's release is published Tuesday.
    - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
    - the `job_manifests` rows: an attempt with only a `running` row died;
-   - Sunday's merge `detail.missing`: it should be empty;
+   - Tuesday's merge `detail.missing`: it should be empty;
    - the build's gate;
    - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row. No alert policy
      watches job failures yet (DESIGN.md, Next), so nobody is emailed: check the build execution's exit code;
-   - Sunday's site deploy.
+   - Tuesday's site deploy.
 4. **After one good week**, a follow-up PR removes `weekly.yml`'s crawl. Its rollback and Snowflake-migrate inputs
    move to a small manual workflow, or to `coffeedata rollback` run from the build image.
 

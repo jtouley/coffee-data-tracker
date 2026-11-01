@@ -290,8 +290,8 @@ Why:
 **Stays on GitHub Actions:** CI, the site deploy and issue-form handling. None of them contacts a roaster.
 - **Build + gate + publish moves to Cloud Run** (the `build` job: verdicts, `coffeedata build`, `publish`, then
   `egress-check`). That keeps the weekly pipeline in one runtime, from crawl to the release in the lake.
-- **The site deploy stays on Actions**, since GitHub Pages deploys from Actions. At cutover, `site.yml` gets a Sunday
-  schedule after the build. It renders the **served** release (it already reads only that), and takes over the
+- **The site deploy stays on Actions**, since GitHub Pages deploys from Actions. At cutover, `site.yml` gets a Tuesday
+  schedule after the build (11:17 UTC). It renders the **served** release (it already reads only that), and takes over the
   facts-only public export and the Snowflake load from `weekly.yml`. None of these contacts a roaster.
 
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
@@ -306,16 +306,44 @@ refused; its resume slot (or crawl-retry) picks up the rest.
 | `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
 | `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
 | `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
-| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` | default | Tue / Wed / Thu / Fri 09:17, resume 15:17 |
-| `merge` | `merge` | default | Sun 06:17 |
-| `enrich-week` | `enrich-week --submit` | default | Sun 07:17 |
-| `build` | `classify`, `build`, `publish`, `egress-check` | default | Sun 09:17 |
+| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` | default | Mon 09:17, resume 15:17 (with Shopify) |
+| `merge` | `merge` | default | Tue 03:17 |
+| `enrich-week` | `enrich-week --submit` | default | Tue 04:17 |
+| `build` | `classify`, `build`, `publish`, `egress-check` | default | Tue 06:17 |
 | `crawl-shopify-default-egress` | `crawl --connector shopify` | default | never: the confirmation run's control arm |
 
 That is 16 Scheduler entries. They are anchored at the weekly baseline (Monday 09:17 UTC, as `weekly.yml` today),
-in B's slots, and `ingest_schedule_enabled` switches all of them off for the confirmation run. Every connector has
-its own job, so the others could run on Monday alongside Shopify. That would put a week's fetches closer together
-under one run_date. It's a schedule change with no code change; make it if the jobs don't interfere.
+and `ingest_schedule_enabled` switches all of them off for the confirmation run.
+
+**The week (all UTC).** Every connector crawls on Monday, at the same time, so the release is stamped Monday (the
+week's run_date) and published Tuesday: served data is at most 8 days old when the next release replaces it, as the
+public contract (`latency`, `max_run_age_days` = 8) and `marketplace/LISTING.md` ("collected Mondays, published
+Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on Sunday) served data 6–13 days old.
+
+| When | Entry | What | Done by (240-min limit) |
+|---|---|---|---|
+| 1st of the month 03:17 | `discover` | Overture and OSM discovery, publish | 07:17 |
+| Mon 07:17 | `probe` | stale roasters' platforms, publish | 11:17 |
+| Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on the NAT IP, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
+| Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |
+| Mon 21:47 | `crawl-retry` | Shopify's parked stores, on the NAT IP | Tue 01:47 |
+| Tue 03:17 | `merge` | every connector's partition for Monday's week into the lake's tables | 07:17 |
+| Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (otherwise it reports `waiting` and sends nothing: run it again by hand) | 08:17 |
+| Tue 06:17 | `build` | verdicts, build + gate, publish, egress-check | 10:17 |
+| Tue 11:17 | `site.yml` (Actions, at cutover) | the site, the public export and the Snowflake load from the served release | |
+
+Every crawl, its resume and crawl-retry write under the week's Monday (`connectors.week_of`), and the merge,
+enrichment and build on Tuesday resolve the same Monday, so the merge finds each connector's partition. The gaps
+between merge, enrichment and build are the ones the Sunday slots had (1 h, then 2 h).
+
+**Five crawls at once.** They share no process and no instance: each job is its own Cloud Run execution (one task,
+2 vCPU, 2 GiB, 240 min), so Monday 09:17 runs 5 tasks (10 vCPU, 10 GiB), 6 if the probe is still running. Each
+writes only its own partition (`raw/connector=X/run_date=W/`), its own `job_manifests` attempt files and parked files
+named by roaster (only Shopify parks: `PageBlocked` is Shopify's); the staging bucket is shared, but no two jobs write
+the same path. Each job's `publish` uploads every staged lake file it finds, other jobs' included: a file another
+job sent and removed meanwhile is skipped (it re-checks that the file still exists and asks the dataset which paths it
+has, again on every retry), so the jobs' commits never conflict on content. Only crawl-shopify (and crawl-retry, in
+the evening, alone) uses the NAT, so its ports are as before. The roasters' sites are disjoint across connectors.
 
 **The NAT's ports.** Shopify's jobs send all their traffic through the NAT, the lake reads too: DuckDB reads the hf://
 lake with parallel range requests. The default of 64 static ports per VM most likely ran out in the confirmation run's
@@ -561,9 +589,10 @@ Next:
 8. **Conditional requests**: send `If-None-Match` and `If-Modified-Since` where an ETag is known, and log the share
    of 304s.
 9. **Lock the control writes**, so two attempts can't race on `job_manifests`.
-10. **Same-day connector schedule** (section 7), if the confirmation run shows the jobs don't interfere.
+10. **Same-day connector schedule** (section 7): done; every connector crawls Monday 09:17 and the merge, enrichment
+    and build run on Tuesday.
 11. **Cutover PR** (RUNBOOK.md): disable `weekly.yml`'s schedule, keeping `workflow_dispatch`, and give `site.yml` a
-    Sunday schedule plus the public export and Snowflake load. After one good week, remove `weekly.yml`'s crawl.
+    Tuesday schedule (11:17 UTC) plus the public export and Snowflake load. After one good week, remove `weekly.yml`'s crawl.
 12. **Revisit C** only on its trigger ("Deferred: daily shards (C)").
 13. **Roaster status as facts (Kimball; dbt review M3).** `dim_roaster` keeps descriptive attributes only: who the roaster is
     (name, site, platform, location). Status is business logic over run-dated outcomes, so it moves to facts
@@ -607,7 +636,7 @@ Next:
     Bound the cost of such catalogs without missing their coffees (for example a coffee collection or a
     product-type filter first, then the cap), measured on held-out stores (CLAUDE.md).
 
-Before next week's scheduled Sunday merge → enrich → build (PR #68's DevOps review; item 15 above is the first):
+Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps review; item 15 above is the first):
 
 27. **Chain merge → enrich → build by completion, not fixed times** (N2): `enrich-week` and `build` fail closed unless
     this week's `merge` end row is `done` in `job_manifests` (or one job runs the chain), so a slow merge never

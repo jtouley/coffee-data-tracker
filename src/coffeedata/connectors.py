@@ -68,17 +68,17 @@ CONNECTORS: dict[str, Connector] = {
     c.name: c
     for c in (
         Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
-        Connector("squarespace", 1, 9),
-        Connector("woocommerce", 2, 9),
-        Connector("square_online", 3, 9),
-        Connector("generic", 4, 9),
+        Connector("squarespace", 0, 9),
+        Connector("woocommerce", 0, 9),
+        Connector("square_online", 0, 9),
+        Connector("generic", 0, 9),
     )
 }
 # The slots Cloud Scheduler runs (src/terraform/ingestion.tf, at minute :17; the weekly baseline is Monday 09:17 UTC).
-MERGE_WEEKDAY, MERGE_HOUR = 6, 6  # Sunday 06:17 UTC, after every connector's resume slot
+MERGE_WEEKDAY, MERGE_HOUR = 1, 3  # Tuesday 03:17 UTC, after every connector's resume slot and crawl-retry
 # The rest of the week, one job each, timed by Cloud Scheduler and gated by the control table:
-ENRICH_HOUR = 7  # Sunday 07:17: post-load enrichment (Claude candidates from raw), after the merge
-BUILD_HOUR = 9  # Sunday 09:17: classify verdicts, dbt build + gate, then publish (cli weekly's last steps)
+ENRICH_HOUR = 4  # Tuesday 04:17: post-load enrichment (Claude candidates from raw), after the merge
+BUILD_HOUR = 6  # Tuesday 06:17: classify verdicts, dbt build + gate, then publish (cli weekly's last steps)
 
 
 def week_of(day: str) -> str:

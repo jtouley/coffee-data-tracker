@@ -79,25 +79,27 @@ locals {
     }
   }
 
-  # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): each connector's
-  # job, then its resume 6 h later; the Shopify parked-store retry that evening; Sunday merge, enrichment, build.
+  # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): every connector's
+  # job at once, each on its own instance (only Shopify's on the NAT), then each one's resume 6 h later; the Shopify
+  # parked-store retry that evening; Tuesday merge, enrichment, build. The release is stamped Monday and published
+  # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
   ingest_schedule = {
     "discover"                   = { job = "discover", cron = "17 3 1 * *" } # the 1st of each month
     "probe"                      = { job = "probe", cron = "17 7 * * 1" }
     "crawl-shopify"              = { job = "crawl-shopify", cron = "17 9 * * 1" }
     "crawl-shopify-resume"       = { job = "crawl-shopify", cron = "17 15 * * 1" }
     "crawl-retry"                = { job = "crawl-retry", cron = "47 21 * * 1" }
-    "crawl-squarespace"          = { job = "crawl-squarespace", cron = "17 9 * * 2" }
-    "crawl-squarespace-resume"   = { job = "crawl-squarespace", cron = "17 15 * * 2" }
-    "crawl-woocommerce"          = { job = "crawl-woocommerce", cron = "17 9 * * 3" }
-    "crawl-woocommerce-resume"   = { job = "crawl-woocommerce", cron = "17 15 * * 3" }
-    "crawl-square-online"        = { job = "crawl-square-online", cron = "17 9 * * 4" }
-    "crawl-square-online-resume" = { job = "crawl-square-online", cron = "17 15 * * 4" }
-    "crawl-generic"              = { job = "crawl-generic", cron = "17 9 * * 5" }
-    "crawl-generic-resume"       = { job = "crawl-generic", cron = "17 15 * * 5" }
-    "merge"                      = { job = "merge", cron = "17 6 * * 0" }
-    "enrich-week"                = { job = "enrich-week", cron = "17 7 * * 0" }
-    "build"                      = { job = "build", cron = "17 9 * * 0" }
+    "crawl-squarespace"          = { job = "crawl-squarespace", cron = "17 9 * * 1" }
+    "crawl-squarespace-resume"   = { job = "crawl-squarespace", cron = "17 15 * * 1" }
+    "crawl-woocommerce"          = { job = "crawl-woocommerce", cron = "17 9 * * 1" }
+    "crawl-woocommerce-resume"   = { job = "crawl-woocommerce", cron = "17 15 * * 1" }
+    "crawl-square-online"        = { job = "crawl-square-online", cron = "17 9 * * 1" }
+    "crawl-square-online-resume" = { job = "crawl-square-online", cron = "17 15 * * 1" }
+    "crawl-generic"              = { job = "crawl-generic", cron = "17 9 * * 1" }
+    "crawl-generic-resume"       = { job = "crawl-generic", cron = "17 15 * * 1" }
+    "merge"                      = { job = "merge", cron = "17 3 * * 2" }
+    "enrich-week"                = { job = "enrich-week", cron = "17 4 * * 2" }
+    "build"                      = { job = "build", cron = "17 6 * * 2" }
   }
 }
 
