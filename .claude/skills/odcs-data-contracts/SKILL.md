@@ -1,6 +1,6 @@
 ---
 name: odcs-data-contracts
-description: Write, convert, validate, fix and review data contracts in the Open Data Contract Standard (ODCS, Bitol, `*.odcs.yaml`, `kind: DataContract`), including the v3.2.0 AI `context` block. Use it whenever someone wants a data contract for a table, view, topic, API or dataset; turns SQL DDL, a dbt schema.yml, a JSON/Avro schema, a sample file or a plain description into ODCS; asks why a contract fails schema validation; wants quality rules, SLAs, relationships, servers or semantic/AI context added to a contract; upgrades an older ODCS (v2.x, v3.0/v3.1) contract; or wants a contract kept in sync with dbt models. Use it even when they just say "data contract" or "schema contract" without naming ODCS.
+description: Write, convert, validate, fix and review data contracts in the Open Data Contract Standard (ODCS, Bitol, `*.odcs.yaml`, `kind: DataContract`). Use it whenever someone wants a data contract for a table, view, topic, API or dataset; turns SQL DDL, a dbt schema.yml, a JSON/Avro schema, a sample file or a plain description into ODCS; asks why a contract fails schema validation; wants quality rules, SLAs, relationships or servers added to a contract; upgrades an older ODCS (v2.x, v3.0/v3.1) contract; or wants a contract kept in sync with dbt models. Use it even when they just say "data contract" or "schema contract" without naming ODCS. For guidance aimed at AI agents and BI tools (the `context` block, synonyms, measures), use odcs-context instead.
 ---
 
 <!--
@@ -23,8 +23,9 @@ jobs: produce YAML that validates, and keep every claim in it traceable to somet
 2. **Gather the source.** DDL, dbt models, sample rows, an existing contract, or the user's description.
    Read it fully before writing; columns, keys, nullability and allowed values come from here.
 3. **Write or edit the contract.** Follow [references/authoring.md](references/authoring.md): the skeleton,
-   type mapping, and the shapes for quality rules, relationships, SLAs and servers. For the `context` block
-   (guidance for AI agents and BI tools) read [references/context-block.md](references/context-block.md).
+   type mapping, and the shapes for quality rules, relationships, SLAs and servers. The `context` block
+   (guidance for AI agents and BI tools) needs facts only the data's owners have; hand that part to the
+   odcs-context skill, which interviews the user, rather than writing it from the schema alone.
 4. **Validate, then fix until valid.**
    ```bash
    python <skill-dir>/scripts/validate_contract.py path/to/contract.odcs.yaml
