@@ -131,17 +131,21 @@ def rollup(lake: Lake, run_date: str) -> int:
 
 def egress_flags(lake: Lake, job: str = "crawl") -> list[dict]:
     """IPs whose first-contact refusal share was above REFUSAL_FLAG on each of their last two runs of `job` (the
-    egress-check job exits non-zero; no automatic action). Confirmation-run arms (is_arm) are left out: they are
-    experiments, not production runs."""
-    by_ip: dict[str, list[tuple]] = {}
+    egress-check job exits non-zero; no automatic action). A run is a run_date: a main pass and its resume slot (or
+    any other attempt of the same week) are one run, their stores and refusals summed (ingest.run counts each store's
+    first contact once per run_date, so the sum counts each store once). Confirmation-run arms (is_arm) are left
+    out: they are experiments, not production runs."""
+    by_ip: dict[str, dict[date, list[int]]] = {}
     for r in rows(lake):
         if r["job"] != job or r["status"] == "running" or is_arm(r):
             continue
         for x in r["refusals"] or []:
-            by_ip.setdefault(x["ip"], []).append((r["started_at"], x["stores"], x["refused"]))
+            c = by_ip.setdefault(x["ip"], {}).setdefault(r["run_date"], [0, 0])
+            c[0] += x["stores"] or 0
+            c[1] += x["refused"] or 0
     out = []
-    for ip, runs in by_ip.items():
-        last = sorted(runs)[-2:]
-        if len(last) == 2 and all(n and k / n > REFUSAL_FLAG for _, n, k in last):
-            out.append({"ip": ip, "shares": [round(k / n, 3) for _, n, k in last]})
+    for ip, weeks in by_ip.items():
+        last = [weeks[d] for d in sorted(weeks)[-2:]]
+        if len(last) == 2 and all(n and k / n > REFUSAL_FLAG for n, k in last):
+            out.append({"ip": ip, "shares": [round(k / n, 3) for n, k in last]})
     return out

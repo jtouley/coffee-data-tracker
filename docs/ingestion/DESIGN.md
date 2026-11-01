@@ -362,12 +362,14 @@ thing to test (Next).
   data shows otherwise.
 - **Every run logs each egress IP and its refusals** in `job_manifests`: `egress_ips` lists every IP seen (at start,
   at end, and on blocks), and `refusals[ip, stores, refused]` counts first-contact refusals (429/430 before any page)
-  per store, attributed to the IP its first block left from. The IP comes from `COFFEEDATA_EGRESS_IP` (a dedicated NAT
+  per store, attributed to the IP its first block left from. A store's first contact is its first attempt in the
+  run_date: a resume slot or crawl-retry never counts a store an earlier pass of the week already tried. The IP comes from `COFFEEDATA_EGRESS_IP` (a dedicated NAT
   IP is known in advance) or from `COFFEEDATA_EGRESS_ECHO_URL`, a plain "what is my IP" endpoint, never a store. That
   lookup is cached 60 s, since default egress can change IP between connections. With neither set, the IP is
   recorded as unknown.
 - **The 8% check**: `coffeedata egress-check` flags an IP with more than 8% first-contact refusals on two production
-  crawls in a row (confirmation-run arms are left out), and the build job's execution exits non-zero. Nobody is
+  runs in a row (a run is a run_date: a main pass and its resume are summed into one; confirmation-run arms are
+  left out), and the build job's execution exits non-zero. Nobody is
   emailed yet: there is no alert policy on job failures (Next). There is no automatic action.
 - **Escalation, only if the data says so**: Cloud NAT with 1 IP, then N IPs, then a separate egress-swap job. Never
   rotate IPs to dodge limits.
@@ -415,6 +417,31 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
     overlap, and arm 3 ended inside 240 min; otherwise full rate stays;
   - if the low rate wins but a whole week's Shopify crawl at that rate can't fit one job's limit, that is the trigger
     to revisit C.
+
+### 10.1 Confirmation run results (2026-11-01)
+
+The arms ran one after another (not arms 1 and 2 together, as planned) on image 7419da12, salt
+`confirm-2026-11-01`, run week 2026-11-02. Shares with Wilson 95% intervals:
+
+| | ok share | first-contact refusals | 429/430/503 | challenges | fetch window |
+|---|---|---|---|---|---|
+| arm 1, default egress, full rate | 349/351 = 99.4% [97.9, 99.8] | 4 = 1.1% [0.4, 2.9] | 0/0/4, all Cloudflare JSON 503s with retry-after, all recovered on retry | 0 | 5.5 min |
+| arm 2, dedicated NAT IP, full rate | 363/364 = 99.7% [98.5, 100] | 0 [0, 1.0] | 0/0/0 | 0 | 3.9 min |
+| arm 3, dedicated IP, 0.5 rps | 355/355 = 100% [98.9, 100] | 0 [0, 1.1] | 0/0/0 | 0 | 23 min |
+
+Errors: arm 1, javamaster.com (404) and biggunscoffee.com (robots unavailable, closed); arm 2, kaldi.com (page cap).
+
+- **Rule 1 (egress):** dedicated is directionally better, but the intervals overlap, so it isn't statistically
+  shown. The arms ran about 2 h apart, so time of day is a confounder.
+- **Rule 2 (rate):** the low rate gives no material gain at about 6× the time, so full rate stays.
+- **Decision (owner):** keep the dedicated IP for Shopify: directionally better, about $4–6/month, and the stable
+  identity that Web Bot Auth and Shopify's higher-limits form need. Every other connector stays on default egress.
+- **Infra lessons:**
+  - GCSFuse refuses chmod (fixed);
+  - Cloud NAT's default of 64 ports per VM was exhausted by DuckDB's parallel HF reads (fixed with dynamic ports,
+    1,024–8,192, and connect retries);
+  - set `max_retries = 0` for crawl jobs.
+- **C (daily shards) stays deferred:** on Cloud Run egress the refusal rate is already about 0–1%.
 
 ## 11. Closed and unavailable stores (this PR)
 
@@ -511,10 +538,17 @@ Done in this PR:
   page reads as `unavailable`; `fct_price_event` and `stg_run_walk` handle partial runs. After arm 2's crash on
   its first lake read: NAT dynamic port allocation (1,024–8,192 ports per VM) and a short retry of a job's first
   lake reads on a dropped connection (section 7).
+- **Re-review fixes (PR #68):** the RUNBOOK results query filters on salt and run_date and counts each arm's latest
+  successful attempt, with a "re-running after a failed arm" procedure; `egress-check` counts a store's first contact
+  once per run_date (not per process) and treats a main pass and its resume as one run, so a resume's refusers can't
+  raise a false alarm; the `known_bodies` scan and crawl-retry's done query retry a dropped connection too.
+- **DevOps review blockers (PR #68):** every job runs one image pinned by digest (`ingest_image`), since Cloud Run
+  resolves a tag only when a job is created or updated; the cutover turns the schedule on only after `weekly.yml`'s
+  schedule is gone from main and no arm is running; the jobs ignore the `client`/`client_version` a hand `gcloud`
+  update stamps.
 
 Next:
-1. **Confirmation run** (section 10) on Cloud Run: default egress against one dedicated NAT IP, and full speed
-   against a low rate (`src/terraform/ingestion.tf`, `docs/ingestion/RUNBOOK.md`).
+1. ~~**Confirmation run**~~: done 2026-11-01 (section 10.1). The dedicated IP stays for Shopify, at full rate.
 2. **`unavailable` for a dead domain** (a 404 or DNS failure for the whole domain) after two runs at least a day
    apart.
 3. **Under a true IP-wide limit**, count distinct stores blocking together even while they are in page backoff (B's
@@ -544,8 +578,9 @@ Next:
     `dim_roaster`'s status logic moves out in that PR, with its own real-lake comparison (it would change
     kaldi.com, steamshovelcoffee.com and sumerce.coffee, section 4).
 14. **Internal contracts as ODCS YAML**, generated from `lake.SCHEMAS` and `contract_docs.py` so they can't drift.
-15. **Job-failure alert policy**: a Cloud Monitoring alert on `cloud_run_job` failed executions (egress-check,
-    build gate, a crashed crawl) to the app's notification channel. Until then nobody is emailed.
+15. **Job and Scheduler failure alerts** (before next week; DevOps review N1): a Cloud Monitoring alert on
+    `cloud_run_job` failed executions (egress-check, build gate, a crashed crawl) and a log-match alert on Cloud
+    Scheduler errors, both to the app's notification channel. Until then nobody is emailed.
 16. **#67: a 503 on `.js` parks `.js` like a 429**, and the store continues on its pages.
 17. **#67: `/collections/all` unioned with the sitemap** for every store (Atlas: 39 of 41 coffees missing from its
     sitemap).
@@ -559,3 +594,31 @@ Next:
 22. **Held-out evaluation of the `unavailable` rule** (CLAUDE.md): count the stores it marks on the real lake and
     check each by hand while there are 50 or fewer; a full split-and-score if more. It waits for data: no store in the
     lake is marked `unavailable` yet.
+23. **A merge deletes the arms' slice dirs** (re-review R5): `merge`'s `rmtree(partition)` takes `slice=*/` with it.
+    Safe today (arms never land, and the RUNBOOK deletes the slices afterwards); skip `slice=*` subdirectories before
+    slices are reused in a production week.
+24. **`crawl-retry` has no `--slice`** (R6): an arm's deadline-parked stores could only be resumed into the
+    production partition, with no `job_manifests` row. The RUNBOOK forbids crawl-retry during a confirmation run;
+    add `--slice` if arm resumes are ever wanted.
+25. **`unavailable_reason` on 429/430/503 pages** (R7): a throttling or maintenance page containing "store is
+    currently unavailable" reads as closed for the week. The closed-store page is a 402; exclude `BLOCK_STATUSES`
+    from `closed_page`.
+26. **Big, mostly non-coffee catalogs:** kaldi.com hit the 60-page cap (over 15k products, mostly equipment parts).
+    Bound the cost of such catalogs without missing their coffees (for example a coffee collection or a
+    product-type filter first, then the cap), measured on held-out stores (CLAUDE.md).
+
+Before next week's scheduled Sunday merge → enrich → build (PR #68's DevOps review; item 15 above is the first):
+
+27. **Chain merge → enrich → build by completion, not fixed times** (N2): `enrich-week` and `build` fail closed unless
+    this week's `merge` end row is `done` in `job_manifests` (or one job runs the chain), so a slow merge never
+    hands enrichment or the build a half-merged week.
+28. **A service account per job class** (N3): only `enrich-week` and `build` can read `ANTHROPIC_API_KEY`; the crawl
+    jobs, which parse untrusted roaster HTML, can't.
+29. **Ingestion secrets apart from the app's** (N4): `INGEST_HF_TOKEN` (fine-grained to the dataset) and
+    `INGEST_ANTHROPIC_API_KEY`, so rotating one after an ingestion incident never breaks the public app.
+30. **A budget above the cost estimate** (N6): `budget_usd` is $5 against an estimated $5–8, so its alerts would
+    always fire. Raise it (e.g. $20–25) and add a billable-instance-time alert for the jobs.
+31. **A dedicated Cloud Build service account** (N7) with only Artifact Registry write and log writing, not the
+    default Compute SA.
+32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
+    in `ingest.Dockerfile`, with Artifact Registry vulnerability scanning.

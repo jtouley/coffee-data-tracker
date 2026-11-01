@@ -212,18 +212,16 @@ def _done_and_tried(lake: Lake, run_date: str) -> tuple[set[str], set[str]]:
     return done, tried
 
 
+def _known_bodies(lake: Lake) -> set[str]:
+    """Every body_hash the lake already holds: a description is written once, at its first sighting."""
+    q = f"select distinct body_hash from {lake.scan('bodies')}"
+    return {r[0] for r in lake.connect().execute(q).fetchall()}
+
+
 def select_parked(lake: Lake, run_date: str) -> tuple[list[registry.RoasterState], dict[str, dict]]:
     """crawl-retry's work: the run's parked stores still without an ok fetch, and their progress."""
     resume = load_parked(lake, run_date)
-    con = lake.connect()
-    done = {
-        r[0]
-        for r in con.execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? "
-            "and status in ('ok', 'unavailable')",
-            [date.fromisoformat(run_date)],
-        ).fetchall()
-    }
+    done, _ = retry_transient(_done_and_tried, lake, run_date)  # crawl-retry's first lake read: retried
     states = [s for s in registry.current(lake) if s.roaster.roaster_id in resume.keys() - done]
     return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
 
@@ -339,15 +337,15 @@ def run(
         "run_manifests", run_date, manifest, manifest_rows(roasters, rd, manifest, statuses, mode, version)
     )
     lake.publish(f"ingest {run_date} manifest {manifest}")  # kept even if the job dies before its first chunk
-    con = lake.connect()
-    known_bodies = {
-        r[0] for r in con.execute(f"select distinct body_hash from {lake.scan('bodies')}").fetchall()
-    }
+    known_bodies = retry_transient(_known_bodies, lake)  # the widest scan a crawl makes: retried
     known = known_products(lake)
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
-    first_seen: set[str] = set()
+    # A first contact is a store's first attempt in the run date, not in this process: a store an earlier pass of
+    # the same run_date already tried (the main pass a resume slot follows, or the crawl a crawl-retry resumes) is
+    # never a first contact again, so a resume's refusers don't count twice towards egress-check.
+    first_seen: set[str] = set(retry_transient(_done_and_tried, lake, run_date)[1])
     by_ip: dict[str, Counter] = {}
 
     def flush(chunk: list[Result]) -> None:

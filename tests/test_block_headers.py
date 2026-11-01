@@ -90,6 +90,23 @@ def test_every_block_status_is_recorded_with_its_headers_and_egress_ip(lake, moc
     assert job["refusals"] == [{"ip": "203.0.113.7", "stores": 5, "refused": fc["refused"]}]
 
 
+def test_a_resume_of_the_same_run_date_has_no_first_contacts_from_the_earlier_pass(lake, mock, monkeypatch):
+    """R2: first contact is per store per run_date, not per process. The resume slot (or crawl-retry) re-asks the
+    main pass's refusers; counted again, they made its refusal share near 100% by construction."""
+    fake_time(monkeypatch)
+    mock.get("https://wall.com/products.json").mock(return_value=httpx.Response(430))
+    mock.get("https://fine.com/products.json").mock(return_value=httpx.Response(200, json={"products": []}))
+    mock.get("https://new.com/products.json").mock(return_value=httpx.Response(200, json={"products": []}))
+    kw = {"workers": 1, "shopify_rps": 1000, "client_kw": FAST}
+    main = ingest.run(lake, [_r("wall.com"), _r("fine.com")], "2026-11-02", **kw)
+    assert (main["first_contact"]["stores"], main["first_contact"]["refused"]) == (2, 1)
+    # the resume: wall.com is still refused, and new.com is the only store not tried this week
+    resume = ingest.run(lake, [_r("wall.com"), _r("new.com")], "2026-11-02", **kw)
+    assert (resume["first_contact"]["stores"], resume["first_contact"]["refused"]) == (1, 0)
+    week_after = ingest.run(lake, [_r("wall.com")], "2026-11-09", **kw)  # a new run_date: first contact again
+    assert (week_after["first_contact"]["stores"], week_after["first_contact"]["refused"]) == (1, 1)
+
+
 def test_egress_ip_from_an_echo_endpoint_is_reused_for_a_minute(monkeypatch):
     monkeypatch.delenv("COFFEEDATA_EGRESS_IP")
     monkeypatch.setenv("COFFEEDATA_EGRESS_ECHO_URL", "https://echo.example/ip")

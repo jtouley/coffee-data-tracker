@@ -7,6 +7,7 @@ otherwise.
 ```sh
 export PROJECT=coffee-data-tracker REGION=us-central1
 export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
+export WEEK=2026-11-02   # the confirmation run's week (§3)
 ```
 
 ## 0. Before you start
@@ -24,8 +25,8 @@ export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
 
 ## 1. Build the image
 
-The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`), so **the image must exist before the first
-apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
+The jobs reference `$IMAGE` (`.../registry-coffee/ingest:latest`) until `ingest_image` pins a digest (§4), so **the
+image must exist before the first apply**: a job whose image is missing fails to create. The app's Artifact Registry repository already exists.
 
 Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
@@ -44,7 +45,10 @@ gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml --subs
 gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
 ```
 
-The jobs run `:latest`, so every execution started after a build uses it; nothing needs re-applying.
+**A build alone changes no job.** Cloud Run resolves an image tag to a digest when a job is created or updated, not
+on each execution, so after a rebuild every job keeps running the digest it was last created or updated with. To move
+the jobs to a new build, pin it by digest and apply (`-var ingest_image=<repo>/ingest@sha256:<digest>`, §4 step 2):
+every job then runs the same image, and the plan shows the change.
 
 ## 2. Init, plan, apply
 
@@ -53,7 +57,19 @@ job runs `$IMAGE`. This section is for a fresh project, or to check that the liv
 
 - **In production**, `terraform plan -var ingest_schedule_enabled=false` should show only `max_retries` going from 1
   to 0 on the `crawl-*` jobs that don't have it yet (this commit sets it; the two Shopify crawl jobs may already have
-  it from `gcloud run jobs update --max-retries 0`). Anything else: stop.
+  it from `gcloud run jobs update --max-retries 0`; the `client`/`client_version` that update stamps are ignored).
+  Anything else: stop.
+- **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
+  endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
+  `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
+
+  ```sh
+  gcloud compute routers nats describe registry-coffee-shopify-egress --router=registry-coffee-ingest \
+    --region=us-central1 \
+    --format='value(enableDynamicPortAllocation,enableEndpointIndependentMapping,minPortsPerVm,maxPortsPerVm)'
+  ```
+
+  It should print `True False 1024 8192`. Anything else: run the §3 `nats update` command first, then plan again.
 - **In a fresh project**, expect the plan below.
 
 ```sh
@@ -101,6 +117,9 @@ If the first two print `(none)` as well, look at the whole template before trust
 `gcloud run jobs describe crawl-shopify --region $REGION --format=yaml | grep -i -A2 vpc`.
 
 ## 3. Confirmation run: Shopify, three arms (today)
+
+Ran on 2026-11-01 (salt `confirm-2026-11-01`, week 2026-11-02, image 7419da12). The results and the decision are in
+DESIGN.md §10.1. The steps below are kept for a repeat.
 
 Each arm crawls one third of the Shopify roasters, chosen by a salted hash, so the arms' stores don't overlap. From
 this commit on, the hash is of the roaster's **host**, so roaster_ids that share one store (24 hosts serve 49 of the
@@ -154,7 +173,9 @@ under 2026-11-02; Monday's GitHub weekly run doesn't read them, and from this co
 stays as the fallback** (09:17 UTC on 2026-11-02). Nothing enforces that it starts after the arms end, so keep to the
 latest start time below.
 
-Choose a salt and keep it with the results, e.g. `SALT=confirm-2026-11a`.
+Choose a salt and keep it with the results. `arms.sh` takes it from the environment or as its first argument
+(`export SALT=confirm-2026-11-01`, or `sh arms.sh confirm-2026-11-01`), never a hardcoded default, so a re-run with a
+new salt can't reuse the old one by accident.
 
 | Arm | Starts | Job (network) | Slice | Rate |
 |---|---|---|---|---|
@@ -176,7 +197,9 @@ Shell ends idle sessions, so don't leave the sequence in an interactive shell: p
 cat > arms.sh <<'SH'
 #!/bin/sh
 set -u
-SALT=confirm-2026-11a WEEK=2026-11-02 REGION=us-central1
+SALT=${1:-${SALT:?pass the salt as the first argument or set SALT}}
+WEEK=${WEEK:-2026-11-02} REGION=${REGION:-us-central1}
+echo "salt=$SALT week=$WEEK"
 date -u   # the start: no later than 00:45 UTC on 2026-11-02
 
 # Arm 1: default egress, full rate (in the background)
@@ -198,7 +221,7 @@ gcloud run jobs execute crawl-shopify --region $REGION --wait \
 date -u   # arm 3 has ended
 wait   # for arm 1
 SH
-tmux new-session -d -s arms 'sh arms.sh > arms.log 2>&1'   # or: nohup sh arms.sh > arms.log 2>&1 &
+tmux new-session -d -s arms "sh arms.sh $SALT > arms.log 2>&1"   # or: nohup sh arms.sh "$SALT" > arms.log 2>&1 &
 tmux attach -t arms   # to watch; detach with Ctrl-b d, and the sequence keeps running
 ```
 
@@ -209,6 +232,18 @@ An arm that reaches its deadline is a finished arm: from this commit on it exits
 deadline reached, N roasters left` to stderr. Its `job_manifests` end row says `deadline`, with `skipped` = N, and its
 results count. (The 79464cd image still exits 1 on a deadline; with `--max-retries 0` nothing is retried, and the
 execution just shows as failed.)
+
+**Re-running after a failed arm.** Keep all of one salt's arms on one image digest: a different image can draw
+different thirds and runs different code. Record the digest each arm ran (`gcloud run jobs executions describe <execution>
+--region $REGION --format='value(spec.template.spec.containers[0].image)'`; a job keeps the digest of its last create or
+update, so don't update a job between arms), and check that
+every row of the salt has the same `code_version` in the results query. Then either:
+- **re-run only the failed arm(s)** on the same digest, with the same salt and `WEEK`. The finished arms' rows stay
+  valid, and the results query counts each arm's latest successful attempt. The arms no longer ran at the same time:
+  say so with the results, since time of day then confounds the egress comparison; or
+- **re-run all three arms with a new salt**, if the image has changed (a fix was built) or its digest is unknown.
+  First clear the slices and parked progress (the `gcloud storage rm` at the end of this section), so the new arms
+  don't skip the old run's ok stores or compact its rows in, then `sh arms.sh <new salt>`.
 
 **A repeat on another day needs a week of its own.** A crawl skips every store with an ok fetch under its run_date,
 and Monday's GitHub run writes 2026-11-02 fetches, so repeating with `WEEK=2026-11-02` would crawl almost nothing,
@@ -235,16 +270,20 @@ mkdir -p build/confirm && gcloud storage cp -r \
   "gs://$PROJECT-ingest-staging/raw/connector=shopify" build/confirm/
 export COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data
 export HF_TOKEN="$(gcloud secrets versions access latest --secret HF_TOKEN)"   # read access; never echo it
+export SALT WEEK   # the salt and week of the arms to read
 uv run python - <<'EOF'
+import os
+
 from coffeedata.lake import Lake
 
+SALT, WEEK = os.environ["SALT"], os.environ["WEEK"]
 lake = Lake()
 con = lake.connect()
 # Wilson 95% bounds for k of n (s = -1 lower, +1 upper)
 con.sql("create macro wilson(k, n, s) as "
         "(k/n + 1.9208/n + s * 1.96 * sqrt(k/n * (1 - k/n) / n + 0.9604 / n^2)) / (1 + 3.8416/n)")
 print(con.sql(f"""
-  select json_extract_string(detail, '$.arm') as arm, attempt_id, started_at, status,
+  select json_extract_string(detail, '$.arm') as arm, attempt_id, started_at, status, code_version,
          json_extract_string(detail, '$.egress') as egress, r.ip, ended_at - started_at as wall,
          todo, ok, errors, parked, skipped, requests, http_429, http_430,
          round(ok / todo, 3) as ok_share,
@@ -252,20 +291,27 @@ print(con.sql(f"""
          r.refused, r.stores, round(r.refused / r.stores, 3) as refused_share,
          round(wilson(r.refused, r.stores, -1), 3) as lo, round(wilson(r.refused, r.stores, 1), 3) as hi
   from (select *, unnest(refusals) as r from {lake.scan('job_manifests')}
-        where job = 'crawl' and connector = 'shopify' and status <> 'running')
-  where json_extract_string(detail, '$.arm') is not null order by arm, started_at"""))
-print(con.sql("""
+        where job = 'crawl' and connector = 'shopify' and status in ('done', 'deadline')
+          and json_extract_string(detail, '$.salt') = '{SALT}' and run_date = date '{WEEK}')
+  where json_extract_string(detail, '$.arm') is not null
+  -- each arm's latest successful attempt of this salt (all its egress-IP rows)
+  qualify dense_rank() over (partition by json_extract_string(detail, '$.arm')
+                             order by started_at desc, attempt_id desc) = 1
+  order by arm, r.ip"""))
+print(con.sql(f"""
   select b.egress_ip, b.status, count(*) as blocks,
          count(*) filter (where b.cf_mitigated = 'challenge') as challenges,
          count(*) filter (where b.content_type like 'text/html%') as html,
          count(*) filter (where b.retry_after is not null) as with_retry_after
-  from (select unnest(blocks) as b from 'build/confirm/connector=shopify/run_date=*/slice=*/fetches.parquet')
+  from (select unnest(blocks) as b from 'build/confirm/connector=shopify/run_date={WEEK}/slice=*/fetches.parquet')
   group by all order by all"""))
 EOF
 ```
 
-- One row per arm and egress IP. More than one row for an arm with different `attempt_id`s means the arm ran twice
-  (a retry): count only its first attempt.
+- One row per arm and egress IP, from each arm's **latest successful attempt of this salt** (`done` or `deadline`,
+  filtered on `detail.salt` and `run_date`). An earlier attempt of the same arm (a crash, a re-run) is left out. All
+  rows should show one `code_version`; if not, the salt's arms ran on different images (see "Re-running after a
+  failed arm").
 - `ok_share` with `ok_lo`–`ok_hi` is the arm's ok stores over the stores in its slice (`todo`), with Wilson 95%. The
   slices differ in size (about 357 ± 15), so compare shares, never counts.
 - `refused_share` with `lo`–`hi` is the first-contact refusal share per egress IP, with Wilson 95%.
@@ -284,8 +330,8 @@ Afterwards, clear the confirmation run's partition and parked progress (the arms
 never read as a crawl):
 
 ```sh
-gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=$WEEK" \
-  "gs://$PROJECT-ingest-staging/parked/run_date=$WEEK"
+gcloud storage rm -r "gs://$PROJECT-ingest-staging/raw/connector=shopify/run_date=${WEEK:?set WEEK}" \
+  "gs://$PROJECT-ingest-staging/parked/run_date=${WEEK:?set WEEK}"
 ```
 
 ## 4. Cutover: Monday's ship moves every connector at once
@@ -299,15 +345,38 @@ scheduled job.
    - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 0"` (Sunday, after the 09:17 build), plus the
      facts-only public export and the Snowflake load from the **served** release (moved from `weekly.yml`). The
      site deploy stays on Actions and never contacts a roaster.
-2. Rebuild the image from the merged main with Cloud Build (§1; pushes from Cloud Shell are refused). Then turn the
-   schedule on:
+2. **Turn the schedule on only when both hold:** the cutover PR has merged, so `weekly.yml` on main has no
+   `schedule:` (otherwise GitHub and Cloud Scheduler both crawl Monday at 09:17), and no confirmation arm is running
+   (one would share the NAT IP and the week with `crawl-shopify`). Check both first:
    ```sh
+   gh api repos/jtouley/coffee-data-tracker/contents/.github/workflows/weekly.yml --jq .content | base64 -d \
+     | grep -c '^ *schedule:'   # must print 0
+   for j in crawl-shopify crawl-shopify-default-egress; do
+     gcloud run jobs executions list --job $j --region $REGION --limit 3 \
+       --format='table(name,status.startTime,status.completionTime)'   # every row has a completion time
+   done
+   ```
+   Then build the image from the merged main with Cloud Build (§1), read its digest from the build output, and pin
+   every job to it while turning the schedule on:
+   ```sh
+   git checkout main && git pull
+   DIGEST=$(gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
+     --substitutions "_IMAGE=$IMAGE" --suppress-logs --format='value(results.images[0].digest)' .)
+   PINNED="${IMAGE%:*}@${DIGEST:?the build printed no digest}"; echo "$PINNED"
+   gcloud artifacts docker images describe "$PINNED" --format='value(image_summary.digest)'   # the same digest
    cd src/terraform
-   terraform plan -var ingest_schedule_enabled=true -out ingest.plan   # 16 to add (google_cloud_scheduler_job.ingest), 0 to change, 0 to destroy
+   terraform plan -var ingest_image="$PINNED" -var ingest_schedule_enabled=true -out ingest.plan
+   # 16 to add (google_cloud_scheduler_job.ingest), 12 to change (each job's image, to $PINNED), 0 to destroy
    terraform apply ingest.plan
+   for j in $(terraform output -json ingest_jobs | jq -r '.[]'); do   # every job's template runs the pinned digest
+     img=$(gcloud run jobs describe "$j" --region $REGION \
+       --format='value(spec.template.spec.template.spec.containers[0].image)')
+     [ "$img" = "$PINNED" ] && echo "ok $j" || echo "MISMATCH $j: $img"
+   done
    gcloud scheduler jobs list --location $REGION --filter="name~registry-coffee-" --format="table(name,schedule,state)"
    ```
-   Set `ingest_schedule_enabled = true` in `terraform.tfvars`, so a later plan doesn't remove it.
+   Any `MISMATCH`: stop and pause the schedule (§5). Set `ingest_schedule_enabled = true` and
+   `ingest_image = "<the pinned image>"` in `terraform.tfvars`, so a later plan doesn't revert either.
 3. **The first week to watch:**
    - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
    - the `job_manifests` rows: an attempt with only a `running` row died;

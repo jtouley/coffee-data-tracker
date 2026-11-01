@@ -382,3 +382,60 @@ def test_a_dropped_connection_at_a_jobs_first_lake_read_is_retried(monkeypatch):
     with pytest.raises(duckdb.IOException):
         lake_mod.retry_transient(always)
     assert waits == list(lake_mod.RETRY_WAITS)
+
+
+class _FlakyConnection:
+    """A DuckDB connection whose first query matching `needle` fails like a NAT out of ports."""
+
+    def __init__(self, con, needle, failures):
+        self.con, self.needle, self.failures = con, needle, failures
+
+    def execute(self, q, *a):
+        import duckdb
+
+        if self.needle in q and self.failures:
+            self.failures.pop()
+            raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+        return self.con.execute(q, *a)
+
+    def __getattr__(self, name):
+        return getattr(self.con, name)
+
+
+def _flaky(monkeypatch, lk, needle, times=1):
+    from coffeedata import lake as lake_mod
+
+    waits: list[float] = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    failures = [1] * times
+    connect = lk.connect
+    monkeypatch.setattr(lk, "connect", lambda *a, **k: _FlakyConnection(connect(*a, **k), needle, failures))
+    return waits, failures
+
+
+def test_ingest_runs_known_bodies_scan_retries_a_dropped_connection(tmp_path, monkeypatch):
+    """R3: the bodies scan right after the manifest's publish is a crawl's widest read; a dropped connection there
+    is retried (2, 6, 18 s) like the job's other first reads."""
+    from coffeedata import ingest
+
+    lk = Lake(str(tmp_path / "lake"))
+    waits, failures = _flaky(monkeypatch, lk, "select distinct body_hash from", times=2)
+    out = ingest.run(lk, [], "2026-11-02", workers=1)
+    assert out["roasters"] == 0 and failures == [] and waits == [2.0, 6.0]
+
+
+def test_select_parked_done_query_retries_a_dropped_connection(tmp_path, monkeypatch):
+    """R3: crawl-retry's first read (this run's done stores) is retried too, through the shared done/tried query."""
+    from coffeedata import ingest, registry
+    from coffeedata.models import Roaster
+
+    lk = Lake(str(tmp_path / "lake"))
+    ingest.save_parked(lk, "2026-11-02", "parked.example", {"page": 3, "items": []})
+    state = registry.RoasterState(Roaster(roaster_id="parked.example", name="P", host="parked.example",
+                                          platform="shopify"), "active", None)  # fmt: skip
+    monkeypatch.setattr(registry, "current", lambda lake: [state])
+    waits, failures = _flaky(monkeypatch, lk, "status in ('ok', 'unavailable')")
+    states, resume = ingest.select_parked(lk, "2026-11-02")
+    assert [s.roaster.roaster_id for s in states] == ["parked.example"]
+    assert resume["parked.example"]["page"] == 3
+    assert failures == [] and waits == [2.0]

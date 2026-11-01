@@ -18,6 +18,12 @@ variable "ingest_image_tag" {
   default     = "latest"
 }
 
+variable "ingest_image" {
+  description = "The full ingest image every job runs, pinned by digest (`<repo>/ingest@sha256:<digest>`, RUNBOOK section 4). Cloud Run resolves a tag only when a job is created or updated, so a rebuilt `:latest` reaches no job until this changes. Empty = the `ingest_image_tag` form, for compatibility."
+  type        = string
+  default     = ""
+}
+
 variable "egress_echo_url" {
   description = "A plain-text \"what is my IP\" endpoint the default-egress jobs ask (cached 60 s) to log their egress IP. Never a store."
   type        = string
@@ -37,7 +43,7 @@ variable "ingest_subnet_cidr" {
 }
 
 locals {
-  ingest_image = "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
+  ingest_image = var.ingest_image != "" ? var.ingest_image : "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
   staging      = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
 
   # name => what it runs, whether it leaves through the NAT IP, whether it needs the Claude key, its size.
@@ -139,9 +145,11 @@ resource "google_compute_router_nat" "shopify_egress" {
   source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS"
   # The default (64 ports per VM, static) most likely ran out during arm 2: DuckDB's parallel range reads of the hf:// lake go
   # through this NAT too (Direct VPC egress, all traffic), and the job crashed with "Could not connect to server".
-  # Dynamic allocation needs endpoint-independent mapping off. Mirrors the owner's
-  # `gcloud compute routers nats update --enable-dynamic-port-allocation --min-ports-per-vm=1024
-  # --max-ports-per-vm=8192`, so an apply doesn't revert it.
+  # Dynamic allocation needs endpoint-independent mapping off. Mirrors the RUNBOOK's (section 3) command,
+  # `gcloud compute routers nats update registry-coffee-shopify-egress --router registry-coffee-ingest
+  # --region us-central1 --enable-dynamic-port-allocation --min-ports-per-vm=1024 --max-ports-per-vm=8192
+  # --no-enable-endpoint-independent-mapping`, so an apply doesn't revert it. Before applying, check that the live
+  # NAT has these values (RUNBOOK section 2): any drift shows in the plan.
   enable_dynamic_port_allocation      = true
   enable_endpoint_independent_mapping = false
   min_ports_per_vm                    = 1024
@@ -289,6 +297,11 @@ resource "google_cloud_run_v2_job" "ingest" {
     }
   }
 
+  lifecycle {
+    # `gcloud run jobs update` (e.g. the hand-set --max-retries 0) stamps these; they are not configuration.
+    ignore_changes = [client, client_version]
+  }
+
   depends_on = [
     google_secret_manager_secret_iam_member.ingest,
     google_storage_bucket_iam_member.ingest_staging,
@@ -338,7 +351,7 @@ output "ingest_jobs" {
 }
 
 output "ingest_image" {
-  description = "Where to push ingest.Dockerfile's image."
+  description = "The image every ingest job runs (pinned by digest once `ingest_image` is set)."
   value       = local.ingest_image
 }
 

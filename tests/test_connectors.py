@@ -456,3 +456,30 @@ def test_a_crawl_stopped_by_its_deadline_exits_0(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr(connectors, "crawl", lambda *a, **k: {"status": "deadline", "skipped_deadline": 3})
     cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK])  # no SystemExit
     assert "deadline reached, 3 roasters left" in capsys.readouterr().err
+
+
+def test_a_main_pass_and_its_resume_are_one_run_for_egress_check(tmp_path, monkeypatch):
+    """R2: the 15:17 resume slot is a second `crawl` row of the same week. Its stores are the main pass's leftovers,
+    mostly refusers, so on its own its share is far above 8%. With the main pass above 8% too, the last two rows used
+    to be one week's pass and its resume: a false alarm. A run is a run_date, so one bad week is never two runs."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_EGRESS_IP", "34.1.2.3")
+    control.finish(lk, control.start(lk, "crawl", "2026-11-09", "shopify"), "done",
+                   first_contact={"stores": 400, "refused": 36})  # fmt: skip
+    # a resume row as an image before this fix wrote it: its leftovers counted again as first contacts
+    control.finish(lk, control.start(lk, "crawl", "2026-11-09", "shopify"), "done",
+                   first_contact={"stores": 40, "refused": 30})  # fmt: skip
+    # and as this fix writes it: only stores never tried this week are first contacts
+    control.finish(lk, control.start(lk, "crawl", "2026-11-09", "shopify"), "done",
+                   first_contact={"stores": 0, "refused": 0})  # fmt: skip
+    assert control.egress_flags(lk) == []
+
+
+def test_two_bad_weeks_still_flag_with_their_resumes_folded_in(tmp_path, monkeypatch):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_EGRESS_IP", "34.1.2.3")
+    for week, main, resume in (("2026-11-09", (400, 36), (5, 2)), ("2026-11-16", (400, 40), (0, 0))):
+        for stores, refused in (main, resume):
+            control.finish(lk, control.start(lk, "crawl", week, "shopify"), "done",
+                           first_contact={"stores": stores, "refused": refused})  # fmt: skip
+    assert control.egress_flags(lk) == [{"ip": "34.1.2.3", "shares": [0.094, 0.1]}]
