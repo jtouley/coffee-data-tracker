@@ -53,6 +53,13 @@ customProperties:
           part of the catalog (raw fetches.partial; public-catalog contract 2.2.0). A partial catalog lists what it
           read and doesn't delist what it didn't read. No column, type or enum changes, and nothing changes until a
           source lands partial catalogs. public_roaster.status is unchanged.
+      - topic: public-catalog contract's link to this product
+        decided: "2026-11-01"
+        outcome: >-
+          Removed the top-level dataProduct field from contracts/public-catalog.odcs.yaml; ODCS deprecated it in
+          v3.1.0. This product's output port (contractId coffee-data-public-catalog, version 2.2.0) is now the only
+          link between product and contract. Contract version stays 2.2.0: no table, column, type, enum or rule
+          that a consumer reads changed.
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

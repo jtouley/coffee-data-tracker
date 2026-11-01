@@ -7,7 +7,6 @@ name: Coffee Data public catalog
 version: 2.2.0
 status: active
 domain: coffee
-dataProduct: coffee-data
 description:
   purpose: 'Weekly facts about US specialty coffee roasters'' catalogs: what is listed, in stock, at what price,
     and how that changes.'
