@@ -1,9 +1,12 @@
+# The manual fallback. The scheduled weekly crawl now runs on Cloud Run (docs/ingestion/RUNBOOK.md, and
+# src/terraform/ingestion.tf), and site.yml deploys the site, the public export and the Snowflake load each Sunday.
+# This workflow has no schedule: it runs only when dispatched, for one week as a fallback, and its crawl is removed
+# after one good week on Cloud Run (RUNBOOK.md §4).
+#
 # The weekly run: discover (first week of the month), probe stale roasters, fetch every catalog, enrich,
 # build, publish to the lake, deploy the site. Nothing is committed to git; data lives in the lake.
 name: weekly
 on:
-  schedule:
-    - cron: "17 9 * * 1"   # Mondays
   workflow_dispatch:
     inputs:
       sample:
