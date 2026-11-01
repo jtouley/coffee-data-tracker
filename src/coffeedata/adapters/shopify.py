@@ -17,11 +17,13 @@ log = logging.getLogger(__name__)
 # 60 pages of 250: kaldi.com lists more than 20 x 250 products (it failed the old cap of 20 on 2026-10-31).
 MAX_PAGES = 60
 PAGE_LIMIT = 250  # the most /products.json returns per page
-# A page with fewer than PAGE_LIMIT products is the last one: the empty page after it is never asked for. That empty
-# page was the request that got the 429s (B's retest, 2026-10-31: every "page 2" failure had its whole catalog on
-# page 1). The cost: a store whose pages come back short with more behind them (Shopify drops hidden products after
-# paging) is cut at the first short page. In A's real crawl that was 3 of 1,034 stores (portlandcoffeeroasters.com,
-# talitha.com, onyxcoffeelab.com). Exactly PAGE_LIMIT products on the last page costs one more request.
+# A page with fewer than PAGE_LIMIT products ends the catalog, so the empty page after it is never asked for, but
+# only once the products so far reach the store's last known count (its latest ok fetch). That empty page drew the
+# 429s (B's retest, 2026-10-31: every "page 2" failure had its whole catalog on page 1). Shopify can return short
+# pages with more behind them (it drops hidden products after paging): 3 of 1,034 stores in A's real crawl
+# (portlandcoffeeroasters.com, talitha.com, onyxcoffeelab.com with 991 products). A store known to be bigger, or
+# with no history, keeps paginating to the empty page. Exactly PAGE_LIMIT products on the last page costs one more
+# request.
 SHORT_PAGE_ENDS = True
 # A store that answers a page with 429 (Retry-After 60) is not restarted from page 1: restarting hits the same wall
 # every time (A's real crawl, 2026-10-31: 11 large stores served page 1, then 429 on page 2, and failed). The page
@@ -133,8 +135,11 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
     )
 
 
-def fetch(client: PoliteClient, roaster: Roaster, resume: dict | None = None) -> list[CatalogItem]:
-    """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n."""
+def fetch(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> list[CatalogItem]:
+    """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
+    known_products: the store's product count at its latest ok fetch, which lets a short page end the catalog."""
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
     for page in range((resume or {}).get("page", 1), MAX_PAGES + 1):
         try:
@@ -149,12 +154,17 @@ def fetch(client: PoliteClient, roaster: Roaster, resume: dict | None = None) ->
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
         # An empty page ends the catalog, and so does a store that ignores `page` and repeats itself, or (with
-        # SHORT_PAGE_ENDS) a page shorter than the limit.
+        # SHORT_PAGE_ENDS) a page shorter than the limit once the store's last known count is reached.
         new = {i.product_id: i for i in (parse_product(p, roaster) for p in data["products"])}
         if not new.keys() - items.keys():
             break
         items |= new
-        if SHORT_PAGE_ENDS and len(data["products"]) < PAGE_LIMIT:
+        if (
+            SHORT_PAGE_ENDS
+            and len(data["products"]) < PAGE_LIMIT
+            and known_products is not None
+            and len(items) >= known_products
+        ):
             break
     else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
         raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")

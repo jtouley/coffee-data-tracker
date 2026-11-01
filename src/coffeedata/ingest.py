@@ -78,7 +78,9 @@ def parked_path(lake: Lake, run_date: str, roaster_id: str) -> Path:
 def save_parked(lake: Lake, run_date: str, roaster_id: str, progress: dict) -> None:
     p = parked_path(lake, run_date, roaster_id)
     p.parent.mkdir(parents=True, exist_ok=True)
-    doc = {"page": progress["page"], "items": [i.model_dump(mode="json") for i in progress["items"]]}
+    # body_text is excluded from a CatalogItem's dump; the parked pages' descriptions are kept with them
+    items = [i.model_dump(mode="json") | {"body_text": i.body_text} for i in progress["items"]]
+    doc = {"page": progress["page"], "items": items}
     tmp = p.with_suffix(".tmp")
     tmp.write_text(json.dumps(doc))
     tmp.replace(p)
@@ -110,13 +112,15 @@ class Result:
         return [i for i in self.items if is_coffee(i)]
 
 
-def ingest_one(client: PoliteClient, roaster: Roaster, resume: dict | None = None) -> Result:
+def ingest_one(
+    client: PoliteClient, roaster: Roaster, resume: dict | None = None, known_products: int | None = None
+) -> Result:
     res = Result(roaster, datetime.now(UTC).replace(microsecond=0))
     start = time.monotonic()
     with client.track() as res.stats:
         try:
             res.items = list(
-                {i.product_id: i for i in fetch_catalog(client, roaster, resume)}.values()
+                {i.product_id: i for i in fetch_catalog(client, roaster, resume, known_products)}.values()
             )  # feeds repeat items
         except PageBlocked as e:
             res.error = f"{type(e).__name__}: {e}"[:300]
@@ -132,8 +136,18 @@ def ingest_one(client: PoliteClient, roaster: Roaster, resume: dict | None = Non
     return res
 
 
-def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None) -> Result:
-    return ingest_one(client, roaster, resume) if resume is not None else ingest_one(client, roaster)
+def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None, known: int | None) -> Result:
+    if resume is None and known is None:
+        return ingest_one(client, roaster)
+    return ingest_one(client, roaster, resume, known)
+
+
+def known_products(lake: Lake) -> dict[str, int]:
+    """Each roaster's product count at its latest ok fetch with products: lets a Shopify short page end a catalog
+    that has reached its known size, and never one known to be bigger."""
+    q = f"""select roaster_id, arg_max(products, fetched_at) from {lake.scan("fetches")}
+            where status = 'ok' and products > 0 and roaster_id is not null group by 1"""
+    return dict(lake.connect().execute(q).fetchall())
 
 
 def sample_key(roaster_id: str) -> str:
@@ -330,6 +344,7 @@ def run(
             f"select distinct roaster_id, product_id, body_hash from {lake.scan('enrichments')}"
         ).fetchall()
     }
+    known = known_products(lake)
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []
@@ -404,9 +419,8 @@ def run(
                         flush(done)
                         done = []
                     p = progress.get(r.roaster_id)
-                    running.add(
-                        ex.submit(_attempt, client, r, p and {"page": p["page"], "items": p["items"]})
-                    )
+                    resume_at = p and {"page": p["page"], "items": p["items"]}
+                    running.add(ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id)))
                 timeout = max(0.0, pending[0][0] - now) if pending else None
                 if not running:
                     time.sleep(timeout or 0.0)
