@@ -468,15 +468,16 @@ make clean   # remove build/ and dbt artifacts
 - One browser test (`tests/test_app_browser.py`) drives owner setup, sign-in and Log shot → Saved → Undo at phone
   width and runs axe on each screen; it needs Node with Playwright and axe-core (`npm ci` in `tests/browser`) and is
   skipped without them, except in CI.
-- `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and private-key checks,
-  `uv.lock` in step with `pyproject.toml`, ruff and mypy over `src` and `app`); the first run downloads the hook
-  repos, so it needs network once.
+- `make lint` runs the pre-commit hooks on every file except `tests/fixtures/`, `eval/sealed/` and
+  `contracts/schemas/`: whitespace, YAML/TOML, merge-conflict, large-file and private-key checks, `uv.lock` in step
+  with `pyproject.toml`, ruff and ruff format on the Python files, and mypy over `src` and `app`. The first run
+  downloads the hook repos, so it needs network once.
 - CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
   with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
 Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues), and
-vulnerabilities privately, as [SECURITY.md](SECURITY.md) describes. Before opening a pull
-request, read [CONTRIBUTING.md](CONTRIBUTING.md).
+vulnerabilities privately, as [SECURITY.md](SECURITY.md) describes. Before opening a pull request, read
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## History
 

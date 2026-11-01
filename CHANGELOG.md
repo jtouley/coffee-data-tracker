@@ -6,11 +6,11 @@ Notable changes to the code are recorded here. The format follows
 `v0.1.0`, and the version in `pyproject.toml`.
 
 The weekly data releases are versioned separately, by `release_run_date` and `release_build_id` (see the README's
-"How it works"). They aren't code releases and aren't listed here.
+[How it works](README.md#how-it-works)). They aren't code releases and aren't listed here.
 
-## [Unreleased]
+## 0.1.0 (unreleased)
 
-## [0.1.0] - 2026-11-01
+Not tagged yet. When `v0.1.0` is tagged, this heading gets the date and an `[Unreleased]` section goes above it.
 
 The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â€“#5) is the GCP version, at commit
 `92f74da`.
@@ -20,8 +20,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Catalog pipeline.** A weekly catalog of US specialty roasters on an immutable Parquet lake, modeled with dbt and
   DuckDB, with roaster discovery from Overture Maps and OpenStreetMap (#9). The catalog is derived in dbt from the
   raw lake, with a measured coffee classifier (#30). Every page of a Shopify catalog is fetched, and coffees are
-  marked available, sold out or archived (#33). Wholesale listings stay in the data but out of what people browse
-  (#37). Origins are found by context, not by first mention (#41).
+  marked available, sold out or archived (#33). Square Online stores behind Weebly sites and square.site links are
+  read (#11). Wholesale listings stay in the data but out of what people browse (#37). Origins are found by
+  context, not by first mention (#41).
 - **Crawling etiquette.** One rate limit shared across all Shopify stores (#39). Nothing is fetched from a host
   whose `robots.txt` can't be fetched (#45). Robots rules and rate limits are checked on every redirect hop (#56).
 - **Trusted weekly releases.** Run quality and completeness gates, rollback, and ODCS and ODPS contracts (#36).
@@ -38,8 +39,8 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Deployment.** The app on Cloud Run with Terraform, JSON logs and alerts (#24), an uptime check (#32), and
   hardening of the single instance against request bursts (#34).
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
-- **Development.** `CLAUDE.md`: heuristic and model changes are measured on held-out data (#42), with the effort
-  scaled to the size of the change (#48).
+- **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
+  measured on held-out data (#42), with the effort scaled to the size of the change (#48).
 
 ### Fixed
 
@@ -51,9 +52,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Lake: a table with no folder on Hugging Face reads as empty (#31), and a remote table is read only once the
   dataset has its folder (#47).
 - App: lot ranking, roast-date checks and one read per photo (#44); per-photo upload locks pruned and one UTC rule
-  for future roast dates (#50); queued writes bound to their account (#56); Save reads "Savingâ€¦" until the server
-  replies (#58); fresh pages after writes, no duplicate resends and roast-date checks (#66).
+  for future roast dates (#50); Save reads "Savingâ€¦" until the server replies (#58); fresh pages after writes, no
+  duplicate resends and roast-date checks (#66).
 - Tests: a date-dependent bag comparison test (#51).
 
-[Unreleased]: https://github.com/jtouley/coffee-data-tracker/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/jtouley/coffee-data-tracker/releases/tag/v0.1.0
+### Security
+
+- App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
+  the phone instead of being written under the other account (#56).
