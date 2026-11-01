@@ -25,8 +25,7 @@ def test_run_records_ok_and_failed_fetches(lake):
         m.get("https://broken.com/products.json").mock(return_value=httpx.Response(403))
         out = ingest.run(lake, _roasters(), "2026-10-26", workers=2)
     shopify = out["by_adapter"]["shopify"]
-    assert (shopify["roasters"], shopify["errors"], shopify["with_coffee"]) == (2, 1, 1)
-    assert 0 < shopify["coffees"] <= 12
+    assert (shopify["roasters"], shopify["errors"], shopify["with_products"]) == (2, 1, 1)
     con = lake.connect()
     fetches = dict(con.execute(f"select roaster_id, status from {lake.scan('fetches')}").fetchall())
     assert fetches == {"onyxcoffeelab.com": "ok", "broken.com": "error"}
@@ -37,7 +36,18 @@ def test_run_records_ok_and_failed_fetches(lake):
     assert snap == {"onyxcoffeelab.com": 12}
     n_bodies = con.execute(f"select count(*) from {lake.scan('bodies')}").fetchone()[0]
     n_enrich = con.execute(f"select count(*) from {lake.scan('enrichments')}").fetchone()[0]
-    assert n_bodies > 0 and n_enrich == shopify["coffees"]
+    # ELT: extract and load only. No enrichment rows, and no crawl-time coffee judgement in the raw rows.
+    assert n_bodies > 0 and n_enrich == 0
+    assert (
+        con.execute(f"select count(*) from {lake.scan('snapshots')} where is_coffee is not null").fetchone()[
+            0
+        ]
+        == 0
+    )
+    assert (
+        con.execute(f"select count(*) from {lake.scan('fetches')} where coffees is not null").fetchone()[0]
+        == 0
+    )
 
 
 def test_odd_payload_is_one_roasters_error_not_the_runs(lake, monkeypatch):

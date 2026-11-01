@@ -22,6 +22,7 @@ from coffeedata.text import scrub_surrogates
 
 from .conftest import load
 from .lakehelp import old_file
+from .test_ratelimit import fake_time
 
 ONYX = Roaster(roaster_id="onyxcoffeelab.com", name="Onyx", host="onyxcoffeelab.com", platform="shopify")
 SLOW = Roaster(roaster_id="slow.com", name="Slow", host="slow.com", platform="shopify")
@@ -56,23 +57,26 @@ def test_fetches_record_diagnostics_and_the_run_manifest_comes_first(lake, monke
             return_value=httpx.Response(200, json=load("shopify_onyxcoffeelab.json"))
         )
         m.get("https://slow.com/products.json").mock(
-            side_effect=[httpx.Response(429, headers={"retry-after": "0"})] * 3
+            return_value=httpx.Response(429, headers={"retry-after": "0"})
         )
+        fake_time(monkeypatch)  # slow.com's page backoffs pass instantly
         ingest.run(lake, [RoasterState(ONYX, "active", None), SLOW], "2026-10-26", workers=2, mode="full")
-    f = {r["roaster_id"]: r for r in _rows(lake, "fetches")}
-    onyx, slow = f["onyxcoffeelab.com"], f["slow.com"]
-    # Page 2 repeats page 1, which ends the catalog: robots.txt plus two pages.
+    rows = _rows(lake, "fetches")
+    onyx = next(r for r in rows if r["roaster_id"] == "onyxcoffeelab.com")
+    slow = next(r for r in rows if r["roaster_id"] == "slow.com")  # its first attempt; backoffs add rows
+    # Page 2 repeats page 1, which ends the catalog: robots.txt plus two pages (no history, so a short page alone
+    # doesn't end it).
     assert (onyx["requests"], onyx["pages"], onyx["retries"], onyx["rate_limited"]) == (3, 2, 0, 0)
     assert onyx["http_statuses"] == [{"status": 200, "responses": 2}, {"status": 404, "responses": 1}]
     assert (slow["status"], slow["requests"], slow["pages"], slow["retries"], slow["rate_limited"]) == (
         "error", 4, 0, 2, 3)  # fmt: skip
-    assert all(r["duration_s"] >= 0 and r["code_version"] == "abc123" for r in f.values())
+    assert all(r["duration_s"] >= 0 and r["code_version"] == "abc123" for r in rows)
 
     m = sorted(_rows(lake, "run_manifests"), key=lambda r: r["roaster_id"])
     assert [(r["roaster_id"], r["status"], r["adapter"], r["mode"]) for r in m] == [
         ("onyxcoffeelab.com", "active", "shopify", "full"), ("slow.com", None, "shopify", "full")]  # fmt: skip
     assert m[0]["run_date"] == date(2026, 10, 26) and m[0]["code_version"] == "abc123"
-    assert m[0]["started_at"] <= min(r["fetched_at"] for r in f.values())
+    assert m[0]["started_at"] <= min(r["fetched_at"] for r in rows)
 
     snaps = _rows(lake, "snapshots")
     assert snaps and all(re.fullmatch(r"[0-9a-f]{32}", s["payload_hash"]) for s in snaps)

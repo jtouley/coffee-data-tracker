@@ -119,19 +119,26 @@ def _page(ids):
     )
 
 
-def test_shopify_short_pages_are_not_the_end(mock):
-    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first.
+@pytest.mark.parametrize("known, asks_page_3", [(None, True), (991, True), (496, False)])
+def test_shopify_short_pages_end_the_catalog_only_at_its_known_size(mock, known, asks_page_3):
+    # onyxcoffeelab.com: 249, 247, 234 and 242 products on its four pages; we used to stop after the first. A short
+    # page ends the catalog only once the products so far reach the store's last known count, so a store known to
+    # be bigger (991), or with no history, is never cut short.
     pages = {"1": range(0, 249), "2": range(250, 497), "3": [], "4": range(900, 910)}
+    routes = {}
     for n, ids in pages.items():
-        mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
+        routes[n] = mock.get("https://x.com/products.json", params={"page": n}).mock(return_value=_page(ids))
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 249 + 247  # an empty page ends it
+        assert len(shopify.fetch(c, _r(), known_products=known)) == 249 + 247  # an empty page ends it
+    assert routes["3"].call_count == int(asks_page_3)
 
 
 def test_shopify_store_that_ignores_page_stops(mock):
-    route = mock.get("https://x.com/products.json").mock(return_value=_page(range(10)))
+    route = mock.get("https://x.com/products.json").mock(
+        return_value=_page(range(250))
+    )  # full, so not the last
     with PoliteClient(min_interval=0) as c:
-        assert len(shopify.fetch(c, _r())) == 10
+        assert len(shopify.fetch(c, _r())) == 250
     assert route.call_count == 2
 
 
@@ -139,7 +146,7 @@ def test_shopify_page_limit_without_an_empty_page_is_an_error(mock, monkeypatch)
     monkeypatch.setattr(shopify, "MAX_PAGES", 2)
     for n in (1, 2):
         mock.get("https://x.com/products.json", params={"page": str(n)}).mock(
-            return_value=_page(range(n * 100, n * 100 + 50))
+            return_value=_page(range(n * 1000, n * 1000 + 250))
         )
     with PoliteClient(min_interval=0) as c, pytest.raises(FetchError, match="after 2 pages"):
         shopify.fetch(c, _r())  # never a silently truncated catalog

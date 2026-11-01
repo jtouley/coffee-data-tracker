@@ -1,0 +1,99 @@
+{
+ "contract": "enrichment",
+ "version": "1.0.0",
+ "fingerprint": "409684892fcd9fe7",
+ "producer": "post-load enrichment job (enrich-week)",
+ "consumers": [
+  "dbt (stg_enrichments, dim_coffee)"
+ ],
+ "tables": {
+  "enrichments": [
+   {
+    "name": "extracted_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "roaster_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "product_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "body_hash",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "method",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "needs_llm",
+    "type": "bool",
+    "nullable": true
+   },
+   {
+    "name": "origin_country",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "origin_region",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "producer",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "process",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "varietals",
+    "type": "list<item: string>",
+    "nullable": true
+   },
+   {
+    "name": "elevation_masl_min",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "elevation_masl_max",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "roast_level",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "tasting_notes",
+    "type": "list<item: string>",
+    "nullable": true
+   },
+   {
+    "name": "is_blend",
+    "type": "bool",
+    "nullable": true
+   },
+   {
+    "name": "is_decaf",
+    "type": "bool",
+    "nullable": true
+   }
+  ]
+ },
+ "files": {}
+}

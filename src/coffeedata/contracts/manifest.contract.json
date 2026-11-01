@@ -1,0 +1,164 @@
+{
+ "contract": "manifest",
+ "version": "1.0.0",
+ "fingerprint": "78ca1eade3df2d53",
+ "producer": "every job (crawl, crawl-retry, merge, enrich)",
+ "consumers": [
+  "dbt (run_completeness)",
+  "merge",
+  "enrichment job",
+  "egress-check"
+ ],
+ "tables": {
+  "run_manifests": [
+   {
+    "name": "run_date",
+    "type": "date32[day]",
+    "nullable": true
+   },
+   {
+    "name": "manifest_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "started_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "roaster_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "status",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "platform",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "adapter",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "mode",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "code_version",
+    "type": "string",
+    "nullable": true
+   }
+  ],
+  "job_manifests": [
+   {
+    "name": "run_date",
+    "type": "date32[day]",
+    "nullable": true
+   },
+   {
+    "name": "job",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "connector",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "shard",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "attempt_id",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "started_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "ended_at",
+    "type": "timestamp[s, tz=UTC]",
+    "nullable": true
+   },
+   {
+    "name": "status",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "todo",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "ok",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "errors",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "parked",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "skipped",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "requests",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "http_429",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "http_430",
+    "type": "int32",
+    "nullable": true
+   },
+   {
+    "name": "egress_ips",
+    "type": "list<item: string>",
+    "nullable": true
+   },
+   {
+    "name": "refusals",
+    "type": "list<item: struct<ip: string, stores: int32, refused: int32>>",
+    "nullable": true
+   },
+   {
+    "name": "code_version",
+    "type": "string",
+    "nullable": true
+   },
+   {
+    "name": "detail",
+    "type": "string",
+    "nullable": true
+   }
+  ]
+ },
+ "files": {}
+}

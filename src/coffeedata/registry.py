@@ -12,6 +12,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from . import products
 from .lake import Lake
 from .models import Roaster
 
@@ -139,7 +140,7 @@ select
         when coalesce(g.platform, r.seed_platform) is null
              or coalesce(g.platform, r.seed_platform) like 'http\_%' escape '\' then 'unreachable'
         when lo.roaster_id is null then 'pending'
-        when lo.coffees > 0 then 'active'
+        when coalesce(lc.coffees, 0) > 0 then 'active'
         when lo.products > 0 then 'no_coffee'
         else 'no_catalog'
     end as status
@@ -148,6 +149,7 @@ left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
+left join last_ok_coffees lc using (roaster_id)  -- registered by connect_for_state
 """
 
 
@@ -160,6 +162,59 @@ def state_sql(lake: Lake) -> str:
     )
 
 
+# The products of each roaster's last ok fetch, with what the build's coffee decision reads.
+LAST_OK_PRODUCTS_SQL = r"""
+with last_ok as (
+    select roaster_id, batch_id from {fetches} where roaster_id is not null and status = 'ok'
+    qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1
+),
+verdicts as (
+    select input_hash, label from {verdicts} where model = ? and definition = ?
+    qualify row_number() over (partition by input_hash order by decided_at desc) = 1
+)
+select distinct on (s.roaster_id, s.product_id) s.roaster_id, s.product_id, s.title, s.product_type, s.tags,
+       list_transform(s.variants, lambda v: v.grams) as grams, s.body_hash, b.body_text, v.label
+from {snapshots} s
+join last_ok lo on s.roaster_id = lo.roaster_id and s.batch_id = lo.batch_id
+left join (select body_hash, any_value(body_text) as body_text from {bodies} group by 1) b using (body_hash)
+left join verdicts v on v.input_hash = {input_hash}
+"""
+
+
+def connect_for_state(lake: Lake, model: str, definition: str):
+    """A connection with `last_ok_coffees` (roaster_id, coffees) registered for STATE_SQL: coffees in each
+    roaster's last ok fetch, decided as the build decides (coffeedata.products; dbt's dim_roaster). The crawl
+    doesn't classify (ELT)."""
+    from collections import Counter
+
+    import pyarrow as pa
+
+    con = lake.connect()
+    sql = LAST_OK_PRODUCTS_SQL.format(
+        fetches=lake.scan("fetches"),
+        snapshots=lake.scan("snapshots"),
+        bodies=lake.scan("bodies"),
+        verdicts=lake.scan("verdicts"),
+        input_hash=products.input_hash_sql("s"),
+    )
+    n: Counter = Counter()
+    for rid, _pid, title, ptype, tags, grams, bh, body, label in con.execute(
+        sql, [model, definition]
+    ).fetchall():
+        n[rid] += products.decide(products.item(title, ptype, tags, grams, bh, body), label)[0]
+    schema = pa.schema([("roaster_id", pa.string()), ("coffees", pa.int64())])
+    con.register(
+        "last_ok_coffees", pa.table({"roaster_id": list(n), "coffees": list(n.values())}, schema=schema)
+    )
+    return con
+
+
+def _verdict_config() -> tuple[str, str]:
+    from . import verdict
+
+    return verdict.model() or "", verdict.DEFINITION_VERSION
+
+
 @dataclass
 class RoasterState:
     roaster: Roaster
@@ -168,7 +223,7 @@ class RoasterState:
 
 
 def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
-    con = lake.connect()
+    con = connect_for_state(lake, *_verdict_config())
     cur = con.execute(state_sql(lake) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []
