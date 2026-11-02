@@ -21,7 +21,6 @@ of Parquet files: a Hugging Face dataset or a local folder.
 <!-- More links: each one stays commented out until it works. -->
 <!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
 <!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
-<!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
 <!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 <p>
