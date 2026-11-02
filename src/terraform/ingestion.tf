@@ -70,8 +70,8 @@ locals {
     "merge"                        = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi" }
     "enrich-week"                  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi" }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution. No alert policy
-    # watches job failures yet (DESIGN.md, Next): check the executions' exit codes.
+    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution, which emails the
+    # owner (alerts.tf, ingest_job_failed).
     "build" = {
       command = ["sh", "-c"]
       args    = ["coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]

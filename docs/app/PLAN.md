@@ -176,7 +176,7 @@ What Terraform in `src/terraform/` manages:
 - Workload Identity Federation for GitHub Actions: a pool and provider that trust this repo's workflows, and a deploy
   service account they can impersonate. Deploys need no JSON key. A workflow on pushes to `main` that touch `app/`
   or `src/` builds the image, pushes it to Artifact Registry and deploys a new revision.
-- A budget of $5 a month on the project, with alert emails at 50%, 90% and 100%. A budget only warns; it doesn't
+- A budget of $20 a month on the project (it was $5, below the weekly pipeline's estimate), with alert emails at 50%, 90% and 100%. A budget only warns; it doesn't
   stop spending. Max instances 1 is what keeps a runaway bill unlikely.
 - Terraform's own state lives in a GCS bucket, created once before the first `terraform apply`.
 
