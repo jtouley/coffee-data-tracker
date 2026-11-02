@@ -400,6 +400,10 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     prices differ; a `new` event has no previous price), so a row breaking one is a bug in the SQL;
   - `run_manifest_mode_values`: every run manifest's `mode` is `full`, `sample`, `only` or `retry_failed`
     (`run_completeness` takes the expected set from the full ones);
+  - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
+    comment, such as "about 45,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
+    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;
+    `coverage_claims_name_metrics` fails the build if a claim names a metric the profile doesn't have;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 
   Every build appends its record to `builds/` (each dbt node's checksum and test result, metrics, manifest and

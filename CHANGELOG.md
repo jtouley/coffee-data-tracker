@@ -31,9 +31,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Trusted weekly releases.** Run quality and completeness gates, rollback, and ODCS and ODPS contracts (#36).
   Lineage metadata: fetch diagnostics, run manifests, a serving log, the build environment and payload hashes
   (#40). dbt staging tables and unit tests (#49). Run gates calibrated on real data, with per-adapter floors and
-  anomaly bands (#52). Warn-only bands on the filled shares of origin, process, roast level and price, and on the
-  share of the catalog seen in the run; invariants, a single release and freshness checked on the public tables,
-  and run-manifest modes checked in dbt (#82).
+  anomaly bands (#52). A warning when the coverage numbers in the listing copy drift from the build (#79).
+  Warn-only bands on the filled shares of origin, process, roast level and price, and on the share of the catalog
+  seen in the run; invariants, a single release and freshness checked on the public tables, and run-manifest modes
+  checked in dbt (#82).
 - **Shot-logging app.** Data model and shot logging (#13); sign-in and security headers (#15);
   invites, reset codes, equipment and switching gear (#16); bag capture with Claude reading the label (#17); the
   coffee page, History, Correct and Retract, and `mart_bag` (#18); offline pages and queued photos (#20); layout,

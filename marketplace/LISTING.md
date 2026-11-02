@@ -1,13 +1,24 @@
 # Listing copy (draft)
 
 Use for the public Hugging Face dataset, the Snowflake Marketplace and the Databricks Marketplace. Keep the
-three in sync.
+three in sync. The Snowflake listing's attribute boxes are typed by hand from this file, so this file is the
+source of truth for them.
+
+<!-- coverage-claims: every build checks these against its own mart_build_profile (`coverage_claims_*` dbt tests).
+One claim per line, `metric: text`: the text must appear in the copy below, and its number is the stated value.
+Change a number in the copy and here together, then retype it in the Snowflake listing.
+listed_coffees counts the coffees listed for sale in this build (not archived, not wholesale), not PUBLIC_COFFEE's
+rows (every coffee ever seen); roasters_with_coffee counts the roasters with at least one of them, not PUBLIC_ROASTER.
+listed_coffees: about 45,000 coffees listed for sale
+roasters_with_coffee: 1,800 US specialty roasters with coffee for sale
+Not checked: "about half of reachable US roasters" (no build metric counts reachable roasters).
+-->
 
 **Title:** US Specialty Coffee Market: Weekly Prices, Origins and Availability
 
 **Short description:**
-Weekly prices, stock and attributes for about 45,000 coffees from 1,800 US specialty roasters, with price and
-listing history.
+Weekly prices, stock and attributes for about 45,000 coffees listed for sale, from
+1,800 US specialty roasters with coffee for sale. Each coffee keeps its price and listing history.
 
 **Description:**
 What US specialty roasters sell online, collected every week from their own storefronts. Each coffee has origin, process, varietal, roast level, tasting notes, bag sizes, list price and price

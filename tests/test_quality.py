@@ -985,3 +985,99 @@ def test_run_manifest_modes_are_the_writers(lake, tmp_path):
     manifest(lake, "2026-10-26", [RID], mode="partial")  # not a mode: run_completeness wouldn't know it
     r = _test(lake, tmp_path, "run_manifest_mode_values")
     assert r.returncode != 0 and re.search(r"FAIL 1 run_manifest_mode_values", r.stdout), r.stdout[-3000:]
+
+
+def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
+    claims = {c["metric"]: c for c in quality.coverage_claims()}
+    assert {m: c["value"] for m, c in claims.items()} == {
+        "listed_coffees": 45000.0,
+        "roasters_with_coffee": 1800.0,
+    }
+    for c in claims.values():  # the line named is the copy, not the claims comment
+        path, line = c["source"].rsplit(":", 1)
+        assert path == "marketplace/LISTING.md"  # shown from the checkout's root
+        copy = (quality.ROOT / path).read_text().splitlines()[int(line) - 1]
+        assert c["text"] in copy and "coverage-claims" not in copy and not copy.startswith("listed_coffees")
+
+
+@pytest.mark.parametrize(
+    ("claim", "error"),
+    [
+        ("listed_coffees: about 50,000 coffees", "is not in the copy"),
+        ("listed_coffees: coffees", "has no number"),
+    ],
+)
+def test_a_coverage_claim_must_match_its_copy(tmp_path, claim, error):
+    listing = tmp_path / "LISTING.md"
+    listing.write_text(
+        f"<!-- coverage-claims: notes\n{claim}\n-->\nWeekly prices for about 45,000 coffees.\n"
+    )
+    with pytest.raises(ValueError, match=error):
+        quality.coverage_claims(listing)
+
+
+def _claim(metric: str, value: float) -> dict:
+    return {
+        "metric": metric,
+        "value": value,
+        "text": f"about {value:,.0f}",
+        "source": "marketplace/LISTING.md:9",
+    }
+
+
+def test_coverage_claims_pass_inside_the_tolerance_warn_outside_it_and_fail_on_an_unknown_metric(
+    lake, tmp_path
+):
+    run(lake, "2026-10-26", RID, FULL)  # lists 40 coffees from 1 roaster
+    inside = [_claim("listed_coffees", 45), _claim("roasters_with_coffee", 1)]  # 45 is 12.5% over 40
+    r = build(lake, tmp_path, check=False, coverage_claims=inside)
+    assert r.returncode == 0 and not re.search(r"WARN \d+ coverage_claims", r.stdout)
+    assert quality.coverage_claim_messages(tmp_path / "coffee.duckdb") == []
+
+    # Drift only warns, and names the line to update.
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("listed_coffees", 45000)])
+    assert r.returncode == 0 and re.search(r"WARN 1 coverage_claims_match_build", r.stdout)
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert msg.startswith("marketplace/LISTING.md:9: 'about 45,000'") and "listed_coffees (40;" in msg
+    tight = {
+        "coverage_claims": [_claim("listed_coffees", 45)],
+        "claim_tolerance": 0.1,
+    }  # the tolerance is a var
+    assert re.search(
+        r"WARN 1 coverage_claims_match_build", build(lake, tmp_path, check=False, **tight).stdout
+    )
+
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("coffees_listed", 40)])
+    assert r.returncode != 0 and re.search(r"FAIL 1 coverage_claims_name_metrics", r.stdout)  # a bug: fails
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert "names coffees_listed, which mart_build_profile doesn't have" in msg
+
+
+def test_a_build_from_a_directory_without_marketplace_warns_and_is_still_recorded(
+    lake, monkeypatch, tmp_path, caplog
+):
+    """The ingest image before LISTING.md was copied in: the build runs, warns and records its release."""
+    from coffeedata import cli
+
+    image = tmp_path / "image"  # the checkout without marketplace/
+    image.mkdir()
+    for entry in quality.ROOT.iterdir():
+        if entry.name not in ("marketplace", ".git"):
+            (image / entry.name).symlink_to(entry)
+    monkeypatch.chdir(image)
+    monkeypatch.setattr(quality, "LISTING", image / "marketplace" / "LISTING.md")
+    real_dbt_build = cli.dbt_build
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    run(lake, "2026-10-26", RID, FULL)
+    args = argparse.Namespace(
+        db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26", accept_volume_change=False
+    )
+    assert cli.cmd_build(args) is True
+    assert "coverage claims not checked: " in caplog.text and "LISTING.md can't be read" in caplog.text
+    [(build_id, _, _)] = quality.builds(Lake())
+    assert quality.served(Lake())["build_id"] == build_id

@@ -74,6 +74,11 @@ vars:
   band_window: 12
   band_min_share_halfwidth: 0.05
   band_min_volume_halfwidth: 0.05
+  # The coverage claims in marketplace/LISTING.md (set by `coffeedata build` from the file; empty: no check) and
+  # how far a claim may sit from this build's metric, as a fraction of the metric, before
+  # coverage_claims_match_build warns. A claim naming no metric fails the build (coverage_claims_name_metrics).
+  coverage_claims: []
+  claim_tolerance: 0.15
 
 models:
   coffeedata:

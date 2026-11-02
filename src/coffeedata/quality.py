@@ -18,6 +18,7 @@ import functools
 import json
 import logging
 import os
+import re
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -38,6 +39,15 @@ RELEASE_TABLES = (
     "public_market_weekly",
 )
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
+# The coverage we publish (marketplace/LISTING.md, copied by hand into the Snowflake listing's attribute boxes),
+# checked by every build against its own mart_build_profile: dbt's coverage_claims_match_build (warn, beyond
+# claim_tolerance) and coverage_claims_name_metrics (fails: a claim naming no metric is a bug, not drift). Found
+# from this package's checkout (the ingest image copies it there), never from the working directory.
+ROOT = Path(__file__).resolve().parents[2]
+LISTING = ROOT / "marketplace" / "LISTING.md"
+_CLAIMS = re.compile(r"<!-- coverage-claims:(.*?)-->", re.S)
+_CLAIM = re.compile(r"^([a-z][a-z0-9_]*(?::[a-z0-9_]+)?): (.+)$")
+_NUMBER = re.compile(r"\d[\d,]*(?:\.\d+)?")
 _UNREAD = object()  # serve()'s `previous` when the caller hasn't read the served release
 
 
@@ -142,6 +152,78 @@ def record_build(
     if con:
         con.close()
     return passed
+
+
+def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]:
+    """The numeric claims in `path`'s (default LISTING) coverage-claims comment, one `metric: text` line each: the
+    metric in mart_build_profile, the text as it appears in the copy, its number (the stated value) and `source`,
+    the file and line of the copy to update. Strict (CI's test), a claim whose text isn't in the copy or has no
+    number raises ValueError, so the copy and its claims can't drift apart. Not strict (the build), that claim is
+    logged and skipped, and a missing file is logged and gives no claims: the check never stops a build."""
+    path = path or LISTING
+    shown = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+    try:
+        text = path.read_text()
+    except (OSError, UnicodeDecodeError) as e:
+        if strict:
+            raise
+        log.warning("coverage claims not checked: %s can't be read (%s)", shown, e)
+        return []
+    block = _CLAIMS.search(text)
+    if not block:
+        return []
+    copy = (text[: block.start()] + "\n" * block.group(0).count("\n") + text[block.end() :]).splitlines()
+    claims = []
+    for line in block.group(1).splitlines():
+        if not (m := _CLAIM.match(line.strip())):
+            continue  # a note, not a claim
+        metric, said = m.groups()
+        number = _NUMBER.search(said)
+        lineno = next((i for i, c in enumerate(copy, 1) if said in c), None)
+        if number is None or lineno is None:
+            why = "has no number" if number is None else "is not in the copy"
+            problem = f"{shown}: coverage claim {metric}: {said!r} {why}"
+            if strict:
+                raise ValueError(problem)
+            log.warning("%s; not checked", problem)
+            continue
+        claims.append({"metric": metric, "value": float(number.group(0).replace(",", "")), "text": said,
+                       "source": f"{shown}:{lineno}"})  # fmt: skip
+    return claims
+
+
+def coverage_claim_messages(db: Path) -> list[str]:
+    """What the coverage-claim tests found in this build (`db`), one line per claim, naming the line to update."""
+    import duckdb
+
+    if not db.exists():
+        return []
+    con = duckdb.connect(str(db), read_only=True)
+    out = []
+    try:
+        for test, sql in (
+            ("coverage_claims_name_metrics", "select source, metric, text from {t}"),
+            ("coverage_claims_match_build", "select source, metric, text, built, off_by, tolerance from {t}"),
+        ):
+            schema = con.execute(
+                "select any_value(table_schema) from information_schema.tables where table_name = ?", [test]
+            ).fetchone()
+            if not schema or schema[0] is None:
+                continue  # the test didn't run (no claims, or the build stopped before the tests)
+            for r in con.execute(sql.format(t=f'"{schema[0]}"."{test}"')).fetchall():
+                if test == "coverage_claims_name_metrics":
+                    out.append(
+                        f"{r[0]}: coverage claim {r[2]!r} names {r[1]}, which mart_build_profile doesn't have"
+                    )
+                else:
+                    off = "far" if r[4] is None else f"{r[4]:+.0%}"  # None: the build has 0
+                    out.append(
+                        f"{r[0]}: {r[2]!r} is {off} off this build's {r[1]} ({r[3]:,.0f}; tolerance "
+                        f"{r[5]:.0%}): update the line and its coverage-claims entry, then the Snowflake listing"
+                    )
+    finally:
+        con.close()
+    return out
 
 
 def add_override(

@@ -23,6 +23,10 @@ RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user config ./config
 COPY --chown=user dbt ./dbt
 COPY --chown=user contracts ./contracts
+# The listing copy whose coverage claims every build checks (quality.LISTING); without it the check is skipped.
+COPY --chown=user marketplace/LISTING.md ./marketplace/LISTING.md
+# Fail the image build, not every weekly build, if the claims file can't be found (e.g. a non-editable install).
+RUN .venv/bin/python -c "from coffeedata import quality; assert quality.LISTING.is_file(), quality.LISTING"
 
 ENTRYPOINT ["coffeedata"]
 CMD ["--help"]

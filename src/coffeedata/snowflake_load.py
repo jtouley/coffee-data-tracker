@@ -38,7 +38,7 @@ CONTRACT = Path(__file__).resolve().parents[2] / "contracts" / "public-catalog.o
 
 def contract_descriptions(path: Path | None = None) -> dict[str, tuple[str, dict[str, str]]]:
     """Each public table's description and its columns' descriptions (by lower-case name), from the contract."""
-    import yaml  # type: ignore[import-untyped]
+    import yaml
 
     path = path or (CONTRACT if CONTRACT.exists() else Path("contracts/public-catalog.odcs.yaml"))
     contract = yaml.safe_load(path.read_text())

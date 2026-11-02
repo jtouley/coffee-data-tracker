@@ -1,0 +1,7 @@
+# Blank issues stay enabled: SECURITY.md asks for a public "Security contact request" issue, with no details,
+# when private reporting isn't available.
+blank_issues_enabled: true
+contact_links:
+  - name: Report a vulnerability
+    url: https://github.com/jtouley/coffee-data-tracker/security/advisories/new
+    about: Report security issues privately. Don't describe them in a public issue.
