@@ -16,6 +16,10 @@ from ..text import html_to_text, to_float
 log = logging.getLogger(__name__)
 
 COMMON_SHOP_PATHS = ["/shop", "/store", "/coffee", "/shop-coffee", "/coffees", "/beans"]
+# Page size: none to choose. ?format=json is Squarespace's documented way to read a collection as JSON
+# (https://developers.squarespace.com/url-queries: "Returns website and collection data in JSON format"), and the
+# docs give it no page-size parameter: the site sets how many items a page holds, and each page says whether there is
+# a next one (pagination.nextPage, nextPageOffset), which is followed to the end.
 # No cap on a collection's pages (it was 10), or on the shop paths tried (6, from the 4 busiest sitemap parents):
 # pages are read until the store says there is no next one. Only the run's deadline stops early: partial.
 
@@ -86,11 +90,13 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
             return None
         if not isinstance(data, dict) or not isinstance(data.get("items", []), list):
             raise FetchError(f"unexpected Squarespace payload at {path}")
-        items.extend(
-            i
-            for i in data.get("items") or []
-            if isinstance(i, dict) and ("variants" in i or "productType" in i)
-        )
+        listed = [i for i in data.get("items") or [] if isinstance(i, dict)]
+        products = [i for i in listed if "variants" in i or "productType" in i]
+        if not page and listed and not products:
+            # not a shop: a blog, a gallery or an events page whose first page holds no product. Its other pages
+            # aren't read (a large /blog was paged to its end every week, before /shop was reached)
+            return []
+        items.extend(products)
         pagination = data.get("pagination") or {}
         offset = pagination.get("nextPageOffset") if pagination.get("nextPage") else None
         if not offset or str(offset) in offsets:

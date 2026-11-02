@@ -306,6 +306,8 @@ def crawl(
     ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
               "partial": out.get("partial", 0),
+              # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
+              "partial_every_week": out.get("partial_every_week") or [],
               # the job's own limiter (requests, 429s, pauses), as shopify_limiter, squarespace_limiter...
               **({f"{connector}_limiter": (out.get("limiters") or {}).get(connector)} if c.rps else {}),
               # the network the job actually ran on (set by the deploy), else the connector's config

@@ -9,7 +9,15 @@ from urllib.parse import urlparse
 
 import httpx
 
-from ..http import Blocked, DeadlineReached, FetchError, PartialCatalog, PoliteClient, block_status
+from ..http import (
+    Blocked,
+    DeadlineReached,
+    FetchError,
+    PartialCatalog,
+    PoliteClient,
+    block_status,
+    challenge_error,
+)
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
@@ -112,8 +120,10 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
     failed = 0
     # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
-    # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog.
-    urls = product_urls(sitemap_urls(client, roaster.host))
+    # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
+    # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
+    unread: list[str] = []
+    urls = product_urls(sitemap_urls(client, roaster.host, unread))
     # Every product page is read: no cap, and no giving up after the first pages without Product markup (the old
     # GIVE_UP_AFTER = 10 stored the rest of the catalog as empty). Only the run's deadline stops it: partial.
     for n, url in enumerate(urls):
@@ -128,6 +138,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 raise FetchError(f"HTTP {status} {url}", status=status) from e
             failed += 1
             continue
+        if err := challenge_error(r, url):
+            # an edge's challenge (a 202, or a challenge header): a refusal, like a block, never a failed page
+            raise err
         if r.status_code in (404, 410):
             continue  # a sitemap entry for a product that's gone: it's delisted, not unreadable
         if r.status_code != 200:
@@ -140,4 +153,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         # Any unreadable product page makes this a partial catalog, and the missing products would look
         # delisted. Fail the fetch; it is retried and never stored as a successful catalog.
         raise FetchError(f"{failed} of {len(urls)} product pages failed")
+    if unread:
+        msg = f"{len(unread)} sub-sitemaps unread: {'; '.join(unread)}"
+        if not items:
+            raise FetchError(msg)
+        raise PartialCatalog(msg, list(items.values()))
     return list(items.values())

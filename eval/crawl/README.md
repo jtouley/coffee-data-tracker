@@ -8,11 +8,18 @@ for, so the next change to these fields knows how far it is from the last full l
 ## Running total (CLAUDE.md step 9)
 
 Products whose crawl output changed since the last full evaluation of these fields (there has been none): **at
-least 11,750**, all from the change below. Add each later change's count here.
+least 13,232**: 11,750 from the caps' removal, 37 from Lone Oak's registry move (#98), and 1,445 from #99's fix
+round (below). Add each later change's count here.
 
 | Change | Products changed (estimate) | Evaluation |
 |---|---|---|
 | Remove crawl data caps; bulk WooCommerce variation prices; mark early stops partial (2026-11-02) | ≥ 11,750 | Steps 2–7 waived by the owner (below) |
+| Lone Oak Coffee (`loneoakcoffee.com`) moved from Square Online to Shopify in the registry (#98, 2026-11-02): its catalog is read for the first time | 37 | Hand-checked (#98's PR body); under step 9's 50 on its own |
+| #99 fix round: WooCommerce readable size names (variant `title`, and `grams` where the name has a weight) | ≈ 1,391 | Steps 2–7 waived by the owner (below) |
+| #99 fix round: volunteercoffee.com read in smaller pages after a timeout (it failed every week) | 54 | The WooCommerce review's probe (54 products); a fetch fix, not a rule |
+| #99 fix round: each WooCommerce size's own `available` (`is_in_stock`), where prices are read in bulk | unknown | Not measurable from the lake (below) |
+| #99 fix round: no null price stored when a one-by-one price lookup fails (the fetch fails or is deferred) | in the ≤ 36 of the first row | — |
+| #99 fix round: vendor sites and `gmail.com` never crawled (`registry.current`); martincoffee, piccoffee, meanbean registry fixes | 0 | Hand-checked: none had products |
 
 ## 2026-11-02: every data cap removed
 
@@ -64,3 +71,22 @@ read: no request is sent after it (`http.DeadlineReached`). The products read wh
 `fetches.partial = true`, so dbt keeps the unread products listed (`stg_runs.is_current`) and never reads them as
 delisted. A partial fetch is not "done" for the week: the resume slot reads the catalog again, and dbt prefers a
 complete batch of the week. Nothing read is an error, never an empty catalog.
+
+## 2026-11-02: #99's fix round
+
+**Readable size names (WooCommerce).** The Store API lists a variation's attributes as `{name, value}`, and for a
+taxonomy attribute the value is the term's *slug* (`12-oz`, `0-5-lb`); the readable name is in the parent's own
+`attributes[].terms` in the same response (ProductSchema.php `get_variations` and `get_attributes`). The crawl now
+stores the term's name, matched by attribute name, then by slug, and keeps the raw value when no term matches (no
+hyphen rule: `0-5-lb` would read as 5 lb). **The owner waived CLAUDE.md steps 2–7 for this change.** Counted on the
+read-only local lake copy (2026-11-02, latest ok WooCommerce fetch per roaster; no request sent, nothing written):
+**1,391 products at 77 roasters** (8,867 variants, of 10,691 products) have a slug-shaped variant title, so their
+`title` changes; of them, **918 products** (7,836 variants, 49 roasters; `build/research/woocommerce-review-2026-11-02.md`)
+gain `grams`, which `dim_coffee` needs for the per-100 g price. The title count is an estimate: a custom attribute
+whose value only looks like a slug keeps it. Who judged: Claude, from the code and these counts; no product was
+labeled.
+
+**Each size's own stock.** A size priced from the bulk `type=variation` response (or its own lookup) now takes that
+variation's `is_in_stock`, not the parent's (true when any size is). The lake keeps only the old, parent-wide value,
+so how many sizes change can't be counted offline; the WooCommerce review's live sample (hoodrivercoffeeroasters.com,
+100 sizes) had 0 that differ.

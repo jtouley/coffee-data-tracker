@@ -14,7 +14,8 @@ from ..http import (
     FetchError,
     PartialCatalog,
     PoliteClient,
-    retry_after_seconds,
+    asked_wait,
+    causes,
     store_wait,
 )
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
@@ -26,7 +27,11 @@ log = logging.getLogger(__name__)
 # No page cap: pages are read until the catalog ends (an empty page, a repeated page, or a short one below). kaldi.com
 # lists more than 60 x 250 products: it failed the cap of 20 on 2026-10-31 and the cap of 60 on 2026-11-02. Only the
 # run's deadline stops a catalog early, and then it is stored as partial.
-PAGE_LIMIT = 250  # the most /products.json returns per page
+# The most a page holds. The storefront's /products.json isn't documented on its own; Shopify's REST pagination docs
+# give the `limit` it shares with the Admin API's product list: "The default `limit` value is `50`. The maximum
+# `limit` value is `250`." (https://shopify.dev/docs/api/usage/pagination-rest, Parameters). A larger limit is
+# answered with 250.
+PAGE_LIMIT = 250
 # A page with fewer than PAGE_LIMIT products ends the catalog, so the empty page after it is never asked for, but
 # only once the products so far reach the store's last known count (its latest ok fetch). That empty page drew the
 # 429s (B's retest, 2026-10-31: every "page 2" failure had its whole catalog on page 1). Shopify can return short
@@ -63,21 +68,15 @@ class StoreBlocked(FetchError):
     """A 401 or 403: the store refuses. Never backed off or deferred."""
 
 
-def _causes(e: BaseException | None):
-    while e is not None:
-        yield e
-        e = e.__cause__
-
-
 def _hard_block(e: FetchError) -> int | None:
-    for c in _causes(e):
+    for c in causes(e):
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in HARD_BLOCK_STATUSES:
             return c.response.status_code
     return next((s for s in HARD_BLOCK_STATUSES if str(e).startswith(f"HTTP {s} ")), None)
 
 
 def _blocked_host(e: FetchError, default: str) -> str:
-    for c in _causes(e):
+    for c in causes(e):
         if isinstance(c, HostRateLimited):
             return c.host
         if isinstance(c, httpx.HTTPStatusError):
@@ -92,9 +91,9 @@ def _block_wait(e: FetchError) -> float | None:
         return store_wait(e.wait)
     if isinstance(e, RateLimited):  # the platform as a whole gave up: not this store's pause
         return None
-    for c in _causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
+    for c in causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
-            wait = retry_after_seconds(c.response.headers.get("retry-after"))
+            wait = asked_wait(c.response)
             return BLOCK_DEFAULT_WAIT if wait is None else store_wait(wait)
     return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")) else None
 
@@ -158,7 +157,8 @@ def fetch(
         try:
             data = client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
         except DeadlineReached as e:
-            raise PartialCatalog(f"{e} (page {page})", list(items.values())) from e
+            # page: where a resume continues (ingest.run parks it), not page 1 again
+            raise PartialCatalog(f"{e} (page {page})", list(items.values()), page=page) from e
         except FetchError as e:
             if (status := _hard_block(e)) is not None:
                 raise StoreBlocked(f"blocked: HTTP {status} on page {page} of {roaster.host}") from e

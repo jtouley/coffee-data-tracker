@@ -56,8 +56,9 @@ every job then runs the same image, and the plan shows the change.
 job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches.
 
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
-  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi. A plan
-  that shows anything else on a job, beyond the image: stop.
+  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi, and
+  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
+  else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -677,29 +678,45 @@ gcloud run jobs execute build --region $REGION --wait \
 week again. The early release has last week's data, so it is a harmless baseline. Confirm the fix (§5.1 e). After
 11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
 
-### 5.3 A partial crawl doesn't alert
+### 5.3 A crawl that ends `deadline`: skipped or partial
 
-This section describes `main` before PR #91 (crawl-hardening), which changes it; when #91 merges after #92, #91 must
-update it (and §5.1 c step 2).
+A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline` for one
+of two reasons, which need different handling:
 
-A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline`, with
-`skipped` = roasters never started. An attempt whose latest row is `running` died. Check the week's rows per connector
-(each connector has one attempt per slot):
+- **Skipped**: `skipped` > 0 roasters were never started. They have no `fetches` row this week, so
+  `run_is_complete` fails Tuesday's gate until something fetches them.
+- **Partial**: `skipped` = 0, and `detail.partial` > 0 catalogs were read only in part (the deadline stopped them
+  mid-catalog, a WooCommerce store's count differed from its `X-WP-Total`, or a sub-sitemap couldn't be read). Each
+  one is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
+  `partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
+  listed. A partial Shopify catalog is parked at the page it reached: the resume slot and crawl-retry continue from
+  there.
+
+An attempt whose latest row is `running` died. Check the week's rows per connector (each connector has one attempt
+per slot):
 
 ```sh
 uv run python - <<'EOF'
-import os
+import json, os
 from coffeedata import control
 from coffeedata.lake import Lake
 
 for r in control.rows(Lake(), os.environ["WEEK"]):  # the latest row per attempt
+    d = json.loads(r["detail"] or "{}")
     print(r["job"], r["connector"], r["started_at"], r["status"],
-          *(f"{k}={r[k]}" for k in ("todo", "ok", "errors", "parked", "skipped")))
+          *(f"{k}={r[k]}" for k in ("todo", "ok", "errors", "parked", "skipped")),
+          f"partial={d.get('partial')}", f"partial_every_week={d.get('partial_every_week')}")
 EOF
 ```
 
-- A connector whose **latest** crawl row is `deadline` (or `running`) after its 15:17 resume is partial. Re-run its
-  crawl before Tuesday's 03:17 merge (§5.1 c, step 2). Otherwise `run_is_complete` fails Tuesday's gate.
+- **`skipped` > 0** on a connector's **latest** crawl row after its 15:17 resume: re-run its crawl before Tuesday's
+  03:17 merge (§5.1 c, step 2). Otherwise `run_is_complete` fails Tuesday's gate.
+- **Only partial** (`skipped` = 0): the gate passes. No re-run is needed, and none should be made every week for it.
+- **`partial_every_week`** lists the stores that ended partial in each of their last two runs
+  (`ingest.PARTIAL_WEEKS`); the crawl's log and stderr warn about them too. Such a store is never read whole inside
+  one window. Read its `fetches.error` rows: a deadline stop at a later page each week means the catalog is too big
+  for the window, and a count that never matches `X-WP-Total` means the store's listing and its count disagree.
+  Raise it with the owner rather than re-running crawls.
 - `crawl-retry` (Shopify, 21:47) writes no `job_manifests` row. Read its execution's log (above) instead.
 - After the merge, its row's `detail` lists `missing` connectors. That list should be empty.
 

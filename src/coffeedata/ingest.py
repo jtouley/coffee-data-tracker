@@ -38,10 +38,10 @@ from .http import (
     RequestStats,
     RobotsUnavailable,
     Unavailable,
+    asked_wait,
     causes,
     challenged,
     egress_ip,
-    retry_after_seconds,
     server_pause,
     store_wait,
 )
@@ -113,7 +113,7 @@ def block_wait(e: BaseException) -> float | None:
         if isinstance(c, HostRateLimited | RobotsUnavailable) and c.wait is not None:
             return store_wait(c.wait)
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
-            asked = retry_after_seconds(c.response.headers.get("retry-after"))
+            asked = asked_wait(c.response)
             return None if asked is None else store_wait(asked)
         if isinstance(c, httpx.HTTPStatusError) and (wait := server_pause(c.response)) is not None:
             return wait
@@ -163,8 +163,12 @@ class Result:
     progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
     # not fetched: in flight in 2 dead attempts this week (crashguard); its fetches status is `crashed`
     quarantined: bool = False
-    # ok, but the catalog was read only in part (http.PartialCatalog: the run's deadline stopped it); fetches.partial
+    # ok, but the catalog was read only in part (http.PartialCatalog); fetches.partial
     partial: bool = False
+    # why it was partial (PartialCatalog's message: how far it got): fetches.error on the partial ok row
+    partial_reason: str | None = None
+    # a partial paged catalog's place (PartialCatalog.page): {"page", "items"}, parked so a resume continues there
+    resume_at: dict | None = None
 
     @property
     def status(self) -> str:
@@ -188,6 +192,9 @@ def ingest_one(
             if e.items:  # what it read, marked partial: dbt keeps the rest listed instead of delisting it
                 res.items = list({i.product_id: i for i in e.items}.values())
                 res.partial = True
+                res.partial_reason = f"partial: {e}"[:300]
+                if e.page is not None:
+                    res.resume_at = {"page": e.page, "items": res.items}
             else:  # nothing read: an error, never an empty catalog
                 res.error = f"{type(e.__cause__ or e).__name__}: {e}"[:300]
         except PageBlocked as e:
@@ -243,6 +250,31 @@ def known_products(lake: Lake) -> dict[str, int]:
             where status = 'ok' and products > 0 and not coalesce(partial, false) and roaster_id is not null
             group by 1"""
     return dict(retry_transient(lambda: lake.connect().execute(q).fetchall()))
+
+
+# A store whose fetch ended partial (an ok fetch marked partial, no complete one) in each of this many run dates in a
+# row, this one included, is warned about: a catalog too big for one window, or a store whose count never matches.
+PARTIAL_WEEKS = 2
+
+
+def partial_every_week(
+    lake: Lake, run_date: str, roaster_ids: set[str], weeks: int = PARTIAL_WEEKS
+) -> list[str]:
+    """The roasters of roaster_ids that ended partial in each of their last `weeks` run dates, this one included:
+    each of those weeks has an ok fetch marked partial and no complete ok fetch."""
+    if not roaster_ids:
+        return []
+    q = f"""with w as (
+                select roaster_id, run_date,
+                       bool_or(status = 'ok' and coalesce(partial, false)) as part,
+                       bool_or(status = 'ok' and not coalesce(partial, false)) as whole
+                from {lake.scan("fetches")} where roaster_id is not null and run_date <= ? group by 1, 2),
+            ranked as (select *, row_number() over (partition by roaster_id order by run_date desc) as rn from w)
+            select roaster_id from ranked where rn <= ? group by 1
+            having count(*) = ? and bool_and(part and not whole) and max(run_date) = ?"""
+    d = date.fromisoformat(run_date)
+    rows = retry_transient(lambda: lake.connect().execute(q, [d, weeks, weeks, d]).fetchall())
+    return sorted(r[0] for r in rows if r[0] in roaster_ids)
 
 
 def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
@@ -373,7 +405,8 @@ def rows_for(
                 "roaster_id": r.roaster_id,
                 "adapter": r.adapter,
                 "status": res.status,
-                "error": res.error,
+                # a partial ok fetch says why (how far it got), so the lake shows where a catalog stopped
+                "error": res.error or (res.partial_reason if res.status == "ok" else None),
                 "products": len(res.items),
                 "coffees": None,
                 "pages": res.stats.pages,
@@ -506,7 +539,7 @@ def run(
                 res.roaster.roaster_id,
                 res.roaster.adapter,
                 len(res.items),
-                res.error or "",
+                res.error or res.partial_reason or "",
             )
 
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
@@ -535,7 +568,12 @@ def run(
     with (
         # the deadline also stops a catalog still being read: no request is sent after it (http.DeadlineReached), and
         # what was read is stored as a partial fetch
-        PoliteClient(limiters=limiters, **({"deadline_s": deadline_s} | (client_kw or {}))) as client,
+        # the run's own deadline, as it stands now: the client stops at the same moment, not deadline_s after this
+        # point (the manifest publish and the lake reads above came first)
+        PoliteClient(
+            limiters=limiters,
+            **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),
+        ) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round
@@ -682,7 +720,13 @@ def run(
                             quiet = progress.pop(rid, {}).get("host", "")
                             for limiter in limiters.values():
                                 limiter.quiet_hosts.discard(quiet)
-                            parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
+                            if res.resume_at is not None:
+                                # partial (the deadline stopped it mid-catalog): its place is parked, so the resume
+                                # slot or crawl-retry continues from that page instead of page 1
+                                save_parked(lake, run_date, rid, res.resume_at)
+                                page_stats["parked_partial"] += 1
+                            else:  # read whole (or not a paged catalog): nothing left to resume
+                                parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
                         last = not (res.error and res.deferrable) or round_ == rounds - 1
                         # A pause (a block, or a 5xx's long Retry-After): not asked again before its Retry-After
                         # (at most MAX_STORE_WAIT), else a backoff. Never scheduled past the deadline: that store keeps
@@ -723,6 +767,19 @@ def run(
             deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
             deferred["refused"] = sum(1 for rid, ok in retried_ok.items() if not ok and rid in refusing)
         deferred |= {f"page_{k}": v for k, v in page_stats.items()}
+    stuck: list[str] = []
+    if stats["partial"]:
+        try:
+            stuck = partial_every_week(lake, run_date, {r.roaster_id for r in roasters})
+        except Exception as e:  # noqa: BLE001 - a warning's read never fails the run
+            log.warning("could not check for stores partial every week: %s", e)
+        if stuck:
+            log.warning(
+                "%d stores ended partial in each of their last %d runs (never read whole): %s",
+                len(stuck),
+                PARTIAL_WEEKS,
+                ", ".join(stuck),
+            )
     return {
         "run_date": run_date,
         "roasters": len(roasters),
@@ -736,7 +793,8 @@ def run(
         },  # the same, per platform
         "deferred": deferred,  # roasters per deferred round, and those still failing after them
         "skipped_deadline": skipped,  # not started: the deadline passed first
-        "partial": stats["partial"],  # ok fetches stopped by the deadline mid-catalog (fetches.partial)
+        "partial": stats["partial"],  # ok fetches that read only part of the catalog (fetches.partial)
+        "partial_every_week": stuck,  # of them, the stores partial in each of their last PARTIAL_WEEKS runs
         "requests": stats["requests"],
         "http_429": stats["http_429"],
         "http_430": stats["http_430"],

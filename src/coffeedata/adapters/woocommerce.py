@@ -4,14 +4,25 @@ from __future__ import annotations
 
 from collections.abc import Iterator
 
-from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient, block_status, challenged
+import httpx
+
+from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient, block_status, causes, challenged
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
-# No cap on pages or on variation prices: the whole catalog is read, or the fetch fails, or (at the run's deadline)
-# it is stored as partial. The owner removed every cap on 2026-11-02: MAX_VARIATION_LOOKUPS = 150 left 48 of 201
-# stores' sizes unpriced, and MAX_PAGES = 20 cut villageofartisans.com at 2,000 products.
-PER_PAGE = 100  # the most the Store API returns per page
+# No cap on pages or on variation prices: the whole catalog is read, or the fetch fails, or it is stored as partial
+# (the run's deadline, or a count that differs from the store's X-WP-Total). The owner removed every cap on
+# 2026-11-02: MAX_VARIATION_LOOKUPS = 150 left 48 of 201 stores' sizes unpriced, and MAX_PAGES = 20 cut
+# villageofartisans.com at 2,000 products.
+#
+# The most a page holds, the Store API's documented maximum: `per_page` "Defaults to `10`. Maximum `100`."
+# (docs/apis/store-api/README.md, "Pagination"; src/StoreApi/Routes/V1/Products.php, `per_page` maximum 100).
+PER_PAGE = 100
+# A page that times out is asked for again in smaller pages, these sizes in turn, and the rest of the catalog at the
+# smallest that answered: volunteercoffee.com's 54 products embed 3,419 variations, 690 KB that took 41 s at 100 a
+# page (the client gives up at 15 s), so it failed every week. Each size divides PER_PAGE and the one before it, so
+# the products already read stay at the same offsets.
+TIMEOUT_PER_PAGE = (25, 5)
 
 
 def _price(prices: dict | None) -> float | None:
@@ -22,14 +33,47 @@ def _price(prices: dict | None) -> float | None:
     return int(raw) / 10 ** int(prices.get("currency_minor_unit", 2))
 
 
-def _size_label(attrs: list[dict]) -> str:
-    return " ".join(str(a.get("value") or "") for a in attrs)
+def _term_names(parent_attrs: list) -> dict[str, dict[str, str]]:
+    """The parent's attributes (ProductSchema::get_attributes): attribute name (lowercased) -> term slug -> term name.
+    A taxonomy attribute's terms are {id, name, slug}; a custom one's have slug = name."""
+    out: dict[str, dict[str, str]] = {}
+    for a in parent_attrs or []:
+        if not isinstance(a, dict):
+            continue
+        terms = out.setdefault(str(a.get("name") or "").lower(), {})
+        for t in a.get("terms") or []:
+            if isinstance(t, dict) and t.get("slug") not in (None, "") and t.get("name") not in (None, ""):
+                terms[str(t["slug"])] = str(t["name"])
+    return out
+
+
+def _size_label(attrs: list[dict], parent_attrs: list | None = None) -> str:
+    """A variation's readable size, from its attributes. The Store API lists each variation's attributes as
+    {name, value}, where a taxonomy attribute's value is the term's slug ("12-oz"; ProductSchema::get_variations):
+    the readable name ("12 oz") is the term's, in the parent's own `attributes[].terms` in the same response, matched
+    by attribute name, then by slug. A value that matches no term (a custom attribute, whose slug is its name) is kept
+    as it is; a null value ("any") is empty."""
+    names = _term_names(parent_attrs or [])
+    words = []
+    for a in attrs:
+        value = a.get("value")
+        if value in (None, ""):
+            words.append("")
+            continue
+        value = str(value)
+        words.append(names.get(str(a.get("name") or "").lower(), {}).get(value, value))
+    return " ".join(words)
 
 
 def parse_product(
-    p: dict, roaster: Roaster, variation_prices: dict[str, float | None] | None = None
+    p: dict,
+    roaster: Roaster,
+    variation_prices: dict[str, float | None] | None = None,
+    variation_stock: dict[str, bool | None] | None = None,
 ) -> CatalogItem:
-    """variation_prices: variation id -> price, fetched separately because the listing only carries a range."""
+    """variation_prices: variation id -> price, fetched separately because the listing only carries a range.
+    variation_stock: variation id -> its own is_in_stock, from the same lookup; a size without one takes the
+    parent's (in stock when any size is)."""
     tags = sorted(
         {t["name"] for t in p.get("tags", []) if isinstance(t, dict)}
         | {c["name"] for c in p.get("categories", []) if isinstance(c, dict)}
@@ -39,15 +83,17 @@ def parse_product(
     if variations:
         variants = []
         for v in variations:
-            label = _size_label(v.get("attributes") or [])
-            price = (variation_prices or {}).get(str(v["id"]))
+            label = _size_label(v.get("attributes") or [], p.get("attributes"))
+            vid = str(v["id"])
+            price = (variation_prices or {}).get(vid)
+            own = (variation_stock or {}).get(vid)
             variants.append(
                 Variant(
-                    variant_id=str(v["id"]),
+                    variant_id=vid,
                     title=label,
                     price_usd=price,
                     grams=parse_grams(label),
-                    available=stock,
+                    available=stock if own is None else own,
                 )
             )
     else:
@@ -92,23 +138,50 @@ def _variation_ids(p: dict) -> list[str]:
     return [str(v["id"]) for v in p.get("variations") or [] if isinstance(v, dict) and "id" in v]
 
 
-def _pages(client: PoliteClient, url: str, host: str, **params: str | int) -> Iterator[list[dict]]:
+def _timed_out(e: BaseException) -> bool:
+    return any(isinstance(c, httpx.TimeoutException) for c in causes(e))
+
+
+class _Listing:
+    """What a Store API products query said about itself: X-WP-Total, the store's own count of the query's items."""
+
+    def __init__(self) -> None:
+        self.total: int | None = None
+
+
+def _pages(
+    client: PoliteClient, url: str, host: str, listing: _Listing | None = None, **params: str | int
+) -> Iterator[list[dict]]:
     """Every page of a Store API products query, until a short page. A store that ignores `page` and repeats a page
-    ends it too (nothing new would come)."""
+    ends it too (nothing new would come). A page that times out is asked for again at the next smaller size
+    (TIMEOUT_PER_PAGE), from the same offset. listing.total: the first page's X-WP-Total (never `Link`, which real
+    stores send HTML-escaped: `page=2#038;per_page=1`)."""
     seen: set[str] = set()
-    page = 1
+    offset = 0
+    per_page = PER_PAGE
+    smaller = iter(TIMEOUT_PER_PAGE)
     while True:
-        data = client.fetch_json(url, per_page=PER_PAGE, page=page, **params)
+        try:
+            data, r = client.fetch_json_response(
+                url, per_page=per_page, page=offset // per_page + 1, **params
+            )
+        except FetchError as e:
+            if not _timed_out(e) or (per_page := next(smaller, 0)) == 0:
+                raise
+            continue
         if not isinstance(data, list):
             raise FetchError(f"unexpected Store API payload from {host}")
+        if listing is not None and listing.total is None:
+            total = r.headers.get("x-wp-total", "").strip()
+            listing.total = int(total) if total.isdigit() else None
         ids = {str(p.get("id")) for p in data if isinstance(p, dict)}
         if data and ids <= seen:
             return
         seen |= ids
         yield data
-        if len(data) < PER_PAGE:
+        if len(data) < per_page:
             return
-        page += 1
+        offset += len(data)
 
 
 def _batches(products: list[dict]) -> Iterator[list[dict]]:
@@ -126,59 +199,94 @@ def _batches(products: list[dict]) -> Iterator[list[dict]]:
         yield batch
 
 
+def _lookup(client: PoliteClient, base: str, vid: str) -> dict:
+    """One variation, asked for on its own. Any failure fails the fetch (never a null price for a size the store
+    prices): a challenge or a block (429, 430, 503 once the client's retries are spent) as such, so ingest.run counts
+    it as a refusal or defers the store; anything else as the fetch's error, asked again next pass."""
+    try:
+        v = client.fetch_json(f"{base}/{vid}")
+    except DeadlineReached:
+        raise
+    except FetchError as e:
+        if challenged(e) or block_status(e):  # a refusal or a pause, not an unknown price (ingest.run)
+            raise
+        raise FetchError(f"variation {vid}: {e}", status=e.status) from e
+    if not isinstance(v, dict):
+        raise FetchError(f"variation {vid}: unexpected Store API payload")
+    return v
+
+
 def variation_prices(
-    client: PoliteClient, base: str, host: str, products: list[dict], prices: dict[str, float | None]
+    client: PoliteClient,
+    base: str,
+    host: str,
+    products: list[dict],
+    prices: dict[str, float | None],
+    stock: dict[str, bool | None] | None = None,
 ) -> None:
-    """Fills `prices` (variation id -> price) for every variation of `products`, in bulk: the Store API's products
-    endpoint lists variations with their prices when asked for type=variation, filtered to their parents with
-    `parent` (docs/apis/store-api/resources-endpoints/products.md, "Product Variations" and the `parent` and `type`
-    parameters; ProductQuery::prepare_objects_query maps type=variation to post_type product_variation and `parent`
-    to post_parent__in). About one request per 100 variations, instead of one per variation. A failed page fails
-    the fetch (a listing page's failure would). A variation the bulk query didn't return (a store that ignores
-    type=variation, or an older Store API) is asked for on its own, as before, with no cap; only that lookup's
-    failure leaves its price unknown."""
+    """Fills `prices` (variation id -> price) and `stock` (variation id -> its own is_in_stock) for every variation
+    of `products`, in bulk: the Store API's products endpoint lists variations with their prices when asked for
+    type=variation, filtered to their parents with `parent` (docs/apis/store-api/resources-endpoints/products.md,
+    "Product Variations" and the `parent` and `type` parameters; ProductQuery::prepare_objects_query maps
+    type=variation to post_type product_variation and `parent` to post_parent__in). About one request per 100
+    variations, instead of one per variation.
+
+    Each variation the bulk query returns is matched to the batch by its own `parent` id: one whose parent isn't in
+    the batch means the store ignored the filter, so the rest of that batch is asked for one by one, and the next
+    batch tries in bulk again. A published variation the parent doesn't list (an unpriced leftover the listing's
+    get_visible_children leaves out) is simply not wanted: it never turns bulk off. A size the bulk query didn't
+    return is asked for on its own. Any failed request fails the fetch (_lookup): never a null price, or a null
+    stock, for a size the store has."""
+    stock = {} if stock is None else stock
     wanted = {vid for p in products for vid in _variation_ids(p)}
     for batch in _batches(products):
         mine = {vid for p in batch for vid in _variation_ids(p)}
-        parents = ",".join(str(p["id"]) for p in batch)
-        foreign = False
-        for data in _pages(client, base, host, type="variation", parent=parents):
+        ids = [str(p["id"]) for p in batch]
+        parents = set(ids)
+        for data in _pages(client, base, host, type="variation", parent=",".join(ids)):
+            foreign = False
             for v in data:
-                if isinstance(v, dict) and "id" in v:
-                    vid = str(v["id"])
-                    foreign |= vid not in mine
-                    if vid in wanted:
-                        prices[vid] = _price(v.get("prices"))
+                if not isinstance(v, dict) or "id" not in v:
+                    continue
+                if str(v.get("parent")) not in parents:
+                    foreign = True  # the store ignored `parent` (or `type`): not a variation of this batch
+                    continue
+                vid = str(v["id"])
+                if vid in wanted:
+                    prices[vid] = _price(v.get("prices"))
+                    stock[vid] = v.get("is_in_stock")
             if foreign or mine <= prices.keys():  # every listed size priced: no need to ask for an empty page
                 break
-        if (
-            foreign
-        ):  # the store ignored type or parent: stop asking in bulk; the sizes left are asked for one by one
-            break
     for vid in sorted(wanted - prices.keys(), key=lambda x: (len(x), x)):
-        try:
-            prices[vid] = _price(client.fetch_json(f"{base}/{vid}").get("prices"))
-        except DeadlineReached:
-            raise
-        except (FetchError, AttributeError) as e:
-            if challenged(e) or block_status(e):  # a refusal or a pause, not an unknown price (ingest.run)
-                raise
-            prices[vid] = None  # unknown beats wrong: no per-gram price for this size
+        v = _lookup(client, base, vid)
+        prices[vid] = _price(v.get("prices"))
+        stock[vid] = v.get("is_in_stock")
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     base = f"https://{roaster.host}/wp-json/wc/store/v1/products"
     raw: list[dict] = []
     prices: dict[str, float | None] = {}
+    stock: dict[str, bool | None] = {}
+    listing = _Listing()
     try:
-        for data in _pages(client, base, roaster.host):
+        for data in _pages(client, base, roaster.host, listing):
             for p in (p for p in data if isinstance(p, dict)):
                 raw.append(p)
                 if not _needs_variation_prices(p):  # one price for every size: the listing's
                     prices |= dict.fromkeys(_variation_ids(p), _price(p.get("prices")))
-        variation_prices(client, base, roaster.host, [p for p in raw if _needs_variation_prices(p)], prices)
+        needs = [p for p in raw if _needs_variation_prices(p)]
+        variation_prices(client, base, roaster.host, needs, prices, stock)
     except DeadlineReached as e:
         # Only products read whole: listed, with every size's price. The rest stay as they were (partial).
-        done = [parse_product(p, roaster, prices) for p in raw if prices.keys() >= set(_variation_ids(p))]
+        done = [
+            parse_product(p, roaster, prices, stock) for p in raw if prices.keys() >= set(_variation_ids(p))
+        ]
         raise PartialCatalog(f"{roaster.host}: {e} ({len(done)} of {len(raw)}+ products read)", done) from e
-    return [parse_product(p, roaster, prices) for p in raw]
+    items = [parse_product(p, roaster, prices, stock) for p in raw]
+    read = len({str(p.get("id")) for p in raw})
+    if listing.total is not None and read != listing.total:
+        # The store counts the query's products itself (X-WP-Total, docs/apis/store-api/README.md "Pagination"): a
+        # read that differs ended early or ran into a changing catalog, so it is never the whole catalog.
+        raise PartialCatalog(f"{roaster.host}: {read} products read, X-WP-Total says {listing.total}", items)
+    return items

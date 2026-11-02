@@ -144,7 +144,8 @@ def test_woocommerce_reads_past_20_listing_pages():
 
 def test_woocommerce_store_that_ignores_type_variation_falls_back_to_lookups_with_no_cap():
     """An older Store API answers type=variation with its products: each size is asked for on its own, as before,
-    and all 200 of them (the old cap stopped at 150). The ignored filter is noticed after one batch."""
+    and all 200 of them (the old cap stopped at 150). Each batch notices the ignored filter on its first page (a
+    variation's `parent` outside the batch), so it costs one bulk request per batch of about 100 sizes."""
     handler, variations = _woo_store(20, 10, ignore_type=True)
     site = Site(handler)
     with site.client() as c:
@@ -152,7 +153,7 @@ def test_woocommerce_store_that_ignores_type_variation_falls_back_to_lookups_wit
     assert _prices(items) == {str(v["id"]): int(v["prices"]["price"]) / 100 for v in variations}
     lookups = [r for r in site.requests if r.url.path.rstrip("/").split("/")[-1].isdigit()]
     assert len(lookups) == 200
-    assert sum(r.url.params.get("type") == "variation" for r in site.requests) == 1
+    assert sum(r.url.params.get("type") == "variation" for r in site.requests) == 2  # 2 batches of 100 sizes
 
 
 def test_woocommerce_failed_bulk_page_fails_the_fetch_instead_of_wiping_prices():
@@ -411,7 +412,16 @@ def test_ingest_stores_a_catalog_stopped_at_the_deadline_as_partial_and_not_done
     out = ingest.run(lake, stores, WEEK, workers=1, deadline_s=60,
                      client_kw={"min_interval": 0, "retries": 1, "transport": httpx.MockTransport(Site(handler))})  # fmt: skip
     assert out["partial"] == 1 and out["by_adapter"]["shopify"]["partial"] == 1
-    assert _fetches(lake) == [("big.com", "ok", True, 750, None)]
+    # the partial row says why it stopped, and where (fetches.error: item 6)
+    assert _fetches(lake) == [
+        (
+            "big.com",
+            "ok",
+            True,
+            750,
+            "partial: the run's deadline passed before https://big.com/products.json (page 4)",
+        )
+    ]
     done, tried = ingest._done_and_tried(lake, WEEK)
     assert "big.com" not in done and "big.com" in tried
     assert ingest.known_products(lake) == {}  # a partial read is never the store's known size
