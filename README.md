@@ -281,9 +281,10 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
 6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
 
-The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
-`jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
-secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
+The `deploy` workflow runs when a change touches the app. On a pull request it builds the app's image and checks
+its Terraform; on a push to `main` it also deploys it to Cloud Run at `app.registry.coffee`. It skips the deploy
+until the `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE` variables are set; setup and the app's secrets are in
+[`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
 `make app` with `COFFEEDATA_LAKE` and `HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
 
 ## The site
