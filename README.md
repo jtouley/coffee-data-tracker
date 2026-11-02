@@ -228,7 +228,8 @@ you pass `--public`).
 | `make contracts` | `python -m coffeedata.raw_contracts --all` | Regenerate the internal ODCS contracts at their versions; refuses a change to names, types, required or enums without a new version |
 
 The CLI also has `build-diff`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
-connector; with `--no-dev`, add `--extra snowflake`), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
+connector; with `--no-dev`, add `--extra snowflake`; it also writes the table, view and column descriptions
+that make the Snowflake listing's data dictionary, from the public contract), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
 <command> --help` lists each command's flags.
 
 ## Configuration
