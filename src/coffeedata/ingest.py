@@ -34,12 +34,14 @@ from .http import (
     FetchError,
     PoliteClient,
     RequestStats,
+    RobotsUnavailable,
     Unavailable,
     egress_ip,
+    retry_after_seconds,
 )
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, HostRateLimited, PlatformLimiter, RateLimited
 
 log = logging.getLogger(__name__)
 
@@ -49,6 +51,9 @@ DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters a
 # A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
 # don't all wake and ask at the same instant.
 DEFERRED_SPREAD = 60.0
+# A store deferred on a block (429, 430, 503) is asked again no sooner than its Retry-After or these many seconds
+# after its failure (one per deferred round), whichever is longer, plus its place in the round's spread.
+DEFERRED_BACKOFFS = (60.0, 120.0)
 # A store that pauses us on a catalog page (shopify.PageBlocked) is asked for that same page again after each of
 # these waits (at least its Retry-After), without holding a worker meanwhile; the pages it already served are kept.
 # After the last one it is parked, with its progress, for `coffeedata crawl-retry`.
@@ -62,9 +67,13 @@ def _causes(e: BaseException | None) -> Iterator[BaseException]:
 
 
 def challenged(e: BaseException) -> bool:
-    """An edge answered with a challenge (http.CHALLENGE_STATUSES: SiteGround's 202) instead of the catalog or its
-    robots.txt."""
-    return any(isinstance(c, FetchError) and c.status in CHALLENGE_STATUSES for c in _causes(e))
+    """An edge answered with a challenge instead of the catalog (http.CHALLENGE_STATUSES: SiteGround's 202) or its
+    robots.txt (http.is_challenge: a 202, or a challenge header on any status)."""
+    return any(
+        (isinstance(c, FetchError) and c.status in CHALLENGE_STATUSES)
+        or (isinstance(c, RobotsUnavailable) and c.challenge)
+        for c in _causes(e)
+    )
 
 
 def blocked(e: BaseException) -> bool:
@@ -80,13 +89,23 @@ def blocked(e: BaseException) -> bool:
 
 
 def deferrable(e: BaseException) -> bool:
-    """A failure worth another try once the rest of the run is done: rate limiting or a timeout. Never a refusal
-    (401, 403, 430: shopify.StoreBlocked; an edge's challenge, which answers every retry the same way: the 15:18
-    resume of 2026-11-02 asked 32 challenged stores again and got 32 challenges), and never a page block, which
-    ingest.run backs off itself."""
+    """A failure worth another try once the rest of the run is done: rate limiting (429, 430, 503, on any request,
+    robots.txt included) or a timeout. Never a refusal (401, 403: shopify.StoreBlocked; an edge's challenge, which
+    answers every retry the same way: the 15:18 resume of 2026-11-02 asked 32 challenged stores again and got 32
+    challenges), and never a page block, which ingest.run backs off itself."""
     if challenged(e) or any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
         return False
     return blocked(e) or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
+
+
+def block_wait(e: BaseException) -> float | None:
+    """How long the store asked us to wait (its Retry-After, or the limiter's pause for it), if it said."""
+    for c in _causes(e):
+        if isinstance(c, HostRateLimited | RobotsUnavailable) and c.wait is not None:
+            return c.wait
+        if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
+            return retry_after_seconds(c.response.headers.get("retry-after"))
+    return None
 
 
 def parked_path(lake: Lake, run_date: str, roaster_id: str) -> Path:
@@ -124,6 +143,8 @@ class Result:
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
     deferrable: bool = False
+    # a deferrable failure's Retry-After (block_wait): the store isn't asked again before it passes
+    wait: float | None = None
     # failed on a block status (429, 430, 503), an edge's challenge (202) or the limiter's refusal
     blocked: bool = False
     unavailable: bool = False  # the store is closed, deactivated or password-protected (http.Unavailable)
@@ -158,6 +179,7 @@ def ingest_one(
             res.error = f"{type(e).__name__}: {e}"[:300]
             res.items = []
             res.deferrable = deferrable(e)
+            res.wait = block_wait(e) if res.deferrable else None
             res.blocked = blocked(e)
             res.unavailable = any(isinstance(c, Unavailable) for c in _causes(e))
     res.duration_s = round(time.monotonic() - start, 3)
@@ -460,23 +482,24 @@ def run(
 
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
-    # Shopify limits by client IP across all its stores, so its stores share one request budget.
-    shopify = PlatformLimiter(
-        "shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host
-    )
+    # Shopify limits by client IP across all its stores, so its stores share one request budget. Any other platform
+    # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
+    rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
+    limiters = {
+        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
+        for name, rps in rates.items()
+    }
+    shopify = limiters["shopify"]
     # Only a store's first block in a run counts towards a platform-wide pause: a retry pass asks only stores that
     # already failed, and a store that blocked in an earlier job of this run (a resume, crawl-retry) is a repeat.
-    shopify.count_bursts = mode != "retry_failed"
-    shopify.ever_blocked |= blocked_hosts(lake, run_date)
-    # Any other platform with a shared budget (a connector's config: connectors.Connector.rps) gets its own.
-    limiters = {"shopify": shopify} | {
-        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
-        for name, rps in (platform_rps or {}).items()
-        if name != "shopify"
-    }
+    blocked_before = blocked_hosts(lake, run_date)
+    for limiter in limiters.values():
+        limiter.count_bursts = mode != "retry_failed"
+        limiter.ever_blocked |= blocked_before
     if held_out:
         flush(held_out)
     deferred: dict[str, int] = {}
+    not_before: dict[str, float] = {}  # parked roaster -> when its Retry-After (or a backoff) has passed
     retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
@@ -523,12 +546,16 @@ def run(
 
         for round_ in range(rounds):
             if round_:
-                shopify.defer = False  # nothing left to overtake: wait out a store's pause in the worker
+                for limiter in limiters.values():
+                    limiter.defer = False  # nothing left to overtake: wait out a store's pause in the worker
                 deferred[f"round_{round_}"] = len(queue)
             t0, spread = time.monotonic(), DEFERRED_SPREAD if round_ else 0.0
             # (start time, order, roaster): a store is submitted when its time comes, so neither a deferred round's
             # spread nor a page backoff holds a worker while it waits.
-            pending = [(t0 + spread * i / len(queue), i, r) for i, r in enumerate(queue)]
+            pending = [
+                (max(t0, not_before.get(r.roaster_id, 0.0)) + spread * i / len(queue), i, r)
+                for i, r in enumerate(queue)
+            ]
             heapq.heapify(pending)
             order = len(pending)
             running = set()
@@ -597,7 +624,8 @@ def run(
                                 f"backoff {p['backoffs']} of {len(PAGE_BACKOFFS)} ({wait:.0f}s, then page "
                                 f"{p['page']} again): {res.error}"
                             )[:300]
-                            shopify.quiet_hosts.add(res.progress["host"])
+                            for limiter in limiters.values():  # its page backoff is its own pause
+                                limiter.quiet_hosts.add(res.progress["host"])
                             heapq.heappush(pending, (time.monotonic() + wait, order, res.roaster))
                             order += 1
                         else:
@@ -612,7 +640,9 @@ def run(
                                 page_stats["parked_never_served"] += 1
                     else:
                         if not res.error:
-                            shopify.quiet_hosts.discard(progress.pop(rid, {}).get("host", ""))
+                            quiet = progress.pop(rid, {}).get("host", "")
+                            for limiter in limiters.values():
+                                limiter.quiet_hosts.discard(quiet)
                             parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
                         last = not (res.error and res.deferrable) or round_ == rounds - 1
                         if last and rid in refusing and round_:
@@ -622,6 +652,9 @@ def run(
                             )[:300]
                         if not last:
                             parked.append(res.roaster)
+                            if res.blocked:  # a pause: not before its Retry-After, else a backoff
+                                backoff = DEFERRED_BACKOFFS[min(round_, len(DEFERRED_BACKOFFS) - 1)]
+                                not_before[rid] = time.monotonic() + max(res.wait or 0.0, backoff)
                     done.append(res)
                     if len(done) == CHUNK:
                         flush(done)
@@ -646,6 +679,9 @@ def run(
         "failures": failures[:50],
         "quarantined": sorted(quarantine),  # not fetched: a `crashed` row each (crashguard)
         "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
+        "limiters": {
+            name: dict(limiter.stats) for name, limiter in limiters.items()
+        },  # the same, per platform
         "deferred": deferred,  # roasters per deferred round, and those still failing after them
         "skipped_deadline": skipped,  # not started: the deadline passed first
         "requests": stats["requests"],

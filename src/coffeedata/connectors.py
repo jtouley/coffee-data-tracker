@@ -305,7 +305,8 @@ def crawl(
         raise
     ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
-              "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
+              # the job's own limiter (requests, 429s, pauses), as shopify_limiter, squarespace_limiter...
+              **({f"{connector}_limiter": (out.get("limiters") or {}).get(connector)} if c.rps else {}),
               # the network the job actually ran on (set by the deploy), else the connector's config
               "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
               # the confirmation run's arm (COFFEEDATA_ARM), budget and slice, if any

@@ -107,6 +107,52 @@ def test_a_plain_4xx_still_means_no_robots_txt(status):
         assert api.call_count == 1
 
 
+@pytest.mark.parametrize(
+    "status, headers",
+    [(403, {"cf-mitigated": "challenge"}), (401, SG), (403, SG)],
+    ids=["403-cf-challenge", "401-sg-captcha", "403-sg-captcha"],
+)
+def test_a_401_or_403_challenge_is_no_answer_not_disallow_all(monkeypatch, status, headers):
+    """Review item 3: a challenge on a 401/403 robots.txt is no answer about the rules (RobotsUnavailable, asked
+    again after ROBOTS_RETRY_AFTER), not a "disallow everything" cached for the client's lifetime."""
+    now = [5000.0]
+    monkeypatch.setattr(http.time, "monotonic", lambda: now[0])
+    with respx.mock as m:
+        robots = m.get("https://a.com/robots.txt").mock(return_value=httpx.Response(status, headers=headers))
+        m.get("https://a.com/products.json").mock(return_value=httpx.Response(200, json={"products": []}))
+        with PoliteClient(min_interval=0, retries=1) as c:
+            with pytest.raises(http.RobotsUnavailable, match=r"\(a challenge\)") as e:
+                c.get("https://a.com/products.json")
+            assert e.value.challenge and e.value.status == status
+            assert ingest.blocked(e.value) and not ingest.deferrable(e.value)
+            now[0] += http.ROBOTS_RETRY_AFTER + 1
+            with pytest.raises(http.RobotsUnavailable):
+                c.get("https://a.com/products.json")
+        assert robots.call_count == 2  # asked again once ROBOTS_RETRY_AFTER passed
+
+
+@pytest.mark.parametrize(
+    "response",
+    [
+        httpx.Response(200, headers=SG, text=SG_BODY),
+        httpx.Response(200, headers={"cf-mitigated": "challenge"}, text="<html>"),
+        httpx.Response(400, headers=SG),
+    ],
+    ids=["200-sg-captcha", "200-cf-challenge", "400-sg-captcha"],
+)
+def test_a_header_only_challenge_on_robots_txt_is_a_block_and_a_refused_first_contact(
+    lake, monkeypatch, response
+):
+    """Review item 4: is_challenge and ingest.challenged agree. A robots.txt challenge carried only in a header is a
+    block, never deferred, and a first contact it answers counts as refused."""
+    fake_time(monkeypatch)
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://thomasandfisk.com/robots.txt").mock(return_value=response)
+        out = ingest.run(lake, [_woo()], WEEK, workers=1, client_kw=FAST)
+    assert out["first_contact"]["refused"] == 1
+    assert out["deferred"].get("round_1", 0) == 0  # a challenge is never deferred
+
+
 def test_401_403_still_disallow_everything_and_a_200_is_the_rules():
     with respx.mock as m:
         m.get("https://open.com/robots.txt").mock(return_value=httpx.Response(404))
@@ -233,6 +279,87 @@ def test_the_squarespace_job_sends_every_request_through_its_limiter(lake, monke
     assert sq.base_interval == 0.5 and sq.stats["requests"] >= 1
 
 
+def test_every_platform_limiter_is_set_up_like_shopifys(lake, monkeypatch):
+    """Review item 1: burst counting off for a retry pass, the run's earlier blocks known, and (below) no deferring
+    in the deferred rounds: the same for Squarespace's limiter as for Shopify's."""
+    made: dict[str, ratelimit.PlatformLimiter] = {}
+    real = ingest.PlatformLimiter
+
+    def spy(name, **kw):
+        made[name] = real(name, **kw)
+        return made[name]
+
+    monkeypatch.setattr(ingest, "PlatformLimiter", spy)
+    monkeypatch.setattr(ingest, "blocked_hosts", lambda lake, run_date: {"earlier.com"})
+    ingest.run(lake, [], WEEK, mode="retry_failed", platform_rps={"squarespace": 2.0})
+    assert set(made) == {"shopify", "squarespace"}
+    for lim in made.values():
+        assert lim.count_bursts is False and "earlier.com" in lim.ever_blocked
+
+
+def test_the_squarespace_limiter_waits_in_the_deferred_rounds(lake, monkeypatch):
+    """A 429 without Retry-After (a 20 s pause, over defer_after) defers the store in the main pass; in the deferred
+    round the worker waits each new pause out instead of raising HostRateLimited at once."""
+    from tests.test_ratelimit import FakeTime
+
+    clock = FakeTime()
+    monkeypatch.setattr(ingest, "time", clock)
+    made: dict[str, ratelimit.PlatformLimiter] = {}
+
+    def spy(name, **kw):
+        made[name] = ratelimit.PlatformLimiter(name, clock=clock.monotonic, sleep=clock.sleep, **kw)
+        return made[name]
+
+    monkeypatch.setattr(ingest, "PlatformLimiter", spy)
+    store = Roaster(roaster_id="q.com", name="R", host="q.com", platform="squarespace")
+    item = {"id": "a1", "title": "Blend", "urlId": "blend", "variants": [{"price": 1800}]}
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://q.com/robots.txt").mock(return_value=httpx.Response(404))
+        m.get("https://q.com/sitemap.xml").mock(return_value=httpx.Response(404))
+        m.get("https://q.com/shop").mock(
+            side_effect=[*[httpx.Response(429)] * 3, httpx.Response(200, json={"items": [item]})]
+        )
+        out = ingest.run(lake, [store], WEEK, workers=1, platform_rps={"squarespace": 2.0}, client_kw=FAST)
+    sq = made["squarespace"]
+    # one round: before, the deferred rounds raised at its first 429 each, and three 429s used them all up
+    assert out["deferred"] == {"round_1": 1, "still_failing": 0, "refused": 0}
+    assert sq.defer is False and sq.stats["rate_limited"] == 3
+    assert out["limiters"]["squarespace"] == dict(sq.stats)
+
+
+def test_a_challenge_never_speeds_the_limiter_up():
+    """Review item 6: a 202 challenge (or a 200 with a challenge header) is no success: the limiter's rate and its
+    blocked state stay as they were."""
+    lim = ratelimit.PlatformLimiter("squarespace", rate=2.0, max_concurrent=8, per_host=True)
+    lim.interval = 4.0
+    for r in (httpx.Response(202, headers=SG), httpx.Response(200, headers={"cf-mitigated": "challenge"})):
+        r.request = httpx.Request("GET", "https://a.com/shop")
+        lim.record(r)
+    assert lim.interval == 4.0 and not lim._answered
+    ok = httpx.Response(200, request=httpx.Request("GET", "https://a.com/shop"))
+    lim.record(ok)
+    assert lim.interval < 4.0
+
+
+# --- registry: vendor sites are not roasters -----------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "host", ["tryperdiem.com", "www.tryperdiem.com", "us.orderspoon.com", "orderspoon.com"]
+)
+def test_ordering_vendors_are_not_roaster_sites(host):
+    """Owner's decision (review item 7): Per Diem's site was attached by Overture to Java House's North Liberty
+    location, and Spoon's ordering marketplace to The Roasted Mullet. Neither is a roaster's store; discovery and
+    add-roaster now refuse them, as they refuse other ordering platforms."""
+    assert not registry.is_storefront_host(registry.normalize_domain(host))
+
+
+def test_the_vendor_sites_are_gone_from_the_seed_and_java_house_keeps_its_own():
+    seed = {r["roaster_id"]: r for r in registry.load_seed()}
+    assert "tryperdiem.com" not in seed and "us.orderspoon.com" not in seed
+    assert seed["thejavahouse.com"]["name"] == "Java House Coffee Roasters"
+
+
 # --- registry corrections: Square Online stores that moved ---------------------------------------------------
 
 # Each hand-checked on 2026-11-02 (PR body): DNS from the investigation, one probe of the home page (the existing
@@ -245,8 +372,6 @@ MOVED = {
     "wydahoroaster.com": ("wydahoroaster.com", "other"),  # Railway
     "loneoakcoffee.com": ("loneoakcoffee.com", "shopify"),  # /products.json answers
     "nottinghillcoffee.com": ("nottinghillcoffee.com", "other"),  # GoDaddy Websites + Marketing
-    "tryperdiem.com": ("tryperdiem.com", "webflow?"),  # Per Diem's own Webflow site
-    "us.orderspoon.com": ("us.orderspoon.com", "other"),  # Spoon's ordering app
     "ponderosaroasting.com": ("ponderosaroasting.com", "other"),  # WordPress + WP EasyCart
     "publikcoffee.com": ("publikcoffee.com", "other"),  # custom site
     "recdejabrew.com": ("www.recdejabrew.com", "other"),  # IONOS MyWebsite; its square.site link is a 404

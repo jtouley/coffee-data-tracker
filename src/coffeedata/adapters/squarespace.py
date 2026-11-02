@@ -6,7 +6,7 @@ import logging
 from collections import Counter
 from urllib.parse import urlparse
 
-from ..http import FetchError, NotCatalog, PoliteClient
+from ..http import FetchError, NotCatalog, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
@@ -100,6 +100,8 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     try:
         urls = sitemap_urls(client, roaster.host)
     except FetchError as e:
+        if block_status(e):  # a pause: the store is deferred (ingest.run), never read without its sitemap
+            raise
         # the common shop paths below are tried anyway, and fail loudly if they can't be read; the sitemap's own
         # shop paths are lost for this fetch, so say why (a sitemap over sitemap.SITEMAP_MAX_BYTES, a block, a 5xx)
         log.warning("%s: sitemap unreadable, trying the common shop paths only: %s", roaster.roaster_id, e)

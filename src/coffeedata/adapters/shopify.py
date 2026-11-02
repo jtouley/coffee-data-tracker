@@ -33,7 +33,9 @@ SHORT_PAGE_ENDS = True
 # No sitemap pre-read: a Shopify sitemap index only lists product sitemaps of up to 5,000 URLs each, so the page
 # count would need those child sitemaps too: more requests to the same per-store budget that answers 429.
 BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
-HARD_BLOCK_STATUSES = (401, 403, 430)  # refusals, not pauses: recorded as blocked, never backed off
+# Refusals, not pauses: recorded as blocked, never backed off. A 430 (Shopify's IP-wide block) is a pause like a
+# 429: the page is backed off and asked again, then the store parked for crawl-retry.
+HARD_BLOCK_STATUSES = (401, 403)
 
 
 class PageBlocked(RateLimited):
@@ -48,7 +50,7 @@ class PageBlocked(RateLimited):
 
 
 class StoreBlocked(FetchError):
-    """A 401, 403 or 430: the store (or Shopify, for this IP) refuses. Never backed off or deferred."""
+    """A 401 or 403: the store refuses. Never backed off or deferred."""
 
 
 def _causes(e: BaseException | None):
@@ -83,7 +85,7 @@ def _block_wait(e: FetchError) -> float | None:
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
             wait = retry_after_seconds(c.response.headers.get("retry-after"))
             return BLOCK_DEFAULT_WAIT if wait is None else wait
-    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 503 ")) else None
+    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")) else None
 
 
 def _published_at(value: object) -> datetime | None:

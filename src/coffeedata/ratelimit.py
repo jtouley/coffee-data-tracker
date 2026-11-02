@@ -14,17 +14,15 @@ defer_after is parked (HostRateLimited) and ingest.run retries it after the main
 
 from __future__ import annotations
 
-import email.utils
 import logging
 import threading
 import time
 from collections.abc import Callable, Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
 
 import httpx
 
-from .http import BLOCK_STATUSES, FetchError
+from .http import BLOCK_STATUSES, FetchError, is_challenge, retry_after_seconds
 
 log = logging.getLogger(__name__)
 
@@ -57,24 +55,6 @@ class HostRateLimited(RateLimited):
         super().__init__(message)
         self.host = host
         self.wait = wait
-
-
-def retry_after_seconds(value: str | None, now: datetime | None = None) -> float | None:
-    """Retry-After as seconds: delta-seconds or an HTTP date. None if missing or unreadable."""
-    value = (value or "").strip()
-    if not value:
-        return None
-    try:
-        return max(0.0, float(value))
-    except ValueError:
-        pass
-    try:
-        when = email.utils.parsedate_to_datetime(value)
-    except (TypeError, ValueError):
-        return None
-    if when.tzinfo is None:
-        when = when.replace(tzinfo=UTC)
-    return max(0.0, (when - (now or datetime.now(UTC))).total_seconds())
 
 
 def _host(response: httpx.Response) -> str:
@@ -197,7 +177,9 @@ class PlatformLimiter:
                     return
 
     def _wait_for_host(self, host: str | None) -> None:
-        """Per-host mode: wait out this store's own pause, or (defer on, pause > defer_after) park the store."""
+        """Per-host mode: wait out this store's own pause, or park the store (HostRateLimited, so ingest.run retries
+        it once the pause has passed): with defer on, a pause over defer_after; with it off (the deferred rounds), one
+        over max_cooldown, which no worker is held for."""
         if not self.per_host or host is None:
             return
         while True:
@@ -205,7 +187,7 @@ class PlatformLimiter:
                 wait = self.host_until.get(host, 0.0) - self._clock()
                 if wait <= 0:
                     return
-                if self.defer and wait > self.defer_after:
+                if wait > (self.defer_after if self.defer else self.max_cooldown):
                     self.stats["deferred"] += 1
                     raise HostRateLimited(f"{host} asked to wait {wait:.0f}s; deferred", host, wait)
             self._sleep(wait)
@@ -229,8 +211,12 @@ class PlatformLimiter:
 
     def record(self, response: httpx.Response) -> None:
         """Learn from a response: a block pauses the whole platform and slows it; a 2xx or 404 speeds it up;
-        any other status (a 403, a 500) says nothing about the platform's limit."""
+        any other status (a 403, a 500) says nothing about the platform's limit. Nor does an edge's challenge on
+        any other status (http.is_challenge: SiteGround's 202, or a 2xx with a challenge header): it is no answer
+        from the store, so neither a success nor an answer towards a burst's share."""
         status = response.status_code
+        if status not in BLOCK_STATUSES and is_challenge(response):
+            return
         with self._lock:
             now = self._clock()
             if self.per_host and status not in BLOCK_STATUSES:
@@ -243,11 +229,13 @@ class PlatformLimiter:
             if status not in BLOCK_STATUSES:
                 return
             self.stats["rate_limited"] += 1
-            wait = retry_after_seconds(response.headers.get("retry-after"))
-            wait = min(self.max_cooldown, self.default_cooldown if wait is None else wait)
+            asked = retry_after_seconds(response.headers.get("retry-after"))
+            wait = min(self.max_cooldown, self.default_cooldown if asked is None else asked)
             if self.per_host and status != 430:
                 host = _host(response)
-                self.host_until[host] = max(self.host_until.get(host, 0.0), now + wait)
+                # the store's own pause is as long as it asked (never cut short); the platform's is capped
+                pause = wait if asked is None else asked
+                self.host_until[host] = max(self.host_until.get(host, 0.0), now + pause)
                 known = host in self.ever_blocked
                 self.ever_blocked.add(host)
                 if not self.defer or not self.count_bursts or known or host in self.quiet_hosts:

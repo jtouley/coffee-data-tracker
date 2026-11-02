@@ -272,6 +272,21 @@ Every design got the same fixes, and they are in this PR:
 - per-store backoff and deferred rounds (#62). A store refused on every try is labelled `refused`.
 - **A's burst rule**: only a store's first block in a run counts towards a platform-wide pause, and a 430 still
   pauses the platform (section 13).
+- **No store is given up on after one block (PR #98, owner's decision).** On every connector, a 429, 430 or 503, on
+  robots.txt, a sitemap, a catalog page, a product page or a WooCommerce variation lookup, is a pause, never a
+  failure for the week:
+  - the client tries each URL 3 times, waiting each response's Retry-After (else 1 s, then 2 s). A Retry-After over
+    30 s (`http.MAX_RETRY_WAIT`) is never cut short: the client stops, and the store is deferred;
+  - a deferred store gets the run's 2 deferred rounds (3 attempts in all), each no sooner than its Retry-After or
+    a 60 s, then 120 s, backoff (`ingest.DEFERRED_BACKOFFS`). Only then does it end failed, for `crawl-retry`;
+  - Shopify's catalog pages keep the page backoffs above, then parking. A 430 is backed off like a 429; only a 401
+    or 403 is a refusal (`StoreBlocked`);
+  - Shopify and Squarespace have shared limiters (`Connector.rps`), set up alike: burst counting, the run's earlier
+    blocks, and page-backoff stores kept out of bursts. A store's own pause lasts its whole Retry-After. In the
+    deferred rounds a worker waits out pauses up to `max_cooldown` (120 s); a longer one defers the store again;
+  - a robots.txt block is remembered for its Retry-After (else 60 s), not for `ROBOTS_RETRY_AFTER`;
+  - the hard limits stay: robots.txt rules, Retry-After, and an edge's challenge (below) is never retried or
+    deferred.
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 
@@ -468,7 +483,9 @@ cutover and rollback steps are in the runbook.
 ## 8. Pacing (per-connector config, from C)
 
 `connectors.Connector` holds each connector's pacing:
-- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`);
+- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`; Squarespace: `SQUARESPACE_RPS`, from PR #98). The
+  job records its limiter's stats (requests, 429s, pauses, deferrals) in `job_manifests.detail.<connector>_limiter`
+  (`shopify_limiter`, `squarespace_limiter`);
 - `shuffle`: stores in a shuffled order, seeded by connector and week, so the same stores aren't always the last
   ones asked (new in this PR);
 - `deadline_min`: the crawl window, i.e. how long one job may start new stores, up to its time limit (225 of 240 min).
@@ -505,12 +522,17 @@ thing to test (Next).
 
 ### Block-header logging (this PR)
 
-Every 403, 429, 430 or 503 response, robots.txt and redirects included, adds a record to its fetch row,
+Every 202, 403, 429, 430 or 503 response, and any other edge challenge (`http.is_challenge`: a `sg-captcha` header,
+or `cf-mitigated: challenge`, on any status), robots.txt and redirects included, adds a record to its fetch row,
 `fetches.blocks` (at most 20 per fetch). Each record holds: `at`, `status`, `host`, `path`, `server`,
-`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id` and `egress_ip`. That answers the research's
-open questions from our own logs:
-- is a block a Cloudflare challenge (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or a rate
-  limit (JSON, `retry-after: 60`)?
+`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id`, `egress_ip` and, from raw 1.4.0,
+`sg_captcha`. That answers the research's open questions from our own logs:
+- is a block a challenge, Cloudflare's (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or
+  SiteGround's (HTTP 202 with `sg-captcha: challenge`, run 2026-11-02), or a rate limit (JSON, `retry-after: 60`)?
+- A challenge counts as a block and a first-contact refusal, and is never retried or deferred: it answers every
+  retry the same way. On robots.txt it is no answer about the rules, whatever its status (a 401 or 403 with a
+  challenge header included): nothing is fetched from the host for `ROBOTS_RETRY_AFTER`. A shared limiter never
+  counts one as a success.
 - does it cluster by IP or by hour?
 
 It also gives Shopify Support what it asks for: the UTC time, `x-request-id`, `cf-ray` and the source IP. Tested in
@@ -538,7 +560,7 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
   - first-contact refusal share per IP, with Wilson 95% intervals;
   - ok share (ok stores over the slice's stores) with Wilson 95% intervals, refused, parked and wall time;
-  - the share of blocks that are challenges (`cf_mitigated`) and that carry Retry-After.
+  - the share of blocks that are challenges (`cf_mitigated`, `sg_captcha`, or a 202) and that carry Retry-After.
 - **Decision** (the same rules as RUNBOOK §3; shares, never counts, since the slices differ in size):
   - dedicated egress stays if arm 2's first-contact refusal share is below arm 1's with Wilson intervals that don't
     overlap, or if they overlap while arm 1's blocks are challenges and arm 2's aren't;

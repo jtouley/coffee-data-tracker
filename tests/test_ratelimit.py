@@ -1067,8 +1067,8 @@ def test_crawl_retry_resumes_a_parked_store_from_its_page(lake, mock, monkeypatc
     assert ingest.select_parked(lake, "2026-10-26") == ([], {})
 
 
-@pytest.mark.parametrize("status", [401, 403, 430])
-def test_401_403_430_are_blocked_never_backed_off_or_deferred(lake, mock, monkeypatch, status):
+@pytest.mark.parametrize("status", [401, 403])
+def test_401_403_are_blocked_never_backed_off_or_deferred(lake, mock, monkeypatch, status):
     clock = fake_time(monkeypatch)
     route = mock.get("https://no.example/products.json").mock(return_value=resp(status))
     out = ingest.run(
@@ -1078,6 +1078,21 @@ def test_401_403_430_are_blocked_never_backed_off_or_deferred(lake, mock, monkey
     assert out["failures"] == [f"no.example: StoreBlocked: blocked: HTTP {status} on page 1 of no.example"]
     assert out["deferred"] == {}  # no deferred round, no backoff, not parked
     assert not ingest.parked_path(lake, "2026-10-26", "no.example").exists()
+
+
+def test_a_430_is_a_pause_backed_off_and_asked_again_not_a_refusal(lake, mock, monkeypatch):
+    """The owner: no store is given up on after a 430 (Shopify's IP-wide block). Its page is backed off and asked
+    again, like a 429's; only a 401 or 403 is a refusal."""
+    clock = fake_time(monkeypatch)
+    page1 = mock.get("https://busy.example/products.json", params={"page": "1"})
+    page1.side_effect = [resp(430), _page(range(2))]
+    mock.get("https://busy.example/products.json", params={"page": "2"}).mock(return_value=_page([]))
+    out = ingest.run(
+        lake, [_r("busy.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST | {"retries": 1}
+    )
+    assert out["products"] == 2  # served after the backoff; the only error row is the backoff's own
+    assert [f.split(": ")[1] for f in out["failures"]] == ["backoff 1 of 3 (60s, then page 1 again)"]
+    assert out["deferred"]["page_backoffs"] == 1 and clock.sleeps and clock.sleeps[0] >= 60
 
 
 def test_products_json_asks_for_the_shopify_maximum_page_size(mock):

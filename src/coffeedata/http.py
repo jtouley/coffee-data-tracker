@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import contextlib
 import copy
+import email.utils
 import logging
 import os
 import threading
@@ -33,6 +34,12 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # again. A site whose robots.txt always answers 5xx is never crawled: by design (RFC 9309 allows a 5xx to mean
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
+# A robots.txt that answered a block (429, 430, 503) is a pause, not a non-answer: it is remembered for its
+# Retry-After, else this long, and the store is deferred (ingest.run), not given up on.
+ROBOTS_BLOCK_RETRY_AFTER = 60.0
+# The longest the client waits between its own tries of one URL. A Retry-After longer than this isn't cut short: the
+# client stops trying, and the store is deferred until it has passed (ingest.run).
+MAX_RETRY_WAIT = 30.0
 MAX_REDIRECTS = 20
 # The most body one response may bring into memory, decompressed (COFFEEDATA_MAX_RESPONSE_MB, default 32 MiB). A
 # catalog page or a product page is far below it; a video or a runaway page at a product URL is not, and fails that
@@ -87,6 +94,36 @@ def egress_ip() -> str | None:
             ip = None
         _egress.update(ip=ip, at=time.monotonic())
         return ip
+
+
+def retry_after_seconds(value: str | None, now: datetime | None = None) -> float | None:
+    """Retry-After as seconds: delta-seconds or an HTTP date. None if missing or unreadable."""
+    value = (value or "").strip()
+    if not value:
+        return None
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        pass
+    try:
+        when = email.utils.parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        return None
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=UTC)
+    return max(0.0, (when - (now or datetime.now(UTC))).total_seconds())
+
+
+def block_status(e: BaseException | None) -> int | None:
+    """The block status (BLOCK_STATUSES) a failure carries, itself or in its causes: a FetchError's status, or the
+    response of a wrapped HTTPStatusError. None for anything else."""
+    while e is not None:
+        if isinstance(e, FetchError) and e.status in BLOCK_STATUSES:
+            return e.status
+        if isinstance(e, httpx.HTTPStatusError) and e.response.status_code in BLOCK_STATUSES:
+            return e.response.status_code
+        e = e.__cause__
+    return None
 
 
 def is_challenge(r: httpx.Response) -> bool:
@@ -170,13 +207,25 @@ def unavailable_reason(r: httpx.Response) -> str | None:
 class RobotsUnavailable(FetchError, httpx.HTTPError):
     """robots.txt didn't answer with the store's rules (429, 430, 5xx, an edge's challenge, a 2xx other than 200, a
     1xx or 3xx, or a network error) after the client's retries, so nothing on that host is fetched for
-    ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one asks again.
-    unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt. status: the
-    HTTP status when robots.txt was answered with a CHALLENGE_STATUSES challenge (ingest counts it as a refusal)."""
+    ROBOTS_RETRY_AFTER (a block: for its Retry-After, else ROBOTS_BLOCK_RETRY_AFTER). Callers treat it like a
+    network error: this fetch fails and a later one asks again. status: a block's status (ingest defers the store,
+    after wait seconds) or a challenge's.
+    unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt. challenge:
+    robots.txt was answered with an edge's challenge (is_challenge: a 202, or a challenge header on any status),
+    which ingest counts as a refusal and never defers."""
 
-    def __init__(self, message: str, unreachable: bool = False, status: int | None = None) -> None:
+    def __init__(
+        self,
+        message: str,
+        unreachable: bool = False,
+        status: int | None = None,
+        challenge: bool = False,
+        wait: float | None = None,
+    ) -> None:
         super().__init__(message, status=status)
         self.unreachable = unreachable
+        self.challenge = challenge
+        self.wait = wait
 
 
 class NotCatalog(FetchError):
@@ -346,6 +395,8 @@ class PoliteClient:
                             f"{down[1]} (recently); not fetching without it",
                             down[1].unreachable,
                             down[1].status,
+                            down[1].challenge,
+                            max(0.0, down[0] - time.monotonic()),
                         )
                     rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
                     with self._lock:
@@ -367,10 +418,10 @@ class PoliteClient:
     def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
         """The host's rules: a 200 is parsed, a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...)
         means it has no robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an
-        edge's challenge, whatever its status (SiteGround's 202, or a 200 or 4xx with a challenge header), another
-        2xx, a 1xx or 3xx (a redirect without a location), a 429, 430 or 5xx, or a network error raises
-        RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its
-        rules."""
+        edge's challenge, whatever its status (SiteGround's 202, or a 200 or any 4xx, 401 and 403 included, with a
+        challenge header, such as Cloudflare's 403 with `cf-mitigated: challenge`), another 2xx, a 1xx or 3xx (a
+        redirect without a location), a 429, 430 or 5xx, or a network error raises RobotsUnavailable and is
+        remembered for ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
         parser = urllib.robotparser.RobotFileParser()
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
@@ -396,7 +447,7 @@ class PoliteClient:
             if r.status_code == 200 and not challenged:
                 parser.parse(r.text.splitlines())
                 return parser
-            if r.status_code in (401, 403):
+            if r.status_code in (401, 403) and not challenged:  # a challenge is no answer about the rules
                 parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
                 return parser
             if 400 <= r.status_code < 500 and r.status_code not in BLOCK_STATUSES and not challenged:
@@ -407,14 +458,24 @@ class PoliteClient:
             # 202 was read as "no robots.txt"); neither is another 2xx, a 1xx or 3xx, a 429/430 or a 5xx. The host
             # is unavailable for now.
             why = f"answered {r.status_code}" + (" (a challenge)" if challenged else "")
-            status = r.status_code if r.status_code in CHALLENGE_STATUSES else None
-            err = RobotsUnavailable(f"robots.txt for {host} {why}", status=status)
+            block = r.status_code in BLOCK_STATUSES and not challenged
+            status = r.status_code if challenged or block else None
+            wait = None
+            if block:  # a pause: asked again once it has passed, and the store deferred until then
+                wait = retry_after_seconds(r.headers.get("retry-after"))
+                wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else wait
+            err = RobotsUnavailable(
+                f"robots.txt for {host} {why}", status=status, challenge=challenged, wait=wait
+            )
             cause = None
-        # This fetch fails (the retry pass tries again) and the host stays unknown, asked again after
-        # ROBOTS_RETRY_AFTER, so a site whose robots.txt never answers is never crawled.
+        # This fetch fails (the deferred rounds and the retry pass try again) and the host stays unknown, asked again
+        # after ROBOTS_RETRY_AFTER (a block: its wait), so a site whose robots.txt never answers is never crawled.
         with self._lock:
-            self._robots_down[host] = (time.monotonic() + ROBOTS_RETRY_AFTER, err)
-        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable, err.status) from cause
+            until = ROBOTS_RETRY_AFTER if err.wait is None else err.wait
+            self._robots_down[host] = (time.monotonic() + until, err)
+        raise RobotsUnavailable(
+            f"{err}; not fetching without it", err.unreachable, err.status, err.challenge, err.wait
+        ) from cause
 
     def _wait_turn(self, host: str) -> None:
         with self._lock:
@@ -435,7 +496,7 @@ class PoliteClient:
             last = attempt == self.retries - 1
             if spaced:
                 self._wait_turn(host)
-            retry_after = ""
+            asked: float | None = None  # the response's Retry-After, in seconds
             try:
                 r = self._send(url, params)
             except ResponseTooLarge as e:  # an answer, but never retried: counted with its status
@@ -451,8 +512,10 @@ class PoliteClient:
                     return r
                 if self._limiter is not None and r.status_code in BLOCK_STATUSES:
                     continue  # the limiter's platform-wide cooldown is the wait; don't idle this worker too
-                retry_after = r.headers.get("retry-after", "")
-            time.sleep(min(int(retry_after), 30) if retry_after.isdigit() else 2**attempt)
+                asked = retry_after_seconds(r.headers.get("retry-after"))
+                if asked is not None and asked > MAX_RETRY_WAIT:
+                    return r  # never sooner than asked: the store is deferred past it (ingest.run)
+            time.sleep(asked if asked is not None else 2**attempt)
         raise ValueError("retries must be >= 1")
 
     def _follow(self, url: str, params: dict | None = None, robots: bool = False) -> httpx.Response:

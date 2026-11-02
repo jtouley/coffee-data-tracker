@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from ..http import Blocked, FetchError, PoliteClient
+from ..http import Blocked, FetchError, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
@@ -122,7 +122,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
             break
         try:
             r = client.get(url)
-        except (Blocked, httpx.HTTPError):
+        except (Blocked, httpx.HTTPError) as e:
+            if status := block_status(e):  # a pause: stop asking now, and the store is deferred (ingest.run)
+                raise FetchError(f"HTTP {status} {url}", status=status) from e
             failed += 1
             continue
         if r.status_code in (404, 410):
