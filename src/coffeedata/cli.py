@@ -161,6 +161,19 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     _print(ingest.run(lake, states, run_date, workers=args.workers, mode="retry_failed", resume=resume))
 
 
+def cmd_crawl_dq(args: argparse.Namespace) -> None:
+    """The post-crawl check (crawldq.py). Exits non-zero on a systemic problem, which fails the Cloud Run execution
+    and emails the owner; per-roaster problems only go on the repull list."""
+    from . import crawldq
+
+    out = crawldq.run(Lake(), args.run_date, force=args.force)
+    _print(out)
+    if out.get("systemic"):
+        # One structured line, so the execution's log names the problem at ERROR severity.
+        print(json.dumps({"severity": "ERROR", "message": "crawl-dq: systemic", "systemic": out["systemic"]}))
+        raise SystemExit(f"crawl-dq {out['run_date']}: systemic: {json.dumps(out['systemic'])}")
+
+
 def cmd_enrich_week(args: argparse.Namespace) -> None:
     from . import connectors
 
@@ -237,13 +250,24 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
         )
 
 
-def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[bool, list[dict]]:
+def dbt_build(
+    lake: Lake,
+    db: Path,
+    extra_vars: dict | None = None,
+    select: list[str] | None = None,
+    target: Path | None = None,
+    extra_roots: tuple[str, ...] = (),
+    flags: tuple[str, ...] = (),
+) -> tuple[bool, list[dict]]:
     """Build every model and seed, then run every test, so a failed check never stops a model from being built.
     Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command).
-    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`."""
+    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`.
+    select, target, extra_roots and flags are for `crawl-dq`: only the nodes it names, its own target folder (the
+    weekly build's artifacts are left alone), more lake roots to read (its copy of the unmerged crawl output) and
+    more dbt flags."""
     from . import quality, registry, shots, verdict
 
-    roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
+    roots = [str(lake.root), *extra_roots] + ([lake.url] if lake.remote else [])
     folders = remote_folders(lake.url) if lake.remote else None
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
@@ -261,19 +285,34 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
         | (extra_vars or {})
     )
     passed, results = True, []
-    (DBT_TARGET / "manifest.json").unlink(missing_ok=True)
+    where = ["--target-path", str(target.resolve())] if target else []
+    target = target or DBT_TARGET  # read here, not as a default: tests point DBT_TARGET elsewhere
+    (target / "manifest.json").unlink(missing_ok=True)
+    picked = ["--select", *select] if select else []
     for step in (
-        ["build", "--exclude", "resource_type:test", "resource_type:unit_test"],
-        ["test", "--exclude", "resource_type:unit_test"],
+        ["build", *picked, "--exclude", "resource_type:test", "resource_type:unit_test"],
+        ["test", *picked, "--exclude", "resource_type:unit_test"],
     ):
         # A step that crashes before writing its results must not be recorded with the previous step's.
-        (DBT_TARGET / "run_results.json").unlink(missing_ok=True)
+        (target / "run_results.json").unlink(missing_ok=True)
         r = subprocess.run(
-            ["dbt", *step, "--project-dir", "dbt", "--profiles-dir", "dbt", "--vars", dbt_vars], env=env
+            [
+                "dbt",
+                *step,
+                "--project-dir",
+                "dbt",
+                "--profiles-dir",
+                "dbt",
+                *where,
+                *flags,
+                "--vars",
+                dbt_vars,
+            ],
+            env=env,
         )
         passed = passed and r.returncode == 0
         try:
-            results.append(json.loads((DBT_TARGET / "run_results.json").read_text()))
+            results.append(json.loads((target / "run_results.json").read_text()))
         except (OSError, ValueError):
             results.append({})
     return passed, results
@@ -635,6 +674,14 @@ def main(argv: list[str] | None = None) -> None:
     rr.add_argument("--run-date", type=_run_date, default=_today())
     rr.add_argument("--workers", type=int, default=8)
     rr.add_argument("--connector", choices=sorted(CONNECTORS), help="design B: that connector's partition")
+
+    dq = add(
+        "crawl-dq", cmd_crawl_dq, "post-crawl check: the gate's rules on the unmerged week, a repull list"
+    )
+    dq.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to check")
+    dq.add_argument(
+        "--force", action="store_true", help="check now, even while a crawl runs or nothing new has landed"
+    )
 
     ew = add(
         "enrich-week", cmd_enrich_week, "post-load enrichment: Claude candidates from raw, after the merge"

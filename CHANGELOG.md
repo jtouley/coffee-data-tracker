@@ -44,6 +44,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
+- **Post-crawl data quality.** `coffeedata crawl-dq` runs the gate's `run_ok_rate`, `adapter_ok_rate` and suspect-run
+  rules on Monday's crawl output shortly after each pass, before the merge. Roasters whose data looks bad (failed,
+  empty, suspect) go on a repull list that the next crawl pass fetches again the same day; a platform-wide failure,
+  or two at once (a bad image), emails the owner. It never serves, records a build or publishes.
 
 ### Changed
 

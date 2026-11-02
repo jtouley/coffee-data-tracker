@@ -63,9 +63,9 @@ locals {
 
   # name => what it runs, whether it leaves through the NAT IP, whether it needs the Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's crawls. A crawl that dies (OOM kill, crash) is retried at once, and the
-  # retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already done this week, fetches the
-  # dead attempt's in-flight roasters one at a time and quarantines one that killed two attempts (crashguard), and it
+  # Retries: 1 for every job but Shopify's crawls and crawl-dq (below). A crawl that dies (OOM kill, crash) is
+  # retried at once, and the retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already
+  # done this week, fetches the dead attempt's in-flight roasters one at a time and quarantines one that killed two attempts (crashguard), and it
   # stops inside the first attempt's window (connectors._window_left), so it never overlaps the next slot. A crawl
   # stopped by its deadline exits 0 and is never retried. Shopify's crawls stay at 0: a retry straight after a
   # failure would re-ask the stores that just refused, on the one NAT IP; their next slot (15:17, 21:47) resumes.
@@ -90,6 +90,13 @@ locals {
     "crawl-square-online"          = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi", retries = 1 }
     # 8Gi: OOM-killed at 2Gi on 2026-11-02 (about 7 min in); the owner raised it by hand (gcloud run jobs update).
     "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "8Gi", retries = 1 }
+    # The post-crawl check (crawldq.py): polled through Monday's crawl window, it runs the gate's run_ok_rate,
+    # adapter_ok_rate and suspect rules on the unmerged week once a crawl attempt has ended, and writes the repull
+    # list the later passes fetch again. Never serves, records a build or publishes. Its non-zero exit (a systemic
+    # problem) fails the execution, which emails the owner (alerts.tf, ingest_job_failed). Retries 0: a retry would
+    # find the check done and exit 0, hiding the failure. 8Gi, as the build: dbt builds the models
+    # run_completeness reads (dim_coffee, with the classifier).
+    "crawl-dq"      = { command = ["coffeedata"], args = ["crawl-dq"], nat = false, claude = false, memory = "8Gi", retries = 0 }
     "merge"         = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi", retries = 1 }
     "enrich-week"   = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
@@ -105,7 +112,8 @@ locals {
   # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): every connector's
   # job at once, each on its own instance (only Shopify's on the NAT), then each one's resume 6 h later; a third pass
   # that evening for every connector (Shopify: crawl-retry, its parked stores, on the NAT; the others: their own crawl
-  # job again, which resumes and retries every roaster without an ok fetch, on default egress); Tuesday merge,
+  # job again, which resumes and retries every roaster without an ok fetch, on default egress); after each, crawl-dq
+  # judges what landed and lists roasters for the next pass to fetch again (its repull list); Tuesday merge,
   # enrichment, build. The release is stamped Monday and published
   # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
   ingest_schedule = {
@@ -126,6 +134,12 @@ locals {
     "crawl-woocommerce-retry"    = { job = "crawl-woocommerce", cron = "47 21 * * 1" }
     "crawl-square-online-retry"  = { job = "crawl-square-online", cron = "47 21 * * 1" }
     "crawl-generic-retry"        = { job = "crawl-generic", cron = "47 21 * * 1" }
+    # crawl-dq: every 20 minutes over Monday 10:07 (50 minutes into the first pass) to Tuesday 02:47 (after the
+    # 21:47 pass's 240-minute limit, before the 03:17 merge). One entry, named after its job as every entry is
+    # (alerts.tf names the job from the entry), so its hours also cover Monday 00-02 and Tuesday 10-23, when there is
+    # nothing to judge: a poll with no crawl attempt ended since the last check exits in seconds. So each
+    # connector's pass is judged within 20 minutes of ending.
+    "crawl-dq"                   = { job = "crawl-dq", cron = "7,27,47 0-2,10-23 * * 1,2" }
     "merge"                      = { job = "merge", cron = "17 3 * * 2" }
     "enrich-week"                = { job = "enrich-week", cron = "17 4 * * 2" }
     "build"                      = { job = "build", cron = "17 6 * * 2" }

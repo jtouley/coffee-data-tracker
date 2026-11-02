@@ -246,6 +246,8 @@ def crawl(
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
+    if not (part or only):  # what the post-crawl check listed for a repull (never for an arm or --only)
+        states += _repulls(plake, connector, week, states)
     if part:
         states = [s for s in states if in_slice(s.roaster.host.lower() or s.roaster.roaster_id, part, salt)]
     if c.shuffle:
@@ -308,16 +310,26 @@ def crawl(
             "status": end["status"], "skipped_deadline": out.get("skipped_deadline", 0)}  # fmt: skip
 
 
+def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
+    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have."""
+    from . import crawldq
+
+    have = {s.roaster.roaster_id for s in states}
+    return [s for s in crawldq.repull_states(plake, connector, week) if s.roaster.roaster_id not in have]
+
+
 def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
-    their blocked page. Only those: a store that failed outright is not asked again here, so a Shopify store that
-    refused all day isn't re-asked in the evening (the connectors that park nothing get their third pass from
+    their blocked page, and the post-crawl check's repulls (a fetch that landed but looks bad: empty or suspect).
+    Only those: a store that failed outright is not asked again here, so a Shopify store that refused all day isn't
+    re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job
     crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl."""
     week = week_of(day)
     plake = PartitionLake(lake, connector, week)
     compact(plake.part)
     states, resume = ingest.select_parked(plake, week, adapter=connector)
+    states += _repulls(plake, connector, week, states)  # fetched whole: no parked progress
     ids = {s.roaster.roaster_id for s in states}
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = health.quarantine(ids)

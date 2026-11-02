@@ -413,7 +413,7 @@ Each email names what failed and the first command to run.
 
 | Policy | Watches | Fires |
 |---|---|---|
-| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`: 12, and 13 with `crawl-dq`) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
 | `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
@@ -530,6 +530,54 @@ retry fetches it again; if that dies as well, the execution fails. Nothing else 
 Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
 To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
 `gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
+
+## 8. Post-crawl check (crawl-dq)
+
+`crawl-dq` judges the week's crawl output shortly after each pass (DESIGN, "Post-crawl data quality"). It is polled
+every 20 minutes over Monday 10:07 to Tuesday 02:47 UTC (Scheduler entry `crawl-dq`, `7,27,47 0-2,10-23 * * 1,2`;
+the hours outside that window find nothing to judge); a poll with nothing new exits in seconds. It never serves, records a build or publishes.
+
+**Ship it** (after this PR merges):
+1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
+   step): the jobs run the `coffeedata crawl-dq` command and the repull hooks in `crawl`/`crawl-retry` only from it.
+2. `cd src/terraform && terraform plan -out dq.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
+   `google_cloud_run_v2_job.ingest["crawl-dq"]`, its invoker binding
+   `google_cloud_run_v2_job_iam_member.scheduler["crawl-dq"]`, the Scheduler entry
+   `google_cloud_scheduler_job.ingest["crawl-dq"]` (only with `ingest_schedule_enabled = true`), and the alert `google_monitoring_alert_policy.ingest_job_failed["crawl-dq"]`.
+   The 12 existing `ingest_job_failed` policies change in place, only their documentation text (it now names
+   `crawl-dq`): **12 to change**, and nothing else. Stop if the plan touches any other job, the NAT, the bucket or the app.
+3. `terraform apply dq.plan`.
+4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute crawl-dq --region $REGION
+   --args="crawl-dq,--force" --wait`. It writes one `job_manifests` row (job `dq`) and nothing else.
+
+**Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `repull`, `held_back`,
+`by_connector`, `running`, `tests`); the same is the `detail` of the week's latest `dq` row:
+
+```sh
+uv run python -c "
+from coffeedata import control; from coffeedata.lake import Lake; import json, sys
+rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'dq' and r['status'] == 'done']
+print(json.dumps(json.loads(rows[-1]['detail']), indent=1))" 2026-11-02
+```
+
+**When it alerts** (`ingest job crawl-dq failed`): the log's `"severity": "ERROR"` line names the scope.
+- `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached. Its roasters are
+  held off the repull list. Look at that connector's `job_manifests` rows (429/430 counts, egress IPs) and its
+  execution logs before its next slot; Tuesday's build will fail its gate unless the resume or retry recovers it.
+- `image`: two or more platforms at once. Suspect what they share: the image (`code_version` on the rows), a code
+  change, or egress. Roll back the image (section 5) before the next slot.
+- `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
+- No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a data finding; the
+  repull list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes) until another
+  crawl attempt ends or you run it with `--force`. Run `coffeedata crawl-dq --force` locally against a copy of the
+  lake to see the dbt error.
+
+**Repulls** need nothing from the owner: the next crawl pass of each connector (`crawl`, `crawl-retry`) fetches
+its listed `empty` and `suspect` roasters again; `failed` ones are asked again by every `crawl` pass anyway.
+To fetch one roaster by hand instead: `crawl --connector X --only <roaster_id>` (section 7).
+
+**Stop it:** `gcloud scheduler jobs pause registry-coffee-crawl-dq --location $REGION`.
+Nothing else depends on it: with no `dq` row, the crawl passes add no repulls.
 
 ## Cost
 

@@ -12,8 +12,8 @@ domain: coffee
 tags:
 - internal
 description:
-  purpose: 'Internal contract between services: every job (crawl, crawl-retry, merge, enrich) -> dbt (run_completeness),
-    merge, enrichment job, egress-check.'
+  purpose: 'Internal contract between services: every job (crawl, crawl-retry, merge, enrich, crawl-dq) -> dbt (run_completeness),
+    merge, enrichment job, egress-check, crawl-dq (when a pass ended) and the crawl passes after it (its repull list).'
   usage: Internal to the pipeline; not published, and not a public interface. Readers outside the pipeline use the public
     catalog contract (contracts/public-catalog.odcs.yaml).
   limitations: Every lake column is nullable in the Arrow schema so that older files read back; required marks the columns
@@ -98,7 +98,7 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: crawl, crawl-retry, merge or enrich.
+    description: crawl, crawl-retry, merge, enrich or dq (the post-crawl check, crawl-dq).
   - name: connector
     logicalType: string
     physicalType: string
@@ -210,7 +210,8 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: 'JSON: the job''s own summary (arm, egress, rps, slice and salt for the confirmation run).'
+    description: 'JSON: the job''s own summary (arm, egress, rps, slice and salt for the confirmation run; for dq, its verdict:
+      systemic problems and the repull list, roaster_id, adapter and reasons).'
   quality:
   - id: job_start_and_end_rows
     description: a job writes a running row at its start and one end row (done, deadline or failed).
@@ -241,6 +242,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/ingest.py
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/crawldq.py
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -248,14 +252,15 @@ customProperties:
 - property: audience
   value: internal
 - property: producer
-  value: every job (crawl, crawl-retry, merge, enrich)
+  value: every job (crawl, crawl-retry, merge, enrich, crawl-dq)
 - property: consumers
   value:
   - dbt (run_completeness)
   - merge
   - enrichment job
   - egress-check
+  - crawl-dq (when a pass ended) and the crawl passes after it (its repull list)
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: 933dbab889a942e7
+  value: 9554c06c80a7c4d7

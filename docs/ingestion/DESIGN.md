@@ -186,6 +186,7 @@ C never had a PR.
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
 | Post-load enrichment | `coffeedata enrich-week [--submit]` | `job_manifests` (merge done), raw rows | `enrichments`, `llm_batches` |
 | Build + gate, publish | `coffeedata build`, `coffeedata publish` | the lake | marts, release, `builds` |
+| Post-crawl check | `coffeedata crawl-dq` (polled; section 14) | `job_manifests`, the lake, a copy of the week's partitions (fetches, run_manifests) | `job_manifests` (job `dq`: the verdict and the repull list); exit code (systemic: emails the owner) |
 | Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (a failed build emails the owner) |
 | Secondary crawler (deferred) | `coffeedata pages` (#67, not in this branch) | refused stores | the same raw shape |
 
@@ -742,3 +743,74 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
 34. **Right-size `crawl-generic`'s memory** from the next runs' logs (peak memory per execution) now that responses
     are freed and capped; and, if RSS still climbs with a flat Python heap, try `MALLOC_ARENA_MAX=2` (glibc keeps
     per-thread arenas that 32 worker threads can fragment).
+
+## 14. Post-crawl data quality (crawl-dq)
+
+The owner's requirement: keep Monday's crawl, and judge its data shortly after it finishes, so we know that day what
+to fetch again for a roaster whose data is bad. Until now the only judgement was Tuesday's 06:17 `build`, after the
+merge. `coffeedata crawl-dq` (`crawldq.py`) closes that gap. It never builds a release, records a build, serves or
+publishes.
+
+**What it runs is the gate.** dbt builds `run_completeness` and `stg_run_quality` (and the models they read) into a
+scratch database (`build/crawl-dq/`, its own `--target-path`) and runs three of the gate's singular tests, with
+`--store-failures`, `--indirect-selection empty` and `NoNodesForSelectionCriteria` as an error:
+- `run_ok_rate` and `adapter_ok_rate`, with the new var `attempted_only` (only the roasters a pass has reached: one
+  left for the resume slot is not a failure yet). Same thresholds; the weekly build never sets the var.
+- `suspect_runs_need_review`: `stg_run_quality`'s suspect rule (below half the median of the last 4 counted weeks).
+
+The verdict, with no threshold of its own:
+- **Systemic** (exit non-zero, so `ingest_job_failed` emails the owner): a platform below `adapter_ok_rate`'s floor
+  (scope `connector`); two or more at once (scope `image`: what they share is the image, our code or its egress);
+  the run below `run_ok_rate` with no single platform to blame (scope `run`, judged only when no crawl is running).
+- **Repull**, per roaster, the rows the gate counts as not ok, the rule as the reason: `failed`, `empty` (ok with no
+  products, for a roaster known to have a catalog: `run_completeness.catalog_ok`), `suspect`. A systemic platform's
+  roasters are held back (asking a platform that refuses us again that evening helps nobody); an `image` holds back
+  all. A partial fetch, an unreached roaster and a closed store are left alone. No new per-roaster rule, so CLAUDE.md's
+  evaluation doesn't apply; no product's output changes (0 toward the 50-product budget).
+- A dbt error (a model or test that errored, was skipped or didn't run), or a test whose status and stored failing
+  rows disagree (failing with none: never evaluated), is **no verdict**, not bad data: the job fails and says so.
+
+**How it reads unmerged output.** dbt's `lake()` globs never see `raw/connector=*/run_date=W/`. The check copies each
+connector's compacted file and checkpoints (fetches and run_manifests only: every judged column comes from them and
+earlier weeks) into `build/crawl-dq/overlay/`, with every table's schema file, and passes it as one more entry of
+`lake_roots`. Copies, not links: a crawl that starts meanwhile may compact its partition. Checkpoints are copied
+before the compacted file, so a compaction in between duplicates rows (harmless: the judged columns are aggregates or
+the latest batch) instead of losing them. Slice sub-partitions (confirmation arms) are never copied.
+
+**How it's triggered: its own job, polled.** `crawl-dq` is a Cloud Run job (8Gi, default egress, `retries = 0`: a
+retry would find the check done and exit 0, hiding the alert), started every 20 minutes over Monday 10:07 to Tuesday
+02:47 (one Scheduler entry, `7,27,47 0-2,10-23 * * 1,2`, whose other hours find nothing to judge). A poll with no crawl attempt ended since the last check (by attempt id, recorded in the
+check's detail) exits in seconds. Otherwise it judges every connector whose attempt has ended and leaves out one still
+running (`running` in the detail), so each connector is judged within 20 minutes of its pass ending, and the run as a
+whole once all have. An attempt with only a running row older than the jobs' 240-minute limit died, and counts as
+ended. Rejected:
+- *At the end of each crawl job's command*: the check builds `dim_coffee` (the classifier) like the build, which
+  runs at 8Gi, inside crawl jobs mostly sized 2Gi with about 15 minutes left of their 240; Shopify's would read the lake
+  through the NAT; its exit code would either fail the crawl execution (and, with the per-job retries of section
+  7.1, re-run the crawl against a platform that is refusing us) or be swallowed, losing the alert.
+- *One fixed slot after each pass's time limit* (13:22, 19:22): up to four hours late for a connector that finishes
+  early, and it would mis-time any pass added later. Polling follows `job_manifests`, whatever the schedule.
+
+**How the repull happens.** Every later crawl pass of the week (`crawl` for its resume and third slots,
+`crawl-retry`) adds to its work the `empty` and `suspect` roasters of its connector on the latest check that judged
+that connector, less any fetched since that check. So a roaster flagged after the 09:17 pass is asked again at 15:17,
+and one still bad after the resume at 21:47. `failed` roasters are on the list for the owner, but no hook is needed:
+with no ok fetch, every `crawl` pass asks them again anyway, and `crawl-retry` deliberately doesn't (section 7.1: a
+store that refused all day isn't re-asked in the evening). Before this, a crawl or resume skipped any roaster with an ok fetch that week, so an ok-but-bad week could only
+be neutralised with `override --action reject`, one roaster-week at a time. A re-fetch is a new batch of the same
+week; `stg_run_walk` counts the week's newest successful batch (a complete one over a partial one), so a good
+re-fetch replaces a bad one in `stg_runs`, `is_current` and the release, and a failed re-fetch changes nothing. An
+owner's override still wins: `use_batch` pins its batch and `reject` drops the week whatever was re-fetched
+(`test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_again` checks the newer batch counts).
+
+**What it doesn't run, and why.** The catalog bands (`build_metrics_in_band`, and PR #82's
+`fill_and_freshness_in_band`), `catalog_volume_vs_last_build`, the coverage claims and the public-table tests judge a
+built catalog and release against recorded passing builds of complete weeks; mid-week, before classification and the
+merge, they would compare half a week with whole ones. They stay in Tuesday's build. `run_is_complete` and
+`latest_run_is_fresh` are about the finished week. PR #82's `run_manifest_mode_values` (a lake-level test on
+`run_manifests.mode`, which `run_completeness` keys on) belongs in `GATE_TESTS` once #82 merges.
+
+Replayed on the three real runs in a local copy of the lake (counts only): 2026-10-26, no systemic problem and 67
+repulls (all `failed`; 58 of them Square Online, the 71.7% week); 2026-10-27 (a 44-roaster retry run), nothing;
+2026-10-28, the mass Shopify 429s: `connector` shopify (14.1% of 1,062), Shopify's 912 bad roasters held back, 46
+others listed (44 failed, 1 empty, 1 suspect). The dbt step took about 70 s on that lake.

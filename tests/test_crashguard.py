@@ -466,6 +466,7 @@ def test_only_shopifys_crawls_never_retry_in_place():
     assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl")} == {
         "crawl-shopify": 0, "crawl-shopify-default-egress": 0, "crawl-retry": 0, "crawl-squarespace": 1,
         "crawl-woocommerce": 1, "crawl-square-online": 1, "crawl-generic": 1,
+        "crawl-dq": 0,  # the post-crawl check: a retry would find the check done and exit 0, hiding its alert
     }  # fmt: skip
     assert "max_retries = each.value.retries" in _tf()
     assert re.search(

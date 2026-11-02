@@ -75,9 +75,19 @@ CONTRACTS: dict[str, dict[str, Any]] = {
     },
     "manifest": {
         "tables": ["run_manifests", "job_manifests"],
-        "producer": "every job (crawl, crawl-retry, merge, enrich)",
-        "producer_code": ["src/coffeedata/control.py", "src/coffeedata/ingest.py"],
-        "consumers": ["dbt (run_completeness)", "merge", "enrichment job", "egress-check"],
+        "producer": "every job (crawl, crawl-retry, merge, enrich, crawl-dq)",
+        "producer_code": [
+            "src/coffeedata/control.py",
+            "src/coffeedata/ingest.py",
+            "src/coffeedata/crawldq.py",
+        ],
+        "consumers": [
+            "dbt (run_completeness)",
+            "merge",
+            "enrichment job",
+            "egress-check",
+            "crawl-dq (when a pass ended) and the crawl passes after it (its repull list)",
+        ],
     },
     "enrichment": {
         "tables": ["enrichments"],
