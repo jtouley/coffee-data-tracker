@@ -41,7 +41,7 @@ from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' 
 - Product descriptions and images. They're the roasters' own content; every coffee links back through `source_url`.
 - Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
 - Personal data, and roasters that opted out.
-- Roasters known only from OpenStreetMap, so ODbL share-alike terms don't apply.
+- Roasters known only from OpenStreetMap.
 
 ## Method and caveats
 
@@ -52,7 +52,7 @@ from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' 
 
 ## License and attribution
 
-The dataset is released under the [Community Data License Agreement – Permissive 2.0](https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA)
+The dataset is released under the [Community Data License Agreement – Permissive 2.0](https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt)
 (CDLA-Permissive-2.0); the code that builds it is MIT. The same licence covers these tables, the site's catalog
 JSON and the marketplace shares. Roaster discovery uses Overture Maps Places (© Overture Maps Foundation,
 CDLA-Permissive-2.0); roasters known only from OpenStreetMap are left out. Coffee names and prices are facts

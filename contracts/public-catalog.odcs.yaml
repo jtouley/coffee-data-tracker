@@ -25,8 +25,9 @@ context:
     is_decaf read false, and flavor_categories empty, when the text doesn't say). When recommending a coffee, give
     its source_url so the user can check the roaster's own page. public_coffee and public_price_event join to
     public_roaster on roaster_id; public_price_event joins to public_coffee on coffee_id. The data is licensed
-    under CDLA-Permissive-2.0 (https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA), with
-    attribution in docs/ATTRIBUTION.md; the code is MIT.
+    under CDLA-Permissive-2.0
+    (https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt), with attribution
+    in docs/ATTRIBUTION.md; the code is MIT.
   constraints:
   - id: not-live
     constraint: Do not present any row as current stock or price; say which release_run_date it is as of.
@@ -572,16 +573,16 @@ customProperties:
   value: A release is served only when every quality rule passes; otherwise the previous release stays served.
 - property: license
   value: CDLA-Permissive-2.0
-  description: SPDX identifier of the public data's licence (LICENSE-DATA). The code is MIT.
+  description: SPDX identifier of the public data's licence (licenses/CDLA-Permissive-2.0.txt). The code is MIT.
 authoritativeDefinitions:
-- url: https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
   type: license
   description: CDLA-Permissive-2.0, the licence of the public data (these tables, their exports, the site's catalog
     JSON and the marketplace shares). The code is MIT.
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
   type: attribution
   description: Data attribution (Overture Maps, OpenStreetMap, roasters' storefronts). The data is licensed under
-    CDLA-Permissive-2.0 (LICENSE-DATA); the code is MIT.
+    CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt); the code is MIT.
 servers:
 - id: huggingface
   server: huggingface-public-dataset

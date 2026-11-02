@@ -18,7 +18,7 @@ description:
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
 authoritativeDefinitions:
   - type: license
-    url: https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA
+    url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
     description: >-
       CDLA-Permissive-2.0, the licence of the public data (the public tables, their exports, the site's catalog JSON
       and the marketplace shares). The code is MIT.
@@ -76,7 +76,7 @@ outputPorts:
 customProperties:
   - property: license
     value: CDLA-Permissive-2.0
-    description: SPDX identifier of the public data's licence (LICENSE-DATA). The code is MIT.
+    description: SPDX identifier of the public data's licence (licenses/CDLA-Permissive-2.0.txt). The code is MIT.
   - property: glossary
     value:
       bag (public tables): One size option of a coffee in a store's catalog, e.g. a 10 oz or 2 lb bag. Stores give
@@ -128,8 +128,8 @@ customProperties:
       - topic: data licence and contract metadata
         decided: "2026-11-02"
         outcome: >-
-          The owner decided the public data's licence: CDLA-Permissive-2.0 (LICENSE-DATA), covering the public
-          tables, their exports, the site's catalog JSON and the marketplace shares; the code stays MIT. The
+          The owner decided the public data's licence: CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt),
+          covering the public tables, their exports, the site's catalog JSON and the marketplace shares; the code stays MIT. The
           public-catalog contract goes to 2.2.2, a patch (documentation only, additive): a license authoritative
           definition and SPDX id, servers (the public Hugging Face dataset and the Snowflake share, both planned),
           team, tags, and units as customProperties (currency USD per ISO 4217 on price columns; UCUM g and m on

@@ -39,4 +39,4 @@ make fmt       # ruff fix and format over src, app and tests
 
 The code is under the [MIT License](LICENSE). By contributing, you agree that your contribution is licensed
 under the same license. The public dataset the project publishes is under CDLA-Permissive-2.0
-([`LICENSE-DATA`](LICENSE-DATA)).
+([`licenses/CDLA-Permissive-2.0.txt`](licenses/CDLA-Permissive-2.0.txt)).

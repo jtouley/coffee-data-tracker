@@ -40,7 +40,7 @@ where is_listed and not is_blend group by 1 order by 2 desc;
 ## Sources, licensing and caveats
 
 - This private lake keeps every source's own terms (mixed). The facts-only public tables built from it are a separate
-  public dataset under CDLA-Permissive-2.0 ([LICENSE-DATA](https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA)).
+  public dataset under CDLA-Permissive-2.0 ([CDLA-Permissive-2.0.txt](https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt)).
 - Roaster discovery: Overture Maps Places (CDLA-Permissive-2.0) and OpenStreetMap (© OpenStreetMap contributors, ODbL). See [ATTRIBUTION](https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md).
 - Product data is read weekly from each roaster's own public storefront feed. Names, descriptions and images belong to the roasters, and every coffee links back to its source. Roasters can opt out via the repo's issue form.
 - Extracted attributes (origin, process, notes and so on) come from rules or Claude and can be wrong; the roaster's listing is authoritative.
