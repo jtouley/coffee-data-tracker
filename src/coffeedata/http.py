@@ -41,10 +41,26 @@ MAX_REDIRECTS = 20
 MAX_RESPONSE_BYTES = int(float(os.environ.get("COFFEEDATA_MAX_RESPONSE_MB") or 32) * 2**20)
 
 
+# An edge's challenge in place of the page: SiteGround's anti-bot answers HTTP 202 with `sg-captcha: challenge` (and
+# a body that sends a browser to /.well-known/sgcaptcha/), from the first request on and to every retry (run
+# 2026-11-02: 38 stores, all on SiteGround, challenged from Cloud Run's shared egress). A refusal, not a pause: never
+# retried, never deferred within the run, never read as content, and never as a store's robots.txt.
+CHALLENGE_STATUSES = (202,)
+# Headers an edge sets only on a challenge (any value). Cloudflare's is `cf-mitigated: challenge` (is_challenge).
+CHALLENGE_HEADERS = ("sg-captcha",)
 # A refusal or block. Each one is recorded with the headers Shopify Support asks for (and that tell a Cloudflare
-# challenge, `cf-mitigated: challenge` with an HTML body, from a rate limit), plus the egress IP it was sent from.
-LOGGED_BLOCK_STATUSES = (403, 429, 430, 503)
-BLOCK_HEADERS = ("server", "cf-mitigated", "content-type", "retry-after", "cf-ray", "x-request-id")
+# challenge, `cf-mitigated: challenge` with an HTML body, or SiteGround's, `sg-captcha`, from a rate limit), plus
+# the egress IP it was sent from.
+LOGGED_BLOCK_STATUSES = (*CHALLENGE_STATUSES, 403, 429, 430, 503)
+BLOCK_HEADERS = (
+    "server",
+    "cf-mitigated",
+    "content-type",
+    "retry-after",
+    "cf-ray",
+    "x-request-id",
+    "sg-captcha",
+)
 MAX_BLOCKS_PER_FETCH = 20  # a store that refuses every try doesn't fill its fetch row with copies
 EGRESS_TTL = 60.0  # seconds an egress-IP lookup is reused (default egress can change IP between connections)
 _egress_lock = threading.Lock()
@@ -71,6 +87,17 @@ def egress_ip() -> str | None:
             ip = None
         _egress.update(ip=ip, at=time.monotonic())
         return ip
+
+
+def is_challenge(r: httpx.Response) -> bool:
+    """The response is an edge's challenge, not the page: a CHALLENGE_STATUSES answer, a SiteGround `sg-captcha`
+    header, or Cloudflare's `cf-mitigated: challenge`, whatever the status."""
+    h = r.headers
+    return (
+        r.status_code in CHALLENGE_STATUSES
+        or any(k in h for k in CHALLENGE_HEADERS)
+        or h.get("cf-mitigated", "").lower() == "challenge"
+    )
 
 
 def block_record(r: httpx.Response) -> dict:
@@ -141,12 +168,14 @@ def unavailable_reason(r: httpx.Response) -> str | None:
 
 
 class RobotsUnavailable(FetchError, httpx.HTTPError):
-    """robots.txt didn't answer (429, 430, 5xx, or a network error) after the client's retries, so nothing on that
-    host is fetched for ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one
-    asks again. unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt."""
+    """robots.txt didn't answer with the store's rules (429, 430, 5xx, an edge's challenge, a 2xx other than 200, a
+    1xx or 3xx, or a network error) after the client's retries, so nothing on that host is fetched for
+    ROBOTS_RETRY_AFTER. Callers treat it like a network error: this fetch fails and a later one asks again.
+    unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt. status: the
+    HTTP status when robots.txt was answered with a CHALLENGE_STATUSES challenge (ingest counts it as a refusal)."""
 
-    def __init__(self, message: str, unreachable: bool = False) -> None:
-        super().__init__(message)
+    def __init__(self, message: str, unreachable: bool = False, status: int | None = None) -> None:
+        super().__init__(message, status=status)
         self.unreachable = unreachable
 
 
@@ -163,7 +192,8 @@ class RequestStats:
     retries: int = 0  # attempts after the first for one URL
     rate_limited: int = 0  # 429 responses
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
-    blocks: list[dict] = field(default_factory=list)  # block_record() of each 403/429/430/503, the first 20
+    # block_record() of each 202/403/429/430/503 or other challenge (is_challenge), the first 20
+    blocks: list[dict] = field(default_factory=list)
 
     def note(
         self,
@@ -174,7 +204,7 @@ class RequestStats:
     ) -> None:
         if (
             response is not None
-            and status in LOGGED_BLOCK_STATUSES
+            and (status in LOGGED_BLOCK_STATUSES or is_challenge(response))
             and len(self.blocks) < MAX_BLOCKS_PER_FETCH
         ):
             self.blocks.append(block_record(response))
@@ -313,7 +343,9 @@ class PoliteClient:
                 if not known:
                     if down is not None and time.monotonic() < down[0]:
                         raise RobotsUnavailable(
-                            f"{down[1]} (recently); not fetching without it", down[1].unreachable
+                            f"{down[1]} (recently); not fetching without it",
+                            down[1].unreachable,
+                            down[1].status,
                         )
                     rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
                     with self._lock:
@@ -333,9 +365,12 @@ class PoliteClient:
         return not rp.can_fetch(USER_AGENT, urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
     def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
-        """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an
-        answer about robots.txt, a 429, 430, 5xx or a network error, raises RobotsUnavailable and is remembered for
-        ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
+        """The host's rules: a 200 is parsed, a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...)
+        means it has no robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an
+        edge's challenge, whatever its status (SiteGround's 202, or a 200 or 4xx with a challenge header), another
+        2xx, a 1xx or 3xx (a redirect without a location), a 429, 430 or 5xx, or a network error raises
+        RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its
+        rules."""
         parser = urllib.robotparser.RobotFileParser()
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
@@ -357,20 +392,29 @@ class PoliteClient:
             err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__}: {e})", unreachable)
             cause = e
         else:
-            if r.status_code == 200:
+            challenged = is_challenge(r)
+            if r.status_code == 200 and not challenged:
                 parser.parse(r.text.splitlines())
                 return parser
             if r.status_code in (401, 403):
                 parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
                 return parser
-            if r.status_code not in BLOCK_STATUSES and r.status_code < 500:
+            if 400 <= r.status_code < 500 and r.status_code not in BLOCK_STATUSES and not challenged:
+                # RFC 9309's "unavailable": no robots.txt, no restrictions. Square Online's API host
+                # (cdn5.editmysite.com) answers 400 here, so every Square Online catalog depends on this.
                 return None
-            err, cause = RobotsUnavailable(f"robots.txt for {host} answered {r.status_code}"), None
+            # A challenge page standing in for robots.txt is no answer about the rules (run 2026-11-02: SiteGround's
+            # 202 was read as "no robots.txt"); neither is another 2xx, a 1xx or 3xx, a 429/430 or a 5xx. The host
+            # is unavailable for now.
+            why = f"answered {r.status_code}" + (" (a challenge)" if challenged else "")
+            status = r.status_code if r.status_code in CHALLENGE_STATUSES else None
+            err = RobotsUnavailable(f"robots.txt for {host} {why}", status=status)
+            cause = None
         # This fetch fails (the retry pass tries again) and the host stays unknown, asked again after
         # ROBOTS_RETRY_AFTER, so a site whose robots.txt never answers is never crawled.
         with self._lock:
             self._robots_down[host] = (time.monotonic() + ROBOTS_RETRY_AFTER, err)
-        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable) from cause
+        raise RobotsUnavailable(f"{err}; not fetching without it", err.unreachable, err.status) from cause
 
     def _wait_turn(self, host: str) -> None:
         with self._lock:

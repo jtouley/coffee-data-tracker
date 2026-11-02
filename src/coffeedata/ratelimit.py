@@ -35,6 +35,14 @@ log = logging.getLogger(__name__)
 # Every redirect hop uses the same platform budget, alongside per-host spacing.
 SHOPIFY_RPS = 3.0
 SHOPIFY_CONCURRENCY = 8
+# Squarespace publishes no limit for public pages or ?format=json, but answers a burst from one IP with 429s (HTML,
+# no Retry-After) across all its sites: run 2026-11-02, its own 32-worker job sent ~1,040 requests in the first
+# minute (~17/s) from one IP and drew 826 429s from ~175 sites (965 with the resume's own burst). The runs that drew
+# none were slower: 2026-10-30 peaked at 1.5 requests/s (0 429s), and 2026-10-26 and 10-28 (no 429 errors) at ~36
+# stores a minute, ~2.8 requests/s at the ~4.6 requests a store measured since. 2/s sits under every clean peak, and
+# ~340 stores x ~4.6 requests is ~1,600 requests: about 13 minutes, far inside the 225-minute window. The same
+# limiter as Shopify's (8 requests at once, paused and slowed by 429s).
+SQUARESPACE_RPS = 2.0
 
 
 class RateLimited(FetchError):

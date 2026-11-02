@@ -36,7 +36,7 @@ import pyarrow.parquet as pq
 
 from . import control, crashguard, ingest
 from .lake import SCHEMAS, Lake, new_batch_id, retry_transient
-from .ratelimit import SHOPIFY_RPS
+from .ratelimit import SHOPIFY_RPS, SQUARESPACE_RPS
 
 log = logging.getLogger(__name__)
 
@@ -68,7 +68,7 @@ CONNECTORS: dict[str, Connector] = {
     c.name: c
     for c in (
         Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
-        Connector("squarespace", 0, 9),
+        Connector("squarespace", 0, 9, rps=SQUARESPACE_RPS),  # one shared budget, as Shopify's
         Connector("woocommerce", 0, 9),
         Connector("square_online", 0, 9),
         Connector("generic", 0, 9),

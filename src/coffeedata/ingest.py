@@ -28,7 +28,15 @@ import httpx
 from . import crashguard, lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
-from .http import BLOCK_STATUSES, FetchError, PoliteClient, RequestStats, Unavailable, egress_ip
+from .http import (
+    BLOCK_STATUSES,
+    CHALLENGE_STATUSES,
+    FetchError,
+    PoliteClient,
+    RequestStats,
+    Unavailable,
+    egress_ip,
+)
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
 from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
@@ -53,10 +61,17 @@ def _causes(e: BaseException | None) -> Iterator[BaseException]:
         e = e.__cause__
 
 
+def challenged(e: BaseException) -> bool:
+    """An edge answered with a challenge (http.CHALLENGE_STATUSES: SiteGround's 202) instead of the catalog or its
+    robots.txt."""
+    return any(isinstance(c, FetchError) and c.status in CHALLENGE_STATUSES for c in _causes(e))
+
+
 def blocked(e: BaseException) -> bool:
-    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal. The
-    status may come wrapped (an HTTPStatusError cause) or bare (a FetchError from fetch_json or catalog_json)."""
-    return any(
+    """The store (or the platform) refused with a block status: 429, 430 or 503, an edge's challenge (202), or the
+    limiter's own refusal. The status may come wrapped (an HTTPStatusError cause) or bare (a FetchError from
+    fetch_json or catalog_json)."""
+    return challenged(e) or any(
         isinstance(c, RateLimited)
         or (isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES)
         or (isinstance(c, FetchError) and c.status in BLOCK_STATUSES)
@@ -66,8 +81,10 @@ def blocked(e: BaseException) -> bool:
 
 def deferrable(e: BaseException) -> bool:
     """A failure worth another try once the rest of the run is done: rate limiting or a timeout. Never a refusal
-    (401, 403, 430: shopify.StoreBlocked), and never a page block, which ingest.run backs off itself."""
-    if any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
+    (401, 403, 430: shopify.StoreBlocked; an edge's challenge, which answers every retry the same way: the 15:18
+    resume of 2026-11-02 asked 32 challenged stores again and got 32 challenges), and never a page block, which
+    ingest.run backs off itself."""
+    if challenged(e) or any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
         return False
     return blocked(e) or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
 
@@ -107,7 +124,8 @@ class Result:
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
     deferrable: bool = False
-    blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
+    # failed on a block status (429, 430, 503), an edge's challenge (202) or the limiter's refusal
+    blocked: bool = False
     unavailable: bool = False  # the store is closed, deactivated or password-protected (http.Unavailable)
     progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
     # not fetched: in flight in 2 dead attempts this week (crashguard); its fetches status is `crashed`
