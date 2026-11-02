@@ -174,7 +174,7 @@ resource "google_monitoring_alert_policy" "ingest_schedule_failed" {
 
           gcloud scheduler jobs describe $${log.extracted_label.job_id} --location ${var.region}
 
-      `status` holds the error. The attempt's log: `gcloud logging read 'resource.type="cloud_scheduler_job" AND resource.labels.job_id="$${log.extracted_label.job_id}"' --limit 5 --freshness 1d`. To run the slot by hand: `gcloud run jobs execute <job> --region ${var.region}` (the job is the entry's name without `${var.service}-` and `-resume` or `-retry`). Steps: docs/ingestion/RUNBOOK.md, section 5.
+      `status` holds the error. The attempt's log: `gcloud logging read 'resource.type="cloud_scheduler_job" AND resource.labels.job_id="$${log.extracted_label.job_id}"' --limit 5 --freshness 1d`. To run the slot by hand: `gcloud run jobs execute <job> --region ${var.region}` (the job is the entry's name without `${var.service}-` and `-resume` or `-retry`, except for `${var.service}-crawl-retry`, whose job is `crawl-retry` itself). Steps: docs/ingestion/RUNBOOK.md, section 5.
     EOT
   }
   alert_strategy {

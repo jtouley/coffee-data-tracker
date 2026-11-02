@@ -212,6 +212,14 @@ def _window_left(lake: Lake, job: str, connector: str, week: str, deadline_min: 
     return max(0.0, deadline_min - (control.now() - first).total_seconds() / 60)
 
 
+def _ok_errors(out: dict) -> tuple[int, int]:
+    """job_manifests' ok and errors for an ingest.run: a quarantined roaster is neither (never fetched; its own
+    count in by_adapter, as the dbt ok rates leave its `crashed` row out)."""
+    by = (out.get("by_adapter") or {}).values()
+    errors = sum(a.get("errors", 0) for a in by)
+    return sum(a.get("roasters", 0) - a.get("quarantined", 0) for a in by) - errors, errors
+
+
 def crawl(
     lake: Lake,
     connector: str,
@@ -246,7 +254,8 @@ def crawl(
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = {} if only else health.quarantine(todo_ids)
     window = _window_left(lake, "crawl", connector, week, deadline_min or c.deadline_min)
-    started = control.execution() | health.summary(todo_ids)
+    # the quarantine this attempt applies: none for --only, so its start row doesn't list the roaster it fetches
+    started = control.execution() | health.summary(todo_ids) | {"quarantined": sorted(quarantine)}
     job = control.start(lake, "crawl", week, connector, len(states), detail=started)
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     if health.dead:
@@ -276,8 +285,7 @@ def crawl(
         # The end row says why; the in-flight markers stay, so the next attempt sees what was running.
         control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})
         raise
-    errors = sum(a.get("errors", 0) for a in out["by_adapter"].values())
-    tried = sum(a.get("roasters", 0) for a in out["by_adapter"].values())
+    ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
               "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
               # the network the job actually ran on (set by the deploy), else the connector's config
@@ -289,7 +297,7 @@ def crawl(
               **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
         lake, job, "deadline" if out.get("skipped_deadline") else "done",
-        ok=tried - errors, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
+        ok=ok, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
         skipped=out.get("skipped_deadline", 0), requests=out.get("requests"), http_429=out.get("http_429"),
         http_430=out.get("http_430"), first_contact=out.get("first_contact"),
         detail=detail,
@@ -323,10 +331,9 @@ def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     except Exception as e:
         control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})
         raise
-    errors = sum(a.get("errors", 0) for a in out["by_adapter"].values())
-    tried = sum(a.get("roasters", 0) for a in out["by_adapter"].values())
+    ok, errors = _ok_errors(out)
     control.finish(
-        lake, job, "deadline" if out.get("skipped_deadline") else "done", ok=tried - errors, errors=errors,
+        lake, job, "deadline" if out.get("skipped_deadline") else "done", ok=ok, errors=errors,
         parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
         http_429=out.get("http_429"), http_430=out.get("http_430"), first_contact=out.get("first_contact"),
         detail=started | {"by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),

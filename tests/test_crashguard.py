@@ -108,6 +108,9 @@ def test_a_roaster_that_kills_two_attempts_is_quarantined_and_the_resume_skips_i
         == out["dead_attempts"]
     )
 
+    [third] = [r for r in control.rows(lake, WEEK) if control.detail_of(r).get("quarantined")]
+    assert (third["ok"], third["errors"]) == (6, 0)  # the quarantined roaster is neither: never fetched
+
     calls.clear()
     out = _crawl(lake)  # a later resume (15:17, 21:47) skips it: crashed is done for the week
     assert calls == [] and out["todo"] == 0 and _statuses(lake)["pill.com"] == ["crashed"]
@@ -115,6 +118,31 @@ def test_a_roaster_that_kills_two_attempts_is_quarantined_and_the_resume_skips_i
     assert (
         _statuses(lake, None)["pill.com"] == ["crashed"] and not part.exists()
     )  # merged; the week's folders go
+
+
+def test_only_fetches_a_quarantined_roaster_and_its_rows_dont_call_it_quarantined(generic_week, monkeypatch):
+    """RUNBOOK §7's un-quarantine: `crawl --only` fetches the roaster, and its start row (the one a kill leaves)
+    lists no quarantine, so the runbook's json_extract(detail, '$.quarantined') query doesn't name it."""
+    lake, calls, pill = generic_week
+    for _ in range(2):
+        with pytest.raises(Killed):
+            _crawl(lake)
+    assert "pill.com" in _crawl(lake)["quarantined"]
+    pill["kills"] = False  # fixed
+    starts: list[dict] = []
+    real_start = control.start
+
+    def start(*a, **k):
+        starts.append(k.get("detail") or {})
+        return real_start(*a, **k)
+
+    monkeypatch.setattr(control, "start", start)
+    calls.clear()
+    out = connectors.crawl(lake, "generic", WEEK, only="pill.com")
+    assert calls == ["pill.com"] and out["status"] == "done"
+    assert starts[0]["quarantined"] == [] and "pill.com" in starts[0]["suspects"]
+    [end] = [r for r in control.rows(lake, WEEK) if control.detail_of(r).get("only") == "pill.com"]
+    assert end["status"] == "done" and control.detail_of(end)["quarantined"] == []
 
 
 def test_one_dead_attempt_only_makes_suspects_and_suspects_run_one_at_a_time(generic_week, monkeypatch):
@@ -184,6 +212,8 @@ def test_a_quarantined_roaster_has_no_request_and_counts_apart(lake, monkeypatch
     out = ingest.run(lake, stores, WEEK, workers=2, quarantine={"pill.com": "crashed: in flight when 2 died"})
     assert out["quarantined"] == ["pill.com"]
     assert out["by_adapter"]["generic"]["quarantined"] == 1
+    assert out["by_adapter"]["generic"]["errors"] == 0  # not an error: it was never fetched
+    assert connectors._ok_errors(out) == (2, 0)
     assert out["first_contact"]["stores"] == 2  # never asked: no first contact
     assert _lake_statuses(lake)["pill.com"] == ["crashed"]
     done, _ = ingest._done_and_tried(lake, WEEK)
@@ -342,6 +372,84 @@ def test_sitemap_reads_at_most_the_limit_without_listing_every_url():
     assert urls == [f"https://a.com/products/c{i}" for i in range(50)]
 
 
+def test_a_sitemap_over_the_response_cap_but_within_the_protocols_50_mb_is_read(monkeypatch, caplog):
+    """Sitemap requests get their own cap (SITEMAP_MAX_BYTES, above the protocol's 50 MB); a product page still
+    gets the client's. Past SITEMAP_MAX_BYTES a sitemap is out of spec: generic's fetch fails (its only list of
+    product pages), Squarespace's falls back to the common shop paths and says why."""
+    from coffeedata import sitemap
+    from coffeedata.adapters import generic, squarespace
+
+    assert sitemap.SITEMAP_MAX_BYTES >= 50 * 2**20 > http.MAX_RESPONSE_BYTES  # 32 MiB by default
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    monkeypatch.setattr(sitemap, "SITEMAP_MAX_BYTES", 64 * 1024)
+    body = (
+        "<urlset>"
+        + "".join(f"<url><loc>https://a.com/products/c{i}</loc></url>" for i in range(500))
+        + "</urlset>"
+    )
+    assert 8 * 1024 < len(body) < 64 * 1024
+
+    def handler(req):
+        if req.url.path == "/sitemap.xml":
+            return httpx.Response(200, text=body)
+        return httpx.Response(200, text="y" * 9 * 1024)
+
+    c = _client(handler, max_response_bytes=8 * 1024)
+    assert len(sitemap.sitemap_urls(c, "a.com")) == 500
+    assert c.max_response_bytes == 8 * 1024  # the sitemap's cap was a view's, not the client's
+    with pytest.raises(http.ResponseTooLarge):
+        c.get("https://a.com/products/c0")
+    roomy = _client(handler, max_response_bytes=1 << 20)  # a client cap above the sitemap's is never lowered
+    assert roomy.with_max_response(max(roomy.max_response_bytes, sitemap.SITEMAP_MAX_BYTES)) is roomy
+
+    monkeypatch.setattr(sitemap, "SITEMAP_MAX_BYTES", 8 * 1024)  # now the sitemap is over its cap
+    r = Roaster(roaster_id="a.com", name="a", host="a.com", platform="custom")
+    with pytest.raises(http.ResponseTooLarge):
+        generic.fetch(c, r)
+    tried: list[str] = []
+
+    def shop(req):
+        if req.url.path == "/sitemap.xml":
+            return httpx.Response(200, text=body)
+        tried.append(req.url.path)
+        return httpx.Response(404)
+
+    with caplog.at_level("WARNING"):
+        assert squarespace.fetch(_client(shop, max_response_bytes=8 * 1024), r) == []
+    assert tried == squarespace.COMMON_SHOP_PATHS
+    assert "a.com: sitemap unreadable" in caplog.text and "response over" in caplog.text
+
+
+def test_an_oversized_robots_txt_is_remembered_and_counted(monkeypatch):
+    """A robots.txt over the cap (a catch-all page at that path) is a RobotsUnavailable remembered for
+    ROBOTS_RETRY_AFTER, so the host's later fetches don't download it again; it is counted in RequestStats."""
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    asked = {"robots": 0}
+
+    def route(req):
+        if req.url.path == "/robots.txt":
+            asked["robots"] += 1
+            return httpx.Response(200, text="z" * 20 * 1024)
+        return httpx.Response(200, text="ok")
+
+    c = http.PoliteClient(min_interval=0, transport=httpx.MockTransport(route), max_response_bytes=8 * 1024)
+    with c.track() as stats, pytest.raises(http.RobotsUnavailable, match="too large"):
+        c.get("https://a.com/p1")
+    assert stats.requests == 1 and stats.statuses == {200: 1} and stats.pages == 0  # robots.txt: not a page
+    with pytest.raises(http.RobotsUnavailable, match="recently"):
+        c.get("https://a.com/p2")
+    assert asked["robots"] == 1
+
+
+def test_a_response_over_the_cap_is_counted_with_its_status(monkeypatch):
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    c = _client(lambda req: httpx.Response(200, text="x" * 20 * 1024), max_response_bytes=8 * 1024)
+    with c.track() as stats, pytest.raises(http.ResponseTooLarge) as e:
+        c.get("https://a.com/products/big")
+    assert e.value.status == 200 and not ingest.blocked(e.value)
+    assert stats.requests == 2 and stats.statuses == {200: 1, 404: 1}  # robots.txt (404), then the page
+
+
 # --- the Cloud Run shape (src/terraform/ingestion.tf; terraform validate runs where terraform is installed) ----------
 
 
@@ -384,3 +492,26 @@ def test_every_connector_has_a_third_pass_in_the_evening():
         _tf(),
     )
     assert set(connectors.CONNECTORS) == {"shopify", "squarespace", "woocommerce", "square_online", "generic"}
+
+
+def test_job_memory_overrides_are_range_checked_and_must_name_a_job():
+    tf = _tf()
+    assert "mib >= 1024 && mib <= 8192" in tf  # 1Gi to 8Gi: "16Gi" fails at plan, not at apply
+    assert (
+        "length(setsubtract(keys(var.ingest_job_memory), keys(local.ingest_jobs))) == 0" in tf
+    )  # a misspelt key
+
+
+def test_the_schedule_alert_names_each_entrys_job_correctly():
+    """The email tells the owner which job to run by hand: the entry's name without `-resume` or `-retry`, except
+    `crawl-retry`, whose job is itself. That rule, applied to every Scheduler entry, gives its real job."""
+    import re
+    from pathlib import Path
+
+    alert = (Path(__file__).parents[1] / "src/terraform/alerts.tf").read_text()
+    assert "except for `${var.service}-crawl-retry`, whose job is `crawl-retry` itself" in alert
+    slots = re.findall(r'^\s+"([a-z-]+)"\s+= \{ job = "([a-z-]+)", cron = "[^"]+" \}', _tf(), re.M)
+    assert len(slots) >= 20
+    for entry, job in slots:
+        named = entry if entry == "crawl-retry" else re.sub(r"-(resume|retry)$", "", entry)
+        assert named == job, entry

@@ -41,8 +41,13 @@ variable "ingest_job_memory" {
   type        = map(string)
   default     = {}
   validation {
-    condition     = alltrue([for v in values(var.ingest_job_memory) : can(regex("^[0-9]+(Mi|Gi)$", v))])
-    error_message = "Each value is a Cloud Run memory size such as 2Gi or 4096Mi."
+    # the size in MiB, from 1024 (1Gi) to 8192 (8Gi); anything else (another unit, 16Gi) fails at plan, not apply
+    condition = alltrue([
+      for mib in [
+        for v in values(var.ingest_job_memory) : try(tonumber(regex("^([0-9]+)(Mi|Gi)$", v)[0]) * (endswith(v, "Gi") ? 1024 : 1), 0)
+      ] : mib >= 1024 && mib <= 8192
+    ])
+    error_message = "Each value is a Cloud Run memory size from 1Gi to 8Gi (with 2 vCPU), such as 2Gi or 4096Mi."
   }
 }
 
@@ -325,6 +330,11 @@ resource "google_cloud_run_v2_job" "ingest" {
   lifecycle {
     # `gcloud run jobs update` (e.g. the hand-set --max-retries 0) stamps these; they are not configuration.
     ignore_changes = [client, client_version]
+    # a misspelt job name in var.ingest_job_memory would otherwise be ignored by lookup() above, silently
+    precondition {
+      condition     = length(setsubtract(keys(var.ingest_job_memory), keys(local.ingest_jobs))) == 0
+      error_message = "var.ingest_job_memory names a job that isn't in local.ingest_jobs (a misspelt job name?)."
+    }
   }
 
   depends_on = [

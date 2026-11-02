@@ -990,6 +990,52 @@ def test_a_store_in_page_backoff_at_the_deadline_is_parked_not_dropped(lake, moc
     assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
 
 
+@pytest.mark.parametrize("others_pending", [False, True])
+def test_a_suspect_held_for_the_lane_in_page_backoff_at_the_deadline_is_parked(
+    lake, mock, monkeypatch, others_pending
+):
+    """A suspect (crashguard) that backed off on page 2 comes due while the one-at-a-time lane is busy, so it waits
+    in `held`; when the deadline passes it is parked with its pages, as a store waiting in `pending` is, not dropped
+    as never started. others_pending: whether another store is still pending at the deadline (the in-loop stop)
+    or not (the stop after the round)."""
+    clock = fake_time(monkeypatch)
+    real_wait = ingest.wait_any
+    # the main loop polls (in real time) while the lane's fetch runs, so it sees the fake clock move meanwhile
+    monkeypatch.setattr(
+        ingest, "wait_any", lambda fs, timeout=None, return_when=None: real_wait(fs, 0.02, return_when)
+    )
+    mock.get("https://wall.example/products.json", params={"page": "1"}).mock(return_value=_page(range(250)))
+    mock.get("https://wall.example/products.json", params={"page": "2"}).mock(return_value=resp(429, "60"))
+
+    def slow(
+        request,
+    ):  # the lane's other suspect: still running when wall's backoff ends, then past the deadline
+        clock.t += 70
+        time.sleep(0.3)
+        clock.t += 30
+        return _page([])
+
+    mock.get("https://slow.example/products.json", params={"page": "1"}).mock(side_effect=slow)
+    stores = [_r("wall.example"), _r("slow.example")]
+    if others_pending:  # a non-suspect whose own backoff (Retry-After 600) is due after the deadline
+        mock.get("https://late.example/products.json", params={"page": "1"}).mock(
+            return_value=_page(range(250))
+        )
+        mock.get("https://late.example/products.json", params={"page": "2"}).mock(
+            return_value=resp(429, "600")
+        )
+        stores.append(_r("late.example"))
+    out = ingest.run(
+        lake, stores, "2026-10-26", workers=4, shopify_rps=1000, client_kw=FAST | {"retries": 1}, deadline_s=90,
+        suspects={"wall.example", "slow.example"},
+    )  # fmt: skip
+    assert out["skipped_deadline"] == 0
+    parked = ingest.load_parked(lake, "2026-10-26")
+    assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
+    assert out["deferred"]["page_parked_at_deadline"] == 1 + others_pending
+    assert sorted(parked) == sorted({"wall.example"} | ({"late.example"} if others_pending else set()))
+
+
 def test_crawl_retry_resumes_a_parked_store_from_its_page(lake, mock, monkeypatch):
     fake_time(monkeypatch)
     p1 = mock.get("https://wall.example/products.json", params={"page": "1"}).mock(

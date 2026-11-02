@@ -388,10 +388,12 @@ Memory grew across roasters, not on one page: every httpx response refers to its
 reference cycle), so each page body (bytes and decoded text) waited for Python's full garbage collection, and 32
 workers' pages piled up between collections. `PoliteClient` now reads each body itself, breaks the cycle once it is
 read, and caps it at 32 MiB decompressed (`COFFEEDATA_MAX_RESPONSE_MB`; by content-length first, else counted as it
-is read): a bigger response fails that roaster's fetch, never retried. Sitemaps are matched lazily on their bytes,
-up to the URL limit, instead of decoding the whole file and listing every `<loc>`. What remains is the chunk of
-200 results held until it is written (the sawtooth in the first row). `crawl-generic` runs with 8 GiB anyway, as the
-owner set by hand: whether 2 GiB is now enough is for the logs of the next runs to show.
+is read): a bigger response fails that roaster's fetch, never retried, and a robots.txt over it is remembered as
+unavailable for 15 minutes, like a 5xx. Sitemaps get 64 MiB (`sitemap.SITEMAP_MAX_BYTES`), since the protocol
+allows 50 MB, and are matched lazily on their bytes, up to the URL limit, instead of decoding the whole file and
+listing every `<loc>`. What remains is the chunk of 200 results held until it is written (the sawtooth in the
+first row). `crawl-generic` runs with 8 GiB anyway, as the owner set by hand: whether 2 GiB is now enough is for the
+logs of the next runs to show.
 
 **The poison-pill guard** (`crashguard.py`). Before a roaster's fetch starts, its worker writes a marker,
 `raw/connector=X/run_date=W/_inflight/attempt=<attempt_id>/<roaster>.json` in the staging bucket, and removes it

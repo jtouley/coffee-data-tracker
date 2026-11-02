@@ -76,8 +76,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Tests: a date-dependent bag comparison test (#51).
 - Crawl memory (#91): `crawl-generic` was OOM-killed at 2Gi on 2026-11-02. Every httpx response refers to itself
   through its stream, so each page body waited for Python's full garbage collection; the client now breaks that
-  cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`): a larger one
-  fails that roaster's fetch instead of the job. Sitemaps are matched lazily on their bytes, up to the URL limit.
+  cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`; a sitemap
+  64 MiB, above the protocol's 50 MB): a larger one fails that roaster's fetch instead of the job. Sitemaps are
+  matched lazily on their bytes, up to the URL limit.
   An exception from one roaster's fetch is always that roaster's error.
 
 ### Security

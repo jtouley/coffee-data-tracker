@@ -412,7 +412,7 @@ def run(
         for res in chunk:
             a = by_adapter.setdefault(res.roaster.adapter, Counter())
             a["roasters"] += 1
-            a["errors"] += bool(res.error)
+            a["errors"] += bool(res.error) and not res.quarantined  # a quarantined one has its own count
             a["with_products"] += bool(res.items)
             if res.quarantined:  # never asked: no request, no first contact
                 a["quarantined"] += 1
@@ -478,6 +478,18 @@ def run(
         done: list[Result] = []
         running: set = set()
 
+        def stop_at_deadline(r: Roaster) -> None:
+            """r is not started: the deadline passed first. One waiting out a page backoff is parked with its pages
+            (crawl-retry resumes it); one never started is left without a fetches row."""
+            nonlocal skipped
+            p = progress.get(r.roaster_id)
+            if p and p.get("backoffs"):
+                save_parked(lake, run_date, r.roaster_id, p)
+                page_stats["parked"] += 1
+                page_stats["parked_at_deadline"] += 1
+            else:
+                skipped += 1
+
         def launch(r: Roaster) -> None:
             nonlocal done
             if any(d.roaster.roaster_id == r.roaster_id for d in done):
@@ -509,18 +521,13 @@ def run(
             while pending or running:
                 now = time.monotonic()
                 if deadline is not None and now >= deadline and pending:
-                    # Past the deadline nothing new starts. A store waiting out a page backoff is parked with its
-                    # pages (crawl-retry resumes it); one never started is left without a fetches row.
+                    # Past the deadline nothing new starts: neither a store due later nor a suspect still waiting
+                    # for the lane (one held while in a page backoff keeps its pages too).
                     for _, _, r in pending:
-                        p = progress.get(r.roaster_id)
-                        if p and p.get("backoffs"):
-                            save_parked(lake, run_date, r.roaster_id, p)
-                            page_stats["parked"] += 1
-                            page_stats["parked_at_deadline"] += 1
-                        else:
-                            skipped += 1
+                        stop_at_deadline(r)
                     pending = []
-                    skipped += len(held)  # suspects still waiting for the lane: never started
+                    for r in held:
+                        stop_at_deadline(r)
                     held.clear()
                 while pending and pending[0][0] <= now:
                     r = heapq.heappop(pending)[2]
@@ -601,7 +608,8 @@ def run(
                     if len(done) == CHUNK:
                         flush(done)
                         done = []
-            skipped += len(held)  # suspects the lane never reached before the deadline
+            for r in held:  # suspects the lane never reached before the deadline
+                stop_at_deadline(r)
             held.clear()
             if done:
                 flush(done)
