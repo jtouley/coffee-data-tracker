@@ -174,3 +174,196 @@ def test_a_store_that_never_stops_answering_429_ends_failed_after_its_rounds(lak
         crawl_one(lake, monkeypatch, "woocommerce", "n.com", "woocommerce")
     assert fetches(lake, "woocommerce", "n.com") == ["error"] * (ingest.DEFERRED_ROUNDS + 1)
     assert route.call_count == ingest.DEFERRED_ROUNDS + 1  # one ask per round: never sooner than Retry-After
+
+
+# --- PR #98's final review, and the owner's rule: we wait at most 5 minutes for anything a store asks for ----------
+
+
+def _woo_store(host: str = "w.com") -> Roaster:
+    return Roaster(roaster_id=host, name="R", host=host, platform="woocommerce")
+
+
+def _statuses(lake, rid: str) -> list[str]:
+    q = f"select status from {lake.scan('fetches')} where roaster_id = ? order by fetched_at, status"
+    return [r[0] for r in lake.connect().execute(q, [rid]).fetchall()]
+
+
+WOO_OK = [{"id": 7, "name": "Blend", "permalink": "https://w.com/p/blend"}]
+HOURS = "7200"
+
+
+@pytest.mark.parametrize("where", ["catalog", "robots"])
+def test_a_retry_after_of_hours_is_waited_for_5_minutes_and_the_store_asked_again(
+    lake, monkeypatch, clock, where
+):
+    """Reproduced on ef72b9e: one store answering 429 + Retry-After: 7200 held a run without a deadline (weekly's
+    cmd_ingest, crawl-retry) for 4 hours of deferred rounds. Now its wait is cut to 300 s: it is asked again in the
+    next deferred round, never failed just for asking, and the run ends within minutes."""
+    monkeypatch.setattr(http.time, "monotonic", clock.monotonic)  # robots.txt's pause, on the same clock
+    busy = httpx.Response(429, headers={"retry-after": HOURS})
+    with respx.mock(assert_all_called=False) as m:
+        robots = m.get("https://w.com/robots.txt")
+        catalog = m.get("https://w.com/wp-json/wc/store/v1/products")
+        if where == "robots":
+            robots.side_effect = [busy, httpx.Response(404)]
+            catalog.mock(return_value=httpx.Response(200, json=WOO_OK))
+        else:
+            robots.mock(return_value=httpx.Response(404))
+            catalog.side_effect = [busy, httpx.Response(200, json=WOO_OK)]
+        out = ingest.run(
+            lake, [_woo_store()], WEEK, workers=2
+        )  # as cmd_ingest and crawl-retry ran: no deadline
+    assert _statuses(lake, "w.com") == ["error", "ok"]
+    assert out["deferred"]["round_1"] == 1
+    assert max(clock.sleeps) == http.MAX_STORE_WAIT  # asked again after 300 s: never sooner, never later
+    assert sum(clock.sleeps) <= http.MAX_STORE_WAIT + ingest.DEFERRED_SPREAD
+    assert (robots if where == "robots" else catalog).call_count == 2
+
+
+def test_a_store_that_keeps_asking_for_hours_is_asked_every_round_and_the_run_ends_in_minutes(lake, clock):
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://w.com/robots.txt").mock(return_value=httpx.Response(404))
+        catalog = m.get("https://w.com/wp-json/wc/store/v1/products").mock(
+            return_value=httpx.Response(503, headers={"retry-after": "Wed, 21 Oct 2099 07:28:00 GMT"})
+        )
+        out = ingest.run(lake, [_woo_store()], WEEK, workers=2)
+    assert catalog.call_count == ingest.DEFERRED_ROUNDS + 1  # never given up on before its rounds are spent
+    assert (
+        clock.sleeps == [http.MAX_STORE_WAIT] * ingest.DEFERRED_ROUNDS
+    )  # an HTTP date years away: 300 s too
+    assert out["deferred"]["still_failing"] == 1
+
+
+def test_a_limiter_pause_and_a_shopify_page_backoff_are_capped_too(lake, monkeypatch, clock):
+    """The limiter's pause for one store (HostRateLimited) and the page backoffs took a Retry-After uncapped: three
+    backoffs at 7200 s would have held the job 6 hours."""
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://s.com/robots.txt").mock(return_value=httpx.Response(404))
+        page1 = m.get("https://s.com/products.json", params={"page": "1"})
+        page1.side_effect = [httpx.Response(429, headers={"retry-after": HOURS})] * 3 + [
+            httpx.Response(200, json={"products": [{"id": 1, "title": "Blend"}]})
+        ]
+        m.get("https://s.com/products.json", params={"page": "2"}).mock(
+            return_value=httpx.Response(200, json={"products": []})
+        )
+        out = crawl_one(lake, monkeypatch, "shopify", "s.com", "shopify")
+    assert fetches(lake, "shopify", "s.com")[-1] == "ok"
+    assert out["deferred"]["page_backoffs"] >= 1
+    assert max(clock.sleeps) <= http.MAX_STORE_WAIT
+    limiter = PlatformLimiter("shopify", rate=1000, max_concurrent=1, per_host=True, clock=clock.monotonic)
+    request = httpx.Request("GET", "https://x.com/")
+    limiter.record(httpx.Response(429, headers={"retry-after": HOURS}, request=request))
+    assert limiter.host_until["x.com"] - clock.monotonic() == pytest.approx(http.MAX_STORE_WAIT)
+
+
+def test_a_deferred_retry_is_never_scheduled_past_the_deadline(lake, clock):
+    """Its wait ends after the run's deadline: the store keeps its error row for the next pass, at once, instead of
+    the run idling to its deadline."""
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://w.com/robots.txt").mock(return_value=httpx.Response(404))
+        catalog = m.get("https://w.com/wp-json/wc/store/v1/products").mock(
+            return_value=httpx.Response(429, headers={"retry-after": HOURS})
+        )
+        out = ingest.run(lake, [_woo_store()], WEEK, workers=2, deadline_s=120)
+    assert sum(clock.sleeps) == 0
+    assert out["deferred"] == {"past_deadline": 1} and out["skipped_deadline"] == 0
+    assert "past the run's deadline" in out["failures"][0]
+    assert catalog.call_count == 1
+
+
+def test_crawl_retry_and_the_weekly_fallback_have_deadlines_inside_their_240_minutes(lake, monkeypatch):
+    """Both called ingest.run without one: nothing stopped them before the 240-minute kill (ingestion.tf's
+    crawl-retry task timeout, weekly.yml's timeout-minutes)."""
+    import argparse
+
+    from coffeedata import cli
+
+    seen: list = []
+    monkeypatch.setattr(ingest, "run", lambda *a, **k: seen.append(k.get("deadline_s")) or {"deferred": {}})
+    monkeypatch.setattr(ingest, "select_parked", lambda *a, **k: ([], {}))
+    connectors.crawl_retry(lake, "shopify", WEEK)
+    assert seen == [60 * connectors.CONNECTORS["shopify"].deadline_min] and seen[0] < 240 * 60
+    seen.clear()
+    cli.cmd_crawl_retry(argparse.Namespace(run_date=WEEK, workers=8, connector=None, deadline_min=None))
+    assert seen == [60 * cli.CRAWL_RETRY_MIN] and cli.CRAWL_RETRY_MIN < 240
+
+    calls: list = []
+    for name in ("cmd_probe", "cmd_enrich", "cmd_classify", "cmd_publish", "_export_and_site"):
+        monkeypatch.setattr(cli, name, lambda *a, **k: None)
+    monkeypatch.setattr(cli, "cmd_build", lambda a: True)
+    monkeypatch.setattr(cli, "cmd_ingest", lambda a: calls.append(a.deadline_min))
+    cli.cmd_weekly(argparse.Namespace(run_date="2026-11-09", discover=False, sample=None, enrich_limit=None,
+                                      db="build/coffee.duckdb", out="build/site"))  # fmt: skip
+    assert len(calls) == 2 and all(0 < d <= cli.WEEKLY_CRAWL_MIN < 240 for d in calls)
+
+
+@pytest.mark.parametrize("status", [500, 502, 504])
+def test_a_5xx_with_a_long_retry_after_is_deferred_like_a_429(lake, clock, status):
+    """Reproduced on ef72b9e: the client stops at a Retry-After over MAX_RETRY_WAIT, and a 5xx then failed the store
+    after one request (main retried it). It is now deferred past its Retry-After, as a 429 is, capped at 300 s."""
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://w.com/robots.txt").mock(return_value=httpx.Response(404))
+        route = m.get("https://w.com/wp-json/wc/store/v1/products")
+        route.side_effect = [
+            httpx.Response(status, headers={"retry-after": HOURS}),
+            httpx.Response(200, json=WOO_OK),
+        ]
+        out = ingest.run(lake, [_woo_store()], WEEK, workers=2)
+    assert _statuses(lake, "w.com") == ["error", "ok"]
+    assert route.call_count == 2 and out["deferred"]["round_1"] == 1
+    assert max(clock.sleeps) == http.MAX_STORE_WAIT
+
+
+def test_a_5xx_robots_txt_with_a_long_retry_after_is_deferred_like_a_429(lake, clock, monkeypatch):
+    monkeypatch.setattr(http.time, "monotonic", clock.monotonic)
+    with respx.mock(assert_all_called=False) as m:
+        robots = m.get("https://w.com/robots.txt")
+        robots.side_effect = [httpx.Response(502, headers={"retry-after": "120"}), httpx.Response(404)]
+        m.get("https://w.com/wp-json/wc/store/v1/products").mock(return_value=httpx.Response(200, json=[]))
+        ingest.run(lake, [_woo_store()], WEEK, workers=2)
+    assert _statuses(lake, "w.com") == ["error", "ok"] and robots.call_count == 2
+
+
+def test_a_5xx_without_a_long_retry_after_is_still_retried_by_the_client(lake, clock):
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://w.com/robots.txt").mock(return_value=httpx.Response(404))
+        route = m.get("https://w.com/wp-json/wc/store/v1/products")
+        route.side_effect = [
+            httpx.Response(502, headers={"retry-after": "5"}),
+            httpx.Response(200, json=WOO_OK),
+        ]
+        out = ingest.run(lake, [_woo_store()], WEEK, workers=2)
+    assert _statuses(lake, "w.com") == ["ok"] and route.call_count == 2 and not out["deferred"]
+
+
+SQ_ITEM = {"id": "a1", "title": "Blend", "urlId": "blend", "variants": [{"price": 1800}]}
+
+
+@pytest.mark.parametrize("status", [429, 503])
+def test_a_squarespace_sitemap_that_always_blocks_falls_back_to_the_shop_paths_after_its_retries(
+    lake, monkeypatch, clock, status
+):
+    """The sitemap's block defers the store (never read without it while a retry is left); on the last round the
+    common shop paths are read, so its catalog isn't lost every week."""
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://q.com/robots.txt").mock(return_value=httpx.Response(404))
+        sitemap = m.get("https://q.com/sitemap.xml").mock(
+            return_value=httpx.Response(status, headers={"retry-after": WAIT})
+        )
+        shop = m.get("https://q.com/shop").mock(return_value=httpx.Response(200, json={"items": [SQ_ITEM]}))
+        crawl_one(lake, monkeypatch, "squarespace", "q.com", "squarespace")
+    assert fetches(lake, "squarespace", "q.com") == ["error", "error", "ok"]
+    assert fetches(lake, "squarespace", "q.com", "products")[-1] == 1
+    assert sitemap.call_count >= ingest.DEFERRED_ROUNDS + 1  # asked in every round
+    assert shop.call_count == 1  # only on the last try
+
+
+def test_a_squarespace_fallback_without_products_is_an_error_not_an_empty_catalog(lake, monkeypatch, clock):
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://q.com/robots.txt").mock(return_value=httpx.Response(404))
+        m.get("https://q.com/sitemap.xml").mock(
+            return_value=httpx.Response(429, headers={"retry-after": WAIT})
+        )
+        m.get(url__startswith="https://q.com/").mock(return_value=httpx.Response(404))
+        crawl_one(lake, monkeypatch, "squarespace", "q.com", "squarespace")
+    assert fetches(lake, "squarespace", "q.com") == ["error"] * (ingest.DEFERRED_ROUNDS + 1)

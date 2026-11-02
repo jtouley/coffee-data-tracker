@@ -1,6 +1,6 @@
 """Crawl run 2026-11-02 (build/research/crawl-failures-2026-11-02.md): SiteGround's anti-bot answered HTTP 202 with
 `sg-captcha: challenge` to robots.txt and to the catalog, and the client read the robots.txt 202 as "no robots.txt".
-A challenge on robots.txt (or a 2xx other than 200, a 1xx or a 3xx) now leaves the host unavailable for the pass, as
+A challenge on robots.txt (or a 1xx, or a 3xx without a location) now leaves the host unavailable for the pass, as
 a 429 or 5xx already did; a plain 4xx still means no robots.txt (RFC 9309). Every challenge is recorded in fetches.blocks with its headers. Also the run's Squarespace burst (one shared budget
 now, as Shopify's) and the per-roaster registry corrections for the Square Online stores that moved."""
 
@@ -62,8 +62,7 @@ def test_a_challenged_robots_txt_is_no_answer_and_the_host_is_left_alone(monkeyp
     "response",
     [
         httpx.Response(202),  # a 202 without SiteGround's header is still no robots.txt
-        httpx.Response(204),
-        httpx.Response(302),  # a redirect without a location
+        httpx.Response(302),  # a redirect without a location: can't be followed, rules undefined (RFC 9309)
         httpx.Response(200, headers=SG, text=SG_BODY),  # a 200 that is SiteGround's challenge page
         httpx.Response(
             200, headers={"cf-mitigated": "challenge", "content-type": "text/html"}, text="<html>"
@@ -74,7 +73,6 @@ def test_a_challenged_robots_txt_is_no_answer_and_the_host_is_left_alone(monkeyp
     ],
     ids=[
         "202",
-        "204",
         "302-no-location",
         "200-sg-captcha",
         "200-cf-challenge",
@@ -92,6 +90,32 @@ def test_a_challenge_or_a_non_answer_leaves_the_host_unavailable(response):
         with PoliteClient(min_interval=0, retries=1) as c, pytest.raises(http.RobotsUnavailable):
             c.get("https://a.com/products.json")
         assert catalog.call_count == 0
+
+
+@pytest.mark.parametrize(
+    ("response", "allowed"),
+    [
+        (httpx.Response(204), True),  # no body: no rules
+        (httpx.Response(203, text="User-agent: *\nDisallow: /private\n"), True),
+        (httpx.Response(206, text="User-agent: *\nDisallow: /\n"), False),
+    ],
+    ids=["204", "203-rules", "206-disallow-all"],
+)
+def test_any_2xx_robots_txt_that_is_not_a_challenge_is_the_file(response, allowed):
+    """RFC 9309 2.3.1.1: a 2xx is a successful download and its rules are followed; a 204 has none, so everything is
+    allowed. Before, a 204 left the store unavailable every week. A 202 is still a challenge (above)."""
+    with respx.mock as m:
+        robots = m.get("https://a.com/robots.txt").mock(return_value=response)
+        catalog = m.get("https://a.com/products.json").mock(
+            return_value=httpx.Response(200, json={"products": []})
+        )
+        with PoliteClient(min_interval=0, retries=1) as c:
+            if allowed:
+                assert c.get("https://a.com/products.json").status_code == 200
+            else:
+                with pytest.raises(http.SiteDisallowed):
+                    c.get("https://a.com/products.json")
+        assert robots.call_count == 1 and catalog.call_count == int(allowed)
 
 
 @pytest.mark.parametrize("status", [404, 400, 410, 451])

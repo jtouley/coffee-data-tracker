@@ -22,7 +22,7 @@ from contextlib import contextmanager
 
 import httpx
 
-from .http import BLOCK_STATUSES, FetchError, is_challenge, retry_after_seconds
+from .http import BLOCK_STATUSES, FetchError, is_challenge, retry_after_seconds, store_wait
 
 log = logging.getLogger(__name__)
 
@@ -49,7 +49,8 @@ class RateLimited(FetchError):
 
 class HostRateLimited(RateLimited):
     """One store asked us to wait (429/503 + Retry-After) longer than defer_after: the store is parked and
-    retried after the main pass (ingest.run), while the platform's other stores carry on."""
+    retried after the main pass (ingest.run), while the platform's other stores carry on. wait: at most
+    http.MAX_STORE_WAIT."""
 
     def __init__(self, message: str, host: str, wait: float) -> None:
         super().__init__(message)
@@ -233,8 +234,9 @@ class PlatformLimiter:
             wait = min(self.max_cooldown, self.default_cooldown if asked is None else asked)
             if self.per_host and status != 430:
                 host = _host(response)
-                # the store's own pause is as long as it asked (never cut short); the platform's is capped
-                pause = wait if asked is None else asked
+                # the store's own pause is as long as it asked, up to http.MAX_STORE_WAIT (5 minutes: a store asking
+                # for longer is asked again then, in ingest.run's next deferred round); the platform's is capped lower
+                pause = wait if asked is None else store_wait(asked)
                 self.host_until[host] = max(self.host_until.get(host, 0.0), now + pause)
                 known = host in self.ever_blocked
                 self.ever_blocked.add(host)

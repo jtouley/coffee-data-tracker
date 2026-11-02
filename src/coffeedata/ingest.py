@@ -31,6 +31,8 @@ from .adapters.shopify import PageBlocked, StoreBlocked
 from .http import (
     BLOCK_STATUSES,
     CHALLENGE_STATUSES,
+    MAX_STORE_WAIT,
+    SERVER_RETRY_STATUSES,
     FetchError,
     PoliteClient,
     RequestStats,
@@ -38,6 +40,8 @@ from .http import (
     Unavailable,
     egress_ip,
     retry_after_seconds,
+    server_pause,
+    store_wait,
 )
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
@@ -51,11 +55,14 @@ DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters a
 # A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
 # don't all wake and ask at the same instant.
 DEFERRED_SPREAD = 60.0
-# A store deferred on a block (429, 430, 503) is asked again no sooner than its Retry-After or these many seconds
-# after its failure (one per deferred round), whichever is longer, plus its place in the round's spread.
+# A store deferred on a block (429, 430, 503, or a 500/502/504 with a long Retry-After) is asked again no sooner than
+# its Retry-After or these many seconds after its failure (one per deferred round), whichever is longer, plus its place
+# in the round's spread. Never later than http.MAX_STORE_WAIT (5 minutes): a store asking for longer is asked again
+# then, in the next deferred round, and never scheduled past the run's deadline.
 DEFERRED_BACKOFFS = (60.0, 120.0)
 # A store that pauses us on a catalog page (shopify.PageBlocked) is asked for that same page again after each of
-# these waits (at least its Retry-After), without holding a worker meanwhile; the pages it already served are kept.
+# these waits (at least its Retry-After, at most http.MAX_STORE_WAIT), without holding a worker meanwhile; the pages it
+# already served are kept. A backoff that would end past the run's deadline parks the store at once.
 # After the last one it is parked, with its progress, for `coffeedata crawl-retry`.
 PAGE_BACKOFFS = (60.0, 120.0, 240.0)
 
@@ -88,23 +95,42 @@ def blocked(e: BaseException) -> bool:
     )
 
 
+def server_paused(e: BaseException) -> float | None:
+    """How long a 500, 502 or 504 asked us to stay away, when it asked for longer than the client waits
+    (http.server_pause, at most MAX_STORE_WAIT), on the catalog or on robots.txt. None for any other failure."""
+    for c in _causes(e):
+        if isinstance(c, httpx.HTTPStatusError) and (wait := server_pause(c.response)) is not None:
+            return wait
+        if isinstance(c, RobotsUnavailable) and not c.challenge and c.status in SERVER_RETRY_STATUSES:
+            return c.wait or 0.0
+    return None
+
+
 def deferrable(e: BaseException) -> bool:
     """A failure worth another try once the rest of the run is done: rate limiting (429, 430, 503, on any request,
-    robots.txt included) or a timeout. Never a refusal (401, 403: shopify.StoreBlocked; an edge's challenge, which
+    robots.txt included), a 500, 502 or 504 with a long Retry-After (server_paused) or a timeout. Never a refusal (401, 403: shopify.StoreBlocked; an edge's challenge, which
     answers every retry the same way: the 15:18 resume of 2026-11-02 asked 32 challenged stores again and got 32
     challenges), and never a page block, which ingest.run backs off itself."""
     if challenged(e) or any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
         return False
-    return blocked(e) or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
+    return (
+        blocked(e)
+        or server_paused(e) is not None
+        or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
+    )
 
 
 def block_wait(e: BaseException) -> float | None:
-    """How long the store asked us to wait (its Retry-After, or the limiter's pause for it), if it said."""
+    """How long the store asked us to wait (its Retry-After, a 5xx's long one, or the limiter's pause for it), if it
+    said: at most MAX_STORE_WAIT, however long it asked for."""
     for c in _causes(e):
         if isinstance(c, HostRateLimited | RobotsUnavailable) and c.wait is not None:
-            return c.wait
+            return store_wait(c.wait)
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
-            return retry_after_seconds(c.response.headers.get("retry-after"))
+            asked = retry_after_seconds(c.response.headers.get("retry-after"))
+            return None if asked is None else store_wait(asked)
+        if isinstance(c, httpx.HTTPStatusError) and (wait := server_pause(c.response)) is not None:
+            return wait
     return None
 
 
@@ -192,17 +218,19 @@ def _attempt(
     resume: dict | None,
     known: int | None,
     guard: crashguard.Guard | None = None,
+    last: bool = False,
 ) -> Result:
     """One roaster's fetch, in a worker. Its in-flight marker (guard) is written when the worker starts it, not when
     it is queued (every roaster is queued at once), and removed when it returns: only the fetches actually running
-    when the process dies are left marked."""
+    when the process dies are left marked. last: the store's last try in this pass (PoliteClient.last_try)."""
     if guard is not None:
         guard.start(roaster.roaster_id)
     try:
-        if resume is None and known is None:
-            res = ingest_one(client, roaster)
-        else:
-            res = ingest_one(client, roaster, resume, known)
+        with client.last_try(last):
+            if resume is None and known is None:
+                res = ingest_one(client, roaster)
+            else:
+                res = ingest_one(client, roaster, resume, known)
     except Exception:  # contained by run(): the fetch returned, with an error
         if guard is not None:
             guard.end(roaster.roaster_id)
@@ -540,7 +568,8 @@ def run(
                 done = []
             p = progress.get(r.roaster_id)
             resume_at = p and {"page": p["page"], "items": p["items"]}
-            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard)
+            last = round_ == rounds - 1
+            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard, last)
             futures[fut] = r
             running.add(fut)
 
@@ -616,8 +645,11 @@ def run(
                     if res.progress is not None:  # blocked on a page: back off, then that page again
                         p = progress.setdefault(rid, {"backoffs": 0})
                         p |= {k: res.progress[k] for k in ("page", "items", "host")}
-                        if p["backoffs"] < len(PAGE_BACKOFFS):
-                            wait = max(res.progress["wait"], PAGE_BACKOFFS[p["backoffs"]])
+                        n = min(p["backoffs"], len(PAGE_BACKOFFS) - 1)
+                        wait = min(MAX_STORE_WAIT, max(res.progress["wait"] or 0.0, PAGE_BACKOFFS[n]))
+                        due = time.monotonic() + wait
+                        past_deadline = deadline is not None and due >= deadline
+                        if p["backoffs"] < len(PAGE_BACKOFFS) and not past_deadline:
                             p["backoffs"] += 1
                             page_stats["backoffs"] += 1
                             res.error = (
@@ -626,15 +658,19 @@ def run(
                             )[:300]
                             for limiter in limiters.values():  # its page backoff is its own pause
                                 limiter.quiet_hosts.add(res.progress["host"])
-                            heapq.heappush(pending, (time.monotonic() + wait, order, res.roaster))
+                            heapq.heappush(pending, (due, order, res.roaster))
                             order += 1
-                        else:
+                        else:  # backoffs spent, or the next one would end past the deadline: parked now
                             save_parked(lake, run_date, rid, p)
                             page_stats["parked"] += 1
                             never = p["page"] == 1 and not p["items"]
+                            why = f"still blocked after {len(PAGE_BACKOFFS)} backoffs"
+                            if p["backoffs"] < len(PAGE_BACKOFFS):
+                                page_stats["parked_at_deadline"] += 1
+                                why = f"blocked; its {wait:.0f}s backoff would end past the deadline"
                             res.error = (
-                                f"{'refused' if never else 'parked'}: page {p['page']} still blocked after "
-                                f"{len(PAGE_BACKOFFS)} backoffs; crawl-retry resumes it; last {res.error}"
+                                f"{'refused' if never else 'parked'}: page {p['page']} {why}; crawl-retry resumes "
+                                f"it; last {res.error}"
                             )[:300]
                             if never:
                                 page_stats["parked_never_served"] += 1
@@ -645,6 +681,20 @@ def run(
                                 limiter.quiet_hosts.discard(quiet)
                             parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
                         last = not (res.error and res.deferrable) or round_ == rounds - 1
+                        # A pause (a block, or a 5xx's long Retry-After): not asked again before its Retry-After
+                        # (at most MAX_STORE_WAIT), else a backoff. Never scheduled past the deadline: that store keeps
+                        # this error row, and the next pass (a resume, crawl-retry, the retry pass) asks again.
+                        paused = res.blocked or res.wait is not None
+                        backoff = DEFERRED_BACKOFFS[min(round_, len(DEFERRED_BACKOFFS) - 1)]
+                        due = time.monotonic() + (
+                            store_wait(max(res.wait or 0.0, backoff)) if paused else 0.0
+                        )
+                        if not last and paused and deadline is not None and due >= deadline:
+                            last = True
+                            deferred["past_deadline"] = deferred.get("past_deadline", 0) + 1
+                            res.error = f"not retried: its wait ends past the run's deadline; {res.error}"[
+                                :300
+                            ]
                         if last and rid in refusing and round_:
                             res.error = (
                                 f"refused: answered a block to every catalog request in this run "
@@ -652,9 +702,8 @@ def run(
                             )[:300]
                         if not last:
                             parked.append(res.roaster)
-                            if res.blocked:  # a pause: not before its Retry-After, else a backoff
-                                backoff = DEFERRED_BACKOFFS[min(round_, len(DEFERRED_BACKOFFS) - 1)]
-                                not_before[rid] = time.monotonic() + max(res.wait or 0.0, backoff)
+                            if paused:
+                                not_before[rid] = due
                     done.append(res)
                     if len(done) == CHUNK:
                         flush(done)

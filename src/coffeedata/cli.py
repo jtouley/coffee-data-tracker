@@ -18,6 +18,12 @@ from .ratelimit import SHOPIFY_RPS
 # fct_shot and mart_bag are personal: they go to the private lake's marts/ only, never to the public export.
 DBT_TARGET = Path("dbt/target")
 SERVED_DB = Path("build/served.duckdb")  # the served release's tables, for the public export and the site
+# The weekly fallback's crawl (both ingest passes) stops starting roasters this many minutes after the run starts, so
+# enrichment, classify (which waits up to 45 minutes for Claude's batches), the build and the export still fit in the
+# workflow's 240-minute limit (.github/workflows/weekly.yml). Roasters left unfetched wait for a re-run, which resumes.
+WEEKLY_CRAWL_MIN = 150.0
+# crawl-retry without a connector stops starting stores here, under the same 240-minute limit as the crawls.
+CRAWL_RETRY_MIN = 225.0
 MARTS = ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event", "fct_shot", "mart_bag"]
 
 
@@ -112,8 +118,17 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     lake = Lake()
     states, mode = ingest.select_states(lake, args.run_date, args.only, args.sample, args.retry_failed)
     print(f"ingesting {len(states)} roasters for run {args.run_date}", file=sys.stderr)
+    deadline_min = getattr(args, "deadline_min", None)
     _print(
-        ingest.run(lake, states, args.run_date, workers=args.workers, mode=mode, shopify_rps=args.shopify_rps)
+        ingest.run(
+            lake,
+            states,
+            args.run_date,
+            workers=args.workers,
+            mode=mode,
+            shopify_rps=args.shopify_rps,
+            **({} if deadline_min is None else {"deadline_s": 60 * deadline_min}),
+        )
     )
 
 
@@ -154,11 +169,25 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     if args.connector:  # design B: the connector's own partition, its job_manifests rows and the crash guard
         from . import connectors
 
-        _print(connectors.crawl_retry(lake, args.connector, run_date, workers=args.workers))
+        _print(
+            connectors.crawl_retry(
+                lake, args.connector, run_date, workers=args.workers, deadline_min=args.deadline_min
+            )
+        )
         return
     states, resume = ingest.select_parked(lake, run_date)
     print(f"resuming {len(states)} parked stores for run {args.run_date}", file=sys.stderr)
-    _print(ingest.run(lake, states, run_date, workers=args.workers, mode="retry_failed", resume=resume))
+    _print(
+        ingest.run(
+            lake,
+            states,
+            run_date,
+            workers=args.workers,
+            mode="retry_failed",
+            resume=resume,
+            deadline_s=60 * (args.deadline_min or CRAWL_RETRY_MIN),
+        )
+    )
 
 
 def cmd_enrich_week(args: argparse.Namespace) -> None:
@@ -414,6 +443,8 @@ def cmd_load_snowflake(args: argparse.Namespace) -> None:
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
     run = args.run_date
+    crawl_until = time.monotonic() + 60 * WEEKLY_CRAWL_MIN  # both ingest passes stop starting roasters here
+    crawl_left = lambda: max(0.0, (crawl_until - time.monotonic()) / 60)  # noqa: E731
     if date.fromisoformat(run).day <= 7 or args.discover:
         lake = Lake()
         month = run[:7]
@@ -446,12 +477,19 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             retry_failed=False,
             workers=32,
             shopify_rps=SHOPIFY_RPS,
+            deadline_min=crawl_left(),
         )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: catalogs"))
     cmd_ingest(
         argparse.Namespace(
-            run_date=run, only=None, sample=None, retry_failed=True, workers=16, shopify_rps=SHOPIFY_RPS
+            run_date=run,
+            only=None,
+            sample=None,
+            retry_failed=True,
+            workers=16,
+            shopify_rps=SHOPIFY_RPS,
+            deadline_min=crawl_left(),
         )
     )
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
@@ -609,6 +647,9 @@ def main(argv: list[str] | None = None) -> None:
     i.add_argument("--retry-failed", action="store_true", help="only roasters whose fetch failed in this run")
     i.add_argument("--workers", type=int, default=32)
     i.add_argument(
+        "--deadline-min", type=_positive_float, help="stop starting roasters after this many minutes"
+    )
+    i.add_argument(
         "--shopify-rps",
         type=_positive_float,
         default=SHOPIFY_RPS,
@@ -635,6 +676,11 @@ def main(argv: list[str] | None = None) -> None:
     rr.add_argument("--run-date", type=_run_date, default=_today())
     rr.add_argument("--workers", type=int, default=8)
     rr.add_argument("--connector", choices=sorted(CONNECTORS), help="design B: that connector's partition")
+    rr.add_argument(
+        "--deadline-min",
+        type=_positive_float,
+        help=f"stop starting stores after this many minutes (default: the connector's, else {CRAWL_RETRY_MIN:.0f})",
+    )
 
     ew = add(
         "enrich-week", cmd_enrich_week, "post-load enrichment: Claude candidates from raw, after the merge"

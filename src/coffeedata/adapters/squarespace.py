@@ -8,6 +8,7 @@ from urllib.parse import urlparse
 
 from ..http import FetchError, NotCatalog, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..ratelimit import RateLimited
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
 
@@ -97,11 +98,20 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     Returns [] only when every path is missing (404) or a real but empty collection. If no path yields a
     collection and any path was blocked or answered with a non-JSON page, we can't tell "no shop" from
     "couldn't read it", so the fetch fails instead of recording an empty catalog."""
+    sitemap_block: FetchError | None = None
     try:
         urls = sitemap_urls(client, roaster.host)
     except FetchError as e:
-        if block_status(e):  # a pause: the store is deferred (ingest.run), never read without its sitemap
-            raise
+        if block_status(e) or isinstance(
+            e, RateLimited
+        ):  # the sitemap's block, or the limiter's pause for it
+            if (
+                not client.is_last_try
+            ):  # a pause: the store is deferred (ingest.run) and its sitemap asked again
+                raise
+            # Its deferred retries are spent and the sitemap still blocks: the common shop paths, so a store whose
+            # sitemap always answers 429 or 503 still has its catalog read each week.
+            sitemap_block = e
         # the common shop paths below are tried anyway, and fail loudly if they can't be read; the sitemap's own
         # shop paths are lost for this fetch, so say why (a sitemap over sitemap.SITEMAP_MAX_BYTES, a block, a 5xx)
         log.warning("%s: sitemap unreadable, trying the common shop paths only: %s", roaster.roaster_id, e)
@@ -126,4 +136,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
             break
     if not found_collection and unreadable:
         raise FetchError(f"no readable shop collection ({len(unreadable)} non-JSON pages)")
+    if sitemap_block is not None and not seen:
+        # without the sitemap's own shop paths, no products is no answer: never recorded as an empty catalog
+        raise FetchError(f"no products on the common shop paths; {sitemap_block}") from sitemap_block
     return list(seen.values())

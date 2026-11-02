@@ -799,6 +799,14 @@ next, by itself (DESIGN.md section 7.1):
 3. **Every connector gets a third pass at 21:47** (crawl-retry for Shopify, the connector's crawl job for the
    others), and next week the roaster is fetched as usual.
 
+**A store that asks us to wait.** We never wait more than 5 minutes for anything a store asks for (DESIGN.md
+section 6, the 5-minute rule): a Retry-After of an hour, or an HTTP date days away, is waited for 300 s, and the
+store is asked again in the next deferred round, and in the next pass after that. It is never failed just for
+asking, and no store can hold a job past its window: a retry that would start after the deadline isn't scheduled
+(`detail.deferred.past_deadline`), and crawl-retry and the weekly fallback stop starting stores at 225 and 150
+minutes. If a store owner asks why we came back sooner than their Retry-After, that is the answer: they can contact
+us, and we'll wait 5 minutes.
+
 **Look at it:**
 
 ```sh
