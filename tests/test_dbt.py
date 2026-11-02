@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import shutil
 import subprocess
 from datetime import UTC, date, datetime
@@ -602,14 +603,14 @@ def test_states_are_the_fifty():
 
 
 def test_dbt_unit_tests(lake, tmp_path):
-    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule and each kind of price event. They read
+    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding. They read
     hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
     first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=8 " in r.stdout
+    assert "PASS=9 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -803,3 +804,68 @@ def test_a_remote_root_is_read_only_for_folders_it_has(lake, tmp_path):
     r = build(lake, tmp_path, check=False, lake_roots=[str(lake.root), "hf://datasets/nobody/missing"],
               remote_folders=[])  # fmt: skip
     assert r.returncode == 0, r.stdout[-3000:]
+
+
+def test_tags_are_decoded_in_the_build_and_kept_raw_in_the_lake(lake, tmp_path):
+    """Some stores' APIs escape tags (WooCommerce term names: "Parts &amp; Equipment"). The build decodes them,
+    so the classifier reads the tag the store shows; the lake keeps the raw value, and the product-version key
+    (input_hash) stays over it, so stored verdicts and enrichments still join. These escapes decide nothing
+    differently, so the Python readers of raw tags agree with the build and it passes."""
+    from coffeedata import products
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    mug = product("M", title="Logo Mug", coffee=False) | {"tags": ["Parts &amp; Equipment"]}
+    bean = product("K", title="Kenya Kamwangi AA Washed") | {"tags": ["Coffee &gt; Single Origin", "Kenya"]}
+    run(lake, "2026-10-19", rid, [mug, bean], coffees=None)
+    con = build(lake, tmp_path)
+    tags = dict(con.execute("select product_id, tags from stg_snapshots").fetchall())
+    assert tags == {"M": ["Parts & Equipment"], "K": ["Coffee > Single Origin", "Kenya"]}
+    assert con.execute("select product_id from dim_coffee").fetchall() == [("K",)]
+    assert con.execute("select tags from int_fetch_product_inputs order by product_id").fetchall() == [
+        (["Coffee > Single Origin", "Kenya"],),
+        (["Parts & Equipment"],),
+    ]
+    assert con.execute("select coffees from int_fetch_coffees").fetchall() == [(1,)]
+    assert con.execute("select count(*) from int_escaped_tag_inputs").fetchone() == (2,)
+    assert con.execute("select count(*) from int_tag_decoding_parity").fetchone() == (0,)
+    keys = dict(con.execute("select product_id, input_hash from stg_snapshots").fetchall())
+    con.close()
+    raw = duckdb.connect().execute(
+        f"select product_id, tags, {products.input_hash_sql('s')} from read_parquet('{lake.root}/snapshots/*/*.parquet') s"
+    )
+    got = {pid: (t, h) for pid, t, h in raw.fetchall()}
+    assert got == {
+        "M": (["Parts &amp; Equipment"], keys["M"]),
+        "K": (["Coffee &gt; Single Origin", "Kenya"], keys["K"]),
+    }
+
+
+def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_path):
+    """registry.py, enrich.py and verdict.py read raw tags; the build reads decoded ones. A tag whose decoding
+    flips a rule (here "Parts&nbsp;", a gear tag only once decoded) makes them disagree, and
+    python_readers_agree_on_tags fails the build, naming the product. The models themselves still build."""
+    from coffeedata import quality
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    part = product("P", title="Coffee P Roast") | {"tags": ["Parts&nbsp;"]}
+    bean = product("K", title="Kenya Kamwangi AA Washed") | {"tags": ["Coffee &gt; Single Origin"]}
+    run(lake, "2026-10-19", rid, [part, bean], coffees=None)
+    r = build(lake, tmp_path, check=False)
+    assert r.returncode != 0
+    failed = re.findall(r"in test (\w+) \(", r.stdout)
+    assert failed == ["python_readers_agree_on_tags"], r.stdout[-4000:]
+    assert "Got 1 result" in r.stdout and " ERROR=1 " in r.stdout
+    db = tmp_path / "coffee.duckdb"
+    con = duckdb.connect(str(db), read_only=True)
+    # The build decides with the decoded tag: P is a part, not a coffee; the raw tag would make it one.
+    assert con.execute("select product_id from dim_coffee").fetchall() == [("K",)]
+    assert con.execute("select coffees from int_fetch_coffees").fetchall() == [(1,)]
+    rows = con.execute("select product_id, raw_tags, tags, differs from int_tag_decoding_parity").fetchall()
+    con.close()
+    every = ["is_coffee", "excluded", "rules", "rules_with_coffee_verdict"]
+    assert rows == [("P", ["Parts&nbsp;"], ["Parts\u00a0"], every)]
+    head, example = quality.tag_parity_messages(db)
+    assert head.startswith("1 products decide differently on raw and decoded tags")
+    assert example.startswith(f"{rid}:P 'Coffee P Roast': {', '.join(sorted(every))} differ")

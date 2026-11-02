@@ -94,13 +94,36 @@ models:
       - name: product_type
         description: The store's product type.
       - name: tags
-        description: The store's tags.
+        description: The store's tags, HTML entities decoded (decode_html_entities; the lake keeps the raw value).
       - name: body_hash
         description: The description's hash (raw bodies).
       - name: grams
         description: Each variant's bag size in grams, where known.
       - name: body_text
         description: The description as text.
+  - name: int_escaped_tag_inputs
+    description: >-
+      Every product version in the lake whose tags decoding changes, one row per roaster, product and version, with
+      the raw tags (what registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+    columns:
+      - name: input_hash
+        description: The product-version key, over the raw tags (as stg_snapshots.input_hash).
+        data_tests: [not_null]
+      - name: raw_tags
+        description: The tags as the lake has them.
+      - name: tags
+        description: The same tags decoded (decode_html_entities_list).
+  - name: int_tag_decoding_parity
+    description: >-
+      The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
+      the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
+      fails the build on any row, and `coffeedata build` prints them.
+    columns:
+      - name: differs
+        description: >-
+          The outputs that differ: is_coffee (classify.is_coffee: registry.py's coffee count), excluded
+          (classify.excluded: whether a stored verdict applies), rules and rules_with_coffee_verdict
+          (products.rules with no verdict and with a "coffee" one: enrich.py's candidates and their bases).
   - name: int_fetch_coffees
     description: >-
       Coffees per ok fetch without a recorded count, counted as the crawl counted them before ELT:

@@ -247,3 +247,36 @@ unit_tests:
       rows:
         - {roaster_id: pill.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, quarantined: true}
         - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, quarantined: false}
+
+  - name: snapshot_tags_are_decoded
+    description: >-
+      stg_snapshots decodes HTML entities in tags (decode_html_entities), as the real lake has them: WooCommerce's
+      escaped term names ("Parts &amp; Equipment", "Coffee &gt; Single Origin"), a tag escaped twice
+      (decode_html_entities runs exactly three rounds, so up to three levels of escaping are undone), and a number.
+      A bare '&' and an unknown name stay as they are, and null and empty lists stay so. input_hash stays over the
+      raw tags, so stored verdicts and enrichments still join (the hashes are md5 over the raw values).
+    model: stg_snapshots
+    overrides:
+      macros:
+        # The lake's snapshots: the model reads them with lake('snapshots'), the only lake table it reads.
+        lake: >-
+          (select * from (values
+              ('P', ['Parts &amp; Equipment', 'Coffee &gt; Single Origin']),
+              ('Q', ['Education &amp;amp; Display', 'Light &#8211; Medium', 'R&D', null]),
+              ('R', null),
+              ('S', []::varchar[])
+          ) t(product_id, tags)
+          cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
+              timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
+              'Kenya AA' as title, '' as product_type, 'b' as body_hash,
+              [{'variant_id': 'v', 'grams': 340}] as variants))
+    given:
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
+    expect:
+      rows:
+        - {coffee_id: "r.com:P", tags: "['Parts & Equipment', 'Coffee > Single Origin']", input_hash: 06662042c205f4a3c208c887873c8b34}
+        - {coffee_id: "r.com:Q", tags: "['Education & Display', 'Light – Medium', 'R&D', NULL]", input_hash: 5eea2c56221c71c2e5b3c3bed77c478a}
+        - {coffee_id: "r.com:R", tags: null, input_hash: 6917f7444f9e455268154e8ddbf2d243}
+        - {coffee_id: "r.com:S", tags: "[]", input_hash: 7fb87725be5e4f4ffd6c4f555de8ec36}
