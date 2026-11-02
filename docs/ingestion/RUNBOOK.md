@@ -400,6 +400,10 @@ scheduled job.
 - **Run the old weekly pipeline from Actions** (kept for one week):
   `gh workflow run weekly`. To restore its Monday schedule, revert the cutover PR.
 - **Serve the previous release** if a bad one went out: `gh workflow run weekly -f rollback_to=previous`.
+- **Don't re-release an earlier week with `coffeedata build --run-date <older run>`.** Once a newer run is in the
+  lake, `public_coffee_is_fresh` fails such a build (the public catalog's newest `last_seen` is the newer run), so
+  resuming last week after this Monday's crawl has written fetches fails too. Roll back to the previous release
+  instead (`coffeedata rollback`, or `rollback_to` above), or build the latest week.
 - **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
 - **Shopify only, back to default egress:** run `crawl-shopify-default-egress` instead of `crawl-shopify`. To make it

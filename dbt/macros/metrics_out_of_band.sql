@@ -5,7 +5,7 @@
     tests/build_metrics_in_band.sql. -#}
 {% macro metrics_out_of_band(banded) -%}
 {%- set volume = ['listed_coffees', 'in_stock_coffees', 'roasters_with_coffee'] %}
-{% if var('as_of_run') %}
+{%- if var('as_of_run') %}
 with this_run as (select cast('{{ var("as_of_run") }}' as date) as run_date),
 passing as (
     select b.build_id, b.run_date, b.built_at
