@@ -252,7 +252,7 @@ unit_tests:
     description: >-
       stg_snapshots decodes HTML entities in tags (decode_html_entities), as the real lake has them: WooCommerce's
       escaped term names ("Parts &amp; Equipment", "Coffee &gt; Single Origin"), a tag escaped twice
-      (decoded until it stops changing, as titles are), and a number.
+      (decode_html_entities runs exactly three rounds, so up to three levels of escaping are undone), and a number.
       A bare '&' and an unknown name stay as they are, and null and empty lists stay so. input_hash stays over the
       raw tags, so stored verdicts and enrichments still join (the hashes are md5 over the raw values).
     model: stg_snapshots

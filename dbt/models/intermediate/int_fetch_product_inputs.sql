@@ -8,10 +8,11 @@ with fetches as (
 b as (select body_hash, any_value(body_text) as body_text from {{ lake('bodies') }} group by body_hash)
 select distinct on (s.roaster_id, s.batch_id, s.product_id)
     s.roaster_id, s.batch_id, s.product_id, {{ product_input_hash('s') }} as input_hash,
-    s.title, s.product_type, {{ decode_html_entities_list('s.tags') }} as tags, s.body_hash,
+    s.title, s.product_type, {{ decode_tags_with('s.tags', 'html.tag_map') }} as tags, s.body_hash,
     list_transform(s.variants, lambda v: v.grams) as grams, b.body_text
 from {{ lake('snapshots') }} s
 join fetches f on s.roaster_id = f.roaster_id and s.batch_id = f.batch_id
 left join b using (body_hash)
+cross join {{ html_tag_decodings(lake('snapshots')) }} html
 -- a batch holds one row per product; the order only makes a repeat (none in the lake so far) pick the same row
 order by s.roaster_id, s.batch_id, s.product_id, s.fetched_at desc

@@ -7,7 +7,17 @@
     (&#x2013;) numbers with its replacements (0, a surrogate or past U+10FFFF: U+FFFD; 0x80-0x9F: windows-1252,
     so &#150; is an en dash; other control and non-characters: dropped), and the named ones in html_entity_names().
     Unlike html.unescape, an unknown name and a reference without its ';' ("R&D", "&amp") are left as they are.
-    tests/test_html_entities.py checks a round against html.unescape. -#}
+    tests/test_html_entities.py checks a round against html.unescape.
+
+    Names are looked up case-sensitively, as HTML defines them: case changes the character (&Ecirc; is Ê, &ecirc;
+    is ê, &Gt; is ≫), so lowercasing a name would decode some wrongly. The uppercase spellings HTML accepts for the
+    same character (&AMP;, &LT;, &GT;, &QUOT;, &COPY;, &REG;, &TRADE;) are in the map as names of their own.
+
+    A tag with no '&' has nothing to decode and is kept as it is. For a whole table (stg_snapshots,
+    int_fetch_product_inputs), html_tag_decodings decodes each distinct tag that has one once, and
+    decode_tags_with looks tags up in the result, so the build pays for the few escaped tags, not for every row:
+    decoding row by row, even skipping tags with no '&', took about 1s more per table on the lake of 2026-11-02
+    (274k snapshot rows, 2.5k distinct escaped tags). -#}
 
 {% macro html_entity_names() -%}
 map {
@@ -26,7 +36,12 @@ map {
     'icirc': chr(238), 'iuml': chr(239), 'ntilde': chr(241), 'Ntilde': chr(209), 'oacute': chr(243),
     'Oacute': chr(211), 'ograve': chr(242), 'ocirc': chr(244), 'otilde': chr(245), 'ouml': chr(246),
     'Ouml': chr(214), 'oslash': chr(248), 'uacute': chr(250), 'Uacute': chr(218), 'ugrave': chr(249),
-    'ucirc': chr(251), 'uuml': chr(252), 'Uuml': chr(220), 'yacute': chr(253), 'szlig': chr(223)
+    'ucirc': chr(251), 'uuml': chr(252), 'Uuml': chr(220), 'yacute': chr(253), 'szlig': chr(223),
+    'Acirc': chr(194), 'Atilde': chr(195), 'Aring': chr(197), 'AElig': chr(198), 'Ecirc': chr(202),
+    'Euml': chr(203), 'Igrave': chr(204), 'Icirc': chr(206), 'Iuml': chr(207), 'Ograve': chr(210),
+    'Ocirc': chr(212), 'Otilde': chr(213), 'Oslash': chr(216), 'Ugrave': chr(217), 'Ucirc': chr(219),
+    'Yacute': chr(221), 'Lt': chr(8810), 'Gt': chr(8811),
+    'AMP': '&', 'LT': '<', 'GT': '>', 'QUOT': '"', 'COPY': chr(169), 'REG': chr(174), 'TRADE': chr(8482)
 }
 {%- endmacro %}
 
@@ -43,7 +58,6 @@ array_to_string(list_transform(
                 if(length(d) > 7, 1114112, if(d = '', 0,
                    if(lower(tok[3]) = 'x', ('0x' || d)::bigint, d::bigint))))[1]], lambda cp: case
             when cp = 0 or cp between 55296 and 57343 or cp > 1114111 then chr(65533)
-            when cp = 13 then chr(13)
             when cp between 128 and 159 then chr([8364, 129, 8218, 402, 8222, 8230, 8224, 8225, 710, 8240, 352, 8249,
                 338, 141, 381, 143, 144, 8216, 8217, 8220, 8221, 8226, 8211, 8212, 732, 8482, 353, 8250, 339, 157,
                 382, 376][cp - 127])
@@ -53,6 +67,8 @@ array_to_string(list_transform(
     end), '')
 {%- endmacro %}
 
+{#- Exactly `passes` rounds (a text escaped more times than that keeps the rest: with 3, '&amp;amp;amp;amp;' gives
+    '&amp;'). -#}
 {% macro decode_html_entities(text, passes=3) -%}
 {%- if passes > 0 -%}
 {{ decode_html_entities(decode_html_entities_once(text), passes - 1) }}
@@ -61,7 +77,23 @@ array_to_string(list_transform(
 {%- endif -%}
 {%- endmacro %}
 
-{#- Each element of a VARCHAR[] (null stays null). -#}
+{#- Each element of a VARCHAR[] (null stays null). An element with no '&' is kept as it is, without decoding. -#}
 {% macro decode_html_entities_list(items, passes=3) -%}
-list_transform({{ items }}, lambda html_item: {{ decode_html_entities('html_item', passes) }})
+list_transform({{ items }}, lambda html_item: if(contains(html_item, '&'),
+    {{ decode_html_entities('html_item', passes) }}, html_item))
+{%- endmacro %}
+
+
+{#- A one-row relation with tag_map: every distinct tag of `items` (a VARCHAR[] column of `relation`) that holds a
+    '&', mapped to its decoded form (null when no tag has one). Cross join it and decode with decode_tags_with. -#}
+{% macro html_tag_decodings(relation, items='tags') -%}
+(select map_from_entries(list({'k': html_tag, 'v': {{ decode_html_entities('html_tag') }}})) as tag_map
+ from (select distinct unnest({{ items }}) as html_tag from {{ relation }})
+ where contains(html_tag, '&'))
+{%- endmacro %}
+
+{#- Each element of a VARCHAR[] through a tag_map from html_tag_decodings: the same result as
+    decode_html_entities_list, for tags the map was built from (null stays null). -#}
+{% macro decode_tags_with(items, tag_map) -%}
+list_transform({{ items }}, lambda html_item: coalesce({{ tag_map }}[html_item], html_item))
 {%- endmacro %}

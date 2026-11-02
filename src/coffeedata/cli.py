@@ -342,6 +342,13 @@ def cmd_build(args: argparse.Namespace) -> bool:
         claim_lines = []
     for line in claim_lines:
         print(f"coverage claim: {line}", file=sys.stderr)
+    try:  # the python_readers_agree_on_tags test fails the build on these; this shows which products
+        parity_lines = quality.tag_parity_messages(db)
+    except Exception as e:
+        logging.warning("tag parity not reported: %s", e)
+        parity_lines = []
+    for line in parity_lines:
+        print(f"tag parity: {line}", file=sys.stderr)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
         lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
