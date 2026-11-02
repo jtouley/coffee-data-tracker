@@ -2,6 +2,7 @@
 
 [![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Data license: CDLA-Permissive-2.0](https://img.shields.io/badge/Data-CDLA--Permissive--2.0-blue.svg)](LICENSE-DATA)
 
 A weekly catalog of what US specialty roasters sell online, and a phone app that links each espresso shot to a
 coffee in it.
@@ -509,6 +510,11 @@ with dbt and DuckDB, and logs shots from a phone app, Claude (MCP) and issue for
 
 ## License
 
-The code is released under the [MIT License](LICENSE). Roaster data comes from Overture Maps Places
-(CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap contributors); product names, descriptions and
-images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+The code is released under the [MIT License](LICENSE). The public dataset (the public tables, their exports, the
+site's catalog JSON and the marketplace shares) is released under the
+[Community Data License Agreement – Permissive 2.0](LICENSE-DATA) (CDLA-Permissive-2.0).
+
+Roaster discovery uses Overture Maps Places (© Overture Maps Foundation, CDLA-Permissive-2.0) and OpenStreetMap
+(ODbL, © OpenStreetMap contributors); roasters known only from OpenStreetMap are left out of the public tables.
+Product names, descriptions and images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+To cite the dataset, use [`CITATION.cff`](CITATION.cff).

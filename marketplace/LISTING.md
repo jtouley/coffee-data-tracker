@@ -60,5 +60,6 @@ where origin_country = 'Ethiopia' and process = 'natural' and first_seen >= date
 - No descriptions or images.
 
 **Pricing:** free.
-**License:** CDLA-Permissive-2.0 (see the dataset card for attribution).
+**License:** CDLA-Permissive-2.0 (the data; full text: https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA, attribution:
+https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md). The code is MIT.
 **Support contact:** _your email_.

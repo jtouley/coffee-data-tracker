@@ -42,6 +42,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Deployment.** The app on Cloud Run with Terraform, JSON logs and alerts (#24), an uptime check (#32), and
   hardening of the single instance against request bursts (#34).
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
+- **Data licence and citation.** The public dataset is CDLA-Permissive-2.0 (`LICENSE-DATA`); the code stays MIT.
+  `CITATION.cff`, and public contract 2.2.2 (documentation only): licence, servers, team, tags and units, with
+  the product's input ports.
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
 

@@ -85,8 +85,8 @@ Both results are in the build's record (`builds/`, like every other check) and i
 
 ## Before going public
 
-- License: the dataset card proposes CDLA-Permissive-2.0, matching Overture. Change it if you prefer
-  CC BY 4.0.
+- License: the public data is CDLA-Permissive-2.0 ([`LICENSE-DATA`](../LICENSE-DATA)), matching Overture; the
+  code is MIT. Use the same licence in every listing.
 - Terms of service: some roasters' terms restrict automated collection or commercial reuse. A free
   listing of facts with links back and an opt-out is the safer option. Get legal advice before charging.
 - Support contact: put a support email in `LISTING.md`.
