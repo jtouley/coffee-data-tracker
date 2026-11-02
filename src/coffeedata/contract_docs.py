@@ -1,5 +1,5 @@
 """What each internal contract's tables and columns mean, and the quality rules on them (raw_contracts.py puts
-them into the generated contract files). tests/test_raw_contracts.py fails when a contracted column has no
+them into the generated ODCS contracts in contracts/internal/). tests/test_raw_contracts.py fails when a contracted column has no
 description here, or a description names a column the lake doesn't have."""
 
 from __future__ import annotations
@@ -117,29 +117,66 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
 }
 
-# Quality rules on each contract's tables, and what enforces each one.
-QUALITY: dict[str, list[dict[str, str]]] = {
+# Columns the contract requires to be non-null although the Arrow schema allows null (every lake column is
+# nullable, so older files read back): each is held by a quality rule below.
+REQUIRED: dict[str, list[str]] = {"fetches": ["run_date", "batch_id", "roaster_id"]}
+
+_SCHEMA_YML = "models/schema.yml"
+
+# Quality rules on each contract's tables, and what enforces each one. engine dbt names a file under dbt/ (a
+# singular test) or a schema.yml test on model columns; engine pytest names a test; no engine means the writers
+# hold the rule and it is stated as text. raw_contracts.py emits each as an ODCS quality rule on its tables.
+QUALITY: dict[str, list[dict]] = {
     "raw": [
-        {"rule": "fetches.status is one of the contract's values", "enforced_by": "dbt stg_fetches accepted_values"},
-        {"rule": "fetches.roaster_id, run_date and batch_id are not null", "enforced_by": "dbt stg_fetches not_null"},
-        {"rule": "a writer writes exactly the contract's columns",
+        {"id": "fetch_status_values", "tables": ["fetches"], "dimension": "conformity", "severity": "error",
+         "rule": "fetches.status is one of the contract's values",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "stg_fetches", "columns": ["status"],
+                                              "test": "accepted_values"},
+         "enforced_by": "dbt stg_fetches accepted_values"},
+        {"id": "fetch_keys_not_null", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
+         "rule": "fetches.roaster_id, run_date and batch_id are not null",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "stg_fetches",
+                                              "columns": ["run_date", "batch_id", "roaster_id"], "test": "not_null"},
+         "enforced_by": "dbt stg_fetches not_null"},
+        {"id": "writer_columns", "tables": ["snapshots", "bodies", "fetches"], "dimension": "conformity",
+         "severity": "error", "rule": "a writer writes exactly the contract's columns",
+         "engine": "pytest", "implementation": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract",
          "enforced_by": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract"},
-        {"rule": "every expected roaster of a full run has a fetch", "enforced_by": "dbt run_is_complete"},
-        {"rule": "the run's ok share, overall and per adapter, is above its floor (unavailable stores left out)",
-         "enforced_by": "dbt run_ok_rate, adapter_ok_rate"},
-        {"rule": "a roaster's product count doesn't collapse against its baseline unless accepted",
+        {"id": "run_is_complete", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
+         "rule": "every expected roaster of a full run has a fetch",
+         "engine": "dbt", "implementation": "tests/run_is_complete.sql", "enforced_by": "dbt run_is_complete"},
+        {"id": "run_ok_rate", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
+         "rule": "the run's overall ok share is above its floor (unavailable stores left out)",
+         "engine": "dbt", "implementation": "tests/run_ok_rate.sql", "enforced_by": "dbt run_ok_rate"},
+        {"id": "adapter_ok_rate", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
+         "rule": "each adapter's ok share is above its floor (unavailable stores left out)",
+         "engine": "dbt", "implementation": "tests/adapter_ok_rate.sql", "enforced_by": "dbt adapter_ok_rate"},
+        {"id": "suspect_runs_need_review", "tables": ["fetches"], "dimension": "consistency", "severity": "warning",
+         "rule": "a roaster's product count doesn't collapse against its baseline unless accepted",
+         "engine": "dbt", "implementation": "tests/suspect_runs_need_review.sql",
          "enforced_by": "dbt suspect_runs_need_review (warn)"},
     ],
     "manifest": [
-        {"rule": "a job writes a running row at its start and one end row (done, deadline or failed)",
+        {"id": "job_start_and_end_rows", "tables": ["job_manifests"], "dimension": "completeness",
+         "severity": "error",
+         "rule": "a job writes a running row at its start and one end row (done, deadline or failed)",
+         "engine": "pytest",
+         "implementation": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract",
          "enforced_by": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract"},
-        {"rule": "run_manifests.mode is full, sample, only, retry_failed or null",
+        {"id": "run_manifest_mode_values", "tables": ["run_manifests"], "dimension": "conformity",
+         "severity": "error", "rule": "run_manifests.mode is full, sample, only, retry_failed or null",
          "enforced_by": "the writers (ingest.select_states, connectors.crawl, crawl-retry)"},
     ],
     "enrichment": [
-        {"rule": "rows have exactly the contract's columns",
+        {"id": "writer_columns", "tables": ["enrichments"], "dimension": "conformity", "severity": "error",
+         "rule": "rows have exactly the contract's columns",
+         "engine": "pytest",
+         "implementation": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract",
          "enforced_by": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract"},
-        {"rule": "process and roast_level take the dbt-accepted values",
+        {"id": "accepted_attribute_values", "tables": ["enrichments"], "dimension": "conformity",
+         "severity": "error", "rule": "process and roast_level take the dbt-accepted values",
+         "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "dim_coffee",
+                                              "columns": ["process", "roast_level"], "test": "accepted_values"},
          "enforced_by": "dbt dim_coffee accepted_values"},
     ],
 }  # fmt: skip

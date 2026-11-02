@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.2.0
+version: 2.2.1
 status: active
 domain: coffee
 description:
@@ -20,7 +20,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.2.0
+    version: 2.2.1
     contractId: coffee-data-public-catalog
 customProperties:
   - property: glossary
@@ -60,6 +60,17 @@ customProperties:
           v3.1.0. This product's output port (contractId coffee-data-public-catalog, version 2.2.0) is now the only
           link between product and contract. Contract version stays 2.2.0: no table, column, type, enum or rule
           that a consumer reads changed.
+      - topic: public-catalog contract's AI context
+        decided: "2026-11-02"
+        outcome: >-
+          Added ODCS context for AI agents to contracts/public-catalog.odcs.yaml (public-catalog contract 2.2.1, a
+          patch: documentation only and additive). Contract-level and per-table instructions, constraints (not live,
+          facts only, no quality verdicts, no purchasing, no opted-out roasters), canonical questions without
+          answers, and synonyms on public_coffee, public_roaster and four columns; an authoritative definition for
+          data attribution (docs/ATTRIBUTION.md). Also corrected descriptions: min_price_usd may be a sold-out bag,
+          public_roaster holds only published roasters (not the whole registry), and public_price_event.roaster_id
+          names public_roaster.roaster_id. No table, column, type, enum or rule changed. The data license is still
+          the owner's decision (CDLA-Permissive-2.0 proposed); the code is MIT.
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues

@@ -426,7 +426,13 @@ output port, and [`contracts/public-catalog.odcs.yaml`](contracts/public-catalog
 the four tables: columns and types, keys, required columns, allowed values, quality rules and SLAs (weekly, at most
 8 days old, a 4-week rollback window). The contract is the definition and dbt enforces it: `tests/test_contracts.py`
 validates both files against Bitol's JSON schemas and fails if dbt's enforced contracts, tests or thresholds
-disagree with the contract. So a change to a public table starts in the contract.
+disagree with the contract. So a change to a public table starts in the contract. The contract also carries
+context for AI agents (instructions, constraints, canonical questions and synonyms), so an assistant reading the
+tables knows they are weekly, not live, and what not to claim.
+
+The pipeline's internal contracts (raw, manifest and enrichment) are ODCS too, in
+[`contracts/internal/`](contracts/internal/), generated from `lake.SCHEMAS` by `make contracts`. They are not
+published; `tests/test_raw_contracts.py` fails when they drift from the code.
 
 ### Scraping etiquette
 

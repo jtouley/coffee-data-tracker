@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.2.0
+version: 2.2.1
 status: active
 domain: coffee
 description:
@@ -13,12 +13,59 @@ description:
   usage: Analysis of the specialty coffee market. Every coffee links back to its roaster.
   limitations: Weekly snapshots. Attributes come from rules and an LLM over roasters' own text. catalog_status 'archived'
     relies on roasters' tags; untagged back catalog shows as sold_out.
+context:
+  instructions: >-
+    Weekly facts about the public catalogs of US specialty coffee roasters in this project's registry, not every US
+    roaster. Every row is as of one weekly run (release_run_date), which was at most max_run_age_days (8) days old
+    when its release was built; it is never live, and if a later release fails its checks the previous one stays
+    served, so always say which release_run_date a row is as of. Prices are USD as listed on the roaster's own store.
+    Origin, process, varietals, roast level and tasting notes come from rules or an LLM reading the roaster's own
+    text (attributes_source), so they can be wrong or missing; a null means not stated, never "none" (is_blend and
+    is_decaf read false, and flavor_categories empty, when the text doesn't say). When recommending a coffee, give
+    its source_url so the user can check the roaster's own page. public_coffee and public_price_event join to
+    public_roaster on roaster_id; public_price_event joins to public_coffee on coffee_id. Data license and
+    attribution: see docs/ATTRIBUTION.md and the dataset card; the code is MIT.
+  constraints:
+  - id: not-live
+    constraint: Do not present any row as current stock or price; say which release_run_date it is as of.
+  - id: facts-only
+    constraint: Do not reproduce or reconstruct roasters' product descriptions, images or store handles, and do not
+      look for personal data.
+  - id: no-quality-verdicts
+    constraint: Do not rank or judge roasters or coffees as best or worst; the data holds catalog facts, not quality.
+  - id: no-purchasing
+    constraint: Do not claim to buy, order or reserve coffee; point to the coffee's source_url on the roaster's store.
+  - id: no-opted-out-roasters
+    constraint: Never mention roasters with status opted_out, or their coffees, or count them, even in questions
+      about the registry.
+  verifiedStatements:
+  - id: new-this-week
+    question: What coffees appeared this week?
 schema:
 - name: public_coffee
   physicalName: public_coffee
   physicalType: table
   description: One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived
     coffees stay, marked by catalog_status.
+  synonyms:
+  - synonym: beans
+  - synonym: coffees
+  - synonym: listings
+  context:
+    instructions: >-
+      One row per coffee ever seen, including sold out, archived and delisted ones. For coffees someone can buy
+      now, filter catalog_status IN ('available', 'preorder') AND is_wholesale = false; wholesale listings are also
+      left out of market counts and new arrivals. Match broad flavours (e.g. fruity) on flavor_categories; use
+      tasting_notes only for the roaster's exact words. For price questions give both, labelled: price_per_100g
+      (the cheapest available retail bag of 150 g to 2.5 kg, per 100 g) to compare coffees, and min_price_usd for
+      the cheapest listed bag (any size, possibly sold out).
+    verifiedStatements:
+    - id: washed-ethiopian-now
+      question: Which washed Ethiopian coffees can I buy right now?
+    - id: fruity-light-under-20
+      question: Show me fruity light roasts under $20 a bag.
+    - id: single-origin-decaf
+      question: Which roasters sell a single-origin decaf?
   properties:
   - name: coffee_id
     logicalType: string
@@ -104,6 +151,8 @@ schema:
     logicalType: string
     physicalType: varchar
     description: washed, natural, honey, anaerobic or other.
+    synonyms:
+    - synonym: processing method
   - name: varietals
     logicalType: array
     physicalType: varchar[]
@@ -122,6 +171,8 @@ schema:
     logicalType: string
     physicalType: varchar
     description: light, medium or dark.
+    synonyms:
+    - synonym: roast
   - name: tasting_notes
     logicalType: array
     physicalType: varchar[]
@@ -145,11 +196,16 @@ schema:
   - name: min_price_usd
     logicalType: number
     physicalType: double
-    description: Cheapest listed bag, USD.
+    description: Cheapest listed bag of any size, USD; the bag may be sold out.
+    synonyms:
+    - synonym: bag price
+    - synonym: cheapest bag
   - name: price_per_100g
     logicalType: number
     physicalType: double
     description: Cheapest available retail bag (150 g to 2.5 kg) per 100 g, USD.
+    synonyms:
+    - synonym: unit price
   - name: bag_sizes_g
     logicalType: array
     physicalType: integer[]
@@ -230,7 +286,22 @@ schema:
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
-  description: One row per roaster in the registry.
+  description: >-
+    One row per published roaster from the registry: not opted out, with at least one coffee, and known from a source
+    that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone).
+  synonyms:
+  - synonym: roasteries
+  - synonym: coffee roasters
+  context:
+    instructions: >-
+      One row per published roaster in the registry (opted-out roasters are never in it). Treat only status =
+      'active' as current roasters; mention other statuses only if asked, and never opted_out. state is a US state
+      code.
+    verifiedStatements:
+    - id: colorado-in-stock
+      question: Which roasters in Colorado have coffee in stock?
+    - id: roaster-current-catalog
+      question: What does a given roaster currently sell?
   properties:
   - name: roaster_id
     logicalType: string
@@ -311,7 +382,7 @@ schema:
   - name: roaster_id
     logicalType: string
     physicalType: varchar
-    description: The roaster.
+    description: The roaster (public_roaster.roaster_id).
     required: true
   - name: variant_id
     logicalType: string
@@ -444,6 +515,11 @@ customProperties:
   value: 8
 - property: servingPolicy
   value: A release is served only when every quality rule passes; otherwise the previous release stays served.
+authoritativeDefinitions:
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+  type: attribution
+  description: Data attribution (Overture Maps, OpenStreetMap, roasters' storefronts). The data license is not yet
+    decided; the code is MIT.
 support:
 - channel: issues
   url: https://github.com/jtouley/coffee-data-tracker/issues
