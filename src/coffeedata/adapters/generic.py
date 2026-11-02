@@ -116,9 +116,26 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     )
 
 
+# The most failed product page URLs a partial fetch's reason names; it always counts them all.
+MAX_FAILED_URLS_NAMED = 5
+
+
+def _partial_reason(failed: list[str], unread: list[str]) -> str:
+    parts = []
+    if failed:
+        named = "; ".join(failed[:MAX_FAILED_URLS_NAMED])
+        more = (
+            f"; and {len(failed) - MAX_FAILED_URLS_NAMED} more" if len(failed) > MAX_FAILED_URLS_NAMED else ""
+        )
+        parts.append(f"{len(failed)} product pages failed: {named}{more}")
+    if unread:
+        parts.append(f"{len(unread)} sub-sitemaps unread: {'; '.join(unread)}")
+    return "; ".join(parts)
+
+
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
-    failed = 0
+    failed: list[str] = []  # product pages that couldn't be read: "url (why)"
     # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
     # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog. A sub-sitemap it couldn't read
     # (`unread`) leaves the list incomplete: the products read are stored as partial, never as the whole catalog.
@@ -130,13 +147,17 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         try:
             r = client.get(url)
         except DeadlineReached as e:
-            if failed:  # pages already lost: an error, as below, not a partial catalog that hides them
-                raise FetchError(f"{failed} of {n} product pages failed before the deadline") from e
-            raise PartialCatalog(f"{e} ({n} of {len(urls)} product pages read)", list(items.values())) from e
+            why = "; ".join(filter(None, [str(e), _partial_reason(failed, unread)]))
+            raise PartialCatalog(
+                f"{why} ({n} of {len(urls)} product pages read)", list(items.values())
+            ) from e
         except (Blocked, httpx.HTTPError) as e:
             if status := block_status(e):  # a pause: stop asking now, and the store is deferred (ingest.run)
                 raise FetchError(f"HTTP {status} {url}", status=status) from e
-            failed += 1
+            why = (
+                f"HTTP {e.response.status_code}" if isinstance(e, httpx.HTTPStatusError) else type(e).__name__
+            )
+            failed.append(f"{url} ({why})")
             continue
         if err := challenge_error(r, url):
             # an edge's challenge (a 202, or a challenge header): a refusal, like a block, never a failed page
@@ -144,17 +165,16 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         if r.status_code in (404, 410):
             continue  # a sitemap entry for a product that's gone: it's delisted, not unreadable
         if r.status_code != 200:
-            failed += 1
+            failed.append(f"{url} (HTTP {r.status_code})")
             continue
         for p in jsonld_products(r.text)[:1]:  # the page's own product; later blocks are related products
             item = parse_jsonld(p, url, roaster)
             items.setdefault(item.product_id, item)
-    if failed:
-        # Any unreadable product page makes this a partial catalog, and the missing products would look
-        # delisted. Fail the fetch; it is retried and never stored as a successful catalog.
-        raise FetchError(f"{failed} of {len(urls)} product pages failed")
-    if unread:
-        msg = f"{len(unread)} sub-sitemaps unread: {'; '.join(unread)}"
+    if failed or unread:
+        # A product page or a sub-sitemap that couldn't be read: the products on it would look delisted, so the
+        # products read are stored as partial (kept listed, never delisted), and the rest of the catalog isn't lost.
+        # Nothing read at all is the fetch's error, never an empty catalog.
+        msg = _partial_reason(failed, unread)
         if not items:
             raise FetchError(msg)
         raise PartialCatalog(msg, list(items.values()))

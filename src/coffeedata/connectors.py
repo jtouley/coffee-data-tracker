@@ -363,11 +363,15 @@ def crawl_retry(
         raise
     ok, errors = _ok_errors(out)
     control.finish(
-        lake, job, "deadline" if out.get("skipped_deadline") else "done", ok=ok, errors=errors,
-        parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
+        # deadline, as crawl's: roasters left unstarted, or catalogs it stopped mid-way again (partial)
+        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done", ok=ok,
+        errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
         http_429=out.get("http_429"), http_430=out.get("http_430"), first_contact=out.get("first_contact"),
         skipped=out.get("skipped_deadline", 0),
         detail=started | {"by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
+                          "partial": out.get("partial", 0),
+                          # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
+                          "partial_every_week": out.get("partial_every_week") or [],
                           "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or CONNECTORS[connector].egress},
     )  # fmt: skip
     guard.close()

@@ -82,19 +82,27 @@ def _generic_site(tag_status: int, post_status: int):
     return handler
 
 
-def test_2_a_stale_404_sub_sitemap_is_skipped_and_the_catalog_is_whole():
-    with Site(_generic_site(404, 410)).client() as c:
-        items = generic.fetch(c, _r("g.com", "other"))
-    assert sorted(i.product_id for i in items) == ["0", "1", "2"]
+@pytest.mark.parametrize("status", [404, 410])
+def test_2_a_404_or_410_sub_sitemap_makes_the_catalog_partial_never_whole(status):
+    """The final review's item 1: the index still lists it, and nothing says it held no products, so the products it
+    may list are kept listed (partial), never read as delisted."""
+    with Site(_generic_site(status, 200)).client() as c, pytest.raises(PartialCatalog) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    assert sorted(i.product_id for i in e.value.items) == ["0", "1", "2"]
+    assert f"tag-sitemap.xml (HTTP {status})" in str(e.value)
+    unread: list[str] = []
+    with Site(_generic_site(status, 200)).client() as c:
+        assert len(sitemap.sitemap_urls(c, "g.com", unread)) == 3
+    assert unread == [f"https://g.com/tag-sitemap.xml (HTTP {status})"]
 
 
 def test_2_an_unreadable_sub_sitemap_makes_the_catalog_partial_not_failed():
-    with Site(_generic_site(404, 500)).client() as c, pytest.raises(PartialCatalog) as e:
+    with Site(_generic_site(200, 500)).client() as c, pytest.raises(PartialCatalog) as e:
         generic.fetch(c, _r("g.com", "other"))
     assert sorted(i.product_id for i in e.value.items) == ["0", "1", "2"]
     assert "post-sitemap.xml (HTTP 500)" in str(e.value)
     unread: list[str] = []
-    with Site(_generic_site(404, 500)).client() as c:
+    with Site(_generic_site(200, 500)).client() as c:
         assert len(sitemap.sitemap_urls(c, "g.com", unread)) == 3
     assert unread == ["https://g.com/post-sitemap.xml (HTTP 500)"]
 
@@ -267,9 +275,10 @@ def test_8_eval_readme_records_the_count():
 
 
 @pytest.mark.parametrize(
-    ("status", "headers"), [(202, SG), (202, {}), (429, {}), (503, {}), (404, {}), (500, {})]
+    ("status", "headers"), [(202, SG), (202, {}), (429, {}), (503, {}), (404, SG), (500, {}), (403, {})]
 )
 def test_9_a_failed_one_by_one_lookup_never_stores_a_null_price(status, headers):
+    """A 404 is a size that no longer exists (below), unless it is a challenge: then it is a refusal, like a 202."""
     handler, _ = _woo_store(2, 3, ignore_type=True)
 
     def failing(req):
@@ -279,7 +288,7 @@ def test_9_a_failed_one_by_one_lookup_never_stores_a_null_price(status, headers)
 
     with Site(failing).client() as c, pytest.raises(FetchError) as e:
         woocommerce.fetch(c, _r("w.com", "woocommerce"))
-    if status == 202:
+    if status == 202 or headers:
         assert challenged(e.value)  # a refusal: counted, never deferred
     elif status in (429, 503):
         assert block_status(e.value) == status and ingest.deferrable(e.value)  # a pause: deferred
@@ -506,3 +515,225 @@ def test_merge_keeps_the_deadline_with_the_store_wait_cap(clock):
         with pytest.raises(http.DeadlineReached):
             view.get("https://s.com/products.json")
     assert site.requests == []
+
+
+# --- Final review, item 2: one failed product page never fails the whole generic fetch -----------------------------
+
+
+def _generic_pages(n: int, bad: dict[int, int | type[Exception]]):
+    def handler(req):
+        path = req.url.path
+        if path == "/sitemap.xml":
+            return httpx.Response(200, text=_urlset([f"https://g.com/product/c{i}" for i in range(n)]))
+        i = int(path.rsplit("c", 1)[-1])
+        if i in bad:
+            how = bad[i]
+            if isinstance(how, int):
+                return httpx.Response(how)
+            raise how("down", request=req)
+        return httpx.Response(200, text=PAGE.format(n=i))
+
+    return handler
+
+
+def test_r2_a_failed_product_page_stores_the_rest_as_partial_with_the_failures_counted():
+    """passengercoffee.com, 2026-11-02: "1 of 80" failed both attempts, and the whole catalog was lost. Now the pages
+    read are stored, partial (so the failed page's product stays listed), and the reason counts and names the
+    failures."""
+    site = Site(_generic_pages(6, {1: 500, 4: httpx.ConnectError}))
+    with site.client() as c, pytest.raises(PartialCatalog) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    assert sorted(i.product_id for i in e.value.items) == ["0", "2", "3", "5"]
+    msg = str(e.value)
+    assert msg.startswith("2 product pages failed: ")
+    assert "https://g.com/product/c1 (HTTP 500)" in msg and "https://g.com/product/c4 (ConnectError)" in msg
+
+
+def test_r2_the_reason_counts_every_failure_but_names_only_a_few():
+    bad: dict[int, int | type[Exception]] = dict.fromkeys(range(1, 9), 500)
+    with Site(_generic_pages(10, bad)).client() as c, pytest.raises(PartialCatalog) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    msg = str(e.value)
+    assert msg.startswith("8 product pages failed: ") and msg.endswith("; and 3 more")
+    assert msg.count("(HTTP 500)") == generic.MAX_FAILED_URLS_NAMED
+
+
+def test_r2_failed_pages_and_an_unread_sub_sitemap_are_both_in_the_reason():
+    handler = _generic_site(404, 200)
+
+    def with_bad_page(req):
+        return httpx.Response(500) if req.url.path == "/product/c1" else handler(req)
+
+    with Site(with_bad_page).client() as c, pytest.raises(PartialCatalog) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    assert sorted(i.product_id for i in e.value.items) == ["0", "2"]
+    assert "1 product pages failed" in str(e.value) and "1 sub-sitemaps unread" in str(e.value)
+
+
+def test_r2_every_page_failed_is_an_error_never_an_empty_catalog():
+    bad: dict[int, int | type[Exception]] = dict.fromkeys(range(3), 500)
+    with Site(_generic_pages(3, bad)).client() as c, pytest.raises(FetchError) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    assert not isinstance(e.value, PartialCatalog) and "3 product pages failed" in str(e.value)
+
+
+def test_r2_a_failed_page_then_the_deadline_is_partial_with_both_reasons(clock):
+    """It used to be an error ("pages already lost"); now the pages read are kept, partial, as at any deadline."""
+    handler = _generic_pages(5, {0: 500})
+
+    def slow(req):
+        if req.url.path == "/product/c2":
+            clock.t += 10_000  # the deadline passes while this page is read
+        return handler(req)
+
+    with Site(slow).client(deadline_s=60) as c, pytest.raises(PartialCatalog) as e:
+        generic.fetch(c, _r("g.com", "other"))
+    assert sorted(i.product_id for i in e.value.items) == ["1", "2"]
+    assert "1 product pages failed" in str(e.value) and "(3 of 5 product pages read)" in str(e.value)
+
+
+def test_r2_end_to_end_a_partial_generic_fetch_is_an_ok_row_marked_partial(lake):
+    site = Site(_generic_pages(4, {2: 500}))
+    kw = {"min_interval": 0, "retries": 1, "transport": httpx.MockTransport(site)}
+    ingest.run(lake, [_r("g.com", "other")], "2026-11-02", workers=1, client_kw=kw)
+    con = lake.connect()
+    [(status, partial, error, products)] = con.execute(
+        f"select status, partial, error, products from {lake.scan('fetches')}"
+    ).fetchall()
+    assert (status, partial, products) == ("ok", True, 3)
+    assert "1 product pages failed: https://g.com/product/c2 (HTTP 500)" in error
+
+
+# --- Final review, item 5: a 404 on one size's lookup drops that size ----------------------------------------------
+
+
+def _woo_one_gone(status: int = 404, headers: dict | None = None):
+    handler, variations = _woo_store(2, 3, ignore_type=True)
+    gone = str(variations[1]["id"])
+
+    def h(req):
+        if req.url.path.rstrip("/").endswith(f"/{gone}"):
+            return httpx.Response(status, headers=headers or {})
+        return handler(req)
+
+    return h, variations, gone
+
+
+def test_r4_a_404_on_one_sizes_lookup_drops_that_size_and_keeps_the_store():
+    """The size no longer exists: the store has no value for it, so it is left out, never stored as a null price."""
+    h, variations, gone = _woo_one_gone()
+    with Site(h).client() as c:
+        items = woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    want = {str(v["id"]): int(v["prices"]["price"]) / 100 for v in variations if str(v["id"]) != gone}
+    assert _price_map(items) == want and None not in _price_map(items).values()
+    assert len(items) == 2 and [len(i.variants) for i in sorted(items, key=lambda i: i.product_id)] == [2, 3]
+
+
+def test_r4_a_size_that_is_gone_still_counts_as_read_at_the_deadline(clock):
+    """At the deadline, a product with every size priced or known gone is read whole."""
+    h, _, gone = _woo_one_gone()
+    others = sorted(str(10_001_000 + s) for s in range(3))
+
+    def late(req):
+        if req.url.path.endswith(f"/{others[0]}"):
+            clock.t += 10_000  # the deadline passes while the second product's first size is read
+        return h(req)
+
+    with Site(late).client(deadline_s=60) as c, pytest.raises(PartialCatalog) as e:
+        woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    [item] = e.value.items
+    assert item.product_id == "10000" and gone not in {v.variant_id for v in item.variants}
+    assert len(item.variants) == 2
+
+
+@pytest.mark.parametrize(("status", "headers"), [(429, {}), (500, {}), (202, {}), (404, SG)])
+def test_r4_other_lookup_failures_still_fail_the_fetch(status, headers):
+    h, _, _ = _woo_one_gone(status, headers)
+    with Site(h).client() as c, pytest.raises(FetchError) as e:
+        woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    assert not isinstance(e.value, PartialCatalog)
+
+
+# --- Final review, item 6: a store that rejects the bulk query falls back to one request per size ------------------
+
+
+@pytest.mark.parametrize("status", [400, 403])
+def test_r5_a_rejected_bulk_query_falls_back_to_one_lookup_per_size(status):
+    handler, variations = _woo_store(30, 4)
+
+    def rejecting(req):
+        if req.url.params.get("type") == "variation":
+            return httpx.Response(status, json={"code": "rest_invalid_param"})
+        return handler(req)
+
+    site = Site(rejecting)
+    with site.client() as c:
+        items = woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    assert _price_map(items) == {str(v["id"]): int(v["prices"]["price"]) / 100 for v in variations}
+    bulk = [r for r in site.requests if r.url.params.get("type") == "variation"]
+    lookups = [r for r in site.requests if r.url.path.rstrip("/").split("/")[-1].isdigit()]
+    assert len(bulk) == 1  # rejected once: never asked in bulk again for this store
+    assert len(lookups) == 120  # one per size, through the same spaced client
+
+
+def test_r5_bulk_prices_read_before_a_rejection_are_kept():
+    handler, variations = _woo_store(30, 4)  # 120 sizes: two bulk batches
+
+    def second_rejected(req):
+        if req.url.params.get("type") == "variation" and "10029" in req.url.params["parent"].split(","):
+            return httpx.Response(400)
+        return handler(req)
+
+    site = Site(second_rejected)
+    with site.client() as c:
+        items = woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    assert _price_map(items) == {str(v["id"]): int(v["prices"]["price"]) / 100 for v in variations}
+    lookups = [r for r in site.requests if r.url.path.rstrip("/").split("/")[-1].isdigit()]
+    assert 0 < len(lookups) < 120  # only the second batch's sizes, one by one
+
+
+@pytest.mark.parametrize(
+    ("status", "headers"), [(403, SG), (403, {"cf-mitigated": "challenge"}), (429, {}), (500, {})]
+)
+def test_r5_a_challenged_or_paused_bulk_query_still_fails_the_fetch(status, headers):
+    handler, _ = _woo_store(2, 3)
+
+    def refusing(req):
+        if req.url.params.get("type") == "variation":
+            return httpx.Response(status, headers=headers)
+        return handler(req)
+
+    site = Site(refusing)
+    with site.client() as c, pytest.raises(FetchError):
+        woocommerce.fetch(c, _r("w.com", "woocommerce"))
+    assert not any(r.url.path.rstrip("/").split("/")[-1].isdigit() for r in site.requests)  # no fallback
+
+
+# --- Final review, item 9: crawl-retry's end row carries partial, as crawl's -----------------------------------------
+
+
+def test_r9_crawl_retry_end_row_counts_a_store_that_stopped_partial_again(tmp_path, monkeypatch):
+    from coffeedata import connectors, control
+    from coffeedata.lake import Lake
+    from coffeedata.models import Roaster
+    from tests.test_crashguard import _item
+
+    lake = Lake(str(tmp_path / "lake"))
+    shop = Roaster(roaster_id="shop.com", name="s", host="shop.com", platform="shopify")
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(shop, "active", None)]
+    )
+    week = "2026-11-02"
+    ingest.save_parked(
+        connectors.PartitionLake(lake, "shopify", week), week, "shop.com", {"page": 2, "items": []}
+    )
+
+    def fetch(client, roaster, resume=None, known=None):
+        raise PartialCatalog("deadline reached (page 7)", [_item(roaster)], page=7)
+
+    monkeypatch.setattr(ingest, "fetch_catalog", fetch)
+    connectors.crawl_retry(lake, "shopify", week)
+    [row] = control.rows(lake, week)
+    detail = __import__("json").loads(row["detail"])
+    assert (row["job"], row["status"]) == ("crawl-retry", "deadline")
+    assert detail["partial"] == 1 and detail["partial_every_week"] == []

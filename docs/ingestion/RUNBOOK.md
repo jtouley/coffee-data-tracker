@@ -686,7 +686,8 @@ of two reasons, which need different handling:
 - **Skipped**: `skipped` > 0 roasters were never started. They have no `fetches` row this week, so
   `run_is_complete` fails Tuesday's gate until something fetches them.
 - **Partial**: `skipped` = 0, and `detail.partial` > 0 catalogs were read only in part (the deadline stopped them
-  mid-catalog, a WooCommerce store's count differed from its `X-WP-Total`, or a sub-sitemap couldn't be read). Each
+  mid-catalog, a WooCommerce store's count differed from its `X-WP-Total`, a sub-sitemap couldn't be read or
+  answered 404, or some of a generic store's product pages failed: `fetches.error` counts them). Each
   one is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
   `partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
   listed. A partial Shopify catalog is parked at the page it reached: the resume slot and crawl-retry continue from
@@ -717,7 +718,9 @@ EOF
   one window. Read its `fetches.error` rows: a deadline stop at a later page each week means the catalog is too big
   for the window, and a count that never matches `X-WP-Total` means the store's listing and its count disagree.
   Raise it with the owner rather than re-running crawls.
-- `crawl-retry` (Shopify, 21:47) writes no `job_manifests` row. Read its execution's log (above) instead.
+- `crawl-retry` (Shopify, 21:47) writes `job_manifests` rows of its own (job `crawl-retry`, which never counts as a
+  landed crawl). Its end row says `deadline` when it left stores unstarted or a resumed store stopped partial again,
+  with `partial` and `partial_every_week` in its `detail`, as a crawl's. The query above prints it.
 - After the merge, its row's `detail` lists `missing` connectors. That list should be empty.
 
 ### 5.4 Raising a job's memory by hand

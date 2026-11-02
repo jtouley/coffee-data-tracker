@@ -86,9 +86,9 @@ locals {
     "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = false, claude = false, memory = "2Gi", retries = 0 }
     "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi", retries = 0 }
     # 8Gi, as crawl-generic: with no sitemap cap (#99), each of its 32 workers may hold a whole sitemap's URL list.
-    "crawl-squarespace"            = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], nat = false, claude = false, memory = "8Gi", retries = 1 }
-    "crawl-woocommerce"            = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], nat = false, claude = false, memory = "2Gi", retries = 1 }
-    "crawl-square-online"          = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi", retries = 1 }
+    "crawl-squarespace"   = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], nat = false, claude = false, memory = "8Gi", retries = 1 }
+    "crawl-woocommerce"   = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], nat = false, claude = false, memory = "2Gi", retries = 1 }
+    "crawl-square-online" = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi", retries = 1 }
     # 8Gi: OOM-killed at 2Gi on 2026-11-02 (about 7 min in); the owner raised it by hand (gcloud run jobs update).
     "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "8Gi", retries = 1 }
     "merge"         = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi", retries = 1 }

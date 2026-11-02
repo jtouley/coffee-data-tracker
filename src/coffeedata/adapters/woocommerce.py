@@ -2,11 +2,21 @@
 
 from __future__ import annotations
 
+import logging
 from collections.abc import Iterator
 
 import httpx
 
-from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient, block_status, causes, challenged
+from ..http import (
+    Blocked,
+    DeadlineReached,
+    FetchError,
+    PartialCatalog,
+    PoliteClient,
+    block_status,
+    causes,
+    challenged,
+)
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
@@ -23,6 +33,11 @@ PER_PAGE = 100
 # page (the client gives up at 15 s), so it failed every week. Each size divides PER_PAGE and the one before it, so
 # the products already read stay at the same offsets.
 TIMEOUT_PER_PAGE = (25, 5)
+# A bulk variations query the store rejects outright (an old Store API's 400 on type=variation, or a WAF's 403 that
+# is no challenge): every size is asked for on its own instead, spaced as any request.
+BULK_REJECTED_STATUSES = (400, 403)
+
+log = logging.getLogger(__name__)
 
 
 def _price(prices: dict | None) -> float | None:
@@ -70,10 +85,12 @@ def parse_product(
     roaster: Roaster,
     variation_prices: dict[str, float | None] | None = None,
     variation_stock: dict[str, bool | None] | None = None,
+    gone: set[str] | None = None,
 ) -> CatalogItem:
     """variation_prices: variation id -> price, fetched separately because the listing only carries a range.
     variation_stock: variation id -> its own is_in_stock, from the same lookup; a size without one takes the
-    parent's (in stock when any size is)."""
+    parent's (in stock when any size is). gone: variation ids whose own lookup answered 404 (the size no longer
+    exists): left out of the product, never stored with a null price."""
     tags = sorted(
         {t["name"] for t in p.get("tags", []) if isinstance(t, dict)}
         | {c["name"] for c in p.get("categories", []) if isinstance(c, dict)}
@@ -83,6 +100,8 @@ def parse_product(
     if variations:
         variants = []
         for v in variations:
+            if gone and str(v["id"]) in gone:
+                continue
             label = _size_label(v.get("attributes") or [], p.get("attributes"))
             vid = str(v["id"])
             price = (variation_prices or {}).get(vid)
@@ -199,10 +218,12 @@ def _batches(products: list[dict]) -> Iterator[list[dict]]:
         yield batch
 
 
-def _lookup(client: PoliteClient, base: str, vid: str) -> dict:
-    """One variation, asked for on its own. Any failure fails the fetch (never a null price for a size the store
-    prices): a challenge or a block (429, 430, 503 once the client's retries are spent) as such, so ingest.run counts
-    it as a refusal or defers the store; anything else as the fetch's error, asked again next pass."""
+def _lookup(client: PoliteClient, base: str, vid: str) -> dict | None:
+    """One variation, asked for on its own; None when the store answers 404: the size no longer exists (the store
+    has no value for it), so it is dropped from the product. Any other failure fails the fetch (never a null price
+    for a size the store prices): a challenge or a block (429, 430, 503 once the client's retries are spent) as such,
+    so ingest.run counts it as a refusal or defers the store; anything else as the fetch's error, asked again next
+    pass."""
     try:
         v = client.fetch_json(f"{base}/{vid}")
     except DeadlineReached:
@@ -210,6 +231,8 @@ def _lookup(client: PoliteClient, base: str, vid: str) -> dict:
     except FetchError as e:
         if challenged(e) or block_status(e):  # a refusal or a pause, not an unknown price (ingest.run)
             raise
+        if e.status == 404 and not isinstance(e, Blocked):
+            return None
         raise FetchError(f"variation {vid}: {e}", status=e.status) from e
     if not isinstance(v, dict):
         raise FetchError(f"variation {vid}: unexpected Store API payload")
@@ -223,6 +246,7 @@ def variation_prices(
     products: list[dict],
     prices: dict[str, float | None],
     stock: dict[str, bool | None] | None = None,
+    gone: set[str] | None = None,
 ) -> None:
     """Fills `prices` (variation id -> price) and `stock` (variation id -> its own is_in_stock) for every variation
     of `products`, in bulk: the Store API's products endpoint lists variations with their prices when asked for
@@ -235,32 +259,55 @@ def variation_prices(
     the batch means the store ignored the filter, so the rest of that batch is asked for one by one, and the next
     batch tries in bulk again. A published variation the parent doesn't list (an unpriced leftover the listing's
     get_visible_children leaves out) is simply not wanted: it never turns bulk off. A size the bulk query didn't
-    return is asked for on its own. Any failed request fails the fetch (_lookup): never a null price, or a null
-    stock, for a size the store has."""
+    return is asked for on its own. A store that rejects the bulk query outright (BULK_REJECTED_STATUSES, with no
+    challenge) has every remaining size asked for on its own, spaced as usual. A size whose own lookup answers 404 no
+    longer exists: it goes into `gone`, and is left out of its product. Any other failed request fails the fetch
+    (_lookup): never a null price, or a null stock, for a size the store has."""
     stock = {} if stock is None else stock
+    gone = set() if gone is None else gone
     wanted = {vid for p in products for vid in _variation_ids(p)}
+    bulk = True
     for batch in _batches(products):
+        if not bulk:
+            break
         mine = {vid for p in batch for vid in _variation_ids(p)}
         ids = [str(p["id"]) for p in batch]
         parents = set(ids)
-        for data in _pages(client, base, host, type="variation", parent=",".join(ids)):
-            foreign = False
-            for v in data:
-                if not isinstance(v, dict) or "id" not in v:
-                    continue
-                if str(v.get("parent")) not in parents:
-                    foreign = True  # the store ignored `parent` (or `type`): not a variation of this batch
-                    continue
-                vid = str(v["id"])
-                if vid in wanted:
-                    prices[vid] = _price(v.get("prices"))
-                    stock[vid] = v.get("is_in_stock")
-            if foreign or mine <= prices.keys():  # every listed size priced: no need to ask for an empty page
-                break
+        try:
+            for data in _pages(client, base, host, type="variation", parent=",".join(ids)):
+                foreign = False
+                for v in data:
+                    if not isinstance(v, dict) or "id" not in v:
+                        continue
+                    if str(v.get("parent")) not in parents:
+                        foreign = (
+                            True  # the store ignored `parent` (or `type`): not a variation of this batch
+                        )
+                        continue
+                    vid = str(v["id"])
+                    if vid in wanted:
+                        prices[vid] = _price(v.get("prices"))
+                        stock[vid] = v.get("is_in_stock")
+                if (
+                    foreign or mine <= prices.keys()
+                ):  # every listed size priced: no need to ask for an empty page
+                    break
+        except FetchError as e:
+            if (
+                isinstance(e, (DeadlineReached, Blocked))
+                or e.status not in BULK_REJECTED_STATUSES
+                or challenged(e)
+            ):
+                raise
+            log.info("%s: bulk variations query rejected (%s): every size asked for on its own", host, e)
+            bulk = False
     for vid in sorted(wanted - prices.keys(), key=lambda x: (len(x), x)):
-        v = _lookup(client, base, vid)
-        prices[vid] = _price(v.get("prices"))
-        stock[vid] = v.get("is_in_stock")
+        one = _lookup(client, base, vid)
+        if one is None:
+            gone.add(vid)
+            continue
+        prices[vid] = _price(one.get("prices"))
+        stock[vid] = one.get("is_in_stock")
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
@@ -268,6 +315,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     raw: list[dict] = []
     prices: dict[str, float | None] = {}
     stock: dict[str, bool | None] = {}
+    gone: set[str] = set()  # sizes whose own lookup answered 404: they no longer exist, and are left out
     listing = _Listing()
     try:
         for data in _pages(client, base, roaster.host, listing):
@@ -276,14 +324,16 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 if not _needs_variation_prices(p):  # one price for every size: the listing's
                     prices |= dict.fromkeys(_variation_ids(p), _price(p.get("prices")))
         needs = [p for p in raw if _needs_variation_prices(p)]
-        variation_prices(client, base, roaster.host, needs, prices, stock)
+        variation_prices(client, base, roaster.host, needs, prices, stock, gone)
     except DeadlineReached as e:
-        # Only products read whole: listed, with every size's price. The rest stay as they were (partial).
+        # Only products read whole: listed, with every size priced or known gone. The rest stay as they were.
         done = [
-            parse_product(p, roaster, prices, stock) for p in raw if prices.keys() >= set(_variation_ids(p))
+            parse_product(p, roaster, prices, stock, gone)
+            for p in raw
+            if prices.keys() | gone >= set(_variation_ids(p))
         ]
         raise PartialCatalog(f"{roaster.host}: {e} ({len(done)} of {len(raw)}+ products read)", done) from e
-    items = [parse_product(p, roaster, prices, stock) for p in raw]
+    items = [parse_product(p, roaster, prices, stock, gone) for p in raw]
     read = len({str(p.get("id")) for p in raw})
     if listing.total is not None and read != listing.total:
         # The store counts the query's products itself (X-WP-Total, docs/apis/store-api/README.md "Pagination"): a

@@ -55,10 +55,11 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
     ([]); a robots block, network error or any other status of sitemap.xml itself raises FetchError, so a fetch can't
     mistake "couldn't read it" for "nothing there"; so does a sitemap over SITEMAP_MAX_BYTES (ResponseTooLarge).
 
-    One sub-sitemap that can't be read never fails the rest: a 404 or 410 (a stale entry in the index: nothing is
-    behind it) or one robots.txt disallows is skipped; any other failure (a 5xx, a timeout, a file over the cap) is
-    skipped and its URL added to `unread`, so the caller knows the list is incomplete (generic stores the catalog as
-    partial). A pause or a challenge (_refusal) still raises: the store is deferred or refused, as for any page."""
+    One sub-sitemap that can't be read never fails the rest: one robots.txt disallows is skipped; any other failure
+    (a 404 or 410, a 5xx, a timeout, a file over the cap) is skipped and its URL added to `unread`, so the caller knows
+    the list is incomplete (generic stores the catalog as partial). A 404 or 410 too: the index still lists it, and
+    nothing says it held no products, so its products are kept listed (partial), never read as delisted. A pause or a
+    challenge (_refusal) still raises: the store is deferred or refused, as for any page."""
     client = client.with_max_response(max(client.max_response_bytes, SITEMAP_MAX_BYTES))
     r = _get(client, f"https://{host}/sitemap.xml")
     if r.status_code == 404:
@@ -93,8 +94,6 @@ def sitemap_urls(client: PoliteClient, host: str, unread: list[str] | None = Non
                 status=sub.status_code,
                 challenge=is_challenge(sub),
             )
-        elif sub.status_code in (404, 410):
-            log.info("%s: sub-sitemap gone (HTTP %d), skipped: %s", host, sub.status_code, sm)
         else:
             log.warning("%s: sub-sitemap HTTP %d, skipped: %s", host, sub.status_code, sm)
             if unread is not None:
