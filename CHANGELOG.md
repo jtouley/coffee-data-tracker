@@ -38,7 +38,8 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   haptics, dark mode and empty states (#21). Confirmed saves and bag editing (#38). Switching between open bags
   (#53), shots outside the traditional espresso window (#54) and catalog search to correct a bag's coffee (#55).
 - **Public site** at registry.coffee: a launch page and runbook (#19), then beta entry points and one visual system
-  (#35).
+  (#35). Findable: schema.org Dataset JSON-LD, robots.txt and sitemap.xml, only public roasters on the site,
+  and self-describing releases (manifest, licence text, `release-<run date>` tags on Hugging Face) (#89).
 - **Deployment.** The app on Cloud Run with Terraform, JSON logs and alerts (#24), an uptime check (#32), and
   hardening of the single instance against request bursts (#34).
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
