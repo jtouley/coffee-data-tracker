@@ -10,7 +10,7 @@ Every roaster runs its own online store, so there's no single place to compare o
 see when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or grinder. This
 project reads each roaster's public store once a week, starting from a seed list of about 3,200 US roasters, keeps
 every weekly snapshot, and turns them into tables you can query with SQL: what's listed now, what changed, and how
-your shots of a given coffee went. The weekly job runs on a GitHub Actions schedule and needs no server. The data lives in a lake
+your shots of a given coffee went. The weekly crawl runs as scheduled Cloud Run jobs, and GitHub Actions publishes the site. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
 
 **Catalog site:** [registry.coffee](https://registry.coffee/catalog/)
@@ -252,7 +252,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages. The app links to the same `SITE_URL` and sends beta-invite requests to `SUPPORT_EMAIL` (set on Cloud Run by Terraform, `site_url` and `support_email`) |
 | `APP_URL` | `https://app.registry.coffee` | The app the site's Sign in links point to (a fork or a staging build) |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
-| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the weekly workflow loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
+| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the Tuesday `site` workflow (and a manual `weekly` run) loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
 | `SNOWFLAKE_SHARE` | `COFFEE_DATA_SHARE` | The share whose views `load-snowflake --migrate` recreates and grants again |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
@@ -264,7 +264,9 @@ this file stays as it is.
 
 ## Run it on GitHub
 
-The `weekly` workflow runs every Monday, keeps the data in a Hugging Face dataset and deploys the site to Pages.
+The weekly crawl runs every Monday on Cloud Run ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md)), and
+the `site` workflow publishes the site to Pages on Tuesday. The `weekly` workflow is the manual fallback: run by
+hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
 
 1. Create a write token at huggingface.co → Settings → Access Tokens.
 2. Create the dataset once, from any machine. It's private unless you add `--public`; keep it private, because
@@ -279,7 +281,9 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
-6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
+6. Run the `weekly` workflow by hand with `sample: 50`. It has no schedule: the Cloud Run jobs crawl on Monday and
+   the `site` workflow publishes on Tuesday. A fork without the Cloud Run jobs ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md))
+   has no scheduled crawl: run `weekly` by hand each Monday, or the Tuesday `site` run fails its freshness check.
 
 The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
 `jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
@@ -288,7 +292,7 @@ secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a
 
 ## The site
 
-The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+The Tuesday `site` workflow deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
 `/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
 ## How it works
@@ -468,13 +472,16 @@ make clean   # remove build/ and dbt artifacts
 - One browser test (`tests/test_app_browser.py`) drives owner setup, sign-in and Log shot → Saved → Undo at phone
   width and runs axe on each screen; it needs Node with Playwright and axe-core (`npm ci` in `tests/browser`) and is
   skipped without them, except in CI.
-- `make lint` runs the pre-commit hooks on every file (whitespace, YAML/TOML, large-file and private-key checks,
-  `uv.lock` in step with `pyproject.toml`, ruff and mypy over `src` and `app`); the first run downloads the hook
-  repos, so it needs network once.
+- `make lint` runs the pre-commit hooks on every file except `tests/fixtures/`, `eval/sealed/` and
+  `contracts/schemas/`: whitespace, YAML/TOML, merge-conflict, large-file and private-key checks, `uv.lock` in step
+  with `pyproject.toml`, ruff and ruff format on the Python files, and mypy over `src` and `app`. The first run
+  downloads the hook repos, so it needs network once.
 - CI (`.github/workflows/ci.yml`) runs `uv sync --locked`, installs Playwright and Chromium, and runs `make test`
   with `REQUIRE_BROWSER=1` on every pull request and push to `main`.
 
-Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues).
+Report bugs and questions on the [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues), and
+vulnerabilities privately, as [SECURITY.md](SECURITY.md) describes. Before opening a pull request, read
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## History
 
