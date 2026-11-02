@@ -410,6 +410,32 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
   **`weekly.yml` holds the only one-click rollback.** Don't retire it until a replacement exists (§4 step 4).
 - **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
+- **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has
+  deleted it). The merge moves each connector's partition, unchanged, to
+  `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket; `<batch>` is the merge's
+  `job_manifests.detail.batch` and the `batch=<id>` of the lake files it wrote. A week merged more than once has a
+  folder per merge.
+  ```sh
+  export BUCKET=gs://$PROJECT-ingest-staging WEEK=2026-11-02   # any merged week's Monday
+  gcloud storage ls "$BUCKET/archive/raw/connector=*/run_date=$WEEK/"   # one merge=<batch>/ per connector per merge
+  ```
+  - *To read or check the rows* (nothing changes): `gcloud storage cp -r "$BUCKET/archive/raw/*/run_date=$WEEK"
+    /tmp/recover/` and query the Parquet files locally, e.g. `uv run python -c "import duckdb;
+    print(duckdb.sql(\"from '/tmp/recover/**/fetches.parquet'\"))"`. They hold exactly the rows the merge read.
+  - *To merge them into the lake again* (rows the dataset lost, or a merge whose lake files never reached HF):
+    copy, don't move, one merge folder per connector back to where the merge reads it, then run the merge for that
+    week. Restore one `merge=<batch>` folder per connector per run (the files share names), oldest first.
+    ```sh
+    C=shopify B=<batch>   # from the listing above
+    gcloud storage cp "$BUCKET/archive/raw/connector=$C/run_date=$WEEK/merge=$B/*.parquet" \
+      "$BUCKET/raw/connector=$C/run_date=$WEEK/"
+    gcloud run jobs execute merge --region $REGION --args="merge,--run-date,$WEEK" --wait
+    ```
+    The merge adds only rows the lake doesn't already have (by `batch_id`, `manifest_id` and `body_hash`), so a
+    restored partition is never counted twice, and it archives the partition again under a new `merge=<batch>`
+    (another 30 days). The connector must have a finished crawl that week in `job_manifests`, as it had for the
+    first merge. Only a merge of that week reads the restored partition: the crawls and the scheduled merge read
+    the current week's.
 - **Shopify only, back to default egress:** run `crawl-shopify-default-egress` instead of `crawl-shopify`. To make it
   permanent, set `nat = false` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP stays
   reserved until the address resource is removed.
@@ -872,6 +898,7 @@ Nothing else depends on it: with no `dq` row, the crawl passes add no repulls.
 ## Cost
 
 About +$1–2/month for the non-Shopify jobs, and about $4–6/month for Cloud NAT, mostly the reserved static IP. The
-staging bucket holds one week of raw/ at most, a few hundred MB. With the app (inside Cloud Run's free tier), about
+staging bucket holds one week of raw/ and the last 30 days of merged partitions under archive/, about five weeks of
+raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
 $5–8/month in all, so the monthly budget (`budget_usd`) is $20: its first email (50%, $10) is above the estimate's
 top, and 90%/100% ($18/$20) mean more than twice the estimate. Alert policies cost nothing.

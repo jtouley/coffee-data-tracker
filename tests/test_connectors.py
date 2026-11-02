@@ -386,6 +386,7 @@ def test_crawl_park_and_merge_work_without_fuse_metadata_calls(tmp_path, monkeyp
     out = connectors.merge(lake, WEEK)
     assert out["missing"] == [] and out["written"]["fetches"] == 3
     assert not list(lake.root.rglob("*.tmp"))
+    assert len(list((lake.root / "archive").rglob("fetches.parquet"))) == 2  # archived by rename, no chmod
 
 
 def test_arm_rows_never_land_or_feed_the_egress_flag(tmp_path, monkeypatch):
@@ -483,3 +484,107 @@ def test_two_bad_weeks_still_flag_with_their_resumes_folded_in(tmp_path, monkeyp
             control.finish(lk, control.start(lk, "crawl", week, "shopify"), "done",
                            first_contact={"stores": stores, "refused": refused})  # fmt: skip
     assert control.egress_flags(lk) == [{"ip": "34.1.2.3", "shares": [0.094, 0.1]}]
+
+
+def _sha256s(root) -> dict[str, str]:
+    import hashlib
+
+    return {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in sorted(root.rglob("*.parquet"))}  # fmt: skip
+
+
+def _week_batches(lk: Lake, table: str) -> list[str]:
+    q = f"select batch_id from {lk.scan(table)} where run_date = ?"
+    return sorted(r[0] for r in lk.connect().execute(q, [date.fromisoformat(WEEK)]).fetchall())
+
+
+def test_merge_archives_the_files_it_merged_byte_for_byte(tmp_path, monkeypatch):
+    """The owner's retention decision: a merged partition is kept 30 days under archive/ (a bucket lifecycle rule
+    deletes it), as the very files the merge read, not deleted. Nothing that reads raw/ sees it again."""
+    monkeypatch.setattr(
+        connectors, "CONNECTORS", {k: connectors.CONNECTORS[k] for k in ("shopify", "woocommerce")}
+    )
+    lk = _lake(tmp_path, "lake")
+    for rid, prods, adapter, hour in THIS_WEEK:
+        run(connectors.PartitionLake(lk, adapter, WEEK), WEEK, rid, prods, hour=hour, adapter=adapter)
+    for adapter in ("shopify", "woocommerce"):
+        control.finish(lk, control.start(lk, "crawl", WEEK, adapter), "done")
+    before = {}  # what the merge reads: the compacted files (compact is idempotent)
+    for adapter in ("shopify", "woocommerce"):
+        part = connectors.partition(lk, adapter, WEEK)
+        connectors.compact(part)
+        before[adapter] = _sha256s(part)
+    out = connectors.merge(lk, WEEK)
+    assert out["written"]["fetches"] == 3 and not list((lk.root / "raw").glob("connector=*"))
+    for adapter in ("shopify", "woocommerce"):
+        kept = connectors.archive(lk, connectors.partition(lk, adapter, WEEK), out["batch"])
+        assert (
+            kept.relative_to(lk.root).as_posix()
+            == f"archive/raw/connector={adapter}/run_date={WEEK}/merge={out['batch']}"
+        )
+        assert _sha256s(kept) == before[adapter]  # byte for byte
+    # The archive holds the same rows the merge wrote: the week's batches, once each.
+    archived = sorted(
+        b
+        for f in (lk.root / "archive").rglob("fetches.parquet")
+        for b in pq.read_table(f).column("batch_id").to_pylist()
+    )
+    assert archived == _week_batches(lk, "fetches") and len(archived) == 3
+    # Not merged twice, not double-counted, not unmerged work: a re-run merge writes nothing and archives nothing,
+    # a resume reads the week once (from the lake), and the landed set is what it was.
+    assert connectors.merge(lk, WEEK)["written"] == {}
+    assert len([p for p in (lk.root / "archive").rglob("merge=*") if p.is_dir()]) == 2
+    plake = connectors.PartitionLake(lk, "shopify", WEEK)
+    kept = str(lk.root / "archive")
+    assert not any(s.startswith(kept) for t in connectors.RAW_TABLES for s in plake.sources(t))
+    assert len(_week_batches(plake, "fetches")) == 3
+    states, _ = connectors.ingest.select_states(plake, WEEK)
+    assert not {s.roaster.roaster_id for s in states} & {"onyxcoffeelab.com", "anaheimcoffee.com"}
+    assert control.landed(lk, WEEK) == {"shopify", "woocommerce"}
+
+
+def test_a_second_merge_of_the_week_archives_beside_the_first(tmp_path, monkeypatch):
+    """A connector that crawls again after the merge (a late resume) is merged by a re-run: its new partition goes
+    to its own merge=<batch> folder, so the first archive is never overwritten and no row is merged twice."""
+    monkeypatch.setattr(connectors, "CONNECTORS", {"shopify": connectors.CONNECTORS["shopify"]})
+    lk = _lake(tmp_path, "lake")
+    plake = connectors.PartitionLake(lk, "shopify", WEEK)
+    run(plake, WEEK, "onyxcoffeelab.com", [product("A", 22.0)], adapter="shopify")
+    control.finish(lk, control.start(lk, "crawl", WEEK, "shopify"), "done")
+    first = connectors.merge(lk, WEEK)
+    run(plake, WEEK, "late.example", [product("L", 19.0)], adapter="shopify")
+    control.finish(lk, control.start(lk, "crawl", WEEK, "shopify"), "done")
+    second = connectors.merge(lk, WEEK)
+    assert first["written"]["fetches"] == second["written"]["fetches"] == 1
+    part = connectors.partition(lk, "shopify", WEEK)
+    kept = [connectors.archive(lk, part, o["batch"]) / "fetches.parquet" for o in (first, second)]
+    rows = [pq.read_table(f).column("roaster_id").to_pylist() for f in kept]
+    assert rows == [["onyxcoffeelab.com"], ["late.example"]]
+    assert len(_week_batches(lk, "fetches")) == 2
+
+
+def test_the_archive_is_never_published_and_the_bucket_deletes_it_after_30_days():
+    """archive/ sits in the staging bucket beside raw/ and parked/: it is not a lake table, so a publish never sends it
+    to the dataset, and the staging bucket's lifecycle rule removes exactly that prefix after 30 days."""
+    import re
+    from pathlib import Path
+
+    tf = (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
+    bucket = tf[tf.index('resource "google_storage_bucket" "ingest_staging"') :]
+    bucket = bucket[: bucket.index("\n}\n")]
+    rule = re.search(r"lifecycle_rule \{(.*?)\n  \}", bucket, re.S)
+    assert rule, "the staging bucket has no lifecycle rule"
+    assert re.search(r"age\s*=\s*30\b", rule.group(1))
+    assert re.search(r'matches_prefix\s*=\s*\["archive/"\]', rule.group(1))
+    assert re.search(r'type\s*=\s*"Delete"', rule.group(1))
+    assert bucket.count("lifecycle_rule") == 1  # nothing else in the bucket expires
+
+
+def test_a_remote_lake_never_stages_the_archive_for_publishing(tmp_path, monkeypatch):
+    monkeypatch.setenv("COFFEEDATA_STAGING", str(tmp_path / "staging"))
+    lk = Lake("hf://datasets/someone/coffee")
+    kept = connectors.archive(lk, connectors.partition(lk, "shopify", WEEK), "b1") / "fetches.parquet"
+    kept.parent.mkdir(parents=True)
+    pq.write_table(connectors.SCHEMAS["fetches"].empty_table(), kept)
+    assert kept.exists() and kept not in lk.staged_files()
+    assert all(p.relative_to(lk.root).parts[0] != "archive" for p in lk.staged_files())

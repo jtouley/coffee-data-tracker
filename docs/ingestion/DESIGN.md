@@ -366,7 +366,27 @@ lake reads off the NAT would need a split egress (`PRIVATE_RANGES_ONLY` would mo
 IP too); not worth it unless ports run out again.
 
 raw/ and parked/ live in a GCS bucket mounted at `COFFEEDATA_STAGING`. They are never published to HF (they aren't
-lake tables), so parked progress survives between jobs and the merge empties raw/. Prefect is out for now: the jobs
+lake tables), so parked progress survives between jobs and the merge empties raw/.
+
+**Merged partitions are kept 30 days** (the owner's decision), under `archive/` in the same bucket:
+`archive/raw/connector=X/run_date=W/merge=<batch>/<table>.parquet`, where `<batch>` is the merge's batch id
+(`job_manifests.detail.batch`, and the lake files it wrote). The merge moves exactly the files it read, after
+compacting them, so the archive holds those bytes, and the rows it wrote are those rows minus any the lake already had.
+A lifecycle rule on the bucket (`ingest_staging` in `ingestion.tf`) deletes objects under `archive/` 30 days after
+they are created; GCSFuse renames by copy and delete, so that is 30 days after the merge. Recovery is RUNBOOK §5.
+
+Why a separate prefix, not the partitions kept in place with a marker: everything that decides what is unmerged
+looks for `raw/connector=*/run_date=W/` (crawl resume and compaction, `PartitionLake.sources`, the merge's `present`,
+the post-crawl check), so a kept partition would need every one of them, and the open branches that add more, to
+check a marker, or it is merged twice, counted twice or crawled as unfinished. Moved out of `raw/`, a merged week
+looks to all of them exactly as it did when the merge deleted it. `archive/` is not a lake table, so a publish
+never sends it to HF and dbt's globs never see it. The move is file by file (`os.replace`): GCSFuse has no
+directory rename without a hierarchical namespace, which the bucket doesn't have, and no chmod. Each merge gets its
+own `merge=<batch>` folder, so a re-run merge (a late connector, or a resume after the merge) never overwrites an
+earlier archive. Whatever else is in a partition was never merged (an arm's `slice=*/`) and is still removed, as
+before. A local lake (no bucket) keeps `archive/` until it is deleted by hand.
+
+Prefect is out for now: the jobs
 are containers, so adding it later is a wrapper. Add it only if the dependencies outgrow time-based triggers plus
 the manifest table.
 
