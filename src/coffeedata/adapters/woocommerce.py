@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Iterator
 
-from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient
+from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient, block_status, challenged
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
@@ -160,7 +160,9 @@ def variation_prices(
             prices[vid] = _price(client.fetch_json(f"{base}/{vid}").get("prices"))
         except DeadlineReached:
             raise
-        except (FetchError, AttributeError):
+        except (FetchError, AttributeError) as e:
+            if challenged(e) or block_status(e):  # a refusal or a pause, not an unknown price (ingest.run)
+                raise
             prices[vid] = None  # unknown beats wrong: no per-gram price for this size
 
 

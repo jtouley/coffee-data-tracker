@@ -37,7 +37,7 @@ def sitemap_urls(client: PoliteClient, host: str) -> list[str]:
     if r.status_code == 404:
         return []
     if r.status_code != 200:
-        raise FetchError(f"sitemap HTTP {r.status_code}")
+        raise FetchError(f"sitemap HTTP {r.status_code}", status=r.status_code)
     if b"<sitemapindex" not in r.content:
         return _locs(r.content)
     locs = _locs(r.content)
@@ -46,6 +46,6 @@ def sitemap_urls(client: PoliteClient, host: str) -> list[str]:
     for sm in sorted(locs, key=lambda u: "product" not in u.lower()):
         sub = _get(client, sm)
         if sub.status_code != 200:
-            raise FetchError(f"sub-sitemap HTTP {sub.status_code}: {sm}")
+            raise FetchError(f"sub-sitemap HTTP {sub.status_code}: {sm}", status=sub.status_code)
         urls.extend(_locs(sub.content))
     return urls

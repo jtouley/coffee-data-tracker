@@ -62,7 +62,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "rate_limited": "429 responses.",
         "duration_s": "How long the attempt took.",
         "code_version": "The code that made it (git sha).",
-        "blocks": "Each refused or blocked response (403/429/430/503) with its diagnostic headers and egress IP.",
+        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0) and egress IP.",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
     },
     "run_manifests": {
