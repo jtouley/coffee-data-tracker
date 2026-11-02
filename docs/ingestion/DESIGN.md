@@ -274,19 +274,40 @@ Every design got the same fixes, and they are in this PR:
   pauses the platform (section 13).
 - **No store is given up on after one block (PR #98, owner's decision).** On every connector, a 429, 430 or 503, on
   robots.txt, a sitemap, a catalog page, a product page or a WooCommerce variation lookup, is a pause, never a
-  failure for the week:
+  failure for the week. So is a 500, 502 or 504 whose Retry-After is over 30 s (`http.server_pause`):
   - the client tries each URL 3 times, waiting each response's Retry-After (else 1 s, then 2 s). A Retry-After over
     30 s (`http.MAX_RETRY_WAIT`) is never cut short: the client stops, and the store is deferred;
   - a deferred store gets the run's 2 deferred rounds (3 attempts in all), each no sooner than its Retry-After or
-    a 60 s, then 120 s, backoff (`ingest.DEFERRED_BACKOFFS`). Only then does it end failed, for `crawl-retry`;
+    a 60 s, then 120 s, backoff (`ingest.DEFERRED_BACKOFFS`), and never later than 5 minutes (below). Only then does
+    it end failed, for the next pass;
   - Shopify's catalog pages keep the page backoffs above, then parking. A 430 is backed off like a 429; only a 401
     or 403 is a refusal (`StoreBlocked`);
   - Shopify and Squarespace have shared limiters (`Connector.rps`), set up alike: burst counting, the run's earlier
-    blocks, and page-backoff stores kept out of bursts. A store's own pause lasts its whole Retry-After. In the
-    deferred rounds a worker waits out pauses up to `max_cooldown` (120 s); a longer one defers the store again;
-  - a robots.txt block is remembered for its Retry-After (else 60 s), not for `ROBOTS_RETRY_AFTER`;
+    blocks, and page-backoff stores kept out of bursts. A store's own pause lasts its Retry-After, up to 5 minutes.
+    In the deferred rounds a worker waits out pauses up to `max_cooldown` (120 s); a longer one defers the store
+    again. The shared limiter applies through `connectors.crawl` only: `cmd_ingest` (the weekly fallback) and
+    `crawl-retry` pass no `platform_rps`, so Squarespace has no shared budget there (as on `main`);
+  - a robots.txt block is remembered for its Retry-After (else 60 s, at most 5 minutes), not for
+    `ROBOTS_RETRY_AFTER`. A robots.txt answering 204, or any 2xx that isn't a challenge, is the file (RFC 9309
+    2.3.1.1: a 204 has no rules, so everything is allowed); a challenge stays "unavailable";
+  - a Squarespace sitemap that still answers 429 or 503 on the store's last deferred round falls back to the common
+    shop paths, so its catalog isn't lost every week; no products there is an error, never an empty catalog;
   - the hard limits stay: robots.txt rules, Retry-After, and an edge's challenge (below) is never retried or
     deferred.
+- **The 5-minute rule (owner's decision on PR #98's final review): we never wait more than 5 minutes for anything a
+  store asks for.** In the owner's words: "they can contact us for why, but we'll wait 5 minutes." A Retry-After on
+  the catalog or on robots.txt (in seconds or as an HTTP date), the limiter's pause for one store
+  (`HostRateLimited`), a 5xx's long Retry-After and a Shopify page backoff are all cut to 300 s
+  (`http.MAX_STORE_WAIT`, applied by `http.store_wait`). A store asking for longer is waited for 300 s and asked
+  again in the next deferred round: never failed just for asking, and never asked sooner than 300 s. Before this, one
+  store answering `Retry-After: 7200` held a run without a deadline for 4 hours of deferred rounds. Two guards keep a
+  job inside its window as well:
+  - a deferred retry or a page backoff is never scheduled past the run's deadline: the store keeps its error row
+    for the next pass (`deferred.past_deadline`), and a Shopify store with pages is parked at once for crawl-retry;
+  - every pass has a deadline that fits its 240-minute timeout: the crawls and `crawl-retry` stop starting stores
+    at 225 minutes (`Connector.deadline_min`; `cli.CRAWL_RETRY_MIN` without `--connector`), and the weekly
+    fallback's two ingest passes at 150 minutes from the run's start (`cli.WEEKLY_CRAWL_MIN`), which leaves
+    enrichment, classify's 45-minute wait, the build and the export inside weekly.yml's 240 minutes.
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 

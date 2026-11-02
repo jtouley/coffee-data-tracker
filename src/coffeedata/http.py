@@ -39,6 +39,8 @@ MAX_CRAWL_DELAY = 60.0
 # "Slow down": 429, Shopify's 430 (an IP-wide security block), and a 503 that can mean the same.
 BLOCK_STATUSES = (429, 430, 503)
 RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
+# A server error the client retries; one asking for longer than MAX_RETRY_WAIT is a pause like a block (server_pause).
+SERVER_RETRY_STATUSES = tuple(s for s in RETRY_STATUSES if s not in BLOCK_STATUSES)
 # A robots.txt that didn't answer is remembered this long, so the host's fetches fail fast instead of each asking
 # again. A site whose robots.txt always answers 5xx is never crawled: by design (RFC 9309 allows a 5xx to mean
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
@@ -49,6 +51,12 @@ ROBOTS_BLOCK_RETRY_AFTER = 60.0
 # The longest the client waits between its own tries of one URL. A Retry-After longer than this isn't cut short: the
 # client stops trying, and the store is deferred until it has passed (ingest.run).
 MAX_RETRY_WAIT = 30.0
+# The owner's rule: we wait at most 5 minutes for anything a store asks for. A Retry-After (on the catalog or on
+# robots.txt, as seconds or as an HTTP date), the limiter's pause for one store (ratelimit.HostRateLimited) and a
+# Shopify page's backoff are all cut to this. A store asking for longer is asked again after 300 s, in the next
+# deferred round (ingest.run): never given up on just for asking, and never allowed to hold a job past its window.
+# A store that wants longer can tell us why; we'll wait 5 minutes.
+MAX_STORE_WAIT = 300.0
 MAX_REDIRECTS = 20
 # The most body one response may bring into memory, decompressed (COFFEEDATA_MAX_RESPONSE_MB, default 32 MiB). A
 # catalog page or a product page is far below it; a video or a runaway page at a product URL is not, and fails that
@@ -121,6 +129,21 @@ def retry_after_seconds(value: str | None, now: datetime | None = None) -> float
     if when.tzinfo is None:
         when = when.replace(tzinfo=UTC)
     return max(0.0, (when - (now or datetime.now(UTC))).total_seconds())
+
+
+def store_wait(asked: float) -> float:
+    """A wait a store asked for, as we honor it: at most MAX_STORE_WAIT."""
+    return min(max(0.0, asked), MAX_STORE_WAIT)
+
+
+def server_pause(r: httpx.Response) -> float | None:
+    """A 500, 502 or 504 whose Retry-After is longer than MAX_RETRY_WAIT: a pause, like a block's. The client stops
+    trying and the store is deferred past it (ingest.run, at most MAX_STORE_WAIT), never failed after one request.
+    None for any other response (a shorter Retry-After is waited out by the client's own retries)."""
+    if r.status_code not in SERVER_RETRY_STATUSES:
+        return None
+    asked = retry_after_seconds(r.headers.get("retry-after"))
+    return store_wait(asked) if asked is not None and asked > MAX_RETRY_WAIT else None
 
 
 def block_status(e: BaseException | None) -> int | None:
@@ -214,11 +237,12 @@ def unavailable_reason(r: httpx.Response) -> str | None:
 
 
 class RobotsUnavailable(FetchError, httpx.HTTPError):
-    """robots.txt didn't answer with the store's rules (429, 430, 5xx, an edge's challenge, a 2xx other than 200, a
-    1xx or 3xx, or a network error) after the client's retries, so nothing on that host is fetched for
-    ROBOTS_RETRY_AFTER (a block: for its Retry-After, else ROBOTS_BLOCK_RETRY_AFTER). Callers treat it like a
-    network error: this fetch fails and a later one asks again. status: a block's status (ingest defers the store,
-    after wait seconds) or a challenge's.
+    """robots.txt didn't answer with the store's rules (429, 430, 5xx, an edge's challenge, a 1xx, a 3xx without a
+    location, or a network error) after the client's retries, so nothing on that host is fetched for
+    ROBOTS_RETRY_AFTER (a block, or a 5xx's long Retry-After (server_pause): for its Retry-After, at most
+    MAX_STORE_WAIT, else ROBOTS_BLOCK_RETRY_AFTER). Callers treat it like a network error: this fetch fails and a
+    later one asks again. status: a block's or a paused 5xx's status (ingest defers the store, after wait seconds)
+    or a challenge's.
     unreachable: the host itself couldn't be reached (DNS, refused connection), not just robots.txt. challenge:
     robots.txt was answered with an edge's challenge (is_challenge: a 202, or a challenge header on any status),
     which ingest counts as a refusal and never defers."""
@@ -407,6 +431,21 @@ class PoliteClient:
         finally:
             self._local.stats = prev
 
+    @contextlib.contextmanager
+    def last_try(self, last: bool = True) -> Iterator[None]:
+        """Mark this thread's fetch, until the block ends, as the store's last try in this pass (ingest.run's final
+        round): an adapter that defers on a pause reads what it can instead (squarespace: the shop paths without
+        the sitemap)."""
+        prev, self._local.last_try = getattr(self._local, "last_try", False), last
+        try:
+            yield
+        finally:
+            self._local.last_try = prev
+
+    @property
+    def is_last_try(self) -> bool:
+        return bool(getattr(self._local, "last_try", False))
+
     def _note(
         self,
         status: int | None,
@@ -540,12 +579,13 @@ class PoliteClient:
         return not rp.can_fetch(urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
     def _fetch_robots(self, host: str) -> RobotsRules | None:
-        """The host's rules: a 200 is parsed, a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...)
-        means it has no robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an
-        edge's challenge, whatever its status (SiteGround's 202, or a 200 or any 4xx, 401 and 403 included, with a
-        challenge header, such as Cloudflare's 403 with `cf-mitigated: challenge`), another 2xx, a 1xx or 3xx (a
-        redirect without a location), a 429, 430 or 5xx, or a network error raises RobotsUnavailable and is
-        remembered for ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
+        """The host's rules: a 2xx is parsed (RFC 9309 2.3.1.1: a 204, or a 2xx with no rules in its body, allows
+        everything), a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...) means it has no
+        robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an edge's challenge,
+        whatever its status (SiteGround's 202, or a 2xx or any 4xx, 401 and 403 included, with a challenge header,
+        such as Cloudflare's 403 with `cf-mitigated: challenge`), a 1xx or 3xx (a redirect without a location), a
+        429, 430 or 5xx, or a network error raises RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER (a
+        pause: its wait): nothing is ever fetched from a host without its rules."""
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
@@ -567,7 +607,9 @@ class PoliteClient:
             cause = e
         else:
             challenged = is_challenge(r)
-            if r.status_code == 200 and not challenged:
+            if (
+                200 <= r.status_code < 300 and not challenged
+            ):  # RFC 9309 2.3.1.1: any 2xx is the file (204: empty)
                 return RobotsRules(r.text.splitlines())
             if r.status_code in (401, 403) and not challenged:  # a challenge is no answer about the rules
                 return RobotsRules(disallow_all=True)
@@ -576,15 +618,16 @@ class PoliteClient:
                 # (cdn5.editmysite.com) answers 400 here, so every Square Online catalog depends on this.
                 return None
             # A challenge page standing in for robots.txt is no answer about the rules (run 2026-11-02: SiteGround's
-            # 202 was read as "no robots.txt"); neither is another 2xx, a 1xx or 3xx, a 429/430 or a 5xx. The host
-            # is unavailable for now.
+            # 202 was read as "no robots.txt"); neither is a 1xx, a 3xx without a location, a 429/430 or a 5xx. The
+            # host is unavailable for now.
             why = f"answered {r.status_code}" + (" (a challenge)" if challenged else "")
             block = r.status_code in BLOCK_STATUSES and not challenged
-            status = r.status_code if challenged or block else None
-            wait = None
-            if block:  # a pause: asked again once it has passed, and the store deferred until then
+            paused = None if challenged else server_pause(r)  # a 5xx with a long Retry-After: a pause too
+            status = r.status_code if challenged or block or paused is not None else None
+            wait = paused
+            if block:  # a pause: asked again once it has passed (at most MAX_STORE_WAIT), the store deferred till then
                 wait = retry_after_seconds(r.headers.get("retry-after"))
-                wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else wait
+                wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else store_wait(wait)
             err = RobotsUnavailable(
                 f"robots.txt for {host} {why}", status=status, challenge=challenged, wait=wait
             )
@@ -646,7 +689,9 @@ class PoliteClient:
                     continue  # the limiter's platform-wide cooldown is the wait; don't idle this worker too
                 asked = retry_after_seconds(r.headers.get("retry-after"))
                 if asked is not None and asked > MAX_RETRY_WAIT:
-                    return r  # never sooner than asked: the store is deferred past it (ingest.run)
+                    # never sooner than asked (up to MAX_STORE_WAIT): the store is deferred past it (ingest.run), a
+                    # 500/502/504's too (server_pause)
+                    return r
             time.sleep(asked if asked is not None else 2**attempt)
         raise ValueError("retries must be >= 1")
 
