@@ -1,11 +1,13 @@
 """The internal service contracts (coffeedata/raw_contracts.py, ODCS YAML in contracts/internal/): each committed
 file is what the generator writes from lake.SCHEMAS, is valid ODCS v3.2.0, and each producer writes exactly its
-contract's columns. Changing a raw column fails here until the contract is regenerated with a new version."""
+contract's columns. Changing a column, type, required or enum fails here until the contract is written at a new
+version; `make contracts` refuses to write it at the old one."""
 
 import re
 from datetime import UTC, date, datetime
 from pathlib import Path
 
+import pyarrow as pa
 import pytest
 import yaml
 
@@ -22,9 +24,9 @@ def test_the_committed_contract_matches_the_lake_schemas(name):
     committed = raw_contracts.load(name)
     now = raw_contracts.generate(name, committed["version"])
     assert raw_contracts.fingerprint(now) == raw_contracts.fingerprint(committed), (
-        f"{name} contract changed: run python -m coffeedata.raw_contracts --write {name} <new version>"
+        f"{name} interface changed: run python -m coffeedata.raw_contracts --write {name} <new version>"
     )
-    assert now == committed
+    assert now == committed, f"{name} docs changed: run make contracts"
 
 
 @pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))
@@ -36,10 +38,88 @@ def test_regenerating_the_contract_changes_nothing(name):
     )
 
 
-def test_the_contracts_keep_their_versions():
-    assert {n: raw_contracts.load(n)["version"] for n in raw_contracts.CONTRACTS} == {
-        "raw": "1.2.0", "manifest": "1.1.0", "enrichment": "1.1.0"
-    }  # fmt: skip
+@pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))
+def test_each_version_keeps_the_interface_it_was_released_with(name):
+    """The missing-bump guard: interfaces.yaml records each released version's interface fingerprint, and the code's
+    interface must be the one recorded for the committed version. It is the latest released version."""
+    released = raw_contracts.interfaces()[name]
+    version = raw_contracts.load(name)["version"]
+    assert version == max(released, key=lambda v: tuple(map(int, v.split("."))))
+    assert raw_contracts.fingerprint(raw_contracts.generate(name, version)) == released[version], (
+        f"{name} {version} was released with another interface: "
+        f"run python -m coffeedata.raw_contracts --write {name} <new version>"
+    )
+
+
+@pytest.fixture
+def scratch_contracts(tmp_path, monkeypatch):
+    """A copy of contracts/internal/ for the generator to write into."""
+    for f in raw_contracts.DIR.iterdir():
+        (tmp_path / f.name).write_bytes(f.read_bytes())
+    monkeypatch.setattr(raw_contracts, "DIR", tmp_path)
+    return tmp_path
+
+
+def _add_a_bodies_column(monkeypatch):
+    monkeypatch.setitem(SCHEMAS, "bodies", SCHEMAS["bodies"].append(pa.field("language", pa.string())))
+    monkeypatch.setitem(
+        contract_docs.COLUMNS, "bodies", contract_docs.COLUMNS["bodies"] | {"language": "Its language."}
+    )
+
+
+def test_make_contracts_refuses_a_new_column_without_a_version_bump(scratch_contracts, monkeypatch):
+    """The review's case: add a column, describe it, run make contracts at the same version: refused, nothing written."""
+    before = {f.name: f.read_text() for f in scratch_contracts.iterdir()}
+    _add_a_bodies_column(monkeypatch)
+    with pytest.raises(SystemExit, match=r"refused: raw 1\.2\.0: the interface .* --write raw <new version>"):
+        raw_contracts.main(["--all"])
+    with pytest.raises(SystemExit, match="refused: raw 1.2.0"):
+        raw_contracts.main(["--write", "raw", "1.2.0"])
+    with pytest.raises(SystemExit, match="not above the last released version"):
+        raw_contracts.main(["--write", "raw", "1.1.9"])
+    assert {f.name: f.read_text() for f in scratch_contracts.iterdir()} == before
+
+
+def test_a_new_column_ships_at_a_new_version(scratch_contracts, monkeypatch):
+    _add_a_bodies_column(monkeypatch)
+    raw_contracts.main(["--write", "raw", "1.3.0"])
+    doc = raw_contracts.load("raw")
+    assert doc["version"] == "1.3.0" and "language" in raw_contracts.columns("raw", "bodies")
+    released = raw_contracts.interfaces()["raw"]
+    assert list(released) == ["1.2.0", "1.3.0"] and released["1.3.0"] == raw_contracts.fingerprint(doc)
+    assert released["1.2.0"] != released["1.3.0"]
+    raw_contracts.main(["--all"])  # and regenerates at 1.3.0 from then on
+    assert raw_contracts.load("raw")["version"] == "1.3.0"
+
+
+def test_make_contracts_regenerates_a_doc_only_change_at_the_same_version(scratch_contracts, monkeypatch):
+    committed = raw_contracts.load("raw")
+    monkeypatch.setitem(contract_docs.TABLES, "bodies", "Each product description once, by hash.")
+    monkeypatch.setitem(
+        contract_docs.COLUMNS, "bodies", contract_docs.COLUMNS["bodies"] | {"body_text": "The text."}
+    )
+    raw_contracts.main(["--all"])
+    doc = raw_contracts.load("raw")
+    assert doc["version"] == committed["version"]
+    assert raw_contracts.fingerprint(doc) == raw_contracts.fingerprint(committed)
+    assert raw_contracts.fingerprint(doc, "docs") != raw_contracts.fingerprint(committed, "docs")
+    bodies = next(o for o in doc["schema"] if o["name"] == "bodies")
+    assert bodies["description"] == "Each product description once, by hash."
+    assert raw_contracts.interfaces()["raw"] == {committed["version"]: raw_contracts.fingerprint(committed)}
+
+
+@pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))
+def test_quality_rule_ids_are_unique_in_each_contract(name):
+    ids = [q["id"] for o in raw_contracts.load(name)["schema"] for q in o.get("quality") or []]
+    assert len(ids) == len(set(ids)), sorted(i for i in ids if ids.count(i) > 1)
+
+
+def test_required_columns_are_the_ones_a_not_null_rule_holds():
+    for table, required in contract_docs.REQUIRED.items():
+        held = [c for q in contract_docs.QUALITY["raw"] if table in q["tables"] and q.get("engine") == "dbt"
+                and isinstance(q["implementation"], dict) and q["implementation"]["test"] == "not_null"
+                for c in q["implementation"]["columns"]]  # fmt: skip
+        assert sorted(held) == sorted(required), table
 
 
 @pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))

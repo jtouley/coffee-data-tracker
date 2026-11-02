@@ -125,7 +125,8 @@ _SCHEMA_YML = "models/schema.yml"
 
 # Quality rules on each contract's tables, and what enforces each one. engine dbt names a file under dbt/ (a
 # singular test) or a schema.yml test on model columns; engine pytest names a test; no engine means the writers
-# hold the rule and it is stated as text. raw_contracts.py emits each as an ODCS quality rule on its tables.
+# hold the rule and it is stated as text. enforced_by names what enforces a dbt or text rule (a pytest rule's is its
+# implementation). raw_contracts.py emits each as an ODCS quality rule on its tables.
 QUALITY: dict[str, list[dict]] = {
     "raw": [
         {"id": "fetch_status_values", "tables": ["fetches"], "dimension": "conformity", "severity": "error",
@@ -140,8 +141,7 @@ QUALITY: dict[str, list[dict]] = {
          "enforced_by": "dbt stg_fetches not_null"},
         {"id": "writer_columns", "tables": ["snapshots", "bodies", "fetches"], "dimension": "conformity",
          "severity": "error", "rule": "a writer writes exactly the contract's columns",
-         "engine": "pytest", "implementation": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract",
-         "enforced_by": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract"},
+         "engine": "pytest", "implementation": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract"},
         {"id": "run_is_complete", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
          "rule": "every expected roaster of a full run has a fetch",
          "engine": "dbt", "implementation": "tests/run_is_complete.sql", "enforced_by": "dbt run_is_complete"},
@@ -161,8 +161,7 @@ QUALITY: dict[str, list[dict]] = {
          "severity": "error",
          "rule": "a job writes a running row at its start and one end row (done, deadline or failed)",
          "engine": "pytest",
-         "implementation": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract",
-         "enforced_by": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract"},
+         "implementation": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract"},
         {"id": "run_manifest_mode_values", "tables": ["run_manifests"], "dimension": "conformity",
          "severity": "error", "rule": "run_manifests.mode is full, sample, only, retry_failed or null",
          "enforced_by": "the writers (ingest.select_states, connectors.crawl, crawl-retry)"},
@@ -171,8 +170,7 @@ QUALITY: dict[str, list[dict]] = {
         {"id": "writer_columns", "tables": ["enrichments"], "dimension": "conformity", "severity": "error",
          "rule": "rows have exactly the contract's columns",
          "engine": "pytest",
-         "implementation": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract",
-         "enforced_by": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract"},
+         "implementation": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract"},
         {"id": "accepted_attribute_values", "tables": ["enrichments"], "dimension": "conformity",
          "severity": "error", "rule": "process and roast_level take the dbt-accepted values",
          "engine": "dbt", "implementation": {"file": _SCHEMA_YML, "model": "dim_coffee",

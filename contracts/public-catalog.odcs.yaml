@@ -55,8 +55,9 @@ schema:
     instructions: >-
       One row per coffee ever seen, including sold out, archived and delisted ones. For coffees someone can buy
       now, filter catalog_status IN ('available', 'preorder') AND is_wholesale = false; wholesale listings are also
-      left out of market counts and new arrivals. Match broad flavours (e.g. fruity) on flavor_categories; use
-      tasting_notes only for the roaster's exact words. For price questions give both, labelled: price_per_100g
+      left out of market counts and new arrivals. Match broad flavours (e.g. fruity) on flavor_categories.
+      tasting_notes are normalized descriptors taken from the roaster's text (lowercased, split and shortened),
+      not the roaster's exact words. For price questions give both, labelled: price_per_100g
       (the cheapest available retail bag of 150 g to 2.5 kg, per 100 g) to compare coffees, and min_price_usd for
       the cheapest listed bag (any size, possibly sold out).
     verifiedStatements:
@@ -176,7 +177,7 @@ schema:
   - name: tasting_notes
     logicalType: array
     physicalType: varchar[]
-    description: Tasting notes as the roaster words them.
+    description: Tasting notes as normalized descriptors taken from the roaster's text (lowercased, split, shortened).
     items:
       logicalType: string
   - name: flavor_categories
@@ -287,8 +288,8 @@ schema:
   physicalName: public_roaster
   physicalType: table
   description: >-
-    One row per published roaster from the registry: not opted out, with at least one coffee, and known from a source
-    that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone).
+    One row per published roaster from the registry: not opted out, with at least one coffee seen, and known from a
+    source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone).
   synonyms:
   - synonym: roasteries
   - synonym: coffee roasters

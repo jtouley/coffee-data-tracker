@@ -232,10 +232,14 @@ the registry). There is no per-service copy.
 ## 5. Contracts (versioned and tested)
 
 `src/coffeedata/raw_contracts.py` generates the three internal contracts from `lake.SCHEMAS`, as ODCS v3.2.0 YAML in
-`contracts/internal/<name>.odcs.yaml` (tagged internal, never published). Each carries a version and a fingerprint.
-`tests/test_raw_contracts.py` fails on any column change until the file is regenerated with a bumped version
-(`python -m coffeedata.raw_contracts --write <name> <version>`; `make contracts` regenerates all at their current
-versions), and when a committed file differs from what the generator writes. It also validates each against the
+`contracts/internal/<name>.odcs.yaml` (tagged internal, never published). Each carries a version and two
+fingerprints: an interface fingerprint over what consumers see (object and column names, types, required, enums)
+and a docs fingerprint over the rest. `contracts/internal/interfaces.yaml` records the interface fingerprint of every
+released version. A change to the interface needs a new version (`python -m coffeedata.raw_contracts --write <name>
+<version>`, which also refuses a version that isn't above the last); `make contracts` regenerates all at their
+current versions and refuses when an interface changed, so only description and quality-rule changes ship at the
+same version. `tests/test_raw_contracts.py` fails on an interface change until the contract is written at a new
+version, and when a committed file differs from what the generator writes. It also validates each against the
 vendored ODCS schema and checks that each producer writes exactly its contract's columns.
 
 | Contract | Version | Tables / files | Producer → consumers |
