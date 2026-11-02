@@ -128,6 +128,7 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         rps=args.rps,
         part=args.slice,
         salt=args.salt,
+        only=args.only,
     )
     _print(out)
     # A crawl stopped by its deadline is a finished job, not a failed one: it exits 0, and its job_manifests end row
@@ -150,11 +151,11 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     from . import ingest
 
     lake, run_date = Lake(), args.run_date
-    if args.connector:  # design B: the connector's own partition for the week
+    if args.connector:  # design B: the connector's own partition, its job_manifests rows and the crash guard
         from . import connectors
 
-        run_date = connectors.week_of(run_date)
-        lake = connectors.PartitionLake(lake, args.connector, run_date)
+        _print(connectors.crawl_retry(lake, args.connector, run_date, workers=args.workers))
+        return
     states, resume = ingest.select_parked(lake, run_date)
     print(f"resuming {len(states)} parked stores for run {args.run_date}", file=sys.stderr)
     _print(ingest.run(lake, states, run_date, workers=args.workers, mode="retry_failed", resume=resume))
@@ -625,6 +626,9 @@ def main(argv: list[str] | None = None) -> None:
     cr.add_argument("--rps", type=_positive_float, help="override the connector's request budget (req/s)")
     cr.add_argument("--slice", help="crawl one slice k/n of a salted-hash split of its roasters, e.g. 0/3")
     cr.add_argument("--salt", default="arm", help="the split's salt (record it with the results)")
+    cr.add_argument(
+        "--only", help="fetch this one roaster_id, even if done or quarantined this week (RUNBOOK section 7)"
+    )
     mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")
     mg.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to merge")
     rr = add("crawl-retry", cmd_crawl_retry, "resume the run's parked stores from their blocked page")

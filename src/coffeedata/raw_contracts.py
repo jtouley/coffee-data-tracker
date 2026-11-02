@@ -49,7 +49,7 @@ CONTRACTS: dict[str, dict[str, Any]] = {
             "enrichment job",
             "registry",
         ],
-        # The values a column may take, versioned with the columns (1.2.0 added unavailable).
+        # The values a column may take, versioned with the columns (1.2.0 added unavailable, 1.3.0 crashed).
         "values": {"fetches.status": list(FETCH_STATUSES)},
         "files": {
             "parked/run_date=<date>/<roaster_id>.json": {
@@ -59,7 +59,18 @@ CONTRACTS: dict[str, dict[str, Any]] = {
                     "items": ("array", "The catalog items read before the block (CatalogItem fields)."),
                 },
                 "items": sorted(CatalogItem.model_fields),
-            }
+            },
+            "raw/connector=<name>/run_date=<week>/_inflight/attempt=<attempt_id>/<roaster_id>.json": {
+                "name": "inflight",
+                "description": "A roaster in flight in a crawl attempt (crashguard): written before its fetch, "
+                "removed when it returns, and the attempt's folder removed when it ends normally. The folder of an "
+                "attempt without a done or deadline end row holds the roasters in flight when it died; the next "
+                "attempt of the week quarantines one found in two such folders (fetches.status crashed).",
+                "properties": {
+                    "roaster_id": ("string", "The roaster (also the file name)."),
+                    "started_at": ("string", "When its fetch started (ISO 8601, UTC)."),
+                },
+            },
         },
     },
     "manifest": {
@@ -145,10 +156,10 @@ def _file(path: str, spec: dict) -> dict:
             "required": True,
             "description": description,
         }
-        if prop == "items":
+        if prop == "items" and "items" in spec:
             p["items"] = {"logicalType": "object", "properties": [{"name": n} for n in spec["items"]]}
         props.append(p)
-    return {"name": "parked", "physicalName": path, "physicalType": "file", "description": spec["description"],
+    return {"name": spec.get("name", "parked"), "physicalName": path, "physicalType": "file", "description": spec["description"],
             "properties": props}  # fmt: skip
 
 

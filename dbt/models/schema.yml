@@ -21,10 +21,12 @@ models:
         description: >-
           ok (the catalog was read); error (any failure or block, retried in later passes); unavailable (the store
           is closed, deactivated or password-protected, or its robots.txt disallows the whole site: not retried
-          that run, and left out of run_ok_rate and adapter_ok_rate).
+          that run, and left out of run_ok_rate and adapter_ok_rate); crashed (not fetched: quarantined for the
+          week after it was in flight in two attempts of its crawl that died, crashguard; not retried that week,
+          and left out of run_ok_rate and adapter_ok_rate).
         data_tests:
           - not_null
-          - accepted_values: {arguments: {values: [ok, error, unavailable]}}
+          - accepted_values: {arguments: {values: [ok, error, unavailable, crashed]}}
       - name: error
         description: The failure, for a status other than ok.
       - name: products
@@ -55,7 +57,7 @@ models:
       - name: adapter
         description: The catalog adapter used (stg_fetches.adapter).
       - name: status
-        description: ok, error or unavailable (stg_fetches.status).
+        description: ok, error, unavailable or crashed (stg_fetches.status).
       - name: error
         description: The failure message, for a status other than ok (stg_fetches.error).
       - name: products
@@ -143,6 +145,11 @@ models:
         description: >-
           The store was found closed in the run (fetch status unavailable) and no attempt was ok. Such a run says
           nothing about whether the crawl worked.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          The store was quarantined in the run (fetch status crashed: in flight in two attempts of its crawl that
+          died) and no attempt was ok. One store's problem, not the platform's: left out of the ok rates.
         data_tests: [not_null]
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
@@ -277,8 +284,8 @@ models:
         description: The adapter that counts for it in adapter_ok_rate.
       - name: has_catalog
         description: >-
-          It counts in run_ok_rate and adapter_ok_rate: not a roaster known to have no catalog, and not one found
-          closed in this run (unavailable).
+          It counts in run_ok_rate and adapter_ok_rate: not a roaster known to have no catalog, not one found
+          closed in this run (unavailable), and not one quarantined in this run (quarantined).
         data_tests: [not_null]
       - name: catalog_ok
         description: The run fetched it and got products.
@@ -287,6 +294,11 @@ models:
         description: >-
           Found closed in this run (fetch status unavailable, no ok attempt): attempted, but left out of the ok
           rates.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          Quarantined in this run (fetch status crashed, no ok attempt): it crashed its crawl twice and wasn't
+          fetched. Attempted, but left out of the ok rates; mart_build_profile counts them (run_quarantined).
         data_tests: [not_null]
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'

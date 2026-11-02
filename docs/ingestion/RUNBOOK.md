@@ -55,10 +55,9 @@ every job then runs the same image, and the plan shows the change.
 **Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
 job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches.
 
-- **In production**, `terraform plan -var ingest_schedule_enabled=false` should show only `max_retries` going from 1
-  to 0 on the `crawl-*` jobs that don't have it yet (this commit sets it; the two Shopify crawl jobs may already have
-  it from `gcloud run jobs update --max-retries 0`; the `client`/`client_version` that update stamps are ignored).
-  Anything else: stop.
+- **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
+  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi. A plan
+  that shows anything else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -133,8 +132,8 @@ re-run one salt's arms on a different image: the thirds differ. Per-store window
 All three run today, once the image from §1 is built. The lake already has history (product counts), so v2's
 short-page stop works in every arm.
 
-**Before the first arm, turn retries off** for the two jobs (Terraform sets `max_retries = 0` for every crawl job from
-this commit on; this is the same setting, by hand, for an image built earlier):
+**Before the first arm, turn retries off** for the two jobs (Terraform sets `max_retries = 0` for Shopify's crawl jobs;
+this is the same setting, by hand, for an image built earlier):
 
 ```sh
 for j in crawl-shopify crawl-shopify-default-egress; do
@@ -378,10 +377,11 @@ scheduled job.
    Any `MISMATCH`: stop and pause the schedule (§5). Set `ingest_schedule_enabled = true` and
    `ingest_image = "<the pinned image>"` in `terraform.tfvars`, so a later plan doesn't revert either.
 3. **The first week to watch** (all UTC; DESIGN.md section 7 has the table): Mon 07:17 probe; Mon 09:17 all five
-   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 crawl-retry; Tue 03:17 merge;
+   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 the third pass (crawl-retry for
+   Shopify, each other connector's crawl again); Tue 03:17 merge;
    Tue 04:17 enrich-week; Tue 06:17 build; Tue 11:17 the site deploy. Monday's release is published Tuesday.
    - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
-   - the `job_manifests` rows: an attempt with only a `running` row died;
+   - the `job_manifests` rows: an attempt with only a `running` row died (section 7);
    - Tuesday's merge `detail.missing`: it should be empty;
    - the build's gate;
    - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row, and the owner
@@ -413,7 +413,7 @@ Each email names what failed and the first command to run.
 
 | Policy | Watches | Fires |
 |---|---|---|
-| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
 | `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
@@ -463,6 +463,65 @@ no change.
 **Roll back:** revert this PR's commit and plan and apply again (13 to destroy, 1 to change, the budget back to
 $5), or, to silence one policy at once, `gcloud alpha monitoring policies update <policy> --no-enabled` (the name is
 in the list above). The jobs, the schedule and the app don't change either way.
+
+## 7. When a crawl dies
+
+A crawl attempt that dies (OOM kill, segfault, an uncaught error) leaves a `running` row in `job_manifests` with no
+end row (an uncaught Python error writes a `failed` end row first), and its in-flight markers in the staging bucket
+(`gs://<project>-ingest-staging/raw/connector=X/run_date=W/_inflight/attempt=<id>/<roaster>.json`). What happens
+next, by itself (DESIGN.md section 7.1):
+
+1. **The non-Shopify crawls are retried at once** (`max_retries = 1`). The retry compacts what the dead attempt
+   wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time beside the others. It
+   stops starting roasters 225 minutes after the first attempt started, so it never overlaps 15:17. If it
+   succeeds, the execution succeeds and **no alert is sent**; the dead attempt is in `job_manifests`, and the
+   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's crawls aren't retried in place:
+   their next slot resumes.
+2. **A roaster in flight in two dead attempts is quarantined for the week**: the next attempt writes it a `fetches`
+   row with status `crashed` (its `error` names the two attempts) and doesn't ask it; every later pass of the week
+   skips it. Expect, for a true poison pill: the 09:17 attempt and its retry die, the execution fails (one email),
+   and the 15:17 resume quarantines it and crawls the rest.
+3. **Every connector gets a third pass at 21:47** (crawl-retry for Shopify, the connector's crawl job for the
+   others), and next week the roaster is fetched as usual.
+
+**Look at it:**
+
+```sh
+gcloud run jobs executions list --job crawl-generic --region $REGION --limit 5
+gcloud logging read 'resource.type="cloud_run_job" AND resource.labels.job_name="crawl-generic" AND
+  (textPayload:"memory limit" OR textPayload:"earlier attempt" OR severity>=ERROR)' --limit 50 --freshness 1d
+gcloud storage ls "gs://$PROJECT-ingest-staging/raw/connector=generic/run_date=$WEEK/_inflight/**"
+```
+
+and, in the lake (as §3 queries it):
+
+```sql
+-- the week's attempts per connector: an attempt whose latest row is `running` died
+select connector, attempt_id, started_at, status, json_extract(detail, '$.dead_attempts') as dead,
+       json_extract(detail, '$.quarantined') as quarantined
+from job_manifests where run_date = '2026-11-02' and job in ('crawl', 'crawl-retry')
+qualify row_number() over (partition by attempt_id order by (status <> 'running') desc) = 1 order by started_at;
+-- quarantined roasters (before Tuesday's merge, the rows are in the connector's partition in the staging bucket)
+select roaster_id, adapter, fetched_at, error from fetches where run_date = '2026-11-02' and status = 'crashed';
+```
+
+**Memory:** "The configured memory limit was reached" and signal 9 in the logs is an OOM kill. To change a job's
+memory, set it in `terraform.tfvars` and apply (`ingest_job_memory = { "crawl-woocommerce" = "4Gi" }`; up to 8Gi
+with 2 vCPU). A `gcloud run jobs update <job> --memory` by hand is reverted by the next apply unless
+`ingestion.tf` or `ingest_job_memory` says the same.
+
+**Un-quarantine a roaster** (once you know why it crashed, or think it was a bystander): fetch it by hand, alone,
+in its connector's job. The quarantine only lasts the week; next Monday it is fetched as usual.
+
+```sh
+gcloud run jobs execute crawl-generic --region $REGION --wait   --args=crawl,--connector,generic,--only,<roaster_id>
+```
+
+`--only` fetches that roaster even though it is done (`crashed`) this week. If it succeeds, its `ok` row counts for
+the run (a run is ok when any attempt is). If it kills that execution too, nothing else was in flight: it is the
+cause. Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
+To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
+`gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
 
 ## Cost
 

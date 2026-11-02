@@ -15,7 +15,7 @@ import heapq
 import json
 import logging
 import time
-from collections import Counter
+from collections import Counter, deque
 from collections.abc import Iterator, Sequence
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor
 from concurrent.futures import wait as wait_any
@@ -25,7 +25,7 @@ from pathlib import Path
 
 import httpx
 
-from . import lineage, registry
+from . import crashguard, lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
 from .http import BLOCK_STATUSES, FetchError, PoliteClient, RequestStats, Unavailable, egress_ip
@@ -110,6 +110,15 @@ class Result:
     blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
     unavailable: bool = False  # the store is closed, deactivated or password-protected (http.Unavailable)
     progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
+    # not fetched: in flight in 2 dead attempts this week (crashguard); its fetches status is `crashed`
+    quarantined: bool = False
+
+    @property
+    def status(self) -> str:
+        """Its fetches status (lake.FETCH_STATUSES)."""
+        if self.quarantined:
+            return crashguard.CRASHED
+        return "unavailable" if self.unavailable else "error" if self.error else "ok"
 
 
 def ingest_one(
@@ -137,10 +146,31 @@ def ingest_one(
     return res
 
 
-def _attempt(client: PoliteClient, roaster: Roaster, resume: dict | None, known: int | None) -> Result:
-    if resume is None and known is None:
-        return ingest_one(client, roaster)
-    return ingest_one(client, roaster, resume, known)
+def _attempt(
+    client: PoliteClient,
+    roaster: Roaster,
+    resume: dict | None,
+    known: int | None,
+    guard: crashguard.Guard | None = None,
+) -> Result:
+    """One roaster's fetch, in a worker. Its in-flight marker (guard) is written when the worker starts it, not when
+    it is queued (every roaster is queued at once), and removed when it returns: only the fetches actually running
+    when the process dies are left marked."""
+    if guard is not None:
+        guard.start(roaster.roaster_id)
+    try:
+        if resume is None and known is None:
+            res = ingest_one(client, roaster)
+        else:
+            res = ingest_one(client, roaster, resume, known)
+    except Exception:  # contained by run(): the fetch returned, with an error
+        if guard is not None:
+            guard.end(roaster.roaster_id)
+        raise
+    # A BaseException (SystemExit, an interpreter-level kill) leaves the marker, as an OOM kill or segfault does.
+    if guard is not None:
+        guard.end(roaster.roaster_id)
+    return res
 
 
 def known_products(lake: Lake) -> dict[str, int]:
@@ -202,12 +232,12 @@ def select_states(
 
 
 def _done_and_tried(lake: Lake, run_date: str) -> tuple[set[str], set[str]]:
-    """This run's roasters done (fetched, or found closed: unavailable, so asking again won't help until next week)
-    and tried at all."""
+    """This run's roasters done (fetched; found closed: unavailable, so asking again won't help until next week; or
+    quarantined after crashing two attempts: crashed) and tried at all."""
     con = lake.connect()
     q = f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ?"
     d = [date.fromisoformat(run_date)]
-    done = {r[0] for r in con.execute(q + " and status in ('ok', 'unavailable')", d).fetchall()}
+    done = {r[0] for r in con.execute(q + " and status in ('ok', 'unavailable', 'crashed')", d).fetchall()}
     tried = {r[0] for r in con.execute(q, d).fetchall()}
     return done, tried
 
@@ -218,11 +248,18 @@ def _known_bodies(lake: Lake) -> set[str]:
     return {r[0] for r in lake.connect().execute(q).fetchall()}
 
 
-def select_parked(lake: Lake, run_date: str) -> tuple[list[registry.RoasterState], dict[str, dict]]:
-    """crawl-retry's work: the run's parked stores still without an ok fetch, and their progress."""
+def select_parked(
+    lake: Lake, run_date: str, adapter: str | None = None
+) -> tuple[list[registry.RoasterState], dict[str, dict]]:
+    """crawl-retry's work: the run's parked stores still without an ok fetch (of `adapter`'s roasters, when given:
+    the parked folder is shared by every connector's partition), and their progress."""
     resume = load_parked(lake, run_date)
     done, _ = retry_transient(_done_and_tried, lake, run_date)  # crawl-retry's first lake read: retried
-    states = [s for s in registry.current(lake) if s.roaster.roaster_id in resume.keys() - done]
+    states = [
+        s
+        for s in registry.current(lake)
+        if s.roaster.roaster_id in resume.keys() - done and (adapter is None or s.roaster.adapter == adapter)
+    ]
     return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
 
 
@@ -271,7 +308,7 @@ def rows_for(
                 "fetched_at": res.fetched_at,
                 "roaster_id": r.roaster_id,
                 "adapter": r.adapter,
-                "status": "unavailable" if res.unavailable else "error" if res.error else "ok",
+                "status": res.status,
                 "error": res.error,
                 "products": len(res.items),
                 "coffees": None,
@@ -319,13 +356,21 @@ def run(
     deadline_s: float | None = None,
     resume: dict[str, dict] | None = None,
     platform_rps: dict[str, float] | None = None,
+    guard: crashguard.Guard | None = None,
+    suspects: set[str] | frozenset[str] = frozenset(),
+    quarantine: dict[str, str] | None = None,
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
     a remote lake, before the first request. Only a 'full' manifest is the run's expected set (run_completeness);
     without a mode it is recorded as null, which only adds to that set. resume: parked stores' progress
     (load_parked), so crawl-retry continues each from its blocked page. deadline_s: seconds from now after which no
-    new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up)."""
+    new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up).
+
+    The poison-pill guard (crashguard, from connectors.crawl): guard records each roaster in flight; suspects are
+    fetched one at a time, beside the other workers; quarantine (roaster -> error) gets a `crashed` fetches row,
+    written before the first request, instead of a fetch. An exception from one roaster's fetch is that roaster's
+    error, never the run's."""
     deadline = None if deadline_s is None else time.monotonic() + deadline_s
     skipped = 0
     statuses = {r.roaster.roaster_id: r.status for r in todo if isinstance(r, registry.RoasterState)}
@@ -337,6 +382,15 @@ def run(
         "run_manifests", run_date, manifest, manifest_rows(roasters, rd, manifest, statuses, mode, version)
     )
     lake.publish(f"ingest {run_date} manifest {manifest}")  # kept even if the job dies before its first chunk
+    quarantine = {
+        rid: why for rid, why in (quarantine or {}).items() if rid in {r.roaster_id for r in roasters}
+    }
+    held_out = [Result(r, datetime.now(UTC).replace(microsecond=0), error=quarantine[r.roaster_id][:300],
+                       quarantined=True) for r in roasters if r.roaster_id in quarantine]  # fmt: skip
+    # suspects first, so the lane starts on them at once
+    queue_all = sorted(
+        (r for r in roasters if r.roaster_id not in quarantine), key=lambda r: r.roaster_id not in suspects
+    )
     known_bodies = retry_transient(_known_bodies, lake)  # the widest scan a crawl makes: retried
     known = known_products(lake)
     stats: Counter = Counter()
@@ -360,6 +414,10 @@ def run(
             a["roasters"] += 1
             a["errors"] += bool(res.error)
             a["with_products"] += bool(res.items)
+            if res.quarantined:  # never asked: no request, no first contact
+                a["quarantined"] += 1
+                failures.append(f"{res.roaster.roaster_id}: {res.error}")
+                continue
             stats["products"] += len(res.items)
             stats["requests"] += res.stats.requests
             stats["http_429"] += res.stats.statuses.get(429, 0)
@@ -398,6 +456,8 @@ def run(
         for name, rps in (platform_rps or {}).items()
         if name != "shopify"
     }
+    if held_out:
+        flush(held_out)
     deferred: dict[str, int] = {}
     retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
@@ -413,7 +473,24 @@ def run(
         rounds = DEFERRED_ROUNDS + 1 if per_host else 1
         progress: dict[str, dict] = {k: v | {"backoffs": 0} for k, v in (resume or {}).items()}
         page_stats: Counter = Counter()
-        queue = roasters
+        queue = queue_all
+        futures: dict = {}  # future -> its roaster
+        done: list[Result] = []
+        running: set = set()
+
+        def launch(r: Roaster) -> None:
+            nonlocal done
+            if any(d.roaster.roaster_id == r.roaster_id for d in done):
+                # its blocked try's error row goes to the lake before the retry, so a job that dies
+                # meanwhile still shows the store attempted (run_is_complete)
+                flush(done)
+                done = []
+            p = progress.get(r.roaster_id)
+            resume_at = p and {"page": p["page"], "items": p["items"]}
+            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard)
+            futures[fut] = r
+            running.add(fut)
+
         for round_ in range(rounds):
             if round_:
                 shopify.defer = False  # nothing left to overtake: wait out a store's pause in the worker
@@ -424,9 +501,11 @@ def run(
             pending = [(t0 + spread * i / len(queue), i, r) for i, r in enumerate(queue)]
             heapq.heapify(pending)
             order = len(pending)
-            running: set = set()
+            running = set()
             parked: list[Roaster] = []
-            done: list[Result] = []
+            done = []
+            lane: str | None = None  # the suspect being fetched; the others wait in `held`
+            held: deque[Roaster] = deque()
             while pending or running:
                 now = time.monotonic()
                 if deadline is not None and now >= deadline and pending:
@@ -441,16 +520,16 @@ def run(
                         else:
                             skipped += 1
                     pending = []
+                    skipped += len(held)  # suspects still waiting for the lane: never started
+                    held.clear()
                 while pending and pending[0][0] <= now:
                     r = heapq.heappop(pending)[2]
-                    if any(d.roaster.roaster_id == r.roaster_id for d in done):
-                        # its blocked try's error row goes to the lake before the retry, so a job that dies
-                        # meanwhile still shows the store attempted (run_is_complete)
-                        flush(done)
-                        done = []
-                    p = progress.get(r.roaster_id)
-                    resume_at = p and {"page": p["page"], "items": p["items"]}
-                    running.add(ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id)))
+                    if r.roaster_id in suspects:
+                        if lane is not None:
+                            held.append(r)
+                            continue
+                        lane = r.roaster_id
+                    launch(r)
                 timeout = max(0.0, pending[0][0] - now) if pending else None
                 # wake at the deadline, not after a long backoff
                 if timeout is not None and deadline is not None:
@@ -460,8 +539,22 @@ def run(
                     continue
                 finished, running = wait_any(running, timeout=timeout, return_when=FIRST_COMPLETED)
                 for fut in finished:
-                    res = fut.result()
+                    r = futures.pop(fut)
+                    try:
+                        res = fut.result()
+                    except Exception as e:  # noqa: BLE001 - one roaster's failure, never the run's
+                        log.exception("%s: its fetch raised", r.roaster_id)
+                        res = Result(
+                            r,
+                            datetime.now(UTC).replace(microsecond=0),
+                            error=f"{type(e).__name__}: {e}"[:300],
+                        )
                     rid = res.roaster.roaster_id
+                    if rid == lane:
+                        lane = None
+                        if held and (deadline is None or time.monotonic() < deadline):
+                            lane = held[0].roaster_id
+                            launch(held.popleft())
                     if round_:
                         retried_ok[rid] = not res.error
                     if res.error and res.blocked and not res.stats.pages and (not round_ or rid in refusing):
@@ -508,6 +601,8 @@ def run(
                     if len(done) == CHUNK:
                         flush(done)
                         done = []
+            skipped += len(held)  # suspects the lane never reached before the deadline
+            held.clear()
             if done:
                 flush(done)
             queue = parked
@@ -523,6 +618,7 @@ def run(
         "products": stats["products"],
         "by_adapter": {k: dict(v) for k, v in sorted(by_adapter.items())},
         "failures": failures[:50],
+        "quarantined": sorted(quarantine),  # not fetched: a `crashed` row each (crashguard)
         "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
         "deferred": deferred,  # roasters per deferred round, and those still failing after them
         "skipped_deadline": skipped,  # not started: the deadline passed first

@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.2.0
+version: 1.3.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -227,11 +227,13 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: ok; error (any failure or block, retried in later passes); unavailable (closed store).
+    description: 'ok; error (any failure or block, retried in later passes); unavailable (closed store); crashed (not fetched:
+      quarantined for the week after it was in flight in two attempts of its crawl that died).'
     enum:
     - value: ok
     - value: error
     - value: unavailable
+    - value: crashed
   - name: error
     logicalType: string
     physicalType: string
@@ -399,7 +401,7 @@ schema:
     - property: enforcedBy
       value: dbt run_is_complete
   - id: run_ok_rate
-    description: the run's overall ok share is above its floor (unavailable stores left out).
+    description: the run's overall ok share is above its floor (unavailable and crashed stores left out).
     type: custom
     engine: dbt
     implementation: tests/run_ok_rate.sql
@@ -409,7 +411,7 @@ schema:
     - property: enforcedBy
       value: dbt run_ok_rate
   - id: adapter_ok_rate
-    description: each adapter's ok share is above its floor (unavailable stores left out).
+    description: each adapter's ok share is above its floor (unavailable and crashed stores left out).
     type: custom
     engine: dbt
     implementation: tests/adapter_ok_rate.sql
@@ -462,6 +464,22 @@ schema:
       - name: url
       - name: variants
       - name: vendor
+- name: inflight
+  physicalName: raw/connector=<name>/run_date=<week>/_inflight/attempt=<attempt_id>/<roaster_id>.json
+  physicalType: file
+  description: 'A roaster in flight in a crawl attempt (crashguard): written before its fetch, removed when it returns,
+    and the attempt''s folder removed when it ends normally. The folder of an attempt without a done or deadline end row
+    holds the roasters in flight when it died; the next attempt of the week quarantines one found in two such folders (fetches.status
+    crashed).'
+  properties:
+  - name: roaster_id
+    logicalType: string
+    required: true
+    description: The roaster (also the file name).
+  - name: started_at
+    logicalType: string
+    required: true
+    description: When its fetch started (ISO 8601, UTC).
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -492,6 +510,6 @@ customProperties:
   - enrichment job
   - registry
 - property: interfaceFingerprint
-  value: 477079ada4e92ece
+  value: 560b0ef50859167c
 - property: docsFingerprint
-  value: feb56dc826ba3573
+  value: 3025a2c4f3d3a8e0

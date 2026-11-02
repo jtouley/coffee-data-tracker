@@ -36,6 +36,16 @@ variable "verdict_model" {
   default     = ""
 }
 
+variable "ingest_job_memory" {
+  description = "Per-job memory overrides, e.g. { \"crawl-woocommerce\" = \"4Gi\" }: a job named here gets this limit instead of its default in local.ingest_jobs. With 2 vCPU, Cloud Run allows 1Gi to 8Gi."
+  type        = map(string)
+  default     = {}
+  validation {
+    condition     = alltrue([for v in values(var.ingest_job_memory) : can(regex("^[0-9]+(Mi|Gi)$", v))])
+    error_message = "Each value is a Cloud Run memory size such as 2Gi or 4096Mi."
+  }
+}
+
 variable "ingest_subnet_cidr" {
   description = "The Shopify egress subnet (Direct VPC egress needs at least a /26)."
   type        = string
@@ -46,42 +56,52 @@ locals {
   ingest_image = var.ingest_image != "" ? var.ingest_image : "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/ingest:${var.ingest_image_tag}"
   staging      = "/mnt/staging" # COFFEEDATA_STAGING: raw/ and parked/ persist here (GCS) between jobs
 
-  # name => what it runs, whether it leaves through the NAT IP, whether it needs the Claude key, its size.
+  # name => what it runs, whether it leaves through the NAT IP, whether it needs the Claude key, its memory (default;
+  # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
+  # Retries: 1 for every job but Shopify's crawls. A crawl that dies (OOM kill, crash) is retried at once, and the
+  # retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already done this week, fetches the
+  # dead attempt's in-flight roasters one at a time and quarantines one that killed two attempts (crashguard), and it
+  # stops inside the first attempt's window (connectors._window_left), so it never overlaps the next slot. A crawl
+  # stopped by its deadline exits 0 and is never retried. Shopify's crawls stay at 0: a retry straight after a
+  # failure would re-ask the stores that just refused, on the one NAT IP; their next slot (15:17, 21:47) resumes.
   ingest_jobs = {
     # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
     # run, weekly before the crawls. Both publish what they recorded.
     "discover" = {
       command = ["sh", "-c"]
       args    = ["coffeedata discover overture; coffeedata discover osm; coffeedata publish --message \"discover\""]
-      nat     = false, claude = false, memory = "4Gi"
+      nat     = false, claude = false, memory = "4Gi", retries = 1
     }
     "probe" = {
       command = ["sh", "-c"]
       args    = ["coffeedata probe --stale-days 28 && coffeedata publish --message \"probe\""]
-      nat     = false, claude = false, memory = "2Gi"
+      nat     = false, claude = false, memory = "2Gi", retries = 1
     }
-    "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi" }
-    "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = false, claude = false, memory = "2Gi" }
-    "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi" }
-    "crawl-squarespace"            = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], nat = false, claude = false, memory = "2Gi" }
-    "crawl-woocommerce"            = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], nat = false, claude = false, memory = "2Gi" }
-    "crawl-square-online"          = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi" }
-    "crawl-generic"                = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "2Gi" }
-    "merge"                        = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi" }
-    "enrich-week"                  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi" }
+    "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi", retries = 0 }
+    "crawl-shopify-default-egress" = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], nat = false, claude = false, memory = "2Gi", retries = 0 }
+    "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], nat = true, claude = false, memory = "2Gi", retries = 0 }
+    "crawl-squarespace"            = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], nat = false, claude = false, memory = "2Gi", retries = 1 }
+    "crawl-woocommerce"            = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], nat = false, claude = false, memory = "2Gi", retries = 1 }
+    "crawl-square-online"          = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], nat = false, claude = false, memory = "2Gi", retries = 1 }
+    # 8Gi: OOM-killed at 2Gi on 2026-11-02 (about 7 min in); the owner raised it by hand (gcloud run jobs update).
+    "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "8Gi", retries = 1 }
+    "merge"         = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi", retries = 1 }
+    "enrich-week"   = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
     # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution, which emails the
     # owner (alerts.tf, ingest_job_failed).
     "build" = {
       command = ["sh", "-c"]
       args    = ["coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
-      nat     = false, claude = true, memory = "8Gi"
+      nat     = false, claude = true, memory = "8Gi", retries = 1
     }
   }
 
   # B's slots, anchored at the weekly baseline (Monday 09:17 UTC, as .github/workflows/weekly.yml): every connector's
-  # job at once, each on its own instance (only Shopify's on the NAT), then each one's resume 6 h later; the Shopify
-  # parked-store retry that evening; Tuesday merge, enrichment, build. The release is stamped Monday and published
+  # job at once, each on its own instance (only Shopify's on the NAT), then each one's resume 6 h later; a third pass
+  # that evening for every connector (Shopify: crawl-retry, its parked stores, on the NAT; the others: their own crawl
+  # job again, which resumes and retries every roaster without an ok fetch, on default egress); Tuesday merge,
+  # enrichment, build. The release is stamped Monday and published
   # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
   ingest_schedule = {
     "discover"                   = { job = "discover", cron = "17 3 1 * *" } # the 1st of each month
@@ -97,6 +117,10 @@ locals {
     "crawl-square-online-resume" = { job = "crawl-square-online", cron = "17 15 * * 1" }
     "crawl-generic"              = { job = "crawl-generic", cron = "17 9 * * 1" }
     "crawl-generic-resume"       = { job = "crawl-generic", cron = "17 15 * * 1" }
+    "crawl-squarespace-retry"    = { job = "crawl-squarespace", cron = "47 21 * * 1" }
+    "crawl-woocommerce-retry"    = { job = "crawl-woocommerce", cron = "47 21 * * 1" }
+    "crawl-square-online-retry"  = { job = "crawl-square-online", cron = "47 21 * * 1" }
+    "crawl-generic-retry"        = { job = "crawl-generic", cron = "47 21 * * 1" }
     "merge"                      = { job = "merge", cron = "17 3 * * 2" }
     "enrich-week"                = { job = "enrich-week", cron = "17 4 * * 2" }
     "build"                      = { job = "build", cron = "17 6 * * 2" }
@@ -217,9 +241,8 @@ resource "google_cloud_run_v2_job" "ingest" {
     template {
       service_account = google_service_account.ingest.email
       timeout         = "14400s" # 240 min, the limit every design was held to
-      # A crawl never retries in place: a deadline exits 0, and a second attempt would re-ask the stores that already
-      # refused in the same window. Its resume slot (or crawl-retry) picks up what is left. Other jobs retry once.
-      max_retries = startswith(each.key, "crawl") ? 0 : 1
+      # local.ingest_jobs says why: Shopify's crawls 0, everything else 1 (a crawl's deadline exits 0, never retried).
+      max_retries = each.value.retries
 
       dynamic "vpc_access" {
         for_each = each.value.nat ? [1] : []
@@ -247,7 +270,7 @@ resource "google_cloud_run_v2_job" "ingest" {
         resources {
           limits = {
             cpu    = "2"
-            memory = each.value.memory
+            memory = lookup(var.ingest_job_memory, each.key, each.value.memory)
           }
         }
         volume_mounts {

@@ -2,6 +2,7 @@
 # src/coffeedata/raw_contracts.py. A version's interface never changes; a new interface needs a new version.
 raw:
   1.2.0: 477079ada4e92ece
+  1.3.0: 560b0ef50859167c
 manifest:
   1.1.0: d775e9935559e256
 enrichment:

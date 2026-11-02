@@ -34,6 +34,10 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
 MAX_REDIRECTS = 20
+# The most body one response may bring into memory, decompressed (COFFEEDATA_MAX_RESPONSE_MB, default 32 MiB). A
+# catalog page, a product page or a sitemap is far below it; a video or a runaway page at a product URL is not, and
+# fails that roaster's fetch (ResponseTooLarge) instead of the job's memory (crawl-generic's OOM kill, 2026-11-02).
+MAX_RESPONSE_BYTES = int(float(os.environ.get("COFFEEDATA_MAX_RESPONSE_MB") or 32) * 2**20)
 
 
 # A refusal or block. Each one is recorded with the headers Shopify Support asks for (and that tell a Cloudflare
@@ -83,6 +87,11 @@ class FetchError(Exception):
     def __init__(self, *args: object, status: int | None = None) -> None:
         super().__init__(*args)
         self.status = status
+
+
+class ResponseTooLarge(FetchError):
+    """A response body over the client's max_response_bytes (said by its content-length, or counted as it was read,
+    decompressed). Not an httpx.HTTPError: it is never retried, and it fails the roaster's fetch."""
 
 
 class Blocked(FetchError):
@@ -183,8 +192,10 @@ class PoliteClient:
         retries: int = 3,
         transport: httpx.BaseTransport | None = None,
         limiters: dict[str, PlatformLimiter] | None = None,
+        max_response_bytes: int | None = None,
     ):
         self.min_interval = min_interval
+        self.max_response_bytes = max_response_bytes or MAX_RESPONSE_BYTES
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
         self.limiters = limiters or {}
         self._limiter: PlatformLimiter | None = None
@@ -246,10 +257,34 @@ class PoliteClient:
 
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
-            return self._client.get(url, params=params)
+            return self._read(
+                self._client.send(self._client.build_request("GET", url, params=params), stream=True)
+            )
         with self._limiter.slot(urlparse(url).hostname):
-            r = self._client.get(url, params=params)
+            r = self._client.send(self._client.build_request("GET", url, params=params), stream=True)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
+            return self._read(r)
+
+    def _read(self, r: httpx.Response) -> httpx.Response:
+        """The streamed response's body, read up to max_response_bytes (ResponseTooLarge past it), and the response
+        freed as soon as its caller drops it: an httpx response refers to itself through its stream (a reference
+        cycle), so without this every body waited for Python's full garbage collection, and 32 workers' pages piled
+        up between collections (2026-11-02: RSS grew across a generic crawl until the OOM kill)."""
+        cap = self.max_response_bytes
+        try:
+            size = r.headers.get("content-length", "")
+            if size.isdigit() and int(size) > cap:
+                raise ResponseTooLarge(f"response over {cap >> 20} MiB ({int(size)} bytes): {r.url}")
+            chunks, n = [], 0
+            for chunk in r.iter_bytes():
+                n += len(chunk)
+                if n > cap:
+                    raise ResponseTooLarge(f"response over {cap >> 20} MiB: {r.url}")
+                chunks.append(chunk)
+            r._content = b"".join(chunks)
+        finally:
+            r.close()
+            r.stream = httpx.ByteStream(b"")  # breaks the response <-> stream cycle
         return r
 
     def _allowed(self, url: str) -> bool:
