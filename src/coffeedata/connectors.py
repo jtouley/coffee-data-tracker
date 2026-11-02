@@ -11,8 +11,9 @@ Services, one job each, timed by Cloud Scheduler and coordinated only through th
   Running the same command again resumes: it skips roasters with an ok fetch this week and compacts again.
 - weekly merge (`coffeedata merge`): the connectors the control table says landed, unioned into one file per table
   under the week's run_date (fetches/run_date=<week>/batch=<id>.parquet, and so on): the raw-run shape dbt reads.
-  Rows keep their own batch_id and fetched_at; the merged partitions are removed; the week's control rows are
-  rolled into one file.
+  Rows keep their own batch_id and fetched_at; the merged partitions' files move, unchanged, to
+  archive/raw/connector=<name>/run_date=<week>/merge=<batch>/ (a bucket lifecycle rule deletes them after 30 days,
+  and nothing else reads archive/); the week's control rows are rolled into one file.
 - post-load enrichment (`coffeedata enrich-week`): after the merge, Claude's candidates from the raw rows.
 - weekly build + gate, then publish: the existing `build` and `publish` steps.
 """
@@ -118,6 +119,23 @@ class PartitionLake(Lake):
 def _partition_files(part: Path, table: str) -> list[Path]:
     one = part / f"{table}.parquet"
     return ([one] if one.exists() else []) + sorted((part / "_parts" / table).glob("*.parquet"))
+
+
+def archive(lake: Lake, part: Path, batch: str) -> Path:
+    """Where the merge `batch` keeps a connector partition's merged files: archive/ + the partition's own path +
+    merge=<batch>, in the same bucket. No reader globs archive/ (dbt, resume, the merge and the post-crawl check all
+    read raw/), and the staging bucket's lifecycle rule deletes it 30 days after the merge (src/terraform)."""
+    return lake.root / "archive" / part.relative_to(lake.root) / f"merge={batch}"
+
+
+def _archive_files(part: Path, files: list[Path], dest: Path) -> None:
+    """Move a partition's files to dest by rename, at the same relative paths, so their bytes are the ones the merge
+    read. On GCSFuse a rename is a copy and a delete (no chmod or utime, which GCSFuse refuses): the archived object
+    is new, so the lifecycle rule's age starts at the merge."""
+    for f in files:
+        to = dest / f.relative_to(part)
+        to.parent.mkdir(parents=True, exist_ok=True)
+        os.replace(f, to)
 
 
 def _write_table(path: Path, tbl: pa.Table) -> None:
@@ -361,8 +379,12 @@ def merge(lake: Lake, day: str) -> dict:
         compact(p)
     batch = new_batch_id()
     written = {}
+    merged: dict[str, list[Path]] = {c: [] for c in present}  # the files read, archived as they are
     for table in RAW_TABLES:
-        tbl = _read([f for p in present.values() for f in _partition_files(p, table)], table)
+        files = {c: _partition_files(p, table) for c, p in present.items()}
+        for c, fs in files.items():
+            merged[c] += fs
+        tbl = _read([f for fs in files.values() for f in fs], table)
         if table == "run_manifests" and missing:
             # A connector whose job never landed still belongs to the week's expected set: its roasters show up in
             # run_completeness as not attempted, instead of the run looking complete without them.
@@ -389,8 +411,9 @@ def merge(lake: Lake, day: str) -> dict:
             raise FileExistsError(path)
         _write_table(path, new)
         written[table] = new.num_rows
-    for p in present.values():  # the week's data now lives in the lake's tables; resumes read it from there
-        shutil.rmtree(p)
+    for c, p in present.items():  # the week's data now lives in the lake's tables; resumes read it from there
+        _archive_files(p, merged[c], archive(lake, p, batch))  # kept 30 days, out of every reader's way
+        shutil.rmtree(p)  # anything left was never merged (an arm's slice=*/)
         if not any(p.parent.iterdir()):
             p.parent.rmdir()
     control.finish(lake, job, "done", detail={"batch": batch, "written": written, "missing": missing,

@@ -47,6 +47,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Changed
 
+- The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
+  move, unchanged, to `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket, where nothing
+  else reads, and a lifecycle rule on the bucket deletes `archive/` objects 30 days after the merge. The RUNBOOK
+  says how to recover a week from it.
 - The weekly crawl runs on Cloud Run instead of a GitHub Actions schedule. The `weekly` workflow stays as a manual
   fallback. The crawl runs on Monday, and the `site` workflow publishes the site, the public export and the
   Snowflake load on Tuesday (#74).

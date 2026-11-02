@@ -195,7 +195,7 @@ resource "google_compute_router_nat" "shopify_egress" {
   }
 }
 
-# --- Where raw/ and parked/ live between jobs (never published to HF; the merge empties raw/) ----------------------
+# --- Where raw/ and parked/ live between jobs (never published to HF; the merge moves raw/ to archive/) ------------
 
 resource "google_storage_bucket" "ingest_staging" {
   name                        = "${var.project_id}-ingest-staging"
@@ -204,6 +204,19 @@ resource "google_storage_bucket" "ingest_staging" {
   public_access_prevention    = "enforced"
   force_destroy               = false
   depends_on                  = [google_project_service.ingest_apis]
+
+  # The merge moves each merged connector partition to archive/raw/... (connectors.archive), which nothing reads:
+  # kept 30 days to recover a week from (RUNBOOK §5), then deleted. An object's age counts from its creation, and
+  # GCSFuse renames by copy and delete, so the 30 days start at the merge. Nothing outside archive/ is touched.
+  lifecycle_rule {
+    condition {
+      age            = 30
+      matches_prefix = ["archive/"]
+    }
+    action {
+      type = "Delete"
+    }
+  }
 }
 
 # --- The account the jobs run as, and the one Cloud Scheduler calls them with --------------------------------------
