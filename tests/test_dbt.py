@@ -496,7 +496,8 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)" in bot
     assert "on Mondays" in bot and "Crawl-delay" in bot and "up to 60 seconds" in bot and "Retry-After" in bot
     assert "User-agent: RegistryCoffeeBot\nDisallow: /" in bot
-    assert 'href="https://github.com/jtouley/coffee-data-tracker/issues/new?template=add-roaster.yml"' in bot
+    # opt-out is robots.txt or email: the issue form only acts on the owner's own issues (issue-forms.yml)
+    assert "add-roaster.yml" not in bot and "at least 1 second apart" in bot and "platform" in bot
     assert 'href="mailto:support@registry.coffee"' in bot
     assert 'href="bot/"' in landing and 'href="../bot/"' in (out / "privacy" / "index.html").read_text()
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())

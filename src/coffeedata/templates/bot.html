@@ -16,8 +16,10 @@
 
 <h2>What we crawl</h2>
 <ul>
-  <li>Public product catalogs only, such as a shop's <code>/products.json</code> feed or its product pages: names,
+  <li>Public product catalogs, such as a shop's <code>/products.json</code> feed or its product pages: names,
     prices, sizes and stock, the facts a shopper can see.</li>
+  <li>To find which shop platform a store runs on, its home page and a one-product request to its catalog feed. We
+    do this for new stores, and again for a store when that answer is out of date.</li>
   <li>Once a week, on Mondays.</li>
   <li>Never a login, checkout, account or anything behind a password or a challenge.</li>
 </ul>
@@ -25,7 +27,7 @@
 <h2>How we crawl</h2>
 <ul>
   <li>We read your robots.txt first, and don't fetch anything it disallows. If it answers with a server error, or not at all, we don't crawl until it answers.</li>
-  <li>Requests to one store are spaced at least 1 second apart.</li>
+  <li>Every request to one store, including the platform check, is spaced at least 1 second apart.</li>
   <li>We honour a robots.txt <code>Crawl-delay</code> up to 60 seconds between requests. If you want slower crawling
     than that, email <a href="mailto:{{ contact }}">{{ contact }}</a>.</li>
   <li>We honour <code>Retry-After</code>, and stop and come back later when a store answers 429 or 503.</li>
@@ -36,9 +38,8 @@
   <li>Add a rule to your robots.txt. We read it at the start of every weekly crawl:
     <pre><code>User-agent: RegistryCoffeeBot
 Disallow: /</code></pre></li>
-  <li>Or email <a href="mailto:{{ contact }}">{{ contact }}</a>, or use the
-    <a href="{{ links.add_roaster }}">"Add a roaster" form</a> and tick "Opt out". An opted-out store is never fetched
-    again, and its coffees drop out of every public table.</li>
+  <li>Or email <a href="mailto:{{ contact }}">{{ contact }}</a>. We record the opt-out, and from then on the store
+    is never fetched again and its coffees drop out of every public table.</li>
 </ul>
 
 <h2>Contact</h2>

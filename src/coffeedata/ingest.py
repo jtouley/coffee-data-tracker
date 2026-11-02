@@ -533,8 +533,12 @@ def run(
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
     with (
-        # the deadline also bounds a host's Crawl-delay: no worker waits one out past it (http.DeadlineReached)
-        PoliteClient(limiters=limiters, **({"deadline_s": deadline_s} | (client_kw or {}))) as client,
+        # the deadline also bounds a host's Crawl-delay: no worker waits one out past it (http.DeadlineReached). It is
+        # the run's deadline, counted from the run's start, not from now (after the manifest and the lake scans).
+        PoliteClient(
+            limiters=limiters,
+            **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),
+        ) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round

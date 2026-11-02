@@ -6,17 +6,17 @@ import contextlib
 import copy
 import email.utils
 import logging
+import math
 import os
 import re
 import threading
 import time
-import urllib.robotparser
 from collections import Counter
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, unquote, urljoin, urlparse
 
 import httpx
 
@@ -273,13 +273,15 @@ class NotCatalog(FetchError):
 @dataclass
 class _RobotsGroup:
     agents: list[str] = field(default_factory=list)
-    rules: list[str] = field(default_factory=list)  # its allow and disallow lines, as written
+    # its allow and disallow lines, as written: ("allow" | "disallow", path pattern)
+    rules: list[tuple[str, str]] = field(default_factory=list)
     delays: list[str] = field(default_factory=list)  # its Crawl-delay values, as written
 
 
 def _robots_groups(lines: Iterable[str]) -> list[_RobotsGroup]:
-    """robots.txt's groups, as urllib.robotparser reads them: consecutive user-agent lines start a group, and a
-    user-agent line after a rule line starts the next one. Lines before the first user-agent line are no group's."""
+    """robots.txt's groups (RFC 9309 2.2): consecutive user-agent lines start a group, and a user-agent line after a
+    rule line starts the next one. Other lines (Sitemap, unknown keys) don't end a group. Lines before the first
+    user-agent line are no group's."""
     groups: list[_RobotsGroup] = []
     group, in_rules = None, False
     for raw in lines:
@@ -298,49 +300,106 @@ def _robots_groups(lines: Iterable[str]) -> list[_RobotsGroup]:
             if key == "crawl-delay":
                 group.delays.append(value)
             elif key != "request-rate":
-                group.rules.append(f"{key}: {value}")
+                group.rules.append((key, value))
     return groups
 
 
 def _names(agent: str, token: str) -> bool:
-    """A user-agent line names this product token (RFC 9309: case-insensitive; a version after it is ignored)."""
-    m = re.match(r"[A-Za-z_-]+", agent.strip())
-    return m is not None and m.group().lower() == token.lower()
+    """A user-agent line names this product token: the whole token, case-insensitively (RFC 9309 2.2.1), optionally
+    followed by a version (`/1.0`) or a space. `RegistryCoffeeBot2` or `coffee-data.v2` is another crawler's."""
+    return re.fullmatch(rf"{re.escape(token)}(?:[/\s].*)?", agent.strip(), re.I | re.S) is not None
 
 
-def _delay_seconds(value: str) -> float | None:
-    """A Crawl-delay value in seconds, or None when it isn't a plain non-negative number."""
-    return float(value) if re.fullmatch(r"\d+(\.\d+)?", value) else None
+# Characters left as written when a path or pattern is normalized for comparison (RFC 9309 2.2.2: compare after
+# percent-encoding normalization): RFC 3986's reserved characters, which change a URL's meaning when encoded.
+_SAFE = "/?#[]@!$&'()*+,;=:~"
+
+
+def _normalize(path: str) -> str:
+    return quote(unquote(path), safe=_SAFE)
+
+
+@dataclass(frozen=True)
+class _Rule:
+    allow: bool
+    pattern: str  # normalized, as written otherwise; its length is its specificity (RFC 9309 2.2.2)
+    regex: re.Pattern[str]
+
+
+def _rule(kind: str, value: str) -> _Rule | None:
+    """An allow or disallow line; None for an empty one (`Disallow:` matches nothing). `*` matches any run of
+    characters and a final `$` anchors the end of the path (RFC 9309 2.2.3); the rest is a literal prefix."""
+    if not value:
+        return None
+    pattern = _normalize(value)
+    body, anchored = (pattern[:-1], True) if pattern.endswith("$") else (pattern, False)
+    regex = ".*".join(re.escape(part) for part in body.split("*")) + (r"\Z" if anchored else "")
+    return _Rule(kind == "allow", pattern, re.compile(regex, re.S))
+
+
+def _target(url: str) -> str:
+    """The part of a URL robots.txt rules match: its path and query, normalized ("/" for an empty path)."""
+    u = urlparse(url)
+    return _normalize((u.path or "/") + (f"?{u.query}" if u.query else ""))
+
+
+def _verdict(rules: list[_Rule], target: str) -> bool:
+    """RFC 9309 2.2.2: the matching rule with the longest pattern decides; on a tie between an allow and a disallow,
+    allow (the least restrictive). No matching rule allows."""
+    best: _Rule | None = None
+    for r in rules:
+        if r.regex.match(target) and (
+            best is None or (len(r.pattern), r.allow) > (len(best.pattern), best.allow)
+        ):
+            best = r
+    return best is None or best.allow
+
+
+# A Crawl-delay's leading number, as written: `10`, `2.5`, `.5`, `1e3` (then anything: `10s` is 10).
+_DELAY = re.compile(r"\s*(\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?")
+
+
+def _delay_seconds(value: str) -> float:
+    """A Crawl-delay value in seconds: its leading number. When none parses (`ten`, `-5`, an empty value) it is
+    infinite, so the cap (MAX_CRAWL_DELAY) applies: a delay we can't read is never ignored."""
+    m = _DELAY.match(value)
+    return math.inf if m is None else float(m.group())  # float("1e999") is inf: capped like any long delay
 
 
 class RobotsRules:
-    """A host's robots.txt, for us. The groups naming one of our ROBOTS_TOKENS apply (a token's several groups are
-    combined, RFC 9309); when groups name both tokens, a URL is fetched only if each token's rules allow it. Only
-    when no group names us does the `*` group apply. The rules themselves are evaluated by urllib.robotparser.
+    """A host's robots.txt, for us (RFC 9309), evaluated here rather than by urllib.robotparser, which takes the
+    first matching rule and has no wildcards.
 
-    crawl_delay: the Crawl-delay those groups ask (the largest that is a number), or None; crawl_delay_asked: the
-    value as written (a malformed one too)."""
+    Which groups apply (2.2.1): those naming RegistryCoffeeBot, the token we send, combined; or, when none does, the
+    `*` groups. Groups naming the old token, `coffee-data`, apply too (with no `*` fallback of their own). A URL is
+    fetched only if every applicable rule set allows it: longest match decides, allow on a tie (2.2.2), with the `*`
+    and `$` wildcards (2.2.3). /robots.txt itself is always allowed (2.2.2).
+
+    crawl_delay: the longest Crawl-delay those groups ask, in seconds (math.inf when one doesn't parse), or None;
+    crawl_delay_asked: that value as written."""
 
     def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
         self.disallow_all = disallow_all
         groups = _robots_groups(lines)
-        ours = [[g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS]
-        selected = [gs for gs in ours if gs] or [[g for g in groups if any(a == "*" for a in g.agents)]]
-        self._parsers: list[urllib.robotparser.RobotFileParser] = []
-        asked: list[str] = []
-        for gs in selected:
-            parser = urllib.robotparser.RobotFileParser()
-            parser.parse(["User-agent: *", *(rule for g in gs for rule in g.rules)])
-            self._parsers.append(parser)
-            asked += [d for g in gs for d in g.delays]
-        numbers = [(n, d) for d in asked if (n := _delay_seconds(d)) is not None]
-        self.crawl_delay: float | None = max(numbers)[0] if numbers else None
-        self.crawl_delay_asked: str | None = max(numbers)[1] if numbers else (asked[0] if asked else None)
+        current, old = ([g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS)
+        selected = [current or [g for g in groups if "*" in g.agents]] + ([old] if old else [])
+        self._rule_sets: list[list[_Rule]] = [
+            [r for g in gs for kind, value in g.rules if (r := _rule(kind, value)) is not None]
+            for gs in selected
+        ]
+        asked = [d for gs in selected for g in gs for d in g.delays]
+        self.crawl_delay: float | None = None
+        self.crawl_delay_asked: str | None = None
+        if asked:
+            self.crawl_delay, self.crawl_delay_asked = max((_delay_seconds(d), d) for d in asked)
 
     def can_fetch(self, url: str) -> bool:
         if self.disallow_all:
             return False
-        return all(p.can_fetch("*", url) for p in self._parsers)
+        target = _target(url)
+        if target == "/robots.txt":
+            return True
+        return all(_verdict(rules, target) for rules in self._rule_sets)
 
 
 @dataclass
@@ -551,22 +610,15 @@ class PoliteClient:
 
     def _crawl_delay(self, host: str, rules: RobotsRules | None) -> dict | None:
         """The Crawl-delay record for a host whose robots.txt asks one: the spacing its requests get is the larger of
-        the delay, capped at MAX_CRAWL_DELAY, and min_interval. A value that isn't a number keeps min_interval."""
-        if rules is None or rules.crawl_delay_asked is None:
+        the delay, capped at MAX_CRAWL_DELAY, and min_interval. A value with no leading number gets the cap: a delay
+        is never ignored."""
+        if rules is None or rules.crawl_delay is None:
             return None
-        asked, capped = (
-            rules.crawl_delay,
-            rules.crawl_delay is not None and rules.crawl_delay > MAX_CRAWL_DELAY,
-        )
-        applied = (
-            max(self.min_interval, min(asked, MAX_CRAWL_DELAY)) if asked is not None else self.min_interval
-        )
-        if asked is None:
-            log.warning("%s: robots.txt Crawl-delay %r isn't a number; spacing stays %.1f s",
-                        host, rules.crawl_delay_asked, applied)  # fmt: skip
-        elif capped:
+        asked, capped = rules.crawl_delay, rules.crawl_delay > MAX_CRAWL_DELAY
+        applied = max(self.min_interval, min(asked, MAX_CRAWL_DELAY))
+        if capped:
             log.warning(
-                "%s: robots.txt Crawl-delay %s s capped at %.0f s", host, rules.crawl_delay_asked, applied
+                "%s: robots.txt Crawl-delay %r capped at %.0f s", host, rules.crawl_delay_asked, applied
             )
         return {"host": host, "asked": rules.crawl_delay_asked, "applied_s": applied, "capped": capped}
 
@@ -574,7 +626,7 @@ class PoliteClient:
         """The host's robots.txt file disallows the whole site (/) to us: a closed store (SiteDisallowed). Not a
         robots.txt answered with 401 or 403, which is a refusal (often an edge challenge), not the store's rules."""
         rp = self._robots.get(urlparse(url).netloc)
-        if rp is None or getattr(rp, "disallow_all", False):
+        if rp is None or rp.disallow_all:
             return False
         return not rp.can_fetch(urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
@@ -647,6 +699,8 @@ class PoliteClient:
         DeadlineReached, at once, so a slow store never holds a worker past the deadline."""
         delay = self._delays.get(host)
         interval = delay["applied_s"] if delay else self.min_interval
+        if delay and (stats := getattr(self._local, "stats", None)) is not None:
+            stats.note_delay(delay)  # before the deadline check: a fetch it stops is the one this explains
         with self._lock:
             now = time.monotonic()
             due = self._last.get(host, 0.0) + interval
@@ -655,8 +709,6 @@ class PoliteClient:
                     f"the run's deadline passes before {host}'s Crawl-delay ({interval:.0f} s)"
                 )
             self._last[host] = max(now, due)
-        if delay and (stats := getattr(self._local, "stats", None)) is not None:
-            stats.note_delay(delay)
         if due > now:
             time.sleep(due - now)
 

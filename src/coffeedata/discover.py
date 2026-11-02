@@ -269,7 +269,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
 def probe(domains: list[str], workers: int = 16, run_date: str | None = None) -> list[dict]:
     """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten)."""
     run_date = run_date or date.today().isoformat()
-    with PoliteClient(min_interval=0.5, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
+    # Spaced like the catalog crawl (at least 1 s per host, or its robots.txt Crawl-delay), and robots.txt is read
+    # and honoured first, as it is for every PoliteClient request.
+    with PoliteClient(min_interval=1.0, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
         results = list(ex.map(lambda d: _safe_probe(client, d), domains))
     now = datetime.now(UTC).replace(microsecond=0)
     return [

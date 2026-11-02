@@ -373,8 +373,8 @@ schema:
         physicalType: bool
     required: false
     description: 'Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its
-      requests (the delay, at least 1 s, capped at 60 s) and whether the cap applied; null when none asked, and before raw
-      1.5.0.'
+      requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied;
+      null when none asked, and before raw 1.5.0.'
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -540,4 +540,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 1ab99e0abd460ae3
 - property: docsFingerprint
-  value: acd2240bbfd48692
+  value: 8bc0055dfb752421

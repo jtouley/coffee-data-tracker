@@ -455,11 +455,13 @@ old one, and writes a description-only change at the same version.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
   without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
   site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.
-  Catalog requests to a host are at least 1 second apart, platform probes at least 0.5 seconds apart.
-- robots.txt groups for `RegistryCoffeeBot` and for the old token `coffee-data` both apply (RFC 9309 product-token
-  matching: case-insensitive, whole token); the `*` group applies only when neither is named. A `Crawl-delay` there
-  replaces that spacing when it is longer, up to 60 seconds: a longer one is capped at 60 seconds, and the cap is
-  recorded in `fetches.crawl_delays`. A host's Crawl-delay is never waited out past the crawl's deadline.
+  Requests to a host, catalog fetches and platform probes alike, are at least 1 second apart.
+- robots.txt is read as RFC 9309 says, by our own matcher (`http.RobotsRules`): the groups for `RegistryCoffeeBot`
+  apply, or the `*` group when none names it (product-token matching: case-insensitive, the exact token), and any
+  groups for the old token `coffee-data` apply as well; a URL is fetched only if all of them allow it. The longest
+  matching rule decides (allow on a tie), and `*` and `$` wildcards are honoured. A `Crawl-delay` from those groups
+  replaces the spacing when it is longer, up to 60 seconds: a longer one, or one with no readable number, is capped at
+  60 seconds (`10s` reads as 10), and the cap is recorded in `fetches.crawl_delays`. A host's Crawl-delay is never waited out past the crawl's deadline.
 - Only what a shopper can see is stored, and every coffee links back to its roaster.
 - Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
   roaster" box on the "Add a roaster" form, and the site is never fetched again.

@@ -6,7 +6,7 @@ import logging
 from collections import Counter
 from urllib.parse import urlparse
 
-from ..http import FetchError, NotCatalog, PoliteClient, block_status
+from ..http import DeadlineReached, FetchError, NotCatalog, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..ratelimit import RateLimited
 from ..sitemap import sitemap_urls
@@ -101,6 +101,10 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     sitemap_block: FetchError | None = None
     try:
         urls = sitemap_urls(client, roaster.host)
+    except DeadlineReached as e:
+        # the run's deadline, not an unreadable sitemap: the store's Crawl-delay leaves no time for its catalog
+        log.warning("%s: stopped at the run's deadline: %s", roaster.roaster_id, e)
+        raise
     except FetchError as e:
         if block_status(e) or isinstance(
             e, RateLimited
