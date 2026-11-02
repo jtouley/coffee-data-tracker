@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catalog · registry.coffee</title>
 <meta name="description" content="Every coffee US specialty roasters sell online, updated weekly: origin, process, price per 100 g and stock.">
+{% if jsonld %}{{ jsonld }}
+{% endif -%}
 <style>
 {% include "_brand.css" %}
 main { padding: 8px 0 64px; }

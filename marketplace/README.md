@@ -8,7 +8,11 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 - Roasters known only from OpenStreetMap are excluded, so ODbL share-alike doesn't apply.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does
-it automatically.
+it automatically. A directory or Hugging Face export also writes `manifest.json`: the release (`release_build_id`,
+`release_run_date`), the contract id and version, the data licence (`CDLA-Permissive-2.0`,
+[`LICENSE-DATA`](../LICENSE-DATA)) and each Parquet file's `sha256` and row count, with the licence text (`LICENSE-DATA`) beside it. A Hugging Face export tags its
+commit `release-<run date>` (skipped when the tag exists), so consumers can pin a week:
+`hf://datasets/<you>/us-coffee-market@release-2026-11-03/data/public_coffee.parquet`.
 
 | Destination | `--to` / `PUBLIC_EXPORT_URL` | Credentials |
 |---|---|---|

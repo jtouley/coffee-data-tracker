@@ -28,7 +28,9 @@ began. Built by [coffee-data-tracker](https://github.com/jtouley/coffee-data-tra
 | `market_weekly` | origin × process | coffees, roasters, in stock, median / p10 / p90 price per 100 g |
 | `roasters` | one row per roaster | name, city, state, storefront platform, status, coffees listed (its current retail catalog: listed, not archived, not wholesale), coffees in stock |
 
-`manifest.json` gives the run date and row counts of the current export.
+`manifest.json` says which release the export is (`release_build_id`, `release_run_date`), its contract version and
+data licence, and each file's sha256 and row count. Each weekly release is tagged `release-<run date>`, so a past
+week can be read with `@release-2026-11-03` after the repo id.
 
 ```sql
 -- DuckDB, no download needed

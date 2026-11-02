@@ -1,5 +1,6 @@
-# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates or site.py change
-# on main, so a copy or layout change doesn't wait for the week. It renders the release customers get now (the served
+# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates, site.py or the
+# public contract change on main, so a copy or layout change doesn't wait for the week. Everything `coffeedata site`
+# writes to build/site is deployed: the pages, catalog/catalog.json, robots.txt and sitemap.xml. It renders the release customers get now (the served
 # release), never a fresh build of the lake: that would re-run the release checks on the newest run, which may have
 # failed them. It reads the lake but never writes to it, and never contacts a roaster.
 #
@@ -20,7 +21,12 @@ on:
     - cron: "17 11 * * 2"  # Tuesdays, after the Cloud Run build (06:17, ends by 10:17)
   push:
     branches: [main]
-    paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
+    # The contract too: the pages' schema.org Dataset (JSON-LD) is built from it.
+    paths:
+      - "src/coffeedata/templates/**"
+      - "src/coffeedata/site.py"
+      - "contracts/public-catalog.odcs.yaml"
+      - ".github/workflows/site.yml"
   workflow_dispatch:
 permissions:
   contents: read
