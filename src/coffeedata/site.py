@@ -84,6 +84,7 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         "dataset": dataset,
         "hf_path": hf_path,
         "repo": REPO,
+        "data_license": f"{REPO}/blob/main/LICENSE-DATA",
         "marketplace": f"{REPO}/blob/main/marketplace/README.md",
         "mcp": f"{REPO}#logging-shots",
         "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",

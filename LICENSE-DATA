@@ -1,32 +1,3 @@
-registry.coffee public dataset: data licence
-
-The public dataset of coffee-data-tracker (registry.coffee) is made available under the Community Data License
-Agreement - Permissive, Version 2.0 (CDLA-Permissive-2.0), whose full text follows below. It covers:
-
-  - the public tables: public_coffee, public_roaster, public_price_event and public_market_weekly, as defined by
-    contracts/public-catalog.odcs.yaml;
-  - their exports: the Parquet files and manifest.json written by `coffeedata export-public`, including the
-    public Hugging Face dataset jtouley/us-coffee-market;
-  - the site's catalog JSON (https://registry.coffee/catalog/catalog.json);
-  - the marketplace shares of those tables: the Snowflake share of COFFEE_DATA.SHARE and, when set up, the
-    Databricks share.
-
-The code in this repository is under the MIT License (LICENSE), not this one.
-
-Attribution
-  - Roaster discovery uses Overture Maps Places, (c) Overture Maps Foundation, licensed under CDLA-Permissive-2.0.
-    Source datasets carry their own attribution, listed in the Overture release notes.
-  - Roasters known only from OpenStreetMap are excluded from the public tables, so OpenStreetMap's ODbL
-    share-alike terms don't apply to them.
-  - Coffee names and prices are facts published by each roaster on its own storefront; every coffee links back to
-    it through source_url. Product descriptions and images are not included.
-  See docs/ATTRIBUTION.md.
-
-The licence text below is the official plain-text release from
-https://cdla.dev/permissive-2-0/ (https://github.com/Community-Data-License-Agreements/Releases).
-
---------------------------------------------------------------------------------------------------------------------
-
 Community Data License Agreement - Permissive - Version 2.0
 
 This is the Community Data License Agreement - Permissive, Version 2.0 (the "agreement"). Data Provider(s) and Data Recipient(s) agree as follows:
@@ -62,3 +33,31 @@ NO DATA PROVIDER SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
 5.3. "Data Recipient" means any person who receives Data directly or indirectly from a Data Provider and agrees to the terms of this agreement.
 
 5.4. "Results" means any outcome obtained by computational analysis of Data, including for example machine learning models and models' insights.
+
+--------------------------------------------------------------------------------------------------------------------
+
+NOTICE: registry.coffee public dataset
+
+The public dataset of coffee-data-tracker (registry.coffee) is made available under the Community Data License
+Agreement - Permissive, Version 2.0 (CDLA-Permissive-2.0), whose full text is above. It covers:
+
+  - the public tables: public_coffee, public_roaster, public_price_event and public_market_weekly, as defined by
+    contracts/public-catalog.odcs.yaml;
+  - their exports: the Parquet files and manifest.json written by `coffeedata export-public`, including the
+    public Hugging Face dataset jtouley/us-coffee-market;
+  - the site's catalog JSON (https://registry.coffee/catalog/catalog.json);
+  - the marketplace shares of those tables: the Snowflake share of COFFEE_DATA.SHARE and, when set up, the
+    Databricks share.
+
+The code in this repository is under the MIT License (LICENSE), not this one.
+
+Attribution
+  - Roaster discovery uses Overture Maps Places, (c) Overture Maps Foundation, licensed under CDLA-Permissive-2.0.
+    Source datasets carry their own attribution, listed in the Overture release notes.
+  - Roasters known only from OpenStreetMap are excluded from the public tables.
+  - Coffee names and prices are facts published by each roaster on its own storefront; every coffee links back to
+    it through source_url. Product descriptions and images are not included.
+  See docs/ATTRIBUTION.md.
+
+The licence text above is the official plain-text release from
+https://cdla.dev/permissive-2-0/ (https://github.com/Community-Data-License-Agreements/Releases).

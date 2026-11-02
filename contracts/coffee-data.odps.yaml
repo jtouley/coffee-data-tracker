@@ -45,8 +45,7 @@ inputPorts:
       - property: description
         value: >-
           OpenStreetMap via the Overpass API, read to discover US roasters (registry source osm). Roasters known only
-          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql), so ODbL
-          share-alike terms don't apply to them.
+          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql).
       - property: license
         value: ODbL-1.0
       - property: inPublicTables

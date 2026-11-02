@@ -25,7 +25,8 @@ context:
     is_decaf read false, and flavor_categories empty, when the text doesn't say). When recommending a coffee, give
     its source_url so the user can check the roaster's own page. public_coffee and public_price_event join to
     public_roaster on roaster_id; public_price_event joins to public_coffee on coffee_id. The data is licensed
-    under CDLA-Permissive-2.0 (LICENSE-DATA), with attribution in docs/ATTRIBUTION.md; the code is MIT.
+    under CDLA-Permissive-2.0 (https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA), with
+    attribution in docs/ATTRIBUTION.md; the code is MIT.
   constraints:
   - id: not-live
     constraint: Do not present any row as current stock or price; say which release_run_date it is as of.
@@ -585,7 +586,7 @@ servers:
 - id: huggingface
   server: huggingface-public-dataset
   type: custom
-  environment: prod
+  environment: planned
   description: 'Planned, not yet published: the public Hugging Face dataset jtouley/us-coffee-market, one Parquet
     file per table under data/ and manifest.json, replaced by each weekly release. Read it over HTTPS or as
     hf://datasets/jtouley/us-coffee-market/data/<table>.parquet.'
@@ -598,10 +599,12 @@ servers:
 - id: snowflake-share
   server: snowflake-marketplace
   type: custom
-  environment: prod
-  description: 'Planned: the Snowflake share COFFEE_DATA_SHARE of COFFEE_DATA.SHARE, secure views coffee,
-    price_event, market_weekly and roaster over the loaded tables (marketplace/snowflake/admin_setup.sql). The
-    Marketplace listing is a draft (marketplace/LISTING.md).'
+  environment: planned
+  description: 'Planned: the Snowflake share COFFEE_DATA_SHARE of COFFEE_DATA.SHARE, secure views over the loaded
+    tables in COFFEE_DATA.MARKET (marketplace/snowflake/admin_setup.sql). The views drop the public_ prefix:
+    coffee_data.share.coffee is public_coffee, share.price_event is public_price_event, share.market_weekly is
+    public_market_weekly and share.roaster is public_roaster (see the viewMapping property). The Marketplace listing
+    is a draft (marketplace/LISTING.md).'
   database: COFFEE_DATA
   schema: SHARE
   customProperties:
@@ -611,6 +614,12 @@ servers:
     value: snowflake
   - property: share
     value: COFFEE_DATA_SHARE
+  - property: viewMapping
+    value:
+      coffee_data.share.coffee: public_coffee
+      coffee_data.share.price_event: public_price_event
+      coffee_data.share.market_weekly: public_market_weekly
+      coffee_data.share.roaster: public_roaster
 team:
   name: registry.coffee
   members:
