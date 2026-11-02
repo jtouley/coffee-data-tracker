@@ -1,18 +1,43 @@
 import json
+import re
 
 import pytest
+import yaml
 
 from coffeedata import snowflake_load
 from coffeedata.public import PUBLIC_TABLES
 
+REAL_CONTRACT = snowflake_load.CONTRACT
+
+
+def write_contract(path, columns=("coffee_id", "variant_id"), describe=lambda t, c: f"{t} {c}."):
+    """A contract for the test exports: every table with these columns."""
+    schema = [
+        {"name": t, "description": f"The {t} table.",
+         "properties": [{"name": c, "description": describe(t, c)} for c in columns]}
+        for t in PUBLIC_TABLES
+    ]  # fmt: skip
+    path.write_text(yaml.safe_dump({"schema": schema}))
+    return path
+
+
+@pytest.fixture(autouse=True)
+def test_contract(tmp_path_factory, monkeypatch):
+    """The loader reads the contract at load time; these tests' exports have their own columns."""
+    path = write_contract(tmp_path_factory.mktemp("contract") / "public-catalog.odcs.yaml")
+    monkeypatch.setattr(snowflake_load, "CONTRACT", path)
+    return path
+
 
 class FakeCursor:
     def __init__(self, counts, columns=None):
-        self.sql, self.counts, self._last, self.columns = [], counts, None, columns or {}
+        self.sql, self.counts, self._last, self.columns = [], counts, None, dict(columns or {})
 
     def execute(self, sql):
         self.sql.append(sql)
         self._last = sql
+        if m := re.match(r"create table if not exists MARKET\.(\w+)", sql):
+            self.columns.setdefault(m[1], ["COFFEE_ID", "VARIANT_ID"])
         return self
 
     def fetchone(self):
@@ -130,7 +155,8 @@ class FakeSnowflake:
         self.grants = set(self.views if shared is None else shared) if owner else set()
         self.view_owner = {v: "COFFEE_LOADER" for v in self.views}
         self.sql, self.fail_on, self.description, self._rows = [], None, None, []
-        self.export_cols = ["COFFEE_ID", "VARIANT_ID"]
+        self.export_cols: list[str] | dict[str, list[str]] = ["COFFEE_ID", "VARIANT_ID"]  # or by table
+        self.comments: dict[str, str] = {}  # "MARKET.t", "MARKET.t.COL", "SHARE.v", "SHARE.v.COL" -> literal
 
     def cursor(self):
         return self
@@ -138,9 +164,13 @@ class FakeSnowflake:
     def close(self):
         pass
 
-    def execute(self, sql):
-        import re
+    def _comment(self, key, literal, cols=None, col=None):
+        if cols is not None and col not in cols:
+            raise RuntimeError(f"invalid identifier {col}")  # quoted names are case sensitive
+        assert re.fullmatch(r"'(?:[^'\\]|''|\\\\)*'", literal), literal  # one closed, escaped literal
+        self.comments[key + (f".{col}" if col else "")] = literal
 
+    def execute(self, sql):
         self.sql.append(sql)
         if self.fail_on and self.fail_on in sql:
             self.fail_on = None
@@ -164,16 +194,35 @@ class FakeSnowflake:
         elif m := re.match(r"drop table if exists MARKET\.(\w+)", sql):
             self.tables.pop(m[1], None)
         elif m := re.match(r"create table if not exists MARKET\.(\w+)", sql):
-            self.tables.setdefault(m[1], self.export_cols)
+            cols = self.export_cols
+            self.tables.setdefault(m[1], cols[m[1]] if isinstance(cols, dict) else cols)
+        elif sql.startswith("comment on column"):
+            raise RuntimeError("Object 'COFFEE_ID' does not exist or not authorized")  # as Snowflake answers
+        elif m := re.fullmatch(r"comment on table MARKET\.(\w+) is ('.*')", sql):
+            self._comment(f"MARKET.{m[1]}", m[2])
+        elif m := re.fullmatch(r"alter table MARKET\.(\w+) alter column \"(\w+)\" comment ('.*')", sql):
+            self._comment(f"MARKET.{m[1]}", m[3], self.tables[m[1]], m[2])
+        elif m := re.fullmatch(r"comment on view SHARE\.(\w+) is ('.*')", sql):
+            self._comment(f"SHARE.{m[1]}", m[2])
+        elif m := re.fullmatch(r"alter view SHARE\.(\w+) alter column \"(\w+)\" comment ('.*')", sql):
+            self._comment(f"SHARE.{m[1]}", m[3], self.views[m[1]], m[2])
         elif m := re.match(r"select count\(\*\) from MARKET\.(\w+)", sql):
             self._rows = [(self.counts[m[1]],)]
-        elif m := re.match(
-            r"create or replace secure view SHARE\.(\w+) (copy grants )?as select \* from MARKET\.(\w+)", sql
-        ):
+        elif m := re.fullmatch(
+            r"create or replace secure view SHARE\.(\w+) \((.*)\) (copy grants )?comment = ('(?:[^']|'')*') "
+            r"as select ([\w\", ]+) from MARKET\.(\w+)",
+            sql,
+        ):  # Snowflake's order: column list, copy grants, comment, as
             if self.view_owner.setdefault(m[1], self.role) != self.role:
                 raise RuntimeError("insufficient privileges to operate on view")
-            self.views[m[1]] = self.tables[m[3]]
-            if not m[2]:
+            listed = re.findall(r"\"(\w+)\" comment ('(?:[^']|'')*')(?:, |$)", m[2])
+            selected = re.findall(r'"(\w+)"', m[5])
+            assert [c for c, _ in listed] == selected and sorted(selected) == sorted(self.tables[m[6]])
+            self.views[m[1]] = self.tables[m[6]]
+            self._comment(f"SHARE.{m[1]}", m[4])
+            for col, literal in listed:
+                self._comment(f"SHARE.{m[1]}", literal, selected, col)
+            if not m[3]:
                 self.grants.discard(m[1])  # create or replace without copy grants drops the view's grants
         elif m := re.match(r"grant select on view SHARE\.(\w+) to share", sql):
             if self.role != self.owner:
@@ -231,7 +280,7 @@ def test_migrate_uploads_before_dropping_and_rebuilds_every_view_keeping_its_gra
     first_drop = min(n for n, s in enumerate(sql) if s.startswith("drop table"))
     assert last_check < last_put < first_drop  # grants checked, files up, then drops
     views = [s for s in sql if s.startswith("create or replace secure view")]
-    assert len(views) == 4 and all(" copy grants as select * from MARKET." in v for v in views)
+    assert len(views) == 4 and all(re.search(r"\) copy grants comment = '.*' as select ", v) for v in views)
     assert not any(
         s.startswith("grant") for s in sql
     )  # copy grants kept them: nothing needed the share's owner
@@ -328,3 +377,103 @@ def test_dry_run_changes_nothing_and_shows_the_plan(tmp_path):
     sf = old_snowflake(counts)
     refused = snowflake_load.load(export_dir(tmp_path, counts), sf, dry_run=True)  # without --migrate
     assert "contract changed" in refused["refused"] and not any(s.lower().startswith(writes) for s in sf.sql)
+
+
+def contract_export(tmp_path, counts):
+    """An export with the real public contract's columns, as the loader would get it."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    contract = snowflake_load.contract_descriptions(REAL_CONTRACT)
+    for t in PUBLIC_TABLES:
+        pq.write_table(pa.table({c: [None] for c in contract[t][1]}), tmp_path / f"{t}.parquet")
+    (tmp_path / "manifest.json").write_text(
+        json.dumps({"as_of_run": "2026-10-26", "exported_at": "2026-10-27T02:01:48+00:00", "tables": counts})
+    )
+    return tmp_path, contract
+
+
+@pytest.mark.parametrize("migrate", [False, True])
+def test_every_contract_column_is_described_on_its_table_and_view(tmp_path, monkeypatch, migrate):
+    """The real contract, read at load time: each table, view and column gets its description on every load
+    (existing views by ALTER VIEW), and a migration writes the view's into its definition, so a recreate can't drop
+    them."""
+    monkeypatch.setattr(snowflake_load, "CONTRACT", REAL_CONTRACT)
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export, contract = contract_export(tmp_path, counts)
+    names = {t: [c.upper() for c in contract[t][1]] for t in PUBLIC_TABLES}  # as Snowflake would name them
+    old = {t: names[t][:-1] for t in PUBLIC_TABLES}  # e.g. ROASTER without RELEASE_RUN_DATE, to migrate
+    have = old if migrate else names
+    sf = FakeSnowflake(counts, tables=have, views={v: have[t] for t, v in snowflake_load.SHARE_VIEWS.items()})
+    sf.export_cols = names
+    snowflake_load.load(export, sf, migrate=migrate)
+    want = {}
+    for t, (desc, cols) in contract.items():
+        if t not in PUBLIC_TABLES:
+            continue
+        for obj in (f"MARKET.{t}", f"SHARE.{snowflake_load.SHARE_VIEWS[t]}"):
+            want[obj] = snowflake_load.sql_string(desc)
+            want |= {f"{obj}.{c.upper()}": snowflake_load.sql_string(d) for c, d in cols.items()}
+    assert sf.comments == want and all(len(v) > 2 for v in want.values())
+    recreated = [s for s in sf.sql if s.startswith("create or replace secure view")]
+    altered = [s for s in sf.sql if s.startswith("alter view")]
+    assert (len(recreated), bool(altered)) == ((4, False) if migrate else (0, True))
+    # A migration describes everything after the tables are dropped and reloaded: the dictionary is never empty.
+    last_copy = max(n for n, s in enumerate(sf.sql) if s.startswith(("copy into", "drop table")))
+    assert last_copy < min(
+        n for n, s in enumerate(sf.sql) if s.startswith(("comment on", "alter", "create or r"))
+    )
+
+
+def test_no_statement_uses_comment_on_column(tmp_path):
+    """Snowflake refuses `comment on column db.schema.table.col` ("Object ... does not exist or not
+    authorized"): columns are commented with ALTER TABLE / ALTER VIEW ... ALTER COLUMN, under 2-part names."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    for migrate in (False, True):
+        sf = old_snowflake(counts) if migrate else FakeSnowflake(counts, tables={}, views={})
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=migrate)
+        assert not any(s.lower().startswith("comment on column") for s in sf.sql)
+        commented = [s for s in sf.sql if s.startswith(("comment on", "alter table", "alter view"))]
+        assert commented and all(
+            re.match(r"(comment on \w+|alter \w+) (MARKET|SHARE)\.\w+ (is|alter column) ", s)
+            for s in commented
+        )
+
+
+def test_descriptions_are_one_line_with_quotes_escaped(tmp_path, test_contract):
+    write_contract(test_contract, describe=lambda t, c: "The roaster's own\n   id, as \\'listed\\'.")
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = old_snowflake(counts)
+    snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    literal = r"'The roaster''s own id, as \\''listed\\''.'"
+    assert sf.comments["MARKET.public_coffee.COFFEE_ID"] == literal
+    assert sf.comments["SHARE.coffee.VARIANT_ID"] == literal
+    assert snowflake_load.sql_string("it's\t a  'x'") == "'it''s a ''x'''"
+
+
+def test_a_column_missing_from_the_contract_fails_before_anything_is_loaded(tmp_path, test_contract):
+    """Fails loudly rather than skipping: an undescribed column would leave a gap in the listing's dictionary."""
+    write_contract(test_contract, columns=("coffee_id",))
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = FakeSnowflake(counts)
+    with pytest.raises(RuntimeError, match="public_coffee has columns the public contract doesn't describe: "
+                                           "variant_id"):  # fmt: skip
+        snowflake_load.load(export_dir(tmp_path, counts), sf)
+    assert not any(
+        s.startswith(("put ", "create", "drop", "truncate", "copy into", "comment", "alter")) for s in sf.sql
+    )
+
+
+def test_the_loader_reads_the_repository_contract():
+    contract = snowflake_load.contract_descriptions(REAL_CONTRACT)
+    assert set(PUBLIC_TABLES) <= set(contract) and all(d and cols for d, cols in contract.values())
+
+
+def test_a_contract_column_snowflake_lacks_is_skipped_with_a_warning(tmp_path, test_contract, capsys):
+    """Comments touch only columns Snowflake has; a contract column it lacks is reported, and the load goes on."""
+    write_contract(test_contract, columns=("coffee_id", "variant_id", "release_run_date"))
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = FakeSnowflake(counts, tables={t: NEW for t in PUBLIC_TABLES}, views={v: NEW for v in VIEWS})
+    assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
+    assert not any("RELEASE_RUN_DATE" in k for k in sf.comments) and "SHARE.roaster.VARIANT_ID" in sf.comments
+    assert "warning: SHARE.roaster has no column release_run_date" in capsys.readouterr().err

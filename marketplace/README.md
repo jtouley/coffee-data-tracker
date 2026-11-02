@@ -41,6 +41,14 @@ never holds the site back):
   prints what the checks read (tables, share views, owners, grants), whether it would refuse, and every
   statement it would run.
 - It replaces each table in one transaction.
+- On every load, a migration included, it then writes each table's, share view's and column's description
+  from the public contract, read at load time, so **the listing's data dictionary comes from
+  `contracts/public-catalog.odcs.yaml`**: `comment on table` / `comment on view`, and `alter table|view ... alter
+  column ... comment` for columns (Snowflake refuses `comment on column` with a qualified name). A migration
+  writes the view's descriptions into its definition (`create or replace secure view ... (col comment '...', ...)
+  copy grants comment = '...' as select ...`), so recreating a view can't drop them. A column in the export that
+  the contract doesn't describe fails the load before anything changes; a contract column Snowflake doesn't have
+  yet is skipped with a warning. To change a description, change the contract; the next load applies it.
 - It fails if the row counts differ from the export.
 
 Databricks loads from S3 or GCS.
