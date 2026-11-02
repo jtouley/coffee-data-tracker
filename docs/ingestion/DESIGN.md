@@ -231,22 +231,28 @@ the registry). There is no per-service copy.
 
 ## 5. Contracts (versioned and tested)
 
-`src/coffeedata/raw_contracts.py` generates the three internal contracts from `lake.SCHEMAS`. Each committed JSON
-file carries a version and a fingerprint. `tests/test_raw_contracts.py` fails on any column change until the file is
-regenerated with a bumped version (`python -m coffeedata.raw_contracts --write <name> <version>`). It also checks
-that each producer writes exactly its contract's columns.
+`src/coffeedata/raw_contracts.py` generates the three internal contracts from `lake.SCHEMAS`, as ODCS v3.2.0 YAML in
+`contracts/internal/<name>.odcs.yaml` (tagged internal, never published). Each carries a version and two
+fingerprints: an interface fingerprint over what consumers see (object and column names, types, required, enums)
+and a docs fingerprint over the rest. `contracts/internal/interfaces.yaml` records the interface fingerprint of every
+released version. A change to the interface needs a new version (`python -m coffeedata.raw_contracts --write <name>
+<version>`, which also refuses a version that isn't above the last); `make contracts` regenerates all at their
+current versions and refuses when an interface changed, so only description and quality-rule changes ship at the
+same version. `tests/test_raw_contracts.py` fails on an interface change until the contract is written at a new
+version, and when a committed file differs from what the generator writes. It also validates each against the
+vendored ODCS schema and checks that each producer writes exactly its contract's columns.
 
 | Contract | Version | Tables / files | Producer → consumers |
 |---|---|---|---|
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
 | **manifest / control** | 1.1.0 (descriptions and quality rules) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.2.0 (`is_listed` keeps a partial catalog's unread coffees listed; no column or enum change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `contracts/test_contracts.py` |
+| **public** | 2.2.1 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context, documentation only) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and
 column and its quality rules, each naming what enforces it (`contract_docs.py`; a test fails on an undescribed
-column). They stay JSON; emitting them as ODCS YAML from `lake.SCHEMAS` is a follow-up.
+column). They were JSON until they moved to ODCS YAML; nothing read the JSON at runtime, so it was replaced.
 
 **Control plane.** `job_manifests` is the source of truth for what ran, what landed and what's parked. Each job writes
 a row when it starts (`running`) and one when it ends (`done`, `deadline`, `failed`). An attempt with only the first

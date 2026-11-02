@@ -1,7 +1,7 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
 
-.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app lint test clean
+.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app contracts lint test clean
 
 install:
 	uv sync
@@ -46,6 +46,9 @@ hooks:  ## install the git pre-commit hooks
 fmt:
 	uv run ruff check --fix src app tests
 	uv run ruff format src app tests
+
+contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from lake.SCHEMAS and contract_docs.py
+	uv run python -m coffeedata.raw_contracts --all
 
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files

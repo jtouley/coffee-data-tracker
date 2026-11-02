@@ -101,3 +101,17 @@ def test_thresholds_are_the_ones_dbt_uses():
         assert custom[var] == DBT_VARS[var], var
     sla = {p["property"]: p for p in ODCS["slaProperties"]}
     assert (sla["latency"]["value"], sla["latency"]["unit"]) == (DBT_VARS["max_run_age_days"], "d")
+
+
+def test_the_ai_context_asks_questions_and_points_at_real_files():
+    """The context guides AI agents: canonical questions only (no answers, the owner's choice), no context on columns
+    (ODCS v3.2.0 allows it on the contract and tables), and every linked file in this repository exists."""
+    contexts = [ODCS["context"]] + [o["context"] for o in ODCS["schema"] if "context" in o]
+    assert {o["name"] for o in ODCS["schema"] if "context" in o} == {"public_coffee", "public_roaster"}
+    for c in contexts:
+        assert c["instructions"] and all("answer" not in q for q in c.get("verifiedStatements") or [])
+    assert {c["id"] for c in ODCS["context"]["constraints"]} >= {"not-live", "no-opted-out-roasters"}
+    assert all("context" not in p for o in ODCS["schema"] for p in o["properties"])
+    repo = "https://github.com/jtouley/coffee-data-tracker/blob/main/"
+    links = [d["url"] for d in ODCS["authoritativeDefinitions"]]
+    assert links and all((ROOT / u.removeprefix(repo)).is_file() for u in links if u.startswith(repo))

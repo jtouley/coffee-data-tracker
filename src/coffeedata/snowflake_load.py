@@ -7,6 +7,9 @@ Credentials come from the environment, for a key-pair service user:
 Each export is uploaded to @<schema>.public_export/run=<as_of_run>/exported=<time>/. Those files are never
 overwritten, so the stage keeps every export, and re-exporting the same week loads the new files, not the old. Then each table is replaced in one transaction, and row counts are checked
 against the export manifest.
+
+After the load, every table and share view gets its description and column descriptions from the public contract
+(contracts/public-catalog.odcs.yaml, read at load time), so the listing's data dictionary is the contract's.
 """
 
 from __future__ import annotations
@@ -14,6 +17,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 from pathlib import Path
 
 from .public import PUBLIC_TABLES
@@ -27,6 +31,97 @@ SHARE_VIEWS = {
     "public_market_weekly": "market_weekly",
     "public_roaster": "roaster",
 }
+# The public ODCS contract, the source of every table, view and column description (the repository's copy, which
+# the ingestion image also carries; from the working directory when the package is installed elsewhere).
+CONTRACT = Path(__file__).resolve().parents[2] / "contracts" / "public-catalog.odcs.yaml"
+
+
+def contract_descriptions(path: Path | None = None) -> dict[str, tuple[str, dict[str, str]]]:
+    """Each public table's description and its columns' descriptions (by lower-case name), from the contract."""
+    import yaml
+
+    path = path or (CONTRACT if CONTRACT.exists() else Path("contracts/public-catalog.odcs.yaml"))
+    contract = yaml.safe_load(path.read_text())
+    return {
+        obj["name"]: (
+            str(obj.get("description") or ""),
+            {p["name"].lower(): str(p.get("description") or "") for p in obj.get("properties") or []},
+        )
+        for obj in contract["schema"]
+    }
+
+
+def sql_string(text: str) -> str:
+    """A Snowflake string literal: whitespace collapsed to single spaces, backslashes and single quotes escaped."""
+    return "'" + " ".join(text.split()).replace("\\", "\\\\").replace("'", "''") + "'"
+
+
+def _ident(name: str) -> str:
+    """A column name as Snowflake reports it, quoted so its case is kept (infer_schema keeps the file's case)."""
+    return '"' + name.replace('"', '""') + '"'
+
+
+def undescribed(columns: list[str], table: str, contract: dict) -> list[str]:
+    """Columns the contract doesn't describe (none when it describes them all)."""
+    described = contract.get(table, ("", {}))[1]
+    return [c for c in columns if not described.get(c.lower())]
+
+
+def _described(columns: list[str], table: str, contract: dict) -> list[tuple[str, str]]:
+    """(column, its description) for each column; raises if the contract doesn't describe one."""
+    if table not in contract or not contract[table][0]:
+        raise RuntimeError(f"{table} has no description in the public contract ({CONTRACT.name})")
+    if missing := undescribed(columns, table, contract):
+        raise RuntimeError(
+            f"{table} has columns the public contract doesn't describe: {', '.join(missing)}. Describe them in "
+            f"{CONTRACT.name} (the listing's data dictionary comes from it)."
+        )
+    return [(c, contract[table][1][c.lower()]) for c in columns]
+
+
+def _warn_absent(obj: str, columns: list[str], table: str, contract: dict) -> None:
+    """A contract column the object doesn't have yet is skipped with a warning, never commented (that would fail
+    the load): e.g. a share view that only a migration will rebuild with it."""
+    have = {c.lower() for c in columns}
+    if absent := [c for c in contract.get(table, ("", {}))[1] if c not in have]:
+        print(
+            f"warning: {obj} has no column {', '.join(absent)} from the public contract: not described",
+            file=sys.stderr,
+        )
+
+
+def table_comments(table: str, columns: list[str], contract: dict) -> list[str]:
+    """Comments for a loaded table and each of its columns (as Snowflake names them). Columns use ALTER TABLE ...
+    ALTER COLUMN ... COMMENT with a schema.table name: COMMENT ON COLUMN with a qualified column name fails in
+    Snowflake ("Object ... does not exist or not authorized")."""
+    _warn_absent(f"{SCHEMA}.{table}", columns, table, contract)
+    cols = _described(columns, table, contract)
+    return [f"comment on table {SCHEMA}.{table} is {sql_string(contract[table][0])}"] + [
+        f"alter table {SCHEMA}.{table} alter column {_ident(c)} comment {sql_string(d)}" for c, d in cols
+    ]
+
+
+def view_comments(table: str, columns: list[str], contract: dict) -> list[str]:
+    """Comments for an existing share view and its columns (ALTER VIEW ... ALTER COLUMN ... COMMENT: Snowflake
+    documents COMMENT ON COLUMN for table columns only)."""
+    view = f"SHARE.{SHARE_VIEWS[table]}"
+    _warn_absent(view, columns, table, contract)
+    cols = _described(columns, table, contract)
+    return [f"comment on view {view} is {sql_string(contract[table][0])}"] + [
+        f"alter view {view} alter column {_ident(c)} comment {sql_string(d)}" for c, d in cols
+    ]
+
+
+def create_view(table: str, columns: list[str], contract: dict) -> str:
+    """The share view over a table, with its descriptions in the definition itself, so recreating it can't drop
+    them. Snowflake's order: column list, then COPY GRANTS, then COMMENT =, then AS."""
+    cols = _described(columns, table, contract)
+    listed = ", ".join(f"{_ident(c)} comment {sql_string(d)}" for c, d in cols)
+    return (
+        f"create or replace secure view SHARE.{SHARE_VIEWS[table]} ({listed}) copy grants "
+        f"comment = {sql_string(contract[table][0])} as select {', '.join(_ident(c) for c, _ in cols)} "
+        f"from {SCHEMA}.{table}"
+    )
 
 
 def private_key_der(value: str) -> bytes:
@@ -67,15 +162,20 @@ def connect():
     )
 
 
-def _columns(cur, schema: str, name: str) -> list[str]:
-    """A table's or view's columns, sorted and upper case; [] if it doesn't exist."""
-    return sorted(
-        r[0].upper()
+def _column_names(cur, schema: str, name: str) -> list[str]:
+    """A table's or view's columns as Snowflake names them; [] if it doesn't exist."""
+    return [
+        r[0]
         for r in cur.execute(
             f"select column_name from information_schema.columns "
             f"where table_schema = '{schema}' and table_name = '{name.upper()}'"
         ).fetchall()
-    )
+    ]
+
+
+def _columns(cur, schema: str, name: str) -> list[str]:
+    """A table's or view's columns, sorted and upper case; [] if it doesn't exist."""
+    return sorted(c.upper() for c in _column_names(cur, schema, name))
 
 
 def _view_grants(cur, view: str) -> tuple[str, set[str]]:
@@ -193,6 +293,13 @@ def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = Fals
 
 def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> dict:
     """The checks, then the load; returns the row count of each table."""
+    import pyarrow.parquet as pq
+
+    contract = contract_descriptions()
+    order = {t: pq.read_schema(export_dir / f"{t}.parquet").names for t in PUBLIC_TABLES}
+    for t in PUBLIC_TABLES:  # every column gets a description, or nothing is loaded (or even created)
+        _described(order[t], t, contract)
+
     cur.execute(f"create schema if not exists {SCHEMA}")
     cur.execute(f"create file format if not exists {SCHEMA}.PARQUET_FF type = parquet")
     cur.execute(
@@ -255,12 +362,26 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
         for sql in statements(table, run_path):
             cur.execute(sql)
         counts[table] = cur.execute(f"select count(*) from {SCHEMA}.{table}").fetchone()[0]
+
+    def as_exported(names: list[str], table: str) -> list[str]:
+        """Snowflake's column names, in the export's column order (information_schema returns them in any order).
+        Only a dry run, which created and dropped nothing, sees other columns; it shows the export's."""
+        position = {c.lower(): n for n, c in enumerate(order[table])}
+        if sorted(c.lower() for c in names) != sorted(position):
+            return order[table]
+        return sorted(names, key=lambda c: position[c.lower()])
+
+    # The descriptions, from the contract, on every load: idempotent, and the listing's data dictionary.
+    for table in PUBLIC_TABLES:
+        for sql in table_comments(table, as_exported(_column_names(cur, SCHEMA, table), table), contract):
+            cur.execute(sql)
     # Every existing view, not only the changed ones: one left over from a failed migration is rebuilt too.
-    # Views that don't exist yet are left to admin_setup.sql part 2.
+    # Views that don't exist yet are left to admin_setup.sql part 2 (the next load describes them).
     for table in present:
-        cur.execute(
-            f"create or replace secure view SHARE.{SHARE_VIEWS[table]} copy grants as "
-            f"select * from {SCHEMA}.{table}"
-        )
+        cur.execute(create_view(table, as_exported(_column_names(cur, SCHEMA, table), table), contract))
+    for table in PUBLIC_TABLES:  # the views a migration didn't just recreate with their descriptions
+        if table not in present and (names := _column_names(cur, "SHARE", SHARE_VIEWS[table])):
+            for sql in view_comments(table, names, contract):  # only the columns it has
+                cur.execute(sql)
 
     return counts

@@ -571,7 +571,7 @@ models:
       - name: release_run_date
         data_type: date
   - name: public_roaster
-    description: "One row per roaster in the registry."
+    description: "One row per published roaster: not opted out, with a coffee seen, from a redistributable source."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}

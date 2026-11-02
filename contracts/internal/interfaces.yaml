@@ -1,0 +1,8 @@
+# Each internal contract's released versions and their interface fingerprints, written by
+# src/coffeedata/raw_contracts.py. A version's interface never changes; a new interface needs a new version.
+raw:
+  1.2.0: 477079ada4e92ece
+manifest:
+  1.1.0: d775e9935559e256
+enrichment:
+  1.1.0: 476da22198cd35e9
