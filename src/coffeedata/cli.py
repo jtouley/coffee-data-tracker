@@ -255,7 +255,7 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
             "owner_user_id": shots.owner_user_id(),
             "verdict_model": verdict.model() or "",
             "verdict_definition": verdict.DEFINITION_VERSION,
-            "coverage_claims": quality.coverage_claims(),
+            "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
         }
         | (extra_vars or {})
     )
@@ -305,7 +305,12 @@ def cmd_build(args: argparse.Namespace) -> bool:
     started = time.monotonic()
     passed, results = dbt_build(lake, db, extra)
     took = time.monotonic() - started
-    for line in quality.coverage_claim_messages(db):  # the published coverage, against this build
+    try:  # the published coverage, against this build: only a report, so it never stops the build's record
+        claim_lines = quality.coverage_claim_messages(db)
+    except Exception as e:  # e.g. a partial coffee.duckdb after a crashed dbt step
+        logging.warning("coverage claims not reported: %s", e)
+        claim_lines = []
+    for line in claim_lines:
         print(f"coverage claim: {line}", file=sys.stderr)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(

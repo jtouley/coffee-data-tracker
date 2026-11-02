@@ -4,4 +4,4 @@
 with claims as ({{ coverage_claims() }})
 select source, metric, text
 from claims
-where metric not in (select metric from {{ ref('mart_build_profile') }})
+where not exists (select 1 from {{ ref('mart_build_profile') }} p where p.metric = claims.metric)  -- NULL-safe

@@ -1,5 +1,5 @@
 # ingest.Dockerfile's own build context (BuildKit reads <Dockerfile>.dockerignore instead of .dockerignore): it
-# needs dbt/, config/ and contracts/, which the app's image leaves out.
+# needs dbt/, config/, contracts/ and marketplace/LISTING.md, which the app's image leaves out.
 .git
 .venv
 .claude
@@ -11,6 +11,7 @@ tests
 app
 eval
 marketplace
+!marketplace/LISTING.md
 runbook
 dbt/target
 dbt/logs

@@ -23,6 +23,8 @@ RUN python -c "import duckdb; duckdb.sql('INSTALL httpfs')"
 COPY --chown=user config ./config
 COPY --chown=user dbt ./dbt
 COPY --chown=user contracts ./contracts
+# The listing copy whose coverage claims every build checks (quality.LISTING); without it the check is skipped.
+COPY --chown=user marketplace/LISTING.md ./marketplace/LISTING.md
 
 ENTRYPOINT ["coffeedata"]
 CMD ["--help"]

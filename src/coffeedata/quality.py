@@ -41,8 +41,10 @@ RELEASE_TABLES = (
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
 # The coverage we publish (marketplace/LISTING.md, copied by hand into the Snowflake listing's attribute boxes),
 # checked by every build against its own mart_build_profile: dbt's coverage_claims_match_build (warn, beyond
-# claim_tolerance) and coverage_claims_name_metrics (fails: a claim naming no metric is a bug, not drift).
-LISTING = Path("marketplace/LISTING.md")
+# claim_tolerance) and coverage_claims_name_metrics (fails: a claim naming no metric is a bug, not drift). Found
+# from this package's checkout (the ingest image copies it there), never from the working directory.
+ROOT = Path(__file__).resolve().parents[2]
+LISTING = ROOT / "marketplace" / "LISTING.md"
 _CLAIMS = re.compile(r"<!-- coverage-claims:(.*?)-->", re.S)
 _CLAIM = re.compile(r"^([a-z][a-z0-9_]*(?::[a-z0-9_]+)?): (.+)$")
 _NUMBER = re.compile(r"\d[\d,]*(?:\.\d+)?")
@@ -152,12 +154,21 @@ def record_build(
     return passed
 
 
-def coverage_claims(path: Path = LISTING) -> list[dict]:
-    """The numeric claims in `path`'s coverage-claims comment, one `metric: text` line each: the metric in
-    mart_build_profile, the text as it appears in the copy, its number (the stated value) and `source`, the file
-    and line of the copy to update. Raises ValueError for a claim whose text isn't in the copy or has no number,
-    so the copy and its claims can't drift apart."""
-    text = path.read_text()
+def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]:
+    """The numeric claims in `path`'s (default LISTING) coverage-claims comment, one `metric: text` line each: the
+    metric in mart_build_profile, the text as it appears in the copy, its number (the stated value) and `source`,
+    the file and line of the copy to update. Strict (CI's test), a claim whose text isn't in the copy or has no
+    number raises ValueError, so the copy and its claims can't drift apart. Not strict (the build), that claim is
+    logged and skipped, and a missing file is logged and gives no claims: the check never stops a build."""
+    path = path or LISTING
+    shown = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+    try:
+        text = path.read_text()
+    except (OSError, UnicodeDecodeError) as e:
+        if strict:
+            raise
+        logging.warning("coverage claims not checked: %s can't be read (%s)", shown, e)
+        return []
     block = _CLAIMS.search(text)
     if not block:
         return []
@@ -171,9 +182,13 @@ def coverage_claims(path: Path = LISTING) -> list[dict]:
         lineno = next((i for i, c in enumerate(copy, 1) if said in c), None)
         if number is None or lineno is None:
             why = "has no number" if number is None else "is not in the copy"
-            raise ValueError(f"{path}: coverage claim {metric}: {said!r} {why}")
+            problem = f"{shown}: coverage claim {metric}: {said!r} {why}"
+            if strict:
+                raise ValueError(problem)
+            logging.warning("%s; not checked", problem)
+            continue
         claims.append({"metric": metric, "value": float(number.group(0).replace(",", "")), "text": said,
-                       "source": f"{path}:{lineno}"})  # fmt: skip
+                       "source": f"{shown}:{lineno}"})  # fmt: skip
     return claims
 
 

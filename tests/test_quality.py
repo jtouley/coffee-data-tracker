@@ -874,7 +874,8 @@ def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
     }
     for c in claims.values():  # the line named is the copy, not the claims comment
         path, line = c["source"].rsplit(":", 1)
-        copy = Path(path).read_text().splitlines()[int(line) - 1]
+        assert path == "marketplace/LISTING.md"  # shown from the checkout's root
+        copy = (quality.ROOT / path).read_text().splitlines()[int(line) - 1]
         assert c["text"] in copy and "coverage-claims" not in copy and not copy.startswith("listed_coffees")
 
 
@@ -929,3 +930,33 @@ def test_coverage_claims_pass_inside_the_tolerance_warn_outside_it_and_fail_on_a
     assert r.returncode != 0 and re.search(r"FAIL 1 coverage_claims_name_metrics", r.stdout)  # a bug: fails
     [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
     assert "names coffees_listed, which mart_build_profile doesn't have" in msg
+
+
+def test_a_build_from_a_directory_without_marketplace_warns_and_is_still_recorded(
+    lake, monkeypatch, tmp_path, caplog
+):
+    """The ingest image before LISTING.md was copied in: the build runs, warns and records its release."""
+    from coffeedata import cli
+
+    image = tmp_path / "image"  # the checkout without marketplace/
+    image.mkdir()
+    for entry in quality.ROOT.iterdir():
+        if entry.name not in ("marketplace", ".git"):
+            (image / entry.name).symlink_to(entry)
+    monkeypatch.chdir(image)
+    monkeypatch.setattr(quality, "LISTING", image / "marketplace" / "LISTING.md")
+    real_dbt_build = cli.dbt_build
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    run(lake, "2026-10-26", RID, FULL)
+    args = argparse.Namespace(
+        db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26", accept_volume_change=False
+    )
+    assert cli.cmd_build(args) is True
+    assert "coverage claims not checked: " in caplog.text and "LISTING.md can't be read" in caplog.text
+    [(build_id, _, _)] = quality.builds(Lake())
+    assert quality.served(Lake())["build_id"] == build_id
