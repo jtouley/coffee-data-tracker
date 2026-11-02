@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import logging
 from collections import Counter
+from itertools import count
 from urllib.parse import urlparse
 
-from ..http import DeadlineReached, FetchError, NotCatalog, PoliteClient, block_status
+from ..http import DeadlineReached, FetchError, NotCatalog, PartialCatalog, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..ratelimit import RateLimited
 from ..sitemap import sitemap_urls
@@ -15,17 +16,22 @@ from ..text import html_to_text, to_float
 log = logging.getLogger(__name__)
 
 COMMON_SHOP_PATHS = ["/shop", "/store", "/coffee", "/shop-coffee", "/coffees", "/beans"]
-MAX_PAGES = 10
+# Page size: none to choose. ?format=json is Squarespace's documented way to read a collection as JSON
+# (https://developers.squarespace.com/url-queries: "Returns website and collection data in JSON format"), and the
+# docs give it no page-size parameter: the site sets how many items a page holds, and each page says whether there is
+# a next one (pagination.nextPage, nextPageOffset), which is followed to the end.
+# No cap on a collection's pages (it was 10), or on the shop paths tried (6, from the 4 busiest sitemap parents):
+# pages are read until the store says there is no next one. Only the run's deadline stops early: partial.
 
 
 def shop_paths(urls: list[str]) -> list[str]:
-    """Collection paths ranked by how many sitemap URLs sit beneath them, then common names."""
+    """Every collection path with 2 or more sitemap URLs beneath it, busiest first, then the common names."""
     parents: Counter[str] = Counter()
     for u in urls:
         parts = [p for p in urlparse(u).path.split("/") if p]
         if len(parts) >= 2:
             parents["/" + parts[0]] += 1
-    ranked = [p for p, n in parents.most_common(4) if n >= 2]
+    ranked = [p for p, n in parents.most_common() if n >= 2]
     return list(dict.fromkeys(ranked + COMMON_SHOP_PATHS))
 
 
@@ -61,15 +67,19 @@ def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
 
 def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict] | None:
     """Product items in a collection; None when the path doesn't exist (404). A first page that isn't JSON
-    raises NotCatalog; any other failure, on any page, raises FetchError."""
+    raises NotCatalog; any other failure, on any page, raises FetchError. At the run's deadline, PartialCatalog with
+    the items read so far (raw dicts)."""
     items: list[dict] = []
     offset: str | int | None = None
-    for page in range(MAX_PAGES):
+    offsets: set[str] = set()  # a store that hands back an offset it already gave has nothing new: the end
+    for page in count():
         params: dict[str, str | int | float | bool | None] = {"format": "json"}
         if offset:
             params["offset"] = offset
         try:
             data = client.catalog_json(f"https://{roaster.host}{path}", **params)
+        except DeadlineReached as e:
+            raise PartialCatalog(f"{e} ({path} page {page + 1})", items) from e
         except NotCatalog:
             if page:
                 raise FetchError(f"collection {path} page {page + 1} is not JSON") from None
@@ -80,15 +90,18 @@ def _collection(client: PoliteClient, roaster: Roaster, path: str) -> list[dict]
             return None
         if not isinstance(data, dict) or not isinstance(data.get("items", []), list):
             raise FetchError(f"unexpected Squarespace payload at {path}")
-        items.extend(
-            i
-            for i in data.get("items") or []
-            if isinstance(i, dict) and ("variants" in i or "productType" in i)
-        )
+        listed = [i for i in data.get("items") or [] if isinstance(i, dict)]
+        products = [i for i in listed if "variants" in i or "productType" in i]
+        if not page and listed and not products:
+            # not a shop: a blog, a gallery or an events page whose first page holds no product. Its other pages
+            # aren't read (a large /blog was paged to its end every week, before /shop was reached)
+            return []
+        items.extend(products)
         pagination = data.get("pagination") or {}
         offset = pagination.get("nextPageOffset") if pagination.get("nextPage") else None
-        if not offset:
+        if not offset or str(offset) in offsets:
             break
+        offsets.add(str(offset))
     return items
 
 
@@ -102,9 +115,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     try:
         urls = sitemap_urls(client, roaster.host)
     except DeadlineReached as e:
-        # the run's deadline, not an unreadable sitemap: the store's Crawl-delay leaves no time for its catalog
-        log.warning("%s: stopped at the run's deadline: %s", roaster.roaster_id, e)
-        raise
+        raise PartialCatalog(str(e), []) from e
     except FetchError as e:
         if block_status(e) or isinstance(
             e, RateLimited
@@ -123,9 +134,14 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     seen: dict[str, CatalogItem] = {}
     found_collection = False
     unreadable: list[str] = []
-    for path in shop_paths(urls)[:6]:
+    for path in shop_paths(urls):
         try:
             raw_items = _collection(client, roaster, path)
+        except PartialCatalog as e:
+            for raw in e.items:
+                if raw.get("id"):
+                    seen.setdefault(str(raw["id"]), parse_item(raw, roaster))
+            raise PartialCatalog(str(e), list(seen.values())) from e
         except NotCatalog as e:
             unreadable.append(str(e))
             continue

@@ -15,6 +15,7 @@ from coffeedata.http import (
     USER_AGENT,
     Blocked,
     DeadlineReached,
+    PartialCatalog,
     PoliteClient,
     RequestStats,
     RobotsRules,
@@ -203,12 +204,12 @@ def test_a_fetch_stopped_at_the_deadline_still_records_its_crawl_delay(mock, sle
     assert stats.crawl_delays == [{"host": "a.com", "asked": "60", "applied_s": 60.0, "capped": False}]
 
 
-def test_the_deadline_leaves_our_own_spacing_alone(mock, sleeps):
-    """Without a Crawl-delay the deadline doesn't stop a fetch in the client (ingest.run stops starting new ones)."""
+def test_the_deadline_stops_a_store_without_a_crawl_delay_too(mock, sleeps):
+    """#99's check after the wait: with no Crawl-delay, no request is sent once the deadline has passed either."""
     _robots(mock, "")
-    with PoliteClient(min_interval=1.0, retries=1, deadline_s=0) as c:
+    with PoliteClient(min_interval=1.0, retries=1, deadline_s=0) as c, pytest.raises(DeadlineReached):
         c.get(PAGE)
-        c.get(PAGE)
+    assert not mock.routes[0].called
 
 
 def test_ingest_passes_the_deadline_to_the_client(monkeypatch):
@@ -414,15 +415,16 @@ def test_a_woocommerce_variation_lookup_stopped_at_the_deadline_fails_the_fetch(
     roaster = Roaster(roaster_id="w.com", name="W", host="w.com", platform="woocommerce")
     with respx.mock(assert_all_called=False) as m:
         _woo_mock(m)
-        with PoliteClient(min_interval=1.0, retries=1, deadline_s=20) as c, pytest.raises(DeadlineReached):
+        with PoliteClient(min_interval=1.0, retries=1, deadline_s=20) as c, pytest.raises(PartialCatalog) as stop:
             woocommerce.fetch(c, roaster)
+        assert stop.value.items == [] and isinstance(stop.value.__cause__, DeadlineReached)
         with PoliteClient(min_interval=1.0, retries=1, deadline_s=20) as c:
             res = ingest.ingest_one(c, roaster)
     assert res.status == "error" and res.items == [] and "DeadlineReached" in (res.error or "")
     assert res.stats.crawl_delays == [{"host": "w.com", "asked": "30", "applied_s": 30.0, "capped": False}]
 
 
-def test_a_squarespace_sitemap_stopped_at_the_deadline_is_logged_as_the_deadline(sleeps, caplog):
+def test_a_squarespace_sitemap_stopped_at_the_deadline_is_the_deadline_not_unreadable(sleeps, caplog):
     from coffeedata.adapters import squarespace
 
     roaster = Roaster(roaster_id="sq.com", name="S", host="sq.com", platform="squarespace")
@@ -436,10 +438,11 @@ def test_a_squarespace_sitemap_stopped_at_the_deadline_is_logged_as_the_deadline
             c.get(
                 "https://sq.com/"
             )  # the host's first request: the next one's turn is 60 s on, past the deadline
-            with pytest.raises(DeadlineReached):
+            with pytest.raises(PartialCatalog) as stop:
                 squarespace.fetch(c, roaster)
+    assert stop.value.items == [] and isinstance(stop.value.__cause__, DeadlineReached)
     assert sitemap.call_count == 0
-    assert "deadline" in caplog.text and "sitemap unreadable" not in caplog.text
+    assert "sitemap unreadable" not in caplog.text
 
 
 def test_the_platform_probe_is_spaced_like_the_crawl_and_honours_robots(monkeypatch):

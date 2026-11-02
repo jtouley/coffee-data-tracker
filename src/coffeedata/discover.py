@@ -222,7 +222,8 @@ HTML_MARKERS = [
 
 
 def probe_one(client: PoliteClient, domain: str) -> dict:
-    """Which platform serves this roaster's catalog? status: ok | blocked | unreachable | http_<code> |
+    """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
+    an edge's challenge) | unreachable | http_<code> |
     robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
     home = None
     no_robots = False
@@ -233,6 +234,11 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
         except Blocked:
             return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
         except RobotsUnavailable as e:
+            if e.challenge:
+                # an edge's challenge on robots.txt (a 202, or a 401/403 with a challenge header) answers every
+                # request the same way: the site refuses us, as a robots block does. A probe status of its own that
+                # counts as probed (`blocked`), so discovery doesn't ask again on every run (robots_unavailable does)
+                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
@@ -255,7 +261,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     ]:
         try:
             data = client.get_json(f"https://{host}{path}", **params)
-        except RobotsUnavailable:  # the home page redirected to a host whose robots.txt didn't answer
+        except RobotsUnavailable as e:  # the home page redirected to a host whose robots.txt didn't answer
+            if e.challenge:  # refused, as above
+                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
             return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
         except (Blocked, httpx.HTTPError):
             data = None

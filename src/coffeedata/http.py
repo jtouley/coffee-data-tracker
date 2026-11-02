@@ -9,6 +9,7 @@ import logging
 import math
 import os
 import re
+import random
 import threading
 import time
 from collections import Counter
@@ -131,6 +132,23 @@ def retry_after_seconds(value: str | None, now: datetime | None = None) -> float
     return max(0.0, (when - (now or datetime.now(UTC))).total_seconds())
 
 
+def asked_wait(r: httpx.Response) -> float | None:
+    """How long a response asked us to wait, in seconds: its Retry-After, else the WooCommerce Store API's own
+    `RateLimit-Retry-After` (sent with its 429s when the store turns rate limiting on: docs/apis/store-api/
+    rate-limiting.md; Authentication.php). None if it said neither. Callers cap it (store_wait, MAX_RETRY_WAIT)."""
+    asked = retry_after_seconds(r.headers.get("retry-after"))
+    return asked if asked is not None else retry_after_seconds(r.headers.get("ratelimit-retry-after"))
+
+
+def jittered(seconds: float) -> float:
+    """A backoff with up to 25% added at random, so stores (and workers) that failed together don't retry together.
+    Only ever longer: a wait a store asked for is never cut short."""
+    return seconds * (1.0 + 0.25 * _random())
+
+
+_random = random.random  # tests patch it
+
+
 def store_wait(asked: float) -> float:
     """A wait a store asked for, as we honor it: at most MAX_STORE_WAIT."""
     return min(max(0.0, asked), MAX_STORE_WAIT)
@@ -142,7 +160,7 @@ def server_pause(r: httpx.Response) -> float | None:
     None for any other response (a shorter Retry-After is waited out by the client's own retries)."""
     if r.status_code not in SERVER_RETRY_STATUSES:
         return None
-    asked = retry_after_seconds(r.headers.get("retry-after"))
+    asked = asked_wait(r)
     return store_wait(asked) if asked is not None and asked > MAX_RETRY_WAIT else None
 
 
@@ -156,6 +174,30 @@ def block_status(e: BaseException | None) -> int | None:
             return e.response.status_code
         e = e.__cause__
     return None
+
+
+def causes(e: BaseException | None) -> Iterator[BaseException]:
+    """e, then each __cause__ in turn."""
+    while e is not None:
+        yield e
+        e = e.__cause__
+
+
+def challenged(e: BaseException) -> bool:
+    """An edge answered with a challenge (is_challenge: a 202, or SiteGround's `sg-captcha` or Cloudflare's
+    `cf-mitigated: challenge` header on any status) instead of the catalog, a page, a price or its robots.txt."""
+    return any(
+        (isinstance(c, FetchError) and (c.challenge or c.status in CHALLENGE_STATUSES))
+        or (isinstance(c, httpx.HTTPStatusError) and is_challenge(c.response))
+        for c in causes(e)
+    )
+
+
+def challenge_error(r: httpx.Response, url: str) -> FetchError | None:
+    """The FetchError for a response that is an edge's challenge (is_challenge), else None."""
+    if not is_challenge(r):
+        return None
+    return FetchError(f"HTTP {r.status_code} (a challenge) {url}", status=r.status_code, challenge=True)
 
 
 def is_challenge(r: httpx.Response) -> bool:
@@ -179,11 +221,13 @@ def block_record(r: httpx.Response) -> dict:
 
 class FetchError(Exception):
     """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error. status:
-    the HTTP status, when the failure was a non-200 answer (ingest.blocked reads it)."""
+    the HTTP status, when the failure was a non-200 answer (ingest.blocked reads it). challenge: the answer was an
+    edge's challenge (is_challenge: a 202, or a challenge header on any status), read by challenged()."""
 
-    def __init__(self, *args: object, status: int | None = None) -> None:
+    def __init__(self, *args: object, status: int | None = None, challenge: bool = False) -> None:
         super().__init__(*args)
         self.status = status
+        self.challenge = challenge
 
 
 class ResponseTooLarge(FetchError):
@@ -255,15 +299,28 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
         challenge: bool = False,
         wait: float | None = None,
     ) -> None:
-        super().__init__(message, status=status)
+        super().__init__(message, status=status, challenge=challenge)
         self.unreachable = unreachable
-        self.challenge = challenge
         self.wait = wait
 
 
 class DeadlineReached(FetchError):
-    """The run's deadline (PoliteClient.deadline) would pass before this request's turn: the fetch stops where it
-    is, instead of a long Crawl-delay holding a worker past the deadline."""
+    """The run's deadline (PoliteClient.deadline) passed before this request was sent, or would pass
+    before a host's Crawl-delay turn: the fetch stops where it is, without sleeping out the delay.
+    An adapter turns it into models.PartialCatalog with the products it read whole, stored as a `partial` fetch."""
+
+
+class PartialCatalog(Exception):
+    """A fetch that read only part of the catalog (the run's deadline: DeadlineReached; a WooCommerce count that
+    differs from X-WP-Total; a sitemap that couldn't be read whole): `items` are the products it read whole. ingest
+    stores them as an ok fetch marked `partial`, with this message as its fetches.error, so dbt keeps the products
+    it didn't read listed instead of reading them as delisted; with no items it is the fetch's error. page: where a
+    paged catalog stopped (Shopify), so a resume continues from that page (ingest.run parks it) instead of page 1."""
+
+    def __init__(self, message: str, items: list, page: int | None = None) -> None:
+        super().__init__(message)
+        self.items = items
+        self.page = page
 
 
 class NotCatalog(FetchError):
@@ -454,8 +511,8 @@ class PoliteClient:
         deadline_s: float | None = None,
     ):
         self.min_interval = min_interval
-        # deadline_s: seconds from now after which a host's Crawl-delay is never waited out (DeadlineReached): the
-        # crawl job's window, so a store asking a long delay can't hold a worker past it.
+        # deadline_s: seconds from now after which no request is sent (DeadlineReached): the crawl job's window, so a
+        # catalog still being read when it ends stops there and is stored as partial, instead of running past the job.
         self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
         self.max_response_bytes = max_response_bytes or MAX_RESPONSE_BYTES
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
@@ -548,7 +605,10 @@ class PoliteClient:
             return self._read(
                 self._client.send(self._client.build_request("GET", url, params=params), stream=True)
             )
-        with self._limiter.slot(urlparse(url).hostname):
+        with self._limiter.slot(urlparse(url).hostname, patient=self.is_last_try):
+            # a platform's cooldown or a store's pause (at most MAX_STORE_WAIT) may have passed the deadline
+            if self.deadline is not None and time.monotonic() >= self.deadline:
+                raise DeadlineReached(f"the run's deadline passed before {url}")
             r = self._client.send(self._client.build_request("GET", url, params=params), stream=True)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
             return self._read(r)
@@ -678,7 +738,7 @@ class PoliteClient:
             status = r.status_code if challenged or block or paused is not None else None
             wait = paused
             if block:  # a pause: asked again once it has passed (at most MAX_STORE_WAIT), the store deferred till then
-                wait = retry_after_seconds(r.headers.get("retry-after"))
+                wait = asked_wait(r)
                 wait = ROBOTS_BLOCK_RETRY_AFTER if wait is None else store_wait(wait)
             err = RobotsUnavailable(
                 f"robots.txt for {host} {why}", status=status, challenge=challenged, wait=wait
@@ -723,6 +783,8 @@ class PoliteClient:
             last = attempt == self.retries - 1
             if spaced:
                 self._wait_turn(host)
+            if self.deadline is not None and time.monotonic() >= self.deadline:
+                raise DeadlineReached(f"the run's deadline passed before {url}")
             asked: float | None = None  # the response's Retry-After, in seconds
             try:
                 r = self._send(url, params)
@@ -735,16 +797,17 @@ class PoliteClient:
                     raise
             else:
                 self._note(r.status_code, retry=attempt > 0, page=page, response=r)
-                if r.status_code not in RETRY_STATUSES or last:
+                # an edge's challenge (a challenge header, on a 503 too) is a refusal: never retried (is_challenge)
+                if r.status_code not in RETRY_STATUSES or last or is_challenge(r):
                     return r
                 if self._limiter is not None and r.status_code in BLOCK_STATUSES:
                     continue  # the limiter's platform-wide cooldown is the wait; don't idle this worker too
-                asked = retry_after_seconds(r.headers.get("retry-after"))
+                asked = asked_wait(r)
                 if asked is not None and asked > MAX_RETRY_WAIT:
                     # never sooner than asked (up to MAX_STORE_WAIT): the store is deferred past it (ingest.run), a
                     # 500/502/504's too (server_pause)
                     return r
-            time.sleep(asked if asked is not None else 2**attempt)
+            time.sleep(jittered(asked if asked is not None else 2**attempt))
         raise ValueError("retries must be >= 1")
 
     def _follow(self, url: str, params: dict | None = None, robots: bool = False) -> httpx.Response:
@@ -804,6 +867,8 @@ class PoliteClient:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if err := challenge_error(r, url):
+            raise err
         if why := unavailable_reason(r):
             raise Unavailable(why)
         if r.status_code == 404:
@@ -817,15 +882,23 @@ class PoliteClient:
 
     def fetch_json(self, url: str, **params: str | int | float | bool | None) -> Any:
         """JSON body, or FetchError: for catalog pages, where a miss must never look like an empty catalog."""
+        return self.fetch_json_response(url, **params)[0]
+
+    def fetch_json_response(
+        self, url: str, **params: str | int | float | bool | None
+    ) -> tuple[Any, httpx.Response]:
+        """fetch_json, with the response it came from (for its headers: WooCommerce's X-WP-Total)."""
         try:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if err := challenge_error(r, url):
+            raise err
         if why := unavailable_reason(r):
             raise Unavailable(why)
         if r.status_code != 200:
             raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
         try:
-            return scrub_surrogates(r.json())
+            return scrub_surrogates(r.json()), r
         except ValueError as e:
             raise FetchError(f"not JSON: {url}") from e

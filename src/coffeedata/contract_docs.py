@@ -52,7 +52,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store); "
         "crashed (not fetched: quarantined for the week after it was in flight in two attempts of its crawl that "
         "died).",
-        "error": "The failure, when status is not ok.",
+        "error": "The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.",
         "products": "Products the attempt read.",
         "coffees": "Coffees among them as the crawl counted them; null from an ELT crawl.",
         "pages": "Catalog pages (200 responses other than robots.txt) read.",

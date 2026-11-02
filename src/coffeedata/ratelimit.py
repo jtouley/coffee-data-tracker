@@ -22,7 +22,8 @@ from contextlib import contextmanager
 
 import httpx
 
-from .http import BLOCK_STATUSES, FetchError, is_challenge, retry_after_seconds, store_wait
+from .http import BLOCK_STATUSES, MAX_STORE_WAIT, FetchError, asked_wait, is_challenge, store_wait
+from .http import retry_after_seconds as retry_after_seconds  # re-exported (tests, older callers)
 
 log = logging.getLogger(__name__)
 
@@ -177,26 +178,30 @@ class PlatformLimiter:
                     self.stats["requests"] += 1
                     return
 
-    def _wait_for_host(self, host: str | None) -> None:
+    def _wait_for_host(self, host: str | None, patient: bool = False) -> None:
         """Per-host mode: wait out this store's own pause, or park the store (HostRateLimited, so ingest.run retries
         it once the pause has passed): with defer on, a pause over defer_after; with it off (the deferred rounds), one
-        over max_cooldown, which no worker is held for."""
+        over max_cooldown, which no worker is held for. patient: the store's last try in the run (ingest.run's final
+        round), which no later round will retry: its pause is waited out, at most http.MAX_STORE_WAIT (a store's
+        pause is never longer), so a fallback on the same host (squarespace's shop paths after a blocked sitemap)
+        is read instead of failing on the pause the sitemap set."""
         if not self.per_host or host is None:
             return
+        limit = MAX_STORE_WAIT if patient else self.defer_after if self.defer else self.max_cooldown
         while True:
             with self._lock:
                 wait = self.host_until.get(host, 0.0) - self._clock()
                 if wait <= 0:
                     return
-                if wait > (self.defer_after if self.defer else self.max_cooldown):
+                if wait > limit:
                     self.stats["deferred"] += 1
                     raise HostRateLimited(f"{host} asked to wait {wait:.0f}s; deferred", host, wait)
             self._sleep(wait)
 
     @contextmanager
-    def slot(self, host: str | None = None) -> Iterator[None]:
-        """Hold one of the platform's request slots for the duration of one request."""
-        self._wait_for_host(host)  # before taking a slot: a paused store never holds one
+    def slot(self, host: str | None = None, patient: bool = False) -> Iterator[None]:
+        """Hold one of the platform's request slots for the duration of one request. patient: _wait_for_host."""
+        self._wait_for_host(host, patient)  # before taking a slot: a paused store never holds one
         # The slot first, then the time: callers queued for a slot can't bank rate-spacing time and then all
         # start at once when slots free up together.
         self._sem.acquire()
@@ -230,7 +235,7 @@ class PlatformLimiter:
             if status not in BLOCK_STATUSES:
                 return
             self.stats["rate_limited"] += 1
-            asked = retry_after_seconds(response.headers.get("retry-after"))
+            asked = asked_wait(response)
             wait = min(self.max_cooldown, self.default_cooldown if asked is None else asked)
             if self.per_host and status != 430:
                 host = _host(response)
