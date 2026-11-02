@@ -246,8 +246,10 @@ def crawl(
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
+    repulls: list = []
     if not (part or only):  # what the post-crawl check listed for a repull (never for an arm or --only)
-        states += _repulls(plake, connector, week, states)
+        repulls = _repulls(plake, connector, week, states)
+        states += repulls
     if part:
         states = [s for s in states if in_slice(s.roaster.host.lower() or s.roaster.roaster_id, part, salt)]
     if c.shuffle:
@@ -278,6 +280,7 @@ def crawl(
                 guard=guard,
                 suspects=set(health.suspects) - set(quarantine),
                 quarantine=quarantine,
+                refetch={s.roaster.roaster_id for s in repulls},
             )
             if states
             else {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}}
@@ -311,11 +314,20 @@ def crawl(
 
 
 def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
-    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have."""
+    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have. A repull
+    is an extra: if it can't be read (the lake still failing after retry_transient's retries, an unreadable check),
+    it is logged and skipped, and the crawl pass goes on with its own work."""
     from . import crawldq
 
     have = {s.roaster.roaster_id for s in states}
-    return [s for s in crawldq.repull_states(plake, connector, week) if s.roaster.roaster_id not in have]
+    try:
+        listed = crawldq.repull_states(plake, connector, week)
+    except Exception as e:  # noqa: BLE001 - never the pass's failure
+        log.warning(
+            "crawl %s: the post-crawl check's repulls skipped: %s: %s", connector, type(e).__name__, e
+        )
+        return []
+    return [s for s in listed if s.roaster.roaster_id not in have]
 
 
 def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
@@ -329,7 +341,8 @@ def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     plake = PartitionLake(lake, connector, week)
     compact(plake.part)
     states, resume = ingest.select_parked(plake, week, adapter=connector)
-    states += _repulls(plake, connector, week, states)  # fetched whole: no parked progress
+    repulls = _repulls(plake, connector, week, states)  # fetched whole: no parked progress
+    states += repulls
     ids = {s.roaster.roaster_id for s in states}
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = health.quarantine(ids)
@@ -338,7 +351,8 @@ def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     try:
         out = ingest.run(plake, states, week, workers=workers, mode="retry_failed", resume=resume, guard=guard,
-                         suspects=set(health.suspects) - set(quarantine), quarantine=quarantine)  # fmt: skip
+                         suspects=set(health.suspects) - set(quarantine), quarantine=quarantine,
+                         refetch={s.roaster.roaster_id for s in repulls})  # fmt: skip
         compact(plake.part)
     except Exception as e:
         control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})

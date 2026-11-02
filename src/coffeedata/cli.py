@@ -162,16 +162,20 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
 
 
 def cmd_crawl_dq(args: argparse.Namespace) -> None:
-    """The post-crawl check (crawldq.py). Exits non-zero on a systemic problem, which fails the Cloud Run execution
-    and emails the owner; per-roaster problems only go on the repull list."""
+    """The post-crawl check (crawldq.py). Exits non-zero on a systemic problem not already found by an earlier check
+    this week, which fails the Cloud Run execution and emails the owner once per finding; per-roaster problems only
+    go on the repull list."""
     from . import crawldq
 
     out = crawldq.run(Lake(), args.run_date, force=args.force)
     _print(out)
-    if out.get("systemic"):
+    if out.get("alert"):
         # One structured line, so the execution's log names the problem at ERROR severity.
         print(json.dumps({"severity": "ERROR", "message": "crawl-dq: systemic", "systemic": out["systemic"]}))
-        raise SystemExit(f"crawl-dq {out['run_date']}: systemic: {json.dumps(out['systemic'])}")
+        raise SystemExit(f"crawl-dq {out['run_date']}: systemic: {json.dumps(out['alert'])}")
+    if out.get("systemic"):  # found again by a later pass's check: already alerted this week, logged only
+        print(json.dumps({"severity": "WARNING", "message": "crawl-dq: systemic, already alerted this week",
+                          "systemic": out["systemic"]}))  # fmt: skip
 
 
 def cmd_enrich_week(args: argparse.Namespace) -> None:

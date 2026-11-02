@@ -15,17 +15,21 @@ What it decides, with no new threshold of its own:
 - systemic: a platform below adapter_ok_rate's floor (scope connector); two or more platforms below it in the same
   pass, which points at what they share, the image, our code or its egress, rather than at one platform (scope
   image); the run below run_ok_rate's floor with no single platform to blame (scope run). The job exits non-zero,
-  which emails the owner (alerts.tf, ingest_job_failed).
+  which emails the owner (alerts.tf, ingest_job_failed), once per finding a week: a later check that finds the same
+  scope on the same connectors again records it and logs a warning; a new or different finding alerts.
 - repull: per roaster, the rows the gate counts as not ok, with the rule as the reason: `failed` (the fetch
   failed), `empty` (it succeeded with no products, for a roaster known to have a catalog), `suspect`. A platform
   judged systemic is held back from it (asking a platform that is refusing us again the same evening helps nobody),
-  and an image problem holds back all of it. Anything the rules can't tell is left alone (CLAUDE.md: abstain).
+  and an image problem holds back all of it. A suspect with no adapter (no run_completeness row) is listed apart,
+  unattributed: never repulled or held back. Anything the rules can't tell is left alone (CLAUDE.md: abstain).
 
 It never builds a release, records a build, serves, or publishes. Its one write is its job_manifests rows (job
 `dq`), whose detail holds the repull list. Later crawl passes of the week (`crawl` for the resume and third
 slots, `crawl-retry`) read the latest check that judged their connector and fetch its `empty` and `suspect` roasters
-again, unless fetched since that check. `failed` ones are listed for the owner but need no hook: having no ok fetch,
-every crawl pass asks them again anyway, and crawl-retry deliberately doesn't.
+again (the whole catalog: no known count), unless fetched since that check or select_states would no longer crawl
+them (opted out, no platform). A repull that can't be read is skipped, never the pass. `failed` ones are listed for
+the owner but need no hook: having no ok fetch, every crawl pass asks them again anyway, and crawl-retry deliberately
+doesn't.
 
 Triggered by its own Cloud Run job, polled by Cloud Scheduler every 20 minutes through Monday's crawl window: a poll
 with no crawl attempt ended since the last check exits at once; otherwise it judges every connector whose pass has
@@ -34,7 +38,6 @@ ended, and leaves out one still running (the next poll after it ends judges it, 
 
 from __future__ import annotations
 
-import json
 import logging
 import shutil
 from datetime import UTC, date, datetime, timedelta
@@ -42,7 +45,7 @@ from pathlib import Path
 from typing import Any
 
 from . import control, registry
-from .lake import LAKE_TABLES, SCHEMA_FILES, Lake
+from .lake import LAKE_TABLES, SCHEMA_FILES, Lake, retry_transient
 
 log = logging.getLogger(__name__)
 
@@ -180,9 +183,13 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         e["reasons"].append(r["reason"])
         if r["reason"] == "suspect":
             e["products"], e["baseline_products"] = r["products"], r["baseline_products"]
-    repull, held = [], 0
+    repull, held, unattributed = [], 0, []
     for e in sorted(reasons.values(), key=lambda e: (e["adapter"] or "", e["roaster_id"])):
-        if image or e["adapter"] in down:
+        if e["adapter"] is None:
+            # A suspect with no run_completeness row has no connector to ask it again: listed for the owner on its
+            # own, whatever is systemic, and neither repulled nor counted as held back.
+            unattributed.append(e)
+        elif image or e["adapter"] in down:
             held += 1
         else:
             repull.append(e)
@@ -190,10 +197,17 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         "systemic": systemic,
         "repull": repull,
         "held_back": held,  # bad roasters not repulled because their platform (or the image) is systemic
+        "unattributed": unattributed,  # bad roasters with no adapter: for the owner, never repulled or held back
         "by_connector": reached,
         "running": sorted(running),
         "tests": {t: tests[t] for t in GATE_TESTS},  # pass, fail (an error-severity test) or warn
     }
+
+
+def finding_key(f: dict) -> tuple[str, tuple[str, ...]]:
+    """What makes a systemic finding the same one again: its scope and the connectors it names (none for `run`)."""
+    names = f.get("connectors") or ([f["connector"]] if f.get("connector") else [])
+    return f.get("scope", ""), tuple(sorted(names))
 
 
 def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
@@ -217,7 +231,7 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
         if not ended:
             return {"run_date": week, "status": "waiting: no crawl attempt has ended this week",
                     "running": sorted(running)}  # fmt: skip
-        seen = {a for r in checks for a in json.loads(r["detail"] or "{}").get("attempts", [])}
+        seen = {a for r in checks for a in control.detail_of(r).get("attempts", [])}
         if set(ended) <= seen:
             return {"run_date": week, "status": "up to date: no crawl attempt has ended since the last check",
                     "running": sorted(running)}  # fmt: skip
@@ -236,11 +250,20 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
             lake, job, "failed", detail={"error": f"{type(e).__name__}: {e}"[:500], "attempts": ended}
         )
         raise
+    # One systemic finding alerts once a week: a later pass's check that finds it again (the same scope on the same
+    # connectors) records it without alerting again. A new or different finding alerts.
+    before = {
+        finding_key(f)
+        for r in checks
+        if r["status"] == "done"
+        for f in control.detail_of(r).get("systemic", [])
+    }
     out = {
         "partitions": copied,
         "died": sorted({r["connector"] or "" for r in died}),
         "attempts": ended,
     } | out
+    out["alert"] = [f for f in out["systemic"] if finding_key(f) not in before]
     control.finish(lake, job, "done", detail=out)
     return {"run_date": week, "status": "checked", **out}
 
@@ -248,11 +271,17 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
 def repull_states(lake: Lake, connector: str, week: str) -> list[registry.RoasterState]:
     """The repull list of the latest check that judged `connector` this week (one that ran while its crawl did left
     it out), less any roaster fetched since that check (a resume slot already asked it again) and the `failed` ones:
-    what a later crawl pass of the week (crawl, crawl-retry) fetches again although it has an ok fetch."""
-    checks = [r for r in control.rows(lake, week) if r["job"] == JOB and r["status"] == "done"]
-    detail, since = {}, None
+    what a later crawl pass of the week (crawl, crawl-retry) fetches again although it has an ok fetch. Only roasters
+    select_states would still crawl (ingest.crawlable: a platform, not opted out, ...) whose adapter is still
+    `connector`. Its lake reads are retried on a transient error (retry_transient), as every first read of a crawl."""
+    from .ingest import crawlable
+
+    rows = retry_transient(control.rows, lake, week)
+    checks = [r for r in rows if r["job"] == JOB and r["status"] == "done"]
+    detail: dict[str, Any] = {}
+    since = None
     for r in sorted(checks, key=lambda r: (r["started_at"], r["ended_at"]), reverse=True):
-        d = json.loads(r["detail"] or "{}")
+        d = control.detail_of(r)
         if connector not in d.get("running", []):
             detail, since = d, _utc(r["started_at"])
             break
@@ -265,17 +294,14 @@ def repull_states(lake: Lake, connector: str, week: str) -> list[registry.Roaste
     }
     if not listed:
         return []
-    fetched = (
-        lake.connect()
-        .execute(
-            f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and fetched_at > ?",
-            [date.fromisoformat(week), since],
-        )
-        .fetchall()
-    )
+    q = f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ? and fetched_at > ?"
+    fetched = retry_transient(lambda: lake.connect().execute(q, [date.fromisoformat(week), since]).fetchall())
     todo = listed - {r[0] for r in fetched}
+    # Every listed roaster was fetched this run (that's how the check saw it): `tried`, as select_states has it.
     states = [
-        s for s in registry.current(lake) if s.roaster.roaster_id in todo and s.roaster.adapter == connector
+        s
+        for s in registry.current(lake)
+        if s.roaster.roaster_id in todo and s.roaster.adapter == connector and crawlable(s, todo)
     ]
     if states:
         log.info("crawl-dq repull: %d %s roaster(s) from the check at %s", len(states), connector, since)

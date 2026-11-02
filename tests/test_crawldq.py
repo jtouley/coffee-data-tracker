@@ -296,3 +296,152 @@ def test_crawl_retry_also_fetches_the_repull_list_but_not_the_failed(tmp_path, m
         s.roaster.roaster_id for s in states]) and {"by_adapter": {}})  # fmt: skip
     cli.main(["crawl-retry", "--connector", "shopify", "--run-date", WEEK])
     assert seen["ids"] == ["a.com"]
+
+
+def _check(lk: Lake, repull: list[dict]) -> None:
+    control.finish(lk, control.start(lk, "dq", WEEK), "done", detail={"repull": repull})
+
+
+def test_a_repull_read_that_fails_transiently_is_retried(tmp_path, monkeypatch):
+    """The repull's lake reads go through retry_transient, as every first read of a crawl: one dropped connection
+    (the NAT out of ports) is retried, not the end of the pass."""
+    from coffeedata import lake as lake_mod
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com")])
+    _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["empty"]}])
+    waits: list = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    real, calls = control.rows, []
+
+    def flaky(lake, *a, **k):
+        calls.append(1)
+        if len(calls) == 1:
+            raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+        return real(lake, *a, **k)
+
+    monkeypatch.setattr(control, "rows", flaky)
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    assert [s.roaster.roaster_id for s in crawldq.repull_states(part, "shopify", WEEK)] == ["a.com"]
+    assert len(calls) == 2 and waits == [lake_mod.RETRY_WAITS[0]]
+
+
+@pytest.mark.parametrize("command", ["crawl", "crawl-retry"])
+def test_a_repull_that_cannot_be_read_skips_only_the_repull_never_the_pass(tmp_path, monkeypatch, command):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com"), _state("b.com")])
+    _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["empty"]}])
+    monkeypatch.setattr(crawldq, "repull_states", lambda *a: (_ for _ in ()).throw(
+        duckdb.IOException("IO Error: Could not connect to server")))  # fmt: skip
+    seen: dict = {}
+    monkeypatch.setattr(ingest, "run", lambda lake, states, *a, **k: seen.__setitem__("ids", sorted(
+        s.roaster.roaster_id for s in states)) or {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0})  # fmt: skip
+    cli.main([command, "--connector", "shopify", "--run-date", WEEK])
+    # The pass ran its own work (crawl: every roaster without an ok fetch; crawl-retry: no parked store) and ended.
+    assert seen.get("ids", []) == (["a.com", "b.com"] if command == "crawl" else [])
+    assert [r["status"] for r in control.rows(lk, WEEK) if r["job"] == command] == ["done"]
+
+
+def test_an_unreadable_check_detail_lists_no_repull(tmp_path, monkeypatch):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com")])
+    job = control.start(lk, "dq", WEEK)
+    control.write(lk, job | {"status": "done", "ended_at": job["started_at"], "detail": "{not json"})
+    assert crawldq.repull_states(connectors.PartitionLake(lk, "shopify", WEEK), "shopify", WEEK) == []
+
+
+def test_a_roaster_select_states_would_not_crawl_is_never_repulled(tmp_path, monkeypatch):
+    """Opted out (or no platform any more) after the check: select_states' rules apply to the repull too."""
+    lk = Lake(str(tmp_path / "lake"))
+    gone = registry.RoasterState(Roaster(roaster_id="o.com", name="o", host="o.com", platform="shopify"),
+                                 "opted_out", None)  # fmt: skip
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [_state("a.com"), gone, _state("n.com", "")]
+    )
+    _check(
+        lk,
+        [
+            {"roaster_id": r, "adapter": "shopify", "reasons": ["suspect"]}
+            for r in ("a.com", "n.com", "o.com")
+        ],
+    )
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    assert [s.roaster.roaster_id for s in crawldq.repull_states(part, "shopify", WEEK)] == ["a.com"]
+
+
+def test_a_repull_is_fetched_without_a_known_product_count(tmp_path, monkeypatch):
+    """The suspect fetch's short count is its latest complete ok fetch: crawl and crawl-retry pass the repulls as
+    `refetch`, so ingest.run reads their whole catalog."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com")])
+    monkeypatch.setattr(
+        control, "now", lambda: datetime(2026, 11, 2, 18, tzinfo=UTC)
+    )  # the check: after the fetch
+    run(connectors.PartitionLake(lk, "shopify", WEEK), WEEK, "a.com", [product("x")], hour=1)
+    _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["suspect"]}])
+    seen = []
+    monkeypatch.setattr(ingest, "run", lambda lake, states, *a, **k: seen.append(k.get("refetch")) or {
+        "roasters": 0, "by_adapter": {}, "skipped_deadline": 0})  # fmt: skip
+    cli.main(["crawl", "--connector", "shopify", "--run-date", WEEK])
+    cli.main(["crawl-retry", "--connector", "shopify", "--run-date", WEEK])
+    assert seen == [{"a.com"}, {"a.com"}]
+
+
+def test_a_suspect_with_no_adapter_is_listed_apart_never_repulled_or_held_back(tmp_path):
+    rc = [("a.com", "shopify", True, False, True, False)]
+    suspect = [("z.com", date(2026, 11, 2), "b1", 5, 30.0)]
+    db = _db(tmp_path, rc, {"suspect_runs_need_review": suspect})
+    out = crawldq.judge(db, _results(suspect_runs_need_review="warn"))
+    assert [e["roaster_id"] for e in out["repull"]] == ["a.com"] and out["held_back"] == 0
+    assert out["unattributed"] == [{"roaster_id": "z.com", "adapter": None, "reasons": ["suspect"], "products": 5,
+                                    "baseline_products": 30.0}]  # fmt: skip
+    # The same when everything is held back: it is not counted as held.
+    (tmp_path / "dq.duckdb").unlink()
+    db = _db(tmp_path, rc, {"suspect_runs_need_review": suspect,
+                            "adapter_ok_rate": [("shopify", 40, 0.1), ("woocommerce", 30, 0.2)]})  # fmt: skip
+    out = crawldq.judge(db, _results(suspect_runs_need_review="warn", adapter_ok_rate="fail"))
+    assert (
+        out["repull"] == []
+        and out["held_back"] == 1
+        and [e["roaster_id"] for e in out["unattributed"]] == ["z.com"]
+    )
+
+
+def test_one_systemic_finding_alerts_once_a_week_and_a_different_one_alerts_again(
+    tmp_path, monkeypatch, capsys
+):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(crawldq, "DIR", tmp_path / "dq")
+    monkeypatch.setattr(cli, "dbt_build", lambda *a, **k: (True, []))
+    shop = {
+        "scope": "connector",
+        "connector": "shopify",
+        "rule": "adapter_ok_rate",
+        "roasters": 30,
+        "ok_share": 0.1,
+    }
+    found: list = [[shop]]
+    monkeypatch.setattr(crawldq, "judge", lambda db, results, running=frozenset(): {
+        "systemic": found[-1], "repull": [], "held_back": 0, "by_connector": [], "running": []})  # fmt: skip
+
+    def poll(connector: str) -> bool:
+        control.finish(lk, control.start(lk, "crawl", WEEK, connector), "done")
+        try:
+            cli.main(["crawl-dq", "--run-date", WEEK])
+        except SystemExit:
+            return True
+        return False
+
+    assert poll("shopify")  # the first finding emails
+    assert not poll("woocommerce")  # found again after another pass: logged, not emailed
+    assert '"severity": "WARNING"' in capsys.readouterr().out
+    assert not poll("shopify")  # Shopify's resume, same outage, ok_share moved: still the same finding
+    found.append([shop | {"ok_share": 0.2}])
+    assert not poll("generic")
+    woo = shop | {"connector": "woocommerce"}
+    found.append([shop, woo, {"scope": "image", "connectors": ["shopify", "woocommerce"], "rule": "x"}])
+    assert poll("square_online")  # a different finding: emails
+    assert crawldq.run(lk, WEEK, force=True)["alert"] == []  # every finding of it already alerted this week

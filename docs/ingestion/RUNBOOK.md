@@ -837,8 +837,8 @@ the hours outside that window find nothing to judge); a poll with nothing new ex
 4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute crawl-dq --region $REGION
    --args="crawl-dq,--force" --wait`. It writes one `job_manifests` row (job `dq`) and nothing else.
 
-**Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `repull`, `held_back`,
-`by_connector`, `running`, `tests`); the same is the `detail` of the week's latest `dq` row:
+**Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `alert`, `repull`, `held_back`,
+`unattributed`, `by_connector`, `running`, `tests`); the same is the `detail` of the week's latest `dq` row:
 
 ```sh
 uv run python -c "
@@ -847,7 +847,10 @@ rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'dq' and r['
 print(json.dumps(json.loads(rows[-1]['detail']), indent=1))" 2026-11-02
 ```
 
-**When it alerts** (`ingest job crawl-dq failed`): the log's `"severity": "ERROR"` line names the scope.
+**When it alerts** (`ingest job crawl-dq failed`): the log's `"severity": "ERROR"` line names the scope. Each finding
+(a scope on a set of connectors) alerts once a week: a later pass's check that finds it again logs a `WARNING` line and
+exits 0; a new or different finding alerts again. A suspect with no adapter is listed under `unattributed`, for you to
+look at; no pass repulls it.
 - `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached. Its roasters are
   held off the repull list. Look at that connector's `job_manifests` rows (429/430 counts, egress IPs) and its
   execution logs before its next slot; Tuesday's build will fail its gate unless the resume or retry recovers it.

@@ -759,14 +759,18 @@ scratch database (`build/crawl-dq/`, its own `--target-path`) and runs three of 
 - `suspect_runs_need_review`: `stg_run_quality`'s suspect rule (below half the median of the last 4 counted weeks).
 
 The verdict, with no threshold of its own:
-- **Systemic** (exit non-zero, so `ingest_job_failed` emails the owner): a platform below `adapter_ok_rate`'s floor
-  (scope `connector`); two or more at once (scope `image`: what they share is the image, our code or its egress);
+- **Systemic** (exit non-zero, so `ingest_job_failed` emails the owner, once a week per finding: the same scope on
+  the same connectors found again by a later check is logged, not emailed): a platform below `adapter_ok_rate`'s
+  floor (scope `connector`); two or more at once (scope `image`: what they share is the image, our code or its egress);
   the run below `run_ok_rate` with no single platform to blame (scope `run`, judged only when no crawl is running).
 - **Repull**, per roaster, the rows the gate counts as not ok, the rule as the reason: `failed`, `empty` (ok with no
   products, for a roaster known to have a catalog: `run_completeness.catalog_ok`), `suspect`. A systemic platform's
   roasters are held back (asking a platform that refuses us again that evening helps nobody); an `image` holds back
-  all. A partial fetch, an unreached roaster and a closed store are left alone. No new per-roaster rule, so CLAUDE.md's
-  evaluation doesn't apply; no product's output changes (0 toward the 50-product budget).
+  all. A partial fetch, an unreached roaster and a closed store are left alone. The check itself changes
+  no output, but a repull changes which batch counts for a roaster-week (`stg_run_walk`), so `is_current` and prices
+  of the repulled roasters' products can change. CLAUDE.md step 9, measured by replay on the real runs
+  (`eval/run_quality/README.md`): up to 346 products in a weekly run with history (2026-11-02, 11 roasters), an
+  upper bound since a re-fetch can't be simulated offline. That is over 50: the full evaluation is owed.
 - A dbt error (a model or test that errored, was skipped or didn't run), or a test whose status and stored failing
   rows disagree (failing with none: never evaluated), is **no verdict**, not bad data: the job fails and says so.
 
@@ -793,7 +797,10 @@ ended. Rejected:
 
 **How the repull happens.** Every later crawl pass of the week (`crawl` for its resume and third slots,
 `crawl-retry`) adds to its work the `empty` and `suspect` roasters of its connector on the latest check that judged
-that connector, less any fetched since that check. So a roaster flagged after the 09:17 pass is asked again at 15:17,
+that connector, less any fetched since that check and any `select_states` would no longer crawl (opted out, no
+platform). A repull reads the whole catalog: it gets no known product count, since its latest complete ok fetch is the
+suspect one, and a Shopify short page would otherwise end the re-fetch at the same truncation. Its lake reads go
+through `retry_transient`, and if they still fail the pass logs it and goes on without its repulls. So a roaster flagged after the 09:17 pass is asked again at 15:17,
 and one still bad after the resume at 21:47. `failed` roasters are on the list for the owner, but no hook is needed:
 with no ok fetch, every `crawl` pass asks them again anyway, and `crawl-retry` deliberately doesn't (section 7.1: a
 store that refused all day isn't re-asked in the evening). Before this, a crawl or resume skipped any roaster with an ok fetch that week, so an ok-but-bad week could only

@@ -47,7 +47,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Post-crawl data quality.** `coffeedata crawl-dq` runs the gate's `run_ok_rate`, `adapter_ok_rate` and suspect-run
   rules on Monday's crawl output shortly after each pass, before the merge. Roasters whose data looks bad (failed,
   empty, suspect) go on a repull list that the next crawl pass fetches again the same day; a platform-wide failure,
-  or two at once (a bad image), emails the owner. It never serves, records a build or publishes.
+  or two at once (a bad image), emails the owner once a week per finding. It never serves, records a build or
+  publishes. A repull reads the whole catalog, skips roasters that opted out, and never stops a crawl pass if it
+  can't be read. Repulls change which batch counts for the repulled roasters: up to 346 products in a weekly run
+  (`eval/run_quality/README.md`).
 
 ### Changed
 
