@@ -83,7 +83,7 @@ def parse_product(p: dict, roaster: Roaster, base: str | None = None) -> Catalog
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     r = client.get(f"https://{roaster.host}/")
     if r.status_code != 200:
-        raise FetchError(f"HTTP {r.status_code} homepage")
+        raise FetchError(f"HTTP {r.status_code} homepage", status=r.status_code)
     base, ids = f"https://{roaster.host}", site_ids(r.text)
     for store in [] if ids else store_links(r.text):
         sr = client.get(f"{store}/")

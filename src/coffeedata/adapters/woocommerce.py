@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from ..http import FetchError, PoliteClient
+from ..http import FetchError, PoliteClient, block_status
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text
 
@@ -105,7 +105,9 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 lookups += 1
                 try:
                     prices[str(v["id"])] = _price(client.fetch_json(f"{base}/{v['id']}").get("prices"))
-                except (FetchError, AttributeError):
+                except (FetchError, AttributeError) as e:
+                    if block_status(e):  # a pause, not an unknown price: the store is deferred (ingest.run)
+                        raise
                     prices[str(v["id"])] = None  # unknown beats wrong: no per-gram price for this size
         else:
             single = _price(p.get("prices"))

@@ -63,6 +63,10 @@ NOT_A_ROASTER_SITE = (
     "blogspot.com",
     "wordpress.com",
     "gmail.com",
+    # Ordering vendors that Overture lists as a cafe's website (crawl 2026-11-02): Per Diem's own site, for Java
+    # House's North Liberty location (Java House is thejavahouse.com), and Spoon's ordering marketplace.
+    "tryperdiem.com",
+    "orderspoon.com",
 )
 
 MAX_FAILURES = 3
