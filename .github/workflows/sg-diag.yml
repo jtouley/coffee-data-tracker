@@ -1,0 +1,31 @@
+# Temporary SiteGround diagnostic: the crawler's own client, from GitHub Actions (Azure IPs), with the runner's
+# Python (C1) and the Cloud Run image's base, python:3.12-slim (C2). Runs main's code; sends 8 GETs per pass; no writes.
+name: sg-diag
+on:
+  push:
+    branches: [ccr-53fdc95c-2qdy7y]
+    paths: [.github/workflows/sg-diag.yml, tools/diag/siteground-tls.sh]
+permissions:
+  contents: read
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {ref: main, persist-credentials: false}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {path: diag, persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - run: PATH="$PWD/.venv/bin:$PATH" DIAG_LABEL=gha-runner sh diag/tools/diag/siteground-tls.sh
+  image-stack:
+    runs-on: ubuntu-latest
+    container: python:3.12-slim
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {ref: main, persist-credentials: false}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {path: diag, persist-credentials: false}
+      - run: pip install uv==0.11.32 && UV_PYTHON_DOWNLOADS=never uv sync --locked --no-dev
+      - run: PATH="$PWD/.venv/bin:$PATH" DIAG_LABEL=gha-python-3.12-slim sh diag/tools/diag/siteground-tls.sh
