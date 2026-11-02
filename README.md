@@ -264,7 +264,9 @@ this file stays as it is.
 
 ## Run it on GitHub
 
-The `weekly` workflow runs every Monday, keeps the data in a Hugging Face dataset and deploys the site to Pages.
+The weekly crawl runs every Monday on Cloud Run ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md)), and
+the `site` workflow publishes the site to Pages on Tuesday. The `weekly` workflow is the manual fallback: run by
+hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
 
 1. Create a write token at huggingface.co → Settings → Access Tokens.
 2. Create the dataset once, from any machine. It's private unless you add `--public`; keep it private, because
@@ -279,7 +281,8 @@ The `weekly` workflow runs every Monday, keeps the data in a Hugging Face datase
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
-6. Run the `weekly` workflow by hand with `sample: 50`. After that it runs on its own every Monday.
+6. Run the `weekly` workflow by hand with `sample: 50`. It has no schedule: the Cloud Run jobs crawl on Monday and
+   the `site` workflow publishes on Tuesday.
 
 The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
 `jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own

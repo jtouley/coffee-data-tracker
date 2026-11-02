@@ -20,7 +20,10 @@ In scope:
 
 - the code in this repo, including its GitHub Actions workflows;
 - the public site, [registry.coffee](https://registry.coffee);
-- the app, [app.registry.coffee](https://app.registry.coffee).
+- the app, [app.registry.coffee](https://app.registry.coffee);
+- the Hugging Face datasets the pipeline and app write: the lake, and the private datasets for bag photos and for
+  accounts and invites;
+- the weekly ingestion jobs on Cloud Run (`src/terraform/ingestion.tf`).
 
 Out of scope:
 

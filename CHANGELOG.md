@@ -8,9 +8,10 @@ Notable changes to the code are recorded here. The format follows
 The weekly data releases are versioned separately, by `release_run_date` and `release_build_id` (see the README's
 [How it works](README.md#how-it-works)). They aren't code releases and aren't listed here.
 
-## 0.1.0 (unreleased)
+## [Unreleased]
 
-Not tagged yet. When `v0.1.0` is tagged, this heading gets the date and an `[Unreleased]` section goes above it.
+These entries are 0.1.0, not tagged yet. When `v0.1.0` is tagged, this heading becomes `## [0.1.0] - YYYY-MM-DD`
+and a new `## [Unreleased]` section goes above it.
 
 The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â€“#5) is the GCP version, at commit
 `92f74da`.
@@ -22,7 +23,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   raw lake, with a measured coffee classifier (#30). Every page of a Shopify catalog is fetched, and coffees are
   marked available, sold out or archived (#33). Square Online stores behind Weebly sites and square.site links are
   read (#11). Wholesale listings stay in the data but out of what people browse (#37). Origins are found by
-  context, not by first mention (#41).
+  context, not by first mention (#41). Ingestion redesigned for Cloud Run: ELT, with one job per connector, a
+  weekly build and a dedicated egress IP for Shopify stores; the public contract goes to 2.2.0, and a fetch that
+  read only part of a catalog no longer delists or removes a coffee (#68).
 - **Crawling etiquette.** One rate limit shared across all Shopify stores (#39). Nothing is fetched from a host
   whose `robots.txt` can't be fetched (#45). Robots rules and rate limits are checked on every redirect hop (#56).
 - **Trusted weekly releases.** Run quality and completeness gates, rollback, and ODCS and ODPS contracts (#36).
@@ -41,6 +44,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
+
+### Changed
+
+- The weekly crawl runs on Cloud Run instead of a GitHub Actions schedule. The `weekly` workflow stays as a manual
+  fallback. The crawl runs on Monday, and the `site` workflow publishes the site, the public export and the
+  Snowflake load on Tuesday (#74).
 
 ### Fixed
 

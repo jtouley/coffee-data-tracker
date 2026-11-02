@@ -29,9 +29,7 @@ make fmt       # ruff fix and format over src, app and tests
   (model logic) or a data test in `dbt/tests/` (data rules). A bug fix includes a test that reproduces the bug.
 - Changes to heuristics or the classifier (classifying products, extracting attributes, matching bags to coffees,
   choosing a Claude model or prompt) follow the evaluation rules in [CLAUDE.md](CLAUDE.md), which scale the
-  effort to the size of the change. If 50 or fewer products have changed output since the field's last full
-  evaluation, this change included, unit tests and a hand check of each changed product are enough. A larger
-  change, or one to how a rule decides, is measured on held-out data.
+  effort to the size of the change (step 9 covers small changes).
   The accuracy floors in `tests/test_classifier_accuracy.py` and `tests/test_wholesale_accuracy.py` are only ever
   raised.
 - Don't commit data downloaded from the lake. Test fixtures and eval sets are the exception, in `tests/fixtures/`
