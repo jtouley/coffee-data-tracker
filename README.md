@@ -21,7 +21,6 @@ of Parquet files: a Hugging Face dataset or a local folder.
 <!-- More links: each one stays commented out until it works. -->
 <!-- Uncomment once the public dataset is published: **Public dataset:** [Hugging Face](https://huggingface.co/datasets/jtouley/<name>) -->
 <!-- Uncomment once the listing is approved: **Snowflake Marketplace:** [<listing name>](<listing URL>) -->
-<!-- Uncomment once the Space is live: **App:** [Hugging Face Space](https://huggingface.co/spaces/jtouley/<name>) -->
 <!-- Uncomment once the post is up: **Substack:** [<post title>](<Substack URL>) -->
 
 <p>
@@ -285,9 +284,10 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    the `site` workflow publishes on Tuesday. A fork without the Cloud Run jobs ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md))
    has no scheduled crawl: run `weekly` by hand each Monday, or the Tuesday `site` run fails its freshness check.
 
-The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
-`jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
-secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
+The `deploy` workflow runs when a change touches the app. On a pull request it builds the app's image and checks
+its Terraform; on a push to `main` it also deploys it to Cloud Run at `app.registry.coffee`. It skips the deploy
+until the `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE` variables are set; setup and the app's secrets are in
+[`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a local app into the same lake, start
 `make app` with `COFFEEDATA_LAKE` and `HF_TOKEN` set. Each save is then uploaded before the app acknowledges it.
 
 ## The site
