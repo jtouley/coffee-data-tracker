@@ -28,7 +28,9 @@ models:
           - not_null
           - accepted_values: {arguments: {values: [ok, error, unavailable, crashed]}}
       - name: error
-        description: The failure, for a status other than ok.
+        description: >-
+          The failure, for a status other than ok; for an ok fetch marked partial, the reason it is partial (how far
+          it got, or what it couldn't read).
       - name: products
         description: Products the attempt read.
       - name: coffees
@@ -59,7 +61,9 @@ models:
       - name: status
         description: ok, error, unavailable or crashed (stg_fetches.status).
       - name: error
-        description: The failure message, for a status other than ok (stg_fetches.error).
+        description: >-
+          The failure message, for a status other than ok; for an ok fetch marked partial, the reason it is partial
+          (stg_fetches.error).
       - name: products
         description: Products the attempt read (stg_fetches.products).
       - name: coffees

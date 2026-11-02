@@ -238,7 +238,7 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: The failure, when status is not ok.
+    description: The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.
   - name: products
     logicalType: integer
     physicalType: int32
@@ -517,4 +517,4 @@ customProperties:
 - property: interfaceFingerprint
   value: a3b629543dcba7eb
 - property: docsFingerprint
-  value: b8ad932a227a6105
+  value: 318a0dbe4d120c6f

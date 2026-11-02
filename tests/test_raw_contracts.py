@@ -215,7 +215,8 @@ def test_fetch_statuses_are_the_raw_contracts():
                ingest.Result(r, now, error="crashed: in flight when 2 attempts died", quarantined=True)]  # fmt: skip
     rows = ingest.rows_for(results, date(2026, 11, 2), "b", set())["fetches"]
     assert [x["status"] for x in rows] == ["ok", "error", "unavailable", "crashed"]
-    assert all(x["partial"] is None for x in rows)
+    # an ok fetch says whether it read the whole catalog (False: complete); the others have no catalog to qualify
+    assert [x["partial"] for x in rows] == [False, None, None, None]
 
 
 @pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))

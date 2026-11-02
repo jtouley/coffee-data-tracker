@@ -367,3 +367,22 @@ def test_a_squarespace_fallback_without_products_is_an_error_not_an_empty_catalo
         m.get(url__startswith="https://q.com/").mock(return_value=httpx.Response(404))
         crawl_one(lake, monkeypatch, "squarespace", "q.com", "squarespace")
     assert fetches(lake, "squarespace", "q.com") == ["error"] * (ingest.DEFERRED_ROUNDS + 1)
+
+
+@pytest.mark.parametrize("wait", ["300", "7200"])
+def test_a_squarespace_sitemap_asking_for_more_than_120s_still_falls_back_on_the_last_try(
+    lake, monkeypatch, clock, wait
+):
+    """#98's final review, item 1: a sitemap Retry-After over the limiter's max_cooldown (120 s) paused the host for
+    up to 300 s, so the last try's shop paths raised HostRateLimited and nothing was read. The last try now waits
+    the host's pause out (at most http.MAX_STORE_WAIT), and reads the shop."""
+    with respx.mock(assert_all_called=False) as m:
+        m.get("https://q.com/robots.txt").mock(return_value=httpx.Response(404))
+        m.get("https://q.com/sitemap.xml").mock(
+            return_value=httpx.Response(429, headers={"retry-after": wait})
+        )
+        shop = m.get("https://q.com/shop").mock(return_value=httpx.Response(200, json={"items": [SQ_ITEM]}))
+        crawl_one(lake, monkeypatch, "squarespace", "q.com", "squarespace")
+    assert fetches(lake, "squarespace", "q.com")[-1] == "ok"
+    assert shop.call_count == 1
+    assert max(clock.sleeps) <= http.MAX_STORE_WAIT + 1

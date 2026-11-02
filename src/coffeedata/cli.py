@@ -154,6 +154,13 @@ def cmd_crawl(args: argparse.Namespace) -> None:
             f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left",
             file=sys.stderr,
         )
+    if out.get("partial"):  # ok fetches that read only part of a catalog (fetches.partial; RUNBOOK §5.3)
+        every = out.get("partial_every_week") or []
+        print(
+            f"crawl {args.connector}: {out['partial']} catalogs read in part"
+            + (f"; partial every week: {', '.join(every)}" if every else ""),
+            file=sys.stderr,
+        )
 
 
 def cmd_merge(args: argparse.Namespace) -> None:

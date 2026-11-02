@@ -8,13 +8,19 @@ The ids appear in the homepage in one of three forms: Square Online's own JSON, 
 from __future__ import annotations
 
 import re
+from itertools import count
 
-from ..http import FetchError, PoliteClient
+from ..http import DeadlineReached, FetchError, PartialCatalog, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..text import html_to_text, to_float
 
 API = "https://cdn5.editmysite.com/app/store/api/v28/editor/users/{user}/sites/{site}/products"
-MAX_PAGES = 20
+# Page size: the storefront's own. This products API is the one Square Online's store pages call; Square documents
+# no page size for it (it isn't one of Square's public APIs, whose page sizes the API reference gives per endpoint:
+# https://developer.squareup.com/docs/build-basics/common-api-patterns/pagination). The storefront asks for
+# per_page=60 (the call quoted on Square's developer forum, https://developer.squareup.com/forums/t/4008), so that
+# is the most this crawl asks for: a larger page is untested against the store, and every page is read anyway.
+PER_PAGE = 60
 _ID_FORMS = [
     (re.compile(r'"user":\{"id":"?(\d+)'), re.compile(r'"site_id":"?(\d{6,})')),  # Square Online
     (
@@ -95,12 +101,17 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
         raise FetchError("no Square Online store ids on the homepage or a linked square.site store")
     user, site = ids
     items: list[CatalogItem] = []
-    for page in range(1, MAX_PAGES + 1):
-        data = client.fetch_json(API.format(user=user, site=site), page=page, per_page=60, include="images")
+    for page in count(1):  # every page the API says it has: no page cap (it was 20 x 60)
+        try:
+            data = client.fetch_json(
+                API.format(user=user, site=site), page=page, per_page=PER_PAGE, include="images"
+            )
+        except DeadlineReached as e:
+            raise PartialCatalog(f"{e} (page {page})", items) from e
         if not isinstance(data, dict) or not isinstance(data.get("data"), list):
             raise FetchError("unexpected Square Online payload")
         items.extend(parse_product(p, roaster, base) for p in data["data"] if isinstance(p, dict))
         pages = ((data.get("meta") or {}).get("pagination") or {}).get("total_pages") or 1
-        if page >= pages:
+        if page >= pages or not data["data"]:
             break
     return items
