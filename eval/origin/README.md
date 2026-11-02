@@ -5,6 +5,13 @@ the lake. It follows the classifier's precedent (`tests/test_classifier_accuracy
 the products are split before any result is read, the rules are tuned on train, chosen on validation and scored
 once on a sealed test set. The results are in `RESULTS.md`.
 
+**Running total (CLAUDE.md step 9):** 0 products whose `origin_country` changed since the last full evaluation, which
+is this one. Add each later change's count here.
+- 0: decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
+  versions, 51 roasters) and the output of `origin_country` of none: built from main and from the change on a local
+  copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
+  identical. 0 of them in the test set.
+
 ## Data
 
 - Source: `hf://datasets/jtouley/coffee-data`, downloaded with `huggingface_hub.snapshot_download(repo_type=

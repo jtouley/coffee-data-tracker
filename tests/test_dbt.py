@@ -602,14 +602,14 @@ def test_states_are_the_fifty():
 
 
 def test_dbt_unit_tests(lake, tmp_path):
-    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule and each kind of price event. They read
+    """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding. They read
     hand-written rows, but dbt reads the column types of their inputs from built tables, so a small lake is built
     first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=8 " in r.stdout
+    assert "PASS=9 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -803,3 +803,32 @@ def test_a_remote_root_is_read_only_for_folders_it_has(lake, tmp_path):
     r = build(lake, tmp_path, check=False, lake_roots=[str(lake.root), "hf://datasets/nobody/missing"],
               remote_folders=[])  # fmt: skip
     assert r.returncode == 0, r.stdout[-3000:]
+
+
+def test_tags_are_decoded_in_the_build_and_kept_raw_in_the_lake(lake, tmp_path):
+    """Some stores' APIs escape tags (WooCommerce term names: "Parts &amp; Equipment"). The build decodes them,
+    so the classifier reads the tag the store shows; the lake keeps the raw value, and the product-version key
+    (input_hash) stays over it, so stored verdicts and enrichments still join."""
+    from coffeedata import products
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    part = product("P", title="Coffee P Roast") | {"tags": ["Parts&nbsp;"]}  # a gear tag: not coffee, decoded
+    bean = product("K", title="Kenya Kamwangi AA Washed") | {"tags": ["Coffee &gt; Single Origin"]}
+    run(lake, "2026-10-19", rid, [part, bean], coffees=None)
+    con = build(lake, tmp_path)
+    tags = dict(con.execute("select product_id, tags from stg_snapshots").fetchall())
+    assert tags == {"P": ["Parts\u00a0"], "K": ["Coffee > Single Origin"]}
+    assert con.execute("select product_id from dim_coffee").fetchall() == [("K",)]
+    assert con.execute("select tags from int_fetch_product_inputs order by product_id").fetchall() == [
+        (["Coffee > Single Origin"],),
+        (["Parts\u00a0"],),
+    ]
+    assert con.execute("select coffees from int_fetch_coffees").fetchall() == [(1,)]
+    keys = dict(con.execute("select product_id, input_hash from stg_snapshots").fetchall())
+    con.close()
+    raw = duckdb.connect().execute(
+        f"select product_id, tags, {products.input_hash_sql('s')} from read_parquet('{lake.root}/snapshots/*/*.parquet') s"
+    )
+    got = {pid: (t, h) for pid, t, h in raw.fetchall()}
+    assert got == {"P": (["Parts&nbsp;"], keys["P"]), "K": (["Coffee &gt; Single Origin"], keys["K"])}

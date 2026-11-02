@@ -94,7 +94,7 @@ models:
       - name: product_type
         description: The store's product type.
       - name: tags
-        description: The store's tags.
+        description: The store's tags, HTML entities decoded (decode_html_entities; the lake keeps the raw value).
       - name: body_hash
         description: The description's hash (raw bodies).
       - name: grams
