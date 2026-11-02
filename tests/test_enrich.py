@@ -112,3 +112,31 @@ def test_batches_in_flight_are_not_resubmitted_and_collect(lake, monkeypatch):
     assert enrich.collect(lake, "2026-10-26") == {"collected": 2}
     assert len(enrich.pending(lake, 10)) == 1  # the errored item is pending again
     assert enrich.collect(lake, "2026-10-26") == {"collected": 0}  # collected once, never twice
+
+
+def test_the_dbt_and_python_product_version_hashes_are_the_same_expression():
+    """stg_products.input_hash (dbt's product_input_hash macro) and products.INPUT_HASH_SQL (enrichment candidates,
+    stored verdicts) must agree, or verdicts would silently stop applying. Same text, and the same value on a row."""
+    import re
+    from pathlib import Path
+
+    import duckdb
+
+    from coffeedata import products
+
+    src = (Path(__file__).parents[1] / "dbt/macros/products.sql").read_text()
+    body = re.search(r"{% macro product_input_hash\(s\) -%}(.*?){%- endmacro %}", src, re.S).group(1)
+    dbt_sql = body.replace("{{ s }}", "s")
+    py_sql = products.input_hash_sql("s")
+
+    def norm(sql: str) -> str:
+        return re.sub(r"\s+", " ", sql).replace("( ", "(").replace(" )", ")").strip()
+
+    assert norm(dbt_sql) == norm(py_sql)
+    row = """(select 'Ethiopia Guji' as title, 'Coffee' as product_type, ['single origin'] as tags, 'b1' as body_hash,
+              [{'grams': 340}, {'grams': null}] as variants) s"""
+    con = duckdb.connect()
+    assert (
+        con.execute(f"select {dbt_sql} from {row}").fetchone()
+        == con.execute(f"select {py_sql} from {row}").fetchone()
+    )

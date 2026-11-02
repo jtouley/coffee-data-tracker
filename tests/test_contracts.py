@@ -38,9 +38,10 @@ def test_documents_follow_the_bitol_standards(doc, schema):
 
 
 def test_the_product_serves_this_contract():
+    # The ODPS output port is the only link between product and contract: ODCS deprecated dataProduct in v3.1.0.
     assert [p["contractId"] for p in ODPS["outputPorts"]] == [ODCS["id"]]
     assert [p["version"] for p in ODPS["outputPorts"]] == [ODCS["version"]]  # a breaking change bumps both
-    assert ODCS["dataProduct"] == ODPS["id"]
+    assert "dataProduct" not in ODCS
 
 
 def _tests(cols: list) -> dict[str, list]:

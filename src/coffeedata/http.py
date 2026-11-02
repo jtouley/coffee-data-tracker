@@ -5,12 +5,14 @@ from __future__ import annotations
 import contextlib
 import copy
 import logging
+import os
 import threading
 import time
 import urllib.robotparser
 from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
 from urllib.parse import urljoin, urlparse
 
@@ -34,12 +36,97 @@ ROBOTS_RETRY_AFTER = 900.0
 MAX_REDIRECTS = 20
 
 
+# A refusal or block. Each one is recorded with the headers Shopify Support asks for (and that tell a Cloudflare
+# challenge, `cf-mitigated: challenge` with an HTML body, from a rate limit), plus the egress IP it was sent from.
+LOGGED_BLOCK_STATUSES = (403, 429, 430, 503)
+BLOCK_HEADERS = ("server", "cf-mitigated", "content-type", "retry-after", "cf-ray", "x-request-id")
+MAX_BLOCKS_PER_FETCH = 20  # a store that refuses every try doesn't fill its fetch row with copies
+EGRESS_TTL = 60.0  # seconds an egress-IP lookup is reused (default egress can change IP between connections)
+_egress_lock = threading.Lock()
+_egress: dict[str, Any] = {"ip": None, "at": None}
+
+
+def egress_ip() -> str | None:
+    """The public IP this process's requests leave from, as best known: COFFEEDATA_EGRESS_IP if the job sets it
+    (a dedicated NAT IP is known in advance), else a lookup at COFFEEDATA_EGRESS_ECHO_URL (a plain-text "what is
+    my IP" endpoint, not a store), reused for EGRESS_TTL; None when neither is configured or the lookup fails."""
+    if fixed := os.environ.get("COFFEEDATA_EGRESS_IP"):
+        return fixed
+    url = os.environ.get("COFFEEDATA_EGRESS_ECHO_URL")
+    if not url:
+        return None
+    with _egress_lock:
+        if _egress["at"] is not None and time.monotonic() - _egress["at"] < EGRESS_TTL:
+            return _egress["ip"]
+        try:
+            r = httpx.get(url, headers={"User-Agent": USER_AGENT}, timeout=5.0)
+            text = r.text.strip()
+            ip = text if r.status_code == 200 and 0 < len(text) <= 45 and " " not in text else None
+        except httpx.HTTPError:
+            ip = None
+        _egress.update(ip=ip, at=time.monotonic())
+        return ip
+
+
+def block_record(r: httpx.Response) -> dict:
+    """What one refused or blocked response said about itself (raw.fetches.blocks)."""
+    h = r.headers
+    return {"at": datetime.now(UTC).replace(microsecond=0), "status": r.status_code, "host": r.url.host,
+            "path": r.url.path, **{k.replace("-", "_"): h.get(k) for k in BLOCK_HEADERS},
+            "egress_ip": egress_ip()}  # fmt: skip
+
+
 class FetchError(Exception):
-    """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error."""
+    """A catalog request failed (non-200, bad JSON, blocked). The roaster's fetch is recorded as an error. status:
+    the HTTP status, when the failure was a non-200 answer (ingest.blocked reads it)."""
+
+    def __init__(self, *args: object, status: int | None = None) -> None:
+        super().__init__(*args)
+        self.status = status
 
 
 class Blocked(FetchError):
     """robots.txt disallows the URL."""
+
+
+class Unavailable(FetchError):
+    """The store is closed, deactivated or password-protected: Shopify's "This store is unavailable" page, a redirect
+    to /password, or a robots.txt that disallows the whole site. A fetch status of its own (`unavailable`), not an
+    error or a block: retrying won't help, and it doesn't count against the run's ok rate."""
+
+
+class SiteDisallowed(Unavailable, Blocked):
+    """robots.txt disallows the whole site (/), not just the catalog path: the store is closed to us (Big Guns,
+    deactivated, 2026-10-31). Still a Blocked, so callers that try another path on a block keep doing so."""
+
+
+# What Shopify's closed or deactivated storefront page says (lowercased). Read only on a non-200, non-JSON answer
+# to Shopify's catalog path (SHOPIFY_CATALOG_PATH): another platform's page with the same words (a Squarespace
+# shop "currently unavailable until Monday") is not this signature, and neither is any 200 page.
+SHOPIFY_CATALOG_PATH = "/products.json"
+UNAVAILABLE_MARKERS = (
+    "this store is unavailable",
+    "store is currently unavailable",
+    "this shop is unavailable",
+    "shop is currently unavailable",
+)
+
+
+def unavailable_reason(r: httpx.Response) -> str | None:
+    """Why this response says the store is closed, if it does: a redirect to a password page, or Shopify's
+    closed-store page (a non-200 HTML answer to /products.json with its wording)."""
+    if r.url.path.rstrip("/") == "/password" or any(h.url.path.rstrip("/") == "/password" for h in r.history):
+        return f"password-protected: {r.url.host}"
+    closed_page = (
+        r.status_code != 200
+        and "json" not in r.headers.get("content-type", "")
+        and (r.history[0] if r.history else r).request.url.path.rstrip("/") == SHOPIFY_CATALOG_PATH
+    )
+    if closed_page:
+        text = r.text[:20_000].lower() if r.content else ""
+        if any(m in text for m in UNAVAILABLE_MARKERS):
+            return f"store unavailable (HTTP {r.status_code}): {r.url.host}"
+    return None
 
 
 class RobotsUnavailable(FetchError, httpx.HTTPError):
@@ -65,8 +152,21 @@ class RequestStats:
     retries: int = 0  # attempts after the first for one URL
     rate_limited: int = 0  # 429 responses
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
+    blocks: list[dict] = field(default_factory=list)  # block_record() of each 403/429/430/503, the first 20
 
-    def note(self, status: int | None, retry: bool = False, page: bool = True) -> None:
+    def note(
+        self,
+        status: int | None,
+        retry: bool = False,
+        page: bool = True,
+        response: httpx.Response | None = None,
+    ) -> None:
+        if (
+            response is not None
+            and status in LOGGED_BLOCK_STATUSES
+            and len(self.blocks) < MAX_BLOCKS_PER_FETCH
+        ):
+            self.blocks.append(block_record(response))
         self.requests += 1
         self.retries += retry
         if status is not None:
@@ -115,9 +215,15 @@ class PoliteClient:
         finally:
             self._local.stats = prev
 
-    def _note(self, status: int | None, retry: bool = False, page: bool = True) -> None:
+    def _note(
+        self,
+        status: int | None,
+        retry: bool = False,
+        page: bool = True,
+        response: httpx.Response | None = None,
+    ) -> None:
         if (stats := getattr(self._local, "stats", None)) is not None:
-            stats.note(status, retry, page)
+            stats.note(status, retry, page, response)
 
     def close(self) -> None:
         self._client.close()
@@ -141,7 +247,7 @@ class PoliteClient:
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
             return self._client.get(url, params=params)
-        with self._limiter.slot():
+        with self._limiter.slot(urlparse(url).hostname):
             r = self._client.get(url, params=params)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
         return r
@@ -169,6 +275,14 @@ class PoliteClient:
                         self._robots_locks.pop(host, None)
         rp = self._robots[host]
         return rp is None or rp.can_fetch(USER_AGENT, url)
+
+    def _disallows_site(self, url: str) -> bool:
+        """The host's robots.txt file disallows the whole site (/) to us: a closed store (SiteDisallowed). Not a
+        robots.txt answered with 401 or 403, which is a refusal (often an edge challenge), not the store's rules."""
+        rp = self._robots.get(urlparse(url).netloc)
+        if rp is None or getattr(rp, "disallow_all", False):
+            return False
+        return not rp.can_fetch(USER_AGENT, urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
     def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
         """The host's rules; None if it has no robots.txt (404 and the like: no restrictions). Anything that isn't an
@@ -232,7 +346,7 @@ class PoliteClient:
                 if last:
                     raise
             else:
-                self._note(r.status_code, retry=attempt > 0, page=page)
+                self._note(r.status_code, retry=attempt > 0, page=page, response=r)
                 if r.status_code not in RETRY_STATUSES or last:
                     return r
                 if self._limiter is not None and r.status_code in BLOCK_STATUSES:
@@ -253,7 +367,7 @@ class PoliteClient:
         sent_params: set[str] = set()
         for hop in range(MAX_REDIRECTS + 1):
             if not robots and not self._allowed(url):
-                raise Blocked(url)
+                raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
                 r.history = history
@@ -298,10 +412,12 @@ class PoliteClient:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if why := unavailable_reason(r):
+            raise Unavailable(why)
         if r.status_code == 404:
             return None
         if r.status_code != 200:
-            raise FetchError(f"HTTP {r.status_code} {url}")
+            raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
         try:
             return scrub_surrogates(r.json())
         except ValueError as e:
@@ -313,8 +429,10 @@ class PoliteClient:
             r = self.get(url, **params)
         except httpx.HTTPError as e:
             raise FetchError(f"{type(e).__name__} {url}") from e
+        if why := unavailable_reason(r):
+            raise Unavailable(why)
         if r.status_code != 200:
-            raise FetchError(f"HTTP {r.status_code} {url}")
+            raise FetchError(f"HTTP {r.status_code} {url}", status=r.status_code)
         try:
             return scrub_surrogates(r.json())
         except ValueError as e:

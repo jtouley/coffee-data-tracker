@@ -1,0 +1,145 @@
+"""What each internal contract's tables and columns mean, and the quality rules on them (raw_contracts.py puts
+them into the generated contract files). tests/test_raw_contracts.py fails when a contracted column has no
+description here, or a description names a column the lake doesn't have."""
+
+from __future__ import annotations
+
+TABLES: dict[str, str] = {
+    "snapshots": "Every product a store listed at one fetch, coffee or not: one row per (fetch batch, product).",
+    "bodies": "Product descriptions as text, once per distinct description (body_hash).",
+    "fetches": "One row per fetch attempt of a roaster's catalog, ok or not, with what it asked of the store.",
+    "run_manifests": "What an ingest set out to fetch, written before its first request: one row per roaster.",
+    "job_manifests": "The control plane: one row when a job starts and one when it ends, per connector and week.",
+    "enrichments": "Claude's extracted attributes per product description (llm rows; older lakes also hold rules rows).",
+}
+
+_RUN = "The weekly run (the Monday of its ISO week)."
+_BATCH = "The write batch: one per checkpoint of a job, shared by a fetch's row and its snapshots."
+_ROASTER = "The roaster's normalized domain."
+
+COLUMNS: dict[str, dict[str, str]] = {
+    "snapshots": {
+        "run_date": _RUN,
+        "batch_id": _BATCH,
+        "fetched_at": "When the fetch started (UTC).",
+        "roaster_id": _ROASTER,
+        "product_id": "The store's product id.",
+        "handle": "The store's URL handle for the product.",
+        "url": "The product's page on the store.",
+        "title": "The product's title as listed.",
+        "platform": "The store's platform (shopify, woocommerce, squarespace, square_online, generic).",
+        "vendor": "The store's vendor field.",
+        "product_type": "The store's product type.",
+        "tags": "The store's tags.",
+        "image": "The product's first image URL.",
+        "body_hash": "Hash of the description; its text is in bodies.",
+        "variants": "Each bag size or option: variant id, title, price (USD), grams where known, availability.",
+        "is_coffee": "Whether the crawl's rules called it coffee. Null from an ELT crawl, which doesn't classify.",
+        "published_at": "The store's latest publish time (Shopify only).",
+        "payload_hash": "Hash of the store's raw product payload: tells a real change from a repeated fetch.",
+    },
+    "bodies": {
+        "body_hash": "Hash of the description text.",
+        "body_text": "The description as plain text.",
+        "first_seen_run": "The run that first stored it.",
+    },
+    "fetches": {
+        "run_date": _RUN,
+        "batch_id": _BATCH,
+        "fetched_at": "When the attempt started (UTC).",
+        "roaster_id": _ROASTER,
+        "adapter": "The catalog adapter used.",
+        "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store).",
+        "error": "The failure, when status is not ok.",
+        "products": "Products the attempt read.",
+        "coffees": "Coffees among them as the crawl counted them; null from an ELT crawl.",
+        "pages": "Catalog pages (200 responses other than robots.txt) read.",
+        "requests": "HTTP requests made, retries and robots.txt included.",
+        "http_statuses": "Responses per HTTP status.",
+        "retries": "Attempts after the first for one URL.",
+        "rate_limited": "429 responses.",
+        "duration_s": "How long the attempt took.",
+        "code_version": "The code that made it (git sha).",
+        "blocks": "Each refused or blocked response (403/429/430/503) with its diagnostic headers and egress IP.",
+        "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
+    },
+    "run_manifests": {
+        "run_date": _RUN,
+        "manifest_id": "One ingest invocation.",
+        "started_at": "When it was written, before the first request.",
+        "roaster_id": _ROASTER,
+        "status": "The roaster's registry status at that moment.",
+        "platform": "The roaster's platform.",
+        "adapter": "The adapter that will fetch it.",
+        "mode": "full, sample, only or retry_failed; only a full manifest is the run's expected set.",
+        "code_version": "The code that wrote it.",
+    },
+    "job_manifests": {
+        "run_date": _RUN,
+        "job": "crawl, crawl-retry, merge or enrich.",
+        "connector": "The connector (adapter) the job served, if any.",
+        "shard": "The shard, if the job was sharded.",
+        "attempt_id": "One execution of the job; its start and end rows share it.",
+        "started_at": "When the attempt started.",
+        "ended_at": "When it ended (null on the start row).",
+        "status": "running (start row), done, deadline or failed. An attempt with only a running row died.",
+        "todo": "Roasters it set out to fetch.",
+        "ok": "Roasters fetched.",
+        "errors": "Roasters that failed.",
+        "parked": "Stores parked mid-catalog for crawl-retry.",
+        "skipped": "Roasters not started before the deadline.",
+        "requests": "HTTP requests made.",
+        "http_429": "429 responses.",
+        "http_430": "430 responses (Shopify's IP-wide block).",
+        "egress_ips": "The egress IPs the job's requests left from.",
+        "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
+        "code_version": "The code that ran.",
+        "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run).",
+    },
+    "enrichments": {
+        "extracted_at": "When it was extracted.",
+        "roaster_id": _ROASTER,
+        "product_id": "The store's product id.",
+        "body_hash": "The description it was extracted from.",
+        "method": "llm (Claude), or rules in older lakes.",
+        "needs_llm": "The rules left the coffee incompletely described.",
+        "origin_country": "Origin country.",
+        "origin_region": "Origin region.",
+        "producer": "Farm, washing station or producer.",
+        "process": "washed, natural, honey, anaerobic or other.",
+        "varietals": "Varietals.",
+        "elevation_masl_min": "Lowest growing elevation (m).",
+        "elevation_masl_max": "Highest growing elevation (m).",
+        "roast_level": "light, medium or dark.",
+        "tasting_notes": "The roaster's tasting notes.",
+        "is_blend": "A blend.",
+        "is_decaf": "Decaffeinated.",
+    },
+}
+
+# Quality rules on each contract's tables, and what enforces each one.
+QUALITY: dict[str, list[dict[str, str]]] = {
+    "raw": [
+        {"rule": "fetches.status is one of the contract's values", "enforced_by": "dbt stg_fetches accepted_values"},
+        {"rule": "fetches.roaster_id, run_date and batch_id are not null", "enforced_by": "dbt stg_fetches not_null"},
+        {"rule": "a writer writes exactly the contract's columns",
+         "enforced_by": "tests/test_raw_contracts.py::test_ingest_writes_exactly_the_raw_contract"},
+        {"rule": "every expected roaster of a full run has a fetch", "enforced_by": "dbt run_is_complete"},
+        {"rule": "the run's ok share, overall and per adapter, is above its floor (unavailable stores left out)",
+         "enforced_by": "dbt run_ok_rate, adapter_ok_rate"},
+        {"rule": "a roaster's product count doesn't collapse against its baseline unless accepted",
+         "enforced_by": "dbt suspect_runs_need_review (warn)"},
+    ],
+    "manifest": [
+        {"rule": "a job writes a running row at its start and one end row (done, deadline or failed)",
+         "enforced_by": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract"},
+        {"rule": "run_manifests.mode is full, sample, only, retry_failed or null",
+         "enforced_by": "the writers (ingest.select_states, connectors.crawl, crawl-retry)"},
+    ],
+    "enrichment": [
+        {"rule": "rows have exactly the contract's columns",
+         "enforced_by": "tests/test_raw_contracts.py::test_enrichment_rows_follow_the_enrichment_contract"},
+        {"rule": "process and roast_level take the dbt-accepted values",
+         "enforced_by": "dbt dim_coffee accepted_values"},
+    ],
+}  # fmt: skip

@@ -117,6 +117,64 @@ def cmd_ingest(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_crawl(args: argparse.Namespace) -> None:
+    from . import connectors
+
+    out = connectors.crawl(
+        Lake(),
+        args.connector,
+        args.run_date,
+        args.deadline_min,
+        rps=args.rps,
+        part=args.slice,
+        salt=args.salt,
+    )
+    _print(out)
+    # A crawl stopped by its deadline is a finished job, not a failed one: it exits 0, and its job_manifests end row
+    # says `deadline` with the count left (a resume slot or crawl-retry picks them up). A non-zero exit would make
+    # Cloud Run start another attempt that re-asks the stores that already refused.
+    if out.get("skipped_deadline"):
+        print(
+            f"crawl {args.connector}: deadline reached, {out['skipped_deadline']} roasters left",
+            file=sys.stderr,
+        )
+
+
+def cmd_merge(args: argparse.Namespace) -> None:
+    from . import connectors
+
+    _print(connectors.merge(Lake(), args.run_date))
+
+
+def cmd_crawl_retry(args: argparse.Namespace) -> None:
+    from . import ingest
+
+    lake, run_date = Lake(), args.run_date
+    if args.connector:  # design B: the connector's own partition for the week
+        from . import connectors
+
+        run_date = connectors.week_of(run_date)
+        lake = connectors.PartitionLake(lake, args.connector, run_date)
+    states, resume = ingest.select_parked(lake, run_date)
+    print(f"resuming {len(states)} parked stores for run {args.run_date}", file=sys.stderr)
+    _print(ingest.run(lake, states, run_date, workers=args.workers, mode="retry_failed", resume=resume))
+
+
+def cmd_enrich_week(args: argparse.Namespace) -> None:
+    from . import connectors
+
+    _print(connectors.enrich_week(Lake(), args.run_date, args.limit, submit=args.submit))
+
+
+def cmd_egress_check(args: argparse.Namespace) -> None:
+    from . import control
+
+    flags = control.egress_flags(Lake())
+    _print({"flagged": flags})
+    if flags:
+        raise SystemExit(f"egress: {len(flags)} IP(s) refused on >8% of first contacts two runs in a row")
+
+
 def cmd_enrich(args: argparse.Namespace) -> None:
     from . import enrich, extract
 
@@ -546,6 +604,34 @@ def main(argv: list[str] | None = None) -> None:
         type=_positive_float,
         default=SHOPIFY_RPS,
         help="requests/s across all Shopify stores together (default %(default)s; halves itself on 429s)",
+    )
+
+    from .connectors import CONNECTORS
+
+    cr = add("crawl", cmd_crawl, "one connector's weekly job (or its resume) into its raw partition")
+    cr.add_argument("--connector", required=True, choices=sorted(CONNECTORS))
+    cr.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to crawl")
+    cr.add_argument(
+        "--deadline-min", type=_positive_float, help="stop starting roasters after this many minutes"
+    )
+    cr.add_argument("--rps", type=_positive_float, help="override the connector's request budget (req/s)")
+    cr.add_argument("--slice", help="crawl one slice k/n of a salted-hash split of its roasters, e.g. 0/3")
+    cr.add_argument("--salt", default="arm", help="the split's salt (record it with the results)")
+    mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")
+    mg.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to merge")
+    rr = add("crawl-retry", cmd_crawl_retry, "resume the run's parked stores from their blocked page")
+    rr.add_argument("--run-date", type=_run_date, default=_today())
+    rr.add_argument("--workers", type=int, default=8)
+    rr.add_argument("--connector", choices=sorted(CONNECTORS), help="design B: that connector's partition")
+
+    ew = add(
+        "enrich-week", cmd_enrich_week, "post-load enrichment: Claude candidates from raw, after the merge"
+    )
+    ew.add_argument("--run-date", type=_run_date, default=_today())
+    ew.add_argument("--limit", type=int, default=2000)
+    ew.add_argument("--submit", action="store_true", help="send to Claude (spends); without it, only count")
+    add(
+        "egress-check", cmd_egress_check, "flag egress IPs refused on >8% of first contacts two runs in a row"
     )
 
     c = add("classify", cmd_classify, "Claude's coffee-or-not verdicts (collects finished batches first)")
