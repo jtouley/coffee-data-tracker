@@ -414,7 +414,7 @@ Each email names what failed and the first command to run.
 | Policy | Watches | Fires |
 |---|---|---|
 | `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. A crawl that hits its deadline exits 0 and doesn't fire |
-| `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; at most one email per 5 minutes (and Google's 20 a day per log-based policy) |
+| `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
 Monitoring: a metric-absence condition waits at most 23.5 hours and has no time-of-week window, so on a weekly job

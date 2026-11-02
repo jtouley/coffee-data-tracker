@@ -132,12 +132,11 @@ resource "google_monitoring_alert_policy" "ingest_job_failed" {
 
           gcloud logging read 'resource.type="cloud_run_job" AND resource.labels.job_name="${each.key}" AND labels."run.googleapis.com/execution_name"="<execution>"' --limit 200 --freshness 1d
 
-      A failed `build` means no new release this week (the gate, or egress-check over 8%): Tuesday's site run fails without exporting. Steps: docs/ingestion/RUNBOOK.md, section 5.
+      A failed `build`: if the gate failed, no new release this week and Tuesday's site run fails without exporting. If only egress-check failed (an IP refused on over 8% of first contacts), the release is already published: check the egress IPs, not the data. A failed `publish` or `classify` exits 0 and is not caught here. Steps: docs/ingestion/RUNBOOK.md, section 5.
     EOT
   }
   user_labels = {
-    job                       = each.key
-    created-with-google-skill = "cloud-run-alert-configuration"
+    job = each.key
   }
   alert_strategy {
     auto_close = "604800s"
@@ -176,7 +175,7 @@ resource "google_monitoring_alert_policy" "ingest_schedule_failed" {
   }
   alert_strategy {
     notification_rate_limit {
-      period = "300s" # at most one email per 5 minutes (five crawls start at once)
+      period = "300s" # each job_id has its own alert; Google caps new alerts at 2 a minute and 20 notifications a day
     }
     auto_close = "1800s"
   }
