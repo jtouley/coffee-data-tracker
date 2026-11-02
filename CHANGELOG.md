@@ -32,7 +32,7 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   Lineage metadata: fetch diagnostics, run manifests, a serving log, the build environment and payload hashes
   (#40). dbt staging tables and unit tests (#49). Run gates calibrated on real data, with per-adapter floors and
   anomaly bands (#52).
-- **Shot-logging app.** Data model and shot logging (#13); sign-in, security headers and the Space setup (#15);
+- **Shot-logging app.** Data model and shot logging (#13); sign-in and security headers (#15);
   invites, reset codes, equipment and switching gear (#16); bag capture with Claude reading the label (#17); the
   coffee page, History, Correct and Retract, and `mart_bag` (#18); offline pages and queued photos (#20); layout,
   haptics, dark mode and empty states (#21). Confirmed saves and bag editing (#38). Switching between open bags

@@ -252,7 +252,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` | `https://registry.coffee`, `support@registry.coffee`, `Michigan` | The site's canonical URL, and the contact and state on its legal pages. The app links to the same `SITE_URL` and sends beta-invite requests to `SUPPORT_EMAIL` (set on Cloud Run by Terraform, `site_url` and `support_email`) |
 | `APP_URL` | `https://app.registry.coffee` | The app the site's Sign in links point to (a fork or a staging build) |
 | `PUBLIC_EXPORT_URL` | `build/public` | Where `weekly` and `export-public` send the public tables |
-| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the weekly workflow loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
+| `SNOWFLAKE_ACCOUNT`, `SNOWFLAKE_USER`, `SNOWFLAKE_PRIVATE_KEY` | none | Snowflake load. With `SNOWFLAKE_ACCOUNT` set, the Tuesday `site` workflow (and a manual `weekly` run) loads Snowflake after the site (`load-snowflake`; `--migrate` after a public contract change). A local `coffeedata weekly` doesn't: run `coffeedata load-snowflake` after it |
 | `SNOWFLAKE_ROLE`, `SNOWFLAKE_WAREHOUSE`, `SNOWFLAKE_DATABASE` | `COFFEE_LOADER`, `COFFEE_WH`, `COFFEE_DATA` | Snowflake overrides |
 | `SNOWFLAKE_SHARE` | `COFFEE_DATA_SHARE` | The share whose views `load-snowflake --migrate` recreates and grants again |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
@@ -282,7 +282,8 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
 4. Under Settings → Pages, set Source to GitHub Actions.
 5. Create the `shot` and `roaster` issue labels. The issue forms rely on them.
 6. Run the `weekly` workflow by hand with `sample: 50`. It has no schedule: the Cloud Run jobs crawl on Monday and
-   the `site` workflow publishes on Tuesday.
+   the `site` workflow publishes on Tuesday. A fork without the Cloud Run jobs ([`docs/ingestion/RUNBOOK.md`](docs/ingestion/RUNBOOK.md))
+   has no scheduled crawl: run `weekly` by hand each Monday, or the Tuesday `site` run fails its freshness check.
 
 The `space` workflow deploys the app to a Hugging Face Space (the `SPACE_ID` variable, default
 `jtouley/coffee-data-app`) on every push to `main` that changes it, using the same `HF_TOKEN` secret. The Space's own
@@ -291,7 +292,7 @@ secrets are in [`docs/app/RUNNING.md`](docs/app/RUNNING.md). To log shots from a
 
 ## The site
 
-The weekly run deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
+The Tuesday `site` workflow deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
 `/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
 ## How it works

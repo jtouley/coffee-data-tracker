@@ -6,7 +6,7 @@ agreed in an issue.
 - **Bugs, questions and ideas:** open an issue on the
   [issue tracker](https://github.com/jtouley/coffee-data-tracker/issues).
 - **Vulnerabilities:** don't describe them in an issue. Follow [SECURITY.md](SECURITY.md).
-- **Pull requests:** open an issue first to agree the change. Then branch from `main`, open the pull request against
+- **Pull requests:** open an issue first to agree the change. Then fork the repository, branch from `main`, open the pull request against
   `main` and link the issue. All checks must pass.
 
 ## Setting up
