@@ -150,13 +150,15 @@ def test_G2_all_pages_fail_raises(mock):
         fetch_gen()
 
 
-def test_G3_pages_without_markup_are_an_empty_catalog(mock):
+def test_G3_pages_without_markup_are_an_empty_catalog_after_reading_every_one(mock):
+    """No giving up after the first pages without Product markup (the old GIVE_UP_AFTER = 10): every page is read."""
+    assert not hasattr(generic, "GIVE_UP_AFTER")
     mock.get("https://gen.com/sitemap.xml").mock(return_value=sitemap(12))
     route = mock.get(url__regex=r"https://gen.com/products/p\d+").mock(
         return_value=httpx.Response(200, text="<p>hi</p>")
     )
     assert fetch_gen() == []
-    assert route.call_count == generic.GIVE_UP_AFTER
+    assert route.call_count == 12
 
 
 def test_generic_blocked_sitemap_raises():

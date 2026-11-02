@@ -1134,12 +1134,6 @@ def test_exactly_250_on_the_last_page_costs_one_more_request(mock):
     assert (p1.call_count, p2.call_count, p3.call_count, p4.call_count) == (1, 1, 1, 0)
 
 
-def test_shopify_page_cap_is_high_enough_for_big_catalogs():
-    from coffeedata.adapters import shopify
-
-    assert shopify.MAX_PAGES * shopify.PAGE_LIMIT >= 15_000  # kaldi.com: more than 20 pages of 250
-
-
 def test_a_parked_stores_progress_keeps_its_descriptions(lake):
     from coffeedata.models import CatalogItem
 

@@ -305,6 +305,7 @@ def crawl(
         raise
     ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
+              "partial": out.get("partial", 0),
               "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
               # the network the job actually ran on (set by the deploy), else the connector's config
               "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
@@ -314,7 +315,8 @@ def crawl(
               # the Cloud Run execution and task attempt, and the poison-pill guard's view at the start
               **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
-        lake, job, "deadline" if out.get("skipped_deadline") else "done",
+        # deadline: roasters left unstarted, or catalogs it stopped mid-way (partial): the resume slot reads them
+        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done",
         ok=ok, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
         skipped=out.get("skipped_deadline", 0), requests=out.get("requests"), http_429=out.get("http_429"),
         http_430=out.get("http_430"), first_contact=out.get("first_contact"),

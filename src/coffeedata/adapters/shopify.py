@@ -4,18 +4,20 @@ from __future__ import annotations
 
 import logging
 from datetime import UTC, datetime
+from itertools import count
 
 import httpx
 
-from ..http import BLOCK_STATUSES, FetchError, PoliteClient
+from ..http import BLOCK_STATUSES, DeadlineReached, FetchError, PartialCatalog, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..ratelimit import HostRateLimited, RateLimited, retry_after_seconds
 from ..text import html_to_text, to_float
 
 log = logging.getLogger(__name__)
 
-# 60 pages of 250: kaldi.com lists more than 20 x 250 products (it failed the old cap of 20 on 2026-10-31).
-MAX_PAGES = 60
+# No page cap: pages are read until the catalog ends (an empty page, a repeated page, or a short one below). kaldi.com
+# lists more than 60 x 250 products: it failed the cap of 20 on 2026-10-31 and the cap of 60 on 2026-11-02. Only the
+# run's deadline stops a catalog early, and then it is stored as partial.
 PAGE_LIMIT = 250  # the most /products.json returns per page
 # A page with fewer than PAGE_LIMIT products ends the catalog, so the empty page after it is never asked for, but
 # only once the products so far reach the store's last known count (its latest ok fetch). That empty page drew the
@@ -141,9 +143,11 @@ def fetch(
     """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
     known_products: the store's product count at its latest ok fetch, which lets a short page end the catalog."""
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
-    for page in range((resume or {}).get("page", 1), MAX_PAGES + 1):
+    for page in count((resume or {}).get("page", 1)):
         try:
             data = client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
+        except DeadlineReached as e:
+            raise PartialCatalog(f"{e} (page {page})", list(items.values())) from e
         except FetchError as e:
             if (status := _hard_block(e)) is not None:
                 raise StoreBlocked(f"blocked: HTTP {status} on page {page} of {roaster.host}") from e
@@ -166,6 +170,4 @@ def fetch(
             and len(items) >= known_products
         ):
             break
-    else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
-        raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
     return list(items.values())

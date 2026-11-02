@@ -150,6 +150,21 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
         self.unreachable = unreachable
 
 
+class DeadlineReached(FetchError):
+    """The run's deadline (PoliteClient.deadline) passed before this request was sent: the fetch stops where it is.
+    An adapter turns it into models.PartialCatalog with the products it read whole, stored as a `partial` fetch."""
+
+
+class PartialCatalog(Exception):
+    """A fetch that stopped before reading the whole catalog (DeadlineReached): `items` are the products it read
+    whole. ingest stores them as an ok fetch marked `partial`, so dbt keeps the products it didn't read listed
+    instead of reading them as delisted; with no items it is the fetch's error."""
+
+    def __init__(self, message: str, items: list) -> None:
+        super().__init__(message)
+        self.items = items
+
+
 class NotCatalog(FetchError):
     """HTTP 200, but the body isn't the JSON a catalog endpoint returns (e.g. an HTML or challenge page)."""
 
@@ -195,8 +210,12 @@ class PoliteClient:
         transport: httpx.BaseTransport | None = None,
         limiters: dict[str, PlatformLimiter] | None = None,
         max_response_bytes: int | None = None,
+        deadline_s: float | None = None,
     ):
         self.min_interval = min_interval
+        # deadline_s: seconds from now after which no request is sent (DeadlineReached): the crawl job's window, so a
+        # catalog still being read when it ends stops there and is stored as partial, instead of running past the job.
+        self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
         self.max_response_bytes = max_response_bytes or MAX_RESPONSE_BYTES
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
         self.limiters = limiters or {}
@@ -391,6 +410,8 @@ class PoliteClient:
             last = attempt == self.retries - 1
             if spaced:
                 self._wait_turn(host)
+            if self.deadline is not None and time.monotonic() >= self.deadline:
+                raise DeadlineReached(f"the run's deadline passed before {url}")
             retry_after = ""
             try:
                 r = self._send(url, params)
