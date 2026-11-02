@@ -1,5 +1,5 @@
-# Product enhancements. Applies no label (the owner labels at triage), so the issue-forms workflow, which acts
-# only on the `shot` and `roaster` labels, never processes these issues.
+# Product enhancements. Applies only `enhancement`, so the issue-forms workflow, which acts only on the `shot` and
+# `roaster` labels, never processes these issues.
 name: Enhancement
 description: Propose a product change. State who it's for, the problem, a measurable outcome and evidence of demand.
 title: "Enhancement: "
