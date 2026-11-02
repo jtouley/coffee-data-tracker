@@ -384,8 +384,8 @@ scheduled job.
    - the `job_manifests` rows: an attempt with only a `running` row died;
    - Tuesday's merge `detail.missing`: it should be empty;
    - the build's gate;
-   - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row. No alert policy
-     watches job failures yet (DESIGN.md, Next), so nobody is emailed: check the build execution's exit code;
+   - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row, and the owner
+     is emailed (§6);
    - Tuesday's site deploy.
 4. **After one good week**, a follow-up PR removes `weekly.yml`'s crawl. Its rollback and Snowflake-migrate inputs
    move to a small manual workflow, or to `coffeedata rollback` run from the build image.
@@ -406,7 +406,67 @@ scheduled job.
   permanent, set `nat = false` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP stays
   reserved until the address resource is removed.
 
+## 6. Alerts
+
+`src/terraform/alerts.tf` emails the owner (the `owner` notification channel, `owner_email`) about the pipeline too.
+Each email names what failed and the first command to run.
+
+| Policy | Watches | Fires |
+|---|---|---|
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; at most one email per 5 minutes (and Google's 20 a day per log-based policy) |
+
+**No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
+Monitoring: a metric-absence condition waits at most 23.5 hours and has no time-of-week window, so on a weekly job
+it would be met six days out of seven; a log-match condition fires only on an entry that arrives; and a PromQL
+condition gated on the day and hour, over a metric with no points between executions, isn't something Google
+documents, and an empty series would read as "missing" every Tuesday. A failed or timed-out build (or a failed
+merge or enrich-week before it) fires the job alert; a build slot that doesn't start fires the Scheduler alert; and
+`site.yml`'s Tuesday 11:17 run fails red, without exporting, when the served release isn't this week's (GitHub
+emails a failed scheduled run). Left uncovered by email from Cloud Monitoring: a paused or deleted Scheduler entry.
+
+**Apply.** With `terraform.tfvars` as after the cutover (`ingest_schedule_enabled = true`, `ingest_image` pinned):
+
+```sh
+cd src/terraform
+terraform plan -out alerts.plan
+terraform apply alerts.plan
+```
+
+**Expected plan: 13 to add, 1 to change, 0 to destroy.**
+
+| Resources | Count |
+|---|---|
+| `google_monitoring_alert_policy.ingest_job_failed`: discover, probe, crawl-shopify, crawl-shopify-default-egress, crawl-retry, crawl-squarespace, crawl-woocommerce, crawl-square-online, crawl-generic, merge, enrich-week, build | 12 to add |
+| `google_monitoring_alert_policy.ingest_schedule_failed` | 1 to add |
+| `google_billing_budget.monthly`: `amount.specified_amount.units` "5" → "20" (in place) | 1 to change |
+
+Stop if it touches the app service (`google_cloud_run_v2_service.app`), any `google_cloud_run_v2_job.ingest`, any
+Scheduler entry, or anything else. If `terraform.tfvars` sets `budget_usd`, set it to 20 there, or the budget shows
+no change.
+
+**Test an alert** (after the apply):
+
+- Job failure: run a job that fails at once, without touching a roaster or the lake, e.g. the probe with a bad
+  argument: `gcloud run jobs execute probe --region $REGION --args="exit 1" --wait` (the job runs `sh -c`; the override
+  applies to this execution only, and it fails twice: one retry). Expect the `ingest job probe failed` email within about 5 minutes. Don't use a crawl job
+  or `build`.
+- Scheduler: on a test entry, never a live one: `gcloud scheduler jobs create http registry-coffee-alert-test
+  --location $REGION --schedule="0 0 1 1 *" --uri=https://run.googleapis.com/v2/projects/$PROJECT/locations/$REGION/jobs/does-not-exist:run
+  --http-method=POST --oauth-service-account-email=registry-coffee-ingest-sched@$PROJECT.iam.gserviceaccount.com`,
+  then `gcloud scheduler jobs run registry-coffee-alert-test --location $REGION`. The 404 is logged at ERROR and
+  the Scheduler email follows within minutes. Delete it: `gcloud scheduler jobs delete registry-coffee-alert-test
+  --location $REGION --quiet`.
+- Either way, `gcloud alpha monitoring policies list --filter='displayName~"registry.coffee: ingest"'
+  --format='table(displayName,enabled)'` lists the 13 policies.
+
+**Roll back:** revert this PR's commit and plan and apply again (13 to destroy, 1 to change, the budget back to
+$5), or, to silence one policy at once, `gcloud alpha monitoring policies update <policy> --no-enabled` (the name is
+in the list above). The jobs, the schedule and the app don't change either way.
+
 ## Cost
 
 About +$1–2/month for the non-Shopify jobs, and about $4–6/month for Cloud NAT, mostly the reserved static IP. The
-staging bucket holds one week of raw/ at most, a few hundred MB.
+staging bucket holds one week of raw/ at most, a few hundred MB. With the app (inside Cloud Run's free tier), about
+$5–8/month in all, so the monthly budget (`budget_usd`) is $20: its first email (50%, $10) is above the estimate's
+top, and 90%/100% ($18/$20) mean more than twice the estimate. Alert policies cost nothing.

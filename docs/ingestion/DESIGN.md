@@ -186,7 +186,7 @@ C never had a PR.
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
 | Post-load enrichment | `coffeedata enrich-week [--submit]` | `job_manifests` (merge done), raw rows | `enrichments`, `llm_batches` |
 | Build + gate, publish | `coffeedata build`, `coffeedata publish` | the lake | marts, release, `builds` |
-| Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (no alert policy yet: Next) |
+| Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (a failed build emails the owner) |
 | Secondary crawler (deferred) | `coffeedata pages` (#67, not in this branch) | refused stores | the same raw shape |
 
 The shared code is the HTTP client (`http.py`), lake I/O and `SCHEMAS` (`lake.py`), the adapter interface,
@@ -276,8 +276,8 @@ egress. The Terraform is `src/terraform/ingestion.tf`, and the owner's steps are
 
 Why:
 - **One runtime** for the weekly pipeline, with one scheduler, one secrets store (Secret Manager, the app's own
-  secrets by name) and one log path (Cloud Logging). Alerting on a failed job is not set up yet: `alerts.tf` covers
-  only the app service, so a job-failure alert policy is in Next.
+  secrets by name) and one log path (Cloud Logging). `alerts.tf` emails the owner on any failed job execution and on
+  a Scheduler entry that fails to start its job (RUNBOOK §6).
 - **Actions minutes saved.** The weekly run took most of its 240 min.
 - **Every connector is covered** by the per-connector egress logging and the 8% check, not just Shopify. A bare
   429 or 503 from any adapter counts as a block (`ingest.blocked`), so non-Shopify stores get refusal counts too.
@@ -397,8 +397,8 @@ thing to test (Next).
   recorded as unknown.
 - **The 8% check**: `coffeedata egress-check` flags an IP with more than 8% first-contact refusals on two production
   runs in a row (a run is a run_date: a main pass and its resume are summed into one; confirmation-run arms are
-  left out), and the build job's execution exits non-zero. Nobody is
-  emailed yet: there is no alert policy on job failures (Next). There is no automatic action.
+  left out), and the build job's execution exits non-zero, which emails the owner (`alerts.tf`, RUNBOOK §6).
+  There is no automatic action.
 - **Escalation, only if the data says so**: Cloud NAT with 1 IP, then N IPs, then a separate egress-swap job. Never
   rotate IPs to dodge limits.
 
@@ -607,9 +607,9 @@ Next:
     `dim_roaster`'s status logic moves out in that PR, with its own real-lake comparison (it would change
     kaldi.com, steamshovelcoffee.com and sumerce.coffee, section 4).
 14. **Internal contracts as ODCS YAML**, generated from `lake.SCHEMAS` and `contract_docs.py` so they can't drift.
-15. **Job and Scheduler failure alerts** (before next week; DevOps review N1): a Cloud Monitoring alert on
+15. **Job and Scheduler failure alerts** (DevOps review N1; done, RUNBOOK §6): a Cloud Monitoring alert on
     `cloud_run_job` failed executions (egress-check, build gate, a crashed crawl) and a log-match alert on Cloud
-    Scheduler errors, both to the app's notification channel. Until then nobody is emailed.
+    Scheduler errors, both to the app's notification channel. No "missing release" policy: §6 says why.
 16. **#67: a 503 on `.js` parks `.js` like a 429**, and the store continues on its pages.
 17. **#67: `/collections/all` unioned with the sitemap** for every store (Atlas: 39 of 41 coffees missing from its
     sitemap).
@@ -645,8 +645,8 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     jobs, which parse untrusted roaster HTML, can't.
 29. **Ingestion secrets apart from the app's** (N4): `INGEST_HF_TOKEN` (fine-grained to the dataset) and
     `INGEST_ANTHROPIC_API_KEY`, so rotating one after an ingestion incident never breaks the public app.
-30. **A budget above the cost estimate** (N6): `budget_usd` is $5 against an estimated $5–8, so its alerts would
-    always fire. Raise it (e.g. $20–25) and add a billable-instance-time alert for the jobs.
+30. **A budget above the cost estimate** (N6): `budget_usd` was $5 against an estimated $5–8, so its alerts would
+    always fire. Raised to $20 (RUNBOOK, Cost). Still to do: a billable-instance-time alert for the jobs.
 31. **A dedicated Cloud Build service account** (N7) with only Artifact Registry write and log writing, not the
     default Compute SA.
 32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
