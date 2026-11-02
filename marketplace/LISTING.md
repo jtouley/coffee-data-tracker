@@ -1,7 +1,16 @@
 # Listing copy (draft)
 
 Use for the public Hugging Face dataset, the Snowflake Marketplace and the Databricks Marketplace. Keep the
-three in sync.
+three in sync. The Snowflake listing's attribute boxes are typed by hand from this file, so this file is the
+source of truth for them.
+
+<!-- coverage-claims: every build checks these against its own mart_build_profile (`coverage_claims_*` dbt tests).
+One claim per line, `metric: text`: the text must appear in the copy below, and its number is the stated value.
+Change a number in the copy and here together, then retype it in the Snowflake listing.
+listed_coffees: about 45,000 coffees
+roasters_with_coffee: 1,800 US specialty roasters
+Not checked: "about half of reachable US roasters" (no build metric counts reachable roasters).
+-->
 
 **Title:** US Specialty Coffee Market: Weekly Prices, Origins and Availability
 

@@ -864,3 +864,68 @@ def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch, capsy
     cli.main([*site, "--skip-if-unserved"])
     assert "nothing is served yet" in capsys.readouterr().err
     assert not (tmp_path / "site").exists() and not (tmp_path / "s.duckdb").exists()
+
+
+def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
+    claims = {c["metric"]: c for c in quality.coverage_claims()}
+    assert {m: c["value"] for m, c in claims.items()} == {
+        "listed_coffees": 45000.0,
+        "roasters_with_coffee": 1800.0,
+    }
+    for c in claims.values():  # the line named is the copy, not the claims comment
+        path, line = c["source"].rsplit(":", 1)
+        copy = Path(path).read_text().splitlines()[int(line) - 1]
+        assert c["text"] in copy and "coverage-claims" not in copy and not copy.startswith("listed_coffees")
+
+
+@pytest.mark.parametrize(
+    ("claim", "error"),
+    [
+        ("listed_coffees: about 50,000 coffees", "is not in the copy"),
+        ("listed_coffees: coffees", "has no number"),
+    ],
+)
+def test_a_coverage_claim_must_match_its_copy(tmp_path, claim, error):
+    listing = tmp_path / "LISTING.md"
+    listing.write_text(
+        f"<!-- coverage-claims: notes\n{claim}\n-->\nWeekly prices for about 45,000 coffees.\n"
+    )
+    with pytest.raises(ValueError, match=error):
+        quality.coverage_claims(listing)
+
+
+def _claim(metric: str, value: float) -> dict:
+    return {
+        "metric": metric,
+        "value": value,
+        "text": f"about {value:,.0f}",
+        "source": "marketplace/LISTING.md:9",
+    }
+
+
+def test_coverage_claims_pass_inside_the_tolerance_warn_outside_it_and_fail_on_an_unknown_metric(
+    lake, tmp_path
+):
+    run(lake, "2026-10-26", RID, FULL)  # lists 40 coffees from 1 roaster
+    inside = [_claim("listed_coffees", 45), _claim("roasters_with_coffee", 1)]  # 45 is 12.5% over 40
+    r = build(lake, tmp_path, check=False, coverage_claims=inside)
+    assert r.returncode == 0 and not re.search(r"WARN \d+ coverage_claims", r.stdout)
+    assert quality.coverage_claim_messages(tmp_path / "coffee.duckdb") == []
+
+    # Drift only warns, and names the line to update.
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("listed_coffees", 45000)])
+    assert r.returncode == 0 and re.search(r"WARN 1 coverage_claims_match_build", r.stdout)
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert msg.startswith("marketplace/LISTING.md:9: 'about 45,000'") and "listed_coffees (40;" in msg
+    tight = {
+        "coverage_claims": [_claim("listed_coffees", 45)],
+        "claim_tolerance": 0.1,
+    }  # the tolerance is a var
+    assert re.search(
+        r"WARN 1 coverage_claims_match_build", build(lake, tmp_path, check=False, **tight).stdout
+    )
+
+    r = build(lake, tmp_path, check=False, coverage_claims=[_claim("coffees_listed", 40)])
+    assert r.returncode != 0 and re.search(r"FAIL 1 coverage_claims_name_metrics", r.stdout)  # a bug: fails
+    [msg] = quality.coverage_claim_messages(tmp_path / "coffee.duckdb")
+    assert "names coffees_listed, which mart_build_profile doesn't have" in msg
