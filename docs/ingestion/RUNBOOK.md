@@ -412,13 +412,17 @@ scheduled job.
   reserved until the address resource is removed.
 
 The Tuesday steps below use this week's run date, **2026-11-02** (the Monday; use the week's Monday in later weeks).
-Each Cloud Run step is followed by the same `coffeedata` command, which runs locally with §3's `COFFEEDATA_LAKE` and
-`HF_TOKEN` exports (never echo the token). `--args` replaces the job's arguments for one execution, and gcloud splits
-it on commas, so keep commas out of it. `build` runs `sh -c`, so its `--args` is one shell script; the other jobs run
-`coffeedata`, so theirs is the argument list. To read an execution's output:
+**Crawl, merge, enrich-week and build run on Cloud Run only.** The jobs carry the verdict model, the Anthropic key
+and the staging bucket, and the build job runs `coffeedata classify` first. A local `uv run coffeedata` crawl,
+crawl-retry, merge, enrich-week, build or publish has none of these: it builds a different catalog (rules only, no
+verdicts) that can still pass the gate and become the baseline. Don't use the local forms for a release. Only the
+read-only steps (`build-diff`, the Python checks) and `override` also have a local form, which runs with §3's
+`COFFEEDATA_LAKE` and `HF_TOKEN` exports (never echo the token). `--args` replaces the job's arguments for one
+execution, and gcloud splits it on commas, so keep commas out of it. `build` runs `sh -c`, so its `--args` is one
+shell script; the other jobs run `coffeedata`, so theirs is the argument list. To read an execution's output:
 
 ```sh
-E=$(gcloud run jobs executions list --job build --region us-central1 --limit 1 --format='value(name)')
+E=$(gcloud run jobs executions list --job build --region $REGION --limit 1 --format='value(name)')
 gcloud logging read "resource.type=\"cloud_run_job\" AND labels.\"run.googleapis.com/execution_name\"=\"$E\"" \
   --order asc --limit 500 --format='value(textPayload)'
 ```
@@ -431,7 +435,7 @@ is out, but nothing new is either.
 **a. Diagnose.**
 
 ```sh
-gcloud run jobs execute build --region us-central1 --wait --args='coffeedata build-diff'
+gcloud run jobs execute build --region $REGION --wait --args='coffeedata build-diff'
 uv run coffeedata build-diff
 ```
 
@@ -442,75 +446,72 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 
 | Failing test | Go to |
 |---|---|
-| `catalog_volume_vs_last_build`, `build_metrics_in_band` | **b** if build-diff shows a real change; **c** if a crawl lost roasters |
+| `catalog_volume_vs_last_build` | **b** if build-diff shows a real change; **c** if a crawl lost roasters |
 | `run_is_complete`, `run_ok_rate`, `adapter_ok_rate` | **c** |
-| `latest_run_is_fresh` | no week merged: §5.2, then the merge's execution |
+| `latest_run_is_fresh` | last week's run is missing too: on Tuesday 2026-10-26 still counts as fresh (§5.2), so this week's missing merge alone can't fail it. Check both weeks' merges (§5.2), then **c** for each missing week |
 | anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
 
-`suspect_runs_need_review` is a warning and never fails the gate. Settle its rows with `override` (b.1).
+`suspect_runs_need_review` and `build_metrics_in_band` are warnings (`severity='warn'`) and never fail the gate, so
+neither appears in `failing`. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
-**b. The data is right, the gate is wrong.** Minutes, no re-crawl.
+**b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
+the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
+records.
 
 1. One roaster-week at a time: `accept` (a suspect catalog change is real), `reject` (drop that fetch: the week
    counts as missing for the roaster), or `use_batch` with `--batch <batch_id>` (count another ok fetch of that week).
    The override is uploaded to the lake at once; the next build applies it.
 
    ```sh
-   gcloud run jobs execute build --region us-central1 --wait \
+   gcloud run jobs execute build --region $REGION --wait \
      --args='coffeedata override --roaster <roaster_id> --run-date 2026-11-02 --action accept --reason "<why>"'
    uv run coffeedata override --roaster <roaster_id> --run-date 2026-11-02 --action accept --reason "<why>"
    ```
 
-2. A real catalog-wide change (volume or band failure): rebuild with `--accept-volume-change`. The fixed floors still
-   apply, and this build becomes the next baseline. Leave the flag out after overrides alone.
+2. A real catalog-wide change (a `catalog_volume_vs_last_build` failure): rebuild with `--accept-volume-change`. The
+   fixed floors still apply, and this build becomes the next baseline. Leave the flag out after overrides alone.
 
    ```sh
-   gcloud run jobs execute build --region us-central1 --wait \
+   gcloud run jobs execute build --region $REGION --wait \
      --args='coffeedata classify; coffeedata build --run-date 2026-11-02 --accept-volume-change; rc=$?; coffeedata publish --message rebuild; exit $rc'
-   uv run coffeedata build --run-date 2026-11-02 --accept-volume-change && uv run coffeedata publish --message rebuild
    ```
 
-**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build.
+**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
+build that fails the gate runs twice (b).
 
-A crawl asks only roasters **without an ok fetch this week**. It repairs failed, skipped and parked roasters, not ok
-fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one roaster-week at a time. Run it on
-Tuesday: `--run-date` defaults to today, and `week_of()` maps Tuesday to Monday 2026-11-02 (passed explicitly below).
-Crawl and merge share the staging bucket, so run this chain on Cloud Run; the local `coffeedata` forms use local
-staging and only work if the whole chain runs locally.
+A crawl asks only roasters **without an `ok` or `unavailable` fetch this week**. It repairs failed, skipped and
+parked roasters, not ok fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one
+roaster-week at a time. Run it on Tuesday: `--run-date` defaults to today, and `week_of()` maps Tuesday to Monday
+2026-11-02 (passed explicitly below). Crawl and merge share the staging bucket: run the whole chain on Cloud Run.
 
-1. Check no execution of the job is running: `gcloud run jobs executions list --job crawl-<c> --region us-central1
+1. Check no execution of the job is running: `gcloud run jobs executions list --job crawl-<c> --region $REGION
    --limit 3`.
 2. Crawl the connector (`<c>`: `shopify`, `squarespace`, `woocommerce`, `square_online`, `generic`; the job of
    `square_online` is `crawl-square-online`):
 
    ```sh
-   gcloud run jobs execute crawl-<c> --region us-central1 --wait --args=crawl,--connector,<c>,--run-date,2026-11-02
-   uv run coffeedata crawl --connector <c> --run-date 2026-11-02
+   gcloud run jobs execute crawl-<c> --region $REGION --wait --args=crawl,--connector,<c>,--run-date,2026-11-02
    ```
 
    Shopify's parked stores, after `crawl-shopify` (stores that refused on Monday may refuse again):
 
    ```sh
-   gcloud run jobs execute crawl-retry --region us-central1 --wait \
+   gcloud run jobs execute crawl-retry --region $REGION --wait \
      --args=crawl-retry,--connector,shopify,--run-date,2026-11-02
-   uv run coffeedata crawl-retry --connector shopify --run-date 2026-11-02
    ```
 
 3. Merge again. It adds only what the lake doesn't have yet:
 
    ```sh
-   gcloud run jobs execute merge --region us-central1 --wait --args=merge,--run-date,2026-11-02
-   uv run coffeedata merge --run-date 2026-11-02
+   gcloud run jobs execute merge --region $REGION --wait --args=merge,--run-date,2026-11-02
    ```
 
 4. Enrich, then build:
 
    ```sh
-   gcloud run jobs execute enrich-week --region us-central1 --wait --args=enrich-week,--submit,--run-date,2026-11-02
-   gcloud run jobs execute build --region us-central1 --wait \
+   gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,2026-11-02
+   gcloud run jobs execute build --region $REGION --wait \
      --args='coffeedata classify; coffeedata build --run-date 2026-11-02; rc=$?; coffeedata publish --message rebuild; exit $rc'
-   uv run coffeedata enrich-week --submit --run-date 2026-11-02
-   uv run coffeedata build --run-date 2026-11-02 && uv run coffeedata publish --message rebuild
    ```
 
 **d. Bad data passed the gate and is out.** Roll back:
@@ -520,10 +521,17 @@ gh workflow run weekly -f rollback_to=previous   # or -f rollback_to=<build_id> 
 ```
 
 It serves the passing release before the served one, publishes, re-exports the public tables, loads Snowflake and
-deploys the site (the last 4 weekly releases can be served again). The `coffeedata` form is
-`coffeedata rollback --reason "<why>"`. On Cloud Run
-(`gcloud run jobs execute build --region us-central1 --wait --args='coffeedata rollback --reason "<why>"'`) it
-switches the served release only: that job has no public export, Snowflake or site. Then fix the week as in b or c.
+deploys the site. Any earlier passing build can be served with `rollback_to=<build_id>`. On Cloud Run, always name
+the release with `--to <build_id>` (from `build-diff` or `quality.builds`):
+
+```sh
+gcloud run jobs execute build --region $REGION --wait \
+  --args='coffeedata rollback --to <build_id> --reason "<why>"'
+```
+
+Without `--to`, a failed `publish` after the serve makes the job's retry (`max_retries = 1`) run `rollback` again,
+which goes back one more release. The job switches the served release and publishes only: it has no public export,
+Snowflake or site. Then fix the week as in b or c.
 
 **`site.yml` at 11:17 and the 8-day promise.** At 11:17 the Tuesday run renders and deploys the served release, then
 checks that its run is this week's. If not, it fails red and exports nothing (no public export, no Snowflake load).
@@ -535,9 +543,9 @@ Wednesday and gets one day worse each day until this week's release is served.
 
 | Case | 11:17 | 8-day promise |
 |---|---|---|
-| a/b, rebuilt before 11:17 | green, exports this week's | kept |
+| a/b, rebuilt before 11:17 (a rebuild that fails the gate runs twice) | green, exports this week's | kept |
 | a/b, rebuilt after 11:17 | red, nothing exported; then `rollback_to=served` | kept if served on Tuesday |
-| c | red (the crawl alone can take 4 h); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
+| c | red (the crawl alone can take 4 h, and a failing build runs twice); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
 | d, before 11:17 | red (the served release is last week's); the rollback already exported | kept Tuesday; broken from Wednesday until b or c serves this week |
 | d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
 | nothing fixed | red | broken from Wednesday |
@@ -565,7 +573,7 @@ for r in control.rows(lake, "2026-11-02"):
         print(r["job"], r["status"], r["started_at"], r["ended_at"])
 EOF
 for j in merge build; do
-  gcloud run jobs executions list --job $j --region us-central1 --limit 2 \
+  gcloud run jobs executions list --job $j --region $REGION --limit 2 \
     --format='table(name,status.startTime,status.completionTime)'
 done
 ```
@@ -576,11 +584,9 @@ merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
 **Recourse:** once the merge's row is `done`, run enrich-week (if it waited) and the build again:
 
 ```sh
-gcloud run jobs execute enrich-week --region us-central1 --wait --args=enrich-week,--submit,--run-date,2026-11-02
-gcloud run jobs execute build --region us-central1 --wait \
+gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,2026-11-02
+gcloud run jobs execute build --region $REGION --wait \
   --args='coffeedata classify; coffeedata build --run-date 2026-11-02; rc=$?; coffeedata publish --message rebuild; exit $rc'
-uv run coffeedata enrich-week --submit --run-date 2026-11-02
-uv run coffeedata build --run-date 2026-11-02 && uv run coffeedata publish --message rebuild
 ```
 
 `--run-date 2026-11-02` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
@@ -588,6 +594,9 @@ week again. The early release has last week's data, so it is a harmless baseline
 `gh workflow run weekly -f rollback_to=served` (§5.1).
 
 ### 5.3 A partial crawl doesn't alert
+
+This section describes `main` before PR #91 (crawl-hardening), which changes it; when #91 merges after #92, #91 must
+update it (and §5.1 c step 2).
 
 A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline`, with
 `skipped` = roasters never started. An attempt whose latest row is `running` died. Check the week's rows per connector
@@ -615,8 +624,8 @@ An OOM kill shows as "memory limit" and signal 9 in the execution's log. On 2026
 OOM-killed at 2Gi:
 
 ```sh
-gcloud run jobs update crawl-generic --region us-central1 --memory 8Gi
-gcloud run jobs describe crawl-generic --region us-central1 \
+gcloud run jobs update crawl-generic --region $REGION --memory 8Gi
+gcloud run jobs describe crawl-generic --region $REGION \
   --format='value(spec.template.spec.template.spec.containers[0].resources.limits.memory)'   # 8Gi
 ```
 
