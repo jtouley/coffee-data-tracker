@@ -10,7 +10,7 @@ Every roaster runs its own online store, so there's no single place to compare o
 see when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or grinder. This
 project reads each roaster's public store once a week, starting from a seed list of about 3,200 US roasters, keeps
 every weekly snapshot, and turns them into tables you can query with SQL: what's listed now, what changed, and how
-your shots of a given coffee went. The weekly job runs on a GitHub Actions schedule and needs no server. The data lives in a lake
+your shots of a given coffee went. The weekly crawl runs as scheduled Cloud Run jobs, and GitHub Actions publishes the site. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
 
 **Catalog site:** [registry.coffee](https://registry.coffee/catalog/)
