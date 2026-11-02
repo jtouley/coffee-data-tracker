@@ -3,6 +3,7 @@ file is what the generator writes from lake.SCHEMAS, is valid ODCS v3.2.0, and e
 contract's columns. Changing a column, type, required or enum fails here until the contract is written at a new
 version; `make contracts` refuses to write it at the old one."""
 
+import json
 import re
 from datetime import UTC, date, datetime
 from pathlib import Path
@@ -71,25 +72,27 @@ def test_make_contracts_refuses_a_new_column_without_a_version_bump(scratch_cont
     """The review's case: add a column, describe it, run make contracts at the same version: refused, nothing written."""
     before = {f.name: f.read_text() for f in scratch_contracts.iterdir()}
     _add_a_bodies_column(monkeypatch)
-    with pytest.raises(SystemExit, match=r"refused: raw 1\.2\.0: the interface .* --write raw <new version>"):
+    with pytest.raises(SystemExit, match=r"refused: raw 1\.3\.0: the interface .* --write raw <new version>"):
         raw_contracts.main(["--all"])
-    with pytest.raises(SystemExit, match="refused: raw 1.2.0"):
-        raw_contracts.main(["--write", "raw", "1.2.0"])
+    with pytest.raises(SystemExit, match="refused: raw 1.3.0"):
+        raw_contracts.main(["--write", "raw", "1.3.0"])
     with pytest.raises(SystemExit, match="not above the last released version"):
-        raw_contracts.main(["--write", "raw", "1.1.9"])
+        raw_contracts.main(["--write", "raw", "1.2.9"])
     assert {f.name: f.read_text() for f in scratch_contracts.iterdir()} == before
 
 
 def test_a_new_column_ships_at_a_new_version(scratch_contracts, monkeypatch):
     _add_a_bodies_column(monkeypatch)
-    raw_contracts.main(["--write", "raw", "1.3.0"])
+    raw_contracts.main(["--write", "raw", "1.4.0"])
     doc = raw_contracts.load("raw")
-    assert doc["version"] == "1.3.0" and "language" in raw_contracts.columns("raw", "bodies")
+    assert doc["version"] == "1.4.0" and "language" in raw_contracts.columns("raw", "bodies")
     released = raw_contracts.interfaces()["raw"]
-    assert list(released) == ["1.2.0", "1.3.0"] and released["1.3.0"] == raw_contracts.fingerprint(doc)
-    assert released["1.2.0"] != released["1.3.0"]
-    raw_contracts.main(["--all"])  # and regenerates at 1.3.0 from then on
-    assert raw_contracts.load("raw")["version"] == "1.3.0"
+    assert list(released) == ["1.2.0", "1.3.0", "1.4.0"] and released["1.4.0"] == raw_contracts.fingerprint(
+        doc
+    )
+    assert released["1.3.0"] != released["1.4.0"]
+    raw_contracts.main(["--all"])  # and regenerates at 1.4.0 from then on
+    assert raw_contracts.load("raw")["version"] == "1.4.0"
 
 
 def test_make_contracts_regenerates_a_doc_only_change_at_the_same_version(scratch_contracts, monkeypatch):
@@ -105,7 +108,7 @@ def test_make_contracts_regenerates_a_doc_only_change_at_the_same_version(scratc
     assert raw_contracts.fingerprint(doc, "docs") != raw_contracts.fingerprint(committed, "docs")
     bodies = next(o for o in doc["schema"] if o["name"] == "bodies")
     assert bodies["description"] == "Each product description once, by hash."
-    assert raw_contracts.interfaces()["raw"] == {committed["version"]: raw_contracts.fingerprint(committed)}
+    assert raw_contracts.interfaces()["raw"][committed["version"]] == raw_contracts.fingerprint(committed)
 
 
 @pytest.mark.parametrize("name", sorted(raw_contracts.CONTRACTS))
@@ -157,8 +160,6 @@ def test_parked_files_follow_the_raw_contract(tmp_path):
     lake = Lake(str(tmp_path / "lake"))
     item = CatalogItem(roaster_id="x.com", product_id="1", handle="h", url="u", title="C", platform="shopify")
     ingest.save_parked(lake, "2026-11-02", "x.com", {"page": 2, "items": [item]})
-    import json
-
     doc = json.loads(ingest.parked_path(lake, "2026-11-02", "x.com").read_text())
     parked = next(o for o in raw_contracts.load("raw")["schema"] if o["name"] == "parked")
     assert parked["physicalName"] == "parked/run_date=<date>/<roaster_id>.json"
@@ -166,6 +167,22 @@ def test_parked_files_follow_the_raw_contract(tmp_path):
     assert set(doc) == set(shape)
     assert set(doc["items"][0]) == {p["name"] for p in shape["items"]["items"]["properties"]}
     assert ingest.load_parked(lake, "2026-11-02")["x.com"]["page"] == 2
+
+
+def test_inflight_markers_follow_the_raw_contract(tmp_path):
+    from coffeedata import connectors, crashguard
+
+    part = connectors.partition(Lake(str(tmp_path / "lake")), "generic", "2026-11-02")
+    guard = crashguard.Guard(crashguard.root(part), "a1")
+    guard.start("x.com")
+    spec = next(o for o in raw_contracts.load("raw")["schema"] if o["name"] == "inflight")
+    rel = (guard.dir / "x.com.json").relative_to(part.parents[2]).as_posix()
+    assert rel == "raw/connector=generic/run_date=2026-11-02/_inflight/attempt=a1/x.com.json"
+    assert (
+        spec["physicalName"]
+        == "raw/connector=<name>/run_date=<week>/_inflight/attempt=<attempt_id>/<roaster_id>.json"
+    )
+    assert set(json.loads((guard.dir / "x.com.json").read_text())) == {p["name"] for p in spec["properties"]}
 
 
 def test_control_rows_follow_the_manifest_contract(tmp_path):
@@ -187,16 +204,17 @@ def test_enrichment_rows_follow_the_enrichment_contract():
 
 
 def test_fetch_statuses_are_the_raw_contracts():
-    """ok, error and unavailable (raw 1.2.0): every status a crawl writes is in the contract."""
+    """ok, error, unavailable (raw 1.2.0) and crashed (1.3.0): every status a crawl writes is in the contract."""
     fetches = next(o for o in raw_contracts.load("raw")["schema"] if o["name"] == "fetches")
     status = next(p for p in fetches["properties"] if p["name"] == "status")
-    assert [e["value"] for e in status["enum"]] == ["ok", "error", "unavailable"]
+    assert [e["value"] for e in status["enum"]] == ["ok", "error", "unavailable", "crashed"]
     r = Roaster(roaster_id="x.com", name="X", host="x.com", platform="shopify")
     now = datetime(2026, 11, 2, tzinfo=UTC)
     results = [ingest.Result(r, now, stats=RequestStats()), ingest.Result(r, now, error="boom", stats=RequestStats()),
-               ingest.Result(r, now, error="Unavailable: closed", unavailable=True, stats=RequestStats())]  # fmt: skip
+               ingest.Result(r, now, error="Unavailable: closed", unavailable=True, stats=RequestStats()),
+               ingest.Result(r, now, error="crashed: in flight when 2 attempts died", quarantined=True)]  # fmt: skip
     rows = ingest.rows_for(results, date(2026, 11, 2), "b", set())["fetches"]
-    assert [x["status"] for x in rows] == ["ok", "error", "unavailable"]
+    assert [x["status"] for x in rows] == ["ok", "error", "unavailable", "crashed"]
     assert all(x["partial"] is None for x in rows)
 
 

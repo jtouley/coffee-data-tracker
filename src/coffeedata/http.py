@@ -34,6 +34,11 @@ RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
 # "disallow everything", and Google treats it so); we never fetch without a store's rules.
 ROBOTS_RETRY_AFTER = 900.0
 MAX_REDIRECTS = 20
+# The most body one response may bring into memory, decompressed (COFFEEDATA_MAX_RESPONSE_MB, default 32 MiB). A
+# catalog page or a product page is far below it; a video or a runaway page at a product URL is not, and fails that
+# roaster's fetch (ResponseTooLarge) instead of the job's memory (crawl-generic's OOM kill, 2026-11-02). Sitemaps get
+# their own, higher cap (sitemap.SITEMAP_MAX_BYTES, through with_max_response): the protocol allows 50 MB.
+MAX_RESPONSE_BYTES = int(float(os.environ.get("COFFEEDATA_MAX_RESPONSE_MB") or 32) * 2**20)
 
 
 # A refusal or block. Each one is recorded with the headers Shopify Support asks for (and that tell a Cloudflare
@@ -83,6 +88,12 @@ class FetchError(Exception):
     def __init__(self, *args: object, status: int | None = None) -> None:
         super().__init__(*args)
         self.status = status
+
+
+class ResponseTooLarge(FetchError):
+    """A response body over the client's max_response_bytes (said by its content-length, or counted as it was read,
+    decompressed). Not an httpx.HTTPError: it is never retried, and it fails the roaster's fetch. status: the
+    response's HTTP status."""
 
 
 class Blocked(FetchError):
@@ -183,8 +194,10 @@ class PoliteClient:
         retries: int = 3,
         transport: httpx.BaseTransport | None = None,
         limiters: dict[str, PlatformLimiter] | None = None,
+        max_response_bytes: int | None = None,
     ):
         self.min_interval = min_interval
+        self.max_response_bytes = max_response_bytes or MAX_RESPONSE_BYTES
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
         self.limiters = limiters or {}
         self._limiter: PlatformLimiter | None = None
@@ -244,12 +257,47 @@ class PoliteClient:
         view._limiter = limiter
         return view
 
+    def with_max_response(self, max_bytes: int) -> PoliteClient:
+        """This client with another response cap (sitemaps: up to 50 MB by the protocol). A view sharing the
+        connection pool and state, as for_platform: close the original, not it."""
+        if max_bytes == self.max_response_bytes:
+            return self
+        view = copy.copy(self)
+        view.max_response_bytes = max_bytes
+        return view
+
     def _send(self, url: str, params: dict | None = None) -> httpx.Response:
         if self._limiter is None:
-            return self._client.get(url, params=params)
+            return self._read(
+                self._client.send(self._client.build_request("GET", url, params=params), stream=True)
+            )
         with self._limiter.slot(urlparse(url).hostname):
-            r = self._client.get(url, params=params)
+            r = self._client.send(self._client.build_request("GET", url, params=params), stream=True)
             self._limiter.record(r)  # inside the slot: a 429's cooldown is set before the next request starts
+            return self._read(r)
+
+    def _read(self, r: httpx.Response) -> httpx.Response:
+        """The streamed response's body, read up to max_response_bytes (ResponseTooLarge past it), and the response
+        freed as soon as its caller drops it: an httpx response refers to itself through its stream (a reference
+        cycle), so without this every body waited for Python's full garbage collection, and 32 workers' pages piled
+        up between collections (2026-11-02: RSS grew across a generic crawl until the OOM kill)."""
+        cap = self.max_response_bytes
+        try:
+            size = r.headers.get("content-length", "")
+            if size.isdigit() and int(size) > cap:
+                raise ResponseTooLarge(
+                    f"response over {cap >> 20} MiB ({int(size)} bytes): {r.url}", status=r.status_code
+                )
+            chunks, n = [], 0
+            for chunk in r.iter_bytes():
+                n += len(chunk)
+                if n > cap:
+                    raise ResponseTooLarge(f"response over {cap >> 20} MiB: {r.url}", status=r.status_code)
+                chunks.append(chunk)
+            r._content = b"".join(chunks)
+        finally:
+            r.close()
+            r.stream = httpx.ByteStream(b"")  # breaks the response <-> stream cycle
         return r
 
     def _allowed(self, url: str) -> bool:
@@ -293,6 +341,11 @@ class PoliteClient:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
             raise RobotsUnavailable(f"robots.txt for {host} not sent ({type(e).__name__}: {e})") from e
+        except ResponseTooLarge as e:
+            # Not a robots.txt (a catch-all page, or a runaway one): remembered like a 5xx, so the host's later
+            # fetches don't each download it again up to the cap.
+            err = RobotsUnavailable(f"robots.txt for {host} too large ({e})")
+            cause: Exception | None = e
         except httpx.HTTPError as e:
             # DNS failure, refused or timed-out connection to this host itself (not a host it redirected to): down.
             hostname = urlparse(f"https://{host}").hostname
@@ -302,7 +355,7 @@ class PoliteClient:
                 failed_host = hostname
             unreachable = isinstance(e, httpx.ConnectError | httpx.ConnectTimeout) and failed_host == hostname
             err = RobotsUnavailable(f"robots.txt for {host} failed ({type(e).__name__}: {e})", unreachable)
-            cause: Exception | None = e
+            cause = e
         else:
             if r.status_code == 200:
                 parser.parse(r.text.splitlines())
@@ -341,6 +394,9 @@ class PoliteClient:
             retry_after = ""
             try:
                 r = self._send(url, params)
+            except ResponseTooLarge as e:  # an answer, but never retried: counted with its status
+                self._note(e.status, retry=attempt > 0, page=page)
+                raise
             except httpx.HTTPError:
                 self._note(None, retry=attempt > 0, page=page)
                 if last:

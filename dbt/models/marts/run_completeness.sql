@@ -66,12 +66,14 @@ select
         else 'generic' end) as adapter,
     case
         when coalesce(t.unavailable, false) then false  -- a closed store says nothing about whether the run worked
+        when coalesce(t.quarantined, false) then false  -- nor does one store that crashed the crawler
         when coalesce(p.any_products, false) or coalesce(t.products > 0, false) then true
         when coalesce(t.ok, false) then t.products is null  -- succeeded with 0 products (null: an older file)
         else not coalesce(p.any_ok, false)  -- failed, or not tried, after only empty successes; or unknown
     end as has_catalog,
     coalesce(t.ok, false) and coalesce(t.products > 0, true) as catalog_ok,
-    coalesce(t.unavailable, false) as unavailable
+    coalesce(t.unavailable, false) as unavailable,
+    coalesce(t.quarantined, false) as quarantined
 from expected e
 cross join run
 left join attempts t using (roaster_id)

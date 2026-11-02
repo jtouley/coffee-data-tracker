@@ -221,3 +221,29 @@ unit_tests:
       rows:
         - {roaster_id: closed.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, unavailable: true}
         - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, unavailable: false}
+
+  - name: quarantined_stores_have_no_catalog_this_run
+    description: >-
+      run_completeness.has_catalog: a store quarantined this run (fetch status crashed: it crashed its crawl twice)
+      is left out of the ok rates like a closed one, and flagged quarantined. Not a platform failure.
+    model: run_completeness
+    overrides:
+      vars:
+        as_of_run: "2026-11-02"
+    given:
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: pill.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: pill.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, quarantined: true, adapter: generic, first_at: "2026-11-02 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-10-26, ok: true, products: 12, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-10-26 09:00:00+00"}
+          - {roaster_id: failed.com, run_date: 2026-11-02, ok: false, products: null, unavailable: false, quarantined: false, adapter: generic, first_at: "2026-11-02 09:00:00+00"}
+      - input: ref('dim_roaster')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::varchar as platform where false
+      - input: ref('stg_registry')
+        format: sql
+        rows: select null::varchar as roaster_id, null::timestamptz as first_added where false
+    expect:
+      rows:
+        - {roaster_id: pill.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, quarantined: true}
+        - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, quarantined: false}

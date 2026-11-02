@@ -50,6 +50,16 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - The weekly crawl runs on Cloud Run instead of a GitHub Actions schedule. The `weekly` workflow stays as a manual
   fallback. The crawl runs on Monday, and the `site` workflow publishes the site, the public export and the
   Snowflake load on Tuesday (#74).
+- Crawl hardening (#91). A roaster that kills its crawl (an OOM kill, a segfault, an uncaught error) no longer
+  kills every resume: each crawl records the roasters in flight, the next attempt fetches a dead attempt's
+  in-flight roasters one at a time, and a roaster in flight in two dead attempts is quarantined for the week with a
+  new fetch status, `crashed` (raw contract 1.3.0; left out of the ok rates like `unavailable`; `run_completeness`
+  and `int_roaster_runs` gain `quarantined`, and `mart_build_profile` gains `run_quarantined`). Every connector
+  gets an evening third pass (Shopify: `crawl-retry` on the NAT IP; the others: their own crawl again, on default
+  egress). The non-Shopify crawl jobs retry a failed attempt at once (`max_retries = 1`), and the retry stays
+  inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
+  connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
+  memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
 
 ### Fixed
 
@@ -64,6 +74,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   for future roast dates (#50); Save reads "Savingâ€¦" until the server replies (#58); fresh pages after writes, no
   duplicate resends and roast-date checks (#66).
 - Tests: a date-dependent bag comparison test (#51).
+- Crawl memory (#91): `crawl-generic` was OOM-killed at 2Gi on 2026-11-02. Every httpx response refers to itself
+  through its stream, so each page body waited for Python's full garbage collection; the client now breaks that
+  cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`; a sitemap
+  64 MiB, above the protocol's 50 MB): a larger one fails that roaster's fetch instead of the job. Sitemaps are
+  matched lazily on their bytes, up to the URL limit.
+  An exception from one roaster's fetch is always that roaster's error.
 
 ### Security
 

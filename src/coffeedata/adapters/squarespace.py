@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 from collections import Counter
 from urllib.parse import urlparse
 
@@ -9,6 +10,8 @@ from ..http import FetchError, NotCatalog, PoliteClient
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
+
+log = logging.getLogger(__name__)
 
 COMMON_SHOP_PATHS = ["/shop", "/store", "/coffee", "/shop-coffee", "/coffees", "/beans"]
 MAX_PAGES = 10
@@ -96,8 +99,11 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     "couldn't read it", so the fetch fails instead of recording an empty catalog."""
     try:
         urls = sitemap_urls(client, roaster.host)
-    except FetchError:
-        urls = []  # the common shop paths below are tried anyway, and fail loudly if they can't be read
+    except FetchError as e:
+        # the common shop paths below are tried anyway, and fail loudly if they can't be read; the sitemap's own
+        # shop paths are lost for this fetch, so say why (a sitemap over sitemap.SITEMAP_MAX_BYTES, a block, a 5xx)
+        log.warning("%s: sitemap unreadable, trying the common shop paths only: %s", roaster.roaster_id, e)
+        urls = []
     seen: dict[str, CatalogItem] = {}
     found_collection = False
     unreadable: list[str] = []

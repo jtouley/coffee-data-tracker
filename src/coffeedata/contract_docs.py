@@ -49,7 +49,9 @@ COLUMNS: dict[str, dict[str, str]] = {
         "fetched_at": "When the attempt started (UTC).",
         "roaster_id": _ROASTER,
         "adapter": "The catalog adapter used.",
-        "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store).",
+        "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store); "
+        "crashed (not fetched: quarantined for the week after it was in flight in two attempts of its crawl that "
+        "died).",
         "error": "The failure, when status is not ok.",
         "products": "Products the attempt read.",
         "coffees": "Coffees among them as the crawl counted them; null from an ELT crawl.",
@@ -146,10 +148,10 @@ QUALITY: dict[str, list[dict]] = {
          "rule": "every expected roaster of a full run has a fetch",
          "engine": "dbt", "implementation": "tests/run_is_complete.sql", "enforced_by": "dbt run_is_complete"},
         {"id": "run_ok_rate", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
-         "rule": "the run's overall ok share is above its floor (unavailable stores left out)",
+         "rule": "the run's overall ok share is above its floor (unavailable and crashed stores left out)",
          "engine": "dbt", "implementation": "tests/run_ok_rate.sql", "enforced_by": "dbt run_ok_rate"},
         {"id": "adapter_ok_rate", "tables": ["fetches"], "dimension": "completeness", "severity": "error",
-         "rule": "each adapter's ok share is above its floor (unavailable stores left out)",
+         "rule": "each adapter's ok share is above its floor (unavailable and crashed stores left out)",
          "engine": "dbt", "implementation": "tests/adapter_ok_rate.sql", "enforced_by": "dbt adapter_ok_rate"},
         {"id": "suspect_runs_need_review", "tables": ["fetches"], "dimension": "consistency", "severity": "warning",
          "rule": "a roaster's product count doesn't collapse against its baseline unless accepted",

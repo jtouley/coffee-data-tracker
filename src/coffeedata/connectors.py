@@ -27,15 +27,15 @@ import os
 import random
 import shutil
 from dataclasses import dataclass
-from datetime import date, timedelta
+from datetime import UTC, date, timedelta
 from pathlib import Path
 from typing import Any
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from . import control, ingest
-from .lake import SCHEMAS, Lake, new_batch_id
+from . import control, crashguard, ingest
+from .lake import SCHEMAS, Lake, new_batch_id, retry_transient
 from .ratelimit import SHOPIFY_RPS
 
 log = logging.getLogger(__name__)
@@ -184,6 +184,42 @@ def in_slice(key: str, part: str, salt: str) -> bool:
     return int(hashlib.sha256(f"{salt}:{key}".encode()).hexdigest(), 16) % n == k
 
 
+def _finished(lake: Lake, week: str) -> set[str]:
+    """The week's attempts with a done or deadline end row: everything else under _inflight died."""
+    rows = retry_transient(control.rows, lake, week)
+    return {r["attempt_id"] for r in rows if r["status"] in ("done", "deadline")}
+
+
+def _window_left(lake: Lake, job: str, connector: str, week: str, deadline_min: float) -> float:
+    """Minutes left of the window of this Cloud Run execution: its first task attempt's start + deadline_min. A
+    retried attempt (max_retries 1) resumes inside the window the first one had, so it ends before the next slot
+    (the 15:17 resume, or the merge) instead of overlapping it. The full deadline for a first attempt, or outside
+    Cloud Run."""
+    ex = control.execution()
+    if not ex.get("execution") or not ex.get("task_attempt"):
+        return deadline_min
+    starts = [
+        r["started_at"]
+        for r in retry_transient(control.rows, lake, week)
+        if r["job"] == job
+        and r["connector"] == connector
+        and control.detail_of(r).get("execution") == ex["execution"]
+    ]
+    if not starts:
+        return deadline_min
+    first = min(starts)
+    first = first if first.tzinfo else first.replace(tzinfo=UTC)
+    return max(0.0, deadline_min - (control.now() - first).total_seconds() / 60)
+
+
+def _ok_errors(out: dict) -> tuple[int, int]:
+    """job_manifests' ok and errors for an ingest.run: a quarantined roaster is neither (never fetched; its own
+    count in by_adapter, as the dbt ok rates leave its `crashed` row out)."""
+    by = (out.get("by_adapter") or {}).values()
+    errors = sum(a.get("errors", 0) for a in by)
+    return sum(a.get("roasters", 0) - a.get("quarantined", 0) for a in by) - errors, errors
+
+
 def crawl(
     lake: Lake,
     connector: str,
@@ -192,60 +228,120 @@ def crawl(
     rps: float | None = None,
     part: str | None = None,
     salt: str = "arm",
+    only: str | None = None,
 ) -> dict:
     """One connector's weekly job, or its resume: fetch its roasters without an ok fetch this week (parked stores
     continue from their blocked page), then compact. Extract and load only. A job_manifests row marks its start
-    and its end: an attempt with only the first one died (killed or timed out). rps overrides the connector's
-    budget, and part ("k/n", with salt) crawls one slice of its roasters: both for the confirmation run's arms."""
+    and its end: an attempt with only the first one died (killed or timed out), and one that raised ends `failed`.
+    rps overrides the connector's budget, and part ("k/n", with salt) crawls one slice of its roasters: both for the
+    confirmation run's arms. only: fetch that one roaster, even if done or quarantined this week (RUNBOOK §7).
+
+    The poison-pill guard (crashguard): the roasters in flight when an earlier attempt of this week died are fetched
+    one at a time; one in flight in two dead attempts is quarantined for the week (a `crashed` fetches row)."""
     c = CONNECTORS[connector]
     if rps is not None:
         c = dataclasses.replace(c, rps=rps)
     week = week_of(day)
     plake = PartitionLake(lake, connector, week, slice=part)
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
-    states, _ = ingest.select_states(plake, week)
+    states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
     if part:
         states = [s for s in states if in_slice(s.roaster.host.lower() or s.roaster.roaster_id, part, salt)]
     if c.shuffle:
         random.Random(f"{connector}:{week}").shuffle(states)
     todo_ids = {s.roaster.roaster_id for s in states}
-    job = control.start(lake, "crawl", week, connector, len(states))
-    out: dict[str, Any] = (
-        ingest.run(
-            plake,
-            states,
-            week,
-            workers=c.workers,
-            mode="full",
-            shopify_rps=c.rps or SHOPIFY_RPS,
-            platform_rps={connector: c.rps} if c.rps else None,  # its own shared budget, from config
-            deadline_s=60 * (deadline_min or c.deadline_min),
-            resume={k: v for k, v in ingest.load_parked(plake, week).items() if k in todo_ids},
+    health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
+    quarantine = {} if only else health.quarantine(todo_ids)
+    window = _window_left(lake, "crawl", connector, week, deadline_min or c.deadline_min)
+    # the quarantine this attempt applies: none for --only, so its start row doesn't list the roaster it fetches
+    started = control.execution() | health.summary(todo_ids) | {"quarantined": sorted(quarantine)}
+    job = control.start(lake, "crawl", week, connector, len(states), detail=started)
+    guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
+    if health.dead:
+        log.warning("crawl %s: %d earlier attempt(s) this week died; suspects %s, quarantined %s", connector,
+                    len(health.dead), sorted(health.suspects), sorted(quarantine))  # fmt: skip
+    try:
+        out: dict[str, Any] = (
+            ingest.run(
+                plake,
+                states,
+                week,
+                workers=c.workers,
+                mode="only" if only else "full",
+                shopify_rps=c.rps or SHOPIFY_RPS,
+                platform_rps={connector: c.rps} if c.rps else None,  # its own shared budget, from config
+                deadline_s=60 * window,
+                resume={k: v for k, v in ingest.load_parked(plake, week).items() if k in todo_ids},
+                guard=guard,
+                suspects=set(health.suspects) - set(quarantine),
+                quarantine=quarantine,
+            )
+            if states
+            else {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}}
         )
-        if states
-        else {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}}
-    )
-    rows = compact(plake.part)
-    errors = sum(a.get("errors", 0) for a in out["by_adapter"].values())
-    tried = sum(a.get("roasters", 0) for a in out["by_adapter"].values())
+        rows = compact(plake.part)
+    except Exception as e:
+        # The end row says why; the in-flight markers stay, so the next attempt sees what was running.
+        control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})
+        raise
+    ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
               "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
               # the network the job actually ran on (set by the deploy), else the connector's config
               "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
               # the confirmation run's arm (COFFEEDATA_ARM), budget and slice, if any
               "rps": c.rps, "slice": part, "salt": salt if part else None,
-              "arm": os.environ.get("COFFEEDATA_ARM")}  # fmt: skip
+              "arm": os.environ.get("COFFEEDATA_ARM"), "only": only,
+              # the Cloud Run execution and task attempt, and the poison-pill guard's view at the start
+              **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
         lake, job, "deadline" if out.get("skipped_deadline") else "done",
-        ok=tried - errors, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
+        ok=ok, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
         skipped=out.get("skipped_deadline", 0), requests=out.get("requests"), http_429=out.get("http_429"),
         http_430=out.get("http_430"), first_contact=out.get("first_contact"),
         detail=detail,
     )  # fmt: skip
+    guard.close()  # after the end row: a kill in between leaves a folder assess() removes
     lake.publish(f"crawl {connector} {week}")
     return {"connector": connector, "run_date": week, "todo": len(states), **detail,
             "status": end["status"], "skipped_deadline": out.get("skipped_deadline", 0)}  # fmt: skip
+
+
+def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
+    """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
+    their blocked page. Only those: a store that failed outright is not asked again here, so a Shopify store that
+    refused all day isn't re-asked in the evening (the connectors that park nothing get their third pass from
+    another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job
+    crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl."""
+    week = week_of(day)
+    plake = PartitionLake(lake, connector, week)
+    compact(plake.part)
+    states, resume = ingest.select_parked(plake, week, adapter=connector)
+    ids = {s.roaster.roaster_id for s in states}
+    health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
+    quarantine = health.quarantine(ids)
+    started = control.execution() | health.summary(ids)
+    job = control.start(lake, "crawl-retry", week, connector, len(states), detail=started)
+    guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
+    try:
+        out = ingest.run(plake, states, week, workers=workers, mode="retry_failed", resume=resume, guard=guard,
+                         suspects=set(health.suspects) - set(quarantine), quarantine=quarantine)  # fmt: skip
+        compact(plake.part)
+    except Exception as e:
+        control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})
+        raise
+    ok, errors = _ok_errors(out)
+    control.finish(
+        lake, job, "deadline" if out.get("skipped_deadline") else "done", ok=ok, errors=errors,
+        parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
+        http_429=out.get("http_429"), http_430=out.get("http_430"), first_contact=out.get("first_contact"),
+        detail=started | {"by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
+                          "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or CONNECTORS[connector].egress},
+    )  # fmt: skip
+    guard.close()
+    lake.publish(f"crawl-retry {connector} {week}")
+    return out
 
 
 def merge(lake: Lake, day: str) -> dict:

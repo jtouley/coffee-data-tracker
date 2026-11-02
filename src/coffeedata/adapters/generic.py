@@ -114,6 +114,8 @@ GIVE_UP_AFTER = 10  # pages without Product markup before assuming the site has 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     items: dict[str, CatalogItem] = {}
     failed = 0
+    # The sitemap is the only list of product pages: one it can't read (a block, a 5xx, or a file over the protocol's
+    # 50 MB, sitemap.SITEMAP_MAX_BYTES) fails the fetch, never an empty catalog.
     urls = product_urls(sitemap_urls(client, roaster.host))
     for n, url in enumerate(urls):
         if n >= GIVE_UP_AFTER and not items:
