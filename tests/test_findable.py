@@ -72,7 +72,10 @@ def test_the_dataset_jsonld_meets_googles_requirements(export):
     assert doc["dateModified"] == "2026-11-02" and doc["version"] == "20261103T061700-abc123"
     assert doc["temporalCoverage"] == "2026-10-26/.."
     assert doc["spatialCoverage"] == {"@type": "Place", "name": "United States"}
-    assert doc["license"] == "https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA"
+    assert (
+        doc["license"]
+        == "https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt"
+    )
     assert doc["name"] == public.contract()["name"]
     urls = [d["contentUrl"] for d in doc["distribution"]]
     assert urls[0] == "https://registry.coffee/catalog/catalog.json"
@@ -328,20 +331,33 @@ def test_release_tag_needs_a_release_build():
 
 
 def test_the_licence_text_travels_with_the_export(tmp_path, fake_hf, monkeypatch):
-    """CDLA-Permissive-2.0 asks that the licence text go with shared data: LICENSE-DATA is in a directory export and
-    in the Hugging Face commit when the repository has it, and quietly left out when it doesn't."""
-    lic = tmp_path / "LICENSE-DATA-src"
+    """CDLA-Permissive-2.0 asks that the licence text go with shared data: licenses/CDLA-Permissive-2.0.txt is in a
+    directory export and in the Hugging Face commit as LICENSE at the root when the repository has it, and quietly
+    left out when it doesn't."""
+    lic = tmp_path / "cdla-src.txt"
     lic.write_text("Community Data License Agreement - Permissive - Version 2.0\n")
     monkeypatch.setattr(public, "LICENSE_FILE", lic)
     db = _public_db(tmp_path / "p.duckdb")
     public.export(db, str(tmp_path / "out"))
-    assert (tmp_path / "out" / "LICENSE-DATA").read_text() == lic.read_text()
+    assert (tmp_path / "out" / "LICENSE").read_text() == lic.read_text()
     public.export(db, "hf://datasets/jtouley/us-coffee-market")
-    assert "LICENSE-DATA" in fake_hf.calls[1][1]
+    assert "LICENSE" in fake_hf.calls[1][1]
 
     monkeypatch.setattr(public, "LICENSE_FILE", tmp_path / "missing")  # the working directory has none either
     fake_hf.calls.clear()
     public.export(db, str(tmp_path / "out"))
-    assert not (tmp_path / "out" / "LICENSE-DATA").exists()  # nor one left from the export before
+    assert not (tmp_path / "out" / "LICENSE").exists()  # nor one left from the export before
     public.export(db, "hf://datasets/jtouley/us-coffee-market")
-    assert "LICENSE-DATA" not in fake_hf.calls[1][1] and "manifest.json" in fake_hf.calls[1][1]
+    assert "LICENSE" not in fake_hf.calls[1][1] and "manifest.json" in fake_hf.calls[1][1]
+
+
+def test_the_repository_licence_is_what_exports_ship():
+    """The licence URL names the file in the repository; when the repository has it (once #88 is in), it is the
+    CDLA-Permissive-2.0 text that exports ship."""
+    assert public.DATA_LICENSE["url"].endswith("/" + public.LICENSE_PATH.as_posix())
+    if not public.LICENSE_FILE.is_file():
+        pytest.skip("licenses/CDLA-Permissive-2.0.txt is not in this checkout")
+    assert public.license_file() == public.LICENSE_FILE
+    assert public.LICENSE_FILE.read_text().startswith(
+        "Community Data License Agreement - Permissive - Version 2.0"
+    )

@@ -301,10 +301,10 @@ Its coffees, prices and charts cover the same roasters as the public tables (`pu
 known only from OpenStreetMap). The roaster status counts and the registry total are the exception: they count every
 roaster in the registry, opted-out and OpenStreetMap-only ones included. For search engines, both pages carry a schema.org
 [Dataset](https://developers.google.com/search/docs/appearance/structured-data/dataset) in JSON-LD, built from the
-public contract at each build: name and description, the data licence ([`LICENSE-DATA`](LICENSE-DATA),
-CDLA-Permissive-2.0), coverage (US, from the 2026-10-26 run on), every contract column as a variable, the
-downloads (`catalog.json`, and the Hugging Face files when `PUBLIC_EXPORT_URL` is an `hf://` dataset), and the
-release (`dateModified` is its run date, `version` its build id). The site also has a `robots.txt` that allows
+public contract at each build: name and description, the data licence
+([`licenses/CDLA-Permissive-2.0.txt`](licenses/CDLA-Permissive-2.0.txt), CDLA-Permissive-2.0), coverage (US, from
+the 2026-10-26 run on), every contract column as a variable, the downloads (`catalog.json`, and the Hugging Face
+files when `PUBLIC_EXPORT_URL` is an `hf://` dataset), and the release (`dateModified` is its run date, `version` its build id). The site also has a `robots.txt` that allows
 everything and a `sitemap.xml` of its pages. `catalog/catalog.json` starts with a `release` object (build id, run
 date, contract id and version, licence) before its `columns` and `rows`.
 
@@ -443,8 +443,8 @@ IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`]
 
 A directory or Hugging Face export describes itself in `manifest.json`: the release (`release_build_id`,
 `release_run_date`), the contract id and version, the data licence (id and URL) and each file's `sha256` and row
-count. `LICENSE-DATA` goes with it (the licence asks that its text travel with the data). An `s3://` or `gs://` export
-writes only the Parquet files. A Hugging Face export of a release build also tags its commit `release-<run date>`
+count. The licence text goes with it as `LICENSE` (the licence asks that its text travel with the data). An `s3://`
+or `gs://` export writes only the Parquet files. A Hugging Face export of a release build also tags its commit `release-<run date>`
 (the Monday run), so a past week stays readable by name
 (`hf://datasets/<owner>/<name>@release-2026-11-02/data/public_coffee.parquet`). The tag follows the release served
 for that run: a re-export of the same build leaves it, a newer build of the same run moves it to its own commit. An

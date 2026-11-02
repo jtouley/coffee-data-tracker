@@ -329,8 +329,9 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
 
     out = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "public"))
     assert out["tables"]["public_coffee"] == 1
-    # LICENSE-DATA travels with the data once the repository has it (public.license_file()).
-    assert sorted(p.name for p in (tmp_path / "public").iterdir() if p.name != "LICENSE-DATA") == [
+    # The licence text travels with the data, as LICENSE, once the repository has it (public.license_file()).
+    assert (tmp_path / "public" / "LICENSE").is_file() == (public.license_file() is not None)
+    assert sorted(p.name for p in (tmp_path / "public").iterdir() if p.name != "LICENSE") == [
         "manifest.json",
         "public_coffee.parquet",
         "public_market_weekly.parquet",
@@ -549,7 +550,7 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
         "release_run_date": "2026-10-26",
         "contract": f"coffee-data-public-catalog@{public_contract_version()}",
         "license": "CDLA-Permissive-2.0",
-        "license_url": "https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA",
+        "license_url": "https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt",
     }
     assert list(catalog) == ["release", "columns", "rows"]
     landing = (out / "index.html").read_text()
@@ -580,7 +581,7 @@ def test_public_export_describes_its_release(lake, tmp_path):
     assert manifest["release_run_date"] == "2026-10-26" and manifest["as_of_run"] == "2026-10-26"
     assert manifest["contract"] == {"id": "coffee-data-public-catalog", "version": public_contract_version()}
     assert manifest["license"]["id"] == "CDLA-Permissive-2.0" and manifest["license"]["url"].endswith(
-        "/LICENSE-DATA"
+        "/licenses/CDLA-Permissive-2.0.txt"
     )
     assert sorted(manifest["files"]) == sorted(f"{t}.parquet" for t in public.PUBLIC_TABLES)
     for name, f in manifest["files"].items():

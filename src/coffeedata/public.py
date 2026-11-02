@@ -9,8 +9,8 @@ Destinations:
 
 Current tables are replaced each week (they are derived); history lives in `public_price_event`. A directory or
 Hugging Face export writes `manifest.json`, which says which release it is (build id and run date), the contract
-version and data licence, and each file's sha256 and row count, next to the licence text (LICENSE-DATA) when the
-repository has it; an s3:// or gs:// export writes only the Parquet files. A Hugging Face export of a release build
+version and data licence, and each file's sha256 and row count, next to the licence text (LICENSE, from
+licenses/CDLA-Permissive-2.0.txt) when the repository has it; an s3:// or gs:// export writes only the Parquet files. A Hugging Face export of a release build
 also tags its commit `release-<run date>`, so a past release stays retrievable by name
 (`hf://datasets/<owner>/<name>@release-2026-11-02/...`). A build without release ids (a plain `dbt build`) is never
 tagged.
@@ -38,12 +38,15 @@ CARD = Path("docs/PUBLIC_DATASET_CARD.md")
 HF_DATA_DIR = "data"  # where the tables go in a Hugging Face export
 # The public ODCS contract (the repository's copy; from the working directory when the package is installed elsewhere).
 CONTRACT = Path(__file__).resolve().parents[2] / "contracts" / "public-catalog.odcs.yaml"
-# The data licence (LICENSE-DATA at the repository root); the code is MIT (LICENSE). CDLA-Permissive-2.0 asks that
-# the licence text travel with the data, so a directory or Hugging Face export carries the file when it exists.
-LICENSE_FILE = Path(__file__).resolve().parents[2] / "LICENSE-DATA"
+# The data licence (licenses/CDLA-Permissive-2.0.txt; outside the root so GitHub shows the code's MIT LICENSE).
+# CDLA-Permissive-2.0 asks that the licence text travel with the data, so a directory or Hugging Face export carries
+# the file, as LICENSE at the export root, when it exists.
+LICENSE_PATH = Path("licenses") / "CDLA-Permissive-2.0.txt"
+LICENSE_FILE = Path(__file__).resolve().parents[2] / LICENSE_PATH
+EXPORT_LICENSE = "LICENSE"  # the licence's name in an export
 DATA_LICENSE = {
     "id": "CDLA-Permissive-2.0",
-    "url": "https://github.com/jtouley/coffee-data-tracker/blob/main/LICENSE-DATA",
+    "url": f"https://github.com/jtouley/coffee-data-tracker/blob/main/{LICENSE_PATH.as_posix()}",
 }
 
 
@@ -73,8 +76,8 @@ def describe(con) -> dict:
 
 
 def license_file() -> Path | None:
-    """LICENSE-DATA (the repository's copy, else the working directory's), or None where there isn't one."""
-    return next((p for p in (LICENSE_FILE, Path("LICENSE-DATA")) if p.is_file()), None)
+    """The data licence text (the repository's copy, else the working directory's), or None where there isn't one."""
+    return next((p for p in (LICENSE_FILE, LICENSE_PATH) if p.is_file()), None)
 
 
 def _sha256(path: Path) -> str:
@@ -129,9 +132,9 @@ def export(db: Path, dest: str = "build/public") -> dict:
     }
     (local / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
     if lic := license_file():
-        (local / "LICENSE-DATA").write_bytes(lic.read_bytes())
+        (local / EXPORT_LICENSE).write_bytes(lic.read_bytes())
     else:
-        (local / "LICENSE-DATA").unlink(missing_ok=True)  # not left over from an export that had one
+        (local / EXPORT_LICENSE).unlink(missing_ok=True)  # not left over from an export that had one
     if dest.startswith("hf://"):
         manifest["tag"] = _upload_hf(local, dest, manifest)
     return manifest | {"dest": dest}
@@ -186,9 +189,9 @@ def _upload_hf(local: Path, dest: str, manifest: dict) -> str | None:
     ops.append(CommitOperationAdd(path_in_repo="manifest.json", path_or_fileobj=str(local / "manifest.json")))
     if CARD.exists():
         ops.append(CommitOperationAdd(path_in_repo="README.md", path_or_fileobj=str(CARD)))
-    if (local / "LICENSE-DATA").is_file():
+    if (local / EXPORT_LICENSE).is_file():
         ops.append(
-            CommitOperationAdd(path_in_repo="LICENSE-DATA", path_or_fileobj=str(local / "LICENSE-DATA"))
+            CommitOperationAdd(path_in_repo=EXPORT_LICENSE, path_or_fileobj=str(local / EXPORT_LICENSE))
         )
     build = manifest.get("release_build_id")
     commit = api.create_commit(
