@@ -852,7 +852,7 @@ the hours outside that window find nothing to judge); a poll with nothing new ex
 
 **Ship it** (after this PR merges):
 1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
-   step): the jobs run the `coffeedata crawl-dq` command and the repull hooks in `crawl`/`crawl-retry` only from it.
+   step): the jobs run the `coffeedata crawl-dq` command and the repull hooks in `crawl`/`crawl-retry` (off: `COFFEEDATA_DQ_REFETCH` unset) only from it.
 2. `cd src/terraform && terraform plan -out dq.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
    `google_cloud_run_v2_job.ingest["crawl-dq"]`, its invoker binding
    `google_cloud_run_v2_job_iam_member.scheduler["crawl-dq"]`, the Scheduler entry
@@ -888,12 +888,21 @@ look at; no pass repulls it.
   crawl attempt ends or you run it with `--force`. Run `coffeedata crawl-dq --force` locally against a copy of the
   lake to see the dbt error.
 
-**Repulls** need nothing from the owner: the next crawl pass of each connector (`crawl`, `crawl-retry`) fetches
-its listed `empty` and `suspect` roasters again; `failed` ones are asked again by every `crawl` pass anyway.
-To fetch one roaster by hand instead: `crawl --connector X --only <roaster_id>` (section 7).
+**The repull list** is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
+`suspect`) and the DQ `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "What counts as bad
+data"). **Re-fetching is off**: no crawl pass reads the list, and the week's output is as without the check. `failed`
+roasters are asked again by every `crawl` pass anyway. To fetch one listed roaster again by hand:
+`crawl --connector X --only <roaster_id>` (section 7).
+
+**Re-fetch (off; don't turn it on yet).** The one setting is the env var `COFFEEDATA_DQ_REFETCH=1` on the crawl jobs,
+read by `crawl` and `crawl-retry`; with it, each later pass of a connector fetches its listed `empty` and `suspect`
+roasters again (the whole catalog). It changes which batch counts for those roasters, so it needs CLAUDE.md's full
+evaluation first (`eval/run_quality/README.md`). Until then leave it unset; to confirm a job doesn't have it:
+`gcloud run jobs describe <job> --region $REGION --format='value(spec.template.spec.template.spec.containers[0].env)'`
+must not name it.
 
 **Stop it:** `gcloud scheduler jobs pause registry-coffee-crawl-dq --location $REGION`.
-Nothing else depends on it: with no `dq` row, the crawl passes add no repulls.
+Nothing else depends on it: with re-fetch off the crawl passes never read its rows.
 
 ## Cost
 

@@ -97,7 +97,8 @@ COLUMNS: dict[str, dict[str, str]] = {
         "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
         "code_version": "The code that ran.",
         "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; for dq, "
-        "its verdict: systemic problems and the repull list, roaster_id, adapter and reasons).",
+        "its verdict: systemic problems and the repull list, roaster_id, adapter, reasons and the DQ rules "
+        "that gave them).",
     },
     "enrichments": {
         "extracted_at": "When it was extracted.",

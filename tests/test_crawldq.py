@@ -71,10 +71,10 @@ def test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_
         "adapter_ok_rate": "pass",
         "suspect_runs_need_review": "warn",
     }
-    assert [(e["roaster_id"], e["reasons"]) for e in out["repull"]] == [
-        ("s00.com", ["suspect"]),
-        ("s01.com", ["failed"]),
-        ("s02.com", ["empty"]),
+    assert [(e["roaster_id"], e["reasons"], e["rules"]) for e in out["repull"]] == [
+        ("s00.com", ["suspect"], ["suspect_runs_need_review"]),
+        ("s01.com", ["failed"], ["run_ok_rate"]),
+        ("s02.com", ["empty"], ["run_ok_rate"]),
     ]
     assert out["repull"][0]["products"] == 5 and out["repull"][0]["baseline_products"] == 30
     # Never a build, a release, a served mart or a merge: the lake's tables are as they were.
@@ -87,7 +87,8 @@ def test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_
     # The next poll has nothing new to judge.
     assert crawldq.run(lk, WEEK)["status"].startswith("up to date")
 
-    # The resume slot fetches the reached-but-bad roasters again, with the ones it never reached.
+    # With re-fetch on, the resume slot fetches the reached-but-bad roasters again, with the ones it never reached.
+    monkeypatch.setenv(crawldq.REFETCH_ENV, "1")
     seen = {}
     monkeypatch.setattr(ingest, "run", lambda lake, states, *a, **k: seen.setdefault("ids", [
         s.roaster.roaster_id for s in states]) and {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0})  # fmt: skip
@@ -185,7 +186,9 @@ def test_the_run_below_its_floor_with_no_platform_to_blame_is_systemic(tmp_path)
                                                                                           0.8)]})  # fmt: skip
     out = crawldq.judge(db, _results(run_ok_rate="fail"))
     assert out["systemic"] == [{"scope": "run", "rule": "run_ok_rate", "roasters": 30, "ok_share": 0.8}]
-    assert out["repull"] == [{"roaster_id": "a.com", "adapter": "generic", "reasons": ["empty"]}]
+    assert out["repull"] == [
+        {"roaster_id": "a.com", "adapter": "generic", "reasons": ["empty"], "rules": ["run_ok_rate"]}
+    ]
     # While a connector still crawls, it is left out, and the run as a whole isn't judged yet.
     out = crawldq.judge(db, _results(run_ok_rate="fail"), running=frozenset({"generic"}))
     assert out["systemic"] == [] and out["repull"] == [] and out["running"] == ["generic"]
@@ -286,6 +289,7 @@ def test_a_repull_is_asked_once_from_the_latest_check_that_judged_its_connector(
 
 def test_crawl_retry_also_fetches_the_repull_list_but_not_the_failed(tmp_path, monkeypatch):
     lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv(crawldq.REFETCH_ENV, "1")
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com"), _state("f.com")])
     control.finish(lk, control.start(lk, "dq", WEEK), "done", detail={"repull": [
@@ -329,6 +333,7 @@ def test_a_repull_read_that_fails_transiently_is_retried(tmp_path, monkeypatch):
 @pytest.mark.parametrize("command", ["crawl", "crawl-retry"])
 def test_a_repull_that_cannot_be_read_skips_only_the_repull_never_the_pass(tmp_path, monkeypatch, command):
     lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv(crawldq.REFETCH_ENV, "1")
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com"), _state("b.com")])
     _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["empty"]}])
@@ -374,6 +379,7 @@ def test_a_repull_is_fetched_without_a_known_product_count(tmp_path, monkeypatch
     """The suspect fetch's short count is its latest complete ok fetch: crawl and crawl-retry pass the repulls as
     `refetch`, so ingest.run reads their whole catalog."""
     lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv(crawldq.REFETCH_ENV, "1")
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com")])
     monkeypatch.setattr(
@@ -395,7 +401,8 @@ def test_a_suspect_with_no_adapter_is_listed_apart_never_repulled_or_held_back(t
     db = _db(tmp_path, rc, {"suspect_runs_need_review": suspect})
     out = crawldq.judge(db, _results(suspect_runs_need_review="warn"))
     assert [e["roaster_id"] for e in out["repull"]] == ["a.com"] and out["held_back"] == 0
-    assert out["unattributed"] == [{"roaster_id": "z.com", "adapter": None, "reasons": ["suspect"], "products": 5,
+    assert out["unattributed"] == [{"roaster_id": "z.com", "adapter": None, "reasons": ["suspect"],
+                                    "rules": ["suspect_runs_need_review"], "products": 5,
                                     "baseline_products": 30.0}]  # fmt: skip
     # The same when everything is held back: it is not counted as held.
     (tmp_path / "dq.duckdb").unlink()
@@ -445,3 +452,62 @@ def test_one_systemic_finding_alerts_once_a_week_and_a_different_one_alerts_agai
     found.append([shop, woo, {"scope": "image", "connectors": ["shopify", "woocommerce"], "rule": "x"}])
     assert poll("square_online")  # a different finding: emails
     assert crawldq.run(lk, WEEK, force=True)["alert"] == []  # every finding of it already alerted this week
+
+
+def test_every_repull_reason_is_a_named_gate_rule():
+    """The owner's definition: "bad" data is what a named DQ rule says, a dbt test the gate runs, never ad hoc."""
+    from pathlib import Path
+
+    assert set(crawldq.RULES.values()) <= set(crawldq.GATE_TESTS)
+    for rule in crawldq.RULES.values():
+        assert (Path(__file__).parents[1] / "dbt" / "tests" / f"{rule}.sql").exists()
+
+
+def test_a_repull_entry_with_no_named_rule_is_never_fetched(tmp_path, monkeypatch):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com"), _state("b.com")])
+    _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["looks_odd"]},
+                {"roaster_id": "b.com", "adapter": "shopify", "reasons": ["empty"]}])  # fmt: skip
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    assert [s.roaster.roaster_id for s in crawldq.repull_states(part, "shopify", WEEK)] == ["b.com"]
+
+
+@pytest.mark.parametrize("value", [None, "", "0", "false", "off"])
+@pytest.mark.parametrize("command", ["crawl", "crawl-retry"])
+def test_with_refetch_off_crawl_and_crawl_retry_ignore_the_repull_list(tmp_path, monkeypatch, command, value):
+    """Part 2 ships switched off: with the setting unset (the default) or off, neither pass reads the list, and each
+    fetches exactly what it would on main, with no `refetch` (known product counts kept)."""
+    if value is None:
+        monkeypatch.delenv(crawldq.REFETCH_ENV, raising=False)
+    else:
+        monkeypatch.setenv(crawldq.REFETCH_ENV, value)
+    assert not crawldq.refetch_enabled()
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    monkeypatch.setattr(control, "now", lambda: datetime(2026, 11, 2, 18, tzinfo=UTC))
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state("a.com"), _state("b.com")])
+    # a.com fetched ok (then listed as suspect), b.com never fetched: main's crawl asks only b.com, crawl-retry nobody.
+    run(connectors.PartitionLake(lk, "shopify", WEEK), WEEK, "a.com", [product("x")], hour=1)
+    _check(lk, [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["suspect"],
+                 "rules": ["suspect_runs_need_review"]}])  # fmt: skip
+    read: list = []
+    real = crawldq.repull_states
+    monkeypatch.setattr(crawldq, "repull_states", lambda *a: read.append(a) or real(*a))
+    seen: list = []
+    monkeypatch.setattr(ingest, "run", lambda lake, states, *a, **k: seen.append((sorted(
+        s.roaster.roaster_id for s in states), k.get("refetch"))) or {"roasters": 0, "by_adapter": {},
+                                                                     "skipped_deadline": 0})  # fmt: skip
+    cli.main([command, "--connector", "shopify", "--run-date", WEEK])
+    assert read == []  # the list is never read
+    if command == "crawl":  # main's work: the roaster without an ok fetch, never a.com
+        assert seen == [(["b.com"], set())]
+    else:  # main's work: no parked store, so nothing (whether or not ingest.run is called with no roasters)
+        assert all(ids == [] and not refetch for ids, refetch in seen)
+    # The list is still there for the owner.
+    dq = [r for r in control.rows(lk, WEEK) if r["job"] == "dq"]
+    assert json.loads(dq[-1]["detail"])["repull"][0]["roaster_id"] == "a.com"
+    # And turned on, the same pass re-fetches it (the contrast that makes the test mean something).
+    monkeypatch.setenv(crawldq.REFETCH_ENV, "1")
+    seen.clear()
+    cli.main([command, "--connector", "shopify", "--run-date", WEEK])
+    assert read and seen and "a.com" in seen[-1][0] and seen[-1][1] == {"a.com"}

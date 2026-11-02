@@ -45,12 +45,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
 - **Post-crawl data quality.** `coffeedata crawl-dq` runs the gate's `run_ok_rate`, `adapter_ok_rate` and suspect-run
-  rules on Monday's crawl output shortly after each pass, before the merge. Roasters whose data looks bad (failed,
-  empty, suspect) go on a repull list that the next crawl pass fetches again the same day; a platform-wide failure,
-  or two at once (a bad image), emails the owner once a week per finding. It never serves, records a build or
-  publishes. A repull reads the whole catalog, skips roasters that opted out, and never stops a crawl pass if it
-  can't be read. Repulls change which batch counts for the repulled roasters: up to 346 products in a weekly run
-  (`eval/run_quality/README.md`).
+  rules on Monday's crawl output shortly after each pass, before the merge. Roasters whose data looks bad go on a
+  repull list, each with its reason (failed, empty, suspect) and the named DQ rule that gave it; "bad" is only what
+  those rules say. A platform-wide failure, or two at once (a bad image), emails the owner once a week per finding.
+  It never serves, records a build or publishes. Re-fetching the listed roasters ships off, behind one setting
+  (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and `crawl-retry` never read the list and the week's output is
+  unchanged (0 products). Turning it on would change which batch counts for up to 346 products a week, so it needs
+  the full evaluation first (`eval/run_quality/README.md`).
 
 ### Changed
 

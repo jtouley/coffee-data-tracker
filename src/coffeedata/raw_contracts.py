@@ -86,7 +86,7 @@ CONTRACTS: dict[str, dict[str, Any]] = {
             "merge",
             "enrichment job",
             "egress-check",
-            "crawl-dq (when a pass ended) and the crawl passes after it (its repull list)",
+            "crawl-dq (when a pass ended), and the crawl passes after it (its repull list, only with re-fetch on: COFFEEDATA_DQ_REFETCH, off by default)",
         ],
     },
     "enrichment": {

@@ -767,7 +767,9 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
 ## 14. Post-crawl data quality (crawl-dq)
 
 The owner's requirement: keep Monday's crawl, and judge its data shortly after it finishes, so we know that day what
-to fetch again for a roaster whose data is bad. Until now the only judgement was Tuesday's 06:17 `build`, after the
+to fetch again for a roaster whose data is bad. It ships in two parts. **Part 1, on:** the check, the per-roaster
+verdict and repull list, and the systemic alerts. **Part 2, off:** crawl passes re-fetching the listed roasters, behind
+one setting (below), so the week's output stays `main`'s until it is measured. Until now the only judgement was Tuesday's 06:17 `build`, after the
 merge. `coffeedata crawl-dq` (`crawldq.py`) closes that gap. It never builds a release, records a build, serves or
 publishes.
 
@@ -783,14 +785,15 @@ The verdict, with no threshold of its own:
   the same connectors found again by a later check is logged, not emailed): a platform below `adapter_ok_rate`'s
   floor (scope `connector`); two or more at once (scope `image`: what they share is the image, our code or its egress);
   the run below `run_ok_rate` with no single platform to blame (scope `run`, judged only when no crawl is running).
-- **Repull**, per roaster, the rows the gate counts as not ok, the rule as the reason: `failed`, `empty` (ok with no
-  products, for a roaster known to have a catalog: `run_completeness.catalog_ok`), `suspect`. A systemic platform's
+- **Repull**, per roaster, the rows a named gate rule counts as not ok, and only those (see "What counts as bad
+  data" below): `failed`, `empty` (ok with no products, for a roaster known to have a catalog:
+  `run_completeness.catalog_ok`), `suspect`. Each entry records its rule by name (`rules`). A systemic platform's
   roasters are held back (asking a platform that refuses us again that evening helps nobody); an `image` holds back
   all. A partial fetch, an unreached roaster and a closed store are left alone. The check itself changes
   no output, but a repull changes which batch counts for a roaster-week (`stg_run_walk`), so `is_current` and prices
-  of the repulled roasters' products can change. CLAUDE.md step 9, measured by replay on the real runs
-  (`eval/run_quality/README.md`): up to 346 products in a weekly run with history (2026-11-02, 11 roasters), an
-  upper bound since a re-fetch can't be simulated offline. That is over 50: the full evaluation is owed.
+  of the repulled roasters' products can change, which is why re-fetching ships off. CLAUDE.md step 9, measured by
+  replay on the real runs (`eval/run_quality/README.md`): with re-fetch on, up to 346 products in a weekly run with
+  history (2026-11-02, 11 roasters), an upper bound since a re-fetch can't be simulated offline. Off, as shipped: 0.
 - A dbt error (a model or test that errored, was skipped or didn't run), or a test whose status and stored failing
   rows disagree (failing with none: never evaluated), is **no verdict**, not bad data: the job fails and says so.
 
@@ -815,7 +818,30 @@ ended. Rejected:
 - *One fixed slot after each pass's time limit* (13:22, 19:22): up to four hours late for a connector that finishes
   early, and it would mis-time any pass added later. Polling follows `job_manifests`, whatever the schedule.
 
-**How the repull happens.** Every later crawl pass of the week (`crawl` for its resume and third slots,
+**What counts as bad data (the owner's definition).** A roaster's data is bad only when a named data quality rule
+says so: one of the gate's own dbt tests, run by the check (`crawldq.GATE_TESTS`), never an ad hoc condition in
+Python. `crawldq.RULES` maps each reason to its rule, and each repull entry records the rule (`rules`):
+
+| Reason | Rule (dbt test) | The rows |
+|---|---|---|
+| `failed` | `run_ok_rate` | the not-ok rows of its population: has a catalog, attempted, fetch failed (also counted by `adapter_ok_rate`) |
+| `empty` | `run_ok_rate` | the same population: the fetch succeeded with no products for a roaster known to have a catalog |
+| `suspect` | `suspect_runs_need_review` | the test's failing rows (`stg_run_quality`: below half the median of the last 4 counted weeks) |
+
+Systemic findings name their rule the same way (`adapter_ok_rate`, `run_ok_rate`). A new reason needs a gate rule
+first (a dbt test the build runs too), then an entry in `RULES`; `test_every_repull_reason_is_a_named_gate_rule` holds
+the mapping to the tests, and a repull entry whose reason isn't in `RULES` is never re-fetched.
+
+**Re-fetching is off (part 2).** One setting, the env var `COFFEEDATA_DQ_REFETCH` (`crawldq.REFETCH_ENV`), unset by
+default and set nowhere in `ingestion.tf`, read by `crawl` and `crawl-retry` (`crawldq.refetch_enabled`: `1`, `true`,
+`yes` or `on`). Off, neither pass reads the repull list at all, passes no `refetch` to `ingest.run`, and fetches
+exactly what it would on `main`: the week's output is `main`'s (`test_with_refetch_off_crawl_and_crawl_retry_ignore_the_repull_list`).
+The list is still written, in the `dq` row's detail, for the owner to read. **Turning it on requires CLAUDE.md's
+evaluation first** (`eval/run_quality/README.md`): it changes how the batch that counts is chosen, and up to 346
+products a week, over step 9's 50, so steps 2 to 7 apply (a split grouped by roaster, labels, `main` against re-fetch
+on, on a sealed test set). Its running total there is 0 while it is off.
+
+**How the repull happens, with re-fetch on.** Every later crawl pass of the week (`crawl` for its resume and third slots,
 `crawl-retry`) adds to its work the `empty` and `suspect` roasters of its connector on the latest check that judged
 that connector, less any fetched since that check and any `select_states` would no longer crawl (opted out, no
 platform). A repull reads the whole catalog: it gets no known product count, since its latest complete ok fetch is the

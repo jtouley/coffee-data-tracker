@@ -1,6 +1,6 @@
 """Post-crawl data quality (`coffeedata crawl-dq`): the weekly gate's own rules, run on the week's crawl output
-shortly after each crawl pass ends, before the merge, so a roaster whose data looks bad is fetched again the same
-day and a systemic failure is known on Monday instead of at Tuesday's build.
+shortly after each crawl pass ends, before the merge, so the roasters whose data looks bad are listed that day (and,
+with re-fetch on, fetched again) and a systemic failure is known on Monday instead of at Tuesday's build.
 
 What it runs is the gate, not a copy of it: dbt builds run_completeness and stg_run_quality (and what they read)
 into a scratch database and runs three of the gate's singular tests with their failing rows stored:
@@ -17,18 +17,25 @@ What it decides, with no new threshold of its own:
   image); the run below run_ok_rate's floor with no single platform to blame (scope run). The job exits non-zero,
   which emails the owner (alerts.tf, ingest_job_failed), once per finding a week: a later check that finds the same
   scope on the same connectors again records it and logs a warning; a new or different finding alerts.
-- repull: per roaster, the rows the gate counts as not ok, with the rule as the reason: `failed` (the fetch
-  failed), `empty` (it succeeded with no products, for a roaster known to have a catalog), `suspect`. A platform
+- repull: per roaster, the rows a named gate rule counts as not ok, and nothing else (RULES): `failed` (the fetch
+  failed) and `empty` (it succeeded with no products, for a roaster known to have a catalog), the rows run_ok_rate
+  counts against the run (run_completeness has_catalog, attempted, not catalog_ok); `suspect`, a failing row of
+  suspect_runs_need_review. Each entry records its rules by name (`rules`). A platform
   judged systemic is held back from it (asking a platform that is refusing us again the same evening helps nobody),
   and an image problem holds back all of it. A suspect with no adapter (no run_completeness row) is listed apart,
   unattributed: never repulled or held back. Anything the rules can't tell is left alone (CLAUDE.md: abstain).
 
 It never builds a release, records a build, serves, or publishes. Its one write is its job_manifests rows (job
-`dq`), whose detail holds the repull list. Later crawl passes of the week (`crawl` for the resume and third
-slots, `crawl-retry`) read the latest check that judged their connector and fetch its `empty` and `suspect` roasters
-again (the whole catalog: no known count), unless fetched since that check or select_states would no longer crawl
-them (opted out, no platform). A repull that can't be read is skipped, never the pass. `failed` ones are listed for
-the owner but need no hook: having no ok fetch, every crawl pass asks them again anyway, and crawl-retry deliberately
+`dq`), whose detail holds the repull list, for the owner to read.
+
+Re-fetching ships switched off: one setting, REFETCH_ENV (COFFEEDATA_DQ_REFETCH), unset by default, read by `crawl`
+and `crawl-retry` (refetch_enabled). Off, no crawl pass reads the list, and the week's output is main's. Turning it
+on changes which batch counts for the listed roasters, so it needs CLAUDE.md's evaluation first
+(eval/run_quality/README.md). On, later crawl passes of the week (`crawl` for the resume and third slots,
+`crawl-retry`) read the latest check that judged their connector and fetch its `empty` and `suspect` roasters again
+(the whole catalog: no known count), unless fetched since that check or select_states would no longer crawl them
+(opted out, no platform). A repull that can't be read is skipped, never the pass. `failed` ones are listed for the
+owner but need no hook: having no ok fetch, every crawl pass asks them again anyway, and crawl-retry deliberately
 doesn't.
 
 Triggered by its own Cloud Run job, polled by Cloud Scheduler every 20 minutes through Monday's crawl window: a poll
@@ -39,6 +46,7 @@ ended, and leaves out one still running (the next poll after it ends judges it, 
 from __future__ import annotations
 
 import logging
+import os
 import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
@@ -63,12 +71,30 @@ FLAGS = (
     "--warn-error-options",
     '{"error": ["NoNodesForSelectionCriteria"]}',  # a renamed model or test fails loudly instead of selecting nothing
 )
+# What makes a roaster's data "bad": only a named DQ rule of the gate (one of GATE_TESTS), never an ad hoc check.
+# Each repull reason is the rule whose failing (or not-ok) rows it is, and the entry records that rule by name.
+RULES = {
+    "failed": "run_ok_rate",  # a not-ok row of run_ok_rate's population: fetch failed (adapter_ok_rate's too)
+    "empty": "run_ok_rate",  # a not-ok row of run_ok_rate's population: ok, but no products for a known catalog
+    "suspect": "suspect_runs_need_review",  # a failing row of the test (stg_run_quality's suspect rule)
+}
+assert set(RULES.values()) <= set(GATE_TESTS)
+# The one setting for part 2: crawl passes re-fetch the list's empty and suspect roasters only when it is on. Off by
+# default (unset): the list is written for the owner, and no pass reads it. Turning it on needs CLAUDE.md's
+# evaluation (eval/run_quality/README.md).
+REFETCH_ENV = "COFFEEDATA_DQ_REFETCH"
 OVERLAY_TABLES = ("fetches", "run_manifests")
 DIR = Path("build/crawl-dq")  # scratch: the copy of the crawl output, the database, dbt's artifacts
 
 
 class CheckError(RuntimeError):
     """dbt couldn't build or run what the check needs: no verdict, which is not the same as bad data."""
+
+
+def refetch_enabled() -> bool:
+    """Whether crawl and crawl-retry re-fetch the post-crawl check's repull list (REFETCH_ENV). Off unless set to
+    1, true, yes or on."""
+    return os.environ.get(REFETCH_ENV, "").strip().lower() in ("1", "true", "yes", "on")
 
 
 def _utc(t: datetime) -> datetime:
@@ -181,6 +207,7 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         e = reasons.setdefault(r["roaster_id"], {"roaster_id": r["roaster_id"], "adapter": r["adapter"],
                                                 "reasons": []})  # fmt: skip
         e["reasons"].append(r["reason"])
+        e["rules"] = sorted({*e.get("rules", []), RULES[r["reason"]]})
         if r["reason"] == "suspect":
             e["products"], e["baseline_products"] = r["products"], r["baseline_products"]
     repull, held, unattributed = [], 0, []
@@ -271,7 +298,8 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
 def repull_states(lake: Lake, connector: str, week: str) -> list[registry.RoasterState]:
     """The repull list of the latest check that judged `connector` this week (one that ran while its crawl did left
     it out), less any roaster fetched since that check (a resume slot already asked it again) and the `failed` ones:
-    what a later crawl pass of the week (crawl, crawl-retry) fetches again although it has an ok fetch. Only roasters
+    what a later crawl pass of the week (crawl, crawl-retry) fetches again although it has an ok fetch, when
+    refetch_enabled (the passes check it before calling this). Only roasters
     select_states would still crawl (ingest.crawlable: a platform, not opted out, ...) whose adapter is still
     `connector`. Its lake reads are retried on a transient error (retry_transient), as every first read of a crawl."""
     from .ingest import crawlable
@@ -287,10 +315,11 @@ def repull_states(lake: Lake, connector: str, week: str) -> list[registry.Roaste
             break
     # A `failed` roaster has no ok fetch, so every crawl pass asks it again anyway, and crawl-retry deliberately
     # doesn't (a store that refused all day isn't re-asked in the evening): only data that landed but looks bad.
+    # Only reasons a named DQ rule gives (RULES): an entry with anything else is not "bad" data by definition.
     listed = {
         e["roaster_id"]
         for e in detail.get("repull", [])
-        if e.get("adapter") == connector and set(e.get("reasons", [])) - {"failed"}
+        if e.get("adapter") == connector and (set(e.get("reasons", [])) & RULES.keys()) - {"failed"}
     }
     if not listed:
         return []

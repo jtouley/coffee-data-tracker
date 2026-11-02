@@ -265,7 +265,7 @@ def crawl(
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
     repulls: list = []
-    if not (part or only):  # what the post-crawl check listed for a repull (never for an arm or --only)
+    if not (part or only):  # the post-crawl check's repulls, with re-fetch on (never for an arm or --only)
         repulls = _repulls(plake, connector, week, states)
         states += repulls
     if part:
@@ -332,11 +332,14 @@ def crawl(
 
 
 def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
-    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have. A repull
-    is an extra: if it can't be read (the lake still failing after retry_transient's retries, an unreadable check),
-    it is logged and skipped, and the crawl pass goes on with its own work."""
+    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have, only when
+    re-fetch is on (crawldq.refetch_enabled, off by default): off, the list isn't even read, and the pass is main's.
+    A repull is an extra: if it can't be read (the lake still failing after retry_transient's retries, an
+    unreadable check), it is logged and skipped, and the crawl pass goes on with its own work."""
     from . import crawldq
 
+    if not crawldq.refetch_enabled():
+        return []
     have = {s.roaster.roaster_id for s in states}
     try:
         listed = crawldq.repull_states(plake, connector, week)
@@ -350,7 +353,8 @@ def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
 
 def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
-    their blocked page, and the post-crawl check's repulls (a fetch that landed but looks bad: empty or suspect).
+    their blocked page, and, only with re-fetch on (crawldq.refetch_enabled), the post-crawl check's repulls (a
+    fetch that landed but looks bad: empty or suspect).
     Only those: a store that failed outright is not asked again here, so a Shopify store that refused all day isn't
     re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job

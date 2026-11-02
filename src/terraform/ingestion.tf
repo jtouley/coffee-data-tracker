@@ -92,7 +92,8 @@ locals {
     "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], nat = false, claude = false, memory = "8Gi", retries = 1 }
     # The post-crawl check (crawldq.py): polled through Monday's crawl window, it runs the gate's run_ok_rate,
     # adapter_ok_rate and suspect rules on the unmerged week once a crawl attempt has ended, and writes the repull
-    # list the later passes fetch again. Never serves, records a build or publishes. Its non-zero exit (a systemic
+    # list for the owner (the crawl passes re-fetch it only with COFFEEDATA_DQ_REFETCH, set on no job here: off until
+    # measured, eval/run_quality/README.md). Never serves, records a build or publishes. Its non-zero exit (a systemic
     # problem) fails the execution, which emails the owner (alerts.tf, ingest_job_failed). Retries 0: a retry would
     # find the check done and exit 0, hiding the failure. 8Gi, as the build: dbt builds the models
     # run_completeness reads (dim_coffee, with the classifier).
@@ -113,7 +114,7 @@ locals {
   # job at once, each on its own instance (only Shopify's on the NAT), then each one's resume 6 h later; a third pass
   # that evening for every connector (Shopify: crawl-retry, its parked stores, on the NAT; the others: their own crawl
   # job again, which resumes and retries every roaster without an ok fetch, on default egress); after each, crawl-dq
-  # judges what landed and lists roasters for the next pass to fetch again (its repull list); Tuesday merge,
+  # judges what landed and lists roasters whose data looks bad (its repull list; re-fetch is off); Tuesday merge,
   # enrichment, build. The release is stamped Monday and published
   # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
   ingest_schedule = {
