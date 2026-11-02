@@ -167,7 +167,7 @@ def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]
     except (OSError, UnicodeDecodeError) as e:
         if strict:
             raise
-        logging.warning("coverage claims not checked: %s can't be read (%s)", shown, e)
+        log.warning("coverage claims not checked: %s can't be read (%s)", shown, e)
         return []
     block = _CLAIMS.search(text)
     if not block:
@@ -185,7 +185,7 @@ def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]
             problem = f"{shown}: coverage claim {metric}: {said!r} {why}"
             if strict:
                 raise ValueError(problem)
-            logging.warning("%s; not checked", problem)
+            log.warning("%s; not checked", problem)
             continue
         claims.append({"metric": metric, "value": float(number.group(0).replace(",", "")), "text": said,
                        "source": f"{shown}:{lineno}"})  # fmt: skip
