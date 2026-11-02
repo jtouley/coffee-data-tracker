@@ -297,8 +297,9 @@ until the `GCP_WIF_PROVIDER`, `GCP_DEPLOY_SA` and `GCP_IMAGE` variables are set;
 The Tuesday `site` workflow deploys a static site to GitHub Pages at [registry.coffee](https://registry.coffee): a launch page at
 `/` and the catalog at `/catalog/`. Setup, DNS, costs and security are in [`runbook/`](runbook/README.md).
 
-It shows the same roasters as the public tables (`public_roaster`: not opted out, not known only from
-OpenStreetMap). For search engines, both pages carry a schema.org
+Its coffees, prices and charts cover the same roasters as the public tables (`public_roaster`: not opted out, not
+known only from OpenStreetMap). The roaster status counts and the registry total are the exception: they count every
+roaster in the registry, opted-out and OpenStreetMap-only ones included. For search engines, both pages carry a schema.org
 [Dataset](https://developers.google.com/search/docs/appearance/structured-data/dataset) in JSON-LD, built from the
 public contract at each build: name and description, the data licence ([`LICENSE-DATA`](LICENSE-DATA),
 CDLA-Permissive-2.0), coverage (US, from the 2026-10-26 run on), every contract column as a variable, the
@@ -440,12 +441,14 @@ OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole
 descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder and photo
 IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
 
-Each export describes itself in `manifest.json`: the release (`release_build_id`, `release_run_date`), the contract
-id and version, the data licence (id and URL) and each file's `sha256` and row count. `LICENSE-DATA` goes with it (the
-licence asks that its text travel with the data). A Hugging Face export also tags
-its commit `release-<run date>`, so a past week stays readable by name
-(`hf://datasets/<owner>/<name>@release-2026-11-03/data/public_coffee.parquet`); a re-export of the same run keeps
-the existing tag.
+A directory or Hugging Face export describes itself in `manifest.json`: the release (`release_build_id`,
+`release_run_date`), the contract id and version, the data licence (id and URL) and each file's `sha256` and row
+count. `LICENSE-DATA` goes with it (the licence asks that its text travel with the data). An `s3://` or `gs://` export
+writes only the Parquet files. A Hugging Face export of a release build also tags its commit `release-<run date>`
+(the Monday run), so a past week stays readable by name
+(`hf://datasets/<owner>/<name>@release-2026-11-02/data/public_coffee.parquet`). The tag follows the release served
+for that run: a re-export of the same build leaves it, a newer build of the same run moves it to its own commit. An
+export of a build without release ids (a plain `dbt build`) is not tagged.
 
 The tables are a data product with a contract, in the Bitol open standards:
 [`contracts/coffee-data.odps.yaml`](contracts/coffee-data.odps.yaml) (ODPS v1.1.0) describes the product and its

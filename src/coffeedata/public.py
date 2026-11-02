@@ -7,11 +7,13 @@ Destinations:
     S3 uses DuckDB's credential chain (AWS env vars, profile or instance role); GCS uses HMAC keys from
     GCS_HMAC_KEY_ID / GCS_HMAC_SECRET.
 
-Current tables are replaced each week (they are derived); history lives in `public_price_event`. Each export writes
-`manifest.json`, which says which release it is (build id and run date), the contract version and data licence, and
-each file's sha256 and row count, next to the licence text (LICENSE-DATA) when the repository has it. A Hugging Face
-export also tags its commit `release-<run date>`, so a past release
-stays retrievable by name (`hf://datasets/<owner>/<name>@release-2026-11-03/...`).
+Current tables are replaced each week (they are derived); history lives in `public_price_event`. A directory or
+Hugging Face export writes `manifest.json`, which says which release it is (build id and run date), the contract
+version and data licence, and each file's sha256 and row count, next to the licence text (LICENSE-DATA) when the
+repository has it; an s3:// or gs:// export writes only the Parquet files. A Hugging Face export of a release build
+also tags its commit `release-<run date>`, so a past release stays retrievable by name
+(`hf://datasets/<owner>/<name>@release-2026-11-02/...`). A build without release ids (a plain `dbt build`) is never
+tagged.
 """
 
 from __future__ import annotations
@@ -148,14 +150,30 @@ def _configure_object_store(con, dest: str) -> None:
 
 
 def release_tag(manifest: dict) -> str | None:
-    """The Hugging Face tag for a release: `release-<run date>` (one release is served per weekly run)."""
-    run = manifest.get("release_run_date") or manifest.get("as_of_run")
-    return f"release-{str(run)[:10]}" if run else None
+    """The Hugging Face tag for a release: `release-<run date>` (one release is served per weekly run). Only a release
+    build has one: without a release_build_id and release_run_date (a plain `dbt build`) there is no tag."""
+    run = manifest.get("release_run_date")
+    return f"release-{str(run)[:10]}" if run and manifest.get("release_build_id") else None
+
+
+def _tagged_build(api, repo_id: str, tag: str) -> str | None:
+    """The release_build_id in manifest.json at `tag`, or None when the tagged commit has no manifest or no build id."""
+    from huggingface_hub.errors import RemoteEntryNotFoundError
+
+    try:
+        path = api.hf_hub_download(repo_id, "manifest.json", repo_type="dataset", revision=tag)
+    except RemoteEntryNotFoundError:  # only a commit without the file; any other failure is raised
+        return None
+    return json.loads(Path(path).read_text()).get("release_build_id")
 
 
 def _upload_hf(local: Path, dest: str, manifest: dict) -> str | None:
-    """One commit with the files, the manifest and the card, then the release tag on it (unless the tag already
-    exists: an earlier export of this run keeps it). Returns the tag."""
+    """One commit with the files, the manifest and the card, then the release tag on it. Returns the tag.
+
+    The tag names the release served for that run date, so the last export of a run wins: when `release-<run date>`
+    already exists for another build (a corrected build of the same run), it is moved to this commit. A re-export of
+    the same build leaves it where it is (its files are the same). The commit the tag left keeps its build id in its
+    message and manifest."""
     from huggingface_hub import CommitOperationAdd, HfApi
 
     repo_id = hf_repo_id(dest)
@@ -184,12 +202,16 @@ def _upload_hf(local: Path, dest: str, manifest: dict) -> str | None:
     if tag is None:
         return None
     if tag in {t.name for t in api.list_repo_refs(repo_id, repo_type="dataset").tags}:
-        print(f"{repo_id} already has the tag {tag}; left as it is", file=sys.stderr)
-        return tag
+        tagged = _tagged_build(api, repo_id, tag)
+        if tagged == build:
+            print(f"{repo_id}: {tag} is already on build {build}; left as it is", file=sys.stderr)
+            return tag
+        print(f"{repo_id}: moving {tag} from build {tagged} to build {build}", file=sys.stderr)
+        api.delete_tag(repo_id, tag=tag, repo_type="dataset")
     api.create_tag(
         repo_id,
         tag=tag,
-        tag_message=f"release {build or tag}",
+        tag_message=f"release {build}",
         revision=getattr(commit, "oid", None),
         repo_type="dataset",
         exist_ok=True,

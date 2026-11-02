@@ -6,7 +6,7 @@ import hashlib
 import json
 import re
 import types
-from datetime import date
+from pathlib import Path
 
 import duckdb
 import pytest
@@ -168,10 +168,13 @@ def _public_db(path, build_id="20261103T061700-abc123", run_date="2026-11-02"):
 
 
 class FakeHf:
-    """huggingface_hub.HfApi, recording commits and tags; `tags` are the tags the repo already has."""
+    """huggingface_hub.HfApi, recording commits and tags. `commits` maps each commit id to the manifest.json it holds
+    (None: none); `tags` maps each tag the repo has to its commit."""
 
-    tags: list[str] = []
+    commits: dict = {}
+    tags: dict = {}
     calls: list = []
+    tmp = None
 
     def __init__(self, token=None):
         pass
@@ -181,14 +184,34 @@ class FakeHf:
 
     def create_commit(self, repo_id, repo_type, operations, commit_message):
         FakeHf.calls.append(("commit", sorted(op.path_in_repo for op in operations), commit_message))
-        return types.SimpleNamespace(oid="c0ffee")
+        oid = "c0ffee" if not FakeHf.commits else f"c0ffee{len(FakeHf.commits) + 1}"
+        manifest = next(op.path_or_fileobj for op in operations if op.path_in_repo == "manifest.json")
+        FakeHf.commits[oid] = json.loads(Path(manifest).read_text())
+        return types.SimpleNamespace(oid=oid)
 
     def list_repo_refs(self, repo_id, repo_type):
         return types.SimpleNamespace(tags=[types.SimpleNamespace(name=t) for t in FakeHf.tags])
 
+    def hf_hub_download(self, repo_id, filename, *, repo_type, revision):
+        import httpx
+        from huggingface_hub.errors import RemoteEntryNotFoundError
+
+        manifest = FakeHf.commits[FakeHf.tags.get(revision, revision)]
+        if manifest is None:
+            raise RemoteEntryNotFoundError(
+                "404", response=httpx.Response(404, request=httpx.Request("GET", "https://huggingface.co/x"))
+            )
+        path = FakeHf.tmp / f"downloaded-{revision}.json"
+        path.write_text(json.dumps(manifest))
+        return str(path)
+
+    def delete_tag(self, repo_id, *, tag, repo_type):
+        FakeHf.calls.append(("delete_tag", repo_id, tag, repo_type))
+        del FakeHf.tags[tag]
+
     def create_tag(self, repo_id, *, tag, tag_message, revision, repo_type, exist_ok):
         FakeHf.calls.append(("tag", repo_id, tag, revision, repo_type))
-        FakeHf.tags.append(tag)
+        FakeHf.tags[tag] = revision
 
 
 @pytest.fixture
@@ -197,7 +220,7 @@ def fake_hf(monkeypatch, tmp_path):
 
     monkeypatch.setattr(huggingface_hub, "HfApi", FakeHf)
     monkeypatch.chdir(tmp_path)  # an hf:// export stages its files in build/public
-    FakeHf.tags, FakeHf.calls = [], []
+    FakeHf.commits, FakeHf.tags, FakeHf.calls, FakeHf.tmp = {}, {}, [], tmp_path
     return FakeHf
 
 
@@ -239,14 +262,36 @@ def test_a_hugging_face_export_is_tagged_with_its_run_date(tmp_path, fake_hf):
     assert uploaded["release_build_id"] == "20261103T061700-abc123" and uploaded["files"]
 
 
-def test_a_second_export_of_the_same_run_keeps_the_existing_tag(tmp_path, fake_hf):
+def test_a_second_export_of_the_same_build_keeps_the_existing_tag(tmp_path, fake_hf):
     db = _public_db(tmp_path / "p.duckdb")
     public.export(db, "hf://datasets/jtouley/us-coffee-market")
     fake_hf.calls.clear()
     out = public.export(db, "hf://datasets/jtouley/us-coffee-market")
     assert out["tag"] == "release-2026-11-02"
     assert [c[0] for c in fake_hf.calls] == ["repo", "commit"]  # committed, not re-tagged
-    assert fake_hf.tags == ["release-2026-11-02"]
+    assert fake_hf.tags == {"release-2026-11-02": "c0ffee"}  # same files, so the first commit is as good
+
+
+def test_a_corrected_build_of_the_same_run_moves_the_tag(tmp_path, fake_hf):
+    """The tag names the release served for its run date: when a newer build of the same run is served and
+    exported, the tag moves to its commit, so @release-<run date> never keeps serving the build it replaced."""
+    public.export(_public_db(tmp_path / "a.duckdb"), "hf://datasets/jtouley/us-coffee-market")
+    fake_hf.calls.clear()
+    out = public.export(
+        _public_db(tmp_path / "b.duckdb", "20261103T091500-fed789", "2026-11-02"),
+        "hf://datasets/jtouley/us-coffee-market",
+    )
+    assert out["tag"] == "release-2026-11-02"
+    assert [c[0] for c in fake_hf.calls] == ["repo", "commit", "delete_tag", "tag"]
+    assert fake_hf.tags == {"release-2026-11-02": "c0ffee2"}
+    assert fake_hf.commits["c0ffee2"]["release_build_id"] == "20261103T091500-fed789"
+
+
+def test_a_tag_on_a_commit_without_a_manifest_is_moved(tmp_path, fake_hf):
+    """A tag made by hand (or before manifests) isn't a release this code made: the real release takes it."""
+    fake_hf.commits["0ld"], fake_hf.tags["release-2026-11-02"] = None, "0ld"
+    public.export(_public_db(tmp_path / "p.duckdb"), "hf://datasets/jtouley/us-coffee-market")
+    assert fake_hf.tags == {"release-2026-11-02": "c0ffee2"}
 
 
 def test_a_new_run_gets_its_own_tag(tmp_path, fake_hf):
@@ -255,24 +300,31 @@ def test_a_new_run_gets_its_own_tag(tmp_path, fake_hf):
         _public_db(tmp_path / "b.duckdb", "20261110T061700-def456", "2026-11-09"),
         "hf://datasets/jtouley/us-coffee-market",
     )
-    assert fake_hf.tags == ["release-2026-11-02", "release-2026-11-09"]
+    assert fake_hf.tags == {"release-2026-11-02": "c0ffee", "release-2026-11-09": "c0ffee2"}
 
 
-def test_an_export_without_a_release_falls_back_to_the_run_it_checked(tmp_path, fake_hf):
-    """A plain `dbt build` has no release columns set: the manifest says so, and the tag is the latest run."""
+def test_an_export_without_a_release_is_not_tagged(tmp_path, fake_hf):
+    """A plain `dbt build` has no release columns set: the manifest says so, the data is committed, and no
+    `release-<date>` tag is made, so a dev build can never take the name of a real release."""
     con = duckdb.connect(str(_public_db(tmp_path / "p.duckdb")))
     for t in public.PUBLIC_TABLES:
         con.execute(f"update {t} set release_build_id = null, release_run_date = null")
     con.close()
     out = public.export(tmp_path / "p.duckdb", "hf://datasets/a/b")
     assert out["release_build_id"] is None and out["release_run_date"] is None
-    assert out["tag"] == "release-2026-11-02"
+    assert out["tag"] is None
+    assert [c[0] for c in fake_hf.calls] == ["repo", "commit"]
     assert fake_hf.calls[1][2] == "weekly public export (run 2026-11-02)"
+    assert fake_hf.tags == {}
 
 
-def test_release_tag_needs_a_run():
-    assert public.release_tag({"release_run_date": None, "as_of_run": None}) is None
-    assert public.release_tag({"release_run_date": str(date(2026, 11, 2))}) == "release-2026-11-02"
+def test_release_tag_needs_a_release_build():
+    assert (
+        public.release_tag({"release_run_date": None, "release_build_id": None, "as_of_run": "2026-11-02"})
+        is None
+    )
+    assert public.release_tag({"release_run_date": "2026-11-02", "release_build_id": None}) is None
+    assert public.release_tag(RELEASE) == "release-2026-11-02"
 
 
 def test_the_licence_text_travels_with_the_export(tmp_path, fake_hf, monkeypatch):

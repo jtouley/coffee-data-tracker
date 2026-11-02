@@ -3,7 +3,8 @@ to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging F
 private and never appear here; they are only in the app.
 
 Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) and their
-coffees appear, as in the public tables. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
+coffees appear, as in the public tables, except in the roaster status counts and the registry total, which count every
+roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
 from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
 
 from __future__ import annotations
