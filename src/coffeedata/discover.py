@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import Blocked, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, PoliteClient, RobotsUnavailable
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -176,7 +176,7 @@ def osm(states: list[str] | None = None) -> list[dict]:
     from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
-    with httpx.Client(timeout=90, headers={"User-Agent": "coffee-data/0.1"}) as client:
+    with httpx.Client(timeout=90, headers={"User-Agent": USER_AGENT}) as client:
         for st in states or US_STATES:
             q = (
                 f'[out:json][timeout:60];area["ISO3166-2"="US-{st}"]->.a;'

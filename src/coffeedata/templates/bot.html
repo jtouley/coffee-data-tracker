@@ -1,0 +1,46 @@
+{% extends "_legal.html" %}
+{% block title %}RegistryCoffeeBot{% endblock %}
+{% block slug %}bot{% endblock %}
+{% block body %}
+<div class="summary">
+  <p><strong>In short:</strong> RegistryCoffeeBot reads US coffee roasters' public product catalogs once a week for
+    registry.coffee. It follows robots.txt and spaces its requests to each store. To stop it, add a robots.txt rule or
+    email us.</p>
+</div>
+
+<h2>Who we are</h2>
+<p>registry.coffee is a free, personal project run by one person: a weekly catalog of the coffee US roasters sell. The
+  crawler identifies itself as:</p>
+<p><code>{{ user_agent }}</code></p>
+<p>Before the name changed, it identified itself as <code>coffee-data</code>. Rules for either name still apply.</p>
+
+<h2>What we crawl</h2>
+<ul>
+  <li>Public product catalogs only, such as a shop's <code>/products.json</code> feed or its product pages: names,
+    prices, sizes and stock, the facts a shopper can see.</li>
+  <li>Once a week, on Mondays.</li>
+  <li>Never a login, checkout, account or anything behind a password or a challenge.</li>
+</ul>
+
+<h2>How we crawl</h2>
+<ul>
+  <li>We read your robots.txt first, and don't fetch anything it disallows. If it answers with a server error, or not at all, we don't crawl until it answers.</li>
+  <li>Requests to one store are spaced at least 1 second apart.</li>
+  <li>We honour a robots.txt <code>Crawl-delay</code> up to 60 seconds between requests. If you want slower crawling
+    than that, email <a href="mailto:{{ contact }}">{{ contact }}</a>.</li>
+  <li>We honour <code>Retry-After</code>, and stop and come back later when a store answers 429 or 503.</li>
+</ul>
+
+<h2>How to opt out</h2>
+<ul>
+  <li>Add a rule to your robots.txt. We read it at the start of every weekly crawl:
+    <pre><code>User-agent: RegistryCoffeeBot
+Disallow: /</code></pre></li>
+  <li>Or email <a href="mailto:{{ contact }}">{{ contact }}</a>, or use the
+    <a href="{{ links.add_roaster }}">"Add a roaster" form</a> and tick "Opt out". An opted-out store is never fetched
+    again, and its coffees drop out of every public table.</li>
+</ul>
+
+<h2>Contact</h2>
+<p><a href="mailto:{{ contact }}">{{ contact }}</a></p>
+{% endblock %}

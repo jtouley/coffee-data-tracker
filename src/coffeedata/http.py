@@ -7,11 +7,12 @@ import copy
 import email.utils
 import logging
 import os
+import re
 import threading
 import time
 import urllib.robotparser
 from collections import Counter
-from collections.abc import Iterator
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
@@ -26,7 +27,15 @@ if TYPE_CHECKING:
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
+USER_AGENT = "RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)"
+# Our robots.txt product tokens (RFC 9309): the current one, and the one we crawled under before (`coffee-data`), so a
+# store's rules for either keep applying. A group applies when its user-agent line names one of them, matched
+# case-insensitively as a whole token (never as a substring); only when no group names us does the `*` group apply.
+ROBOTS_TOKENS = ("RegistryCoffeeBot", "coffee-data")
+# The longest robots.txt Crawl-delay we wait between requests to one host (60 s), so a catalog still finishes within
+# the crawl window. A longer one is capped here, and the cap is recorded (fetches.crawl_delays); a store that wants
+# slower crawling can email us. Separate from the cap on one-off waits a store asks for (Retry-After).
+MAX_CRAWL_DELAY = 60.0
 # "Slow down": 429, Shopify's 430 (an IP-wide security block), and a 503 that can mean the same.
 BLOCK_STATUSES = (429, 430, 503)
 RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
@@ -228,8 +237,86 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
         self.wait = wait
 
 
+class DeadlineReached(FetchError):
+    """The run's deadline (PoliteClient.deadline) would pass before this request's turn: the fetch stops where it
+    is, instead of a long Crawl-delay holding a worker past the deadline."""
+
+
 class NotCatalog(FetchError):
     """HTTP 200, but the body isn't the JSON a catalog endpoint returns (e.g. an HTML or challenge page)."""
+
+
+@dataclass
+class _RobotsGroup:
+    agents: list[str] = field(default_factory=list)
+    rules: list[str] = field(default_factory=list)  # its allow and disallow lines, as written
+    delays: list[str] = field(default_factory=list)  # its Crawl-delay values, as written
+
+
+def _robots_groups(lines: Iterable[str]) -> list[_RobotsGroup]:
+    """robots.txt's groups, as urllib.robotparser reads them: consecutive user-agent lines start a group, and a
+    user-agent line after a rule line starts the next one. Lines before the first user-agent line are no group's."""
+    groups: list[_RobotsGroup] = []
+    group, in_rules = None, False
+    for raw in lines:
+        line = raw.split("#", 1)[0].strip()
+        key, sep, value = line.partition(":")
+        if not sep:
+            continue
+        key, value = key.strip().lower(), value.strip()
+        if key == "user-agent":
+            if group is None or in_rules:
+                group, in_rules = _RobotsGroup(), False
+                groups.append(group)
+            group.agents.append(value)
+        elif key in ("allow", "disallow", "crawl-delay", "request-rate") and group is not None:
+            in_rules = True
+            if key == "crawl-delay":
+                group.delays.append(value)
+            elif key != "request-rate":
+                group.rules.append(f"{key}: {value}")
+    return groups
+
+
+def _names(agent: str, token: str) -> bool:
+    """A user-agent line names this product token (RFC 9309: case-insensitive; a version after it is ignored)."""
+    m = re.match(r"[A-Za-z_-]+", agent.strip())
+    return m is not None and m.group().lower() == token.lower()
+
+
+def _delay_seconds(value: str) -> float | None:
+    """A Crawl-delay value in seconds, or None when it isn't a plain non-negative number."""
+    return float(value) if re.fullmatch(r"\d+(\.\d+)?", value) else None
+
+
+class RobotsRules:
+    """A host's robots.txt, for us. The groups naming one of our ROBOTS_TOKENS apply (a token's several groups are
+    combined, RFC 9309); when groups name both tokens, a URL is fetched only if each token's rules allow it. Only
+    when no group names us does the `*` group apply. The rules themselves are evaluated by urllib.robotparser.
+
+    crawl_delay: the Crawl-delay those groups ask (the largest that is a number), or None; crawl_delay_asked: the
+    value as written (a malformed one too)."""
+
+    def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
+        self.disallow_all = disallow_all
+        groups = _robots_groups(lines)
+        ours = [[g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS]
+        selected = [gs for gs in ours if gs] or [[g for g in groups if any(a == "*" for a in g.agents)]]
+        self._parsers: list[urllib.robotparser.RobotFileParser] = []
+        asked: list[str] = []
+        for gs in selected:
+            parser = urllib.robotparser.RobotFileParser()
+            parser.parse(["User-agent: *", *(rule for g in gs for rule in g.rules)])
+            self._parsers.append(parser)
+            asked += [d for g in gs for d in g.delays]
+        numbers = [(n, d) for d in asked if (n := _delay_seconds(d)) is not None]
+        self.crawl_delay: float | None = max(numbers)[0] if numbers else None
+        self.crawl_delay_asked: str | None = max(numbers)[1] if numbers else (asked[0] if asked else None)
+
+    def can_fetch(self, url: str) -> bool:
+        if self.disallow_all:
+            return False
+        return all(p.can_fetch("*", url) for p in self._parsers)
 
 
 @dataclass
@@ -243,6 +330,9 @@ class RequestStats:
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
     # block_record() of each 202/403/429/430/503 or other challenge (is_challenge), the first 20
     blocks: list[dict] = field(default_factory=list)
+    # Each host asked of whose robots.txt names a Crawl-delay for us: {host, asked (as written), applied_s (the
+    # spacing used between its requests), capped (asked more than MAX_CRAWL_DELAY)}
+    crawl_delays: list[dict] = field(default_factory=list)
 
     def note(
         self,
@@ -264,6 +354,10 @@ class RequestStats:
             self.rate_limited += status == 429
             self.pages += page and status == 200
 
+    def note_delay(self, record: dict) -> None:
+        if all(d["host"] != record["host"] for d in self.crawl_delays):
+            self.crawl_delays.append(record)
+
 
 class PoliteClient:
     def __init__(
@@ -274,8 +368,12 @@ class PoliteClient:
         transport: httpx.BaseTransport | None = None,
         limiters: dict[str, PlatformLimiter] | None = None,
         max_response_bytes: int | None = None,
+        deadline_s: float | None = None,
     ):
         self.min_interval = min_interval
+        # deadline_s: seconds from now after which a host's Crawl-delay is never waited out (DeadlineReached): the
+        # crawl job's window, so a store asking a long delay can't hold a worker past it.
+        self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
         self.max_response_bytes = max_response_bytes or MAX_RESPONSE_BYTES
         # Platform-wide budgets (ratelimit.py), keyed by adapter name; for_platform() applies one.
         self.limiters = limiters or {}
@@ -288,7 +386,9 @@ class PoliteClient:
             transport=transport,
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
-        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._robots: dict[str, RobotsRules | None] = {}
+        # host -> its Crawl-delay record (RequestStats.crawl_delays), for a host whose robots.txt asks one
+        self._delays: dict[str, dict] = {}
         # host -> (when to ask its robots.txt again, why it didn't answer)
         self._robots_down: dict[str, tuple[float, RobotsUnavailable]] = {}
         self._robots_locks: dict[
@@ -399,13 +499,37 @@ class PoliteClient:
                             max(0.0, down[0] - time.monotonic()),
                         )
                     rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+                    delay = self._crawl_delay(host, rules)
                     with self._lock:
                         self._robots[host] = rules
+                        if delay is not None:
+                            self._delays[host] = delay
                         self._robots_down.pop(host, None)
                         # Known from now on: no robots.txt request left to share.
                         self._robots_locks.pop(host, None)
         rp = self._robots[host]
-        return rp is None or rp.can_fetch(USER_AGENT, url)
+        return rp is None or rp.can_fetch(url)
+
+    def _crawl_delay(self, host: str, rules: RobotsRules | None) -> dict | None:
+        """The Crawl-delay record for a host whose robots.txt asks one: the spacing its requests get is the larger of
+        the delay, capped at MAX_CRAWL_DELAY, and min_interval. A value that isn't a number keeps min_interval."""
+        if rules is None or rules.crawl_delay_asked is None:
+            return None
+        asked, capped = (
+            rules.crawl_delay,
+            rules.crawl_delay is not None and rules.crawl_delay > MAX_CRAWL_DELAY,
+        )
+        applied = (
+            max(self.min_interval, min(asked, MAX_CRAWL_DELAY)) if asked is not None else self.min_interval
+        )
+        if asked is None:
+            log.warning("%s: robots.txt Crawl-delay %r isn't a number; spacing stays %.1f s",
+                        host, rules.crawl_delay_asked, applied)  # fmt: skip
+        elif capped:
+            log.warning(
+                "%s: robots.txt Crawl-delay %s s capped at %.0f s", host, rules.crawl_delay_asked, applied
+            )
+        return {"host": host, "asked": rules.crawl_delay_asked, "applied_s": applied, "capped": capped}
 
     def _disallows_site(self, url: str) -> bool:
         """The host's robots.txt file disallows the whole site (/) to us: a closed store (SiteDisallowed). Not a
@@ -413,16 +537,15 @@ class PoliteClient:
         rp = self._robots.get(urlparse(url).netloc)
         if rp is None or getattr(rp, "disallow_all", False):
             return False
-        return not rp.can_fetch(USER_AGENT, urlparse(url)._replace(path="/", query="", fragment="").geturl())
+        return not rp.can_fetch(urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
-    def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
+    def _fetch_robots(self, host: str) -> RobotsRules | None:
         """The host's rules: a 200 is parsed, a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...)
         means it has no robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an
         edge's challenge, whatever its status (SiteGround's 202, or a 200 or any 4xx, 401 and 403 included, with a
         challenge header, such as Cloudflare's 403 with `cf-mitigated: challenge`), another 2xx, a 1xx or 3xx (a
         redirect without a location), a 429, 430 or 5xx, or a network error raises RobotsUnavailable and is
         remembered for ROBOTS_RETRY_AFTER: nothing is ever fetched from a host without its rules."""
-        parser = urllib.robotparser.RobotFileParser()
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
@@ -445,11 +568,9 @@ class PoliteClient:
         else:
             challenged = is_challenge(r)
             if r.status_code == 200 and not challenged:
-                parser.parse(r.text.splitlines())
-                return parser
+                return RobotsRules(r.text.splitlines())
             if r.status_code in (401, 403) and not challenged:  # a challenge is no answer about the rules
-                parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
-                return parser
+                return RobotsRules(disallow_all=True)
             if 400 <= r.status_code < 500 and r.status_code not in BLOCK_STATUSES and not challenged:
                 # RFC 9309's "unavailable": no robots.txt, no restrictions. Square Online's API host
                 # (cdn5.editmysite.com) answers 400 here, so every Square Online catalog depends on this.
@@ -478,10 +599,21 @@ class PoliteClient:
         ) from cause
 
     def _wait_turn(self, host: str) -> None:
+        """Wait for the host's turn: min_interval after its last request, or its robots.txt Crawl-delay (up to
+        MAX_CRAWL_DELAY) when that is longer. A Crawl-delay turn that falls after the deadline isn't waited for:
+        DeadlineReached, at once, so a slow store never holds a worker past the deadline."""
+        delay = self._delays.get(host)
+        interval = delay["applied_s"] if delay else self.min_interval
         with self._lock:
             now = time.monotonic()
-            due = self._last.get(host, 0.0) + self.min_interval
+            due = self._last.get(host, 0.0) + interval
+            if self.deadline is not None and interval > self.min_interval and due > self.deadline:
+                raise DeadlineReached(
+                    f"the run's deadline passes before {host}'s Crawl-delay ({interval:.0f} s)"
+                )
             self._last[host] = max(now, due)
+        if delay and (stats := getattr(self._local, "stats", None)) is not None:
+            stats.note_delay(delay)
         if due > now:
             time.sleep(due - now)
 

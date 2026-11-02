@@ -363,6 +363,7 @@ def rows_for(
                 "code_version": code_version,
                 "blocks": res.stats.blocks or None,
                 "partial": None,  # set by a source that can land a partial catalog (the secondary crawler, #67)
+                "crawl_delays": res.stats.crawl_delays or None,
             }
         )
         for it in res.items:
@@ -504,7 +505,8 @@ def run(
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
     with (
-        PoliteClient(limiters=limiters, **(client_kw or {})) as client,
+        # the deadline also bounds a host's Crawl-delay: no worker waits one out past it (http.DeadlineReached)
+        PoliteClient(limiters=limiters, **({"deadline_s": deadline_s} | (client_kw or {}))) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round
