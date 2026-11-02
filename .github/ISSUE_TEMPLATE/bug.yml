@@ -29,4 +29,4 @@ body:
     id: version
     attributes:
       label: Version or release date
-      description: Optional. A commit, release or the data's build date.
+      description: Optional. A commit, a release, or the data's release date.

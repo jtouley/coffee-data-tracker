@@ -3,6 +3,7 @@
 name: Enhancement
 description: Propose a product change. State who it's for, the problem, a measurable outcome and evidence of demand.
 title: "Enhancement: "
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:

@@ -11,7 +11,7 @@ agreed in an issue.
 
 ## Issues
 
-New issues use the forms in `.github/ISSUE_TEMPLATE/`:
+Use the forms in `.github/ISSUE_TEMPLATE/` where one fits:
 
 - **Bug:** what happened, what you expected and how to reproduce it.
 - **Enhancement:** every product enhancement states its **target user**, the **problem**, a **measurable outcome**
