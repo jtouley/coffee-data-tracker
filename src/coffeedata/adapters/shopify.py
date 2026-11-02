@@ -7,9 +7,9 @@ from datetime import UTC, datetime
 
 import httpx
 
-from ..http import BLOCK_STATUSES, FetchError, PoliteClient
+from ..http import BLOCK_STATUSES, FetchError, PoliteClient, retry_after_seconds, store_wait
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
-from ..ratelimit import HostRateLimited, RateLimited, retry_after_seconds
+from ..ratelimit import HostRateLimited, RateLimited
 from ..text import html_to_text, to_float
 
 log = logging.getLogger(__name__)
@@ -33,7 +33,9 @@ SHORT_PAGE_ENDS = True
 # No sitemap pre-read: a Shopify sitemap index only lists product sitemaps of up to 5,000 URLs each, so the page
 # count would need those child sitemaps too: more requests to the same per-store budget that answers 429.
 BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
-HARD_BLOCK_STATUSES = (401, 403, 430)  # refusals, not pauses: recorded as blocked, never backed off
+# Refusals, not pauses: recorded as blocked, never backed off. A 430 (Shopify's IP-wide block) is a pause like a
+# 429: the page is backed off and asked again, then the store parked for crawl-retry.
+HARD_BLOCK_STATUSES = (401, 403)
 
 
 class PageBlocked(RateLimited):
@@ -48,7 +50,7 @@ class PageBlocked(RateLimited):
 
 
 class StoreBlocked(FetchError):
-    """A 401, 403 or 430: the store (or Shopify, for this IP) refuses. Never backed off or deferred."""
+    """A 401 or 403: the store refuses. Never backed off or deferred."""
 
 
 def _causes(e: BaseException | None):
@@ -74,16 +76,17 @@ def _blocked_host(e: FetchError, default: str) -> str:
 
 
 def _block_wait(e: FetchError) -> float | None:
-    """The store's Retry-After for this block, or None if this failure isn't a store's pause."""
+    """The store's Retry-After for this block (at most http.MAX_STORE_WAIT), or None if this failure isn't a store's
+    pause."""
     if isinstance(e, HostRateLimited):
-        return max(0.0, e.wait)
+        return store_wait(e.wait)
     if isinstance(e, RateLimited):  # the platform as a whole gave up: not this store's pause
         return None
     for c in _causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
             wait = retry_after_seconds(c.response.headers.get("retry-after"))
-            return BLOCK_DEFAULT_WAIT if wait is None else wait
-    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 503 ")) else None
+            return BLOCK_DEFAULT_WAIT if wait is None else store_wait(wait)
+    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")) else None
 
 
 def _published_at(value: object) -> datetime | None:
