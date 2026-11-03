@@ -10,6 +10,7 @@ Cloud Scheduler's (time-based); this table says what actually ran.
 from __future__ import annotations
 
 import json
+import os
 from datetime import UTC, date, datetime
 
 import pyarrow.parquet as pq
@@ -54,10 +55,28 @@ def write(lake: Lake, row: dict) -> None:
     tmp.replace(path)
 
 
-def start(lake: Lake, job: str, run_date: str, connector: str | None = None, todo: int | None = None) -> dict:
+def execution() -> dict:
+    """The Cloud Run execution and task attempt this process is (CLOUD_RUN_EXECUTION, CLOUD_RUN_TASK_ATTEMPT: 0 for
+    the first, 1 for Cloud Run's retry), or {} outside Cloud Run."""
+    out: dict = {}
+    if name := os.environ.get("CLOUD_RUN_EXECUTION"):
+        out["execution"] = name
+    if (n := os.environ.get("CLOUD_RUN_TASK_ATTEMPT", "")).isdigit():
+        out["task_attempt"] = int(n)
+    return out
+
+
+def start(
+    lake: Lake,
+    job: str,
+    run_date: str,
+    connector: str | None = None,
+    todo: int | None = None,
+    detail: dict | None = None,
+) -> dict:
     row = {"run_date": run_date, "job": job, "connector": connector, "shard": None, "attempt_id": new_batch_id(),
            "started_at": now(), "status": "running", "todo": todo, "code_version": lineage.code_version(),
-           "egress_ips": [ip] if (ip := egress_ip()) else []}  # fmt: skip
+           "egress_ips": [ip] if (ip := egress_ip()) else [], "detail": detail}  # fmt: skip
     write(lake, row)
     return row
 
@@ -76,6 +95,17 @@ def finish(lake: Lake, row: dict, status: str, **counts) -> dict:
     row.pop("first_contact", None)
     write(lake, row)
     return row
+
+
+def detail_of(row: dict) -> dict:
+    """A row's detail as a dict ({} when it has none or it isn't JSON)."""
+    d = row.get("detail")
+    if isinstance(d, str):
+        try:
+            d = json.loads(d)
+        except ValueError:
+            return {}
+    return d if isinstance(d, dict) else {}
 
 
 def rows(lake: Lake, run_date: str | None = None) -> list[dict]:

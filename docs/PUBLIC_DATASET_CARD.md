@@ -35,7 +35,7 @@ run), so a past week can be read with `@release-2026-11-02` after the repo id.
 ```sql
 -- DuckDB, no download needed
 select origin_country, process, coffees, median_price_per_100g
-from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by coffees desc limit 10;
+from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' order by coffees desc limit 10;
 ```
 
 ## Not included
@@ -43,7 +43,7 @@ from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by c
 - Product descriptions and images. They're the roasters' own content; every coffee links back through `source_url`.
 - Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
 - Personal data, and roasters that opted out.
-- Roasters known only from OpenStreetMap, so ODbL share-alike terms don't apply.
+- Roasters known only from OpenStreetMap.
 
 ## Method and caveats
 
@@ -54,6 +54,29 @@ from 'hf://datasets/<owner>/<name>/data/public_market_weekly.parquet' order by c
 
 ## License and attribution
 
-The compilation is released under CDLA-Permissive-2.0. Roaster discovery uses Overture Maps Places
-(© Overture Maps Foundation, CDLA-Permissive-2.0). Coffee names and prices are facts published by each roaster.
+The dataset is released under the [Community Data License Agreement – Permissive 2.0](https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt)
+(CDLA-Permissive-2.0); the code that builds it is MIT. The same licence covers these tables, the site's catalog
+JSON and the marketplace shares. Roaster discovery uses Overture Maps Places (© Overture Maps Foundation,
+CDLA-Permissive-2.0); roasters known only from OpenStreetMap are left out. Coffee names and prices are facts
+published by each roaster. See [ATTRIBUTION](https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md).
 Roasters can opt out via the [repository's issue form](https://github.com/jtouley/coffee-data-tracker/issues/new/choose).
+
+## Citation
+
+If you use this dataset, please cite it, with the `release_run_date` of the release you used:
+
+> Touleyrou, J. registry.coffee: US specialty coffee market dataset (weekly release of YYYY-MM-DD).
+> https://registry.coffee. Hugging Face: https://huggingface.co/datasets/jtouley/us-coffee-market.
+> CDLA-Permissive-2.0.
+
+```bibtex
+@misc{registry_coffee,
+  author       = {Touleyrou, Jason},
+  title        = {registry.coffee: US specialty coffee market dataset},
+  howpublished = {\url{https://huggingface.co/datasets/jtouley/us-coffee-market}},
+  url          = {https://registry.coffee},
+  note         = {Weekly releases; licensed under CDLA-Permissive-2.0}
+}
+```
+
+[`CITATION.cff`](https://github.com/jtouley/coffee-data-tracker/blob/main/CITATION.cff) in the repository has the same citation.

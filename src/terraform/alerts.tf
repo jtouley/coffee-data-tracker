@@ -101,8 +101,12 @@ resource "google_monitoring_alert_policy" "down" {
 # Following Google's cloud-run-alert-configuration skill (references/jobs.md): alert at once on any failed execution of
 # a job. `run.googleapis.com/job/completed_execution_count` (DELTA, resource cloud_run_job with job_name and location,
 # metric label `result`) counts completed executions; in PromQL it is
-# run_googleapis_com:job_completed_execution_count. An execution fails only after its retries (max_retries: 0 for the
-# crawls, 1 otherwise) and on the 240-minute timeout; a crawl that hits its deadline exits 0 and isn't a failure.
+# run_googleapis_com:job_completed_execution_count. It counts executions, not task attempts: an execution's result is
+# decided after its retries (max_retries: 0 for Shopify's crawls, 1 otherwise, ingestion.tf), so an attempt that dies
+# and a retry that succeeds is one `succeeded` execution and sends no email (the dead attempt stays visible in
+# job_manifests: a `running` row with no end row, and the retry's start row lists it under detail.dead_attempts). It
+# fires on a failed retry, on the 240-minute timeout, or on a failed attempt of a job without retries; a crawl that
+# hits its deadline exits 0 and isn't a failure.
 
 # One policy per job, so the email names the job and its first command.
 resource "google_monitoring_alert_policy" "ingest_job_failed" {
@@ -124,7 +128,7 @@ resource "google_monitoring_alert_policy" "ingest_job_failed" {
     mime_type = "text/markdown"
     subject   = "registry.coffee: ingest job ${each.key} failed"
     content   = <<-EOT
-      An execution of the Cloud Run job `${each.key}` ended **failed** (non-zero exit after its retries, or the 240-minute timeout). First:
+      An execution of the Cloud Run job `${each.key}` ended **failed** (non-zero exit after its retries, or the 240-minute timeout). For a crawl that died (an OOM kill: "The configured memory limit was reached" and signal 9 in its logs), the next attempt resumes and quarantines a roaster that killed two attempts (RUNBOOK section 7). First:
 
           gcloud run jobs executions list --job ${each.key} --region ${var.region} --limit 5
 
@@ -170,7 +174,7 @@ resource "google_monitoring_alert_policy" "ingest_schedule_failed" {
 
           gcloud scheduler jobs describe $${log.extracted_label.job_id} --location ${var.region}
 
-      `status` holds the error. The attempt's log: `gcloud logging read 'resource.type="cloud_scheduler_job" AND resource.labels.job_id="$${log.extracted_label.job_id}"' --limit 5 --freshness 1d`. To run the slot by hand: `gcloud run jobs execute <job> --region ${var.region}` (the job is the entry's name without `${var.service}-` and `-resume`). Steps: docs/ingestion/RUNBOOK.md, section 5.
+      `status` holds the error. The attempt's log: `gcloud logging read 'resource.type="cloud_scheduler_job" AND resource.labels.job_id="$${log.extracted_label.job_id}"' --limit 5 --freshness 1d`. To run the slot by hand: `gcloud run jobs execute <job> --region ${var.region}` (the job is the entry's name without `${var.service}-` and `-resume` or `-retry`, except for `${var.service}-crawl-retry`, whose job is `crawl-retry` itself). Steps: docs/ingestion/RUNBOOK.md, section 5.
     EOT
   }
   alert_strategy {

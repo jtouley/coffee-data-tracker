@@ -21,12 +21,16 @@ models:
         description: >-
           ok (the catalog was read); error (any failure or block, retried in later passes); unavailable (the store
           is closed, deactivated or password-protected, or its robots.txt disallows the whole site: not retried
-          that run, and left out of run_ok_rate and adapter_ok_rate).
+          that run, and left out of run_ok_rate and adapter_ok_rate); crashed (not fetched: quarantined for the
+          week after it was in flight in two attempts of its crawl that died, crashguard; not retried that week,
+          and left out of run_ok_rate and adapter_ok_rate).
         data_tests:
           - not_null
-          - accepted_values: {arguments: {values: [ok, error, unavailable]}}
+          - accepted_values: {arguments: {values: [ok, error, unavailable, crashed]}}
       - name: error
-        description: The failure, for a status other than ok.
+        description: >-
+          The failure, for a status other than ok; for an ok fetch marked partial, the reason it is partial (how far
+          it got, or what it couldn't read).
       - name: products
         description: Products the attempt read.
       - name: coffees
@@ -55,9 +59,11 @@ models:
       - name: adapter
         description: The catalog adapter used (stg_fetches.adapter).
       - name: status
-        description: ok, error or unavailable (stg_fetches.status).
+        description: ok, error, unavailable or crashed (stg_fetches.status).
       - name: error
-        description: The failure message, for a status other than ok (stg_fetches.error).
+        description: >-
+          The failure message, for a status other than ok; for an ok fetch marked partial, the reason it is partial
+          (stg_fetches.error).
       - name: products
         description: Products the attempt read (stg_fetches.products).
       - name: coffees
@@ -92,13 +98,36 @@ models:
       - name: product_type
         description: The store's product type.
       - name: tags
-        description: The store's tags.
+        description: The store's tags, HTML entities decoded (decode_html_entities; the lake keeps the raw value).
       - name: body_hash
         description: The description's hash (raw bodies).
       - name: grams
         description: Each variant's bag size in grams, where known.
       - name: body_text
         description: The description as text.
+  - name: int_escaped_tag_inputs
+    description: >-
+      Every product version in the lake whose tags decoding changes, one row per roaster, product and version, with
+      the raw tags (what registry.py, enrich.py and verdict.py read) and the decoded tags (what the build reads).
+    columns:
+      - name: input_hash
+        description: The product-version key, over the raw tags (as stg_snapshots.input_hash).
+        data_tests: [not_null]
+      - name: raw_tags
+        description: The tags as the lake has them.
+      - name: tags
+        description: The same tags decoded (decode_html_entities_list).
+  - name: int_tag_decoding_parity
+    description: >-
+      The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
+      the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
+      fails the build on any row, and `coffeedata build` prints them.
+    columns:
+      - name: differs
+        description: >-
+          The outputs that differ: is_coffee (classify.is_coffee: registry.py's coffee count), excluded
+          (classify.excluded: whether a stored verdict applies), rules and rules_with_coffee_verdict
+          (products.rules with no verdict and with a "coffee" one: enrich.py's candidates and their bases).
   - name: int_fetch_coffees
     description: >-
       Coffees per ok fetch without a recorded count, counted as the crawl counted them before ELT:
@@ -143,6 +172,11 @@ models:
         description: >-
           The store was found closed in the run (fetch status unavailable) and no attempt was ok. Such a run says
           nothing about whether the crawl worked.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          The store was quarantined in the run (fetch status crashed: in flight in two attempts of its crawl that
+          died) and no attempt was ok. One store's problem, not the platform's: left out of the ok rates.
         data_tests: [not_null]
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
@@ -277,8 +311,8 @@ models:
         description: The adapter that counts for it in adapter_ok_rate.
       - name: has_catalog
         description: >-
-          It counts in run_ok_rate and adapter_ok_rate: not a roaster known to have no catalog, and not one found
-          closed in this run (unavailable).
+          It counts in run_ok_rate and adapter_ok_rate: not a roaster known to have no catalog, not one found
+          closed in this run (unavailable), and not one quarantined in this run (quarantined).
         data_tests: [not_null]
       - name: catalog_ok
         description: The run fetched it and got products.
@@ -287,6 +321,11 @@ models:
         description: >-
           Found closed in this run (fetch status unavailable, no ok attempt): attempted, but left out of the ok
           rates.
+        data_tests: [not_null]
+      - name: quarantined
+        description: >-
+          Quarantined in this run (fetch status crashed, no ok attempt): it crashed its crawl twice and wasn't
+          fetched. Attempted, but left out of the ok rates; mart_build_profile counts them (run_quarantined).
         data_tests: [not_null]
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'

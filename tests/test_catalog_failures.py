@@ -6,7 +6,7 @@ import respx
 
 from coffeedata import ingest
 from coffeedata.adapters import generic, squarespace
-from coffeedata.http import FetchError, PoliteClient
+from coffeedata.http import FetchError, PartialCatalog, PoliteClient
 from coffeedata.models import Roaster
 
 SQ = Roaster(roaster_id="sq.com", name="SQ", host="sq.com", platform="squarespace?")
@@ -134,13 +134,15 @@ def fetch_gen():
         return generic.fetch(c, GEN)
 
 
-def test_generic_one_failed_page_raises(mock):  # G1
+def test_generic_one_failed_page_is_partial_not_whole(mock):  # G1: never stored as the whole catalog
     mock.get("https://gen.com/sitemap.xml").mock(return_value=sitemap(3))
     mock.get("https://gen.com/products/p0").mock(return_value=page("A"))
     mock.get("https://gen.com/products/p1").mock(return_value=httpx.Response(500))
     mock.get("https://gen.com/products/p2").mock(return_value=page("C"))
-    with pytest.raises(FetchError):
+    with pytest.raises(PartialCatalog) as e:
         fetch_gen()
+    assert sorted(i.title for i in e.value.items) == ["A 12oz", "C 12oz"]
+    assert "1 product pages failed: https://gen.com/products/p1 (HTTP 500)" in str(e.value)
 
 
 def test_G2_all_pages_fail_raises(mock):
@@ -150,13 +152,15 @@ def test_G2_all_pages_fail_raises(mock):
         fetch_gen()
 
 
-def test_G3_pages_without_markup_are_an_empty_catalog(mock):
+def test_G3_pages_without_markup_are_an_empty_catalog_after_reading_every_one(mock):
+    """No giving up after the first pages without Product markup (the old GIVE_UP_AFTER = 10): every page is read."""
+    assert not hasattr(generic, "GIVE_UP_AFTER")
     mock.get("https://gen.com/sitemap.xml").mock(return_value=sitemap(12))
     route = mock.get(url__regex=r"https://gen.com/products/p\d+").mock(
         return_value=httpx.Response(200, text="<p>hi</p>")
     )
     assert fetch_gen() == []
-    assert route.call_count == generic.GIVE_UP_AFTER
+    assert route.call_count == 12
 
 
 def test_generic_blocked_sitemap_raises():

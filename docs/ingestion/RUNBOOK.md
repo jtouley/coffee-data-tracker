@@ -7,7 +7,7 @@ otherwise.
 ```sh
 export PROJECT=coffee-data-tracker REGION=us-central1
 export IMAGE=$REGION-docker.pkg.dev/$PROJECT/registry-coffee/ingest:latest
-export WEEK=2026-11-02   # the confirmation run's week (§3)
+export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3), and the week §5 repairs
 ```
 
 ## 0. Before you start
@@ -55,10 +55,10 @@ every job then runs the same image, and the plan shows the change.
 **Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
 job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches.
 
-- **In production**, `terraform plan -var ingest_schedule_enabled=false` should show only `max_retries` going from 1
-  to 0 on the `crawl-*` jobs that don't have it yet (this commit sets it; the two Shopify crawl jobs may already have
-  it from `gcloud run jobs update --max-retries 0`; the `client`/`client_version` that update stamps are ignored).
-  Anything else: stop.
+- **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
+  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi, and
+  `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
+  else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
   endpoint-independent mapping off, 1,024 to 8,192 ports per VM), so a NAT updated by hand without
   `--no-enable-endpoint-independent-mapping` doesn't show up as unexplained drift:
@@ -133,8 +133,8 @@ re-run one salt's arms on a different image: the thirds differ. Per-store window
 All three run today, once the image from §1 is built. The lake already has history (product counts), so v2's
 short-page stop works in every arm.
 
-**Before the first arm, turn retries off** for the two jobs (Terraform sets `max_retries = 0` for every crawl job from
-this commit on; this is the same setting, by hand, for an image built earlier):
+**Before the first arm, turn retries off** for the two jobs (Terraform sets `max_retries = 0` for Shopify's crawl jobs;
+this is the same setting, by hand, for an image built earlier):
 
 ```sh
 for j in crawl-shopify crawl-shopify-default-egress; do
@@ -341,7 +341,8 @@ scheduled job.
 
 1. **Merge the cutover PR.** It does two things:
    - `.github/workflows/weekly.yml`: remove the `schedule:` block and keep `workflow_dispatch`, with its inputs
-     (`sample`, `rollback_to`, `snowflake_migrate`, `accept_volume_change`), as the one-week fallback;
+     (`sample`, `rollback_to`, `snowflake_migrate`, `accept_volume_change`), as the fallback (its crawl for
+     one week; its rollback until a replacement exists, step 4);
    - `.github/workflows/site.yml`: add `schedule: - cron: "17 11 * * 2"` (Tuesday, after the 06:17 build), plus the
      facts-only public export and the Snowflake load from the **served** release (moved from `weekly.yml`). The
      site deploy stays on Actions and never contacts a roaster.
@@ -378,33 +379,365 @@ scheduled job.
    Any `MISMATCH`: stop and pause the schedule (§5). Set `ingest_schedule_enabled = true` and
    `ingest_image = "<the pinned image>"` in `terraform.tfvars`, so a later plan doesn't revert either.
 3. **The first week to watch** (all UTC; DESIGN.md section 7 has the table): Mon 07:17 probe; Mon 09:17 all five
-   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 crawl-retry; Tue 03:17 merge;
+   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 the third pass (crawl-retry for
+   Shopify, each other connector's crawl again); Tue 03:17 merge;
    Tue 04:17 enrich-week; Tue 06:17 build; Tue 11:17 the site deploy. Monday's release is published Tuesday.
    - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
-   - the `job_manifests` rows: an attempt with only a `running` row died;
+   - the `job_manifests` rows: an attempt with only a `running` row died (section 7);
    - Tuesday's merge `detail.missing`: it should be empty;
    - the build's gate;
    - `egress-check`: the build job's execution fails if an IP stays above 8% for two runs in a row, and the owner
      is emailed (§6);
    - Tuesday's site deploy.
-4. **After one good week**, a follow-up PR removes `weekly.yml`'s crawl. Its rollback and Snowflake-migrate inputs
-   move to a small manual workflow, or to `coffeedata rollback` run from the build image.
+4. **After one good week**, a follow-up PR may remove `weekly.yml`'s crawl, and only its crawl. **Keep the workflow
+   and its `rollback_to` and `snowflake_migrate` inputs:** it is the one-click rollback (§5). Retire it only after a
+   replacement that serves, re-exports, loads Snowflake and deploys the site has merged and been tested.
+   `coffeedata rollback` in the build image is not one: that job has no `PUBLIC_EXPORT_URL`, Snowflake credentials
+   or Pages deploy.
 
-## 5. Rollback
+## 5. Rollback and Tuesday recovery
+
+Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; distrust them after later changes to
+`ingestion.tf`, `weekly.yml`, `site.yml` or the CLI.
 
 - **Stop the Cloud Run schedule** (the jobs and data stay):
   ```sh
   cd src/terraform && terraform apply -var ingest_schedule_enabled=false
   ```
   For an urgent stop of a single entry: `gcloud scheduler jobs pause registry-coffee-<entry> --location $REGION`.
-- **Run the old weekly pipeline from Actions** (kept for one week):
+- **Run the old weekly pipeline from Actions** (its crawl is kept for one week):
   `gh workflow run weekly`. To restore its Monday schedule, revert the cutover PR.
-- **Serve the previous release** if a bad one went out: `gh workflow run weekly -f rollback_to=previous`.
+- **Serve the previous release** if a bad one went out: `gh workflow run weekly -f rollback_to=previous` (§5.1 d).
+  **`weekly.yml` holds the only one-click rollback.** Don't retire it until a replacement exists (§4 step 4).
 - **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
+- **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has
+  deleted it). The merge moves each connector's partition, unchanged, to
+  `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket; `<batch>` is the merge's
+  `job_manifests.detail.batch` and the `batch=<id>` of the lake files it wrote. A week merged more than once has a
+  folder per merge.
+  ```sh
+  export BUCKET=gs://$PROJECT-ingest-staging WEEK=2026-11-02   # any merged week's Monday
+  gcloud storage ls "$BUCKET/archive/raw/connector=*/run_date=$WEEK/"   # one merge=<batch>/ per connector per merge
+  ```
+  - *To read or check the rows* (nothing changes): `gcloud storage cp -r "$BUCKET/archive/raw/*/run_date=$WEEK"
+    /tmp/recover/` and query the Parquet files locally, e.g. `uv run python -c "import duckdb;
+    print(duckdb.sql(\"from '/tmp/recover/**/fetches.parquet'\"))"`. They hold exactly the rows the merge read.
+  - *To merge them into the lake again* (rows the dataset lost, or a merge whose lake files never reached HF):
+    copy, don't move, one merge folder per connector back to where the merge reads it, then run the merge for that
+    week. Restore one `merge=<batch>` folder per connector per run (the files share names), oldest first.
+    ```sh
+    C=shopify B=<batch>   # from the listing above
+    gcloud storage cp "$BUCKET/archive/raw/connector=$C/run_date=$WEEK/merge=$B/*.parquet" \
+      "$BUCKET/raw/connector=$C/run_date=$WEEK/"
+    gcloud run jobs execute merge --region $REGION --args="merge,--run-date,$WEEK" --wait
+    ```
+    The merge adds only rows the lake doesn't already have (by `batch_id`, `manifest_id` and `body_hash`), so a
+    restored partition is never counted twice, and it archives the partition again under a new `merge=<batch>`
+    (another 30 days). The connector must have a finished crawl that week in `job_manifests`, as it had for the
+    first merge. Only a merge of that week reads the restored partition: the crawls and the scheduled merge read
+    the current week's.
 - **Shopify only, back to default egress:** run `crawl-shopify-default-egress` instead of `crawl-shopify`. To make it
   permanent, set `nat = false` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP stays
   reserved until the address resource is removed.
+
+The Tuesday steps below use this week's run date, `$WEEK` from §0: **this week's Monday**. Set it first, every week:
+
+```sh
+export WEEK=$(uv run python -c 'import datetime as d; t=d.datetime.now(d.UTC).date(); print(t-d.timedelta(t.weekday()))')
+echo $WEEK   # this Monday, e.g. 2026-11-02
+```
+
+**Crawl, merge, enrich-week and build run on Cloud Run only.** The jobs carry the verdict model, the Anthropic key
+and the staging bucket, and the build job runs `coffeedata classify` first. A local `uv run coffeedata` crawl,
+crawl-retry, merge, enrich-week, build or publish has none of these: it builds a different catalog (rules only, no
+verdicts) that can still pass the gate and become the baseline. Don't use the local forms for a release. Only the
+read-only steps (`build-diff`, the Python checks) and `override` also have a local form, which runs with §3's
+`COFFEEDATA_LAKE` and `HF_TOKEN` exports (never echo the token). `--args` replaces the job's arguments for one
+execution, and gcloud splits it on commas, so keep commas out of it. `build` runs `sh -c`, so its `--args` is one
+shell script; the other jobs run `coffeedata`, so theirs is the argument list. To read an execution's output:
+
+```sh
+E=$(gcloud run jobs executions list --job build --region $REGION --limit 1 --format='value(name)')
+gcloud logging read "resource.type=\"cloud_run_job\" AND labels.\"run.googleapis.com/execution_name\"=\"$E\"" \
+  --order asc --limit 500 --format='value(textPayload)'
+```
+
+### 5.1 The gate failed on Tuesday
+
+**Checklist:**
+
+1. `echo $WEEK` shows this Monday (§5).
+2. Diagnose with `build-diff` (a).
+3. Check the failed build judged `$WEEK` (§5.2). If it didn't, follow §5.2 instead.
+4. Pick **b** (gate wrong), **c** (crawl bad) or **d** (bad data out). Never crawl a past week (c).
+5. Rebuild (b, c or §5.2) or roll back (d). After a Cloud Run rollback, run
+   `gh workflow run weekly -f rollback_to=served` (d).
+6. Confirm the fix worked (e).
+7. If the release was served after 11:17: `gh workflow run weekly -f rollback_to=served` (below).
+
+The build exits 1 and the `ingest job build failed` email arrives. The served release stays last week's: nothing bad
+is out, but nothing new is either.
+
+**a. Diagnose.**
+
+```sh
+gcloud run jobs execute build --region $REGION --wait --args='coffeedata build-diff'
+uv run coffeedata build-diff
+```
+
+By default it compares the latest build, passing or not, with the last passing build before it (the CLI's `--help`
+says "the last two that passed"; the code does the former). Read `new_passed`, `failing`, `metrics`, `coffees` and
+`roasters_most_changed`. First check that the failed build judged `$WEEK`, not last week (§5.2). Then go by
+`failing`:
+
+| Failing test | Go to |
+|---|---|
+| `catalog_volume_vs_last_build` | **b** if build-diff shows a real change; **c** if a crawl lost roasters |
+| `run_is_complete`, `run_ok_rate`, `adapter_ok_rate` | **c** |
+| `latest_run_is_fresh` | only possible if last week's run is missing too (on Tuesday last week's Monday still counts as fresh, §5.2). Fix **this** week's merge (§5.2, or **c** for `$WEEK`): once `$WEEK` is merged, this test passes. **Never crawl a past week** (c) |
+| anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
+
+`suspect_runs_need_review` and `build_metrics_in_band` are warnings (`severity='warn'`) and never fail the gate, so
+neither appears in `failing`. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+
+**b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
+the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
+records.
+
+1. One roaster-week at a time: `accept` (a suspect catalog change is real), `reject` (drop that fetch: the week
+   counts as missing for the roaster), or `use_batch` with `--batch <batch_id>` (count another ok fetch of that week).
+   The override is uploaded to the lake at once; the next build applies it.
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="coffeedata override --roaster <roaster_id> --run-date $WEEK --action accept --reason '<why>'"
+   uv run coffeedata override --roaster <roaster_id> --run-date "$WEEK" --action accept --reason "<why>"
+   ```
+
+2. A real catalog-wide change (a `catalog_volume_vs_last_build` failure): rebuild with `--accept-volume-change`. The
+   fixed floors still apply, and this build becomes the next baseline. Leave the flag out after overrides alone.
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="coffeedata classify; coffeedata build --run-date $WEEK --accept-volume-change; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+   ```
+
+**c. The crawl was bad** (an outage, blocks, roasters not attempted). Up to 4 h per crawl, plus merge and build; a
+build that fails the gate runs twice (b).
+
+A crawl asks only roasters **without an `ok` or `unavailable` fetch this week**. It repairs failed, skipped and
+parked roasters, not ok fetches with wrong data (a parser bug in the image): those need b.1's `reject`, one
+roaster-week at a time. Run it on Tuesday: `--run-date` defaults to today, and `week_of()` maps Tuesday to this
+Monday (`$WEEK`, passed explicitly below). Crawl and merge share the staging bucket: run the whole chain on Cloud Run.
+
+**Never crawl a past week** (`--run-date` earlier than this Monday). Nothing refuses it: the crawl fetches today's
+catalogs and files them as that week's run. Lake files can't be changed, so undoing it takes a `reject` override for
+every roaster it fetched. A past week's missing run doesn't need repair: merging `$WEEK` fixes freshness.
+
+1. Check no execution of the job is running: `gcloud run jobs executions list --job crawl-<c> --region $REGION
+   --limit 3`.
+2. Crawl the connector (`<c>`: `shopify`, `squarespace`, `woocommerce`, `square_online`, `generic`; the job of
+   `square_online` is `crawl-square-online`):
+
+   ```sh
+   gcloud run jobs execute crawl-<c> --region $REGION --wait --args=crawl,--connector,<c>,--run-date,$WEEK
+   ```
+
+   Shopify's parked stores, after `crawl-shopify` (stores that refused on Monday may refuse again):
+
+   ```sh
+   gcloud run jobs execute crawl-retry --region $REGION --wait \
+     --args=crawl-retry,--connector,shopify,--run-date,$WEEK
+   ```
+
+3. Merge again. It adds only what the lake doesn't have yet:
+
+   ```sh
+   gcloud run jobs execute merge --region $REGION --wait --args=merge,--run-date,$WEEK
+   ```
+
+4. Enrich, then build:
+
+   ```sh
+   gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
+   gcloud run jobs execute build --region $REGION --wait \
+     --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+   ```
+
+**d. Bad data passed the gate and is out.** Roll back:
+
+```sh
+gh workflow run weekly -f rollback_to=previous   # or -f rollback_to=<build_id> from build-diff
+```
+
+It serves the passing release before the served one, publishes, re-exports the public tables, loads Snowflake and
+deploys the site. Any earlier passing build can be served with `rollback_to=<build_id>`. On Cloud Run, always name
+the release with `--to <build_id>` (from `build-diff` or `quality.builds`):
+
+```sh
+gcloud run jobs execute build --region $REGION --wait \
+  --args="coffeedata rollback --to <build_id> --reason '<why>'"   # <why>: no commas
+```
+
+Without `--to`, a failed `publish` after the serve makes the job's retry (`max_retries = 1`) run `rollback` again,
+which goes back one more release. The job switches the served release and publishes only: it writes the site and
+the public export inside the container, and they're thrown away. Use it only when Actions can't run. **After any
+Cloud Run rollback**, as soon as Actions runs, re-export the release it served:
+
+```sh
+gh workflow run weekly -f rollback_to=served
+```
+
+Until then the static site, the public export and Snowflake keep showing the bad data. Then fix the week as in b
+or c.
+
+**e. Confirm the fix worked** (after b, c or §5.2). The served release's run date must be this Monday, and the
+latest build execution must have succeeded:
+
+```sh
+uv run python - <<'EOF'
+import os
+from coffeedata import quality
+from coffeedata.lake import Lake
+
+s = quality.served(Lake())
+print("served:", s and (s["build_id"], str(s["run_date"])))
+week = os.environ["WEEK"]
+print("FIXED" if s and str(s["run_date"]) == week else f"NOT FIXED: the served run date isn't {week}")
+EOF
+gcloud run jobs executions list --job build --region $REGION --limit 1 \
+  --format='table(name,status.completionTime,status.succeededCount,status.failedCount)'   # succeededCount 1
+```
+
+After d alone, the served run date is last week's until b or c serves this week: check `build_id` is the one you
+rolled back to.
+
+**`site.yml` at 11:17 and the 8-day promise.** At 11:17 the Tuesday run renders and deploys the served release, then
+checks that its run is this week's. If not, it fails red and exports nothing (no public export, no Snowflake load).
+A manual `gh workflow run site` only renders and deploys. To export after a late fix, run
+`gh workflow run weekly -f rollback_to=served`: it serves the current release again, exports, loads Snowflake and
+deploys. `serving_log` records that re-serve with the reason "re-export for Snowflake migration (<actor>)", because
+`weekly.yml` sets that reason for every `rollback_to=served`. Read it as a recovery export of the same release: no
+Snowflake migration ran, and the served release didn't change.
+
+The promise is that served data comes from a run at most 8 days old (`max_run_age_days`). On Tuesday last week's run
+(the Monday before `$WEEK`) is exactly 8 days old, so the promise still holds. It breaks at 00:00 UTC Wednesday and
+gets one day worse each day until this week's release is served.
+
+| Case | 11:17 | 8-day promise |
+|---|---|---|
+| a/b, rebuilt before 11:17 (a rebuild that fails the gate runs twice) | green, exports this week's | kept |
+| a/b, rebuilt after 11:17 | red, nothing exported; then `rollback_to=served` | kept if served on Tuesday |
+| c | red (the crawl alone can take 4 h, and a failing build runs twice); then `rollback_to=served` after the build | kept only if served by 23:59 UTC Tuesday |
+| d, before 11:17 | red (the served release is last week's); the rollback already exported | kept Tuesday; broken from Wednesday until b or c serves this week |
+| d, after 11:17 | the bad release was green and exported; the rollback re-exports | as above |
+| nothing fixed | red | broken from Wednesday |
+
+### 5.2 The build ran before the merge finished
+
+The Tuesday jobs run on fixed clock times, not on completion (issue #84): merge at 03:17 (up to 240 min, and one
+retry), enrich-week at 04:17, build at 06:17. `build` never checks for a finished merge. It judges the latest run in
+the lake, which before the merge is still last week's. Freshness uses a strict `<`, so last Monday counts as fresh on
+Tuesday, and such a build can pass and serve last week's data as a new release. enrich-week before a merge prints
+`waiting: no merge this week yet` and exits 0, so nothing alerts.
+
+**How to tell:**
+
+```sh
+uv run python - <<'EOF'
+import os
+from coffeedata import control, quality
+from coffeedata.lake import Lake
+
+lake = Lake()
+print("latest builds (build_id, run judged, passed):", quality.builds(lake)[-3:])
+print("served:", quality.served(lake))
+for r in control.rows(lake, os.environ["WEEK"]):
+    if r["job"] in ("merge", "enrich"):
+        print(r["job"], r["status"], r["started_at"], r["ended_at"])
+EOF
+for j in merge build; do
+  gcloud run jobs executions list --job $j --region $REGION --limit 2 \
+    --format='table(name,status.startTime,status.completionTime)'
+done
+```
+
+The build ran too early if the latest build judged **last week's Monday** instead of `$WEEK`, or started before the
+merge's `done` row ended. If there is no `enrich` row, enrich-week waited.
+
+**Recourse:** once the merge's row is `done`, run enrich-week (if it waited) and the build again:
+
+```sh
+gcloud run jobs execute enrich-week --region $REGION --wait --args=enrich-week,--submit,--run-date,$WEEK
+gcloud run jobs execute build --region $REGION --wait \
+  --args="coffeedata classify; coffeedata build --run-date $WEEK; rc=\$?; coffeedata publish --message rebuild; exit \$rc"
+```
+
+`--run-date $WEEK` makes it judge this week: run before the merge, it fails as incomplete instead of serving last
+week again. The early release has last week's data, so it is a harmless baseline. Confirm the fix (§5.1 e). After
+11:17, export with `gh workflow run weekly -f rollback_to=served` (§5.1).
+
+### 5.3 A crawl that ends `deadline`: skipped or partial
+
+A crawl that reaches its deadline exits 0 and sends no email. Its end row in `job_manifests` says `deadline` for one
+of two reasons, which need different handling:
+
+- **Skipped**: `skipped` > 0 roasters were never started. They have no `fetches` row this week, so
+  `run_is_complete` fails Tuesday's gate until something fetches them.
+- **Partial**: `skipped` = 0, and `detail.partial` > 0 catalogs were read only in part (the deadline stopped them
+  mid-catalog, a WooCommerce store's count differed from its `X-WP-Total`, a sub-sitemap couldn't be read or
+  answered 404, or some of a generic store's product pages failed: `fetches.error` counts them). Each
+  one is an **ok** fetch with `fetches.partial = true`, and `fetches.error` says why (for example
+  `partial: … (page 55)`). `run_completeness` counts it as ok, so the gate passes, and dbt keeps its unread products
+  listed. A partial Shopify catalog is parked at the page it reached: the resume slot and crawl-retry continue from
+  there.
+
+An attempt whose latest row is `running` died. Check the week's rows per connector (each connector has one attempt
+per slot):
+
+```sh
+uv run python - <<'EOF'
+import json, os
+from coffeedata import control
+from coffeedata.lake import Lake
+
+for r in control.rows(Lake(), os.environ["WEEK"]):  # the latest row per attempt
+    d = json.loads(r["detail"] or "{}")
+    print(r["job"], r["connector"], r["started_at"], r["status"],
+          *(f"{k}={r[k]}" for k in ("todo", "ok", "errors", "parked", "skipped")),
+          f"partial={d.get('partial')}", f"partial_every_week={d.get('partial_every_week')}")
+EOF
+```
+
+- **`skipped` > 0** on a connector's **latest** crawl row after its 15:17 resume: re-run its crawl before Tuesday's
+  03:17 merge (§5.1 c, step 2). Otherwise `run_is_complete` fails Tuesday's gate.
+- **Only partial** (`skipped` = 0): the gate passes. No re-run is needed, and none should be made every week for it.
+- **`partial_every_week`** lists the stores that ended partial in each of their last two runs
+  (`ingest.PARTIAL_WEEKS`); the crawl's log and stderr warn about them too. Such a store is never read whole inside
+  one window. Read its `fetches.error` rows: a deadline stop at a later page each week means the catalog is too big
+  for the window, and a count that never matches `X-WP-Total` means the store's listing and its count disagree.
+  Raise it with the owner rather than re-running crawls.
+- `crawl-retry` (Shopify, 21:47) writes `job_manifests` rows of its own (job `crawl-retry`, which never counts as a
+  landed crawl). Its end row says `deadline` when it left stores unstarted or a resumed store stopped partial again,
+  with `partial` and `partial_every_week` in its `detail`, as a crawl's. The query above prints it.
+- After the merge, its row's `detail` lists `missing` connectors. That list should be empty.
+
+### 5.4 Raising a job's memory by hand
+
+An OOM kill shows as "memory limit" and signal 9 in the execution's log. On 2026-11-02 `crawl-generic` was
+OOM-killed at 2Gi:
+
+```sh
+gcloud run jobs update crawl-generic --region $REGION --memory 8Gi
+gcloud run jobs describe crawl-generic --region $REGION \
+  --format='value(spec.template.spec.template.spec.containers[0].resources.limits.memory)'   # 8Gi
+```
+
+The next execution uses it; one that is running keeps its old limit. **The next `terraform apply` reverts it**
+unless `ingestion.tf` says the same. On main, `crawl-generic` is still 2Gi, and PR #91 sets it to 8Gi. Until that
+merges, a plan that shows `crawl-generic` memory going 8Gi → 2Gi must not be applied (§4 step 2's digest pin
+included): set it to 8Gi in `ingestion.tf` first.
 
 ## 6. Alerts
 
@@ -413,7 +746,7 @@ Each email names what failed and the first command to run.
 
 | Policy | Watches | Fires |
 |---|---|---|
-| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
 | `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
@@ -464,9 +797,85 @@ no change.
 $5), or, to silence one policy at once, `gcloud alpha monitoring policies update <policy> --no-enabled` (the name is
 in the list above). The jobs, the schedule and the app don't change either way.
 
+## 7. When a crawl dies
+
+A crawl attempt that dies (OOM kill, segfault, an uncaught error) leaves a `running` row in `job_manifests` with no
+end row (an uncaught Python error writes a `failed` end row first), and its in-flight markers in the staging bucket
+(`gs://<project>-ingest-staging/raw/connector=X/run_date=W/_inflight/attempt=<id>/<roaster>.json`). What happens
+next, by itself (DESIGN.md section 7.1):
+
+1. **The non-Shopify crawls are retried at once** (`max_retries = 1`). The retry compacts what the dead attempt
+   wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time beside the others. It
+   stops starting roasters 225 minutes after the first attempt started, so it never overlaps 15:17; a suspect
+   still waiting in a page backoff then is parked with its pages for crawl-retry, like any other store. If it
+   succeeds, the execution succeeds and **no alert is sent**; the dead attempt is in `job_manifests`, and the
+   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's crawls aren't retried in place:
+   their next slot resumes.
+2. **A roaster in flight in two dead attempts is quarantined for the week**: the next attempt writes it a `fetches`
+   row with status `crashed` (its `error` names the two attempts) and doesn't ask it; every later pass of the week
+   skips it. In that attempt's end row it is in neither `ok` nor `errors`: `detail.quarantined` and
+   `detail.by_adapter.<connector>.quarantined` count it. Expect, for a true poison pill: the 09:17 attempt and its
+   retry die, the execution fails (one email), and the 15:17 resume quarantines it and crawls the rest.
+3. **Every connector gets a third pass at 21:47** (crawl-retry for Shopify, the connector's crawl job for the
+   others), and next week the roaster is fetched as usual.
+
+**A store that asks us to wait.** We never wait more than 5 minutes for anything a store asks for (DESIGN.md
+section 6, the 5-minute rule): a Retry-After of an hour, or an HTTP date days away, is waited for 300 s, and the
+store is asked again in the next deferred round, and in the next pass after that. It is never failed just for
+asking, and no store can hold a job past its window: a retry that would start after the deadline isn't scheduled
+(`detail.deferred.past_deadline`), and crawl-retry and the weekly fallback stop starting stores at 225 and 150
+minutes. If a store owner asks why we came back sooner than their Retry-After, that is the answer: they can contact
+us, and we'll wait 5 minutes.
+
+**Look at it:**
+
+```sh
+gcloud run jobs executions list --job crawl-generic --region $REGION --limit 5
+gcloud logging read 'resource.type="cloud_run_job" AND resource.labels.job_name="crawl-generic" AND
+  (textPayload:"memory limit" OR textPayload:"earlier attempt" OR severity>=ERROR)' --limit 50 --freshness 1d
+gcloud storage ls "gs://$PROJECT-ingest-staging/raw/connector=generic/run_date=$WEEK/_inflight/**"
+```
+
+and, in the lake (as §3 queries it):
+
+```sql
+-- the week's attempts per connector: an attempt whose latest row is `running` died
+select connector, attempt_id, started_at, status, json_extract(detail, '$.dead_attempts') as dead,
+       json_extract(detail, '$.quarantined') as quarantined
+from job_manifests where run_date = '2026-11-02' and job in ('crawl', 'crawl-retry')
+qualify row_number() over (partition by attempt_id order by (status <> 'running') desc) = 1 order by started_at;
+-- quarantined roasters (the lake has them from Tuesday's merge on)
+select roaster_id, adapter, fetched_at, error from fetches where run_date = '2026-11-02' and status = 'crashed';
+```
+
+Before the merge, the attempts' rows and the `crashed` rows are in the connector's partition in the staging bucket:
+`gcloud storage ls "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/**"`.
+
+**Memory:** "The configured memory limit was reached" and signal 9 in the logs is an OOM kill. To change a job's
+memory, set it in `terraform.tfvars` and apply (`ingest_job_memory = { "crawl-woocommerce" = "4Gi" }`; 1Gi to 8Gi
+with 2 vCPU). `terraform plan` refuses a size outside that range and a key that isn't a job in `ingestion.tf`. A
+`gcloud run jobs update <job> --memory` by hand is reverted by the next apply unless `ingestion.tf` or
+`ingest_job_memory` says the same.
+
+**Un-quarantine a roaster** (once you know why it crashed, or think it was a bystander): fetch it by hand, alone,
+in its connector's job. The quarantine only lasts the week; next Monday it is fetched as usual.
+
+```sh
+gcloud run jobs execute crawl-generic --region $REGION --wait   --args=crawl,--connector,generic,--only,<roaster_id>
+```
+
+`--only` fetches that roaster even though it is done (`crashed`) this week; that attempt's rows list no quarantine
+(`detail.quarantined` is `[]`, `detail.only` names the roaster). If it succeeds, its `ok` row counts for the run (a
+run is ok when any attempt is). If it kills the attempt too, Cloud Run retries it once (`max_retries = 1`), and the
+retry fetches it again; if that dies as well, the execution fails. Nothing else was in flight: it is the cause.
+Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
+To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
+`gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
+
 ## Cost
 
 About +$1–2/month for the non-Shopify jobs, and about $4–6/month for Cloud NAT, mostly the reserved static IP. The
-staging bucket holds one week of raw/ at most, a few hundred MB. With the app (inside Cloud Run's free tier), about
+staging bucket holds one week of raw/ and the last 30 days of merged partitions under archive/, about five weeks of
+raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
 $5–8/month in all, so the monthly budget (`budget_usd`) is $20: its first email (50%, $10) is above the estimate's
 top, and 90%/100% ($18/$20) mean more than twice the estimate. Alert policies cost nothing.

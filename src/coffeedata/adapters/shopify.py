@@ -4,19 +4,34 @@ from __future__ import annotations
 
 import logging
 from datetime import UTC, datetime
+from itertools import count
 
 import httpx
 
-from ..http import BLOCK_STATUSES, FetchError, PoliteClient
+from ..http import (
+    BLOCK_STATUSES,
+    DeadlineReached,
+    FetchError,
+    PartialCatalog,
+    PoliteClient,
+    asked_wait,
+    causes,
+    store_wait,
+)
 from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
-from ..ratelimit import HostRateLimited, RateLimited, retry_after_seconds
+from ..ratelimit import HostRateLimited, RateLimited
 from ..text import html_to_text, to_float
 
 log = logging.getLogger(__name__)
 
-# 60 pages of 250: kaldi.com lists more than 20 x 250 products (it failed the old cap of 20 on 2026-10-31).
-MAX_PAGES = 60
-PAGE_LIMIT = 250  # the most /products.json returns per page
+# No page cap: pages are read until the catalog ends (an empty page, a repeated page, or a short one below). kaldi.com
+# lists more than 60 x 250 products: it failed the cap of 20 on 2026-10-31 and the cap of 60 on 2026-11-02. Only the
+# run's deadline stops a catalog early, and then it is stored as partial.
+# The most a page holds. The storefront's /products.json isn't documented on its own; Shopify's REST pagination docs
+# give the `limit` it shares with the Admin API's product list: "The default `limit` value is `50`. The maximum
+# `limit` value is `250`." (https://shopify.dev/docs/api/usage/pagination-rest, Parameters). A larger limit is
+# answered with 250.
+PAGE_LIMIT = 250
 # A page with fewer than PAGE_LIMIT products ends the catalog, so the empty page after it is never asked for, but
 # only once the products so far reach the store's last known count (its latest ok fetch). That empty page drew the
 # 429s (B's retest, 2026-10-31: every "page 2" failure had its whole catalog on page 1). Shopify can return short
@@ -33,7 +48,9 @@ SHORT_PAGE_ENDS = True
 # No sitemap pre-read: a Shopify sitemap index only lists product sitemaps of up to 5,000 URLs each, so the page
 # count would need those child sitemaps too: more requests to the same per-store budget that answers 429.
 BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
-HARD_BLOCK_STATUSES = (401, 403, 430)  # refusals, not pauses: recorded as blocked, never backed off
+# Refusals, not pauses: recorded as blocked, never backed off. A 430 (Shopify's IP-wide block) is a pause like a
+# 429: the page is backed off and asked again, then the store parked for crawl-retry.
+HARD_BLOCK_STATUSES = (401, 403)
 
 
 class PageBlocked(RateLimited):
@@ -48,24 +65,18 @@ class PageBlocked(RateLimited):
 
 
 class StoreBlocked(FetchError):
-    """A 401, 403 or 430: the store (or Shopify, for this IP) refuses. Never backed off or deferred."""
-
-
-def _causes(e: BaseException | None):
-    while e is not None:
-        yield e
-        e = e.__cause__
+    """A 401 or 403: the store refuses. Never backed off or deferred."""
 
 
 def _hard_block(e: FetchError) -> int | None:
-    for c in _causes(e):
+    for c in causes(e):
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in HARD_BLOCK_STATUSES:
             return c.response.status_code
     return next((s for s in HARD_BLOCK_STATUSES if str(e).startswith(f"HTTP {s} ")), None)
 
 
 def _blocked_host(e: FetchError, default: str) -> str:
-    for c in _causes(e):
+    for c in causes(e):
         if isinstance(c, HostRateLimited):
             return c.host
         if isinstance(c, httpx.HTTPStatusError):
@@ -74,16 +85,17 @@ def _blocked_host(e: FetchError, default: str) -> str:
 
 
 def _block_wait(e: FetchError) -> float | None:
-    """The store's Retry-After for this block, or None if this failure isn't a store's pause."""
+    """The store's Retry-After for this block (at most http.MAX_STORE_WAIT), or None if this failure isn't a store's
+    pause."""
     if isinstance(e, HostRateLimited):
-        return max(0.0, e.wait)
+        return store_wait(e.wait)
     if isinstance(e, RateLimited):  # the platform as a whole gave up: not this store's pause
         return None
-    for c in _causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
+    for c in causes(e):  # the client's retries ran out on a block: fetch_json wraps the HTTPStatusError
         if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
-            wait = retry_after_seconds(c.response.headers.get("retry-after"))
-            return BLOCK_DEFAULT_WAIT if wait is None else wait
-    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 503 ")) else None
+            wait = asked_wait(c.response)
+            return BLOCK_DEFAULT_WAIT if wait is None else store_wait(wait)
+    return BLOCK_DEFAULT_WAIT if str(e).startswith(("HTTP 429 ", "HTTP 430 ", "HTTP 503 ")) else None
 
 
 def _published_at(value: object) -> datetime | None:
@@ -141,9 +153,12 @@ def fetch(
     """The whole catalog. resume: {"page": n, "items": [...]} continues a catalog that was blocked on page n.
     known_products: the store's product count at its latest ok fetch, which lets a short page end the catalog."""
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
-    for page in range((resume or {}).get("page", 1), MAX_PAGES + 1):
+    for page in count((resume or {}).get("page", 1)):
         try:
             data = client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
+        except DeadlineReached as e:
+            # page: where a resume continues (ingest.run parks it), not page 1 again
+            raise PartialCatalog(f"{e} (page {page})", list(items.values()), page=page) from e
         except FetchError as e:
             if (status := _hard_block(e)) is not None:
                 raise StoreBlocked(f"blocked: HTTP {status} on page {page} of {roaster.host}") from e
@@ -166,6 +181,4 @@ def fetch(
             and len(items) >= known_products
         ):
             break
-    else:  # never reached an empty page: storing this as the whole catalog would be a silent truncation
-        raise FetchError(f"{roaster.host}: still more products after {MAX_PAGES} pages")
     return list(items.values())

@@ -7,6 +7,8 @@
 --   run_catalog_ok_share: the share of the run's expected roasters that have a catalog (run_completeness
 --     has_catalog) that it fetched with products; adapter_ok_share:<adapter> is the same per adapter, and
 --     adapter_roasters:<adapter> how many such roasters each adapter has.
+--   run_quarantined: the run's roasters quarantined after crashing their crawl twice (fetch status crashed), which
+--     the ok shares leave out; not banded.
 --   accepted_volume_change (1: this build was let through with --accept-volume-change) and accepted_overrides
 --     (accept overrides in the lake when it was built): where the bands' history starts again.
 with q as (select * from {{ ref('stg_run_quality') }}),
@@ -27,6 +29,8 @@ union all
 select 'run_attempted_share', coalesce(avg(attempted::int), 0)::double from {{ ref('run_completeness') }}
 union all
 select 'run_ok_share', coalesce(avg(ok::int), 0)::double from {{ ref('run_completeness') }}
+union all
+select 'run_quarantined', count(*) filter (where quarantined)::double from {{ ref('run_completeness') }}
 union all
 select 'run_catalog_roasters', count(*)::double from catalog
 union all

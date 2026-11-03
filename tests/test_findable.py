@@ -143,8 +143,9 @@ def test_robots_allows_everything_and_points_at_the_sitemap():
         "https://registry.coffee/catalog/",
         "https://registry.coffee/privacy/",
         "https://registry.coffee/terms/",
+        "https://registry.coffee/bot/",
     ]
-    assert [u.findtext("s:lastmod", namespaces=ns) for u in urls] == ["2026-11-02", None, None, "2026-10-27"]
+    assert [u.findtext("s:lastmod", namespaces=ns) for u in urls] == ["2026-11-02", None, None, "2026-10-27", None]
 
 
 # --- self-describing releases ------------------------------------------------------------------------

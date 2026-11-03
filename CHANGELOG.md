@@ -43,14 +43,32 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - **Deployment.** The app on Cloud Run with Terraform, JSON logs and alerts (#24), an uptime check (#32), and
   hardening of the single instance against request bursts (#34).
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
+- **Data licence and citation.** The public dataset is CDLA-Permissive-2.0
+  (`licenses/CDLA-Permissive-2.0.txt`, outside the root so GitHub still shows the code's MIT); the code stays MIT.
+  `CITATION.cff`, and public contract 2.2.2 (documentation only): licence, servers, team, tags and units, with
+  the product's input ports (#88).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
 
 ### Changed
 
+- The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
+  move, unchanged, to `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket, where nothing
+  else reads, and a lifecycle rule on the bucket deletes `archive/` objects 30 days after the merge. The RUNBOOK
+  says how to recover a week from it.
 - The weekly crawl runs on Cloud Run instead of a GitHub Actions schedule. The `weekly` workflow stays as a manual
   fallback. The crawl runs on Monday, and the `site` workflow publishes the site, the public export and the
   Snowflake load on Tuesday (#74).
+- Crawl hardening (#91). A roaster that kills its crawl (an OOM kill, a segfault, an uncaught error) no longer
+  kills every resume: each crawl records the roasters in flight, the next attempt fetches a dead attempt's
+  in-flight roasters one at a time, and a roaster in flight in two dead attempts is quarantined for the week with a
+  new fetch status, `crashed` (raw contract 1.3.0; left out of the ok rates like `unavailable`; `run_completeness`
+  and `int_roaster_runs` gain `quarantined`, and `mart_build_profile` gains `run_quarantined`). Every connector
+  gets an evening third pass (Shopify: `crawl-retry` on the NAT IP; the others: their own crawl again, on default
+  egress). The non-Shopify crawl jobs retry a failed attempt at once (`max_retries = 1`), and the retry stays
+  inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
+  connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
+  memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
 
 ### Fixed
 
@@ -65,6 +83,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   for future roast dates (#50); Save reads "Savingâ€¦" until the server replies (#58); fresh pages after writes, no
   duplicate resends and roast-date checks (#66).
 - Tests: a date-dependent bag comparison test (#51).
+- Crawl memory (#91): `crawl-generic` was OOM-killed at 2Gi on 2026-11-02. Every httpx response refers to itself
+  through its stream, so each page body waited for Python's full garbage collection; the client now breaks that
+  cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`; a sitemap
+  64 MiB, above the protocol's 50 MB): a larger one fails that roaster's fetch instead of the job. Sitemaps are
+  matched lazily on their bytes, up to the URL limit.
+  An exception from one roaster's fetch is always that roaster's error.
 
 ### Security
 

@@ -23,6 +23,7 @@ from markupsafe import Markup
 
 from . import public
 from .discover import US_STATES
+from .http import USER_AGENT
 
 # The 50 states; DC and Puerto Rico are named separately on the launch page.
 STATES = [s for s in US_STATES if s not in ("DC", "PR")]
@@ -69,10 +70,12 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 REPO = "https://github.com/jtouley/coffee-data-tracker"
 APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
-LEGAL_UPDATED = "October 27, 2026"
+LEGAL_UPDATED = "November 2, 2026"
+# The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
+BOT_UPDATED = "November 2, 2026"
 FIRST_RUN = "2026-10-26"  # the first weekly run the public data covers (the start of temporalCoverage)
 CREATOR = {"@type": "Person", "name": "Jason Touleyrou", "url": "https://github.com/jtouley"}
-PAGES = ("", "catalog/", "privacy/", "terms/")  # every page the site writes, for sitemap.xml
+PAGES = ("", "catalog/", "privacy/", "terms/", "bot/")  # every page the site writes, for sitemap.xml
 
 
 def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
@@ -93,6 +96,7 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         "dataset": dataset,
         "hf_path": hf_path,
         "repo": REPO,
+        "data_license": f"{REPO}/blob/main/licenses/CDLA-Permissive-2.0.txt",
         "marketplace": f"{REPO}/blob/main/marketplace/README.md",
         "mcp": f"{REPO}#logging-shots",
         "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
@@ -388,6 +392,10 @@ def build(db: Path, out: Path) -> Path:
     for page in ("privacy", "terms"):
         (out / page).mkdir(exist_ok=True)
         (out / page / "index.html").write_text(with_csp(env.get_template(f"{page}.html").render(**legal)))
+    # /bot: the page RegistryCoffeeBot's User-Agent links to (who we are, what we crawl, how to opt out)
+    (out / "bot").mkdir(exist_ok=True)
+    bot = env.get_template("bot.html").render(**legal | {"updated": BOT_UPDATED, "user_agent": USER_AGENT})
+    (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(
@@ -425,7 +433,8 @@ def build(db: Path, out: Path) -> Path:
     (out / "robots.txt").write_text(robots_txt(site))
     day = f"{generated:%Y-%m-%d}"
     legal_day = f"{datetime.strptime(LEGAL_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
+    bot_day = f"{datetime.strptime(BOT_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
     (out / "sitemap.xml").write_text(
-        sitemap_xml(site, {"": day, "catalog/": day, "privacy/": legal_day, "terms/": legal_day})
+        sitemap_xml(site, {"": day, "catalog/": day, "privacy/": legal_day, "terms/": legal_day, "bot/": bot_day})
     )
     return out / "index.html"

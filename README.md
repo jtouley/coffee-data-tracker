@@ -2,6 +2,7 @@
 
 [![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Data license: CDLA-Permissive-2.0](https://img.shields.io/badge/Data-CDLA--Permissive--2.0-blue.svg)](licenses/CDLA-Permissive-2.0.txt)
 
 A weekly catalog of what US specialty roasters sell online, and a phone app that links each espresso shot to a
 coffee in it.
@@ -436,10 +437,9 @@ in `lake.py`, which is where another object store would plug in.
 Four facts-only tables (`dbt/models/public/`): `public_coffee` (attributes, sizes, prices, stock and a link back to
 the roaster), `public_price_event`, `public_market_weekly` and `public_roaster`. Descriptions and images belong to
 the roasters, so they stay in the private lake. The tables leave out opted-out roasters and roasters known only from
-OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole table. The
-`public_tables_are_facts_only` dbt test fails the build if a public table has a column on its denylist:
-descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder and photo
-IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+OpenStreetMap. The `public_tables_are_facts_only` dbt test fails the build if a public table has a column on its
+denylist: descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder
+and photo IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
 
 A directory or Hugging Face export describes itself in `manifest.json`: the release (`release_build_id`,
 `release_run_date`), the contract id and version, the data licence (id and URL) and each file's `sha256` and row
@@ -470,11 +470,18 @@ old one, and writes a description-only change at the same version.
 ### Scraping etiquette
 
 - Each store feed is read once a week, because catalogs change slowly and that keeps the load on small roaster
-  sites low. Requests use a User-Agent that names this project and links to this repo.
+  sites low. Requests identify as `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`;
+  [registry.coffee/bot](https://registry.coffee/bot) says what it crawls and how to opt out.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
   without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
   site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.
-  Catalog requests to a host are at least 1 second apart, platform probes at least 0.5 seconds apart.
+  Requests to a host, robots.txt, catalog fetches and platform probes alike, are at least 1 second apart.
+- robots.txt is read as RFC 9309 says, by our own matcher (`http.RobotsRules`): the groups for `RegistryCoffeeBot`
+  apply, or the `*` group when none names it (product-token matching: case-insensitive, the exact token), and any
+  groups for the old token `coffee-data` apply as well; a URL is fetched only if all of them allow it. The longest
+  matching rule decides (allow on a tie), and `*` and `$` wildcards are honoured. A `Crawl-delay` from those groups
+  replaces the spacing when it is longer, up to 60 seconds: a longer one, or one with no readable number, is capped at
+  60 seconds (`10s` reads as 10), and the cap is recorded in `fetches.crawl_delays`. A host's Crawl-delay is never waited out past the crawl's deadline.
 - Only what a shopper can see is stored, and every coffee links back to its roaster.
 - Roasters who want to be left out can open an issue. The owner records the opt-out with the "Exclude this
   roaster" box on the "Add a roaster" form, and the site is never fetched again.
@@ -529,6 +536,11 @@ with dbt and DuckDB, and logs shots from a phone app, Claude (MCP) and issue for
 
 ## License
 
-The code is released under the [MIT License](LICENSE). Roaster data comes from Overture Maps Places
-(CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap contributors); product names, descriptions and
-images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+The code is released under the [MIT License](LICENSE). The public dataset (the public tables, their exports, the
+site's catalog JSON and the marketplace shares) is released under the
+[Community Data License Agreement – Permissive 2.0](licenses/CDLA-Permissive-2.0.txt) (CDLA-Permissive-2.0).
+
+Roaster discovery uses Overture Maps Places (© Overture Maps Foundation, CDLA-Permissive-2.0) and OpenStreetMap
+(ODbL, © OpenStreetMap contributors); roasters known only from OpenStreetMap are left out of the public tables.
+Product names, descriptions and images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+To cite the dataset, use [`CITATION.cff`](CITATION.cff).
