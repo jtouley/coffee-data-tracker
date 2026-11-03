@@ -1,0 +1,6 @@
+{# The favicon on every page: the SVG for browsers that take one, a PNG for those that don't, and the home-screen
+   icon. Files are in templates/static/, copied to the site root by site.build. `root` is the path back to the site
+   root ("" or "../"). Same-origin, so img-src 'self' in with_csp covers them. -#}
+<link rel="icon" href="{{ root }}favicon-64.png" sizes="64x64" type="image/png">
+<link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ root }}apple-touch-icon.png">

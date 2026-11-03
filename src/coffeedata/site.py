@@ -99,6 +99,16 @@ def support_email() -> str:
     return os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee"
 
 
+# The favicon and logo images (templates/static/, under templates/ so site.yml's deploy trigger covers them), served
+# from the site root as they are.
+STATIC = Path(__file__).parent / "templates" / "static"
+
+
+def copy_static(out: Path) -> None:
+    for f in sorted(STATIC.iterdir()):
+        (out / f.name).write_bytes(f.read_bytes())
+
+
 # --- hardening ------------------------------------------------------------------------------------------
 
 
@@ -260,6 +270,7 @@ def build(db: Path, out: Path) -> Path:
         generated=f"{generated:%B} {generated.day}, {generated:%Y}",
     )
     (out / "index.html").write_text(with_csp(landing))
+    copy_static(out)
     legal = {
         "links": links(),
         "updated": LEGAL_UPDATED,

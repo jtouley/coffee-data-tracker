@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{% endblock %} · registry.coffee</title>
+{% with root = "../" %}{% include "_icons.html" %}{% endwith %}
 <link rel="canonical" href="{{ links.site }}/{% block slug %}{% endblock %}/">
 <meta name="robots" content="index, follow">
 <style>
