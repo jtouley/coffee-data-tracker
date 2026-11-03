@@ -435,6 +435,8 @@ def build(db: Path, out: Path) -> Path:
     legal_day = f"{datetime.strptime(LEGAL_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
     bot_day = f"{datetime.strptime(BOT_UPDATED, '%B %d, %Y'):%Y-%m-%d}"
     (out / "sitemap.xml").write_text(
-        sitemap_xml(site, {"": day, "catalog/": day, "privacy/": legal_day, "terms/": legal_day, "bot/": bot_day})
+        sitemap_xml(
+            site, {"": day, "catalog/": day, "privacy/": legal_day, "terms/": legal_day, "bot/": bot_day}
+        )
     )
     return out / "index.html"
