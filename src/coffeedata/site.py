@@ -14,6 +14,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 from datetime import UTC, datetime
 from html import escape
 from pathlib import Path
@@ -107,6 +108,15 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
 
 def support_email() -> str:
     return os.environ.get("SUPPORT_EMAIL") or "support@registry.coffee"
+
+
+# The favicon and logo images (templates/static/, under templates/ so site.yml's deploy trigger covers them), served
+# from the site root as they are.
+STATIC = Path(__file__).parent / "templates" / "static"
+
+
+def copy_static(out: Path) -> None:
+    shutil.copytree(STATIC, out, dirs_exist_ok=True)
 
 
 # --- hardening ------------------------------------------------------------------------------------------
@@ -383,6 +393,7 @@ def build(db: Path, out: Path) -> Path:
         jsonld=jsonld,
     )
     (out / "index.html").write_text(with_csp(landing))
+    copy_static(out)
     legal = {
         "links": links(),
         "updated": LEGAL_UPDATED,

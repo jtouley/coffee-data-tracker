@@ -445,9 +445,11 @@ def test_site_has_no_shots(lake, tmp_path):
     old_shot(lake, "secretshot", "2026-10-20", coffee_freetext="Private Blend", notes="kitchen notes")
     build(lake, tmp_path).close()
     out = site.build(tmp_path / "coffee.duckdb", tmp_path / "site")
-    # Every file the site writes (landing, catalog, legal pages): none carries a shot's data. (The landing page
-    # does mention that shots can be logged through the MCP server.)
-    text = "".join(p.read_text() for p in out.parent.rglob("*") if p.is_file()).lower()
+    # Every file the site writes (landing, catalog, legal pages, icons): none carries a shot's data. (The landing
+    # page does mention that shots can be logged through the MCP server.) Read as bytes: the icons are PNGs.
+    text = "".join(
+        p.read_bytes().decode(errors="replace") for p in out.parent.rglob("*") if p.is_file()
+    ).lower()
     assert not any(w in text for w in ("secretshot", "private blend", "kitchen notes", "rated "))
     assert "rating by brew ratio" not in text and "recent shots" not in text
 
@@ -476,6 +478,15 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "hf://datasets/someone/us-coffee-market/data/public_coffee.parquet" in landing
     assert "Coffee B Roast" in landing  # a new arrival
     assert 'href="../"' in (out / "catalog" / "index.html").read_text()
+    # The favicon on every page, served from the site root; the old inline bean is gone.
+    for page in ("", "catalog/", "privacy/", "terms/", "bot/"):
+        root = "../" if page else ""
+        html = (out / page / "index.html").read_text()
+        for icon in ("favicon.svg", "favicon-64.png", "apple-touch-icon.png"):
+            assert f'href="{root}{icon}"' in html
+        assert "data:image/svg+xml" not in html
+    for f in ("favicon.svg", "favicon-64.png", "apple-touch-icon.png", "mark-1024.png"):
+        assert (out / f).read_bytes() == (site.STATIC / f).read_bytes()
     # The app's beta: sign in and request an invite from the launch page and the catalog; requests are an email,
     # since the static site collects nothing.
     for html in (landing, (out / "catalog" / "index.html").read_text()):
@@ -554,7 +565,8 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     roasters = {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]}
     assert roasters == {"onyxcoffeelab.com"}
-    text = "".join(p.read_text() for p in out.rglob("*") if p.is_file()).lower()
+    # Read as bytes: the icons are PNGs.
+    text = "".join(p.read_bytes().decode(errors="replace") for p in out.rglob("*") if p.is_file()).lower()
     assert "geometry ethiopia new" in text  # onyx's new arrival is there
     for word in ("osmonly", "osm only", "odbl secret", "vividcoffee", "optedout"):
         assert word not in text, word
@@ -683,6 +695,24 @@ def test_csp_needs_somewhere_to_go():
     assert "Content-Security-Policy" in site.with_csp('<head><meta charset="utf-8"></head><script>x</script>')
     with pytest.raises(ValueError):
         site.with_csp("<head><meta charset=utf-8></head>")
+
+
+def test_site_icons_are_same_origin_under_the_csp(monkeypatch):
+    """The favicon and the link-preview image are files on the site, so img-src 'self' covers them: no data: icon,
+    nothing third-party, and the CSP itself is unchanged."""
+    import re
+
+    from coffeedata import site
+
+    monkeypatch.delenv("SITE_URL", raising=False)
+    html = site.with_csp(_landing())
+    assert "img-src 'self' data:;" in html
+    icons = re.findall(r'<link rel="(?:icon|apple-touch-icon)" href="([^"]+)"', html)
+    assert icons == ["favicon-64.png", "favicon.svg", "apple-touch-icon.png"]
+    assert all((site.STATIC / i).is_file() for i in icons)
+    # og:image must be absolute for link previews; it's the site's own file.
+    assert '<meta property="og:image" content="https://registry.coffee/mark-1024.png">' in html
+    assert (site.STATIC / "favicon.svg").read_text().startswith('<svg xmlns="http://www.w3.org/2000/svg"')
 
 
 @pytest.mark.parametrize(
