@@ -551,7 +551,10 @@ def test_redirect_hops_are_spaced_and_counted(monkeypatch):
 
     with PoliteClient(transport=httpx.MockTransport(respond)) as c, c.track() as stats:
         assert c.get("https://a.com/one").status_code == 200
-    assert starts == [1000.0, 1001.0]
+    assert starts == [
+        1001.0,
+        1002.0,
+    ]  # robots.txt at 1000 is spaced like any request: the first hop waits its turn
     assert stats.requests == 3 and stats.statuses[302] == 1 and stats.pages == 1
 
 

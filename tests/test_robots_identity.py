@@ -27,9 +27,16 @@ PAGE = "https://a.com/products.json"
 
 @pytest.fixture
 def sleeps(monkeypatch):
-    """Every sleep the client asks for, without sleeping."""
+    """Every sleep the client asks for, on a fake clock that each sleep moves on (no real sleeping)."""
     out: list[float] = []
-    monkeypatch.setattr(http.time, "sleep", lambda s: out.append(s))
+    now = [1000.0]
+
+    def sleep(s: float) -> None:
+        out.append(s)
+        now[0] += s
+
+    monkeypatch.setattr(http.time, "monotonic", lambda: now[0])
+    monkeypatch.setattr(http.time, "sleep", sleep)
     return out
 
 
@@ -114,7 +121,8 @@ def test_requests_send_the_new_user_agent(mock, sleeps):
 
 
 def _spacing(mock, sleeps, robots: str, **kw) -> tuple[float, list[dict]]:
-    """The longest wait between two requests to a host with this robots.txt, and the fetch's crawl_delays."""
+    """The longest wait between two requests to a host with this robots.txt (robots.txt, then two pages: each
+    page waits its turn after the request before it), and the fetch's crawl_delays."""
     _robots(mock, robots)
     with PoliteClient(min_interval=1.0, retries=1, **kw) as c, c.track() as stats:
         c.get(PAGE)
@@ -132,7 +140,7 @@ def test_no_crawl_delay_keeps_our_spacing(mock, sleeps):
     [("10", 10.0, False), ("60", 60.0, False), ("61", 60.0, True), ("3600", 60.0, True),
      ("2.5", 2.5, False), ("0.5", 1.0, False)],
 )  # fmt: skip
-def test_crawl_delay_up_to_five_minutes(mock, sleeps, asked, spacing, capped):
+def test_crawl_delay_up_to_sixty_seconds_then_capped(mock, sleeps, asked, spacing, capped):
     wait, delays = _spacing(mock, sleeps, f"User-agent: *\nCrawl-delay: {asked}\n")
     assert spacing - 0.1 < wait <= spacing
     assert delays == [{"host": "a.com", "asked": asked, "applied_s": spacing, "capped": capped}]
@@ -184,23 +192,26 @@ def test_crawl_delay_from_our_group_or_star(mock, sleeps, robots, spacing):
 
 
 def test_a_crawl_delay_is_never_waited_out_past_the_deadline(mock, sleeps):
-    """A 60 s Crawl-delay with 30 s of the run left: the second request's turn falls after the deadline, so the
-    fetch stops at once (DeadlineReached) instead of holding the worker past it."""
+    """A 60 s Crawl-delay with 90 s of the run left: robots.txt, the first page 60 s later, and the second page's
+    turn falls after the deadline, so the fetch stops at once (DeadlineReached) instead of holding the worker."""
     _robots(mock, "User-agent: *\nCrawl-delay: 60\n")
-    with PoliteClient(min_interval=1.0, retries=1, deadline_s=30) as c:
+    with PoliteClient(min_interval=1.0, retries=1, deadline_s=90) as c:
         c.get(PAGE)
         with pytest.raises(DeadlineReached):
             c.get(PAGE)
-    assert max(sleeps, default=0.0) < 1.0
+    assert sleeps == [60.0]
 
 
 def test_a_fetch_stopped_at_the_deadline_still_records_its_crawl_delay(mock, sleeps):
     """crawl_delays explains exactly this row: the fetch DeadlineReached stopped."""
     _robots(mock, "User-agent: *\nCrawl-delay: 60\n")
-    with PoliteClient(min_interval=1.0, retries=1, deadline_s=30) as c, c.track() as stats:
+    # the first page's turn is 60 s after robots.txt: past the deadline
+    with (
+        PoliteClient(min_interval=1.0, retries=1, deadline_s=30) as c,
+        c.track() as stats,
+        pytest.raises(DeadlineReached),
+    ):
         c.get(PAGE)
-        with pytest.raises(DeadlineReached):
-            c.get(PAGE)
     assert stats.crawl_delays == [{"host": "a.com", "asked": "60", "applied_s": 60.0, "capped": False}]
 
 
@@ -367,11 +378,56 @@ def test_a_registrycoffeebot_group_replaces_star_and_coffee_data_still_applies()
         ),
         ("Disallow: /checkout\nDisallow: /collections/*+*", "/collections/a+b", False),
         ("Disallow: /*/collections/*sort_by*", "/en/collections/all?sort_by=price", False),
+        # PR #100's re-review: a `;` in the path is part of it (urlsplit; urlparse moved `;params` out of .path)
+        ("Disallow: /a;b", "/a;b", False),
+        ("Disallow: /*;jsessionid", "/p;jsessionid=1", False),
+        # the re-review: a percent-encoded `*` or `$` is a literal, never wildcard syntax
+        ("Disallow: /f/%2A.json", "/f/x.json", True),
+        ("Disallow: /f/%2A.json", "/f/*.json", False),
+        ("Disallow: /p%24", "/p%24x", False),
+        ("Disallow: /p%24", "/p", True),
+        # the linear matcher: a `$` before the end is a literal; an anchored pattern's last run must end the path
+        ("Disallow: /a$b", "/a", True),
+        ("Disallow: /a$b", "/a$bc", False),
+        ("Disallow: /a*$", "/a/anything", False),
+        ("Disallow: /*a*b$", "/xaybzb", False),
+        ("Disallow: /*a*b$", "/xaybzbc", True),
+        ("Disallow: /*ab*ab$", "/ab", True),  # the two runs can't overlap
+        ("Disallow: /*ab*ab$", "/abab", False),
+        ("Disallow: /$", "/", False),
+        ("Disallow: /$", "/a", True),
     ],
 )
 def test_rfc9309_longest_match_and_wildcards(rules, path, allowed):
     text = "User-agent: RegistryCoffeeBot\n" + rules + "\n"
     assert RobotsRules(text.splitlines()).can_fetch(f"https://x.com{path}") is allowed
+
+
+def test_a_utf8_byte_order_mark_doesnt_hide_the_first_group():
+    rules = RobotsRules("\ufeffUser-agent: *\nDisallow: /\n".splitlines())
+    assert rules.can_fetch("https://x.com/a") is False
+
+
+def test_a_hostile_wildcard_pattern_is_matched_in_linear_time():
+    """The re-review's case: `/*a*a*a*a*a*a*a*X` took 0.34 s per check on a 40-character path as a backtracking
+    regex. can_fetch runs before every request, so a hostile robots.txt must never stall a worker."""
+    import time
+
+    rules = RobotsRules(("User-agent: *\nDisallow: /" + "*a" * 30 + "*X\n").splitlines())
+    url = "https://x.com/" + "a" * 2000
+    start = time.perf_counter()
+    for _ in range(100):
+        assert rules.can_fetch(url) is True
+    assert time.perf_counter() - start < 0.5
+
+
+def test_robots_txt_is_spaced_like_any_request(mock, sleeps):
+    """The /bot page's promise, at least 1 s between requests to a store: robots.txt counts, so the first catalog
+    request waits its turn after it."""
+    _robots(mock, "")
+    with PoliteClient(min_interval=1.0, retries=1) as c:
+        c.get(PAGE)
+    assert sleeps == [1.0]
 
 
 # --- a deadline stop is never an ok fetch with null values -------------------------------------------------------
@@ -408,17 +464,22 @@ def _woo_mock(m: respx.MockRouter) -> None:
 
 
 def test_a_woocommerce_variation_lookup_stopped_at_the_deadline_fails_the_fetch(sleeps):
-    """The review's reproduction: Crawl-delay 30 with 20 s left. Before, both variations came back with a None price
+    """The review's reproduction: Crawl-delay 30, with time for robots.txt and the listing but not for a variation
+    (45 s: robots.txt, the listing at 30 s, the first variation's turn at 60 s). Before, both variations came back with a None price
     and the fetch was an ok row; now the deadline stop fails the fetch, so last week's prices stand."""
     from coffeedata.adapters import woocommerce
 
     roaster = Roaster(roaster_id="w.com", name="W", host="w.com", platform="woocommerce")
     with respx.mock(assert_all_called=False) as m:
         _woo_mock(m)
-        with PoliteClient(min_interval=1.0, retries=1, deadline_s=20) as c, pytest.raises(PartialCatalog) as stop:
+        with (
+            PoliteClient(min_interval=1.0, retries=1, deadline_s=45) as c,
+            pytest.raises(PartialCatalog) as stop,
+        ):
             woocommerce.fetch(c, roaster)
         assert stop.value.items == [] and isinstance(stop.value.__cause__, DeadlineReached)
-        with PoliteClient(min_interval=1.0, retries=1, deadline_s=20) as c:
+        assert [c.request.url.path for c in m.calls] == ["/robots.txt", "/wp-json/wc/store/v1/products"]
+        with PoliteClient(min_interval=1.0, retries=1, deadline_s=45) as c:
             res = ingest.ingest_one(c, roaster)
     assert res.status == "error" and res.items == [] and "DeadlineReached" in (res.error or "")
     assert res.stats.crawl_delays == [{"host": "w.com", "asked": "30", "applied_s": 30.0, "capped": False}]
@@ -432,14 +493,13 @@ def test_a_squarespace_sitemap_stopped_at_the_deadline_is_the_deadline_not_unrea
         m.get("https://sq.com/robots.txt").mock(
             return_value=httpx.Response(200, text="User-agent: *\nCrawl-delay: 60\n")
         )
-        m.get("https://sq.com/").mock(return_value=httpx.Response(200))
         sitemap = m.get("https://sq.com/sitemap.xml").mock(return_value=httpx.Response(404))
-        with PoliteClient(min_interval=1.0, retries=1, deadline_s=30) as c:
-            c.get(
-                "https://sq.com/"
-            )  # the host's first request: the next one's turn is 60 s on, past the deadline
-            with pytest.raises(PartialCatalog) as stop:
-                squarespace.fetch(c, roaster)
+        # robots.txt is the host's first request: the sitemap's turn is 60 s on, past the deadline
+        with (
+            PoliteClient(min_interval=1.0, retries=1, deadline_s=30) as c,
+            pytest.raises(PartialCatalog) as stop,
+        ):
+            squarespace.fetch(c, roaster)
     assert stop.value.items == [] and isinstance(stop.value.__cause__, DeadlineReached)
     assert sitemap.call_count == 0
     assert "sitemap unreadable" not in caplog.text

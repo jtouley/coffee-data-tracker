@@ -8,8 +8,8 @@ import email.utils
 import logging
 import math
 import os
-import re
 import random
+import re
 import threading
 import time
 from collections import Counter
@@ -17,7 +17,7 @@ from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
-from urllib.parse import quote, unquote, urljoin, urlparse
+from urllib.parse import quote, unquote, urljoin, urlparse, urlsplit
 
 import httpx
 
@@ -341,8 +341,9 @@ def _robots_groups(lines: Iterable[str]) -> list[_RobotsGroup]:
     user-agent line are no group's."""
     groups: list[_RobotsGroup] = []
     group, in_rules = None, False
-    for raw in lines:
-        line = raw.split("#", 1)[0].strip()
+    for n, raw in enumerate(lines):
+        # a UTF-8 byte-order mark before the first line would hide its key (`\ufeffUser-agent`), and so its group
+        line = (raw.lstrip("\ufeff") if n == 0 else raw).split("#", 1)[0].strip()
         key, sep, value = line.partition(":")
         if not sep:
             continue
@@ -380,23 +381,45 @@ def _normalize(path: str) -> str:
 class _Rule:
     allow: bool
     pattern: str  # normalized, as written otherwise; its length is its specificity (RFC 9309 2.2.2)
-    regex: re.Pattern[str]
+    parts: tuple[str, ...]  # the normalized literal runs between its `*` wildcards
+    anchored: bool  # a final `$`: the path ends where the pattern does
+
+    def matches(self, target: str) -> bool:
+        """Whether the pattern matches the target from its start, without backtracking: each literal run is searched
+        for once, from where the one before it ended, and taken at its leftmost place (a `*` matches any run, so the
+        leftmost place is always as good as a later one). A regex of `.*`s backtracks, polynomially in the
+        wildcards: a hostile robots.txt (`/*a*a*a*a*a*a*a*X`) could stall a worker on every can_fetch."""
+        first, *rest = self.parts
+        if not rest:
+            return target == first if self.anchored else target.startswith(first)
+        if not target.startswith(first):
+            return False
+        pos = len(first)
+        middle, last = (rest[:-1], rest[-1]) if self.anchored else (rest, None)
+        for part in middle:
+            found = target.find(part, pos)
+            if found < 0:
+                return False
+            pos = found + len(part)
+        return last is None or (len(target) - len(last) >= pos and target.endswith(last))
 
 
 def _rule(kind: str, value: str) -> _Rule | None:
     """An allow or disallow line; None for an empty one (`Disallow:` matches nothing). `*` matches any run of
-    characters and a final `$` anchors the end of the path (RFC 9309 2.2.3); the rest is a literal prefix."""
+    characters and a final `$` anchors the end of the path (RFC 9309 2.2.3); the rest is literal. The pattern is
+    split on its `*`s and final `$` as written, before percent-decoding, so `%2A` and `%24` stay a literal `*`
+    and `$` instead of becoming wildcard syntax."""
     if not value:
         return None
-    pattern = _normalize(value)
-    body, anchored = (pattern[:-1], True) if pattern.endswith("$") else (pattern, False)
-    regex = ".*".join(re.escape(part) for part in body.split("*")) + (r"\Z" if anchored else "")
-    return _Rule(kind == "allow", pattern, re.compile(regex, re.S))
+    body, anchored = (value[:-1], True) if value.endswith("$") else (value, False)
+    parts = tuple(_normalize(part) for part in body.split("*"))
+    return _Rule(kind == "allow", "*".join(parts) + ("$" if anchored else ""), parts, anchored)
 
 
 def _target(url: str) -> str:
-    """The part of a URL robots.txt rules match: its path and query, normalized ("/" for an empty path)."""
-    u = urlparse(url)
+    """The part of a URL robots.txt rules match: its path (with any `;params`: urlsplit, not urlparse, which moves
+    them out of the path) and query, normalized ("/" for an empty path)."""
+    u = urlsplit(url)
     return _normalize((u.path or "/") + (f"?{u.query}" if u.query else ""))
 
 
@@ -405,7 +428,7 @@ def _verdict(rules: list[_Rule], target: str) -> bool:
     allow (the least restrictive). No matching rule allows."""
     best: _Rule | None = None
     for r in rules:
-        if r.regex.match(target) and (
+        if r.matches(target) and (
             best is None or (len(r.pattern), r.allow) > (len(best.pattern), best.allow)
         ):
             best = r
@@ -527,8 +550,6 @@ class PoliteClient:
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
         self._robots: dict[str, RobotsRules | None] = {}
-        # host -> its Crawl-delay record (RequestStats.crawl_delays), for a host whose robots.txt asks one
-        self._delays: dict[str, dict] = {}
         # host -> (when to ask its robots.txt again, why it didn't answer)
         self._robots_down: dict[str, tuple[float, RobotsUnavailable]] = {}
         self._robots_locks: dict[
@@ -657,11 +678,15 @@ class PoliteClient:
                             max(0.0, down[0] - time.monotonic()),
                         )
                     rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
-                    delay = self._crawl_delay(host, rules)
+                    if (delay := self._crawl_delay(host, rules)) is not None and delay["capped"]:
+                        log.warning(
+                            "%s: robots.txt Crawl-delay %r capped at %.0f s",
+                            host,
+                            delay["asked"],
+                            delay["applied_s"],
+                        )
                     with self._lock:
                         self._robots[host] = rules
-                        if delay is not None:
-                            self._delays[host] = delay
                         self._robots_down.pop(host, None)
                         # Known from now on: no robots.txt request left to share.
                         self._robots_locks.pop(host, None)
@@ -676,10 +701,6 @@ class PoliteClient:
             return None
         asked, capped = rules.crawl_delay, rules.crawl_delay > MAX_CRAWL_DELAY
         applied = max(self.min_interval, min(asked, MAX_CRAWL_DELAY))
-        if capped:
-            log.warning(
-                "%s: robots.txt Crawl-delay %r capped at %.0f s", host, rules.crawl_delay_asked, applied
-            )
         return {"host": host, "asked": rules.crawl_delay_asked, "applied_s": applied, "capped": capped}
 
     def _disallows_site(self, url: str) -> bool:
@@ -757,7 +778,7 @@ class PoliteClient:
         """Wait for the host's turn: min_interval after its last request, or its robots.txt Crawl-delay (up to
         MAX_CRAWL_DELAY) when that is longer. A Crawl-delay turn that falls after the deadline isn't waited for:
         DeadlineReached, at once, so a slow store never holds a worker past the deadline."""
-        delay = self._delays.get(host)
+        delay = self._crawl_delay(host, self._robots.get(host))  # derived from the host's rules: one source
         interval = delay["applied_s"] if delay else self.min_interval
         if delay and (stats := getattr(self._local, "stats", None)) is not None:
             stats.note_delay(delay)  # before the deadline check: a fetch it stops is the one this explains
@@ -772,17 +793,15 @@ class PoliteClient:
         if due > now:
             time.sleep(due - now)
 
-    def _send_retrying(
-        self, url: str, params: dict | None = None, spaced: bool = True, page: bool = True
-    ) -> httpx.Response:
+    def _send_retrying(self, url: str, params: dict | None = None, page: bool = True) -> httpx.Response:
         """_send with the client's retries: the last response (a RETRY_STATUSES one once retries run out), or the
-        last attempt's network error. spaced: per-host spacing before each attempt. Every attempt is counted in
+        last attempt's network error. Every attempt, robots.txt's too, waits its per-host turn (_wait_turn), so a
+        store's first catalog request comes at least min_interval after its robots.txt. Every attempt is counted in
         the thread's RequestStats; page: whether a 200 counts as a page (robots.txt doesn't)."""
         host = urlparse(url).netloc
         for attempt in range(self.retries):
             last = attempt == self.retries - 1
-            if spaced:
-                self._wait_turn(host)
+            self._wait_turn(host)
             if self.deadline is not None and time.monotonic() >= self.deadline:
                 raise DeadlineReached(f"the run's deadline passed before {url}")
             asked: float | None = None  # the response's Retry-After, in seconds
@@ -823,7 +842,7 @@ class PoliteClient:
         for hop in range(MAX_REDIRECTS + 1):
             if not robots and not self._allowed(url):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
-            r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
+            r = self._send_retrying(url, params, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
                 r.history = history
                 return r

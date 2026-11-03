@@ -455,7 +455,7 @@ old one, and writes a description-only change at the same version.
 - `robots.txt` is followed, and a 401 or 403 on it counts as "disallow everything". Nothing is fetched from a site
   without its rules: if `robots.txt` answers 429, 430 or 5xx, or can't be fetched at all, even after retries, the
   site is skipped and asked again 15 minutes later, so a site whose `robots.txt` never answers is never crawled.
-  Requests to a host, catalog fetches and platform probes alike, are at least 1 second apart.
+  Requests to a host, robots.txt, catalog fetches and platform probes alike, are at least 1 second apart.
 - robots.txt is read as RFC 9309 says, by our own matcher (`http.RobotsRules`): the groups for `RegistryCoffeeBot`
   apply, or the `*` group when none names it (product-token matching: case-insensitive, the exact token), and any
   groups for the old token `coffee-data` apply as well; a URL is fetched only if all of them allow it. The longest
