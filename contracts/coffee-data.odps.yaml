@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.2.1
+version: 2.2.2
 status: active
 domain: coffee
 description:
@@ -15,14 +15,68 @@ description:
   limitations: >-
     Built from roasters' public stores, weekly. The raw lake is append-only and every table is derived from it,
     so any past release can be rebuilt.
-tags: [coffee, specialty-coffee, prices, weekly]
+tags: [coffee, specialty-coffee, prices, weekly, open-data]
+authoritativeDefinitions:
+  - type: license
+    url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
+    description: >-
+      CDLA-Permissive-2.0, the licence of the public data (the public tables, their exports, the site's catalog JSON
+      and the marketplace shares). The code is MIT.
+  - type: attribution
+    url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+    description: Data attribution (Overture Maps, OpenStreetMap, roasters' storefronts).
+inputPorts:
+  - name: overture-maps-places
+    tags: [roaster-discovery]
+    customProperties:
+      - property: description
+        value: >-
+          Overture Maps Places, read monthly to discover US roasters. Each registry row records the release it came
+          from (source overture-<release>).
+      - property: license
+        value: CDLA-Permissive-2.0
+    authoritativeDefinitions:
+      - type: canonicalUrl
+        url: https://docs.overturemaps.org/guides/places/
+        description: Overture Maps Places (© Overture Maps Foundation).
+  - name: openstreetmap
+    tags: [roaster-discovery]
+    customProperties:
+      - property: description
+        value: >-
+          OpenStreetMap via the Overpass API, read to discover US roasters (registry source osm). Roasters known only
+          from OpenStreetMap are excluded from the public tables (dbt/models/public/public_roaster.sql).
+      - property: license
+        value: ODbL-1.0
+      - property: inPublicTables
+        value: false
+    authoritativeDefinitions:
+      - type: canonicalUrl
+        url: https://www.openstreetmap.org/copyright
+        description: © OpenStreetMap contributors.
+  - name: roaster-storefronts
+    tags: [product-catalogs]
+    customProperties:
+      - property: description
+        value: >-
+          Each roaster's own public storefront feed, read weekly following robots.txt: Shopify /products.json, the
+          WooCommerce Store API, Squarespace collection JSON, Square Online, or schema.org Product markup. Only
+          facts a shopper sees are published, each coffee linked back to its roaster by source_url; product
+          descriptions and images belong to the roasters and are not published.
+    authoritativeDefinitions:
+      - type: implementation
+        url: https://github.com/jtouley/coffee-data-tracker/blob/main/docs/ATTRIBUTION.md
+        description: How product catalogs are read and attributed.
 outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.2.1
+    version: 2.2.2
     contractId: coffee-data-public-catalog
 customProperties:
+  - property: license
+    value: CDLA-Permissive-2.0
+    description: SPDX identifier of the public data's licence (licenses/CDLA-Permissive-2.0.txt). The code is MIT.
   - property: glossary
     value:
       bag (public tables): One size option of a coffee in a store's catalog, e.g. a 10 oz or 2 lb bag. Stores give
@@ -71,6 +125,24 @@ customProperties:
           public_roaster holds only published roasters (not the whole registry), and public_price_event.roaster_id
           names public_roaster.roaster_id. No table, column, type, enum or rule changed. The data license is still
           the owner's decision (CDLA-Permissive-2.0 proposed); the code is MIT.
+      - topic: data licence and contract metadata
+        decided: "2026-11-02"
+        outcome: >-
+          The owner decided the public data's licence: CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt),
+          covering the public tables, their exports, the site's catalog JSON and the marketplace shares; the code stays MIT. The
+          public-catalog contract goes to 2.2.2, a patch (documentation only, additive): a license authoritative
+          definition and SPDX id, servers (the public Hugging Face dataset and the Snowflake share, both planned),
+          team, tags, and units as customProperties (currency USD per ISO 4217 on price columns; UCUM g and m on
+          bag sizes and elevations; per 100.g on per-100 g prices). This product gains inputPorts (Overture Maps
+          Places, OpenStreetMap, excluded from the public tables, and roaster storefronts), a team, a licence and
+          attribution. No table, column, type, enum or rule changed, so Snowflake needs no migrate: its load
+          compares column names only and its comments read descriptions only.
+team:
+  name: registry.coffee
+  members:
+    - username: jtouley
+      name: Jason Touleyrou
+      role: owner
 support:
   - channel: issues
     url: https://github.com/jtouley/coffee-data-tracker/issues
