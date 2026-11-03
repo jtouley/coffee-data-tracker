@@ -330,7 +330,9 @@ def test_public_tables_are_facts_only_and_filtered(lake, tmp_path):
 
     out = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "public"))
     assert out["tables"]["public_coffee"] == 1
-    assert sorted(p.name for p in (tmp_path / "public").iterdir()) == [
+    # The licence text travels with the data, as LICENSE, once the repository has it (public.license_file()).
+    assert (tmp_path / "public" / "LICENSE").is_file() == (public.license_file() is not None)
+    assert sorted(p.name for p in (tmp_path / "public").iterdir() if p.name != "LICENSE") == [
         "manifest.json",
         "public_coffee.parquet",
         "public_market_weekly.parquet",
@@ -501,6 +503,9 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
     assert "add-roaster.yml" not in bot and "at least 1 second apart" in bot and "platform" in bot
     assert 'href="mailto:support@registry.coffee"' in bot
     assert 'href="bot/"' in landing and 'href="../bot/"' in (out / "privacy" / "index.html").read_text()
+    # sitemap.xml lists every page the site writes
+    written = sorted(str(p.parent.relative_to(out)) for p in out.rglob("index.html"))
+    assert written == sorted((page.rstrip("/") or ".") for page in site.PAGES)
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     assert catalog["rows"]
     app = (out / "catalog" / "index.html").read_text()
@@ -508,6 +513,100 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert "javascript:" not in html
         assert "Content-Security-Policy" in html and "script-src 'sha256-" in html
     assert None in [r[catalog["columns"].index("url")] for r in catalog["rows"]]  # the javascript: link
+
+
+def test_site_shows_only_the_public_roasters(lake, tmp_path):
+    """The site lists the same roasters as public_roaster: a roaster known only from OpenStreetMap (ODbL) or opted
+    out appears nowhere on it, not in the catalog JSON, the new arrivals, the charts or the counts."""
+    from coffeedata import site
+
+    now = datetime(2026, 10, 1, tzinfo=UTC)
+    lake.write(
+        "registry",
+        "registry/source=osm/x.parquet",
+        [{"added_at": now, "source": "osm", "roaster_id": "osmonly.coffee", "name": "OSM Only"}],
+    )
+    lake.write(
+        "registry",
+        "registry/source=manual/y.parquet",
+        [{"added_at": now, "source": "manual", "roaster_id": "vividcoffee.com", "opted_out": True}],
+    )
+    for rid, title in (
+        ("onyxcoffeelab.com", "Geometry Ethiopia"),
+        ("osmonly.coffee", "Odbl Secret Kenya"),
+        ("vividcoffee.com", "Optedout Ethiopia"),
+    ):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A", title=title)])
+        run(lake, "2026-10-26", rid, [product("A", 22.0, title=title), product("N", title=f"{title} New")])
+    con = build(lake, tmp_path, build_id="20261027T060000-abcdef", as_of_run="2026-10-26", **ANY_RUN)
+    # The OSM-only roaster's coffees are in dim_coffee (the private lake); only public_roaster leaves it out.
+    assert (
+        con.execute("select count(*) from dim_coffee where roaster_id = 'osmonly.coffee'").fetchone()[0] == 2
+    )
+    assert {r[0] for r in con.execute("select roaster_id from public_roaster").fetchall()} == {
+        "onyxcoffeelab.com"
+    }
+    con.close()
+
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    roasters = {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]}
+    assert roasters == {"onyxcoffeelab.com"}
+    text = "".join(p.read_text() for p in out.rglob("*") if p.is_file()).lower()
+    assert "geometry ethiopia new" in text  # onyx's new arrival is there
+    for word in ("osmonly", "osm only", "odbl secret", "vividcoffee", "optedout"):
+        assert word not in text, word
+    # The release this site shows, in the catalog's header and the Dataset JSON-LD.
+    assert catalog["release"] == {
+        "release_build_id": "20261027T060000-abcdef",
+        "release_run_date": "2026-10-26",
+        "contract": f"coffee-data-public-catalog@{public_contract_version()}",
+        "license": "CDLA-Permissive-2.0",
+        "license_url": "https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt",
+    }
+    assert list(catalog) == ["release", "columns", "rows"]
+    landing = (out / "index.html").read_text()
+    assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
+
+
+# A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).
+ANY_RUN = {"min_attempted_share": 0, "min_ok_share": 0}
+
+
+def public_contract_version() -> str:
+    import yaml
+
+    return str(yaml.safe_load((ROOT / "contracts" / "public-catalog.odcs.yaml").read_text())["version"])
+
+
+def test_public_export_describes_its_release(lake, tmp_path):
+    """manifest.json names the release, contract and licence, and each file's sha256 and row count."""
+    import hashlib
+
+    from coffeedata import public
+
+    run(lake, "2026-10-26", "onyxcoffeelab.com", [product("A"), product("B", 18.0)])
+    build(lake, tmp_path, build_id="20261027T060000-abcdef", as_of_run="2026-10-26", **ANY_RUN).close()
+    out = public.export(tmp_path / "coffee.duckdb", str(tmp_path / "public"))
+    manifest = json.loads((tmp_path / "public" / "manifest.json").read_text())
+    assert manifest["release_build_id"] == out["release_build_id"] == "20261027T060000-abcdef"
+    assert manifest["release_run_date"] == "2026-10-26" and manifest["as_of_run"] == "2026-10-26"
+    assert manifest["contract"] == {"id": "coffee-data-public-catalog", "version": public_contract_version()}
+    assert manifest["license"]["id"] == "CDLA-Permissive-2.0" and manifest["license"]["url"].endswith(
+        "/licenses/CDLA-Permissive-2.0.txt"
+    )
+    assert sorted(manifest["files"]) == sorted(f"{t}.parquet" for t in public.PUBLIC_TABLES)
+    for name, f in manifest["files"].items():
+        data = (tmp_path / "public" / name).read_bytes()
+        assert f["sha256"] == hashlib.sha256(data).hexdigest()
+        assert f["rows"] == manifest["tables"][name.removesuffix(".parquet")]
+        assert (
+            f["rows"]
+            == duckdb.connect().execute(f"select count(*) from '{tmp_path / 'public' / name}'").fetchone()[0]
+        )
+    assert manifest["files"]["public_coffee.parquet"]["rows"] == 2
 
 
 @pytest.mark.parametrize(
@@ -571,10 +670,11 @@ def test_landing_counts_dc_and_puerto_rico_apart_from_the_states(states, has_dc,
     assert text in _landing(states=states, has_dc=has_dc, has_pr=has_pr)
 
 
-def test_site_fallback_query_path_is_escaped_once():
+def test_landing_hides_the_query_section_without_a_hugging_face_export():
+    # No PUBLIC_EXPORT_URL (or one that isn't hf://): no path to query, so no "Query it from anywhere" and no
+    # placeholder path a reader could copy.
     html = _landing()
-    assert "hf://datasets/&lt;owner&gt;/&lt;name&gt;/data/public_coffee.parquet" in html
-    assert "&amp;lt;" not in html
+    assert "Query it from anywhere" not in html and "hf://" not in html and "&lt;owner&gt;" not in html
 
 
 def test_csp_needs_somewhere_to_go():

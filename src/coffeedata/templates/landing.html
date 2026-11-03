@@ -11,6 +11,8 @@
 <meta property="og:url" content="{{ links.site }}/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#f4efe6">
+{% if jsonld %}{{ jsonld }}
+{% endif -%}
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='10' ry='13' transform='rotate(30 16 16)' fill='%233b2416'/%3E%3Cpath d='M10 7c6 5 6 13 12 18' stroke='%23e9c79c' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 {% include "_brand.css" %}
@@ -222,6 +224,8 @@ footer p { margin: 0 0 8px; max-width: 46em; }
   </div>
 </section>
 
+{# Only with a public Hugging Face export (PUBLIC_EXPORT_URL): without one there is no path to query. #}
+{% if links.hf_path %}
 <section aria-labelledby="query">
   <div class="split">
     <div>
@@ -242,7 +246,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 <pre id="sql" tabindex="0" aria-label="Example DuckDB query"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
 <span class="kw">select</span> roaster_name, title, price_per_100g, url
 <span class="kw">from</span>
-  '{{ links.hf_path or "hf://datasets/<owner>/<name>/data" }}/public_coffee.parquet'
+  '{{ links.hf_path }}/public_coffee.parquet'
 <span class="kw">where</span> origin_country = 'Ethiopia'
   <span class="kw">and</span> process = 'washed' <span class="kw">and</span> in_stock
 <span class="kw">order by</span> price_per_100g
@@ -250,6 +254,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     </div>
   </div>
 </section>
+{% endif %}
 
 <section aria-labelledby="roasters">
   <div class="split">

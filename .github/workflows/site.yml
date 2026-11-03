@@ -1,7 +1,9 @@
-# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates or site.py change
-# on main, so a copy or layout change doesn't wait for the week. It renders the release customers get now (the served
-# release), never a fresh build of the lake: that would re-run the release checks on the newest run, which may have
-# failed them. It reads the lake but never writes to it, and never contacts a roaster.
+# Rebuild and deploy the public site: each Tuesday after the Cloud Run build, and when its templates, site.py,
+# public.py or the public contract change on main, so a copy or layout change doesn't wait for the week. Everything
+# `coffeedata site` writes to build/site is deployed: the pages, catalog/catalog.json, robots.txt and sitemap.xml.
+# It renders the release customers get now (the served release), never a fresh build of the lake: that would re-run
+# the release checks on the newest run, which may have failed them. It reads the lake but never writes to it, and
+# never contacts a roaster.
 #
 # The Tuesday run also does what weekly.yml did after a passing build, from the same served release: the facts-only
 # public export (PUBLIC_EXPORT_URL, a separate dataset or bucket, not the lake) and the Snowflake load. The weekly
@@ -20,7 +22,14 @@ on:
     - cron: "17 11 * * 2"  # Tuesdays, after the Cloud Run build (06:17, ends by 10:17)
   push:
     branches: [main]
-    paths: ["src/coffeedata/templates/**", "src/coffeedata/site.py", ".github/workflows/site.yml"]
+    # The contract and public.py too: the pages' schema.org Dataset (JSON-LD) and catalog.json's release header are
+    # built from them.
+    paths:
+      - "src/coffeedata/templates/**"
+      - "src/coffeedata/site.py"
+      - "src/coffeedata/public.py"
+      - "contracts/public-catalog.odcs.yaml"
+      - ".github/workflows/site.yml"
   workflow_dispatch:
 permissions:
   contents: read
@@ -100,24 +109,33 @@ jobs:
           EOF
       # After the site artifact is uploaded and the check passes, so neither step holds back the site. Both read the
       # served release that the site step just materialized (build/served.duckdb); nothing is crawled or rebuilt.
+      # build/public is what Snowflake loads; the PUBLIC_EXPORT_URL copy is a step of its own, so a failure there
+      # (such as the Hugging Face release tag, made after the data is committed) fails the job but doesn't skip the
+      # Snowflake load.
       - name: Export the public tables from the served release
+        id: export
         if: github.event_name == 'schedule' && steps.site.outputs.served == 'true'
+        timeout-minutes: 10
+        run: uv run coffeedata export-public --to build/public
+      - name: Publish the export to PUBLIC_EXPORT_URL
+        if: >-
+          steps.export.outcome == 'success' && vars.PUBLIC_EXPORT_URL != ''
+          && vars.PUBLIC_EXPORT_URL != 'build/public'
         timeout-minutes: 20
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}  # for an hf:// PUBLIC_EXPORT_URL
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ vars.AWS_REGION }}
-        run: |
-          uv run coffeedata export-public --to build/public
-          if [ -n "$PUBLIC_EXPORT_URL" ] && [ "$PUBLIC_EXPORT_URL" != build/public ]; then
-            uv run coffeedata export-public --to "$PUBLIC_EXPORT_URL"
-          fi
+        run: uv run coffeedata export-public --to "$PUBLIC_EXPORT_URL"
       # Optional: load the public tables into Snowflake each week (marketplace/snowflake/README.md). A contract
       # change that needs --migrate turns this red without holding back the site; run weekly.yml with
-      # snowflake_migrate for that.
+      # snowflake_migrate for that. It runs whenever build/public was exported, even if the publish step failed;
+      # that step's failure still turns the job red.
       - name: Load Snowflake
-        if: github.event_name == 'schedule' && steps.site.outputs.served == 'true' && vars.SNOWFLAKE_ACCOUNT != ''
+        if: >-
+          !cancelled() && github.event_name == 'schedule' && steps.export.outcome == 'success'
+          && vars.SNOWFLAKE_ACCOUNT != ''
         timeout-minutes: 30  # the deploy job waits for this one, so a hung load mustn't hold the site for hours
         env:
           SNOWFLAKE_ACCOUNT: ${{ vars.SNOWFLAKE_ACCOUNT }}
