@@ -670,10 +670,11 @@ def test_landing_counts_dc_and_puerto_rico_apart_from_the_states(states, has_dc,
     assert text in _landing(states=states, has_dc=has_dc, has_pr=has_pr)
 
 
-def test_site_fallback_query_path_is_escaped_once():
+def test_landing_hides_the_query_section_without_a_hugging_face_export():
+    # No PUBLIC_EXPORT_URL (or one that isn't hf://): no path to query, so no "Query it from anywhere" and no
+    # placeholder path a reader could copy.
     html = _landing()
-    assert "hf://datasets/&lt;owner&gt;/&lt;name&gt;/data/public_coffee.parquet" in html
-    assert "&amp;lt;" not in html
+    assert "Query it from anywhere" not in html and "hf://" not in html and "&lt;owner&gt;" not in html
 
 
 def test_csp_needs_somewhere_to_go():

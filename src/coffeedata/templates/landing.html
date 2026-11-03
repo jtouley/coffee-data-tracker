@@ -224,6 +224,8 @@ footer p { margin: 0 0 8px; max-width: 46em; }
   </div>
 </section>
 
+{# Only with a public Hugging Face export (PUBLIC_EXPORT_URL): without one there is no path to query. #}
+{% if links.hf_path %}
 <section aria-labelledby="query">
   <div class="split">
     <div>
@@ -244,7 +246,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
 <pre id="sql" tabindex="0" aria-label="Example DuckDB query"><span class="c">-- duckdb: cheapest washed Ethiopians in stock</span>
 <span class="kw">select</span> roaster_name, title, price_per_100g, url
 <span class="kw">from</span>
-  '{{ links.hf_path or "hf://datasets/<owner>/<name>/data" }}/public_coffee.parquet'
+  '{{ links.hf_path }}/public_coffee.parquet'
 <span class="kw">where</span> origin_country = 'Ethiopia'
   <span class="kw">and</span> process = 'washed' <span class="kw">and</span> in_stock
 <span class="kw">order by</span> price_per_100g
@@ -252,6 +254,7 @@ footer p { margin: 0 0 8px; max-width: 46em; }
     </div>
   </div>
 </section>
+{% endif %}
 
 <section aria-labelledby="roasters">
   <div class="split">
