@@ -75,8 +75,8 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
   crowded out by shared words now match (#57).
 - Site: copy fixes (#26). The site workflow renders the served release (#59) and skips while nothing is served
-  (#65). Without a Hugging Face export the launch page leaves out "Query it from anywhere", not a placeholder
-  path (#89).
+  (#65). Without a Hugging Face export the launch page leaves out its "Query it from anywhere" section (the
+  example query and the how-it's-built steps beside it) rather than show a placeholder path (#89).
 - Issue forms: the add-roaster form reads a state as a code or a full name (#28).
 - Lake: a table with no folder on Hugging Face reads as empty (#31), and a remote table is read only once the
   dataset has its folder (#47).
