@@ -272,6 +272,42 @@ Every design got the same fixes, and they are in this PR:
 - per-store backoff and deferred rounds (#62). A store refused on every try is labelled `refused`.
 - **A's burst rule**: only a store's first block in a run counts towards a platform-wide pause, and a 430 still
   pauses the platform (section 13).
+- **No store is given up on after one block (PR #98, owner's decision).** On every connector, a 429, 430 or 503, on
+  robots.txt, a sitemap, a catalog page, a product page or a WooCommerce variation lookup, is a pause, never a
+  failure for the week. So is a 500, 502 or 504 whose Retry-After is over 30 s (`http.server_pause`):
+  - the client tries each URL 3 times, waiting each response's Retry-After (else 1 s, then 2 s). A Retry-After over
+    30 s (`http.MAX_RETRY_WAIT`) is never cut short: the client stops, and the store is deferred;
+  - a deferred store gets the run's 2 deferred rounds (3 attempts in all), each no sooner than its Retry-After or
+    a 60 s, then 120 s, backoff (`ingest.DEFERRED_BACKOFFS`), and never later than 5 minutes (below). Only then does
+    it end failed, for the next pass;
+  - Shopify's catalog pages keep the page backoffs above, then parking. A 430 is backed off like a 429; only a 401
+    or 403 is a refusal (`StoreBlocked`);
+  - Shopify and Squarespace have shared limiters (`Connector.rps`), set up alike: burst counting, the run's earlier
+    blocks, and page-backoff stores kept out of bursts. A store's own pause lasts its Retry-After, up to 5 minutes.
+    In the deferred rounds a worker waits out pauses up to `max_cooldown` (120 s); a longer one defers the store
+    again. The shared limiter applies through `connectors.crawl` only: `cmd_ingest` (the weekly fallback) and
+    `crawl-retry` pass no `platform_rps`, so Squarespace has no shared budget there (as on `main`);
+  - a robots.txt block is remembered for its Retry-After (else 60 s, at most 5 minutes), not for
+    `ROBOTS_RETRY_AFTER`. A robots.txt answering 204, or any 2xx that isn't a challenge, is the file (RFC 9309
+    2.3.1.1: a 204 has no rules, so everything is allowed); a challenge stays "unavailable";
+  - a Squarespace sitemap that still answers 429 or 503 on the store's last deferred round falls back to the common
+    shop paths, so its catalog isn't lost every week; no products there is an error, never an empty catalog;
+  - the hard limits stay: robots.txt rules, Retry-After, and an edge's challenge (below) is never retried or
+    deferred.
+- **The 5-minute rule (owner's decision on PR #98's final review): we never wait more than 5 minutes for anything a
+  store asks for.** In the owner's words: "they can contact us for why, but we'll wait 5 minutes." A Retry-After on
+  the catalog or on robots.txt (in seconds or as an HTTP date), the limiter's pause for one store
+  (`HostRateLimited`), a 5xx's long Retry-After and a Shopify page backoff are all cut to 300 s
+  (`http.MAX_STORE_WAIT`, applied by `http.store_wait`). A store asking for longer is waited for 300 s and asked
+  again in the next deferred round: never failed just for asking, and never asked sooner than 300 s. Before this, one
+  store answering `Retry-After: 7200` held a run without a deadline for 4 hours of deferred rounds. Two guards keep a
+  job inside its window as well:
+  - a deferred retry or a page backoff is never scheduled past the run's deadline: the store keeps its error row
+    for the next pass (`deferred.past_deadline`), and a Shopify store with pages is parked at once for crawl-retry;
+  - every pass has a deadline that fits its 240-minute timeout: the crawls and `crawl-retry` stop starting stores
+    at 225 minutes (`Connector.deadline_min`; `cli.CRAWL_RETRY_MIN` without `--connector`), and the weekly
+    fallback's two ingest passes at 150 minutes from the run's start (`cli.WEEKLY_CRAWL_MIN`), which leaves
+    enrichment, classify's 45-minute wait, the build and the export inside weekly.yml's 240 minutes.
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 
@@ -302,9 +338,11 @@ Why:
 
 One image (`ingest.Dockerfile`: the CLI, dbt and the registry seed, pushed to the app's Artifact Registry
 repository, built with Cloud Build). Each job's task timeout is 240 min (the strict limit used in every sim).
-maxRetries is 0 for every crawl job and 1 for the rest: a crawl that stops at its deadline exits 0 and reports
-`deadline` in `job_manifests`, and a second attempt of a failed crawl would only re-ask the stores that just
-refused; its resume slot (or crawl-retry) picks up the rest.
+maxRetries is 0 for Shopify's crawl jobs (`crawl-shopify`, its default-egress arm, `crawl-retry`) and 1 for every
+other job, the other connectors' crawls included (section 7.1). A crawl that stops at its deadline exits 0 and
+reports `deadline` in `job_manifests`, so only a crawl that died is retried. A second attempt of a failed Shopify
+crawl would re-ask the stores that just refused, on the one NAT IP, so its resume slot (or crawl-retry) picks up the
+rest instead.
 
 | Job | Command | Network | Scheduler (UTC) |
 |---|---|---|---|
@@ -312,13 +350,13 @@ refused; its resume slot (or crawl-retry) picks up the rest.
 | `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
 | `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
 | `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
-| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` | default | Mon 09:17, resume 15:17 (with Shopify) |
+| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` (a re-run resumes) | default | Mon 09:17, resume 15:17 (with Shopify), third pass 21:47 |
 | `merge` | `merge` | default | Tue 03:17 |
 | `enrich-week` | `enrich-week --submit` | default | Tue 04:17 |
 | `build` | `classify`, `build`, `publish`, `egress-check` | default | Tue 06:17 |
 | `crawl-shopify-default-egress` | `crawl --connector shopify` | default | never: the confirmation run's control arm |
 
-That is 16 Scheduler entries. They are anchored at the weekly baseline (Monday 09:17 UTC, as `weekly.yml` today),
+That is 20 Scheduler entries. They are anchored at the weekly baseline (Monday 09:17 UTC, as `weekly.yml` today),
 and `ingest_schedule_enabled` switches all of them off for the confirmation run.
 
 **The week (all UTC).** Every connector crawls on Monday, at the same time, so the release is stamped Monday (the
@@ -332,7 +370,7 @@ Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on 
 | Mon 07:17 | `probe` | stale roasters' platforms, publish | 11:17 |
 | Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on the NAT IP, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
 | Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |
-| Mon 21:47 | `crawl-retry` | Shopify's parked stores, on the NAT IP | Tue 01:47 |
+| Mon 21:47 | `crawl-retry` and the four `*-retry` entries | the third pass: Shopify's parked stores, on the NAT IP (`crawl-retry`); every other connector's own crawl job again, on default egress, resuming every roaster without an ok fetch this week | Tue 01:47 |
 | Tue 03:17 | `merge` | every connector's partition for Monday's week into the lake's tables | 07:17 |
 | Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (otherwise it reports `waiting` and sends nothing: run it again by hand) | 08:17 |
 | Tue 06:17 | `build` | verdicts, build + gate, publish, egress-check | 10:17 |
@@ -343,7 +381,9 @@ enrichment and build on Tuesday resolve the same Monday, so the merge finds each
 between merge, enrichment and build are the ones the Sunday slots had (1 h, then 2 h).
 
 **Five crawls at once.** They share no process and no instance: each job is its own Cloud Run execution (one task,
-2 vCPU, 2 GiB, 240 min), so Monday 09:17 runs 5 tasks (10 vCPU, 10 GiB), 6 if the probe is still running. Each
+2 vCPU, 2 GiB, 240 min; `crawl-generic` 8 GiB since its OOM kill, section 7.1), so Monday 09:17 runs 5 tasks
+(10 vCPU, 16 GiB), 6 if the probe is still running. A job's memory is set per job (`ingest_job_memory` overrides
+the default in `local.ingest_jobs`). Each
 writes only its own partition (`raw/connector=X/run_date=W/`), its own `job_manifests` attempt files and parked files
 named by roaster (only Shopify parks: `PageBlocked` is Shopify's); the staging bucket is shared, but no two jobs write
 the same path. Each job's `publish` uploads every staged lake file it finds, other jobs' included: a file another
@@ -361,9 +401,100 @@ lake reads off the NAT would need a split egress (`PRIVATE_RANGES_ONLY` would mo
 IP too); not worth it unless ports run out again.
 
 raw/ and parked/ live in a GCS bucket mounted at `COFFEEDATA_STAGING`. They are never published to HF (they aren't
-lake tables), so parked progress survives between jobs and the merge empties raw/. Prefect is out for now: the jobs
+lake tables), so parked progress survives between jobs and the merge empties raw/.
+
+**Merged partitions are kept 30 days** (the owner's decision), under `archive/` in the same bucket:
+`archive/raw/connector=X/run_date=W/merge=<batch>/<table>.parquet`, where `<batch>` is the merge's batch id
+(`job_manifests.detail.batch`, and the lake files it wrote). The merge moves exactly the files it read, after
+compacting them, so the archive holds those bytes, and the rows it wrote are those rows minus any the lake already had.
+A lifecycle rule on the bucket (`ingest_staging` in `ingestion.tf`) deletes objects under `archive/` 30 days after
+they are created; GCSFuse renames by copy and delete, so that is 30 days after the merge. Recovery is RUNBOOK §5.
+
+Why a separate prefix, not the partitions kept in place with a marker: everything that decides what is unmerged
+looks for `raw/connector=*/run_date=W/` (crawl resume and compaction, `PartitionLake.sources`, the merge's `present`,
+the post-crawl check), so a kept partition would need every one of them, and the open branches that add more, to
+check a marker, or it is merged twice, counted twice or crawled as unfinished. Moved out of `raw/`, a merged week
+looks to all of them exactly as it did when the merge deleted it. `archive/` is not a lake table, so a publish
+never sends it to HF and dbt's globs never see it. The move is file by file (`os.replace`): GCSFuse has no
+directory rename without a hierarchical namespace, which the bucket doesn't have, and no chmod. Each merge gets its
+own `merge=<batch>` folder, so a re-run merge (a late connector, or a resume after the merge) never overwrites an
+earlier archive. Whatever else is in a partition was never merged (an arm's `slice=*/`) and is still removed, as
+before. A local lake (no bucket) keeps `archive/` until it is deleted by hand.
+
+Prefect is out for now: the jobs
 are containers, so adding it later is a wrapper. Add it only if the dependencies outgrow time-based triggers plus
 the manifest table.
+
+### 7.1 When a crawl dies (crawl hardening, 2026-11-02)
+
+On 2026-11-02 `crawl-generic` (696 roasters) was OOM-killed at 2 GiB about 7 minutes in ("The configured memory
+limit was reached", signal 9), with no end row in `job_manifests` (attempt 20261102T091918-3caad3). Three things
+change.
+
+**Memory.** Measured on a fake generic crawl (local lake, `httpx.MockTransport`, 32 workers; tracemalloc and RSS
+sampled every 0.5 s):
+
+| Scenario | main: peak RSS | now: peak RSS |
+|---|---|---|
+| 400 stores × 80 product pages of ~300 KB | 1,061 MB, still rising at the end | 464 MB, flat after the first chunk |
+| 64 stores with a ~20 MB sitemap each | 1,429 MB | 268 MB |
+| 40 stores, one serving 400 MB product pages | 7,412 MB | 219 MB (that store fails, `ResponseTooLarge`) |
+
+Memory grew across roasters, not on one page: every httpx response refers to itself through its stream (a
+reference cycle), so each page body (bytes and decoded text) waited for Python's full garbage collection, and 32
+workers' pages piled up between collections. `PoliteClient` now reads each body itself, breaks the cycle once it is
+read, and caps it at 32 MiB decompressed (`COFFEEDATA_MAX_RESPONSE_MB`; by content-length first, else counted as it
+is read): a bigger response fails that roaster's fetch, never retried, and a robots.txt over it is remembered as
+unavailable for 15 minutes, like a 5xx. Sitemaps get 64 MiB (`sitemap.SITEMAP_MAX_BYTES`), since the protocol
+allows 50 MB, and are matched lazily on their bytes, up to the URL limit, instead of decoding the whole file and
+listing every `<loc>`. What remains is the chunk of 200 results held until it is written (the sawtooth in the
+first row). `crawl-generic` runs with 8 GiB anyway, as the owner set by hand: whether 2 GiB is now enough is for the
+logs of the next runs to show.
+
+**The poison-pill guard** (`crashguard.py`). Before a roaster's fetch starts, its worker writes a marker,
+`raw/connector=X/run_date=W/_inflight/attempt=<attempt_id>/<roaster>.json` in the staging bucket, and removes it
+when the fetch returns; an attempt that ends normally removes its folder after its end row. So the folder of an
+attempt without a `done` or `deadline` end row (only `running`, or `failed`: a crawl that raises now writes a
+`failed` end row) holds the roasters in flight when it died. The next attempt of the connector's week reads them
+first:
+- a roaster in flight in one dead attempt is a suspect, fetched in a lane of its own, one suspect at a time beside
+  the other workers. If the attempt dies again, at most one suspect is in flight, so the innocent roasters that
+  happened to be in flight with the culprit the first time aren't in flight with it again;
+- a roaster in flight in two dead attempts is quarantined for the week: a `fetches` row with status `crashed` is
+  written before the first request, and every later pass of the week skips it (`crashed` is done, like `ok` and
+  `unavailable`). Next week it is fetched as usual: the folders live in the week's partition, which the merge
+  removes. `crawl --only <roaster>` fetches it anyway (RUNBOOK section 7).
+
+`crashed` is raw contract 1.3.0. In dbt it is like `unavailable`: one store's problem, not the platform's or the
+run's, so `run_completeness.has_catalog` is false and `run_ok_rate` and `adapter_ok_rate` leave it out; it is
+attempted, so `run_is_complete` holds; `quarantined` is a column of `int_roaster_runs` and `run_completeness`, and
+`mart_build_profile` counts it (`run_quarantined`, not banded). `dim_roaster`'s failure streak counts it as a
+failed run, as it does `unavailable`. The markers are only created, written and deleted (GCSFuse refuses chmod),
+and need no lock: one attempt of a connector runs at a time, and an arm's slice has its own folder. If the culprit
+is memory piling up rather than one roaster, the second death quarantines at most the one suspect then in flight:
+visible as a `crashed` row, and undone with `crawl --only`. An exception inside one roaster's fetch was already
+that roaster's error (`ingest_one`); one outside it (in the worker) now is too, instead of ending the run.
+
+**A third pass for every connector.** Shopify's evening pass stays `crawl-retry` (parked stores only, from their
+blocked page, on the NAT IP): a store that refused all day isn't asked again. The other connectors park nothing,
+so `crawl-retry` would have nothing to do for them; their evening pass is their own crawl job again (Scheduler
+entries `crawl-<connector>-retry`, 21:47, default egress), which compacts, resumes the roasters never tried,
+retries the failed ones, resumes any parked one, applies the guard and writes its `job_manifests` rows. That needs
+no new job, image or alert. `crawl-retry` now writes `job_manifests` rows too (job `crawl-retry`, which never
+counts as a landed crawl or towards `egress-check`), uses the guard, and resumes only its own connector's parked
+stores (the `parked/` folder is shared).
+
+**A faster resume: `max_retries = 1` for the non-Shopify crawls**, rather than a midday pass. A re-run of `crawl`
+is already a resume (it compacts the dead attempt's checkpoints and skips what is done), so Cloud Run's retry
+starts it within a minute instead of at 15:17, and the guard makes the retry safe against the roaster that
+killed the first attempt. A midday pass would wait up to 3 hours and add 4 more entries. The retry stays inside the
+first attempt's window: it finds its execution's first start row in `job_manifests` (`detail.execution`, from
+`CLOUD_RUN_EXECUTION` and `CLOUD_RUN_TASK_ATTEMPT`) and stops starting roasters 225 minutes after it, so it never
+overlaps the 15:17 slot or the merge. Alerts count executions, not attempts
+(`completed_execution_count{result="failed"}`): a dead attempt followed by a good retry is one succeeded execution
+and sends no email. The dead attempt stays visible in `job_manifests` (a `running` row with no end row, and the
+retry's `detail.dead_attempts`). A poison pill that kills both attempts fails the execution and emails once; the
+15:17 resume quarantines it and goes on. Shopify stays at 0 retries (section 7).
 
 **Rollout.** The confirmation run tests Shopify first (section 10). If it passes, Monday's ship moves all connectors
 at once. The Actions weekly workflow is then turned off: its schedule is disabled and `workflow_dispatch` is kept,
@@ -373,7 +504,9 @@ cutover and rollback steps are in the runbook.
 ## 8. Pacing (per-connector config, from C)
 
 `connectors.Connector` holds each connector's pacing:
-- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`);
+- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`; Squarespace: `SQUARESPACE_RPS`, from PR #98). The
+  job records its limiter's stats (requests, 429s, pauses, deferrals) in `job_manifests.detail.<connector>_limiter`
+  (`shopify_limiter`, `squarespace_limiter`);
 - `shuffle`: stores in a shuffled order, seeded by connector and week, so the same stores aren't always the last
   ones asked (new in this PR);
 - `deadline_min`: the crawl window, i.e. how long one job may start new stores, up to its time limit (225 of 240 min).
@@ -410,12 +543,17 @@ thing to test (Next).
 
 ### Block-header logging (this PR)
 
-Every 403, 429, 430 or 503 response, robots.txt and redirects included, adds a record to its fetch row,
+Every 202, 403, 429, 430 or 503 response, and any other edge challenge (`http.is_challenge`: a `sg-captcha` header,
+or `cf-mitigated: challenge`, on any status), robots.txt and redirects included, adds a record to its fetch row,
 `fetches.blocks` (at most 20 per fetch). Each record holds: `at`, `status`, `host`, `path`, `server`,
-`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id` and `egress_ip`. That answers the research's
-open questions from our own logs:
-- is a block a Cloudflare challenge (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or a rate
-  limit (JSON, `retry-after: 60`)?
+`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id`, `egress_ip` and, from raw 1.4.0,
+`sg_captcha`. That answers the research's open questions from our own logs:
+- is a block a challenge, Cloudflare's (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or
+  SiteGround's (HTTP 202 with `sg-captcha: challenge`, run 2026-11-02), or a rate limit (JSON, `retry-after: 60`)?
+- A challenge counts as a block and a first-contact refusal, and is never retried or deferred: it answers every
+  retry the same way. On robots.txt it is no answer about the rules, whatever its status (a 401 or 403 with a
+  challenge header included): nothing is fetched from the host for `ROBOTS_RETRY_AFTER`. A shared limiter never
+  counts one as a success.
 - does it cluster by IP or by hour?
 
 It also gives Shopify Support what it asks for: the UTC time, `x-request-id`, `cf-ray` and the source IP. Tested in
@@ -443,7 +581,7 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
   - first-contact refusal share per IP, with Wilson 95% intervals;
   - ok share (ok stores over the slice's stores) with Wilson 95% intervals, refused, parked and wall time;
-  - the share of blocks that are challenges (`cf_mitigated`) and that carry Retry-After.
+  - the share of blocks that are challenges (`cf_mitigated`, `sg_captcha`, or a 202) and that carry Retry-After.
 - **Decision** (the same rules as RUNBOOK §3; shares, never counts, since the slices differ in size):
   - dedicated egress stays if arm 2's first-contact refusal share is below arm 1's with Wilson intervals that don't
     overlap, or if they overlap while arm 1's blocks are challenges and arm 2's aren't;
@@ -508,7 +646,9 @@ held-out evaluation (CLAUDE.md): that is in Next, once weekly crawls have marked
   reports say registration takes days to weeks, and that a signature alone isn't recognized until the bot is
   registered. **Operator details are the owner's to supply**: the domain for the key directory, the contact address,
   and the bot page.
-- **Honest UA**: keep `coffee-data/0.1 (+URL)`, and add a contact and a bot page (purpose, rate, opt-out).
+- **Honest UA** (done): `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`, with a bot
+  page on the site (purpose, rate, opt-out). robots.txt groups for the old token, `coffee-data`, still apply, and a
+  `Crawl-delay` is honoured up to 60 seconds between requests (http.MAX_CRAWL_DELAY).
 - **The secondary crawler is a separate component**: draft PR #67 (`coffeedata pages`), for stores whose JSON feed
   refuses every request. Its rules: a transparent UA with contact, robots.txt respected, 3 s between requests, the
   first 401/403/429/430/503 or challenge stops the store, no CAPTCHA/login/403 bypass, facts only. It maps pages and
@@ -581,6 +721,10 @@ Done in this PR:
   schedule is gone from main and no arm is running; the jobs ignore the `client`/`client_version` a hand `gcloud`
   update stamps.
 
+- **Crawl hardening** (section 7.1): the response cap and the response cycle fix behind `crawl-generic`'s OOM kill,
+  the poison-pill guard and the `crashed` status (raw contract 1.3.0), a third pass for every connector, and Cloud
+  Run retries for the non-Shopify crawls inside their window.
+
 Next:
 1. ~~**Confirmation run**~~: done 2026-11-01 (section 10.1). The dedicated IP stays for Shopify, at full rate.
 2. **`unavailable` for a dead domain** (a 404 or DNS failure for the whole domain) after two runs at least a day
@@ -633,7 +777,7 @@ Next:
     Safe today (arms never land, and the RUNBOOK deletes the slices afterwards); skip `slice=*` subdirectories before
     slices are reused in a production week.
 24. **`crawl-retry` has no `--slice`** (R6): an arm's deadline-parked stores could only be resumed into the
-    production partition, with no `job_manifests` row. The RUNBOOK forbids crawl-retry during a confirmation run;
+    production partition (it writes `job_manifests` rows since section 7.1, as job `crawl-retry`). The RUNBOOK forbids crawl-retry during a confirmation run;
     add `--slice` if arm resumes are ever wanted.
 25. **`unavailable_reason` on 429/430/503 pages** (R7): a throttling or maintenance page containing "store is
     currently unavailable" reads as closed for the week. The closed-store page is a 402; exclude `BLOCK_STATUSES`
@@ -657,3 +801,9 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     default Compute SA.
 32. **Base images pinned by digest** (N8): `python:3.12-slim@sha256:…` and `ghcr.io/astral-sh/uv:0.11.32@sha256:…`
     in `ingest.Dockerfile`, with Artifact Registry vulnerability scanning.
+33. **An email when a crawl attempt died but its retry recovered** (section 7.1): today that execution succeeds and
+    only `job_manifests` shows the dead attempt. A log-match alert on the retry's warning ("earlier attempt(s) this
+    week died") would say so.
+34. **Right-size `crawl-generic`'s memory** from the next runs' logs (peak memory per execution) now that responses
+    are freed and capped; and, if RSS still climbs with a flat Python heap, try `MALLOC_ARENA_MAX=2` (glibc keeps
+    per-thread arenas that 32 worker threads can fragment).

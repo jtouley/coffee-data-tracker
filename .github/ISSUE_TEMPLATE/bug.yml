@@ -1,0 +1,32 @@
+# Bug reports. The `bug` label isn't one the issue-forms workflow acts on (it needs `shot` or `roaster`).
+name: Bug
+description: Something in the app, the pipeline or the published data is wrong.
+title: "Bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Don't describe a vulnerability here. Follow [SECURITY.md](https://github.com/jtouley/coffee-data-tracker/blob/main/SECURITY.md).
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: What you saw, and where (app page, CLI command, table and column, listing).
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Commands, URLs or product ids. For a data error, the roaster and coffee.
+    validations: {required: true}
+  - type: input
+    id: version
+    attributes:
+      label: Version or release date
+      description: Optional. A commit, a release, or the data's release date.
