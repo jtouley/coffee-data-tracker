@@ -17,6 +17,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 
 from . import public
 from .discover import US_STATES
+from .http import USER_AGENT
 
 # The 50 states; DC and Puerto Rico are named separately on the launch page.
 STATES = [s for s in US_STATES if s not in ("DC", "PR")]
@@ -64,6 +65,8 @@ REPO = "https://github.com/jtouley/coffee-data-tracker"
 APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
 LEGAL_UPDATED = "October 27, 2026"
+# The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
+BOT_UPDATED = "November 2, 2026"
 
 
 def links(public_export: str | None = None, site_url: str | None = None) -> dict[str, str | None]:
@@ -266,6 +269,10 @@ def build(db: Path, out: Path) -> Path:
     for page in ("privacy", "terms"):
         (out / page).mkdir(exist_ok=True)
         (out / page / "index.html").write_text(with_csp(env.get_template(f"{page}.html").render(**legal)))
+    # /bot: the page RegistryCoffeeBot's User-Agent links to (who we are, what we crawl, how to opt out)
+    (out / "bot").mkdir(exist_ok=True)
+    bot = env.get_template("bot.html").render(**legal | {"updated": BOT_UPDATED, "user_agent": USER_AGENT})
+    (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
     html = env.get_template("index.html").render(

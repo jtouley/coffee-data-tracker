@@ -6,17 +6,18 @@ import contextlib
 import copy
 import email.utils
 import logging
+import math
 import os
 import random
+import re
 import threading
 import time
-import urllib.robotparser
 from collections import Counter
-from collections.abc import Iterator
+from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING, Any
-from urllib.parse import urljoin, urlparse
+from urllib.parse import quote, unquote, urljoin, urlparse, urlsplit
 
 import httpx
 
@@ -27,7 +28,15 @@ if TYPE_CHECKING:
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "coffee-data/0.1 (+https://github.com/jtouley/coffee-data-tracker)"
+USER_AGENT = "RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)"
+# Our robots.txt product tokens (RFC 9309): the current one, and the one we crawled under before (`coffee-data`), so a
+# store's rules for either keep applying. A group applies when its user-agent line names one of them, matched
+# case-insensitively as a whole token (never as a substring); only when no group names us does the `*` group apply.
+ROBOTS_TOKENS = ("RegistryCoffeeBot", "coffee-data")
+# The longest robots.txt Crawl-delay we wait between requests to one host (60 s), so a catalog still finishes within
+# the crawl window. A longer one is capped here, and the cap is recorded (fetches.crawl_delays); a store that wants
+# slower crawling can email us. Separate from the cap on one-off waits a store asks for (Retry-After).
+MAX_CRAWL_DELAY = 60.0
 # "Slow down": 429, Shopify's 430 (an IP-wide security block), and a 503 that can mean the same.
 BLOCK_STATUSES = (429, 430, 503)
 RETRY_STATUSES = (429, 430, 500, 502, 503, 504)
@@ -296,7 +305,8 @@ class RobotsUnavailable(FetchError, httpx.HTTPError):
 
 
 class DeadlineReached(FetchError):
-    """The run's deadline (PoliteClient.deadline) passed before this request was sent: the fetch stops where it is.
+    """The run's deadline (PoliteClient.deadline) passed before this request was sent, or would pass
+    before a host's Crawl-delay turn: the fetch stops where it is, without sleeping out the delay.
     An adapter turns it into models.PartialCatalog with the products it read whole, stored as a `partial` fetch."""
 
 
@@ -318,6 +328,161 @@ class NotCatalog(FetchError):
 
 
 @dataclass
+class _RobotsGroup:
+    agents: list[str] = field(default_factory=list)
+    # its allow and disallow lines, as written: ("allow" | "disallow", path pattern)
+    rules: list[tuple[str, str]] = field(default_factory=list)
+    delays: list[str] = field(default_factory=list)  # its Crawl-delay values, as written
+
+
+def _robots_groups(lines: Iterable[str]) -> list[_RobotsGroup]:
+    """robots.txt's groups (RFC 9309 2.2): consecutive user-agent lines start a group, and a user-agent line after a
+    rule line starts the next one. Other lines (Sitemap, unknown keys) don't end a group. Lines before the first
+    user-agent line are no group's."""
+    groups: list[_RobotsGroup] = []
+    group, in_rules = None, False
+    for n, raw in enumerate(lines):
+        # a UTF-8 byte-order mark before the first line would hide its key (`\ufeffUser-agent`), and so its group
+        line = (raw.lstrip("\ufeff") if n == 0 else raw).split("#", 1)[0].strip()
+        key, sep, value = line.partition(":")
+        if not sep:
+            continue
+        key, value = key.strip().lower(), value.strip()
+        if key == "user-agent":
+            if group is None or in_rules:
+                group, in_rules = _RobotsGroup(), False
+                groups.append(group)
+            group.agents.append(value)
+        elif key in ("allow", "disallow", "crawl-delay", "request-rate") and group is not None:
+            in_rules = True
+            if key == "crawl-delay":
+                group.delays.append(value)
+            elif key != "request-rate":
+                group.rules.append((key, value))
+    return groups
+
+
+def _names(agent: str, token: str) -> bool:
+    """A user-agent line names this product token: the whole token, case-insensitively (RFC 9309 2.2.1), optionally
+    followed by a version (`/1.0`) or a space. `RegistryCoffeeBot2` or `coffee-data.v2` is another crawler's."""
+    return re.fullmatch(rf"{re.escape(token)}(?:[/\s].*)?", agent.strip(), re.I | re.S) is not None
+
+
+# Characters left as written when a path or pattern is normalized for comparison (RFC 9309 2.2.2: compare after
+# percent-encoding normalization): RFC 3986's reserved characters, which change a URL's meaning when encoded.
+_SAFE = "/?#[]@!$&'()*+,;=:~"
+
+
+def _normalize(path: str) -> str:
+    return quote(unquote(path), safe=_SAFE)
+
+
+@dataclass(frozen=True)
+class _Rule:
+    allow: bool
+    pattern: str  # normalized, as written otherwise; its length is its specificity (RFC 9309 2.2.2)
+    parts: tuple[str, ...]  # the normalized literal runs between its `*` wildcards
+    anchored: bool  # a final `$`: the path ends where the pattern does
+
+    def matches(self, target: str) -> bool:
+        """Whether the pattern matches the target from its start, without backtracking: each literal run is searched
+        for once, from where the one before it ended, and taken at its leftmost place (a `*` matches any run, so the
+        leftmost place is always as good as a later one). A regex of `.*`s backtracks, polynomially in the
+        wildcards: a hostile robots.txt (`/*a*a*a*a*a*a*a*X`) could stall a worker on every can_fetch."""
+        first, *rest = self.parts
+        if not rest:
+            return target == first if self.anchored else target.startswith(first)
+        if not target.startswith(first):
+            return False
+        pos = len(first)
+        middle, last = (rest[:-1], rest[-1]) if self.anchored else (rest, None)
+        for part in middle:
+            found = target.find(part, pos)
+            if found < 0:
+                return False
+            pos = found + len(part)
+        return last is None or (len(target) - len(last) >= pos and target.endswith(last))
+
+
+def _rule(kind: str, value: str) -> _Rule | None:
+    """An allow or disallow line; None for an empty one (`Disallow:` matches nothing). `*` matches any run of
+    characters and a final `$` anchors the end of the path (RFC 9309 2.2.3); the rest is literal. The pattern is
+    split on its `*`s and final `$` as written, before percent-decoding, so `%2A` and `%24` stay a literal `*`
+    and `$` instead of becoming wildcard syntax."""
+    if not value:
+        return None
+    body, anchored = (value[:-1], True) if value.endswith("$") else (value, False)
+    parts = tuple(_normalize(part) for part in body.split("*"))
+    return _Rule(kind == "allow", "*".join(parts) + ("$" if anchored else ""), parts, anchored)
+
+
+def _target(url: str) -> str:
+    """The part of a URL robots.txt rules match: its path (with any `;params`: urlsplit, not urlparse, which moves
+    them out of the path) and query, normalized ("/" for an empty path)."""
+    u = urlsplit(url)
+    return _normalize((u.path or "/") + (f"?{u.query}" if u.query else ""))
+
+
+def _verdict(rules: list[_Rule], target: str) -> bool:
+    """RFC 9309 2.2.2: the matching rule with the longest pattern decides; on a tie between an allow and a disallow,
+    allow (the least restrictive). No matching rule allows."""
+    best: _Rule | None = None
+    for r in rules:
+        if r.matches(target) and (
+            best is None or (len(r.pattern), r.allow) > (len(best.pattern), best.allow)
+        ):
+            best = r
+    return best is None or best.allow
+
+
+# A Crawl-delay's leading number, as written: `10`, `2.5`, `.5`, `1e3` (then anything: `10s` is 10).
+_DELAY = re.compile(r"\s*(\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?")
+
+
+def _delay_seconds(value: str) -> float:
+    """A Crawl-delay value in seconds: its leading number. When none parses (`ten`, `-5`, an empty value) it is
+    infinite, so the cap (MAX_CRAWL_DELAY) applies: a delay we can't read is never ignored."""
+    m = _DELAY.match(value)
+    return math.inf if m is None else float(m.group())  # float("1e999") is inf: capped like any long delay
+
+
+class RobotsRules:
+    """A host's robots.txt, for us (RFC 9309), evaluated here rather than by urllib.robotparser, which takes the
+    first matching rule and has no wildcards.
+
+    Which groups apply (2.2.1): those naming RegistryCoffeeBot, the token we send, combined; or, when none does, the
+    `*` groups. Groups naming the old token, `coffee-data`, apply too (with no `*` fallback of their own). A URL is
+    fetched only if every applicable rule set allows it: longest match decides, allow on a tie (2.2.2), with the `*`
+    and `$` wildcards (2.2.3). /robots.txt itself is always allowed (2.2.2).
+
+    crawl_delay: the longest Crawl-delay those groups ask, in seconds (math.inf when one doesn't parse), or None;
+    crawl_delay_asked: that value as written."""
+
+    def __init__(self, lines: Iterable[str] = (), disallow_all: bool = False) -> None:
+        self.disallow_all = disallow_all
+        groups = _robots_groups(lines)
+        current, old = ([g for g in groups if any(_names(a, t) for a in g.agents)] for t in ROBOTS_TOKENS)
+        selected = [current or [g for g in groups if "*" in g.agents]] + ([old] if old else [])
+        self._rule_sets: list[list[_Rule]] = [
+            [r for g in gs for kind, value in g.rules if (r := _rule(kind, value)) is not None]
+            for gs in selected
+        ]
+        asked = [d for gs in selected for g in gs for d in g.delays]
+        self.crawl_delay: float | None = None
+        self.crawl_delay_asked: str | None = None
+        if asked:
+            self.crawl_delay, self.crawl_delay_asked = max((_delay_seconds(d), d) for d in asked)
+
+    def can_fetch(self, url: str) -> bool:
+        if self.disallow_all:
+            return False
+        target = _target(url)
+        if target == "/robots.txt":
+            return True
+        return all(_verdict(rules, target) for rules in self._rule_sets)
+
+
+@dataclass
 class RequestStats:
     """What one tracked unit of work (a roaster's fetch) asked of the network: kept per thread by `track()`."""
 
@@ -328,6 +493,9 @@ class RequestStats:
     statuses: Counter = field(default_factory=Counter)  # HTTP status -> responses; a network error has none
     # block_record() of each 202/403/429/430/503 or other challenge (is_challenge), the first 20
     blocks: list[dict] = field(default_factory=list)
+    # Each host asked of whose robots.txt names a Crawl-delay for us: {host, asked (as written), applied_s (the
+    # spacing used between its requests), capped (asked more than MAX_CRAWL_DELAY)}
+    crawl_delays: list[dict] = field(default_factory=list)
 
     def note(
         self,
@@ -348,6 +516,10 @@ class RequestStats:
             self.statuses[status] += 1
             self.rate_limited += status == 429
             self.pages += page and status == 200
+
+    def note_delay(self, record: dict) -> None:
+        if all(d["host"] != record["host"] for d in self.crawl_delays):
+            self.crawl_delays.append(record)
 
 
 class PoliteClient:
@@ -377,7 +549,7 @@ class PoliteClient:
             transport=transport,
             limits=httpx.Limits(max_connections=256, max_keepalive_connections=64),
         )
-        self._robots: dict[str, urllib.robotparser.RobotFileParser | None] = {}
+        self._robots: dict[str, RobotsRules | None] = {}
         # host -> (when to ask its robots.txt again, why it didn't answer)
         self._robots_down: dict[str, tuple[float, RobotsUnavailable]] = {}
         self._robots_locks: dict[
@@ -506,23 +678,40 @@ class PoliteClient:
                             max(0.0, down[0] - time.monotonic()),
                         )
                     rules = self._fetch_robots(host)  # raises RobotsUnavailable: nothing is fetched
+                    if (delay := self._crawl_delay(host, rules)) is not None and delay["capped"]:
+                        log.warning(
+                            "%s: robots.txt Crawl-delay %r capped at %.0f s",
+                            host,
+                            delay["asked"],
+                            delay["applied_s"],
+                        )
                     with self._lock:
                         self._robots[host] = rules
                         self._robots_down.pop(host, None)
                         # Known from now on: no robots.txt request left to share.
                         self._robots_locks.pop(host, None)
         rp = self._robots[host]
-        return rp is None or rp.can_fetch(USER_AGENT, url)
+        return rp is None or rp.can_fetch(url)
+
+    def _crawl_delay(self, host: str, rules: RobotsRules | None) -> dict | None:
+        """The Crawl-delay record for a host whose robots.txt asks one: the spacing its requests get is the larger of
+        the delay, capped at MAX_CRAWL_DELAY, and min_interval. A value with no leading number gets the cap: a delay
+        is never ignored."""
+        if rules is None or rules.crawl_delay is None:
+            return None
+        asked, capped = rules.crawl_delay, rules.crawl_delay > MAX_CRAWL_DELAY
+        applied = max(self.min_interval, min(asked, MAX_CRAWL_DELAY))
+        return {"host": host, "asked": rules.crawl_delay_asked, "applied_s": applied, "capped": capped}
 
     def _disallows_site(self, url: str) -> bool:
         """The host's robots.txt file disallows the whole site (/) to us: a closed store (SiteDisallowed). Not a
         robots.txt answered with 401 or 403, which is a refusal (often an edge challenge), not the store's rules."""
         rp = self._robots.get(urlparse(url).netloc)
-        if rp is None or getattr(rp, "disallow_all", False):
+        if rp is None or rp.disallow_all:
             return False
-        return not rp.can_fetch(USER_AGENT, urlparse(url)._replace(path="/", query="", fragment="").geturl())
+        return not rp.can_fetch(urlparse(url)._replace(path="/", query="", fragment="").geturl())
 
-    def _fetch_robots(self, host: str) -> urllib.robotparser.RobotFileParser | None:
+    def _fetch_robots(self, host: str) -> RobotsRules | None:
         """The host's rules: a 2xx is parsed (RFC 9309 2.3.1.1: a 204, or a 2xx with no rules in its body, allows
         everything), a 401 or 403 disallows everything, and any other 4xx (404, 400, 410...) means it has no
         robots.txt (no restrictions, RFC 9309). Anything else isn't an answer about robots.txt: an edge's challenge,
@@ -530,7 +719,6 @@ class PoliteClient:
         such as Cloudflare's 403 with `cf-mitigated: challenge`), a 1xx or 3xx (a redirect without a location), a
         429, 430 or 5xx, or a network error raises RobotsUnavailable and is remembered for ROBOTS_RETRY_AFTER (a
         pause: its wait): nothing is ever fetched from a host without its rules."""
-        parser = urllib.robotparser.RobotFileParser()
         try:
             r = self._follow(f"https://{host}/robots.txt", robots=True)
         except httpx.PoolTimeout as e:  # our own connection pool was busy: says nothing about the host
@@ -555,11 +743,9 @@ class PoliteClient:
             if (
                 200 <= r.status_code < 300 and not challenged
             ):  # RFC 9309 2.3.1.1: any 2xx is the file (204: empty)
-                parser.parse(r.text.splitlines())
-                return parser
+                return RobotsRules(r.text.splitlines())
             if r.status_code in (401, 403) and not challenged:  # a challenge is no answer about the rules
-                parser.disallow_all = True  # type: ignore[attr-defined]  # urllib.robotparser's own flag
-                return parser
+                return RobotsRules(disallow_all=True)
             if 400 <= r.status_code < 500 and r.status_code not in BLOCK_STATUSES and not challenged:
                 # RFC 9309's "unavailable": no robots.txt, no restrictions. Square Online's API host
                 # (cdn5.editmysite.com) answers 400 here, so every Square Online catalog depends on this.
@@ -589,24 +775,33 @@ class PoliteClient:
         ) from cause
 
     def _wait_turn(self, host: str) -> None:
+        """Wait for the host's turn: min_interval after its last request, or its robots.txt Crawl-delay (up to
+        MAX_CRAWL_DELAY) when that is longer. A Crawl-delay turn that falls after the deadline isn't waited for:
+        DeadlineReached, at once, so a slow store never holds a worker past the deadline."""
+        delay = self._crawl_delay(host, self._robots.get(host))  # derived from the host's rules: one source
+        interval = delay["applied_s"] if delay else self.min_interval
+        if delay and (stats := getattr(self._local, "stats", None)) is not None:
+            stats.note_delay(delay)  # before the deadline check: a fetch it stops is the one this explains
         with self._lock:
             now = time.monotonic()
-            due = self._last.get(host, 0.0) + self.min_interval
+            due = self._last.get(host, 0.0) + interval
+            if self.deadline is not None and interval > self.min_interval and due > self.deadline:
+                raise DeadlineReached(
+                    f"the run's deadline passes before {host}'s Crawl-delay ({interval:.0f} s)"
+                )
             self._last[host] = max(now, due)
         if due > now:
             time.sleep(due - now)
 
-    def _send_retrying(
-        self, url: str, params: dict | None = None, spaced: bool = True, page: bool = True
-    ) -> httpx.Response:
+    def _send_retrying(self, url: str, params: dict | None = None, page: bool = True) -> httpx.Response:
         """_send with the client's retries: the last response (a RETRY_STATUSES one once retries run out), or the
-        last attempt's network error. spaced: per-host spacing before each attempt. Every attempt is counted in
+        last attempt's network error. Every attempt, robots.txt's too, waits its per-host turn (_wait_turn), so a
+        store's first catalog request comes at least min_interval after its robots.txt. Every attempt is counted in
         the thread's RequestStats; page: whether a 200 counts as a page (robots.txt doesn't)."""
         host = urlparse(url).netloc
         for attempt in range(self.retries):
             last = attempt == self.retries - 1
-            if spaced:
-                self._wait_turn(host)
+            self._wait_turn(host)
             if self.deadline is not None and time.monotonic() >= self.deadline:
                 raise DeadlineReached(f"the run's deadline passed before {url}")
             asked: float | None = None  # the response's Retry-After, in seconds
@@ -647,7 +842,7 @@ class PoliteClient:
         for hop in range(MAX_REDIRECTS + 1):
             if not robots and not self._allowed(url):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
-            r = self._send_retrying(url, params, spaced=not robots or hop > 0, page=not robots)
+            r = self._send_retrying(url, params, page=not robots)
             if r.status_code not in (301, 302, 303, 307, 308) or not r.headers.get("location"):
                 r.history = history
                 return r

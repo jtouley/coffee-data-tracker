@@ -646,7 +646,9 @@ held-out evaluation (CLAUDE.md): that is in Next, once weekly crawls have marked
   reports say registration takes days to weeks, and that a signature alone isn't recognized until the bot is
   registered. **Operator details are the owner's to supply**: the domain for the key directory, the contact address,
   and the bot page.
-- **Honest UA**: keep `coffee-data/0.1 (+URL)`, and add a contact and a bot page (purpose, rate, opt-out).
+- **Honest UA** (done): `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`, with a bot
+  page on the site (purpose, rate, opt-out). robots.txt groups for the old token, `coffee-data`, still apply, and a
+  `Crawl-delay` is honoured up to 60 seconds between requests (http.MAX_CRAWL_DELAY).
 - **The secondary crawler is a separate component**: draft PR #67 (`coffeedata pages`), for stores whose JSON feed
   refuses every request. Its rules: a transparent UA with contact, robots.txt respected, 3 s between requests, the
   first 401/403/429/430/503 or challenge stops the store, no CAPTCHA/login/403 bypass, facts only. It maps pages and

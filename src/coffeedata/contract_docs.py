@@ -64,6 +64,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "code_version": "The code that made it (git sha).",
         "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0) and egress IP.",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
+        "crawl_delays": "Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied; null when none asked, and before raw 1.5.0.",
     },
     "run_manifests": {
         "run_date": _RUN,

@@ -421,6 +421,7 @@ def rows_for(
                 "blocks": res.stats.blocks or None,
                 # an ok fetch that read only part of the catalog (stopped at the run's deadline); else complete
                 "partial": res.partial if res.status == "ok" else None,
+                "crawl_delays": res.stats.crawl_delays or None,
             }
         )
         for it in res.items:
@@ -566,10 +567,10 @@ def run(
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
     with (
-        # the deadline also stops a catalog still being read: no request is sent after it (http.DeadlineReached), and
-        # what was read is stored as a partial fetch
-        # the run's own deadline, as it stands now: the client stops at the same moment, not deadline_s after this
-        # point (the manifest publish and the lake reads above came first)
+        # the deadline also stops a catalog still being read: no request is sent after it, and no host's Crawl-delay
+        # is waited out past it (http.DeadlineReached); what was read is stored as a partial fetch. It is the run's
+        # own deadline, as it stands now: the client stops at the same moment, not deadline_s after this point (the
+        # manifest publish and the lake reads above came first)
         PoliteClient(
             limiters=limiters,
             **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),

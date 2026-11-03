@@ -491,6 +491,16 @@ def test_site_has_a_launch_page_and_the_catalog_app(lake, tmp_path, monkeypatch)
         assert f'href="{page}/"' in landing
         assert f'href="../{page}/"' in (out / "catalog" / "index.html").read_text()
     assert "State of Michigan" in (out / "terms" / "index.html").read_text()
+    # /bot, the page the crawler's User-Agent links to: who we are, what and when we crawl, how to opt out, contact
+    bot = (out / "bot" / "index.html").read_text()
+    assert '<h1 class="serif">RegistryCoffeeBot</h1>' in bot and "Content-Security-Policy" in bot
+    assert "RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)" in bot
+    assert "on Mondays" in bot and "Crawl-delay" in bot and "up to 60 seconds" in bot and "Retry-After" in bot
+    assert "User-agent: RegistryCoffeeBot\nDisallow: /" in bot
+    # opt-out is robots.txt or email: the issue form only acts on the owner's own issues (issue-forms.yml)
+    assert "add-roaster.yml" not in bot and "at least 1 second apart" in bot and "platform" in bot
+    assert 'href="mailto:support@registry.coffee"' in bot
+    assert 'href="bot/"' in landing and 'href="../bot/"' in (out / "privacy" / "index.html").read_text()
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
     assert catalog["rows"]
     app = (out / "catalog" / "index.html").read_text()

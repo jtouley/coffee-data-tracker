@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.4.0
+version: 1.5.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -352,6 +352,29 @@ schema:
     physicalType: bool
     required: false
     description: True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.
+  - name: crawl_delays
+    logicalType: array
+    physicalType: 'list<item: struct<host: string, asked: string, applied_s: double, capped: bool>>'
+    items:
+      logicalType: object
+      physicalType: 'struct<host: string, asked: string, applied_s: double, capped: bool>'
+      properties:
+      - name: host
+        logicalType: string
+        physicalType: string
+      - name: asked
+        logicalType: string
+        physicalType: string
+      - name: applied_s
+        logicalType: number
+        physicalType: double
+      - name: capped
+        logicalType: boolean
+        physicalType: bool
+    required: false
+    description: 'Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its
+      requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied;
+      null when none asked, and before raw 1.5.0.'
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -515,6 +538,6 @@ customProperties:
   - enrichment job
   - registry
 - property: interfaceFingerprint
-  value: a3b629543dcba7eb
+  value: 1ab99e0abd460ae3
 - property: docsFingerprint
-  value: 318a0dbe4d120c6f
+  value: 510117a1ef255df1

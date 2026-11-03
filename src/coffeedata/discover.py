@@ -11,7 +11,7 @@ from urllib.parse import urlparse
 
 import httpx
 
-from .http import Blocked, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, PoliteClient, RobotsUnavailable
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
@@ -176,7 +176,7 @@ def osm(states: list[str] | None = None) -> list[dict]:
     from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
-    with httpx.Client(timeout=90, headers={"User-Agent": "coffee-data/0.1"}) as client:
+    with httpx.Client(timeout=90, headers={"User-Agent": USER_AGENT}) as client:
         for st in states or US_STATES:
             q = (
                 f'[out:json][timeout:60];area["ISO3166-2"="US-{st}"]->.a;'
@@ -277,7 +277,9 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
 def probe(domains: list[str], workers: int = 16, run_date: str | None = None) -> list[dict]:
     """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten)."""
     run_date = run_date or date.today().isoformat()
-    with PoliteClient(min_interval=0.5, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
+    # Spaced like the catalog crawl (at least 1 s per host, or its robots.txt Crawl-delay), and robots.txt is read
+    # and honoured first, as it is for every PoliteClient request.
+    with PoliteClient(min_interval=1.0, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
         results = list(ex.map(lambda d: _safe_probe(client, d), domains))
     now = datetime.now(UTC).replace(microsecond=0)
     return [
