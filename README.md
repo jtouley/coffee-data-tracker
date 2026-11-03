@@ -2,6 +2,7 @@
 
 [![ci](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/jtouley/coffee-data-tracker/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Data license: CDLA-Permissive-2.0](https://img.shields.io/badge/Data-CDLA--Permissive--2.0-blue.svg)](licenses/CDLA-Permissive-2.0.txt)
 
 A weekly catalog of what US specialty roasters sell online, and a phone app that links each espresso shot to a
 coffee in it.
@@ -425,10 +426,9 @@ in `lake.py`, which is where another object store would plug in.
 Four facts-only tables (`dbt/models/public/`): `public_coffee` (attributes, sizes, prices, stock and a link back to
 the roaster), `public_price_event`, `public_market_weekly` and `public_roaster`. Descriptions and images belong to
 the roasters, so they stay in the private lake. The tables leave out opted-out roasters and roasters known only from
-OpenStreetMap, whose ODbL share-alike license would otherwise apply to the whole table. The
-`public_tables_are_facts_only` dbt test fails the build if a public table has a column on its denylist:
-descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder and photo
-IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
+OpenStreetMap. The `public_tables_are_facts_only` dbt test fails the build if a public table has a column on its
+denylist: descriptions, images, store IDs, shot fields such as `rating`, `notes` and doses, and user, bag, grinder
+and photo IDs. Snowflake and Databricks setup and the listing text are in [`marketplace/`](marketplace/README.md).
 
 The tables are a data product with a contract, in the Bitol open standards:
 [`contracts/coffee-data.odps.yaml`](contracts/coffee-data.odps.yaml) (ODPS v1.1.0) describes the product and its
@@ -516,6 +516,11 @@ with dbt and DuckDB, and logs shots from a phone app, Claude (MCP) and issue for
 
 ## License
 
-The code is released under the [MIT License](LICENSE). Roaster data comes from Overture Maps Places
-(CDLA-Permissive-2.0) and OpenStreetMap (ODbL, © OpenStreetMap contributors); product names, descriptions and
-images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+The code is released under the [MIT License](LICENSE). The public dataset (the public tables, their exports, the
+site's catalog JSON and the marketplace shares) is released under the
+[Community Data License Agreement – Permissive 2.0](licenses/CDLA-Permissive-2.0.txt) (CDLA-Permissive-2.0).
+
+Roaster discovery uses Overture Maps Places (© Overture Maps Foundation, CDLA-Permissive-2.0) and OpenStreetMap
+(ODbL, © OpenStreetMap contributors); roasters known only from OpenStreetMap are left out of the public tables.
+Product names, descriptions and images belong to the roasters. See [`docs/ATTRIBUTION.md`](docs/ATTRIBUTION.md).
+To cite the dataset, use [`CITATION.cff`](CITATION.cff).

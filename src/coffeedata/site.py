@@ -64,7 +64,7 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 REPO = "https://github.com/jtouley/coffee-data-tracker"
 APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
-LEGAL_UPDATED = "October 27, 2026"
+LEGAL_UPDATED = "November 2, 2026"
 # The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
 BOT_UPDATED = "November 2, 2026"
 
@@ -87,6 +87,7 @@ def links(public_export: str | None = None, site_url: str | None = None) -> dict
         "dataset": dataset,
         "hf_path": hf_path,
         "repo": REPO,
+        "data_license": f"{REPO}/blob/main/licenses/CDLA-Permissive-2.0.txt",
         "marketplace": f"{REPO}/blob/main/marketplace/README.md",
         "mcp": f"{REPO}#logging-shots",
         "add_roaster": f"{REPO}/issues/new?template=add-roaster.yml",
