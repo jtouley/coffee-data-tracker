@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.5.0
+version: 1.6.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -102,10 +102,12 @@ schema:
     description: Hash of the description; its text is in bodies.
   - name: variants
     logicalType: array
-    physicalType: 'list<item: struct<variant_id: string, title: string, price_usd: double, grams: int32, available: bool>>'
+    physicalType: 'list<item: struct<variant_id: string, title: string, price_usd: double, grams: int32, available: bool,
+      currency: string>>'
     items:
       logicalType: object
-      physicalType: 'struct<variant_id: string, title: string, price_usd: double, grams: int32, available: bool>'
+      physicalType: 'struct<variant_id: string, title: string, price_usd: double, grams: int32, available: bool, currency:
+        string>'
       properties:
       - name: variant_id
         logicalType: string
@@ -122,8 +124,13 @@ schema:
       - name: available
         logicalType: boolean
         physicalType: bool
+      - name: currency
+        logicalType: string
+        physicalType: string
     required: false
-    description: 'Each bag size or option: variant id, title, price (USD), grams where known, availability.'
+    description: 'Each bag size or option: variant id, title, price as the store states it (price_usd: the name predates
+      currency), grams where known, availability, and currency: the price''s currency as the store states it (ISO 4217),
+      null when the store states none and before raw 1.6.0. dbt publishes USD prices only.'
   - name: is_coffee
     logicalType: boolean
     physicalType: bool
@@ -538,6 +545,6 @@ customProperties:
   - enrichment job
   - registry
 - property: interfaceFingerprint
-  value: 1ab99e0abd460ae3
+  value: d58e68611eceb3f6
 - property: docsFingerprint
-  value: 510117a1ef255df1
+  value: 6e6384d814ff7bf6

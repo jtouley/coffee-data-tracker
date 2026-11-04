@@ -1,7 +1,9 @@
 -- Changes between consecutive *successful* fetches of a roaster, per bag size. Derived entirely from the raw
 -- snapshots, so a failed fetch can never look like a delisting and re-running a week changes nothing.
+-- Prices are USD only (stg_snapshots: price_usd is null for a price in another currency, is_usd false): a price
+-- event needs both sides in USD, so a currency the store states for the first time never reads as a price change.
 with obs as (
-    select s.coffee_id, s.roaster_id, s.run_date, s.fetched_at, v.variant_id, v.price_usd,
+    select s.coffee_id, s.roaster_id, s.run_date, s.fetched_at, v.variant_id, v.price_usd, v.is_usd,
            coalesce(v.available, true) as available
     from {{ ref('stg_snapshots') }} s
     join {{ ref('stg_products') }} p using (input_hash), unnest(s.variants) as t(v)
@@ -9,7 +11,7 @@ with obs as (
 ),
 o as (
     select *,
-        lag(run_date) over w as prev_obs_run, lag(price_usd) over w as prev_price,
+        lag(run_date) over w as prev_obs_run, lag(price_usd) over w as prev_price, lag(is_usd) over w as prev_is_usd,
         lag(available) over w as prev_available, lead(run_date) over w as next_obs_run
     from obs
     window w as (partition by coffee_id, variant_id order by run_date)

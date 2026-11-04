@@ -46,15 +46,15 @@ unit_tests:
         format: sql
         rows: |
           select * from (values
-              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false}]),
-              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true}]),
-              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true}])
+              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true, 'is_usd': true}])
           ) t(coffee_id, roaster_id, run_date, input_hash, variants)
           cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
       - input: ref('stg_products')
@@ -90,14 +90,14 @@ unit_tests:
         format: sql
         rows: |
           select * from (values
-              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
-              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
-              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true}]),
-              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}]),
-              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}])
+              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}])
           ) t(coffee_id, roaster_id, run_date, input_hash, variants)
           cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
       - input: ref('stg_products')
@@ -269,11 +269,14 @@ unit_tests:
           cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
               timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
               'Kenya AA' as title, '' as product_type, 'b' as body_hash,
-              [{'variant_id': 'v', 'grams': 340}] as variants))
+              [{'variant_id': 'v', 'price_usd': 20.0, 'grams': 340, 'available': true, 'currency': 'USD'}] as variants))
     given:
       - input: ref('stg_runs')
         rows:
           - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r.com, country: US}
     expect:
       rows:
         - {coffee_id: "r.com:P", tags: "['Parts & Equipment', 'Coffee > Single Origin']", input_hash: 06662042c205f4a3c208c887873c8b34}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 from datetime import UTC, datetime
 from itertools import count
 
@@ -18,7 +19,7 @@ from ..http import (
     causes,
     store_wait,
 )
-from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
 from ..ratelimit import HostRateLimited, RateLimited
 from ..text import html_to_text, to_float
 
@@ -51,6 +52,18 @@ BLOCK_DEFAULT_WAIT = 60.0  # a block whose Retry-After the client didn't pass on
 # Refusals, not pauses: recorded as blocked, never backed off. A 430 (Shopify's IP-wide block) is a pause like a
 # 429: the page is backed off and asked again, then the store parked for crawl-retry.
 HARD_BLOCK_STATUSES = (401, 403)
+# The prices' currency. /products.json gives each variant's `price` as a bare amount ("159.00"), with no currency.
+# The response that carries it states it: the storefront sets its `cart_currency` cookie, the currency the cart, and
+# so the storefront's prices, are in (https://www.shopify.com/legal/cookies: "cart_currency ... initialize a new
+# empty cart with the same currency as the one just used"; the Ajax API returns "All monetary properties ... in the
+# customer's presentment currency", https://shopify.dev/docs/api/ajax/reference/cart). Checked 2026-11-04 against
+# the store's own product page JSON-LD: lacabra.com's products.json said 159.00 with cart_currency=DKK, and its page
+# 159.00 DKK; pilotcoffeeroasters.com 26.75 with CAD, and CAD; onyxcoffeelab.com USD. A page whose response doesn't
+# set it again carries the cookie the client sent with it, from an earlier page of the store. No extra request: the
+# shop's own record (/meta.json, `currency`) is undocumented and states the shop's default currency, not the one
+# a page is priced in, and the Ajax cart (/cart.js) is disallowed by Shopify's default robots.txt.
+CURRENCY_COOKIE = "cart_currency"
+_SENT_COOKIE = re.compile(rf"(?:^|;)\s*{CURRENCY_COOKIE}=([^;]*)")
 
 
 class PageBlocked(RateLimited):
@@ -109,7 +122,22 @@ def _published_at(value: object) -> datetime | None:
         return None
 
 
-def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
+def page_currency(r: httpx.Response) -> str | None:
+    """The currency a /products.json page is priced in, as the store states it (CURRENCY_COOKIE): the cookie the
+    response sets, else the one its request sent. None when the store states neither."""
+    for header in r.headers.get_list("set-cookie"):
+        name, _, value = header.partition("=")
+        if name.strip() == CURRENCY_COOKIE:
+            return currency_code(value.split(";", 1)[0].strip())
+    try:
+        sent = _SENT_COOKIE.search(r.request.headers.get("cookie", ""))
+    except RuntimeError:  # a response built without a request (tests)
+        return None
+    return currency_code(sent.group(1).strip()) if sent else None
+
+
+def parse_product(p: dict, roaster: Roaster, currency: str | None = None) -> CatalogItem:
+    """currency: the page's (page_currency), which every variant's price is in."""
     tags = p.get("tags") or []
     if isinstance(tags, str):
         tags = [t.strip() for t in tags.split(",") if t.strip()]
@@ -126,6 +154,7 @@ def parse_product(p: dict, roaster: Roaster) -> CatalogItem:
                 price_usd=to_float(v.get("price")),
                 grams=grams,
                 available=v.get("available"),
+                currency=currency,
             )
         )
     image = next((i.get("src") if isinstance(i, dict) else str(i) for i in p.get("images") or []), None)
@@ -155,7 +184,9 @@ def fetch(
     items: dict[str, CatalogItem] = {i.product_id: i for i in (resume or {}).get("items", [])}
     for page in count((resume or {}).get("page", 1)):
         try:
-            data = client.fetch_json(f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page)
+            data, r = client.fetch_json_response(
+                f"https://{roaster.host}/products.json", limit=PAGE_LIMIT, page=page
+            )
         except DeadlineReached as e:
             # page: where a resume continues (ingest.run parks it), not page 1 again
             raise PartialCatalog(f"{e} (page {page})", list(items.values()), page=page) from e
@@ -170,7 +201,8 @@ def fetch(
             raise FetchError(f"unexpected /products.json payload from {roaster.host}")
         # An empty page ends the catalog, and so does a store that ignores `page` and repeats itself, or (with
         # SHORT_PAGE_ENDS) a page shorter than the limit once the store's last known count is reached.
-        new = {i.product_id: i for i in (parse_product(p, roaster) for p in data["products"])}
+        currency = page_currency(r)
+        new = {i.product_id: i for i in (parse_product(p, roaster, currency) for p in data["products"])}
         if not new.keys() - items.keys():
             break
         items |= new

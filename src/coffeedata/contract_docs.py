@@ -33,7 +33,9 @@ COLUMNS: dict[str, dict[str, str]] = {
         "tags": "The store's tags.",
         "image": "The product's first image URL.",
         "body_hash": "Hash of the description; its text is in bodies.",
-        "variants": "Each bag size or option: variant id, title, price (USD), grams where known, availability.",
+        "variants": "Each bag size or option: variant id, title, price as the store states it (price_usd: the "
+        "name predates currency), grams where known, availability, and currency: the price's currency as the store "
+        "states it (ISO 4217), null when the store states none and before raw 1.6.0. dbt publishes USD prices only.",
         "is_coffee": "Whether the crawl's rules called it coffee. Null from an ELT crawl, which doesn't classify.",
         "published_at": "The store's latest publish time (Shopify only).",
         "payload_hash": "Hash of the store's raw product payload: tells a real change from a repeated fetch.",

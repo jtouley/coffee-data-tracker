@@ -59,6 +59,8 @@ VARIANT = pa.struct(
         ("price_usd", pa.float64()),
         ("grams", pa.int32()),
         ("available", pa.bool_()),
+        # The price's currency as the store states it (ISO 4217); added in raw 1.6.0, null in older files.
+        ("currency", pa.string()),
     ]
 )
 

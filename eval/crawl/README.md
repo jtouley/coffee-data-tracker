@@ -8,8 +8,9 @@ for, so the next change to these fields knows how far it is from the last full l
 ## Running total (CLAUDE.md step 9)
 
 Products whose crawl output changed since the last full evaluation of these fields (there has been none): **at
-least 13,232**: 11,750 from the caps' removal, 37 from Lone Oak's registry move (#98), and 1,445 from #99's fix
-round (below). Add each later change's count here.
+least 13,266**: 11,750 from the caps' removal, 37 from Lone Oak's registry move (#98), 1,445 from #99's fix round,
+and 34 from the currency change (below). Add each later change's count here. This total is far over step 9's 50,
+so the next change to these fields needs the full process, or the owner's decision to waive it.
 
 | Change | Products changed (estimate) | Evaluation |
 |---|---|---|
@@ -20,6 +21,7 @@ round (below). Add each later change's count here.
 | #99 fix round: each WooCommerce size's own `available` (`is_in_stock`), where prices are read in bulk | unknown | Not measurable from the lake (below) |
 | #99 fix round: no null price stored when a one-by-one price lookup fails (the fetch fails or is deferred) | in the ≤ 36 of the first row | — |
 | #99 fix round: vendor sites and `gmail.com` never crawled (`registry.current`); martincoffee, piccoffee, meanbean registry fixes | 0 | Hand-checked: none had products |
+| Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
 
 ## 2026-11-02: every data cap removed
 
@@ -90,3 +92,38 @@ labeled.
 variation's `is_in_stock`, not the parent's (true when any size is). The lake keeps only the old, parent-wide value,
 so how many sizes change can't be counted offline; the WooCommerce review's live sample (hoodrivercoffeeroasters.com,
 100 sizes) had 0 that differ.
+
+## 2026-11-04: each price's currency; USD and US roasters only in the public tables
+
+**What changed.** Ingestion stores each variant's currency as the store states it (`snapshots.variants.currency`,
+raw contract 1.6.0): WooCommerce `prices.currency_code`; Shopify the `cart_currency` cookie its `/products.json`
+response sets (or the one its request carried); Squarespace `priceMoney.currency`; Square Online the store page's
+`storeInfo.currency`; generic schema.org `priceCurrency`. The price stays as stated. In dbt, `stg_snapshots` keeps
+a variant's price as `price_usd` only when it is in USD (`is_usd`): the store states USD, or states no currency and
+the roaster is in the US (`stg_registry.country`). `public_roaster` keeps US roasters only, and every public table
+follows it.
+
+**Old rows.** Every lake row before raw 1.6.0 has no currency. For a US roaster such a row reads as USD, so its
+prices, per-100 g prices, market stats and price events are exactly as before. For a roaster the registry places
+outside the US, it reads as not USD, and the roaster isn't public anyway. A US roaster whose store starts stating a
+non-USD currency loses those prices from the public tables at that run, and the switch is not a price event (both
+sides of a `price` event must be USD).
+
+**Count, on the read-only lake copy** (`dq-week/lake`, release 2026-11-02, build `20261103T203218-956abd`), with
+DuckDB over the released public tables; nothing was written to any lake. The change to public output comes entirely
+from the 5 corrected roasters that are public today (the other 2 have no catalog): **34 products** leave
+`public_coffee` (aromacoffee.co.za 5, blacksheepcoffee.co.uk 4, lacabra.dk 17, macacotostadores.com 5,
+thecoffeeroaster.sg 3), with their 96 rows of `public_price_event` (none of them a `price` event) and 5 rows of
+`public_roaster`; 13 origin x process rows of `public_market_weekly` change (Ethiopia unknown p90 7.34 -> 7.31,
+Uganda washed p90 5.60 -> 5.29, India washed median 5.73 -> 6.03, ...). No US roaster's price changes: every one of
+their rows has no currency yet. Once raw 1.6.0 is crawled, a US-registered store that states another currency
+(a Canadian Shopify store's CAD, say) drops its prices from the public tables; how many is unknown until that run.
+
+**Hand-check.** Each of the 34 is a product of a store hand-checked as outside the US, whose published "USD" is its
+own currency: 21 are listed in the PR body (store, price as published, the currency the store states); 13 are in
+another field's sealed test set (`eval/origin`, `eval/match`) and are counted only. Who judged: Claude, from the
+stores' own answers (one request each, 2026-11-04) and these counts; no product was labeled.
+
+**Process.** 34 is under step 9's 50, but the running total for these fields was already over 50 before this
+change, and the USD rule is a new rule for what is published (deterministic on what the store states, not a
+judgement). Steps 2-7 were not run; that is the owner's decision.

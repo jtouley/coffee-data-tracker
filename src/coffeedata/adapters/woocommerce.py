@@ -17,7 +17,7 @@ from ..http import (
     causes,
     challenged,
 )
-from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
 from ..text import html_to_text
 
 # No cap on pages or on variation prices: the whole catalog is read, or the fetch fails, or it is stored as partial
@@ -46,6 +46,14 @@ def _price(prices: dict | None) -> float | None:
     if raw in (None, ""):
         return None
     return int(raw) / 10 ** int(prices.get("currency_minor_unit", 2))
+
+
+def _currency(prices: dict | None) -> str | None:
+    """The price's currency as the Store API states it: `prices.currency_code`, "Currency code (in ISO format) for
+    returned prices" (src/StoreApi/Schemas/V1/AbstractSchema.php, get_store_currency_properties; added to every
+    `prices` by ProductSchema::prepare_product_price_response through prepare_currency_response; "currency_code":
+    "GBP" in docs/apis/store-api/resources-endpoints/products.md). aromacoffee.co.za states ZAR."""
+    return currency_code((prices or {}).get("currency_code"))
 
 
 def _term_names(parent_attrs: list) -> dict[str, dict[str, str]]:
@@ -86,17 +94,20 @@ def parse_product(
     variation_prices: dict[str, float | None] | None = None,
     variation_stock: dict[str, bool | None] | None = None,
     gone: set[str] | None = None,
+    variation_currency: dict[str, str | None] | None = None,
 ) -> CatalogItem:
     """variation_prices: variation id -> price, fetched separately because the listing only carries a range.
     variation_stock: variation id -> its own is_in_stock, from the same lookup; a size without one takes the
     parent's (in stock when any size is). gone: variation ids whose own lookup answered 404 (the size no longer
-    exists): left out of the product, never stored with a null price."""
+    exists): left out of the product, never stored with a null price. variation_currency: variation id -> the
+    currency its own price states, from the same lookup; a size priced from the listing takes the listing's."""
     tags = sorted(
         {t["name"] for t in p.get("tags", []) if isinstance(t, dict)}
         | {c["name"] for c in p.get("categories", []) if isinstance(c, dict)}
     )
     variations = [v for v in p.get("variations") or [] if isinstance(v, dict)]
     stock = p.get("is_in_stock")
+    currency = _currency(p.get("prices"))
     if variations:
         variants = []
         for v in variations:
@@ -113,6 +124,7 @@ def parse_product(
                     price_usd=price,
                     grams=parse_grams(label),
                     available=stock if own is None else own,
+                    currency=(variation_currency or {}).get(vid, currency),
                 )
             )
     else:
@@ -124,6 +136,7 @@ def parse_product(
                 price_usd=_price(p.get("prices")),
                 grams=parse_grams(name),
                 available=stock,
+                currency=currency,
             )
         ]
     images = [i for i in p.get("images") or [] if isinstance(i, dict)]
@@ -247,8 +260,10 @@ def variation_prices(
     prices: dict[str, float | None],
     stock: dict[str, bool | None] | None = None,
     gone: set[str] | None = None,
+    currencies: dict[str, str | None] | None = None,
 ) -> None:
-    """Fills `prices` (variation id -> price) and `stock` (variation id -> its own is_in_stock) for every variation
+    """Fills `prices` (variation id -> price), `stock` (variation id -> its own is_in_stock) and `currencies`
+    (variation id -> the currency its price states) for every variation
     of `products`, in bulk: the Store API's products endpoint lists variations with their prices when asked for
     type=variation, filtered to their parents with `parent` (docs/apis/store-api/resources-endpoints/products.md,
     "Product Variations" and the `parent` and `type` parameters; ProductQuery::prepare_objects_query maps
@@ -265,6 +280,7 @@ def variation_prices(
     (_lookup): never a null price, or a null stock, for a size the store has."""
     stock = {} if stock is None else stock
     gone = set() if gone is None else gone
+    currencies = {} if currencies is None else currencies
     wanted = {vid for p in products for vid in _variation_ids(p)}
     bulk = True
     for batch in _batches(products):
@@ -288,6 +304,7 @@ def variation_prices(
                     if vid in wanted:
                         prices[vid] = _price(v.get("prices"))
                         stock[vid] = v.get("is_in_stock")
+                        currencies[vid] = _currency(v.get("prices"))
                 if (
                     foreign or mine <= prices.keys()
                 ):  # every listed size priced: no need to ask for an empty page
@@ -308,6 +325,7 @@ def variation_prices(
             continue
         prices[vid] = _price(one.get("prices"))
         stock[vid] = one.get("is_in_stock")
+        currencies[vid] = _currency(one.get("prices"))
 
 
 def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
@@ -316,6 +334,7 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
     prices: dict[str, float | None] = {}
     stock: dict[str, bool | None] = {}
     gone: set[str] = set()  # sizes whose own lookup answered 404: they no longer exist, and are left out
+    currencies: dict[str, str | None] = {}
     listing = _Listing()
     try:
         for data in _pages(client, base, roaster.host, listing):
@@ -324,16 +343,16 @@ def fetch(client: PoliteClient, roaster: Roaster) -> list[CatalogItem]:
                 if not _needs_variation_prices(p):  # one price for every size: the listing's
                     prices |= dict.fromkeys(_variation_ids(p), _price(p.get("prices")))
         needs = [p for p in raw if _needs_variation_prices(p)]
-        variation_prices(client, base, roaster.host, needs, prices, stock, gone)
+        variation_prices(client, base, roaster.host, needs, prices, stock, gone, currencies)
     except DeadlineReached as e:
         # Only products read whole: listed, with every size priced or known gone. The rest stay as they were.
         done = [
-            parse_product(p, roaster, prices, stock, gone)
+            parse_product(p, roaster, prices, stock, gone, currencies)
             for p in raw
             if prices.keys() | gone >= set(_variation_ids(p))
         ]
         raise PartialCatalog(f"{roaster.host}: {e} ({len(done)} of {len(raw)}+ products read)", done) from e
-    items = [parse_product(p, roaster, prices, stock, gone) for p in raw]
+    items = [parse_product(p, roaster, prices, stock, gone, currencies) for p in raw]
     read = len({str(p.get("id")) for p in raw})
     if listing.total is not None and read != listing.total:
         # The store counts the query's products itself (X-WP-Total, docs/apis/store-api/README.md "Pagination"): a

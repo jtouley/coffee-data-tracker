@@ -4,7 +4,7 @@ with seed as (
            coalesce(try_cast(locations as integer), 1) as locations,
            coalesce(is_chain, 'false') = 'true' as is_chain, coalesce(opted_out, 'false') = 'true' as opted_out,
            nullif(final_host, '') as seed_host, nullif(platform, '') as seed_platform,
-           try_cast(nullif(last_probed, '') as date) as seed_probed, sources
+           try_cast(nullif(last_probed, '') as date) as seed_probed, sources, nullif(country, '') as country
     from read_csv('{{ var("config_dir") }}/roasters.csv', header = true, all_varchar = true)
 ),
 added as (
@@ -21,6 +21,9 @@ select
     coalesce(s.locations, a.locations, 1) as locations, coalesce(s.is_chain, false) as is_chain,
     coalesce(a.opted_out, false) or coalesce(s.opted_out, false) as opted_out,
     concat_ws('+', s.sources, a.sources) as sources, s.seed_host, s.seed_platform, s.seed_probed,
+    -- ISO 3166-1 alpha-2. The seed states it per roaster (a hand-checked correction for a store outside the US);
+    -- a roaster the lake alone lists came from discovery, which keeps US places only.
+    coalesce(s.country, 'US') as country,
     a.first_added  -- when the lake first listed it (null: from the seed list alone)
 from seed s
 full outer join added a using (roaster_id)
