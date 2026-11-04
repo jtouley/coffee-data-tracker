@@ -125,6 +125,23 @@ def test_woocommerce_one_by_one_lookup_records_its_currency(mock):
     assert prices == {"11": 220.0} and currencies == {"11": "MXN"}
 
 
+def test_woocommerce_a_size_whose_lookup_states_no_currency_takes_the_listings():
+    # The size's own lookup gave no currency_code (stored as None): the parent's stated DKK still applies.
+    parent = {
+        "id": 10, "name": "Kenya", "slug": "kenya", "type": "variable",
+        "prices": {"price": "10000", "currency_code": "DKK", "currency_minor_unit": 2},
+        "variations": [{"id": 11, "attributes": [{"name": "Size", "value": "250 g"}]},
+                       {"id": 12, "attributes": [{"name": "Size", "value": "1 kg"}]}],
+    }  # fmt: skip
+    item = woocommerce.parse_product(
+        parent,
+        _r(platform="woocommerce"),
+        variation_prices={"11": 100.0, "12": 340.0},
+        variation_currency={"11": None, "12": "EUR"},
+    )
+    assert [(v.price_usd, v.currency) for v in item.variants] == [(100.0, "DKK"), (340.0, "EUR")]
+
+
 # --- Shopify: the page's cart_currency cookie -------------------------------------------------------
 
 
@@ -384,3 +401,114 @@ def test_old_rows_of_a_us_roaster_publish_as_before(lake, tmp_path):
     assert date(2026, 10, 26) in {
         r[0] for r in con.execute("select run_date from public_price_event").fetchall()
     }
+
+
+# --- a lake from before raw 1.6.0 (no variants.currency anywhere) ------------------------------------
+
+
+def _pre_160_snapshots_schema():
+    old = lake_mod.SCHEMAS["snapshots"]
+    old_variant = lake_mod.pa.struct([f for f in lake_mod.VARIANT if f.name != "currency"])
+    i = old.get_field_index("variants")
+    return old.set(i, old.field(i).with_type(lake_mod.pa.list_(old_variant)))
+
+
+def test_field_paths_include_nested_struct_fields():
+    paths = lake_mod._field_paths(lake_mod.SCHEMAS["snapshots"])
+    assert {"variants", "variants.currency", "variants.price_usd"} <= paths
+    assert "variants.currency" not in lake_mod._field_paths(_pre_160_snapshots_schema())
+
+
+def test_a_schema_file_missing_only_a_nested_field_is_refreshed(tmp_path, monkeypatch):
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    lake = lake_mod.Lake()
+    path = lake.root / lake_mod.SCHEMA_FILES["snapshots"]
+    lake_mod.pq.write_table(_pre_160_snapshots_schema().empty_table(), path)
+    assert "variants.currency" not in lake_mod._field_paths(lake_mod.pq.read_schema(path))
+    lake_mod.Lake()  # same top-level columns: only the nested field differs
+    assert "variants.currency" in lake_mod._field_paths(lake_mod.pq.read_schema(path))
+
+
+def test_the_datasets_schema_file_is_stale_when_it_lacks_a_nested_field(tmp_path):
+    remote, staged = tmp_path / "remote.parquet", tmp_path / "staged.parquet"
+    lake_mod.pq.write_table(_pre_160_snapshots_schema().empty_table(), remote)
+    lake_mod.pq.write_table(lake_mod.SCHEMAS["snapshots"].empty_table(), staged)
+
+    class Api:
+        def hf_hub_download(self, *_a, **_k):
+            return str(remote)
+
+    class Info:
+        lfs = {"sha256": "not-the-staged-file"}
+
+    assert lake_mod._stale_schema(Api(), "r", "rel", Info(), staged)
+    assert not lake_mod._stale_schema(Api(), "r", "rel", Info(), remote)
+
+
+@dbt
+def test_a_lake_from_before_raw_1_6_0_builds(tmp_path, monkeypatch):
+    """Every file, the zero-row schema file too, written before variants.currency existed: Lake() refreshes the
+    schema file, so stg_snapshots binds v.currency and the build passes with the old prices as before."""
+    from .test_dbt import build
+
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    current = lake_mod.SCHEMAS["snapshots"]
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", _pre_160_snapshots_schema())
+    old = lake_mod.Lake()
+    rid = "onyxcoffeelab.com"
+    probe(old, "2026-10-18", rid)
+    run(old, "2026-10-19", rid, [product("A", 20.0)])
+    run(old, "2026-10-26", rid, [product("A", 22.0)])
+    schema_file = old.root / lake_mod.SCHEMA_FILES["snapshots"]
+    assert "variants.currency" not in lake_mod._field_paths(lake_mod.pq.read_schema(schema_file))
+    monkeypatch.setitem(lake_mod.SCHEMAS, "snapshots", current)
+    lake = lake_mod.Lake()
+    con = build(lake, tmp_path)
+    assert con.execute("select min_price_usd from public_coffee").fetchall() == [(22.0,)]
+    assert con.execute(
+        "select event, price_usd, previous_price_usd from public_price_event where event = 'price'"
+    ).fetchall() == [("price", 22.0, 20.0)]
+
+
+# --- price events across a change of stated currency -------------------------------------------------
+
+
+@dbt
+def test_a_us_defaulted_stores_first_stated_cad_while_a_bag_sells_out_passes_the_gate(lake, tmp_path):
+    """Old rows read as USD (no currency, a US roaster); the first 1.6.0 crawl states CAD and the bag sells out.
+    The availability event keeps the previous USD price, which public_prices_are_usd checks against the run that
+    price comes from, not the CAD run: the build passes."""
+    from .test_dbt import build
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid, platform="woocommerce")
+    run(lake, "2026-10-19", rid, [product("A", 24.0)], adapter="woocommerce")
+    sold_out = _priced("A", 32.0, "CAD")
+    sold_out["variants"][0]["available"] = False
+    run(lake, "2026-10-26", rid, [sold_out], adapter="woocommerce")
+    con = build(lake, tmp_path)
+    assert con.execute(
+        "select run_date::varchar, event, price_usd, previous_price_usd, available from public_price_event"
+        " order by run_date"
+    ).fetchall() == [
+        ("2026-10-19", "new", 24.0, None, True),
+        ("2026-10-26", "availability", None, 24.0, False),
+    ]
+
+
+@dbt
+def test_a_usd_price_change_across_a_run_in_another_currency_is_an_event(lake, tmp_path):
+    """20 USD, then 27 CAD, then 25 USD: run 3 is a price change from 20, the bag's previous USD price."""
+    from .test_dbt import build
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-11", rid, platform="woocommerce")
+    run(lake, "2026-10-12", rid, [_priced("A", 20.0, "USD")], adapter="woocommerce")
+    run(lake, "2026-10-19", rid, [_priced("A", 27.0, "CAD")], adapter="woocommerce")
+    run(lake, "2026-10-26", rid, [_priced("A", 25.0, "USD")], adapter="woocommerce")
+    con = build(lake, tmp_path)
+    events = con.execute(
+        "select run_date::varchar, event, price_usd, previous_price_usd from fct_price_event order by run_date"
+    ).fetchall()
+    assert ("2026-10-26", "price", 25.0, 20.0) in events
+    assert all(e[1] != "price" for e in events if e[0] == "2026-10-19")

@@ -522,6 +522,8 @@ models:
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
+      - name: previous_price_run
+        description: "The run previous_price_usd comes from: the bag's previous USD observation for a USD price, else its previous observation (public_prices_are_usd checks it was in USD)."
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."

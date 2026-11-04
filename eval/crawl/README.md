@@ -21,7 +21,7 @@ so the next change to these fields needs the full process, or the owner's decisi
 | #99 fix round: each WooCommerce size's own `available` (`is_in_stock`), where prices are read in bulk | unknown | Not measurable from the lake (below) |
 | #99 fix round: no null price stored when a one-by-one price lookup fails (the fetch fails or is deferred) | in the ≤ 36 of the first row | — |
 | #99 fix round: vendor sites and `gmail.com` never crawled (`registry.current`); martincoffee, piccoffee, meanbean registry fixes | 0 | Hand-checked: none had products |
-| Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
+| Each price's currency stored (raw 1.6.0); public tables USD prices and US roasters only; 7 non-US roasters corrected in the registry (2026-11-04) | 34 now; more at the first crawl with raw 1.6.0 (unknown) | Steps 2–7 waived by the owner (2026-11-04, #107); 21 hand-checked, 13 in other fields' sealed test sets (count only); below |
 
 ## 2026-11-02: every data cap removed
 
@@ -126,4 +126,6 @@ stores' own answers (one request each, 2026-11-04) and these counts; no product 
 
 **Process.** 34 is under step 9's 50, but the running total for these fields was already over 50 before this
 change, and the USD rule is a new rule for what is published (deterministic on what the store states, not a
-judgement). Steps 2-7 were not run; that is the owner's decision.
+judgement). Steps 2-7 were not run: the owner waived them for #107 on 2026-11-04. #107's fix round (price events
+across a run in another currency, the WooCommerce fallback to the listing's currency, the lake's schema file) changes
+no product's output on the current lake, where no row states a currency yet.

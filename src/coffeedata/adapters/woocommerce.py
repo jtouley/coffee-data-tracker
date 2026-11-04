@@ -100,7 +100,8 @@ def parse_product(
     variation_stock: variation id -> its own is_in_stock, from the same lookup; a size without one takes the
     parent's (in stock when any size is). gone: variation ids whose own lookup answered 404 (the size no longer
     exists): left out of the product, never stored with a null price. variation_currency: variation id -> the
-    currency its own price states, from the same lookup; a size priced from the listing takes the listing's."""
+    currency its own price states, from the same lookup; a size priced from the listing, or whose lookup states
+    none, takes the listing's."""
     tags = sorted(
         {t["name"] for t in p.get("tags", []) if isinstance(t, dict)}
         | {c["name"] for c in p.get("categories", []) if isinstance(c, dict)}
@@ -124,7 +125,7 @@ def parse_product(
                     price_usd=price,
                     grams=parse_grams(label),
                     available=stock if own is None else own,
-                    currency=(variation_currency or {}).get(vid, currency),
+                    currency=(variation_currency or {}).get(vid) or currency,
                 )
             )
     else:
