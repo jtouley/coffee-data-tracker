@@ -3,7 +3,8 @@
 -- from stg_products (the current rules over the raw snapshots), so rebuilding from the same lake gives the same
 -- table.
 with s as (
-    select s.*, p.is_coffee from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
+    select s.*, p.is_coffee, p.classified_by, p.verdict_model
+    from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 seen as (
     select coffee_id, min(run_date) as first_seen, max(run_date) as last_seen, count(*) as weeks_listed
@@ -72,6 +73,9 @@ select
     a.elevation_masl_max, a.roast_level, a.tasting_notes, coalesce(n.flavor_categories, []) as flavor_categories,
     coalesce(a.is_blend, false) as is_blend, coalesce(a.is_decaf, false) as is_decaf,
     a.enrichment_method, a.is_wholesale,
+    -- What decided that the latest version is coffee: Claude's verdict (and its model) or the rules
+    -- (verdicts_cover_catalog checks the share).
+    l.classified_by, l.verdict_model,
     run.is_current and coalesce(p.any_available, false) as in_stock,
     -- What a shopper can get now versus the roaster's back catalog. Every coffee is kept either way; a sold-out
     -- coffee the roaster tags as archived or a past offering is history, not "out of stock for now".

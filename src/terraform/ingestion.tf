@@ -30,10 +30,17 @@ variable "egress_echo_url" {
   default     = "https://api.ipify.org"
 }
 
+# Required, with no default: an empty default once left every release to the rules alone, because classify skipped
+# with exit 0 and nothing noticed. The build job now fails without it (classify exits non-zero, and the build's
+# verdicts_cover_catalog test fails), so a plan without it stops here instead.
 variable "verdict_model" {
-  description = "COFFEEDATA_VERDICT_MODEL for the build job's verdicts: the same value as the VERDICT_MODEL repository variable. Empty = rules only."
+  description = "COFFEEDATA_VERDICT_MODEL for the jobs that call Claude (the build job's coffee-or-not verdicts): the same value as the VERDICT_MODEL repository variable, e.g. \"claude-haiku-5-5\". Required."
   type        = string
-  default     = ""
+  nullable    = false
+  validation {
+    condition     = trimspace(var.verdict_model) != ""
+    error_message = "verdict_model is required (e.g. \"claude-haiku-5-5\" in terraform.tfvars): without it the build job's classify and its verdict gate fail."
+  }
 }
 
 variable "ingest_job_memory" {
@@ -94,11 +101,13 @@ locals {
     "merge"         = { command = ["coffeedata"], args = ["merge"], nat = false, claude = false, memory = "4Gi", retries = 1 }
     "enrich-week"   = { command = ["coffeedata"], args = ["enrich-week", "--submit"], nat = false, claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
-    # check, whose non-zero exit (an IP over 8% refusals two runs in a row) fails the execution, which emails the
-    # owner (alerts.tf, ingest_job_failed).
+    # check. A failed classify (no model or key, an API error), a failed gate, or the egress check's non-zero exit
+    # (an IP over 8% refusals two runs in a row) fails the execution, which emails the owner (alerts.tf,
+    # ingest_job_failed). The build still runs after a failed classify, on the verdicts already stored: its own
+    # verdict gate decides whether that release is served.
     "build" = {
       command = ["sh", "-c"]
-      args    = ["coffeedata classify; coffeedata build; rc=$?; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
+      args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]
       nat     = false, claude = true, memory = "8Gi", retries = 1
     }
   }
@@ -319,7 +328,7 @@ resource "google_cloud_run_v2_job" "ingest" {
           }
         }
         dynamic "env" {
-          for_each = each.value.claude && var.verdict_model != "" ? [var.verdict_model] : []
+          for_each = each.value.claude ? [var.verdict_model] : []
           content {
             name  = "COFFEEDATA_VERDICT_MODEL"
             value = env.value

@@ -72,6 +72,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Fixed
 
+- **Claude's coffee-or-not verdicts now fail loudly when they can't run.** They never ran in production: the
+  Terraform variable `verdict_model` defaulted to empty, `coffeedata classify` printed a skip message and exited 0,
+  and every release was classified by the rules alone (on the sealed set, 10.7% of the products they keep are not
+  coffee, against 2.7% with verdicts). `classify` (and `weekly`, before it crawls) now exits non-zero without a
+  verdict model or Anthropic credentials; `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` is the explicit
+  opt-out for local and dev runs (`make` sets it for a local lake, and the tests set it). The build job's chain
+  fails its execution on a failed classify. `dim_coffee` gains `classified_by` (`claude` or `rules`) and
+  `verdict_model`, and a new gate, `verdicts_cover_catalog`, fails a build with no verdict model or with under 85%
+  of listed coffees decided by a verdict (public contract 2.2.3: the rule and its threshold, no column change).
+  `verdict_model` is required in Terraform. RUNBOOK ยง5.5 covers the gate
+  and the backfill.
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
   crowded out by shared words now match (#57).
 - Site: copy fixes (#26). The site workflow renders the served release (#59) and skips while nothing is served

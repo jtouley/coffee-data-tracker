@@ -5,6 +5,7 @@ from datetime import UTC, datetime
 from types import SimpleNamespace
 
 from coffeedata import verdict
+from coffeedata.lake import new_batch_id
 
 from .lakehelp import probe, product, run
 from .test_dbt import build
@@ -166,3 +167,184 @@ def test_judge_warms_the_cache_with_one_request_before_running_in_parallel(monke
     assert set(verdict.judge(rows, "m", usage=usage).values()) == {True}
     assert calls[0] is False and all(calls[1:])  # one request ran before any other started
     assert usage["cache_read_input_tokens"] == 2500
+
+
+# --- the guard: verdicts are required unless rules only is explicitly allowed (non-coffee-2026-11-04) -----------
+
+
+def _no_verdicts(monkeypatch):
+    for var in ("COFFEEDATA_ALLOW_RULES_ONLY", "COFFEEDATA_VERDICT_MODEL", "COFFEEDATA_ANTHROPIC_API_KEY",
+                "ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN"):  # fmt: skip
+        monkeypatch.delenv(var, raising=False)
+
+
+def test_classify_fails_loudly_without_a_model_or_credentials(lake, monkeypatch, capsys):
+    """The build job once ran a classify that printed a skip message and exited 0, so no release had verdicts."""
+    import pytest
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    with pytest.raises(SystemExit) as e:
+        cli.main(["classify"])
+    msg = str(e.value.code)
+    assert (
+        "COFFEEDATA_VERDICT_MODEL" in msg and "Anthropic credentials" in msg and "--allow-rules-only" in msg
+    )
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")  # a model alone isn't enough
+    with pytest.raises(SystemExit) as e:
+        cli.main(["classify"])
+    assert "Anthropic credentials" in str(e.value.code) and "no COFFEEDATA_VERDICT_MODEL" not in str(
+        e.value.code
+    )
+    monkeypatch.delenv("COFFEEDATA_VERDICT_MODEL")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")  # nor credentials alone
+    with pytest.raises(SystemExit, match="no COFFEEDATA_VERDICT_MODEL\\. "):
+        cli.main(["classify"])
+
+
+def test_rules_only_is_an_explicit_opt_out(lake, monkeypatch, capsys):
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    cli.main(["classify", "--allow-rules-only"])  # returns: exit 0
+    assert "rules only (explicitly allowed)" in capsys.readouterr().out
+    for on in ("1", "true", "YES"):
+        monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", on)
+        assert verdict.require() is False
+    for off in ("", "0", "no"):
+        monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", off)
+        assert not verdict.rules_only_allowed()
+
+
+def test_classify_runs_when_configured_even_if_rules_only_is_allowed(lake, monkeypatch):
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    seen = []
+    monkeypatch.setattr(verdict, "collect", lambda lk, d=None: seen.append("collect") or {"collected": 0})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n: seen.append("submit") or {"submitted": 0})
+    cli.main(["classify"])
+    assert seen == ["collect", "submit"]
+
+
+def test_weekly_fails_before_crawling_without_verdicts(monkeypatch):
+    import argparse
+
+    import pytest
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    calls = []
+    for name in ("cmd_discover", "cmd_probe", "cmd_ingest", "cmd_enrich", "cmd_classify", "cmd_build",
+                 "cmd_publish"):  # fmt: skip
+        monkeypatch.setattr(cli, name, lambda a, n=name: calls.append(n))
+    ns = argparse.Namespace(run_date="2026-11-09", discover=False, sample=None, enrich_limit=None,
+                            db="build/coffee.duckdb", out="build/site", accept_volume_change=False)  # fmt: skip
+    with pytest.raises(SystemExit, match="COFFEEDATA_VERDICT_MODEL"):
+        cli.cmd_weekly(ns)
+    assert calls == []
+
+
+def _dbt_vars(monkeypatch, tmp_path, fn) -> dict:
+    """The vars `coffeedata build` passes to dbt, with dbt itself faked."""
+    import subprocess
+
+    from coffeedata import cli
+
+    monkeypatch.setattr(cli, "DBT_TARGET", tmp_path / "target")
+    argv = []
+    monkeypatch.setattr(
+        cli.subprocess, "run", lambda a, **kw: argv.append(a) or subprocess.CompletedProcess(a, 0)
+    )
+    fn(cli)
+    return json.loads(argv[0][argv[0].index("--vars") + 1])
+
+
+def test_the_build_requires_verdicts_unless_rules_only_is_allowed(lake, monkeypatch, tmp_path):
+    import argparse
+
+    from coffeedata import cli, quality
+
+    monkeypatch.setattr(quality, "record_build", lambda *a, **k: False)  # nothing to record from a faked dbt
+    monkeypatch.setattr(cli, "_write_personal_marts", lambda *a: None)
+    db = str(tmp_path / "coffee.duckdb")
+    build = lambda **kw: lambda cli: cli.cmd_build(argparse.Namespace(db=db, run_date="2026-10-19", **kw))  # noqa: E731
+    _no_verdicts(monkeypatch)
+    assert _dbt_vars(monkeypatch, tmp_path, build())["require_verdicts"] is True
+    assert _dbt_vars(monkeypatch, tmp_path, build(allow_rules_only=True))["require_verdicts"] is False
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+    assert _dbt_vars(monkeypatch, tmp_path, build())["require_verdicts"] is False
+
+
+def _two_coffees(lake):
+    probe(lake, "2026-10-18", RID)
+    run(
+        lake, "2026-10-19", RID, [product("A", title="Ethiopia Guji Natural"), product("K", title="Kenya AA")]
+    )
+    todo = {r["title"]: r["input_hash"] for r in verdict.pending(lake, "m", 100)}
+    at = datetime(2026, 10, 20, tzinfo=UTC)
+    return lambda *titles: lake.write_partition("verdicts", "2026-10-20", new_batch_id(), [
+        {"decided_at": at, "input_hash": todo[t], "model": "m", "definition": verdict.DEFINITION_VERSION,
+         "label": "coffee"} for t in titles])  # fmt: skip
+
+
+def test_the_verdict_gate_fails_a_build_without_a_model_or_with_too_few_verdicts(lake, tmp_path):
+    decide = _two_coffees(lake)
+    gate = {"require_verdicts": True, "verdict_definition": verdict.DEFINITION_VERSION}
+
+    r = build(lake, tmp_path / "none", check=False, **gate)  # no verdict model at all
+    assert r.returncode != 0 and "FAIL 1 verdicts_cover_catalog" in r.stdout
+    assert (
+        build(lake, tmp_path / "off", check=False, verdict_model="").returncode == 0
+    )  # gate off: dbt's default
+
+    decide("Ethiopia Guji Natural")  # 1 of 2 listed coffees: 50% < 0.85
+    r = build(lake, tmp_path / "half", check=False, verdict_model="m", **gate)
+    assert r.returncode != 0 and "FAIL 1 verdicts_cover_catalog" in r.stdout
+    assert (
+        build(
+            lake, tmp_path / "low", check=False, verdict_model="m", min_verdict_share=0.5, **gate
+        ).returncode
+        == 0
+    )
+
+    decide("Kenya AA")
+    con = build(lake, tmp_path / "all", verdict_model="m", **gate)
+    assert sorted(con.execute("select title, classified_by, verdict_model from dim_coffee").fetchall()) == [
+        ("Ethiopia Guji Natural", "claude", "m"),
+        ("Kenya AA", "claude", "m"),
+    ]
+
+
+def test_dim_coffee_says_what_classified_each_coffee(lake, tmp_path):
+    from coffeedata import quality
+
+    _two_coffees(lake)("Kenya AA")
+    con = build(lake, tmp_path, verdict_model="m", verdict_definition=verdict.DEFINITION_VERSION)
+    assert sorted(con.execute("select title, classified_by, verdict_model from dim_coffee").fetchall()) == [
+        ("Ethiopia Guji Natural", "rules", None),
+        ("Kenya AA", "claude", "m"),
+    ]
+    con.close()
+    assert quality.verdict_coverage_message(tmp_path / "coffee.duckdb") == (
+        "1 of 2 listed coffees (50.0%) decided by Claude's verdicts (m 1); the rest by the rules"
+    )
+    assert quality.verdict_coverage_message(tmp_path / "missing.duckdb") is None
+
+
+def test_terraform_requires_the_verdict_model_and_the_build_job_fails_on_a_failed_classify():
+    import re
+    from pathlib import Path
+
+    tf = (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
+    var = re.search(r'variable "verdict_model" \{(.*?)\n\}', tf, re.S)
+    assert var and "default" not in var.group(1) and 'trimspace(var.verdict_model) != ""' in var.group(1)
+    assert "for_each = each.value.claude ? [var.verdict_model] : []" in tf
+    build = re.search(r'"build" = \{.*?args += \["(.*?)"\]', tf, re.S)
+    assert build and build.group(1).startswith("rc=0; coffeedata classify || rc=1; coffeedata build || rc=1;")
+    assert build.group(1).endswith("exit $rc")

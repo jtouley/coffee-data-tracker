@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.2.2
+version: 2.2.3
 status: active
 domain: coffee
 description:
@@ -71,7 +71,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.2.2
+    version: 2.2.3
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -137,6 +137,14 @@ customProperties:
           Places, OpenStreetMap, excluded from the public tables, and roaster storefronts), a team, a licence and
           attribution. No table, column, type, enum or rule changed, so Snowflake needs no migrate: its load
           compares column names only and its comments read descriptions only.
+      - topic: release gate on Claude's verdicts
+        decided: "2026-11-04"
+        outcome: >-
+          Added the quality rule verdicts_cover_catalog and its threshold min_verdict_share (0.85) to
+          contracts/public-catalog.odcs.yaml (public-catalog contract 2.2.3, a patch: an added rule, documentation
+          only for readers). A release is served only if the build had a verdict model and at least 85% of listed
+          coffees were decided by Claude's coffee-or-not verdict; until 2026-11 every release was the rules alone.
+          No table, column, type or enum changed, so Snowflake needs no migrate.
 team:
   name: registry.coffee
   members:

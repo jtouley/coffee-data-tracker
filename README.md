@@ -277,7 +277,7 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
@@ -399,6 +399,10 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - `verdicts_cover_catalog`: Claude's verdicts ran: the build has a verdict model, and at least 85% of listed
+    coffees were decided by a verdict (`dim_coffee.classified_by = 'claude'`; about 95% is expected, as this
+    week's new versions get theirs a week later). Off only for an explicit rules-only build (`--allow-rules-only`
+    or `COFFEEDATA_ALLOW_RULES_ONLY=1`; RUNBOOK §5.5);
   - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
     comment, such as "about 45,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
     `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;

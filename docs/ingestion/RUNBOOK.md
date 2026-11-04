@@ -20,8 +20,9 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
   `gcloud secrets versions access` to query the lake.
 - `HF_TOKEN` and `ANTHROPIC_API_KEY` already hold values in Secret Manager: they are the app's secrets
   (`secrets.tf`). Terraform only references them by name and never sets a value.
-- `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`). For verdicts in the build job, add
-  `verdict_model = "<the VERDICT_MODEL repository variable's value>"`. Leave it out for rules only.
+- `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`), with
+  `verdict_model = "claude-haiku-5-5"` (the VERDICT_MODEL repository variable's value). **It is required:** a plan
+  without it stops at the variable's validation, and a build job without it fails (§5.5).
 
 ## 1. Build the image
 
@@ -450,8 +451,10 @@ echo $WEEK   # this Monday, e.g. 2026-11-02
 
 **Crawl, merge, enrich-week and build run on Cloud Run only.** The jobs carry the verdict model, the Anthropic key
 and the staging bucket, and the build job runs `coffeedata classify` first. A local `uv run coffeedata` crawl,
-crawl-retry, merge, enrich-week, build or publish has none of these: it builds a different catalog (rules only, no
-verdicts) that can still pass the gate and become the baseline. Don't use the local forms for a release. Only the
+crawl-retry, merge, enrich-week, build or publish has none of these. Without a verdict model and key, a local
+`classify` or `build` fails (§5.5); with `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` (which `make` sets
+for a local lake) it builds a different catalog, rules only, that has no verdict gate and can still pass the other
+checks and become the baseline. Don't use the local forms for a release. Only the
 read-only steps (`build-diff`, the Python checks) and `override` also have a local form, which runs with §3's
 `COFFEEDATA_LAKE` and `HF_TOKEN` exports (never echo the token). `--args` replaces the job's arguments for one
 execution, and gcloud splits it on commas, so keep commas out of it. `build` runs `sh -c`, so its `--args` is one
@@ -495,6 +498,7 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 |---|---|
 | `catalog_volume_vs_last_build` | **b** if build-diff shows a real change; **c** if a crawl lost roasters |
 | `run_is_complete`, `run_ok_rate`, `adapter_ok_rate` | **c** |
+| `verdicts_cover_catalog` | §5.5: the build had no verdict model, or the verdicts backfill isn't collected yet |
 | `latest_run_is_fresh` | only possible if last week's run is missing too (on Tuesday last week's Monday still counts as fresh, §5.2). Fix **this** week's merge (§5.2, or **c** for `$WEEK`): once `$WEEK` is merged, this test passes. **Never crawl a past week** (c) |
 | anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
 
@@ -738,6 +742,66 @@ The next execution uses it; one that is running keeps its old limit. **The next 
 unless `ingestion.tf` says the same. On main, `crawl-generic` is still 2Gi, and PR #91 sets it to 8Gi. Until that
 merges, a plan that shows `crawl-generic` memory going 8Gi → 2Gi must not be applied (§4 step 2's digest pin
 included): set it to 8Gi in `ingestion.tf` first.
+
+### 5.5 Verdicts: the gate, a failed classify, and the backfill
+
+Claude's coffee-or-not verdicts (`verdict.py`) decide every product the rules don't exclude outright. Until 2026-11
+they never ran: `verdict_model` defaulted to empty, `classify` skipped with exit 0, and every release was the rules
+alone (on the sealed set, 10.7% of the products the rules keep are not coffee, against 2.7% with the verdicts).
+Now three things stop that from happening silently:
+
+- **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
+  which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
+  uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
+  so the `ingest job build failed` email arrives. An API error in classify fails the same way. With
+  `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
+- **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
+  (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
+  `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
+  Claude's verdicts (<model> N); the rest by the rules`.
+- **`verdict_model` is required in Terraform**, with no empty default.
+
+**The expected share and its lag.** About 95%, not 100%. The build job's classify submits this week's new and
+changed product versions and doesn't wait for them, so they get verdicts at next week's build: 2.5% of listed
+coffees in the 2026-11-02 run (1,114 of 44,593). An `unsure` verdict is left to the rules too, about 3% on the
+validation set. 85% leaves room for a week with nearly 3x the usual new versions. To get this week's versions in
+before the build, run classify with a wait (`coffeedata classify --wait 60`) before rebuilding.
+
+**A failed classify** (the log says `Claude's verdicts are expected but can't run: no ...`): check
+`verdict_model` in `terraform.tfvars` and the job's env (`gcloud run jobs describe build --region $REGION
+--format='value(spec.template.spec.template.spec.containers[0].env)'`; it lists names and secret references, not
+the key's value), and that `ANTHROPIC_API_KEY` has a version in Secret Manager. Fix, apply, then rebuild as in §5.2.
+
+**The backfill**, after the first apply with `verdict_model` (and whenever the verdict model or
+`coffee_definition.md` changes, which makes every version pending again): about 62,000 product versions are
+pending, so the first build after the change fails `verdicts_cover_catalog` until their verdicts are collected,
+and last week's release stays served. That is the gate working: don't opt out around it.
+
+1. Submit everything pending (7 batches of 10,000; `--limit` defaults to 100,000), and wait up to 3 hours for them
+   inside the job's 240 minutes:
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   ```
+
+2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
+   later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   ```
+
+3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
+   (95% about 2,400–5,200) and a few hundred to come back: within the 20% volume check, so no
+   `--accept-volume-change` should be needed. Check the counts with `coffeedata build-diff`; a count far outside
+   that range means the production request differs from the one evaluated (`eval/sealed/`).
+4. Add the number of products whose `is_coffee` changed to the running total in `eval/sealed/README.md` (CLAUDE.md
+   step 9).
+
+**Rules only on purpose** (a fork without Claude, a local lake, tests): `--allow-rules-only` on `classify`, `build`
+and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` repository variable for `weekly.yml`).
+`make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
+non-coffee.
 
 ## 6. Alerts
 

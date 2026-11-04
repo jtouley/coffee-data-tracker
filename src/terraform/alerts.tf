@@ -136,7 +136,7 @@ resource "google_monitoring_alert_policy" "ingest_job_failed" {
 
           gcloud logging read 'resource.type="cloud_run_job" AND resource.labels.job_name="${each.key}" AND labels."run.googleapis.com/execution_name"="<execution>"' --limit 200 --freshness 1d
 
-      A failed `build`: if the gate failed, no new release this week and Tuesday's site run fails without exporting. If only egress-check failed (an IP refused on over 8% of first contacts), the release is already published: check the egress IPs, not the data. A failed `publish` or `classify` exits 0 and is not caught here. Steps: docs/ingestion/RUNBOOK.md, section 5.
+      A failed `build`: if the gate failed, no new release this week and Tuesday's site run fails without exporting. If only egress-check failed (an IP refused on over 8% of first contacts), the release is already published: check the egress IPs, not the data. A failed `classify` (no verdict model or Anthropic key, or an API error) fails the execution too: the log names what is missing, and the build after it ran on the verdicts already stored (its verdicts_cover_catalog test says whether that release was served). A failed `publish` exits 0 and is not caught here. Steps: docs/ingestion/RUNBOOK.md, section 5.
     EOT
   }
   user_labels = {
