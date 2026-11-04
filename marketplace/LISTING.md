@@ -36,9 +36,15 @@ are described.
 **Refresh:** weekly (data collected Mondays, published Tuesdays).
 **Geography:** United States. **History:** from 2026-10-26.
 
+**Changed column names on Snowflake (breaking for quoted lower-case names):** the share's views now have upper-case
+column names. A query that quotes a lower-case name now fails with `invalid identifier`. Before:
+`select "release_run_date" from SHARE.COFFEE`. Now: `select release_run_date from SHARE.COFFEE` (unquoted names
+work in any case, or quote the upper-case name, `"RELEASE_RUN_DATE"`).
+
 **Sample queries** (Snowflake: the share's views `SHARE.COFFEE`, `SHARE.PRICE_EVENT`, `SHARE.MARKET_WEEKLY` and
 `SHARE.ROASTER`, in the database the consumer mounts the share as; their column names are upper case and need no
-quotes. On Hugging Face or Databricks, use the `public_*` table names):
+quotes. Databricks: the shared tables `market.coffee`, `market.price_event`, `market.market_weekly` and
+`market.roaster`, in the catalog the consumer creates from the share. Hugging Face: the `public_*` table names):
 ```sql
 -- 1. Median retail price per 100 g by origin, washed vs natural
 select ORIGIN_COUNTRY, PROCESS, COFFEES, MEDIAN_PRICE_PER_100G
