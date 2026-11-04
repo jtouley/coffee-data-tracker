@@ -1002,6 +1002,35 @@ def test_tag_parity_warns_and_the_build_still_serves_records_and_prints_it(
     assert recorded == ("warn", 1)
     run(lake, "2026-11-02", RID, FULL)  # the old version stays in the lake, so the next build warns again
     monkeypatch.setattr(cli, "_today", lambda: "2026-11-02")
+    capsys.readouterr()
     assert cli.cmd_build(argparse.Namespace(**vars(args) | {"run_date": "2026-11-02"})) is True
     diff = quality.build_diff(Lake())  # build-diff lists the latest build's warnings
-    assert diff["new_passed"] and diff["warnings"]["test.coffeedata.python_readers_agree_on_tags"] == 1
+    assert diff["new_passed"] and diff["warnings"]["python_readers_agree_on_tags"] == 1
+    # ... under the same names, and counts, as the build's warnings line
+    [summary] = [line for line in capsys.readouterr().err.splitlines() if " warnings: " in line]
+    assert summary == f"build {diff['new']} warnings: " + ", ".join(
+        f"{t} ({'?' if n is None else n})" for t, n in diff["warnings"].items()
+    )
+
+
+def test_build_warnings_name_generic_tests_by_name_not_by_their_hash():
+    """A generic test's unique_id ends in a hash (`test.<project>.<name>.<hash>`); a singular test's ends in its
+    name. Both print by name, sorted; only `warn` nodes count."""
+    generic = "test.coffeedata.relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_.7223529a27"
+    nodes = [
+        ("test.coffeedata.python_readers_agree_on_tags", "warn", 1),
+        (generic, "warn", 12),
+        ("test.coffeedata.not_null_dim_coffee_coffee_id.5c2d8e1f0a", "pass", 0),
+        ("model.coffeedata.dim_coffee", "success", None),
+        ("test.coffeedata.build_metrics_in_band", "warn", None),
+        (None, "warn", 3),
+    ]
+    assert (
+        quality.readable_test_name(generic)
+        == "relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_"
+    )
+    assert list(quality.build_warnings(nodes).items()) == [
+        ("build_metrics_in_band", None),
+        ("python_readers_agree_on_tags", 1),
+        ("relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_", 12),
+    ]

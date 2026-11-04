@@ -221,6 +221,13 @@ the registry). There is no per-service copy.
     intermediate models above, which are empty on this lake (every fetch in it recorded its count);
   - the gate outcome is the same on both: 10-26 passes; 10-30 fails the same completeness and ok-rate checks,
     because that run is partial in the lake.
+  - Roaster status is `main`'s, including kaldi.com and hikersbrewcoffee.com (hiker.coffee): both `active`.
+    kaldi.com's 10-26 fetch hit the old 20-page cap (5,000 products, all equipment parts such as BUNN kits; its
+    coffees come later in the catalog). The crawl's rules then counted 3,459 of them as coffee; today's rules count 0,
+    so it lists 0 coffees while its status, from the recorded count, is `active`. The live store sells coffee
+    (24 products in /collections/latin-american-gourmet-coffee). steamshovelcoffee.com and sumerce.coffee stay
+    `no_coffee` as on `main`, though their live stores sell coffee and the build lists 1 and 4: the status
+    follow-up fixes both kinds of mismatch.
 - **The Python readers and the build agree on tags, or the build says so.** The build decodes HTML entities in tags
   (`decode_html_entities_list`); `registry.py`, `enrich.py` and `verdict.py` read them raw. `int_tag_decoding_parity`
   lists the products whose coffee/not-coffee decisions differ between the two, and the data test
@@ -229,13 +236,6 @@ the registry). There is no per-service copy.
   prints the count and examples (`tag parity: ...`) and a `build <id> warnings: ...` line, and `builds` records the
   test as a `warn` node with the count (build-diff's `warnings`). No alert emails it: the pipeline's alerts fire on
   failed executions and Scheduler errors only (RUNBOOK §6), and this adds no new channel.
-  - Roaster status is `main`'s, including kaldi.com and hikersbrewcoffee.com (hiker.coffee): both `active`.
-    kaldi.com's 10-26 fetch hit the old 20-page cap (5,000 products, all equipment parts such as BUNN kits; its
-    coffees come later in the catalog). The crawl's rules then counted 3,459 of them as coffee; today's rules count 0,
-    so it lists 0 coffees while its status, from the recorded count, is `active`. The live store sells coffee
-    (24 products in /collections/latin-american-gourmet-coffee). steamshovelcoffee.com and sumerce.coffee stay
-    `no_coffee` as on `main`, though their live stores sell coffee and the build lists 1 and 4: the status
-    follow-up fixes both kinds of mismatch.
 
 ## 5. Contracts (versioned and tested)
 
