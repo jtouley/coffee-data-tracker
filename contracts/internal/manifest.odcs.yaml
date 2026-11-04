@@ -213,10 +213,10 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: 'JSON: the job''s own summary (arm, egress, rps, slice and salt for the confirmation run; for fetch-health,
-      its verdict on the week''s fetches: systemic fetch failures, and the list of roasters whose fetch failed, came back
-      empty or came back short, each with its reasons and the gate rules that gave them, plus the partial and quarantined
-      fetches).'
+    description: 'JSON: the job''s own summary (arm, egress, rps, slice and salt for the confirmation run; only for a manual
+      crawl --only; for fetch-health, its verdict on the week''s fetches: systemic fetch failures, and the list of roasters
+      whose fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, plus
+      the partial and quarantined fetches).'
   quality:
   - id: job_start_and_end_rows
     description: a job writes a running row at its start and one end row (done, deadline or failed).
@@ -269,4 +269,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: 4a57865f654acdcc
+  value: 430a158192706dda

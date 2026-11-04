@@ -96,8 +96,8 @@ locals {
     # through Monday's crawl window, it runs the gate's run_ok_rate, adapter_ok_rate and suspect rules on the
     # unmerged week once a crawl attempt has ended, and writes its list (failed, empty, short) for the owner (the
     # crawl passes re-fetch it only with COFFEEDATA_DQ_REFETCH, set on no job here: off until measured,
-    # eval/run_quality/README.md). It judges fetches, not the data in them. Never serves, records a build or
-    # publishes. Its non-zero exit (a systemic fetch failure) fails the execution, which emails the owner (alerts.tf,
+    # eval/run_quality/README.md). It judges fetches, not the data in them. Never serves or records a build; it
+    # publishes its job_manifests rows (the verdict) to the dataset after every check. Its non-zero exit (a systemic fetch failure) fails the execution, which emails the owner (alerts.tf,
     # ingest_job_failed). Retries 0: a retry would find the check done and exit 0, hiding the failure. 8Gi, as the
     # build: dbt builds the models run_completeness reads (dim_coffee, with the classifier).
     "fetch-health" = { command = ["coffeedata"], args = ["fetch-health"], nat = false, claude = false, memory = "8Gi", retries = 0 }

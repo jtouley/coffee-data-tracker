@@ -927,10 +927,13 @@ a `WARNING` line and exits 0; a new or different finding alerts again. A suspect
   change, or egress. Roll back the image (section 5) before the next slot.
 - `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
 - No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a fetch finding; the
-  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes): a failed check runs
-  again only when the next crawl attempt ends, or with `--force`. After the last pass of the week (21:47) no attempt
-  ends again, so run it with `--force` once it's fixed. Run `coffeedata fetch-health --force` locally against a copy of the lake
-  to see the dbt error.
+  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes). A check that
+  **failed** (its end row says `failed`) runs again when the next crawl attempt ends, or with `--force`. A check that
+  was **killed** (out of memory, instance lost: only its running row) holds back the polls until it is 30 minutes old
+  (`fetchhealth.CHECK_LIMIT`) or a later check has started; then the next poll judges everything that has ended
+  since the last finished check. After the last pass of the week (21:47) no attempt ends again, so after a failure
+  run it with `--force` once it's fixed. Run `coffeedata fetch-health --force` locally against a copy of the lake to
+  see the dbt error.
 
 **The list** (`repull`) is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
 `suspect`) and the gate `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "Why a roaster is

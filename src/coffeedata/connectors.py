@@ -278,6 +278,10 @@ def crawl(
     window = _window_left(lake, "crawl", connector, week, deadline_min or c.deadline_min)
     # the quarantine this attempt applies: none for --only, so its start row doesn't list the roaster it fetches
     started = control.execution() | health.summary(todo_ids) | {"quarantined": sorted(quarantine)}
+    if (
+        only
+    ):  # a manual one-roaster run (RUNBOOK §7): never a retry of the pass running beside it (fetchhealth.run)
+        started["only"] = only
     job = control.start(lake, "crawl", week, connector, len(states), detail=started)
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     if health.dead:

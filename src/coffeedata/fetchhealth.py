@@ -68,7 +68,9 @@ Triggered by its own Cloud Run job, polled by Cloud Scheduler every 20 minutes t
 with no crawl attempt ended since the last check exits at once; otherwise it judges every connector whose pass has
 ended (a `deadline` end row included), and leaves out one still running (the next poll after it ends judges it, and
 the run as a whole). An attempt with only its running row is dead once a later attempt of the same job and connector
-has started, or JOB_LIMIT after it started. A poll that finds another check still running exits at once.
+has started (never a manual `crawl --only` or an arm), or JOB_LIMIT after it started. A poll that finds another check
+still running exits at once; a check with only its running row is dead CHECK_LIMIT after it started, or once a
+later check has started.
 """
 
 from __future__ import annotations
@@ -90,6 +92,12 @@ CRAWL_JOBS = ("crawl", "crawl-retry")  # the passes whose output it judges
 # A crawl attempt with only its running row this long after it started has died: the crawl jobs' Cloud Run task
 # timeout (ingestion.tf, 14400 s). Before that, it may still be running, and the check waits for it.
 JOB_LIMIT = timedelta(minutes=240)
+# A check's own running row this long after it started belongs to a check that died (killed, out of memory): a check
+# takes minutes (its dbt step about 20 s on the replay copy and about 70 s on the whole lake, plus the overlay copy
+# and the verdict), so 30 minutes is over 20 times that. It is also longer than the 20-minute poll interval, so a slow
+# but live check is never overlapped by the next poll, while a killed one holds back at most the next poll, not the
+# next 4 hours. A later check that has started also shows an earlier one with only its running row has died.
+CHECK_LIMIT = timedelta(minutes=30)
 GATE_TESTS = ("run_ok_rate", "adapter_ok_rate", "suspect_runs_need_review")
 SELECT = ["+run_completeness", "+stg_run_quality", *GATE_TESTS]
 FLAGS = (
@@ -292,12 +300,16 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     from .connectors import week_of
 
     week = week_of(day)
-    rows = control.rows(lake, week)
+    # The poll's first read of the lake, retried on a transient error like every first read of a crawl: one dropped
+    # connection must not fail the execution (and email) when there may be nothing to judge.
+    rows = retry_transient(control.rows, lake, week)
     crawls = [r for r in rows if r["job"] in CRAWL_JOBS and not control.is_arm(r)]
     now = _utc(control.now())
     # An attempt with only its running row is live until JOB_LIMIT, unless a later attempt of the same job and
     # connector has started: that one is the retry (Cloud Run's, or the next slot), so the first has died, and its
-    # connector is judged now rather than up to 4 hours later.
+    # connector is judged now rather than up to 4 hours later. A manual `crawl --only` (its detail says `only`) runs
+    # beside a pass and is never its retry, nor is an arm (already left out of `crawls`).
+    passes = [o for o in crawls if not control.detail_of(o).get("only")]
     later = {
         r["attempt_id"]
         for r in crawls
@@ -305,7 +317,7 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
             o["job"] == r["job"]
             and o["connector"] == r["connector"]
             and _utc(o["started_at"]) > _utc(r["started_at"])
-            for o in crawls
+            for o in passes
         )
     }
     live = [
@@ -322,12 +334,16 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     # A failed check counts as having seen its attempts too: a dbt problem alerts once, not on every poll after
     # (`fetch-health --force` checks again once it's fixed).
     checks = [r for r in rows if r["job"] == JOB and r["status"] in ("done", "failed")]
-    # Another check still running (its running row younger than JOB_LIMIT): it judges what has ended, and a second
-    # one meanwhile could alert twice for the same finding.
+    # Another check still running: it judges what has ended, and a second one meanwhile could alert twice for the same
+    # finding. A check's running row counts as dead past CHECK_LIMIT, or once a later check has started.
+    starts = [_utc(r["started_at"]) for r in rows if r["job"] == JOB]
     busy = [
         r
         for r in rows
-        if r["job"] == JOB and r["status"] == "running" and _utc(r["started_at"]) + JOB_LIMIT > now
+        if r["job"] == JOB
+        and r["status"] == "running"
+        and _utc(r["started_at"]) + CHECK_LIMIT > now
+        and not any(t > _utc(r["started_at"]) for t in starts)
     ]
     if not force:
         if busy:

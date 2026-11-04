@@ -27,7 +27,9 @@ roasters had in the 35 days up to the run (snapshots). New products a re-fetch w
 
 **Replay** (`replay_repulls.py`, the check's dbt step and `fetchhealth.judge` with `attempted_only`): a local copy of
 the lake, read only, holding runs 2026-10-26 to 2026-11-02, cut to the run being judged (later `run_date`
-partitions removed, because `suspect_runs_need_review` reads the lake's latest week). `HF_HUB_OFFLINE=1`, no token.
+partitions removed, so `dim_roaster`, which gives the reconstructed expected set and the fallback adapter, sees the
+lake as it stood at that run; `suspect_runs_need_review` itself judges `as_of_run`, which the replay sets).
+`HF_HUB_OFFLINE=1`, no token.
 
 | Run | Systemic | Listed | Held back | Re-fetched (empty / suspect) | Products, upper bound |
 |---|---|---|---|---|---|

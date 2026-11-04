@@ -306,8 +306,8 @@ def test_a_poll_while_another_check_runs_is_up_to_date(tmp_path, monkeypatch):
     seen: list = []
     _stub_judge(monkeypatch, seen)
     control.finish(lk, control.start(lk, "crawl", WEEK, "woocommerce"), "done")
-    # A check whose running row is older than the time limit died: it doesn't hold the next poll back.
-    stale = _utc_now() - fetchhealth.JOB_LIMIT - timedelta(minutes=1)
+    # A check whose running row is older than the check's own limit died: it doesn't hold the next poll back.
+    stale = _utc_now() - fetchhealth.CHECK_LIMIT - timedelta(minutes=1)
     control.write(lk, {"run_date": date.fromisoformat(WEEK), "job": fetchhealth.JOB, "attempt_id": "stale-check",
                        "started_at": stale, "status": "running"})  # fmt: skip
     assert fetchhealth.run(lk, WEEK)["status"] == "checked" and len(seen) == 1
@@ -317,6 +317,108 @@ def test_a_poll_while_another_check_runs_is_up_to_date(tmp_path, monkeypatch):
     out = fetchhealth.run(lk, WEEK)
     assert out["status"] == "up to date: another check is still running" and len(seen) == 1
     assert fetchhealth.run(lk, WEEK, force=True)["status"] == "checked"  # --force runs anyway
+
+
+def _row(lk: Lake, job: str, started: datetime, status: str = "running", connector: str | None = None,
+         detail: dict | None = None, attempt: str | None = None) -> None:  # fmt: skip
+    """A job_manifests row written as it stands: e.g. a killed attempt's lone running row."""
+    control.write(lk, {"run_date": date.fromisoformat(WEEK), "job": job, "connector": connector, "detail": detail,
+                       "attempt_id": attempt or f"{job}-{connector}-{started:%H%M%S}", "started_at": started,
+                       "ended_at": None if status == "running" else started + timedelta(minutes=5),
+                       "status": status})  # fmt: skip
+
+
+def test_a_killed_check_holds_back_at_most_its_own_limit_not_the_crawls(tmp_path, monkeypatch):
+    """The review's case: a check killed at 23:07 leaves only its running row. The 21:47 pass ends at 01:40, and the
+    01:47 poll judges it: the killed check is dead 30 minutes after it started, not 240."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    seen: list = []
+    _stub_judge(monkeypatch, seen)
+    day = datetime(2026, 11, 2, tzinfo=UTC)
+    _row(lk, fetchhealth.JOB, day + timedelta(hours=23, minutes=7))  # killed: only its running row
+    clock = [day + timedelta(hours=23, minutes=27)]
+    monkeypatch.setattr(control, "now", lambda: clock[0])
+    _row(lk, "crawl", day + timedelta(hours=21, minutes=47), "done", "generic")
+    # 23:27: the killed check started 20 minutes ago, inside a check's limit: it may still be running.
+    assert fetchhealth.run(lk, WEEK)["status"] == "up to date: another check is still running" and seen == []
+    clock[0] = day + timedelta(hours=25, minutes=47)  # Tuesday 01:47
+    assert fetchhealth.run(lk, WEEK)["status"] == "checked" and len(seen) == 1
+    assert fetchhealth.CHECK_LIMIT < fetchhealth.JOB_LIMIT
+
+
+def test_a_check_with_only_its_running_row_is_dead_once_a_later_check_has_started(tmp_path, monkeypatch):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    seen: list = []
+    _stub_judge(monkeypatch, seen)
+    now = _utc_now()
+    _row(lk, fetchhealth.JOB, now - timedelta(minutes=10), attempt="killed")  # young, but killed
+    _row(
+        lk, fetchhealth.JOB, now - timedelta(minutes=5), "done", attempt="later"
+    )  # a later check ran after it
+    _row(lk, "crawl", now - timedelta(minutes=2), "done", "generic")
+    assert fetchhealth.run(lk, WEEK)["status"] == "checked" and len(seen) == 1
+
+
+def test_a_manual_only_crawl_never_marks_the_pass_beside_it_dead(tmp_path, monkeypatch):
+    """RUNBOOK §8's `crawl --connector X --only <roaster>` during X's pass is no retry of it: X stays running (left
+    out until its pass ends), and nothing is reported dead. A real later attempt of the pass still is."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    seen: list = []
+    _stub_judge(monkeypatch, seen)
+    now = _utc_now()
+    _row(
+        lk, "crawl", now - timedelta(minutes=60), connector="woocommerce", attempt="pass"
+    )  # the resume, running
+    _row(
+        lk,
+        "crawl",
+        now - timedelta(minutes=20),
+        "done",
+        "woocommerce",
+        detail={"only": "a.com"},
+        attempt="only",
+    )
+    out = fetchhealth.run(lk, WEEK)
+    assert out["status"] == "checked" and out["died"] == [] and seen[-1] == frozenset({"woocommerce"})
+    _row(
+        lk, "crawl", now - timedelta(minutes=10), connector="woocommerce", attempt="retry"
+    )  # Cloud Run's retry
+    out = fetchhealth.run(lk, WEEK)
+    assert out["died"] == ["woocommerce"] and seen[-1] == frozenset({"woocommerce"})  # the retry still runs
+
+
+def test_the_polls_first_lake_read_is_retried_on_a_transient_error(tmp_path, monkeypatch):
+    """One dropped connection on the poll's first read is retried, not an execution that fails and emails; one
+    that keeps failing still fails the poll."""
+    from coffeedata import lake as lake_mod
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    waits: list = []
+    monkeypatch.setattr(lake_mod.time, "sleep", waits.append)
+    real, calls = control.rows, []
+
+    def flaky(lake, *a, **k):
+        calls.append(1)
+        if len(calls) == 1:
+            raise duckdb.IOException("IO Error: HTTP 503: connection reset by peer")
+        return real(lake, *a, **k)
+
+    monkeypatch.setattr(control, "rows", flaky)
+    assert fetchhealth.run(lk, WEEK)["status"].startswith("waiting")  # an empty week, read on the second try
+    assert len(calls) == 2 and waits == [lake_mod.RETRY_WAITS[0]]
+
+    def down(lake, *a, **k):
+        raise duckdb.IOException("IO Error: Could not connect to server: HEAD https://huggingface.co/x")
+
+    monkeypatch.setattr(control, "rows", down)
+    waits.clear()
+    with pytest.raises(duckdb.IOException):
+        fetchhealth.run(lk, WEEK)
+    assert waits == list(lake_mod.RETRY_WAITS)  # every retry, then the error
 
 
 def test_the_verdict_is_published_and_read_from_another_staging_root(tmp_path, monkeypatch, caplog):

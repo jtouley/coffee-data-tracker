@@ -877,9 +877,12 @@ it judges every connector whose attempt has ended (`done`, `failed` or `deadline
 (`running` in the detail), so each connector is judged within 20 minutes of its pass ending, and the run as a whole
 once all have. An attempt with only a running row died, and counts as ended, once a later attempt of the same job and
 connector has started (Cloud Run's retry, or the next slot), or once it is older than the jobs' 240-minute limit.
-A poll that finds another check still running (its running row younger than that limit) exits at once, so two
-overlapping checks never alert twice. A failed check (no verdict) runs again only when another crawl attempt ends,
-or with `--force`.
+A poll that finds another check still running exits at once, so two overlapping checks never alert twice. A check's
+own running row counts as dead 30 minutes after it started (`fetchhealth.CHECK_LIMIT`: a check takes minutes, its dbt
+step about 70 s on the whole lake, and 30 minutes is also over the 20-minute poll interval), or once a later check has
+started, so a killed check holds back one poll, not four hours. A `crawl --only` (its start row's detail says `only`)
+or an arm is never a later attempt that marks a pass dead. A failed check (no verdict) runs again when another crawl
+attempt ends, or with `--force`.
 Rejected:
 - *At the end of each crawl job's command*: the check builds `dim_coffee` (the classifier) like the build, which
   runs at 8Gi, inside crawl jobs mostly sized 2Gi with about 15 minutes left of their 240; Shopify's would read the lake
