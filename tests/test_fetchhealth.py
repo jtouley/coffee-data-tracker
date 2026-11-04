@@ -71,6 +71,7 @@ def test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_
         "run_ok_rate": "pass",
         "adapter_ok_rate": "pass",
         "suspect_runs_need_review": "warn",
+        "edge_challenge_share": "pass",  # the check's own: no challenge here
     }
     assert [(e["roaster_id"], e["reasons"], e["rules"]) for e in out["repull"]] == [
         ("s00.com", ["suspect"], ["suspect_runs_need_review"]),
@@ -138,7 +139,7 @@ def test_a_platform_below_the_gates_floor_is_systemic_and_held_off_the_repull_li
 
 
 def _db(tmp_path, completeness: list[tuple], failing: dict[str, list[tuple]]):
-    """A scratch database as dbt leaves it: run_completeness and the stored failures of the gate's tests."""
+    """A scratch database as dbt leaves it: run_completeness and the stored failures of the check's tests."""
     db = tmp_path / "dq.duckdb"
     con = duckdb.connect(str(db))
     con.execute(
@@ -156,6 +157,8 @@ def _db(tmp_path, completeness: list[tuple], failing: dict[str, list[tuple]]):
         "run_ok_rate": "run_date date, roasters bigint, ok_share double",
         "suspect_runs_need_review": "roaster_id varchar, run_date date, batch_id varchar, products bigint, "
         "baseline_products double",
+        "edge_challenge_share": "edge varchar, adapter varchar, roasters bigint, challenged bigint, "
+        "challenged_share double",
     }
     for test, rows in failing.items():
         con.execute(f"create table main_dbt_test__audit.{test} ({cols[test]})")
@@ -168,7 +171,7 @@ def _db(tmp_path, completeness: list[tuple], failing: dict[str, list[tuple]]):
 
 
 def _results(**statuses) -> list[dict]:
-    tests = {"run_ok_rate": "pass", "adapter_ok_rate": "pass", "suspect_runs_need_review": "pass"} | statuses
+    tests = {t: "pass" for t in fetchhealth.TESTS} | statuses
     return [
         {"results": [{"unique_id": "model.coffeedata.run_completeness", "status": "success"}]},
         {"results": [{"unique_id": f"test.coffeedata.{t}", "status": s} for t, s in tests.items()]},
@@ -523,8 +526,8 @@ def test_with_refetch_off_crawl_and_crawl_retry_ignore_the_repull_list(tmp_path,
 
 def test_mains_fetch_states_are_each_mapped_on_purpose(tmp_path, monkeypatch):
     """Over a real dbt build: a partial fetch is not a failure (listed apart, never re-fetched or held); a
-    quarantined store is left out of the ok rates and listed apart; a challenge is a failure that is systemic for
-    its edge (SiteGround's sg-captcha, or a bare 202 in an older file's error), and its roasters are held back."""
+    quarantined store is left out of the ok rates and listed apart; a challenged store is a failure kept on the list
+    with its edge named; a bare 202 names no edge and is a plain failure."""
     lk = _week(tmp_path, monkeypatch)
     part = connectors.PartitionLake(lk, "shopify", WEEK)
     run(
@@ -536,68 +539,149 @@ def test_mains_fetch_states_are_each_mapped_on_purpose(tmp_path, monkeypatch):
         error="partial: deadline reached (page 2)",
     )
     run(part, WEEK, "s31.com", None, status="crashed")
-    sg = {"status": 202, "host": "s32.com", "path": "/products.json", "sg_captcha": "challenge"}
-    run(part, WEEK, "s32.com", None, error="FetchError: HTTP 202 (a challenge) https://s32.com", blocks=[sg])
+    run(
+        part,
+        WEEK,
+        "s32.com",
+        None,
+        error="FetchError: HTTP 202 (a challenge) https://s32.com",
+        blocks=[_sg("s32")],
+    )
     run(part, WEEK, "s33.com", None, error="FetchError: HTTP 202 https://s33.com/products.json")
     out = fetchhealth.run(lk, WEEK)
     assert out["partial"] == [
         {"roaster_id": "s30.com", "adapter": "shopify", "reason": "partial: deadline reached (page 2)"}
     ]
     assert out["quarantined"] == [{"roaster_id": "s31.com", "adapter": "shopify"}]
-    assert [f for f in out["systemic"] if f["scope"] == "challenge"] == [
-        {
-            "scope": "challenge",
-            "edge": "other",
-            "connectors": ["shopify"],
-            "rule": "stg_fetches.challenge",
-            "roasters": 1,
-        },
-        {
-            "scope": "challenge",
-            "edge": "siteground",
-            "connectors": ["shopify"],
-            "rule": "stg_fetches.challenge",
-            "roasters": 1,
-        },
-    ]
-    # The list: main's three, never the partial, the quarantined or the challenged (held back with their edge).
-    assert [(e["roaster_id"], e["reasons"]) for e in out["repull"]] == [
-        ("s00.com", ["suspect"]), ("s01.com", ["failed"]), ("s02.com", ["empty"])
+    # One SiteGround store among 33 is no systemic challenge (edge_challenge_share). 29 of 33 ok is under
+    # run_ok_rate's 90% with no platform below its floor: the run is a finding of its own.
+    assert [f["scope"] for f in out["systemic"]] == ["run"]
+    assert out["tests"]["edge_challenge_share"] == "pass"
+    assert [(e["roaster_id"], e["reasons"], e.get("challenge")) for e in out["repull"]] == [
+        ("s00.com", ["suspect"], None), ("s01.com", ["failed"], None), ("s02.com", ["empty"], None),
+        ("s32.com", ["failed"], "siteground"), ("s33.com", ["failed"], None),
     ]  # fmt: skip
-    assert out["held_back"] == 2
+    assert out["held_back"] == 0
     shop = next(c for c in out["by_connector"] if c["adapter"] == "shopify")
-    assert (shop["partial"], shop["quarantined"], shop["challenged"]) == (1, 1, 2)
+    assert (shop["partial"], shop["quarantined"], shop["challenged"]) == (1, 1, 1)
     # The quarantined store is not in the ok rates' population; the partial one counts as ok (it has products).
     assert (shop["attempted"], shop["judged"], shop["ok"]) == (34, 33, 29)
-    # 29 of 33 is under run_ok_rate's 90% with no platform below its floor: the run is a finding of its own too.
-    assert [f["scope"] for f in out["systemic"]] == ["run", "challenge", "challenge"]
 
 
-def test_a_partial_or_quarantined_store_is_never_a_reason_and_a_challenge_is_systemic_for_its_edge(tmp_path):
+def _sg(host: str) -> dict:
+    """A recorded block with SiteGround's challenge header."""
+    return {"status": 202, "host": f"{host}.com", "path": "/products.json", "sg_captcha": "challenge"}
+
+
+def _poll(lk: Lake, connector: str = "shopify") -> bool:
+    """A crawl attempt ends and the scheduled poll runs: whether it alerted (exited non-zero)."""
+    control.finish(lk, control.start(lk, "crawl", WEEK, connector), "done")
+    try:
+        cli.main(["fetch-health", "--run-date", WEEK])
+    except SystemExit:
+        return True
+    return False
+
+
+def test_one_challenged_store_alerts_nothing(tmp_path, monkeypatch, capsys):
+    lk = _week(tmp_path, monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    run(
+        part,
+        WEEK,
+        "s30.com",
+        None,
+        error="FetchError: HTTP 202 (a challenge) https://s30.com",
+        blocks=[_sg("s30")],
+    )
+    assert not _poll(lk)  # 28 of 31 ok passes run_ok_rate; 1 of 31 challenged is under edge_challenge_share
+    printed = capsys.readouterr().out
+    assert '"severity"' not in printed  # no ERROR line, no WARNING line: nothing systemic
+    detail = json.loads([r for r in control.rows(lk, WEEK) if r["job"] == fetchhealth.JOB][-1]["detail"])
+    assert detail["systemic"] == [] and detail["alert"] == []
+    assert {"roaster_id": "s30.com", "adapter": "shopify", "reasons": ["failed"], "rules": ["run_ok_rate"],
+            "challenge": "siteground"} in detail["repull"]  # fmt: skip
+
+
+def test_a_systemic_challenge_alerts_once(tmp_path, monkeypatch, capsys):
+    lk = _week(tmp_path, monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    for rid in SHOPS[30:35]:  # 5 of the 35 reached: 14%, over the run's 10% tolerance, on a platform of 20+
+        run(
+            part,
+            WEEK,
+            rid,
+            None,
+            error=f"FetchError: HTTP 202 (a challenge) https://{rid}",
+            blocks=[_sg(rid[:-4])],
+        )
+    assert _poll(lk)
+    alert = json.loads(next(x for x in capsys.readouterr().out.splitlines() if '"severity": "ERROR"' in x))
+    assert {"scope": "challenge", "edge": "siteground", "connectors": ["shopify"], "rule": "edge_challenge_share",
+            "roasters": 5} in alert["systemic"]  # fmt: skip
+    detail = json.loads([r for r in control.rows(lk, WEEK) if r["job"] == fetchhealth.JOB][-1]["detail"])
+    # Its roasters stay on the list, each with the edge named.
+    assert (
+        sorted(e["roaster_id"] for e in detail["repull"] if e.get("challenge") == "siteground")
+        == SHOPS[30:35]
+    )
+    assert not _poll(lk)  # the next pass's check finds it again: logged, not emailed
+    assert '"severity": "WARNING"' in capsys.readouterr().out
+
+
+def test_the_2026_11_02_shape_bare_202s_and_a_few_cloudflare_stores_alert_nothing(
+    tmp_path, monkeypatch, capsys
+):
+    """2026-11-02's replay: no gate test failed, but 27 WooCommerce stores (of 229) failed with a bare 202 and 5
+    generic ones (of 167) behind Cloudflare. A bare 202 names no edge, so however many there are it is no
+    challenge finding (abstain), only failed fetches; a few Cloudflare stores are under edge_challenge_share."""
+    lk = _week(tmp_path, monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    for rid in SHOPS[30:34]:  # 4 of 34: 12%, which would be over the share if a bare 202 were an edge
+        run(part, WEEK, rid, None, error=f"FetchError: HTTP 202 https://{rid}/products.json",
+            blocks=[{"status": 202, "host": rid, "path": "/products.json"}])  # fmt: skip
+    run(part, WEEK, "s34.com", None, error="FetchError: HTTP 403 https://s34.com",
+        blocks=[{"status": 403, "host": "s34.com", "path": "/", "cf_mitigated": "challenge"}])  # fmt: skip
+    out = fetchhealth.run(lk, WEEK)
+    assert [f for f in out["systemic"] if f["scope"] == "challenge"] == []
+    assert out["tests"]["edge_challenge_share"] == "pass"
+    entries = {e["roaster_id"]: e for e in out["repull"]}
+    assert all(entries[r]["reasons"] == ["failed"] and "challenge" not in entries[r] for r in SHOPS[30:34])
+    assert entries["s34.com"]["challenge"] == "cloudflare" and out["held_back"] == 0
+
+
+def test_a_partial_or_quarantined_store_is_never_a_reason_and_a_challenge_needs_its_share(tmp_path):
     rc = [("p.com", "woocommerce", True, True, True, True, False, True, "partial: 40 of 90+ products read", None),
+          # a partial fetch that read nothing (a page block before page 1): partial, never `empty`
+          ("p0.com", "woocommerce", True, True, True, False, False, True, "partial: page 1 blocked", None),
           ("q.com", "generic", True, False, False, False, True, False, None, None),
           ("sg1.com", "woocommerce", True, False, True, False, False, False, None, "siteground"),
           ("sg2.com", "generic", True, False, True, False, False, False, None, "siteground"),
-          # challenged, never had a catalog: outside the ok rates and the list, but the edge still refused us
-          ("cf.com", "generic", True, False, False, False, False, False, None, "cloudflare"),
           ("f.com", "woocommerce", True, False, True, False)]  # fmt: skip
     out = fetchhealth.judge(_db(tmp_path, rc, {}), _results())
-    assert out["systemic"] == [
-        {"scope": "challenge", "edge": "cloudflare", "connectors": ["generic"], "rule": "stg_fetches.challenge",
-         "roasters": 1},
-        {"scope": "challenge", "edge": "siteground", "connectors": ["generic", "woocommerce"],
-         "rule": "stg_fetches.challenge", "roasters": 2},
+    assert out["systemic"] == []  # edge_challenge_share passed: the challenges are per-roaster failures
+    assert [(e["roaster_id"], e["reasons"], e.get("challenge")) for e in out["repull"]] == [
+        ("sg2.com", ["failed"], "siteground"), ("f.com", ["failed"], None), ("sg1.com", ["failed"], "siteground"),
     ]  # fmt: skip
-    assert out["repull"] == [
-        {"roaster_id": "f.com", "adapter": "woocommerce", "reasons": ["failed"], "rules": ["run_ok_rate"]}
-    ]
-    assert out["held_back"] == 2  # the two challenged: asking an edge that challenges us again helps nobody
-    assert [r["roaster_id"] for r in out["partial"]] == ["p.com"]
+    assert out["held_back"] == 0
+    assert [r["roaster_id"] for r in out["partial"]] == ["p.com", "p0.com"]
     assert [r["roaster_id"] for r in out["quarantined"]] == ["q.com"]
-    # While woocommerce still crawls, its challenged and partial stores wait for its pass to end.
+    # Past the share, one finding per edge, naming each platform the test failed for; the roasters stay listed.
     (tmp_path / "w").mkdir()
-    out = fetchhealth.judge(_db(tmp_path / "w", rc, {}), _results(), running=frozenset({"woocommerce"}))
-    assert [f["connectors"] for f in out["systemic"]] == [["generic"], ["generic"]] and out["partial"] == []
+    share = {"edge_challenge_share": [("siteground", "woocommerce", 40, 6, 0.15), ("siteground", "generic", 30, 4,
+                                                                                    0.133)]}  # fmt: skip
+    out = fetchhealth.judge(_db(tmp_path / "w", rc, share), _results(edge_challenge_share="warn"))
+    assert out["systemic"] == [{"scope": "challenge", "edge": "siteground", "connectors": ["generic", "woocommerce"],
+                                "rule": "edge_challenge_share", "roasters": 10}]  # fmt: skip
+    assert len(out["repull"]) == 3 and out["held_back"] == 0
+    # While woocommerce still crawls, its part of the finding and its partial stores wait for its pass to end.
+    (tmp_path / "r").mkdir()
+    out = fetchhealth.judge(_db(tmp_path / "r", rc, share), _results(edge_challenge_share="warn"),
+                            running=frozenset({"woocommerce"}))  # fmt: skip
+    assert [f["connectors"] for f in out["systemic"]] == [["generic"]] and out["partial"] == []
 
 
 def test_a_challenge_found_again_on_more_platforms_is_the_same_finding():

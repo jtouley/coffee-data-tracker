@@ -825,21 +825,29 @@ release, records a build, serves or publishes.
 
 **What it runs is the gate's fetch rules.** dbt builds `run_completeness` and `stg_run_quality` (and the models they
 read) into a scratch database (`build/fetch-health/`, its own `--target-path`) and runs three of the gate's singular
-tests, with `--store-failures`, `--indirect-selection empty` and `NoNodesForSelectionCriteria` as an error:
+tests and one of its own, with `--store-failures`, `--indirect-selection empty` and `NoNodesForSelectionCriteria`
+as an error:
 - `run_ok_rate` and `adapter_ok_rate`, with the var `attempted_only` (only the roasters a pass has reached: one
   left for the resume slot is not a failure yet). Same thresholds; the weekly build never sets the var.
 - `suspect_runs_need_review`: `stg_run_quality`'s suspect rule (below half the median of the last 4 counted weeks).
+- `edge_challenge_share` (the check's own, warn, active only with `attempted_only`, so the weekly build skips it):
+  an edge that alone failed more of a platform's roasters than `run_ok_rate` lets the whole run fail (more than
+  `1 - min_ok_share`, 10%), on a platform `adapter_ok_rate` is big enough to judge (`min_adapter_roasters`, 20, with
+  a catalog, reached). Both numbers are the gate's, reused rather than invented: under 20 roasters one store moves a
+  share 5+ points, and a share inside the run's tolerance is what a normal week already absorbs. So one challenged
+  store never alerts. The numbers aren't measured for challenges in particular (CLAUDE.md); they only keep the
+  scope from firing on one store until they are.
 
-The verdict, with no threshold of its own:
+The verdict, with no new number of its own:
 - **Systemic** (exit non-zero, so `ingest_job_failed` emails the owner, once a week per finding: the same scope on
   the same connectors, or the same edge, found again by a later check is logged, not emailed): a platform below
   `adapter_ok_rate`'s floor (scope `connector`); two or more at once (scope `image`: what they share is the image, our
   code or its egress); the run below `run_ok_rate` with no single platform to blame (scope `run`, judged only when no
-  crawl is running); an edge answering with its challenge (scope `challenge`, below).
+  crawl is running); an edge's challenge past `edge_challenge_share` (scope `challenge`, below).
 - **The list** (`repull` in the detail), per roaster, the rows a named gate rule counts as not ok, and only those
   (see "Why a roaster is listed" below): `failed`, `empty` (ok with no products, for a roaster known to have a
-  catalog: `run_completeness.catalog_ok`), `suspect`. Each entry records its rule by name (`rules`). A systemic
-  platform's or edge's roasters are held back (asking a platform that refuses us again that evening helps nobody); an
+  catalog: `run_completeness.catalog_ok`), `suspect`. Each entry records its rule by name (`rules`), and a challenged
+  roaster its edge (`challenge`). A systemic platform's roasters are held back (asking a platform that refuses us again that evening helps nobody); an
   `image` holds back all. An unreached roaster and a closed store are left alone. The check itself changes no
   output, but a re-fetch changes which batch counts for a roaster-week (`stg_run_walk`), so `is_current` and prices
   of the re-fetched roasters' products can change, which is why re-fetching ships off. CLAUDE.md step 9, measured by
@@ -854,9 +862,9 @@ The verdict, with no threshold of its own:
 
 | State on `main` | What the gate does with it | What the check does |
 |---|---|---|
-| `partial`: an ok fetch that read only part of the catalog (stopped by the deadline, a page block, a total it couldn't reach; its reason in `fetches.error`) | counts as ok when it has products; `stg_run_walk` never makes it suspect or puts it in a baseline | **not a failure.** Listed apart (`partial`, with its reason), never a reason on the list, never re-fetched by the check (a partial fetch isn't done, so the week's own resume passes read it again), never held back or systemic. Counted per connector (`by_connector.partial`). |
+| `partial`: an ok fetch that read only part of the catalog (stopped by the deadline, a page block, a total it couldn't reach; its reason in `fetches.error`) | counts as ok when it has products; `stg_run_walk` never makes it suspect or puts it in a baseline | **not a failure.** Listed apart (`partial`, with its reason), never a reason on the list, not even with 0 products (which `run_ok_rate` counts as not ok), never re-fetched by the check (a partial fetch isn't done, so the week's own resume passes read it again), never held back or systemic. Counted per connector (`by_connector.partial`). |
 | `crashed` (quarantined by crashguard after crashing two attempts of its crawl) | left out of both ok rates (not `has_catalog`) | one store's problem with our crawler, not the platform's: listed apart (`quarantined`), never re-fetched (it is quarantined for the week), never systemic. |
-| a challenge: an edge's anti-bot page instead of the catalog (`stg_fetches.challenge`: `siteground` from the `sg-captcha` header recorded in `fetches.blocks` since raw 1.4.0, `cloudflare` from `cf-mitigated`, `other` for a bare 202, the only trace in older files) | a failed fetch, counted by both ok rates | `failed` on the list's terms, and the entry names the edge (`challenge`). An edge answers every store it fronts, and every retry, the same way (`ingest.deferrable`), so it is **systemic for the edge**: one `challenge` finding per edge, naming the platforms it hit and how many roasters (every challenged one, also one with no known catalog, outside the ok rates); its listed roasters are held back. The platforms it hit growing over the day's passes is the same finding. |
+| a challenge: an edge's anti-bot page instead of the catalog, named only when a recorded block names the edge (`stg_fetches.challenge`: `siteground` from the `sg-captcha` header recorded in `fetches.blocks` since raw 1.4.0, `cloudflare` from `cf-mitigated`). A bare 202, or "HTTP 202" in the error, names no edge: the hosts answering it may share nothing, so it is null (abstain) | a failed fetch, counted by both ok rates | `failed` on the list, and the roaster **stays on the list** with its edge named (`challenge`); `by_connector.challenged` counts them. Systemic only past `edge_challenge_share` (above): one `challenge` finding per edge, naming the platforms past it and their challenged roasters; more platforms later in the day is the same finding. Below it, nothing alerts. A Cloudflare challenge is set per site, so a few say nothing about the edge; a bare 202 is a plain `failed`. |
 | a refusal past the 5-minute wait cap (`http.MAX_STORE_WAIT`: a 429, 430 or 503, or a 5xx's long Retry-After, asked again no later than 5 minutes on, in the pass's next deferred round) | an error fetch, counted by both ok rates | `failed`, like any failure: a platform rate-limiting most of its stores is a `connector` finding (2026-10-28's Shopify 429s). Every later `crawl` pass of the week asks it again anyway. The cap also keeps a pass inside its deadline, so the 240-minute rule for a dead attempt (below) still holds. |
 
 **How it reads unmerged output.** dbt's `lake()` globs never see `raw/connector=*/run_date=W/`. The check copies each
@@ -891,8 +899,7 @@ each reason to its rule, and each entry records the rule (`rules`). All three ju
 | `empty` | `run_ok_rate` | the same population: the fetch succeeded with no products for a roaster known to have a catalog |
 | `suspect` | `suspect_runs_need_review` | the test's failing rows (`stg_run_quality`: below half the median of the last 4 counted weeks) |
 
-Systemic findings name their rule the same way (`adapter_ok_rate`, `run_ok_rate`; a `challenge` finding names
-`stg_fetches.challenge`, the dbt column that classifies it, with its `accepted_values` test). A new reason needs a gate rule first (a dbt test the build runs too), then an entry
+Systemic findings name their rule the same way (`adapter_ok_rate`, `run_ok_rate`, `edge_challenge_share`). A new reason needs a gate rule first (a dbt test the build runs too), then an entry
 in `RULES`; `test_every_repull_reason_is_a_named_gate_rule` holds the mapping to the tests, and an entry whose reason
 isn't in `RULES` is never re-fetched. A check of the data itself (prices, content, duplicates) would be a separate
 check with its own rules and its own evaluation, not a new reason here.
@@ -928,7 +935,7 @@ override still wins: `use_batch` pins its batch and `reject` drops the week what
 built catalog and release against recorded passing builds of complete weeks; mid-week, before classification and the
 merge, they would compare half a week with whole ones. They stay in Tuesday's build. `run_is_complete` and
 `latest_run_is_fresh` are about the finished week. PR #82's `run_manifest_mode_values` (a lake-level test on
-`run_manifests.mode`, which `run_completeness` keys on) belongs in `GATE_TESTS` once #82 merges.
+`run_manifests.mode`, which `run_completeness` keys on) belongs in `GATE_TESTS` (#82 has merged; a follow-up).
 
 Replayed on the three real runs in a local copy of the lake (counts only): 2026-10-26, no systemic problem and 67
 listed (all `failed`; 58 of them Square Online, the 71.7% week); 2026-10-27 (a 44-roaster retry run), nothing;

@@ -923,11 +923,12 @@ a `WARNING` line and exits 0; a new or different finding alerts again. A suspect
 - `image`: two or more platforms at once. Suspect what they share: the image (`code_version` on the rows), a code
   change, or egress. Roll back the image (section 5) before the next slot.
 - `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
-- `challenge`: an edge (`edge`: `siteground`, `cloudflare`, or `other` for a bare 202) answered with its anti-bot
-  challenge instead of the catalog, for `roasters` stores on the `connectors` named. It answers every retry the same
-  way, so no pass re-asks them usefully and they are held off the list. Look at the stores' `fetches.blocks` (the
-  egress IP, the `sg-captcha` or `cf-mitigated` header); the fix is on the egress or bot-identity side, not the
-  store's.
+- `challenge`: one edge (`edge`: `siteground` or `cloudflare`) answered with its anti-bot challenge for more than 10%
+  of a platform's reached roasters (`edge_challenge_share`, on a platform of 20 or more), on the `connectors` named,
+  `roasters` stores in all. A challenge answers every retry the same way. The roasters stay on the list, each with
+  its `challenge`. Look at their `fetches.blocks` (the egress IP, the `sg-captcha` or `cf-mitigated` header); the fix
+  is on the egress or bot-identity side, not the store's. Fewer challenged stores alert nothing: they are only
+  `failed` entries naming their edge. A bare 202 names no edge and is a plain `failed`.
 - No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a fetch finding; the
   list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes) until another crawl
   attempt ends or you run it with `--force`. Run `coffeedata fetch-health --force` locally against a copy of the lake

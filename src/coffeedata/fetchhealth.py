@@ -23,29 +23,31 @@ alone (CLAUDE.md: abstain).
 Main's fetch states, each mapped on purpose (run_completeness carries them):
 - partial (an ok fetch that read only part of the catalog: stopped by the deadline, a page block, a total it
   couldn't reach; fetches.partial, its reason in fetches.error): not failed. The gate counts it as ok when it has
-  products, and stg_run_walk never makes it suspect or puts it in a baseline. So it is never a reason on the list:
-  it is listed apart (`partial`, with its reason), never re-fetched by this check (a partial fetch isn't done, so the
+  products, and stg_run_walk never makes it suspect or puts it in a baseline. So it is never a reason on the list,
+  not even with 0 products (which run_ok_rate counts as not ok): it is listed apart (`partial`, with its reason), never re-fetched by this check (a partial fetch isn't done, so the
   week's own resume passes read it again), never held back, never systemic.
 - crashed (quarantined by crashguard after crashing two attempts of its crawl): one store's problem with our
   crawler, which the gate leaves out of both ok rates (not has_catalog). Listed apart (`quarantined`), never
   re-fetched (it is quarantined for the week), never systemic.
-- a challenge (an edge's anti-bot page instead of the catalog: SiteGround's sg-captcha, Cloudflare's cf-mitigated,
-  or a bare 202; stg_fetches.challenge): still `failed` for run_ok_rate, and the entry names the edge (`challenge`).
-  An edge answers every store it fronts, and every retry, the same way, so it is systemic for that edge (scope
-  `challenge`, naming the platforms it hit), not a per-store problem: its roasters are held back, as a systemic
-  platform's are.
+- a challenge (an edge's anti-bot page instead of the catalog, named when a recorded block names the edge:
+  SiteGround's sg-captcha, Cloudflare's cf-mitigated; stg_fetches.challenge): still `failed` for run_ok_rate, and
+  the roaster stays on the list with its edge named (`challenge`). It is systemic (scope `challenge`) only past
+  edge_challenge_share, on the gate's own numbers: that one edge failed more of a platform's roasters than
+  run_ok_rate lets the whole run fail (1 - min_ok_share), on a platform of at least min_adapter_roasters. So one
+  challenged store alerts nothing. A bare 202 names no edge (the hosts answering it may share nothing): a plain
+  `failed`, with no edge (CLAUDE.md: abstain). How often the classification is right is unmeasured.
 - a refusal that outlasts the 5-minute wait cap (http.MAX_STORE_WAIT: a 429, 430 or 503, or a 5xx's long
   Retry-After): an error fetch, so `failed`, counted by run_ok_rate and adapter_ok_rate as any failure (a platform
   rate-limiting most stores is scope `connector`). Every later crawl pass of the week asks it again anyway.
 
-What it decides, with no new threshold of its own:
+What it decides, with no new number of its own (every threshold is a gate var):
 - systemic: a platform below adapter_ok_rate's floor (scope connector); two or more platforms below it in the same
   pass, which points at what they share, the image, our code or its egress, rather than at one platform (scope
   image); the run below run_ok_rate's floor with no single platform to blame (scope run); an edge's challenge
-  (scope challenge). The job exits non-zero, which emails the owner (alerts.tf, ingest_job_failed), once per finding
+  past edge_challenge_share (scope challenge). The job exits non-zero, which emails the owner (alerts.tf, ingest_job_failed), once per finding
   a week: a later check that finds the same scope on the same connectors (or edge) again records it and logs a
   warning; a new or different finding alerts.
-- held back: a systemic platform's or edge's roasters stay off the list (asking a platform that is refusing us
+- held back: a systemic platform's roasters stay off the list (asking a platform that is refusing us
   again the same evening helps nobody), and an image problem holds back all of it. A suspect with no adapter (no
   run_completeness row) is listed apart, unattributed: never re-fetched or held back.
 
@@ -88,7 +90,11 @@ CRAWL_JOBS = ("crawl", "crawl-retry")  # the passes whose output it judges
 # timeout (ingestion.tf, 14400 s). Before that, it may still be running, and the check waits for it.
 JOB_LIMIT = timedelta(minutes=240)
 GATE_TESTS = ("run_ok_rate", "adapter_ok_rate", "suspect_runs_need_review")
-SELECT = ["+run_completeness", "+stg_run_quality", *GATE_TESTS]
+# The check's own systemic rule, on the gate's numbers (min_adapter_roasters, min_ok_share): an edge's challenge is
+# systemic for a platform only past them, so one challenged store never alerts. It names no roaster's reason.
+CHECK_TESTS = ("edge_challenge_share",)
+TESTS = (*GATE_TESTS, *CHECK_TESTS)
+SELECT = ["+run_completeness", "+stg_run_quality", *TESTS]
 FLAGS = (
     "--store-failures",  # each test's failing rows, which the verdict reads
     "--indirect-selection",
@@ -175,13 +181,13 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
     statuses = {r.get("unique_id"): r.get("status") for step in results for r in step.get("results") or []}
     broken = sorted(uid for uid, st in statuses.items() if st in ("error", "skipped"))
     tests = {uid.split(".")[-1]: st for uid, st in statuses.items() if uid and uid.startswith("test.")}
-    if broken or not results or any(not r for r in results) or not set(GATE_TESTS) <= tests.keys():
+    if broken or not results or any(not r for r in results) or not set(TESTS) <= tests.keys():
         # A metric error is not a data failure (GX-3): no verdict, and the job fails so someone looks.
         raise CheckError(f"dbt didn't run the check: {', '.join(broken) or 'no results for every step'}")
     con = duckdb.connect(str(db), read_only=True)
     try:
         failing: dict[str, list[dict]] = {}
-        for test in GATE_TESTS:
+        for test in TESTS:
             table = failures_table(con, test)
             failing[test] = _rows(con, f"select * from {table}") if table else []
             # A test reported failing with no stored rows was never evaluated (GX: an empty result is a metric
@@ -197,8 +203,10 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
             )
         listed = _rows(
             con,
+            # A partial fetch is never a reason, even one that read 0 products (a page block before the first
+            # page): it is listed apart, under `partial`, with its reason.
             """select roaster_id, adapter, case when ok then 'empty' else 'failed' end as reason, challenge
-               from run_completeness where has_catalog and attempted and not catalog_ok""",
+               from run_completeness where has_catalog and attempted and not catalog_ok and not partial""",
         )
         # Main's other fetch states, listed apart: never a reason, never re-fetched by this check (module doc).
         partial = _rows(
@@ -209,10 +217,6 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         quarantined = _rows(
             con,
             "select roaster_id, adapter from run_completeness where quarantined order by adapter, roaster_id",
-        )
-        # Every roaster an edge challenged this run (attempted, no ok fetch), with a known catalog or not.
-        challenged = _rows(
-            con, "select roaster_id, adapter, challenge from run_completeness where challenge is not null"
         )
         reached = _rows(
             con,
@@ -242,18 +246,18 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         r = failing["run_ok_rate"][0]
         systemic.append({"scope": "run", "rule": "run_ok_rate", "roasters": r["roasters"],
                          "ok_share": round(r["ok_share"], 3)})  # fmt: skip
-    # An edge's challenge answers every store it fronts the same way, and every retry: systemic for that edge, one
-    # finding per edge naming the platforms it hit. It counts every challenged roaster, also one with no known
-    # catalog (outside the ok rates): the edge refused our crawler either way. Its rule is the dbt column that
-    # classifies it (stg_fetches.challenge, with its accepted_values test).
+    # An edge's challenge is systemic only where edge_challenge_share says so: that edge alone failed more of a
+    # platform's roasters than run_ok_rate lets the whole run fail, on a platform adapter_ok_rate is big enough to
+    # judge. One finding per edge, naming those platforms. Below that, a challenge is a per-roaster failure with its
+    # edge named on the entry, and alerts nothing.
     edges: dict[str, dict] = {}
-    for r in challenged:
+    for r in sorted(failing["edge_challenge_share"], key=lambda r: (r["edge"], r["adapter"])):
         if r["adapter"] not in running:
-            f = edges.setdefault(r["challenge"], {"scope": "challenge", "edge": r["challenge"], "connectors": set(),
-                                                  "rule": "stg_fetches.challenge", "roasters": 0})  # fmt: skip
-            f["connectors"].add(r["adapter"])
-            f["roasters"] += 1
-    systemic += [f | {"connectors": sorted(f["connectors"])} for _, f in sorted(edges.items())]
+            f = edges.setdefault(r["edge"], {"scope": "challenge", "edge": r["edge"], "connectors": [],
+                                             "rule": "edge_challenge_share", "roasters": 0})  # fmt: skip
+            f["connectors"].append(r["adapter"])
+            f["roasters"] += r["challenged"]
+    systemic += [edges[e] for e in sorted(edges)]
     image = len(down) >= 2
     reasons: dict[str, dict] = {}
     for r in listed + [s | {"reason": "suspect"} for s in suspects]:
@@ -273,14 +277,15 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
             # A suspect with no run_completeness row has no connector to ask it again: listed for the owner on its
             # own, whatever is systemic, and neither re-fetched nor counted as held back.
             unattributed.append(e)
-        elif image or e["adapter"] in down or e.get("challenge"):
+        elif image or e["adapter"] in down:
             held += 1
         else:
             repull.append(e)
     return {
         "systemic": systemic,
         "repull": repull,
-        # listed roasters kept off the list because their platform, their edge (a challenge) or the image is systemic
+        # listed roasters kept off the list because their platform or the image is systemic (a challenge keeps its
+        # roasters on the list, with their edge named)
         "held_back": held,
         "unattributed": unattributed,  # listed roasters with no adapter: for the owner, never re-fetched or held back
         # main's other fetch states, for the owner: never a reason, never re-fetched by this check, never held back
@@ -288,7 +293,7 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         "quarantined": [r for r in quarantined if r["adapter"] not in running],
         "by_connector": reached,
         "running": sorted(running),
-        "tests": {t: tests[t] for t in GATE_TESTS},  # pass, fail (an error-severity test) or warn
+        "tests": {t: tests[t] for t in TESTS},  # pass, fail (an error-severity test) or warn
     }
 
 

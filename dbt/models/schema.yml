@@ -45,11 +45,12 @@ models:
       - name: challenge
         description: >-
           A failed fetch (status error) that an edge answered with its anti-bot challenge instead of the catalog,
-          by edge: siteground (a recorded block with SiteGround's sg-captcha header, raw contract 1.4.0),
-          cloudflare (cf-mitigated challenge), or other (a bare 202, as a block or in the error, the only trace in
-          older files). Null otherwise. The fetch-health check treats a challenge as systemic for its edge.
+          when a recorded block names the edge: siteground (SiteGround's sg-captcha header, raw contract 1.4.0) or
+          cloudflare (cf-mitigated challenge). Null otherwise, a bare 202 included: it names no edge, so it stays a
+          plain failure. The fetch-health check names the edge on the roaster's entry, and finds it systemic only
+          past edge_challenge_share.
         data_tests:
-          - accepted_values: {arguments: {values: [siteground, cloudflare, other]}}
+          - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
     description: >-
       stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
@@ -355,8 +356,9 @@ models:
         description: Why it is partial (int_roaster_runs.partial_reason); null otherwise.
       - name: challenge
         description: >-
-          Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground, cloudflare or other);
-          null otherwise. A failure for the ok rates; the fetch-health check treats it as systemic for the edge.
+          Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground or cloudflare);
+          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry and
+          finds it systemic only past edge_challenge_share.
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
       volume check and anomaly bands read them.
