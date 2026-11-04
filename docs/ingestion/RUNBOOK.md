@@ -53,10 +53,12 @@ every job then runs the same image, and the plan shows the change.
 ## 2. Init, plan, apply
 
 **Already applied in production** (the image existed first). The Shopify egress IP is **34.172.156.113**, and every
-job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches.
+job runs `$IMAGE`. This section is for a fresh project, or to check that the live state still matches. The second
+egress IP, for the WooCommerce and generic crawls, is applied on its own: §2.1.
 
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
-  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi, and
+  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
+  and crawl-generic's to 0; `crawl-generic` has 8Gi, and
   `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
   else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
@@ -78,12 +80,13 @@ terraform init -backend-config="bucket=coffee-data-tracker-tfstate"
 terraform plan -var ingest_schedule_enabled=false -out ingest.plan
 ```
 
-**Expected plan in a fresh project: 38 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
+**Expected plan in a fresh project: 41 to add, 0 to change, 0 to destroy.** The app's own resources don't change.
 
 | Resources | Count |
 |---|---|
 | `google_project_service.ingest_apis` (compute, cloudscheduler, storage) | 3 |
 | `google_compute_network.ingest`, `google_compute_subnetwork.shopify_egress`, `google_compute_router.ingest`, `google_compute_address.shopify_egress`, `google_compute_router_nat.shopify_egress` | 5 |
+| `google_compute_subnetwork.woo_generic_egress`, `google_compute_address.woo_generic_egress`, `google_compute_router_nat.woo_generic_egress` | 3 |
 | `google_storage_bucket.ingest_staging` + `google_storage_bucket_iam_member.ingest_staging` | 2 |
 | `google_service_account.ingest`, `google_service_account.ingest_scheduler` | 2 |
 | `google_secret_manager_secret_iam_member.ingest` (HF_TOKEN, ANTHROPIC_API_KEY) | 2 |
@@ -96,25 +99,108 @@ Stop if the plan changes or destroys anything else, or creates a secret version.
 ```sh
 terraform apply ingest.plan
 terraform output shopify_egress_ip       # the one IP Shopify sees: keep it for Shopify's form and Support
+terraform output woo_generic_egress_ip   # the one IP the WooCommerce and generic stores see
 terraform output ingest_jobs
 cd ../..
 ```
 
-Check that only crawl-shopify and crawl-retry leave through the NAT. `gcloud run jobs describe` returns the v1 (Knative)
+Check that only crawl-shopify, crawl-retry, crawl-woocommerce and crawl-generic leave through a NAT. `gcloud run jobs describe` returns the v1 (Knative)
 form of the job, where Direct VPC egress is the `run.googleapis.com/vpc-access-egress` annotation on the execution
 template (`spec.template.metadata.annotations`, as in Google's
 [Direct VPC egress for jobs](https://cloud.google.com/run/docs/configuring/vpc-direct-vpc) page), not a
 `vpcAccess` field:
 
 ```sh
-for j in crawl-shopify crawl-retry crawl-shopify-default-egress; do
+for j in crawl-shopify crawl-retry crawl-woocommerce crawl-generic crawl-shopify-default-egress crawl-squarespace; do
   echo "$j: $(gcloud run jobs describe $j --region $REGION --format=json \
-    | jq -r '.spec.template.metadata.annotations["run.googleapis.com/vpc-access-egress"] // "(none)"')"
-done   # all-traffic, all-traffic, (none)
+    | jq -r '.spec.template.metadata.annotations | (.["run.googleapis.com/vpc-access-egress"] // "(none)")
+             + " " + (.["run.googleapis.com/network-interfaces"] // "" | fromjson? // [] | map(.subnetwork) | join(","))')"
+done
+# crawl-shopify, crawl-retry:       all-traffic registry-coffee-shopify-egress
+# crawl-woocommerce, crawl-generic: all-traffic registry-coffee-woo-generic-egress
+# crawl-shopify-default-egress, crawl-squarespace: (none)
 ```
 
-If the first two print `(none)` as well, look at the whole template before trusting either answer:
+The subnet decides the IP: each subnet has its own NAT gateway with its own static IP. If the first four print
+`(none)` as well, look at the whole template before trusting either answer:
 `gcloud run jobs describe crawl-shopify --region $REGION --format=yaml | grep -i -A2 vpc`.
+
+### 2.1 The second egress IP: WooCommerce and generic
+
+**Why.** SiteGround, which hosts many WooCommerce and generic roaster sites, answers Cloud Run's default egress with
+an HTTP 202 `sg-captcha` challenge page instead of the catalog. The same image through the existing NAT IP got 200
+(2026-11-02, execution `sg-diag-nat-5wb2v`). The owner's decision: crawl-woocommerce and crawl-generic, every pass
+(the 09:17 crawl, the 15:17 resume and the 21:47 retry run the same two jobs), leave from a **second** reserved
+static IP, never Shopify's. Shopify's IP keeps carrying only Shopify's traffic, so its standing with Shopify, and the
+confirmation run's reading of it, don't change.
+
+**How.** Cloud NAT translates by source subnet, so the second IP needs its own subnet and gateway: a second subnet
+in the same network (`woo_generic_subnet_cidr`, 10.8.0.64/26 by default, beside Shopify's 10.8.0.0/26), a second
+reserved address and a second Cloud NAT gateway on the same router, with the Shopify NAT's port settings (dynamic
+allocation, 1,024 to 8,192 ports per VM, endpoint-independent mapping off, error logging). In `ingestion.tf` each
+job's `egress` is `default`, `shopify` or `woo_generic`.
+
+**Plan, in production** (Shopify's egress already applied; `terraform.tfvars` as it is now):
+
+```sh
+cd src/terraform
+terraform plan -out egress.plan
+```
+
+**Expected plan: 3 to add, 2 to change, 0 to destroy.**
+
+| Resources | Count |
+|---|---|
+| `google_compute_subnetwork.woo_generic_egress`, `google_compute_address.woo_generic_egress`, `google_compute_router_nat.woo_generic_egress` | 3 to add |
+| `google_cloud_run_v2_job.ingest["crawl-woocommerce"]`, `["crawl-generic"]`, in place: a `vpc_access` block (the new subnet, `ALL_TRAFFIC`), `COFFEEDATA_EGRESS_MODE` `default` → `dedicated`, and `COFFEEDATA_EGRESS_ECHO_URL` → `COFFEEDATA_EGRESS_IP` (the new address, known after apply), and `max_retries` 1 → 0 (one IP: an immediate retry would re-ask the stores that just refused) | 2 to change |
+
+**Nothing existing is replaced.** Stop if the plan shows any `-/+` (replace) or `-` (destroy), any change to
+`google_compute_network.ingest`, `google_compute_router.ingest` or any `*.shopify_egress` resource, or a change to
+any other job (beyond the image, if `ingest_image` isn't pinned in `terraform.tfvars`, and `crawl-squarespace`'s
+memory going to 8Gi until #99's change is applied, both as in §2). Then:
+
+```sh
+terraform apply egress.plan
+terraform output woo_generic_egress_ip   # the new IP; Shopify's (shopify_egress_ip) is unchanged
+gcloud compute routers nats list --router=registry-coffee-ingest --region=us-central1   # two gateways
+gcloud compute routers nats describe registry-coffee-woo-generic-egress --router=registry-coffee-ingest \
+  --region=us-central1 \
+  --format='value(enableDynamicPortAllocation,enableEndpointIndependentMapping,minPortsPerVm,maxPortsPerVm)'
+cd ../..
+```
+
+The `describe` should print `True False 1024 8192`, as Shopify's does. Run the §2 loop: crawl-woocommerce and
+crawl-generic now print `all-traffic registry-coffee-woo-generic-egress`.
+
+**Check one SiteGround store from the new IP** before the next Monday crawl (the 202 came from Cloud Run's default
+shared egress pool, and Shopify's NAT IP got 200; the new one is a fresh Google IP, so check it rather than
+assume). Outside a crawl window, fetch one WooCommerce roaster that answered `sg-captcha` on default egress
+(§7's `--only` run):
+
+```sh
+gcloud run jobs execute crawl-woocommerce --region $REGION --wait \
+  --args="crawl,--connector,woocommerce,--run-date,$WEEK,--only,<roaster_id>"
+```
+
+Its `fetches` row should be `ok`, and its `job_manifests` row should list the new IP in `egress_ips` with
+`detail.egress` = `dedicated`. If it's still challenged, put the two jobs back on default egress (below) and
+report it with the execution name.
+
+**Then open the SiteGround allowlist ticket** (the owner, once the apply is done and the IP is known; it never
+changes, so this is once). In SiteGround's support (or through a roaster whose site SiteGround hosts, if SiteGround
+asks for the site owner), ask that the new IP be allowlisted past the anti-bot challenge, with:
+- the IP: `terraform output -raw woo_generic_egress_ip`;
+- what it is: a weekly catalog crawl of coffee roasters' public product pages, paced per store (`http.py`), that
+  honours robots.txt, with our user agent (`http.USER_AGENT`) and contact address;
+- the evidence: HTTP 202 with `sg-captcha: challenge` on every request from Cloud Run's shared egress (2026-11-02,
+  38 stores), and 200 from a dedicated NAT IP (execution `sg-diag-nat-5wb2v`);
+- the window: Mondays 09:17 to about Tue 01:47 UTC.
+
+Record the ticket number and date in the next week's notes. Don't add other IPs to the request, and don't ask for
+Shopify's: it carries only Shopify's traffic.
+
+**Back to default egress** (both jobs): set `egress = "default"` for crawl-woocommerce and crawl-generic in
+`ingestion.tf` and apply (2 to change). The address stays reserved, and billed, until its resource is removed.
 
 ## 3. Confirmation run: Shopify, three arms (today)
 
@@ -379,7 +465,7 @@ scheduled job.
    Any `MISMATCH`: stop and pause the schedule (§5). Set `ingest_schedule_enabled = true` and
    `ingest_image = "<the pinned image>"` in `terraform.tfvars`, so a later plan doesn't revert either.
 3. **The first week to watch** (all UTC; DESIGN.md section 7 has the table): Mon 07:17 probe; Mon 09:17 all five
-   crawls at once (Shopify on the NAT IP); Mon 15:17 their resumes; Mon 21:47 the third pass (crawl-retry for
+   crawls at once (Shopify on its NAT IP, WooCommerce and generic on the second); Mon 15:17 their resumes; Mon 21:47 the third pass (crawl-retry for
    Shopify, each other connector's crawl again); Tue 03:17 merge;
    Tue 04:17 enrich-week; Tue 06:17 build; Tue 11:17 the site deploy. Monday's release is published Tuesday.
    - each execution's exit code (`gcloud run jobs executions list --region $REGION`);
@@ -442,8 +528,9 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
     first merge. Only a merge of that week reads the restored partition: the crawls and the scheduled merge read
     the current week's.
 - **Shopify only, back to default egress:** run `crawl-shopify-default-egress` instead of `crawl-shopify`. To make it
-  permanent, set `nat = false` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP stays
-  reserved until the address resource is removed.
+  permanent, set `egress = "default"` for crawl-shopify and crawl-retry in `ingestion.tf` and apply. The static IP
+  stays reserved until the address resource is removed.
+- **WooCommerce and generic, back to default egress:** §2.1, last paragraph.
 
 The Tuesday steps below use this week's run date, `$WEEK` from §0: **this week's Monday**. Set it first, every week:
 
@@ -808,13 +895,14 @@ end row (an uncaught Python error writes a `failed` end row first), and its in-f
 (`gs://<project>-ingest-staging/raw/connector=X/run_date=W/_inflight/attempt=<id>/<roaster>.json`). What happens
 next, by itself (DESIGN.md section 7.1):
 
-1. **The non-Shopify crawls are retried at once** (`max_retries = 1`). The retry compacts what the dead attempt
-   wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time beside the others. It
+1. **The Squarespace and Square Online crawls are retried at once** (`max_retries = 1`). The retry compacts what
+   the dead attempt wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time
+   beside the others. It
    stops starting roasters 225 minutes after the first attempt started, so it never overlaps 15:17; a suspect
    still waiting in a page backoff then is parked with its pages for crawl-retry, like any other store. If it
    succeeds, the execution succeeds and **no alert is sent**; the dead attempt is in `job_manifests`, and the
-   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's crawls aren't retried in place:
-   their next slot resumes.
+   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's, WooCommerce's and generic's
+   crawls aren't retried in place (each leaves from one static IP): their next slot resumes.
 2. **A roaster in flight in two dead attempts is quarantined for the week**: the next attempt writes it a `fetches`
    row with status `crashed` (its `error` names the two attempts) and doesn't ask it; every later pass of the week
    skips it. In that attempt's end row it is in neither `ok` nor `errors`: `detail.quarantined` and
@@ -870,16 +958,19 @@ gcloud run jobs execute crawl-generic --region $REGION --wait   --args=crawl,--c
 
 `--only` fetches that roaster even though it is done (`crashed`) this week; that attempt's rows list no quarantine
 (`detail.quarantined` is `[]`, `detail.only` names the roaster). If it succeeds, its `ok` row counts for the run (a
-run is ok when any attempt is). If it kills the attempt too, Cloud Run retries it once (`max_retries = 1`), and the
-retry fetches it again; if that dies as well, the execution fails. Nothing else was in flight: it is the cause.
+run is ok when any attempt is). If it kills the attempt too, the execution fails (crawl-generic's `max_retries` is 0;
+Squarespace's and Square Online's crawls retry once, and the retry fetches it again before failing). Nothing else
+was in flight: it is the cause.
 Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
 To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
 `gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
 
 ## Cost
 
-About +$1–2/month for the non-Shopify jobs, and about $4–6/month for Cloud NAT, mostly the reserved static IP. The
+About +$1–2/month for the non-Shopify jobs, and about $4–6/month for each of the two Cloud NAT gateways, mostly
+its reserved static IP (about $3.65 a month while in use), plus NAT data processing on what the WooCommerce and
+generic crawls fetch. The
 staging bucket holds one week of raw/ and the last 30 days of merged partitions under archive/, about five weeks of
 raw rows, a few GB at most (cents a month). With the app (inside Cloud Run's free tier), about
-$5–8/month in all, so the monthly budget (`budget_usd`) is $20: its first email (50%, $10) is above the estimate's
-top, and 90%/100% ($18/$20) mean more than twice the estimate. Alert policies cost nothing.
+$9–14/month in all with the second IP. The monthly budget (`budget_usd`) stays $20, so its first email (50%, $10)
+now falls inside the estimate: raise `budget_usd` if that email is noise. Alert policies cost nothing.
