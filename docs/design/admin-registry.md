@@ -2,19 +2,20 @@
 
 Status: proposal (2026-11-04), revised after the review on #112. Nothing here is built. Owner: jtouley.
 
-**The ask.** The owner wants flags about registry.coffee's data raised automatically, backed by metadata, and
-reviewed in one place before anything is removed: "Before we remove things, they need flagging [from] multiple
-issues", "an admin ability to remove them, rather than how we have these datasets right now", and "what owns the
-contracts of the coffees we're getting, how are they established, how do we edit them from the control plane?"
+**The ask.** Flags about the data, raised automatically and backed by metadata, reviewed in one place before anything
+is removed ("Before we remove things, they need flagging [from] multiple issues"), and an answer to who owns the
+coffee contracts and how they are edited.
 
 **The recommendation, in short.**
 1. The core is a **data model, not a website**: pipeline-raised `flags` (each with a direction) and an append-only
-   `decisions` log in its own **private curation dataset**, applied softly by dbt. Every UI reads and writes those.
+   `decisions` log in its own **private curation dataset**, applied softly by dbt.
 2. The classifier's removals of public coffees are **held** by an automated guard from the first slice, so the
    Stivers kind of wrong removal can't happen again while the queue catches up.
-3. Build the **admin app** as a small server-rendered service from the existing app's image, on its **own Cloud
-   Run service behind IAP**. It is the only option that shows private evidence to one person, groups items, enforces
-   readiness, and costs about nothing. Start on localhost; host it second.
+3. **admin.registry.coffee is the one control plane** (owner decision): its HTTP API is the only writer of
+   decisions, and both the UI and the CLI are clients of that API. One write path, one audit trail. It is a small
+   server-rendered service from the existing app's image, on its own Cloud Run service. It is the only option that
+   shows private evidence to one person, groups items, enforces readiness, and costs about nothing. Start on
+   localhost; host it second. How it authenticates is open, pending a separate security review (5.5).
 4. The admin decides **items**. The coffee definition, rules, crawl methods and contracts stay in git, changed by
    PR and measured (CLAUDE.md).
 
@@ -44,8 +45,8 @@ that can write decisions into the lake could also rewrite `verdicts/` or `snapsh
 
 | Who | Lake | Curation |
 |---|---|---|
-| Admin (hosted) | read | write |
-| CLI (`coffeedata decide`, the owner's laptop) | read | write |
+| Admin service (its API, hosted or local) | read | **write: the only writer** |
+| CLI (`coffeedata decide`), the UI | none | none: they call the admin API |
 | Build job | write (as today; it writes `flags/`) | read |
 
 `flags/` stays in the lake: only the build writes it. Nothing in either dataset is edited or deleted.
@@ -75,7 +76,7 @@ A flag is *open* while the latest build raises it, and *expired* (derived, no ro
 
 | Column | Meaning |
 |---|---|
-| `decision_id` | made once, when the owner opens the action (a UUID), and reused on every retry |
+| `decision_id` | made by the client once per action (a UUID) and sent as the API's idempotency key, so a retry reuses it |
 | `seq`, `event` | `1-checked`, `2-approved`, …; events are `checked`, `approved`, `rejected`, `reverted` |
 | `event_at` | the writer's clock; for display. Order and reproducibility come from `seq` and recorded ids (4.4) |
 | `subject_kind`, `subject_id`, `action` | as in 2.2, plus batch subjects (roaster_id, run_date) for `accept` / `reject` / `use_batch` |
@@ -83,11 +84,12 @@ A flag is *open* while the latest build raises it, and *expired* (derived, no ro
 | `flag_ids`, `evidence` | the flags answered and their evidence, frozen |
 | `subject_hash` | the product's input_hash when decided |
 | `live_check` | for `checked`: URL, time, the owner's finding (`confirms`, `contradicts`, `cannot_tell`), a note, and `covers` (the group it vouches for, 3.3) |
-| `actor`, `reason` | the IAP-verified email or `cli:<user>`; a reason is required |
+| `actor`, `client`, `reason` | the identity the API authenticated, the client (`ui`, `cli`), and a required reason |
 
-**Writes are idempotent.** The path is built once per action, so a retried upload rewrites the same file instead of
-adding a second event. Each write is one `create_commit` with `parent_commit` set to the revision the page read, so
-two writers (admin and CLI) fail loudly on a stale read rather than race. A group approval is one commit.
+**Writes are idempotent.** The API builds the path once from the idempotency key, so a retried request rewrites the
+same file instead of adding a second event. Each write is one `create_commit` with `parent_commit` set to the
+revision the client last read (sent with the request), so a stale tab or CLI session fails loudly instead of
+overwriting a newer call. A group approval is one commit.
 
 ### 2.4 Subjects, actions and precedence
 
@@ -120,22 +122,16 @@ as a "re-decide" item.
 
 ### 2.5 States
 
-```
-             approved (owner; removals only when ready, 3.2)       first served build that records it
- flagged ───────────────────────────────────────────▶ approved ─────────────────────────────────▶ applied
-   │   │ rejected (reason)                                │                                         │
-   │   └─▶ rejected ── re-flagged only on a new evidence_hash └──────────── reverted (reason) ◀────────┘
-   └─▶ expired (no build raises it any more)
-```
-
-`flagged`, `expired` and `applied` are derived. `applied` is the first served release whose build record lists
-the decision. Every state has a way out, and nothing is undone by deleting.
+`flagged` → `approved` (removals only when ready, 3.2) → `applied`, or `flagged` → `rejected` (raised again only on
+a new `evidence_hash`), or `flagged` → `expired` (no build raises it any more); `approved` or `applied` →
+`reverted`. `flagged`, `expired` and `applied` are derived; `applied` is the first served release whose build record
+lists the decision. Every state has a way out, and nothing is undone by deleting.
 
 ### 2.6 What it replaces or extends
 
 | Today | With decisions |
 |---|---|
-| `run_overrides` | Kept and still read (immutable). `stg_run_overrides` reads overrides plus effective batch decisions. `coffeedata override` writes a decision from then on |
+| `run_overrides` | Kept and still read (immutable). `stg_run_overrides` reads overrides plus effective batch decisions. `coffeedata override` becomes an API client too |
 | `config/roasters.csv` | Stays the curated seed in git: a list of candidates, not a verdict |
 | Opt-out (issue form) | Stays, and needs no second signal: it is the roaster's own request |
 | `NOT_A_ROASTER_SITE` | Stays in code: a tested rule about platforms. One business that isn't a roaster is a decision instead |
@@ -198,19 +194,14 @@ own `approved` event (one commit), so the history stays per product.
   latest version, with `held_by = 'classifier_guard'`. Prices and stock still come from the latest fetch.
 - **The flag.** It raises a `restore` flag (to make it permanent with an `include`) beside the `doubts`. The owner
   can instead approve an `exclude`, which still needs a live check.
-- **Bounds.**
-  - The build fails `classifier_guard` (error) if the guard would hold more than `guard_max_held` (200) products.
-    A deliberate wave, like the 11-04 backfill, then needs `--accept-classifier-change`, the way
-    `--accept-volume-change` works now. So it's a conscious step, never a frozen catalog.
-  - A hold lapses after `guard_max_weeks` (4). The coffee then follows the classifier and the flag stays.
+- **Bounds.** Over `guard_max_held` (200) held products the build fails `classifier_guard`, so a deliberate wave
+  like the 11-04 backfill needs `--accept-classifier-change` (as `--accept-volume-change` works). A hold lapses after
+  `guard_max_weeks` (4): the coffee then follows the classifier, and the flag stays.
 - **Why hold rather than warn.** Holding is the abstain direction CLAUDE.md prefers when rules can't tell. A
   wrong hold keeps one non-coffee for a few weeks; a wrong removal loses a real coffee silently.
-- **It is a rule.** It changes how the catalog decides, so it ships only after CLAUDE.md's full process:
-  - a roaster-grouped salted split, two labelers and a third;
-  - "was the held product coffee?" with Wilson intervals;
-  - the sealed test scored once against `main`.
-
-  The measurement tunes its thresholds; it isn't what switches it on.
+- **It is a rule.** It changes how the catalog decides, so it ships only after CLAUDE.md's full process
+  (roaster-grouped split, two labelers and a third, "was the held product coffee?" with Wilson intervals, the sealed
+  test once against `main`). The measurement tunes it; it isn't what switches it on.
 - **Decisions are labels.** They correct one item each. `products.decide` taking a decision changes output only on
   decided products, and those are counted toward step 9, each checked by hand. Approved decisions go to the
   **train** set and the regression fixtures, never to a sealed test set. The eval scores the classifier before
@@ -258,17 +249,12 @@ Every new model is documented in `dbt/models/schema.yml`, starting with its grai
 
 ### 4.2 Tests
 
-- **Unit tests**, in dict format:
-  - exclude, include over a verdict, revert, exclude_variant;
-  - the three conflicts in 2.4;
-  - the guard: held, lapsed after `guard_max_weeks`, over `guard_max_held`.
-- **Singular tests, named one by one in the gate output:**
-  - `decisions_applied` (error): every effective exclude is absent from the public tables, and every include is
-    present when its product exists. If it fails, find why; never downgrade it to get a build through;
-  - `classifier_guard` (error over the cap);
-  - `flags_have_evidence` and `decision_orphaned` (warn);
-  - relationships between flags and decisions (warn).
-- **Development:** `dbt build --select stg_decisions+`.
+- **Unit tests** (dict fixtures): exclude, include over a verdict, revert, exclude_variant; the three conflicts in
+  2.4; the guard held, lapsed and over its cap.
+- **Singular tests, each named in the gate output:** `decisions_applied` (error: every effective exclude absent from
+  the public tables, every include present; if it fails, find why, never downgrade it), `classifier_guard` (error
+  over the cap), `flags_have_evidence`, `decision_orphaned` and the flag–decision relationships (warn).
+- Develop with `dbt build --select stg_decisions+`.
 
 ### 4.3 Release notes
 
@@ -297,19 +283,28 @@ next build, never on a served release.
 
 Deferred: a server-side live fetch, the Contracts page, and a Coverage page (coverage fixes live in git).
 
-**Every state is defined.**
-- **Empty:** "Nothing to review", with the build the queue is as of.
-- **Loading:** the start-up reads are tens of MB, so show "Reading build X…".
-- **Stale:** when a newer build exists than the one loaded, a banner says "As of build X" with a reload.
-- **Failed write:** keeps the typed reason, shows the error, offers a retry on the same path (idempotent), and says
-  plainly that nothing was recorded.
+**Every state is defined.** Empty: "Nothing to review", as of build X. Loading: "Reading build X…" (tens of MB at
+start). Stale: a banner "As of build X" with a reload when a newer build exists. Failed write: keeps the typed
+reason, shows the error, retries on the same path, and says nothing was recorded.
 
-### 5.2 Reads and writes
+### 5.2 One API, the only writer
+
+The UI and the CLI call the same HTTP API; neither holds a Hugging Face token, and no other code writes
+`decisions/`. Readiness (3.2), precedence and validation are enforced in the API, so a CLI call can't skip what the
+UI's disabled button shows.
+
+| Endpoint | Does |
+|---|---|
+| `GET /api/queue`, `GET /api/cases/{subject}` | the open items and one case's evidence, as of a named build |
+| `POST /api/decisions/{decision_id}/events` | append `checked`, `approved`, `rejected` or `reverted`; the idempotency key is `decision_id` + `seq`; carries `parent_commit` |
+| `POST /api/groups/{signature}/events` | one check or one approval for a group, one commit (Phase 2) |
+| `GET /api/history` | every decision, with the release that applied it |
 
 - **Reads, from the lake with a read-only token:** the private `marts/` (with `int_catalog_decided`), the latest
   `flags`, and the bodies of the products in the queue only.
-- **Reads and writes, in the curation dataset:** `decisions/`. Writes are idempotent paths, `parent_commit`, and one
-  commit per action or group (2.3).
+- **Writes, to the curation dataset only.** Idempotent paths, `parent_commit`, one commit per action or group.
+- **`coffeedata decide`** is a thin client: it calls the API with the owner's credential (5.5) and prints the
+  result. It is also how scripts and bulk work go, through the same checks.
 - **No database.** The build must read decisions to be reproducible, and it reads Hugging Face. A second store would
   need a sync, a backup and a second audit trail, for a few hundred rows a year.
 
@@ -324,58 +319,51 @@ Titles, tags and descriptions are third-party text, shown on the one page that h
 
 ### 5.4 Hosting: its own Cloud Run service, from the app's image
 
-A separate service, not routes in app.registry.coffee.
-- **Access:** the app's service has an `allUsers` invoker; this one has none, and IAP sits in front.
-- **Blast radius:** an admin bug or memory spike can't take down the shot logger (one instance, 1 GiB, its state
-  in memory).
-- **Secrets:** its own service account and a token with lake read and curation write. No Anthropic key at all.
-- **Terraform is additive** (from a reviewed plan only):
-  - `google_cloud_run_v2_service.admin` (min 0, max 1, `iap_enabled`);
-  - `google_service_account.admin`;
-  - `roles/iap.httpsResourceAccessor` for the owner's Google account;
-  - the secret `ADMIN_HF_TOKEN`;
-  - a domain mapping (`admin` CNAME → `ghs.googlehosted.com`);
-  - a `terraform test` plan assertion: no `allUsers` member, and `iap_enabled` true.
-- **To verify before that PR:**
-  - `iap_enabled` exists in `hashicorp/google ~> 6.0`, the pin in `provider.tf`. If it is only in `google-beta`,
-    that is a provider upgrade risk to plan separately;
-  - IAP works with a domain mapping here. If not, use the `run.app` URL. A load balancer (about $18 a month) costs
-    more than everything else together;
-  - **the deploy gap.** `deploy.yml` runs `gcloud run deploy "$SERVICE"` for one service, so a shared image would
-    leave the admin on an old schema. Deploy both services from the same image in one job.
+A separate service, not routes in app.registry.coffee: an admin bug or memory spike can't take down the shot
+logger (one instance, 1 GiB, state in memory), and it gets its own service account and a token with lake read and
+curation write, and no Anthropic key.
 
-### 5.5 Auth: IAP, and a check in the code that fails closed
+Terraform, additive and applied only from a reviewed plan: `google_cloud_run_v2_service.admin` (min 0, max 1),
+`google_service_account.admin`, the secret `ADMIN_HF_TOKEN`, a domain mapping (`admin` CNAME →
+`ghs.googlehosted.com`), the access layer the security review picks (5.5), and a `terraform test` plan assertion on
+it (for example, no `allUsers` invoker if IAP is chosen). To verify before that PR:
+- if IAP: `iap_enabled` exists in `hashicorp/google ~> 6.0` (the pin in `provider.tf`), or else it is a
+  `google-beta` provider upgrade risk; and IAP works with a domain mapping here (a load balancer, about $18 a month,
+  costs more than everything else together);
+- **the deploy gap:** `deploy.yml` runs `gcloud run deploy "$SERVICE"` for one service, so a shared image would leave
+  the admin on an old schema. Deploy both from the same image in one job.
 
-The repo is public, so the routes are known; obscurity protects nothing.
-- **IAP** puts Google sign-in, with 2-step verification, in front.
-- **In the code**, every request needs a valid `X-Goog-IAP-JWT-Assertion`: its signature, the `aud` pinned in
-  config, and the email equal to `ADMIN_EMAIL`. Anything else is a 403, and a test covers that.
-- **Why the check matters:** the deploy service account holds `roles/run.developer` (`deploy.tf`), which can change a
-  service's settings, IAP included. The in-code check is what holds if IAP is turned off.
+### 5.5 Auth: open, pending the security review
+
+The mechanism is not decided here: a separate security review is choosing between IAP, the app's own sign-in (with
+a second factor), a key for the CLI, and a magic link. Whatever it picks must meet these, since the API is the only
+writer and the repo is public (the routes are known, so obscurity protects nothing):
+- **Owner only, fail closed.** Every API request is authenticated in the code; a missing or invalid credential is a
+  403, with a test. If a proxy (IAP) is in front, the code still verifies its token, with the audience pinned in
+  config: the deploy service account holds `roles/run.developer` (`deploy.tf`), which can change a service's
+  settings, so the proxy alone could be switched off.
+- **Both clients.** A browser session for the UI (with the app's CSRF rule) and a credential the CLI can hold.
+- **A second factor** for the thing that edits the public dataset: the app's password-only, 90-day sessions are not
+  enough as they are.
 - **Locally**, `make admin` uses a stub like `auth.LocalOwner` that refuses to start when `hosted()`.
-- **The app's sign-in alone isn't enough:** a password with no second factor and 90-day sessions is too little for
-  the thing that edits the public dataset.
 
 ### 5.6 Audit, alerts, cost
 
-- **Audit.** Three records that agree: decision files (who, when, why, the frozen evidence), the curation dataset's
-  commits, and `builds` plus `serving_log` (which release applied each one). Cloud Run's request logs add the IAP
-  identity.
-- **Logs.** One JSON line per write: `decision_id`, `action`, `subject_kind`, the outcome. No text, no tokens.
-- **Alerts.**
-  - A failed curation write logs at ERROR, which the existing error policy emails.
-  - A check after each build warns on an approved decision that no served build has recorded within 8 days (one
-    weekly cycle). `decisions_applied` catches the reverse case.
-- **Cost.** Scale to zero, inside the free tier; IAP, the domain mapping and the dataset are free. About **$0 a
+- **Audit, one trail:** every decision passes through the API, so its files (who, which client, when, why, frozen
+  evidence), the curation dataset's commits, and `builds` plus `serving_log` (which release applied each) agree.
+  Cloud Run's request logs add the authenticated identity.
+- **Logs:** one JSON line per write (`decision_id`, `action`, `subject_kind`, outcome); no text, no tokens.
+- **Alerts:** a failed curation write logs at ERROR (the existing error policy emails it); after each build, a warning
+  for an approved decision no served build has recorded within 8 days. `decisions_applied` catches the reverse.
+- **Cost:** scale to zero, inside the free tier; the mapping, the dataset and IAP (if chosen) are free. About **$0 a
   month** on top of today's $9–14. The admin calls no model API.
 
 ### 5.7 The UI: the app's design, not a new one
 
-- **Bench Scale.** `app/static/app.css` (the tokens, Archivo and Newsreader, the scale in `docs/app/DESIGN.md`),
-  the same light and dark themes, and the existing components: list link, chips, status text, spec sheet and
-  notice. The header matches the site's nav. No new colours: `--danger` only on a removal's confirm.
-- **A familiar review pattern:** list, detail, decide, history. Every state has a text label as well as a colour.
-  No dashboard tiles, no motion.
+- **Bench Scale:** `app/static/app.css` (tokens, Archivo and Newsreader, `docs/app/DESIGN.md`'s scale), both themes,
+  and the existing list link, chips, status text, spec sheet and notice; the header matches the site's nav. No new
+  colours (`--danger` only on a removal's confirm), no dashboard tiles, no motion.
+- **A familiar review pattern:** list, detail, decide, history; every state has a text label as well as a colour.
 - **Keyboard:** `j`/`k` and `a`/`r` fire only while the queue list has focus, and a setting turns them off
   (WCAG 2.1.4). Focus is visible, controls are real buttons with labels, and text keeps the 4.5:1 contrast the
   tokens already meet.
@@ -384,12 +372,12 @@ The repo is public, so the routes are known; obscurity protects nothing.
 
 | Option | Evidence | Decide | Audit | Cost | Verdict |
 |---|---|---|---|---|---|
-| **Admin app (recommended)** | Yes, private text included | Yes, readiness enforced | Curation commits + builds | ≈ $0 | Build it, after the data model, locally first |
+| **Admin service: API + UI + CLI client (recommended)** | Yes, private text included | Yes, readiness enforced in the API | One trail: curation commits + builds | ≈ $0 | Build it, after the data model, locally first |
 | Issue forms (this repo) | The repo is **public**: the evidence and labels like "not a coffee seller" would be public | A label or comment | Excellent | $0 | Keep for adding and opting out roasters. Not the queue |
 | A private curation repo, decisions as PR'd CSV | Poor: no descriptions or fetch history beside the item | A merged PR | Excellent, with 2FA | $0 | The one real alternative. Clumsy for 16 or 22 items, and it still needs a viewer for the evidence |
 | Grafana / Metabase | Good for reading | No write-back | Weak | Free tier, or a VM | Later, perhaps, for crawl health (#93). Not for decisions |
 | Retool / Appsmith | Quick tables and buttons | Through an API we'd still write | The tool's own | Free tier, or a VM | The HF token and the private text would sit with a third party. Not worth it |
-| CLI only | Weak for reading evidence | Yes | The same | $0 | Built anyway: the second writer, and the break-glass path (section 8) |
+| CLI writing the lake directly | Weak for reading evidence | Yes | A second write path | $0 | No: a second writer splits the audit trail and skips the API's checks. The CLI is an API client instead |
 
 The owner's choice is right for items. It would go wrong if the hosted app came before the model (then the app is
 the model and the build can't reproduce it), or if the admin edited definitions, rules or contracts. That would
@@ -397,59 +385,27 @@ skip the evaluation and, for the definition, re-verdict every product.
 
 ## 7. Phasing
 
-**Phase 1: the smallest useful step.**
-- The curation dataset; `decisions`; and `coffeedata decide` (check, approve, reject, revert), with
-  `coffeedata override` writing decisions too.
-- dbt applying `exclude`, `include` and `exclude_variant`, with the precedence, the uniqueness test and the
-  conflict unit tests; `decisions_applied`.
-- The classifier guard, holding (after its full evaluation, 3.4).
-- Three flag rules: `verdict_flip`, `shared_body`, `bulk_green_weight`.
-- Queue and Case on localhost (`make admin`).
-- The curation contract, 1.0.0.
-- This week's cases decided through it.
-
-**Phase 2:**
-- Group (with group checks) and History;
-- `not_a_coffee_seller`, with `registry.STATE_SQL` and `dim_roaster` agreeing;
-- hosting: the service, IAP, the JWT check, the deploy fix, the alerts;
-- the three runbook entries (section 8), in `runbook/troubleshooting.md`.
-
-**Phase 3:**
-- more rules, each scored, and the two-source readiness clause once two have scores;
-- release-note counts in public;
-- the curation contract extended to `registry`, `verdicts` and `run_overrides`.
-
-**Deferred until needed:**
-- decision expiry dates and `subject_changed` re-flags;
-- a server-side live fetch, and a Contracts page;
-- attribute corrections, and merging near-duplicate roasters (#111 rule 12).
+| Phase | Contents |
+|---|---|
+| **1: the smallest useful step** | The curation dataset, `decisions`, the admin API (the only writer) and `coffeedata decide` as its client (and `override` too); dbt applying `exclude`, `include`, `exclude_variant` with the precedence and its tests, and `decisions_applied`; the holding guard (after its evaluation); three rules: `verdict_flip`, `shared_body`, `bulk_green_weight`; Queue and Case on localhost; the curation contract 1.0.0. This week's cases decided through it |
+| **2** | Group (with group checks) and History; `not_a_coffee_seller` (`STATE_SQL` and `dim_roaster` agreeing); hosting: the service, the auth the security review picks, the deploy fix, alerts; the runbook entries in `runbook/troubleshooting.md` |
+| **3** | More rules, each scored, and the two-source readiness clause; public release-note counts; the curation contract extended to `registry`, `verdicts`, `run_overrides` |
+| **Deferred** | Decision expiry, `subject_changed` re-flags, a server-side live fetch, a Contracts page, attribute corrections, merging near-duplicate roasters (#111 rule 12) |
 
 ## 8. Risks and runbook entries
 
-| Risk | Mitigation |
-|---|---|
-| The guard holds real non-coffees, or freezes a roaster | Bounded by `guard_max_held` and `guard_max_weeks`; measured before it ships; every hold is in the queue |
-| The queue outgrows one person | Sort by public impact; group checks; unsure verdicts go to labeling; flags expire when their evidence goes |
-| Unscored flags are trusted | No rule makes a removal ready alone; Phase 1 needs a live check |
-| An XSS through roaster text | Escaped rendering, the CSP, `https:` links only (5.3) |
-| A token that can rewrite the lake | The admin's token can't: it has lake read only (2.1) |
+Main risks, each covered above: the guard holding real non-coffees (bounded by `guard_max_held` and
+`guard_max_weeks`, measured, every hold in the queue); a queue too big for one person (impact order, group checks,
+unsure verdicts to labeling); unscored flags trusted (Phase 1 needs a live check); an XSS through roaster text (5.3);
+a token that can rewrite the lake (the service's token has lake read only, and clients hold none).
 
-Each runbook entry covers detection, triage, mitigation, verification and rollback:
+Runbook entries (detect, triage, mitigate, verify, roll back), for `runbook/troubleshooting.md` in Phase 2:
 
-- **A bad bulk decision went out.**
-  - *Detect:* the volume check, `release_changes` counts by `decision:` reason, or the owner noticing.
-  - *Mitigate:* `coffeedata rollback` serves the previous release at once.
-  - *Resolve:* one `revert` per decision (a group revert is one commit), then rebuild.
-  - *Verify:* `decisions_applied` passes, and the counts by reason are back to the earlier release's.
-- **Admin writes fail.**
-  - *Detect:* the ERROR alert, or the page's failed-write state.
-  - *Triage:* a `parent_commit` conflict (reload, then retry) or an HF outage or token problem.
-  - *Mitigate:* retry; the path is the same, so a retry never duplicates an event.
-  - *Verify:* the event file is in the curation dataset.
-- **Locked out of IAP** (a lost account, a broken binding).
-  - *Break glass:* on the laptop, `coffeedata decide …` with the curation token writes the same events; the build
-    applies them as usual.
-  - *Then:* fix the IAM binding from a reviewed Terraform plan.
+| Entry | Detect | Mitigate and resolve | Verify |
+|---|---|---|---|
+| A bad bulk decision went out | volume check, `release_changes` by `decision:` reason | `coffeedata rollback` at once; one `revert` per decision (a group is one commit); rebuild | `decisions_applied` passes; counts by reason back to the earlier release's |
+| Admin writes fail | the ERROR alert; the failed-write state | `parent_commit` conflict: reload and retry. HF outage or token: retry later on the same path (never a duplicate) | the event file is in the curation dataset |
+| Locked out of the hosted admin | sign-in fails | break glass: run the same service locally (`make admin`, the curation token from Secret Manager) and point `coffeedata decide` at it: the same API and the same audit trail, actor marked local. Then fix the access from a reviewed plan | the next build records the decision |
 
 ## 9. Open questions for the owner
 
@@ -461,8 +417,8 @@ Each runbook entry covers detection, triage, mitigation, verification and rollba
    enough.
 3. **"Not a coffee seller"** (Phase 2): stop crawling it until a re-check, or keep crawling it monthly?
 4. **Release notes in public** (Phase 3): counts by reason only (proposed), or the named roasters and coffees too?
-5. **Sign-in:** which Google account, and is the `run.app` URL acceptable if IAP can't sit behind the custom
-   domain?
+5. **Auth for the admin API** (the UI and the CLI): IAP, the app's own sign-in with a second factor, a key, or a
+   magic link? A separate security review is answering this.
 6. **Green coffee by the sack:** handle it with decisions and the weight rule (proposed), or add it to the
    definition and pay for a full re-verdict?
 7. **Group checks:** is one live check on a sample enough to cover a group with the same evidence (proposed), or do
@@ -470,23 +426,11 @@ Each runbook entry covers detection, triage, mitigation, verification and rollba
 
 ## Skills used
 
-- **dbt** (2.4, section 4):
-  - dbt Labs `using-dbt-for-analytics-engineering` (extend the existing layers, declare the grain, look at the
-    data first; the counts above come from a local read-only lake copy);
-  - `adding-dbt-unit-test` (dict fixtures for the conflict and guard cases);
-  - `maintaining-dbt-documentation` (the house style in `schema.yml`, grain first);
-  - `troubleshooting-dbt-job-errors` (never weaken `decisions_applied` to pass);
-  - wshobson `dbt-transformation-patterns` (staging, then intermediate, then marts).
-- **Data quality** (section 3):
-  - wshobson `data-quality-frameworks`: a versioned contract, thresholds as variables, and warn before block,
-    except the guard, which is the safe direction.
-- **DevOps** (sections 5 and 8):
-  - `terraform-skill` (blast radius, secret exposure, provider upgrade risk, a reviewed plan);
-  - HashiCorp `terraform-test` (the plan assertion on `allUsers` and `iap_enabled`);
-  - wshobson `python-resilience` (bounded, idempotent retries);
-  - `python-observability` (structured logs, bounded fields, an alert);
-  - `deployment-pipeline-design` (deploy both services, gates, rollback);
-  - `incident-runbook-templates` (the three entries).
-- **Design** (5.1, 5.7):
-  - MengTo `no-ai-design-slop` (keep the local system, hierarchy before labels, no dashboard filler);
-  - Owl-Listener `jakobs-law`, `state-machine` and `accessibility-audit`.
+- **dbt** (2.4, 4): dbt Labs `using-dbt-for-analytics-engineering` (existing layers, grain, look at the data first:
+  the counts above come from a local read-only lake copy), `adding-dbt-unit-test`, `maintaining-dbt-documentation`,
+  `troubleshooting-dbt-job-errors` (never weaken a failing test); wshobson `dbt-transformation-patterns`.
+- **Data quality** (3): wshobson `data-quality-frameworks` (versioned contract, thresholds as vars, warn before
+  block except the guard, the safe direction).
+- **DevOps** (5, 8): `terraform-skill`, HashiCorp `terraform-test`, wshobson `python-resilience`,
+  `python-observability`, `deployment-pipeline-design`, `incident-runbook-templates`.
+- **Design** (5.1, 5.7): MengTo `no-ai-design-slop`; Owl-Listener `jakobs-law`, `state-machine`, `accessibility-audit`.
