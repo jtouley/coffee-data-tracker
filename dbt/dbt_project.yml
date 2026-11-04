@@ -37,6 +37,9 @@ vars:
   # The day of the build, for freshness (empty: no check), and the served release the volume check compares with.
   today: ""
   baseline_build: ""
+  # The served release's public tables ({table: parquet path}), set by `coffeedata build`; release_changes
+  # reconciles this build's public tables against them (empty: nothing served, nothing to reconcile).
+  previous_release: {}
   # The build this run is (release_build_id on every release table); set by `coffeedata build`.
   build_id: ""
   # Completeness of the as_of_run run (checked only when as_of_run is set): the share of expected roasters it
@@ -73,6 +76,11 @@ vars:
   # success rate (about 0.95-0.99), not 1.0: coffees whose roaster's fetch failed, hit the deadline or was parked
   # stay listed with last week's last_seen. With the 0.05 minimum half-width, an ordinary week can warn while the
   # band history builds.
+  # adapter_volume_in_band (warn only) bands three per-adapter metrics with the same mechanism, low side only, at
+  # least band_min_adapter_halfwidth below the median: the attempted-ok share and the same-store product and priced
+  # ratios. 0.10 was chosen on the validation cells of eval/dq (README, #11): at 0.05 one cell labelled normal
+  # warned, at 0.10 none did; 0.10 is also the size of a collapse in the labelling definition (eval/dq/GUIDE.md).
+  band_min_adapter_halfwidth: 0.10
   band_k: 1.5
   band_min_builds: 6
   band_window: 12
@@ -82,6 +90,17 @@ vars:
   # how far a claim may sit from this build's metric, as a fraction of the metric, before
   # coverage_claims_match_build warns. A claim naming no metric fails the build (coverage_claims_name_metrics).
   coverage_claims: []
+  # near_duplicate_roasters (warn): two roasters whose listed titles overlap this much are one catalog listed twice.
+  # Chosen on eval/dq's train and validation pairs (README, #12).
+  near_duplicate_min_shared: 3
+  near_duplicate_min_containment: 0.9
+  near_duplicate_min_rare_containment: 0.3
+  near_duplicate_rare_roasters: 3
+  # price_per_100g_outliers (warn): robust z of ln(price per 100 g) within origin x process (or origin, or all,
+  # below price_outlier_min_group coffees). Chosen on eval/dq's validation sample (README, #7).
+  price_outlier_low_z: 3
+  price_outlier_high_z: 6
+  price_outlier_min_group: 30
   claim_tolerance: 0.15
 
 models:

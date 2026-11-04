@@ -335,6 +335,13 @@ def cmd_build(args: argparse.Namespace) -> bool:
         served
     ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
         extra["baseline_build"] = served
+        # release_changes reconciles this build's public tables against the served release's. Only a report: if
+        # its files can't be listed, the build goes on without it.
+        try:
+            files = quality.release_files(lake, served)
+            extra["previous_release"] = {t: files[t] for t in quality.RECONCILED_TABLES if t in files}
+        except Exception as e:  # noqa: BLE001 - e.g. a 429 listing a remote lake's releases
+            logging.warning("release not reconciled with %s: %s", served, e)
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
         # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
@@ -356,6 +363,11 @@ def cmd_build(args: argparse.Namespace) -> bool:
         parity_lines = []
     for line in parity_lines:
         print(f"tag parity: {line}", file=sys.stderr)
+    try:  # the release notes: what this build changes against the served release, per reason; only a report
+        for line in quality.release_notes(db):
+            print(f"release notes: {line}", file=sys.stderr)
+    except Exception as e:
+        logging.warning("release notes not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
         lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took

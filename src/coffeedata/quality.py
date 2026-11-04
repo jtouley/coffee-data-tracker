@@ -30,6 +30,8 @@ log = logging.getLogger(__name__)
 # What customers read: the catalog marts (dataset, MCP, app, site) and the public tables. Shots and bags are
 # personal and not part of a weekly release.
 SERVED_MARTS = ("dim_coffee", "dim_roaster", "mart_market", "fct_price_event")
+# The public tables release_changes reconciles against the served release.
+RECONCILED_TABLES = ("public_coffee", "public_price_event", "public_roaster", "public_market_weekly")
 RELEASE_TABLES = (
     *SERVED_MARTS,
     "mart_new_arrivals",
@@ -139,6 +141,12 @@ def record_build(
     except duckdb.Error:
         metrics = []
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
+    # The release notes: how many rows of each public table this build adds, removes or changes against the
+    # served release, per reason (release_changes); unique_id is <table>:<change>:<reason>.
+    rows += [
+        base | {"kind": "release_change", "unique_id": ":".join(k), "value": float(n)}
+        for k, n in release_change_counts(con)
+    ]
     if manifest:
         rows.append(
             base | {"kind": "artifact", "unique_id": "manifest.json", "payload": json.dumps(manifest)}
@@ -152,6 +160,47 @@ def record_build(
     if con:
         con.close()
     return passed
+
+
+def release_change_counts(con) -> list[tuple[tuple[str, str, str], int]]:
+    """release_changes counted per (table, change, reason); none when the build has no such model (it crashed, or
+    nothing was served before)."""
+    import duckdb
+
+    if con is None:
+        return []
+    try:
+        rows = con.execute(
+            "select table_name, change, reason, count(*) from release_changes group by all order by all"
+        ).fetchall()
+    except duckdb.Error:
+        return []
+    return [((t, c, r), n) for t, c, r, n in rows]
+
+
+def release_notes(db: Path) -> list[str]:
+    """What this build (`db`) changes against the served release, one line per public table: the rows added,
+    removed and changed, each split by reason. Unexplained ones are what release_changes_explained warns on."""
+    import duckdb
+
+    if not db.exists():
+        return []
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        counts = release_change_counts(con)
+    finally:
+        con.close()
+    out = []
+    for table in RECONCILED_TABLES:
+        parts = []
+        for change in ("added", "removed", "changed"):
+            reasons = [(r, n) for (t, c, r), n in counts if t == table and c == change]
+            if reasons:
+                total = sum(n for _, n in reasons)
+                parts.append(f"{change} {total:,} (" + ", ".join(f"{r} {n:,}" for r, n in reasons) + ")")
+        if parts:
+            out.append(f"{table}: " + "; ".join(parts))
+    return out
 
 
 def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]:

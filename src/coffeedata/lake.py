@@ -251,7 +251,9 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     # One file per dbt build: a row per dbt node (its manifest checksum and test result, so two builds' code
     # and test outcomes can be compared), a row per catalog metric (the baseline the next build's volume check
-    # reads), and the build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
+    # reads), a row per release change count (kind release_change: rows of a public table added, removed or changed
+    # against the served release, per reason; the release's notes), and the build's manifest.json and
+    # run_results.json as text, so `dbt --state` can use them later.
     "builds": pa.schema(
         [
             ("build_id", pa.string()),
