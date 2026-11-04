@@ -987,6 +987,39 @@ def test_run_manifest_modes_are_the_writers(lake, tmp_path):
     assert r.returncode != 0 and re.search(r"FAIL 1 run_manifest_mode_values", r.stdout), r.stdout[-3000:]
 
 
+def test_a_partial_a_quarantined_and_a_closed_store_pass_every_release_rule(lake, tmp_path):
+    """A legitimate week with main's newer fetch states: one store read in part (fetches.partial), one quarantined
+    after crashing the crawl (status crashed), one closed (unavailable). None of the release rules fails: the
+    public tables stay one fresh release and hold their invariants, and the share seen this run only warns."""
+    stores = {"part": "counterculturecoffee.com", "pill": "intelligentsia.com", "closed": "anaheimcoffee.com"}
+    for rid in (RID, *stores.values()):
+        run(lake, "2026-10-19", rid, ORIGINS)
+    run(lake, "2026-10-26", RID, [ORIGINS[0] | {"variants": [ORIGINS[0]["variants"][0] | {"price_usd": 22.0}]},
+                                  *ORIGINS[1:]])  # fmt: skip  # E1's price changed
+    # Read in part, with a price change: E3 and BL unread, so still listed from last week, and never removed.
+    run(lake, "2026-10-26", stores["part"], [ORIGINS[0], ORIGINS[1] | {"variants": [
+        ORIGINS[1]["variants"][0] | {"price_usd": 31.0}]}], partial=True)  # fmt: skip
+    run(lake, "2026-10-26", stores["pill"], None, status="crashed")
+    run(lake, "2026-10-26", stores["closed"], None, status="unavailable")
+    manifest(lake, "2026-10-26", [RID, *stores.values()])
+    _passing_builds(lake, [{"listed_seen_this_run_share": 1.0}] * 6)
+    release = {"build_id": "b1", "as_of_run": "2026-10-26", "volume_tolerance": 1e9}
+    r = build(lake, tmp_path, check=False, **release)
+    assert r.returncode == 0, r.stdout[-4000:]
+    for rule in ("public_coffee_is_fresh", "public_tables_are_one_release", "public_tables_invariants",
+                 "run_manifest_mode_values", "run_ok_rate", "run_is_complete"):  # fmt: skip
+        assert re.search(rf"PASS {rule}\b", r.stdout), rule
+    assert re.search(r"WARN 1 fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    # Seen this run: the 4 of the full store, 2 of the partial one; not the quarantined or closed store's 4 each.
+    assert _metrics(con, "listed_seen%") == {"listed_seen_this_run_share": 6 / 16}
+    assert _metrics(con, "run_quarantined") == {"run_quarantined": 1}
+    assert con.execute(
+        "select count(*) from public_price_event where event = 'removed' and roaster_id = ?", [stores["part"]]
+    ).fetchone() == (0,)
+    con.close()
+
+
 def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
     claims = {c["metric"]: c for c in quality.coverage_claims()}
     assert {m: c["value"] for m, c in claims.items()} == {
