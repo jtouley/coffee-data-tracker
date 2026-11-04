@@ -121,7 +121,7 @@ models:
     description: >-
       The rows of int_escaped_tag_inputs where the rules decide differently on the raw and the decoded tags, so
       the Python readers of the lake would disagree with the build. The data test python_readers_agree_on_tags
-      fails the build on any row, and `coffeedata build` prints them.
+      warns on any row (severity warn: it never fails the build), and `coffeedata build` prints them.
     columns:
       - name: differs
         description: >-

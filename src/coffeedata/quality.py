@@ -228,8 +228,8 @@ def coverage_claim_messages(db: Path) -> list[str]:
 
 def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
     """Products whose raw tags (what registry.py, enrich.py and verdict.py read) and decoded tags (what the build
-    reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test fails the
-    build on any): a count, then a few examples."""
+    reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test warns on
+    any, and never fails the build): a count, then a few examples."""
     import duckdb
 
     if not db.exists():
@@ -257,6 +257,17 @@ def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
     for rid, pid, title, raw, tags, differs in rows[:examples]:
         out.append(f"{rid}:{pid} {title!r}: {', '.join(differs)} differ; raw tags {raw}, decoded {tags}")
     return out
+
+
+def build_warnings(results: list[dict]) -> dict[str, int | None]:
+    """The tests that warned in this build (severity warn: they never fail it), by name, with how many rows each
+    found, from the run_results.json of each dbt step. The builds table records the same as `warn` nodes."""
+    return {
+        r["unique_id"].split(".")[-1]: r.get("failures")
+        for step in results
+        for r in step.get("results") or []
+        if r.get("status") == "warn" and r.get("unique_id")
+    }
 
 
 def add_override(
@@ -539,6 +550,13 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
         "new": new,
         "new_passed": dict(history).get(new),
         "failing": sorted(k for k, v in z.items() if v[2] in ("error", "fail")),
+        "warnings": dict(  # warn-only tests that found rows, with how many (they never fail the build)
+            con.execute(
+                f"select unique_id, failures from {b} where build_id = ? and kind = 'node' and status = 'warn' "
+                "order by unique_id",
+                [new],
+            ).fetchall()
+        ),
         "code": code,
         "tests": tests,
         "row_counts": row_counts,

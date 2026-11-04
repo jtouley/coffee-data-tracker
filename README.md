@@ -403,12 +403,17 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     comment, such as "about 45,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
     `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;
     `coverage_claims_name_metrics` fails the build if a claim names a metric the profile doesn't have;
+  - `python_readers_agree_on_tags`: the Python readers of the lake (`registry.py`, `enrich.py`, `verdict.py`), which
+    read raw tags, decide coffee or not as the build does on decoded tags (`int_tag_decoding_parity`). It only
+    warns, so it never holds a weekly release back; `coffeedata build` prints the count and examples
+    (`tag parity: ...`);
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 
   Every build appends its record to `builds/` (each dbt node's checksum and test result, metrics, manifest and
-  run results) and writes its release to `releases/`, passing or not. A passing release replaces `marts/`, the
-  public export and the site. A failing one leaves the served release in place (the automatic rollback) and the
-  weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
+  run results; a warn-only test that found rows is a `warn` node with their count, and `coffeedata build` prints
+  a `build <id> warnings: <test> (<count>), ...` line) and writes its release to `releases/`, passing or not. A
+  passing release replaces `marts/`, the public export and the site. A failing one leaves the served release in
+  place (the automatic rollback) and the weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
   against the last passing one before it. After reviewing a real change, run the weekly workflow with

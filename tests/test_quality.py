@@ -960,3 +960,48 @@ def test_a_build_from_a_directory_without_marketplace_warns_and_is_still_recorde
     assert "coverage claims not checked: " in caplog.text and "LISTING.md can't be read" in caplog.text
     [(build_id, _, _)] = quality.builds(Lake())
     assert quality.served(Lake())["build_id"] == build_id
+
+
+def test_tag_parity_warns_and_the_build_still_serves_records_and_prints_it(
+    lake, monkeypatch, tmp_path, capsys
+):
+    """python_readers_agree_on_tags is warn-only, so a product whose raw and decoded tags decide differently never
+    holds a weekly release back; it isn't silent either: `coffeedata build` prints its count and examples and the
+    build's warnings, builds records the test as `warn` with the count, and build-diff lists it."""
+    from coffeedata import cli
+
+    real_dbt_build = cli.dbt_build  # no run manifest here: the completeness gates have nothing to judge
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    part = product("P", title="Coffee P Roast") | {"tags": ["Parts&nbsp;"]}  # a gear tag only once decoded
+    run(lake, "2026-10-26", RID, [*FULL, part])
+    args = argparse.Namespace(
+        db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26", accept_volume_change=False
+    )
+    assert cli.cmd_build(args) is True
+    [(build_id, _, passed)] = quality.builds(Lake())
+    assert passed and quality.served(Lake())["build_id"] == build_id
+    err = capsys.readouterr().err
+    assert "tag parity: 1 products decide differently on raw and decoded tags" in err
+    assert f"tag parity: {RID}:P 'Coffee P Roast': " in err
+    [summary] = [line for line in err.splitlines() if line.startswith(f"build {build_id} warnings: ")]
+    assert "python_readers_agree_on_tags (1)" in summary
+    recorded = (
+        Lake()
+        .connect()
+        .execute(
+            f"select status, failures from {Lake().scan('builds')} where build_id = ? and unique_id = ?",
+            [build_id, "test.coffeedata.python_readers_agree_on_tags"],
+        )
+        .fetchone()
+    )
+    assert recorded == ("warn", 1)
+    run(lake, "2026-11-02", RID, FULL)  # the old version stays in the lake, so the next build warns again
+    monkeypatch.setattr(cli, "_today", lambda: "2026-11-02")
+    assert cli.cmd_build(argparse.Namespace(**vars(args) | {"run_date": "2026-11-02"})) is True
+    diff = quality.build_diff(Lake())  # build-diff lists the latest build's warnings
+    assert diff["new_passed"] and diff["warnings"]["test.coffeedata.python_readers_agree_on_tags"] == 1

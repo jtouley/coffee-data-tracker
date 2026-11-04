@@ -59,6 +59,10 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - The weekly crawl runs on Cloud Run instead of a GitHub Actions schedule. The `weekly` workflow stays as a manual
   fallback. The crawl runs on Monday, and the `site` workflow publishes the site, the public export and the
   Snowflake load on Tuesday (#74).
+- The data test `python_readers_agree_on_tags` (raw and decoded tags decide coffee or not the same way) warns
+  instead of failing the build, so it never holds a weekly release back. `coffeedata build` still prints the
+  `tag parity: ...` count and examples, now prints a `build <id> warnings: ...` line listing every warn-only test
+  that found rows, and `build-diff` gains `warnings` (each warn test in the build record, with its row count).
 - Crawl hardening (#91). A roaster that kills its crawl (an OOM kill, a segfault, an uncaught error) no longer
   kills every resume: each crawl records the roasters in flight, the next attempt fetches a dead attempt's
   in-flight roasters one at a time, and a roaster in flight in two dead attempts is quarantined for the week with a

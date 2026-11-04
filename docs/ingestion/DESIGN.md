@@ -221,6 +221,14 @@ the registry). There is no per-service copy.
     intermediate models above, which are empty on this lake (every fetch in it recorded its count);
   - the gate outcome is the same on both: 10-26 passes; 10-30 fails the same completeness and ok-rate checks,
     because that run is partial in the lake.
+- **The Python readers and the build agree on tags, or the build says so.** The build decodes HTML entities in tags
+  (`decode_html_entities_list`); `registry.py`, `enrich.py` and `verdict.py` read them raw. `int_tag_decoding_parity`
+  lists the products whose coffee/not-coffee decisions differ between the two, and the data test
+  `python_readers_agree_on_tags` warns on any (`severity='warn'`): the owner's call is that it never blocks a weekly
+  release, since the build's own decision, on decoded tags, is the one served. It isn't silent: `coffeedata build`
+  prints the count and examples (`tag parity: ...`) and a `build <id> warnings: ...` line, and `builds` records the
+  test as a `warn` node with the count (build-diff's `warnings`). No alert emails it: the pipeline's alerts fire on
+  failed executions and Scheduler errors only (RUNBOOK §6), and this adds no new channel.
   - Roaster status is `main`'s, including kaldi.com and hikersbrewcoffee.com (hiker.coffee): both `active`.
     kaldi.com's 10-26 fetch hit the old 20-page cap (5,000 products, all equipment parts such as BUNN kits; its
     coffees come later in the catalog). The crawl's rules then counted 3,459 of them as coffee; today's rules count 0,

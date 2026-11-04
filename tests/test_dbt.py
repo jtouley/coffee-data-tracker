@@ -981,10 +981,11 @@ def test_tags_are_decoded_in_the_build_and_kept_raw_in_the_lake(lake, tmp_path):
     }
 
 
-def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_path):
+def test_the_build_warns_when_raw_and_decoded_tags_decide_differently(lake, tmp_path):
     """registry.py, enrich.py and verdict.py read raw tags; the build reads decoded ones. A tag whose decoding
     flips a rule (here "Parts&nbsp;", a gear tag only once decoded) makes them disagree, and
-    python_readers_agree_on_tags fails the build, naming the product. The models themselves still build."""
+    python_readers_agree_on_tags warns, naming the product, without failing the build (severity warn: it never
+    holds a weekly release back). test_quality checks that `coffeedata build` prints and records it."""
     from coffeedata import quality
 
     rid = "onyxcoffeelab.com"
@@ -993,10 +994,9 @@ def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_
     bean = product("K", title="Kenya Kamwangi AA Washed") | {"tags": ["Coffee &gt; Single Origin"]}
     run(lake, "2026-10-19", rid, [part, bean], coffees=None)
     r = build(lake, tmp_path, check=False)
-    assert r.returncode != 0
-    failed = re.findall(r"in test (\w+) \(", r.stdout)
-    assert failed == ["python_readers_agree_on_tags"], r.stdout[-4000:]
-    assert "Got 1 result" in r.stdout and " ERROR=1 " in r.stdout
+    assert r.returncode == 0, r.stdout[-4000:]
+    assert re.search(r"WARN 1 python_readers_agree_on_tags ", r.stdout), r.stdout[-4000:]
+    assert " ERROR=0 " in r.stdout and not re.findall(r"(?:Failure|Error) in test (\w+) \(", r.stdout)
     db = tmp_path / "coffee.duckdb"
     con = duckdb.connect(str(db), read_only=True)
     # The build decides with the decoded tag: P is a part, not a coffee; the raw tag would make it one.
