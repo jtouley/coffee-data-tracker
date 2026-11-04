@@ -2,6 +2,7 @@
 judges whether each fetch returned a catalog of about the right size, never whether the data is good."""
 
 import json
+import shutil
 from datetime import UTC, date, datetime, timedelta
 
 import duckdb
@@ -71,7 +72,6 @@ def test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_
         "run_ok_rate": "pass",
         "adapter_ok_rate": "pass",
         "suspect_runs_need_review": "warn",
-        "edge_challenge_share": "pass",  # the check's own: no challenge here
     }
     assert [(e["roaster_id"], e["reasons"], e["rules"]) for e in out["repull"]] == [
         ("s00.com", ["suspect"], ["suspect_runs_need_review"]),
@@ -157,8 +157,6 @@ def _db(tmp_path, completeness: list[tuple], failing: dict[str, list[tuple]]):
         "run_ok_rate": "run_date date, roasters bigint, ok_share double",
         "suspect_runs_need_review": "roaster_id varchar, run_date date, batch_id varchar, products bigint, "
         "baseline_products double",
-        "edge_challenge_share": "edge varchar, adapter varchar, roasters bigint, challenged bigint, "
-        "challenged_share double",
     }
     for test, rows in failing.items():
         con.execute(f"create table main_dbt_test__audit.{test} ({cols[test]})")
@@ -171,7 +169,7 @@ def _db(tmp_path, completeness: list[tuple], failing: dict[str, list[tuple]]):
 
 
 def _results(**statuses) -> list[dict]:
-    tests = {t: "pass" for t in fetchhealth.TESTS} | statuses
+    tests = {t: "pass" for t in fetchhealth.GATE_TESTS} | statuses
     return [
         {"results": [{"unique_id": "model.coffeedata.run_completeness", "status": "success"}]},
         {"results": [{"unique_id": f"test.coffeedata.{t}", "status": s} for t, s in tests.items()]},
@@ -185,6 +183,9 @@ def test_two_platforms_down_at_once_point_at_the_image_and_hold_every_repull(tmp
                             "run_ok_rate": [(date(2026, 11, 2), 70, 0.14)]})  # fmt: skip
     out = fetchhealth.judge(db, _results(adapter_ok_rate="fail", run_ok_rate="fail"))
     assert [s["scope"] for s in out["systemic"]] == ["connector", "connector", "image"]
+    assert (
+        out["systemic"][-1]["rule"] == "adapter_ok_rate"
+    )  # the image finding is adapter_ok_rate's, on 2+ platforms
     assert out["repull"] == [] and out["held_back"] == 3  # generic's too: the image is shared
 
 
@@ -259,6 +260,106 @@ def test_a_crawl_that_died_counts_as_ended(tmp_path, monkeypatch):
     control.write(lk, old | {"started_at": old["started_at"] - fetchhealth.JOB_LIMIT - timedelta(minutes=1)})
     out = fetchhealth.run(lk, WEEK)
     assert out["status"] == "checked" and out["died"] == ["generic"] and out["running"] == []
+
+
+def _utc_now() -> datetime:
+    return datetime.now(UTC)
+
+
+def _stub_judge(monkeypatch, seen: list | None = None) -> None:
+    monkeypatch.setattr(cli, "dbt_build", lambda *a, **k: (True, []))
+    monkeypatch.setattr(fetchhealth, "judge", lambda db, results, running=frozenset(): (
+        seen.append(running) if seen is not None else None) or {"systemic": [], "repull": [], "held_back": 0,
+                                                                 "by_connector": [], "running": sorted(running)})  # fmt: skip
+
+
+def test_a_dead_attempt_is_judged_once_a_later_attempt_of_its_job_and_connector_has_started(
+    tmp_path, monkeypatch
+):
+    """2026-11-02's generic OOM: the killed attempt keeps only its running row, and Cloud Run's retry starts at once.
+    The retry shows the first is dead, so its connector is judged now, not 240 minutes after it started."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    seen: list = []
+    _stub_judge(monkeypatch, seen)
+    clock = iter(datetime(2026, 11, 2, 9, 17, tzinfo=UTC) + timedelta(minutes=i) for i in range(100))
+    monkeypatch.setattr(control, "now", lambda: next(clock))
+    control.start(lk, "crawl", WEEK, "generic")  # killed at 09:24: only its running row
+    assert fetchhealth.run(lk, WEEK)["status"].startswith(
+        "waiting"
+    )  # nothing ended yet: it may still be running
+    retry = control.start(lk, "crawl", WEEK, "generic")  # the retry starts
+    out = fetchhealth.run(lk, WEEK)
+    assert out["status"] == "checked" and out["died"] == ["generic"]
+    assert seen[-1] == frozenset({"generic"})  # the retry itself is still running, so generic waits for it
+    # Another connector's still-running attempt is no later attempt of generic's: it doesn't kill anything.
+    control.start(lk, "crawl", WEEK, "shopify")
+    assert fetchhealth.run(lk, WEEK)["status"].startswith("up to date")
+    control.finish(lk, retry, "done")
+    out = fetchhealth.run(lk, WEEK)
+    assert out["status"] == "checked" and seen[-1] == frozenset({"shopify"})
+
+
+def test_a_poll_while_another_check_runs_is_up_to_date(tmp_path, monkeypatch):
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    seen: list = []
+    _stub_judge(monkeypatch, seen)
+    control.finish(lk, control.start(lk, "crawl", WEEK, "woocommerce"), "done")
+    # A check whose running row is older than the time limit died: it doesn't hold the next poll back.
+    stale = _utc_now() - fetchhealth.JOB_LIMIT - timedelta(minutes=1)
+    control.write(lk, {"run_date": date.fromisoformat(WEEK), "job": fetchhealth.JOB, "attempt_id": "stale-check",
+                       "started_at": stale, "status": "running"})  # fmt: skip
+    assert fetchhealth.run(lk, WEEK)["status"] == "checked" and len(seen) == 1
+    # One still running (its running row younger than the limit) does: two checks at once could alert twice.
+    control.finish(lk, control.start(lk, "crawl", WEEK, "generic"), "done")
+    control.start(lk, fetchhealth.JOB, WEEK)
+    out = fetchhealth.run(lk, WEEK)
+    assert out["status"] == "up to date: another check is still running" and len(seen) == 1
+    assert fetchhealth.run(lk, WEEK, force=True)["status"] == "checked"  # --force runs anyway
+
+
+def test_the_verdict_is_published_and_read_from_another_staging_root(tmp_path, monkeypatch, caplog):
+    """R2: two instances, each with its own staging folder over one dataset. The check's verdict is published right
+    after its done row, so another instance's crawl pass reads it. A publish that fails changes nothing else."""
+    url = "hf://datasets/example/coffee"
+    monkeypatch.setattr(Lake, "remote_has", lambda self, table: False)  # read local files only: no network
+    a = Lake(url, staging=tmp_path / "stage-a")  # the fetch-health job's instance
+    b = Lake(url, staging=tmp_path / "stage-b")  # a crawl pass's instance
+
+    def publish(self, message, *args, **kwargs):  # the dataset is stage-b's copy: publish copies across
+        for f in sorted(self.root.rglob("*.parquet")):
+            dest = tmp_path / "stage-b" / f.relative_to(self.root)
+            if self.root == tmp_path / "stage-a" and not dest.exists():
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(f, dest)
+        return 1
+
+    monkeypatch.setattr(Lake, "publish", publish)
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    monkeypatch.setattr(registry, "current", lambda lake, *x, **k: [_state("a.com")])
+    monkeypatch.setattr(cli, "dbt_build", lambda *x, **k: (True, []))
+    listed = [{"roaster_id": "a.com", "adapter": "shopify", "reasons": ["empty"], "rules": ["run_ok_rate"]}]
+    monkeypatch.setattr(fetchhealth, "judge", lambda db, results, running=frozenset(): {
+        "systemic": [], "repull": listed, "held_back": 0, "by_connector": [], "running": []})  # fmt: skip
+    control.finish(a, control.start(a, "crawl", WEEK, "shopify"), "done")
+    assert fetchhealth.run(a, WEEK)["status"] == "checked"
+    seen = [r for r in control.rows(b, WEEK) if r["job"] == fetchhealth.JOB]
+    assert [r["status"] for r in seen] == ["done"] and control.detail_of(seen[0])["repull"] == listed
+    monkeypatch.setenv(fetchhealth.REFETCH_ENV, "1")
+    part = connectors.PartitionLake(b, "shopify", WEEK)
+    assert [s.roaster.roaster_id for s in fetchhealth.repull_states(part, "shopify", WEEK)] == ["a.com"]
+
+    # A publish that fails: a WARNING, and the same verdict and status (so the same exit code).
+    def broken(self, *args, **kwargs):
+        raise OSError("dataset unreachable")
+
+    monkeypatch.setattr(Lake, "publish", broken)
+    control.finish(a, control.start(a, "crawl", WEEK, "generic"), "done")
+    with caplog.at_level("WARNING"):
+        out = fetchhealth.run(a, WEEK)
+    assert out["status"] == "checked" and out["repull"] == listed and out["alert"] == []
+    assert "verdict wasn't published: OSError: dataset unreachable" in caplog.text
 
 
 def test_a_repull_is_asked_once_from_the_latest_check_that_judged_its_connector(tmp_path, monkeypatch):
@@ -525,9 +626,9 @@ def test_with_refetch_off_crawl_and_crawl_retry_ignore_the_repull_list(tmp_path,
 
 
 def test_mains_fetch_states_are_each_mapped_on_purpose(tmp_path, monkeypatch):
-    """Over a real dbt build: a partial fetch is not a failure (listed apart, never re-fetched or held); a
-    quarantined store is left out of the ok rates and listed apart; a challenged store is a failure kept on the list
-    with its edge named; a bare 202 names no edge and is a plain failure."""
+    """Over a real dbt build: a partial fetch is not a failure (listed apart, never re-fetched or held), with 0
+    products too; a quarantined store is left out of the ok rates and listed apart; a challenged store is an ordinary
+    failed fetch, listed with its edge named; a bare 202 names no edge."""
     lk = _week(tmp_path, monkeypatch)
     part = connectors.PartitionLake(lk, "shopify", WEEK)
     run(
@@ -548,24 +649,51 @@ def test_mains_fetch_states_are_each_mapped_on_purpose(tmp_path, monkeypatch):
         blocks=[_sg("s32")],
     )
     run(part, WEEK, "s33.com", None, error="FetchError: HTTP 202 https://s33.com/products.json")
+    run(part, WEEK, "s34.com", [], partial=True, error="partial: page 1 blocked")  # ok, partial, 0 products
     out = fetchhealth.run(lk, WEEK)
     assert out["partial"] == [
-        {"roaster_id": "s30.com", "adapter": "shopify", "reason": "partial: deadline reached (page 2)"}
+        {"roaster_id": "s30.com", "adapter": "shopify", "reason": "partial: deadline reached (page 2)"},
+        {"roaster_id": "s34.com", "adapter": "shopify", "reason": "partial: page 1 blocked"},
     ]
     assert out["quarantined"] == [{"roaster_id": "s31.com", "adapter": "shopify"}]
-    # One SiteGround store among 33 is no systemic challenge (edge_challenge_share). 29 of 33 ok is under
-    # run_ok_rate's 90% with no platform below its floor: the run is a finding of its own.
+    # 29 of 34 ok is under run_ok_rate's 90% with no platform below its floor: the run is a finding. No challenge
+    # scope exists: a challenge is an ordinary failure.
     assert [f["scope"] for f in out["systemic"]] == ["run"]
-    assert out["tests"]["edge_challenge_share"] == "pass"
     assert [(e["roaster_id"], e["reasons"], e.get("challenge")) for e in out["repull"]] == [
         ("s00.com", ["suspect"], None), ("s01.com", ["failed"], None), ("s02.com", ["empty"], None),
         ("s32.com", ["failed"], "siteground"), ("s33.com", ["failed"], None),
     ]  # fmt: skip
     assert out["held_back"] == 0
     shop = next(c for c in out["by_connector"] if c["adapter"] == "shopify")
-    assert (shop["partial"], shop["quarantined"], shop["challenged"]) == (1, 1, 1)
-    # The quarantined store is not in the ok rates' population; the partial one counts as ok (it has products).
-    assert (shop["attempted"], shop["judged"], shop["ok"]) == (34, 33, 29)
+    assert (shop["partial"], shop["quarantined"], shop["challenged"]) == (2, 1, 1)
+    # The quarantined store is not in the ok rates' population; the partial one with products counts as ok.
+    assert (shop["attempted"], shop["judged"], shop["ok"]) == (35, 34, 29)
+    # The list's failed and empty rows are exactly run_ok_rate's not-ok rows, less the partial fetches.
+    con = duckdb.connect(str(tmp_path / "fh" / "dq.duckdb"), read_only=True)
+    not_ok = {r[0] for r in con.execute(
+        "select roaster_id from run_completeness where has_catalog and attempted and not catalog_ok").fetchall()}  # fmt: skip
+    listed = {e["roaster_id"] for e in out["repull"] if {"failed", "empty"} & set(e["reasons"])}
+    partial0 = {r["roaster_id"] for r in out["partial"]} & not_ok
+    assert partial0 == {"s34.com"} and listed | partial0 == not_ok and not listed & partial0
+
+
+def test_last_weeks_suspect_is_never_listed_for_a_week_with_no_ok_fetch_yet(tmp_path, monkeypatch):
+    """suspect_runs_need_review judges the checked week (as_of_run), not the latest week with an ok fetch: early in
+    an outage, last week's unreviewed suspect would otherwise be listed as this week's."""
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(fetchhealth, "DIR", tmp_path / "fh")
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: [_state(r) for r in SHOPS[:3]])
+    for d in HISTORY[:3]:
+        for rid in SHOPS[:3]:
+            run(lk, d, rid, [product(f"{rid}-{n}") for n in range(30)])
+    for rid in SHOPS[:3]:  # last week (10-26): s00 came back short, a suspect nobody reviewed
+        run(lk, HISTORY[3], rid, [product(f"{rid}-{n}") for n in range(5 if rid == "s00.com" else 30)])
+    part = connectors.PartitionLake(lk, "shopify", WEEK)
+    run(part, WEEK, "s00.com", None)  # this week: one fetch so far, and it failed
+    control.finish(lk, control.start(lk, "crawl", WEEK, "shopify"), "deadline", skipped=2)
+    out = fetchhealth.run(lk, WEEK)
+    assert out["tests"]["suspect_runs_need_review"] == "pass"
+    assert [(e["roaster_id"], e["reasons"]) for e in out["repull"]] == [("s00.com", ["failed"])]
 
 
 def _sg(host: str) -> dict:
@@ -595,7 +723,7 @@ def test_one_challenged_store_alerts_nothing(tmp_path, monkeypatch, capsys):
         error="FetchError: HTTP 202 (a challenge) https://s30.com",
         blocks=[_sg("s30")],
     )
-    assert not _poll(lk)  # 28 of 31 ok passes run_ok_rate; 1 of 31 challenged is under edge_challenge_share
+    assert not _poll(lk)  # 28 of 31 ok passes run_ok_rate, and a challenge has no scope of its own
     printed = capsys.readouterr().out
     assert '"severity"' not in printed  # no ERROR line, no WARNING line: nothing systemic
     detail = json.loads([r for r in control.rows(lk, WEEK) if r["job"] == fetchhealth.JOB][-1]["detail"])
@@ -604,11 +732,12 @@ def test_one_challenged_store_alerts_nothing(tmp_path, monkeypatch, capsys):
             "challenge": "siteground"} in detail["repull"]  # fmt: skip
 
 
-def test_a_systemic_challenge_alerts_once(tmp_path, monkeypatch, capsys):
+def test_many_challenged_stores_are_still_ordinary_failed_fetches(tmp_path, monkeypatch):
+    """The owner's decision (2026-11-04): a challenge has no systemic scope. 5 SiteGround stores of 35 reached are 5
+    `failed` entries naming their edge, never held back; only the gate's own floors decide what is systemic."""
     lk = _week(tmp_path, monkeypatch)
-    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     part = connectors.PartitionLake(lk, "shopify", WEEK)
-    for rid in SHOPS[30:35]:  # 5 of the 35 reached: 14%, over the run's 10% tolerance, on a platform of 20+
+    for rid in SHOPS[30:35]:
         run(
             part,
             WEEK,
@@ -617,43 +746,38 @@ def test_a_systemic_challenge_alerts_once(tmp_path, monkeypatch, capsys):
             error=f"FetchError: HTTP 202 (a challenge) https://{rid}",
             blocks=[_sg(rid[:-4])],
         )
-    assert _poll(lk)
-    alert = json.loads(next(x for x in capsys.readouterr().out.splitlines() if '"severity": "ERROR"' in x))
-    assert {"scope": "challenge", "edge": "siteground", "connectors": ["shopify"], "rule": "edge_challenge_share",
-            "roasters": 5} in alert["systemic"]  # fmt: skip
-    detail = json.loads([r for r in control.rows(lk, WEEK) if r["job"] == fetchhealth.JOB][-1]["detail"])
-    # Its roasters stay on the list, each with the edge named.
-    assert (
-        sorted(e["roaster_id"] for e in detail["repull"] if e.get("challenge") == "siteground")
-        == SHOPS[30:35]
-    )
-    assert not _poll(lk)  # the next pass's check finds it again: logged, not emailed
-    assert '"severity": "WARNING"' in capsys.readouterr().out
+    out = fetchhealth.run(lk, WEEK)
+    assert [f["scope"] for f in out["systemic"]] == [
+        "run"
+    ]  # 28 of 35 ok: run_ok_rate's floor, not a challenge
+    challenged = [e for e in out["repull"] if e.get("challenge")]
+    assert [e["roaster_id"] for e in challenged] == SHOPS[30:35]
+    assert all(e["reasons"] == ["failed"] and e["challenge"] == "siteground" for e in challenged)
+    assert out["held_back"] == 0
 
 
 def test_the_2026_11_02_shape_bare_202s_and_a_few_cloudflare_stores_alert_nothing(
     tmp_path, monkeypatch, capsys
 ):
     """2026-11-02's replay: no gate test failed, but 27 WooCommerce stores (of 229) failed with a bare 202 and 5
-    generic ones (of 167) behind Cloudflare. A bare 202 names no edge, so however many there are it is no
-    challenge finding (abstain), only failed fetches; a few Cloudflare stores are under edge_challenge_share."""
+    generic ones (of 167) behind Cloudflare. A bare 202 names no edge (abstain): a plain failed fetch. A Cloudflare
+    store is a failed fetch naming its edge. Neither alerts on its own."""
     lk = _week(tmp_path, monkeypatch)
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     part = connectors.PartitionLake(lk, "shopify", WEEK)
-    for rid in SHOPS[30:34]:  # 4 of 34: 12%, which would be over the share if a bare 202 were an edge
+    for rid in SHOPS[30:34]:
         run(part, WEEK, rid, None, error=f"FetchError: HTTP 202 https://{rid}/products.json",
             blocks=[{"status": 202, "host": rid, "path": "/products.json"}])  # fmt: skip
     run(part, WEEK, "s34.com", None, error="FetchError: HTTP 403 https://s34.com",
         blocks=[{"status": 403, "host": "s34.com", "path": "/", "cf_mitigated": "challenge"}])  # fmt: skip
     out = fetchhealth.run(lk, WEEK)
-    assert [f for f in out["systemic"] if f["scope"] == "challenge"] == []
-    assert out["tests"]["edge_challenge_share"] == "pass"
+    assert [f["scope"] for f in out["systemic"]] == ["run"]  # 28 of 35 ok: the gate's floor, nothing else
     entries = {e["roaster_id"]: e for e in out["repull"]}
     assert all(entries[r]["reasons"] == ["failed"] and "challenge" not in entries[r] for r in SHOPS[30:34])
     assert entries["s34.com"]["challenge"] == "cloudflare" and out["held_back"] == 0
 
 
-def test_a_partial_or_quarantined_store_is_never_a_reason_and_a_challenge_needs_its_share(tmp_path):
+def test_a_partial_or_quarantined_store_is_never_a_reason_and_a_challenge_is_a_plain_failure(tmp_path):
     rc = [("p.com", "woocommerce", True, True, True, True, False, True, "partial: 40 of 90+ products read", None),
           # a partial fetch that read nothing (a page block before page 1): partial, never `empty`
           ("p0.com", "woocommerce", True, True, True, False, False, True, "partial: page 1 blocked", None),
@@ -662,30 +786,14 @@ def test_a_partial_or_quarantined_store_is_never_a_reason_and_a_challenge_needs_
           ("sg2.com", "generic", True, False, True, False, False, False, None, "siteground"),
           ("f.com", "woocommerce", True, False, True, False)]  # fmt: skip
     out = fetchhealth.judge(_db(tmp_path, rc, {}), _results())
-    assert out["systemic"] == []  # edge_challenge_share passed: the challenges are per-roaster failures
+    assert out["systemic"] == []  # challenges are per-roaster failures: no scope of their own
     assert [(e["roaster_id"], e["reasons"], e.get("challenge")) for e in out["repull"]] == [
         ("sg2.com", ["failed"], "siteground"), ("f.com", ["failed"], None), ("sg1.com", ["failed"], "siteground"),
     ]  # fmt: skip
     assert out["held_back"] == 0
     assert [r["roaster_id"] for r in out["partial"]] == ["p.com", "p0.com"]
     assert [r["roaster_id"] for r in out["quarantined"]] == ["q.com"]
-    # Past the share, one finding per edge, naming each platform the test failed for; the roasters stay listed.
-    (tmp_path / "w").mkdir()
-    share = {"edge_challenge_share": [("siteground", "woocommerce", 40, 6, 0.15), ("siteground", "generic", 30, 4,
-                                                                                    0.133)]}  # fmt: skip
-    out = fetchhealth.judge(_db(tmp_path / "w", rc, share), _results(edge_challenge_share="warn"))
-    assert out["systemic"] == [{"scope": "challenge", "edge": "siteground", "connectors": ["generic", "woocommerce"],
-                                "rule": "edge_challenge_share", "roasters": 10}]  # fmt: skip
-    assert len(out["repull"]) == 3 and out["held_back"] == 0
-    # While woocommerce still crawls, its part of the finding and its partial stores wait for its pass to end.
+    # While woocommerce still crawls, its stores and partial fetches wait for its pass to end.
     (tmp_path / "r").mkdir()
-    out = fetchhealth.judge(_db(tmp_path / "r", rc, share), _results(edge_challenge_share="warn"),
-                            running=frozenset({"woocommerce"}))  # fmt: skip
-    assert [f["connectors"] for f in out["systemic"]] == [["generic"]] and out["partial"] == []
-
-
-def test_a_challenge_found_again_on_more_platforms_is_the_same_finding():
-    one = {"scope": "challenge", "edge": "siteground", "connectors": ["woocommerce"], "roasters": 3}
-    more = one | {"connectors": ["generic", "woocommerce"], "roasters": 9}
-    assert fetchhealth.finding_key(one) == fetchhealth.finding_key(more) == ("challenge", ("siteground",))
-    assert fetchhealth.finding_key(one) != fetchhealth.finding_key(one | {"edge": "cloudflare"})
+    out = fetchhealth.judge(_db(tmp_path / "r", rc, {}), _results(), running=frozenset({"woocommerce"}))
+    assert [e["roaster_id"] for e in out["repull"]] == ["sg2.com"] and out["partial"] == []

@@ -57,9 +57,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `adapter_ok_rate` and suspect-run rules on the unmerged week and lists the roasters whose fetch failed, came back
   empty or came back far smaller than usual, each with the named gate rule that gave its reason. It judges fetches,
   not data: it doesn't look at prices or at which products came back. Partial fetches and quarantined stores are
-  listed apart, never as failures; a challenged store stays listed with its edge (SiteGround, Cloudflare). A
-  platform-wide failure, two at once (the image), or one edge challenging more than 10% of a platform (the gate's
-  own numbers) emails the owner once a week per finding. It never serves, records a build or publishes.
+  listed apart, never as failures; a challenged store is an ordinary failed fetch, listed with its edge when known
+  (SiteGround, Cloudflare). A platform-wide failure, or two at once (the image), emails the owner once a week per
+  finding. It never serves or records a build; it publishes only its own job rows, the verdict.
   Re-fetching the listed roasters ships off, behind one setting (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and
   `crawl-retry` never read the list and the week's output is unchanged (0 products). Turning it on would change
   which batch counts for up to 346 products a week, so it needs the full evaluation first

@@ -47,8 +47,8 @@ models:
           A failed fetch (status error) that an edge answered with its anti-bot challenge instead of the catalog,
           when a recorded block names the edge: siteground (SiteGround's sg-captcha header, raw contract 1.4.0) or
           cloudflare (cf-mitigated challenge). Null otherwise, a bare 202 included: it names no edge, so it stays a
-          plain failure. The fetch-health check names the edge on the roaster's entry, and finds it systemic only
-          past edge_challenge_share.
+          plain failure. The fetch-health check names the edge on the roaster's entry; a challenge is an ordinary
+          failed fetch.
         data_tests:
           - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
@@ -357,8 +357,8 @@ models:
       - name: challenge
         description: >-
           Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground or cloudflare);
-          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry and
-          finds it systemic only past edge_challenge_share.
+          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry,
+          an ordinary failed fetch.
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
       volume check and anomaly bands read them.

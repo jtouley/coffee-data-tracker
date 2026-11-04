@@ -42,15 +42,16 @@ typical week. 2026-11-02 is the only weekly run with history, and the number cit
 33, 8 of 52, 9 of 22, 0 of 126, 0 of 20, 21 of 55.
 
 Those rows predate the mapping of `main`'s fetch states. **2026-11-02 again, with it** (2026-11-04, after the
-review's fixes: the read-only copy `dq-week/lake/` plus its fetches, `dq-week/lake-fetches/`, copied into the
-replay's own scratch lake; a listing of both copies' files, sizes and mtimes hashed the same before and after):
-tests `run_ok_rate` pass, `adapter_ok_rate` pass, `suspect_runs_need_review` warn, `edge_challenge_share` pass.
-**No systemic finding.** Listed 63, as before the mapping (52 `failed`, 8 `empty`, 6 `suspect`; 3 both empty and
-suspect), 0 held back. The 27 WooCommerce stores that failed with a bare 202 name no edge (these files predate raw
-1.4.0's `sg-captcha` field), so they are plain `failed` entries. 5 generic stores behind Cloudflare are counted in
-`by_connector.challenged` (5 of 167 judged: 3%, under the 10% share), but none is on the list, since none has a
-known catalog. 0 partial and 0 quarantined: both states are newer than these files. The 11 roasters re-fetch would
-ask again are the same as above, so the 346 stands. The upper bound wasn't recounted: this copy holds no snapshots.
+review's fixes and the owner's decision that a challenge is an ordinary failed fetch: the read-only copy
+`dq-week/lake/` plus its fetches, `dq-week/lake-fetches/`, copied into the replay's own scratch lake; a listing of
+both copies' files, sizes and mtimes hashed the same before and after): tests `run_ok_rate` pass,
+`adapter_ok_rate` pass, `suspect_runs_need_review` warn. **No systemic finding.** Listed 63, as before the mapping
+(52 `failed`, 8 `empty`, 6 `suspect`; 3 both empty and suspect), 0 held back. The 27 WooCommerce stores that failed
+with a bare 202 name no edge (these files predate raw 1.4.0's `sg-captcha` field), so they are plain `failed`
+entries. 5 generic stores behind Cloudflare are counted in `by_connector.challenged`, but none is on the list,
+since none has a known catalog. 0 partial and 0 quarantined: both states are newer than these files. The 11
+roasters re-fetch would ask again are the same as above, so the 346 stands. The upper bound wasn't recounted: this
+copy holds no snapshots.
 
 Reproduce, from the repo root, with the lake copies cut to `<run_date>` (each root needs every table's schema
 file; copy a fetches-only folder into `<out dir>/lake/fetches/` instead of passing it):

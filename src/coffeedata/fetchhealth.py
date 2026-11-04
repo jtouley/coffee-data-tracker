@@ -14,45 +14,45 @@ dbt reads the lake plus a copy of the connector partitions (raw/connector=*/run_
 see) laid out as one more lake root. Only fetches and run_manifests are copied: every column judged here comes from
 them (and earlier weeks); snapshots and bodies are what the build classifies.
 
-The list (`repull`): per roaster, the rows a named gate rule counts as not ok, and nothing else (RULES): `failed`
-(no ok fetch) and `empty` (an ok fetch with no products, for a roaster known to have a catalog), the rows run_ok_rate
-counts against the run (run_completeness has_catalog, attempted, not catalog_ok); `suspect`, a failing row of
-suspect_runs_need_review. Each entry records its rules by name (`rules`). Anything the rules can't tell is left
-alone (CLAUDE.md: abstain).
+The list (`repull`): per roaster, the rows a named gate rule counts as not ok, less partial fetches, and nothing
+else (RULES): `failed` (no ok fetch) and `empty` (an ok fetch with no products, for a roaster known to have a
+catalog), the rows run_ok_rate counts against the run (run_completeness has_catalog, attempted, not catalog_ok) less
+the partial ones (below); `suspect`, a failing row of suspect_runs_need_review for the checked week. Each entry
+records its rules by name (`rules`). Anything the rules can't tell is left alone (CLAUDE.md: abstain).
 
 Main's fetch states, each mapped on purpose (run_completeness carries them):
 - partial (an ok fetch that read only part of the catalog: stopped by the deadline, a page block, a total it
   couldn't reach; fetches.partial, its reason in fetches.error): not failed. The gate counts it as ok when it has
   products, and stg_run_walk never makes it suspect or puts it in a baseline. So it is never a reason on the list,
-  not even with 0 products (which run_ok_rate counts as not ok): it is listed apart (`partial`, with its reason), never re-fetched by this check (a partial fetch isn't done, so the
-  week's own resume passes read it again), never held back, never systemic.
+  not even with 0 products (which run_ok_rate counts as not ok): it is listed apart (`partial`, with its reason),
+  never re-fetched by this check (a partial fetch isn't done, so the week's own resume passes read it again), never
+  held back, never systemic.
 - crashed (quarantined by crashguard after crashing two attempts of its crawl): one store's problem with our
   crawler, which the gate leaves out of both ok rates (not has_catalog). Listed apart (`quarantined`), never
   re-fetched (it is quarantined for the week), never systemic.
-- a challenge (an edge's anti-bot page instead of the catalog, named when a recorded block names the edge:
-  SiteGround's sg-captcha, Cloudflare's cf-mitigated; stg_fetches.challenge): still `failed` for run_ok_rate, and
-  the roaster stays on the list with its edge named (`challenge`). It is systemic (scope `challenge`) only past
-  edge_challenge_share, on the gate's own numbers: that one edge failed more of a platform's roasters than
-  run_ok_rate lets the whole run fail (1 - min_ok_share), on a platform of at least min_adapter_roasters. So one
-  challenged store alerts nothing. A bare 202 names no edge (the hosts answering it may share nothing): a plain
-  `failed`, with no edge (CLAUDE.md: abstain). How often the classification is right is unmeasured.
+- a challenge (an edge's anti-bot page instead of the catalog, a 202 among them): an ordinary failed fetch, which
+  the week's later passes retry. `failed` on the list, never held back, and the entry names the edge when a
+  recorded block names it (`challenge`: SiteGround's sg-captcha, Cloudflare's cf-mitigated; stg_fetches.challenge).
+  It has no systemic scope of its own: a platform it fails as a whole is adapter_ok_rate's `connector` finding, like
+  any failure. Persistent blocking is a separate follow-up (#110).
 - a refusal that outlasts the 5-minute wait cap (http.MAX_STORE_WAIT: a 429, 430 or 503, or a 5xx's long
   Retry-After): an error fetch, so `failed`, counted by run_ok_rate and adapter_ok_rate as any failure (a platform
   rate-limiting most stores is scope `connector`). Every later crawl pass of the week asks it again anyway.
 
-What it decides, with no new number of its own (every threshold is a gate var):
+What it decides, with no threshold of its own:
 - systemic: a platform below adapter_ok_rate's floor (scope connector); two or more platforms below it in the same
   pass, which points at what they share, the image, our code or its egress, rather than at one platform (scope
-  image); the run below run_ok_rate's floor with no single platform to blame (scope run); an edge's challenge
-  past edge_challenge_share (scope challenge). The job exits non-zero, which emails the owner (alerts.tf, ingest_job_failed), once per finding
-  a week: a later check that finds the same scope on the same connectors (or edge) again records it and logs a
-  warning; a new or different finding alerts.
-- held back: a systemic platform's roasters stay off the list (asking a platform that is refusing us
-  again the same evening helps nobody), and an image problem holds back all of it. A suspect with no adapter (no
-  run_completeness row) is listed apart, unattributed: never re-fetched or held back.
+  image); the run below run_ok_rate's floor with no single platform to blame (scope run). The job exits non-zero,
+  which emails the owner (alerts.tf, ingest_job_failed), once per finding a week: a later check that finds the same
+  scope on the same connectors again records it and logs a warning; a new or different finding alerts.
+- held back: a systemic platform's roasters stay off the list (asking a platform that is refusing us again the same
+  evening helps nobody), and an image problem holds back all of it. A suspect with no adapter (no run_completeness
+  row) is listed apart, unattributed: never re-fetched or held back.
 
-It never builds a release, records a build, serves, or publishes. Its one write is its job_manifests rows (job
-`fetch-health`), whose detail holds the verdict and the list, for the owner to read.
+It never builds a release, records a build or serves. Its one write is its job_manifests rows (job `fetch-health`),
+whose detail holds the verdict and the list, for the owner to read; it publishes them to the dataset (Lake.publish,
+as every job publishes its rows), so a later pass on another instance reads the same verdict. A failed publish is
+logged and never changes the verdict or its exit code.
 
 Re-fetching ships switched off: one setting, REFETCH_ENV (COFFEEDATA_DQ_REFETCH), unset by default, read by `crawl`
 and `crawl-retry` (refetch_enabled). Off, no crawl pass reads the list, and the week's output is main's. Turning it
@@ -67,7 +67,8 @@ doesn't.
 Triggered by its own Cloud Run job, polled by Cloud Scheduler every 20 minutes through Monday's crawl window: a poll
 with no crawl attempt ended since the last check exits at once; otherwise it judges every connector whose pass has
 ended (a `deadline` end row included), and leaves out one still running (the next poll after it ends judges it, and
-the run as a whole).
+the run as a whole). An attempt with only its running row is dead once a later attempt of the same job and connector
+has started, or JOB_LIMIT after it started. A poll that finds another check still running exits at once.
 """
 
 from __future__ import annotations
@@ -90,11 +91,7 @@ CRAWL_JOBS = ("crawl", "crawl-retry")  # the passes whose output it judges
 # timeout (ingestion.tf, 14400 s). Before that, it may still be running, and the check waits for it.
 JOB_LIMIT = timedelta(minutes=240)
 GATE_TESTS = ("run_ok_rate", "adapter_ok_rate", "suspect_runs_need_review")
-# The check's own systemic rule, on the gate's numbers (min_adapter_roasters, min_ok_share): an edge's challenge is
-# systemic for a platform only past them, so one challenged store never alerts. It names no roaster's reason.
-CHECK_TESTS = ("edge_challenge_share",)
-TESTS = (*GATE_TESTS, *CHECK_TESTS)
-SELECT = ["+run_completeness", "+stg_run_quality", *TESTS]
+SELECT = ["+run_completeness", "+stg_run_quality", *GATE_TESTS]
 FLAGS = (
     "--store-failures",  # each test's failing rows, which the verdict reads
     "--indirect-selection",
@@ -181,13 +178,13 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
     statuses = {r.get("unique_id"): r.get("status") for step in results for r in step.get("results") or []}
     broken = sorted(uid for uid, st in statuses.items() if st in ("error", "skipped"))
     tests = {uid.split(".")[-1]: st for uid, st in statuses.items() if uid and uid.startswith("test.")}
-    if broken or not results or any(not r for r in results) or not set(TESTS) <= tests.keys():
+    if broken or not results or any(not r for r in results) or not set(GATE_TESTS) <= tests.keys():
         # A metric error is not a data failure (GX-3): no verdict, and the job fails so someone looks.
         raise CheckError(f"dbt didn't run the check: {', '.join(broken) or 'no results for every step'}")
     con = duckdb.connect(str(db), read_only=True)
     try:
         failing: dict[str, list[dict]] = {}
-        for test in TESTS:
+        for test in GATE_TESTS:
             table = failures_table(con, test)
             failing[test] = _rows(con, f"select * from {table}") if table else []
             # A test reported failing with no stored rows was never evaluated (GX: an empty result is a metric
@@ -239,25 +236,11 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         for r in platforms
     ]  # fmt: skip
     if len(down) >= 2:
-        systemic.append(
-            {"scope": "image", "connectors": down, "rule": "adapter_ok_rate on 2+ platforms at once"}
-        )
+        systemic.append({"scope": "image", "connectors": down, "rule": "adapter_ok_rate"})
     if failing["run_ok_rate"] and not down and not running:
         r = failing["run_ok_rate"][0]
         systemic.append({"scope": "run", "rule": "run_ok_rate", "roasters": r["roasters"],
                          "ok_share": round(r["ok_share"], 3)})  # fmt: skip
-    # An edge's challenge is systemic only where edge_challenge_share says so: that edge alone failed more of a
-    # platform's roasters than run_ok_rate lets the whole run fail, on a platform adapter_ok_rate is big enough to
-    # judge. One finding per edge, naming those platforms. Below that, a challenge is a per-roaster failure with its
-    # edge named on the entry, and alerts nothing.
-    edges: dict[str, dict] = {}
-    for r in sorted(failing["edge_challenge_share"], key=lambda r: (r["edge"], r["adapter"])):
-        if r["adapter"] not in running:
-            f = edges.setdefault(r["edge"], {"scope": "challenge", "edge": r["edge"], "connectors": [],
-                                             "rule": "edge_challenge_share", "roasters": 0})  # fmt: skip
-            f["connectors"].append(r["adapter"])
-            f["roasters"] += r["challenged"]
-    systemic += [edges[e] for e in sorted(edges)]
     image = len(down) >= 2
     reasons: dict[str, dict] = {}
     for r in listed + [s | {"reason": "suspect"} for s in suspects]:
@@ -284,8 +267,8 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
     return {
         "systemic": systemic,
         "repull": repull,
-        # listed roasters kept off the list because their platform or the image is systemic (a challenge keeps its
-        # roasters on the list, with their edge named)
+        # listed roasters kept off the list because their platform or the image is systemic (a challenged roaster is
+        # never held back: it stays on the list, with its edge named)
         "held_back": held,
         "unattributed": unattributed,  # listed roasters with no adapter: for the owner, never re-fetched or held back
         # main's other fetch states, for the owner: never a reason, never re-fetched by this check, never held back
@@ -293,15 +276,12 @@ def judge(db: Path, results: list[dict], running: frozenset[str] = frozenset()) 
         "quarantined": [r for r in quarantined if r["adapter"] not in running],
         "by_connector": reached,
         "running": sorted(running),
-        "tests": {t: tests[t] for t in TESTS},  # pass, fail (an error-severity test) or warn
+        "tests": {t: tests[t] for t in GATE_TESTS},  # pass, fail (an error-severity test) or warn
     }
 
 
 def finding_key(f: dict) -> tuple[str, tuple[str, ...]]:
-    """What makes a systemic finding the same one again: its scope and the connectors it names (none for `run`), or
-    for a challenge, its edge (the platforms it hit may grow as passes end: still the same finding)."""
-    if f.get("scope") == "challenge":
-        return "challenge", (f.get("edge") or "",)
+    """What makes a systemic finding the same one again: its scope and the connectors it names (none for `run`)."""
     names = f.get("connectors") or ([f["connector"]] if f.get("connector") else [])
     return f.get("scope", ""), tuple(sorted(names))
 
@@ -315,7 +295,26 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     rows = control.rows(lake, week)
     crawls = [r for r in rows if r["job"] in CRAWL_JOBS and not control.is_arm(r)]
     now = _utc(control.now())
-    live = [r for r in crawls if r["status"] == "running" and _utc(r["started_at"]) + JOB_LIMIT > now]
+    # An attempt with only its running row is live until JOB_LIMIT, unless a later attempt of the same job and
+    # connector has started: that one is the retry (Cloud Run's, or the next slot), so the first has died, and its
+    # connector is judged now rather than up to 4 hours later.
+    later = {
+        r["attempt_id"]
+        for r in crawls
+        if any(
+            o["job"] == r["job"]
+            and o["connector"] == r["connector"]
+            and _utc(o["started_at"]) > _utc(r["started_at"])
+            for o in crawls
+        )
+    }
+    live = [
+        r
+        for r in crawls
+        if r["status"] == "running"
+        and _utc(r["started_at"]) + JOB_LIMIT > now
+        and r["attempt_id"] not in later
+    ]
     died = [r for r in crawls if r["status"] == "running" and r not in live]
     # The attempts that have ended: an end row, or only a running row older than the time limit (it died).
     ended = sorted(r["attempt_id"] for r in crawls if r not in live)
@@ -323,7 +322,17 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     # A failed check counts as having seen its attempts too: a dbt problem alerts once, not on every poll after
     # (`fetch-health --force` checks again once it's fixed).
     checks = [r for r in rows if r["job"] == JOB and r["status"] in ("done", "failed")]
+    # Another check still running (its running row younger than JOB_LIMIT): it judges what has ended, and a second
+    # one meanwhile could alert twice for the same finding.
+    busy = [
+        r
+        for r in rows
+        if r["job"] == JOB and r["status"] == "running" and _utc(r["started_at"]) + JOB_LIMIT > now
+    ]
     if not force:
+        if busy:
+            return {"run_date": week, "status": "up to date: another check is still running",
+                    "running": sorted(running)}  # fmt: skip
         if not ended:
             return {"run_date": week, "status": "waiting: no crawl attempt has ended this week",
                     "running": sorted(running)}  # fmt: skip
@@ -361,6 +370,13 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     } | out
     out["alert"] = [f for f in out["systemic"] if finding_key(f) not in before]
     control.finish(lake, job, "done", detail=out)
+    # The verdict goes to the dataset, so the owner, and a later pass on another instance with its own staging folder,
+    # can read it. A failed publish never changes the verdict or its exit code: the rows stay staged for the next
+    # publish, and the execution's log has the verdict either way.
+    try:
+        lake.publish(f"fetch-health {week}")
+    except Exception as e:  # noqa: BLE001 - the verdict stands
+        log.warning("fetch-health %s: the verdict wasn't published: %s: %s", week, type(e).__name__, e)
     return {"run_date": week, "status": "checked", **out}
 
 

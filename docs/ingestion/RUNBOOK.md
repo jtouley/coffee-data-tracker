@@ -879,11 +879,13 @@ To stop a roaster from being suspected at all this week (rarely needed), delete 
 ## 8. Fetch-health check (fetch-health)
 
 `fetch-health` judges the week's fetches shortly after each pass (DESIGN, "Fetch health"): did each fetch return a
-catalog of about the right size (failed, empty, or far fewer products than usual), and is a platform, an edge or the
-image failing as a whole. **It doesn't judge the data**: a fetch with wiped prices, swapped products or a short first
+catalog of about the right size (failed, empty, or far fewer products than usual), and is a platform or the image
+failing as a whole. **It doesn't judge the data**: a fetch with wiped prices, swapped products or a short first
 week passes it. It is polled every 20 minutes over Monday 10:07 to Tuesday 02:47 UTC (Scheduler entry
 `fetch-health`, `7,27,47 0-2,10-23 * * 1,2`; the hours outside that window find nothing to judge); a poll with
-nothing new exits in seconds. It never serves, records a build or publishes.
+nothing new exits in seconds, as does one that finds another check still running. It never serves or records a
+build; it writes its `job_manifests` rows and publishes them to the dataset (a failed publish is a `WARNING` line,
+never a different verdict or exit code).
 
 **Ship it** (after this PR merges):
 1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
@@ -898,22 +900,23 @@ nothing new exits in seconds. It never serves, records a build or publishes.
    Stop if the plan touches any other job, the NAT, the bucket or the app.
 3. `terraform apply fh.plan`.
 4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute fetch-health --region
-   $REGION --args="fetch-health,--force" --wait`. It writes one `job_manifests` row (job `fetch-health`) and nothing
-   else.
+   $REGION --args="fetch-health,--force" --wait`. It writes its `job_manifests` rows (job `fetch-health`),
+   publishes them, and nothing else.
 
 **Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `alert`, `repull`, `held_back`,
-`unattributed`, `partial`, `quarantined`, `by_connector`, `running`, `tests`); the same is the `detail` of the
-week's latest `fetch-health` row:
+`unattributed`, `partial`, `quarantined`, `by_connector`, `running`, `tests`). **The log is authoritative.** The same
+is the `detail` of the week's latest `fetch-health` row in the dataset, once its publish has gone through (a failed
+publish leaves the rows staged for the next one):
 
 ```sh
 uv run python -c "
 from coffeedata import control; from coffeedata.lake import Lake; import json, sys
 rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'fetch-health' and r['status'] == 'done']
-print(json.dumps(json.loads(rows[-1]['detail']), indent=1))" 2026-11-02
+print(json.dumps(json.loads(rows[-1]['detail']), indent=1) if rows else 'no check yet for this week')" 2026-11-02
 ```
 
 **When it alerts** (`ingest job fetch-health failed`): the log's `"severity": "ERROR"` line names the scope. Each
-finding (a scope on a set of connectors, or an edge) alerts once a week: a later pass's check that finds it again logs
+finding (a scope on a set of connectors) alerts once a week: a later pass's check that finds it again logs
 a `WARNING` line and exits 0; a new or different finding alerts again. A suspect with no adapter is listed under
 `unattributed`, for you to look at; no pass re-fetches it.
 - `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached (a mass 429,
@@ -923,20 +926,17 @@ a `WARNING` line and exits 0; a new or different finding alerts again. A suspect
 - `image`: two or more platforms at once. Suspect what they share: the image (`code_version` on the rows), a code
   change, or egress. Roll back the image (section 5) before the next slot.
 - `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
-- `challenge`: one edge (`edge`: `siteground` or `cloudflare`) answered with its anti-bot challenge for more than 10%
-  of a platform's reached roasters (`edge_challenge_share`, on a platform of 20 or more), on the `connectors` named,
-  `roasters` stores in all. A challenge answers every retry the same way. The roasters stay on the list, each with
-  its `challenge`. Look at their `fetches.blocks` (the egress IP, the `sg-captcha` or `cf-mitigated` header); the fix
-  is on the egress or bot-identity side, not the store's. Fewer challenged stores alert nothing: they are only
-  `failed` entries naming their edge. A bare 202 names no edge and is a plain `failed`.
 - No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a fetch finding; the
-  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes) until another crawl
-  attempt ends or you run it with `--force`. Run `coffeedata fetch-health --force` locally against a copy of the lake
+  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes): a failed check runs
+  again only when the next crawl attempt ends, or with `--force`. After the last pass of the week (21:47) no attempt
+  ends again, so run it with `--force` once it's fixed. Run `coffeedata fetch-health --force` locally against a copy of the lake
   to see the dbt error.
 
 **The list** (`repull`) is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
 `suspect`) and the gate `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "Why a roaster is
-listed"), and `challenge` when an edge refused it. Apart from it: `partial` (ok fetches that read only part of the
+listed"), and `challenge` (`siteground` or `cloudflare`) when a recorded block names the edge that refused it. A
+challenge is an ordinary failed fetch: never held back, no alert of its own, retried by the week's later passes
+(persistent blocking: issue #110). Apart from it: `partial` (ok fetches that read only part of the
 catalog, with their reason: not failures, and the week's resume passes read them again) and `quarantined` (stores
 crashguard quarantined for the week: section 7). **Re-fetching is off**: no crawl pass reads the list, and the
 week's output is as without the check. `failed` roasters are asked again by every `crawl` pass anyway. To fetch one
