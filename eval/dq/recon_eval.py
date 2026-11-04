@@ -20,8 +20,7 @@ import sys
 from pathlib import Path
 
 import duckdb
-
-from common import SETS, fmt, reference, split_of
+from common import fmt, reference, split_of
 
 RUNS = ["2026-10-26", "2026-10-27", "2026-10-28", "2026-10-30", "2026-11-02"]
 
@@ -65,8 +64,15 @@ def cmd_items(replay: Path, tag: str, data: Path) -> None:
         for check, sql in CHECKS.items():
             for key, roaster, detail, explained in con.execute(sql).fetchall():
                 iid = f"{run}|{check}|{key}"
-                items.append({"id": iid, "run": run, "check": check, "split": split_of(roaster or key),
-                              "explained": explained})
+                items.append(
+                    {
+                        "id": iid,
+                        "run": run,
+                        "check": check,
+                        "split": split_of(roaster or key),
+                        "explained": explained,
+                    }
+                )
                 inputs.append({"id": iid, "evidence": evidence(con, check, key, detail)})
     data.mkdir(parents=True, exist_ok=True)
     (data / "recon_items.json").write_text(json.dumps(items, indent=1))
@@ -89,27 +95,34 @@ def evidence(con: duckdb.DuckDBPyConnection, check: str, key: str, detail: str) 
         "select run_date, event, price_usd, previous_price_usd from fct_price_event where coffee_id = ? order by 1",
         [key],
     ).fetchall()
-    return "\n".join([
-        f"Price events for product {key} (in the internal price-event table), whose product is missing from the "
-        "coffee table (dim_coffee, and so public_coffee):",
-        *[f"  - {r[0]} {r[1]} price {r[2]} previous {r[3]}" for r in events[:8]],
-        "The product's records, per run (title | product type | classified as coffee by the current rules):",
-        *[f"  - {r[0]} | {r[1]} | {r[2]} | {r[3]}" for r in hist],
-        "Stated definition: the coffee table keeps a product only if its latest record is classified as coffee; "
-        "price events are kept for every product that was coffee when they happened.",
-    ])
+    return "\n".join(
+        [
+            f"Price events for product {key} (in the internal price-event table), whose product is missing from the "
+            "coffee table (dim_coffee, and so public_coffee):",
+            *[f"  - {r[0]} {r[1]} price {r[2]} previous {r[3]}" for r in events[:8]],
+            "The product's records, per run (title | product type | classified as coffee by the current rules):",
+            *[f"  - {r[0]} | {r[1]} | {r[2]} | {r[3]}" for r in hist],
+            "Stated definition: the coffee table keeps a product only if its latest record is classified as coffee; "
+            "price events are kept for every product that was coffee when they happened.",
+        ]
+    )
 
 
 def cmd_score(data: Path, labels: Path, which: str) -> None:
     items = [i for i in json.loads((data / "recon_items.json").read_text()) if which in ("all", i["split"])]
     ref = reference(labels, "recon") if (labels / "recon_A.json").exists() else {}
-    for name, flag in (("main", lambda i: i["check"] == "orphan_event"), ("change", lambda i: not i["explained"])):
+    for name, flag in (
+        ("main", lambda i: i["check"] == "orphan_event"),
+        ("change", lambda i: not i["explained"]),
+    ):
         flagged = [i for i in items if flag(i)]
         wrong = sum(ref.get(i["id"]) == "by_design" for i in flagged)
         defects = [i for i in items if ref.get(i["id"]) == "defect"]
-        print(f"[{which}] {name}: {len(items)} disagreements, flagged {len(flagged)}; "
-              f"confidently wrong (by design but flagged) {fmt(wrong, len(flagged))}; "
-              f"defects caught {fmt(sum(flag(i) for i in defects), len(defects))}")
+        print(
+            f"[{which}] {name}: {len(items)} disagreements, flagged {len(flagged)}; "
+            f"confidently wrong (by design but flagged) {fmt(wrong, len(flagged))}; "
+            f"defects caught {fmt(sum(flag(i) for i in defects), len(defects))}"
+        )
 
 
 def main() -> None:

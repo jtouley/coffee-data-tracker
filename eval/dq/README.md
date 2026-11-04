@@ -148,11 +148,58 @@ What can and can't be measured yet:
 
 ## Results
 
-Filled in after the single test scoring (see "Commands").
+Wilson 95% intervals. "Main" is origin/main at 28a1b05; the test set was scored once, at bbe214e (rules and
+predictions frozen there, `sealed/SHA256SUMS` checked first).
+
+**#12 near-duplicate roasters** (main has no rule: it flags nothing)
+
+| Set | Main recall | Change: flagged | Precision | Confidently wrong | Recall (labelled duplicates) |
+|---|---|---|---|---|---|
+| train | 0/20 | 20 | 1.000 (20/20; 0.839-1.000) | 0.000 (0/20; 0.000-0.161) | 1.000 (20/20; 0.839-1.000) |
+| validation | 0/6 | 6 | 1.000 (6/6; 0.610-1.000) | 0.000 (0/6; 0.000-0.390) | 1.000 (6/6; 0.610-1.000) |
+| test | 0/11 | 11 | 1.000 (11/11; 0.741-1.000) | 0.000 (0/11; 0.000-0.259) | 1.000 (11/11; 0.741-1.000) |
+
+Stratum-weighted recall is 1.000 on every set: no S3 (random) pair was a duplicate.
+
+**#7 price per 100 g outliers** (main: `price_per_100g_in_range` only re-checks dim_coffee's filter, so it flags
+nothing). Labelled sample, then stratum-weighted:
+
+| Set | Flags in set | Precision (sample) | Confidently wrong (sample) | Weighted precision | Weighted false-flag share | Weighted recall of wrong prices |
+|---|---|---|---|---|---|---|
+| train | 583 | 0.800 (36/45; 0.662-0.891) | 0.133 (6/45; 0.063-0.262) | 0.857 | 0.041 | 0.326 (of ~1,535) |
+| validation | 166 | 0.884 (38/43; 0.755-0.949) | 0.093 (4/43; 0.037-0.216) | 0.957 | 0.031 | 0.594 (of ~267) |
+| test | 217 | 0.778 (35/45; 0.637-0.875) | 0.200 (9/45; 0.109-0.338) | 0.845 | 0.132 | 0.200 (of ~917) |
+
+The recall estimates lean on the 15 labels in the middle stratum (one wrong label there stands for ~300 coffees),
+so they are rough; the wrong prices the rule misses are mostly non-coffee items at ordinary prices.
+
+**#11 per-adapter volume bands** (cells judged against the earlier clean builds; see the limits above)
+
+| Set | Main (`adapter_ok_share`, 0.05): flagged | Precision | Confidently wrong | Change: flagged | Precision | Confidently wrong | Change recall |
+|---|---|---|---|---|---|---|---|
+| train | 13 | 0.154 (2/13; 0.043-0.422) | 0.769 (10/13; 0.497-0.918) | 1 | 1.000 (1/1; 0.207-1.000) | 0.000 (0/1; 0.000-0.793) | 0.500 (1/2; 0.095-0.905) |
+| validation | 12 | 0.167 (2/12; 0.047-0.448) | 0.833 (10/12; 0.552-0.953) | 2 | 1.000 (2/2; 0.342-1.000) | 0.000 (0/2; 0.000-0.658) | 1.000 (2/2; 0.342-1.000) |
+| test | 13 | 0.154 (2/13; 0.043-0.422) | 0.769 (10/13; 0.497-0.918) | 2 | 1.000 (2/2; 0.342-1.000) | 0.000 (0/2; 0.000-0.658) | 1.000 (2/2; 0.342-1.000) |
+
+Main catches the same collapses (recall 2/2 on every set) but most of its flags are runs that tried fewer
+roasters. The train miss is WooCommerce on 11-02, whose attempted-ok share fell 0.09 there, under the 0.10 band.
+
+**#4 reconciliation**: within a release, 0 disagreements on all five builds. Orphan price events (10 coffees, all
+by design): main's relationships warning flags train 3/3, test 7/7, all confidently wrong (by design); the change
+flags 0. Validation has no item. Release against release: one recorded pair (956abd -> 5060ad), 26,322 rows added, removed or changed,
+0 unexplained.
 
 ## Severity
 
-Filled in after the test scores.
+All four warn, and none blocks yet:
+- **#12** is precise (37 of 37 labelled flags right; test 11/11, Wilson lower bound 0.74). But blocking would hold
+  back every release until the registry is fixed, since the same 37 pairs were served all along, and a block needs
+  more than one release's worth of evidence. Candidate to block on a *new* pair once a few weeks show no false one.
+- **#7** has 1 in 5 (sample) of its test flags on real prices, and wrong prices in every week's catalog: it would
+  block every release. Warn, as a review list.
+- **#11** has 2 real collapses per set to judge, and its bands aren't active in production before 6 clean builds.
+- **#4** has had nothing to flag in any recorded build, so its false alarms can't be measured yet; the release
+  reconciliation was measured on one pair of releases.
 
 ## Running totals (CLAUDE.md step 9)
 

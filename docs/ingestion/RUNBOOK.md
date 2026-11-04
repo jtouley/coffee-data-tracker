@@ -589,8 +589,11 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 | `latest_run_is_fresh` | only possible if last week's run is missing too (on Tuesday last week's Monday still counts as fresh, §5.2). Fix **this** week's merge (§5.2, or **c** for `$WEEK`): once `$WEEK` is merged, this test passes. **Never crawl a past week** (c) |
 | anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
 
-`suspect_runs_need_review` and `build_metrics_in_band` are warnings (`severity='warn'`) and never fail the gate, so
-neither appears in `failing`. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+`suspect_runs_need_review`, `build_metrics_in_band`, `adapter_volume_in_band`, `near_duplicate_roasters`,
+`price_per_100g_outliers`, `public_tables_reconcile` and `release_changes_explained` are warnings
+(`severity='warn'`) and never fail the gate, so none appears in `failing`. The last four keep their rows in the
+build's database (`store_failures`, schema `main_dbt_test__audit`); the build's `release notes:` lines say what the
+release changes against the served one, per reason. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
 **b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
 the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed

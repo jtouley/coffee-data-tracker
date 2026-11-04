@@ -18,7 +18,6 @@ import sys
 from pathlib import Path
 
 import duckdb
-
 from common import SETS, fmt, reference, split_of
 
 STRATA = [(-1e9, -4), (-4, -3), (-3, -2), (-2, 2), (2, 3), (3, 4), (4, 6), (6, 1e9)]
@@ -70,7 +69,12 @@ def cmd_items(db: str, data: Path) -> None:
     (data / "price_inputs.json").write_text(json.dumps(inputs, indent=1))
     (data / "price_strata.json").write_text(json.dumps(sizes, indent=1))
     for s in SETS:
-        print(s, sum(i["split"] == s for i in items), "items of", sum(v for k, v in sizes.items() if k.startswith(s)))
+        print(
+            s,
+            sum(i["split"] == s for i in items),
+            "items of",
+            sum(v for k, v in sizes.items() if k.startswith(s)),
+        )
 
 
 def evidence(con: duckdb.DuckDBPyConnection, cid: str) -> str:
@@ -145,12 +149,16 @@ def cmd_score(data: Path, labels: Path, which: str, preds: list[str], examples: 
         wfp = sum(w[i["stratum"]] for i in fp)
         caught = sum(w[i["stratum"]] for i in tp)
         print(f"[{which}] {pr['rule']}: flags {pr['flagged_population'][which]} coffees in this set")
-        print(f"  labelled sample: precision {fmt(len(tp), len(flagged))}; "
-              f"confidently wrong (right but flagged) {fmt(len(fp), len(flagged))}")
+        print(
+            f"  labelled sample: precision {fmt(len(tp), len(flagged))}; "
+            f"confidently wrong (right but flagged) {fmt(len(fp), len(flagged))}"
+        )
         if wf:
-            print(f"  stratum-weighted: precision {wtp / wf:.3f}, false-flag share {wfp / wf:.3f}, "
-                  f"recall of wrong prices {caught / wrong_total if wrong_total else float('nan'):.3f} "
-                  f"(est. {wrong_total:.0f} wrong in the set)")
+            print(
+                f"  stratum-weighted: precision {wtp / wf:.3f}, false-flag share {wfp / wf:.3f}, "
+                f"recall of wrong prices {caught / wrong_total if wrong_total else float('nan'):.3f} "
+                f"(est. {wrong_total:.0f} wrong in the set)"
+            )
         if examples and which == "train":
             for i in [i for i in items if pred[i["id"]] != (ref[i["id"]] == "wrong")][:examples]:
                 print(f"    {ref[i['id']]:7} pred={pred[i['id']]} stratum={i['stratum']} {i['id']}")

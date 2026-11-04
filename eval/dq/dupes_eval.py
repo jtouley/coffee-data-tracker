@@ -17,7 +17,6 @@ import sys
 from pathlib import Path
 
 import duckdb
-
 from common import SETS, fmt, reference, split_of
 
 FEATURES = """
@@ -43,7 +42,16 @@ from pairs p join n na on na.roaster_id = p.a join n nb on nb.roaster_id = p.b
 def stem(host: str) -> str:
     host = re.sub(r"^www\.", "", host.lower()).split(".myshopify.com")[0]
     base = host.split(".")[0]
-    for w in ("coffeeroasters", "coffeeroasting", "roasters", "roastery", "roasting", "coffeeco", "coffee", "cafe"):
+    for w in (
+        "coffeeroasters",
+        "coffeeroasting",
+        "roasters",
+        "roastery",
+        "roasting",
+        "coffeeco",
+        "coffee",
+        "cafe",
+    ):
         base = base.replace(w, "")
     return re.sub(r"[^a-z0-9]", "", base)
 
@@ -63,7 +71,7 @@ def cmd_items(db: str, data: Path) -> None:
     con = duckdb.connect(db, read_only=True)
     feats = con.execute(FEATURES).fetchall()
     cols = ["a", "b", "shared", "rare", "na", "nb", "cont", "rcont", "size_ratio"]
-    pairs = [dict(zip(cols, r)) for r in feats]
+    pairs = [dict(zip(cols, r, strict=True)) for r in feats]
     names = dict(con.execute("select roaster_id, roaster_name from dim_roaster").fetchall())
     s1, s2, rest = [], [], []
     for p in pairs:
@@ -179,12 +187,16 @@ def cmd_score(data: Path, labels: Path, which: str, preds: list[str], examples: 
         print(f"[{which}] {pr['rule']}: flagged {len(flagged)}")
         print(f"  precision (duplicate among flagged) {fmt(tp, len(flagged))}")
         print(f"  confidently wrong (distinct among flagged) {fmt(wrong, len(flagged))}")
-        print(f"  recall over labelled duplicates {fmt(caught, len(pos))}; stratum-weighted {wcaught / max(wpos, 1):.3f}")
+        print(
+            f"  recall over labelled duplicates {fmt(caught, len(pos))}; stratum-weighted {wcaught / max(wpos, 1):.3f}"
+        )
         if examples and which == "train":
             for k in [k for k in ids if pred[k] != (ref[k] == "duplicate")][:examples]:
                 i = items[k]
-                print(f"    {ref[k]:9} pred={pred[k]} {k} shared={i['shared']} rare={i['rare']} "
-                      f"cont={i['cont']:.2f} rcont={i['rcont']:.2f} ratio={i['size_ratio']:.2f}")
+                print(
+                    f"    {ref[k]:9} pred={pred[k]} {k} shared={i['shared']} rare={i['rare']} "
+                    f"cont={i['cont']:.2f} rcont={i['rcont']:.2f} ratio={i['size_ratio']:.2f}"
+                )
 
 
 def main() -> None:

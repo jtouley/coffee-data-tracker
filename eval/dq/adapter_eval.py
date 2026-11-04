@@ -33,7 +33,6 @@ import sys
 from pathlib import Path
 
 import duckdb
-
 from common import SETS, fmt, reference, split_of
 
 RUNS = ["2026-10-26", "2026-10-27", "2026-10-28", "2026-10-30", "2026-11-02"]
@@ -95,14 +94,20 @@ def metrics(rows: list[dict]) -> dict:
         "fetched_ok": sum(r["ok"] for r in rows),
         "catalog_ok": len(ok),
         "ok_share": len(ok) / len(rows) if rows else None,
-        "ok_attempted": len(ok) / sum(r["attempted"] for r in rows) if any(r["attempted"] for r in rows) else None,
+        "ok_attempted": len(ok) / sum(r["attempted"] for r in rows)
+        if any(r["attempted"] for r in rows)
+        else None,
         "ppf_mean": statistics.mean(prods) if prods else None,
         "ppf_median": statistics.median(prods) if prods else None,
-        "same_store": sum(r["products"] for r in both) / sum(r["prev_products"] for r in both) if both else None,
+        "same_store": sum(r["products"] for r in both) / sum(r["prev_products"] for r in both)
+        if both
+        else None,
         "same_store_n": len(both),
         "priced_share": sum(r["priced"] or 0 for r in ok) / snap if snap else None,
         "same_store_priced": (
-            sum(r["priced"] for r in priced_both) / sum(r["prev_priced"] for r in priced_both) if priced_both else None
+            sum(r["priced"] for r in priced_both) / sum(r["prev_priced"] for r in priced_both)
+            if priced_both
+            else None
         ),
         "prev_products": sum(r["prev_products"] for r in both),
         "this_products": sum(r["products"] for r in both),
@@ -117,23 +122,38 @@ def cmd_cells(replay: Path, tag: str, data: Path) -> None:
         con = duckdb.connect(str(replay / f"coffee-{tag}-{run}.duckdb"), read_only=True)
         cur = con.execute(ROWS, [run])
         cols = [d[0] for d in cur.description]
-        rows = [dict(zip(cols, r)) for r in cur.fetchall()]
-        fetch = con.execute(FETCH, [str(replay / f"lake-{tag}-{run}" / "fetches" / "*" / "*.parquet"), run]).fetchall()
+        rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        fetch = con.execute(
+            FETCH, [str(replay / f"lake-{tag}-{run}" / "fetches" / "*" / "*.parquet"), run]
+        ).fetchall()
         ok_build = passed(replay / f"build-{tag}-{run}.log")
         full = {}
         for r in rows:
             full[r["adapter"]] = full.get(r["adapter"], 0) + 1
         for s in (*SETS, "all"):
             for adapter in sorted(full):
-                sub = [r for r in rows if r["adapter"] == adapter and (s == "all" or split_of(r["roaster_id"]) == s)]
+                sub = [
+                    r
+                    for r in rows
+                    if r["adapter"] == adapter and (s == "all" or split_of(r["roaster_id"]) == s)
+                ]
                 if not sub:
                     continue
                 ids = {r["roaster_id"] for r in sub}
                 fs = [f for f in fetch if f[0] in ids]
                 m = metrics(sub)
                 cid = f"{s}|{run}|{adapter}"
-                cells.append({"id": cid, "split": s, "run": run, "adapter": adapter, "build_passed": ok_build,
-                              "adapter_roasters_all": full[adapter], **m})
+                cells.append(
+                    {
+                        "id": cid,
+                        "split": s,
+                        "run": run,
+                        "adapter": adapter,
+                        "build_passed": ok_build,
+                        "adapter_roasters_all": full[adapter],
+                        **m,
+                    }
+                )
                 if s != "all":
                     inputs.append({"id": cid, "evidence": evidence(run, adapter, m, fs)})
     # Context: the same stores' ok counts in every run, so a labeler can tell the platform's usual failure rate.
@@ -153,7 +173,7 @@ def evidence(run: str, adapter: str, m: dict, fs: list) -> str:
     statuses: dict[str, int] = {}
     errors: dict[str, int] = {}
     rate_limited = 0
-    for _, status, err, rl, hs in fs:
+    for _, status, err, rl, _hs in fs:
         statuses[status] = statuses.get(status, 0) + 1
         if status != "ok":
             errors[error_class(err)] = errors.get(error_class(err), 0) + 1
@@ -163,19 +183,21 @@ def evidence(run: str, adapter: str, m: dict, fs: list) -> str:
         for h in f[4] or []:
             http[h["status"]] = http.get(h["status"], 0) + h["responses"]
     top = sorted(errors.items(), key=lambda kv: -kv[1])[:8]
-    return "\n".join([
-        f"Run {run}, platform {adapter} (this subset of stores)",
-        f"Stores with a catalog expected: {m['roasters']}; tried: {m['attempted']}; a fetch succeeded: "
-        f"{m['fetched_ok']}; succeeded with products: {m['catalog_ok']}",
-        f"Fetch attempts by status: {statuses}",
-        f"Failed attempts by error: {dict(top)}",
-        f"HTTP responses by status (recorded from 2026-10-30 on): {http or 'not recorded'}; rate limited: {rate_limited}",
-        f"Stores fetched with products both now and in their previous successful run: {m['same_store_n']}; their "
-        f"products then {m['prev_products']}, now {m['this_products']}; priced products then {m['prev_priced']}, "
-        f"now {m['this_priced']}",
-        f"Products per store that came back: mean {m['ppf_mean'] and round(m['ppf_mean'], 1)}, "
-        f"median {m['ppf_median']}",
-    ])
+    return "\n".join(
+        [
+            f"Run {run}, platform {adapter} (this subset of stores)",
+            f"Stores with a catalog expected: {m['roasters']}; tried: {m['attempted']}; a fetch succeeded: "
+            f"{m['fetched_ok']}; succeeded with products: {m['catalog_ok']}",
+            f"Fetch attempts by status: {statuses}",
+            f"Failed attempts by error: {dict(top)}",
+            f"HTTP responses by status (recorded from 2026-10-30 on): {http or 'not recorded'}; rate limited: {rate_limited}",
+            f"Stores fetched with products both now and in their previous successful run: {m['same_store_n']}; their "
+            f"products then {m['prev_products']}, now {m['this_products']}; priced products then {m['prev_priced']}, "
+            f"now {m['this_priced']}",
+            f"Products per store that came back: mean {m['ppf_mean'] and round(m['ppf_mean'], 1)}, "
+            f"median {m['ppf_median']}",
+        ]
+    )
 
 
 def parse(rule: str) -> tuple[list[tuple[str, float]], int]:
@@ -196,7 +218,9 @@ def judge(cells: list[dict], rule: str) -> dict[str, bool | None]:
         if c["adapter_roasters_all"] < MIN_ROASTERS:
             out[c["id"]] = None
             continue
-        hist_runs = [r for r in RUNS if r < c["run"] and by.get((c["split"], r, c["adapter"]), {}).get("build_passed")]
+        hist_runs = [
+            r for r in RUNS if r < c["run"] and by.get((c["split"], r, c["adapter"]), {}).get("build_passed")
+        ]
         if len(hist_runs) < min_builds:
             out[c["id"]] = None
             continue
@@ -229,10 +253,14 @@ def cmd_score(data: Path, labels: Path, which: str, preds: list[str], examples: 
         flagged = [k for k in judged if pred[k]]
         pos = [k for k in judged if ref[k] == "collapse"]
         print(f"[{which}] {pr['rule']}: {len(cells)} cells, judged {len(judged)}, flagged {len(flagged)}")
-        print(f"  precision {fmt(sum(ref[k] == 'collapse' for k in flagged), len(flagged))}; "
-              f"confidently wrong (normal but flagged) {fmt(sum(ref[k] == 'normal' for k in flagged), len(flagged))}")
-        print(f"  recall of judged collapses {fmt(sum(pred[k] for k in pos), len(pos))}; collapses not judged "
-              f"(abstained) {sum(ref[k] == 'collapse' and pred.get(k) is None for k in cells)}")
+        print(
+            f"  precision {fmt(sum(ref[k] == 'collapse' for k in flagged), len(flagged))}; "
+            f"confidently wrong (normal but flagged) {fmt(sum(ref[k] == 'normal' for k in flagged), len(flagged))}"
+        )
+        print(
+            f"  recall of judged collapses {fmt(sum(pred[k] for k in pos), len(pos))}; collapses not judged "
+            f"(abstained) {sum(ref[k] == 'collapse' and pred.get(k) is None for k in cells)}"
+        )
         if examples and which == "train":
             for k in judged:
                 if pred[k] != (ref[k] == "collapse"):

@@ -346,6 +346,8 @@ models:
         description: "The row's key: coffee_id; coffee_id|variant_id|run_date|event; roaster_id; origin|process."
         data_tests: [not_null]
       - name: change
+        description: The row is in this build and not the served release (added), the other way round (removed), or
+          in both with different values (changed).
         data_tests:
           - accepted_values: {arguments: {values: [added, removed, changed]}}
       - name: reason
