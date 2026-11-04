@@ -1,0 +1,63 @@
+Community Data License Agreement - Permissive - Version 2.0
+
+This is the Community Data License Agreement - Permissive, Version 2.0 (the "agreement"). Data Provider(s) and Data Recipient(s) agree as follows:
+
+1. Provision of the Data
+
+1.1. A Data Recipient may use, modify, and share the Data made available by Data Provider(s) under this agreement if that Data Recipient follows the terms of this agreement.
+
+1.2. This agreement does not impose any restriction on a Data Recipient's use, modification, or sharing of any portions of the Data that are in the public domain or that may be used, modified, or shared under any other legal exception or limitation.
+
+2. Conditions for Sharing Data
+
+2.1. A Data Recipient may share Data, with or without modifications, so long as the Data Recipient makes available the text of this agreement with the shared Data.
+
+3. No Restrictions on Results
+
+3.1. This agreement does not impose any restriction or obligations with respect to the use, modification, or sharing of Results.
+
+4. No Warranty; Limitation of Liability
+
+4.1. All Data Recipients receive the Data subject to the following terms:
+
+THE DATA IS PROVIDED ON AN "AS IS" BASIS, WITHOUT REPRESENTATIONS, WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+NO DATA PROVIDER SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE DATA OR RESULTS, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+5. Definitions
+
+5.1. "Data" means the material received by a Data Recipient under this agreement.
+
+5.2. "Data Provider" means any person who is the source of Data provided under this agreement and in reliance on a Data Recipient's agreement to its terms.
+
+5.3. "Data Recipient" means any person who receives Data directly or indirectly from a Data Provider and agrees to the terms of this agreement.
+
+5.4. "Results" means any outcome obtained by computational analysis of Data, including for example machine learning models and models' insights.
+
+--------------------------------------------------------------------------------------------------------------------
+
+NOTICE: registry.coffee public dataset
+
+The public dataset of coffee-data-tracker (registry.coffee) is made available under the Community Data License
+Agreement - Permissive, Version 2.0 (CDLA-Permissive-2.0), whose full text is above. It covers:
+
+  - the public tables: public_coffee, public_roaster, public_price_event and public_market_weekly, as defined by
+    contracts/public-catalog.odcs.yaml;
+  - their exports: the Parquet files and manifest.json written by `coffeedata export-public`, including the
+    public Hugging Face dataset jtouley/us-coffee-market;
+  - the site's catalog JSON (https://registry.coffee/catalog/catalog.json);
+  - the marketplace shares of those tables: the Snowflake share of COFFEE_DATA.SHARE and, when set up, the
+    Databricks share.
+
+The code in this repository is under the MIT License (LICENSE at the repository root), not this one.
+
+Attribution
+  - Roaster discovery uses Overture Maps Places, (c) Overture Maps Foundation, licensed under CDLA-Permissive-2.0.
+    Source datasets carry their own attribution, listed in the Overture release notes.
+  - Roasters known only from OpenStreetMap are excluded from the public tables.
+  - Coffee names and prices are facts published by each roaster on its own storefront; every coffee links back to
+    it through source_url. Product descriptions and images are not included.
+  See docs/ATTRIBUTION.md.
+
+The licence text above is the official plain-text release from
+https://cdla.dev/permissive-2-0/ (https://github.com/Community-Data-License-Agreements/Releases).

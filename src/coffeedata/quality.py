@@ -226,6 +226,39 @@ def coverage_claim_messages(db: Path) -> list[str]:
     return out
 
 
+def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
+    """Products whose raw tags (what registry.py, enrich.py and verdict.py read) and decoded tags (what the build
+    reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test fails the
+    build on any): a count, then a few examples."""
+    import duckdb
+
+    if not db.exists():
+        return []
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        built = con.execute(
+            "select count(*) from information_schema.tables where table_name = 'int_tag_decoding_parity'"
+        ).fetchone()
+        if not built or not built[0]:
+            return []  # the build stopped before the model
+        rows = con.execute(
+            "select roaster_id, product_id, any_value(title), any_value(raw_tags), any_value(tags),"
+            " list_sort(list_distinct(flatten(list(differs)))) from int_tag_decoding_parity"
+            " group by roaster_id, product_id order by roaster_id, product_id"
+        ).fetchall()
+    finally:
+        con.close()
+    if not rows:
+        return []
+    out = [
+        f"{len(rows)} products decide differently on raw and decoded tags (registry.py, enrich.py and verdict.py "
+        "read raw tags): decode tags in products.item, or fix the rule"
+    ]
+    for rid, pid, title, raw, tags, differs in rows[:examples]:
+        out.append(f"{rid}:{pid} {title!r}: {', '.join(differs)} differ; raw tags {raw}, decoded {tags}")
+    return out
+
+
 def add_override(
     lake: Lake, roaster_id: str, run_date: str, action: str, reason: str, batch_id: str | None
 ) -> Path:

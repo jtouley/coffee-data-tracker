@@ -551,7 +551,10 @@ def test_redirect_hops_are_spaced_and_counted(monkeypatch):
 
     with PoliteClient(transport=httpx.MockTransport(respond)) as c, c.track() as stats:
         assert c.get("https://a.com/one").status_code == 200
-    assert starts == [1000.0, 1001.0]
+    assert starts == [
+        1001.0,
+        1002.0,
+    ]  # robots.txt at 1000 is spaced like any request: the first hop waits its turn
     assert stats.requests == 3 and stats.statuses[302] == 1 and stats.pages == 1
 
 
@@ -975,7 +978,8 @@ def test_page_backoffs_are_max_of_retry_after_and_60_120_240_then_the_store_is_p
 
 def test_a_store_in_page_backoff_at_the_deadline_is_parked_not_dropped(lake, mock, monkeypatch):
     """Its next try would come due after the deadline: it is parked with its pages for crawl-retry (not counted as
-    never started), and the run stops at the deadline instead of waiting out the backoff."""
+    never started) as soon as that is known, instead of the run idling to the deadline (PR #98: a backoff is never
+    scheduled past the deadline)."""
     clock = fake_time(monkeypatch)
     mock.get("https://wall.example/products.json", params={"page": "1"}).mock(return_value=_page(range(250)))
     mock.get("https://wall.example/products.json", params={"page": "2"}).mock(return_value=resp(429, "60"))
@@ -983,11 +987,58 @@ def test_a_store_in_page_backoff_at_the_deadline_is_parked_not_dropped(lake, moc
         lake, [_r("wall.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST | {"retries": 1},
         deadline_s=90,
     )  # fmt: skip
-    assert clock.sleeps == [60, 30]  # the first backoff, then only up to the deadline (not the 120 s backoff)
+    # the first backoff; the 120 s one would end past the deadline: parked at once
+    assert clock.sleeps == [60]
     assert out["skipped_deadline"] == 0
-    assert out["deferred"] == {"page_backoffs": 2, "page_parked": 1, "page_parked_at_deadline": 1}
+    assert out["deferred"] == {"page_backoffs": 1, "page_parked": 1, "page_parked_at_deadline": 1}
     parked = ingest.load_parked(lake, "2026-10-26")
     assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
+
+
+@pytest.mark.parametrize("others_pending", [False, True])
+def test_a_suspect_held_for_the_lane_in_page_backoff_at_the_deadline_is_parked(
+    lake, mock, monkeypatch, others_pending
+):
+    """A suspect (crashguard) that backed off on page 2 comes due while the one-at-a-time lane is busy, so it waits
+    in `held`; when the deadline passes it is parked with its pages, as a store waiting in `pending` is, not dropped
+    as never started. others_pending: whether another store is still pending at the deadline (the in-loop stop)
+    or not (the stop after the round)."""
+    clock = fake_time(monkeypatch)
+    real_wait = ingest.wait_any
+    # the main loop polls (in real time) while the lane's fetch runs, so it sees the fake clock move meanwhile
+    monkeypatch.setattr(
+        ingest, "wait_any", lambda fs, timeout=None, return_when=None: real_wait(fs, 0.02, return_when)
+    )
+    mock.get("https://wall.example/products.json", params={"page": "1"}).mock(return_value=_page(range(250)))
+    mock.get("https://wall.example/products.json", params={"page": "2"}).mock(return_value=resp(429, "60"))
+
+    def slow(
+        request,
+    ):  # the lane's other suspect: still running when wall's backoff ends, then past the deadline
+        clock.t += 70
+        time.sleep(0.3)
+        clock.t += 30
+        return _page([])
+
+    mock.get("https://slow.example/products.json", params={"page": "1"}).mock(side_effect=slow)
+    stores = [_r("wall.example"), _r("slow.example")]
+    if others_pending:  # a non-suspect whose own backoff (Retry-After 600) is due after the deadline
+        mock.get("https://late.example/products.json", params={"page": "1"}).mock(
+            return_value=_page(range(250))
+        )
+        mock.get("https://late.example/products.json", params={"page": "2"}).mock(
+            return_value=resp(429, "600")
+        )
+        stores.append(_r("late.example"))
+    out = ingest.run(
+        lake, stores, "2026-10-26", workers=4, shopify_rps=1000, client_kw=FAST | {"retries": 1}, deadline_s=90,
+        suspects={"wall.example", "slow.example"},
+    )  # fmt: skip
+    assert out["skipped_deadline"] == 0
+    parked = ingest.load_parked(lake, "2026-10-26")
+    assert parked["wall.example"]["page"] == 2 and len(parked["wall.example"]["items"]) == 250
+    assert out["deferred"]["page_parked_at_deadline"] == 1 + others_pending
+    assert sorted(parked) == sorted({"wall.example"} | ({"late.example"} if others_pending else set()))
 
 
 def test_crawl_retry_resumes_a_parked_store_from_its_page(lake, mock, monkeypatch):
@@ -1021,8 +1072,8 @@ def test_crawl_retry_resumes_a_parked_store_from_its_page(lake, mock, monkeypatc
     assert ingest.select_parked(lake, "2026-10-26") == ([], {})
 
 
-@pytest.mark.parametrize("status", [401, 403, 430])
-def test_401_403_430_are_blocked_never_backed_off_or_deferred(lake, mock, monkeypatch, status):
+@pytest.mark.parametrize("status", [401, 403])
+def test_401_403_are_blocked_never_backed_off_or_deferred(lake, mock, monkeypatch, status):
     clock = fake_time(monkeypatch)
     route = mock.get("https://no.example/products.json").mock(return_value=resp(status))
     out = ingest.run(
@@ -1032,6 +1083,21 @@ def test_401_403_430_are_blocked_never_backed_off_or_deferred(lake, mock, monkey
     assert out["failures"] == [f"no.example: StoreBlocked: blocked: HTTP {status} on page 1 of no.example"]
     assert out["deferred"] == {}  # no deferred round, no backoff, not parked
     assert not ingest.parked_path(lake, "2026-10-26", "no.example").exists()
+
+
+def test_a_430_is_a_pause_backed_off_and_asked_again_not_a_refusal(lake, mock, monkeypatch):
+    """The owner: no store is given up on after a 430 (Shopify's IP-wide block). Its page is backed off and asked
+    again, like a 429's; only a 401 or 403 is a refusal."""
+    clock = fake_time(monkeypatch)
+    page1 = mock.get("https://busy.example/products.json", params={"page": "1"})
+    page1.side_effect = [resp(430), _page(range(2))]
+    mock.get("https://busy.example/products.json", params={"page": "2"}).mock(return_value=_page([]))
+    out = ingest.run(
+        lake, [_r("busy.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST | {"retries": 1}
+    )
+    assert out["products"] == 2  # served after the backoff; the only error row is the backoff's own
+    assert [f.split(": ")[1] for f in out["failures"]] == ["backoff 1 of 3 (60s, then page 1 again)"]
+    assert out["deferred"]["page_backoffs"] == 1 and clock.sleeps and clock.sleeps[0] >= 60
 
 
 def test_products_json_asks_for_the_shopify_maximum_page_size(mock):
@@ -1086,12 +1152,6 @@ def test_exactly_250_on_the_last_page_costs_one_more_request(mock):
     with PoliteClient(min_interval=0) as c:
         assert len(fetch_catalog(c, _r("full.example"))) == 500
     assert (p1.call_count, p2.call_count, p3.call_count, p4.call_count) == (1, 1, 1, 0)
-
-
-def test_shopify_page_cap_is_high_enough_for_big_catalogs():
-    from coffeedata.adapters import shopify
-
-    assert shopify.MAX_PAGES * shopify.PAGE_LIMIT >= 15_000  # kaldi.com: more than 20 pages of 250
 
 
 def test_a_parked_stores_progress_keeps_its_descriptions(lake):

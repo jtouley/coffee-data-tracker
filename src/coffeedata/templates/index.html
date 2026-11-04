@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catalog · registry.coffee</title>
+{% with root = "../" %}{% include "_icons.html" %}{% endwith %}
 <meta name="description" content="Every coffee US specialty roasters sell online, updated weekly: origin, process, price per 100 g and stock.">
+{% if jsonld %}{{ jsonld }}
+{% endif -%}
 <style>
 {% include "_brand.css" %}
 main { padding: 8px 0 64px; }
@@ -131,7 +134,9 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   Roaster discovery: <a href="https://overturemaps.org">Overture Maps Foundation</a> Places (CDLA-Permissive-2.0) and
   © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL). Product data is read once a week
   from each roaster's public storefront feed; every coffee links back to the roaster.
-  Source: <a href="https://github.com/jtouley/coffee-data-tracker">jtouley/coffee-data-tracker</a>.
+  The public dataset is licensed under
+  <a href="{{ links.data_license }}">CDLA-Permissive-2.0</a>; code is
+  MIT-licensed. Source: <a href="https://github.com/jtouley/coffee-data-tracker">jtouley/coffee-data-tracker</a>.
   <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a>
 </footer>
 </main>

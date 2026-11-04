@@ -14,3 +14,10 @@ Rules for using it:
 - After the final score, the set joins the regression fixture and a new sealed set is drawn for the next change.
 
 `pred_rules.json` holds the rules' predictions as of commit c021723, frozen before any score was taken.
+
+**Running total (CLAUDE.md step 9):** 0 products whose `is_coffee` changed, counted from the change that started
+this total; changes before it weren't counted. Add each later change's count here.
+- decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
+  versions, 51 roasters) and the output of `is_coffee` of none: built from main and from the change on a local copy of
+  the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were identical. 0 of
+  them in this sealed set.
