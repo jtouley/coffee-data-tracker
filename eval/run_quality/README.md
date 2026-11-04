@@ -5,8 +5,9 @@ override pins one), and so `stg_run_quality`'s suspect flag, `stg_runs`, `is_cur
 Changes that alter which batches exist or count are measured here.
 
 **Running total (CLAUDE.md step 9): 0 products** since this field's last full evaluation (it has had none).
-#93 ships with re-fetch off (`COFFEEDATA_DQ_REFETCH` unset), and off no crawl pass reads the repull list, so the
-week's output is `main`'s: 0 changed products. Add each later change's count here.
+#93 (the fetch-health check) ships with re-fetch off (`COFFEEDATA_DQ_REFETCH` unset), and off no crawl pass reads
+its list, so the week's output is `main`'s: 0 changed products. Its mapping of `main`'s partial, quarantined and
+challenged fetches only changes what the check reports, never a batch: still 0. Add each later change's count here.
 
 **Before re-fetch is turned on:** it would change up to 346 products in a weekly run (below), over 50, and it changes
 how a rule decides (which batch counts), so CLAUDE.md's full process (steps 2 to 7) is required first: a held-out
@@ -14,21 +15,21 @@ split grouped by roaster, labels made against a written definition of a good bat
 the sealed test set with Wilson intervals. Turning it on without that is not allowed; when it is turned on, add its
 measured count to the running total above.
 
-## #93: post-crawl repulls (crawl-dq), if re-fetch were on
+## #93: the fetch-health check's re-fetches (fetch-health), if re-fetch were on
 
-What follows measures re-fetch on; #93 ships it off. On `main` a roaster with an ok fetch is never fetched again
-that week. With re-fetch on, a crawl pass after the post-crawl check fetches the check's `empty` and `suspect`
-roasters again (not `failed` ones: every pass asks those anyway, as on `main`), and a successful re-fetch becomes the
+The check judges fetches (failed, empty, or far fewer products than usual), not the data in them. What follows
+measures re-fetch on; #93 ships it off. On `main` a roaster with an ok fetch is never fetched again that week. With
+re-fetch on, a crawl pass after the check fetches its `empty` and `suspect` roasters again (not `failed` ones: every pass asks those anyway, as on `main`), and a successful re-fetch becomes the
 batch that counts. Only those roasters' products can change.
 
-A real re-fetch can't be simulated offline, so the count is the upper bound: every distinct product the repull-listed
+A real re-fetch can't be simulated offline, so the count is the upper bound: every distinct product the listed
 roasters had in the 35 days up to the run (snapshots). New products a re-fetch would find are not in it.
 
-**Replay** (`replay_repulls.py`, the check's dbt step and `crawldq.judge` with `attempted_only`): a local copy of
+**Replay** (`replay_repulls.py`, the check's dbt step and `fetchhealth.judge` with `attempted_only`): a local copy of
 the lake, read only, holding runs 2026-10-26 to 2026-11-02, cut to the run being judged (later `run_date`
 partitions removed, because `suspect_runs_need_review` reads the lake's latest week). `HF_HUB_OFFLINE=1`, no token.
 
-| Run | Systemic | Listed | Held back | Repulled (empty / suspect) | Products, upper bound |
+| Run | Systemic | Listed | Held back | Re-fetched (empty / suspect) | Products, upper bound |
 |---|---|---|---|---|---|
 | 2026-10-26 (weekly) | none | 67, all `failed` | 0 | 0 | 0 |
 | 2026-10-27 (retry run) | none | 0 | 0 | 0 | 0 |
@@ -40,8 +41,19 @@ typical week. 2026-11-02 is the only weekly run with history, and the number cit
 (5 empty, 3 suspect, 3 both), 346 products. The roasters' counts at the suspect fetch against their baseline: 0 of
 33, 8 of 52, 9 of 22, 0 of 126, 0 of 20, 21 of 55.
 
-Reproduce, from the repo root, with the lake copy cut to `<run_date>`:
+Those rows predate the mapping of `main`'s fetch states. **2026-11-02 again, with it** (2026-11-04: the read-only
+copy `dq-week/lake/` plus its fetches, `dq-week/lake-fetches/`, copied into the replay's own scratch lake; a
+listing of both copies' files, sizes and mtimes hashed the same before and after): tests `run_ok_rate` pass,
+`adapter_ok_rate` pass, `suspect_runs_need_review` warn. Systemic: two `challenge` findings, `other` (a bare 202:
+these files predate raw 1.4.0's `sg-captcha` field) on generic and WooCommerce, 38 roasters, and `cloudflare` on
+generic, 5. Listed 36 (25 `failed`, 8 `empty`, 6 `suspect`; 3 both empty and suspect); 27 held back, the challenged
+ones with a known catalog, which the earlier replay listed as `failed`. 0 partial and 0 quarantined: both states
+are newer than these files. The 11 roasters re-fetch would ask again are the same as above, so the 346 stands. The
+upper bound wasn't recounted: this copy holds no snapshots.
+
+Reproduce, from the repo root, with the lake copies cut to `<run_date>` (each root needs every table's schema
+file; copy a fetches-only folder into `<out dir>/lake/fetches/` instead of passing it):
 
 ```sh
-HF_HUB_OFFLINE=1 python eval/run_quality/replay_repulls.py <lake copy> <out dir> <run_date>
+HF_HUB_OFFLINE=1 python eval/run_quality/replay_repulls.py <out dir> <run_date> <lake copy> [<lake copy> ...]
 ```

@@ -746,7 +746,7 @@ Each email names what failed and the first command to run.
 
 | Policy | Watches | Fires |
 |---|---|---|
-| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`: 12, and 13 with `crawl-dq`) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`: 12, and 13 with `fetch-health`) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
 | `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
@@ -872,55 +872,70 @@ Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, 
 To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
 `gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
 
-## 8. Post-crawl check (crawl-dq)
+## 8. Fetch-health check (fetch-health)
 
-`crawl-dq` judges the week's crawl output shortly after each pass (DESIGN, "Post-crawl data quality"). It is polled
-every 20 minutes over Monday 10:07 to Tuesday 02:47 UTC (Scheduler entry `crawl-dq`, `7,27,47 0-2,10-23 * * 1,2`;
-the hours outside that window find nothing to judge); a poll with nothing new exits in seconds. It never serves, records a build or publishes.
+`fetch-health` judges the week's fetches shortly after each pass (DESIGN, "Fetch health"): did each fetch return a
+catalog of about the right size (failed, empty, or far fewer products than usual), and is a platform, an edge or the
+image failing as a whole. **It doesn't judge the data**: a fetch with wiped prices, swapped products or a short first
+week passes it. It is polled every 20 minutes over Monday 10:07 to Tuesday 02:47 UTC (Scheduler entry
+`fetch-health`, `7,27,47 0-2,10-23 * * 1,2`; the hours outside that window find nothing to judge); a poll with
+nothing new exits in seconds. It never serves, records a build or publishes.
 
 **Ship it** (after this PR merges):
 1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
-   step): the jobs run the `coffeedata crawl-dq` command and the repull hooks in `crawl`/`crawl-retry` (off: `COFFEEDATA_DQ_REFETCH` unset) only from it.
-2. `cd src/terraform && terraform plan -out dq.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
-   `google_cloud_run_v2_job.ingest["crawl-dq"]`, its invoker binding
-   `google_cloud_run_v2_job_iam_member.scheduler["crawl-dq"]`, the Scheduler entry
-   `google_cloud_scheduler_job.ingest["crawl-dq"]` (only with `ingest_schedule_enabled = true`), and the alert `google_monitoring_alert_policy.ingest_job_failed["crawl-dq"]`.
-   The 12 existing `ingest_job_failed` policies change in place, only their documentation text (it now names
-   `crawl-dq`): **12 to change**, and nothing else. Stop if the plan touches any other job, the NAT, the bucket or the app.
-3. `terraform apply dq.plan`.
-4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute crawl-dq --region $REGION
-   --args="crawl-dq,--force" --wait`. It writes one `job_manifests` row (job `dq`) and nothing else.
+   step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
+   `COFFEEDATA_DQ_REFETCH` unset) only from it.
+2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
+   `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
+   `google_cloud_run_v2_job_iam_member.scheduler["fetch-health"]`, the Scheduler entry
+   `google_cloud_scheduler_job.ingest["fetch-health"]` (only with `ingest_schedule_enabled = true`), and the alert
+   `google_monitoring_alert_policy.ingest_job_failed["fetch-health"]`. The 12 existing `ingest_job_failed` policies
+   change in place, only their documentation text (it now names `fetch-health`): **12 to change**, and nothing else.
+   Stop if the plan touches any other job, the NAT, the bucket or the app.
+3. `terraform apply fh.plan`.
+4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute fetch-health --region
+   $REGION --args="fetch-health,--force" --wait`. It writes one `job_manifests` row (job `fetch-health`) and nothing
+   else.
 
 **Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `alert`, `repull`, `held_back`,
-`unattributed`, `by_connector`, `running`, `tests`); the same is the `detail` of the week's latest `dq` row:
+`unattributed`, `partial`, `quarantined`, `by_connector`, `running`, `tests`); the same is the `detail` of the
+week's latest `fetch-health` row:
 
 ```sh
 uv run python -c "
 from coffeedata import control; from coffeedata.lake import Lake; import json, sys
-rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'dq' and r['status'] == 'done']
+rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'fetch-health' and r['status'] == 'done']
 print(json.dumps(json.loads(rows[-1]['detail']), indent=1))" 2026-11-02
 ```
 
-**When it alerts** (`ingest job crawl-dq failed`): the log's `"severity": "ERROR"` line names the scope. Each finding
-(a scope on a set of connectors) alerts once a week: a later pass's check that finds it again logs a `WARNING` line and
-exits 0; a new or different finding alerts again. A suspect with no adapter is listed under `unattributed`, for you to
-look at; no pass repulls it.
-- `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached. Its roasters are
-  held off the repull list. Look at that connector's `job_manifests` rows (429/430 counts, egress IPs) and its
-  execution logs before its next slot; Tuesday's build will fail its gate unless the resume or retry recovers it.
+**When it alerts** (`ingest job fetch-health failed`): the log's `"severity": "ERROR"` line names the scope. Each
+finding (a scope on a set of connectors, or an edge) alerts once a week: a later pass's check that finds it again logs
+a `WARNING` line and exits 0; a new or different finding alerts again. A suspect with no adapter is listed under
+`unattributed`, for you to look at; no pass re-fetches it.
+- `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached (a mass 429,
+  430 or 503 that outlasted the 5-minute wait cap shows up here). Its roasters are held off the list. Look at that
+  connector's `job_manifests` rows (429/430 counts, egress IPs) and its execution logs before its next slot;
+  Tuesday's build will fail its gate unless the resume or retry recovers it.
 - `image`: two or more platforms at once. Suspect what they share: the image (`code_version` on the rows), a code
   change, or egress. Roll back the image (section 5) before the next slot.
 - `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
-- No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a data finding; the
-  repull list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes) until another
-  crawl attempt ends or you run it with `--force`. Run `coffeedata crawl-dq --force` locally against a copy of the
-  lake to see the dbt error.
+- `challenge`: an edge (`edge`: `siteground`, `cloudflare`, or `other` for a bare 202) answered with its anti-bot
+  challenge instead of the catalog, for `roasters` stores on the `connectors` named. It answers every retry the same
+  way, so no pass re-asks them usefully and they are held off the list. Look at the stores' `fetches.blocks` (the
+  egress IP, the `sg-captcha` or `cf-mitigated` header); the fix is on the egress or bot-identity side, not the
+  store's.
+- No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a fetch finding; the
+  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes) until another crawl
+  attempt ends or you run it with `--force`. Run `coffeedata fetch-health --force` locally against a copy of the lake
+  to see the dbt error.
 
-**The repull list** is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
-`suspect`) and the DQ `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "What counts as bad
-data"). **Re-fetching is off**: no crawl pass reads the list, and the week's output is as without the check. `failed`
-roasters are asked again by every `crawl` pass anyway. To fetch one listed roaster again by hand:
-`crawl --connector X --only <roaster_id>` (section 7).
+**The list** (`repull`) is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
+`suspect`) and the gate `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "Why a roaster is
+listed"), and `challenge` when an edge refused it. Apart from it: `partial` (ok fetches that read only part of the
+catalog, with their reason: not failures, and the week's resume passes read them again) and `quarantined` (stores
+crashguard quarantined for the week: section 7). **Re-fetching is off**: no crawl pass reads the list, and the
+week's output is as without the check. `failed` roasters are asked again by every `crawl` pass anyway. To fetch one
+listed roaster again by hand: `crawl --connector X --only <roaster_id>` (section 7).
 
 **Re-fetch (off; don't turn it on yet).** The one setting is the env var `COFFEEDATA_DQ_REFETCH=1` on the crawl jobs,
 read by `crawl` and `crawl-retry`; with it, each later pass of a connector fetches its listed `empty` and `suspect`
@@ -929,7 +944,7 @@ evaluation first (`eval/run_quality/README.md`). Until then leave it unset; to c
 `gcloud run jobs describe <job> --region $REGION --format='value(spec.template.spec.template.spec.containers[0].env)'`
 must not name it.
 
-**Stop it:** `gcloud scheduler jobs pause registry-coffee-crawl-dq --location $REGION`.
+**Stop it:** `gcloud scheduler jobs pause registry-coffee-fetch-health --location $REGION`.
 Nothing else depends on it: with re-fetch off the crawl passes never read its rows.
 
 ## Cost

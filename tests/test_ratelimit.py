@@ -1141,8 +1141,8 @@ def test_ingest_passes_each_stores_last_known_product_count(lake, mock):
 
 
 def test_a_repull_reads_the_whole_catalog_not_up_to_its_suspect_count(lake, mock):
-    """A suspect repull (crawl-dq's refetch): the latest complete ok fetch is this week's short one, so its count
-    must not end the re-fetch at the same truncation; it paginates to the empty page."""
+    """A suspect re-fetch (the fetch-health check's refetch): the latest complete ok fetch is this week's short one,
+    so its count must not end the re-fetch at the same truncation; it paginates to the empty page."""
     p1 = mock.get("https://small.example/products.json", params={"page": "1"}).mock(
         return_value=_page(range(40))
     )

@@ -325,8 +325,8 @@ def _in_pool(s: registry.RoasterState) -> bool:
 
 def crawlable(s: registry.RoasterState, tried: set[str] | frozenset[str]) -> bool:
     """select_states' status rules for one roaster: in the pool (a platform, not opted out), and ingestable now or
-    already tried this run (`tried`). The post-crawl check's repulls (crawldq.repull_states) apply the same rules,
-    so a roaster that opted out after the check is never fetched again."""
+    already tried this run (`tried`). The fetch-health check's re-fetches (fetchhealth.repull_states) apply the same
+    rules, so a roaster that opted out after the check is never fetched again."""
     return _in_pool(s) and (s.status in INGESTABLE or s.roaster.roaster_id in tried)
 
 
@@ -473,7 +473,7 @@ def run(
     new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up) and no
     request is sent: a catalog still being read stops there and is stored as partial (fetches.partial), never as the
     whole catalog.
-    refetch: the post-crawl check's repulls, fetched without a known product count (a whole catalog).
+    refetch: the fetch-health check's re-fetches, fetched without a known product count (a whole catalog).
 
     The poison-pill guard (crashguard, from connectors.crawl): guard records each roaster in flight; suspects are
     fetched one at a time, beside the other workers; quarantine (roaster -> error) gets a `crashed` fetches row,
@@ -500,9 +500,9 @@ def run(
         (r for r in roasters if r.roaster_id not in quarantine), key=lambda r: r.roaster_id not in suspects
     )
     known_bodies = retry_transient(_known_bodies, lake)  # the widest scan a crawl makes: retried
-    # A repull (refetch: the post-crawl check listed it as empty or suspect) reads its whole catalog, to the empty
-    # page: its latest complete ok fetch is the very fetch that looked bad, and a suspect's short count as the known
-    # size would let a short page end the re-fetch at the same truncation.
+    # A re-fetch (refetch: the fetch-health check listed it as empty or suspect) reads its whole catalog, to the
+    # empty page: its latest complete ok fetch is the very fetch that came back short, and a suspect's short count
+    # as the known size would let a short page end the re-fetch at the same truncation.
     known = {k: v for k, v in known_products(lake).items() if k not in refetch}
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}

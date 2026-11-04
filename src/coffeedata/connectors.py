@@ -123,7 +123,7 @@ def _partition_files(part: Path, table: str) -> list[Path]:
 
 def archive(lake: Lake, part: Path, batch: str) -> Path:
     """Where the merge `batch` keeps a connector partition's merged files: archive/ + the partition's own path +
-    merge=<batch>, in the same bucket. No reader globs archive/ (dbt, resume, the merge and the post-crawl check all
+    merge=<batch>, in the same bucket. No reader globs archive/ (dbt, resume, the merge and the fetch-health check all
     read raw/), and the staging bucket's lifecycle rule deletes it 30 days after the merge (src/terraform)."""
     return lake.root / "archive" / part.relative_to(lake.root) / f"merge={batch}"
 
@@ -265,7 +265,7 @@ def crawl(
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
     repulls: list = []
-    if not (part or only):  # the post-crawl check's repulls, with re-fetch on (never for an arm or --only)
+    if not (part or only):  # the fetch-health check's list, with re-fetch on (never for an arm or --only)
         repulls = _repulls(plake, connector, week, states)
         states += repulls
     if part:
@@ -337,21 +337,20 @@ def crawl(
 
 
 def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
-    """The roasters the post-crawl check (crawldq) listed for a repull that `states` doesn't already have, only when
-    re-fetch is on (crawldq.refetch_enabled, off by default): off, the list isn't even read, and the pass is main's.
+    """The roasters the fetch-health check (fetchhealth) listed to fetch again that `states` doesn't already have,
+    only when re-fetch is on (fetchhealth.refetch_enabled, off by default): off, the list isn't even read, and the
+    pass is main's.
     A repull is an extra: if it can't be read (the lake still failing after retry_transient's retries, an
     unreadable check), it is logged and skipped, and the crawl pass goes on with its own work."""
-    from . import crawldq
+    from . import fetchhealth
 
-    if not crawldq.refetch_enabled():
+    if not fetchhealth.refetch_enabled():
         return []
     have = {s.roaster.roaster_id for s in states}
     try:
-        listed = crawldq.repull_states(plake, connector, week)
+        listed = fetchhealth.repull_states(plake, connector, week)
     except Exception as e:  # noqa: BLE001 - never the pass's failure
-        log.warning(
-            "crawl %s: the post-crawl check's repulls skipped: %s: %s", connector, type(e).__name__, e
-        )
+        log.warning("crawl %s: the fetch-health check's list skipped: %s: %s", connector, type(e).__name__, e)
         return []
     return [s for s in listed if s.roaster.roaster_id not in have]
 
@@ -360,8 +359,8 @@ def crawl_retry(
     lake: Lake, connector: str, day: str, workers: int = 8, deadline_min: float | None = None
 ) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
-    their blocked page, and, only with re-fetch on (crawldq.refetch_enabled), the post-crawl check's repulls (a
-    fetch that landed but looks bad: empty or suspect).
+    their blocked page, and, only with re-fetch on (fetchhealth.refetch_enabled), the fetch-health check's list (a
+    fetch that landed but came back empty or short: empty or suspect).
     Only those: a store that failed outright is not asked again here, so a Shopify store that refused all day isn't
     re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job

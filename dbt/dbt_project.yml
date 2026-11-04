@@ -53,7 +53,7 @@ vars:
   # points, so those are left to run_ok_rate.
   min_adapter_ok_share: 0.5
   min_adapter_roasters: 20
-  # Set only by `coffeedata crawl-dq` (the post-crawl check, before the merge): run_ok_rate and adapter_ok_rate
+  # Set only by `coffeedata fetch-health` (the fetch-health check, before the merge): run_ok_rate and adapter_ok_rate
   # count only the roasters a crawl pass has reached (run_completeness attempted), with the same thresholds. The
   # weekly build leaves it false, so a roaster the week never reached still counts against the run.
   attempted_only: false

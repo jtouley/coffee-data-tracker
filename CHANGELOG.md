@@ -49,14 +49,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   the product's input ports (#88).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
-- **Post-crawl data quality.** `coffeedata crawl-dq` runs the gate's `run_ok_rate`, `adapter_ok_rate` and suspect-run
-  rules on Monday's crawl output shortly after each pass, before the merge. Roasters whose data looks bad go on a
-  repull list, each with its reason (failed, empty, suspect) and the named DQ rule that gave it; "bad" is only what
-  those rules say. A platform-wide failure, or two at once (a bad image), emails the owner once a week per finding.
-  It never serves, records a build or publishes. Re-fetching the listed roasters ships off, behind one setting
-  (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and `crawl-retry` never read the list and the week's output is
-  unchanged (0 products). Turning it on would change which batch counts for up to 346 products a week, so it needs
-  the full evaluation first (`eval/run_quality/README.md`).
+- **Fetch health.** `coffeedata fetch-health` checks, shortly after each of Monday's crawl passes and before the
+  merge, whether each roaster's fetch returned a catalog of about the right size. It runs the gate's `run_ok_rate`,
+  `adapter_ok_rate` and suspect-run rules on the unmerged week and lists the roasters whose fetch failed, came back
+  empty or came back far smaller than usual, each with the named gate rule that gave its reason. It judges fetches,
+  not data: it doesn't look at prices or at which products came back. Partial fetches and quarantined stores are
+  listed apart, never as failures. A platform-wide failure, two at once (the image), or an edge's challenge
+  (SiteGround, Cloudflare) emails the owner once a week per finding. It never serves, records a build or publishes.
+  Re-fetching the listed roasters ships off, behind one setting (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and
+  `crawl-retry` never read the list and the week's output is unchanged (0 products). Turning it on would change
+  which batch counts for up to 346 products a week, so it needs the full evaluation first
+  (`eval/run_quality/README.md`) (#93).
 
 ### Changed
 

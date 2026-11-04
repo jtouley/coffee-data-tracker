@@ -79,7 +79,7 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
     "job_manifests": {
         "run_date": _RUN,
-        "job": "crawl, crawl-retry, merge, enrich or dq (the post-crawl check, crawl-dq).",
+        "job": "crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",
@@ -97,9 +97,10 @@ COLUMNS: dict[str, dict[str, str]] = {
         "egress_ips": "The egress IPs the job's requests left from.",
         "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
         "code_version": "The code that ran.",
-        "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; for dq, "
-        "its verdict: systemic problems and the repull list, roaster_id, adapter, reasons and the DQ rules "
-        "that gave them).",
+        "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; for "
+        "fetch-health, its verdict on the week's fetches: systemic fetch failures, and the list of roasters whose "
+        "fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, "
+        "plus the partial and quarantined fetches).",
     },
     "enrichments": {
         "extracted_at": "When it was extracted.",

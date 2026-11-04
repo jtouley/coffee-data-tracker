@@ -197,20 +197,28 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     )
 
 
-def cmd_crawl_dq(args: argparse.Namespace) -> None:
-    """The post-crawl check (crawldq.py). Exits non-zero on a systemic problem not already found by an earlier check
-    this week, which fails the Cloud Run execution and emails the owner once per finding; per-roaster problems only
-    go on the repull list."""
-    from . import crawldq
+def cmd_fetch_health(args: argparse.Namespace) -> None:
+    """The fetch-health check (fetchhealth.py): did each fetch return a catalog of about the right size. Exits
+    non-zero on a systemic fetch problem not already found by an earlier check this week, which fails the Cloud Run
+    execution and emails the owner once per finding; per-roaster problems only go on its list."""
+    from . import fetchhealth
 
-    out = crawldq.run(Lake(), args.run_date, force=args.force)
+    out = fetchhealth.run(Lake(), args.run_date, force=args.force)
     _print(out)
     if out.get("alert"):
         # One structured line, so the execution's log names the problem at ERROR severity.
-        print(json.dumps({"severity": "ERROR", "message": "crawl-dq: systemic", "systemic": out["systemic"]}))
-        raise SystemExit(f"crawl-dq {out['run_date']}: systemic: {json.dumps(out['alert'])}")
+        print(
+            json.dumps(
+                {
+                    "severity": "ERROR",
+                    "message": "fetch-health: systemic fetch failure",
+                    "systemic": out["systemic"],
+                }
+            )
+        )
+        raise SystemExit(f"fetch-health {out['run_date']}: systemic: {json.dumps(out['alert'])}")
     if out.get("systemic"):  # found again by a later pass's check: already alerted this week, logged only
-        print(json.dumps({"severity": "WARNING", "message": "crawl-dq: systemic, already alerted this week",
+        print(json.dumps({"severity": "WARNING", "message": "fetch-health: systemic, already alerted this week",
                           "systemic": out["systemic"]}))  # fmt: skip
 
 
@@ -302,7 +310,7 @@ def dbt_build(
     """Build every model and seed, then run every test, so a failed check never stops a model from being built.
     Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command).
     dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`.
-    select, target, extra_roots and flags are for `crawl-dq`: only the nodes it names, its own target folder (the
+    select, target, extra_roots and flags are for `fetch-health`: only the nodes it names, its own target folder (the
     weekly build's artifacts are left alone), more lake roots to read (its copy of the unmerged crawl output) and
     more dbt flags."""
     from . import quality, registry, shots, verdict
@@ -740,7 +748,9 @@ def main(argv: list[str] | None = None) -> None:
     )
 
     dq = add(
-        "crawl-dq", cmd_crawl_dq, "post-crawl check: the gate's rules on the unmerged week, a repull list"
+        "fetch-health",
+        cmd_fetch_health,
+        "fetch-health check: did each fetch return a catalog of about the right size (gate rules, unmerged week)",
     )
     dq.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to check")
     dq.add_argument(
