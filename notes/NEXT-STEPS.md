@@ -144,3 +144,18 @@ more.
 retrying every pass and every week (the 5-minute wait cap still applies). Blocked status only after 6 consecutive
 weeks of the same challenge, and then switch crawl method rather than give up. The blacklist PR is a follow-up for
 about two months from now; GitHub issue #110.
+
+## Owner decisions, 2026-11-04 (evening)
+- **Green (unroasted) coffee is not coffee.** This matches `eval/sealed/GUIDE.md`, which excludes it already; no
+  definition change. So Coffee Bean Corral's green coffees were removed correctly. copantrade's 22 green pallets that
+  are still public are misclassified: flag them, don't hand-remove them.
+- **Removals need flags from several signals, plus admin approval.** No more hand-edited CSVs or code lists for
+  removals. The plan is an append-only `decisions` table:
+  - states: flagged → approved → applied / rejected;
+  - pipeline signals raise the flags, and a removal needs at least 2 of them or a human-confirmed live check;
+  - dbt applies approved decisions softly: internal tables keep the rows, public tables filter them out.
+
+  The design proposal comes first; the owner picks the approval surface (an issue form or an admin page in the app).
+  Withdrawn: the "overrides PR" (Stivers restore, 3 mixes, 8 registry fixes). It waits for this mechanism.
+- The validator's per-roaster calls were wrong for Chuck's Roast and Taybat: they sell coffee, and we fail to crawl
+  them (Chuck's sends our bot into a redirect loop; Taybat's feed returns 403). Any registry removal needs a live check of the store.
