@@ -176,3 +176,28 @@ def test_score_counts_background_and_blocks():
 def test_wilson():
     p, lo, hi = ev.wilson(8, 10)
     assert p == 0.8 and round(lo, 3) == 0.490 and round(hi, 3) == 0.943
+
+
+def test_api_key_prefers_env_then_mints_and_refreshes(monkeypatch):
+    calls = []
+    clock = [1000.0]
+
+    def fake_exchange(client_id):
+        calls.append(client_id)
+        return f"key{len(calls)}", clock[0] + 3600
+
+    monkeypatch.setattr(pr, "exchange_oidc", fake_exchange)
+    monkeypatch.setattr(pr.time, "time", lambda: clock[0])
+    monkeypatch.setattr(pr, "_minted", {})
+    monkeypatch.setenv("OPENCODE_API_KEY", "from-env")
+    assert pr.api_key() == "from-env" and calls == []
+
+    monkeypatch.delenv("OPENCODE_API_KEY")
+    monkeypatch.delenv("ACTIONS_ID_TOKEN_REQUEST_URL", raising=False)
+    monkeypatch.setenv("OPENCODE_CLIENT_ID", "cid")
+    assert pr.api_key() is None  # not in Actions
+
+    monkeypatch.setenv("ACTIONS_ID_TOKEN_REQUEST_URL", "https://example.invalid/?x=1")
+    assert pr.api_key() == "key1" and pr.api_key() == "key1" and calls == ["cid"]
+    clock[0] += 3600 - pr.REFRESH_EARLY + 1
+    assert pr.api_key() == "key2"

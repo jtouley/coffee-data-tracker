@@ -99,8 +99,9 @@ and no person or model labelled anything.
 4. **Ship rule:** the chosen model's test net catch is at least the provisional default's (`opencode/big-pickle`),
    with no meaningful rise in clean block rate.
 
-Nothing has been run yet. This sandbox's anonymous free tier was used up, so the first run is in Actions with the
-`OPENCODE_API_KEY` secret.
+Nothing has been run yet. This sandbox's anonymous free tier was used up, so the first run is in Actions. There,
+the job signs in with its GitHub OIDC token, using the `OPENCODE_CLIENT_ID` repository variable. Locally, set
+`OPENCODE_API_KEY`.
 
 ## Commands
 

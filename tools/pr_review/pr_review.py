@@ -18,6 +18,8 @@ import time
 from dataclasses import dataclass, field
 from fnmatch import fnmatch
 from pathlib import Path
+from urllib.parse import quote, urlencode
+from urllib.request import Request, urlopen
 
 MAX_CHARS = 120_000  # about 30k tokens: fits every free model's context with room for the answer
 MAX_FILE_LINES = 600  # per file, so one generated file can't crowd out the rest
@@ -253,6 +255,50 @@ def usage_from_events(stdout: str) -> dict:
     return tokens
 
 
+# ---- the OpenCode API key ----
+
+# In GitHub Actions the key is minted from the job's OIDC token (permissions: id-token: write), so no long-lived
+# secret is stored. OPENCODE_CLIENT_ID names the OpenCode credential that trusts this repo. Outside Actions, or
+# when OPENCODE_API_KEY is set, that key is used as is.
+OIDC_AUDIENCE = "https://opencode.ai/console"
+TOKEN_URL = "https://opencode.ai/console/auth/oauth/token"
+REFRESH_EARLY = 300  # seconds: mint a new key this long before the old one expires
+_minted: dict = {}
+
+
+def exchange_oidc(client_id: str) -> tuple[str, float]:
+    """An OpenCode API key for this Actions job, and when it expires (epoch seconds)."""
+    url = os.environ["ACTIONS_ID_TOKEN_REQUEST_URL"] + "&audience=" + quote(OIDC_AUDIENCE, safe="")
+    req = Request(url, headers={"Authorization": "Bearer " + os.environ["ACTIONS_ID_TOKEN_REQUEST_TOKEN"]})
+    with urlopen(req, timeout=30) as r:
+        oidc = json.load(r)["value"]
+    body = urlencode(
+        {
+            "grant_type": "urn:ietf:params:oauth:grant-type:token-exchange",
+            "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
+            "client_id": client_id,
+            "subject_token": oidc,
+        }
+    ).encode()
+    with urlopen(Request(TOKEN_URL, data=body), timeout=30) as r:
+        tok = json.load(r)
+    key = tok["access_token"]
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::add-mask::{key}", flush=True)
+    return key, time.time() + float(tok.get("expires_in") or 1800)
+
+
+def api_key() -> str | None:
+    if os.environ.get("OPENCODE_API_KEY"):
+        return os.environ["OPENCODE_API_KEY"]
+    client_id = os.environ.get("OPENCODE_CLIENT_ID")
+    if not client_id or "ACTIONS_ID_TOKEN_REQUEST_URL" not in os.environ:
+        return None
+    if not _minted or _minted["expires"] - time.time() < REFRESH_EARLY:
+        _minted["key"], _minted["expires"] = exchange_oidc(client_id)
+    return _minted["key"]
+
+
 # ---- running the reviewer ----
 
 
@@ -263,6 +309,12 @@ def run_model(
     env = dict(os.environ)
     # Belt and braces: no tool may run whatever the checked-out config says.
     env["OPENCODE_PERMISSION"] = json.dumps({"*": "deny"})
+    try:
+        key = api_key()
+    except (OSError, KeyError, ValueError) as e:  # a failed exchange is an unanswered run, not a crash
+        return None, {"model": model, "error": f"OpenCode sign-in failed: {e}", "seconds": 0}
+    if key:
+        env["OPENCODE_API_KEY"] = key
     cmd = [opencode, "run", "--pure", "--agent", "pr-reviewer", "-m", model, "--format", "json"]
     cmd.append("Review the pull request below. Follow your output instructions exactly.")
     started = time.monotonic()

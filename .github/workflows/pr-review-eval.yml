@@ -35,6 +35,9 @@ jobs:
     needs: models
     runs-on: ubuntu-latest
     timeout-minutes: 340
+    permissions:
+      contents: read
+      id-token: write  # to sign in to OpenCode; the key is re-minted before it expires
     strategy:
       fail-fast: false
       max-parallel: 3  # one API key's free-tier rate limit is shared by every job
@@ -52,6 +55,7 @@ jobs:
             --repo jtouley/coffee-data-tracker=. --repo jtouley/md_data_explorer=ext/md_data_explorer
       - name: Predict
         env:
+          OPENCODE_CLIENT_ID: ${{ vars.OPENCODE_CLIENT_ID }}
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           MODEL: ${{ matrix.model }}
           SET: ${{ inputs.set }}

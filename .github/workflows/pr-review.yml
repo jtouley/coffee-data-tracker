@@ -1,5 +1,7 @@
 # An advisory PR review by a free OpenCode Zen model, posted as one comment that's updated on each push. It never
-# blocks merge. Needs the OPENCODE_API_KEY secret (opencode.ai/console → API keys); without it the job is skipped.
+# blocks merge. It signs in to OpenCode with the job's GitHub OIDC token, exchanged for a short-lived API key, so no
+# key is stored: set the repository variable OPENCODE_CLIENT_ID to the OpenCode credential that trusts this repo.
+# (An OPENCODE_API_KEY secret works too.) With neither, the job is skipped.
 # Models are tried in order until one answers; set the repository variable PR_REVIEW_MODELS to change them (the eval
 # in eval/pr_review/ is how to choose).
 #
@@ -26,16 +28,17 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      id-token: write  # to sign in to OpenCode
     env:
       MODELS: ${{ vars.PR_REVIEW_MODELS || 'opencode/big-pickle,opencode/deepseek-v4.1-flash-free' }}
       PR: ${{ github.event.pull_request.number }}
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-      HAS_KEY: ${{ secrets.OPENCODE_API_KEY != '' }}
+      HAS_KEY: ${{ vars.OPENCODE_CLIENT_ID != '' || secrets.OPENCODE_API_KEY != '' }}
     steps:
       - name: No OPENCODE_API_KEY secret
         if: env.HAS_KEY != 'true'
-        run: echo "::notice::Add the OPENCODE_API_KEY secret to turn on the OpenCode PR review."
+        run: echo "::notice::Set the OPENCODE_CLIENT_ID variable to turn on the OpenCode PR review."
       - name: Check out the base branch (the trusted reviewer config)
         if: env.HAS_KEY == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -56,6 +59,7 @@ jobs:
       - name: Review
         if: env.HAS_KEY == 'true'
         env:
+          OPENCODE_CLIENT_ID: ${{ vars.OPENCODE_CLIENT_ID }}
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         run: |
           python3 trusted/tools/pr_review/pr_review.py review diff.txt --models "$MODELS" --pr "$PR" \
