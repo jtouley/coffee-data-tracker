@@ -1,0 +1,81 @@
+# An advisory PR review by a free OpenCode Zen model, posted as one comment that's updated on each push. It never
+# blocks merge. Needs the OPENCODE_API_KEY secret (opencode.ai/console → API keys); without it the job is skipped.
+# Models are tried in order until one answers; set the repository variable PR_REVIEW_MODELS to change them (the eval
+# in eval/pr_review/ is how to choose).
+#
+# Trust: the reviewer's config (.opencode/agents/pr-reviewer.md) and script come from the base branch, never from
+# the PR, and the model gets no tools. The PR's checkout is only diffed, never run.
+name: pr-review
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+concurrency:
+  group: pr-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  review:
+    # Fork and Dependabot PRs get no secrets, so skip them; drafts wait until they're ready.
+    if: >-
+      !github.event.pull_request.draft &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.actor != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      MODELS: ${{ vars.PR_REVIEW_MODELS || 'opencode/big-pickle,opencode/deepseek-v4.1-flash-free' }}
+      PR: ${{ github.event.pull_request.number }}
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      HAS_KEY: ${{ secrets.OPENCODE_API_KEY != '' }}
+    steps:
+      - name: No OPENCODE_API_KEY secret
+        if: env.HAS_KEY != 'true'
+        run: echo "::notice::Add the OPENCODE_API_KEY secret to turn on the OpenCode PR review."
+      - name: Check out the base branch (the trusted reviewer config)
+        if: env.HAS_KEY == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {ref: "${{ github.event.pull_request.base.sha }}", path: trusted, persist-credentials: false}
+      - name: Check out the PR (only diffed)
+        if: env.HAS_KEY == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {ref: "${{ github.event.pull_request.head.sha }}", path: pr, fetch-depth: 0, persist-credentials: false}
+      - name: Prepare the diff
+        if: env.HAS_KEY == 'true'
+        run: |
+          git -C pr diff --no-color --no-ext-diff -M -U3 --src-prefix=a/ --dst-prefix=b/ "$BASE_SHA...$HEAD_SHA" \
+            | python3 trusted/tools/pr_review/pr_review.py prep > diff.txt
+          wc -c diff.txt
+      - name: Install OpenCode
+        if: env.HAS_KEY == 'true'
+        run: npm install -g opencode-ai@1.19.5
+      - name: Review
+        if: env.HAS_KEY == 'true'
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: |
+          python3 trusted/tools/pr_review/pr_review.py review diff.txt --models "$MODELS" --pr "$PR" \
+            --workdir trusted --timeout 300 --out result.json || echo "::warning::No model gave a review."
+          python3 trusted/tools/pr_review/pr_review.py comment result.json > body.md
+          cat body.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Post or update the comment
+        if: env.HAS_KEY == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          id=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- opencode-pr-review -->"))) | .id' \
+            | tail -n 1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$id" -F body=@body.md > /dev/null
+          else
+            gh pr comment "$PR" --repo "$REPO" --body-file body.md
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        if: env.HAS_KEY == 'true' && always()
+        with: {name: pr-review-result, path: result.json, if-no-files-found: ignore}

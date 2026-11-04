@@ -1,0 +1,83 @@
+# Runs the free OpenCode models over one set of the PR-review eval (eval/pr_review/README.md), one job per model.
+# Train and validation are scored here, in the run summary. Test predictions are only uploaded: commit them and
+# score them once, as the README says.
+name: pr-review-eval
+on:
+  workflow_dispatch:
+    inputs:
+      set:
+        description: train, validation or test
+        type: choice
+        options: [validation, train, test]
+        default: validation
+      models:
+        description: comma-separated provider/model
+        default: >-
+          opencode/big-pickle,opencode/beam-free,opencode/crouton-alpha-free,opencode/deepseek-v4.1-flash-free,opencode/flint-40b-free,opencode/glm-5.3-flash-free,opencode/mimo-v2.6-flash-free,opencode/nemotron-3.5-lightning-free,opencode/nemotron-3.5-super-vl-free,opencode/pulse-alpha-free
+      limit:
+        description: at most this many items per model (blank for all)
+        default: ""
+permissions:
+  contents: read
+jobs:
+  models:
+    runs-on: ubuntu-latest
+    outputs:
+      list: ${{ steps.m.outputs.list }}
+    steps:
+      - id: m
+        env:
+          MODELS: ${{ inputs.models }}
+        run: |
+          python3 -c 'import json, os; print("list=" + json.dumps([m.strip() for m in os.environ["MODELS"].split(",") if m.strip()]))' >> "$GITHUB_OUTPUT"
+
+  predict:
+    needs: models
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      max-parallel: 3  # one API key's free-tier rate limit is shared by every job
+      matrix:
+        model: ${{ fromJSON(needs.models.outputs.list) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {repository: jtouley/md_data_explorer, path: ext/md_data_explorer, fetch-depth: 0, persist-credentials: false}
+      - run: npm install -g opencode-ai@1.19.5
+      - name: Build the items from git (checks the sealed test hashes)
+        run: |
+          python3 eval/pr_review/pr_review_eval.py items data \
+            --repo jtouley/coffee-data-tracker=. --repo jtouley/md_data_explorer=ext/md_data_explorer
+      - name: Predict
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          MODEL: ${{ matrix.model }}
+          SET: ${{ inputs.set }}
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          python3 eval/pr_review/pr_review_eval.py predict data "$SET" "$MODEL" ${LIMIT:+--limit "$LIMIT"}
+          echo "ARTIFACT=pred-$SET-${MODEL//\//__}" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
+        if: always() && env.ARTIFACT != ''
+        with: {name: "${{ env.ARTIFACT }}", path: "data/pred/${{ inputs.set }}/*.jsonl"}
+
+  score:
+    needs: predict
+    if: always() && inputs.set != 'test'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {repository: jtouley/md_data_explorer, path: ext/md_data_explorer, fetch-depth: 0, persist-credentials: false}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093  # v4.3.0
+        with: {pattern: "pred-${{ inputs.set }}-*", path: preds, merge-multiple: true}
+      - env:
+          SET: ${{ inputs.set }}
+        run: |
+          python3 eval/pr_review/pr_review_eval.py items data \
+            --repo jtouley/coffee-data-tracker=. --repo jtouley/md_data_explorer=ext/md_data_explorer > /dev/null
+          python3 eval/pr_review/pr_review_eval.py score data "$SET" preds/*.jsonl | tee score.txt
+          { echo '```'; cat score.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
