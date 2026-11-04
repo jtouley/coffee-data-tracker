@@ -48,7 +48,7 @@ recreate them (see "Container-local files" below).
 **Owner decision 2026-11-04 (supersedes the challenge work above):** a 202/challenge is an ordinary failed fetch, so
 the week's later passes retry it. Drop the `challenge` systemic scope and `edge_challenge_share` from #93; challenged
 stores stay on the list as `failed` (note the edge if known). No edge alerts, and no new thresholds. Separate small PR
-later: a store with the same challenge for 4 consecutive weeks (a variable; the owner said 4-6) is marked blocked,
+in about two months (early January 2027): a store with the same challenge for **6 consecutive weeks** (owner, 2026-11-04; keep it a variable) is marked blocked,
 normal crawls skip it, and it moves to a different crawl method. #93's fix round is then: test it, publish the
 verdict (R1/R2), suspects to `as_of_run`, the overlapping-poll guard, the dead-attempt rule, and the nits. Nothing
 more.
@@ -139,3 +139,8 @@ more.
   in the PRs. The 3 local-only merge commits were merges of pushed branches, so they can be recreated. The rest is
   lost with the container.
 - **Uncommitted work: none.** Every PR branch is pushed.
+
+**Owner policy, restated 2026-11-04:** don't be lenient with sites that block access to public catalog data. Keep
+retrying every pass and every week (the 5-minute wait cap still applies). Blocked status only after 6 consecutive
+weeks of the same challenge, and then switch crawl method rather than give up. The blacklist PR is a follow-up for
+about two months from now; GitHub issue #110.
