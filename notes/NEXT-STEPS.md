@@ -159,3 +159,6 @@ about two months from now; GitHub issue #110.
   Withdrawn: the "overrides PR" (Stivers restore, 3 mixes, 8 registry fixes). It waits for this mechanism.
 - The validator's per-roaster calls were wrong for Chuck's Roast and Taybat: they sell coffee, and we fail to crawl
   them (Chuck's sends our bot into a redirect loop; Taybat's feed returns 403). Any registry removal needs a live check of the store.
+
+## Restart plan (Friday reset)
+The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (section "Restart on Friday"). Draft PRs: #93, #104, #106, #107, #108, #109, #111, #112, #113. Merged: #82, #105. Release 5060ad exported 2026-11-04.
