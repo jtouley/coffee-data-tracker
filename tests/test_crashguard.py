@@ -460,13 +460,13 @@ def _tf() -> str:
     return (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
 
 
-def test_only_shopifys_crawls_never_retry_in_place():
+def test_shopify_woocommerce_and_generic_crawls_never_retry_in_place():
     import re
 
     jobs = dict(re.findall(r'^\s+"([a-z-]+)"\s+=\s+\{ command = .*retries = (\d) \}$', _tf(), re.M))
     assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl")} == {
         "crawl-shopify": 0, "crawl-shopify-default-egress": 0, "crawl-retry": 0, "crawl-squarespace": 1,
-        "crawl-woocommerce": 1, "crawl-square-online": 1, "crawl-generic": 1,
+        "crawl-woocommerce": 0, "crawl-square-online": 1, "crawl-generic": 0,
     }  # fmt: skip
     assert "max_retries = each.value.retries" in _tf()
     assert re.search(

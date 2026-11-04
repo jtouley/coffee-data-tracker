@@ -490,7 +490,8 @@ no new job, image or alert. `crawl-retry` now writes `job_manifests` rows too (j
 counts as a landed crawl or towards `egress-check`), uses the guard, and resumes only its own connector's parked
 stores (the `parked/` folder is shared).
 
-**A faster resume: `max_retries = 1` for the non-Shopify crawls**, rather than a midday pass. A re-run of `crawl`
+**A faster resume: `max_retries = 1` for the non-Shopify crawls** (since section 9.1, not WooCommerce's or generic's:
+on one static IP, like Shopify's, they get 0), rather than a midday pass. A re-run of `crawl`
 is already a resume (it compacts the dead attempt's checkpoints and skips what is done), so Cloud Run's retry
 starts it within a minute instead of at 15:17, and the guard makes the retry safe against the roaster that
 killed the first attempt. A midday pass would wait up to 3 hours and add 4 more entries. The retry stays inside the
@@ -553,7 +554,7 @@ thing to test (Next).
 **Why.** SiteGround, the host behind many WooCommerce and generic roaster sites, answers Cloud Run's shared
 default-egress pool with HTTP 202 and an `sg-captcha` challenge page. The same image through the existing NAT IP got
 200 (test run 2026-11-02, execution `sg-diag-nat-5wb2v`). The owner's decision: crawl-woocommerce and crawl-generic,
-and every pass of them (resume, evening retry, Cloud Run's retry of a failed task: the same two jobs), leave from a **second** reserved static IP,
+and every pass of them (resume and evening retry: the same two jobs), leave from a **second** reserved static IP,
 separate from Shopify's 34.172.156.113. Sharing Shopify's IP would mix two traffic profiles on the one identity
 Shopify knows us by, and Shopify's crawl and these crawls run at the same time.
 

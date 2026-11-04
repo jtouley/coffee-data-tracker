@@ -57,7 +57,8 @@ job runs `$IMAGE`. This section is for a fresh project, or to check that the liv
 egress IP, for the WooCommerce and generic crawls, is applied on its own: §2.1.
 
 - **In production**, the crawl jobs' `max_retries` is 0 for Shopify's (`crawl-shopify`, its default-egress arm,
-  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7); `crawl-generic` has 8Gi, and
+  `crawl-retry`) and 1 for the other four since the crawl-hardening PR (section 7), until §2.1 sets crawl-woocommerce's
+  and crawl-generic's to 0; `crawl-generic` has 8Gi, and
   `crawl-squarespace` 8Gi since #99 (a plan shows that change once, until it is applied). A plan that shows anything
   else on a job, beyond the image: stop.
 - **Before applying in production, check the live NAT** against `ingestion.tf` (dynamic ports on,
@@ -151,7 +152,7 @@ terraform plan -out egress.plan
 | Resources | Count |
 |---|---|
 | `google_compute_subnetwork.woo_generic_egress`, `google_compute_address.woo_generic_egress`, `google_compute_router_nat.woo_generic_egress` | 3 to add |
-| `google_cloud_run_v2_job.ingest["crawl-woocommerce"]`, `["crawl-generic"]`, in place: a `vpc_access` block (the new subnet, `ALL_TRAFFIC`), `COFFEEDATA_EGRESS_MODE` `default` → `dedicated`, and `COFFEEDATA_EGRESS_ECHO_URL` → `COFFEEDATA_EGRESS_IP` (the new address, known after apply) | 2 to change |
+| `google_cloud_run_v2_job.ingest["crawl-woocommerce"]`, `["crawl-generic"]`, in place: a `vpc_access` block (the new subnet, `ALL_TRAFFIC`), `COFFEEDATA_EGRESS_MODE` `default` → `dedicated`, and `COFFEEDATA_EGRESS_ECHO_URL` → `COFFEEDATA_EGRESS_IP` (the new address, known after apply), and `max_retries` 1 → 0 (one IP: an immediate retry would re-ask the stores that just refused) | 2 to change |
 
 **Nothing existing is replaced.** Stop if the plan shows any `-/+` (replace) or `-` (destroy), any change to
 `google_compute_network.ingest`, `google_compute_router.ingest` or any `*.shopify_egress` resource, or a change to
@@ -171,9 +172,10 @@ cd ../..
 The `describe` should print `True False 1024 8192`, as Shopify's does. Run the §2 loop: crawl-woocommerce and
 crawl-generic now print `all-traffic registry-coffee-woo-generic-egress`.
 
-**Check one SiteGround store from the new IP** before the next Monday crawl (the 202 was seen through Shopify's NAT
-IP; the new one is a fresh Google IP, so check it rather than assume). Outside a crawl window, fetch one WooCommerce
-roaster that answered `sg-captcha` on default egress (§7's `--only` run):
+**Check one SiteGround store from the new IP** before the next Monday crawl (the 202 came from Cloud Run's default
+shared egress pool, and Shopify's NAT IP got 200; the new one is a fresh Google IP, so check it rather than
+assume). Outside a crawl window, fetch one WooCommerce roaster that answered `sg-captcha` on default egress
+(§7's `--only` run):
 
 ```sh
 gcloud run jobs execute crawl-woocommerce --region $REGION --wait \
@@ -889,13 +891,14 @@ end row (an uncaught Python error writes a `failed` end row first), and its in-f
 (`gs://<project>-ingest-staging/raw/connector=X/run_date=W/_inflight/attempt=<id>/<roaster>.json`). What happens
 next, by itself (DESIGN.md section 7.1):
 
-1. **The non-Shopify crawls are retried at once** (`max_retries = 1`). The retry compacts what the dead attempt
-   wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time beside the others. It
+1. **The Squarespace and Square Online crawls are retried at once** (`max_retries = 1`). The retry compacts what
+   the dead attempt wrote, skips what is done, and fetches the dead attempt's in-flight roasters one at a time
+   beside the others. It
    stops starting roasters 225 minutes after the first attempt started, so it never overlaps 15:17; a suspect
    still waiting in a page backoff then is parked with its pages for crawl-retry, like any other store. If it
    succeeds, the execution succeeds and **no alert is sent**; the dead attempt is in `job_manifests`, and the
-   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's crawls aren't retried in place:
-   their next slot resumes.
+   retry's start row lists it (`detail.dead_attempts`, `detail.suspects`). Shopify's, WooCommerce's and generic's
+   crawls aren't retried in place (each leaves from one static IP): their next slot resumes.
 2. **A roaster in flight in two dead attempts is quarantined for the week**: the next attempt writes it a `fetches`
    row with status `crashed` (its `error` names the two attempts) and doesn't ask it; every later pass of the week
    skips it. In that attempt's end row it is in neither `ok` nor `errors`: `detail.quarantined` and
@@ -951,8 +954,9 @@ gcloud run jobs execute crawl-generic --region $REGION --wait   --args=crawl,--c
 
 `--only` fetches that roaster even though it is done (`crashed`) this week; that attempt's rows list no quarantine
 (`detail.quarantined` is `[]`, `detail.only` names the roaster). If it succeeds, its `ok` row counts for the run (a
-run is ok when any attempt is). If it kills the attempt too, Cloud Run retries it once (`max_retries = 1`), and the
-retry fetches it again; if that dies as well, the execution fails. Nothing else was in flight: it is the cause.
+run is ok when any attempt is). If it kills the attempt too, the execution fails (crawl-generic's `max_retries` is 0;
+Squarespace's and Square Online's crawls retry once, and the retry fetches it again before failing). Nothing else
+was in flight: it is the cause.
 Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
 To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
 `gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.

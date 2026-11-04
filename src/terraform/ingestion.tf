@@ -64,7 +64,7 @@ variable "woo_generic_subnet_cidr" {
   type        = string
   default     = "10.8.0.64/26"
   validation {
-    condition     = can(cidrhost(var.woo_generic_subnet_cidr, 0)) && try(tonumber(split("/", var.woo_generic_subnet_cidr)[1]) <= 26, false)
+    condition     = can(regex("^[0-9]{1,3}(\\.[0-9]{1,3}){3}/[0-9]{1,2}$", var.woo_generic_subnet_cidr)) && can(cidrhost(var.woo_generic_subnet_cidr, 0)) && try(tonumber(split("/", var.woo_generic_subnet_cidr)[1]) <= 26, false)
     error_message = "woo_generic_subnet_cidr must be an IPv4 CIDR of /26 or larger (Direct VPC egress)."
   }
 }
@@ -76,12 +76,14 @@ locals {
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's crawls. A crawl that dies (OOM kill, crash) is retried at once, and the
-  # retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already done this week, fetches the
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls. A crawl that dies (OOM kill, crash)
+  # is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already done this week, fetches the
   # dead attempt's in-flight roasters one at a time and quarantines one that killed two attempts (crashguard), and it
   # stops inside the first attempt's window (connectors._window_left), so it never overlaps the next slot. A crawl
   # stopped by its deadline exits 0 and is never retried. Shopify's crawls stay at 0: a retry straight after a
   # failure would re-ask the stores that just refused, on Shopify's NAT IP; their next slot (15:17, 21:47) resumes.
+  # WooCommerce's and generic's are 0 for the same reason: they share one static IP (woo_generic), and their 15:17
+  # resume and 21:47 retry slots cover a failed attempt.
   ingest_jobs = {
     # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
     # run, weekly before the crawls. Both publish what they recorded.
@@ -100,14 +102,14 @@ locals {
     "crawl-retry"                  = { command = ["coffeedata"], args = ["crawl-retry", "--connector", "shopify"], egress = "shopify", claude = false, memory = "2Gi", retries = 0 }
     # 8Gi, as crawl-generic: with no sitemap cap (#99), each of its 32 workers may hold a whole sitemap's URL list.
     "crawl-squarespace"   = { command = ["coffeedata"], args = ["crawl", "--connector", "squarespace"], egress = "default", claude = false, memory = "8Gi", retries = 1 }
-    "crawl-woocommerce"   = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], egress = "woo_generic", claude = false, memory = "2Gi", retries = 1 }
+    "crawl-woocommerce"   = { command = ["coffeedata"], args = ["crawl", "--connector", "woocommerce"], egress = "woo_generic", claude = false, memory = "2Gi", retries = 0 }
     "crawl-square-online" = { command = ["coffeedata"], args = ["crawl", "--connector", "square_online"], egress = "default", claude = false, memory = "2Gi", retries = 1 }
     # SiteGround, which hosts many WooCommerce and generic sites, answers Cloud Run's default egress with a 202
     # `sg-captcha` challenge; the same image through a NAT IP got 200 (2026-11-02, sg-diag-nat-5wb2v). So both
-    # crawls, and every pass of them (resume, evening retry, Cloud Run's retry of a failed task: the same jobs), leave
-    # from their own NAT IP.
+    # crawls, and every pass of them (resume and evening retry: the same jobs), leave from their own NAT IP. No
+    # retries in place on that one IP (see Retries above).
     # 8Gi: OOM-killed at 2Gi on 2026-11-02 (about 7 min in); the owner raised it by hand (gcloud run jobs update).
-    "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], egress = "woo_generic", claude = false, memory = "8Gi", retries = 1 }
+    "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], egress = "woo_generic", claude = false, memory = "8Gi", retries = 0 }
     "merge"         = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
     "enrich-week"   = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
