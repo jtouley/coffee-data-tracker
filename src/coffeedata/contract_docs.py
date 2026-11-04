@@ -52,7 +52,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "status": "ok; error (any failure or block, retried in later passes); unavailable (closed store); "
         "crashed (not fetched: quarantined for the week after it was in flight in two attempts of its crawl that "
         "died).",
-        "error": "The failure, when status is not ok.",
+        "error": "The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.",
         "products": "Products the attempt read.",
         "coffees": "Coffees among them as the crawl counted them; null from an ELT crawl.",
         "pages": "Catalog pages (200 responses other than robots.txt) read.",
@@ -62,8 +62,9 @@ COLUMNS: dict[str, dict[str, str]] = {
         "rate_limited": "429 responses.",
         "duration_s": "How long the attempt took.",
         "code_version": "The code that made it (git sha).",
-        "blocks": "Each refused or blocked response (403/429/430/503) with its diagnostic headers and egress IP.",
+        "blocks": "Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers (sg_captcha from raw 1.4.0) and egress IP.",
         "partial": "True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.",
+        "crawl_delays": "Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied; null when none asked, and before raw 1.5.0.",
     },
     "run_manifests": {
         "run_date": _RUN,

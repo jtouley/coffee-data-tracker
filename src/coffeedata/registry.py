@@ -63,6 +63,10 @@ NOT_A_ROASTER_SITE = (
     "blogspot.com",
     "wordpress.com",
     "gmail.com",
+    # Ordering vendors that Overture lists as a cafe's website (crawl 2026-11-02): Per Diem's own site, for Java
+    # House's North Liberty location (Java House is thejavahouse.com), and Spoon's ordering marketplace.
+    "tryperdiem.com",
+    "orderspoon.com",
 )
 
 MAX_FAILURES = 3
@@ -74,8 +78,13 @@ def normalize_domain(d: str) -> str:
     return re.sub(r"^(www\d?|locations|shop|store)\.", "", d)
 
 
+def not_a_roaster_site(domain: str) -> bool:
+    """The domain is, or is under, a NOT_A_ROASTER_SITE host."""
+    return any(domain == s or domain.endswith("." + s) for s in NOT_A_ROASTER_SITE)
+
+
 def is_storefront_host(domain: str) -> bool:
-    return "." in domain and not any(domain == s or domain.endswith("." + s) for s in NOT_A_ROASTER_SITE)
+    return "." in domain and not not_a_roaster_site(domain)
 
 
 def load_seed(path: Path = SEED) -> list[dict]:
@@ -219,6 +228,10 @@ def _current(lake: Lake, seed: Path) -> list[RoasterState]:
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
+        if not_a_roaster_site(r["roaster_id"]):
+            # a platform or vendor site (NOT_A_ROASTER_SITE), from an older seed or a lake registry row: never a
+            # roaster, so never crawled, whatever the lake still holds for it
+            continue
         roaster = Roaster(
             roaster_id=r["roaster_id"],
             name=r["name"] or r["roaster_id"],

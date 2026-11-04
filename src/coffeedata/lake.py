@@ -69,8 +69,14 @@ VARIANT = pa.struct(
 # this run, and left out of the ok rates).
 FETCH_STATUSES = ("ok", "error", "unavailable", "crashed")
 HTTP_STATUS = pa.struct([("status", pa.int32()), ("responses", pa.int32())])
-# One refused or blocked response (403/429/430/503), with the headers that tell a rate limit from an edge challenge
-# and that Shopify Support asks for, and the egress IP it left from (http.block_record).
+# A host whose robots.txt asked us a Crawl-delay: the value as written, the spacing its requests got, and whether
+# the 60 s cap applied (http.RequestStats.crawl_delays).
+CRAWL_DELAY = pa.struct(
+    [("host", pa.string()), ("asked", pa.string()), ("applied_s", pa.float64()), ("capped", pa.bool_())]
+)
+# One refused or blocked response (202/403/429/430/503, or another edge challenge), with the headers that tell a rate
+# limit from an edge challenge (Cloudflare's cf-mitigated, SiteGround's sg-captcha) and that Shopify Support asks
+# for, and the egress IP it left from (http.block_record). sg_captcha: added in raw 1.4.0 (null in older files).
 BLOCK = pa.struct(
     [
         ("at", pa.timestamp("s", tz="UTC")),
@@ -84,6 +90,7 @@ BLOCK = pa.struct(
         ("cf_ray", pa.string()),
         ("x_request_id", pa.string()),
         ("egress_ip", pa.string()),
+        ("sg_captcha", pa.string()),
     ]
 )
 
@@ -154,6 +161,10 @@ SCHEMAS: dict[str, pa.Schema] = {
             # the catalog (a secondary crawl stopped mid-way). Its products are listed; the products it didn't
             # read keep their listing (dbt stg_runs.is_current), instead of reading as delisted.
             ("partial", pa.bool_()),
+            # Added with raw contract 1.5.0 (older files read back as null): each host whose robots.txt asked a
+            # Crawl-delay, the value as written, the spacing used (capped at http.MAX_CRAWL_DELAY), and whether the
+            # cap applied.
+            ("crawl_delays", pa.list_(CRAWL_DELAY)),
         ]
     ),
     "probes": pa.schema(

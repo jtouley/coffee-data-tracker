@@ -5,7 +5,7 @@
 apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-internal-raw
-version: 1.3.0
+version: 1.5.0
 name: Coffee Data internal raw contract
 status: active
 domain: coffee
@@ -238,7 +238,7 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: The failure, when status is not ok.
+    description: The failure, when status is not ok; on a partial ok fetch, why it read only part of the catalog.
   - name: products
     logicalType: integer
     physicalType: int32
@@ -298,11 +298,12 @@ schema:
     logicalType: array
     physicalType: 'list<item: struct<at: timestamp[s, tz=UTC], status: int32, host: string, path: string, server: string,
       cf_mitigated: string, content_type: string, retry_after: string, cf_ray: string, x_request_id: string, egress_ip:
-      string>>'
+      string, sg_captcha: string>>'
     items:
       logicalType: object
       physicalType: 'struct<at: timestamp[s, tz=UTC], status: int32, host: string, path: string, server: string, cf_mitigated:
-        string, content_type: string, retry_after: string, cf_ray: string, x_request_id: string, egress_ip: string>'
+        string, content_type: string, retry_after: string, cf_ray: string, x_request_id: string, egress_ip: string, sg_captcha:
+        string>'
       properties:
       - name: at
         logicalType: timestamp
@@ -340,13 +341,40 @@ schema:
       - name: egress_ip
         logicalType: string
         physicalType: string
+      - name: sg_captcha
+        logicalType: string
+        physicalType: string
     required: false
-    description: Each refused or blocked response (403/429/430/503) with its diagnostic headers and egress IP.
+    description: Each refused or blocked response (202/403/429/430/503, or another edge challenge) with its diagnostic headers
+      (sg_captcha from raw 1.4.0) and egress IP.
   - name: partial
     logicalType: boolean
     physicalType: bool
     required: false
     description: True when an ok fetch read only part of the catalog; null (complete) before raw 1.2.0.
+  - name: crawl_delays
+    logicalType: array
+    physicalType: 'list<item: struct<host: string, asked: string, applied_s: double, capped: bool>>'
+    items:
+      logicalType: object
+      physicalType: 'struct<host: string, asked: string, applied_s: double, capped: bool>'
+      properties:
+      - name: host
+        logicalType: string
+        physicalType: string
+      - name: asked
+        logicalType: string
+        physicalType: string
+      - name: applied_s
+        logicalType: number
+        physicalType: double
+      - name: capped
+        logicalType: boolean
+        physicalType: bool
+    required: false
+    description: 'Each host whose robots.txt asked us a Crawl-delay: the value as written, the spacing used between its
+      requests (the delay, at least 1 s, capped at 60 s; 60 s when it has no readable number) and whether the cap applied;
+      null when none asked, and before raw 1.5.0.'
   quality:
   - id: fetch_status_values
     description: fetches.status is one of the contract's values.
@@ -510,6 +538,6 @@ customProperties:
   - enrichment job
   - registry
 - property: interfaceFingerprint
-  value: 560b0ef50859167c
+  value: 1ab99e0abd460ae3
 - property: docsFingerprint
-  value: 3025a2c4f3d3a8e0
+  value: 510117a1ef255df1

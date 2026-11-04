@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{% endblock %} · registry.coffee</title>
+{% with root = "../" %}{% include "_icons.html" %}{% endwith %}
 <link rel="canonical" href="{{ links.site }}/{% block slug %}{% endblock %}/">
 <meta name="robots" content="index, follow">
 <style>
@@ -16,6 +17,7 @@ p, li { color: var(--text-secondary); }
 li { margin: 6px 0; }
 strong { color: var(--text-primary); }
 .summary { background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; }
+pre { background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; overflow-x: auto; }
 .caps { text-transform: uppercase; font-size: 14px; letter-spacing: .01em; }
 footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(--text-muted); font-size: 13px; }
 </style>
@@ -29,7 +31,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
   {% block body %}{% endblock %}
 </main>
 <footer>
-  <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · Questions:
+  <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a> · <a href="../bot/">Our crawler</a> · Questions:
   <a href="mailto:{{ contact }}">{{ contact }}</a>
 </footer>
 </div>

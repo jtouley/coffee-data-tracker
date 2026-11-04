@@ -248,7 +248,7 @@ vendored ODCS schema and checks that each producer writes exactly its contract's
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
 | **manifest / control** | 1.1.0 (descriptions and quality rules) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.2.1 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context, documentation only) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
+| **public** | 2.2.2 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and
@@ -273,6 +273,42 @@ Every design got the same fixes, and they are in this PR:
 - per-store backoff and deferred rounds (#62). A store refused on every try is labelled `refused`.
 - **A's burst rule**: only a store's first block in a run counts towards a platform-wide pause, and a 430 still
   pauses the platform (section 13).
+- **No store is given up on after one block (PR #98, owner's decision).** On every connector, a 429, 430 or 503, on
+  robots.txt, a sitemap, a catalog page, a product page or a WooCommerce variation lookup, is a pause, never a
+  failure for the week. So is a 500, 502 or 504 whose Retry-After is over 30 s (`http.server_pause`):
+  - the client tries each URL 3 times, waiting each response's Retry-After (else 1 s, then 2 s). A Retry-After over
+    30 s (`http.MAX_RETRY_WAIT`) is never cut short: the client stops, and the store is deferred;
+  - a deferred store gets the run's 2 deferred rounds (3 attempts in all), each no sooner than its Retry-After or
+    a 60 s, then 120 s, backoff (`ingest.DEFERRED_BACKOFFS`), and never later than 5 minutes (below). Only then does
+    it end failed, for the next pass;
+  - Shopify's catalog pages keep the page backoffs above, then parking. A 430 is backed off like a 429; only a 401
+    or 403 is a refusal (`StoreBlocked`);
+  - Shopify and Squarespace have shared limiters (`Connector.rps`), set up alike: burst counting, the run's earlier
+    blocks, and page-backoff stores kept out of bursts. A store's own pause lasts its Retry-After, up to 5 minutes.
+    In the deferred rounds a worker waits out pauses up to `max_cooldown` (120 s); a longer one defers the store
+    again. The shared limiter applies through `connectors.crawl` only: `cmd_ingest` (the weekly fallback) and
+    `crawl-retry` pass no `platform_rps`, so Squarespace has no shared budget there (as on `main`);
+  - a robots.txt block is remembered for its Retry-After (else 60 s, at most 5 minutes), not for
+    `ROBOTS_RETRY_AFTER`. A robots.txt answering 204, or any 2xx that isn't a challenge, is the file (RFC 9309
+    2.3.1.1: a 204 has no rules, so everything is allowed); a challenge stays "unavailable";
+  - a Squarespace sitemap that still answers 429 or 503 on the store's last deferred round falls back to the common
+    shop paths, so its catalog isn't lost every week; no products there is an error, never an empty catalog;
+  - the hard limits stay: robots.txt rules, Retry-After, and an edge's challenge (below) is never retried or
+    deferred.
+- **The 5-minute rule (owner's decision on PR #98's final review): we never wait more than 5 minutes for anything a
+  store asks for.** In the owner's words: "they can contact us for why, but we'll wait 5 minutes." A Retry-After on
+  the catalog or on robots.txt (in seconds or as an HTTP date), the limiter's pause for one store
+  (`HostRateLimited`), a 5xx's long Retry-After and a Shopify page backoff are all cut to 300 s
+  (`http.MAX_STORE_WAIT`, applied by `http.store_wait`). A store asking for longer is waited for 300 s and asked
+  again in the next deferred round: never failed just for asking, and never asked sooner than 300 s. Before this, one
+  store answering `Retry-After: 7200` held a run without a deadline for 4 hours of deferred rounds. Two guards keep a
+  job inside its window as well:
+  - a deferred retry or a page backoff is never scheduled past the run's deadline: the store keeps its error row
+    for the next pass (`deferred.past_deadline`), and a Shopify store with pages is parked at once for crawl-retry;
+  - every pass has a deadline that fits its 240-minute timeout: the crawls and `crawl-retry` stop starting stores
+    at 225 minutes (`Connector.deadline_min`; `cli.CRAWL_RETRY_MIN` without `--connector`), and the weekly
+    fallback's two ingest passes at 150 minutes from the run's start (`cli.WEEKLY_CRAWL_MIN`), which leaves
+    enrichment, classify's 45-minute wait, the build and the export inside weekly.yml's 240 minutes.
 
 ## 7. Cloud Run Jobs + Cloud Scheduler (no Prefect)
 
@@ -469,7 +505,9 @@ cutover and rollback steps are in the runbook.
 ## 8. Pacing (per-connector config, from C)
 
 `connectors.Connector` holds each connector's pacing:
-- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`);
+- `rps`: the platform-wide request budget (Shopify: `SHOPIFY_RPS`; Squarespace: `SQUARESPACE_RPS`, from PR #98). The
+  job records its limiter's stats (requests, 429s, pauses, deferrals) in `job_manifests.detail.<connector>_limiter`
+  (`shopify_limiter`, `squarespace_limiter`);
 - `shuffle`: stores in a shuffled order, seeded by connector and week, so the same stores aren't always the last
   ones asked (new in this PR);
 - `deadline_min`: the crawl window, i.e. how long one job may start new stores, up to its time limit (225 of 240 min).
@@ -506,12 +544,17 @@ thing to test (Next).
 
 ### Block-header logging (this PR)
 
-Every 403, 429, 430 or 503 response, robots.txt and redirects included, adds a record to its fetch row,
+Every 202, 403, 429, 430 or 503 response, and any other edge challenge (`http.is_challenge`: a `sg-captcha` header,
+or `cf-mitigated: challenge`, on any status), robots.txt and redirects included, adds a record to its fetch row,
 `fetches.blocks` (at most 20 per fetch). Each record holds: `at`, `status`, `host`, `path`, `server`,
-`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id` and `egress_ip`. That answers the research's
-open questions from our own logs:
-- is a block a Cloudflare challenge (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or a rate
-  limit (JSON, `retry-after: 60`)?
+`cf_mitigated`, `content_type`, `retry_after`, `cf_ray`, `x_request_id`, `egress_ip` and, from raw 1.4.0,
+`sg_captcha`. That answers the research's open questions from our own logs:
+- is a block a challenge, Cloudflare's (`cf-mitigated: challenge`, an HTML body, often no Retry-After) or
+  SiteGround's (HTTP 202 with `sg-captcha: challenge`, run 2026-11-02), or a rate limit (JSON, `retry-after: 60`)?
+- A challenge counts as a block and a first-contact refusal, and is never retried or deferred: it answers every
+  retry the same way. On robots.txt it is no answer about the rules, whatever its status (a 401 or 403 with a
+  challenge header included): nothing is fetched from the host for `ROBOTS_RETRY_AFTER`. A shared limiter never
+  counts one as a success.
 - does it cluster by IP or by hour?
 
 It also gives Shopify Support what it asks for: the UTC time, `x-request-id`, `cf-ray` and the source IP. Tested in
@@ -539,7 +582,7 @@ The question: does one dedicated NAT IP beat default egress for Shopify, and at 
 - **Metrics per arm**, from `job_manifests` and `fetches.blocks`:
   - first-contact refusal share per IP, with Wilson 95% intervals;
   - ok share (ok stores over the slice's stores) with Wilson 95% intervals, refused, parked and wall time;
-  - the share of blocks that are challenges (`cf_mitigated`) and that carry Retry-After.
+  - the share of blocks that are challenges (`cf_mitigated`, `sg_captcha`, or a 202) and that carry Retry-After.
 - **Decision** (the same rules as RUNBOOK §3; shares, never counts, since the slices differ in size):
   - dedicated egress stays if arm 2's first-contact refusal share is below arm 1's with Wilson intervals that don't
     overlap, or if they overlap while arm 1's blocks are challenges and arm 2's aren't;
@@ -604,7 +647,9 @@ held-out evaluation (CLAUDE.md): that is in Next, once weekly crawls have marked
   reports say registration takes days to weeks, and that a signature alone isn't recognized until the bot is
   registered. **Operator details are the owner's to supply**: the domain for the key directory, the contact address,
   and the bot page.
-- **Honest UA**: keep `coffee-data/0.1 (+URL)`, and add a contact and a bot page (purpose, rate, opt-out).
+- **Honest UA** (done): `RegistryCoffeeBot/1.0 (+https://registry.coffee/bot; support@registry.coffee)`, with a bot
+  page on the site (purpose, rate, opt-out). robots.txt groups for the old token, `coffee-data`, still apply, and a
+  `Crawl-delay` is honoured up to 60 seconds between requests (http.MAX_CRAWL_DELAY).
 - **The secondary crawler is a separate component**: draft PR #67 (`coffeedata pages`), for stores whose JSON feed
   refuses every request. Its rules: a transparent UA with contact, robots.txt respected, 3 s between requests, the
   first 401/403/429/430/503 or challenge stops the store, no CAPTCHA/login/403 bypass, facts only. It maps pages and

@@ -1,0 +1,38 @@
+# Citation metadata (Citation File Format 1.2.0, https://citation-file-format.github.io/).
+# The top level describes this repository; preferred-citation is the public dataset, which is what to cite.
+# DOI: none yet. Whether to mint one (Zenodo or Hugging Face) is undecided; add `doi:` to both entries when it is.
+# The dataset's licence is CDLA-Permissive-2.0 (licenses/CDLA-Permissive-2.0.txt). CFF 1.2.0's SPDX list predates
+# that identifier, so it is given as license-url and in notes; the code's licence is MIT (LICENSE).
+cff-version: 1.2.0
+message: If you use this dataset, please cite it as below, with the release_run_date of the release you used.
+type: software
+title: "registry.coffee: US specialty coffee market dataset"
+authors:
+  - family-names: Touleyrou
+    given-names: Jason
+    alias: jtouley
+repository-code: https://github.com/jtouley/coffee-data-tracker
+url: https://registry.coffee
+license: MIT
+keywords:
+  - coffee
+  - specialty-coffee
+  - prices
+  - open-data
+  - dataset
+  - data-contract
+preferred-citation:
+  type: data
+  title: "registry.coffee: US specialty coffee market dataset"
+  authors:
+    - family-names: Touleyrou
+      given-names: Jason
+      alias: jtouley
+  url: https://registry.coffee
+  repository: https://huggingface.co/datasets/jtouley/us-coffee-market
+  repository-code: https://github.com/jtouley/coffee-data-tracker
+  license-url: https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt
+  notes: >-
+    Weekly releases, from 2026-10-26, of what US specialty coffee roasters list on their own storefronts. Licensed
+    under CDLA-Permissive-2.0.
+  year: 2026

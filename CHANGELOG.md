@@ -38,10 +38,15 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   haptics, dark mode and empty states (#21). Confirmed saves and bag editing (#38). Switching between open bags
   (#53), shots outside the traditional espresso window (#54) and catalog search to correct a bag's coffee (#55).
 - **Public site** at registry.coffee: a launch page and runbook (#19), then beta entry points and one visual system
-  (#35).
+  (#35). Findable: schema.org Dataset JSON-LD, robots.txt and sitemap.xml, only public roasters on the site,
+  and self-describing releases (manifest, licence text, `release-<run date>` tags on Hugging Face) (#89).
 - **Deployment.** The app on Cloud Run with Terraform, JSON logs and alerts (#24), an uptime check (#32), and
   hardening of the single instance against request bursts (#34).
 - **Snowflake.** A dry run for `load-snowflake --migrate` (#43).
+- **Data licence and citation.** The public dataset is CDLA-Permissive-2.0
+  (`licenses/CDLA-Permissive-2.0.txt`, outside the root so GitHub still shows the code's MIT); the code stays MIT.
+  `CITATION.cff`, and public contract 2.2.2 (documentation only): licence, servers, team, tags and units, with
+  the product's input ports (#88).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
 - **Post-crawl data quality.** `coffeedata crawl-dq` runs the gate's `run_ok_rate`, `adapter_ok_rate` and suspect-run
@@ -78,7 +83,8 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
   crowded out by shared words now match (#57).
 - Site: copy fixes (#26). The site workflow renders the served release (#59) and skips while nothing is served
-  (#65).
+  (#65). Without a Hugging Face export the launch page leaves out its "Query it from anywhere" section (the
+  example query and the how-it's-built steps beside it) rather than show a placeholder path (#89).
 - Issue forms: the add-roaster form reads a state as a code or a full name (#28).
 - Lake: a table with no folder on Hugging Face reads as empty (#31), and a remote table is read only once the
   dataset has its folder (#47).

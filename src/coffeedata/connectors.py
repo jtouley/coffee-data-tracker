@@ -37,7 +37,7 @@ import pyarrow.parquet as pq
 
 from . import control, crashguard, ingest
 from .lake import SCHEMAS, Lake, new_batch_id, retry_transient
-from .ratelimit import SHOPIFY_RPS
+from .ratelimit import SHOPIFY_RPS, SQUARESPACE_RPS
 
 log = logging.getLogger(__name__)
 
@@ -69,7 +69,7 @@ CONNECTORS: dict[str, Connector] = {
     c.name: c
     for c in (
         Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
-        Connector("squarespace", 0, 9),
+        Connector("squarespace", 0, 9, rps=SQUARESPACE_RPS),  # one shared budget, as Shopify's
         Connector("woocommerce", 0, 9),
         Connector("square_online", 0, 9),
         Connector("generic", 0, 9),
@@ -310,7 +310,11 @@ def crawl(
         raise
     ok, errors = _ok_errors(out)
     detail = {"rows": rows, "by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
-              "shopify_limiter": out.get("shopify_limiter") if c.rps else None,
+              "partial": out.get("partial", 0),
+              # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
+              "partial_every_week": out.get("partial_every_week") or [],
+              # the job's own limiter (requests, 429s, pauses), as shopify_limiter, squarespace_limiter...
+              **({f"{connector}_limiter": (out.get("limiters") or {}).get(connector)} if c.rps else {}),
               # the network the job actually ran on (set by the deploy), else the connector's config
               "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
               # the confirmation run's arm (COFFEEDATA_ARM), budget and slice, if any
@@ -319,7 +323,8 @@ def crawl(
               # the Cloud Run execution and task attempt, and the poison-pill guard's view at the start
               **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
-        lake, job, "deadline" if out.get("skipped_deadline") else "done",
+        # deadline: roasters left unstarted, or catalogs it stopped mid-way (partial): the resume slot reads them
+        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done",
         ok=ok, errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0),
         skipped=out.get("skipped_deadline", 0), requests=out.get("requests"), http_429=out.get("http_429"),
         http_430=out.get("http_430"), first_contact=out.get("first_contact"),
@@ -351,14 +356,17 @@ def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
     return [s for s in listed if s.roaster.roaster_id not in have]
 
 
-def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
+def crawl_retry(
+    lake: Lake, connector: str, day: str, workers: int = 8, deadline_min: float | None = None
+) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
     their blocked page, and, only with re-fetch on (crawldq.refetch_enabled), the post-crawl check's repulls (a
     fetch that landed but looks bad: empty or suspect).
     Only those: a store that failed outright is not asked again here, so a Shopify store that refused all day isn't
     re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job
-    crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl."""
+    crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl. Like crawl, it stops
+    starting stores at deadline_min (default the connector's, under the job's 240-minute limit)."""
     week = week_of(day)
     plake = PartitionLake(lake, connector, week)
     compact(plake.part)
@@ -369,22 +377,30 @@ def crawl_retry(lake: Lake, connector: str, day: str, workers: int = 8) -> dict:
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = health.quarantine(ids)
     started = control.execution() | health.summary(ids)
+    window = _window_left(
+        lake, "crawl-retry", connector, week, deadline_min or CONNECTORS[connector].deadline_min
+    )
     job = control.start(lake, "crawl-retry", week, connector, len(states), detail=started)
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     try:
         out = ingest.run(plake, states, week, workers=workers, mode="retry_failed", resume=resume, guard=guard,
                          suspects=set(health.suspects) - set(quarantine), quarantine=quarantine,
-                         refetch={s.roaster.roaster_id for s in repulls})  # fmt: skip
+                         refetch={s.roaster.roaster_id for s in repulls}, deadline_s=60 * window)  # fmt: skip
         compact(plake.part)
     except Exception as e:
         control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})
         raise
     ok, errors = _ok_errors(out)
     control.finish(
-        lake, job, "deadline" if out.get("skipped_deadline") else "done", ok=ok, errors=errors,
-        parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
+        # deadline, as crawl's: roasters left unstarted, or catalogs it stopped mid-way again (partial)
+        lake, job, "deadline" if out.get("skipped_deadline") or out.get("partial") else "done", ok=ok,
+        errors=errors, parked=(out.get("deferred") or {}).get("page_parked", 0), requests=out.get("requests"),
         http_429=out.get("http_429"), http_430=out.get("http_430"), first_contact=out.get("first_contact"),
+        skipped=out.get("skipped_deadline", 0),
         detail=started | {"by_adapter": out.get("by_adapter"), "deferred": out.get("deferred"),
+                          "partial": out.get("partial", 0),
+                          # stores partial in each of their last runs (ingest.PARTIAL_WEEKS): RUNBOOK §5.3
+                          "partial_every_week": out.get("partial_every_week") or [],
                           "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or CONNECTORS[connector].egress},
     )  # fmt: skip
     guard.close()

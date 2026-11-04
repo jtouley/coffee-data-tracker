@@ -16,7 +16,7 @@ import json
 import logging
 import time
 from collections import Counter, deque
-from collections.abc import Iterator, Sequence
+from collections.abc import Sequence
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor
 from concurrent.futures import wait as wait_any
 from dataclasses import dataclass, field
@@ -28,10 +28,26 @@ import httpx
 from . import crashguard, lineage, registry
 from .adapters import fetch_catalog
 from .adapters.shopify import PageBlocked, StoreBlocked
-from .http import BLOCK_STATUSES, FetchError, PoliteClient, RequestStats, Unavailable, egress_ip
+from .http import (
+    BLOCK_STATUSES,
+    MAX_STORE_WAIT,
+    SERVER_RETRY_STATUSES,
+    FetchError,
+    PartialCatalog,
+    PoliteClient,
+    RequestStats,
+    RobotsUnavailable,
+    Unavailable,
+    asked_wait,
+    causes,
+    challenged,
+    egress_ip,
+    server_pause,
+    store_wait,
+)
 from .lake import Lake, new_batch_id, retry_transient
 from .models import CatalogItem, Roaster
-from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, PlatformLimiter, RateLimited
+from .ratelimit import SHOPIFY_CONCURRENCY, SHOPIFY_RPS, HostRateLimited, PlatformLimiter, RateLimited
 
 log = logging.getLogger(__name__)
 
@@ -41,35 +57,67 @@ DEFERRED_ROUNDS = 2  # after the main pass, rate-limited or timed-out roasters a
 # A deferred round's retries are spread over this many seconds (a Retry-After is typically 60), so parked stores
 # don't all wake and ask at the same instant.
 DEFERRED_SPREAD = 60.0
+# A store deferred on a block (429, 430, 503, or a 500/502/504 with a long Retry-After) is asked again no sooner than
+# its Retry-After or these many seconds after its failure (one per deferred round), whichever is longer, plus its place
+# in the round's spread. Never later than http.MAX_STORE_WAIT (5 minutes): a store asking for longer is asked again
+# then, in the next deferred round, and never scheduled past the run's deadline.
+DEFERRED_BACKOFFS = (60.0, 120.0)
 # A store that pauses us on a catalog page (shopify.PageBlocked) is asked for that same page again after each of
-# these waits (at least its Retry-After), without holding a worker meanwhile; the pages it already served are kept.
+# these waits (at least its Retry-After, at most http.MAX_STORE_WAIT), without holding a worker meanwhile; the pages it
+# already served are kept. A backoff that would end past the run's deadline parks the store at once.
 # After the last one it is parked, with its progress, for `coffeedata crawl-retry`.
 PAGE_BACKOFFS = (60.0, 120.0, 240.0)
 
 
-def _causes(e: BaseException | None) -> Iterator[BaseException]:
-    while e is not None:
-        yield e
-        e = e.__cause__
-
-
 def blocked(e: BaseException) -> bool:
-    """The store (or the platform) refused with a block status: 429, 430 or 503, or the limiter's own refusal. The
-    status may come wrapped (an HTTPStatusError cause) or bare (a FetchError from fetch_json or catalog_json)."""
-    return any(
+    """The store (or the platform) refused with a block status: 429, 430 or 503, an edge's challenge (202), or the
+    limiter's own refusal. The status may come wrapped (an HTTPStatusError cause) or bare (a FetchError from
+    fetch_json or catalog_json)."""
+    return challenged(e) or any(
         isinstance(c, RateLimited)
         or (isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES)
         or (isinstance(c, FetchError) and c.status in BLOCK_STATUSES)
-        for c in _causes(e)
+        for c in causes(e)
     )
 
 
+def server_paused(e: BaseException) -> float | None:
+    """How long a 500, 502 or 504 asked us to stay away, when it asked for longer than the client waits
+    (http.server_pause, at most MAX_STORE_WAIT), on the catalog or on robots.txt. None for any other failure."""
+    for c in causes(e):
+        if isinstance(c, httpx.HTTPStatusError) and (wait := server_pause(c.response)) is not None:
+            return wait
+        if isinstance(c, RobotsUnavailable) and not c.challenge and c.status in SERVER_RETRY_STATUSES:
+            return c.wait or 0.0
+    return None
+
+
 def deferrable(e: BaseException) -> bool:
-    """A failure worth another try once the rest of the run is done: rate limiting or a timeout. Never a refusal
-    (401, 403, 430: shopify.StoreBlocked), and never a page block, which ingest.run backs off itself."""
-    if any(isinstance(c, StoreBlocked | PageBlocked) for c in _causes(e)):
+    """A failure worth another try once the rest of the run is done: rate limiting (429, 430, 503, on any request,
+    robots.txt included), a 500, 502 or 504 with a long Retry-After (server_paused) or a timeout. Never a refusal (401, 403: shopify.StoreBlocked; an edge's challenge, which
+    answers every retry the same way: the 15:18 resume of 2026-11-02 asked 32 challenged stores again and got 32
+    challenges), and never a page block, which ingest.run backs off itself."""
+    if challenged(e) or any(isinstance(c, StoreBlocked | PageBlocked) for c in causes(e)):
         return False
-    return blocked(e) or any(isinstance(c, httpx.TimeoutException) for c in _causes(e))
+    return (
+        blocked(e)
+        or server_paused(e) is not None
+        or any(isinstance(c, httpx.TimeoutException) for c in causes(e))
+    )
+
+
+def block_wait(e: BaseException) -> float | None:
+    """How long the store asked us to wait (its Retry-After, a 5xx's long one, or the limiter's pause for it), if it
+    said: at most MAX_STORE_WAIT, however long it asked for."""
+    for c in causes(e):
+        if isinstance(c, HostRateLimited | RobotsUnavailable) and c.wait is not None:
+            return store_wait(c.wait)
+        if isinstance(c, httpx.HTTPStatusError) and c.response.status_code in BLOCK_STATUSES:
+            asked = asked_wait(c.response)
+            return None if asked is None else store_wait(asked)
+        if isinstance(c, httpx.HTTPStatusError) and (wait := server_pause(c.response)) is not None:
+            return wait
+    return None
 
 
 def parked_path(lake: Lake, run_date: str, roaster_id: str) -> Path:
@@ -107,11 +155,20 @@ class Result:
     stats: RequestStats = field(default_factory=RequestStats)
     duration_s: float | None = None
     deferrable: bool = False
-    blocked: bool = False  # failed on a block status (429, 430, 503) or the limiter's refusal
+    # a deferrable failure's Retry-After (block_wait): the store isn't asked again before it passes
+    wait: float | None = None
+    # failed on a block status (429, 430, 503), an edge's challenge (202) or the limiter's refusal
+    blocked: bool = False
     unavailable: bool = False  # the store is closed, deactivated or password-protected (http.Unavailable)
     progress: dict | None = None  # blocked mid-catalog (shopify.PageBlocked): {"page", "items", "wait"}
     # not fetched: in flight in 2 dead attempts this week (crashguard); its fetches status is `crashed`
     quarantined: bool = False
+    # ok, but the catalog was read only in part (http.PartialCatalog); fetches.partial
+    partial: bool = False
+    # why it was partial (PartialCatalog's message: how far it got): fetches.error on the partial ok row
+    partial_reason: str | None = None
+    # a partial paged catalog's place (PartialCatalog.page): {"page", "items"}, parked so a resume continues there
+    resume_at: dict | None = None
 
     @property
     def status(self) -> str:
@@ -131,6 +188,15 @@ def ingest_one(
             res.items = list(
                 {i.product_id: i for i in fetch_catalog(client, roaster, resume, known_products)}.values()
             )  # feeds repeat items
+        except PartialCatalog as e:
+            if e.items:  # what it read, marked partial: dbt keeps the rest listed instead of delisting it
+                res.items = list({i.product_id: i for i in e.items}.values())
+                res.partial = True
+                res.partial_reason = f"partial: {e}"[:300]
+                if e.page is not None:
+                    res.resume_at = {"page": e.page, "items": res.items}
+            else:  # nothing read: an error, never an empty catalog
+                res.error = f"{type(e.__cause__ or e).__name__}: {e}"[:300]
         except PageBlocked as e:
             res.error = f"{type(e).__name__}: {e}"[:300]
             res.items = []  # never a partial catalog in the lake: the pages so far wait in `progress`
@@ -140,8 +206,9 @@ def ingest_one(
             res.error = f"{type(e).__name__}: {e}"[:300]
             res.items = []
             res.deferrable = deferrable(e)
+            res.wait = block_wait(e) if res.deferrable else None
             res.blocked = blocked(e)
-            res.unavailable = any(isinstance(c, Unavailable) for c in _causes(e))
+            res.unavailable = any(isinstance(c, Unavailable) for c in causes(e))
     res.duration_s = round(time.monotonic() - start, 3)
     return res
 
@@ -152,17 +219,19 @@ def _attempt(
     resume: dict | None,
     known: int | None,
     guard: crashguard.Guard | None = None,
+    last: bool = False,
 ) -> Result:
     """One roaster's fetch, in a worker. Its in-flight marker (guard) is written when the worker starts it, not when
     it is queued (every roaster is queued at once), and removed when it returns: only the fetches actually running
-    when the process dies are left marked."""
+    when the process dies are left marked. last: the store's last try in this pass (PoliteClient.last_try)."""
     if guard is not None:
         guard.start(roaster.roaster_id)
     try:
-        if resume is None and known is None:
-            res = ingest_one(client, roaster)
-        else:
-            res = ingest_one(client, roaster, resume, known)
+        with client.last_try(last):
+            if resume is None and known is None:
+                res = ingest_one(client, roaster)
+            else:
+                res = ingest_one(client, roaster, resume, known)
     except Exception:  # contained by run(): the fetch returned, with an error
         if guard is not None:
             guard.end(roaster.roaster_id)
@@ -181,6 +250,31 @@ def known_products(lake: Lake) -> dict[str, int]:
             where status = 'ok' and products > 0 and not coalesce(partial, false) and roaster_id is not null
             group by 1"""
     return dict(retry_transient(lambda: lake.connect().execute(q).fetchall()))
+
+
+# A store whose fetch ended partial (an ok fetch marked partial, no complete one) in each of this many run dates in a
+# row, this one included, is warned about: a catalog too big for one window, or a store whose count never matches.
+PARTIAL_WEEKS = 2
+
+
+def partial_every_week(
+    lake: Lake, run_date: str, roaster_ids: set[str], weeks: int = PARTIAL_WEEKS
+) -> list[str]:
+    """The roasters of roaster_ids that ended partial in each of their last `weeks` run dates, this one included:
+    each of those weeks has an ok fetch marked partial and no complete ok fetch."""
+    if not roaster_ids:
+        return []
+    q = f"""with w as (
+                select roaster_id, run_date,
+                       bool_or(status = 'ok' and coalesce(partial, false)) as part,
+                       bool_or(status = 'ok' and not coalesce(partial, false)) as whole
+                from {lake.scan("fetches")} where roaster_id is not null and run_date <= ? group by 1, 2),
+            ranked as (select *, row_number() over (partition by roaster_id order by run_date desc) as rn from w)
+            select roaster_id from ranked where rn <= ? group by 1
+            having count(*) = ? and bool_and(part and not whole) and max(run_date) = ?"""
+    d = date.fromisoformat(run_date)
+    rows = retry_transient(lambda: lake.connect().execute(q, [d, weeks, weeks, d]).fetchall())
+    return sorted(r[0] for r in rows if r[0] in roaster_ids)
 
 
 def blocked_hosts(lake: Lake, run_date: str) -> set[str]:
@@ -237,12 +331,14 @@ def crawlable(s: registry.RoasterState, tried: set[str] | frozenset[str]) -> boo
 
 
 def _done_and_tried(lake: Lake, run_date: str) -> tuple[set[str], set[str]]:
-    """This run's roasters done (fetched; found closed: unavailable, so asking again won't help until next week; or
-    quarantined after crashing two attempts: crashed) and tried at all."""
+    """This run's roasters done (fetched whole; found closed: unavailable, so asking again won't help until next week;
+    or quarantined after crashing two attempts: crashed) and tried at all. A partial fetch isn't done: a resume slot
+    or a later pass reads the whole catalog again (dbt prefers a complete batch of the week over a partial one)."""
     con = lake.connect()
     q = f"select distinct roaster_id from {lake.scan('fetches')} where run_date = ?"
     d = [date.fromisoformat(run_date)]
-    done = {r[0] for r in con.execute(q + " and status in ('ok', 'unavailable', 'crashed')", d).fetchall()}
+    done_q = " and status in ('ok', 'unavailable', 'crashed') and not coalesce(partial, false)"
+    done = {r[0] for r in con.execute(q + done_q, d).fetchall()}
     tried = {r[0] for r in con.execute(q, d).fetchall()}
     return done, tried
 
@@ -314,7 +410,8 @@ def rows_for(
                 "roaster_id": r.roaster_id,
                 "adapter": r.adapter,
                 "status": res.status,
-                "error": res.error,
+                # a partial ok fetch says why (how far it got), so the lake shows where a catalog stopped
+                "error": res.error or (res.partial_reason if res.status == "ok" else None),
                 "products": len(res.items),
                 "coffees": None,
                 "pages": res.stats.pages,
@@ -327,7 +424,9 @@ def rows_for(
                 "duration_s": res.duration_s,
                 "code_version": code_version,
                 "blocks": res.stats.blocks or None,
-                "partial": None,  # set by a source that can land a partial catalog (the secondary crawler, #67)
+                # an ok fetch that read only part of the catalog (stopped at the run's deadline); else complete
+                "partial": res.partial if res.status == "ok" else None,
+                "crawl_delays": res.stats.crawl_delays or None,
             }
         )
         for it in res.items:
@@ -371,7 +470,9 @@ def run(
     a remote lake, before the first request. Only a 'full' manifest is the run's expected set (run_completeness);
     without a mode it is recorded as null, which only adds to that set. resume: parked stores' progress
     (load_parked), so crawl-retry continues each from its blocked page. deadline_s: seconds from now after which no
-    new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up).
+    new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up) and no
+    request is sent: a catalog still being read stops there and is stored as partial (fetches.partial), never as the
+    whole catalog.
     refetch: the post-crawl check's repulls, fetched without a known product count (a whole catalog).
 
     The poison-pill guard (crashguard, from connectors.crawl): guard records each roaster in flight; suspects are
@@ -424,11 +525,13 @@ def run(
             a["roasters"] += 1
             a["errors"] += bool(res.error) and not res.quarantined  # a quarantined one has its own count
             a["with_products"] += bool(res.items)
+            a["partial"] += res.partial
             if res.quarantined:  # never asked: no request, no first contact
                 a["quarantined"] += 1
                 failures.append(f"{res.roaster.roaster_id}: {res.error}")
                 continue
             stats["products"] += len(res.items)
+            stats["partial"] += res.partial
             stats["requests"] += res.stats.requests
             stats["http_429"] += res.stats.statuses.get(429, 0)
             stats["http_430"] += res.stats.statuses.get(430, 0)
@@ -447,33 +550,41 @@ def run(
                 res.roaster.roaster_id,
                 res.roaster.adapter,
                 len(res.items),
-                res.error or "",
+                res.error or res.partial_reason or "",
             )
 
     # Every roaster is queued at once and results are written as they finish, so a slow site or a publish
     # never leaves the other workers idle.
-    # Shopify limits by client IP across all its stores, so its stores share one request budget.
-    shopify = PlatformLimiter(
-        "shopify", rate=shopify_rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host
-    )
+    # Shopify limits by client IP across all its stores, so its stores share one request budget. Any other platform
+    # with a shared budget (a connector's config: connectors.Connector.rps) gets its own, set up the same way.
+    rates = {"shopify": shopify_rps} | {k: v for k, v in (platform_rps or {}).items() if k != "shopify"}
+    limiters = {
+        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
+        for name, rps in rates.items()
+    }
+    shopify = limiters["shopify"]
     # Only a store's first block in a run counts towards a platform-wide pause: a retry pass asks only stores that
     # already failed, and a store that blocked in an earlier job of this run (a resume, crawl-retry) is a repeat.
-    shopify.count_bursts = mode != "retry_failed"
-    shopify.ever_blocked |= blocked_hosts(lake, run_date)
-    # Any other platform with a shared budget (a connector's config: connectors.Connector.rps) gets its own.
-    limiters = {"shopify": shopify} | {
-        name: PlatformLimiter(name, rate=rps, max_concurrent=SHOPIFY_CONCURRENCY, per_host=per_host)
-        for name, rps in (platform_rps or {}).items()
-        if name != "shopify"
-    }
+    blocked_before = blocked_hosts(lake, run_date)
+    for limiter in limiters.values():
+        limiter.count_bursts = mode != "retry_failed"
+        limiter.ever_blocked |= blocked_before
     if held_out:
         flush(held_out)
     deferred: dict[str, int] = {}
+    not_before: dict[str, float] = {}  # parked roaster -> when its Retry-After (or a backoff) has passed
     retried_ok: dict[str, bool] = {}  # parked roaster -> whether its latest deferred attempt succeeded
     # Roasters that have answered every attempt this run with a block and never served a catalog page.
     refusing: dict[str, int] = {}  # roaster -> attempts so far
     with (
-        PoliteClient(limiters=limiters, **(client_kw or {})) as client,
+        # the deadline also stops a catalog still being read: no request is sent after it, and no host's Crawl-delay
+        # is waited out past it (http.DeadlineReached); what was read is stored as a partial fetch. It is the run's
+        # own deadline, as it stands now: the client stops at the same moment, not deadline_s after this point (the
+        # manifest publish and the lake reads above came first)
+        PoliteClient(
+            limiters=limiters,
+            **({"deadline_s": None if deadline is None else deadline - time.monotonic()} | (client_kw or {})),
+        ) as client,
         ThreadPoolExecutor(workers) as ex,
     ):
         # A failure is written like any other result, in the chunk it finishes in, and every chunk of a round
@@ -509,18 +620,23 @@ def run(
                 done = []
             p = progress.get(r.roaster_id)
             resume_at = p and {"page": p["page"], "items": p["items"]}
-            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard)
+            last = round_ == rounds - 1
+            fut = ex.submit(_attempt, client, r, resume_at, known.get(r.roaster_id), guard, last)
             futures[fut] = r
             running.add(fut)
 
         for round_ in range(rounds):
             if round_:
-                shopify.defer = False  # nothing left to overtake: wait out a store's pause in the worker
+                for limiter in limiters.values():
+                    limiter.defer = False  # nothing left to overtake: wait out a store's pause in the worker
                 deferred[f"round_{round_}"] = len(queue)
             t0, spread = time.monotonic(), DEFERRED_SPREAD if round_ else 0.0
             # (start time, order, roaster): a store is submitted when its time comes, so neither a deferred round's
             # spread nor a page backoff holds a worker while it waits.
-            pending = [(t0 + spread * i / len(queue), i, r) for i, r in enumerate(queue)]
+            pending = [
+                (max(t0, not_before.get(r.roaster_id, 0.0)) + spread * i / len(queue), i, r)
+                for i, r in enumerate(queue)
+            ]
             heapq.heapify(pending)
             order = len(pending)
             running = set()
@@ -581,32 +697,62 @@ def run(
                     if res.progress is not None:  # blocked on a page: back off, then that page again
                         p = progress.setdefault(rid, {"backoffs": 0})
                         p |= {k: res.progress[k] for k in ("page", "items", "host")}
-                        if p["backoffs"] < len(PAGE_BACKOFFS):
-                            wait = max(res.progress["wait"], PAGE_BACKOFFS[p["backoffs"]])
+                        n = min(p["backoffs"], len(PAGE_BACKOFFS) - 1)
+                        wait = min(MAX_STORE_WAIT, max(res.progress["wait"] or 0.0, PAGE_BACKOFFS[n]))
+                        due = time.monotonic() + wait
+                        past_deadline = deadline is not None and due >= deadline
+                        if p["backoffs"] < len(PAGE_BACKOFFS) and not past_deadline:
                             p["backoffs"] += 1
                             page_stats["backoffs"] += 1
                             res.error = (
                                 f"backoff {p['backoffs']} of {len(PAGE_BACKOFFS)} ({wait:.0f}s, then page "
                                 f"{p['page']} again): {res.error}"
                             )[:300]
-                            shopify.quiet_hosts.add(res.progress["host"])
-                            heapq.heappush(pending, (time.monotonic() + wait, order, res.roaster))
+                            for limiter in limiters.values():  # its page backoff is its own pause
+                                limiter.quiet_hosts.add(res.progress["host"])
+                            heapq.heappush(pending, (due, order, res.roaster))
                             order += 1
-                        else:
+                        else:  # backoffs spent, or the next one would end past the deadline: parked now
                             save_parked(lake, run_date, rid, p)
                             page_stats["parked"] += 1
                             never = p["page"] == 1 and not p["items"]
+                            why = f"still blocked after {len(PAGE_BACKOFFS)} backoffs"
+                            if p["backoffs"] < len(PAGE_BACKOFFS):
+                                page_stats["parked_at_deadline"] += 1
+                                why = f"blocked; its {wait:.0f}s backoff would end past the deadline"
                             res.error = (
-                                f"{'refused' if never else 'parked'}: page {p['page']} still blocked after "
-                                f"{len(PAGE_BACKOFFS)} backoffs; crawl-retry resumes it; last {res.error}"
+                                f"{'refused' if never else 'parked'}: page {p['page']} {why}; crawl-retry resumes "
+                                f"it; last {res.error}"
                             )[:300]
                             if never:
                                 page_stats["parked_never_served"] += 1
                     else:
                         if not res.error:
-                            shopify.quiet_hosts.discard(progress.pop(rid, {}).get("host", ""))
-                            parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
+                            quiet = progress.pop(rid, {}).get("host", "")
+                            for limiter in limiters.values():
+                                limiter.quiet_hosts.discard(quiet)
+                            if res.resume_at is not None:
+                                # partial (the deadline stopped it mid-catalog): its place is parked, so the resume
+                                # slot or crawl-retry continues from that page instead of page 1
+                                save_parked(lake, run_date, rid, res.resume_at)
+                                page_stats["parked_partial"] += 1
+                            else:  # read whole (or not a paged catalog): nothing left to resume
+                                parked_path(lake, run_date, rid).unlink(missing_ok=True)  # crawl-retry got it
                         last = not (res.error and res.deferrable) or round_ == rounds - 1
+                        # A pause (a block, or a 5xx's long Retry-After): not asked again before its Retry-After
+                        # (at most MAX_STORE_WAIT), else a backoff. Never scheduled past the deadline: that store keeps
+                        # this error row, and the next pass (a resume, crawl-retry, the retry pass) asks again.
+                        paused = res.blocked or res.wait is not None
+                        backoff = DEFERRED_BACKOFFS[min(round_, len(DEFERRED_BACKOFFS) - 1)]
+                        due = time.monotonic() + (
+                            store_wait(max(res.wait or 0.0, backoff)) if paused else 0.0
+                        )
+                        if not last and paused and deadline is not None and due >= deadline:
+                            last = True
+                            deferred["past_deadline"] = deferred.get("past_deadline", 0) + 1
+                            res.error = f"not retried: its wait ends past the run's deadline; {res.error}"[
+                                :300
+                            ]
                         if last and rid in refusing and round_:
                             res.error = (
                                 f"refused: answered a block to every catalog request in this run "
@@ -614,6 +760,8 @@ def run(
                             )[:300]
                         if not last:
                             parked.append(res.roaster)
+                            if paused:
+                                not_before[rid] = due
                     done.append(res)
                     if len(done) == CHUNK:
                         flush(done)
@@ -630,6 +778,19 @@ def run(
             deferred["still_failing"] = sum(not ok for ok in retried_ok.values())
             deferred["refused"] = sum(1 for rid, ok in retried_ok.items() if not ok and rid in refusing)
         deferred |= {f"page_{k}": v for k, v in page_stats.items()}
+    stuck: list[str] = []
+    if stats["partial"]:
+        try:
+            stuck = partial_every_week(lake, run_date, {r.roaster_id for r in roasters})
+        except Exception as e:  # noqa: BLE001 - a warning's read never fails the run
+            log.warning("could not check for stores partial every week: %s", e)
+        if stuck:
+            log.warning(
+                "%d stores ended partial in each of their last %d runs (never read whole): %s",
+                len(stuck),
+                PARTIAL_WEEKS,
+                ", ".join(stuck),
+            )
     return {
         "run_date": run_date,
         "roasters": len(roasters),
@@ -638,8 +799,13 @@ def run(
         "failures": failures[:50],
         "quarantined": sorted(quarantine),  # not fetched: a `crashed` row each (crashguard)
         "shopify_limiter": dict(shopify.stats),  # requests, 429s, platform-wide pauses, stores paused/parked
+        "limiters": {
+            name: dict(limiter.stats) for name, limiter in limiters.items()
+        },  # the same, per platform
         "deferred": deferred,  # roasters per deferred round, and those still failing after them
         "skipped_deadline": skipped,  # not started: the deadline passed first
+        "partial": stats["partial"],  # ok fetches that read only part of the catalog (fetches.partial)
+        "partial_every_week": stuck,  # of them, the stores partial in each of their last PARTIAL_WEEKS runs
         "requests": stats["requests"],
         "http_429": stats["http_429"],
         "http_430": stats["http_430"],

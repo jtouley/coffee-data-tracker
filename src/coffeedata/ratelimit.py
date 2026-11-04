@@ -14,17 +14,16 @@ defer_after is parked (HostRateLimited) and ingest.run retries it after the main
 
 from __future__ import annotations
 
-import email.utils
 import logging
 import threading
 import time
 from collections.abc import Callable, Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
 
 import httpx
 
-from .http import BLOCK_STATUSES, FetchError
+from .http import BLOCK_STATUSES, MAX_STORE_WAIT, FetchError, asked_wait, is_challenge, store_wait
+from .http import retry_after_seconds as retry_after_seconds  # re-exported (tests, older callers)
 
 log = logging.getLogger(__name__)
 
@@ -35,6 +34,14 @@ log = logging.getLogger(__name__)
 # Every redirect hop uses the same platform budget, alongside per-host spacing.
 SHOPIFY_RPS = 3.0
 SHOPIFY_CONCURRENCY = 8
+# Squarespace publishes no limit for public pages or ?format=json, but answers a burst from one IP with 429s (HTML,
+# no Retry-After) across all its sites: run 2026-11-02, its own 32-worker job sent ~1,040 requests in the first
+# minute (~17/s) from one IP and drew 826 429s from ~175 sites (965 with the resume's own burst). The runs that drew
+# none were slower: 2026-10-30 peaked at 1.5 requests/s (0 429s), and 2026-10-26 and 10-28 (no 429 errors) at ~36
+# stores a minute, ~2.8 requests/s at the ~4.6 requests a store measured since. 2/s sits under every clean peak, and
+# ~340 stores x ~4.6 requests is ~1,600 requests: about 13 minutes, far inside the 225-minute window. The same
+# limiter as Shopify's (8 requests at once, paused and slowed by 429s).
+SQUARESPACE_RPS = 2.0
 
 
 class RateLimited(FetchError):
@@ -43,30 +50,13 @@ class RateLimited(FetchError):
 
 class HostRateLimited(RateLimited):
     """One store asked us to wait (429/503 + Retry-After) longer than defer_after: the store is parked and
-    retried after the main pass (ingest.run), while the platform's other stores carry on."""
+    retried after the main pass (ingest.run), while the platform's other stores carry on. wait: at most
+    http.MAX_STORE_WAIT."""
 
     def __init__(self, message: str, host: str, wait: float) -> None:
         super().__init__(message)
         self.host = host
         self.wait = wait
-
-
-def retry_after_seconds(value: str | None, now: datetime | None = None) -> float | None:
-    """Retry-After as seconds: delta-seconds or an HTTP date. None if missing or unreadable."""
-    value = (value or "").strip()
-    if not value:
-        return None
-    try:
-        return max(0.0, float(value))
-    except ValueError:
-        pass
-    try:
-        when = email.utils.parsedate_to_datetime(value)
-    except (TypeError, ValueError):
-        return None
-    if when.tzinfo is None:
-        when = when.replace(tzinfo=UTC)
-    return max(0.0, (when - (now or datetime.now(UTC))).total_seconds())
 
 
 def _host(response: httpx.Response) -> str:
@@ -188,24 +178,30 @@ class PlatformLimiter:
                     self.stats["requests"] += 1
                     return
 
-    def _wait_for_host(self, host: str | None) -> None:
-        """Per-host mode: wait out this store's own pause, or (defer on, pause > defer_after) park the store."""
+    def _wait_for_host(self, host: str | None, patient: bool = False) -> None:
+        """Per-host mode: wait out this store's own pause, or park the store (HostRateLimited, so ingest.run retries
+        it once the pause has passed): with defer on, a pause over defer_after; with it off (the deferred rounds), one
+        over max_cooldown, which no worker is held for. patient: the store's last try in the run (ingest.run's final
+        round), which no later round will retry: its pause is waited out, at most http.MAX_STORE_WAIT (a store's
+        pause is never longer), so a fallback on the same host (squarespace's shop paths after a blocked sitemap)
+        is read instead of failing on the pause the sitemap set."""
         if not self.per_host or host is None:
             return
+        limit = MAX_STORE_WAIT if patient else self.defer_after if self.defer else self.max_cooldown
         while True:
             with self._lock:
                 wait = self.host_until.get(host, 0.0) - self._clock()
                 if wait <= 0:
                     return
-                if self.defer and wait > self.defer_after:
+                if wait > limit:
                     self.stats["deferred"] += 1
                     raise HostRateLimited(f"{host} asked to wait {wait:.0f}s; deferred", host, wait)
             self._sleep(wait)
 
     @contextmanager
-    def slot(self, host: str | None = None) -> Iterator[None]:
-        """Hold one of the platform's request slots for the duration of one request."""
-        self._wait_for_host(host)  # before taking a slot: a paused store never holds one
+    def slot(self, host: str | None = None, patient: bool = False) -> Iterator[None]:
+        """Hold one of the platform's request slots for the duration of one request. patient: _wait_for_host."""
+        self._wait_for_host(host, patient)  # before taking a slot: a paused store never holds one
         # The slot first, then the time: callers queued for a slot can't bank rate-spacing time and then all
         # start at once when slots free up together.
         self._sem.acquire()
@@ -221,8 +217,12 @@ class PlatformLimiter:
 
     def record(self, response: httpx.Response) -> None:
         """Learn from a response: a block pauses the whole platform and slows it; a 2xx or 404 speeds it up;
-        any other status (a 403, a 500) says nothing about the platform's limit."""
+        any other status (a 403, a 500) says nothing about the platform's limit. Nor does an edge's challenge on
+        any other status (http.is_challenge: SiteGround's 202, or a 2xx with a challenge header): it is no answer
+        from the store, so neither a success nor an answer towards a burst's share."""
         status = response.status_code
+        if status not in BLOCK_STATUSES and is_challenge(response):
+            return
         with self._lock:
             now = self._clock()
             if self.per_host and status not in BLOCK_STATUSES:
@@ -235,11 +235,14 @@ class PlatformLimiter:
             if status not in BLOCK_STATUSES:
                 return
             self.stats["rate_limited"] += 1
-            wait = retry_after_seconds(response.headers.get("retry-after"))
-            wait = min(self.max_cooldown, self.default_cooldown if wait is None else wait)
+            asked = asked_wait(response)
+            wait = min(self.max_cooldown, self.default_cooldown if asked is None else asked)
             if self.per_host and status != 430:
                 host = _host(response)
-                self.host_until[host] = max(self.host_until.get(host, 0.0), now + wait)
+                # the store's own pause is as long as it asked, up to http.MAX_STORE_WAIT (5 minutes: a store asking
+                # for longer is asked again then, in ingest.run's next deferred round); the platform's is capped lower
+                pause = wait if asked is None else store_wait(asked)
+                self.host_until[host] = max(self.host_until.get(host, 0.0), now + pause)
                 known = host in self.ever_blocked
                 self.ever_blocked.add(host)
                 if not self.defer or not self.count_bursts or known or host in self.quiet_hosts:

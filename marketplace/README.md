@@ -5,10 +5,15 @@ dbt test fails the build if any of them ever exposes descriptions, images, store
 
 - Product descriptions, images, handles, tags and the shot log are excluded.
 - Opted-out roasters are excluded.
-- Roasters known only from OpenStreetMap are excluded, so ODbL share-alike doesn't apply.
+- Roasters known only from OpenStreetMap are excluded.
 
 `coffeedata export-public --to <dest>` writes them as Parquet. With `PUBLIC_EXPORT_URL` set, the weekly run does
-it automatically.
+it automatically. A directory or Hugging Face export also writes `manifest.json`: the release (`release_build_id`,
+`release_run_date`), the contract id and version, the data licence (`CDLA-Permissive-2.0`,
+[`licenses/CDLA-Permissive-2.0.txt`](../licenses/CDLA-Permissive-2.0.txt)) and each Parquet file's `sha256` and row
+count, with the licence text beside it as `LICENSE`. An `s3://` or `gs://` export writes only the Parquet files. A Hugging Face export of a release build tags its commit `release-<run date>`
+(the Monday run; a newer build of the same run moves the tag to its commit), so consumers can pin a week:
+`hf://datasets/<you>/us-coffee-market@release-2026-11-02/data/public_coffee.parquet`.
 
 | Destination | `--to` / `PUBLIC_EXPORT_URL` | Credentials |
 |---|---|---|
@@ -85,8 +90,8 @@ Both results are in the build's record (`builds/`, like every other check) and i
 
 ## Before going public
 
-- License: the dataset card proposes CDLA-Permissive-2.0, matching Overture. Change it if you prefer
-  CC BY 4.0.
+- License: the public data is CDLA-Permissive-2.0
+  ([`licenses/CDLA-Permissive-2.0.txt`](../licenses/CDLA-Permissive-2.0.txt)), matching Overture; the code is MIT. Use the same licence in every listing.
 - Terms of service: some roasters' terms restrict automated collection or commercial reuse. A free
   listing of facts with links back and an opt-out is the safer option. Get legal advice before charging.
 - Support contact: put a support email in `LISTING.md`.

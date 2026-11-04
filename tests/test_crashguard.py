@@ -198,7 +198,7 @@ def test_an_exception_in_one_roasters_fetch_is_that_roasters_error(lake, monkeyp
 
     monkeypatch.setattr(ingest, "ingest_one", one)
     out = ingest.run(lake, stores, WEEK, workers=4)
-    assert out["by_adapter"]["generic"] == {"roasters": 5, "errors": 2, "with_products": 3}
+    assert out["by_adapter"]["generic"] == {"roasters": 5, "errors": 2, "with_products": 3, "partial": 0}
     st = _lake_statuses(lake)
     assert st["pill.com"] == ["error"] and st["s0.com"] == ["error"]
     assert st["s1.com"] == st["s2.com"] == st["s3.com"] == ["ok"]
@@ -359,7 +359,8 @@ def test_a_read_response_is_freed_without_waiting_for_the_garbage_collector():
         gc.enable()
 
 
-def test_sitemap_reads_at_most_the_limit_without_listing_every_url():
+def test_sitemap_reads_every_url_with_no_count_limit():
+    """The old limit of 5,000 URLs is gone: only the byte cap (SITEMAP_MAX_BYTES) bounds a sitemap."""
     from coffeedata import sitemap
 
     body = (
@@ -368,8 +369,8 @@ def test_sitemap_reads_at_most_the_limit_without_listing_every_url():
         + "</urlset>"
     )
     c = _client(lambda req: httpx.Response(200, text=body))
-    urls = sitemap.sitemap_urls(c, "a.com", limit=50)
-    assert urls == [f"https://a.com/products/c{i}" for i in range(50)]
+    urls = sitemap.sitemap_urls(c, "a.com")
+    assert urls == [f"https://a.com/products/c{i}" for i in range(20_000)]
 
 
 def test_a_sitemap_over_the_response_cap_but_within_the_protocols_50_mb_is_read(monkeypatch, caplog):
