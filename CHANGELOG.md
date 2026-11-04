@@ -69,6 +69,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
   connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
   memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
+- **Snowflake share views have upper-case column names**, so Marketplace consumers write `RELEASE_RUN_DATE` (or
+  `release_run_date`) without quotes; before, the views kept the tables' quoted lower-case names and needed
+  `"release_run_date"`. The tables in `MARKET` keep their names, and the views keep their descriptions in their
+  definition. Columns are compared in any case, and the first load after this change recreates the existing views
+  (`copy grants`) without `--migrate`. The listing's sample queries are unquoted, upper case, and four: the price
+  increases filter on `EVENT = 'price'`, and the origin summary no longer sums `ROASTERS` across processes.
 
 ### Fixed
 

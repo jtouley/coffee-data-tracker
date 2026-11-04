@@ -36,21 +36,27 @@ are described.
 **Refresh:** weekly (data collected Mondays, published Tuesdays).
 **Geography:** United States. **History:** from 2026-10-26.
 
-**Sample queries:**
+**Sample queries** (Snowflake: the share's views `SHARE.COFFEE`, `SHARE.PRICE_EVENT`, `SHARE.MARKET_WEEKLY` and
+`SHARE.ROASTER`, in the database the consumer mounts the share as; their column names are upper case and need no
+quotes. On Hugging Face or Databricks, use the `public_*` table names):
 ```sql
--- Median retail price per 100 g by origin, washed vs natural
-select origin_country, process, coffees, median_price_per_100g
-from public_market_weekly where process in ('washed', 'natural') order by coffees desc;
+-- 1. Median retail price per 100 g by origin, washed vs natural
+select ORIGIN_COUNTRY, PROCESS, COFFEES, MEDIAN_PRICE_PER_100G
+from SHARE.MARKET_WEEKLY where PROCESS in ('washed', 'natural') order by COFFEES desc;
 
--- Price increases in the last 4 weeks
-select e.run_date, c.roaster_name, c.coffee_name, e.previous_price_usd, e.price_usd
-from public_price_event e join public_coffee c using (coffee_id)
-where e.event = 'price' and e.price_usd > e.previous_price_usd and e.run_date >= current_date - 28
-order by e.run_date desc;
+-- 2. New Ethiopian naturals this month
+select ROASTER_NAME, COFFEE_NAME, PRICE_PER_100G, SOURCE_URL from SHARE.COFFEE
+where ORIGIN_COUNTRY = 'Ethiopia' and PROCESS = 'natural' and FIRST_SEEN >= date_trunc('month', current_date);
 
--- New Ethiopian naturals this month
-select roaster_name, coffee_name, price_per_100g, source_url from public_coffee
-where origin_country = 'Ethiopia' and process = 'natural' and first_seen >= date_trunc('month', current_date);
+-- 3. Price increases in the last 4 weeks
+select e.RUN_DATE, c.ROASTER_NAME, c.COFFEE_NAME, e.PREVIOUS_PRICE_USD, e.PRICE_USD
+from SHARE.PRICE_EVENT e join SHARE.COFFEE c using (COFFEE_ID)
+where e.PRICE_USD > e.PREVIOUS_PRICE_USD and e.RUN_DATE >= current_date - 28 and e.EVENT = 'price'
+order by e.RUN_DATE desc;
+
+-- 4. Origins with the most coffees for sale, and the median of their processes' median prices
+select ORIGIN_COUNTRY, sum(COFFEES) as COFFEES_LISTED, median(MEDIAN_PRICE_PER_100G) as median_of_medians_per_100g
+from SHARE.MARKET_WEEKLY group by ORIGIN_COUNTRY order by COFFEES_LISTED desc limit 20;
 ```
 
 **Limitations** (more in the dataset card):

@@ -55,6 +55,14 @@ never holds the site back):
   the contract doesn't describe fails the load before anything changes; a contract column Snowflake doesn't have
   yet is skipped with a warning. To change a description, change the contract; the next load applies it.
 - It fails if the row counts differ from the export.
+- The tables in `MARKET` keep the export's lower-case column names (quoted identifiers, as `infer_schema` makes
+  them). The share views rename them to upper case (`create or replace secure view SHARE.COFFEE (RELEASE_RUN_DATE
+  comment '...', ...) copy grants comment = '...' as select "release_run_date", ... from MARKET.public_coffee`),
+  so consumers write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes. Columns are compared in any case.
+  A share view with the export's columns that isn't upper case yet (made by `admin_setup.sql` part 2, or before
+  this change) is recreated by any load, after the same ownership and share checks as a migration; no
+  `--migrate` is needed. To do it at once rather than at the Tuesday `site` run:
+  `gh workflow run weekly -f snowflake_migrate=true`.
 
 Databricks loads from S3 or GCS.
 
