@@ -4,7 +4,7 @@
 -- (dim_roaster) and run completeness (run_completeness) count runs, not attempts.
 select
     roaster_id, run_date, bool_or(status = 'ok') as ok, min(fetched_at) as first_at, max(fetched_at) as last_at,
-    arg_max(adapter, fetched_at) as adapter, max(products) filter (where status = 'ok') as products,
+    arg_max(adapter, (fetched_at, adapter)) as adapter, max(products) filter (where status = 'ok') as products,
     -- closed this run (Shopify's closed-store page, a password page, robots disallowing the whole site) and never
     -- fetched: not a failure of the run, so run_ok_rate and adapter_ok_rate leave it out (run_completeness)
     bool_or(status = 'unavailable') and not bool_or(status = 'ok') as unavailable,

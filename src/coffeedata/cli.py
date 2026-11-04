@@ -418,6 +418,41 @@ def cmd_build_diff(args: argparse.Namespace) -> None:
     _print(quality.build_diff(Lake(), args.old, args.new))
 
 
+def cmd_build_hashes(args: argparse.Namespace) -> bool:
+    """A build's recorded row count and content hash per release table; with --against, whether another build
+    produced the same release; with --verify, whether its release files still hash to what it recorded. Exits 1 on
+    any difference, so a verification can be scripted (docs/ingestion/RUNBOOK.md §5.5)."""
+    from . import quality
+
+    lake = Lake()
+    history = [b for b, _, _ in quality.builds(lake)]
+    build = args.build or (history[-1] if history else None)
+    if not build:
+        _print({"error": "no builds in this lake"})
+        return False
+    recorded = quality.build_hashes(lake, build)
+    out: dict = {"build": build, "inputs": quality.build_inputs(lake, build), "method": quality.HASH_METHOD,
+                 "excluded_columns": list(quality.PER_BUILD_COLUMNS)}  # fmt: skip
+    out["tables"] = {t: {"rows": n, "hash": h, "method": m} for t, (n, h, m) in sorted(recorded.items())}
+    same = bool(recorded)
+    if not recorded:
+        out["error"] = f"build {build} recorded no table hashes (it predates them, or isn't in this lake)"
+    if args.against:
+        diff = quality.compare_hashes(quality.build_hashes(lake, args.against), recorded)
+        out["against"] = {
+            "build": args.against,
+            "same": all(d["same"] for d in diff.values()),
+            "tables": diff,
+        }
+        same = same and out["against"]["same"]
+    if args.verify:
+        diff = quality.compare_hashes(recorded, quality.verify_release(lake, build))
+        out["verify"] = {"same": all(d["same"] for d in diff.values()), "tables": diff}
+        same = same and out["verify"]["same"]
+    _print(out)
+    return same
+
+
 def cmd_override(args: argparse.Namespace) -> None:
     from . import quality
 
@@ -741,6 +776,20 @@ def main(argv: list[str] | None = None) -> None:
     )
     bd.add_argument("--old")
     bd.add_argument("--new")
+
+    bh = add(
+        "build-hashes",
+        cmd_build_hashes,
+        "a build's row count and content hash per release table (default: the latest build), and whether another "
+        "build's match; exits 1 on a difference",
+    )
+    bh.add_argument("build", nargs="?", help="build id (default: the latest build in the lake)")
+    bh.add_argument(
+        "--against", help="another build id: compare its hashes with this build's, table by table"
+    )
+    bh.add_argument(
+        "--verify", action="store_true", help="re-hash this build's release files and compare with its record"
+    )
 
     rb = add(
         "rollback", cmd_rollback, "serve an earlier passing release (default: the one before the current)"

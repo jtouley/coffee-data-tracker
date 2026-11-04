@@ -280,3 +280,21 @@ unit_tests:
         - {coffee_id: "r.com:Q", tags: "['Education & Display', 'Light – Medium', 'R&D', NULL]", input_hash: 5eea2c56221c71c2e5b3c3bed77c478a}
         - {coffee_id: "r.com:R", tags: null, input_hash: 6917f7444f9e455268154e8ddbf2d243}
         - {coffee_id: "r.com:S", tags: "[]", input_hash: 7fb87725be5e4f4ffd6c4f555de8ec36}
+
+  - name: dial_in_best_recipe_is_one_shot_whatever_the_order
+    description: >-
+      The best recipe is one shot's: the highest rating, the latest brewed among equal ratings, then the larger
+      shot_id (two shots brewed in the same second), so every best_* value comes from the same shot however the
+      shots are read. arg_max(x, rating) alone took the first top-rated shot it read, here a's. The label is the
+      latest shot's spelling of the coffee (the key is lower-cased).
+    model: mart_dial_in
+    given:
+      - input: ref('fct_shot')
+        rows:
+          - {shot_id: a, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-20 07:00:00+00", rating: 5, grinder_setting: 10.0, dose_g: 18.0, yield_g: 36.0, time_s: 28.0}
+          - {shot_id: c, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 11.0, dose_g: 19.0, yield_g: 38.0, time_s: 30.0}
+          - {shot_id: b, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 12.0, dose_g: 18.5, yield_g: 37.0, time_s: 29.0}
+          - {shot_id: d, user_id: u1, coffee_freetext: House espresso, brewed_at: "2026-10-22 07:00:00+00", rating: 3, grinder_setting: 14.0, dose_g: 18.0, yield_g: 40.0, time_s: 25.0}
+    expect:
+      rows:
+        - {grain: coffee, key: "freetext:house espresso", label: House espresso, shots: 4, best_rating: 5, best_grind: 11.0, best_dose_g: 19.0, best_yield_g: 38.0, best_time_s: 30.0}

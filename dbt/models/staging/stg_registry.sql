@@ -7,10 +7,12 @@ with seed as (
            try_cast(nullif(last_probed, '') as date) as seed_probed, sources
     from read_csv('{{ var("config_dir") }}/roasters.csv', header = true, all_varchar = true)
 ),
+-- Every pick has a total order (the newest row; on a tie in added_at, the value itself), and sources are listed
+-- alphabetically: the same lake builds the same table whatever order DuckDB reads its rows in.
 added as (
-    select roaster_id, arg_max(name, added_at) as name, arg_max(city, added_at) as city,
-           arg_max(state, added_at) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
-           string_agg(distinct source, '+') as sources, min(added_at) as first_added
+    select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
+           arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
+           string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added
     from {{ lake('registry') }}
     where roaster_id is not null
     group by roaster_id
