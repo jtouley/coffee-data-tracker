@@ -18,6 +18,7 @@ to be config-driven, code-backed, from the admin panel."
 4. **The weekly scheduled release stays automatic**, gated by the existing tests. Drafts are only for changes made in
    the admin.
 5. **One control plane.** The admin's HTTP API is the only writer; the UI and `coffeedata decide` are its clients.
+   It runs as its own Cloud Run service behind IAP, as the security review recommends (5.3).
 
 ## 1. Today (checked on `origin/main`, 28a1b05)
 
@@ -60,8 +61,8 @@ skips `serve`. Publish is `serve` on that build. Nothing else needs a separate r
 - **The weekly build** reads only approved decisions and the active config. It serves automatically when its gates
   pass, as today, and never picks up an open draft.
 - **Where the draft build runs.**
-  - Phase 1: on the owner's laptop. `make admin` runs `coffeedata build --draft` with the owner's lake token. It
-    takes minutes, the weekly build's time.
+  - Phase 1: on the owner's laptop. `make admin` runs `coffeedata build --draft` with a short-expiry HF token minted
+    for the session and revoked after, never a standing one. It takes minutes, the weekly build's time.
   - Phase 2: the admin starts the existing Cloud Run `build` job with `--draft <id>`. The admin service itself never
     writes the lake.
 
@@ -174,21 +175,49 @@ Every page defines its states:
 - **Untrusted text.** Titles, tags and descriptions render as escaped text, never `|safe`. The admin keeps
   `app/web.py`'s CSP and `Referrer-Policy: same-origin`, links only `https:` store URLs, and keeps the app's CSRF
   rule.
-- **Hosting (Phase 2).** A separate Cloud Run service from the app's image (min 0, max 1). It has its own service
-  account with curation write, lake read, and permission to run the `build` job with overrides; it holds no
-  Anthropic key. The Terraform is additive and applied from a reviewed plan, and the domain mapping is
-  `admin` → `ghs.googlehosted.com`.
+- **Hosting (Phase 2).** A separate Cloud Run service from the app's image (min 0, max 1), with no public access.
+  - It has its own service account, and its own fine-grained HF token: **read** on the lake, **write** on the curation
+    dataset, nothing else. It never shares the app's `HF_TOKEN`, and holds no Anthropic key.
+  - It may run the `build` job with overrides, on that job only, for draft builds.
+  - The Terraform is additive and applied by the owner from a reviewed plan. The domain mapping is
+    `admin` → `ghs.googlehosted.com`.
   - `deploy.yml` deploys one `$SERVICE`: deploy both services from the same image in one job.
-  - About **$0 a month**: it scales to zero and the admin calls no model API.
-- **Auth: open, pending the security review.** The options are IAP, the app's sign-in with a second factor, a key
-  for the CLI, or a magic link. Whatever it picks must meet these, since the API is the only writer and the repo is
-  public:
-  - owner-only, and fail closed in the code;
-  - if a proxy is in front, the code verifies the proxy's token too (the deploy account's `roles/run.developer` can
-    switch the proxy off);
-  - a browser session for the UI and a credential the CLI can hold.
-- **Audit.** One trail: decision events (who, which client, why), the curation commits, `builds` and
-  `serving_log` (Publish is a `publish` row). A failed write logs at ERROR, which the existing policy emails.
+  - About **$0 a month** (plus about $50 once for a hardware key). The admin calls no model API.
+
+### 5.3 Access (from the security review)
+
+The owner holds the security review of 2026-11-04. It is not committed, because it lists open weaknesses in the live
+app. Its recommendation, in short:
+- **Sign-in is IAP.** In the code, every route but `/health` checks the IAP token and fails closed: the signature,
+  `iss`, the pinned audience, and the email equal to `ADMIN_EMAIL`. There is a test for each failure, and no
+  env-var bypass: the local stub is chosen by a `make admin` flag and refuses when hosted.
+- **The app's password sign-in is not reused** for the admin, and there are no magic links or long-lived personal
+  API keys.
+- **The owner's Google account** uses two passkeys or hardware keys, with printed backup codes.
+- **The CLI** calls the admin API through IAP with the owner's short-lived `gcloud` ID token. No long-lived HF token
+  sits on the laptop. Break glass is a short-expiry HF token minted on huggingface.co when needed, then revoked.
+- **Deploys:**
+  - a ruleset on `main` (PR and checks, no force-push);
+  - an `admin` GitHub environment the owner approves;
+  - the admin's deploy credential bound to that environment;
+  - a `terraform test` asserting no `allUsers` member and `iap_enabled`.
+- **Alerts and limits:**
+  - an email on every admin write, on every rejected IAP token, and on any IAM or service change to the admin;
+  - write limits per identity;
+  - a typed confirmation (the count) when a Publish or a group changes more than 50 public rows.
+- **The repo stays public**: no control depends on hidden code.
+
+**Open risk:** IAP on Cloud Run may require a Google Cloud organization (open question 3). If this project can't
+use it, the fallback is the review's passkey-only sign-in:
+- no password, two authenticators;
+- 12-hour, revocable sessions;
+- CLI device-flow tokens in the OS keychain.
+
+### 5.4 Audit and UI
+
+- **Audit.** One trail: decision events (the IAP email, which client, why), the curation commits, and `builds` and
+  `serving_log` (Publish is a `publish` row). Builds record the curation revision they applied, so tampering with
+  its history shows as a diff. A failed write logs at ERROR.
 - **UI.** Bench Scale (`app/static/app.css`, `docs/app/DESIGN.md`), both themes, the existing components. No new
   colours (`--danger` only on Publish's confirm when rows leave), no dashboard tiles. A text label on every state;
   any keyboard shortcuts can be turned off (WCAG 2.1.4).
@@ -227,12 +256,13 @@ It depends on #111 for the per-row reasons. Until #111 merges, the Draft page sh
 
 **Later, each only when needed.**
 - Rule-config editing in the admin, through the same draft flow;
-- hosting with the chosen auth;
+- hosting behind IAP, with the review's deploy rules and alerts;
 - group approvals and History;
 - `not_a_coffee_seller`;
 - more rule types, each scored;
 - public release-note counts;
-- the runbook entries (a bad publish: roll back, then `revert`; a failed write; locked out: run the service locally);
+- the runbook entries: a bad publish (roll back, then `revert`); a failed write; a lockout (the IAM binding fixed by
+  the project Owner from a reviewed plan, or a short-expiry HF token for break glass); and the review's revoke order;
 - extending the curation contract to `registry`, `verdicts` and `run_overrides`.
 
 ## 9. Open questions for the owner
@@ -241,8 +271,9 @@ It depends on #111 for the per-row reasons. Until #111 merges, the Draft page sh
    capped at 200 products and 4 weeks. Should it hold every verdict-only removal instead? That would have held most
    of the backfill's 3,765.
 2. **Restores.** Should `include` need your Publish like everything else? Proposed: yes.
-3. **Auth for the admin API**, for the UI and the CLI: IAP, the app's sign-in with a second factor, a key, or a
-   magic link? The security review is answering this.
+3. **Can this project use IAP?** IAP on Cloud Run may need a Google Cloud organization. Is the project in one? If
+   not, do you accept the review's fallback: passkey-only sign-in (no password, two authenticators, 12-hour
+   revocable sessions) with CLI tokens in the OS keychain? Magic links and long-lived keys are ruled out either way.
 4. **Where the rule config lives:** the curation dataset (proposed), or git through PRs the admin opens?
 5. **Green coffee by the sack:** decisions plus the weight rule (proposed), or a definition change and a full
    re-verdict?
