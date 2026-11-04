@@ -171,3 +171,8 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
 5. Green coffee by the sack: deferred. First measure how confident the verdicts are without extra rules. The owner mentioned a decisions API ("jev.ai"); not yet researched.
 6. Group approval: the owner found it unclear. Re-explained as "approve all 16 Stivers coffees from one check of the store, instead of 16 separate checks". Awaiting an answer.
 7. Stale drafts: rebuild automatically, smoke-test what changed and run the test suite. Publishing stays the owner's explicit action, through an explicit workflow, never automatic.
+- Platform-engineering answer on Q4 (https://github.com/jtouley/coffee-data-tracker/pull/112#issuecomment-6641959444):
+  - **Rules are code** and **decisions are data**. Rule config goes in git: `config/rules.yml`, with a JSON Schema generated from the code and checked in CI. A PR is the draft, and merging plus an approved deploy is Publish.
+  - Per-item decisions, including the roaster crawl flag, go in the private HF curation dataset. Each build reads a pinned `@<commit>` and records it. A weekly mirror goes to a versioned GCS bucket, and the build fails if the dataset can't be read.
+  - No Postgres while there is one curator.
+  - This supersedes the design's "rule config in the dataset".
