@@ -162,3 +162,12 @@ about two months from now; GitHub issue #110.
 
 ## Restart plan (Friday reset)
 The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (section "Restart on Friday"). Draft PRs: #93, #104, #106, #107, #108, #109, #111, #112, #113. Merged: #82, #105. Release 5060ad exported 2026-11-04.
+
+## Owner answers on the #112 open questions (2026-11-04, late)
+1. Guard scope: the owner found it unclear. Re-explained as "when Claude flips a published coffee to not-coffee, remove it unless something looks suspicious (recommended), or hold every such removal for review (~3,765 in the backfill)". Awaiting an answer.
+2. Restores and crawling: the owner wants a per-roaster crawl flag in the admin. Unchecking it stops crawling that roaster. Checking it allows crawling, and for a new or under-covered roaster it runs a single-roaster test crawl (`crawl --only`) as a smoke test, followed by a draft build. Restoring a single coffee stays a decision, published through the same flow.
+3. Sign-in: no binding to Gmail; the project sits on a personal Gmail with no Workspace or organization. So no IAP. Use the review's fallback: passkey-only sign-in in the admin (two passkeys plus recovery codes, no password, 12-hour revocable sessions), and CLI device tokens in the OS keychain.
+4. Rule-config storage: the owner asks "should all be code?" and wants a platform-engineering review. Launched; it posts on #112.
+5. Green coffee by the sack: deferred. First measure how confident the verdicts are without extra rules. The owner mentioned a decisions API ("jev.ai"); not yet researched.
+6. Group approval: the owner found it unclear. Re-explained as "approve all 16 Stivers coffees from one check of the store, instead of 16 separate checks". Awaiting an answer.
+7. Stale drafts: rebuild automatically, smoke-test what changed and run the test suite. Publishing stays the owner's explicit action, through an explicit workflow, never automatic.
