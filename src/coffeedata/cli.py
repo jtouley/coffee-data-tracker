@@ -784,7 +784,11 @@ def main(argv: list[str] | None = None) -> None:
     b = add("build", cmd_build, "dbt build from the lake, then export marts")
     b.add_argument("--db", default="build/coffee.duckdb")
     b.add_argument(
-        "--run-date", type=_run_date, help="the run this build checks (default: the latest in the lake)"
+        "--run-date",
+        type=_run_date,
+        help="the run this build checks (default: the latest in the lake). A run older than the latest in the "
+        "lake fails public_coffee_is_fresh, so this can't re-release an earlier week: to serve one again, "
+        "`coffeedata rollback` to its release, or build the latest week",
     )
     b.add_argument(
         "--accept-volume-change",

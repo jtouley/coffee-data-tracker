@@ -170,7 +170,8 @@ QUALITY: dict[str, list[dict]] = {
          "implementation": "tests/test_raw_contracts.py::test_control_rows_follow_the_manifest_contract"},
         {"id": "run_manifest_mode_values", "tables": ["run_manifests"], "dimension": "conformity",
          "severity": "error", "rule": "run_manifests.mode is full, sample, only, retry_failed or null",
-         "enforced_by": "the writers (ingest.select_states, connectors.crawl, crawl-retry)"},
+         "engine": "dbt", "implementation": "tests/run_manifest_mode_values.sql",
+         "enforced_by": "dbt run_manifest_mode_values"},
     ],
     "enrichment": [
         {"id": "writer_columns", "tables": ["enrichments"], "dimension": "conformity", "severity": "error",

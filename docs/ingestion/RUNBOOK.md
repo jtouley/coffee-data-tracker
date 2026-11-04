@@ -409,6 +409,10 @@ Owner: jtouley. Commands last checked against `main` 1e89d74 on 2026-11-02; dist
   `gh workflow run weekly`. To restore its Monday schedule, revert the cutover PR.
 - **Serve the previous release** if a bad one went out: `gh workflow run weekly -f rollback_to=previous` (§5.1 d).
   **`weekly.yml` holds the only one-click rollback.** Don't retire it until a replacement exists (§4 step 4).
+- **Don't re-release an earlier week with `coffeedata build --run-date <older run>`.** Once a newer run is in the
+  lake, `public_coffee_is_fresh` fails such a build (the public catalog's newest `last_seen` is the newer run), so
+  resuming last week after this Monday's crawl has written fetches fails too. Roll back to the previous release
+  instead (`coffeedata rollback`, or `rollback_to` above), or build the latest week.
 - **A half-done week in GCS:** merge what landed (`gcloud run jobs execute merge --region $REGION --wait`). Or, if
   the old workflow crawls that week instead, delete it as in §3 so the two don't overlap.
 - **Recover a merged week from the archive** (within 30 days of its merge; then the bucket's lifecycle rule has

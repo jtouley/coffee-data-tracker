@@ -396,9 +396,22 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     TODO, at that point (about 8 weeks of history): replace the fixed suspect-week rule (below half the median of
     the last 4 counted weeks) with per-roaster MAD bands, both sides, warn-only, active once a roaster has 6 or
     more counted weeks and reset on accept or override, the same pattern as these bands;
+  - `fill_and_freshness_in_band` (warn only, and it never blocks, even once the bands above can): the same bands,
+    low side only, on the share of listed coffees with `origin_country`, `process`, `roast_level` and
+    `price_per_100g` filled in (a drop is an extraction or enrichment break, which `accepted_values` lets through
+    as nulls) and on the share of listed coffees last seen in this run;
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - `public_coffee_is_fresh`: the public catalog's newest `last_seen` is the run the build checked (an empty catalog
+    is left to the volume check);
+  - `public_tables_are_one_release`: every row of every public table carries this build's `release_build_id`
+    and `release_run_date`;
+  - `public_tables_invariants`: rules the public tables hold by construction (in `public_market_weekly` p10 ≤
+    median ≤ p90, `in_stock` ≤ `coffees` and `roasters` ≤ `coffees`; `first_seen` ≤ `last_seen`; a `price` event's
+    prices differ; a `new` event has no previous price), so a row breaking one is a bug in the SQL;
+  - `run_manifest_mode_values`: every run manifest's `mode` is `full`, `sample`, `only` or `retry_failed`
+    (`run_completeness` takes the expected set from the full ones);
   - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
     comment, such as "about 45,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
     `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;
