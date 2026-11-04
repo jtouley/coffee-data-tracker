@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.2.2
+version: 2.3.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -310,6 +310,35 @@ schema:
     dimension: conformity
     severity: error
     description: No descriptions, images, store handles or personal data in any public table.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_coffee_is_fresh.sql
+    dimension: timeliness
+    severity: error
+    description: The newest last_seen in public_coffee is the run the build checked (release_run_date); an empty
+      catalog is left to the volume check.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_are_one_release.sql
+    dimension: consistency
+    severity: error
+    description: Every row of every public table carries this build's release_build_id and release_run_date.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_tables_invariants.sql
+    dimension: accuracy
+    severity: error
+    description: In public_market_weekly p10 <= median <= p90, in_stock <= coffees and roasters <= coffees;
+      first_seen <= last_seen in public_coffee; a price event's prices differ and a new event has no previous
+      price in public_price_event.
+  - type: custom
+    engine: dbt
+    implementation: tests/fill_and_freshness_in_band.sql
+    dimension: completeness
+    severity: warning
+    description: The shares of listed coffees with origin_country, process, roast_level and price_per_100g filled
+      in, and the share last seen in the run, lie above median - band_k x 1.4826 x MAD of the recent passing builds
+      (the bands of build_metrics_in_band, low side only). Warns only, always.
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
