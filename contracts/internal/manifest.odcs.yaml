@@ -75,12 +75,14 @@ schema:
   quality:
   - id: run_manifest_mode_values
     description: run_manifests.mode is full, sample, only, retry_failed or null.
-    type: text
+    type: custom
+    engine: dbt
+    implementation: tests/run_manifest_mode_values.sql
     dimension: conformity
     severity: error
     customProperties:
     - property: enforcedBy
-      value: the writers (ingest.select_states, connectors.crawl, crawl-retry)
+      value: dbt run_manifest_mode_values
   customProperties:
   - property: lakeGlob
     value: run_manifests/*/*.parquet
@@ -258,4 +260,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: 933dbab889a942e7
+  value: 47b0e0ad116224f6
