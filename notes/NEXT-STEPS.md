@@ -176,3 +176,13 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
   - Per-item decisions, including the roaster crawl flag, go in the private HF curation dataset. Each build reads a pinned `@<commit>` and records it. A weekly mirror goes to a versioned GCS bucket, and the build fails if the dataset can't be read.
   - No Postgres while there is one curator.
   - This supersedes the design's "rule config in the dataset".
+
+## Friday: control-plane POCs (owner, 2026-11-04)
+- The owner overrules the platform review: settings edited in the admin panel need a **database-backed control plane**, which doubles as the **data catalog** (rule config versions, decisions and flags, roaster state and crawl flags, DQ results per build, table and contract metadata). Keep from the review:
+  - code defines the rule types and the settings schema;
+  - every change is a new version row;
+  - each build pins an immutable snapshot exported to the lake, so it never reads the live DB.
+- POCs to run:
+  1. **Database:** Cloud SQL (smallest, IAM auth, PITR, ~$9-10/mo) against free tiers: Neon, Supabase, Fly.io Postgres, CockroachDB Serverless, Azure SQL free tier (100k vCore-s, 32 GB, auto-pause), Oracle Cloud free MySQL. Judge on cost, IAM/no-password auth, backups, egress to Cloud Run, cold-start latency, and lock-in.
+  2. **Language:** Go vs Python for the admin/control-plane API. Go: a single static binary, small image, fast cold starts, strong typing. Python: reuses `coffeedata` (draft build, build-diff, serve) and dbt directly. A Go control plane would shell out to or call the Python build. Build the same thin slice in each: decision write, version row, snapshot export, trigger a draft build.
+  3. Measure each POC on the same slice; the owner decides.
