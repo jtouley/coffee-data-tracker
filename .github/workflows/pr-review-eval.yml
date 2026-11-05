@@ -55,14 +55,14 @@ jobs:
             --repo jtouley/coffee-data-tracker=. --repo jtouley/md_data_explorer=ext/md_data_explorer
       - name: Predict
         env:
-          OPENCODE_CLIENT_ID: ${{ vars.OPENCODE_CLIENT_ID }}
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          # OpenCode service account credential "Branch: main", pinned to this repository (not a secret)
+          OPENCODE_CLIENT_ID: sk_18870109-570d-41c3-af05-0b127e944a97
           MODEL: ${{ matrix.model }}
           SET: ${{ inputs.set }}
           LIMIT: ${{ inputs.limit }}
         run: |
+          echo "ARTIFACT=pred-$SET-${MODEL//\//__}" >> "$GITHUB_ENV"  # first, so a failed run still uploads
           python3 eval/pr_review/pr_review_eval.py predict data "$SET" "$MODEL" ${LIMIT:+--limit "$LIMIT"}
-          echo "ARTIFACT=pred-$SET-${MODEL//\//__}" >> "$GITHUB_ENV"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
         if: always() && env.ARTIFACT != ''
         with: {name: "${{ env.ARTIFACT }}", path: "data/pred/${{ inputs.set }}/*.jsonl"}

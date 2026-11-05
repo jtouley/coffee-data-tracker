@@ -201,3 +201,19 @@ def test_api_key_prefers_env_then_mints_and_refreshes(monkeypatch):
     assert pr.api_key() == "key1" and pr.api_key() == "key1" and calls == ["cid"]
     clock[0] += 3600 - pr.REFRESH_EARLY + 1
     assert pr.api_key() == "key2"
+
+
+def test_exchange_reports_which_side_refused(monkeypatch, tmp_path):
+    fake = tmp_path / "bin"
+    fake.mkdir()
+    (fake / "curl").write_text('#!/bin/sh\necho \'{"error":"invalid_grant"}\'\nexit 22\n')
+    (fake / "curl").chmod(0o755)
+    monkeypatch.setenv("PATH", f"{fake}:/usr/bin:/bin")
+    monkeypatch.setenv("ACTIONS_ID_TOKEN_REQUEST_URL", "https://example.invalid/?x=1")
+    monkeypatch.setenv("ACTIONS_ID_TOKEN_REQUEST_TOKEN", "t")
+    try:
+        pr.exchange_oidc("cid")
+    except OSError as e:
+        assert "GitHub refused the OIDC token request" in str(e)
+    else:
+        raise AssertionError("expected OSError")
