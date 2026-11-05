@@ -295,6 +295,15 @@ def api_key() -> str | None:
 # ---- running the reviewer ----
 
 
+def log_errors(stderr: str | bytes | None, keep: int = 3) -> str:
+    """The last few error lines from OpenCode's stderr (--print-logs), or its last lines if none say error."""
+    if isinstance(stderr, bytes):
+        stderr = stderr.decode(errors="replace")
+    lines = [ln.strip() for ln in (stderr or "").splitlines() if ln.strip()]
+    errors = [ln for ln in lines if "level=ERROR" in ln or "error" in ln.lower()]
+    return " | ".join((errors or lines)[-keep:])[-900:]
+
+
 def run_model(
     model: str, message: str, workdir: Path, timeout: int = 600, opencode: str = "opencode"
 ) -> tuple[str | None, dict]:
@@ -308,15 +317,35 @@ def run_model(
         return None, {"model": model, "error": f"OpenCode sign-in failed: {e}", "seconds": 0}
     if key:
         env["OPENCODE_API_KEY"] = key
-    cmd = [opencode, "run", "--pure", "--agent", "pr-reviewer", "-m", model, "--format", "json"]
+    # A fixed --title skips OpenCode's session-title call, which goes to a separate small model. --print-logs puts
+    # OpenCode's warnings and errors on stderr, so a failed or hung run says why.
+    cmd = [
+        opencode,
+        "run",
+        "--pure",
+        "--agent",
+        "pr-reviewer",
+        "-m",
+        model,
+        "--format",
+        "json",
+        "--title",
+        "pr-review",
+    ]
+    cmd += ["--print-logs", "--log-level", "WARN"]
     cmd.append("Review the pull request below. Follow your output instructions exactly.")
     started = time.monotonic()
     try:
         proc = subprocess.run(
             cmd, input=message, capture_output=True, text=True, cwd=workdir, env=env, timeout=timeout
         )
-    except subprocess.TimeoutExpired:
-        return None, {"model": model, "error": f"timeout after {timeout}s", "seconds": timeout}
+    except subprocess.TimeoutExpired as e:
+        why = log_errors(e.stderr)
+        return None, {
+            "model": model,
+            "error": f"timeout after {timeout}s" + (f"; {why}" if why else ""),
+            "seconds": timeout,
+        }
     seconds = round(time.monotonic() - started, 1)
     text = text_from_events(proc.stdout).strip()
     info = {
@@ -326,7 +355,7 @@ def run_model(
         "tokens": usage_from_events(proc.stdout),
     }
     if proc.returncode != 0 or not text:
-        info["error"] = (proc.stderr.strip().splitlines() or ["no output"])[-1][:500]
+        info["error"] = log_errors(proc.stderr) or "no output"
         return None, info
     return text, info
 

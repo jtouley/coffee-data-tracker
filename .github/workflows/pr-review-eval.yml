@@ -17,6 +17,9 @@ on:
       limit:
         description: at most this many items per model (blank for all)
         default: ""
+      timeout:
+        description: seconds per model call before giving up
+        default: "600"
 permissions:
   contents: read
 jobs:
@@ -60,9 +63,10 @@ jobs:
           MODEL: ${{ matrix.model }}
           SET: ${{ inputs.set }}
           LIMIT: ${{ inputs.limit }}
+          TIMEOUT: ${{ inputs.timeout }}
         run: |
           echo "ARTIFACT=pred-$SET-${MODEL//\//__}" >> "$GITHUB_ENV"  # first, so a failed run still uploads
-          python3 eval/pr_review/pr_review_eval.py predict data "$SET" "$MODEL" ${LIMIT:+--limit "$LIMIT"}
+          python3 eval/pr_review/pr_review_eval.py predict data "$SET" "$MODEL" ${LIMIT:+--limit "$LIMIT"} --timeout "${TIMEOUT:-600}"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
         if: always() && env.ARTIFACT != ''
         with: {name: "${{ env.ARTIFACT }}", path: "data/pred/${{ inputs.set }}/*.jsonl"}

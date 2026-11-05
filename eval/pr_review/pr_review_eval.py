@@ -338,6 +338,7 @@ def cmd_predict(
                            error=parsed["error"], raw=text)  # fmt: skip
                 break
             rec.update(ok=False, error=info.get("error"), unanswered=True)
+            print(f"  {it['id']} attempt {attempt + 1}/{tries} failed: {info.get('error')}", flush=True)
             if attempt + 1 < tries:
                 time.sleep(30 * (attempt + 1))
         with open(out, "a") as fh:
