@@ -1,7 +1,7 @@
 # An advisory PR review by a free OpenCode Zen model, posted as one comment that's updated on each push. It never
 # blocks merge. It signs in to OpenCode with the job's GitHub OIDC token, exchanged for a short-lived API key, so no
-# key is stored: set the repository variable OPENCODE_CLIENT_ID to the OpenCode credential that trusts this repo.
-# (An OPENCODE_API_KEY secret works too.) With neither, the job is skipped.
+# key is stored. OPENCODE_CLIENT_ID below is the OpenCode service account credential "Pull requests", pinned to this
+# repository: it isn't a secret, and only this repo's pull request workflows can sign in with it.
 # Models are tried in order until one answers; set the repository variable PR_REVIEW_MODELS to change them (the eval
 # in eval/pr_review/ is how to choose).
 #
@@ -34,40 +34,28 @@ jobs:
       PR: ${{ github.event.pull_request.number }}
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-      HAS_KEY: ${{ vars.OPENCODE_CLIENT_ID != '' || secrets.OPENCODE_API_KEY != '' }}
+      OPENCODE_CLIENT_ID: sk_09e86e31-fd75-4a00-bbe6-a539a8586741
     steps:
-      - name: No OPENCODE_API_KEY secret
-        if: env.HAS_KEY != 'true'
-        run: echo "::notice::Set the OPENCODE_CLIENT_ID variable to turn on the OpenCode PR review."
       - name: Check out the base branch (the trusted reviewer config)
-        if: env.HAS_KEY == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {ref: "${{ github.event.pull_request.base.sha }}", path: trusted, persist-credentials: false}
       - name: Check out the PR (only diffed)
-        if: env.HAS_KEY == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {ref: "${{ github.event.pull_request.head.sha }}", path: pr, fetch-depth: 0, persist-credentials: false}
       - name: Prepare the diff
-        if: env.HAS_KEY == 'true'
         run: |
           git -C pr diff --no-color --no-ext-diff -M -U3 --src-prefix=a/ --dst-prefix=b/ "$BASE_SHA...$HEAD_SHA" \
             | python3 trusted/tools/pr_review/pr_review.py prep > diff.txt
           wc -c diff.txt
       - name: Install OpenCode
-        if: env.HAS_KEY == 'true'
         run: npm install -g opencode-ai@1.19.5
       - name: Review
-        if: env.HAS_KEY == 'true'
-        env:
-          OPENCODE_CLIENT_ID: ${{ vars.OPENCODE_CLIENT_ID }}
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
         run: |
           python3 trusted/tools/pr_review/pr_review.py review diff.txt --models "$MODELS" --pr "$PR" \
             --workdir trusted --timeout 300 --out result.json || echo "::warning::No model gave a review."
           python3 trusted/tools/pr_review/pr_review.py comment result.json > body.md
           cat body.md >> "$GITHUB_STEP_SUMMARY"
       - name: Post or update the comment
-        if: env.HAS_KEY == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
@@ -81,5 +69,5 @@ jobs:
             gh pr comment "$PR" --repo "$REPO" --body-file body.md
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4.6.2
-        if: env.HAS_KEY == 'true' && always()
+        if: always()
         with: {name: pr-review-result, path: result.json, if-no-files-found: ignore}

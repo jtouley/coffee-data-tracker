@@ -55,9 +55,8 @@ jobs:
             --repo jtouley/coffee-data-tracker=. --repo jtouley/md_data_explorer=ext/md_data_explorer
       - name: Predict
         env:
-          # its own OpenCode credential, trusted for runs on main only (falls back to the PR review's)
-          OPENCODE_CLIENT_ID: ${{ vars.OPENCODE_EVAL_CLIENT_ID || vars.OPENCODE_CLIENT_ID }}
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          # OpenCode service account credential "Branch: main", pinned to this repository (not a secret)
+          OPENCODE_CLIENT_ID: sk_18870109-570d-41c3-af05-0b127e944a97
           MODEL: ${{ matrix.model }}
           SET: ${{ inputs.set }}
           LIMIT: ${{ inputs.limit }}
