@@ -217,3 +217,10 @@ def test_exchange_reports_which_side_refused(monkeypatch, tmp_path):
         assert "GitHub refused the OIDC token request" in str(e)
     else:
         raise AssertionError("expected OSError")
+
+
+def test_log_errors_prefers_error_lines():
+    log = "level=INFO a\nlevel=ERROR stream error: 401 Unauthorized\nlevel=WARN retrying\n"
+    assert pr.log_errors(log) == "level=ERROR stream error: 401 Unauthorized"
+    assert pr.log_errors(b"just this\n") == "just this"
+    assert pr.log_errors(None) == ""
