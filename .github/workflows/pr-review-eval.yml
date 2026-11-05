@@ -60,6 +60,7 @@ jobs:
         env:
           # OpenCode service account credential "Branch: main", pinned to this repository (not a secret)
           OPENCODE_CLIENT_ID: sk_18870109-570d-41c3-af05-0b127e944a97
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}  # when set, used instead of the OIDC sign-in
           MODEL: ${{ matrix.model }}
           SET: ${{ inputs.set }}
           LIMIT: ${{ inputs.limit }}
