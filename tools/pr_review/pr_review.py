@@ -18,8 +18,6 @@ import time
 from dataclasses import dataclass, field
 from fnmatch import fnmatch
 from pathlib import Path
-from urllib.parse import quote, urlencode
-from urllib.request import Request, urlopen
 
 MAX_CHARS = 120_000  # about 30k tokens: fits every free model's context with room for the answer
 MAX_FILE_LINES = 600  # per file, so one generated file can't crowd out the rest
@@ -260,28 +258,23 @@ def usage_from_events(stdout: str) -> dict:
 # In GitHub Actions the key is minted from the job's OIDC token (permissions: id-token: write), so no long-lived
 # secret is stored. OPENCODE_CLIENT_ID names the OpenCode credential that trusts this repo. Outside Actions, or
 # when OPENCODE_API_KEY is set, that key is used as is.
-OIDC_AUDIENCE = "https://opencode.ai/console"
-TOKEN_URL = "https://opencode.ai/console/auth/oauth/token"
 REFRESH_EARLY = 300  # seconds: mint a new key this long before the old one expires
 _minted: dict = {}
 
 
 def exchange_oidc(client_id: str) -> tuple[str, float]:
-    """An OpenCode API key for this Actions job, and when it expires (epoch seconds)."""
-    url = os.environ["ACTIONS_ID_TOKEN_REQUEST_URL"] + "&audience=" + quote(OIDC_AUDIENCE, safe="")
-    req = Request(url, headers={"Authorization": "Bearer " + os.environ["ACTIONS_ID_TOKEN_REQUEST_TOKEN"]})
-    with urlopen(req, timeout=30) as r:
-        oidc = json.load(r)["value"]
-    body = urlencode(
-        {
-            "grant_type": "urn:ietf:params:oauth:grant-type:token-exchange",
-            "subject_token_type": "urn:ietf:params:oauth:token-type:jwt",
-            "client_id": client_id,
-            "subject_token": oidc,
-        }
-    ).encode()
-    with urlopen(Request(TOKEN_URL, data=body), timeout=30) as r:
-        tok = json.load(r)
+    """An OpenCode API key for this Actions job, and when it expires (epoch seconds). The exchange is
+    opencode-login.sh, plain curl, so a failure says which side refused and shows OpenCode's error."""
+    proc = subprocess.run(
+        ["bash", str(Path(__file__).with_name("opencode-login.sh"))],
+        capture_output=True,
+        text=True,
+        timeout=60,
+        env={**os.environ, "OPENCODE_CLIENT_ID": client_id},
+    )
+    if proc.returncode != 0:
+        raise OSError(" ".join((proc.stdout + " " + proc.stderr).split())[-500:])
+    tok = json.loads(proc.stdout)
     key = tok["access_token"]
     if os.environ.get("GITHUB_ACTIONS") == "true":
         print(f"::add-mask::{key}", flush=True)
