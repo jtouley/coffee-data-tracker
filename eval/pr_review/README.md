@@ -100,7 +100,8 @@ and no person or model labelled anything.
    with no meaningful rise in clean block rate.
 
 Nothing has been run yet. This sandbox's anonymous free tier was used up, so the first run is in Actions. There,
-the job signs in with its GitHub OIDC token, using the `OPENCODE_CLIENT_ID` repository variable. Locally, set
+the job signs in with its GitHub OIDC token, using the `OPENCODE_EVAL_CLIENT_ID` repository variable: an OpenCode
+credential trusted for runs on `main`, since the eval is run by hand from `main`. Locally, set
 `OPENCODE_API_KEY`.
 
 ## Commands
