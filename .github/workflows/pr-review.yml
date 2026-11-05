@@ -50,6 +50,8 @@ jobs:
       - name: Install OpenCode
         run: npm install -g opencode-ai@1.19.5
       - name: Review
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}  # when set, used instead of the OIDC sign-in
         run: |
           python3 trusted/tools/pr_review/pr_review.py review diff.txt --models "$MODELS" --pr "$PR" \
             --workdir trusted --timeout 300 --out result.json || echo "::warning::No model gave a review."
