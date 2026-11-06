@@ -192,6 +192,15 @@ def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]
     return claims
 
 
+def failures_table(con, test: str) -> str | None:
+    """The table where dbt stored a test's failing rows (store_failures, or `--store-failures`), quoted, or None if
+    the test didn't store any this build."""
+    schema = con.execute(
+        "select any_value(table_schema) from information_schema.tables where table_name = ?", [test]
+    ).fetchone()
+    return None if not schema or schema[0] is None else f'"{schema[0]}"."{test}"'
+
+
 def coverage_claim_messages(db: Path) -> list[str]:
     """What the coverage-claim tests found in this build (`db`), one line per claim, naming the line to update."""
     import duckdb
@@ -205,12 +214,10 @@ def coverage_claim_messages(db: Path) -> list[str]:
             ("coverage_claims_name_metrics", "select source, metric, text from {t}"),
             ("coverage_claims_match_build", "select source, metric, text, built, off_by, tolerance from {t}"),
         ):
-            schema = con.execute(
-                "select any_value(table_schema) from information_schema.tables where table_name = ?", [test]
-            ).fetchone()
-            if not schema or schema[0] is None:
+            table = failures_table(con, test)
+            if table is None:
                 continue  # the test didn't run (no claims, or the build stopped before the tests)
-            for r in con.execute(sql.format(t=f'"{schema[0]}"."{test}"')).fetchall():
+            for r in con.execute(sql.format(t=table)).fetchall():
                 if test == "coverage_claims_name_metrics":
                     out.append(
                         f"{r[0]}: coverage claim {r[2]!r} names {r[1]}, which mart_build_profile doesn't have"
