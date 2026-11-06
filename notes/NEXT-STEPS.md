@@ -275,10 +275,11 @@ gh api -X POST repos/jtouley/coffee-data-tracker/rulesets --input - <<'JSON'
  "conditions":{"ref_name":{"include":["~DEFAULT_BRANCH"],"exclude":[]}},
  "rules":[{"type":"deletion"},{"type":"non_fast_forward"},
   {"type":"pull_request","parameters":{"required_approving_review_count":0,"dismiss_stale_reviews_on_push":false,"require_code_owner_review":false,"require_last_push_approval":false,"required_review_thread_resolution":false}},
-  {"type":"required_status_checks","parameters":{"strict_required_status_checks_policy":false,"required_status_checks":[{"context":"smoke"},{"context":"test"}]}}]}
+  {"type":"required_status_checks","parameters":{"strict_required_status_checks_policy":true,"required_status_checks":[{"context":"smoke"},{"context":"test"}]}}]}
 JSON
 ```
 It restricts deletions, blocks force-push, requires a PR (0 approvals) and requires `smoke` and `test`, with no bypass list (the owner can always edit it). Later: bind the deploy WIF credential to a protected `deploy` environment (terraform PR).
 - 2026-11-06: #122 merged (632f415): fixed the cross-PR smoke break. #108 merged (8b54f80): public contract 2.5.0, verdict gate at 85%, terraform requires verdict_model. All Monday-critical PRs are on main, so cutover2.sh is ready to run.
   - #108 follow-up minors are in issuecomment-6690379936 (items 2-11).
   - The contract version was hand-edited because no generator exists for the public contract; consider adding one.
+- Owner decision (2026-11-06): the ruleset requires up-to-date branches (strict=true; the command above is updated). Priorities now: #111, #113, #112.
