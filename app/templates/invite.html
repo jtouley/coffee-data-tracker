@@ -20,7 +20,7 @@
           {%- else %}Revoked {{ short(r.when) }} · made {{ short(i.created_at) }}{% endif -%}
         </div>
         <div class="edit" id="edit-{{ i.invite_id }}" data-note-edit hidden>
-          {{ note_field("note-" ~ i.invite_id, "Note") }}
+          {{ note_field("note-" ~ i.invite_id, "Note", i.for_label) }}
           <div class="row mt8"><button class="btn secondary" type="button" data-save-note>Save</button><button class="btn text" type="button" data-cancel-note>Cancel</button></div>
         </div>
       </div>

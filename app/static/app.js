@@ -1074,7 +1074,7 @@ function say(root, text) {
   const el = root.querySelector("[data-hint]");
   if (!el) return;
   el.textContent = "";
-  if (text) setTimeout(() => { el.textContent = text; }, 100);
+  if (text) setTimeout(() => hint(root, text), 100);
 }
 
 // One field's error line, under it, and aria-invalid on the field. A hint that doubles as the error line (the
@@ -1394,7 +1394,12 @@ async function copyText(text) {
 }
 
 // An invite's "For" note: what it'll be stored as (trimmed, spaces collapsed), counted as the server counts.
-const noteText = (input) => input.value.split(/\s+/u).filter(Boolean).join(" ");
+// The same cleaning as rules.clean_label: control characters (other than whitespace) dropped, NFC, then split on
+// what Python's str.split() counts as whitespace.
+const PY_SPACE = "\\t\\n\\v\\f\\r\\x1c-\\x1f \\x85\\xa0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000";
+const cleanNote = (text) => text.replace(new RegExp(`(?![${PY_SPACE}])[\\x00-\\x1f\\x7f-\\x9f]`, "g"), "").normalize("NFC")
+  .split(new RegExp(`[${PY_SPACE}]+`)).filter(Boolean).join(" ");
+const noteText = (input) => cleanNote(input.value);
 function noteCounter(input) {
   const count = input.closest("[data-new-note], [data-note-edit]").querySelector("[data-count]");
   const update = () => { count.textContent = `${points(noteText(input))} of ${RULES.label_max}`; };
@@ -1496,7 +1501,11 @@ function invites() {
     return act(b, "Making a link…", "/api/invites", label ? { for_label: label } : {}, (r) => show(r));
   };
   primary.onclick = () => makeOne(primary);
-  another.onclick = () => confirmTap(another, () => makeOne(another));
+  // "Make another link" brings the For box back first; the second tap makes the link, with its note.
+  another.onclick = () => {
+    note.hidden = false;
+    confirmTap(another, () => makeOne(another));
+  };
   for (const b of document.querySelectorAll("[data-reset]")) {
     b.onclick = () => confirmTap(b, () => act(b, "Making a reset link…", "/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name)));
   }
