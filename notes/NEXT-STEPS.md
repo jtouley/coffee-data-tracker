@@ -215,3 +215,14 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
   - Passwords must be compatible with 1Password's generator (https://1password.com/password-generator) at the owner's setting: Random, 20 chars, numbers and symbols on (e.g. `)]=_:!%`). Also cover Memorable (words with separators).
   - Add fixtures for every symbol 1Password can emit, and an end-to-end test that they survive form encoding and JSON.
   - The current rules (10–256 chars, not common, doesn't contain the username, ≥4 distinct chars) should already accept such passwords. The tester's failures were probably the username rule `[a-z0-9_-]{3,32}`, which rejects `@` and `.`, combined with errors that never appeared on the page. Verify this with tests.
+
+## Review policy (owner, 2026-11-06), supersedes earlier review loops
+For every PR:
+1. one specialist review, with the relevant skills (dbt/DQ, DevOps, design, security);
+2. one round of fixes;
+3. one final review.
+
+If that final review finds nothing critical, wait for CI and merge. No more review rounds.
+
+## CI smoke test (to design)
+A fast smoke job across web, ingestion and dbt, as a required check that runs in a few minutes. The full suite takes ~20 min. Plan proposed 2026-11-06; waiting on the owner.
