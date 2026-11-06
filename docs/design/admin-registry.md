@@ -143,8 +143,7 @@ The guard runs in every build, the weekly one included.
 ### Publish: who runs it, and in what order
 
 The admin service can't write the lake. Publish is a **`publish` Cloud Run job**, from the ingest image, running as
-an identity with lake write. The admin can only start it (`run.jobs.runWithOverrides` on `build`, `crawl` and
-`publish`, nothing else).
+an identity with lake write. The admin can only start it, like the other named pipeline jobs (the Jobs section).
 
 Publish is disabled until four things hold:
 1. the draft build passed;
@@ -218,6 +217,54 @@ in RUNBOOK §2.1, run after an egress change: does the new NAT IP get past SiteG
 
 Until the admin ships, RUNBOOK §2.1's check stays a `gcloud run jobs execute … --only` command. After that, it
 becomes this button.
+
+### Jobs (on demand, replacing gcloud)
+
+The owner: "shouldn't I also be able to run full crawls off cycle as well from the admin panel? … the admin panel
+should be able to move the CLI, no?" The Jobs page and API replace the owner's `gcloud run jobs execute` use for the
+pipeline.
+
+**What it can start.** Every pipeline job named in `ingestion.tf`, with the args the CLI takes:
+- a crawl for one connector, or all of them;
+- `crawl-retry`, `merge`, `enrich-week` (classify and enrich) and `fetch-health`;
+- `build`, normal or `--draft`;
+- `publish` (new, section 3), which also re-exports and rebuilds the site files. The GitHub Pages deploy stays in
+  `site.yml`, since the admin holds no GitHub token.
+
+**What it shows.** For each execution: live status, a link to its logs in the Cloud console, the exit code and the
+duration. It keeps a history in a `job_runs` table, and it can cancel a running execution.
+
+**Off-cycle full crawls: two explicit modes.** On `main`, a crawl writes into `run_date=<week>`, and the merge reads
+that week.
+- **(b) "test", the default:** it writes into a `test=<id>` sub-partition, as Test crawl does. The weekly build
+  never reads it.
+- **(a) "count for week W", only if the owner picks it:** it writes into W's partition, like the scheduled passes.
+  - It is allowed only before W's merge has a `done` row in `job_manifests`.
+  - After that it is refused, unless the owner also starts the merge again and a draft build.
+  - A released week is never rewritten. A draft over it is published only through Publish.
+
+**Guards.**
+- **No overlap.** It refuses a job that already has a running execution; that is `cutover2.sh`'s step 1 check.
+- **Scheduled windows.** It refuses inside the Monday crawl and Tuesday release windows, unless the owner overrides
+  explicitly, and that override is recorded.
+- **Confirm.** A confirm step shows the exact args before the start.
+- **Crawling rules unchanged.** Per-store pacing and robots.txt rules don't change.
+- **Audit.** Every start, cancel and override is an audit row: who, the job, the args, the mode, and the execution
+  name. Each also triggers the write email.
+
+**Access.**
+- The admin's service account gets `run.jobs.runWithOverrides` (args included), plus
+  `run.executions.get/list/cancel`, on the named jobs only.
+- It gets no Terraform, IAM or project-level roles. The `publish` job is still the only lake writer for serving.
+- **Infra stays on the CLI:** `terraform apply`, image builds and digest pins (`cutover2.sh`), and Scheduler
+  changes. These change what the jobs *are* and what can reach them, not what they process. Giving the admin those
+  roles would let a stolen admin session rewrite its own guards, which the security review rules out.
+
+**CLI.** `coffeedata admin jobs run|status|cancel` calls the same API, so "the API is the only writer" holds for jobs
+too.
+
+**Phase 1.** It reuses the Test crawl's plumbing (start a job with overrides, poll the execution, write an audit
+row), so it is mostly a page over the same client.
 
 ### Removals and restores
 
@@ -295,6 +342,7 @@ separate PR.
 | **Queue** | open flags by subject, then roaster and rule, sorted by public rows affected; one summary per row ("1 supports · 1 doubts · held") | open a case; add to the draft |
 | **Case** | each flag with its polarity and evidence (rules' answer, verdict, title, type, tags, sizes, prices, the description and how many share it, 8 weeks of fetches); the roaster's crawl flag | live check; propose exclude or include with a reason; toggle the crawl flag; **Test crawl** |
 | **Catalog** | **every** coffee in the published release, flagged or not: keyword search, and filters on roaster, origin, process, coffee or not, listed or removed (and why), stock and price | open any coffee; propose exclude or include (the override) into the draft |
+| **Jobs** | every pipeline job, its running and past executions (status, exit code, duration, logs link), with the mode and args | run (with a confirm showing the args), cancel |
 | **Draft** | its changes; build status; each gate's result; `build-diff`; #111's rows in and out per table with reasons; the count of public rows that leave | **Publish**, **Discard** |
 
 Every page defines these states:
@@ -323,6 +371,8 @@ Playwright runs at 390 px and desktop, light and dark, plus an axe check.
     `POST /api/drafts/{id}/discard`.
   - Roaster state: `POST /api/roasters/{id}/crawl`.
   - Test crawls: `POST /api/test-crawls` (a connector and one or more roaster ids), and `GET /api/test-crawls/{id}`.
+  - Jobs: `POST /api/jobs/{job}/runs` (args, mode, any override), `GET /api/jobs/runs`, and
+    `POST /api/jobs/runs/{execution}/cancel`.
 - **Idempotency.** Writes carry an idempotency key (`decision_id` + `seq`) and the version they were based on, so a
   retry never doubles an event and a stale tab fails loudly.
 - **Untrusted text.** Titles, tags and descriptions are rendered escaped, never `|safe`. The pages keep `app/web.py`'s
@@ -358,7 +408,8 @@ The rest follows the security review of 2026-11-04. It is held privately and not
 weaknesses in the live app; this repo is public. In short:
 - **Credentials.** The admin has its own least-privilege service account and credentials, separate from the app's:
   database access, write on the private curation dataset (snapshots), read on the lake, and the right to start the
-  `build`, `crawl` and `publish` jobs with overrides. Only the jobs hold lake write. It never uses the app's `HF_TOKEN`, and it holds no Anthropic key.
+  named pipeline jobs with overrides, and to list and cancel their executions (the Jobs section). Only the jobs hold
+  lake write. It never uses the app's `HF_TOKEN`, and it holds no Anthropic key.
 - **Deploys.** A ruleset protects `main`. An `admin` GitHub environment needs the owner's approval, and the deploy
   credential is bound to it. A `terraform test` checks the admin's grants (no lake write, its secrets only). The owner applies a reviewed plan, and
   `deploy.yml` deploys the app and the admin from one image.
@@ -421,6 +472,7 @@ The owner decides from the results. Nothing from a POC merges without the review
 - The API, `coffeedata decide`, passkey sign-in with its one-shot enrollment.
 - The Queue, Case, **Catalog** and Draft pages.
 - Test crawl, per roaster and per connector, in its own `test=<id>` sub-partition.
+- The Jobs page and `coffeedata admin jobs`, with the guards and the two crawl modes.
 
 Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page shows `build-diff`.
 
