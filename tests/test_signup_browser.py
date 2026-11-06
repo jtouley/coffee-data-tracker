@@ -14,7 +14,7 @@ import pytest
 
 from app.auth import Sessions
 from app.main import create_app
-from app.rules import check_password, check_username
+from app.rules import check_password, check_username, clean_label
 from coffeedata.lake import Lake
 from tests import signup_seed
 from tests.test_app_browser import BROWSER, _playwright, _serve
@@ -72,7 +72,13 @@ def test_the_page_and_the_server_give_the_same_verdicts_in_the_same_words(tmp_pa
     passwords = [p["password"] for p in json.loads(PASSWORDS.read_text())]
     passwords += ["short", "1234567890", "Password123", "aaaaaaaaaaaa", "maya-espresso", "x" * 256, "x" * 257,
                   "abcabcabcab", "é" * 5, "café crème", "MAYA is here and fine"]  # fmt: skip
-    cases = {"usernames": USERNAMES, "passwords": [[p, u] for p in passwords for u in ("maya", "")]}
+    notes = ["Sam", "  Sam \n at\tthe  café ", "cafe\u0301 on 5th", "bell\x07 ", "👩\u200d💻 dev", "a\x1fb", "a\x85b",
+             "a\u3000b", "\ufeffx", "   ", "x" * 61]  # fmt: skip
+    cases = {
+        "usernames": USERNAMES,
+        "passwords": [[p, u] for p in passwords for u in ("maya", "")],
+        "notes": notes,
+    }
     (tmp_path / "cases.json").write_text(json.dumps(cases))
     server = _serve(_app(tmp_path / "parity"))
     try:
@@ -87,3 +93,4 @@ def test_the_page_and_the_server_give_the_same_verdicts_in_the_same_words(tmp_pa
     page = json.loads(r.stdout)
     assert page["usernames"] == [check_username(u) for u in USERNAMES]
     assert page["passwords"] == [check_password(p, u) for p, u in cases["passwords"]]
+    assert page["notes"] == [clean_label(n) or "" for n in notes]

@@ -11,9 +11,10 @@ const cases = JSON.parse(fs.readFileSync(file, "utf8"));
   try {
     const page = await browser.newPage();
     await page.goto(`${base}/join`);
-    const verdicts = await page.evaluate(({ usernames, passwords }) => ({
+    const verdicts = await page.evaluate(({ usernames, passwords, notes }) => ({
       usernames: usernames.map((u) => checkUsername(u)),
       passwords: passwords.map(([p, u]) => checkPassword(p, u)),
+      notes: notes.map((n) => cleanNote(n)), // the invite screen's note, as it counts it
     }), cases);
     process.stdout.write(JSON.stringify(verdicts));
   } finally {

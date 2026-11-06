@@ -117,6 +117,13 @@ function counting(page, path) {
     await waitText(owner, "main [data-status]", /Invite link ready/);
     const code = (await owner.$$eval("[data-code] span", (els) => els.map((e) => e.textContent))).join("-");
     await snap(owner, "invite-ready");
+    // "Make another link" brings the For box back; the second tap makes the link with its note.
+    await owner.getByRole("button", { name: "Make another link" }).click();
+    assert.equal(await owner.isVisible("#for_label"), true);
+    await owner.fill("#for_label", "Second  cafe\u0301 link");
+    assert.equal(await text(owner, "[data-new-note] [data-count]"), "16 of 60", "counted as the server counts (NFC, spaces collapsed)");
+    await owner.locator("[data-another]").click();
+    await waitText(owner, "[data-code-label]", /^Invite for Second café link$/);
     // A note over 60 characters is refused in place.
     await owner.goto(`${base}/invite`);
     await owner.fill("#for_label", "x".repeat(61));
@@ -128,6 +135,7 @@ function counting(page, path) {
     const samId = await owner.locator("[data-invite]", { hasText: "Sam from the café" }).getAttribute("data-invite");
     const row = owner.locator(`[data-invite="${samId}"]`);
     await row.getByRole("button", { name: "Edit note" }).click();
+    assert.equal(await row.locator("input").inputValue(), "Sam from the café", "the editor opens with the note");
     await row.locator("input").fill("Sam, café on 5th");
     await snap(owner, "invite-edit-note");
     await row.getByRole("button", { name: "Save" }).click();
@@ -472,6 +480,45 @@ function counting(page, path) {
       assert.ok(wide <= width, `no sideways scroll at ${width}`);
       await ctx.close();
     }
+
+    // --- A reset link sent again: the old one stops, the new one works ---------------------------------------
+    const renewed = await owner.evaluate(async () => {
+      const maya = document.querySelector('[data-reset][data-name="maya"]')?.dataset.reset
+        ?? (await (await fetch("/invite")).text()).match(/data-reset="([^"]+)" data-name="maya"/)[1];
+      const first = await post("/api/invites", { kind: "reset", for_user_id: maya });
+      const again = await post(`/api/invites/${first.invite_id}/renew`, {});
+      return [first.code, again.code, again.kind];
+    });
+    assert.equal(renewed[2], "reset");
+    const renewCtx = await context(browser);
+    const renewPage = await renewCtx.newPage();
+    await renewPage.goto(`${base}/reset#${renewed[0]}`);
+    await renewPage.fill("#password", "lantern quarry again");
+    await renewPage.getByRole("button", { name: "Set password" }).click();
+    await waitText(renewPage, "#code-h", /isn’t valid/);
+    const renewNew = await renewCtx.newPage(); // a fresh page: only the # differs, which wouldn't load it again
+    await renewNew.goto(`${base}/reset#${renewed[1]}`);
+    await renewNew.fill("#password", "lantern quarry again");
+    await renewNew.getByRole("button", { name: "Set password" }).click();
+    await renewNew.waitForURL(`${base}/`);
+    await renewCtx.close();
+
+    // --- Change password, from Setup: it changes, and the new one signs in ------------------------------------
+    await owner.goto(`${base}/setup`);
+    await owner.locator("summary", { hasText: "Change password" }).click();
+    await owner.fill("#current", "wrong password!");
+    await owner.fill("#new", "a new kettle orbit");
+    await owner.getByRole("button", { name: "Change password" }).click();
+    await waitText(owner, "#current-error", /current password isn’t right/);
+    await owner.fill("#current", OWNER[1]);
+    await owner.getByRole("button", { name: "Change password" }).click();
+    await waitText(owner, "[data-notice]", /Password changed/);
+    await snap(owner, "setup-password-changed");
+    const again = await context(browser);
+    const signedIn = await again.newPage();
+    await signIn(signedIn, base, [OWNER[0], "a new kettle orbit"]);
+    await signedIn.waitForURL(`${base}/`);
+    await again.close();
 
     await ownerCtx.close();
     assert.deepEqual(errors, []);
