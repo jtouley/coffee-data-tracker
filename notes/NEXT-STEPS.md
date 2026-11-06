@@ -238,3 +238,9 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
 - Review policy, addition 2 (owner, 2026-11-06): "Verify the premise first" goes in each review, and into CLAUDE.md via the smoke-test PR.
   - Steps: existing work; the real failure (logs, not summaries); reproduce it with the exact output and exit code; primary sources; who can fix it; only then act, and show the owner any public post outside the repo first.
   - Each review's PR comment ends with "Premise checks": what was checked, what was found, what was not verified.
+- /code-review levels (owner, 2026-11-06):
+  - low: docs, specs, copy;
+  - medium (default): ordinary features;
+  - high: auth/security, money, anything that publishes data (dbt gates, public tables, contracts), terraform;
+  - final review after fixes: low or medium.
+  Goes into CLAUDE.md via the smoke-test PR.
