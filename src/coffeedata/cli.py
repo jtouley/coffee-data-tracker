@@ -351,9 +351,12 @@ def dbt_build(
     target = target or DBT_TARGET  # read here, not as a default: tests point DBT_TARGET elsewhere
     (target / "manifest.json").unlink(missing_ok=True)
     picked = ["--select", *select] if select else []
+    # Report-only nodes (tag report_only: release_changes and its tests) run after the gate, in a step of their own
+    # whose outcome is logged and never decides `passed`, so a report can't hold back a release.
+    report_only = [] if select else ["tag:report_only+"]
     for step in (
-        ["build", *picked, "--exclude", "resource_type:test", "resource_type:unit_test"],
-        ["test", *picked, "--exclude", "resource_type:unit_test"],
+        ["build", *picked, "--exclude", "resource_type:test", "resource_type:unit_test", *report_only],
+        ["test", *picked, "--exclude", "resource_type:unit_test", *report_only],
     ):
         # A step that crashes before writing its results must not be recorded with the previous step's.
         (target / "run_results.json").unlink(missing_ok=True)
@@ -377,6 +380,16 @@ def dbt_build(
             results.append(json.loads((target / "run_results.json").read_text()))
         except (OSError, ValueError):
             results.append({})
+    if report_only:
+        r = subprocess.run(
+            ["dbt", "build", "--select", *report_only, "--exclude", "resource_type:unit_test",
+             "--project-dir", "dbt", "--profiles-dir", "dbt", *where, *flags, "--vars", dbt_vars],
+            env=env,
+        )  # fmt: skip
+        if r.returncode != 0:
+            logging.warning(
+                "the report-only step (release_changes) failed; the build's verdict doesn't depend on it"
+            )
     return passed, results
 
 
@@ -395,11 +408,20 @@ def cmd_build(args: argparse.Namespace) -> bool:
     run_date = getattr(args, "run_date", None) or quality.latest_run(lake) or _today()
     build_id = new_batch_id()  # every release table carries it as release_build_id
     extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
-    served = (quality.served(lake) or {}).get("build_id")
+    served_release = quality.served(lake)
+    served = (served_release or {}).get("build_id")
     if (
         served
     ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
         extra["baseline_build"] = served
+        # release_changes reconciles this build's public tables against the served release's, from local copies:
+        # a read that fails is retried, then reported (previous_release_status), never a failed build.
+        previous, status = quality.stage_previous_release(lake, served, db.parent / "previous_release")
+        extra |= {
+            "previous_release": previous,
+            "previous_release_status": status,
+            "previous_release_run_date": str((served_release or {}).get("run_date") or ""),
+        }
     if getattr(args, "allow_rules_only", False):
         extra["require_verdicts"] = False
     if getattr(args, "accept_volume_change", False):
@@ -423,6 +445,11 @@ def cmd_build(args: argparse.Namespace) -> bool:
         parity_lines = []
     for line in parity_lines:
         print(f"tag parity: {line}", file=sys.stderr)
+    try:  # the release notes: what this build changes against the served release, per reason; only a report
+        for line in quality.release_notes(db):
+            print(f"release notes: {line}", file=sys.stderr)
+    except Exception as e:
+        logging.warning("release notes not reported: %s", e)
     try:  # the share verdicts_cover_catalog judges, so a failing (or narrowly passing) build shows it
         if verdict_line := quality.verdict_coverage_message(db):
             print(f"verdicts: {verdict_line}", file=sys.stderr)

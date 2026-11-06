@@ -1,9 +1,13 @@
-{#- The anomaly bands (build_metrics_in_band, fill_and_freshness_in_band): the metrics of mart_build_profile that
-    `banded` (a condition on r.metric) selects, each against median +/- band_k x 1.4826 x MAD of its values in the
-    recent passing builds since the last reset, or band_min_*_halfwidth when that is wider. The volume metrics are
-    judged both sides, every other metric (a share) only below. One row per metric out of band. The rules are in
+{#- The anomaly bands (build_metrics_in_band, fill_and_freshness_in_band, adapter_volume_in_band): the metrics of
+    mart_build_profile that `banded` (a condition on r.metric) selects, each against median +/- band_k x 1.4826 x
+    MAD of its values in the recent passing builds since the last reset, or the minimum half-width when that is
+    wider (band_min_volume_halfwidth x the median for a volume metric, else `min_share_halfwidth`, by default
+    band_min_share_halfwidth). The volume metrics are judged both sides, every other metric (a share or a ratio)
+    only below. A per-adapter metric (adapter_<name>:<adapter>) is judged only when this build's adapter has at
+    least min_adapter_roasters roasters with a catalog. One row per metric out of band. The rules are in
     tests/build_metrics_in_band.sql. -#}
-{% macro metrics_out_of_band(banded) -%}
+{% macro metrics_out_of_band(banded, min_share_halfwidth=none) -%}
+{%- set share_halfwidth = min_share_halfwidth if min_share_halfwidth is not none else var('band_min_share_halfwidth') %}
 {%- set volume = ['listed_coffees', 'in_stock_coffees', 'roasters_with_coffee'] %}
 {%- if var('as_of_run') %}
 with this_run as (select cast('{{ var("as_of_run") }}' as date) as run_date),
@@ -63,12 +67,12 @@ judged as (
     select b.*, cur.value as current_value,
            greatest({{ var('band_k') }} * 1.4826 * b.mad, case when b.is_volume
                then {{ var('band_min_volume_halfwidth') }} * abs(b.median)
-               else {{ var('band_min_share_halfwidth') }} end) as halfwidth
+               else {{ share_halfwidth }} end) as halfwidth
     from bands b
     join current_build cur using (metric)
-    left join current_build n on n.metric = replace(b.metric, 'adapter_ok_share:', 'adapter_roasters:')
+    left join current_build n on n.metric = regexp_replace(b.metric, '^adapter_[a-z_]+:', 'adapter_roasters:')
     where b.builds >= {{ var('band_min_builds') }}
-      and (b.metric not like 'adapter_ok_share:%' or n.value >= {{ var('min_adapter_roasters') }})
+      and (not regexp_matches(b.metric, '^adapter_[a-z_]+:') or n.value >= {{ var('min_adapter_roasters') }})
 )
 select metric, current_value, median, mad, halfwidth, builds
 from judged, current_reset

@@ -400,6 +400,19 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     low side only, on the share of listed coffees with `origin_country`, `process`, `roast_level` and
     `price_per_100g` filled in (a drop is an extraction or enrichment break, which `accepted_values` lets through
     as nulls) and on the share of listed coffees last seen in this run;
+  - `adapter_volume_in_band` (warn only): the same bands, low side only, at least 0.10 below the median, on three
+    per-adapter metrics: the ok share of the roasters the run *tried* (unlike `adapter_ok_share`, it doesn't fall
+    when a run just tries fewer roasters), and the same stores' products and priced products against their
+    previous fetch (a platform whose fetches "succeed" with less, or a price wipe on one platform). Measured in
+    `eval/dq`;
+  - `near_duplicate_roasters`, `price_per_100g_outliers`, `public_tables_reconcile` and
+    `release_changes_explained` (all warn only, measured in `eval/dq`): one catalog listed under two roaster_ids; a
+    price per 100 g far from coffees of the same origin and process (robust z of its log, below −3 or above 6);
+    totals that two public tables state separately (roaster counts, the listed total, a price event's roaster, a
+    price event with no coffee row that isn't a reclassified product); and every row this build adds, removes or
+    changes against the served release with a reason (`release_changes`, run after the gate as a report so it
+    can never fail a build; the build prints the counts per reason as `release notes:` and records them in
+    `builds` as `kind = 'release_change'`);
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;

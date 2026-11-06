@@ -1,0 +1,27 @@
+{
+ "meta": {
+  "labeler": "A",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "recon",
+  "n": 3,
+  "note": "train and validation only; the test labels are in sealed/"
+ },
+ "labels": [
+  {
+   "id": "2026-11-02|orphan_event|lostsockroasters.com:2152864481391",
+   "label": "by_design",
+   "reason": "Wholesale placeholder whose latest record is non-coffee leaves dim_coffee; the orphan events follow the definition."
+  },
+  {
+   "id": "2026-11-02|orphan_event|lostsockroasters.com:2152865038447",
+   "label": "by_design",
+   "reason": "Wholesale placeholder whose latest record is non-coffee leaves dim_coffee; the orphan events follow the definition."
+  },
+  {
+   "id": "2026-11-02|orphan_event|weekend-roasters.com:9182451171561",
+   "label": "by_design",
+   "reason": "Cake whose latest record is non-coffee, so it is excluded from dim_coffee; the orphan follows the stated definition."
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "meta": {
+  "labeler": "C",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "price",
+  "n": 15
+ },
+ "labels": [
+  {
+   "id": "acmecoffeeroasting.com:458492092",
+   "label": "right",
+   "reason": "One pound for $28; small gram discrepancy, value is plausible."
+  },
+  {
+   "id": "copantrade.com:7145949429909",
+   "label": "wrong",
+   "reason": "Option-style listing with 100 lb at $150; prices are implausible for roasted coffee, likely placeholders."
+  },
+  {
+   "id": "kopanicoffee.com:8669899686060",
+   "label": "unsure",
+   "reason": "$95 for 12 oz Colombia Supremo is odd unless BCWS denotes a special competition lot."
+  },
+  {
+   "id": "onyxcoffeelab.com:6918722977890",
+   "label": "right",
+   "reason": "5 lb blend at $50.40 is a plausible bulk price, consistent with the 10oz price."
+  },
+  {
+   "id": "savagecoffees.co:9097319186717",
+   "label": "wrong",
+   "reason": "Computed from the 1 kg green-coffee variant, not the roasted bag (200 g roasted is $20/100g)."
+  },
+  {
+   "id": "thrutheflamecoffee.com:9279646335224",
+   "label": "wrong",
+   "reason": "Kenya AA at $17.95 for 2 lb is implausible; the weight is likely misread."
+  }
+ ]
+}

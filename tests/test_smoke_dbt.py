@@ -53,7 +53,8 @@ def test_the_fixture_lake_builds_passes_the_gate_and_is_served(lake, tmp_path, m
     tables = [
         t
         for (t,) in built.execute(
-            "select table_name from information_schema.tables where table_name like 'public_%'"
+            "select table_name from information_schema.tables where table_name like 'public_%' "
+            "and table_schema = 'main'"  # not a warn test's stored failures (main_dbt_test__audit)
         ).fetchall()
     ]
     assert set(public.PUBLIC_TABLES) <= set(tables)

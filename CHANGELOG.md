@@ -18,6 +18,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
+  (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
+  cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the
+  served release, with per-reason release notes printed by `coffeedata build` and recorded in `builds`).
+
 - **Catalog pipeline.** A weekly catalog of US specialty roasters on an immutable Parquet lake, modeled with dbt and
   DuckDB, with roaster discovery from Overture Maps and OpenStreetMap (#9). The catalog is derived in dbt from the
   raw lake, with a measured coffee classifier (#30). Every page of a Shopify catalog is fetched, and coffees are
