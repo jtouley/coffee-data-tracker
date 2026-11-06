@@ -279,3 +279,6 @@ gh api -X POST repos/jtouley/coffee-data-tracker/rulesets --input - <<'JSON'
 JSON
 ```
 It restricts deletions, blocks force-push, requires a PR (0 approvals) and requires `smoke` and `test`, with no bypass list (the owner can always edit it). Later: bind the deploy WIF credential to a protected `deploy` environment (terraform PR).
+- 2026-11-06: #122 merged (632f415): fixed the cross-PR smoke break. #108 merged (8b54f80): public contract 2.5.0, verdict gate at 85%, terraform requires verdict_model. All Monday-critical PRs are on main, so cutover2.sh is ready to run.
+  - #108 follow-up minors are in issuecomment-6690379936 (items 2-11).
+  - The contract version was hand-edited because no generator exists for the public contract; consider adding one.
