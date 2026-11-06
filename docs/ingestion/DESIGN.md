@@ -1042,7 +1042,8 @@ order:
 - the latest probe (`dim_roaster`), the registry's name, city and state (`stg_registry`), an attempt's adapter, and
   (since #93) a partial run's reason and a challenged run's edge (`int_roaster_runs`), and a verdict's label
   (`stg_verdicts`) break a tie by the value picked. Of two verdicts stored in the same second, `coffee` wins
-  whatever the other label, so a tie never removes a product; other ties go by the label;
+  whatever the other label, so a tie with `coffee` never removes a product; other ties go by the label
+  (`not_coffee` before `unsure`);
 - an enrichment breaks a tie in `extracted_at` by the row's hash (`stg_enrichments`);
 - the registry's lake sources are listed alphabetically. `string_agg(distinct source, '+')` had no order, and on
   200k rows across four files DuckDB gave 9 different orders in 12 reads;

@@ -330,7 +330,8 @@ unit_tests:
     description: >-
       Of a product's verdicts, the latest wins (P: a later not_coffee over an earlier coffee). Two stored in the same
       second: coffee wins whatever the other label and whichever is read first (Q and R: not_coffee; S: unsure), so
-      a tie never removes a product. Verdicts for another model or definition are ignored (T).
+      a tie with coffee never removes a product. A tie without coffee goes by the label (U: not_coffee before
+      unsure; the owner's rule covers only coffee). Verdicts for another model or definition are ignored (T).
     model: stg_verdicts
     overrides:
       vars:
@@ -349,7 +350,9 @@ unit_tests:
               ('S', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
               ('S', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
               ('T', 'coffee', 'other', 'd', timestamptz '2026-11-02 12:00:00+00'),
-              ('T', 'coffee', 'm', 'old', timestamptz '2026-11-02 12:00:00+00')
+              ('T', 'coffee', 'm', 'old', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00')
           ) t(input_hash, label, model, definition, decided_at))
     given: []
     expect:
@@ -358,3 +361,4 @@ unit_tests:
         - {input_hash: Q, label: coffee, model: m}
         - {input_hash: R, label: coffee, model: m}
         - {input_hash: S, label: coffee, model: m}
+        - {input_hash: U, label: not_coffee, model: m}
