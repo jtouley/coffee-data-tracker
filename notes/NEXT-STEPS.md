@@ -264,3 +264,4 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
 - 2026-11-06 #120: the final review is clean (issuecomment-6689574646). Merge on green CI once it's out of draft (the owner clicks Ready). Follow-up minors:
   - m1a: a timing tell inside the 15-min retry window (the limiter refuses before the password check);
   - m4a: when the 'Make another link' confirm times out, the For box stays open over the old link.
+- 2026-11-06: #93 merged (3ad007a) and #120 merged (f7ba6e4). Owner: don't wait for confirmation when the review loop is complete. Mark the PR ready and merge it myself after a clean final review and green CI.
