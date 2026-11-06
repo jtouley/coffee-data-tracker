@@ -69,7 +69,8 @@ def _claims_passed_to_dbt(monkeypatch, tmp_path) -> list[dict]:
         cli.subprocess, "run", lambda a, **kw: argv.append(a) or subprocess.CompletedProcess(a, 0)
     )
     passed, _ = cli.dbt_build(Lake(), tmp_path / "coffee.duckdb")
-    assert passed and len(argv) == 2  # both dbt steps ran
+    # Both gate steps ran, then the report-only step (release_changes) after them.
+    assert passed and len(argv) == 3 and argv[2][argv[2].index("--select") + 1] == "tag:report_only+"
     return json.loads(argv[0][argv[0].index("--vars") + 1])["coverage_claims"]
 
 
