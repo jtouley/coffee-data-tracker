@@ -455,6 +455,7 @@ SCHEMAS["invites"] = pa.schema(
         ("revoked", pa.bool_()),
         ("for_label", pa.string()),  # the owner's note on a join link ("For"), up to 60 characters
         ("created_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
+        ("revoked_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
     ]
 )
 # Which Terms and Privacy Policy each account accepted, and when: one file per acceptance, latest wins.

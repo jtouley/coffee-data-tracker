@@ -2,7 +2,9 @@
 commit, the required terms box and its record, re-acceptance when the terms change, named invites and their list,
 owner reset links, the in-app browser banner, and the cold-start log line."""
 
+import json
 import logging
+import time
 from dataclasses import replace
 from datetime import UTC, datetime, timedelta
 
@@ -130,8 +132,46 @@ def test_a_retry_counts_against_the_sign_in_limits(app, owner, accounts):
             .status_code
             == 409
         )
+    # Past the limit even the right password gets the same reply as everyone else.
     r = client(app).post("/api/join", json=join_body(code), headers=W)
-    assert r.status_code == 400 and "Too many" in r.json()["detail"]
+    assert r.status_code == 409 and r.json()["detail"][0]["rule"] == "c.used"
+    assert accounts.limiter.blocked("u:maya|ip:testclient", 5, time.monotonic())
+
+
+def test_a_retry_signs_in_only_soon_after_the_join(app, owner, accounts):
+    code = invite(owner)["code"]
+    client(app).post("/api/join", json=join_body(code), headers=W)
+    inv = next(i for i, _ in accounts.invites.values() if i.kind == "join" and i.used_by)
+    accounts.invites[inv.invite_id] = (replace(inv, used_at=inv.used_at - timedelta(minutes=16)), _now())
+    r = client(app).post("/api/join", json=join_body(code), headers=W)
+    assert r.status_code == 409 and r.json()["detail"][0]["rule"] == "c.used"
+
+
+def test_a_used_code_does_the_same_work_whatever_the_username(app, owner, accounts, monkeypatch):
+    code = invite(owner)["code"]
+    client(app).post("/api/join", json=join_body(code), headers=W)
+    checks = []
+    real = accounts._verify
+    monkeypatch.setattr(accounts, "_verify", lambda h, p: checks.append(p) or real(h, p))
+    replies = []
+    for name in ("maya", "sam", "nobody1"):
+        r = client(app).post("/api/join", json=join_body(code, name, "wrong phrase!"), headers=W)
+        replies.append((r.status_code, r.json()))
+    assert len({json.dumps(x) for x in replies}) == 1  # one reply, word for word
+    assert checks == ["wrong phrase!"] * 3  # one password check each
+
+
+def test_a_bad_code_says_nothing_about_the_username(app, owner, accounts):
+    a = invite(owner)
+    client(app).post("/api/join", json=join_body(a["code"]), headers=W)  # maya exists now
+    for name in ("maya", "nobody1"):
+        r = client(app).post("/api/join", json=join_body("AAAA-BBBB-CCCC-DDDD", name, "x"), headers=W)
+        assert r.json()["detail"] == [{"field": "code", "rule": "c.invalid",
+                                       "message": "That code isn’t valid. It may have been used, replaced or expired."}]  # fmt: skip
+    reset = invite(owner, kind="reset", for_user_id=accounts.by_name("maya").user_id)
+    for name in ("maya", "nobody1"):
+        r = client(app).post("/api/join", json=join_body(reset["code"], name), headers=W)
+        assert [e["rule"] for e in r.json()["detail"]] == ["c.kind"]
 
 
 def test_one_publish_per_join_with_the_account_the_invite_and_the_acceptance(accounts, monkeypatch):
@@ -370,6 +410,39 @@ def test_invite_files_from_before_notes_still_load(tmp_path):
 
 
 # --- owner reset links -----------------------------------------------------------------------------------------
+
+
+def test_a_reset_link_can_be_renewed(app, owner, accounts):
+    a = invite(owner)
+    client(app).post("/api/join", json=join_body(a["code"]), headers=W)
+    first = invite(owner, kind="reset", for_user_id=accounts.by_name("maya").user_id)
+    r = owner.post(f"/api/invites/{first['invite_id']}/renew", headers=W)
+    assert r.status_code == 200 and r.json()["kind"] == "reset"
+    assert accounts.invites[first["invite_id"]][0].revoked
+    assert accounts.invites[r.json()["invite_id"]][0].open(_now())
+    staged = sorted(p.name for p in accounts.lake.root.glob(f"invites/{first['invite_id']}__*.parquet"))
+    assert len(staged) == 2  # made, then revoked once
+    assert client(app).post("/api/reset", json={"code": r.json()["code"], "password": "a brand new phrase"},
+                            headers=W).status_code == 200  # fmt: skip
+
+
+def test_editing_a_note_keeps_the_revoked_date(app, owner, accounts):
+    a = invite(owner, for_label="Ana")
+    owner.post(f"/api/invites/{a['invite_id']}/revoke", headers=W)
+    inv = accounts.invites[a["invite_id"]][0]
+    long_ago = _now() - timedelta(days=120)
+    accounts._write_invite(replace(inv, revoked_at=long_ago))
+    owner.post(f"/api/invites/{a['invite_id']}/label", json={"for_label": "Ana, edited"}, headers=W)
+    row = next(
+        r for r in new_accounts(accounts.lake.root).invite_log() if r.invite.invite_id == a["invite_id"]
+    )
+    assert row.when == long_ago and row.old
+
+
+def test_edit_note_opens_with_the_note(app, owner):
+    invite(owner, for_label="Sam from the café")
+    page = owner.get("/invite").text
+    assert 'data-note value="Sam from the café"' in page
 
 
 def test_reset_links(app, owner, accounts):

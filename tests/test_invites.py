@@ -89,7 +89,7 @@ def test_invite_join_and_sign_in(app, owner, accounts):
     assert (
         r2.status_code == 409 and r2.json()["detail"][0]["rule"] == "c.used"
     )  # it says so, and links to sign-in
-    assert accounts.pending() == []
+    assert [r.status for r in accounts.invite_log()] == ["used"]
 
 
 def test_join_page_needs_no_sign_in_and_never_sees_the_code(app, owner):

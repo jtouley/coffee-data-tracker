@@ -80,6 +80,10 @@ class Invite:
     revoked: bool = False
     for_label: str | None = None  # the owner's "For" note on a join link, shown only to the owner
     created_at: datetime | None = None
+    revoked_at: datetime | None = None  # kept, so a later edit (a new note) doesn't move it
+
+    def revoke(self) -> Invite:
+        return replace(self, revoked=True, revoked_at=_now())
 
     def open(self, now: datetime) -> bool:
         return not self.used_by and not self.revoked and now < self.expires_at
@@ -93,6 +97,7 @@ class Invite:
 
 
 INVITE_DAYS = 7
+JOIN_RETRY = timedelta(minutes=15)  # how long after a join link is used a retry of that join still signs in
 OLD_AFTER_DAYS = 90  # expired and revoked links older than this fold away on the invite screen
 
 
@@ -129,10 +134,6 @@ class AccountError(ValueError):
         self.errors = errors or []
         self.status = status
         super().__init__(message or " ".join(e["message"] for e in self.errors))
-
-    @classmethod
-    def of(cls, rule: str, message: str | None = None, status: int = 400) -> AccountError:
-        return cls(errors=[rules.error(rule, message)], status=status)
 
     @property
     def detail(self) -> str | list[dict[str, str]]:
@@ -304,6 +305,8 @@ class Accounts:
                     used_by=row["used_by"],
                     used_at=row["used_at"],
                     revoked=bool(row["revoked"]),
+                    # Files from before revoked_at was kept: the record that revoked it is the latest one.
+                    revoked_at=row.get("revoked_at") or (row["logged_at"] if row["revoked"] else None),
                     for_label=row.get("for_label"),
                     # Files from before created_at was kept: invites have always lasted INVITE_DAYS.
                     created_at=row.get("created_at") or row["expires_at"] - timedelta(days=INVITE_DAYS),
@@ -380,6 +383,7 @@ class Accounts:
             "used_by": inv.used_by,
             "used_at": inv.used_at,
             "revoked": inv.revoked,
+            "revoked_at": inv.revoked_at,
             "for_label": inv.for_label,
             "created_at": inv.created_at,
         }
@@ -408,7 +412,9 @@ class Accounts:
         consents: tuple[tuple[Consent, datetime], ...] = (),
     ) -> None:
         """Publish what was staged in one commit, then let the cache see it, so the records of one change (an
-        account, its invite marked used and its acceptance) land together or not at all."""
+        account, its invite marked used and its acceptance) are sent together. If the publish fails they stay
+        staged, unseen by the cache, and go with the next publish (Lake.publish); the cache sees them after the
+        next restart."""
         self.lake.publish(message)
         for acct, at in users:
             self.users[acct.user_id] = (acct, at)
@@ -475,9 +481,7 @@ class Accounts:
             if hmac.compare_digest(setup_code.strip().encode(), self.setup_code.encode()):
                 self.limiter.release(key, now)
             else:
-                errors.append(
-                    {"field": "setup_code", "rule": "s.wrong", "message": "That setup code isn’t right."}
-                )
+                errors += field_error("setup_code", "s.wrong", "That setup code isn’t right.").errors
             errors += self._new_account_errors(username, password, agree)
             if errors:
                 raise AccountError(errors=errors)
@@ -578,12 +582,6 @@ class Accounts:
             (a for a, _ in list(self.users.values())), key=lambda a: (a.role != "owner", a.username)
         )
 
-    def pending(self, now: datetime | None = None) -> list[Invite]:
-        """Join links not used, revoked or expired, newest first."""
-        now = now or _now()
-        open_ = [(i, at) for i, at in list(self.invites.values()) if i.kind == "join" and i.open(now)]
-        return [i for i, _ in sorted(open_, key=lambda x: x[1], reverse=True)]
-
     def invite_log(self, now: datetime | None = None) -> list[InviteRow]:
         """Every join link, newest first, with its status and the date that status began (spec §8)."""
         now = now or _now()
@@ -592,7 +590,7 @@ class Accounts:
             if inv.kind != "join":
                 continue
             status = inv.status(now)
-            when = {"used": inv.used_at, "revoked": at, "expired": inv.expires_at}.get(
+            when = {"used": inv.used_at, "revoked": inv.revoked_at or at, "expired": inv.expires_at}.get(
                 status
             ) or inv.expires_at
             user = self.get(inv.used_by) if inv.used_by else None
@@ -629,9 +627,15 @@ class Accounts:
         if kind == "reset" and (for_user_id is None or self.get(for_user_id) is None):
             raise AccountError("No such account.")
         if kind == "reset":
+            done = {i.invite_id for i, _ in staged}  # renew has already revoked the one it replaces
             for old, _ in list(self.invites.values()):
-                if old.kind == "reset" and old.for_user_id == for_user_id and old.open(_now()):
-                    staged += (self._stage_invite(replace(old, revoked=True)),)
+                if (
+                    old.kind == "reset"
+                    and old.for_user_id == for_user_id
+                    and old.open(_now())
+                    and old.invite_id not in done
+                ):
+                    staged += (self._stage_invite(old.revoke()),)
         code, now = new_code(), _now()
         inv = Invite(
             invite_id=str(uuid.uuid4()),
@@ -653,7 +657,7 @@ class Accounts:
             if hit is None:
                 raise AccountError("No such invite.")
             if not hit[0].revoked:
-                self._write_invite(replace(hit[0], revoked=True))
+                self._write_invite(hit[0].revoke())
 
     def set_label(self, by: str, invite_id: str, label: object) -> Invite:
         """Edit or clear (empty) a join link's note. A new version of the invite; latest wins."""
@@ -674,7 +678,7 @@ class Accounts:
             if hit is None or not hit[0].open(_now()):
                 raise AccountError("That link can’t be renewed. Make a new one instead.")
             old = hit[0]
-            revoked = self._stage_invite(replace(old, revoked=True))
+            revoked = self._stage_invite(old.revoke())
             return self._new_invite(by, old.kind, old.for_user_id, old.for_label, revoked)
 
     def _find(self, code: str) -> Invite | None:
@@ -712,24 +716,13 @@ class Accounts:
         return self._join_again(hit, username, password, ip)
 
     def _join(self, code: str, username: str, password: str, ip: str, agree: bool) -> Account:
-        errors: list[dict[str, str]] = []
-        inv = None
-        try:
-            inv = self.lookup(code, ip)
-        except AccountError as e:
-            if not e.errors:
-                raise  # too many tries: nothing else to say
-            errors += e.errors
-        if inv and inv.kind != "join":
-            errors.append(
-                {
-                    "field": "code",
-                    "rule": "c.kind",
-                    "message": "That’s a reset code. Use it on the reset screen.",
-                }
-            )
-        errors += self._new_account_errors(username, password, agree)
-        if errors or inv is None:
+        # The code first, and only the code: without a valid join code nothing is said about the username (whether
+        # it's taken) or the rest (OWASP: generic replies on account creation too).
+        inv = self.lookup(code, ip)
+        if inv.kind != "join":
+            raise field_error("code", "c.kind", "That’s a reset code. Use it on the reset screen.")
+        errors = self._new_account_errors(username, password, agree)
+        if errors:
             raise AccountError(errors=errors)
         acct = Account(str(uuid.uuid4()), username, self._hash(password), invite_id=inv.invite_id)
         self._commit(
@@ -741,19 +734,21 @@ class Accounts:
         return acct
 
     def _join_again(self, inv: Invite, username: str, password: str, ip: str) -> Account:
-        """A used join link: the account it made, if the username and password are that account's. As strict as
-        sign-in, and counted by the same limits."""
+        """A used join link: within JOIN_RETRY of its use (a reply lost on the way back), the account it made, if
+        the username and password are that account's. As strict as sign-in and counted by its limits. Anything
+        else, a wrong password and too many tries included, gets the one "already used" reply, after the same
+        work (one password check), so neither the words nor the time say which username the link made."""
         acct = self.get(inv.used_by or "")
-        if acct is not None and acct.username == username:
+        recent = inv.used_at is not None and _now() - inv.used_at <= JOIN_RETRY
+        if recent and acct is not None and acct.username == username:
             try:
                 signed = self.sign_in(username, password, ip)
-            except AccountError as e:
-                if str(e) != MISMATCH:
-                    raise
-            else:
                 if signed.user_id == acct.user_id:
                     return signed
+            except AccountError:
+                pass
         else:
+            self._verify(self._dummy, password)
             self.limiter.fail(f"ip:{ip}", time.monotonic())
         raise field_error("code", "c.used", CODE_USED, 409)
 
@@ -805,7 +800,7 @@ class Accounts:
             staged: tuple[tuple[Invite, datetime], ...] = ()
             if disabled:  # an outstanding reset code would otherwise still change the password
                 staged = tuple(
-                    self._stage_invite(replace(inv, revoked=True))
+                    self._stage_invite(inv.revoke())
                     for inv, _ in list(self.invites.values())
                     if inv.kind == "reset" and inv.for_user_id == user_id and inv.open(_now())
                 )
