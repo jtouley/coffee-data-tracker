@@ -17,8 +17,9 @@ panel".
    - table and contract metadata.
 2. **Code defines and the database configures.** Rule types and their settings schema live in git, and the schema is
    generated from the code. Every change is a new version row; nothing is updated in place.
-3. **Builds never read the live database.** A draft build exports an immutable snapshot of the settings and
-   decisions to the private lake and pins its id, so every rebuild is exact.
+3. **Builds never read the live database.** The admin API exports an immutable snapshot of the settings and
+   decisions to the private curation dataset. Builds read only that snapshot, pinned by id, and hold no database
+   credential.
 4. **Every admin change runs a draft build.** It is the normal build with every gate, recorded but not served. It
    shows the real diff against the served release.
 5. **Publish is always the owner's explicit action.** Stale drafts rebuild and re-test themselves but never publish.
@@ -40,6 +41,14 @@ panel".
 So a draft needs **one new flag on an existing command**: `coffeedata build --draft <id> --snapshot <id>` records the
 build and skips `serve`. Publish is `serve` on that build. There is no separate replay system.
 
+**Drafts are marked as drafts.** Every `builds/` row of a draft carries its `draft_id`. Until a draft is published,
+these leave it out:
+- `rollback`'s default ("the passing release before the served one");
+- `build-diff`'s default `new`;
+- the anomaly bands and the volume baseline.
+
+A draft writes no personal marts, and only Publish can serve it.
+
 ## 2. The database
 
 ### 2.1 Why a database, and not git (this overrules the platform review)
@@ -50,10 +59,10 @@ home if the panel is where they change. Here is how each of the review's concern
 
 | The review's concern | How it is kept |
 |---|---|
-| Exact rebuilds (one SHA pins code and params) | Builds read only an immutable **snapshot** exported to the lake, never the live database. The build records the snapshot id, the git SHA and the image digest |
+| Exact rebuilds (one SHA pins code and params) | Builds read only an immutable **snapshot** in the curation dataset, never the live database. The build records the snapshot id, the git SHA and the image digest |
 | Audit and review | Every change is a new version row: who, when, why, the old value and the new one. The draft build is the review: its gates and diff |
 | Config and image skew | The settings schema is generated from the code's rule types. The API rejects a value the deployed schema doesn't allow, and a draft build fails on a snapshot its image can't read |
-| A database down breaks the weekly build | It can't: the weekly build reads the **last published snapshot** from the lake. A database outage only blocks admin edits |
+| A database down breaks the weekly build | It can't. The weekly build finds the published snapshot from `serving_log` (3.2), with no database. A database outage only blocks admin edits |
 | A password in Secret Manager and state | Passwordless database auth is a POC success criterion (section 7) |
 | Back up off one store | The database has point-in-time restore. Every published snapshot is in the lake, and each build's release folder keeps its effective decisions |
 | Fail closed | A build whose pinned snapshot can't be read fails; it never builds as if there were no decisions |
@@ -70,7 +79,7 @@ Every table is append-only. The "current" value is the latest version row.
 | `flags` | flag × build | imported from each build: rule, polarity, evidence (references only), `evidence_hash`, public rows affected |
 | `dq_results` | test × build | imported from each build's `builds/` record: gate name, status, failures |
 | `catalog` | table or contract version | imported from `contracts/` and the dbt manifest: tables, columns, owners, contract versions |
-| `drafts`, `snapshots` | draft / snapshot | a draft's changes, its snapshot id, build id, baseline release, status; a snapshot's id, contents hash and lake path |
+| `drafts`, `draft_events`, `snapshots` | draft / status event / snapshot | a draft's changes, snapshot id, build id and baseline release, with its status as events (built, discarded, published); a snapshot's id, contents hash and path |
 
 `flags`, `dq_results` and `catalog` are imported copies of what builds and git already hold. They make the
 database the place to look, but they are never a source a build reads.
@@ -82,8 +91,8 @@ schema: 1                       # generated from the code's rule types
 rules:
   - {id: verdict_flip, family: classifier, polarity: {added: supports, removed: restore}}
   - {id: shared_body, family: catalog, polarity: doubts, params: {min_products: 3}}
-  - {id: bulk_green_weight, family: listing, polarity: supports, proposes: exclude, params: {min_grams: 20000}}
-readiness: {removal: {supports_min: 1, live_check: required, blocked_by: [doubts, coverage]}}
+  - {id: non_coffee_type, family: listing, polarity: supports, proposes: exclude, params: {types: [drink mix, nuts, books, parts]}}
+readiness: {removal: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}}
 guard: {mode: remove_unless_doubted, doubted_by: [shared_body], max_held: 200, max_weeks: 4}
 precedence: [roaster, product, variant]
 action_groups: {visibility: [exclude, include, exclude_variant], batch: [accept, reject, use_batch]}
@@ -96,34 +105,45 @@ changed by PR. The admin shows them read-only, through `catalog`.
 
 | Finding | Setting | Enforced by code | dbt test |
 |---|---|---|---|
-| M1: doubt signals counted as votes to remove | `polarity` per rule (required: `supports` / `doubts` / `restore`); `readiness.removal` | readiness counts only `supports`; an open `doubts` or coverage flag blocks; for now, one flag plus a live check | `ready_removals_have_no_doubts` (error) |
+| M1: doubt signals counted as votes to remove | `polarity` per rule (required: `supports` / `doubts` / `restore`); `readiness.removal` | readiness needs `supports` flags from **two distinct families** (the owner's "several signals"), plus a live check; an open `doubts` or coverage flag blocks | `ready_removals_have_no_doubts` (error) |
 | M2: the classifier's removals bypass review | `guard.mode`, `max_held`, `max_weeks` | a doubted removal keeps the product's last version that was coffee | `classifier_guard` (error over `max_held`) |
 | M3: no single effective decision per subject | `precedence`, `action_groups` | the latest `approved` / `reverted` event per (subject, group) wins; roaster > product > variant | `unique` on `int_effective_decisions`; three conflict unit tests; `decision_orphaned` (warn: a platform move changes `coffee_id`) |
 | M4: an audit trail behind a token that can rewrite the lake | none (deployment) | the admin writes the database and the private curation dataset (snapshots), and only reads the lake | a `terraform test` on the admin's grants |
 
-The guard runs in every build, the weekly one included. Its scope is open question 1.
+The guard runs in every build, the weekly one included.
+- **Mode `remove_unless_doubted`** (the owner chose it): a verdict flip is removed, unless a doubt such as
+  `shared_body` applies.
+- **Overrides.** Every removed coffee can be reviewed in the admin and flipped back. An `include` keyed on
+  `coffee_id`, or on the product's input hash, is a versioned decision row that feeds the next draft like any
+  other change.
 
 ## 3. The workflow
 
 ```
- admin edit ──▶ version rows ──▶ snapshot exported to the lake (immutable, pinned)
+ admin edit ──▶ version rows ──▶ admin API exports a snapshot to curation:snapshots/<id>/ (immutable)
                                      │
                                      ▼
-                     draft build (all gates, recorded, not served)
+              build job: build --draft <draft> --snapshot <id> (all gates, recorded as a draft, not served)
                                      │
            Draft page: gates · build-diff · #111 rows in/out per table with reasons, vs the served release
                                      │
-       Publish (the owner) ──▶ mark the snapshot published ──▶ serve the draft ──▶ export + site
-       Discard ──▶ mark the draft discarded (its build stays recorded, as failed builds do)
+       Publish (the owner) ──▶ admin starts the publish job ──▶ serve(action="publish") ──▶ export + site
+       Discard ──▶ a `discarded` draft event (the build stays recorded, as failed builds do)
 ```
 
-### Drafts
+### Drafts and snapshots
 
-Every admin change creates or extends a draft: decisions, a settings edit, or a crawl-flag change. The draft
-build is the existing Cloud Run `build` job, started with `--draft` and the snapshot id. The admin service itself
-never writes the lake.
+- **Changes.** Every admin change creates or extends a draft: decisions, a settings edit, or a crawl-flag change.
+- **The snapshot.** The **admin API** exports it to `snapshots/<id>/` in the private curation dataset: settings,
+  effective decisions and roaster state as Parquet, plus a contents hash. The build never exports it, and holds no
+  database credential.
+- **The build.** The draft build is the existing Cloud Run `build` job, started with `--draft` and the snapshot id.
 
-### Publish
+### Publish: who runs it, and in what order
+
+The admin service can't write the lake. Publish is a **`publish` Cloud Run job**, from the ingest image, running as
+an identity with lake write. The admin can only start it (`run.jobs.runWithOverrides` on `build`, `crawl` and
+`publish`, nothing else).
 
 Publish is disabled until four things hold:
 1. the draft build passed;
@@ -131,30 +151,42 @@ Publish is disabled until four things hold:
 3. any required evaluation is attached;
 4. the owner has typed the count, when more than 50 public rows leave.
 
-Publish then marks the snapshot `published` and serves the draft with `serve(…, action="publish")`, followed by
-the normal export and site, as `cmd_rollback` does. A retry re-serves the same build.
+The job then runs these steps, in this order:
+1. **serve first:** `serve(…, action="publish")` writes `marts/`, the release pointer and a `serving_log` row;
+2. **then the export and the site**, as `cmd_rollback` does.
+
+**"Published" isn't a status anyone sets.** It is derived: the snapshot of the build in the latest `serving_log`
+row. So a failed serve leaves the snapshot unpublished. A failed export after the serve is retried by re-serving
+the same build, which is idempotent. A `rollback` also rolls back to that build's snapshot, which is the meaning a
+rollback should have.
 
 ### Stale drafts
 
-When a weekly release changes the baseline, the draft rebuilds itself on the new release. It runs its gates and
-the smoke suite (`make smoke`), and it **never publishes**. It rebuilds at most once per new release. The owner sees the new diff and decides again.
+When a weekly release changes the baseline, the draft rebuilds itself on the new release, in the build job. It
+runs every gate, and a diff against the draft's previous build shows what changed. It **never publishes**.
+`make smoke` tests code over fixtures; it runs in CI on code changes, not on drafts, since the image has no tests. It rebuilds at most once per new release. The owner sees the new diff and decides again.
 
 ### The weekly release
 
-It stays automatic, gated by the existing tests. It reads the last **published** snapshot and never an open draft.
+It stays automatic, gated by the existing tests. It reads the published snapshot (the served build's, from
+`serving_log`) and never an open draft.
 
 ### The crawl flag
 
-- **Off:** `select_states` skips the roaster, through the published snapshot.
+- **Off:** `select_states` skips the roaster, through the published snapshot. That includes the `only` branch,
+  which today returns a roaster without the usual filters.
 - **On:** the roaster can be crawled again. For a new or under-covered roaster, turning it on also starts a
-  one-roaster smoke crawl, `crawl --only <roaster>` (the crawl job with overrides, at most once a day per roaster),
+  one-roaster smoke crawl, `crawl --connector <its connector> --only <roaster>` (the crawl job with overrides, at most once a day),
   and then a draft build, so the owner sees its catalog before publishing.
 
 The flag is a roaster-level decision, ranked above the `roasters.csv` seed; the admin never edits the CSV.
 
 ### Removals and restores
 
-- A removal needs a `supports` flag, a live check of the store, no open doubt, and the owner's Publish.
+- A removal needs `supports` flags from two distinct families, a live check of the store, no open doubt, and the
+  owner's Publish.
+- **Group approval** (the owner: yes): one live check covers the members of a group whose `evidence_hash` matches the
+  checked sample.
 - A roaster with a coverage problem is fixed, not removed.
 - A restore (`include`) is a decision, published through the same flow.
 
@@ -194,6 +226,7 @@ take step 9's short path; the draft's diff is the list to check by hand.
 |---|---|---|
 | **Queue** | open flags by subject, then roaster and rule, sorted by public rows affected; one summary per row ("1 supports · 1 doubts · held") | open a case; add to the draft |
 | **Case** | each flag with its polarity and evidence (rules' answer, verdict, title, type, tags, sizes, prices, the description and how many share it, 8 weeks of fetches); the roaster's crawl flag | live check; propose exclude or include with a reason; toggle the crawl flag |
+| **Catalog** | **every** coffee in the published release, flagged or not: keyword search, and filters on roaster, origin, process, coffee or not, listed or removed (and why), stock and price | open any coffee; propose exclude or include (the override) into the draft |
 | **Draft** | its changes; build status; each gate's result; `build-diff`; #111's rows in and out per table with reasons; the count of public rows that leave | **Publish**, **Discard** |
 
 Every page defines these states:
@@ -204,6 +237,10 @@ Every page defines these states:
 - **failed:** keeps the typed reason, retries with the same idempotency key, and says what was recorded.
 
 A disabled Publish says why it is disabled.
+
+**The Catalog's read path.** It reads the published release (`marts/` and the public tables of the served build)
+and the published snapshot. The admin loads them once per release into a local DuckDB file, and searches and filters
+there. It never scans the live lake on each request.
 
 **Design.** The pages reuse Bench Scale (`app/static/app.css`, `docs/app/DESIGN.md`) in both themes, with the
 existing components. No new colours: `--danger` only on Publish's confirm when rows leave. No dashboard tiles. Every
@@ -228,16 +265,31 @@ The GCP project sits on a personal account with no organization, so IAP is out. 
 into the admin, not tied to a Google account. Without IAP the service is reachable from the internet like the app
 (an `allUsers` invoker), so every route but `/health` authenticates in code and fails closed:
 - two registered passkeys and printed recovery codes;
-- no password and no setup-code reset;
+- no password, and no **standing** setup code: the app's `OWNER_SETUP_CODE` can reset the owner at any time, and
+  nothing like it exists here;
 - 12-hour sessions that can be revoked server-side;
 - CLI device tokens (12 hours, scoped, revocable) stored in the OS keychain;
 - no magic links, and no long-lived personal API keys.
+
+**Enrolling the first passkey.**
+- Terraform creates an empty Secret Manager secret, `ADMIN_ENROLL_TOKEN`. The owner adds one random value from the
+  laptop, so no value sits in Terraform state.
+- `/enroll` accepts that token only while **no passkey exists**, and only once. Registering the first passkey records
+  the token's hash as spent, and closes `/enroll` for good.
+- The second passkey is added from that signed-in session.
+- Later, adding or replacing a passkey needs a signed-in passkey session plus one recovery code. Losing both passkeys
+  means a recovery code, which works once.
+
+This is a one-shot bootstrap, not a reset path, so it doesn't contradict "no setup code".
+
+**Reachable signed out:** `/health`, the sign-in and WebAuthn routes, `/enroll` (closed after the first passkey) and
+static assets. A test walks every registered route signed out and expects 401 or 403 on the rest.
 
 The rest follows the security review of 2026-11-04. It is held privately and not committed, because it lists open
 weaknesses in the live app; this repo is public. In short:
 - **Credentials.** The admin has its own least-privilege service account and credentials, separate from the app's:
   database access, write on the private curation dataset (snapshots), read on the lake, and the right to start the
-  `build` and `crawl` jobs with overrides. It never uses the app's `HF_TOKEN`, and it holds no Anthropic key.
+  `build`, `crawl` and `publish` jobs with overrides. Only the jobs hold lake write. It never uses the app's `HF_TOKEN`, and it holds no Anthropic key.
 - **Deploys.** A ruleset protects `main`. An `admin` GitHub environment needs the owner's approval, and the deploy
   credential is bound to it. A `terraform test` checks the admin's grants (no lake write, its secrets only). The owner applies a reviewed plan, and
   `deploy.yml` deploys the app and the admin from one image.
@@ -252,30 +304,32 @@ weaknesses in the live app; this repo is public. In short:
 | Case | Flags | The draft shows |
 |---|---|---|
 | 16 Stivers single-origins removed (the same pasted "Sample Pack" text) | `verdict_flip` restore + `shared_body` doubts; the guard keeps them | 16 `include`s: 0 rows out, `held:guard` → `decision:include` |
-| 3 drink mixes added | `verdict_flip` supports; a live check each | 3 rows out of `public_coffee`, `decision:exclude` |
-| 5 businesses that sell no coffee | product `exclude`s after a live check; crawl flag off | their rows out, by roaster |
+| 3 drink mixes added | `verdict_flip` (classifier) + `non_coffee_type` (listing) support; a live check each | 3 rows out of `public_coffee`, `decision:exclude` |
+| 5 businesses that sell no coffee | the same two families on their products, plus a live check; crawl flag off | their rows out, by roaster |
 | 6 roasters we fail to crawl | coverage doubts block removal; fixed in code or crawl config | after the fix: crawl flag on → smoke crawl → draft |
-| 22 green-coffee sacks | `bulk_green_weight`; a live check (one per group if question 2 says yes) | 22 rows out |
+| 22 green-coffee sacks | deferred by the owner until verdict confidence is measured (Later) | — |
 | Unsure verdicts (4,177 version rows) | none; deferred until verdict confidence is measured | — |
 
 ## 7. POC plan (Friday)
 
-**Narrowed to 2 × 2:** Cloud SQL for PostgreSQL at its smallest size, with IAM database auth and point-in-time
-restore, against one free tier (Neon), each with Go and with Python. Each of the four builds the same thin slice:
+**Narrowed to 2 × 2** by the TPM review, from the owner's seven candidates: Cloud SQL for PostgreSQL at its
+smallest size (IAM database auth, point-in-time restore) against one free tier (Neon), each with Go and with
+Python. Each of the four builds the same thin slice, against a **scratch lake and a scratch curation dataset**
+(`COFFEEDATA_LAKE` names the scratch one, never production):
 1. write a decision through the API;
 2. record its version row;
-3. export a snapshot to a scratch curation dataset;
-4. start a draft build (a scratch build job or a local `coffeedata build --draft`) that reads the pinned snapshot.
+3. export a snapshot;
+4. start a draft build that reads the pinned snapshot.
 
 | Criterion | Pass if |
 |---|---|
-| The slice works end to end | the draft build applies the decision, and a second run with the same snapshot id gives the same rows |
-| Cost | the measured monthly figure at our volume is written down (Cloud SQL's estimate is about $9–10) |
-| Passwordless auth | Cloud Run reaches the database with no password in Secret Manager or Terraform state (IAM auth, or the free tier's equivalent); otherwise record exactly what credential is needed |
-| Backups | a point-in-time or branch restore is done once and timed |
-| Cold start | p50 and p95 of the first admin request after idle, with the database idle too (Neon suspends) |
+| The slice works end to end | the draft applies the decision, and two builds of the same snapshot with the same `today` give equal `table_hash`es: a hash over each public table's rows, without `release_build_id` and `release_run_date` |
+| Cost (an estimate) | at ≤ 1,000 decision writes, ≤ 20 snapshots and ≤ 20 draft builds a week, and ≤ 1 GB stored, the monthly estimate (egress to Cloud Run included) is **≤ $15** |
+| Passwordless auth | **pass:** Cloud Run connects with no static database password in Secret Manager, Terraform state or env vars. **Fail:** anything else |
+| Backups | a point-in-time or branch restore is done once, and takes ≤ 15 minutes |
+| Cold start | 10 samples of the first admin request after 30 minutes idle (the service and the database): **p95 ≤ 3,000 ms**; warm p95 ≤ 300 ms |
 | Lock-in | `pg_dump` from one restores into the other with no code change |
-| Language | lines of code; image size; cold start; how it reads flags and the diff (Parquet), and starts the build |
+| Language (a measurement for the owner, not pass/fail) | lines of code; image size; cold start; how it reads Parquet and starts the build job |
 
 **Notes for judging.**
 - Draft builds run as the existing Python job whatever the API's language, so Go doesn't need to call the build
@@ -290,10 +344,13 @@ The owner decides from the results. Nothing from a POC merges without the review
 - The database with its version tables, and the snapshot export.
 - `coffeedata build --draft --snapshot` and `serve(action="publish")`.
 - dbt applying `exclude`, `include` and `exclude_variant`, with the M1–M3 tests.
-- The guard, in the mode question 1 settles, after its CLAUDE.md evaluation.
-- The three rules.
-- The API, `coffeedata decide`, and passkey sign-in.
-- The Queue, Case and Draft pages.
+- Drafts marked in `builds/` and kept out of the default rollback, the default diff and the bands.
+- The `publish` job.
+- The guard in `remove_unless_doubted` mode, after its CLAUDE.md evaluation, with the per-coffee override.
+- Three rules: `verdict_flip`, `shared_body`, `non_coffee_type`.
+- Readiness from two distinct families, and group approval.
+- The API, `coffeedata decide`, passkey sign-in with its one-shot enrollment.
+- The Queue, Case, **Catalog** and Draft pages.
 
 Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page shows `build-diff`.
 
@@ -302,20 +359,30 @@ Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page s
 - Stale-draft auto-rebuild.
 - Settings editing in the admin.
 - The catalog pages (`dq_results`, contracts).
-- Group approvals and history.
+- History.
 - `not_a_coffee_seller`.
 - More rule types, each scored.
 - Runbook entries: a bad publish (roll back, then `revert`), a failed write, a lost passkey (the recovery codes).
 - #110's blocked-store rule.
-- Green coffee by the sack, after verdict confidence is measured.
+- Green coffee by the sack (`bulk_green_weight`), after verdict confidence is measured.
+
+**Follow-ups from the review** (issuecomment-6692290541, minors):
+- 8: status events instead of status columns, done for drafts here, and to check elsewhere;
+- 9: label the settings example's values as defaults;
+- 12: the crawl toggle and the stale state appear in Phase 1 pages, but their features are in Later;
+- 13: the POC drops five candidates; this is now attributed to the TPM review;
+- 15: how a CLI device token is issued (approved in a signed-in browser session);
+- 16: the HF token's scopes need a startup check, since Terraform can't test them; and the first `*.tftest.hcl`;
+- 17: "publishing" and "session expired" page states, and what Retry does after each failed step;
+- 18: the readers of `serving_log`'s new `publish` action.
 
 ## 9. Open questions for the owner
 
-1. **Guard scope.** When a verdict flips a public coffee to not coffee, should it be removed unless something
-   looks suspicious, such as the same pasted text across a store's catalog (recommended: `remove_unless_doubted`)?
-   Or should every such removal be held for review? Holding them all would have queued about 3,765 in the backfill.
-2. **Group approval.** Can one live check of a store approve a whole group with the same evidence, for example all
-   16 Stivers coffees? Recommended: yes, for members whose `evidence_hash` matches the checked sample.
+None at the moment. The owner settled the last two (2026-11-06):
+- **The guard removes unless doubted.** Every removal is reviewable in the Catalog, and can be overridden per coffee.
+- **Group approval is yes**, for members whose evidence matches the checked sample.
+
+The database and the language wait on the POC.
 
 ## Skills used
 
