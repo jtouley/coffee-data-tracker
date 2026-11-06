@@ -13,7 +13,7 @@ from .test_invites import SETUP, W, accounts, app, client, invite, join, owner  
 
 
 def test_a_blocked_address_cant_try_the_setup_code(accounts):  # noqa: F811
-    accounts.create_owner(SETUP, "jtouley", "correct horse battery", ip="1.1.1.1", now=1)
+    accounts.create_owner(SETUP, "jtouley", "correct horse battery", ip="1.1.1.1", now=1, agree=True)
     for _ in range(20):
         with pytest.raises(AccountError, match="isn’t valid"):
             accounts.lookup("AAAA-BBBB-CCCC-DDDD", "9.9.9.9", now=5)
