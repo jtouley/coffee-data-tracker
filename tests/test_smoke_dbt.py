@@ -4,7 +4,10 @@ public_* table has rows, the public export records each file's sha256, and the c
 `make contracts` writes and valid ODCS/ODPS."""
 
 import json
-import shutil
+import os
+import subprocess
+import sys
+from pathlib import Path
 
 import duckdb
 import pytest
@@ -12,16 +15,14 @@ import yaml
 
 from coffeedata import cli, connectors, public, quality, raw_contracts
 
-from .smoke import fixture_lake
-from .test_contracts import CONTRACTS, _validator
+from .smoke import fixture_lake, require_dbt
+from .test_contracts import CONTRACTS, ROOT, _validator
 
-pytestmark = [
-    pytest.mark.smoke,
-    pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed"),
-]
+pytestmark = pytest.mark.smoke  # no module-wide dbt skip: the contracts test needs no dbt
 
 
 def test_the_fixture_lake_builds_passes_the_gate_and_is_served(lake, tmp_path, monkeypatch, no_network):
+    require_dbt()
     target = tmp_path / "dbt-target"  # this test's own dbt artifacts, not the checkout's dbt/target
     monkeypatch.setenv("DBT_TARGET_PATH", str(target))
     monkeypatch.setenv("DBT_LOG_PATH", str(tmp_path / "dbt-logs"))
@@ -87,3 +88,24 @@ def test_the_contracts_are_what_make_contracts_writes_and_valid():
     assert [
         e.message for e in odps.iter_errors(yaml.safe_load((CONTRACTS / "coffee-data.odps.yaml").read_text()))
     ] == []
+
+
+def test_a_missing_dbt_fails_the_smoke_job_instead_of_skipping(tmp_path):
+    """The review's case: dbt not on PATH. Under REQUIRE_DBT (CI's smoke job) the dbt and web parts fail; without it
+    they skip, as on a laptop without dbt."""
+    path = os.pathsep.join(p for p in os.environ["PATH"].split(os.pathsep) if not (Path(p) / "dbt").exists())
+    tests = [str(ROOT / "tests/test_smoke_dbt.py") + "::test_the_fixture_lake_builds_passes_the_gate_and_is_served",
+             str(ROOT / "tests/test_smoke_web.py")]  # fmt: skip
+
+    def run(**env):
+        return subprocess.run(
+            [sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider", "--basetemp", str(tmp_path / "t"),
+             *tests],
+            cwd=ROOT, env={k: v for k, v in os.environ.items() if not k.startswith("REQUIRE_")} | {"PATH": path} | env,
+            capture_output=True, text=True,
+        )  # fmt: skip
+
+    required = run(REQUIRE_DBT="1")
+    assert required.returncode == 1 and "2 failed" in required.stdout, required.stdout[-2000:]
+    assert required.stdout.count("REQUIRE_DBT is set, but dbt isn't installed") >= 2
+    assert "2 skipped" in run().stdout

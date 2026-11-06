@@ -5,6 +5,11 @@ on:
     branches: [main]
 permissions:
   contents: read
+# A newer push to a PR cancels that PR's older run (the 10-minute test job included); pushes to main, grouped by
+# commit, all finish.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -22,7 +27,7 @@ jobs:
           cache-dependency-path: tests/browser/package-lock.json
       - run: npm ci && npx playwright install --with-deps chromium
         working-directory: tests/browser
-      - run: make test           # pre-commit hooks on every file, then the tests
+      - run: make test           # pre-commit hooks on every file, then every test but the smoke job's
         env:
           REQUIRE_BROWSER: "1"
 
@@ -32,9 +37,6 @@ jobs:
     name: smoke (${{ matrix.part }})
     runs-on: ubuntu-latest
     timeout-minutes: 8
-    concurrency:  # a newer push to the same PR replaces the run; pushes to main all finish
-      group: smoke-${{ matrix.part }}-${{ github.event.pull_request.number || github.sha }}
-      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
     strategy:
       fail-fast: false
       matrix:
@@ -61,7 +63,8 @@ jobs:
         run: npm ci && npx playwright install --with-deps chromium
         working-directory: tests/browser
       - run: make smoke PART=${{ matrix.part }}
-        env:
+        env:  # a missing dbt or browser fails the part instead of skipping it
+          REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
 
   smoke:

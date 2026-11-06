@@ -53,8 +53,8 @@ contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files
 
-test: lint  ## offline: unit tests + dbt builds over synthetic lakes, one pytest-xdist worker per CPU
-	uv run pytest -q -n auto
+test: lint  ## offline: unit tests + dbt builds over synthetic lakes, one pytest-xdist worker per CPU; `make smoke` runs the rest
+	uv run pytest -q -n auto -m "not smoke"
 
 smoke:  ## the fast smoke suite CI requires on every PR: dbt, ingestion and web over the recorded fixtures, no network
 	uv run pytest -q -m smoke $(if $(PART),tests/test_smoke_$(PART).py)

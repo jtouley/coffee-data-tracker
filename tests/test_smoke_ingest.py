@@ -6,6 +6,7 @@ and manifest rows the weekly run reads. Nothing leaves the machine."""
 import json
 import socket
 import threading
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlsplit
 
@@ -109,6 +110,17 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
 
+class ClockWithoutSleep:
+    """coffeedata.http's `time`: the real module, but sleep() returns at once."""
+
+    def __getattr__(self, name):
+        return getattr(time, name)
+
+    @staticmethod
+    def sleep(seconds: float) -> None:
+        pass
+
+
 class ToFakeStores(httpx.HTTPTransport):
     """The crawler's https://<store>/ requests, sent over plain HTTP to the fake stores (the Host header stays)."""
 
@@ -133,7 +145,8 @@ def stores(monkeypatch, no_network):
         real_init(self, *a, **(k | {"transport": ToFakeStores(server.server_address[1])}))
 
     monkeypatch.setattr(http.PoliteClient, "__init__", init)
-    monkeypatch.setattr(http.time, "sleep", lambda s: None)  # Retry-After and pacing, without the wait
+    # Retry-After and pacing without the wait, in the crawler's client only: `time` everywhere else still sleeps.
+    monkeypatch.setattr(http, "time", ClockWithoutSleep())
     yield server
     server.shutdown()
     server.server_close()

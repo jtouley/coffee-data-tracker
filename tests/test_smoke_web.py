@@ -1,14 +1,12 @@
 """Smoke, web (`make smoke`; CI's smoke job, part web). The static site built from the fixture lake's served release
 (the path `coffeedata site --served` takes), with non-zero counts; then the app started as `make app` starts it
 (uvicorn, over the local lake, with sign-in on) and one Playwright pass at 390 px (tests/browser/smoke_flow.js):
-landing, catalog, the join page, and a seeded user's sign-in. Needs dbt, and Node with Playwright (skipped without
-them, except under REQUIRE_BROWSER=1, as CI sets)."""
+landing, catalog, the join page, and a seeded user's sign-in. Needs dbt, and Node with Playwright: skipped without
+them, except under REQUIRE_DBT and REQUIRE_BROWSER (CI's smoke job), where a missing one fails."""
 
 import json
 import os
 import re
-import shutil
-import socket
 import subprocess
 import sys
 import threading
@@ -24,10 +22,10 @@ from app.accounts import Accounts
 from coffeedata import cli, connectors
 from coffeedata.lake import Lake
 
-from .smoke import BLACK_HOLE, PROXY_VARS, fixture_lake
+from .smoke import BLACK_HOLE, PROXY_VARS, fixture_lake, require, require_dbt
+from .test_app_browser import BROWSER, _free_port, _playwright
 
 ROOT = Path(__file__).parent.parent
-BROWSER = Path(__file__).parent / "browser"
 USER, PW = "smoke-owner", "kettle orbit marble"
 PEPPER, SECRET, SETUP = (
     "smoke-test-pepper-0123",
@@ -35,10 +33,7 @@ PEPPER, SECRET, SETUP = (
     "SMOKE-SETUP-1",
 )
 
-pytestmark = [
-    pytest.mark.smoke,
-    pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed"),
-]
+pytestmark = pytest.mark.smoke
 
 
 class QuietFiles(SimpleHTTPRequestHandler):
@@ -48,22 +43,9 @@ class QuietFiles(SimpleHTTPRequestHandler):
         pass
 
 
-def _playwright() -> bool:
-    """Node can load Playwright (tests/browser's, after `npm ci`, or a global one); this pass needs no axe."""
-    node = shutil.which("node")
-    check = (
-        subprocess.run([node, "-e", "require('playwright')"], cwd=BROWSER, capture_output=True)
-        if node
-        else None
-    )
-    return bool(check and check.returncode == 0)
-
-
 def test_site_and_app_in_a_browser(lake, tmp_path, monkeypatch, no_network):
-    if not _playwright():
-        if os.environ.get("REQUIRE_BROWSER"):
-            pytest.fail("REQUIRE_BROWSER is set, but Node with Playwright isn't installed")
-        pytest.skip("Node with Playwright not installed")
+    require_dbt()
+    require("Node with Playwright", _playwright(axe=False), "REQUIRE_BROWSER")  # this pass runs no axe
     monkeypatch.setenv("DBT_TARGET_PATH", str(tmp_path / "dbt-target"))
     monkeypatch.setenv("DBT_LOG_PATH", str(tmp_path / "dbt-logs"))
     monkeypatch.setattr(cli, "DBT_TARGET", tmp_path / "dbt-target")
@@ -88,24 +70,16 @@ def test_site_and_app_in_a_browser(lake, tmp_path, monkeypatch, no_network):
     )
     static = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietFiles, directory=str(site)))
     threading.Thread(target=static.serve_forever, daemon=True).start()
-    port = free_port()
     env = {k: v for k, v in os.environ.items() if k not in PROXY_VARS}
     env |= {k: BLACK_HOLE for k in PROXY_VARS} | {
         "COFFEEDATA_LAKE": str(lake.root), "COFFEEDATA_USERS": str(users), "AUTH_PEPPER": PEPPER,
         "SESSION_SECRET": SECRET, "COFFEEDATA_INSECURE_COOKIES": "1",  # plain http on 127.0.0.1
     }  # fmt: skip
-    app = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", str(port)],
-        cwd=ROOT,
-        env=env,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-    )
+    log = tmp_path / "app.log"
     shots = Path(os.environ.get("APP_SCREENSHOTS") or tmp_path / "shots")
     shots.mkdir(parents=True, exist_ok=True)
+    app, port = start_app(env, log)
     try:
-        wait_for(f"http://127.0.0.1:{port}/healthz", app)
         r = subprocess.run(
             ["node", str(BROWSER / "smoke_flow.js"), f"http://127.0.0.1:{static.server_address[1]}",
              f"http://127.0.0.1:{port}", str(shots), USER, PW],
@@ -113,28 +87,42 @@ def test_site_and_app_in_a_browser(lake, tmp_path, monkeypatch, no_network):
         )  # fmt: skip
     finally:
         app.terminate()
-        log = app.communicate(timeout=10)[0]
+        app.wait(timeout=10)
         static.shutdown()
         static.server_close()
-    assert r.returncode == 0, r.stderr[-3000:] + "\n--- app log ---\n" + log[-2000:]
+    assert r.returncode == 0, r.stderr[-3000:] + "\n--- app log ---\n" + log.read_text()[-2000:]
     assert {p.name for p in shots.iterdir()} >= {"landing.png", "catalog.png", "join.png", "signed-in.png"}
 
 
-def free_port() -> int:
-    with socket.socket() as s:
-        s.bind(("127.0.0.1", 0))
-        return s.getsockname()[1]
+def start_app(env: dict, log: Path, tries: int = 2) -> tuple[subprocess.Popen, int]:
+    """uvicorn app.main:app on a free port, its output in `log` (a file, so a chatty app never blocks on a full
+    pipe). The port is free when picked but can be taken before uvicorn binds it: that collision is retried once."""
+    for attempt in range(tries):
+        port = _free_port()
+        with log.open("a") as out:
+            app = subprocess.Popen(
+                [sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", str(port)],
+                cwd=ROOT, env=env, stdout=out, stderr=subprocess.STDOUT,
+            )  # fmt: skip
+        if wait_for(f"http://127.0.0.1:{port}/healthz", app):
+            return app, port
+        text = log.read_text()
+        if "address already in use" not in text.lower() or attempt == tries - 1:
+            raise AssertionError(f"the app didn't start:\n{text[-2000:]}")
+    raise AssertionError("unreachable")
 
 
-def wait_for(url: str, proc: subprocess.Popen, timeout: float = 30) -> None:
+def wait_for(url: str, proc: subprocess.Popen, timeout: float = 30) -> bool:
+    """True once `url` answers 200; False if the process exits first. Raises if neither happens in time."""
     deadline = time.monotonic() + timeout
     while time.monotonic() < deadline:
         if proc.poll() is not None:
-            raise AssertionError(f"the app exited: {proc.communicate()[0][-2000:]}")
+            return False
         try:
             if httpx.get(url, timeout=1, trust_env=False).status_code == 200:
-                return
+                return True
         except httpx.TransportError:
             pass
         time.sleep(0.1)
+    proc.kill()
     raise AssertionError(f"the app didn't answer {url} in {timeout} s")

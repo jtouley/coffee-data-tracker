@@ -2,8 +2,12 @@
 every connection off this machine, and a small lake made from the recorded storefront responses, written the way
 ingest.run writes a weekly run."""
 
+import os
+import shutil
 import socket
 from datetime import UTC, date, datetime
+
+import pytest
 
 from coffeedata import ingest
 from coffeedata.lake import Lake, new_batch_id
@@ -19,6 +23,20 @@ SECRETS = ("ANTHROPIC_API_KEY", "HF_TOKEN", "AUTH_PEPPER", "SESSION_SECRET", "OW
 
 class NoNetwork(OSError):
     pass
+
+
+def require(tool: str, available: bool, flag: str) -> None:
+    """Skip a smoke test whose tool isn't installed, except where `flag` is set (CI's smoke job sets REQUIRE_DBT and
+    REQUIRE_BROWSER): there a missing tool fails the test, so the check never passes green having run nothing."""
+    if available:
+        return
+    if os.environ.get(flag):
+        pytest.fail(f"{flag} is set, but {tool} isn't installed")
+    pytest.skip(f"{tool} not installed")
+
+
+def require_dbt() -> None:
+    require("dbt", shutil.which("dbt") is not None, "REQUIRE_DBT")
 
 
 def block_network(monkeypatch) -> None:

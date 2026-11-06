@@ -49,15 +49,15 @@ It predates this file, so its sets were drawn one after another as fixed-size sa
 salted hash, and they aren't grouped by roaster. Its labels were made by Claude subagents; a spot-check by a person
 is still to come. New evaluations follow the steps above.
 
-## Frontends are driven, not eyeballed
+## Changes are run, not eyeballed
 
-A change to the site, the app, their templates, CSS or JS is driven end to end with Playwright before review and
-before pushing, the same way a dbt change runs a full build:
+Before review and before pushing, a dbt change runs a full build (`coffeedata build`, every gate test), and a
+change to the site, the app, their templates, CSS or JS is driven end to end with Playwright:
 - every state the change touches, at phone (390 px) and desktop widths, in light and dark;
 - a slow server and the error cases;
 - an axe check.
 
-The design-skills review reads those screenshots. The smoke test (`make smoke`, CI's `smoke` check) passes on every PR.
+The design-skills review reads those screenshots.
 
 ## Reviews: one, fixes, one
 
@@ -68,16 +68,18 @@ The design-skills review reads those screenshots. The smoke test (`make smoke`, 
    - **high:** auth and security, money, anything that publishes data (dbt gates, public tables, contracts),
      terraform.
 
-   It posts one full review as a PR comment, each finding tagged with its severity and source.
+   A PR that mixes them takes the highest level that applies. It posts one full review as a PR comment, each
+   finding tagged with its severity and source.
 2. **One round of fixes.**
 3. **One final review** (`/code-review` at low or medium): the fixes landed and nothing critical remains. If so,
-   wait for CI and merge.
+   wait for CI and merge. The smoke test (`make smoke`, CI's `smoke` check) passes on every PR.
 
 ### Verify the premise first
 
-Before reviewing or acting, verify the premise. Don't act until each step is done.
+Before reviewing or acting, verify the premise: don't act until each step that applies is done (not every review
+has a failure to reproduce).
 1. **Check for existing work:** open PRs, issues and discussions that already cover it. Point to one instead of
-   duplicating it.
+   duplicating it; this never means skipping the review.
 2. **Find the real failure:** read the actual error, labels or logs. Don't trust a summary of why, an AI one included.
 3. **Reproduce it yourself:** run the failing command or check on the current version; report the exact output and
    exit code.

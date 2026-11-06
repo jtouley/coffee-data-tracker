@@ -28,9 +28,10 @@ BROWSER = HERE / "browser"
 PW = "kettle orbit marble"
 
 
-def _playwright() -> bool:
+def _playwright(axe: bool = True) -> bool:
+    """Node can load Playwright (and axe-core, unless axe=False) from tests/browser or a global install."""
     node = shutil.which("node")
-    check = "require('playwright'); require.resolve('axe-core')"
+    check = "require('playwright')" + ("; require.resolve('axe-core')" if axe else "")
     return (
         bool(node) and subprocess.run([node, "-e", check], cwd=BROWSER, capture_output=True).returncode == 0
     )
@@ -46,10 +47,15 @@ def _accounts(root: Path) -> Accounts:
     return Accounts(users, "browser-test-pepper", "browser-test-session-secret-0123456789", "SETUP-CODE-1234")
 
 
-def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
+def _free_port() -> int:
+    """A port free on 127.0.0.1 a moment ago (another process can take it before it is bound again)."""
     with socket.socket() as s:
         s.bind(("127.0.0.1", 0))
-        port = s.getsockname()[1]
+        return s.getsockname()[1]
+
+
+def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
+    port = _free_port()
     server = uvicorn.Server(uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning"))
     thread = threading.Thread(target=server.run, daemon=True)
     thread.start()
