@@ -249,3 +249,4 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - username enumeration on join without a valid code;
   - renewing a reset link returns 500.
   The fix round is running, with the cheap minors too. m7 (reset links last 7 days; OWASP suggests 24–72 h) is left for the owner to decide. Next: a final low/medium review, then CI, then merge.
+- Owner decision (2026-11-06): reset links stay valid for 7 days (m7 closed, no change).
