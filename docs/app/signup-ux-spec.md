@@ -271,7 +271,8 @@ CLI, but not into secrets.
 
 **One consent record per member.** It's a new `consents` table in the users dataset, one file per change, latest
 wins.
-- **Row:** `user_id`, `logged_at`, `marketing` (`none` / `pending` / `confirmed` / `withdrawn`), `marketing_at`,
+- **Row:** `user_id`, `logged_at`, `terms_version`, `privacy_version`, `terms_at`, `terms_source` (`signup` /
+  `reaccept`), `marketing` (`none` / `pending` / `confirmed` / `withdrawn`), `marketing_at`,
   `personalization` (bool, default true), `insights` (`unset` / `in` / `out`), `insights_at`, `wording_version`
   (the `LEGAL_UPDATED` date of the text the person saw), and `source` (`signup` / `settings` / `unsubscribe` /
   `notice`).
@@ -280,9 +281,65 @@ wins.
 - Add `("consents", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`, so it goes with the account.
 - The append-only history is the audit trail of what was agreed and when.
 
+**0. Agreeing to the Terms and Privacy Policy (required at sign-up).** This replaces the passive line "By joining you
+agree to the Terms and Privacy Policy" (`join.html:20-23`). The same applies to owner setup (`signin.html`).
+- **Placement:** a native checkbox, **unticked**, just above the dock button, with the marketing checkbox
+  (point 1) directly under it. Both are visible next to "Create account", not tucked away.
+  - Markup: `<input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">` with
+    `<label for="agree">I've read and agree to the <a href="{site}/terms/" target="_blank" rel="noopener">Terms</a>
+    and <a href="{site}/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>`.
+  - Each link carries visually-hidden text "(opens in a new tab)".
+  - The whole label row is the hit target, at least 44 px tall (better-accessibility "Label and type every
+    control").
+  - Today's short data note ("Your shots, bags and photos are kept in the owner's private Hugging Face datasets…")
+    stays as plain text above it.
+- **Not silently disabled:** "Create account" stays enabled (better-accessibility: "Validate on submit, never by
+  disabling submit"). Submitting without the box ticked:
+  - shows `<p class="ferr" id="agree-error">` under the checkbox: "Tick the box to agree to the Terms and Privacy
+    Policy before creating your account.";
+  - sets `aria-invalid="true"` on the checkbox and moves focus to the **first** problem in form order. That's the
+    checkbox if every field above it is fine, so a screen reader reads its label, the unticked state and the error.
+  - Until the box is ticked, a quiet line under the button (`--ink-2`, part of the button's `aria-describedby`)
+    says "Agree to the Terms and Privacy Policy to continue."
+  - Ticking the box clears the error and the line.
+- **Server:** `/api/join` and owner setup (`/api/signin` with `setup_code`) need `agree: true`. Without it they answer
+  400 `{"field": "agree", "rule": "terms", "message": "Tick the box to agree to the Terms and Privacy Policy before
+  creating your account."}`. That's the same text as the page, from `rules.py` (§3).
+  - The check runs **before** the invite is used. So a missing tick never uses up a code, and the idempotent retry
+    (§11) still needs it.
+- **Recorded:** the first `consents` row is written in the same publish as the account (§11, one commit). It holds
+  `terms_version` and `privacy_version` (each page's `LEGAL_UPDATED`, `site.py:73`; today both pages share it),
+  `terms_at`, and `terms_source = signup`. The marketing column records its own choice in the same row; agreeing
+  to the terms never sets it.
+
+**0b. When the Terms or Privacy Policy change.**
+- `site.py` gains `LEGAL_CHANGES`: a list of `{version, material: bool, summary: [lines]}`, newest first. Bump
+  `LEGAL_UPDATED` and add an entry with every change to `privacy.html` or `terms.html`. The app reads the same module,
+  as it already reads `site.links` (`main.py:34`).
+- **Material change** (`material: true`): for example adding email collection (§5), marketing, or the insights use
+  (§7.3).
+  - At the next page load after sign-in, a member whose `terms_version` is older than the newest material version
+    is sent to `/agree`, enforced in `screen_user` (`main.py:131-136`).
+  - Writes then answer 403 "Accept the updated terms to keep saving." The phone's outbox keeps them (`app.js:61`,
+    `Held`) and sends them after acceptance, so nothing logged at the machine is lost.
+  - `/agree` shows the heading "We've updated our Terms and Privacy Policy", the effective date, and the `summary`
+    lines as a list. It links to the full pages (new tab) and to the change history on GitHub
+    (`{REPO}/commits/main/src/coffeedata/templates/privacy.html` and `…/terms.html`).
+  - The same unticked checkbox, and the buttons **Accept and continue**, **Sign out** and **Delete my account**.
+    Accept needs the tick, with the same error.
+  - Delete asks for a second tap ("Tap again to turn off your account and ask the owner to delete it"). It turns the
+    account off at once (`set_disabled`, signing it out everywhere) and records a deletion request for the owner, who
+    erases it with `coffeedata delete-user` (§6).
+  - Accepting writes a new `consents` row (`terms_source = reaccept`) and lands where the member was going.
+- **Minor change** (`material: false`, wording or contact details): no gate. A dismissible `.notice` once: "We've
+  made small updates to the Terms and Privacy Policy. [What changed]". The member's recorded versions don't change.
+- **Accessibility:** `/agree` is a normal page, not a modal. Focus starts on the `<h1>`, and the summary is a real
+  list. The error and focus rules match sign-up.
+
 **1. Marketing email (opt-in).**
-- At sign-up, under the recovery email, add one checkbox, **unticked by default**: "Send me occasional emails about
-  new coffees and features". It's also in Setup → Account. It's only enabled once an email is entered; the hint is
+- At sign-up, directly under the terms checkbox and next to the button, add a separate optional checkbox,
+  **unticked by default**: "Send me occasional emails about new coffees and features". It's never bundled with the
+  terms, because consent has to be freely given; sign-up works either way. It's also in Setup → Account. It's only enabled once an email is entered; the hint is
   "You can stop them any time; one click in any email does it."
 - **Double opt-in:** ticking it records `pending` and sends "Confirm you'd like coffee news from registry.coffee
   [Yes, send them]". Only a click from a **verified** address makes it `confirmed`. Verifying the email and
@@ -426,7 +483,7 @@ jakubkrehel `better-accessibility` (`forms.md` "Submit behavior", `semantics-and
 regions) and `interface-review` (every new component has its idle, loading, error, disabled and narrow states).
 Paths are in `SKILLS-INDEX.md`.
 
-**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The field order is code, username, recovery email (optional, §5), the marketing checkbox (unticked, §7), then password. Email gets the same live syntax check and the same busy, read-only and error states.
+**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, recovery email (optional, §5), password, then, just above the button, the required terms checkbox and the optional marketing checkbox, both unticked (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
 
 | State | What shows |
 |---|---|
@@ -580,6 +637,18 @@ it often.
   - remove, change and `delete-user` leave no file of the record, and the squash is called;
   - the owner sees the decrypted email, and a member's pages never show anyone else's.
 - **Consent:**
+  - `/api/join` and owner setup without `agree: true` give 400 `terms`; the invite stays open and no account or
+    consent row is written;
+  - the page keeps "Create account" enabled; submitting unticked shows the error, sets `aria-invalid`, and focuses
+    the checkbox (Playwright, and axe on that state);
+  - marketing is independent of the terms: agreeing alone stores marketing `none`; marketing ticked with agreement
+    gives `pending`; marketing never stands in for agreement;
+  - the sign-up row carries `terms_version`, `privacy_version` (equal to `LEGAL_UPDATED`), `terms_at` and
+    `terms_source = signup`;
+  - after a material `LEGAL_CHANGES` entry and a `LEGAL_UPDATED` bump, an older member is sent to `/agree` and writes
+    get 403 (the outbox keeps them); Accept writes a `reaccept` row, clears the gate, and the outbox then syncs;
+    a minor entry shows only the notice;
+  - Delete my account on `/agree` turns the account off and signs it out;
   - the marketing box renders unticked, and an untouched sign-up stores `none`;
   - nothing goes to a `pending`, `withdrawn`, unverified or `none` member; only `confirmed` and verified gets mail;
   - one-click `POST /u/{token}` withdraws, and the headers are present on every marketing mail and absent on
@@ -615,7 +684,8 @@ it often.
 9. **S** In-app browser banner.
 10. **S** Measure cold start.
 11. **M** The site's `/join/` "Brewing…" waking page, CORS on `/health`, site CSP.
-12. **M** Privacy and terms changes (§7.4, plus the named-invite line), `LEGAL_UPDATED`, and the member notice.
+12. **M** Privacy and terms changes (§7.4, plus the named-invite line), `LEGAL_UPDATED` and its first `LEGAL_CHANGES`
+    entry, marked material, and the member notice.
     Deployed **before** 14–17. Wording after task 0.
 13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` and `EMAIL_KEY` in Secret Manager, and
     the `Mailer` protocol with `FakeMailer`.
@@ -624,7 +694,9 @@ it often.
 15. **M** Email recovery: `/forgot`, `/api/forgot` with background send, rate limits, 30-minute codes, the
     password-changed notice, and the email templates. Tests.
 16. **S** The sign-up email field and nudge, and the existing-member prompt on Today.
-17. **M** `consents`: the marketing checkbox, double opt-in, unsubscribe with `List-Unsubscribe` and one-click POST,
+17. **L** `consents`: the required terms checkbox (sign-up and owner setup, server `agree` check, the acceptance
+    fields), `LEGAL_CHANGES` with the `/agree` re-acceptance gate (Accept, Sign out, Delete my account) and the
+    minor-change notice; the marketing checkbox, double opt-in, unsubscribe with `List-Unsubscribe` and one-click POST,
     the personalization toggle and "Recommended because…", and the insights opt-out. Erase covers them. Tests.
 18. **L** Tests: fixtures, parity, Playwright (join, invite, forgot and verify, consent screens), in-app user agents,
     slow and lost-reply servers, waking page.
