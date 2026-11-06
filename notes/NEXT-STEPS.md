@@ -265,3 +265,4 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - m1a: a timing tell inside the 15-min retry window (the limiter refuses before the password check);
   - m4a: when the 'Make another link' confirm times out, the For box stays open over the old link.
 - 2026-11-06: #93 merged (3ad007a) and #120 merged (f7ba6e4). Owner: don't wait for confirmation when the review loop is complete. Mark the PR ready and merge it myself after a clean final review and green CI.
+- 2026-11-06: #121 merged (ceddc26): the smoke CI plus the CLAUDE.md rules. Owner action: make `smoke` a required check in branch protection.
