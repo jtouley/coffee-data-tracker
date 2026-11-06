@@ -361,7 +361,8 @@ def test_a_check_with_only_its_running_row_is_dead_once_a_later_check_has_starte
     assert fetchhealth.run(lk, WEEK)["status"] == "checked" and len(seen) == 1
 
 
-def test_a_manual_only_crawl_never_marks_the_pass_beside_it_dead(tmp_path, monkeypatch):
+@pytest.mark.parametrize("marker", [{"only": "a.com"}, {"mode": "only"}])
+def test_a_manual_only_crawl_never_marks_the_pass_beside_it_dead(tmp_path, monkeypatch, marker):
     """RUNBOOK §8's `crawl --connector X --only <roaster>` during X's pass is no retry of it: X stays running (left
     out until its pass ends), and nothing is reported dead. A real later attempt of the pass still is."""
     lk = Lake(str(tmp_path / "lake"))
@@ -369,23 +370,13 @@ def test_a_manual_only_crawl_never_marks_the_pass_beside_it_dead(tmp_path, monke
     seen: list = []
     _stub_judge(monkeypatch, seen)
     now = _utc_now()
-    _row(
-        lk, "crawl", now - timedelta(minutes=60), connector="woocommerce", attempt="pass"
-    )  # the resume, running
-    _row(
-        lk,
-        "crawl",
-        now - timedelta(minutes=20),
-        "done",
-        "woocommerce",
-        detail={"only": "a.com"},
-        attempt="only",
-    )
+    # The resume, running; then a manual --only run of the same connector, ended (connectors.crawl writes `only`).
+    _row(lk, "crawl", now - timedelta(minutes=60), connector="woocommerce", attempt="pass")
+    _row(lk, "crawl", now - timedelta(minutes=20), "done", "woocommerce", detail=marker, attempt="only")
     out = fetchhealth.run(lk, WEEK)
     assert out["status"] == "checked" and out["died"] == [] and seen[-1] == frozenset({"woocommerce"})
-    _row(
-        lk, "crawl", now - timedelta(minutes=10), connector="woocommerce", attempt="retry"
-    )  # Cloud Run's retry
+    # Cloud Run's retry of the pass: a real later attempt.
+    _row(lk, "crawl", now - timedelta(minutes=10), connector="woocommerce", attempt="retry")
     out = fetchhealth.run(lk, WEEK)
     assert out["died"] == ["woocommerce"] and seen[-1] == frozenset({"woocommerce"})  # the retry still runs
 

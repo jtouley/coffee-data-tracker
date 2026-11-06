@@ -169,6 +169,12 @@ def overlay(lake: Lake, week: str, dest: Path) -> dict[str, int]:
     return copied
 
 
+def _manual(row: dict) -> bool:
+    """A manual `crawl --only` run: its start row's detail says `only` (connectors.crawl), or `mode: only`."""
+    d = control.detail_of(row)
+    return bool(d.get("only")) or d.get("mode") == "only"
+
+
 def _rows(con, sql: str) -> list[dict]:
     cur = con.execute(sql)
     cols = [d[0] for d in cur.description]
@@ -309,7 +315,7 @@ def run(lake: Lake, day: str, force: bool = False) -> dict[str, Any]:
     # connector has started: that one is the retry (Cloud Run's, or the next slot), so the first has died, and its
     # connector is judged now rather than up to 4 hours later. A manual `crawl --only` (its detail says `only`) runs
     # beside a pass and is never its retry, nor is an arm (already left out of `crawls`).
-    passes = [o for o in crawls if not control.detail_of(o).get("only")]
+    passes = [o for o in crawls if not _manual(o)]
     later = {
         r["attempt_id"]
         for r in crawls
