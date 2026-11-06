@@ -10,8 +10,7 @@
 {% macro username_field(id="username") %}
     <label class="flabel" for="{{ id }}">Username</label>
     <input class="input" id="{{ id }}" name="{{ id }}" data-check="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
-    <p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p>
-    <p class="fsuggest" data-suggest hidden><button class="ext tap" type="button"></button></p>
+    <div class="ferr-line"><p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p><span class="fsuggest" data-suggest hidden><button class="ext" type="button"></button></span></div>
     <div class="fhint" id="{{ id }}-h" data-username-hint>You’ll sign in with it. Not your email.</div>
     {{ rule_list(id, ("u.length", "u.chars")) }}
 {%- endmacro %}
@@ -34,7 +33,7 @@
 {%- endmacro %}
 {% macro in_app_banner(name) %}{% if name %}
   <div class="notice stack" data-in-app>
-    <p><strong>Opening from {{ name }}?</strong> Its browser can cover this form and won’t keep your sign-in. Tap ••• and choose <em>Open in external browser</em>, or copy the link and paste it into Safari or Chrome.</p>
+    <p><strong>Opening from {{ name }}?</strong> Its browser can cover this form and won’t keep your <span class="nobr">sign-in</span>. Tap ••• and choose <em>Open in external browser</em>, or copy the link and paste it into Safari or Chrome.</p>
     <button class="btn text start" type="button" data-copy-link>Copy link</button>
     <div data-copy-fallback hidden>
       <input class="input" readonly aria-label="This page’s link" aria-describedby="copy-h">

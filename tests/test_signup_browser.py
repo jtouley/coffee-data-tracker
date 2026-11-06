@@ -44,7 +44,7 @@ def test_signup_in_a_browser(tmp_path):
     apps = [
         _app(tmp_path / "plain"),
         _app(tmp_path / "slow", publish_delay=6),
-        _app(tmp_path / "bumped", legal="December 1, 2026"),
+        _app(tmp_path / "bumped", legal="November 5, 2026"),
     ]
     servers = [_serve(a) for a in apps]
     out = os.environ.get("SIGNUP_SCREENSHOTS") or "-"

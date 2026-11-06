@@ -88,6 +88,9 @@ RULES: dict[str, tuple[str, str | None, str]] = {
 }  # fmt: skip
 TOO_LONG = f"Use at most {MAX_PASSWORD} characters."  # p.length's other message
 SUGGEST = "A username isn’t an email address. Try {suggestion}."  # u.email, when there's a suggestion
+TERMS_AGAIN = (
+    "Tick the box to agree to the Terms and Privacy Policy."  # `terms`, on /agree: no account to create
+)
 
 
 def error(rule: str, message: str | None = None) -> dict[str, str]:
@@ -178,5 +181,6 @@ def for_page() -> dict[str, Any]:
         "rules": {k: {"field": f, "shown": shown, "message": m} for k, (f, shown, m) in RULES.items()},
         "too_long": TOO_LONG,
         "suggest": SUGGEST,
+        "terms_again": TERMS_AGAIN,
         "common": sorted(COMMON),
     }

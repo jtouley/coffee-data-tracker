@@ -1,31 +1,34 @@
 {% extends "base.html" %}
 {% from "_macros.html" import chevron, status_line, rules_json %}
 {% block title %}Invite someone · registry.coffee{% endblock %}
-{% macro note_field(id, value="") %}
-    <label class="flabel" for="{{ id }}">For (optional)</label>
+{% macro note_field(id, label, value="") %}
+    <label class="flabel" for="{{ id }}">{{ label }}</label>
     <input class="input" id="{{ id }}" data-note value="{{ value or '' }}" autocomplete="off" aria-describedby="{{ id }}-error {{ id }}-h">
     <p class="ferr" id="{{ id }}-error" data-error-for="for_label"></p>
     <div class="row base"><div class="fhint" id="{{ id }}-h">Only you see this. Up to {{ rules.label_max }} characters.</div><div class="fhint count" data-count>{{ (value or '') | length }} of {{ rules.label_max }}</div></div>
 {%- endmacro %}
 {% macro invite_row(r) %}
     {%- set i = r.invite %}
-    <div class="gear" data-invite="{{ i.invite_id }}">
-      <div class="row"><div class="n"><span data-label>{{ i.for_label or "Invite" }}</span><em>{{ r.status }}</em></div><button class="ext tap" type="button" data-edit-note aria-expanded="false" aria-controls="edit-{{ i.invite_id }}">Edit note</button></div>
-      <div class="d">
-        {%- if r.status == "open" %}Made {{ short(i.created_at) }} · expires {{ short(i.expires_at) }}
-        {%- elif r.status == "used" %}Used by {{ r.used_by or "a deleted account" }} on {{ short(r.when) }} · made {{ short(i.created_at) }}
-        {%- elif r.status == "expired" %}Expired {{ short(r.when) }} · made {{ short(i.created_at) }}
-        {%- else %}Revoked {{ short(r.when) }} · made {{ short(i.created_at) }}{% endif -%}
+    <div class="invite-group" data-invite="{{ i.invite_id }}">
+      <div class="gear invite">
+        <div class="n"><span data-label>{{ i.for_label or "Invite" }}</span><em>{{ r.status }}</em></div>
+        <button class="ext tap" type="button" data-edit-note aria-expanded="false" aria-controls="edit-{{ i.invite_id }}">Edit note</button>
+        <div class="d">
+          {%- if r.status == "open" %}Made {{ short(i.created_at) }} · expires {{ short(i.expires_at) }}
+          {%- elif r.status == "used" %}Used by {{ r.used_by or "a deleted account" }} on {{ short(r.when) }} · made {{ short(i.created_at) }}
+          {%- elif r.status == "expired" %}Expired {{ short(r.when) }} · made {{ short(i.created_at) }}
+          {%- else %}Revoked {{ short(r.when) }} · made {{ short(i.created_at) }}{% endif -%}
+        </div>
+        <div class="edit" id="edit-{{ i.invite_id }}" data-note-edit hidden>
+          {{ note_field("note-" ~ i.invite_id, "Note") }}
+          <div class="row mt8"><button class="btn secondary" type="button" data-save-note>Save</button><button class="btn text" type="button" data-cancel-note>Cancel</button></div>
+        </div>
       </div>
-      <div class="mt8" id="edit-{{ i.invite_id }}" data-note-edit hidden>
-        {{ note_field("note-" ~ i.invite_id, i.for_label) }}
-        <div class="row mt8"><button class="btn secondary" type="button" data-save-note data-busy="Saving…">Save</button><button class="btn text" type="button" data-cancel-note>Cancel</button></div>
-      </div>
+      {%- if r.status == "open" %}
+      <button class="link" type="button" data-renew="{{ i.invite_id }}">Send a new link{{ chevron() }}</button>
+      <button class="link danger" type="button" data-revoke="{{ i.invite_id }}">Revoke invite</button>
+      {%- endif %}
     </div>
-    {%- if r.status == "open" %}
-    <button class="link" type="button" data-renew="{{ i.invite_id }}">Send a new link{{ chevron() }}</button>
-    <button class="link danger" type="button" data-revoke="{{ i.invite_id }}">Revoke invite</button>
-    {%- endif %}
 {%- endmacro %}
 {% block main %}
   <div class="top"><a class="back" href="/setup">‹ Setup</a></div>
@@ -67,7 +70,7 @@
     their own.</p>
   <div class="spacer"></div>
   <div class="dock">
-    <div data-new-note>{{ note_field("for_label") }}</div>
+    <div data-new-note>{{ note_field("for_label", "For (optional)") }}</div>
     <button class="btn primary mt8" type="button" data-new-invite>Make an invite link</button>
     {{ status_line() }}
     <button class="btn text" type="button" data-another hidden data-confirm="Tap again: the code above won’t be shown again">Make another link</button>

@@ -1089,6 +1089,7 @@ function setError(form, field, message = "", rule = null, mark = true) {
   if (!slot) return Boolean(input && message);
   if (slot.dataset.idle === undefined) slot.dataset.idle = slot.textContent;
   const text = message || slot.dataset.idle;
+  slot.classList.toggle("is-error", Boolean(message) && !slot.classList.contains("ferr")); // a hint that now says what's wrong
   const [before, after] = text.split("sign in");
   if (rule === "c.used" && after !== undefined) {
     const a = document.createElement("a");
@@ -1261,7 +1262,7 @@ function accountForm(form, done = null) {
     let empty = false;
     for (const el of form.querySelectorAll("input[required]")) {
       if (el.type === "checkbox") {
-        if (!el.checked) errors.push(ruleError("terms"));
+        if (!el.checked) errors.push(ruleError("terms", form.id === "agree-form" ? RULES.terms_again : null));
       } else if (!el.dataset.check && !el.value.trim()) {
         errors.push({ field: el.name, message: "" });
         empty = true;
@@ -1337,8 +1338,9 @@ function joinCode(form) {
     if (!input.value.trim()) return;
     try {
       const r = await post("/api/invites/check", { code: input.value });
+      // What the line goes back to when other errors are cleared on submit.
+      status.dataset.idle = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
       setError(form, "code");
-      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
     } catch (err) {
       const e = err.errors?.[0];
       setError(form, "code", e ? e.message : err instanceof Rejected ? err.message : UNREACHABLE, e?.rule);

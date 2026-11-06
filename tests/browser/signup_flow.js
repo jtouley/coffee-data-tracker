@@ -147,7 +147,44 @@ function counting(page, path) {
     await guest.fill("#password", ONEPASSWORD); // pasted from 1Password
     assert.deepEqual(await guest.$$eval("#password-rules li", (els) => els.map((e) => e.dataset.state)), ["met", "met", "met", "met"]);
     await snap(guest, "join-typing");
+    // Submitting with a failing username and password: each error under its field, red, focus on the first.
+    // The form's alert line is emptied and filled again, so a repeat is announced; the code's status survives.
+    await guest.fill("#username", "name.com@x");
+    await guest.fill("#password", "kettle or");
+    await guest.evaluate(() => {
+      window.said = [];
+      new MutationObserver(() => window.said.push(document.querySelector("[data-hint]").textContent)).observe(document.querySelector("[data-hint]"), { childList: true, characterData: true, subtree: true });
+    });
+    await guest.getByRole("button", { name: "Create account" }).click();
+    assert.equal(await guest.evaluate(() => document.activeElement.id), "username");
+    assert.equal(await text(guest, "#username-error"), "A username isn’t an email address. Try name.com.");
+    assert.equal(await text(guest, "#password-error"), "Use at least 10 characters.");
+    assert.equal(await guest.getAttribute("#password", "aria-invalid"), "true");
+    assert.deepEqual(await guest.$$eval("#password-rules li", (els) => els.map((e) => e.dataset.state)), ["unmet", "", "", ""]);
+    assert.match(await text(guest, "#code-h"), /Valid until/, "the code's status stays after a submit");
+    assert.equal(await guest.getAttribute("[data-hint]", "role"), "alert");
+    assert.equal(await guest.getAttribute("#join [data-status]", "role"), "status");
+    await snap(guest, "join-field-invalid");
+    // The same message twice is announced twice: the alert empties, then fills (a 100 ms gap).
+    await guest.fill("#code", "");
+    await guest.getByRole("button", { name: "Create account" }).click();
+    await waitText(guest, "[data-hint]", /Fill in every field/);
+    await guest.getByRole("button", { name: "Create account" }).click();
+    await guest.waitForFunction(() => window.said.filter((t) => t === "Fill in every field.").length === 2);
+    assert.deepEqual(await guest.evaluate(() => window.said), ["Fill in every field.", "", "Fill in every field."]);
+    await guest.fill("#code", code);
+    // Keyboard focus shows a ring on the inputs and the terms box.
+    await guest.focus("#password");
+    await guest.keyboard.press("Tab");
+    await guest.keyboard.press("Shift+Tab");
+    assert.notEqual(await guest.$eval("#password", (el) => getComputedStyle(el).boxShadow), "none");
+    await guest.focus("#agree");
+    await guest.keyboard.press("Shift+Tab");
+    await guest.keyboard.press("Tab");
+    assert.equal(await guest.evaluate(() => document.activeElement.id), "agree");
+    assert.equal(await guest.$eval("#agree", (el) => getComputedStyle(el).outlineStyle), "solid");
     // Invalid: a bad username left on blur, and the terms unticked on submit.
+    await guest.fill("#password", ONEPASSWORD);
     await guest.fill("#username", "m");
     await guest.focus("#password");
     assert.equal(await guest.getAttribute("#username", "aria-invalid"), "true");
@@ -210,18 +247,34 @@ function counting(page, path) {
     assert.equal(lostSent.length, 2, "the same join, sent again once");
     assert.equal(await lost.evaluate(() => "caches" in window), false);
     await lostCtx.close();
+    // No reply at all, three resends later: what happened, nothing lost, Try again.
+    const goneCode = await makeInvite(owner, base);
+    const goneCtx = await context(browser, { width: 375, height: 812 });
+    const gone = await goneCtx.newPage();
+    await gone.route("**/api/join", (route) => route.abort("connectionreset"));
+    const goneSent = counting(gone, "/api/join");
+    await gone.goto(`${base}/join#${goneCode}`);
+    await fillJoin(gone, "nobody.home", "orbit kettle marble");
+    await gone.getByRole("button", { name: "Create account" }).click();
+    await waitText(gone, "[data-hint]", /Couldn’t reach the app\. Nothing you typed is lost\. Try again in a moment\./);
+    assert.equal(goneSent.length, 4, "sent, then resent three times");
+    assert.equal(await text(gone, "#join [type=submit]"), "Try again");
+    assert.equal(await gone.inputValue("#username"), "nobody.home");
+    await snap(gone, "join-lost-reply");
+    await goneCtx.close();
 
     // --- In-app browsers: the banner, rendered by the server, and Copy link ----------------------------------
+    const bannerCode = await makeInvite(owner, base);
     for (const [ua, name] of [[INSTAGRAM, "Instagram"], [FACEBOOK, "Facebook"]]) {
       const ctx = await context(browser, { width: 375, height: 812, userAgent: ua });
       const p = await ctx.newPage();
-      await p.goto(`${base}/join#${lostCode}`);
+      await p.goto(`${base}/join#${bannerCode}`);
       assert.match(await text(p, "[data-in-app]"), new RegExp(`Opening from ${name}\\?`));
       if (name === "Instagram") {
         await snap(p, "join-in-app");
         await p.getByRole("button", { name: "Copy link" }).click(); // no clipboard permission here
         await p.waitForSelector("[data-copy-fallback]:not([hidden])");
-        assert.equal(await p.inputValue("[data-copy-fallback] input"), `${base}/join#${lostCode}`);
+        assert.equal(await p.inputValue("[data-copy-fallback] input"), `${base}/join#${bannerCode}`);
         await snap(p, "join-in-app-copy");
       }
       await ctx.close();
@@ -273,9 +326,42 @@ function counting(page, path) {
     assert.equal(await member.inputValue("#code"), resetLink.split("#")[1]);
     await member.fill("#password", "new lantern quarry");
     await snap(member, "reset");
+    await member.route("**/api/reset", async (route) => { await new Promise((r) => setTimeout(r, 1500)); return route.continue(); });
     await member.getByRole("button", { name: "Set password" }).click();
+    assert.equal(await text(member, "#reset [type=submit]"), "Setting password…");
+    assert.equal(await member.getAttribute("#reset [type=submit]", "aria-disabled"), "true");
     await member.waitForURL(`${base}/`);
     await memberCtx.close();
+
+    // --- Every invite action says what it's doing ----------------------------------------------------------
+    await owner.route(/\/api\/(invites|people)/, async (route) => { await new Promise((r) => setTimeout(r, 800)); return route.continue(); });
+    const busyLabel = async (button, want) => {
+      await button.click();
+      await owner.waitForFunction(([w]) => [...document.querySelectorAll("[aria-disabled=true]")].some((b) => b.textContent === w), [want]);
+      await owner.waitForFunction(() => !document.querySelector("main [aria-disabled=true]"));
+    };
+    await owner.goto(`${base}/invite`);
+    const tapTwice = owner.locator('[data-reset][data-name="maya"]');
+    await tapTwice.click();
+    await tapTwice.click();
+    await owner.waitForFunction(() => document.querySelector('[data-reset][data-name="maya"]').textContent === "Making a reset link…");
+    assert.equal(await owner.$eval('[data-reset][data-name="maya"]', (b) => getComputedStyle(b, "::before").width), "14px");
+    await owner.waitForSelector("[data-codebox]:not([hidden])");
+    await owner.goto(`${base}/invite`);
+    await busyLabel(owner.locator("[data-renew]").first(), "Making a new link…");
+    await owner.goto(`${base}/invite`);
+    await busyLabel(owner.locator("[data-revoke]").first(), "Revoking…");
+    await owner.waitForURL(`${base}/invite`);
+    await owner.goto(`${base}/invite`);
+    const edited = owner.locator("[data-invite]").first();
+    await edited.getByRole("button", { name: "Edit note" }).click();
+    await edited.locator("input").fill("Busy check");
+    await busyLabel(edited.getByRole("button", { name: "Save" }), "Saving…");
+    await owner.goto(`${base}/invite`);
+    const off = owner.locator('[data-person][data-name="lost.reply"]');
+    await off.click();
+    await busyLabel(off, "Turning off…");
+    await owner.unroute(/\/api\/(invites|people)/);
 
     // --- A slow server: busy, then the 4 s line; five taps, one request -------------------------------------
     const slowOwnerCtx = await context(browser);
@@ -299,6 +385,12 @@ function counting(page, path) {
     assert.equal(await slowPage.getAttribute("#join [type=submit]", "aria-disabled"), "true");
     assert.equal(await text(slowPage, "#join [type=submit]"), "Creating account…");
     assert.equal(await slowPage.getAttribute("#username", "readonly"), "");
+    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").animationName), "turn");
+    await slowPage.emulateMedia({ reducedMotion: "reduce" });
+    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").animationName), "none");
+    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").width), "14px");
+    await slowPage.emulateMedia({ reducedMotion: "no-preference" });
+    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b).opacity), "1", "full colour while busy");
     await snap(slowPage, "join-busy");
     await waitText(slowPage, "#join [data-status]", /Still working\. The app may be waking up/);
     await snap(slowPage, "join-slow");
@@ -320,7 +412,7 @@ function counting(page, path) {
     await snap(agree, "agree");
     await agree.getByRole("button", { name: "Accept" }).click();
     assert.equal(await agree.evaluate(() => document.activeElement.id), "agree");
-    assert.match(await text(agree, "#agree-error"), /Tick the box/);
+    assert.equal(await text(agree, "#agree-error"), "Tick the box to agree to the Terms and Privacy Policy.");
     await snap(agree, "agree-invalid");
     await agree.check("#agree");
     await agree.getByRole("button", { name: "Accept" }).click();

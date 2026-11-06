@@ -371,7 +371,7 @@ def create_app(
     def post_agree(body: dict, me: Writer) -> dict:
         s = accounts_only()
         if body.get("agree") is not True:
-            raise HTTPException(400, [rules.error("terms")])
+            raise HTTPException(400, [rules.error("terms", rules.TERMS_AGAIN)])
         s.accounts.accept(me.user_id)
         return {"ok": True}
 
