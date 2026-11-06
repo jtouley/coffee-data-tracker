@@ -20,7 +20,7 @@ import pytest
 
 from app.accounts import Accounts
 from coffeedata import cli, connectors
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 
 from .smoke import BLACK_HOLE, PROXY_VARS, fixture_lake, require, require_dbt
 from .test_app_browser import BROWSER, _free_port, _playwright
@@ -65,8 +65,8 @@ def test_site_and_app_in_a_browser(lake, tmp_path, monkeypatch, no_network):
 
     # A seeded user in the private users lake, then the app as `make app` runs it, with sign-in on.
     users = tmp_path / "users"
-    Accounts(Lake(str(users), tables=("users", "invites")), PEPPER, SECRET, SETUP).create_owner(
-        SETUP, USER, PW
+    Accounts(Lake(str(users), tables=USER_TABLES), PEPPER, SECRET, SETUP).create_owner(
+        SETUP, USER, PW, agree=True
     )
     static = ThreadingHTTPServer(("127.0.0.1", 0), partial(QuietFiles, directory=str(site)))
     threading.Thread(target=static.serve_forever, daemon=True).start()
