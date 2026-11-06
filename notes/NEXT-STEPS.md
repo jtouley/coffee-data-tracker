@@ -256,3 +256,8 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - a still-running manual --only run is marked dead when a later pass starts;
   - remove the dead mode==only branch;
   - #105 left DESIGN §6 saying the non-Shopify crawls retry once.
+- 2026-11-06: #107 merged (47e3356). Follow-up minors:
+  - fct_price_event dbt unit tests with cross-currency rows;
+  - contract wording on previous_price_usd;
+  - CHANGELOG entries for public 2.4.0 and raw 1.6.0;
+  - README / marketplace README still say 45,000.
