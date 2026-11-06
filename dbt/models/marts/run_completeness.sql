@@ -13,7 +13,9 @@
 -- and no fetch up to this run ever returned a product. A roaster never fetched successfully is unknown, and counts
 -- (a failure there counts against the run). catalog_ok: this run fetched it and got products, so an adapter that
 -- "succeeds" with nothing doesn't count as working for a roaster that has a catalog. adapter: this run's latest
--- attempt's, else its latest earlier one's, else the one its platform maps to (models.Roaster.adapter).
+-- attempt's, else its latest earlier one's, else the one its platform maps to (models.Roaster.adapter). partial
+-- and challenge are this run's (int_roaster_runs), for the fetch-health check: a partial ok fetch counts as ok here
+-- when it has products, and a challenged one as a failure.
 with run as (
     {% if var('as_of_run') %}
     select cast('{{ var("as_of_run") }}' as date) as run_date
@@ -73,7 +75,10 @@ select
     end as has_catalog,
     coalesce(t.ok, false) and coalesce(t.products > 0, true) as catalog_ok,
     coalesce(t.unavailable, false) as unavailable,
-    coalesce(t.quarantined, false) as quarantined
+    coalesce(t.quarantined, false) as quarantined,
+    coalesce(t.partial, false) as partial,
+    t.partial_reason,
+    t.challenge
 from expected e
 cross join run
 left join attempts t using (roaster_id)

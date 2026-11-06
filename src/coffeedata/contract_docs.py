@@ -33,7 +33,9 @@ COLUMNS: dict[str, dict[str, str]] = {
         "tags": "The store's tags.",
         "image": "The product's first image URL.",
         "body_hash": "Hash of the description; its text is in bodies.",
-        "variants": "Each bag size or option: variant id, title, price (USD), grams where known, availability.",
+        "variants": "Each bag size or option: variant id, title, price as the store states it (price_usd: the "
+        "name predates currency), grams where known, availability, and currency: the price's currency as the store "
+        "states it (ISO 4217), null when the store states none and before raw 1.6.0. dbt publishes USD prices only.",
         "is_coffee": "Whether the crawl's rules called it coffee. Null from an ELT crawl, which doesn't classify.",
         "published_at": "The store's latest publish time (Shopify only).",
         "payload_hash": "Hash of the store's raw product payload: tells a real change from a repeated fetch.",
@@ -79,7 +81,7 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
     "job_manifests": {
         "run_date": _RUN,
-        "job": "crawl, crawl-retry, merge or enrich.",
+        "job": "crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",
@@ -97,7 +99,11 @@ COLUMNS: dict[str, dict[str, str]] = {
         "egress_ips": "The egress IPs the job's requests left from.",
         "refusals": "Per egress IP: stores contacted, and those that refused their first catalog request.",
         "code_version": "The code that ran.",
-        "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run).",
+        "detail": "JSON: the job's own summary (arm, egress, rps, slice and salt for the confirmation run; only for a "
+        "manual crawl --only; for "
+        "fetch-health, its verdict on the week's fetches: systemic fetch failures, and the list of roasters whose "
+        "fetch failed, came back empty or came back short, each with its reasons and the gate rules that gave them, "
+        "plus the partial and quarantined fetches).",
     },
     "enrichments": {
         "extracted_at": "When it was extracted.",

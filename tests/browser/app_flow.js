@@ -62,10 +62,12 @@ async function newPage(browser, errors) {
     assert.equal(new URL(first.url()).pathname, "/signin");
     await shoot(first, "owner-setup");
     await first.getByRole("button", { name: "Create account" }).click();
-    assert.equal(await first.textContent("[data-hint]"), "Fill in every field.");
+    await first.waitForFunction(() => document.querySelector("[data-hint]").textContent === "Fill in every field.");
+    assert.equal(await first.evaluate(() => document.activeElement.id), "setup_code"); // the first field that failed
     await first.fill("#setup_code", "SETUP-CODE-1234");
     await first.fill("#username", "jtouley");
     await first.fill("#password", "kettle orbit marble");
+    await first.check("#agree");
     await first.getByRole("button", { name: "Show" }).click();
     assert.equal(await first.getAttribute("#password", "type"), "text");
     await first.getByRole("button", { name: "Create account" }).click();
@@ -488,6 +490,7 @@ async function newPage(browser, errors) {
     await guest.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("someone else's"))));
     await guest.fill("#username", "maya");
     await guest.fill("#password", "lantern quarry velvet");
+    await guest.check("#agree");
     await guest.getByRole("button", { name: "Create account" }).click();
     await guest.waitForURL(`${base}/`);
     assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);

@@ -138,7 +138,12 @@ def test_secrets_stored_with_a_trailing_newline_still_work(monkeypatch, tmp_path
     c = TestClient(hosted_app, base_url="https://testserver")
     r = c.post(
         "/api/signin",
-        json={"setup_code": "SETUP-CODE-9", "username": "jtouley", "password": "kettle orbit marble"},
+        json={
+            "agree": True,
+            "setup_code": "SETUP-CODE-9",
+            "username": "jtouley",
+            "password": "kettle orbit marble",
+        },
         headers=W,
     )
     assert r.status_code == 200, r.text  # the setup code matches as typed

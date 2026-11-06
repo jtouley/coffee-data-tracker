@@ -1140,6 +1140,20 @@ def test_ingest_passes_each_stores_last_known_product_count(lake, mock):
     assert (p1.call_count, p2.call_count) == (2, 1)  # 40 known, 40 fetched: page 1 was the last
 
 
+def test_a_repull_reads_the_whole_catalog_not_up_to_its_suspect_count(lake, mock):
+    """A suspect re-fetch (the fetch-health check's refetch): the latest complete ok fetch is this week's short one,
+    so its count must not end the re-fetch at the same truncation; it paginates to the empty page."""
+    p1 = mock.get("https://small.example/products.json", params={"page": "1"}).mock(
+        return_value=_page(range(40))
+    )
+    p2 = mock.get("https://small.example/products.json", params={"page": "2"}).mock(return_value=_page([]))
+    ingest.run(lake, [_r("small.example")], "2026-10-26", workers=1, shopify_rps=1000, client_kw=FAST)
+    assert ingest.known_products(lake) == {"small.example": 40}
+    ingest.run(lake, [_r("small.example")], "2026-11-02", workers=1, shopify_rps=1000, client_kw=FAST,
+               refetch={"small.example"})  # fmt: skip
+    assert (p1.call_count, p2.call_count) == (2, 2)  # no known count: to the empty page again
+
+
 def test_exactly_250_on_the_last_page_costs_one_more_request(mock):
     p1 = mock.get("https://full.example/products.json", params={"page": "1"}).mock(
         return_value=_page(range(250))

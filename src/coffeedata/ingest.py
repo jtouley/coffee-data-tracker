@@ -309,20 +309,25 @@ def select_states(
     done, tried = retry_transient(_done_and_tried, lake, run_date)
     # Draw a sample from a population that doesn't change as the run progresses, so re-running the same
     # command picks the same roasters (and then skips the ones already done).
-    pool = sorted(
-        (s for s in states if s.roaster.platform and s.status != "opted_out"),
-        key=lambda s: s.roaster.roaster_id,
-    )
+    pool = sorted((s for s in states if _in_pool(s)), key=lambda s: s.roaster.roaster_id)
     if sample:  # a hash order is stable as roasters are added, so weekly samples keep the same roasters
         pool = sorted(pool, key=lambda s: sample_key(s.roaster.roaster_id))[:sample]
-    todo = [
-        s
-        for s in pool
-        if (s.status in INGESTABLE or s.roaster.roaster_id in tried) and s.roaster.roaster_id not in done
-    ]
+    todo = [s for s in pool if crawlable(s, tried) and s.roaster.roaster_id not in done]
     if retry_failed:
         todo = [s for s in todo if s.roaster.roaster_id in tried]
     return todo, mode
+
+
+def _in_pool(s: registry.RoasterState) -> bool:
+    """A roaster a crawl may ask at all: it has a platform and hasn't opted out."""
+    return bool(s.roaster.platform) and s.status != "opted_out"
+
+
+def crawlable(s: registry.RoasterState, tried: set[str] | frozenset[str]) -> bool:
+    """select_states' status rules for one roaster: in the pool (a platform, not opted out), and ingestable now or
+    already tried this run (`tried`). The fetch-health check's re-fetches (fetchhealth.repull_states) apply the same
+    rules, so a roaster that opted out after the check is never fetched again."""
+    return _in_pool(s) and (s.status in INGESTABLE or s.roaster.roaster_id in tried)
 
 
 def _done_and_tried(lake: Lake, run_date: str) -> tuple[set[str], set[str]]:
@@ -458,6 +463,7 @@ def run(
     guard: crashguard.Guard | None = None,
     suspects: set[str] | frozenset[str] = frozenset(),
     quarantine: dict[str, str] | None = None,
+    refetch: set[str] | frozenset[str] = frozenset(),
 ) -> dict:
     """Fetch the `todo` roasters for the run. Each one's status (when given as a RoasterState) and `mode` (full, sample,
     only or retry_failed, as select_states returns it) go in the run manifest, which is written, and published to
@@ -467,6 +473,7 @@ def run(
     new attempt is started (a roaster never tried is left without a fetches row, for a resume to pick up) and no
     request is sent: a catalog still being read stops there and is stored as partial (fetches.partial), never as the
     whole catalog.
+    refetch: the fetch-health check's re-fetches, fetched without a known product count (a whole catalog).
 
     The poison-pill guard (crashguard, from connectors.crawl): guard records each roaster in flight; suspects are
     fetched one at a time, beside the other workers; quarantine (roaster -> error) gets a `crashed` fetches row,
@@ -493,7 +500,10 @@ def run(
         (r for r in roasters if r.roaster_id not in quarantine), key=lambda r: r.roaster_id not in suspects
     )
     known_bodies = retry_transient(_known_bodies, lake)  # the widest scan a crawl makes: retried
-    known = known_products(lake)
+    # A re-fetch (refetch: the fetch-health check listed it as empty or suspect) reads its whole catalog, to the
+    # empty page: its latest complete ok fetch is the very fetch that came back short, and a suspect's short count
+    # as the known size would let a short page end the re-fetch at the same truncation.
+    known = {k: v for k, v in known_products(lake).items() if k not in refetch}
     stats: Counter = Counter()
     by_adapter: dict[str, Counter] = {}
     failures: list[str] = []

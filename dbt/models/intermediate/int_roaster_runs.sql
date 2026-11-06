@@ -10,6 +10,13 @@ select
     bool_or(status = 'unavailable') and not bool_or(status = 'ok') as unavailable,
     -- quarantined this run after crashing its crawl twice (crashguard) and never fetched: a problem with that one
     -- store, not the platform's or the run's, so the ok rates leave it out too (run_completeness)
-    bool_or(status = 'crashed') and not bool_or(status = 'ok') as quarantined
+    bool_or(status = 'crashed') and not bool_or(status = 'ok') as quarantined,
+    -- every ok attempt read only part of the catalog (no complete one this run), and why (the latest's reason)
+    bool_or(status = 'ok') and not bool_or(status = 'ok' and not partial) as partial,
+    case when bool_or(status = 'ok') and not bool_or(status = 'ok' and not partial)
+        then arg_max(error, fetched_at) filter (where status = 'ok' and partial) end as partial_reason,
+    -- no ok attempt, and an edge answered a failed one with a challenge: which edge (the latest challenged attempt's)
+    case when not bool_or(status = 'ok')
+        then arg_max(challenge, fetched_at) filter (where challenge is not null) end as challenge
 from {{ ref('stg_fetches') }}
 group by roaster_id, run_date

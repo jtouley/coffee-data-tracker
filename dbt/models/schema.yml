@@ -42,6 +42,15 @@ models:
           True when an ok fetch read only part of the catalog: the products it didn't read keep their listing
           (stg_runs.is_current). False for files from before raw contract 1.2.0.
         data_tests: [not_null]
+      - name: challenge
+        description: >-
+          A failed fetch (status error) that an edge answered with its anti-bot challenge instead of the catalog,
+          when a recorded block names the edge: siteground (SiteGround's sg-captcha header, raw contract 1.4.0) or
+          cloudflare (cf-mitigated challenge). Null otherwise, a bare 202 included: it names no edge, so it stays a
+          plain failure. The fetch-health check names the edge on the roaster's entry; a challenge is an ordinary
+          failed fetch.
+        data_tests:
+          - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
     description: >-
       stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
@@ -178,6 +187,17 @@ models:
           The store was quarantined in the run (fetch status crashed: in flight in two attempts of its crawl that
           died) and no attempt was ok. One store's problem, not the platform's: left out of the ok rates.
         data_tests: [not_null]
+      - name: partial
+        description: >-
+          The run's ok attempts all read only part of the catalog (stg_fetches.partial), none of it whole. Still ok
+          for the ok rates when it brought back products.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why, for a partial run (the latest partial ok attempt's stg_fetches.error); null otherwise.
+      - name: challenge
+        description: >-
+          No attempt was ok and an edge answered a failed one with a challenge: the edge of the latest such attempt
+          (stg_fetches.challenge). Null otherwise.
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
     data_tests:
@@ -289,6 +309,10 @@ models:
     columns:
       - name: input_hash
         data_tests: [unique, not_null]
+      - name: classified_by
+        description: "claude (a stored verdict decided) or rules."
+      - name: verdict_model
+        description: "The verdict's model when classified_by = claude, else null."
   - name: mart_market
     data_tests:
       - unique:
@@ -327,6 +351,18 @@ models:
           Quarantined in this run (fetch status crashed, no ok attempt): it crashed its crawl twice and wasn't
           fetched. Attempted, but left out of the ok rates; mart_build_profile counts them (run_quarantined).
         data_tests: [not_null]
+      - name: partial
+        description: >-
+          This run read only part of its catalog (int_roaster_runs.partial). Counted ok in the ok rates when it
+          brought back products; the fetch-health check lists it apart, never as a failure.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why it is partial (int_roaster_runs.partial_reason); null otherwise.
+      - name: challenge
+        description: >-
+          Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground or cloudflare);
+          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry,
+          an ordinary failed fetch.
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
       volume check and anomaly bands read them.
@@ -366,6 +402,8 @@ models:
         description: "The roaster's name."
       - name: roaster_state
         description: "The roaster's US state, where known."
+      - name: roaster_country
+        description: "The roaster's country (ISO 3166-1 alpha-2, stg_registry; null for a roaster no longer in the registry). The public tables keep US only."
       - name: is_chain
         description: "The roaster is a chain."
       - name: product_id
@@ -411,9 +449,9 @@ models:
       - name: published_at
         description: "The store's latest publish time (Shopify only)."
       - name: min_price_usd
-        description: "The lowest bag price (USD)."
+        description: "The lowest bag price in USD; a price the store states in another currency is never used."
       - name: price_per_100g
-        description: "The lowest plausible retail price per 100 g of an available bag."
+        description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
       - name: bag_sizes_g
         description: "The bag sizes offered, in grams."
       - name: release_build_id
@@ -445,6 +483,16 @@ models:
         description: "rules or llm: what the attributes come from."
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: classified_by
+        description: >-
+          claude or rules: what decided that the latest version is coffee. claude is a stored verdict for the
+          build's verdict model and definition (stg_verdicts); rules is the rules alone (no verdict yet, an unsure
+          verdict, or a rules-only build). verdicts_cover_catalog checks the share of listed coffees with claude.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [claude, rules]}}
+      - name: verdict_model
+        description: "The Claude model whose verdict decided it (classified_by = claude); null for the rules."
   - name: dim_roaster
     description: One row per roaster in the registry, with its site, platform, status and coffee counts.
     columns:
@@ -457,6 +505,9 @@ models:
         description: "City, where known."
       - name: state
         description: "US state, where known."
+      - name: country
+        description: "Country (ISO 3166-1 alpha-2): the seed's, US unless corrected; public_roaster keeps US only."
+        data_tests: [not_null]
       - name: locations
         description: "Number of locations."
       - name: is_chain
@@ -538,6 +589,8 @@ models:
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
+      - name: previous_price_run
+        description: "The run previous_price_usd comes from: the bag's previous USD observation for a USD price, else its previous observation (public_prices_are_usd checks it was in USD)."
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
@@ -631,7 +684,7 @@ models:
       - name: release_run_date
         data_type: date
   - name: public_roaster
-    description: "One row per published roaster: not opted out, with a coffee seen, from a redistributable source."
+    description: "One row per published roaster: in the US, not opted out, with a coffee seen, from a redistributable source."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
