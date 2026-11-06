@@ -1114,3 +1114,77 @@ def test_a_build_from_a_directory_without_marketplace_warns_and_is_still_recorde
     assert "coverage claims not checked: " in caplog.text and "LISTING.md can't be read" in caplog.text
     [(build_id, _, _)] = quality.builds(Lake())
     assert quality.served(Lake())["build_id"] == build_id
+
+
+def test_tag_parity_warns_and_the_build_still_serves_records_and_prints_it(
+    lake, monkeypatch, tmp_path, capsys
+):
+    """python_readers_agree_on_tags is warn-only, so a product whose raw and decoded tags decide differently never
+    holds a weekly release back; it isn't silent either: `coffeedata build` prints its count and examples and the
+    build's warnings, builds records the test as `warn` with the count, and build-diff lists it."""
+    from coffeedata import cli
+
+    real_dbt_build = cli.dbt_build  # no run manifest here: the completeness gates have nothing to judge
+    monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real_dbt_build(
+        lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
+    monkeypatch.setattr(cli, "MARTS", ["dim_coffee", "dim_roaster", "mart_market", "fct_price_event"])
+    monkeypatch.setattr(cli, "SERVED_DB", tmp_path / "served.duckdb")
+    monkeypatch.setattr(cli, "_today", lambda: "2026-10-26")
+    part = product("P", title="Coffee P Roast") | {"tags": ["Parts&nbsp;"]}  # a gear tag only once decoded
+    run(lake, "2026-10-26", RID, [*FULL, part])
+    args = argparse.Namespace(
+        db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-26", accept_volume_change=False
+    )
+    assert cli.cmd_build(args) is True
+    [(build_id, _, passed)] = quality.builds(Lake())
+    assert passed and quality.served(Lake())["build_id"] == build_id
+    err = capsys.readouterr().err
+    assert "tag parity: 1 products decide differently on raw and decoded tags" in err
+    assert f"tag parity: {RID}:P 'Coffee P Roast': " in err
+    [summary] = [line for line in err.splitlines() if line.startswith(f"build {build_id} warnings: ")]
+    assert "python_readers_agree_on_tags (1)" in summary
+    recorded = (
+        Lake()
+        .connect()
+        .execute(
+            f"select status, failures from {Lake().scan('builds')} where build_id = ? and unique_id = ?",
+            [build_id, "test.coffeedata.python_readers_agree_on_tags"],
+        )
+        .fetchone()
+    )
+    assert recorded == ("warn", 1)
+    run(lake, "2026-11-02", RID, FULL)  # the old version stays in the lake, so the next build warns again
+    monkeypatch.setattr(cli, "_today", lambda: "2026-11-02")
+    capsys.readouterr()
+    assert cli.cmd_build(argparse.Namespace(**vars(args) | {"run_date": "2026-11-02"})) is True
+    diff = quality.build_diff(Lake())  # build-diff lists the latest build's warnings
+    assert diff["new_passed"] and diff["warnings"]["python_readers_agree_on_tags"] == 1
+    # ... under the same names, and counts, as the build's warnings line
+    [summary] = [line for line in capsys.readouterr().err.splitlines() if " warnings: " in line]
+    assert summary == f"build {diff['new']} warnings: " + ", ".join(
+        f"{t} ({'?' if n is None else n})" for t, n in diff["warnings"].items()
+    )
+
+
+def test_build_warnings_name_generic_tests_by_name_not_by_their_hash():
+    """A generic test's unique_id ends in a hash (`test.<project>.<name>.<hash>`); a singular test's ends in its
+    name. Both print by name, sorted; only `warn` nodes count."""
+    generic = "test.coffeedata.relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_.7223529a27"
+    nodes = [
+        ("test.coffeedata.python_readers_agree_on_tags", "warn", 1),
+        (generic, "warn", 12),
+        ("test.coffeedata.not_null_dim_coffee_coffee_id.5c2d8e1f0a", "pass", 0),
+        ("model.coffeedata.dim_coffee", "success", None),
+        ("test.coffeedata.build_metrics_in_band", "warn", None),
+        (None, "warn", 3),
+    ]
+    assert (
+        quality.readable_test_name(generic)
+        == "relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_"
+    )
+    assert list(quality.build_warnings(nodes).items()) == [
+        ("build_metrics_in_band", None),
+        ("python_readers_agree_on_tags", 1),
+        ("relationships_fct_price_event_coffee_id__coffee_id__ref_dim_coffee_", 12),
+    ]

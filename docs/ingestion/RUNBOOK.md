@@ -589,8 +589,19 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 | `latest_run_is_fresh` | only possible if last week's run is missing too (on Tuesday last week's Monday still counts as fresh, §5.2). Fix **this** week's merge (§5.2, or **c** for `$WEEK`): once `$WEEK` is merged, this test passes. **Never crawl a past week** (c) |
 | anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
 
-`suspect_runs_need_review` and `build_metrics_in_band` are warnings (`severity='warn'`) and never fail the gate, so
-neither appears in `failing`. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+`suspect_runs_need_review`, `build_metrics_in_band`, `coverage_claims_match_build` and `python_readers_agree_on_tags`
+are warnings (`severity='warn'`) and never fail the gate, so none appears in `failing`; build-diff lists them under
+`warnings`, with how many rows each found. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+
+**Warnings on a passing build.** They don't block the release, and nothing emails about them (the alerts in §6 fire
+on failed executions and Scheduler errors only). Read them after each Tuesday build: near its end, the build's log
+has `build <id> warnings: <test> (<rows>), ...`, and `coffeedata build-diff` shows the same under `warnings`.
+
+- `python_readers_agree_on_tags` (also printed as `tag parity: <n> products decide differently ...`, with up to
+  five examples): `registry.py`, `enrich.py` and `verdict.py` read raw tags and would count those products as
+  coffee, or pick them for Claude, differently from the build. The release decides on decoded tags, so it is served;
+  fix it in code, by decoding tags in `coffeedata.products.item` as the build does or changing the rule that reads
+  the escaped form. The warning stays while any such product version is in the lake.
 
 **b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
 the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed

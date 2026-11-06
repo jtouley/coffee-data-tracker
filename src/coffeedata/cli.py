@@ -349,7 +349,7 @@ def cmd_build(args: argparse.Namespace) -> bool:
         claim_lines = []
     for line in claim_lines:
         print(f"coverage claim: {line}", file=sys.stderr)
-    try:  # the python_readers_agree_on_tags test fails the build on these; this shows which products
+    try:  # the python_readers_agree_on_tags test warns on these (never fails the build); this shows which products
         parity_lines = quality.tag_parity_messages(db)
     except Exception as e:
         logging.warning("tag parity not reported: %s", e)
@@ -361,6 +361,18 @@ def cmd_build(args: argparse.Namespace) -> bool:
         lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
     )
     _write_personal_marts(lake, db, quality.SERVED_MARTS)
+    # The nodes record_build just wrote, through the helper build-diff's `warnings` uses: the same names.
+    warned = quality.build_warnings(
+        (r.get("unique_id"), r.get("status"), r.get("failures"))
+        for step in results
+        for r in step.get("results") or []
+    )
+    if warned:
+        print(
+            f"build {build_id} warnings: "
+            + ", ".join(f"{t} ({'?' if n is None else n})" for t, n in warned.items()),
+            file=sys.stderr,
+        )
     if not passed:
         print(
             f"build {build_id} failed its checks: its release is recorded, the served release is unchanged "

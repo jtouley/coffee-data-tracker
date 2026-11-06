@@ -230,6 +230,14 @@ the registry). There is no per-service copy.
     (24 products in /collections/latin-american-gourmet-coffee). steamshovelcoffee.com and sumerce.coffee stay
     `no_coffee` as on `main`, though their live stores sell coffee and the build lists 1 and 4: the status
     follow-up fixes both kinds of mismatch.
+- **The Python readers and the build agree on tags, or the build says so.** The build decodes HTML entities in tags
+  (`decode_html_entities_list`); `registry.py`, `enrich.py` and `verdict.py` read them raw. `int_tag_decoding_parity`
+  lists the products whose coffee/not-coffee decisions differ between the two, and the data test
+  `python_readers_agree_on_tags` warns on any (`severity='warn'`): the owner's call is that it never blocks a weekly
+  release, since the build's own decision, on decoded tags, is the one served. It isn't silent: `coffeedata build`
+  prints the count and examples (`tag parity: ...`) and a `build <id> warnings: ...` line, and `builds` records the
+  test as a `warn` node with the count (build-diff's `warnings`). No alert emails it: the pipeline's alerts fire on
+  failed executions and Scheduler errors only (RUNBOOK §6), and this adds no new channel.
 
 ## 5. Contracts (versioned and tested)
 

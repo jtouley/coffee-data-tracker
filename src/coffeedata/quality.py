@@ -19,6 +19,7 @@ import json
 import logging
 import os
 import re
+from collections.abc import Iterable
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -228,8 +229,8 @@ def coverage_claim_messages(db: Path) -> list[str]:
 
 def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
     """Products whose raw tags (what registry.py, enrich.py and verdict.py read) and decoded tags (what the build
-    reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test fails the
-    build on any): a count, then a few examples."""
+    reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test warns on
+    any, and never fails the build): a count, then a few examples."""
     import duckdb
 
     if not db.exists():
@@ -257,6 +258,26 @@ def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
     for rid, pid, title, raw, tags, differs in rows[:examples]:
         out.append(f"{rid}:{pid} {title!r}: {', '.join(differs)} differ; raw tags {raw}, decoded {tags}")
     return out
+
+
+def readable_test_name(unique_id: str) -> str:
+    """A test's readable name from its unique_id: `test.<project>.<name>`, plus `.<hash>` for a generic test
+    (e.g. `test.coffeedata.relationships_fct_shot_coffee_id__coffee_id__ref_dim_coffee_.7223529a27`), whose last
+    part is only the hash."""
+    parts = unique_id.split(".")
+    return parts[2] if len(parts) > 2 else unique_id
+
+
+def build_warnings(nodes: Iterable[tuple[str | None, str | None, int | None]]) -> dict[str, int | None]:
+    """The tests that warned in a build (severity warn: they never fail it), by readable name
+    (`readable_test_name`), with how many rows each found, from its nodes as (unique_id, status, failures).
+    `coffeedata build` passes its dbt steps' results, which record_build writes to builds as these nodes;
+    build-diff passes the recorded nodes. So both show the same names."""
+    return dict(
+        sorted(
+            (readable_test_name(uid), failures) for uid, status, failures in nodes if uid and status == "warn"
+        )
+    )
 
 
 def add_override(
@@ -504,7 +525,7 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
         return {
             r[0]: r[1:]
             for r in con.execute(
-                f"select unique_id, resource_type, checksum, status, rows from {b} "
+                f"select unique_id, resource_type, checksum, status, rows, failures from {b} "
                 "where build_id = ? and kind = 'node'",
                 [build],
             ).fetchall()
@@ -539,6 +560,8 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
         "new": new,
         "new_passed": dict(history).get(new),
         "failing": sorted(k for k, v in z.items() if v[2] in ("error", "fail")),
+        # warn-only tests that found rows, with how many (they never fail the build): the CLI's warnings line
+        "warnings": build_warnings((k, v[2], v[4]) for k, v in z.items()),
         "code": code,
         "tests": tests,
         "row_counts": row_counts,

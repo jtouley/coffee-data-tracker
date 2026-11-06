@@ -8,7 +8,8 @@ each version int_escaped_tag_inputs lists: coffee or not by the rules, excluded 
 with no verdict and with a "coffee" verdict (a "not_coffee" verdict gives no attributes either way). The prompt
 text sent to Claude differs whenever a tag is decoded, by design, so it isn't compared.
 
-The data test python_readers_agree_on_tags fails the build on any row; `coffeedata build` prints them.
+The data test python_readers_agree_on_tags warns on any row (it never fails the build); `coffeedata build` prints
+them.
 """
 
 import pyarrow as pa
