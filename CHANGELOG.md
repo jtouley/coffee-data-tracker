@@ -129,7 +129,7 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 - Builds: every "latest" pick has a total order, so the same lake builds the same tables whatever order DuckDB
   reads rows in. Ties in time are broken by the batch id (the counted batch of a roaster-week, a roaster's last ok
   fetch), by the value picked (probes, registry names, an attempt's adapter, a partial run's reason and a challenged
-  run's edge, verdict labels) or by the row's hash
+  run's edge, verdict labels: `coffee` first, so a tie never removes a product, then the label) or by the row's hash
   (enrichments), and the registry's lake sources are listed alphabetically (`string_agg` without an order gave
   different orders on different reads). `mart_dial_in` and `mart_bag` take every `best_*` value from one shot:
   the highest rated, the latest of equal ratings, then `shot_id` (before, equally rated shots gave arbitrary and

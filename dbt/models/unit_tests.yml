@@ -325,3 +325,36 @@ unit_tests:
     expect:
       rows:
         - {grain: coffee, key: "freetext:house espresso", label: House espresso, shots: 4, best_rating: 5, best_grind: 11.0, best_dose_g: 19.0, best_yield_g: 38.0, best_time_s: 30.0}
+
+  - name: verdict_tie_prefers_coffee
+    description: >-
+      Of a product's verdicts, the latest wins (P: a later not_coffee over an earlier coffee). Two stored in the same
+      second: coffee wins whatever the other label and whichever is read first (Q and R: not_coffee; S: unsure), so
+      a tie never removes a product. Verdicts for another model or definition are ignored (T).
+    model: stg_verdicts
+    overrides:
+      vars:
+        verdict_model: m
+        verdict_definition: d
+      macros:
+        # The lake's verdicts: the model reads them with lake('verdicts'), the only lake table it reads.
+        lake: >-
+          (select * from (values
+              ('P', 'coffee', 'm', 'd', timestamptz '2026-11-01 12:00:00+00'),
+              ('P', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'other', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'm', 'old', timestamptz '2026-11-02 12:00:00+00')
+          ) t(input_hash, label, model, definition, decided_at))
+    given: []
+    expect:
+      rows:
+        - {input_hash: P, label: not_coffee, model: m}
+        - {input_hash: Q, label: coffee, model: m}
+        - {input_hash: R, label: coffee, model: m}
+        - {input_hash: S, label: coffee, model: m}
