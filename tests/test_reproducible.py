@@ -26,6 +26,7 @@ pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not ins
 WEEKS = ("2026-10-19", "2026-10-26")
 VERDICT_MODEL = "claude-test-model"
 ONYX = "onyxcoffeelab.com"
+PARTIAL, EDGE = "partial.example", "edge.example"
 
 
 def _write(lake: Lake, run_date: str, results: list[ingest.Result], bodies: set[str], batch: str) -> None:
@@ -44,9 +45,9 @@ def fixture_lake(root: Path, fixture_items: dict, roasters: dict, ties: bool = T
     """Two weekly runs of the five recorded storefronts (week two: the first product of each gone, every third
     one's price up), with what a real lake also holds: probes, run manifests, registry rows from two sources, a
     failed fetch, an override, stored Claude verdicts, a Claude enrichment and a few shots. And a tie for every
-    "latest" pick the build makes: two ok batches of one roaster-week fetched in the same second, two probes in the
-    same second, two registry rows added in the same second, two verdicts and two enrichments stored in the same
-    second, two equally rated shots. Without `ties`, the same lake with none of them (where any build of it, before
+    "latest" pick the build makes: two ok batches of one roaster-week fetched in the same second, two partial and two
+    challenged fetches in the same second, two probes in the same second, two registry rows added in the same
+    second, two verdicts and two enrichments stored in the same second, two equally rated shots. Without `ties`, the same lake with none of them (where any build of it, before
     the tie-breaks or after, gives one answer)."""
     lake = Lake(str(root))
     bodies: set[str] = set()
@@ -70,6 +71,12 @@ def fixture_lake(root: Path, fixture_items: dict, roasters: dict, ties: bool = T
     if ties:
         run(lake, WEEKS[1], ONYX, [product("tie1"), product("tie2")], adapter="generic")
         probe(lake, WEEKS[1], "intelligentsia.com", status="timeout")
+        # Two partial ok fetches of one store in the same second, with different reasons, and two failed fetches
+        # of another answered by different edges' challenges (int_roaster_runs: partial_reason, challenge).
+        for reason in ("partial: page cap", "partial: deadline"):
+            run(lake, WEEKS[1], PARTIAL, [product("p1")], partial=True, error=reason)
+        for block in ({"sg_captcha": "1"}, {"cf_mitigated": "challenge"}):
+            run(lake, WEEKS[1], EDGE, None, blocks=[{"status": 403, "host": EDGE, "path": "/", **block}])
     lake.write("registry", "registry/source=overture/x.parquet", [
         {"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "overture", "roaster_id": "vividcoffee.com",
          "name": "Vivid Coffee", "state": "CA", "locations": 2},
@@ -219,6 +226,12 @@ def test_the_same_lake_builds_the_same_release(fixture_items, roasters, monkeypa
     assert one(f"select batch_id from stg_runs where {week2}") == "w1"
     assert one(f"select count(*) from dim_coffee where roaster_id = '{ONYX}' and product_id like 'tie%'") == 0
     assert one(f"select adapter from int_roaster_runs where {week2}") == "shopify"
+    # Two partial fetches, or two challenged ones, in the same second: the greater value (int_roaster_runs).
+    assert (
+        one(f"select partial_reason from int_roaster_runs where roaster_id = '{PARTIAL}'")
+        == "partial: page cap"
+    )
+    assert one(f"select challenge from int_roaster_runs where roaster_id = '{EDGE}'") == "siteground"
     # The lake's sources alphabetically after the seed list's (stg_registry), and a tie in added_at by the value.
     vivid = one("select sources from dim_roaster where roaster_id = 'vividcoffee.com'")
     assert vivid == "curated+overture+osm+overture"
