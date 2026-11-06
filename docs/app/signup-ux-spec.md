@@ -120,7 +120,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
    - The code rides in the `#` fragment, so it never reaches server logs or a `Referer`. `/reset` and `/forgot` also
      send `Referrer-Policy: no-referrer`.
 4. **Rate limits** (the `Limiter`, `accounts.py:178-243`), before any lookup:
-   - 3 requests per email per hour, keyed by the email (§5);
+   - 3 requests per email per hour, keyed by the email's HMAC (§5);
    - 10 per IP per hour;
    - 90 sends per day in total, under the provider's 100-a-day free cap.
 
@@ -149,7 +149,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 **Sign-up.** Between the username and the password, add the field **"Email, for account recovery only"**.
 - Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
 - Hint: "For resetting your password and the odd account notice. Never for signing in. Only the owner can see it."
-  Marketing is a separate checkbox, unticked by default (§7.1).
+  Marketing is a separate checkbox, ticked by default (§7.1).
 - **Recommendation: optional, but encouraged. Not required.**
   - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
     tester.
@@ -171,22 +171,35 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 
 **Setup → Account:** a "Recovery email" row.
 - It shows "{email} · verified" or "No recovery email", with **Change** and **Remove**.
-- Removing asks for a second tap and says "Email removed. The owner can still make you a reset link."
+- Removing asks for a second tap. It deletes the record's files (see Storage) and says "Email removed. The owner can
+  still make you a reset link."
 - A changed email isn't used until the new one is verified.
 
 **Existing members.** After sign-in, if there's no verified email, Today shows one dismissible `.notice`: "Add an
 email so you can reset your password yourself. [Add email] [Not now]". "Not now" sets a `nudge-email` cookie for 90
 days, and the row in Setup is always there.
 
-**Storage.** A separate `contacts` table in the users dataset, so password changes and sign-outs don't copy the email
-into every later `users` file (`accounts.py:308-328`).
-- Row (one file per change, latest wins): `user_id`, `logged_at`, `email` (trimmed, lower-cased), `verified_at`,
-  `verify_sha256`, `verify_expires`. Forgot-password looks the email up in memory, as usernames are.
-- Erased with the account: add `("contacts", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`. Logs never carry
-  the email; they carry the user id only (`privacy.html:39`).
-- **Secrets:** `RESEND_API_KEY` in Secret Manager, added to `local.secrets` (`src/terraform/provider.tf:26-28`) and
-  mounted like the rest (`cloud_run.tf:47-57`). Without it, email features are hidden and the app still starts:
-  don't add it to `missing_secrets()` (`auth.py:102-110`).
+**Storage.** Recommendation: a separate `contacts` table in the users dataset, with an encrypted email, an HMAC for
+lookup, and real erasure.
+- **Why not a column on `users`:** the users table is append-only on Hugging Face, one file per change, with
+  version history (`accounts.py:308-328`, `privacy.html:83-86`). Every later users row (a password change, a
+  sign-out everywhere) would copy the email into another file.
+- **Row** (one file per change, `contacts/{user_id}__{ts}.parquet`): `user_id`, `logged_at`, `email_hmac`,
+  `email_enc`, `verified_at`, `verify_sha256`, `verify_expires`.
+- **`email_hmac`:** HMAC-SHA256 of the normalised email, under a key derived from a new `EMAIL_KEY` secret (HKDF,
+  label "lookup"). Forgot-password finds the account with it without decrypting anything. A keyed hash, not plain
+  SHA-256, because emails are guessable (OWASP Password Storage, on peppers: [OWASP-PS][owasp-ps]).
+- **`email_enc`:** AES-256-GCM (the `cryptography` package) under an HKDF "encrypt" key from `EMAIL_KEY`, with
+  `user_id` as associated data. The owner's screen and the mail sender decrypt it in the app. Anyone reading the
+  dataset, or its history, sees only ciphertext.
+- **Erasing and changing:** add `("contacts", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`. Remove, change and
+  account deletion all delete **every** file of the record in one commit, the way `erase.py` deletes records. Then
+  `HfApi.super_squash_history` on the users dataset drops the old commits. The users dataset is private and small,
+  so that's cheap. With encryption that step is defence in depth, not the only protection. Never log an email: logs
+  carry the user id only (`privacy.html:39`).
+- **Secrets:** `EMAIL_KEY` (32 random bytes, base64) and `RESEND_API_KEY` in Secret Manager, added to `local.secrets`
+  (`src/terraform/provider.tf:26-28`), so they're mounted like the rest (`cloud_run.tf:47-57`). Without them, email
+  features are hidden. The app still starts: don't add them to `missing_secrets()` (`auth.py:102-110`).
 
 **Privacy page:** it currently promises only "your username and a hash of your password" (`privacy.html:33`), so it
 has to be updated before the email field ships (§7.4).
@@ -227,7 +240,7 @@ has to be updated before the email field ships (§7.4).
 The owner has full admin access over accounts, through the app (`/invite`, which becomes the "People" screen) and the
 CLI, but not into secrets.
 - **Sees:** every member's username, role, status (active or turned off) and shot count. Their recovery email and
-  whether it's verified. Every invite with its For note and
+  whether it's verified (decrypted in the app, for helping someone back in). Every invite with its For note and
   status (§8). The owner can also read the datasets directly, as the join page already says (`join.html:20-23`).
 - **Does:**
   - makes invite links and reset links (§4);
@@ -243,13 +256,13 @@ CLI, but not into secrets.
 
 ## 7. Consent and data use
 
-Scope here is what the owner asked for: a required terms checkbox, a separate unticked marketing checkbox, a record
-of acceptance, recommendations from logged bags, and aggregated insights for roasters later. Anything that may be
+Scope here is what the owner asked for: a required terms checkbox, a separate pre-ticked marketing checkbox, a record
+of acceptance, re-acceptance when the terms change, recommendations from logged bags, and aggregated insights for roasters later. Anything that may be
 legally required beyond that is a "confirm with counsel" line under task 0 (§13), not a feature in this spec.
 
 **Consent record.** A new `consents` table in the users dataset, one file per change, latest wins.
 - Row: `user_id`, `logged_at`, `terms_version`, `privacy_version` (each page's `LEGAL_UPDATED`, `site.py:73`; today
-  they share one value), `terms_at`, `marketing` (bool), `marketing_at`, and `source` (`signup` / `settings`).
+  they share one value), `terms_at`, `marketing` (bool), `marketing_at`, `marketing_version`, and `source` (`signup` / `settings` / `reaccept`).
 - Sends read the latest row at the time of sending. Add `("consents", "user_id", ("user_id",))` to `erase.py:28`'s
   `USERS`, so it goes with the account.
 
@@ -257,8 +270,10 @@ legally required beyond that is a "confirm with counsel" line under task 0 (§13
 on join and on owner setup.
 - A native checkbox, **unticked**, just above the button:
   `<input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">`, labelled
-  `<label for="agree">I've read and agree to the <a href="{site}/terms/">Terms</a> and <a href="{site}/privacy/">Privacy
-  Policy</a></label>`. The links open in the same tab.
+  `<label for="agree">I've read and agree to the <a href="{site}/terms/" target="_blank" rel="noopener">Terms</a> and
+  <a href="{site}/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>`. A link opens in a new tab only
+  when it's clicked. Nothing opens by itself, and ticking the box opens nothing: the links sit inside the label, so
+  their clicks don't toggle the box.
 - "Create account" stays enabled. Submitting unticked shows `<p class="ferr" id="agree-error">`: "Tick the box to
   agree to the Terms and Privacy Policy before creating your account." It sets `aria-invalid` and focuses the first
   problem, as for any field (§9).
@@ -266,12 +281,21 @@ on join and on owner setup.
   `rules.py`). The check runs before the invite is used.
 - **Recorded:** the first `consents` row is written with the account, in the same publish (§11):
   `terms_version`, `privacy_version`, `terms_at`, `source = signup`.
-- **When the terms change:** on a material change, follow counsel's advice.
+- **When the terms change:** if a member's recorded `terms_version` is older than the current `LEGAL_UPDATED`, the next
+  sign-in lands on `/agree` (checked after `sign_in` in `main.py:298-313`, and in `screen_user`, `main.py:131-136`,
+  for sessions already open).
+  - `/agree` reuses the existing page shell (`base.html`, same layout as `/reset`). It has the heading "We've updated
+    our Terms and Privacy Policy", one line with the date, the two links, and the same checkbox.
+  - Buttons: **Accept** (needs the tick, with the same error) and **Sign out**.
+  - Accept writes a new `consents` row (`source = reaccept`, with the new versions and `terms_at`) and continues to
+    `/`.
+  - Until then, writes answer 403. The phone's outbox keeps them (`app.js:61`, `Held`) and sends them after Accept.
 
-**1. Marketing checkbox (optional).** Directly under the terms checkbox, separate from it and **unticked**: "Send me
-occasional emails about new coffees and features".
-- Sign-up works either way. It's also in Setup → Account, and is only enabled once an email is entered.
-- Ticking it sets `marketing = true` with `marketing_at`. Marketing goes only to members with `marketing = true` and
+**1. Marketing checkbox (opt-out).** Directly under the terms checkbox, separate from it, and **ticked by default**:
+"Send me occasional emails about new coffees and features". The member can untick it.
+- Sign-up works either way. It's also in Setup → Account.
+- The choice is recorded at sign-up and on every change: `marketing` (true or false), `marketing_at`, and
+  `marketing_version` (the `LEGAL_UPDATED` the member saw). Marketing goes only to members with `marketing = true` and
   a verified email (§5), via Resend, from `news@send.registry.coffee`.
 - Recovery, verification and password-changed emails are separate templates and don't depend on this box.
 
@@ -290,7 +314,7 @@ bags, ratings and shots, matched against the public catalog. The privacy page li
 email collection ships, update the page and bump `LEGAL_UPDATED` (`site.py:73`):
 - Collected (`:33`): add "a recovery email address, if you add one" and "whether you agreed to the Terms and opted
   into marketing, and when".
-- Uses (`:55-62`): password resets and account notices by email; marketing email if you opt in; coffee
+- Uses (`:55-62`): password resets and account notices by email; marketing email unless you untick the box; coffee
   recommendations from the bags and shots you log; aggregated insights provided to roasters.
 - Who processes it (`:66-72`): add "**Resend:** sends the app's emails."
 - "We don't use third-party tracking or analytics" (`:79`) stays true and stays.
@@ -334,7 +358,7 @@ jakubkrehel `better-accessibility` (`forms.md` "Submit behavior", `semantics-and
 regions) and `interface-review` (every new component has its idle, loading, error, disabled and narrow states).
 Paths are in `SKILLS-INDEX.md`.
 
-**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, recovery email (optional, §5), password, then, just above the button, the required terms checkbox and the optional marketing checkbox, both unticked (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
+**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, recovery email (optional, §5), password, then, just above the button, the required terms checkbox (unticked) and the marketing checkbox (ticked by default) (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
 
 | State | What shows |
 |---|---|
@@ -483,16 +507,20 @@ it often.
   - limits: the 4th request in an hour for one email and the 11th for one IP send nothing, and the daily cap holds;
   - links use `APP` even with a forged `Host` header;
   - the verify link works once and expires after 24 h; an unverified email can't receive a reset;
-  - `delete-user` removes the `contacts` record;
+  - `contacts` rows hold no plaintext email (search the parquet bytes), and the HMAC lookup finds them;
+  - remove, change and `delete-user` leave no file of the record, and the squash is called;
   - the owner sees members' emails, and a member's pages never show anyone else's.
 - **Consent:**
   - `/api/join` and owner setup without `agree: true` give 400 `terms`; the invite stays open and no account is made;
-  - submitting unticked shows the error on the checkbox and focuses it; the Terms and Privacy links have no
-    `target`;
-  - the marketing box renders unticked, and is independent of the terms: agreeing alone stores `marketing = false`;
+  - submitting unticked shows the error on the checkbox and focuses it; both links carry `target="_blank"
+    rel="noopener"`, and ticking the box opens no tab;
+  - the marketing box renders ticked, and is independent of the terms. Unticking it stores `marketing = false`;
+    leaving it stores `true`. Both record `marketing_at` and `marketing_version`;
   - the sign-up row carries `terms_version`, `privacy_version` (equal to `LEGAL_UPDATED`) and `terms_at`;
   - marketing sends skip members with `marketing = false` or no verified email;
   - the insights job drops every cell under 11 users, with complementary suppression;
+  - after a `LEGAL_UPDATED` bump, an older member's sign-in lands on `/agree`, and writes get 403; Accept records a
+    `reaccept` row and clears the gate, and Sign out signs out;
   - `delete-user` removes the `consents` record.
 - **By hand, once:** iPhone Safari with 1Password, the Instagram app, Android Chrome, and VoiceOver through join and
   reset.
@@ -503,6 +531,8 @@ it often.
    email or consent ships before it, and the insights sale waits for its own sign-off. Confirm with counsel:
    - the privacy and terms wording (§7.4), and whether and how to tell existing members;
    - what to do on a material terms change (re-acceptance or notice);
+   - confirm the pre-checked opt-out with counsel (allowed under US CAN-SPAM; not valid consent under GDPR if EU
+     users sign up);
    - CAN-SPAM for marketing email (it requires an unsubscribe in every message, a postal address, and opt-outs
      honoured within 10 business days; [FTC][ftc-canspam]), and whether to add `List-Unsubscribe` headers;
    - whether CCPA/CPRA applies; if so, what de-identified data needs (`1798.140(m)`: a public commitment and recipient
@@ -528,14 +558,17 @@ it often.
 10. **S** Measure cold start.
 11. **M** The site's `/join/` "Brewing…" waking page, CORS on `/health`, site CSP.
 12. **S** Privacy page changes (§7.4) and `LEGAL_UPDATED`, deployed **before** 14–17. Wording after task 0.
-13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` in Secret Manager, and
+13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` and `EMAIL_KEY` in Secret Manager, and
     the `Mailer` protocol with `FakeMailer`.
-14. **M** The `contacts` table, the verify flow (`/verify`), the Setup → Account email row, and erase. Tests.
+14. **M** The `contacts` table: HMAC lookup, AES-GCM, the verify flow (`/verify`), Setup → Account email row, erase
+    and squash. Tests.
 15. **M** Email recovery: `/forgot`, `/api/forgot` with background send, rate limits, 30-minute codes, the
     password-changed notice, and the email templates. Tests.
 16. **S** The sign-up email field and nudge, and the existing-member prompt on Today.
-17. **S–M** `consents`: the required terms checkbox (sign-up and owner setup), the server `agree` check, the acceptance
-    record, and the marketing checkbox (sign-up and Setup) honoured by sends. Erase covers it. Tests.
+17. **M** `consents`: the required terms checkbox (sign-up and owner setup; links open in a new tab on click), the
+    server `agree` check, the acceptance record, the pre-ticked marketing checkbox (sign-up and Setup) with its
+    version and timestamp, honoured by sends, and the `/agree` re-acceptance screen (Accept or Sign out). Erase covers
+    it. Tests.
 18. **L** Tests: fixtures, parity, Playwright (join, invite, forgot and verify, consent screens), in-app user agents,
     slow and lost-reply servers, waking page.
 19. **S** `DESIGN.md` copy table, `RUNNING.md` cold-start numbers and email operations. Decide on `min_instances`
@@ -567,3 +600,4 @@ it often.
 [chhs]: https://kb.data.chhs.ca.gov/ddg-1/6.-justification-of-thresholds-identified
 [ccpa-140]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140
 [ccpa-120]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.120
+[owasp-ps]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
