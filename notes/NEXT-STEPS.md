@@ -266,3 +266,16 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - m4a: when the 'Make another link' confirm times out, the For box stays open over the old link.
 - 2026-11-06: #93 merged (3ad007a) and #120 merged (f7ba6e4). Owner: don't wait for confirmation when the review loop is complete. Mark the PR ready and merge it myself after a clean final review and green CI.
 - 2026-11-06: #121 merged (ceddc26): the smoke CI plus the CLAUDE.md rules. Owner action: make `smoke` a required check in branch protection.
+
+## Owner TODO for the next shell script: branch protection on main (deferred 2026-11-06)
+The session proxy can't write rulesets (HTTP 403), so the owner adds this to their script and runs it with their own gh login:
+```bash
+gh api -X POST repos/jtouley/coffee-data-tracker/rulesets --input - <<'JSON'
+{"name":"main","target":"branch","enforcement":"active",
+ "conditions":{"ref_name":{"include":["~DEFAULT_BRANCH"],"exclude":[]}},
+ "rules":[{"type":"deletion"},{"type":"non_fast_forward"},
+  {"type":"pull_request","parameters":{"required_approving_review_count":0,"dismiss_stale_reviews_on_push":false,"require_code_owner_review":false,"require_last_push_approval":false,"required_review_thread_resolution":false}},
+  {"type":"required_status_checks","parameters":{"strict_required_status_checks_policy":false,"required_status_checks":[{"context":"smoke"},{"context":"test"}]}}]}
+JSON
+```
+It restricts deletions, blocks force-push, requires a PR (0 approvals) and requires `smoke` and `test`, with no bypass list (the owner can always edit it). Later: bind the deploy WIF credential to a protected `deploy` environment (terraform PR).
