@@ -32,6 +32,7 @@ SEED_FIELDS = [
     "final_host",
     "platform",
     "last_probed",
+    "country",  # ISO 3166-1 alpha-2 (US unless a hand-checked correction says otherwise); dbt publishes US only
 ]
 
 # Hosts that are never a roaster's own storefront (full suffixes).

@@ -35,7 +35,7 @@ coffees as (
     from {{ ref('dim_coffee') }} group by roaster_id
 )
 select
-    r.roaster_id, r.roaster_name, r.city, r.state, r.locations, r.is_chain, r.opted_out, r.sources,
+    r.roaster_id, r.roaster_name, r.city, r.state, r.country, r.locations, r.is_chain, r.opted_out, r.sources,
     coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
     coalesce(g.platform, r.seed_platform) as platform,
     coalesce(cast(lp.probed_at as date), r.seed_probed) as last_probed,

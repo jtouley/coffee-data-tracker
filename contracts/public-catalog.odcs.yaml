@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.3.0
+version: 2.5.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -306,6 +306,15 @@ schema:
     description: The newest counted run is at most max_run_age_days old.
   - type: custom
     engine: dbt
+    implementation: tests/verdicts_cover_catalog.sql
+    dimension: accuracy
+    severity: error
+    description: Claude's coffee-or-not verdicts ran for the release. The build has a verdict model, and at least
+      min_verdict_share of listed coffees were decided by a verdict (about 95% expected; this week's new product
+      versions get theirs a week later). Off only for an explicitly rules-only build, which is never served
+      publicly.
+  - type: custom
+    engine: dbt
     implementation: tests/public_tables_are_facts_only.sql
     dimension: conformity
     severity: error
@@ -339,12 +348,20 @@ schema:
     description: The shares of listed coffees with origin_country, process, roast_level and price_per_100g filled
       in, and the share last seen in the run, lie above median - band_k x 1.4826 x MAD of the recent passing builds
       (the bands of build_metrics_in_band, low side only). Warns only, always.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_prices_are_usd.sql
+    dimension: conformity
+    severity: error
+    description: Every public price is one the store states in USD (or, with no currency stated, a US roaster's);
+      a price in another currency stays in the raw lake only. Every public roaster is in the US.
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
   description: >-
-    One row per published roaster from the registry: not opted out, with at least one coffee seen, and known from a
-    source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone).
+    One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and
+    known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap
+    alone). A store outside the US (a registry correction) is never published.
   synonyms:
   - synonym: roasteries
   - synonym: coffee roasters
@@ -598,6 +615,8 @@ customProperties:
   value: 6
 - property: max_run_age_days
   value: 8
+- property: min_verdict_share
+  value: 0.85
 - property: servingPolicy
   value: A release is served only when every quality rule passes; otherwise the previous release stays served.
 - property: license

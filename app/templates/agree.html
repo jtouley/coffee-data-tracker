@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "_macros.html" import agree_box, status_line, rules_json %}
+{% block title %}Updated terms · registry.coffee{% endblock %}
+{% block main %}
+  <div class="top"><a class="meta home" href="{{ site.site }}/">registry.coffee</a></div>
+  <h1 class="serif title mt8">We’ve updated our Terms and Privacy Policy</h1>
+  <p class="body">Both were updated on {{ updated }}.</p>
+  <form id="agree-form" class="fill" data-api="/api/agree" data-busy="Saving…" data-done="Thanks" novalidate>
+    {{ agree_box() }}
+    <div class="hint" id="signin-hint" data-hint role="alert"></div>
+    <div class="spacer"></div>
+    <div class="dock">
+      <button class="btn primary" type="submit">Accept</button>
+      {{ status_line() }}
+      <button class="btn text" type="button" data-signout="/api/signout">Sign out</button>
+    </div>
+  </form>
+  {{ rules_json() }}
+{% endblock %}

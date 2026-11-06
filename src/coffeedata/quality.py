@@ -8,7 +8,7 @@ customers read (RELEASE_TABLES) under releases/run_date=.../build=.../. Only a p
 marts/release.parquet. A failed build leaves the served release as it was, which is the automatic rollback;
 `rollback` serves an earlier release by hand. `build-diff` compares any two builds down to individual coffees.
 Every build also records each release table's row count and content hash (`table_hash`), so two builds of the same
-lake and code can be shown to have produced the same release (`build-hashes`, docs/ingestion/RUNBOOK.md §5.5).
+lake and code can be shown to have produced the same release (`build-hashes`, docs/ingestion/RUNBOOK.md §5.6).
 Every serve and rollback also appends a row to serving_log (which release, when, why, who, and the one it
 replaced), so the history of what customers got survives marts/release.parquet being replaced.
 Raw lake files are never touched here, and no release is ever edited.
@@ -308,6 +308,15 @@ def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]
     return claims
 
 
+def failures_table(con, test: str) -> str | None:
+    """The table where dbt stored a test's failing rows (store_failures, or `--store-failures`), quoted, or None if
+    the test didn't store any this build."""
+    schema = con.execute(
+        "select any_value(table_schema) from information_schema.tables where table_name = ?", [test]
+    ).fetchone()
+    return None if not schema or schema[0] is None else f'"{schema[0]}"."{test}"'
+
+
 def coverage_claim_messages(db: Path) -> list[str]:
     """What the coverage-claim tests found in this build (`db`), one line per claim, naming the line to update."""
     import duckdb
@@ -321,12 +330,10 @@ def coverage_claim_messages(db: Path) -> list[str]:
             ("coverage_claims_name_metrics", "select source, metric, text from {t}"),
             ("coverage_claims_match_build", "select source, metric, text, built, off_by, tolerance from {t}"),
         ):
-            schema = con.execute(
-                "select any_value(table_schema) from information_schema.tables where table_name = ?", [test]
-            ).fetchone()
-            if not schema or schema[0] is None:
+            table = failures_table(con, test)
+            if table is None:
                 continue  # the test didn't run (no claims, or the build stopped before the tests)
-            for r in con.execute(sql.format(t=f'"{schema[0]}"."{test}"')).fetchall():
+            for r in con.execute(sql.format(t=table)).fetchall():
                 if test == "coverage_claims_name_metrics":
                     out.append(
                         f"{r[0]}: coverage claim {r[2]!r} names {r[1]}, which mart_build_profile doesn't have"
@@ -340,6 +347,35 @@ def coverage_claim_messages(db: Path) -> list[str]:
     finally:
         con.close()
     return out
+
+
+def verdict_coverage_message(db: Path) -> str | None:
+    """The share of listed coffees that Claude's verdicts decided in this build (dim_coffee.classified_by), by
+    model: what verdicts_cover_catalog judges. None when dim_coffee wasn't built."""
+    import duckdb
+
+    if not db.exists():
+        return None
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        built = con.execute(
+            "select count(*) from information_schema.tables where table_name = 'dim_coffee'"
+        ).fetchone()
+        if not built or not built[0]:
+            return None
+        counts = con.execute(
+            "select count(*), count(*) filter (where classified_by = 'claude') from dim_coffee where is_listed"
+        ).fetchone()
+        listed, by_claude = counts or (0, 0)
+        models = con.execute(
+            "select verdict_model, count(*) from dim_coffee where is_listed and classified_by = 'claude'"
+            " group by 1 order by 2 desc"
+        ).fetchall()
+    finally:
+        con.close()
+    share = f"{by_claude / listed:.1%}" if listed else "n/a"
+    named = ", ".join(f"{m} {n:,}" for m, n in models) or "no verdict model"
+    return f"{by_claude:,} of {listed:,} listed coffees ({share}) decided by Claude's verdicts ({named}); the rest by the rules"
 
 
 def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:

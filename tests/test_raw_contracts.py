@@ -72,27 +72,38 @@ def test_make_contracts_refuses_a_new_column_without_a_version_bump(scratch_cont
     """The review's case: add a column, describe it, run make contracts at the same version: refused, nothing written."""
     before = {f.name: f.read_text() for f in scratch_contracts.iterdir()}
     _add_a_bodies_column(monkeypatch)
-    with pytest.raises(SystemExit, match=r"refused: raw 1\.5\.0: the interface .* --write raw <new version>"):
+    with pytest.raises(SystemExit, match=r"refused: raw 1\.6\.0: the interface .* --write raw <new version>"):
         raw_contracts.main(["--all"])
-    with pytest.raises(SystemExit, match="refused: raw 1.5.0"):
-        raw_contracts.main(["--write", "raw", "1.5.0"])
+    with pytest.raises(SystemExit, match="refused: raw 1.6.0"):
+        raw_contracts.main(["--write", "raw", "1.6.0"])
     with pytest.raises(SystemExit, match="not above the last released version"):
-        raw_contracts.main(["--write", "raw", "1.4.9"])
+        raw_contracts.main(["--write", "raw", "1.5.9"])
     assert {f.name: f.read_text() for f in scratch_contracts.iterdir()} == before
 
 
 def test_a_new_column_ships_at_a_new_version(scratch_contracts, monkeypatch):
     _add_a_bodies_column(monkeypatch)
-    raw_contracts.main(["--write", "raw", "1.6.0"])
+    raw_contracts.main(["--write", "raw", "1.7.0"])
     doc = raw_contracts.load("raw")
-    assert doc["version"] == "1.6.0" and "language" in raw_contracts.columns("raw", "bodies")
+    assert doc["version"] == "1.7.0" and "language" in raw_contracts.columns("raw", "bodies")
     released = raw_contracts.interfaces()["raw"]
-    assert list(released) == ["1.2.0", "1.3.0", "1.4.0", "1.5.0", "1.6.0"] and released[
-        "1.6.0"
+    assert list(released) == ["1.2.0", "1.3.0", "1.4.0", "1.5.0", "1.6.0", "1.7.0"] and released[
+        "1.7.0"
     ] == raw_contracts.fingerprint(doc)
-    assert released["1.5.0"] != released["1.6.0"]
-    raw_contracts.main(["--all"])  # and regenerates at 1.6.0 from then on
-    assert raw_contracts.load("raw")["version"] == "1.6.0"
+    assert released["1.6.0"] != released["1.7.0"]
+    raw_contracts.main(["--all"])  # and regenerates at 1.7.0 from then on
+    assert raw_contracts.load("raw")["version"] == "1.7.0"
+
+
+def test_raw_1_6_0_records_each_variants_currency():
+    """Each variant's currency as the store states it (WooCommerce prices.currency_code, Shopify's shop currency,
+    Squarespace priceMoney.currency, Square Online storeInfo.currency, JSON-LD priceCurrency): raw 1.6.0."""
+    doc = raw_contracts.load("raw")
+    assert doc["version"] == "1.6.0"
+    variants = next(c for c in next(t for t in doc["schema"] if t["name"] == "snapshots")["properties"]
+                    if c["name"] == "variants")  # fmt: skip
+    assert "currency: string" in variants["physicalType"]
+    assert raw_contracts.interfaces()["raw"]["1.5.0"] != raw_contracts.interfaces()["raw"]["1.6.0"]
 
 
 def test_make_contracts_regenerates_a_doc_only_change_at_the_same_version(scratch_contracts, monkeypatch):

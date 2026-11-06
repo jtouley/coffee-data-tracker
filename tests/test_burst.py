@@ -12,7 +12,7 @@ from app import accounts as accounts_mod
 from app import web
 from app.main import create_app
 from coffeedata import lake as lake_mod
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 
 from .test_app import HeaderAuth
 
@@ -113,7 +113,7 @@ def test_real_404s_still_come_from_the_app(lake):
 
 
 def test_hashing_runs_a_few_at_a_time(tmp_path, monkeypatch):
-    users = Lake(str(tmp_path / "users"), tables=("users", "invites"))
+    users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
     accts = accounts_mod.Accounts(users, "pepper-" + "p" * 16, "s" * 40, None)
     running, most, lock = 0, 0, threading.Lock()
     real = accounts_mod._hasher.verify

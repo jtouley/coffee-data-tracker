@@ -21,6 +21,24 @@ vars:
   # Claude's verdicts to use (verdict.py); empty means the rules alone. The build passes the configured ones.
   verdict_model: ""
   verdict_definition: ""
+  # verdicts_cover_catalog: with require_verdicts (what `coffeedata build` passes, unless rules only is explicitly
+  # allowed: --allow-rules-only or COFFEEDATA_ALLOW_RULES_ONLY=1), the build fails without a verdict model, or when
+  # fewer than min_verdict_share of listed coffees are classified_by claude. Off here, for dbt run by hand and the
+  # tests' synthetic lakes.
+  # Why 0.85: a listed coffee falls back to the rules for two expected reasons.
+  # (1) Lag. The build job's classify submits this week's new or changed product versions and doesn't wait, so
+  #     they get verdicts at next week's build. In release 956abd (run 2026-11-02, a week after the first full
+  #     run), 1,114 of 44,593 listed coffees (2.5%, Wilson 95% 2.4-2.6%) had a latest version first seen that run.
+  # (2) No usable verdict. On the validation set (eval/validation, pred_haiku_*), 7 of the 254 products kept as
+  #     coffee (2.8%, 1.3-5.6%) were left to the rules: 5 unsure, 2 without a verdict.
+  # So about 95% is expected, and about 92% at the upper bounds of both. 0.85 leaves 7 points under that (about
+  # 3,000 more listed coffees without a verdict, nearly 3x that week's new versions: a big discovery, stores
+  # rewriting their copy) before a legitimate release fails. A build whose verdicts never ran is near 0%, and so is
+  # the first build after verdicts are switched on until the backfill is collected (RUNBOOK, verdicts). If
+  # classify stops after verdicts have run, the share falls only by the lag each week (about 4 weeks to trip
+  # this); classify's non-zero exit and the empty-model check catch that at once.
+  require_verdicts: false
+  min_verdict_share: 0.85
   # Data quality. A roaster-week whose product count falls below suspect_drop_ratio x the median of its previous
   # 4 weeks (when that median is at least suspect_min_products) is held out of history until accepted.
   suspect_drop_ratio: 0.5
@@ -53,6 +71,10 @@ vars:
   # points, so those are left to run_ok_rate.
   min_adapter_ok_share: 0.5
   min_adapter_roasters: 20
+  # Set only by `coffeedata fetch-health` (the fetch-health check, before the merge): run_ok_rate and adapter_ok_rate
+  # count only the roasters a crawl pass has reached (run_completeness attempted), with the same thresholds. The
+  # weekly build leaves it false, so a roaster the week never reached still counts against the run.
+  attempted_only: false
   # Anomaly bands (build_metrics_in_band) on the ok shares (overall and per adapter, low side only) and the three
   # volume metrics (both sides): median +/- band_k x 1.4826 x MAD over the latest passing build of each of the last
   # band_window runs since the last accepted change, or band_min_*_halfwidth when that is wider (share: absolute;

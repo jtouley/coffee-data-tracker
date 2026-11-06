@@ -44,7 +44,11 @@ jobs:
       COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}          # e.g. hf://datasets/<you>/coffee-data
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
       COFFEEDATA_ANTHROPIC_API_KEY: ${{ secrets.COFFEEDATA_ANTHROPIC_API_KEY }}
-      COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}  # Claude model for coffee-or-not verdicts; unset = rules only
+      # Claude's coffee-or-not verdicts are required: without VERDICT_MODEL and the Anthropic key the run fails at
+      # its start (coffeedata weekly), before crawling. ALLOW_RULES_ONLY=1 is the explicit opt-out, for a fork
+      # without Claude only; a release built that way keeps about 4x the non-coffee (docs/ingestion/RUNBOOK.md).
+      COFFEEDATA_VERDICT_MODEL: ${{ vars.VERDICT_MODEL }}
+      COFFEEDATA_ALLOW_RULES_ONLY: ${{ vars.ALLOW_RULES_ONLY }}
       # Optional: facts-only public export (marketplace/README.md), e.g. hf://datasets/<you>/us-coffee-market
       # or s3://<bucket>/coffee-data/ (then also set AWS credentials as secrets).
       PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}

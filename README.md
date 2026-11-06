@@ -277,7 +277,7 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
@@ -403,6 +403,10 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - `verdicts_cover_catalog`: Claude's verdicts ran: the build has a verdict model, and at least 85% of listed
+    coffees were decided by a verdict (`dim_coffee.classified_by = 'claude'`; about 95% is expected, as this
+    week's new versions get theirs a week later). Off only for an explicit rules-only build (`--allow-rules-only`
+    or `COFFEEDATA_ALLOW_RULES_ONLY=1`; RUNBOOK §5.5);
   - `public_coffee_is_fresh`: the public catalog's newest `last_seen` is the run the build checked (an empty catalog
     is left to the volume check);
   - `public_tables_are_one_release`: every row of every public table carries this build's `release_build_id`
@@ -428,7 +432,7 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   build's row count and content hash per release table and compares them with another build's, or with its
   release files as they are now; the same lake and code always give the same hashes
   (`tests/test_reproducible.py`), so a served release can be rebuilt from raw and checked
-  (`docs/ingestion/RUNBOOK.md` §5.5). After reviewing a real change, run the weekly workflow with
+  (`docs/ingestion/RUNBOOK.md` §5.6). After reviewing a real change, run the weekly workflow with
   `accept_volume_change` (or `build --accept-volume-change`) to let it through the volume check and the bands and
   make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.

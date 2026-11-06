@@ -187,7 +187,9 @@ C never had a PR.
 | Parked-store retry | `coffeedata crawl-retry --connector X` | its parked progress | the same partition |
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
 | Post-load enrichment | `coffeedata enrich-week [--submit]` | `job_manifests` (merge done), raw rows | `enrichments`, `llm_batches` |
+| Verdicts | `coffeedata classify` (fails without a verdict model or key, unless rules only is allowed) | snapshots, bodies, `verdicts`, `verdict_batches` | `verdicts`, `verdict_batches` |
 | Build + gate, publish | `coffeedata build`, `coffeedata publish` | the lake | marts, release, `builds` |
+| Fetch-health check | `coffeedata fetch-health` (polled; section 14) | `job_manifests`, the lake, a copy of the week's partitions (fetches, run_manifests) | `job_manifests` (job `fetch-health`: the verdict and its list); exit code (systemic: emails the owner) |
 | Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (a failed build emails the owner) |
 | Secondary crawler (deferred) | `coffeedata pages` (#67, not in this branch) | refused stores | the same raw shape |
 
@@ -205,6 +207,14 @@ the registry). There is no per-service copy.
   remain for the raw shape.
 - **Enrichment is a separate job after the load.** It reads raw from the lake and picks Claude's candidates with the
   build's own rules (`products.py`, shared with `stg_products`). It runs after the merge and before the build.
+- **Verdicts are required, and their absence is loud.** Every product the rules don't exclude outright is decided
+  by Claude's stored verdict where there is one (`stg_products`, `products.decide`), and `dim_coffee` carries what
+  decided it (`classified_by`: `claude` or `rules`, and `verdict_model`). Until 2026-11 the build job had no verdict
+  model, `classify` skipped with exit 0, and every release was the rules alone. Now `classify` exits non-zero
+  without a model or key, the build's `verdicts_cover_catalog` test fails without a model or when under 85% of
+  listed coffees are `claude` (expected about 95%: this week's new versions wait a week, and `unsure` falls back to
+  the rules; the evidence is in `dbt/dbt_project.yml`), and Terraform requires `verdict_model`. Local and dev runs
+  opt out explicitly (`--allow-rules-only`, `COFFEEDATA_ALLOW_RULES_ONLY=1`). RUNBOOK §5.5.
 - **Enrichment submits to Claude only with an explicit `--submit`**, and only with credentials. Without it, it
   counts candidates and sends nothing. Sims and tests never pass it. (One sim sent two real batches before this guard
   existed; the owner let them run.)
@@ -247,9 +257,9 @@ vendored ODCS schema and checks that each producer writes exactly its contract's
 | Contract | Version | Tables / files | Producer → consumers |
 |---|---|---|---|
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
-| **manifest / control** | 1.1.0 (descriptions and quality rules) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
+| **manifest / control** | 1.2.0 (1.2.0: the `fetch-health` job and its detail; descriptions only, the interface is 1.1.0's) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check, fetch-health (and, only with re-fetch on, the crawl passes after it) |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.3.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
+| **public** | 2.5.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`; 2.5.0 adds the `verdicts_cover_catalog` rule and `min_verdict_share`, no column change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and
@@ -418,7 +428,7 @@ they are created; GCSFuse renames by copy and delete, so that is 30 days after t
 
 Why a separate prefix, not the partitions kept in place with a marker: everything that decides what is unmerged
 looks for `raw/connector=*/run_date=W/` (crawl resume and compaction, `PartitionLake.sources`, the merge's `present`,
-the post-crawl check), so a kept partition would need every one of them, and the open branches that add more, to
+the fetch-health check), so a kept partition would need every one of them, and the open branches that add more, to
 check a marker, or it is merged twice, counted twice or crawled as unfinished. Moved out of `raw/`, a merged week
 looks to all of them exactly as it did when the merge deleted it. `archive/` is not a lake table, so a publish
 never sends it to HF and dbt's globs never see it. The move is file by file (`os.replace`): GCSFuse has no
@@ -858,7 +868,143 @@ Before next week's scheduled Tuesday merge → enrich → build (PR #68's DevOps
     are freed and capped; and, if RSS still climbs with a flat Python heap, try `MALLOC_ARENA_MAX=2` (glibc keeps
     per-thread arenas that 32 worker threads can fragment).
 
-## 14. Reproducible releases
+## 14. Fetch health (fetch-health)
+
+The owner's requirement: keep Monday's crawl, and judge its fetches shortly after each pass, so we know that day
+which roasters' fetches failed, came back empty or came back far smaller than usual, and whether a platform or our
+image is failing as a whole. **It is a fetch-health check: it judges whether each fetch returned a catalog of
+about the right size, not whether the data is good.** It never looks at which products came back or what they say,
+so a fetch whose prices were wiped, whose products were swapped for others of the same count, or which was already
+short in its first week passes it (the dq-audit of 2026-11-02 found each of these in real runs: 102 bogus price
+events from wiped prices, 170 churn events at capped generic roasters, Onyx's first week at 249 of about 980). It
+ships with the check, its list and the systemic alerts on, and re-fetching the listed roasters off, behind one
+setting (below), so the week's output stays `main`'s until it is measured. Until now the only judgement was Tuesday's 06:17
+`build`, after the merge. `coffeedata fetch-health` (`fetchhealth.py`) closes that gap for fetches. It never builds a
+release, records a build or serves. It writes only its `job_manifests` rows and publishes them to the dataset, as
+every job does, so a later pass on another instance (its own staging folder) reads the same verdict; a failed
+publish is logged as a warning and never changes the verdict or its exit code.
+
+**What it runs is the gate's fetch rules.** dbt builds `run_completeness` and `stg_run_quality` (and the models they
+read) into a scratch database (`build/fetch-health/`, its own `--target-path`) and runs three of the gate's singular
+tests, with `--store-failures`, `--indirect-selection empty` and `NoNodesForSelectionCriteria` as an error:
+- `run_ok_rate` and `adapter_ok_rate`, with the var `attempted_only` (only the roasters a pass has reached: one
+  left for the resume slot is not a failure yet). Same thresholds; the weekly build never sets the var.
+- `suspect_runs_need_review`: `stg_run_quality`'s suspect rule (below half the median of the last 4 counted weeks),
+  for the checked week (`as_of_run`): a week with no ok fetch yet never lists last week's unreviewed suspects.
+
+The verdict, with no threshold of its own:
+- **Systemic** (exit non-zero, so `ingest_job_failed` emails the owner, once a week per finding: the same scope on
+  the same connectors found again by a later check is logged, not emailed): a platform below
+  `adapter_ok_rate`'s floor (scope `connector`); two or more at once (scope `image`: what they share is the image, our
+  code or its egress); the run below `run_ok_rate` with no single platform to blame (scope `run`, judged only when no
+  crawl is running). A challenge has no scope of its own (below).
+- **The list** (`repull` in the detail), per roaster, the rows a named gate rule counts as not ok, less partial
+  fetches, and only those (see "Why a roaster is listed" below): `failed`, `empty` (ok with no products, for a roaster known to have a
+  catalog: `run_completeness.catalog_ok`), `suspect`. Each entry records its rule by name (`rules`), and a challenged
+  roaster its edge (`challenge`). A systemic platform's roasters are held back (asking a platform that refuses us again
+  that evening helps nobody); an `image` holds back all. A challenged roaster is never held back. An unreached roaster and a closed store are left alone. The check itself changes no
+  output, but a re-fetch changes which batch counts for a roaster-week (`stg_run_walk`), so `is_current` and prices
+  of the re-fetched roasters' products can change, which is why re-fetching ships off. CLAUDE.md step 9, measured by
+  replay on the real runs (`eval/run_quality/README.md`): with re-fetch on, up to 346 products in a weekly run with
+  history (2026-11-02, 11 roasters), an upper bound since a re-fetch can't be simulated offline. Off, as shipped: 0.
+- A dbt error (a model or test that errored, was skipped or didn't run), or a test whose status and stored failing
+  rows disagree (failing with none: never evaluated), is **no verdict**, not a failed fetch: the job fails and says
+  so.
+
+**Main's fetch states, each mapped on purpose.** `run_completeness` carries them (`partial`, `partial_reason`,
+`quarantined`, `challenge`, from `int_roaster_runs` and `stg_fetches`):
+
+| State on `main` | What the gate does with it | What the check does |
+|---|---|---|
+| `partial`: an ok fetch that read only part of the catalog (stopped by the deadline, a page block, a total it couldn't reach; its reason in `fetches.error`) | counts as ok when it has products; `stg_run_walk` never makes it suspect or puts it in a baseline | **not a failure.** Listed apart (`partial`, with its reason), never a reason on the list, not even with 0 products (which `run_ok_rate` counts as not ok), never re-fetched by the check (a partial fetch isn't done, so the week's own resume passes read it again), never held back or systemic. Counted per connector (`by_connector.partial`). |
+| `crashed` (quarantined by crashguard after crashing two attempts of its crawl) | left out of both ok rates (not `has_catalog`) | one store's problem with our crawler, not the platform's: listed apart (`quarantined`), never re-fetched (it is quarantined for the week), never systemic. |
+| a challenge: an edge's anti-bot page instead of the catalog, a 202 among them (`stg_fetches.challenge` names the edge only when a recorded block does: `siteground` from the `sg-captcha` header recorded in `fetches.blocks` since raw 1.4.0, `cloudflare` from `cf-mitigated`; a bare 202 names none) | a failed fetch, counted by both ok rates | **An ordinary failed fetch** (the owner's decision, 2026-11-04), retried by the week's later passes: `failed` on the list, the edge named when known (`challenge`), never held back, counted in `by_connector.challenged`. No systemic scope and no threshold of its own: a platform it fails as a whole is `adapter_ok_rate`'s `connector` finding, like any failure. Persistent blocking is a separate follow-up (#110). |
+| a refusal past the 5-minute wait cap (`http.MAX_STORE_WAIT`: a 429, 430 or 503, or a 5xx's long Retry-After, asked again no later than 5 minutes on, in the pass's next deferred round) | an error fetch, counted by both ok rates | `failed`, like any failure: a platform rate-limiting most of its stores is a `connector` finding (2026-10-28's Shopify 429s). Every later `crawl` pass of the week asks it again anyway. The cap also keeps a pass inside its deadline, so the 240-minute rule for a dead attempt (below) still holds. |
+
+**How it reads unmerged output.** dbt's `lake()` globs never see `raw/connector=*/run_date=W/`. The check copies each
+connector's compacted file and checkpoints (fetches and run_manifests only: every judged column comes from them and
+earlier weeks) into `build/fetch-health/overlay/`, with every table's schema file, and passes it as one more entry of
+`lake_roots`. Copies, not links: a crawl that starts meanwhile may compact its partition. Checkpoints are copied
+before the compacted file, so a compaction in between duplicates rows (harmless: the judged columns are aggregates or
+the latest batch) instead of losing them. Slice sub-partitions (confirmation arms) are never copied.
+
+**How it's triggered: its own job, polled.** `fetch-health` is a Cloud Run job (8Gi, default egress, `retries = 0`: a
+retry would find the check done and exit 0, hiding the alert), started every 20 minutes over Monday 10:07 to Tuesday
+02:47 (one Scheduler entry, `7,27,47 0-2,10-23 * * 1,2`, whose other hours find nothing to judge). A poll with no
+crawl attempt ended since the last check (by attempt id, recorded in the check's detail) exits in seconds. Otherwise
+it judges every connector whose attempt has ended (`done`, `failed` or `deadline`) and leaves out one still running
+(`running` in the detail), so each connector is judged within 20 minutes of its pass ending, and the run as a whole
+once all have. An attempt with only a running row died, and counts as ended, once a later attempt of the same job and
+connector has started (Cloud Run's retry, or the next slot), or once it is older than the jobs' 240-minute limit.
+A poll that finds another check still running exits at once, so two overlapping checks never alert twice. A check's
+own running row counts as dead 30 minutes after it started (`fetchhealth.CHECK_LIMIT`: a check takes minutes, its dbt
+step about 70 s on the whole lake, and 30 minutes is also over the 20-minute poll interval), or once a later check has
+started, so a killed check holds back one poll, not four hours. A `crawl --only` (its start row's detail says `only`)
+or an arm is never a later attempt that marks a pass dead. A failed check (no verdict) runs again when another crawl
+attempt ends, or with `--force`.
+Rejected:
+- *At the end of each crawl job's command*: the check builds `dim_coffee` (the classifier) like the build, which
+  runs at 8Gi, inside crawl jobs mostly sized 2Gi with about 15 minutes left of their 240; Shopify's would read the lake
+  through the NAT; its exit code would either fail the crawl execution (and, with the per-job retries of section
+  7.1, re-run the crawl against a platform that is refusing us) or be swallowed, losing the alert.
+- *One fixed slot after each pass's time limit* (13:22, 19:22): up to four hours late for a connector that finishes
+  early, and it would mis-time any pass added later. Polling follows `job_manifests`, whatever the schedule.
+
+**Why a roaster is listed.** Only when a named rule of the gate says its fetch was not ok: one of the gate's own dbt
+tests, run by the check (`fetchhealth.GATE_TESTS`), never an ad hoc condition in Python. `fetchhealth.RULES` maps
+each reason to its rule, and each entry records the rule (`rules`). All three judge the fetch, not the data in it:
+
+| Reason | Rule (dbt test) | The rows |
+|---|---|---|
+| `failed` | `run_ok_rate` | the not-ok rows of its population: has a catalog, attempted, fetch failed (also counted by `adapter_ok_rate`); a challenged one names its edge |
+| `empty` | `run_ok_rate` | the same population: the fetch succeeded with no products for a roaster known to have a catalog, less partial fetches (a partial one with 0 products is listed under `partial`) |
+| `suspect` | `suspect_runs_need_review` | the test's failing rows (`stg_run_quality`: below half the median of the last 4 counted weeks) |
+
+Systemic findings name their rule the same way (`adapter_ok_rate` for `connector` and `image`, `run_ok_rate`). A new reason needs a gate rule first (a dbt test the build runs too), then an entry
+in `RULES`; `test_every_repull_reason_is_a_named_gate_rule` holds the mapping to the tests, and an entry whose reason
+isn't in `RULES` is never re-fetched. A check of the data itself (prices, content, duplicates) would be a separate
+check with its own rules and its own evaluation, not a new reason here.
+
+**Re-fetching is off.** One setting, the env var `COFFEEDATA_DQ_REFETCH` (`fetchhealth.REFETCH_ENV`), unset by
+default and set nowhere in `ingestion.tf`, read by `crawl` and `crawl-retry` (`fetchhealth.refetch_enabled`: `1`,
+`true`, `yes` or `on`). Off, neither pass reads the list at all, passes no `refetch` to `ingest.run`, and fetches
+exactly what it would on `main`: the week's output is `main`'s
+(`test_with_refetch_off_crawl_and_crawl_retry_ignore_the_repull_list`). The list is still written, in the
+`fetch-health` row's detail, for the owner to read. **Turning it on requires CLAUDE.md's evaluation first**
+(`eval/run_quality/README.md`): it changes how the batch that counts is chosen, and up to 346 products a week, over
+step 9's 50, so steps 2 to 7 apply (a split grouped by roaster, labels, `main` against re-fetch on, on a sealed test
+set). Its running total there is 0 while it is off.
+
+**How a re-fetch happens, with re-fetch on.** Every later crawl pass of the week (`crawl` for its resume and third
+slots, `crawl-retry`) adds to its work the `empty` and `suspect` roasters of its connector on the latest check that
+judged that connector, less any fetched since that check and any `select_states` would no longer crawl (opted out,
+no platform). A re-fetch reads the whole catalog: it gets no known product count, since its latest complete ok fetch
+is the suspect one, and a Shopify short page would otherwise end the re-fetch at the same truncation. Its lake reads
+go through `retry_transient`, and if they still fail the pass logs it and goes on without them. So a roaster listed
+after the 09:17 pass is asked again at 15:17, and one still listed after the resume at 21:47. `failed` roasters are
+on the list for the owner, but no hook is needed: with no ok fetch, every `crawl` pass asks them again anyway, and
+`crawl-retry` deliberately doesn't (section 7.1: a store that refused all day isn't re-asked in the evening). Before
+this, a crawl or resume skipped any roaster with an ok fetch that week, so an empty or short week could only be
+neutralised with `override --action reject`, one roaster-week at a time. A re-fetch is a new batch of the same week;
+`stg_run_walk` counts the week's newest successful batch (a complete one over a partial one), so a good re-fetch
+replaces a short one in `stg_runs`, `is_current` and the release, and a failed re-fetch changes nothing. An owner's
+override still wins: `use_batch` pins its batch and `reject` drops the week whatever was re-fetched
+(`test_a_finished_pass_is_judged_with_the_gates_rules_and_lists_what_to_fetch_again` checks the newer batch counts).
+
+**What it doesn't run, and why.** The catalog bands (`build_metrics_in_band`, and PR #82's
+`fill_and_freshness_in_band`), `catalog_volume_vs_last_build`, the coverage claims and the public-table tests judge a
+built catalog and release against recorded passing builds of complete weeks; mid-week, before classification and the
+merge, they would compare half a week with whole ones. They stay in Tuesday's build. `run_is_complete` and
+`latest_run_is_fresh` are about the finished week. PR #82's `run_manifest_mode_values` (a lake-level test on
+`run_manifests.mode`, which `run_completeness` keys on) belongs in `GATE_TESTS` (#82 has merged; a follow-up).
+
+Replayed on the three real runs in a local copy of the lake (counts only): 2026-10-26, no systemic problem and 67
+listed (all `failed`; 58 of them Square Online, the 71.7% week); 2026-10-27 (a 44-roaster retry run), nothing;
+2026-10-28, the mass Shopify 429s: `connector` shopify (14.1% of 1,062), Shopify's 912 listed roasters held back, 46
+others listed (44 failed, 1 empty, 1 suspect). The dbt step took about 70 s on that lake. Those replays predate the
+`challenge` and `partial` mapping; the 2026-11-02 replay with it is in `eval/run_quality/README.md`.
+
+## 15. Reproducible releases
 
 A release is reproducible when the same raw lake, stored verdicts and code build the same tables. Three tiers check
 it, cheapest first: the cheap check runs on every change, the expensive one on demand or on a schedule.
@@ -881,7 +1027,7 @@ it, cheapest first: the cheap check runs on every change, the expensive one on d
    (`inputs`: run date, git sha, package versions, verdict model). It compares them with another build's, or
    re-hashes the release files in the lake, and exits 1 on a difference. The `builds` table has no contract, and
    the new rows use its existing columns, so no contract changes.
-3. **On demand** (RUNBOOK §5.5): rebuild a served release from the dataset revision that published its record, with
+3. **On demand** (RUNBOOK §5.6): rebuild a served release from the dataset revision that published its record, with
    its code (the commit, or the image the build job ran), into a local copy. Then compare its hashes with the
    original's. Do it after a change to how the build decides, monthly, or in an investigation.
 
