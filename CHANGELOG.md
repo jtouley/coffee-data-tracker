@@ -70,8 +70,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1�
   `coffeedata build-hashes [ID] [--against ID] [--verify]` prints them, compares two builds' and re-hashes a
   release's files, exiting 1 on a difference. `tests/test_reproducible.py` builds a fixture lake twice through
   `coffeedata build`, the second time with every file's rows and every folder's files in reverse order, and
-  compares every model table row for row. `docs/ingestion/RUNBOOK.md` §5.6 says how to rebuild a served release
-  from raw at its commit and compare its hashes.
+  compares every model table row for row; the second build runs in another time zone, and dbt's session is now
+  pinned to UTC (`dbt/profiles.yml`), as production already ran. `docs/ingestion/RUNBOOK.md` §5.6 says how to
+  rebuild a served release from raw at its commit and compare its hashes.
 
 ### Changed
 

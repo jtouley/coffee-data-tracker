@@ -953,14 +953,17 @@ build, so leave them out:
 ```sh
 export V=/tmp/verify-$BUILD && mkdir -p $V
 uv run hf download jtouley/coffee-data --repo-type dataset --revision $REV --local-dir $V/lake \
-  --exclude 'releases/*' 'marts/*'
+  --exclude 'releases/*' --exclude 'marts/*'
 ```
+
+Give `--exclude` once per pattern: a second pattern after one flag is read as a file to download, and the download
+fails.
 
 **4. Rebuild with the build's code**, on the local copy only. Unset `HF_TOKEN` first, so nothing can reach the
 dataset. Don't run `classify`: the stored verdicts are part of the input, and asking Claude again would change them.
 - `git_sha` set (an Actions build): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
   ```sh
-  env -u HF_TOKEN COFFEEDATA_LAKE=$V/lake COFFEEDATA_VERDICT_MODEL=<inputs.dbt_vars.verdict_model> \
+  env -u HF_TOKEN TZ=UTC COFFEEDATA_LAKE=$V/lake COFFEEDATA_VERDICT_MODEL=<inputs.dbt_vars.verdict_model> \
     uv run coffeedata build --run-date $RUN_DATE --db $V/coffee.duckdb
   ```
 - A Cloud Run build: run the same image, with the copy mounted:
@@ -969,6 +972,10 @@ dataset. Don't run `classify`: the stored verdicts are part of the input, and as
   docker run --rm -v $V:/verify -e COFFEEDATA_LAKE=/verify/lake -e COFFEEDATA_VERDICT_MODEL=<verdict model> \
     <image from step 1> build --run-date $RUN_DATE --db /verify/coffee.duckdb
   ```
+
+Builds run in UTC: `dbt/profiles.yml` pins it, and Cloud Run and Actions run in UTC anyway. `TZ=UTC` above does the
+same for a commit from before the pin. In any other zone, a date cast from a timestamp, or a tie-break over a row's
+text, can come out differently.
 
 The rebuild of a release more than 8 days old ends with "failed its checks". That is expected: `latest_run_is_fresh`
 is measured against today, and the checks never change a table. Passing or not, the rebuild records its own hashes

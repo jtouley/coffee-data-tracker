@@ -27,6 +27,7 @@ WEEKS = ("2026-10-19", "2026-10-26")
 VERDICT_MODEL = "claude-test-model"
 ONYX = "onyxcoffeelab.com"
 PARTIAL, EDGE = "partial.example", "edge.example"
+GB = "blacksheepcoffee.co.uk"  # in the seed list, country GB
 
 
 def _write(lake: Lake, run_date: str, results: list[ingest.Result], bodies: set[str], batch: str) -> None:
@@ -45,7 +46,7 @@ def fixture_lake(root: Path, fixture_items: dict, roasters: dict, ties: bool = T
     """Two weekly runs of the five recorded storefronts (week two: the first product of each gone, every third
     one's price up), with what a real lake also holds: probes, run manifests, registry rows from two sources, a
     failed fetch, an override, stored Claude verdicts, a Claude enrichment and a few shots. And a tie for every
-    "latest" pick the build makes: two ok batches of one roaster-week fetched in the same second, two partial and two
+    "latest" pick the build makes (and, from #107, a bag priced in CAD and a roaster outside the US): two ok batches of one roaster-week fetched in the same second, two partial and two
     challenged fetches in the same second, two probes in the same second, two registry rows added in the same
     second, two verdicts and two enrichments stored in the same second, two equally rated shots. Without `ties`, the same lake with none of them (where any build of it, before
     the tie-breaks or after, gives one answer)."""
@@ -60,10 +61,16 @@ def fixture_lake(root: Path, fixture_items: dict, roasters: dict, ties: bool = T
                                                       for v in i.variants]}) if n % 3 == 0 else i
                     for n, i in enumerate(items[1:])
                 ]  # fmt: skip
+                if rid == next(iter(fixture_items)):  # one US bag states another currency in week two
+                    items = [items[0].model_copy(update={"variants": [
+                        v.model_copy(update={"currency": "CAD"}) for v in items[0].variants]}), *items[1:]]  # fmt: skip
             results.append(ingest.Result(roasters[rid], at(d), items))
             probe(lake, d, rid, platform=roasters[rid].platform)
         _write(lake, d, results, bodies, f"w{w}")
         run(lake, d, "down.example", None)  # a store whose fetch failed both weeks
+        gb = product("gb1", 12.0 + w)  # a roaster outside the US, priced in pounds (never published)
+        gb["variants"][0]["currency"] = "GBP"
+        run(lake, d, GB, [gb])
         manifest(lake, d, [*fixture_items, "down.example"])
     # Ties. Another ok batch of Onyx's week two in the same second as w1 (fetched_at at(WEEKS[1])), with other
     # products and another adapter: which batch counts decides Onyx's catalog. A second probe of Intelligentsia in
@@ -186,7 +193,10 @@ def test_the_same_lake_builds_the_same_release(fixture_items, roasters, monkeypa
     fixture_lake(first, fixture_items, roasters)
     reversed_copy(first, second)
     a_id = build(monkeypatch, first, tmp_path / "a.duckdb")
+    # The second build also runs in another time zone, as a rebuild on someone's laptop does (RUNBOOK §5.6).
+    monkeypatch.setenv("TZ", "Asia/Tokyo")
     z_id = build(monkeypatch, second, tmp_path / "z.duckdb")
+    monkeypatch.delenv("TZ")
     assert a_id != z_id
 
     con = duckdb.connect(str(tmp_path / "a.duckdb"), read_only=True)
@@ -244,6 +254,18 @@ def test_the_same_lake_builds_the_same_release(fixture_items, roasters, monkeypa
     assert labels == [("coffee", 2), ("unsure", 1)]
     # Two enrichments in the same second: one of them, always the same (both builds agree above).
     assert one("select count(*) from dim_coffee where enrichment_method = 'llm'") == 1
+    # Prices in another currency (stg_snapshots.is_usd): the CAD bag is in the marts but its week-two price is no
+    # price change, and the GB roaster's coffee is in dim_coffee but in no public table.
+    cad = one("select coffee_id from stg_snapshots, unnest(variants) t(v) where v.currency = 'CAD' limit 1")
+    assert one("select count(*) from stg_snapshots, unnest(variants) t(v) where not v.is_usd") >= 3
+    assert one(f"select count(*) from fct_price_event where coffee_id = '{cad}' and event = 'price'") == 0
+    assert (
+        one(f"select count(*) from public_price_event where coffee_id = '{cad}' and run_date = '{WEEKS[1]}'")
+        == 0
+    )
+    assert one(f"select roaster_country from dim_coffee where roaster_id = '{GB}'") == "GB"
+    assert one(f"select count(*) from public_coffee where roaster_id = '{GB}'") == 0
+    assert one(f"select count(*) from public_roaster where roaster_id = '{GB}'") == 0
     # The best recipe is the latest of the equally top-rated shots (s2), and the label the latest shot's spelling (s3).
     dial = con.execute(
         "select best_grind, best_rating, label, shots from mart_dial_in where grain = 'coffee'"

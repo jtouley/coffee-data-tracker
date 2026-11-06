@@ -1015,7 +1015,10 @@ it, cheapest first: the cheap check runs on every change, the expensive one on d
    rows, and every folder's files, in reverse order. Every model table is compared row for row (`except all` both
    ways), with only `release_build_id` left out (`quality.PER_BUILD_COLUMNS`). The lake holds a tie for every
    "latest" pick on purpose. Reading in another order is what exposes an order-dependent result, because two builds
-   in the same order usually agree by luck.
+   in the same order usually agree by luck. The second build also runs in another time zone (Asia/Tokyo). dbt's
+   session is pinned to UTC (`dbt/profiles.yml`); without the pin, `stg_enrichments`' tie-break and every timestamp
+   cast to a date followed the machine's zone, and a rebuild on a laptop didn't match. The lake also holds a bag
+   priced in CAD and a roaster outside the US, so #107's USD-only rules are built both times too.
 2. **Every build** (`quality.record_build`): one `builds` row per release table, of kind `table_hash`, with its row
    count (`rows`), its content hash (`checksum`) and the hash method (`payload`, `row-md5-sum-v1`). Each row is
    encoded as DuckDB's JSON of its columns, in name order, without the per-build ones and with timestamps in UTC.
