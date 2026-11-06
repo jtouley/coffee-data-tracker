@@ -1003,38 +1003,370 @@ function equipment(form) {
   retire?.addEventListener("click", () => confirmTap(retire, () => save({ retired: true }))); // it leaves the pickers
 }
 
+// --- The sign-up rules --------------------------------------------------------------------------------
+// The same rules and words as the server (app/rules.py), from the page's JSON block, so a verdict here is the
+// server's verdict (tests/test_rules.py holds the two to that). Each check returns every failing rule.
+
+const RULES = (() => {
+  try {
+    return JSON.parse(document.getElementById("rules")?.textContent || "null");
+  } catch {
+    return null;
+  }
+})();
+const COMMON = new Set(RULES?.common || []);
+const points = (s) => [...s].length; // code points, as Python's len()
+
+function ruleError(rule, message = null) {
+  return { field: RULES.rules[rule].field, rule, message: message || RULES.rules[rule].message };
+}
+
+function cleanUsername(name) {
+  return name.normalize("NFC").trim().toLowerCase();
+}
+
+function usernameSuggestion(name) {
+  if (!name.includes("@")) return null;
+  const s = cleanUsername(name).split("@")[0].replace(new RegExp(`[^${RULES.username.chars}]`, "gu"), "").slice(0, RULES.username.max);
+  return points(s) >= RULES.username.min ? s : null;
+}
+
+function checkUsername(name) {
+  const u = cleanUsername(name);
+  const out = [];
+  if (u.includes("@")) {
+    const s = usernameSuggestion(u);
+    out.push(ruleError("u.email", s ? RULES.suggest.replace("{suggestion}", s) : null));
+  }
+  const n = points(u);
+  if (n < RULES.username.min || n > RULES.username.max) out.push(ruleError("u.length"));
+  const allowed = new RegExp(`^[${RULES.username.chars}]$`, "u");
+  if ([...u].some((c) => !allowed.test(c))) out.push(ruleError("u.chars"));
+  return out;
+}
+
+function checkPassword(password, username = "") {
+  const pw = password.normalize("NFC");
+  const name = cleanUsername(username);
+  const out = [];
+  const n = points(pw);
+  if (n < RULES.password.min) out.push(ruleError("p.length"));
+  else if (n > RULES.password.max) out.push(ruleError("p.length", RULES.too_long));
+  const folded = pw.toLowerCase();
+  if (COMMON.has(folded)) out.push(ruleError("p.common"));
+  if (name && folded.includes(name)) out.push(ruleError("p.username"));
+  if (new Set([...pw]).size < RULES.password.distinct) out.push(ruleError("p.variety"));
+  return out;
+}
+
+// --- Forms: errors under their fields, busy and slow states ---------------------------------------------
+
+const UNREACHABLE = "Couldn’t reach the app. Nothing you typed is lost. Try again in a moment.";
+const OUR_SIDE = "Something went wrong on our side. Try again.";
+const SLOW = "Still working. The app may be waking up, which can take a minute or two. Keep this page open.";
+const SLOWER = "Still working. Saving can take a little longer when the app has just woken up.";
+const SLOW_SAVE = "Still saving. This takes a few seconds when the app has just woken up.";
+const RETRY_WAITS = [2000, 5000, 10000]; // a lost reply is sent again, the same body, this far apart
+const sleep = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
+
+// The form-level line (role="alert"): emptied, then filled a moment later, so the same words twice are read again.
+function say(root, text) {
+  const el = root.querySelector("[data-hint]");
+  if (!el) return;
+  el.textContent = "";
+  if (text) setTimeout(() => { el.textContent = text; }, 100);
+}
+
+// One field's error line, under it, and aria-invalid on the field. A hint that doubles as the error line (the
+// invite code's) goes back to its own words when cleared. "Already used" links "sign in" to the sign-in screen.
+function setError(form, field, message = "", rule = null, mark = true) {
+  const slot = form.querySelector(`[data-error-for="${field}"]`);
+  const input = form.querySelector(`[name="${field}"]`);
+  if (input) {
+    if (message && mark) input.setAttribute("aria-invalid", "true");
+    else input.removeAttribute("aria-invalid");
+  }
+  if (!slot) return Boolean(input && message);
+  if (slot.dataset.idle === undefined) slot.dataset.idle = slot.textContent;
+  const text = message || slot.dataset.idle;
+  const [before, after] = text.split("sign in");
+  if (rule === "c.used" && after !== undefined) {
+    const a = document.createElement("a");
+    a.href = "/signin";
+    a.textContent = "sign in";
+    slot.replaceChildren(before, a, after);
+  } else {
+    slot.textContent = text;
+  }
+  return true;
+}
+
+function clearErrors(form) {
+  for (const slot of form.querySelectorAll("[data-error-for]")) setError(form, slot.dataset.errorFor);
+  for (const el of form.querySelectorAll("[aria-invalid]")) el.removeAttribute("aria-invalid");
+}
+
+// Field errors in place; anything that belongs to no field in the form's line. Focus goes to the first field that
+// failed, in screen order, so the keyboard doesn't hide the message.
+function showErrors(form, errors, text = "") {
+  let loose = text;
+  for (const e of errors) {
+    const slot = form.querySelector(`[data-error-for="${e.field}"]`);
+    if (slot && slot.dataset.shown !== "1") {
+      setError(form, e.field, e.message, e.rule);
+      slot.dataset.shown = "1";
+    } else if (!slot && !setError(form, e.field, e.message)) {
+      loose = loose || e.message;
+    }
+  }
+  for (const slot of form.querySelectorAll("[data-shown]")) delete slot.dataset.shown;
+  say(form, loose);
+  form.querySelector('[aria-invalid="true"]')?.focus();
+}
+
+// Leaving a field shows its errors, which moves what's below it. When the field was left by a tap (on the terms box,
+// or the button), that waits until the tap is over, so the layout doesn't shift under the finger and the tap lands.
+let pointerDown = false;
+let afterTap = [];
+addEventListener("pointerdown", () => { pointerDown = true; }, true);
+addEventListener("pointerup", () => {
+  pointerDown = false;
+  const run = afterTap;
+  afterTap = [];
+  setTimeout(() => { for (const fn of run) fn(); }, 0); // after the click this pointerup ends
+}, true);
+const whenTapEnds = (fn) => (pointerDown ? afterTap.push(fn) : fn());
+
+// The ✓/✗ list under a field and its error line. While typing, rules only turn met (and the others wait until the
+// length is met); a failed rule turns red when the field is left or the form sent (validate on blur). Nothing is
+// announced per keystroke: the list and the error are read with the field (aria-describedby).
+function liveRules(form) {
+  const user = form.querySelector('[data-check="username"]');
+  const pass = form.querySelector('[data-check="password"]');
+  if (!RULES || (!user && !pass)) return null;
+  const strict = new Set();
+  const nameHint = form.querySelector("[data-username-hint]");
+  const suggest = form.querySelector("[data-suggest]");
+  const failed = (input) => (input === user ? checkUsername(input.value) : checkPassword(input.value, user ? user.value : form.dataset.username || ""));
+  const paint = (input) => {
+    const fails = failed(input);
+    const ids = new Set(fails.map((e) => e.rule));
+    const lengthRule = input === user ? "u.length" : "p.length";
+    const lengthMet = input.value !== "" && !ids.has(lengthRule);
+    const loud = strict.has(input);
+    for (const li of document.querySelectorAll(`#${input.id}-rules li`)) {
+      const rule = li.dataset.rule;
+      const state = ids.has(rule) ? (loud ? "unmet" : "") : input.value && (rule === lengthRule || lengthMet) ? "met" : "";
+      li.dataset.state = state;
+      li.querySelector("[data-said]").textContent = state === "met" ? ", met" : state === "unmet" ? ", not met" : "";
+    }
+    // "@" is answered at once, with a one-tap fix; the rest waits for blur.
+    const email = fails.find((e) => e.rule === "u.email");
+    if (loud) setError(form, input.name, fails[0]?.message || "");
+    else setError(form, input.name, email ? email.message : "", null, false);
+    if (loud && !fails.length) input.removeAttribute("aria-invalid");
+    if (input === user) {
+      const s = email && usernameSuggestion(input.value);
+      suggest.hidden = !s;
+      if (s) suggest.querySelector("button").textContent = `Use ${s}`;
+      const lower = cleanUsername(input.value);
+      nameHint.textContent = lower !== input.value.trim() && !fails.length ? `You’ll sign in as ${lower}.` : "You’ll sign in with it. Not your email.";
+    }
+    return fails;
+  };
+  for (const input of [user, pass].filter(Boolean)) {
+    input.addEventListener("input", () => { paint(input); if (input === user && pass) paint(pass); });
+    input.addEventListener("blur", () => whenTapEnds(() => { if (input.value) strict.add(input); paint(input); }));
+  }
+  suggest?.querySelector("button").addEventListener("click", () => {
+    user.value = usernameSuggestion(user.value) || user.value;
+    strict.add(user);
+    paint(user);
+    if (pass) paint(pass);
+    user.focus();
+  });
+  return {
+    check() {
+      const out = [];
+      for (const input of [user, pass].filter(Boolean)) {
+        strict.add(input);
+        out.push(...paint(input).map((e) => ({ ...e, field: input.name })));
+      }
+      return out;
+    },
+  };
+}
+
+// Busy: the button says what's happening and ignores more taps (aria-disabled, so focus stays on it), the fields
+// can't change underneath the request, and a line under the button explains a wait past 4 s.
+function busyState(form, submit) {
+  const idle = submit.textContent;
+  const status = form.querySelector("[data-status]");
+  let timers = [];
+  let locked = [];
+  return {
+    get on() { return submit.getAttribute("aria-disabled") === "true"; },
+    start(text) {
+      submit.setAttribute("aria-disabled", "true");
+      submit.textContent = text;
+      locked = [...form.querySelectorAll("input:not([type=checkbox]):not([readonly])")];
+      for (const el of locked) el.readOnly = true;
+      timers = [setTimeout(() => { if (status) status.textContent = SLOW; }, 4000),
+        setTimeout(() => { if (status) status.textContent = SLOWER; }, 45000)];
+    },
+    stop(text = idle) {
+      for (const t of timers) clearTimeout(t);
+      if (status) status.textContent = "";
+      submit.removeAttribute("aria-disabled");
+      submit.textContent = text;
+      for (const el of locked) el.readOnly = false;
+      locked = [];
+    },
+  };
+}
+
+// The form's body: each named input's value, and a checkbox's tick.
+function formBody(form) {
+  const body = {};
+  for (const el of form.querySelectorAll("input[name]")) body[el.name] = el.type === "checkbox" ? el.checked : el.value;
+  return body;
+}
+
+// Join is idempotent on the server, so a reply that never arrived (a timeout, a dropped connection, a 502/503/504
+// while the app wakes) is sent again, the identical body, up to three times.
+async function postRetrying(url, body) {
+  for (let i = 0; ; i++) {
+    try {
+      return await post(url, body);
+    } catch (err) {
+      if (!(err instanceof Unreachable) || i >= RETRY_WAITS.length) throw err;
+      await sleep(RETRY_WAITS[i]);
+    }
+  }
+}
+
+// Sign in, owner setup, join, reset, accepting new terms and changing the password: one pattern. `done` runs on
+// success; by default the page moves on to Today.
+function accountForm(form, done = null) {
+  const submit = form.querySelector('[type="submit"]');
+  const busy = busyState(form, submit);
+  const live = liveRules(form);
+  // A tick can't change while the request is out.
+  form.addEventListener("click", (e) => { if (busy.on && e.target.matches?.("input[type=checkbox]")) e.preventDefault(); });
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (busy.on) return; // repeat taps do nothing
+    clearErrors(form);
+    const errors = live ? live.check() : [];
+    let empty = false;
+    for (const el of form.querySelectorAll("input[required]")) {
+      if (el.type === "checkbox") {
+        if (!el.checked) errors.push(ruleError("terms"));
+      } else if (!el.dataset.check && !el.value.trim()) {
+        errors.push({ field: el.name, message: "" });
+        empty = true;
+      }
+    }
+    if (errors.length) {
+      for (const err of errors.filter((x) => !x.message)) form.querySelector(`[name="${err.field}"]`)?.setAttribute("aria-invalid", "true");
+      // Errors are shown in the order of the fields on screen.
+      const order = [...form.querySelectorAll("input[name]")].map((el) => el.name);
+      errors.sort((a, b) => order.indexOf(a.field) - order.indexOf(b.field));
+      return showErrors(form, errors.filter((err) => err.message), empty ? "Fill in every field." : "");
+    }
+    const body = formBody(form);
+    busy.start(form.dataset.busy || "Saving…");
+    try {
+      const url = form.dataset.api || "/api/signin";
+      const reply = await (form.dataset.retry !== undefined ? postRetrying(url, body) : post(url, body));
+      busy.stop(form.dataset.done || submit.textContent);
+      submit.setAttribute("aria-disabled", "true"); // nothing more to send from this page
+      if (done) return done(reply, body);
+      try {
+        sessionStorage.removeItem("join-code");
+        sessionStorage.removeItem("reset-code");
+        if (form.id === "join" || form.dataset.ownerSetup === "true") sessionStorage.setItem("notice", `Welcome, ${cleanUsername(body.username)}.`);
+      } catch { /* storage is optional */ }
+      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
+      // Some WebViews have no `caches` at all; the account is made by now, so that mustn't look like a failure.
+      try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
+      location.replace("/");
+    } catch (err) {
+      if (err instanceof Unreachable) {
+        busy.stop("Try again");
+        return say(form, UNREACHABLE);
+      }
+      busy.stop();
+      if (err.status >= 500) return say(form, OUR_SIDE);
+      if (err.errors?.length) return showErrors(form, err.errors);
+      say(form, err.message);
+    }
+  });
+}
+
 // --- Joining and inviting -----------------------------------------------------------------------------
 
-// The invite link carries its code after #, which never reaches the server; fill it in and say if it's good.
-async function joinCode(form) {
+// A link carries its code after #, which never reaches the server. It's kept for this tab (sessionStorage) before
+// it leaves the address bar, so a reload still has it; it's cleared once the account is made.
+function codeFromLink(form, key, check = null) {
   const input = form.querySelector("#code");
-  const status = form.querySelector("[data-code-status]");
-  const check = async () => {
-    if (!input.value.trim()) return;
-    try {
-      const r = await post("/api/invites/check", { code: input.value });
-      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
-      input.removeAttribute("aria-invalid");
-    } catch (err) {
-      status.textContent = err.message;
-      input.setAttribute("aria-invalid", "true");
-    }
-  };
   let fromLink = "";
   try {
     fromLink = decodeURIComponent(location.hash.slice(1));
   } catch {
     // A link that was cut or mangled in the message: say so, and keep it out of history.
     history.replaceState(null, "", location.pathname);
-    status.textContent = "That link didn’t come through whole. Type the code from the message.";
-    input.setAttribute("aria-invalid", "true");
+    setError(form, "code", "That link didn’t come through whole. Type the code from the message.");
+    return;
   }
   if (fromLink) {
+    try { sessionStorage.setItem(key, fromLink); } catch { /* storage is optional */ }
     input.value = fromLink;
     history.replaceState(null, "", location.pathname); // keep the code out of history and screenshots
-    check();
+  } else if (!input.value) {
+    try { input.value = sessionStorage.getItem(key) || ""; } catch { /* storage is optional */ }
   }
+  if (input.value && check) check();
+}
+
+// The join screen says whether the code is good, or already used (with a way to sign in).
+function joinCode(form) {
+  const input = form.querySelector("#code");
+  const status = form.querySelector("[data-code-status]");
+  const check = async () => {
+    if (!input.value.trim()) return;
+    try {
+      const r = await post("/api/invites/check", { code: input.value });
+      setError(form, "code");
+      status.textContent = r.kind === "join" ? `Valid until ${r.expires}.` : "That’s a reset code. Use it on the reset screen.";
+    } catch (err) {
+      const e = err.errors?.[0];
+      setError(form, "code", e ? e.message : err instanceof Rejected ? err.message : UNREACHABLE, e?.rule);
+    }
+  };
+  codeFromLink(form, "join-code", check);
   input.addEventListener("change", check);
+}
+
+// In Instagram's or Facebook's browser: copy this page's link (the code from the field, if any) to open elsewhere.
+// If the clipboard says no, the link is shown to press and hold.
+function inAppBanner(box) {
+  const button = box.querySelector("[data-copy-link]");
+  button.addEventListener("click", async () => {
+    const code = document.getElementById("code")?.value.trim();
+    const link = `${location.origin}${location.pathname}${code ? `#${code}` : ""}`;
+    if (await copyText(link)) {
+      button.textContent = "Copied";
+      setTimeout(() => { button.textContent = "Copy link"; }, 2000);
+      return;
+    }
+    const fallback = box.querySelector("[data-copy-fallback]");
+    const field = fallback.querySelector("input");
+    fallback.hidden = false;
+    field.value = link;
+    field.focus();
+    field.select();
+  });
 }
 
 async function copyText(text) {
@@ -1046,61 +1378,167 @@ async function copyText(text) {
   }
 }
 
+// An invite's "For" note: what it'll be stored as (trimmed, spaces collapsed), counted as the server counts.
+const noteText = (input) => input.value.split(/\s+/u).filter(Boolean).join(" ");
+function noteCounter(input) {
+  const count = input.closest("[data-new-note], [data-note-edit]").querySelector("[data-count]");
+  const update = () => { count.textContent = `${points(noteText(input))} of ${RULES.label_max}`; };
+  input.addEventListener("input", update);
+  update();
+}
+
 function invites() {
   const box = document.querySelector("[data-codebox]");
   const primary = document.querySelector("[data-new-invite]");
   const another = document.querySelector("[data-another]");
   const intro = document.querySelector("[data-code-intro]");
-  const say = (text) => hint(document.querySelector("main"), text);
+  const status = document.querySelector("main [data-status]");
+  const note = document.querySelector("[data-new-note]");
+  const main = document.querySelector("main");
+  const tooLong = () => RULES.rules["i.label"].message;
   const show = (r, name) => {
-    const link = `${location.origin}/join#${r.code}`;
     const join = r.kind === "join";
+    const link = `${location.origin}/${join ? "join" : "reset"}#${r.code}`;
     const groups = r.code.split("-");
     const [a, b] = box.querySelectorAll("[data-code] span");
     a.textContent = `${groups[0]}-${groups[1]}`; // two groups per line, never broken inside one
     b.textContent = `${groups[2]}-${groups[3]}`;
-    box.querySelector("[data-code-label]").textContent = join ? "Invite code" : `Reset code for ${name}`;
+    const label = box.querySelector("[data-code-label]");
+    label.textContent = join ? (r.for_label ? `Invite for ${r.for_label}` : "Invite code") : `Reset link for ${name}`;
     box.querySelector("[data-code-note]").textContent = join
       ? `${location.host}/join · until ${r.expires}. Shown only once: send it before you leave this screen.`
-      : `Give ${name} this code. It works once, until ${r.expires}, and signs them out everywhere.`;
-    intro.textContent = join
-      ? `Share the link. It works once and expires ${r.expires}.`
-      : `Give ${name} the code below.`;
+      : `Send it to ${name}. It works once, until ${r.expires}, and signs them out everywhere.`;
+    intro.textContent = join ? `Share the link. It works once and expires ${r.expires}.` : `Send ${name} the link below.`;
     box.hidden = false;
-    // The one filled button now sends this code; making another one is a text button with a second tap.
-    const share = join && navigator.share;
-    primary.textContent = share ? "Share link" : join ? "Copy link" : "Copy code";
+    note.hidden = true;
+    note.querySelector("input").value = "";
+    note.querySelector("input").dispatchEvent(new Event("input"));
+    // The one filled button now sends this link; making another one is a text button with a second tap.
+    const share = Boolean(navigator.share);
+    const idle = share ? "Share link" : "Copy link";
+    primary.textContent = idle;
     primary.onclick = async () => {
       if (share) return navigator.share({ title: "registry.coffee", url: link }).catch(() => {});
-      say((await copyText(join ? link : r.code)) ? "" : "Couldn’t copy. Press and hold the code to copy it.");
-      if (!share) primary.textContent = "Copied";
+      if (await copyText(link)) {
+        say(main, "");
+        primary.textContent = "Copied";
+        setTimeout(() => { primary.textContent = idle; }, 2000);
+      } else {
+        say(main, "Couldn’t copy. Press and hold the code to copy it.");
+      }
     };
     another.hidden = !join;
     box.scrollIntoView({ block: "center" });
+    label.focus({ preventScroll: true });
+    status.textContent = join ? "Invite link ready. It’s shown only once." : "Reset link ready. It’s shown only once.";
   };
-  const act = async (url, body, after) => {
+  // Every action: its own busy label, no second request while one is out, and a line if it takes a while.
+  const act = async (b, busyText, url, body, after) => {
+    if (b.getAttribute("aria-disabled") === "true") return;
+    const idle = b.textContent;
+    b.setAttribute("aria-disabled", "true");
+    b.textContent = busyText;
+    say(main, "");
+    status.textContent = "";
+    const slow = setTimeout(() => { status.textContent = SLOW_SAVE; }, 4000);
     try {
-      after(await post(url, body));
+      const r = await post(url, body);
+      clearTimeout(slow);
+      status.textContent = "";
+      if (b.textContent === busyText) b.textContent = idle;
+      b.removeAttribute("aria-disabled");
+      after(r);
     } catch (err) {
-      say(err.message);
+      clearTimeout(slow);
+      status.textContent = "";
+      b.textContent = idle;
+      b.removeAttribute("aria-disabled");
+      const e = err.errors?.[0];
+      if (e?.field === "for_label") {
+        const scope = b.closest("[data-note-edit]") || note;
+        setError(scope, "for_label", e.message);
+        scope.querySelector("input").setAttribute("aria-invalid", "true");
+        scope.querySelector("input").focus();
+      } else {
+        say(main, e ? e.message : err instanceof Rejected ? err.message : UNREACHABLE);
+      }
     }
   };
-  const makeOne = () => act("/api/invites", {}, (r) => show(r));
-  primary.onclick = makeOne;
-  another.onclick = () => confirmTap(another, makeOne);
+  const noteField = note.querySelector("input");
+  noteField.name = "for_label";
+  noteCounter(noteField);
+  const makeOne = (b) => {
+    setError(note, "for_label");
+    const label = noteText(noteField);
+    if (points(label) > RULES.label_max) {
+      setError(note, "for_label", tooLong());
+      noteField.setAttribute("aria-invalid", "true");
+      return noteField.focus();
+    }
+    return act(b, "Making a link…", "/api/invites", label ? { for_label: label } : {}, (r) => show(r));
+  };
+  primary.onclick = () => makeOne(primary);
+  another.onclick = () => confirmTap(another, () => makeOne(another));
   for (const b of document.querySelectorAll("[data-reset]")) {
-    b.onclick = () => act("/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name));
+    b.onclick = () => confirmTap(b, () => act(b, "Making a reset link…", "/api/invites", { kind: "reset", for_user_id: b.dataset.reset }, (r) => show(r, b.dataset.name)));
   }
   for (const b of document.querySelectorAll("[data-renew]")) {
-    b.onclick = () => act(`/api/invites/${b.dataset.renew}/renew`, {}, (r) => { b.previousElementSibling.hidden = true; b.nextElementSibling.hidden = true; b.hidden = true; show(r); });
+    b.onclick = () => act(b, "Making a new link…", `/api/invites/${b.dataset.renew}/renew`, {}, (r) => {
+      b.previousElementSibling.hidden = true;
+      b.nextElementSibling.hidden = true;
+      b.hidden = true;
+      show(r);
+    });
   }
   for (const b of document.querySelectorAll("[data-revoke]")) {
-    b.onclick = () => act(`/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
+    b.onclick = () => act(b, "Revoking…", `/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
   }
   for (const b of document.querySelectorAll("[data-person]")) {
     const off = b.dataset.disabled === "true";
-    b.onclick = () => confirmTap(b, () => act(`/api/people/${b.dataset.person}`, { disabled: off },
+    b.onclick = () => confirmTap(b, () => act(b, off ? "Turning off…" : "Turning on…", `/api/people/${b.dataset.person}`, { disabled: off },
       () => go(location.pathname, off ? `${b.dataset.name}’s account is turned off` : `${b.dataset.name}’s account is back on`)));
+  }
+  // Edit note, in place: Save (empty clears it) or Cancel.
+  for (const row of document.querySelectorAll("[data-invite]")) {
+    const edit = row.querySelector("[data-note-edit]");
+    const open = row.querySelector("[data-edit-note]");
+    const field = edit.querySelector("input");
+    const shown = row.querySelector("[data-label]");
+    field.name = "for_label";
+    noteCounter(field);
+    const close = () => {
+      edit.hidden = true;
+      open.setAttribute("aria-expanded", "false");
+      setError(edit, "for_label");
+      open.focus();
+    };
+    open.onclick = () => {
+      edit.hidden = !edit.hidden;
+      open.setAttribute("aria-expanded", String(!edit.hidden));
+      if (!edit.hidden) field.focus();
+    };
+    edit.querySelector("[data-cancel-note]").onclick = () => {
+      field.value = shown.dataset.saved ?? (shown.textContent === "Invite" ? "" : shown.textContent);
+      field.dispatchEvent(new Event("input"));
+      close();
+    };
+    const save = edit.querySelector("[data-save-note]");
+    save.onclick = () => {
+      setError(edit, "for_label");
+      const label = noteText(field);
+      if (points(label) > RULES.label_max) {
+        setError(edit, "for_label", tooLong());
+        field.setAttribute("aria-invalid", "true");
+        return field.focus();
+      }
+      return act(save, "Saving…", `/api/invites/${row.dataset.invite}/label`, { for_label: label }, (r) => {
+        shown.textContent = r.for_label || "Invite";
+        shown.dataset.saved = r.for_label || "";
+        field.value = r.for_label || "";
+        close();
+        status.textContent = r.for_label ? "Note saved." : "Note cleared.";
+      });
+    };
   }
 }
 
@@ -1164,15 +1602,36 @@ function preference(group, name, plain) {
 
 // --- Signing in and the account -----------------------------------------------------------------------
 
-async function post(url, body) {
-  const r = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
-    body: JSON.stringify(body),
-  });
+class Unreachable extends Error {} // no reply: offline, timed out, or a gateway error while the app wakes up
+
+// A JSON POST with a deadline: past it (130 s, just over Cloud Run's 120 s request limit) the request is given up.
+// A refusal carries the server's words: a plain string, or a list of {field, rule, message} for errors that belong
+// to a field.
+async function post(url, body, { timeout = 130000 } = {}) {
+  const ctrl = typeof AbortController === "function" ? new AbortController() : null;
+  const timer = ctrl && setTimeout(() => ctrl.abort(), timeout);
+  let r;
+  try {
+    r = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" },
+      body: JSON.stringify(body),
+      signal: ctrl?.signal,
+    });
+  } catch {
+    throw new Unreachable(UNREACHABLE);
+  } finally {
+    clearTimeout(timer);
+  }
   if (r.ok) return r.json();
+  if ([502, 503, 504].includes(r.status)) throw new Unreachable(UNREACHABLE);
   const detail = (await r.json().catch(() => ({}))).detail;
-  throw new Rejected(Array.isArray(detail) ? detail.join(" ") : detail || "Something went wrong. Try again.");
+  const list = Array.isArray(detail) ? detail : [];
+  const words = typeof detail === "string" ? detail : list.map((d) => (typeof d === "string" ? d : d?.message)).filter(Boolean).join(" ");
+  const err = new Rejected(words || (r.status >= 500 ? OUR_SIDE : "Something went wrong. Try again."));
+  err.status = r.status;
+  err.errors = list.filter((d) => d && typeof d === "object" && d.field);
+  return Promise.reject(err);
 }
 
 function showPassword(button) {
@@ -1185,60 +1644,27 @@ function showPassword(button) {
   });
 }
 
-function signIn(form) {
-  const submit = form.querySelector('[type="submit"]');
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const body = {};
-    for (const el of form.querySelectorAll("input")) body[el.name] = el.value;
-    for (const el of form.querySelectorAll("input")) el.removeAttribute("aria-invalid");
-    const empty = [...form.querySelectorAll("input")].find((el) => !el.value.trim());
-    if (empty) {
-      empty.setAttribute("aria-invalid", "true");
-      empty.focus();
-      return hint(form, "Fill in every field.");
-    }
-    submit.disabled = true;
-    try {
-      await post(form.dataset.api || "/api/signin", body);
-      // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
-      await caches.delete("pages").catch(() => {});
-      location.replace("/");
-    } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
-      if (err instanceof Rejected) {
-        for (const el of form.querySelectorAll("input")) {
-          el.setAttribute("aria-invalid", "true");
-          el.setAttribute("aria-errormessage", "signin-hint");
-        }
-      }
-      submit.disabled = false;
-    }
-  });
-}
-
 function account() {
   const form = document.getElementById("password-form");
-  form?.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    try {
-      await post("/api/password", { current: form.current.value, new: form.new.value });
+  if (form) {
+    accountForm(form, (reply, body) => {
       form.reset();
-      hint(form, "");
+      form.querySelector('[type="submit"]').removeAttribute("aria-disabled");
+      form.querySelector('[type="submit"]').textContent = "Change password";
+      for (const li of form.querySelectorAll(".rules li")) li.dataset.state = "";
       form.closest("details").open = false;
       notify("Password changed. You’re signed out on your other devices.");
       scrollTo(0, 0);
-    } catch (err) {
-      hint(form, err instanceof Rejected ? err.message : "Couldn’t reach the server. Check the connection.");
-    }
-  });
+      return body;
+    });
+  }
   for (const b of document.querySelectorAll("[data-signout]")) {
     // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
         await post(b.dataset.signout, {});
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
-        await caches.delete("pages").catch(() => {});
+        try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");
         location.replace("/signin");
       } catch {
@@ -1270,12 +1696,16 @@ document.addEventListener("DOMContentLoaded", () => {
   if (theme) preference(theme, "theme", "auto");
   const hand = document.querySelector("[data-hand-choice]");
   if (hand) preference(hand, "hand", "right");
-  for (const id of ["signin", "join", "reset"]) {
+  for (const id of ["signin", "join", "reset", "agree-form"]) {
     const f = document.getElementById(id);
-    if (f) signIn(f);
+    if (f) accountForm(f);
   }
   const join = document.getElementById("join");
   if (join) joinCode(join);
+  const reset = document.getElementById("reset");
+  if (reset) codeFromLink(reset, "reset-code");
+  const inApp = document.querySelector("[data-in-app]");
+  if (inApp) inAppBanner(inApp);
   if (document.querySelector("[data-new-invite]")) invites();
   for (const b of document.querySelectorAll("[data-retract]")) retractShot(b);
   for (const b of document.querySelectorAll("[data-show]")) showPassword(b);
