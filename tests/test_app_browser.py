@@ -20,7 +20,7 @@ from app.accounts import Accounts
 from app.auth import Sessions
 from app.main import create_app
 from coffeedata import shots
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 from tests.test_bags import LABEL, FakeClient, jpeg
 
 HERE = Path(__file__).parent
@@ -42,7 +42,7 @@ pytestmark = pytest.mark.skipif(
 
 
 def _accounts(root: Path) -> Accounts:
-    users = Lake(str(root), tables=("users", "invites"))
+    users = Lake(str(root), tables=USER_TABLES)
     return Accounts(users, "browser-test-pepper", "browser-test-session-secret-0123456789", "SETUP-CODE-1234")
 
 
@@ -60,7 +60,7 @@ def _serve(app) -> tuple[uvicorn.Server, threading.Thread, int]:
 
 def test_app_in_a_browser(lake, tmp_path):
     accounts = _accounts(tmp_path / "users")
-    accounts.create_owner("SETUP-CODE-1234", "jtouley", PW)
+    accounts.create_owner("SETUP-CODE-1234", "jtouley", PW, agree=True)
     # Label reads answer in turn: a clear match, an unclear one, an unreadable label, then the photo sent offline.
     reader = FakeClient([LABEL | {"roaster": "Larkspur Roasting"}, LABEL | {"roaster": "Larkspur Roasting", "coffee": "Hambela"},
                          {"legible": False, "roaster": None, "coffee": None}, LABEL | {"roaster": "Larkspur Roasting"},
