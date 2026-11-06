@@ -225,6 +225,36 @@ take step 9's short path; the draft's diff is the list to check by hand.
   - `decision_orphaned` (warn).
 - **Builds record** the snapshot id, the git SHA, the image digest, the `draft_id` and every decision id applied.
 
+### Corrections feed labeling, and a keyword pre-filter
+
+The owner, on 2026-11-06: corrections are "fixable in admin panel", which "would [allow] us to better train the
+labeling", and "further keyword filtering before the labeling would help remove more objects before LLM
+classification".
+
+**Corrections as labels.** Each `include` or `exclude` override is a versioned decision row, so it is also a labeled
+example.
+- `coffeedata decide export-labels` writes the overrides as candidate reference labels for the classifier eval:
+  `input_hash`, the label, the reason and the actor.
+- Under CLAUDE.md, an owner correction is **one labeler**. It goes into the train set only.
+- It reaches a sealed test set only if a second labeler labels it independently against `GUIDE.md`, and a third
+  settles any disagreement.
+- **The bias:** corrections exist only where something was flagged or looked wrong, so they are not a random sample.
+  They show where the classifier breaks, not how often.
+
+**A keyword pre-filter before the LLM.** Part of this exists already. `verdict.pending` skips every product
+`classify.excluded` rules out (gear, merch, tea, green coffee and the like), so those never reach Claude.
+- **What it adds.** Admin-configured keyword and product-type rules, a `prefilter` rule type in the same settings
+  schema, that extend `excluded`. They are not a second list.
+- **What they do.** They drop obvious non-coffee before Claude classifies it, to save cost. When unsure, they
+  abstain and leave the product for Claude.
+- **How it ships.** It is measured like any heuristic under CLAUDE.md: a held-out split grouped by roaster, Wilson
+  intervals, and no meaningful rise in confidently wrong answers. Each settings version takes the draft flow and
+  the evaluation gate (section 3).
+- **When.** It comes in Later, once the Phase 1 decision log exists to measure against.
+
+**Ties prefer "coffee".** When the verdicts tie, the product is kept as coffee. That change is being made in a
+separate PR.
+
 ## 5. The admin
 
 ### 5.1 Pages (Phase 1)
@@ -372,6 +402,8 @@ Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page s
 - Runbook entries: a bad publish (roll back, then `revert`), a failed write, a lost passkey (the recovery codes).
 - #110's blocked-store rule.
 - Green coffee by the sack (`bulk_green_weight`), after verdict confidence is measured.
+- Overrides exported as candidate labels (train only), and the keyword pre-filter extending `classify.excluded`
+  (section 4).
 
 **Follow-ups from the review** (issuecomment-6692290541, minors):
 - 8: status events instead of status columns, done for drafts here, and to check elsewhere;
