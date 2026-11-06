@@ -4,3 +4,43 @@
 {% macro nav(on) %}<nav class="nav"><a class="{{ 'on' if on == 'today' }}" href="/"{% if on == 'today' %} aria-current="page"{% endif %}>Today</a><a class="{{ 'on' if on == 'coffees' }}" href="/coffees"{% if on == 'coffees' %} aria-current="page"{% endif %}>Coffees</a><a class="{{ 'on' if on == 'setup' }}" href="/setup"{% if on == 'setup' %} aria-current="page"{% endif %}>Setup</a></nav>{% endmacro %}
 {% macro shotrow(s, day, via="") %}<a class="item" href="/shot/{{ s.shot_id }}{{ via }}"><span class="t">{{ day(s.brewed_at) }}</span><span class="num n20 grow">{{ g(s.time_s) }}<span class="u"> s</span> · 1:{{ "%.2f" | format(ratio(s)) }} · grind {{ g(s.grinder_setting) }}</span>{{ taste(s.taste) }}{{ chevron() }}</a>{% endmacro %}
 {% macro legal() %}<p class="meta legal"><a class="ext tap" href="{{ site.site }}/privacy/">Privacy Policy</a><a class="ext tap" href="{{ site.site }}/terms/">Terms</a></p>{% endmacro %}
+{# Sign-up pieces (docs/app/signup-ux-spec.md §3, §9). The rules come from app/rules.py, through the JSON block. #}
+{% macro rules_json() %}<script type="application/json" id="rules">{{ rules | tojson }}</script>{% endmacro %}
+{% macro rule_list(id, ids) %}<ul class="rules" id="{{ id }}-rules">{% for r in ids %}<li data-rule="{{ r }}">{{ rules.rules[r].shown }}<span class="visually-hidden" data-said></span></li>{% endfor %}</ul>{% endmacro %}
+{% macro username_field(id="username") %}
+    <label class="flabel" for="{{ id }}">Username</label>
+    <input class="input" id="{{ id }}" name="{{ id }}" data-check="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
+    <p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p>
+    <p class="fsuggest" data-suggest hidden><button class="ext tap" type="button"></button></p>
+    <div class="fhint" id="{{ id }}-h" data-username-hint>You’ll sign in with it. Not your email.</div>
+    {{ rule_list(id, ("u.length", "u.chars")) }}
+{%- endmacro %}
+{% macro new_password(id="password", label="Password", hint="Any characters, spaces and symbols included. A password manager’s suggestion or a few unrelated words work well.", knows_username=True) %}
+    <label class="flabel" for="{{ id }}">{{ label }}</label>
+    <div class="pw">
+      <input class="input" id="{{ id }}" name="{{ id }}" type="password" data-check="password" autocomplete="new-password" passwordrules="minlength: {{ rules.password.min }}; maxlength: {{ rules.password.max }}; allowed: unicode;" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
+      <button type="button" data-show aria-controls="{{ id }}" aria-pressed="false">Show</button>
+    </div>
+    <p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p>
+    <div class="fhint" id="{{ id }}-h">{{ hint }}</div>
+    {{ rule_list(id, ("p.length", "p.common", "p.username", "p.variety") if knows_username else ("p.length", "p.common", "p.variety")) }}
+{%- endmacro %}
+{% macro agree_box() %}
+    <div class="agree">
+      <input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">
+      <label for="agree">I’ve read and agree to the <a class="ext" href="{{ site.site }}/terms/" target="_blank" rel="noopener">Terms</a> and <a class="ext" href="{{ site.site }}/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>
+    </div>
+    <p class="ferr" id="agree-error" data-error-for="agree"></p>
+{%- endmacro %}
+{% macro in_app_banner(name) %}{% if name %}
+  <div class="notice stack" data-in-app>
+    <p><strong>Opening from {{ name }}?</strong> Its browser can cover this form and won’t keep your sign-in. Tap ••• and choose <em>Open in external browser</em>, or copy the link and paste it into Safari or Chrome.</p>
+    <button class="btn text start" type="button" data-copy-link>Copy link</button>
+    <div data-copy-fallback hidden>
+      <input class="input" readonly aria-label="This page’s link" aria-describedby="copy-h">
+      <div class="fhint" id="copy-h">Press and hold to copy.</div>
+    </div>
+  </div>
+{% endif %}{% endmacro %}
+{# Under the main button: what a slow request is doing. Present and empty from the start, so it's announced. #}
+{% macro status_line() %}<p class="meta center mt4" data-status role="status"></p>{% endmacro %}
