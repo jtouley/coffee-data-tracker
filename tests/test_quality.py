@@ -1023,7 +1023,7 @@ def test_a_partial_a_quarantined_and_a_closed_store_pass_every_release_rule(lake
 def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
     claims = {c["metric"]: c for c in quality.coverage_claims()}
     assert {m: c["value"] for m, c in claims.items()} == {
-        "listed_coffees": 45000.0,
+        "listed_coffees": 38000.0,
         "roasters_with_coffee": 1800.0,
     }
     for c in claims.values():  # the line named is the copy, not the claims comment
