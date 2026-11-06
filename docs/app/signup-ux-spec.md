@@ -1,9 +1,10 @@
 # Sign-up and invite UX: spec
 
-Status: ready to build. Owner decisions recorded 2026-11-06. Scope: `/join`, owner setup on `/signin`, `/reset`,
-Change password, `/invite` (links, reset links, the invite list), and the first visit after the app has scaled to
-zero. Changes are subtle: same layout, type, colours and dock. What's new is rule text, inline feedback, busy
-states, named invites, and a way through in-app browsers and cold starts.
+Status: ready to build. Owner decisions recorded 2026-11-06, with email recovery added the same day. Scope:
+`/join`, owner setup on `/signin`, `/reset`, the new `/forgot` and `/verify`, Setup → Account, `/invite` (people,
+links, reset links, the invite list), recovery emails, and the first visit after the app has scaled to zero. Changes
+are subtle: same layout, type, colours and dock. What's new is rule text, inline feedback, busy states, named
+invites, email recovery, and a way through in-app browsers and cold starts.
 
 ## 1. What the tester hit and why
 
@@ -22,15 +23,15 @@ All line numbers are on `origin/main` at 1e7a280. The server-side claims were ch
 
 ## 2. Decisions
 
-**Username: no email, no email field. Allow dots.** (Owner decision.)
-- The privacy policy promises only "your username and a hash of your password" (`privacy.html:33`). The users table
-  is append-only on Hugging Face with version history (`privacy.html:83-86`), so an email stored there is hard to
-  truly delete. Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`).
+**Username: the sign-in, and never an email. Allow dots.** (Owner decision.) You sign in with a username and a
+password. An email can be added, but only for recovery (§5), and it never works as a sign-in name.
 - Rule: `^[a-z0-9._-]{3,32}$` after trim and lower-case, so `first.last` and the tester's `name.com` edit both work.
   Typing `@` shows its own message and a one-tap suggestion: the part before `@`, cleaned up. Never strip characters
   as he types (better-accessibility `forms.md`: "Never block typing or filter characters").
 - Capitals are accepted and shown as they'll be stored ("You'll sign in as maya"). The server already lower-cases
   (`accounts.py:528`). Existing usernames aren't affected: sign-in doesn't re-check the pattern (`accounts.py:406-431`).
+- Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`). Recovery emails are shown only to the owner
+  (§6).
 
 **Password: 10 to 256 characters, any character, no composition rules.** (Owner decision on the minimum.)
 - **The minimum stays 10 (`MIN_PASSWORD`, `accounts.py:37`); that's the owner's decision.** For reference, NIST SP
@@ -57,7 +58,7 @@ All line numbers are on `origin/main` at 1e7a280. The server-side claims were ch
   least 11 characters and pass. Only 3 short words with no separator (as few as 9) can fail, and the live length
   check shows that.
 
-**Cold start: a waking page on the public site, not `min_instances = 1`.** Details in §7.
+**Cold start: a waking page on the public site, not `min_instances = 1`.** Details in §10.
 
 ## 3. Rules: one source, the same words on both sides
 
@@ -68,7 +69,7 @@ data as `<script type="application/json" id="rules">{{ rules | tojson }}</script
 `web.py`'s `script-src 'self'` allows them (comment at `app/web.py:17-18`). `app.js` evaluates them. The common
 list (47 entries) ships too. The server answers 400 with
 `{"detail": [{"field": "password", "rule": "length", "message": "…"}]}`. `post()` keeps a plain-string `detail`
-working and places field errors inline. A parity test (§9) holds the two sides to the same verdicts and words.
+working and places field errors inline. A parity test (§12) holds the two sides to the same verdicts and words.
 
 | Rule id | Shown under the field (✓/✗ list) | Error message (server and client, word for word) |
 |---|---|---|
@@ -86,32 +87,298 @@ Password: "Any characters, spaces and symbols included. A password manager's sug
 work well." The rule list sits under the hint, as `<ul class="rules" id="password-rules">`, and the input's
 `aria-describedby` points at the hint, the list and the error line.
 
-## 4. Account recovery without email
+## 4. Account recovery: email first, the owner's reset link as the fallback
 
-How it works today, kept as is and made visible:
+**What exists today, which stays as the fallback:**
 - The owner makes a reset code for one member: `Accounts.invite(by, kind="reset", for_user_id=…)` (`accounts.py:470`,
-  via `POST /api/invites` with `kind: "reset"`, `main.py:435-440`). A new code revokes any earlier open one for that
-  person (`accounts.py:479-482`). It lasts 7 days, works once, and only its SHA-256 is stored.
-- The code is shown once, on the owner's screen. The owner sends it however they like. The member enters it on
-  `/reset` with a new password (`accounts.py:544-576`), which signs them out everywhere. The owner recovers their
-  own account with `OWNER_SETUP_CODE` (`accounts.py:551-559`).
+  via `POST /api/invites` with `kind: "reset"`, `main.py:435-440`). A new code revokes any earlier open one
+  (`accounts.py:479-482`). It lasts 7 days, works once, and only its SHA-256 is stored.
+- The code is shown once, on the owner's screen, and the owner sends it however they like.
+- `/reset` sets the new password and signs out every device (`accounts.py:544-576`).
+- The owner recovers their own account with `OWNER_SETUP_CODE` (`accounts.py:551-559`).
 
-Changes:
-- **A reset link instead of a bare code:** `{app}/reset#{code}`. `/reset` reads the code from the hash, as join
-  does (`app.js:1009-1037`). Reuse `joinCode`, with the status "Reset link for {username}, valid until {date}."
-- **Sign-in copy** (`signin.html:31`): "Forgot your password? Ask the person who invited you for a reset link".
-  It links to `/reset`, whose intro becomes: "Ask the person who invited you for a reset link. It works once, and
-  signs you out everywhere else."
-- **Owner's member list** (`invite.html:20`): the action reads "Make reset link".
+**Email recovery (new), following OWASP's Forgot Password sheet ([OWASP-FP][owasp-fp]):**
+1. **Asking:** sign-in's "Forgot your password?" (`signin.html:31`) goes to the new `/forgot` page.
+   - Heading "Reset your password"; field "Email on your account" (`type="email"`, `autocomplete="email"`); button
+     "Send reset link"; busy text "Sending…".
+   - Under the button: "No email on your account? Ask the person who invited you for a reset link."
+2. **Answering:** the reply is always the same and takes the same time.
+   - The page says: "If that email is on an account, we've sent a link. It works for 30 minutes. Check your spam
+     folder if it isn't there in a few minutes."
+   - `POST /api/forgot` answers 200 at once; the lookup and the send run in a background task. So neither the text
+     nor the timing shows whether an account exists (OWASP-FP "consistent message", "uniform response times";
+     [OWASP Authentication][owasp-auth], "Authentication and Error Messages").
+   - Only a *verified* email can get a link.
+3. **The link:** `{APP}/reset#{code}`.
+   - The base URL is the fixed `APP` (`site.py:71`), never the request's Host header (OWASP-FP "Host Header
+     Injection").
+   - The code is `new_code()`: 80 random bits (`accounts.py:141-144`), above NIST's 64-bit floor for recovery codes
+     ([NIST][nist] §4.2.1). It's stored as an `Invite` with `kind="reset"`, `created_by="email"` and a **30-minute**
+     expiry. NIST allows up to 24 h for email; the owner asked for 15–30 minutes.
+   - Only its SHA-256 is stored, it works once, and a new request or a successful reset revokes any other open reset
+     code for that person (`accounts.py:479-482`).
+   - The code rides in the `#` fragment, so it never reaches server logs or a `Referer`. `/reset` and `/forgot` also
+     send `Referrer-Policy: no-referrer`.
+4. **Rate limits** (the `Limiter`, `accounts.py:178-243`), before any lookup:
+   - 3 requests per email per hour, keyed by the email's HMAC (§5);
+   - 10 per IP per hour;
+   - 90 sends per day in total, under the provider's 100-a-day free cap.
+
+   Past a limit, the reply text is the same, and nothing is sent. Wrong reset codes already count against the IP
+   (`accounts.py:514-525`). Accounts are never locked by a reset request (OWASP-FP).
+5. **Resetting:** `/reset` fills the code from the hash, as join does (`app.js:1009-1037`). The new password follows
+   the §3 rules.
+   - It bumps `session_epoch`, which signs out every device (as today), and revokes the other reset codes.
+   - Afterwards, a notice email goes to the verified address: "Your registry.coffee password was changed." NIST
+     §4.2: "account recovery SHALL cause a notification".
+   - OWASP-FP advises against signing in automatically. So the email path ends on `/signin`, with the username
+     filled in and the notice "Password changed. Sign in with the new one." The owner-link path keeps today's
+     behaviour.
+
+**Owner fallback, made visible:**
+- The member list action reads "Make reset link" (`invite.html:20`).
   - First tap: `confirmTap`, "Tap again to make a reset link for {username}. Any earlier one stops working."
-  - While it runs: busy, "Making a reset link…".
-  - Then the codebox, labelled "Reset link for {username}", with Share link / Copy link → "Copied", and the note
+  - Busy: "Making a reset link…".
+  - Then a codebox labelled "Reset link for {username}", with Share link / Copy link → "Copied", and the note
     "Send it to {username}. It works once, until {date}, and signs them out everywhere."
-- **Out of scope: self-service email recovery.** It would mean storing email addresses, which breaks the privacy
-  promise of "your username and a hash of your password" (`privacy.html:33`). That policy would have to change
-  first.
+- The `/reset` intro: "Use the link from your email, or ask the person who invited you for a reset link. It works
+  once, and signs you out everywhere else."
 
-## 5. Named invites (owner requirement)
+## 5. Recovery email
+
+**Sign-up.** Between the username and the password, add the field **"Email, for account recovery only"**.
+- Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
+- Hint: "For resetting your password and the odd account notice. Never for signing in. Only the owner can see it."
+  Marketing is a separate checkbox, unticked by default (§7).
+- **Recommendation: optional, but encouraged. Not required.**
+  - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
+    tester.
+  - A typo or a slow inbox shouldn't block an invited person.
+  - The owner's reset link already covers anyone without one.
+  - It's encouraged in three places: the hint, a gentle nudge on submit when it's empty ("Add an email so you can
+    reset your password yourself? [Add email] [Skip]"; asked once), and the reminder for members in point 4 below.
+- Email syntax check, live: has one `@`, a dot in the domain, and is at most 254 characters. Error message: "That
+  doesn't look like an email address. Check for typos."
+- The server lower-cases the domain and trims. One verified email per account. An email already verified on another
+  account gives the same "verify" screen with no error, and that account's owner gets nothing (no enumeration).
+
+**Verification.** An email counts only once verified.
+- On join, or when an email is added or changed in Setup, send a link: `{APP}/verify#{token}`. The token has 32
+  random bytes, is stored as SHA-256, works once, and lasts 24 h (NIST §4.2.1.2's limit for email).
+- `/verify` posts the token. Success: "Email verified. You can now reset your password by email." Expired or used:
+  "That link has expired or was already used. Send a new one from Setup." with a link to `/setup#account`.
+- Until it's verified, Setup shows "{email} · not verified yet", with "Send again" (3 per hour) and "Change".
+
+**Setup → Account:** a "Recovery email" row.
+- It shows "{email} · verified" or "No recovery email", with **Change** and **Remove**.
+- Removing asks for a second tap. It deletes the record's files (see Storage) and says "Email removed. The owner can
+  still make you a reset link."
+- A changed email isn't used until the new one is verified, and the old address gets a notice: "The recovery email
+  on your registry.coffee account was changed." That follows OWASP-FP's advice not to trust a just-changed recovery
+  detail.
+
+**Existing members.** After sign-in, if there's no verified email, Today shows one dismissible `.notice`: "Add an
+email so you can reset your password yourself. [Add email] [Not now]". "Not now" sets a `nudge-email` cookie for 90
+days, and the row in Setup is always there. The first time, the same notice links "What changed" to the privacy
+page.
+
+**Storage.** Recommendation: a separate `contacts` table in the users dataset, with an encrypted email, an HMAC for
+lookup, and real erasure.
+- **Why not a column on `users`:** the users table is append-only on Hugging Face, one file per change, with
+  version history (`accounts.py:308-328`, `privacy.html:83-86`). Every later users row (a password change, a
+  sign-out everywhere) would copy the email into another file.
+- **Row** (one file per change, `contacts/{user_id}__{ts}.parquet`): `user_id`, `logged_at`, `email_hmac`,
+  `email_enc`, `verified_at`, `verify_sha256`, `verify_expires`.
+- **`email_hmac`:** HMAC-SHA256 of the normalised email, under a key derived from a new `EMAIL_KEY` secret (HKDF,
+  label "lookup"). Forgot-password finds the account with it without decrypting anything. A keyed hash, not plain
+  SHA-256, because emails are guessable (OWASP Password Storage, on peppers: [OWASP-PS][owasp-ps]).
+- **`email_enc`:** AES-256-GCM (the `cryptography` package) under an HKDF "encrypt" key from `EMAIL_KEY`, with
+  `user_id` as associated data. The owner's screen and the mail sender decrypt it in the app. Anyone reading the
+  dataset, or its history, sees only ciphertext.
+- **Erasing and changing:** add `("contacts", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`. Remove, change and
+  account deletion all delete **every** file of the record in one commit, as named-invite notes do (§8). Then
+  `HfApi.super_squash_history` on the users dataset drops the old commits. The users dataset is private and small,
+  so that's cheap. With encryption that step is defence in depth, not the only protection. Never log an email: logs
+  carry the user id only (`privacy.html:39`).
+- **Secrets:** `EMAIL_KEY` (32 random bytes, base64) and `RESEND_API_KEY` in Secret Manager, added to `local.secrets`
+  (`src/terraform/provider.tf:26-28`), so they're mounted like the rest (`cloud_run.tf:47-57`). Without them, email
+  features are hidden. The app still starts: don't add them to `missing_secrets()` (`auth.py:102-110`).
+
+**Privacy page: change it before any email is collected.** This changes today's promise of "your username and a
+hash of your password" (`privacy.html:33`). The new page must be deployed, with `LEGAL_UPDATED` (`site.py:73`)
+bumped, **before** the email field ships.
+- The full diff, covering email, consents, recommendations and insights, is in §7.4.
+- The named-invite line from §8 goes in the same release.
+- **Tell existing members** with the notice in §7.4. The owner also tells current members directly, since they have
+  no emails on file to send to.
+
+**Sending.** Recommendation: **Resend**.
+
+| Provider | Free tier | Paid entry | Domain setup | Notes |
+|---|---|---|---|---|
+| Resend | 3,000/month, 100/day, 3 domains, 30-day logs ([pricing][resend]) | $20/mo for 50k | DKIM TXT, SPF + MX on a `send.` subdomain, DMARC | A simple HTTP API with official Python SDK; enough for an invite-only app |
+| Postmark | 100/month ([pricing][postmark]) | $15/mo for 10k | DKIM, Return-Path CNAME, DMARC | Best known for transactional deliverability; the free tier is for testing only |
+| Amazon SES | No SES free tier for new accounts, only general AWS credits ([pricing][ses]) | $0.10 per 1,000 | DKIM CNAMEs, custom MAIL FROM, DMARC | Cheapest at volume; starts in a sandbox; adds an AWS account and IAM |
+| Mailgun | 100/day, 1-day logs ([comparison][mg-cmp]) | about $15/mo | DKIM, SPF, tracking CNAME, DMARC | Fine, but no advantage here |
+
+- **Why Resend:** the free tier covers this app many times over, it's one HTTPS call with one secret, and logs last
+  30 days for debugging deliverability. Postmark is the swap-in if deliverability ever disappoints.
+- **DNS** (by hand, as for the app's CNAME in `RUNNING.md`):
+  - Resend's DKIM `TXT` at `resend._domainkey`, plus the SPF `TXT` and `MX` on `send.registry.coffee`;
+  - `_dmarc` `TXT` `v=DMARC1; p=none; rua=mailto:{SUPPORT_EMAIL}`, raised to `p=quarantine` once the reports are
+    clean. Gmail asks every sender for SPF or DKIM, and bulk senders for DMARC too ([Google][gmail-guidelines]).
+  - Send from `registry.coffee <hello@send.registry.coffee>`, with replies to `SUPPORT_EMAIL`.
+- **Templates:** `app/templates/email/{verify,reset,changed}.{txt,html}`, each with a plain-text part and an HTML
+  part. The HTML has inline styles only, the app's paper and ink colours, Newsreader for the heading with a serif
+  fallback, one accent button, and no images or tracking pixels. Turn off Resend's open and click tracking. The copy
+  keeps the coffee subtle:
+  - **Verify.** Subject "Confirm your email for registry.coffee". Body: "One quick step before your first shot: confirm
+    this is your email, so you can reset your password yourself. [Confirm email] The link works for 24 hours. If you
+    didn't sign up, ignore this."
+  - **Reset.** Subject "Reset your registry.coffee password". Body: "Someone, hopefully you, asked to reset the
+    password for {username}. [Choose a new password] The link works once, for 30 minutes. If it wasn't you, ignore
+    this; your password stays as it is."
+  - **Changed.** Subject "Your registry.coffee password was changed". Body: "The password for {username} was just
+    changed, and every device was signed out. If that wasn't you, reply to this email."
+- **Sender interface:** a `Mailer` protocol (`send(to, subject, text, html)`), with `ResendMailer` and a `FakeMailer`
+  for tests, so the tests never call out.
+
+## 6. What the owner can see and do
+
+The owner has full admin access over accounts, through the app (`/invite`, which becomes the "People" screen) and the
+CLI, but not into secrets.
+- **Sees:** every member's username, role, status (active or turned off) and shot count. Their recovery email and
+  whether it's verified (decrypted in the app, for helping someone back in). Every invite with its For note and
+  status (§8). The owner can also read the datasets directly, as the join page already says (`join.html:20-23`).
+- **Does:**
+  - makes invite links and reset links (§4);
+  - turns accounts off and on, which signs them out (`accounts.py:578-589`);
+  - removes a member's recovery email;
+  - erases an account and all its data with `coffeedata delete-user` (`erase.py`; the account must be turned off
+    first).
+- **Never:** passwords, which are peppered and hashed with Argon2id (`accounts.py:292-304`). Reset, verify and invite
+  codes, of which only hashes are stored. Session cookies. And no "sign in as this member": recovery goes through a
+  reset link the member opens, so the owner never learns a member's password.
+- **Out of scope:** the separate `admin.registry.coffee` control plane. This spec covers only what the app's own
+  owner screens show.
+
+## 7. Consent and data use
+
+> **Legal review is required before launch.** Email collection, marketing email, and any sale of insights all need
+> it. This spec isn't legal advice. Its author isn't a lawyer, and the statute summaries below are for that review,
+> not a substitute for it. In particular, whether CCPA/CPRA applies to registry.coffee at all is for counsel: it has
+> revenue and volume thresholds, `1798.140(d)`.
+
+**One consent record per member.** It's a new `consents` table in the users dataset, one file per change, latest
+wins.
+- **Row:** `user_id`, `logged_at`, `marketing` (`none` / `pending` / `confirmed` / `withdrawn`), `marketing_at`,
+  `personalization` (bool, default true), `insights` (`unset` / `in` / `out`), `insights_at`, `wording_version`
+  (the `LEGAL_UPDATED` date of the text the person saw), and `source` (`signup` / `settings` / `unsubscribe` /
+  `notice`).
+- Every send, every recommendation and every insights export reads the **latest** row at the moment of use. Nothing
+  caches a consent past one request or job.
+- Add `("consents", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`, so it goes with the account.
+- The append-only history is the audit trail of what was agreed and when.
+
+**1. Marketing email (opt-in).**
+- At sign-up, under the recovery email, add one checkbox, **unticked by default**: "Send me occasional emails about
+  new coffees and features". It's also in Setup → Account. It's only enabled once an email is entered; the hint is
+  "You can stop them any time; one click in any email does it."
+- **Double opt-in:** ticking it records `pending` and sends "Confirm you'd like coffee news from registry.coffee
+  [Yes, send them]". Only a click from a **verified** address makes it `confirmed`. Verifying the email and
+  confirming marketing can be one click when they happen together; the confirmation text says both.
+- **Every marketing email:**
+  - a visible "Unsubscribe" link at the foot;
+  - `List-Unsubscribe: <{APP}/u/{token}>, <mailto:unsubscribe@send.registry.coffee>` and
+    `List-Unsubscribe-Post: List-Unsubscribe=One-Click` ([RFC 8058][rfc8058]; Gmail asks for one-click unsubscribe
+    from bulk senders, [Google][gmail-guidelines]);
+  - the postal address CAN-SPAM requires ([FTC][ftc-canspam]).
+  - The `{token}` is an HMAC of `user_id` and a purpose, so it needs no sign-in and lasts indefinitely. CAN-SPAM
+    needs at least 30 days.
+- A `POST` to `/u/{token}` writes `withdrawn` at once (CAN-SPAM allows 10 business days). The confirmation page
+  reads "You're unsubscribed. You'll still get password and account emails." It has no second step.
+- **Recovery, verification, password-changed and service notices are separate:** a different template set, no
+  opt-in needed, and no promotional content mixed in, so they stay transactional under CAN-SPAM.
+- Marketing goes through Resend's broadcast or batch API, from `news@send.registry.coffee`, under the same domain
+  set-up as §5.
+
+**2. Personalized recommendations from logged bags and shots.**
+- These are made inside registry.coffee, from the member's own bags, ratings and shots, matched against the public
+  catalog. No person's data, or anything derived from it, is ever shared per person.
+- **At the point of use:** each recommendation carries its reason in `--ink-2`, for example "Recommended because you
+  rated Ethiopia Guji (washed) highly." It links to "Why am I seeing this?", which goes to the Setup toggle.
+- **Setup → Privacy:** "Personalized recommendations" (default on, disclosed at sign-up). Its hint: "Suggest
+  coffees from the bags and shots you've logged. Off: no suggestions, and nothing is computed from your logs for
+  them." When it's off, the recommendation surfaces aren't rendered, and the recommender skips the member.
+- On by default, because it's a feature of the service the member is using, disclosed up front. Whether that's
+  enough consent where they live is part of the legal review.
+
+**3. Selling anonymized usage insights to roasters (future; not to be built until counsel signs off).**
+- **What may leave:** aggregates only, such as counts, medians and distributions by coffee, roaster, origin, process
+  or region, computed by a reviewed job. Never rows, user ids, usernames, emails, photos, free-text notes, or
+  anything at a single-bag or single-shot level.
+- **Minimum group size: k = 11.** Suppress any cell with fewer than **11 distinct users** (1 to 10), following CMS's
+  long-standing cell-size suppression rule for released health data ([CMS][cms-cells]; [CHHS guidelines][chhs]).
+  - Also suppress complementary cells, so a suppressed cell can't be recovered by subtraction from totals.
+  - No cell may have one user contributing more than 50% of its rows.
+  - Regions are coarsened (state, or a metro of over 100k people).
+- **Small markets:** where a slice has fewer than 50 users, add calibrated noise, a differential-privacy mechanism
+  following NIST SP 800-226 ([NIST DP][nist-dp]), or don't release it. The privacy budget is set and recorded per
+  release.
+- **California (CCPA/CPRA), for counsel to confirm:**
+  - *Deidentified* information (`1798.140(m)`) requires three things: reasonable technical measures against
+    re-identification, a **public commitment** to keep it deidentified and not re-identify it, and **contracts**
+    obliging every recipient to do the same and not re-identify ([statute][ccpa-140]; summary: [NLR][nlr-deid]).
+  - So the privacy page gains that public commitment, and every roaster agreement carries no-re-identification,
+    no-onward-transfer and audit clauses.
+  - If any released data were *personal information* (`1798.140(v)`), disclosing it for money is a *sale*
+    (`1798.140(ad)`). That needs notice and a "**Do Not Sell or Share My Personal Information**" link and opt-out
+    (`1798.120`, `1798.135`, [statute][ccpa-120]). The spec avoids releasing personal information, but the link is
+    budgeted in case counsel says it's needed.
+- **Data already collected:** data collected under the current promise **must not** be used for selling insights
+  without new consent. Today the privacy page says aggregated data is used "to run and improve the service and to
+  publish statistics" (`privacy.html:60-62`) and "We don't sell or rent your personal data" (`privacy.html:77`).
+  The new terms apply only to data logged **after** their effective date, unless an existing member explicitly opts
+  in (`insights = in`, `source = notice`).
+  - Every insights job filters each member's rows by `logged_at` ≥ the effective date, unless they opted in.
+  - `terms.html:31-33` already has an aggregated-use licence. Whether that covers a sale is a question for counsel,
+    and this spec doesn't rely on it.
+- **Opt-out for everyone:** Setup → Privacy, "Don't include my data in aggregated insights". Recommended even where
+  it isn't required. It's honoured from the next export, and excluded members' rows never enter the job.
+- **Erasure:** an erased member's rows leave every future release. Releases already delivered were aggregates and
+  aren't recalled; the privacy page says so.
+
+**4. Privacy page: changes as a diff.** The page ships, with `LEGAL_UPDATED` (`site.py:73`) set to the effective
+date, **before** any of this collects or uses data.
+- `privacy.html:33`, the account item: "your username, a hash of your password and, if you add one, a recovery email
+  address (encrypted when stored)."
+- After `:35`, a new item: "**Your choices:** whether you want marketing email, personalized recommendations and
+  aggregated insights, with when you chose."
+- "Why we use it" (`:55-59`), add:
+  - "**Your email:** password resets, confirming the address, and notices about your account or the service.
+    Marketing email only if you opt in and confirm."
+  - "**Recommendations:** suggesting coffees from the bags and shots you log, inside registry.coffee. You can turn
+    this off in Setup."
+- Replace `:60-62` with: "We may use **aggregated, de-identified** data to run and improve the service, to publish
+  statistics, and, from {effective date}, to provide insights to roasters, for which they may pay. These are
+  aggregates of at least 11 people and never individual records. We commit to keeping that data de-identified and
+  not trying to re-identify it, and we require anyone who receives it to commit to the same. Data from before
+  {effective date} is included only if you opt in."
+- "Who processes it" (`:66-72`), add "**Resend:** sends the app's emails."
+- "What we don't do" (`:76-80`): keep "We don't use third-party tracking or analytics." It stays true, because the
+  recommender runs in the app and Resend's tracking is off. Change "We don't sell or rent your personal data" to "We
+  don't sell or rent your personal data. Aggregated insights, described above, aren't personal data."
+- "Your choices and rights" (`:88-96`), add:
+  - "In Setup → Account and Privacy: remove your email; stop marketing (or use the link in any marketing email);
+    turn off recommendations; leave your data out of aggregated insights."
+  - The "Do Not Sell or Share" link, if counsel requires it.
+- "How long we keep it": "Your email and choices are deleted with your account."
+- **Notice to existing members:** a dismissible in-app notice on next sign-in, worded by counsel, with the effective
+  date. Plus an email to those with a verified address, at least 30 days before the effective date if counsel agrees.
+  It offers, without pre-selecting anything: "Include my earlier logs in aggregated insights" and "Send me occasional
+  emails about new coffees and features".
+
+## 8. Named invites (owner requirement)
 
 - **What:** an optional **For** note on each invite, so the owner can track links: free text, at most 60 characters
   after trimming and collapsing whitespace, with no control characters. Owner only. **Never** sent to `/join`,
@@ -150,7 +417,7 @@ Changes:
   `LEGAL_UPDATED` (`site.py:73`):
   `<li><strong>Invite notes:</strong> the owner may note who an invite link is for. The note is kept only with that invite, and is deleted with it.</li>`
 
-## 6. Target behaviour by state
+## 9. Target behaviour by state
 
 Guidance used: Owl-Listener `form-design` (labels, errors under the field, a check mark where correctness isn't
 obvious), `error-handling-ux` (what happened, why, what to do; keep the input), `loading-states` (100 ms–1 s subtle,
@@ -159,7 +426,7 @@ jakubkrehel `better-accessibility` (`forms.md` "Submit behavior", `semantics-and
 regions) and `interface-review` (every new component has its idle, loading, error, disabled and narrow states).
 Paths are in `SKILLS-INDEX.md`.
 
-**Join form (`join.html`). Owner setup and reset reuse the same pieces.**
+**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The field order is code, username, recovery email (optional, §5), the marketing checkbox (unticked, §7), then password. Email gets the same live syntax check and the same busy, read-only and error states.
 
 | State | What shows |
 |---|---|
@@ -168,7 +435,7 @@ Paths are in `SKILLS-INDEX.md`.
 | Invalid (blur or submit) | Unmet rules turn ✗ (`--danger`), with visually-hidden "met" / "not met" text. One error line under the field (`<p class="ferr" id="password-error">`) shows the first failing rule's message, and the field gets `aria-invalid="true"`. On submit, focus moves to the first invalid field. Only fields that fail are marked. The form-level `[data-hint]` is kept for errors that belong to no field, and is cleared before each new message so a repeat is announced again. |
 | Submitting (0–4 s) | The button gets `aria-disabled="true"` (not `disabled`, which drops focus), a 14 px spinner before the label, and the label "Creating account…". Repeat taps do nothing. The form gets `aria-busy="true"`; the inputs become `readonly`. The style is `.btn[aria-disabled="true"], .btn:disabled { opacity: .72 }`. With reduced motion the spinner is a static `…`. |
 | Slow (> 4 s) | A status line under the button (`role="status"`, in the DOM from the start): "Still working. The app may be waking up, which can take a minute or two. Keep this page open." At 45 s: "Still working. Saving can take a little longer when the app has just woken up." |
-| Lost reply | The fetch times out at 130 s, or the network fails, or a 502/503/504 comes back. The page then resends the **same** body up to 3 times (2 s, 5 s, 10 s apart). That's safe: join is idempotent (§8). If all of them fail: "Couldn't reach the app. Nothing you typed is lost. Try again in a moment." The button reads "Try again". |
+| Lost reply | The fetch times out at 130 s, or the network fails, or a 502/503/504 comes back. The page then resends the **same** body up to 3 times (2 s, 5 s, 10 s apart). That's safe: join is idempotent (§11). If all of them fail: "Couldn't reach the app. Nothing you typed is lost. Try again in a moment." The button reads "Try again". |
 | Success | Button: "Account created". `globalThis.caches?.delete("pages")`, then `location.replace("/")` with the notice "Welcome, {username}." |
 | Error, a field / other | The server's message under its field, or in the form hint: the server's text, or "Something went wrong on our side. Try again." for a 500. |
 | Code already used | `#code-h`: "This invite has already been used. If you made an account with it, sign in. If not, ask whoever sent it for a new link." The words "sign in" link to `/signin`. |
@@ -195,10 +462,10 @@ invite link, Make reset link, Send a new link, Revoke, Edit note, Delete, Turn o
 | Ready | The codebox appears, and focus moves to its label (`tabindex="-1"`). Status: "Invite link ready. It's shown only once." The button becomes "Share link" / "Copy link"; "Copied" for 2 s. A filled-in For note shows on the codebox label: "Invite for {label}". |
 | Error | `[data-hint]` with the server text, and the button goes back to idle. Note too long: "Keep the note to 60 characters." |
 
-Links point to `{site}/join/#{code}` (§7) instead of `location.origin` (`app.js:1056`), with
+Links point to `{site}/join/#{code}` (§10) instead of `location.origin` (`app.js:1056`), with
 `data-site="{{ site.site }}"` on the dock. Reset links stay on the app, because the member already has it open.
 
-## 7. Cold start
+## 10. Cold start
 
 **Measure first (S).** Log `logs.event("ready", seconds=…)` at the end of `create_app`, timed from process start.
 Pull a week from `run.googleapis.com/container/startup_latencies`, and from the request log's
@@ -234,7 +501,7 @@ GiB-second ([Cloud Run pricing][run-pricing]). For 1 vCPU and 1 GiB that's about
 inside the free tier (`PLAN.md:591`). Revisit if the measured p95 is over 30 s and members, not just invitees, meet
 it often.
 
-## 8. Idempotent submit
+## 11. Idempotent submit
 
 - **Client:** one request in flight per form (the `aria-disabled` guard). Retries resend the identical body.
 - **Join (server):** if the code matches a *join* invite that is used, and `used_by` is an account whose username
@@ -248,7 +515,7 @@ it often.
 - **Invites:** the client guard is enough. A stray link shows in the list and can be revoked or deleted. The
   [IETF Idempotency-Key draft][idem] is the pattern if that ever changes.
 
-## 9. Test plan
+## 12. Test plan
 
 - **Unit (`tests/test_rules.py`, `tests/test_invites.py`):**
   - every rule id and message; `@`, `.`, capitals, 2/3/32/33 characters;
@@ -299,11 +566,39 @@ it often.
   - the error text at 150 s, and Try again restarting the polling;
   - `#code` kept through the redirect;
   - the CSP allowing only that `connect-src`.
+- **Email recovery** (with a `FakeMailer` and a fake clock):
+  - `/api/forgot` gives the same body and status for a verified email, an unverified email, an unknown email and a
+    rate-limited request; response times are within 50 ms of each other (the send happens in the background);
+  - only a verified email gets a mail;
+  - a reset code from email expires at 30 minutes, works once, and revokes the other open codes; reset bumps
+    `session_epoch` and sends the "changed" notice;
+  - limits: the 4th request in an hour for one email and the 11th for one IP send nothing, and the daily cap holds;
+  - links use `APP` even with a forged `Host` header;
+  - the verify link works once and expires after 24 h; an unverified email can't receive a reset; changing the email
+    notifies the old address;
+  - `contacts` rows hold no plaintext email (search the parquet bytes), and the HMAC lookup finds them;
+  - remove, change and `delete-user` leave no file of the record, and the squash is called;
+  - the owner sees the decrypted email, and a member's pages never show anyone else's.
+- **Consent:**
+  - the marketing box renders unticked, and an untouched sign-up stores `none`;
+  - nothing goes to a `pending`, `withdrawn`, unverified or `none` member; only `confirmed` and verified gets mail;
+  - one-click `POST /u/{token}` withdraws, and the headers are present on every marketing mail and absent on
+    transactional ones;
+  - `wording_version` and timestamps are recorded;
+  - turning personalization off removes the recommendation markup and skips the member in the recommender;
+  - the insights job drops opted-out members, rows from before the effective date for members who didn't opt in,
+    and every cell under 11 users, with complementary suppression;
+  - `delete-user` removes the `consents` and `contacts` records;
+  - the privacy page's built HTML still contains "We don't use third-party tracking or analytics".
 - **By hand, once:** iPhone Safari with 1Password, the Instagram app, Android Chrome, and VoiceOver through join and
   reset.
 
-## 10. Tasks, in order
+## 13. Tasks, in order
 
+0. **Legal review required before launch: email collection, marketing and insights sale.** Counsel reviews §5 and
+   §7, the privacy and terms text, whether CCPA/CPRA and CAN-SPAM apply and how, the roaster contract terms, and the
+   member notice. Nothing that collects email or consent ships before this. The insights sale also waits for its
+   own sign-off.
 1. **S** Quick fixes: guard `caches` (`app.js:1205`, `:1241`), mark only the failing field, clear-then-set the hint,
    `:disabled` / `aria-disabled` styles, keep the code in `sessionStorage`.
 2. **M** `app/rules.py`: every rule and message, with the 10 minimum. `accounts.py` uses it. Field-tagged 400s, dots
@@ -313,17 +608,31 @@ it often.
    lines. On join, owner setup, reset and Change password.
 5. **L** `app.js`: live checks, the `@` suggestion, the submit states (busy, slow, retry, timeout), focus, and
    `post()` reading field details. CSS: rule list, spinner, `.ferr`.
-6. **S** Recovery without email: reset links (`/reset#code`), the sign-in and reset copy, "Make reset link" with its
-   confirm, busy and copy states.
-7. **S–M** Named invites: `for_label` and `created_at` on `Invite` and the schema, the For input, `invite_log()`
-   and the list with statuses, edit, clear and delete (removing old files), the privacy line and `LEGAL_UPDATED`.
-   Tests.
+6. **S** Owner reset links: `/reset#code`, the copy, "Make reset link" with its confirm, busy and copy states.
+7. **S–M** Named invites: `for_label` and `created_at`, the For input, `invite_log()` and the list, edit, clear and
+   delete (removing old files). Tests.
 8. **S–M** Invite screen busy states and focus for every action; the invite link points at the site.
-9. **S** In-app browser banner (UA helper in `web.py`, a template block, Copy link).
-10. **S** Measure cold start (`ready` event, query in `RUNNING.md`).
-11. **M** The site's `/join/` "Brewing…" waking page, CORS on `/health`, site CSP for that page.
-12. **L** Fixtures, parity test, Playwright cases, in-app user agents, slow and lost-reply servers, waking-page tests.
-13. **S** `DESIGN.md` copy table, `RUNNING.md` cold-start numbers. Decide on `min_instances` once there's data.
+9. **S** In-app browser banner.
+10. **S** Measure cold start.
+11. **M** The site's `/join/` "Brewing…" waking page, CORS on `/health`, site CSP.
+12. **M** Privacy and terms changes (§7.4, plus the named-invite line), `LEGAL_UPDATED`, and the member notice.
+    Deployed **before** 14–17. Wording after task 0.
+13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` and `EMAIL_KEY` in Secret Manager, and
+    the `Mailer` protocol with `FakeMailer`.
+14. **M** The `contacts` table: HMAC lookup, AES-GCM, the verify flow (`/verify`), Setup → Account email row, erase
+    and squash. Tests.
+15. **M** Email recovery: `/forgot`, `/api/forgot` with background send, rate limits, 30-minute codes, the
+    password-changed notice, and the email templates. Tests.
+16. **S** The sign-up email field and nudge, and the existing-member prompt on Today.
+17. **M** `consents`: the marketing checkbox, double opt-in, unsubscribe with `List-Unsubscribe` and one-click POST,
+    the personalization toggle and "Recommended because…", and the insights opt-out. Erase covers them. Tests.
+18. **L** Tests: fixtures, parity, Playwright (join, invite, forgot and verify, consent screens), in-app user agents,
+    slow and lost-reply servers, waking page.
+19. **S** `DESIGN.md` copy table, `RUNNING.md` cold-start numbers and email operations. Decide on `min_instances`
+    once there's data.
+20. **L, later, behind task 0's insights sign-off** The insights export job: k = 11, complementary suppression,
+    noise for small markets, effective-date and opt-out filters, and a release log. Plus the roaster contract
+    template, from counsel.
 
 [meta-autofill]: https://www.meta.com/help/meta-pay/1896636927418202/
 [adstatus]: https://adstatus.app/blog/meta-in-app-browser-autofill-lead-gen-2026
@@ -337,3 +646,19 @@ it often.
 [xsafari]: https://gist.github.com/felquis/a08ee196747f71689dcb
 [run-pricing]: https://cloud.google.com/run/pricing
 [idem]: https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/
+[owasp-fp]: https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html
+[owasp-auth]: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
+[owasp-ps]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+[resend]: https://resend.com/pricing
+[postmark]: https://postmarkapp.com/pricing
+[ses]: https://aws.amazon.com/ses/pricing/
+[mg-cmp]: https://devtoolpicks.com/blog/resend-vs-postmark-vs-mailgun-solo-developers-2026
+[gmail-guidelines]: https://support.google.com/a/answer/81126
+[rfc8058]: https://www.rfc-editor.org/rfc/rfc8058
+[ftc-canspam]: https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business
+[cms-cells]: https://www2.ccwdata.org/documents/10280/19002246/ccw-output-review-dos-donts.pdf
+[chhs]: https://kb.data.chhs.ca.gov/ddg-1/6.-justification-of-thresholds-identified
+[nist-dp]: https://csrc.nist.gov/pubs/sp/800/226/final
+[ccpa-140]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140
+[ccpa-120]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.120
+[nlr-deid]: https://natlawreview.com/article/what-de-identified-data
