@@ -203,3 +203,8 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
 - Owner's invite creation: loading and confirmation states, plus copy feedback.
 - Cold start: measure it, then decide between min_instances=1 and a faster startup.
 - Responsiveness on phone widths. Add an end-to-end join-flow test, including a slow-server case.
+- More tester detail: he is a senior UX designer and built the iOS app Dialed Grounds; he's open to integrating with the dataset.
+  - Instagram's in-app browser showed only a Meta Pay sheet. Detect in-app browsers, show "open in Safari/Chrome", and test the flow inside IG.
+  - The username rule `[a-z0-9_-]{3,32}` (app/accounts.py:36) rejects emails and dotted names, and the page doesn't show the error. Accept emails or dotted names, or state the rule up front and show inline errors.
+  - A password from a password manager, and later a simpler one: the submit button seemed dead. Every validation error must be visible inline. Test with a generated password.
+  - His ask, verbatim in spirit: "fine if it's slow, just disable the button and show it's in progress".
