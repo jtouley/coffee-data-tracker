@@ -30,7 +30,7 @@ password. An email can be added, but only for recovery (§5), and it never works
   as he types (better-accessibility `forms.md`: "Never block typing or filter characters").
 - Capitals are accepted and shown as they'll be stored ("You'll sign in as maya"). The server already lower-cases
   (`accounts.py:528`). Existing usernames aren't affected: sign-in doesn't re-check the pattern (`accounts.py:406-431`).
-- Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`). Recovery emails are shown only to the owner
+- Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`). Members' emails are shown only to the owner
   (§6).
 
 **Password: 10 to 256 characters, any character, no composition rules.** (Owner decision on the minimum.)
@@ -99,7 +99,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 
 **Email recovery (new), following OWASP's Forgot Password sheet ([OWASP-FP][owasp-fp]):**
 1. **Asking:** sign-in's "Forgot your password?" (`signin.html:31`) goes to the new `/forgot` page.
-   - Heading "Reset your password"; field "Email on your account" (`type="email"`, `autocomplete="email"`); button
+   - Heading "Reset your password"; field "Email" (`type="email"`, `autocomplete="email"`); button
      "Send reset link"; busy text "Sending…".
    - Under the button: "No email on your account? Ask the person who invited you for a reset link."
 2. **Answering:** the reply is always the same and takes the same time.
@@ -144,12 +144,13 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 - The `/reset` intro: "Use the link from your email, or ask the person who invited you for a reset link. It works
   once, and signs you out everywhere else."
 
-## 5. Recovery email
+## 5. Email
 
-**Sign-up.** Between the username and the password, add the field **"Email, for account recovery only"**.
+**Sign-up.** Between the username and the password, add one optional field labelled just **"Email"**. It's the
+account's only email: used for account recovery and, if the marketing box is ticked (§7.1), for marketing.
 - Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
-- Hint: "For resetting your password and the odd account notice. Never for signing in. Only the owner can see it."
-  Marketing is a separate checkbox, ticked by default (§7.1).
+- Hint: "Optional. For resetting your password and account notices, and for news if you tick the box below. Never
+  for signing in. Only the owner can see it." Marketing is a separate checkbox, ticked by default (§7.1).
 - **Recommendation: optional, but encouraged. Not required.**
   - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
     tester.
@@ -169,8 +170,8 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
   "That link has expired or was already used. Send a new one from Setup." with a link to `/setup#account`.
 - Until it's verified, Setup shows "{email} · not verified yet", with "Send again" (3 per hour) and "Change".
 
-**Setup → Account:** a "Recovery email" row.
-- It shows "{email} · verified" or "No recovery email", with **Change** and **Remove**.
+**Setup → Account:** an "Email" row.
+- It shows "{email} · verified" or "No email", with **Change** and **Remove**.
 - Removing asks for a second tap. It deletes the record's files (see Storage) and says "Email removed. The owner can
   still make you a reset link."
 - A changed email isn't used until the new one is verified.
@@ -239,13 +240,13 @@ has to be updated before the email field ships (§7.4).
 
 The owner has full admin access over accounts, through the app (`/invite`, which becomes the "People" screen) and the
 CLI, but not into secrets.
-- **Sees:** every member's username, role, status (active or turned off) and shot count. Their recovery email and
+- **Sees:** every member's username, role, status (active or turned off) and shot count. Their email and
   whether it's verified (decrypted in the app, for helping someone back in). Every invite with its For note and
   status (§8). The owner can also read the datasets directly, as the join page already says (`join.html:20-23`).
 - **Does:**
   - makes invite links and reset links (§4);
   - turns accounts off and on, which signs them out (`accounts.py:578-589`);
-  - removes a member's recovery email;
+  - removes a member's email;
   - erases an account and all its data with `coffeedata delete-user` (`erase.py`; the account must be turned off
     first).
 - **Never:** passwords, which are peppered and hashed with Argon2id (`accounts.py:292-304`). Reset, verify and invite
@@ -312,7 +313,7 @@ bags, ratings and shots, matched against the public catalog. The privacy page li
 **4. Privacy page changes.** `privacy.html` currently says the app keeps "your username and a hash of your password"
 (`:33`) and uses aggregated data "to run and improve the service and to publish statistics" (`:60-62`). Before
 email collection ships, update the page and bump `LEGAL_UPDATED` (`site.py:73`):
-- Collected (`:33`): add "a recovery email address, if you add one" and "whether you agreed to the Terms and opted
+- Collected (`:33`): add "an email address, if you add one, used for account recovery and, if you tick the box, marketing" and "whether you agreed to the Terms and opted
   into marketing, and when".
 - Uses (`:55-62`): password resets and account notices by email; marketing email unless you untick the box; coffee
   recommendations from the bags and shots you log; aggregated insights provided to roasters.
@@ -358,7 +359,7 @@ jakubkrehel `better-accessibility` (`forms.md` "Submit behavior", `semantics-and
 regions) and `interface-review` (every new component has its idle, loading, error, disabled and narrow states).
 Paths are in `SKILLS-INDEX.md`.
 
-**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, recovery email (optional, §5), password, then, just above the button, the required terms checkbox (unticked) and the marketing checkbox (ticked by default) (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
+**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, Email (optional, §5), password, then, just above the button, the required terms checkbox (unticked) and the marketing checkbox (ticked by default) (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
 
 | State | What shows |
 |---|---|
