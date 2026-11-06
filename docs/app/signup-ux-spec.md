@@ -366,7 +366,7 @@ Paths are in `SKILLS-INDEX.md`.
 | Idle | Today's form. Each field has its hint and, for username and password, a rule list with neutral bullets (`○`, `--ink-3`). Button "Create account". |
 | Typing | Each rule turns ✓ (`--balanced`) as it's met. Unmet rules stay neutral while typing. Red only appears on blur or submit (`form-design`: validate on blur), so the live checks read as progress. Nothing is announced per keystroke. Capitals in the username: the hint becomes "You'll sign in as {lower}." Typing `@` shows the `u.email` line at once, with a text button "Use {suggestion}". The suggestion is the part before `@`, lower-cased, with characters outside `[a-z0-9._-]` removed, cut to 32 characters, and only offered when it passes. |
 | Invalid (blur or submit) | Unmet rules turn ✗ (`--danger`), with visually-hidden "met" / "not met" text. One error line under the field (`<p class="ferr" id="password-error">`) shows the first failing rule's message, and the field gets `aria-invalid="true"`. On submit, focus moves to the first invalid field. Only fields that fail are marked. The form-level `[data-hint]` is kept for errors that belong to no field, and is cleared before each new message so a repeat is announced again. |
-| Submitting (0–4 s) | The button gets `aria-disabled="true"` (not `disabled`, which drops focus), a 14 px ring before the label (pure CSS, `.btn[aria-disabled="true"]::before`, turning; standing still under reduced motion), and the label "Creating account…". It keeps its full colour: no opacity fade, which would drop the label below 4.5:1, and no press scale. Repeat taps do nothing. The inputs become `readonly`. No `aria-busy` on the form, so the slow line below is still announced. |
+| Submitting (0–4 s) | The button gets `aria-disabled="true"` (not `disabled`, which drops focus), the bag page's filling cup before the label (the same `.cup` SVG, CSS and `pour`/`drip` keyframes as the label-reading screen, at about 1 em in the button's own colour; under reduced motion a still, half-full cup), and the label "Creating account…". It keeps its full colour: no opacity fade, which would drop the label below 4.5:1, and no press scale. Repeat taps do nothing. The inputs become `readonly`. No `aria-busy` on the form, so the slow line below is still announced. |
 | Slow (> 4 s) | A status line under the button (`<p class="meta center" role="status">`, in the dock, in the DOM from the start, empty until then; not the error line): "Still working. The app may be waking up, which can take a minute or two. Keep this page open." At 45 s: "Still working. Saving can take a little longer when the app has just woken up." |
 | Lost reply | The fetch times out at 130 s, or the network fails, or a 502/503/504 comes back. The page then resends the **same** body up to 3 times (2 s, 5 s, 10 s apart). That's safe: join is idempotent (§11). If all of them fail: "Couldn't reach the app. Nothing you typed is lost. Try again in a moment." The button reads "Try again". |
 | Success | Button: "Account created". `globalThis.caches?.delete("pages")`, then `location.replace("/")` with the notice "Welcome, {username}." |
@@ -390,8 +390,8 @@ invite link, Make reset link, Send a new link, Revoke, Edit note, Delete, Turn o
 
 | State | What shows |
 |---|---|
-| Busy (0–4 s) | The tapped button is `aria-disabled`, with a spinner and its own label: "Making a link…", "Making a reset link…", "Making a new link…", "Revoking…", "Saving…", "Deleting…", "Turning off…" / "Turning on…". Repeat taps are ignored. |
-| Slow (> 4 s) | `[data-hint]` neutral, `role="status"`: "Still saving. This takes a few seconds when the app has just woken up." |
+| Busy (0–4 s) | The tapped button is `aria-disabled`, with the filling cup and its own label: "Making a link…", "Making a reset link…", "Making a new link…", "Revoking…", "Saving…", "Deleting…", "Turning off…" / "Turning on…". Repeat taps are ignored. |
+| Slow (> 4 s) | The status line under the button (`role="status"`, the same as join's, not `[data-hint]`): "Still saving. This takes a few seconds when the app has just woken up." |
 | Ready | The codebox appears, and focus moves to its label (`tabindex="-1"`). Status: "Invite link ready. It's shown only once." The button becomes "Share link" / "Copy link"; "Copied" for 2 s. A filled-in For note shows on the codebox label: "Invite for {label}". |
 | Error | `[data-hint]` with the server text, and the button goes back to idle. Note too long: "Keep the note to 60 characters." |
 
@@ -550,7 +550,7 @@ it often.
 4. **M** Templates: hints, rule lists, the rules JSON block, `passwordrules` (minlength 10), aria wiring, error
    lines. On join, owner setup, reset and Change password.
 5. **L** `app.js`: live checks, the `@` suggestion, the submit states (busy, slow, retry, timeout), focus, and
-   `post()` reading field details. CSS: rule list, spinner, `.ferr`.
+   `post()` reading field details. CSS: rule list, the busy cup, `.ferr`.
 6. **S** Owner reset links: `/reset#code`, the copy, "Make reset link" with its confirm, busy and copy states.
 7. **S–M** Named invites: `for_label` and `created_at`, the For input, `invite_log()` and the list, edit and clear.
    Tests.

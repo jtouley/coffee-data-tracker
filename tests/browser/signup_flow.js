@@ -1,5 +1,5 @@
 // Sign-up and invites in Chromium (docs/app/signup-ux-spec.md §12), against three running servers seeded by
-// tests/signup_seed.py: a normal one, one whose users-dataset commits take 6 s, and one whose Terms are newer than
+// tests/signup_seed.py: a normal one, one whose users-dataset commits take 15 s, and one whose Terms are newer than
 // what everyone accepted. Run by tests/test_signup_browser.py.
 // Usage: node signup_flow.js <app url> <slow app url> <bumped-terms app url> <screenshot dir or -> <passwords.json>
 const { chromium } = require("playwright");
@@ -122,6 +122,53 @@ function counting(page, path) {
     await owner.fill("#for_label", "x".repeat(61));
     await owner.getByRole("button", { name: "Make an invite link" }).click();
     assert.equal(await text(owner, "[data-new-note] .ferr"), "Keep the note to 60 characters.");
+
+    // --- The invite screen: edit and clear a note, with their busy state -------------------------------------
+    await owner.goto(`${base}/invite`);
+    const samId = await owner.locator("[data-invite]", { hasText: "Sam from the café" }).getAttribute("data-invite");
+    const row = owner.locator(`[data-invite="${samId}"]`);
+    await row.getByRole("button", { name: "Edit note" }).click();
+    await row.locator("input").fill("Sam, café on 5th");
+    await snap(owner, "invite-edit-note");
+    await row.getByRole("button", { name: "Save" }).click();
+    await waitText(owner, "main [data-status]", /Note saved/);
+    assert.match(await row.textContent(), /Sam, café on 5th/);
+    await row.getByRole("button", { name: "Edit note" }).click();
+    await row.locator("input").fill("");
+    await row.getByRole("button", { name: "Save" }).click();
+    await waitText(owner, "main [data-status]", /Note cleared/);
+    await owner.reload();
+    assert.equal(await owner.locator("[data-invite]", { hasText: "Sam" }).count(), 0, "cleared after a reload too");
+
+    // --- A reset link: confirm, busy, copy; the member uses it -----------------------------------------------
+    await ownerCtx.grantPermissions(["clipboard-read", "clipboard-write"], { origin: base });
+    await owner.goto(`${base}/invite`);
+    const reset = owner.locator('[data-reset][data-name="maya"]');
+    assert.equal(await reset.textContent(), "Make a reset link for maya");
+    await reset.click();
+    assert.equal(await reset.textContent(), "Tap again: maya’s old reset link stops working");
+    await owner.getByRole("button", { name: "Tap again: maya’s old reset link stops working" }).click();
+    await owner.waitForSelector("[data-codebox]:not([hidden])");
+    assert.equal(await text(owner, "[data-code-label]"), "Reset link for maya");
+    assert.match(await text(owner, "[data-code-note]"), /^127\.0\.0\.1:\d+\/reset · Send it to maya\. It works once, until .+, and signs them out everywhere\.$/);
+    await owner.getByRole("button", { name: "Copy link" }).click();
+    await waitText(owner, "[data-new-invite]", /^Copied$/);
+    const resetLink = await owner.evaluate(() => navigator.clipboard.readText());
+    assert.match(resetLink, new RegExp(`^${base}/reset#[A-Z2-7]{4}(-[A-Z2-7]{4}){3}$`));
+    await snap(owner, "invite-reset-link");
+    const memberCtx = await context(browser, { width: 375, height: 812 });
+    const member = await memberCtx.newPage();
+    await member.goto(resetLink);
+    assert.equal(await member.inputValue("#code"), resetLink.split("#")[1]);
+    await member.fill("#password", "new lantern quarry");
+    await snap(member, "reset");
+    await member.route("**/api/reset", async (route) => { await new Promise((r) => setTimeout(r, 12000)); return route.continue(); });
+    await member.getByRole("button", { name: "Set password" }).click();
+    assert.equal(await text(member, "#reset [type=submit]"), "Setting password…");
+    await snap(member, "reset-busy");
+    assert.equal(await member.getAttribute("#reset [type=submit]", "aria-disabled"), "true");
+    await member.waitForURL(`${base}/`);
+    await memberCtx.close();
 
     // --- Joining: idle, reload keeps the code, "@", 1Password, terms unticked then ticked, a double tap ----------
     const guestCtx = await context(browser, { width: 375, height: 812 });
@@ -287,54 +334,9 @@ function counting(page, path) {
       await ctx.close();
     }
 
-    // --- The invite screen: edit and clear a note, with their busy state -------------------------------------
-    await owner.goto(`${base}/invite`);
-    const samId = await owner.locator("[data-invite]", { hasText: "Sam from the café" }).getAttribute("data-invite");
-    const row = owner.locator(`[data-invite="${samId}"]`);
-    await row.getByRole("button", { name: "Edit note" }).click();
-    await row.locator("input").fill("Sam, café on 5th");
-    await snap(owner, "invite-edit-note");
-    await row.getByRole("button", { name: "Save" }).click();
-    await waitText(owner, "main [data-status]", /Note saved/);
-    assert.match(await row.textContent(), /Sam, café on 5th/);
-    await row.getByRole("button", { name: "Edit note" }).click();
-    await row.locator("input").fill("");
-    await row.getByRole("button", { name: "Save" }).click();
-    await waitText(owner, "main [data-status]", /Note cleared/);
-    await owner.reload();
-    assert.equal(await owner.locator("[data-invite]", { hasText: "Sam" }).count(), 0, "cleared after a reload too");
-
-    // --- A reset link: confirm, busy, copy; the member uses it -----------------------------------------------
-    await ownerCtx.grantPermissions(["clipboard-read", "clipboard-write"], { origin: base });
-    await owner.goto(`${base}/invite`);
-    const reset = owner.locator('[data-reset][data-name="maya"]');
-    assert.equal(await reset.textContent(), "Make a reset link for maya");
-    await reset.click();
-    assert.equal(await reset.textContent(), "Tap again: maya’s old reset link stops working");
-    await owner.getByRole("button", { name: "Tap again: maya’s old reset link stops working" }).click();
-    await owner.waitForSelector("[data-codebox]:not([hidden])");
-    assert.equal(await text(owner, "[data-code-label]"), "Reset link for maya");
-    assert.match(await text(owner, "[data-code-note]"), /^Send it to maya\. It works once, until .+, and signs them out everywhere\.$/);
-    await owner.getByRole("button", { name: "Copy link" }).click();
-    await waitText(owner, "[data-new-invite]", /^Copied$/);
-    const resetLink = await owner.evaluate(() => navigator.clipboard.readText());
-    assert.match(resetLink, new RegExp(`^${base}/reset#[A-Z2-7]{4}(-[A-Z2-7]{4}){3}$`));
-    await snap(owner, "invite-reset-link");
-    const memberCtx = await context(browser, { width: 375, height: 812 });
-    const member = await memberCtx.newPage();
-    await member.goto(resetLink);
-    assert.equal(await member.inputValue("#code"), resetLink.split("#")[1]);
-    await member.fill("#password", "new lantern quarry");
-    await snap(member, "reset");
-    await member.route("**/api/reset", async (route) => { await new Promise((r) => setTimeout(r, 1500)); return route.continue(); });
-    await member.getByRole("button", { name: "Set password" }).click();
-    assert.equal(await text(member, "#reset [type=submit]"), "Setting password…");
-    assert.equal(await member.getAttribute("#reset [type=submit]", "aria-disabled"), "true");
-    await member.waitForURL(`${base}/`);
-    await memberCtx.close();
-
     // --- Every invite action says what it's doing ----------------------------------------------------------
-    await owner.route(/\/api\/(invites|people)/, async (route) => { await new Promise((r) => setTimeout(r, 800)); return route.continue(); });
+    let delay = 800;
+    await owner.route(/\/api\/(invites|people)/, async (route) => { await new Promise((r) => setTimeout(r, delay)); return route.continue().catch(() => {}); });
     const busyLabel = async (button, want) => {
       await button.click();
       await owner.waitForFunction(([w]) => [...document.querySelectorAll("[aria-disabled=true]")].some((b) => b.textContent === w), [want]);
@@ -345,13 +347,18 @@ function counting(page, path) {
     await tapTwice.click();
     await tapTwice.click();
     await owner.waitForFunction(() => document.querySelector('[data-reset][data-name="maya"]').textContent === "Making a reset link…");
-    assert.equal(await owner.$eval('[data-reset][data-name="maya"]', (b) => getComputedStyle(b, "::before").width), "14px");
+    assert.equal(await owner.$$eval('[data-reset][data-name="maya"] > .cup', (c) => c.length), 1, "the filling cup, before the label");
     await owner.waitForSelector("[data-codebox]:not([hidden])");
     await owner.goto(`${base}/invite`);
     await busyLabel(owner.locator("[data-renew]").first(), "Making a new link…");
     await owner.goto(`${base}/invite`);
-    await busyLabel(owner.locator("[data-revoke]").first(), "Revoking…");
-    await owner.waitForURL(`${base}/invite`);
+    delay = 12000; // long enough to photograph
+    await owner.locator("[data-revoke]").first().click();
+    await owner.waitForFunction(() => [...document.querySelectorAll("[data-revoke]")].some((b) => b.textContent === "Revoking…"));
+    assert.equal(await owner.$$eval("[data-revoke][aria-disabled=true] > .cup", (c) => c.length), 1);
+    await snap(owner, "invite-busy-revoking");
+    delay = 800;
+    await waitText(owner, "[data-notice]", /Invite revoked/);
     await owner.goto(`${base}/invite`);
     const edited = owner.locator("[data-invite]").first();
     await edited.getByRole("button", { name: "Edit note" }).click();
@@ -372,7 +379,7 @@ function counting(page, path) {
     await slowOwner.getByRole("button", { name: "Make an invite link" }).click();
     assert.equal(await text(slowOwner, "[data-new-invite]"), "Making a link…");
     await waitText(slowOwner, "main [data-status]", /Still saving/);
-    await slowOwner.waitForSelector("[data-codebox]:not([hidden])", { timeout: 20000 });
+    await slowOwner.waitForSelector("[data-codebox]:not([hidden])", { timeout: 40000 });
     const slowCode = (await slowOwner.$$eval("[data-code] span", (els) => els.map((e) => e.textContent))).join("-");
     const slowCtx = await context(browser, { width: 375, height: 812 });
     const slowPage = await slowCtx.newPage();
@@ -381,20 +388,39 @@ function counting(page, path) {
     await fillJoin(slowPage, "patient", "slow kettle marble");
     const button = slowPage.getByRole("button", { name: "Create account" });
     await button.click();
+    const clicked = Date.now();
+    // The cup at 0.5 s and at 6 s (it fills, then fills again), light and dark.
+    const at = async (ms, name) => {
+      await slowPage.waitForTimeout(Math.max(0, clicked + ms - Date.now()));
+      if (out === "-") return;
+      for (const scheme of ["light", "dark"]) {
+        await slowPage.emulateMedia({ colorScheme: scheme });
+        await slowPage.locator("#join .dock").screenshot({ path: `${out}/${name}-375-${scheme}.png` });
+      }
+      await slowPage.emulateMedia({ colorScheme: "light" });
+    };
+    await at(500, "join-busy-0.5s");
     for (let i = 0; i < 4; i++) await slowPage.locator("#join [type=submit]").click({ force: true }); // aria-disabled: Playwright would wait
     assert.equal(await slowPage.getAttribute("#join [type=submit]", "aria-disabled"), "true");
     assert.equal(await text(slowPage, "#join [type=submit]"), "Creating account…");
     assert.equal(await slowPage.getAttribute("#username", "readonly"), "");
-    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").animationName), "turn");
+    // The bag page's cup fills before the label; under reduced motion it stands still.
+    const pour = () => slowPage.$eval("#join [type=submit] > .cup .pour", (p) => getComputedStyle(p).animationName);
+    assert.equal(await pour(), "pour");
     await slowPage.emulateMedia({ reducedMotion: "reduce" });
-    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").animationName), "none");
-    assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b, "::before").width), "14px");
+    assert.equal(await pour(), "none");
     await slowPage.emulateMedia({ reducedMotion: "no-preference" });
     assert.equal(await slowPage.$eval("#join [type=submit]", (b) => getComputedStyle(b).opacity), "1", "full colour while busy");
     await snap(slowPage, "join-busy");
+    if (out !== "-") {
+      await slowPage.emulateMedia({ reducedMotion: "reduce" });
+      await slowPage.screenshot({ path: `${out}/join-busy-reduced-motion-375-light.png` });
+      await slowPage.emulateMedia({ reducedMotion: "no-preference" });
+    }
     await waitText(slowPage, "#join [data-status]", /Still working\. The app may be waking up/);
+    await at(6000, "join-busy-6s");
     await snap(slowPage, "join-slow");
-    await slowPage.waitForURL(`${slow}/`, { timeout: 30000 });
+    await slowPage.waitForURL(`${slow}/`, { timeout: 40000 });
     assert.equal(slowSent.length, 1, "five taps sent one join");
     await slowCtx.close();
     await slowOwnerCtx.close();

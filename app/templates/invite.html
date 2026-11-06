@@ -25,7 +25,7 @@
         </div>
       </div>
       {%- if r.status == "open" %}
-      <button class="link" type="button" data-renew="{{ i.invite_id }}">Send a new link{{ chevron() }}</button>
+      <button class="link" type="button" data-renew="{{ i.invite_id }}">Send a new link</button>
       <button class="link danger" type="button" data-revoke="{{ i.invite_id }}">Revoke invite</button>
       {%- endif %}
     </div>

@@ -98,17 +98,21 @@ details + .section.group { margin-top: 24px; }
 .btn .sub { font-weight: 400; font-size: 0.9375rem; opacity: .85; font-stretch: 85%; font-variant-numeric: tabular-nums; }
 .btn, .step, .chip, .seg button, .pips button { transition: transform 100ms ease-out, background-color 120ms ease-out; }
 .btn:active:not(:disabled):not([aria-disabled="true"]), .step:active, .chip:active { transform: scale(.97); }
-/* Busy: a small ring turns before the label, which says what's happening ("Creating account…"), at full contrast;
-   repeat taps do nothing. Under reduced motion the ring stands still. A truly disabled button fades. */
+/* Busy: the bag page's filling cup (.cup, below), small, before the label, which says what's happening ("Creating
+   account…"), at full contrast; repeat taps do nothing. Under reduced motion the cup stands still, half full. A truly
+   disabled button fades. */
 .btn[aria-disabled="true"], .link[aria-disabled="true"] { cursor: progress; }
-.btn[aria-disabled="true"]::before, .link[aria-disabled="true"]::before { content: ""; flex: none; width: 14px; height: 14px;
-  box-sizing: border-box; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; }
-.link[aria-disabled="true"] { justify-content: flex-start; gap: 8px; }
-.link[aria-disabled="true"] svg { display: none; }
+.btn .cup, .link .cup { width: 1.15em; height: 1.15em; margin-top: -0.2em; }
+.btn .cup .rim, .link .cup .rim { stroke: currentColor; stroke-width: 5; }
+.btn .cup .stream rect, .btn .cup .pour, .link .cup .stream rect, .link .cup .pour { fill: currentColor; }
+.btn .cup .stream rect, .link .cup .stream rect { width: 4px; x: 21.25px; }
 @media (prefers-reduced-motion: no-preference) {
-  .btn[aria-disabled="true"]::before, .link[aria-disabled="true"]::before { animation: turn .8s linear infinite; }
-  @keyframes turn { to { transform: rotate(1turn); } }
+  /* In a button the wait can be long: the cup fills again and again, so it never looks stopped. */
+  .btn .cup .pour, .link .cup .pour { animation: pour 2.4s cubic-bezier(.2, .6, .35, 1) infinite; }
 }
+.link[aria-disabled="true"] { justify-content: flex-start; gap: 8px; }
+.link[aria-disabled="true"] > svg:not(.cup) { display: none; }
+.cup-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .btn:disabled { opacity: .72; }
 .dock { background: var(--paper); padding: 12px 16px calc(16px + env(safe-area-inset-bottom)); margin: 0 -16px;
   display: grid; gap: 4px; position: relative; }
@@ -380,7 +384,7 @@ details.disclose[open] [data-more-summary] { display: none; }
 .ferr-line:has(.ferr:empty) { margin-top: 0; }
 .ferr-line .ferr { display: inline; margin: 0; }
 .ferr-line .ferr:empty { display: none; }
-.fsuggest button { display: inline-flex; align-items: center; font-size: inherit; min-height: 44px; margin: -14px 0; padding: 0 4px; vertical-align: baseline; }
+.fsuggest button { display: inline-flex; align-items: center; font-size: inherit; min-height: 44px; margin: -14px 0; padding: 0; vertical-align: baseline; }
 .ferr a { color: inherit; text-decoration: underline; }
 .fhint a { color: var(--accent); font-weight: 500; }
 .rules { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 4px; font-size: 0.8125rem; color: var(--ink-2); }

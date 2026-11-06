@@ -1,5 +1,5 @@
 """Sign-up and invites in a real browser (tests/browser/signup_flow.js, spec §12): the rule list as you type, the
-"@" suggestion, the terms box, double taps, a slow server, a lost reply, "already used", the in-app browser banner,
+"@" suggestion, the terms box, double taps, a slow server (15 s commits), a lost reply, "already used", the in-app browser banner,
 named invites, reset links, re-acceptance of new terms, and widths from 320 to 430 px, with axe in light and dark.
 Then the page's rule checker against rules.py (tests/browser/rules_parity.js). Skipped without Node and Playwright,
 except in CI (REQUIRE_BROWSER=1). SIGNUP_SCREENSHOTS=<dir> keeps the screenshots."""
@@ -43,7 +43,7 @@ def _app(root: Path, legal: str | None = None, publish_delay: float = 0):
 def test_signup_in_a_browser(tmp_path):
     apps = [
         _app(tmp_path / "plain"),
-        _app(tmp_path / "slow", publish_delay=6),
+        _app(tmp_path / "slow", publish_delay=15),
         _app(tmp_path / "bumped", legal="November 5, 2026"),
     ]
     servers = [_serve(a) for a in apps]

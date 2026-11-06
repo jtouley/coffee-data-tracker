@@ -1157,7 +1157,9 @@ function liveRules(form) {
     const loud = strict.has(input);
     for (const li of document.querySelectorAll(`#${input.id}-rules li`)) {
       const rule = li.dataset.rule;
-      const state = ids.has(rule) ? (loud ? "unmet" : "") : input.value && (rule === lengthRule || lengthMet) ? "met" : "";
+      // While the "@" line shows, the characters rule it breaks shows as failed too.
+      const now = loud || (rule === "u.chars" && ids.has("u.email"));
+      const state = ids.has(rule) ? (now ? "unmet" : "") : input.value && (rule === lengthRule || lengthMet) ? "met" : "";
       li.dataset.state = state;
       li.querySelector("[data-said]").textContent = state === "met" ? ", met" : state === "unmet" ? ", not met" : "";
     }
@@ -1198,6 +1200,13 @@ function liveRules(form) {
   };
 }
 
+// The bag page's filling cup in a busy button, before its label; gone again when it's done.
+function busyCup(b, on) {
+  b.querySelector(":scope > .cup")?.remove();
+  const cup = on && document.getElementById("busy-cup")?.content.firstElementChild;
+  if (cup) b.prepend(cup.cloneNode(true));
+}
+
 // Busy: the button says what's happening and ignores more taps (aria-disabled, so focus stays on it), the fields
 // can't change underneath the request, and a line under the button explains a wait past 4 s.
 function busyState(form, submit) {
@@ -1210,6 +1219,7 @@ function busyState(form, submit) {
     start(text) {
       submit.setAttribute("aria-disabled", "true");
       submit.textContent = text;
+      busyCup(submit, true);
       locked = [...form.querySelectorAll("input:not([type=checkbox]):not([readonly])")];
       for (const el of locked) el.readOnly = true;
       timers = [setTimeout(() => { if (status) status.textContent = SLOW; }, 4000),
@@ -1220,6 +1230,7 @@ function busyState(form, submit) {
       if (status) status.textContent = "";
       submit.removeAttribute("aria-disabled");
       submit.textContent = text;
+      busyCup(submit, false);
       for (const el of locked) el.readOnly = false;
       locked = [];
     },
@@ -1282,6 +1293,7 @@ function accountForm(form, done = null) {
       const reply = await (form.dataset.retry !== undefined ? postRetrying(url, body) : post(url, body));
       busy.stop(form.dataset.done || submit.textContent);
       submit.setAttribute("aria-disabled", "true"); // nothing more to send from this page
+      busyCup(submit, true); // the next page is loading
       if (done) return done(reply, body);
       try {
         sessionStorage.removeItem("join-code");
@@ -1368,6 +1380,7 @@ function inAppBanner(box) {
     field.value = link;
     field.focus();
     field.select();
+    field.scrollLeft = 0; // the start of the link (the host) in view
   });
 }
 
@@ -1409,7 +1422,7 @@ function invites() {
     label.textContent = join ? (r.for_label ? `Invite for ${r.for_label}` : "Invite code") : `Reset link for ${name}`;
     box.querySelector("[data-code-note]").textContent = join
       ? `${location.host}/join · until ${r.expires}. Shown only once: send it before you leave this screen.`
-      : `Send it to ${name}. It works once, until ${r.expires}, and signs them out everywhere.`;
+      : `${location.host}/reset · Send it to ${name}. It works once, until ${r.expires}, and signs them out everywhere.`;
     intro.textContent = join ? `Share the link. It works once and expires ${r.expires}.` : `Send ${name} the link below.`;
     box.hidden = false;
     note.hidden = true;
@@ -1440,6 +1453,7 @@ function invites() {
     const idle = b.textContent;
     b.setAttribute("aria-disabled", "true");
     b.textContent = busyText;
+    busyCup(b, true);
     say(main, "");
     status.textContent = "";
     const slow = setTimeout(() => { status.textContent = SLOW_SAVE; }, 4000);
@@ -1449,12 +1463,14 @@ function invites() {
       status.textContent = "";
       if (b.textContent === busyText) b.textContent = idle;
       b.removeAttribute("aria-disabled");
+      busyCup(b, false);
       after(r);
     } catch (err) {
       clearTimeout(slow);
       status.textContent = "";
       b.textContent = idle;
       b.removeAttribute("aria-disabled");
+      busyCup(b, false);
       const e = err.errors?.[0];
       if (e?.field === "for_label") {
         const scope = b.closest("[data-note-edit]") || note;
@@ -1510,14 +1526,16 @@ function invites() {
     noteCounter(field);
     const close = () => {
       edit.hidden = true;
+      open.hidden = false;
       open.setAttribute("aria-expanded", "false");
       setError(edit, "for_label");
       open.focus();
     };
     open.onclick = () => {
-      edit.hidden = !edit.hidden;
-      open.setAttribute("aria-expanded", String(!edit.hidden));
-      if (!edit.hidden) field.focus();
+      edit.hidden = false;
+      open.hidden = true; // Save and Cancel close it
+      open.setAttribute("aria-expanded", "true");
+      field.focus();
     };
     edit.querySelector("[data-cancel-note]").onclick = () => {
       field.value = shown.dataset.saved ?? (shown.textContent === "Invite" ? "" : shown.textContent);
