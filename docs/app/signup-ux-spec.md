@@ -120,7 +120,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
    - The code rides in the `#` fragment, so it never reaches server logs or a `Referer`. `/reset` and `/forgot` also
      send `Referrer-Policy: no-referrer`.
 4. **Rate limits** (the `Limiter`, `accounts.py:178-243`), before any lookup:
-   - 3 requests per email per hour, keyed by the email's HMAC (§5);
+   - 3 requests per email per hour, keyed by the email (§5);
    - 10 per IP per hour;
    - 90 sends per day in total, under the provider's 100-a-day free cap.
 
@@ -149,7 +149,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 **Sign-up.** Between the username and the password, add the field **"Email, for account recovery only"**.
 - Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
 - Hint: "For resetting your password and the odd account notice. Never for signing in. Only the owner can see it."
-  Marketing is a separate checkbox, unticked by default (§7).
+  Marketing is a separate checkbox, unticked by default (§7.1).
 - **Recommendation: optional, but encouraged. Not required.**
   - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
     tester.
@@ -171,46 +171,25 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 
 **Setup → Account:** a "Recovery email" row.
 - It shows "{email} · verified" or "No recovery email", with **Change** and **Remove**.
-- Removing asks for a second tap. It deletes the record's files (see Storage) and says "Email removed. The owner can
-  still make you a reset link."
-- A changed email isn't used until the new one is verified, and the old address gets a notice: "The recovery email
-  on your registry.coffee account was changed." That follows OWASP-FP's advice not to trust a just-changed recovery
-  detail.
+- Removing asks for a second tap and says "Email removed. The owner can still make you a reset link."
+- A changed email isn't used until the new one is verified.
 
 **Existing members.** After sign-in, if there's no verified email, Today shows one dismissible `.notice`: "Add an
 email so you can reset your password yourself. [Add email] [Not now]". "Not now" sets a `nudge-email` cookie for 90
-days, and the row in Setup is always there. The first time, the same notice links "What changed" to the privacy
-page.
+days, and the row in Setup is always there.
 
-**Storage.** Recommendation: a separate `contacts` table in the users dataset, with an encrypted email, an HMAC for
-lookup, and real erasure.
-- **Why not a column on `users`:** the users table is append-only on Hugging Face, one file per change, with
-  version history (`accounts.py:308-328`, `privacy.html:83-86`). Every later users row (a password change, a
-  sign-out everywhere) would copy the email into another file.
-- **Row** (one file per change, `contacts/{user_id}__{ts}.parquet`): `user_id`, `logged_at`, `email_hmac`,
-  `email_enc`, `verified_at`, `verify_sha256`, `verify_expires`.
-- **`email_hmac`:** HMAC-SHA256 of the normalised email, under a key derived from a new `EMAIL_KEY` secret (HKDF,
-  label "lookup"). Forgot-password finds the account with it without decrypting anything. A keyed hash, not plain
-  SHA-256, because emails are guessable (OWASP Password Storage, on peppers: [OWASP-PS][owasp-ps]).
-- **`email_enc`:** AES-256-GCM (the `cryptography` package) under an HKDF "encrypt" key from `EMAIL_KEY`, with
-  `user_id` as associated data. The owner's screen and the mail sender decrypt it in the app. Anyone reading the
-  dataset, or its history, sees only ciphertext.
-- **Erasing and changing:** add `("contacts", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`. Remove, change and
-  account deletion all delete **every** file of the record in one commit, as named-invite notes do (§8). Then
-  `HfApi.super_squash_history` on the users dataset drops the old commits. The users dataset is private and small,
-  so that's cheap. With encryption that step is defence in depth, not the only protection. Never log an email: logs
-  carry the user id only (`privacy.html:39`).
-- **Secrets:** `EMAIL_KEY` (32 random bytes, base64) and `RESEND_API_KEY` in Secret Manager, added to `local.secrets`
-  (`src/terraform/provider.tf:26-28`), so they're mounted like the rest (`cloud_run.tf:47-57`). Without them, email
-  features are hidden. The app still starts: don't add them to `missing_secrets()` (`auth.py:102-110`).
+**Storage.** A separate `contacts` table in the users dataset, so password changes and sign-outs don't copy the email
+into every later `users` file (`accounts.py:308-328`).
+- Row (one file per change, latest wins): `user_id`, `logged_at`, `email` (trimmed, lower-cased), `verified_at`,
+  `verify_sha256`, `verify_expires`. Forgot-password looks the email up in memory, as usernames are.
+- Erased with the account: add `("contacts", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`. Logs never carry
+  the email; they carry the user id only (`privacy.html:39`).
+- **Secrets:** `RESEND_API_KEY` in Secret Manager, added to `local.secrets` (`src/terraform/provider.tf:26-28`) and
+  mounted like the rest (`cloud_run.tf:47-57`). Without it, email features are hidden and the app still starts:
+  don't add it to `missing_secrets()` (`auth.py:102-110`).
 
-**Privacy page: change it before any email is collected.** This changes today's promise of "your username and a
-hash of your password" (`privacy.html:33`). The new page must be deployed, with `LEGAL_UPDATED` (`site.py:73`)
-bumped, **before** the email field ships.
-- The full diff, covering email, consents, recommendations and insights, is in §7.4.
-- The named-invite line from §8 goes in the same release.
-- **Tell existing members** with the notice in §7.4. The owner also tells current members directly, since they have
-  no emails on file to send to.
+**Privacy page:** it currently promises only "your username and a hash of your password" (`privacy.html:33`), so it
+has to be updated before the email field ships (§7.4).
 
 **Sending.** Recommendation: **Resend**.
 
@@ -248,7 +227,7 @@ bumped, **before** the email field ships.
 The owner has full admin access over accounts, through the app (`/invite`, which becomes the "People" screen) and the
 CLI, but not into secrets.
 - **Sees:** every member's username, role, status (active or turned off) and shot count. Their recovery email and
-  whether it's verified (decrypted in the app, for helping someone back in). Every invite with its For note and
+  whether it's verified. Every invite with its For note and
   status (§8). The owner can also read the datasets directly, as the join page already says (`join.html:20-23`).
 - **Does:**
   - makes invite links and reset links (§4);
@@ -264,182 +243,63 @@ CLI, but not into secrets.
 
 ## 7. Consent and data use
 
-> **Legal review is required before launch.** Email collection, marketing email, and any sale of insights all need
-> it. This spec isn't legal advice. Its author isn't a lawyer, and the statute summaries below are for that review,
-> not a substitute for it. In particular, whether CCPA/CPRA applies to registry.coffee at all is for counsel: it has
-> revenue and volume thresholds, `1798.140(d)`.
+Scope here is what the owner asked for: a required terms checkbox, a separate unticked marketing checkbox, a record
+of acceptance, recommendations from logged bags, and aggregated insights for roasters later. Anything that may be
+legally required beyond that is a "confirm with counsel" line under task 0 (§13), not a feature in this spec.
 
-**One consent record per member.** It's a new `consents` table in the users dataset, one file per change, latest
-wins.
-- **Row:** `user_id`, `logged_at`, `terms_version`, `privacy_version`, `terms_at`, `terms_source` (`signup` /
-  `reaccept`), `marketing` (`none` / `pending` / `confirmed` / `withdrawn`), `marketing_at`,
-  `personalization` (bool, default true), `insights` (`unset` / `in` / `out`), `insights_at`, `wording_version`
-  (the `LEGAL_UPDATED` date of the text the person saw), and `source` (`signup` / `settings` / `unsubscribe` /
-  `notice`).
-- Every send, every recommendation and every insights export reads the **latest** row at the moment of use. Nothing
-  caches a consent past one request or job.
-- Add `("consents", "user_id", ("user_id",))` to `erase.py:28`'s `USERS`, so it goes with the account.
-- The append-only history is the audit trail of what was agreed and when.
+**Consent record.** A new `consents` table in the users dataset, one file per change, latest wins.
+- Row: `user_id`, `logged_at`, `terms_version`, `privacy_version` (each page's `LEGAL_UPDATED`, `site.py:73`; today
+  they share one value), `terms_at`, `marketing` (bool), `marketing_at`, and `source` (`signup` / `settings`).
+- Sends read the latest row at the time of sending. Add `("consents", "user_id", ("user_id",))` to `erase.py:28`'s
+  `USERS`, so it goes with the account.
 
-**0. Agreeing to the Terms and Privacy Policy (required at sign-up).** This replaces the passive line "By joining you
-agree to the Terms and Privacy Policy" (`join.html:20-23`). The same applies to owner setup (`signin.html`).
-- **Placement:** a native checkbox, **unticked**, just above the dock button, with the marketing checkbox
-  (point 1) directly under it. Both are visible next to "Create account", not tucked away.
-  - Markup: `<input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">` with
-    `<label for="agree">I've read and agree to the <a href="{site}/terms/" target="_blank" rel="noopener">Terms</a>
-    and <a href="{site}/privacy/" target="_blank" rel="noopener">Privacy Policy</a></label>`.
-  - Each link carries visually-hidden text "(opens in a new tab)".
-  - The whole label row is the hit target, at least 44 px tall (better-accessibility "Label and type every
-    control").
-  - Today's short data note ("Your shots, bags and photos are kept in the owner's private Hugging Face datasets…")
-    stays as plain text above it.
-- **Not silently disabled:** "Create account" stays enabled (better-accessibility: "Validate on submit, never by
-  disabling submit"). Submitting without the box ticked:
-  - shows `<p class="ferr" id="agree-error">` under the checkbox: "Tick the box to agree to the Terms and Privacy
-    Policy before creating your account.";
-  - sets `aria-invalid="true"` on the checkbox and moves focus to the **first** problem in form order. That's the
-    checkbox if every field above it is fine, so a screen reader reads its label, the unticked state and the error.
-  - Until the box is ticked, a quiet line under the button (`--ink-2`, part of the button's `aria-describedby`)
-    says "Agree to the Terms and Privacy Policy to continue."
-  - Ticking the box clears the error and the line.
-- **Server:** `/api/join` and owner setup (`/api/signin` with `setup_code`) need `agree: true`. Without it they answer
-  400 `{"field": "agree", "rule": "terms", "message": "Tick the box to agree to the Terms and Privacy Policy before
-  creating your account."}`. That's the same text as the page, from `rules.py` (§3).
-  - The check runs **before** the invite is used. So a missing tick never uses up a code, and the idempotent retry
-    (§11) still needs it.
-- **Recorded:** the first `consents` row is written in the same publish as the account (§11, one commit). It holds
-  `terms_version` and `privacy_version` (each page's `LEGAL_UPDATED`, `site.py:73`; today both pages share it),
-  `terms_at`, and `terms_source = signup`. The marketing column records its own choice in the same row; agreeing
-  to the terms never sets it.
+**0. Terms checkbox (required at sign-up).** It replaces the passive "By joining you agree…" line (`join.html:20-23`)
+on join and on owner setup.
+- A native checkbox, **unticked**, just above the button:
+  `<input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">`, labelled
+  `<label for="agree">I've read and agree to the <a href="{site}/terms/">Terms</a> and <a href="{site}/privacy/">Privacy
+  Policy</a></label>`. The links open in the same tab.
+- "Create account" stays enabled. Submitting unticked shows `<p class="ferr" id="agree-error">`: "Tick the box to
+  agree to the Terms and Privacy Policy before creating your account." It sets `aria-invalid` and focuses the first
+  problem, as for any field (§9).
+- **Server:** `/api/join` and owner setup need `agree: true`, or they answer 400 with that message (rule `terms`, in
+  `rules.py`). The check runs before the invite is used.
+- **Recorded:** the first `consents` row is written with the account, in the same publish (§11):
+  `terms_version`, `privacy_version`, `terms_at`, `source = signup`.
+- **When the terms change:** on a material change, follow counsel's advice.
 
-**0b. When the Terms or Privacy Policy change.**
-- `site.py` gains `LEGAL_CHANGES`: a list of `{version, material: bool, summary: [lines]}`, newest first. Bump
-  `LEGAL_UPDATED` and add an entry with every change to `privacy.html` or `terms.html`. The app reads the same module,
-  as it already reads `site.links` (`main.py:34`).
-- **Material change** (`material: true`): for example adding email collection (§5), marketing, or the insights use
-  (§7.3).
-  - At the next page load after sign-in, a member whose `terms_version` is older than the newest material version
-    is sent to `/agree`, enforced in `screen_user` (`main.py:131-136`).
-  - Writes then answer 403 "Accept the updated terms to keep saving." The phone's outbox keeps them (`app.js:61`,
-    `Held`) and sends them after acceptance, so nothing logged at the machine is lost.
-  - `/agree` shows the heading "We've updated our Terms and Privacy Policy", the effective date, and the `summary`
-    lines as a list. It links to the full pages (new tab) and to the change history on GitHub
-    (`{REPO}/commits/main/src/coffeedata/templates/privacy.html` and `…/terms.html`).
-  - The same unticked checkbox, and the buttons **Accept and continue**, **Sign out** and **Delete my account**.
-    Accept needs the tick, with the same error.
-  - Delete asks for a second tap ("Tap again to turn off your account and ask the owner to delete it"). It turns the
-    account off at once (`set_disabled`, signing it out everywhere) and records a deletion request for the owner, who
-    erases it with `coffeedata delete-user` (§6).
-  - Accepting writes a new `consents` row (`terms_source = reaccept`) and lands where the member was going.
-- **Minor change** (`material: false`, wording or contact details): no gate. A dismissible `.notice` once: "We've
-  made small updates to the Terms and Privacy Policy. [What changed]". The member's recorded versions don't change.
-- **Accessibility:** `/agree` is a normal page, not a modal. Focus starts on the `<h1>`, and the summary is a real
-  list. The error and focus rules match sign-up.
+**1. Marketing checkbox (optional).** Directly under the terms checkbox, separate from it and **unticked**: "Send me
+occasional emails about new coffees and features".
+- Sign-up works either way. It's also in Setup → Account, and is only enabled once an email is entered.
+- Ticking it sets `marketing = true` with `marketing_at`. Marketing goes only to members with `marketing = true` and
+  a verified email (§5), via Resend, from `news@send.registry.coffee`.
+- Recovery, verification and password-changed emails are separate templates and don't depend on this box.
 
-**1. Marketing email (opt-in).**
-- At sign-up, directly under the terms checkbox and next to the button, add a separate optional checkbox,
-  **unticked by default**: "Send me occasional emails about new coffees and features". It's never bundled with the
-  terms, because consent has to be freely given; sign-up works either way. It's also in Setup → Account. It's only enabled once an email is entered; the hint is
-  "You can stop them any time; one click in any email does it."
-- **Double opt-in:** ticking it records `pending` and sends "Confirm you'd like coffee news from registry.coffee
-  [Yes, send them]". Only a click from a **verified** address makes it `confirmed`. Verifying the email and
-  confirming marketing can be one click when they happen together; the confirmation text says both.
-- **Every marketing email:**
-  - a visible "Unsubscribe" link at the foot;
-  - `List-Unsubscribe: <{APP}/u/{token}>, <mailto:unsubscribe@send.registry.coffee>` and
-    `List-Unsubscribe-Post: List-Unsubscribe=One-Click` ([RFC 8058][rfc8058]; Gmail asks for one-click unsubscribe
-    from bulk senders, [Google][gmail-guidelines]);
-  - the postal address CAN-SPAM requires ([FTC][ftc-canspam]).
-  - The `{token}` is an HMAC of `user_id` and a purpose, so it needs no sign-in and lasts indefinitely. CAN-SPAM
-    needs at least 30 days.
-- A `POST` to `/u/{token}` writes `withdrawn` at once (CAN-SPAM allows 10 business days). The confirmation page
-  reads "You're unsubscribed. You'll still get password and account emails." It has no second step.
-- **Recovery, verification, password-changed and service notices are separate:** a different template set, no
-  opt-in needed, and no promotional content mixed in, so they stay transactional under CAN-SPAM.
-- Marketing goes through Resend's broadcast or batch API, from `news@send.registry.coffee`, under the same domain
-  set-up as §5.
+**2. Recommendations from logged bags and shots.** Suggestions are computed inside the app, from the member's own
+bags, ratings and shots, matched against the public catalog. The privacy page lists this use (point 4).
 
-**2. Personalized recommendations from logged bags and shots.**
-- These are made inside registry.coffee, from the member's own bags, ratings and shots, matched against the public
-  catalog. No person's data, or anything derived from it, is ever shared per person.
-- **At the point of use:** each recommendation carries its reason in `--ink-2`, for example "Recommended because you
-  rated Ethiopia Guji (washed) highly." It links to "Why am I seeing this?", which goes to the Setup toggle.
-- **Setup → Privacy:** "Personalized recommendations" (default on, disclosed at sign-up). Its hint: "Suggest
-  coffees from the bags and shots you've logged. Off: no suggestions, and nothing is computed from your logs for
-  them." When it's off, the recommendation surfaces aren't rendered, and the recommender skips the member.
-- On by default, because it's a feature of the service the member is using, disclosed up front. Whether that's
-  enough consent where they live is part of the legal review.
+**3. Aggregated insights for roasters (future).** Build only after task 0.
+- Only aggregates leave the app: counts, medians and distributions by coffee, roaster, origin, process or region.
+  Never rows, user ids, usernames, emails, photos or notes.
+- **Minimum group size: k = 11.** Suppress any cell with fewer than 11 distinct users, plus any cell that would let
+  a suppressed one be worked out from totals. This follows CMS's cell-size suppression rule (cells of 1 to 10 are
+  suppressed; [CMS][cms-cells], [CHHS][chhs]).
 
-**3. Selling anonymized usage insights to roasters (future; not to be built until counsel signs off).**
-- **What may leave:** aggregates only, such as counts, medians and distributions by coffee, roaster, origin, process
-  or region, computed by a reviewed job. Never rows, user ids, usernames, emails, photos, free-text notes, or
-  anything at a single-bag or single-shot level.
-- **Minimum group size: k = 11.** Suppress any cell with fewer than **11 distinct users** (1 to 10), following CMS's
-  long-standing cell-size suppression rule for released health data ([CMS][cms-cells]; [CHHS guidelines][chhs]).
-  - Also suppress complementary cells, so a suppressed cell can't be recovered by subtraction from totals.
-  - No cell may have one user contributing more than 50% of its rows.
-  - Regions are coarsened (state, or a metro of over 100k people).
-- **Small markets:** where a slice has fewer than 50 users, add calibrated noise, a differential-privacy mechanism
-  following NIST SP 800-226 ([NIST DP][nist-dp]), or don't release it. The privacy budget is set and recorded per
-  release.
-- **California (CCPA/CPRA), for counsel to confirm:**
-  - *Deidentified* information (`1798.140(m)`) requires three things: reasonable technical measures against
-    re-identification, a **public commitment** to keep it deidentified and not re-identify it, and **contracts**
-    obliging every recipient to do the same and not re-identify ([statute][ccpa-140]; summary: [NLR][nlr-deid]).
-  - So the privacy page gains that public commitment, and every roaster agreement carries no-re-identification,
-    no-onward-transfer and audit clauses.
-  - If any released data were *personal information* (`1798.140(v)`), disclosing it for money is a *sale*
-    (`1798.140(ad)`). That needs notice and a "**Do Not Sell or Share My Personal Information**" link and opt-out
-    (`1798.120`, `1798.135`, [statute][ccpa-120]). The spec avoids releasing personal information, but the link is
-    budgeted in case counsel says it's needed.
-- **Data already collected:** data collected under the current promise **must not** be used for selling insights
-  without new consent. Today the privacy page says aggregated data is used "to run and improve the service and to
-  publish statistics" (`privacy.html:60-62`) and "We don't sell or rent your personal data" (`privacy.html:77`).
-  The new terms apply only to data logged **after** their effective date, unless an existing member explicitly opts
-  in (`insights = in`, `source = notice`).
-  - Every insights job filters each member's rows by `logged_at` ≥ the effective date, unless they opted in.
-  - `terms.html:31-33` already has an aggregated-use licence. Whether that covers a sale is a question for counsel,
-    and this spec doesn't rely on it.
-- **Opt-out for everyone:** Setup → Privacy, "Don't include my data in aggregated insights". Recommended even where
-  it isn't required. It's honoured from the next export, and excluded members' rows never enter the job.
-- **Erasure:** an erased member's rows leave every future release. Releases already delivered were aggregates and
-  aren't recalled; the privacy page says so.
-
-**4. Privacy page: changes as a diff.** The page ships, with `LEGAL_UPDATED` (`site.py:73`) set to the effective
-date, **before** any of this collects or uses data.
-- `privacy.html:33`, the account item: "your username, a hash of your password and, if you add one, a recovery email
-  address (encrypted when stored)."
-- After `:35`, a new item: "**Your choices:** whether you want marketing email, personalized recommendations and
-  aggregated insights, with when you chose."
-- "Why we use it" (`:55-59`), add:
-  - "**Your email:** password resets, confirming the address, and notices about your account or the service.
-    Marketing email only if you opt in and confirm."
-  - "**Recommendations:** suggesting coffees from the bags and shots you log, inside registry.coffee. You can turn
-    this off in Setup."
-- Replace `:60-62` with: "We may use **aggregated, de-identified** data to run and improve the service, to publish
-  statistics, and, from {effective date}, to provide insights to roasters, for which they may pay. These are
-  aggregates of at least 11 people and never individual records. We commit to keeping that data de-identified and
-  not trying to re-identify it, and we require anyone who receives it to commit to the same. Data from before
-  {effective date} is included only if you opt in."
-- "Who processes it" (`:66-72`), add "**Resend:** sends the app's emails."
-- "What we don't do" (`:76-80`): keep "We don't use third-party tracking or analytics." It stays true, because the
-  recommender runs in the app and Resend's tracking is off. Change "We don't sell or rent your personal data" to "We
-  don't sell or rent your personal data. Aggregated insights, described above, aren't personal data."
-- "Your choices and rights" (`:88-96`), add:
-  - "In Setup → Account and Privacy: remove your email; stop marketing (or use the link in any marketing email);
-    turn off recommendations; leave your data out of aggregated insights."
-  - The "Do Not Sell or Share" link, if counsel requires it.
-- "How long we keep it": "Your email and choices are deleted with your account."
-- **Notice to existing members:** a dismissible in-app notice on next sign-in, worded by counsel, with the effective
-  date. Plus an email to those with a verified address, at least 30 days before the effective date if counsel agrees.
-  It offers, without pre-selecting anything: "Include my earlier logs in aggregated insights" and "Send me occasional
-  emails about new coffees and features".
+**4. Privacy page changes.** `privacy.html` currently says the app keeps "your username and a hash of your password"
+(`:33`) and uses aggregated data "to run and improve the service and to publish statistics" (`:60-62`). Before
+email collection ships, update the page and bump `LEGAL_UPDATED` (`site.py:73`):
+- Collected (`:33`): add "a recovery email address, if you add one" and "whether you agreed to the Terms and opted
+  into marketing, and when".
+- Uses (`:55-62`): password resets and account notices by email; marketing email if you opt in; coffee
+  recommendations from the bags and shots you log; aggregated insights provided to roasters.
+- Who processes it (`:66-72`): add "**Resend:** sends the app's emails."
+- "We don't use third-party tracking or analytics" (`:79`) stays true and stays.
+- Exact wording comes after counsel's review (task 0).
 
 ## 8. Named invites (owner requirement)
 
 - **What:** an optional **For** note on each invite, so the owner can track links: free text, at most 60 characters
-  after trimming and collapsing whitespace, with no control characters. Owner only. **Never** sent to `/join`,
-  `/api/invites/check`, the invitee, or other members.
+  after trimming and collapsing whitespace, with no control characters. It shows only on the owner's invite screen.
 - **Stored:** a new nullable `for_label` field on `Invite` (`accounts.py:119-134`), plus `created_at`. The
   in-memory map keeps only the latest `logged_at`, so creation time has to be stored. Add both columns to
   `SCHEMAS["invites"]` (`lake.py:444-457`). Old files read as NULL: `latest` uses `union_by_name` (`lake.py:704`),
@@ -459,20 +319,11 @@ date, **before** any of this collects or uses data.
 | expired | Expired {date} · made {date} |
 | revoked | Revoked {date} · made {date} |
 
-  Open rows keep "Send a new link" and "Revoke invite". Every row gets "Edit note" and "Delete invite"; used rows
-  get only "Edit note". Expired and revoked rows older than 90 days are collapsed under "Older links ({n})".
+  Open rows keep "Send a new link" and "Revoke invite". Every row gets "Edit note". Expired and revoked rows older
+  than 90 days are collapsed under "Older links ({n})".
 - **Edit and clear:** "Edit note" opens the input in place (Save / Cancel, busy state "Saving…"), calling
-  `POST /api/invites/{id}/label` with `{for_label}`. An empty value clears the note. The lake is append-only, so an
-  edit writes the new version **and deletes the record's earlier files in the same commit** (`CommitOperationDelete`,
-  as `erase.py` does). The old note is then gone from the dataset, apart from version history, which the privacy
-  page already covers.
-- **Delete:** `POST /api/invites/{id}/delete`, behind `confirmTap` ("Tap again to delete this invite and its note").
-  It's allowed for revoked or expired invites (an open one is revoked first) and removes every file of the record.
-  A used invite can't be deleted on its own: it records how the account was made, and goes with the account
-  (`erase.py:28` already erases invites by `used_by`). Clearing its note is the way to drop the name.
-- **Privacy page** (`privacy.html`, "What the app collects", after the account item). Add this line and bump
-  `LEGAL_UPDATED` (`site.py:73`):
-  `<li><strong>Invite notes:</strong> the owner may note who an invite link is for. The note is kept only with that invite, and is deleted with it.</li>`
+  `POST /api/invites/{id}/label` with `{for_label}`. An empty value clears the note. That writes a new version of the
+  invite; latest wins. Invites go with the account they made (`erase.py:28`).
 
 ## 9. Target behaviour by state
 
@@ -583,11 +434,11 @@ it often.
   - NFC: composed and decomposed `é` verify the same.
 - **Named invites:**
   - a note of 60 characters is accepted, and 61 is refused with the message;
-  - the note never appears in `/api/invites/check`, `/join`, or the invitee's pages (search the HTML and JSON for it);
+  - the note isn't in `/api/invites/check` or `/join`;
   - only the owner can set it (a member gets 404/400);
   - it survives a restart and a renew;
   - the list shows each status (open, used by `maya`, expired, revoked) with its dates;
-  - after an edit, a clear or a delete, no file of the record in the users lake contains the old note;
+  - edit and clear show the new value after a restart;
   - old invite files without the columns still load, with `created_at` filled from the fallback;
   - `erase.py` removes an invite whose note was set.
 - **Reset links:**
@@ -613,7 +464,7 @@ it often.
     signed in.
   - `delete window.caches` (via `addInitScript`): join still lands on `/`.
   - Reload after `/join#CODE`: the code is still filled in.
-  - Invite screen: a double tap makes one link; a note is shown; edit, clear and delete each show their busy state.
+  - Invite screen: a double tap makes one link; a note is shown; edit and clear show their busy state.
   - axe on every state above, light and dark.
 - **In-app user agents:** `…Mobile/15E148 Instagram 390.0.0.27.105 (iPhone15,2; iOS 18_5; …)` and
   `…[FBAN/FBIOS;FBAV/480.0.0.40.104;…]` show the banner; plain Safari and Chrome don't.
@@ -631,43 +482,35 @@ it often.
     `session_epoch` and sends the "changed" notice;
   - limits: the 4th request in an hour for one email and the 11th for one IP send nothing, and the daily cap holds;
   - links use `APP` even with a forged `Host` header;
-  - the verify link works once and expires after 24 h; an unverified email can't receive a reset; changing the email
-    notifies the old address;
-  - `contacts` rows hold no plaintext email (search the parquet bytes), and the HMAC lookup finds them;
-  - remove, change and `delete-user` leave no file of the record, and the squash is called;
-  - the owner sees the decrypted email, and a member's pages never show anyone else's.
+  - the verify link works once and expires after 24 h; an unverified email can't receive a reset;
+  - `delete-user` removes the `contacts` record;
+  - the owner sees members' emails, and a member's pages never show anyone else's.
 - **Consent:**
-  - `/api/join` and owner setup without `agree: true` give 400 `terms`; the invite stays open and no account or
-    consent row is written;
-  - the page keeps "Create account" enabled; submitting unticked shows the error, sets `aria-invalid`, and focuses
-    the checkbox (Playwright, and axe on that state);
-  - marketing is independent of the terms: agreeing alone stores marketing `none`; marketing ticked with agreement
-    gives `pending`; marketing never stands in for agreement;
-  - the sign-up row carries `terms_version`, `privacy_version` (equal to `LEGAL_UPDATED`), `terms_at` and
-    `terms_source = signup`;
-  - after a material `LEGAL_CHANGES` entry and a `LEGAL_UPDATED` bump, an older member is sent to `/agree` and writes
-    get 403 (the outbox keeps them); Accept writes a `reaccept` row, clears the gate, and the outbox then syncs;
-    a minor entry shows only the notice;
-  - Delete my account on `/agree` turns the account off and signs it out;
-  - the marketing box renders unticked, and an untouched sign-up stores `none`;
-  - nothing goes to a `pending`, `withdrawn`, unverified or `none` member; only `confirmed` and verified gets mail;
-  - one-click `POST /u/{token}` withdraws, and the headers are present on every marketing mail and absent on
-    transactional ones;
-  - `wording_version` and timestamps are recorded;
-  - turning personalization off removes the recommendation markup and skips the member in the recommender;
-  - the insights job drops opted-out members, rows from before the effective date for members who didn't opt in,
-    and every cell under 11 users, with complementary suppression;
-  - `delete-user` removes the `consents` and `contacts` records;
-  - the privacy page's built HTML still contains "We don't use third-party tracking or analytics".
+  - `/api/join` and owner setup without `agree: true` give 400 `terms`; the invite stays open and no account is made;
+  - submitting unticked shows the error on the checkbox and focuses it; the Terms and Privacy links have no
+    `target`;
+  - the marketing box renders unticked, and is independent of the terms: agreeing alone stores `marketing = false`;
+  - the sign-up row carries `terms_version`, `privacy_version` (equal to `LEGAL_UPDATED`) and `terms_at`;
+  - marketing sends skip members with `marketing = false` or no verified email;
+  - the insights job drops every cell under 11 users, with complementary suppression;
+  - `delete-user` removes the `consents` record.
 - **By hand, once:** iPhone Safari with 1Password, the Instagram app, Android Chrome, and VoiceOver through join and
   reset.
 
 ## 13. Tasks, in order
 
-0. **Legal review required before launch: email collection, marketing and insights sale.** Counsel reviews §5 and
-   §7, the privacy and terms text, whether CCPA/CPRA and CAN-SPAM apply and how, the roaster contract terms, and the
-   member notice. Nothing that collects email or consent ships before this. The insights sale also waits for its
-   own sign-off.
+0. **Legal review required before launch: email collection, marketing and insights sale.** Nothing that collects
+   email or consent ships before it, and the insights sale waits for its own sign-off. Confirm with counsel:
+   - the privacy and terms wording (§7.4), and whether and how to tell existing members;
+   - what to do on a material terms change (re-acceptance or notice);
+   - CAN-SPAM for marketing email (it requires an unsubscribe in every message, a postal address, and opt-outs
+     honoured within 10 business days; [FTC][ftc-canspam]), and whether to add `List-Unsubscribe` headers;
+   - whether CCPA/CPRA applies; if so, what de-identified data needs (`1798.140(m)`: a public commitment and recipient
+     contracts against re-identification, [statute][ccpa-140]), and whether a "Do Not Sell or Share" opt-out is needed
+     (`1798.120`, [statute][ccpa-120]);
+   - whether data logged under the current privacy page can be used for insights without new consent, and whether
+     `terms.html:31-33`'s aggregated-use licence covers it;
+   - whether the named-invite note (a third party's name) needs a privacy-page line.
 1. **S** Quick fixes: guard `caches` (`app.js:1205`, `:1241`), mark only the failing field, clear-then-set the hint,
    `:disabled` / `aria-disabled` styles, keep the code in `sessionStorage`.
 2. **M** `app/rules.py`: every rule and message, with the 10 minimum. `accounts.py` uses it. Field-tagged 400s, dots
@@ -678,33 +521,27 @@ it often.
 5. **L** `app.js`: live checks, the `@` suggestion, the submit states (busy, slow, retry, timeout), focus, and
    `post()` reading field details. CSS: rule list, spinner, `.ferr`.
 6. **S** Owner reset links: `/reset#code`, the copy, "Make reset link" with its confirm, busy and copy states.
-7. **S–M** Named invites: `for_label` and `created_at`, the For input, `invite_log()` and the list, edit, clear and
-   delete (removing old files). Tests.
+7. **S–M** Named invites: `for_label` and `created_at`, the For input, `invite_log()` and the list, edit and clear.
+   Tests.
 8. **S–M** Invite screen busy states and focus for every action; the invite link points at the site.
 9. **S** In-app browser banner.
 10. **S** Measure cold start.
 11. **M** The site's `/join/` "Brewing…" waking page, CORS on `/health`, site CSP.
-12. **M** Privacy and terms changes (§7.4, plus the named-invite line), `LEGAL_UPDATED` and its first `LEGAL_CHANGES`
-    entry, marked material, and the member notice.
-    Deployed **before** 14–17. Wording after task 0.
-13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` and `EMAIL_KEY` in Secret Manager, and
+12. **S** Privacy page changes (§7.4) and `LEGAL_UPDATED`, deployed **before** 14–17. Wording after task 0.
+13. **S** Resend account, DNS (DKIM, SPF, DMARC `p=none`), `RESEND_API_KEY` in Secret Manager, and
     the `Mailer` protocol with `FakeMailer`.
-14. **M** The `contacts` table: HMAC lookup, AES-GCM, the verify flow (`/verify`), Setup → Account email row, erase
-    and squash. Tests.
+14. **M** The `contacts` table, the verify flow (`/verify`), the Setup → Account email row, and erase. Tests.
 15. **M** Email recovery: `/forgot`, `/api/forgot` with background send, rate limits, 30-minute codes, the
     password-changed notice, and the email templates. Tests.
 16. **S** The sign-up email field and nudge, and the existing-member prompt on Today.
-17. **L** `consents`: the required terms checkbox (sign-up and owner setup, server `agree` check, the acceptance
-    fields), `LEGAL_CHANGES` with the `/agree` re-acceptance gate (Accept, Sign out, Delete my account) and the
-    minor-change notice; the marketing checkbox, double opt-in, unsubscribe with `List-Unsubscribe` and one-click POST,
-    the personalization toggle and "Recommended because…", and the insights opt-out. Erase covers them. Tests.
+17. **S–M** `consents`: the required terms checkbox (sign-up and owner setup), the server `agree` check, the acceptance
+    record, and the marketing checkbox (sign-up and Setup) honoured by sends. Erase covers it. Tests.
 18. **L** Tests: fixtures, parity, Playwright (join, invite, forgot and verify, consent screens), in-app user agents,
     slow and lost-reply servers, waking page.
 19. **S** `DESIGN.md` copy table, `RUNNING.md` cold-start numbers and email operations. Decide on `min_instances`
     once there's data.
-20. **L, later, behind task 0's insights sign-off** The insights export job: k = 11, complementary suppression,
-    noise for small markets, effective-date and opt-out filters, and a release log. Plus the roaster contract
-    template, from counsel.
+20. **M, later, after task 0's insights sign-off** The insights export job: aggregates only, k = 11 with
+    complementary suppression, and a release log.
 
 [meta-autofill]: https://www.meta.com/help/meta-pay/1896636927418202/
 [adstatus]: https://adstatus.app/blog/meta-in-app-browser-autofill-lead-gen-2026
@@ -720,17 +557,13 @@ it often.
 [idem]: https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/
 [owasp-fp]: https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html
 [owasp-auth]: https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
-[owasp-ps]: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 [resend]: https://resend.com/pricing
 [postmark]: https://postmarkapp.com/pricing
 [ses]: https://aws.amazon.com/ses/pricing/
 [mg-cmp]: https://devtoolpicks.com/blog/resend-vs-postmark-vs-mailgun-solo-developers-2026
 [gmail-guidelines]: https://support.google.com/a/answer/81126
-[rfc8058]: https://www.rfc-editor.org/rfc/rfc8058
 [ftc-canspam]: https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business
 [cms-cells]: https://www2.ccwdata.org/documents/10280/19002246/ccw-output-review-dos-donts.pdf
 [chhs]: https://kb.data.chhs.ca.gov/ddg-1/6.-justification-of-thresholds-identified
-[nist-dp]: https://csrc.nist.gov/pubs/sp/800/226/final
 [ccpa-140]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140
 [ccpa-120]: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.120
-[nlr-deid]: https://natlawreview.com/article/what-de-identified-data
