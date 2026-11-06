@@ -283,3 +283,4 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
   - #108 follow-up minors are in issuecomment-6690379936 (items 2-11).
   - The contract version was hand-edited because no generator exists for the public contract; consider adding one.
 - Owner decision (2026-11-06): the ruleset requires up-to-date branches (strict=true; the command above is updated). Priorities now: #111, #113, #112.
+- Owner decision (2026-11-06, #112): guard scope = remove, but admin can review any removed coffee and flip it back (per-coffee override on coffee_id/hash, versioned, feeds next draft). Group approval = yes for evidence-matching members; plus all coffees browsable in admin with keyword search and filters on dataset values (Phase 1).
