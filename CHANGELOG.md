@@ -65,6 +65,15 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   which batch counts for up to 346 products a week, so it needs the full evaluation first
   (`eval/run_quality/README.md`) (#93).
 
+- **Reproducible releases.** Every build records each release table's row count and an order-independent content
+  hash (`builds` rows of kind `table_hash`; the per-build `release_build_id` is left out), and
+  `coffeedata build-hashes [ID] [--against ID] [--verify]` prints them, compares two builds' and re-hashes a
+  release's files, exiting 1 on a difference. `tests/test_reproducible.py` builds a fixture lake twice through
+  `coffeedata build`, the second time with every file's rows and every folder's files in reverse order, and
+  compares every model table row for row; the second build runs in another time zone, and dbt's session is now
+  pinned to UTC (`dbt/profiles.yml`), as production already ran. `docs/ingestion/RUNBOOK.md` Â§5.6 says how to
+  rebuild a served release from raw at its commit and compare its hashes.
+
 ### Changed
 
 - The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
@@ -117,6 +126,16 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   for future roast dates (#50); Save reads "Savingâ€¦" until the server replies (#58); fresh pages after writes, no
   duplicate resends and roast-date checks (#66).
 - Tests: a date-dependent bag comparison test (#51).
+- Builds: every "latest" pick has a total order, so the same lake builds the same tables whatever order DuckDB
+  reads rows in. Ties in time are broken by the batch id (the counted batch of a roaster-week, a roaster's last ok
+  fetch), by the value picked (probes, registry names, an attempt's adapter, a partial run's reason and a challenged
+  run's edge, verdict labels) or by the row's hash
+  (enrichments), and the registry's lake sources are listed alphabetically (`string_agg` without an order gave
+  different orders on different reads). `mart_dial_in` and `mart_bag` take every `best_*` value from one shot:
+  the highest rated, the latest of equal ratings, then `shot_id` (before, equally rated shots gave arbitrary and
+  possibly mixed values). `registry.STATE_SQL` breaks ties as `dim_roaster` does. On the real lake (2026-11-04
+  copy) no pick had a tie and no roaster had two lake sources, so no catalog output changes; one of four
+  coffee-and-grinder groups in the shot log had equally top-rated shots with different recipes.
 - Crawl memory (#91): `crawl-generic` was OOM-killed at 2Gi on 2026-11-02. Every httpx response refers to itself
   through its stream, so each page body waited for Python's full garbage collection; the client now breaks that
   cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`; a sitemap
