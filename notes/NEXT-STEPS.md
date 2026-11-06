@@ -261,3 +261,6 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - contract wording on previous_price_usd;
   - CHANGELOG entries for public 2.4.0 and raw 1.6.0;
   - README / marketplace README still say 45,000.
+- 2026-11-06 #120: the final review is clean (issuecomment-6689574646). Merge on green CI once it's out of draft (the owner clicks Ready). Follow-up minors:
+  - m1a: a timing tell inside the 15-min retry window (the limiter refuses before the password check);
+  - m4a: when the 'Make another link' confirm times out, the For box stays open over the old link.
