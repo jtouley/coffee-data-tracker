@@ -231,6 +231,62 @@ def test_classify_runs_when_configured_even_if_rules_only_is_allowed(lake, monke
     assert seen == ["collect", "submit"]
 
 
+def test_classify_fails_when_claude_rejects_the_batches(lake, monkeypatch, capsys):
+    """A key that is set but revoked passes the config check; the rejected submit must still fail the job."""
+    import anthropic
+    import httpx
+    import pytest
+
+    from coffeedata import cli
+
+    _week(lake)
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+
+    class Batches:
+        def create(self, requests):
+            raise anthropic.APIError(
+                "invalid x-api-key", httpx.Request("POST", "https://api.anthropic.com"), body=None
+            )
+
+    monkeypatch.setattr(
+        anthropic, "Anthropic", lambda **_: SimpleNamespace(messages=SimpleNamespace(batches=Batches()))
+    )
+    with pytest.raises(SystemExit, match="verdict batch submit failed: invalid x-api-key"):
+        cli.main(["classify"])
+    assert (
+        '"error": "invalid x-api-key"' in capsys.readouterr().out
+    )  # the JSON summary is still printed first
+
+
+def test_weekly_still_builds_after_a_failed_classify_and_then_fails(monkeypatch):
+    import argparse
+
+    import pytest
+
+    from coffeedata import cli
+
+    _no_verdicts(monkeypatch)
+    monkeypatch.setenv("COFFEEDATA_VERDICT_MODEL", "m")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
+    calls = []
+    for name in ("cmd_probe", "cmd_ingest", "cmd_enrich", "cmd_publish", "_export_and_site"):
+        monkeypatch.setattr(cli, name, lambda *a, n=name: calls.append(n))
+
+    def classify(a):
+        calls.append("cmd_classify")
+        raise SystemExit("Claude's verdict batch submit failed: overloaded")
+
+    monkeypatch.setattr(cli, "cmd_classify", classify)
+    monkeypatch.setattr(cli, "cmd_build", lambda a: calls.append("cmd_build") or True)
+    ns = argparse.Namespace(run_date="2026-11-09", discover=False, sample=None, enrich_limit=None,
+                            db="build/coffee.duckdb", out="build/site", accept_volume_change=False)  # fmt: skip
+    with pytest.raises(SystemExit, match="classify failed; the build ran on the verdicts already stored"):
+        cli.cmd_weekly(ns)
+    assert calls.index("cmd_classify") < calls.index("cmd_build") < calls.index("_export_and_site")
+
+
 def test_weekly_fails_before_crawling_without_verdicts(monkeypatch):
     import argparse
 

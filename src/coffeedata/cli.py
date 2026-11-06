@@ -251,6 +251,13 @@ def cmd_classify(args: argparse.Namespace) -> None:
         out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
         waiting &= verdict.open_batch_ids(lake)
     _print(out)
+    if err := out["submit"].get("error"):
+        # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
+        # model or key, so the build job's execution fails and emails; the build still runs on the stored verdicts.
+        raise SystemExit(
+            f"Claude's verdict batch submit failed: {err}. This week's new product versions have no verdicts yet "
+            "(docs/ingestion/RUNBOOK.md, verdicts)."
+        )
 
 
 def cmd_eval_classifier(args: argparse.Namespace) -> None:
@@ -528,7 +535,12 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
-    cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45, allow_rules_only=rules_only))
+    classify_failed = None
+    try:  # as in the build job: a failed classify fails the run, but the build still runs on the stored verdicts
+        cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45, allow_rules_only=rules_only))
+    except SystemExit as e:
+        classify_failed = str(e.code)
+        print(f"classify failed: {classify_failed}", file=sys.stderr)
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: verdicts"))
     # The checks gate publishing, not the run: the build is recorded and published either way (its results and a
     # copy of its catalog marts), but only a passing build replaces the current marts, public tables and site.
@@ -548,6 +560,8 @@ def cmd_weekly(args: argparse.Namespace) -> None:
         raise SystemExit(f"weekly run {run}: the build failed its data checks; nothing derived was published")
     # Facts-only tables and the site come from the served release (this build's, since it passed).
     _export_and_site(SERVED_DB, args.out)
+    if classify_failed:
+        raise SystemExit(f"weekly run {run}: classify failed; the build ran on the verdicts already stored")
 
 
 def cmd_shot(args: argparse.Namespace) -> None:

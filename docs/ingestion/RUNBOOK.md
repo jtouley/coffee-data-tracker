@@ -844,7 +844,8 @@ Now three things stop that from happening silently:
 - **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
   which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
   uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
-  so the `ingest job build failed` email arrives. An API error in classify fails the same way. With
+  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
+  fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
   `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
 - **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
   (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
