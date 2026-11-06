@@ -233,6 +233,35 @@ def coverage_claim_messages(db: Path) -> list[str]:
     return out
 
 
+def verdict_coverage_message(db: Path) -> str | None:
+    """The share of listed coffees that Claude's verdicts decided in this build (dim_coffee.classified_by), by
+    model: what verdicts_cover_catalog judges. None when dim_coffee wasn't built."""
+    import duckdb
+
+    if not db.exists():
+        return None
+    con = duckdb.connect(str(db), read_only=True)
+    try:
+        built = con.execute(
+            "select count(*) from information_schema.tables where table_name = 'dim_coffee'"
+        ).fetchone()
+        if not built or not built[0]:
+            return None
+        counts = con.execute(
+            "select count(*), count(*) filter (where classified_by = 'claude') from dim_coffee where is_listed"
+        ).fetchone()
+        listed, by_claude = counts or (0, 0)
+        models = con.execute(
+            "select verdict_model, count(*) from dim_coffee where is_listed and classified_by = 'claude'"
+            " group by 1 order by 2 desc"
+        ).fetchall()
+    finally:
+        con.close()
+    share = f"{by_claude / listed:.1%}" if listed else "n/a"
+    named = ", ".join(f"{m} {n:,}" for m, n in models) or "no verdict model"
+    return f"{by_claude:,} of {listed:,} listed coffees ({share}) decided by Claude's verdicts ({named}); the rest by the rules"
+
+
 def tag_parity_messages(db: Path, examples: int = 5) -> list[str]:
     """Products whose raw tags (what registry.py, enrich.py and verdict.py read) and decoded tags (what the build
     reads) give different decisions (int_tag_decoding_parity; the python_readers_agree_on_tags test fails the

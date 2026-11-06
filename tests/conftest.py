@@ -16,6 +16,13 @@ def load(name: str):
     return json.loads((FIX / name).read_text())
 
 
+@pytest.fixture(autouse=True)
+def _rules_only(monkeypatch):
+    """Tests build synthetic lakes without Claude, so they take the explicit rules-only opt-out
+    (verdict.rules_only_allowed). Tests of the verdict guard delete it."""
+    monkeypatch.setenv("COFFEEDATA_ALLOW_RULES_ONLY", "1")
+
+
 def load_roasters() -> dict[str, Roaster]:
     """The recorded stores (fixtures/roasters.csv), keyed by roaster id."""
     with (FIX / "roasters.csv").open() as f:

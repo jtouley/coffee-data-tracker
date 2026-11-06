@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.4.0
+version: 2.5.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -304,6 +304,15 @@ schema:
     dimension: timeliness
     severity: error
     description: The newest counted run is at most max_run_age_days old.
+  - type: custom
+    engine: dbt
+    implementation: tests/verdicts_cover_catalog.sql
+    dimension: accuracy
+    severity: error
+    description: Claude's coffee-or-not verdicts ran for the release. The build has a verdict model, and at least
+      min_verdict_share of listed coffees were decided by a verdict (about 95% expected; this week's new product
+      versions get theirs a week later). Off only for an explicitly rules-only build, which is never served
+      publicly.
   - type: custom
     engine: dbt
     implementation: tests/public_tables_are_facts_only.sql
@@ -606,6 +615,8 @@ customProperties:
   value: 6
 - property: max_run_age_days
   value: 8
+- property: min_verdict_share
+  value: 0.85
 - property: servingPolicy
   value: A release is served only when every quality rule passes; otherwise the previous release stays served.
 - property: license

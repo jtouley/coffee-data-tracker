@@ -1,5 +1,12 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
+# Claude's verdicts are required for a release: `coffeedata classify`, `build` and `weekly` fail without
+# COFFEEDATA_VERDICT_MODEL and an Anthropic key. A local lake is for development, so make opts out explicitly
+# (COFFEEDATA_ALLOW_RULES_ONLY=1: classify skips, the build's verdict gate is off); a remote lake (hf://, s3://)
+# never does. Override with `make build COFFEEDATA_ALLOW_RULES_ONLY=`.
+ifeq ($(findstring ://,$(COFFEEDATA_LAKE)),)
+export COFFEEDATA_ALLOW_RULES_ONLY ?= 1
+endif
 
 .PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app contracts lint test smoke clean
 

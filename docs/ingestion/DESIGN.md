@@ -187,6 +187,7 @@ C never had a PR.
 | Parked-store retry | `coffeedata crawl-retry --connector X` | its parked progress | the same partition |
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
 | Post-load enrichment | `coffeedata enrich-week [--submit]` | `job_manifests` (merge done), raw rows | `enrichments`, `llm_batches` |
+| Verdicts | `coffeedata classify` (fails without a verdict model or key, unless rules only is allowed) | snapshots, bodies, `verdicts`, `verdict_batches` | `verdicts`, `verdict_batches` |
 | Build + gate, publish | `coffeedata build`, `coffeedata publish` | the lake | marts, release, `builds` |
 | Fetch-health check | `coffeedata fetch-health` (polled; section 14) | `job_manifests`, the lake, a copy of the week's partitions (fetches, run_manifests) | `job_manifests` (job `fetch-health`: the verdict and its list); exit code (systemic: emails the owner) |
 | Egress check | `coffeedata egress-check` | `job_manifests` (production crawls; arms are left out) | exit code (a failed build emails the owner) |
@@ -206,6 +207,14 @@ the registry). There is no per-service copy.
   remain for the raw shape.
 - **Enrichment is a separate job after the load.** It reads raw from the lake and picks Claude's candidates with the
   build's own rules (`products.py`, shared with `stg_products`). It runs after the merge and before the build.
+- **Verdicts are required, and their absence is loud.** Every product the rules don't exclude outright is decided
+  by Claude's stored verdict where there is one (`stg_products`, `products.decide`), and `dim_coffee` carries what
+  decided it (`classified_by`: `claude` or `rules`, and `verdict_model`). Until 2026-11 the build job had no verdict
+  model, `classify` skipped with exit 0, and every release was the rules alone. Now `classify` exits non-zero
+  without a model or key, the build's `verdicts_cover_catalog` test fails without a model or when under 85% of
+  listed coffees are `claude` (expected about 95%: this week's new versions wait a week, and `unsure` falls back to
+  the rules; the evidence is in `dbt/dbt_project.yml`), and Terraform requires `verdict_model`. Local and dev runs
+  opt out explicitly (`--allow-rules-only`, `COFFEEDATA_ALLOW_RULES_ONLY=1`). RUNBOOK §5.5.
 - **Enrichment submits to Claude only with an explicit `--submit`**, and only with credentials. Without it, it
   counts candidates and sends nothing. Sims and tests never pass it. (One sim sent two real batches before this guard
   existed; the owner let them run.)
@@ -250,7 +259,7 @@ vendored ODCS schema and checks that each producer writes exactly its contract's
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
 | **manifest / control** | 1.2.0 (1.2.0: the `fetch-health` job and its detail; descriptions only, the interface is 1.1.0's) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check, fetch-health (and, only with re-fetch on, the crawl passes after it) |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.4.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
+| **public** | 2.5.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`; 2.5.0 adds the `verdicts_cover_catalog` rule and `min_verdict_share`, no column change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and

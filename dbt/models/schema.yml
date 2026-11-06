@@ -309,6 +309,10 @@ models:
     columns:
       - name: input_hash
         data_tests: [unique, not_null]
+      - name: classified_by
+        description: "claude (a stored verdict decided) or rules."
+      - name: verdict_model
+        description: "The verdict's model when classified_by = claude, else null."
   - name: mart_market
     data_tests:
       - unique:
@@ -458,6 +462,16 @@ models:
         description: "rules or llm: what the attributes come from."
         data_tests:
           - accepted_values: {arguments: {values: [rules, llm]}}
+      - name: classified_by
+        description: >-
+          claude or rules: what decided that the latest version is coffee. claude is a stored verdict for the
+          build's verdict model and definition (stg_verdicts); rules is the rules alone (no verdict yet, an unsure
+          verdict, or a rules-only build). verdicts_cover_catalog checks the share of listed coffees with claude.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [claude, rules]}}
+      - name: verdict_model
+        description: "The Claude model whose verdict decided it (classified_by = claude); null for the rules."
   - name: dim_roaster
     description: One row per roaster in the registry, with its site, platform, status and coffee counts.
     columns:
