@@ -235,3 +235,6 @@ Every frontend change (site, app, templates, CSS, JS) is driven end to end with 
 
 The design-skills specialist review reads those screenshots. Lesson: the sign-up and invite problems the tester hit would have been caught if this had been done before.
 - Review policy, addition (owner, 2026-11-06): every specialist review runs /code-review at high effort on the full PR diff, plus its skills. It posts one full review as a PR comment, with each finding tagged by severity and source (the /code-review run or a named skill).
+- Review policy, addition 2 (owner, 2026-11-06): "Verify the premise first" goes in each review, and into CLAUDE.md via the smoke-test PR.
+  - Steps: existing work; the real failure (logs, not summaries); reproduce it with the exact output and exit code; primary sources; who can fix it; only then act, and show the owner any public post outside the repo first.
+  - Each review's PR comment ends with "Premise checks": what was checked, what was found, what was not verified.
