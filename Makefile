@@ -1,7 +1,7 @@
 # Coffee Data. The lake is $COFFEEDATA_LAKE (default ./lake); set it to hf://datasets/<you>/<name> to publish.
 SAMPLE ?=
 
-.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app contracts lint test clean
+.PHONY: install hooks fmt init weekly ingest probe discover enrich build site publish mcp app contracts lint test smoke clean
 
 install:
 	uv sync
@@ -53,8 +53,11 @@ contracts:  ## regenerate the internal ODCS contracts (contracts/internal/) from
 lint:  ## the same checks as the pre-commit hooks, on every file
 	uv run pre-commit run --all-files
 
-test: lint  ## offline: unit tests + dbt builds over synthetic lakes
-	uv run pytest -q
+test: lint  ## offline: unit tests + dbt builds over synthetic lakes, one pytest-xdist worker per CPU; `make smoke` runs the rest
+	uv run pytest -q -n auto -m "not smoke"
+
+smoke:  ## the fast smoke suite CI requires on every PR: dbt, ingestion and web over the recorded fixtures, no network
+	uv run pytest -q -m smoke $(if $(PART),tests/test_smoke_$(PART).py)
 
 clean:
 	rm -rf build dbt/target dbt/logs

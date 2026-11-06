@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 from pathlib import Path
 
 import pytest
@@ -15,8 +16,8 @@ def load(name: str):
     return json.loads((FIX / name).read_text())
 
 
-@pytest.fixture
-def roasters() -> dict[str, Roaster]:
+def load_roasters() -> dict[str, Roaster]:
+    """The recorded stores (fixtures/roasters.csv), keyed by roaster id."""
     with (FIX / "roasters.csv").open() as f:
         return {
             r["roaster_id"]: Roaster(
@@ -27,13 +28,17 @@ def roasters() -> dict[str, Roaster]:
 
 
 @pytest.fixture
+def roasters() -> dict[str, Roaster]:
+    return load_roasters()
+
+
+@pytest.fixture
 def lake(tmp_path, monkeypatch) -> Lake:
     monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake"))
     return Lake()
 
 
-@pytest.fixture
-def fixture_items(roasters):
+def recorded_items(roasters: dict[str, Roaster]) -> dict:
     """CatalogItems parsed from every recorded storefront response, keyed by roaster id."""
     out = {}
     for rid in ("counterculturecoffee.com", "onyxcoffeelab.com", "intelligentsia.com"):
@@ -48,3 +53,34 @@ def fixture_items(roasters):
         for i in load("squarespace_vividcoffee.json")["items"]
     ]
     return out
+
+
+@pytest.fixture
+def fixture_items(roasters):
+    return recorded_items(roasters)
+
+
+@pytest.fixture
+def no_network(monkeypatch):
+    """The smoke suite's guard (tests/smoke.py): no connection off this machine, and no API keys."""
+    from .smoke import block_network
+
+    block_network(monkeypatch)
+
+
+@pytest.fixture(autouse=True, scope="session")
+def _own_dbt_target(tmp_path_factory):
+    """Under pytest-xdist (`pytest -n`), each worker gets its own dbt target and log folders: a `coffeedata build`
+    in two workers at once would otherwise overwrite each other's run_results.json in the checkout's dbt/target."""
+    if not os.environ.get("PYTEST_XDIST_WORKER"):
+        yield
+        return
+    from coffeedata import cli
+
+    target = tmp_path_factory.getbasetemp() / "dbt-target"
+    mp = pytest.MonkeyPatch()
+    mp.setenv("DBT_TARGET_PATH", str(target))
+    mp.setenv("DBT_LOG_PATH", str(tmp_path_factory.getbasetemp() / "dbt-logs"))
+    mp.setattr(cli, "DBT_TARGET", target)
+    yield
+    mp.undo()
