@@ -250,3 +250,4 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - renewing a reset link returns 500.
   The fix round is running, with the cheap minors too. m7 (reset links last 7 days; OWASP suggests 24–72 h) is left for the owner to decide. Next: a final low/medium review, then CI, then merge.
 - Owner decision (2026-11-06): reset links stay valid for 7 days (m7 closed, no change).
+- Rule (owner, 2026-11-06): every review agent posts its review to GitHub as a PR comment. The three #120 design reviews were backfilled as comments 6688494016, 6688494429 and 6688494822. Posting needs the REST API (gh api …/issues/N/comments), because gh pr comment uses GraphQL, which is blocked.
