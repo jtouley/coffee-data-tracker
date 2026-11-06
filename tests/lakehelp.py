@@ -51,10 +51,13 @@ def run(
     status: str | None = None,
     partial: bool | None = None,
     coffees: int | None = -1,
+    error: str | None = None,
+    blocks: list[dict] | None = None,
 ) -> str:
     """Record one fetch attempt: products=None means the fetch failed (status: e.g. "unavailable" instead of
     "error"); partial: an ok fetch that read only part of the catalog. coffees: the count the crawl recorded
-    (default: the products' is_coffee; None: none recorded, as an ELT crawl writes)."""
+    (default: the products' is_coffee; None: none recorded, as an ELT crawl writes). error: the fetch's error (a
+    failure's default is "boom"; on a partial ok fetch, its reason); blocks: the refused responses it recorded."""
     b = batch()
     fetched = at(run_date, hour)
     lake.write_partition(
@@ -70,7 +73,8 @@ def run(
                 "adapter": adapter,
                 "status": status or ("error" if products is None else "ok"),
                 "partial": partial,
-                "error": "boom" if products is None else None,
+                "error": error or ("boom" if products is None else None),
+                "blocks": blocks,
                 "products": len(products or []),
                 "coffees": sum(p["is_coffee"] for p in products or []) if coffees == -1 else coffees,
             }

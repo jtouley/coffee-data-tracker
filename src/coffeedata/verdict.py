@@ -7,8 +7,11 @@ rules don't exclude outright is shown to Claude with the same written definition
 otherwise, so a build stays a pure function of the lake.
 
 Model: claude-haiku-5-5, chosen as the cheapest model at or above 98% on the validation set (eval/validation/).
-Opt-in: nothing runs unless COFFEEDATA_VERDICT_MODEL names a model. Work is derived, not tracked: a product version
-is pending when it has no verdict for this model and definition and isn't in an open batch.
+Required: `coffeedata classify` and `coffeedata build` expect COFFEEDATA_VERDICT_MODEL and Anthropic credentials, and
+fail without them (classify exits non-zero; the build's verdicts_cover_catalog test fails), because a release built
+by the rules alone measures about 10.7% non-coffee among the coffees it keeps, against 2.7% with verdicts. Local and
+dev runs opt out explicitly: COFFEEDATA_ALLOW_RULES_ONLY=1, or `--allow-rules-only`. Work is derived, not tracked: a
+product version is pending when it has no verdict for this model and definition and isn't in an open batch.
 """
 
 from __future__ import annotations
@@ -71,6 +74,40 @@ order by input_hash
 
 def model() -> str | None:
     return os.environ.get("COFFEEDATA_VERDICT_MODEL") or None
+
+
+RULES_ONLY_ENV = "COFFEEDATA_ALLOW_RULES_ONLY"
+
+
+def rules_only_allowed() -> bool:
+    """The explicit opt-out for local and dev runs (COFFEEDATA_ALLOW_RULES_ONLY=1): classify skips without a model
+    or credentials, and the build's verdict gate is off. Never set in production."""
+    return os.environ.get(RULES_ONLY_ENV, "").strip().lower() in ("1", "true", "yes")
+
+
+def missing() -> list[str]:
+    """What classify needs and doesn't have: the verdict model, Anthropic credentials, or both."""
+    out = [] if model() else ["COFFEEDATA_VERDICT_MODEL"]
+    if not extract.llm_enabled():
+        out.append(
+            "Anthropic credentials (COFFEEDATA_ANTHROPIC_API_KEY, ANTHROPIC_API_KEY or ANTHROPIC_AUTH_TOKEN)"
+        )
+    return out
+
+
+def require(allow_rules_only: bool = False) -> bool:
+    """Whether verdicts can run. Without a model or credentials: False when rules only is allowed (the flag or
+    COFFEEDATA_ALLOW_RULES_ONLY), else a SystemExit that names what is missing."""
+    gaps = missing()
+    if not gaps:
+        return True
+    if allow_rules_only or rules_only_allowed():
+        return False
+    raise SystemExit(
+        f"Claude's verdicts are expected but can't run: no {' and no '.join(gaps)}. Without them the release is "
+        "classified by the rules alone (docs/ingestion/RUNBOOK.md, verdicts). For a local or dev build, opt out "
+        f"with --allow-rules-only or {RULES_ONLY_ENV}=1."
+    )
 
 
 def item(r: dict) -> CatalogItem:

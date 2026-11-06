@@ -197,6 +197,31 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     )
 
 
+def cmd_fetch_health(args: argparse.Namespace) -> None:
+    """The fetch-health check (fetchhealth.py): did each fetch return a catalog of about the right size. Exits
+    non-zero on a systemic fetch problem not already found by an earlier check this week, which fails the Cloud Run
+    execution and emails the owner once per finding; per-roaster problems only go on its list."""
+    from . import fetchhealth
+
+    out = fetchhealth.run(Lake(), args.run_date, force=args.force)
+    _print(out)
+    if out.get("alert"):
+        # One structured line, so the execution's log names the problem at ERROR severity.
+        print(
+            json.dumps(
+                {
+                    "severity": "ERROR",
+                    "message": "fetch-health: systemic fetch failure",
+                    "systemic": out["systemic"],
+                }
+            )
+        )
+        raise SystemExit(f"fetch-health {out['run_date']}: systemic: {json.dumps(out['alert'])}")
+    if out.get("systemic"):  # found again by a later pass's check: already alerted this week, logged only
+        print(json.dumps({"severity": "WARNING", "message": "fetch-health: systemic, already alerted this week",
+                          "systemic": out["systemic"]}))  # fmt: skip
+
+
 def cmd_enrich_week(args: argparse.Namespace) -> None:
     from . import connectors
 
@@ -231,10 +256,14 @@ def cmd_classify(args: argparse.Namespace) -> None:
     """Claude's verdicts (verdict.py): collect finished batches, submit what's pending, optionally wait for it."""
     import time
 
-    from . import extract, verdict
+    from . import verdict
 
-    if not (verdict.model() and extract.llm_enabled()):
-        print("no COFFEEDATA_VERDICT_MODEL or Anthropic credentials; the rules classify alone")
+    # Fails (non-zero, naming what is missing) unless rules only is explicitly allowed: a skipped classify once
+    # left every release to the rules alone without anyone noticing.
+    if not verdict.require(getattr(args, "allow_rules_only", False)):
+        print(
+            "rules only (explicitly allowed): no COFFEEDATA_VERDICT_MODEL or Anthropic credentials; nothing to do"
+        )
         return
     lake = Lake()
     out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
@@ -247,6 +276,13 @@ def cmd_classify(args: argparse.Namespace) -> None:
         out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
         waiting &= verdict.open_batch_ids(lake)
     _print(out)
+    if err := out["submit"].get("error"):
+        # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
+        # model or key, so the build job's execution fails and emails; the build still runs on the stored verdicts.
+        raise SystemExit(
+            f"Claude's verdict batch submit failed: {err}. This week's new product versions have no verdicts yet "
+            "(docs/ingestion/RUNBOOK.md, verdicts)."
+        )
 
 
 def cmd_eval_classifier(args: argparse.Namespace) -> None:
@@ -273,13 +309,24 @@ def cmd_eval_classifier(args: argparse.Namespace) -> None:
         )
 
 
-def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[bool, list[dict]]:
+def dbt_build(
+    lake: Lake,
+    db: Path,
+    extra_vars: dict | None = None,
+    select: list[str] | None = None,
+    target: Path | None = None,
+    extra_roots: tuple[str, ...] = (),
+    flags: tuple[str, ...] = (),
+) -> tuple[bool, list[dict]]:
     """Build every model and seed, then run every test, so a failed check never stops a model from being built.
     Returns whether every step passed, and each step's run_results.json (dbt overwrites the file per command).
-    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`."""
+    dbt's unit tests check SQL logic over hand-written rows, not this lake's data, so they run in `make test`.
+    select, target, extra_roots and flags are for `fetch-health`: only the nodes it names, its own target folder (the
+    weekly build's artifacts are left alone), more lake roots to read (its copy of the unmerged crawl output) and
+    more dbt flags."""
     from . import quality, registry, shots, verdict
 
-    roots = [str(lake.root)] + ([lake.url] if lake.remote else [])
+    roots = [str(lake.root), *extra_roots] + ([lake.url] if lake.remote else [])
     folders = remote_folders(lake.url) if lake.remote else None
     db.parent.mkdir(parents=True, exist_ok=True)
     env = os.environ | {"COFFEEDATA_DB": str(db)}
@@ -292,24 +339,42 @@ def dbt_build(lake: Lake, db: Path, extra_vars: dict | None = None) -> tuple[boo
             "owner_user_id": shots.owner_user_id(),
             "verdict_model": verdict.model() or "",
             "verdict_definition": verdict.DEFINITION_VERSION,
+            # verdicts_cover_catalog: fails a build with no verdict model, or too few listed coffees decided by
+            # one, unless rules only is explicitly allowed (cmd_build's --allow-rules-only overrides this).
+            "require_verdicts": not verdict.rules_only_allowed(),
             "coverage_claims": quality.coverage_claims(strict=False),  # never stops a build
         }
         | (extra_vars or {})
     )
     passed, results = True, []
-    (DBT_TARGET / "manifest.json").unlink(missing_ok=True)
+    where = ["--target-path", str(target.resolve())] if target else []
+    target = target or DBT_TARGET  # read here, not as a default: tests point DBT_TARGET elsewhere
+    (target / "manifest.json").unlink(missing_ok=True)
+    picked = ["--select", *select] if select else []
     for step in (
-        ["build", "--exclude", "resource_type:test", "resource_type:unit_test"],
-        ["test", "--exclude", "resource_type:unit_test"],
+        ["build", *picked, "--exclude", "resource_type:test", "resource_type:unit_test"],
+        ["test", *picked, "--exclude", "resource_type:unit_test"],
     ):
         # A step that crashes before writing its results must not be recorded with the previous step's.
-        (DBT_TARGET / "run_results.json").unlink(missing_ok=True)
+        (target / "run_results.json").unlink(missing_ok=True)
         r = subprocess.run(
-            ["dbt", *step, "--project-dir", "dbt", "--profiles-dir", "dbt", "--vars", dbt_vars], env=env
+            [
+                "dbt",
+                *step,
+                "--project-dir",
+                "dbt",
+                "--profiles-dir",
+                "dbt",
+                *where,
+                *flags,
+                "--vars",
+                dbt_vars,
+            ],
+            env=env,
         )
         passed = passed and r.returncode == 0
         try:
-            results.append(json.loads((DBT_TARGET / "run_results.json").read_text()))
+            results.append(json.loads((target / "run_results.json").read_text()))
         except (OSError, ValueError):
             results.append({})
     return passed, results
@@ -335,6 +400,8 @@ def cmd_build(args: argparse.Namespace) -> bool:
         served
     ):  # the volume check compares with what customers get now, which after a rollback isn't the newest
         extra["baseline_build"] = served
+    if getattr(args, "allow_rules_only", False):
+        extra["require_verdicts"] = False
     if getattr(args, "accept_volume_change", False):
         extra["volume_tolerance"] = 1e9  # this build passes and becomes the next one's baseline
         # It skips the anomaly bands too, and records accepted_volume_change, so their history restarts at it.
@@ -356,6 +423,11 @@ def cmd_build(args: argparse.Namespace) -> bool:
         parity_lines = []
     for line in parity_lines:
         print(f"tag parity: {line}", file=sys.stderr)
+    try:  # the share verdicts_cover_catalog judges, so a failing (or narrowly passing) build shows it
+        if verdict_line := quality.verdict_coverage_message(db):
+            print(f"verdicts: {verdict_line}", file=sys.stderr)
+    except Exception as e:
+        logging.warning("verdict coverage not reported: %s", e)
     # A release that couldn't be written in full is recorded as failed, so it is never served or a baseline.
     passed = quality.record_build(
         lake, db, run_date, DBT_TARGET / "manifest.json", results, passed, build_id, took
@@ -456,7 +528,12 @@ def cmd_load_snowflake(args: argparse.Namespace) -> None:
 
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
+    from . import verdict
+
     run = args.run_date
+    rules_only = getattr(args, "allow_rules_only", False)
+    # Before hours of crawling: the run's classify and build would fail without verdicts.
+    verdict.require(rules_only)
     crawl_until = time.monotonic() + 60 * WEEKLY_CRAWL_MIN  # both ingest passes stop starting roasters here
     crawl_left = lambda: max(0.0, (crawl_until - time.monotonic()) / 60)  # noqa: E731
     if date.fromisoformat(run).day <= 7 or args.discover:
@@ -509,12 +586,24 @@ def cmd_weekly(args: argparse.Namespace) -> None:
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: retries"))
     cmd_enrich(argparse.Namespace(limit=args.enrich_limit, run_date=run))
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: enrichment"))
-    cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45))
+    classify_failed = None
+    try:  # as in the build job: a failed classify fails the run, but the build still runs on the stored verdicts
+        cmd_classify(argparse.Namespace(limit=100_000, run_date=run, wait=45, allow_rules_only=rules_only))
+    except SystemExit as e:
+        classify_failed = str(e.code)
+        print(f"classify failed: {classify_failed}", file=sys.stderr)
     cmd_publish(argparse.Namespace(message=f"weekly run {run}: verdicts"))
     # The checks gate publishing, not the run: the build is recorded and published either way (its results and a
     # copy of its catalog marts), but only a passing build replaces the current marts, public tables and site.
     accept = getattr(args, "accept_volume_change", False)
-    passed = cmd_build(argparse.Namespace(db=args.db, run_date=run, accept_volume_change=accept)) is not False
+    passed = (
+        cmd_build(
+            argparse.Namespace(
+                db=args.db, run_date=run, accept_volume_change=accept, allow_rules_only=rules_only
+            )
+        )
+        is not False
+    )
     cmd_publish(
         argparse.Namespace(message=f"weekly run {run}: {'marts' if passed else 'failed build record'}")
     )
@@ -522,6 +611,8 @@ def cmd_weekly(args: argparse.Namespace) -> None:
         raise SystemExit(f"weekly run {run}: the build failed its data checks; nothing derived was published")
     # Facts-only tables and the site come from the served release (this build's, since it passed).
     _export_and_site(SERVED_DB, args.out)
+    if classify_failed:
+        raise SystemExit(f"weekly run {run}: classify failed; the build ran on the verdicts already stored")
 
 
 def cmd_shot(args: argparse.Namespace) -> None:
@@ -696,6 +787,16 @@ def main(argv: list[str] | None = None) -> None:
         help=f"stop starting stores after this many minutes (default: the connector's, else {CRAWL_RETRY_MIN:.0f})",
     )
 
+    dq = add(
+        "fetch-health",
+        cmd_fetch_health,
+        "fetch-health check: did each fetch return a catalog of about the right size (gate rules, unmerged week)",
+    )
+    dq.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to check")
+    dq.add_argument(
+        "--force", action="store_true", help="check now, even while a crawl runs or nothing new has landed"
+    )
+
     ew = add(
         "enrich-week", cmd_enrich_week, "post-load enrichment: Claude candidates from raw, after the merge"
     )
@@ -710,6 +811,11 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--limit", type=int, default=100_000)
     c.add_argument("--run-date", default=None)
     c.add_argument("--wait", type=int, default=0, help="minutes to wait for the new batch")
+    c.add_argument(
+        "--allow-rules-only",
+        action="store_true",
+        help="exit 0 without a verdict model or credentials (local and dev runs; also COFFEEDATA_ALLOW_RULES_ONLY=1)",
+    )
     ev = add("eval-classifier", cmd_eval_classifier, "score a verdict model on the labeled sets")
     ev.add_argument("--model", required=True)
     ev.add_argument("--labels", default="tests/fixtures/classifier_labels.jsonl")
@@ -734,6 +840,12 @@ def main(argv: list[str] | None = None) -> None:
         action="store_true",
         help="let one build through the volume check and the anomaly bands (it becomes the next baseline, and "
         "the bands' history starts again at it); the fixed floors still apply",
+    )
+    b.add_argument(
+        "--allow-rules-only",
+        action="store_true",
+        help="turn off the verdict gate (verdicts_cover_catalog) for a deliberate rules-only build (local and dev "
+        "runs; also COFFEEDATA_ALLOW_RULES_ONLY=1)",
     )
 
     bd = add(
@@ -792,6 +904,9 @@ def main(argv: list[str] | None = None) -> None:
     w.add_argument("--db", default="build/coffee.duckdb")
     w.add_argument("--out", default="build/site")
     w.add_argument("--accept-volume-change", action="store_true", help="see build --accept-volume-change")
+    w.add_argument(
+        "--allow-rules-only", action="store_true", help="see classify and build --allow-rules-only"
+    )
 
     s = add("shot", cmd_shot, "log a shot")
     s.add_argument("action", choices=["add", "from-issue"])

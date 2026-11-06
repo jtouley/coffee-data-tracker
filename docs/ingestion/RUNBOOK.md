@@ -20,8 +20,9 @@ export WEEK=2026-11-02   # the week's Monday: the confirmation run's week (§3),
   `gcloud secrets versions access` to query the lake.
 - `HF_TOKEN` and `ANTHROPIC_API_KEY` already hold values in Secret Manager: they are the app's secrets
   (`secrets.tf`). Terraform only references them by name and never sets a value.
-- `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`). For verdicts in the build job, add
-  `verdict_model = "<the VERDICT_MODEL repository variable's value>"`. Leave it out for rules only.
+- `src/terraform/terraform.tfvars` exists (copy `terraform.tfvars.example`), with
+  `verdict_model = "claude-haiku-5-5"` (the VERDICT_MODEL repository variable's value). **It is required:** a plan
+  without it stops at the variable's validation, and a build job without it fails (§5.5).
 
 ## 1. Build the image
 
@@ -541,8 +542,10 @@ echo $WEEK   # this Monday, e.g. 2026-11-02
 
 **Crawl, merge, enrich-week and build run on Cloud Run only.** The jobs carry the verdict model, the Anthropic key
 and the staging bucket, and the build job runs `coffeedata classify` first. A local `uv run coffeedata` crawl,
-crawl-retry, merge, enrich-week, build or publish has none of these: it builds a different catalog (rules only, no
-verdicts) that can still pass the gate and become the baseline. Don't use the local forms for a release. Only the
+crawl-retry, merge, enrich-week, build or publish has none of these. Without a verdict model and key, a local
+`classify` or `build` fails (§5.5); with `--allow-rules-only` or `COFFEEDATA_ALLOW_RULES_ONLY=1` (which `make` sets
+for a local lake) it builds a different catalog, rules only, that has no verdict gate and can still pass the other
+checks and become the baseline. Don't use the local forms for a release. Only the
 read-only steps (`build-diff`, the Python checks) and `override` also have a local form, which runs with §3's
 `COFFEEDATA_LAKE` and `HF_TOKEN` exports (never echo the token). `--args` replaces the job's arguments for one
 execution, and gcloud splits it on commas, so keep commas out of it. `build` runs `sh -c`, so its `--args` is one
@@ -586,6 +589,7 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 |---|---|
 | `catalog_volume_vs_last_build` | **b** if build-diff shows a real change; **c** if a crawl lost roasters |
 | `run_is_complete`, `run_ok_rate`, `adapter_ok_rate` | **c** |
+| `verdicts_cover_catalog` | §5.5: the build had no verdict model, or the verdicts backfill isn't collected yet |
 | `latest_run_is_fresh` | only possible if last week's run is missing too (on Tuesday last week's Monday still counts as fresh, §5.2). Fix **this** week's merge (§5.2, or **c** for `$WEEK`): once `$WEEK` is merged, this test passes. **Never crawl a past week** (c) |
 | anything else (prices, uniqueness, facts-only, coverage claims) | a code or data bug: leave last week served and fix it in code |
 
@@ -830,6 +834,67 @@ unless `ingestion.tf` says the same. On main, `crawl-generic` is still 2Gi, and 
 merges, a plan that shows `crawl-generic` memory going 8Gi → 2Gi must not be applied (§4 step 2's digest pin
 included): set it to 8Gi in `ingestion.tf` first.
 
+### 5.5 Verdicts: the gate, a failed classify, and the backfill
+
+Claude's coffee-or-not verdicts (`verdict.py`) decide every product the rules don't exclude outright. Until 2026-11
+they never ran: `verdict_model` defaulted to empty, `classify` skipped with exit 0, and every release was the rules
+alone (on the sealed set, 10.7% of the products the rules keep are not coffee, against 2.7% with the verdicts).
+Now three things stop that from happening silently:
+
+- **`coffeedata classify` exits non-zero** when `COFFEEDATA_VERDICT_MODEL` or the Anthropic key is missing, naming
+  which. The build job keeps going (`rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; ...`): the build
+  uses the verdicts already stored, and its gate decides whether the release is served. The execution still fails,
+  so the `ingest job build failed` email arrives. A batch submit that Claude rejects (a revoked key, an outage)
+  fails the same way; a finished batch whose results can't be read yet stays open for the next run. With
+  `max_retries = 1` the whole chain then runs a second time, as for a failed gate (§5.1 b).
+- **`verdicts_cover_catalog` fails the build** when it has no verdict model at all, or when fewer than 85%
+  (`min_verdict_share`, `dbt/dbt_project.yml`) of listed coffees (`dim_coffee.is_listed`) have
+  `classified_by = 'claude'`. The build's log prints the share: `verdicts: N of M listed coffees (x%) decided by
+  Claude's verdicts (<model> N); the rest by the rules`.
+- **`verdict_model` is required in Terraform**, with no empty default.
+
+**The expected share and its lag.** About 95%, not 100%. The build job's classify submits this week's new and
+changed product versions and doesn't wait for them, so they get verdicts at next week's build: 2.5% of listed
+coffees in the 2026-11-02 run (1,114 of 44,593). An `unsure` verdict is left to the rules too, about 3% on the
+validation set. 85% leaves room for a week with nearly 3x the usual new versions. To get this week's versions in
+before the build, run classify with a wait (`coffeedata classify --wait 60`) before rebuilding.
+
+**A failed classify** (the log says `Claude's verdicts are expected but can't run: no ...`): check
+`verdict_model` in `terraform.tfvars` and the job's env (`gcloud run jobs describe build --region $REGION
+--format='value(spec.template.spec.template.spec.containers[0].env)'`; it lists names and secret references, not
+the key's value), and that `ANTHROPIC_API_KEY` has a version in Secret Manager. Fix, apply, then rebuild as in §5.2.
+
+**The backfill**, after the first apply with `verdict_model` (and whenever the verdict model or
+`coffee_definition.md` changes, which makes every version pending again): about 62,000 product versions are
+pending, so the first build after the change fails `verdicts_cover_catalog` until their verdicts are collected,
+and last week's release stays served. That is the gate working: don't opt out around it.
+
+1. Submit everything pending (7 batches of 10,000; `--limit` defaults to 100,000), and wait up to 3 hours for them
+   inside the job's 240 minutes:
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify --wait 180; coffeedata publish --message verdicts"
+   ```
+
+2. If batches were still running (its output's `collect_after_wait` is below `submit.submitted`), collect again
+   later; batches end within 24 hours. Repeat until a run collects 0 and submits 0:
+
+   ```sh
+   gcloud run jobs execute build --region $REGION --wait --args="coffeedata classify; coffeedata publish --message verdicts"
+   ```
+
+3. Rebuild (§5.2's form) and read the `verdicts:` line in its log. Expect about 3,600 listed products to drop out
+   (95% about 2,400–5,200) and a few hundred to come back: within the 20% volume check, so no
+   `--accept-volume-change` should be needed. Check the counts with `coffeedata build-diff`; a count far outside
+   that range means the production request differs from the one evaluated (`eval/sealed/`).
+4. Add the number of products whose `is_coffee` changed to the running total in `eval/sealed/README.md` (CLAUDE.md
+   step 9).
+
+**Rules only on purpose** (a fork without Claude, a local lake, tests): `--allow-rules-only` on `classify`, `build`
+and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` repository variable for `weekly.yml`).
+`make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
+non-coffee.
+
 ## 6. Alerts
 
 `src/terraform/alerts.tf` emails the owner (the `owner` notification channel, `owner_email`) about the pipeline too.
@@ -837,7 +902,7 @@ Each email names what failed and the first command to run.
 
 | Policy | Watches | Fires |
 |---|---|---|
-| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`, 12) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
+| `registry.coffee: ingest job <job> failed` (one per job in `ingestion.tf`: 12, and 13 with `fetch-health`) | `run.googleapis.com/job/completed_execution_count` with `result="failed"` for that job, as Google's Cloud Run jobs guidance (PromQL, 15-minute window, `duration = 0s`) | at the first failed execution: a non-zero exit after its retries, or the 240-minute timeout. It counts executions, not attempts: a crawl attempt that dies and a retry that succeeds is one succeeded execution and doesn't fire (section 7). A crawl that hits its deadline exits 0 and doesn't fire |
 | `registry.coffee: ingest schedule failed to start a job` | Cloud Scheduler logs, `resource.type="cloud_scheduler_job"`, `job_id` starting `registry-coffee-`, `severity>=ERROR` | when an entry's attempt to start its job fails; one alert per Scheduler entry; Google caps new alerts at 2 a minute and 20 notifications a day per log-based policy, so five failures at 09:17 send about two emails at first |
 
 **No "missing release" policy.** "No `build` success between Tue 06:17 and 12:00 UTC" has no reliable form in Cloud
@@ -964,6 +1029,85 @@ was in flight: it is the cause.
 Run it before Tuesday's 03:17 merge, so the merge picks it up; after the merge, run `merge` again by hand.
 To stop a roaster from being suspected at all this week (rarely needed), delete its markers:
 `gcloud storage rm "gs://$PROJECT-ingest-staging/raw/connector=<c>/run_date=$WEEK/_inflight/attempt=*/<roaster_id>.json"`.
+
+## 8. Fetch-health check (fetch-health)
+
+`fetch-health` judges the week's fetches shortly after each pass (DESIGN, "Fetch health"): did each fetch return a
+catalog of about the right size (failed, empty, or far fewer products than usual), and is a platform or the image
+failing as a whole. **It doesn't judge the data**: a fetch with wiped prices, swapped products or a short first
+week passes it. It is polled every 20 minutes over Monday 10:07 to Tuesday 02:47 UTC (Scheduler entry
+`fetch-health`, `7,27,47 0-2,10-23 * * 1,2`; the hours outside that window find nothing to judge); a poll with
+nothing new exits in seconds, as does one that finds another check still running. It never serves or records a
+build; it writes its `job_manifests` rows and publishes them to the dataset (a failed publish is a `WARNING` line,
+never a different verdict or exit code).
+
+**Ship it** (after this PR merges):
+1. Rebuild and push the ingest image, and pin the new digest in `ingest_image` (section 1, and section 4's pinning
+   step): the jobs run the `coffeedata fetch-health` command and the re-fetch hooks in `crawl`/`crawl-retry` (off:
+   `COFFEEDATA_DQ_REFETCH` unset) only from it.
+2. `cd src/terraform && terraform plan -out fh.plan`. **Expected: 4 to add, 12 to change, 0 to destroy**: the job
+   `google_cloud_run_v2_job.ingest["fetch-health"]`, its invoker binding
+   `google_cloud_run_v2_job_iam_member.scheduler["fetch-health"]`, the Scheduler entry
+   `google_cloud_scheduler_job.ingest["fetch-health"]` (only with `ingest_schedule_enabled = true`), and the alert
+   `google_monitoring_alert_policy.ingest_job_failed["fetch-health"]`. The 12 existing `ingest_job_failed` policies
+   change in place, only their documentation text (it now names `fetch-health`): **12 to change**, and nothing else.
+   Stop if the plan touches any other job, the NAT, the bucket or the app.
+3. `terraform apply fh.plan`.
+4. Try it by hand on the current week, without waiting for Monday: `gcloud run jobs execute fetch-health --region
+   $REGION --args="fetch-health,--force" --wait`. It writes its `job_manifests` rows (job `fetch-health`),
+   publishes them, and nothing else.
+
+**Read a verdict.** The execution's log ends with the verdict as JSON (`systemic`, `alert`, `repull`, `held_back`,
+`unattributed`, `partial`, `quarantined`, `by_connector`, `running`, `tests`). **The log is authoritative.** The same
+is the `detail` of the week's latest `fetch-health` row in the dataset, once its publish has gone through (a failed
+publish leaves the rows staged for the next one):
+
+```sh
+uv run python -c "
+from coffeedata import control; from coffeedata.lake import Lake; import json, sys
+rows = [r for r in control.rows(Lake(), sys.argv[1]) if r['job'] == 'fetch-health' and r['status'] == 'done']
+print(json.dumps(json.loads(rows[-1]['detail']), indent=1) if rows else 'no check yet for this week')" 2026-11-02
+```
+
+**When it alerts** (`ingest job fetch-health failed`): the log's `"severity": "ERROR"` line names the scope. Each
+finding (a scope on a set of connectors) alerts once a week: a later pass's check that finds it again logs
+a `WARNING` line and exits 0; a new or different finding alerts again. A suspect with no adapter is listed under
+`unattributed`, for you to look at; no pass re-fetches it.
+- `connector`: one platform is below `adapter_ok_rate`'s floor among the roasters its passes reached (a mass 429,
+  430 or 503 that outlasted the 5-minute wait cap shows up here). Its roasters are held off the list. Look at that
+  connector's `job_manifests` rows (429/430 counts, egress IPs) and its execution logs before its next slot;
+  Tuesday's build will fail its gate unless the resume or retry recovers it.
+- `image`: two or more platforms at once. Suspect what they share: the image (`code_version` on the rows), a code
+  change, or egress. Roll back the image (section 5) before the next slot.
+- `run`: the run as a whole is below `run_ok_rate` with no single platform to blame.
+- No verdict (`CheckError`, or a traceback): dbt couldn't build or run the check. That's not a fetch finding; the
+  list keeps its last value, and the polls don't retry it (one email, not one every 20 minutes). A check that
+  **failed** (its end row says `failed`) runs again when the next crawl attempt ends, or with `--force`. A check that
+  was **killed** (out of memory, instance lost: only its running row) holds back the polls until it is 30 minutes old
+  (`fetchhealth.CHECK_LIMIT`) or a later check has started; then the next poll judges everything that has ended
+  since the last finished check. After the last pass of the week (21:47) no attempt ends again, so after a failure
+  run it with `--force` once it's fixed. Run `coffeedata fetch-health --force` locally against a copy of the lake to
+  see the dbt error.
+
+**The list** (`repull`) is for you to read: each entry is a roaster, its adapter, its `reasons` (`failed`, `empty`,
+`suspect`) and the gate `rules` that gave them (`run_ok_rate`, `suspect_runs_need_review`; DESIGN, "Why a roaster is
+listed"), and `challenge` (`siteground` or `cloudflare`) when a recorded block names the edge that refused it. A
+challenge is an ordinary failed fetch: never held back, no alert of its own, retried by the week's later passes
+(persistent blocking: issue #110). Apart from it: `partial` (ok fetches that read only part of the
+catalog, with their reason: not failures, and the week's resume passes read them again) and `quarantined` (stores
+crashguard quarantined for the week: section 7). **Re-fetching is off**: no crawl pass reads the list, and the
+week's output is as without the check. `failed` roasters are asked again by every `crawl` pass anyway. To fetch one
+listed roaster again by hand: `crawl --connector X --only <roaster_id>` (section 7).
+
+**Re-fetch (off; don't turn it on yet).** The one setting is the env var `COFFEEDATA_DQ_REFETCH=1` on the crawl jobs,
+read by `crawl` and `crawl-retry`; with it, each later pass of a connector fetches its listed `empty` and `suspect`
+roasters again (the whole catalog). It changes which batch counts for those roasters, so it needs CLAUDE.md's full
+evaluation first (`eval/run_quality/README.md`). Until then leave it unset; to confirm a job doesn't have it:
+`gcloud run jobs describe <job> --region $REGION --format='value(spec.template.spec.template.spec.containers[0].env)'`
+must not name it.
+
+**Stop it:** `gcloud scheduler jobs pause registry-coffee-fetch-health --location $REGION`.
+Nothing else depends on it: with re-fetch off the crawl passes never read its rows.
 
 ## Cost
 

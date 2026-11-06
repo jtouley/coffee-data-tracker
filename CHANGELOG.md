@@ -52,6 +52,18 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   the product's input ports (#88).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
+- **Fetch health.** `coffeedata fetch-health` checks, shortly after each of Monday's crawl passes and before the
+  merge, whether each roaster's fetch returned a catalog of about the right size. It runs the gate's `run_ok_rate`,
+  `adapter_ok_rate` and suspect-run rules on the unmerged week and lists the roasters whose fetch failed, came back
+  empty or came back far smaller than usual, each with the named gate rule that gave its reason. It judges fetches,
+  not data: it doesn't look at prices or at which products came back. Partial fetches and quarantined stores are
+  listed apart, never as failures; a challenged store is an ordinary failed fetch, listed with its edge when known
+  (SiteGround, Cloudflare). A platform-wide failure, or two at once (the image), emails the owner once a week per
+  finding. It never serves or records a build; it publishes only its own job rows, the verdict.
+  Re-fetching the listed roasters ships off, behind one setting (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and
+  `crawl-retry` never read the list and the week's output is unchanged (0 products). Turning it on would change
+  which batch counts for up to 346 products a week, so it needs the full evaluation first
+  (`eval/run_quality/README.md`) (#93).
 
 ### Changed
 
@@ -82,6 +94,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Fixed
 
+- **Claude's coffee-or-not verdicts now fail loudly when they can't run.** They never ran in production: the Terraform
+  variable `verdict_model` defaulted to empty, `coffeedata classify` printed a skip message and exited 0, and every
+  release was classified by the rules alone (on the sealed set, 10.7% of the products they keep are not coffee,
+  against 2.7% with verdicts). `classify` (and `weekly`, before it crawls) now exits non-zero without a verdict model
+  or Anthropic credentials, and `classify` also when Claude rejects its batch submit; `--allow-rules-only` or
+  `COFFEEDATA_ALLOW_RULES_ONLY=1` is the explicit opt-out for local and dev runs (`make` sets it for a local lake, and
+  the tests set it). The build job's chain fails its execution on a failed classify. `dim_coffee` gains
+  `classified_by` (`claude` or `rules`) and `verdict_model`, and a new gate, `verdicts_cover_catalog`, fails a build
+  with no verdict model or with under 85% of listed coffees decided by a verdict (public contract 2.5.0: the rule and
+  its threshold, no column change; #108). `verdict_model` is required in Terraform. RUNBOOK ยง5.5 covers the gate and
+  the backfill.
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
   crowded out by shared words now match (#57).
 - Site: copy fixes (#26). The site workflow renders the served release (#59) and skips while nothing is served
