@@ -194,3 +194,12 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
 - **Tasting notes.** All 6 Counter Culture Finca El Puente listings have 0 notes, and only 21% of the catalog has any. The bag-photo read doesn't extract tasting notes; add them, store them with the bag, and fall back to them when the catalog has none.
 - Also add a per-coffee rating, plus a predicted rating logged before opening, separate from shot ratings. Shot ratings swing 2-5 within one coffee because of dial-in.
 - Product order (owner + ChatGPT): insights, then predicted taste, then recommendations, then preference optimization. Insights are deterministic dbt marts; the LLM only explains findings the mart computed. Every insight shows its n.
+
+## CRITICAL user-facing: invites and sign-up (beta tester report, 2026-11-05)
+- What happened: the tester tapped "Create account" and saw no response. The account was in fact created; a retry then said "code already used". Cause: a Cloud Run cold start (scale to zero takes minutes) with no feedback on the page.
+- Sign-up: disable the button on submit, show a "Creating your account…" spinner, then an explicit confirmation and error states. Make it idempotent, so a double tap can't use the invite twice.
+- "Code already used" right after this person redeemed it: say so and link to sign-in.
+- Invite (join) link: serve a static loading page that polls /health while the app wakes, then continues.
+- Owner's invite creation: loading and confirmation states, plus copy feedback.
+- Cold start: measure it, then decide between min_instances=1 and a faster startup.
+- Responsiveness on phone widths. Add an end-to-end join-flow test, including a slow-server case.
