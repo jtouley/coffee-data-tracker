@@ -56,8 +56,9 @@ class Connector:
     deadline_min: float = 225.0  # stop starting roasters here, leaving time to compact under a 240-min limit
     retry_after_h: int = 6
     # Where its Cloud Run job's requests leave from: "default" (Cloud Run's shared Google egress) or "dedicated"
-    # (Direct VPC egress through Cloud NAT with one reserved IP). The deploy sets the job's network from this; the
-    # job records it, with the IPs it saw, in job_manifests. A per-connector setting, not a different design.
+    # (Direct VPC egress through Cloud NAT with a reserved IP: Shopify's own, or the one WooCommerce and generic
+    # share; src/terraform/ingestion.tf, local.ingest_jobs). The job records it, with the IPs it saw, in
+    # job_manifests. A per-connector setting, not a different design.
     egress: str = "default"
     # Pacing, with rps above and deadline_min (the crawl window: how long one job may run, up to its time limit):
     # stores in a shuffled order, seeded by the week, so the same stores aren't always the last ones asked.
@@ -70,9 +71,9 @@ CONNECTORS: dict[str, Connector] = {
     for c in (
         Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
         Connector("squarespace", 0, 9, rps=SQUARESPACE_RPS),  # one shared budget, as Shopify's
-        Connector("woocommerce", 0, 9),
+        Connector("woocommerce", 0, 9, egress="dedicated"),  # SiteGround challenges default egress
         Connector("square_online", 0, 9),
-        Connector("generic", 0, 9),
+        Connector("generic", 0, 9, egress="dedicated"),
     )
 }
 # The slots Cloud Scheduler runs (src/terraform/ingestion.tf, at minute :17; the weekly baseline is Monday 09:17 UTC).

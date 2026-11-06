@@ -45,7 +45,7 @@ variable "owner_email" {
 }
 
 variable "budget_usd" {
-  description = "Monthly budget; alerts at 50%, 90% and 100%. The runbook estimates $5-8 a month (app + ingestion jobs + Cloud NAT and its static IP, docs/ingestion/RUNBOOK.md, Cost), so $20 puts the first email ($10) above the estimate's top."
+  description = "Monthly budget; alerts at 50%, 90% and 100%. The runbook estimates $9-14 a month (app + ingestion jobs + two Cloud NAT gateways and their static IPs, docs/ingestion/RUNBOOK.md, Cost), so the first email ($10) can fire in a normal month; raise this if it is noise."
   type        = number
   default     = 20
 }

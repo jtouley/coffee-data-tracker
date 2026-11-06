@@ -84,6 +84,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
   connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
   memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
+- The WooCommerce and generic crawls (`crawl-woocommerce`, `crawl-generic`, every pass) leave from a second
+  reserved static IP, separate from Shopify's: SiteGround answers Cloud Run's default egress with a 202
+  `sg-captcha` challenge. Terraform adds a second subnet, address and Cloud NAT gateway on the existing router, with
+  the Shopify NAT's port settings, and outputs `woo_generic_egress_ip`; Shopify's subnet, IP and NAT are unchanged.
+  Each job's egress in `ingestion.tf` is now `default`, `shopify` or `woo_generic` instead of a `nat` flag, and
+  `Connector.egress` is `dedicated` for WooCommerce and generic. After apply, the runbook (ยง2.1) has the owner
+  check one SiteGround store from the new IP and open a SiteGround allowlist ticket for it.
 
 ### Fixed
 
