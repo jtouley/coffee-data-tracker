@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.3.0
+version: 2.4.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -339,12 +339,20 @@ schema:
     description: The shares of listed coffees with origin_country, process, roast_level and price_per_100g filled
       in, and the share last seen in the run, lie above median - band_k x 1.4826 x MAD of the recent passing builds
       (the bands of build_metrics_in_band, low side only). Warns only, always.
+  - type: custom
+    engine: dbt
+    implementation: tests/public_prices_are_usd.sql
+    dimension: conformity
+    severity: error
+    description: Every public price is one the store states in USD (or, with no currency stated, a US roaster's);
+      a price in another currency stays in the raw lake only. Every public roaster is in the US.
 - name: public_roaster
   physicalName: public_roaster
   physicalType: table
   description: >-
-    One row per published roaster from the registry: not opted out, with at least one coffee seen, and known from a
-    source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap alone).
+    One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and
+    known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap
+    alone). A store outside the US (a registry correction) is never published.
   synonyms:
   - synonym: roasteries
   - synonym: coffee roasters

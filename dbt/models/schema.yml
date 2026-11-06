@@ -345,6 +345,8 @@ models:
         description: "The roaster's name."
       - name: roaster_state
         description: "The roaster's US state, where known."
+      - name: roaster_country
+        description: "The roaster's country (ISO 3166-1 alpha-2, stg_registry; null for a roaster no longer in the registry). The public tables keep US only."
       - name: is_chain
         description: "The roaster is a chain."
       - name: product_id
@@ -390,9 +392,9 @@ models:
       - name: published_at
         description: "The store's latest publish time (Shopify only)."
       - name: min_price_usd
-        description: "The lowest bag price (USD)."
+        description: "The lowest bag price in USD; a price the store states in another currency is never used."
       - name: price_per_100g
-        description: "The lowest plausible retail price per 100 g of an available bag."
+        description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
       - name: bag_sizes_g
         description: "The bag sizes offered, in grams."
       - name: release_build_id
@@ -436,6 +438,9 @@ models:
         description: "City, where known."
       - name: state
         description: "US state, where known."
+      - name: country
+        description: "Country (ISO 3166-1 alpha-2): the seed's, US unless corrected; public_roaster keeps US only."
+        data_tests: [not_null]
       - name: locations
         description: "Number of locations."
       - name: is_chain
@@ -517,6 +522,8 @@ models:
       - name: event
         data_tests:
           - accepted_values: {arguments: {values: [new, relisted, price, availability, removed]}}
+      - name: previous_price_run
+        description: "The run previous_price_usd comes from: the bag's previous USD observation for a USD price, else its previous observation (public_prices_are_usd checks it was in USD)."
 
   - name: public_coffee
     description: "One row per coffee ever seen from a public roaster, with its latest listing. Delisted and archived coffees stay, marked by catalog_status."
@@ -610,7 +617,7 @@ models:
       - name: release_run_date
         data_type: date
   - name: public_roaster
-    description: "One row per published roaster: not opted out, with a coffee seen, from a redistributable source."
+    description: "One row per published roaster: in the US, not opted out, with a coffee seen, from a redistributable source."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}

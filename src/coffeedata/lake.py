@@ -59,6 +59,8 @@ VARIANT = pa.struct(
         ("price_usd", pa.float64()),
         ("grams", pa.int32()),
         ("available", pa.bool_()),
+        # The price's currency as the store states it (ISO 4217); added in raw 1.6.0, null in older files.
+        ("currency", pa.string()),
     ]
 )
 
@@ -581,13 +583,29 @@ def _same_file(info, path: Path) -> bool:
     return blob_id is None or blob_id == hashlib.sha1(b"blob %d\0" % len(data) + data).hexdigest()
 
 
+def _field_paths(schema: pa.Schema) -> frozenset[str]:
+    """Every column and nested field by dotted path (a struct's fields, and those of a list's struct items), so a
+    field added inside a struct, like snapshots' variants.currency, counts as an added column."""
+
+    def walk(prefix: str, t: pa.DataType):
+        if pa.types.is_list(t) or pa.types.is_large_list(t) or pa.types.is_fixed_size_list(t):
+            yield from walk(prefix, t.value_type)
+        elif pa.types.is_struct(t):
+            for f in t:
+                yield f"{prefix}.{f.name}"
+                yield from walk(f"{prefix}.{f.name}", f.type)
+
+    return frozenset(path for f in schema for path in (f.name, *walk(f.name, f.type)))
+
+
 def _stale_schema(api, repo_id: str, rel: str, info, path: Path) -> bool:
-    """Whether the dataset's schema file at `rel` has fewer columns than the staged one at `path`: only then is it
-    replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by) compare by name."""
+    """Whether the dataset's schema file at `rel` has fewer columns (or nested fields) than the staged one at
+    `path`: only then is it replaced. Identical bytes skip the download; other bytes (another pyarrow's created_by)
+    compare by name."""
     if _same_file(info, path):
         return False
     remote = pq.read_schema(api.hf_hub_download(repo_id, rel, repo_type="dataset"))
-    return set(remote.names) < set(pq.read_schema(path).names)
+    return _field_paths(remote) < _field_paths(pq.read_schema(path))
 
 
 def new_batch_id(now: datetime | None = None) -> str:
@@ -630,10 +648,11 @@ class Lake:
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
             # A zero-row schema file from before a column was added is refreshed in place, so globs always see
-            # every column. That is the pattern for added columns; a changed type or meaning still gets a new schema
+            # every column, nested struct fields included (a glob's union_by_name never adds a nested field that no
+            # file has). That is the pattern for added columns; a changed type or meaning still gets a new schema
             # file beside the old one (like shots' schema-v2), since names are all this compares (Parquet stores
             # timestamp[s] as [ms], so comparing full schemas would never match).
-            if not p.exists() or pq.read_schema(p).names != SCHEMAS[table].names:
+            if not p.exists() or _field_paths(pq.read_schema(p)) != _field_paths(SCHEMAS[table]):
                 p.parent.mkdir(parents=True, exist_ok=True)
                 # A unique temp file in the same folder: two Lake()s refreshing at once never share one, and a
                 # reader globbing *.parquet never sees a half-written file.
