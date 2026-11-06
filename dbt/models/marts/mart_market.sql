@@ -2,7 +2,8 @@
 -- catalog): breadth, price and flavor language.
 with c as (
     select * from {{ ref('int_current_catalog') }}
-    where not is_wholesale and not is_blend and origin_country is not null and not is_chain
+    -- US roasters only, as the public tables: the market is the US one
+    where not is_wholesale and not is_blend and origin_country is not null and not is_chain and roaster_country = 'US'
 ),
 notes as (
     select origin_country, note, count(*) as n

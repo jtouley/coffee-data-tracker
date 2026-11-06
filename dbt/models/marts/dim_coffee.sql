@@ -64,7 +64,8 @@ notes as (
     group by a.coffee_id
 )
 select
-    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.is_chain, l.product_id, l.handle,
+    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, r.is_chain,
+    l.product_id, l.handle,
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
     l.image, l.platform, s.first_seen, s.last_seen, s.weeks_listed,

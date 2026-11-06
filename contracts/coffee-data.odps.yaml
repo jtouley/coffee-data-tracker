@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.2.3
+version: 2.5.0
 status: active
 domain: coffee
 description:
@@ -71,7 +71,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.2.3
+    version: 2.5.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -137,12 +137,35 @@ customProperties:
           Places, OpenStreetMap, excluded from the public tables, and roaster storefronts), a team, a licence and
           attribution. No table, column, type, enum or rule changed, so Snowflake needs no migrate: its load
           compares column names only and its comments read descriptions only.
+      - topic: release rules on the public tables
+        decided: "2026-11-04"
+        outcome: >-
+          Four quality rules join the public-catalog contract (2.3.0, a minor version: rules added, none changed or
+          removed). A release is served only if public_coffee's newest last_seen is the run the build checked
+          (public_coffee_is_fresh), every public row carries the build's release_build_id and release_run_date
+          (public_tables_are_one_release), and the public tables hold their invariants (public_tables_invariants:
+          quantiles in order, counts within counts, first_seen <= last_seen, price events that change a price, new
+          events with no previous price). fill_and_freshness_in_band warns, never blocks, on a drop in the filled
+          shares of origin_country, process, roast_level and price_per_100g or in the share seen this run. No
+          table, column, type or enum changed, so Snowflake needs no migrate. A week with partial, quarantined
+          or closed stores passes every error rule; their unread coffees stay listed, so the share seen this run
+          can warn (#82).
+      - topic: currencies and roasters outside the US
+        decided: "2026-11-04"
+        outcome: >-
+          Prices stay as the store states them in the raw lake, now with their currency (raw contract 1.6.0,
+          snapshots.variants.currency). The public tables publish a price only when it is in USD: stated as USD, or
+          with no currency stated by a US roaster, which is how every older row of a US roaster reads, so nothing
+          changes for them. A store outside the US (aromacoffee.co.za in rand, lacabra.dk in krone, a hand-checked
+          registry correction, config/roasters.csv country) leaves the public tables entirely, as the product's US
+          scope says. public-catalog contract 2.4.0, a minor version: no table, column, type or enum changed; a new
+          quality rule (tests/public_prices_are_usd.sql) and fewer rows.
       - topic: release gate on Claude's verdicts
         decided: "2026-11-04"
         outcome: >-
           Added the quality rule verdicts_cover_catalog and its threshold min_verdict_share (0.85) to
-          contracts/public-catalog.odcs.yaml (public-catalog contract 2.2.3, a patch: an added rule, documentation
-          only for readers). A release is served only if the build had a verdict model and at least 85% of listed
+          contracts/public-catalog.odcs.yaml (public-catalog contract 2.5.0, a minor version: a quality rule added,
+          none changed or removed). A release is served only if the build had a verdict model and at least 85% of listed
           coffees were decided by Claude's coffee-or-not verdict; until 2026-11 every release was the rules alone.
           No table, column, type or enum changed, so Snowflake needs no migrate.
 team:

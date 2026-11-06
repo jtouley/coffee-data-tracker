@@ -200,7 +200,9 @@ def test_egress_ip_refused_on_over_8_percent_two_runs_in_a_row_is_flagged(tmp_pa
 def test_egress_and_pacing_are_per_connector_config():
     assert {c.egress for c in connectors.CONNECTORS.values()} <= set(connectors.EGRESS_MODES)
     assert connectors.CONNECTORS["shopify"].egress == "dedicated"  # the confirmation run's arm
-    assert all(c.egress == "default" for n, c in connectors.CONNECTORS.items() if n != "shopify")
+    # WooCommerce and generic: their own NAT IP (SiteGround challenges Cloud Run's default egress)
+    dedicated = {n for n, c in connectors.CONNECTORS.items() if c.egress == "dedicated"}
+    assert dedicated == {"shopify", "woocommerce", "generic"}
     assert all(c.deadline_min < 240 and c.shuffle for c in connectors.CONNECTORS.values())
 
 

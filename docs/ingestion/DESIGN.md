@@ -1,7 +1,8 @@
 # Ingestion: design (Shopify first)
 
 Status: POC (draft PR). The Cloud Run jobs, the NAT and its egress IP (34.172.156.113) are applied in production
-with the schedule off (RUNBOOK.md §2); nothing crawls on a schedule from Cloud Run yet. The confirmation run on Cloud
+with the schedule off (RUNBOOK.md §2); the second NAT IP, for WooCommerce and generic (section 9.1), is applied
+with RUNBOOK.md §2.1; nothing crawls on a schedule from Cloud Run yet. The confirmation run on Cloud
 Run decides whether the cutover ships.
 
 **Terms used below.**
@@ -20,7 +21,8 @@ Run decides whether the cutover ships.
 ## 1. Decision
 
 **Design B wins: one job per connector, a weekly merge, then enrichment, then the build and gate, then publish.**
-Egress is a per-connector setting (Shopify: one dedicated NAT IP; the others: Cloud Run's default egress). Pacing
+Egress is a per-connector setting (Shopify: one dedicated NAT IP; WooCommerce and generic: a second one, section
+9.1; Squarespace and Square Online: Cloud Run's default egress). Pacing
 is per-connector config too: a request budget, a shuffled store order and a crawl window.
 
 The owner's rule is that the simplest design that meets the bar wins. The bar: the big stores complete, every job
@@ -256,7 +258,7 @@ vendored ODCS schema and checks that each producer writes exactly its contract's
 | **raw** | **1.2.0** (this PR adds `fetches.blocks` in 1.1.0, then `fetches.partial` and the `unavailable` status in 1.2.0) | `snapshots` (run_date, batch_id, fetched_at, roaster_id, product_id, handle, url, title, platform, vendor, product_type, tags, image, body_hash, variants, is_coffee, published_at, payload_hash); `bodies` (body_hash, body_text, first_seen_run); `fetches` (run_date, batch_id, fetched_at, roaster_id, adapter, status, error, products, coffees, pages, requests, http_statuses, retries, rate_limited, duration_s, code_version, **blocks**, **partial**); `fetches.status` ∈ ok, error, unavailable; `parked/run_date=<d>/<roaster_id>.json` (page, items) | connector jobs via the merge → dbt (stg_snapshots, stg_product_inputs, stg_fetches), enrichment, registry |
 | **manifest / control** | 1.1.0 (descriptions and quality rules) | `run_manifests` (run_date, manifest_id, started_at, roaster_id, status, platform, adapter, mode, code_version); `job_manifests` (run_date, job, connector, shard, attempt_id, started_at, ended_at, status, todo, ok, errors, parked, skipped, requests, http_429, http_430, egress_ips, refusals[ip, stores, refused], code_version, detail) | every job → dbt run_completeness, merge, enrichment, egress-check |
 | **enrichment** | 1.1.0 (descriptions and quality rules) | `enrichments` (extracted_at, roaster_id, product_id, body_hash, method, needs_llm, origin_country, origin_region, producer, process, varietals, elevation_masl_min/max, roast_level, tasting_notes, is_blend, is_decaf) | enrich-week → dbt stg_enrichments, dim_coffee |
-| **public** | 2.2.3 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.3 adds the `verdicts_cover_catalog` rule and `min_verdict_share`; 2.2.1 to 2.2.3 change no column) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
+| **public** | 2.5.0 (2.2.0: `is_listed` keeps a partial catalog's unread coffees listed; 2.2.1 adds AI context; 2.2.2 adds licence, servers, team, tags and units; 2.2.1 and 2.2.2 are documentation only; 2.3.0 adds the release rules on the public tables, #82; 2.4.0: USD prices and US roasters only, raw 1.6.0's `variants.currency`; 2.5.0 adds the `verdicts_cover_catalog` rule and `min_verdict_share`, no column change) | `contracts/public-catalog.odcs.yaml` (ODCS/ODPS) | build → the dataset; `tests/test_contracts.py` |
 
 `fetches.blocks` and `fetches.partial` are new and nullable, so older files read back as null; the merge reads a
 checkpoint from an older image the same way. Each internal contract now carries a description of every table and
@@ -322,8 +324,8 @@ Every design got the same fixes, and they are in this PR:
 
 **All crawling moves off GitHub Actions to Cloud Run, not just Shopify.** Every request to a roaster, from
 discovery, probing, every connector's crawl and crawl-retry, runs as a Cloud Run Job on Cloud Scheduler. So do the
-merge, enrichment and the build + gate + publish. Only Shopify's jobs use the dedicated NAT IP; the rest use default
-egress. The Terraform is `src/terraform/ingestion.tf`, and the owner's steps are in `docs/ingestion/RUNBOOK.md`.
+merge, enrichment and the build + gate + publish. Shopify's jobs use Shopify's dedicated NAT IP, the WooCommerce and
+generic crawls a second one (section 9.1); the rest use default egress. The Terraform is `src/terraform/ingestion.tf`, and the owner's steps are in `docs/ingestion/RUNBOOK.md`.
 
 Why:
 - **One runtime** for the weekly pipeline, with one scheduler, one secrets store (Secret Manager, the app's own
@@ -336,7 +338,8 @@ Why:
   answered any 429: 29% from GitHub-hosted runners (`crawl-plan/backoff.md`) and 37% in A's run 1 from this
   environment's pooled egress (`A/real.md`). (The ~20% in section 2 is another metric: the store's *first* catalog
   request answered 429.) The reasons to move are one runtime and per-connector egress, not the runners' IPs.
-- **Cost:** about +$1–2/month for the non-Shopify jobs, and about $4–6/month for the NAT, mostly the static IP.
+- **Cost:** about +$1–2/month for the non-Shopify jobs, and about $4–6/month for each of the two NATs, mostly its
+  static IP.
 
 **Stays on GitHub Actions:** CI, the site deploy and issue-form handling. None of them contacts a roaster.
 - **Build + gate + publish moves to Cloud Run** (the `build` job: verdicts, `coffeedata build`, `publish`, then
@@ -350,7 +353,7 @@ repository, built with Cloud Build). Each job's task timeout is 240 min (the str
 maxRetries is 0 for Shopify's crawl jobs (`crawl-shopify`, its default-egress arm, `crawl-retry`) and 1 for every
 other job, the other connectors' crawls included (section 7.1). A crawl that stops at its deadline exits 0 and
 reports `deadline` in `job_manifests`, so only a crawl that died is retried. A second attempt of a failed Shopify
-crawl would re-ask the stores that just refused, on the one NAT IP, so its resume slot (or crawl-retry) picks up the
+crawl would re-ask the stores that just refused, on Shopify's NAT IP, so its resume slot (or crawl-retry) picks up the
 rest instead.
 
 | Job | Command | Network | Scheduler (UTC) |
@@ -359,7 +362,8 @@ rest instead.
 | `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
 | `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
 | `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
-| `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | `crawl --connector X` (a re-run resumes) | default | Mon 09:17, resume 15:17 (with Shopify), third pass 21:47 |
+| `crawl-woocommerce`, `crawl-generic` | `crawl --connector X` (a re-run resumes) | **Direct VPC egress → a second Cloud NAT, its own static IP** (section 9.1) | Mon 09:17, resume 15:17 (with Shopify), third pass 21:47 |
+| `crawl-squarespace`, `crawl-square-online` | `crawl --connector X` (a re-run resumes) | default | Mon 09:17, resume 15:17 (with Shopify), third pass 21:47 |
 | `merge` | `merge` | default | Tue 03:17 |
 | `enrich-week` | `enrich-week --submit` | default | Tue 04:17 |
 | `build` | `classify`, `build`, `publish`, `egress-check` | default | Tue 06:17 |
@@ -377,9 +381,9 @@ Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on 
 |---|---|---|---|
 | 1st of the month 03:17 | `discover` | Overture and OSM discovery, publish | 07:17 |
 | Mon 07:17 | `probe` | stale roasters' platforms, publish | 11:17 |
-| Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on the NAT IP, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
+| Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on its NAT IP, WooCommerce and generic on the second, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
 | Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |
-| Mon 21:47 | `crawl-retry` and the four `*-retry` entries | the third pass: Shopify's parked stores, on the NAT IP (`crawl-retry`); every other connector's own crawl job again, on default egress, resuming every roaster without an ok fetch this week | Tue 01:47 |
+| Mon 21:47 | `crawl-retry` and the four `*-retry` entries | the third pass: Shopify's parked stores, on the NAT IP (`crawl-retry`); every other connector's own crawl job again, on that job's egress, resuming every roaster without an ok fetch this week | Tue 01:47 |
 | Tue 03:17 | `merge` | every connector's partition for Monday's week into the lake's tables | 07:17 |
 | Tue 04:17 | `enrich-week` | `--submit`: Claude's candidates, once the week's merge is `done` (otherwise it reports `waiting` and sends nothing: run it again by hand) | 08:17 |
 | Tue 06:17 | `build` | verdicts, build + gate, publish, egress-check | 10:17 |
@@ -398,12 +402,14 @@ named by roaster (only Shopify parks: `PageBlocked` is Shopify's); the staging b
 the same path. Each job's `publish` uploads every staged lake file it finds, other jobs' included: a file another
 job sent and removed meanwhile is skipped (it re-checks that the file still exists and asks the dataset which paths it
 has, again on every retry), so the jobs' commits never conflict on content. Only crawl-shopify (and crawl-retry, in
-the evening, alone) uses the NAT, so its ports are as before. The roasters' sites are disjoint across connectors.
+the evening, alone) uses Shopify's NAT, so its ports are as before; crawl-woocommerce and crawl-generic share the
+second NAT, two instances on their own gateway with the same per-VM port range. The roasters' sites are disjoint across connectors.
 
-**The NAT's ports.** Shopify's jobs send all their traffic through the NAT, the lake reads too: DuckDB reads the hf://
+**The NATs' ports.** Shopify's jobs send all their traffic through the NAT, the lake reads too: DuckDB reads the hf://
 lake with parallel range requests. The default of 64 static ports per VM most likely ran out in the confirmation run's
 arm 2 ("Could not connect to server" on its first lake read), so the NAT uses dynamic port allocation, 1,024 to 8,192
-ports per VM (endpoint-independent mapping off, as dynamic allocation requires). A job's first lake reads (the
+ports per VM (endpoint-independent mapping off, as dynamic allocation requires). The second NAT has the same
+settings, for the same reason. A job's first lake reads (the
 registry state, this run's done and tried roasters, known product counts, blocked hosts) also retry a transient
 connection error three times (`lake.retry_transient`, 2/6/18 s), never a missing file or a bad query. Keeping the
 lake reads off the NAT would need a split egress (`PRIVATE_RANGES_ONLY` would move the store requests off the dedicated
@@ -493,7 +499,8 @@ no new job, image or alert. `crawl-retry` now writes `job_manifests` rows too (j
 counts as a landed crawl or towards `egress-check`), uses the guard, and resumes only its own connector's parked
 stores (the `parked/` folder is shared).
 
-**A faster resume: `max_retries = 1` for the non-Shopify crawls**, rather than a midday pass. A re-run of `crawl`
+**A faster resume: `max_retries = 1` for the non-Shopify crawls** (since section 9.1, not WooCommerce's or generic's:
+on one static IP, like Shopify's, they get 0), rather than a midday pass. A re-run of `crawl`
 is already a resume (it compacts the dead attempt's checkpoints and skips what is done), so Cloud Run's retry
 starts it within a minute instead of at 15:17, and the guard makes the retry safe against the roaster that
 killed the first attempt. A midday pass would wait up to 3 hours and add 4 more entries. The retry stays inside the
@@ -532,10 +539,11 @@ thing to test (Next).
 
 ## 9. Egress
 
-- **Per connector, in config**: `Connector.egress` is `"dedicated"` for Shopify and `"default"` for the rest. The
-  deploy sets the job's network from it, and the job records it in `job_manifests.detail.egress`. It's one design
-  with a setting, not a different design per connector. The other connectors stay on default egress unless their
-  data shows otherwise.
+- **Per connector, in config**: `Connector.egress` is `"dedicated"` for Shopify, WooCommerce and generic and
+  `"default"` for the rest; in `ingestion.tf` each job's `egress` names which: `"shopify"`, `"woo_generic"` or
+  `"default"`. The job records `detail.egress` (`dedicated` on either NAT; `egress_ips` says which IP). It's one
+  design with a setting, not a different design per connector. Squarespace and Square Online stay on default egress
+  unless their data shows otherwise.
 - **Every run logs each egress IP and its refusals** in `job_manifests`: `egress_ips` lists every IP seen (at start,
   at end, and on blocks), and `refusals[ip, stores, refused]` counts first-contact refusals (429/430 before any page)
   per store, attributed to the IP its first block left from. A store's first contact is its first attempt in the
@@ -549,6 +557,48 @@ thing to test (Next).
   There is no automatic action.
 - **Escalation, only if the data says so**: Cloud NAT with 1 IP, then N IPs, then a separate egress-swap job. Never
   rotate IPs to dodge limits.
+
+### 9.1 A second egress IP for WooCommerce and generic (2026-11-02)
+
+**Why.** SiteGround, the host behind many WooCommerce and generic roaster sites, answers Cloud Run's shared
+default-egress pool with HTTP 202 and an `sg-captcha` challenge page. The same image through the existing NAT IP got
+200 (test run 2026-11-02, execution `sg-diag-nat-5wb2v`). The owner's decision: crawl-woocommerce and crawl-generic,
+and every pass of them (resume and evening retry: the same two jobs), leave from a **second** reserved static IP,
+separate from Shopify's 34.172.156.113. Sharing Shopify's IP would mix two traffic profiles on the one identity
+Shopify knows us by, and Shopify's crawl and these crawls run at the same time.
+
+**How.** Cloud NAT translates by source: a gateway serves the subnets in its list, and its manually reserved IPs
+are its own ("NAT IP addresses can't be shared between NAT gateways",
+[Cloud NAT quotas and limits](https://cloud.google.com/nat/quota)). A Cloud Run job's Direct VPC egress names a
+network and subnet, and any number of jobs can share a subnet
+([Direct VPC egress](https://cloud.google.com/run/docs/configuring/vpc-direct-vpc)). So the job's subnet picks the
+gateway, and the gateway picks the IP: a second subnet (10.8.0.64/26, beside Shopify's 10.8.0.0/26; jobs need a
+/26), a second reserved address, and a second gateway on the **same** router (up to 50 gateways per router, same
+quotas page), with the Shopify NAT's port settings. This is Google's static-outbound-IP recipe
+([Static outbound IP](https://cloud.google.com/run/docs/configuring/static-outbound-ip)) done twice. `ingestion.tf`
+maps each egress to its subnet and IP (`local.egress_nats`); the jobs' `nat` boolean became `egress` = `default`,
+`shopify` or `woo_generic`.
+
+**Alternatives not taken.**
+- **A second IP on Shopify's gateway**: with `MANUAL_ONLY`, a gateway hands its IPs out across VMs and ports
+  itself; nothing picks which IP a job gets, so Shopify's crawl could leave from the new IP.
+- **Source-based NAT rules on Shopify's gateway** ([NAT rules](https://cloud.google.com/nat/docs/nat-rules-overview)):
+  they match on IP ranges, so the second subnet is still needed, and the rule and the subnet would be changes to
+  Shopify's NAT. A separate gateway leaves Shopify's subnet, IP and NAT untouched.
+- **A second router or network**: works, but adds resources for nothing; one router already holds many gateways.
+
+**Ports.** Each gateway has its own port pool on its own IP: the WooCommerce and generic crawls (two instances,
+both on Monday's three slots) can't exhaust Shopify's ports, nor Shopify's theirs.
+
+**Measurement.** Nothing changes in how egress is measured: `egress_ips` and `refusals` are per IP, so the new IP
+gets its own rows in `egress-check` (no IP is listed in code or in its expectations). A first contact answered with
+an `sg-captcha` challenge counts as a refusal (`http.CHALLENGE_STATUSES`), so if SiteGround challenges the new IP
+too, `egress-check` flags it after two runs over 8%; the first week's WooCommerce and generic `ok` rates, against
+earlier weeks, are the other check.
+
+**After apply: SiteGround's allowlist.** The owner opens a SiteGround support ticket asking that the new IP
+(`terraform output woo_generic_egress_ip`) be allowlisted for crawling, naming our user agent and robots.txt
+compliance (RUNBOOK §2.1). Until SiteGround answers, the NAT IP alone is what got 200 in the test.
 
 ### Block-header logging (this PR)
 

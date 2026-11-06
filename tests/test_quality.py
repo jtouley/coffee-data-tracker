@@ -8,13 +8,14 @@ import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+import duckdb
 import pytest
 
 from coffeedata import quality
 from coffeedata.lake import Lake
 
 from .lakehelp import manifest, old_file, product, run
-from .test_dbt import build
+from .test_dbt import build, run_dbt
 
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 RID = "onyxcoffeelab.com"
@@ -866,10 +867,163 @@ def test_the_site_from_the_served_release_needs_one(tmp_path, monkeypatch, capsy
     assert not (tmp_path / "site").exists() and not (tmp_path / "s.duckdb").exists()
 
 
+ORIGINS = [
+    product("E1", title="Ethiopia Guji Washed Light Roast"),
+    product("E2", 30.0, title="Ethiopia Yirgacheffe Washed Light Roast"),
+    product("E3", 40.0, available=False, title="Ethiopia Sidama Washed Light Roast"),
+    product("BL", None, title="House Coffee"),  # nothing the rules can read, and no price
+]
+
+
+def _metrics(con, prefix: str) -> dict[str, float]:
+    return dict(
+        con.execute("select metric, value from mart_build_profile where metric like ?", [prefix]).fetchall()
+    )
+
+
+def test_the_profile_has_filled_shares_and_the_share_seen_this_run(lake, tmp_path):
+    """filled_share:<column> is the share of listed coffees with the column filled in; listed_seen_this_run_share
+    the share last seen in this run, which a partial fetch keeps below 1 (its unread products stay listed)."""
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, ORIGINS[:2], partial=True)  # E3 and BL unread: still listed, last seen 10-19
+    manifest(lake, "2026-10-26", [RID])
+    con = build(lake, tmp_path, as_of_run="2026-10-26")
+    assert _metrics(con, "filled_share:%") == {
+        "filled_share:origin_country": 0.75,
+        "filled_share:process": 0.75,
+        "filled_share:roast_level": 0.75,
+        "filled_share:price_per_100g": 0.5,  # BL has no price, E3 no available bag
+    }
+    assert _metrics(con, "listed_seen%") == {"listed_seen_this_run_share": 0.5}
+    con.close()
+
+
+def test_a_drop_in_a_filled_share_warns_and_never_fails(lake, tmp_path):
+    """fill_and_freshness_in_band: the anomaly bands of build_metrics_in_band, low side only, and warn only."""
+    run(lake, "2026-10-26", RID, ORIGINS)
+    manifest(lake, "2026-10-26", [RID])
+    _passing_builds(lake, [{
+        "filled_share:origin_country": 0.75, "filled_share:process": 0.75, "filled_share:roast_level": 0.75,
+        "filled_share:price_per_100g": 0.1,  # this build's 0.5 is a rise: no problem
+        "listed_seen_this_run_share": 1.0,
+    }] * 6)  # fmt: skip
+    floors = {"as_of_run": "2026-10-26", "volume_tolerance": 1e9}
+    r = build(lake, tmp_path, check=False, **floors)
+    assert r.returncode == 0 and re.search(r"PASS fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    # Extraction broke: no title reads any more, so origin, process and roast level fall from 0.75 to 0.
+    run(lake, "2026-10-26", RID, [p | {"title": f"Coffee {p['product_id']}"} for p in ORIGINS], hour=13)
+    r = build(lake, tmp_path, check=False, **floors)
+    assert r.returncode == 0 and re.search(r"WARN 3 fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert _metrics(con, "filled_share:%")["filled_share:origin_country"] == 0
+    con.close()
+
+
+def _break(tmp_path, *statements: str) -> None:
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"))
+    for s in statements:
+        con.execute(s)
+    con.close()
+
+
+def _test(lake, tmp_path, name: str, **dbt_vars):
+    return run_dbt(lake, tmp_path, "test", "--select", name, **dbt_vars)
+
+
+def test_the_public_tables_hold_their_invariants(lake, tmp_path):
+    """public_tables_invariants: rows that the SQL can't produce, written into a built database by hand."""
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, [ORIGINS[0] | {"variants": [ORIGINS[0]["variants"][0] | {"price_usd": 22.0}]},
+                                  *ORIGINS[1:]])  # fmt: skip  # E1's price changed
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "public_tables_invariants").returncode == 0
+    _break(
+        tmp_path,
+        "update public_market_weekly set p10_price_per_100g = median_price_per_100g + 1",  # p10 above the median
+        "update public_market_weekly set in_stock = coffees + 1, roasters = coffees + 1",
+        f"update public_coffee set first_seen = last_seen + 7 where coffee_id = '{RID}:E2'",
+        "update public_price_event set previous_price_usd = price_usd where event = 'price'",
+        "update public_price_event set previous_price_usd = 1 where event = 'new' and coffee_id like '%:E3'",
+    )
+    r = _test(lake, tmp_path, "public_tables_invariants")
+    assert r.returncode != 0 and re.search(r"FAIL 6 public_tables_invariants", r.stdout), r.stdout[-3000:]
+
+
+def test_every_public_row_is_this_builds_release(lake, tmp_path):
+    run(lake, "2026-10-26", RID, ORIGINS)
+    manifest(lake, "2026-10-26", [RID])
+    release = {"build_id": "b1", "as_of_run": "2026-10-26"}
+    build(lake, tmp_path, **release).close()  # every release column is this build's
+    assert _test(lake, tmp_path, "public_tables_are_one_release", **release).returncode == 0
+    r = _test(lake, tmp_path, "public_tables_are_one_release", build_id="b2", as_of_run="2026-10-26")
+    assert re.search(r"FAIL 4 public_tables_are_one_release", r.stdout), r.stdout[-3000:]  # another build's
+    _break(
+        tmp_path,
+        f"update public_coffee set release_run_date = date '2026-10-19' where coffee_id = '{RID}:E1'",
+    )
+    r = _test(lake, tmp_path, "public_tables_are_one_release", **release)  # a mixed release
+    assert re.search(r"FAIL 1 public_tables_are_one_release", r.stdout), r.stdout[-3000:]
+
+
+def test_the_public_catalog_is_from_the_run_the_build_checked(lake, tmp_path):
+    run(lake, "2026-10-19", RID, ORIGINS)
+    run(lake, "2026-10-26", RID, None)  # the run failed: the catalog is still last week's
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-19").returncode == 0
+    r = _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-26")
+    assert re.search(r"FAIL 1 public_coffee_is_fresh", r.stdout), r.stdout[-3000:]
+    r = _test(lake, tmp_path, "public_coffee_is_fresh", as_of_run="2026-10-12")  # a newer run in the lake
+    assert re.search(r"FAIL 1 public_coffee_is_fresh", r.stdout)
+
+
+def test_run_manifest_modes_are_the_writers(lake, tmp_path):
+    run(lake, "2026-10-26", RID, ORIGINS)
+    for mode in ("full", "sample", "only", "retry_failed"):
+        manifest(lake, "2026-10-26", [RID], mode=mode)
+    build(lake, tmp_path).close()
+    assert _test(lake, tmp_path, "run_manifest_mode_values").returncode == 0
+    manifest(lake, "2026-10-26", [RID], mode="partial")  # not a mode: run_completeness wouldn't know it
+    r = _test(lake, tmp_path, "run_manifest_mode_values")
+    assert r.returncode != 0 and re.search(r"FAIL 1 run_manifest_mode_values", r.stdout), r.stdout[-3000:]
+
+
+def test_a_partial_a_quarantined_and_a_closed_store_pass_every_release_rule(lake, tmp_path):
+    """A legitimate week with main's newer fetch states: one store read in part (fetches.partial), one quarantined
+    after crashing the crawl (status crashed), one closed (unavailable). None of the release rules fails: the
+    public tables stay one fresh release and hold their invariants, and the share seen this run only warns."""
+    stores = {"part": "counterculturecoffee.com", "pill": "intelligentsia.com", "closed": "anaheimcoffee.com"}
+    for rid in (RID, *stores.values()):
+        run(lake, "2026-10-19", rid, ORIGINS)
+    run(lake, "2026-10-26", RID, [ORIGINS[0] | {"variants": [ORIGINS[0]["variants"][0] | {"price_usd": 22.0}]},
+                                  *ORIGINS[1:]])  # fmt: skip  # E1's price changed
+    # Read in part, with a price change: E3 and BL unread, so still listed from last week, and never removed.
+    run(lake, "2026-10-26", stores["part"], [ORIGINS[0], ORIGINS[1] | {"variants": [
+        ORIGINS[1]["variants"][0] | {"price_usd": 31.0}]}], partial=True)  # fmt: skip
+    run(lake, "2026-10-26", stores["pill"], None, status="crashed")
+    run(lake, "2026-10-26", stores["closed"], None, status="unavailable")
+    manifest(lake, "2026-10-26", [RID, *stores.values()])
+    _passing_builds(lake, [{"listed_seen_this_run_share": 1.0}] * 6)
+    release = {"build_id": "b1", "as_of_run": "2026-10-26", "volume_tolerance": 1e9}
+    r = build(lake, tmp_path, check=False, **release)
+    assert r.returncode == 0, r.stdout[-4000:]
+    for rule in ("public_coffee_is_fresh", "public_tables_are_one_release", "public_tables_invariants",
+                 "run_manifest_mode_values", "run_ok_rate", "run_is_complete"):  # fmt: skip
+        assert re.search(rf"PASS {rule}\b", r.stdout), rule
+    assert re.search(r"WARN 1 fill_and_freshness_in_band", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    # Seen this run: the 4 of the full store, 2 of the partial one; not the quarantined or closed store's 4 each.
+    assert _metrics(con, "listed_seen%") == {"listed_seen_this_run_share": 6 / 16}
+    assert _metrics(con, "run_quarantined") == {"run_quarantined": 1}
+    assert con.execute(
+        "select count(*) from public_price_event where event = 'removed' and roaster_id = ?", [stores["part"]]
+    ).fetchone() == (0,)
+    con.close()
+
+
 def test_the_listings_coverage_claims_parse_and_point_at_their_copy():
     claims = {c["metric"]: c for c in quality.coverage_claims()}
     assert {m: c["value"] for m, c in claims.items()} == {
-        "listed_coffees": 45000.0,
+        "listed_coffees": 38000.0,
         "roasters_with_coffee": 1800.0,
     }
     for c in claims.values():  # the line named is the copy, not the claims comment

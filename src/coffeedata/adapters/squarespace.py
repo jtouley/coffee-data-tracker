@@ -8,7 +8,7 @@ from itertools import count
 from urllib.parse import urlparse
 
 from ..http import DeadlineReached, FetchError, NotCatalog, PartialCatalog, PoliteClient, block_status
-from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
 from ..ratelimit import RateLimited
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, to_float
@@ -36,6 +36,10 @@ def shop_paths(urls: list[str]) -> list[str]:
 
 
 def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
+    """Each variant's price and its currency come from its `priceMoney`, {"currency": "USD", "value": "32.00"}.
+    ?format=json documents no fields; this is the shape of Squarespace's money in its Commerce APIs, a product
+    variant's `pricing.basePrice` {"currency": "USD", "value": 49.99}
+    (https://developers.squarespace.com/commerce-apis/retrieve-specific-products)."""
     variants = []
     for v in i.get("variants") or []:
         title = " ".join(str(x) for x in (v.get("attributes") or {}).values())
@@ -47,6 +51,7 @@ def parse_item(i: dict, roaster: Roaster) -> CatalogItem:
                 price_usd=to_float((v.get("priceMoney") or {}).get("value")),
                 grams=parse_grams(title),
                 available=bool(stock),
+                currency=currency_code((v.get("priceMoney") or {}).get("currency")),
             )
         )
     return CatalogItem(

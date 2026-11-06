@@ -50,7 +50,7 @@ from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' 
 - Source: each roaster's own public storefront feed, read once a week (Shopify, WooCommerce, Squarespace, Square Online, or schema.org markup), following robots.txt.
 - Coverage: only roasters whose storefront publishes a readable catalog, about half of the US roasters whose sites respond. Treat counts as a sample, not a census.
 - Attributes: origin, process, notes and the rest come from structured tags and text rules, with Claude filling gaps (`attributes_source` = `rules` or `llm`). They can be wrong; the roaster's listing is authoritative.
-- Prices: USD as listed, before discounts and shipping. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
+- Prices: USD as listed, before discounts and shipping. A price the store states in another currency is never published, and roasters outside the US aren't in the public tables. `price_per_100g` uses the cheapest in-stock bag of 150 g to 2.5 kg.
 
 ## License and attribution
 

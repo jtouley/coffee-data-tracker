@@ -32,6 +32,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   Lineage metadata: fetch diagnostics, run manifests, a serving log, the build environment and payload hashes
   (#40). dbt staging tables and unit tests (#49). Run gates calibrated on real data, with per-adapter floors and
   anomaly bands (#52). A warning when the coverage numbers in the listing copy drift from the build (#79).
+  Warn-only bands on the filled shares of origin, process, roast level and price, and on the share of the catalog
+  seen in the run; invariants, a single release and freshness checked on the public tables, and run-manifest modes
+  checked in dbt; public contract 2.3.0 lists the new release rules (#82).
 - **Shot-logging app.** Data model and shot logging (#13); sign-in and security headers (#15);
   invites, reset codes, equipment and switching gear (#16); bag capture with Claude reading the label (#17); the
   coffee page, History, Correct and Retract, and `mart_bag` (#18); offline pages and queued photos (#20); layout,
@@ -69,6 +72,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
   connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
   memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
+- The WooCommerce and generic crawls (`crawl-woocommerce`, `crawl-generic`, every pass) leave from a second
+  reserved static IP, separate from Shopify's: SiteGround answers Cloud Run's default egress with a 202
+  `sg-captcha` challenge. Terraform adds a second subnet, address and Cloud NAT gateway on the existing router, with
+  the Shopify NAT's port settings, and outputs `woo_generic_egress_ip`; Shopify's subnet, IP and NAT are unchanged.
+  Each job's egress in `ingestion.tf` is now `default`, `shopify` or `woo_generic` instead of a `nat` flag, and
+  `Connector.egress` is `dedicated` for WooCommerce and generic. After apply, the runbook (ยง2.1) has the owner
+  check one SiteGround store from the new IP and open a SiteGround allowlist ticket for it.
 
 ### Fixed
 
@@ -80,7 +90,7 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   opt-out for local and dev runs (`make` sets it for a local lake, and the tests set it). The build job's chain
   fails its execution on a failed classify. `dim_coffee` gains `classified_by` (`claude` or `rules`) and
   `verdict_model`, and a new gate, `verdicts_cover_catalog`, fails a build with no verdict model or with under 85%
-  of listed coffees decided by a verdict (public contract 2.2.3: the rule and its threshold, no column change).
+  of listed coffees decided by a verdict (public contract 2.5.0: the rule and its threshold, no column change; #108).
   `verdict_model` is required in Terraform. RUNBOOK ยง5.5 covers the gate
   and the backfill.
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
