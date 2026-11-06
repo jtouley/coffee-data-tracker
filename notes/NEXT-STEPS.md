@@ -251,3 +251,8 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   The fix round is running, with the cheap minors too. m7 (reset links last 7 days; OWASP suggests 24–72 h) is left for the owner to decide. Next: a final low/medium review, then CI, then merge.
 - Owner decision (2026-11-06): reset links stay valid for 7 days (m7 closed, no change).
 - Rule (owner, 2026-11-06): every review agent posts its review to GitHub as a PR comment. The three #120 design reviews were backfilled as comments 6688494016, 6688494429 and 6688494822. Posting needs the REST API (gh api …/issues/N/comments), because gh pr comment uses GraphQL, which is blocked.
+- 2026-11-06 #93: the final review is clean (issuecomment-6688842599). Merge on green CI once the PR is out of draft (the owner clicks Ready). Follow-ups:
+  - give fetch-health a ~1800 s task timeout;
+  - a still-running manual --only run is marked dead when a later pass starts;
+  - remove the dead mode==only branch;
+  - #105 left DESIGN §6 saying the non-Shopify crawls retry once.
