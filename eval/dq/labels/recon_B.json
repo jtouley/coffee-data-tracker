@@ -4,44 +4,10 @@
   "model": "claude-opus-5-5",
   "effort": "high",
   "rule": "recon",
-  "n": 10
+  "n": 3,
+  "note": "train and validation only; the test labels are in sealed/"
  },
  "labels": [
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073308897584",
-   "label": "by_design",
-   "reason": "Latest record is classified non-coffee, so it is excluded from the coffee table; its events are kept per the definition."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073308963120",
-   "label": "by_design",
-   "reason": "Latest pod record is classified non-coffee and the product leaves dim_coffee; the orphan events are explained by the definition."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309126960",
-   "label": "by_design",
-   "reason": "Latest record is classified non-coffee, so the product is excluded from dim_coffee; the events are retained per the definition."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309225264",
-   "label": "by_design",
-   "reason": "Latest record is classified non-coffee, so it is dropped from dim_coffee; the event table keeps its history as defined."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309290800",
-   "label": "by_design",
-   "reason": "Latest record is classified non-coffee (pods), so it is dropped from the coffee table; the events are kept as defined."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309323568",
-   "label": "by_design",
-   "reason": "Latest pod record is classified non-coffee and leaves the coffee table; the earlier events stay by definition."
-  },
-  {
-   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309454640",
-   "label": "by_design",
-   "reason": "Latest record (pod pack) is classified non-coffee, so it leaves dim_coffee; its earlier events stay, as the stated definition says."
-  },
   {
    "id": "2026-11-02|orphan_event|lostsockroasters.com:2152864481391",
    "label": "by_design",

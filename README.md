@@ -410,8 +410,9 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     price per 100 g far from coffees of the same origin and process (robust z of its log, below −3 or above 6);
     totals that two public tables state separately (roaster counts, the listed total, a price event's roaster, a
     price event with no coffee row that isn't a reclassified product); and every row this build adds, removes or
-    changes against the served release with a reason (`release_changes`; the build prints the counts per reason
-    as `release notes:` and records them in `builds` as `kind = 'release_change'`);
+    changes against the served release with a reason (`release_changes`, run after the gate as a report so it
+    can never fail a build; the build prints the counts per reason as `release notes:` and records them in
+    `builds` as `kind = 'release_change'`);
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;

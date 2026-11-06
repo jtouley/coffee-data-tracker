@@ -7,9 +7,19 @@ import shutil
 import duckdb
 import pytest
 
-from .lakehelp import manifest, product, run
+from .lakehelp import manifest, run
+from .lakehelp import product as _product
 from .test_dbt import build, run_dbt
 from .test_quality import _passing_builds
+
+
+def product(*args, **kwargs) -> dict:
+    """lakehelp.product, priced in stated USD: these stores aren't in the fixture registry, so a price with no
+    currency wouldn't count as dollars (stg_snapshots, is_usd)."""
+    p = _product(*args, **kwargs)
+    p["variants"] = [v | {"currency": "USD"} for v in p["variants"]]
+    return p
+
 
 pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
 WEEK1, WEEK2 = "2026-10-19", "2026-10-26"
@@ -137,18 +147,24 @@ def test_the_public_tables_reconcile_and_a_reclassified_product_is_no_disagreeme
     assert r.returncode == 0 and re.search(r"WARN 4 public_tables_reconcile", r.stdout), r.stdout[-3000:]
 
 
-def _release(tmp_path, name: str) -> dict[str, str]:
+def _release(tmp_path, name: str, run_date: str = WEEK2, drop: dict | None = None) -> dict[str, dict]:
     """Write the built public tables as a release's files, under a releases/run_date=.../build=... path as the lake
-    keeps them (the path must not leak into the rows: price events keep their own run_date)."""
-    out = tmp_path / "releases" / f"run_date={WEEK2}" / f"build={name}"
+    keeps them (the path must not leak into the rows: price events keep their own run_date), and return the
+    previous_release var `coffeedata build` passes for it. drop: {table: [columns]} left out of the files, as in a
+    release written before those columns were added."""
+    out = tmp_path / "releases" / f"run_date={run_date}" / f"build={name}"
     out.mkdir(parents=True)
     con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
-    files = {}
+    spec = {}
     for t in ("public_coffee", "public_price_event", "public_roaster", "public_market_weekly"):
-        files[t] = str(out / f"{t}.parquet")
-        con.execute(f"copy (select * from {t}) to '{files[t]}' (format parquet)")
+        path = out / f"{t}.parquet"
+        gone = (drop or {}).get(t)
+        cols = f"* exclude ({', '.join(gone)})" if gone else "*"
+        con.execute(f"copy (select {cols} from {t}) to '{path}' (format parquet)")
+        names = [r[0] for r in con.execute(f"describe select * from '{path}'").fetchall()]
+        spec[t] = {"path": str(path), "columns": names}
     con.close()
-    return files
+    return spec
 
 
 def _changes(tmp_path) -> dict[tuple[str, str, str], int]:
@@ -160,6 +176,17 @@ def _changes(tmp_path) -> dict[tuple[str, str, str], int]:
     return {(t, c, r): n for t, c, r, n in rows}
 
 
+def _tamper(tmp_path, spec: dict, where: str) -> dict:
+    """The served price events with one event's price rewritten (+1): a past price changed with nothing to show."""
+    path = tmp_path / "tampered.parquet"
+    con = duckdb.connect()
+    src = spec["public_price_event"]["path"]
+    con.execute(f"copy (select * replace (case when {where} then price_usd + 1 else price_usd end as price_usd) "
+                f"from '{src}') to '{path}' (format parquet)")  # fmt: skip
+    con.close()
+    return spec | {"public_price_event": spec["public_price_event"] | {"path": str(path)}}
+
+
 def test_every_change_against_the_served_release_has_a_reason(lake, tmp_path):
     """release_changes: the new build's public tables against the served release's, row by row, each change with
     the reason the build can show; release_changes_explained warns on the rest. The case of the 2026-11-02 verdict
@@ -168,27 +195,35 @@ def test_every_change_against_the_served_release_has_a_reason(lake, tmp_path):
     'new' event moves to the earlier run and a 'price' event appears)."""
     rid = "onyxcoffeelab.com"
     flip = {"title": "Venus (Espresso, Drip, Cold Brew) Gift Set"}  # the rules read it as not coffee
+    venus = {"title": "Venus Espresso Blend"}
     run(lake, WEEK1, rid, [product("A"), product("P", title="Single Cups Coffee"), product("V", 24.5, coffee=False,
                                                                                          **flip)])  # fmt: skip
-    run(lake, WEEK2, rid, [product("A"), product("P", title="Single Cups Coffee"), product("V", 28.5,
-                                                                                         title="Venus Espresso Blend")])  # fmt: skip
+    run(
+        lake,
+        WEEK2,
+        rid,
+        [product("A"), product("P", title="Single Cups Coffee"), product("V", 28.5, **venus)],
+    )
     manifest(lake, WEEK2, [rid])
     build(lake, tmp_path, as_of_run=WEEK2).close()
     con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
-    assert con.execute(f"select first_seen::varchar from public_coffee where coffee_id = '{rid}:V'").fetchone() == (
-        WEEK2,), "the fixture's first version should read as not coffee"  # fmt: skip
+    first = con.execute(
+        f"select first_seen::varchar from public_coffee where coffee_id = '{rid}:V'"
+    ).fetchone()
+    assert first == (WEEK2,), "the fixture's first version should read as not coffee"
     con.close()
     served = _release(tmp_path, "b1")
     # The backfill: V's first version now reads as coffee (its title, as a verdict would), P's latest doesn't.
-    run(lake, WEEK1, rid, [product("A"), product("P", title="Single Cups Coffee"), product("V", 24.5,
-                                                                                         title="Venus Espresso Blend")], hour=13)  # fmt: skip
-    run(lake, WEEK2, rid, [product("A"), product("P", coffee=False, title="Single Cups Mug"), product("V", 28.5,
-                                                                                         title="Venus Espresso Blend")], hour=13)  # fmt: skip
-    r = build(lake, tmp_path, check=False, as_of_run=WEEK2, previous_release=served)
+    run(lake, WEEK1, rid, [product("A"), product("P", title="Single Cups Coffee"), product("V", 24.5, **venus)],
+        hour=13)  # fmt: skip
+    run(lake, WEEK2, rid, [product("A"), product("P", coffee=False, title="Single Cups Mug"),
+                           product("V", 28.5, **venus)], hour=13)  # fmt: skip
+    same_run = {"as_of_run": WEEK2, "previous_release": served, "previous_release_run_date": WEEK2}
+    r = build(lake, tmp_path, check=False, **same_run)
     assert r.returncode == 0 and re.search(r"PASS release_changes_explained", r.stdout), r.stdout[-3000:]
     changes = _changes(tmp_path)
     assert changes[("public_coffee", "removed", "reclassified")] == 1  # P
-    assert changes[("public_coffee", "changed", "history_changed")] == 1  # V
+    assert changes[("public_coffee", "changed", "history_changed")] == 1  # V; A didn't change
     assert changes[("public_price_event", "removed", "coffee_left")] == 1  # P's 'new'
     assert (
         changes[("public_price_event", "added", "history_changed")] == 2
@@ -200,13 +235,105 @@ def test_every_change_against_the_served_release_has_a_reason(lake, tmp_path):
     notes = quality.release_notes(tmp_path / "coffee.duckdb")
     assert any(n.startswith("public_coffee: ") and "removed 1 (reclassified 1)" in n for n in notes), notes
     # An event that changed on a coffee whose own row didn't is unexplained: it warns, and the build still passes.
-    con = duckdb.connect()
-    con.execute(f"copy (select * replace (price_usd + 1 as price_usd) from '{served['public_price_event']}') "
-                f"to '{tmp_path}/tampered.parquet' (format parquet)")  # fmt: skip
-    con.close()
-    r = build(lake, tmp_path, check=False, as_of_run=WEEK2,
-              previous_release=served | {"public_price_event": f"{tmp_path}/tampered.parquet"})  # fmt: skip
+    r = build(
+        lake, tmp_path, check=False, **same_run | {"previous_release": _tamper(tmp_path, served, "true")}
+    )
     assert r.returncode == 0 and re.search(r"WARN \d+ release_changes_explained", r.stdout), r.stdout[-3000:]
+
+
+def test_an_ordinary_week_explains_itself_and_a_rewritten_past_price_does_not(lake, tmp_path):
+    """W1 served, then W2: weeks_listed and last_seen advance for every coffee, which is no change at all, and a W1
+    price rewritten in the served release (+1) is unexplained: it isn't hidden as a history change."""
+    rid = "onyxcoffeelab.com"
+    run(lake, WEEK1, rid, [product("A", 20.0), product("B", 18.0)])
+    manifest(lake, WEEK1, [rid])
+    build(lake, tmp_path, as_of_run=WEEK1).close()
+    served = _release(tmp_path, "w1", run_date=WEEK1)
+    run(lake, WEEK2, rid, [product("A", 20.0), product("B", 18.0)])
+    manifest(lake, WEEK2, [rid])
+    week = {"as_of_run": WEEK2, "previous_release_run_date": WEEK1}
+    r = build(lake, tmp_path, check=False, **week, previous_release=served)
+    assert r.returncode == 0 and re.search(r"PASS release_changes_explained", r.stdout), r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert not any(c == "public_coffee" for c, _, _ in changes), (
+        changes
+    )  # no history_changed for the weekly advance
+    assert not any(reason == "unexplained" for _, _, reason in changes), changes
+    tampered = _tamper(tmp_path, served, f"coffee_id = '{rid}:A'")
+    r = build(lake, tmp_path, check=False, **week, previous_release=tampered)
+    assert r.returncode == 0 and re.search(r"WARN 2 release_changes_explained", r.stdout), r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert changes[("public_price_event", "removed", "unexplained")] == 1
+    assert changes[("public_price_event", "added", "unexplained")] == 1
+    assert not any(reason == "history_changed" for _, _, reason in changes), changes
+
+
+def test_a_served_release_missing_a_column_still_reconciles_and_warns(lake, tmp_path):
+    """A release written before a compared column existed reads that column as null: the rest is still reconciled,
+    the missing column is reported (change 'schema'), and nothing fails."""
+    rid = "onyxcoffeelab.com"
+    run(lake, WEEK1, rid, [product("A"), product("B")])
+    manifest(lake, WEEK1, [rid])
+    build(lake, tmp_path, as_of_run=WEEK1).close()
+    served = _release(tmp_path, "w1", run_date=WEEK1, drop={"public_coffee": ["is_wholesale"]})
+    run(lake, WEEK2, rid, [product("A"), product("B")])
+    manifest(lake, WEEK2, [rid])
+    r = build(lake, tmp_path, check=False, as_of_run=WEEK2, previous_release=served,
+              previous_release_run_date=WEEK1)  # fmt: skip
+    assert r.returncode == 0 and re.search(r"WARN 1 release_changes_explained", r.stdout), r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert changes[("public_coffee", "schema", "missing_column:is_wholesale")] == 1
+    # No served table at all for one of them: reported too, and that table isn't compared.
+    del served["public_roaster"]
+    r = build(lake, tmp_path, check=False, as_of_run=WEEK2, previous_release=served,
+              previous_release_run_date=WEEK1)  # fmt: skip
+    assert r.returncode == 0, r.stdout[-3000:]
+    changes = _changes(tmp_path)
+    assert changes[("public_roaster", "schema", "missing_table")] == 1
+    assert not any(t == "public_roaster" and c != "schema" for t, c, _ in changes), changes
+
+
+def test_a_served_release_that_cannot_be_read_is_reported_not_a_failed_build(
+    lake, tmp_path, monkeypatch, caplog
+):
+    from coffeedata import quality
+
+    def broken(lk, build_id):
+        raise OSError("HTTP 429")
+
+    monkeypatch.setattr(quality, "release_files", broken)
+    monkeypatch.setattr("time.sleep", lambda s: None)
+    spec, status = quality.stage_previous_release(lake, "b0", tmp_path / "previous")
+    assert spec == {} and status == "unreadable: OSError"
+    assert "not reconciled" in caplog.text
+    run(lake, WEEK2, "onyxcoffeelab.com", [product("A")])
+    r = build(lake, tmp_path, check=False, previous_release_status=status, baseline_build="b0")
+    assert r.returncode == 0 and re.search(r"WARN 1 release_changes_explained", r.stdout), r.stdout[-3000:]
+    assert _changes(tmp_path) == {("release", "not_reconciled", "unreadable: OSError"): 1}
+
+
+def test_the_reconciliation_runs_after_the_gate_and_never_decides_it(lake, tmp_path, monkeypatch, caplog):
+    """dbt_build runs the report-only nodes (release_changes and its tests) in a step of their own: even an error
+    there (here, a served file that is gone) leaves the build's verdict to the real checks."""
+    from coffeedata import cli, quality
+
+    run(lake, WEEK2, "onyxcoffeelab.com", [product("A")])
+    manifest(lake, WEEK2, ["onyxcoffeelab.com"])
+    gone = {"public_coffee": {"path": str(tmp_path / "gone.parquet"), "columns": ["coffee_id"]}}
+    floors = {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0, "require_verdicts": False,
+              "as_of_run": WEEK2, "lake_roots": [str(lake.root)]}  # fmt: skip
+    db = tmp_path / "coffee.duckdb"
+    passed, results = cli.dbt_build(lake, db, floors | {"previous_release": gone}, target=tmp_path / "target")
+    assert passed, [
+        r.get("status") for step in results for r in step.get("results", []) if r.get("status") != "pass"
+    ]
+    assert "report-only step" in caplog.text
+    con = duckdb.connect(str(db), read_only=True)
+    assert quality.release_change_counts(con) == [
+        (("release", "not_reconciled", "release_changes_missing"), 1)
+    ]
+    con.close()
+    assert "release_changes is missing or failed" in caplog.text
 
 
 def test_nothing_served_is_nothing_to_reconcile(lake, tmp_path):
@@ -214,3 +341,17 @@ def test_nothing_served_is_nothing_to_reconcile(lake, tmp_path):
     r = build(lake, tmp_path, check=False)
     assert r.returncode == 0 and re.search(r"PASS release_changes_explained", r.stdout), r.stdout[-3000:]
     assert _changes(tmp_path) == {}
+
+
+def test_a_group_whose_prices_are_all_one_value_falls_back_to_a_wider_one(lake, tmp_path):
+    """MAD 0 makes z undefined: the group falls back (origin, then all coffees) instead of never flagging."""
+    same = [product(f"k{i}", 15.0, title=f"Kenya Nyeri Lot {i} Washed Coffee") for i in range(6)]
+    odd = product("k9", 150.0, title="Kenya Nyeri Lot 9 Washed Coffee")  # ten times its group
+    others = [product(str(i), 12.0 + i, title=f"House Blend {i} Coffee") for i in range(10)]
+    run(lake, WEEK2, "r.com", [*same, odd, *others])
+    r = build(lake, tmp_path, check=False, price_outlier_min_group=5)
+    assert r.returncode == 0, r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    flagged = con.execute("select coffee_id, compared_with from main_dbt_test__audit.price_per_100g_outliers")
+    assert ("r.com:k9", "all") in flagged.fetchall()
+    con.close()

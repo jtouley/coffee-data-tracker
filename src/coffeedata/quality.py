@@ -162,9 +162,51 @@ def record_build(
     return passed
 
 
+def stage_previous_release(lake: Lake, build_id: str, dest: Path, attempts: int = 3) -> tuple[dict, str]:
+    """Copy the served release's public tables to `dest` for release_changes, and list each file's columns: the
+    dbt vars previous_release ({table: {"path", "columns"}}) and previous_release_status. A failed read (a 429 or a
+    timeout on a remote lake) is retried, then logged and reported as status "unreadable: ...", so the
+    reconciliation never reaches dbt half-read and can never fail the build; release_changes reports it."""
+    import time
+
+    import duckdb
+
+    last: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            files = release_files(lake, build_id)
+            dest.mkdir(parents=True, exist_ok=True)
+            out = {}
+            con = lake.connect() if lake.remote else duckdb.connect()
+            try:
+                for t in RECONCILED_TABLES:
+                    if t not in files:
+                        continue
+                    local = dest / f"{t}.parquet"
+                    src = files[t].replace("'", "''")
+                    con.execute(
+                        f"copy (select * from read_parquet('{src}', hive_partitioning = false)) "
+                        f"to '{local}' (format parquet)"
+                    )
+                    cols = con.execute(
+                        f"select column_name from (describe select * from read_parquet('{local}'))"
+                    ).fetchall()
+                    out[t] = {"path": str(local), "columns": [c for (c,) in cols]}
+            finally:
+                con.close()
+            return out, "ok"
+        except Exception as e:  # noqa: BLE001 - duckdb.IOException / HTTPException, a listing error
+            last = e
+            if attempt + 1 < attempts:
+                time.sleep(2 ** (attempt + 1))
+    log.warning("release %s not reconciled: its files couldn't be read (%s)", build_id, last)
+    return {}, f"unreadable: {type(last).__name__}"
+
+
 def release_change_counts(con) -> list[tuple[tuple[str, str, str], int]]:
-    """release_changes counted per (table, change, reason); none when the build has no such model (it crashed, or
-    nothing was served before)."""
+    """release_changes counted per (table, change, reason). A build without the model (it errored, or the report
+    step never ran) is logged and counted as one ('release', 'not_reconciled', 'release_changes_missing'), so its
+    record says so instead of looking like a release with nothing served before it."""
     import duckdb
 
     if con is None:
@@ -173,14 +215,19 @@ def release_change_counts(con) -> list[tuple[tuple[str, str, str], int]]:
         rows = con.execute(
             "select table_name, change, reason, count(*) from release_changes group by all order by all"
         ).fetchall()
-    except duckdb.Error:
-        return []
+    except duckdb.Error as e:
+        log.warning(
+            "release notes: release_changes is missing or failed, so this build isn't reconciled (%s)", e
+        )
+        return [(("release", "not_reconciled", "release_changes_missing"), 1)]
     return [((t, c, r), n) for t, c, r, n in rows]
 
 
 def release_notes(db: Path) -> list[str]:
     """What this build (`db`) changes against the served release, one line per public table: the rows added,
-    removed and changed, each split by reason. Unexplained ones are what release_changes_explained warns on."""
+    removed and changed, each split by reason, then what couldn't be compared (a column or table the served release
+    lacks, or a release that couldn't be read). Unexplained and incomplete ones are what release_changes_explained
+    warns on."""
     import duckdb
 
     if not db.exists():
@@ -200,6 +247,9 @@ def release_notes(db: Path) -> list[str]:
                 parts.append(f"{change} {total:,} (" + ", ".join(f"{r} {n:,}" for r, n in reasons) + ")")
         if parts:
             out.append(f"{table}: " + "; ".join(parts))
+    incomplete = [f"{t} {c} {r}" for (t, c, r), _ in counts if c in ("schema", "not_reconciled")]
+    if incomplete:
+        out.append("not compared in full: " + "; ".join(incomplete))
     return out
 
 

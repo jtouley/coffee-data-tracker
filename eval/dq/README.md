@@ -21,7 +21,9 @@ Results are in "Results" below; how each rule was chosen is under its own headin
   removed; enrichments are not run-dated and were kept whole), then `coffeedata build --run-date <run>` offline with
   no API keys, once on `main` (28a1b05) and once on this branch. The replay of 11-02 reproduces the served build's
   results (WARN 24 orphan events, WARN 6 suspect weeks, 0 errors).
-- In git: the labels (`labels/`), the sealed test files (`sealed/`) and the scripts. Out of git: the replayed
+- In git: the train and validation labels (`labels/`), the sealed test files (`sealed/`: test keys, test labels,
+  frozen predictions, `SHA256SUMS`) and the scripts. The test labels are only in `sealed/`, and test scoring reads
+  them from there, so everything a test score uses is hashed. Out of git: the replayed
   databases and the label inputs (the data dir the scripts write).
 
 ## Split
@@ -42,7 +44,9 @@ Results are in "Results" below; how each rule was chosen is under its own headin
   each label every item independently (separate runs, each in its own shuffled order, batches of 20, blind to every
   rule's verdict and to each other); labeler C, a third independent run, labels only the items where A and B
   disagree, blind to both, and its label settles them. No person labelled; a person's spot check is still owed.
-- Agreement of A and B: #12 149 of 149; #7 343 of 358 (15 settled by C); #11 74 of 75 (1); #4 10 of 10.
+- Agreement of A and B, over all three sets: #12 149 of 149; #7 343 of 358 (15 settled by C); #11 74 of 75 (1);
+  #4 10 of 10. A, B and C are blind runs of one model and prompt, not independent labelers, so high agreement says
+  little; a person's spot check is still owed.
 - `unsure` counts against precision (a flagged `unsure` is neither right nor wrong) and never as a positive.
 - The release-against-release reasons (#4) are mechanical, not judged: each is a fact of the two releases and the
   build (the coffee is in one release and not the other; its latest record is classified as not coffee; ...). As in
@@ -54,7 +58,10 @@ Results are in "Results" below; how each rule was chosen is under its own headin
 2. Validation: candidates compared on aggregates only.
 3. Test (sealed): the rules frozen at the commit that added `sealed/pred_*`; `sealed/SHA256SUMS` was written when
    the test keys and labels were made (before any score), and again when the frozen predictions were added. Scored
-   once. `main` and the change are scored on the same frozen set.
+   once. `main` and the change are scored on the same frozen set. The sums, the test labels and the predictions
+   were committed together (bbe214e), so git itself can't show that the sums predate the score; the order above is
+   this session's record. Until the fix round the test labels also sat in `labels/`, outside the sums; they were
+   removed from there, and the scorers now read the test labels from `sealed/` only.
 4. Ship rule (`CLAUDE.md`): every rule warns first. A rule may block only if its test precision is high and its
    confidently wrong answers don't rise; none is made to block here (see "Severity").
 
@@ -77,7 +84,9 @@ Results are in "Results" below; how each rule was chosen is under its own headin
 
 - Population: listed, non-wholesale coffees with a `price_per_100g` on 11-02 (24,625). Robust z of
   ln(price_per_100g) within (origin_country, process) when that group has >= 30 coffees, else origin_country, else
-  all coffees.
+  all coffees. Fix round: a group whose MAD is 0 (z undefined) now also falls back to the wider group, instead of
+  never flagging. On the 11-02 replay this changes no coffee's flag (966 before and after; no group of 30 has
+  MAD 0), so the running total stays 0 and the sealed scores stand; a fixture covers the case.
 - Stratified sample: strata by that z (min group 30): <= -4, -4..-3, -3..-2, -2..2, 2..3, 3..4, 4..6, >= 6; 15 drawn
   per stratum per set (358 labelled). Weights are the stratum sizes (in `price_strata.json`, data dir). The middle
   stratum holds 12,475 / 5,275 / 4,551 coffees per set, so recall estimates rest on 15 labels there and are rough.
@@ -87,7 +96,8 @@ Results are in "Results" below; how each rule was chosen is under its own headin
 - Candidates: symmetric |z| >= 3 or 4; low 3 with high 5, 6 or none; low 2.5 / high 6; min group 10/30/100.
 - Validation (weighted precision / false-flag share / recall): |z|>=3 0.820/0.147/0.708; low 3 + high 6
   0.957/0.031/0.594; low 3 + high 5 0.935/0.053/0.622; low only 0.973/0.014/0.557. Chosen: **low 3, high 6, min
-  group 30** (most of the recall for a 3% false-flag share).
+  group 30** (on validation, most of the recall for a 3% false-flag share; on test the weighted false-flag share was
+  0.132 and recall 0.200, see "Results").
 
 ## #11 per-adapter volume bands
 
@@ -121,8 +131,9 @@ What can and can't be measured yet:
 - Within a release (`public_tables_reconcile`): roaster counts against public_coffee rows, the sum of
   dim_roaster.coffees_listed against listed_coffees, a price event's roaster against its coffee's, and orphan price
   events whose product is still coffee. On all five replayed builds: 0 disagreements. The 24 orphan events of 11-02
-  (10 coffees) are all products whose latest record is classified not coffee; labelled by_design 10 of 10. Main's
-  relationships warning reports all 24; the new rule reports none of them.
+  (10 coffees) are the items: 3 in train (all labelled by_design, all products whose latest record is classified
+  not coffee) and 7 in test, scored in totals only (see "Results"). Main's relationships warning reports all 24;
+  the new rule reports none of them.
 - Release against release (`release_changes`): every added, removed or changed row of the four public tables
   against the served release, with a reason. Validation case, the verdict backfill 956abd -> 5060ad (run 11-02),
   rebuilt on this branch with `COFFEEDATA_VERDICT_MODEL=claude-haiku-5-5` and 956abd as the served release (its
@@ -145,6 +156,29 @@ What can and can't be measured yet:
     11-02). The 79 changed cells plus the 2 lost are the owner's 81.
   - Origin normalization, reported and not fixed here: the lost cell 'Uganda, Kenya, Rwanda, Burundi' is a
     multi-country string used as an origin_country.
+- **That measurement was too narrow** (review of #111, finding 1). The backfill is a same-run rebuild, where
+  `weeks_listed` and `last_seen` don't advance; in an ordinary week they advance for every coffee seen, so the
+  first version labelled every listed coffee `history_changed` and let a rewritten past price pass as explained.
+  The fix compares only business columns (not `weeks_listed`, `last_seen`, release ids or `last_ok_run`), and
+  counts a history as changed only when `first_seen` moved or `weeks_listed` moved by other than the coffee's runs
+  since the served release. Re-measured after merging main (which now keeps non-US roasters out of the public
+  tables, #107):
+  - an ordinary week of real data, the 10-26 replay served and 11-02 built: public_coffee added 1,969 (new),
+    removed 38 (reclassified 10, roaster_left 28), changed 1,315 (attributes_changed 908, delisted 407), no
+    history_changed; public_price_event added 12,904 (coffee_joined 6,783, new_run 6,121), removed 75
+    (coffee_left 75); public_roaster added 38 (first_coffee), removed 5 (outside_us 5: aroma, Black Sheep, La
+    Cabra, Macaco, The Coffee Roaster, the non-US stores #107 drops), changed 368; public_market_weekly removed 1,
+    changed 106. **0 unexplained.** The first run of this check found those 5 roasters `unexplained`: #107's US
+    filter was a reason the model didn't know yet, and it now has (`outside_us`).
+  - the backfill again, on the merged code: public_coffee +1,254 / -3,787 (reclassified 3,582, roaster_left 205);
+    public_price_event +8,178 / -12,204; public_roaster +1 / -21 (no_coffee_left 16, outside_us 5); market -2 cells,
+    82 changed. 0 unexplained. (The counts differ from 5060ad's by the 5 non-US roasters, which 5060ad still had.)
+  - fixtures: an ordinary W1 -> W2 week reports no coffee change, and the same week with one served W1 price +1
+    reports one removed and one added event `unexplained` (`tests/test_dq_rules.py`).
+- It never fails a build (finding 2): `coffeedata build` copies the served files locally first (3 tries), a read
+  that still fails is reported as `release not_reconciled unreadable: ...`, a compared column the served file
+  lacks reads as null and is reported as `schema missing_column:<col>`, and the model and its tests run after the
+  gate in a step of their own, whose failure is logged and recorded as `not_reconciled release_changes_missing`.
 
 ## Results
 
@@ -217,7 +251,7 @@ python dupes_eval.py   items <replay>/coffee-main-2026-11-02.duckdb <data>
 python price_eval.py   items <replay>/coffee-main-2026-11-02.duckdb <data>
 python adapter_eval.py cells <replay> main <data>
 python recon_eval.py   items <replay> main <data>
-python label.py <dupes|price|adapter|recon> <data>/<rule>_inputs.json <A|B|C> labels/<rule>_<A|B|C>.json [--only <ids>]
+python label.py <dupes|price|adapter|recon> <data>/<rule>_inputs.json <A|B|C> <out>.json [--only <ids>]   # then split: test ids to sealed/
 python dupes_eval.py   predict <data> '<rule>' <out>          # e.g. 'cont>=0.9,shared>=3,rcont>=0.3'; 'none'
 python price_eval.py   predict <db> <data> '<rule>' <out>     # e.g. 'lo=3,hi=6,min_group=30'; 'none'
 python adapter_eval.py predict <data> '<rule>' <out>          # e.g. 'ok_attempted:0.1+same_store:0.1+same_store_priced:0.1'
@@ -227,10 +261,10 @@ python <rule>_eval.py  score <data> labels <train|validation> <pred>... [--examp
 Test scoring, once, totals and Wilson 95% intervals only (check `sealed/` first: `sha256sum -c SHA256SUMS`):
 
 ```
-python dupes_eval.py   score <data> labels test sealed/pred_dupes_main_test.json sealed/pred_dupes_change_test.json
-python price_eval.py   score <data> labels test sealed/pred_price_main_test.json sealed/pred_price_change_test.json
-python adapter_eval.py score <data> labels test sealed/pred_adapter_main_test.json sealed/pred_adapter_change_test.json
-python recon_eval.py   score <data> labels test
+python dupes_eval.py   score <data> sealed test sealed/pred_dupes_main_test.json sealed/pred_dupes_change_test.json
+python price_eval.py   score <data> sealed test sealed/pred_price_main_test.json sealed/pred_price_change_test.json
+python adapter_eval.py score <data> sealed test sealed/pred_adapter_main_test.json sealed/pred_adapter_change_test.json
+python recon_eval.py   score <data> sealed test
 ```
 
 The label inputs carry dicts whose key order can differ between two runs of `cells`; the labels were made on the

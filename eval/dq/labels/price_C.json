@@ -4,23 +4,14 @@
   "model": "claude-opus-5-5",
   "effort": "high",
   "rule": "price",
-  "n": 15
+  "n": 9,
+  "note": "train and validation only; the test labels are in sealed/"
  },
  "labels": [
-  {
-   "id": "acmecoffeeroasting.com:458492092",
-   "label": "right",
-   "reason": "One pound for $28; small gram discrepancy, value is plausible."
-  },
   {
    "id": "artizancoffee.com:10511425274129",
    "label": "wrong",
    "reason": "Identical $50.95 for 4 oz to 2 lb shows broken pricing; 2.2 matches no listed available variant."
-  },
-  {
-   "id": "copantrade.com:7145949429909",
-   "label": "wrong",
-   "reason": "Option-style listing with 100 lb at $150; prices are implausible for roasted coffee, likely placeholders."
   },
   {
    "id": "dandylion.coffee:9585647780070",
@@ -53,34 +44,14 @@
    "reason": "\"6X\" suggests a case of six bags priced against a single 2 lb weight."
   },
   {
-   "id": "kopanicoffee.com:8669899686060",
-   "label": "unsure",
-   "reason": "$95 for 12 oz Colombia Supremo is odd unless BCWS denotes a special competition lot."
-  },
-  {
-   "id": "onyxcoffeelab.com:6918722977890",
-   "label": "right",
-   "reason": "5 lb blend at $50.40 is a plausible bulk price, consistent with the 10oz price."
-  },
-  {
    "id": "owlcoffeeroasters.com:9592305778932",
    "label": "unsure",
    "reason": "Expensive single lot at $55/12oz with no indication of a rare variety or process."
   },
   {
-   "id": "savagecoffees.co:9097319186717",
-   "label": "wrong",
-   "reason": "Computed from the 1 kg green-coffee variant, not the roasted bag (200 g roasted is $20/100g)."
-  },
-  {
    "id": "shelburnefallscoffee.com:4784820486193",
    "label": "right",
    "reason": "Three-month supply; 850 g appears to cover all three bags, so the per-100g is plausible."
-  },
-  {
-   "id": "thrutheflamecoffee.com:9279646335224",
-   "label": "wrong",
-   "reason": "Kenya AA at $17.95 for 2 lb is implausible; the weight is likely misread."
   }
  ]
 }

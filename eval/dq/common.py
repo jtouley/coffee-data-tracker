@@ -39,10 +39,17 @@ def fmt(k: float, n: float) -> str:
     return f"{k / n:.3f} ({k:g}/{n:g}; {lo:.3f}-{hi:.3f})"
 
 
+def _label_file(labels_dir: Path, rule: str, labeler: str) -> Path:
+    """labels/<rule>_<X>.json holds train and validation; the sealed test copy is sealed/<rule>_<X>_test.json."""
+    plain = labels_dir / f"{rule}_{labeler}.json"
+    return plain if plain.exists() else labels_dir / f"{rule}_{labeler}_test.json"
+
+
 def reference(labels_dir: Path, rule: str) -> dict[str, str]:
-    """A and B's labels where they agree, C's where they don't (eval/dq/README.md, "Reference labels")."""
-    a, b = (_labels(labels_dir / f"{rule}_{x}.json") for x in "AB")
-    c_path = labels_dir / f"{rule}_C.json"
+    """A and B's labels where they agree, C's where they don't (eval/dq/README.md, "Reference labels"). Score train
+    and validation from labels/, the test set from sealed/ (its files are covered by sealed/SHA256SUMS)."""
+    a, b = (_labels(_label_file(labels_dir, rule, x)) for x in "AB")
+    c_path = _label_file(labels_dir, rule, "C")
     c = _labels(c_path) if c_path.exists() else {}
     if set(a) != set(b):
         raise SystemExit(f"{rule}: labelers A and B labelled different items")
@@ -58,7 +65,7 @@ def reference(labels_dir: Path, rule: str) -> dict[str, str]:
 
 
 def agreement(labels_dir: Path, rule: str) -> str:
-    a, b = (_labels(labels_dir / f"{rule}_{x}.json") for x in "AB")
+    a, b = (_labels(_label_file(labels_dir, rule, x)) for x in "AB")
     same = sum(a[k] == b[k] for k in a)
     pairs = Counter((a[k], b[k]) for k in a if a[k] != b[k])
     return f"A/B agree on {same} of {len(a)}; disagreements {dict(pairs)}"

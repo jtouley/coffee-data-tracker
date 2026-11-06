@@ -371,21 +371,25 @@ models:
         data_tests: [unique, not_null]
   - name: release_changes
     description: Every row this build's public tables add, remove or change against the release customers get now
-      (var previous_release), with the reason the build can show for it. Empty when nothing is served. The build
+      (var previous_release), with the reason the build can show for it, and a row for each comparison that couldn't
+      be made in full. Empty when nothing is served. Report only (tag report_only), run after the gate. The build
       prints the counts per reason and records them (builds, kind release_change) as the release's notes;
-      release_changes_explained warns on the unexplained ones.
+      release_changes_explained warns on the unexplained and incomplete ones.
     columns:
       - name: table_name
-        description: The public table (public_coffee, public_price_event, public_roaster, public_market_weekly).
+        description: The public table (public_coffee, public_price_event, public_roaster, public_market_weekly), or
+          'release' when the served release couldn't be read.
         data_tests: [not_null]
       - name: item
-        description: "The row's key: coffee_id; coffee_id|variant_id|run_date|event; roaster_id; origin|process."
+        description: "The row's key: coffee_id; coffee_id|variant_id|run_date|event; roaster_id; origin|process;
+          for a schema row the missing column or table."
         data_tests: [not_null]
       - name: change
         description: The row is in this build and not the served release (added), the other way round (removed), or
-          in both with different values (changed).
+          in both with different values (changed); schema when a compared column or table is missing from the served
+          release, not_reconciled when it couldn't be read.
         data_tests:
-          - accepted_values: {arguments: {values: [added, removed, changed]}}
+          - accepted_values: {arguments: {values: [added, removed, changed, schema, not_reconciled]}}
       - name: reason
         description: Why, from the two releases and this build (see the model's header); 'unexplained' when nothing
           shows why.

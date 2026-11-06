@@ -4,7 +4,8 @@
   "model": "claude-opus-5-5",
   "effort": "high",
   "rule": "adapter",
-  "n": 1
+  "n": 1,
+  "note": "train and validation only; the test labels are in sealed/"
  },
  "labels": [
   {

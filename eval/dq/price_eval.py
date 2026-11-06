@@ -38,8 +38,8 @@ def z_scores(con: duckdb.DuckDBPyConnection, min_group: int) -> dict[str, float]
     g0 as (select median(lp) as m from p),
     g0m as (select g0.m, median(abs(p.lp - g0.m)) as mad from p, g0 group by g0.m)
     select p.coffee_id,
-           case when g2m.n >= {min_group} then (p.lp - g2m.m) / nullif(1.4826 * g2m.mad, 0)
-                when g1m.n >= {min_group} then (p.lp - g1m.m) / nullif(1.4826 * g1m.mad, 0)
+           case when g2m.n >= {min_group} and g2m.mad > 0 then (p.lp - g2m.m) / (1.4826 * g2m.mad)
+                when g1m.n >= {min_group} and g1m.mad > 0 then (p.lp - g1m.m) / (1.4826 * g1m.mad)
                 else (p.lp - g0m.m) / nullif(1.4826 * g0m.mad, 0) end as z
     from p left join g2m using (o, pr) left join g1m using (o) cross join g0m
     """

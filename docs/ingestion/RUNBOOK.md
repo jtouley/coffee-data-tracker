@@ -599,6 +599,17 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 build's database (`store_failures`, schema `main_dbt_test__audit`); the build's `release notes:` lines say what the
 release changes against the served one, per reason. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
+`release_changes` and `release_changes_explained` are report only (tag `report_only`): `coffeedata build` runs them
+after the gate, in a dbt step of its own, so even an error there can't fail a build. What to do when they say
+something:
+
+| Build output | Meaning | Do |
+|---|---|---|
+| `release notes: ... unexplained N` | a row changed against the served release and the build can't show why | read `main_dbt_test__audit.release_changes_explained` in the build's database; a past price rewritten is a code or data bug |
+| `release notes: not compared in full: <table> schema missing_column:<col>` | the served release predates a compared column; the rest was reconciled | nothing: the next release is compared in full |
+| `release <id> not reconciled: its files couldn't be read` and `release not_reconciled unreadable: ...` | the served release's files couldn't be copied (after 3 tries) | nothing for this release; if it repeats, check the lake's `releases/` folder |
+| `the report-only step (release_changes) failed` / `release_changes is missing or failed` | the reconciliation itself errored; its record says `not_reconciled release_changes_missing` | open an issue with the dbt log; the release was gated without it |
+
 **b. The data is right, the gate is wrong.** Minutes, no re-crawl. A rebuild that fails the gate again runs twice:
 the build job has `max_retries = 1`, so `--wait` returns only after the second attempt, and `builds` gets two failed
 records.
