@@ -188,6 +188,37 @@ It stays automatic, gated by the existing tests. It reads the published snapshot
 
 The flag is a roaster-level decision, ranked above the `roasters.csv` seed; the admin never edits the CSV.
 
+### Test crawl (on demand)
+
+The owner: "Shouldn't that run, by connector be something I can run in the admin panel?" This is the one-store check
+in RUNBOOK §2.1, run after an egress change: does the new NAT IP get past SiteGround's challenge?
+
+- **Where.** On a roaster's page, and per connector, for a sample of that connector's stores (for example 5
+  roasters that answered `sg-captcha`).
+- **What it runs.** The admin starts the `crawl` job with `--connector` and `--only` for each roaster. This is the
+  same path as the crawl-flag smoke crawl, which is a test crawl plus a draft build.
+- **What it shows,** per roaster:
+  - the fetch's status and HTTP code;
+  - `challenge` (`siteground` or `cloudflare`);
+  - the job manifest's `egress_ips` and `detail.egress`;
+  - the Cloud Run execution name.
+
+  It keeps a summary in a `test_crawls` table.
+- **It never counts as the week's crawl.**
+  - On `main`, `crawl --only` writes into the week's own partition (`raw/connector=X/run_date=W/`), and the weekly
+    merge reads it. So the RUNBOOK's manual check today becomes that roaster's fetch for the week.
+  - The test crawl instead reuses the confirmation arms' path. It gets a sub-partition of its own, `test=<id>` (as
+    `slice=` does), which the merge never reads. `detail.arm = "test"` makes `control.is_arm` keep it out of
+    `landed` and the egress flags.
+  - A smoke crawl's draft build adds that sub-partition as an extra lake root (`dbt_build`'s `extra_roots`, as
+    fetch-health does). The weekly build never adds it.
+- **Limits.** Once a day per roaster, as for the smoke crawl. It is refused from the Monday crawl window's start
+  (09:00 UTC) until the week's merge has a `done` row. It follows the same robots.txt and pacing as any crawl.
+- **Phase 1**, since it shares the smoke-crawl plumbing.
+
+Until the admin ships, RUNBOOK §2.1's check stays a `gcloud run jobs execute … --only` command. After that, it
+becomes this button.
+
 ### Removals and restores
 
 - A removal needs `supports` flags from two distinct families, a live check of the store, no open doubt, and the
@@ -262,7 +293,7 @@ separate PR.
 | Page | Shows | Actions |
 |---|---|---|
 | **Queue** | open flags by subject, then roaster and rule, sorted by public rows affected; one summary per row ("1 supports · 1 doubts · held") | open a case; add to the draft |
-| **Case** | each flag with its polarity and evidence (rules' answer, verdict, title, type, tags, sizes, prices, the description and how many share it, 8 weeks of fetches); the roaster's crawl flag | live check; propose exclude or include with a reason; toggle the crawl flag |
+| **Case** | each flag with its polarity and evidence (rules' answer, verdict, title, type, tags, sizes, prices, the description and how many share it, 8 weeks of fetches); the roaster's crawl flag | live check; propose exclude or include with a reason; toggle the crawl flag; **Test crawl** |
 | **Catalog** | **every** coffee in the published release, flagged or not: keyword search, and filters on roaster, origin, process, coffee or not, listed or removed (and why), stock and price | open any coffee; propose exclude or include (the override) into the draft |
 | **Draft** | its changes; build status; each gate's result; `build-diff`; #111's rows in and out per table with reasons; the count of public rows that leave | **Publish**, **Discard** |
 
@@ -291,6 +322,7 @@ Playwright runs at 390 px and desktop, light and dark, plus an axe check.
   - Drafts: `POST /api/drafts`, `POST /api/drafts/{id}/changes`, `POST /api/drafts/{id}/publish`,
     `POST /api/drafts/{id}/discard`.
   - Roaster state: `POST /api/roasters/{id}/crawl`.
+  - Test crawls: `POST /api/test-crawls` (a connector and one or more roaster ids), and `GET /api/test-crawls/{id}`.
 - **Idempotency.** Writes carry an idempotency key (`decision_id` + `seq`) and the version they were based on, so a
   retry never doubles an event and a stale tab fails loudly.
 - **Untrusted text.** Titles, tags and descriptions are rendered escaped, never `|safe`. The pages keep `app/web.py`'s
@@ -388,6 +420,7 @@ The owner decides from the results. Nothing from a POC merges without the review
 - Readiness from two distinct families, and group approval.
 - The API, `coffeedata decide`, passkey sign-in with its one-shot enrollment.
 - The Queue, Case, **Catalog** and Draft pages.
+- Test crawl, per roaster and per connector, in its own `test=<id>` sub-partition.
 
 Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page shows `build-diff`.
 
