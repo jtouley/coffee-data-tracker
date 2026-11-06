@@ -455,12 +455,26 @@ SCHEMAS["invites"] = pa.schema(
         ("used_by", pa.string()),
         ("used_at", pa.timestamp("s", tz="UTC")),
         ("revoked", pa.bool_()),
+        ("for_label", pa.string()),  # the owner's note on a join link ("For"), up to 60 characters
+        ("created_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
+        ("revoked_at", pa.timestamp("s", tz="UTC")),  # null in files from before it was kept
+    ]
+)
+# Which Terms and Privacy Policy each account accepted, and when: one file per acceptance, latest wins.
+SCHEMAS["consents"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("terms_version", pa.string()),  # the Terms' "Last updated" date (site.LEGAL_UPDATED)
+        ("privacy_version", pa.string()),  # the Privacy Policy's
+        ("terms_at", pa.timestamp("s", tz="UTC")),
+        ("source", pa.string()),  # signup or reaccept
     ]
 )
 
 # Tables that live in the photo dataset or the users dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites")
+USER_TABLES = ("users", "invites", "consents")
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -484,6 +498,7 @@ GLOBS = {
     "photos": "photos/*.parquet",
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
+    "consents": "consents/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -509,6 +524,7 @@ SCHEMA_FILES = {
     "photos": "photos/photo_id=schema.parquet",
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
+    "consents": "consents/user_id=schema.parquet",
 }
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 

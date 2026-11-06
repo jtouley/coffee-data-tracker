@@ -71,6 +71,10 @@ vars:
   # points, so those are left to run_ok_rate.
   min_adapter_ok_share: 0.5
   min_adapter_roasters: 20
+  # Set only by `coffeedata fetch-health` (the fetch-health check, before the merge): run_ok_rate and adapter_ok_rate
+  # count only the roasters a crawl pass has reached (run_completeness attempted), with the same thresholds. The
+  # weekly build leaves it false, so a roaster the week never reached still counts against the run.
+  attempted_only: false
   # Anomaly bands (build_metrics_in_band) on the ok shares (overall and per adapter, low side only) and the three
   # volume metrics (both sides): median +/- band_k x 1.4826 x MAD over the latest passing build of each of the last
   # band_window runs since the last accepted change, or band_min_*_halfwidth when that is wider (share: absolute;

@@ -25,7 +25,8 @@ Tables = list[tuple[str, str, tuple[str, ...]]]
 MAIN: Tables = [("shots", "shot_id", ("user_id",)), ("bags", "bag_id", ("user_id",)),
                 ("equipment", "equipment_id", ("user_id",))]  # fmt: skip
 PHOTOS: Tables = [("photos", "photo_id", ("user_id",))]
-USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by"))]
+USERS: Tables = [("users", "user_id", ("user_id",)), ("invites", "invite_id", ("for_user_id", "used_by")),
+                 ("consents", "user_id", ("user_id",))]  # fmt: skip
 MARTS = ["fct_shot", "mart_bag"]  # private exports with a user_id column, rewritten without the person's rows
 
 

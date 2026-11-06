@@ -30,7 +30,7 @@ password. An email can be added, but only for recovery (§5), and it never works
   as he types (better-accessibility `forms.md`: "Never block typing or filter characters").
 - Capitals are accepted and shown as they'll be stored ("You'll sign in as maya"). The server already lower-cases
   (`accounts.py:528`). Existing usernames aren't affected: sign-in doesn't re-check the pattern (`accounts.py:406-431`).
-- Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`). Recovery emails are shown only to the owner
+- Usernames are shown to the owner (`invite.html:18`; `accounts.py:43`). Members' emails are shown only to the owner
   (§6).
 
 **Password: 10 to 256 characters, any character, no composition rules.** (Owner decision on the minimum.)
@@ -99,7 +99,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 
 **Email recovery (new), following OWASP's Forgot Password sheet ([OWASP-FP][owasp-fp]):**
 1. **Asking:** sign-in's "Forgot your password?" (`signin.html:31`) goes to the new `/forgot` page.
-   - Heading "Reset your password"; field "Email on your account" (`type="email"`, `autocomplete="email"`); button
+   - Heading "Reset your password"; field "Email" (`type="email"`, `autocomplete="email"`); button
      "Send reset link"; busy text "Sending…".
    - Under the button: "No email on your account? Ask the person who invited you for a reset link."
 2. **Answering:** the reply is always the same and takes the same time.
@@ -144,12 +144,13 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 - The `/reset` intro: "Use the link from your email, or ask the person who invited you for a reset link. It works
   once, and signs you out everywhere else."
 
-## 5. Recovery email
+## 5. Email
 
-**Sign-up.** Between the username and the password, add the field **"Email, for account recovery only"**.
+**Sign-up.** Between the username and the password, add one optional field labelled just **"Email"**. It's the
+account's only email: used for account recovery and, if the marketing box is ticked (§7.1), for marketing.
 - Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
-- Hint: "For resetting your password and the odd account notice. Never for signing in. Only the owner can see it."
-  Marketing is a separate checkbox, ticked by default (§7.1).
+- Hint: "Optional. For resetting your password and account notices, and for news if you tick the box below. Never
+  for signing in. Only the owner can see it." Marketing is a separate checkbox, ticked by default (§7.1).
 - **Recommendation: optional, but encouraged. Not required.**
   - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
     tester.
@@ -169,8 +170,8 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
   "That link has expired or was already used. Send a new one from Setup." with a link to `/setup#account`.
 - Until it's verified, Setup shows "{email} · not verified yet", with "Send again" (3 per hour) and "Change".
 
-**Setup → Account:** a "Recovery email" row.
-- It shows "{email} · verified" or "No recovery email", with **Change** and **Remove**.
+**Setup → Account:** an "Email" row.
+- It shows "{email} · verified" or "No email", with **Change** and **Remove**.
 - Removing asks for a second tap. It deletes the record's files (see Storage) and says "Email removed. The owner can
   still make you a reset link."
 - A changed email isn't used until the new one is verified.
@@ -239,13 +240,13 @@ has to be updated before the email field ships (§7.4).
 
 The owner has full admin access over accounts, through the app (`/invite`, which becomes the "People" screen) and the
 CLI, but not into secrets.
-- **Sees:** every member's username, role, status (active or turned off) and shot count. Their recovery email and
+- **Sees:** every member's username, role, status (active or turned off) and shot count. Their email and
   whether it's verified (decrypted in the app, for helping someone back in). Every invite with its For note and
   status (§8). The owner can also read the datasets directly, as the join page already says (`join.html:20-23`).
 - **Does:**
   - makes invite links and reset links (§4);
   - turns accounts off and on, which signs them out (`accounts.py:578-589`);
-  - removes a member's recovery email;
+  - removes a member's email;
   - erases an account and all its data with `coffeedata delete-user` (`erase.py`; the account must be turned off
     first).
 - **Never:** passwords, which are peppered and hashed with Argon2id (`accounts.py:292-304`). Reset, verify and invite
@@ -312,7 +313,7 @@ bags, ratings and shots, matched against the public catalog. The privacy page li
 **4. Privacy page changes.** `privacy.html` currently says the app keeps "your username and a hash of your password"
 (`:33`) and uses aggregated data "to run and improve the service and to publish statistics" (`:60-62`). Before
 email collection ships, update the page and bump `LEGAL_UPDATED` (`site.py:73`):
-- Collected (`:33`): add "a recovery email address, if you add one" and "whether you agreed to the Terms and opted
+- Collected (`:33`): add "an email address, if you add one, used for account recovery and, if you tick the box, marketing" and "whether you agreed to the Terms and opted
   into marketing, and when".
 - Uses (`:55-62`): password resets and account notices by email; marketing email unless you untick the box; coffee
   recommendations from the bags and shots you log; aggregated insights provided to roasters.
@@ -358,15 +359,15 @@ jakubkrehel `better-accessibility` (`forms.md` "Submit behavior", `semantics-and
 regions) and `interface-review` (every new component has its idle, loading, error, disabled and narrow states).
 Paths are in `SKILLS-INDEX.md`.
 
-**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, recovery email (optional, §5), password, then, just above the button, the required terms checkbox (unticked) and the marketing checkbox (ticked by default) (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
+**Join form (`join.html`). Owner setup and reset reuse the same pieces.** The order is code, username, Email (optional, §5), password, then, just above the button, the required terms checkbox (unticked) and the marketing checkbox (ticked by default) (§7.0, §7.1). Email gets the same live syntax check and the same busy, read-only and error states.
 
 | State | What shows |
 |---|---|
 | Idle | Today's form. Each field has its hint and, for username and password, a rule list with neutral bullets (`○`, `--ink-3`). Button "Create account". |
 | Typing | Each rule turns ✓ (`--balanced`) as it's met. Unmet rules stay neutral while typing. Red only appears on blur or submit (`form-design`: validate on blur), so the live checks read as progress. Nothing is announced per keystroke. Capitals in the username: the hint becomes "You'll sign in as {lower}." Typing `@` shows the `u.email` line at once, with a text button "Use {suggestion}". The suggestion is the part before `@`, lower-cased, with characters outside `[a-z0-9._-]` removed, cut to 32 characters, and only offered when it passes. |
 | Invalid (blur or submit) | Unmet rules turn ✗ (`--danger`), with visually-hidden "met" / "not met" text. One error line under the field (`<p class="ferr" id="password-error">`) shows the first failing rule's message, and the field gets `aria-invalid="true"`. On submit, focus moves to the first invalid field. Only fields that fail are marked. The form-level `[data-hint]` is kept for errors that belong to no field, and is cleared before each new message so a repeat is announced again. |
-| Submitting (0–4 s) | The button gets `aria-disabled="true"` (not `disabled`, which drops focus), a 14 px spinner before the label, and the label "Creating account…". Repeat taps do nothing. The form gets `aria-busy="true"`; the inputs become `readonly`. The style is `.btn[aria-disabled="true"], .btn:disabled { opacity: .72 }`. With reduced motion the spinner is a static `…`. |
-| Slow (> 4 s) | A status line under the button (`role="status"`, in the DOM from the start): "Still working. The app may be waking up, which can take a minute or two. Keep this page open." At 45 s: "Still working. Saving can take a little longer when the app has just woken up." |
+| Submitting (0–4 s) | The button gets `aria-disabled="true"` (not `disabled`, which drops focus), the bag page's filling cup before the label (the same `.cup` SVG, CSS and `pour`/`drip` keyframes as the label-reading screen, at about 1 em in the button's own colour; under reduced motion a still, half-full cup), and the label "Creating account…". It keeps its full colour: no opacity fade, which would drop the label below 4.5:1, and no press scale. Repeat taps do nothing. The inputs become `readonly`. No `aria-busy` on the form, so the slow line below is still announced. |
+| Slow (> 4 s) | A status line under the button (`<p class="meta center" role="status">`, in the dock, in the DOM from the start, empty until then; not the error line): "Still working. The app may be waking up, which can take a minute or two. Keep this page open." At 45 s: "Still working. Saving can take a little longer when the app has just woken up." |
 | Lost reply | The fetch times out at 130 s, or the network fails, or a 502/503/504 comes back. The page then resends the **same** body up to 3 times (2 s, 5 s, 10 s apart). That's safe: join is idempotent (§11). If all of them fail: "Couldn't reach the app. Nothing you typed is lost. Try again in a moment." The button reads "Try again". |
 | Success | Button: "Account created". `globalThis.caches?.delete("pages")`, then `location.replace("/")` with the notice "Welcome, {username}." |
 | Error, a field / other | The server's message under its field, or in the form hint: the server's text, or "Something went wrong on our side. Try again." for a 500. |
@@ -389,8 +390,8 @@ invite link, Make reset link, Send a new link, Revoke, Edit note, Delete, Turn o
 
 | State | What shows |
 |---|---|
-| Busy (0–4 s) | The tapped button is `aria-disabled`, with a spinner and its own label: "Making a link…", "Making a reset link…", "Making a new link…", "Revoking…", "Saving…", "Deleting…", "Turning off…" / "Turning on…". Repeat taps are ignored. |
-| Slow (> 4 s) | `[data-hint]` neutral, `role="status"`: "Still saving. This takes a few seconds when the app has just woken up." |
+| Busy (0–4 s) | The tapped button is `aria-disabled`, with the filling cup and its own label: "Making a link…", "Making a reset link…", "Making a new link…", "Revoking…", "Saving…", "Deleting…", "Turning off…" / "Turning on…". Repeat taps are ignored. |
+| Slow (> 4 s) | The status line under the button (`role="status"`, the same as join's, not `[data-hint]`): "Still saving. This takes a few seconds when the app has just woken up." |
 | Ready | The codebox appears, and focus moves to its label (`tabindex="-1"`). Status: "Invite link ready. It's shown only once." The button becomes "Share link" / "Copy link"; "Copied" for 2 s. A filled-in For note shows on the codebox label: "Invite for {label}". |
 | Error | `[data-hint]` with the server text, and the button goes back to idle. Note too long: "Keep the note to 60 characters." |
 
@@ -549,7 +550,7 @@ it often.
 4. **M** Templates: hints, rule lists, the rules JSON block, `passwordrules` (minlength 10), aria wiring, error
    lines. On join, owner setup, reset and Change password.
 5. **L** `app.js`: live checks, the `@` suggestion, the submit states (busy, slow, retry, timeout), focus, and
-   `post()` reading field details. CSS: rule list, spinner, `.ferr`.
+   `post()` reading field details. CSS: rule list, the busy cup, `.ferr`.
 6. **S** Owner reset links: `/reset#code`, the copy, "Make reset link" with its confirm, busy and copy states.
 7. **S–M** Named invites: `for_label` and `created_at`, the For input, `invite_log()` and the list, edit and clear.
    Tests.

@@ -42,6 +42,15 @@ models:
           True when an ok fetch read only part of the catalog: the products it didn't read keep their listing
           (stg_runs.is_current). False for files from before raw contract 1.2.0.
         data_tests: [not_null]
+      - name: challenge
+        description: >-
+          A failed fetch (status error) that an edge answered with its anti-bot challenge instead of the catalog,
+          when a recorded block names the edge: siteground (SiteGround's sg-captcha header, raw contract 1.4.0) or
+          cloudflare (cf-mitigated challenge). Null otherwise, a bare 202 included: it names no edge, so it stays a
+          plain failure. The fetch-health check names the edge on the roaster's entry; a challenge is an ordinary
+          failed fetch.
+        data_tests:
+          - accepted_values: {arguments: {values: [siteground, cloudflare]}}
   - name: int_fetches
     description: >-
       stg_fetches with every ok fetch's coffee count: as its crawl recorded it, else as int_fetch_coffees counts it
@@ -178,6 +187,17 @@ models:
           The store was quarantined in the run (fetch status crashed: in flight in two attempts of its crawl that
           died) and no attempt was ok. One store's problem, not the platform's: left out of the ok rates.
         data_tests: [not_null]
+      - name: partial
+        description: >-
+          The run's ok attempts all read only part of the catalog (stg_fetches.partial), none of it whole. Still ok
+          for the ok rates when it brought back products.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why, for a partial run (the latest partial ok attempt's stg_fetches.error); null otherwise.
+      - name: challenge
+        description: >-
+          No attempt was ok and an edge answered a failed one with a challenge: the edge of the latest such attempt
+          (stg_fetches.challenge). Null otherwise.
   - name: stg_runs
     description: One row per (roaster, run_date) that counts in history; re-runs of a week collapse here.
     data_tests:
@@ -331,6 +351,18 @@ models:
           Quarantined in this run (fetch status crashed, no ok attempt): it crashed its crawl twice and wasn't
           fetched. Attempted, but left out of the ok rates; mart_build_profile counts them (run_quarantined).
         data_tests: [not_null]
+      - name: partial
+        description: >-
+          This run read only part of its catalog (int_roaster_runs.partial). Counted ok in the ok rates when it
+          brought back products; the fetch-health check lists it apart, never as a failure.
+        data_tests: [not_null]
+      - name: partial_reason
+        description: Why it is partial (int_roaster_runs.partial_reason); null otherwise.
+      - name: challenge
+        description: >-
+          Failed this run behind an edge's challenge (int_roaster_runs.challenge: siteground or cloudflare);
+          null otherwise. A failure for the ok rates; the fetch-health check names it on the roaster's entry,
+          an ordinary failed fetch.
   - name: mart_build_profile
     description: This build's catalog and run metrics; appended to the lake's builds table, where the next builds'
       volume check and anomaly bands read them.

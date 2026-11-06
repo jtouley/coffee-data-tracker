@@ -83,14 +83,15 @@ locals {
   # name => what it runs, its egress ("default", "shopify" or "woo_generic": local.egress_nats), whether it needs the
   # Claude key, its memory (default;
   # var.ingest_job_memory overrides it per job) and Cloud Run's retries of a failed task (max_retries).
-  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls. A crawl that dies (OOM kill, crash)
-  # is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints, skips the roasters already done this week, fetches the
-  # dead attempt's in-flight roasters one at a time and quarantines one that killed two attempts (crashguard), and it
-  # stops inside the first attempt's window (connectors._window_left), so it never overlaps the next slot. A crawl
-  # stopped by its deadline exits 0 and is never retried. Shopify's crawls stay at 0: a retry straight after a
-  # failure would re-ask the stores that just refused, on Shopify's NAT IP; their next slot (15:17, 21:47) resumes.
-  # WooCommerce's and generic's are 0 for the same reason: they share one static IP (woo_generic), and their 15:17
-  # resume and 21:47 retry slots cover a failed attempt.
+  # Retries: 1 for every job but Shopify's, WooCommerce's and generic's crawls and fetch-health (below). A crawl that
+  # dies (OOM kill, crash) is retried at once, and the retry resumes: it compacts the dead attempt's checkpoints,
+  # skips the roasters already done this week, fetches the dead attempt's in-flight roasters one at a time and
+  # quarantines one that killed two attempts (crashguard), and it stops inside the first attempt's window
+  # (connectors._window_left), so it never overlaps the next slot. A crawl stopped by its deadline exits 0 and is
+  # never retried. Shopify's crawls stay at 0: a retry straight after a failure would re-ask the stores that just
+  # refused, on Shopify's NAT IP; their next slot (15:17, 21:47) resumes. WooCommerce's and generic's are 0 for the
+  # same reason: they share one static IP (woo_generic), and their 15:17 resume and 21:47 retry slots cover a failed
+  # attempt.
   ingest_jobs = {
     # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
     # run, weekly before the crawls. Both publish what they recorded.
@@ -117,8 +118,17 @@ locals {
     # retries in place on that one IP (see Retries above).
     # 8Gi: OOM-killed at 2Gi on 2026-11-02 (about 7 min in); the owner raised it by hand (gcloud run jobs update).
     "crawl-generic" = { command = ["coffeedata"], args = ["crawl", "--connector", "generic"], egress = "woo_generic", claude = false, memory = "8Gi", retries = 0 }
-    "merge"         = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
-    "enrich-week"   = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
+    # The fetch-health check (fetchhealth.py): did each fetch return a catalog of about the right size? Polled
+    # through Monday's crawl window, it runs the gate's run_ok_rate, adapter_ok_rate and suspect rules on the
+    # unmerged week once a crawl attempt has ended, and writes its list (failed, empty, short) for the owner (the
+    # crawl passes re-fetch it only with COFFEEDATA_DQ_REFETCH, set on no job here: off until measured,
+    # eval/run_quality/README.md). It judges fetches, not the data in them. Never serves or records a build; it
+    # publishes its job_manifests rows (the verdict) to the dataset after every check. Its non-zero exit (a systemic
+    # fetch failure) fails the execution, which emails the owner (alerts.tf, ingest_job_failed). Retries 0: a retry would find the check done and exit 0, hiding the failure. 8Gi, as the
+    # build: dbt builds the models run_completeness reads (dim_coffee, with the classifier).
+    "fetch-health" = { command = ["coffeedata"], args = ["fetch-health"], egress = "default", claude = false, memory = "8Gi", retries = 0 }
+    "merge"        = { command = ["coffeedata"], args = ["merge"], egress = "default", claude = false, memory = "4Gi", retries = 1 }
+    "enrich-week"  = { command = ["coffeedata"], args = ["enrich-week", "--submit"], egress = "default", claude = true, memory = "2Gi", retries = 1 }
     # Verdicts, then the build and its gate; publish either way (a failed build's record too); then the egress
     # check. A failed classify (no model or key, an API error), a failed gate, or the egress check's non-zero exit
     # (an IP over 8% refusals two runs in a row) fails the execution, which emails the owner (alerts.tf,
@@ -135,7 +145,8 @@ locals {
   # job at once, each on its own instance (Shopify's on its NAT IP, WooCommerce's and generic's on theirs), then each
   # one's resume 6 h later; a third pass that evening for every connector (Shopify: crawl-retry, its parked stores, on
   # its NAT; the others: their own crawl job again, which resumes and retries every roaster without an ok fetch, on
-  # that job's egress); Tuesday merge,
+  # that job's egress); after each, fetch-health judges the fetches that landed and lists roasters whose fetch
+  # failed, came back empty or short (re-fetch is off); Tuesday merge,
   # enrichment, build. The release is stamped Monday and published
   # Tuesday, at most 8 days old (contracts/public-catalog.odcs.yaml, max_run_age_days).
   ingest_schedule = {
@@ -156,9 +167,15 @@ locals {
     "crawl-woocommerce-retry"    = { job = "crawl-woocommerce", cron = "47 21 * * 1" }
     "crawl-square-online-retry"  = { job = "crawl-square-online", cron = "47 21 * * 1" }
     "crawl-generic-retry"        = { job = "crawl-generic", cron = "47 21 * * 1" }
-    "merge"                      = { job = "merge", cron = "17 3 * * 2" }
-    "enrich-week"                = { job = "enrich-week", cron = "17 4 * * 2" }
-    "build"                      = { job = "build", cron = "17 6 * * 2" }
+    # fetch-health: every 20 minutes over Monday 10:07 (50 minutes into the first pass) to Tuesday 02:47 (after the
+    # 21:47 pass's 240-minute limit, before the 03:17 merge). One entry, named after its job as every entry is
+    # (alerts.tf names the job from the entry), so its hours also cover Monday 00-02 and Tuesday 10-23, when there is
+    # nothing to judge: a poll with no crawl attempt ended since the last check exits in seconds. So each
+    # connector's pass is judged within 20 minutes of ending.
+    "fetch-health" = { job = "fetch-health", cron = "7,27,47 0-2,10-23 * * 1,2" }
+    "merge"        = { job = "merge", cron = "17 3 * * 2" }
+    "enrich-week"  = { job = "enrich-week", cron = "17 4 * * 2" }
+    "build"        = { job = "build", cron = "17 6 * * 2" }
   }
 }
 
