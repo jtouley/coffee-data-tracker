@@ -226,3 +226,11 @@ If that final review finds nothing critical, wait for CI and merge. No more revi
 
 ## CI smoke test (to design)
 A fast smoke job across web, ingestion and dbt, as a required check that runs in a few minutes. The full suite takes ~20 min. Plan proposed 2026-11-06; waiting on the owner.
+
+## Frontend rule (owner, 2026-11-06)
+Every frontend change (site, app, templates, CSS, JS) is driven end to end with Playwright before review and before pushing, the same way every dbt change runs a full build:
+- every state the change touches, at phone and desktop widths, in light and dark;
+- slow-server and error cases;
+- an axe check.
+
+The design-skills specialist review reads those screenshots. Lesson: the sign-up and invite problems the tester hit would have been caught if this had been done before.
