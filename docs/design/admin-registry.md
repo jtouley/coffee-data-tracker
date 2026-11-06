@@ -47,7 +47,8 @@ these leave it out:
 - `build-diff`'s default `new`;
 - the anomaly bands and the volume baseline.
 
-A draft writes no personal marts, and only Publish can serve it.
+A draft writes no personal marts, and only Publish can serve it. `rollback(to=<id>)` refuses an unpublished draft's
+id.
 
 ## 2. The database
 
@@ -64,7 +65,7 @@ home if the panel is where they change. Here is how each of the review's concern
 | Config and image skew | The settings schema is generated from the code's rule types. The API rejects a value the deployed schema doesn't allow, and a draft build fails on a snapshot its image can't read |
 | A database down breaks the weekly build | It can't. The weekly build finds the published snapshot from `serving_log` (3.2), with no database. A database outage only blocks admin edits |
 | A password in Secret Manager and state | Passwordless database auth is a POC success criterion (section 7) |
-| Back up off one store | The database has point-in-time restore. Every published snapshot is in the lake, and each build's release folder keeps its effective decisions |
+| Back up off one store | The database has point-in-time restore. Every snapshot is in the private curation dataset, and each build's release folder keeps its effective decisions |
 | Fail closed | A build whose pinned snapshot can't be read fails; it never builds as if there were no decisions |
 
 ### 2.2 Tables
@@ -163,8 +164,11 @@ rollback should have.
 ### Stale drafts
 
 When a weekly release changes the baseline, the draft rebuilds itself on the new release, in the build job. It
-runs every gate, and a diff against the draft's previous build shows what changed. It **never publishes**.
-`make smoke` tests code over fixtures; it runs in CI on code changes, not on drafts, since the image has no tests. It rebuilds at most once per new release. The owner sees the new diff and decides again.
+runs every gate, and a diff against the draft's previous build shows what changed. It rebuilds at most once per
+new release and **never publishes**; the owner sees the new diff and decides again.
+
+`make smoke` is not part of this: it tests code over fixtures, and runs in CI on code changes. The build image has no
+tests.
 
 ### The weekly release
 
@@ -173,8 +177,11 @@ It stays automatic, gated by the existing tests. It reads the published snapshot
 
 ### The crawl flag
 
-- **Off:** `select_states` skips the roaster, through the published snapshot. That includes the `only` branch,
-  which today returns a roaster without the usual filters.
+- **Off:** `select_states` skips the roaster, through the snapshot the crawl was given. That includes the `only`
+  branch, which today returns a roaster without the usual filters.
+- **Which snapshot.** Scheduled crawls read the published snapshot. The admin-started smoke crawl is given the
+  **draft's** snapshot id as an argument when the admin starts the `crawl` job, so a draft that turns the flag on
+  is read as on.
 - **On:** the roaster can be crawled again. For a new or under-covered roaster, turning it on also starts a
   one-roaster smoke crawl, `crawl --connector <its connector> --only <roaster>` (the crawl job with overrides, at most once a day),
   and then a draft build, so the owner sees its catalog before publishing.
@@ -358,7 +365,7 @@ Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page s
 - The crawl flag with its smoke crawl.
 - Stale-draft auto-rebuild.
 - Settings editing in the admin.
-- The catalog pages (`dq_results`, contracts).
+- Data-catalog pages for `dq_results` and contracts (apart from Phase 1's coffee Catalog page).
 - History.
 - `not_a_coffee_seller`.
 - More rule types, each scored.
