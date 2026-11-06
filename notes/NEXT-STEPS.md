@@ -244,3 +244,8 @@ The design-skills specialist review reads those screenshots. Lesson: the sign-up
   - high: auth/security, money, anything that publishes data (dbt gates, public tables, contracts), terraform;
   - final review after fixes: low or medium.
   Goes into CLAUDE.md via the smoke-test PR.
+- 2026-11-06 #120: the security plus /code-review specialist review found no critical issue and 3 MAJORs:
+  - Change password posts to the wrong API;
+  - username enumeration on join without a valid code;
+  - renewing a reset link returns 500.
+  The fix round is running, with the cheap minors too. m7 (reset links last 7 days; OWASP suggests 24–72 h) is left for the owner to decide. Next: a final low/medium review, then CI, then merge.
