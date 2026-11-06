@@ -208,3 +208,10 @@ The live restart page is https://claude.ai/artifact/T8CXDYCf2Tsv2mrU4Rq7S8 (sect
   - The username rule `[a-z0-9_-]{3,32}` (app/accounts.py:36) rejects emails and dotted names, and the page doesn't show the error. Accept emails or dotted names, or state the rule up front and show inline errors.
   - A password from a password manager, and later a simpler one: the submit button seemed dead. Every validation error must be visible inline. Test with a generated password.
   - His ask, verbatim in spirit: "fine if it's slow, just disable the button and show it's in progress".
+- Owner decisions (2026-11-06) for sign-up validation:
+  - State the username and password rules up front, under each field.
+  - Live checks as you type, with a ✓/✗ per rule and the reason in words.
+  - The server keeps identical checks and returns the same messages.
+  - Passwords must be compatible with 1Password's generator (https://1password.com/password-generator) at the owner's setting: Random, 20 chars, numbers and symbols on (e.g. `)]=_:!%`). Also cover Memorable (words with separators).
+  - Add fixtures for every symbol 1Password can emit, and an end-to-end test that they survive form encoding and JSON.
+  - The current rules (10–256 chars, not common, doesn't contain the username, ≥4 distinct chars) should already accept such passwords. The tester's failures were probably the username rule `[a-z0-9_-]{3,32}`, which rejects `@` and `.`, combined with errors that never appeared on the page. Verify this with tests.
