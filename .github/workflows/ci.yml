@@ -25,3 +25,51 @@ jobs:
       - run: make test           # pre-commit hooks on every file, then the tests
         env:
           REQUIRE_BROWSER: "1"
+
+  # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no
+  # network. Branch protection requires `smoke`, the job below that waits for all three.
+  smoke-part:
+    name: smoke (${{ matrix.part }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    concurrency:  # a newer push to the same PR replaces the run; pushes to main all finish
+      group: smoke-${{ matrix.part }}-${{ github.event.pull_request.number || github.sha }}
+      cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [dbt, ingest, web]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      # DuckDB's httpfs (dbt's profile loads it) is installed before the tests, which then make no outside request.
+      - if: matrix.part != 'ingest'
+        run: uv run python -c "import duckdb; duckdb.connect().install_extension('httpfs')"
+      - if: matrix.part == 'dbt'
+        name: the contracts are what make contracts writes
+        run: make contracts && git diff --exit-code -- contracts/
+      - if: matrix.part == 'web'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1  # v7.1.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: tests/browser/package-lock.json
+      - if: matrix.part == 'web'
+        run: npm ci && npx playwright install --with-deps chromium
+        working-directory: tests/browser
+      - run: make smoke PART=${{ matrix.part }}
+        env:
+          REQUIRE_BROWSER: "1"
+
+  smoke:
+    needs: smoke-part
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - run: test "$RESULT" = success
+        env:
+          RESULT: ${{ needs.smoke-part.result }}

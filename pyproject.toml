@@ -52,6 +52,7 @@ dev = [
     "uvicorn>=0.30",
     "pillow>=11",
     "jsonschema>=4.20",
+    "pytest-xdist>=3.8.0",
 ]
 
 [build-system]
@@ -79,3 +80,6 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+markers = [
+    "smoke: the fast CI smoke suite (`make smoke`): dbt, ingestion and web, on recorded fixtures, no network",
+]
