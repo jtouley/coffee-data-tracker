@@ -228,7 +228,7 @@ you pass `--public`).
 | `make mcp` | `coffeedata mcp` | Run the MCP server over stdio |
 | `make contracts` | `python -m coffeedata.raw_contracts --all` | Regenerate the internal ODCS contracts at their versions; refuses a change to names, types, required or enums without a new version |
 
-The CLI also has `build-diff`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
+The CLI also has `build-diff`, `build-hashes`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
 connector; with `--no-dev`, add `--extra snowflake`; it also writes the table, view and column descriptions
 that make the Snowflake listing's data dictionary, from the public contract), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
 <command> --help` lists each command's flags.
@@ -441,7 +441,11 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
-  against the last passing one before it. After reviewing a real change, run the weekly workflow with
+  against the last passing one before it. `coffeedata build-hashes [ID] [--against ID] [--verify]` prints a
+  build's row count and content hash per release table and compares them with another build's, or with its
+  release files as they are now; the same lake and code always give the same hashes
+  (`tests/test_reproducible.py`), so a served release can be rebuilt from raw and checked
+  (`docs/ingestion/RUNBOOK.md` §5.6). After reviewing a real change, run the weekly workflow with
   `accept_volume_change` (or `build --accept-volume-change`) to let it through the volume check and the bands and
   make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.

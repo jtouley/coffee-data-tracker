@@ -1003,3 +1003,63 @@ listed (all `failed`; 58 of them Square Online, the 71.7% week); 2026-10-27 (a 4
 2026-10-28, the mass Shopify 429s: `connector` shopify (14.1% of 1,062), Shopify's 912 listed roasters held back, 46
 others listed (44 failed, 1 empty, 1 suspect). The dbt step took about 70 s on that lake. Those replays predate the
 `challenge` and `partial` mapping; the 2026-11-02 replay with it is in `eval/run_quality/README.md`.
+
+## 15. Reproducible releases
+
+A release is reproducible when the same raw lake, stored verdicts and code build the same tables. Three tiers check
+it, cheapest first: the cheap check runs on every change, the expensive one on demand or on a schedule.
+
+1. **Every PR** (`tests/test_reproducible.py`, about 40 s): a fixture lake (the five recorded storefronts over two
+   weeks, with probes, manifests, registry rows from two sources, a failed fetch, an override, verdicts, an
+   enrichment and shots) is built twice through `coffeedata build`. The second build reads a copy with every file's
+   rows, and every folder's files, in reverse order. Every model table is compared row for row (`except all` both
+   ways), with only `release_build_id` left out (`quality.PER_BUILD_COLUMNS`). The lake holds a tie for every
+   "latest" pick on purpose. Reading in another order is what exposes an order-dependent result, because two builds
+   in the same order usually agree by luck. The second build also runs in another time zone (Asia/Tokyo). dbt's
+   session is pinned to UTC (`dbt/profiles.yml`); without the pin, `stg_enrichments`' tie-break and every timestamp
+   cast to a date followed the machine's zone, and a rebuild on a laptop didn't match. The lake also holds a bag
+   priced in CAD and a roaster outside the US, so #107's USD-only rules are built both times too.
+2. **Every build** (`quality.record_build`): one `builds` row per release table, of kind `table_hash`, with its row
+   count (`rows`), its content hash (`checksum`) and the hash method (`payload`, `row-md5-sum-v1`). Each row is
+   encoded as DuckDB's JSON of its columns, in name order, without the per-build ones and with timestamps in UTC.
+   The row's md5 is split into two 64-bit halves, and each half is summed over the table in a 128-bit integer. The
+   table's hash is a sha256 over the method, the column names, the row count and the two sums. So it doesn't depend
+   on row order, but it does change with every value, a list's order, a duplicate or missing row, and a renamed or
+   added column. Doubles are hashed in DuckDB's text form, so two values that print the same hash the same.
+   `coffeedata build-hashes [ID] [--against ID] [--verify]` prints a build's hashes and what a rebuild must match
+   (`inputs`: run date, git sha, package versions, verdict model). It compares them with another build's, or
+   re-hashes the release files in the lake, and exits 1 on a difference. The `builds` table has no contract, and
+   the new rows use its existing columns, so no contract changes.
+3. **On demand** (RUNBOOK §5.6): rebuild a served release from the dataset revision that published its record, with
+   its code (the commit, or the image the build job ran), into a local copy. Then compare its hashes with the
+   original's. Do it after a change to how the build decides, monthly, or in an investigation.
+
+**What tier 1 found on `main`** (fixed here; every fix has its case in the test): with the ties in the fixture lake,
+the two builds differed in 16 tables, from `stg_runs` up to every public table. The fixes give each pick a total
+order:
+- the counted batch of a roaster-week (`stg_run_walk`) and a roaster's last ok fetch (`dim_roaster`) break a tie in
+  `fetched_at` by the later `batch_id`;
+- the latest probe (`dim_roaster`), the registry's name, city and state (`stg_registry`), an attempt's adapter, and
+  (since #93) a partial run's reason and a challenged run's edge (`int_roaster_runs`), and a verdict's label
+  (`stg_verdicts`) break a tie by the value picked;
+- an enrichment breaks a tie in `extracted_at` by the row's hash (`stg_enrichments`);
+- the registry's lake sources are listed alphabetically. `string_agg(distinct source, '+')` had no order, and on
+  200k rows across four files DuckDB gave 9 different orders in 12 reads;
+- `mart_dial_in`'s `best_*` came from `arg_max(x, rating)`, so equally rated shots gave arbitrary values, possibly
+  from different shots. Now it is one shot: the highest rated, the latest of equal ratings, then `shot_id`. That is
+  the rule `mart_bag` already stated, which now adds `shot_id` too.
+
+`registry.STATE_SQL` breaks ties as `dim_roaster` does, so the two still agree. On a copy of the real lake
+(2026-11-04), none of the catalog picks had a tie, and no roaster had two lake sources. So the catalog doesn't change
+(step 9 of CLAUDE.md: 0 products). One of the shot log's four coffee-and-grinder groups had equally top-rated shots
+with different recipes. Built on `main` and on this branch, the fixture lake without its ties gives identical tables,
+every one of them.
+
+**Left as they are:** `run_completeness` reads `now()` only when a run has no attempt at all (the expected set is
+then every roaster known before now). It feeds checks and metrics, never a release table. `latest_run_is_fresh` and
+the volume and band checks read `today` and earlier builds, so a rebuild's verdict can differ from the original's
+while its tables, and their hashes, don't.
+
+**Follow-up:** a Cloud Run build records no `git_sha`, because the image has no checkout. Record the image digest
+(and the commit it was built from) in the build record, so tier 3 doesn't need the execution's history to find the
+code.

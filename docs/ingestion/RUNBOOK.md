@@ -909,6 +909,109 @@ and `weekly`, or `COFFEEDATA_ALLOW_RULES_ONLY=1` (the `ALLOW_RULES_ONLY` reposit
 `make` sets it for a local lake. Never set it on the Cloud Run jobs: a rules-only release keeps about four times the
 non-coffee.
 
+### 5.6 Verifying a release: rebuild it from raw and compare hashes
+
+Every build records each release table's row count and content hash in its `builds` record (kind `table_hash`,
+`quality.table_hash`): a hash over every row and column except `release_build_id`, independent of row order. The
+same lake and the same code give the same hashes. `tests/test_reproducible.py` checks that on every PR, on a fixture
+lake. This section checks it for a release that customers actually got. Everything here runs locally, on a
+downloaded copy of the lake. Nothing is written to the dataset or GCS, nothing is served, and Claude isn't called.
+
+**When:**
+- **After a change to how the build decides** (the dbt models, `classify`/`extract`/`products`, or the pinned dbt,
+  DuckDB or Python packages) reaches the build job: verify the first release it serves. Also rebuild the release
+  served before the change from its own lake revision, with the new code (step 4 with the new commit). A change
+  meant to leave the output alone (a refactor, a version bump) should give `same` for every table. A change that
+  isn't should differ only in the tables it meant to change.
+- **Monthly:** the served release, on any day after the Tuesday export.
+- **In an investigation:** a customer reports wrong data, a release looks wrong, or the lake may have been edited.
+
+**1. Read the build's record** (§3's `COFFEEDATA_LAKE` and `HF_TOKEN` exports; never echo the token):
+
+```sh
+export BUILD=<build_id>   # quality.served(Lake())["build_id"] for the served one, or from build-diff
+uv run coffeedata build-hashes $BUILD --verify
+```
+
+`tables` lists each release table's rows and hash. `--verify` re-hashes the release files in the dataset and fails
+(exit 1) if any no longer matches the record: the release was damaged or replaced after its build. `inputs` is what a
+rebuild has to match: `run_date`, `git_sha`, `package_versions` and `dbt_vars.verdict_model`. A Cloud Run build has
+no git checkout, so its `git_sha` is null. Its code is the image the build job ran: read it from the execution
+(`gcloud run jobs executions describe <execution> --region $REGION
+--format='value(spec.template.spec.containers[0].image)'`, with the execution found as in §5's log commands, on the
+build's day).
+
+**2. Find the dataset revision the build read.** The build job publishes the verdicts it collected, its record and
+its release in one commit, after the build. The commit that added the record is the lake as the build read it, plus
+the build's own outputs (no model reads those):
+
+```sh
+export RUN_DATE=<inputs.run_date>
+cat > /tmp/find_rev.py <<'PY'
+import os
+from huggingface_hub import HfApi
+
+api, repo = HfApi(token=os.environ["HF_TOKEN"]), "jtouley/coffee-data"
+path = f"builds/run_date={os.environ['RUN_DATE']}/build={os.environ['BUILD']}.parquet"
+for c in reversed(api.list_repo_commits(repo, repo_type="dataset")):  # oldest first
+    if api.file_exists(repo, path, repo_type="dataset", revision=c.commit_id):
+        print(c.commit_id)
+        break
+PY
+export REV=$(uv run python /tmp/find_rev.py) && echo $REV
+```
+
+**3. Download that revision to a scratch folder,** never over a working lake. Releases and marts aren't read by the
+build, so leave them out:
+
+```sh
+export V=/tmp/verify-$BUILD && mkdir -p $V
+uv run hf download jtouley/coffee-data --repo-type dataset --revision $REV --local-dir $V/lake \
+  --exclude 'releases/*' --exclude 'marts/*'
+```
+
+Give `--exclude` once per pattern: a second pattern after one flag is read as a file to download, and the download
+fails.
+
+**4. Rebuild with the build's code**, on the local copy only. Unset `HF_TOKEN` first, so nothing can reach the
+dataset. Don't run `classify`: the stored verdicts are part of the input, and asking Claude again would change them.
+- `git_sha` set (an Actions build): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
+  ```sh
+  env -u HF_TOKEN TZ=UTC COFFEEDATA_LAKE=$V/lake COFFEEDATA_VERDICT_MODEL=<inputs.dbt_vars.verdict_model> \
+    uv run coffeedata build --run-date $RUN_DATE --db $V/coffee.duckdb
+  ```
+- A Cloud Run build: run the same image, with the copy mounted:
+  ```sh
+  chmod -R a+rwX $V
+  docker run --rm -v $V:/verify -e COFFEEDATA_LAKE=/verify/lake -e COFFEEDATA_VERDICT_MODEL=<verdict model> \
+    <image from step 1> build --run-date $RUN_DATE --db /verify/coffee.duckdb
+  ```
+
+Builds run in UTC: `dbt/profiles.yml` pins it, and Cloud Run and Actions run in UTC anyway. `TZ=UTC` above does the
+same for a commit from before the pin. In any other zone, a date cast from a timestamp, or a tie-break over a row's
+text, can come out differently.
+
+The rebuild of a release more than 8 days old ends with "failed its checks". That is expected: `latest_run_is_fresh`
+is measured against today, and the checks never change a table. Passing or not, the rebuild records its own hashes
+in the copy, beside the original's. If its `inputs.package_versions` (`build-hashes` with no id, next step) differ
+from the original's, the rebuild didn't run the same code: use the image, or `uv sync --frozen` at the same commit.
+
+**5. Compare** (the rebuild is the latest build in the copy):
+
+```sh
+env -u HF_TOKEN COFFEEDATA_LAKE=$V/lake uv run coffeedata build-hashes --against $BUILD
+```
+
+Exit 0, with `same` for every table: the release is reproduced from raw. Write that down, with the build id, `REV`
+and the code, where the check was asked for (the PR, the issue or the monthly note). A table that differs shows its
+row counts and both hashes. To see the rows, compare the original release's table (in the dataset at any later
+revision, `releases/run_date=$RUN_DATE/build=$BUILD/<table>.parquet`) with the rebuild's (`$V/coffee.duckdb`), with
+`except all` both ways and `release_build_id` left out, as `tests/test_reproducible.py` does. Then find the cause: a
+model that depends on the order rows are read in (a tie in a "latest" pick, a list or `string_agg` without an
+order), a lake file changed after the build, or different code or versions.
+
+**6. Clean up:** `rm -rf $V /tmp/find_rev.py`, and `git worktree remove $V/code` if you made one.
+
 ## 6. Alerts
 
 `src/terraform/alerts.tf` emails the owner (the `owner` notification channel, `owner_email`) about the pipeline too.

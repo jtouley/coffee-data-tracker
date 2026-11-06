@@ -7,6 +7,8 @@ customers read (RELEASE_TABLES) under releases/run_date=.../build=.../. Only a p
 `serve` copies it to marts/ (what the app, MCP and dataset readers use) and records which release that is in
 marts/release.parquet. A failed build leaves the served release as it was, which is the automatic rollback;
 `rollback` serves an earlier release by hand. `build-diff` compares any two builds down to individual coffees.
+Every build also records each release table's row count and content hash (`table_hash`), so two builds of the same
+lake and code can be shown to have produced the same release (`build-hashes`, docs/ingestion/RUNBOOK.md §5.6).
 Every serve and rollback also appends a row to serving_log (which release, when, why, who, and the one it
 replaced), so the history of what customers got survives marts/release.parquet being replaced.
 Raw lake files are never touched here, and no release is ever edited.
@@ -15,6 +17,7 @@ Raw lake files are never touched here, and no release is ever edited.
 from __future__ import annotations
 
 import functools
+import hashlib
 import json
 import logging
 import os
@@ -41,6 +44,12 @@ RELEASE_TABLES = (
     "public_market_weekly",
 )
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
+# The release columns that differ between two builds of the same lake by design: which build a row came from. The
+# content hash leaves them out, and so does tests/test_reproducible.py's row-for-row comparison.
+PER_BUILD_COLUMNS = ("release_build_id",)
+# How table_hash encodes and combines rows. A change to the encoding gets a new name, so hashes made two ways are
+# never compared as if they were made one way (build-hashes reports a method mismatch instead of a difference).
+HASH_METHOD = "row-md5-sum-v1"
 # The coverage we publish (marketplace/LISTING.md, copied by hand into the Snowflake listing's attribute boxes),
 # checked by every build against its own mart_build_profile: dbt's coverage_claims_match_build (warn, beyond
 # claim_tolerance) and coverage_claims_name_metrics (fails: a claim naming no metric is a bug, not drift). Found
@@ -108,6 +117,16 @@ def record_build(
         ) as e:  # a model that failed to build, or a failed write: the release is incomplete
             log.warning("release %s has no %s: %s", build_id, t, e)
     passed = passed and written == set(RELEASE_TABLES)
+    hashes = []  # each release table's content, for build-hashes: what a rebuild of this release must reproduce
+    for t in sorted(written):
+        try:
+            n, h = table_hash(con, t)
+        except duckdb.Error as e:  # only a record: it never changes the verdict
+            log.warning("release %s: no hash for %s: %s", build_id, t, e)
+            continue
+        hashes.append(
+            {"kind": "table_hash", "unique_id": t, "rows": n, "checksum": h, "payload": HASH_METHOD}
+        )
 
     def count(name: str | None) -> int | None:
         if con is None or not name:
@@ -141,6 +160,7 @@ def record_build(
     except duckdb.Error:
         metrics = []
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
+    rows += [base | h for h in hashes]
     # The release notes: how many rows of each public table this build adds, removes or changes against the
     # served release, per reason (release_changes); unique_id is <table>:<change>:<reason>.
     rows += [
@@ -250,6 +270,102 @@ def release_notes(db: Path) -> list[str]:
     incomplete = [f"{t} {c} {r}" for (t, c, r), _ in counts if c in ("schema", "not_reconciled")]
     if incomplete:
         out.append("not compared in full: " + "; ".join(incomplete))
+    return out
+
+
+def table_hash(con, relation: str) -> tuple[int, str]:
+    """(rows, content hash) of a table, or of any relation such as a read_parquet() of a release file.
+
+    Each row is encoded canonically: its columns but PER_BUILD_COLUMNS, sorted by name, as DuckDB's JSON of the row
+    (to_json: lists keep their order, structs their fields; timestamps in UTC), and hashed with md5. The table's hash
+    is a sha256 over HASH_METHOD, the column names, the row count and the sums of the rows' hashes (as two 64-bit
+    halves, in 128-bit integers), so it doesn't depend on row order but does on every row, duplicates included."""
+    cur = con.cursor()
+    try:
+        cur.execute("set session TimeZone = 'UTC'")  # timestamptz values render in UTC, wherever this runs
+        names = [r[0] for r in cur.execute(f"describe select * from {relation}").fetchall()]
+        cols = sorted(c for c in names if c not in PER_BUILD_COLUMNS)
+        sel = ", ".join(f'"{c}"' for c in cols)
+        row = cur.execute(
+            "select count(*), coalesce(sum(('0x' || h[1:16])::ubigint::hugeint), 0), "
+            "coalesce(sum(('0x' || h[17:32])::ubigint::hugeint), 0) "
+            f"from (select md5(to_json(t)::varchar) as h from (select {sel} from {relation}) t)"
+        ).fetchone()
+    finally:
+        cur.close()
+    n, hi, lo = row if row else (0, 0, 0)
+    digest = hashlib.sha256(f"{HASH_METHOD}|{','.join(cols)}|{n}|{hi}|{lo}".encode()).hexdigest()
+    return int(n), digest
+
+
+def build_hashes(lake: Lake, build_id: str) -> dict[str, tuple[int, str, str]]:
+    """What a build recorded for each release table: {table: (rows, content hash, hash method)}. Empty for a build
+    from before hashes were recorded."""
+    rows = (
+        lake.connect()
+        .execute(
+            f"select unique_id, rows, checksum, payload from {lake.scan('builds')} "
+            "where build_id = ? and kind = 'table_hash'",
+            [build_id],
+        )
+        .fetchall()
+    )
+    return {t: (int(n), h, m) for t, n, h, m in rows}
+
+
+def build_inputs(lake: Lake, build_id: str) -> dict:
+    """What a rebuild of this build needs to match: its run date, code (git_sha; null for a build in the ingest
+    image, which has no git checkout: use the image the build job ran), package versions and dbt vars that decide
+    the output (verdict model and definition, max_failures), from its build record and run_results."""
+    con = lake.connect()
+    b = f"(select * from {lake.scan('builds')} where build_id = ?)"
+    row = con.execute(
+        f"select run_date::varchar, git_sha, dbt_version, package_versions, ci_run_url from {b} "
+        "where kind = 'build'",
+        [build_id],
+    ).fetchone()
+    if not row:
+        return {}
+    out = dict(
+        zip(("run_date", "git_sha", "dbt_version", "package_versions", "ci_run_url"), row, strict=True)
+    )
+    out["package_versions"] = json.loads(out["package_versions"]) if out["package_versions"] else None
+    results = con.execute(
+        f"select payload from {b} where kind = 'artifact' and unique_id = 'run_results.build.json'",
+        [build_id],
+    ).fetchone()
+    dbt_vars = ((json.loads(results[0]) if results else {}).get("args") or {}).get("vars") or {}
+    keys = ("verdict_model", "verdict_definition", "max_failures")
+    return out | {"dbt_vars": {k: dbt_vars.get(k) for k in keys} if dbt_vars else None}
+
+
+def verify_release(lake: Lake, build_id: str) -> dict[str, tuple[int, str, str]]:
+    """The hashes of a build's release files as they are now, to check against what the build recorded."""
+    con = lake.connect()
+    out = {}
+    for t in sorted(release_files(lake, build_id)):
+        n, h = table_hash(con, _release(lake, build_id, t))
+        out[t] = (n, h, HASH_METHOD)
+    return out
+
+
+def compare_hashes(
+    old: dict[str, tuple[int, str, str]], new: dict[str, tuple[int, str, str]]
+) -> dict[str, dict[str, object]]:
+    """Per table in either: whether it's the same (rows and hash both equal), and what differs. Hashes made by two
+    methods can't be compared: that is reported as a method difference, never as different content."""
+    out: dict[str, dict[str, object]] = {}
+    for t in sorted(old.keys() | new.keys()):
+        a, z = old.get(t), new.get(t)
+        if a is None or z is None:
+            out[t] = {"same": False, "missing_from": "old" if a is None else "new"}
+            continue
+        d: dict[str, object] = {"same": a == z, "rows": {"old": a[0], "new": z[0]}}
+        if a[2] != z[2]:
+            d["method"] = {"old": a[2], "new": z[2]}
+        elif a[1] != z[1]:
+            d["hash"] = {"old": a[1], "new": z[1]}
+        out[t] = d
     return out
 
 
