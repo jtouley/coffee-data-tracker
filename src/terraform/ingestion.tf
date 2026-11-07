@@ -94,10 +94,13 @@ locals {
   # attempt.
   ingest_jobs = {
     # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
-    # run, weekly before the crawls. Both publish what they recorded.
+    # run, weekly before the crawls. Both publish what they recorded. After discovery is published, the screen
+    # (screen.py) visits discovery's café and coffee-shop candidates once each and admits the roasters among them; it
+    # stops starting candidates after 140 minutes (screen.DEADLINE_MIN) and publishes every 200, so it fits the
+    # 240-minute limit after discovery (Overture about a minute; OSM at most 51 states x 90 s).
     "discover" = {
       command = ["sh", "-c"]
-      args    = ["coffeedata discover overture; coffeedata discover osm; coffeedata publish --message \"discover\""]
+      args    = ["coffeedata discover overture; coffeedata discover osm; coffeedata publish --message \"discover\"; coffeedata screen"]
       egress  = "default", claude = false, memory = "4Gi", retries = 1
     }
     "probe" = {

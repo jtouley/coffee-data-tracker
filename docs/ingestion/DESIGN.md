@@ -182,7 +182,8 @@ C never had a PR.
 
 | Service | Command | Reads | Writes |
 |---|---|---|---|
-| Discovery, probing | `coffeedata discover overture\|osm`, `coffeedata probe` | open datasets, stale roasters' sites | `registry`, `probes` |
+| Discovery, probing | `coffeedata discover overture\|osm`, `coffeedata probe` | open datasets, stale roasters' sites | `registry`, `candidates`, `probes` |
+| Screen | `coffeedata screen` | `candidates`, `screens`, the registry; each due candidate's site, once | `screens`; for an admitted one, `registry` and `probes` |
 | Connector ingest | `coffeedata crawl --connector X` | registry, lake history, its partition | `raw/connector=X/run_date=W/` (snapshots, bodies, fetches, run_manifests), parked progress, `job_manifests` |
 | Parked-store retry | `coffeedata crawl-retry --connector X` | its parked progress | the same partition |
 | Weekly merge | `coffeedata merge` | `job_manifests` (who landed), the partitions | the lake's `run_manifests/ fetches/ snapshots/ bodies/run_date=W/`: today's raw-run shape |
@@ -359,7 +360,7 @@ rest instead.
 
 | Job | Command | Network | Scheduler (UTC) |
 |---|---|---|---|
-| `discover` | `discover overture`, `discover osm`, `publish` | default | 1st of the month 03:17 |
+| `discover` | `discover overture`, `discover osm`, `publish`, `screen` (publishes every 200; stops starting at 140 min) | default | 1st of the month 03:17 |
 | `probe` | `probe --stale-days 28`, `publish` | default | Mon 07:17 |
 | `crawl-shopify` | `crawl --connector shopify` (a re-run resumes) | **Direct VPC egress → Cloud NAT, one static IP** | Mon 09:17, resume 15:17 |
 | `crawl-retry` | `crawl-retry --connector shopify` | **the same NAT IP** | Mon 21:47 |
@@ -380,7 +381,7 @@ Tuesdays") say. The earlier spread (connectors Mon–Fri, merge/enrich/build on 
 
 | When | Entry | What | Done by (240-min limit) |
 |---|---|---|---|
-| 1st of the month 03:17 | `discover` | Overture and OSM discovery, publish | 07:17 |
+| 1st of the month 03:17 | `discover` | Overture and OSM discovery, publish, then the screen of café candidates | 07:17 |
 | Mon 07:17 | `probe` | stale roasters' platforms, publish | 11:17 |
 | Mon 09:17 | `crawl-shopify`, `crawl-squarespace`, `crawl-woocommerce`, `crawl-square-online`, `crawl-generic` | every connector's crawl at once: 5 executions, one task and one instance each (Shopify on its NAT IP, WooCommerce and generic on the second, the rest on default egress) | 13:17 (each stops starting roasters at 225 min) |
 | Mon 15:17 | the five `*-resume` entries | the same five jobs again: each resumes its own connector's roasters without an ok fetch this week | 19:17 |

@@ -107,11 +107,13 @@ def overture_latest_release() -> str:
     return sorted(re.findall(r"<Prefix>release/([^<]+)/</Prefix>", xml.decode()))[-1]
 
 
-def overture(release: str | None = None) -> list[dict]:
-    """US places tagged coffee_roastery, or coffee places with "roast" in the name, one row per website."""
-    import duckdb
+# Places tagged as cafés rather than roasteries. Some are real roasters (Rival Bros is tagged only coffee_shop), most
+# aren't: they're recorded as screening candidates (screen.py), never straight into the registry, so the weekly crawl
+# sees one only after its screen admits it. Primary category or an alternate; open places only.
+CANDIDATE_TAGS = ("coffee_shop", "cafe")
 
-    release = release or overture_latest_release()
+
+def _overture_urls(release: str) -> list[str]:
     xml = (
         urllib.request.urlopen(
             f"{OVERTURE}?list-type=2&prefix=release/{release}/theme=places/type=place/", timeout=30
@@ -119,53 +121,111 @@ def overture(release: str | None = None) -> list[dict]:
         .read()
         .decode()
     )
-    urls = [OVERTURE + k for k in re.findall(r"<Key>([^<]+)</Key>", xml) if k.endswith(".parquet")]
+    return [OVERTURE + k for k in re.findall(r"<Key>([^<]+)</Key>", xml) if k.endswith(".parquet")]
+
+
+# One scan of the release for both lists: roasters (tagged coffee_roastery, or a coffee place with "roast" in the
+# name, as before) and screening candidates (CANDIDATE_TAGS, open, and not a roaster by that rule).
+OVERTURE_SQL = """
+    WITH r AS (
+      SELECT names.primary AS name, taxonomy.primary AS cat, coalesce(taxonomy.alternates, []) AS alts,
+             addresses[1].locality AS city, addresses[1].region AS state, confidence, websites[1] AS website,
+             operating_status,
+             (taxonomy.primary = 'coffee_roastery'
+              OR list_contains(taxonomy.alternates, 'coffee_roastery')
+              OR (names.primary ILIKE '%roast%'
+                  AND (taxonomy.primary ILIKE '%coffee%' OR basic_category ILIKE '%coffee%'
+                       OR names.primary ILIKE '%coffee%'))) AS is_roaster
+      FROM read_parquet({urls}, hive_partitioning = false)
+      WHERE ((bbox.xmin BETWEEN -125 AND -66 AND bbox.ymin BETWEEN 24 AND 50)
+          OR (bbox.xmin BETWEEN -170 AND -129 AND bbox.ymin BETWEEN 51 AND 72)
+          OR (bbox.xmin BETWEEN -161 AND -154 AND bbox.ymin BETWEEN 18 AND 23))
+        AND addresses[1].country = 'US' AND websites IS NOT NULL
+        AND (taxonomy.primary IN {tags} OR list_has_any(taxonomy.alternates, {tag_list})
+             OR taxonomy.primary = 'coffee_roastery' OR list_contains(taxonomy.alternates, 'coffee_roastery')
+             OR names.primary ILIKE '%roast%'))
+    SELECT website, name, city, state, confidence, cat = 'coffee_roastery' AS tagged,
+           name ILIKE '%roast%' AS roast_in_name, is_roaster,
+           CASE WHEN cat = 'coffee_shop' OR list_contains(alts, 'coffee_shop') THEN 'coffee_shop'
+                WHEN cat = 'cafe' OR list_contains(alts, 'cafe') THEN 'cafe' END AS tag,
+           operating_status IS NULL OR operating_status = 'open' AS open
+    FROM r
+    WHERE is_roaster OR tag IS NOT NULL"""
+
+
+def overture(release: str | None = None) -> list[dict]:
+    """US places tagged coffee_roastery, or coffee places with "roast" in the name, one row per website."""
+    return overture_places(release)[0]
+
+
+def overture_places(release: str | None = None) -> tuple[list[dict], list[dict]]:
+    """(roasters, candidates) from one read of the release: see OVERTURE_SQL. Both are one row per website domain
+    that passes is_storefront_host, so a chain is one row (its `locations` counts the places). A domain that is a
+    roaster by the rule is never also a candidate."""
+    import duckdb
+
+    release = release or overture_latest_release()
     c = duckdb.connect()
     c.sql("INSTALL httpfs; LOAD httpfs;")
-    rel = c.sql(f"""
-        WITH r AS (
-          SELECT names.primary AS name, taxonomy.primary AS cat, addresses[1].locality AS city,
-                 addresses[1].region AS state, confidence, websites[1] AS website
-          FROM read_parquet({urls})
-          WHERE ((bbox.xmin BETWEEN -125 AND -66 AND bbox.ymin BETWEEN 24 AND 50)
-              OR (bbox.xmin BETWEEN -170 AND -129 AND bbox.ymin BETWEEN 51 AND 72)
-              OR (bbox.xmin BETWEEN -161 AND -154 AND bbox.ymin BETWEEN 18 AND 23))
-            AND addresses[1].country = 'US' AND websites IS NOT NULL
-            AND (taxonomy.primary = 'coffee_roastery'
-                 OR list_contains(taxonomy.alternates, 'coffee_roastery')
-                 OR (names.primary ILIKE '%roast%'
-                     AND (taxonomy.primary ILIKE '%coffee%' OR basic_category ILIKE '%coffee%'
-                          OR names.primary ILIKE '%coffee%'))))
-        SELECT website, name, city, state, confidence, cat = 'coffee_roastery' AS tagged,
-               name ILIKE '%roast%' AS roast_in_name
-        FROM r""")
+    tags = "(" + ", ".join(f"'{t}'" for t in CANDIDATE_TAGS) + ")"
+    rel = c.sql(
+        OVERTURE_SQL.format(urls=_overture_urls(release), tags=tags, tag_list="[" + tags.strip("()") + "]")
+    )
+    return places_to_rows(rel.fetchall(), f"overture-{release}")
+
+
+def places_to_rows(places: list[tuple], source: str) -> tuple[list[dict], list[dict]]:
+    """OVERTURE_SQL's rows (website, name, city, state, confidence, tagged, roast_in_name, is_roaster, tag, open) as
+    (roasters, candidates), one row per normalized storefront domain."""
     from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
-    for website, name, city, state, conf, tagged, roast in rel.fetchall():
+    cand: dict[str, dict] = {}
+    for website, name, city, state, conf, tagged, roast, is_roaster, tag, is_open in places:
         d = normalize_domain(website or "")
         if not is_storefront_host(d):
             continue
-        row = out.setdefault(
-            d,
-            {
-                "roaster_id": d,
-                "name": name,
-                "city": city,
-                "state": state,
-                "locations": 0,
-                "confidence": 0.0,
-                "tagged_roastery": False,
-                "roast_in_name": False,
-                "source": f"overture-{release}",
-            },
-        )
+        if is_roaster:
+            row = out.setdefault(
+                d,
+                {
+                    "roaster_id": d,
+                    "name": name,
+                    "city": city,
+                    "state": state,
+                    "locations": 0,
+                    "confidence": 0.0,
+                    "tagged_roastery": False,
+                    "roast_in_name": False,
+                    "source": source,
+                },
+            )
+            row["tagged_roastery"] |= bool(tagged)
+            row["roast_in_name"] |= bool(roast)
+        elif is_open and tag:
+            row = cand.setdefault(
+                d,
+                {
+                    "roaster_id": d,
+                    "name": name,
+                    "city": city,
+                    "state": state,
+                    "locations": 0,
+                    "confidence": 0.0,
+                    "tag": tag,
+                    "source": source,
+                },
+            )
+            if tag == "coffee_shop":  # a domain with any coffee_shop place is in that stratum
+                row["tag"] = tag
+        else:
+            continue
         row["locations"] += 1
         if (conf or 0) > row["confidence"]:
             row.update(name=name, city=city, state=state, confidence=round(conf or 0, 2))
-        row["tagged_roastery"] |= bool(tagged)
-        row["roast_in_name"] |= bool(roast)
-    return sorted(out.values(), key=lambda r: r["roaster_id"])
+    roasters = sorted(out.values(), key=lambda r: r["roaster_id"])
+    candidates = sorted((r for d, r in cand.items() if d not in out), key=lambda r: r["roaster_id"])
+    return roasters, candidates
 
 
 # --- OpenStreetMap via Overpass (ODbL) ----------------------------------------------------------------
@@ -225,6 +285,17 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     """Which platform serves this roaster's catalog? status: ok | blocked (robots.txt disallows us, or answers with
     an edge's challenge) | unreachable | http_<code> |
     robots_unavailable (robots.txt didn't answer: no answer about the site, so the next probe run asks again)."""
+    return probe_home(client, domain)[0]
+
+
+def probe_home(client: PoliteClient, domain: str) -> tuple[dict, str]:
+    """probe_one's answer, and the home page's text when the probe is ok ("" otherwise): the screen (screen.py)
+    reads it for roastery wording without asking for the page again."""
+    res, home = _probe(client, domain)
+    return res, home.text if home is not None and res["status"] == "ok" else ""
+
+
+def _probe(client: PoliteClient, domain: str) -> tuple[dict, httpx.Response | None]:
     home = None
     no_robots = False
     for host in (domain, f"www.{domain}"):
@@ -232,13 +303,18 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             home = client.get(f"https://{host}/")
             break
         except Blocked:
-            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}
+            return {"status": "blocked", "final_host": host, "platform": "", "http_status": None}, home
         except RobotsUnavailable as e:
             if e.challenge:
                 # an edge's challenge on robots.txt (a 202, or a 401/403 with a challenge header) answers every
                 # request the same way: the site refuses us, as a robots block does. A probe status of its own that
                 # counts as probed (`blocked`), so discovery doesn't ask again on every run (robots_unavailable does)
-                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
+                return {
+                    "status": "blocked",
+                    "final_host": host,
+                    "platform": "",
+                    "http_status": e.status,
+                }, home
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
@@ -246,14 +322,14 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             continue
     if home is None:
         status = "robots_unavailable" if no_robots else "unreachable"
-        return {"status": status, "final_host": "", "platform": "", "http_status": None}
+        return {"status": status, "final_host": "", "platform": "", "http_status": None}, home
     if home.status_code != 200:
         return {
             "status": f"http_{home.status_code}",
             "final_host": urlparse(str(home.url)).netloc,
             "platform": "",
             "http_status": home.status_code,
-        }
+        }, home
     host = urlparse(str(home.url)).netloc
     for platform, path, params, kind in [
         ("shopify", "/products.json", {"limit": 1}, dict),
@@ -263,15 +339,25 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
             data = client.get_json(f"https://{host}{path}", **params)
         except RobotsUnavailable as e:  # the home page redirected to a host whose robots.txt didn't answer
             if e.challenge:  # refused, as above
-                return {"status": "blocked", "final_host": host, "platform": "", "http_status": e.status}
-            return {"status": "robots_unavailable", "final_host": host, "platform": "", "http_status": None}
+                return {
+                    "status": "blocked",
+                    "final_host": host,
+                    "platform": "",
+                    "http_status": e.status,
+                }, home
+            return {
+                "status": "robots_unavailable",
+                "final_host": host,
+                "platform": "",
+                "http_status": None,
+            }, home
         except (Blocked, httpx.HTTPError):
             data = None
         if isinstance(data, kind) and (kind is list or "products" in data):
-            return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
+            return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}, home
     html = home.text.lower()
     platform = next((p for p, pat in HTML_MARKERS if re.search(pat, html)), "other")
-    return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
+    return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}, home
 
 
 def probe(domains: list[str], workers: int = 16, run_date: str | None = None) -> list[dict]:

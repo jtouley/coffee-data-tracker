@@ -6,7 +6,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     bodies/run_date=YYYY-MM-DD/batch=<id>.parquet         product description text, once per new body_hash
     fetches/run_date=YYYY-MM-DD/batch=<id>.parquet        one row per roaster fetch attempt (ok / error)
     probes/run_date=YYYY-MM-DD/batch=<id>.parquet         storefront platform detection results
-    registry/source=<s>/<key>.parquet                     roasters added by discovery or by hand
+    registry/source=<s>/<key>.parquet                     roasters added by discovery, the screen or by hand
+    candidates/source=<s>/<key>.parquet                   cafés and coffee shops discovery found, to be screened
+    screens/run_date=YYYY-MM-DD/batch=<id>.parquet        each candidate's screen and its answer
     enrichments/method=<m>/run_date=.../batch=<id>.parquet extracted attributes, keyed by body_hash
     llm_batches/state=<submitted|collected>/<id>.parquet  Claude Message Batches bookkeeping
     shots/<shot_id>__<time>.parquet                       one file per logged shot (or correction)
@@ -194,6 +196,51 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("tagged_roastery", pa.bool_()),
             ("roast_in_name", pa.bool_()),
             ("opted_out", pa.bool_()),
+        ]
+    ),
+    # Discovery candidates (screen.py): places tagged coffee_shop or cafe, one row per website domain, recorded but
+    # never crawled until a screen admits them to the registry.
+    "candidates": pa.schema(
+        [
+            ("added_at", pa.timestamp("s", tz="UTC")),
+            ("source", pa.string()),
+            ("roaster_id", pa.string()),
+            ("name", pa.string()),
+            ("city", pa.string()),
+            ("state", pa.string()),
+            ("locations", pa.int32()),
+            ("confidence", pa.float64()),
+            ("tag", pa.string()),  # coffee_shop (any of its places) or cafe
+        ]
+    ),
+    # One row per screen of a candidate: the probe, the product count, the signals, the rule and its answer.
+    "screens": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("batch_id", pa.string()),
+            ("screened_at", pa.timestamp("s", tz="UTC")),
+            ("roaster_id", pa.string()),
+            ("candidate_source", pa.string()),
+            ("tag", pa.string()),
+            ("status", pa.string()),  # the probe's status, or error
+            ("http_status", pa.int32()),
+            ("final_host", pa.string()),
+            ("platform", pa.string()),
+            ("products", pa.int32()),
+            ("coffees", pa.int32()),  # classify.is_coffee, rules only
+            ("named", pa.int32()),  # of those, named as coffee in title, type or tags (screen.named_coffee)
+            ("partial", pa.bool_()),  # the product list was read in part (the screen's page budget)
+            ("own_vendor", pa.int32()),
+            ("other_roaster", pa.int32()),
+            ("roast_phrase", pa.string()),
+            ("serves_phrase", pa.string()),
+            ("rule", pa.string()),
+            ("min_coffees", pa.int32()),
+            ("admitted", pa.bool_()),
+            ("reason", pa.string()),
+            ("requests", pa.int32()),
+            ("duration_s", pa.float64()),
+            ("code_version", pa.string()),
         ]
     ),
     "enrichments": pa.schema(
@@ -486,6 +533,8 @@ GLOBS = {
     "fetches": "fetches/*/*.parquet",
     "probes": "probes/*/*.parquet",
     "registry": "registry/*/*.parquet",
+    "candidates": "candidates/*/*.parquet",
+    "screens": "screens/*/*.parquet",
     "enrichments": "enrichments/*/*/*.parquet",
     "llm_batches": "llm_batches/*/*.parquet",
     "verdicts": "verdicts/*/*.parquet",
@@ -510,6 +559,8 @@ SCHEMA_FILES = {
     "fetches": "fetches/run_date=0000-00-00/batch=schema.parquet",
     "probes": "probes/run_date=0000-00-00/batch=schema.parquet",
     "registry": "registry/source=schema/schema.parquet",
+    "candidates": "candidates/source=schema/schema.parquet",
+    "screens": "screens/run_date=0000-00-00/batch=schema.parquet",
     "enrichments": "enrichments/method=schema/run_date=0000-00-00/batch=schema.parquet",
     "llm_batches": "llm_batches/state=schema/schema.parquet",
     "verdicts": "verdicts/run_date=0000-00-00/batch=schema.parquet",

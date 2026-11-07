@@ -54,7 +54,8 @@ read through relative paths. CI runs on Ubuntu.
 
 > [!NOTE]
 > On days 1–7 of a month, `weekly` first runs roaster discovery against Overture Maps and OpenStreetMap, and
-> `SAMPLE` doesn't limit that step. Leave out `SAMPLE` to fetch every roaster; the GitHub workflow allows 4 hours.
+> `SAMPLE` doesn't limit that step. It records café candidates but doesn't screen them, so the crawl keeps its time:
+> the screen runs in the monthly `discover` job, or with `coffeedata screen`. Leave out `SAMPLE` to fetch every roaster; the GitHub workflow allows 4 hours.
 
 ```bash
 git clone https://github.com/jtouley/coffee-data-tracker.git
@@ -219,7 +220,7 @@ you pass `--public`).
 | `make weekly [SAMPLE=N]` | `coffeedata weekly` | The full weekly run (see [How it works](#how-it-works)) |
 | `make app` | `uvicorn app.main:app` | The shot-logging app; `HOST` and `PORT` default to `127.0.0.1` and `8000` |
 | `make init` | `coffeedata init` | Create the lake. For `hf://`, a private dataset, its card and schemas (`make init PUBLIC=1` for a public one) |
-| `make discover` | `coffeedata discover overture`, `discover osm` | Record roasters from open datasets |
+| `make discover` | `coffeedata discover overture`, `discover osm`, `screen` | Record roasters from open datasets, and screen café candidates |
 | `make probe` | `coffeedata probe` | Detect the store platform for roasters not checked in 28 days |
 | `make ingest [SAMPLE=N]` | `coffeedata ingest` | Fetch catalogs for today's run, skipping roasters already fetched |
 | `make enrich` | `coffeedata enrich` | Claude enrichment (needs `ANTHROPIC_API_KEY`) |
@@ -263,6 +264,20 @@ Everything is set through environment variables. Nothing is required for a local
 The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
 list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
 this file stays as it is.
+
+**What discovery admits, and why.** Discovery adds a place to the registry straight away when Overture tags it
+`coffee_roastery`, or it is a coffee place with "roast" in its name (and OpenStreetMap's `craft=coffee_roaster`).
+Overture also tags some real roasters only `coffee_shop` or `cafe` (Rival Bros, Bean2Bean), alongside about 43,000
+café websites that roast nothing. Those are recorded as candidates (`candidates/`), never crawled, and
+`coffeedata screen` visits each one once: the platform probe, then the first pages of its public product list. It is
+admitted to the registry only when the rules (no Claude verdicts) count enough coffees and the store looks like a
+roaster selling its own coffee: roastery wording ("we roast") or its own name on the coffees, and no sign it resells
+another roaster's (a known roaster's name on the bags, "we proudly serve …"). When it can't tell, it rejects. Cafés,
+coffee shops and multi-roaster shops are deliberately out of scope: the catalog lists roasters. Every screen is
+recorded in `screens/` with its reason. A rejection is screened again after 180 days, a site that didn't answer after
+28. The monthly `discover` job runs the screen after discovery, at most 6,000 candidates and 140 minutes a run,
+never-screened candidates first in a fixed order, so each run continues where the last stopped. The rule and its
+threshold are measured on held-out candidates: [`eval/screen/README.md`](eval/screen/README.md).
 
 ## Run it on GitHub
 
@@ -350,7 +365,9 @@ current state is computed:
 | `bodies/…` | ingest | product description text, stored once per new description |
 | `enrichments/method=rules\|llm/…` | ingest, enrich | extracted attributes, keyed by product and description hash |
 | `probes/…` | probe | store platform checks |
-| `registry/source=…/…` | discover, issue form | roasters added (or opted out) beyond the seed list |
+| `registry/source=…/…` | discover, screen, issue form | roasters added (or opted out) beyond the seed list |
+| `candidates/source=…/…` | discover | cafés and coffee shops, one row per website, waiting for a screen; never crawled |
+| `screens/run_date=…/batch=…` | screen | each candidate's screen: platform, products, coffees, the signals, the rule, admitted or not and why |
 | `llm_batches/state=submitted\|collected/…` | enrich | Claude Message Batches bookkeeping |
 | `shots/<id>__<time>-<random>.parquet` | app, CLI, MCP, issue form | one logged shot; corrections and retractions are new files |
 | `equipment/<id>__<time>.parquet` | app | a grinder, machine or basket; changes are new files |

@@ -28,6 +28,7 @@ probe:
 discover:
 	uv run coffeedata discover overture
 	uv run coffeedata discover osm
+	uv run coffeedata screen
 
 enrich:  ## Claude enrichment (needs ANTHROPIC_API_KEY)
 	uv run coffeedata enrich

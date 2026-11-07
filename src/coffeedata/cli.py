@@ -85,12 +85,47 @@ def cmd_discover(args: argparse.Namespace) -> None:
     from . import discover
 
     lake = Lake()
-    found = discover.overture(args.release) if args.source == "overture" else discover.osm(args.states)
+    candidates: list[dict] = []
+    if args.source == "overture":
+        found, candidates = discover.overture_places(args.release)
+    else:
+        found = discover.osm(args.states)
     now = datetime.now(UTC).replace(microsecond=0)
     rows = [r | {"added_at": now, "opted_out": False} for r in found]
     key = (args.release or "latest") if args.source == "overture" else _today()
-    lake.write("registry", f"registry/source={args.source}/{key}-{new_batch_id()}.parquet", rows)
-    print(f"{args.source}: {len(rows)} roasters recorded (new ones are picked up by the next probe)")
+    batch = new_batch_id()
+    lake.write("registry", f"registry/source={args.source}/{key}-{batch}.parquet", rows)
+    # Cafés and coffee shops: candidates only, never crawled until `coffeedata screen` admits one (screen.py).
+    lake.write(
+        "candidates",
+        f"candidates/source={args.source}/{key}-{batch}.parquet",
+        [r | {"added_at": now} for r in candidates],
+    )
+    print(
+        f"{args.source}: {len(rows)} roasters recorded (new ones are picked up by the next probe)"
+        + (f"; {len(candidates)} screening candidates" if args.source == "overture" else "")
+    )
+
+
+def cmd_screen(args: argparse.Namespace) -> None:
+    """Screen discovery candidates once; admit the ones that look like roasters selling their own coffee online."""
+    from . import registry, screen
+
+    lake = Lake()
+    states = registry.current(lake)
+    known = {s.roaster.roaster_id for s in states}
+    todo = screen.select(lake, args.run_date, known, cap=args.cap, only=args.only)
+    print(f"screening {len(todo)} candidates for run {args.run_date}", file=sys.stderr)
+    _print(
+        screen.run(
+            lake,
+            todo,
+            [s.roaster.name for s in states],
+            args.run_date,
+            workers=args.workers,
+            deadline_min=args.deadline_min,
+        )
+    )
 
 
 def cmd_probe(args: argparse.Namespace) -> None:
@@ -799,6 +834,19 @@ def main(argv: list[str] | None = None) -> None:
     d.add_argument("source", choices=["overture", "osm"])
     d.add_argument("--release", help="Overture release (default: latest)")
     d.add_argument("--states", nargs="*", help="OSM: limit to these state codes")
+
+    from .screen import DEADLINE_MIN, MAX_PER_RUN, WORKERS
+
+    sc = add(
+        "screen", cmd_screen, "screen discovery candidates once; admit roasters that sell their coffee online"
+    )
+    sc.add_argument(
+        "--cap", type=int, default=MAX_PER_RUN, help="most candidates per run (default %(default)s)"
+    )
+    sc.add_argument("--deadline-min", type=_positive_float, default=DEADLINE_MIN)
+    sc.add_argument("--workers", type=int, default=WORKERS)
+    sc.add_argument("--only", help="one candidate domain (screened even if not due)")
+    sc.add_argument("--run-date", type=_run_date, default=_today())
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
