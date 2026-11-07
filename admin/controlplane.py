@@ -292,11 +292,17 @@ class ControlPlane:
              run.get("override_reason")),
         )  # fmt: skip
 
-    def run_status(self, run_id: str, status: str) -> None:
-        """Record a run's final status the first time the admin sees it (never changed after)."""
+    def run_status(
+        self, run_id: str, status: str, duration_s: float | None = None, message: str | None = None
+    ) -> None:
+        """Record a run's outcome the first time the admin sees it (never changed after): the page then shows it
+        without asking Cloud Run again."""
         with self.tx() as cur:
-            cur.execute("insert into control.job_run_status (run_id, status) values (%s, %s) "
-                        "on conflict (run_id) do nothing", (run_id, status))  # fmt: skip
+            cur.execute(
+                "insert into control.job_run_status (run_id, status, duration_s, message) values (%s, %s, %s, %s) "
+                "on conflict (run_id) do nothing",
+                (run_id, status, duration_s, (message or "")[:500] or None),
+            )
 
     def create_snapshot(self, cur, snapshot_id: str, sha256: str, n: int, actor: str) -> None:
         cur.execute("insert into control.snapshots (snapshot_id, sha256, decisions, actor) values (%s, %s, %s, %s)",
@@ -379,16 +385,23 @@ class ControlPlane:
         with self.tx() as cur:
             cur.execute(
                 "select r.run_id, r.action, r.job, r.args, r.mode, r.week, r.test_id, r.roaster_id, r.execution, "
-                "r.actor, r.override_reason, r.started_at, s.status from control.job_runs r "
+                "r.actor, r.override_reason, r.started_at, s.status, s.duration_s, s.message from control.job_runs r "
                 "left join control.job_run_status s using (run_id) order by r.started_at desc limit %s",
                 (limit,),
             )
             cols = ("run_id", "action", "job", "args", "mode", "week", "test_id", "roaster_id", "execution", "actor",
-                    "override_reason", "started_at", "final")  # fmt: skip
+                    "override_reason", "started_at", "final", "duration_s", "message")  # fmt: skip
             rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
             for r in rows:
                 r["args"] = _json(r["args"])
             return rows
+
+    def run(self, run_id: str) -> dict | None:
+        """One run the admin started, or None."""
+        with self.tx() as cur:
+            cur.execute("select run_id, job, execution from control.job_runs where run_id = %s", (run_id,))
+            r = cur.fetchone()
+            return dict(zip(("run_id", "job", "execution"), r, strict=True)) if r else None
 
     def recent_test(self, roaster_id: str, hours: float = 24) -> dict | None:
         """The latest test crawl of this roaster started in the last `hours`, if any."""

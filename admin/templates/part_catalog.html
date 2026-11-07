@@ -1,7 +1,6 @@
-{% from "_macros.html" import build_picker, ev, write_off, write_button %}
+{% from "_macros.html" import ev, write_off, write_button %}
 <div data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
-{% if builds %}{{ build_picker(builds, build, "/catalog") }}{% endif %}
 {% if not data %}
   <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {% else %}
@@ -42,15 +41,15 @@
   {% endif %}
   <div class="frame" tabindex="0" role="region" aria-label="Products"><table class="dense">
     <caption>Products {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, by roaster and title</caption>
-    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Choose every product on this page"></th>{% endif %}<th scope="col">Product</th><th scope="col">Roaster</th><th scope="col">Coffee</th><th scope="col">Decided by</th><th scope="col">Reason</th><th scope="col">Status</th><th scope="col">Origin</th><th scope="col">Process</th><th scope="col">Stock</th><th scope="col" class="n">Lowest $</th><th scope="col" class="n">$/100 g</th><th scope="col">Owner’s decision</th></tr></thead>
+    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Choose every product on this page"></th>{% endif %}<th scope="col">Product</th><th scope="col">Owner’s decision</th><th scope="col">Roaster</th><th scope="col">Classifier</th><th scope="col">Status</th><th scope="col">Origin · process</th><th scope="col" class="n">Lowest $</th></tr></thead>
     <tbody>{% for r in data.rows %}{% set item = {"coffee_id": r.coffee_id, "input_hash": r.input_hash, "roaster_id": r.roaster_id, "title": r.title, "coffee": r.coffee, "seen_coffee_id": r.dc.decision_id if r.dc else none, "seen_input_hash": r.dh.decision_id if r.dh else none} %}<tr>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Choose {{ r.title or r.coffee_id }}"></td>{% endif %}
-      <th scope="row">{{ ev(r.url, r.title or r.coffee_id) }}</th><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
-      <td>{{ r.coffee }}</td><td>{{ r.classified_by or "—" }}</td><td class="err">{{ r.reason or "—" }}</td><td>{{ r.listed }}</td>
-      <td>{{ r.origin_country or "—" }}</td><td>{{ r.process or "—" }}</td><td>{{ r.stock or "—" }}</td><td class="n">{{ n(r.min_price_usd) }}</td><td class="n">{{ n(r.price_per_100g) }}</td>
+      <th scope="row">{{ ev(r.url, r.title or r.coffee_id) }}</th>
       <td>{% if r.decision %}<span class="st st-ok"><i aria-hidden="true"></i>{{ r.decision.action }}d</span>{% if r.decision.group_id %} <span class="meta">(group)</span>{% endif %}
           {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decision.decision_id ~ "/undo", "Undo", "Undo the owner’s " ~ r.decision.action ~ " of " ~ (r.title or r.coffee_id) ~ "? The classifier decides it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
-        {% elif not writes_off %}<button class="btn text inline" type="button" data-decide="{{ 'exclude' if r.coffee == 'coffee' else 'include' }}" data-item='{{ item | tojson }}'>{{ "Exclude…" if r.coffee == "coffee" else "Include…" }}</button>{% else %}—{% endif %}</td>
+        {% elif not writes_off %}<button class="btn text inline" type="button" data-decide="{{ 'exclude' if r.coffee == 'coffee' else 'include' }}" data-item='{{ item | tojson }}'>{{ "Exclude…" if r.coffee == "coffee" else "Include…" }}</button>{% else %}—{% endif %}</td><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
+      <td class="err">{{ r.coffee }} · {{ r.classified_by or "—" }}{% if r.reason %}: {{ r.reason }}{% endif %}</td><td>{{ r.listed }}{% if r.stock %} · {{ r.stock }}{% endif %}</td>
+      <td>{{ [r.origin_country, r.process] | select | join(" · ") or "—" }}</td><td class="n">{{ n(r.min_price_usd) }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
   {% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
@@ -59,7 +58,7 @@
 {% if not writes_off and data and data.matching %}
 <dialog class="sheet" id="decide" aria-labelledby="decide-h">
   <form method="dialog" data-write="/api/decisions" data-decide-form novalidate>
-    <h2 class="section" id="decide-h" data-decide-title>Decide</h2>
+    <h2 class="serif title-s" id="decide-h" data-decide-title>Decide</h2>
     <p class="body" data-decide-what></p>
     <input type="hidden" name="key" value="{{ new_key() }}">
     <input type="hidden" name="action" value="">

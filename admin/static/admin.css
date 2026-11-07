@@ -107,7 +107,7 @@ dialog.sheet::backdrop { background: rgb(20 17 15 / 0.45); }
 dialog.sheet .steps { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 4px; }
 dialog.sheet .steps code { display: block; background: var(--panel); border-radius: 8px; padding: 8px 12px; overflow-wrap: anywhere; }
 .refused { color: var(--danger); font-weight: 600; font-size: 0.9375rem; }
-dialog .btn.danger { background: var(--danger); color: var(--on-accent); border-color: var(--danger); }
+dialog .btn.danger { background: var(--danger); color: var(--paper); border-color: var(--danger); }
 .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
 .toast { position: fixed; left: 16px; right: 16px; bottom: 16px; margin: 0 auto; max-width: 40rem; z-index: 3;
   background: var(--ink); color: var(--paper); border-radius: 8px; padding: 12px 16px; display: flex; align-items: center;
@@ -119,11 +119,16 @@ dialog .btn.danger { background: var(--danger); color: var(--on-accent); border-
 .bulk[hidden] { display: none; }
 th.pick, td.pick { width: 44px; padding-right: 8px; }
 td.pick input, th.pick input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); }
-th:first-child.pick, td:first-child.pick { position: sticky; left: 0; }
+/* With the checkbox column, the product name stays pinned beside it when the table scrolls sideways. */
+th.pick + th, td.pick + th { position: sticky; left: 44px; background: var(--paper); z-index: 1; }
+/* The product wraps (within a bound) so the owner's decision beside it stays on screen on a phone. */
+table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13rem; }
+@media (min-width: 760px) { table.dense td.pick + th { max-width: 22rem; } }
 .inline-form { display: inline; }
 .choice { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; font-size: 0.9375rem; }
-.choice label { display: flex; gap: 8px; align-items: flex-start; min-height: 24px; }
-.choice input { margin-top: 3px; accent-color: var(--accent); }
+.choice label { display: block; padding-left: 28px; text-indent: -28px; min-height: 24px; }
+.choice input { width: 18px; height: 18px; margin: 0 10px 0 0; vertical-align: -3px; accent-color: var(--accent); }
+.title-s { font-size: 1.5rem; line-height: 1.25; margin: 8px 0 8px; color: var(--ink); font-weight: 500; }
 .jobs { list-style: none; padding: 0; margin: 8px 0 0; border-top: 1px solid var(--rule); }
 .jobs > li { border-bottom: 1px solid var(--rule); }
 .jobs summary { min-height: 48px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; padding: 12px 0; cursor: pointer; }
@@ -132,3 +137,6 @@ th:first-child.pick, td:first-child.pick { position: sticky; left: 0; }
 .jobform .actions, .jobform .hint { grid-column: 1 / -1; }
 .checks { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; font-size: 0.9375rem; }
 .checks li { display: flex; gap: 8px; align-items: baseline; }
+details.args { display: inline; }
+details.args summary { display: inline; cursor: pointer; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+details.args[open] code { display: block; margin-top: 4px; }

@@ -57,8 +57,10 @@ create table control.job_runs (
 create index job_runs_started on control.job_runs (started_at desc);
 create table control.job_run_status (
     run_id   text primary key references control.job_runs (run_id),
-    status   text not null check (status in ('succeeded', 'failed', 'cancelled')),
-    seen_at  timestamptz not null default now()
+    status     text not null check (status in ('succeeded', 'failed', 'cancelled')),
+    duration_s double precision,
+    message    text,                            -- Cloud Run's message on a failure
+    seen_at    timestamptz not null default now()
 );
 
 create table control.snapshots (

@@ -14,8 +14,6 @@ A structured log line (`admin_write`) goes with every write, which the owner's a
 from __future__ import annotations
 
 import asyncio
-import json
-import logging
 import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
@@ -27,17 +25,18 @@ from coffeedata import decisions as snap
 from . import jobs as registry
 from . import queries
 from .controlplane import ControlPlane, new_id
-from .runjobs import Jobs, JobsError
+from .logs import emit
+from .runjobs import Jobs, JobsError, logs_url
 from .store import Store
 
-log = logging.getLogger("admin")
 TYPE_OVER = 50  # Publish asks for the count of public rows that leave above this (design §3)
 LIVE_CHECK_DAYS = 7
 REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
 
 
-def emit(**fields) -> None:
-    log.info(json.dumps({"severity": "NOTICE", "event": "admin_write", **fields}, default=str))
+def written(**fields) -> None:
+    """The structured line every write logs (event admin_write), which the owner's alert emails."""
+    emit("NOTICE", event="admin_write", **fields)
 
 
 def reason_of(raw: object, what: str = "a reason") -> str:
@@ -113,8 +112,7 @@ class Writes:
         return await asyncio.to_thread(self.control.answered, key)
 
     async def start(self, actor: str, key: str, action_key: str, raw: dict, override: str | None) -> dict:
-        if (first := await self.replay(key)) is not None:
-            return first
+        """Start an action's jobs (main.write has already returned the first answer of a used key)."""
         try:
             plan = await self.plan(action_key, raw)
         except JobsError as e:
@@ -130,7 +128,7 @@ class Writes:
         if plan.refusals:
             await asyncio.to_thread(self.control.audit_now, actor, "job_start", plan.action.key, "refused",
                                     {"reasons": plan.refusals, "params": plan.params})  # fmt: skip
-            emit(action="job_start", subject=plan.action.key, outcome="refused")
+            written(action="job_start", subject=plan.action.key, outcome="refused")
             raise registry.Refused(plan.refusals, overridable=bool(plan.window) and len(plan.refusals) == 1)
         return await asyncio.to_thread(self._start_sync, actor, key, plan, override, extra, answer or {})
 
@@ -169,15 +167,16 @@ class Writes:
                    "errors": errors} | answer  # fmt: skip
             if runs:  # a start where nothing started can be retried with the same key
                 self.control.remember(cur, key, out)
-        emit(action="job_start", subject=plan.action.key, outcome=outcome, runs=[r["run_id"] for r in runs])
+        written(
+            action="job_start", subject=plan.action.key, outcome=outcome, runs=[r["run_id"] for r in runs]
+        )
         return out
 
     async def cancel(self, actor: str, key: str, run_id: str) -> dict:
         await self.ready()
 
         def go():
-            runs = {r["run_id"]: r for r in self.control.runs(200)}
-            run = runs.get(run_id)
+            run = self.control.run(run_id)
             if run is None or not run["execution"]:
                 raise ValueError("no such run")
             with self.control.tx() as cur:
@@ -189,7 +188,7 @@ class Writes:
                                                                                  "execution": run["execution"]})  # fmt: skip
                 out = {"ok": True, "run_id": run_id}
                 self.control.remember(cur, key, out)
-            emit(action="job_cancel", subject=run["job"], outcome="ok")
+            written(action="job_cancel", subject=run["job"], outcome="ok")
             return out
 
         return await asyncio.to_thread(go)
@@ -202,27 +201,18 @@ class Writes:
 
         def live():
             for r in rows:
-                r["status"], r["log_uri"], r["message"], r["duration_s"] = (
-                    r["final"] or "unknown",
-                    None,
-                    None,
-                    None,
-                )
-                if not r["execution"]:
+                r["status"], r["log_uri"] = r["final"] or "unknown", logs_url(r["execution"] or "")
+                if not r["execution"] or r["final"]:  # a finished run's outcome is recorded: no API call
                     continue
                 try:
                     e = self.jobs.execution(r["execution"])
                 except (JobsError, ValueError) as err:
                     r["message"] = str(err)
                     continue
-                r["status"], r["log_uri"], r["message"], r["duration_s"] = (
-                    e.status,
-                    e.log_uri,
-                    e.message,
-                    e.duration_s,
-                )
-                if not r["final"] and e.status in ("succeeded", "failed", "cancelled"):
-                    self.control.run_status(r["run_id"], e.status)
+                r["status"], r["message"], r["duration_s"] = e.status, e.message, e.duration_s
+                r["log_uri"] = e.log_uri or r["log_uri"]
+                if e.status in ("succeeded", "failed", "cancelled"):
+                    self.control.run_status(r["run_id"], e.status, e.duration_s, e.message)
                     r["final"] = e.status
 
         await asyncio.to_thread(live)
@@ -247,14 +237,14 @@ class Writes:
         out = await asyncio.to_thread(self.control.decide, actor, key, str(body.get("action")), kind, reason,
                                       [{k: (str(v)[:300] if v is not None else None) for k, v in i.items()}
                                        for i in items], {str(k): (str(v) if v else None) for k, v in seen.items()})  # fmt: skip
-        emit(action="decide", subject=out.get("group") or (out.get("decisions") or [""])[0], outcome="ok",
+        written(action="decide", subject=out.get("group") or (out.get("decisions") or [""])[0], outcome="ok",
              count=out.get("count"))  # fmt: skip
         return out
 
     async def undo(self, actor: str, key: str, target: str, reason: str | None) -> dict:
         await self.ready()
         out = await asyncio.to_thread(self.control.undo, actor, key, target, str(reason or "undo"))
-        emit(action="undo", subject=target, outcome="ok", count=out.get("count"))
+        written(action="undo", subject=target, outcome="ok", count=out.get("count"))
         return out
 
     # --- release: draft, publish, roll back, discard ---------------------------------------------------------------
@@ -270,12 +260,22 @@ class Writes:
             for d in ((pinned or {}).get("doc") or {}).get("decisions", [])
         }
         now = {(d["subject_kind"], d["subject"], d["action"]) for d in effective}
+        # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
+        # served release: no second draft for the same thing.
+        drafted = None
+        for d in await asyncio.to_thread(self.control.drafts, 5):
+            if d["last_event"] in ("discarded", "publish_started"):
+                continue
+            if d["baseline"] != (served or {}).get("build_id"):
+                break
+            doc = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
+            if doc and {(x["subject_kind"], x["subject"], x["action"]) for x in doc["decisions"]} == now:
+                drafted = d["draft_id"]
+            break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
-                "served": served, "served_snapshot": pinned and pinned["snapshot_id"]}  # fmt: skip
+                "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str) -> dict:
-        if (first := await self.replay(key)) is not None:
-            return first
         p = await self.pending()
         if not (p["added"] or p["removed"]):
             raise ValueError("Nothing to build: the decisions are the served release's")
@@ -347,8 +347,7 @@ class Writes:
     async def publish(
         self, actor: str, key: str, draft_id: str, typed: str | None, reason: str | None
     ) -> dict:
-        if (first := await self.replay(key)) is not None:
-            return first
+        await self.ready()
         drafts = {d["draft_id"]: d for d in await asyncio.to_thread(self.control.drafts, 200)}
         draft = drafts.get(draft_id)
         if draft is None:
@@ -377,8 +376,7 @@ class Writes:
                                                                             {"build": build, "run": runs[0]["run_id"]}))  # fmt: skip
 
     async def rollback(self, actor: str, key: str, build: str, reason: str | None) -> dict:
-        if (first := await self.replay(key)) is not None:
-            return first
+        await self.ready()
         rel = await self.read(queries.releases)
         info = next((b for b in rel["builds"] if b["build_id"] == build), None)
         served = await self.read(queries.served)
@@ -408,5 +406,5 @@ class Writes:
                 return out
 
         out = await asyncio.to_thread(go)
-        emit(action="discard", subject=draft_id, outcome="ok")
+        written(action="discard", subject=draft_id, outcome="ok")
         return out

@@ -55,6 +55,15 @@ class Execution:
         return None
 
 
+def logs_url(name: str) -> str | None:
+    """The Cloud console's logs page of an execution, from its name alone (what Cloud Run's logUri points to), so a
+    finished run's link needs no API call."""
+    if not EXECUTION.fullmatch(name):
+        return None
+    _, project, _, region, _, _job, _, short = name.split("/")
+    return f"https://console.cloud.google.com/run/jobs/executions/details/{region}/{short}/logs?project={project}"
+
+
 def _t(v: str | None) -> datetime | None:
     if not v:
         return None

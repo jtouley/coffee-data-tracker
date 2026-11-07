@@ -11,6 +11,8 @@
 <h2 class="section">Decisions</h2>
 {% if not p %}
   <p class="body">Decisions need the control plane, which is off.</p>
+{% elif p.drafted %}
+  <p class="body">{{ p.effective | length }} decisions are in effect, {{ p.added + p.removed }} of them changes against the served release. Draft <code>{{ p.drafted }}</code> already builds exactly these: review it below.</p>
 {% elif p.added or p.removed %}
   <p class="body">{{ p.effective | length }} include or exclude decisions are in effect: {{ p.added }} {{ "is" if p.added == 1 else "are" }} new against the served release{% if p.removed %} and {{ p.removed }} {{ "was" if p.removed == 1 else "were" }} undone{% endif %}. A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
   {{ write_button("/api/drafts", "Build a draft", "Build a draft with the " ~ (p.effective | length) ~ " decisions in effect? It starts the build job with --draft: every gate runs, and the release is recorded but not served.", busy="Starting…", cls="primary") }}
@@ -35,7 +37,7 @@
 <h2 class="section">Build {{ build }}</h2>
 {{ build_picker(builds, build, "/release") }}
 {% if info %}
-  <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %}</p>
+  <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %} <a class="ev" href="/catalog?build={{ build }}">Its catalog</a>.</p>
   {% if draft and ready %}
     <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status("ok" if c.ok else "failed") }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
     {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public rows leave against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
@@ -57,7 +59,7 @@
   {% endif %}
 {% endif %}
 
-{% if gate %}{% include "_gate.html" %}{% endif %}
 {% if changes %}{% include "_changes.html" %}{% endif %}
+{% if gate %}{% include "_gate.html" %}{% endif %}
 {% endif %}
 </div>

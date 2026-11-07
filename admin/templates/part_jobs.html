@@ -16,7 +16,7 @@
   <tbody>{% for r in runs %}<tr{% if r.status == "failed" %} class="bad"{% endif %}>
     <th scope="row">{{ t(r.started_at) }}</th>
     <td>{{ r.action }}{% if r.mode %} · {{ r.mode }}{% endif %}{% if r.override_reason %} · <span title="{{ r.override_reason }}">window overridden</span>{% endif %}</td>
-    <td class="err"><code>{{ r.job }}</code>{% if r.args %} <code>{{ r.args | join(" ") }}</code>{% else %} (its own arguments){% endif %}</td>
+    <td class="err"><code>{{ r.job }}</code>{% if r.args %}{% set a = r.args | join(" ") %}{% if a | length > 90 %} <details class="args"><summary>arguments</summary><code>{{ a }}</code></details>{% else %} <code>{{ a }}</code>{% endif %}{% else %} (its own arguments){% endif %}</td>
     <td>{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
     <td class="n">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
     <td>{{ r.actor }}</td>

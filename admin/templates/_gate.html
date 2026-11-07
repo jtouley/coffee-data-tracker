@@ -5,11 +5,11 @@
   {% set bad = data.by_status.get("fail", 0) + data.by_status.get("error", 0) %}
   <p class="answer">Build {{ build }} {{ "passed" if b and b.passed else "failed" }}: {{ bad }} failing and {{ data.by_status.get("warn", 0) }} warning tests of {{ data.tests | length }}{% if data.previous %} · compared with {{ data.previous }}{% else %} · no earlier passing build to compare{% endif %}</p>
   {{ source(data.source, read_at) }}
-  {% if b %}<dl class="facts">
+  {% if b %}<details class="mt8"><summary class="btn text start">Build details: week, commit, CI run</summary><dl class="facts">
     <dt>Week</dt><dd>{{ b.run_date }}</dd><dt>Built</dt><dd>{{ t(b.built_at) }} UTC{% if b.duration_s %}, dbt took {{ n(b.duration_s) }} s{% endif %}</dd>
     <dt>Commit</dt><dd><code>{{ b.git_sha or "unknown" }}</code></dd><dt>CI run</dt><dd>{{ ev(b.ci_run_url, "the run that built it") if b.ci_run_url else "none recorded" }}</dd>
     <dt>dbt</dt><dd>{{ b.dbt_version or "—" }}</dd>
-  </dl>{% endif %}
+  </dl></details>{% endif %}
 
   <h3 class="section">Tests</h3>
   <div class="frame" tabindex="0" role="region" aria-label="Tests"><table class="dense">
@@ -28,9 +28,10 @@
   </table></div></details>
   {% endif %}
 
-  <h3 class="section">Metrics</h3>
+  {% set moved = data.metrics | selectattr("change") | list %}
+  <details class="mt12"><summary class="btn text start">{{ data.metrics | length }} metrics{% if data.previous %}, {{ moved | length }} changed against {{ data.previous }}{% endif %}</summary>
   <div class="frame" tabindex="0" role="region" aria-label="Metrics"><table>
     <caption>The build's catalog metrics (<code>mart_build_profile</code>) against {{ data.previous or "no earlier passing build" }}</caption>
     <thead><tr><th scope="col">Metric</th><th scope="col" class="n">This build</th><th scope="col" class="n">Previous</th><th scope="col" class="n">Change</th><th scope="col" class="n">Ratio</th></tr></thead>
     <tbody>{% for m in data.metrics %}<tr><th scope="row"><code>{{ m.metric }}</code></th><td class="n">{{ n(m.value) }}</td><td class="n">{{ n(m.previous) }}</td><td class="n">{{ "%+.2f" | format(m.change) if m.change is not none else "—" }}</td><td class="n">{{ "%.3f" | format(m.ratio) if m.ratio is not none else "—" }}</td></tr>{% else %}<tr><td colspan="5">No metrics recorded.</td></tr>{% endfor %}</tbody>
-  </table></div>
+  </table></div></details>

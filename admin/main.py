@@ -16,8 +16,6 @@ import asyncio
 import contextlib
 import contextvars
 import hashlib
-import json
-import logging
 import mimetypes
 import re
 import secrets
@@ -36,33 +34,15 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from coffeedata import decisions, quality
 from coffeedata.lake import Lake
 
-from . import jobs, queries
+from . import jobs, logs, queries
 from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
 from .catalog import FACETS, Catalog, Filters
 from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
+from .logs import emit
 from .runjobs import JobsError
 from .store import StoreError
 from .writes import Writes
-
-log = logging.getLogger("admin")
-
-
-def emit(severity: str, **fields) -> None:
-    """One JSON object per line, with its severity: Cloud Run reads it as a structured entry, so alerts can match
-    its fields (src/terraform/admin.tf). Never a header, cookie, token, code or request body."""
-    level = logging.ERROR if severity == "ERROR" else logging.INFO
-    log.log(level, json.dumps({"severity": severity, **fields}, default=str))
-
-
-def _log_setup() -> None:
-    if not log.handlers:
-        handler = logging.StreamHandler()
-        handler.setFormatter(logging.Formatter("%(message)s"))
-        log.addHandler(handler)
-        log.setLevel(logging.INFO)
-        log.propagate = False
-
 
 HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
@@ -252,7 +232,7 @@ def create_app(
     """The admin app. `reader`, `slow_s` and `now` are for tests (a slow or broken lake, a fixed clock); the service
     uses the defaults."""
     settings = settings or from_env()
-    _log_setup()
+    logs.setup()
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     assets = Assets()
     env = Environment(loader=FileSystemLoader(HERE / "templates"), autoescape=select_autoescape(["html"]))
@@ -725,7 +705,9 @@ def create_app(
         assert writes is not None
         return writes
 
-    async def write(request: Request, fn: Callable[[str, str, dict], Awaitable[Any]]) -> Response:
+    async def write(
+        request: Request, fn: Callable[[str, str, dict], Awaitable[Any]], replay: bool = True
+    ) -> Response:
         if writes is None:
             return JSONResponse({"detail": "Writes are off: " + "; ".join(settings.writes_off) + "."}, 503)
         if not limiter.allow(request.state.session.key):
@@ -737,7 +719,10 @@ def create_app(
         if not isinstance(body, dict) or not isinstance(body.get("key"), str):
             return JSONResponse({"detail": "Bad request."}, 400)
         try:
-            out = await fn(actor(request), body["key"], body)
+            # A key already used (a double submit, a retry): its first answer, before any check that the first
+            # write's own effect would now fail (the job it started is running).
+            first = await on().replay(body["key"]) if replay else None
+            out = first if first is not None else await fn(actor(request), body["key"], body)
         except jobs.Refused as e:
             return JSONResponse(
                 {"detail": "Refused.", "reasons": e.reasons, "overridable": e.overridable}, 409
@@ -762,7 +747,7 @@ def create_app(
             return {"steps": [{"job": s.job, "args": s.args} for s in p.steps], "refusals": p.refusals,
                     "window": p.window, "params": p.params}  # fmt: skip
 
-        return await write(request, go)
+        return await write(request, go, replay=False)  # a preview acts on nothing
 
     @app.post("/api/jobs/{action}/runs")
     async def job_start(request: Request, action: str):
