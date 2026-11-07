@@ -132,9 +132,12 @@ ACTIONS: dict[str, Action] = {
                page="release", acts_on_week=False),
     )
 }  # fmt: skip
-JOB_NAMES = sorted(
-    {*CRAWL_JOB.values(), "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish"}
-)
+# Every job an action can start, from the table itself (each action's steps for a sample of every field): the list
+# admin_control.tf grants, checked by tests/test_admin_terraform.py. Adding a job is one Action above.
+_SAMPLE = {"connectors": "all", "connector": "shopify", "roaster": "a.example", "mode": "test", "week": "2026-01-05",
+           "test_id": "t", "draft_id": "d", "snapshot_id": "s", "sha256": "0" * 64, "build": "b", "baseline": "b",
+           "reason": "r"}  # fmt: skip
+JOB_NAMES = sorted({s.job for a in ACTIONS.values() for s in a.steps(_SAMPLE)})
 
 
 def checked(action: Action, raw: dict, today: date, new_test_id: Callable[[], str]) -> dict:
