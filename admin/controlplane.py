@@ -30,6 +30,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlsplit
 
+from coffeedata import decisions
+
 MIGRATIONS = Path(__file__).parent / "migrations"
 LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
@@ -206,7 +208,7 @@ class ControlPlane:
         """Approve `action` (include or exclude) for each item's subject (its coffee_id or input_hash, by `kind`),
         as one group when there are several. `seen` maps each subject to the decision_id the page showed as its
         latest event (None: none): a subject decided since makes the whole write a Conflict. Idempotent on `key`."""
-        if action not in ("include", "exclude") or kind not in ("coffee_id", "input_hash"):
+        if action not in decisions.ACTIONS or kind not in decisions.SUBJECTS:
             raise ValueError("bad decision")
         reason = (reason or "").strip()
         if not 3 <= len(reason) <= 500:

@@ -295,6 +295,12 @@ unit_tests:
               'Kenya AA' as title, '' as product_type, 'b' as body_hash,
               [{'variant_id': 'v', 'price_usd': 20.0, 'grams': 340, 'available': true, 'currency': 'USD'}] as variants))
     given:
+      - input: ref('stg_decisions')
+        format: sql
+        rows: |
+          select null::varchar as decision_id, null::varchar as subject_kind, null::varchar as subject,
+                 null::varchar as action, null::varchar as subject_key
+          where false
       - input: ref('stg_runs')
         rows:
           - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}

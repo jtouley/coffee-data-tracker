@@ -127,7 +127,9 @@ class Pipeline:
             changes = [{"build_id": build, "table_name": "public_coffee", "item": d["subject"],
                         "change": "removed" if d["action"] == "exclude" else "added",
                         "reason": f"decision:{d['action']}"} for d in doc["decisions"]]  # fmt: skip
-            lake.write_ops("release_changes", self.week, build, pa.Table.from_pylist(changes, SCHEMAS["release_changes"]))
+            lake.write_ops(
+                "release_changes", self.week, build, pa.Table.from_pylist(changes, SCHEMAS["release_changes"])
+            )
         elif a[:1] == ["publish-release"] and status == "succeeded":
             build, action = a[a.index("--build") + 1], a[a.index("--action") + 1]
             run_date = next(self.lake_root.glob(f"releases/*/build={build}")).parent.name.split("=")[1]

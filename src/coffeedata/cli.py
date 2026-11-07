@@ -144,7 +144,7 @@ def cmd_crawl(args: argparse.Namespace) -> None:
         part=args.slice,
         salt=args.salt,
         only=args.only,
-        test=args.test,
+        test=getattr(args, "test", None),
     )
     _print(out)
     # A crawl stopped by its deadline is a finished job, not a failed one: it exits 0, and its job_manifests end row
@@ -196,7 +196,7 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
     from . import ingest
 
     lake, run_date = Lake(), args.run_date
-    if args.test and not args.connector:
+    if getattr(args, "test", None) and not args.connector:
         raise SystemExit("crawl-retry --test needs --connector")
     if args.connector:  # design B: the connector's own partition, its job_manifests rows and the crash guard
         from . import connectors
@@ -208,7 +208,7 @@ def cmd_crawl_retry(args: argparse.Namespace) -> None:
                 run_date,
                 workers=args.workers,
                 deadline_min=args.deadline_min,
-                test=args.test,
+                test=getattr(args, "test", None),
             )
         )
         return

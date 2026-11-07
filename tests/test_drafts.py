@@ -115,8 +115,19 @@ def test_a_draft_applies_its_snapshot_is_never_served_and_publish_serves_it(lake
         )
         .fetchone()[0]
     )
+    hash4 = (
+        duckdb.connect()
+        .execute(
+            f"select input_hash from '{quality.ops_files(lake, base)['product_decisions']}' where coffee_id = ?",
+            [f"{RID}:4"],
+        )
+        .fetchone()[0]
+    )
+    # A conflict: coffee 4's version is excluded, coffee 4 itself included. The coffee's own decision wins.
     sha = _write_snapshot(snaps, "s1", [_decision("coffee_id", f"{RID}:3", "exclude", 1),
-                                        _decision("input_hash", mug_hash, "include", 2, f"{RID}:mug")])  # fmt: skip
+                                        _decision("input_hash", mug_hash, "include", 2, f"{RID}:mug"),
+                                        _decision("input_hash", hash4, "exclude", 3, f"{RID}:4"),
+                                        _decision("coffee_id", f"{RID}:4", "include", 4)])  # fmt: skip
     with pytest.raises(SystemExit, match="digest"):
         cli.cmd_build(args(draft="d1", snapshot="s1", snapshot_sha256="0" * 64))
     assert cli.cmd_build(args(draft="d1", snapshot="s1", snapshot_sha256=sha)) is True

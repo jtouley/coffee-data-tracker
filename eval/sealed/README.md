@@ -35,6 +35,8 @@ this total; changes before it weren't counted. Add each later change's count her
   them in this sealed set (compared as a count, without reading its products).
 - the owner's include/exclude decisions (`stg_decisions`, `stg_snapshots.decision`, macro `decided`; the admin's
   Catalog, `admin-actions`) changed **0** products by themselves: with no decisions snapshot, `decided()` returns
-  `stg_products.is_coffee` unchanged (`tests/test_drafts.py` builds a lake with and without one). Each decision the
+  `stg_products.is_coffee` unchanged, by construction (`stg_decisions` has no rows, so `stg_snapshots.decision` is
+  null for every row); every existing dbt and fixture-lake test passes unchanged, and `tests/test_drafts.py` checks a
+  draft applies only the decisions it was given. Each decision the
   owner later publishes changes exactly its own products, listed in its draft's `release_changes`; those are per-item
   corrections by the owner, not a rule, so they are not added to this total. 0 of them in this sealed set.
