@@ -13,7 +13,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Week | Did the week land (each connector's passes, merge, enrich, classify, build, the served release), and what failed (by HTTP status, challenge, partial, quarantined; the trend; every failed store) | a Test crawl link per failed store | `job_manifests`, `fetches`, `builds`, `serving_log`, ops `run_completeness` |
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
-| Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Include or Exclude one product or a chosen group, by `coffee_id` or by version (`input_hash`); Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
+| Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
 | Log | Every write: who, when, what, the outcome | download the decisions (for `coffeedata decide export-labels`) | the control plane |
 
 The Catalog copies a build's two files into a local DuckDB file once (releases are immutable) and filters there.
@@ -58,15 +58,23 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   starts the build job with `build --draft <id> --snapshot <id> --snapshot-sha256 <digest>`. The build checks the
   digest (a changed or missing snapshot fails it), applies the decisions in dbt (`stg_decisions`, `decided()`,
   the `decisions_applied` test), records the build with its draft id and snapshot, and never serves it.
-- **Publish** is off until the draft build passed, the served release is still the one it was built against, the
-  owner typed the count when more than 50 public rows leave, and each store a removal comes from answered a test
-  crawl in the last 7 days. It starts the `publish` job (`publish-release --action publish`). "Published" is read
-  from `serving_log`, never set.
+- **Publish** is off until:
+  - the draft build passed;
+  - the served release is still the one it was built against;
+  - CLAUDE.md step 9's running total stays at 50 or fewer: the public coffees the published drafts' decisions changed
+    since the last recorded full evaluation, plus this draft's (Release records an evaluation, which starts the total
+    again);
+  - the owner typed the count, when more than 50 public rows leave;
+  - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
+    version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
+
+  It starts the `publish` job (`publish-release --action publish`). "Published" is read from `serving_log`, never
+  set. A draft being published, or published, can't be discarded.
 - **Roll back** serves a release that was served before (`publish-release --action rollback`); an unpublished draft
   can't be rolled back to.
 - **The weekly build** applies the served build's snapshot, which its builds row carries, so it needs no bucket and
   no database.
-- **Labels:** Log's download is the effective decisions as a snapshot; `coffeedata decide export-labels --snapshot
+- **Labels:** Log's download is the effective decisions as a snapshot, with each version's coffees listed; `coffeedata decide export-labels --snapshot
   decisions.json` turns them into candidate labels for the classifier's train set only. A coffee in the sealed test
   set or the validation set is left out and only counted (CLAUDE.md: an owner correction is one labeler).
 

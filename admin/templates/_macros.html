@@ -58,8 +58,8 @@
 {%- endmacro %}
 
 {# A one-button write: its confirm text, then POST with the form's idempotency key (admin.js). #}
-{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none) -%}
-<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}>
+{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none, ask="") -%}
+<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}{% if ask %} data-ask="{{ ask }}"{% endif %}>
   <input type="hidden" name="key" value="{{ new_key() }}">
   <button class="btn {{ cls }} inline" type="submit" data-busy="{{ busy }}"{% if disabled %} aria-disabled="true" aria-describedby="{{ disabled }}"{% endif %}>{{ label }}</button>
 </form>

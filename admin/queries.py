@@ -423,7 +423,12 @@ def gate(lake: Lake, con, build_id: str) -> dict:
             [build_id],
         )
     )
-    all_builds = builds(lake, con)
+    all_builds = builds(lake, con)  # never an unpublished draft: one isn't anyone's baseline
+    if build_id not in {
+        b["build_id"] for b in all_builds
+    }:  # this build is a draft: place it among them by time
+        own = [b for b in builds(lake, con, drafts=True) if b["build_id"] == build_id]
+        all_builds = sorted(all_builds + own, key=lambda b: (b["built_at"], b["build_id"]), reverse=True)
     prev = previous_passing(all_builds, build_id)
     metrics = _rows(
         con.execute(
@@ -507,24 +512,20 @@ def changes(
 
 
 def week_state(lake: Lake, con, week: str) -> dict:
-    """For the job guards: has the week's merge a done row, and has its build ended (job_manifests)."""
+    """For the job guards: has the week's merge a done row (job_manifests)."""
     rows = _empty_ok(lambda: job_rows(lake, con, week), [])
     return {
         "week": week,
         "merge_done": any(r["job"] == "merge" and r["status"] == "done" for r in rows),
-        "build_ended": any(r["job"] == "build" and r["status"] in ("done", "failed") for r in rows),
     }
 
 
 def releases(lake: Lake, con) -> dict:
-    """Every build with its verdict, which are drafts (builds kind draft: draft_id) and which were ever served
-    (serving_log, by any action). "Published" is derived from serving_log, never a status anyone sets."""
+    """Every build with its verdict, which are drafts and which were ever served: quality's one rule for each
+    (quality.drafts, quality.ever_served). "Published" is derived from serving_log, never a status anyone sets."""
     all_builds = builds(lake, con, drafts=True)
-    drafts = dict(_empty_ok(lambda: con.execute(
-        f"select build_id, any_value(unique_id) from {lake.scan('builds')} where kind = 'draft' group by build_id"
-    ).fetchall(), []))  # fmt: skip
-    ever = {b for (b,) in _empty_ok(lambda: con.execute(
-        f"select distinct build_id from {lake.scan('serving_log')}").fetchall(), [])}  # fmt: skip
+    drafts = _empty_ok(lambda: quality.drafts(lake), {})
+    ever = _empty_ok(lambda: quality.ever_served(lake), set())
     for b in all_builds:
         b["draft_id"] = drafts.get(b["build_id"])
         b["ever_served"] = b["build_id"] in ever
@@ -532,13 +533,8 @@ def releases(lake: Lake, con) -> dict:
 
 
 def build_snapshot(lake: Lake, con, build_id: str) -> dict | None:
-    """The decisions snapshot a build applied (quality.build_snapshot, through this connection)."""
-    row = _empty_ok(lambda: con.execute(
-        f"select unique_id, checksum, payload from {lake.scan('builds')} where build_id = ? and kind = 'snapshot' "
-        "limit 1", [build_id]).fetchone(), None)  # fmt: skip
-    if not row:
-        return None
-    return {"snapshot_id": row[0], "sha256": row[1], "doc": json.loads(row[2]) if row[2] else None}
+    """The decisions snapshot a build applied (quality.build_snapshot)."""
+    return _empty_ok(lambda: quality.build_snapshot(lake, build_id), None)
 
 
 def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, list[dict]]:
@@ -557,20 +553,21 @@ def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, list[dict]]:
     return out
 
 
-def leaving(lake: Lake, con, build_id: str) -> dict:
+def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None) -> dict:
     """How many public rows a build removes against the release it was compared with (release_changes): Publish
-    asks the owner to type the count when it is over 50."""
+    asks the owner to type the count when it is over 50. `changed`: how many of `coffees` (a draft's decisions'
+    coffees) change in public_coffee, whatever the reason (an undone include reads as reclassified)."""
     ops = quality.ops_files(lake, build_id)
     if "release_changes" not in ops:
-        return {"recorded": False, "removed": None, "decided": None, "by_table": {}}
+        return {"recorded": False, "removed": None, "changed": None}
     src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
-    by = dict(
-        con.execute(f"select table_name, count(*) from {src} where change = 'removed' group by 1").fetchall()
-    )
-    decided = con.execute(
-        f"select count(*) from {src} where table_name = 'public_coffee' and reason like 'decision:%'"
+    removed = con.execute(f"select count(*) from {src} where change = 'removed'").fetchone()[0]
+    changed = con.execute(
+        f"select count(distinct item) from {src} where table_name = 'public_coffee' "
+        "and item in (select unnest(?::varchar[]))",
+        [coffees or []],
     ).fetchone()[0]
-    return {"recorded": True, "removed": sum(by.values()), "decided": decided, "by_table": by}
+    return {"recorded": True, "removed": removed, "changed": changed}
 
 
 def to_json(value: Any) -> str:

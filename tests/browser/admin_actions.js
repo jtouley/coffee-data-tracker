@@ -112,7 +112,7 @@ const errors = [];
   try {
     await check("Jobs: nothing started yet (empty), every job listed with its help", async () => {
       assert.match(await page.textContent("[data-answer]"), /0 running · 0 started from here/);
-      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build", "Site"]) {
+      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build"]) {
         assert.ok(await page.isVisible(`.jname:text-is("${label}")`), label);
       }
       await shoot(page, "jobs-empty");
@@ -121,18 +121,20 @@ const errors = [];
     await check("Catalog: exclude one coffee (confirm with a reason), then Undo from the outcome", async () => {
       await page.goto(`${cfg.act}/catalog?q=onyx`);
       await settled(page);
-      const first = page.locator("button[data-decide][data-item] >> nth=0");
-      roaster = JSON.parse(await first.getAttribute("data-item")).roaster_id;
-      await first.click();
-      await page.waitForSelector("dialog#decide[open]");
+      const first = page.locator("input[data-pick] >> nth=0");
+      roaster = JSON.parse(await first.getAttribute("data-pick")).roaster_id;
+      await first.check(); // one ticked row: the bulk bar acts on it
+      await page.click("[data-bulk] form[data-picks] button >> nth=0");
+      await page.waitForSelector("dialog#confirm[open] [data-ask-reason]:not([hidden])");
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /Exclude this product\?/);
       await shoot(page, "catalog-decide-dialog", true);
-      await page.click("dialog#decide [data-decide-go]");
-      await page.waitForFunction(() => /reason/i.test(document.querySelector("dialog#decide [data-hint]").textContent)); // a reason is required
-      await page.fill("#decide-reason", "a drink mix, not coffee");
-      await page.click("dialog#decide [data-decide-go]");
+      await page.click("[data-confirm-go]");
+      await page.waitForFunction(() => /reason/i.test(document.querySelector("[data-confirm-hint]").textContent)); // a reason is required
+      await page.fill("#confirm-reason", "a drink mix, not coffee");
+      await page.click("[data-confirm-go]");
       await toast(page, /Recorded 1 decision/);
       await settled(page);
-      assert.ok(await page.isVisible("text=/included|excluded/"));
+      assert.ok(await page.locator("table form[data-write$='/undo']").count());
       await shoot(page, "catalog-decided");
       await page.click("[data-result] [data-undo]");
       await toast(page, /Undone \(1\)/);
@@ -145,12 +147,12 @@ const errors = [];
       await page.check("input[data-pick] >> nth=1");
       assert.match(await page.textContent("[data-bulk-count]"), /2 chosen/);
       await shoot(page, "catalog-chosen");
-      await page.click("[data-bulk] [data-decide=exclude]");
-      await page.waitForSelector("dialog#decide[open]");
-      assert.match(await page.textContent("[data-decide-title]"), /Exclude 2 products/);
-      await page.check("dialog#decide input[value=input_hash]");
-      await page.fill("#decide-reason", "the same pasted sample-pack text");
-      await page.click("dialog#decide [data-decide-go]");
+      await page.click("[data-bulk] form[data-picks] button >> nth=0");
+      await page.waitForSelector("dialog#confirm[open] [data-ask-kind]:not([hidden])");
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /Exclude 2 products/);
+      await page.check("dialog#confirm input[name=confirm-kind][value=input_hash]");
+      await page.fill("#confirm-reason", "the same pasted sample-pack text");
+      await page.click("[data-confirm-go]");
       await toast(page, /Recorded 2 decisions/);
       await settled(page);
       assert.equal(await page.locator("text=(group)").count(), 2);
@@ -284,9 +286,9 @@ const errors = [];
     await check("Release: roll back to the release served before (a destructive confirm with a reason)", async () => {
       await page.goto(`${cfg.act}/release?build=${servedBefore}`);
       await settled(page);
-      await page.fill("form[data-write$='/rollback'] input[name=reason]", "the publish removed the wrong coffee");
       await page.click("form[data-write$='/rollback'] button");
-      await page.waitForSelector("dialog#confirm[open]");
+      await page.waitForSelector("dialog#confirm[open] [data-ask-reason]:not([hidden])");
+      await page.fill("#confirm-reason", "the publish removed the wrong coffee");
       await page.click("[data-confirm-go]");
       await toast(page, /Started publish/);
       await ctl("/finish?job=publish");
@@ -362,14 +364,15 @@ const errors = [];
     await check("Writes off: the pages read, the actions say why", async () => {
       const { ctx, page: p } = await open(browser, "off", "/catalog");
       assert.match(await p.textContent("main"), /Actions are off: no control-plane database/);
-      assert.equal(await p.locator("button[data-decide]").count(), 0);
+      assert.equal(await p.locator("[data-bulk], input[data-pick]").count(), 0);
       await shoot(p, "writes-off");
       await ctx.close();
     });
 
-    await check("The control plane is down: the error state, and a write refused with nothing started", async () => {
+    await check("The control plane is down: the page degrades (no actions, says why), and a write is refused with nothing started", async () => {
       const { ctx, page: p } = await open(browser, "down", "/jobs");
-      assert.match(await p.textContent("[data-state=error]"), /control plane/);
+      assert.match(await p.textContent("main"), /control plane can.t be read right now/); // degraded, not blank
+      assert.equal(await p.locator("form[data-write]").count(), 0);
       await shoot(p, "control-plane-down");
       const r = await p.evaluate(async () => (await fetch("/api/jobs/merge/runs", { method: "POST", headers: { "Content-Type": "application/json", "X-Requested-With": "fetch" }, body: JSON.stringify({ key: "k" }) })).status);
       assert.equal(r, 503);
@@ -385,10 +388,11 @@ const errors = [];
       await page.goto(`${cfg.act}/catalog`);
       await settled(page);
       await page.context().clearCookies();
-      await page.click("button[data-decide][data-item] >> nth=0");
-      await page.fill("#decide-reason", "this will not be recorded");
+      await page.check("input[data-pick] >> nth=0");
+      await page.click("[data-bulk] form[data-picks] button >> nth=0");
+      await page.fill("#confirm-reason", "this will not be recorded");
       const ended = page.waitForRequest((r) => r.url().includes("/signin?ended=1"));
-      await page.click("dialog#decide [data-decide-go]");
+      await page.click("[data-confirm-go]");
       await ended; // (this test service has no passkey, so sign-in then forwards to enrollment)
     });
 

@@ -132,11 +132,12 @@ The same owner, now doing what used to need `gcloud run jobs execute`, `coffeeda
 | Week | connectors landed · merge · enrich · classify · build · serving week; then the week's failures | Test crawl (a link per failed store, to Jobs, prefilled) |
 | Jobs | N running · N started from here · last by whom | Start any job (a confirm with the exact arguments), Cancel |
 | Release | serving X · N decision changes not in it · the latest draft's state | Build a draft, Publish, Roll back, Discard |
-| Catalog | N of M products | Include or Exclude one product, or a chosen group; Undo |
+| Catalog | N of M products | Tick products, then Include or Exclude them (the bulk bar); Undo |
 | Log | N writes recorded | (read only: every write, filterable; the decisions download for `decide export-labels`) |
 
 - **One way each.** A job starts only from Jobs (Week's and Release's links go there, prefilled). A decision is made
-  only in the Catalog, with one dialog for one product or a group. A release changes only on Release.
+  only in the Catalog: tick one product or several, then the bulk bar, in the same confirm sheet as every other
+  write (with a reason, and coffee or version). A release changes only on Release.
 - **One primary action per view** (Krehel `better-layout`): Start… on a job's form, Build a draft or Publish on
   Release, the decide button in its sheet. Everything else is a text button.
 - **The confirm step says exactly what happens** (Owl-Listener `form-design`, `ux-writing`): the Cloud Run job and
@@ -207,3 +208,16 @@ not, merge where two overlap.
 - **Folded:** a build's facts and its metrics (one line says how many moved).
 - **Code:** the five page routes are one loop over `PAGES`; the job list is one table (`admin/jobs.py`), and the
   list Terraform grants is derived from it and checked by a test.
+
+### Cut in the final review
+
+- The Catalog's per-row Include…/Exclude… buttons: the bulk bar does the same with one ticked row. They also clipped
+  the decision column at 390 px, as did the pinned product column, now placed after a fixed 44 px checkbox column.
+- The decide dialog: the shared confirm sheet asks for the reason (and coffee or version) where a write needs one.
+  Publish and Roll back take their reason there too, instead of a field on the page.
+- Release: the Decisions paragraph is one line under the answer line; Changes shows only the rows when there are 20
+  or fewer.
+- Jobs: "Site" is a link in the intro line, not a job; the Action column is folded into the job's cell.
+- Code: dead code (`Action.acts_on_week`, `WeekState.build_ended`, `ControlPlane.decision_log`); `queries.releases`
+  and `build_snapshot` call quality's own rules; Release reads the served release and the drafts once.
+- Kept: Release's build select. It is the one way to reach a release served before, which Roll back needs.

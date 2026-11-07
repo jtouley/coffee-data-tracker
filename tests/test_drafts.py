@@ -64,7 +64,8 @@ def test_corrections_are_train_labels_and_never_held_out_ones(tmp_path):
     )
     doc = decisions.snapshot("s2", "t", [
         _decision("coffee_id", "r:ok", "include", 1), _decision("coffee_id", "r:sealed", "exclude", 2),
-        _decision("coffee_id", "r:val", "exclude", 3), _decision("input_hash", "h1", "exclude", 4, "r:tr"),
+        _decision("coffee_id", "r:val", "exclude", 3),
+        _decision("input_hash", "h1", "exclude", 4, "r:tr") | {"coffee_ids": ["r:tr", "r:sealed"]},
         _decision("input_hash", "h2", "exclude", 5),
     ])  # fmt: skip
     rows, skipped = decisions.export_labels(doc, decisions.held_out(repo))
@@ -72,7 +73,7 @@ def test_corrections_are_train_labels_and_never_held_out_ones(tmp_path):
         ("r:ok", "coffee", "train", "owner"),
         ("r:tr", "not_coffee", "train", "owner"),
     ]
-    assert skipped == 3
+    assert skipped == 4  # r:sealed, r:val, h1's r:sealed, and h2 (no coffees listed for its version)
     with pytest.raises(decisions.SnapshotError, match="held-out"):
         decisions.held_out(tmp_path / "nothing")
     # the real repository's held-out sets are found (ids only)

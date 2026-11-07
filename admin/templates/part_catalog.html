@@ -34,8 +34,12 @@
   {% if not writes_off %}
   <div class="bulk" data-bulk hidden role="region" aria-label="Chosen products">
     <span data-bulk-count>0 chosen</span>
-    <button class="btn secondary inline" type="button" data-decide="exclude" data-bulk-use>Exclude…</button>
-    <button class="btn secondary inline" type="button" data-decide="include" data-bulk-use>Include…</button>
+    {% for action, label in (("exclude", "Exclude"), ("include", "Include")) %}
+    <form class="inline-form" data-write="/api/decisions" data-picks data-ask="reason kind" data-confirm-label="{{ label }}"
+          data-confirm="{{ 'Leave out of the catalog, even if the classifier says coffee' if action == 'exclude' else 'Keep in the catalog as coffee, even if the classifier says not' }}. Nothing is served until a draft of it is published (Release).">
+      <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="action" value="{{ action }}"><input type="hidden" name="items" value="[]" data-json>
+      <button class="btn secondary inline" type="submit" data-busy="Recording…">{{ label }}…</button>
+    </form>{% endfor %}
     <button class="btn text inline" type="button" data-bulk-clear>Clear</button>
   </div>
   {% endif %}
@@ -47,31 +51,12 @@
       <th scope="row">{{ ev(r.url, r.title or r.coffee_id) }}</th>
       <td>{% if r.decision %}<span class="st st-ok"><i aria-hidden="true"></i>{{ r.decision.action }}d</span>{% if r.decision.group_id %} <span class="meta">(group)</span>{% endif %}
           {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decision.decision_id ~ "/undo", "Undo", "Undo the owner’s " ~ r.decision.action ~ " of " ~ (r.title or r.coffee_id) ~ "? The classifier decides it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
-        {% elif not writes_off %}<button class="btn text inline" type="button" data-decide="{{ 'exclude' if r.coffee == 'coffee' else 'include' }}" data-item='{{ item | tojson }}'>{{ "Exclude…" if r.coffee == "coffee" else "Include…" }}</button>{% else %}—{% endif %}</td><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
+        {% else %}—{% endif %}</td><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
       <td class="err">{{ r.coffee }} · {{ r.classified_by or "—" }}{% if r.reason %}: {{ r.reason }}{% endif %}</td><td>{{ r.listed }}{% if r.stock %} · {{ r.stock }}{% endif %}</td>
       <td>{{ [r.origin_country, r.process] | select | join(" · ") or "—" }}</td><td class="n">{{ n(r.min_price_usd) }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
   {% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
   {% endif %}
-{% endif %}
-{% if not writes_off and data and data.matching %}
-<dialog class="sheet" id="decide" aria-labelledby="decide-h">
-  <form method="dialog" data-write="/api/decisions" data-decide-form novalidate>
-    <h2 class="serif title-s" id="decide-h" data-decide-title>Decide</h2>
-    <p class="body" data-decide-what></p>
-    <input type="hidden" name="key" value="{{ new_key() }}">
-    <input type="hidden" name="action" value="">
-    <fieldset class="choice"><legend class="label">Apply to</legend>
-      <label><input type="radio" name="kind" value="coffee_id" checked> These products (by <code>coffee_id</code>)</label>
-      <label><input type="radio" name="kind" value="input_hash"> Every product with the same version: title, type, tags, sizes and description (by <code>input_hash</code>, across roasters)</label>
-    </fieldset>
-    <label class="flabel" for="decide-reason">Reason (recorded, 3 to 300 characters)</label>
-    <input class="input" id="decide-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off" aria-describedby="decide-hint">
-    <div class="hint" id="decide-hint" data-hint role="alert"></div>
-    <p class="meta">Nothing is served until a draft of it is published (Release).</p>
-    <div class="actions mt12"><button class="btn primary inline" type="submit" value="go" data-busy="Recording…" data-decide-go>Decide</button><button class="btn text inline" type="button" data-close>Cancel</button></div>
-  </form>
-</dialog>
 {% endif %}
 </div>

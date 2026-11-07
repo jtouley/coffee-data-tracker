@@ -57,7 +57,7 @@ READS = {
     "catalog": "product_decisions, dim_coffee and decisions",
     "log": "the control plane's audit",
 }
-AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard")
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation")
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -259,9 +259,8 @@ def create_app(
     writes: Writes | None = None
     if not settings.writes_off:
         assert settings.control and settings.jobs and settings.snapshots
-        writes = Writes(
-            settings.control, settings.jobs, settings.snapshots, reader.run, **({"now": now} if now else {})
-        )
+        writes = Writes(settings.control, settings.jobs, settings.snapshots, reader.run, catalog=catalog,
+                        **({"now": now} if now else {}))  # fmt: skip
     else:
         emit("WARNING", event="admin_writes_off", reasons=settings.writes_off)
     limiter = Limiter()
@@ -578,7 +577,22 @@ def create_app(
         except Exception as e:  # noqa: BLE001 - shown as the error state; the class only, never a trace
             emit("ERROR", event="admin_read_failed", page=name, error=type(e).__name__)
             return page("part_error.html", 502, files=files, error=_reason(e))
-        return page(f"part_{name}.html", read_at=started, files=files, writes_off=settings.writes_off, **ctx)
+        return page(
+            f"part_{name}.html", read_at=started, files=files, **({"writes_off": settings.writes_off} | ctx)
+        )
+
+    DOWN = "the control plane can't be read right now, so decisions, drafts and runs aren't shown"
+
+    async def plane(read: Callable[[], Awaitable[Any]], default: Any, down: list[str]) -> Any:
+        """A control-plane read for a page that also reads the lake: on an outage the page keeps the lake's part,
+        says so once, and offers no action (`down` gets the reason)."""
+        try:
+            return await read()
+        except ControlPlaneError as e:
+            emit("ERROR", event="admin_control_plane_failed", error=str(e)[:200])
+            if DOWN not in down:
+                down.append(DOWN)
+            return default
 
     async def common(week: str | None) -> dict:
         weeks = await reader.run(queries.weeks)
@@ -610,13 +624,16 @@ def create_app(
         p = request.query_params
 
         async def make():
-            runs = {r["run_id"]: r for r in (await writes.runs(20) if writes else [])}
+            off = list(settings.writes_off)
             rel = await reader.run(queries.releases)
-            served = await reader.run(queries.served)
+            served = await reader.run(queries.served)  # read once: pending and readiness are given it
             all_builds = rel["builds"]
             ids = [b["build_id"] for b in all_builds]
-            drafts = await asyncio.to_thread(writes.control.drafts, 20) if writes else []
-            pending = await writes.pending() if writes else None
+            runs, drafts, pending = {}, [], None
+            if writes:
+                runs = {r["run_id"]: r for r in await plane(lambda: writes.runs(20), [], off)}
+                drafts = await plane(lambda: asyncio.to_thread(writes.control.drafts, 20), [], off)
+                pending = await plane(lambda: writes.pending(served, drafts), None, off)
             chosen = _build_arg(build)
             if chosen not in ids:  # the newest draft that was built, else the served build, else the newest
                 built = [rel["by_draft"][d["draft_id"]] for d in drafts if d["draft_id"] in rel["by_draft"]]
@@ -627,7 +644,11 @@ def create_app(
                 )
             info = next((b for b in all_builds if b["build_id"] == chosen), None)
             draft = next((d for d in drafts if info and d["draft_id"] == info["draft_id"]), None)
-            ready = await writes.readiness(draft, rel) if writes and draft else None
+            ready = (
+                await plane(lambda: writes.readiness(draft, rel, served), None, off)
+                if writes and draft
+                else None
+            )
             try:
                 offset = max(0, int(p.get("offset") or 0))
             except ValueError:
@@ -641,15 +662,16 @@ def create_app(
                 d["build_id"], d["state"] = b, _draft_state(d, bi, served, runs.get(d["run_id"]))
             return {"builds": all_builds, "build": chosen, "info": info, "served": served, "drafts": drafts,
                     "draft": draft, "ready": ready, "pending": pending, "gate": gate, "changes": changes,
-                    "filters": dict(p), "offset": offset}  # fmt: skip
+                    "filters": dict(p), "offset": offset, "writes_off": off}  # fmt: skip
 
         return await part("release", make)
 
     @app.get("/part/jobs", response_class=HTMLResponse)
     async def jobs_part(request: Request):
         async def make():
-            runs = await writes.runs(30) if writes else []
-            return {"actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
+            off = list(settings.writes_off)
+            runs = await plane(lambda: writes.runs(30), [], off) if writes else []
+            return {"writes_off": off, "actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
                     "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs),
                     "prefill": dict(request.query_params),
                     "today": datetime.now(UTC).date().isoformat()}  # fmt: skip
@@ -667,16 +689,19 @@ def create_app(
             chosen = _build_arg(build)
             chosen = chosen if chosen in ids else served.get("build_id") or (ids[0] if ids else None)
             data = await reader.run(lambda _lake, _con: catalog.search(chosen, f)) if chosen else None
+            off = list(settings.writes_off)
             if data and writes:  # each row's latest decision, by coffee and by version
-                latest = await asyncio.to_thread(writes.control.latest, [r["coffee_id"] for r in data["rows"]],
-                                                 [r["input_hash"] for r in data["rows"] if r.get("input_hash")])  # fmt: skip
+                latest = await plane(lambda: asyncio.to_thread(
+                    writes.control.latest, [r["coffee_id"] for r in data["rows"]],
+                    [r["input_hash"] for r in data["rows"] if r.get("input_hash")]),
+                    {"coffee_id": {}, "input_hash": {}}, off)  # fmt: skip
                 for r in data["rows"]:
                     r["dc"] = latest["coffee_id"].get(r["coffee_id"])
                     r["dh"] = latest["input_hash"].get(r.get("input_hash") or "")
                     live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
                     r["decision"] = live[0] if live else None
             return {"builds": rel["builds"], "build": chosen, "data": data, "f": f, "facets": FACETS,
-                    "qs": _qs(request, f, chosen)}  # fmt: skip
+                    "qs": _qs(request, f, chosen), "writes_off": off}  # fmt: skip
 
         return await part("catalog", make)
 
@@ -737,8 +762,8 @@ def create_app(
             return JSONResponse({"detail": "The control plane couldn't record this, so nothing was done. "
                                            "Try again shortly."}, 503)  # fmt: skip
         except StartedUnrecorded as e:
-            return JSONResponse({"detail": f"Cloud Run started {e}, but the control plane couldn't record it. "
-                                           "It is running: see Jobs and Cloud Run before starting it again."}, 500)  # fmt: skip
+            return JSONResponse({"detail": f"Cloud Run {e.verb} {e}, but the control plane couldn't record it. "
+                                           "See Jobs and Cloud Run before trying again."}, 500)  # fmt: skip
         except JobsError as e:
             emit("ERROR", event="admin_write_failed", path=request.url.path, error=str(e)[:200])
             return JSONResponse({"detail": str(e)}, 502)
@@ -782,6 +807,12 @@ def create_app(
             ),
         )
 
+    @app.post("/api/evaluations")
+    async def evaluation(request: Request):
+        return await write(
+            request, lambda a, k, b: on().evaluation(a, k, str(b.get("path") or ""), b.get("reason"))
+        )
+
     @app.post("/api/drafts/{draft_id}/discard")
     async def discard(request: Request, draft_id: str):
         return await write(request, lambda a, k, b: on().discard(a, k, draft_id))
@@ -800,6 +831,17 @@ def create_app(
         try:
             await writes.ready()
             effective = await asyncio.to_thread(writes.control.effective)
+            served = await reader.run(queries.served)
+            hashes = [d["subject"] for d in effective if d["subject_kind"] == "input_hash"]
+            if (
+                hashes and served
+            ):  # each version's coffees, so export-labels checks every one against held-out sets
+                members = await reader.run(lambda _l, _c: catalog.members(served["build_id"], [], hashes))
+                for d in effective:
+                    if d["subject_kind"] == "input_hash":
+                        d["coffee_ids"] = sorted(
+                            m["coffee_id"] for m in members if m["input_hash"] == d["subject"]
+                        )
         except ControlPlaneError:
             return JSONResponse({"detail": "The control plane can't be read right now."}, 503)
         doc = decisions.snapshot("export", datetime.now(UTC).strftime("%Y-%m-%dT%H:%M:%SZ"), effective)

@@ -26,8 +26,10 @@ ACTIONS = ("include", "exclude")
 SNAPSHOT_ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 # A decision's fields in a snapshot; only subject_kind, subject and action reach dbt.
+# coffee_ids: for a decision by version, every coffee sharing it (the admin's export resolves them; export-labels
+# checks each against the held-out sets).
 FIELDS = ("decision_id", "subject_kind", "subject", "action", "reason", "actor", "decided_at", "coffee_id",
-          "input_hash", "roaster_id", "title")  # fmt: skip
+          "input_hash", "roaster_id", "title", "coffee_ids")  # fmt: skip
 
 
 class SnapshotError(RuntimeError):
@@ -140,17 +142,29 @@ def held_out(repo: Path) -> set[str]:
 
 def export_labels(doc: dict, held: set[str]) -> tuple[list[dict], int]:
     """The snapshot's decisions as candidate reference labels, train set only, and how many were left out because
-    their coffee is held out (sealed test or validation; counted, never listed). An owner correction is one labeler
+    their coffee is held out (sealed test or validation; counted, never listed). A decision by version labels each
+    coffee in its `coffee_ids`, each checked; without them it is left out. An owner correction is one labeler
     (CLAUDE.md step 6): it needs a second independent label against eval/sealed/GUIDE.md, and a third to settle a
     disagreement, before it can be part of any test set. A decision with no coffee_id can't be checked against the
     held-out sets, so it is left out too."""
     out, skipped = [], 0
     for d in check(doc):
-        if not d.get("coffee_id") or d["coffee_id"] in held:
+        # A decision by version labels every coffee sharing it, each checked; one with no list of them can't be.
+        ids = (d.get("coffee_ids") or []) if d["subject_kind"] == "input_hash" else [d.get("coffee_id")]
+        if not ids or not all(ids):
             skipped += 1
             continue
-        out.append({"set": "train", "coffee_id": d["coffee_id"], "input_hash": d.get("input_hash"),
-                    "label": LABEL[d["action"]], "reason": d.get("reason"), "labeler": "owner",
-                    "actor": d.get("actor"), "decided_at": d.get("decided_at"), "decision_id": d.get("decision_id"),
-                    "subject_kind": d["subject_kind"], "source": "admin override"})  # fmt: skip
+        for cid in ids:
+            if cid in held:
+                skipped += 1
+                continue
+            out.append(_label(d, str(cid)))
     return out, skipped
+
+
+def _label(d: dict, coffee_id: str) -> dict:
+    return {
+        "set": "train", "coffee_id": coffee_id, "input_hash": d.get("input_hash"), "label": LABEL[d["action"]],
+        "reason": d.get("reason"), "labeler": "owner", "actor": d.get("actor"), "decided_at": d.get("decided_at"),
+        "decision_id": d.get("decision_id"), "subject_kind": d["subject_kind"], "source": "admin override",
+    }  # fmt: skip

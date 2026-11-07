@@ -655,7 +655,8 @@ def cmd_build_hashes(args: argparse.Namespace) -> bool:
     from . import quality
 
     lake = Lake()
-    history = [b for b, _, _ in quality.builds(lake)]
+    hidden = quality.unpublished_drafts(lake)  # the default is never a draft no one published
+    history = [b for b, _, _ in quality.builds(lake) if b not in hidden]
     build = args.build or (history[-1] if history else None)
     if not build:
         _print({"error": "no builds in this lake"})
