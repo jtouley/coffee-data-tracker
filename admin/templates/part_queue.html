@@ -109,14 +109,15 @@
   {% else %}
   <div class="frame mt12" tabindex="0" role="region" aria-label="Flagged products"><table class="dense flagged">
     <caption>Products {{ q.offset + 1 }}–{{ q.offset + q.rows | length }} of {{ n(q.matching) }}, by the public rows a removal touches; products with the same evidence together</caption>
-    <thead><tr><th scope="col">Product</th><th scope="col">Roaster</th><th scope="col">Flags</th><th scope="col" class="n">Public rows</th><th scope="col">Decision</th></tr></thead>
+    <thead><tr><th scope="col">Product</th><th scope="col">Flags</th><th scope="col">Decision</th><th scope="col" class="n">Public rows</th><th scope="col">Roaster</th></tr></thead>
     <tbody>{% for g in q.rows | groupby("evidence_hash") | sort(attribute="list.0.group_rows", reverse=true) %}{% set members = g.list %}
-      {% if members[0].group_n > 1 %}{% set want = proposal(members[0]) %}<tr class="grp"><th scope="rowgroup" colspan="3">{{ members[0].group_n }} products with the same evidence: {{ members[0].rules | join(", ") }} · {{ summary(members[0]) }}</th><td class="n">{{ n(members[0].group_rows) }}</td>
-        <td>{% set open = members | rejectattr("decided") | list %}{% if want and open and not writes_off %}{{ decide(want, open, (want | capitalize) ~ " these " ~ (open | length) ~ "…") }}{% else %}—{% endif %}</td></tr>{% endif %}
+      {% if members[0].group_n > 1 %}{% set want = proposal(members[0]) %}<tr class="grp"><th scope="rowgroup" colspan="2">{{ members[0].group_n }} products of {{ members[0].roaster_id }} with the same evidence: {{ members[0].rules | join(", ") }} · {{ summary(members[0]) }}</th>
+        <td>{% set open = members | rejectattr("decided") | list %}{% if want and open and not writes_off %}{{ decide(want, open, (want | capitalize) ~ " these " ~ (open | length) ~ "…") }}{% else %}—{% endif %}</td><td class="n">{{ n(members[0].group_rows) }}</td><td></td></tr>{% endif %}
       {% for r in members %}<tr>
         <th scope="row"><a class="ev" href="/queue?{{ {"case": r.coffee_id} | urlencode }}">{{ r.title or r.coffee_id }}</a></th>
-        <td>{{ r.roaster_id }}</td><td>{{ summary(r) }}</td><td class="n">{{ n(r.public_rows) }}</td>
+        <td>{{ summary(r) }}</td>
         <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off %}{{ decide(proposal(r), [r], (proposal(r) | capitalize) ~ "…") }}{% else %}—{% endif %}</td>
+        <td class="n">{{ n(r.public_rows) }}</td><td>{{ r.roaster_id }}</td>
       </tr>{% endfor %}
     {% endfor %}</tbody>
   </table></div>

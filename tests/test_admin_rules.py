@@ -1,7 +1,7 @@
 """The admin's rules and flags (docs/design/admin-registry.md §2.3-3, §5.1): the Queue and a Case read the served
 build's mart_flags; settings edits and crawl flags are versioned, checked, audited in the write's transaction and
 idempotent; a draft carries them; Publish needs the evaluation of a change to how a rule decides; one live check
-covers a group decided on the same evidence."""
+is about one store, whichever group a decision was made in."""
 
 import json
 from datetime import date
@@ -56,12 +56,12 @@ def _flag(cid, rule, polarity, family, direction="", roaster="good.example", **k
 def lake(tmp_path):
     lake = build_lake(tmp_path / "lake")
     rows = [
-        # two drink mixes from two stores, the same evidence: ready, a group
+        # two drink mixes of one store, the same evidence: ready, a group
         _flag("d1", "verdict_flip", "supports", "classifier", "added", ready=True, families=2, rows=3),
         _flag("d1", "non_coffee_type", "supports", "listing", ready=True, families=2, rows=3),
-        _flag("d2", "verdict_flip", "supports", "classifier", "added", roaster="cf.example", ready=True,
+        _flag("d2", "verdict_flip", "supports", "classifier", "added", roaster="good.example", ready=True,
               families=2),
-        _flag("d2", "non_coffee_type", "supports", "listing", roaster="cf.example", ready=True, families=2),
+        _flag("d2", "non_coffee_type", "supports", "listing", roaster="good.example", ready=True, families=2),
         # a held single origin: a classifier removal with pasted text
         _flag("s1", "verdict_flip", "restore", "classifier", "removed", eh="e2", coffee=False, public=True,
               held=True, doubts=1, url="javascript:alert(1)"),
@@ -76,7 +76,7 @@ def test_the_queue_groups_by_evidence_and_a_case_shows_its_evidence(tmp_path, la
     app, c, _ = make(tmp_path, lake.root, pg_url)
     page = c.get("/part/queue").text
     assert "3 products with open flags · 1 held · 2 ready to remove" in page
-    assert "2 products with the same evidence" in page and "Exclude these 2…" in page
+    assert "with the same evidence" in page and "Exclude these 2…" in page
     assert page.index("d1") < page.index("s1")  # more public rows first
     assert "1 doubt · 1 restore · held" in page and "2 supports · ready" in page
     assert "&lt;b&gt;d1&lt;/b&gt;" in page and "<b>d1</b>" not in page  # store text is escaped

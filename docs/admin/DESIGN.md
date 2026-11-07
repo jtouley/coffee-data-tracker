@@ -253,6 +253,9 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
   `dl.facts`, `.picker`, `.frame` tables and the shared confirm sheet, which asks the reason and coffee-or-version
   for a decision, as the Catalog's does since #128's final review (MengTo `no-ai-design-slop`: repeated components
   only for a repeated content type).
+- **The decision before the metadata.** The Queue's columns are product, flags, decision, public rows, roaster: on a
+  phone the table scrolls in its frame, and the decision is on screen with the product (the first screenshots had
+  it last, off screen at 390 px).
 - **Polarity is a word,** never a colour: "supports", "doubts", "restore", "held", "ready", "coverage". No badges.
 - **Store text stays text.** Titles, tags and descriptions render escaped; the description keeps its line breaks
   (`white-space: pre-line`) at a readable measure; a store link is shown only when it is `https:`.
