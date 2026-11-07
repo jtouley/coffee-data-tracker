@@ -154,4 +154,3 @@ textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, mono
   width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
 dialog.sheet [data-confirm-body] p + p { margin-top: 8px; }
 pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
-

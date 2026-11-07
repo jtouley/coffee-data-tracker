@@ -38,8 +38,8 @@ def main(eval_dir: str) -> None:
             main_pred[r["coffee_id"]] = "not_coffee"
             guard_pred[r["coffee_id"]] = "coffee" if r["held"] else "not_coffee"
         print(name, {s: sum(r["stratum"] == s for r in drawn) for s in ks})
-    (HERE / "preds_main.json").write_text(json.dumps(main_pred, sort_keys=True, indent=0))
-    (HERE / "preds_guard.json").write_text(json.dumps(guard_pred, sort_keys=True, indent=0))
+    (HERE / "preds_main.json").write_text(json.dumps(main_pred, sort_keys=True, indent=0) + "\n")
+    (HERE / "preds_guard.json").write_text(json.dumps(guard_pred, sort_keys=True, indent=0) + "\n")
 
 
 if __name__ == "__main__":
