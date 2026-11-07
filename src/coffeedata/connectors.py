@@ -209,21 +209,12 @@ def _finished(lake: Lake, week: str) -> set[str]:
     return {r["attempt_id"] for r in rows if r["status"] in ("done", "deadline")}
 
 
-def _window_left(lake: Lake, job: str, connector: str, week: str, deadline_min: float) -> float:
+def _window_left(lake: Lake, job: str, connector: str | None, week: str, deadline_min: float) -> float:
     """Minutes left of the window of this Cloud Run execution: its first task attempt's start + deadline_min. A
     retried attempt (max_retries 1) resumes inside the window the first one had, so it ends before the next slot
     (the 15:17 resume, or the merge) instead of overlapping it. The full deadline for a first attempt, or outside
     Cloud Run."""
-    ex = control.execution()
-    if not ex.get("execution") or not ex.get("task_attempt"):
-        return deadline_min
-    starts = [
-        r["started_at"]
-        for r in retry_transient(control.rows, lake, week)
-        if r["job"] == job
-        and r["connector"] == connector
-        and control.detail_of(r).get("execution") == ex["execution"]
-    ]
+    starts = [r["started_at"] for r in control.this_execution(lake, week, job, connector)]
     if not starts:
         return deadline_min
     first = min(starts)

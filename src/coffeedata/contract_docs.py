@@ -81,7 +81,7 @@ COLUMNS: dict[str, dict[str, str]] = {
     },
     "job_manifests": {
         "run_date": _RUN,
-        "job": "crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).",
+        "job": "discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).",
         "connector": "The connector (adapter) the job served, if any.",
         "shard": "The shard, if the job was sharded.",
         "attempt_id": "One execution of the job; its start and end rows share it.",

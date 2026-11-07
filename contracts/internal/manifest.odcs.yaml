@@ -12,9 +12,9 @@ domain: coffee
 tags:
 - internal
 description:
-  purpose: 'Internal contract between services: every job (crawl, crawl-retry, merge, enrich, fetch-health) -> dbt (run_completeness),
-    merge, enrichment job, egress-check, fetch-health (when a pass ended), and the crawl passes after it (its list, only
-    with re-fetch on: COFFEEDATA_DQ_REFETCH, off by default).'
+  purpose: 'Internal contract between services: every job (discover, probe, crawl, crawl-retry, merge, enrich, fetch-health)
+    -> dbt (run_completeness), merge, enrichment job, egress-check, fetch-health (when a pass ended), and the crawl passes
+    after it (its list, only with re-fetch on: COFFEEDATA_DQ_REFETCH, off by default).'
   usage: Internal to the pipeline; not published, and not a public interface. Readers outside the pipeline use the public
     catalog contract (contracts/public-catalog.odcs.yaml).
   limitations: Every lake column is nullable in the Arrow schema so that older files read back; required marks the columns
@@ -101,7 +101,8 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: crawl, crawl-retry, merge, enrich or fetch-health (the fetch-health check).
+    description: 'discover (connector: the source, osm or overture), probe, crawl, crawl-retry, merge, enrich or fetch-health
+      (the fetch-health check).'
   - name: connector
     logicalType: string
     physicalType: string
@@ -250,6 +251,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/fetchhealth.py
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/cli.py
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -257,7 +261,7 @@ customProperties:
 - property: audience
   value: internal
 - property: producer
-  value: every job (crawl, crawl-retry, merge, enrich, fetch-health)
+  value: every job (discover, probe, crawl, crawl-retry, merge, enrich, fetch-health)
 - property: consumers
   value:
   - dbt (run_completeness)
@@ -269,4 +273,4 @@ customProperties:
 - property: interfaceFingerprint
   value: d775e9935559e256
 - property: docsFingerprint
-  value: 430a158192706dda
+  value: 6a2819223fdbeb11
