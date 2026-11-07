@@ -483,6 +483,68 @@ Python. Each of the four builds the same thin slice, against a **scratch lake an
 
 The owner decides from the results. Nothing from a POC merges without the review cycle.
 
+### 7.1 Decision: Python (2026-11-07)
+
+The owner accepted **Python**: FastAPI, from the same image as the app. These are the local POC's numbers
+(issuecomment-6699824051), 10 samples each, from `docker run` to the first signed-in 200:
+
+| | Python | Go |
+|---|---|---|
+| Container cold start p95 | 938 ms | 273 ms |
+| Lines of code | 218 | 473 |
+| Image | the app's image, plus about 20 MB (psycopg) | a second image, 29 MB |
+
+**Why Python.**
+- **It reuses `coffeedata` in-process:** `served`, `build_diff`, `builds` and `serve`. Go would reimplement them or
+  shell out to jobs.
+- **About half the code.**
+- **One image for the app and the admin**, which §5.3's deploy rule needs. Go would add a second image, and its
+  Catalog DuckDB needs cgo.
+
+**The revisit trigger.** If the admin's cold start p95 on real Cloud Run goes over about 2 s, the owner revisits Go
+against Python. The local numbers don't include scale-from-zero, image fetch, or a database waking up.
+
+**The alert that watches it** goes in the admin's Terraform, in the style of `src/terraform/alerts.tf`:
+- **The metric** is `run.googleapis.com/container/startup_latencies`, which Cloud Run documents
+  (https://cloud.google.com/monitoring/api/metrics_gcp_p_z, "Container startup latency").
+  - It is BETA.
+  - It is a DELTA distribution, in ms, on `cloud_run_revision`, sampled every 60 s.
+- **What it measures:** the time to start a new container instance, not "the first 200". It is the closest
+  documented metric for a cold start, but it leaves out the first request's own work, such as the database
+  connection.
+- **Which condition type:** a PromQL condition, because a plain threshold can't also require a minimum number of
+  samples.
+
+```hcl
+resource "google_monitoring_alert_policy" "admin_cold_start" {
+  display_name = "admin.registry.coffee: cold start p95 > 2 s"
+  combiner     = "OR"
+  conditions {
+    display_name = "container startup p95 over 1 h, at least ${var.admin_cold_start_min_samples} starts"
+    condition_prometheus_query_language {
+      query    = <<-EOT
+        histogram_quantile(0.95, sum by (le) (increase(run_googleapis_com:container_startup_latencies_bucket{monitored_resource="cloud_run_revision",service_name="${google_cloud_run_v2_service.admin.name}"}[1h]))) > 2000
+        and on() sum(increase(run_googleapis_com:container_startup_latencies_count{monitored_resource="cloud_run_revision",service_name="${google_cloud_run_v2_service.admin.name}"}[1h])) >= ${var.admin_cold_start_min_samples}
+      EOT
+      duration = "0s"
+    }
+  }
+  documentation {
+    content   = "admin cold start p95 > 2 s: revisit the Go vs Python decision (docs/design/admin-registry.md §7.1)."
+    mime_type = "text/markdown"
+  }
+  alert_strategy { auto_close = "86400s" }
+  notification_channels = [google_monitoring_notification_channel.owner.id]
+}
+```
+
+- **`admin_cold_start_min_samples`** (default 3) means a single slow start never pages.
+- **The notification** goes to the existing owner channel.
+- **Before the PR:**
+  - check the PromQL name mapping for this BETA metric (`run_googleapis_com:container_startup_latencies_*`) in
+    Metrics Explorer;
+  - check that `condition_prometheus_query_language` exists in `hashicorp/google ~> 6.0`.
+
 ## 8. Phasing
 
 **Phase 1** (after the POC decision): change something in the admin, see the draft's diff, then Publish or Discard.
@@ -498,6 +560,7 @@ The owner decides from the results. Nothing from a POC merges without the review
 - The Queue, Case, **Catalog** and Draft pages.
 - Test crawl, per roaster and per connector, in its own `test=<id>` sub-partition.
 - The Jobs page and `coffeedata admin jobs`, with the guards and the two crawl modes.
+- The admin cold-start alert (§7.1), which ships with the admin service.
 
 Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page shows `build-diff`.
 
