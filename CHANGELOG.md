@@ -105,6 +105,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
   Each job's egress in `ingestion.tf` is now `default`, `shopify` or `woo_generic` instead of a `nat` flag, and
   `Connector.egress` is `dedicated` for WooCommerce and generic. After apply, the runbook (ยง2.1) has the owner
   check one SiteGround store from the new IP and open a SiteGround allowlist ticket for it.
+- **Snowflake share views have upper-case column names (breaking for queries that quote lower-case names).**
+  Marketplace consumers now write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes; before, the views kept
+  the tables' quoted lower-case names and needed `"release_run_date"`. Snowflake compares quoted names exactly, so
+  once the first load after this change recreates the views, a query that quotes a lower-case name fails with
+  `invalid identifier`. Before: `select "release_run_date" from SHARE.COFFEE`. After:
+  `select release_run_date from SHARE.COFFEE` (or `RELEASE_RUN_DATE`, or `"RELEASE_RUN_DATE"`). The tables in
+  `MARKET` keep their names, and the views keep their descriptions in their definition. Columns are compared in any
+  case, and the first load after this change recreates the existing views (`copy grants`) without `--migrate`; a
+  view another role owns is left as it is, with a warning, and the data still loads. The
+  listing's sample queries are unquoted and upper case: query 3 keeps its `EVENT = 'price'` filter, and query 4, a
+  summary by origin, is new.
 
 ### Fixed
 

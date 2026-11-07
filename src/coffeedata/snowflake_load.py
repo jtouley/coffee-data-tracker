@@ -10,6 +10,10 @@ against the export manifest.
 
 After the load, every table and share view gets its description and column descriptions from the public contract
 (contracts/public-catalog.odcs.yaml, read at load time), so the listing's data dictionary is the contract's.
+
+The tables keep the export's lower-case column names (infer_schema keeps the file's case, so they're quoted
+identifiers). The share views, which are what Marketplace consumers query, rename them to upper case, so
+consumers write `RELEASE_RUN_DATE` or `release_run_date` unquoted, as with any Snowflake table.
 """
 
 from __future__ import annotations
@@ -59,6 +63,29 @@ def sql_string(text: str) -> str:
 def _ident(name: str) -> str:
     """A column name as Snowflake reports it, quoted so its case is kept (infer_schema keeps the file's case)."""
     return '"' + name.replace('"', '""') + '"'
+
+
+# Snowflake's reserved keywords (docs: "Reserved & limited keywords"): a share view column named one of these
+# would still need quotes, so none may be.
+_RESERVED = """ACCOUNT ALL ALTER AND ANY AS ASOF BETWEEN BY CASE CAST CHECK COLUMN CONNECT CONNECTION
+    CONSTRAINT CREATE CROSS CURRENT CURRENT_DATE CURRENT_TIME CURRENT_TIMESTAMP CURRENT_USER DATABASE DELETE DISTINCT DROP ELSE
+    EXISTS FALSE FOLLOWING FOR FROM FULL GRANT GROUP GSCLUSTER HAVING ILIKE IN INCREMENT INNER INSERT INTERSECT
+    INTO IS ISSUE JOIN LATERAL LEFT LIKE LOCALTIME LOCALTIMESTAMP MATCH_CONDITION MINUS NATURAL NOT NULL OF ON OR
+    ORDER ORGANIZATION QUALIFY REGEXP REVOKE RIGHT RLIKE ROW ROWS SAMPLE SCHEMA SELECT SET SOME START TABLE
+    TABLESAMPLE THEN TO TRIGGER TRUE TRY_CAST UNION UNIQUE UPDATE USING VALUES VIEW WHEN WHENEVER WHERE WITH"""
+RESERVED = frozenset(_RESERVED.split())
+
+
+def view_column(name: str) -> str:
+    """A share view's name for a column: upper case and unquoted, so consumers can write it in any case without
+    quotes. Raises for a name that would still need quotes (not a plain identifier, or a reserved keyword)."""
+    upper = name.upper()
+    if not re.fullmatch(r"[A-Z_][A-Z0-9_$]*", upper) or upper in RESERVED:
+        raise RuntimeError(
+            f"{name} can't be a share view column that consumers write without quotes (Snowflake would need "
+            f'"{upper}"): rename it in the public contract ({CONTRACT.name})'
+        )
+    return upper
 
 
 def undescribed(columns: list[str], table: str, contract: dict) -> list[str]:
@@ -114,9 +141,10 @@ def view_comments(table: str, columns: list[str], contract: dict) -> list[str]:
 
 def create_view(table: str, columns: list[str], contract: dict) -> str:
     """The share view over a table, with its descriptions in the definition itself, so recreating it can't drop
-    them. Snowflake's order: column list, then COPY GRANTS, then COMMENT =, then AS."""
+    them, and its columns renamed to upper case (`columns` are the table's names, selected quoted).
+    Snowflake's order: column list, then COPY GRANTS, then COMMENT =, then AS."""
     cols = _described(columns, table, contract)
-    listed = ", ".join(f"{_ident(c)} comment {sql_string(d)}" for c, d in cols)
+    listed = ", ".join(f"{view_column(c)} comment {sql_string(d)}" for c, d in cols)
     return (
         f"create or replace secure view SHARE.{SHARE_VIEWS[table]} ({listed}) copy grants "
         f"comment = {sql_string(contract[table][0])} as select {', '.join(_ident(c) for c, _ in cols)} "
@@ -193,21 +221,28 @@ def _view_grants(cur, view: str) -> tuple[str, set[str]]:
     return owner, shares
 
 
-def stale(cur, export_dir: Path) -> tuple[list[str], list[str]]:
-    """Tables and share views whose columns differ from the export. COPY ... match_by_column_name silently loads
-    NULL into a column the file no longer has, and a `select *` secure view keeps the columns it was created
-    with, so neither can be used as is after a public contract change. One that doesn't exist yet doesn't
-    differ: the load creates the table, and admin_setup.sql part 2 the view."""
+def stale(cur, export_dir: Path) -> tuple[list[str], list[str], list[str]]:
+    """Tables and share views whose columns differ from the export, by name in any case (the tables keep the
+    file's lower case, the views are upper case). COPY ... match_by_column_name silently loads NULL into a column
+    the file no longer has, and a secure view keeps the columns it was created with, so neither can be used as
+    is after a public contract change. One that doesn't exist yet doesn't differ: the load creates the table, and
+    admin_setup.sql part 2 the view.
+
+    Third, the share views that have the export's columns but not all in upper case (made by admin_setup.sql
+    part 2's `select *`, or before the views were upper case): any load recreates them, no migration needed."""
     import pyarrow.parquet as pq
 
-    tables, views = [], []
+    tables, views, recase = [], [], []
     for t in PUBLIC_TABLES:
         want = sorted(c.upper() for c in pq.read_schema(export_dir / f"{t}.parquet").names)
         if (have := _columns(cur, SCHEMA, t)) and have != want:
             tables.append(t)
-        if (have := _columns(cur, "SHARE", SHARE_VIEWS[t])) and have != want:
-            views.append(t)
-    return tables, views
+        if names := _column_names(cur, "SHARE", SHARE_VIEWS[t]):
+            if sorted(c.upper() for c in names) != want:
+                views.append(t)
+            elif any(c != c.upper() for c in names):
+                recase.append(t)
+    return tables, views, recase
 
 
 def statements(table: str, run_path: str) -> list[str]:
@@ -262,8 +297,10 @@ def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = Fals
     version), nothing is loaded unless `migrate`. Then the role must own the share views; the files are uploaded
     first, the differing tables are dropped and loaded fresh, and every share view is recreated with `copy grants`,
     so the share never loses one. Each step can be repeated, so a migration that failed partway is finished by
-    running it again. `dry_run` changes nothing: it runs only the checks' reads and returns them (tables, share
-    views, owners, grants), any refusal, and the statements the load would run."""
+    running it again. A share view with the export's columns but not all in upper case is recreated by any load,
+    after the same ownership and share checks; if another role owns it, a load (not a migration) warns, leaves it
+    as it is and loads the data. `dry_run` changes nothing: it runs only the checks' reads and returns them
+    (tables, share views, owners, grants), any refusal, and the statements the load would run."""
     manifest = json.loads((export_dir / "manifest.json").read_text())
     exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
     run_path = f"run={manifest['as_of_run']}/exported={exported}"
@@ -297,8 +334,10 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
 
     contract = contract_descriptions()
     order = {t: pq.read_schema(export_dir / f"{t}.parquet").names for t in PUBLIC_TABLES}
-    for t in PUBLIC_TABLES:  # every column gets a description, or nothing is loaded (or even created)
+    for t in PUBLIC_TABLES:  # every column gets a description and an unquoted view name, or nothing is loaded
         _described(order[t], t, contract)
+        for c in order[t]:
+            view_column(c)
 
     cur.execute(f"create schema if not exists {SCHEMA}")
     cur.execute(f"create file format if not exists {SCHEMA}.PARQUET_FF type = parquet")
@@ -307,14 +346,19 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
         "comment = 'Weekly facts-only exports, one folder per run'"
     )
     # Everything is checked before anything changes, so a mismatch never leaves Snowflake half on the new export.
-    tables, views = stale(cur, export_dir)
+    tables, views, recase = stale(cur, export_dir)
     if (tables or views) and not migrate:
         raise RuntimeError(
             f"{', '.join(dict.fromkeys(tables + views))} in Snowflake have different columns from the export: "
             "the public contract changed. Nothing was loaded. Run `coffeedata load-snowflake --migrate` (or "
             "the weekly workflow with only `snowflake_migrate` set) to recreate those tables and the share views."
         )
-    present = [t for t in PUBLIC_TABLES if migrate and _columns(cur, "SHARE", SHARE_VIEWS[t])]
+    # The views to recreate: a migration recreates every existing one, any load those not yet in upper case.
+    present = [
+        t for t in PUBLIC_TABLES if t in recase or (migrate and _columns(cur, "SHARE", SHARE_VIEWS[t]))
+    ]
+    # Lower-case views another role owns: a load (not a migration) leaves them as they are.
+    skipped: set[str] = set()
     if present:  # checked first, so a migration that can't finish changes nothing
         role = str(cur.execute("select current_role()").fetchone()[0]).upper()
         grants = {}
@@ -329,8 +373,18 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
                     "another role",
                     set(),
                 )  # only a role with rights on the view can list its grants
-        for t, (owner, _) in grants.items():
-            if owner != role:
+        for t, (owner, _) in list(grants.items()):
+            if owner != role and not migrate:  # only a re-case: never worth holding back the week's data
+                print(
+                    f"warning: SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so its columns stay lower "
+                    f"case and its descriptions aren't updated this load. To fix it, its owner (or ACCOUNTADMIN) "
+                    f"runs: grant ownership on view SHARE.{SHARE_VIEWS[t]} to role {role} copy current grants",
+                    file=sys.stderr,
+                )
+                del grants[t]
+                present.remove(t)
+                skipped.add(t)
+            elif owner != role:
                 raise RuntimeError(
                     f"SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so {role} can't recreate it. "
                     f"Nothing was changed. Its owner (or ACCOUNTADMIN) can give it back, keeping its grants: "
@@ -375,12 +429,17 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
     for table in PUBLIC_TABLES:
         for sql in table_comments(table, as_exported(_column_names(cur, SCHEMA, table), table), contract):
             cur.execute(sql)
-    # Every existing view, not only the changed ones: one left over from a failed migration is rebuilt too.
-    # Views that don't exist yet are left to admin_setup.sql part 2 (the next load describes them).
+    # A migration rebuilds every existing view, not only the changed ones: one left over from a failed migration
+    # is rebuilt too. Views that don't exist yet are left to admin_setup.sql part 2; the next load recreates them
+    # with upper-case columns and their descriptions.
     for table in present:
         cur.execute(create_view(table, as_exported(_column_names(cur, SCHEMA, table), table), contract))
-    for table in PUBLIC_TABLES:  # the views a migration didn't just recreate with their descriptions
-        if table not in present and (names := _column_names(cur, "SHARE", SHARE_VIEWS[table])):
+    for table in PUBLIC_TABLES:  # the views this load didn't just recreate with their descriptions
+        if (
+            table not in present
+            and table not in skipped
+            and (names := _column_names(cur, "SHARE", SHARE_VIEWS[table]))
+        ):
             for sql in view_comments(table, names, contract):  # only the columns it has
                 cur.execute(sql)
 
