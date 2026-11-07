@@ -302,3 +302,4 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - #125 (admin) fixed after final review (owner-lockout regression); held behind #124, which waits on cutover2.sh.
 
 - 2026-11-07 (owner): scope is who sells coffee where (roasters and bean sellers). The cafe -> "serves X's beans" link is a much-later idea, not now. Cafes enter discovery only as candidates admitted when they sell coffee online.
+- 2026-11-07 (owner, refined): the registry is actual roasters only. Cafes and resellers are out; revisit cafes as a future item. Widening discovery to coffee_shop/cafe tags only serves to find mis-tagged roasters (e.g. Rival Bros).
