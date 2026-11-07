@@ -25,6 +25,11 @@ schema:
   description: 'Ops: one row per roaster the build''s run should have tried, and how its fetch went (dbt run_completeness,
     as the build saw it).'
   properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
   - name: run_date
     logicalType: date
     physicalType: date32[day]
@@ -125,6 +130,11 @@ schema:
   description: 'Ops: every row the build''s public tables add, remove or change against the release served before it, with
     the reason (dbt release_changes); empty when nothing was served.'
   properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
   - name: table_name
     logicalType: string
     physicalType: string
@@ -180,6 +190,11 @@ schema:
   description: 'Ops: every product a store lists, coffee or not, as of its latest record, with the build''s coffee decision,
     what decided it and why (dbt product_decisions).'
   properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
   - name: coffee_id
     logicalType: string
     physicalType: string
@@ -320,6 +335,6 @@ customProperties:
   value:
   - the owner's command center (admin.registry.coffee)
 - property: interfaceFingerprint
-  value: ddae9db92e762ca6
+  value: 106a5474e48e89c2
 - property: docsFingerprint
-  value: 8a6dad74e0d47699
+  value: 19ca94645995c7c0

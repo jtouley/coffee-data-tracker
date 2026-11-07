@@ -137,8 +137,10 @@ COLUMNS: dict[str, dict[str, str]] = {
 }
 
 _OPS_RUN = "The run the build judged (as_of_run, else the latest run)."
+_OPS_BUILD = "The build that wrote it (builds.build_id, the folder's build=<id>): every row names its build."
 COLUMNS |= {
     "run_completeness": {
+        "build_id": _OPS_BUILD,
         "run_date": _OPS_RUN,
         "roaster_id": "A roaster the run should have tried.",
         "attempted": "The run has a fetch for it.",
@@ -154,12 +156,14 @@ COLUMNS |= {
         "challenge": "The edge whose challenge it failed behind (siteground or cloudflare); null otherwise.",
     },
     "release_changes": {
+        "build_id": _OPS_BUILD,
         "table_name": "The public table, or 'release' when the served release couldn't be read.",
         "item": "The row's key in that table; for a schema row the missing column or table.",
         "change": "added, removed, changed, schema or not_reconciled.",
         "reason": "Why, from the two releases and the build; unexplained when nothing shows why.",
     },
     "product_decisions": {
+        "build_id": _OPS_BUILD,
         "coffee_id": "<roaster domain>:<store product id> (dim_coffee's key, for the ones that are coffee).",
         "roaster_id": _ROASTER,
         "product_id": "The store's product id.",

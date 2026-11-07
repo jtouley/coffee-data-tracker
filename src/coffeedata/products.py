@@ -51,7 +51,7 @@ def decide_why(it: CatalogItem, label: str | None) -> tuple[bool, str, str]:
     exclusion = classify.exclusion(it)
     if label in ("coffee", "not_coffee") and exclusion is None:
         return label == "coffee", "claude", f"verdict:{label}"
-    is_coffee, why = (False, f"excluded:{exclusion}") if exclusion else classify.decision(it)
+    is_coffee, why = classify.decision(it, exclusion)  # the exclusions ran once, above
     return is_coffee, "rules", why
 
 

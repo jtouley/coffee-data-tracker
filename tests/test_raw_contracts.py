@@ -225,7 +225,9 @@ def test_ops_tables_follow_the_ops_contract(tmp_path, caplog):
     for t in ("run_completeness", "product_decisions"):  # release_changes didn't build
         con.register("src", pa.Table.from_pylist([{}], schema=SCHEMAS[t]))
         # columns in another order and an extra one: the file still has the contract's, in its order
-        con.execute(f"create table {t} as select 'x' as extra, * exclude (roaster_id), roaster_id from src")
+        con.execute(
+            f"create table {t} as select 'x' as extra, * exclude (build_id, roaster_id), roaster_id from src"
+        )
         con.unregister("src")
     written = quality.write_ops(lake, con, "2026-11-02", "b1")
     assert written == {"run_completeness": 1, "product_decisions": 1}
@@ -239,6 +241,7 @@ def test_ops_tables_follow_the_ops_contract(tmp_path, caplog):
         )
         assert pq.read_schema(f).remove_metadata() == SCHEMAS[t], t
         assert pq.read_schema(f).names == _cols("ops", t)
+        assert pq.read_table(f).column("build_id").to_pylist() == ["b1"]  # every row names its build
     # immutable, like the release: a second write of the same build's table is refused (and logged)
     assert quality.write_ops(lake, con, "2026-11-02", "b1") == {}
 

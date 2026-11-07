@@ -33,7 +33,7 @@ import pyarrow as pa
 import yaml
 
 from . import contract_docs
-from .lake import FETCH_STATUSES, GLOBS, SCHEMAS
+from .lake import FETCH_STATUSES, GLOBS, OPS_GLOBS, SCHEMAS
 from .models import CatalogItem
 
 # The repo's contracts/internal/: this assumes a source or editable install, which is fine because only the
@@ -167,7 +167,7 @@ def _table(name: str, table: str, values: dict[str, list[str]]) -> dict:
         "description": contract_docs.TABLES[table],
         "properties": props,
         **({"quality": quality} if quality else {}),
-        "customProperties": [{"property": "lakeGlob", "value": GLOBS[table]}],
+        "customProperties": [{"property": "lakeGlob", "value": (GLOBS | OPS_GLOBS)[table]}],
     }
 
 

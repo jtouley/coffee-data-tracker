@@ -348,11 +348,14 @@ SCHEMAS: dict[str, pa.Schema] = {
         ]
     ),
     # The ops tables: what each build saw, written beside its release (releases/.../build=<id>/ops/<table>.parquet,
-    # quality.OPS_TABLES) for the owner's command center. Copied from the build's dbt models, cast to these schemas;
-    # never served, exported, published as public tables or read by dbt, and with no schema file (no lake glob over
-    # an empty lake needs one). contracts/internal/ops.odcs.yaml is their contract.
+    # quality.OPS_TABLES) for the owner's command center. Copied from the build's dbt models with the build's id
+    # first (every row says which build it is, however the files are read), cast to these schemas; never served,
+    # exported, published as public tables or read by dbt. Not Lake tables: no GLOBS entry or schema file, so
+    # Lake.scan never reads them; quality.ops_files(lake, build_id) finds one build's (OPS_GLOBS: all builds').
+    # contracts/internal/ops.odcs.yaml is their contract.
     "run_completeness": pa.schema(
         [
+            ("build_id", pa.string()),
             ("run_date", pa.date32()),
             ("roaster_id", pa.string()),
             ("attempted", pa.bool_()),
@@ -370,6 +373,7 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     "release_changes": pa.schema(
         [
+            ("build_id", pa.string()),
             ("table_name", pa.string()),
             ("item", pa.string()),
             ("change", pa.string()),
@@ -378,6 +382,7 @@ SCHEMAS: dict[str, pa.Schema] = {
     ),
     "product_decisions": pa.schema(
         [
+            ("build_id", pa.string()),
             ("coffee_id", pa.string()),
             ("roaster_id", pa.string()),
             ("product_id", pa.string()),
@@ -546,10 +551,6 @@ GLOBS = {
     "run_manifests": "run_manifests/*/*.parquet",
     "job_manifests": "job_manifests/*/*.parquet",
     "serving_log": "serving_log/*.parquet",
-    # The ops tables, across every build (no schema files: see SCHEMAS).
-    "run_completeness": "releases/*/*/ops/run_completeness.parquet",
-    "release_changes": "releases/*/*/ops/release_changes.parquet",
-    "product_decisions": "releases/*/*/ops/product_decisions.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -557,6 +558,11 @@ GLOBS = {
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
+}
+# The ops tables' files across every build (see SCHEMAS): for a reader that globs them itself, with
+# hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
+OPS_GLOBS = {
+    t: f"releases/*/*/ops/{t}.parquet" for t in ("run_completeness", "release_changes", "product_decisions")
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {

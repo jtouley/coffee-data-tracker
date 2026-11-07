@@ -281,7 +281,7 @@ def cmd_classify(args: argparse.Namespace) -> None:
             got = verdict.collect(lake, args.run_date)
             out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
             waiting &= verdict.open_batch_ids(lake)
-    except Exception as e:
+    except BaseException as e:  # a crash, or an interrupt in the wait: the end row says the attempt failed
         control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
         raise
     err = out["submit"].get("error")

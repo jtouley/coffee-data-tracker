@@ -199,16 +199,20 @@ def record_build(
 
 def write_ops(lake: Lake, con, run_date: str, build_id: str) -> dict[str, int]:
     """Write this build's ops tables (OPS_TABLES) beside its release, each exactly its contract's columns cast to
-    lake.SCHEMAS; returns {table: rows} for those written. One that can't be (a model that didn't build, a column
+    lake.SCHEMAS, the build's id first; returns {table: rows} for those written. One that can't be (a model that didn't build, a column
     the contract doesn't match) is logged and left out: only a record, so it never changes the verdict."""
+    import pyarrow as pa
+
     from .lake import SCHEMAS
 
     out = {}
     for t in OPS_TABLES:
         schema = SCHEMAS[t]
         try:
-            cols = ", ".join(f'"{c}"' for c in schema.names)
-            table = con.sql(f"select {cols} from {t}").to_arrow_table().cast(schema)
+            cols = ", ".join(f'"{c}"' for c in schema.names[1:])  # build_id is this build's, not the model's
+            table = con.sql(f"select {cols} from {t}").to_arrow_table()
+            table = table.add_column(0, "build_id", pa.array([build_id] * table.num_rows, pa.string()))
+            table = table.cast(schema)
             lake.write_ops(t, run_date, build_id, table)
         except Exception as e:  # noqa: BLE001 - duckdb.Error (no model), pyarrow's cast errors, an existing file
             log.warning("release %s: ops table %s not written: %s", build_id, t, e)

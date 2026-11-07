@@ -150,7 +150,7 @@ def exclusion(item: CatalogItem) -> str | None:
         ("subscription", lambda: _SUBSCRIPTION.search(title) or _SUBSCRIPTION_TYPE.search(ptype)),
         ("green_coffee", lambda: _GREEN_TITLE.search(title) or _GREEN_META.search(ptype)),
         ("not_coffee_type", lambda: _NOT_COFFEE_TYPE.search(ptype)),
-        ("tea_type", lambda: _TEA_META.search(ptype) and not re.search(r"\bcoffee\b", ptype, re.I)),
+        ("tea_meta", lambda: _TEA_META.search(ptype) and not re.search(r"\bcoffee\b", ptype, re.I)),
         ("other_type", lambda: _OTHER_META.search(ptype)),
         ("tag", lambda: any(_TAG.fullmatch(t.strip()) for t in item.tags)),
     )
@@ -168,11 +168,16 @@ def is_coffee(item: CatalogItem) -> bool:
     return decision(item)[0]
 
 
-def decision(item: CatalogItem) -> tuple[bool, str]:
+_UNSET = object()
+
+
+def decision(item: CatalogItem, excluded_by: str | None | object = _UNSET) -> tuple[bool, str]:
     """The rules' answer and the rule that gave it: excluded:<rule> (exclusion), sauce, sweets or drinks (not
     coffee); coffee_words, country, demonym or coffee_type (coffee); else signals:<n>, the count of the four
-    independent signals (coffee at two or more). Only an explanation: is_coffee is this answer."""
-    if (why := exclusion(item)) is not None:
+    independent signals (coffee at two or more). Only an explanation: is_coffee is this answer. `excluded_by` is
+    exclusion(item) when the caller already has it, so the exclusions run once."""
+    why = exclusion(item) if excluded_by is _UNSET else excluded_by
+    if why is not None:
         return False, f"excluded:{why}"
     title, ptype = item.title, item.product_type
     head = f"{title} | {ptype}"

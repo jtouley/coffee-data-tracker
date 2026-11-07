@@ -939,8 +939,10 @@ uv run coffeedata build-hashes $BUILD --verify
 
 `tables` lists each release table's rows and hash. `--verify` re-hashes the release files in the dataset and fails
 (exit 1) if any no longer matches the record: the release was damaged or replaced after its build. `inputs` is what a
-rebuild has to match: `run_date`, `git_sha`, `package_versions` and `dbt_vars.verdict_model`. A Cloud Run build has
-no git checkout, so its `git_sha` is null. Its code is the image the build job ran: read it from the execution
+rebuild has to match: `run_date`, `git_sha`, `package_versions`, `ci_run_url` and `dbt_vars.verdict_model`. An
+Actions build has a `ci_run_url`; a Cloud Run build has none. A Cloud Run build's `git_sha` is the commit its image
+was built from (`--build-arg GIT_SHA`, §1), `unknown` for an image built without it, or null for a build recorded
+before images carried it. Either way its code is the image the build job ran, not a checkout: read it from the execution
 (`gcloud run jobs executions describe <execution> --region $REGION
 --format='value(spec.template.spec.containers[0].image)'`, with the execution found as in §5's log commands, on the
 build's day).
@@ -979,12 +981,12 @@ fails.
 
 **4. Rebuild with the build's code**, on the local copy only. Unset `HF_TOKEN` first, so nothing can reach the
 dataset. Don't run `classify`: the stored verdicts are part of the input, and asking Claude again would change them.
-- `git_sha` set (an Actions build): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
+- An Actions build (`ci_run_url` set): `git worktree add $V/code <git_sha> && cd $V/code && uv sync --frozen`, then
   ```sh
   env -u HF_TOKEN TZ=UTC COFFEEDATA_LAKE=$V/lake COFFEEDATA_VERDICT_MODEL=<inputs.dbt_vars.verdict_model> \
     uv run coffeedata build --run-date $RUN_DATE --db $V/coffee.duckdb
   ```
-- A Cloud Run build: run the same image, with the copy mounted:
+- A Cloud Run build (no `ci_run_url`, whatever its `git_sha`): run the same image, with the copy mounted:
   ```sh
   chmod -R a+rwX $V
   docker run --rm -v $V:/verify -e COFFEEDATA_LAKE=/verify/lake -e COFFEEDATA_VERDICT_MODEL=<verdict model> \
