@@ -15,12 +15,21 @@ Rules for using it:
 
 `pred_rules.json` holds the rules' predictions as of commit c021723, frozen before any score was taken.
 
-**Running total (CLAUDE.md step 9):** 0 products whose `is_coffee` changed, counted from the change that started
-this total; changes before it weren't counted. Add each later change's count here.
+**Running total (CLAUDE.md step 9):** 0 products whose `is_coffee` changed since the last full evaluation, which is
+the 2026-10-28 sealed score of Claude's verdicts (`RESULTS.md`). Add each later change's count here.
 - decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
   versions, 51 roasters) and the output of `is_coffee` of none: built from main and from the change on a local copy of
   the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were identical. 0 of
   them in this sealed set.
+- turning on Claude's verdicts in production (`COFFEEDATA_VERDICT_MODEL=claude-haiku-5-5`, the model scored on this
+  set in `RESULTS.md`; backfill 2026-11-04, release `20261104T041920-5060ad` against the rules-only
+  `20261103T203218-956abd`, same lake otherwise) changed the `is_coffee` of 5,033 products (5,063 versions, 980
+  roasters): 3,765 from coffee to not coffee and 1,268 from not coffee to coffee. In `public_coffee` 3,757 coffees
+  left and 1,255 entered (42,524 rows, from 45,026). Counted on a local copy of the lake by running the rules and
+  `products.decide` over every product version, with and without the stored verdicts. 31 of them are in this sealed
+  set. Counted as **0** toward the total: this is the change fully evaluated here on 2026-10-28, put into production.
+ 
+  The 5,033 are kept as a record of its production impact.
 - `coffee` winning a tie between two verdicts stored in the same second (`stg_verdicts`, `verdict-tie-prefers-coffee`)
   changed **0** products: on a read-only copy of the lake's `verdicts` (2026-11-06: 62,235 rows, all
   `claude-haiku-5-5`, definition `e45965cf2582`) every `input_hash` has one verdict, so there is no tie to break.
