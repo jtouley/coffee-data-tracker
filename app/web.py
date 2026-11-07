@@ -121,13 +121,14 @@ def middleware(
             response = await call_next(request)
         except Exception:  # noqa: BLE001 - shown as the error screen; logged by on_error
             response = await on_error(request)
-        # Private unless RequireSession matched the request to a public route.
-        secure_headers(
-            response, request.url.path, private=getattr(request.state, "public", False) is not True
-        )
         acct = getattr(request.state, "renew", None)
         already = any(v.startswith(f"{cookie}=") for v in response.headers.getlist("set-cookie"))
-        if acct is not None and set_cookie is not None and not already:
+        renew = acct is not None and set_cookie is not None and not already
+        # Private unless RequireSession matched the request to a public route, and always when it carries a
+        # session cookie (a sign-in, or a renewal on any route).
+        public = getattr(request.state, "public", False) is True and not (already or renew)
+        secure_headers(response, request.url.path, private=not public)
+        if renew and set_cookie is not None:
             set_cookie(response, acct)
         return response
 

@@ -87,9 +87,8 @@ def not_configured(missing: list[str]) -> FastAPI:
     """What the hosted app shows until its secrets are set: their names, never their values."""
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     text = (
-        "This app isn't set up yet. Set these (Secret Manager, see docs/app/RUNNING.md), then deploy again: "
-        + ", ".join(missing)
-        + "."
+        "This app isn't set up yet. Fix these settings (Secret Manager, see docs/app/RUNNING.md), then deploy "
+        "again: " + ", ".join(missing) + "."
     )
 
     @app.middleware("http")
@@ -141,7 +140,7 @@ def create_app(
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
     # Default deny: outside the body limit, so a signed-out request is refused before its body is read.
-    app.add_middleware(RequireSession, routes=lambda: app.router.routes, auth=auth)
+    app.add_middleware(RequireSession, routes=lambda: app.router.routes, auth=auth, tag=logs.set_user)
 
     async def on_error(request: Request) -> Response:
         log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
@@ -353,15 +352,12 @@ def create_app(
         if current_user(auth, request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        # A cookie that no longer signs anyone in: say why they're here. One that ended (expired, signed out
-        # elsewhere, a new secret) is cleared, so this shows once; a failed check is kept to try again.
+        # A cookie that no longer signs anyone in: say why they're here. It's left alone (signing in replaces
+        # it): during a deploy a new revision may not know an account the old one just made.
         ended = None
         if request.cookies.get(COOKIE):
             ended = "failed" if getattr(request.state, "auth_failed", False) else "ended"
-        response = page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
-        if ended == "ended":
-            s.clear_cookie(response)
-        return response
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:

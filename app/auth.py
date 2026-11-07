@@ -8,7 +8,6 @@ out."""
 
 from __future__ import annotations
 
-import json
 import logging
 import os
 from collections.abc import Callable, Iterable
@@ -16,6 +15,8 @@ from dataclasses import dataclass
 from typing import Any, Protocol
 
 from fastapi import Request, Response
+from fastapi.responses import JSONResponse, RedirectResponse
+from starlette.requests import HTTPConnection
 from starlette.routing import BaseRoute, Match
 
 from coffeedata import shots
@@ -54,12 +55,12 @@ class User:
 
 
 class Auth(Protocol):
-    def user(self, request: Request) -> User | None:
+    def user(self, request: HTTPConnection) -> User | None:
         """The signed-in user, or None. Never read from the request body."""
         ...
 
 
-def current_user(auth: Auth, request: Request) -> User | None:
+def current_user(auth: Auth, request: HTTPConnection) -> User | None:
     """The signed-in user, worked out once per request. Any error on the way (a bad secret, a failed read) counts
     as signed out: logged, never shown."""
     state = request.state
@@ -85,33 +86,45 @@ def public_route(routes: Iterable[BaseRoute], scope: dict[str, Any]) -> bool:
 
 
 class RequireSession:
-    """Default deny: a request for anything but a PUBLIC route needs a signed-in user before the route (or its
-    body) is read. Signed out, a page asked for by a browser goes to sign-in; anything else answers 401. Marks the
-    request public or private for the cache headers (web.middleware)."""
+    """Default deny: a request (or a WebSocket) for anything but a PUBLIC route needs a signed-in user before the
+    route, or its body, is read. Signed out, a screen goes to sign-in, the API answers 401 and a WebSocket is
+    closed. Marks the request public or private for the cache headers (web.middleware) and tags its log line with
+    the user."""
 
-    def __init__(self, app: Callable, routes: Callable[[], Iterable[BaseRoute]], auth: Auth):
-        self.app, self.routes, self.auth = app, routes, auth
+    def __init__(
+        self,
+        app: Callable,
+        routes: Callable[[], Iterable[BaseRoute]],
+        auth: Auth,
+        tag: Callable[[str], None] | None = None,
+    ):
+        self.app, self.routes, self.auth, self.tag = app, routes, auth, tag
 
     async def __call__(self, scope: dict, receive: Callable, send: Callable) -> None:
-        if scope["type"] != "http":
+        if scope["type"] not in ("http", "websocket"):
             return await self.app(scope, receive, send)
-        request = Request(scope)
+        conn = HTTPConnection(scope)
         try:
             public = public_route(self.routes(), scope)
         except Exception:  # noqa: BLE001 - fail closed
             log.exception("matching %s to a route failed", scope.get("path"))
             public = False
-        request.state.public = public
-        if public or current_user(self.auth, request) is not None:
+        conn.state.public = public
+        user = None if public else current_user(self.auth, conn)
+        if user is not None and self.tag is not None:
+            self.tag(user.user_id)
+        if public or user is not None:
             return await self.app(scope, receive, send)
-        await signed_out(request)(scope, receive, send)
+        if scope["type"] == "websocket":
+            return await send({"type": "websocket.close", "code": 1008})
+        await signed_out(Request(scope))(scope, receive, send)
 
 
 def signed_out(request: Request) -> Response:
     """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401."""
     if request.method in ("GET", "HEAD") and not request.url.path.startswith("/api/"):
-        return Response(status_code=303, headers={"Location": "/signin"})
-    return Response(json.dumps({"detail": "sign in first"}), 401, media_type="application/json")
+        return RedirectResponse("/signin", 303)
+    return JSONResponse({"detail": "sign in first"}, 401)
 
 
 class LocalOwner:
@@ -133,7 +146,7 @@ class LocalOwner:
             "owner",
         )
 
-    def user(self, request: Request) -> User | None:
+    def user(self, request: HTTPConnection) -> User | None:
         return self.owner
 
 
@@ -145,7 +158,7 @@ class Sessions:
     def __init__(self, accounts: Accounts, secure: bool = True):
         self.accounts, self.secure = accounts, secure
 
-    def user(self, request: Request) -> User | None:
+    def user(self, request: HTTPConnection) -> User | None:
         hit = self.accounts.session(request.cookies.get(COOKIE))
         if hit is None:
             return None
@@ -207,8 +220,8 @@ def missing_secrets() -> list[str]:
     if hosted():
         need["HF_TOKEN"] = 1  # the hosted app writes to Hugging Face datasets
     missing = [k for k, n in need.items() if len(os.environ.get(k, "")) < n]
-    if hosted() and os.environ.get("COFFEEDATA_INSECURE_COOKIES"):
-        missing.append("COFFEEDATA_INSECURE_COOKIES (unset it: cookies are always Secure on a public host)")
+    if hosted() and os.environ.get("COFFEEDATA_INSECURE_COOKIES") == "1":
+        missing.append("COFFEEDATA_INSECURE_COOKIES (remove it: cookies are always Secure on a public host)")
     return missing
 
 

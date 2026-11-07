@@ -5,9 +5,11 @@ import re
 import time
 
 import pytest
+from fastapi import WebSocket
 from fastapi.routing import APIRoute
 from fastapi.testclient import TestClient
 from starlette.routing import Mount
+from starlette.websockets import WebSocketDisconnect
 
 from app import photos
 from app.accounts import Accounts
@@ -100,6 +102,38 @@ def test_routes_added_later_are_private_too(lake, users, photo_lake):
     assert c.get("/later").json() == {"secret": 1}
 
 
+def test_websockets_need_a_session_too(lake, users, photo_lake):
+    app = make(lake, users, photo_lake)
+
+    async def echo(ws: WebSocket) -> None:
+        await ws.accept()
+        await ws.send_text("hello")
+        await ws.close()
+
+    app.add_api_websocket_route("/ws", echo)
+    c = client(app)
+    with pytest.raises(WebSocketDisconnect) as closed, c.websocket_connect("/ws"):
+        pass
+    assert closed.value.code == 1008
+    sign_in(c)
+    cookie = {
+        "cookie": f"session={c.cookies['session']}"
+    }  # the test client's ws:// wouldn't send a Secure one
+    with c.websocket_connect("/ws", headers=cookie) as ws:
+        assert ws.receive_text() == "hello"
+
+
+def test_requests_let_through_are_logged_with_their_user(lake, users, photo_lake, caplog):
+    app = make(lake, users, photo_lake)
+    app.add_api_route("/later", lambda: {"ok": True})  # no Me dependency: only the middleware knows the user
+    c = client(app)
+    sign_in(c)
+    caplog.set_level("INFO", logger="app.access")
+    c.get("/later")
+    line = next(r for r in caplog.records if r.name == "app.access" and r.fields["route"] == "/later")
+    assert line.fields["user_id"] == "owner"
+
+
 def test_public_routes_answer_signed_out(lake, users, photo_lake):
     c = client(make(lake, users, photo_lake))
     for path in ("/health", "/healthz", "/signin", "/join", "/reset", "/offline", "/sw.js", "/robots.txt",
@@ -175,9 +209,23 @@ def test_expired_and_foreign_sessions_go_to_sign_in(lake, users, photo_lake):
         assert c.post("/api/shots", json={}, headers=W).status_code == 401
         r = c.get("/signin")
         assert r.status_code == 200 and "You’ve been signed out. Sign in again" in r.text
-        assert 'session=""' in r.headers["set-cookie"]  # the dead cookie goes, so the notice shows once
-        assert "signed out" not in c.get("/signin").text
+        assert "set-cookie" not in r.headers  # left alone: signing in replaces it
     assert "signed out" not in client(app).get("/signin").text  # never signed in: no notice
+
+
+def test_any_response_carrying_a_session_cookie_is_private(lake, users, photo_lake):
+    acc = accounts(users)
+    app = make(lake, users, photo_lake, Sessions(acc))
+    c = client(app)
+    body = {"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW}
+    r = c.post("/api/signin", json=body, headers=W)  # a public route that signs someone in
+    assert "session=" in r.headers["set-cookie"] and r.headers["cache-control"] == "no-store, private"
+    # A cookie due for renewal, on a public route that looks at it (/signin sends the signed-in home).
+    due = client(app)
+    due.cookies.set("session", acc.issue(acc.by_name("jtouley"), now=time.time() - 2 * 86400))
+    r = due.get("/signin")
+    assert r.headers["location"] == "/" and "session=" in r.headers["set-cookie"]
+    assert r.headers["cache-control"] == "no-store, private" and "Cookie" in r.headers["vary"]
 
 
 def test_photos_and_signed_in_pages_are_never_stored(lake, users, photo_lake):
@@ -218,3 +266,6 @@ def test_insecure_cookies_are_refused_when_hosted(monkeypatch, tmp_path):
     monkeypatch.setenv("COFFEEDATA_USERS", str(tmp_path / "users"))
     r = TestClient(create_app(lake=Lake(str(tmp_path / "lake")))).get("/signin")
     assert r.status_code == 503 and "COFFEEDATA_INSECURE_COOKIES" in r.text
+    monkeypatch.setenv("COFFEEDATA_INSECURE_COOKIES", "0")  # only "1" turns it on, so only "1" is refused
+    c = TestClient(create_app(lake=Lake(str(tmp_path / "lake"))), base_url="https://testserver")
+    assert c.get("/signin").status_code == 200

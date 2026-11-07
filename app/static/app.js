@@ -1725,6 +1725,12 @@ document.addEventListener("DOMContentLoaded", () => {
   if (theme) preference(theme, "theme", "auto");
   const hand = document.querySelector("[data-hand-choice]");
   if (hand) preference(hand, "hand", "right");
+  // On the sign-in screen nobody is signed in, however the last session ended (signed out, expired, ended on
+  // another phone): the pages kept for offline use held that person's data, so they go too.
+  if (document.getElementById("signin")) {
+    globalThis.caches?.delete("pages").catch(() => { /* nothing kept */ });
+    navigator.serviceWorker?.controller?.postMessage("signed-out");
+  }
   for (const id of ["signin", "join", "reset", "agree-form"]) {
     const f = document.getElementById(id);
     if (f) accountForm(f);
