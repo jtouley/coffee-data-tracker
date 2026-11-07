@@ -133,13 +133,31 @@ jobs:
       id-token: write  # for Workload Identity Federation
     env:
       REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
     steps:
-      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+      # Checked again here: if the admin environment ever gets a required reviewer, approvals can come out of
+      # order, and an older image must not replace a newer one.
+      - name: Is this commit still main's tip?
+        id: tip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
+          if [ "$tip" = "$HEAD_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Not deploying the admin at $HEAD_SHA: main has moved on to $tip, whose own run deploys it."
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.tip.outputs.current == 'true'
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
           workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
           service_account: ${{ vars.GCP_DEPLOY_SA }}
-      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - if: steps.tip.outputs.current == 'true'
+        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
       - name: Deploy
+        if: steps.tip.outputs.current == 'true'
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
           IMAGE_REF: ${{ needs.deploy.outputs.image }}
