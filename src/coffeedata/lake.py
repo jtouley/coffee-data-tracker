@@ -694,13 +694,25 @@ def new_batch_id(now: datetime | None = None) -> str:
     return f"{now:%Y%m%dT%H%M%S}-{secrets.token_hex(3)}"
 
 
+class ReadOnlyLake(PermissionError):
+    """A write was asked of a Lake opened read-only (Lake(read_only=True)): the admin's lake, which only reads."""
+
+
 class Lake:
     def __init__(
-        self, url: str | None = None, staging: str | Path | None = None, tables: tuple[str, ...] | None = None
+        self,
+        url: str | None = None,
+        staging: str | Path | None = None,
+        tables: tuple[str, ...] | None = None,
+        read_only: bool = False,
     ):
+        """`read_only`: a reader's lake (the admin's). Nothing is created or written, not even the schema files
+        ensure_schemas would add, and every write method raises ReadOnlyLake. A remote one reads only the remote
+        lake, never a staging folder."""
         self.url = (url or os.environ.get("COFFEEDATA_LAKE") or DEFAULT_URL).rstrip("/")
         self.tables = tables or LAKE_TABLES
         self.remote = self.url.startswith("hf://")
+        self.read_only = read_only
         self.root = (
             Path(staging or os.environ.get("COFFEEDATA_STAGING", "build/lake-staging"))
             if self.remote
@@ -708,7 +720,12 @@ class Lake:
         )
         self._publishing = threading.Lock()
         self._schemas_checked = False
-        self.ensure_schemas()
+        if not read_only:
+            self.ensure_schemas()
+
+    def _writable(self) -> None:
+        if self.read_only:
+            raise ReadOnlyLake(f"{self.url} is open read-only")
 
     @classmethod
     def photos(cls) -> Lake:
@@ -725,6 +742,7 @@ class Lake:
     # --- writing -------------------------------------------------------------------------------------
 
     def ensure_schemas(self) -> None:
+        self._writable()
         for table in self.tables:
             p = self.root / SCHEMA_FILES[table]
             # A zero-row schema file from before a column was added is refreshed in place, so globs always see
@@ -747,6 +765,7 @@ class Lake:
 
     def write(self, table: str, rel: str, rows: list[dict]) -> Path | None:
         """Write rows as a new Parquet file. Refuses to replace an existing file (immutability)."""
+        self._writable()
         if not rows:
             return None
         path = self.root / rel
@@ -772,6 +791,8 @@ class Lake:
 
     def sources(self, table: str) -> list[str]:
         """Globs DuckDB should read for a table: local (staged) files, plus the remote lake if there is one."""
+        if self.read_only and self.remote:  # nothing is staged by a reader: the remote lake only
+            return [f"{self.url}/{GLOBS[table]}"]
         out = [str(self.root / GLOBS[table])]
         if self.remote and self.remote_has(table):
             out.append(f"{self.url}/{GLOBS[table]}")
@@ -799,7 +820,7 @@ class Lake:
                 cur = self.connect().execute(sql.format(self.scan(table), key, key))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-                if self.remote and no_files(e):
+                if self.remote and no_files(e) and not self.read_only:  # a reader stages nothing
                     local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
                     cur = self.connect().execute(sql.format(local, key, key))
                     break
@@ -834,7 +855,7 @@ class Lake:
     def mart_sources(self, name: str) -> list[str]:
         """The weekly derived export of a dbt mart (marts/<name>.parquet), local first."""
         local = self.root / "marts" / f"{name}.parquet"
-        if local.exists() or not self.remote:
+        if (local.exists() and not (self.read_only and self.remote)) or not self.remote:
             return [str(local)]
         return [f"{self.url}/marts/{name}.parquet"]
 
@@ -866,6 +887,7 @@ class Lake:
 
     def write_mart(self, name: str, con, sql: str) -> Path:
         """Export a derived table (replaced every run; the raw tables are the source of truth)."""
+        self._writable()
         path = self.root / "marts" / f"{name}.parquet"
         path.parent.mkdir(parents=True, exist_ok=True)
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
@@ -873,6 +895,7 @@ class Lake:
 
     def write_release(self, name: str, run_date: str, build_id: str, con, sql: str) -> Path:
         """One table of a build's release: immutable, so any release can be served again or diffed later."""
+        self._writable()
         path = self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / f"{name}.parquet"
         if path.exists():
             raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
@@ -882,6 +905,7 @@ class Lake:
 
     def write_ops(self, name: str, run_date: str, build_id: str, table: pa.Table) -> Path:
         """One of a build's ops tables (quality.OPS_TABLES), beside its release under ops/: immutable like it."""
+        self._writable()
         path = (
             self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / "ops" / f"{name}.parquet"
         )
@@ -909,6 +933,7 @@ class Lake:
         process running older code (fewer columns) never replaces a newer schema file. This is checked once per
         process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
         """
+        self._writable()
         if not self.remote:
             return 0
         with self._publishing:

@@ -1,0 +1,53 @@
+{# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone. #}
+{% macro status(word) -%}
+{%- set w = (word or "missing") | string -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "ok", "landed", "served") else "run" if w in ("running", "pending") else "warn" if w in ("deadline", "warn", "partial", "skipped") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+<span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
+{%- endmacro %}
+
+{% macro cup(id="cup-inside") -%}
+<svg class="cup" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+  <clipPath id="{{ id }}"><path d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9z"/></clipPath>
+  <g class="stream"><rect x="22" y="1" width="2.5" height="5" rx="1.25"/><rect x="22" y="10" width="2.5" height="5" rx="1.25"/></g>
+  <g clip-path="url(#{{ id }})"><rect class="pour" x="10" y="19" width="26" height="22"/></g>
+  <path class="rim" d="M11 19h24v12a9 9 0 0 1-9 9h-6a9 9 0 0 1-9-9zM35 23h2.5a4 4 0 0 1 0 8H35M8 44h30"/>
+</svg>
+{%- endmacro %}
+
+{% macro ev(url, text) -%}
+{%- if url %}<a class="ev" href="{{ url }}" rel="noreferrer noopener" target="_blank">{{ text }}</a>{% else %}{{ text }}{% endif -%}
+{%- endmacro %}
+
+{% macro source(files, read_at) -%}
+<p class="src">From {% for f in files %}<code>{{ f }}</code>{{ ", " if not loop.last }}{% endfor %} · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{%- endmacro %}
+
+{% macro served_line(served) -%}
+{%- if served %}
+<dl class="facts">
+  <dt>Serving</dt><dd><code>{{ served.build_id }}</code>, week {{ served.run_date[:10] }}</dd>
+  {% if served.log %}<dt>Served</dt><dd>{{ t(served.log.served_at) }} UTC by {{ served.log.actor or "unknown" }} ({{ served.log.action }}){% if served.log.reason %}: {{ served.log.reason }}{% endif %}</dd>
+  <dt>CI run</dt><dd>{{ ev(served.log.ci_run_url, "the run that served it") if served.log.ci_run_url else "none recorded" }}</dd>{% endif %}
+  <dt>Release folder</dt><dd>{{ ev(served.folder.url, served.folder.path) }}</dd>
+</dl>
+{%- else %}
+<p class="body">Nothing is served yet: <code>marts/release.parquet</code> doesn’t exist.</p>
+{%- endif %}
+{%- endmacro %}
+
+{% macro week_picker(weeks, week, action) -%}
+<form class="picker" method="get" action="{{ action }}">
+  <label class="label" for="week">Week</label>
+  <select id="week" name="week" class="select">{% for w in weeks %}<option value="{{ w }}"{% if w == week %} selected{% endif %}>{{ w }}</option>{% endfor %}</select>
+  <button class="btn secondary inline" type="submit">Show</button>
+</form>
+{%- endmacro %}
+
+{% macro build_picker(builds, build, action, extra={}) -%}
+<form class="picker" method="get" action="{{ action }}">
+  <label class="label" for="build">Build</label>
+  <select id="build" name="build" class="select">{% for b in builds %}<option value="{{ b.build_id }}"{% if b.build_id == build %} selected{% endif %}>{{ b.build_id }} · week {{ b.run_date }} · {{ "passed" if b.passed else "failed" }}</option>{% endfor %}</select>
+  {% for k, v in extra.items() %}<input type="hidden" name="{{ k }}" value="{{ v }}">{% endfor %}
+  <button class="btn secondary inline" type="submit">Show</button>
+</form>
+{%- endmacro %}

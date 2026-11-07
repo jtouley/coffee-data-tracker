@@ -55,3 +55,15 @@ variable "service" {
   type        = string
   default     = "registry-coffee"
 }
+
+variable "admin_domain" {
+  description = "The admin's own hostname (admin.tf): its sign-in origin and passkeys' relying party."
+  type        = string
+  default     = "admin.registry.coffee"
+}
+
+variable "admin_cold_start_min_samples" {
+  description = "Container starts an hour needs before the admin's cold-start alert can fire, so one slow start never pages (docs/design/admin-registry.md §7.1)."
+  type        = number
+  default     = 3
+}
