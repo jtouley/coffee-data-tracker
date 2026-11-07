@@ -219,7 +219,10 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await page.goto(`${base}/release?build=${b2}`);
       await settled(page);
       assert.match(await page.textContent("#changes ~ .answer"), /rows change/);
-      await page.click("#changes ~ .frame table td.n a >> nth=0");
+      // 20 rows or fewer: the rows alone, no counts table above them
+      assert.ok(await page.isVisible(".frame[aria-label=Rows]"));
+      assert.equal(await page.locator(".frame[aria-label=Counts]").count(), 0);
+      await page.goto(`${base}/release?build=${b2}&table=public_coffee#changes`);
       await settled(page);
       assert.match(await page.textContent("main"), /show all/);
       await shoot(page, "release-changes-filtered");

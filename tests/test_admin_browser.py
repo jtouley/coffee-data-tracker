@@ -200,7 +200,6 @@ def test_admin_actions_in_a_browser(tmp_path, built, pg_server):
     from admin.controlplane import ControlPlane, url_connect
 
     from .admin_fakes import FakeJobs, Pipeline
-
     from .admin_fixture import flag_served_build
 
     lake = tmp_path / "lake"

@@ -118,7 +118,7 @@ dialog .btn.danger { background: var(--danger); color: var(--paper); border-colo
 .bulk { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
   background: var(--panel); border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 0.9375rem; }
 .bulk[hidden] { display: none; }
-th.pick, td.pick { width: 44px; padding-right: 8px; }
+th.pick, td.pick { width: 44px; min-width: 44px; box-sizing: border-box; padding-right: 8px; }
 td.pick input, th.pick input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); }
 /* With the checkbox column, the product name stays pinned beside it when the table scrolls sideways. */
 th.pick + th, td.pick + th { position: sticky; left: 44px; background: var(--paper); z-index: 1; }

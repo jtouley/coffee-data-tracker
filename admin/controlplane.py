@@ -468,17 +468,6 @@ class ControlPlane:
                     "coffee_id", "input_hash", "roaster_id", "title", "evidence_hash")  # fmt: skip
             return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
 
-    def decision_log(self, limit: int = 100) -> list[dict]:
-        with self.tx() as cur:
-            cur.execute(
-                "select decision_id, seq, event, subject_kind, subject, action, reason, actor, at, group_id, coffee_id, "
-                "roaster_id, title from control.decisions order by id desc limit %s",
-                (limit,),
-            )
-            cols = ("decision_id", "seq", "event", "subject_kind", "subject", "action", "reason", "actor", "at",
-                    "group_id", "coffee_id", "roaster_id", "title")  # fmt: skip
-            return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
-
     def audit_log(
         self, limit: int = 100, offset: int = 0, action: str | None = None
     ) -> tuple[list[dict], int]:
@@ -535,6 +524,56 @@ class ControlPlane:
                 if r
                 else None
             )
+
+    def tests_since(self, hours: float) -> list[dict]:
+        """Every test crawl started in the last `hours`: one roaster's (roaster_id) or a whole connector's (none)."""
+        with self.tx() as cur:
+            cur.execute(
+                "select run_id, test_id, roaster_id, args from control.job_runs where mode = 'test' "
+                "and started_at > now() - make_interval(secs => %s) order by started_at desc",
+                (hours * 3600,),
+            )
+            rows = [
+                dict(zip(("run_id", "test_id", "roaster_id", "args"), r, strict=True)) for r in cur.fetchall()
+            ]
+        for r in rows:
+            r["args"] = _json(r["args"]) or []
+            r["connector"] = (
+                r["args"][r["args"].index("--connector") + 1] if "--connector" in r["args"] else None
+            )
+        return rows
+
+    def step9_total(self, published: set[str]) -> tuple[int, dict | None]:
+        """CLAUDE.md step 9's running total: the public coffees changed by the drafts published (their build in
+        `published`, from serving_log) since the last recorded full evaluation, and that evaluation."""
+        with self.tx() as cur:
+            cur.execute("select at, path, actor from control.evaluations order by id desc limit 1")
+            ev = cur.fetchone()
+            last = dict(zip(("at", "path", "actor"), ev, strict=True)) if ev else None
+            cur.execute(
+                "select detail from control.draft_events where event = 'publish_started' and (%s::timestamptz is null "
+                "or at > %s::timestamptz)",
+                (last and last["at"], last and last["at"]),
+            )
+            total = 0
+            for (detail,) in cur.fetchall():
+                d = _json(detail) or {}
+                if d.get("build") in published:
+                    total += int(d.get("changed") or 0)
+        return total, last
+
+    def record_evaluation(self, actor: str, key: str, path: str, reason: str) -> dict:
+        """A full evaluation of the classifier's output, done: the running total starts again from here."""
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            if (first := self.claim(cur, key)) is not None:
+                return first
+            cur.execute("insert into control.evaluations (actor, path, reason) values (%s, %s, %s)",
+                        (actor, path, reason))  # fmt: skip
+            self.audit(cur, actor, "evaluation", path, "ok", {"reason": reason})
+            out = {"ok": True, "evaluation": path}
+            self.remember(cur, key, out)
+            return out
 
     def drafts(self, limit: int = 20) -> list[dict]:
         with self.tx() as cur:

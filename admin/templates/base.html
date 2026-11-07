@@ -32,6 +32,11 @@
   <form method="dialog" novalidate>
     <h2 class="serif title-s" id="confirm-h" data-confirm-title>Confirm</h2>
     <div class="body" data-confirm-body></div>
+    <div data-ask-reason hidden><label class="flabel" for="confirm-reason">Reason (recorded, 3 to 300 characters)</label><input class="input" id="confirm-reason" maxlength="300" autocomplete="off"></div>
+    <fieldset class="choice" data-ask-kind hidden><legend class="label">Apply to</legend>
+      <label><input type="radio" name="confirm-kind" value="coffee_id" checked> These products (by <code>coffee_id</code>)</label>
+      <label><input type="radio" name="confirm-kind" value="input_hash"> Every product with the same version: title, type, tags, sizes and description (by <code>input_hash</code>, across roasters)</label>
+    </fieldset>
     <div data-type-wrap hidden><label class="flabel" for="confirm-type">Type <strong data-type-want></strong> to confirm</label><input class="input" id="confirm-type" autocomplete="off" inputmode="numeric"></div>
     <div data-override-wrap hidden><label class="flabel" for="confirm-override">Reason to start inside the window (recorded)</label><input class="input" id="confirm-override" autocomplete="off" maxlength="300"></div>
     <div class="hint" data-confirm-hint role="alert"></div>

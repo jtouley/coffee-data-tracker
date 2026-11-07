@@ -58,30 +58,9 @@
 {%- endmacro %}
 
 {# A one-button write: its confirm text, then POST with the form's idempotency key (admin.js). #}
-{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none) -%}
-<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}>
+{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none, ask="") -%}
+<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}{% if ask %} data-ask="{{ ask }}"{% endif %}>
   <input type="hidden" name="key" value="{{ new_key() }}">
   <button class="btn {{ cls }} inline" type="submit" data-busy="{{ busy }}"{% if disabled %} aria-disabled="true" aria-describedby="{{ disabled }}"{% endif %}>{{ label }}</button>
 </form>
-{%- endmacro %}
-
-{# The include/exclude sheet (admin.js data-decide): the Catalog's, the Queue's and a Case's. #}
-{% macro decide_dialog() -%}
-<dialog class="sheet" id="decide" aria-labelledby="decide-h">
-  <form method="dialog" data-write="/api/decisions" data-decide-form novalidate>
-    <h2 class="serif title-s" id="decide-h" data-decide-title>Decide</h2>
-    <p class="body" data-decide-what></p>
-    <input type="hidden" name="key" value="{{ new_key() }}">
-    <input type="hidden" name="action" value="">
-    <fieldset class="choice"><legend class="label">Apply to</legend>
-      <label><input type="radio" name="kind" value="coffee_id" checked> These products (by <code>coffee_id</code>)</label>
-      <label><input type="radio" name="kind" value="input_hash"> Every product with the same version: title, type, tags, sizes and description (by <code>input_hash</code>, across roasters)</label>
-    </fieldset>
-    <label class="flabel" for="decide-reason">Reason (recorded, 3 to 300 characters)</label>
-    <input class="input" id="decide-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off" aria-describedby="decide-hint">
-    <div class="hint" id="decide-hint" data-hint role="alert"></div>
-    <p class="meta">Nothing is served until a draft of it is published (Release).</p>
-    <div class="actions mt12"><button class="btn primary inline" type="submit" value="go" data-busy="Recording…" data-decide-go>Decide</button><button class="btn text inline" type="button" data-close>Cancel</button></div>
-  </form>
-</dialog>
 {%- endmacro %}

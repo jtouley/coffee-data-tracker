@@ -119,7 +119,7 @@ def test_a_group_decision_carries_its_evidence_and_one_live_check_covers_it(tmp_
     control.finish(w, job, "done", ok=1, errors=0, detail={"test": test_id, "arm": "test"})
     fake.finish()
     page = c.get(f"/part/release?build={b3}").text
-    assert "or one of its evidence group did" in page
+    assert "or one of their evidence group did" in page
 
 
 def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, pg_url):
@@ -202,3 +202,26 @@ def test_a_build_without_flags_says_so(tmp_path, pg_url):
     app, c, _ = make(tmp_path, lake.root, pg_url)
     assert "has no flags" in c.get("/part/queue").text
     assert date.fromisoformat(W1)  # the served build is B1
+
+
+def test_the_queue_reads_on_when_the_control_plane_is_down(tmp_path, lake):
+    from admin.controlplane import ControlPlane, url_connect
+
+    _, c, _ = make(
+        tmp_path, lake.root, "", control_plane=ControlPlane(url_connect("postgresql://x@127.0.0.1:1/x"))
+    )
+    page = c.get("/part/queue").text
+    assert "3 products with open flags" in page and "control plane can" in page
+    assert "Exclude these 2" not in page  # no action without the control plane
+    assert "shared_body" in c.get("/part/queue?case=s1").text
+
+
+def test_a_settings_change_counts_every_public_coffee_its_draft_changes(tmp_path, lake):
+    from admin import queries
+
+    Lake(str(lake.root)).write_ops("release_changes", W3, "b-settings", pa.Table.from_pylist([
+        {"build_id": "b-settings", "table_name": "public_coffee", "item": f"c{i}", "change": "removed",
+         "reason": "reclassified"} for i in range(3)], SCHEMAS["release_changes"]))  # fmt: skip
+    ro = Lake(str(lake.root), read_only=True)
+    assert queries.leaving(ro, ro.connect(), "b-settings", ["c0"])["changed"] == 1
+    assert queries.leaving(ro, ro.connect(), "b-settings", ["c0"], True)["changed"] == 3

@@ -212,6 +212,25 @@ class Catalog:
             if p != keep:
                 p.unlink(missing_ok=True)
 
+    def members(self, build_id: str, coffee_ids: list[str], hashes: list[str]) -> list[dict]:
+        """The build's products with these coffee ids or versions (input_hash), with their roaster and platform: who a
+        decision by version covers (every product sharing it, across roasters)."""
+        if not (coffee_ids or hashes):
+            return []
+        self.ensure(build_id)
+        con = duckdb.connect(str(self.path(build_id)), read_only=True)
+        try:
+            rows = con.execute(
+                "select coffee_id, input_hash, roaster_id, platform from products "
+                "where coffee_id in (select unnest(?::varchar[])) or input_hash in (select unnest(?::varchar[]))",
+                [coffee_ids, hashes],
+            ).fetchall()
+        finally:
+            con.close()
+        return [
+            dict(zip(("coffee_id", "input_hash", "roaster_id", "platform"), r, strict=True)) for r in rows
+        ]
+
     def search(self, build_id: str, f: Filters) -> dict:
         try:
             meta = self.ensure(build_id)

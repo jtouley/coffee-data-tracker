@@ -250,6 +250,7 @@ const $ = (root, sel) => root.querySelector(sel);
 function fields(form) {
   const body = {};
   for (const [k, v] of new FormData(form)) body[k] = v;
+  form.querySelectorAll("input[data-json]").forEach((i) => { body[i.name] = JSON.parse(i.value); });
   return body;
 }
 
@@ -346,6 +347,18 @@ async function confirmWrite(form) {
   const overWrap = $(d, "[data-override-wrap]");
   const typed = $(d, "#confirm-type");
   const over = $(d, "#confirm-override");
+  const ask = (form.dataset.ask || "").split(" ");
+  const reason = $(d, "#confirm-reason");
+  $(d, "[data-ask-reason]").hidden = !ask.includes("reason");
+  $(d, "[data-ask-kind]").hidden = !ask.includes("kind");
+  reason.value = form.dataset.reason || "";
+  if ("picks" in form.dataset) { // the Catalog's ticked rows: what the decision covers, named in the sheet
+    const items = picks();
+    form.querySelector("input[name=items]").value = JSON.stringify(items);
+    const names = items.slice(0, 5).map((i) => i.title || i.coffee_id).join("; ");
+    form.dataset.confirmTitle = `${form.dataset.confirmLabel} ${items.length === 1 ? "this product" : `${items.length} products`}?`;
+    form.dataset.confirmText = `${names}${items.length > 5 ? `; and ${items.length - 5} more` : ""}.`;
+  }
   $(d, "[data-confirm-title]").textContent = form.dataset.confirmTitle || (form.dataset.confirmLabel ? `${form.dataset.confirmLabel}?` : "Confirm");
   go.textContent = form.dataset.confirmLabel || "Confirm";
   go.classList.toggle("danger", "danger" in form.dataset);
@@ -357,7 +370,7 @@ async function confirmWrite(form) {
   $(d, "[data-type-want]").textContent = form.dataset.type || "";
   overWrap.hidden = true;
   go.removeAttribute("aria-disabled");
-  body.textContent = form.dataset.confirm || "";
+  body.textContent = [form.dataset.confirmText, form.dataset.confirm].filter(Boolean).join(" ");
   if (!d.open) d.showModal();
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";
@@ -382,9 +395,12 @@ async function confirmWrite(form) {
     hint.textContent = "";
     busy(go, true);
     try {
-      const out = await post(form.dataset.write, { ...fields(form), confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined });
+      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined };
+      if (ask.includes("reason")) extra.reason = reason.value;
+      if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
+      const out = await post(form.dataset.write, { ...fields(form), ...extra });
       d.close();
-      showResult(describe(out));
+      showResult(describe(out), out.decisions ? out.group || out.decisions[0] : undefined);
       reloadParts();
     } catch (err) {
       hint.textContent = refusal(err);
@@ -400,7 +416,7 @@ async function confirmWrite(form) {
 
 document.addEventListener("submit", (e) => {
   const form = e.target.closest("form[data-write]");
-  if (!form || form.hasAttribute("data-decide-form")) return;
+  if (!form) return;
   e.preventDefault();
   const button = form.querySelector('button[type="submit"]');
   if (button && button.getAttribute("aria-disabled") === "true") return;
@@ -412,7 +428,7 @@ document.addEventListener("click", (e) => {
   if (close) close.closest("dialog").close();
 });
 
-// --- Catalog, Queue and Case: decide one product or a group, and undo -------------------------------------------
+// --- Catalog: the ticked rows a decision covers, and undo ---------------------------------------------------
 
 function picks() {
   return [...document.querySelectorAll("input[data-pick]:checked")].map((c) => JSON.parse(c.dataset.pick));
@@ -434,57 +450,9 @@ document.addEventListener("change", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.closest("[data-bulk-clear]")) {
-    document.querySelectorAll("input[data-pick], input[data-pick-all]").forEach((c) => { c.checked = false; });
-    updateBulk();
-    return;
-  }
-  const b = e.target.closest("[data-decide]");
-  if (!b) return;
-  const d = document.getElementById("decide");
-  // One product (data-item), the chosen ones (Catalog), or a group with the same evidence (Queue: data-items).
-  const items = b.hasAttribute("data-bulk-use") ? picks() : b.dataset.items ? JSON.parse(b.dataset.items) : [JSON.parse(b.dataset.item)];
-  if (!d || !items.length) return;
-  const form = $(d, "form");
-  form.elements.action.value = b.dataset.decide;
-  d.items = items;
-  const verb = b.dataset.decide === "exclude" ? "Exclude" : "Include";
-  $(d, "[data-decide-title]").textContent = `${verb} ${items.length === 1 ? "this product" : `${items.length} products`}`;
-  const names = items.slice(0, 5).map((i) => i.title || i.coffee_id).join("; ");
-  $(d, "[data-decide-what]").textContent = (b.dataset.decide === "exclude"
-    ? "Leave out of the catalog, even if the classifier says coffee: "
-    : "Keep in the catalog as coffee, even if the classifier says not: ") + names + (items.length > 5 ? `; and ${items.length - 5} more` : "") + ".";
-  $(d, "[data-decide-go]").textContent = verb;
-  $(d, "[data-hint]").textContent = "";
-  d.showModal();
-  form.elements.reason.focus();
-});
-
-document.addEventListener("submit", async (e) => {
-  const form = e.target.closest("form[data-decide-form]");
-  if (!form) return;
-  e.preventDefault();
-  const d = form.closest("dialog");
-  const go = $(form, "[data-decide-go]");
-  if (go.getAttribute("aria-disabled") === "true") return;
-  const kind = form.elements.kind.value;
-  const items = d.items || [];
-  if (items.some((i) => !i[kind])) {
-    $(form, "[data-hint]").textContent = "Some of these have no version hash (an older build): decide them by coffee_id.";
-    return;
-  }
-  const seen = Object.fromEntries(items.map((i) => [i[kind], i[`seen_${kind}`] || null]));
-  busy(go, true);
-  try {
-    const out = await post(form.dataset.write, { key: form.elements.key.value, action: form.elements.action.value, kind, reason: form.elements.reason.value, items, seen });
-    d.close();
-    showResult(describe(out), out.group || out.decisions[0]);
-    reloadParts();
-  } catch (err) {
-    $(form, "[data-hint]").textContent = refusal(err);
-  } finally {
-    busy(go, false);
-  }
+  if (!e.target.closest("[data-bulk-clear]")) return;
+  document.querySelectorAll("input[data-pick], input[data-pick-all]").forEach((c) => { c.checked = false; });
+  updateBulk();
 });
 
 document.addEventListener("click", async (e) => {

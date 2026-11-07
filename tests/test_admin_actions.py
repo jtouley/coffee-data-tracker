@@ -129,8 +129,8 @@ def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url
     writes = [
         r for r in app.routes if "POST" in getattr(r, "methods", set()) and not r.path.startswith("/api/auth")
     ]
-    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, settings check and save, crawl flag
-    assert len(writes) == 12
+    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save, crawl
+    assert len(writes) == 13
     anon = TestClient(app, base_url=ORIGIN)
     for r in writes:
         url = r.path.replace("{action}", "merge").replace("{run_id}", "r").replace("{target}", "d")
@@ -234,7 +234,8 @@ def test_a_job_is_never_started_when_the_control_plane_cant_record_it(tmp_path, 
     r = post(c, "/api/jobs/merge/runs", {"key": "k1", "week": W3})
     assert r.status_code == 503 and "nothing was done" in r.json()["detail"]
     assert not [x for x in fake.calls if x[0] == "run"]
-    assert c.get("/part/jobs").status_code == 503  # the page says so instead of showing nothing
+    page = c.get("/part/jobs")  # the page degrades: no runs or actions, and it says why
+    assert page.status_code == 200 and "be read right now" in page.text and "data-write=" not in page.text
 
 
 def test_cloud_run_down_starts_nothing_and_says_so(tmp_path, lake, pg_url):
@@ -631,8 +632,8 @@ def test_the_live_check_covers_only_what_the_draft_removes_and_step_9_counts(
     b3 = _draft_build(lake.root, r["draft_id"], doc)
     page = c.get(f"/part/release?build={b3}").text
     assert "this draft removes nothing" in page  # c1's exclude was served already
-    assert "change 1 public coffees" in page
-    monkeypatch.setattr(w, "STEP9_LIMIT", 0)
+    assert "this draft changes 0 public coffees" in page  # c1's exclude is the served release's already
+    monkeypatch.setattr(w, "STEP9_LIMIT", -1)
     no = post(c, f"/api/drafts/{r['draft_id']}/publish", {"key": "k4", "reason": "go ahead"})
     assert no.status_code == 409 and any("step 9" in x for x in no.json()["reasons"])
 
@@ -701,3 +702,141 @@ def test_an_idle_connection_is_dropped_and_a_double_submit_answers_once(pg_url, 
     for t in ts:
         t.join()
     assert len(out) == 2 and out[0] == out[1]
+
+
+# --- the final review's fixes ----------------------------------------------------------------------------------
+
+
+class _Members:
+    """A Catalog stand-in for who a decision covers: `rows` as Catalog.members returns them."""
+
+    def __init__(self, rows):
+        self.rows = rows
+
+    def members(self, build_id, coffee_ids, hashes):
+        return [r for r in self.rows if r["coffee_id"] in coffee_ids or r["input_hash"] in hashes]
+
+
+def _draft_with(c, tmp_path, lake, fake, items, action="exclude", kind="coffee_id", key="k"):
+    post(c, "/api/decisions", {"key": key + "d", "action": action, "kind": kind, "reason": "the owner's call",
+                               "items": items})  # fmt: skip
+    r = post(c, "/api/drafts", {"key": key + "r"}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(r["snapshot_id"])).read_text())
+    fake.finish("build")
+    return r["draft_id"], _draft_build(lake.root, r["draft_id"], doc)
+
+
+def test_a_drafts_gate_says_it_passed_against_the_last_published_build(tmp_path, lake, pg_url):
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    _, b3 = _draft_with(c, tmp_path, lake, fake, [_item("c1")])
+    page = c.get(f"/part/release?build={b3}").text
+    assert f"Build {b3} passed" in page and f"compared with {B1}" in page
+
+
+def test_the_live_check_counts_any_answer_a_connector_test_and_every_roaster_of_a_version(
+    tmp_path, lake, pg_url
+):
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    app.state.writes.catalog = _Members([
+        {"coffee_id": "c1", "input_hash": "h1", "roaster_id": "good.example", "platform": "shopify"},
+        {"coffee_id": "x9", "input_hash": "h1", "roaster_id": "other.example", "platform": "woocommerce"},
+    ])  # fmt: skip
+    did, b3 = _draft_with(c, tmp_path, lake, fake, [_item("c1", "h1")], kind="input_hash")
+    page = c.get(f"/part/release?build={b3}").text
+    assert "good.example" in page and "other.example" in page  # the version's every roaster
+    w = Lake(str(lake.root))
+
+    def test(fill, ok):
+        post(c, "/api/jobs/" + ("crawl-one" if "roaster" in fill else "crawl") + "/runs",
+             {"key": f"t{len(fake.ex)}", "mode": "test"} | fill)  # fmt: skip
+        run = app.state.writes.control.runs()[0]
+        job = control.start(w, "crawl", W3, run["args"][2], 1, detail={"test": run["test_id"], "arm": "test"})
+        control.finish(w, job, "done", ok=ok, errors=1 - ok, detail={"test": run["test_id"], "arm": "test"})
+        fake.finish()
+
+    test({"connector": "shopify", "roaster": "good.example"}, 1)  # answered...
+    with pytest.MonkeyPatch.context() as m:  # ...then a later failed test of the same store
+        m.setattr(app.state.writes.control, "recent_test", lambda *a, **k: None)
+        test({"connector": "shopify", "roaster": "good.example"}, 0)
+    test({"connectors": "woocommerce"}, 1)  # a whole-connector test covers other.example
+    page = c.get(f"/part/release?build={b3}").text
+    assert "2 of 2 stores answered" in page
+
+
+def test_step_9s_running_total_spans_drafts_until_an_evaluation_is_recorded(
+    tmp_path, lake, pg_url, monkeypatch
+):
+    from admin import writes as w
+
+    monkeypatch.setattr(w, "STEP9_LIMIT", 1)
+    monkeypatch.setattr(w, "LIVE_CHECK_DAYS", 0)
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    cp = app.state.writes.control
+    did, b3 = _draft_with(c, tmp_path, lake, fake, [_item("c1")])
+    assert "1 in all" in c.get(f"/part/release?build={b3}").text
+    # a draft of the same total, published before: its count joins the running total
+    monkeypatch.setattr(cp, "step9_total", lambda served: (1, None))
+    no = post(c, f"/api/drafts/{did}/publish", {"key": "p1", "reason": "go ahead"})
+    assert no.status_code == 409 and any("over 50" in x and "record it" in x for x in no.json()["reasons"])
+    assert "Publish fewer" not in json.dumps(no.json())
+    monkeypatch.undo()
+    monkeypatch.setattr(w, "STEP9_LIMIT", 1)
+    monkeypatch.setattr(w, "LIVE_CHECK_DAYS", 0)
+    assert post(c, "/api/evaluations", {"key": "e1", "path": "../etc"}).status_code == 400
+    assert post(c, "/api/evaluations", {"key": "e2", "path": "eval/classifier-2026-11/"}).status_code == 200
+    assert cp.step9_total(set())[1]["path"] == "eval/classifier-2026-11/"
+
+
+def test_a_publishing_or_published_draft_cant_be_discarded(tmp_path, lake, pg_url, monkeypatch):
+    from admin import writes as w
+
+    monkeypatch.setattr(w, "LIVE_CHECK_DAYS", 0)
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    did, b3 = _draft_with(c, tmp_path, lake, fake, [_item("m1")], action="include")
+    assert post(c, f"/api/drafts/{did}/publish", {"key": "p1", "reason": "go ahead"}).status_code == 200
+    r = post(c, f"/api/drafts/{did}/discard", {"key": "x1"})
+    assert r.status_code == 409 and "publishing" in r.json()["reasons"][0]
+
+
+def test_a_cancel_that_cant_be_recorded_is_recorded_again(tmp_path, lake, pg_url, monkeypatch):
+    from admin.controlplane import ControlPlaneError
+
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    post(c, "/api/jobs/fetch-health/runs", {"key": "k1"})
+    (run,) = app.state.writes.control.runs()
+    cp = app.state.writes.control
+    real, fails = cp.audit, {"n": 1}
+
+    def flaky(cur, actor, action, *a, **k):
+        if action == "job_cancel" and fails["n"]:
+            fails["n"] -= 1
+            raise ControlPlaneError("connection dropped")
+        return real(cur, actor, action, *a, **k)
+
+    monkeypatch.setattr(cp, "audit", flaky)
+    assert post(c, f"/api/jobs/runs/{run['run_id']}/cancel", {"key": "k2"}).status_code == 200
+    assert [x["action"] for x in audit(app)].count("job_cancel") == 1 and fake.calls[-1][0] == "cancel"
+
+
+def test_the_catalog_degrades_when_the_control_plane_is_down(tmp_path, lake, pg_url):
+    dead = ControlPlane(url_connect("postgresql://nobody@127.0.0.1:1/none"))
+    app, c, _ = make(tmp_path, lake.root, pg_url, control_plane=dead)
+    page = c.get(f"/part/catalog?build={B2}")
+    assert page.status_code == 200 and "of 3 products" in page.text and "be read right now" in page.text
+    assert "data-write=" not in page.text
+    release = c.get("/part/release")
+    assert release.status_code == 200 and "Gate" in release.text
+
+
+def test_the_export_lists_every_coffee_of_a_version(tmp_path, lake, pg_url):
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    app.state.writes.catalog = _Members([])  # the export reads the served build's own catalog
+    import admin.main as m  # noqa: F401 - the route's catalog is the app's; use its members over the real cache
+
+    post(c, "/api/decisions", {"key": "k1", "action": "exclude", "kind": "input_hash", "reason": "a drink mix",
+                               "items": [_item("c1", "h-none")]})  # fmt: skip
+    doc = c.get("/api/decisions/export").json()
+    (d,) = doc["decisions"]
+    assert d["subject_kind"] == "input_hash" and d["coffee_ids"] == []  # no coffee in the served build has it
+    rows, skipped = decisions.export_labels(doc, set())
+    assert rows == [] and skipped == 1  # a version with no listed coffees is never exported

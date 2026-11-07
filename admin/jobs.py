@@ -74,8 +74,6 @@ class Action:
     fields: tuple[str, ...]
     steps: Callable[[dict], list[Step]]
     page: str = "jobs"  # jobs: on the Jobs page; release: started from the Release page only
-    # the week the start acts on, for the guards: the crawl's (count) or the job's --run-date
-    acts_on_week: bool = True
 
 
 def _mode(p: dict) -> list[str]:
@@ -121,15 +119,15 @@ ACTIONS: dict[str, Action] = {
                    f"rc=0; coffeedata build --draft {p['draft_id']} --snapshot {p['snapshot_id']} "
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
                    f'coffeedata publish --message "draft {p["draft_id"]}"; exit $rc'))],
-               page="release", acts_on_week=False),
+               page="release"),
         Action("publish", "Publish", "Serve a draft build: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
                                            "--baseline", p["baseline"] or "none", f"--reason={p['reason']}"])],
-               page="release", acts_on_week=False),
+               page="release"),
         Action("rollback", "Roll back", "Serve an earlier release again: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "rollback",
                                            f"--reason={p['reason']}"])],
-               page="release", acts_on_week=False),
+               page="release"),
     )
 }  # fmt: skip
 # Every job an action can start, from the table itself (each action's steps for a sample of every field): the list
@@ -171,7 +169,6 @@ class WeekState:
 
     week: str
     merge_done: bool
-    build_ended: bool = False
 
 
 @dataclass

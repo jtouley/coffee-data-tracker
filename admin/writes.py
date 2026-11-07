@@ -38,11 +38,11 @@ REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
 
 
 class StartedUnrecorded(Exception):
-    """Cloud Run started these executions, but the control plane couldn't record them (twice)."""
+    """Cloud Run started (or cancelled) these executions, but the control plane couldn't record it, twice."""
 
-    def __init__(self, executions: list[str]):
+    def __init__(self, executions: list[str], verb: str = "started"):
         super().__init__(", ".join(e.rsplit("/", 1)[-1] for e in executions))
-        self.executions = executions
+        self.executions, self.verb = executions, verb
 
 
 def written(**fields) -> None:
@@ -64,6 +64,7 @@ class Readiness:
     checks: list[dict]
     removed: int | None
     needs_count: bool
+    changed: int | None = None
 
     @property
     def ready(self) -> bool:
@@ -72,8 +73,10 @@ class Readiness:
 
 class Writes:
     def __init__(self, control: ControlPlane, jobs: Jobs, snapshots: Store,
-                 read: Callable[..., Awaitable[Any]], now: Callable[[], datetime] = lambda: datetime.now(UTC)):  # fmt: skip
+                 read: Callable[..., Awaitable[Any]], now: Callable[[], datetime] = lambda: datetime.now(UTC),
+                 catalog: Any = None):  # fmt: skip
         self.control, self.jobs, self.snapshots, self.read, self.now = control, jobs, snapshots, read, now
+        self.catalog = catalog  # admin.catalog.Catalog: who a decision by version covers
         self._migrated = False
 
     async def ready(self) -> None:
@@ -102,7 +105,11 @@ class Writes:
         current = registry.WeekState(**await self.read(queries.week_state, current_week))
         target = current if params.get("week", current_week) == current_week else registry.WeekState(
             **await self.read(queries.week_state, params["week"]))  # fmt: skip
-        running = await asyncio.to_thread(self._running, {s.job for s in steps})
+        try:
+            running = await asyncio.to_thread(self._running, {s.job for s in steps})
+        except JobsError as e:  # every start, Draft, Publish and Roll back alike: a refusal, audited
+            plan.refusals.append(f"Cloud Run can't say what is running: {e}")
+            running = {}
         recent = None
         if action.key == "crawl-one" and params.get("mode") == "test":
             recent = await asyncio.to_thread(self.control.recent_test, params["roaster"], 24)
@@ -124,11 +131,7 @@ class Writes:
 
     async def start(self, actor: str, key: str, action_key: str, raw: dict, override: str | None) -> dict:
         """Start an action's jobs (main.write has already returned the first answer of a used key)."""
-        try:
-            plan = await self.plan(action_key, raw)
-        except JobsError as e:
-            raise registry.Refused([f"Cloud Run can't say what is running: {e}"]) from e
-        return await self._start(actor, key, plan, override)
+        return await self._start(actor, key, await self.plan(action_key, raw), override)
 
     async def _check(self, actor: str, plan: registry.Plan, override: str | None) -> str | None:
         """The guards' verdict on a plan: refused (audited) with every reason, or the checked override reason."""
@@ -218,21 +221,39 @@ class Writes:
         return out
 
     async def cancel(self, actor: str, key: str, run_id: str) -> dict:
+        """Cancel a run, recorded as starts are: in the transaction around the call, and if that commit fails after
+        Cloud Run cancelled it, again in a new one; failing that, the error names the execution."""
         await self.ready()
+
+        def record(cur, run):
+            self.control.audit(cur, actor, "job_cancel", run["job"], "ok",
+                               {"run_id": run_id, "execution": run["execution"]})  # fmt: skip
+            out = {"ok": True, "run_id": run_id}
+            self.control.remember(cur, key, out)
+            return out
 
         def go():
             run = self.control.run(run_id)
             if run is None or not run["execution"]:
                 raise ValueError("no such run")
-            with self.control.tx() as cur:
-                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                if (first := self.control.claim(cur, key)) is not None:
-                    return first
-                self.jobs.cancel(run["execution"])
-                self.control.audit(cur, actor, "job_cancel", run["job"], "ok", {"run_id": run_id,
-                                                                                 "execution": run["execution"]})  # fmt: skip
-                out = {"ok": True, "run_id": run_id}
-                self.control.remember(cur, key, out)
+            cancelled = False
+            try:
+                with self.control.tx() as cur:
+                    cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+                    if (first := self.control.claim(cur, key)) is not None:
+                        return first
+                    self.jobs.cancel(run["execution"])
+                    cancelled = True
+                    out = record(cur, run)
+            except ControlPlaneError:
+                if not cancelled:
+                    raise
+                try:
+                    with self.control.tx() as cur:
+                        out = record(cur, run)
+                except ControlPlaneError as e:
+                    emit("ERROR", event="admin_cancel_unrecorded", execution=run["execution"])
+                    raise StartedUnrecorded([run["execution"]], "cancelled") from e
             written(action="job_cancel", subject=run["job"], outcome="ok")
             return out
 
@@ -285,8 +306,9 @@ class Writes:
         if not isinstance(items, list) or not all(isinstance(i, dict) for i in items):
             raise ValueError("no products chosen")
         kind = str(body.get("kind") or "coffee_id")
-        raw_seen = body.get("seen")
-        seen: dict = raw_seen if isinstance(raw_seen, dict) else {}
+        # What the page showed as each subject's latest decision (a stale tab conflicts): each item carries it, for
+        # its coffee and for its version, so it holds whichever the owner picks in the confirm sheet.
+        seen = {str(i.get(kind)): i.get(f"seen_{kind}") for i in items if i.get(kind)}
         reason = reason_of(body.get("reason"))
         out = await asyncio.to_thread(self.control.decide, actor, key, str(body.get("action")), kind, reason,
                                       [{k: (str(v)[:300] if v is not None else None) for k, v in i.items()}
@@ -343,14 +365,17 @@ class Writes:
 
     # --- release: draft, publish, roll back, discard ---------------------------------------------------------------
 
-    async def pending(self) -> dict:
+    async def pending(self, served: dict | None = None, drafts: list[dict] | None = None) -> dict:
         """The effective decisions, rule settings and crawl flags against the served build's snapshot: what a draft
-        would change."""
+        would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
         effective = await asyncio.to_thread(self.control.effective)
         settings = await asyncio.to_thread(self.control.settings)
         states = await asyncio.to_thread(self.control.roaster_states)
-        served = await self.read(queries.served)
+        if served is None:
+            served = await self.read(queries.served)
+        if drafts is None:
+            drafts = await asyncio.to_thread(self.control.drafts, 5)
         pinned = await self.read(queries.build_snapshot, served["build_id"]) if served else None
         served_doc = (pinned or {}).get("doc")
         before = {
@@ -366,7 +391,7 @@ class Writes:
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
-        for d in await asyncio.to_thread(self.control.drafts, 5):
+        for d in drafts[:5]:
             if d["last_event"] in ("discarded", "publish_started"):
                 continue
             if d["baseline"] != (served or {}).get("build_id"):
@@ -406,13 +431,13 @@ class Writes:
 
         return await self._start(actor, key, plan, override, record, {"draft_id": did, "snapshot_id": sid})
 
-    async def readiness(self, draft: dict, rel: dict) -> Readiness:
-        """Publish is disabled until: the draft build passed; the served release is still its baseline; any
-        required evaluation is attached; the owner typed the count when more than 50 public rows leave; and each
-        store a removal comes from answered a live check (a test crawl) in the last 7 days."""
+    async def readiness(self, draft: dict, rel: dict, served: dict | None) -> Readiness:
+        """Publish is disabled until: the draft build passed; the served release is still its baseline; CLAUDE.md
+        step 9's running total stays at 50 or fewer with this draft; the owner typed the count when more than 50
+        public rows leave; and each store this draft removes a coffee from answered a live check (a test crawl of the
+        store, or of its whole connector) in the last 7 days."""
         build = rel["by_draft"].get(draft["draft_id"])
         info = next((b for b in rel["builds"] if b["build_id"] == build), None)
-        served = await self.read(queries.served)
         now_id = (served or {}).get("build_id")
         checks = [
             {"name": "The draft build passed", "ok": bool(info and info["passed"]),
@@ -420,59 +445,103 @@ class Writes:
             {"name": "The served release is still its baseline", "ok": now_id == draft["baseline"] or now_id == build,
              "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"},
         ]  # fmt: skip
-        left = await self.read(queries.leaving, build) if build else {"removed": None, "decided": None}
-        removed, decided = left.get("removed"), left.get("decided")
-        # CLAUDE.md step 9: a change to more than 50 products' output needs the full evaluation, not the short path.
-        checks.append({"name": "Evaluation", "ok": decided is None or decided <= STEP9_LIMIT,
-                       "why": ("not built yet" if decided is None else
-                               f"not required: these decisions change {decided} public coffees (50 or fewer: "
-                               "CLAUDE.md step 9's short path, the changes listed below)" if decided <= STEP9_LIMIT else
-                               f"these decisions change {decided} public coffees, over 50: CLAUDE.md step 9 asks for "
-                               "the full evaluation first. Publish fewer at a time, or evaluate them")})  # fmt: skip
-        now_doc = await self._snapshot_doc(draft["snapshot_id"])
-        pinned = await self.read(queries.build_snapshot, draft["baseline"]) if draft["baseline"] else None
-        # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts.
-        old_settings, new_settings = snap.settings_of((pinned or {}).get("doc")), snap.settings_of(now_doc)
-        deciding = rules.decides(old_settings, new_settings)
-        needed = rules.evaluation_needed(old_settings, new_settings)
+        effect = await self.effect(draft)
+        # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts; any
+        # other settings change counts every public coffee the draft changes, on top of step 9's running total.
+        deciding, needed, settings_changed = (
+            effect["deciding"],
+            effect["needs_evaluation"],
+            effect["settings_changed"],
+        )
+        left = (await self.read(queries.leaving, build, effect["coffees"], bool(settings_changed)) if build
+                else {"removed": None})  # fmt: skip
+        removed, changed = left.get("removed"), left.get("changed")
+        total, last = await asyncio.to_thread(self.control.step9_total, rel["ever_served"])
+        since = f"since the evaluation {last['path']}" if last else "since the total was started"
+        checks.append({"name": "Evaluation (CLAUDE.md step 9)",
+                       "ok": changed is None or total + changed <= STEP9_LIMIT,
+                       "why": ("not built yet" if changed is None else
+                               f"not required: this draft changes {changed} public coffees, {total + changed} in all "
+                               f"{since} (50 or fewer: the short path)" if total + changed <= STEP9_LIMIT else
+                               f"this draft changes {changed} public coffees, {total + changed} in all {since}: over "
+                               "50, so the full evaluation comes first, then record it below"),
+                       "needs_evaluation": changed is not None and total + changed > STEP9_LIMIT})  # fmt: skip
         checks.append({"name": "Evaluation of a rule change", "ok": not needed,
                        "why": ("no rule settings change how a rule decides" if not deciding else
                                f"evaluated: {', '.join(deciding)}" if not needed else
                                f"{', '.join(deciding)} changes how a rule decides: CLAUDE.md asks for its full "
                                f"evaluation first (eval/{needed[0]}/, merged with its entry in "
                                "coffeedata.rules.EVALUATED)")})  # fmt: skip
-        # The live check covers what this draft removes against the served release: new excludes, and undone
-        # includes. Decisions already served were checked when they were published. Group approval: one answered
-        # live check of a store covers every removal decided on the same flags' evidence (evidence_hash).
-        before = ((pinned or {}).get("doc") or {}).get("decisions", [])
-        key_of = lambda d: (d["subject_kind"], d["subject"], d["action"])  # noqa: E731
-        was = {key_of(d) for d in before}
-        removals = [d for d in now_doc["decisions"] if d["action"] == "exclude" and key_of(d) not in was]
-        still = {key_of(d) for d in now_doc["decisions"]}
-        removals += [d for d in before if d["action"] == "include" and key_of(d) not in still]
-        store = lambda d: d.get("roaster_id") or (d.get("coffee_id") or "").split(":")[0]  # noqa: E731
-        roasters = sorted({store(d) for d in removals} - {""})
-        groups: dict[str, set[str]] = {}  # each store's group: the stores sharing its removals' evidence
-        for d in removals:
-            if d.get("evidence_hash"):
-                groups.setdefault(d["evidence_hash"], set()).add(store(d))
-        answered: dict[str, bool] = {}
-        for r in roasters:
-            t = await asyncio.to_thread(self.control.recent_test, r, LIVE_CHECK_DAYS * 24)
-            answers = (
-                (await self.read(queries.test_results, [t["test_id"]])).get(t["test_id"], []) if t else []
-            )
-            answered[r] = any(a.get("ok") for a in answers)
-        ungrouped = {store(d) for d in removals if not d.get("evidence_hash")} - {""}
-        missing = sorted({r for r in ungrouped if not answered[r]}
-                         | {r for g in groups.values() if not any(answered[x] for x in g) for r in g})  # fmt: skip
+        tests = await asyncio.to_thread(self.control.tests_since, LIVE_CHECK_DAYS * 24)
+        answers = (
+            await self.read(queries.test_results, sorted({t["test_id"] for t in tests})) if tests else {}
+        )
+        ok = [t for t in tests if any(a.get("ok") for a in answers.get(t["test_id"], [])
+                                      if a["connector"] == t["connector"])]  # fmt: skip
+        stores = {t["roaster_id"] for t in ok if t["roaster_id"]}  # a test of the store itself
+        connectors = {t["connector"] for t in ok if not t["roaster_id"]}  # or of its whole connector
+        checked = {r for r, conn in effect["removal_roasters"] if r in stores or conn in connectors}
+        # Group approval: one answered live check covers every store whose removals were decided on the same
+        # flags' evidence (evidence_hash) as a checked store's.
+        for group in effect["groups"].values():
+            if group & checked:
+                checked |= group
+        missing = sorted({r for r, _ in effect["removal_roasters"]} - checked)
+        n = len({r for r, _ in effect["removal_roasters"]})
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
-                       "why": ("this draft removes nothing" if not roasters else
-                               f"each of the {len(roasters)} stores answered a test crawl in the last "
-                               f"{LIVE_CHECK_DAYS} days, or one of its evidence group did" if not missing else
+                       "why": ("this draft removes nothing" if not n else
+                               f"{n} of {n} stores answered a test crawl (of the store or its connector) in the last "
+                               f"{LIVE_CHECK_DAYS} days, or one of their evidence group did" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
-        return Readiness(checks, removed, bool(removed and removed > TYPE_OVER))
+        return Readiness(checks, removed, bool(removed and removed > TYPE_OVER), changed)
+
+    async def effect(self, draft: dict) -> dict:
+        """What a draft changes against the release it was built on: the coffees its changed decisions cover (a
+        decision by version covers every product sharing it, across roasters), the stores it removes coffees from
+        (new excludes, and includes it undoes) with their connector and their evidence groups, and its rule settings
+        changes (which decide, and the evaluations those still need)."""
+        now_doc = await self._snapshot_doc(draft["snapshot_id"])
+        pinned = await self.read(queries.build_snapshot, draft["baseline"]) if draft["baseline"] else None
+        old_settings, new_settings = snap.settings_of((pinned or {}).get("doc")), snap.settings_of(now_doc)
+        before = ((pinned or {}).get("doc") or {}).get("decisions", [])
+        key_of = lambda d: (d["subject_kind"], d["subject"], d["action"])  # noqa: E731
+        was, now = {key_of(d) for d in before}, {key_of(d) for d in now_doc["decisions"]}
+        changed = [d for d in now_doc["decisions"] if key_of(d) not in was] + [
+            d for d in before if key_of(d) not in now
+        ]
+        removing = [d for d in now_doc["decisions"] if d["action"] == "exclude" and key_of(d) not in was]
+        removing += [d for d in before if d["action"] == "include" and key_of(d) not in now]
+        members: list[dict] = []
+        if draft["baseline"] and self.catalog is not None:
+            ids = [d["subject"] for d in changed if d["subject_kind"] == "coffee_id"]
+            hashes = [d["subject"] for d in changed if d["subject_kind"] == "input_hash"]
+            members = await self.read(lambda _l, _c: self.catalog.members(draft["baseline"], ids, hashes))
+        by_id = {m["coffee_id"]: m for m in members}
+        by_hash: dict[str, list[dict]] = {}
+        for m in members:
+            by_hash.setdefault(m["input_hash"], []).append(m)
+
+        def covered(d: dict) -> list[dict]:
+            if d["subject_kind"] == "input_hash":
+                return by_hash.get(d["subject"], [])
+            m = by_id.get(d["subject"])
+            return [m] if m else [{"coffee_id": d["subject"], "roaster_id": d.get("roaster_id")
+                                   or d["subject"].split(":")[0], "platform": None}]  # fmt: skip
+
+        coffees = sorted({m["coffee_id"] for d in changed for m in covered(d)})
+        roasters = sorted({(m["roaster_id"], m.get("platform")) for d in removing for m in covered(d) if m["roaster_id"]},
+                          key=lambda x: (x[0], x[1] or ""))  # fmt: skip
+        groups: dict[str, set[str]] = {}
+        for d in removing:
+            if d.get("evidence_hash"):
+                groups.setdefault(d["evidence_hash"], set()).update(
+                    m["roaster_id"] for m in covered(d) if m["roaster_id"]
+                )
+        return {"coffees": coffees, "removal_roasters": roasters, "groups": groups,
+                "settings_changed": rules.changed(old_settings, new_settings),
+                "deciding": rules.decides(old_settings, new_settings),
+                "needs_evaluation": rules.evaluation_needed(old_settings, new_settings)}  # fmt: skip
 
     async def _snapshot_doc(self, sid: str) -> dict:
         doc = await asyncio.to_thread(self.snapshots.get, snap.key(sid))
@@ -497,7 +566,7 @@ class Writes:
         if draft["last_event"] == "discarded":
             raise registry.Refused(["this draft was discarded"])
         rel = await self.read(queries.releases)
-        ready = await self.readiness(draft, rel)
+        ready = await self.readiness(draft, rel, await self.read(queries.served))
         refusals = [f"{c['name']}: {c['why']}" for c in ready.checks if not c["ok"]]
         if ready.needs_count and str(typed or "").strip() != str(ready.removed):
             refusals.append(f"{ready.removed} public rows leave: type that number to publish")
@@ -515,7 +584,7 @@ class Writes:
         plan = await self._guarded(registry.ACTIONS["publish"], params)
         return await self._start(actor, key, plan, override,
                                  lambda cur, runs: self.control.draft_event(cur, draft_id, "publish_started", actor,
-                                                                            {"build": build, "run": runs[0]["run_id"]}))  # fmt: skip
+                                                                            {"build": build, "run": runs[0]["run_id"], "changed": ready.changed}))  # fmt: skip
 
     async def rollback(
         self, actor: str, key: str, build: str, reason: str | None, override: str | None = None
@@ -533,8 +602,28 @@ class Writes:
         )
         return await self._start(actor, key, plan, override)
 
+    async def evaluation(self, actor: str, key: str, path: str, reason: str | None) -> dict:
+        """Record a full evaluation (CLAUDE.md steps 2-7): step 9's running total starts again."""
+        await self.ready()
+        path = str(path or "").strip()
+        if not re.fullmatch(r"eval/[A-Za-z0-9_./-]+", path) or ".." in path:
+            raise ValueError("Give the evaluation's folder, like eval/classifier-2026-11/")
+        out = await asyncio.to_thread(self.control.record_evaluation, actor, key, path,
+                                      reason_of(reason or f"full evaluation {path}"))  # fmt: skip
+        written(action="evaluation", subject=path, outcome="ok")
+        return out
+
     async def discard(self, actor: str, key: str, draft_id: str) -> dict:
         await self.ready()
+        rel = await self.read(queries.releases)
+        draft = next(
+            (d for d in await asyncio.to_thread(self.control.drafts, 200) if d["draft_id"] == draft_id), None
+        )
+        build = rel["builds"] and next(
+            (b for b in rel["builds"] if b["build_id"] == rel["by_draft"].get(draft_id)), None
+        )
+        state = ("published" if build and build["ever_served"] else
+                 "publishing" if draft and draft["last_event"] == "publish_started" else None)  # fmt: skip
 
         def go():
             with self.control.tx() as cur:
@@ -544,6 +633,10 @@ class Writes:
                 cur.execute("select 1 from control.drafts where draft_id = %s", (draft_id,))
                 if not cur.fetchone():
                     raise ValueError("no such draft")
+                if state in ("publishing", "published"):
+                    raise registry.Refused(
+                        [f"draft {draft_id} is {state}: roll back instead of discarding it"]
+                    )
                 self.control.draft_event(cur, draft_id, "discarded", actor)
                 self.control.audit(cur, actor, "discard", draft_id, "ok")
                 out = {"ok": True}

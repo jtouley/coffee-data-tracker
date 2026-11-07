@@ -38,5 +38,6 @@ this total; changes before it weren't counted. Add each later change's count her
   `stg_products.is_coffee` unchanged, by construction (`stg_decisions` has no rows, so `stg_snapshots.decision` is
   null for every row); every existing dbt and fixture-lake test passes unchanged, and `tests/test_drafts.py` checks a
   draft applies only the decisions it was given. Each decision the
-  owner later publishes changes exactly its own products, listed in its draft's `release_changes`; those are per-item
-  corrections by the owner, not a rule, so they are not added to this total. 0 of them in this sealed set.
+  owner later publishes changes exactly its own products, listed in its draft's `release_changes`. The admin keeps
+  their running total (Release: the public coffees each published draft changed, since the last full evaluation
+  recorded there) and refuses a Publish that takes it over 50. 0 of them in this sealed set.

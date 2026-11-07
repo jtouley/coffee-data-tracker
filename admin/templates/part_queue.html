@@ -1,10 +1,18 @@
-{% from "_macros.html" import status, ev, write_off, write_button, decide_dialog %}
+{% from "_macros.html" import status, ev, write_off, write_button %}
 {% macro summary(r) -%}
 {{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["held"] if r.held else []) + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
 {%- endmacro %}
 {# The decision a product's flags propose: exclude when its removal is ready or a listing rule supports it while it
    is coffee; include (keep it) when the guard holds it or a flag argues to restore it. #}
 {% macro proposal(r) -%}{{ "exclude" if r.ready or (r.supports and r.coffee_now) else "include" if r.held or r.restores else "" }}{%- endmacro %}
+{# Exclude or Include products: the confirm sheet asks the reason and whether by coffee or by version (admin.js). #}
+{% macro decide(action, items, label, cls="text") -%}
+<form class="inline-form" data-write="/api/decisions" data-ask="reason kind" data-confirm-label="{{ action | capitalize }}" data-confirm-title="{{ action | capitalize }} {{ 'this product' if items | length == 1 else (items | length) ~ ' products' }}?"
+      data-confirm="{{ (items[:5] | map(attribute='title') | map('default', '') | join('; ')) }}{{ '; and ' ~ (items | length - 5) ~ ' more' if items | length > 5 }}. {{ 'Leave out of the catalog, even if the classifier says coffee' if action == 'exclude' else 'Keep in the catalog as coffee, even if the classifier says not' }}. Nothing is served until a draft of it is published (Release).">
+  <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="action" value="{{ action }}"><input type="hidden" name="items" value='[{% for m in items %}{{ item(m) }}{{ "," if not loop.last }}{% endfor %}]' data-json>
+  <button class="btn {{ cls }} inline" type="submit" data-busy="Recording…">{{ label }}</button>
+</form>
+{%- endmacro %}
 {% macro item(r) -%}{{ {"coffee_id": r.coffee_id, "input_hash": r.input_hash, "roaster_id": r.roaster_id, "title": r.title, "evidence_hash": r.evidence_hash, "seen_coffee_id": r.dc.decision_id if r.dc else none, "seen_input_hash": r.dh.decision_id if r.dh else none} | tojson }}{%- endmacro %}
 <div data-state="{{ 'data' if build else 'empty' }}">
 {{ write_off(writes_off) }}
@@ -33,8 +41,8 @@
     {% set want = proposal(r) %}
     <p class="body">{% if pr.ready_flags %}Its removal is ready as far as the build can tell: supports from {{ pr.supports_families }} families, no doubt. Publish also needs a live check of the store (below).{% elif pr.doubts %}A doubt is open, so its removal can’t be ready: decide only if you have checked it yourself.{% else %}Not ready: removal needs supports from two families and no doubt.{% endif %}</p>
     <div class="actions mt12">
-      <button class="btn {{ 'primary' if want == 'exclude' else 'secondary' }} inline" type="button" data-decide="exclude" data-item='{{ item(r) }}'>Exclude…</button>
-      <button class="btn {{ 'primary' if want == 'include' else 'secondary' }} inline" type="button" data-decide="include" data-item='{{ item(r) }}'>Include…</button>
+      {{ decide("exclude", [r], "Exclude…", "primary" if want == "exclude" else "secondary") }}
+      {{ decide("include", [r], "Include…", "primary" if want == "include" else "secondary") }}
     </div>
   {% endif %}
 
@@ -82,7 +90,6 @@
     <tbody>{% for x in case.fetches %}<tr><th scope="row">{{ x.run_date }}</th><td>{{ status("ok" if x.ok else x.last_status or "failed") }}</td><td class="n">{{ n(x.products) }}</td><td class="n">{{ x.attempts }}</td><td class="err">{{ x.last_error or "—" }}</td></tr>{% endfor %}</tbody>
   </table></div>
   {% else %}<p class="body">No fetches of the store in the lake.</p>{% endif %}
-  {% if not writes_off and not live %}{{ decide_dialog() }}{% endif %}
   {% endif %}
 {% else %}
 {# --- the queue ----------------------------------------------------------------------------------------------- #}
@@ -105,16 +112,15 @@
     <thead><tr><th scope="col">Product</th><th scope="col">Roaster</th><th scope="col">Flags</th><th scope="col" class="n">Public rows</th><th scope="col">Decision</th></tr></thead>
     <tbody>{% for g in q.rows | groupby("evidence_hash") | sort(attribute="list.0.group_rows", reverse=true) %}{% set members = g.list %}
       {% if members[0].group_n > 1 %}{% set want = proposal(members[0]) %}<tr class="grp"><th scope="rowgroup" colspan="3">{{ members[0].group_n }} products with the same evidence: {{ members[0].rules | join(", ") }} · {{ summary(members[0]) }}</th><td class="n">{{ n(members[0].group_rows) }}</td>
-        <td>{% set open = members | rejectattr("decided") | list %}{% if want and open and not writes_off %}<button class="btn text inline" type="button" data-decide="{{ want }}" data-items='[{% for m in open %}{{ item(m) }}{{ "," if not loop.last }}{% endfor %}]'>{{ want | capitalize }} these {{ open | length }}…</button>{% else %}—{% endif %}</td></tr>{% endif %}
+        <td>{% set open = members | rejectattr("decided") | list %}{% if want and open and not writes_off %}{{ decide(want, open, (want | capitalize) ~ " these " ~ (open | length) ~ "…") }}{% else %}—{% endif %}</td></tr>{% endif %}
       {% for r in members %}<tr>
         <th scope="row"><a class="ev" href="/queue?{{ {"case": r.coffee_id} | urlencode }}">{{ r.title or r.coffee_id }}</a></th>
         <td>{{ r.roaster_id }}</td><td>{{ summary(r) }}</td><td class="n">{{ n(r.public_rows) }}</td>
-        <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off %}<button class="btn text inline" type="button" data-decide="{{ proposal(r) }}" data-item='{{ item(r) }}'>{{ proposal(r) | capitalize }}…</button>{% else %}—{% endif %}</td>
+        <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off %}{{ decide(proposal(r), [r], (proposal(r) | capitalize) ~ "…") }}{% else %}—{% endif %}</td>
       </tr>{% endfor %}
     {% endfor %}</tbody>
   </table></div>
   {% if q.matching > q.page %}<nav class="pager" aria-label="Pages of results">{% if q.offset %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset - q.page)]) | urlencode }}">Previous {{ q.page }}</a>{% endif %}<span class="meta">{{ q.offset // q.page + 1 }} of {{ (q.matching + q.page - 1) // q.page }}</span>{% if q.offset + q.page < q.matching %}<a class="ev" href="/queue?{{ (pager + [("offset", q.offset + q.page)]) | urlencode }}">Next {{ q.page }}</a>{% endif %}</nav>{% endif %}
-  {% if not writes_off %}{{ decide_dialog() }}{% endif %}
   {% endif %}
   {% endif %}
 
