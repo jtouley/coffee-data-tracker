@@ -96,7 +96,7 @@ def test_the_windows():
 
 def test_migrations_apply_once_and_every_table_is_append_only(pg_url):
     cp = ControlPlane(url_connect(pg_url))
-    assert cp.migrate() == ["0001_control_plane.sql", "0002_rules.sql"]
+    assert cp.migrate() == ["0001_control_plane.sql", "0002_evaluations.sql", "0003_rules.sql"]
     assert cp.migrate() == []  # every instance runs it at start: idempotent
     cp.audit_now("owner", "decide", "x", "ok")
     for sql in ("update control.audit set actor = 'x'", "delete from control.audit", "truncate control.audit",
