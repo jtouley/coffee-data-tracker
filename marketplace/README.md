@@ -70,7 +70,7 @@ Databricks loads from S3 or GCS.
 
 `LISTING.md` is the source of truth for the listing copy. The Snowflake listing's attribute boxes are typed by
 hand from it, so nothing else would notice when a number there goes stale. Its `coverage-claims` comment maps
-each number in the copy to a `mart_build_profile` metric (`listed_coffees: about 45,000 coffees listed for
+each number in the copy to a `mart_build_profile` metric (`listed_coffees: about 38,000 coffees listed for
 sale`), and every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
 wholesale (not `PUBLIC_COFFEE`'s rows), and `roasters_with_coffee` the roasters with at least one of them:
 - `coverage_claims_match_build` warns when a claim is more than 15% (`claim_tolerance` in

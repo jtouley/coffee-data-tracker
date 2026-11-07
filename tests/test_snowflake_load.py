@@ -572,3 +572,38 @@ def test_dry_run_shows_the_views_a_load_would_recreate_in_upper_case(tmp_path):
     assert "(COFFEE_ID comment " in create and 'as select "coffee_id", "variant_id" from' in create
     # the views it would recreate aren't also described column by column (their definition carries it)
     assert not any(s.startswith("alter view") for s in out["statements"])
+
+
+def _real_columns() -> dict[str, list[tuple[str, str]]]:
+    """Each public table's (column, physicalType), from the repository's contract (dbt enforces the same)."""
+    schema = yaml.safe_load(REAL_CONTRACT.read_text())["schema"]
+    return {o["name"]: [(p["name"], p["physicalType"]) for p in o["properties"]] for o in schema}
+
+
+def test_every_public_column_has_an_unquoted_upper_case_view_name():
+    """The real contract's columns, as the share views will name them: none needs quotes, none collides."""
+    columns = _real_columns()
+    assert set(PUBLIC_TABLES) <= set(columns)
+    for t in PUBLIC_TABLES:
+        names = [snowflake_load.view_column(c) for c, _ in columns[t]]
+        assert len(set(names)) == len(names), t
+
+
+def test_the_listing_sample_queries_use_only_public_columns():
+    """marketplace/LISTING.md's Snowflake sample queries run (in DuckDB) against empty SHARE views with the
+    contract's upper-case columns and types, so a renamed or dropped column breaks this test, not the listing."""
+    import duckdb
+
+    listing = (REAL_CONTRACT.parents[1] / "marketplace" / "LISTING.md").read_text()
+    sql = re.search(r"\*\*Sample queries\*\*.*?```sql\n(.*?)```", listing, re.S)[1]
+    con = duckdb.connect()
+    con.execute("create schema SHARE")
+    for t, cols in _real_columns().items():
+        if t in snowflake_load.SHARE_VIEWS:
+            typed = ", ".join(f"{snowflake_load.view_column(c)} {ty}" for c, ty in cols)
+            con.execute(f"create table SHARE.{snowflake_load.SHARE_VIEWS[t]} ({typed})")
+    queries = [q.strip() for q in sql.split(";") if q.strip()]
+    assert len(queries) == 4
+    for q in queries:
+        con.execute(q).fetchall()
+        assert '"' not in q  # no quoted names

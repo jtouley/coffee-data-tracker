@@ -61,14 +61,15 @@ where e.PRICE_USD > e.PREVIOUS_PRICE_USD and e.RUN_DATE >= current_date - 28 and
 order by e.RUN_DATE desc;
 
 -- 4. Origins with the most coffees for sale, and the median of their processes' median prices
-select ORIGIN_COUNTRY, sum(COFFEES) as COFFEES_LISTED, median(MEDIAN_PRICE_PER_100G) as median_of_medians_per_100g
+select ORIGIN_COUNTRY, sum(COFFEES) as COFFEES_LISTED, median(MEDIAN_PRICE_PER_100G) as MEDIAN_OF_MEDIANS_PER_100G
 from SHARE.MARKET_WEEKLY group by ORIGIN_COUNTRY order by COFFEES_LISTED desc limit 20;
 ```
 
 **Limitations** (more in the dataset card):
 - Coverage is roasters with machine-readable storefronts (about half of reachable US roasters).
 - Attributes are extracted, by rules or LLM, and can be wrong.
-- Prices are list prices.
+- Prices are list prices in USD; a store that prices in another currency is left out, and every roaster is in
+  the US.
 - No descriptions or images.
 
 **Pricing:** free.
