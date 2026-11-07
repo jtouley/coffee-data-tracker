@@ -13,8 +13,10 @@ main:focus { outline: none; }
 .bar .mark { font-size: 1.25rem; min-height: 48px; display: flex; align-items: center; }
 .bar .acct { margin-left: auto; font-size: 0.9375rem; color: var(--ink-2); font-weight: 500; min-height: 48px; display: flex; align-items: center; }
 .bar .acct.on { color: var(--ink); font-weight: 600; }
-@media (min-width: 760px) { .bar .acct { order: 3; } }
-.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 12px; flex: 1 1 100%; }
+/* On a phone: the wordmark and Account on one row, the tabs below. On a desktop: one row, Account at the end. */
+.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 12px; flex: 1 1 100%;
+  order: 3; }
+@media (min-width: 760px) { .tabs { order: 2; } .bar .acct { order: 3; } }
 .tabs a { display: flex; align-items: center; min-height: 44px; padding: 0 8px; font-size: 0.9375rem; color: var(--ink-2);
   font-weight: 500; white-space: nowrap; border-bottom: 2px solid transparent; }
 .tabs a.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
