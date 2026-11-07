@@ -285,4 +285,3 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **The rule types' list** in the settings fold went: it repeated the schema and the README.
 - **Code:** the Case reads the Queue's own summary row; the Queue's totals come with its rows (one scan fewer); one
   reason check in the control plane; `AUDITED` on one line.
-
