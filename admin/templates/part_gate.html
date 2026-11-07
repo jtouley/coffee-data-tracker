@@ -1,0 +1,41 @@
+{% from "_macros.html" import status, source, build_picker, ev %}
+<div data-state="{{ 'data' if data else 'empty' }}">
+{% if builds %}{{ build_picker(builds, build, "/gate") }}{% endif %}
+{% if not data %}
+  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows.</p></div>
+{% else %}
+  {% set b = data.build %}
+  {% set bad = data.by_status.get("fail", 0) + data.by_status.get("error", 0) %}
+  <p class="answer" data-answer>Build {{ build }} {{ "passed" if b and b.passed else "failed" }}: {{ bad }} failing and {{ data.by_status.get("warn", 0) }} warning tests of {{ data.tests | length }}{% if data.previous %} · compared with {{ data.previous }}{% else %} · no earlier passing build to compare{% endif %}</p>
+  {{ source(data.source, read_at) }}
+  {% if b %}<dl class="facts">
+    <dt>Week</dt><dd>{{ b.run_date }}</dd><dt>Built</dt><dd>{{ t(b.built_at) }} UTC{% if b.duration_s %}, dbt took {{ n(b.duration_s) }} s{% endif %}</dd>
+    <dt>Commit</dt><dd><code>{{ b.git_sha or "unknown" }}</code></dd><dt>CI run</dt><dd>{{ ev(b.ci_run_url, "the run that built it") if b.ci_run_url else "none recorded" }}</dd>
+    <dt>dbt</dt><dd>{{ b.dbt_version or "—" }}</dd>
+  </dl>{% endif %}
+
+  <h2 class="section">Tests</h2>
+  <div class="frame" tabindex="0" role="region" aria-label="Tests"><table class="dense">
+    <caption>Tests that failed, warned or didn’t run</caption>
+    <thead><tr><th scope="col">Test</th><th scope="col">Status</th><th scope="col" class="n">Failures</th><th scope="col" class="n">Seconds</th></tr></thead>
+    {% set flagged = data.tests | rejectattr("status", "in", ["pass", "success"]) | list %}
+    <tbody>{% for x in flagged %}<tr{% if x.status in ("fail", "error") %} class="bad"{% endif %}><th scope="row"><code>{{ x.unique_id }}</code></th><td>{{ status(x.status) }}</td><td class="n">{{ n(x.failures) }}</td><td class="n">{{ n(x.execution_s) }}</td></tr>{% else %}<tr><td colspan="4">{{ "Every test passed." if data.tests else "This build recorded no tests: its dbt step stopped before them." }}</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% set passing = data.tests | selectattr("status", "in", ["pass", "success"]) | list %}
+  {% if passing %}
+  <details class="mt12"><summary class="btn text start">{{ passing | length }} passing tests</summary>
+  <div class="frame" tabindex="0" role="region" aria-label="Passing tests"><table class="dense">
+    <caption>Tests that passed</caption>
+    <thead><tr><th scope="col">Test</th><th scope="col" class="n">Seconds</th></tr></thead>
+    <tbody>{% for x in passing %}<tr><th scope="row"><code>{{ x.unique_id }}</code></th><td class="n">{{ n(x.execution_s) }}</td></tr>{% endfor %}</tbody>
+  </table></div></details>
+  {% endif %}
+
+  <h2 class="section">Metrics</h2>
+  <div class="frame" tabindex="0" role="region" aria-label="Metrics"><table>
+    <caption>The build's catalog metrics (<code>mart_build_profile</code>) against {{ data.previous or "no earlier passing build" }}</caption>
+    <thead><tr><th scope="col">Metric</th><th scope="col" class="n">This build</th><th scope="col" class="n">Previous</th><th scope="col" class="n">Change</th><th scope="col" class="n">Ratio</th></tr></thead>
+    <tbody>{% for m in data.metrics %}<tr><th scope="row"><code>{{ m.metric }}</code></th><td class="n">{{ n(m.value) }}</td><td class="n">{{ n(m.previous) }}</td><td class="n">{{ "%+.2f" | format(m.change) if m.change is not none else "—" }}</td><td class="n">{{ "%.3f" | format(m.ratio) if m.ratio is not none else "—" }}</td></tr>{% else %}<tr><td colspan="5">No metrics recorded.</td></tr>{% endfor %}</tbody>
+  </table></div>
+{% endif %}
+</div>

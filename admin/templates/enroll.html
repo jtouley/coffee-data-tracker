@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% set narrow = true %}
+{% block main %}
+<h1 class="serif title mt32">Enroll</h1>
+{% if open %}
+<p class="body mt12" data-enroll-intro>Register the first passkey. The enrollment token is the <code>ADMIN_ENROLL_TOKEN</code> secret you set. It works once: enrollment closes as soon as a passkey is registered.</p>
+<form class="auth" data-flow="enroll" novalidate>
+  <label class="flabel" for="token">Enrollment token</label>
+  <input class="input" id="token" name="token" type="password" autocomplete="off" spellcheck="false" required aria-describedby="enroll-hint">
+  <div class="hint" id="enroll-hint" data-hint role="alert"></div>
+  <button class="btn primary mt8" type="submit" data-busy="Waiting for your passkey…">Register this passkey</button>
+</form>
+<section class="codes mt24" data-codes hidden tabindex="-1" aria-labelledby="codes-title">
+  <h2 class="section" id="codes-title">Your recovery codes</h2>
+  <p class="body">Each works once, if you lose both passkeys. They are shown only now: print them or write them down, and keep them offline.</p>
+  <ol class="codebox codes-list code mt12" data-code-list></ol>
+  <p class="body mt16">Then add your second passkey from Account, within 10 minutes.</p>
+  <a class="btn primary mt16" href="/account">I’ve saved them</a>
+</section>
+{% else %}
+<p class="body mt12">Enrollment is closed: a passkey is registered. {% if signed_in %}Add a passkey from <a class="ev" href="/account">Account</a>.{% else %}<a class="ev" href="/signin">Sign in</a> with it.{% endif %}</p>
+{% endif %}
+{% endblock %}

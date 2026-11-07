@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+<h1 class="serif title mt16">Account</h1>
+<p class="body">Signed in until {{ expires.strftime("%a %d %b %H:%M") }} UTC. Sessions last 12 hours and never renew.</p>
+<div class="frame mt16" tabindex="0" role="region" aria-label="Passkeys"><table>
+  <caption>Passkeys ({{ creds | length }})</caption>
+  <thead><tr><th scope="col">Passkey</th><th scope="col">Registered (UTC)</th><th scope="col">How</th><th scope="col" class="n">Counter</th></tr></thead>
+  <tbody>{% for c in creds %}<tr><th scope="row"><code>{{ c.credential_id[:12] }}…</code>{% if c.credential_id == session.credential_id %} (this session){% endif %}</th><td>{{ c.created_at }}</td><td>{{ c.via }}</td><td class="n">{{ n(c.sign_count) }}</td></tr>{% endfor %}</tbody>
+</table></div>
+<form class="auth" data-flow="add" novalidate>
+  <h2 class="section">Add a passkey</h2>
+  {% if rule == "fresh" %}<p class="body">Add your second passkey now: this session is less than 10 minutes old.</p>
+  {% elif rule == "stale" %}<p class="body">To add your second passkey, sign out, sign in again, and add it within 10 minutes.</p>
+  {% else %}<p class="body">Two passkeys are registered. Another needs a recovery code, which it uses up.</p>
+  <label class="flabel" for="code">Recovery code</label>
+  <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="add-hint">{% endif %}
+  <div class="hint" id="add-hint" data-hint role="alert"></div>
+  {% if rule != "stale" %}<button class="btn secondary inline" type="submit" data-busy="Waiting for your passkey…">Add a passkey</button>{% endif %}
+  <p class="notice mt12" data-done hidden role="status">Passkey added.</p>
+</form>
+<h2 class="section">Sessions</h2>
+<div class="actions">
+  <button class="btn secondary inline" type="button" data-signout="/api/auth/signout" data-busy="Signing out…">Sign out</button>
+  <button class="btn danger inline" type="button" data-signout="/api/auth/signout-all" data-busy="Signing out…">Sign out everywhere</button>
+</div>
+{% endblock %}

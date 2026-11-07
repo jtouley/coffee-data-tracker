@@ -1,0 +1,97 @@
+/* The admin's additions to Bench Scale (app/static/app.css, docs/admin/DESIGN.md): the same tokens, type scale
+   (12 13 15 17 20 24 34), spacing (4 8 12 16 24 32 48) and radii; wider pages and dense tables for reading at a
+   desk. No new colours: status is a word with a mark, and --danger marks only failures and unexplained rows. */
+body.admin { max-width: 1200px; }
+body.admin.narrow { max-width: 480px; }
+.admin .screen { padding: 8px 16px 48px; min-width: 0; }
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 2; background: var(--sheet); padding: 8px 12px; border-radius: 8px; }
+main:focus { outline: none; }
+
+/* Header: the wordmark, then the page tabs on their own line on a phone (they scroll sideways if they must) */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0 24px; padding: 8px 16px 0; border-bottom: 1px solid var(--rule); }
+.bar .mark { font-size: 1.25rem; min-height: 48px; display: flex; align-items: center; }
+.bar .acct { margin-left: auto; font-size: 0.9375rem; color: var(--ink-2); font-weight: 500; min-height: 48px; display: flex; align-items: center; }
+.bar .acct.on { color: var(--ink); font-weight: 600; }
+@media (min-width: 760px) { .bar .acct { order: 3; } }
+.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 12px; flex: 1 1 100%; }
+.tabs a { display: flex; align-items: center; min-height: 44px; padding: 0 8px; font-size: 0.9375rem; color: var(--ink-2);
+  font-weight: 500; white-space: nowrap; border-bottom: 2px solid transparent; }
+.tabs a.on { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+@media (min-width: 760px) { .tabs { flex: 0 1 auto; margin: 0; padding: 0; } }
+
+/* The answer, its source, facts */
+.answer { font-size: 1.0625rem; line-height: 1.4; margin: 16px 0 4px; color: var(--ink); }
+.src { font-size: 0.8125rem; color: var(--ink-2); margin: 0 0 8px; }
+.stale, .notice { font-size: 0.9375rem; color: var(--ink); background: var(--panel); border-radius: 8px; padding: 12px 16px; margin: 12px 0 0; }
+code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.875em; overflow-wrap: anywhere; }
+dl.facts { display: grid; grid-template-columns: minmax(96px, max-content) minmax(0, 1fr); gap: 0 16px; margin: 8px 0 0;
+  font-size: 0.8125rem; }
+dl.facts dt { color: var(--ink-2); padding: 8px 0; border-bottom: 1px solid var(--rule); }
+dl.facts dd { margin: 0; padding: 8px 0; border-bottom: 1px solid var(--rule); min-width: 0; overflow-wrap: anywhere; }
+a.ev { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a.ev.small { font-size: 0.8125rem; font-weight: 500; }
+
+/* Tables: dense, hairlines, tabular numerals right-aligned. Each sits in a frame that scrolls sideways on its own,
+   with the first column pinned, so the page never scrolls sideways. */
+.frame { overflow-x: auto; max-width: 100%; margin-top: 8px; border-top: 1px solid var(--rule); }
+.frame:focus-visible { outline-offset: 0; }
+table { border-collapse: separate; border-spacing: 0; width: auto; min-width: min(100%, 40rem); font-size: 0.8125rem; line-height: 1.35; }
+caption { text-align: left; font-size: 0.8125rem; color: var(--ink-2); padding: 8px 0; caption-side: top; }
+th, td { text-align: left; padding: 8px 16px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th { color: var(--ink-2); font-weight: 600; white-space: nowrap; position: sticky; top: 0; background: var(--paper); }
+tbody th { font-weight: 500; white-space: nowrap; }
+table.dense td, table.dense th { padding-top: 6px; padding-bottom: 6px; white-space: nowrap; }
+table.dense td.err { white-space: normal; min-width: 16rem; max-width: 32rem; color: var(--ink-2); }
+th:first-child, td:first-child { position: sticky; left: 0; background: var(--paper); z-index: 1; padding-left: 0; }
+.n { text-align: right; font-variant-numeric: tabular-nums; }
+tr.sel th, tr.sel td { background: var(--panel); }
+td a.ev, th a.ev { display: inline-block; min-height: 24px; }
+.cols { display: grid; gap: 0 32px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 760px) { .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Status: a word with a mark */
+.st { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.st i { width: 8px; height: 8px; flex: none; }
+.st-ok i { background: var(--ink); border-radius: 50%; }
+.st-run i { border: 1.5px solid var(--ink); border-radius: 50%; width: 6px; height: 6px; }
+.st-warn i { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 9px solid var(--ink-2); }
+.st-bad { color: var(--danger); font-weight: 600; }
+.st-bad i { background: var(--danger); }
+.st-none { color: var(--ink-2); }
+.st-none i { height: 2px; background: var(--ink-2); }
+.unexplained { color: var(--danger); font-weight: 600; }
+tr.bad th:first-child { box-shadow: inset 3px 0 0 var(--danger); padding-left: 8px; }
+
+/* States */
+.state { padding: 16px 0; }
+.state .group-title, .state.empty .section { font-size: 1.0625rem; color: var(--ink); margin-top: 8px; }
+.state.loading .brewing p { margin: 0; }
+.state.error .body, .state.empty .body { max-width: 65ch; }
+.btn.inline { width: auto; min-height: 44px; padding: 0 16px; display: inline-flex; font-size: 0.9375rem; }
+.btn.text.inline { padding: 0 4px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Pickers, search and facets */
+.picker { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; }
+.select { min-height: 44px; max-width: 100%; border: 1px solid var(--control); border-radius: 8px; background: var(--sheet);
+  color: var(--ink); font: inherit; font-size: 0.9375rem; padding: 0 12px; }
+.search { margin-top: 16px; }
+.searchrow { display: flex; gap: 8px; margin-top: 8px; }
+.searchrow .input { min-height: 44px; flex: 1; min-width: 0; font-size: 1rem; }
+.facets { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); margin-top: 16px; }
+.facet { display: grid; gap: 4px; min-width: 0; }
+.facet .select { width: 100%; }
+.input.small { min-height: 44px; font-size: 1rem; }
+.chips { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chips .chip { font-size: 0.8125rem; min-height: 36px; gap: 8px; }
+.chips .chip .x { font-size: 1rem; line-height: 1; }
+.filters { margin-top: 8px; }
+.filters > summary { width: auto; min-height: 44px; display: inline-flex; cursor: pointer; }
+.pager { display: flex; gap: 16px; align-items: center; margin-top: 16px; }
+
+/* Signed out */
+.auth { margin-top: 8px; }
+.codes-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5em, 1fr)); gap: 8px 16px;
+  font-size: 1.0625rem; margin: 12px 0 0; }
+.codes-list li { white-space: nowrap; }

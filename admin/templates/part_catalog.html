@@ -1,0 +1,46 @@
+{% from "_macros.html" import build_picker, ev %}
+<div data-state="{{ 'data' if data and data.matching else 'empty' }}">
+{% if builds %}{{ build_picker(builds, build, "/catalog") }}{% endif %}
+{% if not data %}
+  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows.</p></div>
+{% else %}
+  <form class="search" method="get" action="/catalog" role="search">
+    <input type="hidden" name="build" value="{{ build }}">
+    <label class="label" for="q">Search title, roaster, product id or URL</label>
+    <div class="searchrow"><input class="input" id="q" name="q" type="search" value="{{ f.q }}" autocomplete="off" spellcheck="false"><button class="btn primary inline" type="submit">Search</button></div>
+    <details class="filters" data-filters{% if f.values or f.price_min is not none or f.price_max is not none %} open{% endif %}>
+    <summary class="btn text start">Filters{% if f.values %} ({{ f.values | length }} applied){% endif %}</summary>
+    <div class="facets">
+      {% for name in facets %}
+      <label class="facet"><span class="label">{{ name.replace("_", " ") | capitalize }}</span>
+        <select name="{{ name }}" class="select" data-autosubmit>
+          <option value="">Any</option>
+          {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ value }} ({{ n(count) }})</option>{% endfor %}
+        </select></label>
+      {% endfor %}
+      <label class="facet"><span class="label">Lowest price from ($)</span><input class="input small" name="price_min" inputmode="decimal" value="{{ f.price_min if f.price_min is not none else '' }}"></label>
+      <label class="facet"><span class="label">to ($)</span><input class="input small" name="price_max" inputmode="decimal" value="{{ f.price_max if f.price_max is not none else '' }}"></label>
+    </div>
+    </details>
+    <noscript><button class="btn secondary inline" type="submit">Apply filters</button></noscript>
+  </form>
+  {% set chips = f.chips() %}
+  {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}<li><a class="btn text inline" href="/catalog?build={{ build }}">Clear all</a></li></ul>{% endif %}
+  <p class="answer" data-answer>{{ n(data.matching) }} of {{ n(data.total) }} products</p>
+  <p class="src">From build {{ build }}’s {{ data.meta.made_from }} · cached locally per build · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+  {% if not data.matching %}
+  <div class="state empty mt16"><h2 class="section">No products match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
+  {% else %}
+  <div class="frame" tabindex="0" role="region" aria-label="Products"><table class="dense">
+    <caption>Products {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, by roaster and title</caption>
+    <thead><tr><th scope="col">Product</th><th scope="col">Roaster</th><th scope="col">Coffee</th><th scope="col">Decided by</th><th scope="col">Reason</th><th scope="col">Status</th><th scope="col">Origin</th><th scope="col">Process</th><th scope="col">Stock</th><th scope="col" class="n">Lowest $</th><th scope="col" class="n">$/100 g</th></tr></thead>
+    <tbody>{% for r in data.rows %}<tr>
+      <th scope="row">{{ ev(r.url, r.title or r.coffee_id) }}</th><td><a class="ev" href="{{ qs(roaster=r.roaster_id) }}">{{ r.roaster_id }}</a></td>
+      <td>{{ r.coffee }}</td><td>{{ r.classified_by or "—" }}</td><td class="err">{{ r.reason or "—" }}</td><td>{{ r.listed }}</td>
+      <td>{{ r.origin_country or "—" }}</td><td>{{ r.process or "—" }}</td><td>{{ r.stock or "—" }}</td><td class="n">{{ n(r.min_price_usd) }}</td><td class="n">{{ n(r.price_per_100g) }}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+  {% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
+  {% endif %}
+{% endif %}
+</div>

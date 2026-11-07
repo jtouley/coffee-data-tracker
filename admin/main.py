@@ -1,0 +1,659 @@
+"""admin.registry.coffee: the owner's command center (docs/admin/README.md).
+
+Read-only pages over the lake (Week, Failures, Gate, Changes, Catalog) behind passkey sign-in (auth.py). Every
+route but PUBLIC needs a live session, checked in one place (`gate`) before any route runs, so a route added later
+is signed-in by default, and an unknown path answers 401 like a known one. A misconfigured service answers 503 to
+everything. The lake is opened read-only and never written.
+
+Run it with `uvicorn --factory admin.main:create_app` (`make admin` locally; docs/admin/README.md).
+"""
+
+from __future__ import annotations
+
+import asyncio
+import contextlib
+import hashlib
+import json
+import logging
+import mimetypes
+import re
+import time
+from collections.abc import Callable
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+from urllib.parse import urlencode, urlsplit
+
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+from coffeedata import quality
+from coffeedata.lake import Lake
+
+from . import queries
+from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
+from .catalog import FACETS, Catalog, Filters
+from .config import Settings, from_env
+
+log = logging.getLogger("admin")
+
+
+def emit(severity: str, **fields) -> None:
+    """One JSON object per line, with its severity: Cloud Run reads it as a structured entry, so alerts can match
+    its fields (src/terraform/admin.tf). Never a header, cookie, token, code or request body."""
+    level = logging.ERROR if severity == "ERROR" else logging.INFO
+    log.log(level, json.dumps({"severity": severity, **fields}, default=str))
+
+
+def _log_setup() -> None:
+    if not log.handlers:
+        handler = logging.StreamHandler()
+        handler.setFormatter(logging.Formatter("%(message)s"))
+        log.addHandler(handler)
+        log.setLevel(logging.INFO)
+        log.propagate = False
+
+
+HERE = Path(__file__).parent
+APP_STATIC = HERE.parent / "app" / "static"
+COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
+COOKIE_LOCAL = "admin_session"  # http://localhost only
+PAGES = ("week", "failures", "gate", "changes", "catalog")
+SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
+WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+BUILD_RE = re.compile(r"^[0-9A-Za-z-]{1,64}$")
+
+# Reachable signed out. Everything else needs a session (tests/test_admin_routes.py walks every route).
+PUBLIC = {
+    ("GET", "/health"),
+    ("GET", "/signin"),
+    ("GET", "/enroll"),
+    ("GET", "/recover"),
+    ("POST", "/api/auth/signin/begin"),
+    ("POST", "/api/auth/signin/finish"),
+    ("POST", "/api/auth/enroll/begin"),
+    ("POST", "/api/auth/enroll/finish"),
+    ("POST", "/api/auth/recover/begin"),
+    ("POST", "/api/auth/recover/finish"),
+}
+PUBLIC_PREFIX = "/static/"
+
+CSP = "; ".join(
+    [
+        "default-src 'none'",
+        "script-src 'self'",
+        "style-src 'self'",
+        "img-src 'self' data:",
+        "font-src 'self'",
+        "connect-src 'self'",
+        "base-uri 'none'",
+        "form-action 'self'",
+        "frame-ancestors 'none'",
+    ]
+)
+
+
+def secure_headers(response: Response, static: bool = False) -> None:
+    h = response.headers
+    h["Content-Security-Policy"] = CSP
+    h["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains"
+    h["X-Content-Type-Options"] = "nosniff"
+    h["Referrer-Policy"] = "same-origin"
+    h["Cross-Origin-Opener-Policy"] = "same-origin"
+    h["Cross-Origin-Resource-Policy"] = "same-origin"
+    h["Permissions-Policy"] = (
+        "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    )
+    h["X-Robots-Tag"] = "noindex, nofollow"
+    if not static:
+        h["Cache-Control"] = "no-store"
+
+
+class Assets:
+    """The app's stylesheet and fonts (the same look) and the admin's own files, under content-hashed names."""
+
+    def __init__(self) -> None:
+        self.url: dict[str, str] = {}
+        self.files: dict[str, tuple[bytes, str]] = {}
+        sources = [
+            (APP_STATIC / "fonts", "fonts"),
+            (APP_STATIC / "app.css", "app.css"),
+            (HERE / "static", ""),
+        ]
+        paths: list[tuple[str, Path]] = []
+        for src, rel in sources:
+            if src.is_file():
+                paths.append((rel, src))
+            else:
+                paths += [
+                    ((f"{rel}/" if rel else "") + p.relative_to(src).as_posix(), p)
+                    for p in src.rglob("*")
+                    if p.is_file()
+                ]
+        for rel, p in sorted(paths, key=lambda x: (x[0].endswith(".css"), x[0])):
+            data = p.read_bytes()
+            if rel.endswith(".css"):
+                text = data.decode()
+                for name, url in self.url.items():
+                    text = text.replace(f"url(/static/{name})", f"url({url})")
+                data = text.encode()
+            stem, _, ext = rel.rpartition(".")
+            hashed = f"/static/{stem}.{hashlib.sha256(data).hexdigest()[:10]}.{ext}"
+            self.url[rel] = hashed
+            self.files[hashed] = (data, mimetypes.guess_type(p.name)[0] or "application/octet-stream")
+
+    def __call__(self, rel: str) -> str:
+        return self.url[rel]
+
+
+class LakeTimeout(Exception):
+    pass
+
+
+class Reader:
+    """Runs a query function (lake, con, *args) in a thread with a timeout, interrupting DuckDB if it runs over.
+    `before` runs first in the thread: tests use it to make the lake slow or broken."""
+
+    def __init__(self, lake: Lake, timeout_s: float = 25.0, before: Callable[[], None] | None = None):
+        self.lake, self.timeout_s, self.before = lake, timeout_s, before
+        self._listed = time.monotonic()
+
+    async def run(self, fn: Callable, *args) -> Any:
+        if self.lake.remote and time.monotonic() - self._listed > 300:  # see releases written since
+            quality.forget_listings()
+            self._listed = time.monotonic()
+        con = self.lake.connect()
+
+        def call():
+            if self.before:
+                self.before()
+            return fn(self.lake, con, *args)
+
+        try:
+            return await asyncio.wait_for(asyncio.to_thread(call), self.timeout_s)
+        except TimeoutError as e:
+            con.interrupt()
+            raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s") from e
+        finally:
+            with contextlib.suppress(Exception):  # closing an interrupted connection
+                con.close()
+
+
+def _client_ip(request: Request, hops: int) -> str:
+    if hops > 0:
+        chain = [p.strip() for p in request.headers.get("x-forwarded-for", "").split(",") if p.strip()]
+        if len(chain) >= hops:
+            return chain[-hops]
+    return request.client.host if request.client else ""
+
+
+def _fmt_n(v: Any) -> str:
+    if v is None:
+        return "—"
+    if isinstance(v, float):
+        return f"{v:,.2f}" if abs(v) < 1000 else f"{v:,.0f}"
+    if isinstance(v, int):
+        return f"{v:,}"
+    return str(v)
+
+
+def _fmt_t(v: Any) -> str:
+    if v is None:
+        return "—"
+    if isinstance(v, datetime):
+        return v.astimezone(UTC).strftime("%a %d %b %H:%M")
+    return str(v)
+
+
+def create_app(
+    settings: Settings | None = None, reader: Reader | None = None, slow_s: float = SLOW_S
+) -> FastAPI:
+    """The admin app. `reader` and `slow_s` are for tests (a slow or broken lake); the service uses the defaults."""
+    settings = settings or from_env()
+    _log_setup()
+    app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+    assets = Assets()
+    env = Environment(loader=FileSystemLoader(HERE / "templates"), autoescape=select_autoescape(["html"]))
+    env.globals |= {"asset": assets, "pages": PAGES, "n": _fmt_n, "t": _fmt_t, "slow_s": slow_s}
+    cookie = COOKIE_SECURE if settings.secure_cookies else COOKIE_LOCAL
+    auth: Auth | None = None
+    if not settings.problems:
+        assert settings.store is not None
+        auth = Auth(
+            settings.store, settings.session_secret, settings.enroll_token, settings.rp_id, settings.origin
+        )
+    else:
+        emit("ERROR", event="admin_switched_off", problems=settings.problems)
+    lake = Lake(settings.lake_url, read_only=True)
+    reader = reader or Reader(lake, settings.lake_timeout_s)
+    catalog = Catalog(reader.lake, settings.cache_dir)
+    app.state.settings, app.state.auth, app.state.reader = settings, auth, reader
+
+    def page(name: str, status: int = 200, **ctx) -> HTMLResponse:
+        return HTMLResponse(env.get_template(name).render(**ctx), status)
+
+    def audit(event: str, request: Request, outcome: str) -> None:
+        emit(
+            "INFO" if outcome == "ok" else "WARNING",
+            event="admin_auth",
+            action=event,
+            outcome=outcome,
+            ip=_client_ip(request, settings.proxy_hops),
+        )
+
+    # --- the gate: every request, before any route ------------------------------------------------------
+
+    @app.middleware("http")
+    async def gate(request: Request, call_next):
+        path, method = request.url.path, request.method
+        static = path.startswith(PUBLIC_PREFIX)
+        if auth is None:  # switched off: fail closed, say why without values
+            if static:
+                response = await call_next(request)
+            elif path == "/health":
+                response = JSONResponse({"ok": False, "detail": "misconfigured"}, 503)
+            elif method == "GET" and not path.startswith(("/api/", "/part/")):
+                response = page("off.html", 503, problems=settings.problems)
+            else:
+                response = JSONResponse({"detail": "The admin is switched off."}, 503)
+            secure_headers(response, static)
+            return response
+        request.state.session = None
+        public = static or (method, path) in PUBLIC or (method == "HEAD" and ("GET", path) in PUBLIC)
+        try:
+            if method == "POST" and not _same_origin(request):
+                response = JSONResponse({"detail": "Refused: not from this site."}, 403)
+            elif public:
+                if (method, path) in {("GET", "/signin"), ("GET", "/enroll"), ("GET", "/recover")}:
+                    request.state.session = auth.session(request.cookies.get(cookie))
+                response = await call_next(request)
+            else:
+                s = auth.session(request.cookies.get(cookie))
+                if s is None:
+                    response = _signed_out(request, ended=bool(request.cookies.get(cookie)))
+                else:
+                    request.state.session = s
+                    response = await call_next(request)
+        except AuthUnavailable as e:
+            emit("ERROR", event="admin_auth_unavailable", error=str(e))
+            response = (
+                page("off.html", 503, problems=[], unavailable=True)
+                if method == "GET" and not path.startswith(("/api/", "/part/"))
+                else JSONResponse({"detail": "Sign-in is unavailable. Try again shortly."}, 503)
+            )
+        secure_headers(response, static)
+        return response
+
+    def _same_origin(request: Request) -> bool:
+        """The app's CSRF rule: a fetch from this origin (header, Fetch Metadata and Origin all agree)."""
+        if request.headers.get("x-requested-with") != "fetch":
+            return False
+        if request.headers.get("sec-fetch-site", "same-origin") not in ("same-origin", "none"):
+            return False
+        return request.headers.get("origin", "").rstrip("/") == settings.origin
+
+    def _signed_out(request: Request, ended: bool) -> Response:
+        path = request.url.path
+        if request.method == "GET" and not path.startswith(("/api/", "/part/")):
+            q = {"next": path + (f"?{request.url.query}" if request.url.query else "")}
+            if ended:
+                q["ended"] = "1"
+            r: Response = RedirectResponse(f"/signin?{urlencode(q)}", 303)
+        else:
+            r = JSONResponse({"detail": "Sign in first.", "ended": ended}, 401)
+        if ended:
+            r.delete_cookie(
+                cookie, path="/", secure=settings.secure_cookies, httponly=True, samesite="strict"
+            )
+        return r
+
+    def _set_session(response: Response, value: str) -> None:
+        response.set_cookie(cookie, value, max_age=SESSION_S, path="/", secure=settings.secure_cookies,
+                            httponly=True, samesite="strict")  # fmt: skip
+
+    def _next(raw: str | None) -> str:
+        """Only a path on this site: never another origin (`//evil`, `https://…`)."""
+        if raw and raw.startswith("/") and not raw.startswith("//") and "\\" not in raw:
+            u = urlsplit(raw)
+            if not u.scheme and not u.netloc:
+                return raw
+        return "/week"
+
+    # --- public -------------------------------------------------------------------------------------------
+
+    @app.get("/health")
+    async def health():
+        return {"ok": True}
+
+    @app.get("/static/{rest:path}")
+    async def static(rest: str):
+        hit = assets.files.get(f"/static/{rest}")
+        if hit is None:
+            return Response(b"", 404)
+        data, media = hit
+        return Response(
+            data, media_type=media, headers={"Cache-Control": "public, max-age=31536000, immutable"}
+        )
+
+    @app.get("/signin", response_class=HTMLResponse)
+    async def signin(request: Request, next: str | None = None, ended: str | None = None):
+        assert auth is not None
+        if request.state.session:
+            return RedirectResponse(_next(next), 303)
+        if await asyncio.to_thread(auth.enroll_open):
+            return RedirectResponse("/enroll", 303)
+        return page("signin.html", ended=bool(ended), next=_next(next), title="Sign in")
+
+    @app.get("/enroll", response_class=HTMLResponse)
+    async def enroll(request: Request):
+        assert auth is not None
+        is_open = await asyncio.to_thread(auth.enroll_open)
+        return page("enroll.html", open=is_open, signed_in=bool(request.state.session), title="Enroll")
+
+    @app.get("/recover", response_class=HTMLResponse)
+    async def recover(request: Request):
+        return page("recover.html", title="Recover")
+
+    async def _json(request: Request) -> dict:
+        try:
+            body = await request.json()
+        except ValueError:
+            body = None
+        if not isinstance(body, dict):
+            raise AuthError("Bad request.")
+        return body
+
+    async def _auth_call(request: Request, action: str, fn: Callable[[dict], Any]) -> Response:
+        try:
+            body = await _json(request)
+            result = await asyncio.to_thread(fn, body)
+        except AuthError as e:
+            audit(action, request, "refused")
+            return JSONResponse({"detail": e.message}, e.status)
+        audit(action, request, "ok")
+        return result
+
+    def _session_response(value: str, extra: dict | None = None, to: str = "/week") -> JSONResponse:
+        r = JSONResponse({"ok": True, "next": to} | (extra or {}))
+        _set_session(r, value)
+        return r
+
+    def ip(request: Request) -> str:
+        return _client_ip(request, settings.proxy_hops)
+
+    @app.post("/api/auth/signin/begin")
+    async def signin_begin(request: Request):
+        assert auth is not None
+        return await _auth_call(
+            request, "signin_begin", lambda b: JSONResponse(auth.signin_begin(ip(request)))
+        )
+
+    @app.post("/api/auth/signin/finish")
+    async def signin_finish(request: Request):
+        assert auth is not None
+        return await _auth_call(
+            request,
+            "signin",
+            lambda b: _session_response(
+                auth.signin_finish(str(b.get("ceremony", "")), b.get("credential") or {}, ip(request)),
+                to=_next(b.get("next")),
+            ),
+        )
+
+    @app.post("/api/auth/enroll/begin")
+    async def enroll_begin(request: Request):
+        assert auth is not None
+        return await _auth_call(
+            request,
+            "enroll_begin",
+            lambda b: JSONResponse(auth.enroll_begin(str(b.get("token", "")), ip(request))),
+        )
+
+    @app.post("/api/auth/enroll/finish")
+    async def enroll_finish(request: Request):
+        assert auth is not None
+
+        def go(b):
+            value, codes = auth.enroll_finish(str(b.get("ceremony", "")), b.get("credential") or {})
+            return _session_response(value, {"codes": codes})
+
+        return await _auth_call(request, "enroll", go)
+
+    @app.post("/api/auth/recover/begin")
+    async def recover_begin(request: Request):
+        assert auth is not None
+        return await _auth_call(
+            request,
+            "recover_begin",
+            lambda b: JSONResponse(auth.recover_begin(str(b.get("code", "")), ip(request))),
+        )
+
+    @app.post("/api/auth/recover/finish")
+    async def recover_finish(request: Request):
+        assert auth is not None
+        return await _auth_call(
+            request,
+            "recover",
+            lambda b: _session_response(
+                auth.recover_finish(str(b.get("ceremony", "")), b.get("credential") or {})
+            ),
+        )
+
+    # --- signed in: account -------------------------------------------------------------------------------
+
+    @app.get("/", include_in_schema=False)
+    async def home():
+        return RedirectResponse("/week", 303)
+
+    @app.get("/account", response_class=HTMLResponse)
+    async def account(request: Request):
+        assert auth is not None
+        s: Session = request.state.session
+        creds = await asyncio.to_thread(auth.credentials)
+        rule = await asyncio.to_thread(auth.add_rule, s)
+        return page("account.html", creds=list(creds.values()), rule=rule, session=s, title="Account",
+                    expires=datetime.fromtimestamp(s.expires_at, UTC), on="account")  # fmt: skip
+
+    @app.post("/api/auth/add/begin")
+    async def add_begin(request: Request):
+        assert auth is not None
+        s = request.state.session
+        return await _auth_call(
+            request, "add_begin", lambda b: JSONResponse(auth.add_begin(s, b.get("code"), ip(request)))
+        )
+
+    @app.post("/api/auth/add/finish")
+    async def add_finish(request: Request):
+        assert auth is not None
+        s = request.state.session
+        return await _auth_call(
+            request,
+            "add_passkey",
+            lambda b: (
+                auth.add_finish(s, str(b.get("ceremony", "")), b.get("credential") or {}),
+                JSONResponse({"ok": True}),
+            )[1],
+        )
+
+    @app.post("/api/auth/signout")
+    async def signout(request: Request):
+        assert auth is not None
+        await asyncio.to_thread(auth.revoke, request.state.session)
+        audit("signout", request, "ok")
+        r = JSONResponse({"ok": True, "next": "/signin"})
+        r.delete_cookie(cookie, path="/", secure=settings.secure_cookies, httponly=True, samesite="strict")
+        return r
+
+    @app.post("/api/auth/signout-all")
+    async def signout_all(request: Request):
+        assert auth is not None
+        await asyncio.to_thread(auth.revoke_all)
+        audit("signout_all", request, "ok")
+        r = JSONResponse({"ok": True, "next": "/signin"})
+        r.delete_cookie(cookie, path="/", secure=settings.secure_cookies, httponly=True, samesite="strict")
+        return r
+
+    # --- signed in: pages ---------------------------------------------------------------------------------
+    # Each page is a shell that renders at once (no lake read) and a part (/part/<page>) that admin.js loads into
+    # it, so the page shows the loading, slow and error states while the lake is read.
+
+    def _week_arg(v: str | None) -> str | None:
+        return v if v and WEEK_RE.match(v) else None
+
+    def _build_arg(v: str | None) -> str | None:
+        return v if v and BUILD_RE.match(v) else None
+
+    def shell(request: Request, name: str, reading: str) -> HTMLResponse:
+        q = request.url.query
+        return page("shell.html", on=name, part=f"/part/{name}" + (f"?{q}" if q else ""), reading=reading,
+                    title=name.capitalize())  # fmt: skip
+
+    @app.get("/week", response_class=HTMLResponse)
+    async def week_page(request: Request):
+        return shell(request, "week", "job_manifests, builds and serving_log")
+
+    @app.get("/failures", response_class=HTMLResponse)
+    async def failures_page(request: Request):
+        return shell(request, "failures", "fetches and run_completeness")
+
+    @app.get("/gate", response_class=HTMLResponse)
+    async def gate_page(request: Request):
+        return shell(request, "gate", "builds")
+
+    @app.get("/changes", response_class=HTMLResponse)
+    async def changes_page(request: Request):
+        return shell(request, "changes", "release_changes")
+
+    @app.get("/catalog", response_class=HTMLResponse)
+    async def catalog_page(request: Request):
+        return shell(request, "catalog", "product_decisions and dim_coffee")
+
+    async def part(name: str, files: str, build: Callable) -> HTMLResponse:
+        """A page's data region: its template with the query's result, or the error state."""
+        started = datetime.now(UTC)
+        try:
+            ctx = await build()
+        except LakeTimeout as e:
+            return page("part_error.html", 504, files=files, error=str(e))
+        except Exception as e:  # noqa: BLE001 - shown as the error state; the class only, never a trace
+            emit("ERROR", event="admin_read_failed", page=name, error=type(e).__name__)
+            return page("part_error.html", 502, files=files, error=_reason(e))
+        return page(f"part_{name}.html", read_at=started, files=files, **ctx)
+
+    async def common(week: str | None) -> dict:
+        weeks = await reader.run(queries.weeks)
+        served = await reader.run(queries.served)
+        chosen = week if week in weeks else (weeks[0] if weeks else week)
+        stale = None
+        if served and weeks and str(served.get("run_date"))[:10] < weeks[0]:
+            stale = {"served": str(served.get("run_date"))[:10], "latest": weeks[0]}
+        return {"weeks": weeks, "week": chosen, "served": served, "stale": stale}
+
+    async def pick_build(build: str | None, week: str | None = None) -> tuple[list[dict], str | None]:
+        all_builds = await reader.run(queries.builds)
+        ids = [b["build_id"] for b in all_builds]
+        if build in ids:
+            return all_builds, build
+        served = await reader.run(queries.served)
+        if served and served["build_id"] in ids:
+            return all_builds, served["build_id"]
+        return all_builds, ids[0] if ids else None
+
+    @app.get("/part/week", response_class=HTMLResponse)
+    async def week_part(week: str | None = None):
+        async def build():
+            c = await common(_week_arg(week))
+            data = await reader.run(queries.week, c["week"]) if c["week"] else None
+            return c | {"data": data}
+
+        return await part("week", "job_manifests, builds, serving_log", build)
+
+    @app.get("/part/failures", response_class=HTMLResponse)
+    async def failures_part(week: str | None = None):
+        async def build():
+            c = await common(_week_arg(week))
+            data = await reader.run(queries.failures, c["week"]) if c["week"] else None
+            trend = await reader.run(queries.failure_trend)
+            return c | {"data": data, "trend": trend}
+
+        return await part("failures", "fetches, run_completeness", build)
+
+    @app.get("/part/gate", response_class=HTMLResponse)
+    async def gate_part(build: str | None = None):
+        async def make():
+            all_builds, chosen = await pick_build(_build_arg(build))
+            data = await reader.run(queries.gate, chosen) if chosen else None
+            return {"builds": all_builds, "build": chosen, "data": data}
+
+        return await part("gate", "builds", make)
+
+    @app.get("/part/changes", response_class=HTMLResponse)
+    async def changes_part(request: Request, build: str | None = None):
+        p = request.query_params
+
+        async def make():
+            all_builds, chosen = await pick_build(_build_arg(build))
+            try:
+                offset = max(0, int(p.get("offset") or 0))
+            except ValueError:
+                offset = 0
+            data = (
+                await reader.run(
+                    queries.changes,
+                    chosen,
+                    p.get("table") or None,
+                    p.get("change") or None,
+                    p.get("reason") or None,
+                    200,
+                    offset,
+                )  # fmt: skip
+                if chosen
+                else None
+            )
+            return {"builds": all_builds, "build": chosen, "data": data, "filters": dict(p), "offset": offset}
+
+        return await part("changes", "release_changes", make)
+
+    @app.get("/part/catalog", response_class=HTMLResponse)
+    async def catalog_part(request: Request, build: str | None = None):
+        f = Filters.from_query(request.query_params)
+
+        async def make():
+            all_builds, chosen = await pick_build(_build_arg(build))
+            data = await reader.run(lambda _lake, _con: catalog.search(chosen, f)) if chosen else None
+            return {"builds": all_builds, "build": chosen, "data": data, "f": f, "facets": FACETS,
+                    "qs": _qs(request, f, chosen)}  # fmt: skip
+
+        return await part("catalog", "product_decisions, dim_coffee", make)
+
+    @app.exception_handler(404)
+    async def not_found(request: Request, exc):
+        return page("error.html", 404, message="There is no such page.", title="Not found")
+
+    return app
+
+
+def _reason(e: Exception) -> str:
+    """What failed, in a line, without a trace or a path's secrets."""
+    msg = str(e).splitlines()[0] if str(e) else ""
+    msg = re.sub(r"hf://\S+|https?://\S+", "<lake>", msg)
+    return f"{type(e).__name__}: {msg[:200]}" if msg else type(e).__name__
+
+
+def _qs(request: Request, f: Filters, build: str | None) -> Callable[..., str]:
+    """A link to this Catalog view with one filter changed or removed (None removes it), and the page reset."""
+    base = {k: v for k, v in request.query_params.items() if k != "page"}
+    if build:
+        base["build"] = build
+
+    def link(**change) -> str:
+        q = dict(base)
+        for k, v in change.items():
+            if v is None:
+                q.pop(k, None)
+            else:
+                q[k] = str(v)
+        return "/catalog?" + urlencode(q)
+
+    return link

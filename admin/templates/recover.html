@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% set narrow = true %}
+{% block main %}
+<h1 class="serif title mt32">Recover</h1>
+<p class="body mt12">A recovery code registers a new passkey on this device and signs out every other session. Each code works once.</p>
+<form class="auth" data-flow="recover" novalidate>
+  <label class="flabel" for="code">Recovery code</label>
+  <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" required aria-describedby="recover-hint">
+  <div class="hint" id="recover-hint" data-hint role="alert"></div>
+  <button class="btn primary mt8" type="submit" data-busy="Waiting for your passkey…">Register a new passkey</button>
+</form>
+<p class="mt24"><a class="btn text start" href="/signin">Back to sign in</a></p>
+{% endblock %}
