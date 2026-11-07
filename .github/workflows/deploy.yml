@@ -1,14 +1,15 @@
 # Build the app's image and deploy it to Cloud Run once ci has passed on a push to main. Pull requests only build
 # the image and check the Terraform. Authentication is Workload Identity Federation (no keys); the variables come
 # from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy jobs are skipped.
-# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha).
+# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha), once app/Dockerfile reads
+# it (#124); until then Docker ignores the argument.
 #
 # - Main deploys start on workflow_run, when ci completes, and only if it succeeded on a push. That event has no path
 #   filter, so a docs-only merge deploys too: the same app, rebuilt and restarted. A filter on the one commit that
 #   triggered the run would miss app changes in an earlier commit whose own deploy was skipped (next point).
 # - A run deploys only main's tip: ci runs for two quick pushes can finish out of order, and the older commit must
-#   not replace the newer one in production. Deploys run one at a time; a newer one waiting its turn replaces an
-#   older one waiting (GitHub's concurrency), which wasn't main's tip anyway.
+#   not replace the newer one in production. Deploys run one at a time and every waiting one keeps its place
+#   (`queue: max`): with GitHub's default, a late older commit's job would replace the tip's and then skip itself.
 # - workflow_dispatch from main deploys main's tip as it is, without waiting for ci: a redeploy, or the first
 #   deploy once the variables are set.
 # - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set. A required
@@ -59,7 +60,7 @@ jobs:
         (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    concurrency: {group: deploy-main, cancel-in-progress: false}
+    concurrency: {group: deploy-main, cancel-in-progress: false, queue: max}
     permissions:
       contents: read
       id-token: write  # for Workload Identity Federation
@@ -87,7 +88,7 @@ jobs:
       - if: steps.tip.outputs.current == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ env.HEAD_SHA }}
           persist-credentials: false
       - if: steps.tip.outputs.current == 'true'
         uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
@@ -125,7 +126,7 @@ jobs:
     if: vars.GCP_ADMIN_SERVICE != '' && needs.deploy.outputs.image != ''
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    concurrency: {group: deploy-admin-main, cancel-in-progress: false}
+    concurrency: {group: deploy-admin-main, cancel-in-progress: false, queue: max}
     environment: {name: admin, url: "https://admin.registry.coffee"}
     permissions:
       contents: read

@@ -175,7 +175,8 @@ Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines
 ### Rolling back
 
 Every deploy makes a new revision, and each revision keeps the image digest it was deployed with. To go back to the
-last good one while the fix is made:
+last good one while the fix is made (with the repository variables `GCP_SERVICE` or `GCP_REGION` set, use their
+values instead of `registry-coffee` and `us-central1`):
 
 ```bash
 gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
