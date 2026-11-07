@@ -151,6 +151,58 @@ def build_admin_lake(root: Path, today: date | None = None) -> dict:
     }
 
 
+def flag_served_build(lake_dir: Path, week: str, build: str) -> None:
+    """Give a copy of the built lake's served build the flags the Queue's states need, on real products of it: two
+    drink mixes from two stores ready to remove on the same evidence, and a classifier removal that pasted text
+    doubts. The fixture's stores raise no such flags of themselves (dbt's flag_* models are tested in
+    tests/test_flags.py); this replaces the build's ops file in a test copy only."""
+    import json
+
+    import duckdb
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    from coffeedata import quality
+    from coffeedata.lake import SCHEMAS
+
+    lake = Lake(str(lake_dir), read_only=True)
+    ops = quality.ops_files(lake, build)
+    picks = (
+        duckdb.connect()
+        .execute(
+            f"select coffee_id, roaster_id, input_hash, title from '{ops['product_decisions']}' where is_coffee "
+            "qualify row_number() over (partition by roaster_id order by coffee_id) = 1 order by roaster_id limit 3"
+        )
+        .fetchall()
+    )
+    (a, b, c) = picks
+    base = {"build_id": build, "decision": None, "coverage_problem": False, "restores": 0, "verdict_label": "coffee",
+            "classified_by": "rules", "reason": "coffee_words", "tags": ["drink mix"], "bag_sizes_g": [283],
+            "prices_usd": [14.0], "description": "A cocoa drink mix. Stir two spoons into hot milk."}  # fmt: skip
+
+    def row(p, rule, family, polarity, direction, evidence, key, eh, **kw):
+        return base | {"rule": rule, "family": family, "polarity": polarity, "direction": direction,
+                       "coffee_id": p[0], "roaster_id": p[1], "input_hash": p[2], "title": p[3],
+                       "product_type": "Drink Mix", "evidence": json.dumps(evidence), "evidence_key": key,
+                       "evidence_hash": eh, "url": f"https://{p[1]}/products/x", "public_rows": 4} | kw  # fmt: skip
+
+    ready = {"classifier_is_coffee": True, "was_public": True, "held": False, "ready_flags": True,
+             "supports_families": 2, "doubts": 0}  # fmt: skip
+    doubted = {"classifier_is_coffee": False, "was_public": True, "held": False, "ready_flags": False,
+               "supports_families": 0, "doubts": 1, "restores": 1, "public_rows": 2, "product_type": ""}  # fmt: skip
+    rows = [
+        row(a, "verdict_flip", "classifier", "supports", "added", {"verdict": "coffee"}, "added:coffee", "mix", **ready),
+        row(a, "non_coffee_type", "listing", "supports", "", {"product_type": "Drink Mix"}, "drink mix", "mix", **ready),
+        row(b, "verdict_flip", "classifier", "supports", "added", {"verdict": "coffee"}, "added:coffee", "mix", **ready),
+        row(b, "non_coffee_type", "listing", "supports", "", {"product_type": "Drink Mix"}, "drink mix", "mix", **ready),
+        row(c, "verdict_flip", "classifier", "restore", "removed", {"verdict": "not_coffee"}, "removed", "pasted",
+            **doubted),
+        row(c, "shared_body", "catalog", "doubts", "", {"products": 4, "text": "this sample pack includes three bags"},
+            "p1", "pasted", **doubted),
+    ]  # fmt: skip
+    pq.write_table(pa.Table.from_pylist(rows, SCHEMAS["mart_flags"]), ops["mart_flags"])
+
+
 if __name__ == "__main__":  # python -m tests.admin_fixture <root>: for the Playwright run and screenshots
     import json
     import sys

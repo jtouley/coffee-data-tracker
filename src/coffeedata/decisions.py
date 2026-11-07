@@ -57,7 +57,7 @@ def check(doc: object) -> list[dict]:
         raise SnapshotError("not a decisions snapshot (version 1)")
     if "settings" in doc:
         try:
-            rules.check(doc["settings"])
+            rules.check(doc["settings"], strict=False)
         except rules.SettingsError as e:
             raise SnapshotError(f"its rule settings can't be read: {e}") from e
     roasters_ = doc.get("roasters", [])
@@ -101,7 +101,7 @@ def snapshot(snapshot_id: str, created_at: str, decisions: Iterable[dict], setti
 
 def settings_of(doc: dict | None) -> dict:
     """The rule settings a snapshot builds with: its own, else the defaults."""
-    return rules.check((doc or {}).get("settings") or rules.DEFAULTS)
+    return rules.check((doc or {}).get("settings") or rules.DEFAULTS, strict=False)
 
 
 def crawl_off(doc: dict | None) -> set[str]:

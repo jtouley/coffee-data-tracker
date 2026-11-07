@@ -207,3 +207,51 @@ not, merge where two overlap.
 - **Folded:** a build's facts and its metrics (one line says how many moved).
 - **Code:** the five page routes are one loop over `PAGES`; the job list is one table (`admin/jobs.py`), and the
   list Terraform grants is derived from it and checked by a test.
+
+## Rules and flags (the third pass)
+
+### Who and what
+
+The same owner, on Monday evening, after Week says the build landed: **what did the rules flag, and what should I do
+about it?** A product the classifier dropped that pasted text makes doubtful; two stores' drink mixes that two
+families of rules agree aren't coffee; a store that sells no coffee. Then: decide, check the store, and put it in
+the draft.
+
+### One page more, not three
+
+The design (#112 §5.1) lists Queue and Case as pages, and settings editing as its own. Here they are one page:
+- **Queue** (`/queue`): the served build's open flags, one row per product, products with the same evidence
+  together under a band that offers the group's decision; sorted by the public rows a removal touches.
+- **A case is a section of the Queue** (`/queue?case=<coffee_id>`, "← Queue" back): the flags with polarity and
+  evidence, the decision, the listing, then the store (crawl flag, live check, fetches). It is the Queue's detail
+  view (Owl-Listener `critique-information-density`: progressive disclosure, a detail view instead of inlining).
+- **The rule settings fold at the foot of the Queue**: they are edited rarely, and only make sense next to the flags
+  they produce.
+
+| | Answer line | Then | Primary action |
+|---|---|---|---|
+| Queue | "3 products with open flags · 1 held · 2 ready to remove · N public rows" | filters (roaster, rule with counts, products: open, ready, held, doubted); the table: product, roaster, flags ("2 supports · ready", "1 doubts · 1 restore · held"), public rows, decision | none: each row's decision is a text button; a group band's decision is the one bigger choice |
+| Case | the product's one line, then "the guard keeps it as coffee" when held, and its public rows | Decision (with why it is or isn't ready), Flags, Product, Store | the decision the flags propose (Exclude when ready, Include when held or restored); the other is secondary |
+
+### Decisions on the design
+
+- **No new component.** The band, the summary line, the flags list and the settings fold reuse the answer line,
+  `dl.facts`, `.picker`, `.frame` tables and the confirm sheet. The decide sheet is now one macro used by the
+  Catalog, the Queue and a Case (MengTo `no-ai-design-slop`: repeated components only for a repeated content type).
+- **Polarity is a word,** never a colour: "supports", "doubts", "restore", "held", "ready", "coverage". No badges.
+- **Store text stays text.** Titles, tags and descriptions render escaped; the description keeps its line breaks
+  (`white-space: pre-line`) at a readable measure; a store link is shown only when it is `https:`.
+- **One live check, one Test crawl.** The design names both on the Case; they are the same job (a test crawl of the
+  store), so the Case has one button, "Live check (test crawl)…", whose confirm shows the exact arguments.
+- **Settings are JSON in a textarea,** checked against the code's schema in the confirm step, which says what
+  changes, which changes decide, and what Publish will need. A form per field would have to change with every rule
+  type; this one doesn't (adding a rule is its entry and its model).
+
+### Skills used (this pass)
+
+- MengTo `no-ai-design-slop`: the existing system only; no badges or tiles for polarity; one macro for the decide
+  sheet instead of a third copy.
+- Owl-Listener `critique-information-density`: the Queue's answer first, five columns, the case as a detail view, the
+  settings folded.
+- Krehel `better-layout`: one primary action per view, identity before metadata in each row, the band grouped with
+  space and the panel tint, nothing scrolls sideways at 390 px.

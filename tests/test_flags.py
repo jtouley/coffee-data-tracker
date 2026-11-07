@@ -98,13 +98,20 @@ def test_settings_the_code_cant_read_are_refused_with_every_problem(doc, problem
     assert any(problem in p for p in e.value.problems), e.value.problems
 
 
-def test_missing_rule_types_and_unknown_keys_are_refused():
+def test_a_rule_added_or_removed_in_code_never_breaks_saved_settings():
+    """Settings saved before a rule type existed get its defaults; a rule the code no longer has is refused in an
+    edit and left out of a saved document (a served snapshot must keep building)."""
     doc = rules.default()
     doc["rules"] = doc["rules"][:2]
-    doc["extra"] = 1
-    with pytest.raises(rules.SettingsError) as e:
-        rules.check(doc)
-    assert "missing non_coffee_type" in str(e.value) and "unknown keys: extra" in str(e.value)
+    assert rules.check(doc) == rules.DEFAULTS
+    gone = rules.default()
+    gone["rules"].append({"id": "retired_rule", "family": "listing", "polarity": "supports"})
+    with pytest.raises(rules.SettingsError, match="id must be one of"):
+        rules.check(gone)
+    assert rules.check(gone, strict=False) == rules.DEFAULTS
+    assert decisions.settings_of(decisions.snapshot("s", "t", [], gone)) == rules.DEFAULTS
+    with pytest.raises(rules.SettingsError, match="unknown keys: extra"):
+        rules.check(rules.default() | {"extra": 1})
 
 
 def test_what_decides_and_what_only_counts(monkeypatch):

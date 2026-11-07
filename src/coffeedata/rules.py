@@ -113,7 +113,7 @@ EVALUATED: dict[str, dict] = {}
 def deciding_part(doc: dict, name: str) -> Any:
     """The part of the settings that decides, for one name of decides(): a rule's family, polarity and proposal,
     readiness, or the guard's mode and doubters."""
-    s = check(doc)
+    s = check(doc, strict=False)
     if name == "readiness":
         return s["readiness"]
     if name == "guard":
@@ -128,10 +128,11 @@ def evaluation_needed(old: dict, new: dict) -> list[str]:
     return [n for n in names if (EVALUATED.get(n) or {}).get("settings") != deciding_part(new, n)]
 
 
-def check(doc: object) -> dict:
-    """Settings the deployed code can read, normalized (each rule's params filled from its type's defaults), or
-    SettingsError with every problem. Every rule type must be listed once (a rule is switched off by deleting its
-    model, not its settings)."""
+def check(doc: object, strict: bool = True) -> dict:
+    """Settings the deployed code can read, normalized, or SettingsError with every problem. Normalized: each rule's
+    params filled from its type's defaults, and a rule type the settings don't list (one added to the code after
+    they were saved) given its defaults, so adding a rule never invalidates a saved version or a served snapshot.
+    A rule the code no longer has is an error in an edit (strict), and left out when reading a saved document."""
     p: list[str] = []
     if not isinstance(doc, dict):
         raise SettingsError(["settings must be an object"])
@@ -149,7 +150,8 @@ def check(doc: object) -> dict:
     for i, r in enumerate(rules):
         where = f"rules[{i}]"
         if not isinstance(r, dict) or r.get("id") not in RULE_TYPES:
-            p.append(f"{where}: id must be one of {', '.join(RULE_TYPES)}")
+            if strict or not isinstance(r, dict):
+                p.append(f"{where}: id must be one of {', '.join(RULE_TYPES)}")
             continue
         t = RULE_TYPES[r["id"]]
         where = r["id"]
@@ -199,9 +201,9 @@ def check(doc: object) -> dict:
         out["rules"].append({"id": t.id, "family": r.get("family"), "polarity": pol if dirs != [""] else pol.get(""),
                              **({"params": norm} if t.params else {}),
                              **({"proposes": proposes} if proposes else {})})  # fmt: skip
-    missing = set(RULE_TYPES) - seen
-    if missing:
-        p.append(f"every rule type is listed once: missing {', '.join(sorted(missing))}")
+    out["rules"] += [copy.deepcopy(d) for d in DEFAULTS["rules"] if d["id"] not in seen]
+    order = list(RULE_TYPES)
+    out["rules"].sort(key=lambda r: order.index(r["id"]))
     ready = (doc.get("readiness") or {}).get("removal") if isinstance(doc.get("readiness"), dict) else None
     if not isinstance(ready, dict):
         p.append("readiness.removal is required")
@@ -252,7 +254,7 @@ def decides(old: dict, new: dict) -> list[str]:
     evaluation whatever it counts): a rule's family or polarity, readiness, the guard's mode or what doubts it.
     Params and the guard's caps change which products a rule finds, not how it decides: those take the count
     (step 9's running total)."""
-    a, b = check(old), check(new)
+    a, b = check(old, strict=False), check(new, strict=False)
     out = []
     ra, rb = ({r["id"]: r for r in x["rules"]} for x in (a, b))
     for i in sorted(set(ra) | set(rb)):
@@ -279,7 +281,7 @@ def changed(old: dict, new: dict) -> list[str]:
             }
         return {at: json.dumps(x, sort_keys=True)}
 
-    fa, fb = flat(_by_id(check(old))), flat(_by_id(check(new)))
+    fa, fb = flat(_by_id(check(old, strict=False))), flat(_by_id(check(new, strict=False)))
     return sorted(k for k in set(fa) | set(fb) if fa.get(k) != fb.get(k))
 
 
@@ -290,7 +292,7 @@ def _by_id(doc: dict) -> dict:
 def dbt_var(doc: dict | None) -> dict:
     """The settings as dbt's var `rules`: {rules: {id: {family, polarity: {direction: polarity}, params}},
     readiness, guard}."""
-    s = check(doc if doc is not None else DEFAULTS)
+    s = check(doc if doc is not None else DEFAULTS, strict=False)
     return {
         "rules": {r["id"]: {"family": r["family"], "params": r.get("params", {}),
                             "polarity": r["polarity"] if isinstance(r["polarity"], dict) else {"": r["polarity"]}}
