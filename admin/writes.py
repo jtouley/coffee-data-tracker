@@ -14,6 +14,7 @@ A structured log line (`admin_write`) goes with every write, which the owner's a
 from __future__ import annotations
 
 import asyncio
+import json
 import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
@@ -21,6 +22,7 @@ from datetime import UTC, datetime
 from typing import Any
 
 from coffeedata import decisions as snap
+from coffeedata import rules
 
 from . import jobs as registry
 from . import queries
@@ -299,19 +301,68 @@ class Writes:
         written(action="undo", subject=target, outcome="ok", count=out.get("count"))
         return out
 
+    # --- rule settings and crawl flags -------------------------------------------------------------------------
+
+    async def check_settings(self, raw: object) -> dict:
+        """What saving these settings would change, before it is saved: the changes, those that decide, and the
+        evaluations they need at Publish (a preview acts on nothing)."""
+        await self.ready()
+        now = await asyncio.to_thread(self.control.settings)
+        new = rules.check(_settings_doc(raw))
+        changed, deciding = rules.changed(now["doc"], new), rules.decides(now["doc"], new)
+        needed = rules.evaluation_needed(now["doc"], new)
+        lines = [f"Changes: {', '.join(changed)}." if changed else "Nothing changes."]
+        if needed:
+            lines.append(f"{', '.join(deciding)} changes how a rule decides. Publish will need its full evaluation "
+                         f"first (CLAUDE.md; eval/{needed[0]}/), whatever it counts.")  # fmt: skip
+        elif changed:
+            lines.append("The draft build counts the public products this changes. Over 50 on top of the running "
+                         "total, Publish needs the full evaluation (CLAUDE.md step 9).")  # fmt: skip
+        lines.append("Nothing changes for anyone until a draft of it is published (Release).")
+        return {"lines": lines, "changed": changed, "decides": deciding, "needs_evaluation": needed,
+                "refusals": [] if changed else ["nothing changed"]}  # fmt: skip
+
+    async def save_settings(self, actor: str, key: str, body: dict) -> dict:
+        await self.ready()
+        out = await asyncio.to_thread(self.control.save_settings, actor, key, _settings_doc(body.get("doc")),
+                                      body.get("based_on") or None, reason_of(body.get("reason")))  # fmt: skip
+        written(action="settings", subject=out["version_id"], outcome="ok", decides=out["decides"])
+        return out
+
+    async def set_crawl(self, actor: str, key: str, roaster_id: str, body: dict) -> dict:
+        await self.ready()
+        crawl = body.get("crawl")
+        if crawl not in ("on", "off"):
+            raise ValueError("crawl is on or off")
+        seen = body.get("seen")
+        out = await asyncio.to_thread(self.control.set_crawl, actor, key, roaster_id, crawl == "on",
+                                      reason_of(body.get("reason")),
+                                      None if seen not in ("on", "off") else seen == "on")  # fmt: skip
+        written(action="crawl_flag", subject=roaster_id, outcome="ok", crawl=crawl)
+        return out
+
     # --- release: draft, publish, roll back, discard ---------------------------------------------------------------
 
     async def pending(self) -> dict:
-        """The effective decisions against the served build's: what a draft would change."""
+        """The effective decisions, rule settings and crawl flags against the served build's snapshot: what a draft
+        would change."""
         await self.ready()
         effective = await asyncio.to_thread(self.control.effective)
+        settings = await asyncio.to_thread(self.control.settings)
+        states = await asyncio.to_thread(self.control.roaster_states)
         served = await self.read(queries.served)
         pinned = await self.read(queries.build_snapshot, served["build_id"]) if served else None
+        served_doc = (pinned or {}).get("doc")
         before = {
-            (d["subject_kind"], d["subject"], d["action"])
-            for d in ((pinned or {}).get("doc") or {}).get("decisions", [])
+            (d["subject_kind"], d["subject"], d["action"]) for d in (served_doc or {}).get("decisions", [])
         }
         now = {(d["subject_kind"], d["subject"], d["action"]) for d in effective}
+        off = sorted(r for r, s in states.items() if not s["crawl"])
+        doc = settings["doc"] if settings["version_id"] else None  # no edit yet: the defaults, left out
+        settings_changed = rules.changed(snap.settings_of(served_doc), snap.settings_of({"settings": doc} if doc
+                                                                                      else None))  # fmt: skip
+        crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
+        mine = (now, rules.check(doc or rules.DEFAULTS), set(off))
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -320,19 +371,25 @@ class Writes:
                 continue
             if d["baseline"] != (served or {}).get("build_id"):
                 break
-            doc = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
-            if doc and {(x["subject_kind"], x["subject"], x["action"]) for x in doc["decisions"]} == now:
+            got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
+            if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
+                        snap.settings_of(got), snap.crawl_off(got)) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
+                "settings": doc, "settings_version": settings["version_id"], "settings_changed": settings_changed,
+                "crawl_off": off, "crawl_changed": crawl_changed,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
-        if not (p["added"] or p["removed"]):
-            raise ValueError("Nothing to build: the decisions are the served release's")
+        if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"]):
+            raise ValueError(
+                "Nothing to build: the decisions, rule settings and crawl flags are the served release's"
+            )
         sid, did = new_id("s").lower(), new_id("draft").lower()
-        doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"])
+        doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
+                            [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
@@ -372,31 +429,47 @@ class Writes:
                                "CLAUDE.md step 9's short path, the changes listed below)" if decided <= STEP9_LIMIT else
                                f"these decisions change {decided} public coffees, over 50: CLAUDE.md step 9 asks for "
                                "the full evaluation first. Publish fewer at a time, or evaluate them")})  # fmt: skip
-        # The live check covers what this draft removes against the served release: new excludes, and undone
-        # includes. Decisions already served were checked when they were published.
         now_doc = await self._snapshot_doc(draft["snapshot_id"])
         pinned = await self.read(queries.build_snapshot, draft["baseline"]) if draft["baseline"] else None
+        # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts.
+        old_settings, new_settings = snap.settings_of((pinned or {}).get("doc")), snap.settings_of(now_doc)
+        deciding = rules.decides(old_settings, new_settings)
+        needed = rules.evaluation_needed(old_settings, new_settings)
+        checks.append({"name": "Evaluation of a rule change", "ok": not needed,
+                       "why": ("no rule settings change how a rule decides" if not deciding else
+                               f"evaluated: {', '.join(deciding)}" if not needed else
+                               f"{', '.join(deciding)} changes how a rule decides: CLAUDE.md asks for its full "
+                               f"evaluation first (eval/{needed[0]}/, merged with its entry in "
+                               "coffeedata.rules.EVALUATED)")})  # fmt: skip
+        # The live check covers what this draft removes against the served release: new excludes, and undone
+        # includes. Decisions already served were checked when they were published. Group approval: one answered
+        # live check of a store covers every removal decided on the same flags' evidence (evidence_hash).
         before = ((pinned or {}).get("doc") or {}).get("decisions", [])
         key_of = lambda d: (d["subject_kind"], d["subject"], d["action"])  # noqa: E731
         was = {key_of(d) for d in before}
         removals = [d for d in now_doc["decisions"] if d["action"] == "exclude" and key_of(d) not in was]
         still = {key_of(d) for d in now_doc["decisions"]}
         removals += [d for d in before if d["action"] == "include" and key_of(d) not in still]
-        roasters = sorted(
-            {d.get("roaster_id") or (d.get("coffee_id") or "").split(":")[0] for d in removals} - {""}
-        )
-        missing = []
+        store = lambda d: d.get("roaster_id") or (d.get("coffee_id") or "").split(":")[0]  # noqa: E731
+        roasters = sorted({store(d) for d in removals} - {""})
+        groups: dict[str, set[str]] = {}  # each store's group: the stores sharing its removals' evidence
+        for d in removals:
+            if d.get("evidence_hash"):
+                groups.setdefault(d["evidence_hash"], set()).add(store(d))
+        answered: dict[str, bool] = {}
         for r in roasters:
             t = await asyncio.to_thread(self.control.recent_test, r, LIVE_CHECK_DAYS * 24)
             answers = (
                 (await self.read(queries.test_results, [t["test_id"]])).get(t["test_id"], []) if t else []
             )
-            if not any(a.get("ok") for a in answers):
-                missing.append(r)
+            answered[r] = any(a.get("ok") for a in answers)
+        ungrouped = {store(d) for d in removals if not d.get("evidence_hash")} - {""}
+        missing = sorted({r for r in ungrouped if not answered[r]}
+                         | {r for g in groups.values() if not any(answered[x] for x in g) for r in g})  # fmt: skip
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
                        "why": ("this draft removes nothing" if not roasters else
-                               f"{len(roasters)} of {len(roasters)} stores answered a test crawl in the last "
-                               f"{LIVE_CHECK_DAYS} days" if not missing else
+                               f"each of the {len(roasters)} stores answered a test crawl in the last "
+                               f"{LIVE_CHECK_DAYS} days, or one of its evidence group did" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
         return Readiness(checks, removed, bool(removed and removed > TYPE_OVER))
@@ -480,3 +553,13 @@ class Writes:
         out = await asyncio.to_thread(go)
         written(action="discard", subject=draft_id, outcome="ok")
         return out
+
+
+def _settings_doc(raw: object) -> object:
+    """The settings an edit sends: a JSON document, as text (the form's) or already parsed."""
+    if isinstance(raw, str):
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"the settings aren't valid JSON: {e.msg} (line {e.lineno})") from e
+    return raw

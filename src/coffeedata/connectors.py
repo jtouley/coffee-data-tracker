@@ -282,7 +282,7 @@ def crawl(
     if test and not only:
         states, mode = _test_states(plake, connector), "full"
     else:
-        states, mode = ingest.select_states(plake, week, only=only)
+        states, mode = ingest.select_states(plake, week, only=only, test=bool(test))
     states = [s for s in states if s.roaster.adapter == connector]
     repulls: list = []
     if not (

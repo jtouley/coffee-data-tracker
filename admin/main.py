@@ -1,8 +1,9 @@
 """admin.registry.coffee: the owner's command center (docs/admin/README.md).
 
-Five pages behind passkey sign-in (auth.py): Week (did it land, what failed), Jobs (start, watch and cancel the
-pipeline's Cloud Run jobs), Release (a build's gate and changes; draft, Publish, Roll back), Catalog (every product;
-include or exclude it), Log (every write). Every route but PUBLIC needs a live session, checked in one place
+Six pages behind passkey sign-in (auth.py): Week (did it land, what failed), Queue (the build's flags by product,
+each product's case, and the rule settings), Jobs (start, watch and cancel the pipeline's Cloud Run jobs), Release
+(a build's gate and changes; draft, Publish, Roll back), Catalog (every product; include or exclude it), Log (every
+write). Every route but PUBLIC needs a live session, checked in one place
 (`gate`) before any route runs, so a route added later is signed-in by default, and an unknown path answers 401 like
 a known one. A misconfigured service answers 503 to everything. The lake is opened read-only and never written:
 writes go to the control plane, and the lake changes only through the pipeline's jobs (writes.py).
@@ -16,6 +17,7 @@ import asyncio
 import contextlib
 import contextvars
 import hashlib
+import json
 import mimetypes
 import re
 import secrets
@@ -31,7 +33,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from coffeedata import decisions, quality
+from coffeedata import decisions, quality, rules
 from coffeedata.lake import Lake
 
 from . import jobs, logs, queries
@@ -48,16 +50,17 @@ HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
 COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
 COOKIE_LOCAL = "admin_session"  # http://localhost only
-PAGES = ("week", "jobs", "release", "catalog", "log")
+PAGES = ("week", "queue", "jobs", "release", "catalog", "log")
 # What each page's data region reads, named on its loading state.
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
+    "queue": "mart_flags, fetches and the rule settings",
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
     "log": "the control plane's audit",
 }
-AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard")
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "settings", "crawl_flag")
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -645,6 +648,68 @@ def create_app(
 
         return await part("release", make)
 
+    @app.get("/part/queue", response_class=HTMLResponse)
+    async def queue_part(request: Request):
+        """The served build's open flags by product, or one product's case (?case=<coffee_id>), and the rule
+        settings. Decisions, live checks and crawl flags come from the control plane; the flags from the build."""
+        p = request.query_params
+        f = {k: (p.get(k) or "").strip()[:200] or None for k in ("roaster", "rule", "state", "case")}
+        f["rule"] = f["rule"] if f["rule"] in rules.RULE_TYPES else None
+        f["state"] = f["state"] if f["state"] in queries.QUEUE_STATES else None
+        try:
+            offset = max(0, int(p.get("offset") or 0))
+        except ValueError:
+            offset = 0
+
+        async def make():
+            served = await reader.run(queries.served)
+            build = (served or {}).get("build_id")
+            ctx: dict = {"served": served, "build": build, "f": f, "rule_types": rules.RULE_TYPES,
+                         "states": queries.QUEUE_STATES}  # fmt: skip
+            if not build:
+                return ctx
+            if writes:
+                await writes.ready()
+            if f["case"]:
+                c = await reader.run(queries.case, build, f["case"])
+                ctx["case"] = c
+                if c:
+                    c["product"]["url"] = queries.safe_url(c["product"]["url"])
+                if c and writes:
+                    pr = c["product"]
+                    ctx["latest"] = await asyncio.to_thread(writes.control.latest, [pr["coffee_id"]],
+                                                            [pr["input_hash"]] if pr["input_hash"] else [])  # fmt: skip
+                    ctx["crawl"] = (await asyncio.to_thread(writes.control.roaster_states, [pr["roaster_id"]])).get(
+                        pr["roaster_id"])  # fmt: skip
+                    test = await asyncio.to_thread(writes.control.recent_test, pr["roaster_id"], 7 * 24)
+                    ctx["test"] = test
+                    if test:
+                        ctx["answers"] = (await reader.run(queries.test_results, [test["test_id"]])).get(
+                            test["test_id"], [])  # fmt: skip
+                ctx["connectors"] = jobs.FIELDS["connector"].choices
+                return ctx
+            q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], offset)
+            ctx["q"], ctx["pager"] = q, [(k, f[k]) for k in ("roaster", "rule", "state") if f[k]]
+            if (
+                q.get("rows") and writes
+            ):  # decided in the control plane since the build: say so, offer no decision
+                latest = await asyncio.to_thread(writes.control.latest, [r["coffee_id"] for r in q["rows"]],
+                                                 [r["input_hash"] for r in q["rows"] if r["input_hash"]])  # fmt: skip
+                for r in q["rows"]:
+                    r["dc"] = latest["coffee_id"].get(r["coffee_id"])
+                    r["dh"] = latest["input_hash"].get(r["input_hash"] or "")
+                    live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
+                    r["decided"] = live[0] if live else None
+            if writes:
+                ctx["settings"] = await asyncio.to_thread(writes.control.settings)
+                ctx["history"] = await asyncio.to_thread(writes.control.settings_history, 5)
+            else:
+                ctx["settings"] = {"version_id": None, "doc": rules.default()}
+            ctx["settings_json"] = json.dumps(ctx["settings"]["doc"], indent=2)
+            return ctx
+
+        return await part("queue", make)
+
     @app.get("/part/jobs", response_class=HTMLResponse)
     async def jobs_part(request: Request):
         async def make():
@@ -768,6 +833,18 @@ def create_app(
     @app.post("/api/decisions/{target}/undo")
     async def undo(request: Request, target: str):
         return await write(request, lambda a, k, b: on().undo(a, k, target, b.get("reason")))
+
+    @app.post("/api/settings/check")
+    async def settings_check(request: Request):
+        return await write(request, lambda _a, _k, b: on().check_settings(b.get("doc")), replay=False)
+
+    @app.post("/api/settings")
+    async def settings_save(request: Request):
+        return await write(request, lambda a, k, b: on().save_settings(a, k, b))
+
+    @app.post("/api/roasters/{roaster_id}/crawl")
+    async def crawl_flag(request: Request, roaster_id: str):
+        return await write(request, lambda a, k, b: on().set_crawl(a, k, roaster_id, b))
 
     @app.post("/api/drafts")
     async def draft(request: Request):

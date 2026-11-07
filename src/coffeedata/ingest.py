@@ -298,12 +298,16 @@ def select(
 
 
 def select_states(
-    lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False
-) -> tuple[list[registry.RoasterState], str]:
+    lake: Lake, run_date: str, only: str | None = None, sample: int | None = None, retry_failed: bool = False,
+    test: bool = False,
+) -> tuple[list[registry.RoasterState], str]:  # fmt: skip
     """`select`, with each roaster's status now and the run's mode (full, sample, only or retry_failed): what the
-    run manifest records."""
+    run manifest records. A roaster whose crawl flag the published snapshot turns off is skipped, `only` included,
+    except by a test crawl (`test`: the admin's live check, which never counts as the week's crawl)."""
     mode = "only" if only else "retry_failed" if retry_failed else "sample" if sample else "full"
     states = registry.current(lake)
+    if not test and (off := crawl_off(lake)):
+        states = [s for s in states if s.roaster.roaster_id not in off]
     if only:
         return [s for s in states if s.roaster.roaster_id == only], mode
     done, tried = retry_transient(_done_and_tried, lake, run_date)
@@ -316,6 +320,21 @@ def select_states(
     if retry_failed:
         todo = [s for s in todo if s.roaster.roaster_id in tried]
     return todo, mode
+
+
+def crawl_off(lake: Lake) -> set[str]:
+    """The roasters the published snapshot (the served build's) turns the crawl flag off for. A lake with nothing
+    served, or a snapshot that can't be read, turns none off: the flag is the owner's choice to stop asking a store,
+    and a failed read must never stop the week's crawl (the build, which applies decisions, fails closed instead)."""
+    from . import decisions, quality
+
+    try:
+        build = (quality.served(lake) or {}).get("build_id")
+        pinned = quality.build_snapshot(lake, build) if build else None
+        return decisions.crawl_off((pinned or {}).get("doc"))
+    except Exception as e:  # noqa: BLE001 - a read failure crawls everyone, as before the flag
+        logging.warning("crawl flags not read (%s): crawling every roaster", type(e).__name__)
+        return set()
 
 
 def _in_pool(s: registry.RoasterState) -> bool:

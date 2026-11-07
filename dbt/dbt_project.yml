@@ -124,6 +124,16 @@ vars:
   price_outlier_high_z: 6
   price_outlier_min_group: 30
   claim_tolerance: 0.15
+  # The rule settings (coffeedata.rules.dbt_var: the flag_* models, int_catalog_decided, the guard and readiness).
+  # `coffeedata build` always passes them, from the build's snapshot or rules.DEFAULTS; these are those defaults,
+  # for dbt run by hand and the unit tests (tests/test_flags.py checks they match). The guard is off.
+  rules:
+    rules:
+      verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+      shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+      non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts]}, polarity: {"": supports}}
+    readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
+    guard: {mode: "off", doubted_by: [shared_body], max_held: 200, max_weeks: 4}
 
 models:
   coffeedata:

@@ -42,6 +42,9 @@ unit_tests:
       price that then gets one.
     model: fct_price_event
     given:
+      # nothing held (the guard is off by default)
+      - input: ref('int_catalog_decided')
+        rows: []
       - input: ref('stg_snapshots')
         format: sql
         rows: |
@@ -86,6 +89,9 @@ unit_tests:
       again in the partial 10-26, is relisted there. S, first read in a partial run, is new.
     model: fct_price_event
     given:
+      # nothing held (the guard is off by default)
+      - input: ref('int_catalog_decided')
+        rows: []
       - input: ref('stg_snapshots')
         format: sql
         rows: |
@@ -376,6 +382,9 @@ unit_tests:
       rules made.
     model: product_decisions
     given:
+      # nothing held (the guard is off by default)
+      - input: ref('int_catalog_decided')
+        rows: []
       - input: ref('stg_snapshots')
         rows:
           - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya, run_date: 2026-10-12, input_hash: a1}
@@ -399,3 +408,65 @@ unit_tests:
            is_coffee: false, verdict_label: null, reason: "excluded:not_coffee_words"}
         - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
            is_coffee: false, verdict_label: unsure, reason: "signals:0"}
+
+  - name: guard_holds_only_doubted_classifier_removals_and_readiness_needs_two_families
+    description: >-
+      int_catalog_decided with the guard on (remove_unless_doubted, doubted_by shared_body, max_weeks 4). Held: a
+      classifier removal (verdict_flip removed) a shared_body flag doubts (A); not one with no doubt (B), one whose
+      answer changed more than 4 weeks ago (C), or one the owner decided (D). Ready: supports from two families with
+      no doubt (E); not with a coverage problem at the store (F) or with an open doubt (G), and never from a doubt or
+      a restore alone (A).
+    model: int_catalog_decided
+    overrides:
+      vars:
+        rules:
+          rules:
+            verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+            shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+            non_coffee_type: {family: listing, params: {types: [drink mix]}, polarity: {"": supports}}
+          readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
+          guard: {mode: remove_unless_doubted, doubted_by: [shared_body], max_held: 200, max_weeks: 4}
+    given:
+      - input: ref('int_catalog_candidates')
+        rows:
+          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: C, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-09-21", run_date: "2026-11-02"}
+          - {coffee_id: D, roaster_id: r, decision: include, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
+      - input: ref('flag_verdict_flip')
+        rows:
+          - {coffee_id: A, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: B, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: C, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: D, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
+          - {coffee_id: E, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+          - {coffee_id: F, roaster_id: bad, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+          - {coffee_id: G, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
+      - input: ref('flag_shared_body')
+        rows:
+          - {coffee_id: A, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
+          - {coffee_id: C, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
+          - {coffee_id: D, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
+          - {coffee_id: G, roaster_id: r, direction: "", evidence: "{}", evidence_key: p2}
+      - input: ref('flag_non_coffee_type')
+        rows:
+          - {coffee_id: E, roaster_id: r, direction: "", evidence: "{}", evidence_key: drink mix}
+          - {coffee_id: F, roaster_id: bad, direction: "", evidence: "{}", evidence_key: drink mix}
+          - {coffee_id: G, roaster_id: r, direction: "", evidence: "{}", evidence_key: drink mix}
+      - input: ref('int_roaster_runs')
+        rows:
+          - {roaster_id: r, run_date: "2026-11-02", ok: true, partial: false}
+          - {roaster_id: bad, run_date: "2026-10-26", ok: true, partial: false}
+          - {roaster_id: bad, run_date: "2026-11-02", ok: false, partial: false}
+    expect:
+      rows:
+        - {coffee_id: A, held: true, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
+        - {coffee_id: B, held: false, ready_flags: false, supports_families: 0, doubts: 0, restores: 1}
+        - {coffee_id: C, held: false, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
+        - {coffee_id: D, held: false, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
+        - {coffee_id: E, held: false, ready_flags: true, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: F, held: false, ready_flags: false, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: G, held: false, ready_flags: false, supports_families: 2, doubts: 1, restores: 0}

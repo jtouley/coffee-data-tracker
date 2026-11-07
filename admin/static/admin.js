@@ -277,6 +277,8 @@ function describe(out) {
   }
   if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
   if (out.reverted) return out.count ? `Undone (${out.count}). The classifier decides again in the next draft.` : "Already superseded: nothing to undo.";
+  if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
+  if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
 }
 
@@ -289,6 +291,21 @@ function refusal(err) {
 
 function renderPlan(box, plan) {
   box.textContent = "";
+  if (plan.lines) { // a preview that starts no job (a settings edit): its lines, then any refusal
+    for (const line of plan.lines) {
+      const p = document.createElement("p");
+      p.className = "body";
+      p.textContent = line;
+      box.append(p);
+    }
+    for (const r of plan.refusals || []) {
+      const x = document.createElement("p");
+      x.className = "refused";
+      x.textContent = `Refused: ${r}`;
+      box.append(x);
+    }
+    return;
+  }
   const p = document.createElement("p");
   p.textContent = plan.steps.length === 1 ? "This starts one Cloud Run job:" : `This starts ${plan.steps.length} Cloud Run jobs:`;
   const ul = document.createElement("ul");
@@ -395,7 +412,7 @@ document.addEventListener("click", (e) => {
   if (close) close.closest("dialog").close();
 });
 
-// --- Catalog: decide one product or a chosen group, and undo ---------------------------------------------------
+// --- Catalog, Queue and Case: decide one product or a group, and undo -------------------------------------------
 
 function picks() {
   return [...document.querySelectorAll("input[data-pick]:checked")].map((c) => JSON.parse(c.dataset.pick));
@@ -425,7 +442,8 @@ document.addEventListener("click", (e) => {
   const b = e.target.closest("[data-decide]");
   if (!b) return;
   const d = document.getElementById("decide");
-  const items = b.hasAttribute("data-bulk-use") ? picks() : [JSON.parse(b.dataset.item)];
+  // One product (data-item), the chosen ones (Catalog), or a group with the same evidence (Queue: data-items).
+  const items = b.hasAttribute("data-bulk-use") ? picks() : b.dataset.items ? JSON.parse(b.dataset.items) : [JSON.parse(b.dataset.item)];
   if (!d || !items.length) return;
   const form = $(d, "form");
   form.elements.action.value = b.dataset.decide;

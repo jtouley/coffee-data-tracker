@@ -52,7 +52,7 @@ prev_run as (
                     (select max(last_seen) from prev_coffee)) as run_date
 ),
 coffee_records as (
-    select s.coffee_id, s.run_date, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee, s.decision
+    select s.coffee_id, s.run_date, {{ decided('s.decision', 'p.is_coffee', 's.coffee_id') }} as is_coffee, s.decision
     from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 latest as (

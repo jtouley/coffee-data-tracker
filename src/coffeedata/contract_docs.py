@@ -17,6 +17,8 @@ TABLES: dict[str, str] = {
     "before it, with the reason (dbt release_changes); empty when nothing was served.",
     "product_decisions": "Ops: every product a store lists, coffee or not, as of its latest record, with the "
     "build's coffee decision, what decided it and why (dbt product_decisions).",
+    "mart_flags": "Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, "
+    "evidence and the product's summary: held by the guard, ready to remove (dbt mart_flags).",
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
@@ -180,7 +182,42 @@ COLUMNS |= {
         "verdict_label": "Claude's stored label for the version (coffee, not_coffee or unsure), whether or not it "
         "decided; null without one.",
         "reason": "Why: verdict:<label> when Claude's verdict decided, else the rule that did: excluded:<rule>, sauce, "
-        "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>.",
+        "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the "
+        "owner's decision overrides them; held:guard while the guard keeps it.",
+    },
+    "mart_flags": {
+        "build_id": _OPS_BUILD,
+        "rule": "The rule that raised the flag (coffeedata.rules.RULE_TYPES).",
+        "family": "The rule's family (classifier, catalog or listing): readiness counts distinct families.",
+        "polarity": "supports (a removal), doubts (a removal) or restore, from the build's rule settings.",
+        "direction": "The rule's direction (verdict_flip: added or removed); empty for a rule with one.",
+        "coffee_id": "The product flagged.",
+        "roaster_id": _ROASTER,
+        "input_hash": "The product version its latest record is (the owner can decide by it).",
+        "title": "The title as the store sent it (latest record).",
+        "product_type": "The store's product type (latest record).",
+        "evidence": "What the rule saw, as JSON (shown on the admin's Case page).",
+        "evidence_key": "The evidence without the product's identity.",
+        "evidence_hash": "A hash of every flag's evidence_key on the product: products with equal evidence group.",
+        "decision": "The owner's decision the build applied (include or exclude), else null.",
+        "classifier_is_coffee": "The classifier's answer for the latest version, before any decision or the guard.",
+        "was_public": "In the served release's public_coffee.",
+        "held": "The guard keeps the product as coffee.",
+        "ready_flags": "Its removal is ready as far as the build can tell (supports from enough families, no doubt, "
+        "no coverage problem); the admin adds the live check.",
+        "coverage_problem": "This run failed to fetch the product's store although it has a catalog.",
+        "supports_families": "Distinct families of its supports flags.",
+        "doubts": "Its doubts flags.",
+        "restores": "Its restore flags.",
+        "public_rows": "Public rows a removal touches: its public_coffee row and its public_price_event rows.",
+        "verdict_label": "Claude's stored label for the latest version, if any.",
+        "classified_by": "claude (a stored verdict decided) or rules.",
+        "reason": "Why the classifier answered as it did (stg_products.reason).",
+        "url": "The product's page on the store, as sent.",
+        "tags": "The store's tags (latest record).",
+        "bag_sizes_g": "Each variant's weight in grams, as sent.",
+        "prices_usd": "Each variant's price in USD (null when the store states another currency).",
+        "description": "The description's text, first 2,000 characters.",
     },
 }
 
@@ -235,7 +272,7 @@ QUALITY: dict[str, list[dict]] = {
          "enforced_by": "dbt run_manifest_mode_values"},
     ],
     "ops": [
-        {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions"],
+        {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags"],
          "dimension": "conformity", "severity": "error",
          "rule": "each ops file has exactly the contract's columns and types, and none is a release table",
          "engine": "pytest",

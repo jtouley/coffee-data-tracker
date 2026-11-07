@@ -141,3 +141,15 @@ table.dense td.pick + th { white-space: normal; min-width: 9rem; max-width: 13re
 details.args { display: inline; }
 details.args summary { display: inline; cursor: pointer; color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 details.args[open] code { display: block; margin-top: 4px; }
+
+/* Queue and Case: a group of products with the same evidence reads as a band above its rows; a flag's evidence and a
+   description are text to read, so they wrap; the settings are code-like JSON. No new colours. */
+table.flagged tbody th { white-space: normal; min-width: 9rem; max-width: 22rem; }
+tr.grp th, tr.grp td { background: var(--panel); font-weight: 500; white-space: normal; }
+ul.flags { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 16px; font-size: 0.9375rem; }
+p.desc { white-space: pre-line; overflow-wrap: anywhere; max-width: 72ch; font-size: 0.9375rem; line-height: 1.5; margin: 8px 0 0; }
+details.settings > summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+textarea.json, pre.json { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.8125rem; line-height: 1.45;
+  width: 100%; min-height: 16rem; white-space: pre; overflow: auto; }
+pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
+

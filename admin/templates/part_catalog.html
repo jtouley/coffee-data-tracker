@@ -1,4 +1,4 @@
-{% from "_macros.html" import ev, write_off, write_button %}
+{% from "_macros.html" import ev, write_off, write_button, decide_dialog %}
 <div data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not data %}
@@ -55,23 +55,5 @@
   {% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
   {% endif %}
 {% endif %}
-{% if not writes_off and data and data.matching %}
-<dialog class="sheet" id="decide" aria-labelledby="decide-h">
-  <form method="dialog" data-write="/api/decisions" data-decide-form novalidate>
-    <h2 class="serif title-s" id="decide-h" data-decide-title>Decide</h2>
-    <p class="body" data-decide-what></p>
-    <input type="hidden" name="key" value="{{ new_key() }}">
-    <input type="hidden" name="action" value="">
-    <fieldset class="choice"><legend class="label">Apply to</legend>
-      <label><input type="radio" name="kind" value="coffee_id" checked> These products (by <code>coffee_id</code>)</label>
-      <label><input type="radio" name="kind" value="input_hash"> Every product with the same version: title, type, tags, sizes and description (by <code>input_hash</code>, across roasters)</label>
-    </fieldset>
-    <label class="flabel" for="decide-reason">Reason (recorded, 3 to 300 characters)</label>
-    <input class="input" id="decide-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off" aria-describedby="decide-hint">
-    <div class="hint" id="decide-hint" data-hint role="alert"></div>
-    <p class="meta">Nothing is served until a draft of it is published (Release).</p>
-    <div class="actions mt12"><button class="btn primary inline" type="submit" value="go" data-busy="Recording…" data-decide-go>Decide</button><button class="btn text inline" type="button" data-close>Cancel</button></div>
-  </form>
-</dialog>
-{% endif %}
+{% if not writes_off and data and data.matching %}{{ decide_dialog() }}{% endif %}
 </div>

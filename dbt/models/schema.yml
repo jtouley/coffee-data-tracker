@@ -377,6 +377,66 @@ models:
       - name: reason
         description: Why (stg_products.reason).
         data_tests: [not_null]
+  - name: int_catalog_candidates
+    description: >-
+      One row per product (coffee_id), as of its latest record: what the rules (flag_*) read. is_coffee is the
+      classifier's answer before the owner's decision and the guard; was_public is membership of the served
+      release's public_coffee (false when nothing is served).
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: version_since
+        description: When the classifier's current answer appeared (the latest version's first record, or its verdict).
+  - name: flag_verdict_flip
+    description: >-
+      One row per product whose classifier answer differs from the served release (rule verdict_flip, family
+      classifier): direction removed or added. The flag_* contract: coffee_id, roaster_id, direction, evidence (JSON
+      text), evidence_key (the evidence without the product's identity).
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: direction
+        data_tests:
+          - accepted_values: {arguments: {values: [added, removed]}}
+  - name: flag_shared_body
+    description: >-
+      One row per product whose description, or a paragraph of it, is on params.min_products or more of the
+      roaster's products (rule shared_body, family catalog). evidence_key is the shared text's hash.
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+  - name: flag_non_coffee_type
+    description: >-
+      One row per product whose store product type names a kind in params.types (rule non_coffee_type, family
+      listing).
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+  - name: int_catalog_decided
+    description: >-
+      One row per flagged product (coffee_id): its flags by polarity, whether the guard holds it (held) and whether
+      its removal is ready as far as the build can tell (ready_flags). Macro decided() counts a held product as
+      coffee. Tested by classifier_guard and ready_removals_have_no_doubts (both errors).
+    columns:
+      - name: coffee_id
+        data_tests: [unique, not_null]
+      - name: held
+        data_tests: [not_null]
+      - name: ready_flags
+        data_tests: [not_null]
+  - name: mart_flags
+    description: >-
+      One row per flag (rule x product) of this build, with the product's summary (held, ready_flags,
+      evidence_hash, public_rows). Report only (tag report_only), run after the gate; written beside the release as
+      an ops table (releases/.../ops/) for the admin's Queue and Case pages; never served or exported.
+    columns:
+      - name: rule
+        data_tests: [not_null]
+      - name: polarity
+        data_tests:
+          - accepted_values: {arguments: {values: [supports, doubts, restore]}}
+      - name: coffee_id
+        data_tests: [not_null]
   - name: mart_market
     data_tests:
       - unique:

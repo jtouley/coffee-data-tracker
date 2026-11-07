@@ -400,6 +400,41 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("reason", pa.string()),
         ]
     ),
+    "mart_flags": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("rule", pa.string()),
+            ("family", pa.string()),
+            ("polarity", pa.string()),
+            ("direction", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("input_hash", pa.string()),
+            ("title", pa.string()),
+            ("product_type", pa.string()),
+            ("evidence", pa.string()),
+            ("evidence_key", pa.string()),
+            ("evidence_hash", pa.string()),
+            ("decision", pa.string()),
+            ("classifier_is_coffee", pa.bool_()),
+            ("was_public", pa.bool_()),
+            ("held", pa.bool_()),
+            ("ready_flags", pa.bool_()),
+            ("coverage_problem", pa.bool_()),
+            ("supports_families", pa.int64()),
+            ("doubts", pa.int64()),
+            ("restores", pa.int64()),
+            ("public_rows", pa.int64()),
+            ("verdict_label", pa.string()),
+            ("classified_by", pa.string()),
+            ("reason", pa.string()),
+            ("url", pa.string()),
+            ("tags", pa.list_(pa.string())),
+            ("bag_sizes_g", pa.list_(pa.int32())),
+            ("prices_usd", pa.list_(pa.float64())),
+            ("description", pa.string()),
+        ]
+    ),
     "verdict_batches": pa.schema(
         [
             ("batch_id", pa.string()),
@@ -562,7 +597,8 @@ GLOBS = {
 # The ops tables' files across every build (see SCHEMAS): for a reader that globs them itself, with
 # hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
 OPS_GLOBS = {
-    t: f"releases/*/*/ops/{t}.parquet" for t in ("run_completeness", "release_changes", "product_decisions")
+    t: f"releases/*/*/ops/{t}.parquet"
+    for t in ("run_completeness", "release_changes", "product_decisions", "mart_flags")
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {

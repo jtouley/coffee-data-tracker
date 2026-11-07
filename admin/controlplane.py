@@ -31,12 +31,13 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlsplit
 
-from coffeedata import decisions
+from coffeedata import decisions, rules
 
 MIGRATIONS = Path(__file__).parent / "migrations"
 IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
 LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
+ID_ROASTER = re.compile(r"[a-z0-9][a-z0-9.-]{0,252}")  # a roaster id is its store's domain
 
 
 class ControlPlaneError(RuntimeError):
@@ -246,10 +247,10 @@ class ControlPlane:
                 it, did = by_subject[s], new_id("d")
                 cur.execute(
                     "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
-                    "actor, group_id, coffee_id, input_hash, roaster_id, title) "
-                    "values (%s, 1, 'approved', %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                    "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
+                    "values (%s, 1, 'approved', %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                     (did, kind, s, action, reason, actor, group, it.get("coffee_id"), it.get("input_hash"),
-                     it.get("roaster_id"), (it.get("title") or "")[:300]),
+                     it.get("roaster_id"), (it.get("title") or "")[:300], it.get("evidence_hash") or None),
                 )  # fmt: skip
                 ids.append(did)
             out = {"ok": True, "decisions": ids, "group": group, "count": len(ids)}
@@ -286,9 +287,10 @@ class ControlPlane:
                     continue
                 cur.execute(
                     "insert into control.decisions (decision_id, seq, event, subject_kind, subject, action, reason, "
-                    "actor, group_id, coffee_id, input_hash, roaster_id, title) "
+                    "actor, group_id, coffee_id, input_hash, roaster_id, title, evidence_hash) "
                     "select decision_id, %s, 'reverted', subject_kind, subject, action, %s, %s, group_id, coffee_id, "
-                    "input_hash, roaster_id, title from control.decisions where decision_id = %s and seq = 1",
+                    "input_hash, roaster_id, title, evidence_hash from control.decisions "
+                    "where decision_id = %s and seq = 1",
                     (seq + 1, reason[:500] if len(reason) >= 3 else "undo", actor, did),
                 )  # fmt: skip
                 reverted.append(did)
@@ -296,6 +298,105 @@ class ControlPlane:
             self.audit(cur, actor, "undo", target, "ok", {"reverted": reverted, "reason": reason})
             self.remember(cur, key, out)
             return out
+
+    def save_settings(self, actor: str, key: str, doc: object, based_on: str | None, reason: str) -> dict:
+        """A new rule settings version, checked against the deployed code (rules.check), based on the version the
+        page showed (`based_on`, None for the defaults): another edit since is a Conflict. Records what changed and
+        which changes decide (rules.decides). Idempotent on `key`; an edit that changes nothing is refused."""
+        reason = (reason or "").strip()
+        if not 3 <= len(reason) <= 500:
+            raise ValueError("give a reason (3 to 500 characters)")
+        new = rules.check(doc)
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            if (first := self.claim(cur, key)) is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 2,))
+            now = self._settings(cur)
+            if now["version_id"] != (based_on or None):
+                raise Conflict("the rule settings changed since the page was loaded: reload and edit again")
+            changed = rules.changed(now["doc"], new)
+            if not changed:
+                raise ValueError("nothing changed")
+            decides = rules.decides(now["doc"], new)
+            vid = new_id("rs").lower()
+            cur.execute(
+                "insert into control.rule_settings (version_id, prev_id, schema, doc, changed, decides, reason, actor) "
+                "values (%s, %s, %s, %s::jsonb, %s::jsonb, %s::jsonb, %s, %s)",
+                (vid, now["version_id"], rules.SCHEMA_VERSION, json.dumps(new), json.dumps(changed),
+                 json.dumps(decides), reason, actor),
+            )  # fmt: skip
+            out = {"ok": True, "version_id": vid, "changed": changed, "decides": decides}
+            self.audit(cur, actor, "settings", vid, "ok", out | {"prev": now["version_id"], "reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _settings(cur) -> dict:
+        cur.execute("select version_id, doc, actor, at, reason from control.rule_settings order by at desc, "
+                    "version_id desc limit 1")  # fmt: skip
+        r = cur.fetchone()
+        if not r:
+            return {"version_id": None, "doc": rules.default(), "actor": None, "at": None, "reason": None}
+        return {"version_id": r[0], "doc": _json(r[1]), "actor": r[2], "at": r[3], "reason": r[4]}
+
+    def settings(self) -> dict:
+        """The current rule settings version (the defaults, version None, before the first edit)."""
+        with self.tx() as cur:
+            return self._settings(cur)
+
+    def settings_history(self, limit: int = 10) -> list[dict]:
+        with self.tx() as cur:
+            cur.execute("select version_id, prev_id, changed, decides, reason, actor, at from control.rule_settings "
+                        "order by at desc, version_id desc limit %s", (limit,))  # fmt: skip
+            cols = ("version_id", "prev_id", "changed", "decides", "reason", "actor", "at")
+            rows = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        for r in rows:
+            r["changed"], r["decides"] = _json(r["changed"]), _json(r["decides"])
+        return rows
+
+    def set_crawl(
+        self, actor: str, key: str, roaster_id: str, crawl: bool, reason: str, seen: bool | None
+    ) -> dict:
+        """Turn a roaster's crawl flag on or off, from the state the page showed (`seen`: a change since is a
+        Conflict). Takes effect for scheduled crawls once a draft carrying it is published. Idempotent on `key`."""
+        reason = (reason or "").strip()
+        if not 3 <= len(reason) <= 500:
+            raise ValueError("give a reason (3 to 500 characters)")
+        if not ID_ROASTER.fullmatch(roaster_id or ""):
+            raise ValueError("bad roaster id")
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            if (first := self.claim(cur, key)) is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("crawl:" + roaster_id,))
+            now = self._crawl(cur, [roaster_id]).get(roaster_id, {}).get("crawl", True)
+            if seen is not None and now != seen:
+                raise Conflict("the crawl flag changed since the page was loaded: reload")
+            if now == crawl:
+                raise ValueError(f"the crawl flag is already {'on' if crawl else 'off'}")
+            cur.execute("insert into control.roaster_state (roaster_id, crawl, reason, actor) values (%s, %s, %s, %s)",
+                        (roaster_id, crawl, reason, actor))  # fmt: skip
+            out = {"ok": True, "roaster_id": roaster_id, "crawl": crawl}
+            self.audit(cur, actor, "crawl_flag", roaster_id, "ok", out | {"reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _crawl(cur, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        cur.execute(
+            "select distinct on (roaster_id) roaster_id, crawl, reason, actor, at from control.roaster_state "
+            + ("where roaster_id = any(%s) " if roaster_ids is not None else "")
+            + "order by roaster_id, id desc",
+            (roaster_ids,) if roaster_ids is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "crawl", "reason", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def roaster_states(self, roaster_ids: list[str] | None = None) -> dict[str, dict]:
+        """Each roaster's latest crawl flag row (a roaster never changed has none: crawl on)."""
+        with self.tx() as cur:
+            return self._crawl(cur, roaster_ids)
 
     def record_run(self, cur, run: dict) -> None:
         cur.execute(
@@ -359,11 +460,12 @@ class ControlPlane:
             cur.execute(
                 "select * from (select distinct on (subject_kind, subject) decision_id, event, subject_kind, subject, "
                 "action, reason, actor, to_char(at at time zone 'UTC', 'YYYY-MM-DD\"T\"HH24:MI:SS\"Z\"'), coffee_id, "
-                "input_hash, roaster_id, title from control.decisions order by subject_kind, subject, id desc) d "
+                "input_hash, roaster_id, title, evidence_hash from control.decisions "
+                "order by subject_kind, subject, id desc) d "
                 "where event = 'approved' order by subject_kind, subject"
             )
             cols = ("decision_id", "event", "subject_kind", "subject", "action", "reason", "actor", "decided_at",
-                    "coffee_id", "input_hash", "roaster_id", "title")  # fmt: skip
+                    "coffee_id", "input_hash", "roaster_id", "title", "evidence_hash")  # fmt: skip
             return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
 
     def decision_log(self, limit: int = 100) -> list[dict]:
