@@ -6,6 +6,11 @@ coffeedata:
       path: "{{ env_var('COFFEEDATA_DB', 'build/coffee.duckdb') }}"
       threads: 4
       extensions: [httpfs]
+      # Every build in UTC, wherever it runs: a timestamp cast to a date, or rendered as text (stg_enrichments'
+      # tie-break), would otherwise depend on the machine's zone, and a rebuild elsewhere wouldn't match
+      # (tests/test_reproducible.py builds a second time in Asia/Tokyo). Cloud Run and Actions already run in UTC.
+      settings:
+        TimeZone: UTC
       secrets:
         - type: huggingface
           token: "{{ env_var('HF_TOKEN', 'none') }}"

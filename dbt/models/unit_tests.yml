@@ -46,15 +46,15 @@ unit_tests:
         format: sql
         rows: |
           select * from (values
-              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true}]),
-              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false}]),
-              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true}]),
-              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true}]),
-              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true}])
+              ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
+              ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-05', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:B', 'r', date '2026-10-19', 'h', [{'variant_id': 'B', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-05', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:C', 'r', date '2026-10-12', 'h', [{'variant_id': 'C', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-12', 'h', [{'variant_id': 'D', 'price_usd': null, 'available': true, 'is_usd': true}]),
+              ('r:D', 'r', date '2026-10-19', 'h', [{'variant_id': 'D', 'price_usd': 16.0, 'available': true, 'is_usd': true}])
           ) t(coffee_id, roaster_id, run_date, input_hash, variants)
           cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
       - input: ref('stg_products')
@@ -90,14 +90,14 @@ unit_tests:
         format: sql
         rows: |
           select * from (values
-              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
-              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true}]),
-              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true}]),
-              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true}]),
-              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}]),
-              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true}])
+              ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
+              ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-05', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-12', 'h', [{'variant_id': 'R', 'price_usd': 15.0, 'available': true, 'is_usd': true}]),
+              ('r:R', 'r', date '2026-10-26', 'h', [{'variant_id': 'R', 'price_usd': 16.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-12', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}]),
+              ('r:S', 'r', date '2026-10-19', 'h', [{'variant_id': 'S', 'price_usd': 12.0, 'available': true, 'is_usd': true}])
           ) t(coffee_id, roaster_id, run_date, input_hash, variants)
           cross join (select timestamptz '2026-10-05 12:00:00+00' as fetched_at)
       - input: ref('stg_products')
@@ -248,6 +248,30 @@ unit_tests:
         - {roaster_id: pill.com, attempted: true, ok: false, has_catalog: false, catalog_ok: false, quarantined: true}
         - {roaster_id: failed.com, attempted: true, ok: false, has_catalog: true, catalog_ok: false, quarantined: false}
 
+  - name: roaster_runs_carry_partial_and_challenge
+    description: >-
+      int_roaster_runs, for the fetch-health check: a run whose ok attempts all read part of the catalog is partial,
+      with the latest one's reason; a complete ok attempt the same week means it isn't. A run with no ok attempt
+      keeps the edge of its latest challenged one; a challenge before an ok attempt is no challenge.
+    model: int_roaster_runs
+    given:
+      - input: ref('stg_fetches')
+        rows:
+          - {roaster_id: part.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, partial: true, error: "partial: page 3", products: 40, challenge: null}
+          - {roaster_id: part.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: true, error: "partial: page 5", products: 60, challenge: null}
+          - {roaster_id: whole.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, partial: true, error: "partial: page 3", products: 40, challenge: null}
+          - {roaster_id: whole.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: false, error: null, products: 90, challenge: null}
+          - {roaster_id: sg.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: error, partial: false, error: "HTTP 202 (a challenge)", products: 0, challenge: siteground}
+          - {roaster_id: sg.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: error, partial: false, error: "ReadTimeout", products: 0, challenge: null}
+          - {roaster_id: later.com, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: error, partial: false, error: "HTTP 202 (a challenge)", products: 0, challenge: cloudflare}
+          - {roaster_id: later.com, run_date: 2026-11-02, fetched_at: "2026-11-02 15:00:00+00", status: ok, partial: false, error: null, products: 9, challenge: null}
+    expect:
+      rows:
+        - {roaster_id: part.com, ok: true, partial: true, partial_reason: "partial: page 5", challenge: null}
+        - {roaster_id: whole.com, ok: true, partial: false, partial_reason: null, challenge: null}
+        - {roaster_id: sg.com, ok: false, partial: false, partial_reason: null, challenge: siteground}
+        - {roaster_id: later.com, ok: true, partial: false, partial_reason: null, challenge: null}
+
   - name: snapshot_tags_are_decoded
     description: >-
       stg_snapshots decodes HTML entities in tags (decode_html_entities), as the real lake has them: WooCommerce's
@@ -269,14 +293,72 @@ unit_tests:
           cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
               timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
               'Kenya AA' as title, '' as product_type, 'b' as body_hash,
-              [{'variant_id': 'v', 'grams': 340}] as variants))
+              [{'variant_id': 'v', 'price_usd': 20.0, 'grams': 340, 'available': true, 'currency': 'USD'}] as variants))
     given:
       - input: ref('stg_runs')
         rows:
           - {roaster_id: r.com, run_date: 2026-10-19, batch_id: b1, fetched_at: "2026-10-19 12:00:00+00"}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r.com, country: US}
     expect:
       rows:
         - {coffee_id: "r.com:P", tags: "['Parts & Equipment', 'Coffee > Single Origin']", input_hash: 06662042c205f4a3c208c887873c8b34}
         - {coffee_id: "r.com:Q", tags: "['Education & Display', 'Light – Medium', 'R&D', NULL]", input_hash: 5eea2c56221c71c2e5b3c3bed77c478a}
         - {coffee_id: "r.com:R", tags: null, input_hash: 6917f7444f9e455268154e8ddbf2d243}
         - {coffee_id: "r.com:S", tags: "[]", input_hash: 7fb87725be5e4f4ffd6c4f555de8ec36}
+
+  - name: dial_in_best_recipe_is_one_shot_whatever_the_order
+    description: >-
+      The best recipe is one shot's: the highest rating, the latest brewed among equal ratings, then the larger
+      shot_id (two shots brewed in the same second), so every best_* value comes from the same shot however the
+      shots are read. arg_max(x, rating) alone took the first top-rated shot it read, here a's. The label is the
+      latest shot's spelling of the coffee (the key is lower-cased).
+    model: mart_dial_in
+    given:
+      - input: ref('fct_shot')
+        rows:
+          - {shot_id: a, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-20 07:00:00+00", rating: 5, grinder_setting: 10.0, dose_g: 18.0, yield_g: 36.0, time_s: 28.0}
+          - {shot_id: c, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 11.0, dose_g: 19.0, yield_g: 38.0, time_s: 30.0}
+          - {shot_id: b, user_id: u1, coffee_freetext: House Espresso, brewed_at: "2026-10-21 07:00:00+00", rating: 5, grinder_setting: 12.0, dose_g: 18.5, yield_g: 37.0, time_s: 29.0}
+          - {shot_id: d, user_id: u1, coffee_freetext: House espresso, brewed_at: "2026-10-22 07:00:00+00", rating: 3, grinder_setting: 14.0, dose_g: 18.0, yield_g: 40.0, time_s: 25.0}
+    expect:
+      rows:
+        - {grain: coffee, key: "freetext:house espresso", label: House espresso, shots: 4, best_rating: 5, best_grind: 11.0, best_dose_g: 19.0, best_yield_g: 38.0, best_time_s: 30.0}
+
+  - name: verdict_tie_prefers_coffee
+    description: >-
+      Of a product's verdicts, the latest wins (P: a later not_coffee over an earlier coffee). Two stored in the same
+      second: coffee wins whatever the other label and whichever is read first (Q and R: not_coffee; S: unsure), so
+      a tie with coffee never removes a product. A tie without coffee goes by the label (U: not_coffee before
+      unsure; the owner's rule covers only coffee). Verdicts for another model or definition are ignored (T).
+    model: stg_verdicts
+    overrides:
+      vars:
+        verdict_model: m
+        verdict_definition: d
+      macros:
+        # The lake's verdicts: the model reads them with lake('verdicts'), the only lake table it reads.
+        lake: >-
+          (select * from (values
+              ('P', 'coffee', 'm', 'd', timestamptz '2026-11-01 12:00:00+00'),
+              ('P', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('Q', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('R', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('S', 'coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'other', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('T', 'coffee', 'm', 'old', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'unsure', 'm', 'd', timestamptz '2026-11-02 12:00:00+00'),
+              ('U', 'not_coffee', 'm', 'd', timestamptz '2026-11-02 12:00:00+00')
+          ) t(input_hash, label, model, definition, decided_at))
+    given: []
+    expect:
+      rows:
+        - {input_hash: P, label: not_coffee, model: m}
+        - {input_hash: Q, label: coffee, model: m}
+        - {input_hash: R, label: coffee, model: m}
+        - {input_hash: S, label: coffee, model: m}
+        - {input_hash: U, label: not_coffee, model: m}

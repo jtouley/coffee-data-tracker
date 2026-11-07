@@ -1,0 +1,46 @@
+{
+ "meta": {
+  "labeler": "A",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "recon",
+  "n": 10
+ },
+ "labels": [
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073308897584",
+   "label": "by_design",
+   "reason": "Reclassified as non-coffee in the latest run, so it drops from dim_coffee; the earlier events were logged while it was coffee."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073308963120",
+   "label": "by_design",
+   "reason": "Latest record is classified non-coffee, so it is excluded from dim_coffee as defined; the orphan events follow from that."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309126960",
+   "label": "by_design",
+   "reason": "Latest record is classified non-coffee after the '12 pods' retitle, so it leaves dim_coffee per the stated definition; events predate this."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309225264",
+   "label": "by_design",
+   "reason": "Latest record (retitled '12 pods') is classified non-coffee, so it leaves dim_coffee; earlier events came while it was coffee."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309290800",
+   "label": "by_design",
+   "reason": "Reclassified as non-coffee in the latest run, so it leaves dim_coffee per the definition; the events predate this."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309323568",
+   "label": "by_design",
+   "reason": "Latest record is classified non-coffee, so it is excluded from dim_coffee; earlier events were kept while it was coffee."
+  },
+  {
+   "id": "2026-11-02|orphan_event|joescoffeehouse.com:8073309454640",
+   "label": "by_design",
+   "reason": "Latest record is classified non-coffee, so it is excluded from dim_coffee; the orphan events follow the stated definition."
+  }
+ ]
+}

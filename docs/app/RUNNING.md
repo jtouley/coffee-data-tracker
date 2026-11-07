@@ -10,9 +10,11 @@ make app                     # http://127.0.0.1:8000 over ./lake, signed in as t
 HOST=0.0.0.0 make app        # reachable from a phone on the same network
 ```
 
-Without `SESSION_SECRET` the app uses a stub that treats every request as the owner (`COFFEEDATA_OWNER_ID`,
-default `owner`). Anyone who can reach it can log shots, so keep it on your own network. The stub refuses to start on
-Cloud Run (or a Hugging Face Space).
+`make app` sets `COFFEEDATA_LOCAL_OWNER=1`, which, without `SESSION_SECRET`, uses a stub that treats every request
+as the owner (`COFFEEDATA_OWNER_ID`, default `owner`). Anyone who can reach it can log shots, so keep it on your own
+network. The stub runs only when asked for by that variable, and refuses to start on Cloud Run (or a Hugging Face
+Space). Started any other way without `SESSION_SECRET` and `AUTH_PEPPER`, the app serves nothing but a "not set up"
+notice.
 
 To try real sign-in locally, with accounts in `./lake-users`:
 
@@ -22,7 +24,12 @@ SESSION_SECRET=$(openssl rand -hex 32) AUTH_PEPPER=$(openssl rand -hex 16) OWNER
 ```
 
 `COFFEEDATA_INSECURE_COOKIES=1` drops the cookie's `Secure` flag, which plain http on a LAN address needs. Chrome
-accepts Secure cookies on `localhost` without it.
+accepts Secure cookies on `localhost` without it. On Cloud Run (or a Space) the app refuses to start while it is set.
+
+Every screen and API call needs a signed-in session except the few listed in `PUBLIC` (`app/auth.py`): health,
+sign-in, join, reset, the offline page and the static files. A new route is private until it is added there, and
+`tests/test_auth_gate.py` checks every registered route. Pages and photos for a signed-in person are sent with
+`Cache-Control: no-store, private` and `Vary: Cookie`, so no browser or shared cache keeps them.
 
 ## Sign-in
 
@@ -59,8 +66,12 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 - a $20 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
   15 minutes, all emailed to the owner.
 
-`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it pushes
-the image and deploys it, once the variables below are set.
+`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it waits
+for `ci` to pass on the push, then pushes the image and deploys it by digest, once the variables below are set. It
+deploys only main's newest commit, so an older commit whose `ci` finished late never replaces a newer one, and it
+deploys after docs-only merges too (the same app, restarted). Running the workflow by hand from `main` deploys main's
+newest commit without waiting for `ci`. With the variable `GCP_ADMIN_SERVICE` set, the same image then goes to the
+admin service, through the `admin` environment, where a required reviewer can be added in the repository's settings.
 
 ### Owner's steps
 
@@ -160,6 +171,33 @@ gcloud logging read "$S AND jsonPayload.message=\"saved\"" --freshness=1d       
 
 A request's trace id is on its access line (`logging.googleapis.com/trace`). Errors also appear in Error
 Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines.
+
+### Rolling back
+
+Every deploy makes a new revision, and each revision keeps the image digest it was deployed with. To go back to the
+last good one while the fix is made (with the repository variables `GCP_SERVICE` or `GCP_REGION` set, use their
+values instead of `registry-coffee` and `us-central1`):
+
+```bash
+gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
+gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100
+```
+
+> **Pinned traffic stays pinned.** Once traffic is sent to a named revision, every later deploy makes a new revision
+> that gets **0%** of the traffic, and the deploy job still succeeds ("all subsequent deployments use that traffic
+> split pattern going forward", in Cloud Run's
+> [rollouts and rollbacks](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration)). So the fix's own
+> deploy changes nothing until traffic is moved back.
+
+Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision:
+
+```bash
+gcloud run services update-traffic registry-coffee --region us-central1 --to-latest
+gcloud run services describe registry-coffee --region us-central1    # check where traffic goes now
+```
+
+The admin service (`registry-coffee-admin`, when `GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own
+name in place of `registry-coffee`.
 
 ### Deleting a person's data
 

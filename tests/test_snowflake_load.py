@@ -37,7 +37,7 @@ class FakeCursor:
         self.sql.append(sql)
         self._last = sql
         if m := re.match(r"create table if not exists MARKET\.(\w+)", sql):
-            self.columns.setdefault(m[1], ["COFFEE_ID", "VARIANT_ID"])
+            self.columns.setdefault(m[1], ["coffee_id", "variant_id"])  # infer_schema keeps the file's case
         return self
 
     def fetchone(self):
@@ -143,7 +143,9 @@ def test_missing_credentials_is_a_clear_error(monkeypatch):
 
 class FakeSnowflake:
     """Enough of Snowflake to follow a migration: tables and views with their columns, who owns the views and the
-    share, and which views are in the share. `fail_on` makes the first statement containing it raise, as a failure
+    share, and which views are in the share. Column names are case sensitive as in Snowflake: a table made by
+    infer_schema has the file's lower-case names, and a view's column list names its columns (unquoted: upper
+    case). `fail_on` makes the first statement containing it raise, as a failure
     partway through would. There is no `show shares`: without IMPORT SHARE (which admin_setup.sql doesn't grant)
     it lists nothing."""
 
@@ -155,7 +157,7 @@ class FakeSnowflake:
         self.grants = set(self.views if shared is None else shared) if owner else set()
         self.view_owner = {v: "COFFEE_LOADER" for v in self.views}
         self.sql, self.fail_on, self.description, self._rows = [], None, None, []
-        self.export_cols: list[str] | dict[str, list[str]] = ["COFFEE_ID", "VARIANT_ID"]  # or by table
+        self.export_cols: list[str] | dict[str, list[str]] = ["coffee_id", "variant_id"]  # or by table
         self.comments: dict[str, str] = {}  # "MARKET.t", "MARKET.t.COL", "SHARE.v", "SHARE.v.COL" -> literal
 
     def cursor(self):
@@ -215,13 +217,16 @@ class FakeSnowflake:
         ):  # Snowflake's order: column list, copy grants, comment, as
             if self.view_owner.setdefault(m[1], self.role) != self.role:
                 raise RuntimeError("insufficient privileges to operate on view")
-            listed = re.findall(r"\"(\w+)\" comment ('(?:[^']|'')*')(?:, |$)", m[2])
-            selected = re.findall(r'"(\w+)"', m[5])
-            assert [c for c, _ in listed] == selected and sorted(selected) == sorted(self.tables[m[6]])
-            self.views[m[1]] = self.tables[m[6]]
+            listed = [
+                (c.strip('"') if c.startswith('"') else c.upper(), literal)  # unquoted: upper case
+                for c, literal in re.findall(r"(\"\w+\"|\w+) comment ('(?:[^']|'')*')(?:, |$)", m[2])
+            ]
+            selected = re.findall(r'"(\w+)"', m[5])  # quoted: as the table names them, or Snowflake refuses
+            assert len(listed) == len(selected) and sorted(selected) == sorted(self.tables[m[6]])
+            self.views[m[1]] = [c for c, _ in listed]
             self._comment(f"SHARE.{m[1]}", m[4])
             for col, literal in listed:
-                self._comment(f"SHARE.{m[1]}", literal, selected, col)
+                self._comment(f"SHARE.{m[1]}", literal, self.views[m[1]], col)
             if not m[3]:
                 self.grants.discard(m[1])  # create or replace without copy grants drops the view's grants
         elif m := re.match(r"grant select on view SHARE\.(\w+) to share", sql):
@@ -237,9 +242,10 @@ class FakeSnowflake:
         return self._rows
 
 
-OLD = ["COFFEE_ID", "BAG_ID"]  # loaded before the rename
-VIEWS = {"coffee": OLD, "price_event": OLD, "market_weekly": OLD, "roaster": OLD}
-NEW = ["COFFEE_ID", "VARIANT_ID"]
+OLD = ["coffee_id", "bag_id"]  # loaded before the rename (infer_schema keeps the file's lower case)
+VIEWS = {"coffee": OLD, "price_event": OLD, "market_weekly": OLD, "roaster": OLD}  # select *: lower case too
+NEW = ["coffee_id", "variant_id"]
+NEW_VIEW = ["COFFEE_ID", "VARIANT_ID"]  # what consumers see: upper case, no quotes needed
 
 
 def old_snowflake(counts, **kw):
@@ -249,7 +255,7 @@ def old_snowflake(counts, **kw):
 def healthy(sf):
     return (
         all(sf.tables.get(t) == NEW for t in PUBLIC_TABLES)
-        and all(sf.views.get(v) == NEW for v in VIEWS)
+        and all(sf.views.get(v) == NEW_VIEW for v in VIEWS)
         and sf.grants == set(VIEWS)
     )
 
@@ -355,7 +361,7 @@ def test_migrate_before_the_share_and_its_views_exist_only_reloads_the_tables(tm
 
 def test_same_columns_load_as_usual(tmp_path):
     counts = {t: 1 for t in PUBLIC_TABLES}
-    con = FakeConn(counts, columns={"public_coffee": ["COFFEE_ID", "VARIANT_ID"]})
+    con = FakeConn(counts, columns={"public_coffee": ["coffee_id", "variant_id"], "coffee": NEW_VIEW})
     assert snowflake_load.load(export_dir(tmp_path, counts), con)["tables"] == counts
     assert not any(s.startswith(("drop table", "create or replace secure view", "show")) for s in con.cur.sql)
 
@@ -401,19 +407,21 @@ def test_every_contract_column_is_described_on_its_table_and_view(tmp_path, monk
     monkeypatch.setattr(snowflake_load, "CONTRACT", REAL_CONTRACT)
     counts = {t: 1 for t in PUBLIC_TABLES}
     export, contract = contract_export(tmp_path, counts)
-    names = {t: [c.upper() for c in contract[t][1]] for t in PUBLIC_TABLES}  # as Snowflake would name them
-    old = {t: names[t][:-1] for t in PUBLIC_TABLES}  # e.g. ROASTER without RELEASE_RUN_DATE, to migrate
-    have = old if migrate else names
-    sf = FakeSnowflake(counts, tables=have, views={v: have[t] for t, v in snowflake_load.SHARE_VIEWS.items()})
+    names = {t: list(contract[t][1]) for t in PUBLIC_TABLES}  # as infer_schema names them: the file's case
+    old = {t: names[t][:-1] for t in PUBLIC_TABLES}  # e.g. roaster without release_run_date, to migrate
+    tables = old if migrate else names
+    upper = {t: [c.upper() for c in names[t]] for t in PUBLIC_TABLES}  # views already upper case
+    views = {v: (old if migrate else upper)[t] for t, v in snowflake_load.SHARE_VIEWS.items()}
+    sf = FakeSnowflake(counts, tables=tables, views=views)
     sf.export_cols = names
     snowflake_load.load(export, sf, migrate=migrate)
     want = {}
     for t, (desc, cols) in contract.items():
         if t not in PUBLIC_TABLES:
             continue
-        for obj in (f"MARKET.{t}", f"SHARE.{snowflake_load.SHARE_VIEWS[t]}"):
+        for obj, case in ((f"MARKET.{t}", str.lower), (f"SHARE.{snowflake_load.SHARE_VIEWS[t]}", str.upper)):
             want[obj] = snowflake_load.sql_string(desc)
-            want |= {f"{obj}.{c.upper()}": snowflake_load.sql_string(d) for c, d in cols.items()}
+            want |= {f"{obj}.{case(c)}": snowflake_load.sql_string(d) for c, d in cols.items()}
     assert sf.comments == want and all(len(v) > 2 for v in want.values())
     recreated = [s for s in sf.sql if s.startswith("create or replace secure view")]
     altered = [s for s in sf.sql if s.startswith("alter view")]
@@ -446,7 +454,7 @@ def test_descriptions_are_one_line_with_quotes_escaped(tmp_path, test_contract):
     sf = old_snowflake(counts)
     snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     literal = r"'The roaster''s own id, as \\''listed\\''.'"
-    assert sf.comments["MARKET.public_coffee.COFFEE_ID"] == literal
+    assert sf.comments["MARKET.public_coffee.coffee_id"] == literal
     assert sf.comments["SHARE.coffee.VARIANT_ID"] == literal
     assert snowflake_load.sql_string("it's\t a  'x'") == "'it''s a ''x'''"
 
@@ -473,7 +481,144 @@ def test_a_contract_column_snowflake_lacks_is_skipped_with_a_warning(tmp_path, t
     """Comments touch only columns Snowflake has; a contract column it lacks is reported, and the load goes on."""
     write_contract(test_contract, columns=("coffee_id", "variant_id", "release_run_date"))
     counts = {t: 1 for t in PUBLIC_TABLES}
-    sf = FakeSnowflake(counts, tables={t: NEW for t in PUBLIC_TABLES}, views={v: NEW for v in VIEWS})
+    sf = FakeSnowflake(counts, tables={t: NEW for t in PUBLIC_TABLES}, views={v: NEW_VIEW for v in VIEWS})
     assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
     assert not any("RELEASE_RUN_DATE" in k for k in sf.comments) and "SHARE.roaster.VARIANT_ID" in sf.comments
     assert "warning: SHARE.roaster has no column release_run_date" in capsys.readouterr().err
+
+
+def test_the_share_views_name_their_columns_in_upper_case_and_select_the_tables_quoted():
+    contract = {"public_coffee": ("Coffees.", {"release_run_date": "The run.", "coffee_id": "The id."})}
+    assert snowflake_load.create_view("public_coffee", ["release_run_date", "coffee_id"], contract) == (
+        "create or replace secure view SHARE.coffee (RELEASE_RUN_DATE comment 'The run.', COFFEE_ID comment "
+        "'The id.') copy grants comment = 'Coffees.' as select \"release_run_date\", \"coffee_id\" "
+        "from MARKET.public_coffee"
+    )
+
+
+@pytest.mark.parametrize("name", ["order", "current_date", "price-usd", "2nd_price", "prix_€"])
+def test_a_column_consumers_would_have_to_quote_fails_before_anything_is_loaded(
+    tmp_path, test_contract, name
+):
+    write_contract(test_contract, columns=("coffee_id", name))
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export = export_dir(tmp_path, counts)
+    for t in PUBLIC_TABLES:
+        pq.write_table(pa.table({"coffee_id": ["x"], name: ["v"]}), export / f"{t}.parquet")
+    sf = FakeSnowflake(counts)
+    with pytest.raises(RuntimeError, match="without quotes"):
+        snowflake_load.load(export, sf)
+    assert not any(s.startswith(("put ", "create", "drop", "truncate", "copy into")) for s in sf.sql)
+    assert snowflake_load.view_column("release_run_date") == "RELEASE_RUN_DATE"
+
+
+def lower_case_snowflake(counts, **kw):
+    """Loaded and shared before the views were upper case: each view's columns are the table's, lower case."""
+    return FakeSnowflake(counts, tables={t: NEW for t in PUBLIC_TABLES}, views={v: NEW for v in VIEWS}, **kw)
+
+
+def test_stale_compares_column_names_in_any_case(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export = export_dir(tmp_path, counts)
+    upper = FakeSnowflake(counts, tables={t: NEW for t in PUBLIC_TABLES}, views={v: NEW_VIEW for v in VIEWS})
+    assert snowflake_load.stale(upper, export) == ([], [], [])  # lower-case tables, upper-case views: current
+    assert snowflake_load.stale(lower_case_snowflake(counts), export) == ([], [], list(PUBLIC_TABLES))
+    assert snowflake_load.stale(old_snowflake(counts), export) == (
+        list(PUBLIC_TABLES),
+        list(PUBLIC_TABLES),
+        [],
+    )
+
+
+def test_the_first_load_after_the_upper_case_change_recreates_the_views_then_loads_as_usual(tmp_path):
+    """No migration needed: the views keep their columns (only their case changes), their grants and their
+    descriptions. The next weekly load finds them current and only refreshes the descriptions."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export = export_dir(tmp_path, counts)
+    sf = lower_case_snowflake(counts)
+    assert snowflake_load.load(export, sf)["tables"] == counts
+    assert healthy(sf)
+    views = [s for s in sf.sql if s.startswith("create or replace secure view")]
+    assert len(views) == 4 and all(" copy grants " in v for v in views)
+    assert not any(s.startswith(("drop table", "grant", "alter view")) for s in sf.sql)
+    assert sf.comments["SHARE.coffee.VARIANT_ID"] == "'public_coffee variant_id.'"
+
+    sf.sql.clear()
+    snowflake_load.load(export, sf)  # and every load after it is an ordinary one
+    assert healthy(sf)
+    assert not any(s.startswith(("create or replace", "drop table", "show grants")) for s in sf.sql)
+    assert any(s.startswith('alter view SHARE.coffee alter column "VARIANT_ID" comment ') for s in sf.sql)
+
+
+def test_a_lower_case_view_another_role_owns_is_left_as_is_and_the_data_still_loads(tmp_path, capsys):
+    """Re-casing is cosmetic, so a load (not a migration) never holds the week's data back for it: the view another
+    role owns keeps its lower-case columns, untouched, with a warning naming the grant that fixes it."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
+    assert all(sf.views[v] == NEW_VIEW for v in ("coffee", "price_event", "market_weekly"))
+    assert sf.views["roaster"] == NEW and sf.grants == set(VIEWS)
+    assert not any("SHARE.roaster" in s for s in sf.sql if not s.startswith(("show ", "select ")))
+    err = capsys.readouterr().err
+    assert "warning: SHARE.roaster is owned by another role, not COFFEE_LOADER" in err
+    assert "grant ownership on view SHARE.roaster to role COFFEE_LOADER copy current grants" in err
+
+
+def test_a_migration_still_stops_if_another_role_owns_a_lower_case_view(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    with pytest.raises(RuntimeError, match="SHARE.roaster is owned by another role, not COFFEE_LOADER"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+    assert not any(s.startswith(("put ", "drop", "truncate", "create or replace")) for s in sf.sql)
+    assert sf.views["coffee"] == NEW
+
+
+def test_dry_run_shows_the_views_a_load_would_recreate_in_upper_case(tmp_path):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    out = snowflake_load.load(export_dir(tmp_path, counts), sf, dry_run=True)
+    assert out["refused"] is None and sf.views["coffee"] == NEW  # nothing changed
+    create = next(s for s in out["statements"] if s.startswith("create or replace secure view SHARE.coffee"))
+    assert "(COFFEE_ID comment " in create and 'as select "coffee_id", "variant_id" from' in create
+    # the views it would recreate aren't also described column by column (their definition carries it)
+    assert not any(s.startswith("alter view") for s in out["statements"])
+
+
+def _real_columns() -> dict[str, list[tuple[str, str]]]:
+    """Each public table's (column, physicalType), from the repository's contract (dbt enforces the same)."""
+    schema = yaml.safe_load(REAL_CONTRACT.read_text())["schema"]
+    return {o["name"]: [(p["name"], p["physicalType"]) for p in o["properties"]] for o in schema}
+
+
+def test_every_public_column_has_an_unquoted_upper_case_view_name():
+    """The real contract's columns, as the share views will name them: none needs quotes, none collides."""
+    columns = _real_columns()
+    assert set(PUBLIC_TABLES) <= set(columns)
+    for t in PUBLIC_TABLES:
+        names = [snowflake_load.view_column(c) for c, _ in columns[t]]
+        assert len(set(names)) == len(names), t
+
+
+def test_the_listing_sample_queries_use_only_public_columns():
+    """marketplace/LISTING.md's Snowflake sample queries run (in DuckDB) against empty SHARE views with the
+    contract's upper-case columns and types, so a renamed or dropped column breaks this test, not the listing."""
+    import duckdb
+
+    listing = (REAL_CONTRACT.parents[1] / "marketplace" / "LISTING.md").read_text()
+    sql = re.search(r"\*\*Sample queries\*\*.*?```sql\n(.*?)```", listing, re.S)[1]
+    con = duckdb.connect()
+    con.execute("create schema SHARE")
+    for t, cols in _real_columns().items():
+        if t in snowflake_load.SHARE_VIEWS:
+            typed = ", ".join(f"{snowflake_load.view_column(c)} {ty}" for c, ty in cols)
+            con.execute(f"create table SHARE.{snowflake_load.SHARE_VIEWS[t]} ({typed})")
+    queries = [q.strip() for q in sql.split(";") if q.strip()]
+    assert len(queries) == 4
+    for q in queries:
+        con.execute(q).fetchall()
+        assert '"' not in q  # no quoted names

@@ -1,0 +1,17 @@
+{
+ "meta": {
+  "labeler": "C",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "adapter",
+  "n": 1,
+  "note": "train and validation only; the test labels are in sealed/"
+ },
+ "labels": [
+  {
+   "id": "train|2026-10-28|generic",
+   "label": "unsure",
+   "reason": "About 9% of stores failed (96/106 vs 105/107 baseline) with HTTP errors, near the 10% threshold; returned stores' products and prices were unchanged."
+  }
+ ]
+}

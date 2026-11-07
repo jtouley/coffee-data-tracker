@@ -1,11 +1,15 @@
 -- Current roaster state, derived from probe and fetch history (mirrors registry.STATE_SQL in Python, which
 -- picks what to fetch; tests/test_dbt.py::test_python_and_dbt_agree_on_roaster_status checks the two agree).
 -- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed (as in Python).
+-- Each "latest" pick breaks a tie in time by the values it reads, so the same lake always builds the same table.
 with probes as (select * from {{ ref('stg_probes') }} where status <> 'robots_unavailable'),
-last_probe as (select * from probes qualify row_number() over (partition by roaster_id order by probed_at desc) = 1),
+last_probe as (
+    select * from probes
+    qualify row_number() over (partition by roaster_id order by probed_at desc, status, final_host, platform) = 1
+),
 last_good_probe as (
     select * from probes where status = 'ok'
-    qualify row_number() over (partition by roaster_id order by probed_at desc) = 1
+    qualify row_number() over (partition by roaster_id order by probed_at desc, final_host, platform) = 1
 ),
 -- Failure streaks count runs, not attempts.
 runs as (
@@ -17,7 +21,10 @@ recent as (
            count(*) filter (where rn <= {{ var('max_failures') }} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
-last_ok as (select * from {{ ref('int_fetches') }} where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1),
+last_ok as (
+    select * from {{ ref('int_fetches') }} where status = 'ok'
+    qualify row_number() over (partition by roaster_id order by fetched_at desc, batch_id desc) = 1
+),
 coffees as (
     -- Listed means the current catalog; a roaster's archived back catalog is counted separately.
     -- Wholesale listings (a roaster's wholesale twin of a retail coffee) aren't counted as more coffees.
@@ -28,7 +35,7 @@ coffees as (
     from {{ ref('dim_coffee') }} group by roaster_id
 )
 select
-    r.roaster_id, r.roaster_name, r.city, r.state, r.locations, r.is_chain, r.opted_out, r.sources,
+    r.roaster_id, r.roaster_name, r.city, r.state, r.country, r.locations, r.is_chain, r.opted_out, r.sources,
     coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
     coalesce(g.platform, r.seed_platform) as platform,
     coalesce(cast(lp.probed_at as date), r.seed_probed) as last_probed,

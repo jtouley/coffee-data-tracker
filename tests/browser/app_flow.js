@@ -62,10 +62,12 @@ async function newPage(browser, errors) {
     assert.equal(new URL(first.url()).pathname, "/signin");
     await shoot(first, "owner-setup");
     await first.getByRole("button", { name: "Create account" }).click();
-    assert.equal(await first.textContent("[data-hint]"), "Fill in every field.");
+    await first.waitForFunction(() => document.querySelector("[data-hint]").textContent === "Fill in every field.");
+    assert.equal(await first.evaluate(() => document.activeElement.id), "setup_code"); // the first field that failed
     await first.fill("#setup_code", "SETUP-CODE-1234");
     await first.fill("#username", "jtouley");
     await first.fill("#password", "kettle orbit marble");
+    await first.check("#agree");
     await first.getByRole("button", { name: "Show" }).click();
     assert.equal(await first.getAttribute("#password", "type"), "text");
     await first.getByRole("button", { name: "Create account" }).click();
@@ -384,15 +386,16 @@ async function newPage(browser, errors) {
     await page.goto(`${base}/setup/gear/g1`);
     await page.getByRole("button", { name: "Save", exact: true }).click();
     await page.waitForURL(`${base}/setup`);
-    // Offline, Back after an online save shows the page as the browser kept it, not "No connection" from a reload.
-    await page.goto(`${base}/shot/first`); // not kept by the service worker: only the browser's copy can show it
+    // Offline, Back to a page the service worker doesn't keep: signed-in pages are sent no-store, so the browser
+    // keeps no copy of its own either, and the offline screen shows (no stale or half-drawn page).
+    await page.goto(`${base}/shot/first`); // not kept by the service worker
     await page.goto(`${base}/history`);
     await page.evaluate(() => send("equipment:g1", "/api/equipment", { equipment_id: "g1", kind: "grinder", name: "DF64 V2" }));
     await page.context().setOffline(true);
     await page.goBack();
     await page.waitForTimeout(500); // a reload, if one started, has replaced the page by now
     assert.equal(new URL(page.url()).pathname, "/shot/first");
-    assert.doesNotMatch(await page.textContent("h1"), /No connection/);
+    assert.match(await page.textContent("h1"), /No connection/);
     await page.context().setOffline(false);
     await page.goto(`${base}/bag/new`); // kept for later, like the screens visited above
     await page.evaluate(() => navigator.serviceWorker.ready);
@@ -488,6 +491,7 @@ async function newPage(browser, errors) {
     await guest.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("someone else's"))));
     await guest.fill("#username", "maya");
     await guest.fill("#password", "lantern quarry velvet");
+    await guest.check("#agree");
     await guest.getByRole("button", { name: "Create account" }).click();
     await guest.waitForURL(`${base}/`);
     assert.match(await guest.textContent("main"), /Nothing on the grinder yet/);

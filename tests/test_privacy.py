@@ -47,7 +47,7 @@ def test_ip_addresses_are_kept_in_memory_only_never_stored_or_logged(  # noqa: F
         h = W | {"X-Forwarded-For": ip}
         c.post(
             "/api/signin",
-            json={"setup_code": "SETUP-CODE-1234", "username": "jtouley", "password": PW},
+            json={"agree": True, "setup_code": "SETUP-CODE-1234", "username": "jtouley", "password": PW},
             headers=h,
         )
         c.post("/api/signin", json={"username": "jtouley", "password": "wrong password!"}, headers=h)

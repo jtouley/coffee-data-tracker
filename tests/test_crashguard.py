@@ -464,9 +464,10 @@ def test_shopify_woocommerce_and_generic_crawls_never_retry_in_place():
     import re
 
     jobs = dict(re.findall(r'^\s+"([a-z-]+)"\s+=\s+\{ command = .*retries = (\d) \}$', _tf(), re.M))
-    assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl")} == {
+    assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl") or j == "fetch-health"} == {
         "crawl-shopify": 0, "crawl-shopify-default-egress": 0, "crawl-retry": 0, "crawl-squarespace": 1,
         "crawl-woocommerce": 0, "crawl-square-online": 1, "crawl-generic": 0,
+        "fetch-health": 0,  # a retry would find the check done and exit 0, hiding its alert
     }  # fmt: skip
     assert "max_retries = each.value.retries" in _tf()
     assert re.search(
@@ -524,6 +525,7 @@ def test_each_job_leaves_through_the_egress_the_owner_chose():
         "crawl-shopify": "shopify", "crawl-shopify-default-egress": "default", "crawl-retry": "shopify",
         "crawl-squarespace": "default", "crawl-woocommerce": "woo_generic", "crawl-square-online": "default",
         "crawl-generic": "woo_generic", "merge": "default", "enrich-week": "default", "build": "default",
+        "fetch-health": "default",  # it reads the lake and crawls no store
     }  # fmt: skip
     slots = re.findall(r'^\s+"([a-z-]+)"\s+= \{ job = "([a-z-]+)", cron = "[^"]+" \}', _tf(), re.M)
     woo_generic = {entry for entry, job in slots if _job_egress()[job] == "woo_generic"}

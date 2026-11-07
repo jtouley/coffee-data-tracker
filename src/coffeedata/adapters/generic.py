@@ -18,7 +18,7 @@ from ..http import (
     block_status,
     challenge_error,
 )
-from ..models import CatalogItem, Roaster, Variant, parse_grams, payload_hash
+from ..models import CatalogItem, Roaster, Variant, currency_code, parse_grams, payload_hash
 from ..sitemap import sitemap_urls
 from ..text import html_to_text, scrub_surrogates, to_float
 
@@ -71,9 +71,25 @@ def jsonld_products(html: str) -> list[dict]:
     return out
 
 
+def _price_currency(offer: dict, default: str | None = None) -> str | None:
+    """An offer's currency as stated: schema.org's `priceCurrency`, "The currency of the price ... Use standard
+    formats: ISO 4217 currency format" (https://schema.org/priceCurrency), on the Offer itself, else on its
+    `priceSpecification` (a PriceSpecification also takes priceCurrency), else on the AggregateOffer that holds it
+    (default)."""
+    if (own := currency_code(offer.get("priceCurrency"))) is not None:
+        return own
+    spec = offer.get("priceSpecification")
+    for s in spec if isinstance(spec, list) else [spec]:
+        if isinstance(s, dict) and (c := currency_code(s.get("priceCurrency"))) is not None:
+            return c
+    return default
+
+
 def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
     offers = p.get("offers") or []
+    outer: str | None = None  # an AggregateOffer's own priceCurrency, for offers inside it that state none
     if isinstance(offers, dict):
+        outer = _price_currency(offers)
         offers = offers.get("offers") or [offers]
     variants, seen = [], set()
     for i, o in enumerate(o for o in offers if isinstance(o, dict)):
@@ -92,6 +108,7 @@ def parse_jsonld(p: dict, url: str, roaster: Roaster) -> CatalogItem:
                 price_usd=to_float(o.get("price") or o.get("lowPrice")),
                 grams=parse_grams(title) or parse_grams(str(p.get("name"))),
                 available=("InStock" in avail) if avail else None,
+                currency=_price_currency(o, outer),
             )
         )
     image = p.get("image")

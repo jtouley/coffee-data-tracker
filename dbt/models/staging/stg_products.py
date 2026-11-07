@@ -16,6 +16,7 @@ SCHEMA = pa.schema(
         ("input_hash", pa.string()),
         ("is_coffee", pa.bool_()),
         ("classified_by", pa.string()),
+        ("verdict_model", pa.string()),
         ("is_wholesale", pa.bool_()),
         ("clean_title", pa.string()),
         ("origin_country", pa.string()),
@@ -31,18 +32,19 @@ SCHEMA = pa.schema(
         ("is_decaf", pa.bool_()),
     ]
 )
-ATTRS = [f.name for f in SCHEMA][5:]
+ATTRS = [f.name for f in SCHEMA][6:]
 
 
-def row(r: dict, verdicts: dict[str, str]) -> dict:
+def row(r: dict, verdicts: dict[str, tuple[str, str]]) -> dict:
     # The decisions live in coffeedata.products, shared with the enrichment job and the registry.
     item = products.item(r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"])
-    label = verdicts.get(r["input_hash"])
+    label, verdict_model = verdicts.get(r["input_hash"], (None, None))
     is_coffee, classified_by = products.decide(item, label)
     out = {
         "input_hash": r["input_hash"],
         "is_coffee": is_coffee,
         "classified_by": classified_by,
+        "verdict_model": verdict_model if classified_by == "claude" else None,
         "is_wholesale": classify.is_wholesale(item),
         "clean_title": item.title,
     }
@@ -53,5 +55,8 @@ def row(r: dict, verdicts: dict[str, str]) -> dict:
 def model(dbt, session):
     dbt.config(materialized="table")
     inputs = dbt.ref("stg_product_inputs").to_arrow_table()
-    verdicts = {v["input_hash"]: v["label"] for v in dbt.ref("stg_verdicts").to_arrow_table().to_pylist()}
+    verdicts = {
+        v["input_hash"]: (v["label"], v["model"])
+        for v in dbt.ref("stg_verdicts").to_arrow_table().to_pylist()
+    }
     return pa.Table.from_pylist([row(r, verdicts) for r in inputs.to_pylist()], schema=SCHEMA)

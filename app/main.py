@@ -10,6 +10,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 import time
 from collections import OrderedDict
 from collections.abc import AsyncIterator
@@ -33,12 +34,25 @@ from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
 from coffeedata.site import links as site_links
 
-from . import labels, logs, photos, views, web
+from . import labels, logs, photos, rules, views, web
 from .accounts import AccountError
-from .auth import COOKIE, Auth, Sessions, User, clean_secrets, from_env, missing_secrets
+from .auth import (
+    COOKIE,
+    Auth,
+    RequireSession,
+    Sessions,
+    User,
+    clean_secrets,
+    current_user,
+    from_env,
+    missing_secrets,
+)
 from .store import Invalid, NotFound, Store, coffee_key
 
 HERE = Path(__file__).parent
+STARTED = (
+    time.monotonic()
+)  # when this module was imported, close to the process start: cold starts are logged from it
 MAX_BODY = 64 * 1024  # JSON writes are a few hundred bytes
 READS_PER_DAY = 10  # label reads per account per day (PLAN, "Cost")
 PHOTO_MISS_TTL = 300  # seconds an unknown photo id answers 404 without another lookup
@@ -50,13 +64,31 @@ class SignIn(Exception):
     """A screen asked for while signed out: go to the sign-in screen."""
 
 
+class Agree(Exception):
+    """A screen asked for by someone who hasn't accepted the current Terms and Privacy Policy: go to /agree."""
+
+
+# Instagram's and Facebook's in-app browsers (spec §9): their own autofill sheet can cover the form, and they don't
+# keep the sign-in. Instagram; Facebook as FBAN/FBAV on iOS and FB_IAB on Android; Messenger.
+IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
+# Paths someone who still has to accept the new terms may write to.
+AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
+
+
+def in_app_browser(user_agent: str | None) -> str | None:
+    """The name of the in-app browser a User-Agent belongs to, or None."""
+    m = IN_APP.search(user_agent or "")
+    if not m:
+        return None
+    return "Instagram" if m.group(1) else "Facebook" if m.group(2) else "Messenger"
+
+
 def not_configured(missing: list[str]) -> FastAPI:
     """What the hosted app shows until its secrets are set: their names, never their values."""
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     text = (
-        "This app isn't set up yet. Add these secrets (Secret Manager, see RUNNING.md), then deploy again: "
-        + ", ".join(missing)
-        + "."
+        "This app isn't set up yet. Fix these settings (Secret Manager, see docs/app/RUNNING.md), then deploy "
+        "again: " + ", ".join(missing) + "."
     )
 
     @app.middleware("http")
@@ -103,9 +135,12 @@ def create_app(
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
     # The public site's address and the beta-invite email, from the same settings the site is built with.
     templates.env.globals.update(site=site_links())
+    templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
+    # Default deny: outside the body limit, so a signed-out request is refused before its body is read.
+    app.add_middleware(RequireSession, routes=lambda: app.router.routes, auth=auth, tag=logs.set_user)
 
     async def on_error(request: Request) -> Response:
         log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
@@ -121,18 +156,31 @@ def create_app(
     def ip(request: Request) -> str:
         return web.client_ip(request, hops)
 
+    # RequireSession has already refused anyone signed out; these check again, from the same lookup.
     def user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise HTTPException(401, "sign in first")
         logs.set_user(u.user_id)
         return u
 
+    def must_agree(u: User) -> bool:
+        """If the check itself fails, the answer is yes: nothing is shown until acceptance can be confirmed."""
+        if sessions is None:
+            return False
+        try:
+            return sessions.accounts.needs_agree(u.user_id)
+        except Exception:  # noqa: BLE001 - fail closed
+            log.exception("checking the terms acceptance failed")
+            return True
+
     def screen_user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise SignIn()
         logs.set_user(u.user_id)
+        if must_agree(u):
+            raise Agree()
         return u
 
     def same_origin(request: Request, x_requested_with: str | None) -> None:
@@ -147,8 +195,15 @@ def create_app(
             raise HTTPException(403, "cross-site request")
 
     def writer(request: Request, x_requested_with: Annotated[str | None, Header()] = None) -> User:
+        """Until the current terms are accepted, writes answer 403, which the phone's outbox keeps and sends again
+        (Held in app.js)."""
         same_origin(request, x_requested_with)
-        return user(request)
+        u = user(request)
+        if request.url.path not in AGREE_FREE and must_agree(u):
+            raise HTTPException(
+                403, "Accept the updated Terms and Privacy Policy first. This is kept and sent then."
+            )
+        return u
 
     def outbox_writer(
         request: Request,
@@ -195,6 +250,10 @@ def create_app(
     @app.exception_handler(SignIn)
     async def to_sign_in(request: Request, exc: SignIn) -> Response:
         return RedirectResponse("/signin", 303)
+
+    @app.exception_handler(Agree)
+    async def to_agree(request: Request, exc: Agree) -> Response:
+        return RedirectResponse("/agree", 303)
 
     @app.exception_handler(StarletteHTTPException)
     async def http_error(request: Request, exc: StarletteHTTPException) -> Response:
@@ -290,10 +349,15 @@ def create_app(
 
     @app.get("/signin", response_class=HTMLResponse, response_model=None)
     def signin(request: Request) -> HTMLResponse | RedirectResponse:
-        if auth.user(request):
+        if current_user(auth, request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
+        # A cookie that no longer signs anyone in: say why they're here. It's left alone (signing in replaces
+        # it): during a deploy a new revision may not know an account the old one just made.
+        ended = None
+        if request.cookies.get(COOKIE):
+            ended = "failed" if getattr(request.state, "auth_failed", False) else "ended"
+        return page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -302,15 +366,38 @@ def create_app(
         try:
             if s.accounts.needs_owner:
                 acct = s.accounts.create_owner(
-                    str(body.get("setup_code") or ""), username, password, ip(request)
+                    str(body.get("setup_code") or ""),
+                    username,
+                    password,
+                    ip(request),
+                    agree=body.get("agree") is True,
                 )
             else:
                 acct = s.accounts.sign_in(username, password, ip(request))
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
+
+    @app.get("/agree", response_class=HTMLResponse, response_model=None)
+    def agree_page(request: Request) -> HTMLResponse | RedirectResponse:
+        """The Terms or Privacy Policy changed since this account last accepted them: Accept, or Sign out."""
+        s = accounts_only()
+        u = current_user(auth, request)
+        if u is None:
+            return RedirectResponse("/signin", 303)
+        if not must_agree(u):
+            return RedirectResponse("/", 303)
+        return page(request, "agree.html", updated=s.accounts.legal)
+
+    @app.post("/api/agree")
+    def post_agree(body: dict, me: Writer) -> dict:
+        s = accounts_only()
+        if body.get("agree") is not True:
+            raise HTTPException(400, [rules.error("terms", rules.TERMS_AGAIN)])
+        s.accounts.accept(me.user_id)
+        return {"ok": True}
 
     @app.post("/api/signout")
     def post_signout(me: Writer) -> Response:
@@ -334,7 +421,7 @@ def create_app(
                 me.user_id, str(body.get("current") or ""), str(body.get("new") or "")
             )
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)  # this phone stays signed in; the others don't
         return response
@@ -353,12 +440,12 @@ def create_app(
     def join_page(request: Request) -> HTMLResponse:
         # The code is after # in the link, so it never reaches the server or its logs; the page's script reads it.
         accounts_only()
-        return page(request, "join.html")
+        return page(request, "join.html", in_app=in_app_browser(request.headers.get("user-agent")))
 
     @app.get("/reset", response_class=HTMLResponse)
     def reset_page(request: Request) -> HTMLResponse:
         accounts_only()
-        return page(request, "reset.html")
+        return page(request, "reset.html", in_app=in_app_browser(request.headers.get("user-agent")))
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -366,7 +453,7 @@ def create_app(
         try:
             inv = s.accounts.lookup(str(body.get("code") or ""), ip(request))
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         exp = inv.expires_at.astimezone(tz(request))  # the viewer's day, as on the invite screen
         return {"kind": inv.kind, "expires": f"{exp:%B} {exp.day}"}
 
@@ -379,9 +466,10 @@ def create_app(
                 str(body.get("username") or ""),
                 str(body.get("password") or ""),
                 ip(request),
+                agree=body.get("agree") is True,
             )
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
@@ -392,7 +480,7 @@ def create_app(
         try:
             acct = s.accounts.reset(str(body.get("code") or ""), str(body.get("password") or ""), ip(request))
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
@@ -409,9 +497,10 @@ def create_app(
             "invite.html",
             me=me,
             people=[a for a in s.accounts.people() if a.role != "owner"],
-            pending=s.accounts.pending(),
+            log=s.accounts.invite_log(),
             shots_of=lambda uid: mine.get(uid, 0),
             date=lambda d: f"{d.astimezone(z):%A, %B} {d.astimezone(z).day}",
+            short=lambda d: f"{d.astimezone(z):%b} {d.astimezone(z).day}",
         )
 
     def counts_by_user() -> dict[str, int]:
@@ -425,19 +514,32 @@ def create_app(
         try:
             return fn(*args)
         except AccountError as e:
-            raise HTTPException(400, str(e)) from None
+            raise HTTPException(e.status, e.detail) from None
 
     def code_reply(request: Request, inv: Any, code: str) -> dict:
         z = tz(request)
         e = inv.expires_at.astimezone(z)
-        return {"invite_id": inv.invite_id, "kind": inv.kind, "code": code, "expires": f"{e:%A, %B} {e.day}"}
+        return {
+            "invite_id": inv.invite_id,
+            "kind": inv.kind,
+            "code": code,
+            "expires": f"{e:%A, %B} {e.day}",
+            "for_label": inv.for_label,
+        }
 
     @app.post("/api/invites")
     def post_invite(body: dict, request: Request, me: Writer) -> dict:
         s = accounts_only()
         kind = "reset" if body.get("kind") == "reset" else "join"
-        inv, code = owner_call(s.accounts.invite, me.user_id, kind, body.get("for_user_id"))
+        inv, code = owner_call(
+            s.accounts.invite, me.user_id, kind, body.get("for_user_id"), body.get("for_label")
+        )
         return code_reply(request, inv, code)
+
+    @app.post("/api/invites/{invite_id}/label")
+    def label_invite(invite_id: str, body: dict, me: Writer) -> dict:
+        inv = owner_call(accounts_only().accounts.set_label, me.user_id, invite_id, body.get("for_label"))
+        return {"invite_id": inv.invite_id, "for_label": inv.for_label}
 
     @app.post("/api/invites/{invite_id}/renew")
     def renew_invite(invite_id: str, request: Request, me: Writer) -> dict:
@@ -750,7 +852,7 @@ def create_app(
 
     @app.get("/photos/{photo_id}")
     async def photo(photo_id: str, me: Me) -> Response:
-        """A bag photo, to its owner only. Photos never change, so the browser keeps them (privately)."""
+        """A bag photo, to its owner only. Never stored by the browser or anything between it and the app."""
         if not SAFE_ID.fullmatch(photo_id):
             raise HTTPException(404, "not found")
         hit = photo_cache.get(photo_id)
@@ -769,9 +871,7 @@ def create_app(
         photo_cache.move_to_end(photo_id)
         if hit[0] != me.user_id:
             raise HTTPException(404, "not found")
-        return Response(
-            hit[1], media_type="image/jpeg", headers={"Cache-Control": "private, max-age=31536000, immutable"}
-        )
+        return Response(hit[1], media_type="image/jpeg", headers={"Cache-Control": web.PRIVATE})
 
     def counts(user_id: str) -> dict[str, int]:
         return gear_counts(store.shots_of(user_id))
@@ -1028,6 +1128,8 @@ def create_app(
             bag = store.bag(me.user_id, bag.bag_id) or bag
         return {"bag_id": bag.bag_id, "coffee_id": bag.coffee_id, "matches": matches}
 
+    # Cold starts (spec §10): how long from this module's import to a built app, the lake and the accounts read.
+    logs.event("ready", seconds=round(time.monotonic() - STARTED, 2))
     return app
 
 

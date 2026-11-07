@@ -1,0 +1,186 @@
+{
+ "meta": {
+  "labeler": "A",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "dupes",
+  "n": 149
+ },
+ "labels": [
+  {
+   "id": "abeantogo.com|wallacecityroasters.com",
+   "label": "distinct",
+   "reason": "Generic flavor and espresso titles, with different prices and sizes, in different states."
+  },
+  {
+   "id": "ahillofbeans.com|themusecoffee.co",
+   "label": "distinct",
+   "reason": "Only generic flavored titles shared, different prices and states."
+  },
+  {
+   "id": "armeno.com|lavajavamaui.com",
+   "label": "distinct",
+   "reason": "Common Maui varietal names; prices differ widely; separate MA and HI businesses."
+  },
+  {
+   "id": "barkingdogcoffee.com|smastadcoffee.com",
+   "label": "duplicate",
+   "reason": "Same town, identical 11 titles, prices and sizes; Sm\u00e5stad even lists 'Barking Dog Roasters' titled items. One catalog under two hosts."
+  },
+  {
+   "id": "broadwayroasting.com|mozzaroasters.com",
+   "label": "distinct",
+   "reason": "Generic titles (Brazil, Espresso Blend) with different prices; different businesses and states."
+  },
+  {
+   "id": "cedarburgcoffee.com|zoescoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices, WI vs CA businesses."
+  },
+  {
+   "id": "coffeelatitudes.com|latitudecoffee.com",
+   "label": "distinct",
+   "reason": "Different names and towns (Tampa vs Sarasota), one generic overlap at different prices, catalogs otherwise different."
+  },
+  {
+   "id": "coffeetree.com|coffeetree.store",
+   "label": "duplicate",
+   "reason": "Same name, town, and all 16 titles with identical prices and sizes; alternate domain of the same roaster."
+  },
+  {
+   "id": "coffeetree.com|northwestcoffee.com",
+   "label": "distinct",
+   "reason": "Different cities and names; generic roast titles at different prices and sizes."
+  },
+  {
+   "id": "coyotemooncoffee.com|lacosechacoffee.com",
+   "label": "distinct",
+   "reason": "Generic Ethiopia/Guatemala titles, different prices, TX vs MO."
+  },
+  {
+   "id": "cxt.coffee|cxtcoffee.com",
+   "label": "duplicate",
+   "reason": "Same CxT Roasting Company in Peoria, host variants, identical 13-title catalog."
+  },
+  {
+   "id": "fairhoperoasting.com|jonescoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Generic roast and origin titles at very different prices; Alabama vs California."
+  },
+  {
+   "id": "farmhouseroasters.com|rowdy-beans-coffee-roasters.myshopify.com",
+   "label": "distinct",
+   "reason": "Only generic blend names overlap, with different prices and locations."
+  },
+  {
+   "id": "ghosttowncoffee.com|hemispherecoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Different towns and names; overlap is only resold third-party espresso tamps at list price."
+  },
+  {
+   "id": "ghosttowncoffee.com|ragamuffinroasters.com",
+   "label": "distinct",
+   "reason": "Overlap is only resold espresso tools at the maker's list price; coffees differ."
+  },
+  {
+   "id": "goodcoffeegoodpurpose.com|vigilanthoperoasting.com",
+   "label": "duplicate",
+   "reason": "Same town, Vigilant Hope name, identical 12 titles, prices, sizes."
+  },
+  {
+   "id": "innkeeperscoffee.com|whiffroasters.com",
+   "label": "distinct",
+   "reason": "Generic origin and blend titles; separate IL and PA businesses."
+  },
+  {
+   "id": "javataza.com|lucasroasting.com",
+   "label": "distinct",
+   "reason": "Common flavored-coffee titles with different prices and sizes; separate businesses in PA and NH."
+  },
+  {
+   "id": "jonescoffee.com|jonescoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same name, adjacent towns, all 29 titles identical with the same prices and sizes."
+  },
+  {
+   "id": "jonescoffee.com|swingscoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; different businesses in CA and DC."
+  },
+  {
+   "id": "jonescoffee.com|thebestcoffee.com",
+   "label": "duplicate",
+   "reason": "Same name, town, platform; identical 29 titles with same prices and sizes."
+  },
+  {
+   "id": "jonescoffeeroasters.com|thebestcoffee.com",
+   "label": "duplicate",
+   "reason": "Same name (Jones Coffee Roasters), Pasadena area, identical 29-coffee catalog and prices."
+  },
+  {
+   "id": "keeblercoffee.com|whisperingbean.com",
+   "label": "distinct",
+   "reason": "Generic Brazil/Colombia titles, different prices, WA vs NM."
+  },
+  {
+   "id": "laddercoffee.com|laddercoffeespokane.com",
+   "label": "duplicate",
+   "reason": "Same name and town, host variants, identical catalog including merch and prices."
+  },
+  {
+   "id": "latitudecoffee.com|ohoriscoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; Sarasota vs Santa Fe, unrelated names."
+  },
+  {
+   "id": "lescheneauxcoffeeroasters.com|ohoriscoffee.com",
+   "label": "distinct",
+   "reason": "Different states; only generic origin names overlap with differing prices."
+  },
+  {
+   "id": "mozzaroasters.com|smithrockcoffeeroaster.com",
+   "label": "distinct",
+   "reason": "Generic Brazil/Espresso Blend overlap, different prices, SC vs OR."
+  },
+  {
+   "id": "naomijoecoffee.com|ragamuffinroasters.com",
+   "label": "distinct",
+   "reason": "Overlap is only resold equipment at the maker's list price; coffees differ."
+  },
+  {
+   "id": "north-fork-coffee-roasters.myshopify.com|northforkcoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Myshopify host and custom domain of same roaster; identical catalog, prices, sizes."
+  },
+  {
+   "id": "ohoriscoffee.com|roadmapcoffeeworks.com",
+   "label": "distinct",
+   "reason": "Generic roast names only; different prices, sizes, towns and businesses."
+  },
+  {
+   "id": "raxakoulcoffeecheese.com|roosterscrowcoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices and sizes, Berkeley vs Huntsville."
+  },
+  {
+   "id": "seattlecoffeeworks.com|victrolacoffee.com",
+   "label": "duplicate",
+   "reason": "Same city, identical distinctive 18-title catalog with identical prices and odd sizes; office feed of same company's catalog."
+  },
+  {
+   "id": "sparrowcoffee.com|sparrowscoffee.com",
+   "label": "distinct",
+   "reason": "Similar names but different cities (Chicago vs Grand Rapids), different line-ups; one generic decaf overlap at different prices."
+  },
+  {
+   "id": "strigocoffee.com|vigilant.coffee",
+   "label": "distinct",
+   "reason": "Two shared importer lots at different prices; different names and states."
+  },
+  {
+   "id": "troubadourcoffee.com|troubadourcoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same name variants, adjacent Ohio towns, identical full catalog with the same prices and sizes."
+  }
+ ]
+}
