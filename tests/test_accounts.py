@@ -318,7 +318,7 @@ def test_security_headers(lake, users):
     owner(c)
     assert "camera=(self)" in c.get("/bag/new").headers["permissions-policy"]
     assert "camera=()" in c.get("/setup").headers["permissions-policy"]
-    assert c.post("/api/signout", headers=W).headers["cache-control"] == "no-store"
+    assert c.post("/api/signout", headers=W).headers["cache-control"] == "no-store, private"
 
 
 def test_no_inline_script_or_style(lake, users):
@@ -341,6 +341,9 @@ def test_static_files_are_hashed_compressed_and_cached_for_a_year(lake, users):
     assert re.search(r"url\(/static/fonts/archivo\.[0-9a-f]{10}\.woff2\)", r.text)
     assert 'rel="preload"' in html and "font/woff2" in html
     assert c.get("/static/app.css").status_code == 404
+    # No route serves it: signed out that's the sign-in screen (default deny), signed in a 404.
+    assert c.get("/static/../main.py", follow_redirects=False).headers["location"] == "/signin"
+    owner(c)
     assert c.get("/static/../main.py").status_code == 404
 
 
@@ -563,8 +566,10 @@ def test_server_errors_get_the_security_headers(lake, users):
     def boom() -> None:
         raise RuntimeError("boom")
 
-    app.add_api_route("/boom", boom)
+    app.add_api_route("/boom", boom)  # added late, so private like every route not on PUBLIC
     c = TestClient(app, base_url="https://testserver", raise_server_exceptions=False)
+    assert c.get("/boom", follow_redirects=False).headers["location"] == "/signin"
+    owner(c)
     r = c.get("/boom", headers={"Accept": "text/html"})
     assert r.status_code == 500 and "Something went wrong" in r.text
     assert r.headers["x-content-type-options"] == "nosniff" and "content-security-policy" in r.headers
