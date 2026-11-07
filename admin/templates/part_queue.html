@@ -1,10 +1,10 @@
 {% from "_macros.html" import status, ev, write_off, write_button %}
 {% macro summary(r) -%}
-{{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["held"] if r.held else []) + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
+{{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
 {%- endmacro %}
 {# The decision a product's flags propose: exclude when its removal is ready (two families, no doubt), include (keep
-   it) when the guard holds it or a flag argues to restore it, else none: open the case and decide there. #}
-{% macro proposal(r) -%}{{ "exclude" if r.ready else "include" if r.held or r.restores else "" }}{%- endmacro %}
+   it) when a flag argues to restore it, else none: open the case and decide there. #}
+{% macro proposal(r) -%}{{ "exclude" if r.ready else "include" if r.restores else "" }}{%- endmacro %}
 {# Exclude or Include products: the confirm sheet asks the reason and whether by coffee or by version (admin.js). #}
 {% macro decide(action, items, label, cls="text") -%}
 <form class="inline-form" data-write="/api/decisions" data-ask="reason kind" data-confirm-label="{{ action | capitalize }}" data-confirm-title="{{ action | capitalize }} {{ 'this product' if items | length == 1 else (items | length) ~ ' products' }}?"
@@ -24,18 +24,15 @@
   {% if not case %}
   <div class="state empty mt16"><h2 class="section">No open flags on {{ f.case }}</h2><p class="body">Build {{ build }}’s <code>mart_flags</code> has no row for it: no rule flags it, or the build has no flags (written from this change on). <a class="ev" href="/catalog?{{ {"q": f.case} | urlencode }}">Find it in the Catalog</a>.</p></div>
   {% else %}
-  {% set pr = case.product %}
-  {% set lc = latest.coffee_id.get(pr.coffee_id) if latest else none %}{% set lh = latest.input_hash.get(pr.input_hash or "") if latest else none %}
-  {% set live = [lc, lh] | select | selectattr("event", "equalto", "approved") | list %}
-  {% set r = {"coffee_id": pr.coffee_id, "input_hash": pr.input_hash, "roaster_id": pr.roaster_id, "title": pr.title, "evidence_hash": pr.evidence_hash, "dc": lc, "dh": lh, "supports": case.flags | selectattr("polarity", "equalto", "supports") | list | length, "doubts": pr.doubts, "restores": pr.restores, "held": pr.held, "ready": pr.ready_flags, "coverage": pr.coverage_problem, "coffee_now": pr.classifier_is_coffee} %}
+  {% set pr, r = case.product, case.summary %}
   <h2 class="serif title-s">{{ ev(pr.url, pr.title or pr.coffee_id) }}</h2>
-  <p class="answer" data-answer>{{ summary(r) or "no open flag" }}{% if pr.held %}: the guard keeps it as coffee{% endif %} · {{ n(pr.public_rows) }} public row{{ "s" if pr.public_rows != 1 }}</p>
+  <p class="answer" data-answer>{{ summary(r) or "no open flag" }} · {{ n(pr.public_rows) }} public row{{ "s" if pr.public_rows != 1 }}</p>
   <p class="src">From build {{ build }}’s <code>mart_flags</code> and <code>fetches</code>, and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
 
   <h2 class="section">Decision</h2>
-  {% if live %}
-    <p class="body">{{ status("ok") }} {{ live[0].action | capitalize }}d{% if live[0].group_id %} with its group{% endif %}: in the next draft (Release).</p>
-    {% if not writes_off %}{{ write_button("/api/decisions/" ~ live[0].decision_id ~ "/undo", "Undo", "Undo the " ~ live[0].action ~ " of " ~ (pr.title or pr.coffee_id) ~ "? The rules and the classifier decide it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
+  {% if r.decided %}
+    <p class="body">{{ status("ok") }} {{ r.decided.action | capitalize }}d{% if r.decided.group_id %} with its group{% endif %}: in the next draft (Release).</p>
+    {% if not writes_off %}{{ write_button("/api/decisions/" ~ r.decided.decision_id ~ "/undo", "Undo", "Undo the " ~ r.decided.action ~ " of " ~ (pr.title or pr.coffee_id) ~ "? The rules and the classifier decide it again in the next draft.", busy="Undoing…", cls="text") }}{% endif %}
   {% elif writes_off %}<p class="body">—</p>
   {% else %}
     {% set want = proposal(r) %}
@@ -70,13 +67,12 @@
   {% set off = crawl and not crawl.crawl %}
   <p class="body">Crawl flag: <strong>{{ "off" if off else "on" }}</strong>{% if crawl %} ({{ crawl.reason }}; {{ crawl.actor }}, {{ t(crawl.at) }} UTC){% endif %}. Off stops scheduled crawls of the store once a draft carrying it is published; a live check still runs.</p>
   {% if not writes_off %}
-  <form class="jobform" data-write="/api/roasters/{{ pr.roaster_id }}/crawl" data-confirm="Turn the crawl flag {{ 'on' if off else 'off' }} for {{ pr.roaster_id }}? It goes into the next draft; scheduled crawls follow once it is published." data-confirm-label="Turn {{ 'on' if off else 'off' }}">
+  <form class="inline-form" data-write="/api/roasters/{{ pr.roaster_id }}/crawl" data-ask="reason" data-confirm="Turn the crawl flag {{ 'on' if off else 'off' }} for {{ pr.roaster_id }}? It goes into the next draft; scheduled crawls follow once it is published." data-confirm-label="Turn {{ 'on' if off else 'off' }}">
     <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="crawl" value="{{ 'on' if off else 'off' }}"><input type="hidden" name="seen" value="{{ 'off' if off else 'on' }}">
-    <label class="facet"><span class="label">Reason (recorded)</span><input class="input small" name="reason" required minlength="3" maxlength="300" autocomplete="off"></label>
-    <div class="actions"><button class="btn secondary inline" type="submit" data-busy="Recording…">Turn crawling {{ "on" if off else "off" }}…</button></div>
+    <button class="btn secondary inline" type="submit" data-busy="Recording…">Turn crawling {{ "on" if off else "off" }}…</button>
   </form>
   {% endif %}
-  <p class="body mt12">Live check: {% if test %}{{ status(test.status or "running") }} test crawl started {{ t(test.started_at) }} UTC{% if answers %}; the store {{ "answered" if answers | selectattr("ok") | list else "didn’t answer" }}{% endif %}.{% else %}none in the last 7 days. A removal’s Publish needs one (or one of its evidence group’s).{% endif %}</p>
+  <p class="body mt12">Live check: {% if test %}{{ status(test.status or "running") }} test crawl started {{ t(test.started_at) }} UTC{% if answers %}; the store {{ "answered" if answers | selectattr("ok") | list else "didn’t answer" }}{% endif %}.{% else %}none in the last 7 days. A removal’s Publish needs one.{% endif %}</p>
   {% if not writes_off and case.adapter in connectors %}
   <form class="inline-form" data-write="/api/jobs/crawl-one/runs" data-preview="/api/jobs/crawl-one/plan" data-confirm-label="Start">
     <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="connector" value="{{ case.adapter }}"><input type="hidden" name="roaster" value="{{ pr.roaster_id }}"><input type="hidden" name="mode" value="test">
@@ -96,7 +92,7 @@
   {% if not q.recorded %}
   <div class="state empty mt16"><h2 class="section">Build {{ build }} has no flags</h2><p class="body">Its ops tables have no <code>mart_flags</code>: builds write it from this change on.</p></div>
   {% else %}
-  <p class="answer" data-answer>{{ n(q.matching) }} product{{ "s" if q.matching != 1 }} with open flags · {{ n(q.held) }} held · {{ n(q.ready) }} ready to remove · {{ n(q.public_rows) }} public rows</p>
+  <p class="answer" data-answer>{{ n(q.matching) }} product{{ "s" if q.matching != 1 }} with open flags · {{ n(q.ready) }} ready to remove · {{ n(q.public_rows) }} public rows</p>
   <p class="src">From served build {{ build }}’s <code>mart_flags</code> and the control plane · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
   <form class="picker" method="get" action="/queue">
     <label class="facet"><span class="label">Roaster</span><input class="input small" name="roaster" value="{{ f.roaster or '' }}" autocomplete="off" spellcheck="false"></label>
@@ -116,7 +112,7 @@
       {% for r in members %}<tr>
         <th scope="row"><a class="ev" href="/queue?{{ {"case": r.coffee_id} | urlencode }}">{{ r.title or r.coffee_id }}</a></th>
         <td>{{ summary(r) }}</td>
-        <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off %}{{ decide(proposal(r), [r], (proposal(r) | capitalize) ~ "…") }}{% else %}—{% endif %}</td>
+        <td>{% if r.decided %}{{ r.decided.action }}d · next draft{% elif proposal(r) and not writes_off and r.group_n == 1 %}{{ decide(proposal(r), [r], (proposal(r) | capitalize) ~ "…") }}{% else %}—{% endif %}</td>
         <td class="n">{{ n(r.public_rows) }}</td><td>{{ r.roaster_id }}</td>
       </tr>{% endfor %}
     {% endfor %}</tbody>
@@ -128,8 +124,7 @@
   {# --- the rule settings ------------------------------------------------------------------------------------- #}
   <details class="settings mt24">
     <summary class="section">Rule settings · {% if settings.version_id %}version <code>{{ settings.version_id }}</code>, {{ settings.actor }}, {{ t(settings.at) }} UTC{% else %}the defaults{% endif %}</summary>
-    <p class="body">The code defines each rule; these settings configure it. A change goes into the next draft, and nothing changes for anyone until it is published. One that changes how a rule decides (a polarity, readiness, the guard’s mode) needs its full evaluation before Publish.</p>
-    <dl class="facts">{% for t_ in rule_types.values() %}<dt><code>{{ t_.id }}</code> ({{ t_.family }})</dt><dd>{{ t_.doc }}</dd>{% endfor %}</dl>
+    <p class="body">The code defines each rule; these settings configure it. A change goes into the next draft, and nothing changes for anyone until it is published. One that changes how a rule decides (a family, a polarity, readiness) needs its full evaluation before Publish.</p>
     {% if writes_off %}<pre class="json">{{ settings_json }}</pre>{% else %}
     <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-confirm-title="Save the rule settings?" data-confirm-label="Save">
       <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="based_on" value="{{ settings.version_id or '' }}">

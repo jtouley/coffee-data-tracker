@@ -34,7 +34,6 @@ def _flag(cid, rule, polarity, family, direction="", roaster="good.example", **k
         "decision": None,
         "classifier_is_coffee": kw.get("coffee", True),
         "was_public": kw.get("public", False),
-        "held": kw.get("held", False),
         "ready_flags": kw.get("ready", False),
         "coverage_problem": False,
         "supports_families": kw.get("families", 0),
@@ -62,10 +61,10 @@ def lake(tmp_path):
         _flag("d2", "verdict_flip", "supports", "classifier", "added", roaster="good.example", ready=True,
               families=2),
         _flag("d2", "non_coffee_type", "supports", "listing", roaster="good.example", ready=True, families=2),
-        # a held single origin: a classifier removal with pasted text
+        # a single origin the classifier removed, with pasted text: doubted, a restore
         _flag("s1", "verdict_flip", "restore", "classifier", "removed", eh="e2", coffee=False, public=True,
-              held=True, doubts=1, url="javascript:alert(1)"),
-        _flag("s1", "shared_body", "doubts", "catalog", eh="e2", coffee=False, public=True, held=True, doubts=1),
+              doubts=1, url="javascript:alert(1)"),
+        _flag("s1", "shared_body", "doubts", "catalog", eh="e2", coffee=False, public=True, doubts=1),
     ]  # fmt: skip
     Lake(str(lake.root)).write_ops("mart_flags", W1, B1, pa.Table.from_pylist(rows, SCHEMAS["mart_flags"]))
     return lake
@@ -75,17 +74,16 @@ def test_the_queue_groups_by_evidence_and_a_case_shows_its_evidence(tmp_path, la
     before = tree(lake.root)
     app, c, _ = make(tmp_path, lake.root, pg_url)
     page = c.get("/part/queue").text
-    assert "3 products with open flags · 1 held · 2 ready to remove" in page
+    assert "3 products with open flags · 2 ready to remove" in page
     assert "with the same evidence" in page and "Exclude these 2…" in page
     assert page.index("d1") < page.index("s1")  # more public rows first
-    assert "1 doubt · 1 restore · held" in page and "2 supports · ready" in page
+    assert "1 doubt · 1 restore" in page and "2 supports · ready" in page
     assert "&lt;b&gt;d1&lt;/b&gt;" in page and "<b>d1</b>" not in page  # store text is escaped
-    assert c.get("/part/queue?state=held").text.count('href="/queue?case=') == 1
     assert c.get("/part/queue?state=ready").text.count('href="/queue?case=') == 2
     assert c.get("/part/queue?state=doubted").text.count('href="/queue?case=') == 1
     assert "No open flag matches" in c.get("/part/queue?roaster=nobody.example").text
     case = c.get("/part/queue?case=s1").text
-    assert "shared_body" in case and "doubts" in case and "the guard keeps it as coffee" in case
+    assert "shared_body" in case and "doubts" in case
     assert "&lt;script&gt;" in case and "<script>x" not in case
     assert "javascript:" not in case  # only https store links
     assert "Live check (test crawl)" in case and 'name="connector" value="shopify"' in case
@@ -130,29 +128,32 @@ def test_a_group_decision_carries_its_evidence_and_each_store_needs_its_live_che
 def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, pg_url):
     app, c, _ = make(tmp_path, lake.root, pg_url)
     page = c.get("/part/queue").text
-    assert (
-        "Rule settings · the defaults" in page
-        and "remove_unless_doubted" not in page.split("Rule settings")[0]
-    )
+    assert "Rule settings · the defaults" in page and '"added": "doubts"' not in page
     on = rules.default()
-    on["guard"]["mode"] = "remove_unless_doubted"
+    on["rules"][0]["polarity"]["added"] = "doubts"  # verdict_flip: how a rule decides
     check = post(c, "/api/settings/check", {"key": "p", "doc": json.dumps(on)}).json()
-    assert check["decides"] == ["guard.mode"] and check["needs_evaluation"] == ["guard"]
+    assert check["decides"] == ["verdict_flip.polarity"] and check["needs_evaluation"] == ["verdict_flip"]
     assert any("full evaluation" in x for x in check["lines"])
     bad = post(
-        c, "/api/settings", {"key": "k0", "doc": json.dumps(on | {"guard": {"mode": "x"}}), "reason": "try"}
+        c,
+        "/api/settings",
+        {
+            "key": "k0",
+            "doc": json.dumps(on | {"readiness": {"removal": {"supports_min": 9}}}),
+            "reason": "try",
+        },
     )
-    assert bad.status_code == 400 and "guard.mode" in bad.json()["detail"]
+    assert bad.status_code == 400 and "supports_min" in bad.json()["detail"]
     assert post(c, "/api/settings", {"key": "k0", "doc": "{not json", "reason": "try"}).status_code == 400
     r1 = post(
         c,
         "/api/settings",
-        {"key": "k1", "doc": json.dumps(on), "reason": "turn the guard on", "based_on": ""},
+        {"key": "k1", "doc": json.dumps(on), "reason": "a re-added coffee doubts", "based_on": ""},
     )
     r2 = post(
         c,
         "/api/settings",
-        {"key": "k1", "doc": json.dumps(on), "reason": "turn the guard on", "based_on": ""},
+        {"key": "k1", "doc": json.dumps(on), "reason": "a re-added coffee doubts", "based_on": ""},
     )
     assert r1.status_code == 200 and r1.json() == r2.json()  # a double submit acts once
     v1 = r1.json()["version_id"]
@@ -163,18 +164,18 @@ def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, p
     same = post(c, "/api/settings", {"key": "k3", "doc": json.dumps(on), "reason": "again", "based_on": v1})
     assert same.status_code == 400 and "nothing changed" in same.json()["detail"]
     saved = [a for a in audit(app) if a["action"] == "settings"]
-    assert len(saved) == 1 and saved[0]["detail"]["decides"] == ["guard.mode"]
+    assert len(saved) == 1 and saved[0]["detail"]["decides"] == ["verdict_flip.polarity"]
     assert f"version <code>{v1}</code>" in c.get("/part/queue").text
-    # the draft carries the settings, and Publish waits for the guard's evaluation
+    # the draft carries the settings, and Publish waits for the change's evaluation
     d = post(c, "/api/drafts", {"key": "k4"}).json()
     doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
-    assert decisions.settings_of(doc)["guard"]["mode"] == "remove_unless_doubted" and doc["decisions"] == []
+    assert decisions.settings_of(doc) == rules.check(on) and doc["decisions"] == []
     b3 = _draft_build(lake.root, d["draft_id"], doc)
     page = c.get(f"/part/release?build={b3}").text
-    assert "Evaluation of a rule change" in page and "eval/guard/" in page
+    assert "Evaluation of a rule change" in page and "eval/verdict_flip/" in page
     no = post(c, f"/api/drafts/{d['draft_id']}/publish", {"key": "k5", "reason": "go"})
     assert no.status_code == 409 and any(
-        "guard.mode changes how a rule decides" in x for x in no.json()["reasons"]
+        "verdict_flip.polarity changes how a rule decides" in x for x in no.json()["reasons"]
     )
 
 
@@ -221,15 +222,24 @@ def test_the_queue_reads_on_when_the_control_plane_is_down(tmp_path, lake):
     assert "shared_body" in c.get("/part/queue?case=s1").text
 
 
-def test_a_settings_change_counts_only_what_the_guard_holds(tmp_path, lake):
-    """Step 9's count for a draft whose rule settings change: its decided coffees and the ones the guard holds in it
-    or in its baseline, never every change the draft's newer data brings (a new week, a verdict backfill)."""
+def test_step_9_counts_only_the_drafts_decided_coffees(tmp_path, lake):
+    """A draft's step 9 count: the public coffees its decisions cover, never every change its newer data brings (a
+    new week, a verdict backfill). Rule settings change no public output."""
     from admin import queries
 
     Lake(str(lake.root)).write_ops("release_changes", W3, "b-settings", pa.Table.from_pylist([
         {"build_id": "b-settings", "table_name": "public_coffee", "item": c, "change": "removed",
          "reason": "reclassified"} for c in ("s1", "x1", "x2")], SCHEMAS["release_changes"]))  # fmt: skip
     ro = Lake(str(lake.root), read_only=True)
-    held = queries.held(ro, ro.connect(), B1)
-    assert held == ["s1"] and queries.held(ro, ro.connect(), None) == []
-    assert queries.leaving(ro, ro.connect(), "b-settings", held)["changed"] == 1
+    assert queries.leaving(ro, ro.connect(), "b-settings", ["s1"])["changed"] == 1
+
+
+def test_the_settings_editor_shows_what_the_code_reads(tmp_path, lake, pg_url, monkeypatch):
+    """A version saved before a rule was retired (here, the cut guard) is shown as the code reads it, so an edit
+    made from the page's text passes the strict check."""
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    old = rules.default() | {"guard": {"mode": "off", "max_held": 200}}
+    monkeypatch.setattr(app.state.writes.control, "settings",
+                        lambda: {"version_id": "rs-old", "doc": old, "actor": "owner", "at": None, "reason": "x"})  # fmt: skip
+    page = c.get("/part/queue").text
+    assert "max_held" not in page and "shared_body" in page

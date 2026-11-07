@@ -18,7 +18,7 @@ TABLES: dict[str, str] = {
     "product_decisions": "Ops: every product a store lists, coffee or not, as of its latest record, with the "
     "build's coffee decision, what decided it and why (dbt product_decisions).",
     "mart_flags": "Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, "
-    "evidence and the product's summary: held by the guard, ready to remove (dbt mart_flags).",
+    "evidence and the product's summary: ready to remove, and its evidence group (dbt mart_flags).",
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
@@ -183,7 +183,7 @@ COLUMNS |= {
         "decided; null without one.",
         "reason": "Why: verdict:<label> when Claude's verdict decided, else the rule that did: excluded:<rule>, sauce, "
         "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the "
-        "owner's decision overrides them; held:guard while the guard keeps it.",
+        "owner's decision overrides them.",
     },
     "mart_flags": {
         "build_id": _OPS_BUILD,
@@ -201,9 +201,8 @@ COLUMNS |= {
         "evidence_hash": "A hash of the store and every flag's evidence_key on the product: a store's products with "
         "equal evidence group.",
         "decision": "The owner's decision the build applied (include or exclude), else null.",
-        "classifier_is_coffee": "The classifier's answer for the latest version, before any decision or the guard.",
+        "classifier_is_coffee": "The classifier's answer for the latest version, before any decision.",
         "was_public": "In the served release's public_coffee.",
-        "held": "The guard keeps the product as coffee.",
         "ready_flags": "Its removal is ready as far as the build can tell (supports from enough families, no doubt, "
         "no coverage problem); the admin adds the live check.",
         "coverage_problem": "This run failed to fetch the product's store although it has a catalog.",

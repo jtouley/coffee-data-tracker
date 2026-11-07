@@ -23,3 +23,16 @@ removed. `shared_body` doubts are mostly pasted text on genuine non-coffee listi
 The few coffees wrongly removed are better handled one at a time with an `include` decision from the Queue.
 
 These sets can now join the regression fixtures; a new test set is drawn for the next change.
+
+## The guard is cut, and what this measured
+
+The guard was removed from #129 instead of fixed: the mode, `held`, `max_held` and `max_weeks`, the `classifier_guard`
+test, and the guard's settings, Queue, Case and readiness parts. `shared_body` stays as a doubt shown on a product's
+Case, and `coffeedata.rules.EVALUATED` stays as the gate for any other setting that changes how a rule decides.
+
+**A caveat on what was measured** (#129's final review, MAJOR 1). The guard arm held every public product that a
+`verdict_flip removed` flag and a `shared_body` doubt both covered, whatever removed it: a Claude verdict, but also
+a rules exclusion (`excluded:<rule>`) or an `unsure` verdict that fell back to the rules. A guard limited to the
+removals a verdict made, where the rules alone would keep the product, was never measured. It would need a new
+population and a new test set under a new salt. With 4 of 150 held products coffee on this test set, it isn't worth
+building now.

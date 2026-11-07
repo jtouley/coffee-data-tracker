@@ -53,10 +53,7 @@ def row(r: dict, verdicts: dict[str, tuple[str, str]]) -> dict:
         "is_wholesale": classify.is_wholesale(item),
         "clean_title": item.title,
     }
-    # The attributes of a coffee, and of a version Claude's verdict removes that the rules alone would keep: the
-    # guard (int_catalog_decided.held) may keep that one public, with its attributes.
-    keep = out["is_coffee"] or (classified_by == "claude" and classify.decision(item, None)[0])
-    e = extract.rules(item) if keep else None
+    e = extract.rules(item) if out["is_coffee"] else None
     return out | {a: getattr(e, a) if e else None for a in ATTRS}
 
 

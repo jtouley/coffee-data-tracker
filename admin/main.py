@@ -60,17 +60,7 @@ READS = {
     "catalog": "product_decisions, dim_coffee and decisions",
     "log": "the control plane's audit",
 }
-AUDITED = (
-    "job_start",
-    "job_cancel",
-    "decide",
-    "undo",
-    "publish",
-    "discard",
-    "evaluation",
-    "settings",
-    "crawl_flag",
-)
+AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -696,7 +686,7 @@ def create_app(
             served = await reader.run(queries.served)
             build = (served or {}).get("build_id")
             off = list(settings.writes_off)
-            ctx: dict = {"served": served, "build": build, "f": f, "rule_types": rules.RULE_TYPES,
+            ctx: dict = {"served": served, "build": build, "f": f,
                          "states": queries.QUEUE_STATES, "writes_off": off,
                          "settings": {"version_id": None, "doc": rules.default()}}  # fmt: skip
             if not build:
@@ -716,8 +706,9 @@ def create_app(
                     c["product"]["url"] = queries.safe_url(c["product"]["url"])
                 if c and writes:
                     pr = c["product"]
-                    ctx["latest"] = await cp(writes.control.latest, [pr["coffee_id"]],
-                                             [pr["input_hash"]] if pr["input_hash"] else [])  # fmt: skip
+                    _with_latest([c["summary"]], await cp(writes.control.latest, [pr["coffee_id"]],
+                                 [pr["input_hash"]] if pr["input_hash"] else [],
+                                 default={"coffee_id": {}, "input_hash": {}}), "decided")  # fmt: skip
                     ctx["crawl"] = ((await cp(writes.control.roaster_states, [pr["roaster_id"]], default={}))
                                     .get(pr["roaster_id"]))  # fmt: skip
                     test = await cp(writes.control.recent_test, pr["roaster_id"], 7 * 24)
@@ -739,7 +730,9 @@ def create_app(
                 await cp(writes.control.settings, default=ctx["settings"]) if writes else ctx["settings"]
             )
             ctx["history"] = await cp(writes.control.settings_history, 5, default=[]) if writes else []
-            ctx["settings_json"] = json.dumps(ctx["settings"]["doc"], indent=2)
+            # shown as the deployed code reads it: a rule type retired since it was saved is left out, so an edit made
+            # from this text still checks
+            ctx["settings_json"] = json.dumps(rules.check(ctx["settings"]["doc"], strict=False), indent=2)
             return ctx
 
         return await part("queue", make)

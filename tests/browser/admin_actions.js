@@ -334,7 +334,7 @@ const errors = [];
     await check("Queue: open flags by product, the evidence group first, one line each", async () => {
       await page.goto(`${cfg.act}/queue`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /3 products with open flags · 0 held · 2 ready to remove/);
+      assert.match(await page.textContent("[data-answer]"), /3 products with open flags · 2 ready to remove/);
       assert.match(await page.textContent("tr.grp"), /2 products of [^ ]+ with the same evidence: non_coffee_type, verdict_flip · 2 supports · ready/);
       assert.match(await page.textContent("main"), /1 doubt · 1 restore/);
       await shoot(page, "queue");
@@ -349,10 +349,10 @@ const errors = [];
     });
 
     await check("Case: turn the store's crawl flag off (a confirm with a reason)", async () => {
-      await page.fill("form[data-write$='/crawl'] [name=reason]", "sells no coffee: drink mixes only");
       await page.click("form[data-write$='/crawl'] button[type=submit]");
-      await page.waitForSelector("dialog#confirm[open]");
+      await page.waitForSelector("dialog#confirm[open] #confirm-reason");
       assert.match(await page.textContent("dialog#confirm"), /Turn the crawl flag off/);
+      await page.fill("#confirm-reason", "sells no coffee: drink mixes only");
       await page.click("[data-confirm-go]");
       await toast(page, /Crawl flag off/);
       await settled(page);
@@ -376,8 +376,8 @@ const errors = [];
     await check("Queue: a settings edit that changes how a rule decides is checked first, and says it needs its evaluation", async () => {
       await page.click("details.settings summary");
       const doc = await page.inputValue("#settings-doc");
-      await page.fill("#settings-doc", doc.replace('"mode": "off"', '"mode": "remove_unless_doubted"'));
-      await page.fill("#settings-reason", "try the guard");
+      await page.fill("#settings-doc", doc.replace('"added": "supports"', '"added": "doubts"'));
+      await page.fill("#settings-reason", "a re-added coffee only doubts a removal");
       await page.click("form.settings-form button[type=submit]");
       await page.waitForFunction(() => document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent.includes("full evaluation"));
       await shoot(page, "settings-check", true);
@@ -397,7 +397,7 @@ const errors = [];
       await page.click("dialog#confirm [data-close]");
     });
 
-    await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the guard's evaluation", async () => {
+    await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
       assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag not in it/);

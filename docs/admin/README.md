@@ -12,7 +12,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Page | Answers | Actions | Reads |
 |---|---|---|---|
 | Week | Did the week land (each connector's passes, merge, enrich, classify, build, the served release), and what failed (by HTTP status, challenge, partial, quarantined; the trend; every failed store) | a Test crawl link per failed store | `job_manifests`, `fetches`, `builds`, `serving_log`, ops `run_completeness` |
-| Queue | The served build's open flags by product, sorted by the public rows a removal touches, products with the same evidence together, one line each ("1 supports · 1 doubts · held"); a product's case (`?case=<coffee_id>`): each flag with its polarity and evidence, the classifier's answer, the listing (type, tags, sizes, prices, description and how many products share it), the store's last 8 runs of fetches, its crawl flag and live check; the rule settings | Exclude or Include one product, or a group with the same evidence; Live check (a test crawl); the store's crawl flag; edit the rule settings | ops `mart_flags`, `fetches`, the control plane |
+| Queue | The served build's open flags by product, sorted by the public rows a removal touches, products with the same evidence together, one line each ("2 supports · ready", "1 doubt · 1 restore"); a product's case (`?case=<coffee_id>`): each flag with its polarity and evidence, the classifier's answer, the listing (type, tags, sizes, prices, description and how many products share it), the store's last 8 runs of fetches, its crawl flag and live check; the rule settings | Exclude or Include one product, or a group with the same evidence; Live check (a test crawl); the store's crawl flag; edit the rule settings | ops `mart_flags`, `fetches`, the control plane |
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
@@ -103,16 +103,15 @@ defaults.
   the store). The Queue offers one decision for the group, and that decision records the evidence; the store's one
   live check covers it. A live check never speaks for another store, so evidence shared across stores (a verdict
   label, a product type) doesn't make a group.
-- **The guard** (`guard.mode`: `off`, the default, or `remove_unless_doubted`) keeps a product the classifier removes
-  from the served release while a `doubted_by` rule doubts it, for at most `max_weeks`; `classifier_guard` fails a
-  build that holds more than `max_held`. Turning it on changes public output, so it waits for its evaluation
-  (`eval/guard/`).
-- **Settings edits.** A change to how a rule decides (a family or polarity, readiness, the guard's mode or doubters)
+- **Flags change nothing public.** A removal is the owner's decision in a draft. A guard that kept doubted classifier
+  removals public was evaluated and cut: 4 of the 150 products it held on the sealed test were coffee
+  (`eval/guard/RESULTS.md`).
+- **Settings edits.** A change to how a rule decides (a family, a polarity or proposal, readiness)
   needs its full evaluation before Publish whatever it counts: Publish stays off until `coffeedata.rules.EVALUATED`
-  names that exact value, which lands with the evaluation on `main`. Any other change takes the count: the draft's
-  public changes against step 9's limit.
-- **The crawl flag.** Off stops scheduled crawls of the store (`ingest.select_states`) once a draft carrying it is
-  published; a live check still runs.
+  names that exact value, which lands with the evaluation on `main`; returning to the defaults never needs one. A
+  param change only changes which products are flagged.
+- **The crawl flag.** Off stops scheduled crawls of the store (`ingest.select_states`, crawl-retry's parked stores
+  and the fetch-health re-fetch) once a draft carrying it is published; a live check still runs.
 - **Adding a rule** is one `RuleType` entry in `coffeedata.rules`, its model `dbt/models/intermediate/flags/
   flag_<id>.sql` and its `schema.yml` entry, and its default in `dbt_project.yml`'s `rules` var (a test checks the
   var matches the code). The settings schema, the Queue, the Case and the readiness come from the entry.

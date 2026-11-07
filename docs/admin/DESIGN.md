@@ -244,8 +244,8 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 
 | | Answer line | Then | Primary action |
 |---|---|---|---|
-| Queue | "3 products with open flags · 1 held · 2 ready to remove · N public rows" | filters (roaster, rule with counts, products: open, ready, held, doubted); the table: product, roaster, flags ("2 supports · ready", "1 doubt · 1 restore · held"), public rows, decision | none: each row's decision is a text button; a group band's decision is the one bigger choice |
-| Case | the product's one line, then "the guard keeps it as coffee" when held, and its public rows | Decision (with why it is or isn't ready), Flags, Product, Store | the decision the flags propose (Exclude when ready, Include when held or restored); the other is secondary |
+| Queue | "3 products with open flags · 2 ready to remove · N public rows" | filters (roaster, rule with counts, products: open, ready, doubted); the table: product, flags ("2 supports · ready", "1 doubt · 1 restore"), decision, public rows, roaster | none: a lone product's decision is a text button; a group's one decision is on its band, and its rows link to their cases |
+| Case | the product's one line and its public rows | Decision (with why it is or isn't ready), Flags, Product, Store | the decision the flags propose (Exclude when ready, Include when restored); the other is secondary |
 
 ### Decisions on the design
 
@@ -256,7 +256,7 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **The decision before the metadata.** The Queue's columns are product, flags, decision, public rows, roaster: on a
   phone the table scrolls in its frame, and the decision is on screen with the product (the first screenshots had
   it last, off screen at 390 px).
-- **Polarity is a word,** never a colour: "supports", "doubts", "restore", "held", "ready", "coverage". No badges.
+- **Polarity is a word,** never a colour: "supports", "doubts", "restore", "ready", "coverage". No badges.
 - **Store text stays text.** Titles, tags and descriptions render escaped; the description keeps its line breaks
   (`white-space: pre-line`) at a readable measure; a store link is shown only when it is `https:`.
 - **One live check, one Test crawl.** The design names both on the Case; they are the same job (a test crawl of the
@@ -273,3 +273,16 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
   settings folded.
 - Krehel `better-layout`: one primary action per view, identity before metadata in each row, the band grouped with
   space and the panel tint, nothing scrolls sideways at 390 px.
+
+### The final review's cuts
+
+- **The guard is gone** (its evaluation: 4 of 150 held products were coffee). With it went `held` and "held" in the
+  Queue's answer, filter and summaries, and the Case's "the guard keeps it as coffee". `shared_body` stays as a
+  doubt shown on the Case.
+- **One decision per group.** A product inside an evidence group has no button of its own; the band's decision
+  covers it and each row links to its case (Krehel `better-layout`: one primary action per view).
+- **The crawl flag's reason** is asked in the confirm sheet, like a decision's, instead of a field always on the page.
+- **The rule types' list** in the settings fold went: it repeated the schema and the README.
+- **Code:** the Case reads the Queue's own summary row; the Queue's totals come with its rows (one scan fewer); one
+  reason check in the control plane; `AUDITED` on one line.
+

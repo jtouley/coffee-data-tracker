@@ -10,6 +10,9 @@ the full evaluation (steps 2-7).
 
 The two differ only on doubted removals (stratum D below). Everywhere else they give the same answer.
 
+**The guard was then cut from the code** (#129); this folder is the record of why. `RESULTS.md` says what was
+measured, and what wasn't.
+
 **Status: scored once, 2026-11-07. The guard does not ship** (`RESULTS.md`). The code was frozen at `dd2eb5d` (branch
 `admin-rules`, #129); the sets were drawn and both arms' predictions pinned in `SHA256SUMS` before any label existed.
 

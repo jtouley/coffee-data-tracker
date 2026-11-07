@@ -42,9 +42,6 @@ unit_tests:
       price that then gets one.
     model: fct_price_event
     given:
-      # nothing held (the guard is off by default)
-      - input: ref('int_catalog_decided')
-        rows: []
       - input: ref('stg_snapshots')
         format: sql
         rows: |
@@ -89,9 +86,6 @@ unit_tests:
       again in the partial 10-26, is relisted there. S, first read in a partial run, is new.
     model: fct_price_event
     given:
-      # nothing held (the guard is off by default)
-      - input: ref('int_catalog_decided')
-        rows: []
       - input: ref('stg_snapshots')
         format: sql
         rows: |
@@ -382,9 +376,6 @@ unit_tests:
       rules made.
     model: product_decisions
     given:
-      # nothing held (the guard is off by default)
-      - input: ref('int_catalog_decided')
-        rows: []
       - input: ref('stg_snapshots')
         rows:
           - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya, run_date: 2026-10-12, input_hash: a1}
@@ -409,13 +400,10 @@ unit_tests:
         - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
            is_coffee: false, verdict_label: unsure, reason: "signals:0"}
 
-  - name: guard_holds_only_doubted_classifier_removals_and_readiness_needs_two_families
+  - name: readiness_needs_two_families_and_no_doubt
     description: >-
-      int_catalog_decided with the guard on (remove_unless_doubted, doubted_by shared_body, max_weeks 4). Held: a
-      classifier removal (verdict_flip removed) a shared_body flag doubts (A); not one with no doubt (B), one whose
-      answer changed more than 4 weeks ago (C), or one the owner decided (D). Ready: supports from two families with
-      no doubt (E); not with a coverage problem at the store (F) or with an open doubt (G), and never from a doubt or
-      a restore alone (A).
+      int_catalog_decided: a removal is ready with supports from two families and no doubt (E); not with a coverage
+      problem at the store (F) or with an open doubt (G), and never from a doubt or a restore alone (A, B).
     model: int_catalog_decided
     overrides:
       vars:
@@ -425,31 +413,24 @@ unit_tests:
             shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
             non_coffee_type: {family: listing, params: {types: [drink mix]}, polarity: {"": supports}}
           readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
-          guard: {mode: remove_unless_doubted, doubted_by: [shared_body], max_held: 200, max_weeks: 4}
     given:
       - input: ref('int_catalog_candidates')
         rows:
-          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: C, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-09-21", run_date: "2026-11-02"}
-          - {coffee_id: D, roaster_id: r, decision: include, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true}
+          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true}
+          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false}
+          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false}
+          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false}
       - input: ref('flag_verdict_flip')
         rows:
           - {coffee_id: A, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
           - {coffee_id: B, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
-          - {coffee_id: C, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
-          - {coffee_id: D, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
           - {coffee_id: E, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
           - {coffee_id: F, roaster_id: bad, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
           - {coffee_id: G, roaster_id: r, direction: added, evidence: "{}", evidence_key: "added:verdict:coffee"}
       - input: ref('flag_shared_body')
         rows:
           - {coffee_id: A, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
-          - {coffee_id: C, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
-          - {coffee_id: D, roaster_id: r, direction: "", evidence: "{}", evidence_key: p1}
           - {coffee_id: G, roaster_id: r, direction: "", evidence: "{}", evidence_key: p2}
       - input: ref('flag_non_coffee_type')
         rows:
@@ -463,18 +444,16 @@ unit_tests:
           - {roaster_id: bad, run_date: "2026-11-02", ok: false, partial: false}
     expect:
       rows:
-        - {coffee_id: A, held: true, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
-        - {coffee_id: B, held: false, ready_flags: false, supports_families: 0, doubts: 0, restores: 1}
-        - {coffee_id: C, held: false, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
-        - {coffee_id: D, held: false, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
-        - {coffee_id: E, held: false, ready_flags: true, supports_families: 2, doubts: 0, restores: 0}
-        - {coffee_id: F, held: false, ready_flags: false, supports_families: 2, doubts: 0, restores: 0}
-        - {coffee_id: G, held: false, ready_flags: false, supports_families: 2, doubts: 1, restores: 0}
+        - {coffee_id: A, ready_flags: false, supports_families: 0, doubts: 1, restores: 1}
+        - {coffee_id: B, ready_flags: false, supports_families: 0, doubts: 0, restores: 1}
+        - {coffee_id: E, ready_flags: true, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: F, ready_flags: false, supports_families: 2, doubts: 0, restores: 0}
+        - {coffee_id: G, ready_flags: false, supports_families: 2, doubts: 1, restores: 0}
 
   - name: non_coffee_type_matches_whole_words_singular_or_plural
     description: >-
       flag_non_coffee_type: a listed type matches the store's product type as a whole word or phrase, singular or
-      plural, in any case ("Drink Mixes", "Nut"), but not inside another word ("Peanuts", "Partners") or with no type;
+      plural, in any case ("Drink Mixes", "Nut", and "Glass" or "Box" for an -es plural), but not inside another word ("Peanuts", "Partners") or with no type;
       a product that is neither public nor coffee is no one's concern (not relevant).
     model: flag_non_coffee_type
     overrides:
@@ -483,9 +462,8 @@ unit_tests:
           rules:
             verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
             shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
-            non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts]}, polarity: {"": supports}}
+            non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts, glasses, boxes]}, polarity: {"": supports}}
           readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
-          guard: {mode: "off", doubted_by: [shared_body], max_held: 200, max_weeks: 4}
     given:
       - input: ref('int_catalog_candidates')
         rows:
@@ -496,8 +474,14 @@ unit_tests:
           - {coffee_id: E, roaster_id: r, product_type: "Gear | Books", relevant: true}
           - {coffee_id: F, roaster_id: r, product_type: "Books", relevant: false}
           - {coffee_id: G, roaster_id: r, product_type: null, relevant: true}
+          - {coffee_id: H, roaster_id: r, product_type: "Glass", relevant: true}
+          - {coffee_id: I, roaster_id: r, product_type: "Gift Box", relevant: true}
+          - {coffee_id: J, roaster_id: r, product_type: "Glasses", relevant: true}
     expect:
       rows:
         - {coffee_id: A, evidence_key: drink mix}
-        - {coffee_id: B, evidence_key: nut}
-        - {coffee_id: E, evidence_key: book}
+        - {coffee_id: B, evidence_key: nuts}
+        - {coffee_id: E, evidence_key: books}
+        - {coffee_id: H, evidence_key: glasses}
+        - {coffee_id: I, evidence_key: boxes}
+        - {coffee_id: J, evidence_key: glasses}

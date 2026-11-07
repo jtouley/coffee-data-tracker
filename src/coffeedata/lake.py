@@ -418,7 +418,6 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("decision", pa.string()),
             ("classifier_is_coffee", pa.bool_()),
             ("was_public", pa.bool_()),
-            ("held", pa.bool_()),
             ("ready_flags", pa.bool_()),
             ("coverage_problem", pa.bool_()),
             ("supports_families", pa.int64()),

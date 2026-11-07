@@ -3,7 +3,7 @@
 -- from stg_products (the current rules over the raw snapshots), so rebuilding from the same lake gives the same
 -- table. The owner's include or exclude (stg_snapshots.decision) overrides the classifier (macro decided).
 with s as (
-    select s.*, {{ decided('s.decision', 'p.is_coffee', 's.coffee_id') }} as is_coffee, p.classified_by, p.verdict_model
+    select s.*, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee, p.classified_by, p.verdict_model
     from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 seen as (

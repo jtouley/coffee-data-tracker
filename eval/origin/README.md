@@ -11,13 +11,6 @@ is this one. Add each later change's count here.
   versions, 51 roasters) and the output of `origin_country` of none: built from main and from the change on a local
   copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
   identical. 0 of them in the test set.
-- 0: the rules and flags (`admin-rules`) have `stg_products` extract the rules' attributes for a version Claude's
-  verdict removes and the rules alone would keep (783 such versions in a local copy of the lake, through build
-  `20261104T041920-5060ad`), so the guard can keep one public with them. Those versions aren't coffee, so nothing
-  public, no mart and no ops table reads them: built from #128's code and from the change (guard off) on the same
-  copy, `dim_coffee`, every public table, `fct_price_event`, `mart_market` and `product_decisions` were identical
-  row for row. `origin_country` changes for a public product only once the guard is on, which needs its own
-  evaluation first (`eval/guard/`).
 
 ## Data
 

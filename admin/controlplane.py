@@ -221,9 +221,7 @@ class ControlPlane:
         latest event (None: none): a subject decided since makes the whole write a Conflict. Idempotent on `key`."""
         if action not in decisions.ACTIONS or kind not in decisions.SUBJECTS:
             raise ValueError("bad decision")
-        reason = (reason or "").strip()
-        if not 3 <= len(reason) <= 500:
-            raise ValueError("give a reason (3 to 500 characters)")
+        reason = _reason(reason)
         if not items or len(items) > 500:
             raise ValueError("decide 1 to 500 products at a time")
         with self.tx() as cur:
@@ -303,9 +301,7 @@ class ControlPlane:
         """A new rule settings version, checked against the deployed code (rules.check), based on the version the
         page showed (`based_on`, None for the defaults): another edit since is a Conflict. Records what changed and
         which changes decide (rules.decides). Idempotent on `key`; an edit that changes nothing is refused."""
-        reason = (reason or "").strip()
-        if not 3 <= len(reason) <= 500:
-            raise ValueError("give a reason (3 to 500 characters)")
+        reason = _reason(reason)
         new = rules.check(doc)
         with self.tx() as cur:
             cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
@@ -360,9 +356,7 @@ class ControlPlane:
     ) -> dict:
         """Turn a roaster's crawl flag on or off, from the state the page showed (`seen`: a change since is a
         Conflict). Takes effect for scheduled crawls once a draft carrying it is published. Idempotent on `key`."""
-        reason = (reason or "").strip()
-        if not 3 <= len(reason) <= 500:
-            raise ValueError("give a reason (3 to 500 characters)")
+        reason = _reason(reason)
         if not ID_ROASTER.fullmatch(roaster_id or ""):
             raise ValueError("bad roaster id")
         with self.tx() as cur:
@@ -586,6 +580,14 @@ class ControlPlane:
             cols = ("draft_id", "snapshot_id", "sha256", "decisions", "baseline", "run_id", "actor", "created_at",
                     "last_event")  # fmt: skip
             return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+
+def _reason(raw: str | None) -> str:
+    """A write's recorded reason: 3 to 500 characters."""
+    reason = (raw or "").strip()
+    if not 3 <= len(reason) <= 500:
+        raise ValueError("give a reason (3 to 500 characters)")
+    return reason
 
 
 def _from_database(e: BaseException) -> bool:

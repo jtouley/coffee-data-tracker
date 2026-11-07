@@ -15,7 +15,6 @@ f as (
     where c.decision is null and r.run_date is not null and {{ 'true' if prev else 'false' }}  -- nothing served
 )
 select coffee_id, roaster_id, direction,
-       to_json({'verdict': verdict_label, 'classified_by': classified_by, 'reason': reason,
-                'since': removed_since}) as evidence,
+       to_json({'verdict': verdict_label, 'classified_by': classified_by, 'reason': reason}) as evidence,
        direction || ':' || coalesce('verdict:' || verdict_label, reason) as evidence_key
 from f where direction is not null

@@ -369,9 +369,11 @@ class Writes:
         """The effective decisions, rule settings and crawl flags against the served build's snapshot: what a draft
         would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective = await asyncio.to_thread(self.control.effective)
-        settings = await asyncio.to_thread(self.control.settings)
-        states = await asyncio.to_thread(self.control.roaster_states)
+        effective, settings, states = await asyncio.gather(
+            asyncio.to_thread(self.control.effective),
+            asyncio.to_thread(self.control.settings),
+            asyncio.to_thread(self.control.roaster_states),
+        )
         if served is None:
             served = await self.read(queries.served)
         if drafts is None:
@@ -446,20 +448,8 @@ class Writes:
              "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"},
         ]  # fmt: skip
         effect = await self.effect(draft)
-        # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts; any
-        # other settings change counts every public coffee the draft changes, on top of step 9's running total.
-        deciding, needed, settings_changed = (
-            effect["deciding"],
-            effect["needs_evaluation"],
-            effect["settings_changed"],
-        )
-        coffees = effect["coffees"]
-        if (
-            settings_changed and build
-        ):  # a settings change moves public output only through what the guard holds
-            coffees = sorted(set(coffees) | set(await self.read(queries.held, build))
-                             | set(await self.read(queries.held, draft["baseline"])))  # fmt: skip
-        left = await self.read(queries.leaving, build, coffees) if build else {"removed": None}
+        # Step 9 counts the public coffees the draft's decisions change: rule settings change no public output.
+        left = await self.read(queries.leaving, build, effect["coffees"]) if build else {"removed": None}
         removed, changed = left.get("removed"), left.get("changed")
         total, last = await asyncio.to_thread(self.control.step9_total, rel["ever_served"])
         since = f"since the evaluation {last['path']}" if last else "since the total was started"
@@ -471,6 +461,8 @@ class Writes:
                                f"this draft changes {changed} public coffees, {total + changed} in all {since}: over "
                                "50, so the full evaluation comes first, then record it below"),
                        "needs_evaluation": changed is not None and total + changed > STEP9_LIMIT})  # fmt: skip
+        # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts.
+        deciding, needed = effect["deciding"], effect["needs_evaluation"]
         checks.append({"name": "Evaluation of a rule change", "ok": not needed,
                        "why": ("no rule settings change how a rule decides" if not deciding else
                                f"evaluated: {', '.join(deciding)}" if not needed else
@@ -532,7 +524,6 @@ class Writes:
         roasters = sorted({(m["roaster_id"], m.get("platform")) for d in removing for m in covered(d) if m["roaster_id"]},
                           key=lambda x: (x[0], x[1] or ""))  # fmt: skip
         return {"coffees": coffees, "removal_roasters": roasters,
-                "settings_changed": rules.changed(old_settings, new_settings),
                 "deciding": rules.decides(old_settings, new_settings),
                 "needs_evaluation": rules.evaluation_needed(old_settings, new_settings)}  # fmt: skip
 

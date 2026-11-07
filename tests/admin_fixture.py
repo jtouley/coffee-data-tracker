@@ -186,9 +186,9 @@ def flag_served_build(lake_dir: Path, week: str, build: str) -> None:
                        "product_type": "Drink Mix", "evidence": json.dumps(evidence), "evidence_key": key,
                        "evidence_hash": eh, "url": f"https://{p[1]}/products/x", "public_rows": 4} | kw  # fmt: skip
 
-    ready = {"classifier_is_coffee": True, "was_public": True, "held": False, "ready_flags": True,
+    ready = {"classifier_is_coffee": True, "was_public": True, "ready_flags": True,
              "supports_families": 2, "doubts": 0}  # fmt: skip
-    doubted = {"classifier_is_coffee": False, "was_public": True, "held": False, "ready_flags": False,
+    doubted = {"classifier_is_coffee": False, "was_public": True, "ready_flags": False,
                "supports_families": 0, "doubts": 1, "restores": 1, "public_rows": 2, "product_type": ""}  # fmt: skip
     rows = [
         row(a, "verdict_flip", "classifier", "supports", "added", {"verdict": "coffee"}, "added:coffee", "mix", **ready),

@@ -7,15 +7,16 @@ implied: a doubt is never counted as a vote to remove (the review's M1).
 
 - **Readiness** (`readiness.removal`): a removal is ready only with `supports` flags from `supports_min` distinct
   families, no open `doubts` or coverage problem (dbt), and a live check of the store (the admin).
-- **The guard** (`guard`): in mode `remove_unless_doubted`, a product the classifier removes from the served
-  release is kept as coffee while a `doubted_by` flag doubts it, for at most `max_weeks`; `classifier_guard` fails a
-  build holding more than `max_held`. It ships `off`: turning it on changes public output, so it needs its
-  evaluation (eval/guard/) first, like any rule that decides.
 
-Adding a rule type is one `RuleType` entry here plus its model, `dbt/models/flags/flag_<id>.sql`, which returns one
-row per flag: coffee_id, roaster_id, direction ('' for a rule with one), evidence (JSON text, shown on the Case
-page) and evidence_key (the evidence without the product's identity, so equal evidence groups). The settings
-schema, the defaults, the admin's form and dbt's var come from the entry.
+Flags change nothing public by themselves: a removal is the owner's decision, published by a draft. (A guard that
+kept doubted classifier removals public was evaluated and cut: eval/guard/RESULTS.md.)
+
+Adding a rule type touches four places: its `RuleType` entry here; its model,
+`dbt/models/intermediate/flags/flag_<id>.sql`, which returns one row per flag (coffee_id, roaster_id, direction ('' for
+a rule with one), evidence (JSON text, shown on the Case page) and evidence_key (the evidence without the product's
+identity, so equal evidence groups)); its `schema.yml` entry; and its default in `dbt_project.yml`'s `rules` var
+(tests/test_flags.py checks it matches DEFAULTS). The settings schema, the defaults, the Queue and the Case come from
+the entry.
 
 Settings travel in the admin's snapshot (coffeedata.decisions), so a build reads them without the database; a build
 without a snapshot uses DEFAULTS.
@@ -32,7 +33,6 @@ from typing import Any
 SCHEMA_VERSION = 1
 POLARITIES = ("supports", "doubts", "restore")
 FAMILIES = ("classifier", "catalog", "listing")
-GUARD_MODES = ("off", "remove_unless_doubted")
 PROPOSALS = ("exclude", "include")
 NAME = re.compile(r"[a-z0-9][a-z0-9 &-]{0,59}")  # a listed name reaches dbt's SQL: nothing to escape
 
@@ -98,34 +98,31 @@ DEFAULTS: dict = {
     ],
     "readiness": {"removal": {"supports_min": 2, "distinct_families": True, "live_check": "required",
                               "blocked_by": ["doubts", "coverage"]}},
-    "guard": {"mode": "off", "doubted_by": ["shared_body"], "max_held": 200, "max_weeks": 4},
 }  # fmt: skip
 
 
-# Evaluations on main, by the part of the settings a deciding change touches (decides(): a rule's id, "readiness"
-# or "guard"): the folder (its README, RESULTS.md and SHA256SUMS; tests/test_flags.py checks they exist) and the
+# Evaluations on main, by the part of the settings a deciding change touches (decides(): a rule's id or
+# "readiness"): the folder (its README, RESULTS.md and SHA256SUMS; tests/test_flags.py checks they exist) and the
 # exact value of that part that was evaluated (deciding_part). The admin's Publish refuses a draft whose settings
 # change how a rule decides to a value not evaluated here, so an entry lands only with its reviewed evaluation
-# (CLAUDE.md steps 2-7). The guard's evaluation is ready to label (eval/guard/README.md): no entry yet.
+# (CLAUDE.md steps 2-7).
 EVALUATED: dict[str, dict] = {}
 
 
 def deciding_part(doc: dict, name: str) -> Any:
-    """The part of the settings that decides, for one name of decides(): a rule's family, polarity and proposal,
-    readiness, or the guard's mode and doubters."""
+    """The part of the settings that decides, for one name of decides(): a rule's family, polarity and proposal, or
+    readiness."""
     s = check(doc, strict=False)
     if name == "readiness":
         return s["readiness"]
-    if name == "guard":
-        return {k: s["guard"][k] for k in ("mode", "doubted_by")}
     r = next(r for r in s["rules"] if r["id"] == name)
     return {k: r.get(k) for k in ("family", "polarity", "proposes")}
 
 
 def evaluation_needed(old: dict, new: dict) -> list[str]:
     """The parts whose deciding change from `old` to `new` has no evaluation of the new value in EVALUATED. A return
-    to the defaults' value (main's behaviour, what every evaluation is measured against) never needs one, so the
-    guard can always be turned back off."""
+    to the defaults' value (main's behaviour, what every evaluation is measured against) never needs one, so a
+    change can always be undone."""
     names = sorted({c.split(".")[0] for c in decides(old, new)})
     return [
         n for n in names
@@ -145,14 +142,15 @@ def _check(doc: object, strict: bool) -> dict:
     """Settings the deployed code can read, normalized, or SettingsError with every problem. Normalized: each rule's
     params filled from its type's defaults, and a rule type the settings don't list (one added to the code after
     they were saved) given its defaults, so adding a rule never invalidates a saved version or a served snapshot.
-    A rule the code no longer has is an error in an edit (strict), and left out when reading a saved document."""
+    A rule the code no longer has, or a setting it no longer reads (an old `guard`), is an error in an edit (strict),
+    and left out when reading a saved document."""
     p: list[str] = []
     if not isinstance(doc, dict):
         raise SettingsError(["settings must be an object"])
     if doc.get("schema") != SCHEMA_VERSION:
         p.append(f"schema must be {SCHEMA_VERSION}")
-    extra = set(doc) - {"schema", "rules", "readiness", "guard"}
-    if extra:
+    extra = set(doc) - {"schema", "rules", "readiness"}
+    if extra and strict:
         p.append(f"unknown keys: {', '.join(sorted(extra))}")
     out: dict = {"schema": SCHEMA_VERSION, "rules": []}
     rules = doc.get("rules")
@@ -235,40 +233,9 @@ def _check(doc: object, strict: bool) -> dict:
         p.append("readiness.removal.blocked_by must include doubts, and may include coverage")
     out["readiness"] = {"removal": {k: ready.get(k) for k in ("supports_min", "distinct_families", "live_check",
                                                                "blocked_by")}}  # fmt: skip
-    g = doc.get("guard")
-    if not isinstance(g, dict):
-        p.append("guard is required")
-        g = {}
-    if g.get("mode") not in GUARD_MODES:
-        p.append(f"guard.mode must be one of {', '.join(GUARD_MODES)}")
-    doubters = g.get("doubted_by")
-    if isinstance(doubters, list) and not strict:  # a retired doubter is left out of a saved document
-        doubters = (
-            [d for d in doubters if d in RULE_TYPES] if all(isinstance(d, str) for d in doubters) else None
-        )
-        g = (
-            g | {"doubted_by": doubters} | ({"mode": "off"} if doubters == [] else {})
-        )  # none left: it holds nothing
-    if doubters == [] and not strict:
-        pass
-    elif not (isinstance(doubters, list) and doubters and all(isinstance(d, str) for d in doubters)
-              and set(doubters) <= set(RULE_TYPES)):  # fmt: skip
-        p.append("guard.doubted_by must list one or more rules")
-    else:
-        bad = [d for d in doubters for r in out["rules"] if r["id"] == d and "doubts" not in _pols(r)]
-        if bad:
-            p.append(f"guard.doubted_by: {', '.join(bad)} must have polarity doubts")
-    for k, hi in (("max_held", 100_000), ("max_weeks", 52)):
-        if not (type(g.get(k)) is int and 0 <= g[k] <= hi):
-            p.append(f"guard.{k} must be a whole number from 0 to {hi}")
-    out["guard"] = {k: g.get(k) for k in ("mode", "doubted_by", "max_held", "max_weeks")}
     if p:
         raise SettingsError(p)
     return out
-
-
-def _pols(r: dict) -> set[str]:
-    return set(r["polarity"].values()) if isinstance(r["polarity"], dict) else {r["polarity"]}
 
 
 def default() -> dict:
@@ -277,9 +244,8 @@ def default() -> dict:
 
 def decides(old: dict, new: dict) -> list[str]:
     """What an edit changes in *how* rules decide (CLAUDE.md: a change to how a rule decides needs the full
-    evaluation whatever it counts): a rule's family or polarity, readiness, the guard's mode or what doubts it.
-    Params and the guard's caps change which products a rule finds, not how it decides: those take the count
-    (step 9's running total)."""
+    evaluation whatever it counts): a rule's family, polarity or proposal, or readiness. Params change which
+    products a rule finds, not how it decides; and no setting changes public output by itself."""
     a, b = check(old, strict=False), check(new, strict=False)
     out = []
     ra, rb = ({r["id"]: r for r in x["rules"]} for x in (a, b))
@@ -289,9 +255,6 @@ def decides(old: dict, new: dict) -> list[str]:
                 out.append(f"{i}.{k}")
     if a["readiness"] != b["readiness"]:
         out.append("readiness")
-    for k in ("mode", "doubted_by"):
-        if a["guard"][k] != b["guard"][k]:
-            out.append(f"guard.{k}")
     return out
 
 
@@ -317,14 +280,13 @@ def _by_id(doc: dict) -> dict:
 
 def dbt_var(doc: dict | None) -> dict:
     """The settings as dbt's var `rules`: {rules: {id: {family, polarity: {direction: polarity}, params}},
-    readiness, guard}."""
+    readiness}."""
     s = check(doc if doc is not None else DEFAULTS, strict=False)
     return {
         "rules": {r["id"]: {"family": r["family"], "params": r.get("params", {}),
                             "polarity": r["polarity"] if isinstance(r["polarity"], dict) else {"": r["polarity"]}}
                   for r in s["rules"]},
         "readiness": s["readiness"]["removal"],
-        "guard": s["guard"],
     }  # fmt: skip
 
 
@@ -347,11 +309,10 @@ def schema() -> dict:
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
-        "required": ["schema", "rules", "readiness", "guard"],
+        "required": ["schema", "rules", "readiness"],
         "properties": {
             "schema": {"const": SCHEMA_VERSION},
             "rules": {"type": "array", "items": {"oneOf": rules}},
             "readiness": {"type": "object"},
-            "guard": {"type": "object", "properties": {"mode": {"enum": list(GUARD_MODES)}}},
         },
     }
