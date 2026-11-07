@@ -1,7 +1,7 @@
 """Evaluation of the discovery screen (src/coffeedata/screen.py). See README.md for the protocol.
 
     python screen_eval.py frame   <data-dir> <pool.parquet> <lake-dir>    the population, split and ranked
-    python screen_eval.py screen  <data-dir> <set> <per-tag>               screen the first <per-tag> of each tag, live
+    python screen_eval.py screen  <data-dir> <set> <per-tag> [<tag>...]    screen the first <per-tag> of each tag, live
     python screen_eval.py draw    <data-dir> <set> <per-stratum>           the items to label, and the stratum sizes
     python screen_eval.py predict <data-dir> <set> <rule> <min-coffees> <out.json>   rescore the screened evidence
     python screen_eval.py agree   <set>                                    two labels -> agreed + to settle
@@ -120,7 +120,7 @@ def load_evidence(data: Path, set_name: str) -> dict[str, dict]:
         return {e["roaster_id"]: e for e in map(json.loads, f)}
 
 
-def screen(data: Path, set_name: str, per_tag: int) -> None:
+def screen(data: Path, set_name: str, per_tag: int, tags: tuple[str, ...] = TAGS) -> None:
     """Screen the first per_tag candidates of each tag in the set's rank order, live, through screen.screen_one,
     keeping the evidence (the probe, the products read, the home page's text). Resumable: done ones are skipped."""
     import logging
@@ -134,7 +134,7 @@ def screen(data: Path, set_name: str, per_tag: int) -> None:
     names = [r["name"] for r in registry.load_seed(D.parents[1] / "config" / "roasters.csv")]
     known = sc.KnownRoasters(names)
     done = load_evidence(data, set_name)
-    todo = [c for t in TAGS for c in ranked(data, set_name, t)[:per_tag] if c["roaster_id"] not in done]
+    todo = [c for t in tags for c in ranked(data, set_name, t)[:per_tag] if c["roaster_id"] not in done]
 
     def one(c: dict) -> dict:
         # A client of its own per candidate (each is a different host, so spacing and robots.txt are per candidate
@@ -283,7 +283,12 @@ def agree(set_name: str) -> None:
     the disagreements (the item and both labels, no screen result) for the third labeler."""
     a, b = labels(f"labels_{set_name}_A.json"), labels(f"labels_{set_name}_B.json")
     items = {i["id"]: i for i in json.loads((D / f"items_{set_name}.json").read_text())}
-    same = {i: a[i] for i in a if i in b and a[i]["label"] == b[i]["label"] and a[i]["label"] != "unsure"}
+    # agreed only when both the label and the kind agree: the kind decides what a confidently wrong admission is
+    same = {
+        i: a[i]
+        for i in a
+        if i in b and (a[i]["label"], a[i].get("kind")) == (b[i]["label"], b[i].get("kind")) and a[i]["label"] != "unsure"
+    }
     print(f"{set_name}: agreement {len(same)}/{len(items)} = {len(same) / len(items):.1%}")
     (D / f"agreed_{set_name}.json").write_text(json.dumps(same, indent=0, sort_keys=True) + "\n")
     dis = [items[i] | {"label_A": a.get(i), "label_B": b.get(i)} for i in items if i not in same]
@@ -357,7 +362,8 @@ def choose(data: Path) -> None:
             predict(data, "validation", rule, n, out)
             m = metrics("validation", json.loads(out.read_text()))
             show(f"{rule} N={n}", m)
-            if best is None or m["f05"] > best[0]:
+            # RULES runs loosest to strictest and N upwards: >= gives a tie to the stricter choice
+            if best is None or m["f05"] >= best[0]:
                 best = (m["f05"], rule, n)
     print(f"chosen: {best}")
 
@@ -373,7 +379,7 @@ if __name__ == "__main__":
     if cmd == "frame":
         frame(Path(a[0]), Path(a[1]), Path(a[2]))
     elif cmd == "screen":
-        screen(Path(a[0]), a[1], int(a[2]))
+        screen(Path(a[0]), a[1], int(a[2]), tuple(a[3:]) or TAGS)
     elif cmd == "draw":
         draw(Path(a[0]), a[1], int(a[2]))
     elif cmd == "predict":

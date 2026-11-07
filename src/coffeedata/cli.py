@@ -108,22 +108,23 @@ def cmd_discover(args: argparse.Namespace) -> None:
 
 
 def cmd_screen(args: argparse.Namespace) -> None:
-    """Screen discovery candidates once; admit the ones that look like roasters selling their own coffee online."""
+    """Screen discovery candidates once; with --admit, admit the ones that look like roasters selling their own
+    coffee online."""
     from . import registry, screen
 
     lake = Lake()
-    states = registry.current(lake)
-    known = {s.roaster.roaster_id for s in states}
-    todo = screen.select(lake, args.run_date, known, cap=args.cap, only=args.only)
+    roasters = registry.known(lake)
+    todo = screen.select(lake, args.run_date, set(roasters), cap=args.cap, only=args.only)
     print(f"screening {len(todo)} candidates for run {args.run_date}", file=sys.stderr)
     _print(
         screen.run(
             lake,
             todo,
-            [s.roaster.name for s in states],
+            roasters.values(),
             args.run_date,
             workers=args.workers,
             deadline_min=args.deadline_min,
+            admit=args.admit,
         )
     )
 
@@ -846,6 +847,11 @@ def main(argv: list[str] | None = None) -> None:
     sc.add_argument("--deadline-min", type=_positive_float, default=DEADLINE_MIN)
     sc.add_argument("--workers", type=int, default=WORKERS)
     sc.add_argument("--only", help="one candidate domain (screened even if not due)")
+    sc.add_argument(
+        "--admit",
+        action="store_true",
+        help="write registry rows for admitted candidates (off until the rule is scored: eval/screen/README.md)",
+    )
     sc.add_argument("--run-date", type=_run_date, default=_today())
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")

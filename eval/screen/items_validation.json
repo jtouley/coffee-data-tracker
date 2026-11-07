@@ -1,0 +1,1568 @@
+[
+ {
+  "id": "va-00832075",
+  "domain": "hotchocolatesparrow.com",
+  "website": "https://hotchocolatesparrow.com/",
+  "name": "Hot Chocolate Sparrow",
+  "city": "Orleans",
+  "state": "MA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-01370408",
+  "domain": "7323chicago.com",
+  "website": "https://7323chicago.com/",
+  "name": "7323 Chicago Café",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-02770767",
+  "domain": "sandiacasino.com",
+  "website": "https://sandiacasino.com/",
+  "name": "Kiva Koffee",
+  "city": "Albuquerque",
+  "state": "NM",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-03340801",
+  "domain": "goodmanner.co",
+  "website": "https://goodmanner.co/",
+  "name": "Good Manner",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-03496141",
+  "domain": "55beachstreetcafe.com",
+  "website": "https://55beachstreetcafe.com/",
+  "name": "55 Beach Street Cafe",
+  "city": "Westerly",
+  "state": "RI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-04377265",
+  "domain": "nickhotel.com",
+  "website": "https://nickhotel.com/",
+  "name": "Lakeside Cafe",
+  "city": "Orlando",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-04770696",
+  "domain": "bryant.com",
+  "website": "https://bryant.com/",
+  "name": "Yellow Rose Cafe",
+  "city": "Bridgeport",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-05386573",
+  "domain": "chatterbox-cafe-ca-1.hub.biz",
+  "website": "https://chatterbox-cafe-ca-1.hub.biz/",
+  "name": "Chatterbox Cafe",
+  "city": "Durham",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-05408271",
+  "domain": "backstagecafeandwinebar.com",
+  "website": "https://backstagecafeandwinebar.com/",
+  "name": "Backstage Cafe and Wine Bar",
+  "city": "Branson",
+  "state": "MO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-05818636",
+  "domain": "block2coffee.com",
+  "website": "https://block2coffee.com/",
+  "name": "Block 2 Coffee",
+  "city": "Red Lake Falls",
+  "state": "MN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-05861623",
+  "domain": "mandrakecafenyc.com",
+  "website": "https://mandrakecafenyc.com/",
+  "name": "Mandrake Café",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-07009832",
+  "domain": "togethercafe.co",
+  "website": "https://togethercafe.co/",
+  "name": "Together Cafe",
+  "city": "Salisbury",
+  "state": "MD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-08201971",
+  "domain": "luuacaffe.com",
+  "website": "https://luuacaffe.com/",
+  "name": "Luua Caffe",
+  "city": "Inglewood",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-08922234",
+  "domain": "occ-cafe.craftydelivers.com",
+  "website": "https://occ-cafe.craftydelivers.com/",
+  "name": "Cafe ‘73",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-09089874",
+  "domain": "birdhousecafe.tripod.com",
+  "website": "https://birdhousecafe.tripod.com/",
+  "name": "Bird House Cafe",
+  "city": "Milledgeville",
+  "state": "IL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-09719150",
+  "domain": "oldeuropean-restaurant.com",
+  "website": "https://oldeuropean-restaurant.com/",
+  "name": "The Old European Express",
+  "city": "Coeur D'Alene",
+  "state": "ID",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-09833610",
+  "domain": "moonshotcoffee-nashville.com",
+  "website": "https://moonshotcoffee-nashville.com/",
+  "name": "moonshot coffee bar",
+  "city": "Nashville",
+  "state": "TN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-10619474",
+  "domain": "alleycatcoffeehouse.com",
+  "website": "https://alleycatcoffeehouse.com/",
+  "name": "Alleycat Coffee House",
+  "city": "Fort Collins",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-10891947",
+  "domain": "cafe-ella.com",
+  "website": "https://cafe-ella.com/",
+  "name": "Cafe Ella",
+  "city": "Watsonville",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-12375912",
+  "domain": "eastsidecafepizza.com",
+  "website": "https://eastsidecafepizza.com/",
+  "name": "East Side Cafe",
+  "city": "Blue Rapids",
+  "state": "KS",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-12833353",
+  "domain": "manchestercoffeeco.com",
+  "website": "https://manchestercoffeeco.com/",
+  "name": "Manchester Coffee Co.",
+  "city": "Lexington",
+  "state": "KY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-12883956",
+  "domain": "birdiesva.com",
+  "website": "https://birdiesva.com/",
+  "name": "Birdie's",
+  "city": "Richmond",
+  "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-13047568",
+  "domain": "cornercoffeeco.com",
+  "website": "https://cornercoffeeco.com/",
+  "name": "Corner Coffee Company",
+  "city": "Murphy",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-13445203",
+  "domain": "javaandjambroadway.com",
+  "website": "https://javaandjambroadway.com/",
+  "name": "Java and Jam Coffee Cafe",
+  "city": "Broadway",
+  "state": "VA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-14591991",
+  "domain": "tamc.amedd.army.mil",
+  "website": "https://tamc.amedd.army.mil/",
+  "name": "Anuenue Cafe",
+  "city": "Tripler Army Medical Ctr",
+  "state": "HI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-15252359",
+  "domain": "bigwiskyporchbb64cafe.com",
+  "website": "https://bigwiskyporchbb64cafe.com/",
+  "name": "BB-64 Cafe",
+  "city": "Norfolk",
+  "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-15468596",
+  "domain": "rxcoffeeandmore.menufy.com",
+  "website": "https://rxcoffeeandmore.menufy.com/",
+  "name": "RX Coffee & More",
+  "city": "Verona",
+  "state": "VA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-16190664",
+  "domain": "spearfishblackbird.com",
+  "website": "https://spearfishblackbird.com/",
+  "name": "Blackbird Espresso",
+  "city": "Spearfish",
+  "state": "SD",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-16280607",
+  "domain": "coffee-emporium.com",
+  "website": "https://coffee-emporium.com/",
+  "name": "Coffee Emporium",
+  "city": "Cincinnati",
+  "state": "OH",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-16295829",
+  "domain": "sidestreetbarharbor.com",
+  "website": "https://sidestreetbarharbor.com/",
+  "name": "Side Street Cafe Bar Harbor Maine",
+  "city": "Mt Desert",
+  "state": "ME",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-16355147",
+  "domain": "outpostcoffeeco.com",
+  "website": "https://outpostcoffeeco.com/",
+  "name": "Outpost Coffee",
+  "city": "Bartlesville",
+  "state": "OK",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-16508489",
+  "domain": "tricklebeecafe.org",
+  "website": "https://tricklebeecafe.org/",
+  "name": "Tricklebee Cafe",
+  "city": "Milwaukee",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-17133847",
+  "domain": "soldadoscoffee.com",
+  "website": "https://soldadoscoffee.com/",
+  "name": "Soldados Coffee",
+  "city": "Closter",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-18005324",
+  "domain": "deltagrounds.com",
+  "website": "https://deltagrounds.com/",
+  "name": "Delta Grounds Coffee",
+  "city": "Oak Grove",
+  "state": "LA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-18022624",
+  "domain": "bigyellowcoffee.com",
+  "website": "https://bigyellowcoffee.com/",
+  "name": "Yellow Elk Coffee",
+  "city": "Miami",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-18120043",
+  "domain": "liftcoffeebar.com",
+  "website": "https://liftcoffeebar.com/",
+  "name": "Lift Coffee Bar",
+  "city": "Johnstown",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-19214049",
+  "domain": "brucecafe.netwaiter.com",
+  "website": "https://brucecafe.netwaiter.com/",
+  "name": "Bruce Cafe",
+  "city": "Ponce De Leon",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-20502310",
+  "domain": "buckmancoffee.com",
+  "website": "https://buckmancoffee.com/",
+  "name": "Buckman Coffee Factory",
+  "city": "Portland",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-20805083",
+  "domain": "tintotimeusa.com",
+  "website": "https://tintotimeusa.com/",
+  "name": "Tinto Time",
+  "city": "Brick Twp",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-21016470",
+  "domain": "thelocalyolkal.com",
+  "website": "https://thelocalyolkal.com/",
+  "name": "The Local Yolkal Cafe",
+  "city": "Milledgeville",
+  "state": "GA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-21619865",
+  "domain": "zekescoffeepgh.com",
+  "website": "https://zekescoffeepgh.com/",
+  "name": "Zeke's Coffee Pittsburgh",
+  "city": "Pittsburgh",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-22919962",
+  "domain": "nancygscafe.com",
+  "website": "https://nancygscafe.com/",
+  "name": "Nancy G's Cafe",
+  "city": "Atlanta",
+  "state": "GA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-23843264",
+  "domain": "wakemancoffee.com",
+  "website": "https://wakemancoffee.com/",
+  "name": "The Wakeman Coffee Co.",
+  "city": "Sidney",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-24850126",
+  "domain": "crossroadscoffee.co",
+  "website": "https://crossroadscoffee.co/",
+  "name": "Crossroads Coffee Company",
+  "city": "Tucson",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-26261558",
+  "domain": "shadedbloomcoffee.com",
+  "website": "https://shadedbloomcoffee.com/",
+  "name": "Shaded Bloom Coffee House",
+  "city": "Lake Orion",
+  "state": "MI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-26456373",
+  "domain": "drinkyoungcoffee.com",
+  "website": "https://drinkyoungcoffee.com/",
+  "name": "Young Coffee",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-26652692",
+  "domain": "4lwcoffee.com",
+  "website": "https://4lwcoffee.com/",
+  "name": "Four Letter Word Coffee",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-26660766",
+  "domain": "coffeeontheriver.net",
+  "website": "https://coffeeontheriver.net/",
+  "name": "Coffee on the River",
+  "city": "Lansing",
+  "state": "IA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-27120056",
+  "domain": "cathedralparkkitchen.com",
+  "website": "https://cathedralparkkitchen.com/",
+  "name": "Cathedral Park Restaurant",
+  "city": "Portland",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-28242233",
+  "domain": "scotts-country-store-deli.hub.biz",
+  "website": "https://scotts-country-store-deli.hub.biz/",
+  "name": "Lulu Scotts Corner Cafe",
+  "city": "Scotts",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-28491984",
+  "domain": "themixcafe.com",
+  "website": "https://themixcafe.com/",
+  "name": "The Mix Cafe",
+  "city": "Waco",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-28590338",
+  "domain": "ivyleaguebaristaacademy.com",
+  "website": "https://ivyleaguebaristaacademy.com/",
+  "name": "Ivy League Barista Academy",
+  "city": "Vista",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-28683977",
+  "domain": "hilocoffeemill.com",
+  "website": "https://hilocoffeemill.com/",
+  "name": "Hilo Coffee Mill",
+  "city": "Mountain View",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-29764857",
+  "domain": "mochaandpearl.com",
+  "website": "https://mochaandpearl.com/",
+  "name": "Mocha and Pearl Cafe",
+  "city": "Baltimore",
+  "state": "MD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-29875635",
+  "domain": "dobson-creek-coffee-company.myshopify.com",
+  "website": "https://dobson-creek-coffee-company.myshopify.com/",
+  "name": "Virginia City Coffee Depot",
+  "city": "Virginia City",
+  "state": "MT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-30142003",
+  "domain": "frontiercoffee.com",
+  "website": "https://frontiercoffee.com/",
+  "name": "Frontier Coffee Company",
+  "city": "Talbott",
+  "state": "TN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-30535961",
+  "domain": "havencoffeeandgoods.com",
+  "website": "https://havencoffeeandgoods.com/",
+  "name": "Haven Coffee and Goods",
+  "city": "Maryville",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-31779974",
+  "domain": "sweeteleanors.com",
+  "website": "https://sweeteleanors.com/",
+  "name": "Sweet Eleanor's Divine Desserts",
+  "city": "Macon",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-32338947",
+  "domain": "wildflowercafetulsa.com",
+  "website": "https://wildflowercafetulsa.com/",
+  "name": "Wildflower Cafe",
+  "city": "Tulsa",
+  "state": "OK",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-34177388",
+  "domain": "westsidecoffeeplace.com",
+  "website": "https://westsidecoffeeplace.com/",
+  "name": "Westside Coffee Place & Cafe",
+  "city": "Decatur",
+  "state": "AL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-34177425",
+  "domain": "mightymocoffee.com",
+  "website": "https://mightymocoffee.com/",
+  "name": "Mighty Missouri Coffee Company",
+  "city": "Bismarck",
+  "state": "ND",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-34848562",
+  "domain": "oldschoolcoffeepdx.com",
+  "website": "https://oldschoolcoffeepdx.com/",
+  "name": "Old School Coffee",
+  "city": "Portland",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-37025497",
+  "domain": "mudslingerscoffeemo.com",
+  "website": "https://mudslingerscoffeemo.com/",
+  "name": "Mudslingers Drive-Thru Coffee",
+  "city": "Kennett",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-37066800",
+  "domain": "l3craftcoffee.com",
+  "website": "https://l3craftcoffee.com/",
+  "name": "L3 Craft Coffee",
+  "city": "Cypress",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-37080160",
+  "domain": "rockymountaincafe.com",
+  "website": "https://rockymountaincafe.com/",
+  "name": "Rocky Mountain Cafe",
+  "city": "La Porte",
+  "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-37667848",
+  "domain": "coffeecottagecafe.net",
+  "website": "https://coffeecottagecafe.net/",
+  "name": "The Coffee Cottage",
+  "city": "Port Angeles",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-37747631",
+  "domain": "menehunecoffee.com",
+  "website": "https://menehunecoffee.com/",
+  "name": "Menehune Coffee Company",
+  "city": "Captain Cook",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-38951248",
+  "domain": "petrossian.com",
+  "website": "https://petrossian.com/",
+  "name": "CBD Boutique",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-39394679",
+  "domain": "wisteriacoffee.com",
+  "website": "https://wisteriacoffee.com/",
+  "name": "Wisteria Coffee Company",
+  "city": "King",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-40459113",
+  "domain": "highnotecoffee.com",
+  "website": "https://highnotecoffee.com/",
+  "name": "HighNote Coffee",
+  "city": "San Carlos",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-41360333",
+  "domain": "venividivicicafe.com",
+  "website": "https://venividivicicafe.com/",
+  "name": "Veni Vidi Vici Cafe",
+  "city": "Kannapolis",
+  "state": "NC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-43126715",
+  "domain": "thecafe2011.com",
+  "website": "https://thecafe2011.com/",
+  "name": "Cafe Walnut",
+  "city": "Philadelphia",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-43327022",
+  "domain": "perkupindy.com",
+  "website": "https://perkupindy.com/",
+  "name": "Perk Up",
+  "city": "Indianapolis",
+  "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-44399491",
+  "domain": "breadcoffeecake.com",
+  "website": "https://breadcoffeecake.com/",
+  "name": "Bread Coffee & Cake",
+  "city": "Saint Paul",
+  "state": "MN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-45605993",
+  "domain": "kismetcoffeecompany.com",
+  "website": "https://kismetcoffeecompany.com/",
+  "name": "Kismet Coffee Company",
+  "city": "Bay Shore",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-45884630",
+  "domain": "luccaeatery.com",
+  "website": "https://luccaeatery.com/",
+  "name": "Lucca Coffee and Eatery",
+  "city": "Louisville",
+  "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-46477760",
+  "domain": "komadecafe.com",
+  "website": "https://komadecafe.com/",
+  "name": "Komade",
+  "city": "New Iberia",
+  "state": "LA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-46696894",
+  "domain": "kewaskumcoffeecorner.com",
+  "website": "https://kewaskumcoffeecorner.com/",
+  "name": "Coffee Corner Bistro",
+  "city": "Kewaskum",
+  "state": "WI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-47473697",
+  "domain": "bradburyscoffee.com",
+  "website": "https://bradburyscoffee.com/",
+  "name": "Bradbury's Coffee",
+  "city": "Madison",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-47477657",
+  "domain": "empirecoffeetea.com",
+  "website": "https://empirecoffeetea.com/",
+  "name": "Empire Coffee & Tea",
+  "city": "Hoboken",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-47515545",
+  "domain": "espresso-news.myshopify.com",
+  "website": "https://espresso-news.myshopify.com/",
+  "name": "Espresso News",
+  "city": "Boone",
+  "state": "NC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-47517477",
+  "domain": "antoines.com",
+  "website": "https://antoines.com/",
+  "name": "Antoine's Annex",
+  "city": "New Orleans",
+  "state": "LA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-47717164",
+  "domain": "orders.cremaespressogourmet.com",
+  "website": "https://orders.cremaespressogourmet.com/",
+  "name": "Crema Espresso Gourmet",
+  "city": "Dunwoody",
+  "state": "GA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-47718331",
+  "domain": "magiccactus.com",
+  "website": "https://magiccactus.com/",
+  "name": "Magic Cactus",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-48089609",
+  "domain": "primarycoffeeco.com",
+  "website": "https://primarycoffeeco.com/",
+  "name": "Primary Coffee Company",
+  "city": "La Vista",
+  "state": "NE",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-48277145",
+  "domain": "strictlyorganic.com",
+  "website": "https://strictlyorganic.com/",
+  "name": "Strictly Organic",
+  "city": "Bend",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-49458795",
+  "domain": "flyinggoatcoffee.com",
+  "website": "https://flyinggoatcoffee.com/",
+  "name": "Flying Goat Coffee",
+  "city": "Healdsburg",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-49624322",
+  "domain": "donutsontherunonline.com",
+  "website": "https://donutsontherunonline.com/",
+  "name": "Donuts on the Run",
+  "city": "Monroe",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-49773667",
+  "domain": "robertemerychocolate.com",
+  "website": "https://robertemerychocolate.com/",
+  "name": "Robert Emery Chocolate Gifts & Tea Room",
+  "city": "Farmington",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-49797096",
+  "domain": "cafearomaonline.com",
+  "website": "https://cafearomaonline.com/",
+  "name": "Cafe Aroma",
+  "city": "Buffalo",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-50372144",
+  "domain": "labarbacoffee.com",
+  "website": "https://labarbacoffee.com/",
+  "name": "La Barba Coffee",
+  "city": "Draper",
+  "state": "UT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-52325566",
+  "domain": "breadfellow.com",
+  "website": "https://breadfellow.com/",
+  "name": "Bread Fellow",
+  "city": "Fort Collins",
+  "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-52482651",
+  "domain": "manhattancafe.com",
+  "website": "https://manhattancafe.com/",
+  "name": "Manhattan Cafe",
+  "city": "Raleigh",
+  "state": "NC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-53124015",
+  "domain": "caffepromenade.com",
+  "website": "https://caffepromenade.com/",
+  "name": "Caffe Promenade",
+  "city": "Allen",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-53615520",
+  "domain": "eyrthbeat.com",
+  "website": "https://eyrthbeat.com/",
+  "name": "eYrthBeat Coffee Company",
+  "city": "Hattiesburg",
+  "state": "MS",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-55577712",
+  "domain": "dps-siteplatform.com",
+  "website": "https://dps-siteplatform.com/",
+  "name": "Ramona's Cafe",
+  "city": "San Antonio",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-55658329",
+  "domain": "roc2.com",
+  "website": "https://roc2.com/",
+  "name": "ROC²",
+  "city": "Cave Creek",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-55773683",
+  "domain": "java-jitters-wa-3.hub.biz",
+  "website": "https://java-jitters-wa-3.hub.biz/",
+  "name": "Royal Grind Espresso",
+  "city": "Everett",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-55890544",
+  "domain": "stonescafeandbakery.com",
+  "website": "https://stonescafeandbakery.com/",
+  "name": "Heart's Stone Restaurant",
+  "city": "North Yarmouth",
+  "state": "ME",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-56140084",
+  "domain": "kaladi.com",
+  "website": "https://kaladi.com/",
+  "name": "Kaladi Brothers Coffee",
+  "city": "Wasilla",
+  "state": "AK",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-57854480",
+  "domain": "shibacoffeeandtea.com",
+  "website": "https://shibacoffeeandtea.com/",
+  "name": "Shiba Coffee and Tea Co.",
+  "city": "Douglasville",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-58490474",
+  "domain": "buffalo-espresso-1.placestars.com",
+  "website": "https://buffalo-espresso-1.placestars.com/",
+  "name": "Buffalo Espresso",
+  "city": "Bothell",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-58789412",
+  "domain": "coffeebeancafepk.com",
+  "website": "https://coffeebeancafepk.com/",
+  "name": "The Coffee Bean & Tea Leaf",
+  "city": "Poughkeepsie",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-59090957",
+  "domain": "kaffemercantile.com",
+  "website": "https://kaffemercantile.com/",
+  "name": "Kaffe Mercantile",
+  "city": "Ogden",
+  "state": "UT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-59393801",
+  "domain": "paragoncoffeehouse.com",
+  "website": "https://paragoncoffeehouse.com/",
+  "name": "Paragon Coffeehouse",
+  "city": "Crescent City",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-59641856",
+  "domain": "theinnercitycafe.com",
+  "website": "https://theinnercitycafe.com/",
+  "name": "Inner City Cafe",
+  "city": "Orange",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-60048692",
+  "domain": "baristas.tv",
+  "website": "https://baristas.tv/",
+  "name": "Baristas coffee",
+  "city": "Tacoma",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-60117243",
+  "domain": "makr.coffee",
+  "website": "https://makr.coffee/",
+  "name": "MAKR Coffee Company",
+  "city": "Sunnyvale",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-60373977",
+  "domain": "larubianyc.com",
+  "website": "https://larubianyc.com/",
+  "name": "La Rubia",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-60374835",
+  "domain": "novacoffeeag.com",
+  "website": "https://novacoffeeag.com/",
+  "name": "Nova Coffee Co",
+  "city": "Arroyo Grande",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-60473311",
+  "domain": "drinkhuff.com",
+  "website": "https://drinkhuff.com/",
+  "name": "Huff Coffee",
+  "city": "Palos Hills",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-61003253",
+  "domain": "streetbrewcoffee.com",
+  "website": "https://streetbrewcoffee.com/",
+  "name": "Street Brew Coffee",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-61144885",
+  "domain": "wickedjoe.com",
+  "website": "https://wickedjoe.com/",
+  "name": "Wicked Joe Organic Coffees",
+  "city": "Topsham",
+  "state": "ME",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-61285355",
+  "domain": "macyscoffee.net",
+  "website": "https://macyscoffee.net/",
+  "name": "Macy's European Coffee House",
+  "city": "Flagstaff",
+  "state": "AZ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-61409624",
+  "domain": "k2-cafe.com",
+  "website": "https://k2-cafe.com/",
+  "name": "K2 Cafe",
+  "city": "Poolesville",
+  "state": "MD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-61748971",
+  "domain": "ninas-cafe-ca-1.hub.biz",
+  "website": "https://ninas-cafe-ca-1.hub.biz/",
+  "name": "Nina's Cafe",
+  "city": "Huntington Park",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-62082330",
+  "domain": "omencoffeeco.com",
+  "website": "https://omencoffeeco.com/",
+  "name": "Omen Coffee Company",
+  "city": "Saint Louis",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-62326465",
+  "domain": "aeroastery.com",
+  "website": "https://aeroastery.com/",
+  "name": "A&E Coffee and Tea",
+  "city": "Manchester",
+  "state": "NH",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-62377831",
+  "domain": "northerncoffeehaus.com",
+  "website": "https://northerncoffeehaus.com/",
+  "name": "Northern Coffee Haus",
+  "city": "Rhinelander",
+  "state": "WI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-62680088",
+  "domain": "finebrewedcafe.com",
+  "website": "https://finebrewedcafe.com/",
+  "name": "Fine Brewed Cafe",
+  "city": "Coeur D'Alene",
+  "state": "ID",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-63112388",
+  "domain": "carabellocoffee.com",
+  "website": "https://carabellocoffee.com/",
+  "name": "Carabello Coffee",
+  "city": "Newport",
+  "state": "KY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-64819789",
+  "domain": "rosencentre.com",
+  "website": "https://rosencentre.com/",
+  "name": "Smoooth Java Coffee Shop",
+  "city": "Orlando",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-65080200",
+  "domain": "anchorheadcoffee.com",
+  "website": "https://anchorheadcoffee.com/",
+  "name": "Anchorhead Coffee and Bakery",
+  "city": "Seattle",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-65594448",
+  "domain": "bethalcafe.com",
+  "website": "https://bethalcafe.com/",
+  "name": "BethAl Cafe",
+  "city": "Union City",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-66373095",
+  "domain": "bubbleteasupply.com",
+  "website": "https://bubbleteasupply.com/",
+  "name": "Thanh French Coffee & Bubble Tea",
+  "city": "Honolulu",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-67392005",
+  "domain": "felicianacoffee.com",
+  "website": "https://felicianacoffee.com/",
+  "name": "Feliciana Coffee",
+  "city": "United States Air Force Academy",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-67418073",
+  "domain": "ponyexpresso.com",
+  "website": "https://ponyexpresso.com/",
+  "name": "Jax Gourmet Coffee & Snow",
+  "city": "Scottsbluff",
+  "state": "NE",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-67497673",
+  "domain": "pilarcoffeebar.com",
+  "website": "https://pilarcoffeebar.com/",
+  "name": "Pilar Coffee Bar & Iced Treats",
+  "city": "Deerfield Beach",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-67568645",
+  "domain": "borderlandscoffeeco.com",
+  "website": "https://borderlandscoffeeco.com/",
+  "name": "Borderlands Coffee Co",
+  "city": "Eureka",
+  "state": "SD",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-67652309",
+  "domain": "soggysurfer.com",
+  "website": "https://soggysurfer.com/",
+  "name": "Soggy Surfer",
+  "city": "Salida",
+  "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-67861499",
+  "domain": "driftwood.coffee",
+  "website": "https://driftwood.coffee/",
+  "name": "Driftwood Coffee Company",
+  "city": "Corpus Christi",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-68052302",
+  "domain": "dickandjanes.com",
+  "website": "https://dickandjanes.com/",
+  "name": "Dick & Jane's",
+  "city": "Deland",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-68611480",
+  "domain": "bettertogethercoffee.co",
+  "website": "https://bettertogethercoffee.co/",
+  "name": "Better Together Coffee Co.",
+  "city": "Coeur d'Alene",
+  "state": "ID",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-68902041",
+  "domain": "essentialbaking.com",
+  "website": "https://essentialbaking.com/",
+  "name": "Essential Baking Company",
+  "city": "Seattle",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-70894421",
+  "domain": "valleypikefarmmarket.com",
+  "website": "https://valleypikefarmmarket.com/",
+  "name": "The Rumor Mill Coffee",
+  "city": "Weyers Cave",
+  "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-71995476",
+  "domain": "bootleggercoffeeco.com",
+  "website": "https://bootleggercoffeeco.com/",
+  "name": "Bootlegger Coffee Co",
+  "city": "Mt Pleasant",
+  "state": "SC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-72835172",
+  "domain": "cosmicsavories.com",
+  "website": "https://cosmicsavories.com/",
+  "name": "Cosmic Donuts",
+  "city": "Palm Harbor",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-74193929",
+  "domain": "joyhouse.coffee",
+  "website": "https://joyhouse.coffee/",
+  "name": "Joyhouse Coffee",
+  "city": "Bismarck",
+  "state": "ND",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-74535535",
+  "domain": "louisesplacecafe.com",
+  "website": "https://louisesplacecafe.com/",
+  "name": "Louise's Place Cafe and Pantry Provisions",
+  "city": "Two Harbors",
+  "state": "MN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-76279833",
+  "domain": "woodstockgardencafe.net",
+  "website": "https://woodstockgardencafe.net/",
+  "name": "Woodstock Garden Cafe",
+  "city": "Woodstock",
+  "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-76417882",
+  "domain": "hawaiislocalbuzz.com",
+  "website": "https://hawaiislocalbuzz.com/",
+  "name": "Hawaii's Local Buzz Store & Showroom",
+  "city": "Honolulu",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-76822855",
+  "domain": "cathyshealthcafe.com",
+  "website": "https://cathyshealthcafe.com/",
+  "name": "Cathy's Health Cafe",
+  "city": "Islip",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-77334108",
+  "domain": "lewicafe.com",
+  "website": "https://lewicafe.com/",
+  "name": "Lewi Cafe",
+  "city": "Silver Spring",
+  "state": "MD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-77783968",
+  "domain": "yellowrosevegan.com",
+  "website": "https://yellowrosevegan.com/",
+  "name": "Yellow Rose Vegan Bakery & Cafe",
+  "city": "Maplewood",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-78207044",
+  "domain": "casablancainn.com",
+  "website": "https://casablancainn.com/",
+  "name": "Nero's Waterfront Cafe",
+  "city": "St Augustine",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-78228861",
+  "domain": "camillessiouxfalls.com",
+  "website": "https://camillessiouxfalls.com/",
+  "name": "Camille's Sidewalk Cafe",
+  "city": "Sioux Falls",
+  "state": "SD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-78527915",
+  "domain": "amackswell.com",
+  "website": "https://amackswell.com/",
+  "name": "Amack's Well",
+  "city": "Batesville",
+  "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-79169073",
+  "domain": "uwwjitters.org",
+  "website": "https://uwwjitters.org/",
+  "name": "Jitters Coffeehouse",
+  "city": "Whitewater",
+  "state": "WI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-79362009",
+  "domain": "magdalenacoffee.com",
+  "website": "https://magdalenacoffee.com/",
+  "name": "Magdalena Coffee & Houseplants",
+  "city": "Miami",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-79754544",
+  "domain": "indyofrozenyogurt.com",
+  "website": "https://indyofrozenyogurt.com/",
+  "name": "Indyo Frozen Yogurt",
+  "city": "Greenwood",
+  "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-79950602",
+  "domain": "mochaandmayhem.com",
+  "website": "https://mochaandmayhem.com/",
+  "name": "Mocha and Mayhem Indoor Play Cafe",
+  "city": "Waterford",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-80169460",
+  "domain": "islandcafefamilydining.com",
+  "website": "https://islandcafefamilydining.com/",
+  "name": "The Island Cafe of Port Aransas",
+  "city": "Port Aransas",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-80271305",
+  "domain": "cutbowespresso.net",
+  "website": "https://cutbowespresso.net/",
+  "name": "Cutbow Espresso",
+  "city": "Clinton",
+  "state": "MT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-82220622",
+  "domain": "nobecafe.com",
+  "website": "https://nobecafe.com/",
+  "name": "North Beach Cafe & Creamery",
+  "city": "Ventnor City",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-82899032",
+  "domain": "bloomcoffeehouse.com",
+  "website": "https://bloomcoffeehouse.com/",
+  "name": "Bloom Coffee House",
+  "city": "Kewaunee",
+  "state": "WI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-82960847",
+  "domain": "trixiescoffee.myshopify.com",
+  "website": "https://trixiescoffee.myshopify.com/",
+  "name": "Trixie's Coffee Shop",
+  "city": "Montgomery",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-83020209",
+  "domain": "lofo.studio",
+  "website": "https://lofo.studio/",
+  "name": "Lofo",
+  "city": "Syracuse",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-84090568",
+  "domain": "redoakcafe.net",
+  "website": "https://redoakcafe.net/",
+  "name": "Red Oak Cafe",
+  "city": "League City",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-84665389",
+  "domain": "innerbeancafe.com",
+  "website": "https://innerbeancafe.com/",
+  "name": "Inner Bean Cafe",
+  "city": "Augusta",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-87101516",
+  "domain": "noshboxsf.com",
+  "website": "https://noshboxsf.com/",
+  "name": "The Nosh Box",
+  "city": "San Francisco",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-88022371",
+  "domain": "jupiterhousecoffee.com",
+  "website": "https://jupiterhousecoffee.com/",
+  "name": "Jupiter House",
+  "city": "Denton",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-89389633",
+  "domain": "eastelevate.com",
+  "website": "https://eastelevate.com/",
+  "name": "Elevate",
+  "city": "Harvest",
+  "state": "AL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-89805705",
+  "domain": "enjoyperks.com",
+  "website": "https://enjoyperks.com/",
+  "name": "Perks Coffee & Cafe",
+  "city": "Metairie",
+  "state": "LA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-90658311",
+  "domain": "aromoscafe.com",
+  "website": "https://aromoscafe.com/",
+  "name": "Romo's Cafe",
+  "city": "Hayward",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-91099741",
+  "domain": "greatamericanvideoandespresso.com",
+  "website": "https://greatamericanvideoandespresso.com/",
+  "name": "Great American Video & Espresso",
+  "city": "Milwaukie",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-91193114",
+  "domain": "bichotacoffee.com",
+  "website": "https://bichotacoffee.com/",
+  "name": "Bichota Coffee",
+  "city": "Minneapolis",
+  "state": "MN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-92170280",
+  "domain": "sagemariecoffee.com",
+  "website": "https://sagemariecoffee.com/",
+  "name": "Sage Marie's Coffee & Tea",
+  "city": "Huntersville",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-92833871",
+  "domain": "thecoffee-mill.com",
+  "website": "https://thecoffee-mill.com/",
+  "name": "The Coffee Mill",
+  "city": "Oakland",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-93266856",
+  "domain": "mamaceciles.com",
+  "website": "https://mamaceciles.com/",
+  "name": "Mama Cecile's Barista & Cafe",
+  "city": "Colorado City",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-94561051",
+  "domain": "cherrycoffeelab.com",
+  "website": "https://cherrycoffeelab.com/",
+  "name": "Cherry Coffee",
+  "city": "Bullhead City",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-94755031",
+  "domain": "foundationcoffeeco.com",
+  "website": "https://foundationcoffeeco.com/",
+  "name": "Foundation Coffee",
+  "city": "Tampa",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-97887396",
+  "domain": "teawithtae.com",
+  "website": "https://teawithtae.com/",
+  "name": "Tea with Tae (Warehouse) | No Retail or In-Person | Local Pickup Only!",
+  "city": "Golden",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-98320104",
+  "domain": "filtradopr.com",
+  "website": "https://filtradopr.com/",
+  "name": "Filtrado",
+  "city": "Longwood",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-98588846",
+  "domain": "cappuccinobythesea.com",
+  "website": "https://cappuccinobythesea.com/",
+  "name": "Cappuccino by The Sea",
+  "city": "Supply",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ }
+]

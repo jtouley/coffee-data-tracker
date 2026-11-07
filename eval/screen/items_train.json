@@ -1,0 +1,1532 @@
+[
+ {
+  "id": "tr-00155784",
+  "domain": "bigironcoffee.com",
+  "website": "https://bigironcoffee.com/",
+  "name": "Big Iron Coffee Co.",
+  "city": "Steamboat Springs",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-01150219",
+  "domain": "mukwanocoffee.com",
+  "website": "https://mukwanocoffee.com/",
+  "name": "Mukwano Coffee",
+  "city": "Rawlins",
+  "state": "WY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-01553024",
+  "domain": "coffeemeupportland.com",
+  "website": "https://coffeemeupportland.com/",
+  "name": "Coffee ME Up",
+  "city": "Portland",
+  "state": "ME",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-01871029",
+  "domain": "riptidesanjuan.com",
+  "website": "https://riptidesanjuan.com/",
+  "name": "Riptide Cafe",
+  "city": "Friday Harbor",
+  "state": "WA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-01906697",
+  "domain": "thearrowheadcoffee.com",
+  "website": "https://thearrowheadcoffee.com/",
+  "name": "Arrowhead Coffee",
+  "city": "Yacolt",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-02474523",
+  "domain": "kintsugi-dc.com",
+  "website": "https://kintsugi-dc.com/",
+  "name": "Kintsugi Cafe",
+  "city": "Washington",
+  "state": "DC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-02829305",
+  "domain": "1828coffee.com",
+  "website": "https://1828coffee.com/",
+  "name": "1828 Coffee Co.",
+  "city": "Zebulon",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-03488285",
+  "domain": "brickandmortar.coffee",
+  "website": "https://brickandmortar.coffee/",
+  "name": "Brick & Mortar Coffee",
+  "city": "Springfield",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-05662761",
+  "domain": "sanvelcoffee.com",
+  "website": "https://sanvelcoffee.com/",
+  "name": "Cumbrescoffee",
+  "city": "Delray Beach",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-05696224",
+  "domain": "sweet-nation.com",
+  "website": "https://sweet-nation.com/",
+  "name": "The Sweet Nation",
+  "city": "Gadsden",
+  "state": "AL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-05935299",
+  "domain": "agadirfl.com",
+  "website": "https://agadirfl.com/",
+  "name": "Riwaa Yemeni Cafe",
+  "city": "Orlando",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-06239278",
+  "domain": "shopzabunicoffee.com",
+  "website": "https://shopzabunicoffee.com/",
+  "name": "Zabuni Specialty Coffee",
+  "city": "Grand Island",
+  "state": "NE",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-06429888",
+  "domain": "renegadecoffeeaz.com",
+  "website": "https://renegadecoffeeaz.com/",
+  "name": "Renegade Coffee Company",
+  "city": "Mesa",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-06807588",
+  "domain": "sheerasweets.com",
+  "website": "https://sheerasweets.com/",
+  "name": "Cafe Sheera",
+  "city": "Beverly Hills",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-07046837",
+  "domain": "mile22roastery.com",
+  "website": "https://mile22roastery.com/",
+  "name": "Mile 22 Coffee",
+  "city": "Black Creek",
+  "state": "WI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-07100486",
+  "domain": "homcoffees.com",
+  "website": "https://homcoffees.com/",
+  "name": "Hōm Coffee",
+  "city": "Hercules",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-07242060",
+  "domain": "ci.monroe.la.us",
+  "website": "https://ci.monroe.la.us/",
+  "name": "Cosmetic Cafe",
+  "city": "Monroe",
+  "state": "LA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-07399102",
+  "domain": "prairiewitchcoffee.com",
+  "website": "https://prairiewitchcoffee.com/",
+  "name": "Prairie Witch Coffee",
+  "city": "Okmulgee",
+  "state": "OK",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-09408575",
+  "domain": "frenzicoffee.com",
+  "website": "https://frenzicoffee.com/",
+  "name": "Frenzi Coffee",
+  "city": "Maquoketa",
+  "state": "IA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-10223751",
+  "domain": "recess.love",
+  "website": "https://recess.love/",
+  "name": "Recess",
+  "city": "Indianapolis",
+  "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-10806529",
+  "domain": "baysidetavern.com",
+  "website": "https://baysidetavern.com/",
+  "name": "Bayside Coffee",
+  "city": "Fish Creek",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-11704030",
+  "domain": "moderncoffeeoakland.com",
+  "website": "https://moderncoffeeoakland.com/",
+  "name": "Modern Coffee",
+  "city": "Oakland",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-11904200",
+  "domain": "iriscoffeelab.com",
+  "website": "https://iriscoffeelab.com/",
+  "name": "Iris Coffee Lab",
+  "city": "Raleigh",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-12103427",
+  "domain": "college.oxy.edu",
+  "website": "https://college.oxy.edu/",
+  "name": "The Green Bean",
+  "city": "Los Angeles",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-13966154",
+  "domain": "typicallycaffeinated.com",
+  "website": "https://typicallycaffeinated.com/",
+  "name": "TypicallyCaffeinated",
+  "city": "Richmond",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-14423514",
+  "domain": "jaysbcafe.com",
+  "website": "https://jaysbcafe.com/",
+  "name": "Jay's B Cafe",
+  "city": "Miami",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-14468979",
+  "domain": "feedyoursoul.com",
+  "website": "https://feedyoursoul.com/",
+  "name": "Feed Your Soul Cafe",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-15109666",
+  "domain": "civilizedcoffee.com",
+  "website": "https://civilizedcoffee.com/",
+  "name": "Civilized Coffee",
+  "city": "Sequim",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-16076232",
+  "domain": "chathamcookware.com",
+  "website": "https://chathamcookware.com/",
+  "name": "Chatham Cookware",
+  "city": "Chatham",
+  "state": "MA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-16444682",
+  "domain": "firststreetcoffeeexchange.com",
+  "website": "https://firststreetcoffeeexchange.com/",
+  "name": "First Street Coffee House",
+  "city": "Gilroy",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-16814536",
+  "domain": "grinchos.online",
+  "website": "https://grinchos.online/",
+  "name": "Grinchos",
+  "city": "San Jose",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-16958143",
+  "domain": "shawscoffee.com",
+  "website": "https://shawscoffee.com/",
+  "name": "Shaw's Coffee Ltd.",
+  "city": "St. Louis",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-17227077",
+  "domain": "theroostreno.com",
+  "website": "https://theroostreno.com/",
+  "name": "The Roost",
+  "city": "Reno",
+  "state": "NV",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-18475610",
+  "domain": "bettyloucoffeeco.com",
+  "website": "https://bettyloucoffeeco.com/",
+  "name": "Betty Lou Coffee Co",
+  "city": "New Braunfels",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-20347237",
+  "domain": "citycafe-tx.com",
+  "website": "https://citycafe-tx.com/",
+  "name": "City Cafe",
+  "city": "Iowa Park",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-20349617",
+  "domain": "rushespressocafe.com",
+  "website": "https://rushespressocafe.com/",
+  "name": "Rush Espresso",
+  "city": "Charlotte",
+  "state": "NC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-20661639",
+  "domain": "covenantcoffee.org",
+  "website": "https://covenantcoffee.org/",
+  "name": "Cloud nine coffee company",
+  "city": "Bakersfield",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-21042314",
+  "domain": "turbomember.com",
+  "website": "https://turbomember.com/",
+  "name": "TURBO - Coffee Kitchen Wine",
+  "city": "The Colony",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-21148720",
+  "domain": "lamabeanscafe.com",
+  "website": "https://lamabeanscafe.com/",
+  "name": "Lama Beans Cafe",
+  "city": "Berkeley",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-22133448",
+  "domain": "thefaintinggoatcafe.com",
+  "website": "https://thefaintinggoatcafe.com/",
+  "name": "The Fainting Goat Cafe",
+  "city": "Nashville",
+  "state": "TN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-22143513",
+  "domain": "espresso77.com",
+  "website": "https://espresso77.com/",
+  "name": "Espresso 77",
+  "city": "Jackson Heights",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-23399776",
+  "domain": "wakeupcoffeeco.com",
+  "website": "https://wakeupcoffeeco.com/",
+  "name": "Wake Up Coffee Company",
+  "city": "Brunswick",
+  "state": "GA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-24216784",
+  "domain": "crepesandgames.com",
+  "website": "https://crepesandgames.com/",
+  "name": "Crepes and Games",
+  "city": "Genoa Twp",
+  "state": "MI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-24294114",
+  "domain": "luckycafesac.com",
+  "website": "https://luckycafesac.com/",
+  "name": "Lucky Cafe",
+  "city": "Sacramento",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-24466671",
+  "domain": "kellys-cafe-restaurant.food96.com",
+  "website": "https://kellys-cafe-restaurant.food96.com/",
+  "name": "Kelly's Cafe",
+  "city": "Wildwood",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-24742008",
+  "domain": "shortdsbeans.com",
+  "website": "https://shortdsbeans.com/",
+  "name": "ShortD's",
+  "city": "Longmont",
+  "state": "CO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-25324353",
+  "domain": "alwayscoffee.co",
+  "website": "https://alwayscoffee.co/",
+  "name": "Always Coffee",
+  "city": "Bell",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-25438325",
+  "domain": "orderalphafreshchoice.com",
+  "website": "https://orderalphafreshchoice.com/",
+  "name": "Alpha Fresh Choice",
+  "city": "Southfield",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-26519375",
+  "domain": "landtoseanyc.com",
+  "website": "https://landtoseanyc.com/",
+  "name": "Land to Sea",
+  "city": "Brooklyn",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-26906886",
+  "domain": "thecoffeemess.com",
+  "website": "https://thecoffeemess.com/",
+  "name": "The Coffee Mess",
+  "city": "Columbus",
+  "state": "OH",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-27480037",
+  "domain": "charleston-cafe.com",
+  "website": "https://charleston-cafe.com/",
+  "name": "Charleston Cafe",
+  "city": "Surfside Beach",
+  "state": "SC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-28225767",
+  "domain": "handlebarcafe.com",
+  "website": "https://handlebarcafe.com/",
+  "name": "Handlebar Cafe",
+  "city": "Baltimore",
+  "state": "MD",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-28737022",
+  "domain": "kiddcoffeemason.com",
+  "website": "https://kiddcoffeemason.com/",
+  "name": "Kidd Coffee & Wine Bar",
+  "city": "Mason",
+  "state": "OH",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-29129361",
+  "domain": "ljhcc.com",
+  "website": "https://ljhcc.com/",
+  "name": "Hometown Cafe",
+  "city": "Gilbert",
+  "state": "WV",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-29762886",
+  "domain": "dailykneadscafe.com",
+  "website": "https://dailykneadscafe.com/",
+  "name": "Daily Kneads Cafe",
+  "city": "Arcola",
+  "state": "IL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-29859595",
+  "domain": "bevybeanscoffee.toast.site",
+  "website": "https://bevybeanscoffee.toast.site/",
+  "name": "Bevy Beans Coffee",
+  "city": "Chino",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-30009104",
+  "domain": "devilmountaincoffee.com",
+  "website": "https://devilmountaincoffee.com/",
+  "name": "Devil Mountain Coffee Company",
+  "city": "Concord",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-30157515",
+  "domain": "cafebachis.com",
+  "website": "https://cafebachis.com/",
+  "name": "Cafe Bachi's",
+  "city": "Emmaus",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-30318239",
+  "domain": "tricitycoffee.com",
+  "website": "https://tricitycoffee.com/",
+  "name": "Tri-City Coffee Company",
+  "city": "Kennewick",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-31455407",
+  "domain": "ozzyscoffee.com",
+  "website": "https://ozzyscoffee.com/",
+  "name": "Ozzy's Coffee Stand",
+  "city": "Brooklyn",
+  "state": "NY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-32212073",
+  "domain": "successcoffee.store",
+  "website": "https://successcoffee.store/",
+  "name": "SUCCE55",
+  "city": "Miami",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-32274389",
+  "domain": "kenaicatering.com",
+  "website": "https://kenaicatering.com/",
+  "name": "Iditarod Cafe",
+  "city": "Kenai",
+  "state": "AK",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-32858584",
+  "domain": "konamountaincoffee.com",
+  "website": "https://konamountaincoffee.com/",
+  "name": "Kona Mountain Coffee",
+  "city": "Kailua-Kona",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-33650074",
+  "domain": "skratchlabs.com",
+  "website": "https://skratchlabs.com/",
+  "name": "Skratch Labs Cafe",
+  "city": "Boulder",
+  "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-34304876",
+  "domain": "surferscoffee.com",
+  "website": "https://surferscoffee.com/",
+  "name": "Surfers Coffee",
+  "city": "Wahiawa",
+  "state": "HI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-34467314",
+  "domain": "bridgecoffeenc.com",
+  "website": "https://bridgecoffeenc.com/",
+  "name": "Bridge Coffee",
+  "city": "Carrboro",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-34707398",
+  "domain": "yellowbike.coffee",
+  "website": "https://yellowbike.coffee/",
+  "name": "Yellow Bike Coffee",
+  "city": "Duluth",
+  "state": "MN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-35171704",
+  "domain": "mygirlscafe.com",
+  "website": "https://mygirlscafe.com/",
+  "name": "MyGirls Cafe",
+  "city": "South Abington Township",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-36056375",
+  "domain": "groundsfordivorcecoffee.com",
+  "website": "https://groundsfordivorcecoffee.com/",
+  "name": "Grounds for Divorce Coffee",
+  "city": "Westport",
+  "state": "CT",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-36489080",
+  "domain": "kateskoffee.com",
+  "website": "https://kateskoffee.com/",
+  "name": "Kate's Koffee",
+  "city": "Las Vegas",
+  "state": "NV",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-36712718",
+  "domain": "coastland.winfieldcoffee.com",
+  "website": "https://coastland.winfieldcoffee.com/",
+  "name": "Winfield Street Coffee",
+  "city": "NAPLES",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-36890201",
+  "domain": "salmonriversmokehouse.com",
+  "website": "https://salmonriversmokehouse.com/",
+  "name": "Salmon River Coffee House",
+  "city": "Cannon Beach",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-38492326",
+  "domain": "seasonscafe.com",
+  "website": "https://seasonscafe.com/",
+  "name": "Seasons Café And Deli",
+  "city": "Rockland",
+  "state": "MA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-39150166",
+  "domain": "drinkmauds.com",
+  "website": "https://drinkmauds.com/",
+  "name": "Maud's Coffee & Tea",
+  "city": "San Diego",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-39182257",
+  "domain": "ecafecoffee.com",
+  "website": "https://ecafecoffee.com/",
+  "name": "eCafé Coffee House & Business Center",
+  "city": "Overland Park",
+  "state": "KS",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-39865977",
+  "domain": "tasteofgracecafe.com",
+  "website": "https://tasteofgracecafe.com/",
+  "name": "Taste Of Grace Cafe'",
+  "city": "Niagara Falls",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-39897745",
+  "domain": "jos15.com",
+  "website": "https://jos15.com/",
+  "name": "JOS Fifteen Coffee, Ice Cream, Bakery, and Sweets",
+  "city": "Antioch",
+  "state": "TN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-40264030",
+  "domain": "cafelibertyeats.com",
+  "website": "https://cafelibertyeats.com/",
+  "name": "Cafe Liberty",
+  "city": "Kenilworth",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-41077785",
+  "domain": "rubys.com",
+  "website": "https://rubys.com/",
+  "name": "Ruby's Dinner",
+  "city": "Temecula",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-41439543",
+  "domain": "firstdatecoffeeshops.com",
+  "website": "https://firstdatecoffeeshops.com/",
+  "name": "First Date Coffee Shop",
+  "city": "Toms River",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-41746545",
+  "domain": "zipcodemc.com",
+  "website": "https://zipcodemc.com/",
+  "name": "Zip Code Media Cafe",
+  "city": "Plano",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-41784528",
+  "domain": "villagetrough.com",
+  "website": "https://villagetrough.com/",
+  "name": "Berea Hometown WoodSongs Coffeehouse",
+  "city": "Berea",
+  "state": "KY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-41952109",
+  "domain": "akcoffeecompany.com",
+  "website": "https://akcoffeecompany.com/",
+  "name": "AK Coffee Company",
+  "city": "Anchorage",
+  "state": "AK",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-41972388",
+  "domain": "swamiscafesd.com",
+  "website": "https://swamiscafesd.com/",
+  "name": "Swami's Cafe",
+  "city": "La Mesa",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-43713636",
+  "domain": "bonescoffee.com",
+  "website": "https://bonescoffee.com/",
+  "name": "Bones Coffee",
+  "city": "Cape Coral",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-44160982",
+  "domain": "coffeecartla.com",
+  "website": "https://coffeecartla.com/",
+  "name": "Coffee Cart LosAngeles",
+  "city": "Los Angeles",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-44634125",
+  "domain": "noisettepatisserie.com",
+  "website": "https://noisettepatisserie.com/",
+  "name": "Noisette Cafe & French Patisserie",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-45356076",
+  "domain": "baristasbouquet.com",
+  "website": "https://baristasbouquet.com/",
+  "name": "Baristas Bouquet West Des Moines",
+  "city": "West Des Moines",
+  "state": "IA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-46041723",
+  "domain": "hiddendoorcafeor.com",
+  "website": "https://hiddendoorcafeor.com/",
+  "name": "Hidden Door Cafe",
+  "city": "Medford",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-46259221",
+  "domain": "bayblendcafe.com",
+  "website": "https://bayblendcafe.com/",
+  "name": "Bay Blend Cafe",
+  "city": "Oakland",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-46909000",
+  "domain": "cloudforestcafe.com",
+  "website": "https://cloudforestcafe.com/",
+  "name": "Cloud Forest Cafe",
+  "city": "Davis",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-47272699",
+  "domain": "binghams.coffee.house",
+  "website": "https://binghams.coffee.house/",
+  "name": "Bingham's",
+  "city": "Arrow Rock",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-48247343",
+  "domain": "sexycoffeepdx.com",
+  "website": "https://sexycoffeepdx.com/",
+  "name": "GrindHouse Coffee",
+  "city": "Portland",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-48435669",
+  "domain": "timhortons.ca",
+  "website": "https://timhortons.ca/",
+  "name": "Tim Hortons",
+  "city": "Harper Woods",
+  "state": "MI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-48877089",
+  "domain": "playcafeforkids.com",
+  "website": "https://playcafeforkids.com/",
+  "name": "Play' Cafe",
+  "city": "Detroit",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-49521329",
+  "domain": "neighborcoffee.co",
+  "website": "https://neighborcoffee.co/",
+  "name": "Neighbor Coffee and Friends",
+  "city": "Austin",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-50607383",
+  "domain": "graytcoffeehouse.com",
+  "website": "https://graytcoffeehouse.com/",
+  "name": "Grayt Coffee",
+  "city": "Santa Rosa Beach",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-53630534",
+  "domain": "visitthecapitol.gov",
+  "website": "https://visitthecapitol.gov/",
+  "name": "The Capitol Cafe",
+  "city": "Washington",
+  "state": "DC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-53656408",
+  "domain": "ph.coffee",
+  "website": "https://ph.coffee/",
+  "name": "PH Coffee",
+  "city": "Kansas City",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-54598955",
+  "domain": "naranjacafe.com",
+  "website": "https://naranjacafe.com/",
+  "name": "Naranja Cafe",
+  "city": "Denton",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-55786748",
+  "domain": "jitterhouse.com",
+  "website": "https://jitterhouse.com/",
+  "name": "Jitter House",
+  "city": "Hoquiam",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-55810131",
+  "domain": "drinkconti.com",
+  "website": "https://drinkconti.com/",
+  "name": "Conti Coffee",
+  "city": "Louisville",
+  "state": "KY",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-56386699",
+  "domain": "lafleurcafenyc.com",
+  "website": "https://lafleurcafenyc.com/",
+  "name": "La Fleur Cafe",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-57033833",
+  "domain": "bakedbrewed.com",
+  "website": "https://bakedbrewed.com/",
+  "name": "Baked and Brewed Cafe",
+  "city": "Alton",
+  "state": "NH",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-57755891",
+  "domain": "fuellafayette.com",
+  "website": "https://fuellafayette.com/",
+  "name": "Fuel West",
+  "city": "West Lafayette",
+  "state": "IN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-57934336",
+  "domain": "growdeepreachwide.org",
+  "website": "https://growdeepreachwide.org/",
+  "name": "Connect Café at RVCF Church",
+  "city": "Bradley",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-58158665",
+  "domain": "staywokepnw.com",
+  "website": "https://staywokepnw.com/",
+  "name": "Stay Woke",
+  "city": "Eugene",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-60748360",
+  "domain": "stateandmain.coffee",
+  "website": "https://stateandmain.coffee/",
+  "name": "State & Main",
+  "city": "Scottville",
+  "state": "MI",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-61385758",
+  "domain": "therenaissancecafe.com",
+  "website": "https://therenaissancecafe.com/",
+  "name": "Renaissance Café",
+  "city": "Leavenworth",
+  "state": "WA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-62497715",
+  "domain": "mycanni.com",
+  "website": "https://mycanni.com/",
+  "name": "Canni Infusion Bar and Cafe",
+  "city": "Milwaukee",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-62828904",
+  "domain": "jtjavahouselancaster.gastrobars.com",
+  "website": "https://jtjavahouselancaster.gastrobars.com/",
+  "name": "JT Java House",
+  "city": "Lancaster",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-63499507",
+  "domain": "aromacafetero.us",
+  "website": "https://aromacafetero.us/",
+  "name": "Aroma Cafetero USA",
+  "city": "Linden",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-65173489",
+  "domain": "youngstowncoffee.com",
+  "website": "https://youngstowncoffee.com/",
+  "name": "Youngstown Coffee Co.",
+  "city": "Youngstown",
+  "state": "OH",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-65480752",
+  "domain": "oldkatycoffee.com",
+  "website": "https://oldkatycoffee.com/",
+  "name": "Old Katy Coffee",
+  "city": "Katy",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-66872146",
+  "domain": "fikafikacoffee.com",
+  "website": "https://fikafikacoffee.com/",
+  "name": "Fika Fika Coffee",
+  "city": "Pasadena",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-67172965",
+  "domain": "cabincoffeecafe.com",
+  "website": "https://cabincoffeecafe.com/",
+  "name": "Cabin Coffee Cafe",
+  "city": "Phoenix",
+  "state": "AZ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-67307756",
+  "domain": "3blackcatscafe.com",
+  "website": "https://3blackcatscafe.com/",
+  "name": "3 black cats",
+  "city": "Brooklyn",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-68038813",
+  "domain": "maccwinebar.com",
+  "website": "https://maccwinebar.com/",
+  "name": "M.A.C.C.",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-68175706",
+  "domain": "happymonday.company",
+  "website": "https://happymonday.company/",
+  "name": "Happy Monday & Co",
+  "city": "Roseville",
+  "state": "MN",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-68229898",
+  "domain": "jacscoffee.us",
+  "website": "https://jacscoffee.us/",
+  "name": "Jac's Coffee",
+  "city": "Kenilworth",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-68775624",
+  "domain": "ordercafesouthwest.com",
+  "website": "https://ordercafesouthwest.com/",
+  "name": "Cafe Southwest",
+  "city": "Studio City",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-69123102",
+  "domain": "standingwavecoffee.com",
+  "website": "https://standingwavecoffee.com/",
+  "name": "Standing Wave Coffee",
+  "city": "Pittsburgh",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-69217629",
+  "domain": "caferoseanne.com",
+  "website": "https://caferoseanne.com/",
+  "name": "Cafe Roseanne",
+  "city": "Lahaina",
+  "state": "HI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-69345743",
+  "domain": "spoon.com",
+  "website": "https://spoon.com/",
+  "name": "American Spoon Gelato Cafe",
+  "city": "Petoskey",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-69451956",
+  "domain": "homeskillet-redwood.com",
+  "website": "https://homeskillet-redwood.com/",
+  "name": "Homeskillet",
+  "city": "Redwood City",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-70174632",
+  "domain": "sl-cafe.com",
+  "website": "https://sl-cafe.com/",
+  "name": "Salt & Light Cafe",
+  "city": "Reading",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-70481875",
+  "domain": "coffee-lovers.cafes-usa.com",
+  "website": "https://coffee-lovers.cafes-usa.com/",
+  "name": "Coffee Lovers",
+  "city": "Garden Grove",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-71364197",
+  "domain": "wacofork.com",
+  "website": "https://wacofork.com/",
+  "name": "Gospel Cafe",
+  "city": "Waco",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-71774163",
+  "domain": "smokymountainhempcafe.com",
+  "website": "https://smokymountainhempcafe.com/",
+  "name": "Smoky Mountain Hemp Cafe of the Holistic Hempire",
+  "city": "Newport",
+  "state": "TN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-72433093",
+  "domain": "richlandhub.com",
+  "website": "https://richlandhub.com/",
+  "name": "Richlandhub",
+  "city": "Vancouver",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-72720448",
+  "domain": "destincoffeeco.com",
+  "website": "https://destincoffeeco.com/",
+  "name": "Destin Coffee",
+  "city": "Destin",
+  "state": "FL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-72829837",
+  "domain": "earthselements.co",
+  "website": "https://earthselements.co/",
+  "name": "Luna Mobile Cafe",
+  "city": "Walhalla",
+  "state": "SC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-73106270",
+  "domain": "violetsandcream.com",
+  "website": "https://violetsandcream.com/",
+  "name": "Violets & Cream",
+  "city": "Medford",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-73560811",
+  "domain": "coffeecupcafenc.com",
+  "website": "https://coffeecupcafenc.com/",
+  "name": "Coffee Cup Cafe",
+  "city": "Clyde",
+  "state": "NC",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-73929721",
+  "domain": "ecologysports.com",
+  "website": "https://ecologysports.com/",
+  "name": "Base Camp Coffee Bar",
+  "city": "Sister Bay",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-74526242",
+  "domain": "urbanacoffee.com",
+  "website": "https://urbanacoffee.com/",
+  "name": "Urbana Cafe and Gallery",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-75365616",
+  "domain": "bipartisancafe.com",
+  "website": "https://bipartisancafe.com/",
+  "name": "Bipartisan Cafe",
+  "city": "Portland",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-75683452",
+  "domain": "coffeecreationsbranson.start.page",
+  "website": "https://coffeecreationsbranson.start.page/",
+  "name": "Coffee Creations",
+  "city": "Branson",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-78281861",
+  "domain": "cafeverteandwildwood.com",
+  "website": "https://cafeverteandwildwood.com/",
+  "name": "Wildwood Mercantile and Cafe Verté",
+  "city": "Ronceverte",
+  "state": "WV",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-78550643",
+  "domain": "visitcorny.com",
+  "website": "https://visitcorny.com/",
+  "name": "Cornucopia Coffee and Sweet Shoppe",
+  "city": "Cornucopia",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-79061098",
+  "domain": "sujuscoffee.com",
+  "website": "https://sujuscoffee.com/",
+  "name": "Suju's Coffee & Tea",
+  "city": "Fremont",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-80462022",
+  "domain": "stanzacoffee.com",
+  "website": "https://stanzacoffee.com/",
+  "name": "Stanza Coffee Bar",
+  "city": "San Francisco",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-81616986",
+  "domain": "rocknjoe.com",
+  "website": "https://rocknjoe.com/",
+  "name": "Rock 'n' Joe",
+  "city": "Westfield",
+  "state": "NJ",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-81863574",
+  "domain": "daracafeandbrew.com",
+  "website": "https://daracafeandbrew.com/",
+  "name": "Da Ra Cafe and Brew",
+  "city": "Eugene",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-83422328",
+  "domain": "aeshm.hs.iastate.edu",
+  "website": "https://aeshm.hs.iastate.edu/",
+  "name": "Sparks at Iowa State",
+  "city": "Ames",
+  "state": "IA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-84117351",
+  "domain": "thebackyardia.com",
+  "website": "https://thebackyardia.com/",
+  "name": "The Back Yard",
+  "city": "Collins",
+  "state": "IA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-86869736",
+  "domain": "straycatbrew.com",
+  "website": "https://straycatbrew.com/",
+  "name": "Stray Cat Brew",
+  "city": "Maywood",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-86869865",
+  "domain": "hlanedrygoods.com",
+  "website": "https://hlanedrygoods.com/",
+  "name": "HLane Dry Goods & Coffee",
+  "city": "Swissvale",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-89670401",
+  "domain": "mycoffeesupply.com",
+  "website": "https://mycoffeesupply.com/",
+  "name": "MyCoffeeSupply.com",
+  "city": "St Peters",
+  "state": "MO",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-89751525",
+  "domain": "caffeluxxe.com",
+  "website": "https://caffeluxxe.com/",
+  "name": "Caffe Luxxe",
+  "city": "Santa Barbara",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-90089754",
+  "domain": "elkabeescoffee.com",
+  "website": "https://elkabeescoffee.com/",
+  "name": "Elka Bee's Coffee Haus",
+  "city": "Clackamas",
+  "state": "OR",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-91199574",
+  "domain": "thefruitionlife.com",
+  "website": "https://thefruitionlife.com/",
+  "name": "Fruition Acai & Coffee Cafe",
+  "city": "Birmingham",
+  "state": "MI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-92535391",
+  "domain": "rose-garden.com",
+  "website": "https://rose-garden.com/",
+  "name": "Rose Garden Cafe",
+  "city": "Erie",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-92641726",
+  "domain": "brokencoffeeus.com",
+  "website": "https://brokencoffeeus.com/",
+  "name": "Broken Coffee - Cheongdam Food Hall",
+  "city": "Las Vegas",
+  "state": "NV",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-92917955",
+  "domain": "terraincoffee.com",
+  "website": "https://terraincoffee.com/",
+  "name": "Terrain Coffee Project",
+  "city": "Vancouver",
+  "state": "WA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-93049182",
+  "domain": "oneillcoffee.com",
+  "website": "https://oneillcoffee.com/",
+  "name": "O'Neill Coffee Co",
+  "city": "West Middlesex",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-94022848",
+  "domain": "houseelevenbhm.com",
+  "website": "https://houseelevenbhm.com/",
+  "name": "House Eleven",
+  "city": "Birmingham",
+  "state": "AL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-94191418",
+  "domain": "huckleberry-cafe.com",
+  "website": "https://huckleberry-cafe.com/",
+  "name": "Sandlot Cafe & Catering",
+  "city": "Chester",
+  "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-94651829",
+  "domain": "casagracecoffee.com",
+  "website": "https://casagracecoffee.com/",
+  "name": "Casa Grace Coffee Co.",
+  "city": "Baytown",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-95222404",
+  "domain": "pumphouse-mill.edan.io",
+  "website": "https://pumphouse-mill.edan.io/",
+  "name": "Pumphouse On The Mill",
+  "city": "Wild Rose",
+  "state": "WI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-95301319",
+  "domain": "kocojavacoffee.com",
+  "website": "https://kocojavacoffee.com/",
+  "name": "Koco Java Coffee",
+  "city": "Salisbury",
+  "state": "NC",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-95661217",
+  "domain": "rainbeaujos.com",
+  "website": "https://rainbeaujos.com/",
+  "name": "Rainbeau Jo's",
+  "city": "Lihue",
+  "state": "HI",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-97036264",
+  "domain": "silver-cafe.com",
+  "website": "https://silver-cafe.com/",
+  "name": "Silver Cafe",
+  "city": "San Francisco",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-97332760",
+  "domain": "riverscoffeehouse.com",
+  "website": "https://riverscoffeehouse.com/",
+  "name": "River's Coffee House",
+  "city": "Ashville",
+  "state": "OH",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-98027642",
+  "domain": "alpressocoffee.com",
+  "website": "https://alpressocoffee.com/",
+  "name": "Alpresso Coffee",
+  "city": "Half Moon Bay",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-98297894",
+  "domain": "crossvilleacres.grazecart.com",
+  "website": "https://crossvilleacres.grazecart.com/",
+  "name": "The Farmer’s Table Café",
+  "city": "Crossville",
+  "state": "TN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "tr-98352074",
+  "domain": "hebrewscoffeelbk.com",
+  "website": "https://hebrewscoffeelbk.com/",
+  "name": "He-Brews Coffee",
+  "city": "Lubbock",
+  "state": "TX",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-99037570",
+  "domain": "ihaveabean.com",
+  "website": "https://ihaveabean.com/",
+  "name": "I Have a Bean",
+  "city": "Wheaton",
+  "state": "IL",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-99590426",
+  "domain": "treeloungecoffee.com",
+  "website": "https://treeloungecoffee.com/",
+  "name": "Tree Lounge Coffee",
+  "city": "Camarillo",
+  "state": "CA",
+  "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "tr-99803666",
+  "domain": "arbucklesgourmetcoffee.com",
+  "website": "https://arbucklesgourmetcoffee.com/",
+  "name": "Arbuckle's Coffee",
+  "city": "Verona",
+  "state": "PA",
+  "overture_tag": "coffee_shop"
+ }
+]

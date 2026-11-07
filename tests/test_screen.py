@@ -91,7 +91,7 @@ def test_cafe_tolia_a_cafe_with_no_beans_is_rejected():
         False,
         "no_catalog",
     )
-    assert out["serves_phrase"] == "proudly serves"
+    assert out["serves_phrase"] == "proudly serves Rival Bros Coffee"
 
 
 def test_a_shop_selling_other_roasters_bags_is_rejected():
@@ -115,7 +115,8 @@ def test_a_cafe_that_says_it_serves_another_roaster_and_never_that_it_roasts_is_
     home = "<p>We proudly serve Passenger Coffee from Lancaster.</p>"
     with _shopify("twopersonscoffee.example", home, products):
         out = _screen("twopersonscoffee.example", "Two Persons Coffee")
-    assert (out["admitted"], out["serves_phrase"]) == (False, "proudly serve")
+    assert (out["admitted"], out["serves_phrase"]) == (False, "proudly serve Passenger Coffee")
+    assert out["reason"].startswith("reseller: says")
 
 
 def test_bean2bean_a_roaster_tagged_cafe_selling_own_brand_coffee_and_tea_is_admitted():
@@ -169,6 +170,33 @@ def test_title_matching_ignores_blend_names_and_matches_multi_word_roasters():
     assert screen.is_own("Rival Bros Coffee", "Rival Bros", "rivalbros.com")
     assert screen.is_own("RIVALBROS", "Rival Brothers", "rivalbros.com")
     assert not screen.is_own("Counter Culture Coffee", "Corner Shop", "cornershop.example")
+    # never a substring: another roaster's bags at a café whose name is part of the roaster's
+    assert not screen.is_own("Counter Culture Coffee", "The Counter", "thecounter.example")
+    assert not screen.is_own("Peet's Coffee", "Peet Street Cafe", "peetstreetcafe.example")
+
+
+@pytest.mark.parametrize(
+    ("home", "serves"),
+    [
+        ("We serve Stumptown coffee and fresh pastries.", "We serve Stumptown"),
+        ("Proudly serving Rival Bros every morning.", "Proudly serving Rival Bros"),
+        ("We serve a full breakfast menu.", ""),
+        ("Proudly serving Portland since 2005.", ""),
+        ("Proudly serving our community.", ""),
+    ],
+)
+def test_serves_wording_needs_a_named_roaster_or_coffee_words(home, serves):
+    assert screen.signals([], home, "Corner", "corner.example", KNOWN).serves_phrase == serves
+
+
+def test_roastery_wording_copied_into_a_resellers_product_descriptions_is_not_the_stores():
+    products = [
+        _product(1, "Chimney Rock Blend", "Passenger Coffee", body="Small batch roasted in Lancaster."),
+        _product(2, "Corner House Blend", "Corner Shop", body="We roast every batch by hand."),
+    ]
+    with _shopify("cornershop.example", "<p>We proudly serve Passenger Coffee.</p>", products):
+        out = _screen("cornershop.example", "Corner Shop")
+    assert (out["roast_phrase"], out["admitted"]) == ("", False)
 
 
 # --- discovery: candidates, never the registry -----------------------------------------------------------------------
@@ -258,29 +286,35 @@ def test_select_orders_new_first_skips_known_and_admitted_and_waits_out_rejectio
 
 
 def test_an_admitted_candidate_joins_the_registry_with_its_probe(lake, monkeypatch):
-    _cands(lake, ["rivalbros.com", "cafetolia.com"])
+    _cands(lake, ["roaster.example", "cafe.example"])
     fake = {
-        "rivalbros.com": {"status": "ok", "http_status": 200, "final_host": "rivalbros.com", "platform": "shopify",
+        "roaster.example": {"status": "ok", "http_status": 200, "final_host": "roaster.example", "platform": "shopify",
                           "admitted": True, "reason": "roaster"},
-        "cafetolia.com": {"status": "ok", "http_status": 200, "final_host": "www.cafetolia.com",
+        "cafe.example": {"status": "ok", "http_status": 200, "final_host": "www.cafe.example",
                           "platform": "squarespace?", "admitted": False, "reason": "no_catalog"},
     }  # fmt: skip
     monkeypatch.setattr(
         screen, "screen_one", lambda c, d, *a, **k: {k2: None for k2 in screen.SCREEN_FIELDS} | fake[d]
     )
     todo = screen.select(lake, "2026-11-07", known=set())
-    assert screen.run(lake, todo, ["Rival Bros Coffee"], "2026-11-07", workers=2)["admitted"] == 1
+    # without --admit: screens recorded, nobody admitted, and the one the rule would admit is screened again later
+    dry = screen.run(lake, todo, ["Rival Bros Coffee"], "2026-11-01", workers=2)
+    assert (dry["screened"], dry["admitted"], dry["admit"]) == (2, 0, False)
+    assert "roaster.example" not in {s.roaster.roaster_id for s in registry.current(lake)}
+    todo = screen.select(lake, "2026-11-07", known=set())
+    assert [c["roaster_id"] for c in todo] == ["roaster.example"]
+    out = screen.run(lake, todo, ["Rival Bros Coffee"], "2026-11-07", workers=2, admit=True)
+    assert (out["admitted"], out["reasons"]) == (1, {"roaster": 1})
     states = {s.roaster.roaster_id: s for s in registry.current(lake)}
-    assert "cafetolia.com" not in states
-    rival = states["rivalbros.com"]
+    assert "cafe.example" not in states
+    rival = states["roaster.example"]
     assert (rival.roaster.platform, rival.roaster.host, rival.status) == (
         "shopify",
-        "rivalbros.com",
+        "roaster.example",
         "pending",
     )
-    # screened and admitted: never selected again
-    assert screen.select(lake, "2026-11-07", known=set(states)) == []
-    assert [c["roaster_id"] for c in screen.select(lake, "2026-11-07", known=set())] == []
+    # screened and admitted: a registry roaster from then on, never selected again
+    assert screen.select(lake, "2026-11-07", known=set(registry.known(lake))) == []
 
 
 # --- the budget ------------------------------------------------------------------------------------------------------
@@ -318,7 +352,11 @@ def test_screen_items_are_catalog_items():
     ("last", "due"),
     [
         (None, True),
-        ({"admitted": True, "status": "ok", "reason": "roaster", "days": 999}, False),
+        (
+            {"admitted": True, "status": "ok", "reason": "roaster", "days": 1},
+            True,
+        ),  # select drops registry ones
+        ({"admitted": False, "status": "http_429", "reason": "http_429", "days": 28}, True),
         ({"admitted": False, "status": "ok", "reason": "no_catalog", "days": 179}, False),
         ({"admitted": False, "status": "ok", "reason": "no_catalog", "days": 180}, True),
         ({"admitted": False, "status": "blocked", "reason": "blocked", "days": 100}, False),
@@ -351,3 +389,21 @@ def test_a_gift_shops_jams_are_not_counted_as_named_coffee():
     ]
     s = screen.signals(items, "", "Spoon", "spoon.example", KNOWN)
     assert s.named == 0 and not screen.rule_own_brand(s, 1)[0]
+
+
+def test_a_busy_home_page_is_http_status_not_unreachable():
+    m = respx.mock(assert_all_called=False)
+    m.get(url__regex=r"https://(www\.)?busy\.example/robots\.txt").mock(return_value=httpx.Response(404))
+    m.get(url__regex=r"https://(www\.)?busy\.example/$").mock(return_value=httpx.Response(503))
+    with m, screen.ScreenClient(min_interval=0, retries=1) as c:
+        assert (
+            discover.probe_one(c, "busy.example")["status"] == "http_503"
+        )  # re-screened after 28 days, not 180
+
+
+def test_known_lists_seed_and_registry_roasters_without_reading_catalogs(lake, tmp_path):
+    seed = tmp_path / "seed.csv"
+    seed.write_text("roaster_id,name\nrivalbros.com,Rival Bros Coffee\n")
+    lake.write("registry", "registry/source=manual/x.parquet",
+               [{"added_at": NOW, "source": "manual", "roaster_id": "new.example", "name": "New"}])  # fmt: skip
+    assert registry.known(lake, seed) == {"rivalbros.com": "Rival Bros Coffee", "new.example": "New"}

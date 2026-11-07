@@ -216,6 +216,23 @@ def connect_for_state(lake: Lake):
     return con
 
 
+KNOWN_SQL = """
+select roaster_id, any_value(name) as name from (
+    select roaster_id, name from read_csv(?, header = true, all_varchar = true)
+    union all
+    select roaster_id, name from {registry}
+) where roaster_id is not null group by roaster_id
+"""
+
+
+def known(lake: Lake, seed: Path = SEED) -> dict[str, str]:
+    """Every roaster id in the seed or the lake's registry (opted-out ones too), with a name: what `current` lists,
+    without reading any catalog. Retried as `current` is."""
+    sql = KNOWN_SQL.format(registry=lake.scan("registry"))
+    rows = retry_transient(lambda: lake.connect().execute(sql, [str(seed)]).fetchall())
+    return {rid: name or rid for rid, name in rows}
+
+
 @dataclass
 class RoasterState:
     roaster: Roaster

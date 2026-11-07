@@ -6,7 +6,8 @@ how many of those it finds, and how often it admits a café or a reseller. It fo
 screen is a rule that decides what is included. `main` admits none of these candidates.
 
 **Status: waiting for labels.** The items are drawn; nothing is labeled yet. The rule (`screen.RULE`) and its minimum
-coffee count (`screen.MIN_COFFEES`) are provisional (`own_brand`, 1) until they are chosen on the validation set.
+coffee count (`screen.MIN_COFFEES`) are provisional (`own_brand`, 1) until they are chosen on the validation set. Until
+the test score, the monthly job runs `coffeedata screen` without `--admit`: it records screens and admits nobody.
 
 **Running total (CLAUDE.md step 9):** 0 candidates whose admission changed since the last full evaluation, which is
 this one. Add each later change's count here.
@@ -40,8 +41,9 @@ sell another roaster's beans, multi-roaster shops and private-label sellers are 
 
 Two stages, each in a fixed order: `rank = int(sha256(salt + ":rank:" + domain)[:8], 16)`, ascending.
 
-1. **Screen:** the first candidates of each tag in each set are screened live with `screen.screen_one` (450 per tag
-   and set). The evidence is kept: the probe, the products read (title, vendor, type, tags, sizes, the first 1,500
+1. **Screen:** the first candidates of each tag in each set are screened live with `screen.screen_one` (450
+   `coffee_shop` and 1,000 `cafe` per set: cafés find coffee about half as often, so more were screened to fill their
+   coffee stratum), 2026-11-07, from one client per candidate. The evidence is kept: the probe, the products read (title, vendor, type, tags, sizes, the first 1,500
    characters of each description) and the home page's text. Every candidate rule is scored from this same evidence
    (`screen.decide`), so rules differ only in how they decide, never in what the site said that day.
 2. **Draw:** strata are tag × whether the screen found a product the rules call coffee (`coffees >= 1`, the same for
@@ -57,7 +59,8 @@ screen result, sorted by id). `sample_<set>.json` holds the stratum sizes, each 
 
 Each item is labeled twice, independently, against `GUIDE.md`, and a third labeler settles disagreements
 (`python screen_eval.py agree <set>` writes `agreed_<set>.json` and `to_settle_<set>.json`; the settled ones go in
-`settled_<set>.json`). **Labelers: not yet assigned** (to be recorded here: people, or Claude and which model).
+`settled_<set>.json`). Two labels agree only when both the label and the kind agree, since the kind decides what a
+confidently wrong admission is. **Labelers: not yet assigned** (to be recorded here: people, or Claude and which model).
 Unsure items are left out of the scores.
 
 ## Protocol
@@ -67,7 +70,8 @@ Unsure items are left out of the scores.
    gift boxes coffee), and a known roaster's name is matched in a title only when it is two or more words that aren't
    all coffee words (single-word names such as "Local" and "Origin" matched blend names).
 2. **Validation:** `python screen_eval.py choose <data-dir>` scores every rule in `screen.RULES` with N in 1, 2, 3, 5
-   and prints aggregates only. The choice is the highest F0.5 (precision weighs more than recall: a café admitted is
+   and prints aggregates only (`coffee` is the investigation's rule, any coffee; the other three need coffees named as
+   coffee and no sign of reselling). The choice is the highest F0.5 (precision weighs more than recall: a café admitted is
    a crawl wasted every week and a wrong row in the catalog), ties to the stricter rule; then `screen.RULE` and
    `screen.MIN_COFFEES` are set and frozen.
 3. **Test (sealed):** `SHA256SUMS` covers `items_test.json` and `sample_test.json`; the test evidence's hash is below.
@@ -88,6 +92,10 @@ wrong admits stay low (the owner: "keep reseller admissions low"; when unsure, r
 
 ## Limits
 
+- The review round after the screen changed two things the stored evidence is rescored with, not re-collected:
+  roastery wording is read from the home page only (no longer product descriptions), and a home page answering 429
+  or 5xx is now `http_<code>` rather than `unreachable`. Neither changes an admission: a failed probe is rejected
+  either way, and `decide` rescores the stored home text and products with the current code.
 - The screen ran from a sandbox behind an HTTPS proxy. About a quarter of the train candidates gave no answer
   (robots.txt unavailable, unreachable, HTTP errors); about two thirds of those don't resolve in DNS at all (dead
   domains). The rest include TLS failures, and some may be the proxy's own refusals, which production (no proxy)

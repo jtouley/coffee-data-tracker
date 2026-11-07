@@ -298,6 +298,7 @@ def probe_home(client: PoliteClient, domain: str) -> tuple[dict, str]:
 def _probe(client: PoliteClient, domain: str) -> tuple[dict, httpx.Response | None]:
     home = None
     no_robots = False
+    answered: httpx.HTTPStatusError | None = None  # a 429 or 5xx the client's retries didn't get past
     for host in (domain, f"www.{domain}"):
         try:
             home = client.get(f"https://{host}/")
@@ -318,8 +319,16 @@ def _probe(client: PoliteClient, domain: str) -> tuple[dict, httpx.Response | No
             if e.unreachable:  # the host itself is down, not just its robots.txt
                 continue
             no_robots = True
+        except httpx.HTTPStatusError as e:
+            answered = e
         except httpx.HTTPError:
             continue
+    if home is None and answered is not None:
+        # The site answered, with a pause or a server error: http_<code>, not unreachable, so whoever reads the
+        # probe (the screen's re-screen window) can tell a busy site from a dead one.
+        code = answered.response.status_code
+        return {"status": f"http_{code}", "final_host": answered.request.url.host, "platform": "",
+                "http_status": code}, home  # fmt: skip
     if home is None:
         status = "robots_unavailable" if no_robots else "unreachable"
         return {"status": status, "final_host": "", "platform": "", "http_status": None}, home

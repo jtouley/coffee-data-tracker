@@ -28,8 +28,9 @@ import re
 import threading
 import time
 import unicodedata
+from collections import Counter
 from collections.abc import Callable, Iterable
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 
@@ -90,13 +91,16 @@ ROAST_WORDS = re.compile(
     r"micro[- ]?roast(?:er|ery)|small[- ]batch roast(?:er|ery|ed|ing))\b",
     re.I,
 )
-# Wording that a café serves, or a shop sells, another roaster's coffee.
+# Wording that a café serves, or a shop sells, another roaster's coffee: a serving verb followed by a capitalized
+# name ("We proudly serve Passenger Coffee"), counted only when the words after it name a roaster we know or say
+# coffee, roaster or roastery ("Proudly serving Portland since 2005" and "We serve a full breakfast" don't count).
 SERVES_WORDS = re.compile(
-    r"\b(proudly (?:serv(?:e|es|ing)|brew(?:s|ing)?|pour(?:s|ing)?)|we serve [A-Z]|featuring (?:coffee|beans) from|"
-    r"(?:our|local) (?:coffee )?roasting partners?|partner roaster|coffee (?:is )?(?:roasted|supplied) by|"
-    r"roasted by (?:our friends|the (?:folks|team|good people))|we carry (?:beans|coffee) from)\b",
-    re.I,
+    r"(?i:\bproudly (?:serv(?:e|es|ing)|brew(?:s|ing)?|pour(?:s|ing)?)|\bwe (?:serve|brew|pour|carry|feature)|"
+    r"\bfeaturing|\bcoffee (?:is )?(?:roasted|supplied) by|\bour (?:coffee )?roasting partners?(?: is| are)?|"
+    r"\bpartner roaster(?:y|s)?(?: is| are)?) (?!(?:Our|The|You|Your|A|An|This|Local|Fresh|Great|Delicious|Quality)\b)"
+    r"([A-Z][\w'&-]*(?: [A-Z][\w'&-]*){0,3})"
 )
+_SERVES_COFFEE = re.compile(r"\b(coffee|coffees|roasters?|roastery|roasting|espresso)\b", re.I)
 
 
 def brand_key(name: str) -> str:
@@ -120,12 +124,10 @@ def domain_stem(domain: str) -> str:
 
 
 def is_own(vendor: str, name: str, domain: str) -> bool:
-    """A vendor that names the store itself: its brand key, or its domain's name."""
+    """A vendor that names the store itself: its brand key, or its domain's name, exactly. Never a substring: "Counter
+    Culture Coffee" is not the own brand of a café called "The Counter"."""
     v = _squash(brand_key(vendor))
-    if len(v) < 3:
-        return False
-    own = {_squash(brand_key(name)), domain_stem(domain)}
-    return any(o and (v == o or (len(v) >= 4 and v in o) or (len(o) >= 4 and o in v)) for o in own)
+    return len(v) >= 3 and v in {_squash(brand_key(name)), domain_stem(domain)}
 
 
 # Words that name a coffee rather than a business, so a known roaster's name made only of them ("Dark Roast", "Single
@@ -193,6 +195,19 @@ class Signals:
     serves_phrase: str  # the first "proudly serving X" wording found
 
 
+def _serves_coffee(m: re.Match, text: str, own: str, known: KnownRoasters) -> bool:
+    """A serves phrase whose name is a roaster we know (not the store), or is followed by coffee wording."""
+    named = m.group(1)
+    if brand_key(named) == own:
+        return False
+    return bool(
+        known.in_title(named, own)
+        or known.vendor(named, own)
+        or _SERVES_COFFEE.search(text[m.end(1) : m.end(1) + 40])
+        or _SERVES_COFFEE.search(named)
+    )
+
+
 def signals(
     items: list[CatalogItem], home_text: str, name: str, domain: str, known: KnownRoasters
 ) -> Signals:
@@ -205,9 +220,12 @@ def signals(
         or bool(known.in_title(i.title, own))
         for i in named
     )
-    text = " ".join([home_text, *(i.body_text[:1500] for i in named[:20])])
-    roast = ROAST_WORDS.search(text)
-    serves = SERVES_WORDS.search(text)
+    # The store's own words only: product descriptions on a reseller's store are often the source roaster's ("small
+    # batch roasted"), so roastery wording there would read as the store's.
+    roast = ROAST_WORDS.search(home_text)
+    serves = next(
+        (m for m in SERVES_WORDS.finditer(home_text) if _serves_coffee(m, home_text, own, known)), None
+    )
     return Signals(
         products=len(items),
         coffees=len(coffees),
@@ -441,11 +459,16 @@ def due(last: dict | None, run_date: date) -> bool:
     if last is None:
         return True
     if last["admitted"]:
-        return False  # admitted ones are registry roasters from then on (select drops them)
+        # An admitted candidate is a registry roaster from then on, and select drops it before asking. One that is
+        # not (a run without --admit, or a registry write that was lost) is screened again, and admitted then.
+        return True
     age = run_date - last["screened_at"].date()
     status, reason = str(last["status"]), str(last["reason"])
     answered = not (
-        status in RETRY_STATUSES or status.startswith("http_5") or reason.startswith(RETRY_REASONS)
+        status in RETRY_STATUSES
+        or status in ("http_429", "http_430")
+        or status.startswith("http_5")
+        or reason.startswith(RETRY_REASONS)
     )
     return age >= timedelta(days=RESCREEN_DAYS if answered else RETRY_DAYS)
 
@@ -497,43 +520,53 @@ def run(
     deadline_min: float = DEADLINE_MIN,
     rule: str = RULE,
     min_coffees: int = MIN_COFFEES,
+    admit: bool = False,
 ) -> dict:
-    """Screen `todo` (select's rows), CHUNK at a time: each chunk's screens, and its admissions (registry and
-    probes rows), are written and published together, so a stopped job keeps what it screened. No candidate is
-    started after deadline_min; one still running then stops at its next request."""
+    """Screen `todo` (select's rows) with one pool of workers. Every CHUNK finished screens, and their admissions, are
+    written and published together, so a stopped job keeps what it screened. No candidate is started after
+    deadline_min; one still running then stops at its next request (status `deadline`, which isn't a screen).
+
+    admit: write a registry row (and the screen's probe) for each candidate the rule admits. Off by default: until
+    the rule is chosen and scored (eval/screen/README.md) a run records its screens and admits nobody, and a
+    candidate the rule would admit is screened again by the first run with admit on (due)."""
     known = KnownRoasters(known_names)
     until = time.monotonic() + 60 * deadline_min
     version = lineage.code_version()
-    totals = {"screened": 0, "admitted": 0, "skipped_deadline": 0}
+    totals: dict = {"screened": 0, "admitted": 0, "skipped_deadline": 0, "admit": admit, "reasons": Counter()}
     # spaced as the probe and the crawl are: at least 1 s per host, or its robots.txt Crawl-delay
     client = ScreenClient(min_interval=1.0, timeout=12, retries=2, deadline_s=60 * deadline_min)
-    with client:
-        for i in range(0, len(todo), CHUNK):
-            chunk = todo[i : i + CHUNK]
-            if time.monotonic() >= until:
-                totals["skipped_deadline"] += len(todo) - i
-                break
-            with ThreadPoolExecutor(workers) as ex:
-                results = list(
-                    ex.map(
-                        lambda c: (
-                            None
-                            if time.monotonic() >= until
-                            else screen_one(client, c["roaster_id"], c["name"], known, rule, min_coffees)
-                        ),
-                        chunk,
-                    )
-                )
-            done = [(c, r) for c, r in zip(chunk, results, strict=True) if r is not None]
-            totals["skipped_deadline"] += len(chunk) - len(done)
-            _write(lake, run_date, done, version)
-            totals["screened"] += len(done)
-            totals["admitted"] += sum(r["admitted"] for _, r in done)
-            lake.publish(f"screen {run_date} batch {i // CHUNK}")
+
+    def one(c: dict) -> tuple[dict, dict | None]:
+        if time.monotonic() >= until:
+            return c, None
+        return c, screen_one(client, c["roaster_id"], c["name"], known, rule, min_coffees)
+
+    def flush(done: list[tuple[dict, dict]]) -> None:
+        _write(lake, run_date, done, version, admit)
+        totals["screened"] += len(done)
+        totals["admitted"] += sum(bool(r["admitted"]) for _, r in done) if admit else 0
+        totals["reasons"].update(str(r["reason"]).split(":")[0] for _, r in done)
+        lake.publish(f"screen {run_date}: {totals['screened']} screened")
+
+    done: list[tuple[dict, dict]] = []
+    # One pool for the whole run, not one per chunk: a slow site never holds the other workers at a chunk's end.
+    with client, ThreadPoolExecutor(workers) as ex:
+        for fut in as_completed([ex.submit(one, c) for c in todo]):
+            c, r = fut.result()
+            if r is None:
+                totals["skipped_deadline"] += 1
+                continue
+            done.append((c, r))
+            if len(done) >= CHUNK:
+                flush(done)
+                done = []
+    if done:
+        flush(done)
+    totals["reasons"] = dict(totals["reasons"].most_common())
     return totals
 
 
-def _write(lake: Lake, run_date: str, done: list[tuple[dict, dict]], version: str) -> None:
+def _write(lake: Lake, run_date: str, done: list[tuple[dict, dict]], version: str, admit: bool) -> None:
     if not done:
         return
     now = datetime.now(UTC).replace(microsecond=0)
@@ -551,7 +584,7 @@ def _write(lake: Lake, run_date: str, done: list[tuple[dict, dict]], version: st
         ],
     )  # fmt: skip
     admitted = [(c, r) for c, r in done if r["admitted"]]
-    if not admitted:
+    if not admit or not admitted:
         return
     lake.write(
         "registry",

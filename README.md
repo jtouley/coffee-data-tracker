@@ -267,16 +267,20 @@ this file stays as it is.
 
 **What discovery admits, and why.** Discovery adds a place to the registry straight away when Overture tags it
 `coffee_roastery`, or it is a coffee place with "roast" in its name (and OpenStreetMap's `craft=coffee_roaster`).
-Overture also tags some real roasters only `coffee_shop` or `cafe` (Rival Bros, Bean2Bean), alongside about 43,000
-café websites that roast nothing. Those are recorded as candidates (`candidates/`), never crawled, and
-`coffeedata screen` visits each one once: the platform probe, then the first pages of its public product list. It is
-admitted to the registry only when the rules (no Claude verdicts) count enough coffees and the store looks like a
-roaster selling its own coffee: roastery wording ("we roast") or its own name on the coffees, and no sign it resells
-another roaster's (a known roaster's name on the bags, "we proudly serve …"). When it can't tell, it rejects. Cafés,
+Overture also tags some real roasters only `coffee_shop` or `cafe` (Rival Bros, Bean2Bean). Those tags cover about
+43,600 websites not already in the registry, most of them cafés that roast nothing. They are recorded as candidates
+(`candidates/`), never crawled, and `coffeedata screen` visits each one once: the platform probe, then the first
+pages of its public product list. With `--admit`, a candidate joins the registry only when the rules (no Claude
+verdicts) count enough coffees named as coffee and the store looks like a roaster selling its own coffee: roastery
+wording on its home page ("we roast") or its own name on the coffees, and no sign it resells another roaster's (a
+known roaster's name on the bags, "we proudly serve Passenger Coffee"). When it can't tell, it rejects. Until the
+rule is scored on held-out candidates, the monthly job screens without `--admit`: it records what it would admit and
+admits nobody. Cafés,
 coffee shops and multi-roaster shops are deliberately out of scope: the catalog lists roasters. Every screen is
-recorded in `screens/` with its reason. A rejection is screened again after 180 days, a site that didn't answer after
-28. The monthly `discover` job runs the screen after discovery, at most 6,000 candidates and 140 minutes a run,
-never-screened candidates first in a fixed order, so each run continues where the last stopped. The rule and its
+recorded in `screens/` with its reason. A rejection, a dead site included, is screened again after 180 days; a busy
+or failing server, or a robots.txt that didn't answer, after 28. The monthly `discover` job runs the screen after
+discovery, at most 6,000 candidates and 140 minutes a run, never-screened candidates first in a fixed order, so each
+run continues where the last stopped. The rule and its
 threshold are measured on held-out candidates: [`eval/screen/README.md`](eval/screen/README.md).
 
 ## Run it on GitHub
