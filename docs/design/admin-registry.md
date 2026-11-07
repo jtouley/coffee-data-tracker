@@ -365,7 +365,8 @@ Playwright runs at 390 px and desktop, light and dark, plus an axe check.
 
 ### 5.2 API and safety
 
-- **Endpoints.** The API is the only writer; `coffeedata decide` is a thin client.
+- **Endpoints.** The API is the only writer. `coffeedata decide` is a thin client, as is the admin MCP server
+  (5.2.1).
   - Reads: `GET /api/queue`, `GET /api/cases/{subject}`, `GET /api/catalog`.
   - Drafts: `POST /api/drafts`, `POST /api/drafts/{id}/changes`, `POST /api/drafts/{id}/publish`,
     `POST /api/drafts/{id}/discard`.
@@ -377,6 +378,30 @@ Playwright runs at 390 px and desktop, light and dark, plus an axe check.
   retry never doubles an event and a stale tab fails loudly.
 - **Untrusted text.** Titles, tags and descriptions are rendered escaped, never `|safe`. The pages keep `app/web.py`'s
   CSP and `Referrer-Policy: same-origin`, link only to `https:` store URLs, and keep the app's CSRF rule.
+
+### 5.2.1 The admin MCP server: a fourth client
+
+The owner: "While an MCP for admin is fine, wrapping the mcp without a login just leaves me stuck on gcloud".
+So the admin MCP server is one more client of the admin API, beside the UI, the CLI and the Jobs page. It is
+separate from the existing `coffeedata` MCP server (`mcp_server.py`: shots and the public catalog).
+
+- **Auth.** It signs in as the owner with the same short-lived CLI device token: kept in the OS keychain, 12 hours,
+  revocable. It has no credentials of its own: no gcloud ADC, no HF token, no service-account key.
+- **Tools.** Each tool is a thin call to an existing endpoint:
+  - catalog search;
+  - the week's status and its failures;
+  - release changes;
+  - decisions;
+  - draft and publish;
+  - jobs;
+  - test crawls.
+- **Writes.** They go through the same confirm-and-audit path, recorded with `client=mcp`.
+- **Read-mostly.** Publish and job starts need an explicit `confirm` argument, and they are refused in the Monday and
+  Tuesday windows like everywhere else.
+- **Why not wrap gcloud or the lake directly:** that MCP would carry its own credentials and bypass sign-in, the
+  audit rows and every guard (the windows, the overlap check, the readiness and Publish gates).
+- **When: Later, first.** It is thin, but every tool depends on Phase 1's endpoints and device tokens. Building it
+  after they settle avoids wrapping a moving API.
 
 ### 5.3 Sign-in and access
 
@@ -477,6 +502,7 @@ The owner decides from the results. Nothing from a POC merges without the review
 Phase 1 depends on #111 for per-row reasons. Until #111 merges, the Draft page shows `build-diff`.
 
 **Later.**
+- The admin MCP server (5.2.1), first: a thin client once Phase 1's API and device tokens settle.
 - The crawl flag with its smoke crawl.
 - Stale-draft auto-rebuild.
 - Settings editing in the admin.
