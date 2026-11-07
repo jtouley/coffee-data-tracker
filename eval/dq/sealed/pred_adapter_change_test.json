@@ -1,0 +1,30 @@
+{
+ "pred": {
+  "test|2026-10-26|generic": null,
+  "test|2026-10-26|shopify": null,
+  "test|2026-10-26|square_online": null,
+  "test|2026-10-26|squarespace": null,
+  "test|2026-10-26|woocommerce": null,
+  "test|2026-10-27|generic": false,
+  "test|2026-10-27|shopify": false,
+  "test|2026-10-27|square_online": false,
+  "test|2026-10-27|squarespace": false,
+  "test|2026-10-27|woocommerce": false,
+  "test|2026-10-28|generic": false,
+  "test|2026-10-28|shopify": true,
+  "test|2026-10-28|square_online": false,
+  "test|2026-10-28|squarespace": false,
+  "test|2026-10-28|woocommerce": false,
+  "test|2026-10-30|generic": false,
+  "test|2026-10-30|shopify": false,
+  "test|2026-10-30|square_online": false,
+  "test|2026-10-30|squarespace": false,
+  "test|2026-10-30|woocommerce": false,
+  "test|2026-11-02|generic": false,
+  "test|2026-11-02|shopify": false,
+  "test|2026-11-02|square_online": false,
+  "test|2026-11-02|squarespace": false,
+  "test|2026-11-02|woocommerce": true
+ },
+ "rule": "ok_attempted:0.1+same_store:0.1+same_store_priced:0.1"
+}

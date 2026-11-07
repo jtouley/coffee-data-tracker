@@ -460,13 +460,14 @@ def _tf() -> str:
     return (Path(__file__).parents[1] / "src/terraform/ingestion.tf").read_text()
 
 
-def test_only_shopifys_crawls_never_retry_in_place():
+def test_shopify_woocommerce_and_generic_crawls_never_retry_in_place():
     import re
 
     jobs = dict(re.findall(r'^\s+"([a-z-]+)"\s+=\s+\{ command = .*retries = (\d) \}$', _tf(), re.M))
-    assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl")} == {
+    assert {j: int(n) for j, n in jobs.items() if j.startswith("crawl") or j == "fetch-health"} == {
         "crawl-shopify": 0, "crawl-shopify-default-egress": 0, "crawl-retry": 0, "crawl-squarespace": 1,
-        "crawl-woocommerce": 1, "crawl-square-online": 1, "crawl-generic": 1,
+        "crawl-woocommerce": 0, "crawl-square-online": 1, "crawl-generic": 0,
+        "fetch-health": 0,  # a retry would find the check done and exit 0, hiding its alert
     }  # fmt: skip
     assert "max_retries = each.value.retries" in _tf()
     assert re.search(
@@ -487,12 +488,131 @@ def test_every_connector_has_a_third_pass_in_the_evening():
         "crawl-square-online",
         "crawl-generic",
     }
-    # Shopify's evening pass is crawl-retry, on the NAT; the others run their own crawl job, on default egress
+    # Shopify's evening pass is crawl-retry, on its NAT; the others run their own crawl job, on that job's egress
     assert re.search(
-        r'"crawl-retry"\s+= \{ command = \["coffeedata"\], args = \["crawl-retry", "--connector", "shopify"\], nat = true',
+        r'"crawl-retry"\s+= \{ command = \["coffeedata"\], args = \["crawl-retry", "--connector", "shopify"\], egress = "shopify"',
         _tf(),
     )
     assert set(connectors.CONNECTORS) == {"shopify", "squarespace", "woocommerce", "square_online", "generic"}
+
+
+def _block(kind: str, name: str) -> str:
+    """One top-level block of ingestion.tf, e.g. _block("resource", 'google_compute_router_nat" "shopify_egress')."""
+    tf = _tf()
+    start = tf.index(f'{kind} "{name}" {{')
+    return tf[start : tf.index("\n}\n", start) + 2]
+
+
+def _job_egress() -> dict[str, str]:
+    """Each job in local.ingest_jobs => its egress, from the one-line and the multi-line entries alike."""
+    import re
+
+    jobs = _tf()[_tf().index("ingest_jobs = {") : _tf().index("ingest_schedule = {")]
+    return dict(
+        re.findall(
+            r'^\s+"([a-z-]+)"\s+=\s+\{(?:[^{}]|\[[^]]*\])*?egress\s+=\s+"([a-z_-]+)"', jobs, re.M | re.S
+        )
+    )
+
+
+def test_each_job_leaves_through_the_egress_the_owner_chose():
+    """Shopify's crawls on Shopify's NAT IP, WooCommerce's and generic's (every pass: resume and evening retry run the
+    same jobs) on a second NAT IP, everything else on default egress."""
+    import re
+
+    assert _job_egress() == {
+        "discover": "default", "probe": "default",
+        "crawl-shopify": "shopify", "crawl-shopify-default-egress": "default", "crawl-retry": "shopify",
+        "crawl-squarespace": "default", "crawl-woocommerce": "woo_generic", "crawl-square-online": "default",
+        "crawl-generic": "woo_generic", "merge": "default", "enrich-week": "default", "build": "default",
+        "fetch-health": "default",  # it reads the lake and crawls no store
+    }  # fmt: skip
+    slots = re.findall(r'^\s+"([a-z-]+)"\s+= \{ job = "([a-z-]+)", cron = "[^"]+" \}', _tf(), re.M)
+    woo_generic = {entry for entry, job in slots if _job_egress()[job] == "woo_generic"}
+    assert woo_generic == {
+        f"crawl-{c}{p}" for c in ("woocommerce", "generic") for p in ("", "-resume", "-retry")
+    }
+    assert (
+        "nat " not in _tf()[_tf().index("ingest_jobs = {") : _tf().index("ingest_schedule = {")]
+    )  # no old flag
+    job = _block("resource", 'google_cloud_run_v2_job" "ingest')
+    assert 'for_each = each.value.egress == "default" ? [] : [local.egress_nats[each.value.egress]]' in job
+    assert "subnetwork = vpc_access.value.subnet" in job
+    assert (
+        'value = each.value.egress == "default" ? var.egress_echo_url : local.egress_nats[each.value.egress].ip'
+        in job
+    )
+    assert "contains(keys(local.egress_nats), each.value.egress)" in job  # a misspelt egress fails at plan
+    assert "google_compute_router_nat.woo_generic_egress" in job  # jobs wait for their NAT
+    nats = _tf()[_tf().index("egress_nats = {") :]
+    nats = nats[: nats.index("\n  }\n")]
+    assert re.search(
+        r'"shopify"\s+= \{ subnet = google_compute_subnetwork\.shopify_egress\.id, ip = google_compute_address\.shopify_egress\.address \}',
+        nats,
+    )
+    assert re.search(
+        r'"woo_generic" = \{ subnet = google_compute_subnetwork\.woo_generic_egress\.id, ip = google_compute_address\.woo_generic_egress\.address \}',
+        nats,
+    )
+
+
+def test_shopifys_egress_is_untouched_and_the_second_nat_is_separate():
+    """Shopify's subnet, IP and NAT keep their addresses, names and settings (nothing existing is replaced); the
+    WooCommerce/generic gateway has its own subnet and IP, on the same router, with the same port settings."""
+    import ipaddress
+    import re
+
+    def default(var: str) -> str:
+        return re.search(r'default\s+=\s+"([^"]+)"', _block("variable", var)).group(1)
+
+    shopify_net = ipaddress.ip_network(default("ingest_subnet_cidr"))
+    woo_net = ipaddress.ip_network(default("woo_generic_subnet_cidr"))
+    assert str(shopify_net) == "10.8.0.0/26" and woo_net.prefixlen <= 26 and not shopify_net.overlaps(woo_net)
+
+    for which, cidr in (
+        ("shopify_egress", "ingest_subnet_cidr"),
+        ("woo_generic_egress", "woo_generic_subnet_cidr"),
+    ):
+        dash = which.replace("_", "-")
+        subnet = _block("resource", f'google_compute_subnetwork" "{which}')
+        assert f'name          = "${{var.service}}-{dash}"' in subnet and f"var.{cidr}" in subnet
+        assert "network       = google_compute_network.ingest.id" in subnet
+        address = _block("resource", f'google_compute_address" "{which}')
+        assert (
+            f'name         = "${{var.service}}-{dash}"' in address and 'address_type = "EXTERNAL"' in address
+        )
+        nat = _block("resource", f'google_compute_router_nat" "{which}')
+        assert f'name                               = "${{var.service}}-{dash}"' in nat
+        assert "router                             = google_compute_router.ingest.name" in nat  # one router
+        assert f"nat_ips                            = [google_compute_address.{which}.self_link]" in nat
+        assert re.findall(r"name\s+= (google_compute_subnetwork\.\w+)\.id", nat) == [
+            f"google_compute_subnetwork.{which}"
+        ]
+        for setting in (
+            'nat_ip_allocate_option             = "MANUAL_ONLY"',
+            'source_subnetwork_ip_ranges_to_nat = "LIST_OF_SUBNETWORKS"',
+            "enable_dynamic_port_allocation      = true",
+            "enable_endpoint_independent_mapping = false",
+            "min_ports_per_vm                    = 1024",
+            "max_ports_per_vm                    = 8192",
+            'source_ip_ranges_to_nat = ["ALL_IP_RANGES"]',
+            'filter = "ERRORS_ONLY"',
+        ):
+            assert setting in nat, (which, setting)
+    assert _tf().count('resource "google_compute_router" ') == 1
+    # a /26 or larger, and never overlapping Shopify's subnet: checked at plan, before anything is created
+    assert "<= 26" in _block("variable", "woo_generic_subnet_cidr")
+    assert "overlaps ingest_subnet_cidr" in _block(
+        "resource", 'google_compute_subnetwork" "woo_generic_egress'
+    )
+    assert "precondition" not in _block("resource", 'google_compute_subnetwork" "shopify_egress')
+    assert _tf().count('resource "google_compute_network" ') == 1
+    assert _tf().count('resource "google_compute_router_nat" ') == 2
+
+
+def test_both_egress_ips_are_outputs():
+    assert "google_compute_address.shopify_egress.address" in _block("output", "shopify_egress_ip")
+    assert "google_compute_address.woo_generic_egress.address" in _block("output", "woo_generic_egress_ip")
 
 
 def test_job_memory_overrides_are_range_checked_and_must_name_a_job():

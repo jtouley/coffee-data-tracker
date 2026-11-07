@@ -10,7 +10,7 @@ from fastapi.testclient import TestClient
 from app.accounts import AccountError, Accounts, code_hash
 from app.auth import Sessions
 from app.main import create_app
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 
 W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 SETUP = "SETUP-CODE-1234"
@@ -19,7 +19,7 @@ PW = "correct horse battery"
 
 @pytest.fixture
 def accounts(tmp_path) -> Accounts:
-    users = Lake(str(tmp_path / "users"), tables=("users", "invites"))
+    users = Lake(str(tmp_path / "users"), tables=USER_TABLES)
     return Accounts(users, "pepper-" + "p" * 16, "s" * 40, SETUP)
 
 
@@ -35,7 +35,11 @@ def client(app) -> TestClient:
 @pytest.fixture
 def owner(app) -> TestClient:
     c = client(app)
-    r = c.post("/api/signin", json={"setup_code": SETUP, "username": "jtouley", "password": PW}, headers=W)
+    r = c.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": SETUP, "username": "jtouley", "password": PW},
+        headers=W,
+    )
     assert r.status_code == 200
     return c
 
@@ -48,7 +52,9 @@ def invite(owner: TestClient, **body) -> dict:
 
 def join(app, code: str, username: str = "maya", password: str = "kettle orbit marble") -> TestClient:
     c = client(app)
-    r = c.post("/api/join", json={"code": code, "username": username, "password": password}, headers=W)
+    r = c.post(
+        "/api/join", json={"agree": True, "code": code, "username": username, "password": password}, headers=W
+    )
     assert r.status_code == 200, r.text
     return c
 
@@ -76,10 +82,14 @@ def test_invite_join_and_sign_in(app, owner, accounts):
     )
     # Once only.
     r2 = client(app).post(
-        "/api/join", json={"code": r["code"], "username": "sam", "password": "kettle orbit marble"}, headers=W
+        "/api/join",
+        json={"agree": True, "code": r["code"], "username": "sam", "password": "kettle orbit marble"},
+        headers=W,
     )
-    assert r2.status_code == 400 and "isn’t valid" in r2.json()["detail"]
-    assert accounts.pending() == []
+    assert (
+        r2.status_code == 409 and r2.json()["detail"][0]["rule"] == "c.used"
+    )  # it says so, and links to sign-in
+    assert [r.status for r in accounts.invite_log()] == ["used"]
 
 
 def test_join_page_needs_no_sign_in_and_never_sees_the_code(app, owner):
@@ -95,9 +105,11 @@ def test_usernames_are_unique_and_rules_apply(app, owner):
     join(app, invite(owner)["code"], "maya")
     code = invite(owner)["code"]
     for name, pw, msg in (("maya", "kettle orbit marble", "taken"), ("JTOUley", "kettle orbit marble", "taken"),
-                          ("x", "kettle orbit marble", "lower-case"), ("sam", "short", "at least")):  # fmt: skip
-        r = client(app).post("/api/join", json={"code": code, "username": name, "password": pw}, headers=W)
-        assert r.status_code == 400 and msg in r.json()["detail"], (name, r.text)
+                          ("x", "kettle orbit marble", "3 to 32"), ("sam", "short", "at least")):  # fmt: skip
+        r = client(app).post(
+            "/api/join", json={"agree": True, "code": code, "username": name, "password": pw}, headers=W
+        )
+        assert r.status_code == 400 and msg in r.json()["detail"][0]["message"], (name, r.text)
     join(app, code, "sam")  # the failures didn't use the code up
 
 
@@ -131,7 +143,7 @@ def test_reset_code_sets_a_password_and_signs_out_everywhere(app, owner, account
     r = invite(owner, kind="reset", for_user_id=maya_id)
     assert client(app).get("/reset").status_code == 200
     # A join code can't reset, and a reset code can't join.
-    assert client(app).post("/api/join", json={"code": r["code"], "username": "x2y", "password": "kettle orbit marble"},
+    assert client(app).post("/api/join", json={"agree": True, "code": r["code"], "username": "x2y", "password": "kettle orbit marble"},
                             headers=W).status_code == 400  # fmt: skip
     phone = client(app)
     assert (
@@ -341,7 +353,7 @@ def test_sign_in_and_join_link_to_the_site_and_the_beta_address(lake, accounts, 
     for k, v in env.items():
         monkeypatch.setenv(k, v)
     app = create_app(lake, Sessions(accounts))
-    accounts.create_owner(SETUP, "jtouley", PW)  # past owner setup: the ordinary sign-in screen
+    accounts.create_owner(SETUP, "jtouley", PW, agree=True)  # past owner setup: the ordinary sign-in screen
     beta = f'href="mailto:{mail}?subject=registry.coffee%20beta%20invite">No invite? Ask for one</a>'
     for url, wordmark in (
         ("/signin", '<a class="home" href="{}/">'),

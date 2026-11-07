@@ -36,9 +36,20 @@ class Roaster(BaseModel):
 class Variant(BaseModel):
     variant_id: str
     title: str = ""
+    # The price as the store states it, in `currency` (the name predates the currency field: a store outside the
+    # US states its own currency, never converted here). dbt publishes only USD prices.
     price_usd: float | None = None
+    # The price's currency as the store states it (an ISO 4217 code: "USD", "ZAR"), as given; None only when the
+    # store doesn't state one.
+    currency: str | None = None
     grams: int | None = None
     available: bool | None = None
+
+
+def currency_code(value: object) -> str | None:
+    """A store's stated currency, kept as the store gives it (the raw lake stores raw values; dbt reads them as ISO
+    4217 codes). None only when the store states none: missing, empty, or not a string."""
+    return value if isinstance(value, str) and value.strip() else None
 
 
 def payload_hash(payload: object) -> str:

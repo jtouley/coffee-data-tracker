@@ -32,6 +32,7 @@ SEED_FIELDS = [
     "final_host",
     "platform",
     "last_probed",
+    "country",  # ISO 3166-1 alpha-2 (US unless a hand-checked correction says otherwise); dbt publishes US only
 ]
 
 # Hosts that are never a roaster's own storefront (full suffixes).
@@ -103,8 +104,9 @@ with seed as (
     from read_csv(?, header = true, all_varchar = true)
 ),
 added as (
-    select roaster_id, arg_max(name, added_at) as name, arg_max(city, added_at) as city,
-           arg_max(state, added_at) as state, max(locations) as locations, bool_or(opted_out) as opted_out
+    -- ties broken as in dbt's stg_registry and dim_roaster, so the two always agree
+    select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
+           arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out
     from {registry} where roaster_id is not null group by roaster_id
 ),
 roasters as (
@@ -118,10 +120,13 @@ roasters as (
 -- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed, so the next
 -- probe run (stale-probe selection reads last_probed) tries the roaster again.
 probes as (select * from {probes} where roaster_id is not null and status <> 'robots_unavailable'),
-last_probe as (select * from probes qualify row_number() over (partition by roaster_id order by probed_at desc) = 1),
+last_probe as (
+    select * from probes
+    qualify row_number() over (partition by roaster_id order by probed_at desc, status, final_host, platform) = 1
+),
 last_good_probe as (
     select * from probes where status = 'ok'
-    qualify row_number() over (partition by roaster_id order by probed_at desc) = 1
+    qualify row_number() over (partition by roaster_id order by probed_at desc, final_host, platform) = 1
 ),
 fetches as (select * from {fetches} where roaster_id is not null),
 -- Failure streaks count runs, not attempts: a run is ok if any attempt in it succeeded.
@@ -135,7 +140,10 @@ recent as (
            count(*) filter (where rn <= {k} and not ok) as errors, max(last_at) as last_fetch
     from runs group by roaster_id
 ),
-last_ok as (select * from fetches where status = 'ok' qualify row_number() over (partition by roaster_id order by fetched_at desc) = 1)
+last_ok as (
+    select * from fetches where status = 'ok'
+    qualify row_number() over (partition by roaster_id order by fetched_at desc, batch_id desc) = 1
+)
 select
     r.roaster_id, r.name, r.city, r.state, r.locations, r.is_chain, r.opted_out,
     coalesce(g.final_host, r.seed_host, r.roaster_id) as host,

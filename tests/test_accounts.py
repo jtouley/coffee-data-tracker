@@ -15,7 +15,7 @@ from app.accounts import Account, AccountError, Accounts, check_password
 from app.auth import COOKIE, Sessions
 from app.main import create_app
 from coffeedata import shots
-from coffeedata.lake import Lake
+from coffeedata.lake import USER_TABLES, Lake
 
 W = {"X-Requested-With": "test", "X-Expected-User": "owner"}
 CODE = "K7QD-M2XF-9RPA-T4WE"
@@ -24,7 +24,7 @@ PW = "correct horse battery"
 
 @pytest.fixture
 def users(tmp_path) -> Lake:
-    return Lake(str(tmp_path / "users"), tables=("users", "invites"))
+    return Lake(str(tmp_path / "users"), tables=USER_TABLES)
 
 
 def accounts(users: Lake) -> Accounts:
@@ -37,7 +37,11 @@ def client(lake: Lake, users: Lake) -> TestClient:
 
 
 def owner(c: TestClient) -> None:
-    r = c.post("/api/signin", json={"setup_code": CODE, "username": "jtouley", "password": PW}, headers=W)
+    r = c.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
     assert r.status_code == 200, r.text
 
 
@@ -48,14 +52,24 @@ def test_first_screen_is_owner_setup_and_needs_the_code(lake, users):
     c = client(lake, users)
     assert c.get("/").headers["location"] == "/signin"
     assert "Setup code" in c.get("/signin").text
-    r = c.post("/api/signin", json={"setup_code": "nope", "username": "jtouley", "password": PW}, headers=W)
-    assert r.status_code == 400 and "setup code" in r.json()["detail"]
+    r = c.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": "nope", "username": "jtouley", "password": PW},
+        headers=W,
+    )
+    assert r.status_code == 400 and r.json()["detail"] == [
+        {"field": "setup_code", "rule": "s.wrong", "message": "That setup code isn’t right."}
+    ]
     owner(c)
     assert c.get("/").status_code == 200  # signed in by creating the account
     # The code does nothing once an owner exists; the screen is plain sign-in.
     c2 = client(lake, users)
     assert "Setup code" not in c2.get("/signin").text
-    r = c2.post("/api/signin", json={"setup_code": CODE, "username": "other", "password": PW}, headers=W)
+    r = c2.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "other", "password": PW},
+        headers=W,
+    )
     assert r.status_code == 400
     assert len(accounts(users).users) == 1
 
@@ -93,7 +107,7 @@ def test_sign_in_messages_dont_say_whether_the_username_exists(lake, users):
 
 def test_lockout_after_five_failures_for_a_username_from_one_address_and_twenty_for_an_address(users):
     a = accounts(users)
-    a.create_owner(CODE, "jtouley", PW)
+    a.create_owner(CODE, "jtouley", PW, agree=True)
     for _ in range(5):
         with pytest.raises(AccountError, match="match"):
             a.sign_in("jtouley", "wrong password!", "1.1.1.1", now=100)
@@ -118,8 +132,8 @@ def test_password_rules():
 
 def test_owner_setup_validates_username(users):
     a = accounts(users)
-    with pytest.raises(AccountError, match="lower-case"):
-        a.create_owner(CODE, "J Touley!", PW)
+    with pytest.raises(AccountError, match="Use only letters, digits"):
+        a.create_owner(CODE, "J Touley!", PW, agree=True)
 
 
 # --- sessions ------------------------------------------------------------------------------------------
@@ -127,7 +141,11 @@ def test_owner_setup_validates_username(users):
 
 def test_cookie_flags(lake, users):
     c = client(lake, users)
-    r = c.post("/api/signin", json={"setup_code": CODE, "username": "jtouley", "password": PW}, headers=W)
+    r = c.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
     cookie = r.headers["set-cookie"]
     assert cookie.startswith(f"{COOKIE}=")
     for flag in ("HttpOnly", "Secure", "SameSite=lax", "Path=/", "Max-Age=7776000"):
@@ -151,7 +169,7 @@ def test_tampered_or_expired_cookie_is_signed_out(lake, users):
 
 def test_cookie_renews_after_a_day(lake, users):
     a = accounts(users)
-    acct = a.create_owner(CODE, "jtouley", PW)
+    acct = a.create_owner(CODE, "jtouley", PW, agree=True)
     old = a.issue(acct, now=datetime.now(UTC).timestamp() - 2 * 86400)
     c = TestClient(create_app(lake, Sessions(a)), base_url="https://testserver")
     c.cookies.set(COOKIE, old)
@@ -166,7 +184,11 @@ def test_sign_out_everywhere_and_password_change_end_other_sessions(lake, users)
     a = accounts(users)
     app = create_app(lake, Sessions(a))
     phone, laptop = (TestClient(app, base_url="https://testserver", follow_redirects=False) for _ in "ab")
-    phone.post("/api/signin", json={"setup_code": CODE, "username": "jtouley", "password": PW}, headers=W)
+    phone.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
     laptop.post("/api/signin", json={"username": "jtouley", "password": PW}, headers=W)
     new = "a different long password"
     r = phone.post("/api/password", json={"current": "wrong one here", "new": new}, headers=W)
@@ -198,7 +220,7 @@ def test_accounts_survive_a_restart(lake, users):
 
 def test_disabled_account_cannot_sign_in_and_its_cookie_stops_working(lake, users):
     a = accounts(users)
-    a.create_owner(CODE, "jtouley", PW)
+    a.create_owner(CODE, "jtouley", PW, agree=True)
     member = a._write(Account("u2", "maria", a._hash(PW)))
     token = a.issue(member)
     a._write(Account("u2", "maria", member.password_hash, disabled=True))
@@ -242,7 +264,11 @@ def test_two_real_accounts_cant_see_each_others_shots(lake, users):
     a = accounts(users)
     app = create_app(lake, Sessions(a))
     own = TestClient(app, base_url="https://testserver", follow_redirects=False)
-    own.post("/api/signin", json={"setup_code": CODE, "username": "jtouley", "password": PW}, headers=W)
+    own.post(
+        "/api/signin",
+        json={"agree": True, "setup_code": CODE, "username": "jtouley", "password": PW},
+        headers=W,
+    )
     a._write(Account("u2", "maria", a._hash(PW)))
     other = TestClient(app, base_url="https://testserver", follow_redirects=False)
     other.post("/api/signin", json={"username": "maria", "password": PW}, headers=W)
@@ -426,7 +452,7 @@ def test_a_space_without_its_secrets_says_which_are_missing(lake, monkeypatch):
 def _aged(lake, users, days: float = 2) -> TestClient:
     """Signed in with a cookie old enough to be renewed on the next request."""
     a = accounts(users)
-    acct = a.by_name("jtouley") or a.create_owner(CODE, "jtouley", PW)
+    acct = a.by_name("jtouley") or a.create_owner(CODE, "jtouley", PW, agree=True)
     c = TestClient(create_app(lake, Sessions(a)), base_url="https://testserver", follow_redirects=False)
     c.cookies.set(COOKIE, a.issue(acct, now=datetime.now(UTC).timestamp() - days * 86400))
     return c
@@ -452,7 +478,7 @@ def test_parallel_guesses_are_counted_before_the_slow_check(users, monkeypatch):
     import threading
 
     a = accounts(users)
-    a.create_owner(CODE, "jtouley", PW)
+    a.create_owner(CODE, "jtouley", PW, agree=True)
     checked = []
     real = a._verify
 
@@ -479,10 +505,10 @@ def test_setup_code_guesses_are_limited(users):
     a = accounts(users)
     for i in range(20):
         with pytest.raises(AccountError, match="isn’t right"):
-            a.create_owner(f"guess-{i}", "jtouley", PW, ip="7.7.7.7", now=10)
+            a.create_owner(f"guess-{i}", "jtouley", PW, ip="7.7.7.7", now=10, agree=True)
     with pytest.raises(AccountError, match="Too many"):
-        a.create_owner(CODE, "jtouley", PW, ip="7.7.7.7", now=11)
-    assert a.create_owner(CODE, "jtouley", PW, ip="8.8.8.8", now=11).role == "owner"
+        a.create_owner(CODE, "jtouley", PW, ip="7.7.7.7", now=11, agree=True)
+    assert a.create_owner(CODE, "jtouley", PW, ip="8.8.8.8", now=11, agree=True).role == "owner"
 
 
 def test_limiter_forgets_old_keys(monkeypatch):
@@ -549,7 +575,7 @@ def test_guesses_spread_over_addresses_back_off_per_username(users):
     from app.accounts import BACKOFF_AFTER
 
     a = accounts(users)
-    a.create_owner(CODE, "jtouley", PW)
+    a.create_owner(CODE, "jtouley", PW, agree=True)
     for i in range(BACKOFF_AFTER):
         with pytest.raises(AccountError, match="match"):
             a.sign_in("jtouley", "wrong password!", f"9.9.9.{i}", now=100)
@@ -571,4 +597,4 @@ def test_each_dataset_publishes_only_its_own_files(tmp_path):
     main.write("shots", "shots/s1__20261027T000000.parquet", [{"shot_id": "s1"}])
     top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
     assert "users" not in top(main) and "shots" in top(main)
-    assert top(users) <= {"users", "invites"}
+    assert top(users) <= {"users", "invites", "consents"}

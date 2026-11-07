@@ -9,7 +9,7 @@ One claim per line, `metric: text`: the text must appear in the copy below, and 
 Change a number in the copy and here together, then retype it in the Snowflake listing.
 listed_coffees counts the coffees listed for sale in this build (not archived, not wholesale), not PUBLIC_COFFEE's
 rows (every coffee ever seen); roasters_with_coffee counts the roasters with at least one of them, not PUBLIC_ROASTER.
-listed_coffees: about 45,000 coffees listed for sale
+listed_coffees: about 38,000 coffees listed for sale
 roasters_with_coffee: 1,800 US specialty roasters with coffee for sale
 Not checked: "about half of reachable US roasters" (no build metric counts reachable roasters).
 -->
@@ -17,7 +17,7 @@ Not checked: "about half of reachable US roasters" (no build metric counts reach
 **Title:** US Specialty Coffee Market: Weekly Prices, Origins and Availability
 
 **Short description:**
-Weekly prices, stock and attributes for about 45,000 coffees listed for sale, from
+Weekly prices, stock and attributes for about 38,000 coffees listed for sale, from
 1,800 US specialty roasters with coffee for sale. Each coffee keeps its price and listing history.
 
 **Description:**

@@ -1,0 +1,582 @@
+{
+ "meta": {
+  "labeler": "B",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "rule": "dupes",
+  "n": 114,
+  "note": "train and validation only; the test labels are in sealed/"
+ },
+ "labels": [
+  {
+   "id": "5starcoffeeroasters.com|temeculacoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Generic flavored and cold brew titles with different prices. Stores in NC and CA."
+  },
+  {
+   "id": "81301coffee.com|haobaobaocoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles with different prices and sizes; unrelated stores in Colorado and Florida."
+  },
+  {
+   "id": "81301coffee.com|lavantacoffee.com",
+   "label": "distinct",
+   "reason": "Only generic origin names overlap; Colorado and New Jersey stores with unrelated catalogs."
+  },
+  {
+   "id": "afterdarkroasting.com|javaboulevard.com",
+   "label": "distinct",
+   "reason": "Different names and locations; generic origin titles at different prices."
+  },
+  {
+   "id": "aguadulcecafe.com|frenchtownroasters.com",
+   "label": "duplicate",
+   "reason": "Caf\u00e9 and roastery of same company in Monroe, MI; identical catalog, prices, sizes."
+  },
+  {
+   "id": "aliencoffeeroasters.com|primeroastcoffee.com",
+   "label": "distinct",
+   "reason": "Generic country titles only; different names, states, platforms and prices."
+  },
+  {
+   "id": "aromaridge.com|joescoffeehouse.com",
+   "label": "distinct",
+   "reason": "Same town, but prices differ on most shared titles and each has large unique ranges. Looks like resale or a shared supplier."
+  },
+  {
+   "id": "artizancoffee.com|uncommoncoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Only generic origin titles overlap, with different prices; Florida and Michigan roasters with unrelated names."
+  },
+  {
+   "id": "ascension.coffee|ascensioncoffee.com",
+   "label": "duplicate",
+   "reason": "Same name variant, same city, all 14 titles identical with identical prices and sizes."
+  },
+  {
+   "id": "beanjuicecoffee.com|coffeebean.com",
+   "label": "distinct",
+   "reason": "Only 'Espresso' overlaps; unrelated businesses."
+  },
+  {
+   "id": "beanjuicecoffee.com|headrushroasters.com",
+   "label": "distinct",
+   "reason": "Generic origin titles only. Different towns and names."
+  },
+  {
+   "id": "beanstockcoffee.com|coffeebean.com",
+   "label": "distinct",
+   "reason": "Single generic 'Espresso' title shared; different businesses and states."
+  },
+  {
+   "id": "beanstockcoffee.com|shadrachscoffee.com",
+   "label": "distinct",
+   "reason": "Only generic flavored titles overlap, with different prices and sizes; the stores are in different states and have unrelated names."
+  },
+  {
+   "id": "birdrockcoffee.com|quillscoffee.com",
+   "label": "distinct",
+   "reason": "Shared generic subscription titles with different prices; different names and cities."
+  },
+  {
+   "id": "blindtigercafe.com|blindtigercoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same Blind Tiger name, Tampa, caf\u00e9 and roastery hosts, identical titles and prices."
+  },
+  {
+   "id": "bluechipcoffeeroaster.com|piatanoirroast.com",
+   "label": "distinct",
+   "reason": "Large overlap fits a shared white-label supplier catalog. Prices differ and the stores are in different states with different names."
+  },
+  {
+   "id": "bluejazzcoffee.com|dillanos.com",
+   "label": "distinct",
+   "reason": "Generic origin titles; different prices, sizes, states."
+  },
+  {
+   "id": "bluestrawberrycoffee.com|doublebarrelroasters.com",
+   "label": "distinct",
+   "reason": "Iowa vs New York, different names; generic flavor titles at different prices."
+  },
+  {
+   "id": "bonitoroaster.com|theroastedbean.com",
+   "label": "distinct",
+   "reason": "Different names, states; generic varietal titles with different prices."
+  },
+  {
+   "id": "broadcastcoffee.com|broadcastcoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same Seattle business under two host variants; all 16 titles identical in price and sizes."
+  },
+  {
+   "id": "cafesantanaroastingcompany.com|javajunctionroasters.com",
+   "label": "distinct",
+   "reason": "Generic titles, different prices, opposite coasts."
+  },
+  {
+   "id": "caffemedici.com|mediciroasting.com",
+   "label": "duplicate",
+   "reason": "Same Medici brand in Austin; identical catalog, prices and sizes."
+  },
+  {
+   "id": "caminorealcoffee.com|idlehandsroasting.com",
+   "label": "distinct",
+   "reason": "Shared importer lots at different prices; Texas and Utah roasters with unrelated names."
+  },
+  {
+   "id": "campcreekcoffee.com|lgcrcoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices, names and states."
+  },
+  {
+   "id": "canyoncoffeeroasters.com|shadrachscoffee.com",
+   "label": "distinct",
+   "reason": "Only generic flavor titles shared; different prices, sizes, names and states."
+  },
+  {
+   "id": "capecodcoffee.com|fiveriverscoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin/roast titles, different prices, coasts apart."
+  },
+  {
+   "id": "capecodcoffee.com|lionrushcoffee.com",
+   "label": "distinct",
+   "reason": "Generic Brazil/Colombia overlap, different prices and states."
+  },
+  {
+   "id": "captainscoffee.com|lonelymonkcoffeeroasting.com",
+   "label": "distinct",
+   "reason": "Generic origin names; Alaska vs Pennsylvania."
+  },
+  {
+   "id": "cartelcoffeelab.com|cartelroasting.co",
+   "label": "duplicate",
+   "reason": "Cartel caf\u00e9 and roastery sites in the Phoenix area with an identical 11-item catalog and prices."
+  },
+  {
+   "id": "cashuacoffee.com|readingcoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles with different prices and sizes; South Carolina and Pennsylvania stores with unrelated names."
+  },
+  {
+   "id": "cbrccoffee.com|chesapeake.coffee",
+   "label": "duplicate",
+   "reason": "All 20 titles identical with the same prices and sizes; both are Chesapeake-named Maryland roasters; gift certificate names Chesapeake Coffee Roasters."
+  },
+  {
+   "id": "chasecoffeeroasters.com|plankroadcoffee.com",
+   "label": "distinct",
+   "reason": "Generic size-based titles with very different prices; California and Illinois stores with unrelated names."
+  },
+  {
+   "id": "chazzanocoffee.com|highpointroasters.com",
+   "label": "distinct",
+   "reason": "Only two generic origin titles shared at different prices; different names, states and platforms."
+  },
+  {
+   "id": "cherrycoffeeroasters.com|cherryrivercoffee.com",
+   "label": "distinct",
+   "reason": "Only a generic 'Roaster's Choice' is shared; different towns, prices and line-ups."
+  },
+  {
+   "id": "chilmarkcoffeeco.com|pacifikcoffee.com",
+   "label": "distinct",
+   "reason": "Massachusetts vs Oregon; generic origin names with different prices."
+  },
+  {
+   "id": "coffeolroasting.com|starlightcoffeeco.com",
+   "label": "distinct",
+   "reason": "Two common titles at different prices; unrelated names in different states."
+  },
+  {
+   "id": "colipsecoffee.com|temeculacoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Shared flavored-coffee titles likely from a common supplier; different prices, sizes, names and states."
+  },
+  {
+   "id": "companioncoffeeroasters.com|companionroasters.com",
+   "label": "distinct",
+   "reason": "Similar names, but they are in different states with different line-ups; only a generic 'Ethiopia' is shared."
+  },
+  {
+   "id": "confidentcoffeeroasters.com|michaelthomascoffee.com",
+   "label": "distinct",
+   "reason": "Generic fair-trade origin titles; different names, states and platforms."
+  },
+  {
+   "id": "cravenscoffee.com|daybreakcoffee.com",
+   "label": "distinct",
+   "reason": "Different businesses in WA and CT; only generic blend names overlap at different prices."
+  },
+  {
+   "id": "creativecoffees.com|downeastcoffee.com",
+   "label": "distinct",
+   "reason": "Generic flavored titles; different towns, prices and catalogs."
+  },
+  {
+   "id": "creativecoffees.com|yummycoffee.bigcartel.com",
+   "label": "distinct",
+   "reason": "Different states and names, generic overlapping titles, different prices and catalogs."
+  },
+  {
+   "id": "cunninghamcoffeeroasters.com|hawaiicoffee.net",
+   "label": "distinct",
+   "reason": "Oregon vs Hawaii, different names, different prices and sizes."
+  },
+  {
+   "id": "dancinggoats.com|kaldiscoffee.com",
+   "label": "distinct",
+   "reason": "A few shared items at matching prices, but each store has its own line-up, name and city."
+  },
+  {
+   "id": "daybreak.coffee|daybreakcoffee.com",
+   "label": "distinct",
+   "reason": "Similar names but Texas vs Connecticut, different catalog sizes, only generic overlap."
+  },
+  {
+   "id": "dessertoasiscoffee.com|docr.coffee",
+   "label": "duplicate",
+   "reason": "Same name, docr is initials, nearby Michigan towns, identical catalog and prices."
+  },
+  {
+   "id": "dmcoffee.com|quarrymencoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices, names and states."
+  },
+  {
+   "id": "downeastcoffee.com|oceancoffee.com",
+   "label": "duplicate",
+   "reason": "Both list the same 24 distinctive titles at identical prices and sizes, and both are in Rhode Island. One catalog fed through to two stores."
+  },
+  {
+   "id": "elliottmurreycoffee.com|roastedbymom.com",
+   "label": "duplicate",
+   "reason": "Same town and an identical 12-item catalog with the same prices, including Roasted By Mom branded merch."
+  },
+  {
+   "id": "enderlycoffee.com|lionrushcoffee.com",
+   "label": "distinct",
+   "reason": "Generic country titles, different prices, names and states."
+  },
+  {
+   "id": "euroroast.com|roasting.com",
+   "label": "distinct",
+   "reason": "Different businesses in MN and UT; only generic titles overlap."
+  },
+  {
+   "id": "fieldstonecoffeeroasters.com|maplecityroasters.com",
+   "label": "distinct",
+   "reason": "Different towns and names; generic flavored titles overlap with differing prices."
+  },
+  {
+   "id": "frenchiecoffee.com|frenchieroast.com",
+   "label": "distinct",
+   "reason": "Texas vs Ohio, different line-ups, only generic origin titles shared at different prices."
+  },
+  {
+   "id": "frothymonkeycoffee.com|frothymonkeyroasting.co",
+   "label": "duplicate",
+   "reason": "Same brand, same city, identical full catalog with identical prices and sizes."
+  },
+  {
+   "id": "ggroasting.com|greatergoodsroasting.com",
+   "label": "duplicate",
+   "reason": "Host abbreviation of same name, same Austin town, identical 21 titles and prices."
+  },
+  {
+   "id": "globalcoffeeco.com|globalgourmetcoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices, cities and catalog sizes; only a name word in common."
+  },
+  {
+   "id": "globalgourmetcoffee.com|javaloveroasters.com",
+   "label": "distinct",
+   "reason": "Generic titles, different prices, names and states."
+  },
+  {
+   "id": "goldenlanterncoffee.com|regentcoffee.com",
+   "label": "distinct",
+   "reason": "Different names and towns; two common importer-lot titles at different prices and sizes."
+  },
+  {
+   "id": "gracestcoffee.com|gracestreetcoffee.com",
+   "label": "duplicate",
+   "reason": "Same name, host variants, and an identical catalog with the same prices and sizes."
+  },
+  {
+   "id": "greencastlecoffee.com|jimsorganiccoffee.com",
+   "label": "distinct",
+   "reason": "Generic flavored titles; different prices and states."
+  },
+  {
+   "id": "guilfordroastingcompany.com|ritualgroundsroasting.com",
+   "label": "distinct",
+   "reason": "Generic dark roast titles with different prices and sizes. Different states."
+  },
+  {
+   "id": "haerfestcoffee.com|steelcupcoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin names with different prices, in different states."
+  },
+  {
+   "id": "haileycoffeeco.com|vanelis.com",
+   "label": "distinct",
+   "reason": "Only generic roast names shared, different prices and states."
+  },
+  {
+   "id": "haobaobaocoffee.com|reviveroasting.com",
+   "label": "distinct",
+   "reason": "Generic blend/flavor titles, different names, prices and states."
+  },
+  {
+   "id": "harryandbeanscoffee.com|sanfranciscocoffeeroastingco.com",
+   "label": "distinct",
+   "reason": "Only two generic Fair Trade origins overlap, with different prices; New Jersey and Georgia stores with unrelated names."
+  },
+  {
+   "id": "heartwoodcoffee.com|heartwoodroastery.com",
+   "label": "duplicate",
+   "reason": "Same name, nearby Ohio towns, identical 11-title catalog with identical prices and sizes."
+  },
+  {
+   "id": "heritagecoffee.com|roasting.com",
+   "label": "distinct",
+   "reason": "Generic origin titles with different prices. Juneau and Salt Lake City businesses."
+  },
+  {
+   "id": "hiddenfortresscoffee.com|scottbroscoffee.com",
+   "label": "distinct",
+   "reason": "Common importer lots; different names, states, prices and catalog sizes."
+  },
+  {
+   "id": "highfalutin.coffee|steeloakcoffee.com",
+   "label": "distinct",
+   "reason": "Shared importer lot names, different prices, sizes, names and states."
+  },
+  {
+   "id": "idiomacoffee.com|oldcrown.com",
+   "label": "distinct",
+   "reason": "Different names and states; common importer lots, otherwise different catalogs."
+  },
+  {
+   "id": "intelligentsia.com|intelligentsiacoffee.com",
+   "label": "duplicate",
+   "reason": "Same brand and city, identical 181-title catalog with identical prices and sizes."
+  },
+  {
+   "id": "iowacr.com|medleno.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; separate businesses in IA and CA."
+  },
+  {
+   "id": "iowacr.com|olycrest.com",
+   "label": "distinct",
+   "reason": "Only generic titles overlap; different states, prices and line-ups."
+  },
+  {
+   "id": "java-gourmet.com|javacoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; different companies in NY and TX."
+  },
+  {
+   "id": "javabeanroast.com|martinhenrycoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles with different sizes and prices; Nebraska and Washington stores with unrelated names."
+  },
+  {
+   "id": "javabeanroast.com|sigbrew.com",
+   "label": "distinct",
+   "reason": "Only generic origin names shared, at different prices; different businesses in NE and NC."
+  },
+  {
+   "id": "javaboulevard.com|javacoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; separate businesses in MI and TX."
+  },
+  {
+   "id": "javacity.com|javacoffee.com",
+   "label": "distinct",
+   "reason": "Only a generic 'French Roast' is shared. Different names, cities and prices."
+  },
+  {
+   "id": "javacoffee.com|javadoro.com",
+   "label": "distinct",
+   "reason": "Only generic titles overlap, with different prices; Texas and Florida stores with different names."
+  },
+  {
+   "id": "javacoffee.com|javajunctionroasters.com",
+   "label": "distinct",
+   "reason": "Generic titles at very different prices; separate businesses in TX and NY."
+  },
+  {
+   "id": "javacoffee.com|javaloveroasters.com",
+   "label": "distinct",
+   "reason": "Single generic blend name; different prices and states."
+  },
+  {
+   "id": "javacoffee.com|javamania.com",
+   "label": "distinct",
+   "reason": "Texas vs Illinois, only 'French Roast' shared at different prices."
+  },
+  {
+   "id": "javacoffee.com|westendcoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles, very different prices and locations."
+  },
+  {
+   "id": "jbirdsupply.com|kahawaroasters.com",
+   "label": "distinct",
+   "reason": "Only generic origin titles shared; different names, states and very different prices."
+  },
+  {
+   "id": "jsacoffee.com|northcoastroasting.com",
+   "label": "distinct",
+   "reason": "Generic origins with different prices. Wisconsin vs California."
+  },
+  {
+   "id": "kahacoffee.com|kahawaroasters.com",
+   "label": "distinct",
+   "reason": "One common origin title, different prices and states."
+  },
+  {
+   "id": "kauaigourmetroasters.com|kauairoastery.com",
+   "label": "distinct",
+   "reason": "One generic Kauai title; different towns, prices and catalogs."
+  },
+  {
+   "id": "kauairoastery.com|mountainroaster.com",
+   "label": "distinct",
+   "reason": "Only generic origin titles overlap, with different prices and sizes; Hawaii and West Virginia roasters with unrelated names."
+  },
+  {
+   "id": "kickapoocoffee.com|wonderstate.com",
+   "label": "duplicate",
+   "reason": "Kickapoo Coffee rebranded as Wonderstate; same town, and the full catalog matches exactly."
+  },
+  {
+   "id": "koolbeanscoffee.net|mojosjavatx.com",
+   "label": "distinct",
+   "reason": "Generic origin titles at different prices; separate businesses in SD and TX."
+  },
+  {
+   "id": "koolbeanscoffee.net|quartertonecoffee.com",
+   "label": "distinct",
+   "reason": "Generic country titles, different prices and states."
+  },
+  {
+   "id": "leelanaucoffee.com|mississippimudcoffee.com",
+   "label": "distinct",
+   "reason": "Generic flavor and roast titles, different prices and states."
+  },
+  {
+   "id": "moodusmud.com|springtownroasters.com",
+   "label": "distinct",
+   "reason": "Generic origin titles with different prices; Connecticut and Texas stores with unrelated names."
+  },
+  {
+   "id": "oldworldcoffee.co|oldworldcoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Two locations of the same Reno roaster with an identical catalog, prices and sizes."
+  },
+  {
+   "id": "pcroaster.com|superiorcoffeeroasting.com",
+   "label": "distinct",
+   "reason": "Generic titles with different prices. Utah vs Michigan."
+  },
+  {
+   "id": "piatanoirroast.com|thrutheflamecoffee.com",
+   "label": "distinct",
+   "reason": "Generic origin titles, different prices, names and states."
+  },
+  {
+   "id": "portolacoffee.com|portolacoffeelab.com",
+   "label": "duplicate",
+   "reason": "Same name and town, and both list the same 14 items with identical prices. One business under two hosts."
+  },
+  {
+   "id": "redbarncoffee.com|signetcoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles only, different prices and states."
+  },
+  {
+   "id": "redbudroasters.com|temeculacoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Generic origin-plus-roast titles with different prices. Texas vs California."
+  },
+  {
+   "id": "reprisecoffee.com|repriseroasters.com",
+   "label": "duplicate",
+   "reason": "Same name, host variants, identical 26 titles and prices; nearby Illinois towns."
+  },
+  {
+   "id": "revecoffee.com|revecoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same name and town, with identical titles and prices. Two hosts for one roaster."
+  },
+  {
+   "id": "roastery.coffee|shoptheroastery.com",
+   "label": "distinct",
+   "reason": "Same generic name but Georgia vs Minnesota, different prices, sizes and mostly different catalogs."
+  },
+  {
+   "id": "rockfordroasting.co|rockfordroastingcompany.com",
+   "label": "duplicate",
+   "reason": "Same name and town, host variants, identical titles, prices and sizes."
+  },
+  {
+   "id": "serafinacoffeebar.com|serafinacoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same name and Phoenix town; host variants; all five titles identical at the same prices."
+  },
+  {
+   "id": "sevenhillscoffee.com|thirdcoastcoffee.com",
+   "label": "distinct",
+   "reason": "Generic titles at different prices; separate roasters in OH and TX."
+  },
+  {
+   "id": "silvercupcoffeeroasters.com|unionroasters.co",
+   "label": "duplicate",
+   "reason": "Identical full catalog, prices and sizes; nearby north Idaho towns suggest same company."
+  },
+  {
+   "id": "smellycatcoffee.com|sturbridgecoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Generic roast-level titles; unrelated businesses in NC and MA."
+  },
+  {
+   "id": "springridgeroasters.com|sturbridgecoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Two generic origin titles overlap; different names, states and catalogs."
+  },
+  {
+   "id": "steelcupcoffee.com|tamerabbit.com",
+   "label": "distinct",
+   "reason": "Only generic origin titles are shared. Different towns, names and prices."
+  },
+  {
+   "id": "sunshinecoffeeroasters.com|sunshineorganiccoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Host variants of Sunshine name, neighboring Sonoma towns, all 13 titles identical with same prices and sizes."
+  },
+  {
+   "id": "sweetleafcoffee.com|sweetleaflic.com",
+   "label": "duplicate",
+   "reason": "Same name and city, host variant, identical 31-title catalog with identical prices."
+  },
+  {
+   "id": "switchcoffee.co|vamocoffee.com",
+   "label": "distinct",
+   "reason": "Different cities and names; shared titles are generic bag-size labels."
+  },
+  {
+   "id": "sypcoffee.com|touringcoffeeroasters.com",
+   "label": "distinct",
+   "reason": "Shared items are resold Jura machines at differing prices; different businesses in TN and OR."
+  },
+  {
+   "id": "vervecoffee.com|vervecoffeeroasters.com",
+   "label": "duplicate",
+   "reason": "Same name, and both list the same 18 coffees with identical prices and sizes. Two hosts for one business."
+  }
+ ]
+}

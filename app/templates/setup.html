@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import nav, chevron, legal %}
+{% from "_macros.html" import nav, chevron, legal, new_password, rules_json, status_line %}
 {% block title %}Setup · registry.coffee{% endblock %}
 {% macro describe(e) -%}
   {%- if e.kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer
@@ -36,14 +36,14 @@
     {% if auth_name != "local" %}
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
     <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
-      <form id="password-form" class="mt8" novalidate>
+      <form id="password-form" class="mt8" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>
         <label class="flabel" for="current">Current password</label>
-        <input class="input" id="current" name="current" type="password" autocomplete="current-password" required>
-        <label class="flabel" for="new">New password</label>
-        <input class="input" id="new" name="new" type="password" autocomplete="new-password" aria-describedby="new-h" required>
-        <div class="fhint" id="new-h">At least 10 characters. Changing it signs you out on your other devices.</div>
+        <input class="input" id="current" name="current" type="password" autocomplete="current-password" aria-describedby="current-error" required>
+        <p class="ferr" id="current-error" data-error-for="current"></p>
+        {{ new_password(id="new", label="New password", hint="Any characters, spaces and symbols included. Changing it signs you out on your other devices.") }}
         <div class="hint" data-hint role="alert"></div>
         <button class="btn secondary mt8" type="submit">Change password</button>
+        {{ status_line() }}
       </form>
     </details>
     <button class="link" type="button" data-signout="/api/signout">Sign out</button>
@@ -52,5 +52,6 @@
   </div>
   {{ legal() }}
   <div class="mt24"></div>
+  {% if auth_name != "local" %}{{ rules_json() }}{% endif %}
 {% endblock %}
 {% block nav %}{{ nav('setup') }}{% endblock %}

@@ -228,7 +228,7 @@ you pass `--public`).
 | `make mcp` | `coffeedata mcp` | Run the MCP server over stdio |
 | `make contracts` | `python -m coffeedata.raw_contracts --all` | Regenerate the internal ODCS contracts at their versions; refuses a change to names, types, required or enums without a new version |
 
-The CLI also has `build-diff`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
+The CLI also has `build-diff`, `build-hashes`, `override`, `export-public --to <dir|hf://|s3://|gs://>`, `load-snowflake` (`make install` includes the
 connector; with `--no-dev`, add `--extra snowflake`; it also writes the table, view and column descriptions
 that make the Snowflake listing's data dictionary, from the public contract), `shot add|from-issue` and `add-roaster`. `uv run coffeedata
 <command> --help` lists each command's flags.
@@ -277,7 +277,7 @@ hand, it keeps the data in a Hugging Face dataset and deploys the site to Pages.
    COFFEEDATA_LAKE=hf://datasets/<you>/coffee-data HF_TOKEN=<token> uv run coffeedata init
    ```
 3. In the repo's Actions settings, add the variable `LAKE_URL` = `hf://datasets/<you>/coffee-data` and the secret
-   `HF_TOKEN`. Optionally add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`); the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
+   `HF_TOKEN`. Add the secret `COFFEEDATA_ANTHROPIC_API_KEY` and the variable `VERDICT_MODEL` (`claude-haiku-5-5`): the run fails without them, unless the variable `ALLOW_RULES_ONLY` is `1` (a rules-only catalog, for a fork without Claude). Optionally add the variable `PUBLIC_EXPORT_URL` (for `s3://`, also
    the AWS secrets and the `AWS_REGION` variable); and for Snowflake the variables `SNOWFLAKE_ACCOUNT` and
    `SNOWFLAKE_USER` and the secret `SNOWFLAKE_PRIVATE_KEY` (see [`marketplace/README.md`](marketplace/README.md));
    and for the site the variables `SITE_URL`, `SUPPORT_EMAIL`, `GOVERNING_STATE` and `APP_URL`.
@@ -400,9 +400,26 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     low side only, on the share of listed coffees with `origin_country`, `process`, `roast_level` and
     `price_per_100g` filled in (a drop is an extraction or enrichment break, which `accepted_values` lets through
     as nulls) and on the share of listed coffees last seen in this run;
+  - `adapter_volume_in_band` (warn only): the same bands, low side only, at least 0.10 below the median, on three
+    per-adapter metrics: the ok share of the roasters the run *tried* (unlike `adapter_ok_share`, it doesn't fall
+    when a run just tries fewer roasters), and the same stores' products and priced products against their
+    previous fetch (a platform whose fetches "succeed" with less, or a price wipe on one platform). Measured in
+    `eval/dq`;
+  - `near_duplicate_roasters`, `price_per_100g_outliers`, `public_tables_reconcile` and
+    `release_changes_explained` (all warn only, measured in `eval/dq`): one catalog listed under two roaster_ids; a
+    price per 100 g far from coffees of the same origin and process (robust z of its log, below −3 or above 6);
+    totals that two public tables state separately (roaster counts, the listed total, a price event's roaster, a
+    price event with no coffee row that isn't a reclassified product); and every row this build adds, removes or
+    changes against the served release with a reason (`release_changes`, run after the gate as a report so it
+    can never fail a build; the build prints the counts per reason as `release notes:` and records them in
+    `builds` as `kind = 'release_change'`);
   - `catalog_volume_vs_last_build`: listed coffees, in-stock coffees and roasters moved at most 20% from the
     release being served;
   - `latest_run_is_fresh`: the newest run is at most 8 days older than the day of the build;
+  - `verdicts_cover_catalog`: Claude's verdicts ran: the build has a verdict model, and at least 85% of listed
+    coffees were decided by a verdict (`dim_coffee.classified_by = 'claude'`; about 95% is expected, as this
+    week's new versions get theirs a week later). Off only for an explicit rules-only build (`--allow-rules-only`
+    or `COFFEEDATA_ALLOW_RULES_ONLY=1`; RUNBOOK §5.5);
   - `public_coffee_is_fresh`: the public catalog's newest `last_seen` is the run the build checked (an empty catalog
     is left to the volume check);
   - `public_tables_are_one_release`: every row of every public table carries this build's `release_build_id`
@@ -424,7 +441,11 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
   weekly job ends red. `coffeedata rollback [--to BUILD]`, or the weekly workflow's `rollback_to` input, serves an
   earlier passing release. `coffeedata build-diff [--old ID --new ID]` compares two builds: changed models, test
   results, row counts, metrics and the coffees added, delisted or out of stock; by default the latest build
-  against the last passing one before it. After reviewing a real change, run the weekly workflow with
+  against the last passing one before it. `coffeedata build-hashes [ID] [--against ID] [--verify]` prints a
+  build's row count and content hash per release table and compares them with another build's, or with its
+  release files as they are now; the same lake and code always give the same hashes
+  (`tests/test_reproducible.py`), so a served release can be rebuilt from raw and checked
+  (`docs/ingestion/RUNBOOK.md` §5.6). After reviewing a real change, run the weekly workflow with
   `accept_volume_change` (or `build --accept-volume-change`) to let it through the volume check and the bands and
   make it the new baseline.
 - **Stable coffee IDs.** `coffee_id` is `<roaster domain>:<store product id>`, so a rename doesn't change it.

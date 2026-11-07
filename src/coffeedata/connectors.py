@@ -56,8 +56,9 @@ class Connector:
     deadline_min: float = 225.0  # stop starting roasters here, leaving time to compact under a 240-min limit
     retry_after_h: int = 6
     # Where its Cloud Run job's requests leave from: "default" (Cloud Run's shared Google egress) or "dedicated"
-    # (Direct VPC egress through Cloud NAT with one reserved IP). The deploy sets the job's network from this; the
-    # job records it, with the IPs it saw, in job_manifests. A per-connector setting, not a different design.
+    # (Direct VPC egress through Cloud NAT with a reserved IP: Shopify's own, or the one WooCommerce and generic
+    # share; src/terraform/ingestion.tf, local.ingest_jobs). The job records it, with the IPs it saw, in
+    # job_manifests. A per-connector setting, not a different design.
     egress: str = "default"
     # Pacing, with rps above and deadline_min (the crawl window: how long one job may run, up to its time limit):
     # stores in a shuffled order, seeded by the week, so the same stores aren't always the last ones asked.
@@ -70,9 +71,9 @@ CONNECTORS: dict[str, Connector] = {
     for c in (
         Connector("shopify", 0, 9, rps=SHOPIFY_RPS, egress="dedicated"),  # the confirmation run compares
         Connector("squarespace", 0, 9, rps=SQUARESPACE_RPS),  # one shared budget, as Shopify's
-        Connector("woocommerce", 0, 9),
+        Connector("woocommerce", 0, 9, egress="dedicated"),  # SiteGround challenges default egress
         Connector("square_online", 0, 9),
-        Connector("generic", 0, 9),
+        Connector("generic", 0, 9, egress="dedicated"),
     )
 }
 # The slots Cloud Scheduler runs (src/terraform/ingestion.tf, at minute :17; the weekly baseline is Monday 09:17 UTC).
@@ -123,7 +124,7 @@ def _partition_files(part: Path, table: str) -> list[Path]:
 
 def archive(lake: Lake, part: Path, batch: str) -> Path:
     """Where the merge `batch` keeps a connector partition's merged files: archive/ + the partition's own path +
-    merge=<batch>, in the same bucket. No reader globs archive/ (dbt, resume, the merge and the post-crawl check all
+    merge=<batch>, in the same bucket. No reader globs archive/ (dbt, resume, the merge and the fetch-health check all
     read raw/), and the staging bucket's lifecycle rule deletes it 30 days after the merge (src/terraform)."""
     return lake.root / "archive" / part.relative_to(lake.root) / f"merge={batch}"
 
@@ -264,6 +265,10 @@ def crawl(
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
+    repulls: list = []
+    if not (part or only):  # the fetch-health check's list, with re-fetch on (never for an arm or --only)
+        repulls = _repulls(plake, connector, week, states)
+        states += repulls
     if part:
         states = [s for s in states if in_slice(s.roaster.host.lower() or s.roaster.roaster_id, part, salt)]
     if c.shuffle:
@@ -274,6 +279,9 @@ def crawl(
     window = _window_left(lake, "crawl", connector, week, deadline_min or c.deadline_min)
     # the quarantine this attempt applies: none for --only, so its start row doesn't list the roaster it fetches
     started = control.execution() | health.summary(todo_ids) | {"quarantined": sorted(quarantine)}
+    # A manual one-roaster run (RUNBOOK §7) says so: never a retry of the pass running beside it (fetchhealth.run).
+    if only:
+        started["only"] = only
     job = control.start(lake, "crawl", week, connector, len(states), detail=started)
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     if health.dead:
@@ -294,6 +302,7 @@ def crawl(
                 guard=guard,
                 suspects=set(health.suspects) - set(quarantine),
                 quarantine=quarantine,
+                refetch={s.roaster.roaster_id for s in repulls},
             )
             if states
             else {"roasters": 0, "by_adapter": {}, "skipped_deadline": 0, "deferred": {}}
@@ -331,12 +340,33 @@ def crawl(
             "status": end["status"], "skipped_deadline": out.get("skipped_deadline", 0)}  # fmt: skip
 
 
+def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
+    """The roasters the fetch-health check (fetchhealth) listed to fetch again that `states` doesn't already have,
+    only when re-fetch is on (fetchhealth.refetch_enabled, off by default): off, the list isn't even read, and the
+    pass is main's.
+    A repull is an extra: if it can't be read (the lake still failing after retry_transient's retries, an
+    unreadable check), it is logged and skipped, and the crawl pass goes on with its own work."""
+    from . import fetchhealth
+
+    if not fetchhealth.refetch_enabled():
+        return []
+    have = {s.roaster.roaster_id for s in states}
+    try:
+        listed = fetchhealth.repull_states(plake, connector, week)
+    except Exception as e:  # noqa: BLE001 - never the pass's failure
+        log.warning("crawl %s: the fetch-health check's list skipped: %s: %s", connector, type(e).__name__, e)
+        return []
+    return [s for s in listed if s.roaster.roaster_id not in have]
+
+
 def crawl_retry(
     lake: Lake, connector: str, day: str, workers: int = 8, deadline_min: float | None = None
 ) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
-    their blocked page. Only those: a store that failed outright is not asked again here, so a Shopify store that
-    refused all day isn't re-asked in the evening (the connectors that park nothing get their third pass from
+    their blocked page, and, only with re-fetch on (fetchhealth.refetch_enabled), the fetch-health check's list (a
+    fetch that landed but came back empty or short: empty or suspect).
+    Only those: a store that failed outright is not asked again here, so a Shopify store that refused all day isn't
+    re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job
     crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl. Like crawl, it stops
     starting stores at deadline_min (default the connector's, under the job's 240-minute limit)."""
@@ -344,6 +374,8 @@ def crawl_retry(
     plake = PartitionLake(lake, connector, week)
     compact(plake.part)
     states, resume = ingest.select_parked(plake, week, adapter=connector)
+    repulls = _repulls(plake, connector, week, states)  # fetched whole: no parked progress
+    states += repulls
     ids = {s.roaster.roaster_id for s in states}
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = health.quarantine(ids)
@@ -356,7 +388,7 @@ def crawl_retry(
     try:
         out = ingest.run(plake, states, week, workers=workers, mode="retry_failed", resume=resume, guard=guard,
                          suspects=set(health.suspects) - set(quarantine), quarantine=quarantine,
-                         deadline_s=60 * window)  # fmt: skip
+                         refetch={s.roaster.roaster_id for s in repulls}, deadline_s=60 * window)  # fmt: skip
         compact(plake.part)
     except Exception as e:
         control.finish(lake, job, "failed", detail=started | {"error": f"{type(e).__name__}: {e}"[:500]})

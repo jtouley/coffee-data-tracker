@@ -18,6 +18,11 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
+  (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
+  cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the
+  served release, with per-reason release notes printed by `coffeedata build` and recorded in `builds`).
+
 - **Catalog pipeline.** A weekly catalog of US specialty roasters on an immutable Parquet lake, modeled with dbt and
   DuckDB, with roaster discovery from Overture Maps and OpenStreetMap (#9). The catalog is derived in dbt from the
   raw lake, with a measured coffee classifier (#30). Every page of a Shopify catalog is fetched, and coffees are
@@ -52,6 +57,27 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   the product's input ports (#88).
 - **Development.** Pre-commit hooks and ruff formatting (#10). `CLAUDE.md`: heuristic and model changes are
   measured on held-out data (#42), with the effort scaled to the size of the change (#48).
+- **Fetch health.** `coffeedata fetch-health` checks, shortly after each of Monday's crawl passes and before the
+  merge, whether each roaster's fetch returned a catalog of about the right size. It runs the gate's `run_ok_rate`,
+  `adapter_ok_rate` and suspect-run rules on the unmerged week and lists the roasters whose fetch failed, came back
+  empty or came back far smaller than usual, each with the named gate rule that gave its reason. It judges fetches,
+  not data: it doesn't look at prices or at which products came back. Partial fetches and quarantined stores are
+  listed apart, never as failures; a challenged store is an ordinary failed fetch, listed with its edge when known
+  (SiteGround, Cloudflare). A platform-wide failure, or two at once (the image), emails the owner once a week per
+  finding. It never serves or records a build; it publishes only its own job rows, the verdict.
+  Re-fetching the listed roasters ships off, behind one setting (`COFFEEDATA_DQ_REFETCH`, unset): off, `crawl` and
+  `crawl-retry` never read the list and the week's output is unchanged (0 products). Turning it on would change
+  which batch counts for up to 346 products a week, so it needs the full evaluation first
+  (`eval/run_quality/README.md`) (#93).
+
+- **Reproducible releases.** Every build records each release table's row count and an order-independent content
+  hash (`builds` rows of kind `table_hash`; the per-build `release_build_id` is left out), and
+  `coffeedata build-hashes [ID] [--against ID] [--verify]` prints them, compares two builds' and re-hashes a
+  release's files, exiting 1 on a difference. `tests/test_reproducible.py` builds a fixture lake twice through
+  `coffeedata build`, the second time with every file's rows and every folder's files in reverse order, and
+  compares every model table row for row; the second build runs in another time zone, and dbt's session is now
+  pinned to UTC (`dbt/profiles.yml`), as production already ran. `docs/ingestion/RUNBOOK.md` Â§5.6 says how to
+  rebuild a served release from raw at its commit and compare its hashes.
 
 ### Changed
 
@@ -72,6 +98,13 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   inside the first attempt's window. `crawl-retry` writes `job_manifests` rows and only resumes its own
   connector's parked stores. `crawl --only <roaster>` fetches one roaster even if it is quarantined. Per-job
   memory overrides (`ingest_job_memory`); `crawl-generic` runs with 8Gi.
+- The WooCommerce and generic crawls (`crawl-woocommerce`, `crawl-generic`, every pass) leave from a second
+  reserved static IP, separate from Shopify's: SiteGround answers Cloud Run's default egress with a 202
+  `sg-captcha` challenge. Terraform adds a second subnet, address and Cloud NAT gateway on the existing router, with
+  the Shopify NAT's port settings, and outputs `woo_generic_egress_ip`; Shopify's subnet, IP and NAT are unchanged.
+  Each job's egress in `ingestion.tf` is now `default`, `shopify` or `woo_generic` instead of a `nat` flag, and
+  `Connector.egress` is `dedicated` for WooCommerce and generic. After apply, the runbook (Â§2.1) has the owner
+  check one SiteGround store from the new IP and open a SiteGround allowlist ticket for it.
 - **Snowflake share views have upper-case column names (breaking for queries that quote lower-case names).**
   Marketplace consumers now write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes; before, the views kept
   the tables' quoted lower-case names and needed `"release_run_date"`. Snowflake compares quoted names exactly, so
@@ -85,6 +118,17 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Fixed
 
+- **Claude's coffee-or-not verdicts now fail loudly when they can't run.** They never ran in production: the Terraform
+  variable `verdict_model` defaulted to empty, `coffeedata classify` printed a skip message and exited 0, and every
+  release was classified by the rules alone (on the sealed set, 10.7% of the products they keep are not coffee,
+  against 2.7% with verdicts). `classify` (and `weekly`, before it crawls) now exits non-zero without a verdict model
+  or Anthropic credentials, and `classify` also when Claude rejects its batch submit; `--allow-rules-only` or
+  `COFFEEDATA_ALLOW_RULES_ONLY=1` is the explicit opt-out for local and dev runs (`make` sets it for a local lake, and
+  the tests set it). The build job's chain fails its execution on a failed classify. `dim_coffee` gains
+  `classified_by` (`claude` or `rules`) and `verdict_model`, and a new gate, `verdicts_cover_catalog`, fails a build
+  with no verdict model or with under 85% of listed coffees decided by a verdict (public contract 2.5.0: the rule and
+  its threshold, no column change; #108). `verdict_model` is required in Terraform. RUNBOOK Â§5.5 covers the gate and
+  the backfill.
 - Catalog: parts, cups and test listings dropped; Java and multi-origin titles fixed (#27). Typed coffee names
   crowded out by shared words now match (#57).
 - Site: copy fixes (#26). The site workflow renders the served release (#59) and skips while nothing is served
@@ -97,6 +141,16 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   for future roast dates (#50); Save reads "Savingâ€¦" until the server replies (#58); fresh pages after writes, no
   duplicate resends and roast-date checks (#66).
 - Tests: a date-dependent bag comparison test (#51).
+- Builds: every "latest" pick has a total order, so the same lake builds the same tables whatever order DuckDB
+  reads rows in. Ties in time are broken by the batch id (the counted batch of a roaster-week, a roaster's last ok
+  fetch), by the value picked (probes, registry names, an attempt's adapter, a partial run's reason and a challenged
+  run's edge, verdict labels: `coffee` first, so a tie with `coffee` never removes a product, then the label) or by the row's hash
+  (enrichments), and the registry's lake sources are listed alphabetically (`string_agg` without an order gave
+  different orders on different reads). `mart_dial_in` and `mart_bag` take every `best_*` value from one shot:
+  the highest rated, the latest of equal ratings, then `shot_id` (before, equally rated shots gave arbitrary and
+  possibly mixed values). `registry.STATE_SQL` breaks ties as `dim_roaster` does. On the real lake (2026-11-04
+  copy) no pick had a tie and no roaster had two lake sources, so no catalog output changes; one of four
+  coffee-and-grinder groups in the shot log had equally top-rated shots with different recipes.
 - Crawl memory (#91): `crawl-generic` was OOM-killed at 2Gi on 2026-11-02. Every httpx response refers to itself
   through its stream, so each page body waited for Python's full garbage collection; the client now breaks that
   cycle once the body is read. A response body is capped at 32 MiB (`COFFEEDATA_MAX_RESPONSE_MB`; a sitemap
