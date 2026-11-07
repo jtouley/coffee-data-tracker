@@ -134,53 +134,66 @@ def says_wholesale(text: str) -> bool:
     return bool(_WHOLESALE.search(text))
 
 
-def excluded(item: CatalogItem) -> bool:
-    """Never a coffee, whatever else the listing says: gear, parts, merch, tea, green coffee, subscriptions,
-    test listings. These skip Claude's verdict (verdict.py)."""
+def exclusion(item: CatalogItem) -> str | None:
+    """The first rule that excludes the product outright (never a coffee, whatever else the listing says: gear,
+    parts, merch, tea, green coffee, subscriptions, test listings), by name, or None. The rules are checked in a
+    fixed order, so a product that more than one rule excludes always gets the same name."""
     title, ptype = item.title, item.product_type
-    return bool(
-        _NOT_COFFEE.search(f"{title} | {ptype}")
-        or _TEA.search(title)
-        or _TEA_TYPE.search(ptype)
-        or _PART_NO.search(title)
-        or _PARTS_SELLER.search(title)
-        or _TEST.search(title)
-        or _TEST_CAPS.search(title)
-        or _FILTER_GEAR.search(title)
-        or _SUBSCRIPTION.search(title)
-        or _SUBSCRIPTION_TYPE.search(ptype)
-        or _GREEN_TITLE.search(title)
-        or _GREEN_META.search(ptype)
-        or _NOT_COFFEE_TYPE.search(ptype)
-        or (_TEA_META.search(ptype) and not re.search(r"\bcoffee\b", ptype, re.I))
-        or _OTHER_META.search(ptype)
-        or any(_TAG.fullmatch(t.strip()) for t in item.tags)
+    checks = (
+        ("not_coffee_words", lambda: _NOT_COFFEE.search(f"{title} | {ptype}")),
+        ("tea_title", lambda: _TEA.search(title)),
+        ("tea_type", lambda: _TEA_TYPE.search(ptype)),
+        ("part_number", lambda: _PART_NO.search(title)),
+        ("parts_seller", lambda: _PARTS_SELLER.search(title)),
+        ("test_listing", lambda: _TEST.search(title) or _TEST_CAPS.search(title)),
+        ("filter_gear", lambda: _FILTER_GEAR.search(title)),
+        ("subscription", lambda: _SUBSCRIPTION.search(title) or _SUBSCRIPTION_TYPE.search(ptype)),
+        ("green_coffee", lambda: _GREEN_TITLE.search(title) or _GREEN_META.search(ptype)),
+        ("not_coffee_type", lambda: _NOT_COFFEE_TYPE.search(ptype)),
+        ("tea_type", lambda: _TEA_META.search(ptype) and not re.search(r"\bcoffee\b", ptype, re.I)),
+        ("other_type", lambda: _OTHER_META.search(ptype)),
+        ("tag", lambda: any(_TAG.fullmatch(t.strip()) for t in item.tags)),
     )
+    return next((name for name, check in checks if check()), None)
+
+
+def excluded(item: CatalogItem) -> bool:
+    """Never a coffee, whatever else the listing says (exclusion names the rule). These skip Claude's verdict
+    (verdict.py)."""
+    return exclusion(item) is not None
 
 
 def is_coffee(item: CatalogItem) -> bool:
     """The rules' answer: used where Claude has no verdict, and as the floor the labeled sets hold it to."""
-    if excluded(item):
-        return False
+    return decision(item)[0]
+
+
+def decision(item: CatalogItem) -> tuple[bool, str]:
+    """The rules' answer and the rule that gave it: excluded:<rule> (exclusion), sauce, sweets or drinks (not
+    coffee); coffee_words, country, demonym or coffee_type (coffee); else signals:<n>, the count of the four
+    independent signals (coffee at two or more). Only an explanation: is_coffee is this answer."""
+    if (why := exclusion(item)) is not None:
+        return False, f"excluded:{why}"
     title, ptype = item.title, item.product_type
     head = f"{title} | {ptype}"
     tags = " ".join(item.tags)
     meta = f"{ptype} | {tags}"
     if _SAUCE.search(title) and not (_COFFEE_WORDS.search(title) or _COUNTRY.search(title)):
-        return False
+        return False, "sauce"
     if _SWEETS.search(title) and not (
         _SWEET_COFFEE.search(title) or re.search(r"\bflavou?red\b", meta, re.I) or _COUNTRY.search(title)
     ):
-        return False
+        return False, "sweets"
     if _DRINKS.search(title) and not _BEANS.search(title):
-        return False
-    if (
-        _COFFEE_WORDS.search(head)
-        or _COUNTRY.search(title)
-        or _DEMONYM.search(title)
-        or _COFFEE_TYPE.search(ptype)
+        return False, "drinks"
+    for name, hit in (
+        ("coffee_words", lambda: _COFFEE_WORDS.search(head)),
+        ("country", lambda: _COUNTRY.search(title)),
+        ("demonym", lambda: _DEMONYM.search(title)),
+        ("coffee_type", lambda: _COFFEE_TYPE.search(ptype)),
     ):
-        return True
+        if hit():
+            return True, name
     body = item.body_text[:1500]
     # Otherwise two independent signals: coffee language in the tags or description, an origin there, the word
     # coffee in the type, tags or description, a bag-sized variant, or bag wording in the title.
@@ -190,4 +203,5 @@ def is_coffee(item: CatalogItem) -> bool:
         bool(re.search(r"\bcoffees?\b", f"{title} {meta} {body}", re.I)),
         _bag_sized(item) or bool(_BAG.search(head)),
     ]
-    return sum(signals) >= 2
+    n = sum(signals)
+    return n >= 2, f"signals:{n}"

@@ -32,17 +32,20 @@ image must exist before the first apply**: a job whose image is missing fails to
 Build with Cloud Build (`gcloud builds submit`), because pushes from Cloud Shell were refused. Its docker step runs
 with `DOCKER_BUILDKIT=1`: only BuildKit reads `ingest.Dockerfile.dockerignore`, which keeps dbt/, config/ and
 contracts/ in the image (the app's `.dockerignore` leaves them out). The upload follows `.gitignore`, so the local
-lake and build/ stay behind.
+lake and build/ stay behind. `_GIT_SHA` stamps the commit into the image (`COFFEEDATA_GIT_SHA`), so every record a
+job writes names it (`code_version`, `builds.git_sha`); an image built without it records `unknown`. Build from a
+clean checkout of the commit you mean (`git status` shows nothing), since the upload is the working tree.
 
 ```sh
 cat > /tmp/ingest-build.yaml <<'YAML'
 steps:
   - name: gcr.io/cloud-builders/docker
     env: ["DOCKER_BUILDKIT=1"]
-    args: ["build", "-f", "ingest.Dockerfile", "-t", "$_IMAGE", "."]
+    args: ["build", "-f", "ingest.Dockerfile", "--build-arg", "GIT_SHA=$_GIT_SHA", "-t", "$_IMAGE", "."]
 images: ["$_IMAGE"]
 YAML
-gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml --substitutions "_IMAGE=$IMAGE" .
+gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
+  --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" .
 gcloud artifacts docker images describe "$IMAGE" --format='value(image_summary.digest)'   # it exists
 ```
 
@@ -449,7 +452,7 @@ scheduled job.
    ```sh
    git checkout main && git pull
    DIGEST=$(gcloud builds submit --project "$PROJECT" --config /tmp/ingest-build.yaml \
-     --substitutions "_IMAGE=$IMAGE" --suppress-logs --format='value(results.images[0].digest)' .)
+     --substitutions "_IMAGE=$IMAGE,_GIT_SHA=$(git rev-parse HEAD)" --suppress-logs --format='value(results.images[0].digest)' .)
    PINNED="${IMAGE%:*}@${DIGEST:?the build printed no digest}"; echo "$PINNED"
    gcloud artifacts docker images describe "$PINNED" --format='value(image_summary.digest)'   # the same digest
    cd src/terraform
@@ -726,9 +729,10 @@ rolled back to.
 checks that its run is this week's. If not, it fails red and exports nothing (no public export, no Snowflake load).
 A manual `gh workflow run site` only renders and deploys. To export after a late fix, run
 `gh workflow run weekly -f rollback_to=served`: it serves the current release again, exports, loads Snowflake and
-deploys. `serving_log` records that re-serve with the reason "re-export for Snowflake migration (<actor>)", because
-`weekly.yml` sets that reason for every `rollback_to=served`. Read it as a recovery export of the same release: no
-Snowflake migration ran, and the served release didn't change.
+deploys. `serving_log` records that re-serve as action `reexport` (not `rollback`), with the reason "re-export for
+Snowflake migration (<actor>)", because `weekly.yml` sets that reason for every `rollback_to=served`. Read it as a
+recovery export of the same release: no Snowflake migration ran, and the served release didn't change. Rows written
+before `reexport` existed show such a re-serve as `rollback` with `previous_build_id` equal to `build_id`.
 
 The promise is that served data comes from a run at most 8 days old (`max_run_age_days`). On Tuesday last week's run
 (the Monday before `$WEEK`) is exactly 8 days old, so the promise still holds. It breaks at 00:00 UTC Wednesday and

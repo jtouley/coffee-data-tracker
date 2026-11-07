@@ -18,16 +18,26 @@ from pathlib import Path
 KEY_PACKAGES = ("coffeedata", "dbt-core", "dbt-duckdb", "duckdb", "pyarrow", "pydantic", "httpx")
 
 
+# The commit an image was built from, set by its build (ingest.Dockerfile and app/Dockerfile: ARG GIT_SHA, from
+# `--build-arg GIT_SHA=$(git rev-parse HEAD)` in Cloud Build and the deploy workflow). An image has no git checkout,
+# so without it a Cloud Run build recorded no commit at all.
+IMAGE_SHA_ENV = "COFFEEDATA_GIT_SHA"
+UNKNOWN = "unknown"
+
+
 def git_sha() -> str | None:
-    """GITHUB_SHA, else the sha of the checkout this package runs from (never the cwd's repo), else None."""
-    if os.environ.get("GITHUB_SHA"):
-        return os.environ["GITHUB_SHA"]
+    """GITHUB_SHA, else the commit the image was built from (COFFEEDATA_GIT_SHA), else the sha of the checkout this
+    package runs from (never the cwd's repo), else None. An image built without the commit has
+    COFFEEDATA_GIT_SHA=unknown, which counts as missing."""
+    for var in ("GITHUB_SHA", IMAGE_SHA_ENV):
+        if (v := os.environ.get(var, "").strip()) and v != UNKNOWN:
+            return v
     try:
         here = Path(__file__).resolve().parent
         r = subprocess.run(
             ["git", "-C", str(here), "rev-parse", "HEAD"], capture_output=True, text=True, check=True
         )
-        return r.stdout.strip() or None
+        return (r.stdout or "").strip() or None
     except (OSError, subprocess.CalledProcessError):
         return None
 
@@ -40,8 +50,9 @@ def package_version(name: str) -> str | None:
 
 
 def code_version() -> str:
-    """GITHUB_SHA, else the checkout's git sha, else the installed package's version."""
-    return git_sha() or f"coffeedata {package_version('coffeedata') or 'unknown'}"
+    """The commit the code is (git_sha), else "unknown": never just the package's version, which every commit
+    shares."""
+    return git_sha() or UNKNOWN
 
 
 def package_versions() -> str:

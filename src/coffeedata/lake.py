@@ -13,7 +13,9 @@ Every pipeline step *adds* files and never rewrites another run's files:
     equipment/<equipment_id>__<time>.parquet              one file per grinder, machine or basket change
     bags/<bag_id>__<time>.parquet                         one file per bag opened (or changed)
     run_manifests/run_date=YYYY-MM-DD/batch=<id>.parquet  the roasters an ingest set out to fetch, and their status
-    serving_log/serve_id=<id>.parquet                     one row per serve or rollback of a release
+    serving_log/serve_id=<id>.parquet                     one row per serve, rollback or re-export of a release
+    releases/run_date=.../build=<id>/<table>.parquet       every build's release (quality.RELEASE_TABLES)
+    releases/run_date=.../build=<id>/ops/<table>.parquet   its ops tables (quality.OPS_TABLES): never public
 
 Bag photos go to their own private dataset (`Lake.photos()`), one photo per file:
 
@@ -254,7 +256,8 @@ SCHEMAS: dict[str, pa.Schema] = {
     # One file per dbt build: a row per dbt node (its manifest checksum and test result, so two builds' code
     # and test outcomes can be compared), a row per catalog metric (the baseline the next build's volume check
     # reads), a row per release table (kind table_hash: its row count in rows, its content hash in checksum and the
-    # hash method in payload, quality.table_hash), a row per release change count (kind release_change: rows of a
+    # hash method in payload, quality.table_hash), a row per ops table written (kind ops_table: its rows), a row per
+    # release change count (kind release_change: rows of a
     # public table added, removed or changed against the served release, per reason; the release's notes), and the
     # build's manifest.json and run_results.json as text, so `dbt --state` can use them later.
     "builds": pa.schema(
@@ -329,12 +332,12 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("code_version", pa.string()),
         ]
     ),
-    # One row per serve and rollback: which release customers got, when, why, from whom, and what it replaced.
-    # marts/release.parquet holds only the current one.
+    # One row per serve, rollback and re-export: which release customers got, when, why, from whom, and what it
+    # replaced. marts/release.parquet holds only the current one.
     "serving_log": pa.schema(
         [
             ("served_at", pa.timestamp("s", tz="UTC")),
-            ("action", pa.string()),  # serve or rollback
+            ("action", pa.string()),  # serve, rollback or reexport (the served release again)
             ("build_id", pa.string()),
             ("run_date", pa.date32()),
             ("reason", pa.string()),
@@ -342,6 +345,54 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("previous_build_id", pa.string()),
             ("ci_run_id", pa.string()),
             ("ci_run_url", pa.string()),
+        ]
+    ),
+    # The ops tables: what each build saw, written beside its release (releases/.../build=<id>/ops/<table>.parquet,
+    # quality.OPS_TABLES) for the owner's command center. Copied from the build's dbt models, cast to these schemas;
+    # never served, exported, published as public tables or read by dbt, and with no schema file (no lake glob over
+    # an empty lake needs one). contracts/internal/ops.odcs.yaml is their contract.
+    "run_completeness": pa.schema(
+        [
+            ("run_date", pa.date32()),
+            ("roaster_id", pa.string()),
+            ("attempted", pa.bool_()),
+            ("ok", pa.bool_()),
+            ("expected_from", pa.string()),
+            ("adapter", pa.string()),
+            ("has_catalog", pa.bool_()),
+            ("catalog_ok", pa.bool_()),
+            ("unavailable", pa.bool_()),
+            ("quarantined", pa.bool_()),
+            ("partial", pa.bool_()),
+            ("partial_reason", pa.string()),
+            ("challenge", pa.string()),
+        ]
+    ),
+    "release_changes": pa.schema(
+        [
+            ("table_name", pa.string()),
+            ("item", pa.string()),
+            ("change", pa.string()),
+            ("reason", pa.string()),
+        ]
+    ),
+    "product_decisions": pa.schema(
+        [
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("product_id", pa.string()),
+            ("title", pa.string()),
+            ("product_type", pa.string()),
+            ("url", pa.string()),
+            ("first_seen", pa.date32()),
+            ("last_seen", pa.date32()),
+            ("is_listed", pa.bool_()),
+            ("input_hash", pa.string()),
+            ("is_coffee", pa.bool_()),
+            ("classified_by", pa.string()),
+            ("verdict_model", pa.string()),
+            ("verdict_label", pa.string()),
+            ("reason", pa.string()),
         ]
     ),
     "verdict_batches": pa.schema(
@@ -495,6 +546,10 @@ GLOBS = {
     "run_manifests": "run_manifests/*/*.parquet",
     "job_manifests": "job_manifests/*/*.parquet",
     "serving_log": "serving_log/*.parquet",
+    # The ops tables, across every build (no schema files: see SCHEMAS).
+    "run_completeness": "releases/*/*/ops/run_completeness.parquet",
+    "release_changes": "releases/*/*/ops/release_changes.parquet",
+    "product_decisions": "releases/*/*/ops/product_decisions.parquet",
     "shots": "shots/*.parquet",
     "equipment": "equipment/*.parquet",
     "bags": "bags/*.parquet",
@@ -817,6 +872,19 @@ class Lake:
             raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
         path.parent.mkdir(parents=True, exist_ok=True)
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
+        return path
+
+    def write_ops(self, name: str, run_date: str, build_id: str, table: pa.Table) -> Path:
+        """One of a build's ops tables (quality.OPS_TABLES), beside its release under ops/: immutable like it."""
+        path = (
+            self.root / "releases" / f"run_date={run_date}" / f"build={build_id}" / "ops" / f"{name}.parquet"
+        )
+        if path.exists():
+            raise FileExistsError(f"lake files are immutable: {path.relative_to(self.root)}")
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(".tmp")
+        pq.write_table(table, tmp, compression="zstd")
+        tmp.replace(path)
         return path
 
     def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
