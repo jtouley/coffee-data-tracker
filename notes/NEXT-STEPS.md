@@ -304,3 +304,4 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - 2026-11-07 (owner): scope is who sells coffee where (roasters and bean sellers). The cafe -> "serves X's beans" link is a much-later idea, not now. Cafes enter discovery only as candidates admitted when they sell coffee online.
 - 2026-11-07 (owner, refined): the registry is actual roasters only. Cafes and resellers are out; revisit cafes as a future item. Widening discovery to coffee_shop/cafe tags only serves to find mis-tagged roasters (e.g. Rival Bros).
 - 2026-11-07 (owner rule): ask before any large spend (many subagents, mass labeling or site visits); say the cost up front.
+- 2026-11-07 (owner): ELT, no preconditions on loading data. Crawl every discovered candidate; filter/flag after (is_roaster flag in dbt, public = roasters only, admin override per store). Cadence (b): unflagged stores monthly, flagged roasters weekly.
