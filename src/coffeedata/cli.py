@@ -9,6 +9,7 @@ import os
 import subprocess
 import sys
 import time
+from collections import Counter
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -100,29 +101,24 @@ def _discover_done(lake: Lake, week: str, source: str) -> bool:
     """Cloud Run's retry of this execution (CLOUD_RUN_TASK_ATTEMPT > 0): did an earlier attempt record `source`
     already? Its rows are in staging or the dataset, so the retry doesn't record (or ask Overpass for) them again."""
     from . import control
-    from .lake import retry_transient
 
-    ex = control.execution()
-    if not ex.get("task_attempt") or not ex.get("execution"):
-        return False
-    return any(
-        r["job"] == "discover"
-        and r["connector"] == source
-        and r["status"] == "done"
-        and control.detail_of(r).get("execution") == ex["execution"]
-        for r in retry_transient(control.rows, lake, week)
-    )
+    return any(r["status"] == "done" for r in control.this_execution(lake, week, "discover", source))
 
 
 def discover_source(
-    lake: Lake, source: str, release: str | None = None, states: list[str] | None = None
+    lake: Lake,
+    source: str,
+    release: str | None = None,
+    states: list[str] | None = None,
+    week: str | None = None,
 ) -> dict:
     """Record one open dataset's roasters in the registry, with a job_manifests start and end row (job discover,
-    connector = the source) for the week, as every pipeline job has. Raises when the source gave nothing usable
-    (Overture's scan found no roaster, or Overpass answered no state), after the end row says `failed`."""
+    connector = the source) under `week` (default: this week's Monday), as every pipeline job has. Raises, after the
+    end row says `failed`, when the source gave nothing usable: Overture's scan found no roaster, or Overpass left
+    more than half the states unanswered (an outage; the states it did answer are still recorded)."""
     from . import connectors, control, discover
 
-    week = connectors.week_of(_today())
+    week = week or connectors.week_of(_today())
     if _discover_done(lake, week, source):
         print(f"{source}: already recorded by an earlier attempt of this execution", file=sys.stderr)
         return {"source": source, "skipped": True}
@@ -130,18 +126,18 @@ def discover_source(
     job = control.start(lake, "discover", week, source, detail=started)
     try:
         failed: list[str] = []
+        outage = None
         if source == "overture":
             release = release or discover.overture_latest_release()
             found = discover.overture(release)
-            if (
-                not found
-            ):  # ~3,100 in October 2026: none means the scan or Overture's schema broke, not "no roasters"
+            # ~3,100 in October 2026: none means the scan or Overture's schema broke, not "no roasters"
+            if not found:
                 raise RuntimeError(f"Overture {release}: the scan found no roasters")
         else:
             asked = states or discover.US_STATES
             found = discover.osm(asked, failed=failed)
-            if len(failed) == len(asked):
-                raise RuntimeError(f"Overpass answered none of the {len(asked)} states (an outage?)")
+            if 2 * len(failed) > len(asked):
+                outage = f"Overpass left {len(failed)} of {len(asked)} states unanswered (an outage?)"
         try:
             known: set[str] | None = _known_roasters(lake)
         except Exception as e:  # noqa: BLE001 - only the "new" count needs it; the rows are recorded either way
@@ -164,7 +160,18 @@ def discover_source(
         "failed_states": failed,
         "file": path.relative_to(lake.root).as_posix() if path else None,
     }
-    control.finish(lake, job, "done", ok=len(rows), errors=len(failed), detail=started | out)
+    control.finish(
+        lake,
+        job,
+        "failed" if outage else "done",
+        ok=len(rows),
+        errors=len(failed),
+        detail=started | out | ({"error": outage} if outage else {}),
+    )
+    if (
+        outage
+    ):  # what Overpass did answer is recorded; the job fails so the owner hears of it and runs it again
+        raise RuntimeError(outage)
     print(
         f"{source}: {len(rows)} roasters recorded, {out['new']} new (new ones are picked up by the next probe)"
         + (f"; Overpass didn't answer {', '.join(failed)}" if failed else "")
@@ -214,7 +221,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
 
     t0 = time.monotonic()
     lake = Lake()
-    job = control.start(lake, "probe", connectors.week_of(args.run_date), detail=control.execution())
+    week = connectors.week_of(args.run_date)
+    job = control.start(lake, "probe", week, detail=control.execution())
     files: list[str] = []
 
     def write(batch: list[dict]) -> None:
@@ -231,7 +239,12 @@ def cmd_probe(args: argparse.Namespace) -> None:
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
         deadline_min = getattr(args, "deadline_min", None)
-        left = None if deadline_min is None else max(0.0, 60 * deadline_min - (time.monotonic() - t0))
+        left = None
+        if (
+            deadline_min is not None
+        ):  # a Cloud Run retry keeps the first attempt's window (it ends before the crawls)
+            window = connectors._window_left(lake, "probe", None, week, deadline_min)
+            left = max(0.0, 60 * window - (time.monotonic() - t0))
         rows = discover.probe(
             todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
         )
@@ -246,12 +259,9 @@ def cmd_probe(args: argparse.Namespace) -> None:
         raise
     ok = sum(r["status"] == "ok" for r in rows)
     left_over = len(todo) - len(rows)
-    by_status: dict[str, int] = {}
-    for r in rows:
-        by_status[r["status"]] = by_status.get(r["status"], 0) + 1
     detail = control.detail_of(job) | {
         "probed": len(rows),
-        "by_status": by_status,
+        "by_status": dict(Counter(r["status"] for r in rows)),
         "files": len(files),
         "minutes": round((time.monotonic() - t0) / 60, 1),
     }
@@ -770,11 +780,13 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             )
             .fetchall()
         }
-        for src in ("overture", "osm"):
+        from .connectors import week_of
+
+        for src in DISCOVER_SOURCES:
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it
             try:
-                discover_source(lake, src)
+                discover_source(lake, src, week=week_of(run))
             except Exception as e:  # noqa: BLE001 - discovery is best-effort; the catalog run must still happen
                 logging.warning("discover %s failed: %s", src, e)
     # Publish after every step that records new data, so a later failure (build, export, Snowflake, site) or a

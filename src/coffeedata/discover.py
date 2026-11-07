@@ -186,11 +186,14 @@ def overture(release: str | None = None) -> list[dict]:
 
 
 def _overpass(
-    client: httpx.Client, st: str, sleep: Callable[[float], None] = time.sleep
+    client: httpx.Client,
+    st: str,
+    sleep: Callable[[float], None] = time.sleep,
+    stop: float | None = None,
 ) -> list[dict] | None:
     """One state's elements, or None if Overpass didn't answer it: an HTTP error or a busy server (429, 5xx) after
     OVERPASS_WAITS, or an answer whose `remark` reports a runtime error (a timed-out query returns 200 with the
-    elements it found so far, which would be a silently short list)."""
+    elements it found so far, which would be a silently short list). No wait runs past `stop` (time.monotonic())."""
     q = (
         f'[out:json][timeout:60];area["ISO3166-2"="US-{st}"]->.a;'
         '(nwr["craft"="coffee_roaster"](area.a);nwr["roastery"="yes"](area.a););out tags;'
@@ -205,12 +208,11 @@ def _overpass(
                 raise ValueError(f"overpass remark: {remark[:200]}")
             return body.get("elements", [])
         except (httpx.HTTPError, ValueError) as e:
-            busy = isinstance(e, httpx.HTTPStatusError) and (
-                e.response.status_code == 429 or e.response.status_code >= 500
-            )
-            if wait is None or not (
-                busy or not isinstance(e, httpx.HTTPStatusError)
-            ):  # a 4xx: asking again won't help
+            # a transport error, a timed-out query or a busy server is worth asking again; another 4xx isn't
+            status = e.response.status_code if isinstance(e, httpx.HTTPStatusError) else None
+            retryable = status is None or status == 429 or status >= 500
+            out_of_time = wait is not None and stop is not None and time.monotonic() + wait >= stop
+            if wait is None or not retryable or out_of_time:
                 log.warning("overpass %s failed: %s", st, e)
                 return None
             log.warning("overpass %s failed: %s; asking again in %.0fs", st, e, wait)
@@ -235,7 +237,7 @@ def osm(
             if in_a_row >= OVERPASS_DOWN_AFTER or time.monotonic() >= stop:
                 missed.append(st)  # Overpass is down, or the pass is out of time: not asked
                 continue
-            elements = _overpass(client, st)
+            elements = _overpass(client, st, stop=stop)
             if elements is None:
                 missed.append(st)
                 in_a_row += 1
@@ -330,7 +332,11 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
 
 
-PROBE_BATCH = 100  # probe rows handed to `on_batch` (one lake file each) at a time
+# Probe rows are handed to `on_batch` (one lake file each) every PROBE_FLUSH_S seconds, or sooner at PROBE_BATCH rows:
+# a full re-probe (about 3,200 roasters, under the job's 100-minute deadline) writes about 10 files, not one per 100
+# rows (every crawl reads every probes file), and a killed run loses at most about 10 minutes of probing.
+PROBE_BATCH = 1000
+PROBE_FLUSH_S = 600.0
 
 
 def probe(
@@ -340,14 +346,16 @@ def probe(
     deadline_s: float | None = None,
     on_batch: Callable[[list[dict]], object] | None = None,
     batch_size: int = PROBE_BATCH,
+    flush_s: float = PROBE_FLUSH_S,
 ) -> list[dict]:
     """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten), one per roaster
     probed, in the order they finished.
 
     deadline_s: seconds from now after which no roaster is started and no request is sent; a roaster cut off part way
-    gets no row (it was not probed, so the next run asks it again). on_batch: called with each `batch_size` rows as
-    they finish, and with the rest at the end, even when the run stops on an error, so a caller that writes each
-    batch keeps what was probed before a crash or a deadline."""
+    gets no row (it was not probed, so the next run asks it again). on_batch: called with the rows finished so far
+    every `flush_s` seconds or `batch_size` rows, and with the rest at the end, even when the run stops on an error
+    (the original error is the one raised), so a caller that writes each batch keeps what was probed before a crash
+    or a deadline."""
     run_date = run_date or date.today().isoformat()
     stop = None if deadline_s is None else time.monotonic() + deadline_s
     out: list[dict] = []
@@ -369,6 +377,7 @@ def probe(
         ThreadPoolExecutor(workers) as ex,
     ):
         futures = [ex.submit(one, client, d) for d in domains]
+        flushed = time.monotonic()
         try:
             for f in as_completed(futures):
                 row = f.result()
@@ -376,14 +385,27 @@ def probe(
                     continue
                 out.append(row)
                 pending.append(row)
-                if on_batch is not None and len(pending) >= batch_size:
+                if on_batch is not None and (
+                    len(pending) >= batch_size or time.monotonic() - flushed >= flush_s
+                ):
                     batch, pending = pending, []
-                    on_batch(batch)
-        finally:
+                    try:
+                        on_batch(batch)
+                    except BaseException:
+                        pending = batch + pending  # not written: the flush below tries it again
+                        raise
+                    flushed = time.monotonic()
+        except BaseException:
             for f in futures:
-                f.cancel()  # an error above: start no more roasters
+                f.cancel()  # start no more roasters
             if on_batch is not None and pending:
-                on_batch(pending)
+                try:
+                    on_batch(pending)
+                except Exception as e:  # noqa: BLE001 - the error that stopped the run is the one to raise
+                    log.error("couldn't write %d probe rows after the run failed: %s", len(pending), e)
+            raise
+        if on_batch is not None and pending:
+            on_batch(pending)
     return out
 
 

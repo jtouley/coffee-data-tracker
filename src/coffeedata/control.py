@@ -66,6 +66,24 @@ def execution() -> dict:
     return out
 
 
+def this_execution(lake: Lake, week: str, job: str, connector: str | None) -> list[dict]:
+    """The rows of `job` (and `connector`) written by this Cloud Run execution's attempts, the current one's included,
+    when this attempt is a retry (CLOUD_RUN_TASK_ATTEMPT > 0); [] for a first attempt or outside Cloud Run. A retry
+    uses them to keep the first attempt's window, or to skip what it already did."""
+    from .lake import retry_transient
+
+    ex = execution()
+    if not ex.get("execution") or not ex.get("task_attempt"):
+        return []
+    return [
+        r
+        for r in retry_transient(rows, lake, week)
+        if r["job"] == job
+        and r["connector"] == connector
+        and detail_of(r).get("execution") == ex["execution"]
+    ]
+
+
 def start(
     lake: Lake,
     job: str,

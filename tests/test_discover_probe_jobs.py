@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse
 import re
 import types
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import httpx
@@ -209,7 +209,7 @@ def test_an_overture_scan_that_finds_nothing_fails(lake, monkeypatch):
 
 
 def test_osm_records_the_states_overpass_did_not_answer(lake, monkeypatch):
-    monkeypatch.setattr(discover, "_overpass", lambda client, st: None if st == "CA" else [
+    monkeypatch.setattr(discover, "_overpass", lambda client, st, stop=None: None if st == "CA" else [
         {"tags": {"craft": "coffee_roaster", "website": f"https://{st.lower()}roast.example/", "name": st}}
     ])  # fmt: skip
     out = cli.discover_source(lake, "osm", states=["CA", "OR"])
@@ -337,7 +337,9 @@ def test_an_overpass_outage_stops_after_three_states_and_a_slow_pass_after_its_b
     """OSM runs first in the job: unbounded, an outage (each state up to 3 x 90 s timeouts plus 2 minutes of
     waits, 52 states) would run past the 240-minute task timeout, and Overture would never run."""
     asked: list[str] = []
-    monkeypatch.setattr(discover, "_overpass", lambda client, st: asked.append(st))  # None: not answered
+    monkeypatch.setattr(
+        discover, "_overpass", lambda client, st, stop=None: asked.append(st)
+    )  # None: not answered
     failed: list[str] = []
     assert discover.osm(failed=failed) == []
     assert asked == discover.US_STATES[: discover.OVERPASS_DOWN_AFTER]
@@ -346,7 +348,7 @@ def test_an_overpass_outage_stops_after_three_states_and_a_slow_pass_after_its_b
     clock = [0.0]
     monkeypatch.setattr(discover.time, "monotonic", lambda: clock[0])
 
-    def slow(client, st):
+    def slow(client, st, stop=None):
         clock[0] += 1000
         return []
 
@@ -354,3 +356,91 @@ def test_an_overpass_outage_stops_after_three_states_and_a_slow_pass_after_its_b
     failed = []
     discover.osm(["AL", "AK", "AZ", "AR", "CA"], failed=failed, budget_s=2500)
     assert failed == ["AR", "CA"]
+
+
+# --- review fixes --------------------------------------------------------------------------------------------------
+
+
+def test_an_outage_after_the_first_states_fails_the_source_but_keeps_what_was_answered(lake, monkeypatch):
+    """Overpass answers AL, then stops: before, anything short of all states unanswered ended `done` and exit 0."""
+    monkeypatch.setattr(discover, "_overpass", lambda client, st, stop=None: [
+        {"tags": {"craft": "coffee_roaster", "website": "https://alroast.example/"}}
+    ] if st == "AL" else None)  # fmt: skip
+    with pytest.raises(RuntimeError, match="51 of 52 states unanswered"):
+        cli.discover_source(lake, "osm")
+    (end,) = _jobs(lake, "discover")
+    assert (end["status"], end["ok"], end["errors"]) == ("failed", 1, 51)
+    files = list((lake.root / "registry").glob("source=osm/*.parquet"))
+    assert [r["roaster_id"] for r in pq.read_table(files[0]).to_pylist()] == ["alroast.example"]
+
+
+def test_a_probe_retry_keeps_the_first_attempts_window(lake, monkeypatch):
+    """Cloud Run retries a failed probe once: the retry must not get a fresh 100 minutes and run into the crawls."""
+    monkeypatch.setenv("CLOUD_RUN_EXECUTION", "probe-x1")
+    monkeypatch.setenv("CLOUD_RUN_TASK_ATTEMPT", "1")
+    first = {"run_date": "2026-11-02", "job": "probe", "connector": None, "attempt_id": "a0",
+             "started_at": control.now().replace(tzinfo=UTC) - timedelta(minutes=90),
+             "status": "running", "detail": {"execution": "probe-x1", "task_attempt": 0}}  # fmt: skip
+    control.write(lake, first)
+    seen = {}
+    monkeypatch.setattr(discover, "probe", lambda todo, **kw: seen.update(kw) or [])
+    cli.cmd_probe(_probe_args(run_date=control.now().date().isoformat(), deadline_min=100))
+    assert 0 < seen["deadline_s"] <= 10 * 60 + 5  # what's left of the first attempt's 100 minutes
+
+
+def test_a_failed_batch_write_is_tried_again_and_the_original_error_is_raised(monkeypatch):
+    monkeypatch.setattr(discover, "probe_one", lambda client, d: OK)
+    written: list[list[str]] = []
+    calls = [0]
+
+    def write(rows):
+        calls[0] += 1
+        if calls[0] == 1:
+            raise OSError("staging mount hiccup")
+        written.append([r["roaster_id"] for r in rows])
+
+    with pytest.raises(OSError, match="hiccup"):
+        discover.probe(["a.com", "b.com", "c.com"], workers=1, batch_size=2, on_batch=write)
+    assert written == [["a.com", "b.com"]]  # the batch that failed to write, written by the flush
+
+
+def test_probe_flushes_by_time_so_a_full_run_writes_few_files(monkeypatch):
+    clock = [0.0]
+    monkeypatch.setattr(discover.time, "monotonic", lambda: clock[0])
+    real = discover.as_completed
+
+    def paced(futures):  # each result is seen two minutes after the one before
+        for f in real(futures):
+            clock[0] += 120
+            yield f
+
+    monkeypatch.setattr(discover, "as_completed", paced)
+    monkeypatch.setattr(discover, "probe_one", lambda client, d: OK)
+    batches: list[int] = []
+    discover.probe(
+        [f"{i}.com" for i in range(12)], workers=1, on_batch=lambda rows: batches.append(len(rows))
+    )
+    assert batches == [5, 5, 2]  # every 10 minutes, then the rest
+    assert discover.PROBE_BATCH >= 1000 and discover.PROBE_FLUSH_S == 600
+
+
+def test_overpass_gives_up_rather_than_wait_past_the_budget(monkeypatch):
+    monkeypatch.setattr(discover.time, "monotonic", lambda: 100.0)
+    client = httpx.Client(transport=httpx.MockTransport(lambda req: httpx.Response(429)))
+    assert (
+        discover._overpass(client, "CA", sleep=lambda s: pytest.fail("no wait past the budget"), stop=120.0)
+        is None
+    )
+
+
+def test_the_weekly_run_discovers_osm_first_under_its_own_week(lake, monkeypatch):
+    calls = []
+    for name in ("cmd_probe", "cmd_ingest", "cmd_enrich", "cmd_classify", "cmd_build", "cmd_publish",
+                 "cmd_export_public", "cmd_load_snowflake", "cmd_site"):  # fmt: skip
+        monkeypatch.setattr(cli, name, lambda a: True)
+    monkeypatch.setattr(cli, "discover_source", lambda lake, src, week=None: calls.append((src, week)))
+    monkeypatch.delenv("PUBLIC_EXPORT_URL", raising=False)
+    monkeypatch.delenv("SNOWFLAKE_ACCOUNT", raising=False)
+    cli.cmd_weekly(argparse.Namespace(run_date="2026-11-04", discover=False, sample=None, enrich_limit=None,
+                                      db="build/coffee.duckdb", out="build/site", accept_volume_change=False))  # fmt: skip
+    assert calls == [("osm", "2026-11-02"), ("overture", "2026-11-02")]

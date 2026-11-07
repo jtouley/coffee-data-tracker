@@ -1028,13 +1028,24 @@ asks a busy state again after 30 and 90 seconds, and stops asking (the rest coun
 a row go unanswered or after an hour, so an Overpass outage never keeps Overture from running. Each source writes a `job_manifests` start and end row (job
 `discover`, connector `osm` or `overture`, under the week's Monday), whose `detail` has `recorded`, `new` (not in the
 seed or the registry before), a sample of the new ones, and `failed_states` (states Overpass never answered). A
-source that gives nothing usable (Overture's scan finds no roaster; Overpass answers no state) ends `failed`, the
-other source still runs and publishes, and the execution exits 1 (the failure email). Re-run it once Overpass is
-back; re-recording a roaster is harmless (the registry keeps the latest row).
+source that gives nothing usable ends `failed`: Overture's scan finds no roaster, or Overpass leaves more than half
+the states unanswered (what it did answer is still recorded). The other source still runs and publishes, and the
+execution exits 1 (the failure email). Re-run it once Overpass is back; re-recording a roaster is harmless (the
+registry keeps the latest row). To check a run, read the week's rows from the dataset (`HF_TOKEN` set; `WEEK` is
+the Monday; an attempt with only a `running` row died):
+
+```sh
+COFFEEDATA_LAKE=hf://datasets/jtouley/coffee-data uv run python -c "
+from coffeedata import control; from coffeedata.lake import Lake
+for r in control.rows(Lake(), '$WEEK'):
+    if r['job'] in ('discover', 'probe'):
+        print(r['job'], r['connector'], r['status'], r['ok'], r['errors'], r['skipped'], r['detail'])"
+```
 
 The probe (Mondays 07:17) asks the roasters never probed (new from discovery) first, then those last probed 28 or
-more days before. It writes each batch of 100 results to the lake as it goes and starts no roaster after 100
-minutes, so it ends before the 09:17 crawls; what's left waits for next Monday (end row `deadline`, `skipped` = the
+more days before. It writes what it has probed to the lake every 10 minutes as it goes and starts no roaster
+after 100 minutes from its first attempt's start (a Cloud Run retry keeps that window), so it ends before the 09:17
+crawls; what's left waits for next Monday (end row `deadline`, `skipped` = the
 count left). Its publish runs whatever the probe's exit. A week with nothing stale still writes its start and end
 rows (`todo` 0): the seed's roasters were all probed 2026-10-26, so the first full re-probe is 2026-11-30 (about
 3,200 roasters; at the rate of a 20-roaster sample, 16 workers take about 40 minutes, and the deadline covers a
