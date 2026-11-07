@@ -659,5 +659,14 @@ def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None) ->
     return {"recorded": True, "removed": removed, "changed": changed}
 
 
+def registry_ids(lake: Lake, con, build_id: str | None) -> set[str]:
+    """The registry's roasters as a build saw them (its release's dim_roaster: the seed and the lake's additions)."""
+    f = quality.release_files(lake, build_id).get("dim_roaster") if build_id else None
+    if not f:
+        return set()
+    return {r[0] for r in con.execute(
+        f"select roaster_id from read_parquet('{f.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)").fetchall()}  # fmt: skip
+
+
 def to_json(value: Any) -> str:
     return json.dumps(value, default=str)

@@ -85,12 +85,21 @@ def cmd_discover(args: argparse.Namespace) -> None:
     from . import discover
 
     lake = Lake()
-    found = discover.overture(args.release) if args.source == "overture" else discover.osm(args.states)
+    places: list[dict] = []
+    if args.source == "overture":
+        found, places = discover.overture_places(args.release)
+    else:
+        found = discover.osm(args.states)
     now = datetime.now(UTC).replace(microsecond=0)
     rows = [r | {"added_at": now, "opted_out": False} for r in found]
     key = (args.release or "latest") if args.source == "overture" else _today()
-    lake.write("registry", f"registry/source={args.source}/{key}-{new_batch_id()}.parquet", rows)
-    print(f"{args.source}: {len(rows)} roasters recorded (new ones are picked up by the next probe)")
+    batch = new_batch_id()
+    lake.write("registry", f"registry/source={args.source}/{key}-{batch}.parquet", rows)
+    if places:  # the whole source list, for the admin's Sources page: recorded only, never fetched or crawled
+        lake.write("candidates", f"candidates/source={args.source}/{key}-{batch}.parquet",
+                   [r | {"added_at": now} for r in places])  # fmt: skip
+    print(f"{args.source}: {len(rows)} roasters recorded (new ones are picked up by the next probe)"
+          + (f"; {len(places)} places in the source list" if places else ""))  # fmt: skip
 
 
 def cmd_probe(args: argparse.Namespace) -> None:
@@ -499,6 +508,9 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
     extra["rules"] = rules.dbt_var(
         decisions.settings_of(snap)
     )  # the snapshot's rule settings, else the defaults
+    extra["source_roasters"] = decisions.source_roasters(
+        snap
+    )  # places flagged roasters: stg_registry adds them
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),

@@ -1,4 +1,6 @@
--- Seed list (config/roasters.csv) plus roasters added in the lake by discovery or by hand.
+-- Seed list (config/roasters.csv) plus roasters added in the lake by discovery or by hand, plus the places of the
+-- source list (`candidates`) the build's snapshot flags as roasters (var source_roasters; the admin's Sources page),
+-- as if discovery had added them: the same rule as registry.current, so the crawl and the build agree.
 with seed as (
     select roaster_id, name, nullif(city, '') as city, nullif(state, '') as state,
            coalesce(try_cast(locations as integer), 1) as locations,
@@ -13,7 +15,16 @@ added as (
     select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
            arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
            string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added
-    from {{ lake('registry') }}
+    from (
+        select added_at, source, roaster_id, name, city, state, locations, opted_out from {{ lake('registry') }}
+        {%- set flagged = var('source_roasters', []) %}
+        {%- if flagged %}
+        union all
+        select added_at, source, roaster_id, name, city, state, locations, false as opted_out
+        from {{ lake('candidates') }}
+        where roaster_id in ({% for d in flagged %}'{{ d | replace("'", "''") }}'{{ ", " if not loop.last }}{% endfor %})
+        {%- endif %}
+    )
     where roaster_id is not null
     group by roaster_id
 )

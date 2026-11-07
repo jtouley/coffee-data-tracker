@@ -285,3 +285,39 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **The rule types' list** in the settings fold went: it repeated the schema and the README.
 - **Code:** the Case reads the Queue's own summary row; the Queue's totals come with its rows (one scan fewer); one
   reason check in the control plane; `AUDITED` on one line.
+
+## Sources (the fourth pass)
+
+### Who and what
+
+The owner, with a roaster's name or address in mind (from a bag, a shop or a link someone sent): **is it in our
+list, and is it a roaster?** They search, find the row and flag it in one click. On another evening they might work
+through the unreviewed cafés whose names say "roast".
+
+### Decisions on the design
+
+- **Search first.** The search box is the first thing on the page, above the counts. A pasted address
+  (`https://www.example.com/shop`) searches for its domain. There is no "add a roaster" form: discovery already
+  lists about 47,000 places, and a form is a user-facing tool, not an admin one.
+- **One click on the row.** Roaster and Not a roaster are text buttons in the Flag column, posted at once with Undo
+  in the outcome line, with no confirm sheet. A flag changes nothing until a draft is published, and it can be
+  undone. Ticked rows take the same two buttons in the bulk bar.
+- **Inherited is a status, not a flag.** Registry roasters show "roaster (inherited)" and their origin (curated,
+  manual, overture, ...). Nothing happens to them unless the owner flags one.
+- **No new component.** The page reuses the Catalog's search, facets, chips and pager. These are now shared macros
+  (`search`, `pager` in `_macros.html`), and `catalog.Filters` takes its facets and search columns from the class,
+  so the Sources page subclasses it.
+
+### Skills used (this pass)
+
+- MengTo `no-ai-design-slop`: the existing system only; statuses are words; no badges or tiles for counts.
+- Owl-Listener `critique-information-density`: one answer line of counts by status, one source line (latest run,
+  new and gone, by tag), five columns.
+- Krehel `better-layout`: the search, then identity (name and domain) before the flag, hints and origin; the table
+  scrolls in its frame at 390 px.
+
+### Cut
+
+- The screening evidence as a hint (see the README: not in the lake).
+- Two copies of the search form and pager (Catalog and Sources): one macro each.
+- An "add a roaster" form, at the owner's request: search, then flag.

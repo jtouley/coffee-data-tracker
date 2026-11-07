@@ -16,6 +16,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
+| Sources | Every place discovery has listed (lake `candidates`: roastery-tagged places, and cafés and coffee shops with a storefront website) and every roaster in the registry, one row per domain, with its flag (roaster (inherited), roaster, not a roaster, unreviewed), its hints (tag, "roast" in the name), where it came from, and what the last discovery run added or dropped | Search (a pasted address finds its domain), filter by status, origin, tag, hint, change, state and city; flag a row Roaster or Not a roaster in one click, or tick rows and flag them together; Unflag; Undo | the lake's `candidates`, the served release's `dim_roaster`, the control plane |
 | Log | Every write: who, when, what, the outcome | download the decisions (for `coffeedata decide export-labels`) | the control plane |
 
 The Catalog copies a build's two files into a local DuckDB file once (releases are immutable) and filters there.
@@ -80,6 +81,31 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
 - **Labels:** Log's download is the effective decisions as a snapshot, with each version's coffees listed; `coffeedata decide export-labels --snapshot
   decisions.json` turns them into candidate labels for the classifier's train set only. A coffee in the sealed test
   set or the validation set is left out and only counted (CLAUDE.md: an owner correction is one labeler).
+
+## Sources
+
+Discovery (`coffeedata discover overture`) reads Overture's coffee places. Roastery-tagged places go straight into
+the registry, as before. Every place it reads (the roasteries, plus `coffee_shop` and `cafe` places whose website
+passes `registry.is_storefront_host`) is also recorded in the lake's `candidates` table, without any request to the
+place's site.
+
+The Sources page lists those places together with the served release's registry (the curated seed, the issue forms
+and discovery's roasteries). It copies them into a local DuckDB file once per discovery run and served build, the
+way the Catalog does, and searches and pages there (100 rows a page; about 47,000 places).
+
+- **Every registry roaster inherits Roaster.** With no flag set, the registry, the probe and the crawl are exactly
+  what they were (`tests/test_sources.py::test_the_registry_and_the_crawl_are_unchanged_until_flagged`).
+- **Flags** are written to `control.source_flags` (append-only). Each write is CSRF-checked, idempotent on its key,
+  audited in the same transaction, refused with 409 if another tab flagged the place since the page loaded, and
+  undoable as a batch.
+- **Flags reach the crawl through the snapshot.** The next draft carries `sources` (listed places flagged Roaster,
+  not already in the registry) and `not_roasters` (registry roasters flagged Not a roaster). Once that draft is
+  published, `registry.current` adds the flagged places from `candidates` and drops the not-roasters, so the probe
+  and the weekly crawl pick them up or leave them. dbt's `stg_registry` adds the same places through the var
+  `source_roasters`. A not-roaster leaves the probe and the crawl, and stays in `dim_roaster` with its history.
+  Unreviewed places are never probed or crawled. A snapshot that can't be read applies no flags.
+- **Hints never flag anything.** The hints are the Overture tag and "roast" in the name. The evidence from the
+  screening experiment (#130) is not shown: it is not in the lake, and the admin reads only the lake.
 
 ## Rules and flags
 

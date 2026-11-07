@@ -96,11 +96,16 @@ def test_the_windows():
 
 def test_migrations_apply_once_and_every_table_is_append_only(pg_url):
     cp = ControlPlane(url_connect(pg_url))
-    assert cp.migrate() == ["0001_control_plane.sql", "0002_evaluations.sql", "0003_rules.sql"]
+    assert cp.migrate() == [
+        "0001_control_plane.sql",
+        "0002_evaluations.sql",
+        "0003_rules.sql",
+        "0004_sources.sql",
+    ]
     assert cp.migrate() == []  # every instance runs it at start: idempotent
     cp.audit_now("owner", "decide", "x", "ok")
     for sql in ("update control.audit set actor = 'x'", "delete from control.audit", "truncate control.audit",
-                "delete from control.decisions", "delete from control.rule_settings",
+                "delete from control.decisions", "delete from control.rule_settings", "delete from control.source_flags",
                 "update control.roaster_state set crawl = true"):  # fmt: skip
         with pytest.raises(Exception, match="append-only"), cp.tx() as cur:
             cur.execute(sql)
@@ -129,12 +134,18 @@ def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url
     writes = [
         r for r in app.routes if "POST" in getattr(r, "methods", set()) and not r.path.startswith("/api/auth")
     ]
-    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save, crawl
-    assert len(writes) == 13
+    # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save,
+    # crawl flag, source flags and their undo
+    assert len(writes) == 15
     anon = TestClient(app, base_url=ORIGIN)
     for r in writes:
         url = r.path.replace("{action}", "merge").replace("{run_id}", "r").replace("{target}", "d")
-        url = url.replace("{draft_id}", "d").replace("{build_id}", B1).replace("{roaster_id}", "a.example")
+        url = (
+            url.replace("{draft_id}", "d")
+            .replace("{build_id}", B1)
+            .replace("{roaster_id}", "a.example")
+            .replace("{batch}", "f")
+        )
         assert anon.post(url, json={"key": "k"}, headers=WRITE).status_code == 401, url
         assert c.post(url, json={"key": "k"}).status_code == 403, url  # no same-origin markers: CSRF
         assert (

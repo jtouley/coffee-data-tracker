@@ -37,6 +37,7 @@ MIGRATIONS = Path(__file__).parent / "migrations"
 IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
 LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
+SOURCE_FLAGS = ("roaster", "not_roaster", "unreviewed")
 ID_ROASTER = re.compile(r"[a-z0-9][a-z0-9.-]{0,252}")  # a roaster id is its store's domain
 
 
@@ -391,6 +392,89 @@ class ControlPlane:
         """Each roaster's latest crawl flag row (a roaster never changed has none: crawl on)."""
         with self.tx() as cur:
             return self._crawl(cur, roaster_ids)
+
+    # --- the source list's flags (the Sources page) --------------------------------------------------------------
+
+    def flag_sources(
+        self, actor: str, key: str, flag: str, places: list[str], seen: dict[str, str | None]
+    ) -> dict:
+        """Flag places of the source list `roaster` or `not_roaster` (or back to `unreviewed`), as one batch. `seen`
+        maps each place to the batch the page showed as its latest flag (None: none): a place flagged since makes the
+        write a Conflict. Idempotent on `key`; undone with undo_flags."""
+        if flag not in SOURCE_FLAGS:
+            raise ValueError("flag a place roaster, not_roaster or unreviewed")
+        places = sorted({p for p in places if ID_ROASTER.fullmatch(p or "")})
+        if not places or len(places) > 1000:
+            raise ValueError("flag 1 to 1,000 places at a time")
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            if (first := self.claim(cur, key)) is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            now = self._source_flags(cur, places)
+            stale = [p for p in places if (now.get(p) or {}).get("batch_id") != seen.get(p)]
+            if stale:
+                raise Conflict(
+                    f"{len(stale)} of these were flagged since the page was loaded: reload and flag again"
+                )
+            batch = new_id("f").lower()
+            for p in places:
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, actor) values (%s, %s, %s, %s)",
+                            (batch, p, flag, actor))  # fmt: skip
+            out = {"ok": True, "batch_id": batch, "flag": flag, "count": len(places)}
+            self.audit(cur, actor, "source_flag", batch, "ok", out | {"places": places[:50]})
+            self.remember(cur, key, out)
+            return out
+
+    def undo_flags(self, actor: str, key: str, batch: str) -> dict:
+        """Put each place of a batch back to the flag it had before it, if the batch is still its latest flag."""
+        if not ID.fullmatch(batch):
+            raise ValueError("bad batch id")
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            if (first := self.claim(cur, key)) is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
+            cur.execute("select roaster_id from control.source_flags where batch_id = %s", (batch,))
+            places = sorted({r[0] for r in cur.fetchall()})
+            if not places:
+                raise ValueError("no such batch")
+            now = self._source_flags(cur, places)
+            undo = new_id("f").lower()
+            undone = []
+            for p in places:
+                if (now.get(p) or {}).get("batch_id") != batch:
+                    continue  # flagged again since: that later flag stands
+                cur.execute("select flag from control.source_flags where roaster_id = %s and batch_id <> %s "
+                            "and id < (select max(id) from control.source_flags where batch_id = %s) "
+                            "order by id desc limit 1", (p, batch, batch))  # fmt: skip
+                before = cur.fetchone()
+                cur.execute("insert into control.source_flags (batch_id, roaster_id, flag, undoes, actor) "
+                            "values (%s, %s, %s, %s, %s)",
+                            (undo, p, before[0] if before else "unreviewed", batch, actor))  # fmt: skip
+                undone.append(p)
+            out = {"ok": True, "reverted": undone, "count": len(undone)}
+            self.audit(
+                cur, actor, "source_flag_undo", batch, "ok", {"places": undone[:50], "count": len(undone)}
+            )
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _source_flags(cur, places: list[str] | None = None) -> dict[str, dict]:
+        cur.execute(
+            "select distinct on (roaster_id) roaster_id, flag, batch_id, actor, at from control.source_flags "
+            + ("where roaster_id = any(%s) " if places is not None else "")
+            + "order by roaster_id, id desc",
+            (places,) if places is not None else (),
+        )
+        return {r[0]: dict(zip(("roaster_id", "flag", "batch_id", "actor", "at"), r, strict=True))
+                for r in cur.fetchall()}  # fmt: skip
+
+    def source_flags(self, places: list[str] | None = None) -> dict[str, dict]:
+        """Each flagged place's latest flag (a place never flagged has none: unreviewed)."""
+        with self.tx() as cur:
+            return self._source_flags(cur, places)
 
     def record_run(self, cur, run: dict) -> None:
         cur.execute(

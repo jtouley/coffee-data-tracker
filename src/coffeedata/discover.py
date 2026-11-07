@@ -107,11 +107,42 @@ def overture_latest_release() -> str:
     return sorted(re.findall(r"<Prefix>release/([^<]+)/</Prefix>", xml.decode()))[-1]
 
 
-def overture(release: str | None = None) -> list[dict]:
-    """US places tagged coffee_roastery, or coffee places with "roast" in the name, one row per website."""
-    import duckdb
+# Places tagged as cafés rather than roasteries. Some are real roasters (Rival Bros is tagged only coffee_shop), most
+# aren't: they are recorded in the source list (`candidates`) for the owner to flag in the admin, never fetched here
+# and never crawled unless flagged. Primary category or an alternate; open places only.
+CANDIDATE_TAGS = ("coffee_shop", "cafe")
 
-    release = release or overture_latest_release()
+# One scan of the release for both lists: roasters (tagged coffee_roastery, or a coffee place with "roast" in the
+# name, as before) and the café candidates (CANDIDATE_TAGS, open). From #130 (discover-cafes), recording only.
+OVERTURE_SQL = """
+    WITH r AS (
+      SELECT names.primary AS name, taxonomy.primary AS cat, coalesce(taxonomy.alternates, []) AS alts,
+             addresses[1].locality AS city, addresses[1].region AS state, confidence, websites[1] AS website,
+             operating_status,
+             (taxonomy.primary = 'coffee_roastery'
+              OR list_contains(taxonomy.alternates, 'coffee_roastery')
+              OR (names.primary ILIKE '%roast%'
+                  AND (taxonomy.primary ILIKE '%coffee%' OR basic_category ILIKE '%coffee%'
+                       OR names.primary ILIKE '%coffee%'))) AS is_roaster
+      FROM read_parquet({urls}, hive_partitioning = false)
+      WHERE ((bbox.xmin BETWEEN -125 AND -66 AND bbox.ymin BETWEEN 24 AND 50)
+          OR (bbox.xmin BETWEEN -170 AND -129 AND bbox.ymin BETWEEN 51 AND 72)
+          OR (bbox.xmin BETWEEN -161 AND -154 AND bbox.ymin BETWEEN 18 AND 23))
+        AND addresses[1].country = 'US' AND websites IS NOT NULL
+        AND (taxonomy.primary IN {tags} OR list_has_any(taxonomy.alternates, {tag_list})
+             OR taxonomy.primary = 'coffee_roastery' OR list_contains(taxonomy.alternates, 'coffee_roastery')
+             OR names.primary ILIKE '%roast%'))
+    SELECT website, name, city, state, confidence, cat = 'coffee_roastery' OR list_contains(alts, 'coffee_roastery')
+               AS tagged,
+           name ILIKE '%roast%' AS roast_in_name, is_roaster,
+           CASE WHEN cat = 'coffee_shop' OR list_contains(alts, 'coffee_shop') THEN 'coffee_shop'
+                WHEN cat = 'cafe' OR list_contains(alts, 'cafe') THEN 'cafe' END AS tag,
+           operating_status IS NULL OR operating_status = 'open' AS open
+    FROM r
+    WHERE is_roaster OR tag IS NOT NULL"""
+
+
+def _overture_urls(release: str) -> list[str]:
     xml = (
         urllib.request.urlopen(
             f"{OVERTURE}?list-type=2&prefix=release/{release}/theme=places/type=place/", timeout=30
@@ -119,53 +150,68 @@ def overture(release: str | None = None) -> list[dict]:
         .read()
         .decode()
     )
-    urls = [OVERTURE + k for k in re.findall(r"<Key>([^<]+)</Key>", xml) if k.endswith(".parquet")]
+    return [OVERTURE + k for k in re.findall(r"<Key>([^<]+)</Key>", xml) if k.endswith(".parquet")]
+
+
+def overture(release: str | None = None) -> list[dict]:
+    """US places tagged coffee_roastery, or coffee places with "roast" in the name, one row per website."""
+    return overture_places(release)[0]
+
+
+def overture_places(release: str | None = None) -> tuple[list[dict], list[dict]]:
+    """(roasters, places) from one read of the release (OVERTURE_SQL). roasters go to the registry, as before;
+    places is the whole source list (`candidates`): every roaster and every open café or coffee shop, one row per
+    storefront domain. Nothing is fetched from any of their sites."""
+    import duckdb
+
+    release = release or overture_latest_release()
     c = duckdb.connect()
     c.sql("INSTALL httpfs; LOAD httpfs;")
-    rel = c.sql(f"""
-        WITH r AS (
-          SELECT names.primary AS name, taxonomy.primary AS cat, addresses[1].locality AS city,
-                 addresses[1].region AS state, confidence, websites[1] AS website
-          FROM read_parquet({urls})
-          WHERE ((bbox.xmin BETWEEN -125 AND -66 AND bbox.ymin BETWEEN 24 AND 50)
-              OR (bbox.xmin BETWEEN -170 AND -129 AND bbox.ymin BETWEEN 51 AND 72)
-              OR (bbox.xmin BETWEEN -161 AND -154 AND bbox.ymin BETWEEN 18 AND 23))
-            AND addresses[1].country = 'US' AND websites IS NOT NULL
-            AND (taxonomy.primary = 'coffee_roastery'
-                 OR list_contains(taxonomy.alternates, 'coffee_roastery')
-                 OR (names.primary ILIKE '%roast%'
-                     AND (taxonomy.primary ILIKE '%coffee%' OR basic_category ILIKE '%coffee%'
-                          OR names.primary ILIKE '%coffee%'))))
-        SELECT website, name, city, state, confidence, cat = 'coffee_roastery' AS tagged,
-               name ILIKE '%roast%' AS roast_in_name
-        FROM r""")
+    tags = "(" + ", ".join(f"'{t}'" for t in CANDIDATE_TAGS) + ")"
+    rel = c.sql(
+        OVERTURE_SQL.format(urls=_overture_urls(release), tags=tags, tag_list="[" + tags.strip("()") + "]")
+    )
+    return places_to_rows(rel.fetchall(), f"overture-{release}")
+
+
+def places_to_rows(places: list[tuple], source: str) -> tuple[list[dict], list[dict]]:
+    """OVERTURE_SQL's rows (website, name, city, state, confidence, tagged, roast_in_name, is_roaster, tag, open) as
+    (roasters, places), each one row per normalized storefront domain (a chain is one row; `locations` counts its
+    places). A place's `tags` are every tag its places carry (coffee_roastery, coffee_shop, cafe), sorted."""
     from .registry import is_storefront_host, normalize_domain
 
-    out: dict[str, dict] = {}
-    for website, name, city, state, conf, tagged, roast in rel.fetchall():
-        d = normalize_domain(website or "")
-        if not is_storefront_host(d):
-            continue
-        row = out.setdefault(
-            d,
-            {
-                "roaster_id": d,
-                "name": name,
-                "city": city,
-                "state": state,
-                "locations": 0,
-                "confidence": 0.0,
-                "tagged_roastery": False,
-                "roast_in_name": False,
-                "source": f"overture-{release}",
-            },
-        )
+    def blank(d: str, name, city, state, website) -> dict:
+        return {"roaster_id": d, "name": name, "city": city, "state": state, "locations": 0, "confidence": 0.0,
+                "source": source, "website": website}  # fmt: skip
+
+    def seen(row: dict, name, city, state, conf, website) -> None:
         row["locations"] += 1
         if (conf or 0) > row["confidence"]:
-            row.update(name=name, city=city, state=state, confidence=round(conf or 0, 2))
-        row["tagged_roastery"] |= bool(tagged)
-        row["roast_in_name"] |= bool(roast)
-    return sorted(out.values(), key=lambda r: r["roaster_id"])
+            row.update(name=name, city=city, state=state, confidence=round(conf or 0, 2), website=website)
+
+    out: dict[str, dict] = {}
+    listed: dict[str, dict] = {}
+    for website, name, city, state, conf, tagged, roast, is_roaster, tag, is_open in places:
+        d = normalize_domain(website or "")
+        if not is_storefront_host(d) or not (is_roaster or (is_open and tag)):
+            continue
+        if is_roaster:
+            row = out.setdefault(d, blank(d, name, city, state, website) | {"tagged_roastery": False,
+                                                                           "roast_in_name": False})  # fmt: skip
+            row["tagged_roastery"] |= bool(tagged)
+            row["roast_in_name"] |= bool(roast)
+            seen(row, name, city, state, conf, website)
+        place = listed.setdefault(
+            d, blank(d, name, city, state, website) | {"tags": [], "roast_in_name": False}
+        )
+        place["tags"] = sorted(
+            set(place["tags"]) | ({"coffee_roastery"} if tagged else set()) | ({tag} if tag else set())
+        )
+        place["roast_in_name"] |= bool(roast)
+        seen(place, name, city, state, conf, website)
+    roasters = sorted(({k: v for k, v in r.items() if k != "website"} for r in out.values()),
+                      key=lambda r: r["roaster_id"])  # fmt: skip
+    return roasters, sorted(listed.values(), key=lambda r: r["roaster_id"])
 
 
 # --- OpenStreetMap via Overpass (ODbL) ----------------------------------------------------------------

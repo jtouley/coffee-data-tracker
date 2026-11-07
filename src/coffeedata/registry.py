@@ -8,6 +8,7 @@ built; any probe recorded in the lake supersedes them. Nothing here is mutated b
 from __future__ import annotations
 
 import csv
+import logging
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -16,6 +17,7 @@ from . import classify, products
 from .lake import Lake, retry_transient
 from .models import Roaster
 
+log = logging.getLogger(__name__)
 SEED = Path("config/roasters.csv")
 SEED_FIELDS = [
     "roaster_id",
@@ -170,9 +172,18 @@ left join last_ok_coffees lc using (roaster_id)  -- registered by connect_for_st
 """
 
 
-def state_sql(lake: Lake) -> str:
+def state_sql(lake: Lake, sources: list[str] | None = None) -> str:
+    """STATE_SQL over the lake. `sources`: places of the source list (`candidates`) the published snapshot flags as
+    roasters (flagged_sources): the registry includes them, as if discovery had added them, so the probe and the
+    crawl pick them up. Any other place of the source list is never probed or crawled."""
+    registry = lake.scan("registry")
+    if sources:
+        listed = ", ".join("'" + d.replace("'", "''") + "'" for d in sources)
+        registry = (f"(select added_at, roaster_id, name, city, state, locations, opted_out from {registry} "
+                    f"union all select added_at, roaster_id, name, city, state, locations, false as opted_out "
+                    f"from {lake.scan('candidates')} where roaster_id in ({listed}))")  # fmt: skip
     return STATE_SQL.format(
-        registry=lake.scan("registry"),
+        registry=registry,
         probes=lake.scan("probes"),
         fetches=lake.scan("fetches"),
         k=MAX_FAILURES,
@@ -223,19 +234,39 @@ class RoasterState:
     last_probed: str | None
 
 
-def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
+def current(lake: Lake, seed: Path | None = None) -> list[RoasterState]:
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
     it is each crawl job's first read of the hf:// lake."""
-    return retry_transient(_current, lake, seed)
+    return retry_transient(_current, lake, seed or SEED)
+
+
+def source_flags(lake: Lake) -> tuple[list[str], set[str]]:
+    """The owner's flags from the published snapshot (the admin's Sources page): the source-list places flagged
+    roaster, which the registry adds, and the registry roasters flagged not a roaster, which it drops. Every other
+    registry roaster inherits the roaster flag, so with no flags the registry is exactly what it was. A snapshot
+    that can't be read applies none: the registry as it was before the flags."""
+    from . import decisions
+
+    try:
+        doc = decisions.served_doc(lake)
+        return decisions.source_roasters(doc), set(decisions.not_roasters(doc))
+    except Exception as e:  # noqa: BLE001 - logged; the registry stays as it was without the flags
+        log.warning("source flags not read (%s): the registry without them", type(e).__name__)
+        return [], set()
 
 
 def _current(lake: Lake, seed: Path) -> list[RoasterState]:
     con = connect_for_state(lake)
-    cur = con.execute(state_sql(lake) + " order by roaster_id", [str(seed)])
+    added, dropped = source_flags(lake)
+    cur = con.execute(state_sql(lake, added) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
+        if (
+            r["roaster_id"] in dropped
+        ):  # the owner flagged it not a roaster (Sources): never probed or crawled
+            continue
         if not_a_roaster_site(r["roaster_id"]):
             # a platform or vendor site (NOT_A_ROASTER_SITE), from an older seed or a lake registry row: never a
             # roaster, so never crawled, whatever the lake still holds for it

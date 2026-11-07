@@ -5,7 +5,7 @@
   <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {% else %}
 {% set p = pending %}
-<p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }}{% if p.settings_changed %}, rule settings{% endif %}{% if p.crawl_changed %}, {{ p.crawl_changed | length }} crawl flag{{ "s" if p.crawl_changed | length != 1 }}{% endif %} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
+<p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }}{% if p.settings_changed %}, rule settings{% endif %}{% if p.crawl_changed %}, {{ p.crawl_changed | length }} crawl flag{{ "s" if p.crawl_changed | length != 1 }}{% endif %}{% if p.sources_changed %}, {{ p.sources_changed | length }} source flag{{ "s" if p.sources_changed | length != 1 }}{% endif %} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
 <p class="src">From <code>builds</code>, <code>serving_log</code>, <code>release_changes</code> and the control plane · “published” is read from <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
 
 <h2 class="section">Decisions</h2>
@@ -13,8 +13,8 @@
   <p class="body">Decisions need the control plane, which is off.</p>
 {% elif p.drafted %}
   <p class="body">Draft <code>{{ p.drafted }}</code> already builds them: review it below.</p>
-{% elif p.added or p.removed or p.settings_changed or p.crawl_changed %}
-  <p class="body">{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
+{% elif p.added or p.removed or p.settings_changed or p.crawl_changed or p.sources_changed %}
+  <p class="body">{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}{% if p.sources_changed %}{{ p.sources_changed | length }} place{{ "s" if p.sources_changed | length != 1 }} of the source list join or leave the registry (Sources). {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
   {{ write_button("/api/drafts", "Build a draft", "Build a draft with the " ~ (p.effective | length) ~ " decisions in effect? It starts the build job with --draft: every gate runs, and the release is recorded but not served.", busy="Starting…", cls="primary") }}
 {% else %}
   <p class="body">The decisions in effect are the served release's{% if p.served_snapshot %} (snapshot <code>{{ p.served_snapshot }}</code>){% endif %}: nothing to build. Decide in the Queue or the Catalog.</p>

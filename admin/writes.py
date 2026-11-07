@@ -363,16 +363,38 @@ class Writes:
         written(action="crawl_flag", subject=roaster_id, outcome="ok", crawl=crawl)
         return out
 
+    # --- the source list's flags ---------------------------------------------------------------------------------
+
+    async def flag_sources(self, actor: str, key: str, body: dict) -> dict:
+        await self.ready()
+        items = body.get("items")
+        if not isinstance(items, list) or not all(isinstance(i, dict) for i in items):
+            raise ValueError("no places chosen")
+        places = [str(i.get("roaster_id") or "") for i in items]
+        seen = {str(i.get("roaster_id")): (str(i["seen"]) if i.get("seen") else None) for i in items}
+        out = await asyncio.to_thread(
+            self.control.flag_sources, actor, key, str(body.get("flag")), places, seen
+        )
+        written(action="source_flag", subject=out["batch_id"], outcome="ok", count=out["count"])
+        return out
+
+    async def undo_flags(self, actor: str, key: str, batch: str) -> dict:
+        await self.ready()
+        out = await asyncio.to_thread(self.control.undo_flags, actor, key, batch)
+        written(action="source_flag_undo", subject=batch, outcome="ok", count=out["count"])
+        return out
+
     # --- release: draft, publish, roll back, discard ---------------------------------------------------------------
 
     async def pending(self, served: dict | None = None, drafts: list[dict] | None = None) -> dict:
-        """The effective decisions, rule settings and crawl flags against the served build's snapshot: what a draft
-        would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
+        """The effective decisions, rule settings, crawl flags and source-list roasters against the served build's
+        snapshot: what a draft would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective, settings, states = await asyncio.gather(
+        effective, settings, states, flags = await asyncio.gather(
             asyncio.to_thread(self.control.effective),
             asyncio.to_thread(self.control.settings),
             asyncio.to_thread(self.control.roaster_states),
+            asyncio.to_thread(self.control.source_flags),
         )
         if served is None:
             served = await self.read(queries.served)
@@ -389,7 +411,14 @@ class Writes:
         now_settings = snap.settings_of({"settings": doc} if doc else None)
         settings_changed = rules.changed(snap.settings_of(served_doc), now_settings)
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
-        mine = (now, now_settings, set(off))
+        # Flags on the source list: places flagged roaster join the registry; registry roasters (which inherit
+        # roaster) flagged not a roaster leave it.
+        known = await self.read(queries.registry_ids, (served or {}).get("build_id"))
+        sources = sorted(p for p, f in flags.items() if f["flag"] == "roaster" and p not in known)
+        dropped = sorted(p for p, f in flags.items() if f["flag"] == "not_roaster" and p in known)
+        sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
+                                 | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
+        mine = (now, now_settings, set(off), sources, dropped)
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -400,23 +429,27 @@ class Writes:
                 break
             got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
             if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
-                        snap.settings_of(got), snap.crawl_off(got)) == mine:  # fmt: skip
+                        snap.settings_of(got), snap.crawl_off(got), snap.source_roasters(got),
+                        snap.not_roasters(got)) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
                 "settings": doc, "settings_version": settings["version_id"], "settings_changed": settings_changed,
-                "crawl_off": off, "crawl_changed": crawl_changed,
+                "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
+                "sources_changed": sources_changed,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
-        if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"]):
-            raise ValueError(
-                "Nothing to build: the decisions, rule settings and crawl flags are the served release's"
-            )
+        if not (
+            p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
+        ):
+            raise ValueError("Nothing to build: the decisions, rule settings, crawl flags and source flags are the "
+                             "served release's")  # fmt: skip
         sid, did = new_id("s").lower(), new_id("draft").lower()
         doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
-                            [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]])  # fmt: skip
+                            [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]], p["sources"],
+                            p["not_roasters"])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]

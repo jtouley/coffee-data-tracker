@@ -258,6 +258,7 @@ function reloadParts() {
   document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
 }
 
+// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
 function showResult(text, undo) {
   const box = document.querySelector("[data-result]");
   if (!box) return;
@@ -270,6 +271,12 @@ function showResult(text, undo) {
   showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
 }
 
+function undoUrl(out) {
+  if (out.decisions) return `/api/decisions/${encodeURIComponent(out.group || out.decisions[0])}/undo`;
+  if (out.batch_id) return `/api/sources/flags/${encodeURIComponent(out.batch_id)}/undo`;
+  return undefined;
+}
+
 function describe(out) {
   if (out.runs) {
     const started = out.runs.map((r) => `${r.job} (${r.execution})`).join(", ");
@@ -277,7 +284,8 @@ function describe(out) {
     return (started ? `Started ${started}.` : "Nothing started.") + (failed ? ` Not started: ${failed}` : "");
   }
   if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
-  if (out.reverted) return out.count ? `Undone (${out.count}). The classifier decides again in the next draft.` : "Already superseded: nothing to undo.";
+  if (out.batch_id) return `Flagged ${out.count} place${out.count === 1 ? "" : "s"} ${out.flag.replace("_", " ")}. It reaches the crawl when a draft of it is published (Release).`;
+  if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
@@ -400,7 +408,7 @@ async function confirmWrite(form) {
       if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
       const out = await post(form.dataset.write, { ...fields(form), ...extra });
       d.close();
-      showResult(describe(out), out.decisions ? out.group || out.decisions[0] : undefined);
+      showResult(describe(out), undoUrl(out));
       reloadParts();
     } catch (err) {
       hint.textContent = refusal(err);
@@ -414,13 +422,30 @@ async function confirmWrite(form) {
   };
 }
 
+// A one-click write (data-now: the Sources page's flags) posts at once, with Undo in its outcome line; any other
+// write goes through the confirm sheet.
+async function writeNow(form, button) {
+  if ("picks" in form.dataset) form.querySelector("input[name=items]").value = JSON.stringify(picks());
+  busy(button, true);
+  try {
+    const out = await post(form.dataset.write, fields(form));
+    showResult(describe(out), undoUrl(out));
+    reloadParts();
+  } catch (err) {
+    showResult(refusal(err));
+  } finally {
+    busy(button, false);
+  }
+}
+
 document.addEventListener("submit", (e) => {
   const form = e.target.closest("form[data-write]");
   if (!form) return;
   e.preventDefault();
   const button = form.querySelector('button[type="submit"]');
   if (button && button.getAttribute("aria-disabled") === "true") return;
-  confirmWrite(form);
+  if ("now" in form.dataset) writeNow(form, button);
+  else confirmWrite(form);
 });
 
 document.addEventListener("click", (e) => {
@@ -460,7 +485,7 @@ document.addEventListener("click", async (e) => {
   if (!b || !b.dataset.target) return;
   busy(b, true);
   try {
-    const out = await post(`/api/decisions/${encodeURIComponent(b.dataset.target)}/undo`, { key: crypto.randomUUID(), reason: "undo right after deciding" });
+    const out = await post(b.dataset.target, { key: crypto.randomUUID(), reason: "undo right after deciding" });
     showResult(describe(out));
     reloadParts();
   } catch (err) {

@@ -326,12 +326,10 @@ def crawl_off(lake: Lake) -> set[str]:
     """The roasters the published snapshot (the served build's) turns the crawl flag off for. A lake with nothing
     served, or a snapshot that can't be read, turns none off: the flag is the owner's choice to stop asking a store,
     and a failed read must never stop the week's crawl (the build, which applies decisions, fails closed instead)."""
-    from . import decisions, quality
+    from . import decisions
 
     try:
-        build = (quality.served(lake) or {}).get("build_id")
-        pinned = quality.build_snapshot(lake, build) if build else None
-        return decisions.crawl_off((pinned or {}).get("doc"))
+        return decisions.crawl_off(decisions.served_doc(lake))
     except Exception as e:  # noqa: BLE001 - a read failure crawls everyone, as before the flag
         logging.warning("crawl flags not read (%s): crawling every roaster", type(e).__name__)
         return set()

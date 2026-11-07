@@ -10,7 +10,7 @@ import re
 import threading
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, ClassVar
 
 import duckdb
 
@@ -37,6 +37,19 @@ BUILD_ID = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
 @dataclass
 class Filters:
+    """A page's search, facets, price range and page number, from its query string; where() is the SQL over the
+    page's table. The Sources page uses the same with its own facets (sources.SourceFilters)."""
+
+    FACETS: ClassVar[tuple[str, ...]] = FACETS
+    COLUMN = COLUMN
+    SEARCH: ClassVar[tuple[str, ...]] = (
+        "title",
+        "roaster_id",
+        "product_id",
+        "coalesce(url, '')",
+        "coalesce(coffee_name, '')",
+    )
+    PRICES = True
     q: str = ""
     values: dict[str, str] = field(default_factory=dict)  # facet -> value
     price_min: float | None = None
@@ -58,9 +71,9 @@ class Filters:
             page = 1
         return cls(
             q=(params.get("q") or "").strip()[:200],
-            values={f: v[:200] for f in FACETS if (v := (params.get(f) or "").strip())},
-            price_min=num("price_min"),
-            price_max=num("price_max"),
+            values={f: v[:200] for f in cls.FACETS if (v := (params.get(f) or "").strip())},
+            price_min=num("price_min") if cls.PRICES else None,
+            price_max=num("price_max") if cls.PRICES else None,
             page=page,
         )
 
@@ -68,19 +81,16 @@ class Filters:
         sql: list[str] = []
         params: list[object] = []
         if self.q:
-            sql.append(
-                "(title ilike ? escape '\\' or roaster_id ilike ? escape '\\' or product_id ilike ? escape '\\' "
-                "or coalesce(url, '') ilike ? escape '\\' or coalesce(coffee_name, '') ilike ? escape '\\')"
-            )
+            sql.append("(" + " or ".join(f"{c} ilike ? escape '\\'" for c in self.SEARCH) + ")")
             like = "%" + self.q.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%"
-            params += [like] * 5
+            params += [like] * len(self.SEARCH)
         for f, v in self.values.items():
             if f == skip:
                 continue
             if v == "(none)":
-                sql.append(f"{COLUMN[f]} is null")
+                sql.append(f"{self.COLUMN[f]} is null")
             else:
-                sql.append(f"{COLUMN[f]} = ?")
+                sql.append(f"{self.COLUMN[f]} = ?")
                 params.append(v)
         if self.price_min is not None:
             sql.append("min_price_usd >= ?")

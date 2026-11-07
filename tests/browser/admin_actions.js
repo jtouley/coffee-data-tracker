@@ -397,10 +397,51 @@ const errors = [];
       await page.click("dialog#confirm [data-close]");
     });
 
+    await check("Sources: search first, flag a row Roaster in one click, then Undo from the outcome", async () => {
+      await page.goto(`${cfg.act}/sources`);
+      await settled(page);
+      const main = await page.textContent("main");
+      assert.match(main, /roasters from the registry · 0 flagged roaster/);
+      assert.match(main, /roaster \(inherited\)/);
+      assert.ok(await page.evaluate(() => document.querySelector("form.search").compareDocumentPosition(document.querySelector("[data-answer]")) & Node.DOCUMENT_POSITION_FOLLOWING), "the search comes first");
+      await shoot(page, "sources");
+      await page.fill("#q", "https://www.ember-roastworks.example/shop"); // a pasted address finds its domain
+      await page.click("form.search button[type=submit]");
+      await settled(page);
+      assert.match(await page.textContent("[data-answer-matching]"), /^1 of /);
+      assert.match(await page.textContent("table.sources"), /roast in the name/);
+      await page.click("table.sources form[data-now] button:text-is('Roaster')");
+      await toast(page, /Flagged 1 place/);
+      await settled(page);
+      assert.match(await page.textContent("table.sources"), /\broaster\b/);
+      await shoot(page, "sources-flagged");
+      await page.click("[data-result] [data-undo]");
+      await toast(page, /Undone \(1\)/);
+      await settled(page);
+      assert.match(await page.textContent("table.sources"), /unreviewed/);
+      await page.click("table.sources form[data-now] button:text-is('Roaster')");
+      await toast(page, /Flagged 1 place/);
+    });
+
+    await check("Sources: tick two cafés and flag them Not a roaster together", async () => {
+      await page.goto(`${cfg.act}/sources?status=unreviewed`);
+      await settled(page);
+      const n = await page.locator("input[data-pick]").count();
+      assert.ok(n >= 2, `${n} unreviewed`);
+      await page.check("input[data-pick] >> nth=0");
+      await page.check("input[data-pick] >> nth=1");
+      assert.match(await page.textContent("[data-bulk-count]"), /2 chosen/);
+      await page.click("[data-bulk] button:text-is('Not a roaster')");
+      await toast(page, /Flagged 2 places/);
+      await settled(page);
+      assert.match(await page.textContent("[data-answer]"), /1 flagged roaster · 2 not a roaster/);
+      await shoot(page, "sources-bulk");
+    });
+
     await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag not in it/);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag not in it/);
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {

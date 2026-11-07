@@ -208,3 +208,19 @@ if __name__ == "__main__":  # python -m tests.admin_fixture <root>: for the Play
     import sys
 
     print(json.dumps(build_admin_lake(Path(sys.argv[1])), default=str))
+
+
+def list_sources(lake_dir: Path, at: datetime) -> None:
+    """Give a copy of the built lake a discovery source list (lake `candidates`) for the Sources page: cafés, one
+    with "roast" in its name, and a coffee shop. The places are made up; nothing fetches them."""
+
+    def place(domain, name, tag, city):
+        return {"added_at": at, "source": "overture-2026-10", "roaster_id": domain, "name": name, "city": city,
+                "state": "OR", "website": f"https://{domain}/", "locations": 1, "confidence": 0.9, "tags": [tag],
+                "roast_in_name": "roast" in name.lower()}  # fmt: skip
+
+    Lake(str(lake_dir)).write("candidates", "candidates/source=overture/fixture.parquet", [
+        place("ember-roastworks.example", "Ember Roastworks Cafe", "cafe", "Bend"),
+        place("corner-cup.example", "Corner Cup", "coffee_shop", "Eugene"),
+        place("tea-and-toast.example", "Tea and Toast", "cafe", "Salem"),
+    ])  # fmt: skip

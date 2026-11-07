@@ -64,3 +64,33 @@
   <button class="btn {{ cls }} inline" type="submit" data-busy="{{ busy }}"{% if disabled %} aria-disabled="true" aria-describedby="{{ disabled }}"{% endif %}>{{ label }}</button>
 </form>
 {%- endmacro %}
+
+{# A search box, facet selects with counts (and the caller's extra fields), and the removable filter chips: the
+   Catalog's and the Sources page's. #}
+{% macro search(f, facets, data, qs, action, label, hidden={}) -%}
+<form class="search" method="get" action="{{ action }}" role="search">
+  {% for k, v in hidden.items() %}<input type="hidden" name="{{ k }}" value="{{ v }}">{% endfor %}
+  <label class="label" for="q">{{ label }}</label>
+  <div class="searchrow"><input class="input" id="q" name="q" type="search" value="{{ f.q }}" autocomplete="off" spellcheck="false"><button class="btn primary inline" type="submit">Search</button></div>
+  <details class="filters" data-filters{% if f.values or f.price_min is not none or f.price_max is not none %} open{% endif %}>
+  <summary class="btn text start">Filters{% if f.values %} ({{ f.values | length }} applied){% endif %}</summary>
+  <div class="facets">
+    {% for name in facets %}
+    <label class="facet"><span class="label">{{ name.replace("_", " ") | capitalize }}</span>
+      <select name="{{ name }}" class="select" data-autosubmit>
+        <option value="">Any</option>
+        {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ value }} ({{ n(count) }})</option>{% endfor %}
+      </select></label>
+    {% endfor %}
+    {{ caller() if caller else "" }}
+  </div>
+  </details>
+  <noscript><button class="btn secondary inline" type="submit">Apply filters</button></noscript>
+</form>
+{% set chips = f.chips() %}
+{% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}<li><a class="btn text inline" href="{{ action }}{% if hidden %}?{{ hidden | urlencode }}{% endif %}">Clear all</a></li></ul>{% endif %}
+{%- endmacro %}
+
+{% macro pager(data, qs) -%}
+{% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
+{%- endmacro %}
