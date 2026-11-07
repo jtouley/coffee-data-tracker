@@ -48,7 +48,7 @@ log = logging.getLogger(__name__)
 
 # At least this many products the rules call coffee. Provisional until chosen on the validation set
 # (eval/screen/README.md); the investigation's rule was "at least one".
-MIN_COFFEES = 1
+MIN_COFFEES = 5
 # A rejection is an answer about the site, asked again only after RESCREEN_DAYS: never-screened candidates go first,
 # so a re-screen only spends a run's spare capacity. 180 days because a café that starts roasting and selling bags
 # online is a rare, slow change (a new roastery and a new store), and a monthly run screens a few thousand of the

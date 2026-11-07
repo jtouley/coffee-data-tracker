@@ -1,0 +1,1131 @@
+[
+ {
+  "id": "te-00525076",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasts in-house; bags under founder's sister roasting brand sold on own site"
+ },
+ {
+  "id": "te-01165031",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-01680666",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "micro-roasted in house; bags in cart"
+ },
+ {
+  "id": "te-01899546",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves another roaster"
+ },
+ {
+  "id": "te-01968011",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "website is a different restaurant"
+ },
+ {
+  "id": "te-02571190",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-02955639",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-03135417",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-03666581",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "website is only a gift-card page"
+ },
+ {
+  "id": "te-04244403",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "game store"
+ },
+ {
+  "id": "te-05259120",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-05388300",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-05981424",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-07323248",
+  "label": "unsure",
+  "kind": "other",
+  "note": "bot challenge (403); could not view"
+ },
+ {
+  "id": "te-07700364",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves another roaster"
+ },
+ {
+  "id": "te-08046628",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "directory site, 403"
+ },
+ {
+  "id": "te-08430622",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "home roastery; shop on linked same-brand store"
+ },
+ {
+  "id": "te-09358098",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "directory site, 403"
+ },
+ {
+  "id": "te-09929264",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-10870013",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "restaurant chain corporate site"
+ },
+ {
+  "id": "te-11335850",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "says coffee roaster in meta; bulk coffee on pickup menu; no roasting story"
+ },
+ {
+  "id": "te-11581982",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-11786007",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-11852551",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "boba/drinks"
+ },
+ {
+  "id": "te-12331523",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "sells unbranded bags online; no clear claim it roasts"
+ },
+ {
+  "id": "te-13956885",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-14195870",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "directory site"
+ },
+ {
+  "id": "te-15481877",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "site returns 403 to fetches; could not view"
+ },
+ {
+  "id": "te-16149400",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-17151241",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-17707558",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unrelated site"
+ },
+ {
+  "id": "te-17871549",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-18279539",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-18405408",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-18741485",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-18958498",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "espresso catering"
+ },
+ {
+  "id": "te-19042270",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (503)"
+ },
+ {
+  "id": "te-19365083",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-20266129",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves locally roasted coffee"
+ },
+ {
+  "id": "te-20451451",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "soda shop"
+ },
+ {
+  "id": "te-20643001",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-21797571",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-21919417",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-22081384",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-22492079",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roasts in Tacoma; Order Coffee shop category (products JS-rendered)"
+ },
+ {
+  "id": "te-22493653",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-22635667",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "bakery"
+ },
+ {
+  "id": "te-23109217",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (503)"
+ },
+ {
+  "id": "te-23628458",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-24200026",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-24285781",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "whole bean on pickup menu; no roasting claim"
+ },
+ {
+  "id": "te-24543130",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-25061308",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-25614485",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label bags online; no roasting claim"
+ },
+ {
+  "id": "te-25823568",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-26084411",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-26636911",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-27134522",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-27595313",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-27801617",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-28095572",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "directory site, 403"
+ },
+ {
+  "id": "te-28694822",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no online bag sales"
+ },
+ {
+  "id": "te-28878964",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-29283756",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves locally roasted coffee"
+ },
+ {
+  "id": "te-29297705",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "lab instruments company"
+ },
+ {
+  "id": "te-30427905",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "own-brand kosher coffee sold online; no claim it roasts"
+ },
+ {
+  "id": "te-30537896",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "hijacked domain"
+ },
+ {
+  "id": "te-30636713",
+  "label": "out_of_scope",
+  "kind": "reseller",
+  "note": "sells local roasters' coffee"
+ },
+ {
+  "id": "te-31453729",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-31551788",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "ice cream"
+ },
+ {
+  "id": "te-32888404",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-32992653",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-33378534",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-35198423",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-35529810",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "espresso-tools store with a few beans; no roasting claim"
+ },
+ {
+  "id": "te-35735804",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "charity coffee brand; vague roasting claim, likely private label"
+ },
+ {
+  "id": "te-36812073",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "hijacked domain"
+ },
+ {
+  "id": "te-36890690",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "college site; TLS error"
+ },
+ {
+  "id": "te-36969220",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own blend 12oz shippable, \"locally roasted\"; unclear by whom"
+ },
+ {
+  "id": "te-37393402",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "roastery; bag shop on linked same-brand store"
+ },
+ {
+  "id": "te-38644554",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-38772564",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-41022985",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-41540050",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "no bags online"
+ },
+ {
+  "id": "te-41873966",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "roasts own beans; no online shop"
+ },
+ {
+  "id": "te-42423474",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-42535145",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unrelated site"
+ },
+ {
+  "id": "te-43947295",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-44178311",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-44276663",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-44497020",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-44536860",
+  "label": "out_of_scope",
+  "kind": "roaster",
+  "note": "says it roasts locally; no online bag sales"
+ },
+ {
+  "id": "te-44565330",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-45017546",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-45658569",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "subdomain does not load (DNS error page)"
+ },
+ {
+  "id": "te-46063246",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-46228239",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "different business site"
+ },
+ {
+  "id": "te-46374601",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "Italian roaster; this site is its EU store, links a US store"
+ },
+ {
+  "id": "te-46671572",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-46953119",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "maple syrup producer"
+ },
+ {
+  "id": "te-49198301",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves another roaster"
+ },
+ {
+  "id": "te-50634492",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-50648251",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves another roaster"
+ },
+ {
+  "id": "te-50793143",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "town tourism site"
+ },
+ {
+  "id": "te-50808694",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-51188849",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "hijacked domain"
+ },
+ {
+  "id": "te-51504050",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "sells 1lb bags online; roasting not stated"
+ },
+ {
+  "id": "te-51825315",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "own-brand bags, \"small-batch roasted in California\", roaster not named"
+ },
+ {
+  "id": "te-52942196",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-53212273",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "play space cafe"
+ },
+ {
+  "id": "te-53477849",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "convenience store chain"
+ },
+ {
+  "id": "te-53518987",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-53954843",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-54095478",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-54586240",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-54692137",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-55519915",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "own-brand bags online; no roasting claim"
+ },
+ {
+  "id": "te-56303600",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "matcha"
+ },
+ {
+  "id": "te-56818152",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "non-alcoholic cocktails"
+ },
+ {
+  "id": "te-57003861",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "museum"
+ },
+ {
+  "id": "te-57048373",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "audio store"
+ },
+ {
+  "id": "te-58660459",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "payroll login page"
+ },
+ {
+  "id": "te-59327945",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "bags via coffee club / bundles"
+ },
+ {
+  "id": "te-59823136",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-59953101",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "barber shop"
+ },
+ {
+  "id": "te-60010140",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-60064804",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "game cafe"
+ },
+ {
+  "id": "te-60156553",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-60242326",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain parked"
+ },
+ {
+  "id": "te-60660880",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-60879212",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-61117915",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "water treatment"
+ },
+ {
+  "id": "te-61182183",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label bag in gift sets; says locally roasted, roaster unclear"
+ },
+ {
+  "id": "te-61618555",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-62841094",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "partners with a local roaster"
+ },
+ {
+  "id": "te-64244356",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-64357589",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-65276952",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-65883530",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-brand bags online; no roasting claim"
+ },
+ {
+  "id": "te-65969946",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-66374817",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-67049553",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-67264996",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-67480442",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "says it roasts; bags sold on a differently branded linked store"
+ },
+ {
+  "id": "te-67501087",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "not a coffee business"
+ },
+ {
+  "id": "te-67682318",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-68161490",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "1lb bag online; no roasting claim"
+ },
+ {
+  "id": "te-69153563",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-69448012",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-70688455",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves Starbucks"
+ },
+ {
+  "id": "te-71102767",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-71340384",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-71710553",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-71874889",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-label bags online; no roasting claim"
+ },
+ {
+  "id": "te-72249971",
+  "label": "in_scope",
+  "kind": "roaster"
+ },
+ {
+  "id": "te-72806788",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-73677627",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-73886468",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-75657778",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "\"our own roasts\" bags in cart; unclear who roasts"
+ },
+ {
+  "id": "te-76789649",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own bags, \"hand-roasted\", roaster not named"
+ },
+ {
+  "id": "te-76796366",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "UK cafe"
+ },
+ {
+  "id": "te-77250148",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-77321648",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "market/cafe"
+ },
+ {
+  "id": "te-77347053",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "own-brand farm coffee bags; no roasting claim"
+ },
+ {
+  "id": "te-77644054",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "coffee service distributor with own-label bags; no roasting claim"
+ },
+ {
+  "id": "te-77701285",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "\"roasted in small batches\", ships bags; unclear by whom"
+ },
+ {
+  "id": "te-78830538",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "photo studio"
+ },
+ {
+  "id": "te-79828738",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "patisserie"
+ },
+ {
+  "id": "te-79996848",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cupcakes"
+ },
+ {
+  "id": "te-80223956",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable"
+ },
+ {
+  "id": "te-80650991",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-80874528",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "directory site"
+ },
+ {
+  "id": "te-81297058",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-81739377",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "cat cafe"
+ },
+ {
+  "id": "te-82872227",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "drinks/boutique"
+ },
+ {
+  "id": "te-83160409",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "Turkish cafe"
+ },
+ {
+  "id": "te-84275776",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "JS bot-check page; content not viewable"
+ },
+ {
+  "id": "te-85188800",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-85382846",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-86950930",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-87998140",
+  "label": "in_scope",
+  "kind": "roaster",
+  "note": "also private label; sells 4lb bags online"
+ },
+ {
+  "id": "te-88248099",
+  "label": "unsure",
+  "kind": "roaster",
+  "note": "house-roasted; could not find bags for sale online"
+ },
+ {
+  "id": "te-88432807",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (526)"
+ },
+ {
+  "id": "te-88741183",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-91180354",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "unreachable (no DNS)"
+ },
+ {
+  "id": "te-91263731",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "redirects to a broken store host"
+ },
+ {
+  "id": "te-91905481",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-92545473",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "serves another roaster"
+ },
+ {
+  "id": "te-92709129",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "hijacked domain"
+ },
+ {
+  "id": "te-93337352",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-93943276",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "family-farm coffee, retail on pickup menu; who roasts unclear"
+ },
+ {
+  "id": "te-95039129",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "12oz bags online; no roasting claim"
+ },
+ {
+  "id": "te-95113438",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "domain for sale"
+ },
+ {
+  "id": "te-95117017",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-95690359",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-96019681",
+  "label": "unsure",
+  "kind": "cafe",
+  "note": "\"roasted in the Hudson Valley\"; unclear if by them"
+ },
+ {
+  "id": "te-98729223",
+  "label": "unsure",
+  "kind": "reseller",
+  "note": "herb-infused coffee brand; cofounder is a roaster, no claim they roast it"
+ },
+ {
+  "id": "te-98748426",
+  "label": "out_of_scope",
+  "kind": "cafe"
+ },
+ {
+  "id": "te-99128136",
+  "label": "out_of_scope",
+  "kind": "cafe",
+  "note": "bistro"
+ },
+ {
+  "id": "te-99144584",
+  "label": "out_of_scope",
+  "kind": "other",
+  "note": "art gallery"
+ }
+]

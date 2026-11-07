@@ -1,0 +1,905 @@
+{
+"te-00525076": {
+"id": "te-00525076",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts in-house; bags in web shop"
+},
+"te-01165031": {
+"id": "te-01165031",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-01680666": {
+"id": "te-01680666",
+"kind": "roaster",
+"label": "in_scope",
+"note": "micro-roasted; coffee in web shop"
+},
+"te-01899546": {
+"id": "te-01899546",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-02571190": {
+"id": "te-02571190",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-02955639": {
+"id": "te-02955639",
+"kind": "roaster",
+"label": "in_scope",
+"note": "redirects to Swell Brew (same vendor); roastery"
+},
+"te-03135417": {
+"id": "te-03135417",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-03666581": {
+"id": "te-03666581",
+"kind": "other",
+"label": "out_of_scope",
+"note": "egift card page only"
+},
+"te-04244403": {
+"id": "te-04244403",
+"kind": "other",
+"label": "out_of_scope",
+"note": "game store"
+},
+"te-05259120": {
+"id": "te-05259120",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-05388300": {
+"id": "te-05388300",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-05981424": {
+"id": "te-05981424",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-07700364": {
+"id": "te-07700364",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-08046628": {
+"id": "te-08046628",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page, 403"
+},
+"te-08430622": {
+"id": "te-08430622",
+"kind": "roaster",
+"label": "in_scope",
+"note": "home roasting shop; linked web store"
+},
+"te-09358098": {
+"id": "te-09358098",
+"kind": "other",
+"label": "out_of_scope",
+"note": "news directory"
+},
+"te-09929264": {
+"id": "te-09929264",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-10870013": {
+"id": "te-10870013",
+"kind": "other",
+"label": "out_of_scope",
+"note": "restaurant chain corporate site"
+},
+"te-11581982": {
+"id": "te-11581982",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-11786007": {
+"id": "te-11786007",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-11852551": {
+"id": "te-11852551",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-13956885": {
+"id": "te-13956885",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-14195870": {
+"id": "te-14195870",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unrelated site"
+},
+"te-16149400": {
+"id": "te-16149400",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-17151241": {
+"id": "te-17151241",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-17707558": {
+"id": "te-17707558",
+"kind": "other",
+"label": "out_of_scope",
+"note": "soundcloud"
+},
+"te-17871549": {
+"id": "te-17871549",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-18279539": {
+"id": "te-18279539",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-18405408": {
+"id": "te-18405408",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves another roaster"
+},
+"te-18741485": {
+"id": "te-18741485",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-18958498": {
+"id": "te-18958498",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-19042270": {
+"id": "te-19042270",
+"kind": "other",
+"label": "out_of_scope",
+"note": "did not load"
+},
+"te-19365083": {
+"id": "te-19365083",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-20266129": {
+"id": "te-20266129",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-20451451": {
+"id": "te-20451451",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-20643001": {
+"id": "te-20643001",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves locally roasted coffee"
+},
+"te-21797571": {
+"id": "te-21797571",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-21919417": {
+"id": "te-21919417",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-22081384": {
+"id": "te-22081384",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-22492079": {
+"id": "te-22492079",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts since 2004; Square order-coffee category (product list not visible)"
+},
+"te-22493653": {
+"id": "te-22493653",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-22635667": {
+"id": "te-22635667",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-23109217": {
+"id": "te-23109217",
+"kind": "other",
+"label": "out_of_scope",
+"note": "did not load"
+},
+"te-23628458": {
+"id": "te-23628458",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-24200026": {
+"id": "te-24200026",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-24285781": {
+"id": "te-24285781",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "whole bean category but no roasting claim"
+},
+"te-24543130": {
+"id": "te-24543130",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-25061308": {
+"id": "te-25061308",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-25823568": {
+"id": "te-25823568",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-26084411": {
+"id": "te-26084411",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-26636911": {
+"id": "te-26636911",
+"kind": "other",
+"label": "out_of_scope",
+"note": "no DNS record"
+},
+"te-27134522": {
+"id": "te-27134522",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts to order in Sweet Home OR"
+},
+"te-27595313": {
+"id": "te-27595313",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-27801617": {
+"id": "te-27801617",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-28095572": {
+"id": "te-28095572",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page, 403"
+},
+"te-28694822": {
+"id": "te-28694822",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no bag sales online"
+},
+"te-28878964": {
+"id": "te-28878964",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-29283756": {
+"id": "te-29283756",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "sources locally roasted beans"
+},
+"te-29297705": {
+"id": "te-29297705",
+"kind": "other",
+"label": "out_of_scope",
+"note": "lab instrument company"
+},
+"te-30537896": {
+"id": "te-30537896",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"te-31453729": {
+"id": "te-31453729",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-31551788": {
+"id": "te-31551788",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "ice cream shop"
+},
+"te-32888404": {
+"id": "te-32888404",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-32992653": {
+"id": "te-32992653",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-36812073": {
+"id": "te-36812073",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"te-36890690": {
+"id": "te-36890690",
+"kind": "other",
+"label": "out_of_scope",
+"note": "college site, TLS error"
+},
+"te-37393402": {
+"id": "te-37393402",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-38644554": {
+"id": "te-38644554",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-38772564": {
+"id": "te-38772564",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-41022985": {
+"id": "te-41022985",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts on site; web shop"
+},
+"te-41540050": {
+"id": "te-41540050",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no bags online"
+},
+"te-42423474": {
+"id": "te-42423474",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-42535145": {
+"id": "te-42535145",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unrelated site"
+},
+"te-43947295": {
+"id": "te-43947295",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-44178311": {
+"id": "te-44178311",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-44276663": {
+"id": "te-44276663",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Lost Coffee"
+},
+"te-44497020": {
+"id": "te-44497020",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Peet's"
+},
+"te-44536860": {
+"id": "te-44536860",
+"kind": "roaster",
+"label": "out_of_scope",
+"note": "roasts locally; no bags online"
+},
+"te-44565330": {
+"id": "te-44565330",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-45017546": {
+"id": "te-45017546",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-46063246": {
+"id": "te-46063246",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-46374601": {
+"id": "te-46374601",
+"kind": "roaster",
+"label": "in_scope",
+"note": "Italian roaster; EU web shop"
+},
+"te-46671572": {
+"id": "te-46671572",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-46953119": {
+"id": "te-46953119",
+"kind": "other",
+"label": "out_of_scope",
+"note": "maple syrup"
+},
+"te-49198301": {
+"id": "te-49198301",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Madrona"
+},
+"te-50634492": {
+"id": "te-50634492",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-50648251": {
+"id": "te-50648251",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "sources from a roaster"
+},
+"te-50793143": {
+"id": "te-50793143",
+"kind": "other",
+"label": "out_of_scope",
+"note": "town site"
+},
+"te-50808694": {
+"id": "te-50808694",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-51188849": {
+"id": "te-51188849",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"te-52942196": {
+"id": "te-52942196",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-53212273": {
+"id": "te-53212273",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "play cafe"
+},
+"te-53477849": {
+"id": "te-53477849",
+"kind": "other",
+"label": "out_of_scope",
+"note": "convenience store chain"
+},
+"te-53518987": {
+"id": "te-53518987",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-53954843": {
+"id": "te-53954843",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-54095478": {
+"id": "te-54095478",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-54586240": {
+"id": "te-54586240",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-54692137": {
+"id": "te-54692137",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-56303600": {
+"id": "te-56303600",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "matcha"
+},
+"te-56818152": {
+"id": "te-56818152",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NA cocktails"
+},
+"te-57003861": {
+"id": "te-57003861",
+"kind": "other",
+"label": "out_of_scope",
+"note": "museum"
+},
+"te-57048373": {
+"id": "te-57048373",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unrelated"
+},
+"te-58660459": {
+"id": "te-58660459",
+"kind": "other",
+"label": "out_of_scope",
+"note": "ADP"
+},
+"te-59327945": {
+"id": "te-59327945",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-59823136": {
+"id": "te-59823136",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-59953101": {
+"id": "te-59953101",
+"kind": "other",
+"label": "out_of_scope",
+"note": "barber shop"
+},
+"te-60010140": {
+"id": "te-60010140",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-60064804": {
+"id": "te-60064804",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-60156553": {
+"id": "te-60156553",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-60242326": {
+"id": "te-60242326",
+"kind": "other",
+"label": "out_of_scope",
+"note": "parked domain"
+},
+"te-60660880": {
+"id": "te-60660880",
+"kind": "roaster",
+"label": "in_scope",
+"note": "\"roasted by us\""
+},
+"te-60879212": {
+"id": "te-60879212",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-61117915": {
+"id": "te-61117915",
+"kind": "other",
+"label": "out_of_scope",
+"note": "water treatment"
+},
+"te-61618555": {
+"id": "te-61618555",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-62841094": {
+"id": "te-62841094",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "beans roasted by partner roaster"
+},
+"te-64244356": {
+"id": "te-64244356",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-64357589": {
+"id": "te-64357589",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-65276952": {
+"id": "te-65276952",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-65969946": {
+"id": "te-65969946",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-66374817": {
+"id": "te-66374817",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-67264996": {
+"id": "te-67264996",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-67501087": {
+"id": "te-67501087",
+"kind": "other",
+"label": "out_of_scope",
+"note": "TLS failure"
+},
+"te-67682318": {
+"id": "te-67682318",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-69153563": {
+"id": "te-69153563",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-69448012": {
+"id": "te-69448012",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-70688455": {
+"id": "te-70688455",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Starbucks"
+},
+"te-71102767": {
+"id": "te-71102767",
+"kind": "roaster",
+"label": "in_scope",
+"note": "site implicit; web search confirms roastery"
+},
+"te-71340384": {
+"id": "te-71340384",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-71710553": {
+"id": "te-71710553",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-72249971": {
+"id": "te-72249971",
+"kind": "roaster",
+"label": "in_scope"
+},
+"te-72806788": {
+"id": "te-72806788",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-73677627": {
+"id": "te-73677627",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-73886468": {
+"id": "te-73886468",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-76796366": {
+"id": "te-76796366",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "UK cafe"
+},
+"te-77250148": {
+"id": "te-77250148",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-77321648": {
+"id": "te-77321648",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-78830538": {
+"id": "te-78830538",
+"kind": "other",
+"label": "out_of_scope",
+"note": "photo studio"
+},
+"te-79828738": {
+"id": "te-79828738",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-79996848": {
+"id": "te-79996848",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-80223956": {
+"id": "te-80223956",
+"kind": "other",
+"label": "out_of_scope",
+"note": "TLS failure"
+},
+"te-80650991": {
+"id": "te-80650991",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-80874528": {
+"id": "te-80874528",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory"
+},
+"te-81297058": {
+"id": "te-81297058",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-81739377": {
+"id": "te-81739377",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-82872227": {
+"id": "te-82872227",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-83160409": {
+"id": "te-83160409",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Turkish cafe"
+},
+"te-85188800": {
+"id": "te-85188800",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-85382846": {
+"id": "te-85382846",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-86950930": {
+"id": "te-86950930",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-87998140": {
+"id": "te-87998140",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts in-house; bags online"
+},
+"te-88432807": {
+"id": "te-88432807",
+"kind": "other",
+"label": "out_of_scope",
+"note": "Cloudflare 526"
+},
+"te-88741183": {
+"id": "te-88741183",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-91180354": {
+"id": "te-91180354",
+"kind": "other",
+"label": "out_of_scope",
+"note": "NXDOMAIN"
+},
+"te-91905481": {
+"id": "te-91905481",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-92545473": {
+"id": "te-92545473",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Damiani"
+},
+"te-92709129": {
+"id": "te-92709129",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked domain"
+},
+"te-93337352": {
+"id": "te-93337352",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-95113438": {
+"id": "te-95113438",
+"kind": "other",
+"label": "out_of_scope",
+"note": "domain for sale"
+},
+"te-95117017": {
+"id": "te-95117017",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-95690359": {
+"id": "te-95690359",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-98748426": {
+"id": "te-98748426",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-99128136": {
+"id": "te-99128136",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"te-99144584": {
+"id": "te-99144584",
+"kind": "other",
+"label": "out_of_scope",
+"note": "art gallery"
+}
+}

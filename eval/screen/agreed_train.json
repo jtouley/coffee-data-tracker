@@ -1,0 +1,839 @@
+{
+"tr-00155784": {
+"id": "tr-00155784",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasting page, shop sells bags"
+},
+"tr-01150219": {
+"id": "tr-01150219",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roastery + online shop"
+},
+"tr-01553024": {
+"id": "tr-01553024",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "cafe menu only"
+},
+"tr-01871029": {
+"id": "tr-01871029",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves locally roasted coffee"
+},
+"tr-02474523": {
+"id": "tr-02474523",
+"kind": "other",
+"label": "out_of_scope",
+"note": "HTTP 500"
+},
+"tr-03142441": {
+"id": "tr-03142441",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "cafe; own-label bag \"roasted in California\", no roasting claim"
+},
+"tr-03488285": {
+"id": "tr-03488285",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-05662761": {
+"id": "tr-05662761",
+"kind": "roaster",
+"label": "in_scope",
+"note": "site is SanVel Coffee Roasters"
+},
+"tr-05935299": {
+"id": "tr-05935299",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-06239278": {
+"id": "tr-06239278",
+"kind": "other",
+"label": "out_of_scope",
+"note": "Shopify store unavailable"
+},
+"tr-07046837": {
+"id": "tr-07046837",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-07100486": {
+"id": "tr-07100486",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no products"
+},
+"tr-07242060": {
+"id": "tr-07242060",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable; city site"
+},
+"tr-09408575": {
+"id": "tr-09408575",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-10806529": {
+"id": "tr-10806529",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Colectivo"
+},
+"tr-11704030": {
+"id": "tr-11704030",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no roasting claim, no online bags"
+},
+"tr-11904200": {
+"id": "tr-11904200",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "shop links to sister brand Promethium Coffee (different brand)"
+},
+"tr-12103427": {
+"id": "tr-12103427",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable"
+},
+"tr-12708079": {
+"id": "tr-12708079",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-13966154": {
+"id": "tr-13966154",
+"kind": "other",
+"label": "out_of_scope",
+"note": "content creator site"
+},
+"tr-14423514": {
+"id": "tr-14423514",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable"
+},
+"tr-15109666": {
+"id": "tr-15109666",
+"kind": "other",
+"label": "out_of_scope",
+"note": "instant coffee/powders only"
+},
+"tr-16076232": {
+"id": "tr-16076232",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-16444682": {
+"id": "tr-16444682",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-16958143": {
+"id": "tr-16958143",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roastery and cafe, bean shop"
+},
+"tr-17227077": {
+"id": "tr-17227077",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-18475610": {
+"id": "tr-18475610",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-20349617": {
+"id": "tr-20349617",
+"kind": "other",
+"label": "out_of_scope",
+"note": "parked"
+},
+"tr-20661639": {
+"id": "tr-20661639",
+"kind": "roaster",
+"label": "in_scope",
+"note": "site is Covenant Coffee, hand roasted"
+},
+"tr-21042314": {
+"id": "tr-21042314",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-21148720": {
+"id": "tr-21148720",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-22143513": {
+"id": "tr-22143513",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Gimme Coffee"
+},
+"tr-23399776": {
+"id": "tr-23399776",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-24216784": {
+"id": "tr-24216784",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-24294114": {
+"id": "tr-24294114",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-24466671": {
+"id": "tr-24466671",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page, not own site"
+},
+"tr-24742008": {
+"id": "tr-24742008",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-25324353": {
+"id": "tr-25324353",
+"kind": "other",
+"label": "out_of_scope",
+"note": "Squarespace expired"
+},
+"tr-25438325": {
+"id": "tr-25438325",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-26906886": {
+"id": "tr-26906886",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-27480037": {
+"id": "tr-27480037",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-28225767": {
+"id": "tr-28225767",
+"kind": "other",
+"label": "out_of_scope",
+"note": "domain for sale"
+},
+"tr-28574328": {
+"id": "tr-28574328",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "brewery cafe, coffee by Broadsheet"
+},
+"tr-28737022": {
+"id": "tr-28737022",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-29129361": {
+"id": "tr-29129361",
+"kind": "other",
+"label": "out_of_scope",
+"note": "community center"
+},
+"tr-29762886": {
+"id": "tr-29762886",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-29859595": {
+"id": "tr-29859595",
+"kind": "other",
+"label": "out_of_scope",
+"note": "site bot challenge 403, unreadable"
+},
+"tr-30009104": {
+"id": "tr-30009104",
+"kind": "other",
+"label": "out_of_scope",
+"note": "placeholder WordPress"
+},
+"tr-30157515": {
+"id": "tr-30157515",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-30318239": {
+"id": "tr-30318239",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "coming soon; serves DOMA"
+},
+"tr-31455407": {
+"id": "tr-31455407",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "coffee stand; beans origin not stated"
+},
+"tr-32212073": {
+"id": "tr-32212073",
+"kind": "other",
+"label": "out_of_scope",
+"note": "parked"
+},
+"tr-32858584": {
+"id": "tr-32858584",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roasts in-store in Kona"
+},
+"tr-33650074": {
+"id": "tr-33650074",
+"kind": "other",
+"label": "out_of_scope",
+"note": "sports nutrition"
+},
+"tr-34304876": {
+"id": "tr-34304876",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no coffee bags"
+},
+"tr-34467314": {
+"id": "tr-34467314",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Carrboro Coffee Roasters beans"
+},
+"tr-34707398": {
+"id": "tr-34707398",
+"kind": "roaster",
+"label": "in_scope",
+"note": "about says they roast"
+},
+"tr-35171704": {
+"id": "tr-35171704",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-36056375": {
+"id": "tr-36056375",
+"kind": "other",
+"label": "out_of_scope",
+"note": "Wix domain error"
+},
+"tr-36712718": {
+"id": "tr-36712718",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-36883106": {
+"id": "tr-36883106",
+"kind": "other",
+"label": "out_of_scope",
+"note": "game store"
+},
+"tr-36890201": {
+"id": "tr-36890201",
+"kind": "other",
+"label": "out_of_scope",
+"note": "smokehouse market"
+},
+"tr-38492326": {
+"id": "tr-38492326",
+"kind": "other",
+"label": "out_of_scope",
+"note": "site bot challenge 403, unreadable"
+},
+"tr-39182257": {
+"id": "tr-39182257",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-39865977": {
+"id": "tr-39865977",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-40264030": {
+"id": "tr-40264030",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-41077785": {
+"id": "tr-41077785",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "diner chain"
+},
+"tr-41746545": {
+"id": "tr-41746545",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-41784528": {
+"id": "tr-41784528",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-41952109": {
+"id": "tr-41952109",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-41972388": {
+"id": "tr-41972388",
+"kind": "other",
+"label": "out_of_scope",
+"note": "522"
+},
+"tr-42362919": {
+"id": "tr-42362919",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "restaurant"
+},
+"tr-44160982": {
+"id": "tr-44160982",
+"kind": "roaster",
+"label": "in_scope",
+"note": "redirects to Inheritance Coffee (roaster)"
+},
+"tr-44634125": {
+"id": "tr-44634125",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-45356076": {
+"id": "tr-45356076",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "Pammel Park beans"
+},
+"tr-46041723": {
+"id": "tr-46041723",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-46259221": {
+"id": "tr-46259221",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-46909000": {
+"id": "tr-46909000",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-47272699": {
+"id": "tr-47272699",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-48435669": {
+"id": "tr-48435669",
+"kind": "other",
+"label": "out_of_scope",
+"note": "chain corporate site"
+},
+"tr-48877089": {
+"id": "tr-48877089",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-49521329": {
+"id": "tr-49521329",
+"kind": "roaster",
+"label": "in_scope",
+"note": "roast our own beans"
+},
+"tr-50607383": {
+"id": "tr-50607383",
+"kind": "other",
+"label": "out_of_scope",
+"note": "catering site"
+},
+"tr-51274211": {
+"id": "tr-51274211",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-53630534": {
+"id": "tr-53630534",
+"kind": "other",
+"label": "out_of_scope",
+"note": "gov site"
+},
+"tr-54598955": {
+"id": "tr-54598955",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-55786748": {
+"id": "tr-55786748",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-56386699": {
+"id": "tr-56386699",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked spam"
+},
+"tr-56521606": {
+"id": "tr-56521606",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-57039600": {
+"id": "tr-57039600",
+"kind": "other",
+"label": "out_of_scope",
+"note": "kratom"
+},
+"tr-57934336": {
+"id": "tr-57934336",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-58158665": {
+"id": "tr-58158665",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked spam"
+},
+"tr-60532116": {
+"id": "tr-60532116",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-60748360": {
+"id": "tr-60748360",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-61385758": {
+"id": "tr-61385758",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hijacked spam"
+},
+"tr-61765120": {
+"id": "tr-61765120",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-62497715": {
+"id": "tr-62497715",
+"kind": "other",
+"label": "out_of_scope",
+"note": "hemp"
+},
+"tr-62828904": {
+"id": "tr-62828904",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page"
+},
+"tr-63499507": {
+"id": "tr-63499507",
+"kind": "other",
+"label": "out_of_scope",
+"note": "store unavailable"
+},
+"tr-65173489": {
+"id": "tr-65173489",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-66777030": {
+"id": "tr-66777030",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-66872146": {
+"id": "tr-66872146",
+"kind": "roaster",
+"label": "in_scope",
+"note": "we roast in small batches and ship"
+},
+"tr-67172965": {
+"id": "tr-67172965",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-67724125": {
+"id": "tr-67724125",
+"kind": "roaster",
+"label": "in_scope",
+"note": "farm roasts"
+},
+"tr-68038813": {
+"id": "tr-68038813",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-68175706": {
+"id": "tr-68175706",
+"kind": "roaster",
+"label": "in_scope",
+"note": "co-roasting space"
+},
+"tr-68775624": {
+"id": "tr-68775624",
+"kind": "other",
+"label": "out_of_scope",
+"note": "expired domain"
+},
+"tr-69123102": {
+"id": "tr-69123102",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-69217629": {
+"id": "tr-69217629",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable"
+},
+"tr-69345743": {
+"id": "tr-69345743",
+"kind": "other",
+"label": "out_of_scope",
+"note": "preserves"
+},
+"tr-69451956": {
+"id": "tr-69451956",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-70174632": {
+"id": "tr-70174632",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-70481875": {
+"id": "tr-70481875",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page"
+},
+"tr-71364197": {
+"id": "tr-71364197",
+"kind": "other",
+"label": "out_of_scope",
+"note": "site down"
+},
+"tr-71774163": {
+"id": "tr-71774163",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-72720448": {
+"id": "tr-72720448",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-73106270": {
+"id": "tr-73106270",
+"kind": "reseller",
+"label": "out_of_scope",
+"note": "candy shop; Portland Roasters coffee"
+},
+"tr-73929721": {
+"id": "tr-73929721",
+"kind": "other",
+"label": "out_of_scope",
+"note": "clothing store"
+},
+"tr-75365616": {
+"id": "tr-75365616",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Coava"
+},
+"tr-75683452": {
+"id": "tr-75683452",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "no shop"
+},
+"tr-75808158": {
+"id": "tr-75808158",
+"kind": "other",
+"label": "out_of_scope",
+"note": "gift shop"
+},
+"tr-76294766": {
+"id": "tr-76294766",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-78281861": {
+"id": "tr-78281861",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-78550643": {
+"id": "tr-78550643",
+"kind": "other",
+"label": "out_of_scope",
+"note": "directory page"
+},
+"tr-80462022": {
+"id": "tr-80462022",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-81616986": {
+"id": "tr-81616986",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-83422328": {
+"id": "tr-83422328",
+"kind": "other",
+"label": "out_of_scope",
+"note": "university dept"
+},
+"tr-86869736": {
+"id": "tr-86869736",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-86869865": {
+"id": "tr-86869865",
+"kind": "other",
+"label": "out_of_scope",
+"note": "tailoring"
+},
+"tr-89670401": {
+"id": "tr-89670401",
+"kind": "reseller",
+"label": "out_of_scope",
+"note": "sells national brands"
+},
+"tr-89751525": {
+"id": "tr-89751525",
+"kind": "roaster",
+"label": "in_scope",
+"note": "master roasters"
+},
+"tr-90089754": {
+"id": "tr-90089754",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Longbottom"
+},
+"tr-91199574": {
+"id": "tr-91199574",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-92535391": {
+"id": "tr-92535391",
+"kind": "other",
+"label": "out_of_scope",
+"note": "domain for sale"
+},
+"tr-92917955": {
+"id": "tr-92917955",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-93049182": {
+"id": "tr-93049182",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-94022848": {
+"id": "tr-94022848",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-94191418": {
+"id": "tr-94191418",
+"kind": "other",
+"label": "out_of_scope",
+"note": "DNS fail"
+},
+"tr-95222404": {
+"id": "tr-95222404",
+"kind": "other",
+"label": "out_of_scope",
+"note": "site bot challenge 403, unreadable"
+},
+"tr-95224014": {
+"id": "tr-95224014",
+"kind": "cafe",
+"label": "out_of_scope"
+},
+"tr-95301319": {
+"id": "tr-95301319",
+"kind": "roaster",
+"label": "in_scope",
+"note": "locally roasted, roastery, Wix cart"
+},
+"tr-97332760": {
+"id": "tr-97332760",
+"kind": "cafe",
+"label": "out_of_scope",
+"note": "serves Silverbridge Coffee"
+},
+"tr-98027642": {
+"id": "tr-98027642",
+"kind": "other",
+"label": "out_of_scope",
+"note": "unreachable"
+},
+"tr-98297894": {
+"id": "tr-98297894",
+"kind": "other",
+"label": "out_of_scope",
+"note": "farm store"
+},
+"tr-99037570": {
+"id": "tr-99037570",
+"kind": "roaster",
+"label": "in_scope"
+},
+"tr-99590426": {
+"id": "tr-99590426",
+"kind": "cafe",
+"label": "out_of_scope"
+}
+}

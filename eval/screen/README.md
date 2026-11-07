@@ -73,7 +73,7 @@ rank, so every item of the first draw is in this one; no label or prediction exi
 Each item is labeled twice, independently, against `GUIDE.md`, and a third labeler settles disagreements
 (`python screen_eval.py agree <set>` writes `agreed_<set>.json` and `to_settle_<set>.json`; the settled ones go in
 `settled_<set>.json`). Two labels agree only when both the label and the kind agree, since the kind decides what a
-confidently wrong admission is. **Labelers: not yet assigned** (to be recorded here: people, or Claude and which model).
+confidently wrong admission is. **Labelers:** Claude subagents, not people: two independent labelers per set (A and B), each reading the businesses' own websites, blind to each other, the screen and the strata; a third (C) settled every disagreement blind to A and B, using a headless browser for JavaScript-only pages. Agreement (label and kind): train 73.0%, validation 85.0%, test 81.5%. A spot-check by a person is still to come.
 Unsure items are left out of the scores.
 
 ## Protocol
