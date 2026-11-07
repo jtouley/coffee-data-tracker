@@ -712,9 +712,10 @@ def create_app(
             if f["case"]:
                 c = await reader.run(queries.case, build, f["case"])
                 ctx["case"], ctx["connectors"] = c, jobs.FIELDS["connector"].choices
+                if c:
+                    c["product"]["url"] = queries.safe_url(c["product"]["url"])
                 if c and writes:
                     pr = c["product"]
-                    pr["url"] = queries.safe_url(pr["url"])
                     ctx["latest"] = await cp(writes.control.latest, [pr["coffee_id"]],
                                              [pr["input_hash"]] if pr["input_hash"] else [])  # fmt: skip
                     ctx["crawl"] = ((await cp(writes.control.roaster_states, [pr["roaster_id"]], default={}))
@@ -724,8 +725,6 @@ def create_app(
                     if test:
                         ctx["answers"] = (await reader.run(queries.test_results, [test["test_id"]])).get(
                             test["test_id"], [])  # fmt: skip
-                elif c:
-                    c["product"]["url"] = queries.safe_url(c["product"]["url"])
                 return ctx
             q = await reader.run(queries.queue, build, f["roaster"], f["rule"], f["state"], offset)
             ctx["q"], ctx["pager"] = q, [(k, f[k]) for k in ("roaster", "rule", "state") if f[k]]
@@ -735,11 +734,7 @@ def create_app(
                 latest = await cp(writes.control.latest, [r["coffee_id"] for r in q["rows"]],
                                   [r["input_hash"] for r in q["rows"] if r["input_hash"]],
                                   default={"coffee_id": {}, "input_hash": {}})  # fmt: skip
-                for r in q["rows"]:
-                    r["dc"] = latest["coffee_id"].get(r["coffee_id"])
-                    r["dh"] = latest["input_hash"].get(r["input_hash"] or "")
-                    live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
-                    r["decided"] = live[0] if live else None
+                _with_latest(q["rows"], latest, "decided")
             ctx["settings"] = (
                 await cp(writes.control.settings, default=ctx["settings"]) if writes else ctx["settings"]
             )
@@ -778,11 +773,7 @@ def create_app(
                     writes.control.latest, [r["coffee_id"] for r in data["rows"]],
                     [r["input_hash"] for r in data["rows"] if r.get("input_hash")]),
                     {"coffee_id": {}, "input_hash": {}}, off)  # fmt: skip
-                for r in data["rows"]:
-                    r["dc"] = latest["coffee_id"].get(r["coffee_id"])
-                    r["dh"] = latest["input_hash"].get(r.get("input_hash") or "")
-                    live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
-                    r["decision"] = live[0] if live else None
+                _with_latest(data["rows"], latest, "decision")
             return {"builds": rel["builds"], "build": chosen, "data": data, "f": f, "facets": FACETS,
                     "qs": _qs(request, f, chosen), "writes_off": off}  # fmt: skip
 
@@ -985,6 +976,16 @@ def _draft_state(d: dict, build: dict | None, served: dict | None, run: dict | N
     if (served or {}).get("build_id") != d["baseline"]:
         return "stale"
     return "publishing" if d["last_event"] == "publish_started" else "built"
+
+
+def _with_latest(rows: list[dict], latest: dict[str, dict[str, dict]], into: str) -> None:
+    """Each row's latest decision event, by coffee (dc) and by version (dh), and under `into` the approved one in
+    effect, if any (the Catalog's and the Queue's rows alike)."""
+    for r in rows:
+        r["dc"] = latest["coffee_id"].get(r["coffee_id"])
+        r["dh"] = latest["input_hash"].get(r.get("input_hash") or "")
+        live = [d for d in (r["dc"], r["dh"]) if d and d["event"] == "approved"]
+        r[into] = live[0] if live else None
 
 
 def _reason(e: Exception) -> str:

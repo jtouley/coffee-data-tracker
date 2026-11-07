@@ -384,10 +384,10 @@ class Writes:
         now = {(d["subject_kind"], d["subject"], d["action"]) for d in effective}
         off = sorted(r for r, s in states.items() if not s["crawl"])
         doc = settings["doc"] if settings["version_id"] else None  # no edit yet: the defaults, left out
-        settings_changed = rules.changed(snap.settings_of(served_doc), snap.settings_of({"settings": doc} if doc
-                                                                                      else None))  # fmt: skip
+        now_settings = snap.settings_of({"settings": doc} if doc else None)
+        settings_changed = rules.changed(snap.settings_of(served_doc), now_settings)
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
-        mine = (now, rules.check(doc or rules.DEFAULTS, strict=False), set(off))
+        mine = (now, now_settings, set(off))
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
