@@ -63,7 +63,10 @@ stratum says whether the screen found coffee, so **labelers use only `items_<set
 | validation | 450 / 1,000 | 200 | 50 / 50 | 50 / 50 | 977 / 3,554 / 244 / 4,352 |
 | test | 450 / 1,000 | 200 | 50 / 50 | 50 / 50 | 968 / 3,390 / 295 / 4,042 |
 
-Population columns are coffee_shop with coffee, coffee_shop without, cafe with coffee, cafe without.
+Population columns are coffee_shop with coffee, coffee_shop without, cafe with coffee, cafe without. A first draw,
+made when only 450 cafés per set had been screened (20 to 26 items in the cafe-with-coffee stratum), was committed in
+`7046e63` and replaced by this one after more cafés were screened. Screening more only adds candidates of a later
+rank, so every item of the first draw is in this one; no label or prediction existed for either.
 
 ## Labels
 
