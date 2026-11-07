@@ -10,8 +10,12 @@ the full evaluation (steps 2-7).
 
 The two differ only on doubted removals (stratum D below). Everywhere else they give the same answer.
 
-**Status: drawn, not labeled.** The code is frozen at `dd2eb5d` (branch `admin-rules`, #129). The sets were drawn and
-both arms' predictions written and pinned in `SHA256SUMS` before any label existed. Labels are next (below).
+**Status: scored once, 2026-11-07. The guard does not ship** (`RESULTS.md`). The code was frozen at `dd2eb5d` (branch
+`admin-rules`, #129); the sets were drawn and both arms' predictions pinned in `SHA256SUMS` before any label existed.
+
+**Who labeled:** Claude subagents, not people. Labelers A and B each labeled all 480 items independently, blind to
+each other and to both arms' predictions; a third subagent (C) labeled only the 3 disagreements, blind to A and B.
+A spot-check by a person is still to come.
 
 **Running total (CLAUDE.md step 9):** 0 products changed: the guard ships off and no public output has changed
 (#129, built row for row against #128's code). Add each later change's count here.
