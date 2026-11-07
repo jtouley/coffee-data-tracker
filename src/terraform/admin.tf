@@ -4,7 +4,9 @@
 #   - create and read, never overwrite or delete, on the bucket that keeps its sign-in state (passkeys, sessions,
 #     recovery codes, the spent enrollment record), so the one-shot records it writes can't be rewritten by it;
 #   - nothing on the lake in GCP: the lake is a Hugging Face dataset, read with ADMIN_HF_TOKEN, a fine-grained token
-#     the owner makes with read access to the lake dataset only.
+#     the owner makes with read access to the lake dataset only;
+#   - and, for its writes (admin_control.tf): its Cloud SQL database, the snapshot bucket, and starting the named
+#     pipeline jobs, which alone write the lake.
 # Sign-in is in code (passkeys), as for the app, so the service itself is public. Every route but /health and the
 # sign-in routes needs a session, and the service answers 503 to everything when its settings are incomplete.
 
@@ -107,6 +109,28 @@ resource "google_cloud_run_v2_service" "admin" {
         name  = "GOOGLE_CLOUD_PROJECT"
         value = var.project_id
       }
+      # The writes (admin_control.tf): the control plane through the Cloud SQL connector as an IAM database user,
+      # the jobs it may start in this region, and the bucket drafts' snapshots go to. No password secret.
+      env {
+        name  = "ADMIN_DB_INSTANCE"
+        value = google_sql_database_instance.admin.connection_name
+      }
+      env {
+        name  = "ADMIN_DB_USER"
+        value = google_sql_user.admin.name
+      }
+      env {
+        name  = "ADMIN_DB_NAME"
+        value = google_sql_database.admin.name
+      }
+      env {
+        name  = "ADMIN_RUN_REGION"
+        value = var.region
+      }
+      env {
+        name  = "ADMIN_SNAPSHOT_BUCKET"
+        value = google_storage_bucket.admin_snapshots.name
+      }
       dynamic "env" {
         for_each = google_secret_manager_secret.admin
         content {
@@ -134,7 +158,10 @@ resource "google_cloud_run_v2_service" "admin" {
   lifecycle {
     ignore_changes = [template[0].containers[0].image, client, client_version, scaling]
   }
-  depends_on = [google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state]
+  depends_on = [
+    google_secret_manager_secret_iam_member.admin, google_storage_bucket_iam_member.admin_state,
+    google_project_iam_member.admin_sql, google_storage_bucket_iam_member.admin_snapshots,
+  ]
 }
 
 resource "google_cloud_run_v2_service_iam_member" "admin_public" {
