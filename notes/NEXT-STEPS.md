@@ -300,3 +300,5 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - Owner: accepted the offline Back change from #126; the weekend Bellingham check counts as its 11-09 crawl.
 - not_coffee/unsure tie: closed, no change (no such ties exist; any wrong removal is fixable in the admin).
 - #125 (admin) fixed after final review (owner-lockout regression); held behind #124, which waits on cutover2.sh.
+
+- 2026-11-07 (owner): scope is who sells coffee where (roasters and bean sellers). The cafe -> "serves X's beans" link is a much-later idea, not now. Cafes enter discovery only as candidates admitted when they sell coffee online.
