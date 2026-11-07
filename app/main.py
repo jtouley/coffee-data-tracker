@@ -36,7 +36,17 @@ from coffeedata.site import links as site_links
 
 from . import labels, logs, photos, rules, views, web
 from .accounts import AccountError
-from .auth import COOKIE, Auth, Sessions, User, clean_secrets, from_env, missing_secrets
+from .auth import (
+    COOKIE,
+    Auth,
+    RequireSession,
+    Sessions,
+    User,
+    clean_secrets,
+    current_user,
+    from_env,
+    missing_secrets,
+)
 from .store import Invalid, NotFound, Store, coffee_key
 
 HERE = Path(__file__).parent
@@ -77,7 +87,7 @@ def not_configured(missing: list[str]) -> FastAPI:
     """What the hosted app shows until its secrets are set: their names, never their values."""
     app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
     text = (
-        "This app isn't set up yet. Add these secrets (Secret Manager, see RUNNING.md), then deploy again: "
+        "This app isn't set up yet. Set these (Secret Manager, see docs/app/RUNNING.md), then deploy again: "
         + ", ".join(missing)
         + "."
     )
@@ -130,6 +140,8 @@ def create_app(
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
+    # Default deny: outside the body limit, so a signed-out request is refused before its body is read.
+    app.add_middleware(RequireSession, routes=lambda: app.router.routes, auth=auth)
 
     async def on_error(request: Request) -> Response:
         log.exception("%s %s failed", request.method, request.url.path)  # no headers or body: no tokens
@@ -145,18 +157,26 @@ def create_app(
     def ip(request: Request) -> str:
         return web.client_ip(request, hops)
 
+    # RequireSession has already refused anyone signed out; these check again, from the same lookup.
     def user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise HTTPException(401, "sign in first")
         logs.set_user(u.user_id)
         return u
 
     def must_agree(u: User) -> bool:
-        return sessions is not None and sessions.accounts.needs_agree(u.user_id)
+        """If the check itself fails, the answer is yes: nothing is shown until acceptance can be confirmed."""
+        if sessions is None:
+            return False
+        try:
+            return sessions.accounts.needs_agree(u.user_id)
+        except Exception:  # noqa: BLE001 - fail closed
+            log.exception("checking the terms acceptance failed")
+            return True
 
     def screen_user(request: Request) -> User:
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             raise SignIn()
         logs.set_user(u.user_id)
@@ -330,10 +350,18 @@ def create_app(
 
     @app.get("/signin", response_class=HTMLResponse, response_model=None)
     def signin(request: Request) -> HTMLResponse | RedirectResponse:
-        if auth.user(request):
+        if current_user(auth, request):
             return RedirectResponse("/", 303)
         s = accounts_only()
-        return page(request, "signin.html", owner_setup=s.accounts.needs_owner)
+        # A cookie that no longer signs anyone in: say why they're here. One that ended (expired, signed out
+        # elsewhere, a new secret) is cleared, so this shows once; a failed check is kept to try again.
+        ended = None
+        if request.cookies.get(COOKIE):
+            ended = "failed" if getattr(request.state, "auth_failed", False) else "ended"
+        response = page(request, "signin.html", owner_setup=s.accounts.needs_owner, ended=ended)
+        if ended == "ended":
+            s.clear_cookie(response)
+        return response
 
     @app.post("/api/signin", dependencies=[Depends(anyone)])
     def post_signin(body: dict, request: Request) -> Response:
@@ -360,10 +388,10 @@ def create_app(
     def agree_page(request: Request) -> HTMLResponse | RedirectResponse:
         """The Terms or Privacy Policy changed since this account last accepted them: Accept, or Sign out."""
         s = accounts_only()
-        u = auth.user(request)
+        u = current_user(auth, request)
         if u is None:
             return RedirectResponse("/signin", 303)
-        if not s.accounts.needs_agree(u.user_id):
+        if not must_agree(u):
             return RedirectResponse("/", 303)
         return page(request, "agree.html", updated=s.accounts.legal)
 
@@ -828,7 +856,7 @@ def create_app(
 
     @app.get("/photos/{photo_id}")
     async def photo(photo_id: str, me: Me) -> Response:
-        """A bag photo, to its owner only. Photos never change, so the browser keeps them (privately)."""
+        """A bag photo, to its owner only. Never stored by the browser or anything between it and the app."""
         if not SAFE_ID.fullmatch(photo_id):
             raise HTTPException(404, "not found")
         hit = photo_cache.get(photo_id)
@@ -847,9 +875,7 @@ def create_app(
         photo_cache.move_to_end(photo_id)
         if hit[0] != me.user_id:
             raise HTTPException(404, "not found")
-        return Response(
-            hit[1], media_type="image/jpeg", headers={"Cache-Control": "private, max-age=31536000, immutable"}
-        )
+        return Response(hit[1], media_type="image/jpeg", headers={"Cache-Control": web.PRIVATE})
 
     def counts(user_id: str) -> dict[str, int]:
         return gear_counts(store.shots_of(user_id))

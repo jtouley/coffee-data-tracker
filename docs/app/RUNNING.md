@@ -10,9 +10,11 @@ make app                     # http://127.0.0.1:8000 over ./lake, signed in as t
 HOST=0.0.0.0 make app        # reachable from a phone on the same network
 ```
 
-Without `SESSION_SECRET` the app uses a stub that treats every request as the owner (`COFFEEDATA_OWNER_ID`,
-default `owner`). Anyone who can reach it can log shots, so keep it on your own network. The stub refuses to start on
-Cloud Run (or a Hugging Face Space).
+`make app` sets `COFFEEDATA_LOCAL_OWNER=1`, which, without `SESSION_SECRET`, uses a stub that treats every request
+as the owner (`COFFEEDATA_OWNER_ID`, default `owner`). Anyone who can reach it can log shots, so keep it on your own
+network. The stub runs only when asked for by that variable, and refuses to start on Cloud Run (or a Hugging Face
+Space). Started any other way without `SESSION_SECRET` and `AUTH_PEPPER`, the app serves nothing but a "not set up"
+notice.
 
 To try real sign-in locally, with accounts in `./lake-users`:
 
@@ -22,7 +24,12 @@ SESSION_SECRET=$(openssl rand -hex 32) AUTH_PEPPER=$(openssl rand -hex 16) OWNER
 ```
 
 `COFFEEDATA_INSECURE_COOKIES=1` drops the cookie's `Secure` flag, which plain http on a LAN address needs. Chrome
-accepts Secure cookies on `localhost` without it.
+accepts Secure cookies on `localhost` without it. On Cloud Run (or a Space) the app refuses to start while it is set.
+
+Every screen and API call needs a signed-in session except the few listed in `PUBLIC` (`app/auth.py`): health,
+sign-in, join, reset, the offline page and the static files. A new route is private until it is added there, and
+`tests/test_auth_gate.py` checks every registered route. Pages and photos for a signed-in person are sent with
+`Cache-Control: no-store, private` and `Vary: Cookie`, so no browser or shared cache keeps them.
 
 ## Sign-in
 

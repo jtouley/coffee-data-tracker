@@ -1,19 +1,49 @@
 """Who is making a request. `Sessions` is the real sign-in (app/accounts.py); `LocalOwner` is a stub for
-`make app` on a laptop, which treats every request as the owner and refuses to run when hosted."""
+`make app` on a laptop, which treats every request as the owner, must be asked for by name and refuses to run when
+hosted.
+
+Every route needs a signed-in user unless it is on `PUBLIC`: `RequireSession` checks that before any route runs,
+so a new route is private until it is added there. Any failure while working out who is asking counts as signed
+out."""
 
 from __future__ import annotations
 
+import json
+import logging
 import os
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
-from typing import Protocol
+from typing import Any, Protocol
 
 from fastapi import Request, Response
+from starlette.routing import BaseRoute, Match
 
 from coffeedata import shots
 
 from .accounts import SESSION_DAYS, Account, Accounts
 
 COOKIE = "session"
+log = logging.getLogger(__name__)
+
+# The only routes that answer someone signed out: (method, path as registered). Everything else needs a session.
+PUBLIC: frozenset[tuple[str, str]] = frozenset(
+    {
+        ("GET", "/static/{path:path}"),  # hashed styles, script, fonts and icons
+        ("GET", "/sw.js"),
+        ("GET", "/manifest.webmanifest"),
+        ("GET", "/robots.txt"),
+        ("GET", "/health"),
+        ("GET", "/healthz"),
+        ("GET", "/offline"),  # the service worker's fallback page, cached at install
+        ("GET", "/signin"),
+        ("POST", "/api/signin"),
+        ("GET", "/join"),
+        ("POST", "/api/invites/check"),
+        ("POST", "/api/join"),
+        ("GET", "/reset"),
+        ("POST", "/api/reset"),
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -29,6 +59,61 @@ class Auth(Protocol):
         ...
 
 
+def current_user(auth: Auth, request: Request) -> User | None:
+    """The signed-in user, worked out once per request. Any error on the way (a bad secret, a failed read) counts
+    as signed out: logged, never shown."""
+    state = request.state
+    if not hasattr(state, "user"):
+        try:
+            state.user = auth.user(request)
+        except Exception:  # noqa: BLE001 - fail closed
+            log.exception("working out who is signed in failed; treating the request as signed out")
+            state.user, state.auth_failed = None, True
+    return state.user
+
+
+def public_route(routes: Iterable[BaseRoute], scope: dict[str, Any]) -> bool:
+    """Whether the route this request reaches is on PUBLIC. A HEAD is the GET it stands for. A path no route
+    matches is not public (it gets the sign-in check, then the 404)."""
+    method = "GET" if scope.get("method") == "HEAD" else scope.get("method", "")
+    scope = scope | {"method": method}
+    for route in routes:
+        match, _ = route.matches(scope)
+        if match == Match.FULL:
+            return (method, getattr(route, "path", "")) in PUBLIC
+    return False
+
+
+class RequireSession:
+    """Default deny: a request for anything but a PUBLIC route needs a signed-in user before the route (or its
+    body) is read. Signed out, a page asked for by a browser goes to sign-in; anything else answers 401. Marks the
+    request public or private for the cache headers (web.middleware)."""
+
+    def __init__(self, app: Callable, routes: Callable[[], Iterable[BaseRoute]], auth: Auth):
+        self.app, self.routes, self.auth = app, routes, auth
+
+    async def __call__(self, scope: dict, receive: Callable, send: Callable) -> None:
+        if scope["type"] != "http":
+            return await self.app(scope, receive, send)
+        request = Request(scope)
+        try:
+            public = public_route(self.routes(), scope)
+        except Exception:  # noqa: BLE001 - fail closed
+            log.exception("matching %s to a route failed", scope.get("path"))
+            public = False
+        request.state.public = public
+        if public or current_user(self.auth, request) is not None:
+            return await self.app(scope, receive, send)
+        await signed_out(request)(scope, receive, send)
+
+
+def signed_out(request: Request) -> Response:
+    """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401."""
+    if request.method in ("GET", "HEAD") and not request.url.path.startswith("/api/"):
+        return Response(status_code=303, headers={"Location": "/signin"})
+    return Response(json.dumps({"detail": "sign in first"}), 401, media_type="application/json")
+
+
 class LocalOwner:
     """Every request is the one configured owner (COFFEEDATA_OWNER_ID, COFFEEDATA_OWNER). Local use only."""
 
@@ -38,6 +123,10 @@ class LocalOwner:
     def __init__(self, user_id: str | None = None, username: str | None = None):
         if hosted():
             raise RuntimeError("the local sign-in stub must not run on a public host")
+        if os.environ.get("COFFEEDATA_LOCAL_OWNER") != "1":
+            raise RuntimeError(
+                "the local sign-in stub runs only with COFFEEDATA_LOCAL_OWNER=1 (make app sets it)"
+            )
         self.owner = User(
             user_id or shots.owner_user_id(),
             username or os.environ.get("COFFEEDATA_OWNER") or "owner",
@@ -99,21 +188,33 @@ def hosted() -> bool:
     return bool(os.environ.get("K_SERVICE") or os.environ.get("SPACE_ID"))
 
 
+def local_stub() -> bool:
+    """The local stub was asked for by name, off any public host, with no real sign-in configured."""
+    return (
+        os.environ.get("COFFEEDATA_LOCAL_OWNER") == "1"
+        and not hosted()
+        and not os.environ.get("SESSION_SECRET")
+    )
+
+
 def missing_secrets() -> list[str]:
-    """Sign-in secrets a hosted app needs and doesn't have (names only)."""
-    if not (hosted() or os.environ.get("SESSION_SECRET")):
+    """Sign-in settings the app needs and doesn't have (names only). Without them it serves nothing."""
+    if local_stub():
         return []
     # OWNER_SETUP_CODE isn't required: without it nobody can create the owner (the screen says so), and once the
     # owner exists it only resets the owner's password, once per value.
     need = {"AUTH_PEPPER": 16, "SESSION_SECRET": 32}
     if hosted():
         need["HF_TOKEN"] = 1  # the hosted app writes to Hugging Face datasets
-    return [k for k, n in need.items() if len(os.environ.get(k, "")) < n]
+    missing = [k for k, n in need.items() if len(os.environ.get(k, "")) < n]
+    if hosted() and os.environ.get("COFFEEDATA_INSECURE_COOKIES"):
+        missing.append("COFFEEDATA_INSECURE_COOKIES (unset it: cookies are always Secure on a public host)")
+    return missing
 
 
 def from_env() -> Auth:
-    """Real sign-in when hosted or wherever SESSION_SECRET is set; the local stub otherwise."""
-    if not (hosted() or os.environ.get("SESSION_SECRET")):
+    """Real sign-in, or the local stub where it was asked for (missing_secrets has refused anything else)."""
+    if local_stub():
         return LocalOwner()
     from coffeedata.lake import Lake
 
@@ -123,4 +224,5 @@ def from_env() -> Auth:
         os.environ.get("SESSION_SECRET", ""),
         os.environ.get("OWNER_SETUP_CODE"),
     )
-    return Sessions(accounts, secure=os.environ.get("COFFEEDATA_INSECURE_COOKIES") != "1")
+    insecure = os.environ.get("COFFEEDATA_INSECURE_COOKIES") == "1" and not hosted()
+    return Sessions(accounts, secure=not insecure)

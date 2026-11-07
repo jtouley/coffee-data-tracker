@@ -8,6 +8,11 @@
   {% else %}
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
+  {% if ended == "ended" %}
+  <p class="notice" role="status">You’ve been signed out. Sign in again to carry on.</p>
+  {% elif ended == "failed" %}
+  <p class="notice" role="status">We couldn’t check your sign-in just now. Try again in a moment.</p>
+  {% endif %}
   <form id="signin" class="fill" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
     {% if owner_setup %}
     <label class="flabel" for="setup_code">Setup code</label>
