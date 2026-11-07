@@ -265,18 +265,29 @@ def cmd_classify(args: argparse.Namespace) -> None:
             "rules only (explicitly allowed): no COFFEEDATA_VERDICT_MODEL or Anthropic credentials; nothing to do"
         )
         return
+    from . import connectors, control
+
     lake = Lake()
-    out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
-    deadline = time.monotonic() + args.wait * 60
-    # Wait for this run's batches only; whatever is still running is collected by the next run.
-    waiting = set(out["submit"].get("batch_ids", []))
-    while waiting and time.monotonic() < deadline:
-        time.sleep(60)
-        got = verdict.collect(lake, args.run_date)
-        out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
-        waiting &= verdict.open_batch_ids(lake)
+    # The control plane's start and end rows (job classify), for the week the verdicts are for.
+    job = control.start(lake, "classify", connectors.week_of(args.run_date or _today()),
+                        detail={"model": verdict.model(), **control.execution()})  # fmt: skip
+    try:
+        out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+        deadline = time.monotonic() + args.wait * 60
+        # Wait for this run's batches only; whatever is still running is collected by the next run.
+        waiting = set(out["submit"].get("batch_ids", []))
+        while waiting and time.monotonic() < deadline:
+            time.sleep(60)
+            got = verdict.collect(lake, args.run_date)
+            out["collect_after_wait"] = got["collected"] + out.get("collect_after_wait", 0)
+            waiting &= verdict.open_batch_ids(lake)
+    except BaseException as e:  # a crash, or an interrupt in the wait: the end row says the attempt failed
+        control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
+        raise
+    err = out["submit"].get("error")
+    control.finish(lake, job, "failed" if err else "done", detail=control.detail_of(job) | out)
     _print(out)
-    if err := out["submit"].get("error"):
+    if err:
         # A rejected key or an API outage leaves this week's new versions without verdicts. Fail like a missing
         # model or key, so the build job's execution fails and emails; the build still runs on the stored verdicts.
         raise SystemExit(
@@ -393,11 +404,16 @@ def dbt_build(
     return passed, results
 
 
+def _error(e: BaseException) -> str:
+    return f"{type(e).__name__}: {e}"[:500]
+
+
 def cmd_build(args: argparse.Namespace) -> bool:
     """Build, check, and record the build either way. Only a build whose checks all pass replaces the current
     marts (what the site, the app, the public export and the MCP tools other than run_sql read); a failing one is still kept, with its results and a
-    copy of its catalog marts, for `build-diff`. Returns whether the checks passed."""
-    from . import quality
+    copy of its catalog marts, for `build-diff`. Returns whether the checks passed. The control plane gets a start
+    and an end row (job build): done when it passed and was served, failed when its checks failed or it crashed."""
+    from . import control, quality
 
     lake = Lake()
     db = Path(args.db)
@@ -407,6 +423,21 @@ def cmd_build(args: argparse.Namespace) -> bool:
     # site, the app) checks the last real run instead of an empty "today". Freshness is measured against today.
     run_date = getattr(args, "run_date", None) or quality.latest_run(lake) or _today()
     build_id = new_batch_id()  # every release table carries it as release_build_id
+    job = control.start(lake, "build", run_date, detail={"build_id": build_id, **control.execution()})
+    try:
+        passed = _build(args, lake, db, run_date, build_id)
+    except BaseException as e:  # a crash, or a SystemExit or interrupt: the end row says the attempt failed
+        control.finish(lake, job, "failed", detail=control.detail_of(job) | {"error": _error(e)})
+        raise
+    control.finish(
+        lake, job, "done" if passed else "failed", detail=control.detail_of(job) | {"passed": passed}
+    )
+    return passed
+
+
+def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_id: str) -> bool:
+    from . import quality
+
     extra: dict = {"as_of_run": run_date, "today": _today(), "build_id": build_id}
     served_release = quality.served(lake)
     served = (served_release or {}).get("build_id")

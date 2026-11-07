@@ -227,8 +227,15 @@ def test_classify_runs_when_configured_even_if_rules_only_is_allowed(lake, monke
     seen = []
     monkeypatch.setattr(verdict, "collect", lambda lk, d=None: seen.append("collect") or {"collected": 0})
     monkeypatch.setattr(verdict, "submit", lambda lk, n: seen.append("submit") or {"submitted": 0})
-    cli.main(["classify"])
+    cli.main(["classify", "--run-date", "2026-10-28"])
     assert seen == ["collect", "submit"]
+    # The control plane's start and end rows (job classify), under the week's Monday.
+    from coffeedata import control
+
+    [row] = [r for r in control.rows(lake, "2026-10-26") if r["job"] == "classify"]
+    assert row["status"] == "done" and row["code_version"]
+    want = {"model": "m", "collect": {"collected": 0}, "submit": {"submitted": 0}}
+    assert want.items() <= control.detail_of(row).items()
 
 
 def test_classify_fails_when_claude_rejects_the_batches(lake, monkeypatch, capsys):
@@ -258,6 +265,10 @@ def test_classify_fails_when_claude_rejects_the_batches(lake, monkeypatch, capsy
     assert (
         '"error": "invalid x-api-key"' in capsys.readouterr().out
     )  # the JSON summary is still printed first
+    from coffeedata import control
+
+    [row] = [r for r in control.rows(lake) if r["job"] == "classify"]  # its end row says it failed, and why
+    assert row["status"] == "failed" and control.detail_of(row)["submit"]["error"] == "invalid x-api-key"
 
 
 def test_weekly_still_builds_after_a_failed_classify_and_then_fails(monkeypatch):
@@ -318,7 +329,8 @@ def _dbt_vars(monkeypatch, tmp_path, fn) -> dict:
         cli.subprocess, "run", lambda a, **kw: argv.append(a) or subprocess.CompletedProcess(a, 0)
     )
     fn(cli)
-    return json.loads(argv[0][argv[0].index("--vars") + 1])
+    dbt = next(a for a in argv if a[0] == "dbt")  # not the build's `git rev-parse` (its code_version)
+    return json.loads(dbt[dbt.index("--vars") + 1])
 
 
 def test_the_build_requires_verdicts_unless_rules_only_is_allowed(lake, monkeypatch, tmp_path):

@@ -313,6 +313,55 @@ models:
         description: "claude (a stored verdict decided) or rules."
       - name: verdict_model
         description: "The verdict's model when classified_by = claude, else null."
+      - name: reason
+        description: >-
+          Why (products.decide_why): verdict:<label> when Claude's verdict decided, else the rule that did
+          (classify.decision): excluded:<rule>, sauce, sweets, drinks, coffee_words, country, demonym, coffee_type, or
+          signals:<n>. An explanation only (product_decisions); nothing public reads it, and no test on it gates
+          a release.
+  - name: product_decisions
+    description: >-
+      Every product a store lists, coffee or not, as of its latest record, with the build's decision and why. Report
+      only (tag report_only), run after the gate; written beside the release as an ops table (releases/.../ops/),
+      never served, exported or published.
+    columns:
+      - name: coffee_id
+        description: "<roaster domain>:<store product id> (dim_coffee's key, for the ones that are coffee)."
+        data_tests: [unique, not_null]
+      - name: roaster_id
+        description: "The roaster's normalized domain."
+      - name: product_id
+        description: "The store's product id."
+      - name: title
+        description: The title as the store sent it (latest record).
+      - name: product_type
+        description: The store's product type (latest record).
+      - name: url
+        description: The product's page on the store, as sent.
+      - name: first_seen
+        description: The first run with a record of it.
+      - name: last_seen
+        description: The run of its latest record, which the decision is about.
+      - name: is_listed
+        description: Its latest record is from the roaster's current run (stg_runs.is_current).
+      - name: input_hash
+        description: The product version the decision is about (stg_products).
+      - name: is_coffee
+        description: The build counts it as coffee (dim_coffee holds it).
+        data_tests: [not_null]
+      - name: classified_by
+        description: "claude (a stored verdict decided) or rules."
+        data_tests:
+          - accepted_values: {arguments: {values: [claude, rules]}}
+      - name: verdict_model
+        description: "The verdict's model when classified_by = claude, else null."
+      - name: verdict_label
+        description: >-
+          Claude's stored label for the version (coffee, not_coffee or unsure), whether or not it decided; null
+          without one. An unsure or an outright exclusion leaves the decision to the rules.
+      - name: reason
+        description: Why (stg_products.reason).
+        data_tests: [not_null]
   - name: mart_market
     data_tests:
       - unique:

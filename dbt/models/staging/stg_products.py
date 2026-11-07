@@ -17,6 +17,9 @@ SCHEMA = pa.schema(
         ("is_coffee", pa.bool_()),
         ("classified_by", pa.string()),
         ("verdict_model", pa.string()),
+        # Why: verdict:<label>, or the rule that decided (products.decide_why). Only for the owner's view
+        # (product_decisions); nothing public reads it.
+        ("reason", pa.string()),
         ("is_wholesale", pa.bool_()),
         ("clean_title", pa.string()),
         ("origin_country", pa.string()),
@@ -32,19 +35,21 @@ SCHEMA = pa.schema(
         ("is_decaf", pa.bool_()),
     ]
 )
-ATTRS = [f.name for f in SCHEMA][6:]
+# The rule attributes, after the decision's columns.
+ATTRS = SCHEMA.names[SCHEMA.names.index("clean_title") + 1 :]
 
 
 def row(r: dict, verdicts: dict[str, tuple[str, str]]) -> dict:
     # The decisions live in coffeedata.products, shared with the enrichment job and the registry.
     item = products.item(r["title"], r["product_type"], r["tags"], r["grams"], r["body_hash"], r["body_text"])
     label, verdict_model = verdicts.get(r["input_hash"], (None, None))
-    is_coffee, classified_by = products.decide(item, label)
+    is_coffee, classified_by, reason = products.decide_why(item, label)
     out = {
         "input_hash": r["input_hash"],
         "is_coffee": is_coffee,
         "classified_by": classified_by,
         "verdict_model": verdict_model if classified_by == "claude" else None,
+        "reason": reason,
         "is_wholesale": classify.is_wholesale(item),
         "clean_title": item.title,
     }

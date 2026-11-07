@@ -362,3 +362,34 @@ unit_tests:
         - {input_hash: R, label: coffee, model: m}
         - {input_hash: S, label: coffee, model: m}
         - {input_hash: U, label: not_coffee, model: m}
+
+  - name: product_decisions_keeps_every_product_at_its_latest_record
+    description: >-
+      One row per product, coffee or not: the decision is its latest record's (a product that stopped being coffee
+      is kept, as not coffee), first_seen is its first record, and a stored unsure verdict shows beside a decision the
+      rules made.
+    model: product_decisions
+    given:
+      - input: ref('stg_snapshots')
+        rows:
+          - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya, run_date: 2026-10-12, input_hash: a1}
+          - {coffee_id: "r:A", roaster_id: r, product_id: A, title: Kenya Mug, run_date: 2026-10-19, input_hash: a2}
+          - {coffee_id: "r:B", roaster_id: r, product_id: B, title: Tote, run_date: 2026-10-12, input_hash: b1}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a1, is_coffee: true, classified_by: rules, reason: country}
+          - {input_hash: a2, is_coffee: false, classified_by: rules, reason: "excluded:not_coffee_words"}
+          - {input_hash: b1, is_coffee: false, classified_by: rules, reason: "signals:0"}
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-12, is_current: false}
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_verdicts')
+        rows:
+          - {input_hash: b1, label: unsure, model: m}
+    expect:
+      rows:
+        - {coffee_id: "r:A", title: Kenya Mug, first_seen: 2026-10-12, last_seen: 2026-10-19, is_listed: true,
+           is_coffee: false, verdict_label: null, reason: "excluded:not_coffee_words"}
+        - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
+           is_coffee: false, verdict_label: unsure, reason: "signals:0"}
