@@ -119,6 +119,15 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1โ
 
 ### Fixed
 
+- **The `discover` and `probe` jobs record new roasters, and say that they ran.** Neither had left anything in the
+  lake: `discover` runs monthly and its first slot (Nov 1) came before the schedule was on, so the registry stayed
+  empty, and the seed's roasters were all probed 2026-10-26, so the probe found nothing stale (until 2026-11-30)
+  and exited 0 without a trace. Now each source (OSM, then Overture) is recorded and published on its own, an
+  Overpass outage is bounded and fails the execution without losing Overture's rows, the Overture scan runs in half
+  the memory, the probe writes its results in batches as it goes, asks never-probed roasters first and stops at a
+  deadline, its publish runs whatever its exit, and both jobs write `job_manifests` rows (jobs `discover`, `probe`).
+  RUNBOOK ยง5.7 says how to run discovery by hand.
+
 - **Claude's coffee-or-not verdicts now fail loudly when they can't run.** They never ran in production: the Terraform
   variable `verdict_model` defaulted to empty, `coffeedata classify` printed a skip message and exited 0, and every
   release was classified by the rules alone (on the sealed set, 10.7% of the products they keep are not coffee,

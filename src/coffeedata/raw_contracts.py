@@ -75,11 +75,12 @@ CONTRACTS: dict[str, dict[str, Any]] = {
     },
     "manifest": {
         "tables": ["run_manifests", "job_manifests"],
-        "producer": "every job (crawl, crawl-retry, merge, enrich, fetch-health)",
+        "producer": "every job (discover, probe, crawl, crawl-retry, merge, enrich, fetch-health)",
         "producer_code": [
             "src/coffeedata/control.py",
             "src/coffeedata/ingest.py",
             "src/coffeedata/fetchhealth.py",
+            "src/coffeedata/cli.py",
         ],
         "consumers": [
             "dbt (run_completeness)",

@@ -93,16 +93,23 @@ locals {
   # same reason: they share one static IP (woo_generic), and their 15:17 resume and 21:47 retry slots cover a failed
   # attempt.
   ingest_jobs = {
-    # Discovery reads open datasets (Overture, OSM), monthly; probing asks stale roasters' sites which platform they
-    # run, weekly before the crawls. Both publish what they recorded.
+    # Discovery reads open datasets (OSM, then Overture), monthly and by hand (the admin's Jobs page, or `gcloud run
+    # jobs execute discover`); probing asks stale roasters' sites which platform they run, weekly before the crawls.
+    # Each source is recorded and published on its own (`--publish`), so one that fails (Overpass down) or is killed
+    # never loses the other's rows; a failed source still fails the execution (exit 1), which emails the owner. The
+    # probe writes each batch of results as it goes and stops starting roasters after 100 minutes, before the 09:17
+    # crawls (the rest, longest-unprobed first, wait for next Monday); the publish runs whatever the probe's exit, so
+    # what it probed is never left unpublished (a killed task leaves its batches staged for the next publish). Both
+    # write job_manifests rows (jobs discover and probe). Cloud Run's retry of a discover attempt skips a source the
+    # first attempt recorded; a probe retry skips the roasters already probed (their rows are staged).
     "discover" = {
       command = ["sh", "-c"]
-      args    = ["coffeedata discover overture; coffeedata discover osm; coffeedata publish --message \"discover\""]
+      args    = ["rc=0; coffeedata discover osm overture --publish || rc=1; coffeedata publish --message \"discover\" || rc=1; exit $rc"]
       egress  = "default", claude = false, memory = "4Gi", retries = 1
     }
     "probe" = {
       command = ["sh", "-c"]
-      args    = ["coffeedata probe --stale-days 28 && coffeedata publish --message \"probe\""]
+      args    = ["rc=0; coffeedata probe --stale-days 28 --deadline-min 100 || rc=1; coffeedata publish --message \"probe\" || rc=1; exit $rc"]
       egress  = "default", claude = false, memory = "2Gi", retries = 1
     }
     "crawl-shopify"                = { command = ["coffeedata"], args = ["crawl", "--connector", "shopify"], egress = "shopify", claude = false, memory = "2Gi", retries = 0 }

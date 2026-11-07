@@ -1012,6 +1012,36 @@ order), a lake file changed after the build, or different code or versions.
 
 **6. Clean up:** `rm -rf $V /tmp/find_rev.py`, and `git worktree remove $V/code` if you made one.
 
+### 5.7 Discovery and the probe: running them by hand, reading what they recorded
+
+`discover` is scheduled monthly (03:17 on the 1st), so a schedule turned on after the 1st runs it only on the next
+1st. Run it by hand whenever new roasters are wanted (the admin's Jobs page, or the Console): it runs OSM, then
+Overture, and publishes each source's rows as soon as they're recorded.
+
+```sh
+gcloud run jobs execute discover --region $REGION --wait
+```
+
+What to expect: Overture's scan of the US places (about 12 GB of public Parquet, read in about a minute and 1.5 GiB
+of memory) records about 3,100 roasters, nearly all already in the seed; OSM asks Overpass one state at a time,
+asks a busy state again after 30 and 90 seconds, and stops asking (the rest count as failed) after three states in
+a row go unanswered or after an hour, so an Overpass outage never keeps Overture from running. Each source writes a `job_manifests` start and end row (job
+`discover`, connector `osm` or `overture`, under the week's Monday), whose `detail` has `recorded`, `new` (not in the
+seed or the registry before), a sample of the new ones, and `failed_states` (states Overpass never answered). A
+source that gives nothing usable (Overture's scan finds no roaster; Overpass answers no state) ends `failed`, the
+other source still runs and publishes, and the execution exits 1 (the failure email). Re-run it once Overpass is
+back; re-recording a roaster is harmless (the registry keeps the latest row).
+
+The probe (Mondays 07:17) asks the roasters never probed (new from discovery) first, then those last probed 28 or
+more days before. It writes each batch of 100 results to the lake as it goes and starts no roaster after 100
+minutes, so it ends before the 09:17 crawls; what's left waits for next Monday (end row `deadline`, `skipped` = the
+count left). Its publish runs whatever the probe's exit. A week with nothing stale still writes its start and end
+rows (`todo` 0): the seed's roasters were all probed 2026-10-26, so the first full re-probe is 2026-11-30 (about
+3,200 roasters; at the rate of a 20-roaster sample, 16 workers take about 40 minutes, and the deadline covers a
+slower week).
+
+A new roaster is crawled only after a probe has found its platform: discover, then probe, then the next crawl.
+
 ## 6. Alerts
 
 `src/terraform/alerts.tf` emails the owner (the `owner` notification channel, `owner_email`) about the pipeline too.

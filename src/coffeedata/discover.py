@@ -4,20 +4,34 @@ from __future__ import annotations
 
 import logging
 import re
+import time
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor
+from collections.abc import Callable
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, date, datetime
 from urllib.parse import urlparse
 
 import httpx
 
-from .http import USER_AGENT, Blocked, PoliteClient, RobotsUnavailable
+from .http import USER_AGENT, Blocked, DeadlineReached, PoliteClient, RobotsUnavailable
 from .text import scrub_surrogates
 
 log = logging.getLogger(__name__)
 
 OVERTURE = "https://overturemaps-us-west-2.s3.amazonaws.com/"
 OVERPASS = "https://overpass-api.de/api/interpreter"
+# Overpass answers a busy server with a 429 or 504 and asks clients to wait; each state is asked again after these
+# pauses (seconds) before it counts as failed. One request at a time, as before.
+OVERPASS_WAITS = (30.0, 90.0)
+# An Overpass outage must not use up the discover job's 240 minutes (it runs before Overture): after this many
+# states in a row go unanswered, or once the OSM pass has run this long, the states left are recorded as failed
+# without asking. A whole pass normally takes minutes.
+OVERPASS_DOWN_AFTER = 3
+OSM_BUDGET_S = 60 * 60.0
+# The Overture scan's DuckDB settings. Unset, DuckDB used every core it could see and peaked at 2.7 GiB of resident
+# memory locally (four threads), in a job limited to 4Gi; two threads and a 1 GB buffer limit keep the scan far
+# below that. The scan only filters and projects, so it needs no large buffers.
+OVERTURE_DUCKDB: dict[str, str | int] = {"threads": 2, "memory_limit": "1GB"}
 US_STATES = [
     "AL",
     "AK",
@@ -120,7 +134,7 @@ def overture(release: str | None = None) -> list[dict]:
         .decode()
     )
     urls = [OVERTURE + k for k in re.findall(r"<Key>([^<]+)</Key>", xml) if k.endswith(".parquet")]
-    c = duckdb.connect()
+    c = duckdb.connect(config=dict(OVERTURE_DUCKDB))
     c.sql("INSTALL httpfs; LOAD httpfs;")
     rel = c.sql(f"""
         WITH r AS (
@@ -171,24 +185,62 @@ def overture(release: str | None = None) -> list[dict]:
 # --- OpenStreetMap via Overpass (ODbL) ----------------------------------------------------------------
 
 
-def osm(states: list[str] | None = None) -> list[dict]:
-    """craft=coffee_roaster / roastery=yes with a website, queried one state at a time."""
+def _overpass(
+    client: httpx.Client, st: str, sleep: Callable[[float], None] = time.sleep
+) -> list[dict] | None:
+    """One state's elements, or None if Overpass didn't answer it: an HTTP error or a busy server (429, 5xx) after
+    OVERPASS_WAITS, or an answer whose `remark` reports a runtime error (a timed-out query returns 200 with the
+    elements it found so far, which would be a silently short list)."""
+    q = (
+        f'[out:json][timeout:60];area["ISO3166-2"="US-{st}"]->.a;'
+        '(nwr["craft"="coffee_roaster"](area.a);nwr["roastery"="yes"](area.a););out tags;'
+    )
+    for wait in (*OVERPASS_WAITS, None):
+        try:
+            r = client.post(OVERPASS, data={"data": q})
+            r.raise_for_status()
+            body = scrub_surrogates(r.json())
+            remark = str(body.get("remark") or "")
+            if "error" in remark.lower():
+                raise ValueError(f"overpass remark: {remark[:200]}")
+            return body.get("elements", [])
+        except (httpx.HTTPError, ValueError) as e:
+            busy = isinstance(e, httpx.HTTPStatusError) and (
+                e.response.status_code == 429 or e.response.status_code >= 500
+            )
+            if wait is None or not (
+                busy or not isinstance(e, httpx.HTTPStatusError)
+            ):  # a 4xx: asking again won't help
+                log.warning("overpass %s failed: %s", st, e)
+                return None
+            log.warning("overpass %s failed: %s; asking again in %.0fs", st, e, wait)
+            sleep(wait)
+    return None
+
+
+def osm(
+    states: list[str] | None = None, failed: list[str] | None = None, budget_s: float = OSM_BUDGET_S
+) -> list[dict]:
+    """craft=coffee_roaster / roastery=yes with a website, queried one state at a time. States Overpass didn't
+    answer are skipped and, when `failed` is given, appended to it (the job records them). After
+    OVERPASS_DOWN_AFTER unanswered states in a row, or `budget_s` seconds, the rest are failed without asking."""
     from .registry import is_storefront_host, normalize_domain
 
     out: dict[str, dict] = {}
+    missed: list[str] = []
+    in_a_row = 0
+    stop = time.monotonic() + budget_s
     with httpx.Client(timeout=90, headers={"User-Agent": USER_AGENT}) as client:
         for st in states or US_STATES:
-            q = (
-                f'[out:json][timeout:60];area["ISO3166-2"="US-{st}"]->.a;'
-                '(nwr["craft"="coffee_roaster"](area.a);nwr["roastery"="yes"](area.a););out tags;'
-            )
-            try:
-                r = client.post(OVERPASS, data={"data": q})
-                r.raise_for_status()
-                elements = scrub_surrogates(r.json()).get("elements", [])
-            except (httpx.HTTPError, ValueError) as e:
-                log.warning("overpass %s failed: %s", st, e)
+            if in_a_row >= OVERPASS_DOWN_AFTER or time.monotonic() >= stop:
+                missed.append(st)  # Overpass is down, or the pass is out of time: not asked
                 continue
+            elements = _overpass(client, st)
+            if elements is None:
+                missed.append(st)
+                in_a_row += 1
+                continue
+            in_a_row = 0
             for el in elements:
                 t = el.get("tags", {})
                 d = normalize_domain(t.get("website") or t.get("contact:website") or "")
@@ -205,6 +257,10 @@ def osm(states: list[str] | None = None) -> list[dict]:
                             "source": "osm",
                         },
                     )
+    if missed:
+        log.warning("overpass: %d states not answered: %s", len(missed), ", ".join(missed))
+    if failed is not None:
+        failed.extend(missed)
     return sorted(out.values(), key=lambda r: r["roaster_id"])
 
 
@@ -274,23 +330,69 @@ def probe_one(client: PoliteClient, domain: str) -> dict:
     return {"status": "ok", "final_host": host, "platform": platform, "http_status": 200}
 
 
-def probe(domains: list[str], workers: int = 16, run_date: str | None = None) -> list[dict]:
-    """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten)."""
+PROBE_BATCH = 100  # probe rows handed to `on_batch` (one lake file each) at a time
+
+
+def probe(
+    domains: list[str],
+    workers: int = 16,
+    run_date: str | None = None,
+    deadline_s: float | None = None,
+    on_batch: Callable[[list[dict]], object] | None = None,
+    batch_size: int = PROBE_BATCH,
+) -> list[dict]:
+    """Probe roaster homepages; returns lake rows for the `probes` table (nothing is overwritten), one per roaster
+    probed, in the order they finished.
+
+    deadline_s: seconds from now after which no roaster is started and no request is sent; a roaster cut off part way
+    gets no row (it was not probed, so the next run asks it again). on_batch: called with each `batch_size` rows as
+    they finish, and with the rest at the end, even when the run stops on an error, so a caller that writes each
+    batch keeps what was probed before a crash or a deadline."""
     run_date = run_date or date.today().isoformat()
+    stop = None if deadline_s is None else time.monotonic() + deadline_s
+    out: list[dict] = []
+    pending: list[dict] = []
+
+    def one(client: PoliteClient, domain: str) -> dict | None:
+        if stop is not None and time.monotonic() >= stop:
+            return None
+        res = _safe_probe(client, domain)
+        if res is None:
+            return None
+        now = datetime.now(UTC).replace(microsecond=0)
+        return {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": domain, **res}
+
     # Spaced like the catalog crawl (at least 1 s per host, or its robots.txt Crawl-delay), and robots.txt is read
     # and honoured first, as it is for every PoliteClient request.
-    with PoliteClient(min_interval=1.0, timeout=12, retries=2) as client, ThreadPoolExecutor(workers) as ex:
-        results = list(ex.map(lambda d: _safe_probe(client, d), domains))
-    now = datetime.now(UTC).replace(microsecond=0)
-    return [
-        {"run_date": date.fromisoformat(run_date), "probed_at": now, "roaster_id": d, **res}
-        for d, res in zip(domains, results, strict=True)
-    ]
+    with (
+        PoliteClient(min_interval=1.0, timeout=12, retries=2, deadline_s=deadline_s) as client,
+        ThreadPoolExecutor(workers) as ex,
+    ):
+        futures = [ex.submit(one, client, d) for d in domains]
+        try:
+            for f in as_completed(futures):
+                row = f.result()
+                if row is None:
+                    continue
+                out.append(row)
+                pending.append(row)
+                if on_batch is not None and len(pending) >= batch_size:
+                    batch, pending = pending, []
+                    on_batch(batch)
+        finally:
+            for f in futures:
+                f.cancel()  # an error above: start no more roasters
+            if on_batch is not None and pending:
+                on_batch(pending)
+    return out
 
 
-def _safe_probe(client: PoliteClient, domain: str) -> dict:
+def _safe_probe(client: PoliteClient, domain: str) -> dict | None:
+    """probe_one, or None when the run's deadline cut it off (no answer about the site, so no row)."""
     try:
         return probe_one(client, domain)
+    except DeadlineReached:
+        return None
     except Exception as e:  # noqa: BLE001 - one odd site must not abort the probe run
         log.warning("probe %s failed: %s", domain, e)
         return {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}
