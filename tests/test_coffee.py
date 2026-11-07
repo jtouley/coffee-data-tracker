@@ -146,7 +146,7 @@ def test_photos_are_served_to_their_owner_only(world):
         and got.headers["content-type"] == "image/jpeg"
         and got.content[:2] == b"\xff\xd8"
     )
-    assert got.headers["cache-control"].startswith("private")
+    assert got.headers["cache-control"] == "no-store, private"  # never kept by a browser or a shared cache
     assert c.get("/photos/p1", headers={"x-test-user": "maya"}).status_code == 404
     assert c.get("/photos/nope").status_code == 404
     assert '<img class="cover mt8" src="/photos/p1"' in c.get("/coffee/g2-bag").text
