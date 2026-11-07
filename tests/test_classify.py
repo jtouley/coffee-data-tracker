@@ -213,20 +213,20 @@ def test_the_rules_name_what_decided():
     """classify.decision names the rule behind is_coffee's answer (product_decisions.reason): only an explanation."""
     from coffeedata.classify import decision, excluded, exclusion
 
-    cases = {
-        item("Ceramic Mug"): (False, "excluded:not_coffee_words"),
-        item("Ethiopia Guji - Unroasted Green Coffee"): (False, "excluded:green_coffee"),
-        item("Monthly Subscription"): (False, "excluded:subscription"),
-        item("Kenya AA", tags=["Brewing Equipment"]): (False, "excluded:tag"),
-        item("Hot Sauce"): (False, "sauce"),
-        item("Cold Brew Lemonade"): (False, "drinks"),
-        item("House Blend"): (True, "coffee_words"),
-        item("Guatemala Huehuetenango"): (True, "country"),
-        item("Mystery Lot", "Coffee"): (True, "coffee_type"),
-        item("Night Owl", grams=340, body="A sweet coffee."): (True, "signals:2"),
-        item("Night Owl"): (False, "signals:0"),
-    }
-    for it, want in cases.items():
+    cases = [
+        (item("Ceramic Mug"), (False, "excluded:not_coffee_words")),
+        (item("Ethiopia Guji - Unroasted Green Coffee"), (False, "excluded:green_coffee")),
+        (item("Monthly Subscription"), (False, "excluded:subscription")),
+        (item("Kenya AA", tags=["Brewing Equipment"]), (False, "excluded:tag")),
+        (item("Hot Sauce"), (False, "sauce")),
+        (item("Cold Brew Lemonade"), (False, "drinks")),
+        (item("House Blend"), (True, "coffee_words")),
+        (item("Guatemala Huehuetenango"), (True, "country")),
+        (item("Mystery Lot", "Coffee"), (True, "coffee_type")),
+        (item("Night Owl", grams=340, body="A sweet coffee."), (True, "signals:2")),
+        (item("Night Owl"), (False, "signals:0")),
+    ]
+    for it, want in cases:
         assert decision(it) == want, it.title
         assert is_coffee(it) == want[0] and excluded(it) == want[1].startswith("excluded:")
         assert (exclusion(it) is None) == (not excluded(it))

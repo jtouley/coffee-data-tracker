@@ -208,7 +208,7 @@ def write_ops(lake: Lake, con, run_date: str, build_id: str) -> dict[str, int]:
         schema = SCHEMAS[t]
         try:
             cols = ", ".join(f'"{c}"' for c in schema.names)
-            table = con.execute(f"select {cols} from {t}").to_arrow_table().cast(schema)
+            table = con.sql(f"select {cols} from {t}").to_arrow_table().cast(schema)
             lake.write_ops(t, run_date, build_id, table)
         except Exception as e:  # noqa: BLE001 - duckdb.Error (no model), pyarrow's cast errors, an existing file
             log.warning("release %s: ops table %s not written: %s", build_id, t, e)
