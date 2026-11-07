@@ -53,7 +53,17 @@ Two stages, each in a fixed order: `rank = int(sha256(salt + ":rank:" + domain)[
    hold few admissions (the train screen found coffee at about 12 in 100 candidates) and say little about precision.
 
 The items to label are `items_<set>.json` (id, domain, website, name, city, state, Overture tag; no stratum and no
-screen result, sorted by id). `sample_<set>.json` holds the stratum sizes, each item's stratum and its domain.
+screen result, sorted by id). `sample_<set>.json` holds the stratum sizes, each item's stratum and its domain; its
+stratum says whether the screen found coffee, so **labelers use only `items_<set>.json` and `GUIDE.md`**, never
+`sample_<set>.json`.
+
+| Set | Screened (coffee_shop / cafe) | Items to label | coffee_shop: coffee / none | cafe: coffee / none | Population (est. by stratum) |
+|---|---|---|---|---|---|
+| train | 450 / 1,000 | 200 | 50 / 50 | 50 / 50 | 2,526 / 10,391 / 723 / 12,194 |
+| validation | 450 / 1,000 | 200 | 50 / 50 | 50 / 50 | 977 / 3,554 / 244 / 4,352 |
+| test | 450 / 1,000 | 200 | 50 / 50 | 50 / 50 | 968 / 3,390 / 295 / 4,042 |
+
+Population columns are coffee_shop with coffee, coffee_shop without, cafe with coffee, cafe without.
 
 ## Labels
 
@@ -74,7 +84,10 @@ Unsure items are left out of the scores.
    coffee and no sign of reselling). The choice is the highest F0.5 (precision weighs more than recall: a café admitted is
    a crawl wasted every week and a wrong row in the catalog), ties to the stricter rule; then `screen.RULE` and
    `screen.MIN_COFFEES` are set and frozen.
-3. **Test (sealed):** `SHA256SUMS` covers `items_test.json` and `sample_test.json`; the test evidence's hash is below.
+3. **Test (sealed):** `SHA256SUMS` covers `items_test.json` and `sample_test.json`, written when they were drawn.
+   The test evidence (out of git) was hashed then too: `evidence_test.jsonl.gz`
+   `b8a1ca0766f8f28aa1bd3585a4a3ea369ac47f22537b1f0f2c3b25e702f2c004`; the frame, `frame.json`,
+   `dab17bc80753647d77ddd8a28b6d690324db4f65185872e50dcfd60ec8d1c54b`.
    Nothing of the test set is read while developing: its screen printed only counts. After the freeze, `main`'s and
    the change's predictions are written and hashed, then scored once with `final`, which prints only totals and
    intervals.

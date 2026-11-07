@@ -108,12 +108,30 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "va-07642175",
+  "domain": "nourishtoheal.com",
+  "website": "https://nourishtoheal.com/",
+  "name": "Feel Good Food at Home",
+  "city": "Clinton",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-08201971",
   "domain": "luuacaffe.com",
   "website": "https://luuacaffe.com/",
   "name": "Luua Caffe",
   "city": "Inglewood",
   "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-08599306",
+  "domain": "swedehollowcafe.com",
+  "website": "https://swedehollowcafe.com/",
+  "name": "Swede Hollow Cafe",
+  "city": "St Paul",
+  "state": "MN",
   "overture_tag": "cafe"
  },
  {
@@ -207,6 +225,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-13435595",
+  "domain": "teshuahtea.com",
+  "website": "https://teshuahtea.com/",
+  "name": "Teshuah Tea and Coffee Company",
+  "city": "Lawton",
+  "state": "IA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-13445203",
   "domain": "javaandjambroadway.com",
   "website": "https://javaandjambroadway.com/",
@@ -214,6 +241,15 @@
   "city": "Broadway",
   "state": "VA",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-14149652",
+  "domain": "thebeehivecafe.com",
+  "website": "https://thebeehivecafe.com/",
+  "name": "The Beehive Cafe",
+  "city": "Bristol",
+  "state": "RI",
+  "overture_tag": "cafe"
  },
  {
   "id": "va-14591991",
@@ -231,6 +267,15 @@
   "name": "BB-64 Cafe",
   "city": "Norfolk",
   "state": "VA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-15397001",
+  "domain": "pangolincafe.com",
+  "website": "https://pangolincafe.com/",
+  "name": "Pangolin Cafe",
+  "city": "Reno",
+  "state": "NV",
   "overture_tag": "cafe"
  },
  {
@@ -324,12 +369,30 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-19201031",
+  "domain": "pawpawssweetshop.com",
+  "website": "https://pawpawssweetshop.com/",
+  "name": "Paw Paw's",
+  "city": "Garland",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-19214049",
   "domain": "brucecafe.netwaiter.com",
   "website": "https://brucecafe.netwaiter.com/",
   "name": "Bruce Cafe",
   "city": "Ponce De Leon",
   "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-19321816",
+  "domain": "psandco.com",
+  "website": "https://psandco.com/",
+  "name": "Pure Sweets & Co.",
+  "city": "Philadelphia",
+  "state": "PA",
   "overture_tag": "cafe"
  },
  {
@@ -396,6 +459,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-26173224",
+  "domain": "cafeaquatica.com",
+  "website": "https://cafeaquatica.com/",
+  "name": "Cafe Aquatica",
+  "city": "Jenner",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-26261558",
   "domain": "shadedbloomcoffee.com",
   "website": "https://shadedbloomcoffee.com/",
@@ -403,6 +475,15 @@
   "city": "Lake Orion",
   "state": "MI",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-26351886",
+  "domain": "heavenlygardencafe.com",
+  "website": "https://heavenlygardencafe.com/",
+  "name": "Heavenly Garden Cafe",
+  "city": "Hopewell Junction",
+  "state": "NY",
+  "overture_tag": "cafe"
  },
  {
   "id": "va-26456373",
@@ -438,6 +519,24 @@
   "name": "Cathedral Park Restaurant",
   "city": "Portland",
   "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-27124713",
+  "domain": "maggiesfarmespresso.com",
+  "website": "https://maggiesfarmespresso.com/",
+  "name": "Maggie's Farm Espresso",
+  "city": "Jersey City",
+  "state": "NJ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-28226533",
+  "domain": "cafe-reynard.com",
+  "website": "https://cafe-reynard.com/",
+  "name": "Cafe Reynard",
+  "city": "Malden",
+  "state": "MA",
   "overture_tag": "cafe"
  },
  {
@@ -513,6 +612,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-31191110",
+  "domain": "pearchef.com",
+  "website": "https://pearchef.com/",
+  "name": "Pear Chef",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-31779974",
   "domain": "sweeteleanors.com",
   "website": "https://sweeteleanors.com/",
@@ -528,6 +636,15 @@
   "name": "Wildflower Cafe",
   "city": "Tulsa",
   "state": "OK",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-34172192",
+  "domain": "gigisuptown.com",
+  "website": "https://gigisuptown.com/",
+  "name": "Gigi's Cafe",
+  "city": "Minneapolis",
+  "state": "MN",
   "overture_tag": "cafe"
  },
  {
@@ -630,6 +747,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-41033831",
+  "domain": "cafecrewy.com",
+  "website": "https://cafecrewy.com/",
+  "name": "Cafe Crewy",
+  "city": "Bethlehem",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-41360333",
   "domain": "venividivicicafe.com",
   "website": "https://venividivicicafe.com/",
@@ -681,6 +807,15 @@
   "name": "Lucca Coffee and Eatery",
   "city": "Louisville",
   "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-45933374",
+  "domain": "worldcupcafe.org",
+  "website": "https://worldcupcafe.org/",
+  "name": "World Cup Cafe",
+  "city": "Waco",
+  "state": "TX",
   "overture_tag": "cafe"
  },
  {
@@ -837,6 +972,15 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "va-52617141",
+  "domain": "truebluecoffeeco.com",
+  "website": "https://truebluecoffeeco.com/",
+  "name": "True Blue Coffee, Gelato & Cafe",
+  "city": "Dillon",
+  "state": "CO",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-53124015",
   "domain": "caffepromenade.com",
   "website": "https://caffepromenade.com/",
@@ -853,6 +997,15 @@
   "city": "Hattiesburg",
   "state": "MS",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-53730172",
+  "domain": "urbanityonline.com",
+  "website": "https://urbanityonline.com/",
+  "name": "Urbanity Coffee & Wine ",
+  "city": "DeWitt",
+  "state": "IA",
+  "overture_tag": "cafe"
  },
  {
   "id": "va-55577712",
@@ -900,6 +1053,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-57560003",
+  "domain": "sipofhope.com",
+  "website": "https://sipofhope.com/",
+  "name": "Sip of Hope Coffee",
+  "city": "Chicago",
+  "state": "IL",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-57854480",
   "domain": "shibacoffeeandtea.com",
   "website": "https://shibacoffeeandtea.com/",
@@ -925,6 +1087,15 @@
   "city": "Poughkeepsie",
   "state": "NY",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-58859344",
+  "domain": "theimbingbrand.com",
+  "website": "https://theimbingbrand.com/",
+  "name": "The IMBing Lounge",
+  "city": "Palm Coast",
+  "state": "FL",
+  "overture_tag": "cafe"
  },
  {
   "id": "va-59090957",
@@ -1251,6 +1422,15 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "va-75696170",
+  "domain": "primabrooklyn.com",
+  "website": "https://primabrooklyn.com/",
+  "name": "Prima Brooklyn",
+  "city": "Brooklyn",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-76279833",
   "domain": "woodstockgardencafe.net",
   "website": "https://woodstockgardencafe.net/",
@@ -1320,6 +1500,15 @@
   "name": "Amack's Well",
   "city": "Batesville",
   "state": "IN",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-79063924",
+  "domain": "mosleyscafe.com",
+  "website": "https://mosleyscafe.com/",
+  "name": "Mosley's Cafe",
+  "city": "Alameda",
+  "state": "CA",
   "overture_tag": "cafe"
  },
  {
@@ -1422,6 +1611,24 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "va-84407374",
+  "domain": "southforkcafetx.com",
+  "website": "https://southforkcafetx.com/",
+  "name": "South Fork Cafe",
+  "city": "Murphy",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "va-84532891",
+  "domain": "almostheavendesserts.com",
+  "website": "https://almostheavendesserts.com/",
+  "name": "Almost Heaven Desserts and Coffee Shop",
+  "city": "Morgantown",
+  "state": "WV",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-84665389",
   "domain": "innerbeancafe.com",
   "website": "https://innerbeancafe.com/",
@@ -1465,6 +1672,15 @@
   "city": "Metairie",
   "state": "LA",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-90141928",
+  "domain": "prontogelateria.com",
+  "website": "https://prontogelateria.com/",
+  "name": "Pronto Caffe & Gelateria",
+  "city": "Lexington",
+  "state": "VA",
+  "overture_tag": "cafe"
  },
  {
   "id": "va-90658311",
@@ -1521,6 +1737,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "va-93661826",
+  "domain": "blackpearlcaffeine.com",
+  "website": "https://blackpearlcaffeine.com/",
+  "name": "Black Pearl Café",
+  "city": "Muscatine",
+  "state": "IA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "va-94561051",
   "domain": "cherrycoffeelab.com",
   "website": "https://cherrycoffeelab.com/",
@@ -1564,5 +1789,14 @@
   "city": "Supply",
   "state": "NC",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "va-99056867",
+  "domain": "pacificsbr.com",
+  "website": "https://pacificsbr.com/",
+  "name": "Cafe at Pacific Cycling and Triathlon",
+  "city": "Stamford",
+  "state": "CT",
+  "overture_tag": "cafe"
  }
 ]

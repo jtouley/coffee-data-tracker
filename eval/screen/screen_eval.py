@@ -287,7 +287,9 @@ def agree(set_name: str) -> None:
     same = {
         i: a[i]
         for i in a
-        if i in b and (a[i]["label"], a[i].get("kind")) == (b[i]["label"], b[i].get("kind")) and a[i]["label"] != "unsure"
+        if i in b
+        and (a[i]["label"], a[i].get("kind")) == (b[i]["label"], b[i].get("kind"))
+        and a[i]["label"] != "unsure"
     }
     print(f"{set_name}: agreement {len(same)}/{len(items)} = {len(same) / len(items):.1%}")
     (D / f"agreed_{set_name}.json").write_text(json.dumps(same, indent=0, sort_keys=True) + "\n")

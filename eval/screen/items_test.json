@@ -1,5 +1,14 @@
 [
  {
+  "id": "te-00525076",
+  "domain": "sipnsea.com",
+  "website": "https://sipnsea.com/",
+  "name": "Sip-N-Sea Cafe",
+  "city": "Encinitas",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-01165031",
   "domain": "cupofjoycoffeetruck.com",
   "website": "https://cupofjoycoffeetruck.com/",
@@ -72,6 +81,24 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-04244403",
+  "domain": "gatherandgame.com",
+  "website": "https://gatherandgame.com/",
+  "name": "Gather and Game",
+  "city": "Buffalo",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-05259120",
+  "domain": "ikneadcoffee.co",
+  "website": "https://ikneadcoffee.co/",
+  "name": "I Knead Coffee",
+  "city": "Philadelphia",
+  "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-05388300",
   "domain": "lgrande.cafe",
   "website": "https://lgrande.cafe/",
@@ -97,6 +124,15 @@
   "city": "Crawfordville",
   "state": "FL",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-07700364",
+  "domain": "marketplacekitchen.com",
+  "website": "https://marketplacekitchen.com/",
+  "name": "Marketplace Kitchen Table",
+  "city": "Great Barrington",
+  "state": "MA",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-08046628",
@@ -171,6 +207,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-11852551",
+  "domain": "bubble-wrapped.com",
+  "website": "https://bubble-wrapped.com/",
+  "name": "Bubble Wrapped",
+  "city": "Bartlesville",
+  "state": "OK",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-12331523",
   "domain": "beantrustcoffee.com",
   "website": "https://beantrustcoffee.com/",
@@ -178,6 +223,15 @@
   "city": "Beverly",
   "state": "MA",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-13956885",
+  "domain": "vfamilycoffee.com",
+  "website": "https://vfamilycoffee.com/",
+  "name": "Velasquez Family Coffee",
+  "city": "St Paul",
+  "state": "MN",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-14195870",
@@ -223,6 +277,15 @@
   "city": "Boone",
   "state": "NC",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-17871549",
+  "domain": "sunncafemoho.com",
+  "website": "https://sunncafemoho.com/",
+  "name": "Sunn Cafe",
+  "city": "Mt Horeb",
+  "state": "WI",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-18279539",
@@ -423,6 +486,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-25823568",
+  "domain": "express-oyourself.com",
+  "website": "https://express-oyourself.com/",
+  "name": "Express-o Yourself",
+  "city": "Enumclaw",
+  "state": "WA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-26084411",
   "domain": "nissabar.com",
   "website": "https://nissabar.com/",
@@ -484,6 +556,15 @@
   "city": "Sacramento",
   "state": "CA",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-28878964",
+  "domain": "kaperepublik.com",
+  "website": "https://kaperepublik.com/",
+  "name": "Kape Republik",
+  "city": "Ontario",
+  "state": "CA",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-29283756",
@@ -621,6 +702,15 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "te-36969220",
+  "domain": "quesuavecafe.com",
+  "website": "https://quesuavecafe.com/",
+  "name": "Que Suave Cafe",
+  "city": "Socorro",
+  "state": "NM",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-37393402",
   "domain": "cafenated.co",
   "website": "https://cafenated.co/",
@@ -718,6 +808,15 @@
   "city": "Lakewood",
   "state": "CO",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-44497020",
+  "domain": "wildoakcafe.com",
+  "website": "https://wildoakcafe.com/",
+  "name": "Wild Oak Cafe",
+  "city": "Glendale",
+  "state": "CA",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-44536860",
@@ -963,12 +1062,30 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-56818152",
+  "domain": "nomorecocktails.shop",
+  "website": "https://nomorecocktails.shop/",
+  "name": "No More Cafe",
+  "city": "New York",
+  "state": "NY",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-57003861",
   "domain": "usslexington.com",
   "website": "https://usslexington.com/",
   "name": "The Mess Deck",
   "city": "Corpus Christi",
   "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-57048373",
+  "domain": "coffincase.com",
+  "website": "https://coffincase.com/",
+  "name": "Coffin Case",
+  "city": "North Hollywood",
+  "state": "CA",
   "overture_tag": "cafe"
  },
  {
@@ -981,6 +1098,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-59327945",
+  "domain": "bennetturbanfarm.com",
+  "website": "https://bennetturbanfarm.com/",
+  "name": "Bennett Urban Farm Store",
+  "city": "Hillsboro",
+  "state": "OR",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-59823136",
   "domain": "sissysmetropolis.com",
   "website": "https://sissysmetropolis.com/",
@@ -988,6 +1114,15 @@
   "city": "Metropolis",
   "state": "IL",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-59953101",
+  "domain": "rosewoodcutters.com",
+  "website": "https://rosewoodcutters.com/",
+  "name": "Rosewood Barber Cafe",
+  "city": "Anaheim",
+  "state": "CA",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-60010140",
@@ -1035,12 +1170,30 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-60879212",
+  "domain": "sucrecafeandgo.com",
+  "website": "https://sucrecafeandgo.com/",
+  "name": "Sucré Café and Go",
+  "city": "San Marcos",
+  "state": "TX",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-61117915",
   "domain": "southernwater.com",
   "website": "https://southernwater.com/",
   "name": "Southern Water & Beverage",
   "city": "Savannah",
   "state": "GA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-61182183",
+  "domain": "freshtribela.com",
+  "website": "https://freshtribela.com/",
+  "name": "Fresh Tribe La",
+  "city": "Los Angeles",
+  "state": "CA",
   "overture_tag": "cafe"
  },
  {
@@ -1068,6 +1221,24 @@
   "name": "home made food",
   "city": "Kissimmee",
   "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-64357589",
+  "domain": "citybistrobmo.com",
+  "website": "https://citybistrobmo.com/",
+  "name": "City Bistro BMO",
+  "city": "Phoenix",
+  "state": "AZ",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-65276952",
+  "domain": "ndpdx.com",
+  "website": "https://ndpdx.com/",
+  "name": "New Deal Cafe",
+  "city": "Portland",
+  "state": "OR",
   "overture_tag": "cafe"
  },
  {
@@ -1170,6 +1341,15 @@
   "overture_tag": "cafe"
  },
  {
+  "id": "te-70688455",
+  "domain": "beachesandcreampcb.com",
+  "website": "https://beachesandcreampcb.com/",
+  "name": "Beaches and Cream Cafe",
+  "city": "Panama City Beach",
+  "state": "FL",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-71102767",
   "domain": "cafekreyol.com",
   "website": "https://cafekreyol.com/",
@@ -1251,6 +1431,15 @@
   "overture_tag": "coffee_shop"
  },
  {
+  "id": "te-76789649",
+  "domain": "lalalandcafe.com",
+  "website": "https://lalalandcafe.com/",
+  "name": "La La Land",
+  "city": "Calabasas",
+  "state": "CA",
+  "overture_tag": "cafe"
+ },
+ {
   "id": "te-76796366",
   "domain": "aromacoffeeshop.net",
   "website": "https://aromacoffeeshop.net/",
@@ -1275,6 +1464,15 @@
   "name": "Laporte Cafe and Trading Post",
   "city": "Laporte",
   "state": "PA",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-77347053",
+  "domain": "happyplacecoffeerevolution.com",
+  "website": "https://happyplacecoffeerevolution.com/",
+  "name": "Happy Place Coffee & Eats",
+  "city": "Woodbridge",
+  "state": "VA",
   "overture_tag": "cafe"
  },
  {
@@ -1329,6 +1527,15 @@
   "name": "Twilight Cafe",
   "city": "Juneau",
   "state": "AK",
+  "overture_tag": "cafe"
+ },
+ {
+  "id": "te-80650991",
+  "domain": "ctcoffeeandgrill.com",
+  "website": "https://ctcoffeeandgrill.com/",
+  "name": "Connecticut Coffee & Grill",
+  "city": "Wilton",
+  "state": "CT",
   "overture_tag": "cafe"
  },
  {
@@ -1402,6 +1609,15 @@
   "city": "Santa Fe",
   "state": "NM",
   "overture_tag": "coffee_shop"
+ },
+ {
+  "id": "te-86950930",
+  "domain": "prep-hero.com",
+  "website": "https://prep-hero.com/",
+  "name": "Prep Hero Café",
+  "city": "Malden",
+  "state": "MA",
+  "overture_tag": "cafe"
  },
  {
   "id": "te-87998140",
