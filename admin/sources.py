@@ -49,38 +49,33 @@ class SourceList:
         self.lake, self.dir = lake, Path(cache_dir)
         self.lock = threading.Lock()
 
-    def _candidates(self) -> str:
-        """The lake's candidates, or an empty table of their shape while no discovery run has written any."""
-        con = self.lake.connect()
-        try:
-            con.execute(f"select 1 from {self.lake.scan('candidates')} limit 0")
-            return self.lake.scan("candidates")
-        except Exception as e:  # noqa: BLE001 - duckdb.IOException; the table has no files yet
-            if not (no_files(e) or "HTTP 404" in str(e)):
-                raise
-            return EMPTY
-        finally:
-            con.close()
-
-    def _key(self, con, served: str | None) -> tuple[str, str | None]:
-        latest = _one(con, f"select max(added_at)::varchar from {self._candidates()}")
-        return hashlib.sha256(f"{CACHE_VERSION}|{latest}|{served}".encode()).hexdigest()[:16], latest
+    def _files(self, con) -> list[str]:
+        """The candidates files, from one listing per source (no read of them): the copy's key and its input."""
+        files: list[str] = []
+        for pattern in self.lake.sources("candidates"):
+            try:
+                files += [r[0] for r in con.execute("select file from glob(?)", [pattern]).fetchall()]
+            except Exception as e:  # noqa: BLE001 - duckdb.IOException; the table has no files yet
+                if not (no_files(e) or "HTTP 404" in str(e)):
+                    raise
+        return sorted(files)
 
     def ensure(self, served: str | None) -> Path:
         con = self.lake.connect()
         try:
-            key, latest = self._key(con, served)
+            files = self._files(con)
         finally:
             con.close()
+        key = hashlib.sha256(f"{CACHE_VERSION}|{'|'.join(files)}|{served}".encode()).hexdigest()[:16]
         path = self.dir / f"sources-{key}.duckdb"
         with self.lock:
             if path.exists():
                 os.utime(path)
             else:
-                self._make(path, served, latest)
+                self._make(path, served, files)
         return path
 
-    def _make(self, path: Path, served: str | None, latest: str | None) -> None:
+    def _make(self, path: Path, served: str | None, files: list[str]) -> None:
         """places: one row per domain of the source list, its latest record, when it was first and last listed,
         whether the latest run added it (new) or dropped it (gone), and whether the served release lists it."""
         self.dir.mkdir(parents=True, exist_ok=True)
@@ -89,7 +84,14 @@ class SourceList:
         roasters = (quality.release_files(self.lake, served) if served else {}).get("dim_roaster")
         con = self.lake.connect(str(tmp))
         try:
-            con.execute(f"create table c as select * from {self._candidates()} where roaster_id is not null")
+            listed = ", ".join("'" + f.replace("'", "''") + "'" for f in files)
+            scan = (
+                f"read_parquet([{listed}], union_by_name = true, hive_partitioning = false)"
+                if files
+                else EMPTY
+            )
+            con.execute(f"create table c as select * from {scan} where roaster_id is not null")
+            latest = _one(con, "select max(added_at)::varchar from c")
             reg = (f"select roaster_id, roaster_name as name, city, state, sources from read_parquet("
                    f"'{roasters.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)" if roasters else
                    "select null::varchar as roaster_id, null::varchar as name, null::varchar as city, "

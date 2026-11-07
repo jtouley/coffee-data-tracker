@@ -115,3 +115,21 @@ def test_no_source_list_yet(tmp_path, pg_url):
     lake = build_lake(tmp_path / "lake")
     _, c, _ = make(tmp_path, lake.root, pg_url)
     assert "No places yet" in c.get("/part/sources").text
+
+
+def test_a_published_place_stays_in_the_next_draft(tmp_path, lake, pg_url):
+    """Once a draft adding a place is published, the release's registry lists it: the flag is then already served,
+    not a change, and the next draft still carries it (it would otherwise leave the registry again)."""
+    doc = decisions.snapshot("s1", "2026-10-19T00:00:00Z", [], sources=["beans.example"])
+    Lake(str(lake.root)).write("builds", f"builds/run_date={W1}/build={B1}-snapshot.parquet",
+                               [{"build_id": B1, "kind": "snapshot", "unique_id": doc["snapshot_id"],
+                                 "checksum": decisions.digest(doc), "payload": json.dumps(doc, sort_keys=True)}])  # fmt: skip
+    rel = lake.root / "releases" / f"run_date={W1}" / f"build={B1}" / "dim_roaster.parquet"
+    rows = pq.read_table(rel).to_pylist() + [{"roaster_id": "beans.example", "roaster_name": "Beans & Roast",
+                                              "city": "Portland", "state": "OR", "sources": "overture-2026-10"}]  # fmt: skip
+    pq.write_table(pa.Table.from_pylist(rows), rel)
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    post(
+        c, "/api/sources/flags", {"key": "k1", "flag": "roaster", "items": [{"roaster_id": "beans.example"}]}
+    )
+    assert "source flag" not in c.get("/part/release").text  # served already: nothing to build

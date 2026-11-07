@@ -17,7 +17,7 @@
   {{ search(f, facets, data, qs, "/sources", "Find a place: name, domain or city") }}
   <p class="answer" data-answer>{{ n(data.total) }} places · {{ n(st.get("roaster (inherited)", 0)) }} roasters from the registry · {{ n(st.get("roaster", 0)) }} flagged roaster · {{ n(st.get("not a roaster", 0)) }} not a roaster · {{ n(st.get("unreviewed", 0)) }} unreviewed</p>
   <p class="src">Discovery’s source list (<code>candidates</code>), latest run {{ (data.meta.latest_run or "—")[:10] }}: {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone · by tag {% for tag, count in data.counts.tag | dictsort %}{{ tag or "no tag" }} {{ n(count) }}{{ " · " if not loop.last }}{% endfor %} · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
-  <p class="meta">Every roaster in the registry inherits the roaster flag, so the crawl is unchanged until you flag something. Only roasters are ever probed or crawled: a flag reaches the crawl once a draft of it is published. Nothing here visits a site; the hints are what discovery recorded.</p>
+  <p class="meta">Only roasters are probed and crawled; registry roasters inherit the flag, and a flag takes effect once a draft of it is published.</p>
   {% set chips = f.chips() %}
   <p class="answer" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places</p>
   {% if not data.matching %}
@@ -37,7 +37,7 @@
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Choose {{ r.name or r.roaster_id }}"></td>{% endif %}
       <th scope="row">{{ ev(r.url, r.name or r.roaster_id) }} <span class="meta">{{ r.roaster_id }}{% if r.change %} · {{ r.change }}{% endif %}</span></th>
       <td>{{ r.status }}{% if not writes_off %}
-          {% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.batch_id and r.status != "unreviewed" %}{{ flag("unreviewed", "Unflag", [item]) }}{% endif %}{% endif %}</td>
+          {% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Unflag", [item]) }}{% endif %}{% endif %}</td>
       <td>{{ [r.tag, r.hint] | select | join(" · ") or "—" }}</td>
       <td>{{ r.sources or "—" }}</td>
       <td>{{ [r.city, r.state] | select | join(", ") or "—" }}</td>

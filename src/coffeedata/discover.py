@@ -132,8 +132,7 @@ OVERTURE_SQL = """
         AND (taxonomy.primary IN {tags} OR list_has_any(taxonomy.alternates, {tag_list})
              OR taxonomy.primary = 'coffee_roastery' OR list_contains(taxonomy.alternates, 'coffee_roastery')
              OR names.primary ILIKE '%roast%'))
-    SELECT website, name, city, state, confidence, cat = 'coffee_roastery' OR list_contains(alts, 'coffee_roastery')
-               AS tagged,
+    SELECT website, name, city, state, confidence, cat = 'coffee_roastery' AS tagged,  -- primary: as before
            name ILIKE '%roast%' AS roast_in_name, is_roaster,
            CASE WHEN cat = 'coffee_shop' OR list_contains(alts, 'coffee_shop') THEN 'coffee_shop'
                 WHEN cat = 'cafe' OR list_contains(alts, 'cafe') THEN 'cafe' END AS tag,
@@ -177,7 +176,8 @@ def overture_places(release: str | None = None) -> tuple[list[dict], list[dict]]
 def places_to_rows(places: list[tuple], source: str) -> tuple[list[dict], list[dict]]:
     """OVERTURE_SQL's rows (website, name, city, state, confidence, tagged, roast_in_name, is_roaster, tag, open) as
     (roasters, places), each one row per normalized storefront domain (a chain is one row; `locations` counts its
-    places). A place's `tags` are every tag its places carry (coffee_roastery, coffee_shop, cafe), sorted."""
+    places). A place's `tags` are the tags its places carry (coffee_roastery as the primary category, as the
+    registry's tagged_roastery; coffee_shop, cafe), sorted."""
     from .registry import is_storefront_host, normalize_domain
 
     def blank(d: str, name, city, state, website) -> dict:

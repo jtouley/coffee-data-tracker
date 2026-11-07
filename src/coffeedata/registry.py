@@ -237,7 +237,8 @@ class RoasterState:
 def current(lake: Lake, seed: Path | None = None) -> list[RoasterState]:
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
     it is each crawl job's first read of the hf:// lake."""
-    return retry_transient(_current, lake, seed or SEED)
+    added, dropped = source_flags(lake)
+    return retry_transient(_current, lake, seed or SEED, added, dropped)
 
 
 def source_flags(lake: Lake) -> tuple[list[str], set[str]]:
@@ -248,16 +249,15 @@ def source_flags(lake: Lake) -> tuple[list[str], set[str]]:
     from . import decisions
 
     try:
-        doc = decisions.served_doc(lake)
+        doc = retry_transient(decisions.served_doc, lake)
         return decisions.source_roasters(doc), set(decisions.not_roasters(doc))
     except Exception as e:  # noqa: BLE001 - logged; the registry stays as it was without the flags
         log.warning("source flags not read (%s): the registry without them", type(e).__name__)
         return [], set()
 
 
-def _current(lake: Lake, seed: Path) -> list[RoasterState]:
+def _current(lake: Lake, seed: Path, added: list[str], dropped: set[str]) -> list[RoasterState]:
     con = connect_for_state(lake)
-    added, dropped = source_flags(lake)
     cur = con.execute(state_sql(lake, added) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []

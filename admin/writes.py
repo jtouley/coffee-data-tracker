@@ -413,9 +413,14 @@ class Writes:
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
         # Flags on the source list: places flagged roaster join the registry; registry roasters (which inherit
         # roaster) flagged not a roaster leave it.
+        # `known`: the registry without the flags (the served release's, less the places its snapshot added), so a
+        # published place stays in the next draft. With nothing served, every not-roaster flag is kept.
         known = await self.read(queries.registry_ids, (served or {}).get("build_id"))
+        known -= set(snap.source_roasters(served_doc))
         sources = sorted(p for p, f in flags.items() if f["flag"] == "roaster" and p not in known)
-        dropped = sorted(p for p, f in flags.items() if f["flag"] == "not_roaster" and p in known)
+        dropped = sorted(
+            p for p, f in flags.items() if f["flag"] == "not_roaster" and (p in known or not served)
+        )
         sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
                                  | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
         mine = (now, now_settings, set(off), sources, dropped)

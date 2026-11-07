@@ -321,3 +321,10 @@ through the unreviewed cafés whose names say "roast".
 - The screening evidence as a hint (see the README: not in the lake).
 - Two copies of the search form and pager (Catalog and Sources): one macro each.
 - An "add a roaster" form, at the owner's request: search, then flag.
+
+### The review's fixes
+
+- A place flagged Roaster stays in every later draft once it is published. The registry it is compared against is
+  the served release's less the places that release's snapshot added.
+- The page's copy is keyed on the `candidates` file listing (no read of the files) and made from exactly those files.
+- Unflag shows only on an explicit flag. The meta paragraph is one sentence.
