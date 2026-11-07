@@ -298,8 +298,9 @@ def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = Fals
     first, the differing tables are dropped and loaded fresh, and every share view is recreated with `copy grants`,
     so the share never loses one. Each step can be repeated, so a migration that failed partway is finished by
     running it again. A share view with the export's columns but not all in upper case is recreated by any load,
-    after the same ownership and share checks. `dry_run` changes nothing: it runs only the checks' reads and returns them (tables, share
-    views, owners, grants), any refusal, and the statements the load would run."""
+    after the same ownership and share checks; if another role owns it, a load (not a migration) warns, leaves it
+    as it is and loads the data. `dry_run` changes nothing: it runs only the checks' reads and returns them
+    (tables, share views, owners, grants), any refusal, and the statements the load would run."""
     manifest = json.loads((export_dir / "manifest.json").read_text())
     exported = re.sub(r"[^0-9T]", "", manifest["exported_at"].split("+")[0]) + "Z"  # 20261027T020148Z
     run_path = f"run={manifest['as_of_run']}/exported={exported}"
@@ -356,6 +357,8 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
     present = [
         t for t in PUBLIC_TABLES if t in recase or (migrate and _columns(cur, "SHARE", SHARE_VIEWS[t]))
     ]
+    # Lower-case views another role owns: a load (not a migration) leaves them as they are.
+    skipped: set[str] = set()
     if present:  # checked first, so a migration that can't finish changes nothing
         role = str(cur.execute("select current_role()").fetchone()[0]).upper()
         grants = {}
@@ -370,8 +373,18 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
                     "another role",
                     set(),
                 )  # only a role with rights on the view can list its grants
-        for t, (owner, _) in grants.items():
-            if owner != role:
+        for t, (owner, _) in list(grants.items()):
+            if owner != role and not migrate:  # only a re-case: never worth holding back the week's data
+                print(
+                    f"warning: SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so its columns stay lower "
+                    f"case and its descriptions aren't updated this load. To fix it, its owner (or ACCOUNTADMIN) "
+                    f"runs: grant ownership on view SHARE.{SHARE_VIEWS[t]} to role {role} copy current grants",
+                    file=sys.stderr,
+                )
+                del grants[t]
+                present.remove(t)
+                skipped.add(t)
+            elif owner != role:
                 raise RuntimeError(
                     f"SHARE.{SHARE_VIEWS[t]} is owned by {owner}, not {role}, so {role} can't recreate it. "
                     f"Nothing was changed. Its owner (or ACCOUNTADMIN) can give it back, keeping its grants: "
@@ -422,7 +435,11 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
     for table in present:
         cur.execute(create_view(table, as_exported(_column_names(cur, SCHEMA, table), table), contract))
     for table in PUBLIC_TABLES:  # the views this load didn't just recreate with their descriptions
-        if table not in present and (names := _column_names(cur, "SHARE", SHARE_VIEWS[table])):
+        if (
+            table not in present
+            and table not in skipped
+            and (names := _column_names(cur, "SHARE", SHARE_VIEWS[table]))
+        ):
             for sql in view_comments(table, names, contract):  # only the columns it has
                 cur.execute(sql)
 

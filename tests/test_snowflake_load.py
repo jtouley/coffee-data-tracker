@@ -553,12 +553,27 @@ def test_the_first_load_after_the_upper_case_change_recreates_the_views_then_loa
     assert any(s.startswith('alter view SHARE.coffee alter column "VARIANT_ID" comment ') for s in sf.sql)
 
 
-def test_a_lower_case_view_another_role_owns_stops_the_load_before_anything_changes(tmp_path):
+def test_a_lower_case_view_another_role_owns_is_left_as_is_and_the_data_still_loads(tmp_path, capsys):
+    """Re-casing is cosmetic, so a load (not a migration) never holds the week's data back for it: the view another
+    role owns keeps its lower-case columns, untouched, with a warning naming the grant that fixes it."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
+    assert all(sf.views[v] == NEW_VIEW for v in ("coffee", "price_event", "market_weekly"))
+    assert sf.views["roaster"] == NEW and sf.grants == set(VIEWS)
+    assert not any("SHARE.roaster" in s for s in sf.sql if not s.startswith(("show ", "select ")))
+    err = capsys.readouterr().err
+    assert "warning: SHARE.roaster is owned by another role, not COFFEE_LOADER" in err
+    assert "grant ownership on view SHARE.roaster to role COFFEE_LOADER copy current grants" in err
+
+
+def test_a_migration_still_stops_if_another_role_owns_a_lower_case_view(tmp_path):
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = lower_case_snowflake(counts)
     sf.view_owner["roaster"] = "ACCOUNTADMIN"
     with pytest.raises(RuntimeError, match="SHARE.roaster is owned by another role, not COFFEE_LOADER"):
-        snowflake_load.load(export_dir(tmp_path, counts), sf)
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
     assert not any(s.startswith(("put ", "drop", "truncate", "create or replace")) for s in sf.sql)
     assert sf.views["coffee"] == NEW
 

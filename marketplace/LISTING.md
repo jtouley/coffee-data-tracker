@@ -68,8 +68,8 @@ from SHARE.MARKET_WEEKLY group by ORIGIN_COUNTRY order by COFFEES_LISTED desc li
 **Limitations** (more in the dataset card):
 - Coverage is roasters with machine-readable storefronts (about half of reachable US roasters).
 - Attributes are extracted, by rules or LLM, and can be wrong.
-- Prices are list prices in USD; a store that prices in another currency is left out, and every roaster is in
-  the US.
+- Prices are list prices in USD. A price a store states in another currency is left blank (the coffee is still
+  listed), and every roaster is in the US.
 - No descriptions or images.
 
 **Pricing:** free.
