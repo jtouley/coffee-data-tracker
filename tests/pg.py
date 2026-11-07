@@ -8,6 +8,7 @@ from __future__ import annotations
 import glob
 import os
 import shutil
+import signal
 import socket
 import subprocess
 import tempfile
@@ -85,7 +86,13 @@ class Server:
         return f"{base}/{name}"
 
     def stop(self) -> None:
+        # SIGINT is Postgres's fast shutdown: it ends open client connections instead of waiting for them (SIGTERM,
+        # the smart shutdown, waits for every client, so one leaked connection made teardown time out on CI).
         if self.proc:
-            self.proc.terminate()
-            self.proc.wait(10)
+            self.proc.send_signal(signal.SIGINT)
+            try:
+                self.proc.wait(30)
+            except subprocess.TimeoutExpired:
+                self.proc.kill()
+                self.proc.wait(10)
             shutil.rmtree(self.root, ignore_errors=True)
