@@ -26,6 +26,7 @@ import json
 import logging
 import os
 import random
+import re
 import shutil
 from dataclasses import dataclass
 from datetime import UTC, date, timedelta
@@ -83,6 +84,10 @@ ENRICH_HOUR = 4  # Tuesday 04:17: post-load enrichment (Claude candidates from r
 BUILD_HOUR = 6  # Tuesday 06:17: classify verdicts, dbt build + gate, then publish (cli weekly's last steps)
 
 
+# A test crawl's id (the admin's Jobs page, `crawl --test`): its sub-partition's name, test=<id>.
+TEST_ID = re.compile(r"[a-z0-9][a-z0-9-]{0,39}")
+
+
 def week_of(day: str) -> str:
     """The week's run_date: the Monday of `day`'s ISO week. Every connector's job that week writes under it."""
     d = date.fromisoformat(day)
@@ -97,14 +102,22 @@ class PartitionLake(Lake):
     """The lake, as one connector job sees it: reads the lake plus its own partition, writes only the partition.
 
     slice ("k/n", the confirmation run's arms): the arm gets a sub-partition of its own, slice=k-of-n, so arms that
-    run at the same time never compact each other's checkpoints. The weekly merge reads only the partition's own
-    files, so an arm's rows are never merged."""
+    run at the same time never compact each other's checkpoints. test (an id, the admin's test crawls): the same, in
+    test=<id>. The weekly merge reads only the partition's own files, so an arm's or a test's rows are never merged."""
 
-    def __init__(self, base: Lake, connector: str, week: str, slice: str | None = None):
+    def __init__(
+        self, base: Lake, connector: str, week: str, slice: str | None = None, test: str | None = None
+    ):
         super().__init__(base.url, staging=base.root if base.remote else None, tables=base.tables)
         self.part = partition(self, connector, week_of(week))
+        if slice and test:
+            raise ValueError("a crawl is a slice or a test, not both")
         if slice:
             self.part = self.part / f"slice={slice.replace('/', '-of-')}"
+        if test:
+            if not TEST_ID.fullmatch(test):
+                raise ValueError(f"bad test id: {test!r}")
+            self.part = self.part / f"test={test}"
 
     def write_partition(self, table: str, run_date: str, batch_id: str, rows: list[dict]) -> Path | None:
         rel = self.part.relative_to(self.root) / "_parts" / table / f"batch={batch_id}.parquet"
@@ -248,12 +261,15 @@ def crawl(
     part: str | None = None,
     salt: str = "arm",
     only: str | None = None,
+    test: str | None = None,
 ) -> dict:
     """One connector's weekly job, or its resume: fetch its roasters without an ok fetch this week (parked stores
     continue from their blocked page), then compact. Extract and load only. A job_manifests row marks its start
     and its end: an attempt with only the first one died (killed or timed out), and one that raised ends `failed`.
     rps overrides the connector's budget, and part ("k/n", with salt) crawls one slice of its roasters: both for the
     confirmation run's arms. only: fetch that one roaster, even if done or quarantined this week (RUNBOOK §7).
+    test (an id): a test crawl (the admin's Jobs page): it writes to its own test=<id> sub-partition, which the
+    merge never reads, and its rows say arm "test", so it never counts as the week's crawl (control.is_arm).
 
     The poison-pill guard (crashguard): the roasters in flight when an earlier attempt of this week died are fetched
     one at a time; one in flight in two dead attempts is quarantined for the week (a `crashed` fetches row)."""
@@ -261,12 +277,14 @@ def crawl(
     if rps is not None:
         c = dataclasses.replace(c, rps=rps)
     week = week_of(day)
-    plake = PartitionLake(lake, connector, week, slice=part)
+    plake = PartitionLake(lake, connector, week, slice=part, test=test)
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
     states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
     repulls: list = []
-    if not (part or only):  # the fetch-health check's list, with re-fetch on (never for an arm or --only)
+    if not (
+        part or only or test
+    ):  # the fetch-health list, with re-fetch on (never for an arm, a test or --only)
         repulls = _repulls(plake, connector, week, states)
         states += repulls
     if part:
@@ -282,6 +300,8 @@ def crawl(
     # A manual one-roaster run (RUNBOOK §7) says so: never a retry of the pass running beside it (fetchhealth.run).
     if only:
         started["only"] = only
+    if test:  # is_arm keeps it out of `landed`, the egress flags and fetch-health from the start row on
+        started |= {"test": test, "arm": "test"}
     job = control.start(lake, "crawl", week, connector, len(states), detail=started)
     guard = crashguard.Guard(crashguard.root(plake.part), job["attempt_id"])
     if health.dead:
@@ -323,7 +343,7 @@ def crawl(
               "egress": os.environ.get("COFFEEDATA_EGRESS_MODE") or c.egress,
               # the confirmation run's arm (COFFEEDATA_ARM), budget and slice, if any
               "rps": c.rps, "slice": part, "salt": salt if part else None,
-              "arm": os.environ.get("COFFEEDATA_ARM"), "only": only,
+              "arm": "test" if test else os.environ.get("COFFEEDATA_ARM"), "only": only, "test": test,
               # the Cloud Run execution and task attempt, and the poison-pill guard's view at the start
               **started, "window_min": round(window, 1)}  # fmt: skip
     end = control.finish(
@@ -360,7 +380,12 @@ def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:
 
 
 def crawl_retry(
-    lake: Lake, connector: str, day: str, workers: int = 8, deadline_min: float | None = None
+    lake: Lake,
+    connector: str,
+    day: str,
+    workers: int = 8,
+    deadline_min: float | None = None,
+    test: str | None = None,
 ) -> dict:
     """crawl-retry for one connector: its parked stores (blocked mid-catalog, Shopify's page blocks), resumed from
     their blocked page, and, only with re-fetch on (fetchhealth.refetch_enabled), the fetch-health check's list (a
@@ -369,17 +394,18 @@ def crawl_retry(
     re-asked in the evening (the connectors that park nothing get their third pass from
     another `crawl`, which resumes and retries everything without an ok fetch). With job_manifests rows (job
     crawl-retry, which never counts as a landed crawl) and the poison-pill guard, as crawl. Like crawl, it stops
-    starting stores at deadline_min (default the connector's, under the job's 240-minute limit)."""
+    starting stores at deadline_min (default the connector's, under the job's 240-minute limit). test (an id): its
+    test crawl's own test=<id> sub-partition, as crawl's."""
     week = week_of(day)
-    plake = PartitionLake(lake, connector, week)
+    plake = PartitionLake(lake, connector, week, test=test)
     compact(plake.part)
     states, resume = ingest.select_parked(plake, week, adapter=connector)
-    repulls = _repulls(plake, connector, week, states)  # fetched whole: no parked progress
+    repulls = [] if test else _repulls(plake, connector, week, states)  # fetched whole: no parked progress
     states += repulls
     ids = {s.roaster.roaster_id for s in states}
     health = crashguard.assess(crashguard.root(plake.part), _finished(lake, week))
     quarantine = health.quarantine(ids)
-    started = control.execution() | health.summary(ids)
+    started = control.execution() | health.summary(ids) | ({"test": test, "arm": "test"} if test else {})
     window = _window_left(
         lake, "crawl-retry", connector, week, deadline_min or CONNECTORS[connector].deadline_min
     )

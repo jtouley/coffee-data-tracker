@@ -45,7 +45,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:A', 'r', date '2026-10-05', 'h', [{'variant_id': 'A', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-12', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': true, 'is_usd': true}]),
               ('r:A', 'r', date '2026-10-19', 'h', [{'variant_id': 'A', 'price_usd': 22.0, 'available': false, 'is_usd': true}]),
@@ -89,7 +89,7 @@ unit_tests:
       - input: ref('stg_snapshots')
         format: sql
         rows: |
-          select * from (values
+          select *, null::varchar as decision from (values
               ('r:P', 'r', date '2026-10-05', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:P', 'r', date '2026-10-19', 'h', [{'variant_id': 'P', 'price_usd': 20.0, 'available': true, 'is_usd': true}]),
               ('r:Q', 'r', date '2026-10-05', 'h', [{'variant_id': 'Q', 'price_usd': 18.0, 'available': true, 'is_usd': true}]),

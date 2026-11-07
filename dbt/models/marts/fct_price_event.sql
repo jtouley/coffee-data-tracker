@@ -9,7 +9,7 @@ with obs as (
            coalesce(v.available, true) as available
     from {{ ref('stg_snapshots') }} s
     join {{ ref('stg_products') }} p using (input_hash), unnest(s.variants) as t(v)
-    where p.is_coffee
+    where {{ decided('s.decision', 'p.is_coffee') }}
 ),
 o as (
     select *,

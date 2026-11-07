@@ -52,11 +52,11 @@ prev_run as (
                     (select max(last_seen) from prev_coffee)) as run_date
 ),
 coffee_records as (
-    select s.coffee_id, s.run_date, p.is_coffee
+    select s.coffee_id, s.run_date, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee, s.decision
     from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
 ),
 latest as (
-    select coffee_id, is_coffee, min(run_date) over (partition by coffee_id) as first_record
+    select coffee_id, is_coffee, decision, min(run_date) over (partition by coffee_id) as first_record
     from coffee_records
     qualify row_number() over (partition by coffee_id order by run_date desc) = 1
 ),
@@ -73,6 +73,7 @@ history_moved as (
 coffee_changes as (
     select 'public_coffee' as table_name, p.coffee_id as item, 'removed' as change,
            case when not exists (select 1 from cur_roaster r where r.roaster_id = p.roaster_id) then 'roaster_left'
+                when l.decision = 'exclude' then 'decision:exclude'
                 when l.is_coffee = false then 'reclassified'
                 else 'unexplained' end as reason
     from prev_coffee p left join latest l using (coffee_id)
@@ -81,6 +82,7 @@ coffee_changes as (
     select 'public_coffee', c.coffee_id, 'added',
            case when c.first_seen > (select run_date from prev_run) then 'new'
                 when not exists (select 1 from prev_roaster r where r.roaster_id = c.roaster_id) then 'roaster_joined'
+                when l.decision = 'include' then 'decision:include'
                 when l.first_record <= (select run_date from prev_run) then 'reclassified'
                 else 'unexplained' end
     from cur_coffee c left join latest l using (coffee_id)

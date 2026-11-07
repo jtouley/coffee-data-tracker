@@ -302,6 +302,21 @@ models:
       - name: counted
         description: >-
           The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
+  - name: stg_decisions
+    description: >-
+      The owner's include and exclude decisions this build applies, one row per subject (coffee_id or input_hash):
+      the effective decisions of the build's snapshot (a draft's, or the served build's), from var decisions_path.
+      No snapshot, no rows. The build never reads the admin's database.
+    columns:
+      - name: subject_key
+        description: "<subject_kind>:<subject>: one decision per subject."
+        data_tests: [unique, not_null]
+      - name: subject_kind
+        data_tests:
+          - accepted_values: {arguments: {values: [coffee_id, input_hash]}}
+      - name: action
+        data_tests:
+          - accepted_values: {arguments: {values: [include, exclude]}}
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
   - name: stg_products

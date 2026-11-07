@@ -10,6 +10,9 @@
 -- states USD, or states no currency and the roaster is in the US (stg_registry.country), which is how every
 -- older row of a US roaster reads, as before. A stated non-USD currency, or none from a roaster outside the US (or
 -- not in the registry), is never published as dollars.
+-- decision: the owner's include or exclude for the coffee (coffee_id) or, failing that, for its version (input_hash),
+-- from stg_decisions; the coffee's own decision is the more specific one, so it wins. Null: the classifier decides.
+with base as (
 select s.roaster_id || ':' || s.product_id as coffee_id,
        s.* exclude (batch_id, fetched_at, is_coffee, payload_hash) replace (
            list_transform(s.variants, lambda v, i: struct_update(v, variant_id :=
@@ -26,3 +29,8 @@ from {{ lake('snapshots') }} s
 join {{ ref('stg_runs') }} r using (roaster_id, run_date, batch_id)
 left join {{ ref('stg_registry') }} g using (roaster_id)
 cross join {{ html_tag_decodings(lake('snapshots')) }} html
+)
+select b.*, coalesce(c.action, h.action) as decision
+from base b
+left join {{ ref('stg_decisions') }} c on c.subject_kind = 'coffee_id' and c.subject = b.coffee_id
+left join {{ ref('stg_decisions') }} h on h.subject_kind = 'input_hash' and h.subject = b.input_hash

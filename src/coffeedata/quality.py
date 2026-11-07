@@ -52,9 +52,10 @@ RELEASE_TABLES = (
 # export, hashed or reconciled. Only a record: writing them never changes a build's verdict.
 OPS_TABLES = ("run_completeness", "release_changes", "product_decisions")
 OVERRIDE_ACTIONS = ("accept", "reject", "use_batch")
-# serving_log.action: a new release served (serve), an earlier one served by hand (rollback), or the release served
-# now served again to re-export it (reexport: `rollback --to served`, or --to the served build).
-SERVING_ACTIONS = ("serve", "rollback", "reexport")
+# serving_log.action: a new release served (serve), an earlier one served by hand (rollback), the release served
+# now served again to re-export it (reexport: `rollback --to served`, or --to the served build), or a draft build the
+# owner published from the admin (publish: `publish-release`, the publish job).
+SERVING_ACTIONS = ("serve", "rollback", "reexport", "publish")
 # The release columns that differ between two builds of the same lake by design: which build a row came from. The
 # content hash leaves them out, and so does tests/test_reproducible.py's row-for-row comparison.
 PER_BUILD_COLUMNS = ("release_build_id",)
@@ -89,9 +90,11 @@ def record_build(
     passed: bool,
     build_id: str | None = None,
     duration_s: float | None = None,
+    extra_rows: tuple[dict, ...] = (),
 ) -> bool:
     """Append this build's release and record to the lake: passing or not, nothing is lost. `results` holds one
-    run_results.json per dbt step (models, then tests); `duration_s` is how long they took. Every row carries the
+    run_results.json per dbt step (models, then tests); `duration_s` is how long they took; `extra_rows` (kind, unique_id
+    and their fields) are recorded with them: a draft's id, the decisions snapshot it applied. Every row carries the
     build's environment: the CI run, dbt's and the key packages' versions. Returns the recorded verdict: `passed`,
     and only if every release table was written, since a release missing a table can't be served."""
     import duckdb
@@ -174,6 +177,7 @@ def record_build(
         metrics = []
     rows += [base | {"kind": "metric", "unique_id": m, "value": v} for m, v in metrics]
     rows += [base | h for h in hashes]
+    rows += [base | r for r in extra_rows]
     # Each ops table written beside the release, and its row count (a missing one is in the build's log).
     rows += [base | {"kind": "ops_table", "unique_id": t, "rows": n} for t, n in sorted(ops.items())]
     # The release notes: how many rows of each public table this build adds, removes or changes against the
@@ -708,6 +712,47 @@ def builds(lake: Lake) -> list[tuple[str, str, bool]]:
     return [(b, d, bool(ok)) for b, d, ok in rows]
 
 
+def drafts(lake: Lake) -> dict[str, str]:
+    """build_id -> draft_id for every draft build (`build --draft`): recorded, never served by the build itself."""
+    rows = lake.connect().execute(
+        f"select build_id, any_value(unique_id) from {lake.scan('builds')} where kind = 'draft' group by build_id"
+    )
+    return dict(rows.fetchall())
+
+
+def ever_served(lake: Lake) -> set[str]:
+    """Every build serving_log has served, by any action: a draft in it was published."""
+    try:
+        rows = lake.connect().execute(f"select distinct build_id from {lake.scan('serving_log')}").fetchall()
+    except Exception as e:  # noqa: BLE001 - a lake from before serving_log
+        if no_files(e):
+            return set()
+        raise
+    return {b for (b,) in rows if b}
+
+
+def unpublished_drafts(lake: Lake) -> set[str]:
+    """Draft builds never served: kept out of rollback's default, build-diff's default `new`, and (stg_builds) the
+    anomaly bands and the volume baseline, and rollback refuses them. Only Publish serves one."""
+    return set(drafts(lake)) - ever_served(lake)
+
+
+def build_snapshot(lake: Lake, build_id: str) -> dict | None:
+    """The decisions snapshot a build applied (its builds row kind snapshot): id, digest and the document, or None."""
+    row = (
+        lake.connect()
+        .execute(
+            f"select unique_id, checksum, payload from {lake.scan('builds')} "
+            "where build_id = ? and kind = 'snapshot' limit 1",
+            [build_id],
+        )
+        .fetchone()
+    )
+    if not row:
+        return None
+    return {"snapshot_id": row[0], "sha256": row[1], "doc": json.loads(row[2]) if row[2] else None}
+
+
 def served(lake: Lake) -> dict | None:
     """The release customers are getting now (marts/release.parquet), if any. Only a missing file means nothing
     is served; any other failed read (a 429, a timeout) is raised, so it is never recorded as "nothing served"."""
@@ -798,7 +843,12 @@ def rollback(lake: Lake, to: str | None = None, reason: str = "") -> str:
     served now. Serving the release served now again (to 'served', or its build id) is a re-export, logged as
     action reexport, not rollback: the served release doesn't change."""
     now = (served(lake) or {}).get("build_id")
-    passing = [b for b, _, ok in builds(lake) if ok]
+    hidden = unpublished_drafts(lake)
+    if to in hidden:
+        raise ValueError(
+            f"build {to} is a draft that was never published: Publish serves a draft, not rollback"
+        )
+    passing = [b for b, _, ok in builds(lake) if ok and b not in hidden]
     if to == "served":  # the same release again: re-export it and rebuild the site, with no crawl
         if not now:
             raise ValueError("no release is served yet")
@@ -818,13 +868,16 @@ def build_diff(lake: Lake, old: str | None = None, new: str | None = None) -> di
     build before it, i.e. after a failed weekly run, what the held-back build would have published."""
     con = lake.connect()
     b = f"(select * from {lake.scan('builds')} where build_id is not null)"
+    hidden = unpublished_drafts(lake)
     history = [(bid, ok) for bid, _, ok in builds(lake)]  # the one definition of a passing build
+    if new is None:  # the latest build that isn't an unpublished draft
+        new = next((bid for bid, _ in reversed(history) if bid not in hidden), None)
     if new is None:
         new = history[-1][0] if history else None
     if old is None:  # the last passing build before `new`, never a later one
         order = [bid for bid, _ in history]
         cut = order.index(new) if new in order else len(order)
-        before = [bid for bid, ok in history[:cut] if ok]
+        before = [bid for bid, ok in history[:cut] if ok and bid not in hidden]
         old = before[-1] if before else None
     if not (old and new):
         return {"error": "need two builds to compare", "builds": [bid for bid, _ in history]}
