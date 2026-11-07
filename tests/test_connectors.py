@@ -375,6 +375,32 @@ def test_a_test_crawl_writes_its_own_sub_partition_and_never_counts_as_the_week(
     assert not out["written"].get("fetches") and "shopify" in out["missing"]
 
 
+def test_a_test_crawl_asks_every_roaster_even_after_the_week_is_done(tmp_path, monkeypatch):
+    """A whole-connector test crawl after the week's crawl and merge: every roaster is "done" for the week, but the
+    test asks them all again (into its own partition); a resume of the same test skips what it fetched."""
+    import httpx
+    import respx
+
+    from coffeedata import http
+
+    lk = Lake(str(tmp_path / "lake"))
+    monkeypatch.setattr(http.time, "sleep", lambda s: None)
+    stores = [Roaster(roaster_id=h, name=h, host=h, platform="shopify") for h in ("a.com", "b.com")]
+    monkeypatch.setattr(
+        registry, "current", lambda lake, *a, **k: [registry.RoasterState(r, "active", None) for r in stores]
+    )
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots.txt").mock(return_value=httpx.Response(404))
+        m.get(url__regex=r"https://[^/]+/products.json").mock(
+            side_effect=lambda req: httpx.Response(200, json={"products": []})
+        )
+        connectors.crawl(lk, "shopify", WEEK)
+        connectors.merge(lk, WEEK)
+        assert connectors.crawl(lk, "shopify", WEEK)["todo"] == 0  # the week's own crawl: nothing left
+        assert connectors.crawl(lk, "shopify", WEEK, test="t-2")["todo"] == 2  # the test asks them all
+        assert connectors.crawl(lk, "shopify", WEEK, test="t-2")["todo"] == 0  # its resume: nothing left
+
+
 def test_a_partition_is_a_slice_or_a_test_never_both(tmp_path):
     lk = Lake(str(tmp_path / "lake"))
     with pytest.raises(ValueError):

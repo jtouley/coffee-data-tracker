@@ -156,7 +156,7 @@ def test_a_draft_applies_its_snapshot_is_never_served_and_publish_serves_it(lake
 
     # Publish refuses a stale baseline, then serves the draft (action publish); a retry is idempotent.
     monkeypatch.setenv("COFFEEDATA_LAKE", str(lake.root))
-    pub = ["publish-release", "--build", draft, "--action", "publish", "--reason", "owner"]
+    pub = ["publish-release", "--build", draft, "--action", "publish", "--reason=--looks-like-a-flag"]
     with pytest.raises(SystemExit, match="baseline"):
         cli.main([*pub, "--baseline", "other"])
     cli.main([*pub, "--baseline", base])

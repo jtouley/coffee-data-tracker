@@ -371,7 +371,7 @@ def test_a_draft_snapshots_the_decisions_then_publish_waits_for_every_check(tmp_
     ok = post(c, f"/api/drafts/{did}/publish", {"key": "k5", "reason": "publish the drink-mix removal"})
     assert ok.status_code == 200, ok.json()
     assert fake.calls[-1] == ("run", "publish", ["publish-release", "--build", b3, "--action", "publish",
-                                                 "--baseline", B1, "--reason", "publish the drink-mix removal"])  # fmt: skip
+                                                 "--baseline", B1, "--reason=publish the drink-mix removal"])  # fmt: skip
     assert "publishing" in c.get(f"/part/release?build={b3}").text
     assert any(x["action"] == "job_start" and x["subject"] == "publish" for x in audit(app))
 
@@ -436,8 +436,8 @@ def test_roll_back_only_to_a_release_that_was_served(tmp_path, lake, pg_url):
     )  # failed
     r = post(c, f"/api/releases/{B1}/rollback", {"key": "k2", "reason": "the publish removed too much"})
     assert r.status_code == 200
-    assert fake.calls[-1] == ("run", "publish", ["publish-release", "--build", B1, "--action", "rollback", "--reason",
-                                                 "the publish removed too much"])  # fmt: skip
+    assert fake.calls[-1] == ("run", "publish", ["publish-release", "--build", B1, "--action", "rollback",
+                                                 "--reason=the publish removed too much"])  # fmt: skip
 
 
 def test_the_decisions_export_feeds_export_labels(tmp_path, lake, pg_url):
@@ -528,3 +528,174 @@ def test_hosted_writes_need_cloud_sql_and_the_snapshot_bucket(monkeypatch):
     monkeypatch.setenv("ADMIN_SNAPSHOT_BUCKET", "coffee-test-1-admin-snapshots")
     st = from_env()  # the Connector is made, never connected, until the first write
     assert st.writes_off == [] and st.control is not None
+
+
+# --- the review's fixes ----------------------------------------------------------------------------------------
+
+
+def test_roll_back_inside_a_window_with_a_recorded_reason(tmp_path, lake, pg_url):
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    pq.write_table(pa.Table.from_pylist([{"build_id": "20261103T000000-dddddd", "run_date": date.fromisoformat(W2),
+                                          "reason": "x", "served_at": datetime(2026, 11, 4, tzinfo=UTC)}]),
+                   lake.root / "marts" / "release.parquet")  # fmt: skip
+    tuesday = datetime(2026, 11, 3, 6, 30, tzinfo=UTC)
+    app, c, fake = make(tmp_path, lake.root, pg_url, now=tuesday)
+    r = post(c, f"/api/releases/{B1}/rollback", {"key": "k1", "reason": "bad release"})
+    assert r.status_code == 409 and r.json()["overridable"]
+    ok = post(c, f"/api/releases/{B1}/rollback", {"key": "k2", "reason": "bad release",
+                                                 "override": "the release went out with wrong prices"})  # fmt: skip
+    assert ok.status_code == 200 and fake.calls[-1][1] == "publish"
+
+
+def test_a_refused_draft_writes_no_snapshot(tmp_path, lake, pg_url):
+    app, c, fake = make(tmp_path, lake.root, pg_url, now=MONDAY)
+    post(c, "/api/decisions", {"key": "k1", "action": "exclude", "kind": "coffee_id", "reason": "a drink mix",
+                               "items": [_item("c1")], "seen": {}})  # fmt: skip
+    assert post(c, "/api/drafts", {"key": "k2"}).status_code == 409
+    assert not (tmp_path / "snapshots").exists() or not list((tmp_path / "snapshots").rglob("*.json"))
+    assert (
+        post(c, "/api/drafts", {"key": "k3", "override": "decided on Monday, build now"}).status_code == 200
+    )
+
+
+def test_two_tabs_cant_both_start_the_same_job(tmp_path, lake, pg_url):
+    """The plan's overlap check passed for both, but the start checks again under the job's lock."""
+
+    class Racing(FakeJobs):
+        def executions(
+            self, job, limit=10
+        ):  # the plan sees nothing running; the start sees the other tab's run
+            self.calls.append(("list", job))
+            listed = [x for x in self.calls if x == ("list", job)]
+            return [] if len(listed) == 1 else super().executions(job, limit)
+
+    fake = Racing()
+    fake.run("merge", ["merge"])  # the other tab's start landed in between
+    app, c, _ = make(tmp_path, lake.root, pg_url, fake=fake)
+    r = post(c, "/api/jobs/merge/runs", {"key": "k1", "week": W3})
+    assert r.status_code == 409 and "already running" in r.json()["reasons"][0]
+    assert [x for x in fake.calls if x[0] == "run"] == [("run", "merge", ["merge"])]
+    assert app.state.writes.control.runs() == []
+
+
+def test_a_start_that_cant_be_recorded_is_recorded_again_or_named(tmp_path, lake, pg_url, monkeypatch):
+    from admin.controlplane import ControlPlaneError
+
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    cp = app.state.writes.control
+    real = cp.record_run
+    fails = {"n": 1}
+
+    def flaky(cur, run):
+        if fails["n"]:
+            fails["n"] -= 1
+            raise ControlPlaneError("connection dropped")
+        return real(cur, run)
+
+    monkeypatch.setattr(cp, "record_run", flaky)
+    r = post(c, "/api/jobs/merge/runs", {"key": "k1", "week": W3})
+    assert r.status_code == 200 and len(cp.runs()) == 1  # written again in a new transaction
+    fails["n"] = 2
+    fake.finish()
+    r = post(c, "/api/jobs/merge/runs", {"key": "k2", "week": W3})
+    assert r.status_code == 500 and "couldn't record it" in r.json()["detail"]
+    again = post(c, "/api/jobs/merge/runs", {"key": "k2", "week": W3})  # a retry starts nothing twice
+    assert again.status_code == 409 and len([x for x in fake.calls if x[0] == "run"]) == 2
+
+
+def test_the_live_check_covers_only_what_the_draft_removes_and_step_9_counts(
+    tmp_path, lake, pg_url, monkeypatch
+):
+    """An exclude already served needs no new live check; Publish's evaluation check counts the public coffees the
+    decisions change and refuses over 50 (CLAUDE.md step 9)."""
+    from admin import writes as w
+
+    served = decisions.snapshot("s-served", "t", [dict(_item("c1"), subject_kind="coffee_id", subject="c1",
+                                                       action="exclude", decision_id="d0")])  # fmt: skip
+    Lake(str(lake.root)).write("builds", f"builds/run_date={W1}/build={B1}-snap.parquet", [{
+        "build_id": B1, "built_at": datetime(2026, 10, 19, 20, tzinfo=UTC), "run_date": date.fromisoformat(W1),
+        "kind": "snapshot", "unique_id": "s-served", "checksum": decisions.digest(served),
+        "payload": json.dumps(served, sort_keys=True)}])  # fmt: skip
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    post(c, "/api/decisions", {"key": "k1", "action": "exclude", "kind": "coffee_id", "reason": "a drink mix",
+                               "items": [_item("c1")], "seen": {}})  # fmt: skip
+    post(c, "/api/decisions", {"key": "k2", "action": "include", "kind": "coffee_id", "reason": "it is coffee",
+                               "items": [_item("m1")], "seen": {}})  # fmt: skip
+    r = post(c, "/api/drafts", {"key": "k3"}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(r["snapshot_id"])).read_text())
+    fake.finish()
+    b3 = _draft_build(lake.root, r["draft_id"], doc)
+    page = c.get(f"/part/release?build={b3}").text
+    assert "this draft removes nothing" in page  # c1's exclude was served already
+    assert "change 1 public coffees" in page
+    monkeypatch.setattr(w, "STEP9_LIMIT", 0)
+    no = post(c, f"/api/drafts/{r['draft_id']}/publish", {"key": "k4", "reason": "go ahead"})
+    assert no.status_code == 409 and any("step 9" in x for x in no.json()["reasons"])
+
+
+def test_unpublished_drafts_are_not_the_weeks_build_or_a_baseline(tmp_path, lake):
+    from admin import queries
+
+    _draft_build(lake.root, "draft-x", decisions.snapshot("s-x", "t", []))
+    ro = Lake(str(lake.root), read_only=True)
+    assert all(b["build_id"].endswith(("aaaaaa", "bbbbbb")) for b in queries.builds(ro, ro.connect()))
+    assert queries.week_build(ro, ro.connect(), W3) is None
+    assert len(queries.builds(ro, ro.connect(), drafts=True)) == 3
+
+
+def test_a_full_test_crawl_keeps_each_connectors_answer(tmp_path, lake):
+    from admin import queries
+
+    w = Lake(str(lake.root))
+    for conn, ok in (("shopify", 1), ("generic", 0)):
+        job = control.start(w, "crawl", W3, conn, 1, detail={"test": "t-9", "arm": "test"})
+        control.finish(w, job, "done", ok=ok, errors=1 - ok, detail={"test": "t-9", "arm": "test"})
+    ro = Lake(str(lake.root), read_only=True)
+    got = {a["connector"]: a["ok"] for a in queries.test_results(ro, ro.connect(), ["t-9"])["t-9"]}
+    assert got == {"shopify": 1, "generic": 0}
+
+
+def test_cloud_run_reads_are_retried_once_and_starts_never():
+    import httpx
+    import respx
+
+    from admin.runjobs import API, CloudRunJobs, JobsError
+
+    parent = "projects/coffee-test-1/locations/us-central1"
+    with respx.mock() as m:
+        m.get(url__startswith="http://metadata.google.internal/").mock(
+            return_value=httpx.Response(200, json={"access_token": "tok", "expires_in": 3600}))  # fmt: skip
+        listing = m.get(f"{API}/{parent}/jobs/merge/executions").mock(
+            side_effect=[httpx.Response(503), httpx.Response(200, json={"executions": []})])  # fmt: skip
+        start = m.post(f"{API}/{parent}/jobs/merge:run").mock(return_value=httpx.Response(503))
+        c = CloudRunJobs("coffee-test-1", "us-central1")
+        assert c.executions("merge") == [] and listing.call_count == 2
+        with pytest.raises(JobsError, match="503"):
+            c.run("merge", None)
+        assert start.call_count == 1
+
+
+def test_an_idle_connection_is_dropped_and_a_double_submit_answers_once(pg_url, monkeypatch):
+    import threading
+
+    from admin import controlplane
+
+    made = []
+    connect = url_connect(pg_url)
+    cp = ControlPlane(lambda: made.append(1) or connect())
+    cp.migrate()
+    monkeypatch.setattr(controlplane, "IDLE_S", 0)
+    cp.ping()
+    assert len(made) == 2  # the pooled one was idle too long: a new connection
+    monkeypatch.setattr(controlplane, "IDLE_S", 120)
+    out = []
+    item = [{"coffee_id": "c1", "input_hash": "h1"}]
+    ts = [threading.Thread(target=lambda: out.append(cp.decide("o", "same", "exclude", "coffee_id", "a drink mix",
+                                                               item, {"c1": None}))) for _ in range(2)]  # fmt: skip
+    for t in ts:
+        t.start()
+    for t in ts:
+        t.join()
+    assert len(out) == 2 and out[0] == out[1]

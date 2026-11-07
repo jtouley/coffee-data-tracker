@@ -279,7 +279,10 @@ def crawl(
     week = week_of(day)
     plake = PartitionLake(lake, connector, week, slice=part, test=test)
     compact(plake.part)  # a killed attempt's checkpoints, before deciding what is left
-    states, mode = ingest.select_states(plake, week, only=only)
+    if test and not only:
+        states, mode = _test_states(plake, connector), "full"
+    else:
+        states, mode = ingest.select_states(plake, week, only=only)
     states = [s for s in states if s.roaster.adapter == connector]
     repulls: list = []
     if not (
@@ -358,6 +361,22 @@ def crawl(
     lake.publish(f"crawl {connector} {week}")
     return {"connector": connector, "run_date": week, "todo": len(states), **detail,
             "status": end["status"], "skipped_deadline": out.get("skipped_deadline", 0)}  # fmt: skip
+
+
+def _test_states(plake: PartitionLake, connector: str) -> list:
+    """A test crawl's roasters: every crawlable roaster of the connector, whatever the week's own crawl (merged or
+    not) already fetched, less the ones this test's own partition fetched whole (a resume of the same test). A test
+    crawl re-checks the stores; it never reads as "nothing left to do" because the week is done."""
+    from . import registry
+
+    done: set[str] = set()
+    files = _partition_files(plake.part, "fetches")
+    if files:
+        tbl = _read(files, "fetches").select(["roaster_id", "status", "partial"]).to_pylist()
+        done = {r["roaster_id"] for r in tbl if r["status"] in ("unavailable", "crashed") or
+                (r["status"] == "ok" and not r["partial"])}  # fmt: skip
+    return [s for s in registry.current(plake) if s.roaster.adapter == connector
+            and ingest.crawlable(s, frozenset()) and s.roaster.roaster_id not in done]  # fmt: skip
 
 
 def _repulls(plake: Lake, connector: str, week: str, states: list) -> list:

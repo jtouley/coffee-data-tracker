@@ -24,14 +24,23 @@ from coffeedata import decisions as snap
 
 from . import jobs as registry
 from . import queries
-from .controlplane import ControlPlane, new_id
+from .controlplane import ControlPlane, ControlPlaneError, new_id
 from .logs import emit
 from .runjobs import Jobs, JobsError, logs_url
 from .store import Store
 
 TYPE_OVER = 50  # Publish asks for the count of public rows that leave above this (design §3)
 LIVE_CHECK_DAYS = 7
+STEP9_LIMIT = 50  # CLAUDE.md step 9: over this many products changed, the full evaluation
 REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
+
+
+class StartedUnrecorded(Exception):
+    """Cloud Run started these executions, but the control plane couldn't record them (twice)."""
+
+    def __init__(self, executions: list[str]):
+        super().__init__(", ".join(e.rsplit("/", 1)[-1] for e in executions))
+        self.executions = executions
 
 
 def written(**fields) -> None:
@@ -119,8 +128,8 @@ class Writes:
             raise registry.Refused([f"Cloud Run can't say what is running: {e}"]) from e
         return await self._start(actor, key, plan, override)
 
-    async def _start(self, actor: str, key: str, plan: registry.Plan, override: str | None,
-                     extra: Callable[[Any, list[dict]], None] | None = None, answer: dict | None = None) -> dict:  # fmt: skip
+    async def _check(self, actor: str, plan: registry.Plan, override: str | None) -> str | None:
+        """The guards' verdict on a plan: refused (audited) with every reason, or the checked override reason."""
         if plan.window and not override:
             plan.refusals.append(f"now is inside {plan.window}: give a reason to override")
         if override:
@@ -130,46 +139,80 @@ class Writes:
                                     {"reasons": plan.refusals, "params": plan.params})  # fmt: skip
             written(action="job_start", subject=plan.action.key, outcome="refused")
             raise registry.Refused(plan.refusals, overridable=bool(plan.window) and len(plan.refusals) == 1)
-        return await asyncio.to_thread(self._start_sync, actor, key, plan, override, extra, answer or {})
+        return override
+
+    async def _start(self, actor: str, key: str, plan: registry.Plan, override: str | None,
+                     extra: Callable[[Any, list[dict]], None] | None = None, answer: dict | None = None) -> dict:  # fmt: skip
+        override = await self._check(actor, plan, override)
+        try:
+            return await asyncio.to_thread(self._start_sync, actor, key, plan, override, extra, answer or {})
+        except registry.Refused as e:  # the overlap check again, under the jobs' locks: another start won
+            await asyncio.to_thread(self.control.audit_now, actor, "job_start", plan.action.key, "refused",
+                                    {"reasons": e.reasons, "params": plan.params})  # fmt: skip
+            raise
 
     def _start_sync(self, actor: str, key: str, plan: registry.Plan, override: str | None,
                     extra: Callable[[Any, list[dict]], None] | None, answer: dict) -> dict:  # fmt: skip
-        """Start each step and record it, in one transaction held across the starts: if the database can't record
-        them, the transaction fails before the first start. A step Cloud Run refuses is recorded as failed and the
-        rest still start (a full crawl is five jobs)."""
-        with self.control.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.control.claim(cur, key)) is not None:
-                return first
-            runs, errors = [], []
-            for s in plan.steps:
-                run_id = new_id("r")
-                try:
-                    ex = self.jobs.run(s.job, s.args)
-                except JobsError as e:
-                    errors.append(f"{s.job}: {e}")
-                    continue
-                run = {"run_id": run_id, "action": plan.action.key, "job": s.job, "args": s.args,
-                       "mode": plan.params.get("mode"), "week": plan.params.get("week"),
-                       "test_id": plan.params.get("test_id"), "roaster_id": plan.params.get("roaster"),
-                       "execution": ex.name, "actor": actor, "override_reason": override}  # fmt: skip
-                self.control.record_run(cur, run)
-                runs.append(run)
-            if extra and runs:
-                extra(cur, runs)
-            outcome = "ok" if not errors else "failed"
-            self.control.audit(cur, actor, "job_start", plan.action.key, outcome,
-                               {"runs": [{k: r[k] for k in ("run_id", "job", "args", "execution")} for r in runs],
-                                "errors": errors, "params": plan.params, "override": override,
-                                "window": plan.window})  # fmt: skip
-            out = {"ok": not errors, "runs": [{"run_id": r["run_id"], "job": r["job"],
-                                               "execution": str(r["execution"]).rsplit("/", 1)[-1]} for r in runs],
-                   "errors": errors} | answer  # fmt: skip
-            if runs:  # a start where nothing started can be retried with the same key
-                self.control.remember(cur, key, out)
-        written(
-            action="job_start", subject=plan.action.key, outcome=outcome, runs=[r["run_id"] for r in runs]
-        )
+        """Start each step and record it in one transaction, opened (and so known to work) before the first start.
+        Under a lock per job, what is running is checked again, so two submissions (two tabs) can't both start the
+        same job. A step Cloud Run refuses is recorded as failed and the rest still start (a full crawl is five jobs).
+        If the record can't be committed after Cloud Run started a step, it is written again in a new transaction;
+        if that fails too, StartedUnrecorded names the executions (an ERROR line, which alerts) and a retry is
+        refused by the overlap check, so nothing starts twice."""
+        started: list[dict] = []
+        errors: list[str] = []
+        try:
+            with self.control.tx() as cur:
+                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+                if (first := self.control.claim(cur, key)) is not None:
+                    return first
+                jobs = sorted({s.job for s in plan.steps})
+                for job in jobs:
+                    cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("job:" + job,))
+                running = self._running(set(jobs))
+                if running:
+                    raise registry.Refused([f"{j} is already running ({e}): wait for it, or cancel it first"
+                                            for j, e in sorted(running.items())])  # fmt: skip
+                for s in plan.steps:
+                    try:
+                        ex = self.jobs.run(s.job, s.args)
+                    except JobsError as e:
+                        errors.append(f"{s.job}: {e}")
+                        continue
+                    started.append({"run_id": new_id("r"), "action": plan.action.key, "job": s.job, "args": s.args,
+                                    "mode": plan.params.get("mode"), "week": plan.params.get("week"),
+                                    "test_id": plan.params.get("test_id"), "roaster_id": plan.params.get("roaster"),
+                                    "execution": ex.name, "actor": actor, "override_reason": override})  # fmt: skip
+                out = self._record(cur, actor, key, plan, override, started, errors, extra, answer)
+        except ControlPlaneError:
+            if not started:
+                raise
+            try:
+                with self.control.tx() as cur:
+                    out = self._record(cur, actor, key, plan, override, started, errors, extra, answer)
+            except ControlPlaneError as e:
+                names = [r["execution"] for r in started]
+                emit("ERROR", event="admin_start_unrecorded", action=plan.action.key, executions=names)
+                raise StartedUnrecorded(names) from e
+        written(action="job_start", subject=plan.action.key, outcome="ok" if not errors else "failed",
+                runs=[r["run_id"] for r in started])  # fmt: skip
+        return out
+
+    def _record(self, cur, actor: str, key: str, plan: registry.Plan, override: str | None, runs: list[dict],
+                errors: list[str], extra: Callable[[Any, list[dict]], None] | None, answer: dict) -> dict:  # fmt: skip
+        for run in runs:
+            self.control.record_run(cur, run)
+        if extra and runs:
+            extra(cur, runs)
+        self.control.audit(cur, actor, "job_start", plan.action.key, "ok" if not errors else "failed",
+                           {"runs": [{k: r[k] for k in ("run_id", "job", "args", "execution")} for r in runs],
+                            "errors": errors, "params": plan.params, "override": override,
+                            "window": plan.window})  # fmt: skip
+        out = {"ok": not errors, "runs": [{"run_id": r["run_id"], "job": r["job"],
+                                           "execution": str(r["execution"]).rsplit("/", 1)[-1]} for r in runs],
+               "errors": errors} | answer  # fmt: skip
+        if runs:  # a start where nothing started can be retried with the same key
+            self.control.remember(cur, key, out)
         return out
 
     async def cancel(self, actor: str, key: str, run_id: str) -> dict:
@@ -220,7 +263,16 @@ class Writes:
         if tests:
             answers = await self.read(queries.test_results, tests)
             for r in rows:
-                r["answer"] = answers.get(r["test_id"]) if r["test_id"] else None
+                conn = (
+                    (r["args"] or [])[(r["args"] or []).index("--connector") + 1]
+                    if "--connector" in (r["args"] or [])
+                    else None
+                )
+                r["answer"] = (
+                    next((a for a in answers.get(r["test_id"], []) if a["connector"] == conn), None)
+                    if r["test_id"]
+                    else None
+                )
         return rows
 
     # --- decisions -------------------------------------------------------------------------------------------------
@@ -275,7 +327,7 @@ class Writes:
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
-    async def build_draft(self, actor: str, key: str) -> dict:
+    async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
         if not (p["added"] or p["removed"]):
             raise ValueError("Nothing to build: the decisions are the served release's")
@@ -285,7 +337,9 @@ class Writes:
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
         plan = await self._guarded(action, {"draft_id": did, "snapshot_id": sid, "sha256": digest})
-        # The snapshot first: immutable, so a draft that never starts leaves an unused file, never a changed one.
+        override = await self._check(actor, plan, override)  # refused before any snapshot is written
+        # The snapshot before the start: immutable, so a draft that never starts leaves an unused file, never a
+        # changed one.
         if not await asyncio.to_thread(self.snapshots.create, snap.key(sid), doc):
             raise ValueError("snapshot id already used: try again")
 
@@ -293,7 +347,7 @@ class Writes:
             self.control.create_snapshot(cur, sid, digest, len(doc["decisions"]), actor)
             self.control.create_draft(cur, did, sid, baseline, runs[0]["run_id"], actor)
 
-        return await self._start(actor, key, plan, None, record, {"draft_id": did, "snapshot_id": sid})
+        return await self._start(actor, key, plan, override, record, {"draft_id": did, "snapshot_id": sid})
 
     async def readiness(self, draft: dict, rel: dict) -> Readiness:
         """Publish is disabled until: the draft build passed; the served release is still its baseline; any
@@ -308,31 +362,40 @@ class Writes:
              "why": "not built yet" if not info else ("passed" if info["passed"] else "it failed its checks: see Gate")},
             {"name": "The served release is still its baseline", "ok": now_id == draft["baseline"] or now_id == build,
              "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"},
-            {"name": "Evaluation attached", "ok": True,
-             "why": "not required: decisions on single products, no rule or setting changed (CLAUDE.md step 9)"},
         ]  # fmt: skip
-        left = await self.read(queries.leaving, build) if build else {"removed": None}
-        removed = left.get("removed")
-        excludes = [
-            d
-            for d in (await self._snapshot_doc(draft["snapshot_id"]))["decisions"]
-            if d["action"] == "exclude"
-        ]
+        left = await self.read(queries.leaving, build) if build else {"removed": None, "decided": None}
+        removed, decided = left.get("removed"), left.get("decided")
+        # CLAUDE.md step 9: a change to more than 50 products' output needs the full evaluation, not the short path.
+        checks.append({"name": "Evaluation", "ok": decided is None or decided <= STEP9_LIMIT,
+                       "why": ("not built yet" if decided is None else
+                               f"not required: these decisions change {decided} public coffees (50 or fewer: "
+                               "CLAUDE.md step 9's short path, the changes listed below)" if decided <= STEP9_LIMIT else
+                               f"these decisions change {decided} public coffees, over 50: CLAUDE.md step 9 asks for "
+                               "the full evaluation first. Publish fewer at a time, or evaluate them")})  # fmt: skip
+        # The live check covers what this draft removes against the served release: new excludes, and undone
+        # includes. Decisions already served were checked when they were published.
+        now_doc = await self._snapshot_doc(draft["snapshot_id"])
+        pinned = await self.read(queries.build_snapshot, draft["baseline"]) if draft["baseline"] else None
+        before = ((pinned or {}).get("doc") or {}).get("decisions", [])
+        key_of = lambda d: (d["subject_kind"], d["subject"], d["action"])  # noqa: E731
+        was = {key_of(d) for d in before}
+        removals = [d for d in now_doc["decisions"] if d["action"] == "exclude" and key_of(d) not in was]
+        still = {key_of(d) for d in now_doc["decisions"]}
+        removals += [d for d in before if d["action"] == "include" and key_of(d) not in still]
         roasters = sorted(
-            {d.get("roaster_id") or (d.get("coffee_id") or "").split(":")[0] for d in excludes} - {""}
+            {d.get("roaster_id") or (d.get("coffee_id") or "").split(":")[0] for d in removals} - {""}
         )
         missing = []
         for r in roasters:
             t = await asyncio.to_thread(self.control.recent_test, r, LIVE_CHECK_DAYS * 24)
-            ans = (
-                (await self.read(queries.test_results, [t["test_id"]])).get(t["test_id"])
-                if t and t.get("test_id")
-                else None
+            answers = (
+                (await self.read(queries.test_results, [t["test_id"]])).get(t["test_id"], []) if t else []
             )
-            if not (ans and ans.get("ok")):
+            if not any(a.get("ok") for a in answers):
                 missing.append(r)
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
-                       "why": (f"{len(roasters)} of {len(roasters)} stores answered a test crawl in the last "
+                       "why": ("this draft removes nothing" if not roasters else
+                               f"{len(roasters)} of {len(roasters)} stores answered a test crawl in the last "
                                f"{LIVE_CHECK_DAYS} days" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
@@ -345,7 +408,13 @@ class Writes:
         return doc
 
     async def publish(
-        self, actor: str, key: str, draft_id: str, typed: str | None, reason: str | None
+        self,
+        actor: str,
+        key: str,
+        draft_id: str,
+        typed: str | None,
+        reason: str | None,
+        override: str | None = None,
     ) -> dict:
         await self.ready()
         drafts = {d["draft_id"]: d for d in await asyncio.to_thread(self.control.drafts, 200)}
@@ -371,11 +440,13 @@ class Writes:
             "reason": reason_of(reason or f"publish {draft_id}"),
         }
         plan = await self._guarded(registry.ACTIONS["publish"], params)
-        return await self._start(actor, key, plan, None,
+        return await self._start(actor, key, plan, override,
                                  lambda cur, runs: self.control.draft_event(cur, draft_id, "publish_started", actor,
                                                                             {"build": build, "run": runs[0]["run_id"]}))  # fmt: skip
 
-    async def rollback(self, actor: str, key: str, build: str, reason: str | None) -> dict:
+    async def rollback(
+        self, actor: str, key: str, build: str, reason: str | None, override: str | None = None
+    ) -> dict:
         await self.ready()
         rel = await self.read(queries.releases)
         info = next((b for b in rel["builds"] if b["build_id"] == build), None)
@@ -387,13 +458,14 @@ class Writes:
         plan = await self._guarded(
             registry.ACTIONS["rollback"], {"build": build, "reason": reason_of(reason)}
         )
-        return await self._start(actor, key, plan, None)
+        return await self._start(actor, key, plan, override)
 
     async def discard(self, actor: str, key: str, draft_id: str) -> dict:
         await self.ready()
 
         def go():
             with self.control.tx() as cur:
+                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
                 if (first := self.control.claim(cur, key)) is not None:
                     return first
                 cur.execute("select 1 from control.drafts where draft_id = %s", (draft_id,))

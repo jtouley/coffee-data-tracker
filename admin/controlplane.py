@@ -24,6 +24,7 @@ import queue
 import re
 import secrets
 import threading
+import time
 from collections.abc import Callable, Iterator
 from datetime import UTC, datetime
 from pathlib import Path
@@ -33,6 +34,7 @@ from urllib.parse import unquote, urlsplit
 from coffeedata import decisions
 
 MIGRATIONS = Path(__file__).parent / "migrations"
+IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
 LOCK = 0x61646D696E  # pg_advisory_xact_lock key for migrations ("admin")
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
 
@@ -100,40 +102,48 @@ class ControlPlane:
 
     # --- connections and transactions ----------------------------------------------------------------------------
 
+    def _take(self):
+        """A pooled connection used in the last IDLE_S seconds, else a new one. An older one may have been closed by
+        the server or the connector while the instance idled, so it is dropped rather than tried."""
+        while True:
+            try:
+                con, used = self._pool.get_nowait()
+            except queue.Empty:
+                break
+            if time.monotonic() - used < IDLE_S:
+                return con
+            with contextlib.suppress(Exception):
+                con.close()
+        try:
+            return self._connect()
+        except Exception as e:  # noqa: BLE001 - the driver's and the connector's errors vary
+            raise ControlPlaneError(f"can't connect: {type(e).__name__}") from e
+
     @contextlib.contextmanager
     def tx(self) -> Iterator[Any]:
-        """One transaction: committed if the block finishes, rolled back otherwise. Any database error is raised as
-        ControlPlaneError (a Conflict passes through)."""
-        try:
-            con = self._pool.get_nowait()
-        except queue.Empty:
-            try:
-                con = self._connect()
-            except Exception as e:  # noqa: BLE001 - the driver's and the connector's errors vary
-                raise ControlPlaneError(f"can't connect: {type(e).__name__}") from e
+        """One transaction: committed if the block finishes, rolled back otherwise. A database or connection error is
+        raised as ControlPlaneError (and the connection dropped); anything else the block raises (a Conflict, a
+        refusal, a Cloud Run error) passes through as it is, after the rollback."""
+        con = self._take()
         ok = False
         try:
             cur = con.cursor()
             yield cur
             con.commit()
             ok = True
-        except (Conflict, ValueError):
+        except BaseException as e:
             with contextlib.suppress(Exception):
                 con.rollback()
-            ok = True  # the connection is fine
+            if isinstance(e, ControlPlaneError) or _from_database(e):
+                raise ControlPlaneError(
+                    f"{type(e).__name__}: {str(e).splitlines()[0][:200] if str(e) else ''}"
+                ) from e
+            ok = True  # the connection is fine: the block refused, not the database
             raise
-        except ControlPlaneError:
-            raise
-        except Exception as e:  # noqa: BLE001
-            with contextlib.suppress(Exception):
-                con.rollback()
-            raise ControlPlaneError(
-                f"{type(e).__name__}: {str(e).splitlines()[0][:200] if str(e) else ''}"
-            ) from e
         finally:
             if ok:
                 try:
-                    self._pool.put_nowait(con)
+                    self._pool.put_nowait((con, time.monotonic()))
                 except queue.Full:
                     con.close()
             else:
@@ -170,7 +180,7 @@ class ControlPlane:
     @staticmethod
     def claim(cur, key: str) -> dict | None:
         """Claim an idempotency key in this transaction: None if it is new (go ahead), else the first answer."""
-        if not key or len(key) > 100:
+        if not key or len(key) > 200:
             raise ValueError("a write needs its idempotency key")
         cur.execute("select response from control.idempotency where key = %s", (key,))
         row = cur.fetchone()
@@ -216,6 +226,7 @@ class ControlPlane:
         if not items or len(items) > 500:
             raise ValueError("decide 1 to 500 products at a time")
         with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
             if (first := self.claim(cur, key)) is not None:
                 return first
             subjects = sorted({str(it[kind]) for it in items if it.get(kind)})
@@ -256,6 +267,7 @@ class ControlPlane:
         if not ID.fullmatch(target):
             raise ValueError("bad decision id")
         with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
             if (first := self.claim(cur, key)) is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
@@ -433,6 +445,12 @@ class ControlPlane:
             cols = ("draft_id", "snapshot_id", "sha256", "decisions", "baseline", "run_id", "actor", "created_at",
                     "last_event")  # fmt: skip
             return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+
+def _from_database(e: BaseException) -> bool:
+    """An error from the database, the driver or the connection (as opposed to the block's own refusal)."""
+    return isinstance(e, OSError | TimeoutError) or type(e).__module__.split(".")[0] in (
+        "pg8000", "google", "aiohttp", "ssl", "scramp", "asyncio")  # fmt: skip
 
 
 def _json(v: Any) -> Any:

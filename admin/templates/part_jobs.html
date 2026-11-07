@@ -33,7 +33,7 @@
 {% for a in actions %}
   {% set open = prefill.get("action") == a.key %}
   <li><details id="{{ a.key }}"{% if open %} open{% endif %}><summary><span class="jname">{{ a.label }}</span> <span class="meta">{{ a.help }}</span></summary>
-  <form class="jobform" data-write="/api/jobs/{{ a.key }}/runs" data-preview="/api/jobs/{{ a.key }}/plan" novalidate>
+  <form class="jobform" data-write="/api/jobs/{{ a.key }}/runs" data-preview="/api/jobs/{{ a.key }}/plan" data-confirm-title="Start {{ a.label }}?" data-confirm-label="Start" novalidate>
     <input type="hidden" name="key" value="{{ new_key() }}">
     {% for name in a.fields %}{% set f = fields[name] %}{% set v = prefill.get(name) if open else none %}
     <label class="facet"><span class="label">{{ f.label }}</span>

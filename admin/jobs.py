@@ -124,11 +124,11 @@ ACTIONS: dict[str, Action] = {
                page="release", acts_on_week=False),
         Action("publish", "Publish", "Serve a draft build: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
-                                           "--baseline", p["baseline"] or "none", "--reason", p["reason"]])],
+                                           "--baseline", p["baseline"] or "none", f"--reason={p['reason']}"])],
                page="release", acts_on_week=False),
         Action("rollback", "Roll back", "Serve an earlier release again: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "rollback",
-                                           "--reason", p["reason"]])],
+                                           f"--reason={p['reason']}"])],
                page="release", acts_on_week=False),
     )
 }  # fmt: skip

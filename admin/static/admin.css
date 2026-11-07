@@ -105,6 +105,7 @@ dialog.sheet { border: 1px solid var(--rule); border-radius: 8px; background: va
   width: min(36rem, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
 dialog.sheet::backdrop { background: rgb(20 17 15 / 0.45); }
 dialog.sheet .steps { list-style: none; padding: 0; margin: 8px 0; display: grid; gap: 4px; }
+dialog.sheet .steps strong { display: block; font-size: 0.8125rem; font-weight: 600; margin: 4px 0; }
 dialog.sheet .steps code { display: block; background: var(--panel); border-radius: 8px; padding: 8px 12px; overflow-wrap: anywhere; }
 .refused { color: var(--danger); font-weight: 600; font-size: 0.9375rem; }
 dialog .btn.danger { background: var(--danger); color: var(--paper); border-color: var(--danger); }

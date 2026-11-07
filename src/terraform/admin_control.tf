@@ -33,12 +33,13 @@ resource "google_sql_database_instance" "admin" {
   deletion_protection = true
 
   settings {
-    edition           = "ENTERPRISE" # shared-core tiers exist only in Enterprise; PostgreSQL 16 defaults to Plus
-    tier              = "db-f1-micro"
-    availability_type = "ZONAL"
-    disk_type         = "PD_SSD"
-    disk_size         = 10
-    disk_autoresize   = false
+    edition                     = "ENTERPRISE" # shared-core tiers exist only in Enterprise; PostgreSQL 16 defaults to Plus
+    deletion_protection_enabled = true         # also refuses a delete from the console or gcloud, not only Terraform
+    tier                        = "db-f1-micro"
+    availability_type           = "ZONAL"
+    disk_type                   = "PD_SSD"
+    disk_size                   = 10
+    disk_autoresize             = false
 
     database_flags {
       name  = "cloudsql.iam_authentication"

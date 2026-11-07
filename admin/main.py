@@ -42,7 +42,7 @@ from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
 from .runjobs import JobsError
 from .store import StoreError
-from .writes import Writes
+from .writes import StartedUnrecorded, Writes
 
 HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
@@ -721,8 +721,9 @@ def create_app(
         try:
             # A key already used (a double submit, a retry): its first answer, before any check that the first
             # write's own effect would now fail (the job it started is running).
-            first = await on().replay(body["key"]) if replay else None
-            out = first if first is not None else await fn(actor(request), body["key"], body)
+            key = f"{request.url.path}:{body['key']}"  # one write's key never replays another write's answer
+            first = await on().replay(key) if replay else None
+            out = first if first is not None else await fn(actor(request), key, body)
         except jobs.Refused as e:
             return JSONResponse(
                 {"detail": "Refused.", "reasons": e.reasons, "overridable": e.overridable}, 409
@@ -735,6 +736,9 @@ def create_app(
             emit("ERROR", event="admin_write_failed", path=request.url.path, error=str(e)[:200])
             return JSONResponse({"detail": "The control plane couldn't record this, so nothing was done. "
                                            "Try again shortly."}, 503)  # fmt: skip
+        except StartedUnrecorded as e:
+            return JSONResponse({"detail": f"Cloud Run started {e}, but the control plane couldn't record it. "
+                                           "It is running: see Jobs and Cloud Run before starting it again."}, 500)  # fmt: skip
         except JobsError as e:
             emit("ERROR", event="admin_write_failed", path=request.url.path, error=str(e)[:200])
             return JSONResponse({"detail": str(e)}, 502)
@@ -767,12 +771,15 @@ def create_app(
 
     @app.post("/api/drafts")
     async def draft(request: Request):
-        return await write(request, lambda a, k, b: on().build_draft(a, k))
+        return await write(request, lambda a, k, b: on().build_draft(a, k, b.get("override") or None))
 
     @app.post("/api/drafts/{draft_id}/publish")
     async def publish(request: Request, draft_id: str):
         return await write(
-            request, lambda a, k, b: on().publish(a, k, draft_id, b.get("typed"), b.get("reason"))
+            request,
+            lambda a, k, b: on().publish(
+                a, k, draft_id, b.get("typed"), b.get("reason"), b.get("override") or None
+            ),
         )
 
     @app.post("/api/drafts/{draft_id}/discard")
@@ -781,7 +788,9 @@ def create_app(
 
     @app.post("/api/releases/{build_id}/rollback")
     async def rollback(request: Request, build_id: str):
-        return await write(request, lambda a, k, b: on().rollback(a, k, build_id, b.get("reason")))
+        return await write(
+            request, lambda a, k, b: on().rollback(a, k, build_id, b.get("reason"), b.get("override") or None)
+        )
 
     @app.get("/api/decisions/export")
     async def export(request: Request):

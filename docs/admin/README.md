@@ -74,8 +74,9 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
 
 Postgres (`admin/controlplane.py`, migrations in `admin/migrations/*.sql`): the audit trail, decisions as events,
 job runs, snapshots, drafts and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
-TRUNCATE). The admin runs its migrations at start, once each, under an advisory lock, in a `control` schema it
-creates and owns.
+TRUNCATE). The admin applies its migrations on its first use of the database after it starts (the first page or write
+that needs it), once each, under an advisory lock, in a `control` schema it creates and owns. They are additive and
+forward-only, so rolling the admin's image back to an earlier one leaves a schema it can still use.
 
 Hosted, it is Cloud SQL for PostgreSQL 16 (`admin_control.tf`), reached through the Cloud SQL Python Connector with
 IAM database authentication: the admin's service account is the database user and there is no password anywhere.

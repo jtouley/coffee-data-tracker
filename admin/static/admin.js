@@ -295,9 +295,11 @@ function renderPlan(box, plan) {
   ul.className = "steps";
   for (const s of plan.steps) {
     const li = document.createElement("li");
+    const job = document.createElement("strong");
+    job.textContent = `Cloud Run job ${s.job}`;
     const code = document.createElement("code");
-    code.textContent = s.args ? `${s.job}  ${s.args.join(" ")}` : `${s.job}  (its own arguments)`;
-    li.append(code);
+    code.textContent = s.args ? s.args.join(" ") : "(its own arguments)";
+    li.append(job, code);
     ul.append(li);
   }
   box.append(p, ul);
@@ -327,7 +329,7 @@ async function confirmWrite(form) {
   const overWrap = $(d, "[data-override-wrap]");
   const typed = $(d, "#confirm-type");
   const over = $(d, "#confirm-override");
-  $(d, "[data-confirm-title]").textContent = form.dataset.confirmLabel ? `${form.dataset.confirmLabel}?` : "Confirm";
+  $(d, "[data-confirm-title]").textContent = form.dataset.confirmTitle || (form.dataset.confirmLabel ? `${form.dataset.confirmLabel}?` : "Confirm");
   go.textContent = form.dataset.confirmLabel || "Confirm";
   go.classList.toggle("danger", "danger" in form.dataset);
   go.classList.toggle("primary", !("danger" in form.dataset));

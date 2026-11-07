@@ -9,6 +9,7 @@ pipeline jobs only: no other job, no job updates, no Terraform.
 from __future__ import annotations
 
 import re
+import time
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Protocol
@@ -118,10 +119,22 @@ class CloudRunJobs:
         self.token = MetadataToken(self.http, JobsError)
 
     def _call(self, method: str, path: str, **kw) -> dict:
-        try:
-            r = self.http.request(method, f"{API}/{path}", headers=self.token.header(), **kw)
-        except httpx.HTTPError as e:
-            raise JobsError(f"Cloud Run didn't answer: {type(e).__name__}") from e
+        """One request. A read (GET) is tried once more after a dropped connection, a 429 or a 5xx; a start or a
+        cancel never is (a retried start that had landed would run the job twice)."""
+        tries = 2 if method == "GET" else 1
+        for attempt in range(tries):
+            last = attempt + 1 == tries
+            try:
+                r = self.http.request(method, f"{API}/{path}", headers=self.token.header(), **kw)
+            except httpx.HTTPError as e:
+                if last:
+                    raise JobsError(f"Cloud Run didn't answer: {type(e).__name__}") from e
+                time.sleep(0.5)
+                continue
+            if not last and (r.status_code == 429 or r.status_code >= 500):
+                time.sleep(0.5)
+                continue
+            break
         if r.status_code >= 400:
             try:
                 msg = str((r.json().get("error") or {}).get("message") or "")[:200]

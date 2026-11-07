@@ -82,9 +82,15 @@ def weeks(lake: Lake, con) -> list[str]:
     return sorted(found, reverse=True)
 
 
-def builds(lake: Lake, con, run_date: str | None = None) -> list[dict]:
-    """Every build (or a week's), newest first: id, week, when, verdict, commit and CI run."""
+def builds(lake: Lake, con, run_date: str | None = None, drafts: bool = False) -> list[dict]:
+    """Every build (or a week's), newest first: id, week, when, verdict, commit and CI run. A draft build never served
+    is left out unless `drafts` (Release lists them): it isn't the week's build or a passing baseline, the rule of
+    stg_builds and quality.unpublished_drafts."""
     where = "and run_date = ?" if run_date else ""
+    if not drafts:
+        where += f""" and build_id not in (
+            select build_id from {lake.scan("builds")} where kind = 'draft' and build_id is not null
+            except select build_id from {lake.scan("serving_log")} where build_id is not null)"""
     sql = f"""
         select build_id, any_value(run_date)::varchar as run_date, max(built_at) as built_at,
                {PASSED} as passed,
@@ -513,7 +519,7 @@ def week_state(lake: Lake, con, week: str) -> dict:
 def releases(lake: Lake, con) -> dict:
     """Every build with its verdict, which are drafts (builds kind draft: draft_id) and which were ever served
     (serving_log, by any action). "Published" is derived from serving_log, never a status anyone sets."""
-    all_builds = builds(lake, con)
+    all_builds = builds(lake, con, drafts=True)
     drafts = dict(_empty_ok(lambda: con.execute(
         f"select build_id, any_value(unique_id) from {lake.scan('builds')} where kind = 'draft' group by build_id"
     ).fetchall(), []))  # fmt: skip
@@ -535,7 +541,7 @@ def build_snapshot(lake: Lake, con, build_id: str) -> dict | None:
     return {"snapshot_id": row[0], "sha256": row[1], "doc": json.loads(row[2]) if row[2] else None}
 
 
-def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, dict]:
+def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, list[dict]]:
     """What each test crawl found (its job_manifests end row, detail.test = the id): the store answered when ok > 0."""
     if not test_ids:
         return {}
@@ -545,7 +551,10 @@ def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, dict]:
               and json_extract_string(detail, '$.test') in (select unnest(?::varchar[]))
             qualify row_number() over (partition by attempt_id order by ended_at desc nulls last) = 1""",
         [test_ids])), [])  # fmt: skip
-    return {r["test_id"]: r for r in rows}
+    out: dict[str, list[dict]] = {}
+    for r in rows:  # a full test crawl's five connectors share one test id
+        out.setdefault(r["test_id"], []).append(r)
+    return out
 
 
 def leaving(lake: Lake, con, build_id: str) -> dict:
@@ -553,12 +562,15 @@ def leaving(lake: Lake, con, build_id: str) -> dict:
     asks the owner to type the count when it is over 50."""
     ops = quality.ops_files(lake, build_id)
     if "release_changes" not in ops:
-        return {"recorded": False, "removed": None, "by_table": {}}
+        return {"recorded": False, "removed": None, "decided": None, "by_table": {}}
     src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
     by = dict(
         con.execute(f"select table_name, count(*) from {src} where change = 'removed' group by 1").fetchall()
     )
-    return {"recorded": True, "removed": sum(by.values()), "by_table": by}
+    decided = con.execute(
+        f"select count(*) from {src} where table_name = 'public_coffee' and reason like 'decision:%'"
+    ).fetchone()[0]
+    return {"recorded": True, "removed": sum(by.values()), "decided": decided, "by_table": by}
 
 
 def to_json(value: Any) -> str:

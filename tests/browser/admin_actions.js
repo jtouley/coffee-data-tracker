@@ -187,7 +187,8 @@ const errors = [];
     await check("Jobs: a live check (crawl one roaster, test mode): the confirm shows the exact arguments, then it runs", async () => {
       await startForm(page, "crawl-one", { connector: "shopify", roaster });
       const steps = await page.textContent("dialog#confirm .steps");
-      assert.match(steps, new RegExp(`crawl-shopify\\s+crawl --connector shopify --only ${roaster.replace(/\./g, "\\.")} --test t-`));
+      assert.match(steps, new RegExp(`Cloud Run job crawl-shopify\\s*crawl --connector shopify --only ${roaster.replace(/\./g, "\\.")} --test t-`));
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /Start Crawl one roaster\?/);
       await shoot(page, "jobs-confirm", true);
       await page.click("[data-confirm-go]");
       await toast(page, /Started crawl-shopify/);

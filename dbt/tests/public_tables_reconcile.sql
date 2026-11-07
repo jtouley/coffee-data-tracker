@@ -18,7 +18,7 @@ with listed as (
     from {{ ref('public_coffee') }} where not is_wholesale group by roaster_id
 ),
 latest as (
-    select s.coffee_id, p.is_coffee
+    select s.coffee_id, {{ decided('s.decision', 'p.is_coffee') }} as is_coffee
     from {{ ref('stg_snapshots') }} s join {{ ref('stg_products') }} p using (input_hash)
     qualify row_number() over (partition by s.coffee_id order by s.run_date desc) = 1
 ),
