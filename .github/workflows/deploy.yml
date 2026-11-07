@@ -1,27 +1,44 @@
-# Build the app's image and deploy it to Cloud Run on every push to main that changes what the app runs. Pull
-# requests only build the image and check the Terraform. Authentication is Workload Identity Federation (no keys);
-# the variables come from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy job is skipped.
+# Build the app's image and deploy it to Cloud Run once ci has passed on a push to main. Pull requests only build
+# the image and check the Terraform. Authentication is Workload Identity Federation (no keys); the variables come
+# from `terraform output` (docs/app/RUNNING.md). Until they're set, the deploy jobs are skipped.
+# The image carries the commit it was built from (--build-arg GIT_SHA: lineage.git_sha).
+#
+# - Main deploys start on workflow_run, when ci completes, and only if it succeeded on a push. That event has no path
+#   filter, so a docs-only merge deploys too: the same app, rebuilt and restarted. A filter on the one commit that
+#   triggered the run would miss app changes in an earlier commit whose own deploy was skipped (next point).
+# - A run deploys only main's tip: ci runs for two quick pushes can finish out of order, and the older commit must
+#   not replace the newer one in production. Deploys run one at a time; a newer one waiting its turn replaces an
+#   older one waiting (GitHub's concurrency), which wasn't main's tip anyway.
+# - workflow_dispatch from main deploys main's tip as it is, without waiting for ci: a redeploy, or the first
+#   deploy once the variables are set.
+# - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set. A required
+#   reviewer for the admin can be added to the `admin` environment in the repository's settings.
 name: deploy
 on:
-  push:
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
     branches: [main]
-    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
   pull_request:
-    paths: ["app/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
+    paths: ["app/**", "admin/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
   workflow_dispatch:
 permissions:
   contents: read
+# A newer push to a pull request cancels its older check. Other runs get a group of their own here, and only the
+# deploy jobs queue (deploy-main, deploy-admin-main), so a run whose jobs skip (after a red ci, say) displaces none.
 concurrency:
-  group: deploy-${{ github.ref }}
-  cancel-in-progress: true
+  group: deploy-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   check:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with: {persist-credentials: false}
       - name: Build the image
-        run: docker build -f app/Dockerfile -t registry-coffee:check .
+        run: docker build -f app/Dockerfile --build-arg GIT_SHA="$GITHUB_SHA" -t registry-coffee:check .
       - uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e  # v4.0.1
         with: {terraform_version: "1.9.8"}
       - name: Check the Terraform
@@ -32,28 +49,97 @@ jobs:
           terraform validate
 
   deploy:
-    needs: check
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && vars.GCP_WIF_PROVIDER != '' && vars.GCP_DEPLOY_SA != '' && vars.GCP_IMAGE != ''
+    # A green ci run on a push to main in this repository (a fork's pull request from its own branch named main
+    # matches `branches` too, hence the event and repository checks), or a manual run from main.
+    if: >-
+      vars.GCP_WIF_PROVIDER != '' && vars.GCP_DEPLOY_SA != '' && vars.GCP_IMAGE != '' && (
+        (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' &&
+         github.event.workflow_run.event == 'push' &&
+         github.event.workflow_run.head_repository.full_name == github.repository) ||
+        (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'))
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency: {group: deploy-main, cancel-in-progress: false}
+    permissions:
+      contents: read
+      id-token: write  # for Workload Identity Federation
+    outputs:
+      image: ${{ steps.push.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>; empty when the run skipped
+    env:
+      REGION: ${{ vars.GCP_REGION || 'us-central1' }}
+      SERVICE: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
+      # workflow_run's github.sha is main's tip when the event fired, not the commit ci passed.
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+    steps:
+      # Inside the deploy-main queue, so a newer commit's deploy can't slip in between this check and the deploy.
+      - name: Is this commit still main's tip?
+        id: tip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
+          if [ "$tip" = "$HEAD_SHA" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Not deploying $HEAD_SHA: main has moved on to $tip, whose own run deploys it."
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.tip.outputs.current == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
+      - if: steps.tip.outputs.current == 'true'
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_DEPLOY_SA }}
+      - if: steps.tip.outputs.current == 'true'
+        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - name: Build and push
+        id: push
+        if: steps.tip.outputs.current == 'true'
+        env:
+          IMAGE: ${{ vars.GCP_IMAGE }}
+        run: |
+          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
+          docker build -f app/Dockerfile --build-arg GIT_SHA="$HEAD_SHA" -t "$IMAGE:$HEAD_SHA" .
+          docker push "$IMAGE:$HEAD_SHA"
+          # The registry's digest for what was just pushed: the tag can move, the digest can't.
+          ref=$(docker inspect --format '{{join .RepoDigests "\n"}}' "$IMAGE:$HEAD_SHA" |
+            awk -v p="$IMAGE@sha256:" 'index($0, p) == 1 {print; exit}')
+          if ! [[ "$ref" =~ @sha256:[0-9a-f]{64}$ ]]; then
+            echo "::error::No registry digest for $IMAGE:$HEAD_SHA after the push."
+            exit 1
+          fi
+          echo "image=$ref" >> "$GITHUB_OUTPUT"
+      - name: Deploy
+        if: steps.tip.outputs.current == 'true'
+        env:
+          IMAGE_REF: ${{ steps.push.outputs.image }}
+        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+
+  # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
+  deploy-admin:
+    needs: deploy
+    if: vars.GCP_ADMIN_SERVICE != '' && needs.deploy.outputs.image != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency: {group: deploy-admin-main, cancel-in-progress: false}
+    environment: {name: admin, url: "https://admin.registry.coffee"}
     permissions:
       contents: read
       id-token: write  # for Workload Identity Federation
     env:
       REGION: ${{ vars.GCP_REGION || 'us-central1' }}
-      SERVICE: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
-      IMAGE: ${{ vars.GCP_IMAGE }}:${{ github.sha }}
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with: {persist-credentials: false}
       - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
           workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
           service_account: ${{ vars.GCP_DEPLOY_SA }}
       - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
-      - name: Build and push
-        run: |
-          gcloud auth configure-docker "$REGION-docker.pkg.dev" --quiet
-          docker build -f app/Dockerfile -t "$IMAGE" .
-          docker push "$IMAGE"
       - name: Deploy
-        run: gcloud run deploy "$SERVICE" --image "$IMAGE" --region "$REGION" --quiet
+        env:
+          SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
+          IMAGE_REF: ${{ needs.deploy.outputs.image }}
+        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet

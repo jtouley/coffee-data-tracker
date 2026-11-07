@@ -1,4 +1,7 @@
-# GitHub Actions deploys with Workload Identity Federation: no JSON keys. Only main of var.github_repo may.
+# GitHub Actions deploys with Workload Identity Federation: no JSON keys. Only deploy.yml, run from main of
+# var.github_repo, may. workflow_ref is "<repo>/<path>@<ref>" of the workflow that runs (GitHub's OIDC reference);
+# deploy.yml's runs from main, on workflow_run or workflow_dispatch, are ".github/workflows/deploy.yml@refs/heads/main"
+# (workflow_run runs the default branch's file, at the default branch's ref). No other workflow can use this provider.
 
 resource "google_iam_workload_identity_pool" "github" {
   workload_identity_pool_id = "github"
@@ -15,7 +18,11 @@ resource "google_iam_workload_identity_pool_provider" "github" {
     "attribute.repository" = "assertion.repository"
     "attribute.ref"        = "assertion.ref"
   }
-  attribute_condition = "assertion.repository == '${var.github_repo}' && assertion.ref == 'refs/heads/main'"
+  attribute_condition = join(" && ", [
+    "assertion.repository == '${var.github_repo}'",
+    "assertion.ref == 'refs/heads/main'",
+    "assertion.workflow_ref == '${var.github_repo}/.github/workflows/deploy.yml@refs/heads/main'",
+  ])
   oidc {
     issuer_uri = "https://token.actions.githubusercontent.com"
   }
