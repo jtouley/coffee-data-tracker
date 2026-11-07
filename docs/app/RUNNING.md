@@ -66,8 +66,12 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 - a $20 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
   15 minutes, all emailed to the owner.
 
-`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it pushes
-the image and deploys it, once the variables below are set.
+`.github/workflows/deploy.yml` builds the image and checks the Terraform on every pull request. On `main` it waits
+for `ci` to pass on the push, then pushes the image and deploys it by digest, once the variables below are set. It
+deploys only main's newest commit, so an older commit whose `ci` finished late never replaces a newer one, and it
+deploys after docs-only merges too (the same app, restarted). Running the workflow by hand from `main` deploys main's
+newest commit without waiting for `ci`. With the variable `GCP_ADMIN_SERVICE` set, the same image then goes to the
+admin service, through the `admin` environment, where a required reviewer can be added in the repository's settings.
 
 ### Owner's steps
 
@@ -167,6 +171,33 @@ gcloud logging read "$S AND jsonPayload.message=\"saved\"" --freshness=1d       
 
 A request's trace id is on its access line (`logging.googleapis.com/trace`). Errors also appear in Error
 Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines.
+
+### Rolling back
+
+Every deploy makes a new revision, and each revision keeps the image digest it was deployed with. To go back to the
+last good one while the fix is made (with the repository variables `GCP_SERVICE` or `GCP_REGION` set, use their
+values instead of `registry-coffee` and `us-central1`):
+
+```bash
+gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
+gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100
+```
+
+> **Pinned traffic stays pinned.** Once traffic is sent to a named revision, every later deploy makes a new revision
+> that gets **0%** of the traffic, and the deploy job still succeeds ("all subsequent deployments use that traffic
+> split pattern going forward", in Cloud Run's
+> [rollouts and rollbacks](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration)). So the fix's own
+> deploy changes nothing until traffic is moved back.
+
+Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision:
+
+```bash
+gcloud run services update-traffic registry-coffee --region us-central1 --to-latest
+gcloud run services describe registry-coffee --region us-central1    # check where traffic goes now
+```
+
+The admin service (`registry-coffee-admin`, when `GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own
+name in place of `registry-coffee`.
 
 ### Deleting a person's data
 
