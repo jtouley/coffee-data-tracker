@@ -1,12 +1,9 @@
-{% from "_macros.html" import status, source, build_picker, ev %}
-<div data-state="{{ 'data' if data else 'empty' }}">
-{% if builds %}{{ build_picker(builds, build, "/gate") }}{% endif %}
-{% if not data %}
-  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
-{% else %}
+{% from "_macros.html" import status, source, ev %}
+{% set data = gate %}
+<h2 class="section group-title" id="gate">Gate</h2>
   {% set b = data.build %}
   {% set bad = data.by_status.get("fail", 0) + data.by_status.get("error", 0) %}
-  <p class="answer" data-answer>Build {{ build }} {{ "passed" if b and b.passed else "failed" }}: {{ bad }} failing and {{ data.by_status.get("warn", 0) }} warning tests of {{ data.tests | length }}{% if data.previous %} · compared with {{ data.previous }}{% else %} · no earlier passing build to compare{% endif %}</p>
+  <p class="answer">Build {{ build }} {{ "passed" if b and b.passed else "failed" }}: {{ bad }} failing and {{ data.by_status.get("warn", 0) }} warning tests of {{ data.tests | length }}{% if data.previous %} · compared with {{ data.previous }}{% else %} · no earlier passing build to compare{% endif %}</p>
   {{ source(data.source, read_at) }}
   {% if b %}<dl class="facts">
     <dt>Week</dt><dd>{{ b.run_date }}</dd><dt>Built</dt><dd>{{ t(b.built_at) }} UTC{% if b.duration_s %}, dbt took {{ n(b.duration_s) }} s{% endif %}</dd>
@@ -14,7 +11,7 @@
     <dt>dbt</dt><dd>{{ b.dbt_version or "—" }}</dd>
   </dl>{% endif %}
 
-  <h2 class="section">Tests</h2>
+  <h3 class="section">Tests</h3>
   <div class="frame" tabindex="0" role="region" aria-label="Tests"><table class="dense">
     <caption>Tests that failed, warned or didn’t run</caption>
     <thead><tr><th scope="col">Test</th><th scope="col">Status</th><th scope="col" class="n">Failures</th><th scope="col" class="n">Seconds</th></tr></thead>
@@ -31,11 +28,9 @@
   </table></div></details>
   {% endif %}
 
-  <h2 class="section">Metrics</h2>
+  <h3 class="section">Metrics</h3>
   <div class="frame" tabindex="0" role="region" aria-label="Metrics"><table>
     <caption>The build's catalog metrics (<code>mart_build_profile</code>) against {{ data.previous or "no earlier passing build" }}</caption>
     <thead><tr><th scope="col">Metric</th><th scope="col" class="n">This build</th><th scope="col" class="n">Previous</th><th scope="col" class="n">Change</th><th scope="col" class="n">Ratio</th></tr></thead>
     <tbody>{% for m in data.metrics %}<tr><th scope="row"><code>{{ m.metric }}</code></th><td class="n">{{ n(m.value) }}</td><td class="n">{{ n(m.previous) }}</td><td class="n">{{ "%+.2f" | format(m.change) if m.change is not none else "—" }}</td><td class="n">{{ "%.3f" | format(m.ratio) if m.ratio is not none else "—" }}</td></tr>{% else %}<tr><td colspan="5">No metrics recorded.</td></tr>{% endfor %}</tbody>
   </table></div>
-{% endif %}
-</div>

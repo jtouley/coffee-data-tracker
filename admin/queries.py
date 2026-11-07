@@ -497,5 +497,69 @@ def changes(
     }
 
 
+# --- Release and the guards: what the writes check against the lake ---------------------------------------------
+
+
+def week_state(lake: Lake, con, week: str) -> dict:
+    """For the job guards: has the week's merge a done row, and has its build ended (job_manifests)."""
+    rows = _empty_ok(lambda: job_rows(lake, con, week), [])
+    return {
+        "week": week,
+        "merge_done": any(r["job"] == "merge" and r["status"] == "done" for r in rows),
+        "build_ended": any(r["job"] == "build" and r["status"] in ("done", "failed") for r in rows),
+    }
+
+
+def releases(lake: Lake, con) -> dict:
+    """Every build with its verdict, which are drafts (builds kind draft: draft_id) and which were ever served
+    (serving_log, by any action). "Published" is derived from serving_log, never a status anyone sets."""
+    all_builds = builds(lake, con)
+    drafts = dict(_empty_ok(lambda: con.execute(
+        f"select build_id, any_value(unique_id) from {lake.scan('builds')} where kind = 'draft' group by build_id"
+    ).fetchall(), []))  # fmt: skip
+    ever = {b for (b,) in _empty_ok(lambda: con.execute(
+        f"select distinct build_id from {lake.scan('serving_log')}").fetchall(), [])}  # fmt: skip
+    for b in all_builds:
+        b["draft_id"] = drafts.get(b["build_id"])
+        b["ever_served"] = b["build_id"] in ever
+    return {"builds": all_builds, "by_draft": {d: b for b, d in drafts.items()}, "ever_served": ever}
+
+
+def build_snapshot(lake: Lake, con, build_id: str) -> dict | None:
+    """The decisions snapshot a build applied (quality.build_snapshot, through this connection)."""
+    row = _empty_ok(lambda: con.execute(
+        f"select unique_id, checksum, payload from {lake.scan('builds')} where build_id = ? and kind = 'snapshot' "
+        "limit 1", [build_id]).fetchone(), None)  # fmt: skip
+    if not row:
+        return None
+    return {"snapshot_id": row[0], "sha256": row[1], "doc": json.loads(row[2]) if row[2] else None}
+
+
+def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, dict]:
+    """What each test crawl found (its job_manifests end row, detail.test = the id): the store answered when ok > 0."""
+    if not test_ids:
+        return {}
+    rows = _empty_ok(lambda: _rows(con.execute(
+        f"""select json_extract_string(detail, '$.test') as test_id, job, connector, status, ok, errors
+            from {lake.scan("job_manifests")} where status <> 'running'
+              and json_extract_string(detail, '$.test') in (select unnest(?::varchar[]))
+            qualify row_number() over (partition by attempt_id order by ended_at desc nulls last) = 1""",
+        [test_ids])), [])  # fmt: skip
+    return {r["test_id"]: r for r in rows}
+
+
+def leaving(lake: Lake, con, build_id: str) -> dict:
+    """How many public rows a build removes against the release it was compared with (release_changes): Publish
+    asks the owner to type the count when it is over 50."""
+    ops = quality.ops_files(lake, build_id)
+    if "release_changes" not in ops:
+        return {"recorded": False, "removed": None, "by_table": {}}
+    src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
+    by = dict(
+        con.execute(f"select table_name, count(*) from {src} where change = 'removed' group by 1").fetchall()
+    )
+    return {"recorded": True, "removed": sum(by.values()), "by_table": by}
+
+
 def to_json(value: Any) -> str:
     return json.dumps(value, default=str)

@@ -1,16 +1,16 @@
-{% from "_macros.html" import status, source, week_picker, ev %}
-<div data-state="{{ 'data' if data and data.fetches else 'empty' }}">
-{% if weeks %}{{ week_picker(weeks, week, "/failures") }}{% endif %}
+{% from "_macros.html" import status, source, ev %}
+{% set data = failures %}
+<h2 class="section group-title" id="failures">Failures</h2>
 {% if not data or not data.fetches %}
   <div class="state empty mt16">
-    <h2 class="section">No fetches for week {{ week or "—" }} yet</h2>
-    <p class="body"><code>fetches</code> has no rows for it. The week’s crawls write them from Monday 09:17 UTC.{% if weeks and week != weeks[0] %} <a class="ev" href="/failures?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
+    <h3 class="section">No fetches for week {{ week or "—" }} yet</h3>
+    <p class="body"><code>fetches</code> has no rows for it. The week’s crawls write them from Monday 09:17 UTC.{% if weeks and week != weeks[0] %} <a class="ev" href="/week?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
   </div>
 {% else %}
   {% set c = data.counts %}
   <p class="answer" data-answer>{{ n(data.stores | length) }} stores need a look · {{ n(data.by_status.get("error", 0)) }} of {{ n(data.fetches) }} fetches failed{% if data.http %} · HTTP {% for h in data.http[:3] %}{{ h.http_status }}: {{ n(h.stores) }}{{ ", " if not loop.last }}{% endfor %} stores{% endif %} · siteground {{ n(c.siteground) }} · cloudflare {{ n(c.cloudflare) }} · partial {{ n(c.partial) }} · quarantined {{ n(c.quarantined) }}</p>
   {{ source(data.source, read_at) }}
-  {% if data.counts_source == "fetches" %}<p class="meta">Week {{ week }} has no build with <code>run_completeness</code>{% if data.build_id %} (build {{ data.build_id }} is from before the ops tables){% endif %}, so challenge, partial and quarantined are counted from <code>fetches</code> by the same rule.</p>{% else %}<p class="meta">Challenge, partial and quarantined are from build <a class="ev" href="/gate?build={{ data.build_id }}">{{ data.build_id }}</a>’s <code>run_completeness</code>.</p>{% endif %}
+  {% if data.counts_source == "fetches" %}<p class="meta">Week {{ week }} has no build with <code>run_completeness</code>{% if data.build_id %} (build {{ data.build_id }} is from before the ops tables){% endif %}, so challenge, partial and quarantined are counted from <code>fetches</code> by the same rule.</p>{% else %}<p class="meta">Challenge, partial and quarantined are from build <a class="ev" href="/release?build={{ data.build_id }}">{{ data.build_id }}</a>’s <code>run_completeness</code>.</p>{% endif %}
 
   <div class="cols">
   <div class="frame" tabindex="0" role="region" aria-label="By HTTP status"><table>
@@ -34,26 +34,26 @@
   </div>
 
   {% if trend | length > 1 %}
-  <h2 class="section">Across weeks</h2>
+  <h3 class="section">Across weeks</h3>
   <div class="frame" tabindex="0" role="region" aria-label="Trend"><table>
     <caption>Per week, from <code>fetches</code>: stores that never fetched ok, and stores that saw a 202 or a 429</caption>
     <thead><tr><th scope="col">Week</th><th scope="col" class="n">Fetches</th><th scope="col" class="n">Stores</th><th scope="col" class="n">Failed</th><th scope="col" class="n">Saw 202</th><th scope="col" class="n">Saw 429</th></tr></thead>
-    <tbody>{% for w in trend %}<tr{% if w.week == week %} class="sel"{% endif %}><th scope="row"><a class="ev" href="/failures?week={{ w.week }}">{{ w.week }}</a></th><td class="n">{{ n(w.fetches) }}</td><td class="n">{{ n(w.stores) }}</td><td class="n">{{ n(w.failed) }}</td><td class="n">{{ n(w.stores_202) }}</td><td class="n">{{ n(w.stores_429) }}</td></tr>{% endfor %}</tbody>
+    <tbody>{% for w in trend %}<tr{% if w.week == week %} class="sel"{% endif %}><th scope="row"><a class="ev" href="/week?week={{ w.week }}">{{ w.week }}</a></th><td class="n">{{ n(w.fetches) }}</td><td class="n">{{ n(w.stores) }}</td><td class="n">{{ n(w.failed) }}</td><td class="n">{{ n(w.stores_202) }}</td><td class="n">{{ n(w.stores_429) }}</td></tr>{% endfor %}</tbody>
   </table></div>
   {% endif %}
 
-  <h2 class="section">Stores ({{ n(data.stores | length) }})</h2>
+  <h3 class="section">Stores ({{ n(data.stores | length) }})</h3>
   {% if data.stores %}
   <div class="frame" tabindex="0" role="region" aria-label="Stores"><table class="dense">
     <caption>Every store this week without a complete ok fetch: its latest attempt, and every HTTP status it saw</caption>
-    <thead><tr><th scope="col">Store</th><th scope="col">Adapter</th><th scope="col">Latest</th><th scope="col">HTTP seen</th><th scope="col">Challenge</th><th scope="col">Flags</th><th scope="col" class="n">Attempts</th><th scope="col">Last (UTC)</th><th scope="col">Error</th></tr></thead>
+    <thead><tr><th scope="col">Store</th><th scope="col">Adapter</th><th scope="col">Latest</th><th scope="col">HTTP seen</th><th scope="col">Challenge</th><th scope="col">Flags</th><th scope="col" class="n">Attempts</th><th scope="col">Last (UTC)</th><th scope="col">Error</th><th scope="col">Check</th></tr></thead>
     <tbody>{% for s in data.stores %}<tr>
       <th scope="row">{{ ev(s.url, s.roaster_id) }}</th><td>{{ s.adapter or "—" }}</td><td>{{ status("partial" if s.any_ok else s.status) }}</td>
       <td>{{ s.http_statuses | join(", ") or "—" }}</td><td>{{ s.challenge or "—" }}</td>
       <td>{{ (["quarantined"] if s.quarantined else []) | join }}{% if s.partial %}{{ " · " if s.quarantined }}partial{% if s.partial_reason %} ({{ s.partial_reason }}){% endif %}{% endif %}</td>
       <td class="n">{{ s.attempts }}</td><td>{{ t(s.last_at) }}</td><td class="err">{{ s.error or "—" }}</td>
+      <td>{% if s.adapter in connectors %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "connector": s.adapter, "roaster": s.roaster_id} | urlencode }}#crawl-one">Test crawl</a>{% else %}—{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
   {% else %}<p class="body">Every store fetched ok this week.</p>{% endif %}
 {% endif %}
-</div>

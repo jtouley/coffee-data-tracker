@@ -40,4 +40,5 @@
     </tr>{% endfor %}</tbody>
   </table></div>
 {% endif %}
+{% if failures is not none %}{% include "_failures.html" %}{% endif %}
 </div>

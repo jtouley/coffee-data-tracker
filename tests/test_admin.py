@@ -686,7 +686,10 @@ def test_a_cookie_from_another_secret_or_tampered_is_refused(tmp_path):
     b = Auth(FileStore(tmp_path / "state"), "t" * 40, TOKEN, "localhost", ORIGIN)
     assert b.session(cookie) is None
     sid, sig = cookie.split(".")
-    for bad in (f"{sid}.{sig[:-1]}A", f"{sid}x.{sig}", sid, "", None, "a.b.c"):
+    other = (
+        "B" if sig.endswith("A") else "A"
+    )  # a changed last character (never the same one: a 1-in-64 flake)
+    for bad in (f"{sid}.{sig[:-1]}{other}", f"{sid}x.{sig}", sid, "", None, "a.b.c"):
         assert a.session(bad) is None
 
 
@@ -954,16 +957,16 @@ def test_sign_in_through_the_api_sets_a_strict_session_cookie(tmp_path, lake):
     assert r.status_code == 200 and len(r.json()["codes"]) == 10
     set_cookie = r.headers["set-cookie"].lower()
     assert "httponly" in set_cookie and "samesite=strict" in set_cookie and "max-age=43200" in set_cookie
-    assert c.get("/part/gate").status_code == 200
+    assert c.get("/part/release").status_code == 200
     c.cookies.clear()
-    assert c.get("/part/gate").status_code == 401
+    assert c.get("/part/release").status_code == 401
     b = c.post("/api/auth/signin/begin", json={}, headers=WRITE).json()
     r = c.post("/api/auth/signin/finish", headers=WRITE,
                json={"ceremony": b["ceremony"], "credential": key.get(b["options"]), "next": "//evil.example/x"})  # fmt: skip
     assert r.json()["next"] == "/week"  # never another origin
-    assert c.get("/part/gate").status_code == 200
+    assert c.get("/part/release").status_code == 200
     assert c.post("/api/auth/signout", headers=WRITE).status_code == 200
-    assert c.get("/part/gate").status_code == 401
+    assert c.get("/part/release").status_code == 401
 
 
 @pytest.mark.parametrize("bad", [5, True, ["x"], "text", 1.5])
@@ -1006,10 +1009,10 @@ def test_pages_read_the_lake_and_never_write_it(tmp_path, lake):
     app = _app(tmp_path, lake.root)
     c = TestClient(app, base_url=ORIGIN)
     c.cookies.set("admin_session", app.state.auth.start_session("c"))
-    for url in ("/week", "/part/week", f"/part/week?week={W2}", f"/part/failures?week={W2}", "/part/failures",
-                f"/part/gate?build={B2}", "/part/gate", f"/part/changes?build={B2}&reason=unexplained",
-                f"/part/changes?build={B1}", f"/part/catalog?build={B2}&q=guji&coffee=coffee", "/part/catalog",
-                "/account"):  # fmt: skip
+    for url in ("/week", "/jobs", "/release", "/catalog", "/log", "/part/week", f"/part/week?week={W2}",
+                f"/part/release?build={B2}", "/part/release", f"/part/release?build={B2}&reason=unexplained",
+                f"/part/release?build={B1}", f"/part/catalog?build={B2}&q=guji&coffee=coffee", "/part/catalog",
+                "/part/jobs", "/part/log", "/account"):  # fmt: skip
         r = c.get(url)
         assert r.status_code == 200, url
         h = r.headers
@@ -1024,15 +1027,15 @@ def test_pages_say_what_they_read(tmp_path, lake):
     c.cookies.set("admin_session", app.state.auth.start_session("c"))
     week = c.get(f"/part/week?week={W2}").text
     assert "2 of 5 connectors landed" in week and f"Serving week {W1}; week {W3} has data" in week
-    changes = c.get(f"/part/changes?build={B2}").text
-    assert 'class="unexplained"' in changes and "3 rows change" in changes
-    gate = c.get(f"/part/gate?build={B2}").text
-    assert "1 failing and 1 warning tests of 3" in gate and "1 passing tests" in gate
+    release = c.get(f"/part/release?build={B2}").text  # Gate and Changes, one page
+    assert 'class="unexplained"' in release and "3 rows change" in release
+    assert "1 failing and 1 warning tests of 3" in release and "1 passing tests" in release
     assert "javascript:" not in c.get(f"/part/catalog?build={B2}").text + c.get("/part/week").text
+    b1 = c.get(f"/part/release?build={B1}").text
+    assert "No changes" in b1 or "Not recorded" in b1
     assert (
-        "No changes" in c.get(f"/part/changes?build={B1}").text
-        or "Not recorded" in c.get(f"/part/changes?build={B1}").text
-    )
+        "Actions are off" in release
+    )  # no database, Cloud Run or snapshot store here: writes off, said once
     empty_week = c.get(f"/part/week?week={W3}").text
     assert 'data-state="empty"' in empty_week
 
@@ -1048,7 +1051,7 @@ def test_a_slow_or_broken_lake_shows_the_error_state(tmp_path, lake):
     app = _app(tmp_path, lake.root, reader=Reader(lake, 5, before=broken))
     c = TestClient(app, base_url=ORIGIN)
     c.cookies.set("admin_session", app.state.auth.start_session("c"))
-    r = c.get("/part/failures")
+    r = c.get("/part/week")
     assert (
         r.status_code == 502
         and "data-retry" in r.text
@@ -1069,7 +1072,7 @@ def test_one_deadline_covers_all_the_reads_of_a_part(tmp_path, lake):
     c = TestClient(slow, base_url=ORIGIN)
     c.cookies.set("admin_session", slow.state.auth.start_session("c"))
     started = time.monotonic()
-    r = c.get(f"/part/failures?week={W2}")  # four reads of 0.25 s each: over the part's 0.6 s
+    r = c.get(f"/part/week?week={W2}")  # several reads of 0.25 s each: over the part's 0.6 s
     assert r.status_code == 504 and time.monotonic() - started < 1.5
 
 

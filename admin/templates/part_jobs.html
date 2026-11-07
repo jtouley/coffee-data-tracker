@@ -1,0 +1,51 @@
+{% from "_macros.html" import status, ev, write_off, cup %}
+{% set active = runs | selectattr("status", "in", ["pending", "running"]) | list %}
+<div data-state="{{ 'data' if runs else 'empty' }}">
+{{ write_off(writes_off) }}
+<p class="answer" data-answer>{{ active | length }} running · {{ runs | length }} started from here{% if runs %} · last {{ t(runs[0].started_at) }} UTC by {{ runs[0].actor }}{% endif %}</p>
+<p class="src">From the control plane's <code>job_runs</code> and Cloud Run's executions · read {{ read_at.strftime("%H:%M:%S") }} UTC{% if active %} · refreshing every 5 s{% endif %}</p>
+
+<section aria-labelledby="runs-h" data-runs{% if active %} data-poll="5"{% endif %}>
+<h2 class="section" id="runs-h">Runs</h2>
+{% if not runs %}
+  <div class="state empty"><p class="body">Nothing started from the admin yet. The scheduled runs are on Week.</p></div>
+{% else %}
+<div class="frame" tabindex="0" role="region" aria-label="Runs"><table class="dense">
+  <caption>Every job started from the admin, newest first, with its live status</caption>
+  <thead><tr><th scope="col">Started (UTC)</th><th scope="col">Action</th><th scope="col">Job and arguments</th><th scope="col">Status</th><th scope="col" class="n">Took</th><th scope="col">By</th><th scope="col">Logs</th><th scope="col"><span class="vh">Cancel</span></th></tr></thead>
+  <tbody>{% for r in runs %}<tr{% if r.status == "failed" %} class="bad"{% endif %}>
+    <th scope="row">{{ t(r.started_at) }}</th>
+    <td>{{ r.action }}{% if r.mode %} · {{ r.mode }}{% endif %}{% if r.override_reason %} · <span title="{{ r.override_reason }}">window overridden</span>{% endif %}</td>
+    <td class="err"><code>{{ r.job }}</code>{% if r.args %} <code>{{ r.args | join(" ") }}</code>{% else %} (its own arguments){% endif %}</td>
+    <td>{{ status(r.status) }}{% if r.answer %}<br><span class="meta">store: {{ "answered" if r.answer.ok else "didn’t answer" }} ({{ r.answer.ok or 0 }} ok, {{ r.answer.errors or 0 }} failed)</span>{% endif %}{% if r.message %}<br><span class="meta">{{ r.message }}</span>{% endif %}</td>
+    <td class="n">{{ (r.duration_s | int ~ " s") if r.duration_s is not none else "—" }}</td>
+    <td>{{ r.actor }}</td>
+    <td>{{ ev(r.log_uri, "logs") if r.log_uri else "—" }}</td>
+    <td>{% if r.status in ("pending", "running") %}<form data-write="/api/jobs/runs/{{ r.run_id }}/cancel" data-confirm="Cancel {{ r.job }} ({{ r.execution.rsplit('/', 1)[-1] }})? Cloud Run stops it; what it already wrote stays." data-confirm-label="Cancel the run" data-danger><input type="hidden" name="key" value="{{ new_key() }}"><button class="btn text inline" type="submit" data-busy="Cancelling…">Cancel</button></form>{% endif %}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+{% endif %}
+</section>
+
+<h2 class="section">Start a job</h2>
+<p class="body">Each starts the pipeline's own Cloud Run job, as the schedule does. The confirm step shows the exact arguments first. Refused while the job is running, and inside the Monday crawl and Tuesday release windows unless you give a reason. Images, schedules and Terraform stay on the CLI.</p>
+<ul class="jobs">
+{% for a in actions %}
+  {% set open = prefill.get("action") == a.key %}
+  <li><details id="{{ a.key }}"{% if open %} open{% endif %}><summary><span class="jname">{{ a.label }}</span> <span class="meta">{{ a.help }}</span></summary>
+  <form class="jobform" data-write="/api/jobs/{{ a.key }}/runs" data-preview="/api/jobs/{{ a.key }}/plan" novalidate>
+    <input type="hidden" name="key" value="{{ new_key() }}">
+    {% for name in a.fields %}{% set f = fields[name] %}{% set v = prefill.get(name) if open else none %}
+    <label class="facet"><span class="label">{{ f.label }}</span>
+      {% if f.choices %}<select class="select" name="{{ name }}">{% for c in f.choices %}<option value="{{ c }}"{% if (v or f.default) == c %} selected{% endif %}>{{ c }}</option>{% endfor %}</select>
+      {% elif name == "week" %}<input class="input small" type="date" name="week" value="{{ v or today }}">
+      {% else %}<input class="input small" name="{{ name }}" value="{{ v or '' }}" autocomplete="off" spellcheck="false"{% if f.help %} placeholder="{{ f.help }}"{% endif %}>{% endif %}
+      {% if f.help and f.choices %}<span class="meta">{{ f.help }}</span>{% endif %}
+    </label>{% endfor %}
+    <div class="actions"><button class="btn primary inline" type="submit" data-busy="Checking…">Start…</button></div>
+  </form></details></li>
+{% endfor %}
+  <li><details id="site"><summary><span class="jname">Site</span> <span class="meta">The site and the public export rebuild from the served release on GitHub.</span></summary>
+    <p class="body">The admin holds no GitHub token, so the site is deployed by the <code>site</code> workflow: on Tuesdays after the build, or by hand. {{ ev("https://github.com/jtouley/coffee-data-tracker/actions/workflows/site.yml", "Run it on GitHub") }}.</p></details></li>
+</ul>
+</div>

@@ -1,7 +1,7 @@
 {# Status is a word with a mark (filled dot done, ring running, square failed, triangle warn, dash missing): never colour alone. #}
 {% macro status(word) -%}
 {%- set w = (word or "missing") | string -%}
-{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "ok", "landed", "served") else "run" if w in ("running", "pending") else "warn" if w in ("deadline", "warn", "partial", "skipped") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
+{%- set kind = "ok" if w in ("done", "passed", "pass", "success", "succeeded", "ok", "landed", "served", "published", "built") else "run" if w in ("running", "pending", "building", "publishing") else "warn" if w in ("deadline", "warn", "partial", "skipped", "stale", "cancelled") else "bad" if w in ("failed", "fail", "error", "crashed") else "none" -%}
 <span class="st st-{{ kind }}"><i aria-hidden="true"></i>{{ w }}</span>
 {%- endmacro %}
 
@@ -49,5 +49,18 @@
   <select id="build" name="build" class="select">{% for b in builds %}<option value="{{ b.build_id }}"{% if b.build_id == build %} selected{% endif %}>{{ b.build_id }} · week {{ b.run_date }} · {{ "passed" if b.passed else "failed" }}</option>{% endfor %}</select>
   {% for k, v in extra.items() %}<input type="hidden" name="{{ k }}" value="{{ v }}">{% endfor %}
   <button class="btn secondary inline" type="submit">Show</button>
+</form>
+{%- endmacro %}
+
+{# Writes are off (no database, Cloud Run or snapshot store): say so once, where the actions would be. #}
+{% macro write_off(reasons) -%}
+{%- if reasons %}<p class="notice mt12" role="status">Actions are off: {{ reasons | join("; ") }}. The pages still read the lake.</p>{% endif -%}
+{%- endmacro %}
+
+{# A one-button write: its confirm text, then POST with the form's idempotency key (admin.js). #}
+{% macro write_button(url, label, confirm, busy="Working…", cls="secondary", danger=false, disabled=none) -%}
+<form class="inline-form" data-write="{{ url }}" data-confirm="{{ confirm }}" data-confirm-label="{{ label }}"{% if danger %} data-danger{% endif %}>
+  <input type="hidden" name="key" value="{{ new_key() }}">
+  <button class="btn {{ cls }} inline" type="submit" data-busy="{{ busy }}"{% if disabled %} aria-disabled="true" aria-describedby="{{ disabled }}"{% endif %}>{{ label }}</button>
 </form>
 {%- endmacro %}

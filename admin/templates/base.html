@@ -27,5 +27,18 @@
 <main class="screen" id="main" tabindex="-1">
 {% block main %}{% endblock %}
 </main>
+{% if on %}
+<dialog class="sheet" id="confirm" aria-labelledby="confirm-h">
+  <form method="dialog" novalidate>
+    <h2 class="section" id="confirm-h" data-confirm-title>Confirm</h2>
+    <div class="body" data-confirm-body></div>
+    <div data-type-wrap hidden><label class="flabel" for="confirm-type">Type <strong data-type-want></strong> to confirm</label><input class="input" id="confirm-type" autocomplete="off" inputmode="numeric"></div>
+    <div data-override-wrap hidden><label class="flabel" for="confirm-override">Reason to start inside the window (recorded)</label><input class="input" id="confirm-override" autocomplete="off" maxlength="300"></div>
+    <div class="hint" data-confirm-hint role="alert"></div>
+    <div class="actions mt12"><button class="btn primary inline" type="button" data-confirm-go data-busy="Working…">Confirm</button><button class="btn text inline" type="button" data-close>Cancel</button></div>
+  </form>
+</dialog>
+<div class="toast" data-result role="status" aria-live="polite" hidden><span data-result-text></span> <button class="btn text inline" type="button" data-undo hidden>Undo</button></div>
+{% endif %}
 </body>
 </html>

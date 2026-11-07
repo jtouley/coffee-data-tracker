@@ -1,0 +1,63 @@
+{% from "_macros.html" import status, ev, build_picker, served_line, write_off, write_button %}
+<div data-state="{{ 'data' if builds else 'empty' }}">
+{{ write_off(writes_off) }}
+{% if not builds %}
+  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
+{% else %}
+{% set p = pending %}
+<p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
+<p class="src">From <code>builds</code>, <code>serving_log</code>, <code>release_changes</code> and the control plane · “published” is read from <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+
+<h2 class="section">Decisions</h2>
+{% if not p %}
+  <p class="body">Decisions need the control plane, which is off.</p>
+{% elif p.added or p.removed %}
+  <p class="body">{{ p.effective | length }} include or exclude decisions are in effect: {{ p.added }} {{ "is" if p.added == 1 else "are" }} new against the served release{% if p.removed %} and {{ p.removed }} {{ "was" if p.removed == 1 else "were" }} undone{% endif %}. A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
+  {{ write_button("/api/drafts", "Build a draft", "Build a draft with the " ~ (p.effective | length) ~ " decisions in effect? It starts the build job with --draft: every gate runs, and the release is recorded but not served.", busy="Starting…", cls="primary") }}
+{% else %}
+  <p class="body">The decisions in effect are the served release's{% if p.served_snapshot %} (snapshot <code>{{ p.served_snapshot }}</code>){% endif %}: nothing to build. Decide in the Catalog.</p>
+{% endif %}
+
+{% if drafts %}
+<div class="frame mt12" tabindex="0" role="region" aria-label="Drafts"><table class="dense">
+  <caption>Drafts, newest first: a draft is a build of the decisions, recorded but not served</caption>
+  <thead><tr><th scope="col">Draft</th><th scope="col">State</th><th scope="col" class="n">Decisions</th><th scope="col">Built against</th><th scope="col">Build</th><th scope="col">By</th><th scope="col">Created (UTC)</th><th scope="col"><span class="vh">Discard</span></th></tr></thead>
+  <tbody>{% for d in drafts %}<tr{% if d.state == "failed" %} class="bad"{% endif %}{% if d.build_id and d.build_id == build %} class="sel"{% endif %}>
+    <th scope="row"><code>{{ d.draft_id }}</code></th><td>{{ status(d.state) }}</td><td class="n">{{ d.decisions }}</td>
+    <td><code>{{ d.baseline or "nothing served" }}</code></td>
+    <td>{% if d.build_id %}<a class="ev" href="/release?build={{ d.build_id }}">{{ d.build_id }}</a>{% else %}—{% endif %}</td>
+    <td>{{ d.actor }}</td><td>{{ t(d.created_at) }}</td>
+    <td>{% if d.state not in ("published", "discarded", "publishing") %}{{ write_button("/api/drafts/" ~ d.draft_id ~ "/discard", "Discard", "Discard draft " ~ d.draft_id ~ "? Its build stays recorded, as failed builds do; the decisions stay in effect for the next draft.", busy="Discarding…", cls="text") }}{% endif %}</td>
+  </tr>{% endfor %}</tbody>
+</table></div>
+{% endif %}
+
+<h2 class="section">Build {{ build }}</h2>
+{{ build_picker(builds, build, "/release") }}
+{% if info %}
+  <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %}</p>
+  {% if draft and ready %}
+    <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status("ok" if c.ok else "failed") }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
+    {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public rows leave against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
+    {% if draft.last_event == "publish_started" and not info.ever_served %}<p class="notice" role="status">Publishing: the publish job is running. See Jobs.</p>
+    {% elif not info.ever_served and draft.last_event != "discarded" %}
+    <form class="jobform" data-write="/api/drafts/{{ draft.draft_id }}/publish" data-confirm="Publish build {{ build }}? The publish job serves it: marts, the release pointer and serving_log, then the lake upload. The site follows from the served release." data-confirm-label="Publish"{% if ready.needs_count %} data-type="{{ ready.removed }}" data-danger{% endif %}>
+      <input type="hidden" name="key" value="{{ new_key() }}">
+      <label class="facet"><span class="label">Reason (recorded)</span><input class="input small" name="reason" value="publish {{ draft.draft_id }}" maxlength="300"></label>
+      {% if not ready.ready %}<p class="hint" id="why-not">Publish is off until every check above holds.</p>{% endif %}
+      <div class="actions"><button class="btn primary inline" type="submit" data-busy="Starting the publish job…"{% if not ready.ready %} aria-disabled="true" aria-describedby="why-not"{% endif %}>Publish…</button></div>
+    </form>
+    {% endif %}
+  {% elif info.passed and info.ever_served and not (served and served.build_id == build) %}
+    <form class="jobform" data-write="/api/releases/{{ build }}/rollback" data-confirm="Roll back to build {{ build }}? The publish job serves it again (serving_log action rollback); the build served now stays recorded." data-confirm-label="Roll back" data-danger>
+      <input type="hidden" name="key" value="{{ new_key() }}">
+      <label class="facet"><span class="label">Reason (recorded)</span><input class="input small" name="reason" required minlength="3" maxlength="300"></label>
+      <div class="actions"><button class="btn secondary inline" type="submit" data-busy="Starting the publish job…">Roll back…</button></div>
+    </form>
+  {% endif %}
+{% endif %}
+
+{% if gate %}{% include "_gate.html" %}{% endif %}
+{% if changes %}{% include "_changes.html" %}{% endif %}
+{% endif %}
+</div>

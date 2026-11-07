@@ -91,3 +91,23 @@ def _own_dbt_target(tmp_path_factory):
     mp.setattr(cli, "DBT_TARGET", target)
     yield
     mp.undo()
+
+
+@pytest.fixture(scope="session")
+def pg_server(tmp_path_factory):
+    """A local Postgres for the admin's control plane (tests/pg.py): one per test session and xdist worker."""
+    from .pg import Server, bindir
+
+    if not (bindir() or os.environ.get("ADMIN_TEST_DATABASE_URL")):
+        if os.environ.get("REQUIRE_POSTGRES"):
+            pytest.fail("REQUIRE_POSTGRES is set but no Postgres server binaries are installed")
+        pytest.skip("no Postgres server binaries (initdb) installed")
+    server = Server(tmp_path_factory.mktemp("pg")).start()
+    yield server
+    server.stop()
+
+
+@pytest.fixture
+def pg_url(pg_server) -> str:
+    """A fresh, empty database on the test Postgres."""
+    return pg_server.database()
