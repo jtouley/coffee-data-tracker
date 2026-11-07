@@ -294,3 +294,9 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - Owner decisions (2026-11-07): merge #106 (after main merge + skills review); start security P0s (photo no-store, auth fail-closed) as PR app-hardening-p0 with Playwright + design walkthrough; closed #71/#67/#63.
 - Owner rule (2026-11-07): restate every open decision in every update, each with a simple why.
 - Owner decision (2026-11-07): admin language = Python, revisit if real Cloud Run cold start p95 > 2 s; add a Cloud Monitoring alert for that with the admin service (in #112 Phase 1).
+
+## 2026-11-07 (later)
+- Merged #126 (app hardening: default-deny auth, no-store on private responses), deployed from main. Merged #106 (Snowflake upper-case views).
+- Owner: accepted the offline Back change from #126; the weekend Bellingham check counts as its 11-09 crawl.
+- not_coffee/unsure tie: closed, no change (no such ties exist; any wrong removal is fixable in the admin).
+- #125 (admin) fixed after final review (owner-lockout regression); held behind #124, which waits on cutover2.sh.
