@@ -18,6 +18,8 @@
   {% if rule != "stale" %}<button class="btn secondary inline" type="submit" data-busy="Waiting for your passkey…">Add a passkey</button>{% endif %}
   <p class="notice mt12" data-done hidden role="status">Passkey added.</p>
 </form>
+<h2 class="section">Recovery codes</h2>
+<p class="body">{{ codes_left }} of 10 unused. Each one adds a passkey after the second, or recovers the admin if both passkeys are lost (which retires them). New codes come with the write API; until then keep these offline.</p>
 <h2 class="section">Sessions</h2>
 <div class="actions">
   <button class="btn secondary inline" type="button" data-signout="/api/auth/signout" data-busy="Signing out…">Sign out</button>

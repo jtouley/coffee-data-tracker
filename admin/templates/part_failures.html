@@ -4,7 +4,7 @@
 {% if not data or not data.fetches %}
   <div class="state empty mt16">
     <h2 class="section">No fetches for week {{ week or "—" }} yet</h2>
-    <p class="body"><code>fetches</code> has no rows for it.{% if weeks and week != weeks[0] %} <a class="ev" href="/failures?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
+    <p class="body"><code>fetches</code> has no rows for it. The week’s crawls write them from Monday 09:17 UTC.{% if weeks and week != weeks[0] %} <a class="ev" href="/failures?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
   </div>
 {% else %}
   {% set c = data.counts %}

@@ -299,6 +299,13 @@ def test_failures_read_fetches_written_before_the_challenge_fields(tmp_path):
     assert f["counts"]["siteground"] == 0 and f["stores"][0]["challenge"] is None
 
 
+def test_the_passed_rule_is_quality_builds_own(lake):
+    assert {b["build_id"]: b["passed"] for b in run(lake, queries.builds)} == {
+        b: ok for b, _, ok in quality.builds(lake)
+    }
+    assert queries.previous_passing(run(lake, queries.builds), B2) == B1
+
+
 def test_failure_trend(lake):
     t = run(lake, queries.failure_trend)
     assert [(x["week"], x["stores"], x["failed"], x["stores_202"], x["stores_429"]) for x in t] == [
@@ -378,9 +385,9 @@ def test_catalog_joins_decisions_and_dim_coffee_and_caches_once_per_build(lake, 
         and by["m1"]["origin_country"] is None
     )
     assert by["c2"]["url"] is None  # never a javascript: link
-    made = cat.path(B2).stat().st_mtime_ns
+    made = cat.path(B2).stat().st_ino
     cat.search(B2, Filters(q="guji"))
-    assert cat.path(B2).stat().st_mtime_ns == made  # made once
+    assert cat.path(B2).stat().st_ino == made  # made once (a use only touches it)
     assert cat.path(B2).parent == cache and not cat.path(B2).is_relative_to(lake.root)
 
 
@@ -400,6 +407,21 @@ def test_catalog_facets_count_without_their_own_filter_and_search_escapes_wildca
 def test_catalog_of_a_build_without_ops_tables_is_its_coffees(lake, tmp_path):
     r = Catalog(lake, tmp_path / "c").search(B1, Filters())
     assert r["total"] == 2 and "dim_coffee only" in r["meta"]["made_from"]
+
+
+def test_catalog_pruning_keeps_the_builds_in_use(lake, tmp_path, monkeypatch):
+    import time as _time
+
+    cat = Catalog(lake, tmp_path / "cache")
+    cat.search(B2, Filters())
+    for i in range(5):  # five other builds' files, all older than B2's last use
+        f = tmp_path / "cache" / f"catalog-old{i}.duckdb"
+        f.write_bytes(b"")
+        os.utime(f, (_time.time() - 100 - i, _time.time() - 100 - i))
+    cat.search(B2, Filters())  # used again: touched
+    cat._prune(keep=cat.path(B1))
+    assert cat.path(B2).exists()
+    assert len(list((tmp_path / "cache").glob("catalog-*.duckdb"))) == 4
 
 
 def test_catalog_refuses_a_bad_build_id(lake, tmp_path):
@@ -570,11 +592,67 @@ def test_recovery_registers_a_passkey_signs_out_everywhere_and_works_once(tmp_pa
     b = a.recover_begin(codes[0], "1.1.1.1")
     new = a.recover_finish(b["ceremony"], SoftKey().create(b["options"]))
     assert a.session(new) is not None and a.session(old) is None
-    assert len(a.credentials()) == 2
+    assert len(a.credentials()) == 1  # the new passkey; the lost one is retired
     with pytest.raises(AuthError, match="used"):
         a.recover_begin(codes[0], "1.1.1.1")
     with pytest.raises(AuthError):
         a.recover_begin("0000-0000-0000-0000", "1.1.1.1")
+
+
+def test_recovery_retires_every_earlier_passkey(tmp_path):
+    a = new_auth(tmp_path)
+    lost1, lost2, new = SoftKey(), SoftKey(), SoftKey()
+    cookie, codes = enroll(a, lost1)
+    s = a.session(cookie)
+    b = a.add_begin(s, None, "1.1.1.1")
+    a.add_finish(s, b["ceremony"], lost2.create(b["options"]))
+    b = a.recover_begin(codes[0], "1.1.1.1")
+    fresh = a.recover_finish(b["ceremony"], new.create(b["options"]))
+    assert list(a.credentials()) == [b64u(new.cred)]
+    for lost in (lost1, lost2):
+        with pytest.raises(AuthError, match="isn't registered"):
+            signin(a, lost)
+    assert a.session(signin(a, new)) is not None
+    assert a.add_rule(a.session(fresh)) == "fresh" and a.recovery_left() == 9  # the second passkey, again
+
+
+def test_the_add_rule_is_checked_again_when_the_ceremony_finishes(tmp_path):
+    a = new_auth(tmp_path)
+    cookie, _ = enroll(a, SoftKey())
+    s = a.session(cookie)
+    b1, b2 = (
+        a.add_begin(s, None, "1.1.1.1"),
+        a.add_begin(s, None, "1.1.1.1"),
+    )  # both while there's one passkey
+    a.add_finish(s, b1["ceremony"], SoftKey().create(b1["options"]))
+    with pytest.raises(AuthError, match="needs a recovery code"):
+        a.add_finish(s, b2["ceremony"], SoftKey().create(b2["options"]))
+    assert len(a.credentials()) == 2
+
+
+def test_a_malformed_credential_is_refused_not_an_error(tmp_path):
+    a = new_auth(tmp_path)
+    k = SoftKey()
+    enroll(a, k)
+    begin = a.signin_begin("1.1.1.1")
+    bad = k.get(begin["options"])
+    del bad["response"]["signature"]
+    with pytest.raises(AuthError):
+        a.signin_finish(begin["ceremony"], bad, "1.1.1.1")
+    s = a.session(a.start_session(b64u(k.cred)))
+    b = a.add_begin(s, None, "1.1.1.1")
+    with pytest.raises(AuthError):
+        a.add_finish(s, b["ceremony"], {"id": "x", "response": {}})
+
+
+def test_a_flood_of_ceremonies_evicts_the_oldest_instead_of_refusing(tmp_path):
+    a = new_auth(tmp_path)
+    for _ in range(1005):
+        a._ceremony("signin")
+    assert len(a.ceremonies) == 1000
+    k = SoftKey()
+    enroll(a, k)
+    assert a.session(signin(a, k)) is not None
 
 
 def test_recovery_before_enrollment_is_refused(tmp_path):
@@ -633,15 +711,16 @@ def test_an_unreadable_store_fails_closed(tmp_path):
         new_auth(tmp_path, store=Broken()).session(cookie)
 
 
-def test_failed_attempts_are_limited(tmp_path):
+def test_failed_attempts_are_limited_before_anything_is_checked(tmp_path):
     a = new_auth(tmp_path)
     for _ in range(10):
         with pytest.raises(AuthError) as e:
             a.enroll_begin("x" * 40, "9.9.9.9")
         assert e.value.status == 403
     with pytest.raises(AuthError) as e:
-        a.enroll_begin("x" * 40, "9.9.9.9")
+        a.enroll_begin(TOKEN, "9.9.9.9")  # the right token, but nothing is checked any more from there
     assert e.value.status == 429
+    assert a.enroll_begin(TOKEN, "8.8.8.8")["ceremony"]  # another address still can
 
 
 def test_recovery_codes_read_like_invite_codes():
@@ -685,6 +764,24 @@ def test_gcs_store_creates_atomically_with_its_own_token():
         httpx.Response(200, json={"items": [{"name": "uses/b"}], "nextPageToken": "p"}),
         httpx.Response(200, json={"items": [{"name": "uses/a"}]})])  # fmt: skip
     assert s.list("uses/") == ["uses/a", "uses/b"]
+
+
+@respx.mock
+def test_gcs_store_retries_a_read_once_but_never_a_create():
+    respx.get(
+        "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token"
+    ).mock(return_value=httpx.Response(200, json={"access_token": "tok", "expires_in": 3600}))
+    read = respx.get("https://storage.googleapis.com/storage/v1/b/bkt/o/enroll%2Fspent").mock(
+        side_effect=[httpx.Response(503), httpx.Response(200, json={"a": 1})]
+    )
+    up = respx.post("https://storage.googleapis.com/upload/storage/v1/b/bkt/o").mock(
+        return_value=httpx.Response(503)
+    )
+    s = GcsStore("bkt")
+    assert s.get("enroll/spent") == {"a": 1} and read.call_count == 2
+    with pytest.raises(StoreError):
+        s.create("enroll/spent", {})
+    assert up.call_count == 1
 
 
 @respx.mock
@@ -901,6 +998,33 @@ def test_a_slow_or_broken_lake_shows_the_error_state(tmp_path, lake):
     c.cookies.set("admin_session", slow.state.auth.start_session("c"))
     r = c.get("/part/week")
     assert r.status_code == 504 and "answer in 0.2 s" in r.text
+
+
+def test_one_deadline_covers_all_the_reads_of_a_part(tmp_path, lake):
+    import time
+
+    slow = _app(tmp_path, lake.root, reader=Reader(lake, 0.6, before=lambda: time.sleep(0.25)))
+    c = TestClient(slow, base_url=ORIGIN)
+    c.cookies.set("admin_session", slow.state.auth.start_session("c"))
+    started = time.monotonic()
+    r = c.get(f"/part/failures?week={W2}")  # four reads of 0.25 s each: over the part's 0.6 s
+    assert r.status_code == 504 and time.monotonic() - started < 1.5
+
+
+def test_a_sign_in_with_a_next_that_isnt_text_still_lands_on_the_admin(tmp_path, lake):
+    app = _app(tmp_path, lake.root)
+    c = TestClient(app, base_url=ORIGIN)
+    key = SoftKey()
+    b = c.post("/api/auth/enroll/begin", json={"token": TOKEN}, headers=WRITE).json()
+    c.post(
+        "/api/auth/enroll/finish",
+        json={"ceremony": b["ceremony"], "credential": key.create(b["options"])},
+        headers=WRITE,
+    )
+    b = c.post("/api/auth/signin/begin", json={}, headers=WRITE).json()
+    r = c.post("/api/auth/signin/finish", headers=WRITE,
+               json={"ceremony": b["ceremony"], "credential": key.get(b["options"]), "next": ["/x"]})  # fmt: skip
+    assert r.status_code == 200 and r.json()["next"] == "/week"
 
 
 def test_the_admin_image_runs_the_admin(tmp_path):

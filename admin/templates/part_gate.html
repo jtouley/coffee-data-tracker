@@ -2,7 +2,7 @@
 <div data-state="{{ 'data' if data else 'empty' }}">
 {% if builds %}{{ build_picker(builds, build, "/gate") }}{% endif %}
 {% if not data %}
-  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows.</p></div>
+  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {% else %}
   {% set b = data.build %}
   {% set bad = data.by_status.get("fail", 0) + data.by_status.get("error", 0) %}

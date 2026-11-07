@@ -123,7 +123,9 @@ class Catalog:
         with self.guard:
             lock = self.locks.setdefault(build_id, threading.Lock())
         with lock:
-            if not path.exists():
+            if path.exists():
+                os.utime(path)  # used now: the newest, so pruning keeps it
+            else:
                 self._make(build_id, path)
         con = duckdb.connect(str(path), read_only=True)
         try:
@@ -200,15 +202,20 @@ class Catalog:
         self._prune(keep=path)
 
     def _prune(self, keep: Path, files: int = 4) -> None:
-        """Keep the newest few builds' files: the cache is on the instance's in-memory disk."""
+        """Keep the few most recently used builds' files (each use touches its file): the cache is on the
+        instance's in-memory disk."""
         old = sorted(self.dir.glob("catalog-*.duckdb"), key=lambda p: p.stat().st_mtime, reverse=True)
         for p in old[files:]:
             if p != keep:
                 p.unlink(missing_ok=True)
 
     def search(self, build_id: str, f: Filters) -> dict:
-        meta = self.ensure(build_id)
-        con = duckdb.connect(str(self.path(build_id)), read_only=True)
+        try:
+            meta = self.ensure(build_id)
+            con = duckdb.connect(str(self.path(build_id)), read_only=True)
+        except duckdb.IOException:  # pruned by another request between ensure and connect: make it again
+            meta = self.ensure(build_id)
+            con = duckdb.connect(str(self.path(build_id)), read_only=True)
         try:
             where, params = f.where()
             total = _one(con, "select count(*) from products")

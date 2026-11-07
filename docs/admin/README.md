@@ -33,9 +33,14 @@ Passkeys only (WebAuthn, the `webauthn` package), no password:
   whatever the secret still holds.
 - **The second passkey** is added from Account within 10 minutes of signing in, which is the enrollment session in
   practice. After two, another passkey needs a recovery code.
-- **Recovery:** a recovery code registers a new passkey and signs out every session. Each code works once.
+- **Recovery:** a recovery code registers a new passkey, retires every earlier passkey (recovery means they are
+  lost) and signs out every session. Each code works once. Then add the second passkey again from Account within 10
+  minutes. Lost only one passkey? Recover from a device you control: it retires both, then add the other again.
+  New recovery codes come with the write API; Account shows how many are left.
 - **Sessions** last 12 hours from sign-in and never renew. Sign out revokes the session on the server; "Sign out
   everywhere" revokes them all.
+- **Limits:** failed tokens, codes and passkeys are counted per address and overall, and once over the limit
+  nothing more is checked for 15 minutes.
 - **Every route but `/health`, the sign-in pages and their API, and static files needs a session**, checked before
   any route runs, so a new route is protected by default. A missing or weak setting switches the whole service off
   (503), and it never falls back to showing data. No setting or environment variable turns sign-in off.

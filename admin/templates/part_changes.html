@@ -2,7 +2,7 @@
 <div data-state="{{ 'data' if data and data.recorded and data.total else 'empty' }}">
 {% if builds %}{{ build_picker(builds, build, "/changes") }}{% endif %}
 {% if not data %}
-  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows.</p></div>
+  <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {% elif not data.recorded %}
   <div class="state empty mt16"><h2 class="section">Not recorded for this build</h2><p class="body">Build {{ build }} has no <code>release_changes</code> ops table. Builds write it from #124 on.</p></div>
 {% elif not data.total %}

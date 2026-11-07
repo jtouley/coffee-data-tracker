@@ -116,10 +116,22 @@ class GcsStore:
             return {"Authorization": f"Bearer {self._token[0]}"}
 
     def _call(self, method: str, url: str, headers: dict | None = None, **kw) -> httpx.Response:
-        try:
-            return self.http.request(method, url, headers=self._auth() | (headers or {}), **kw)
-        except httpx.HTTPError as e:
-            raise StoreError(f"{method} to the state bucket failed: {type(e).__name__}") from e
+        """One request. A read (GET) is tried again once after a dropped connection, a 429 or a 5xx; a create is
+        never retried, since a retried one-shot create that had landed would read as "already exists"."""
+        tries = 2 if method == "GET" else 1
+        for attempt in range(tries):
+            try:
+                r = self.http.request(method, url, headers=self._auth() | (headers or {}), **kw)
+            except httpx.HTTPError as e:
+                if attempt + 1 < tries:
+                    time.sleep(0.5)
+                    continue
+                raise StoreError(f"{method} to the state bucket failed: {type(e).__name__}") from e
+            if attempt + 1 < tries and (r.status_code == 429 or r.status_code >= 500):
+                time.sleep(0.5)
+                continue
+            return r
+        raise AssertionError("unreachable")
 
     def create(self, key: str, record: dict) -> bool:
         r = self._call(
@@ -157,7 +169,10 @@ class GcsStore:
             r = self._call("GET", f"{GCS}/storage/v1/b/{self.bucket}/o", params=params)
             if r.status_code != 200:
                 raise StoreError(f"list {prefix}: HTTP {r.status_code}")
-            body = r.json()
+            try:
+                body = r.json()
+            except ValueError as e:
+                raise StoreError(f"list {prefix}: not JSON") from e
             out += [i["name"] for i in body.get("items", [])]
             token = body.get("nextPageToken")
             if not token:

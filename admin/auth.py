@@ -6,7 +6,8 @@
   moment it succeeds, whatever the secret still holds.
 - **The second passkey** is added from a session at most FRESH_S old, which in practice is the enrollment session.
   Any passkey after that needs a session and a recovery code.
-- **Recovery:** a recovery code (each works once) registers a new passkey and signs out every session.
+- **Recovery:** a recovery code (each works once) registers a new passkey, retires every earlier passkey (recovery
+  means they are lost) and signs out every session.
 - **Sessions** last SESSION_S (12 hours) from sign-in and never renew. Each is a server-side record; the cookie
   carries its random id, signed with the session secret, so a cookie made under another secret is refused before
   the store is asked. Sign-out revokes the session server-side; "sign out everywhere" revokes all of them.
@@ -34,7 +35,7 @@ from webauthn import (
     verify_registration_response,
 )
 from webauthn.helpers import base64url_to_bytes, bytes_to_base64url
-from webauthn.helpers.exceptions import InvalidAuthenticationResponse, InvalidRegistrationResponse
+from webauthn.helpers.exceptions import WebAuthnException
 from webauthn.helpers.structs import (
     AuthenticatorSelectionCriteria,
     PublicKeyCredentialDescriptor,
@@ -127,16 +128,29 @@ class Limiter:
         self.events: dict[str, deque[float]] = {}
         self.lock = threading.Lock()
 
+    def _live(self, key: str, now: float) -> deque[float]:
+        q = self.events.setdefault(key, deque())
+        while q and q[0] < now - self.window:
+            q.popleft()
+        if len(self.events) > 10_000:  # forget keys with nothing in the window
+            for k in [k for k, v in self.events.items() if not v and k != key]:
+                del self.events[k]
+        return q
+
     def hit(self, key: str) -> bool:
+        """Count one event; False (and not counted) if the key is already at its limit."""
         now = _now()
         with self.lock:
-            q = self.events.setdefault(key, deque())
-            while q and q[0] < now - self.window:
-                q.popleft()
+            q = self._live(key, now)
             if len(q) >= self.n:
                 return False
             q.append(now)
             return True
+
+    def full(self, key: str) -> bool:
+        """Whether the key is at its limit, without counting anything."""
+        with self.lock:
+            return len(self._live(key, _now())) >= self.n
 
 
 class Auth:
@@ -158,6 +172,7 @@ class Auth:
         self.ceremonies: dict[str, Ceremony] = {}
         self.sessions: dict[str, tuple[Session, float]] = {}  # key -> (session, checked_at)
         self.lock = threading.Lock()
+        self.add_lock = threading.Lock()  # one passkey registration decided at a time
         self.begin_limit = Limiter(30, 900)  # ceremonies started per client IP
         self.fail_limit = Limiter(10, 900)  # refused tokens, codes and assertions per client IP
         self.global_fail = Limiter(50, 900)  # refused tokens and codes from anywhere
@@ -183,6 +198,8 @@ class Auth:
             rec = self._read(self.store.get, key)
             if rec:
                 out[rec["credential_id"]] = Credential(**rec)
+        for key in self._read(self.store.list, "retired/"):  # passkeys a recovery retired
+            out.pop(key.rsplit("/", 1)[1], None)
         for cid in out:  # the highest counter any use recorded (names: uses/<id>/<count>-<time>-<rand>)
             uses = self._read(self.store.list, f"uses/{cid}/")
             if uses:
@@ -194,15 +211,13 @@ class Auth:
         return self._enroll_hash is not None and self.enrollment() is None
 
     def _recovery_hashes(self) -> set[str]:
+        """The recovery codes made at enrollment (hashes). Issuing a new set comes with the write API."""
         spent = self.enrollment()
-        if not spent:
-            return set()
-        sets = [
-            spent["recovery"],
-            *(self._read(self.store.get, k) for k in self._read(self.store.list, "recovery-sets/")),
-        ]
-        latest = max((s for s in sets if s), key=lambda s: s["created_at"])
-        return set(latest["hashes"])
+        return set(spent["recovery"]["hashes"]) if spent else set()
+
+    def recovery_left(self) -> int:
+        used = {k.rsplit("/", 1)[1] for k in self._read(self.store.list, "recovery-used/")}
+        return len(self._recovery_hashes() - used)
 
     def _code_ok(self, code: str) -> str | None:
         h = sha256(normalize_code(code))
@@ -218,8 +233,8 @@ class Auth:
         with self.lock:
             for k in [k for k, c in self.ceremonies.items() if c.expires_at < now]:
                 del self.ceremonies[k]
-            if len(self.ceremonies) > 1000:
-                raise AuthError("Too many sign-in attempts at once. Try again in a few minutes.", 429)
+            while len(self.ceremonies) >= 1000:  # a flood evicts the oldest, never refuses everyone
+                del self.ceremonies[min(self.ceremonies, key=lambda k: self.ceremonies[k].expires_at)]
             self.ceremonies[cid] = Ceremony(challenge, kind, now + CEREMONY_S, extra or {})
         return cid, challenge
 
@@ -232,6 +247,11 @@ class Auth:
 
     def _limited(self, ip: str) -> None:
         if not self.begin_limit.hit(ip):
+            raise AuthError("Too many attempts. Try again in 15 minutes.", 429)
+
+    def _not_blocked(self, ip: str) -> None:
+        """Refuse before any token, code or passkey is checked once this IP, or everyone, failed too often."""
+        if self.fail_limit.full(ip) or self.global_fail.full("*"):
             raise AuthError("Too many attempts. Try again in 15 minutes.", 429)
 
     def _failed(self, ip: str) -> None:
@@ -265,7 +285,7 @@ class Auth:
                 expected_origin=self.origin,
                 require_user_verification=True,
             )
-        except (InvalidRegistrationResponse, ValueError, KeyError, TypeError) as e:
+        except (WebAuthnException, ValueError, KeyError, TypeError) as e:
             raise AuthError("The passkey couldn't be registered. Try again.") from e
         return Credential(
             credential_id=bytes_to_base64url(v.credential_id),
@@ -279,6 +299,7 @@ class Auth:
 
     def enroll_begin(self, token: str, ip: str) -> dict:
         self._limited(ip)
+        self._not_blocked(ip)
         if not self.enroll_open():
             raise AuthError("Enrollment is closed: a passkey is already registered.", 403)
         assert self._enroll_hash is not None
@@ -312,6 +333,7 @@ class Auth:
 
     def add_begin(self, session: Session, code: str | None, ip: str) -> dict:
         self._limited(ip)
+        self._not_blocked(ip)
         rule = self.add_rule(session)
         if rule == "stale":
             raise AuthError("Sign in again, then add the passkey within 10 minutes.", 403)
@@ -329,17 +351,25 @@ class Auth:
         if c.extra.get("session") != session.key:
             raise AuthError("That sign-in step expired. Start again.")
         cred = self._verify_registration(c, credential, "session")
-        if (h := c.extra.get("code")) and not self._read(
-            self.store.create, f"recovery-used/{h}", {"used_at": _iso(_now()), "for": "add"}
-        ):
-            raise AuthError("That recovery code was just used.", 403)
-        self._read(self.store.create, f"credentials/{cred.credential_id}", cred.__dict__)
+        with self.add_lock:  # the rule again, now: another registration may have finished meanwhile
+            rule = self.add_rule(session)
+            if rule == "stale":
+                raise AuthError("Sign in again, then add the passkey within 10 minutes.", 403)
+            h = c.extra.get("code")
+            if rule == "code" and not h:
+                raise AuthError("Two passkeys are registered now: another needs a recovery code.", 403)
+            if h and not self._read(
+                self.store.create, f"recovery-used/{h}", {"used_at": _iso(_now()), "for": "add"}
+            ):
+                raise AuthError("That recovery code was just used.", 403)
+            self._read(self.store.create, f"credentials/{cred.credential_id}", cred.__dict__)
         return cred
 
     # Recovery ---------------------------------------------------------------------------------------------
 
     def recover_begin(self, code: str, ip: str) -> dict:
         self._limited(ip)
+        self._not_blocked(ip)
         if self.enrollment() is None:
             raise AuthError("Nothing to recover: no passkey is registered yet.", 403)
         h = self._code_ok(code or "")
@@ -356,7 +386,11 @@ class Auth:
             self.store.create, f"recovery-used/{h}", {"used_at": _iso(_now()), "for": "recover"}
         ):
             raise AuthError("That recovery code was just used.", 403)
-        self._read(self.store.create, f"credentials/{cred.credential_id}", cred.__dict__)
+        with self.add_lock:
+            earlier = list(self.credentials())
+            self._read(self.store.create, f"credentials/{cred.credential_id}", cred.__dict__)
+            for cid in earlier:  # recovery means they are lost: none of them signs in again
+                self._read(self.store.create, f"retired/{cid}", {"at": _iso(_now()), "by": "recover"})
         self.revoke_all()
         return self.start_session(cred.credential_id)
 
@@ -372,6 +406,7 @@ class Auth:
         return {"ceremony": cid, "options": options_to_json(opts)}
 
     def signin_finish(self, ceremony: str, credential: dict, ip: str) -> str:
+        self._not_blocked(ip)
         c = self._take(ceremony, "signin")
         raw = credential.get("rawId") if isinstance(credential, dict) else None
         cred = self.credentials().get(raw) if isinstance(raw, str) else None
@@ -390,7 +425,7 @@ class Auth:
                 credential_current_sign_count=cred.sign_count,
                 require_user_verification=True,
             )
-        except (InvalidAuthenticationResponse, ValueError, KeyError, TypeError) as e:
+        except (WebAuthnException, ValueError, KeyError, TypeError) as e:
             self._failed(ip)
             raise AuthError("The passkey didn't sign in. Try again.", 403) from e
         stamp = f"{v.new_sign_count:012d}-{int(_now())}-{secrets.token_hex(4)}"

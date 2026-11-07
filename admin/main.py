@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import asyncio
 import contextlib
+import contextvars
 import hashlib
 import json
 import logging
@@ -19,6 +20,7 @@ import mimetypes
 import re
 import time
 from collections.abc import Callable
+from concurrent.futures import ThreadPoolExecutor
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -151,15 +153,30 @@ class LakeTimeout(Exception):
     pass
 
 
+# The deadline of the page part being read: every lake read of one part shares it (Reader.run).
+DEADLINE: contextvars.ContextVar[float | None] = contextvars.ContextVar("admin_deadline", default=None)
+
+
 class Reader:
-    """Runs a query function (lake, con, *args) in a thread with a timeout, interrupting DuckDB if it runs over.
-    `before` runs first in the thread: tests use it to make the lake slow or broken."""
+    """Runs a query function (lake, con, *args) on the lake's own small thread pool, so slow reads never hold the
+    threads sign-in uses. All the reads of one page part share one deadline (`timeout_s` from the part's start), well
+    under Cloud Run's request timeout; at the deadline DuckDB is interrupted and the part shows its timeout state.
+    Query functions read through `con`, so the interrupt reaches them. `before` runs first in the thread: tests use it
+    to make the lake slow or broken."""
 
     def __init__(self, lake: Lake, timeout_s: float = 25.0, before: Callable[[], None] | None = None):
         self.lake, self.timeout_s, self.before = lake, timeout_s, before
         self._listed = time.monotonic()
+        self.pool = ThreadPoolExecutor(max_workers=4, thread_name_prefix="lake")
+
+    def start(self) -> None:
+        DEADLINE.set(time.monotonic() + self.timeout_s)
 
     async def run(self, fn: Callable, *args) -> Any:
+        deadline = DEADLINE.get() or time.monotonic() + self.timeout_s
+        left = deadline - time.monotonic()
+        if left <= 0:
+            raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s")
         if self.lake.remote and time.monotonic() - self._listed > 300:  # see releases written since
             quality.forget_listings()
             self._listed = time.monotonic()
@@ -168,16 +185,19 @@ class Reader:
         def call():
             if self.before:
                 self.before()
-            return fn(self.lake, con, *args)
+            try:
+                return fn(self.lake, con, *args)
+            finally:
+                with contextlib.suppress(Exception):
+                    con.close()
 
+        future = asyncio.get_running_loop().run_in_executor(self.pool, call)
         try:
-            return await asyncio.wait_for(asyncio.to_thread(call), self.timeout_s)
+            return await asyncio.wait_for(future, left)
         except TimeoutError as e:
-            con.interrupt()
+            with contextlib.suppress(Exception):
+                con.interrupt()  # the thread closes the connection when the query stops
             raise LakeTimeout(f"the lake didn't answer in {self.timeout_s:g} s") from e
-        finally:
-            with contextlib.suppress(Exception):  # closing an interrupted connection
-                con.close()
 
 
 def _client_ip(request: Request, hops: int) -> str:
@@ -266,10 +286,10 @@ def create_app(
                 response = JSONResponse({"detail": "Refused: not from this site."}, 403)
             elif public:
                 if (method, path) in {("GET", "/signin"), ("GET", "/enroll"), ("GET", "/recover")}:
-                    request.state.session = auth.session(request.cookies.get(cookie))
+                    request.state.session = await asyncio.to_thread(auth.session, request.cookies.get(cookie))
                 response = await call_next(request)
             else:
-                s = auth.session(request.cookies.get(cookie))
+                s = await asyncio.to_thread(auth.session, request.cookies.get(cookie))
                 if s is None:
                     response = _signed_out(request, ended=bool(request.cookies.get(cookie)))
                 else:
@@ -312,9 +332,15 @@ def create_app(
         response.set_cookie(cookie, value, max_age=SESSION_S, path="/", secure=settings.secure_cookies,
                             httponly=True, samesite="strict")  # fmt: skip
 
-    def _next(raw: str | None) -> str:
+    def _next(raw: object) -> str:
         """Only a path on this site: never another origin (`//evil`, `https://…`)."""
-        if raw and raw.startswith("/") and not raw.startswith("//") and "\\" not in raw:
+        if (
+            isinstance(raw, str)
+            and raw
+            and raw.startswith("/")
+            and not raw.startswith("//")
+            and "\\" not in raw
+        ):
             u = urlsplit(raw)
             if not u.scheme and not u.netloc:
                 return raw
@@ -452,7 +478,8 @@ def create_app(
         s: Session = request.state.session
         creds = await asyncio.to_thread(auth.credentials)
         rule = await asyncio.to_thread(auth.add_rule, s)
-        return page("account.html", creds=list(creds.values()), rule=rule, session=s, title="Account",
+        left = await asyncio.to_thread(auth.recovery_left)
+        return page("account.html", creds=list(creds.values()), rule=rule, session=s, title="Account", codes_left=left,
                     expires=datetime.fromtimestamp(s.expires_at, UTC), on="account")  # fmt: skip
 
     @app.post("/api/auth/add/begin")
@@ -532,6 +559,7 @@ def create_app(
     async def part(name: str, files: str, build: Callable) -> HTMLResponse:
         """A page's data region: its template with the query's result, or the error state."""
         started = datetime.now(UTC)
+        reader.start()  # one deadline for all of this part's reads
         try:
             ctx = await build()
         except LakeTimeout as e:

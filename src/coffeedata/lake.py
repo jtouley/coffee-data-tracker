@@ -820,7 +820,7 @@ class Lake:
                 cur = self.connect().execute(sql.format(self.scan(table), key, key))
                 break
             except Exception as e:  # noqa: BLE001 - duckdb.IOException; duckdb is imported lazily
-                if self.remote and no_files(e):
+                if self.remote and no_files(e) and not self.read_only:  # a reader stages nothing
                     local = f"read_parquet(['{self.root / GLOBS[table]}'], union_by_name = true, hive_partitioning = false)"
                     cur = self.connect().execute(sql.format(local, key, key))
                     break

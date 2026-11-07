@@ -16,6 +16,12 @@ from coffeedata import control, quality
 from coffeedata.connectors import CONNECTORS
 from coffeedata.lake import Lake, no_files
 
+# A build passed when its gate row says so and no node failed: quality.builds' rule (and dbt stg_builds'), checked
+# against it in tests/test_admin.py, written here once so the admin reads it through the request's connection.
+PASSED = (
+    "bool_or(kind = 'build' and status = 'pass') and not bool_or(coalesce(status, '') in ('error', 'fail'))"
+)
+
 STAGES = ("merge", "enrich", "classify", "build")
 LANDED = ("done", "deadline")
 HOST = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$")
@@ -81,8 +87,7 @@ def builds(lake: Lake, con, run_date: str | None = None) -> list[dict]:
     where = "and run_date = ?" if run_date else ""
     sql = f"""
         select build_id, any_value(run_date)::varchar as run_date, max(built_at) as built_at,
-               bool_or(kind = 'build' and status = 'pass')
-                 and not bool_or(coalesce(status, '') in ('error', 'fail')) as passed,
+               {PASSED} as passed,
                any_value(git_sha) as git_sha, any_value(ci_run_url) as ci_run_url,
                any_value(dbt_version) as dbt_version, max(duration_s) as duration_s
         from {lake.scan("builds")} where build_id is not null {where}
@@ -96,7 +101,14 @@ def builds(lake: Lake, con, run_date: str | None = None) -> list[dict]:
 def served(lake: Lake, con) -> dict | None:
     """The release customers get now (marts/release.parquet), with its serving_log row: who served it, why, and
     the CI run that did."""
-    cur = quality.served(lake)
+    src = ", ".join("'" + s.replace("'", "''") + "'" for s in lake.mart_sources("release"))
+    try:  # quality.served's read, through this connection; only a missing file means nothing is served
+        rows = _rows(con.execute(f"select * from read_parquet([{src}])"))
+    except Exception as e:  # noqa: BLE001 - duckdb.IOException / HTTPException
+        if no_files(e) or "HTTP 404" in str(e):
+            return None
+        raise
+    cur = rows[0] if rows else None
     if not cur:
         return None
     out: dict[str, Any] = {k: (str(v) if v is not None else None) for k, v in cur.items()}
@@ -126,10 +138,18 @@ def week_build(lake: Lake, con, week: str) -> dict | None:
 # --- Week ---------------------------------------------------------------------------------------------------
 
 
+def job_rows(lake: Lake, con, run_date: str) -> list[dict]:
+    """control.rows through this connection: the latest row per attempt (only a 'running' row: it died)."""
+    q = f"""select * from {lake.scan("job_manifests")} where run_date = ?
+            qualify row_number() over (partition by attempt_id order by (status <> 'running') desc,
+                                       ended_at desc nulls last) = 1"""
+    return [r for r in _rows(con.execute(q, [date.fromisoformat(run_date)])) if r["attempt_id"]]
+
+
 def week(lake: Lake, con, run_date: str) -> dict:
     """Did the week land: every job attempt (job_manifests, the latest row per attempt), each connector's passes in
     order, the stages after the crawl, and the served release."""
-    attempts = _empty_ok(lambda: control.rows(lake, run_date), [])
+    attempts = _empty_ok(lambda: job_rows(lake, con, run_date), [])
     # One order however DuckDB reads the files: jobs that start in the same second sort by job, connector, attempt.
     attempts.sort(key=lambda r: (r["started_at"], r["job"] or "", r["connector"] or "", r["attempt_id"]))
     by_connector: dict[str, int] = {}
@@ -369,13 +389,12 @@ def failure_trend(lake: Lake, con, limit: int = 12) -> list[dict]:
 # --- Gate ---------------------------------------------------------------------------------------------------
 
 
-def previous_passing(lake: Lake, build_id: str) -> str | None:
-    order = quality.builds(lake)
-    ids = [b for b, _, _ in order]
+def previous_passing(all_builds: list[dict], build_id: str) -> str | None:
+    """The last passing build before this one (all_builds: builds(), newest first)."""
+    ids = [b["build_id"] for b in all_builds]
     if build_id not in ids:
         return None
-    before = [b for b, _, ok in order[: ids.index(build_id)] if ok]
-    return before[-1] if before else None
+    return next((b["build_id"] for b in all_builds[ids.index(build_id) + 1 :] if b["passed"]), None)
 
 
 def gate(lake: Lake, con, build_id: str) -> dict:
@@ -398,7 +417,8 @@ def gate(lake: Lake, con, build_id: str) -> dict:
             [build_id],
         )
     )
-    prev = previous_passing(lake, build_id)
+    all_builds = builds(lake, con)
+    prev = previous_passing(all_builds, build_id)
     metrics = _rows(
         con.execute(
             f"""with m as (select build_id, unique_id, value from {scan} where kind = 'metric' and build_id in (?, ?))
@@ -413,7 +433,7 @@ def gate(lake: Lake, con, build_id: str) -> dict:
         a, b = m["value"], m["previous"]
         m["change"] = None if a is None or b is None else a - b
         m["ratio"] = None if a is None or not b else a / b
-    info = [b for b in builds(lake, con) if b["build_id"] == build_id]
+    info = [b for b in all_builds if b["build_id"] == build_id]
     by_status: dict[str, int] = {}
     for t in tests:
         by_status[t["status"] or "none"] = by_status.get(t["status"] or "none", 0) + 1

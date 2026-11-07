@@ -277,7 +277,7 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await c2.close();
     });
 
-    await check("recovery: a code registers a new passkey and signs out every session; it works once", async () => {
+    await check("recovery: a code registers a new passkey, retires the lost ones, signs out every session; it works once", async () => {
       await page.goto(`${base}/account`);
       await page.click("button[data-signout='/api/auth/signout-all']");
       await page.waitForURL(/\/signin$/);
@@ -289,7 +289,8 @@ async function api(page, path, body, headers = { "X-Requested-With": "fetch" }) 
       await page.click("button[type=submit]");
       await page.waitForURL(/\/week$/);
       await page.goto(`${base}/account`);
-      assert.match(await page.textContent("caption"), /Passkeys \(3\)/);
+      assert.match(await page.textContent("caption"), /Passkeys \(1\)/); // the lost ones are retired
+      assert.match(await page.textContent("main"), /9 of 10 unused/);
       await page.click("button[data-signout='/api/auth/signout']");
       await page.waitForURL(/\/signin$/);
       await page.goto(`${base}/recover`);

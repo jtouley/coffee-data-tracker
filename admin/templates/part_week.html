@@ -5,7 +5,7 @@
 {% if not data or not data.rows %}
   <div class="state empty mt16">
     <h2 class="section">Nothing for week {{ week or "—" }} yet</h2>
-    <p class="body"><code>job_manifests</code> has no rows for it{% if not weeks %}, and the lake has no weeks at all{% endif %}.{% if weeks and week != weeks[0] %} <a class="ev" href="/week?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
+    <p class="body"><code>job_manifests</code> has no rows for it{% if not weeks %}, and the lake has no weeks at all{% endif %}. Each crawl, merge, enrich, classify and build writes a row when it starts and when it ends.{% if weeks and week != weeks[0] %} <a class="ev" href="/week?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
   </div>
 {% else %}
   <p class="answer" data-answer>{{ data.landed }} of {{ data.connectors | length }} connectors landed{% for job, st in data.stages.items() %} · {{ job }} {% if st in ("failed", "missing") %}{{ status(st) }}{% else %}{{ st }}{% endif %}{% endfor %}{% if served %} · serving week {{ served.run_date[:10] }}{% endif %}</p>
