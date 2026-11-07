@@ -1,6 +1,6 @@
 {% from "_macros.html" import status, ev, write_off, write_button, decide_dialog %}
 {% macro summary(r) -%}
-{{ ([(r.supports ~ " supports") if r.supports] + [(r.doubts ~ " doubts") if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["held"] if r.held else []) + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
+{{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["held"] if r.held else []) + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
 {%- endmacro %}
 {# The decision a product's flags propose: exclude when its removal is ready or a listing rule supports it while it
    is coffee; include (keep it) when the guard holds it or a flag argues to restore it. #}
@@ -60,7 +60,7 @@
 
   <h2 class="section">Store</h2>
   {% set off = crawl and not crawl.crawl %}
-  <p class="body">Crawl flag {{ status("off" if off else "on") }}{% if crawl %}: {{ crawl.reason }} ({{ crawl.actor }}, {{ t(crawl.at) }} UTC){% endif %}. Off stops scheduled crawls of the store once a draft carrying it is published; a live check still runs.</p>
+  <p class="body">Crawl flag: <strong>{{ "off" if off else "on" }}</strong>{% if crawl %} ({{ crawl.reason }}; {{ crawl.actor }}, {{ t(crawl.at) }} UTC){% endif %}. Off stops scheduled crawls of the store once a draft carrying it is published; a live check still runs.</p>
   {% if not writes_off %}
   <form class="jobform" data-write="/api/roasters/{{ pr.roaster_id }}/crawl" data-confirm="Turn the crawl flag {{ 'on' if off else 'off' }} for {{ pr.roaster_id }}? It goes into the next draft; scheduled crawls follow once it is published." data-confirm-label="Turn {{ 'on' if off else 'off' }}">
     <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="crawl" value="{{ 'on' if off else 'off' }}"><input type="hidden" name="seen" value="{{ 'off' if off else 'on' }}">
@@ -124,7 +124,7 @@
     <p class="body">The code defines each rule; these settings configure it. A change goes into the next draft, and nothing changes for anyone until it is published. One that changes how a rule decides (a polarity, readiness, the guard’s mode) needs its full evaluation before Publish.</p>
     <dl class="facts">{% for t_ in rule_types.values() %}<dt><code>{{ t_.id }}</code> ({{ t_.family }})</dt><dd>{{ t_.doc }}</dd>{% endfor %}</dl>
     {% if writes_off %}<pre class="json">{{ settings_json }}</pre>{% else %}
-    <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-confirm-label="Save">
+    <form class="settings-form" data-write="/api/settings" data-preview="/api/settings/check" data-confirm-title="Save the rule settings?" data-confirm-label="Save">
       <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="based_on" value="{{ settings.version_id or '' }}">
       <label class="flabel" for="settings-doc">Settings (JSON; checked against the code’s schema)</label>
       <textarea class="input json" id="settings-doc" name="doc" rows="18" spellcheck="false" autocomplete="off">{{ settings_json }}</textarea>

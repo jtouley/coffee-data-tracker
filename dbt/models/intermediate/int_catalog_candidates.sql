@@ -4,10 +4,10 @@
 -- version_since: when the classifier's current answer appeared, the later of the latest version's first record and
 -- its verdict (a verdict arriving for an unchanged version flips it too). relevant: a product the flags are about,
 -- public in the served release or coffee now; the rest are already out and stay out.
-{%- set prev = (var('previous_release', {}) or {}).get('public_coffee') %}
+{%- set prev = served_file('public_coffee') %}
 with prev as (
     {%- if prev %}
-    select coffee_id from read_parquet('{{ prev.path }}', hive_partitioning = false)
+    select coffee_id from read_parquet('{{ prev }}', hive_partitioning = false)
     {%- else %}
     select null::varchar as coffee_id where false
     {%- endif %}

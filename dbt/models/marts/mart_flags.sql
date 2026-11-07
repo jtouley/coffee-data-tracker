@@ -6,14 +6,14 @@
 -- public_rows: the public rows a removal touches, its public_coffee row and its public_price_event rows (this
 -- build's, else the served release's for a product this build already removes). And what the Case page shows of
 -- the product, so it reads one file: its classifier answer, link, tags, bag sizes, prices and description.
-{%- set prev = (var('previous_release', {}) or {}).get('public_price_event') %}
+{%- set prev = served_file('public_price_event') %}
 with flags as ({{ all_flags() }}),
 events as (
     select coffee_id, count(*) as n from {{ ref('public_price_event') }} group by coffee_id
 ),
 prev_events as (
     {%- if prev %}
-    select coffee_id, count(*) as n from read_parquet('{{ prev.path }}', hive_partitioning = false) group by coffee_id
+    select coffee_id, count(*) as n from read_parquet('{{ prev }}', hive_partitioning = false) group by coffee_id
     {%- else %}
     select null::varchar as coffee_id, 0 as n where false
     {%- endif %}

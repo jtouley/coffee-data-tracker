@@ -78,7 +78,7 @@ def test_the_queue_groups_by_evidence_and_a_case_shows_its_evidence(tmp_path, la
     assert "3 products with open flags · 1 held · 2 ready to remove" in page
     assert "2 products with the same evidence" in page and "Exclude these 2…" in page
     assert page.index("d1") < page.index("s1")  # more public rows first
-    assert "1 doubts · 1 restore · held" in page and "2 supports · ready" in page
+    assert "1 doubt · 1 restore · held" in page and "2 supports · ready" in page
     assert "&lt;b&gt;d1&lt;/b&gt;" in page and "<b>d1</b>" not in page  # store text is escaped
     assert c.get("/part/queue?state=held").text.count('href="/queue?case=') == 1
     assert "No open flag matches" in c.get("/part/queue?roaster=nobody.example").text

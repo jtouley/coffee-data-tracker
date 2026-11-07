@@ -334,7 +334,7 @@ const errors = [];
       await settled(page);
       assert.match(await page.textContent("[data-answer]"), /3 products with open flags · 0 held · 2 ready to remove/);
       assert.match(await page.textContent("tr.grp"), /2 products with the same evidence: non_coffee_type, verdict_flip · 2 supports · ready/);
-      assert.match(await page.textContent("main"), /1 doubts · 1 restore/);
+      assert.match(await page.textContent("main"), /1 doubt · 1 restore/);
       await shoot(page, "queue");
     });
 
