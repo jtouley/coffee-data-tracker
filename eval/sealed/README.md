@@ -33,3 +33,8 @@ this total; changes before it weren't counted. Add each later change's count her
   of the lake (runs 2026-10-26 to 11-02: 104,429 distinct versions, 1,895 roasters), on all 1,196 train and
   validation products, and on the public tables' hashes from the #113 fixture lake (built twice with each). 0 of
   them in this sealed set (compared as a count, without reading its products).
+- the owner's include/exclude decisions (`stg_decisions`, `stg_snapshots.decision`, macro `decided`; the admin's
+  Catalog, `admin-actions`) changed **0** products by themselves: with no decisions snapshot, `decided()` returns
+  `stg_products.is_coffee` unchanged (`tests/test_drafts.py` builds a lake with and without one). Each decision the
+  owner later publishes changes exactly its own products, listed in its draft's `release_changes`; those are per-item
+  corrections by the owner, not a rule, so they are not added to this total. 0 of them in this sealed set.

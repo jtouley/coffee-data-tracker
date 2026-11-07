@@ -1,9 +1,10 @@
 # admin.registry.coffee: the command center's pages
 
-The first admin pages: read-only views of what the pipeline wrote to the lake, for one person who wants the raw
-truth fast. The service, its sign-in and its deployment are in [README.md](README.md). The wider plan (queue,
-drafts, publish) is `docs/design/admin-registry.md` (#112). This file is the design pass made before any code, and
-what changed after the screens were driven in a browser.
+The owner's command center: what the pipeline wrote to the lake, and the actions that replace the CLI (start any
+pipeline job, include or exclude a coffee, build a draft, Publish, Roll back). The service, its sign-in and its
+deployment are in [README.md](README.md); the wider plan is `docs/design/admin-registry.md` (#112). This file is the
+design pass, first for the read-only pages (#125), then for the actions and the cut that came with them (below,
+"Actions").
 
 ## Who and what
 
@@ -112,3 +113,97 @@ runs on every page and state in both themes.
 
 Screenshots are taken before, during and after the build, at 390 px and 1,280 px, light and dark. The findings of each
 pass and what changed are in the PR.
+
+## Actions (the second pass)
+
+### Who and what, again
+
+The same owner, now doing what used to need `gcloud run jobs execute`, `coffeedata rollback` or a hand edit:
+1. **Run a job off-cycle:** a crawl (one connector, all five, or one roaster), the Shopify retry, fetch health,
+   merge, enrich, classify, the build. A test crawl is the default; counting it for a week is a deliberate choice.
+2. **Correct the catalog:** keep a product the classifier dropped, or drop one it kept, alone or as a group, with a
+   reason, and undo it.
+3. **Release it:** build the corrections as a draft, read what changes, Publish, or Roll back.
+
+### Five pages, one way to do each task
+
+| Page | Answer line | Actions |
+|---|---|---|
+| Week | connectors landed · merge · enrich · classify · build · serving week; then the week's failures | Test crawl (a link per failed store, to Jobs, prefilled) |
+| Jobs | N running · N started from here · last by whom | Start any job (a confirm with the exact arguments), Cancel |
+| Release | serving X · N decision changes not in it · the latest draft's state | Build a draft, Publish, Roll back, Discard |
+| Catalog | N of M products | Include or Exclude one product, or a chosen group; Undo |
+| Log | N writes recorded | (read only: every write, filterable; the decisions download for `decide export-labels`) |
+
+- **One way each.** A job starts only from Jobs (Week's and Release's links go there, prefilled). A decision is made
+  only in the Catalog, with one dialog for one product or a group. A release changes only on Release.
+- **One primary action per view** (Krehel `better-layout`): Start… on a job's form, Build a draft or Publish on
+  Release, the decide button in its sheet. Everything else is a text button.
+- **The confirm step says exactly what happens** (Owl-Listener `form-design`, `ux-writing`): the Cloud Run job and
+  its arguments as they will run, the guards' refusals in words, and the scheduled window with a field for the
+  reason to override it. Confirm is off while anything refuses.
+- **Destructive confirms** (Cancel a run, Roll back, a Publish where more than 50 public rows leave) fill the confirm
+  button with `--danger`; the last also asks for the typed count. No other new colour.
+- **Outcome and Undo** (Owl-Listener `feedback-patterns`): a write's result is one line at the foot of the screen
+  (`role=status`), with Undo after a decision; the region it changed reloads in place.
+
+### States of a write
+
+From `state-machine` and `error-handling-ux`: every write is in one state, with a way out.
+
+| State | What the owner sees |
+|---|---|
+| Ready | the form, or the row's Include/Exclude button |
+| Checking | the confirm sheet: "Checking what this starts…", then the plan |
+| Refused | each reason in `--danger` text; Confirm off; a window refusal offers the override field |
+| Working | the bag page's filling cup in the Confirm button, which ignores further clicks (and the server acts once per key) |
+| Done | the outcome line; the region reloads; Jobs polls every 5 s while anything runs |
+| Failed | the reason in the sheet (Cloud Run refused, the database down: "nothing was done"); the form keeps its key, so a retry acts once |
+| Writes off | "Actions are off: <why>", once per page; no action buttons; the pages still read |
+| Signed out | a write sends you to sign in, saying the session ended |
+
+Drafts have their own states, all derived (nothing is a status anyone sets): building, failed, built, stale (the
+served release moved), publishing, published (from `serving_log`), discarded.
+
+### Skills used (this pass)
+
+Local copies from the skills index:
+- MengTo `no-ai-design-slop`: keep Bench Scale; no tiles, badges or pills for status; hierarchy before labels.
+- Owl-Listener `critique-information-density` (the bloat pass), `state-machine`, `error-handling-ux`,
+  `feedback-patterns`, `form-design`, `ux-writing`, `loading-states`, `accessibility-audit`.
+- Krehel `better-layout` (one primary action per view; order by importance; plan for clipping) and
+  `better-typography` (tabular numbers; the sheets' serif titles).
+
+### Before, during, after
+
+- **Before** (`scratchpad/admin-actions-shots/before/`: #125's pages as merged): eight tabs' worth of reading spread
+  over five pages, two build pickers and two week pickers; the Catalog at 13 columns.
+- **During** (`admin-actions-shots/during/`, from the first Playwright runs):
+  - the decide sheet's title was the 13 px section label: now a serif title;
+  - the `input_hash` choice wrapped mid-word inside a flex label: now a block label with a hanging radio;
+  - once the Catalog scrolled sideways, the pinned checkbox column covered product names, and the decision was the
+    last column: the product is now pinned beside the checkbox and wraps (bounded) on a phone, with the decision next
+    to it;
+  - the draft's `sh -c` script made its Jobs row six lines tall: long arguments fold behind "arguments";
+  - Release put a 40-row metrics table above the changes that decide a Publish: Changes now comes first, and the
+    build facts and metrics fold;
+  - Release offered "Build a draft" again for decisions a built draft already held: it now points to that draft;
+  - the filled danger confirm failed contrast in dark mode (axe): its text is `--paper` now.
+- **After:** `admin-actions-shots/after/`, both Playwright runs (the read-only pages and the actions), every state
+  at 390 px and 1,280 px, light and dark, with axe: no serious or critical issue, no sideways scroll at 390 px.
+
+### Cut (the bloat pass)
+
+For every page, panel and control: does the owner need it to replace the CLI or to understand the week? Cut where
+not, merge where two overlap.
+- **Failures merged into Week** (one week picker; one page answers "did it land, and what failed").
+- **Gate and Changes merged into Release** with the draft, Publish and Roll back (one build picker; the gate and the
+  changes are what Publish is decided on).
+- **Week's two Failures count tables cut:** the answer line already gives each count (and now the not-attempted and
+  unavailable ones too).
+- **The Catalog's build picker cut:** the Catalog shows the served build, and Release links to any build's catalog.
+- **Catalog columns 13 to 8:** coffee, decided by and reason are one "Classifier" column; listed and stock one
+  "Status"; origin and process one; the price per 100 g went (the lowest price and its filter stay).
+- **Folded:** a build's facts and its metrics (one line says how many moved).
+- **Code:** the five page routes are one loop over `PAGES`; the job list is one table (`admin/jobs.py`), and the
+  list Terraform grants is derived from it and checked by a test.
