@@ -3,12 +3,13 @@
 -- var rules, from coffeedata.rules).
 --   held: the guard (mode remove_unless_doubted) keeps a product the classifier removes from the served release
 --     (verdict_flip removed) while a guard.doubted_by rule doubts it, for at most guard.max_weeks after the
---     classifier's answer changed, and never against the owner's decision. Macro decided() counts a held product as
---     coffee. Mode off (the default): nothing is held, and the build is the classifier's alone.
+--     classifier stopped calling it coffee (removed_since), and never against the owner's decision. Macro
+--     decided() counts a held product as coffee. Mode off (the default): nothing is held, and the build is the classifier's alone.
 --   ready_flags: supports from readiness.supports_min distinct families (or flags, when distinct_families is
 --     false), no doubts, and no coverage problem (the store's latest run failed to fetch it, or fetched part of it), when
 --     readiness.blocked_by names coverage. The live check is the admin's, never the build's.
---   evidence_hash: the flags' evidence without the product's identity, so products with the same evidence group.
+--   evidence_hash: the store and the flags' evidence without the product's identity: a store's products with the
+--     same evidence group.
 {%- set g = var('rules')['guard'] %}
 {%- set r = var('rules')['readiness'] %}
 with flags as ({{ all_flags() }}),
@@ -18,10 +19,13 @@ per as (
            count(*) filter (where polarity = 'supports') as supports,
            count(*) filter (where polarity = 'doubts') as doubts,
            count(*) filter (where polarity = 'restore') as restores,
-           bool_or(polarity = 'doubts' and rule in ({{ "'" ~ g['doubted_by'] | join("', '") ~ "'" }})) as guard_doubt,
+           bool_or(polarity = 'doubts' and rule in ({{ ("'" ~ g['doubted_by'] | join("', '") ~ "'") if g['doubted_by'] else "null" }}))
+               as guard_doubt,
            bool_or(rule = 'verdict_flip' and direction = 'removed') as removed_by_classifier,
-           md5(string_agg(rule || ':' || direction || ':' || coalesce(evidence_key, ''), '|'
-                          order by rule, direction, evidence_key)) as evidence_hash
+           -- the store is part of it: a group is one store's products with the same evidence, so one live check
+           -- (a test crawl of the store) speaks for the whole group, and never for another store
+           md5(any_value(roaster_id) || '|' || string_agg(rule || ':' || direction || ':' || coalesce(evidence_key, ''),
+                                                          '|' order by rule, direction, evidence_key)) as evidence_hash
     from flags group by coffee_id
 ),
 -- A coverage problem: the store's latest run failed to fetch it, or read only part of its catalog.
@@ -31,12 +35,13 @@ coverage as (
 ),
 as_of as (select max(run_date) as run_date from {{ ref('int_catalog_candidates') }})
 select
-    p.coffee_id, p.roaster_id, c.decision, c.is_coffee as classifier_is_coffee, c.was_public, c.version_since,
+    p.coffee_id, p.roaster_id, c.decision, c.is_coffee as classifier_is_coffee, c.was_public, c.removed_since,
+    p.removed_by_classifier, coalesce(p.guard_doubt, false) as guard_doubt,
     p.supports_families, p.supports, p.doubts, p.restores, p.evidence_hash,
     p.roaster_id in (select roaster_id from coverage) as coverage_problem,
     {{ 'true' if g['mode'] == 'remove_unless_doubted' else 'false' }}
         and p.removed_by_classifier and coalesce(p.guard_doubt, false) and c.decision is null
-        and date_diff('day', c.version_since, a.run_date) <= 7 * {{ g['max_weeks'] }} as held,
+        and date_diff('day', c.removed_since, a.run_date) <= 7 * {{ g['max_weeks'] }} as held,
     {{ 'p.supports_families' if r['distinct_families'] else 'p.supports' }} >= {{ r['supports_min'] }}
         and p.doubts = 0
         {%- if 'coverage' in r['blocked_by'] %}

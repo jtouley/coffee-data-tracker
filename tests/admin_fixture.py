@@ -153,7 +153,7 @@ def build_admin_lake(root: Path, today: date | None = None) -> dict:
 
 def flag_served_build(lake_dir: Path, week: str, build: str) -> None:
     """Give a copy of the built lake's served build the flags the Queue's states need, on real products of it: two
-    drink mixes from two stores ready to remove on the same evidence, and a classifier removal that pasted text
+    drink mixes of one store ready to remove on the same evidence, and a classifier removal that pasted text
     doubts. The fixture's stores raise no such flags of themselves (dbt's flag_* models are tested in
     tests/test_flags.py); this replaces the build's ops file in a test copy only."""
     import json
@@ -171,7 +171,7 @@ def flag_served_build(lake_dir: Path, week: str, build: str) -> None:
         duckdb.connect()
         .execute(
             f"select coffee_id, roaster_id, input_hash, title from '{ops['product_decisions']}' where is_coffee "
-            "qualify row_number() over (partition by roaster_id order by coffee_id) = 1 order by roaster_id limit 3"
+            "qualify count(*) over (partition by roaster_id) >= 3 order by roaster_id, coffee_id limit 3"
         )
         .fetchall()
     )

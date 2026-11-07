@@ -429,13 +429,13 @@ unit_tests:
     given:
       - input: ref('int_catalog_candidates')
         rows:
-          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: C, roaster_id: r, decision: null, is_coffee: false, was_public: true, version_since: "2026-09-21", run_date: "2026-11-02"}
-          - {coffee_id: D, roaster_id: r, decision: include, is_coffee: false, was_public: true, version_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
-          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false, version_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: A, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: B, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: C, roaster_id: r, decision: null, is_coffee: false, was_public: true, removed_since: "2026-09-21", run_date: "2026-11-02"}
+          - {coffee_id: D, roaster_id: r, decision: include, is_coffee: false, was_public: true, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: E, roaster_id: r, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: F, roaster_id: bad, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
+          - {coffee_id: G, roaster_id: r, decision: null, is_coffee: true, was_public: false, removed_since: "2026-10-26", run_date: "2026-11-02"}
       - input: ref('flag_verdict_flip')
         rows:
           - {coffee_id: A, roaster_id: r, direction: removed, evidence: "{}", evidence_key: "removed:verdict:not_coffee"}
@@ -470,3 +470,34 @@ unit_tests:
         - {coffee_id: E, held: false, ready_flags: true, supports_families: 2, doubts: 0, restores: 0}
         - {coffee_id: F, held: false, ready_flags: false, supports_families: 2, doubts: 0, restores: 0}
         - {coffee_id: G, held: false, ready_flags: false, supports_families: 2, doubts: 1, restores: 0}
+
+  - name: non_coffee_type_matches_whole_words_singular_or_plural
+    description: >-
+      flag_non_coffee_type: a listed type matches the store's product type as a whole word or phrase, singular or
+      plural, in any case ("Drink Mixes", "Nut"), but not inside another word ("Peanuts", "Partners") or with no type;
+      a product that is neither public nor coffee is no one's concern (not relevant).
+    model: flag_non_coffee_type
+    overrides:
+      vars:
+        rules:
+          rules:
+            verdict_flip: {family: classifier, params: {}, polarity: {added: supports, removed: restore}}
+            shared_body: {family: catalog, params: {min_products: 3, min_chars: 60}, polarity: {"": doubts}}
+            non_coffee_type: {family: listing, params: {types: [drink mix, nuts, books, parts]}, polarity: {"": supports}}
+          readiness: {supports_min: 2, distinct_families: true, live_check: required, blocked_by: [doubts, coverage]}
+          guard: {mode: "off", doubted_by: [shared_body], max_held: 200, max_weeks: 4}
+    given:
+      - input: ref('int_catalog_candidates')
+        rows:
+          - {coffee_id: A, roaster_id: r, product_type: "Drink Mixes", relevant: true}
+          - {coffee_id: B, roaster_id: r, product_type: "Nut", relevant: true}
+          - {coffee_id: C, roaster_id: r, product_type: "PEANUTS", relevant: true}
+          - {coffee_id: D, roaster_id: r, product_type: "Partners - Hebrew", relevant: true}
+          - {coffee_id: E, roaster_id: r, product_type: "Gear | Books", relevant: true}
+          - {coffee_id: F, roaster_id: r, product_type: "Books", relevant: false}
+          - {coffee_id: G, roaster_id: r, product_type: null, relevant: true}
+    expect:
+      rows:
+        - {coffee_id: A, evidence_key: drink mix}
+        - {coffee_id: B, evidence_key: nut}
+        - {coffee_id: E, evidence_key: book}

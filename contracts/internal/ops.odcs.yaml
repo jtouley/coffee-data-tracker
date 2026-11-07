@@ -372,7 +372,8 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: 'A hash of every flag''s evidence_key on the product: products with equal evidence group.'
+    description: 'A hash of the store and every flag''s evidence_key on the product: a store''s products with equal evidence
+      group.'
   - name: decision
     logicalType: string
     physicalType: string
@@ -526,4 +527,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 54f4d16691834280
 - property: docsFingerprint
-  value: 9fa3b21c618df2e8
+  value: e34669d386e7628e

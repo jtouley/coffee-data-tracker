@@ -268,3 +268,20 @@ def test_the_guard_keeps_a_doubted_removal_only_when_on(lake, monkeypatch, tmp_p
     capped["guard"]["max_held"] = 0
     passed, _ = draft("capped", capped)
     assert passed is False  # classifier_guard: more held than max_held is an error
+
+
+def test_review_fixes_retired_doubters_turning_back_off_and_wrong_shapes(monkeypatch):
+    """A saved document whose only doubter was retired reads with the guard off; returning a deciding setting to the
+    defaults never needs an evaluation; a wrong shape is a SettingsError (a 400), never a TypeError (a 500)."""
+    on = _with(guard__mode="remove_unless_doubted")
+    monkeypatch.delitem(rules.RULE_TYPES, "shared_body")
+    assert decisions.settings_of({"settings": on})["guard"]["mode"] == "off"
+    monkeypatch.undo()
+    monkeypatch.setitem(
+        rules.EVALUATED, "guard", {"folder": "eval/guard", "settings": rules.deciding_part(on, "guard")}
+    )
+    assert rules.evaluation_needed(on, rules.default()) == []  # back off: always allowed
+    for bad in ({"schema": 1, "rules": [{"id": ["x"]}]}, _with(guard__doubted_by=[["x"]]),
+                _with(readiness__removal={"blocked_by": [{}]})):  # fmt: skip
+        with pytest.raises(rules.SettingsError):
+            rules.check(bad)

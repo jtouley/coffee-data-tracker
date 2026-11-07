@@ -9,4 +9,7 @@ select 'over max_held' as problem, cast(held as varchar) as detail from n where 
 union all
 select 'held against its rule', coffee_id from held
 where {{ 'true' if g['mode'] != 'remove_unless_doubted' else 'false' }}
-   or decision is not null or classifier_is_coffee or not was_public or doubts = 0
+   or decision is not null or classifier_is_coffee or not was_public or not removed_by_classifier
+   or not guard_doubt
+   or removed_since is null or removed_since < (select max(run_date) from {{ ref('int_catalog_candidates') }})
+                                              - interval ({{ 7 * g['max_weeks'] }}) day

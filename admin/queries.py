@@ -47,6 +47,14 @@ def release_folder(lake: Lake, run_date: str, build_id: str) -> dict:
     return {"path": rel, "url": None}
 
 
+def ops_src(lake: Lake, build_id: str, table: str) -> str | None:
+    """A SQL read of one of a build's ops tables (quality.OPS_TABLES), or None when the build has none."""
+    path = quality.ops_files(lake, build_id).get(table)
+    return (
+        f"read_parquet('{path.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)" if path else None
+    )
+
+
 def _rows(cur) -> list[dict]:
     cols = [d[0] for d in cur.description]
     return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
@@ -473,10 +481,9 @@ def changes(
     offset: int = 0,
 ) -> dict:
     """The build's release_changes (ops): counts by table, change and reason, and the rows, filtered."""
-    ops = quality.ops_files(lake, build_id)
-    if "release_changes" not in ops:
+    src = ops_src(lake, build_id, "release_changes")
+    if src is None:
         return {"recorded": False, "build_id": build_id, "source": ["release_changes"]}
-    src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
     counts = _rows(
         con.execute(
             f"select table_name, change, reason, count(*) as n from {src} group by all order by table_name, change, n desc, reason"
@@ -514,20 +521,13 @@ QUEUE_STATES = ("open", "ready", "held", "doubted")
 QUEUE_PAGE = 100
 
 
-def _flags_src(lake: Lake, build_id: str) -> str | None:
-    ops = quality.ops_files(lake, build_id)
-    if "mart_flags" not in ops:
-        return None
-    return f"read_parquet('{ops['mart_flags'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
-
-
 def queue(lake: Lake, con, build_id: str, roaster: str | None = None, rule: str | None = None,
           state: str | None = None, offset: int = 0) -> dict:  # fmt: skip
     """The build's open flags by product (no decision applied in the build), sorted by the public rows a removal
     would touch, products with the same evidence together: one row per product, with its flags summed up. state:
     open (every product), ready (its removal is ready as far as the build can tell), held (the guard keeps it),
     doubted (a doubt is open)."""
-    src = _flags_src(lake, build_id)
+    src = ops_src(lake, build_id, "mart_flags")
     if src is None:
         return {"recorded": False, "build_id": build_id}
     where, params = ["decision is null"], []
@@ -537,7 +537,7 @@ def queue(lake: Lake, con, build_id: str, roaster: str | None = None, rule: str 
     if rule:
         where.append("coffee_id in (select coffee_id from f where rule = ?)")
         params.append(rule)
-    where.append({"ready": "ready_flags", "held": "held", "doubted": "doubts > 0"}.get(state or "", "true"))
+    where.append({"ready": "ready", "held": "held", "doubted": "doubts > 0"}.get(state or "", "true"))
     subjects = f"""
         with f as (select * from {src}),
         s as (
@@ -573,7 +573,7 @@ def queue(lake: Lake, con, build_id: str, roaster: str | None = None, rule: str 
 
 def case(lake: Lake, con, build_id: str, coffee_id: str, weeks: int = 8) -> dict | None:
     """One product's flags and evidence (mart_flags), and its store's fetches over the last `weeks` runs."""
-    src = _flags_src(lake, build_id)
+    src = ops_src(lake, build_id, "mart_flags")
     if src is None:
         return None
     flags = _rows(
@@ -640,22 +640,31 @@ def test_results(lake: Lake, con, test_ids: list[str]) -> dict[str, list[dict]]:
     return out
 
 
-def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None, every: bool = False) -> dict:
+def leaving(lake: Lake, con, build_id: str, coffees: list[str] | None = None) -> dict:
     """How many public rows a build removes against the release it was compared with (release_changes): Publish
     asks the owner to type the count when it is over 50. `changed`: how many of `coffees` (a draft's decisions'
-    coffees) change in public_coffee, whatever the reason (an undone include reads as reclassified); with `every`
-    (a draft whose rule settings change), every public coffee it adds, removes or changes."""
-    ops = quality.ops_files(lake, build_id)
-    if "release_changes" not in ops:
+    coffees, and the ones the guard holds on either side when its rule settings change) change in public_coffee,
+    whatever the reason (an undone include reads as reclassified)."""
+    src = ops_src(lake, build_id, "release_changes")
+    if src is None:
         return {"recorded": False, "removed": None, "changed": None}
-    src = f"read_parquet('{ops['release_changes'].replace(chr(39), chr(39) * 2)}', hive_partitioning = false)"
     removed = con.execute(f"select count(*) from {src} where change = 'removed'").fetchone()[0]
     changed = con.execute(
         f"select count(distinct item) from {src} where table_name = 'public_coffee' "
-        "and (? or item in (select unnest(?::varchar[])))",
-        [every, coffees or []],
+        "and item in (select unnest(?::varchar[]))",
+        [coffees or []],
     ).fetchone()[0]
     return {"recorded": True, "removed": removed, "changed": changed}
+
+
+def held(lake: Lake, con, build_id: str | None) -> list[str]:
+    """The coffees the guard holds in a build (ops mart_flags): what a rule settings change can move in public."""
+    src = ops_src(lake, build_id, "mart_flags") if build_id else None
+    return (
+        [r[0] for r in con.execute(f"select distinct coffee_id from {src} where held").fetchall()]
+        if src
+        else []
+    )
 
 
 def to_json(value: Any) -> str:

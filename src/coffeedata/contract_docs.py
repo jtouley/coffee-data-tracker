@@ -198,7 +198,8 @@ COLUMNS |= {
         "product_type": "The store's product type (latest record).",
         "evidence": "What the rule saw, as JSON (shown on the admin's Case page).",
         "evidence_key": "The evidence without the product's identity.",
-        "evidence_hash": "A hash of every flag's evidence_key on the product: products with equal evidence group.",
+        "evidence_hash": "A hash of the store and every flag's evidence_key on the product: a store's products with "
+        "equal evidence group.",
         "decision": "The owner's decision the build applied (include or exclude), else null.",
         "classifier_is_coffee": "The classifier's answer for the latest version, before any decision or the guard.",
         "was_public": "In the served release's public_coffee.",

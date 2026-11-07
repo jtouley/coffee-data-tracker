@@ -81,6 +81,8 @@ def test_the_queue_groups_by_evidence_and_a_case_shows_its_evidence(tmp_path, la
     assert "1 doubt · 1 restore · held" in page and "2 supports · ready" in page
     assert "&lt;b&gt;d1&lt;/b&gt;" in page and "<b>d1</b>" not in page  # store text is escaped
     assert c.get("/part/queue?state=held").text.count('href="/queue?case=') == 1
+    assert c.get("/part/queue?state=ready").text.count('href="/queue?case=') == 2
+    assert c.get("/part/queue?state=doubted").text.count('href="/queue?case=') == 1
     assert "No open flag matches" in c.get("/part/queue?roaster=nobody.example").text
     case = c.get("/part/queue?case=s1").text
     assert "shared_body" in case and "doubts" in case and "the guard keeps it as coffee" in case
@@ -91,9 +93,9 @@ def test_the_queue_groups_by_evidence_and_a_case_shows_its_evidence(tmp_path, la
     assert tree(lake.root) == before  # the admin never writes the lake
 
 
-def test_a_group_decision_carries_its_evidence_and_one_live_check_covers_it(tmp_path, lake, pg_url):
-    """Group approval: two stores' drink mixes decided together on the same evidence; one answered live check of
-    either store lets Publish through for both."""
+def test_a_group_decision_carries_its_evidence_and_each_store_needs_its_live_check(tmp_path, lake, pg_url):
+    """Group approval: products decided together on the same evidence are one decision, which records the evidence;
+    a live check is about one store, so the second store still needs its own."""
     from coffeedata import control
 
     app, c, fake = make(tmp_path, lake.root, pg_url)
@@ -119,7 +121,10 @@ def test_a_group_decision_carries_its_evidence_and_one_live_check_covers_it(tmp_
     control.finish(w, job, "done", ok=1, errors=0, detail={"test": test_id, "arm": "test"})
     fake.finish()
     page = c.get(f"/part/release?build={b3}").text
-    assert "or one of their evidence group did" in page
+    assert (
+        "no answered test crawl in 7 days: cf.example" in page
+        and "good.example" not in page.split("no answered test crawl")[1].split("</li>")[0]
+    )
 
 
 def test_settings_are_versioned_checked_audited_and_idempotent(tmp_path, lake, pg_url):
@@ -216,12 +221,15 @@ def test_the_queue_reads_on_when_the_control_plane_is_down(tmp_path, lake):
     assert "shared_body" in c.get("/part/queue?case=s1").text
 
 
-def test_a_settings_change_counts_every_public_coffee_its_draft_changes(tmp_path, lake):
+def test_a_settings_change_counts_only_what_the_guard_holds(tmp_path, lake):
+    """Step 9's count for a draft whose rule settings change: its decided coffees and the ones the guard holds in it
+    or in its baseline, never every change the draft's newer data brings (a new week, a verdict backfill)."""
     from admin import queries
 
     Lake(str(lake.root)).write_ops("release_changes", W3, "b-settings", pa.Table.from_pylist([
-        {"build_id": "b-settings", "table_name": "public_coffee", "item": f"c{i}", "change": "removed",
-         "reason": "reclassified"} for i in range(3)], SCHEMAS["release_changes"]))  # fmt: skip
+        {"build_id": "b-settings", "table_name": "public_coffee", "item": c, "change": "removed",
+         "reason": "reclassified"} for c in ("s1", "x1", "x2")], SCHEMAS["release_changes"]))  # fmt: skip
     ro = Lake(str(lake.root), read_only=True)
-    assert queries.leaving(ro, ro.connect(), "b-settings", ["c0"])["changed"] == 1
-    assert queries.leaving(ro, ro.connect(), "b-settings", ["c0"], True)["changed"] == 3
+    held = queries.held(ro, ro.connect(), B1)
+    assert held == ["s1"] and queries.held(ro, ro.connect(), None) == []
+    assert queries.leaving(ro, ro.connect(), "b-settings", held)["changed"] == 1

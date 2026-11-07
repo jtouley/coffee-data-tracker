@@ -33,8 +33,8 @@ SNAPSHOT_ID = re.compile(r"[a-z0-9][a-z0-9-]{0,63}")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 # A decision's fields in a snapshot; only subject_kind, subject and action reach dbt.
 # coffee_ids: for a decision by version, every coffee sharing it (the admin's export resolves them; export-labels
-# checks each against the held-out sets). evidence_hash: the flags' evidence the decision was made on (group
-# approval: one live check covers a group).
+# checks each against the held-out sets). evidence_hash: the store and the flags' evidence the decision was made on
+# (group approval).
 FIELDS = ("decision_id", "subject_kind", "subject", "action", "reason", "actor", "decided_at", "coffee_id",
           "input_hash", "roaster_id", "title", "coffee_ids", "evidence_hash")  # fmt: skip
 

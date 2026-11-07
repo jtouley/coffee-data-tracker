@@ -16,6 +16,6 @@ f as (
 )
 select coffee_id, roaster_id, direction,
        to_json({'verdict': verdict_label, 'classified_by': classified_by, 'reason': reason,
-                'since': version_since}) as evidence,
+                'since': removed_since}) as evidence,
        direction || ':' || coalesce('verdict:' || verdict_label, reason) as evidence_key
 from f where direction is not null

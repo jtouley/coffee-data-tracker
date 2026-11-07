@@ -22,7 +22,9 @@ select
     f.rule, f.family, f.polarity, f.direction, f.coffee_id, f.roaster_id, c.input_hash, c.title, c.product_type,
     f.evidence, f.evidence_key, d.evidence_hash, d.decision, d.classifier_is_coffee, d.was_public, d.held,
     d.ready_flags, d.coverage_problem, d.supports_families, d.doubts, d.restores,
-    1 + coalesce(e.n, pe.n, 0) as public_rows,
+    -- a product public in neither release touches no public row
+    case when d.was_public or f.coffee_id in (select coffee_id from {{ ref('public_coffee') }})
+         then 1 + coalesce(e.n, pe.n, 0) else 0 end as public_rows,
     c.verdict_label, c.classified_by, c.reason, c.url, c.tags,
     list_transform(c.variants, lambda v: v.grams) as bag_sizes_g,
     list_transform(c.variants, lambda v: v.price_usd) as prices_usd,

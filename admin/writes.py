@@ -387,7 +387,7 @@ class Writes:
         settings_changed = rules.changed(snap.settings_of(served_doc), snap.settings_of({"settings": doc} if doc
                                                                                       else None))  # fmt: skip
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
-        mine = (now, rules.check(doc or rules.DEFAULTS), set(off))
+        mine = (now, rules.check(doc or rules.DEFAULTS, strict=False), set(off))
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -453,8 +453,13 @@ class Writes:
             effect["needs_evaluation"],
             effect["settings_changed"],
         )
-        left = (await self.read(queries.leaving, build, effect["coffees"], bool(settings_changed)) if build
-                else {"removed": None})  # fmt: skip
+        coffees = effect["coffees"]
+        if (
+            settings_changed and build
+        ):  # a settings change moves public output only through what the guard holds
+            coffees = sorted(set(coffees) | set(await self.read(queries.held, build))
+                             | set(await self.read(queries.held, draft["baseline"])))  # fmt: skip
+        left = await self.read(queries.leaving, build, coffees) if build else {"removed": None}
         removed, changed = left.get("removed"), left.get("changed")
         total, last = await asyncio.to_thread(self.control.step9_total, rel["ever_served"])
         since = f"since the evaluation {last['path']}" if last else "since the total was started"
@@ -480,18 +485,12 @@ class Writes:
                                       if a["connector"] == t["connector"])]  # fmt: skip
         stores = {t["roaster_id"] for t in ok if t["roaster_id"]}  # a test of the store itself
         connectors = {t["connector"] for t in ok if not t["roaster_id"]}  # or of its whole connector
-        checked = {r for r, conn in effect["removal_roasters"] if r in stores or conn in connectors}
-        # Group approval: one answered live check covers every store whose removals were decided on the same
-        # flags' evidence (evidence_hash) as a checked store's.
-        for group in effect["groups"].values():
-            if group & checked:
-                checked |= group
-        missing = sorted({r for r, _ in effect["removal_roasters"]} - checked)
-        n = len({r for r, _ in effect["removal_roasters"]})
+        missing = [r for r, conn in effect["removal_roasters"] if r not in stores and conn not in connectors]
+        n = len(effect["removal_roasters"])
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
                        "why": ("this draft removes nothing" if not n else
                                f"{n} of {n} stores answered a test crawl (of the store or its connector) in the last "
-                               f"{LIVE_CHECK_DAYS} days, or one of their evidence group did" if not missing else
+                               f"{LIVE_CHECK_DAYS} days" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
         return Readiness(checks, removed, bool(removed and removed > TYPE_OVER), changed)
@@ -499,7 +498,7 @@ class Writes:
     async def effect(self, draft: dict) -> dict:
         """What a draft changes against the release it was built on: the coffees its changed decisions cover (a
         decision by version covers every product sharing it, across roasters), the stores it removes coffees from
-        (new excludes, and includes it undoes) with their connector and their evidence groups, and its rule settings
+        (new excludes, and includes it undoes) with their connector, and its rule settings
         changes (which decide, and the evaluations those still need)."""
         now_doc = await self._snapshot_doc(draft["snapshot_id"])
         pinned = await self.read(queries.build_snapshot, draft["baseline"]) if draft["baseline"] else None
@@ -532,13 +531,7 @@ class Writes:
         coffees = sorted({m["coffee_id"] for d in changed for m in covered(d)})
         roasters = sorted({(m["roaster_id"], m.get("platform")) for d in removing for m in covered(d) if m["roaster_id"]},
                           key=lambda x: (x[0], x[1] or ""))  # fmt: skip
-        groups: dict[str, set[str]] = {}
-        for d in removing:
-            if d.get("evidence_hash"):
-                groups.setdefault(d["evidence_hash"], set()).update(
-                    m["roaster_id"] for m in covered(d) if m["roaster_id"]
-                )
-        return {"coffees": coffees, "removal_roasters": roasters, "groups": groups,
+        return {"coffees": coffees, "removal_roasters": roasters,
                 "settings_changed": rules.changed(old_settings, new_settings),
                 "deciding": rules.decides(old_settings, new_settings),
                 "needs_evaluation": rules.evaluation_needed(old_settings, new_settings)}  # fmt: skip

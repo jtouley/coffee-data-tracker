@@ -2,9 +2,9 @@
 {% macro summary(r) -%}
 {{ ([(r.supports ~ (" supports" if r.supports > 1 else " support")) if r.supports] + [(r.doubts ~ (" doubts" if r.doubts > 1 else " doubt")) if r.doubts] + [(r.restores ~ " restore") if r.restores] + (["held"] if r.held else []) + (["ready"] if r.ready else []) + (["coverage"] if r.coverage else [])) | select | join(" · ") }}
 {%- endmacro %}
-{# The decision a product's flags propose: exclude when its removal is ready or a listing rule supports it while it
-   is coffee; include (keep it) when the guard holds it or a flag argues to restore it. #}
-{% macro proposal(r) -%}{{ "exclude" if r.ready or (r.supports and r.coffee_now) else "include" if r.held or r.restores else "" }}{%- endmacro %}
+{# The decision a product's flags propose: exclude when its removal is ready (two families, no doubt), include (keep
+   it) when the guard holds it or a flag argues to restore it, else none: open the case and decide there. #}
+{% macro proposal(r) -%}{{ "exclude" if r.ready else "include" if r.held or r.restores else "" }}{%- endmacro %}
 {# Exclude or Include products: the confirm sheet asks the reason and whether by coffee or by version (admin.js). #}
 {% macro decide(action, items, label, cls="text") -%}
 <form class="inline-form" data-write="/api/decisions" data-ask="reason kind" data-confirm-label="{{ action | capitalize }}" data-confirm-title="{{ action | capitalize }} {{ 'this product' if items | length == 1 else (items | length) ~ ' products' }}?"

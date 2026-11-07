@@ -123,12 +123,25 @@ def deciding_part(doc: dict, name: str) -> Any:
 
 
 def evaluation_needed(old: dict, new: dict) -> list[str]:
-    """The parts whose deciding change from `old` to `new` has no evaluation of the new value in EVALUATED."""
+    """The parts whose deciding change from `old` to `new` has no evaluation of the new value in EVALUATED. A return
+    to the defaults' value (main's behaviour, what every evaluation is measured against) never needs one, so the
+    guard can always be turned back off."""
     names = sorted({c.split(".")[0] for c in decides(old, new)})
-    return [n for n in names if (EVALUATED.get(n) or {}).get("settings") != deciding_part(new, n)]
+    return [
+        n for n in names
+        if deciding_part(new, n) != deciding_part(DEFAULTS, n)
+        and (EVALUATED.get(n) or {}).get("settings") != deciding_part(new, n)
+    ]  # fmt: skip
 
 
 def check(doc: object, strict: bool = True) -> dict:
+    try:
+        return _check(doc, strict)
+    except (TypeError, AttributeError) as e:  # a shape the checks below didn't expect: a problem, never a 500
+        raise SettingsError([f"the settings have the wrong shape ({type(e).__name__})"]) from e
+
+
+def _check(doc: object, strict: bool) -> dict:
     """Settings the deployed code can read, normalized, or SettingsError with every problem. Normalized: each rule's
     params filled from its type's defaults, and a rule type the settings don't list (one added to the code after
     they were saved) given its defaults, so adding a rule never invalidates a saved version or a served snapshot.
@@ -149,7 +162,7 @@ def check(doc: object, strict: bool = True) -> dict:
     seen = set()
     for i, r in enumerate(rules):
         where = f"rules[{i}]"
-        if not isinstance(r, dict) or r.get("id") not in RULE_TYPES:
+        if not isinstance(r, dict) or not isinstance(r.get("id"), str) or r["id"] not in RULE_TYPES:
             if strict or not isinstance(r, dict):
                 p.append(f"{where}: id must be one of {', '.join(RULE_TYPES)}")
             continue
@@ -201,7 +214,9 @@ def check(doc: object, strict: bool = True) -> dict:
         out["rules"].append({"id": t.id, "family": r.get("family"), "polarity": pol if dirs != [""] else pol.get(""),
                              **({"params": norm} if t.params else {}),
                              **({"proposes": proposes} if proposes else {})})  # fmt: skip
-    out["rules"] += [copy.deepcopy(d) for d in DEFAULTS["rules"] if d["id"] not in seen]
+    out["rules"] += [
+        copy.deepcopy(d) for d in DEFAULTS["rules"] if d["id"] not in seen and d["id"] in RULE_TYPES
+    ]
     order = list(RULE_TYPES)
     out["rules"].sort(key=lambda r: order.index(r["id"]))
     ready = (doc.get("readiness") or {}).get("removal") if isinstance(doc.get("readiness"), dict) else None
@@ -215,7 +230,8 @@ def check(doc: object, strict: bool = True) -> dict:
     if ready.get("live_check") != "required":
         p.append("readiness.removal.live_check must be 'required'")
     blocked = ready.get("blocked_by")
-    if not (isinstance(blocked, list) and set(blocked) <= {"doubts", "coverage"} and "doubts" in blocked):
+    if not (isinstance(blocked, list) and all(isinstance(b, str) for b in blocked)
+            and set(blocked) <= {"doubts", "coverage"} and "doubts" in blocked):  # fmt: skip
         p.append("readiness.removal.blocked_by must include doubts, and may include coverage")
     out["readiness"] = {"removal": {k: ready.get(k) for k in ("supports_min", "distinct_families", "live_check",
                                                                "blocked_by")}}  # fmt: skip
@@ -226,7 +242,17 @@ def check(doc: object, strict: bool = True) -> dict:
     if g.get("mode") not in GUARD_MODES:
         p.append(f"guard.mode must be one of {', '.join(GUARD_MODES)}")
     doubters = g.get("doubted_by")
-    if not (isinstance(doubters, list) and doubters and set(doubters) <= set(RULE_TYPES)):
+    if isinstance(doubters, list) and not strict:  # a retired doubter is left out of a saved document
+        doubters = (
+            [d for d in doubters if d in RULE_TYPES] if all(isinstance(d, str) for d in doubters) else None
+        )
+        g = (
+            g | {"doubted_by": doubters} | ({"mode": "off"} if doubters == [] else {})
+        )  # none left: it holds nothing
+    if doubters == [] and not strict:
+        pass
+    elif not (isinstance(doubters, list) and doubters and all(isinstance(d, str) for d in doubters)
+              and set(doubters) <= set(RULE_TYPES)):  # fmt: skip
         p.append("guard.doubted_by must list one or more rules")
     else:
         bad = [d for d in doubters for r in out["rules"] if r["id"] == d and "doubts" not in _pols(r)]

@@ -69,8 +69,7 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
-    version) answered a test crawl of the store, or of its whole connector, in the last 7 days, or a store of the
-    removals decided on the same flags' evidence did (group approval).
+    version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
 
   It starts the `publish` job (`publish-release --action publish`). "Published" is read from `serving_log`, never
   set. A draft being published, or published, can't be discarded.
@@ -99,8 +98,11 @@ defaults.
     coffee (drink mix, nuts, books, parts).
 - **Readiness.** A removal is ready only with `supports` from two distinct families, no open doubt and no coverage
   problem at the store (dbt `int_catalog_decided.ready_flags`, tested by `ready_removals_have_no_doubts`), and an
-  answered live check (Publish). One live check covers the removals decided together on the same evidence
-  (`evidence_hash`): group approval.
+  answered live check of the store (Publish).
+- **Group approval.** A group is one store's products with the same flags' evidence (`evidence_hash`, which includes
+  the store). The Queue offers one decision for the group, and that decision records the evidence; the store's one
+  live check covers it. A live check never speaks for another store, so evidence shared across stores (a verdict
+  label, a product type) doesn't make a group.
 - **The guard** (`guard.mode`: `off`, the default, or `remove_unless_doubted`) keeps a product the classifier removes
   from the served release while a `doubted_by` rule doubts it, for at most `max_weeks`; `classifier_guard` fails a
   build that holds more than `max_held`. Turning it on changes public output, so it waits for its evaluation

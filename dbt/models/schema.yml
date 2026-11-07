@@ -385,8 +385,10 @@ models:
     columns:
       - name: coffee_id
         data_tests: [unique, not_null]
-      - name: version_since
-        description: When the classifier's current answer appeared (the latest version's first record, or its verdict).
+      - name: removed_since
+        description: >-
+          When the classifier stopped calling it coffee: the earliest record (or its verdict) after its last coffee
+          record. Later edits don't move it, so the guard's max_weeks counts from the removal. Null while coffee.
   - name: flag_verdict_flip
     description: >-
       One row per product whose classifier answer differs from the served release (rule verdict_flip, family

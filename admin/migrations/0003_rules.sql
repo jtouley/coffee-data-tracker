@@ -31,8 +31,8 @@ create table control.roaster_state (
 );
 create index roaster_state_roaster on control.roaster_state (roaster_id, id desc);
 
--- The flags' evidence hash a decision was made on (mart_flags.evidence_hash): one live check of a store covers the
--- removals of a group that share it (design §3, group approval).
+-- The flags' evidence hash a decision was made on (mart_flags.evidence_hash: the store and its flags' evidence), so
+-- a group decided together says what it was decided on (design §3, group approval).
 alter table control.decisions add column evidence_hash text;
 
 do $$
