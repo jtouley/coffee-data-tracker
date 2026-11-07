@@ -175,7 +175,9 @@ class Auth:
         self.add_lock = threading.Lock()  # one passkey registration decided at a time
         self.begin_limit = Limiter(30, 900)  # ceremonies started per client IP
         self.fail_limit = Limiter(10, 900)  # refused tokens, codes and assertions per client IP
-        self.global_fail = Limiter(50, 900)  # refused tokens and codes from anywhere
+        # Refused enrollment tokens and recovery codes from anywhere. Never passkey sign-ins: anyone can send those,
+        # and counting them here would let a stranger lock the owner's own passkey out.
+        self.global_fail = Limiter(50, 900)
 
     # --- state --------------------------------------------------------------------------------------------
 
@@ -249,18 +251,22 @@ class Auth:
         if not self.begin_limit.hit(ip):
             raise AuthError("Too many attempts. Try again in 15 minutes.", 429)
 
-    def _not_blocked(self, ip: str) -> None:
-        """Refuse before any token, code or passkey is checked once this IP, or everyone, failed too often."""
-        if self.fail_limit.full(ip) or self.global_fail.full("*"):
+    def _not_blocked(self, ip: str, secret: bool = True) -> None:
+        """Refuse before anything is checked once this IP failed too often, or (for a token or recovery code,
+        `secret`) once everyone did. A passkey sign-in (secret=False) is limited per IP only."""
+        if self.fail_limit.full(ip) or (secret and self.global_fail.full("*")):
             raise AuthError("Too many attempts. Try again in 15 minutes.", 429)
 
-    def _failed(self, ip: str) -> None:
-        if not (self.fail_limit.hit(ip) and self.global_fail.hit("*")):
+    def _failed(self, ip: str, secret: bool = True) -> None:
+        if not self.fail_limit.hit(ip) or (secret and not self.global_fail.hit("*")):
             raise AuthError("Too many attempts. Try again in 15 minutes.", 429)
 
     def _registration(self, kind: str, extra: dict | None = None) -> dict:
         cid, challenge = self._ceremony(kind, extra)
-        exclude = [PublicKeyCredentialDescriptor(id=base64url_to_bytes(c)) for c in self.credentials()]
+        # Recovery retires every passkey registered now, so it excludes none: the device holding one of them may
+        # register its new passkey.
+        held = [] if kind == "recover" else list(self.credentials())
+        exclude = [PublicKeyCredentialDescriptor(id=base64url_to_bytes(c)) for c in held]
         opts = generate_registration_options(
             rp_id=self.rp_id,
             rp_name=self.rp_name,
@@ -277,6 +283,8 @@ class Auth:
         return {"ceremony": cid, "options": options_to_json(opts)}
 
     def _verify_registration(self, c: Ceremony, credential: dict, via: str) -> Credential:
+        if not isinstance(credential, dict):  # a number, a boolean, a list: a bad request, not an error
+            raise AuthError("The passkey couldn't be registered. Try again.")
         try:
             v = verify_registration_response(
                 credential=credential,
@@ -406,12 +414,12 @@ class Auth:
         return {"ceremony": cid, "options": options_to_json(opts)}
 
     def signin_finish(self, ceremony: str, credential: dict, ip: str) -> str:
-        self._not_blocked(ip)
+        self._not_blocked(ip, secret=False)
         c = self._take(ceremony, "signin")
         raw = credential.get("rawId") if isinstance(credential, dict) else None
         cred = self.credentials().get(raw) if isinstance(raw, str) else None
         if cred is None:
-            self._failed(ip)
+            self._failed(ip, secret=False)
             raise AuthError(
                 "That passkey isn't registered here. Use your other passkey, or a recovery code.", 403
             )
@@ -426,7 +434,7 @@ class Auth:
                 require_user_verification=True,
             )
         except (WebAuthnException, ValueError, KeyError, TypeError) as e:
-            self._failed(ip)
+            self._failed(ip, secret=False)
             raise AuthError("The passkey didn't sign in. Try again.", 403) from e
         stamp = f"{v.new_sign_count:012d}-{int(_now())}-{secrets.token_hex(4)}"
         self._read(self.store.create, f"uses/{cred.credential_id}/{stamp}", {"at": _iso(_now())})

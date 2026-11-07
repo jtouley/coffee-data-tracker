@@ -723,6 +723,48 @@ def test_failed_attempts_are_limited_before_anything_is_checked(tmp_path):
     assert a.enroll_begin(TOKEN, "8.8.8.8")["ceremony"]  # another address still can
 
 
+def test_a_full_global_counter_never_blocks_the_owners_passkey(tmp_path):
+    a = new_auth(tmp_path)
+    owner = SoftKey()
+    enroll(a, owner)
+    for i in range(60):  # strangers' passkey sign-ins, from many addresses: never counted globally
+        b = a.signin_begin(f"10.0.{i}.1")
+        with pytest.raises(AuthError):
+            a.signin_finish(b["ceremony"], SoftKey().get(b["options"]), f"10.0.{i}.1")
+    assert not a.global_fail.full("*")
+    for i in range(50):  # wrong recovery codes from many addresses fill the global counter
+        with pytest.raises(AuthError):
+            a.recover_begin("0000-0000-0000-0000", f"10.1.{i}.1")
+    assert a.global_fail.full("*")
+    with pytest.raises(AuthError) as e:  # recovery codes and tokens are now refused from anywhere
+        a.recover_begin("0000-0000-0000-0000", "10.2.0.1")
+    assert e.value.status == 429
+    assert a.session(signin(a, owner)) is not None  # the owner's passkey still signs in
+
+
+def test_passkey_sign_in_keeps_its_per_address_limit(tmp_path):
+    a = new_auth(tmp_path)
+    enroll(a, SoftKey())
+    for _ in range(10):
+        with pytest.raises(AuthError) as e:
+            b = a.signin_begin("9.9.9.9")
+            a.signin_finish(b["ceremony"], SoftKey().get(b["options"]), "9.9.9.9")
+        assert e.value.status == 403
+    b = a.signin_begin("9.9.9.9")
+    with pytest.raises(AuthError) as e:
+        a.signin_finish(b["ceremony"], SoftKey().get(b["options"]), "9.9.9.9")
+    assert e.value.status == 429
+
+
+def test_recovery_excludes_no_passkey_but_adding_excludes_the_registered_ones(tmp_path):
+    a = new_auth(tmp_path)
+    k = SoftKey()
+    cookie, codes = enroll(a, k)
+    assert json.loads(a.recover_begin(codes[0], "1.1.1.1")["options"]).get("excludeCredentials", []) == []
+    add = json.loads(a.add_begin(a.session(cookie), None, "1.1.1.1")["options"])
+    assert [c["id"] for c in add["excludeCredentials"]] == [b64u(k.cred)]
+
+
 def test_recovery_codes_read_like_invite_codes():
     assert normalize_code("abcd efgh ijkl mnop") == "ABCD-EFGH-1JK1-MN0P"
 
@@ -922,6 +964,26 @@ def test_sign_in_through_the_api_sets_a_strict_session_cookie(tmp_path, lake):
     assert c.get("/part/gate").status_code == 200
     assert c.post("/api/auth/signout", headers=WRITE).status_code == 200
     assert c.get("/part/gate").status_code == 401
+
+
+@pytest.mark.parametrize("bad", [5, True, ["x"], "text", 1.5])
+def test_a_credential_that_isnt_an_object_is_a_bad_request(tmp_path, lake, bad):
+    app = _app(tmp_path, lake.root)
+    c = TestClient(app, base_url=ORIGIN)
+    b = c.post("/api/auth/enroll/begin", json={"token": TOKEN}, headers=WRITE).json()
+    assert c.post("/api/auth/enroll/finish", json={"ceremony": b["ceremony"], "credential": bad},
+                  headers=WRITE).status_code == 400  # fmt: skip
+    key = SoftKey()
+    b = c.post("/api/auth/enroll/begin", json={"token": TOKEN}, headers=WRITE).json()
+    r = c.post("/api/auth/enroll/finish", json={"ceremony": b["ceremony"], "credential": key.create(b["options"])},
+               headers=WRITE)  # fmt: skip
+    codes = r.json()["codes"]
+    b = c.post("/api/auth/add/begin", json={"code": None}, headers=WRITE).json()
+    assert c.post("/api/auth/add/finish", json={"ceremony": b["ceremony"], "credential": bad},
+                  headers=WRITE).status_code == 400  # fmt: skip
+    b = c.post("/api/auth/recover/begin", json={"code": codes[0]}, headers=WRITE).json()
+    assert c.post("/api/auth/recover/finish", json={"ceremony": b["ceremony"], "credential": bad},
+                  headers=WRITE).status_code == 400  # fmt: skip
 
 
 def test_the_secure_cookie_is_host_only_on_https(tmp_path, lake):
