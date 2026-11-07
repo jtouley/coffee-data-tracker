@@ -418,7 +418,7 @@ def crawl_retry(
     week = week_of(day)
     plake = PartitionLake(lake, connector, week, test=test)
     compact(plake.part)
-    states, resume = ingest.select_parked(plake, week, adapter=connector)
+    states, resume = ingest.select_parked(plake, week, adapter=connector, test=bool(test))
     repulls = [] if test else _repulls(plake, connector, week, states)  # fetched whole: no parked progress
     states += repulls
     ids = {s.roaster.roaster_id for s in states}

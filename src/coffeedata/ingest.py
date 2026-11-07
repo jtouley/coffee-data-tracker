@@ -369,16 +369,19 @@ def _known_bodies(lake: Lake) -> set[str]:
 
 
 def select_parked(
-    lake: Lake, run_date: str, adapter: str | None = None
+    lake: Lake, run_date: str, adapter: str | None = None, test: bool = False
 ) -> tuple[list[registry.RoasterState], dict[str, dict]]:
     """crawl-retry's work: the run's parked stores still without an ok fetch (of `adapter`'s roasters, when given:
-    the parked folder is shared by every connector's partition), and their progress."""
+    the parked folder is shared by every connector's partition), and their progress. A store whose crawl flag the
+    published snapshot turns off is left parked, unless `test` (a test crawl), as select_states does."""
     resume = load_parked(lake, run_date)
     done, _ = retry_transient(_done_and_tried, lake, run_date)  # crawl-retry's first lake read: retried
+    off = set() if test else crawl_off(lake)
     states = [
         s
         for s in registry.current(lake)
-        if s.roaster.roaster_id in resume.keys() - done and (adapter is None or s.roaster.adapter == adapter)
+        if s.roaster.roaster_id in resume.keys() - done - off
+        and (adapter is None or s.roaster.adapter == adapter)
     ]
     return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
 
