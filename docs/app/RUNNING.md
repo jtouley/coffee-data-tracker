@@ -346,6 +346,12 @@ contact unverified.
   users dataset's history (`HfApi.super_squash_history`), so no old revision holds it.
 - Logs never carry an address or a link: only which email it was and the user id.
 
+**Roaster insights.** The privacy policy lets a member turn off "Include my shots in roaster insights" (Setup →
+Account; on by default). The choice is in the latest `consents` row per member (`insights`, `insights_at`,
+`insights_version`; null means never changed, which counts as on). There's no export job yet. When there is, it
+must leave out every member with `insights = false` (`Accounts.insights_excluded()`), and keep a record of each report
+it releases, as the policy says.
+
 ## Using it on the phone
 
 - **Install:** open the app's address in Chrome on Android and use "Add to Home screen". It runs full screen and stays

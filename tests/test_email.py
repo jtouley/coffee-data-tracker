@@ -424,6 +424,7 @@ def test_delete_user_removes_the_contact_record_and_squashes(tmp_path, monkeypat
     _, code = accounts.invite(o.user_id)
     maya, link = accounts.join_sending(code, "maya", MAYA_PW, "1.1.1.1", agree=True, email="maya@example.com")
     accounts.verify_email(link[1], "1.1.1.1")
+    accounts.set_insights(maya.user_id, False)  # the insights choice goes with the account too
     accounts.set_disabled(o.user_id, maya.user_id, True)
     main, photos = Lake(str(tmp_path / "lake")), Lake(str(tmp_path / "photos"), tables=PHOTO_TABLES)
     p = erase.plan("maya", main, photos, accounts.lake)
@@ -433,6 +434,7 @@ def test_delete_user_removes_the_contact_record_and_squashes(tmp_path, monkeypat
     monkeypatch.setattr(accounts.lake, "squash", lambda message: squashed.append(message))
     erase.apply(p, main, photos, accounts.lake)
     assert not list((tmp_path / "users" / "contacts").glob(f"{maya.user_id}__*")) and squashed
+    assert not list((tmp_path / "users" / "consents").glob(f"{maya.user_id}__*"))
 
 
 def test_publishing_deletes_and_adds_in_one_commit(tmp_path, monkeypatch):
@@ -666,14 +668,17 @@ def test_forgot_and_verify_pages(app):
     assert "Checking your link…" in c.get("/verify").text
 
 
-def test_the_privacy_policy_covers_email_and_marks_the_pending_passage():
+def test_the_privacy_policy_covers_email_and_roaster_insights():
     policy = (ROOT / "src/coffeedata/templates/privacy.html").read_text()
     for words in ("Your email address, if you add one", "<strong>Resend:</strong> sends the app's emails",
                   "To recommend coffees", "nudge-email", "We don't use third-party tracking or analytics",
                   "opted into marketing email"):  # fmt: skip
         assert words in policy
-    # The insights passage waits on the owner's wording (task 0): marked in the page and in the template.
-    assert policy.count('data-pending="owner-wording"') == 1 and "[Pending the owner's wording]" in policy
+    # The owner's wording on insights for roasters (2026-11-08), and the setting it names exists.
+    assert "<strong>Insights we sell to roasters.</strong>" in policy and "at least 11 members" in policy
+    assert "turn off <strong>Include my shots in roaster insights</strong>" in policy
+    assert "Your personal data isn't sold," in policy  # the summary
+    assert "Include my shots in roaster insights" in (ROOT / "app/templates/setup.html").read_text()
     assert LEGAL_UPDATED != "November 2, 2026"  # bumped, so every member accepts the new policy once
 
 
@@ -701,3 +706,50 @@ def test_rotating_the_email_key_reseals_everything_and_keeps_links_working(
     assert rekey.main(["--check"]) == 0
     monkeypatch.setenv("EMAIL_KEY", KEY)
     assert rekey.main(["--check"]) == 1  # the old key opens nothing now
+
+
+# --- roaster insights: the setting the privacy policy names --------------------------------------------------------
+
+
+def test_shots_count_in_roaster_insights_until_turned_off_and_the_choice_is_recorded(
+    app, owner, outbox, accounts
+):
+    maya = join(app, owner, "maya", "maya@example.com", marketing=True)
+    uid = accounts.by_name("maya").user_id
+    me = W | {"X-Expected-User": uid}
+    assert accounts.insights(uid) is True and accounts.insights_excluded() == set()  # on by default
+    page = maya.get("/setup").text
+    assert re.search(
+        r'<input type="checkbox" id="insights" data-insights aria-describedby="insights-h" checked>', page
+    )
+    assert maya.post("/api/insights", json={"insights": False}, headers=me).json() == {"insights": False}
+    assert accounts.insights_excluded() == {uid}
+    row = {r["user_id"]: r for r in accounts.lake.latest("consents", "user_id")}[uid]
+    assert (
+        row["insights"] is False
+        and row["insights_version"] == LEGAL_UPDATED
+        and row["insights_at"] is not None
+    )
+    assert row["source"] == "settings" and row["marketing"] is True and row["terms_version"] == LEGAL_UPDATED
+    assert 'id="insights" data-insights aria-describedby="insights-h">' in maya.get("/setup").text  # unticked
+    # It survives a restart, a marketing change and re-acceptance of newer terms.
+    maya.post("/api/marketing", json={"marketing": False}, headers=me)
+    later = new_accounts(accounts.lake.root, legal="December 31, 2026")
+    later.accept(uid)
+    assert later.insights(uid) is False and later.consents[uid][0].source == "reaccept"
+    assert maya.post("/api/insights", json={"insights": "no"}, headers=me).status_code == 422
+    assert client(app).post("/api/insights", json={"insights": True}, headers=W).status_code == 401
+
+
+def test_the_insights_setting_is_there_without_email(tmp_path, lake):
+    accounts = new_accounts(tmp_path / "users", key=None)
+    app = create_app(lake, Sessions(accounts), mailer=None)
+    c = client(app)
+    c.post(
+        "/api/signin",
+        json={"setup_code": SETUP, "username": "jtouley", "password": PW, "agree": True},
+        headers=W,
+    )
+    page = c.get("/setup").text
+    assert "Include my shots in roaster insights" in page and 'id="marketing"' not in page
+    assert c.post("/api/insights", json={"insights": False}, headers=W).json() == {"insights": False}

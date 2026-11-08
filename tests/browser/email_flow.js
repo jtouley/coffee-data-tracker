@@ -217,6 +217,14 @@ function linkIn(message, path) {
     await joiner.uncheck("#marketing");
     await waitText(joiner, "[data-marketing-status]", /^Saved: you won’t get them\.$/);
     await snap(joiner, "setup-email-verified");
+    // Roaster insights: on to start with; turning it off saves, says so, and stays off after a reload.
+    assert.equal(await joiner.isChecked("#insights"), true);
+    await joiner.uncheck("#insights");
+    await waitText(joiner, "[data-insights-status]", /^Saved: later reports leave your shots out\.$/);
+    await joiner.locator("#insights").scrollIntoViewIfNeeded();
+    await snap(joiner, "setup-insights-off");
+    await joiner.reload();
+    assert.equal(await joiner.isChecked("#insights"), false, "kept");
     // Change: the form, then the new address waiting to be confirmed.
     await joiner.locator("summary", { hasText: "Change email" }).click();
     await joiner.fill("#new-email", "ana@new.example");

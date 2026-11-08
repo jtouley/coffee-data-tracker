@@ -628,6 +628,15 @@ def create_app(
         owner_call(email_only().accounts.remove_email, me.user_id, user_id)
         return {"ok": True}
 
+    @app.post("/api/insights")
+    def post_insights(body: dict, me: Writer) -> dict:
+        """ "Include my shots in roaster insights" (privacy policy). Not tied to email: every member has it."""
+        s = accounts_only()
+        if not isinstance(body.get("insights"), bool):
+            raise HTTPException(422, "insights must be true or false")
+        s.accounts.set_insights(me.user_id, body["insights"])
+        return {"insights": body["insights"]}
+
     @app.post("/api/marketing")
     def post_marketing(body: dict, me: Writer) -> dict:
         s = email_only()
@@ -1046,6 +1055,7 @@ def create_app(
             auth_name=getattr(auth, "name", ""),
             email=sessions.accounts.email(me.user_id) if email_on and sessions else None,
             marketing=sessions.accounts.marketing(me.user_id) if email_on and sessions else None,
+            insights=sessions.accounts.insights(me.user_id) if sessions else True,
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
         )

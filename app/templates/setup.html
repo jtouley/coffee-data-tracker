@@ -52,6 +52,12 @@
       <p class="fhint" id="marketing-h" data-marketing-status role="status">{% if not (email and email.verified) %}Sent only to a verified email.{% endif %}</p></div>
     </div>
     {% endif %}
+    {# Roaster insights (privacy policy, "Insights we sell to roasters"): on unless the member turns it off. #}
+    <div class="agree setting">
+      <input type="checkbox" id="insights" data-insights aria-describedby="insights-h"{% if insights %} checked{% endif %}>
+      <div><label for="insights">Include my shots in roaster insights</label>
+      <p class="fhint" id="insights-h" data-insights-status role="status">Totals and averages across at least 11 members, sold to roasters. Never your name, email, photos, notes or a single shot.</p></div>
+    </div>
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
     <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
       <form id="password-form" class="mt8" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>

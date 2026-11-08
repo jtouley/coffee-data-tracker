@@ -1866,20 +1866,31 @@ function emailSettings() {
     }
   }));
   // The marketing box saves as it's ticked; the line under it says so (or puts the tick back).
-  const box = document.querySelector("[data-marketing]");
-  const said = document.querySelector("[data-marketing-status]");
-  const quiet = said?.textContent || "";
-  box?.addEventListener("change", async () => {
+  const quiet = document.querySelector("[data-marketing-status]")?.textContent || "";
+  autosave(document.querySelector("[data-marketing]"), document.querySelector("[data-marketing-status]"), "/api/marketing", "marketing",
+    `Saved: you’ll get them${quiet ? " once your email is verified" : ""}.`, "Saved: you won’t get them.");
+}
+
+// A Setup box that saves as it's ticked (marketing email, roaster insights): "Saving…", then what was saved, in
+// the line under it (role="status"); a refusal puts the tick back and says why.
+function autosave(box, said, url, field, onText, offText) {
+  if (!box || !said) return;
+  box.addEventListener("change", async () => {
     const on = box.checked;
     said.textContent = "Saving…";
     try {
-      await post("/api/marketing", { marketing: on });
-      said.textContent = on ? `Saved: you’ll get them${quiet ? " once your email is verified" : ""}.` : "Saved: you won’t get them.";
+      await post(url, { [field]: on });
+      said.textContent = on ? onText : offText;
     } catch (err) {
       box.checked = !on;
       said.textContent = err instanceof Rejected ? err.message : UNREACHABLE;
     }
   });
+}
+
+function insightsSetting() {
+  autosave(document.querySelector("[data-insights]"), document.querySelector("[data-insights-status]"), "/api/insights", "insights",
+    "Saved: your shots are counted in later reports.", "Saved: later reports leave your shots out.");
 }
 
 // Today's "Add an email" notice: Not now hides it for 90 days (the server reads the cookie).
@@ -1940,6 +1951,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const verify = document.querySelector("[data-verify]");
   if (verify) verifyPage(verify);
   emailSettings();
+  insightsSetting();
   const prompt = document.querySelector("[data-email-prompt]");
   if (prompt) emailPrompt(prompt);
   const join = document.getElementById("join");

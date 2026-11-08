@@ -283,6 +283,9 @@ class Consent:
     marketing: bool | None = None  # None: never offered
     marketing_at: datetime | None = None
     marketing_version: str | None = None
+    insights: bool | None = None  # counted in roaster insights; None: never changed, which counts as on
+    insights_at: datetime | None = None
+    insights_version: str | None = None
 
 
 _KEEP = object()  # "leave the marketing choice as it was"
@@ -368,7 +371,8 @@ class Accounts:
                 self.consents[row["user_id"]] = (
                     Consent(row["user_id"], row["terms_version"], row["privacy_version"], row["terms_at"],
                             row["source"], row.get("marketing"), row.get("marketing_at"),
-                            row.get("marketing_version")),
+                            row.get("marketing_version"), row.get("insights"), row.get("insights_at"),
+                            row.get("insights_version")),
                     row["logged_at"],
                 )  # fmt: skip
         self.contacts: dict[str, tuple[Contact, datetime]] = {}
@@ -449,14 +453,14 @@ class Accounts:
         return inv, at
 
     def _stage_consent(
-        self, user_id: str, source: str, marketing: object = _KEEP
+        self, user_id: str, source: str, marketing: object = _KEEP, insights: object = _KEEP
     ) -> tuple[Consent, datetime]:
-        """A new acceptance (signup, reaccept) records the current Terms; a marketing change from Setup
-        (`settings`) keeps the acceptance it had. The marketing choice is carried forward unless given."""
+        """A new acceptance (signup, reaccept) records the current Terms; a choice changed in Setup (`settings`)
+        keeps the acceptance it had. The marketing and roaster-insights choices are carried forward unless given."""
         prev = self.consents.get(user_id)
         at = self._next_at(prev)
         if source == "settings":
-            # Only the marketing choice changes. An account with no record yet accepted the terms of its day by
+            # Only a choice changes. An account with no record yet accepted the terms of its day by
             # joining (TERMS_BEFORE_RECORDS), and this mustn't claim it accepted anything newer.
             old = TERMS_BEFORE_RECORDS
             c = (
@@ -468,7 +472,8 @@ class Accounts:
             c = Consent(user_id, self.legal, self.legal, at, source)
             if prev:
                 c = replace(c, marketing=prev[0].marketing, marketing_at=prev[0].marketing_at,
-                            marketing_version=prev[0].marketing_version)  # fmt: skip
+                            marketing_version=prev[0].marketing_version, insights=prev[0].insights,
+                            insights_at=prev[0].insights_at, insights_version=prev[0].insights_version)  # fmt: skip
         if marketing is not _KEEP:
             c = replace(
                 c,
@@ -476,6 +481,8 @@ class Accounts:
                 marketing_at=at,
                 marketing_version=self.legal,
             )
+        if insights is not _KEEP:
+            c = replace(c, insights=bool(insights), insights_at=at, insights_version=self.legal)
         row = {
             "user_id": user_id,
             "logged_at": at,
@@ -486,6 +493,9 @@ class Accounts:
             "marketing": c.marketing,
             "marketing_at": c.marketing_at,
             "marketing_version": c.marketing_version,
+            "insights": c.insights,
+            "insights_at": c.insights_at,
+            "insights_version": c.insights_version,
         }
         self.lake.write("consents", f"consents/{user_id}__{at:%Y%m%dT%H%M%S}.parquet", [row])
         return c, at
@@ -1186,6 +1196,24 @@ class Accounts:
             if self.get(user_id) is None:
                 raise AccountError("No such account.")
             self._commit(f"app: consents {user_id}", consents=(self._stage_consent(user_id, "settings", on),))
+
+    def insights(self, user_id: str) -> bool:
+        """Whether this member's shots may be counted in roaster insights: on unless they turned it off."""
+        hit = self.consents.get(user_id)
+        return not (hit and hit[0].insights is False)
+
+    def set_insights(self, user_id: str, on: bool) -> None:
+        """ "Include my shots in roaster insights" in Setup: recorded with when, and the Privacy Policy version."""
+        with self.lock:
+            if self.get(user_id) is None:
+                raise AccountError("No such account.")
+            staged = self._stage_consent(user_id, "settings", insights=on)
+            self._commit(f"app: consents {user_id}", consents=(staged,))
+
+    def insights_excluded(self) -> set[str]:
+        """User ids whose shots the roaster-insights export must leave out, read when it runs. There's no export
+        job yet: when there is, it reads this (or the latest `consents` row per user, `insights = false`)."""
+        return {uid for uid, (c, _) in list(self.consents.items()) if c.insights is False}
 
     def marketing_recipients(self) -> list[tuple[str, str]]:
         """(user_id, address) of everyone a marketing email may go to, read at the time of sending: the box ticked,

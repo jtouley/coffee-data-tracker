@@ -479,6 +479,11 @@ SCHEMAS["consents"] = pa.schema(
         ("marketing", pa.bool_()),
         ("marketing_at", pa.timestamp("s", tz="UTC")),
         ("marketing_version", pa.string()),
+        # Roaster insights (privacy policy): whether this member's shots may be counted in the aggregate reports
+        # sold to roasters. On by default: null means never changed, and counts as on. Set from Setup.
+        ("insights", pa.bool_()),
+        ("insights_at", pa.timestamp("s", tz="UTC")),
+        ("insights_version", pa.string()),
     ]
 )
 # Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
