@@ -18,12 +18,11 @@ import json
 import re
 from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
 from coffeedata import decisions as snap
 from coffeedata import rules
-from coffeedata.models import adapter_of
 
 from . import jobs as registry
 from . import queries
@@ -97,6 +96,15 @@ class Writes:
         await self.ready()
         today = self.now().date()
         params = registry.checked(action, raw, today, lambda: new_id("t").lower()[:40])
+        if (
+            action.key == "pull"
+        ):  # a counted crawl into a week whose merge is still to come, so the data is kept
+            state = await self.read(queries.week_state, params["week"])
+            if state["merge_done"]:
+                params["week"] = registry.week_of(
+                    (date.fromisoformat(params["week"]) + timedelta(days=7)).isoformat()
+                )
+            params["mode"] = "count"
         plan = await self._guarded(action, params)
         if action.key == "pull":  # only places the owner flagged Roaster
             places = params["roasters"].split(",")
@@ -290,12 +298,6 @@ class Writes:
                     r["final"] = e.status
 
         await asyncio.to_thread(live)
-        for r in rows:  # Pull now: once its probe has succeeded, the crawl of the places it probed
-            if r["action"] == "pull" and r["final"] == "succeeded":
-                r["followed"] = await self._pull_crawl(r)
-        listed = {r["run_id"] for r in rows}
-        if any(x["run_id"] not in listed for r in rows for x in (r.get("followed") or {}).get("runs", [])):
-            return await self.runs(limit)  # a crawl just started: list it too
         tests = [r["test_id"] for r in rows if r["test_id"]]
         if tests:
             answers = await self.read(queries.test_results, tests)
@@ -311,41 +313,6 @@ class Writes:
                     else None
                 )
         return rows
-
-    async def _pull_crawl(self, run: dict) -> dict:
-        """Start Pull now's crawl once its probe has succeeded: each probed place on its connector's crawl job, a
-        count crawl of the probe's week, as the owner who pulled (their window override carried over), through the
-        same guards and audit as any start. Once per probe (its key): a refusal is recorded and not retried; the
-        owner can start Crawl one roaster from Jobs."""
-        key = f"pull-crawl:{run['run_id']}"
-        if (first := await asyncio.to_thread(self.control.answered, key)) is not None:
-            return first
-        places = (run["roaster_id"] or "").split(",")  # the pull's places, recorded with its run
-        platforms = await self.read(queries.probed_platforms, [p for p in places if p])
-        groups: dict[str, list[str]] = {}
-        for place, platform in sorted(platforms.items()):
-            groups.setdefault(adapter_of(platform), []).append(place)
-        action = registry.ACTIONS["pull-crawl"]
-        params = dict(action.fixed) | {"week": str(run["week"])[:10], "after": run["run_id"],
-                                       "groups": {c: ",".join(ds) for c, ds in groups.items()}}  # fmt: skip
-        try:
-            if not groups:
-                raise registry.Refused([f"no pulled place answered the probe ({', '.join(places)})"])
-            plan = await self._guarded(action, params)
-            return await self._start(run["actor"], key, plan, run["override_reason"])
-        except registry.Refused as e:  # the guards' refusals are audited already (_check); this one not yet
-            out, audited = {"ok": False, "errors": e.reasons}, bool(groups)
-
-            def record():
-                with self.control.tx() as cur:
-                    if self.control.claim(cur, key) is None:
-                        if not audited:
-                            self.control.audit(cur, run["actor"], "job_start", "pull-crawl", "refused",
-                                               {"reasons": out["errors"], "after": run["run_id"]})  # fmt: skip
-                        self.control.remember(cur, key, out)
-
-            await asyncio.to_thread(record)
-            return out
 
     # --- decisions -------------------------------------------------------------------------------------------------
 
@@ -480,7 +447,10 @@ class Writes:
             if got is None:
                 sources_error = (f"The served release {served['build_id']}'s registry (dim_roaster) can't be read, "
                                  "so the source flags can't be applied: try again shortly")  # fmt: skip
-            known = (got or set()) - set(snap.source_roasters(served_doc))
+            # the registry without the served flags: less the places it added, plus the roasters it dropped
+            known = ((got or set()) - set(snap.source_roasters(served_doc))) | set(
+                snap.not_roasters(served_doc)
+            )
         if sources_error:
             sources, dropped = snap.source_roasters(served_doc), snap.not_roasters(served_doc)
         else:

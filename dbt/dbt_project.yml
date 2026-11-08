@@ -126,6 +126,8 @@ vars:
   claim_tolerance: 0.15
   # The source-list places (candidates) the build's snapshot flags as roasters: stg_registry adds them (cli._build).
   source_roasters: []
+  # The registry roasters the build's snapshot flags not a roaster: stg_registry drops them (cli._build).
+  not_roasters: []
   # The rule settings (coffeedata.rules.dbt_var: the flag_* models and readiness in int_catalog_decided).
   # `coffeedata build` always passes them, from the build's snapshot or rules.DEFAULTS; these are those defaults,
   # for dbt run by hand and the unit tests (tests/test_flags.py checks they match).

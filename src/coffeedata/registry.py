@@ -234,30 +234,42 @@ class RoasterState:
     last_probed: str | None
 
 
-def current(
-    lake: Lake, seed: Path | None = None, also: list[str] | tuple[str, ...] = ()
-) -> list[RoasterState]:
+UNREAD = object()  # a served snapshot not read yet (read_served reads it)
+
+
+def read_served(lake: Lake) -> dict | None | bool:
+    """The served build's snapshot (None: nothing served), or False when it can't be read (logged): the crawl
+    then runs as before the owner's flags. Read once per job and passed down (current, ingest.crawl_off)."""
+    from . import decisions
+
+    try:
+        return retry_transient(decisions.served_doc, lake)
+    except Exception as e:  # noqa: BLE001 - logged; the registry and the crawl stay as they were without the flags
+        log.warning("the served snapshot wasn't read (%s): no flags apply", type(e).__name__)
+        return False
+
+
+def current(lake: Lake, seed: Path | None = None, also: list[str] | tuple[str, ...] = (),
+            doc: object = UNREAD) -> list[RoasterState]:  # fmt: skip
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
     it is each crawl job's first read of the hf:// lake. `also`: places of the source list to include as if flagged
     (the admin's Pull now crawls a place the owner flagged before a draft of it is published)."""
-    added, dropped = source_flags(lake)
+    added, dropped = source_flags(lake, doc)
     added = added + [d for d in also if d not in added]
     return retry_transient(_current, lake, seed or SEED, added, dropped)
 
 
-def source_flags(lake: Lake) -> tuple[list[str], set[str]]:
+def source_flags(lake: Lake, doc: object = UNREAD) -> tuple[list[str], set[str]]:
     """The owner's flags from the published snapshot (the admin's Sources page): the source-list places flagged
     roaster, which the registry adds, and the registry roasters flagged not a roaster, which it drops. Every other
     registry roaster inherits the roaster flag, so with no flags the registry is exactly what it was. A snapshot
     that can't be read applies none: the registry as it was before the flags."""
     from . import decisions
 
-    try:
-        doc = retry_transient(decisions.served_doc, lake)
-        return decisions.source_roasters(doc), set(decisions.not_roasters(doc))
-    except Exception as e:  # noqa: BLE001 - logged; the registry stays as it was without the flags
-        log.warning("source flags not read (%s): the registry without them", type(e).__name__)
+    doc = read_served(lake) if doc is UNREAD else doc
+    if doc is False:
         return [], set()
+    return decisions.source_roasters(doc), set(decisions.not_roasters(doc))  # type: ignore[arg-type]
 
 
 def _current(lake: Lake, seed: Path, added: list[str], dropped: set[str]) -> list[RoasterState]:

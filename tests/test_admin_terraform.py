@@ -18,12 +18,14 @@ def test_the_jobs_the_admin_starts_are_the_jobs_it_may_start():
     ingestion = (TF / "ingestion.tf").read_text()
     defined = set(re.findall(r'^\s+"([a-z0-9-]+)"\s+=\s+\{', ingestion, re.M))
     assert granted <= defined, granted - defined
-    assert "discover" not in granted
-    # The probe only for Pull now: places the owner flagged, by name (probe --only), never the weekly probe.
-    probes = [s for a in jobs.ACTIONS.values() for s in a.steps(jobs._SAMPLE) if s.job == "probe"]
-    assert probes and all(
-        s.args and s.args[0].startswith("coffeedata probe --only a.example ") for s in probes
+    assert "discover" not in granted and "probe" not in granted
+    # Pull now's job: the places the owner flagged, by name (pull --only), never the registry's whole probe.
+    pulls = [s for a in jobs.ACTIONS.values() for s in a.steps(jobs._SAMPLE) if s.job == "pull"]
+    assert pulls and all(
+        s.args and s.args[0].startswith("rc=0; coffeedata pull --only a.example ") for s in pulls
     )
+    line = next(x for x in ingestion.splitlines() if x.strip().startswith('"pull"'))
+    assert 'args = ["coffeedata pull --help"]' in line and "retries = 0" in line
 
 
 def test_the_publish_job_does_nothing_without_the_admins_arguments():

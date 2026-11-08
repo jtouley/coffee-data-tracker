@@ -669,16 +669,5 @@ def registry_ids(lake: Lake, con, build_id: str) -> set[str] | None:
         f"select roaster_id from read_parquet('{f.replace(chr(39), chr(39) * 2)}', hive_partitioning = false)").fetchall()}  # fmt: skip
 
 
-def probed_platforms(lake: Lake, con, places: list[str]) -> dict[str, str]:
-    """Each place's platform from its latest answered probe (the places no probe reached are left out)."""
-    if not places:
-        return {}
-    rows = _empty_ok(lambda: con.execute(
-        f"""select roaster_id, platform from {lake.scan("probes")}
-            where roaster_id in (select unnest(?::varchar[])) and status = 'ok'
-            qualify row_number() over (partition by roaster_id order by probed_at desc) = 1""", [places]).fetchall(), [])  # fmt: skip
-    return {r[0]: r[1] or "" for r in rows}
-
-
 def to_json(value: Any) -> str:
     return json.dumps(value, default=str)

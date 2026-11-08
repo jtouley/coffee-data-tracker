@@ -139,6 +139,12 @@ locals {
     # arguments only print the help. Retries 0: a failed serve is started again by the owner, and serving the same
     # build again is idempotent.
     "publish" = { command = ["coffeedata"], args = ["publish-release", "--help"], egress = "default", claude = false, memory = "4Gi", retries = 0 }
+    # The admin's Pull now (admin/jobs.py `pull`): probe the places the owner flagged, then a counted crawl of each
+    # storefront found, on its connector, then publish the probes. Never scheduled; started only with the admin's
+    # override (`coffeedata pull --only ...`); its own arguments print the help. It leaves from WooCommerce's and
+    # generic's NAT IP (SiteGround answers the default egress with a challenge), and a few stores asked once don't
+    # touch Shopify's IP budget. Retries 0: the owner starts it again.
+    "pull" = { command = ["sh", "-c"], args = ["coffeedata pull --help"], egress = "woo_generic", claude = false, memory = "2Gi", retries = 0 }
     "build" = {
       command = ["sh", "-c"]
       args    = ["rc=0; coffeedata classify || rc=1; coffeedata build || rc=1; coffeedata publish --message \"weekly build\"; coffeedata egress-check || rc=1; exit $rc"]

@@ -191,13 +191,23 @@ def test_not_a_roaster_takes_its_coffees_out_and_undo_puts_them_back(tmp_path, l
     back = post(c, "/api/sources/flags", {"key": "k5", "flag": "roaster", "items": [
         {"roaster_id": "good.example", "seen": again.json()["batch_id"]}]})  # fmt: skip
     assert back.json()["restored"] == 2  # flagged Roaster again: its coffees come back too
+    redo = post(c, f"/api/sources/flags/{back.json()['batch_id']}/undo", {"key": "k6"})
+    assert redo.json()["excluded"] == 2  # undoing that puts Not a roaster back, and its coffees leave again
+    gone = post(c, "/api/sources/flags", {"key": "k7", "flag": "unreviewed", "items": [
+        {"roaster_id": "good.example", "seen": u_batch(app)}]})  # fmt: skip
+    assert gone.json()["restored"] == 2  # and a later change still finds them
 
 
 def u_batch(app):
     return app.state.writes.control.source_flags(["good.example"])["good.example"]["batch_id"]
 
 
-def test_pull_now_probes_then_crawls_the_flagged_places(tmp_path, lake, pg_url):
+def test_pull_now_is_one_job_and_after_the_merge_crawls_into_next_week(tmp_path, lake, pg_url):
+    """Pull now is one Cloud Run job: the probe, then a counted crawl of each storefront found (coffeedata pull).
+    No page load starts anything. Once this week's merge is done, it crawls into next week, which the next merge and
+    build keep (a merged week's partition is never read again)."""
+    from coffeedata import control
+
     app, c, fake = make(tmp_path, lake.root, pg_url)
     post(
         c, "/api/sources/flags", {"key": "k1", "flag": "roaster", "items": [{"roaster_id": "beans.example"}]}
@@ -207,23 +217,17 @@ def test_pull_now_probes_then_crawls_the_flagged_places(tmp_path, lake, pg_url):
     assert post(c, "/api/jobs/pull/runs", {"key": "p1", "roasters": "tea.example"}).status_code == 409
     r = post(c, "/api/jobs/pull/runs", {"key": "p2", "roasters": "beans.example"})
     assert r.status_code == 200, r.text
-    (probe,) = [x for x in fake.calls if x[0] == "run"]
-    assert probe[1] == "probe" and "coffeedata probe --only beans.example" in probe[2][0]
-    c.get("/part/sources")  # the probe is still running: no crawl yet
+    (run,) = [x for x in fake.calls if x[0] == "run"]
+    assert run[1] == "pull" and "coffeedata pull --only beans.example --run-date 2026-11-02" in run[2][0]
+    fake.finish("pull")
+    for page in ("/part/sources", "/part/jobs", "/part/release"):  # GETs only read
+        c.get(page)
     assert len([x for x in fake.calls if x[0] == "run"]) == 1
-    Lake(str(lake.root)).write_partition("probes", "2026-11-05", "pp", [{
-        "run_date": datetime(2026, 11, 5).date(), "batch_id": "pp", "probed_at": datetime(2026, 11, 5, tzinfo=UTC),
-        "roaster_id": "beans.example", "status": "ok", "final_host": "beans.example", "platform": "woocommerce"}])  # fmt: skip
-    fake.finish("probe")
-    page = c.get("/part/sources").text
-    runs = [x for x in fake.calls if x[0] == "run"]
-    assert runs[1][1] == "crawl-woocommerce" and runs[1][2][:5] == ["crawl", "--connector", "woocommerce", "--only",
-                                                                    "beans.example"]  # fmt: skip
-    assert "--run-date" in runs[1][2] and "--test" not in runs[1][2]  # a count crawl of the week
-    assert "Pull now: probe succeeded · crawl-woocommerce running" in page
-    c.get("/part/jobs")
-    assert len([x for x in fake.calls if x[0] == "run"]) == 2  # once per probe
-    assert [a["action"] for a in audit(app)][:2] == ["job_start", "job_start"]
+    lk = Lake(str(lake.root))
+    control.finish(lk, control.start(lk, "merge", "2026-11-02"), "done")  # this week is merged
+    later = post(c, "/api/jobs/pull/plan", {"key": "p3", "roasters": "beans.example"}).json()
+    assert later["refusals"] == [] and later["params"]["week"] == "2026-11-09"
+    assert "--run-date 2026-11-09" in later["steps"][0]["args"][0]
 
 
 def test_a_header_sorts_by_its_column_both_ways(tmp_path, lake, pg_url):

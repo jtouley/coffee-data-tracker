@@ -11,7 +11,7 @@ locals {
   # The jobs the admin may start (admin/jobs.py JOB_NAMES; tests/test_admin_terraform.py checks the two agree).
   admin_jobs = toset([
     "crawl-shopify", "crawl-squarespace", "crawl-woocommerce", "crawl-square-online", "crawl-generic",
-    "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish", "probe",
+    "crawl-retry", "fetch-health", "merge", "enrich-week", "build", "publish", "pull",
   ])
   # The Cloud SQL user of a service account is its email without ".gserviceaccount.com".
   admin_db_user = trimsuffix(google_service_account.admin.email, ".gserviceaccount.com")

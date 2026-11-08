@@ -159,7 +159,7 @@ def test_scheduled_crawls_skip_a_crawl_off_roaster_and_a_live_check_doesnt(lake,
 
     states = [registry.RoasterState(Roaster(roaster_id=r, name=r, host=r, platform="shopify"), "active", None)
               for r in ("a.example", "b.example")]  # fmt: skip
-    monkeypatch.setattr(registry, "current", lambda _lake: states)
+    monkeypatch.setattr(registry, "current", lambda _lake, **k: states)
     assert ingest.crawl_off(lake) == set()  # nothing served: nothing off
     _serve_snapshot(
         lake, "b1", decisions.snapshot("s1", "t", [], None, [{"roaster_id": "b.example", "crawl": False}])

@@ -60,8 +60,7 @@ def test_every_action_names_a_real_pipeline_job_and_checked_fields():
         assert set(a.fields) <= set(jobs.FIELDS), a.key
     p = {"connectors": "all", "connector": "shopify", "roaster": "onyxcoffeelab.com", "mode": "test",
          "week": W3, "test_id": "t-1", "draft_id": "d-1", "snapshot_id": "s-1", "sha256": "0" * 64,
-         "build": B1, "baseline": B1, "reason": "why", "roasters": "a.example,b.example",
-         "groups": {"generic": "a.example,b.example"}}  # fmt: skip
+         "build": B1, "baseline": B1, "reason": "why", "roasters": "a.example,b.example"}  # fmt: skip
     for a in jobs.ACTIONS.values():
         for s in a.steps(p):
             assert s.job in jobs.JOB_NAMES, (a.key, s.job)
@@ -70,10 +69,10 @@ def test_every_action_names_a_real_pipeline_job_and_checked_fields():
     assert full[0].args[-2:] == ["--test", "t-1"]
     count = jobs.ACTIONS["crawl-one"].steps(p | {"mode": "count"})[0]
     assert count.args == ["crawl", "--connector", "shopify", "--only", "onyxcoffeelab.com", "--run-date", W3]
-    (pull,) = jobs.ACTIONS["pull"].steps(p)  # Pull now: the named places only, then their count crawl
-    assert pull.job == "probe" and pull.args[0].startswith("coffeedata probe --only a.example,b.example && ")
-    assert jobs.ACTIONS["pull-crawl"].steps(p)[0].args == ["crawl", "--connector", "generic", "--only",
-                                                           "a.example,b.example", "--run-date", W3]  # fmt: skip
+    (pull,) = jobs.ACTIONS["pull"].steps(p)  # Pull now: one job, the named places only
+    assert pull.job == "pull" and pull.args[0].startswith(
+        f"rc=0; coffeedata pull --only a.example,b.example --run-date {W3} "
+    )
 
 
 @pytest.mark.parametrize(

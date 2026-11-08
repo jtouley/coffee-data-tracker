@@ -1,6 +1,7 @@
 -- Seed list (config/roasters.csv) plus roasters added in the lake by discovery or by hand, plus the places of the
 -- source list (`candidates`) the build's snapshot flags as roasters (var source_roasters; the admin's Sources page),
--- as if discovery had added them: the same rule as registry.current, so the crawl and the build agree.
+-- as if discovery had added them, less the roasters it flags not a roaster (var not_roasters): the same rule as
+-- registry.current, so the crawl and the build agree.
 with seed as (
     select roaster_id, name, nullif(city, '') as city, nullif(state, '') as state,
            coalesce(try_cast(locations as integer), 1) as locations,
@@ -40,3 +41,7 @@ select
     a.first_added  -- when the lake first listed it (null: from the seed list alone)
 from seed s
 full outer join added a using (roaster_id)
+{%- set dropped = var('not_roasters', []) %}
+{%- if dropped %}
+where coalesce(s.roaster_id, a.roaster_id) not in ({% for d in dropped %}'{{ d | replace("'", "''") }}'{{ ", " if not loop.last }}{% endfor %})
+{%- endif %}

@@ -500,7 +500,7 @@ function pullNow(places) {
   if (!form || !places.length) return;
   form.querySelector("input[name=roasters]").value = places.join(",");
   form.dataset.confirmTitle = `Probe and crawl ${plural(places.length, "place")}?`;
-  form.dataset.confirmText = `${places.join(", ")}. The crawl starts when the probe finishes; no Publish needed.`;
+  form.dataset.confirmText = `${places.join(", ")}. One job probes them, then crawls each storefront it finds, counted for the week; no Publish needed.`;
   confirmWrite(form);
 }
 

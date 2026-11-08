@@ -104,19 +104,23 @@ way the Catalog does, and searches and pages there (100 rows a page; about 47,00
   and the weekly crawl pick them up or leave them. dbt's `stg_registry` adds the same places through the var
   `source_roasters`. A newly flagged roaster is probed at the next probe run and crawled once a probe finds its
   platform. Unreviewed places are never probed or crawled. A snapshot that can't be read applies no flags.
-- **Not a roaster takes the store's coffees out.** In the same write it records an exclude decision for each of the
-  store's coffees in the served release (grouped under the flag's batch), so the next draft drops them from the
-  public catalog as well as from the probe and the crawl. Undo restores both; flagging the place Roaster or clearing
-  the flag later reverts those exclusions too.
-- **Pull now.** The action bar (for the selected places) and a Roaster place's ⋯ menu offer Pull now. It is Jobs'
-  `pull` action: the probe job with `probe --only <domains>` (and a publish of its rows), then, once the admin sees
-  that probe succeed (the Sources and Jobs pages poll it), the `pull-crawl` action: a count crawl of the week for
-  each probed place on its connector's job, `crawl --only <domains> --run-date <week>`. The same guards (overlap, a
-  merged week, the Monday and Tuesday windows with the owner's override, carried to the crawl), the same audit and
-  the same live status. No Publish is needed: `--only` crawls a place of the source list before it is in a published
-  registry (`ingest.select_states`). The next published draft carries the flag, so the weekly crawl keeps the place.
-  Only places flagged Roaster can be pulled. A crawl that is refused after the probe is recorded on the pull and
-  not retried; Crawl one roaster on Jobs starts it by hand.
+- **Not a roaster leaves the crawl, the build and the catalog.** The next draft's snapshot carries it in
+  `not_roasters`: `registry.current` drops it from the probe and the crawl, and dbt `stg_registry` (var
+  `not_roasters`) drops it from `dim_roaster` and the public roaster table. In the same write it records an exclude
+  decision for each of the store's coffees in the served release (grouped under the flag's batch). Undo restores the
+  flag and the coffees; flagging it Roaster or clearing the flag reverts the exclusions, and undoing that excludes
+  them again.
+- **Pull now.** The action bar (for the selected places) and a Roaster place's ⋯ menu offer Pull now. It is one
+  Cloud Run job, `pull` (`coffeedata pull --only <domains> --run-date <week>`, then a publish of its probe rows):
+  it probes the places, then crawls each one that answered with a storefront, counted, on its platform's connector,
+  in the same execution. Nothing waits for a page to be open, and no GET starts anything. The week is this week
+  until its merge is done, then next week: a merged week's partition is never read again, and next week's merge and
+  build keep the data (that place counts as done for next week's crawl). It runs on any day, with the same guards
+  (overlap, and the Monday and Tuesday windows with the owner's override) and the same audit, and Jobs shows it.
+  No Publish is needed: `--only` crawls a place of the source list before it is in a published registry
+  (`ingest.select_states`); the next published draft carries the flag, so the weekly crawl keeps it. Only places
+  flagged Roaster can be pulled; a place whose probe finds no storefront is not crawled. The job leaves from the
+  WooCommerce and generic NAT IP (`src/terraform/ingestion.tf`).
 - **Fails closed.** If the served release's `dim_roaster` can't be read while there are flags, Release says so and
   refuses a draft, rather than treating the registry as empty. If the flags can't be read (control plane down),
   Sources still lists the places but shows no status and no flag counts.

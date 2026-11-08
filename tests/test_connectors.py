@@ -97,7 +97,7 @@ def test_a_connector_that_never_ran_stays_in_the_expected_set(tmp_path, monkeypa
         registry.RoasterState(Roaster(roaster_id=r, name=r, host=r, platform=p), "active", None)
         for r, p in (("s.com", "shopify"), ("w.com", "woocommerce"), ("g.com", "wix"))
     ]
-    monkeypatch.setattr(registry, "current", lambda lake, seed=None: states)
+    monkeypatch.setattr(registry, "current", lambda lake, *a, **k: states)
     run(connectors.PartitionLake(lk, "shopify", WEEK), WEEK, "s.com", [product("A")])
     control.finish(lk, control.start(lk, "crawl", WEEK, "shopify"), "done")
     # woocommerce's job started but never finished (killed): it hasn't landed, so it counts as missing

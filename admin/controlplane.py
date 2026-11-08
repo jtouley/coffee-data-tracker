@@ -319,6 +319,23 @@ class ControlPlane:
         )
         return cur.fetchall()
 
+    def _reexclude(self, cur, actor: str, earlier: str, place: str, batch: str) -> list[str]:
+        """Exclude again the coffees an earlier Not a roaster batch excluded for `place`, now under `batch` (the
+        place's latest flag, so a later change finds them)."""
+        cur.execute(
+            "select distinct subject, coffee_id, input_hash, roaster_id, title from control.decisions "
+            "where group_id = %s and roaster_id = %s and subject_kind = 'coffee_id' and action = 'exclude'",
+            (earlier, place),
+        )
+        cols = ("subject", "coffee_id", "input_hash", "roaster_id", "title")
+        items = [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+        latest = self._latest(cur, "coffee_id", [i["subject"] for i in items])
+        return [self._approve(cur, "coffee_id", i["subject"], "exclude", f"not a roaster: {place} (Sources)", actor,
+                              batch, i)  # fmt: skip
+                for i in items
+                if not ((latest.get(i["subject"]) or {}).get("event") == "approved"
+                        and latest[i["subject"]]["action"] == "exclude")]  # fmt: skip
+
     def save_settings(self, actor: str, key: str, doc: object, based_on: str | None, reason: str) -> dict:
         """A new rule settings version, checked against the deployed code (rules.check), based on the version the
         page showed (`based_on`, None for the defaults): another edit since is a Conflict. Records what changed and
@@ -490,11 +507,12 @@ class ControlPlane:
                 raise ValueError("no such batch")
             now = self._source_flags(cur, places)
             undo = new_id("f").lower()
-            undone = []
+            undone: list[str] = []
+            reexcluded: list[str] = []
             for p in places:
                 if (now.get(p) or {}).get("batch_id") != batch:
                     continue  # flagged again since: that later flag stands
-                cur.execute("select flag from control.source_flags where roaster_id = %s and batch_id <> %s "
+                cur.execute("select flag, batch_id from control.source_flags where roaster_id = %s and batch_id <> %s "
                             "and id < (select max(id) from control.source_flags where batch_id = %s) "
                             "order by id desc limit 1", (p, batch, batch))  # fmt: skip
                 before = cur.fetchone()
@@ -502,9 +520,12 @@ class ControlPlane:
                             "values (%s, %s, %s, %s, %s)",
                             (undo, p, before[0] if before else "unreviewed", batch, actor))  # fmt: skip
                 undone.append(p)
+                if before and before[0] == "not_roaster":  # back to Not a roaster: its coffees leave again
+                    reexcluded += self._reexclude(cur, actor, before[1], p, undo)
             # Undo of a Not a roaster batch puts its places' coffees back too.
             restored = self._revert(cur, actor, self._source_excludes(cur, batch, undone), "undo")
-            out = {"ok": True, "reverted": undone, "count": len(undone), "restored": len(restored)}
+            out = {"ok": True, "reverted": undone, "count": len(undone), "restored": len(restored),
+                   "excluded": len(reexcluded)}  # fmt: skip
             self.audit(
                 cur, actor, "source_flag_undo", batch, "ok", {"places": undone[:50], "count": len(undone)}
             )

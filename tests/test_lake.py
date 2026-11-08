@@ -433,7 +433,7 @@ def test_select_parked_done_query_retries_a_dropped_connection(tmp_path, monkeyp
     ingest.save_parked(lk, "2026-11-02", "parked.example", {"page": 3, "items": []})
     state = registry.RoasterState(Roaster(roaster_id="parked.example", name="P", host="parked.example",
                                           platform="shopify"), "active", None)  # fmt: skip
-    monkeypatch.setattr(registry, "current", lambda lake: [state])
+    monkeypatch.setattr(registry, "current", lambda lake, **k: [state])
     waits, failures = _flaky(monkeypatch, lk, "status in ('ok', 'unavailable', 'crashed')")
     states, resume = ingest.select_parked(lk, "2026-11-02")
     assert [s.roaster.roaster_id for s in states] == ["parked.example"]

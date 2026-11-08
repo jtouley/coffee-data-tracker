@@ -9,7 +9,7 @@
 {%- endmacro %}
 {% macro many(n_, one, more) %}{{ n(n_) }} {{ one if n_ == 1 else more }}{% endmacro %}
 {% set label = {"roaster": "Roaster", "roaster (inherited)": "Roaster (inherited)", "not a roaster": "Not a roaster", "unreviewed": "Unreviewed"} %}
-<div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}"{% if pulls | rejectattr("final") | list %} data-poll="10"{% endif %}>
+<div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not data or not data.total %}
   <div class="state empty mt16"><h2 class="section">No places yet</h2><p class="body">The served release lists no roasters, and the lake has no <code>candidates</code>: discovery (<code>coffeedata discover overture</code>, the monthly discover job) records every place it reads there, from its next run.</p></div>
@@ -46,7 +46,6 @@
   {% else %}
   <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
-  {% if pulls %}<p class="src" data-pulls>Pull now: {% for r in pulls | reverse %}{{ r.job }} {{ r.status }}{% if r.followed and r.followed.errors %} (the crawl didn’t start: {{ r.followed.errors | join("; ") }}){% endif %}{{ " · " if not loop.last }}{% endfor %} · <a class="ev" href="/jobs">Jobs</a></p>{% endif %}
   {% if chips %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ many(data.total, "place", "places") }} {{ "matches" if data.matching == 1 else "match" }}</p>{% endif %}
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
@@ -81,10 +80,10 @@
   <div class="bulk bar-bottom" data-bulk data-word="selected" hidden role="region" aria-label="Selected places">
     <span data-bulk-count aria-live="polite">0 selected</span>
     {{ flag("roaster", "Roaster", cls="secondary") }}{{ flag("not_roaster", "Not a roaster", cls="secondary") }}
-    <button class="btn text inline" type="button" data-pull-picks>Pull now</button>
+    <button class="btn secondary inline" type="button" data-pull-picks>Pull now</button>
     <button class="btn text inline" type="button" data-bulk-clear>Clear</button>
   </div>
-  {# Pull now: Jobs' `pull` action (probe, then a count crawl) for places flagged Roaster; the confirm shows the plan. #}
+  {# Pull now: Jobs' `pull` action (one job: the probe, then a counted crawl) for places flagged Roaster. #}
   <form id="pull-form" data-write="/api/jobs/pull/runs" data-preview="/api/jobs/pull/plan" data-confirm-label="Pull now" data-plan-details hidden>
     <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="roasters" value="">
   </form>

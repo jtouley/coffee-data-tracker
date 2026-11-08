@@ -305,16 +305,19 @@ def select_states(
     run manifest records. A roaster whose crawl flag the published snapshot turns off is skipped, `only` included,
     except by a test crawl (`test`: the admin's live check, which never counts as the week's crawl)."""
     mode = "only" if only else "retry_failed" if retry_failed else "sample" if sample else "full"
-    states = registry.current(lake)
+    doc = registry.read_served(lake)  # once: the registry's flags and the crawl flags
+    states = registry.current(lake, doc=doc)
     listed = {s.roaster.roaster_id for s in states}
-    if not test and (off := crawl_off(lake)):
+    if not test and (off := crawl_off(lake, doc)):
         states = [s for s in states if s.roaster.roaster_id not in off]
     if only:  # one domain, or several joined by commas (the admin's Pull now)
         ids = set(only.split(","))
         found = [s for s in states if s.roaster.roaster_id in ids]
         if missing := ids - listed:  # a place of the source list, flagged, not yet in a published registry
             found += [
-                s for s in registry.current(lake, also=sorted(missing)) if s.roaster.roaster_id in missing
+                s
+                for s in registry.current(lake, also=sorted(missing), doc=doc)
+                if s.roaster.roaster_id in missing
             ]
         return found, mode
     done, tried = retry_transient(_done_and_tried, lake, run_date)
@@ -329,12 +332,14 @@ def select_states(
     return todo, mode
 
 
-def crawl_off(lake: Lake) -> set[str]:
+def crawl_off(lake: Lake, doc: object = registry.UNREAD) -> set[str]:
     """The roasters the published snapshot (the served build's) turns the crawl flag off for. A lake with nothing
     served, or a snapshot that can't be read, turns none off: the flag is the owner's choice to stop asking a store,
     and a failed read must never stop the week's crawl (the build, which applies decisions, fails closed instead)."""
     from . import decisions
 
+    if doc is not registry.UNREAD:
+        return set() if doc is False else decisions.crawl_off(doc)  # type: ignore[arg-type]
     try:
         return decisions.crawl_off(decisions.served_doc(lake))
     except Exception as e:  # noqa: BLE001 - a read failure crawls everyone, as before the flag

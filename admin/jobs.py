@@ -75,8 +75,7 @@ class Action:
     help: str
     fields: tuple[str, ...]
     steps: Callable[[dict], list[Step]]
-    page: str = "jobs"  # jobs: on the Jobs page; release: from the Release page; sources: from Sources; chain
-    fixed: dict = field(default_factory=dict)  # params the action always has (not fields)
+    page: str = "jobs"  # jobs: on the Jobs page; release: from the Release page; sources: from Sources
 
 
 def _mode(p: dict) -> list[str]:
@@ -123,16 +122,14 @@ ACTIONS: dict[str, Action] = {
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
                    f'coffeedata publish --message "draft {p["draft_id"]}"; exit $rc'))],
                page="release"),
-        # From the Sources page: Pull now, for places the owner flagged Roaster. The probe, then (when the admin sees
-        # it succeed: Writes.runs) a count crawl of each probed place on its connector's job, `pull-crawl`.
-        Action("pull", "Pull now", "Probe the places, then crawl them for this week: no Publish needed.",
-               ("roasters",), lambda p: [Step("probe", _sh(
-                   f'coffeedata probe --only {p["roasters"]} && coffeedata publish --message "probe (admin pull)"'))],
-               page="sources", fixed={"mode": "count"}),
-        Action("pull-crawl", "Pull now: the crawl", "A count crawl of the pulled places, on each one's connector.",
-               (), lambda p: [Step(CRAWL_JOB[c], ["crawl", "--connector", c, "--only", ds, "--run-date", p["week"]])
-                              for c, ds in sorted(p["groups"].items())],
-               page="chain", fixed={"mode": "count"}),
+        # From the Sources page: Pull now, for places the owner flagged Roaster. One job: the probe, then a counted
+        # crawl of each storefront found on its connector, into `week` (Writes.plan: the next week once this
+        # week's merge is done, so the next merge and build keep it), then publish the probes.
+        Action("pull", "Pull now", "Probe the places, then a counted crawl of each one: no Publish needed.",
+               ("roasters",), lambda p: [Step("pull", _sh(
+                   f'rc=0; coffeedata pull --only {p["roasters"]} --run-date {p["week"]} || rc=1; '
+                   f'coffeedata publish --message "pull (admin)"; exit $rc'))],
+               page="sources"),
         Action("publish", "Publish", "Serve a draft build: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
                                            "--baseline", p["baseline"] or "none", f"--reason={p['reason']}"])],
@@ -147,14 +144,14 @@ ACTIONS: dict[str, Action] = {
 # admin_control.tf grants, checked by tests/test_admin_terraform.py. Adding a job is one Action above.
 _SAMPLE = {"connectors": "all", "connector": "shopify", "roaster": "a.example", "mode": "test", "week": "2026-01-05",
            "test_id": "t", "draft_id": "d", "snapshot_id": "s", "sha256": "0" * 64, "build": "b", "baseline": "b",
-           "reason": "r", "roasters": "a.example", "groups": {"shopify": "a.example"}}  # fmt: skip
+           "reason": "r", "roasters": "a.example"}  # fmt: skip
 JOB_NAMES = sorted({s.job for a in ACTIONS.values() for s in a.steps(_SAMPLE)})
 
 
 def checked(action: Action, raw: dict, today: date, new_test_id: Callable[[], str]) -> dict:
     """The action's fields from a form, checked (ValueError says which is wrong). Adds the week (its Monday) and,
     for test mode, a new test id."""
-    p: dict = dict(action.fixed)
+    p: dict = {}
     for name in action.fields:
         f, v = FIELDS[name], str(raw.get(name) or FIELDS[name].default).strip()
         if f.choices and v not in f.choices:

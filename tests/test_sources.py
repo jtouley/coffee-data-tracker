@@ -139,6 +139,22 @@ def test_pull_now_crawls_a_flagged_place_before_it_is_published(sources_lake):
     assert _ids(lake) == ["seeded.example"]  # the registry itself is unchanged until a draft is published
 
 
+def test_pull_probes_then_crawls_each_storefront_on_its_connector(sources_lake, monkeypatch):
+    """`coffeedata pull`: the probe, then a counted crawl of each place that answered with a storefront, on its
+    platform's connector, into the week asked; a place with no storefront is never crawled."""
+    calls = []
+    monkeypatch.setattr(discover, "probe", lambda places, workers, run_date: [
+        {"run_date": NOW.date(), "batch_id": "x", "probed_at": NOW, "roaster_id": d, "status": "ok",
+         "final_host": d, "platform": {"beanhouse.example": "woocommerce", "teashop.example": None}[d]}
+        for d in places])  # fmt: skip
+    monkeypatch.setattr(cli, "Lake", lambda: sources_lake)
+    monkeypatch.setattr(
+        "coffeedata.connectors.crawl", lambda lake, c, day, **k: calls.append((c, day, k)) or {}
+    )
+    cli.cmd_pull(argparse.Namespace(only="beanhouse.example,teashop.example", run_date="2026-11-09"))
+    assert calls == [("woocommerce", "2026-11-09", {"only": "beanhouse.example"})]
+
+
 def test_a_registry_roaster_marked_not_a_roaster_leaves_the_crawl(sources_lake):
     _serve_snapshot(sources_lake, "b1", decisions.snapshot("s1", "t", [], not_roasters=["seeded.example"]))
     assert _ids(sources_lake) == []
@@ -160,7 +176,7 @@ def test_the_snapshot_carries_the_flagged_places():
 @pytest.mark.skipif(__import__("shutil").which("dbt") is None, reason="dbt not installed")
 def test_the_build_registers_a_flagged_place_like_the_crawl(lake, monkeypatch, tmp_path):
     """A draft whose snapshot flags a place: stg_registry (and so dim_roaster) has it, the same rule as
-    registry.current; one that isn't flagged stays out."""
+    registry.current; one that isn't flagged stays out, and a roaster flagged not a roaster leaves the build."""
     real = cli.dbt_build
     monkeypatch.setattr(cli, "dbt_build", lambda lk, db, extra=None: real(
         lk, db, (extra or {}) | {"min_attempted_share": 0, "min_ok_share": 0, "min_adapter_ok_share": 0}))  # fmt: skip
@@ -174,7 +190,8 @@ def test_the_build_registers_a_flagged_place_like_the_crawl(lake, monkeypatch, t
     lake.write("candidates", "candidates/source=overture/a.parquet",
                [place("beanhouse.example", "Bean House"), place("teashop.example", "Tea Shop")])  # fmt: skip
     run(lake, "2026-10-19", "beanhouse.example", [product(str(i)) for i in range(30)])
-    doc = decisions.snapshot("s1", "t", [], sources=["beanhouse.example"])
+    dropped = "107roasters.com"  # a seed roaster the owner flagged not a roaster
+    doc = decisions.snapshot("s1", "t", [], sources=["beanhouse.example"], not_roasters=[dropped])
     (snaps / "snapshots").mkdir(parents=True)
     (snaps / decisions.key("s1")).write_text(json.dumps(doc, sort_keys=True))
     args = argparse.Namespace(db=str(tmp_path / "coffee.duckdb"), run_date="2026-10-19", accept_volume_change=False,
@@ -184,3 +201,4 @@ def test_the_build_registers_a_flagged_place_like_the_crawl(lake, monkeypatch, t
     f = quality.release_files(Lake(), draft)["dim_roaster"]
     rows = dict(duckdb.connect().execute(f"select roaster_id, sources from '{f}'").fetchall())
     assert rows.get("beanhouse.example") == "overture-2026-10" and "teashop.example" not in rows
+    assert dropped not in rows and len(rows) > 1000  # not a roaster: out of the build too, the rest kept

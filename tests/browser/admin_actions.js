@@ -476,26 +476,20 @@ const errors = [];
       await page.waitForFunction(() => /Roaster/.test(document.querySelector("table.sources td.c-status")?.textContent || "") && !/Unreviewed/.test(document.querySelector("table.sources td.c-status").textContent));
     });
 
-    await check("Sources: Pull now from a row's ⋯ menu: the Jobs confirm in plain words (probe, then a count crawl), then live status", async () => {
+    await check("Sources: Pull now from a row's ⋯ menu: the Jobs confirm in plain words, one job (probe, then a counted crawl)", async () => {
       await page.click("table.sources summary");
       await page.click("details[data-rowmenu][open] button:text-is('Pull now')");
       await page.waitForSelector("dialog#confirm[open] .plan-details");
       assert.ok(await page.isHidden("[data-result]"), "the outcome line steps aside for the confirm");
       assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /^Probe and crawl 1 place\?$/);
-      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. The crawl starts when the probe finishes/);
+      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. One job probes them, then crawls/);
       assert.ok(!(await page.isVisible("dialog#confirm .steps")), "the command waits behind Details");
       await shoot(page, "sources-pull-confirm", true);
       await page.click("dialog#confirm .plan-details summary");
-      assert.match(await page.textContent("dialog#confirm .steps"), /coffeedata probe --only ember-roastworks\.example/);
+      assert.match(await page.textContent("dialog#confirm .steps"), /coffeedata pull --only ember-roastworks\.example --run-date/);
       await page.click("[data-confirm-go]");
-      await toast(page, /Started probe/);
-      await settled(page);
-      assert.match(await page.textContent("[data-pulls]"), /probe running/);
-      await ctl("/finish?job=probe");
-      await page.reload();
-      await settled(page);
-      assert.match(await page.textContent("[data-pulls]"), /probe succeeded · crawl-shopify running/);
-      await ctl("/finish?job=crawl-shopify");
+      await toast(page, /Started pull/);
+      await ctl("/finish?job=pull");
     });
 
     await check("Sources: select two places (tap a row, tick a box), then Not a roaster from the action bar", async () => {

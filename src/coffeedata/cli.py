@@ -121,6 +121,26 @@ def cmd_probe(args: argparse.Namespace) -> None:
     print(f"probed {len(rows)} roasters ({ok} reachable)")
 
 
+def cmd_pull(args: argparse.Namespace) -> None:
+    """The admin's Pull now, as one job: probe the places, then a counted crawl of each one that answered with a
+    storefront, on its platform's connector, into the week `--run-date` names (the admin picks the next week when
+    this week's merge is done, so the next merge and build keep the data). Nothing else of the registry is asked."""
+    from . import connectors, discover
+    from .models import adapter_of
+
+    lake = Lake()
+    places = [p for p in args.only.split(",") if p]
+    rows = discover.probe(places, workers=4, run_date=_today())
+    lake.write_partition("probes", _today(), new_batch_id(), rows)
+    found: dict[str, list[str]] = {}
+    for r in rows:  # only a storefront this probe found: a place with no platform is never crawled
+        if r["status"] == "ok" and r.get("platform"):
+            found.setdefault(adapter_of(r["platform"]), []).append(r["roaster_id"])
+    print(f"pull: probed {len(rows)} places, {sum(map(len, found.values()))} with a storefront")
+    for connector, ids in sorted(found.items()):
+        _print(connectors.crawl(lake, connector, args.run_date, only=",".join(sorted(ids))))
+
+
 def cmd_ingest(args: argparse.Namespace) -> None:
     from . import ingest
 
@@ -511,6 +531,7 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
     extra["source_roasters"] = decisions.source_roasters(
         snap
     )  # places flagged roasters: stg_registry adds them
+    extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),
@@ -954,6 +975,12 @@ def main(argv: list[str] | None = None) -> None:
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
     pr.add_argument("--run-date", type=_run_date, default=_today())
+
+    pu = add(
+        "pull", cmd_pull, "probe places, then a counted crawl of each storefront found (the admin's Pull now)"
+    )
+    pu.add_argument("--only", required=True, help="the places: domains, comma-separated")
+    pu.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to crawl into")
 
     i = add("ingest", cmd_ingest, "fetch catalogs for this run (skips roasters already fetched in it)")
     i.add_argument("--run-date", type=_run_date, default=_today())
