@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import legal, rules_json, username_field, new_password, agree_box, status_line %}
+{% from "_macros.html" import legal, rules_json, username_field, new_password, agree_box, status_line, unloaded_notice %}
 {% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
 {% block main %}
   <h1 class="mt48 serif wordmark"><a class="home" href="{{ site.site }}/">registry.coffee</a></h1>
@@ -13,6 +13,7 @@
   {% elif ended == "failed" %}
   <p class="notice">We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in.</p>
   {% endif %}
+  {{ unloaded_notice(unloaded) }}
   <form id="signin" class="fill" method="post" data-ended="{{ ended or '' }}" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
     {% if owner_setup %}
     <label class="flabel" for="setup_code">Setup code</label>

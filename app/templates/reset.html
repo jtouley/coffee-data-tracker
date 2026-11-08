@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-{% from "_macros.html" import rules_json, new_password, in_app_banner, status_line %}
+{% from "_macros.html" import rules_json, new_password, in_app_banner, status_line, unloaded_notice %}
 {% block title %}Reset password · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="back" href="/signin">‹ Sign in</a></div>
   {{ in_app_banner(in_app) }}
   <h1 class="serif title mt8">Reset your password</h1>
   <p class="body">Ask the person who invited you for a reset link. It works once, and signs you out everywhere else.</p>
+  {{ unloaded_notice(unloaded) }}
   <form id="reset" class="fill" method="post" data-api="/api/reset" data-busy="Setting password…" data-done="Password set" novalidate>
     <label class="flabel" for="code">Reset code</label>
     <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>

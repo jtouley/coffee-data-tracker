@@ -43,3 +43,8 @@
 {% endif %}{% endmacro %}
 {# Under the main button: what a slow request is doing. Present and empty from the start, so it's announced. #}
 {% macro status_line() %}<p class="meta center mt4" data-status role="status"></p>{% endmacro %}
+
+{# A form app.js didn't wire, submitted natively: shown right above the form, where the sign-in screen's notices sit. #}
+{% macro unloaded_notice(unloaded) %}{% if unloaded %}
+  <p class="notice">The page didn’t finish loading, so {{ unloaded }}. Reload the page and try again.</p>
+{%- endif %}{% endmacro %}
