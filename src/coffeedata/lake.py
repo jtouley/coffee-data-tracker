@@ -873,6 +873,26 @@ class Lake:
             out |= {path for path, name in names if "__" in name and (mine is None or name.startswith(mine))}
         return sorted(out)
 
+    def file_rows(self, table: str, cols: tuple[str, ...]) -> list[dict]:
+        """Every row of a table with the file it's in (path within the dataset), staged and remote."""
+        out: list[dict] = []
+        for src in self.sources(table):
+            scan = f"read_parquet('{src}', union_by_name = true, hive_partitioning = false, filename = true)"
+            try:
+                rows = self.connect().execute(f"select filename, {', '.join(cols)} from {scan}").fetchall()
+            except Exception as e:  # noqa: BLE001 - duckdb.IOException: no files in this source
+                if no_files(e):
+                    continue
+                raise
+            for name, *values in rows:
+                rel = (
+                    name[len(self.url) + 1 :]
+                    if self.remote and name.startswith(self.url + "/")
+                    else Path(name).resolve().relative_to(self.root.resolve()).as_posix()
+                )
+                out.append({"file": rel} | dict(zip(cols, values, strict=True)))
+        return out
+
     def _repo_id(self) -> str:
         return self.url.removeprefix("hf://datasets/").split("@")[0]
 

@@ -258,6 +258,9 @@ person's email (sealed) goes from its history too.
 
 ## Email
 
+_Last verified against the code: 2026-11-08 (PR #134, after the final review). Check it again whenever
+`app/mail.py`, `app/accounts.py`'s email section or `src/terraform/` change._
+
 Email recovery (docs/app/signup-ux-spec.md §4, §5): members can add an email, confirm it from a link, and reset a
 forgotten password from `/forgot` with their username or email. The app sends four emails, verify, reset,
 password changed and email changed, through [Resend](https://resend.com), inside the request that asks for them
@@ -319,6 +322,10 @@ accepts the new Terms and Privacy Policy once, on `/agree`.
   reply is the same as for an unknown account and nothing is sent. Every answer takes at least 2 s
   (`FORGOT_FLOOR`), so the reply's timing doesn't say whether a link went.
 - **Verify links:** 3 an hour per account (Send again, and changing the email).
+- **"No email came", and the limits.** Because the limits are shared, someone else can use up a name's 3 an hour,
+  or the 20 "no verified email" answers an hour in all. A real member is then told "we've sent a link" (or, with
+  no email, isn't told to ask you) and nothing goes. If a member reports that, check the logs for a burst of
+  `/api/forgot` and make them a reset link on the People screen.
 - **What the limits are worth.** They're counted in memory, per instance, and every cold start of this
   scale-to-zero service starts them again. They stop a quick run of guesses from one place and cap how many
   accounts a scan can confirm in an instance-hour. They don't stop a slow scan spread over many addresses and many
@@ -371,6 +378,18 @@ contact unverified.
   it was sealed under, run `app.rekey` again from that key to the current one. If that key is gone, the address
   can't be recovered: ask the member to add it again in Setup (adding replaces the unreadable record).
 
+### When the app is slow and `/api/forgot` traffic is high
+
+Every `/forgot` answer that gets past the limits waits until 2 s have passed (an async wait: it holds no worker
+thread, so other routes go on), and its send runs in the thread pool. A flood of requests is answered at once once
+past the per-IP limit. If the app is still slow:
+
+1. `gcloud logging read 'resource.type="cloud_run_revision" AND jsonPayload.route="/api/forgot"' --limit 50 --freshness 1h`
+   shows the volume and where it's from.
+2. Many addresses at a low rate each are what the in-memory limits don't stop. Lower `FORGOT_PER_IP` or
+   `NO_EMAIL_PER_HOUR` (app/accounts.py) and deploy, or turn email off (`email = false`) until it passes: members
+   can still get a reset link from you.
+
 ### When Resend is down or refusing
 
 **Quick checklist** for the "email not sent" alert (severity: a member can't recover their password by email; the
@@ -402,8 +421,13 @@ owner's reset link still works, so nobody is locked out):
   every member's, on the People screen.
 - Removing or changing an email (both need the member's current password, and the old address is told), and
   `delete-user`, delete every file of the record in one commit, then squash the users dataset's history
-  (`HfApi.super_squash_history`), so no old revision holds it. A delete that fails waits in the staging folder
-  (`deletes.pending.json`) and goes with the next commit; a squash is tried 3 times, then logged at ERROR.
+  (`HfApi.super_squash_history`), so no old revision holds it. A squash is tried 3 times, then logged at ERROR.
+- **If a commit fails.** The member is told it failed ("Something went wrong on our side. Try again."), and the
+  dataset is as it was. The delete list waits in the staging folder (`deletes.pending.json`) and goes with the next
+  commit on that instance. Staging is in the instance's memory, so the list is lost if the instance stops first.
+  For that, every start checks the dataset: contact files from a member's older email (a different lookup hash
+  from the current record's) are deleted in one commit and the history squashed. The log line is "deleted contact
+  files left from changed emails".
 - Logs never carry an address or a link: only which email it was and the user id.
 
 **Roaster insights.** No report has been sold yet. The privacy policy lets a member turn off "Include my shots and

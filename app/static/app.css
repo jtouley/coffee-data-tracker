@@ -441,3 +441,5 @@ details.disclose[open] [data-more-summary] { display: none; }
 [data-verify-title]:focus, main h1[tabindex="-1"]:focus { outline: none; }
 /* A link inside a sentence (verify's "Send a new one from Setup") looks like one: accent and underlined */
 [data-verify-status] a { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
+/* An emailed reset link's token (E-…) is case-sensitive: shown as it is, not in the owner code's capitals */
+.input.code[data-token] { text-transform: none; }

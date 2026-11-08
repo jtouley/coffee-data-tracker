@@ -65,9 +65,10 @@
     {# Roaster insights (privacy policy, "Insights for roasters"): on unless the member turns it off. Nothing reads
        it yet: a future insights export must leave out members who turned it off (Accounts.insights_excluded). #}
     <div class="agree setting">
-      <input type="checkbox" id="insights" data-insights aria-describedby="insights-h"{% if insights %} checked{% endif %}>
+      <input type="checkbox" id="insights" data-insights aria-describedby="insights-h insights-s"{% if insights %} checked{% endif %}>
       <div><label for="insights">Include my shots and bags in roaster insights</label>
-      <p class="fhint" id="insights-h" data-insights-status role="status"></p></div>
+      <p class="fhint" id="insights-h">Totals across at least 11 members. None sold yet. <a href="{{ site.site }}/privacy/">Privacy Policy</a></p>
+      <p class="fhint" id="insights-s" data-insights-status role="status"></p></div>
     </div>
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
     {{ unloaded_notice(unloaded) }}

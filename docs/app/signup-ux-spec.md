@@ -98,6 +98,20 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 - The owner recovers their own account with `OWNER_SETUP_CODE` (`accounts.py:551-559`).
 
 **Email recovery (new), following OWASP's Forgot Password sheet ([OWASP-FP][owasp-fp]):**
+
+> **As built (PR #134, 2026-11-08); this differs from the plan below:**
+> - **One field.** `/forgot` takes a username or an email (owner decision, 2026-11-08). An account with no
+>   verified email is told so on the field; an account with one and no account at all get the same reply.
+> - **The link is a signed token, not a stored invite code.** It's `E-` plus a base64url HMAC (the key is derived
+>   from `SESSION_SECRET`) over a keyed account tag, the time in ms, the password hash, the session epoch and the
+>   verified email's lookup hash. It lasts 30 minutes and works once (the password changes). Changing or removing
+>   the email ends it, and so does a newer link (held in memory, so not across a restart). Issuing one writes
+>   nothing and never revokes the owner's link. A reset by either route ends the other.
+> - **The email goes inside the request, not in a background task.** Cloud Run gives no CPU after the reply.
+>   Every `/forgot` answer that gets past the limits is held to a 2 s floor (an async sleep); one refused by a
+>   limit comes back at once.
+> - **Limits:** 3 an hour per name or address and per account, 10 an hour per IP, and 20 "no verified email"
+>   answers an hour in all. All in memory.
 1. **Asking:** sign-in's "Forgot your password?" (`signin.html:31`) goes to the new `/forgot` page.
    - Heading "Reset your password"; field "Email" (`type="email"`, `autocomplete="email"`); button
      "Send reset link"; busy text "Sending…".
@@ -150,7 +164,8 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 account's only email: used for account recovery and, if the marketing box is ticked (§7.1), for marketing.
 - Input: `type="email"`, `autocomplete="email"`, `autocapitalize="none"`, `spellcheck="false"`.
 - Hint: "Optional. For resetting your password and account notices, and for news if you tick the box below. Never
-  for signing in. Only the owner can see it." Marketing is a separate checkbox, ticked by default (§7.1).
+  for signing in. Only the owner, and our email provider, see it." (As built: the wording names Resend's part.)
+  Marketing is a separate checkbox, ticked by default (§7.1).
 - **Recommendation: optional, but encouraged. Not required.**
   - A required email makes the account wait on mail delivery and a cold start, the same fragile path that failed the
     tester.

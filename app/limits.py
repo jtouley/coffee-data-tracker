@@ -21,15 +21,17 @@ class Windows:
         self.lock = threading.Lock()
 
     def take(self, limits: dict[str, tuple[int, float]], now: float) -> bool:
+        """A key is only made once a request is counted, so refused requests (random names past a limit) add
+        nothing (final review N7)."""
         with self.lock:
             if len(self.hits) > SWEEP_AT:
                 for key in [k for k, q in self.hits.items() if not q or q[-1] <= now - 86400]:
                     del self.hits[key]
             for key, (_, window) in limits.items():
-                q = self.hits[key]
+                q = self.hits.get(key)
                 while q and q[0] <= now - window:
                     q.popleft()
-            if any(len(self.hits[k]) >= n for k, (n, _) in limits.items()):
+            if any(len(self.hits.get(k) or ()) >= n for k, (n, _) in limits.items()):
                 return False
             for k in limits:
                 self.hits[k].append(now)

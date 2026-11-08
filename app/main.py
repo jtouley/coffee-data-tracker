@@ -539,11 +539,13 @@ def create_app(
                          removed=removed, by_owner=by_owner)  # fmt: skip
 
     def send_reset(user_id: str) -> None:
-        hit = accounts_only().accounts.reset_link(user_id)
+        accounts = accounts_only().accounts
+        hit = accounts.reset_link(user_id)
         if hit:
-            address, acct, token = hit
-            mail.deliver(mailer, "reset", address, acct.user_id, username=acct.username,
-                         link=f"{app_url}/reset#{token}")  # fmt: skip
+            address, acct, token, issued = hit
+            if mail.deliver(mailer, "reset", address, acct.user_id, username=acct.username,
+                            link=f"{app_url}/reset#{token}"):  # fmt: skip
+                accounts.link_sent(acct.user_id, issued)
 
     def email_only() -> Sessions:
         s = accounts_only()
@@ -603,11 +605,13 @@ def create_app(
                     unloaded="no link was sent. Enter your username or email and send it again")  # fmt: skip
 
     @app.post("/api/forgot", dependencies=[Depends(anyone)])
-    def post_forgot(body: dict, request: Request) -> dict:
+    async def post_forgot(body: dict, request: Request) -> dict:
         """A username or an email. One reply for an account with a verified email and for no account at all; an
         account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
-        sent inside the request (review H1), and every answer is held to the same floor (FORGOT_FLOOR), so the two
-        alike replies take the same time unless sending itself runs past it."""
+        sent inside the request (review H1), and every answer that gets past the limits is held to the same floor
+        (FORGOT_FLOOR), so those alike replies take the same time unless sending runs past it. The floor is an
+        async sleep and the work runs in the thread pool, so a burst of requests holds no worker thread while it
+        waits (final review N1). An answer refused by a limit comes back at once, with the same words."""
         s = email_only()
         started = time.monotonic()
         who = str(body.get("account") or "")
@@ -615,12 +619,14 @@ def create_app(
             raise HTTPException(400, [rules.error("f.required")])
         if "@" in who and rules.check_email(who):  # not an address: says nothing about any account
             raise HTTPException(400, [rules.error("e.syntax") | {"field": "account"}])
+        answer, acct = await run_in_threadpool(s.accounts.forgot, who, ip(request))
+        if answer == "limited":
+            return {"ok": True}
         try:
-            answer, acct = s.accounts.forgot(who, ip(request))
             if answer == "send" and acct is not None:
-                send_reset(acct.user_id)
+                await run_in_threadpool(send_reset, acct.user_id)
         finally:
-            time.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
+            await asyncio.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
         if answer == "no_email":
             raise HTTPException(400, [rules.error("f.no_email")])
         return {"ok": True}

@@ -157,8 +157,9 @@ def test_forgot_takes_the_same_time_whether_or_not_there_is_an_account(
         assert c.post("/api/forgot", json={"account": who}, headers=W).json() == SAME
         return time.perf_counter() - t
 
-    found = statistics.median(timed(w) for w in ["maya@example.com", "maya"] * 3)
-    missing = statistics.median(timed(w) for w in ["nobody@example.com", "nobody"] * 3)
+    # Three for maya (her hourly limit; a 4th would be refused, and answered at once), three for no one.
+    found = statistics.median(timed(w) for w in ["maya@example.com", "maya", "Maya"])
+    missing = statistics.median(timed(w) for w in ["nobody@example.com", "nobody", "nobody2"])
     assert abs(found - missing) < 0.05 and 0.6 <= missing < 0.75
     assert (
         len(outbox.to("maya@example.com")) == 3
@@ -183,7 +184,7 @@ def test_the_limits_come_first_send_nothing_and_hide_the_no_email_answer(app, ow
     now = time.monotonic()
     for i in range(10):
         assert accounts.forgot(f"n{i}", "203.0.113.9", now=now) == ("quiet", None)
-    assert accounts.forgot("maya@example.com", "203.0.113.9", now=now) == ("quiet", None)
+    assert accounts.forgot("maya@example.com", "203.0.113.9", now=now) == ("limited", None)
     answer, acct = accounts.forgot("maya@example.com", "203.0.113.9", now=now + 3601)  # an hour later
     assert answer == "send" and acct.username == "maya"
 
@@ -198,7 +199,7 @@ def test_no_email_answers_are_capped_across_everyone(app, owner, outbox, account
     for n in names:
         join(app, owner, n)
     answers = [accounts.forgot(n, f"10.0.0.{i}", now=now)[0] for i, n in enumerate(names)]
-    assert answers.count("no_email") == NO_EMAIL_PER_HOUR and answers[-2:] == ["quiet", "quiet"]
+    assert answers.count("no_email") == NO_EMAIL_PER_HOUR and answers[-2:] == ["limited", "limited"]
 
 
 def test_the_daily_cap_holds_across_every_kind_of_email():
@@ -290,9 +291,9 @@ def test_an_emailed_link_lasts_30_minutes_works_once_and_a_newer_one_replaces_it
 def test_an_emailed_link_stops_working_after_30_minutes(app, owner, outbox, accounts):
     verified_member(app, owner, outbox)
     maya = accounts.by_name("maya")
-    token = accounts.email_reset_token(maya, now=time.time() - 30 * 60 - 1)
+    token, _ = accounts.email_reset_token(maya, now=time.time() - 30 * 60 - 1)
     assert accounts._from_email_token(token) is None
-    fresh = accounts.email_reset_token(maya)
+    fresh, _ = accounts.email_reset_token(maya)
     assert accounts._from_email_token(fresh).user_id == maya.user_id
     # A turned-off account's link stops working too.
     accounts.set_disabled(accounts.by_name("jtouley").user_id, maya.user_id, True)
@@ -328,7 +329,7 @@ def test_forgot_never_touches_the_owners_reset_link_but_a_reset_ends_every_other
     )
     # The other way round: an emailed reset revokes the owner's open link.
     second = owner.post("/api/invites", json={"kind": "reset", "for_user_id": maya.user_id}, headers=W).json()
-    token = accounts.email_reset_token(accounts.by_name("maya"))
+    token, _ = accounts.email_reset_token(accounts.by_name("maya"))
     assert (
         client(app)
         .post("/api/reset", json={"code": token, "password": "third " + NEW_PW}, headers=W)
@@ -775,7 +776,8 @@ def test_shots_count_in_roaster_insights_until_turned_off_and_the_choice_is_reco
     assert accounts.insights(uid) is True and accounts.insights_excluded() == set()  # on by default
     page = maya.get("/setup").text
     assert re.search(
-        r'<input type="checkbox" id="insights" data-insights aria-describedby="insights-h" checked>', page
+        r'<input type="checkbox" id="insights" data-insights aria-describedby="insights-h insights-s" checked>',
+        page,
     )
     assert maya.post("/api/insights", json={"insights": False}, headers=me).json() == {"insights": False}
     assert accounts.insights_excluded() == {uid}
@@ -786,7 +788,9 @@ def test_shots_count_in_roaster_insights_until_turned_off_and_the_choice_is_reco
         and row["insights_at"] is not None
     )
     assert row["source"] == "settings" and row["marketing"] is True and row["terms_version"] == LEGAL_UPDATED
-    assert 'id="insights" data-insights aria-describedby="insights-h">' in maya.get("/setup").text  # unticked
+    assert (
+        'id="insights" data-insights aria-describedby="insights-h insights-s">' in maya.get("/setup").text
+    )  # unticked
     # It survives a restart, a marketing change and re-acceptance of newer terms.
     maya.post("/api/marketing", json={"marketing": False}, headers=me)
     later = new_accounts(accounts.lake.root, legal="December 31, 2026")
@@ -964,3 +968,180 @@ def test_turning_email_off_never_destroys_its_secrets():
     secrets_line = next(line for line in provider.splitlines() if line.strip().startswith("secrets "))
     assert "local.email_secrets" in secrets_line and "var.email" not in secrets_line
     assert "if var.email || !contains(local.email_secrets, k)" in run
+
+
+# --- the final review (PR #134) -----------------------------------------------------------------------------------
+
+
+def test_a_burst_of_forgot_requests_doesnt_hold_up_the_rest_of_the_app(lake, tmp_path, monkeypatch):
+    """Final review N1: the floor is an async wait, so it holds no worker thread. 60 requests that all get past
+    the limits wait 1.5 s each, at once; /healthz meanwhile answers as quickly as when idle."""
+    import concurrent.futures
+
+    import app.accounts
+    from tests.test_app_browser import _serve
+
+    monkeypatch.setattr(
+        app.accounts, "FORGOT_PER_IP", 10_000
+    )  # one test client, one address: let them all in
+    accounts = new_accounts(tmp_path / "users")
+    accounts.create_owner(SETUP, "jtouley", PW, agree=True)
+    a = create_app(lake, Sessions(accounts, secure=False), mailer=mail.FakeMailer())
+    a.state.forgot_floor = 1.5
+    server, thread, port = _serve(a)
+    base = f"http://127.0.0.1:{port}"
+    try:
+        with httpx.Client() as c:
+            started = time.perf_counter()
+            assert c.get(f"{base}/healthz").status_code == 200
+            idle = time.perf_counter() - started
+
+        def ask(i: int) -> float:
+            with httpx.Client(timeout=30) as c:
+                t = time.perf_counter()
+                r = c.post(f"{base}/api/forgot", json={"account": f"nobody{i}"}, headers=W)
+                assert r.json() == SAME
+                return time.perf_counter() - t
+
+        with concurrent.futures.ThreadPoolExecutor(60) as pool:
+            burst = [pool.submit(ask, i) for i in range(60)]
+            time.sleep(0.4)  # the burst is waiting out its floor now
+            with httpx.Client() as c:
+                t = time.perf_counter()
+                assert c.get(f"{base}/healthz").status_code == 200
+                busy = time.perf_counter() - t
+            waits = [f.result() for f in burst]
+    finally:
+        server.should_exit = True
+        thread.join()
+    assert busy < max(0.3, idle * 5), (idle, busy)
+    assert (
+        min(waits) >= 1.5 and max(waits) < 4.0
+    )  # every answer held to the floor, none queued behind the others
+
+
+def test_an_answer_refused_by_a_limit_comes_back_at_once(app, owner, outbox, accounts):
+    app.state.forgot_floor = 1.0
+    for _ in range(3):
+        forgot(app, "maya")
+    t = time.perf_counter()
+    assert forgot(app, "maya").json() == SAME  # the 4th: limited, same words
+    assert time.perf_counter() - t < 0.5
+
+
+def test_changing_or_removing_the_email_ends_an_outstanding_link(app, owner, outbox, accounts):
+    """Final review N2: the link is bound to the verified email it was sent to."""
+    c = verified_member(app, owner, outbox)
+    uid = accounts.by_name("maya").user_id
+    me = W | {"X-Expected-User": uid}
+    forgot(app, "maya")
+    link = link_in(outbox.sent[-1], "reset")
+    assert accounts._from_email_token(link) is not None
+    c.post("/api/email", json={"email": "maya@new.example", "current": MAYA_PW}, headers=me)
+    assert accounts._from_email_token(link) is None
+    r = client(app).post("/api/reset", json={"code": link, "password": NEW_PW}, headers=W)
+    assert r.status_code == 400
+    # Removing it does the same: confirm the new address, get a link, remove the email.
+    token = link_in(outbox.to("maya@new.example")[-1], "verify")
+    client(app).post("/api/verify", json={"token": token}, headers=W)
+    forgot(app, "maya@new.example")
+    link = link_in(outbox.to("maya@new.example")[-1], "reset")
+    assert accounts._from_email_token(link) is not None
+    c.post("/api/email/remove", json={"current": MAYA_PW}, headers=me)
+    assert accounts._from_email_token(link) is None
+
+
+def test_a_failed_send_doesnt_end_the_previous_link(app, owner, outbox, accounts, monkeypatch):
+    """Final review N2 (related): "a newer link replaces the older one" only once the newer one has gone."""
+    verified_member(app, owner, outbox)
+    forgot(app, "maya")
+    first = link_in(outbox.sent[-1], "reset")
+
+    def down(*a):
+        raise RuntimeError("Resend is down")
+
+    monkeypatch.setattr(outbox, "send", down)
+    assert forgot(app, "maya").json() == SAME  # nothing went
+    assert accounts._from_email_token(first) is not None
+
+
+def test_wrong_current_passwords_are_counted(app, owner, outbox, accounts):
+    """Final review N3: past 10 wrong ones in 15 minutes, email and password changes refuse before checking."""
+    from app.accounts import REAUTH_TRIES
+
+    c = verified_member(app, owner, outbox)
+    me = W | {"X-Expected-User": accounts.by_name("maya").user_id}
+    for _ in range(REAUTH_TRIES):
+        r = c.post("/api/email", json={"email": "x@example.com", "current": "guess"}, headers=me)
+        assert r.status_code == 400
+    for path, body in (("/api/email", {"email": "x@example.com", "current": MAYA_PW}),
+                       ("/api/email/remove", {"current": MAYA_PW}),
+                       ("/api/password", {"current": MAYA_PW, "new": "a brand new kettle"})):  # fmt: skip
+        r = c.post(path, json=body, headers=me)
+        assert r.status_code == 429 and "Too many wrong passwords" in r.text, path
+
+
+def test_a_change_made_while_listing_still_deletes_every_old_file(app, owner, outbox, accounts, monkeypatch):
+    """Final review N4: if the record changes between listing (outside the lock) and committing, it's listed
+    again under the lock."""
+    c = verified_member(app, owner, outbox)
+    uid = accounts.by_name("maya").user_id
+    me = W | {"X-Expected-User": uid}
+    real = accounts.lake.record_files
+    calls = []
+
+    def listing(table, key=None):
+        calls.append(key)
+        if len(calls) == 1:  # a second change lands right after the first listing
+            accounts.set_email(uid, "maya@other.example", MAYA_PW)
+        return real(table, key)
+
+    monkeypatch.setattr(accounts.lake, "record_files", listing)
+    c.post("/api/email/remove", json={"current": MAYA_PW}, headers=me)
+    monkeypatch.setattr(accounts.lake, "record_files", real)
+    assert not list((accounts.lake.root / "contacts").glob(f"{uid}__*.parquet"))
+    assert len(calls) >= 2
+
+
+def test_the_reset_field_keeps_an_emailed_tokens_case(app):
+    """Final review N6."""
+    page = client(app).get("/reset").text
+    assert re.search(r'<input class="input code" id="code"[^>]* autocapitalize="none"', page)
+    assert ".input.code[data-token] { text-transform: none; }" in (ROOT / "app/static/app.css").read_text()
+
+
+def test_refused_requests_add_no_keys():
+    """Final review N7."""
+    from app.limits import Windows
+
+    w = Windows()
+    assert w.take({"ip": (1, 3600)}, 0.0)
+    for i in range(50):
+        assert not w.take({"ip": (1, 3600), f"name:{i}": (3, 3600)}, 1.0)
+    assert set(w.hits) == {"ip"}
+
+
+def test_the_copy_names_who_sees_an_email_and_explains_insights(app, owner):
+    """Final review N10."""
+    assert "Only the owner, and our email provider, see it." in client(app).get("/join").text
+    setup = owner.get("/setup").text
+    assert "Totals across at least 11 members. None sold yet." in setup
+    assert re.search(
+        r"Totals across at least 11 members\. None sold yet\. <a href=\"[^\"]*/privacy/\">Privacy Policy</a>",
+        setup,
+    )
+
+
+def test_start_up_deletes_contact_files_left_from_a_changed_email(app, owner, outbox, accounts):
+    """Final review N11: a change's delete that never landed (the instance stopped) is done at the next start."""
+    verified_member(app, owner, outbox)
+    uid = accounts.by_name("maya").user_id
+    folder = accounts.lake.root / "contacts"
+    # A leftover file from an older email, as if its delete had been lost.
+    accounts.lake.write("contacts", f"contacts/{uid}__20260101T000000.parquet",
+                        [{"user_id": uid, "email_hmac": "old-hash", "email_enc": "x", "logged_at": None}])  # fmt: skip
+    assert len(list(folder.glob(f"{uid}__*.parquet"))) == 3
+    again = new_accounts(accounts.lake.root)
+    assert not (folder / f"{uid}__20260101T000000.parquet").exists()
+    assert len(list(folder.glob(f"{uid}__*.parquet"))) == 2  # the current record's two files stay
+    assert again.email(uid).address == "maya@example.com" and again.sweep_contacts() == []

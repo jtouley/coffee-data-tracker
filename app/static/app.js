@@ -1973,7 +1973,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const join = document.getElementById("join");
   if (join) joinCode(join);
   const reset = document.getElementById("reset");
-  if (reset) codeFromLink(reset, "reset-code");
+  if (reset) {
+    codeFromLink(reset, "reset-code");
+    // An emailed token is case-sensitive, so it isn't shown in capitals; owner codes are (the server reads either).
+    const field = reset.querySelector("#code");
+    const mark = () => { field.toggleAttribute("data-token", field.value.trim().startsWith("E-")); };
+    field.addEventListener("input", mark);
+    mark();
+  }
   const inApp = document.querySelector("[data-in-app]");
   if (inApp) inAppBanner(inApp);
   if (document.querySelector("[data-new-invite]")) invites();

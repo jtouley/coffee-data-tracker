@@ -9,7 +9,7 @@
   {{ unloaded_notice(unloaded) }}
   <form id="reset" class="fill" method="post" data-api="/api/reset" data-busy="Setting password…" data-done="Password set" novalidate>
     <label class="flabel" for="code">Reset code</label>
-    <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
+    <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="none" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-error-for="code">From the reset link you were sent.</div>
     {{ new_password(label="New password", knows_username=False) }}
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
