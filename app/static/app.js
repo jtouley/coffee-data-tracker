@@ -1353,7 +1353,8 @@ function accountForm(form, done = null) {
         sessionStorage.removeItem("reset-code");
         if (form.id === "join" || form.dataset.ownerSetup === "true") {
           const welcome = `Welcome, ${cleanUsername(body.username)}.`;
-          sessionStorage.setItem("notice", reply.email_sent ? `${welcome} Check your inbox for a link to confirm your email.` : welcome);
+          // From what they typed, not the reply, which doesn't say whether a link went (review M2).
+          sessionStorage.setItem("notice", body.email?.trim() ? `${welcome} Check your inbox for a link to confirm your email.` : welcome);
         }
         if (reply.signin) { // a reset link from email ends on sign-in, with the username filled in (spec §4)
           sessionStorage.setItem("notice", "Password changed. Sign in with the new one.");
@@ -1823,8 +1824,13 @@ async function verifyPage(box) {
     next.hidden = false;
   } catch (err) {
     if (err instanceof Unreachable) {
-      status.textContent = UNREACHABLE;
-      // keep the token for a reload
+      // Offline or the app waking up: say so, keep the token for a reload, and offer one (review L8).
+      const again = document.createElement("button");
+      again.type = "button";
+      again.className = "btn text start";
+      again.textContent = "Try again";
+      again.addEventListener("click", () => location.reload());
+      status.replaceChildren(UNREACHABLE, again);
       history.replaceState(null, "", `${location.pathname}#${encodeURIComponent(token)}`);
       return;
     }
@@ -1837,7 +1843,7 @@ function emailSettings() {
   const form = document.getElementById("email-form");
   if (!form) return;
   const edit = form.closest("details");
-  if (location.hash === "#email" && !document.querySelector("[data-email-remove]")) {
+  if (location.hash === "#email" && !document.querySelector("[data-email-remove-box]")) {
     edit.open = true; // "Add email" from Today
     form.querySelector('[name="email"]').focus();
   }
@@ -1860,22 +1866,9 @@ function emailSettings() {
     resend.removeAttribute("aria-disabled");
     scrollTo(0, 0);
   });
-  const remove = document.querySelector("[data-email-remove]");
-  remove?.addEventListener("click", () => confirmTap(remove, async () => {
-    remove.setAttribute("aria-disabled", "true");
-    remove.textContent = "Removing…";
-    busyCup(remove, true);
-    try {
-      await post("/api/email/remove", {});
-      go("/setup", remove.dataset.done);
-    } catch (err) {
-      remove.removeAttribute("aria-disabled");
-      busyCup(remove, false);
-      remove.textContent = "Remove email";
-      notify(err instanceof Rejected ? err.message : UNREACHABLE);
-      scrollTo(0, 0);
-    }
-  }));
+  // Removing it takes the current password too (review M3), so it's a small form, not a second tap.
+  const remove = document.getElementById("email-remove-form");
+  if (remove) accountForm(remove, () => go("/setup", remove.dataset.doneNotice));
   // The marketing box saves as it's ticked; the line under it says so (or puts the tick back).
   const quiet = document.querySelector("[data-marketing-status]")?.textContent || "";
   autosave(document.querySelector("[data-marketing]"), document.querySelector("[data-marketing-status]"), "/api/marketing", "marketing",
@@ -1901,7 +1894,7 @@ function autosave(box, said, url, field, onText, offText) {
 
 function insightsSetting() {
   autosave(document.querySelector("[data-insights]"), document.querySelector("[data-insights-status]"), "/api/insights", "insights",
-    "Saved: your shots are counted in later reports.", "Saved: later reports leave your shots out.");
+    "Saved: later reports will count your shots and bags.", "Saved: later reports will leave out your shots and bags.");
 }
 
 // Today's "Add an email" notice: Not now hides it for 90 days (the server reads the cookie).
@@ -1955,7 +1948,6 @@ document.addEventListener("DOMContentLoaded", () => {
       signin.dataset.purge = "done"; // no caches here: nothing kept
     }
   }
-  const signin = document.getElementById("signin");
   if (signin && signin.dataset.ownerSetup !== "true") {
     try { // after a reset by email: the username they reset, filled in
       const name = sessionStorage.getItem("signin-username");

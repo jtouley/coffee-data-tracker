@@ -30,6 +30,7 @@ from coffeedata.lake import Lake
 
 from . import rules
 from .contacts import RESET_MINUTES, VERIFY_HOURS, Contact, EmailCrypto, new_token, token_hash
+from .limits import Windows
 from .rules import clean_email, clean_username, nfc
 from .store import STARTUP_READS
 
@@ -149,10 +150,18 @@ CODE_USED = (
 )
 MISMATCH = "That username and password don’t match. Check them, or ask the owner for a reset code."
 VERIFY_EXPIRED = "That link has expired or was already used. Send a new one from Setup."
+EMAIL_TOKEN = "E-"  # an emailed reset link's token starts with this; owner codes and the setup code never do
+EMAIL_LINK_USED = (
+    "That link no longer works. It may be over 30 minutes old, already used or replaced by a newer one. Ask for "
+    "a new one under “Forgot your password?”."
+)
 TOO_MANY_LINKS = "You’ve asked for 3 links in the last hour. Try again in an hour."
 # Email recovery's limits (spec §4): per address (by its keyed hash) and per IP, per hour; and verify links per
 # account per hour. Counted before any lookup, whether or not an account matches.
 FORGOT_PER_EMAIL, FORGOT_PER_IP, LINKS_PER_ACCOUNT, HOUR = 3, 10, 3, 3600.0
+NO_EMAIL_PER_HOUR = (
+    20  # "no verified email" answers an hour, from everyone: the most a scan can confirm per hour
+)
 
 
 def field_error(field: str, rule: str, message: str, status: int = 400) -> AccountError:
@@ -246,30 +255,6 @@ class Limiter:
             self.fails.pop(key, None)
 
 
-class Windows:
-    """Counts per key within a window of its own length, in memory (a restart clears it). `take` counts one
-    request against every key unless any is already at its limit, under one lock."""
-
-    def __init__(self) -> None:
-        self.hits: dict[str, deque[float]] = defaultdict(deque)
-        self.lock = threading.Lock()
-
-    def take(self, limits: dict[str, tuple[int, float]], now: float) -> bool:
-        with self.lock:
-            if len(self.hits) > Limiter.SWEEP_AT:
-                for key in [k for k, q in self.hits.items() if not q or q[-1] <= now - 86400]:
-                    del self.hits[key]
-            for key, (_, window) in limits.items():
-                q = self.hits[key]
-                while q and q[0] <= now - window:
-                    q.popleft()
-            if any(len(self.hits[k]) >= n for k, (n, _) in limits.items()):
-                return False
-            for k in limits:
-                self.hits[k].append(now)
-            return True
-
-
 @dataclass(frozen=True)
 class Consent:
     """Which Terms and Privacy Policy an account accepted, and when, and its marketing-email choice (spec §7).
@@ -318,6 +303,9 @@ class Accounts:
         self.lake = lake
         self.pepper = pepper.encode()
         self.key = hashlib.sha256(b"session\0" + session_secret.encode()).digest()
+        # Emailed reset links are signed, not stored (see email_reset_token), under a key of their own.
+        self.reset_key = hashlib.sha256(b"reset\0" + session_secret.encode()).digest()
+        self.reset_issued: dict[str, int] = {}  # user id -> when the newest emailed link was made (in memory)
         self.setup_code = setup_code or None
         if legal_version is None:
             from coffeedata.site import LEGAL_UPDATED
@@ -474,12 +462,13 @@ class Accounts:
                 c = replace(c, marketing=prev[0].marketing, marketing_at=prev[0].marketing_at,
                             marketing_version=prev[0].marketing_version, insights=prev[0].insights,
                             insights_at=prev[0].insights_at, insights_version=prev[0].insights_version)  # fmt: skip
-        if marketing is not _KEEP:
+        if marketing is not _KEEP:  # None: never offered, so no time or version either (review L2)
+            offered = isinstance(marketing, bool)
             c = replace(
                 c,
                 marketing=marketing if isinstance(marketing, bool) else None,
-                marketing_at=at,
-                marketing_version=self.legal,
+                marketing_at=at if offered else None,
+                marketing_version=self.legal if offered else None,
             )
         if insights is not _KEEP:
             c = replace(c, insights=bool(insights), insights_at=at, insights_version=self.legal)
@@ -751,14 +740,7 @@ class Accounts:
             raise AccountError("No such account.")
         if kind == "reset":
             done = {i.invite_id for i, _ in staged}  # renew has already revoked the one it replaces
-            for old, _ in list(self.invites.values()):
-                if (
-                    old.kind == "reset"
-                    and old.for_user_id == for_user_id
-                    and old.open(_now())
-                    and old.invite_id not in done
-                ):
-                    staged += (self._stage_invite(old.revoke()),)
+            staged += self._revoke_resets(for_user_id or "", done)
         code, now = new_code(), _now()
         inv = Invite(
             invite_id=str(uuid.uuid4()),
@@ -772,6 +754,17 @@ class Accounts:
         )
         self._commit(f"app: invites {inv.invite_id}", invites=(*staged, self._stage_invite(inv)))
         return inv, code
+
+    def _revoke_resets(
+        self, user_id: str, keep: set[str] | None = None
+    ) -> tuple[tuple[Invite, datetime], ...]:
+        """Stage a revocation of every open reset code for one account, except those in `keep`."""
+        keep = keep or set()
+        return tuple(
+            self._stage_invite(o.revoke())
+            for o, _ in list(self.invites.values())
+            if o.kind == "reset" and o.for_user_id == user_id and o.open(_now()) and o.invite_id not in keep
+        )
 
     def revoke(self, by: str, invite_id: str) -> None:
         with self.lock:
@@ -925,7 +918,14 @@ class Accounts:
         with self.lock:
             if self.limiter.blocked(f"ip:{ip}", MAX_PER_IP, now):
                 raise AccountError("Too many tries. Wait 15 minutes and try again.")
-            if self.setup_code and hmac.compare_digest(code.strip().encode(), self.setup_code.encode()):
+            emailed = code.strip().startswith(EMAIL_TOKEN)
+            inv = None
+            if emailed:
+                acct = self._from_email_token(code)
+                if acct is None:
+                    self.limiter.fail(f"ip:{ip}", now)
+                    raise field_error("code", "c.invalid", EMAIL_LINK_USED)
+            elif self.setup_code and hmac.compare_digest(code.strip().encode(), self.setup_code.encode()):
                 if self._setup_code_spent():
                     raise field_error(
                         "code",
@@ -935,7 +935,6 @@ class Accounts:
                 acct = next((a for a in self.people() if a.role == "owner"), None)
                 if acct is None:
                     raise AccountError("There’s no owner yet. Create the account first.")
-                inv = None
             else:
                 inv = self.lookup(code, ip, now)
                 acct = self.get(inv.for_user_id or "") if inv.kind == "reset" else None
@@ -945,26 +944,18 @@ class Accounts:
                     raise AccountError("This account is turned off. Ask the owner to turn it back on.")
             check_password(password, acct.username)
             acct = replace(acct, password_hash=self._hash(password), session_epoch=acct.session_epoch + 1)
-            used = (
-                replace(inv, used_by=acct.user_id, used_at=_now())
-                if inv
-                else self._setup_invite(acct.user_id)
-            )
-            others = tuple(
-                self._stage_invite(o.revoke())
-                for o, _ in list(self.invites.values())
-                if o.kind == "reset"
-                and o.for_user_id == acct.user_id
-                and o.open(_now())
-                and o.invite_id != used.invite_id
-            )
-            self._commit(
-                f"app: users {acct.user_id}",
-                users=(self._stage(acct),),
-                invites=(self._stage_invite(used), *others),
-            )
+            # A reset revokes every other way in: the owner's open reset links, and (the password hash they're
+            # signed over has changed) every emailed link.
+            used: tuple[tuple[Invite, datetime], ...] = ()
+            if inv:
+                used = (self._stage_invite(replace(inv, used_by=acct.user_id, used_at=_now())),)
+            elif not emailed:
+                used = (self._stage_invite(self._setup_invite(acct.user_id)),)
+            others = self._revoke_resets(acct.user_id, {inv.invite_id} if inv else set())
+            self._commit(f"app: users {acct.user_id}", users=(self._stage(acct),), invites=(*used, *others))
             self.limiter.clear(f"u:{acct.username}")
-            return acct, bool(inv and inv.created_by == "email")
+            self.reset_issued.pop(acct.user_id, None)
+            return acct, emailed
 
     def set_disabled(self, by: str, user_id: str, disabled: bool) -> Account:
         """The owner turns an account off (or back on). Off signs it out everywhere."""
@@ -975,11 +966,7 @@ class Accounts:
                 raise AccountError("No such account.")
             staged: tuple[tuple[Invite, datetime], ...] = ()
             if disabled:  # an outstanding reset code would otherwise still change the password
-                staged = tuple(
-                    self._stage_invite(inv.revoke())
-                    for inv, _ in list(self.invites.values())
-                    if inv.kind == "reset" and inv.for_user_id == user_id and inv.open(_now())
-                )
+                staged = self._revoke_resets(user_id)
             acct = replace(acct, disabled=disabled, session_epoch=acct.session_epoch + 1)
             self._commit(f"app: users {acct.user_id}", users=(self._stage(acct),), invites=staged)
             return acct
@@ -1016,48 +1003,73 @@ class Accounts:
         return Contact(user_id, h, sealed, None, token_hash(token), expires), (email, token)
 
     def email(self, user_id: str) -> EmailView | None:
-        """The account's email, decrypted, for that person or the app's owner only (callers check who asks)."""
+        """The account's email, decrypted, for that person or the app's owner only (callers check who asks). One
+        that won't open with this EMAIL_KEY (sealed under another key: RUNNING.md, "Rotating keys") counts as no
+        email, logged by user id, rather than failing the page (review M1)."""
         hit = self.contacts.get(user_id)
         if hit is None or self.crypto is None:
             return None
-        return EmailView(self.crypto.open(hit[0].email_enc, user_id), hit[0].verified_at is not None)
+        try:
+            address = self.crypto.open(hit[0].email_enc, user_id)
+        except Exception:  # noqa: BLE001 - cryptography's InvalidTag, or a damaged row
+            log.error("an email doesn't open with this EMAIL_KEY", extra={"fields": {"user_id": user_id}})
+            return None
+        return EmailView(address, hit[0].verified_at is not None)
 
     def verified_email(self, user_id: str) -> str | None:
         view = self.email(user_id)
         return view.address if view and view.verified else None
 
-    def _drop_squash(self, user_id: str) -> None:
-        """After an email's files are deleted: drop the old commits too, so it can't be read from history. With
-        encryption that's defence in depth, so a failure is logged, not shown."""
-        try:
-            self.lake.squash(f"app: squash after contacts {user_id}")
-        except Exception:  # noqa: BLE001 - the deletion itself has happened
-            log.exception("squashing the users dataset's history failed")
+    def _drop_squash(self, user_id: str, tries: int = 3) -> None:
+        """After an email's files are deleted: drop the old commits too, so it can't be read from history. Tried
+        3 times, 2 and 4 s apart; if it still fails it's logged at ERROR, which the "errors" alert emails, and the
+        next removal's squash covers it (review M6). With encryption it's defence in depth, so the person isn't
+        shown an error."""
+        for attempt in range(tries):
+            try:
+                self.lake.squash(f"app: squash after contacts {user_id}")
+                return
+            except Exception:  # noqa: BLE001 - the deletion itself has happened
+                if attempt == tries - 1:
+                    log.exception("squashing the users dataset's history failed; it still holds old contacts")
+                else:
+                    time.sleep(2 ** (attempt + 1))
 
-    def set_email(self, user_id: str, email: str, now: float | None = None) -> tuple[str, str] | None:
-        """Add or change the account's email. A change deletes every file of the old record in the same commit,
-        and isn't used until the new address is verified. Returns the verify link to send, if any. Counts against
-        the account's 3 links an hour."""
+    def _reauth(self, user_id: str, password: str) -> Account:
+        """The current password, for a change that would hand the account to whoever made it (OWASP Authentication:
+        re-authenticate before a sensitive change; review M3)."""
+        acct = self.get(user_id)
+        if acct is None or not self._verify(acct.password_hash, password):
+            raise field_error("current", "current", "Your current password isn’t right.")
+        return acct
+
+    def set_email(
+        self, user_id: str, email: str, password: str, now: float | None = None
+    ) -> tuple[tuple[str, str] | None, str | None]:
+        """Add or change the account's email, with the current password. A change deletes every file of the old
+        record in the same commit, and isn't used until the new address is verified. Returns the verify link to
+        send, if any, and the previous verified address, which is told of the change. Counts against the account's
+        3 links an hour."""
         self._crypto()
         failed = rules.check_email(email, required=True)
         if failed:
             raise AccountError(errors=failed)
         address = clean_email(email)
         now = time.monotonic() if now is None else now
+        self._reauth(user_id, password)
+        # Listed before the lock (a remote listing takes a moment, and sign-ins wait on the lock; review L5).
+        old = self.lake.record_files("contacts", user_id) if user_id in self.contacts else []
         with self.lock:
-            if self.get(user_id) is None:
-                raise AccountError("No such account.")
             current = self.email(user_id)
             if current and current.verified and current.address.lower() == address.lower():
-                return None  # nothing changes
+                return None, None  # nothing changes
             if not self.windows.take({f"verify:u:{user_id}": (LINKS_PER_ACCOUNT, HOUR)}, now):
                 raise field_error("email", "e.limit", TOO_MANY_LINKS, 429)
             contact, send = self._new_contact(user_id, address)
-            old = self.lake.record_files("contacts", user_id) if user_id in self.contacts else []
             self._commit(f"app: contacts {user_id}", contacts=(self._stage_contact(contact),), delete=old)
         if old:
             self._drop_squash(user_id)
-        return send
+        return send, current.address if current and current.verified else None
 
     def resend_verify(self, user_id: str, now: float | None = None) -> tuple[str, str] | None:
         """ "Send again": a new verify link for an email not verified yet (the old link stops working)."""
@@ -1100,27 +1112,36 @@ class Accounts:
             self._commit(f"app: contacts {hit.user_id}", contacts=(self._stage_contact(done),))
             return acct
 
-    def remove_email(self, by: str, user_id: str) -> None:
-        """The person themselves, or the app's owner. Every file of the record goes, in one commit, then the
-        dataset's history is squashed."""
+    def remove_email(self, by: str, user_id: str, password: str | None = None) -> str | None:
+        """The person themselves, with their current password, or the app's owner. Every file of the record goes,
+        in one commit, then the dataset's history is squashed. Returns the address if it was verified, to be told
+        of the removal (review M3)."""
+        if by != user_id:
+            self._owner(by)
+        else:
+            self._reauth(user_id, password or "")
+        if user_id not in self.contacts:
+            return None
+        current = self.email(user_id)
+        files = self.lake.record_files("contacts", user_id)  # outside the lock (review L5)
         with self.lock:
-            if by != user_id:
-                self._owner(by)
-            if user_id not in self.contacts:
-                return
-            files = self.lake.record_files("contacts", user_id)
             self._commit(f"app: contacts {user_id} removed", delete=files, forget=user_id)
         self._drop_squash(user_id)
+        return current.address if current and current.verified else None
 
     def forgot(self, who: str, ip: str, now: float | None = None) -> tuple[str, Account | None]:
         """ "Forgot your password?" with a username or an email (owner decision, 2026-11-08). The answer:
-        - "send": the account has a verified email; the caller sends a link (`reset_link`) after replying;
-        - "no_email": the account exists and has no verified email, said on the form so the person knows to ask
-          whoever invited them. This tells the asker the account exists: the owner's trade-off for an invite-only
-          app, against OWASP's uniform reply. The limits below keep it from being used to scan;
+        - "send": the account has a verified email; the caller sends a link (`reset_link`);
+        - "no_email": the account exists and has no verified email (none, or one not confirmed yet), said on the
+          form so the person knows to ask whoever invited them. That tells the asker the account exists: the
+          owner's trade-off for an invite-only app, against OWASP's uniform reply;
         - "quiet": no such account, a turned-off one, or past a limit. The same reply as "send", and nothing goes.
-        The limits are counted first, before any lookup, for every request: 3 an hour per account named (per
-        address, by its keyed hash, or per username) and 10 an hour per IP. Only a verified email gets a link."""
+
+        Limits (review M5: what they do and don't do). Before any lookup: 3 an hour per name or address asked
+        about, and 10 an hour per IP. After it: 3 an hour per account, however it was named (review L1), and at
+        most NO_EMAIL_PER_HOUR "no_email" answers an hour in all. They're in memory, so each cold start counts
+        afresh: they stop a quick run of guesses from one place, and cap how many accounts a scan can confirm per
+        instance-hour, but not a slow scan spread over many addresses and many hours."""
         now = time.monotonic() if now is None else now
         text = nfc(who).strip(rules.TRIM)
         if not text:
@@ -1138,35 +1159,84 @@ class Accounts:
             return "quiet", None
         if by_email:
             assert self.crypto is not None
-            hit = self._verified_with(self.crypto.lookup(clean_email(text)))
+            h = self.crypto.lookup(clean_email(text))
+            # A verified address finds its account. An address not confirmed yet finds its account too (review
+            # L8), so it gets the same "no verified email" answer as the username would.
+            hit = self._verified_with(h) or next(
+                (c for c, _ in list(self.contacts.values()) if hmac.compare_digest(c.email_hmac, h)), None
+            )
             acct = self.get(hit.user_id) if hit else None
         else:
             acct = self.by_name(text)
         if acct is None or acct.disabled:
             return "quiet", None
-        return ("send" if self.verified_email(acct.user_id) else "no_email"), acct
+        if not self.windows.take({f"forgot:a:{acct.user_id}": (FORGOT_PER_EMAIL, HOUR)}, now):
+            return "quiet", None
+        if self.verified_email(acct.user_id):
+            return "send", acct
+        if not self.windows.take({"forgot:no_email": (NO_EMAIL_PER_HOUR, HOUR)}, now):
+            return "quiet", None
+        return "no_email", acct
 
     def reset_link(self, user_id: str) -> tuple[str, Account, str] | None:
-        """A 30-minute reset code for an account with a verified email, and the (address, account, code) to send.
-        A new code revokes the account's other open ones. Run after the reply has gone."""
-        with self.lock:
-            acct = self.get(user_id)
-            address = self.verified_email(user_id)
-            if acct is None or acct.disabled or address is None:
-                return None
-            _, code = self._new_invite("email", "reset", user_id, ttl=timedelta(minutes=RESET_MINUTES))
-            return address, acct, code
+        """A 30-minute reset link for an account with a verified email: the (address, account, token) to send.
+        Nothing is written: the token is signed (email_reset_token), so asking costs no commit, and an anonymous
+        request never touches the owner's reset links (review M4)."""
+        acct = self.get(user_id)
+        address = self.verified_email(user_id)
+        if acct is None or acct.disabled or address is None:
+            return None
+        return address, acct, self.email_reset_token(acct)
+
+    # --- emailed reset links: signed, not stored ------------------------------------------------------
+
+    def _tag(self, user_id: str) -> bytes:
+        return hmac.new(self.reset_key, b"tag\0" + user_id.encode(), hashlib.sha256).digest()[:8]
+
+    def _token_mac(self, acct: Account, tag: bytes, issued: int) -> bytes:
+        body = (
+            tag + issued.to_bytes(6, "big") + acct.password_hash.encode() + str(acct.session_epoch).encode()
+        )
+        return hmac.new(self.reset_key, b"mac\0" + body, hashlib.sha256).digest()[:16]
+
+    def email_reset_token(self, acct: Account, now: float | None = None) -> str:
+        """A reset link's token: which account (an 8-byte keyed tag, not the id), when it was made, and a 128-bit
+        MAC over those and the account's current password hash. It lasts RESET_MINUTES; it works once, because
+        using it changes the password hash; and a newer one replaces it (reset_issued: in memory, so after a
+        restart an older link works again until its 30 minutes are up)."""
+        # In milliseconds, and always after the last one, so two links asked for in one second still order.
+        ms = int((time.time() if now is None else now) * 1000)
+        issued = max(ms, self.reset_issued.get(acct.user_id, 0) + 1)
+        tag = self._tag(acct.user_id)
+        self.reset_issued[acct.user_id] = issued
+        return EMAIL_TOKEN + _b64(tag + issued.to_bytes(6, "big") + self._token_mac(acct, tag, issued))
+
+    def _from_email_token(self, token: str, now: float | None = None) -> Account | None:
+        try:
+            raw = _unb64(token.strip()[len(EMAIL_TOKEN) :])
+        except ValueError:
+            return None
+        if len(raw) != 30:
+            return None
+        tag, issued, mac = raw[:8], int.from_bytes(raw[8:14], "big"), raw[14:]
+        now_ms = (time.time() if now is None else now) * 1000
+        if not issued <= now_ms + 60_000 or now_ms - issued > RESET_MINUTES * 60_000:
+            return None
+        acct = next((a for a in self.people() if hmac.compare_digest(self._tag(a.user_id), tag)), None)
+        if acct is None or acct.disabled or issued < self.reset_issued.get(acct.user_id, 0):
+            return None
+        return acct if hmac.compare_digest(self._token_mac(acct, tag, issued), mac) else None
 
     def rekey(self, new_key: str) -> int:
         """Rotate EMAIL_KEY (docs/app/RUNNING.md, "Email"): every email re-sealed and re-hashed under the new key,
         written with the old files deleted in one commit, then the history squashed so nothing sealed under the old
         key stays readable. Verify links in flight keep working. Returns how many were re-sealed."""
         old, new = self._crypto(), EmailCrypto(new_key)
+        delete = self.lake.record_files("contacts")  # one listing for all of them (review L5)
         with self.lock:
-            fresh, delete = [], []
+            fresh = []
             for uid, (c, _) in list(self.contacts.items()):
                 address = old.open(c.email_enc, uid)
-                delete += self.lake.record_files("contacts", uid)
                 fresh.append(replace(c, email_hmac=new.lookup(address), email_enc=new.seal(address, uid)))
             self.crypto = new
             staged = tuple(self._stage_contact(c) for c in fresh)
@@ -1178,10 +1248,11 @@ class Accounts:
 
     def unreadable(self) -> list[str]:
         """User ids whose email doesn't open with the current key (should be none)."""
+        crypto = self._crypto()
         out = []
-        for uid in list(self.contacts):
+        for uid, (c, _) in list(self.contacts.items()):
             try:
-                self.email(uid)
+                crypto.open(c.email_enc, uid)
             except Exception:  # noqa: BLE001 - cryptography's InvalidTag
                 out.append(uid)
         return out

@@ -11,9 +11,10 @@ from __future__ import annotations
 
 import logging
 import os
+import random
 import threading
 import time
-from collections import deque
+import uuid
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -21,6 +22,8 @@ from typing import Protocol
 
 import httpx
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+
+from .limits import Windows
 
 log = logging.getLogger(__name__)
 
@@ -61,11 +64,28 @@ class FakeMailer:
 
 
 class ResendMailer:
-    """One POST per message to Resend's API (https://resend.com/docs/api-reference/emails/send-email). Open and
-    click tracking are off in the Resend domain's settings (RUNNING.md), so the HTML arrives as written."""
+    """One POST per message to Resend's API (https://resend.com/docs/api-reference/emails/send-email), tried up to
+    3 times on a 429, a 5xx or a network error, 0.5 and 1.5 s apart (with jitter). Every try carries the same
+    Idempotency-Key, so Resend sends a message once however many tries reach it. Open and click tracking are off in
+    the Resend domain's settings (RUNNING.md), so the HTML arrives as written."""
 
-    def __init__(self, api_key: str, sender: str = SENDER, reply_to: str | None = None, timeout: float = 10):
-        self.api_key, self.sender, self.reply_to, self.timeout = api_key, sender, reply_to, timeout
+    TRIES, WAITS = 3, (0.5, 1.5)
+
+    def __init__(
+        self,
+        api_key: str,
+        sender: str = SENDER,
+        reply_to: str | None = None,
+        timeout: float = 5,
+        sleep: Callable[[float], None] = time.sleep,
+    ):
+        self.api_key, self.sender, self.reply_to, self.timeout, self.sleep = (
+            api_key,
+            sender,
+            reply_to,
+            timeout,
+            sleep,
+        )
 
     def send(self, to: str, subject: str, text: str, html: str) -> None:
         body: dict[str, object] = {
@@ -77,33 +97,40 @@ class ResendMailer:
         }
         if self.reply_to:
             body["reply_to"] = self.reply_to
-        r = httpx.post(
-            RESEND_URL, json=body, headers={"Authorization": f"Bearer {self.api_key}"}, timeout=self.timeout
-        )
-        if r.status_code >= 300:
-            raise RuntimeError(
-                f"Resend answered {r.status_code}"
-            )  # the body may echo the address: not logged
+        headers = {"Authorization": f"Bearer {self.api_key}", "Idempotency-Key": str(uuid.uuid4())}
+        for attempt in range(self.TRIES):
+            last = attempt == self.TRIES - 1
+            try:
+                r = httpx.post(RESEND_URL, json=body, headers=headers, timeout=self.timeout)
+            except httpx.TransportError:
+                if last:
+                    raise
+            else:
+                if r.status_code < 300:
+                    return
+                if r.status_code != 429 and r.status_code < 500 or last:
+                    raise RuntimeError(f"Resend answered {r.status_code}")  # the body may echo the address
+            self.sleep(self.WAITS[attempt] * random.uniform(0.8, 1.2))
 
 
 class Capped:
     """At most `cap` messages in any 24 hours, across every kind; past it, nothing is sent (and it says so in the
-    log). In memory: the app runs as one instance, and a restart only makes the cap more lenient for a day."""
+    log). A send that fails gives its place back. In memory (app/limits.py): each cold start counts afresh, so
+    it guards against a runaway loop within an instance's life, and Resend's own daily quota is the hard stop."""
 
     def __init__(self, inner: Mailer, cap: int = DAILY_CAP, clock: Callable[[], float] = time.time):
         self.inner, self.cap, self.clock = inner, cap, clock
-        self.times: deque[float] = deque()
-        self.lock = threading.Lock()
+        self.window = Windows()
 
     def send(self, to: str, subject: str, text: str, html: str) -> None:
         now = self.clock()
-        with self.lock:
-            while self.times and self.times[0] <= now - 86400:
-                self.times.popleft()
-            if len(self.times) >= self.cap:
-                raise CapReached()
-            self.times.append(now)
-        self.inner.send(to, subject, text, html)
+        if not self.window.take({"day": (self.cap, 86400)}, now):
+            raise CapReached()
+        try:
+            self.inner.send(to, subject, text, html)
+        except Exception:
+            self.window.refund("day", now)
+            raise
 
 
 class CapReached(RuntimeError):
@@ -119,6 +146,7 @@ SUBJECTS = {
     "verify": "Confirm your email for registry.coffee",
     "reset": "Reset your registry.coffee password",
     "changed": "Your registry.coffee password was changed",
+    "email_changed": "The email on your registry.coffee account changed",
 }
 
 
@@ -132,11 +160,32 @@ def render(kind: str, **ctx: object) -> tuple[str, str, str]:
     )
 
 
+class _Timing:
+    """How long a send usually takes (a moving average), so a request that deliberately sends nothing can wait about
+    as long (pad), and its reply's timing doesn't say which it was."""
+
+    def __init__(self, start: float = 0.4):
+        self.typical, self.lock = start, threading.Lock()
+
+    def add(self, seconds: float) -> None:
+        with self.lock:
+            self.typical = 0.8 * self.typical + 0.2 * min(seconds, 5.0)
+
+
+timing = _Timing()
+
+
+def pad() -> None:
+    """Wait about as long as a send takes, give or take a fifth."""
+    time.sleep(timing.typical * random.uniform(0.8, 1.2))
+
+
 def deliver(mailer: Mailer | None, kind: str, to: str, user_id: str, **ctx: object) -> bool:
     """Render and send, never raising: a failed send is logged (kind and user id only) and the caller carries on.
-    Callers run this after the reply has gone, so neither the outcome nor its timing reaches the person asking."""
+    Called inside the request (Cloud Run gives no CPU after the reply), so its time is part of the reply's."""
     if mailer is None:
         return False
+    started = time.monotonic()
     try:
         mailer.send(to, *render(kind, **ctx))
     except CapReached:
@@ -147,6 +196,7 @@ def deliver(mailer: Mailer | None, kind: str, to: str, user_id: str, **ctx: obje
     except Exception:  # noqa: BLE001 - a mail outage mustn't break the request that asked for it
         log.exception("email not sent", extra={"fields": {"kind": kind, "user_id": user_id}})
         return False
+    timing.add(time.monotonic() - started)
     log.info("email sent", extra={"fields": {"kind": kind, "user_id": user_id}})
     return True
 

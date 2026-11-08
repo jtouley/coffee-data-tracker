@@ -37,7 +37,7 @@ OWNER, MAYA, SAM = (
 def _app(root: Path):
     accounts = Accounts(Lake(str(root / "users"), tables=USER_TABLES), PEPPER, SECRET, SETUP, email_key=KEY)
     owner = accounts.create_owner(SETUP, *OWNER, agree=True)
-    accounts.set_email(owner.user_id, "owner@example.com")
+    accounts.set_email(owner.user_id, "owner@example.com", OWNER[1])
     _, code = accounts.invite(owner.user_id, for_label="Maya")
     _, link = accounts.join_sending(
         code, *MAYA, "127.0.0.1", agree=True, email="maya@example.com", marketing=True
@@ -48,8 +48,7 @@ def _app(root: Path):
     outbox = mail.FakeMailer()
     app = create_app(Lake(str(root / "lake")), Sessions(accounts, secure=False), mailer=outbox)
 
-    def sent() -> JSONResponse:  # test-only: what the app "sent", newest last
-        app.state.drain_mail()
+    def sent() -> JSONResponse:  # test-only: what the app sent (inside each request), newest last
         return JSONResponse([{"to": m.to, "subject": m.subject, "text": m.text} for m in outbox.sent])
 
     app.add_api_route("/__test/outbox", sent, methods=["GET"])

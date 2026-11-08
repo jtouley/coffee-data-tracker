@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import rules_json, in_app_banner, status_line %}
+{% from "_macros.html" import rules_json, in_app_banner, status_line, unloaded_notice %}
 {% block title %}Forgot password · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="back" href="/signin">‹ Sign in</a></div>
@@ -9,7 +9,8 @@
   <p class="body">We’ll email you a link to choose a new one.</p>
   {# The reply, under the heading and above the form, as sign-in's notices sit. #}
   <p class="notice" data-sent role="status" hidden></p>
-  <form id="forgot" class="fill" data-api="/api/forgot" data-busy="Sending…" novalidate>
+  {{ unloaded_notice(unloaded) }}
+  <form id="forgot" class="fill" method="post" data-api="/api/forgot" data-busy="Sending…" novalidate>
     <label class="flabel" for="account">Username or email</label>
     <input class="input" id="account" name="account" autocomplete="username" autocapitalize="none" spellcheck="false" data-empty="Enter your username or email." aria-describedby="account-error account-h" required>
     <p class="ferr" id="account-error" data-error-for="account"></p>

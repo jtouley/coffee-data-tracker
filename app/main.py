@@ -14,7 +14,6 @@ import re
 import time
 from collections import OrderedDict
 from collections.abc import AsyncIterator
-from concurrent.futures import Future, ThreadPoolExecutor
 from datetime import UTC, date, datetime, timedelta, tzinfo
 from pathlib import Path
 from typing import Annotated, Any
@@ -76,6 +75,7 @@ class Agree(Exception):
 IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
 # Paths someone who still has to accept the new terms may write to.
 AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
+FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes at least: a lookup plus a send fits well inside
 NUDGE_COOKIE = "nudge-email"  # "Not now" on Today's add-an-email prompt, for 90 days (spec §5)
 
 
@@ -141,20 +141,11 @@ def create_app(
     # Links in emails are built on the app's fixed address, never the request's Host header (OWASP Forgot Password,
     # "Host Header Injection").
     app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
-    # Emails go out after the reply, on their own threads, so a reply's timing never depends on a lookup or a send.
-    outbox = ThreadPoolExecutor(max_workers=2, thread_name_prefix="mail")
-    pending: list[Future] = []
-
-    def later(fn: Any, *args: Any, **kwargs: Any) -> None:
-        pending[:] = [f for f in pending if not f.done()]
-        pending.append(outbox.submit(fn, *args, **kwargs))
-
-    def drain(timeout: float = 10) -> None:
-        """Wait for the emails in flight (tests)."""
-        for f in list(pending):
-            f.result(timeout)
-
-    app.state.drain_mail = drain
+    # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
+    # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
+    # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
+    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad).
+    app.state.forgot_floor = FORGOT_FLOOR
     app.state.mailer = mailer
     assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
@@ -521,33 +512,38 @@ def create_app(
 
     # --- email: sending, recovery and verification (spec §4, §5) ---------------------------------------
 
-    def send_verify(user_id: str, link: tuple[str, str] | None) -> None:
-        if link and email_on:
+    def send_verify(user_id: str, link: tuple[str, str] | None, asked: bool = True) -> None:
+        """The verify email. `asked` but no link (the address is verified on another account): wait about as long
+        as a send takes instead, so the reply's timing doesn't say so either (review M2)."""
+        if not email_on:
+            return
+        if link:
             address, token = link
-            later(mail.deliver, mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}")
+            mail.deliver(mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}")
+        elif asked:
+            mail.pad()
 
     def send_changed(acct: Any) -> None:
         """NIST 800-63B §4.2: account recovery notifies the account's verified address."""
         if not email_on:
             return
+        address = accounts_only().accounts.verified_email(acct.user_id)
+        if address:
+            mail.deliver(mailer, "changed", address, acct.user_id, username=acct.username, app=app_url)
 
-        def job() -> None:
-            address = accounts_only().accounts.verified_email(acct.user_id)
-            if address:
-                mail.deliver(mailer, "changed", address, acct.user_id, username=acct.username, app=app_url)
+    def send_email_changed(acct: Any, previous: str | None, removed: bool, by_owner: bool = False) -> None:
+        """The address that was on the account hears when it's changed or removed (review M3), so a change made
+        from a stolen session doesn't go unnoticed."""
+        if previous and email_on:
+            mail.deliver(mailer, "email_changed", previous, acct.user_id, username=acct.username,
+                         removed=removed, by_owner=by_owner)  # fmt: skip
 
-        later(job)
-
-    def reset_job(user_id: str) -> None:
-        try:
-            hit = accounts_only().accounts.reset_link(user_id)
-        except Exception:  # noqa: BLE001 - after the reply: nobody to tell, so log it (no address)
-            log.exception("a reset request failed")
-            return
+    def send_reset(user_id: str) -> None:
+        hit = accounts_only().accounts.reset_link(user_id)
         if hit:
-            address, acct, code = hit
+            address, acct, token = hit
             mail.deliver(mailer, "reset", address, acct.user_id, username=acct.username,
-                         link=f"{app_url}/reset#{code}")  # fmt: skip
+                         link=f"{app_url}/reset#{token}")  # fmt: skip
 
     def email_only() -> Sessions:
         s = accounts_only()
@@ -570,8 +566,9 @@ def create_app(
             )
         except AccountError as e:
             raise HTTPException(e.status, e.detail) from None
-        send_verify(acct.user_id, link)
-        response = JSONResponse({"ok": True, "email_sent": bool(link)})
+        # One reply whether or not a link went (review M2): an address verified on another account gets none.
+        send_verify(acct.user_id, link, asked=bool(email_on and str(body.get("email") or "").strip()))
+        response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
 
@@ -598,22 +595,34 @@ def create_app(
         accounts_only()
         return page(request, "forgot.html", in_app=in_app_browser(request.headers.get("user-agent")))
 
+    @app.post("/forgot", response_class=HTMLResponse)
+    async def forgot_unwired(request: Request) -> HTMLResponse:
+        """The forgot form submitted natively (app.js didn't wire it): nothing is looked up or sent."""
+        accounts_only()
+        return page(request, "forgot.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="no link was sent. Enter your username or email and send it again")  # fmt: skip
+
     @app.post("/api/forgot", dependencies=[Depends(anyone)])
     def post_forgot(body: dict, request: Request) -> dict:
         """A username or an email. One reply for an account with a verified email and for no account at all; an
-        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The code is
-        made and the email sent after the reply, so the two alike replies take the same time."""
+        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
+        sent inside the request (review H1), and every answer is held to the same floor (FORGOT_FLOOR), so the two
+        alike replies take the same time unless sending itself runs past it."""
         s = email_only()
+        started = time.monotonic()
         who = str(body.get("account") or "")
         if not who.strip():
             raise HTTPException(400, [rules.error("f.required")])
         if "@" in who and rules.check_email(who):  # not an address: says nothing about any account
             raise HTTPException(400, [rules.error("e.syntax") | {"field": "account"}])
-        answer, acct = s.accounts.forgot(who, ip(request))
+        try:
+            answer, acct = s.accounts.forgot(who, ip(request))
+            if answer == "send" and acct is not None:
+                send_reset(acct.user_id)
+        finally:
+            time.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
         if answer == "no_email":
             raise HTTPException(400, [rules.error("f.no_email")])
-        if answer == "send" and acct is not None:
-            later(reset_job, acct.user_id)
         return {"ok": True}
 
     @app.get("/verify", response_class=HTMLResponse)
@@ -633,13 +642,17 @@ def create_app(
 
     @app.post("/api/email")
     def post_email(body: dict, me: Writer) -> dict:
-        """Add or change your email. The reply is the same whether or not the address is on another account."""
+        """Add or change your email, with your current password (review M3). The reply is the same whether or not
+        the address is on another account. The previous verified address is told."""
         s = email_only()
         try:
-            link = s.accounts.set_email(me.user_id, str(body.get("email") or ""))
+            link, previous = s.accounts.set_email(
+                me.user_id, str(body.get("email") or ""), str(body.get("current") or "")
+            )
         except AccountError as e:
             raise HTTPException(e.status, e.detail) from None
         send_verify(me.user_id, link)
+        send_email_changed(me, previous, removed=False)
         view = s.accounts.email(me.user_id)
         return {"email": view.address if view else None, "verified": bool(view and view.verified)}
 
@@ -654,13 +667,24 @@ def create_app(
         return {"ok": True}
 
     @app.post("/api/email/remove")
-    def remove_email(me: Writer) -> dict:
-        email_only().accounts.remove_email(me.user_id, me.user_id)
+    def remove_email(body: dict, me: Writer) -> dict:
+        """Remove your email, with your current password (review M3); the address is told it was removed."""
+        s = email_only()
+        try:
+            previous = s.accounts.remove_email(me.user_id, me.user_id, str(body.get("current") or ""))
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_email_changed(me, previous, removed=True)
         return {"ok": True}
 
     @app.post("/api/people/{user_id}/email/remove")
     def remove_member_email(user_id: str, me: Writer) -> dict:
-        owner_call(email_only().accounts.remove_email, me.user_id, user_id)
+        """The owner removes a member's email (spec §6). The member's address is told who did it."""
+        s = email_only()
+        target = s.accounts.get(user_id)
+        previous = owner_call(s.accounts.remove_email, me.user_id, user_id)
+        if target is not None:
+            send_email_changed(target, previous, removed=True, by_owner=True)
         return {"ok": True}
 
     @app.post("/api/insights")
@@ -1101,8 +1125,13 @@ def create_app(
         return setup_page(request, me)
 
     @app.post("/setup", response_class=HTMLResponse)
-    def setup_unwired(request: Request, me: Me) -> HTMLResponse:
-        """Change password's form, unwired (see signin_unwired): the passwords are dropped, unread."""
+    def setup_unwired(request: Request, me: Me, form: str = "") -> HTMLResponse:
+        """Change password's form, or the email forms (?form=email), unwired (see signin_unwired): what was typed,
+        passwords included, is dropped, unread."""
+        if form == "email":
+            return setup_page(
+                request, me, unloaded="your email wasn’t changed. Enter it and your password again"
+            )
         return setup_page(
             request, me, unloaded="your password wasn’t changed. Enter both passwords and change it again"
         )

@@ -219,23 +219,33 @@ function linkIn(message, path) {
     await snap(joiner, "setup-email-verified");
     // Roaster insights: on to start with; turning it off saves, says so, and stays off after a reload.
     assert.equal(await joiner.isChecked("#insights"), true);
+    assert.equal(await text(joiner, "label[for=insights]"), "Include my shots and bags in roaster insights");
+    assert.equal(await text(joiner, "[data-insights-status]"), "", "no hint that describes sales as happening");
     await joiner.uncheck("#insights");
-    await waitText(joiner, "[data-insights-status]", /^Saved: later reports leave your shots out\.$/);
+    await waitText(joiner, "[data-insights-status]", /^Saved: later reports will leave out your shots and bags\.$/);
     await joiner.locator("#insights").scrollIntoViewIfNeeded();
     await snap(joiner, "setup-insights-off");
     await joiner.reload();
     assert.equal(await joiner.isChecked("#insights"), false, "kept");
-    // Change: the form, then the new address waiting to be confirmed.
+    // Change: it needs the current password (review M3); a wrong one is said on its field, then it goes through.
     await joiner.locator("summary", { hasText: "Change email" }).click();
     await joiner.fill("#new-email", "ana@new.example");
     await joiner.getByRole("button", { name: "Send link" }).click();
+    await waitText(joiner, "#email-current-error", /^Enter your current password\.$/);
+    await joiner.fill("#email-current", "not my password");
+    await joiner.getByRole("button", { name: "Send link" }).click();
+    await waitText(joiner, "#email-current-error", /^Your current password isn’t right\.$/);
+    assert.equal(await joiner.inputValue("#new-email"), "ana@new.example", "what was typed stays");
+    await snap(joiner, "setup-change-email-password");
+    await joiner.fill("#email-current", "quiet morning grind");
+    await joiner.getByRole("button", { name: "Send link" }).click();
     await joiner.waitForURL(`${base}/setup`);
     await waitText(joiner, "[data-notice]", /^Check your inbox for a link to confirm ana@new\.example\.$/);
-    // Remove: a second tap.
-    const remove = joiner.getByRole("button", { name: "Remove email" });
-    await remove.click();
-    assert.equal(await joiner.locator("[data-email-remove]").textContent(), "Tap again to remove your email");
-    await joiner.locator("[data-email-remove]").click();
+    // Remove: the current password too, in its own small form.
+    await joiner.locator("summary", { hasText: "Remove email" }).click();
+    await joiner.fill("#remove-current", "quiet morning grind");
+    await snap(joiner, "setup-remove-email");
+    await joiner.locator("#email-remove-form").getByRole("button", { name: "Remove email" }).click();
     await joiner.waitForURL(`${base}/setup`);
     await waitText(joiner, "[data-notice]", /^Email removed\. The owner can still make you a reset link\.$/);
     await waitText(joiner, "[data-email-status]", /^No email$/);

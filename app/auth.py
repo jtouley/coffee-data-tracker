@@ -48,6 +48,7 @@ PUBLIC: frozenset[tuple[str, str]] = frozenset(
         ("POST", "/api/reset"),
         # Email recovery (spec §4, §5): asking for a reset link, and opening a verify link on any device.
         ("GET", "/forgot"),
+        ("POST", "/forgot"),  # unwired, like /signin: shown again with a notice, nothing looked up or sent
         ("POST", "/api/forgot"),
         ("GET", "/verify"),
         ("POST", "/api/verify"),

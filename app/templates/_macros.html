@@ -75,3 +75,13 @@
 {% macro unloaded_notice(unloaded) %}{% if unloaded %}
   <p class="notice" id="unloaded-notice">The page didn’t finish loading, so {{ unloaded }}.</p>
 {%- endif %}{% endmacro %}
+{# Re-authentication before an email change or removal (review M3). Show, like every password field. #}
+{% macro current_password(id) %}
+    <label class="flabel" for="{{ id }}">Current password</label>
+    <div class="pw">
+      <input class="input" id="{{ id }}" name="current" type="password" autocomplete="current-password" data-empty="Enter your current password." aria-describedby="{{ id }}-error {{ id }}-h" required>
+      <button type="button" data-show aria-controls="{{ id }}" aria-pressed="false">Show</button>
+    </div>
+    <p class="ferr" id="{{ id }}-error" data-error-for="current"></p>
+    <div class="fhint" id="{{ id }}-h">So nobody else with this phone can change it.</div>
+{%- endmacro %}

@@ -556,6 +556,9 @@ SCHEMA_FILES = {
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
 }
+PENDING_DELETES = (
+    "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
+)
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
 
@@ -846,11 +849,16 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def record_files(self, table: str, key: str) -> list[str]:
-        """Every file (path within the dataset) of one record of a per-record table (`<key>__<time>.parquet`):
-        staged here and, for a remote lake, already in the dataset."""
+    def record_files(self, table: str, key: str | None = None) -> list[str]:
+        """Every file (path within the dataset) of one record of a per-record table (`<key>__<time>.parquet`), or
+        of every record with no key: staged here and, for a remote lake, already in the dataset. One listing."""
         prefix = GLOBS[table].split("/")[0]
-        out = {f"{prefix}/{p.name}" for p in (self.root / prefix).glob(f"{key}__*.parquet")}
+        mine = f"{key}__" if key is not None else None
+        out = {
+            f"{prefix}/{p.name}"
+            for p in (self.root / prefix).glob("*__*.parquet")
+            if mine is None or p.name.startswith(mine)
+        }
         if self.remote:
             from huggingface_hub import HfApi
 
@@ -861,7 +869,8 @@ class Lake:
                 if "404" not in str(e) and "not found" not in str(e).lower():
                     raise
                 tree = []
-            out |= {f.path for f in tree if f.path.rsplit("/", 1)[-1].startswith(f"{key}__")}
+            names = ((f.path, f.path.rsplit("/", 1)[-1]) for f in tree)
+            out |= {path for path, name in names if "__" in name and (mine is None or name.startswith(mine))}
         return sorted(out)
 
     def _repo_id(self) -> str:
@@ -899,7 +908,8 @@ class Lake:
 
         `delete` names files (paths within the dataset) to remove in the same commit: an email changed or removed
         goes in one step with whatever replaces it. Their staged copies go too. In a local lake they're simply
-        removed.
+        removed. For a remote lake they're kept in staging (PENDING_DELETES) until a commit has removed them, so a
+        failed publish doesn't lose them: the next publish tries again (review M6).
         """
         for rel in delete:
             path = self.root / rel
@@ -909,7 +919,15 @@ class Lake:
         if not self.remote:
             return 0
         with self._publishing:
-            return self._publish(message, attempts, schemas, tuple(delete))
+            pending = self.root / PENDING_DELETES
+            waiting = json.loads(pending.read_text()) if pending.exists() else []
+            todo = tuple(dict.fromkeys([*waiting, *delete]))
+            if todo:
+                pending.parent.mkdir(parents=True, exist_ok=True)
+                pending.write_text(json.dumps(list(todo)))
+            n = self._publish(message, attempts, schemas, todo)
+            pending.unlink(missing_ok=True)
+            return n
 
     def _publish(self, message: str, attempts: int, schemas: bool, delete: tuple[str, ...] = ()) -> int:
         schema_paths = {SCHEMA_FILES[t] for t in self.tables}

@@ -12,7 +12,7 @@
     <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-code-status data-error-for="code" role="status">From the invite link you were sent.</div>
     {{ username_field(value=username) }}
-    {% if email_on %}{{ email_field(hint="Optional. For resetting your password and account notices, and for news if you tick the box below. Never for signing in. Only the owner can see it.") }}{% endif %}
+    {% if email_on %}{{ email_field(hint="Optional. For resetting your password and account notices, and for news unless you untick the box below. Never for signing in. Only the owner can see it.") }}{% endif %}
     {{ new_password() }}
     <p class="meta mt24">Your shots, bags and photos are kept in the owner’s private Hugging Face datasets. The app
       shows them only to you; the owner can read the datasets.</p>
