@@ -24,6 +24,7 @@ from datetime import UTC, date, datetime, time, timedelta
 from coffeedata.connectors import CONNECTORS, TEST_ID, week_of
 
 ROASTER = re.compile(r"[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+")
+ROASTERS = re.compile(rf"{ROASTER.pattern}(,{ROASTER.pattern}){{0,19}}")  # 1 to 20 domains, comma-separated
 BUILD = re.compile(r"[0-9A-Za-z-]{1,64}")
 CRAWL_JOB = {c: "crawl-" + c.replace("_", "-") for c in sorted(CONNECTORS)}
 
@@ -57,6 +58,7 @@ FIELDS = {
         "into week W's partition, like the scheduled passes",
     ),  # fmt: skip
     "week": Field("Week (any day of it)", check=re.compile(r"\d{4}-\d{2}-\d{2}"), help="for count mode"),
+    "roasters": Field("Places (domains)", check=ROASTERS),
 }
 
 
@@ -73,7 +75,8 @@ class Action:
     help: str
     fields: tuple[str, ...]
     steps: Callable[[dict], list[Step]]
-    page: str = "jobs"  # jobs: on the Jobs page; release: started from the Release page only
+    page: str = "jobs"  # jobs: on the Jobs page; release: from the Release page; sources: from Sources; chain
+    fixed: dict = field(default_factory=dict)  # params the action always has (not fields)
 
 
 def _mode(p: dict) -> list[str]:
@@ -120,6 +123,16 @@ ACTIONS: dict[str, Action] = {
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
                    f'coffeedata publish --message "draft {p["draft_id"]}"; exit $rc'))],
                page="release"),
+        # From the Sources page: Pull now, for places the owner flagged Roaster. The probe, then (when the admin sees
+        # it succeed: Writes.runs) a count crawl of each probed place on its connector's job, `pull-crawl`.
+        Action("pull", "Pull now", "Probe the places, then crawl them for this week: no Publish needed.",
+               ("roasters",), lambda p: [Step("probe", _sh(
+                   f'coffeedata probe --only {p["roasters"]} && coffeedata publish --message "probe (admin pull)"'))],
+               page="sources", fixed={"mode": "count"}),
+        Action("pull-crawl", "Pull now: the crawl", "A count crawl of the pulled places, on each one's connector.",
+               (), lambda p: [Step(CRAWL_JOB[c], ["crawl", "--connector", c, "--only", ds, "--run-date", p["week"]])
+                              for c, ds in sorted(p["groups"].items())],
+               page="chain", fixed={"mode": "count"}),
         Action("publish", "Publish", "Serve a draft build: the publish job.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
                                            "--baseline", p["baseline"] or "none", f"--reason={p['reason']}"])],
@@ -134,14 +147,14 @@ ACTIONS: dict[str, Action] = {
 # admin_control.tf grants, checked by tests/test_admin_terraform.py. Adding a job is one Action above.
 _SAMPLE = {"connectors": "all", "connector": "shopify", "roaster": "a.example", "mode": "test", "week": "2026-01-05",
            "test_id": "t", "draft_id": "d", "snapshot_id": "s", "sha256": "0" * 64, "build": "b", "baseline": "b",
-           "reason": "r"}  # fmt: skip
+           "reason": "r", "roasters": "a.example", "groups": {"shopify": "a.example"}}  # fmt: skip
 JOB_NAMES = sorted({s.job for a in ACTIONS.values() for s in a.steps(_SAMPLE)})
 
 
 def checked(action: Action, raw: dict, today: date, new_test_id: Callable[[], str]) -> dict:
     """The action's fields from a form, checked (ValueError says which is wrong). Adds the week (its Monday) and,
     for test mode, a new test id."""
-    p: dict = {}
+    p: dict = dict(action.fixed)
     for name in action.fields:
         f, v = FIELDS[name], str(raw.get(name) or FIELDS[name].default).strip()
         if f.choices and v not in f.choices:
@@ -154,8 +167,9 @@ def checked(action: Action, raw: dict, today: date, new_test_id: Callable[[], st
         p["week"] = week_of(week)
     except ValueError as e:
         raise ValueError("Week: not a date") from e
-    if "roaster" in action.fields and not p.get("roaster"):
-        raise ValueError("Roaster: required")
+    for name in ("roaster", "roasters"):
+        if name in action.fields and not p.get(name):
+            raise ValueError(f"{FIELDS[name].label}: required")
     if p.get("mode") == "test":
         p["test_id"] = new_test_id()
         if not TEST_ID.fullmatch(p["test_id"]):

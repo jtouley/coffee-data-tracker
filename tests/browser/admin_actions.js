@@ -412,6 +412,8 @@ const errors = [];
         const box = await page.locator(sel).first().boundingBox();
         assert.ok(box && box.x >= 0 && box.x + box.width <= 390 && box.height >= 44, `${sel} at ${JSON.stringify(box)}`);
       }
+      await page.setViewportSize({ width: 320, height: 640 }); // reflow at 320 px (WCAG 1.4.10): no sideways scroll
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth), 0);
       await page.setViewportSize({ width: 1280, height: 900 });
       await page.click("[data-panel]");
       await page.waitForSelector("dialog#filters[open]");
@@ -450,7 +452,23 @@ const errors = [];
       assert.match(await page.textContent("table.sources"), /Unreviewed/);
       await page.click("table.sources summary");
       await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
-      await toast(page, /Flagged 1 place/);
+      await toast(page, /Flagged 1 place roaster\. Pull now crawls it this week/);
+    });
+
+    await check("Sources: Pull now from the outcome: the Jobs confirm (probe, then a count crawl), then live status", async () => {
+      await page.click("[data-result] [data-pull-now]");
+      await page.waitForSelector("dialog#confirm[open] .steps");
+      assert.match(await page.textContent("dialog#confirm"), /probe[\s\S]*coffeedata probe --only ember-roastworks\.example/);
+      await shoot(page, "sources-pull-confirm", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Started probe/);
+      await settled(page);
+      assert.match(await page.textContent("[data-pulls]"), /probe running/);
+      await ctl("/finish?job=probe");
+      await page.reload();
+      await settled(page);
+      assert.match(await page.textContent("[data-pulls]"), /probe succeeded · crawl-shopify running/);
+      await ctl("/finish?job=crawl-shopify");
     });
 
     await check("Sources: select two places (tap a row, tick a box), then Not a roaster from the action bar", async () => {

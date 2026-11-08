@@ -269,17 +269,21 @@ function reloadParts() {
   document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
 }
 
-// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
-function showResult(text, undo) {
+// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo;
+// `pull`: places just flagged Roaster, offered as Pull now (the Sources page's pull form).
+function showResult(text, undo, pull) {
   const box = document.querySelector("[data-result]");
   if (!box) return;
   $(box, "[data-result-text]").textContent = text;
   const b = $(box, "[data-undo]");
   b.hidden = !undo;
   b.dataset.target = undo || "";
+  const p = $(box, "[data-pull-now]");
+  p.hidden = !(pull && pull.length && document.getElementById("pull-form"));
+  p.dataset.places = (pull || []).join(",");
   box.hidden = false;
-  clearTimeout(showResult.timer);
-  showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
+  clearTimeout(showResult.timer); // a message offering an action stays until dismissed (WCAG 2.2.1); others fade
+  if (!undo && p.hidden) showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
 }
 
 function undoUrl(out) {
@@ -295,7 +299,13 @@ function describe(out) {
     return (started ? `Started ${started}.` : "Nothing started.") + (failed ? ` Not started: ${failed}` : "");
   }
   if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
-  if (out.batch_id) return `Flagged ${out.count} place${out.count === 1 ? "" : "s"} ${out.flag.replace("_", " ")}. It reaches the crawl when a draft of it is published (Release).`;
+  if (out.batch_id) {
+    const n = `${out.count} place${out.count === 1 ? "" : "s"}`;
+    const gone = out.excluded ? ` ${out.excluded} coffee${out.excluded === 1 ? "" : "s"} leave the catalog in the next draft.` : "";
+    if (out.flag === "roaster") return `Flagged ${n} roaster. Pull now crawls ${out.count === 1 ? "it" : "them"} this week; the next published draft keeps ${out.count === 1 ? "it" : "them"} in the weekly crawl.`;
+    return `Flagged ${n} ${out.flag.replace("_", " ")}.${gone} It takes effect when a draft of it is published (Release).`;
+  }
+  if (out.restored !== undefined && out.reverted) return `Undone (${out.count})${out.restored ? `, and ${out.restored} coffee${out.restored === 1 ? "" : "s"} back in the catalog` : ""}: as it was before, from the next draft.`;
   if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
@@ -440,7 +450,7 @@ async function writeNow(form, button) {
   busy(button, true);
   try {
     const out = await post(form.dataset.write, fields(form));
-    showResult(describe(out), undoUrl(out));
+    showResult(describe(out), undoUrl(out), out.flag === "roaster" && out.count <= 20 ? out.places : null);
     reloadParts();
   } catch (err) {
     showResult(refusal(err));
@@ -448,6 +458,21 @@ async function writeNow(form, button) {
     busy(button, false);
   }
 }
+
+// Pull now (the toast, or the action bar for the selected places): the Jobs page's confirm, with the plan and the
+// window's override, through the Sources page's pull form.
+function pullNow(places) {
+  const form = document.getElementById("pull-form");
+  if (!form || !places.length) return;
+  form.querySelector("input[name=roasters]").value = places.join(",");
+  confirmWrite(form);
+}
+
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-pull-now], [data-pull-picks]");
+  if (!t) return;
+  pullNow(t.matches("[data-pull-now]") ? t.dataset.places.split(",").filter(Boolean) : picks().map((p) => p.roaster_id));
+});
 
 document.addEventListener("submit", (e) => {
   const form = e.target.closest("form[data-write]");
@@ -542,4 +567,8 @@ document.addEventListener("keydown", (e) => {
     m.open = false;
     m.querySelector("summary").focus();
   }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("[data-result-close]")) e.target.closest("[data-result]").hidden = true;
 });

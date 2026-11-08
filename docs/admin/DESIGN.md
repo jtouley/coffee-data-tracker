@@ -329,6 +329,15 @@ light and dark:
   foot. The action bar wrapped Clear to a second line at 390 px; it fits one line. On a desktop the status sat far
   from its row's ⋯; it is right-aligned beside it.
 
+### The owner's two decisions
+
+- **Pull now** sits where the owner just acted: in the outcome line after a Roaster flag, and in the action bar for
+  the selected places. It opens the same confirm sheet as every job, with the exact command, the window's override
+  when one is needed, and a line saying the crawl follows the probe. Its live status is one small line on Sources
+  ("Pull now: probe succeeded · crawl-shopify running · Jobs"), which polls while a run is going.
+- **Not a roaster** says what it did in the outcome line: "2 coffees leave the catalog in the next draft". Undo says
+  what came back.
+
 ### Following Bench Scale (`docs/app/DESIGN.md`)
 
 - **Flat, with hairlines.** The panel, the ⋯ menu and the action bar have a `--control` border and no shadow ("shadows

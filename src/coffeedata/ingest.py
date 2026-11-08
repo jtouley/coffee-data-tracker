@@ -306,10 +306,17 @@ def select_states(
     except by a test crawl (`test`: the admin's live check, which never counts as the week's crawl)."""
     mode = "only" if only else "retry_failed" if retry_failed else "sample" if sample else "full"
     states = registry.current(lake)
+    listed = {s.roaster.roaster_id for s in states}
     if not test and (off := crawl_off(lake)):
         states = [s for s in states if s.roaster.roaster_id not in off]
-    if only:
-        return [s for s in states if s.roaster.roaster_id == only], mode
+    if only:  # one domain, or several joined by commas (the admin's Pull now)
+        ids = set(only.split(","))
+        found = [s for s in states if s.roaster.roaster_id in ids]
+        if missing := ids - listed:  # a place of the source list, flagged, not yet in a published registry
+            found += [
+                s for s in registry.current(lake, also=sorted(missing)) if s.roaster.roaster_id in missing
+            ]
+        return found, mode
     done, tried = retry_transient(_done_and_tried, lake, run_date)
     # Draw a sample from a population that doesn't change as the run progresses, so re-running the same
     # command picks the same roasters (and then skips the ones already done).

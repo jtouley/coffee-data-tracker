@@ -241,6 +241,22 @@ class Catalog:
             dict(zip(("coffee_id", "input_hash", "roaster_id", "platform"), r, strict=True)) for r in rows
         ]
 
+    def of_roasters(self, build_id: str, roaster_ids: list[str]) -> list[dict]:
+        """The build's public coffees (in dim_coffee) of these stores: what Not a roaster takes out of the catalog."""
+        if not roaster_ids:
+            return []
+        self.ensure(build_id)
+        con = duckdb.connect(str(self.path(build_id)), read_only=True)
+        try:
+            rows = con.execute(
+                "select coffee_id, input_hash, roaster_id, title from products "
+                "where in_dim_coffee and roaster_id in (select unnest(?::varchar[])) order by coffee_id",
+                [roaster_ids],
+            ).fetchall()
+        finally:
+            con.close()
+        return [dict(zip(("coffee_id", "input_hash", "roaster_id", "title"), r, strict=True)) for r in rows]
+
     def search(self, build_id: str, f: Filters) -> dict:
         try:
             meta = self.ensure(build_id)

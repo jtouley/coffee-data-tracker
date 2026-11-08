@@ -167,3 +167,57 @@ def test_sort_orders_and_the_panel_count(tmp_path, lake, pg_url):
     names = c.get("/part/sources?sort=name").text
     assert names.index("Beans &amp; Roast") < names.index("Good Coffee") < names.index("Tea Corner")
     assert "Filter / Sort</button>" in c.get("/part/sources?sort=bogus").text  # an unknown order: the default
+
+
+def test_not_a_roaster_takes_its_coffees_out_and_undo_puts_them_back(tmp_path, lake, pg_url):
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    r = post(
+        c,
+        "/api/sources/flags",
+        {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "good.example"}]},
+    )
+    assert r.status_code == 200 and r.json()["excluded"] == 2  # the served release's two coffees of the store
+    d = post(c, "/api/drafts", {"key": "k2"}).json()
+    doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
+    assert {(x["subject"], x["action"]) for x in doc["decisions"]} == {("c1", "exclude"), ("c2", "exclude")}
+    assert decisions.not_roasters(doc) == ["good.example"]
+    u = post(c, f"/api/sources/flags/{r.json()['batch_id']}/undo", {"key": "k3"})
+    assert u.json()["restored"] == 2  # Undo restores the flag and the coffees
+    again = post(c, "/api/sources/flags", {"key": "k4", "flag": "not_roaster", "items": [
+        {"roaster_id": "good.example", "seen": u_batch(app)}]})  # fmt: skip
+    back = post(c, "/api/sources/flags", {"key": "k5", "flag": "roaster", "items": [
+        {"roaster_id": "good.example", "seen": again.json()["batch_id"]}]})  # fmt: skip
+    assert back.json()["restored"] == 2  # flagged Roaster again: its coffees come back too
+
+
+def u_batch(app):
+    return app.state.writes.control.source_flags(["good.example"])["good.example"]["batch_id"]
+
+
+def test_pull_now_probes_then_crawls_the_flagged_places(tmp_path, lake, pg_url):
+    app, c, fake = make(tmp_path, lake.root, pg_url)
+    post(
+        c, "/api/sources/flags", {"key": "k1", "flag": "roaster", "items": [{"roaster_id": "beans.example"}]}
+    )
+    plan = post(c, "/api/jobs/pull/plan", {"key": "p0", "roasters": "beans.example,tea.example"}).json()
+    assert plan["refusals"] == ["tea.example isn't flagged Roaster: flag it first"]
+    assert post(c, "/api/jobs/pull/runs", {"key": "p1", "roasters": "tea.example"}).status_code == 409
+    r = post(c, "/api/jobs/pull/runs", {"key": "p2", "roasters": "beans.example"})
+    assert r.status_code == 200, r.text
+    (probe,) = [x for x in fake.calls if x[0] == "run"]
+    assert probe[1] == "probe" and "coffeedata probe --only beans.example" in probe[2][0]
+    c.get("/part/sources")  # the probe is still running: no crawl yet
+    assert len([x for x in fake.calls if x[0] == "run"]) == 1
+    Lake(str(lake.root)).write_partition("probes", "2026-11-05", "pp", [{
+        "run_date": datetime(2026, 11, 5).date(), "batch_id": "pp", "probed_at": datetime(2026, 11, 5, tzinfo=UTC),
+        "roaster_id": "beans.example", "status": "ok", "final_host": "beans.example", "platform": "woocommerce"}])  # fmt: skip
+    fake.finish("probe")
+    page = c.get("/part/sources").text
+    runs = [x for x in fake.calls if x[0] == "run"]
+    assert runs[1][1] == "crawl-woocommerce" and runs[1][2][:5] == ["crawl", "--connector", "woocommerce", "--only",
+                                                                    "beans.example"]  # fmt: skip
+    assert "--run-date" in runs[1][2] and "--test" not in runs[1][2]  # a count crawl of the week
+    assert "Pull now: probe succeeded · crawl-woocommerce running" in page
+    c.get("/part/jobs")
+    assert len([x for x in fake.calls if x[0] == "run"]) == 2  # once per probe
+    assert [a["action"] for a in audit(app)][:2] == ["job_start", "job_start"]

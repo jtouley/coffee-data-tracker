@@ -24,7 +24,7 @@ import secrets
 import time
 from collections.abc import Awaitable, Callable
 from concurrent.futures import ThreadPoolExecutor
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlsplit
@@ -791,6 +791,10 @@ def create_app(
                 return await asyncio.to_thread(on().control.source_flags)
 
             marks = await plane(flags, None, off) if writes else None  # None: not read, statuses unknown
+            # Pull now's runs of the last day, live (reading them also starts a pull's crawl once its probe is done)
+            since = datetime.now(UTC) - timedelta(days=1)
+            pulls = [r for r in (await plane(lambda: writes.runs(20), [], off) if writes else [])
+                     if r["action"] in ("pull", "pull-crawl") and r["started_at"] and r["started_at"] > since]  # fmt: skip
             try:
                 data = await reader.run(lambda _lake, _con: sources.search(served.get("build_id"), f, marks))
             except Exception as e:  # noqa: BLE001 - no discovery run has written the source list yet
@@ -803,7 +807,7 @@ def create_app(
                 else tuple(x for x in SourceFilters.FACETS if x != "status")
             )
             return {"data": data, "f": f, "facets": facets, "writes_off": off, "flags_read": marks is not None,
-                    "sorts": SORTS,
+                    "sorts": SORTS, "pulls": pulls,
                     "qs": _qs(request, f, None, "/sources")}  # fmt: skip
 
         return await part("sources", make)

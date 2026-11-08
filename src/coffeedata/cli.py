@@ -111,8 +111,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
     todo = [
         s.roaster.roaster_id for s in states if s.status != "opted_out" and (s.last_probed or "") < cutoff
     ]
-    if args.only:
-        todo = [args.only]
+    if args.only:  # one domain, or several joined by commas (the admin's Pull now)
+        todo = args.only.split(",")
     if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
         todo = sorted(todo, key=ingest.sample_key)[: args.sample]
     rows = discover.probe(todo, workers=args.workers, run_date=args.run_date)
@@ -950,7 +950,7 @@ def main(argv: list[str] | None = None) -> None:
 
     pr = add("probe", cmd_probe, "detect storefront platforms for roasters not probed recently")
     pr.add_argument("--stale-days", type=int, default=28)
-    pr.add_argument("--only")
+    pr.add_argument("--only", help="probe these roaster_ids (domains, comma-separated), registry or not")
     pr.add_argument("--sample", type=int)
     pr.add_argument("--workers", type=int, default=16)
     pr.add_argument("--run-date", type=_run_date, default=_today())
@@ -983,7 +983,9 @@ def main(argv: list[str] | None = None) -> None:
     cr.add_argument("--slice", help="crawl one slice k/n of a salted-hash split of its roasters, e.g. 0/3")
     cr.add_argument("--salt", default="arm", help="the split's salt (record it with the results)")
     cr.add_argument(
-        "--only", help="fetch this one roaster_id, even if done or quarantined this week (RUNBOOK section 7)"
+        "--only",
+        help="fetch this roaster_id (or several, comma-separated), even if done or quarantined this week "
+        "(RUNBOOK section 7); a place of the source list the owner flagged is fetched before it's in a published registry",
     )
     cr.add_argument("--test", type=_test_id, help=TEST_HELP)
     mg = add("merge", cmd_merge, "union the week's connector partitions into the run dbt reads")

@@ -23,6 +23,7 @@ from typing import Any
 
 from coffeedata import decisions as snap
 from coffeedata import rules
+from coffeedata.models import adapter_of
 
 from . import jobs as registry
 from . import queries
@@ -91,12 +92,18 @@ class Writes:
         """The steps an action would start, with the guards' refusals and the window it falls in: the confirm step
         shows exactly this, and `start` checks it again."""
         action = registry.ACTIONS.get(key)
-        if action is None or action.page != "jobs":
+        if action is None or action.page not in ("jobs", "sources"):
             raise ValueError("no such job action")
         await self.ready()
         today = self.now().date()
         params = registry.checked(action, raw, today, lambda: new_id("t").lower()[:40])
-        return await self._guarded(action, params)
+        plan = await self._guarded(action, params)
+        if action.key == "pull":  # only places the owner flagged Roaster
+            places = params["roasters"].split(",")
+            flags = await asyncio.to_thread(self.control.source_flags, places)
+            plan.refusals += [f"{d} isn't flagged Roaster: flag it first" for d in places
+                              if (flags.get(d) or {}).get("flag") != "roaster"]  # fmt: skip
+        return plan
 
     async def _guarded(self, action: registry.Action, params: dict) -> registry.Plan:
         steps = action.steps(params)
@@ -186,7 +193,8 @@ class Writes:
                         continue
                     started.append({"run_id": new_id("r"), "action": plan.action.key, "job": s.job, "args": s.args,
                                     "mode": plan.params.get("mode"), "week": plan.params.get("week"),
-                                    "test_id": plan.params.get("test_id"), "roaster_id": plan.params.get("roaster"),
+                                    "test_id": plan.params.get("test_id"),
+                                    "roaster_id": plan.params.get("roaster") or plan.params.get("roasters"),
                                     "execution": ex.name, "actor": actor, "override_reason": override})  # fmt: skip
                 out = self._record(cur, actor, key, plan, override, started, errors, extra, answer)
         except ControlPlaneError:
@@ -282,6 +290,12 @@ class Writes:
                     r["final"] = e.status
 
         await asyncio.to_thread(live)
+        for r in rows:  # Pull now: once its probe has succeeded, the crawl of the places it probed
+            if r["action"] == "pull" and r["final"] == "succeeded":
+                r["followed"] = await self._pull_crawl(r)
+        listed = {r["run_id"] for r in rows}
+        if any(x["run_id"] not in listed for r in rows for x in (r.get("followed") or {}).get("runs", [])):
+            return await self.runs(limit)  # a crawl just started: list it too
         tests = [r["test_id"] for r in rows if r["test_id"]]
         if tests:
             answers = await self.read(queries.test_results, tests)
@@ -297,6 +311,41 @@ class Writes:
                     else None
                 )
         return rows
+
+    async def _pull_crawl(self, run: dict) -> dict:
+        """Start Pull now's crawl once its probe has succeeded: each probed place on its connector's crawl job, a
+        count crawl of the probe's week, as the owner who pulled (their window override carried over), through the
+        same guards and audit as any start. Once per probe (its key): a refusal is recorded and not retried; the
+        owner can start Crawl one roaster from Jobs."""
+        key = f"pull-crawl:{run['run_id']}"
+        if (first := await asyncio.to_thread(self.control.answered, key)) is not None:
+            return first
+        places = (run["roaster_id"] or "").split(",")  # the pull's places, recorded with its run
+        platforms = await self.read(queries.probed_platforms, [p for p in places if p])
+        groups: dict[str, list[str]] = {}
+        for place, platform in sorted(platforms.items()):
+            groups.setdefault(adapter_of(platform), []).append(place)
+        action = registry.ACTIONS["pull-crawl"]
+        params = dict(action.fixed) | {"week": str(run["week"])[:10], "after": run["run_id"],
+                                       "groups": {c: ",".join(ds) for c, ds in groups.items()}}  # fmt: skip
+        try:
+            if not groups:
+                raise registry.Refused([f"no pulled place answered the probe ({', '.join(places)})"])
+            plan = await self._guarded(action, params)
+            return await self._start(run["actor"], key, plan, run["override_reason"])
+        except registry.Refused as e:  # the guards' refusals are audited already (_check); this one not yet
+            out, audited = {"ok": False, "errors": e.reasons}, bool(groups)
+
+            def record():
+                with self.control.tx() as cur:
+                    if self.control.claim(cur, key) is None:
+                        if not audited:
+                            self.control.audit(cur, run["actor"], "job_start", "pull-crawl", "refused",
+                                               {"reasons": out["errors"], "after": run["run_id"]})  # fmt: skip
+                        self.control.remember(cur, key, out)
+
+            await asyncio.to_thread(record)
+            return out
 
     # --- decisions -------------------------------------------------------------------------------------------------
 
@@ -372,8 +421,15 @@ class Writes:
             raise ValueError("no places chosen")
         places = [str(i.get("roaster_id") or "") for i in items]
         seen = {str(i.get("roaster_id")): (str(i["seen"]) if i.get("seen") else None) for i in items}
+        coffees: list[dict] = []
+        if (
+            body.get("flag") == "not_roaster" and self.catalog is not None
+        ):  # their coffees leave the catalog too
+            served = await self.read(queries.served)
+            if served:
+                coffees = await self.read(lambda _l, _c: self.catalog.of_roasters(served["build_id"], places))
         out = await asyncio.to_thread(
-            self.control.flag_sources, actor, key, str(body.get("flag")), places, seen
+            self.control.flag_sources, actor, key, str(body.get("flag")), places, seen, coffees
         )
         written(action="source_flag", subject=out["batch_id"], outcome="ok", count=out["count"])
         return out

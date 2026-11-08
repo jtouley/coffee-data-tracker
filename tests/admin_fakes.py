@@ -74,7 +74,7 @@ class FakeJobs:
 
 class Pipeline:
     """What the real jobs would write when a fake execution finishes, into a copy of the test lake (never the admin):
-    a test crawl's job_manifests rows (so the store "answered"), a draft build's builds rows, release files and
+    a test crawl's job_manifests rows (so the store "answered"), Pull now's probe rows, a draft build's builds rows, release files and
     release_changes (cli._build's records), and a publish or rollback's serving_log row and release pointer
     (quality.serve). Attach with `fake.on_finish = Pipeline(...)`."""
 
@@ -95,6 +95,13 @@ class Pipeline:
         lake = Lake(str(self.lake_root))
         a = args or []
         script = a[0] if len(a) == 1 else ""
+        if e.job == "probe" and status == "succeeded" and (m := re.search(r"--only (\S+)", script)):
+            from datetime import date as _date
+
+            now = datetime.now(UTC)  # Pull now's probe: each place answers, on Shopify
+            lake.write_partition("probes", _date.today().isoformat(), f"pull-{e.name.rsplit('-', 1)[-1]}", [
+                {"run_date": now.date(), "batch_id": "pull", "probed_at": now, "roaster_id": d, "status": "ok",
+                 "final_host": d, "platform": "shopify"} for d in m[1].split(",")])  # fmt: skip
         if "--test" in a:
             test = a[a.index("--test") + 1]
             conn = a[a.index("--connector") + 1]

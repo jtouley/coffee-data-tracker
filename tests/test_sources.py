@@ -123,6 +123,22 @@ def test_the_registry_and_the_crawl_are_unchanged_until_flagged(sources_lake):
     assert [s.roaster.roaster_id for s in with_list[1][0]] == ["seeded.example"]
 
 
+def test_pull_now_crawls_a_flagged_place_before_it_is_published(sources_lake):
+    """`crawl --only` (and `probe --only`) take domains, comma-separated; one that only the source list has (flagged,
+    no draft published yet) is crawled all the same, and nothing else of the source list is."""
+    lake = sources_lake
+    probe = {"run_date": NOW.date(), "batch_id": "p1", "probed_at": NOW, "roaster_id": "beanhouse.example",
+             "status": "ok", "final_host": "beanhouse.example", "platform": "woocommerce"}  # fmt: skip
+    lake.write_partition("probes", "2026-11-02", "p1", [probe])
+    states, mode = ingest.select_states(lake, "2026-11-02", only="beanhouse.example,seeded.example")
+    assert mode == "only" and sorted(s.roaster.roaster_id for s in states) == [
+        "beanhouse.example",
+        "seeded.example",
+    ]
+    assert {s.roaster.roaster_id: s.roaster.adapter for s in states}["beanhouse.example"] == "woocommerce"
+    assert _ids(lake) == ["seeded.example"]  # the registry itself is unchanged until a draft is published
+
+
 def test_a_registry_roaster_marked_not_a_roaster_leaves_the_crawl(sources_lake):
     _serve_snapshot(sources_lake, "b1", decisions.snapshot("s1", "t", [], not_roasters=["seeded.example"]))
     assert _ids(sources_lake) == []

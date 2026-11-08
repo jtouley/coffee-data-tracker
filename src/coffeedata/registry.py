@@ -234,10 +234,14 @@ class RoasterState:
     last_probed: str | None
 
 
-def current(lake: Lake, seed: Path | None = None) -> list[RoasterState]:
+def current(
+    lake: Lake, seed: Path | None = None, also: list[str] | tuple[str, ...] = ()
+) -> list[RoasterState]:
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
-    it is each crawl job's first read of the hf:// lake."""
+    it is each crawl job's first read of the hf:// lake. `also`: places of the source list to include as if flagged
+    (the admin's Pull now crawls a place the owner flagged before a draft of it is published)."""
     added, dropped = source_flags(lake)
+    added = added + [d for d in also if d not in added]
     return retry_transient(_current, lake, seed or SEED, added, dropped)
 
 

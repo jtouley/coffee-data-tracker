@@ -157,7 +157,8 @@ pre.json { background: var(--panel); border-radius: 8px; padding: 12px; }
 
 /* Sources: one Filter / Sort panel (a sheet on a phone, a popover on a desktop); compact rows, each with a quiet
    status and a ⋯ menu; selecting rows (the box, or a tap on the row) shows the action bar at the bottom. */
-dialog.panel { margin: auto 0 0; width: 100%; max-width: 100%; max-height: 85dvh; border-radius: 14px 14px 0 0; }
+dialog.panel { margin: auto 0 0; width: 100%; max-width: 100%; max-height: 85dvh; border-radius: 14px 14px 0 0;
+  overscroll-behavior: contain; }
 @media (min-width: 760px) {
   dialog.panel { margin: 0; top: var(--panel-top, 120px); left: var(--panel-left, 16px); width: 32rem; border-radius: 8px;
     border-color: var(--control); }
@@ -168,27 +169,28 @@ dialog.panel .facets { margin-top: 12px; gap: 8px 12px; }
 .sorts .radio { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 0.9375rem; }
 .sorts .radio input { width: 20px; height: 20px; accent-color: var(--accent); }
 dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.sources-page { padding-bottom: 88px; }
+.sources-page { padding-bottom: 128px; }
 table.sources { width: 100%; border-collapse: collapse; margin-top: 8px; }
-table.sources thead th { font-size: 0.8125rem; text-align: left; padding: 4px 8px 4px 0; border-bottom: 1px solid var(--rule); }
+table.sources thead th { font-size: 0.8125rem; text-align: start; padding-block: 4px; padding-inline: 0 8px; border-bottom: 1px solid var(--rule); }
 table.sources tbody tr { border-bottom: 1px solid var(--rule); cursor: pointer; }
 table.sources tbody tr:has(input[data-pick]:checked) { background: var(--panel); }
-table.sources tbody th, table.sources td { padding: 8px 8px 8px 0; vertical-align: top; text-align: left; }
+@media (hover: hover) { table.sources tbody tr:hover { background: var(--panel); } } /* a row is selectable */
+table.sources tbody th, table.sources td { padding-block: 8px; padding-inline: 0 8px; vertical-align: top; text-align: start; }
 table.sources tbody th { font-weight: 400; white-space: normal; overflow-wrap: anywhere; }
 table.sources td.pick + th { position: static; background: none; } /* not the Catalog's pinned column: no sideways scroll */
 table.sources .pname { display: block; font-weight: 500; }
 table.sources .meta { display: block; font-size: 0.8125rem; color: var(--ink-2); }
-table.sources .status-col { text-align: right; }
+table.sources .status-col { text-align: end; }
 dialog.panel h2 { margin-top: 0; }
-dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
 @media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
-html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 96px; }
+html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
 table.sources .status { font-size: 0.8125rem; color: var(--ink-2); white-space: nowrap; }
-table.sources th.act, table.sources td.act { width: 44px; padding-right: 0; text-align: right; position: relative; }
+table.sources th.act, table.sources td.act { width: 44px; padding-inline-end: 0; text-align: end; position: relative; }
 .rowmenu > summary { list-style: none; min-width: 44px; justify-content: center; font-size: 1.25rem; }
 .rowmenu > summary::-webkit-details-marker { display: none; }
-.rowmenu .menu { position: absolute; right: 0; top: calc(100% - 4px); z-index: 4; display: grid; min-width: 12rem; padding: 4px;
+.rowmenu .menu { position: absolute; inset-inline-end: 0; top: calc(100% - 4px); z-index: 4; display: grid; min-width: 12rem; padding: 4px;
   background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; }
 .rowmenu .menu .inline-form { display: block; }
 .rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
@@ -199,3 +201,7 @@ table.sources th.act, table.sources td.act { width: 44px; padding-right: 0; text
   gap: 8px; padding: 8px; flex-wrap: nowrap; border: 1px solid var(--control); }
 .bulk.bar-bottom [data-bulk-count] { flex: 1; min-width: 0; padding-left: 4px; }
 .bulk.bar-bottom .btn.secondary.inline { padding: 0 12px; }
+@media (max-width: 759px) { /* the count on its own line, the actions under it */
+  .bulk.bar-bottom { flex-wrap: wrap; }
+  .bulk.bar-bottom [data-bulk-count] { flex-basis: 100%; }
+}
