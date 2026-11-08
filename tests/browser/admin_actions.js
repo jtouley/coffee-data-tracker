@@ -128,7 +128,7 @@ const errors = [];
       await page.keyboard.press("Escape");
       await openRun(page, "crawl", { connectors: "shopify" });
       assert.ok(await page.isHidden("dialog#run-job [data-field=roaster]"), "only the chosen job's fields");
-      assert.match(await page.textContent("dialog#run-job [data-job-hint]"), /Every roaster of one connector/);
+      assert.match(await page.textContent("dialog#run-job [data-job-hint]"), /Every store on one platform/);
       await shoot(page, "jobs-run-sheet", true);
       await page.selectOption("dialog#run-job [data-job]", "site");
       assert.ok(await page.isVisible("dialog#run-job [data-site] a"), "Site is a link to GitHub");

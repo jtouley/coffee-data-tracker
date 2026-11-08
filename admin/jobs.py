@@ -49,15 +49,14 @@ class Field:
 FIELDS = {
     "connector": Field("Connector", tuple(sorted(CONNECTORS))),
     "connectors": Field("Connector", ("all", *sorted(CONNECTORS)), default="all"),
-    "roaster": Field("Roaster (its domain)", check=ROASTER, help="e.g. onyxcoffeelab.com"),
+    "roaster": Field("Roaster (its domain)", check=ROASTER, help="onyxcoffeelab.com"),
     "mode": Field(
         "Mode",
         ("test", "count"),
         default="test",
-        help="test writes to its own test=<id> sub-partition, which the merge never reads; count writes "
-        "into week W's partition, like the scheduled passes",
+        help="Test: a trial run that never counts. Count: counts as this week's crawl.",
     ),  # fmt: skip
-    "week": Field("Week (any day of it)", check=re.compile(r"\d{4}-\d{2}-\d{2}"), help="for count mode"),
+    "week": Field("Week (any day of it)", check=re.compile(r"\d{4}-\d{2}-\d{2}"), help="Only for Count"),
     "roasters": Field("Places (domains)", check=ROASTERS),
 }
 
@@ -95,28 +94,27 @@ def _sh(script: str) -> list[str]:
 ACTIONS: dict[str, Action] = {
     a.key: a
     for a in (
-        Action("crawl", "Crawl", "Every roaster of one connector, or of all five: a full crawl.",
+        Action("crawl", "Crawl", "Every store on one platform, or on all five. Use it to redo a whole crawl.",
                ("connectors", "mode", "week"), _crawl),
-        Action("crawl-one", "Crawl one roaster", "crawl --only: one store, even if done or quarantined this week. "
-               "In test mode it is the live check of a store.", ("connector", "roaster", "mode", "week"),
+        Action("crawl-one", "Crawl one roaster", "One store, even if it's done or skipped this week. In Test mode it's the store's live check.", ("connector", "roaster", "mode", "week"),
                lambda p: [Step(CRAWL_JOB[p["connector"]],
                                ["crawl", "--connector", p["connector"], "--only", p["roaster"], *_mode(p)])]),
-        Action("crawl-retry", "Shopify retry", "crawl-retry: Shopify's parked stores, from their blocked page.",
+        Action("crawl-retry", "Shopify retry", "Try again the Shopify stores that blocked us, from where they stopped.",
                ("mode", "week"),
                lambda p: [Step("crawl-retry", ["crawl-retry", "--connector", "shopify", *_mode(p)])]),
-        Action("fetch-health", "Fetch health", "Did each fetch return a catalog of about the right size.",
+        Action("fetch-health", "Fetch health", "Check that each store's crawl brought back about as many products as usual.",
                ("week",), lambda p: [Step("fetch-health", ["fetch-health", "--run-date", p["week"], "--force"])]),
-        Action("merge", "Merge", "Union the week's connector partitions into the run the build reads.",
+        Action("merge", "Merge", "Combine this week's crawls so the build can use them.",
                ("week",), lambda p: [Step("merge", ["merge", "--run-date", p["week"]])]),
-        Action("enrich-week", "Enrich", "Claude's enrichment candidates from the merged week (spends).",
+        Action("enrich-week", "Enrich", "Ask Claude to read this week's new product descriptions. It costs money.",
                ("week",), lambda p: [Step("enrich-week", ["enrich-week", "--submit", "--run-date", p["week"]])]),
-        Action("classify", "Classify", "Claude's coffee-or-not verdicts for new product versions (spends).", (),
+        Action("classify", "Classify", "Ask Claude which new products are coffee. It costs money.", (),
                lambda p: [Step("build", _sh('rc=0; coffeedata classify || rc=1; '
                                             'coffeedata publish --message "classify (admin)"; exit $rc'))]),
-        Action("build", "Build", "The weekly build: classify, build and gate. It serves the release if it passes.",
+        Action("build", "Build", "Build the catalog and check it. If every check passes, it goes live.",
                (), lambda p: [Step("build", None)]),
         # From the Release page: a draft build over a decisions snapshot, Publish, Roll back.
-        Action("draft", "Draft build", "Build the decisions as a draft: recorded, never served.", (),
+        Action("draft", "Draft build", "Build your decisions as a draft to review. It doesn't go live.", (),
                lambda p: [Step("build", _sh(
                    f"rc=0; coffeedata build --draft {p['draft_id']} --snapshot {p['snapshot_id']} "
                    f"--snapshot-sha256 {p['sha256']} || rc=1; "
@@ -125,16 +123,16 @@ ACTIONS: dict[str, Action] = {
         # From the Sources page: Pull now, for places the owner flagged Roaster. One job: the probe, then a counted
         # crawl of each storefront found on its connector, into `week` (Writes.plan: the next week once this
         # week's merge is done, so the next merge and build keep it), then publish the probes.
-        Action("pull", "Pull now", "Probe the places, then a counted crawl of each one: no Publish needed.",
+        Action("pull", "Pull now", "Find each place's shop, then crawl it for this week. No Publish needed.",
                ("roasters",), lambda p: [Step("pull", _sh(
                    f'rc=0; coffeedata pull --only {p["roasters"]} --run-date {p["week"]} || rc=1; '
                    f'coffeedata publish --message "pull (admin)"; exit $rc'))],
                page="sources"),
-        Action("publish", "Publish", "Serve a draft build: the publish job.", (),
+        Action("publish", "Publish", "Make a draft build live.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "publish",
                                            "--baseline", p["baseline"] or "none", f"--reason={p['reason']}"])],
                page="release"),
-        Action("rollback", "Roll back", "Serve an earlier release again: the publish job.", (),
+        Action("rollback", "Roll back", "Make an earlier release live again.", (),
                lambda p: [Step("publish", ["publish-release", "--build", p["build"], "--action", "rollback",
                                            f"--reason={p['reason']}"])],
                page="release"),
