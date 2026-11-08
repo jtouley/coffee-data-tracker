@@ -66,7 +66,9 @@ never holds the site back):
   warning on the workflow run's summary page) with the statement that fixes it. After recreating a view, the load
   reads its grants back and fails the job if the view is no longer in the share. To re-case before the Tuesday
   `site` run, `gh workflow run weekly -f snowflake_migrate=true` works too, but it is the strict path: it stops,
-  loading nothing, if any view can't be recreated (run `coffeedata load-snowflake --dry-run` first to see).
+  loading nothing, if any view can't be recreated. Run `coffeedata load-snowflake --migrate --dry-run` first to
+  see what it would refuse; a dry run only records the `grant … to share` statements, so a share grant that would
+  fail shows only in the real run.
 
 Databricks loads from S3 or GCS.
 

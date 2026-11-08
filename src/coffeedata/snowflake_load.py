@@ -108,11 +108,14 @@ def _described(columns: list[str], table: str, contract: dict) -> list[tuple[str
     return [(c, contract[table][1][c.lower()]) for c in columns]
 
 
+_ANNOTATE = True  # off for a dry run: it loads nothing, and its stdout is the JSON plan
+
+
 def _warn(message: str) -> None:
-    """A warning the load goes on after: on stderr, and as a GitHub annotation in a workflow run, so a green job
-    still shows it on the run's summary page."""
+    """A warning the load goes on after: on stderr, and (not on a dry run) as a GitHub annotation in a workflow
+    run, so a green job still shows it on the run's summary page."""
     print(f"warning: {message}", file=sys.stderr)
-    if os.environ.get("GITHUB_ACTIONS") == "true":
+    if _ANNOTATE and os.environ.get("GITHUB_ACTIONS") == "true":
         text = message.replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
         print(f"::warning title=Snowflake load::{text}", flush=True)
 
@@ -122,10 +125,7 @@ def _warn_absent(obj: str, columns: list[str], table: str, contract: dict) -> No
     the load): e.g. a share view that only a migration will rebuild with it."""
     have = {c.lower() for c in columns}
     if absent := [c for c in contract.get(table, ("", {}))[1] if c not in have]:
-        print(
-            f"warning: {obj} has no column {', '.join(absent)} from the public contract: not described",
-            file=sys.stderr,
-        )
+        _warn(f"{obj} has no column {', '.join(absent)} from the public contract: not described")
 
 
 def table_comments(table: str, columns: list[str], contract: dict) -> list[str]:
@@ -322,11 +322,15 @@ def load(export_dir: Path, con=None, migrate: bool = False, dry_run: bool = Fals
     cur = _DryRun(con.cursor()) if dry_run else con.cursor()
     try:
         if dry_run:
+            global _ANNOTATE
+            _ANNOTATE = False
             try:
                 _load(cur, export_dir, run_path, share, migrate)
                 refused = None
             except RuntimeError as e:
                 refused = str(e)
+            finally:
+                _ANNOTATE = True
             return {"dry_run": True, "run": manifest["as_of_run"], "migrate": migrate, "refused": refused,
                     "reads": cur.reads, "statements": cur.writes}  # fmt: skip
         counts = _load(cur, export_dir, run_path, share, migrate)
@@ -464,9 +468,15 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
     for table in present:
         cur.execute(create_view(table, as_exported(_column_names(cur, SCHEMA, table), table), contract))
     # A dry run recreated nothing (and granted nothing), so there is nothing to read back.
-    lost = [] if isinstance(cur, _DryRun) else [
-        t for t in shared if share not in _view_grants(cur, f"SHARE.{SHARE_VIEWS[t]}")[1]
-    ]  # fmt: skip
+    lost: list[str] = []
+    unchecked: list[str] = []
+    for t in [] if isinstance(cur, _DryRun) else shared:
+        try:
+            if share not in _view_grants(cur, f"SHARE.{SHARE_VIEWS[t]}")[1]:
+                lost.append(t)
+        except Exception as e:  # noqa: BLE001 - snowflake.connector's error; the other views are still described
+            _warn(f"couldn't read back SHARE.{SHARE_VIEWS[t]}'s grants ({e})")
+            unchecked.append(t)
     for table in PUBLIC_TABLES:  # the views this load didn't just recreate with their descriptions
         if (
             table not in present
@@ -475,10 +485,16 @@ def _load(cur, export_dir: Path, run_path: str, share: str, migrate: bool) -> di
         ):
             for sql in view_comments(table, names, contract):  # only the columns it has
                 cur.execute(sql)
-    if lost:  # the data is loaded; the job fails so the owner hears that consumers lost these views
+    # The data is loaded: the job fails so the owner hears that consumers lost these views, or may have.
+    problems: list[str] = []
+    if lost:
         gone = ", ".join(f"SHARE.{SHARE_VIEWS[t]}" for t in lost)
-        raise RuntimeError(
-            f"{gone} left share {share} when recreated. As the share's owner, grant each again: grant select on "
-            f"view <view> to share {share}"
-        )
+        problems.append(f"{gone} left share {share} when recreated. As the share's owner, grant each again: "
+                        f"grant select on view <view> to share {share}")  # fmt: skip
+    if unchecked:
+        unread = ", ".join(f"SHARE.{SHARE_VIEWS[t]}" for t in unchecked)
+        problems.append(f"{unread} couldn't be read back after being recreated: check `show grants on view <view>` "
+                        f"lists share {share}")  # fmt: skip
+    if problems:
+        raise RuntimeError(" ".join(problems))
     return counts

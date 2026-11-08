@@ -700,3 +700,50 @@ def test_a_view_that_left_the_share_when_recreated_fails_the_job_after_the_load(
     with pytest.raises(RuntimeError, match="SHARE.roaster left share COFFEE_DATA_SHARE when recreated"):
         snowflake_load.load(export_dir(tmp_path, counts), sf)
     assert all(sf.tables[t] == NEW for t in PUBLIC_TABLES) and sf.views["coffee"] == NEW_VIEW
+
+
+# Snowflake's "Reserved & limited keywords" page, the reserved table, as fetched on 2026-11-08
+# (https://docs.snowflake.com/en/sql-reference/reserved-keywords). Re-fetch it when the pre-flight is next changed.
+DOCUMENTED_RESERVED = """ACCOUNT ALL ALTER AND ANY AS BETWEEN BY CASE CAST CHECK COLUMN CONNECT CONNECTION CONSTRAINT
+    CREATE CROSS CURRENT CURRENT_DATE CURRENT_TIME CURRENT_TIMESTAMP CURRENT_USER DATABASE DELETE DISTINCT DROP ELSE
+    EXISTS FALSE FOLLOWING FOR FROM FULL GRANT GROUP GSCLUSTER HAVING ILIKE IN INCREMENT INNER INSERT INTERSECT INTO IS
+    ISSUE JOIN LATERAL LEFT LIKE LOCALTIME LOCALTIMESTAMP MINUS NATURAL NOT NULL OF ON OR ORDER ORGANIZATION QUALIFY
+    REGEXP REVOKE RIGHT RLIKE ROW ROWS SAMPLE SCHEMA SELECT SET SOME START TABLE TABLESAMPLE THEN TO TRIGGER TRUE
+    TRY_CAST UNION UNIQUE UPDATE USING VALUES VIEW WHEN WHENEVER WHERE WINDOW WITH""".split()  # noqa: SIM905
+
+
+def test_every_documented_reserved_keyword_is_refused():
+    """The code may refuse more (ASOF and MATCH_CONDITION, from the ASOF JOIN syntax), never fewer."""
+    assert not set(DOCUMENTED_RESERVED) - snowflake_load.RESERVED
+
+
+def test_a_read_back_that_errors_still_describes_the_other_views_then_fails(tmp_path, capsys):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    real = sf.execute
+    checks = {"n": 0}
+
+    def flaky(sql):
+        if sql == "show grants on view SHARE.coffee":
+            checks["n"] += 1
+            if checks["n"] == 2:  # the read-back, after the pre-flight's check
+                raise RuntimeError("connection reset")
+        return real(sql)
+
+    sf.execute = flaky
+    with pytest.raises(RuntimeError, match="SHARE.coffee couldn't be read back"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf)
+    assert all(sf.views[v] == NEW_VIEW for v in VIEWS)  # recreated, data loaded
+    assert "couldn't read back SHARE.coffee's grants (connection reset)" in capsys.readouterr().err
+
+
+def test_a_dry_run_warns_on_stderr_but_adds_no_annotation(tmp_path, capsys, monkeypatch):
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    snowflake_load.load(export_dir(tmp_path, counts), sf, dry_run=True)
+    out, err = capsys.readouterr()
+    assert "warning: SHARE.roaster is owned by" in err and "::warning" not in out + err
+    snowflake_load._warn("after")  # and the next real load annotates again
+    assert "::warning title=Snowflake load::after" in capsys.readouterr().out
