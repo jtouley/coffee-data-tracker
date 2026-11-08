@@ -447,6 +447,41 @@ def create_app(
         accounts_only()
         return page(request, "reset.html", in_app=in_app_browser(request.headers.get("user-agent")))
 
+    # A native submit of a form app.js didn't wire (it failed to load, or threw first). The forms post, so the
+    # password never goes in a URL; it is dropped here, unread. The page comes back with a notice and the username
+    # as typed, never the password or a code. Nothing is signed in, created or changed.
+    async def typed_username(request: Request) -> str:
+        try:
+            value = (await request.form()).get("username")
+        except Exception:  # noqa: BLE001 - not a form: nothing to keep
+            return ""
+        return value[:64] if isinstance(value, str) else ""
+
+    @app.post("/signin", response_class=HTMLResponse)
+    async def signin_unwired(request: Request) -> HTMLResponse:
+        s = accounts_only()
+        username = await typed_username(request)
+        return page(
+            request,
+            "signin.html",
+            400,
+            owner_setup=s.accounts.needs_owner,
+            unloaded="you’re not signed in yet. Enter your password and sign in again",
+            username=username,
+        )
+
+    @app.post("/join", response_class=HTMLResponse)
+    async def join_unwired(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "join.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="your account wasn’t created. Fill in the form and create it again", username=await typed_username(request))  # fmt: skip
+
+    @app.post("/reset", response_class=HTMLResponse)
+    async def reset_unwired(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "reset.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="your password wasn’t set. Enter the code and a new password again")  # fmt: skip
+
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
         s = accounts_only()
@@ -876,15 +911,27 @@ def create_app(
     def counts(user_id: str) -> dict[str, int]:
         return gear_counts(store.shots_of(user_id))
 
-    @app.get("/setup", response_class=HTMLResponse)
-    def setup(request: Request, me: Me) -> HTMLResponse:
+    def setup_page(request: Request, me: User, unloaded: str = "") -> HTMLResponse:
         return page(
             request,
             "setup.html",
+            400 if unloaded else 200,
             me=me,
             auth_name=getattr(auth, "name", ""),
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
+            unloaded=unloaded,
+        )
+
+    @app.get("/setup", response_class=HTMLResponse)
+    def setup(request: Request, me: Me) -> HTMLResponse:
+        return setup_page(request, me)
+
+    @app.post("/setup", response_class=HTMLResponse)
+    def setup_unwired(request: Request, me: Me) -> HTMLResponse:
+        """Change password's form, unwired (see signin_unwired): the passwords are dropped, unread."""
+        return setup_page(
+            request, me, unloaded="your password wasn’t changed. Enter both passwords and change it again"
         )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)

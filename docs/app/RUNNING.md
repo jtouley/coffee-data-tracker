@@ -29,7 +29,12 @@ accepts Secure cookies on `localhost` without it. On Cloud Run (or a Space) the 
 Every screen and API call needs a signed-in session except the few listed in `PUBLIC` (`app/auth.py`): health,
 sign-in, join, reset, the offline page and the static files. A new route is private until it is added there, and
 `tests/test_auth_gate.py` checks every registered route. Pages and photos for a signed-in person are sent with
-`Cache-Control: no-store, private` and `Vary: Cookie`, so no browser or shared cache keeps them.
+`Cache-Control: no-store, private` and `Vary: Cookie`, so no browser HTTP cache or shared cache keeps them. The
+app's own service worker is the exception: it keeps the last copy of the screens used at the machine (Today, Log
+shot, New bag, Coffees, a coffee, History, Settings), and up to 60 bag photos, so they open offline. It clears them
+on sign-out and whenever the sign-in screen opens (except after "couldn't check your sign-in", when the session may
+still be good). The password forms post: if app.js didn't wire one, the page comes back with a notice and the
+username as typed, and nothing is done with what was sent.
 
 ## Sign-in
 
@@ -70,8 +75,11 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 for `ci` to pass on the push, then pushes the image and deploys it by digest, once the variables below are set. It
 deploys only main's newest commit, so an older commit whose `ci` finished late never replaces a newer one, and it
 deploys after docs-only merges too (the same app, restarted). Running the workflow by hand from `main` deploys main's
-newest commit without waiting for `ci`. With the variable `GCP_ADMIN_SERVICE` set, the same image then goes to the
-admin service, through the `admin` environment, where a required reviewer can be added in the repository's settings.
+newest commit if `ci` passed on it; with `force` checked, even if it didn't. With the variable `GCP_ADMIN_SERVICE`
+set, the same image then goes to the admin service, through the `admin` environment, where a required reviewer can
+be added in the repository's settings, as long as the app still runs that image (a later run's deploy carries on
+from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
+back, below) ends with a warning on the run, and leaves the admin where it is.
 
 ### Owner's steps
 
@@ -174,30 +182,53 @@ Reporting. Locally, `COFFEEDATA_JSON_LOGS=1 make app` prints the same JSON lines
 
 ### Rolling back
 
-Every deploy makes a new revision, and each revision keeps the image digest it was deployed with. To go back to the
-last good one while the fix is made (with the repository variables `GCP_SERVICE` or `GCP_REGION` set, use their
-values instead of `registry-coffee` and `us-central1`):
+Every deploy makes a new revision, and each revision keeps the image digest it was deployed with.
+
+**Before you start.** You need `gcloud` signed in as an account with `roles/run.developer` (or Owner) on the project,
+and the project set: `gcloud config set project <project_id>` (the `project_id` in Terraform's variables). With the
+repository variables `GCP_SERVICE` or `GCP_REGION` set, use their values instead of `registry-coffee` and
+`us-central1` below.
+
+**App and admin together.** They run the same image, so a bad change in shared code (anything outside `admin/`)
+is bad in both: roll back both, to revisions with the same image. The admin service (`registry-coffee-admin`, when
+`GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own name in place of `registry-coffee`.
+
+**Stored data.** A rollback changes the code, not the data. Before going back past a change to what the app writes
+(the users dataset's tables, `USER_TABLES` in `src/coffeedata/lake.py`, or the shot and bag records), check that
+the older code can read what the newer one wrote. A new column is ignored by older readers; a changed meaning or
+type isn't. Each image is pushed with its commit as its tag, so the revision's commit is:
+
+```bash
+image=$(gcloud run revisions describe <previous> --region us-central1 --format='value(spec.containers[0].image)')
+gcloud artifacts docker tags list "${image%@*}" --filter="version~${image#*@}" --format='value(tag)'
+git log -p <that commit>..main -- src/coffeedata/lake.py app/accounts.py
+```
+
+To go back to the last good revision while the fix is made:
 
 ```bash
 gcloud run revisions list --service registry-coffee --region us-central1    # newest first: pick the last good one
 gcloud run services update-traffic registry-coffee --region us-central1 --to-revisions=<previous>=100
 ```
 
+**Check it worked.** `curl -fsS https://app.registry.coffee/health` answers 200, `gcloud run services describe
+registry-coffee --region us-central1` shows 100% on `<previous>`, and the "registry.coffee: errors" alert stops
+firing (Monitoring, Alerting; it closes on its own once the errors stop).
+
 > **Pinned traffic stays pinned.** Once traffic is sent to a named revision, every later deploy makes a new revision
-> that gets **0%** of the traffic, and the deploy job still succeeds ("all subsequent deployments use that traffic
-> split pattern going forward", in Cloud Run's
+> that gets **0%** of the traffic. The deploy job still succeeds, with a warning that traffic is pinned ("all
+> subsequent deployments use that traffic split pattern going forward", in Cloud Run's
 > [rollouts and rollbacks](https://cloud.google.com/run/docs/rollouts-rollbacks-traffic-migration)). So the fix's own
 > deploy changes nothing until traffic is moved back.
 
-Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision:
+Once the fix is on `main` and its deploy has finished, send traffic back to the newest revision, and check it the
+same way:
 
 ```bash
 gcloud run services update-traffic registry-coffee --region us-central1 --to-latest
-gcloud run services describe registry-coffee --region us-central1    # check where traffic goes now
+gcloud run services describe registry-coffee --region us-central1    # 100% to the latest revision
+curl -fsS https://app.registry.coffee/health
 ```
-
-The admin service (`registry-coffee-admin`, when `GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own
-name in place of `registry-coffee`.
 
 ### Deleting a person's data
 

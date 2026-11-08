@@ -281,10 +281,16 @@ def test_migrate_uploads_before_dropping_and_rebuilds_every_view_keeping_its_gra
     assert snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)["tables"] == counts
     assert healthy(sf)
     sql = sf.sql
-    last_check = max(n for n, s in enumerate(sql) if s.startswith("show grants on view"))
+    first_put = min(n for n, s in enumerate(sql) if s.startswith("put "))
+    checks = [n for n, s in enumerate(sql) if s.startswith("show grants on view")]
+    last_check = max(n for n in checks if n < first_put)
     last_put = max(n for n, s in enumerate(sql) if s.startswith("put "))
     first_drop = min(n for n, s in enumerate(sql) if s.startswith("drop table"))
     assert last_check < last_put < first_drop  # grants checked, files up, then drops
+    last_view = max(n for n, s in enumerate(sql) if s.startswith("create or replace secure view"))
+    assert (
+        len([n for n in checks if n > last_view]) == 4
+    )  # and each view read back in the share once recreated
     views = [s for s in sql if s.startswith("create or replace secure view")]
     assert len(views) == 4 and all(re.search(r"\) copy grants comment = '.*' as select ", v) for v in views)
     assert not any(
@@ -315,8 +321,9 @@ def test_a_migration_that_failed_partway_is_finished_by_running_it_again(tmp_pat
 
 
 def test_migrate_works_when_another_role_owns_the_share(tmp_path):
-    """The documented setup: COFFEE_LOADER has no IMPORT SHARE, and after a listing ACCOUNTADMIN owns the share.
-    Every view is already in it, and copy grants keeps it there."""
+    """Not the documented setup (admin_setup.sql creates the share as COFFEE_LOADER, and a share's ownership can't be
+    moved; the PR's owner step checks it), but a migration doesn't need the share's owner: every view is already in
+    it, and copy grants keeps it there (as this fake models Snowflake; not checked against a live account)."""
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts, owner="ACCOUNTADMIN")
     snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
@@ -622,3 +629,122 @@ def test_the_listing_sample_queries_use_only_public_columns():
     for q in queries:
         con.execute(q).fetchall()
         assert '"' not in q  # no quoted names
+
+
+# --- post-merge audit of #106 -------------------------------------------------------------------------------------
+
+
+def test_window_is_reserved_so_a_window_column_fails_before_anything_is_loaded():
+    """WINDOW is on Snowflake's reserved-keyword list ("Reserved by ANSI") and was missing: a `window` column would
+    have passed the pre-flight, reloaded the tables and then failed at `create view`."""
+    assert "WINDOW" in snowflake_load.RESERVED
+    with pytest.raises(RuntimeError, match="without quotes"):
+        snowflake_load.view_column("window")
+
+
+def test_a_name_is_checked_as_written_not_as_upper_cased():
+    with pytest.raises(RuntimeError, match="without quotes"):
+        snowflake_load.view_column("straße")  # "STRASSE" once upper-cased, which would pass
+
+
+def test_columns_that_differ_only_in_case_fail_before_anything_is_loaded(tmp_path, test_contract):
+    write_contract(test_contract, columns=("coffee_id", "Coffee_ID"))
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    export = export_dir(tmp_path, counts)
+    for t in PUBLIC_TABLES:
+        pq.write_table(pa.table({"coffee_id": ["x"], "Coffee_ID": ["y"]}), export / f"{t}.parquet")
+    sf = FakeSnowflake(counts)
+    with pytest.raises(RuntimeError, match="differ only in case"):
+        snowflake_load.load(export, sf)
+    assert not any(s.startswith(("put ", "create", "drop", "truncate", "copy into")) for s in sf.sql)
+
+
+def test_a_re_case_the_share_grant_fails_for_is_left_and_the_week_still_loads(tmp_path, capsys, monkeypatch):
+    """Urgent before the 2026-11-10 load: a lower-case view missing from the share, with a role that can't grant
+    it, refused the whole ordinary load. Re-casing is cosmetic, so the load now leaves that view and warns (also
+    as a GitHub annotation); a migration still stops."""
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts, owner="ACCOUNTADMIN", shared={"coffee", "price_event", "market_weekly"})
+    assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
+    assert all(sf.views[v] == NEW_VIEW for v in ("coffee", "price_event", "market_weekly"))
+    assert sf.views["roaster"] == NEW  # left as it was
+    out, err = capsys.readouterr()
+    assert "warning: SHARE.roaster is missing from share COFFEE_DATA_SHARE" in err
+    assert "::warning title=Snowflake load::SHARE.roaster is missing from share" in out
+
+    sf = lower_case_snowflake(counts, owner="ACCOUNTADMIN", shared={"coffee", "price_event", "market_weekly"})
+    with pytest.raises(RuntimeError, match="No table or view was changed"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)
+
+
+def test_a_re_case_whose_grants_cant_be_read_is_left_and_the_week_still_loads(tmp_path, capsys):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.fail_on = "show grants on view SHARE.roaster"  # a transient error, not a missing privilege
+    assert snowflake_load.load(export_dir(tmp_path, counts), sf)["tables"] == counts
+    assert sf.views["roaster"] == NEW and sf.views["coffee"] == NEW_VIEW
+    assert "warning: SHARE.roaster couldn't be checked" in capsys.readouterr().err
+
+
+def test_a_view_that_left_the_share_when_recreated_fails_the_job_after_the_load(tmp_path, monkeypatch):
+    """`copy grants` is what keeps a view in the share; the load reads each one back and fails the job (the data
+    is loaded) if one isn't there any more, instead of consumers finding out."""
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    real = snowflake_load.create_view
+    monkeypatch.setattr(snowflake_load, "create_view",
+                        lambda *a: real(*a).replace(" copy grants ", " ") if a[0] == "public_roaster" else real(*a))  # fmt: skip
+    with pytest.raises(RuntimeError, match="SHARE.roaster left share COFFEE_DATA_SHARE when recreated"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf)
+    assert all(sf.tables[t] == NEW for t in PUBLIC_TABLES) and sf.views["coffee"] == NEW_VIEW
+
+
+# Snowflake's "Reserved & limited keywords" page, the reserved table, as fetched on 2026-11-08
+# (https://docs.snowflake.com/en/sql-reference/reserved-keywords). Re-fetch it when the pre-flight is next changed.
+DOCUMENTED_RESERVED = """ACCOUNT ALL ALTER AND ANY AS BETWEEN BY CASE CAST CHECK COLUMN CONNECT CONNECTION CONSTRAINT
+    CREATE CROSS CURRENT CURRENT_DATE CURRENT_TIME CURRENT_TIMESTAMP CURRENT_USER DATABASE DELETE DISTINCT DROP ELSE
+    EXISTS FALSE FOLLOWING FOR FROM FULL GRANT GROUP GSCLUSTER HAVING ILIKE IN INCREMENT INNER INSERT INTERSECT INTO IS
+    ISSUE JOIN LATERAL LEFT LIKE LOCALTIME LOCALTIMESTAMP MINUS NATURAL NOT NULL OF ON OR ORDER ORGANIZATION QUALIFY
+    REGEXP REVOKE RIGHT RLIKE ROW ROWS SAMPLE SCHEMA SELECT SET SOME START TABLE TABLESAMPLE THEN TO TRIGGER TRUE
+    TRY_CAST UNION UNIQUE UPDATE USING VALUES VIEW WHEN WHENEVER WHERE WINDOW WITH""".split()  # noqa: SIM905
+
+
+def test_every_documented_reserved_keyword_is_refused():
+    """The code may refuse more (ASOF and MATCH_CONDITION, from the ASOF JOIN syntax), never fewer."""
+    assert not set(DOCUMENTED_RESERVED) - snowflake_load.RESERVED
+
+
+def test_a_read_back_that_errors_still_describes_the_other_views_then_fails(tmp_path, capsys):
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    real = sf.execute
+    checks = {"n": 0}
+
+    def flaky(sql):
+        if sql == "show grants on view SHARE.coffee":
+            checks["n"] += 1
+            if checks["n"] == 2:  # the read-back, after the pre-flight's check
+                raise RuntimeError("connection reset")
+        return real(sql)
+
+    sf.execute = flaky
+    with pytest.raises(RuntimeError, match="SHARE.coffee couldn't be read back"):
+        snowflake_load.load(export_dir(tmp_path, counts), sf)
+    assert all(sf.views[v] == NEW_VIEW for v in VIEWS)  # recreated, data loaded
+    assert "couldn't read back SHARE.coffee's grants (connection reset)" in capsys.readouterr().err
+
+
+def test_a_dry_run_warns_on_stderr_but_adds_no_annotation(tmp_path, capsys, monkeypatch):
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    counts = {t: 1 for t in PUBLIC_TABLES}
+    sf = lower_case_snowflake(counts)
+    sf.view_owner["roaster"] = "ACCOUNTADMIN"
+    snowflake_load.load(export_dir(tmp_path, counts), sf, dry_run=True)
+    out, err = capsys.readouterr()
+    assert "warning: SHARE.roaster is owned by" in err and "::warning" not in out + err
+    snowflake_load._warn("after")  # and the next real load annotates again
+    assert "::warning title=Snowflake load::after" in capsys.readouterr().out

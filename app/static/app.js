@@ -1691,7 +1691,18 @@ function account() {
     // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
-        await post(b.dataset.signout, {});
+        // 401: the session had already ended (signed out on another phone, or expired); for this phone's sign-out
+        // that is signed out too. Not for "Sign out on all devices": the other sessions are untouched, so say so.
+        // A session the server couldn't check answers 503 instead, which stays an error here.
+        const everywhere = b.dataset.signout !== "/api/signout";
+        const ended = await post(b.dataset.signout, {}).then(() => false, (err) => {
+          if (err.status !== 401) throw err;
+          return true;
+        });
+        if (ended && everywhere) {
+          b.textContent = "This phone was already signed out. Sign in, then sign out on all devices.";
+          return;
+        }
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
         try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");
@@ -1727,9 +1738,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hand) preference(hand, "hand", "right");
   // On the sign-in screen nobody is signed in, however the last session ended (signed out, expired, ended on
   // another phone): the pages kept for offline use held that person's data, so they go too.
-  if (document.getElementById("signin")) {
-    globalThis.caches?.delete("pages").catch(() => { /* nothing kept */ });
-    navigator.serviceWorker?.controller?.postMessage("signed-out");
+  // Not after "couldn't check your sign-in": that was a failed lookup, and the session may still be good.
+  // Guarded like sign-out's (some WebViews have no caches): a throw here must never stop the forms being wired
+  // below. Their method="post" means an unwired form still never puts a password in the URL.
+  // data-purge says when that is settled ("done" or "skipped"), for the browser tests.
+  const signin = document.getElementById("signin");
+  if (signin && signin.dataset.ended === "failed") {
+    signin.dataset.purge = "skipped";
+  } else if (signin) {
+    try {
+      navigator.serviceWorker?.controller?.postMessage("signed-out");
+      Promise.resolve(globalThis.caches?.delete("pages"))
+        .catch(() => { /* nothing kept */ })
+        .finally(() => { signin.dataset.purge = "done"; });
+    } catch {
+      signin.dataset.purge = "done"; // no caches here: nothing kept
+    }
   }
   for (const id of ["signin", "join", "reset", "agree-form"]) {
     const f = document.getElementById(id);

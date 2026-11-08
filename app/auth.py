@@ -37,11 +37,14 @@ PUBLIC: frozenset[tuple[str, str]] = frozenset(
         ("GET", "/healthz"),
         ("GET", "/offline"),  # the service worker's fallback page, cached at install
         ("GET", "/signin"),
+        ("POST", "/signin"),  # a form app.js didn't wire: shown again with a notice, nothing done
         ("POST", "/api/signin"),
         ("GET", "/join"),
+        ("POST", "/join"),
         ("POST", "/api/invites/check"),
         ("POST", "/api/join"),
         ("GET", "/reset"),
+        ("POST", "/reset"),
         ("POST", "/api/reset"),
     }
 )
@@ -107,7 +110,8 @@ class RequireSession:
         try:
             public = public_route(self.routes(), scope)
         except Exception:  # noqa: BLE001 - fail closed
-            log.exception("matching %s to a route failed", scope.get("path"))
+            # The method, not the path: a path carries ids (/shot/<id>), and logs name routes by template only.
+            log.exception("matching a %s request to a route failed", scope.get("method") or scope.get("type"))
             public = False
         conn.state.public = public
         user = None if public else current_user(self.auth, conn)
@@ -121,9 +125,18 @@ class RequireSession:
 
 
 def signed_out(request: Request) -> Response:
-    """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401."""
+    """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401. When the session
+    couldn't be checked (current_user raised), the API answers 503 instead: the session may still be good, so a
+    sign-out must not look done, and a queued write is sent again later rather than taken as refused."""
     if request.method in ("GET", "HEAD") and not request.url.path.startswith("/api/"):
         return RedirectResponse("/signin", 303)
+    if getattr(request.state, "auth_failed", False):
+        return JSONResponse(
+            {
+                "detail": "We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in."
+            },
+            503,
+        )
     return JSONResponse({"detail": "sign in first"}, 401)
 
 
