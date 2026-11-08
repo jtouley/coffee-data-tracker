@@ -55,3 +55,9 @@ variable "service" {
   type        = string
   default     = "registry-coffee"
 }
+
+variable "email" {
+  description = "Email recovery (docs/app/signup-ux-spec.md §5): adds the EMAIL_KEY and RESEND_API_KEY secrets and mounts them on the app. Turn on only after the Resend domain is verified; the secrets need values before the service can use them (RUNNING.md, \"Email\")."
+  type        = bool
+  default     = false
+}

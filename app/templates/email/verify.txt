@@ -1,0 +1,10 @@
+Confirm your email
+
+One quick step before your first shot: confirm this is your email, so you can reset your password yourself.
+
+Confirm email:
+{{ link }}
+
+The link works for 24 hours. If you didn’t sign up, ignore this.
+
+registry.coffee

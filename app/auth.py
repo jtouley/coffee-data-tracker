@@ -43,6 +43,11 @@ PUBLIC: frozenset[tuple[str, str]] = frozenset(
         ("POST", "/api/join"),
         ("GET", "/reset"),
         ("POST", "/api/reset"),
+        # Email recovery (spec §4, §5): asking for a reset link, and opening a verify link on any device.
+        ("GET", "/forgot"),
+        ("POST", "/api/forgot"),
+        ("GET", "/verify"),
+        ("POST", "/api/verify"),
     }
 )
 
@@ -182,7 +187,15 @@ class Sessions:
         response.delete_cookie(COOKIE, path="/", secure=self.secure, httponly=True, samesite="lax")
 
 
-SECRETS = ("HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE")
+SECRETS = (
+    "HF_TOKEN",
+    "ANTHROPIC_API_KEY",
+    "AUTH_PEPPER",
+    "SESSION_SECRET",
+    "OWNER_SETUP_CODE",
+    "EMAIL_KEY",
+    "RESEND_API_KEY",
+)
 
 
 def clean_secrets() -> None:
@@ -225,6 +238,22 @@ def missing_secrets() -> list[str]:
     return missing
 
 
+def email_key() -> str | None:
+    """EMAIL_KEY, when the email features can work: it's a valid key, and (hosted) there's a way to send. Neither is
+    in missing_secrets(): without them the app starts and the email features stay hidden (spec §5)."""
+    from .contacts import EmailCrypto, EmailKeyError
+
+    key = os.environ.get("EMAIL_KEY") or None
+    if not key or (hosted() and not os.environ.get("RESEND_API_KEY")):
+        return None
+    try:
+        EmailCrypto(key)
+    except EmailKeyError as e:
+        log.error("email features are off: %s", e)  # what's wrong with it, never the value
+        return None
+    return key
+
+
 def from_env() -> Auth:
     """Real sign-in, or the local stub where it was asked for (missing_secrets has refused anything else)."""
     if local_stub():
@@ -236,6 +265,7 @@ def from_env() -> Auth:
         os.environ.get("AUTH_PEPPER", ""),
         os.environ.get("SESSION_SECRET", ""),
         os.environ.get("OWNER_SETUP_CODE"),
+        email_key=email_key(),
     )
     insecure = os.environ.get("COFFEEDATA_INSECURE_COOKIES") == "1" and not hosted()
     return Sessions(accounts, secure=not insecure)

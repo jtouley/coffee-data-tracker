@@ -25,7 +25,12 @@ provider "google" {
 
 locals {
   # The app's secrets, mounted as environment variables. Values are never in Terraform or its state.
-  secrets = ["HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE"]
+  # The email secrets join only once the owner turns email on (var.email): until then an apply changes nothing, and
+  # the app runs with its email features hidden (docs/app/RUNNING.md, "Email").
+  secrets = concat(
+    ["HF_TOKEN", "ANTHROPIC_API_KEY", "AUTH_PEPPER", "SESSION_SECRET", "OWNER_SETUP_CODE"],
+    var.email ? ["EMAIL_KEY", "RESEND_API_KEY"] : [],
+  )
   image   = "${var.region}-docker.pkg.dev/${var.project_id}/${var.service}/app"
 }
 

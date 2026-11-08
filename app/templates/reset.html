@@ -5,7 +5,7 @@
   <div class="top"><a class="back" href="/signin">‹ Sign in</a></div>
   {{ in_app_banner(in_app) }}
   <h1 class="serif title mt8">Reset your password</h1>
-  <p class="body">Ask the person who invited you for a reset link. It works once, and signs you out everywhere else.</p>
+  <p class="body">{% if email_on %}Use the link from your email, or ask the person who invited you for a reset link.{% else %}Ask the person who invited you for a reset link.{% endif %} It works once, and signs you out everywhere else.</p>
   <form id="reset" class="fill" data-api="/api/reset" data-busy="Setting password…" data-done="Password set" novalidate>
     <label class="flabel" for="code">Reset code</label>
     <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
@@ -16,6 +16,7 @@
     <div class="dock">
       <button class="btn primary" type="submit">Set password</button>
       {{ status_line() }}
+      {% if email_on %}<a class="btn text" href="/forgot">Need a new link? Ask for one by email</a>{% endif %}
     </div>
   </form>
   {{ rules_json() }}

@@ -59,8 +59,8 @@ it, in `src/terraform/` (the original GCP setup's place and style):
 - the Cloud Run service: scales to zero, at most **one** instance, 1 GiB, CPU only during requests, startup CPU
   boost, up to 250 requests at once, a 120 s request timeout, and a startup probe that allows about two minutes.
   One instance because shots, accounts, the write lock and the sign-in limits live in memory;
-- Secret Manager secrets for the five app secrets, mounted as environment variables, readable only by the
-  service's own runtime account;
+- Secret Manager secrets for the five app secrets (seven once email is on, below), mounted as environment variables,
+  readable only by the service's own runtime account;
 - Workload Identity Federation, so GitHub Actions on `main` can deploy without a JSON key;
 - the domain mapping for `app.registry.coffee`;
 - a $20 monthly budget alert, an alert on any ERROR log line or 5xx, and an uptime check on `/health` every
@@ -133,6 +133,8 @@ Nothing here was created for you. Once, in this order:
 | `AUTH_PEPPER` | 16+ random characters mixed into every password hash. Changing it breaks every password |
 | `SESSION_SECRET` | 32+ random characters that sign the cookie. Changing it signs everyone out |
 | `OWNER_SETUP_CODE` | Creates the owner's account, or resets the owner's password on the reset screen. Each value works once; set a new one to use it again. It needs a value for the service to start, even once the owner exists |
+| `EMAIL_KEY` | Email only (`email = true`). 32 random bytes, base64 (`openssl rand -base64 32`). Seals members' email addresses and keys their lookup hash. Losing it makes every stored email unreadable; rotate it with `app.rekey` (Email, below), never by just replacing it. Missing or malformed: the email features are hidden and the app still starts |
+| `RESEND_API_KEY` | Email only. A Resend API key with "Sending access" to the sending domain only. Without it, on Cloud Run, the email features are hidden |
 
 `python -c "import secrets; print(secrets.token_urlsafe(32))"` makes a good random string. Until `AUTH_PEPPER`,
 `SESSION_SECRET` and `HF_TOKEN` are set, every page returns 503 and names the missing secrets, never their values.
@@ -219,8 +221,130 @@ The privacy policy promises deletion within 30 days of a request.
 It removes every version of that person's shots, bags, equipment, photos, account and invites, and rewrites the
 private exports that carry their rows (`marts/fct_shot.parquet`, `marts/mart_bag.parquet`) without them, so the app
 can't load them back when it starts: one commit per dataset. It refuses the owner's own account, and an account that
-isn't turned off (`--force` skips that check when the app isn't running). The datasets' version history still holds
-the old commits, as the policy says.
+isn't turned off (`--force` skips that check when the app isn't running). The main and photo datasets' version
+history still holds the old commits, as the policy says. The users dataset's history is squashed afterwards, so the
+person's email (sealed) goes from its history too.
+
+## Email
+
+Email recovery (docs/app/signup-ux-spec.md §4, §5): members can add an email, confirm it from a link, and reset a
+forgotten password from `/forgot` with their username or email. The app sends three emails, verify, reset and
+password changed, through [Resend](https://resend.com). Until `EMAIL_KEY` and `RESEND_API_KEY` are both set, the
+email features are hidden: no email field, no marketing box, and `/forgot` shows only "ask the person who invited
+you". The app starts either way.
+
+| What | Where | Value |
+|---|---|---|
+| `EMAIL_KEY` secret | Secret Manager, mounted when `email = true` | `openssl rand -base64 32`. Keep a copy offline (a password manager): without it no stored email can be read |
+| `RESEND_API_KEY` secret | Secret Manager, mounted when `email = true` | A Resend key with "Sending access", limited to the sending domain |
+| `email` | `terraform.tfvars` | `true` adds the two secrets, mounts them and adds the "email not sent" alert |
+| `EMAIL_FROM` env var (optional) | Cloud Run | Default `registry.coffee <hello@send.registry.coffee>`; set it only if the Resend domain differs |
+| `SUPPORT_EMAIL` env var (already set) | Cloud Run | The reply-to address of every email |
+| DNS records | the registrar, by hand | Resend's DKIM `TXT`, the SPF `TXT` and `MX` for the sending subdomain, and DMARC (below) |
+
+### Turning email on
+
+1. **Resend.** Make an account and add the domain `send.registry.coffee` (a sending subdomain keeps the root
+   domain's reputation apart). In the domain's settings, turn **off** open tracking and click tracking: the emails
+   carry no pixels and their links go straight to the app.
+2. **DNS**, by hand, like the app's CNAME. Copy each record exactly as Resend shows it:
+   - the DKIM `TXT` record (`resend._domainkey…`);
+   - the SPF `TXT` record and the `MX` record for the bounce subdomain;
+   - DMARC at `_dmarc.registry.coffee`: `TXT` `v=DMARC1; p=none; rua=mailto:<SUPPORT_EMAIL>`. Read the reports for
+     two weeks, then raise it to `p=quarantine`. Gmail asks every sender for SPF or DKIM, and bulk senders for
+     DMARC too.
+
+   Wait until Resend shows the domain as verified.
+3. **The key.** In Resend, API Keys → Create: permission "Sending access", domain `send.registry.coffee`.
+4. **Terraform, in two parts.** The service reads every secret at version `latest`, so the secrets need values
+   before the service mounts them (the same reason as the first apply, above). Set `email = true` in
+   `terraform.tfvars`, then:
+
+   ```bash
+   terraform apply -target='google_secret_manager_secret.app["EMAIL_KEY"]' \
+                   -target='google_secret_manager_secret.app["RESEND_API_KEY"]'
+   openssl rand -base64 32 | tr -d '\n' | tee /dev/tty | gcloud secrets versions add EMAIL_KEY --data-file=-   # save it offline
+   gcloud secrets versions add RESEND_API_KEY --data-file=-   # paste the key, then Ctrl-D
+   terraform apply   # mounts both, grants the runtime account access, adds the alert; Cloud Run makes a new revision
+   ```
+
+5. **Check it.** In the app: Setup → Add email, with your own address. The confirm email arrives (check the spam
+   folder too); open its link. Sign out, Forgot your password? → your username: the reset email arrives and its link
+   works once. Resend's Emails log shows each as delivered.
+
+The privacy policy's update (with `LEGAL_UPDATED`) ships in the same deploy as the email field. Every member then
+accepts the new Terms and Privacy Policy once, on `/agree`.
+
+### Sending limits
+
+- **Resend's free tier:** 100 emails a day and 3,000 a month. The app stops at **90 in any 24 hours**
+  (`app/mail.py`, `DAILY_CAP`), counting every kind, and logs "email not sent: the daily limit is reached" past
+  it. The count lives in memory, so a restart starts it again; at this app's size that's a day's grace, not a risk.
+- **Per person:** `/forgot` answers at most 3 requests an hour for one username or one email, and 10 an hour from
+  one IP address. Past them it gives the same reply as for an unknown account and sends nothing. Verify links: 3 an
+  hour per account (Send again, and changing the email).
+- **Links:** a reset link works once, for 30 minutes; a verify link once, for 24 hours. A new one replaces the old.
+
+If the cap is hit by real use, Resend's paid tier ($20 a month for 50,000) lifts it: raise `DAILY_CAP` with it.
+
+### Bounces and complaints (weekly, two minutes)
+
+In Resend's dashboard, Emails, filter on **Bounced** and **Complained** for the last 7 days.
+
+- Resend adds hard-bounced and complaining addresses to its suppression list by itself, so they aren't sent to
+  again.
+- A bounced verify email is usually a typo: the member's Setup row says "not verified yet", and they can fix it
+  there. Nothing to do.
+- Keep complaints under 0.1% of sends (Gmail's line is 0.3%) and hard bounces under 4%. Over that, stop and look at
+  what's being sent before anything else goes.
+- Read the DMARC reports (they go to `SUPPORT_EMAIL`) for anyone sending as the domain who isn't Resend.
+
+The app doesn't receive Resend's webhooks yet. If bounces become routine, add a webhook endpoint that marks the
+contact unverified.
+
+### Rotating keys
+
+- **`RESEND_API_KEY`:** make a new key in Resend (as in step 3), add it as a new version, then redeploy (run the
+  deploy workflow from `main`, or `gcloud run services update registry-coffee --region us-central1` to start a new
+  revision). Once an email goes out, delete the old key in Resend. Do it at once if the key may have leaked.
+- **`EMAIL_KEY`:** never just replace it: every stored email is sealed under it. At a quiet time, from a laptop
+  with `HF_TOKEN` and `COFFEEDATA_USERS` set:
+
+  ```bash
+  export EMAIL_KEY=<current> EMAIL_KEY_NEW=$(openssl rand -base64 32)   # save the new one offline first
+  uv run python -m app.rekey             # re-seals every email under the new key, deletes the old files, squashes history
+  EMAIL_KEY=$EMAIL_KEY_NEW uv run python -m app.rekey --check   # "N of N emails open with this EMAIL_KEY."
+  printf %s "$EMAIL_KEY_NEW" | gcloud secrets versions add EMAIL_KEY --data-file=-
+  gcloud run services update registry-coffee --region us-central1   # restart on the new key at once
+  ```
+
+  Between the first command and the restart, the running app still holds the old key: an email added in that
+  minute would be sealed under it. Run `--check` again after the restart; it should report every email. Verify
+  links already sent keep working.
+
+### When Resend is down or refusing
+
+- **What people see:** nothing breaks. `/forgot` still gives its usual reply, but no email arrives; a new member
+  still joins, without a confirm email. Every unsent email logs "email not sent" (ERROR, with Resend's status
+  code, never the address), and the owner gets the "email not sent" alert, at most one an hour.
+- **What to do:** check Resend's status page and the Emails log. A `429` is Resend's rate limit; any other 4xx is
+  the key (rotate it, above) or the domain (DNS changed, the domain no longer verified); a 5xx or a timeout is
+  Resend itself.
+- **Meanwhile:** the owner makes reset links on the People screen, as before email. Members can press "Send again"
+  in Setup once it's back. Links that weren't sent don't need cleaning up: they expire.
+- **For a long outage:** Postmark is the planned swap (spec §5). A `PostmarkMailer` is one class beside
+  `ResendMailer` in `app/mail.py`, with its own key and DNS records.
+- **To turn email off:** remove the `RESEND_API_KEY` secret's mount (`email = false` and apply), and the features
+  hide again. Stored emails stay sealed and come back when it's on again.
+
+### Members' emails
+
+- Stored only sealed (AES-256-GCM, `app/contacts.py`), in the users dataset's `contacts` table, with a keyed hash
+  for lookup. Nobody reading the dataset sees an address. The app shows a member their own email, and the owner
+  every member's, on the People screen.
+- Removing or changing an email, and `delete-user`, delete every file of the record in one commit, then squash the
+  users dataset's history (`HfApi.super_squash_history`), so no old revision holds it.
+- Logs never carry an address or a link: only which email it was and the user id.
 
 ## Using it on the phone
 

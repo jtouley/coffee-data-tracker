@@ -23,6 +23,8 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
 
     users/<user_id>__<time>.parquet                       one file per sign-up or account change
     invites/<invite_id>__<time>.parquet                   one file per invite or reset code (or its use)
+    consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
+    contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -471,13 +473,31 @@ SCHEMAS["consents"] = pa.schema(
         ("terms_version", pa.string()),  # the Terms' "Last updated" date (site.LEGAL_UPDATED)
         ("privacy_version", pa.string()),  # the Privacy Policy's
         ("terms_at", pa.timestamp("s", tz="UTC")),
-        ("source", pa.string()),  # signup or reaccept
+        ("source", pa.string()),  # signup, reaccept or settings
+        # Marketing email (spec §7.1): the member's choice, when it was made and the Privacy Policy version they saw.
+        # Null where it was never offered (accounts from before it, owner setup, the app without email).
+        ("marketing", pa.bool_()),
+        ("marketing_at", pa.timestamp("s", tz="UTC")),
+        ("marketing_version", pa.string()),
+    ]
+)
+# Each account's email, sealed (app/contacts.py): a keyed hash to find it by and the address encrypted to the app,
+# never the address itself. One file per change, latest wins; removing or changing it deletes every file.
+SCHEMAS["contacts"] = pa.schema(
+    [
+        ("user_id", pa.string()),
+        ("logged_at", pa.timestamp("s", tz="UTC")),
+        ("email_hmac", pa.string()),  # HMAC-SHA256 under a key derived from EMAIL_KEY
+        ("email_enc", pa.string()),  # AES-256-GCM, the user id as associated data
+        ("verified_at", pa.timestamp("s", tz="UTC")),
+        ("verify_sha256", pa.string()),  # the open verify link's token, hashed
+        ("verify_expires", pa.timestamp("s", tz="UTC")),
     ]
 )
 
 # Tables that live in the photo dataset or the users dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
-USER_TABLES = ("users", "invites", "consents")
+USER_TABLES = ("users", "invites", "consents", "contacts")
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -502,6 +522,7 @@ GLOBS = {
     "users": "users/*.parquet",
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
+    "contacts": "contacts/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -528,6 +549,7 @@ SCHEMA_FILES = {
     "users": "users/user_id=schema.parquet",
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
+    "contacts": "contacts/user_id=schema.parquet",
 }
 LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
 
@@ -819,7 +841,42 @@ class Lake:
         con.execute(f"COPY ({sql}) TO '{path}' (FORMAT parquet, COMPRESSION zstd)")
         return path
 
-    def publish(self, message: str, attempts: int = 5, schemas: bool = False) -> int:
+    def record_files(self, table: str, key: str) -> list[str]:
+        """Every file (path within the dataset) of one record of a per-record table (`<key>__<time>.parquet`):
+        staged here and, for a remote lake, already in the dataset."""
+        prefix = GLOBS[table].split("/")[0]
+        out = {f"{prefix}/{p.name}" for p in (self.root / prefix).glob(f"{key}__*.parquet")}
+        if self.remote:
+            from huggingface_hub import HfApi
+
+            api = HfApi(token=os.environ.get("HF_TOKEN"))
+            try:
+                tree = list(api.list_repo_tree(self._repo_id(), path_in_repo=prefix, repo_type="dataset"))
+            except Exception as e:  # noqa: BLE001 - a folder the dataset doesn't have yet
+                if "404" not in str(e) and "not found" not in str(e).lower():
+                    raise
+                tree = []
+            out |= {f.path for f in tree if f.path.rsplit("/", 1)[-1].startswith(f"{key}__")}
+        return sorted(out)
+
+    def _repo_id(self) -> str:
+        return self.url.removeprefix("hf://datasets/").split("@")[0]
+
+    def squash(self, message: str) -> None:
+        """Drop the dataset's version history (one commit holding what's there now), so files deleted from it can't
+        be read from an old revision. For the small private users dataset only."""
+        if not self.remote:
+            return
+        from huggingface_hub import HfApi
+
+        with self._publishing:
+            HfApi(token=os.environ.get("HF_TOKEN")).super_squash_history(
+                self._repo_id(), repo_type="dataset", commit_message=message
+            )
+
+    def publish(
+        self, message: str, attempts: int = 5, schemas: bool = False, delete: tuple[str, ...] | list[str] = ()
+    ) -> int:
         """Upload staged files to the remote lake in one commit, then clear the staging area.
 
         A file already in the dataset is never replaced (except the derived marts/). Staged paths carry a batch
@@ -834,13 +891,22 @@ class Lake:
         reader of the dataset alone sees every column. Like ensure_schemas, that compares column names, so a
         process running older code (fewer columns) never replaces a newer schema file. This is checked once per
         process, or every time with `schemas`. One publish runs at a time per lake, so writers can keep staging files meanwhile.
+
+        `delete` names files (paths within the dataset) to remove in the same commit: an email changed or removed
+        goes in one step with whatever replaces it. Their staged copies go too. In a local lake they're simply
+        removed.
         """
+        for rel in delete:
+            path = self.root / rel
+            if not path.resolve().is_relative_to(self.root.resolve()):
+                raise ValueError(f"path escapes the lake: {rel}")
+            path.unlink(missing_ok=True)
         if not self.remote:
             return 0
         with self._publishing:
-            return self._publish(message, attempts, schemas)
+            return self._publish(message, attempts, schemas, tuple(delete))
 
-    def _publish(self, message: str, attempts: int, schemas: bool) -> int:
+    def _publish(self, message: str, attempts: int, schemas: bool, delete: tuple[str, ...] = ()) -> int:
         schema_paths = {SCHEMA_FILES[t] for t in self.tables}
         check_schemas = schemas or not self._schemas_checked
         files = [
@@ -848,9 +914,9 @@ class Lake:
             for p in self.staged_files()
             if check_schemas or p.relative_to(self.root).as_posix() not in schema_paths
         ]
-        if not files:
+        if not files and not delete:
             return 0  # nothing new: no API calls
-        from huggingface_hub import CommitOperationAdd, HfApi
+        from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
 
         repo_id = self.url.removeprefix("hf://datasets/").split("@")[0]
         api = HfApi(token=os.environ.get("HF_TOKEN"))
@@ -865,7 +931,7 @@ class Lake:
                 }
                 # A job sharing this staging folder (the confirmation run's concurrent arms) may have sent and
                 # removed a file since it was listed: it is in the dataset now, or goes with that job's commit.
-                ops = [
+                ops: list = [
                     CommitOperationAdd(path_in_repo=rel, path_or_fileobj=str(p))
                     for p, rel in zip(files, rels, strict=True)
                     if p.exists()
@@ -875,6 +941,9 @@ class Lake:
                         or (rel in schema_paths and _stale_schema(api, repo_id, rel, existing[rel], p))
                     )
                 ]
+                if delete:
+                    there = {f.path for f in api.get_paths_info(repo_id, list(delete), repo_type="dataset")}
+                    ops += [CommitOperationDelete(path_in_repo=rel) for rel in delete if rel in there]
                 if ops:
                     api.create_commit(
                         repo_id=repo_id, repo_type="dataset", operations=ops, commit_message=message

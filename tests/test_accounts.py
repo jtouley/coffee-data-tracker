@@ -270,6 +270,7 @@ def test_two_real_accounts_cant_see_each_others_shots(lake, users):
         headers=W,
     )
     a._write(Account("u2", "maria", a._hash(PW)))
+    a.accept("u2")  # an account with no record accepted the terms of its day, and these are newer
     other = TestClient(app, base_url="https://testserver", follow_redirects=False)
     other.post("/api/signin", json={"username": "maria", "password": PW}, headers=W)
     maria = W | {"X-Expected-User": "u2"}
@@ -602,4 +603,4 @@ def test_each_dataset_publishes_only_its_own_files(tmp_path):
     main.write("shots", "shots/s1__20261027T000000.parquet", [{"shot_id": "s1"}])
     top = lambda lake: {p.relative_to(shared).parts[0] for p in lake.staged_files()}  # noqa: E731
     assert "users" not in top(main) and "shots" in top(main)
-    assert top(users) <= {"users", "invites", "consents"}
+    assert top(users) <= {"users", "invites", "consents", "contacts"}

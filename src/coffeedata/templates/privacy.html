@@ -4,7 +4,7 @@
 {% block body %}
 <div class="summary">
   <p><strong>In short:</strong> the public site doesn't collect anything about you. The invite-only app keeps what you log
-    so it can work. Nothing is sold, there are no ads, and there are no third-party trackers. You can ask for a copy of
+    so it can work. Your personal data isn't sold, there are no ads, and there are no third-party trackers. You can ask for a copy of
     your data, or for it to be deleted, at <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
 </div>
 
@@ -31,6 +31,10 @@
 <p>The app is invite-only. When you use it, we keep:</p>
 <ul>
   <li><strong>Your account:</strong> your username and a hash of your password. We never store the password itself.</li>
+  <li><strong>Your email address, if you add one:</strong> used for account recovery and, if you tick the box, for
+    marketing. It's stored encrypted, so only the app can read it, and it's never used to sign in. Besides you, only the
+    operator can see it, to help you back into your account.</li>
+  <li><strong>Your choices:</strong> whether you agreed to the Terms and opted into marketing email, and when.</li>
   <li><strong>What you log:</strong> shots, bags, equipment and any notes you write.</li>
   <li><strong>Bag photos you upload.</strong> Location and other EXIF metadata is removed before the photo is stored.</li>
   <li><strong>Technical data:</strong>
@@ -41,12 +45,14 @@
         requested and the response status. They're kept in Google Cloud Logging for about 30 days by default.</li>
     </ul>
   </li>
-  <li><strong>Cookies:</strong> four, none used for tracking or advertising:
+  <li><strong>Cookies:</strong> five, none used for tracking or advertising:
     <ul>
       <li><code>session</code> keeps you signed in;</li>
       <li><code>theme</code> remembers light, dark or automatic;</li>
       <li><code>hand</code> remembers which side the &minus; and + buttons go on;</li>
-      <li><code>tz</code> holds your phone's time zone, so times show in your local time.</li>
+      <li><code>tz</code> holds your phone's time zone, so times show in your local time;</li>
+      <li><code>nudge-email</code> remembers that you chose "Not now" when the app suggested adding an email, for 90
+        days.</li>
     </ul>
   </li>
 </ul>
@@ -54,17 +60,34 @@
 <h2>Why we use it</h2>
 <ul>
   <li>To run the app: show your history, suggest your next shot, and match bags to the catalog.</li>
+  <li>To recommend coffees, from the bags, ratings and shots you log, matched against the public catalog. This happens
+    inside the app.</li>
+  <li>To email you about your account, if you add an email: a link to confirm it, a link to reset your password when you
+    ask for one, and a notice when your password changes.</li>
+  <li>To email you occasional news about new coffees and features, if you tick that box when you sign up or in Setup.
+    You can untick it in Setup at any time.</li>
   <li>To keep it secure and prevent abuse, for example with rate limits.</li>
   <li>To find and fix problems.</li>
 </ul>
 <p>We may also use <strong>aggregated or de-identified</strong> data, which can't reasonably identify you, to run and
   improve the service and to publish statistics about it. For example: "washed Ethiopians are most often brewed at
   1:2.2".</p>
+{#- PENDING OWNER WORDING: aggregated insights provided to roasters (owner decision 2026-11-06; spec §7.3 and task 0).
+    This draft is a placeholder, not approved text. Replace the whole <div> below with the owner's wording, after
+    counsel's review, before this page is deployed. tests/test_email.py checks that the marker is still here, so
+    removing it is a deliberate step. -#}
+<div class="pending" data-pending="owner-wording">
+  <p><strong>[Pending the owner's wording]</strong> We may also provide <strong>aggregated insights</strong> to coffee
+    roasters, such as how often a coffee or an origin is brewed and how it's rated. Only counts, medians and
+    distributions leave the app, never rows, usernames, email addresses, photos or notes, and only for groups of at
+    least 11 people.</p>
+</div>
 
 <h2>Who processes it</h2>
 <p>We use these services to run registry.coffee. Each receives only what it needs for its part:</p>
 <ul>
   <li><strong>Hugging Face:</strong> stores the app's data and the public dataset.</li>
+  <li><strong>Resend:</strong> sends the app's emails.</li>
   <li><strong>Google Cloud:</strong> hosts the app (Cloud Run, in the United States) and keeps its logs.</li>
   <li><strong>Anthropic:</strong> reads the label on a bag photo, and only when you upload one, to fill in the coffee's
     details.</li>
@@ -84,9 +107,12 @@
   overwritten. So when you ask for deletion, we remove your records within <strong>30 days</strong>. Copies may remain
   in backups or in the data store's version history for a limited time afterwards, until they're overwritten or
   expire.</p>
+<p>Your email address is different: when you remove or change it, or your account is deleted, every copy of it is
+  deleted from the data store, including its version history.</p>
 
 <h2>Your choices and rights</h2>
-<p>Email <a href="mailto:{{ contact }}">{{ contact }}</a> from the address on your account (or tell us your username) to:</p>
+<p>Email <a href="mailto:{{ contact }}">{{ contact }}</a> and tell us your username (writing from the email address on
+  your account, if you added one, helps us confirm it's you) to:</p>
 <ul>
   <li>get a copy of your data</li>
   <li>correct it</li>
@@ -100,6 +126,7 @@
 <ul>
   <li>HTTPS everywhere</li>
   <li>password hashing</li>
+  <li>email addresses encrypted</li>
   <li>secrets kept out of the code</li>
   <li>access limited to what each part needs</li>
 </ul>

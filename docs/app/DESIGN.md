@@ -400,6 +400,27 @@ Errors say what happened and what to do next, and keep what was typed:
 | Reading failed | The label was too dark or out of focus. Retake it with the label facing the light, or type the coffee. |
 | Daily read limit | You’ve used today’s 10 bag reads. Type the coffee, or try again tomorrow. |
 | Offline save | Saved on this phone. It’ll sync when you’re back online. |
+| Forgot, sent (or no such account) | If that account has a verified email, we’ve sent a link to it. It works for 30 minutes. Check your spam folder if it isn’t there in a few minutes. |
+| Forgot, no verified email (owner's choice; see the note below) | This account has no verified email, so we can’t send a link. Ask the person who invited you for a reset link. |
+| Forgot, empty | Enter your username or email. |
+| Email, not an address | That doesn’t look like an email address. Check for typos. |
+| Verify link, expired or used | That link has expired or was already used. Send a new one from Setup. |
+| Verify link, done | Email verified. You can now reset your password by email. |
+| Send again, over the limit | You’ve asked for 3 links in the last hour. Try again in an hour. |
+| Email removed (member) | Email removed. The owner can still make you a reset link. |
+| Reset by email, done | Password changed. Sign in with the new one. |
+
+Email recovery's copy (docs/app/signup-ux-spec.md §4, §5) keeps one vocabulary: a **reset link** (never "code" in
+the email path), **Email** as the field label, **confirm** for the action in an email and **verified** / **not
+verified yet** for the status in Setup and on the People screen. Prompts to add an email ask once and offer a way
+out: "Add an email so you can reset your password yourself?" with Add email / Skip on sign-up, and the same
+sentence with Add email / Not now on Today (Not now lasts 90 days). The marketing box names what ticking it does:
+"Send me occasional emails about new coffees and features".
+
+`/forgot` takes a username or an email. Its reply is the same for an account with a verified email and for no
+account at all; only an account with no verified email is told so, on the field, so the person knows to ask the
+owner. That tells whoever asks that the account exists, which OWASP's uniform reply avoids; the owner chose it for an
+invite-only app, and the per-account and per-address limits (3 and 10 an hour) come first and hide it past them.
 
 The share text for an invite: "Log your espresso shots with me on registry.coffee: app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE
 (works once, until November 3)."

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import nav, chevron, legal, new_password, rules_json, status_line %}
+{% from "_macros.html" import nav, chevron, legal, new_password, rules_json, status_line, email_field %}
 {% block title %}Setup · registry.coffee{% endblock %}
 {% macro describe(e) -%}
   {%- if e.kind == "grinder" %}{{ g(e.scale_min) }} to {{ g(e.scale_max) }} in steps of {{ g(e.scale_step) }}, {{ "lower" if e.finer_is_lower else "higher" }} is finer
@@ -34,6 +34,24 @@
   <div class="rows">
     <div class="gear"><div class="n">{{ me.username }}<em>{{ me.role }}</em></div><div class="d">{% if auth_name == "local" %}Local development: no sign-in{% else %}Signed in on this phone{% endif %}</div></div>
     {% if auth_name != "local" %}
+    {% if email_on %}
+    <div class="gear" id="email"><div class="n">Email</div><div class="d addr" data-email-status>{% if email %}{{ email.address }} · {{ "verified" if email.verified else "not verified yet" }}{% else %}No email{% endif %}</div></div>
+    <details class="disclose" data-email-edit><summary class="link"><span>{{ "Change email" if email else "Add email" }}</span>{{ chevron() }}</summary>
+      <form id="email-form" class="mt8" data-api="/api/email" data-busy="Sending link…" novalidate>
+        {{ email_field(id="new-email", required=True, hint=("We’ll send a link to the new address. Until you confirm it, you can’t reset your password by email." if email else "For resetting your password yourself. We’ll send a link to confirm it; it works for 24 hours.")) }}
+        <div class="hint" data-hint role="alert"></div>
+        <button class="btn secondary mt8" type="submit">Send link</button>
+        {{ status_line() }}
+      </form>
+    </details>
+    {% if email and not email.verified %}<button class="link" type="button" data-email-resend>Send again<span class="meta">The link in your inbox works for 24 hours</span></button>{% endif %}
+    {% if email %}<button class="link danger" type="button" data-email-remove data-confirm="Tap again to remove your email" data-done="{{ 'Email removed.' if me.role == 'owner' else 'Email removed. The owner can still make you a reset link.' }}">Remove email</button>{% endif %}
+    <div class="agree setting">
+      <input type="checkbox" id="marketing" data-marketing aria-describedby="marketing-h"{% if marketing %} checked{% endif %}>
+      <div><label for="marketing">Send me occasional emails about new coffees and features</label>
+      <p class="fhint" id="marketing-h" data-marketing-status role="status">{% if not (email and email.verified) %}Sent only to a verified email.{% endif %}</p></div>
+    </div>
+    {% endif %}
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
     <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
       <form id="password-form" class="mt8" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>

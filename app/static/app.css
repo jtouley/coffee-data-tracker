@@ -426,3 +426,18 @@ details.disclose[open] [data-more-summary] { display: none; }
 .invite-group > .gear:not(:last-child) { border-bottom: 0; padding-bottom: 0; }
 .invite-group > .link { min-height: 48px; border-bottom: 0; padding-left: 16px; }
 .invite-group:has(> .link) { border-bottom: 1px solid var(--rule); }
+/* Email (docs/app/signup-ux-spec.md §4, §5): the two choices under a notice (Add email / Skip, Add email / Not now)
+   side by side, start-aligned like the in-app banner's button; an address breaks anywhere rather than overflow. */
+.notice.stack .pair { display: flex; gap: 24px; margin-bottom: -8px; }
+.notice.stack .pair .btn { width: auto; min-height: 48px; margin: 0; }
+.dock .notice.nudge { margin: 0 0 8px; text-align: left; }
+.notice.stack p:focus { outline: none; }
+.addr { overflow-wrap: anywhere; }
+/* The marketing box in Setup: a row like the others, the line under its label saying what was saved */
+.agree.setting { padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.agree.setting .fhint { margin-top: 4px; }
+.agree.setting .fhint:empty { display: none; }
+/* Headings that take focus after a change (verify's outcome, Today's heading after Not now) are read, not acted on */
+[data-verify-title]:focus, main h1[tabindex="-1"]:focus { outline: none; }
+/* A link inside a sentence (verify's "Send a new one from Setup") looks like one: accent and underlined */
+[data-verify-status] a { color: var(--accent); font-weight: 500; text-decoration: underline; text-underline-offset: 2px; }
