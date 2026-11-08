@@ -46,20 +46,17 @@ def _probe_args(**kw) -> argparse.Namespace:
 # --- probe: the Nov 2 run had nothing to probe, and said nothing -----------------------------------------------------
 
 
-def test_the_seed_was_probed_2026_10_26_so_no_roaster_is_stale_until_2026_11_30():
-    """Confirmed cause: every seed roaster's last_probed is 2026-10-26, so `--stale-days 28` selects none of them
-    on 2026-11-02 (cutoff 2026-10-05). With discovery never run, the registry added nobody either: the probe had
-    nothing to do, wrote nothing and exited 0."""
-    import csv
-
-    with (ROOT / "config/roasters.csv").open() as f:
-        probed = {r["last_probed"] for r in csv.DictReader(f)}
-    assert max(probed) >= "2026-10-26" and min(probed) == "2026-10-26"
+def test_a_roaster_probed_exactly_stale_days_ago_waits_a_week():
+    """Confirmed cause of the Nov 2 run doing nothing: the seed's roasters were probed 2026-10-26 (a few 2026-11-02),
+    so `--stale-days 28` selected none of them until 2026-11-30. The cutoff is strict: a roaster is stale when it was
+    probed *more than* 28 days before, so one probed exactly 28 days earlier waits for the next week. Fixed states,
+    so a seed refresh doesn't break this."""
     states = [types.SimpleNamespace(status="pending", last_probed=d, roaster=types.SimpleNamespace(roaster_id=d))
-              for d in sorted(probed)]  # fmt: skip
+              for d in ("2026-10-26", "2026-11-02")]  # fmt: skip
     for day in ("2026-11-02", "2026-11-09", "2026-11-16", "2026-11-23"):
-        assert cli.probe_todo(states, day, 28) == []
+        assert cli.probe_todo(states, day, 28) == []  # Nov 23 is exactly 28 days after Oct 26
     assert cli.probe_todo(states, "2026-11-30", 28) == ["2026-10-26"]
+    assert cli.probe_todo(states, "2026-12-07", 28) == ["2026-10-26", "2026-11-02"]
 
 
 def test_a_probe_with_nothing_to_do_still_records_that_it_ran(lake, monkeypatch):
@@ -208,7 +205,8 @@ def test_an_overture_scan_that_finds_nothing_fails(lake, monkeypatch):
     assert not list((lake.root / "registry").glob("source=overture/*.parquet"))
 
 
-def test_osm_records_the_states_overpass_did_not_answer(lake, monkeypatch):
+def test_osm_records_the_states_overpass_did_not_answer(lake, monkeypatch, caplog):
+    caplog.set_level("WARNING")
     monkeypatch.setattr(discover, "_overpass", lambda client, st, stop=None: None if st == "CA" else [
         {"tags": {"craft": "coffee_roaster", "website": f"https://{st.lower()}roast.example/", "name": st}}
     ])  # fmt: skip
@@ -216,6 +214,7 @@ def test_osm_records_the_states_overpass_did_not_answer(lake, monkeypatch):
     assert (out["recorded"], out["failed_states"]) == (1, ["CA"])
     (end,) = _jobs(lake, "discover")
     assert (end["status"], end["ok"], end["errors"]) == ("done", 1, 1)
+    assert "Overpass didn't answer 1 states: CA" in caplog.text  # a partial outage is logged at WARNING
 
 
 def test_overpass_is_asked_again_when_busy_and_a_timed_out_query_is_not_an_answer():
@@ -388,6 +387,33 @@ def test_a_probe_retry_keeps_the_first_attempts_window(lake, monkeypatch):
     assert 0 < seen["deadline_s"] <= 10 * 60 + 5  # what's left of the first attempt's 100 minutes
 
 
+def test_a_probe_retry_does_not_take_its_own_setup_off_the_window_twice(lake, monkeypatch):
+    """The retry's window is measured from the first attempt's start up to now; this attempt's setup (5 minutes
+    here) is inside that already. Before, it was subtracted again and the retry stopped early by the setup time."""
+    monkeypatch.setenv("CLOUD_RUN_EXECUTION", "probe-x2")
+    monkeypatch.setenv("CLOUD_RUN_TASK_ATTEMPT", "1")
+    first = {"run_date": "2026-11-02", "job": "probe", "connector": None, "attempt_id": "a0",
+             "started_at": control.now().replace(tzinfo=UTC) - timedelta(minutes=90),
+             "status": "running", "detail": {"execution": "probe-x2", "task_attempt": 0}}  # fmt: skip
+    control.write(lake, first)
+    clock = iter([1000.0])  # t0, then every later reading is 5 minutes on
+    monkeypatch.setattr(cli, "time", types.SimpleNamespace(monotonic=lambda: next(clock, 1300.0)))
+    seen = {}
+    monkeypatch.setattr(discover, "probe", lambda todo, **kw: seen.update(kw) or [])
+    cli.cmd_probe(_probe_args(run_date=control.now().date().isoformat(), deadline_min=100))
+    assert seen["deadline_s"] == pytest.approx(10 * 60, abs=5)  # not 5 minutes
+
+
+def test_a_first_probe_attempt_takes_its_setup_off_the_deadline(lake, monkeypatch):
+    monkeypatch.delenv("CLOUD_RUN_TASK_ATTEMPT", raising=False)
+    clock = iter([1000.0])
+    monkeypatch.setattr(cli, "time", types.SimpleNamespace(monotonic=lambda: next(clock, 1300.0)))
+    seen = {}
+    monkeypatch.setattr(discover, "probe", lambda todo, **kw: seen.update(kw) or [])
+    cli.cmd_probe(_probe_args(run_date=control.now().date().isoformat(), deadline_min=100))
+    assert seen["deadline_s"] == pytest.approx(95 * 60)
+
+
 def test_a_failed_batch_write_is_tried_again_and_the_original_error_is_raised(monkeypatch):
     monkeypatch.setattr(discover, "probe_one", lambda client, d: OK)
     written: list[list[str]] = []
@@ -444,3 +470,48 @@ def test_the_weekly_run_discovers_osm_first_under_its_own_week(lake, monkeypatch
     cli.cmd_weekly(argparse.Namespace(run_date="2026-11-04", discover=False, sample=None, enrich_limit=None,
                                       db="build/coffee.duckdb", out="build/site", accept_volume_change=False))  # fmt: skip
     assert calls == [("osm", "2026-11-02"), ("overture", "2026-11-02")]
+
+
+def test_a_weekly_rerun_asks_again_a_source_whose_discover_failed(lake, monkeypatch):
+    """An OSM outage still records the states Overpass answered, so the registry has OSM rows for the month; before,
+    a re-run of the week took those as "done for the month" and skipped OSM without --discover."""
+    calls = []
+    for name in ("cmd_probe", "cmd_ingest", "cmd_enrich", "cmd_classify", "cmd_build", "cmd_publish",
+                 "cmd_export_public", "cmd_load_snowflake", "cmd_site"):  # fmt: skip
+        monkeypatch.setattr(cli, name, lambda a: True)
+    monkeypatch.delenv("PUBLIC_EXPORT_URL", raising=False)
+    monkeypatch.delenv("SNOWFLAKE_ACCOUNT", raising=False)
+    # The outage's leftovers: what Overpass answered is in the registry, and the source's end row says failed.
+    lake.write("registry", "registry/source=osm/2026-11-04-b1.parquet", [_registry_row("alroast.example")])
+    job = control.start(lake, "discover", "2026-11-02", "osm")
+    control.finish(lake, job, "failed", ok=1, errors=51)
+    lake.write("registry", "registry/source=overture/latest-b2.parquet",
+               [_registry_row("ovroast.example") | {"source": "overture"}])  # fmt: skip
+    monkeypatch.setattr(cli, "Lake", lambda: lake)
+    monkeypatch.setattr(cli, "discover_source", lambda lake, src, week=None: calls.append(src))
+    args = argparse.Namespace(run_date="2026-11-04", discover=False, sample=None, enrich_limit=None,
+                              db="build/coffee.duckdb", out="build/site", accept_volume_change=False)  # fmt: skip
+    cli.cmd_weekly(args)
+    assert calls == ["osm"]  # Overture ended done (no control row says otherwise): once a month
+
+
+def test_the_merges_rollup_skips_a_file_another_jobs_publish_removed(lake, monkeypatch):
+    """When the 1st is a Tuesday, discover (03:17) and the merge (03:17) share the week's job_manifests partition in
+    staging. Discover's publish uploads and removes its row files; one that goes between the merge's glob and its
+    read or unlink made rollup raise, after the merge's `done` row and before its publish."""
+    for job in ("merge", "discover", "probe"):
+        control.finish(lake, control.start(lake, job, "2026-11-30"), "done")
+    d = lake.root / "job_manifests" / "run_date=2026-11-30"
+    files = sorted(d.glob("attempt=*.parquet"))
+    assert len(files) == 6
+    real = pq.read_table
+
+    def published_meanwhile(f, *a, **kw):
+        if f == files[0]:
+            files[1].unlink()  # discover's publish sent and removed it: its rows are in the dataset
+        return real(f, *a, **kw)
+
+    monkeypatch.setattr(control.pq, "read_table", published_meanwhile)
+    assert control.rollup(lake, "2026-11-30") == 5  # the five rows it could read, folded into one file
+    (left,) = d.glob("attempt=*.parquet")
+    assert left.name.startswith("attempt=rollup-")

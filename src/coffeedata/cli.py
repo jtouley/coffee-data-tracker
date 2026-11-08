@@ -88,7 +88,9 @@ def _error(e: BaseException) -> str:
 
 
 def _known_roasters(lake: Lake) -> set[str]:
-    """Every roaster_id in the seed or the lake's registry, before this run's rows: what "new" is measured against."""
+    """Every roaster_id in the seed or the lake's registry, before this source's rows: what "new" is measured against.
+    A source run after another in the same execution (Overture after OSM) counts the first one's roasters as known,
+    so the run's new roasters are the sum of `new` over its sources, not one source's figure."""
     from . import registry
 
     con = lake.connect()
@@ -168,10 +170,13 @@ def discover_source(
         errors=len(failed),
         detail=started | out | ({"error": outage} if outage else {}),
     )
-    if (
-        outage
-    ):  # what Overpass did answer is recorded; the job fails so the owner hears of it and runs it again
+    # What Overpass did answer is recorded; the job fails so the owner hears of it and runs it again.
+    if outage:
         raise RuntimeError(outage)
+    if failed:  # a partial outage (half the states or fewer) ends `done`: say which states are missing
+        logging.warning(
+            "discover %s: Overpass didn't answer %d states: %s", source, len(failed), ", ".join(failed)
+        )
     print(
         f"{source}: {len(rows)} roasters recorded, {out['new']} new (new ones are picked up by the next probe)"
         + (f"; Overpass didn't answer {', '.join(failed)}" if failed else "")
@@ -203,7 +208,7 @@ def cmd_discover(args: argparse.Namespace) -> None:
 
 
 def probe_todo(states: list, run_date: str, stale_days: int) -> list[str]:
-    """Roasters to probe: not opted out, and never probed or last probed `stale_days` or more before `run_date`;
+    """Roasters to probe: not opted out, and never probed or last probed more than `stale_days` before `run_date`;
     never-probed ones (new from discovery) first, then the longest unprobed, so a run stopped by its deadline has
     asked the ones that most need it, and the next run carries on with the rest."""
     cutoff = (date.fromisoformat(run_date) - timedelta(days=stale_days)).isoformat()
@@ -240,11 +245,12 @@ def cmd_probe(args: argparse.Namespace) -> None:
             todo = sorted(todo, key=ingest.sample_key)[: args.sample]
         deadline_min = getattr(args, "deadline_min", None)
         left = None
-        if (
-            deadline_min is not None
-        ):  # a Cloud Run retry keeps the first attempt's window (it ends before the crawls)
+        # A Cloud Run retry keeps the first attempt's window (it ends before the crawls). For a retry the window is
+        # already measured up to now, from the first attempt's start, so this attempt's setup isn't taken off again;
+        # a first attempt's window is the full deadline, less the setup since t0.
+        if deadline_min is not None:
             window = connectors._window_left(lake, "probe", None, week, deadline_min)
-            left = max(0.0, 60 * window - (time.monotonic() - t0))
+            left = max(0.0, min(60 * window, 60 * deadline_min - (time.monotonic() - t0)))
         rows = discover.probe(
             todo, workers=args.workers, run_date=args.run_date, deadline_s=left, on_batch=write
         )
@@ -780,8 +786,15 @@ def cmd_weekly(args: argparse.Namespace) -> None:
             )
             .fetchall()
         }
+        from . import control
         from .connectors import week_of
 
+        # A source whose last discover this week ended `failed` (an Overpass outage still records what it answered)
+        # is not done: re-running the week asks it again.
+        last = {
+            r["connector"]: r["status"] for r in control.rows(lake, week_of(run)) if r["job"] == "discover"
+        }
+        done -= {src for src, status in last.items() if status == "failed"}
         for src in DISCOVER_SOURCES:
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it

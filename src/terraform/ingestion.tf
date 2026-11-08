@@ -93,8 +93,8 @@ locals {
   # same reason: they share one static IP (woo_generic), and their 15:17 resume and 21:47 retry slots cover a failed
   # attempt.
   ingest_jobs = {
-    # Discovery reads open datasets (OSM, then Overture), monthly and by hand (the admin's Jobs page, or `gcloud run
-    # jobs execute discover`); probing asks stale roasters' sites which platform they run, weekly before the crawls.
+    # Discovery reads open datasets (OSM, then Overture), monthly and by hand (the Console, or `gcloud run jobs
+    # execute discover`); probing asks stale roasters' sites which platform they run, weekly before the crawls.
     # Each source is recorded and published on its own (`--publish`), so one that fails (Overpass down) or is killed
     # never loses the other's rows; a failed source still fails the execution (exit 1), which emails the owner. The
     # probe writes each batch of results as it goes and stops starting roasters after 100 minutes, before the 09:17
