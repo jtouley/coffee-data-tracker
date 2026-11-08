@@ -486,13 +486,11 @@ def test_a_weekly_rerun_asks_again_a_source_whose_discover_failed(lake, monkeypa
     lake.write("registry", "registry/source=osm/2026-11-01-b1.parquet", [_registry_row("alroast.example")])
     job = control.start(lake, "discover", "2026-10-26", "osm")
     control.finish(lake, job, "failed", ok=1, errors=51)
-    # Overture's attempt was killed after recording: only its start row.
+    # Overture's attempt was killed after recording: only its start row, older than the job's 4 h timeout.
     lake.write("registry", "registry/source=overture/latest-b2.parquet",
                [_registry_row("ovroast.example") | {"source": "overture"}])  # fmt: skip
-    killed = control.start(lake, "discover", "2026-10-26", "overture")
-    control.write(
-        lake, killed | {"attempt_id": "killed", "started_at": killed["started_at"] - timedelta(hours=1)}
-    )
+    control.write(lake, {"run_date": "2026-10-26", "job": "discover", "connector": "overture", "attempt_id": "killed",
+                         "started_at": control.now() - timedelta(hours=5), "status": "running"})  # fmt: skip
     monkeypatch.setattr(cli, "Lake", lambda: lake)
     monkeypatch.setattr(cli, "discover_source", lambda lake, src, week=None: calls.append(src))
     args = argparse.Namespace(run_date="2026-11-04", discover=False, sample=None, enrich_limit=None,
@@ -500,11 +498,20 @@ def test_a_weekly_rerun_asks_again_a_source_whose_discover_failed(lake, monkeypa
     cli.cmd_weekly(args)
     assert calls == ["osm", "overture"]
     # Once each has a done row, the month is done.
-    for src in ("osm", "overture"):
-        control.finish(lake, control.start(lake, "discover", "2026-11-02", src), "done")
+    for src in ("osm", "overture"):  # a second later than the rows above, so they are the latest
+        control.write(lake, {"run_date": "2026-11-02", "job": "discover", "connector": src, "attempt_id": f"ok-{src}",
+                             "started_at": control.now() + timedelta(seconds=1), "status": "done"})  # fmt: skip
     calls.clear()
     cli.cmd_weekly(args)
     assert calls == []
+    # A discover still in progress (started minutes ago, say the Cloud Run job) isn't started again alongside it.
+    later = control.now() + timedelta(seconds=2)
+    control.write(lake, {"run_date": "2026-11-02", "job": "discover", "connector": "osm", "attempt_id": "in-progress",
+                         "started_at": later, "status": "running"})  # fmt: skip
+    control.write(lake, {**control.start(lake, "discover", "2026-11-02", "overture"), "attempt_id": "new-failed",
+                         "started_at": later, "ended_at": later, "status": "failed"})  # fmt: skip
+    cli.cmd_weekly(args)
+    assert calls == ["overture"]  # the failed one is asked again; the running one is left to finish
 
 
 def test_the_merges_rollup_skips_a_file_another_jobs_publish_removed(lake, monkeypatch):

@@ -321,8 +321,9 @@ def test_a_migration_that_failed_partway_is_finished_by_running_it_again(tmp_pat
 
 
 def test_migrate_works_when_another_role_owns_the_share(tmp_path):
-    """The documented setup: COFFEE_LOADER has no IMPORT SHARE, and after a listing ACCOUNTADMIN owns the share.
-    Every view is already in it, and copy grants keeps it there."""
+    """Not the documented setup (admin_setup.sql creates the share as COFFEE_LOADER, and a share's ownership can't be
+    moved; the PR's owner step checks it), but a migration doesn't need the share's owner: every view is already in
+    it, and copy grants keeps it there (as this fake models Snowflake; not checked against a live account)."""
     counts = {t: 1 for t in PUBLIC_TABLES}
     sf = old_snowflake(counts, owner="ACCOUNTADMIN")
     snowflake_load.load(export_dir(tmp_path, counts), sf, migrate=True)

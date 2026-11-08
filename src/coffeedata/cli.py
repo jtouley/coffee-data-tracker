@@ -763,6 +763,9 @@ def cmd_load_snowflake(args: argparse.Namespace) -> None:
     )
 
 
+DISCOVER_TIMEOUT = timedelta(hours=4)  # the discover job's task timeout (src/terraform/ingestion.tf, 14400s)
+
+
 def cmd_weekly(args: argparse.Namespace) -> None:
     """The whole weekly run, in order. Safe to re-run: each step skips what this run already has."""
     from . import verdict
@@ -795,11 +798,22 @@ def cmd_weekly(args: argparse.Namespace) -> None:
         # week's Monday, so the month's start from the week of the 1st (the Cloud Run job's week, when it ran).
         first, last_week = week_of(f"{month}-01"), week_of(run)
         last = {
-            r["connector"]: r["status"]
+            r["connector"]: r
             for r in retry_transient(control.rows, lake)
             if r["job"] == "discover" and first <= r["run_date"].isoformat() <= last_week
         }
-        done -= {src for src, status in last.items() if status in ("failed", "running")}
+
+        def killed(r: dict) -> bool:
+            """A `running` row older than the discover job's task timeout: that attempt died. A younger one may
+            still be running (the Cloud Run job of the 1st), so it isn't started again alongside it."""
+            started = r["started_at"] if r["started_at"].tzinfo else r["started_at"].replace(tzinfo=UTC)
+            return control.now() - started > DISCOVER_TIMEOUT
+
+        done -= {
+            src
+            for src, r in last.items()
+            if r["status"] == "failed" or (r["status"] == "running" and killed(r))
+        }
         for src in DISCOVER_SOURCES:
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it

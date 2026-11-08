@@ -85,7 +85,7 @@ def view_column(name: str) -> str:
     if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_$]*", name) or upper in RESERVED:
         raise RuntimeError(
             f"{name} can't be a share view column that consumers write without quotes (Snowflake would need "
-            f'"{upper}"): rename it in the public contract ({CONTRACT.name})'
+            f'"{upper if upper in RESERVED else name}" quoted): rename it in the public contract ({CONTRACT.name})'
         )
     return upper
 
