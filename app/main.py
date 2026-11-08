@@ -462,20 +462,25 @@ def create_app(
         s = accounts_only()
         username = await typed_username(request)
         return page(
-            request, "signin.html", 400, owner_setup=s.accounts.needs_owner, unloaded=True, username=username
+            request,
+            "signin.html",
+            400,
+            owner_setup=s.accounts.needs_owner,
+            unloaded="you’re not signed in yet",
+            username=username,
         )
 
     @app.post("/join", response_class=HTMLResponse)
     async def join_unwired(request: Request) -> HTMLResponse:
         accounts_only()
         return page(request, "join.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
-                    unloaded=True, username=await typed_username(request))  # fmt: skip
+                    unloaded="your account wasn’t created", username=await typed_username(request))  # fmt: skip
 
     @app.post("/reset", response_class=HTMLResponse)
     async def reset_unwired(request: Request) -> HTMLResponse:
         accounts_only()
         return page(request, "reset.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
-                    unloaded=True)  # fmt: skip
+                    unloaded="your password wasn’t changed")  # fmt: skip
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -906,7 +911,7 @@ def create_app(
     def counts(user_id: str) -> dict[str, int]:
         return gear_counts(store.shots_of(user_id))
 
-    def setup_page(request: Request, me: User, unloaded: bool = False) -> HTMLResponse:
+    def setup_page(request: Request, me: User, unloaded: str = "") -> HTMLResponse:
         return page(
             request,
             "setup.html",
@@ -925,7 +930,7 @@ def create_app(
     @app.post("/setup", response_class=HTMLResponse)
     def setup_unwired(request: Request, me: Me) -> HTMLResponse:
         """Change password's form, unwired (see signin_unwired): the passwords are dropped, unread."""
-        return setup_page(request, me, unloaded=True)
+        return setup_page(request, me, unloaded="your password wasn’t changed")
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
     def gear_page(

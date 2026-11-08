@@ -11,7 +11,7 @@
   {% if ended == "ended" %}
   <p class="notice">You’ve been signed out. Sign in again to continue.</p>
   {% elif ended == "failed" %}
-  <p class="notice">We couldn’t check your sign-in just now. Reload in a moment: you may still be signed in.</p>
+  <p class="notice">We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in.</p>
   {% endif %}
   <form id="signin" class="fill" method="post" data-ended="{{ ended or '' }}" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
     {% if owner_setup %}
@@ -26,7 +26,7 @@
     <input class="input" id="username" name="username"{% if username %} value="{{ username }}"{% endif %} autocomplete="username" autocapitalize="none" spellcheck="false" required>
     <label class="flabel" for="password">Password</label>
     <div class="pw">
-      <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+      <input class="input" id="password" name="password" type="password" autocomplete="current-password"{% if username %} autofocus{% endif %} required>
       <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
     </div>
     {% endif %}

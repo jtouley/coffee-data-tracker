@@ -378,7 +378,10 @@ this phone. It’ll sync when you’re back online."; a bag names itself, since 
 it syncs: "Bag saved on this phone: Onyx Geometry. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
 The sign-in screen's notices ("You’ve been signed out", "We couldn’t check your sign-in") are different: they're
 in the page as it's sent, not filled in afterwards, so they have no `role="status"` (a live region announces
-changes, not text present at load) and are read in order before the form.
+changes, not text present at load) and are read in order before the form. So is the notice for a form submitted before app.js wired it
+(the password forms post, and the page comes back): "The page didn’t finish loading, so you’re not signed in yet.
+Reload the page and try again.", naming what didn't happen (account not created, password not changed), with the
+username kept and the password field empty (focused, on sign-in).
 
 Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
 on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.
