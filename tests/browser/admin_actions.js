@@ -402,7 +402,7 @@ const errors = [];
       await settled(page);
       const main = await page.textContent("main");
       assert.match(main, /to review of .* places/);
-      assert.match(main, /roasters from the registry · 0 flagged roaster/);
+      assert.match(main, /roasters from the registry · 0 flagged as roasters/);
       assert.match(main, /Unreviewed/);
       assert.equal(await page.locator("table.sources tbody form[data-now]:visible").count(), 0, "no action button on a row");
       assert.ok(await page.evaluate(() => document.querySelector("form.search").compareDocumentPosition(document.querySelector("[data-answer]")) & Node.DOCUMENT_POSITION_FOLLOWING), "the search comes first");
@@ -421,12 +421,32 @@ const errors = [];
       await page.keyboard.press("Escape");
       await page.waitForFunction(() => !document.querySelector("dialog#filters").open);
       await page.click("[data-panel]");
-      await page.check("dialog#filters input[name=sort][value=name]");
+      assert.ok(await page.isHidden("dialog#filters fieldset.sorts"), "a desktop sorts by the table's headers");
       await page.selectOption("dialog#filters select[name=tag]", "coffee_shop");
       await page.click("dialog#filters button[type=submit]");
       await settled(page);
-      assert.match(await page.textContent("[data-panel]"), /Filter \/ Sort \(2\)/);
+      assert.match(await page.textContent("[data-panel]"), /Filter \/ Sort \(1\)/);
       assert.match(await page.textContent("[data-answer-matching]"), / of .* places match/);
+    });
+
+    await check("Sources (desktop): a data table; a header sorts by its column, both ways, and says so (aria-sort)", async () => {
+      await page.goto(`${cfg.act}/sources`);
+      await settled(page);
+      const heads = await page.$$eval("table.sources thead th", (ths) => ths.filter((t) => t.offsetParent && !t.querySelector(".vh")).map((t) => t.textContent.replace(/[↑↓]/g, "").trim()));
+      assert.deepEqual(heads.filter(Boolean), ["Name", "Domain", "City", "State", "Tag", "Hints", "Status", "First seen"]);
+      const row = await page.locator("table.sources tbody tr >> nth=0").boundingBox();
+      assert.ok(row.height >= 44 && row.height < 56, `a dense row, ${row.height}px`);
+      await page.click("table.sources thead a.sort:has-text('First seen')");
+      await settled(page);
+      assert.equal(await page.getAttribute("table.sources thead th[aria-sort]", "aria-sort"), "ascending");
+      await page.click("table.sources thead a.sort:has-text('First seen')");
+      await settled(page);
+      assert.equal(await page.getAttribute("table.sources thead th[aria-sort]", "aria-sort"), "descending");
+      assert.match(await page.textContent("table.sources thead th[aria-sort]"), /First seen↓/);
+      await shoot(page, "sources-sorted");
+      await page.evaluate(() => scrollTo(0, 2000)); // the header stays in view
+      const top = await page.locator("table.sources thead th >> nth=1").boundingBox();
+      assert.ok(top.y >= -1 && top.y < 60, `sticky header at ${top.y}`);
     });
 
     await check("Sources: a row's ⋯ menu flags one place Roaster (keyboard too), then Undo from the outcome", async () => {
@@ -443,7 +463,7 @@ const errors = [];
       await page.click("table.sources summary");
       await shoot(page, "sources-menu", true);
       await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
-      await toast(page, /Flagged 1 place/);
+      await toast(page, /Marked 1 place as a roaster\./);
       await settled(page);
       assert.match(await page.textContent("table.sources"), /Roaster/);
       await page.click("[data-result] [data-undo]");
@@ -452,14 +472,21 @@ const errors = [];
       assert.match(await page.textContent("table.sources"), /Unreviewed/);
       await page.click("table.sources summary");
       await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
-      await toast(page, /Flagged 1 place roaster\. Pull now crawls it this week/);
+      await toast(page, /^Marked 1 place as a roaster\.$/);
+      await page.waitForFunction(() => /Roaster/.test(document.querySelector("table.sources td.c-status")?.textContent || "") && !/Unreviewed/.test(document.querySelector("table.sources td.c-status").textContent));
     });
 
-    await check("Sources: Pull now from the outcome: the Jobs confirm (probe, then a count crawl), then live status", async () => {
-      await page.click("[data-result] [data-pull-now]");
-      await page.waitForSelector("dialog#confirm[open] .steps");
-      assert.match(await page.textContent("dialog#confirm"), /probe[\s\S]*coffeedata probe --only ember-roastworks\.example/);
+    await check("Sources: Pull now from a row's ⋯ menu: the Jobs confirm in plain words (probe, then a count crawl), then live status", async () => {
+      await page.click("table.sources summary");
+      await page.click("details[data-rowmenu][open] button:text-is('Pull now')");
+      await page.waitForSelector("dialog#confirm[open] .plan-details");
+      assert.ok(await page.isHidden("[data-result]"), "the outcome line steps aside for the confirm");
+      assert.match(await page.textContent("dialog#confirm [data-confirm-title]"), /^Probe and crawl 1 place\?$/);
+      assert.match(await page.textContent("dialog#confirm [data-confirm-body]"), /^ember-roastworks\.example\. The crawl starts when the probe finishes/);
+      assert.ok(!(await page.isVisible("dialog#confirm .steps")), "the command waits behind Details");
       await shoot(page, "sources-pull-confirm", true);
+      await page.click("dialog#confirm .plan-details summary");
+      assert.match(await page.textContent("dialog#confirm .steps"), /coffeedata probe --only ember-roastworks\.example/);
       await page.click("[data-confirm-go]");
       await toast(page, /Started probe/);
       await settled(page);
@@ -479,9 +506,9 @@ const errors = [];
       assert.match(await page.textContent("[data-bulk-count]"), /2 selected/);
       await shoot(page, "sources-selected", true);
       await page.click("[data-bulk] button:text-is('Not a roaster')");
-      await toast(page, /Flagged 2 places/);
+      await toast(page, /Marked 2 places as not roasters\./);
       await settled(page);
-      assert.match(await page.textContent("[data-counts]"), /1 flagged roaster · 2 not a roaster/);
+      assert.match(await page.textContent("[data-counts]"), /1 flagged as a roaster · 2 flagged as not roasters/);
     });
 
     await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {

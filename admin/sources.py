@@ -29,13 +29,27 @@ EMPTY = ("(select null::timestamptz as added_at, null::varchar as source, null::
          "null::varchar[] as tags, null::boolean as roast_in_name where false)")  # fmt: skip
 
 
-# The Filter / Sort panel's orders: the first is the default (the places to review first, those with a hint first).
-SORTS = {
-    "status": ("Status, to review first", "status = 'unreviewed' desc, hint is null, name, roaster_id"),
-    "name": ("Name", "name, roaster_id"),
-    "state": ("State, then city", "state nulls last, city nulls last, name, roaster_id"),
-    "newest": ("Newest listed", "first_seen desc nulls last, name, roaster_id"),
-}
+# The table's columns a click on the header sorts by (desktop), with the column each reads; `status` sorts the places
+# to review first (and those with a hint first). Ties go by name, then domain.
+COLUMNS = {"name": ("Name", "name"), "domain": ("Domain", "roaster_id"), "city": ("City", "city"),
+           "state": ("State", "state"), "tag": ("Tag", "tag"), "hint": ("Hints", "hint"),
+           "status": ("Status", "status"), "first_seen": ("First seen", "first_seen")}  # fmt: skip
+# The phone sheet's sort options: (column, direction) each.
+SORTS = {"status": ("Status, to review first", "status", "asc"), "name": ("Name", "name", "asc"),
+         "state": ("State, then city", "state", "asc"), "newest": ("Newest listed", "first_seen", "desc")}  # fmt: skip
+
+
+def order_by(sort: str, desc: bool) -> str:
+    """SQL order for a column and direction."""
+    if sort == "status":
+        first = (
+            "status = 'unreviewed' asc, status desc" if desc else "status = 'unreviewed' desc, hint is null"
+        )
+    else:
+        first = f"{COLUMNS[sort][1]} {'desc' if desc else 'asc'} nulls last"
+        if sort == "state":
+            first += ", city nulls last"
+    return f"{first}, name, roaster_id"
 
 
 @dataclass
@@ -45,6 +59,7 @@ class SourceFilters(Filters):
     SEARCH = ("name", "roaster_id", "coalesce(city, '')")
     PRICES = False
     sort: str = "status"
+    desc: bool = False
 
     @classmethod
     def from_query(cls, params) -> SourceFilters:
@@ -52,12 +67,21 @@ class SourceFilters(Filters):
         f = cast(SourceFilters, super().from_query(params))
         if "://" in f.q or f.q.lower().startswith("www."):
             f.q = normalize_domain(f.q)
-        f.sort = s if (s := params.get("sort")) in SORTS else "status"
+        sort, direction = params.get("sort") or "status", params.get("dir")
+        if sort in SORTS:  # the phone sheet's options
+            _, sort, default = SORTS[sort]
+            direction = direction or default
+        f.sort = sort if sort in COLUMNS else "status"
+        f.desc = direction == "desc"
         return f
+
+    def sheet_sort(self) -> str | None:
+        """The phone sheet's option for this order, if it is one."""
+        return next((k for k, (_, c, d) in SORTS.items() if (c, d == "desc") == (self.sort, self.desc)), None)
 
     def in_use(self) -> int:
         """How many filters and orders the panel has applied (the button's count)."""
-        return len(self.values) + (self.sort != "status")
+        return len(self.values) + (self.sort != "status" or self.desc)
 
 
 class SourceList:
@@ -181,7 +205,7 @@ class SourceList:
             cur = con.execute(
                 f"""select roaster_id, name, city, state, website, tag, hint, sources, status, change, batch_id,
                            in_registry, first_seen, last_seen from {view} {where}
-                    order by {SORTS[f.sort][1]}
+                    order by {order_by(f.sort, f.desc)}
                     limit {PAGE} offset {(f.page - 1) * PAGE}""",
                 params,
             )

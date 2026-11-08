@@ -59,6 +59,7 @@ function loadPart(section, quiet) {
       if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
       if (matchMedia("(min-width: 760px)").matches) section.querySelectorAll("[data-filters]").forEach((d) => { d.open = true; });
+      modes(section);
     })
     .catch(() => {
       if (quiet) return;
@@ -239,10 +240,30 @@ document.addEventListener("click", async (e) => {
   }
 });
 
+// Controls for one width only: a phone sorts with the sheet's options, a desktop by the table's headers. The other
+// set is disabled, so a form sends one order.
+function modes(root = document) {
+  const wide = matchMedia("(min-width: 760px)").matches;
+  root.querySelectorAll("[data-wide-only]").forEach((el) => { el.disabled = !wide; });
+  root.querySelectorAll("[data-narrow-only]").forEach((el) => { el.disabled = wide; });
+}
+
+function edges(tabs) {
+  tabs.classList.toggle("more-start", tabs.scrollLeft > 1);
+  tabs.classList.toggle("more-end", tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 1);
+}
+document.addEventListener("scroll", (e) => { if (e.target.matches && e.target.matches(".tabs")) edges(e.target); }, true);
+
 // A phone shows the page's own tab (the tabs scroll sideways), and folds the filters unless some are applied.
 function fit() {
   const on = document.querySelector(".tabs a.on");
-  if (on) on.parentElement.scrollLeft = on.offsetLeft - on.parentElement.offsetLeft - 12;
+  if (on) { // only as far as it takes to show the page's own tab, then mark the edges that hide more tabs
+    const tabs = on.parentElement;
+    const need = on.offsetLeft - tabs.offsetLeft + on.offsetWidth - tabs.clientWidth + 24;
+    const first = [...tabs.children].find((a) => a.offsetLeft - tabs.offsetLeft >= need); // start on a whole tab
+    tabs.scrollLeft = need > 0 && first ? first.offsetLeft - tabs.offsetLeft - 12 : 0;
+    edges(tabs);
+  }
   if (!matchMedia("(min-width: 760px)").matches) {
     document.querySelectorAll("details[data-filters]:not([data-applied])").forEach((d) => { d.open = false; });
   }
@@ -251,7 +272,7 @@ function fit() {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section[data-part]").forEach(loadPart);
   fit();
-  matchMedia("(min-width: 760px)").addEventListener("change", fit);
+  matchMedia("(min-width: 760px)").addEventListener("change", () => { fit(); modes(); });
 });
 
 // --- writes ------------------------------------------------------------------------------------------------------
@@ -269,27 +290,27 @@ function reloadParts() {
   document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
 }
 
-// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo;
-// `pull`: places just flagged Roaster, offered as Pull now (the Sources page's pull form).
-function showResult(text, undo, pull) {
+// The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
+function showResult(text, undo) {
   const box = document.querySelector("[data-result]");
   if (!box) return;
   $(box, "[data-result-text]").textContent = text;
   const b = $(box, "[data-undo]");
   b.hidden = !undo;
   b.dataset.target = undo || "";
-  const p = $(box, "[data-pull-now]");
-  p.hidden = !(pull && pull.length && document.getElementById("pull-form"));
-  p.dataset.places = (pull || []).join(",");
   box.hidden = false;
   clearTimeout(showResult.timer); // a message offering an action stays until dismissed (WCAG 2.2.1); others fade
-  if (!undo && p.hidden) showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
+  if (!undo) showResult.timer = setTimeout(() => { box.hidden = true; }, 20000);
 }
 
 function undoUrl(out) {
   if (out.decisions) return `/api/decisions/${encodeURIComponent(out.group || out.decisions[0])}/undo`;
   if (out.batch_id) return `/api/sources/flags/${encodeURIComponent(out.batch_id)}/undo`;
   return undefined;
+}
+
+function plural(n, one, many = `${one}s`) {
+  return `${n.toLocaleString("en-US")} ${n === 1 ? one : many}`;
 }
 
 function describe(out) {
@@ -300,12 +321,12 @@ function describe(out) {
   }
   if (out.decisions) return `Recorded ${out.count} decision${out.count === 1 ? "" : "s"}. Build a draft on Release to see the change.`;
   if (out.batch_id) {
-    const n = `${out.count} place${out.count === 1 ? "" : "s"}`;
-    const gone = out.excluded ? ` ${out.excluded} coffee${out.excluded === 1 ? "" : "s"} leave the catalog in the next draft.` : "";
-    if (out.flag === "roaster") return `Flagged ${n} roaster. Pull now crawls ${out.count === 1 ? "it" : "them"} this week; the next published draft keeps ${out.count === 1 ? "it" : "them"} in the weekly crawl.`;
-    return `Flagged ${n} ${out.flag.replace("_", " ")}.${gone} It takes effect when a draft of it is published (Release).`;
+    const n = plural(out.count, "place");
+    if (out.flag === "roaster") return `Marked ${n} as ${out.count === 1 ? "a roaster" : "roasters"}.`;
+    if (out.flag === "not_roaster") return `Marked ${n} as not ${out.count === 1 ? "a roaster" : "roasters"}.` + (out.excluded ? ` ${plural(out.excluded, "coffee")} leave the catalog.` : "");
+    return `Cleared the flag on ${n}.`;
   }
-  if (out.restored !== undefined && out.reverted) return `Undone (${out.count})${out.restored ? `, and ${out.restored} coffee${out.restored === 1 ? "" : "s"} back in the catalog` : ""}: as it was before, from the next draft.`;
+  if (out.restored !== undefined && out.reverted) return `Undone (${out.count}).` + (out.restored ? ` ${plural(out.restored, "coffee")} back in the catalog.` : "");
   if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
@@ -400,6 +421,9 @@ async function confirmWrite(form) {
   overWrap.hidden = true;
   go.removeAttribute("aria-disabled");
   body.textContent = [form.dataset.confirmText, form.dataset.confirm].filter(Boolean).join(" ");
+  const result = document.querySelector("[data-result]");
+  if (result) result.hidden = true; // the confirm stands alone; its outcome replaces the last one
+  document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { m.open = false; });
   if (!d.open) d.showModal();
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";
@@ -407,6 +431,16 @@ async function confirmWrite(form) {
     try {
       const plan = await post(form.dataset.preview, fields(form));
       renderPlan(body, plan);
+      if ("planDetails" in form.dataset) { // the summary in words; the jobs and their exact commands under Details
+        const more = document.createElement("details");
+        more.className = "plan-details";
+        more.innerHTML = "<summary class=\"btn text start\">Details</summary>";
+        more.append(...[...body.childNodes].filter((n) => !(n.classList && (n.classList.contains("refused") || n.classList.contains("notice")))));
+        const say = document.createElement("p");
+        say.className = "body";
+        say.textContent = form.dataset.confirmText || "";
+        body.prepend(say, more);
+      }
       if (!(plan.refusals || []).length) go.removeAttribute("aria-disabled");
       overWrap.hidden = !plan.window;
     } catch (err) {
@@ -450,7 +484,7 @@ async function writeNow(form, button) {
   busy(button, true);
   try {
     const out = await post(form.dataset.write, fields(form));
-    showResult(describe(out), undoUrl(out), out.flag === "roaster" && out.count <= 20 ? out.places : null);
+    showResult(describe(out), undoUrl(out));
     reloadParts();
   } catch (err) {
     showResult(refusal(err));
@@ -465,13 +499,15 @@ function pullNow(places) {
   const form = document.getElementById("pull-form");
   if (!form || !places.length) return;
   form.querySelector("input[name=roasters]").value = places.join(",");
+  form.dataset.confirmTitle = `Probe and crawl ${plural(places.length, "place")}?`;
+  form.dataset.confirmText = `${places.join(", ")}. The crawl starts when the probe finishes; no Publish needed.`;
   confirmWrite(form);
 }
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-pull-now], [data-pull-picks]");
+  const t = e.target.closest("[data-pull-picks], [data-pull-one]");
   if (!t) return;
-  pullNow(t.matches("[data-pull-now]") ? t.dataset.places.split(",").filter(Boolean) : picks().map((p) => p.roaster_id));
+  pullNow(t.matches("[data-pull-one]") ? [t.dataset.pullOne] : picks().map((p) => p.roaster_id));
 });
 
 document.addEventListener("submit", (e) => {

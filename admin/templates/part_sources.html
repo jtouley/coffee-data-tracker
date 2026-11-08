@@ -7,6 +7,7 @@
   <button class="btn {{ cls }} inline" type="submit" data-busy="Flagging…">{{ label }}</button>
 </form>
 {%- endmacro %}
+{% macro many(n_, one, more) %}{{ n(n_) }} {{ one if n_ == 1 else more }}{% endmacro %}
 {% set label = {"roaster": "Roaster", "roaster (inherited)": "Roaster (inherited)", "not a roaster": "Not a roaster", "unreviewed": "Unreviewed"} %}
 <div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}"{% if pulls | rejectattr("final") | list %} data-poll="10"{% endif %}>
 {{ write_off(writes_off) }}
@@ -29,36 +30,48 @@
           </select></label>
         {% endfor %}
       </div>
-      <fieldset class="sorts"><legend class="label">Sort by</legend>
-        {% for key, (text, _) in sorts.items() %}<label class="radio"><input type="radio" name="sort" value="{{ key }}"{% if f.sort == key %} checked{% endif %}> {{ text }}</label>{% endfor %}
+      {# A phone sorts here; a desktop by the table's headers, and keeps that order (admin.js modes: one set is off). #}
+      <fieldset class="sorts" data-narrow-only><legend class="label">Sort by</legend>
+        {% set picked = f.sheet_sort() %}{% for key, (text, _, _) in sorts.items() %}<label class="radio"><input type="radio" name="sort" value="{{ key }}"{% if picked == key %} checked{% endif %}> {{ text }}</label>{% endfor %}
       </fieldset>
+      <input type="hidden" name="sort" value="{{ f.sort }}" data-wide-only><input type="hidden" name="dir" value="{{ 'desc' if f.desc else 'asc' }}" data-wide-only>
       <div class="actions"><button class="btn primary inline" type="submit">Show places</button><a class="btn text inline" href="/sources{% if f.q %}?q={{ f.q | urlencode }}{% endif %}">Clear filters</a><button class="btn text inline" type="button" data-panel-close>Close</button></div>
     </dialog>
   </form>
   {% set chips = f.chips() %}
   {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
   {% if flags_read %}
-  <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ n(data.total) }} places{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
-  <p class="src" data-counts>{{ n(st.get("roaster (inherited)", 0)) }} roasters from the registry · {{ n(st.get("roaster", 0)) }} flagged roaster · {{ n(st.get("not a roaster", 0)) }} not a roaster</p>
+  <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ many(data.total, "place", "places") }}{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
+  <p class="src" data-counts>{{ many(st.get("roaster (inherited)", 0), "roaster", "roasters") }} from the registry · {{ n(st.get("roaster", 0)) }} flagged as {{ "a roaster" if st.get("roaster", 0) == 1 else "roasters" }} · {{ n(st.get("not a roaster", 0)) }} flagged as not {{ "a roaster" if st.get("not a roaster", 0) == 1 else "roasters" }}</p>
   {% else %}
-  <p class="answer" data-answer>{{ n(data.total) }} places · the flags can’t be read now, so no place’s status is shown</p>
+  <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
   {% if pulls %}<p class="src" data-pulls>Pull now: {% for r in pulls | reverse %}{{ r.job }} {{ r.status }}{% if r.followed and r.followed.errors %} (the crawl didn’t start: {{ r.followed.errors | join("; ") }}){% endif %}{{ " · " if not loop.last }}{% endfor %} · <a class="ev" href="/jobs">Jobs</a></p>{% endif %}
-  {% if chips %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places match</p>{% endif %}
+  {% if chips %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ many(data.total, "place", "places") }} {{ "matches" if data.matching == 1 else "match" }}</p>{% endif %}
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}
+  {% macro head(key, cls="") -%}
+  {%- set on = f.sort == key -%}
+  <th scope="col" class="{{ cls }}"{% if on %} aria-sort="{{ 'descending' if f.desc else 'ascending' }}"{% endif %}><a class="sort" href="{{ qs(sort=key, dir=('asc' if on and f.desc else 'desc' if on else 'asc')) }}">{{ columns[key][0] }}<span class="dir" aria-hidden="true">{{ ('↓' if f.desc else '↑') if on else '' }}</span></a></th>
+  {%- endmacro %}
   <table class="sources">
-    <caption class="vh">Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, sorted by {{ sorts[f.sort][0] | lower }}</caption>
-    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Select every place on this page"></th>{% endif %}<th scope="col">Place</th><th scope="col" class="only-wide status-col">Status</th><th scope="col" class="act"><span class="vh">Actions</span></th></tr></thead>
-    <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}{% set name = r.name or r.roaster_id %}<tr data-row>
+    <caption class="vh">Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, sorted by {{ columns[f.sort][0] | lower }}, {{ "descending" if f.desc else "ascending" }}</caption>
+    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Select every place on this page"></th>{% endif %}{{ head("name", "c-name") }}{{ head("domain", "wide c-domain") }}{{ head("city", "wide c-city") }}{{ head("state", "wide c-state") }}{{ head("tag", "wide c-tag") }}{{ head("hint", "wide c-hint") }}{{ head("status", "wide c-status") }}{{ head("first_seen", "wide c-seen") }}<th scope="col" class="act"><span class="vh">Actions</span></th></tr></thead>
+    <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}{% set name = r.name or r.roaster_id %}{% set where = [r.city, r.state] | select | join(", ") %}<tr data-row>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Select {{ name }}"></td>{% endif %}
-      <th scope="row"><span class="pname">{{ name }}</span>
-        <span class="meta">{{ [r.roaster_id, [r.city, r.state] | select | join(", ")] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %}<span class="only-narrow"> · <span class="status">{{ label[r.status] }}</span></span>{% endif %}</span></th>
-      <td class="only-wide status-col"><span class="status">{{ label[r.status] if r.status else "—" }}</span></td>
+      <th scope="row" class="c-name" title="{{ name }}"><span class="pname">{{ name }}</span>
+        <span class="meta narrow">{{ [r.roaster_id, where] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %} · <span class="status">{{ label[r.status] }}</span>{% endif %}</span></th>
+      <td class="wide c-domain" title="{{ r.roaster_id }}">{% if r.url %}<a class="ev" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.roaster_id }}</a>{% else %}{{ r.roaster_id }}{% endif %}</td>
+      <td class="wide c-city" title="{{ r.city or '' }}">{{ r.city or "—" }}</td>
+      <td class="wide c-state">{{ r.state or "—" }}</td>
+      <td class="wide c-tag">{{ r.tag or "—" }}</td>
+      {% set hints = [r.hint, r.change] | select | join(" · ") %}<td class="wide c-hint" title="{{ hints }}">{{ hints or "—" }}</td>
+      <td class="wide c-status"><span class="status">{{ label[r.status] if r.status else "—" }}</span></td>
+      <td class="wide c-seen">{{ (r.first_seen | string)[:10] if r.first_seen else "—" }}</td>
       <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="Actions for {{ name }}">⋯</summary>
         <div class="menu">
-          {% if r.status and not writes_off %}{% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Clear the flag", [item]) }}{% endif %}{% endif %}
+          {% if r.status and not writes_off %}{% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Clear the flag", [item]) }}{% endif %}{% if r.status == "roaster" %}<button class="btn text inline" type="button" data-pull-one="{{ r.roaster_id }}">Pull now</button>{% endif %}{% endif %}
           {% if r.url %}<a class="btn text inline" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">Open site</a>{% endif %}
         </div></details></td>
     </tr>{% endfor %}</tbody>
@@ -72,7 +85,7 @@
     <button class="btn text inline" type="button" data-bulk-clear>Clear</button>
   </div>
   {# Pull now: Jobs' `pull` action (probe, then a count crawl) for places flagged Roaster; the confirm shows the plan. #}
-  <form id="pull-form" data-write="/api/jobs/pull/runs" data-preview="/api/jobs/pull/plan" data-confirm-title="Pull these places now?" data-confirm-label="Pull now" data-confirm-text="The probe first; when it succeeds, a count crawl of this week for each place, on its connector’s job. No Publish needed." hidden>
+  <form id="pull-form" data-write="/api/jobs/pull/runs" data-preview="/api/jobs/pull/plan" data-confirm-label="Pull now" data-plan-details hidden>
     <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="roasters" value="">
   </form>
   {% endif %}

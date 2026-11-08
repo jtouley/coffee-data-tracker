@@ -170,33 +170,54 @@ dialog.panel .facets { margin-top: 12px; gap: 8px 12px; }
 .sorts .radio input { width: 20px; height: 20px; accent-color: var(--accent); }
 dialog.panel .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .sources-page { padding-bottom: 128px; }
-table.sources { width: 100%; border-collapse: collapse; margin-top: 8px; }
-table.sources thead th { font-size: 0.8125rem; text-align: start; padding-block: 4px; padding-inline: 0 8px; border-bottom: 1px solid var(--rule); }
+/* Sources' table: on a desktop one dense row per place with sortable columns and a sticky header; on a phone the
+   same table shows the name, a line of metadata and the status, stacked (the .wide cells hide, .narrow shows). */
+table.sources { width: 100%; border-collapse: collapse; margin-top: 8px; table-layout: fixed; }
+table.sources th, table.sources td { padding-block: 0; padding-inline: 0 12px; height: 44px; vertical-align: middle;
+  text-align: start; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+table.sources thead th { font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); border-bottom: 1px solid var(--control);
+  position: sticky; top: 0; z-index: 2; background: var(--paper); }
+table.sources thead a.sort { color: inherit; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; }
+table.sources thead a.sort:hover { color: var(--accent); }
+table.sources thead [aria-sort] { color: var(--ink); }
 table.sources tbody tr { border-bottom: 1px solid var(--rule); cursor: pointer; }
-table.sources tbody tr:has(input[data-pick]:checked) { background: var(--panel); }
-@media (hover: hover) { table.sources tbody tr:hover { background: var(--panel); } } /* a row is selectable */
-table.sources tbody th, table.sources td { padding-block: 8px; padding-inline: 0 8px; vertical-align: top; text-align: start; }
-table.sources tbody th { font-weight: 400; white-space: normal; overflow-wrap: anywhere; }
-table.sources td.pick + th { position: static; background: none; } /* not the Catalog's pinned column: no sideways scroll */
-table.sources .pname { display: block; font-weight: 500; }
-table.sources .meta { display: block; font-size: 0.8125rem; color: var(--ink-2); }
-table.sources .status-col { text-align: end; }
-dialog.panel h2 { margin-top: 0; }
-@media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
-@media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
-html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
-table.sources .status { font-size: 0.8125rem; color: var(--ink-2); white-space: nowrap; }
-table.sources th.act, table.sources td.act { width: 44px; padding-inline-end: 0; text-align: end; position: relative; }
+table.sources tbody tr:has(input[data-pick]:checked) > * { background: var(--panel); } /* the whole row, box included */
+@media (hover: hover) { table.sources tbody tr:hover > * { background: var(--panel); } } /* a row is selectable */
+table.sources tbody th { font-weight: 500; }
+table.sources td.pick + th { position: static; } /* no pinned column here */
+table.sources thead th.pick + th { left: auto; } /* the header row stays sticky to the top only */
+table.sources .status { font-size: 0.8125rem; color: var(--ink-2); }
+table.sources td.c-seen { font-variant-numeric: tabular-nums; }
+table.sources td a.ev { display: inline; } /* so a long domain ends in an ellipsis, not under the next column */
+table.sources td.c-tag, table.sources td.c-hint, table.sources td.c-city, table.sources td.c-state { color: var(--ink-2); font-size: 0.8125rem; }
+table.sources th.pick { width: 44px; }
+table.sources th.act { width: 44px; }
+table.sources th.act, table.sources td.act { padding-inline-end: 0; text-align: end; overflow: visible; position: relative; }
+table.sources .narrow { display: none; }
+@media (min-width: 760px) {
+  table.sources .c-name { width: 22%; } table.sources .c-domain { width: 18%; } table.sources .c-city { width: 11%; }
+  table.sources .c-state { width: 4.5rem; } table.sources .c-tag { width: 7.5rem; } table.sources .c-hint { width: 13%; }
+  table.sources .c-status { width: 9.5rem; } table.sources .c-seen { width: 6.5rem; }
+}
+html:has(table.sources) { scroll-padding-block-start: 52px; } /* a focused row never sits under the sticky header */
+@media (max-width: 759px) {
+  table.sources .wide { display: none; }
+  table.sources tbody th { white-space: normal; height: auto; padding-block: 8px; }
+  table.sources .pname, table.sources .narrow { display: block; overflow-wrap: anywhere; }
+  table.sources .narrow { font-size: 0.8125rem; font-weight: 400; color: var(--ink-2); }
+  table.sources thead th { position: static; }
+}
 .rowmenu > summary { list-style: none; min-width: 44px; justify-content: center; font-size: 1.25rem; }
 .rowmenu > summary::-webkit-details-marker { display: none; }
 .rowmenu .menu { position: absolute; inset-inline-end: 0; top: calc(100% - 4px); z-index: 4; display: grid; min-width: 12rem; padding: 4px;
-  background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; }
+  background: var(--sheet); border: 1px solid var(--control); border-radius: 8px; text-align: start; }
 .rowmenu .menu .inline-form { display: block; }
 .rowmenu .menu .btn { width: 100%; justify-content: flex-start; padding: 0 12px; }
-.only-narrow { display: inline; }
-.only-wide { display: none; }
-@media (min-width: 760px) { .only-narrow { display: none; } .only-wide { display: table-cell; } }
+dialog.panel h2 { margin-top: 0; }
+@media (min-width: 760px) { dialog.panel .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sorts[data-narrow-only] { display: none; } }
+dialog.panel .actions { position: sticky; bottom: -24px; background: var(--sheet); padding: 12px 0; margin-bottom: -12px; }
+@media (max-width: 759px) { .searchrow .btn.wide-only { display: none; } } /* Enter searches */
+html:has(.bar-bottom:not([hidden])) { scroll-padding-bottom: 136px; }
 .bulk.bar-bottom { position: fixed; top: auto; left: 8px; right: 8px; bottom: 8px; margin: 0 auto; max-width: 40rem; z-index: 3;
   gap: 8px; padding: 8px; flex-wrap: nowrap; border: 1px solid var(--control); }
 .bulk.bar-bottom [data-bulk-count] { flex: 1; min-width: 0; padding-left: 4px; }
@@ -205,3 +226,10 @@ table.sources th.act, table.sources td.act { width: 44px; padding-inline-end: 0;
   .bulk.bar-bottom { flex-wrap: wrap; }
   .bulk.bar-bottom [data-bulk-count] { flex-basis: 100%; }
 }
+/* Phone tabs scroll sideways: a fade at an edge with tabs past it (admin.js fit), so a cut tab reads as more. */
+@media (max-width: 759px) {
+  .tabs.more-start { mask-image: linear-gradient(to right, transparent, #000 24px); }
+  .tabs.more-end { mask-image: linear-gradient(to left, transparent, #000 24px); }
+  .tabs.more-start.more-end { mask-image: linear-gradient(to right, transparent, #000 24px, #000 calc(100% - 24px), transparent); }
+}
+dialog .plan-details { margin-top: 8px; }

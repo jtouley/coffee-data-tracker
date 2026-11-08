@@ -3,6 +3,7 @@ counts and the latest discovery run's changes, and the flags: one click, a bulk 
 each audited in its transaction and idempotent, and carried by the next draft's snapshot."""
 
 import json
+import re
 from datetime import UTC, datetime
 
 import pyarrow as pa
@@ -49,7 +50,7 @@ def test_the_source_list_its_counts_changes_and_filters(tmp_path, lake, pg_url):
     page = c.get("/part/sources").text
     assert (
         "4 to review of 6 places" in page
-        and "2 roasters from the registry · 0 flagged roaster · 0 not a roaster" in page
+        and "2 roasters from the registry · 0 flagged as roasters · 0 flagged as not roasters" in page
     )
     assert (
         "Seeded Roasters" in page and "curated" in page
@@ -78,7 +79,7 @@ def test_flags_one_click_bulk_undo_conflict_and_the_draft(tmp_path, lake, pg_url
     bulk = post(c, "/api/sources/flags", {"key": "k3", "flag": "not_roaster", "items": [
         {"roaster_id": "tea.example"}, {"roaster_id": "gone.example"}]})  # fmt: skip
     assert bulk.json()["count"] == 2
-    assert "1 flagged roaster · 2 not a roaster" in c.get("/part/sources").text
+    assert "1 flagged as a roaster · 2 flagged as not roasters" in c.get("/part/sources").text
     assert (
         post(
             c, "/api/sources/flags", {"key": "k4", "flag": "maybe", "items": [{"roaster_id": "x.example"}]}
@@ -93,7 +94,7 @@ def test_flags_one_click_bulk_undo_conflict_and_the_draft(tmp_path, lake, pg_url
     # undo puts the place back to unreviewed
     u = post(c, f"/api/sources/flags/{batch}/undo", {"key": "k6"})
     assert u.status_code == 200 and u.json()["reverted"] == ["beans.example"]
-    assert "0 flagged roaster" in c.get("/part/sources").text
+    assert "0 flagged as roasters" in c.get("/part/sources").text
     assert post(c, f"/api/sources/flags/{batch}/undo", {"key": "k7"}).json()["count"] == 0  # already undone
 
 
@@ -141,7 +142,9 @@ def test_without_the_flags_no_status_is_shown(tmp_path, lake):
 
     dead = ControlPlane(url_connect("postgresql://nobody@127.0.0.1:1/none"))
     _, c, _ = make(tmp_path, lake.root, "postgresql://nobody@127.0.0.1:1/none", control_plane=dead)
-    page = c.get("/part/sources?status=unreviewed").text
+    page = re.sub(
+        r'href="[^"]*"', "", c.get("/part/sources?status=unreviewed").text
+    )  # the text, not its links
     assert "6 places · the flags can’t be read now" in page and "Seeded Roasters" in page
     for word in ("inherited", "unreviewed", "flagged roaster", "data-write="):
         assert word not in page, word
@@ -221,3 +224,16 @@ def test_pull_now_probes_then_crawls_the_flagged_places(tmp_path, lake, pg_url):
     c.get("/part/jobs")
     assert len([x for x in fake.calls if x[0] == "run"]) == 2  # once per probe
     assert [a["action"] for a in audit(app)][:2] == ["job_start", "job_start"]
+
+
+def test_a_header_sorts_by_its_column_both_ways(tmp_path, lake, pg_url):
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    up = c.get("/part/sources?sort=name&dir=asc").text
+    assert up.index("Beans &amp; Roast") < up.index("Tea Corner") and 'aria-sort="ascending"' in up
+    down = c.get("/part/sources?sort=name&dir=desc").text
+    assert down.index("Tea Corner") < down.index("Beans &amp; Roast") and 'aria-sort="descending"' in down
+    assert down.count("aria-sort=") == 1  # only the sorted column says so
+    assert "sort=name&amp;dir=asc" in down  # its header flips the direction
+    assert "Filter / Sort (1)" in down  # a non-default order counts
+    newest = c.get("/part/sources?sort=newest").text  # the phone sheet's option
+    assert 'aria-sort="descending"' in newest and 'value="newest" checked' in newest

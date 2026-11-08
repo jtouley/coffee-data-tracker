@@ -300,8 +300,13 @@ through the unreviewed cafés whose names say "roast".
   for its domain. Every filter (status, origin, tag, state, city) and the sort (status, name, state, newest) sit in one
   panel: a sheet at the bottom on a phone, a popover under the button on a desktop. The button shows how many are in
   use. On a phone, Enter searches and the Search button is hidden, so the box keeps its width.
-- **No action buttons on rows.** A row is the place's name, its domain, city and state, the hints in muted italic
-  and a quiet status word (Roaster, Roaster (inherited), Not a roaster, Unreviewed). Selecting rows (the box, or a tap
+- **A data table on a desktop, stacked rows on a phone.** At 760 px and wider each place is one dense 44 px row:
+  select, Name, Domain (a link), City, State, Tag, Hints, Status, First seen, ⋯. A header sorts by its column and
+  again the other way (`aria-sort`, an arrow); the header row stays at the top while the page scrolls; long cells
+  end in an ellipsis with the full text in a `title`; dates are tabular. On a phone the same table shows the name,
+  a muted line of domain, city, hints and status, and the ⋯; the sheet's Sort by options replace the headers.
+- **No action buttons on rows.** The status is a quiet word (Roaster, Roaster (inherited), Not a roaster,
+  Unreviewed). Selecting rows (the box, or a tap
   on the row) shows a sticky action bar at the bottom: "N selected · Roaster · Not a roaster · Clear". That is the
   main path, for one place or many. Each row's ⋯ menu has the same actions for that place, Clear the flag on an
   explicit flag, and Open site. Undo is in the outcome line.
@@ -331,9 +336,10 @@ light and dark:
 
 ### The owner's two decisions
 
-- **Pull now** sits where the owner just acted: in the outcome line after a Roaster flag, and in the action bar for
-  the selected places. It opens the same confirm sheet as every job, with the exact command, the window's override
-  when one is needed, and a line saying the crawl follows the probe. Its live status is one small line on Sources
+- **Pull now** is in the action bar for the selected places and in the ⋯ menu of a place flagged Roaster. It opens
+  the same confirm sheet as every job, titled in words ("Probe and crawl 2 places?"), naming the places, with the
+  exact commands under Details and the window's override when one is needed. The outcome line stays short ("Marked
+  1 place as a roaster." · Undo · Dismiss) and steps aside while a confirm is open. Its live status is one small line on Sources
   ("Pull now: probe succeeded · crawl-shopify running · Jobs"), which polls while a run is going.
 - **Not a roaster** says what it did in the outcome line: "2 coffees leave the catalog in the next draft". Undo says
   what came back.
