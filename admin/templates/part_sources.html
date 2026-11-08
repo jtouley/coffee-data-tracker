@@ -15,11 +15,15 @@
   {% set st, ch = data.counts.status, data.counts.change %}
   {# Search first: the owner finds a place in the big list and flags it on its row, in one click. #}
   {{ search(f, facets, data, qs, "/sources", "Find a place: name, domain or city") }}
+  {% if flags_read %}
   <p class="answer" data-answer>{{ n(data.total) }} places · {{ n(st.get("roaster (inherited)", 0)) }} roasters from the registry · {{ n(st.get("roaster", 0)) }} flagged roaster · {{ n(st.get("not a roaster", 0)) }} not a roaster · {{ n(st.get("unreviewed", 0)) }} unreviewed</p>
-  <p class="src">Discovery’s source list (<code>candidates</code>), latest run {{ (data.meta.latest_run or "—")[:10] }}: {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone · by tag {% for tag, count in data.counts.tag | dictsort %}{{ tag or "no tag" }} {{ n(count) }}{{ " · " if not loop.last }}{% endfor %} · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
-  <p class="meta">Only roasters are probed and crawled; registry roasters inherit the flag, and a flag takes effect once a draft of it is published.</p>
+  {% else %}
+  <p class="answer" data-answer>{{ n(data.total) }} places · the flags can’t be read now, so no place’s status is shown</p>
+  {% endif %}
+  <p class="src">Discovery’s source list (<code>candidates</code>), latest run {{ (data.meta.latest_run or "—")[:10] }}: {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+  {% if flags_read %}<p class="meta">Only roasters are probed and crawled; registry roasters inherit the flag, and a flag takes effect once a draft of it is published.</p>{% endif %}
   {% set chips = f.chips() %}
-  <p class="answer" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places</p>
+  {% if chips %}<p class="answer" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places</p>{% endif %}
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}
@@ -31,15 +35,14 @@
   </div>
   {% endif %}
   <div class="frame" tabindex="0" role="region" aria-label="Places"><table class="dense sources">
-    <caption>Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, unreviewed first, those with a hint first, then by name</caption>
-    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Choose every place on this page"></th>{% endif %}<th scope="col">Place</th><th scope="col">Flag</th><th scope="col">Hints</th><th scope="col">Origin</th><th scope="col">City, state</th></tr></thead>
+    <caption>Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}{% if flags_read %}, unreviewed first{% endif %}, those with a hint first, then by name</caption>
+    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Choose every place on this page"></th>{% endif %}<th scope="col">Place and flag</th><th scope="col">Hints</th><th scope="col">City, state</th></tr></thead>
     <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}<tr>
       {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Choose {{ r.name or r.roaster_id }}"></td>{% endif %}
-      <th scope="row">{{ ev(r.url, r.name or r.roaster_id) }} <span class="meta">{{ r.roaster_id }}{% if r.change %} · {{ r.change }}{% endif %}</span></th>
-      <td>{{ r.status }}{% if not writes_off %}
-          {% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Unflag", [item]) }}{% endif %}{% endif %}</td>
+      <th scope="row">{{ ev(r.url, r.name or r.roaster_id) }} <span class="meta">{{ r.roaster_id }}{% if r.change %} · {{ r.change }}{% endif %}</span>
+        {% if r.status %}<div class="meta">{{ r.status }}{% if not writes_off %}
+          {% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Unflag", [item]) }}{% endif %}{% endif %}</div>{% endif %}</th>
       <td>{{ [r.tag, r.hint] | select | join(" · ") or "—" }}</td>
-      <td>{{ r.sources or "—" }}</td>
       <td>{{ [r.city, r.state] | select | join(", ") or "—" }}</td>
     </tr>{% endfor %}</tbody>
   </table></div>

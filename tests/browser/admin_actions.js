@@ -405,6 +405,12 @@ const errors = [];
       assert.match(main, /roaster \(inherited\)/);
       assert.ok(await page.evaluate(() => document.querySelector("form.search").compareDocumentPosition(document.querySelector("[data-answer]")) & Node.DOCUMENT_POSITION_FOLLOWING), "the search comes first");
       await shoot(page, "sources");
+      await page.setViewportSize({ width: 390, height: 844 }); // a row's flag buttons are on screen on a phone, no sideways scroll
+      for (const b of await page.locator("table.sources tbody form[data-now] button").all()) {
+        const box = await b.boundingBox();
+        assert.ok(box && box.x >= 0 && box.x + box.width <= 390, `a flag button at ${JSON.stringify(box)}`);
+      }
+      await page.setViewportSize({ width: 1280, height: 900 });
       await page.fill("#q", "https://www.ember-roastworks.example/shop"); // a pasted address finds its domain
       await page.click("form.search button[type=submit]");
       await settled(page);

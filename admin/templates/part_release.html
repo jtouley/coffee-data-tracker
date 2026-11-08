@@ -11,6 +11,8 @@
 <h2 class="section">Decisions</h2>
 {% if not p %}
   <p class="body">Decisions need the control plane, which is off.</p>
+{% elif p.sources_error %}
+  <p class="body" role="alert">{{ p.sources_error }}. No draft can be built until then.</p>
 {% elif p.drafted %}
   <p class="body">Draft <code>{{ p.drafted }}</code> already builds them: review it below.</p>
 {% elif p.added or p.removed or p.settings_changed or p.crawl_changed or p.sources_changed %}

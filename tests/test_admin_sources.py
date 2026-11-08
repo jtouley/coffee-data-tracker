@@ -53,7 +53,7 @@ def test_the_source_list_its_counts_changes_and_filters(tmp_path, lake, pg_url):
     assert (
         "Seeded Roasters" in page and "curated" in page
     )  # a seed roaster, inherited, with where it came from
-    assert "2 new, 1 gone" in page and "coffee_shop 2" in page
+    assert "2 new, 1 gone" in page and "coffee_shop (2)" in page
     assert "&lt;b&gt;New&lt;/b&gt; Cafe" in page and "<b>New</b>" not in page and "javascript:" not in page
     assert page.index("Beans &amp; Roast") < page.index("Tea Corner")  # a hint first
     assert "2 of 6 places" in c.get("/part/sources?status=roaster+(inherited)").text
@@ -133,3 +133,28 @@ def test_a_published_place_stays_in_the_next_draft(tmp_path, lake, pg_url):
         c, "/api/sources/flags", {"key": "k1", "flag": "roaster", "items": [{"roaster_id": "beans.example"}]}
     )
     assert "source flag" not in c.get("/part/release").text  # served already: nothing to build
+
+
+def test_without_the_flags_no_status_is_shown(tmp_path, lake):
+    """The control plane down: the list still reads, but no place says inherited or unreviewed, and no flag counts."""
+    from admin.controlplane import ControlPlane, url_connect
+
+    dead = ControlPlane(url_connect("postgresql://nobody@127.0.0.1:1/none"))
+    _, c, _ = make(tmp_path, lake.root, "postgresql://nobody@127.0.0.1:1/none", control_plane=dead)
+    page = c.get("/part/sources?status=unreviewed").text
+    assert "6 places · the flags can’t be read now" in page and "Seeded Roasters" in page
+    for word in ("inherited", "unreviewed", "flagged roaster", "data-write="):
+        assert word not in page, word
+
+
+def test_a_draft_is_refused_while_the_served_registry_cant_be_read(tmp_path, lake, pg_url):
+    (lake.root / "releases" / f"run_date={W1}" / f"build={B1}" / "dim_roaster.parquet").unlink()
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    post(
+        c,
+        "/api/sources/flags",
+        {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "seeded.example"}]},
+    )
+    assert "registry (dim_roaster) can&#39;t be read" in c.get("/part/release").text
+    r = post(c, "/api/drafts", {"key": "k2"})
+    assert r.status_code == 409 and "dim_roaster" in r.text  # fails closed: never an empty registry

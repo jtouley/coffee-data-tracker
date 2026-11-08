@@ -415,12 +415,23 @@ class Writes:
         # roaster) flagged not a roaster leave it.
         # `known`: the registry without the flags (the served release's, less the places its snapshot added), so a
         # published place stays in the next draft. With nothing served, every not-roaster flag is kept.
-        known = await self.read(queries.registry_ids, (served or {}).get("build_id"))
-        known -= set(snap.source_roasters(served_doc))
-        sources = sorted(p for p, f in flags.items() if f["flag"] == "roaster" and p not in known)
-        dropped = sorted(
-            p for p, f in flags.items() if f["flag"] == "not_roaster" and (p in known or not served)
-        )
+        # No flag at all: no read of the release. A served release without its registry fails closed: the served
+        # snapshot's flags are kept, and a draft is refused until the registry can be read.
+        sources_error = None
+        known: set[str] = set()
+        if flags and served:
+            got = await self.read(queries.registry_ids, served["build_id"])
+            if got is None:
+                sources_error = (f"The served release {served['build_id']}'s registry (dim_roaster) can't be read, "
+                                 "so the source flags can't be applied: try again shortly")  # fmt: skip
+            known = (got or set()) - set(snap.source_roasters(served_doc))
+        if sources_error:
+            sources, dropped = snap.source_roasters(served_doc), snap.not_roasters(served_doc)
+        else:
+            sources = sorted(p for p, f in flags.items() if f["flag"] == "roaster" and p not in known)
+            dropped = sorted(
+                p for p, f in flags.items() if f["flag"] == "not_roaster" and (p in known or not served)
+            )
         sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
                                  | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
         mine = (now, now_settings, set(off), sources, dropped)
@@ -441,11 +452,13 @@ class Writes:
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
                 "settings": doc, "settings_version": settings["version_id"], "settings_changed": settings_changed,
                 "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
-                "sources_changed": sources_changed,
+                "sources_changed": sources_changed, "sources_error": sources_error,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
+        if p["sources_error"]:
+            raise registry.Refused([p["sources_error"]])
         if not (
             p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
         ):

@@ -137,9 +137,14 @@ class SourceList:
             if p != path:
                 p.unlink(missing_ok=True)
 
-    def search(self, served: str | None, f: SourceFilters, flags: dict[str, dict]) -> dict:
-        """The places matching `f` (a page of them), counts by status, by tag and of the latest run's changes, and
-        each facet's values. `flags`: the control plane's latest flag per place."""
+    def search(self, served: str | None, f: SourceFilters, flags: dict[str, dict] | None) -> dict:
+        """The places matching `f` (a page of them), counts by status and of the latest run's changes, and each
+        facet's values. `flags`: the control plane's latest flag per place; None when it couldn't be read, and then
+        no place has a status (an inherited or unreviewed label could be wrong)."""
+        known = flags is not None
+        if flags is None:
+            flags = {}
+            f.values.pop("status", None)
         path = self.ensure(served)
         con = duckdb.connect(str(path), read_only=True)
         try:
@@ -148,10 +153,10 @@ class SourceList:
                 "batch_id": [v["batch_id"] for v in flags.values()],
             }, schema=pa.schema([("roaster_id", pa.string()), ("flag", pa.string()), ("batch_id", pa.string())])))  # fmt: skip
             # Every registry roaster inherits the roaster flag; an explicit flag, either way, wins.
-            view = """(select p.*, f.batch_id,
-                              case when f.flag = 'not_roaster' then 'not a roaster' when f.flag = 'roaster' then 'roaster'
-                                   when p.in_registry then 'roaster (inherited)' else 'unreviewed' end as status
-                       from places p left join flags f using (roaster_id))"""
+            status = ("""case when f.flag = 'not_roaster' then 'not a roaster' when f.flag = 'roaster' then 'roaster'
+                                  when p.in_registry then 'roaster (inherited)' else 'unreviewed' end"""
+                      if known else "null::varchar")  # fmt: skip
+            view = f"(select p.*, f.batch_id, {status} as status from places p left join flags f using (roaster_id))"
             where, params = f.where()
             total = _one(con, f"select count(*) from {view}")
             matching = _one(con, f"select count(*) from {view} {where}", params)
@@ -175,7 +180,7 @@ class SourceList:
                     p,
                 ).fetchall()
             counts = {k: dict(con.execute(f"select coalesce({k}, ''), count(*) from {view} group by 1").fetchall())
-                      for k in ("status", "tag", "change")}  # fmt: skip
+                      for k in ("status", "change")}  # fmt: skip
             latest_run, served_build = con.execute("select * from meta").fetchone() or (None, None)
             meta = {"latest_run": latest_run, "served": served_build}
             return {"total": total, "matching": matching, "rows": rows, "facets": facets, "counts": counts,

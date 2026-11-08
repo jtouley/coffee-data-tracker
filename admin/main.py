@@ -790,14 +790,19 @@ def create_app(
                 await on().ready()
                 return await asyncio.to_thread(on().control.source_flags)
 
-            marks = await plane(flags, {}, off) if writes else {}
+            marks = await plane(flags, None, off) if writes else None  # None: not read, statuses unknown
             try:
                 data = await reader.run(lambda _lake, _con: sources.search(served.get("build_id"), f, marks))
             except Exception as e:  # noqa: BLE001 - no discovery run has written the source list yet
                 if not (no_files(e) or "HTTP 404" in str(e)):
                     raise
                 data = None
-            return {"data": data, "f": f, "facets": SourceFilters.FACETS, "writes_off": off,
+            facets = (
+                SourceFilters.FACETS
+                if marks is not None
+                else tuple(x for x in SourceFilters.FACETS if x != "status")
+            )
+            return {"data": data, "f": f, "facets": facets, "writes_off": off, "flags_read": marks is not None,
                     "qs": _qs(request, f, None, "/sources")}  # fmt: skip
 
         return await part("sources", make)

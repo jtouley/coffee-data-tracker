@@ -102,8 +102,15 @@ way the Catalog does, and searches and pages there (100 rows a page; about 47,00
   not already in the registry) and `not_roasters` (registry roasters flagged Not a roaster). Once that draft is
   published, `registry.current` adds the flagged places from `candidates` and drops the not-roasters, so the probe
   and the weekly crawl pick them up or leave them. dbt's `stg_registry` adds the same places through the var
-  `source_roasters`. A not-roaster leaves the probe and the crawl, and stays in `dim_roaster` with its history.
-  Unreviewed places are never probed or crawled. A snapshot that can't be read applies no flags.
+  `source_roasters`. A newly flagged roaster is probed at the next probe run and crawled once a probe finds its
+  platform. Unreviewed places are never probed or crawled. A snapshot that can't be read applies no flags.
+- **What Not a roaster does today.** It stops the probe and the crawl, and nothing else. The roaster stays in
+  `dim_roaster` and `public_roaster`. Since nobody crawls it, its last run stays current, so its coffees stay
+  **listed and in stock** in `public_coffee`, frozen, until they are excluded in the Catalog. That is the way to
+  take them down. Whether Not a roaster should also hide them is the owner's decision still to make.
+- **Fails closed.** If the served release's `dim_roaster` can't be read while there are flags, Release says so and
+  refuses a draft, rather than treating the registry as empty. If the flags can't be read (control plane down),
+  Sources still lists the places but shows no status and no flag counts.
 - **Hints never flag anything.** The hints are the Overture tag and "roast" in the name. The evidence from the
   screening experiment (#130) is not shown: it is not in the lake, and the admin reads only the lake.
 

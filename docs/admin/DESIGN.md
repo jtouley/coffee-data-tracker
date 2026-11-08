@@ -328,3 +328,10 @@ through the unreviewed cafés whose names say "roast".
   the served release's less the places that release's snapshot added.
 - The page's copy is keyed on the `candidates` file listing (no read of the files) and made from exactly those files.
 - Unflag shows only on an explicit flag. The meta paragraph is one sentence.
+
+### The final review's cuts
+
+- The flag buttons sit under the place's name (one "Place and flag" column), so they're on screen at 390 px.
+- The Origin column is gone (the Origin facet groups by kind). The by-tag run is gone (the Tag facet has the counts).
+- "N of M places" shows only when a search or filter is applied.
+- Without the flags (control plane down), the page shows no status, no flag counts and no Status facet.
