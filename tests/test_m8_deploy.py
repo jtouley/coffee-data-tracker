@@ -28,6 +28,9 @@ PUBLIC_WRITES = {
     "/api/forgot",
     "/api/verify",
 }  # before an account exists
+# A form app.js didn't wire posts to its own page, which only shows it again with a notice and writes nothing
+# (tests/test_auth_gate.py: test_an_unwired_form_comes_back_with_a_notice_keeping_only_the_username).
+PUBLIC_WRITES |= {"/signin", "/join", "/reset", "/forgot"}
 
 
 def test_every_write_route_refuses_a_request_without_an_account(app):  # noqa: F811

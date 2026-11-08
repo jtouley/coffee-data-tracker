@@ -113,7 +113,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   `select release_run_date from SHARE.COFFEE` (or `RELEASE_RUN_DATE`, or `"RELEASE_RUN_DATE"`). The tables in
   `MARKET` keep their names, and the views keep their descriptions in their definition. Columns are compared in any
   case, and the first load after this change recreates the existing views (`copy grants`) without `--migrate`; a
-  view another role owns is left as it is, with a warning, and the data still loads. The
+  view it can't recreate (another role owns it, the share is missing it and the loader can't grant it, or its
+  grants can't be read) is left as it is, with a warning on the workflow run, and the data still loads. Each
+  recreated view is read back, and the job fails if one is no longer in the share. The
   listing's sample queries are unquoted and upper case: query 3 keeps its `EVENT = 'price'` filter, and query 4, a
   summary by origin, is new.
 
@@ -169,6 +171,9 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
   An exception from one roaster's fetch is always that roaster's error.
 
 ### Security
+
+- App: the sign-in, join, reset and change-password forms post, so a form app.js didn't wire never puts the
+  password in the URL, and the sign-in screen's clearing of offline pages can no longer stop the forms being wired.
 
 - App: queued writes are bound to the account that queued them. After an account switch, a queued save is held on
   the phone instead of being written under the other account (#56).

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import legal, rules_json, username_field, new_password, agree_box, status_line %}
+{% from "_macros.html" import legal, rules_json, username_field, new_password, agree_box, status_line, unloaded_notice %}
 {% block title %}{{ "Set up" if owner_setup else "Sign in" }} · registry.coffee{% endblock %}
 {% block main %}
   <h1 class="mt48 serif wordmark"><a class="home" href="{{ site.site }}/">registry.coffee</a></h1>
@@ -9,24 +9,25 @@
   <p class="body mt12 lede">Log each shot at the machine and see how every bag dials in.</p>
   {% endif %}
   {% if ended == "ended" %}
-  <p class="notice" role="status">You’ve been signed out. Sign in again to carry on.</p>
+  <p class="notice">You’ve been signed out. Sign in again to continue.</p>
   {% elif ended == "failed" %}
-  <p class="notice" role="status">We couldn’t check your sign-in just now. Try again in a moment.</p>
+  <p class="notice">We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in.</p>
   {% endif %}
-  <form id="signin" class="fill" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
+  {{ unloaded_notice(unloaded) }}
+  <form id="signin" class="fill" method="post" data-ended="{{ ended or '' }}" data-owner-setup="{{ 'true' if owner_setup else 'false' }}" data-busy="{{ 'Creating account…' if owner_setup else 'Signing in…' }}" novalidate>
     {% if owner_setup %}
     <label class="flabel" for="setup_code">Setup code</label>
     <input class="input" id="setup_code" name="setup_code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="setup_code-error" required>
     <p class="ferr" id="setup_code-error" data-error-for="setup_code"></p>
-    {{ username_field() }}
+    {{ username_field(value=username) }}
     {{ new_password() }}
     {{ agree_box() }}
     {% else %}
     <label class="flabel" for="username">Username</label>
-    <input class="input" id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+    <input class="input" id="username" name="username"{% if username %} value="{{ username }}"{% endif %} autocomplete="username" autocapitalize="none" spellcheck="false" required>
     <label class="flabel" for="password">Password</label>
     <div class="pw">
-      <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+      <input class="input" id="password" name="password" type="password" autocomplete="current-password"{% if unloaded %} aria-describedby="unloaded-notice"{% endif %}{% if username %} autofocus{% endif %} required>
       <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
     </div>
     {% endif %}

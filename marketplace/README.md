@@ -60,9 +60,15 @@ never holds the site back):
   comment '...', ...) copy grants comment = '...' as select "release_run_date", ... from MARKET.public_coffee`),
   so consumers write `RELEASE_RUN_DATE` (or `release_run_date`) without quotes. Columns are compared in any case.
   A share view with the export's columns that isn't upper case yet (made by `admin_setup.sql` part 2, or before
-  this change) is recreated by any load, after the same ownership and share checks as a migration; no
-  `--migrate` is needed. To do it at once rather than at the Tuesday `site` run:
-  `gh workflow run weekly -f snowflake_migrate=true`.
+  this change) is recreated by any load; no `--migrate` is needed. Unlike a migration, an ordinary load never
+  stops for it: if another role owns the view, the share is missing it and COFFEE_LOADER can't grant it, or its
+  grants can't be read, the load leaves that view lower case, loads the data, and warns (on stderr and as a
+  warning on the workflow run's summary page) with the statement that fixes it. After recreating a view, the load
+  reads its grants back and fails the job if the view is no longer in the share. To re-case before the Tuesday
+  `site` run, `gh workflow run weekly -f snowflake_migrate=true` works too, but it is the strict path: it stops,
+  loading nothing, if any view can't be recreated. Run `coffeedata load-snowflake --migrate --dry-run` first to
+  see what it would refuse; a dry run only records the `grant … to share` statements, so a share grant that would
+  fail shows only in the real run.
 
 Databricks loads from S3 or GCS.
 
