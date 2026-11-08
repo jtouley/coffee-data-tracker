@@ -296,42 +296,64 @@ through the unreviewed cafés whose names say "roast".
 
 ### Decisions on the design
 
-- **Search first.** The search box is the first thing on the page, above the counts. A pasted address
-  (`https://www.example.com/shop`) searches for its domain. There is no "add a roaster" form: discovery already
-  lists about 47,000 places, and a form is a user-facing tool, not an admin one.
-- **One click on the row.** Roaster and Not a roaster are text buttons in the Flag column, posted at once with Undo
-  in the outcome line, with no confirm sheet. A flag changes nothing until a draft is published, and it can be
-  undone. Ticked rows take the same two buttons in the bulk bar.
-- **Inherited is a status, not a flag.** Registry roasters show "roaster (inherited)" and their origin (curated,
-  manual, overture, ...). Nothing happens to them unless the owner flags one.
-- **No new component.** The page reuses the Catalog's search, facets, chips and pager. These are now shared macros
-  (`search`, `pager` in `_macros.html`), and `catalog.Filters` takes its facets and search columns from the class,
-  so the Sources page subclasses it.
+- **Search first, one Filter / Sort button beside it.** A pasted address (`https://www.example.com/shop`) searches
+  for its domain. Every filter (status, origin, tag, state, city) and the sort (status, name, state, newest) sit in one
+  panel: a sheet at the bottom on a phone, a popover under the button on a desktop. The button shows how many are in
+  use. On a phone, Enter searches and the Search button is hidden, so the box keeps its width.
+- **No action buttons on rows.** A row is the place's name, its domain, city and state, the hints in muted italic
+  and a quiet status word (Roaster, Roaster (inherited), Not a roaster, Unreviewed). Selecting rows (the box, or a tap
+  on the row) shows a sticky action bar at the bottom: "N selected · Roaster · Not a roaster · Clear". That is the
+  main path, for one place or many. Each row's ⋯ menu has the same actions for that place, Clear the flag on an
+  explicit flag, and Open site. Undo is in the outcome line.
+- **One count line.** "N to review of M places · new and gone in the latest run", then one small line of the other
+  statuses. The Status and Tag facets carry the per-status and per-tag counts.
+- **No "add a roaster" form:** discovery lists about 47,000 places; search, then flag.
+- **Inherited is a status, not a flag.** Nothing happens to a registry roaster unless the owner flags one.
+- **Reuse.** `catalog.Filters` takes its facets and search columns from the class, so `SourceFilters` subclasses
+  it and adds the sort. The pager is a shared macro. The panel and the ⋯ menu are the page's own (a `<dialog>` and a
+  `<details>`), styled from the existing tokens.
 
-### Skills used (this pass)
+### Skills used (the redesign's review)
 
-- MengTo `no-ai-design-slop`: the existing system only; statuses are words; no badges or tiles for counts.
-- Owl-Listener `critique-information-density`: one answer line of counts by status, one source line (latest run,
-  new and gone, by tag), five columns.
-- Krehel `better-layout`: the search, then identity (name and domain) before the flag, hints and origin; the table
-  scrolls in its frame at 390 px.
+Run on the screenshots of the realistic fixture (about 3,000 cafés beside the registry), at 390 px and desktop,
+light and dark:
+- MengTo `no-ai-design-slop`: the hint rendered in the danger colour (it borrowed the form-error class), which says
+  "error" for a neutral cue. It is now plain `--ink-2` text, like the rest of the row's metadata.
+- Owl-Listener `critique-information-density`: the count line ran to four lines on a phone. It is now one answer
+  line plus one small line. The filter panel stacked five full-width selects; it now uses two columns.
+- Owl-Listener `accessibility-audit`: the action bar could hide the focused row (WCAG 2.4.11); the page now reserves
+  scroll padding while it shows. Its count is announced (`aria-live`). The ⋯ menu closes on Escape and returns focus;
+  the panel is a modal dialog with Escape and its title. Targets are 44 px. axe passes.
+- Krehel `better-layout`: on a phone the search box shrank to fit three controls (Search, Filter / Sort); the
+  Search button is hidden there. The panel's actions fell below the fold on a phone sheet; they are sticky at its
+  foot. The action bar wrapped Clear to a second line at 390 px; it fits one line. On a desktop the status sat far
+  from its row's ⋯; it is right-aligned beside it.
+
+### Following Bench Scale (`docs/app/DESIGN.md`)
+
+- **Flat, with hairlines.** The panel, the ⋯ menu and the action bar have a `--control` border and no shadow ("shadows
+  read as smudges"). The phone panel is the app's sheet: `--sheet`, 14 px top corners, rising from the bottom.
+- **Status text** is the app's: 13 px `--ink-2`, no border, after the name. Chips stay tappable only (the filter
+  chips); status is never a chip or a badge.
+- **One accent meaning.** The accent marks what you can tap (⋯, Clear, the menu's items); the one filled button is
+  "Show places" in the panel and Search on a desktop.
+- **Type and space** from the app's scale (13, 15, 17, 24; 4 to 24 px steps); the panel's title is the serif, as
+  every sheet's is.
+- **Departures, and why:** no grabber on the sheet (it can't be dragged; Close and Escape dismiss it); 44 px targets
+  rather than the app's 48, as everywhere in the admin (it's read at a desk, and dense); the action bar sits at the
+  foot like the app's dock, not at the top like the Catalog's bulk bar, because the owner asked for it there on a
+  phone.
 
 ### Cut
 
 - The screening evidence as a hint (see the README: not in the lake).
-- Two copies of the search form and pager (Catalog and Sources): one macro each.
-- An "add a roaster" form, at the owner's request: search, then flag.
+- An "add a roaster" form, at the owner's request.
+- The row buttons, the Flag, Hints, Origin and City columns, the Hint and Change facets, the by-tag run and the
+  explanation paragraph.
 
-### The review's fixes
+### The reviews' fixes
 
 - A place flagged Roaster stays in every later draft once it is published. The registry it is compared against is
   the served release's less the places that release's snapshot added.
 - The page's copy is keyed on the `candidates` file listing (no read of the files) and made from exactly those files.
-- Unflag shows only on an explicit flag. The meta paragraph is one sentence.
-
-### The final review's cuts
-
-- The flag buttons sit under the place's name (one "Place and flag" column), so they're on screen at 390 px.
-- The Origin column is gone (the Origin facet groups by kind). The by-tag run is gone (the Tag facet has the counts).
-- "N of M places" shows only when a search or filter is applied.
 - Without the flags (control plane down), the page shows no status, no flag counts and no Status facet.

@@ -397,51 +397,73 @@ const errors = [];
       await page.click("dialog#confirm [data-close]");
     });
 
-    await check("Sources: search first, flag a row Roaster in one click, then Undo from the outcome", async () => {
+    await check("Sources: search first, one Filter / Sort panel, compact rows with a quiet status and a ⋯ menu", async () => {
       await page.goto(`${cfg.act}/sources`);
       await settled(page);
       const main = await page.textContent("main");
+      assert.match(main, /to review of .* places/);
       assert.match(main, /roasters from the registry · 0 flagged roaster/);
-      assert.match(main, /roaster \(inherited\)/);
+      assert.match(main, /Unreviewed/);
+      assert.equal(await page.locator("table.sources tbody form[data-now]:visible").count(), 0, "no action button on a row");
       assert.ok(await page.evaluate(() => document.querySelector("form.search").compareDocumentPosition(document.querySelector("[data-answer]")) & Node.DOCUMENT_POSITION_FOLLOWING), "the search comes first");
       await shoot(page, "sources");
-      await page.setViewportSize({ width: 390, height: 844 }); // a row's flag buttons are on screen on a phone, no sideways scroll
-      for (const b of await page.locator("table.sources tbody form[data-now] button").all()) {
-        const box = await b.boundingBox();
-        assert.ok(box && box.x >= 0 && box.x + box.width <= 390, `a flag button at ${JSON.stringify(box)}`);
+      await page.setViewportSize({ width: 390, height: 844 });
+      for (const sel of ["[data-panel]", ".tabs a.on", "table.sources tbody summary >> nth=0"]) { // on screen at 390, 44 px targets
+        const box = await page.locator(sel).first().boundingBox();
+        assert.ok(box && box.x >= 0 && box.x + box.width <= 390 && box.height >= 44, `${sel} at ${JSON.stringify(box)}`);
       }
       await page.setViewportSize({ width: 1280, height: 900 });
-      await page.fill("#q", "https://www.ember-roastworks.example/shop"); // a pasted address finds its domain
-      await page.click("form.search button[type=submit]");
+      await page.click("[data-panel]");
+      await page.waitForSelector("dialog#filters[open]");
+      await shoot(page, "sources-panel", true);
+      await page.keyboard.press("Escape");
+      await page.waitForFunction(() => !document.querySelector("dialog#filters").open);
+      await page.click("[data-panel]");
+      await page.check("dialog#filters input[name=sort][value=name]");
+      await page.selectOption("dialog#filters select[name=tag]", "coffee_shop");
+      await page.click("dialog#filters button[type=submit]");
+      await settled(page);
+      assert.match(await page.textContent("[data-panel]"), /Filter \/ Sort \(2\)/);
+      assert.match(await page.textContent("[data-answer-matching]"), / of .* places match/);
+    });
+
+    await check("Sources: a row's ⋯ menu flags one place Roaster (keyboard too), then Undo from the outcome", async () => {
+      await page.goto(`${cfg.act}/sources?q=${encodeURIComponent("https://www.ember-roastworks.example/shop")}`); // a pasted address finds its domain
       await settled(page);
       assert.match(await page.textContent("[data-answer-matching]"), /^1 of /);
       assert.match(await page.textContent("table.sources"), /roast in the name/);
-      await page.click("table.sources form[data-now] button:text-is('Roaster')");
+      await page.focus("table.sources summary");
+      await page.keyboard.press("Enter");
+      await page.waitForSelector("details[data-rowmenu][open]");
+      await page.keyboard.press("Escape");
+      await page.waitForFunction(() => !document.querySelector("details[data-rowmenu][open]"));
+      assert.ok(await page.evaluate(() => document.activeElement.matches("details[data-rowmenu] summary")), "focus back on ⋯");
+      await page.click("table.sources summary");
+      await shoot(page, "sources-menu", true);
+      await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
       await toast(page, /Flagged 1 place/);
       await settled(page);
-      assert.match(await page.textContent("table.sources"), /\broaster\b/);
-      await shoot(page, "sources-flagged");
+      assert.match(await page.textContent("table.sources"), /Roaster/);
       await page.click("[data-result] [data-undo]");
       await toast(page, /Undone \(1\)/);
       await settled(page);
-      assert.match(await page.textContent("table.sources"), /unreviewed/);
-      await page.click("table.sources form[data-now] button:text-is('Roaster')");
+      assert.match(await page.textContent("table.sources"), /Unreviewed/);
+      await page.click("table.sources summary");
+      await page.click("details[data-rowmenu][open] button:text-is('Roaster')");
       await toast(page, /Flagged 1 place/);
     });
 
-    await check("Sources: tick two cafés and flag them Not a roaster together", async () => {
+    await check("Sources: select two places (tap a row, tick a box), then Not a roaster from the action bar", async () => {
       await page.goto(`${cfg.act}/sources?status=unreviewed`);
       await settled(page);
-      const n = await page.locator("input[data-pick]").count();
-      assert.ok(n >= 2, `${n} unreviewed`);
-      await page.check("input[data-pick] >> nth=0");
+      await page.click("table.sources tbody tr >> nth=0 >> .pname"); // a tap on the row selects it
       await page.check("input[data-pick] >> nth=1");
-      assert.match(await page.textContent("[data-bulk-count]"), /2 chosen/);
+      assert.match(await page.textContent("[data-bulk-count]"), /2 selected/);
+      await shoot(page, "sources-selected", true);
       await page.click("[data-bulk] button:text-is('Not a roaster')");
       await toast(page, /Flagged 2 places/);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /1 flagged roaster · 2 not a roaster/);
-      await shoot(page, "sources-bulk");
+      assert.match(await page.textContent("[data-counts]"), /1 flagged roaster · 2 not a roaster/);
     });
 
     await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {

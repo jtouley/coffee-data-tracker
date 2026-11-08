@@ -1,52 +1,75 @@
-{% from "_macros.html" import ev, write_off, search, pager %}
-{# Flag places roaster or not a roaster: one click, posted at once with Undo in the outcome line (admin.js data-now);
-   `picks` takes the ticked rows instead. #}
+{% from "_macros.html" import write_off, pager %}
+{# A flag write, posted at once with Undo in the outcome line (admin.js data-now): for the selected rows (the action
+   bar, `data-picks`) or for one place (its ⋯ menu). #}
 {% macro flag(value, label, items=none, cls="text") -%}
 <form class="inline-form" data-write="/api/sources/flags" data-now{% if items is none %} data-picks{% endif %}>
   <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="flag" value="{{ value }}"><input type="hidden" name="items" value='{{ (items or []) | tojson }}' data-json>
   <button class="btn {{ cls }} inline" type="submit" data-busy="Flagging…">{{ label }}</button>
 </form>
 {%- endmacro %}
-<div data-state="{{ 'data' if data and data.matching else 'empty' }}">
+{% set label = {"roaster": "Roaster", "roaster (inherited)": "Roaster (inherited)", "not a roaster": "Not a roaster", "unreviewed": "Unreviewed"} %}
+<div class="sources-page" data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not data or not data.total %}
   <div class="state empty mt16"><h2 class="section">No places yet</h2><p class="body">The served release lists no roasters, and the lake has no <code>candidates</code>: discovery (<code>coffeedata discover overture</code>, the monthly discover job) records every place it reads there, from its next run.</p></div>
 {% else %}
-  {% set st, ch = data.counts.status, data.counts.change %}
-  {# Search first: the owner finds a place in the big list and flags it on its row, in one click. #}
-  {{ search(f, facets, data, qs, "/sources", "Find a place: name, domain or city") }}
+  {% set st, ch, used = data.counts.status, data.counts.change, f.in_use() %}
+  {# Search first, with one Filter / Sort button beside it: the panel is a sheet on a phone, a popover on a desktop. #}
+  <form class="search" method="get" action="/sources" role="search">
+    <label class="label" for="q">Find a place: name, domain or city</label>
+    <div class="searchrow"><input class="input" id="q" name="q" type="search" value="{{ f.q }}" autocomplete="off" spellcheck="false"><button class="btn primary inline wide-only" type="submit">Search</button><button class="btn secondary inline" type="button" data-panel="filters" aria-haspopup="dialog" aria-controls="filters">Filter / Sort{% if used %} ({{ used }}){% endif %}</button></div>
+    <dialog class="sheet panel" id="filters" aria-labelledby="filters-title">
+      <h2 class="serif title-s" id="filters-title">Filter and sort</h2>
+      <div class="facets">
+        {% for name in facets %}
+        <label class="facet"><span class="label">{{ name | capitalize }}</span>
+          <select name="{{ name }}" class="select">
+            <option value="">Any</option>
+            {% for value, count in data.facets[name] %}<option value="{{ value }}"{% if f.values.get(name) == value %} selected{% endif %}>{{ value }} ({{ n(count) }})</option>{% endfor %}
+          </select></label>
+        {% endfor %}
+      </div>
+      <fieldset class="sorts"><legend class="label">Sort by</legend>
+        {% for key, (text, _) in sorts.items() %}<label class="radio"><input type="radio" name="sort" value="{{ key }}"{% if f.sort == key %} checked{% endif %}> {{ text }}</label>{% endfor %}
+      </fieldset>
+      <div class="actions"><button class="btn primary inline" type="submit">Show places</button><a class="btn text inline" href="/sources{% if f.q %}?q={{ f.q | urlencode }}{% endif %}">Clear</a><button class="btn text inline" type="button" data-panel-close>Close</button></div>
+    </dialog>
+  </form>
+  {% set chips = f.chips() %}
+  {% if chips %}<ul class="chips" aria-label="Applied filters">{% for key, text in chips %}<li><a class="chip quiet" href="{{ qs(**{key: none}) }}" aria-label="Remove filter {{ text }}">{{ text }}<span class="x" aria-hidden="true">×</span></a></li>{% endfor %}</ul>{% endif %}
   {% if flags_read %}
-  <p class="answer" data-answer>{{ n(data.total) }} places · {{ n(st.get("roaster (inherited)", 0)) }} roasters from the registry · {{ n(st.get("roaster", 0)) }} flagged roaster · {{ n(st.get("not a roaster", 0)) }} not a roaster · {{ n(st.get("unreviewed", 0)) }} unreviewed</p>
+  <p class="answer" data-answer>{{ n(st.get("unreviewed", 0)) }} to review of {{ n(data.total) }} places{% if data.meta.latest_run %} · {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone in the {{ data.meta.latest_run[:10] }} run{% endif %}</p>
+  <p class="src" data-counts>{{ n(st.get("roaster (inherited)", 0)) }} roasters from the registry · {{ n(st.get("roaster", 0)) }} flagged roaster · {{ n(st.get("not a roaster", 0)) }} not a roaster</p>
   {% else %}
   <p class="answer" data-answer>{{ n(data.total) }} places · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
-  <p class="src">Discovery’s source list (<code>candidates</code>), latest run {{ (data.meta.latest_run or "—")[:10] }}: {{ n(ch.get("new", 0)) }} new, {{ n(ch.get("gone", 0)) }} gone · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
-  {% if flags_read %}<p class="meta">Only roasters are probed and crawled; registry roasters inherit the flag, and a flag takes effect once a draft of it is published.</p>{% endif %}
-  {% set chips = f.chips() %}
-  {% if chips %}<p class="answer" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places</p>{% endif %}
+  {% if chips %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ n(data.total) }} places match</p>{% endif %}
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}
+  <table class="sources">
+    <caption class="vh">Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}, sorted by {{ sorts[f.sort][0] | lower }}</caption>
+    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Select every place on this page"></th>{% endif %}<th scope="col">Place</th><th scope="col" class="only-wide status-col">Status</th><th scope="col" class="act"><span class="vh">Actions</span></th></tr></thead>
+    <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}{% set name = r.name or r.roaster_id %}<tr data-row>
+      {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Select {{ name }}"></td>{% endif %}
+      <th scope="row"><span class="pname">{{ name }}</span>
+        <span class="meta">{{ [r.roaster_id, [r.city, r.state] | select | join(", ")] | select | join(" · ") }}{% if r.tag or r.hint %} · {{ [r.tag, r.hint] | select | join(", ") }}{% endif %}{% if r.change %} · {{ r.change }}{% endif %}{% if r.status %}<span class="only-narrow"> · <span class="status">{{ label[r.status] }}</span></span>{% endif %}</span></th>
+      <td class="only-wide status-col"><span class="status">{{ label[r.status] if r.status else "—" }}</span></td>
+      <td class="act"><details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="Actions for {{ name }}">⋯</summary>
+        <div class="menu">
+          {% if r.status and not writes_off %}{% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Clear the flag", [item]) }}{% endif %}{% endif %}
+          {% if r.url %}<a class="btn text inline" href="{{ r.url }}" target="_blank" rel="noopener noreferrer">Open site</a>{% endif %}
+        </div></details></td>
+    </tr>{% endfor %}</tbody>
+  </table>
+  {{ pager(data, qs) }}
   {% if not writes_off %}
-  <div class="bulk" data-bulk hidden role="region" aria-label="Chosen places">
-    <span data-bulk-count>0 chosen</span>
+  <div class="bulk bar-bottom" data-bulk data-word="selected" hidden role="region" aria-label="Selected places">
+    <span data-bulk-count aria-live="polite">0 selected</span>
     {{ flag("roaster", "Roaster", cls="secondary") }}{{ flag("not_roaster", "Not a roaster", cls="secondary") }}
     <button class="btn text inline" type="button" data-bulk-clear>Clear</button>
   </div>
   {% endif %}
-  <div class="frame" tabindex="0" role="region" aria-label="Places"><table class="dense sources">
-    <caption>Places {{ (data.page - 1) * 100 + 1 }}–{{ (data.page - 1) * 100 + data.rows | length }}{% if flags_read %}, unreviewed first{% endif %}, those with a hint first, then by name</caption>
-    <thead><tr>{% if not writes_off %}<th scope="col" class="pick"><input type="checkbox" data-pick-all aria-label="Choose every place on this page"></th>{% endif %}<th scope="col">Place and flag</th><th scope="col">Hints</th><th scope="col">City, state</th></tr></thead>
-    <tbody>{% for r in data.rows %}{% set item = {"roaster_id": r.roaster_id, "seen": r.batch_id} %}<tr>
-      {% if not writes_off %}<td class="pick"><input type="checkbox" data-pick='{{ item | tojson }}' aria-label="Choose {{ r.name or r.roaster_id }}"></td>{% endif %}
-      <th scope="row">{{ ev(r.url, r.name or r.roaster_id) }} <span class="meta">{{ r.roaster_id }}{% if r.change %} · {{ r.change }}{% endif %}</span>
-        {% if r.status %}<div class="meta">{{ r.status }}{% if not writes_off %}
-          {% if r.status in ("unreviewed", "not a roaster") %}{{ flag("roaster", "Roaster", [item]) }}{% endif %}{% if r.status != "not a roaster" %}{{ flag("not_roaster", "Not a roaster", [item]) }}{% endif %}{% if r.status in ("roaster", "not a roaster") %}{{ flag("unreviewed", "Unflag", [item]) }}{% endif %}{% endif %}</div>{% endif %}</th>
-      <td>{{ [r.tag, r.hint] | select | join(" · ") or "—" }}</td>
-      <td>{{ [r.city, r.state] | select | join(", ") or "—" }}</td>
-    </tr>{% endfor %}</tbody>
-  </table></div>
-  {{ pager(data, qs) }}
   {% endif %}
 {% endif %}
 </div>

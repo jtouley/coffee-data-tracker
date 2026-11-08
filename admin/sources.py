@@ -9,7 +9,9 @@ from __future__ import annotations
 import hashlib
 import os
 import threading
+from dataclasses import dataclass
 from pathlib import Path
+from typing import cast
 
 import duckdb
 import pyarrow as pa
@@ -27,19 +29,35 @@ EMPTY = ("(select null::timestamptz as added_at, null::varchar as source, null::
          "null::varchar[] as tags, null::boolean as roast_in_name where false)")  # fmt: skip
 
 
+# The Filter / Sort panel's orders: the first is the default (the places to review first, those with a hint first).
+SORTS = {
+    "status": ("Status, to review first", "status = 'unreviewed' desc, hint is null, name, roaster_id"),
+    "name": ("Name", "name, roaster_id"),
+    "state": ("State, then city", "state nulls last, city nulls last, name, roaster_id"),
+    "newest": ("Newest listed", "first_seen desc nulls last, name, roaster_id"),
+}
+
+
+@dataclass
 class SourceFilters(Filters):
-    FACETS = ("status", "origin", "tag", "hint", "change", "state", "city")
+    FACETS = ("status", "origin", "tag", "state", "city")
     COLUMN = {f: f for f in FACETS}
     SEARCH = ("name", "roaster_id", "coalesce(city, '')")
     PRICES = False
+    sort: str = "status"
 
     @classmethod
     def from_query(cls, params) -> SourceFilters:
         """A pasted address finds its place: `https://www.example.com/shop` searches for `example.com`."""
-        f = super().from_query(params)
+        f = cast(SourceFilters, super().from_query(params))
         if "://" in f.q or f.q.lower().startswith("www."):
             f.q = normalize_domain(f.q)
-        return f  # type: ignore[return-value]
+        f.sort = s if (s := params.get("sort")) in SORTS else "status"
+        return f
+
+    def in_use(self) -> int:
+        """How many filters and orders the panel has applied (the button's count)."""
+        return len(self.values) + (self.sort != "status")
 
 
 class SourceList:
@@ -163,7 +181,7 @@ class SourceList:
             cur = con.execute(
                 f"""select roaster_id, name, city, state, website, tag, hint, sources, status, change, batch_id,
                            in_registry, first_seen, last_seen from {view} {where}
-                    order by status = 'unreviewed' desc, hint is null, name, roaster_id
+                    order by {SORTS[f.sort][1]}
                     limit {PAGE} offset {(f.page - 1) * PAGE}""",
                 params,
             )

@@ -239,8 +239,19 @@ document.addEventListener("click", async (e) => {
   }
 });
 
+// A phone shows the page's own tab (the tabs scroll sideways), and folds the filters unless some are applied.
+function fit() {
+  const on = document.querySelector(".tabs a.on");
+  if (on) on.parentElement.scrollLeft = on.offsetLeft - on.parentElement.offsetLeft - 12;
+  if (!matchMedia("(min-width: 760px)").matches) {
+    document.querySelectorAll("details[data-filters]:not([data-applied])").forEach((d) => { d.open = false; });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section[data-part]").forEach(loadPart);
+  fit();
+  matchMedia("(min-width: 760px)").addEventListener("change", fit);
 });
 
 // --- writes ------------------------------------------------------------------------------------------------------
@@ -464,7 +475,7 @@ function updateBulk() {
   if (!bar) return;
   const n = picks().length;
   bar.hidden = n === 0;
-  $(bar, "[data-bulk-count]").textContent = `${n} chosen`;
+  $(bar, "[data-bulk-count]").textContent = `${n} ${bar.dataset.word || "chosen"}`;
 }
 
 document.addEventListener("change", (e) => {
@@ -492,5 +503,43 @@ document.addEventListener("click", async (e) => {
     showResult(refusal(err));
   } finally {
     busy(b, false);
+  }
+});
+
+// --- Sources: the Filter / Sort panel, tapping a row to select it, and each row's ⋯ menu ----------------------------
+
+document.addEventListener("click", (e) => {
+  const open = e.target.closest("[data-panel]");
+  if (open) {
+    const d = document.getElementById(open.getAttribute("aria-controls"));
+    const r = open.getBoundingClientRect(); // a desktop shows it as a popover under the button
+    d.style.setProperty("--panel-top", `${Math.round(r.bottom + 8)}px`);
+    d.style.setProperty("--panel-left", `${Math.round(Math.max(16, Math.min(r.right - 512, innerWidth - 528)))}px`);
+    d.showModal();
+    return;
+  }
+  const d = e.target.closest("dialog.panel");
+  if (d && (e.target === d || e.target.closest("[data-panel-close]"))) { // the backdrop, or Close
+    d.close();
+    return;
+  }
+  // One ⋯ menu open at a time; a click elsewhere closes it.
+  document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { if (!m.contains(e.target)) m.open = false; });
+  const row = e.target.closest("tr[data-row]");
+  if (row && !e.target.closest("a, button, input, summary, details, label")) {
+    const box = row.querySelector("input[data-pick]");
+    if (box) {
+      box.checked = !box.checked;
+      updateBulk();
+    }
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  const m = e.target.closest && e.target.closest("details[data-rowmenu][open]");
+  if (m) {
+    m.open = false;
+    m.querySelector("summary").focus();
   }
 });

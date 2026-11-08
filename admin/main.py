@@ -43,7 +43,7 @@ from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
 from .runjobs import JobsError
-from .sources import SourceFilters, SourceList
+from .sources import SORTS, SourceFilters, SourceList
 from .store import StoreError
 from .writes import StartedUnrecorded, Writes
 
@@ -803,6 +803,7 @@ def create_app(
                 else tuple(x for x in SourceFilters.FACETS if x != "status")
             )
             return {"data": data, "f": f, "facets": facets, "writes_off": off, "flags_read": marks is not None,
+                    "sorts": SORTS,
                     "qs": _qs(request, f, None, "/sources")}  # fmt: skip
 
         return await part("sources", make)

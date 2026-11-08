@@ -48,7 +48,8 @@ def test_the_source_list_its_counts_changes_and_filters(tmp_path, lake, pg_url):
     _, c, _ = make(tmp_path, lake.root, pg_url)
     page = c.get("/part/sources").text
     assert (
-        "6 places · 2 roasters from the registry · 0 flagged roaster · 0 not a roaster · 4 unreviewed" in page
+        "4 to review of 6 places" in page
+        and "2 roasters from the registry · 0 flagged roaster · 0 not a roaster" in page
     )
     assert (
         "Seeded Roasters" in page and "curated" in page
@@ -58,7 +59,6 @@ def test_the_source_list_its_counts_changes_and_filters(tmp_path, lake, pg_url):
     assert page.index("Beans &amp; Roast") < page.index("Tea Corner")  # a hint first
     assert "2 of 6 places" in c.get("/part/sources?status=roaster+(inherited)").text
     assert "1 of 6 places" in c.get("/part/sources?origin=curated").text
-    assert "1 of 6 places" in c.get("/part/sources?change=gone").text
     assert "1 of 6 places" in c.get("/part/sources?q=tea").text
     assert "1 of 6 places" in c.get("/part/sources?q=https://www.good.example/shop").text  # a pasted address
     assert "2 of 6 places" in c.get("/part/sources?tag=coffee_shop").text
@@ -99,13 +99,13 @@ def test_flags_one_click_bulk_undo_conflict_and_the_draft(tmp_path, lake, pg_url
 
 def test_a_registry_roaster_marked_not_a_roaster_leaves_the_next_draft(tmp_path, lake, pg_url):
     _, c, _ = make(tmp_path, lake.root, pg_url)
-    assert "roaster (inherited)" in c.get("/part/sources?q=seeded").text  # nothing happens by default
+    assert "Roaster (inherited)" in c.get("/part/sources?q=seeded").text  # nothing happens by default
     r = post(
         c,
         "/api/sources/flags",
         {"key": "k1", "flag": "not_roaster", "items": [{"roaster_id": "seeded.example"}]},
     )
-    assert r.status_code == 200 and "not a roaster" in c.get("/part/sources?q=seeded").text
+    assert r.status_code == 200 and "Not a roaster</span>" in c.get("/part/sources?q=seeded").text
     d = post(c, "/api/drafts", {"key": "k2"}).json()
     doc = json.loads((tmp_path / "snapshots" / decisions.key(d["snapshot_id"])).read_text())
     assert decisions.not_roasters(doc) == ["seeded.example"] and decisions.source_roasters(doc) == []
@@ -158,3 +158,12 @@ def test_a_draft_is_refused_while_the_served_registry_cant_be_read(tmp_path, lak
     assert "registry (dim_roaster) can&#39;t be read" in c.get("/part/release").text
     r = post(c, "/api/drafts", {"key": "k2"})
     assert r.status_code == 409 and "dim_roaster" in r.text  # fails closed: never an empty registry
+
+
+def test_sort_orders_and_the_panel_count(tmp_path, lake, pg_url):
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    page = c.get("/part/sources?sort=name&tag=coffee_shop").text
+    assert "Filter / Sort (2)" in page and 'value="name" checked' in page
+    names = c.get("/part/sources?sort=name").text
+    assert names.index("Beans &amp; Roast") < names.index("Good Coffee") < names.index("Tea Corner")
+    assert "Filter / Sort</button>" in c.get("/part/sources?sort=bogus").text  # an unknown order: the default

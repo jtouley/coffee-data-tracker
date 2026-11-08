@@ -211,16 +211,46 @@ if __name__ == "__main__":  # python -m tests.admin_fixture <root>: for the Play
 
 
 def list_sources(lake_dir: Path, at: datetime) -> None:
-    """Give a copy of the built lake a discovery source list (lake `candidates`) for the Sources page: cafés, one
-    with "roast" in its name, and a coffee shop. The places are made up; nothing fetches them."""
+    """Give a copy of the built lake a discovery source list (lake `candidates`) for the Sources page, shaped like
+    production's: about 3,000 cafés and coffee shops (some with "roast" in the name) beside the registry, from two
+    runs, so some are new and some gone. The places are made up; nothing fetches them."""
+    first, second = ("Blue", "Copper", "Ember", "Little", "North", "Golden", "Lucky", "Third", "Wild", "Corner"), (
+        "Bean", "Cup", "Grind", "Kettle", "Mug", "Brew", "Press", "Pour", "Drip", "Crema")  # fmt: skip
+    kinds = (
+        "Cafe",
+        "Coffee House",
+        "Coffee Bar",
+        "Espresso",
+        "Roasters",
+        "Coffee",
+        "Cafe & Bakery",
+        "Coffee Co",
+    )
+    towns = (("Bend", "OR"), ("Eugene", "OR"), ("Boise", "ID"), ("Tacoma", "WA"), ("Reno", "NV"), ("Fresno", "CA"),
+             ("Tucson", "AZ"), ("Provo", "UT"), ("Helena", "MT"), ("Spokane", "WA"))  # fmt: skip
 
-    def place(domain, name, tag, city):
-        return {"added_at": at, "source": "overture-2026-10", "roaster_id": domain, "name": name, "city": city,
-                "state": "OR", "website": f"https://{domain}/", "locations": 1, "confidence": 0.9, "tags": [tag],
+    def place(domain, name, tag, town, when):
+        return {"added_at": when, "source": "overture-2026-10", "roaster_id": domain, "name": name, "city": town[0],
+                "state": town[1], "website": f"https://{domain}/", "locations": 1, "confidence": 0.9, "tags": [tag],
                 "roast_in_name": "roast" in name.lower()}  # fmt: skip
 
-    Lake(str(lake_dir)).write("candidates", "candidates/source=overture/fixture.parquet", [
-        place("ember-roastworks.example", "Ember Roastworks Cafe", "cafe", "Bend"),
-        place("corner-cup.example", "Corner Cup", "coffee_shop", "Eugene"),
-        place("tea-and-toast.example", "Tea and Toast", "cafe", "Salem"),
+    def made(i, when):
+        name = f"{first[i % 10]} {second[i // 10 % 10]} {kinds[i // 100 % 8]}" + (
+            f" {i // 800 + 1}" if i >= 800 else ""
+        )
+        return place(f"{name.lower().replace(' & ', '-').replace(' ', '-')}.example", name,
+                     ("cafe", "coffee_shop")[i % 2], towns[i % 10], when)  # fmt: skip
+
+    before = at - timedelta(days=30)
+    lake = Lake(str(lake_dir))
+    lake.write(
+        "candidates",
+        "candidates/source=overture/fixture-1.parquet",
+        [made(i, before) for i in range(20, 3010)],
+    )
+    lake.write("candidates", "candidates/source=overture/fixture-2.parquet", [
+        place("ember-roastworks.example", "Ember Roastworks Cafe", "cafe", ("Bend", "OR"), at),
+        place("corner-cup.example", "Corner Cup", "coffee_shop", ("Eugene", "OR"), at),
+        place("tea-and-toast.example", "Tea and Toast", "cafe", ("Salem", "OR"), at),
+        *(made(i, at) for i in range(0, 3000)),
     ])  # fmt: skip
