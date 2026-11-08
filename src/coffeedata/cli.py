@@ -788,13 +788,18 @@ def cmd_weekly(args: argparse.Namespace) -> None:
         }
         from . import control
         from .connectors import week_of
+        from .lake import retry_transient
 
-        # A source whose last discover this week ended `failed` (an Overpass outage still records what it answered)
-        # is not done: re-running the week asks it again.
+        # A source whose last discover this month ended `failed` (an Overpass outage still records what it answered)
+        # or never ended (a killed attempt) is not done: re-running asks it again. Discover rows sit under their
+        # week's Monday, so the month's start from the week of the 1st (the Cloud Run job's week, when it ran).
+        first, last_week = week_of(f"{month}-01"), week_of(run)
         last = {
-            r["connector"]: r["status"] for r in control.rows(lake, week_of(run)) if r["job"] == "discover"
+            r["connector"]: r["status"]
+            for r in retry_transient(control.rows, lake)
+            if r["job"] == "discover" and first <= r["run_date"].isoformat() <= last_week
         }
-        done -= {src for src, status in last.items() if status == "failed"}
+        done -= {src for src, status in last.items() if status in ("failed", "running")}
         for src in DISCOVER_SOURCES:
             if src in done and not args.discover:
                 continue  # once a month; re-running the week doesn't re-record it

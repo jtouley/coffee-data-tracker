@@ -9,6 +9,7 @@ Cloud Scheduler's (time-based); this table says what actually ran.
 
 from __future__ import annotations
 
+import errno
 import json
 import os
 from datetime import UTC, date, datetime
@@ -177,7 +178,11 @@ def rollup(lake: Lake, run_date: str) -> int:
     for f in files:
         try:
             tables.append(pq.read_table(f).cast(SCHEMAS["job_manifests"]))
-        except FileNotFoundError:
+        except (
+            OSError
+        ) as e:  # gone: FileNotFoundError, or ESTALE on a gcsfuse mount if removed after the open
+            if not isinstance(e, FileNotFoundError) and e.errno != errno.ESTALE:
+                raise
             continue
         read.append(f)
     if len(read) <= 1:

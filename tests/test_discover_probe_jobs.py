@@ -481,18 +481,30 @@ def test_a_weekly_rerun_asks_again_a_source_whose_discover_failed(lake, monkeypa
         monkeypatch.setattr(cli, name, lambda a: True)
     monkeypatch.delenv("PUBLIC_EXPORT_URL", raising=False)
     monkeypatch.delenv("SNOWFLAKE_ACCOUNT", raising=False)
-    # The outage's leftovers: what Overpass answered is in the registry, and the source's end row says failed.
-    lake.write("registry", "registry/source=osm/2026-11-04-b1.parquet", [_registry_row("alroast.example")])
-    job = control.start(lake, "discover", "2026-11-02", "osm")
+    # The outage's leftovers: what Overpass answered is in the registry, and the source's end row says failed. The
+    # Cloud Run job ran on Sunday the 1st, so its rows are under the week before this run's (2026-10-26).
+    lake.write("registry", "registry/source=osm/2026-11-01-b1.parquet", [_registry_row("alroast.example")])
+    job = control.start(lake, "discover", "2026-10-26", "osm")
     control.finish(lake, job, "failed", ok=1, errors=51)
+    # Overture's attempt was killed after recording: only its start row.
     lake.write("registry", "registry/source=overture/latest-b2.parquet",
                [_registry_row("ovroast.example") | {"source": "overture"}])  # fmt: skip
+    killed = control.start(lake, "discover", "2026-10-26", "overture")
+    control.write(
+        lake, killed | {"attempt_id": "killed", "started_at": killed["started_at"] - timedelta(hours=1)}
+    )
     monkeypatch.setattr(cli, "Lake", lambda: lake)
     monkeypatch.setattr(cli, "discover_source", lambda lake, src, week=None: calls.append(src))
     args = argparse.Namespace(run_date="2026-11-04", discover=False, sample=None, enrich_limit=None,
                               db="build/coffee.duckdb", out="build/site", accept_volume_change=False)  # fmt: skip
     cli.cmd_weekly(args)
-    assert calls == ["osm"]  # Overture ended done (no control row says otherwise): once a month
+    assert calls == ["osm", "overture"]
+    # Once each has a done row, the month is done.
+    for src in ("osm", "overture"):
+        control.finish(lake, control.start(lake, "discover", "2026-11-02", src), "done")
+    calls.clear()
+    cli.cmd_weekly(args)
+    assert calls == []
 
 
 def test_the_merges_rollup_skips_a_file_another_jobs_publish_removed(lake, monkeypatch):
@@ -515,3 +527,29 @@ def test_the_merges_rollup_skips_a_file_another_jobs_publish_removed(lake, monke
     assert control.rollup(lake, "2026-11-30") == 5  # the five rows it could read, folded into one file
     (left,) = d.glob("attempt=*.parquet")
     assert left.name.startswith("attempt=rollup-")
+
+
+def test_rollup_skips_a_file_gcsfuse_reports_stale(lake, monkeypatch):
+    """On the gcsfuse staging mount, a file removed after it was opened can raise ESTALE rather than ENOENT."""
+    import errno
+
+    for job in ("merge", "discover"):
+        control.finish(lake, control.start(lake, job, "2026-11-30"), "done")
+    d = lake.root / "job_manifests" / "run_date=2026-11-30"
+    files = sorted(d.glob("attempt=*.parquet"))
+    real = pq.read_table
+
+    def stale(f, *a, **kw):
+        if f == files[0]:
+            raise OSError(errno.ESTALE, "Stale file handle")
+        return real(f, *a, **kw)
+
+    monkeypatch.setattr(control.pq, "read_table", stale)
+    assert control.rollup(lake, "2026-11-30") == 3
+    monkeypatch.setattr(
+        control.pq, "read_table", lambda f, *a, **kw: (_ for _ in ()).throw(OSError(errno.EIO, "io"))
+    )
+    for job in ("probe", "merge"):
+        control.finish(lake, control.start(lake, job, "2026-11-30"), "done")
+    with pytest.raises(OSError, match="io"):  # any other error still stops the merge
+        control.rollup(lake, "2026-11-30")
