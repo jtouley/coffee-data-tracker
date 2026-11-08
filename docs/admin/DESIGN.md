@@ -372,3 +372,23 @@ light and dark:
   the served release's less the places that release's snapshot added.
 - The page's copy is keyed on the `candidates` file listing (no read of the files) and made from exactly those files.
 - Without the flags (control plane down), the page shows no status, no flag counts and no Status facet.
+
+## The stack review's round
+
+An independent review of the four admin PRs, then the owner's "super cluttery" on Jobs. What changed:
+
+- **Jobs:** one "Run a job" button and a "?" beside the title (shell.html's title actions, filled from each part's
+  `<template data-title>`). The run sheet (a sheet on a phone, a popover on a desktop) has a Job dropdown, one hint
+  line, only the chosen job's fields, and Run, which opens the usual confirm with every guard and the window's
+  override. Site is a link to GitHub. The page is the Runs table: Started, the job in plain words ("Test crawl ·
+  Shopify · onyxcoffeelab.com"), Status, Took, Logs, and a ⋯ with Cancel (in the danger colour, named) and the raw
+  arguments. One count line.
+- **Help, not prose:** Week, Release, Queue and Catalog keep their answer line first; what they read and how they
+  work moved behind the "?" (the `help` macro). Week dropped its Connectors table and "Builds of week" (the answer
+  line and the job attempts already say it); its build links go to Release.
+- **Folds show a chevron** and are 15 px ink; section headings are 17 px ink, so they outweigh the folds. The outcome
+  line is the app's undo strip (`--panel`), not an inverted bar. The data region is no longer a live region, so a
+  poll doesn't re-read the tables; the outcome line keeps `role=status`.
+- Skills invoked: `critique-information-density`, `hicks-law`, `form-design`, `better-layout`, `no-ai-design-slop`,
+  `accessibility-audit`, `critique-affordance`, `critique-visual-hierarchy`, `python-resilience`,
+  `dbt-transformation-patterns`, `/simplify`.

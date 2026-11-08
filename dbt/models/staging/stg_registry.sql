@@ -23,7 +23,7 @@ added as (
         union all
         select added_at, source, roaster_id, name, city, state, locations, false as opted_out
         from {{ lake('candidates') }}
-        where roaster_id in ({% for d in flagged %}'{{ d | replace("'", "''") }}'{{ ", " if not loop.last }}{% endfor %})
+        where roaster_id in ({{ sql_strings(flagged) }})
         {%- endif %}
     )
     where roaster_id is not null
@@ -43,5 +43,5 @@ from seed s
 full outer join added a using (roaster_id)
 {%- set dropped = var('not_roasters', []) %}
 {%- if dropped %}
-where coalesce(s.roaster_id, a.roaster_id) not in ({% for d in dropped %}'{{ d | replace("'", "''") }}'{{ ", " if not loop.last }}{% endfor %})
+where coalesce(s.roaster_id, a.roaster_id) not in ({{ sql_strings(dropped) }})
 {%- endif %}

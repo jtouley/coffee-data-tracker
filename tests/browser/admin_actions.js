@@ -86,18 +86,23 @@ async function open(browser, server, path, viewport = { width: 1280, height: 900
   return { ctx, page };
 }
 
-// Open a job's form on the Jobs page, fill it, press Start…, and wait for the confirm sheet's plan.
-async function startForm(page, action, fill = {}) {
-  await page.goto(`${cfg.act}/jobs#${action}`);
-  await settled(page);
-  const d = page.locator(`details#${action}`);
-  if (!(await d.getAttribute("open"))) await d.locator("summary").click();
+// Run a job (the button beside the title): pick the job, fill its fields, press Run…, and wait for the confirm's plan.
+async function openRun(page, action, fill = {}) {
+  await page.click("[data-title-actions] button:text-is('Run a job')");
+  await page.waitForSelector("dialog#run-job[open]");
+  await page.selectOption("dialog#run-job [data-job]", action);
   for (const [k, v] of Object.entries(fill)) {
-    const el = d.locator(`[name=${k}]`);
+    const el = page.locator(`dialog#run-job [name=${k}]`);
     if ((await el.evaluate((e) => e.tagName)) === "SELECT") await el.selectOption(v);
     else await el.fill(v);
   }
-  await d.locator("button[type=submit]").click();
+}
+
+async function startForm(page, action, fill = {}) {
+  await page.goto(`${cfg.act}/jobs`);
+  await settled(page);
+  await openRun(page, action, fill);
+  await page.click("dialog#run-job button[type=submit]");
   await page.waitForSelector("dialog#confirm[open] .steps, dialog#confirm[open] .refused", { timeout: 15000 });
 }
 
@@ -110,12 +115,24 @@ const errors = [];
   let servedBefore = null;
 
   try {
-    await check("Jobs: nothing started yet (empty), every job listed with its help", async () => {
+    await check("Jobs: nothing started yet (empty); one Run a job button and a ? help beside the title", async () => {
       assert.match(await page.textContent("[data-answer]"), /0 running · 0 started from here/);
-      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build"]) {
-        assert.ok(await page.isVisible(`.jname:text-is("${label}")`), label);
-      }
       await shoot(page, "jobs-empty");
+      await page.click("[data-title-actions] button.help");
+      await page.waitForSelector("dialog#help-jobs[open]");
+      const help = await page.textContent("dialog#help-jobs");
+      for (const label of ["Crawl", "Crawl one roaster", "Shopify retry", "Fetch health", "Merge", "Enrich", "Classify", "Build", "Site"]) {
+        assert.match(help, new RegExp(label), label);
+      }
+      await shoot(page, "jobs-help", true);
+      await page.keyboard.press("Escape");
+      await openRun(page, "crawl", { connectors: "shopify" });
+      assert.ok(await page.isHidden("dialog#run-job [data-field=roaster]"), "only the chosen job's fields");
+      assert.match(await page.textContent("dialog#run-job [data-job-hint]"), /Every roaster of one connector/);
+      await shoot(page, "jobs-run-sheet", true);
+      await page.selectOption("dialog#run-job [data-job]", "site");
+      assert.ok(await page.isVisible("dialog#run-job [data-site] a"), "Site is a link to GitHub");
+      await page.keyboard.press("Escape");
     });
 
     await check("Catalog: exclude one coffee (confirm with a reason), then Undo from the outcome", async () => {
@@ -229,14 +246,14 @@ const errors = [];
       await page.dblclick("[data-confirm-go]");
       await toast(page, /Started fetch-health/);
       await settled(page);
-      assert.equal(await page.locator("[data-runs] tbody tr", { hasText: "fetch-health" }).count(), 1);
+      assert.equal(await page.locator("[data-runs] tbody tr", { hasText: "Fetch health" }).count(), 1);
     });
 
     await check("Jobs: failure, with Cloud Run's message", async () => {
       await ctl("/finish?job=fetch-health&status=failed&message=Task%20failed%3A%20exit%201");
       await page.reload();
       await settled(page);
-      assert.match(await page.textContent("[data-runs] tr.bad"), /failed[\s\S]*Task failed: exit 1/);
+      assert.match(await page.textContent("[data-runs] tbody tr >> nth=0"), /failed[\s\S]*Task failed: exit 1/);
       await shoot(page, "jobs-failed");
     });
 
@@ -245,6 +262,7 @@ const errors = [];
       await page.click("[data-confirm-go]");
       await toast(page, /Started merge/);
       await settled(page);
+      await page.click("[data-runs] tbody tr >> nth=0 >> summary"); // Cancel is in the run's ⋯
       await page.click("[data-runs] form[data-write$='/cancel'] button");
       await page.waitForSelector("dialog#confirm[open]");
       assert.ok(await page.locator("[data-confirm-go].danger").count());
@@ -512,9 +530,9 @@ const errors = [];
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {
-      const { ctx, page: p } = await open(browser, "window", "/jobs#merge");
-      if (!(await p.locator("details#merge").getAttribute("open"))) await p.click("details#merge summary");
-      await p.click("details#merge button[type=submit]");
+      const { ctx, page: p } = await open(browser, "window", "/jobs");
+      await openRun(p, "merge");
+      await p.click("dialog#run-job button[type=submit]");
       await p.waitForSelector("dialog#confirm[open] .notice");
       assert.match(await p.textContent("dialog#confirm"), /Monday crawl window/);
       await p.click("[data-confirm-go]");
@@ -529,9 +547,9 @@ const errors = [];
     });
 
     await check("A slow Cloud Run: the Confirm button shows it is working, then the outcome", async () => {
-      const { ctx, page: p } = await open(browser, "slow", "/jobs#fetch-health", { width: 390, height: 844 });
-      if (!(await p.locator("details#fetch-health").getAttribute("open"))) await p.click("details#fetch-health summary");
-      await p.click("details#fetch-health button[type=submit]");
+      const { ctx, page: p } = await open(browser, "slow", "/jobs", { width: 390, height: 844 });
+      await openRun(p, "fetch-health");
+      await p.click("dialog#run-job button[type=submit]");
       await p.waitForSelector("dialog#confirm[open] .steps");
       await p.click("[data-confirm-go]");
       await p.waitForSelector("[data-confirm-go][aria-disabled=true] .cup");

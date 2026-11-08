@@ -193,7 +193,9 @@ def _check(doc: object, strict: bool) -> dict:
         if not isinstance(params, dict) or (strict and set(params) - set(t.params)):
             p.append(f"{where}: params may only be {', '.join(t.params) or 'none'}")
             params = {}
-        params = {k: v for k, v in params.items() if k in t.params}  # a retired param, read from an old document
+        params = {
+            k: v for k, v in params.items() if k in t.params
+        }  # a retired param, read from an old document
         norm = {}
         for k, spec in t.params.items():
             v = params.get(k, spec.default)
