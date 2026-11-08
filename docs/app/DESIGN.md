@@ -427,7 +427,7 @@ sentence with Add email / Not now on Today (Not now lasts 90 days). The marketin
 `/forgot` takes a username or an email. Its reply is the same for an account with a verified email and for no
 account at all; only an account with no verified email is told so, on the field, so the person knows to ask the
 owner. That tells whoever asks that the account exists, which OWASP's uniform reply avoids; the owner chose it for an
-invite-only app, and the per-account and per-address limits (3 and 10 an hour) come first and hide it past them.
+invite-only app. Limits come first: 3 an hour per name or address and per account, 10 an hour per IP, and 20 such answers an hour in all; past them the error is hidden. They're in memory, so they slow a scan rather than stop one (RUNNING.md, "Email").
 
 The share text for an invite: "Log your espresso shots with me on registry.coffee: app.registry.coffee/join#K7QD-M2XF-9RPA-T4WE
 (works once, until November 3)."

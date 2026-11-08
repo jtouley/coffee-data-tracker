@@ -14,8 +14,7 @@ resource "google_secret_manager_secret" "app" {
   depends_on = [google_project_service.apis]
 }
 
-# Least privilege: the runtime account can read these secrets (five, seven with email on) and nothing else in the
-# project.
+# Least privilege: the runtime account can read these seven secrets and nothing else in the project.
 resource "google_secret_manager_secret_iam_member" "runtime" {
   for_each  = google_secret_manager_secret.app
   secret_id = each.value.id

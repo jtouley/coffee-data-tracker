@@ -57,7 +57,7 @@ variable "service" {
 }
 
 variable "email" {
-  description = "Email recovery (docs/app/signup-ux-spec.md §5): adds the EMAIL_KEY and RESEND_API_KEY secrets and mounts them on the app. Turn on only after the Resend domain is verified; the secrets need values before the service can use them (RUNNING.md, \"Email\")."
+  description = "Email recovery (docs/app/signup-ux-spec.md §5): mounts the EMAIL_KEY and RESEND_API_KEY secrets on the app and adds the \"email not sent\" alert. The secrets themselves always exist; turning this off only unmounts them. Turn on after the Resend domain is verified and both secrets have values (RUNNING.md, \"Email\")."
   type        = bool
   default     = false
 }
