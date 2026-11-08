@@ -37,11 +37,14 @@ PUBLIC: frozenset[tuple[str, str]] = frozenset(
         ("GET", "/healthz"),
         ("GET", "/offline"),  # the service worker's fallback page, cached at install
         ("GET", "/signin"),
+        ("POST", "/signin"),  # a form app.js didn't wire: shown again with a notice, nothing done
         ("POST", "/api/signin"),
         ("GET", "/join"),
+        ("POST", "/join"),
         ("POST", "/api/invites/check"),
         ("POST", "/api/join"),
         ("GET", "/reset"),
+        ("POST", "/reset"),
         ("POST", "/api/reset"),
     }
 )
@@ -122,9 +125,15 @@ class RequireSession:
 
 
 def signed_out(request: Request) -> Response:
-    """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401."""
+    """A screen (any GET outside /api/) goes to sign-in, as it always has; the API answers 401. When the session
+    couldn't be checked (current_user raised), the API answers 503 instead: the session may still be good, so a
+    sign-out must not look done, and a queued write is sent again later rather than taken as refused."""
     if request.method in ("GET", "HEAD") and not request.url.path.startswith("/api/"):
         return RedirectResponse("/signin", 303)
+    if getattr(request.state, "auth_failed", False):
+        return JSONResponse(
+            {"detail": "We couldn’t check your sign-in just now. Try again in a moment."}, 503
+        )
     return JSONResponse({"detail": "sign in first"}, 401)
 
 

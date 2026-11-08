@@ -10,7 +10,7 @@
     <label class="flabel" for="code">Invite code</label>
     <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-code-status data-error-for="code" role="status">From the invite link you were sent.</div>
-    {{ username_field() }}
+    {{ username_field(value=username) }}
     {{ new_password() }}
     <p class="meta mt24">Your shots, bags and photos are kept in the owner’s private Hugging Face datasets. The app
       shows them only to you; the owner can read the datasets.</p>

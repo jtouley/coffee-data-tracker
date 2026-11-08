@@ -7,9 +7,9 @@
 {# Sign-up pieces (docs/app/signup-ux-spec.md §3, §9). The rules come from app/rules.py, through the JSON block. #}
 {% macro rules_json() %}<script type="application/json" id="rules">{{ rules | tojson }}</script>{% endmacro %}
 {% macro rule_list(id, ids) %}<ul class="rules" id="{{ id }}-rules">{% for r in ids %}<li data-rule="{{ r }}">{{ rules.rules[r].shown }}<span class="visually-hidden" data-said></span></li>{% endfor %}</ul>{% endmacro %}
-{% macro username_field(id="username") %}
+{% macro username_field(id="username", value="") %}
     <label class="flabel" for="{{ id }}">Username</label>
-    <input class="input" id="{{ id }}" name="{{ id }}" data-check="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
+    <input class="input" id="{{ id }}" name="{{ id }}"{% if value %} value="{{ value }}"{% endif %} data-check="username" autocomplete="username" autocapitalize="none" spellcheck="false" aria-describedby="{{ id }}-error {{ id }}-h {{ id }}-rules" required>
     <div class="ferr-line"><p class="ferr" id="{{ id }}-error" data-error-for="{{ id }}"></p><span class="fsuggest" data-suggest hidden><button class="ext" type="button"></button></span></div>
     <div class="fhint" id="{{ id }}-h" data-username-hint>You’ll sign in with it. Not your email.</div>
     {{ rule_list(id, ("u.length", "u.chars")) }}

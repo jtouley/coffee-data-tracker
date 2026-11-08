@@ -73,22 +73,29 @@ async function page(request) {
 }
 
 // A bag photo: from the network (the app sends it no-store), kept with the pages so a kept screen shows it offline.
-// It goes with them on sign-out.
-async function photo(request) {
-  const url = new URL(request.url);
+// It goes with them on sign-out. Only an image is kept: signed out, the app redirects to the sign-in page, which
+// fetch follows to a 200 that must not replace the photo.
+async function keepPhoto(path, response) {
+  const pages = await caches.open(PAGES);
+  await pages.put(path, response);
+  const kept = (await pages.keys()).filter((r) => PHOTO.test(new URL(r.url).pathname));
+  await Promise.all(kept.slice(0, Math.max(0, kept.length - PHOTO_LIMIT)).map((r) => pages.delete(r)));
+}
+
+async function photo(e) {
+  const url = new URL(e.request.url);
+  let response;
   try {
-    const response = await fetch(request);
-    if (response.ok) {
-      const copy = response.clone();
-      const pages = await caches.open(PAGES);
-      await pages.put(url.pathname, copy);
-      const kept = (await pages.keys()).filter((r) => PHOTO.test(new URL(r.url).pathname));
-      await Promise.all(kept.slice(0, Math.max(0, kept.length - PHOTO_LIMIT)).map((r) => pages.delete(r)));
-    }
-    return response;
+    response = await fetch(e.request);
   } catch {
     return (await caches.match(url.pathname, { cacheName: PAGES })) || Response.error();
   }
+  const image = (response.headers.get("content-type") || "").startsWith("image/");
+  if (response.ok && !response.redirected && image) {
+    // Kept after answering, on its own: a full storage (QuotaExceededError) never costs the photo just fetched.
+    e.waitUntil(keepPhoto(url.pathname, response.clone()).catch(() => { /* not kept: still shown online */ }));
+  }
+  return response;
 }
 
 self.addEventListener("fetch", (e) => {
@@ -99,6 +106,6 @@ self.addEventListener("fetch", (e) => {
   } else if (e.request.mode === "navigate") {
     e.respondWith(page(e.request));
   } else if (PHOTO.test(url.pathname)) {
-    e.respondWith(photo(e.request));
+    e.respondWith(photo(e));
   }
 });

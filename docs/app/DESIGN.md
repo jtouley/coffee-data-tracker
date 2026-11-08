@@ -376,6 +376,9 @@ What the last save did, at the top of the screen it lands on: "Bag saved: Onyx G
 so it's read out (shown empty, then filled, so screen readers announce it). A save queued offline says so: "Saved on
 this phone. It’ll sync when you’re back online."; a bag names itself, since Today may still show the last one until
 it syncs: "Bag saved on this phone: Onyx Geometry. It’ll sync when you’re back online." Logging a shot keeps Saved as its confirmation, with Undo.
+The sign-in screen's notices ("You’ve been signed out", "We couldn’t check your sign-in") are different: they're
+in the page as it's sent, not filled in afterwards, so they have no `role="status"` (a live region announces
+changes, not text present at load) and are read in order before the form.
 
 Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker
 on Log shot), stepping back in history, or else replaces the form, so Back never reopens what was just saved.

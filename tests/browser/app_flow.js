@@ -658,6 +658,10 @@ async function newPage(browser, errors) {
     // Sign out after the session already ended elsewhere (here: its cookie is gone) is signed out, not an error.
     await page.goto(`${base}/setup`);
     await page.context().clearCookies();
+    // Signed out, the photo's URL redirects to sign-in: that page must not replace the kept photo.
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.redirected), thumb), true);
+    await page.waitForTimeout(300); // the worker keeps a photo after answering
+    assert.match(await page.evaluate((u) => caches.open("pages").then(async (c) => (await c.match(u))?.headers.get("content-type") ?? ""), thumb), /^image\//);
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);
     assert.equal(await page.evaluate(() => caches.has("pages")), false); // the photo went with the pages
@@ -674,6 +678,11 @@ async function newPage(browser, errors) {
     ]);
     assert.equal(sent.method(), "POST");
     assert.doesNotMatch(sent.url(), /never|password/);
+    // ...and isn't a dead end: the page comes back saying what happened, with the username, never the password.
+    await bare.waitForLoadState("load");
+    assert.match(await bare.textContent("main"), /didn’t finish loading/);
+    assert.equal(await bare.inputValue("#username"), "owner");
+    assert.equal(await bare.inputValue("#password"), "");
     await noScript.close();
 
     // "We couldn't check your sign-in" keeps the offline pages (the session may still be good); a sign-out doesn't.
@@ -687,12 +696,16 @@ async function newPage(browser, errors) {
       const r = await route.fetch();
       await route.fulfill({ response: r, body: (await r.text()).replace(/data-ended="[^"]*"/, 'data-ended="failed"') });
     });
+    // data-purge says when the screen's decision has settled, so neither check can pass on a purge still running.
     await lookup.goto(`${base}/signin`);
-    await lookup.waitForLoadState("load");
+    await lookup.waitForSelector("#signin[data-purge]");
+    assert.equal(await lookup.getAttribute("#signin", "data-purge"), "skipped");
     assert.equal(await kept(), "kept");
     await lookup.unroute(`${base}/signin`);
     await lookup.goto(`${base}/signin`);
-    await lookup.waitForFunction(() => caches.open("pages").then(async (c) => !(await c.match("/history"))));
+    await lookup.waitForSelector("#signin[data-purge]");
+    assert.equal(await lookup.getAttribute("#signin", "data-purge"), "done");
+    assert.equal(await kept(), null);
     await check.close();
     assert.deepEqual(errors, []);
     assert.deepEqual(problems, [], `axe found serious or critical issues:\n${problems.join("\n")}`);
