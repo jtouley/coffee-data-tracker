@@ -306,3 +306,4 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - 2026-11-07 (owner rule): ask before any large spend (many subagents, mass labeling or site visits); say the cost up front.
 - 2026-11-07 (owner, final): crawl roasters only; no cafes crawled. Discovery records the full source list (~47k Overture places) without fetching; the admin shows it and the owner flags roasters by hand; only flagged places (plus today's registry) are probed and crawled. No screen gate. #130 closed (its measurement kept as a record).
 - 2026-11-08 (owner): review standards are not optional. No "quick pass": each review must show every skill run, its findings, the changes, and before/after screenshots the orchestrator has looked at.
+- 2026-11-08 (owner rule): every design change: the orchestrator reviews the screenshots against the public site's clean design and sends them to the owner before calling it done.
