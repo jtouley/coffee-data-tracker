@@ -656,9 +656,12 @@ def test_recovery_pages_send_no_referrer(app):
 def test_forgot_and_verify_pages(app):
     c = client(app)
     page = c.get("/forgot").text
+    # The no-email path is only the inline error (owner, 2026-11-08), not a line under the button.
+    assert "No email on your account?" not in page
+    assert page.index("We’ll email you a link") < page.index("data-sent") < page.index('id="forgot"')
     for words in ("Reset your password", '<label class="flabel" for="account">Username or email</label>',
                   'autocomplete="username"', "Send reset link", 'data-busy="Sending…"',
-                  "No email on your account? Ask the person who invited you for a reset link."):  # fmt: skip
+                  'data-sent role="status" hidden'):  # fmt: skip
         assert words in page
     assert "Checking your link…" in c.get("/verify").text
 

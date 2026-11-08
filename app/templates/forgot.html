@@ -7,6 +7,8 @@
   <h1 class="serif title mt8">Reset your password</h1>
   {% if email_on %}
   <p class="body">We’ll email you a link to choose a new one.</p>
+  {# The reply, under the heading and above the form, as sign-in's notices sit. #}
+  <p class="notice" data-sent role="status" hidden></p>
   <form id="forgot" class="fill" data-api="/api/forgot" data-busy="Sending…" novalidate>
     <label class="flabel" for="account">Username or email</label>
     <input class="input" id="account" name="account" autocomplete="username" autocapitalize="none" spellcheck="false" data-empty="Enter your username or email." aria-describedby="account-error account-h" required>
@@ -17,7 +19,6 @@
     <div class="dock">
       <button class="btn primary" type="submit">Send reset link</button>
       {{ status_line() }}
-      <p class="meta center mt12">No email on your account? Ask the person who invited you for a reset link.</p>
       <a class="btn text" href="/reset">Have a reset link? Enter its code</a>
     </div>
   </form>

@@ -94,6 +94,7 @@ function linkIn(message, path) {
     await forgotLink.click();
     await anon.waitForURL(`${base}/forgot`);
     assert.equal(await anon.evaluate(() => document.title), "Forgot password · registry.coffee");
+    assert.doesNotMatch(await text(anon, "main"), /No email on your account/, "only the inline error says that");
     await snap(anon, "forgot");
 
     // --- /forgot: empty, then a malformed email, then an account with no email -------------------------------
@@ -116,14 +117,19 @@ function linkIn(message, path) {
     const posts = [];
     anon.on("request", (r) => { if (r.method() === "POST" && r.url().endsWith("/api/forgot")) posts.push(r); });
     await anon.getByRole("button", { name: "Send reset link" }).dblclick();
-    await waitText(anon, "[data-notice]", SENT);
+    await waitText(anon, "[data-sent]", SENT);
     assert.equal(posts.length, 1, "a double tap sends one request");
     assert.equal(await anon.getAttribute("#account", "aria-invalid"), null, "the error went with the fix");
     assert.equal(await text(anon, "#account-error"), "");
+    assert.equal(await anon.evaluate(() => document.querySelector("[data-notice]").hidden), true, "not the top notice");
+    assert.equal(await anon.evaluate(() => {
+      const [h, sent, form] = ["h1", "[data-sent]", "#forgot"].map((q) => document.querySelector(q).getBoundingClientRect().top);
+      return h < sent && sent < form;
+    }), true, "under the heading, above the form");
     await snap(anon, "forgot-sent");
     await anon.fill("#account", "nobody-here");
     await anon.getByRole("button", { name: "Send reset link" }).click();
-    await waitText(anon, "[data-notice]", SENT);
+    await waitText(anon, "[data-sent]", SENT);
     assert.equal(await text(anon, "#account-error"), "", "an unknown name gets the same reply, no error");
     let mails = await outbox(owner);
     const resetMail = mails.filter((m) => m.to === "maya@example.com" && /Reset/.test(m.subject)).at(-1);

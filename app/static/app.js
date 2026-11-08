@@ -1781,8 +1781,11 @@ function forgotForm(form) {
     submit.removeAttribute("aria-disabled");
     busyCup(submit, false);
     submit.textContent = idle;
-    notify(SENT);
-    scrollTo(0, 0);
+    // Its own line above the form (not the screen's top notice): shown empty, then filled, so it's read out.
+    const sent = document.querySelector("[data-sent]");
+    sent.textContent = "";
+    sent.hidden = false;
+    setTimeout(() => { sent.textContent = SENT; }, 100);
   });
 }
 
