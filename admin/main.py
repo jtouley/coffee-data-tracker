@@ -224,6 +224,11 @@ def _fmt_n(v: Any) -> str:
 def _fmt_t(v: Any) -> str:
     if v is None:
         return "—"
+    if isinstance(v, str):  # an ISO time (the account's passkeys): shown like every other time
+        try:
+            v = datetime.fromisoformat(v.replace("Z", "+00:00"))
+        except ValueError:
+            return v
     if isinstance(v, datetime):
         return v.astimezone(UTC).strftime("%a %d %b %H:%M")
     return str(v)
@@ -747,6 +752,7 @@ def create_app(
             off = list(settings.writes_off)
             runs = await plane(lambda: writes.runs(30), [], off) if writes else []
             return {"writes_off": off, "actions": [a for a in jobs.ACTIONS.values() if a.page == "jobs"], "fields": jobs.FIELDS,
+                    "labels": {k: a.label for k, a in jobs.ACTIONS.items()},
                     "runs": runs, "running": any(r["status"] in ("pending", "running") for r in runs),
                     "prefill": dict(request.query_params),
                     "today": datetime.now(UTC).date().isoformat()}  # fmt: skip
@@ -825,8 +831,9 @@ def create_app(
     # transaction (writes.py). Refusals say why; nothing is half done.
 
     def actor(request: Request) -> str:
-        s: Session = request.state.session
-        return f"owner (passkey {s.credential_id[:8]})"
+        """Who wrote: the owner (the only account; a write needs a session, which `write` checked)."""
+        assert request.state.session is not None
+        return "owner"
 
     def on() -> Writes:
         """The writes, inside `write` (which has answered 503 already when they are off)."""

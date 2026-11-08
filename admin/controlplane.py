@@ -99,8 +99,6 @@ class ControlPlane:
     def __init__(self, connect: Callable[[], Any], size: int = 4):
         self._connect = connect
         self._pool: queue.LifoQueue = queue.LifoQueue(maxsize=size)
-        self._migrated = False
-        self._lock = threading.Lock()
 
     # --- connections and transactions ----------------------------------------------------------------------------
 
@@ -152,6 +150,14 @@ class ControlPlane:
                 with contextlib.suppress(Exception):
                     con.close()
 
+    @contextlib.contextmanager
+    def once(self, key: str) -> Iterator[tuple[Any, dict | None]]:
+        """An idempotent write's transaction: locked on its key, with the key's first answer if it has one (the
+        caller returns that, and otherwise remembers its own answer before the block ends)."""
+        with self.tx() as cur:
+            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
+            yield cur, self.claim(cur, key)
+
     def migrate(self) -> list[str]:
         """Apply every migration not yet applied, in order, in one transaction under an advisory lock. Returns the
         ones applied now."""
@@ -170,12 +176,7 @@ class ControlPlane:
                 cur.execute(f.read_text())
                 cur.execute("insert into control.schema_migrations (name) values (%s)", (f.name,))
                 applied.append(f.name)
-        self._migrated = True
         return applied
-
-    def ping(self) -> None:
-        with self.tx() as cur:
-            cur.execute("select 1")
 
     # --- writes ----------------------------------------------------------------------------------------------------
 
@@ -225,9 +226,8 @@ class ControlPlane:
         reason = _reason(reason)
         if not items or len(items) > 500:
             raise ValueError("decide 1 to 500 products at a time")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             subjects = sorted({str(it[kind]) for it in items if it.get(kind)})
             if not subjects:
@@ -258,9 +258,8 @@ class ControlPlane:
         reason = (reason or "").strip() or "undo"
         if not ID.fullmatch(target):
             raise ValueError("bad decision id")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 1,))
             cur.execute(
@@ -342,9 +341,8 @@ class ControlPlane:
         which changes decide (rules.decides). Idempotent on `key`; an edit that changes nothing is refused."""
         reason = _reason(reason)
         new = rules.check(doc)
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 2,))
             now = self._settings(cur)
@@ -398,9 +396,8 @@ class ControlPlane:
         reason = _reason(reason)
         if not ID_ROASTER.fullmatch(roaster_id or ""):
             raise ValueError("bad roaster id")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(hashtext(%s))", ("crawl:" + roaster_id,))
             now = self._crawl(cur, [roaster_id]).get(roaster_id, {}).get("crawl", True)
@@ -450,9 +447,8 @@ class ControlPlane:
         places = sorted({p for p in places if ID_ROASTER.fullmatch(p or "")})
         if not places or len(places) > 1000:
             raise ValueError("flag 1 to 1,000 places at a time")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
             now = self._source_flags(cur, places)
@@ -496,9 +492,8 @@ class ControlPlane:
         """Put each place of a batch back to the flag it had before it, if the batch is still its latest flag."""
         if not ID.fullmatch(batch):
             raise ValueError("bad batch id")
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 3,))
             cur.execute("select roaster_id from control.source_flags where batch_id = %s", (batch,))
@@ -714,9 +709,8 @@ class ControlPlane:
 
     def record_evaluation(self, actor: str, key: str, path: str, reason: str) -> dict:
         """A full evaluation of the classifier's output, done: the running total starts again from here."""
-        with self.tx() as cur:
-            cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-            if (first := self.claim(cur, key)) is not None:
+        with self.once(key) as (cur, first):
+            if first is not None:
                 return first
             cur.execute("insert into control.evaluations (actor, path, reason) values (%s, %s, %s)",
                         (actor, path, reason))  # fmt: skip

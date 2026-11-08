@@ -4,6 +4,7 @@ and undo, drafts over a snapshot, Publish's readiness, Roll back, and that every
 idempotent, audited, and fails closed. The lake is never written."""
 
 import json
+import re
 from datetime import UTC, date, datetime
 
 import pytest
@@ -186,11 +187,7 @@ def test_a_job_start_shows_its_plan_then_starts_once_and_is_audited(tmp_path, la
     assert r1.status_code == r2.status_code == 200 and r1.json() == r2.json()
     assert len([x for x in fake.calls if x[0] == "run"]) == 1
     (run,) = app.state.writes.control.runs()
-    assert (
-        run["job"] == "crawl-shopify"
-        and run["mode"] == "test"
-        and run["actor"].startswith("owner (passkey cred-abc")
-    )
+    assert run["job"] == "crawl-shopify" and run["mode"] == "test" and run["actor"] == "owner"
     (a,) = [x for x in audit(app) if x["action"] == "job_start"]
     assert a["outcome"] == "ok" and a["detail"]["runs"][0]["execution"].endswith("crawl-shopify-00001")
     # the Jobs page shows it running, with its logs link, and polls while it runs
@@ -713,7 +710,7 @@ def test_an_idle_connection_is_dropped_and_a_double_submit_answers_once(pg_url, 
     cp = ControlPlane(lambda: made.append(1) or connect())
     cp.migrate()
     monkeypatch.setattr(controlplane, "IDLE_S", 0)
-    cp.ping()
+    cp.source_flags([])  # any read takes a connection
     assert len(made) == 2  # the pooled one was idle too long: a new connection
     monkeypatch.setattr(controlplane, "IDLE_S", 120)
     out = []
@@ -756,7 +753,7 @@ def test_a_drafts_gate_says_it_passed_against_the_last_published_build(tmp_path,
     assert f"Build {b3} passed" in page and f"compared with {B1}" in page
 
 
-def test_the_live_check_counts_any_answer_a_connector_test_and_every_roaster_of_a_version(
+def test_the_live_check_counts_a_stores_own_answer_never_a_connector_test_and_every_roaster_of_a_version(
     tmp_path, lake, pg_url
 ):
     app, c, fake = make(tmp_path, lake.root, pg_url)
@@ -781,9 +778,13 @@ def test_the_live_check_counts_any_answer_a_connector_test_and_every_roaster_of_
     with pytest.MonkeyPatch.context() as m:  # ...then a later failed test of the same store
         m.setattr(app.state.writes.control, "recent_test", lambda *a, **k: None)
         test({"connector": "shopify", "roaster": "good.example"}, 0)
-    test({"connectors": "woocommerce"}, 1)  # a whole-connector test covers other.example
+    test({"connectors": "woocommerce"}, 1)  # a whole-connector test doesn't say other.example answered
     page = c.get(f"/part/release?build={b3}").text
-    assert "2 of 2 stores answered" in page
+    assert "no answered test crawl in 7 days: other.example" in page
+    with pytest.MonkeyPatch.context() as m:
+        m.setattr(app.state.writes.control, "recent_test", lambda *a, **k: None)
+        test({"connector": "woocommerce", "roaster": "other.example"}, 1)  # its own test does
+    assert "2 of 2 stores answered" in c.get(f"/part/release?build={b3}").text
 
 
 def test_step_9s_running_total_spans_drafts_until_an_evaluation_is_recorded(
@@ -863,3 +864,18 @@ def test_the_export_lists_every_coffee_of_a_version(tmp_path, lake, pg_url):
     assert d["subject_kind"] == "input_hash" and d["coffee_ids"] == []  # no coffee in the served build has it
     rows, skipped = decisions.export_labels(doc, set())
     assert rows == [] and skipped == 1  # a version with no listed coffees is never exported
+
+
+def test_every_internal_link_on_every_page_leads_somewhere(tmp_path, lake, pg_url):
+    """No page links to a page that isn't there (Week linked the merged-away /gate)."""
+    _, c, _ = make(tmp_path, lake.root, pg_url)
+    seen = set()
+    for page in ("week", "queue", "jobs", "release", "catalog", "sources", "log"):
+        for href in re.findall(r'href="(/[^"#]*)', c.get(f"/part/{page}").text):
+            href = href.replace("&amp;", "&")
+            if href.startswith(("/api/", "/static/")) or href in seen:
+                continue
+            seen.add(href)
+            r = c.get(href)
+            assert r.status_code == 200 and "There is no such page" not in r.text, href
+    assert seen and not any(h.startswith("/gate") for h in seen)

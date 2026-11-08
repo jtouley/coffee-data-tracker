@@ -37,6 +37,9 @@ STEP9_LIMIT = 50  # CLAUDE.md step 9: over this many products changed, the full 
 REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
 
 
+RUNS_WAIT_S = 10  # Writes.runs: how long the runs' live status may take in all
+
+
 class StartedUnrecorded(Exception):
     """Cloud Run started (or cancelled) these executions, but the control plane couldn't record it, twice."""
 
@@ -182,9 +185,8 @@ class Writes:
         started: list[dict] = []
         errors: list[str] = []
         try:
-            with self.control.tx() as cur:
-                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                if (first := self.control.claim(cur, key)) is not None:
+            with self.control.once(key) as (cur, first):
+                if first is not None:
                     return first
                 jobs = sorted({s.job for s in plan.steps})
                 for job in jobs:
@@ -254,9 +256,8 @@ class Writes:
                 raise ValueError("no such run")
             cancelled = False
             try:
-                with self.control.tx() as cur:
-                    cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                    if (first := self.control.claim(cur, key)) is not None:
+                with self.control.once(key) as (cur, first):
+                    if first is not None:
                         return first
                     self.jobs.cancel(run["execution"])
                     cancelled = True
@@ -281,23 +282,28 @@ class Writes:
         await self.ready()
         rows = await asyncio.to_thread(self.control.runs, limit)
 
-        def live():
-            for r in rows:
-                r["status"], r["log_uri"] = r["final"] or "unknown", logs_url(r["execution"] or "")
-                if not r["execution"] or r["final"]:  # a finished run's outcome is recorded: no API call
-                    continue
-                try:
-                    e = self.jobs.execution(r["execution"])
-                except (JobsError, ValueError) as err:
-                    r["message"] = str(err)
-                    continue
-                r["status"], r["message"], r["duration_s"] = e.status, e.message, e.duration_s
-                r["log_uri"] = e.log_uri or r["log_uri"]
-                if e.status in ("succeeded", "failed", "cancelled"):
-                    self.control.run_status(r["run_id"], e.status, e.duration_s, e.message)
-                    r["final"] = e.status
+        def live(r: dict) -> None:
+            try:
+                e = self.jobs.execution(r["execution"])
+            except (JobsError, ValueError) as err:
+                r["message"] = str(err)
+                return
+            r["status"], r["message"], r["duration_s"] = e.status, e.message, e.duration_s
+            r["log_uri"] = e.log_uri or r["log_uri"]
+            if e.status in ("succeeded", "failed", "cancelled"):
+                self.control.run_status(r["run_id"], e.status, e.duration_s, e.message)
+                r["final"] = e.status
 
-        await asyncio.to_thread(live)
+        for r in rows:
+            r["status"], r["log_uri"] = r["final"] or "unknown", logs_url(r["execution"] or "")
+        # The unfinished runs' live status, together and within RUNS_WAIT_S in all: a slow Cloud Run leaves a run's
+        # status "unknown" for this read instead of holding the page past its own deadline.
+        todo = [r for r in rows if r["execution"] and not r["final"]]
+        if todo:
+            _, late = await asyncio.wait([asyncio.ensure_future(asyncio.to_thread(live, r)) for r in todo],
+                                            timeout=RUNS_WAIT_S)  # fmt: skip
+            for task in late:
+                task.cancel()
         tests = [r["test_id"] for r in rows if r["test_id"]]
         if tests:
             answers = await self.read(queries.test_results, tests)
@@ -552,13 +558,14 @@ class Writes:
         )
         ok = [t for t in tests if any(a.get("ok") for a in answers.get(t["test_id"], [])
                                       if a["connector"] == t["connector"])]  # fmt: skip
-        stores = {t["roaster_id"] for t in ok if t["roaster_id"]}  # a test of the store itself
-        connectors = {t["connector"] for t in ok if not t["roaster_id"]}  # or of its whole connector
-        missing = [r for r, conn in effect["removal_roasters"] if r not in stores and conn not in connectors]
+        # Only a test of the store itself: a connector-wide test's end row counts the connector's fetches, not
+        # whether this store answered (its per-store rows stay in the test's own partition).
+        stores = {t["roaster_id"] for t in ok if t["roaster_id"]}
+        missing = [r for r, _conn in effect["removal_roasters"] if r not in stores]
         n = len(effect["removal_roasters"])
         checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
                        "why": ("this draft removes nothing" if not n else
-                               f"{n} of {n} stores answered a test crawl (of the store or its connector) in the last "
+                               f"{n} of {n} stores answered a test crawl of the store in the last "
                                f"{LIVE_CHECK_DAYS} days" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
@@ -687,9 +694,8 @@ class Writes:
                  "publishing" if draft and draft["last_event"] == "publish_started" else None)  # fmt: skip
 
         def go():
-            with self.control.tx() as cur:
-                cur.execute("select pg_advisory_xact_lock(hashtext(%s))", (key,))
-                if (first := self.control.claim(cur, key)) is not None:
+            with self.control.once(key) as (cur, first):
+                if first is not None:
                     return first
                 cur.execute("select 1 from control.drafts where draft_id = %s", (draft_id,))
                 if not cur.fetchone():

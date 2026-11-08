@@ -250,3 +250,20 @@ def test_review_fixes_retired_rules_and_wrong_shapes(monkeypatch):
     for bad in ({"schema": 1, "rules": [{"id": ["x"]}]}, _with(readiness__removal={"blocked_by": [{}]})):
         with pytest.raises(rules.SettingsError):
             rules.check(bad)
+
+
+def test_a_saved_document_with_a_retired_param_or_rule_key_still_reads():
+    """Reading a saved version or a served snapshot (strict=False) leaves out a param or a rule-level key the code no
+    longer has; an edit (strict) still refuses them."""
+    import copy
+
+    from coffeedata import rules as crules
+
+    old = copy.deepcopy(crules.DEFAULTS)
+    i = next(n for n, r in enumerate(old["rules"]) if r["id"] == "shared_body")  # a rule with params
+    old["rules"][i]["params"] = dict(old["rules"][i].get("params") or {}, retired_param=3)
+    old["rules"][i]["retired_key"] = True
+    got = next(r for r in crules.check(old, strict=False)["rules"] if r["id"] == "shared_body")
+    assert "retired_param" not in got["params"] and "retired_key" not in got
+    with pytest.raises(crules.SettingsError):
+        crules.check(old)

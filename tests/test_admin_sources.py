@@ -58,7 +58,7 @@ def test_the_source_list_its_counts_changes_and_filters(tmp_path, lake, pg_url):
     assert "2 new, 1 gone" in page and "coffee_shop (2)" in page
     assert "&lt;b&gt;New&lt;/b&gt; Cafe" in page and "<b>New</b>" not in page and "javascript:" not in page
     assert page.index("Beans &amp; Roast") < page.index("Tea Corner")  # a hint first
-    assert "2 of 6 places" in c.get("/part/sources?status=roaster+(inherited)").text
+    assert c.get("/part/sources?status=roaster+(inherited)").text.count("<tr data-row>") == 2
     assert "1 of 6 places" in c.get("/part/sources?origin=curated").text
     assert "1 of 6 places" in c.get("/part/sources?q=tea").text
     assert "1 of 6 places" in c.get("/part/sources?q=https://www.good.example/shop").text  # a pasted address

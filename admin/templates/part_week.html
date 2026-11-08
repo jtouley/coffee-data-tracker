@@ -1,4 +1,8 @@
-{% from "_macros.html" import status, source, served_line, week_picker, ev %}
+{% from "_macros.html" import status, served_line, week_picker, ev, help %}
+<template data-title>{% call help("week", "About Week") %}
+  <p class="body">Did the week land: each connector's crawl passes, the merge, enrich, classify and the build, and the release customers get. Then what failed, by HTTP status, challenge and store, with a Test crawl link for each.</p>
+  <p class="meta">From <code>job_manifests</code>, <code>builds</code> and <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{% endcall %}</template>
 <div data-state="{{ 'data' if data and data.rows else 'empty' }}">
 {% if weeks %}{{ week_picker(weeks, week, "/week") }}{% endif %}
 {% if stale %}<p class="stale mt12" role="status">Serving week {{ stale.served }}; week {{ stale.latest }} has data but no release yet.</p>{% endif %}
@@ -8,25 +12,10 @@
     <p class="body"><code>job_manifests</code> has no rows for it{% if not weeks %}, and the lake has no weeks at all{% endif %}. Each crawl, merge, enrich, classify and build writes a row when it starts and when it ends.{% if weeks and week != weeks[0] %} <a class="ev" href="/week?week={{ weeks[0] }}">Show week {{ weeks[0] }}</a>.{% endif %}</p>
   </div>
 {% else %}
-  <p class="answer" data-answer>{{ data.landed }} of {{ data.connectors | length }} connectors landed{% for job, st in data.stages.items() %} · {{ job }} {% if st in ("failed", "missing") %}{{ status(st) }}{% else %}{{ st }}{% endif %}{% endfor %}{% if served %} · serving week {{ served.run_date[:10] }}{% endif %}</p>
-  {{ source(["job_manifests", "builds", "serving_log"], read_at) }}
-
-  <h2 class="section">Connectors</h2>
-  <div class="frame" tabindex="0" role="region" aria-label="Connectors"><table>
-    <caption>Each connector's crawl passes this week</caption>
-    <thead><tr><th scope="col">Connector</th><th scope="col">Landed</th><th scope="col" class="n">Passes</th><th scope="col">Latest pass</th></tr></thead>
-    <tbody>{% for c in data.connectors %}<tr><th scope="row">{{ c.connector }}</th><td>{{ status("landed" if c.landed else "missing") }}</td><td class="n">{{ c.passes }}</td><td>{{ status(c.latest) }}</td></tr>{% endfor %}</tbody>
-  </table></div>
+  <p class="answer" data-answer>{{ data.landed }} of {{ data.connectors | length }} connectors landed{% for job, st in data.stages.items() %} · {% if job == "build" and data.builds %}<a class="ev" href="/release?build={{ data.builds[-1].build_id }}">build</a>{% else %}{{ job }}{% endif %} {% if st in ("failed", "missing") %}{{ status(st) }}{% else %}{{ st }}{% endif %}{% endfor %}{% if served %} · serving week {{ served.run_date[:10] }}{% endif %}</p>
 
   <h2 class="section">Release</h2>
   {{ served_line(served) }}
-  {% if data.builds %}
-  <div class="frame mt12" tabindex="0" role="region" aria-label="Builds this week"><table>
-    <caption>Builds of week {{ week }}</caption>
-    <thead><tr><th scope="col">Build</th><th scope="col">Built (UTC)</th><th scope="col">Gate</th><th scope="col">Commit</th><th scope="col">CI run</th></tr></thead>
-    <tbody>{% for b in data.builds %}<tr><th scope="row"><a class="ev" href="/gate?build={{ b.build_id }}">{{ b.build_id }}</a>{% if served and served.build_id == b.build_id %} (served){% endif %}</th><td>{{ t(b.built_at) }}</td><td>{{ status("passed" if b.passed else "failed") }}</td><td><code>{{ (b.git_sha or "")[:10] }}</code></td><td>{{ ev(b.ci_run_url, "run") if b.ci_run_url else "—" }}</td></tr>{% endfor %}</tbody>
-  </table></div>
-  {% endif %}
 
   <h2 class="section">Every job attempt</h2>
   <div class="frame" tabindex="0" role="region" aria-label="Job attempts"><table class="dense">
@@ -36,7 +25,7 @@
     <tbody>{% for r in data.rows %}<tr>
       <th scope="row">{{ r.job }}</th><td>{{ r.connector or "—" }}</td><td class="n">{{ "arm" if r.arm else n(r.pass) }}</td><td>{{ t(r.started_at) }}</td><td>{{ t(r.ended_at) }}</td><td>{{ status(r.status) }}</td>
       <td class="n">{{ n(r.todo) }}</td><td class="n">{{ n(r.ok) }}</td><td class="n">{{ n(r.errors) }}</td><td class="n">{{ n(r.parked) }}</td><td class="n">{{ n(r.skipped) }}</td><td class="n">{{ n(r.http_429) }}</td><td class="n">{{ n(r.http_430) }}</td>
-      <td>{{ r.egress_ips | join(", ") or "—" }}</td><td>{% if r.build_id %}<a class="ev" href="/gate?build={{ r.build_id }}">{{ r.build_id }}</a>{% else %}{{ r.execution or "—" }}{% endif %}</td>
+      <td>{{ r.egress_ips | join(", ") or "—" }}</td><td>{% if r.build_id %}<a class="ev" href="/release?build={{ r.build_id }}">{{ r.build_id }}</a>{% else %}{{ r.execution or "—" }}{% endif %}</td>
     </tr>{% endfor %}</tbody>
   </table></div>
 {% endif %}

@@ -170,7 +170,7 @@ def _check(doc: object, strict: bool) -> dict:
             p.append(f"{where}: listed twice")
         seen.add(t.id)
         unknown = set(r) - {"id", "family", "polarity", "params", "proposes"}
-        if unknown:
+        if unknown and strict:  # a retired rule-level setting: an error in an edit, left out when reading
             p.append(f"{where}: unknown keys {', '.join(sorted(unknown))}")
         if r.get("family") not in FAMILIES:
             p.append(f"{where}: family must be one of {', '.join(FAMILIES)}")
@@ -190,9 +190,10 @@ def _check(doc: object, strict: bool) -> dict:
             )
             pol = {}
         params = r.get("params") or {}
-        if not isinstance(params, dict) or set(params) - set(t.params):
+        if not isinstance(params, dict) or (strict and set(params) - set(t.params)):
             p.append(f"{where}: params may only be {', '.join(t.params) or 'none'}")
             params = {}
+        params = {k: v for k, v in params.items() if k in t.params}  # a retired param, read from an old document
         norm = {}
         for k, spec in t.params.items():
             v = params.get(k, spec.default)

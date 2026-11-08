@@ -1,4 +1,8 @@
-{% from "_macros.html" import status, ev, build_picker, served_line, write_off, write_button %}
+{% from "_macros.html" import status, ev, build_picker, served_line, write_off, write_button, help %}
+<template data-title>{% call help("release", "About Release") %}
+  <p class="body">The served release, the decisions and flags not in it yet, drafts, and a build's changes and gate. Build a draft, Publish, Roll back or Discard here.</p>
+  <p class="meta">From <code>builds</code>, <code>serving_log</code>, <code>release_changes</code> and the control plane · “published” is read from <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{% endcall %}</template>
 <div data-state="{{ 'data' if builds else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not builds %}
@@ -6,7 +10,6 @@
 {% else %}
 {% set p = pending %}
 <p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }}{% if p.settings_changed %}, rule settings{% endif %}{% if p.crawl_changed %}, {{ p.crawl_changed | length }} crawl flag{{ "s" if p.crawl_changed | length != 1 }}{% endif %}{% if p.sources_changed %}, {{ p.sources_changed | length }} source flag{{ "s" if p.sources_changed | length != 1 }}{% endif %} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
-<p class="src">From <code>builds</code>, <code>serving_log</code>, <code>release_changes</code> and the control plane · “published” is read from <code>serving_log</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
 
 <h2 class="section">Decisions</h2>
 {% if not p %}
@@ -54,7 +57,7 @@
     {% endif %}
     <form class="actions" data-write="/api/drafts/{{ draft.draft_id }}/publish" data-ask="reason" data-reason="publish {{ draft.draft_id }}" data-confirm="Publish build {{ build }}? The publish job serves it: marts, the release pointer and serving_log, then the lake upload. The site follows from the served release." data-confirm-label="Publish"{% if ready.needs_count %} data-type="{{ ready.removed }}" data-danger{% endif %}>
       <input type="hidden" name="key" value="{{ new_key() }}">
-      {% if not ready.ready %}<p class="hint" id="why-not">Publish is off until every check above holds.</p>{% endif %}
+      {% if not ready.ready %}<p class="meta" id="why-not">Publish is off until every check above holds.</p>{% endif %}
       <button class="btn primary inline" type="submit" data-busy="Starting the publish job…"{% if not ready.ready %} aria-disabled="true" aria-describedby="why-not"{% endif %}>Publish…</button>
     </form>
     {% endif %}

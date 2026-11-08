@@ -70,7 +70,8 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
   - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
-    version) answered a test crawl of the store, or of its whole connector, in the last 7 days.
+    version) answered a test crawl of the store itself in the last 7 days (a connector-wide test doesn't say which
+    stores answered).
 
   It starts the `publish` job (`publish-release --action publish`). "Published" is read from `serving_log`, never
   set. A draft being published, or published, can't be discarded.

@@ -46,7 +46,7 @@
   {% else %}
   <p class="answer" data-answer>{{ many(data.total, "place", "places") }} · the flags can’t be read now, so no place’s status is shown</p>
   {% endif %}
-  {% if chips %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ many(data.total, "place", "places") }} {{ "matches" if data.matching == 1 else "match" }}</p>{% endif %}
+  {% if chips and not (chips | length == 1 and chips[0][0] == "status") %}<p class="src" data-answer-matching>{{ n(data.matching) }} of {{ many(data.total, "place", "places") }} {{ "matches" if data.matching == 1 else "match" }}</p>{% endif %}
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No places match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}

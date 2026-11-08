@@ -55,6 +55,7 @@ function loadPart(section, quiet) {
       const html = await r.text(); // server-rendered and escaped by the template engine
       if (quiet && !r.ok) return; // keep what is shown; the next poll tries again
       section.innerHTML = html;
+      if (!quiet) titleActions(section); // a poll leaves the title's buttons (and any panel open there) alone
       const poll = section.querySelector("[data-poll]");
       if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
@@ -248,6 +249,44 @@ function modes(root = document) {
   root.querySelectorAll("[data-narrow-only]").forEach((el) => { el.disabled = wide; });
 }
 
+// A part's <template data-title> goes beside the page title: its Run a job, its "?" help, and their panels.
+function titleActions(section) {
+  const slot = document.querySelector("[data-title-actions]");
+  if (!slot) return;
+  slot.replaceChildren();
+  const tpl = section.querySelector("template[data-title]");
+  if (tpl) slot.append(tpl.content.cloneNode(true));
+  const run = slot.querySelector("[data-run-form]");
+  if (run) {
+    runForm(run);
+    if ("open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
+  }
+}
+
+// Run a job: the Job picks which fields show (the others are disabled, so they aren't sent) and where Run posts;
+// Run opens the usual confirm with the plan, the guards and the window's override.
+function runForm(form) {
+  const pick = form.querySelector("[data-job]");
+  const opt = pick.selectedOptions[0];
+  const fields = (opt.dataset.fields || "").split(" ").filter(Boolean);
+  form.querySelectorAll("[data-field]").forEach((l) => {
+    const on = fields.includes(l.dataset.field);
+    l.hidden = !on;
+    l.querySelectorAll("input, select").forEach((i) => { i.disabled = !on; });
+  });
+  form.querySelector("[data-job-hint]").textContent = opt.dataset.hint || "";
+  const site = pick.value === "site";
+  form.querySelector("[data-site]").hidden = !site;
+  form.querySelector('button[type="submit"]').hidden = site;
+  form.dataset.write = `/api/jobs/${pick.value}/runs`;
+  form.dataset.preview = `/api/jobs/${pick.value}/plan`;
+  form.dataset.confirmTitle = `Start ${opt.textContent.trim()}?`;
+}
+
+document.addEventListener("change", (e) => {
+  if (e.target.matches("[data-job]")) runForm(e.target.form);
+});
+
 function edges(tabs) {
   tabs.classList.toggle("more-start", tabs.scrollLeft > 1);
   tabs.classList.toggle("more-end", tabs.scrollLeft + tabs.clientWidth < tabs.scrollWidth - 1);
@@ -323,7 +362,7 @@ function describe(out) {
   if (out.batch_id) {
     const n = plural(out.count, "place");
     if (out.flag === "roaster") return `Marked ${n} as ${out.count === 1 ? "a roaster" : "roasters"}.`;
-    if (out.flag === "not_roaster") return `Marked ${n} as not ${out.count === 1 ? "a roaster" : "roasters"}.` + (out.excluded ? ` ${plural(out.excluded, "coffee")} leave the catalog.` : "");
+    if (out.flag === "not_roaster") return `Marked ${n} as not ${out.count === 1 ? "a roaster" : "roasters"}.` + (out.excluded ? ` ${plural(out.excluded, "coffee")} ${out.excluded === 1 ? "leaves" : "leave"} the catalog.` : "");
     return `Cleared the flag on ${n}.`;
   }
   if (out.restored !== undefined && out.reverted) return `Undone (${out.count}).` + (out.restored ? ` ${plural(out.restored, "coffee")} back in the catalog.` : "");
@@ -424,6 +463,7 @@ async function confirmWrite(form) {
   const result = document.querySelector("[data-result]");
   if (result) result.hidden = true; // the confirm stands alone; its outcome replaces the last one
   document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { m.open = false; });
+  document.querySelectorAll("dialog.panel[open]").forEach((p) => p.close()); // the confirm stands alone
   if (!d.open) d.showModal();
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";

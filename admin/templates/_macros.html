@@ -94,3 +94,14 @@
 {% macro pager(data, qs) -%}
 {% if data.pages > 1 %}<nav class="pager" aria-label="Pages of results">{% if data.page > 1 %}<a class="ev" href="{{ qs(page=data.page - 1) }}">Previous 100</a>{% endif %}<span class="meta">Page {{ data.page }} of {{ data.pages }}</span>{% if data.page < data.pages %}<a class="ev" href="{{ qs(page=data.page + 1) }}">Next 100</a>{% endif %}</nav>{% endif %}
 {%- endmacro %}
+
+{# The page's "?" beside its title (shell.html's title actions): what the page reads and how it works, in a panel
+   (a sheet on a phone, a popover on a desktop), so the page itself starts with its answer. #}
+{% macro help(id, title) -%}
+<button class="btn secondary inline help" type="button" data-panel aria-controls="help-{{ id }}" aria-haspopup="dialog" aria-label="About {{ id }}: {{ title | lower }}">?</button>
+<dialog class="sheet panel" id="help-{{ id }}" aria-labelledby="help-{{ id }}-h">
+  <h2 class="serif title-s" id="help-{{ id }}-h">{{ title }}</h2>
+  {{ caller() }}
+  <div class="actions"><button class="btn text inline" type="button" data-panel-close>Close</button></div>
+</dialog>
+{%- endmacro %}

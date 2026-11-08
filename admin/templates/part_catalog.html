@@ -1,4 +1,8 @@
-{% from "_macros.html" import ev, write_off, write_button, search, pager %}
+{% from "_macros.html" import ev, write_off, write_button, search, pager, help %}
+{% if data %}<template data-title>{% call help("catalog", "About the Catalog") %}
+  <p class="body">Every product of the build, coffee or not, with the owner's decision. Tick products, then Include or Exclude them, by coffee or by version; Undo is in the outcome line.</p>
+  <p class="meta">From build {{ build }}’s {{ data.meta.made_from }} · cached locally per build · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+{% endcall %}</template>{% endif %}
 <div data-state="{{ 'data' if data and data.matching else 'empty' }}">
 {{ write_off(writes_off) }}
 {% if not data %}
@@ -10,7 +14,6 @@
   {% endcall %}
   {% set chips = f.chips() %}
   <p class="answer" data-answer>{{ n(data.matching) }} of {{ n(data.total) }} products</p>
-  <p class="src">From build {{ build }}’s {{ data.meta.made_from }} · cached locally per build · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
   {% if not data.matching %}
   <div class="state empty mt16"><h2 class="section">No products match</h2><p class="body">Nothing matches {% for key, text in chips %}{{ text }}{{ ", " if not loop.last }}{% endfor %}.{% if chips %} <a class="ev" href="{{ qs(**{chips[-1][0]: none}) }}">Remove the last filter</a>.{% endif %}</p></div>
   {% else %}
