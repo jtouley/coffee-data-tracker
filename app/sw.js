@@ -35,8 +35,14 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Bumped by each sign-out: a photo fetched before it must not put the kept pages back afterwards.
+let generation = 0;
+
 self.addEventListener("message", (e) => {
-  if (e.data === "signed-out") e.waitUntil(caches.delete(PAGES));
+  if (e.data === "signed-out") {
+    generation += 1;
+    e.waitUntil(caches.delete(PAGES));
+  }
 });
 
 async function hashed(request) {
@@ -75,15 +81,19 @@ async function page(request) {
 // A bag photo: from the network (the app sends it no-store), kept with the pages so a kept screen shows it offline.
 // It goes with them on sign-out. Only an image is kept: signed out, the app redirects to the sign-in page, which
 // fetch follows to a 200 that must not replace the photo.
-async function keepPhoto(path, response) {
+async function keepPhoto(path, response, fetchedIn) {
+  if (generation !== fetchedIn) return; // signed out meanwhile: the photo was the last person's
   const pages = await caches.open(PAGES);
+  if (generation !== fetchedIn) return;
   await pages.put(path, response);
+  if (generation !== fetchedIn) return void (await pages.delete(path)); // signed out during the put
   const kept = (await pages.keys()).filter((r) => PHOTO.test(new URL(r.url).pathname));
   await Promise.all(kept.slice(0, Math.max(0, kept.length - PHOTO_LIMIT)).map((r) => pages.delete(r)));
 }
 
 async function photo(e) {
   const url = new URL(e.request.url);
+  const fetchedIn = generation;
   let response;
   try {
     response = await fetch(e.request);
@@ -93,7 +103,7 @@ async function photo(e) {
   const image = (response.headers.get("content-type") || "").startsWith("image/");
   if (response.ok && !response.redirected && image) {
     // Kept after answering, on its own: a full storage (QuotaExceededError) never costs the photo just fetched.
-    e.waitUntil(keepPhoto(url.pathname, response.clone()).catch(() => { /* not kept: still shown online */ }));
+    e.waitUntil(keepPhoto(url.pathname, response.clone(), fetchedIn).catch(() => { /* not kept: still shown online */ }));
   }
   return response;
 }

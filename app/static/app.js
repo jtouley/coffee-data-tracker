@@ -1691,9 +1691,18 @@ function account() {
     // Signing out everywhere asks for a second tap (data-confirm); plain sign-out doesn't.
     b.addEventListener("click", () => confirmTap(b, async () => {
       try {
-        // 401: the session had already ended (signed out on another phone, or expired); that is signed out too.
+        // 401: the session had already ended (signed out on another phone, or expired); for this phone's sign-out
+        // that is signed out too. Not for "Sign out on all devices": the other sessions are untouched, so say so.
         // A session the server couldn't check answers 503 instead, which stays an error here.
-        await post(b.dataset.signout, {}).catch((err) => { if (err.status !== 401) throw err; });
+        const everywhere = b.dataset.signout !== "/api/signout";
+        const ended = await post(b.dataset.signout, {}).then(() => false, (err) => {
+          if (err.status !== 401) throw err;
+          return true;
+        });
+        if (ended && everywhere) {
+          b.textContent = "This phone was already signed out. Sign in, then sign out on all devices.";
+          return;
+        }
         // Kept pages hold this person's data: they go with the session, once the server has signed it out.
         try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
         navigator.serviceWorker?.controller?.postMessage("signed-out");

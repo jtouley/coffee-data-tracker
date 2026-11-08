@@ -46,5 +46,5 @@
 
 {# A form app.js didn't wire, submitted natively: shown right above the form, where the sign-in screen's notices sit. #}
 {% macro unloaded_notice(unloaded) %}{% if unloaded %}
-  <p class="notice">The page didn’t finish loading, so {{ unloaded }}. Reload the page and try again.</p>
+  <p class="notice" id="unloaded-notice">The page didn’t finish loading, so {{ unloaded }}.</p>
 {%- endif %}{% endmacro %}

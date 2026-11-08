@@ -27,7 +27,7 @@
     <input class="input" id="username" name="username"{% if username %} value="{{ username }}"{% endif %} autocomplete="username" autocapitalize="none" spellcheck="false" required>
     <label class="flabel" for="password">Password</label>
     <div class="pw">
-      <input class="input" id="password" name="password" type="password" autocomplete="current-password"{% if username %} autofocus{% endif %} required>
+      <input class="input" id="password" name="password" type="password" autocomplete="current-password"{% if unloaded %} aria-describedby="unloaded-notice"{% endif %}{% if username %} autofocus{% endif %} required>
       <button type="button" data-show aria-controls="password" aria-pressed="false">Show</button>
     </div>
     {% endif %}

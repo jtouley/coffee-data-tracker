@@ -380,8 +380,8 @@ The sign-in screen's notices ("You’ve been signed out", "We couldn’t check y
 the page as it's sent, not filled in afterwards, so they have no `role="status"` (a live region announces changes,
 not text present at load) and are read in order before the form. So is the notice for a form submitted before app.js
 wired it (the password forms post, and the page comes back, with the notice in the same place, just above the form):
-"The page didn’t finish loading, so you’re not signed in yet. Reload the page and try again.", naming what didn't
-happen (account not created, password not changed), with the username kept and the password field empty (focused, on
+"The page didn’t finish loading, so you’re not signed in yet. Enter your password and sign in again.", naming what
+didn't happen and what to fill in again (the returned page works, so not "reload": that would resend the form), with the username kept and the password field empty (focused, on
 sign-in).
 
 Every save leaves its form: it returns to the screen the form was opened from (Setup, first run, the gear picker

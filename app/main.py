@@ -466,7 +466,7 @@ def create_app(
             "signin.html",
             400,
             owner_setup=s.accounts.needs_owner,
-            unloaded="you’re not signed in yet",
+            unloaded="you’re not signed in yet. Enter your password and sign in again",
             username=username,
         )
 
@@ -474,13 +474,13 @@ def create_app(
     async def join_unwired(request: Request) -> HTMLResponse:
         accounts_only()
         return page(request, "join.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
-                    unloaded="your account wasn’t created", username=await typed_username(request))  # fmt: skip
+                    unloaded="your account wasn’t created. Fill in the form and create it again", username=await typed_username(request))  # fmt: skip
 
     @app.post("/reset", response_class=HTMLResponse)
     async def reset_unwired(request: Request) -> HTMLResponse:
         accounts_only()
         return page(request, "reset.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
-                    unloaded="your password wasn’t changed")  # fmt: skip
+                    unloaded="your password wasn’t set. Enter the code and a new password again")  # fmt: skip
 
     @app.post("/api/invites/check", dependencies=[Depends(anyone)])
     def check_invite(body: dict, request: Request) -> dict:
@@ -930,7 +930,9 @@ def create_app(
     @app.post("/setup", response_class=HTMLResponse)
     def setup_unwired(request: Request, me: Me) -> HTMLResponse:
         """Change password's form, unwired (see signin_unwired): the passwords are dropped, unread."""
-        return setup_page(request, me, unloaded="your password wasn’t changed")
+        return setup_page(
+            request, me, unloaded="your password wasn’t changed. Enter both passwords and change it again"
+        )
 
     @app.get("/setup/gear/{equipment_id}", response_class=HTMLResponse)
     def gear_page(

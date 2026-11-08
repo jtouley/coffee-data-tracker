@@ -132,7 +132,10 @@ def signed_out(request: Request) -> Response:
         return RedirectResponse("/signin", 303)
     if getattr(request.state, "auth_failed", False):
         return JSONResponse(
-            {"detail": "We couldn’t check your sign-in just now. Try again in a moment."}, 503
+            {
+                "detail": "We couldn’t check your sign-in just now. Reload the page in a moment: you may still be signed in."
+            },
+            503,
         )
     return JSONResponse({"detail": "sign in first"}, 401)
 

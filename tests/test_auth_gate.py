@@ -177,6 +177,7 @@ def test_a_failing_session_lookup_fails_closed(lake, users, photo_lake, caplog):
     assert c.get("/api/coffees/search?q=x").status_code == 503
     assert c.post("/api/shots", json={}, headers=W).status_code == 503
     assert c.post("/api/signout", json={}, headers=W).status_code == 503
+    assert "you may still be signed in" in c.post("/api/signout", json={}, headers=W).json()["detail"]
     r = c.get("/signin")  # the way back in still opens, and says why
     assert (
         r.status_code == 200 and "couldn’t check your sign-in just now. Reload the page in a moment" in r.text
@@ -308,8 +309,9 @@ def test_an_unwired_form_comes_back_with_a_notice_keeping_only_the_username(lake
     sign_in(c)  # an owner exists: the ordinary sign-in screen
     c.post("/api/signout", json={}, headers=W)
     notice = "The page didn’t finish loading, so "
-    outcome = {"/signin": "you’re not signed in yet", "/join": "your account wasn’t created",
-               "/reset": "your password wasn’t changed"}  # fmt: skip
+    outcome = {"/signin": "you’re not signed in yet. Enter your password and sign in again",
+               "/join": "your account wasn’t created. Fill in the form and create it again",
+               "/reset": "your password wasn’t set. Enter the code and a new password again"}  # fmt: skip
     form = {"username": "maya<b>", "password": "secret-pass-123", "code": "K7QD-ABCD"}
     for path in ("/signin", "/join", "/reset"):
         r = c.post(path, data=form)
@@ -318,11 +320,13 @@ def test_an_unwired_form_comes_back_with_a_notice_keeping_only_the_username(lake
         assert "set-cookie" not in r.headers, path
     signin = c.post("/signin", data=form).text
     assert 'value="maya&lt;b&gt;"' in signin and "autofocus" in signin  # kept, escaped; on to the password
+    # The focused password field names the notice, so a screen reader starting there still hears it.
+    assert 'id="unloaded-notice"' in signin and 'aria-describedby="unloaded-notice"' in signin
     assert 'value="maya&lt;b&gt;"' in c.post("/join", data=form).text
     assert c.get("/signin").status_code == 200 and notice not in c.get("/signin").text
     sign_in(c)
     r = c.post("/setup", data={"current": "secret-pass-123", "new": "another-pass-456"})
-    assert r.status_code == 400 and notice + "your password wasn’t changed" in r.text
+    assert r.status_code == 400 and notice + "your password wasn’t changed. Enter both passwords" in r.text
     assert "secret-pass-123" not in r.text
     c.post("/api/signout", json={}, headers=W)
     sign_in(c)  # the password didn't change
