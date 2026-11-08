@@ -107,7 +107,8 @@ class RequireSession:
         try:
             public = public_route(self.routes(), scope)
         except Exception:  # noqa: BLE001 - fail closed
-            log.exception("matching %s to a route failed", scope.get("path"))
+            # The method, not the path: a path carries ids (/shot/<id>), and logs name routes by template only.
+            log.exception("matching a %s request to a route failed", scope.get("method") or scope.get("type"))
             public = False
         conn.state.public = public
         user = None if public else current_user(self.auth, conn)

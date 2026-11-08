@@ -179,6 +179,31 @@ def test_a_failing_session_lookup_fails_closed(lake, users, photo_lake, caplog):
     assert "set-cookie" not in r.headers  # kept: it may be fine once the check works again
     assert c.get("/health").json() == {"ok": True}
     assert "lake read failed" in caplog.text and "Traceback" in caplog.text  # logged, not shown
+    # The sign-in screen tells app.js not to clear the offline pages: the session may still be good.
+    assert 'data-ended="failed"' in r.text
+
+
+def test_forms_that_carry_a_password_post_even_unwired(lake, users, photo_lake):
+    """Without app.js (it failed to load, or threw first), a form submits natively: a GET would put the password
+    in the URL, the browser's history and the platform's request log."""
+    c = client(make(lake, users, photo_lake))
+    for path, form in (("/signin", "signin"), ("/join", "join"), ("/reset", "reset")):
+        assert re.search(rf'<form id="{form}"[^>]* method="post"', c.get(path).text), path
+    sign_in(c)
+    assert re.search(r'<form id="password-form"[^>]* method="post"', c.get("/setup").text)
+
+
+def test_a_failed_route_match_logs_the_method_not_the_path(lake, users, photo_lake, caplog, monkeypatch):
+    import app.auth
+
+    def broken(routes, scope):
+        raise RuntimeError("matcher broke")
+
+    monkeypatch.setattr(app.auth, "public_route", broken)
+    c = client(make(lake, users, photo_lake))
+    assert c.get("/shot/secret-id-123").headers["location"] == "/signin"  # fails closed
+    assert "matching a GET request to a route failed" in caplog.text
+    assert "secret-id-123" not in caplog.text
 
 
 def test_a_failing_terms_check_shows_only_the_agree_screen(lake, users, photo_lake, monkeypatch):

@@ -10,10 +10,13 @@
 # - A run deploys only main's tip: ci runs for two quick pushes can finish out of order, and the older commit must
 #   not replace the newer one in production. Deploys run one at a time and every waiting one keeps its place
 #   (`queue: max`): with GitHub's default, a late older commit's job would replace the tip's and then skip itself.
-# - workflow_dispatch from main deploys main's tip as it is, without waiting for ci: a redeploy, or the first
-#   deploy once the variables are set.
-# - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set. A required
-#   reviewer for the admin can be added to the `admin` environment in the repository's settings.
+# - workflow_dispatch from main deploys main's tip (a redeploy, or the first deploy once the variables are set), but
+#   only if ci passed on it: a manual redeploy is most wanted when the tip is red. `force` deploys it anyway.
+# - The image goes out by digest: to the app, then to the admin service once GCP_ADMIN_SERVICE is set, only while
+#   the app still runs that image (so the two never stay on different ones). A required reviewer for the admin can
+#   be added to the `admin` environment in the repository's settings.
+# - A deploy while the app's traffic is pinned to an older revision (RUNNING.md, Rolling back) gets 0% of the
+#   traffic: the run says so with a warning.
 name: deploy
 on:
   workflow_run:
@@ -23,6 +26,11 @@ on:
   pull_request:
     paths: ["app/**", "admin/**", "src/**", "pyproject.toml", "uv.lock", "src/terraform/**", ".github/workflows/deploy.yml"]
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Deploy main's tip even if ci didn't pass on it"
+        type: boolean
+        default: false
 permissions:
   contents: read
 # A newer push to a pull request cancels its older check. Other runs get a group of their own here, and only the
@@ -63,6 +71,7 @@ jobs:
     concurrency: {group: deploy-main, cancel-in-progress: false, queue: max}
     permissions:
       contents: read
+      actions: read  # ci's runs, for a manual deploy
       id-token: write  # for Workload Identity Federation
     outputs:
       image: ${{ steps.push.outputs.image }}  # <GCP_IMAGE>@sha256:<digest>; empty when the run skipped
@@ -77,14 +86,23 @@ jobs:
         id: tip
         env:
           GH_TOKEN: ${{ github.token }}
+          MANUAL: ${{ github.event_name == 'workflow_dispatch' && !inputs.force }}
         run: |
           tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
-          if [ "$tip" = "$HEAD_SHA" ]; then
-            echo "current=true" >> "$GITHUB_OUTPUT"
-          else
+          if [ "$tip" != "$HEAD_SHA" ]; then
             echo "::notice::Not deploying $HEAD_SHA: main has moved on to $tip, whose own run deploys it."
             echo "current=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          if [ "$MANUAL" = "true" ]; then  # workflow_run already requires ci's success
+            ci=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$HEAD_SHA&event=push&per_page=1" \
+              --jq '.workflow_runs[0].conclusion // "none"')
+            if [ "$ci" != "success" ]; then
+              echo "::error::ci on $HEAD_SHA is '$ci', not success. Fix main, or run this again with force to deploy it anyway."
+              exit 1
+            fi
+          fi
+          echo "current=true" >> "$GITHUB_OUTPUT"
       - if: steps.tip.outputs.current == 'true'
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
@@ -118,7 +136,14 @@ jobs:
         if: steps.tip.outputs.current == 'true'
         env:
           IMAGE_REF: ${{ steps.push.outputs.image }}
-        run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+        run: |
+          gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
+          # Pinned traffic stays pinned: this revision then gets 0%, and nothing else would say so.
+          latest=$(gcloud run services describe "$SERVICE" --region "$REGION" --format=json |
+            jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0')
+          if [ "$latest" != "100" ]; then
+            echo "::warning::$SERVICE's traffic is pinned (${latest}% to the newest revision), so this deploy serves no one. After a rollback, move it back: RUNNING.md, Rolling back."
+          fi
 
   # The admin (admin.registry.coffee) runs the same image as its own service: the same digest, after the app.
   deploy-admin:
@@ -133,32 +158,31 @@ jobs:
       id-token: write  # for Workload Identity Federation
     env:
       REGION: ${{ vars.GCP_REGION || 'us-central1' }}
-      HEAD_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      APP: ${{ vars.GCP_SERVICE || 'registry-coffee' }}
+      IMAGE_REF: ${{ needs.deploy.outputs.image }}
     steps:
-      # Checked again here: if the admin environment ever gets a required reviewer, approvals can come out of
-      # order, and an older image must not replace a newer one.
-      - name: Is this commit still main's tip?
-        id: tip
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
-          if [ "$tip" = "$HEAD_SHA" ]; then
-            echo "current=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "::notice::Not deploying the admin at $HEAD_SHA: main has moved on to $tip, whose own run deploys it."
-            echo "current=false" >> "$GITHUB_OUTPUT"
-          fi
-      - if: steps.tip.outputs.current == 'true'
-        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093  # v3.0.0
         with:
           workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
           service_account: ${{ vars.GCP_DEPLOY_SA }}
-      - if: steps.tip.outputs.current == 'true'
-        uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db  # v3.0.1
+      # The admin follows the app, not main's tip: if the app has a newer image now (a later run deployed it), that
+      # run's admin job deploys it, and an older image never replaces it, however approvals for the `admin`
+      # environment come in. While the app still runs this image (main moved on, but its ci failed), the admin
+      # gets it too, so the two never stay on different images.
+      - name: Does the app still run this image?
+        id: tip
+        run: |
+          app=$(gcloud run services describe "$APP" --region "$REGION" \
+            --format='value(spec.template.spec.containers[0].image)')
+          if [ "$app" = "$IMAGE_REF" ]; then
+            echo "current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Not deploying $IMAGE_REF to the admin: the app runs $app now, and its own run deploys that."
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Deploy
         if: steps.tip.outputs.current == 'true'
         env:
           SERVICE: ${{ vars.GCP_ADMIN_SERVICE }}
-          IMAGE_REF: ${{ needs.deploy.outputs.image }}
         run: gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet

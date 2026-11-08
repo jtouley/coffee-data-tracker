@@ -6,7 +6,7 @@
   {{ in_app_banner(in_app) }}
   <h1 class="serif title mt8">You’re invited</h1>
   <p class="body">Pick a username and password to start logging your shots.</p>
-  <form id="join" class="fill" data-api="/api/join" data-retry data-busy="Creating account…" data-done="Account created" novalidate>
+  <form id="join" class="fill" method="post" data-api="/api/join" data-retry data-busy="Creating account…" data-done="Account created" novalidate>
     <label class="flabel" for="code">Invite code</label>
     <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-code-status data-error-for="code" role="status">From the invite link you were sent.</div>

@@ -645,8 +645,55 @@ async function newPage(browser, errors) {
     };
     assert.equal(((await clockIn("Asia/Kolkata")) - (await clockIn("UTC")) + 1440) % 1440, 330);
 
+    // A kept screen's bag photo opens offline too: the service worker keeps it with the pages (it's sent no-store).
+    await page.goto(`${base}/coffees`);
+    const thumb = await page.getAttribute('img[src^="/photos/"]', "src");
+    assert.ok(thumb, "a bag with a photo on Coffees");
+    await page.evaluate(async () => navigator.serviceWorker.ready);
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.status), thumb), 200);
+    await page.context().setOffline(true);
+    assert.equal(await page.evaluate((u) => fetch(u).then((r) => r.status, () => "failed"), thumb), 200);
+    await page.context().setOffline(false);
+
+    // Sign out after the session already ended elsewhere (here: its cookie is gone) is signed out, not an error.
+    await page.goto(`${base}/setup`);
+    await page.context().clearCookies();
     await page.getByRole("button", { name: "Sign out", exact: true }).click();
     await page.waitForURL(`${base}/signin`);
+    assert.equal(await page.evaluate(() => caches.has("pages")), false); // the photo went with the pages
+
+    // An unwired sign-in form (app.js failed to load) posts: the password never goes in the URL.
+    const noScript = await browser.newContext({ javaScriptEnabled: false, serviceWorkers: "block" });
+    const bare = await noScript.newPage();
+    await bare.goto(`${base}/signin`);
+    await bare.fill("#username", "owner");
+    await bare.fill("#password", "never in a url");
+    const [sent] = await Promise.all([
+      bare.waitForRequest((r) => r.isNavigationRequest() && new URL(r.url()).pathname === "/signin"),
+      bare.press("#password", "Enter"),
+    ]);
+    assert.equal(sent.method(), "POST");
+    assert.doesNotMatch(sent.url(), /never|password/);
+    await noScript.close();
+
+    // "We couldn't check your sign-in" keeps the offline pages (the session may still be good); a sign-out doesn't.
+    const check = await browser.newContext({ serviceWorkers: "block" });
+    const lookup = await check.newPage();
+    lookup.on("pageerror", (e) => errors.push(e.message));
+    await lookup.goto(`${base}/offline`);
+    await lookup.evaluate(() => caches.open("pages").then((c) => c.put("/history", new Response("kept"))));
+    const kept = () => lookup.evaluate(() => caches.open("pages").then(async (c) => (await c.match("/history"))?.text() ?? null));
+    await lookup.route(`${base}/signin`, async (route) => {
+      const r = await route.fetch();
+      await route.fulfill({ response: r, body: (await r.text()).replace(/data-ended="[^"]*"/, 'data-ended="failed"') });
+    });
+    await lookup.goto(`${base}/signin`);
+    await lookup.waitForLoadState("load");
+    assert.equal(await kept(), "kept");
+    await lookup.unroute(`${base}/signin`);
+    await lookup.goto(`${base}/signin`);
+    await lookup.waitForFunction(() => caches.open("pages").then(async (c) => !(await c.match("/history"))));
+    await check.close();
     assert.deepEqual(errors, []);
     assert.deepEqual(problems, [], `axe found serious or critical issues:\n${problems.join("\n")}`);
   } finally {

@@ -36,7 +36,7 @@
     {% if auth_name != "local" %}
     {% if me.role == "owner" %}<a class="link" href="/invite"><span>Invite someone<span class="meta">People and reset codes</span></span>{{ chevron() }}</a>{% endif %}
     <details class="disclose"><summary class="link"><span>Change password</span>{{ chevron() }}</summary>
-      <form id="password-form" class="mt8" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>
+      <form id="password-form" class="mt8" method="post" data-api="/api/password" data-username="{{ me.username }}" data-busy="Changing password…" novalidate>
         <label class="flabel" for="current">Current password</label>
         <input class="input" id="current" name="current" type="password" autocomplete="current-password" aria-describedby="current-error" required>
         <p class="ferr" id="current-error" data-error-for="current"></p>

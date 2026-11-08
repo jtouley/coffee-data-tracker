@@ -6,7 +6,7 @@
   {{ in_app_banner(in_app) }}
   <h1 class="serif title mt8">Reset your password</h1>
   <p class="body">Ask the person who invited you for a reset link. It works once, and signs you out everywhere else.</p>
-  <form id="reset" class="fill" data-api="/api/reset" data-busy="Setting password…" data-done="Password set" novalidate>
+  <form id="reset" class="fill" method="post" data-api="/api/reset" data-busy="Setting password…" data-done="Password set" novalidate>
     <label class="flabel" for="code">Reset code</label>
     <input class="input code" id="code" name="code" autocomplete="one-time-code" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-error-for="code">From the reset link you were sent.</div>

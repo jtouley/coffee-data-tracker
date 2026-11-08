@@ -2,7 +2,8 @@
 //
 // The shell (styles, script, fonts, an offline page) is cached at install, so the app opens without a network.
 // Pages go to the network first; the last good copy of the screens used at the machine (Today, Log shot, New bag,
-// Coffees, a coffee, History) is kept, so they still open offline. Writes never go through here: they wait in the
+// Coffees, a coffee, History) is kept, so they still open offline, and so are the bag photos they show (up to
+// PHOTO_LIMIT, the oldest dropped first). Writes never go through here: they wait in the
 // page's IndexedDB outbox until the server acknowledges them. Signing out clears the kept pages, which hold that
 // person's data.
 //
@@ -12,6 +13,8 @@ const SHELL = __SHELL__;
 const STATIC = "static";
 const CACHE = "shell-__VERSION__"; // the unhashed shell (the offline page) for this version
 const PAGES = "pages";
+const PHOTO = /^\/photos\/[\w-]+$/;
+const PHOTO_LIMIT = 60;
 const KEEP = [/^\/$/, /^\/log$/, /^\/bag\/new$/, /^\/coffees$/, /^\/history$/, /^\/coffee\/[\w-]+$/, /^\/setup$/];
 
 self.addEventListener("install", (e) => {
@@ -69,6 +72,25 @@ async function page(request) {
   }
 }
 
+// A bag photo: from the network (the app sends it no-store), kept with the pages so a kept screen shows it offline.
+// It goes with them on sign-out.
+async function photo(request) {
+  const url = new URL(request.url);
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      const copy = response.clone();
+      const pages = await caches.open(PAGES);
+      await pages.put(url.pathname, copy);
+      const kept = (await pages.keys()).filter((r) => PHOTO.test(new URL(r.url).pathname));
+      await Promise.all(kept.slice(0, Math.max(0, kept.length - PHOTO_LIMIT)).map((r) => pages.delete(r)));
+    }
+    return response;
+  } catch {
+    return (await caches.match(url.pathname, { cacheName: PAGES })) || Response.error();
+  }
+}
+
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
@@ -76,5 +98,7 @@ self.addEventListener("fetch", (e) => {
     e.respondWith(hashed(e.request)); // cache first, and kept across versions
   } else if (e.request.mode === "navigate") {
     e.respondWith(page(e.request));
+  } else if (PHOTO.test(url.pathname)) {
+    e.respondWith(photo(e.request));
   }
 });
