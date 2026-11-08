@@ -96,8 +96,11 @@ jobs:
           fi
           if [ "$MANUAL" = "true" ]; then  # workflow_run already requires ci's success
             ci=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$HEAD_SHA&event=push&per_page=1" \
-              --jq '.workflow_runs[0].conclusion // "none"')
-            if [ "$ci" != "success" ]; then
+              --jq '.workflow_runs[0] | if . == null then "none" elif .status != "completed" then "running" else .conclusion end')
+            if [ "$ci" = "running" ]; then
+              echo "::error::ci on $HEAD_SHA hasn't finished yet. Wait for it (its success deploys this commit anyway), or run this again with force."
+              exit 1
+            elif [ "$ci" != "success" ]; then
               echo "::error::ci on $HEAD_SHA is '$ci', not success. Fix main, or run this again with force to deploy it anyway."
               exit 1
             fi
@@ -137,11 +140,14 @@ jobs:
         env:
           IMAGE_REF: ${{ steps.push.outputs.image }}
         run: |
+          set -o pipefail
           gcloud run deploy "$SERVICE" --image "$IMAGE_REF" --region "$REGION" --quiet
           # Pinned traffic stays pinned: this revision then gets 0%, and nothing else would say so.
           latest=$(gcloud run services describe "$SERVICE" --region "$REGION" --format=json |
-            jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0')
-          if [ "$latest" != "100" ]; then
+            jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0') || latest=""
+          if ! [[ "$latest" =~ ^[0-9]+$ ]]; then
+            echo "::warning::Couldn't read $SERVICE's traffic split after the deploy; check it with gcloud run services describe."
+          elif [ "$latest" != "100" ]; then
             echo "::warning::$SERVICE's traffic is pinned (${latest}% to the newest revision), so this deploy serves no one. After a rollback, move it back: RUNNING.md, Rolling back."
           fi
 
@@ -169,13 +175,19 @@ jobs:
       # The admin follows the app, not main's tip: if the app has a newer image now (a later run deployed it), that
       # run's admin job deploys it, and an older image never replaces it, however approvals for the `admin`
       # environment come in. While the app still runs this image (main moved on, but its ci failed), the admin
-      # gets it too, so the two never stay on different images.
+      # gets it too, so the two never stay on different images. While the app's traffic is pinned to an older
+      # revision (a rollback), the newest revision serves no one, so the admin is left where it is too.
       - name: Does the app still run this image?
         id: tip
         run: |
-          app=$(gcloud run services describe "$APP" --region "$REGION" \
-            --format='value(spec.template.spec.containers[0].image)')
-          if [ "$app" = "$IMAGE_REF" ]; then
+          set -o pipefail
+          svc=$(gcloud run services describe "$APP" --region "$REGION" --format=json)
+          app=$(jq -r '.spec.template.spec.containers[0].image' <<< "$svc")
+          latest=$(jq '[.spec.traffic[]? | select(.latestRevision == true) | .percent // 0] | add // 0' <<< "$svc")
+          if [ "$latest" != "100" ]; then
+            echo "::warning::Not deploying $IMAGE_REF to the admin: the app's traffic is pinned (${latest}% to its newest revision). Roll the admin back or forward with the app: RUNNING.md, Rolling back."
+            echo "current=false" >> "$GITHUB_OUTPUT"
+          elif [ "$app" = "$IMAGE_REF" ]; then
             echo "current=true" >> "$GITHUB_OUTPUT"
           else
             echo "::notice::Not deploying $IMAGE_REF to the admin: the app runs $app now, and its own run deploys that."

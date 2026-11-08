@@ -31,8 +31,10 @@ sign-in, join, reset, the offline page and the static files. A new route is priv
 `tests/test_auth_gate.py` checks every registered route. Pages and photos for a signed-in person are sent with
 `Cache-Control: no-store, private` and `Vary: Cookie`, so no browser HTTP cache or shared cache keeps them. The
 app's own service worker is the exception: it keeps the last copy of the screens used at the machine (Today, Log
-shot, New bag, Coffees, a coffee, History, Settings), and up to 60 bag photos, so they open offline. It clears them on sign-out and whenever the sign-in screen opens
-(except after "couldn't check your sign-in", when the session may still be good).
+shot, New bag, Coffees, a coffee, History, Settings), and up to 60 bag photos, so they open offline. It clears them
+on sign-out and whenever the sign-in screen opens (except after "couldn't check your sign-in", when the session may
+still be good). The password forms post: if app.js didn't wire one, the page comes back with a notice and the
+username as typed, and nothing is done with what was sent.
 
 ## Sign-in
 
@@ -77,7 +79,7 @@ newest commit if `ci` passed on it; with `force` checked, even if it didn't. Wit
 set, the same image then goes to the admin service, through the `admin` environment, where a required reviewer can
 be added in the repository's settings, as long as the app still runs that image (a later run's deploy carries on
 from there), so the app and the admin never stay on different images. A deploy while traffic is pinned (Rolling
-back, below) ends with a warning on the run.
+back, below) ends with a warning on the run, and leaves the admin where it is.
 
 ### Owner's steps
 
@@ -192,9 +194,15 @@ is bad in both: roll back both, to revisions with the same image. The admin serv
 `GCP_ADMIN_SERVICE` is set) rolls back the same way, with its own name in place of `registry-coffee`.
 
 **Stored data.** A rollback changes the code, not the data. Before going back past a change to what the app writes
-(the users dataset's tables, `USER_TABLES` in `src/coffeedata/lake.py`, or the shot and bag records), check with
-`git log -p <previous image's commit>..main -- src/coffeedata/lake.py app/accounts.py` that the older code can read
-what the newer one wrote. A new column is ignored by older readers; a changed meaning or type isn't.
+(the users dataset's tables, `USER_TABLES` in `src/coffeedata/lake.py`, or the shot and bag records), check that
+the older code can read what the newer one wrote. A new column is ignored by older readers; a changed meaning or
+type isn't. Each image is pushed with its commit as its tag, so the revision's commit is:
+
+```bash
+image=$(gcloud run revisions describe <previous> --region us-central1 --format='value(spec.containers[0].image)')
+gcloud artifacts docker tags list "${image%@*}" --filter="version~${image#*@}" --format='value(tag)'
+git log -p <that commit>..main -- src/coffeedata/lake.py app/accounts.py
+```
 
 To go back to the last good revision while the fix is made:
 
