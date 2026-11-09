@@ -43,8 +43,45 @@
 {% endif %}{% endmacro %}
 {# Under the main button: what a slow request is doing. Present and empty from the start, so it's announced. #}
 {% macro status_line() %}<p class="meta center mt4" data-status role="status"></p>{% endmacro %}
+{# Email (spec §5): optional on sign-up, required where it's the point of the form (forgot, Setup). The same live
+   syntax check as the server (rules.check_email), on blur. #}
+{% macro email_field(id="email", hint="", required=False, value="") %}
+    <label class="flabel" for="{{ id }}">Email</label>
+    <input class="input" id="{{ id }}" name="email" type="email" data-check="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" maxlength="{{ rules.email_max + 20 }}" value="{{ value }}" aria-describedby="{{ id }}-error {{ id }}-h"{% if required %} required data-required{% endif %}>
+    <p class="ferr" id="{{ id }}-error" data-error-for="email"></p>
+    <div class="fhint" id="{{ id }}-h">{{ hint }}</div>
+{%- endmacro %}
+{# Marketing email (spec §7.1): separate from the terms box, ticked unless the person unticks it. #}
+{% macro marketing_box(checked=True) %}
+    <div class="agree">
+      <input type="checkbox" id="marketing" name="marketing"{% if checked %} checked{% endif %}>
+      <label for="marketing">Send me occasional emails about new coffees and features</label>
+    </div>
+{%- endmacro %}
+{# Asked once, on submit, when the optional email is empty. #}
+{% macro email_nudge() %}
+    <div class="notice stack nudge" data-email-nudge hidden>
+      <p id="nudge-text" tabindex="-1">Add an email so you can reset your password yourself?</p>
+      <div class="pair"><button class="btn text start" type="button" data-nudge-add>Add email</button><button class="btn text" type="button" data-nudge-skip>Skip</button></div>
+    </div>
+{%- endmacro %}
+{# Today, for a member with no email yet (spec §5): one dismissible notice. Not now hides it for 90 days. #}
+{% macro email_prompt() %}<div class="notice stack" data-email-prompt>
+    <p>Add an email so you can reset your password yourself.</p>
+    <div class="pair"><a class="btn text start" href="/setup#email">Add email</a><button class="btn text" type="button" data-not-now>Not now</button></div>
+  </div>{% endmacro %}
 
 {# A form app.js didn't wire, submitted natively: shown right above the form, where the sign-in screen's notices sit. #}
 {% macro unloaded_notice(unloaded) %}{% if unloaded %}
   <p class="notice" id="unloaded-notice">The page didn’t finish loading, so {{ unloaded }}.</p>
 {%- endif %}{% endmacro %}
+{# Re-authentication before an email change or removal (review M3). Show, like every password field. #}
+{% macro current_password(id) %}
+    <label class="flabel" for="{{ id }}">Current password</label>
+    <div class="pw">
+      <input class="input" id="{{ id }}" name="current" type="password" autocomplete="current-password" data-empty="Enter your current password." aria-describedby="{{ id }}-error {{ id }}-h" required>
+      <button type="button" data-show aria-controls="{{ id }}" aria-pressed="false">Show</button>
+    </div>
+    <p class="ferr" id="{{ id }}-error" data-error-for="current"></p>
+    <div class="fhint" id="{{ id }}-h">So nobody else with this phone can change it.</div>
+{%- endmacro %}

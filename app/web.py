@@ -34,6 +34,8 @@ CSP = "; ".join(
         "frame-ancestors 'none'",
     ]
 )
+# Pages a link with a secret in its fragment opens (spec §4): never a Referer, even to the app itself.
+NO_REFERRER = ("/reset", "/forgot", "/verify")
 # The camera is only for photographing a bag, so only that screen may ask for it.
 CAMERA_PATHS = ("/bag/new",)
 
@@ -53,7 +55,7 @@ def secure_headers(response: Response, path: str, private: bool = False) -> None
     h.setdefault("Content-Security-Policy", CSP)
     h["Strict-Transport-Security"] = "max-age=63072000; includeSubDomains"
     h["X-Content-Type-Options"] = "nosniff"
-    h["Referrer-Policy"] = "same-origin"
+    h["Referrer-Policy"] = "no-referrer" if path in NO_REFERRER else "same-origin"
     h["Permissions-Policy"] = permissions_policy(path)
     h["Cross-Origin-Opener-Policy"] = "same-origin"
     h["Cross-Origin-Resource-Policy"] = "same-origin"

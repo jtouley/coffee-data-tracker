@@ -1059,6 +1059,27 @@ function checkPassword(password, username = "") {
   return out;
 }
 
+// What rules.TRIM holds: JavaScript's trim() set, so "no spaces" means the same on both sides.
+const SPACES = new RegExp("[\\t\\n\\v\\f\\r \\u00a0\\u1680\\u2000-\\u200a\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]", "u");
+
+function cleanEmail(email) {
+  const e = email.normalize("NFC").trim();
+  const at = e.lastIndexOf("@");
+  return at < 0 ? e : `${e.slice(0, at)}@${e.slice(at + 1).toLowerCase()}`;
+}
+
+// rules.check_email: one @, something before it, a dot inside the part after it, no spaces, at most 254.
+function checkEmail(email, required = false) {
+  const e = cleanEmail(email);
+  if (!e) return required ? [ruleError("e.required")] : [];
+  const at = e.indexOf("@");
+  const local = at < 0 ? e : e.slice(0, at);
+  const domain = at < 0 ? "" : e.slice(at + 1);
+  const ok = (e.match(/@/g) || []).length === 1 && local !== "" && domain.replace(/^\.+|\.+$/g, "").includes(".")
+    && points(e) <= RULES.email_max && !SPACES.test(e);
+  return ok ? [] : [ruleError("e.syntax")];
+}
+
 // --- Forms: errors under their fields, busy and slow states ---------------------------------------------
 
 const UNREACHABLE = "Couldn’t reach the app. Nothing you typed is lost. Try again in a moment.";
@@ -1144,12 +1165,23 @@ const whenTapEnds = (fn) => (pointerDown ? afterTap.push(fn) : fn());
 function liveRules(form) {
   const user = form.querySelector('[data-check="username"]');
   const pass = form.querySelector('[data-check="password"]');
-  if (!RULES || (!user && !pass)) return null;
+  const mail = form.querySelector('[data-check="email"]');
+  if (!RULES || (!user && !pass && !mail)) return null;
   const strict = new Set();
   const nameHint = form.querySelector("[data-username-hint]");
   const suggest = form.querySelector("[data-suggest]");
-  const failed = (input) => (input === user ? checkUsername(input.value) : checkPassword(input.value, user ? user.value : form.dataset.username || ""));
+  const failed = (input) => (input === user ? checkUsername(input.value)
+    : input === mail ? checkEmail(input.value, input.dataset.required !== undefined && strict.has(input))
+      : checkPassword(input.value, user ? user.value : form.dataset.username || ""));
+  // The email has no rule list: its one error shows on blur or submit, and goes as soon as it's fixed.
+  const paintMail = () => {
+    const fails = failed(mail);
+    if (strict.has(mail)) setError(form, "email", fails[0]?.message || "");
+    else if (!fails.length) setError(form, "email");
+    return fails;
+  };
   const paint = (input) => {
+    if (input === mail) return paintMail();
     const fails = failed(input);
     const ids = new Set(fails.map((e) => e.rule));
     const lengthRule = input === user ? "u.length" : "p.length";
@@ -1177,7 +1209,7 @@ function liveRules(form) {
     }
     return fails;
   };
-  for (const input of [user, pass].filter(Boolean)) {
+  for (const input of [user, mail, pass].filter(Boolean)) {
     input.addEventListener("input", () => { paint(input); if (input === user && pass) paint(pass); });
     input.addEventListener("blur", () => whenTapEnds(() => { if (input.value) strict.add(input); paint(input); }));
   }
@@ -1191,7 +1223,7 @@ function liveRules(form) {
   return {
     check() {
       const out = [];
-      for (const input of [user, pass].filter(Boolean)) {
+      for (const input of [user, mail, pass].filter(Boolean)) {
         strict.add(input);
         out.push(...paint(input).map((e) => ({ ...e, field: input.name })));
       }
@@ -1263,6 +1295,20 @@ function accountForm(form, done = null) {
   const submit = form.querySelector('[type="submit"]');
   const busy = busyState(form, submit);
   const live = liveRules(form);
+  // Sign-up's optional email: asked about once, on submit, when it's empty (spec §5). Add email goes to the field;
+  // Skip sends the form as it is.
+  const nudge = form.querySelector("[data-email-nudge]");
+  let nudged = false;
+  if (nudge) {
+    nudge.querySelector("[data-nudge-add]").addEventListener("click", () => {
+      nudge.hidden = true;
+      form.querySelector('[name="email"]').focus();
+    });
+    nudge.querySelector("[data-nudge-skip]").addEventListener("click", () => {
+      nudge.hidden = true;
+      form.requestSubmit(submit);
+    });
+  }
   // A tick can't change while the request is out.
   form.addEventListener("click", (e) => { if (busy.on && e.target.matches?.("input[type=checkbox]")) e.preventDefault(); });
   form.addEventListener("submit", async (e) => {
@@ -1275,8 +1321,8 @@ function accountForm(form, done = null) {
       if (el.type === "checkbox") {
         if (!el.checked) errors.push(ruleError("terms", form.id === "agree-form" ? RULES.terms_again : null));
       } else if (!el.dataset.check && !el.value.trim()) {
-        errors.push({ field: el.name, message: "" });
-        empty = true;
+        errors.push({ field: el.name, message: el.dataset.empty || "" }); // its own words, or the form's line
+        empty = empty || !el.dataset.empty;
       }
     }
     if (errors.length) {
@@ -1286,6 +1332,13 @@ function accountForm(form, done = null) {
       errors.sort((a, b) => order.indexOf(a.field) - order.indexOf(b.field));
       return showErrors(form, errors.filter((err) => err.message), empty ? "Fill in every field." : "");
     }
+    if (nudge && !nudged && !form.querySelector('[name="email"]').value.trim()) {
+      nudged = true;
+      nudge.hidden = false;
+      nudge.querySelector("#nudge-text").focus(); // read out, and the two choices are next
+      return;
+    }
+    nudge && (nudge.hidden = true);
     const body = formBody(form);
     busy.start(form.dataset.busy || "Saving…");
     try {
@@ -1298,8 +1351,17 @@ function accountForm(form, done = null) {
       try {
         sessionStorage.removeItem("join-code");
         sessionStorage.removeItem("reset-code");
-        if (form.id === "join" || form.dataset.ownerSetup === "true") sessionStorage.setItem("notice", `Welcome, ${cleanUsername(body.username)}.`);
+        if (form.id === "join" || form.dataset.ownerSetup === "true") {
+          const welcome = `Welcome, ${cleanUsername(body.username)}.`;
+          // From what they typed, not the reply, which doesn't say whether a link went (review M2).
+          sessionStorage.setItem("notice", body.email?.trim() ? `${welcome} Check your inbox for a link to confirm your email.` : welcome);
+        }
+        if (reply.signin) { // a reset link from email ends on sign-in, with the username filled in (spec §4)
+          sessionStorage.setItem("notice", "Password changed. Sign in with the new one.");
+          sessionStorage.setItem("signin-username", reply.signin);
+        }
       } catch { /* storage is optional */ }
+      if (reply.signin) return location.replace("/signin");
       // Pages kept for offline use belong to whoever was signed in before: they go before this person's first page.
       // Some WebViews have no `caches` at all; the account is made by now, so that mustn't look like a failure.
       try { await globalThis.caches?.delete("pages"); } catch { /* nothing kept */ }
@@ -1520,6 +1582,10 @@ function invites() {
   for (const b of document.querySelectorAll("[data-revoke]")) {
     b.onclick = () => act(b, "Revoking…", `/api/invites/${b.dataset.revoke}/revoke`, {}, () => go(location.pathname, "Invite revoked"));
   }
+  for (const b of document.querySelectorAll("[data-remove-email]")) {
+    b.onclick = () => confirmTap(b, () => act(b, "Removing…", `/api/people/${b.dataset.removeEmail}/email/remove`, {},
+      () => go(location.pathname, `${b.dataset.name}’s email removed`)));
+  }
   for (const b of document.querySelectorAll("[data-person]")) {
     const off = b.dataset.disabled === "true";
     b.onclick = () => confirmTap(b, () => act(b, off ? "Turning off…" : "Turning on…", `/api/people/${b.dataset.person}`, { disabled: off },
@@ -1714,6 +1780,134 @@ function account() {
   }
 }
 
+// --- Email: recovery, verification and the Setup row (docs/app/signup-ux-spec.md §4, §5) -------------
+
+// One reply for an account with a verified email and for no account at all (owner decision, 2026-11-08: only an
+// account with no verified email is told so, on the field).
+const SENT = "If that account has a verified email, we’ve sent a link to it. It works for 30 minutes. Check your spam folder if it isn’t there in a few minutes.";
+
+function forgotForm(form) {
+  const submit = form.querySelector('[type="submit"]');
+  const idle = submit.textContent;
+  accountForm(form, () => {
+    submit.removeAttribute("aria-disabled");
+    busyCup(submit, false);
+    submit.textContent = idle;
+    // Its own line above the form (not the screen's top notice): shown empty, then filled, so it's read out.
+    const sent = document.querySelector("[data-sent]");
+    sent.textContent = "";
+    sent.hidden = false;
+    setTimeout(() => { sent.textContent = SENT; }, 100);
+  });
+}
+
+// A verify link carries its token after #, which never reaches the server's logs; it leaves the address bar at once.
+async function verifyPage(box) {
+  const title = box.querySelector("[data-verify-title]");
+  const status = box.querySelector("[data-verify-status]");
+  const next = document.querySelector("[data-verify-next]");
+  let token = "";
+  try { token = decodeURIComponent(location.hash.slice(1)); } catch { /* a mangled link: treated as expired */ }
+  history.replaceState(null, "", location.pathname);
+  const expired = () => {
+    title.textContent = "Link expired";
+    const a = document.createElement("a");
+    a.href = "/setup#email";
+    a.textContent = "Send a new one from Setup";
+    status.replaceChildren("That link has expired or was already used. ", a, ".");
+  };
+  if (!token) return expired();
+  try {
+    const reply = await post("/api/verify", { token });
+    title.textContent = "Email verified";
+    // The owner's email is for notices only: the owner resets with the setup code.
+    status.textContent = reply.notices_only ? "It’s used for account notices." : "You can now reset your password by email.";
+    next.hidden = false;
+  } catch (err) {
+    if (err instanceof Unreachable) {
+      // Offline or the app waking up: say so, keep the token for a reload, and offer one (review L8).
+      const again = document.createElement("button");
+      again.type = "button";
+      again.className = "btn text start";
+      again.textContent = "Try again";
+      again.addEventListener("click", () => location.reload());
+      status.replaceChildren(UNREACHABLE, again);
+      history.replaceState(null, "", `${location.pathname}#${encodeURIComponent(token)}`);
+      return;
+    }
+    expired();
+  }
+  title.focus();
+}
+
+function emailSettings() {
+  const form = document.getElementById("email-form");
+  if (!form) return;
+  const edit = form.closest("details");
+  if (location.hash === "#email" && !document.querySelector("[data-email-remove-box]")) {
+    edit.open = true; // "Add email" from Today
+    form.querySelector('[name="email"]').focus();
+  }
+  accountForm(form, (reply) => go("/setup", reply.verified ? "Email saved." : `Check your inbox for a link to confirm ${reply.email}.`));
+  const resend = document.querySelector("[data-email-resend]");
+  resend?.addEventListener("click", async () => {
+    if (resend.getAttribute("aria-disabled") === "true") return;
+    const idle = [...resend.childNodes].map((n) => n.cloneNode(true));
+    resend.setAttribute("aria-disabled", "true");
+    resend.textContent = "Sending…";
+    busyCup(resend, true);
+    try {
+      await post("/api/email/resend", {});
+      resend.replaceChildren(...idle);
+      notify("Sent. The new link works for 24 hours; the old one no longer does.");
+    } catch (err) {
+      resend.replaceChildren(...idle);
+      notify(err instanceof Rejected ? err.message : UNREACHABLE);
+    }
+    resend.removeAttribute("aria-disabled");
+    scrollTo(0, 0);
+  });
+  // Removing it takes the current password too (review M3), so it's a small form, not a second tap.
+  const remove = document.getElementById("email-remove-form");
+  if (remove) accountForm(remove, () => go("/setup", remove.dataset.doneNotice));
+  // The marketing box saves as it's ticked; the line under it says so (or puts the tick back).
+  const quiet = document.querySelector("[data-marketing-status]")?.textContent || "";
+  autosave(document.querySelector("[data-marketing]"), document.querySelector("[data-marketing-status]"), "/api/marketing", "marketing",
+    `Saved: you’ll get them${quiet ? " once your email is verified" : ""}.`, "Saved: you won’t get them.");
+}
+
+// A Setup box that saves as it's ticked (marketing email, roaster insights): "Saving…", then what was saved, in
+// the line under it (role="status"); a refusal puts the tick back and says why.
+function autosave(box, said, url, field, onText, offText) {
+  if (!box || !said) return;
+  box.addEventListener("change", async () => {
+    const on = box.checked;
+    said.textContent = "Saving…";
+    try {
+      await post(url, { [field]: on });
+      said.textContent = on ? onText : offText;
+    } catch (err) {
+      box.checked = !on;
+      said.textContent = err instanceof Rejected ? err.message : UNREACHABLE;
+    }
+  });
+}
+
+function insightsSetting() {
+  autosave(document.querySelector("[data-insights]"), document.querySelector("[data-insights-status]"), "/api/insights", "insights",
+    "Saved: later reports will count your shots and bags.", "Saved: later reports will leave out your shots and bags.");
+}
+
+// Today's "Add an email" notice: Not now hides it for 90 days (the server reads the cookie).
+function emailPrompt(box) {
+  box.querySelector("[data-not-now]").addEventListener("click", () => {
+    document.cookie = `nudge-email=1; path=/; max-age=${90 * 86400}; samesite=lax${location.protocol === "https:" ? "; secure" : ""}`;
+    box.remove();
+    const heading = document.querySelector("main h1"); // focus stays on the page, not lost with the notice
+    if (heading) { heading.tabIndex = -1; heading.focus(); }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (stale(false)) return location.reload();
   try {
@@ -1755,14 +1949,39 @@ document.addEventListener("DOMContentLoaded", () => {
       signin.dataset.purge = "done"; // no caches here: nothing kept
     }
   }
+  if (signin && signin.dataset.ownerSetup !== "true") {
+    try { // after a reset by email: the username they reset, filled in
+      const name = sessionStorage.getItem("signin-username");
+      sessionStorage.removeItem("signin-username");
+      if (name) {
+        signin.querySelector("#username").value = name;
+        signin.querySelector("#password").focus();
+      }
+    } catch { /* storage is optional */ }
+  }
   for (const id of ["signin", "join", "reset", "agree-form"]) {
     const f = document.getElementById(id);
     if (f) accountForm(f);
   }
+  const forgot = document.getElementById("forgot");
+  if (forgot) forgotForm(forgot);
+  const verify = document.querySelector("[data-verify]");
+  if (verify) verifyPage(verify);
+  emailSettings();
+  insightsSetting();
+  const prompt = document.querySelector("[data-email-prompt]");
+  if (prompt) emailPrompt(prompt);
   const join = document.getElementById("join");
   if (join) joinCode(join);
   const reset = document.getElementById("reset");
-  if (reset) codeFromLink(reset, "reset-code");
+  if (reset) {
+    codeFromLink(reset, "reset-code");
+    // An emailed token is case-sensitive, so it isn't shown in capitals; owner codes are (the server reads either).
+    const field = reset.querySelector("#code");
+    const mark = () => { field.toggleAttribute("data-token", field.value.trim().startsWith("E-")); };
+    field.addEventListener("input", mark);
+    mark();
+  }
   const inApp = document.querySelector("[data-in-app]");
   if (inApp) inAppBanner(inApp);
   if (document.querySelector("[data-new-invite]")) invites();

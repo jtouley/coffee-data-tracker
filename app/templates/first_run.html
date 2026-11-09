@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-{% from "_macros.html" import chevron, nav %}
+{% from "_macros.html" import chevron, nav, email_prompt %}
 {% block main %}
   <div class="top"><span class="meta">{{ now.strftime("%A, %B ") ~ now.day }}</span></div>
+  {% if nudge %}{{ email_prompt() }}{% endif %}
   <h1 class="serif title mt8">Nothing on the grinder yet</h1>
   {% if grinder and basket %}
   <p class="body">Type the coffee you’re about to open. The app looks for it among the

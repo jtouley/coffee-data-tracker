@@ -76,7 +76,8 @@ def test_every_route_is_public_by_name_or_refuses_anyone_signed_out(lake, users,
     # Opening a route to everyone is a decision: change this list with PUBLIC, in the same review.
     assert {p for _, p in PUBLIC} == {"/static/{path:path}", "/sw.js", "/manifest.webmanifest", "/robots.txt",
                                       "/health", "/healthz", "/offline", "/signin", "/api/signin", "/join",
-                                      "/api/invites/check", "/api/join", "/reset", "/api/reset"}  # fmt: skip
+                                      "/api/invites/check", "/api/join", "/reset", "/api/reset",
+                                      "/forgot", "/api/forgot", "/verify", "/api/verify"}  # fmt: skip
     private = [(m, p) for m, p in found if (m, p) not in PUBLIC]
     assert len(private) > 30
     for method, path in private:

@@ -15,7 +15,7 @@ import httpx
 import pyarrow.parquet as pq
 import pytest
 
-from coffeedata import cli, control, discover, registry
+from coffeedata import cli, connectors, control, discover, registry
 from coffeedata.http import DeadlineReached
 from coffeedata.lake import Lake
 
@@ -373,34 +373,49 @@ def test_an_outage_after_the_first_states_fails_the_source_but_keeps_what_was_an
     assert [r["roaster_id"] for r in pq.read_table(files[0]).to_pylist()] == ["alroast.example"]
 
 
-def test_a_probe_retry_keeps_the_first_attempts_window(lake, monkeypatch):
+# The retry tests run on a frozen clock (control.now): 00:30 UTC on a Monday, so the first attempt began on the
+# previous day and in the previous ISO week (its row still belongs to this run's week), and 12:00 UTC midweek.
+# They once wrote the first attempt under a hard-coded week and read the real clock, so they failed once the
+# calendar moved past that week.
+RETRY_CLOCKS = [datetime(2026, 11, 9, 0, 30, tzinfo=UTC), datetime(2026, 11, 11, 12, 0, tzinfo=UTC)]
+
+
+def _first_attempt(lake, monkeypatch, frozen: datetime, execution: str) -> str:
+    """Freeze the clock, write the first attempt's running row (begun 90 minutes ago, in this run's week) and
+    return the run date the retry is given."""
+    monkeypatch.setattr(control, "now", lambda: frozen)
+    run_date = frozen.date().isoformat()
+    first = {"run_date": connectors.week_of(run_date), "job": "probe", "connector": None, "attempt_id": "a0",
+             "started_at": frozen - timedelta(minutes=90),
+             "status": "running", "detail": {"execution": execution, "task_attempt": 0}}  # fmt: skip
+    control.write(lake, first)
+    return run_date
+
+
+@pytest.mark.parametrize("frozen", RETRY_CLOCKS, ids=["monday-00:30", "midweek-12:00"])
+def test_a_probe_retry_keeps_the_first_attempts_window(lake, monkeypatch, frozen):
     """Cloud Run retries a failed probe once: the retry must not get a fresh 100 minutes and run into the crawls."""
     monkeypatch.setenv("CLOUD_RUN_EXECUTION", "probe-x1")
     monkeypatch.setenv("CLOUD_RUN_TASK_ATTEMPT", "1")
-    first = {"run_date": "2026-11-02", "job": "probe", "connector": None, "attempt_id": "a0",
-             "started_at": control.now().replace(tzinfo=UTC) - timedelta(minutes=90),
-             "status": "running", "detail": {"execution": "probe-x1", "task_attempt": 0}}  # fmt: skip
-    control.write(lake, first)
+    run_date = _first_attempt(lake, monkeypatch, frozen, "probe-x1")
     seen = {}
     monkeypatch.setattr(discover, "probe", lambda todo, **kw: seen.update(kw) or [])
-    cli.cmd_probe(_probe_args(run_date=control.now().date().isoformat(), deadline_min=100))
+    cli.cmd_probe(_probe_args(run_date=run_date, deadline_min=100))
     assert 0 < seen["deadline_s"] <= 10 * 60 + 5  # what's left of the first attempt's 100 minutes
 
 
-def test_a_probe_retry_does_not_take_its_own_setup_off_the_window_twice(lake, monkeypatch):
+@pytest.mark.parametrize("frozen", RETRY_CLOCKS, ids=["monday-00:30", "midweek-12:00"])
+def test_a_probe_retry_does_not_take_its_own_setup_off_the_window_twice(lake, monkeypatch, frozen):
     """The retry's window is measured from the first attempt's start up to now; this attempt's setup (5 minutes
     here) is inside that already. Before, it was subtracted again and the retry stopped early by the setup time."""
     monkeypatch.setenv("CLOUD_RUN_EXECUTION", "probe-x2")
     monkeypatch.setenv("CLOUD_RUN_TASK_ATTEMPT", "1")
-    first = {"run_date": "2026-11-02", "job": "probe", "connector": None, "attempt_id": "a0",
-             "started_at": control.now().replace(tzinfo=UTC) - timedelta(minutes=90),
-             "status": "running", "detail": {"execution": "probe-x2", "task_attempt": 0}}  # fmt: skip
-    control.write(lake, first)
+    run_date = _first_attempt(lake, monkeypatch, frozen, "probe-x2")
     clock = iter([1000.0])  # t0, then every later reading is 5 minutes on
     monkeypatch.setattr(cli, "time", types.SimpleNamespace(monotonic=lambda: next(clock, 1300.0)))
     seen = {}
     monkeypatch.setattr(discover, "probe", lambda todo, **kw: seen.update(kw) or [])
-    cli.cmd_probe(_probe_args(run_date=control.now().date().isoformat(), deadline_min=100))
+    cli.cmd_probe(_probe_args(run_date=run_date, deadline_min=100))
     assert seen["deadline_s"] == pytest.approx(10 * 60, abs=5)  # not 5 minutes
 
 

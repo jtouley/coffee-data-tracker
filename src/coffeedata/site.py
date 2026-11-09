@@ -71,7 +71,9 @@ def hbar_chart(rows: list[tuple[str, float, str]], unit: str, label: str, width:
 REPO = "https://github.com/jtouley/coffee-data-tracker"
 APP = "https://app.registry.coffee"  # the shot-logging app; APP_URL overrides it for a fork or staging
 # The legal pages' "Last updated" date: change it whenever privacy.html or terms.html changes, not on every build.
-LEGAL_UPDATED = "November 2, 2026"
+LEGAL_UPDATED = (
+    "November 8, 2026"  # email, marketing and recommendations (spec §7.4); the owner sets the deploy day
+)
 # The crawler page's (bot.html) "Last updated" date: change it whenever that page changes.
 BOT_UPDATED = "November 2, 2026"
 FIRST_RUN = "2026-10-26"  # the first weekly run the public data covers (the start of temporalCoverage)

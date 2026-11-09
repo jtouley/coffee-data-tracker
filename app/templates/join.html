@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import rules_json, username_field, new_password, agree_box, in_app_banner, status_line, unloaded_notice %}
+{% from "_macros.html" import rules_json, username_field, new_password, agree_box, in_app_banner, status_line, unloaded_notice, email_field, marketing_box, email_nudge %}
 {% block title %}Join · registry.coffee{% endblock %}
 {% block main %}
   <div class="top"><a class="meta home" href="{{ site.site }}/">registry.coffee</a></div>
@@ -12,13 +12,16 @@
     <input class="input code" id="code" name="code" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="code-h" required>
     <div class="fhint" id="code-h" data-code-status data-error-for="code" role="status">From the invite link you were sent.</div>
     {{ username_field(value=username) }}
+    {% if email_on %}{{ email_field(hint="Optional. For resetting your password and account notices, and for news unless you untick the box below. Never for signing in. Only the owner, and our email provider, see it.") }}{% endif %}
     {{ new_password() }}
     <p class="meta mt24">Your shots, bags and photos are kept in the owner’s private Hugging Face datasets. The app
       shows them only to you; the owner can read the datasets.</p>
     {{ agree_box() }}
+    {% if email_on %}{{ marketing_box() }}{% endif %}
     <div class="hint" id="signin-hint" data-hint role="alert"></div>
     <div class="spacer"></div>
     <div class="dock">
+      {% if email_on %}{{ email_nudge() }}{% endif %}
       <button class="btn primary" type="submit">Create account</button>
       {{ status_line() }}
       <a class="btn text" href="/signin">Already have an account? Sign in</a>

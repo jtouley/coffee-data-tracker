@@ -45,7 +45,8 @@ resource "google_cloud_run_v2_service" "app" {
         value = var.support_email
       }
       dynamic "env" {
-        for_each = google_secret_manager_secret.app
+        # Every secret but the email ones, which only with var.email (they need values first: RUNNING.md, "Email").
+        for_each = { for k, v in google_secret_manager_secret.app : k => v if var.email || !contains(local.email_secrets, k) }
         content {
           name = env.key
           value_source {

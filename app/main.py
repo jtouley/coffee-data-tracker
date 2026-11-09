@@ -32,9 +32,10 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from coffeedata import shots
 from coffeedata.lake import Lake
 from coffeedata.models import SAFE_ID
+from coffeedata.site import APP
 from coffeedata.site import links as site_links
 
-from . import labels, logs, photos, rules, views, web
+from . import labels, logs, mail, photos, rules, views, web
 from .accounts import AccountError
 from .auth import (
     COOKIE,
@@ -45,6 +46,7 @@ from .auth import (
     clean_secrets,
     current_user,
     from_env,
+    hosted,
     missing_secrets,
 )
 from .store import Invalid, NotFound, Store, coffee_key
@@ -73,6 +75,8 @@ class Agree(Exception):
 IN_APP = re.compile(r"\b(Instagram)\b|(FBAN/|FBAV/|FB_IAB/|FBIOS)|(MessengerForiOS)")
 # Paths someone who still has to accept the new terms may write to.
 AGREE_FREE = {"/api/agree", "/api/signout", "/api/signout-everywhere"}
+FORGOT_FLOOR = 2.0  # seconds every /api/forgot answer takes at least: a lookup plus a send fits well inside
+NUDGE_COOKIE = "nudge-email"  # "Not now" on Today's add-an-email prompt, for 90 days (spec §5)
 
 
 def in_app_browser(user_agent: str | None) -> str | None:
@@ -114,6 +118,7 @@ def create_app(
     auth: Auth | None = None,
     photos_lake: Lake | None = None,
     labels_client: Any = None,
+    mailer: mail.Mailer | None = None,
 ) -> FastAPI:
     if auth is None:
         clean_secrets()
@@ -122,6 +127,7 @@ def create_app(
             log.error("not configured; missing secrets: %s", ", ".join(missing))
             return not_configured(missing)
         auth = from_env()
+        mailer = mailer or mail.from_env(hosted())
     lake = lake or Lake()
     # Records from before accounts (user_id null) belong to the owner.
     store = Store(lake, shots.owner_user_id())
@@ -130,12 +136,24 @@ def create_app(
     sessions = auth if isinstance(auth, Sessions) else None
     app = FastAPI(title="registry.coffee", docs_url=None, redoc_url=None, openapi_url=None)
     app.state.store = store
+    # Email features show only with a key to seal addresses (EMAIL_KEY) and a way to send (spec §5).
+    email_on = bool(sessions and sessions.accounts.email_on and mailer is not None)
+    # Links in emails are built on the app's fixed address, never the request's Host header (OWASP Forgot Password,
+    # "Host Header Injection").
+    app_url = (os.environ.get("APP_URL") or APP).rstrip("/")
+    # Emails go out inside the request (review H1): Cloud Run gives an instance CPU only while it serves a request
+    # (cpu_idle), so work left for after the reply could stall until the next request, or be lost when the instance
+    # stops. Where a reply mustn't say whether an email went (forgot, and an address verified on another account),
+    # it's padded instead: to a fixed floor (forgot), or by about as long as a send takes (mail.pad).
+    app.state.forgot_floor = FORGOT_FLOOR
+    app.state.mailer = mailer
     assets = web.Assets()
     templates = Jinja2Templates(directory=HERE / "templates")
     templates.env.globals.update(g=views.g, ratio=views.ratio, shots_n=views.n_shots, asset=assets)
     # The public site's address and the beta-invite email, from the same settings the site is built with.
     templates.env.globals.update(site=site_links())
     templates.env.globals.update(rules=rules.for_page())  # the sign-up rules, for the page script (rules.py)
+    templates.env.globals.update(email_on=email_on)
     # Added innermost first: the body limit, then compression, then (outermost) the headers every response gets.
     app.add_middleware(web.LimitBody, default=MAX_BODY, limits={"/api/photos/": photos.MAX_UPLOAD})
     app.add_middleware(GZipMiddleware, minimum_size=500)
@@ -492,33 +510,208 @@ def create_app(
         exp = inv.expires_at.astimezone(tz(request))  # the viewer's day, as on the invite screen
         return {"kind": inv.kind, "expires": f"{exp:%B} {exp.day}"}
 
+    # --- email: sending, recovery and verification (spec §4, §5) ---------------------------------------
+
+    def send_verify(user_id: str, link: tuple[str, str] | None, asked: bool = True) -> None:
+        """The verify email. `asked` but no link (the address is verified on another account): wait about as long
+        as a send takes instead, so the reply's timing doesn't say so either (review M2)."""
+        if not email_on:
+            return
+        if link:
+            address, token = link
+            acct = accounts_only().accounts.get(user_id)
+            mail.deliver(mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}",
+                         notices_only=bool(acct and acct.role == "owner"))  # fmt: skip
+        elif asked:
+            mail.pad()
+
+    def send_changed(acct: Any) -> None:
+        """NIST 800-63B §4.2: account recovery notifies the account's verified address."""
+        if not email_on:
+            return
+        address = accounts_only().accounts.verified_email(acct.user_id)
+        if address:
+            mail.deliver(mailer, "changed", address, acct.user_id, username=acct.username, app=app_url)
+
+    def send_email_changed(acct: Any, previous: str | None, removed: bool, by_owner: bool = False) -> None:
+        """The address that was on the account hears when it's changed or removed (review M3), so a change made
+        from a stolen session doesn't go unnoticed."""
+        if previous and email_on:
+            mail.deliver(mailer, "email_changed", previous, acct.user_id, username=acct.username,
+                         removed=removed, by_owner=by_owner)  # fmt: skip
+
+    def send_reset(user_id: str) -> None:
+        accounts = accounts_only().accounts
+        hit = accounts.reset_link(user_id)
+        if hit:
+            address, acct, token, issued = hit
+            if mail.deliver(mailer, "reset", address, acct.user_id, username=acct.username,
+                            link=f"{app_url}/reset#{token}"):  # fmt: skip
+                accounts.link_sent(acct.user_id, issued)
+
+    def email_only() -> Sessions:
+        s = accounts_only()
+        if not email_on:
+            raise HTTPException(404, "email isn’t set up on this app")
+        return s
+
     @app.post("/api/join", dependencies=[Depends(anyone)])
     def post_join(body: dict, request: Request) -> Response:
         s = accounts_only()
         try:
-            acct = s.accounts.join(
+            acct, link = s.accounts.join_sending(
                 str(body.get("code") or ""),
                 str(body.get("username") or ""),
                 str(body.get("password") or ""),
                 ip(request),
                 agree=body.get("agree") is True,
+                email=str(body.get("email") or "") if email_on else "",
+                marketing=body.get("marketing") is True,
             )
         except AccountError as e:
             raise HTTPException(e.status, e.detail) from None
+        # One reply whether or not a link went (review M2): an address verified on another account gets none.
+        send_verify(acct.user_id, link, asked=bool(email_on and str(body.get("email") or "").strip()))
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
 
     @app.post("/api/reset", dependencies=[Depends(anyone)])
     def post_reset(body: dict, request: Request) -> Response:
+        """An owner's reset link signs in, as it always has. One from email ends on sign-in instead, with the
+        username filled in (OWASP Forgot Password: don't sign in automatically)."""
         s = accounts_only()
         try:
-            acct = s.accounts.reset(str(body.get("code") or ""), str(body.get("password") or ""), ip(request))
+            acct, by_email = s.accounts.reset_by(
+                str(body.get("code") or ""), str(body.get("password") or ""), ip(request)
+            )
         except AccountError as e:
             raise HTTPException(e.status, e.detail) from None
+        send_changed(acct)
+        if by_email:
+            return JSONResponse({"ok": True, "signin": acct.username})
         response = JSONResponse({"ok": True})
         s.set_cookie(response, acct)
         return response
+
+    @app.get("/forgot", response_class=HTMLResponse)
+    def forgot_page(request: Request) -> HTMLResponse:
+        accounts_only()
+        return page(request, "forgot.html", in_app=in_app_browser(request.headers.get("user-agent")))
+
+    @app.post("/forgot", response_class=HTMLResponse)
+    async def forgot_unwired(request: Request) -> HTMLResponse:
+        """The forgot form submitted natively (app.js didn't wire it): nothing is looked up or sent."""
+        accounts_only()
+        return page(request, "forgot.html", 400, in_app=in_app_browser(request.headers.get("user-agent")),
+                    unloaded="no link was sent. Enter your username or email and send it again")  # fmt: skip
+
+    @app.post("/api/forgot", dependencies=[Depends(anyone)])
+    async def post_forgot(body: dict, request: Request) -> dict:
+        """A username or an email. One reply for an account with a verified email and for no account at all; an
+        account with no verified email is told so on the form (owner decision; see Accounts.forgot). The link is
+        sent inside the request (review H1), and every answer that gets past the limits is held to the same floor
+        (FORGOT_FLOOR), so those alike replies take the same time unless sending runs past it. The floor is an
+        async sleep and the work runs in the thread pool, so a burst of requests holds no worker thread while it
+        waits (final review N1). An answer refused by a limit comes back at once, with the same words."""
+        s = email_only()
+        started = time.monotonic()
+        who = str(body.get("account") or "")
+        if not who.strip():
+            raise HTTPException(400, [rules.error("f.required")])
+        if "@" in who and rules.check_email(who):  # not an address: says nothing about any account
+            raise HTTPException(400, [rules.error("e.syntax") | {"field": "account"}])
+        answer, acct = await run_in_threadpool(s.accounts.forgot, who, ip(request))
+        if answer == "limited":
+            return {"ok": True}
+        try:
+            if answer == "send" and acct is not None:
+                await run_in_threadpool(send_reset, acct.user_id)
+        finally:
+            await asyncio.sleep(max(0.0, app.state.forgot_floor - (time.monotonic() - started)))
+        if answer == "no_email":
+            raise HTTPException(400, [rules.error("f.no_email")])
+        return {"ok": True}
+
+    @app.get("/verify", response_class=HTMLResponse)
+    def verify_page(request: Request) -> HTMLResponse:
+        # The token is after # in the link: the page's script posts it, so it never reaches a log.
+        accounts_only()
+        return page(request, "verify.html", me=current_user(auth, request))
+
+    @app.post("/api/verify", dependencies=[Depends(anyone)])
+    def post_verify(body: dict, request: Request) -> dict:
+        s = email_only()
+        try:
+            acct = s.accounts.verify_email(str(body.get("token") or ""), ip(request))
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        # The owner's email is for notices only: the owner resets with the setup code (owner decision, N9).
+        return {"ok": True, "notices_only": True} if acct.role == "owner" else {"ok": True}
+
+    @app.post("/api/email")
+    def post_email(body: dict, me: Writer) -> dict:
+        """Add or change your email, with your current password (review M3). The reply is the same whether or not
+        the address is on another account. The previous verified address is told."""
+        s = email_only()
+        try:
+            link, previous = s.accounts.set_email(
+                me.user_id, str(body.get("email") or ""), str(body.get("current") or "")
+            )
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_verify(me.user_id, link)
+        send_email_changed(me, previous, removed=False)
+        view = s.accounts.email(me.user_id)
+        return {"email": view.address if view else None, "verified": bool(view and view.verified)}
+
+    @app.post("/api/email/resend")
+    def resend_email(me: Writer) -> dict:
+        s = email_only()
+        try:
+            link = s.accounts.resend_verify(me.user_id)
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_verify(me.user_id, link)
+        return {"ok": True}
+
+    @app.post("/api/email/remove")
+    def remove_email(body: dict, me: Writer) -> dict:
+        """Remove your email, with your current password (review M3); the address is told it was removed."""
+        s = email_only()
+        try:
+            previous = s.accounts.remove_email(me.user_id, me.user_id, str(body.get("current") or ""))
+        except AccountError as e:
+            raise HTTPException(e.status, e.detail) from None
+        send_email_changed(me, previous, removed=True)
+        return {"ok": True}
+
+    @app.post("/api/people/{user_id}/email/remove")
+    def remove_member_email(user_id: str, me: Writer) -> dict:
+        """The owner removes a member's email (spec §6). The member's address is told who did it."""
+        s = email_only()
+        target = s.accounts.get(user_id)
+        previous = owner_call(s.accounts.remove_email, me.user_id, user_id)
+        if target is not None:
+            send_email_changed(target, previous, removed=True, by_owner=True)
+        return {"ok": True}
+
+    @app.post("/api/insights")
+    def post_insights(body: dict, me: Writer) -> dict:
+        """ "Include my shots in roaster insights" (privacy policy). Not tied to email: every member has it."""
+        s = accounts_only()
+        if not isinstance(body.get("insights"), bool):
+            raise HTTPException(422, "insights must be true or false")
+        s.accounts.set_insights(me.user_id, body["insights"])
+        return {"insights": body["insights"]}
+
+    @app.post("/api/marketing")
+    def post_marketing(body: dict, me: Writer) -> dict:
+        s = email_only()
+        if not isinstance(body.get("marketing"), bool):
+            raise HTTPException(422, "marketing must be true or false")
+        s.accounts.set_marketing(me.user_id, body["marketing"])
+        return {"marketing": body["marketing"]}
 
     @app.get("/invite", response_class=HTMLResponse)
     def invite_page(request: Request, me: Me) -> HTMLResponse:
@@ -534,6 +727,7 @@ def create_app(
             people=[a for a in s.accounts.people() if a.role != "owner"],
             log=s.accounts.invite_log(),
             shots_of=lambda uid: mine.get(uid, 0),
+            email_of=s.accounts.email if email_on else (lambda uid: None),
             date=lambda d: f"{d.astimezone(z):%A, %B} {d.astimezone(z).day}",
             short=lambda d: f"{d.astimezone(z):%b} {d.astimezone(z).day}",
         )
@@ -599,8 +793,17 @@ def create_app(
     def today(request: Request, me: Me) -> HTMLResponse:
         p = store.prefill(me.user_id, bag_id=request.cookies.get("selected_bag"))
         bag, last = p["bag"], p["last"]
+        nudge = (
+            email_on
+            and sessions is not None
+            and not request.cookies.get(NUDGE_COOKIE)
+            and not sessions.accounts.contacts.get(me.user_id)
+            and me.role != "owner"  # the owner resets with the setup code, not by email (N9)
+        )
         if not bag and not last:
-            return page(request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"])
+            return page(
+                request, "first_run.html", me=me, grinder=p["grinder"], basket=p["basket"], nudge=nudge
+            )
         name, facts = coffee_name(bag, p["coffee_id"], p["coffee_freetext"])
         pulled = store.bag_shots(me.user_id, bag, last)
         z = tz(request)
@@ -617,6 +820,7 @@ def create_app(
             target=views.target_svg(pulled) if pulled else "",
             summary=views.summary(pulled[-1], prev, z) if pulled else "",
             me=me,
+            nudge=nudge,
             grinder_of=lambda s: store.gear(me.user_id, s.grinder_id),
             days_off=(datetime.now(z).date() - bag.roast_date).days if bag and bag.roast_date else None,
             day=lambda d: views.day(d, z),
@@ -918,6 +1122,9 @@ def create_app(
             400 if unloaded else 200,
             me=me,
             auth_name=getattr(auth, "name", ""),
+            email=sessions.accounts.email(me.user_id) if email_on and sessions else None,
+            marketing=sessions.accounts.marketing(me.user_id) if email_on and sessions else None,
+            insights=sessions.accounts.insights(me.user_id) if sessions else True,
             gear={k: store.equipment_of(me.user_id, k) for k in ("grinder", "machine", "basket")},
             counts=counts(me.user_id),
             unloaded=unloaded,
@@ -928,8 +1135,13 @@ def create_app(
         return setup_page(request, me)
 
     @app.post("/setup", response_class=HTMLResponse)
-    def setup_unwired(request: Request, me: Me) -> HTMLResponse:
-        """Change password's form, unwired (see signin_unwired): the passwords are dropped, unread."""
+    def setup_unwired(request: Request, me: Me, form: str = "") -> HTMLResponse:
+        """Change password's form, or the email forms (?form=email), unwired (see signin_unwired): what was typed,
+        passwords included, is dropped, unread."""
+        if form == "email":
+            return setup_page(
+                request, me, unloaded="your email wasn’t changed. Enter it and your password again"
+            )
         return setup_page(
             request, me, unloaded="your password wasn’t changed. Enter both passwords and change it again"
         )

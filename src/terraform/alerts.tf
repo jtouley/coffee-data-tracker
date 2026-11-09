@@ -197,3 +197,44 @@ resource "google_monitoring_alert_policy" "ingest_schedule_failed" {
 # ingest_schedule_failed (a build slot that didn't start), and site.yml's Tuesday 11:17 run, which fails red when the
 # served release isn't this week's (GitHub emails a failed scheduled run). The gap left: a paused or deleted
 # Scheduler entry, which only the red Tuesday run shows.
+
+# Email (var.email, docs/app/RUNNING.md "Email"): a message the app didn't send. Resend refusing or unreachable logs
+# at ERROR (the errors policy above fires too); the day's sending cap (app/mail.py DAILY_CAP) logs at WARNING, which
+# only this policy sees. Logs carry the kind of email and the user id, never an address or a link.
+resource "google_monitoring_alert_policy" "email_not_sent" {
+  count        = var.email ? 1 : 0
+  display_name = "registry.coffee: email not sent"
+  combiner     = "OR"
+  conditions {
+    display_name = "app.mail logged \"email not sent\""
+    condition_matched_log {
+      filter = join(" AND ", [
+        "resource.type=\"cloud_run_revision\"",
+        "resource.labels.service_name=\"${google_cloud_run_v2_service.app.name}\"",
+        "jsonPayload.logger=\"app.mail\"",
+        "severity>=WARNING",
+      ])
+      label_extractors = {
+        kind = "EXTRACT(jsonPayload.kind)"
+      }
+    }
+  }
+  documentation {
+    mime_type = "text/markdown"
+    subject   = "registry.coffee: a $${log.extracted_label.kind} email wasn't sent"
+    content   = <<-EOT
+      The app couldn't send a `$${log.extracted_label.kind}` email. The log line says why: the daily cap ("the daily limit is reached") or Resend refusing or unreachable (with a stack trace).
+
+          gcloud logging read 'resource.type="cloud_run_revision" AND jsonPayload.logger="app.mail"' --limit 20 --freshness 1d
+
+      Check Resend's status page and the Emails log in its dashboard. Members aren't locked out: the owner can still make a reset link on the People screen. Steps: docs/app/RUNNING.md, "Email", "When Resend is down".
+    EOT
+  }
+  alert_strategy {
+    notification_rate_limit {
+      period = "3600s" # at most one an hour: an outage would otherwise repeat on every request
+    }
+    auto_close = "1800s"
+  }
+  notification_channels = [google_monitoring_notification_channel.owner.id]
+}
