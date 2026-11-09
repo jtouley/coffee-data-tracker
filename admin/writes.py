@@ -465,9 +465,11 @@ class Writes:
                      "Puts nothing back in the catalog.",
                      "Removing a filter only hands products back to Claude and the rules, so it never waits for a "
                      "review."]  # fmt: skip
-            if unseen:
-                lines.append(f"Claude hasn’t seen {len(unseen):,} of them yet: the rules decide "
-                             f"{'it' if len(unseen) == 1 else 'them'} until it does.")  # fmt: skip
+            # "of them": of the products put back, the same ones the lists below group by Claude's call
+            back_unseen = sum(_call(r) == "no_verdict" for r in moved)
+            if back_unseen:
+                lines.append(f"Claude hasn’t seen {back_unseen:,} of them yet: the rules decide "
+                             f"{'it' if back_unseen == 1 else 'them'} until it does.")  # fmt: skip
         cap = PREFILTER_SAMPLE if over else PREFILTER_LIST_MAX
         groups: list[dict] = []
         left = cap

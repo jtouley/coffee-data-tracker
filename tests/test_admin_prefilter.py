@@ -221,12 +221,39 @@ def test_removing_a_filter_counts_what_comes_back_and_never_waits(tmp_path, lake
     p, r = _add(c, event="remove", key="r1", based_on=v, reason="too broad")
     assert p["lines"] == ["Puts 1 product back in the catalog.",
                           "Removing a filter only hands products back to Claude and the rules, so it never waits for "
-                          "a review.", "Claude hasn’t seen 1 of them yet: the rules decide it until it does."]  # fmt: skip
+                          "a review."]  # fmt: skip
     assert p["public"] == 1 and not p["over"]
     assert r.status_code == 200 and not app.state.writes.control.keyword_filters()["filters"]
     gone = post(c, "/api/prefilter/check", {"key": "x", "event": "remove", "phrase": "apron", "field": "title",
                                             "based_on": str(r.json()["filter_change"])}).json()  # fmt: skip
     assert any("isn't a filter" in x for x in gone["refusals"])
+
+
+def test_a_removal_counts_seen_and_unseen_products_the_same_way_its_lists_do(tmp_path, pg_url):
+    """What a removal puts back, by Claude's call: one Claude calls coffee, one it hasn't seen that the rules call
+    coffee; the two that come back not coffee (one seen, one not) aren't put back. The lines count within what's put
+    back, as the lists below them do, so "hasn't seen" never contradicts "Claude calls these coffee"."""
+    lake = build_lake(tmp_path / "lake")
+    rows = [("r1", "Guji Apron", "coffee", True), ("r2", "Apron Espresso", None, True),
+            ("r3", "Waxed Apron", None, False), ("r4", "Linen Apron", "not_coffee", False)]  # fmt: skip
+    _ops(Lake(str(lake.root)), W1, B1, "product_decisions", [
+        {"coffee_id": cid, "roaster_id": "m.example", "product_id": cid, "title": t, "product_type": "", "tags": [],
+         "url": f"https://m.example/p/{cid}", "is_listed": True, "input_hash": f"h-{cid}", "is_coffee": False,
+         "classified_by": "rules", "verdict_label": label, "reason": "excluded:keyword:title:apron",
+         "unfiltered_is_coffee": unfiltered} for cid, t, label, unfiltered in rows])  # fmt: skip
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    _add(c)
+    v = str(app.state.writes.control.keyword_filters()["version"])
+    p = post(c, "/api/prefilter/check", {"key": "r", "event": "remove", "phrase": "apron", "field": "title",
+                                         "based_on": v}).json()  # fmt: skip
+    assert p["lines"] == ["Puts 2 products back in the catalog.",
+                          "Removing a filter only hands products back to Claude and the rules, so it never waits for "
+                          "a review.", "Claude hasn’t seen 1 of them yet: the rules decide it until it does."]  # fmt: skip
+    groups = [(g["title"], [i["title"] for i in g["items"]], bool(g.get("details"))) for g in p["groups"]]
+    assert groups == [("Claude calls these coffee (1)", ["Guji Apron"], False),
+                      ("Claude hasn’t seen these (1)", ["Apron Espresso"], False),
+                      ("Also given back, not coffee", ["Linen Apron", "Waxed Apron"], True)]  # fmt: skip
+    assert p["public"] == 2
 
 
 def _eval(lake_root, build, rows=(("c1", "coffee", "coffee"), ("x2", "not_coffee", "not_coffee"),
