@@ -34,7 +34,9 @@ async function post(url, body) {
 // --- data regions -------------------------------------------------------------------------------------------
 
 // quiet: refresh in place (after a write, or a poll while a job runs) without showing the loading state again.
-function loadPart(section, quiet) {
+// titles: also refresh the title's buttons and sheets (after a write, whose forms carry the version they were made
+// from); a poll leaves them, and any panel open there, alone.
+function loadPart(section, quiet, titles = !quiet) {
   const url = section.dataset.part;
   const loading = section.dataset.loadingHtml || section.innerHTML;
   section.dataset.loadingHtml = loading;
@@ -55,7 +57,7 @@ function loadPart(section, quiet) {
       const html = await r.text(); // server-rendered and escaped by the template engine
       if (quiet && !r.ok) return; // keep what is shown; the next poll tries again
       section.innerHTML = html;
-      if (!quiet) titleActions(section); // a poll leaves the title's buttons (and any panel open there) alone
+      if (titles) titleActions(section, !quiet);
       const poll = section.querySelector("[data-poll]");
       if (poll) section.pollTimer = setTimeout(() => loadPart(section, true), Number(poll.dataset.poll) * 1000);
       // Filters start open where there's room for them beside the results; on a phone they fold away.
@@ -250,7 +252,7 @@ function modes(root = document) {
 }
 
 // A part's <template data-title> goes beside the page title: its Run a job, its "?" help, and their panels.
-function titleActions(section) {
+function titleActions(section, first = true) {
   const slot = document.querySelector("[data-title-actions]");
   if (!slot) return;
   slot.replaceChildren();
@@ -259,7 +261,7 @@ function titleActions(section) {
   const run = slot.querySelector("[data-run-form]");
   if (run) {
     runForm(run);
-    if ("open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
+    if (first && "open" in run.dataset) run.closest("dialog").showModal(); // a link here asked for a job (Week, Release)
   }
 }
 
@@ -326,7 +328,7 @@ function fields(form) {
 }
 
 function reloadParts() {
-  document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true));
+  document.querySelectorAll("section[data-part]").forEach((s) => loadPart(s, true, true));
 }
 
 // The outcome line; `undo`: the URL that undoes the write (a decision's or a flag batch's), offered as Undo.
@@ -383,6 +385,39 @@ function refusal(err) {
   return err.message || "Something went wrong. Try again.";
 }
 
+// A titled list of products, each a link to its store page with the store and Claude's call after it.
+function productList(g) {
+  const h = document.createElement("h3");
+  h.className = "label mt12";
+  h.textContent = g.title;
+  const ul = document.createElement("ul");
+  ul.className = "plist";
+  for (const it of g.items) {
+    const li = document.createElement("li");
+    const name = document.createElement(it.url ? "a" : "span");
+    if (it.url) {
+      name.className = "ev";
+      name.href = it.url; // https only: the server's safe_url
+      name.target = "_blank";
+      name.rel = "noreferrer noopener";
+    }
+    name.textContent = it.title || it.coffee_id;
+    const store = document.createElement("span");
+    store.className = "meta";
+    store.textContent = ` · ${it.roaster_id} · Claude: ${it.verdict_label ? it.verdict_label.replace("_", " ") : "no verdict"}`;
+    li.append(name, store);
+    ul.append(li);
+  }
+  const out = [h, ul];
+  if (g.more) {
+    const more = document.createElement("p");
+    more.className = "meta";
+    more.textContent = `and ${g.more.toLocaleString("en-US")} more`;
+    out.push(more);
+  }
+  return out;
+}
+
 function renderPlan(box, plan) {
   box.textContent = "";
   if (plan.lines) { // a preview that starts no job (a settings edit): its lines, then any refusal
@@ -392,35 +427,21 @@ function renderPlan(box, plan) {
       p.textContent = line;
       box.append(p);
     }
-    for (const g of plan.groups || []) { // a keyword filter's preview: the products it moves, each with its store
-      const h = document.createElement("h3");
-      h.className = "label mt12";
-      h.textContent = g.title;
-      const ul = document.createElement("ul");
-      ul.className = "plist";
-      for (const it of g.items) {
-        const li = document.createElement("li");
-        const name = document.createElement(it.url ? "a" : "span");
-        if (it.url) {
-          name.className = "ev";
-          name.href = it.url; // https only: the server's safe_url
-          name.target = "_blank";
-          name.rel = "noreferrer noopener";
-        }
-        name.textContent = it.title || it.coffee_id;
-        const store = document.createElement("span");
-        store.className = "meta";
-        store.textContent = ` · ${it.roaster_id} · Claude: ${it.verdict_label ? it.verdict_label.replace("_", " ") : "no verdict"}`;
-        li.append(name, store);
-        ul.append(li);
+    // A keyword filter's preview: the products it moves, each with its store and Claude's call; the release, the
+    // counts and the step-9 arithmetic under Details.
+    for (const g of (plan.groups || []).filter((x) => !x.details)) box.append(...productList(g));
+    if (plan.details) {
+      const more = document.createElement("details");
+      more.className = "plan-details";
+      more.innerHTML = '<summary class="btn text start">Details</summary>';
+      for (const line of plan.details) {
+        const p = document.createElement("p");
+        p.className = "meta";
+        p.textContent = line;
+        more.append(p);
       }
-      box.append(h, ul);
-      if (g.more) {
-        const more = document.createElement("p");
-        more.className = "meta";
-        more.textContent = `and ${g.more.toLocaleString("en-US")} more`;
-        box.append(more);
-      }
+      for (const g of (plan.groups || []).filter((x) => x.details)) more.append(...productList(g));
+      box.append(more);
     }
     for (const r of plan.refusals || []) {
       const x = document.createElement("p");

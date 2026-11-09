@@ -1,0 +1,67 @@
+{% from "_macros.html" import write_off, write_button, help %}
+{% set field_name = {"title": "Title", "product_type": "Product type", "tags": "Tags"} %}
+<template data-title>
+  {% if kf is not none and build and not writes_off %}<button class="btn primary inline" type="button" data-panel aria-controls="add-filter" aria-haspopup="dialog">Add filter</button>{% endif %}
+  {% call help("filters", "How keyword filters work") %}
+    <p class="body">A product whose title, product type or tags contain one of these words is never a coffee, and isn’t sent to Claude.</p>
+    <p class="body">Whole words only, ignoring case: “tea towel” matches “Linen Tea Towel”, not “tea-towel”. A filter only removes products. When it isn’t sure (the word is part of a longer one), it doesn’t match and the product goes to Claude as usual.</p>
+    <p class="body">Adding or removing a filter shows what it changes in the served release first. The change goes into the next draft and reaches the catalog when you publish it (Release). A change that moves more than 50 coffees waits on Release until you have checked each product Claude calls coffee.</p>
+    <p class="meta">From the control plane and build {{ build or "—" }}’s <code>product_decisions</code> · read {{ read_at.strftime("%H:%M:%S") }} UTC</p>
+  {% endcall %}
+  {% if kf is not none and build and not writes_off %}
+  <dialog class="sheet panel" id="add-filter" aria-labelledby="add-filter-h">
+    <h2 class="serif title-s" id="add-filter-h">Add filter</h2>
+    <form class="kf-add" data-write="/api/prefilter" data-preview="/api/prefilter/check" data-confirm-title="Add this keyword filter?" data-confirm-label="Add filter">
+      <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="add"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">
+      <div class="fld">
+        <label class="flabel" for="kf-phrase">Word or phrase</label>
+        <p class="meta" id="kf-phrase-hint">Something that is never coffee, such as “tea towel” or “grinder brush”. Whole words, any case.</p>
+        <input class="input" id="kf-phrase" name="phrase" required minlength="3" maxlength="60" autocomplete="off" spellcheck="false" aria-describedby="kf-phrase-hint">
+      </div>
+      <fieldset class="choice fld">
+        <legend class="flabel">Look in</legend>
+        {% for v in ("title", "product_type", "tags") %}<label><input type="radio" name="field" value="{{ v }}"{% if loop.first %} checked{% endif %}>{{ field_name[v] }}</label>{% endfor %}
+      </fieldset>
+      <div class="fld">
+        <label class="flabel" for="kf-reason">Why</label>
+        <input class="input" id="kf-reason" name="reason" required minlength="3" maxlength="300" autocomplete="off">
+      </div>
+      <div class="actions"><button class="btn primary inline" type="submit" data-busy="Checking…">Preview…</button><button class="btn text inline" type="button" data-panel-close>Cancel</button></div>
+    </form>
+  </dialog>
+  {% endif %}
+</template>
+<div data-state="{{ 'data' if kf and kf.filters else 'empty' }}">
+{{ write_off(writes_off) }}
+{% if kf is none %}
+  <div class="state empty mt16"><p class="body">The keyword filters live in the control plane, which can’t be read right now.</p></div>
+{% else %}
+  {% set nf = kf.filters | length %}
+  <p class="answer" data-answer>{{ nf }} filter{{ "s" if nf != 1 }}{% if excluded is not none %} · {{ n(excluded) }} product{{ "s" if excluded != 1 }} excluded{% endif %}</p>
+  {% if not build %}<p class="body">Nothing is served yet, so there is nothing to check a filter against.</p>{% endif %}
+  {% if not kf.filters %}
+  <div class="state empty"><p class="body">No keyword filters yet. Add a word that only ever names something that isn’t coffee, such as “tea towel” or “grinder brush”.</p></div>
+  {% else %}
+  <div class="frame" tabindex="0" role="region" aria-label="Keyword filters"><table class="dense kf-list">
+    <caption class="vh">The keyword filters, with how many of build {{ build }}’s products each matches</caption>
+    <thead><tr><th scope="col">Word or phrase</th><th scope="col">In</th><th scope="col" class="n">Matches</th><th scope="col">Why</th><th scope="col" class="act"><span class="vh">More</span></th></tr></thead>
+    <tbody>{% for x in kf.filters %}<tr>
+      <th scope="row">“{{ x.phrase }}”</th><td>{{ field_name[x.field] }}</td><td class="n">{{ n(x.matches) if x.matches is not none else "—" }}</td>
+      <td>{{ x.reason }} <span class="meta">· {{ t(x.at) }}</span></td>
+      <td class="act">{% if not writes_off %}<details class="rowmenu" data-rowmenu><summary class="btn text inline" aria-label="More for “{{ x.phrase }}”">⋯</summary>
+        <div class="menu"><form data-write="/api/prefilter" data-preview="/api/prefilter/check" data-ask="reason" data-confirm-title="Remove “{{ x.phrase }}”?" data-confirm-label="Remove">
+          <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="event" value="remove"><input type="hidden" name="phrase" value="{{ x.phrase }}"><input type="hidden" name="field" value="{{ x.field }}"><input type="hidden" name="based_on" value="{{ kf.version or '' }}">
+          <button class="btn text inline" type="submit" data-busy="Checking…">Remove…</button></form></div>
+      </details>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+  {% if kf_history %}
+  <details class="settings mt16">
+    <summary class="btn text">Recent changes</summary>
+    <ul class="checks" aria-label="Recent changes to the keyword filters">{% for h in kf_history %}<li><span>{{ "Added" if h.event == "added" else "Removed" }} “{{ h.phrase }}” · {{ field_name[h.field] | lower }} · {{ t(h.at) }}{% if not h.undoes %} · {{ h.reason }}{% endif %}</span>
+      {% if h.latest and not writes_off %}{{ write_button("/api/prefilter/" ~ h.change ~ "/undo", "Undo", "Undo: " ~ ("remove" if h.event == "added" else "add back") ~ " “" ~ h.phrase ~ "”? It goes into the next draft.", busy="Undoing…", cls="text") }}{% endif %}</li>{% endfor %}</ul>
+  </details>
+  {% endif %}
+{% endif %}
+</div>

@@ -873,7 +873,7 @@ def test_every_internal_link_on_every_page_leads_somewhere(tmp_path, lake, pg_ur
     """No page links to a page that isn't there (Week linked the merged-away /gate)."""
     _, c, _ = make(tmp_path, lake.root, pg_url)
     seen = set()
-    for page in ("week", "queue", "jobs", "release", "catalog", "sources", "log"):
+    for page in ("week", "queue", "filters", "jobs", "release", "catalog", "sources", "log"):
         for href in re.findall(r'href="(/[^"#]*)', c.get(f"/part/{page}").text):
             href = href.replace("&amp;", "&")
             if href.startswith(("/api/", "/static/")) or href in seen:

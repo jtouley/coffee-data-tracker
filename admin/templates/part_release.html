@@ -44,12 +44,13 @@
 {% if info %}
   <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %} <a class="ev" href="/catalog?build={{ build }}">Its catalog</a>.</p>
   {% if draft and ready %}
-    <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status("ok" if c.ok else "failed") }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
+    <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status(c.state or ("ok" if c.ok else "failed")) }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
     {% set pf = ready.prefilter %}{% set ps = pf.eval.summary if pf and pf.eval else none %}
     {% if ps %}
     <section class="pf-review" aria-labelledby="pf-title">
-      <h3 class="section" id="pf-title">Keyword filters: {{ n(ps.affected) }} product{{ "s" if ps.affected != 1 }} newly excluded, of which {{ n(ps.claude_coffee) }} Claude calls coffee</h3>
-      <p class="body prose">{% if ps.affected %}Claude also calls {{ n(ps.claude_not_coffee) }} not coffee{% if ps.no_verdict %}, and has no verdict on {{ n(ps.no_verdict) }}{% endif %}. {% endif %}{% if pf.eval.coffee %}{% if pf.over %}This change moves more than 50 public coffees, so Publish waits until you mark each product below: keep it excluded, or drop the filter (remove it on the Queue and build a new draft).{% else %}Within step 9’s 50, so marking is optional: open each to check.{% endif %}{% endif %}</p>
+      <h3 class="section" id="pf-title">{{ n(ps.affected) }} product{{ "s" if ps.affected != 1 }} removed by keyword filters · Claude calls {{ n(ps.claude_coffee) }} of them coffee</h3>
+      {% if pf.eval.coffee %}<p class="body prose">{% if pf.over %}A big change: check each product Claude calls coffee and mark it. Keep excluded if the filter is right; Drop the filter if it isn’t (then remove the filter on Filters and build a new draft).{% else %}A small change, so marking these is optional.{% endif %}</p>{% endif %}
+      {% if pf.details %}<details class="plan-details"><summary class="btn text start">Details</summary>{% for line in pf.details %}<p class="meta">{{ line }}</p>{% endfor %}</details>{% endif %}
       {% if pf.eval.coffee %}
       <div class="frame" tabindex="0" role="region" aria-label="Products Claude calls coffee"><table class="dense review">
         <caption>Products the filters exclude that Claude calls coffee</caption>
@@ -65,7 +66,7 @@
       {% endif %}
     </section>
     {% endif %}
-    {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public rows leave against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
+    {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public row{{ "s" if ready.removed != 1 }} {{ "leaves" if ready.removed == 1 else "leave" }} against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
     {% if draft.last_event == "publish_started" and not info.ever_served %}<p class="notice" role="status">Publishing: the publish job is running. See Jobs.</p>
     {% elif not info.ever_served and draft.last_event != "discarded" %}
     {% if ready.checks | selectattr("needs_evaluation") | list %}
@@ -77,8 +78,8 @@
     {% endif %}
     <form class="actions" data-write="/api/drafts/{{ draft.draft_id }}/publish" data-ask="reason" data-reason="publish {{ draft.draft_id }}" data-confirm="Publish build {{ build }}? The publish job serves it: marts, the release pointer and serving_log, then the lake upload. The site follows from the served release." data-confirm-label="Publish"{% if ready.needs_count %} data-type="{{ ready.removed }}" data-danger{% endif %}>
       <input type="hidden" name="key" value="{{ new_key() }}">
-      {% if not ready.ready %}<p class="meta" id="why-not">Publish is off until every check above holds.</p>{% endif %}
       <button class="btn primary inline" type="submit" data-busy="Starting the publish job…"{% if not ready.ready %} aria-disabled="true" aria-describedby="why-not"{% endif %}>Publish…</button>
+      {% if not ready.ready %}<p class="meta why-not" id="why-not">Can’t publish yet, waiting on: {{ ready.checks | rejectattr("ok") | map(attribute="name") | join("; ") }}.</p>{% endif %}
     </form>
     {% endif %}
   {% elif info.passed and info.ever_served and not (served and served.build_id == build) %}

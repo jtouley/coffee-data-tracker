@@ -51,11 +51,12 @@ HERE = Path(__file__).parent
 APP_STATIC = HERE.parent / "app" / "static"
 COOKIE_SECURE = "__Host-admin"  # host-only, Secure, path=/
 COOKIE_LOCAL = "admin_session"  # http://localhost only
-PAGES = ("week", "queue", "jobs", "release", "catalog", "sources", "log")
+PAGES = ("week", "queue", "filters", "jobs", "release", "catalog", "sources", "log")
 # What each page's data region reads, named on its loading state.
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
-    "queue": "mart_flags, fetches, the keyword filters and the rule settings",
+    "queue": "mart_flags, fetches and the rule settings",
+    "filters": "the keyword filters and the served build's product_decisions",
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
@@ -746,21 +747,42 @@ def create_app(
                                            for k, spec in rules.RULE_TYPES[r["id"]].params.items()]}
                 for r in rules.check(ctx["settings"]["doc"], strict=False)["rules"] if rules.RULE_TYPES[r["id"]].params
             ]  # fmt: skip
-            # The keyword filters (the control plane), each with how many of the served build's products it matches
-            kf = await cp(writes.control.keyword_filters, default=None) if writes else None
+            return ctx
+
+        return await part("queue", make)
+
+    @app.get("/part/filters", response_class=HTMLResponse)
+    async def filters_part():
+        """The owner's keyword filters (the control plane), each with how many of the served build's products it
+        matches, and the products any of them matches: the page's one line."""
+
+        async def make():
+            served = await reader.run(queries.served)
+            build = (served or {}).get("build_id")
+            off = list(settings.writes_off)
+            ctx: dict = {"served": served, "build": build, "writes_off": off, "kf": None, "kf_history": [],
+                         "excluded": None}  # fmt: skip
+            if not writes:
+                return ctx
+
+            async def read(fn, *args):
+                await writes.ready()
+                return await asyncio.to_thread(fn, *args)
+
+            kf = await plane(lambda: read(writes.control.keyword_filters), None, off)
             ctx["kf"] = kf
-            ctx["kf_history"] = (
-                await cp(writes.control.filter_history, 8, default=[]) if writes and kf else []
-            )
-            if kf and kf["filters"]:
+            if kf is None:
+                return ctx
+            ctx["kf_history"] = await plane(lambda: read(writes.control.filter_history, 8), [], off)
+            if kf["filters"] and build:
                 pf = PrefilterReader(catalog, build)
                 fs = [KeywordFilter(x["phrase"], x["field"]) for x in kf["filters"]]
-                counts = await reader.run(lambda _l, _c: pf.counts(fs))
+                counts, ctx["excluded"] = await reader.run(lambda _l, _c: pf.counts(fs))
                 for x, one in zip(kf["filters"], fs, strict=True):
                     x["matches"] = counts[one]
             return ctx
 
-        return await part("queue", make)
+        return await part("filters", make)
 
     @app.get("/part/jobs", response_class=HTMLResponse)
     async def jobs_part(request: Request):

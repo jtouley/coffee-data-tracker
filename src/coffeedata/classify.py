@@ -137,7 +137,7 @@ def says_wholesale(text: str) -> bool:
     return bool(_WHOLESALE.search(text))
 
 
-# --- the owner's keyword filters (the admin's Queue: docs/design/admin-registry.md §4, "a keyword pre-filter") -----
+# --- the owner's keyword filters (the admin's Filters page: docs/design/admin-registry.md §4, "a keyword pre-filter") -----
 
 KEYWORD_FIELDS = ("title", "product_type", "tags")
 KEYWORD_MAX = 200  # filters in one snapshot

@@ -1,4 +1,4 @@
-"""The admin's keyword filters (the Queue's Keyword filters section): stored in the control plane (append-only,
+"""The admin's keyword filters (its Filters page): stored in the control plane (append-only,
 versioned, audited in the write's transaction, idempotent, undoable), previewed against the served release before
 they can be saved, carried to the build by the draft's snapshot, and gated at Publish by CLAUDE.md step 9: at 50 or
 fewer public coffees changed, the short path; over 50, the draft build's eval_prefilter and the owner's review of
@@ -61,15 +61,19 @@ def test_the_preview_counts_what_a_filter_newly_excludes_in_the_served_release(t
     ).json()
     assert (p["count"], p["public"], p["claude_coffee"], p["over"]) == (2, 1, 1, False)
     assert not p["refusals"] and p["token"]
-    assert p["lines"][0] == (
-        f"“apron” in titles takes 2 products out of the served release {B1}: 1 public coffee "
-        "leaves the catalog. Claude calls 1 of them coffee."
-    )
-    assert any("50 or fewer" in x for x in p["lines"])
-    # Claude's coffee first, with its link and store; then a sample of the rest (no product twice)
-    titles = [[i["title"] for i in g["items"]] for g in p["groups"]]
-    assert titles == [["Guji Apron"], ["Linen Apron"]]
+    # plain words first: what leaves the catalog, then the products with their store and Claude's call
+    assert p["lines"] == ["Removes 1 product from the catalog.", "Check each one below."]
+    assert [(g["title"], [i["title"] for i in g["items"]], bool(g.get("details"))) for g in p["groups"]] == [
+        ("Leaving the catalog", ["Guji Apron"], False),
+        ("Also matched, already out of the catalog", ["Linen Apron"], True),  # under Details
+    ]
     assert p["groups"][0]["items"][0]["url"] == "https://good.example/p/c1"
+    assert p["groups"][0]["items"][0]["verdict_label"] == "coffee"
+    # the release, the counts and step 9's arithmetic are under Details
+    assert p["details"][0] == f"Checked against the served release {B1}."
+    assert "matches 2 products" in p["details"][1] and "Claude calls 1 of them coffee" in p["details"][1]
+    assert "CLAUDE.md step 9" in p["details"][2] and "50 or fewer" in p["details"][2]
+    assert not any("CLAUDE.md" in x or B1 in x for x in p["lines"])
     # a filter on tags; nothing matched; a bad phrase
     t = post(
         c, "/api/prefilter/check", {"key": "p", "event": "add", "phrase": "linen", "field": "tags"}
@@ -125,12 +129,15 @@ def test_a_filter_is_saved_only_after_its_preview_and_is_versioned_audited_idemp
         and rows[0]["subject"] == "title:apron"
         and rows[0]["detail"]["reason"] == "aprons are not coffee"
     )
-    page = c.get("/part/queue").text
-    assert (
-        "Keyword filters" in page and "“apron”" in page and "Remove…" in page and "Preview and add…" in page
-    )
+    page = c.get("/part/filters").text
+    assert "1 filter · 4 products excluded" in page  # the page's one line
+    assert "“apron”" in page and "Remove…" in page and "Add filter" in page and "Preview…" in page
     assert '<td class="n">4</td>' in page  # every match in the served build: c1, x2, x3, x6
-    assert "settings-doc" not in page and "JSON" not in page  # the JSON editor is gone
+    assert "/filters" in c.get("/queue").text  # its own page in the nav
+    queue = c.get("/part/queue").text
+    assert (
+        "settings-doc" not in queue and "JSON" not in queue and "kf-phrase" not in queue
+    )  # the editor is gone
 
 
 def test_undo_reverts_the_latest_change_to_a_filter(tmp_path, lake, pg_url):
@@ -156,10 +163,7 @@ def test_removing_a_filter_needs_its_preview_too(tmp_path, lake, pg_url):
     _add(c)
     v = str(app.state.writes.control.keyword_filters()["version"])
     p, r = _add(c, event="remove", key="r1", based_on=v, reason="too broad")
-    assert p["lines"][0] == (
-        "Removing “apron” in titles gives 2 products back to Claude and the rules. Claude calls "
-        "1 of them coffee: it comes back to the catalog."
-    )
+    assert p["lines"] == ["Puts 1 product back in the catalog.", "Check each one below."]
     assert r.status_code == 200 and not app.state.writes.control.keyword_filters()["filters"]
     gone = post(c, "/api/prefilter/check", {"key": "x", "event": "remove", "phrase": "apron", "field": "title",
                                             "based_on": str(r.json()["filter_change"])}).json()  # fmt: skip
@@ -199,9 +203,16 @@ def test_a_draft_carries_the_filters_and_publish_takes_the_short_path_at_50_or_f
     assert "already builds them" in c.get("/part/release").text  # the same filters: the draft that has them
     _eval(lake.root, b3)
     page = c.get(f"/part/release?build={b3}").text
-    assert "Keyword filters (CLAUDE.md step 9)" in page and "within step 9’s 50" in page
-    assert "2 products newly excluded, of which 1 Claude calls coffee" in page and "Guji Apron" in page
-    assert "marking is optional" in page
+    assert "Keyword filters checked against Claude." in page and "a small change (1 coffee leaves" in page
+    assert (
+        "2 products removed by keyword filters · Claude calls 1 of them coffee" in page
+        and "Guji Apron" in page
+    )
+    assert "marking these is optional" in page
+    fold = page.split('<summary class="btn text start">Details</summary>', 1)
+    assert (
+        len(fold) == 2 and "Wilson 95%" in fold[1] and "Wilson 95%" not in fold[0]
+    )  # the figures under Details
     r = post(c, f"/api/drafts/{d['draft_id']}/publish", {"key": "p1", "reason": "aprons out"})
     assert r.status_code == 200, r.json()
     # the step-9 running total counts the one public coffee the filter moved
@@ -216,13 +227,18 @@ def test_over_50_publish_waits_for_the_owners_review_of_each_product_claude_call
     d, doc, b3 = _drafted(tmp_path, c, lake, fake)
     did = d["draft_id"]
     no = post(c, f"/api/drafts/{did}/publish", {"key": "p1", "reason": "go"})
-    assert no.status_code == 409 and any("no evaluation of the filters" in x for x in no.json()["reasons"])
+    assert no.status_code == 409 and any(
+        "didn’t check the filters against Claude" in x for x in no.json()["reasons"]
+    )
     _eval(lake.root, b3)
     page = c.get(f"/part/release?build={b3}").text
-    assert "Publish waits until you mark each product below" in page
-    assert "Keep excluded" in page and "Drop the filter" in page and "1 still to review" in page
+    assert "A big change: check each product Claude calls coffee" in page
+    assert "Keep excluded" in page and "Drop the filter" in page
+    assert "Needs your review: 1 product Claude calls coffee" in page
+    assert 'st-warn"><i aria-hidden="true"></i>needs review' in page  # waiting, not failed
+    assert "Can’t publish yet, waiting on: Keyword filters checked against Claude." in page
     no = post(c, f"/api/drafts/{did}/publish", {"key": "p2", "reason": "go"})
-    assert no.status_code == 409 and any("1 still to review" in x for x in no.json()["reasons"])
+    assert no.status_code == 409 and any("Needs your review: 1 product" in x for x in no.json()["reasons"])
     # only a listed product can be marked
     bad = post(
         c,
@@ -235,7 +251,7 @@ def test_over_50_publish_waits_for_the_owners_review_of_each_product_claude_call
     )
     assert drop.status_code == 200
     no = post(c, f"/api/drafts/{did}/publish", {"key": "p3", "reason": "go"})
-    assert no.status_code == 409 and any("drop the filter" in x for x in no.json()["reasons"])
+    assert no.status_code == 409 and any("“Drop the filter”" in x for x in no.json()["reasons"])
     post(
         c,
         "/api/prefilter/reviews",

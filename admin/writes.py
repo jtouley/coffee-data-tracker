@@ -438,44 +438,57 @@ class Writes:
         over = in_all > STEP9_LIMIT
         since = f"since the evaluation {last['path']}" if last else "since the running total started"
         name = f"“{f.phrase}” in {_field(f.field)}"
-        claude = _claude_says(len(coffee), len(rows))
+        n_moved = len(moved)
+        # Plain words first: what leaves (or returns to) the catalog, and the products themselves. The release, the
+        # counts and CLAUDE.md step 9's arithmetic are under Details.
         if event == "added":
-            lines = [f"{name} takes {_n(len(rows), 'product')} out of the served release {build}"
-                     + (f": {_n(len(moved), 'public coffee')} {'leaves' if len(moved) == 1 else 'leave'} the "
-                        f"catalog. {claude}." if rows else ".")]  # fmt: skip
+            lead = (f"Removes {_n(n_moved, 'product')} from the catalog." if n_moved else
+                    "Matches nothing in the served release." if not rows else
+                    f"Removes nothing from the catalog: {'the product it matches is' if len(rows) == 1 else 'the ' + _n(len(rows), 'product') + ' it matches are'} already out of it.")  # fmt: skip
+            main = {"title": "Leaving the catalog", "items": moved}
         else:
             unknown = sum(r["verdict_label"] is None for r in rows)
-            lines = [f"Removing {name} gives {_n(len(rows), 'product')} back to Claude and the rules"
-                     + (f". {claude}: {'it comes' if len(coffee) == 1 else 'they come'} back to the catalog."
-                        if coffee else ".")
-                     + (f" {_n(unknown, 'product')} {'has' if unknown == 1 else 'have'} no verdict yet: Claude "
-                        "decides next week." if unknown else "")]  # fmt: skip
-        changed_all = f"CLAUDE.md step 9: {_n(in_all, 'public coffee')} changed in all {since}"
-        if not over:
-            lines.append(f"{changed_all}, 50 or fewer, so no full evaluation."
-                         + (" Check each product below before you save." if moved else ""))  # fmt: skip
-        else:
-            lines.append(f"{changed_all}, over 50. You can save it, and the draft build measures it against "
-                         "Claude’s verdicts. Publish then waits until you have marked each product Claude calls "
-                         "coffee, on Release.")  # fmt: skip
-        lines.append("Nothing changes for anyone until a draft of it is published (Release).")
+            lead = (
+                f"Puts {_n(n_moved, 'product')} back in the catalog."
+                if n_moved
+                else "Puts nothing back in the catalog."
+            )
+            if unknown:
+                lead += f" Claude decides {_n(unknown, 'other product')} next week."
+            main = {"title": "Back in the catalog", "items": moved}
+        lines = [lead]
+        if over:
+            lines.append("With the changes since the last full check, that’s more than 50 coffees, so before you can "
+                         "publish it, Release asks you to check each product Claude calls coffee.")  # fmt: skip
+        elif n_moved:
+            lines.append("Check each one below.")
+        cap = PREFILTER_SAMPLE if over else PREFILTER_LIST_MAX
         groups = []
-        if coffee:
-            groups.append({"title": f"Claude calls {_n(len(coffee), 'product')} coffee", "items": coffee[:PREFILTER_LIST_MAX],
-                           "more": max(0, len(coffee) - PREFILTER_LIST_MAX)})  # fmt: skip
-        shown = {r["coffee_id"] for r in coffee[:PREFILTER_LIST_MAX]}
-        if not over and moved:
-            rest = [r for r in moved if r["coffee_id"] not in shown]
-            if rest:
-                groups.append({"title": "Public coffees it changes: check each", "items": rest, "more": 0})
-                shown |= {r["coffee_id"] for r in rest}
-        sample = [r for r in rows if r["coffee_id"] not in shown][:PREFILTER_SAMPLE]
-        if sample:
-            groups.append({"title": f"A sample of what it {'excludes' if event == 'added' else 'gives back'}",
-                           "items": sample, "more": 0})  # fmt: skip
-        return {"lines": lines, "refusals": refusals, "groups": groups, "token": _preview_token(event, f, based_on, build),
-                "count": len(rows), "public": len(moved), "claude_coffee": len(coffee), "in_all": in_all,
-                "over": over}  # fmt: skip
+        if moved:
+            groups.append(main | {"items": moved[:cap], "more": max(0, n_moved - cap)})
+        shown = {r["coffee_id"] for r in moved[:cap]}
+        # Claude's coffee the change touches outside the catalog (not listed, say): named, never hidden
+        odd = [r for r in coffee if r["coffee_id"] not in shown and r not in moved]
+        if odd:
+            groups.append({"title": "Claude calls these coffee too", "items": odd[:PREFILTER_LIST_MAX],
+                           "more": max(0, len(odd) - PREFILTER_LIST_MAX)})  # fmt: skip
+            shown |= {r["coffee_id"] for r in odd[:PREFILTER_LIST_MAX]}
+        details = [
+            f"Checked against the served release {build}.",
+            f"{name} matches {_n(len(rows), 'product')} that no other "
+            f"rule already takes out. {_claude_says(len(coffee), len(rows))}." if rows else f"{name} matches nothing.",
+            f"CLAUDE.md step 9: {_n(in_all, 'public coffee')} changed {since}, counting this change: "
+            + ("50 or fewer, so no full evaluation." if not over else
+               "over 50, so the draft build measures it against Claude’s verdicts (eval_prefilter)."),
+            "Nothing changes for anyone until a draft of it is published (Release).",
+        ]  # fmt: skip
+        rest = [r for r in rows if r["coffee_id"] not in shown][:PREFILTER_SAMPLE]
+        if rest:
+            groups.append({"title": "Also matched, already out of the catalog" if event == "added" else
+                           "Also given back to Claude and the rules", "items": rest, "more": 0, "details": True})  # fmt: skip
+        return {"lines": lines, "details": details, "refusals": refusals, "groups": groups,
+                "token": _preview_token(event, f, based_on, build), "count": len(rows), "public": n_moved,
+                "claude_coffee": len(coffee), "in_all": in_all, "over": over}  # fmt: skip
 
     async def prefilter_save(self, actor: str, key: str, body: dict) -> dict:
         """Add or remove a filter. Refused without the preview of exactly this change against the release served
@@ -697,17 +710,17 @@ class Writes:
             if changed is not None and moved is not None and not over:
                 changed += moved
             checks.append(prefilter["check"])
-        checks.append({"name": "Evaluation (CLAUDE.md step 9)",
+        checks.append({"name": "Change size",
                        "ok": changed is None or total + changed <= STEP9_LIMIT,
                        "why": ("not built yet" if changed is None else
-                               f"not required: this draft changes {changed} public coffees, {total + changed} in all "
-                               f"{since} (50 or fewer: the short path)" if total + changed <= STEP9_LIMIT else
-                               f"this draft changes {changed} public coffees, {total + changed} in all {since}: over "
-                               "50, so the full evaluation comes first, then record it below"),
+                               f"small: this draft changes {_n(changed, 'public coffee')}, {total + changed:,} in all "
+                               f"{since} (50 or fewer, CLAUDE.md step 9)" if total + changed <= STEP9_LIMIT else
+                               f"this draft changes {_n(changed, 'public coffee')}, {total + changed:,} in all {since}: "
+                               "over 50 (CLAUDE.md step 9), so the full evaluation comes first, then record it below"),
                        "needs_evaluation": changed is not None and total + changed > STEP9_LIMIT})  # fmt: skip
         # CLAUDE.md: a settings change to how a rule decides needs its full evaluation, whatever it counts.
         deciding, needed = effect["deciding"], effect["needs_evaluation"]
-        checks.append({"name": "Evaluation of a rule change", "ok": not needed,
+        checks.append({"name": "Rule changes", "ok": not needed,
                        "why": ("no rule settings change how a rule decides" if not deciding else
                                f"evaluated: {', '.join(deciding)}" if not needed else
                                f"{', '.join(deciding)} changes how a rule decides: CLAUDE.md asks for its full "
@@ -724,7 +737,7 @@ class Writes:
         stores = {t["roaster_id"] for t in ok if t["roaster_id"]}
         missing = [r for r, _conn in effect["removal_roasters"] if r not in stores]
         n = len(effect["removal_roasters"])
-        checks.append({"name": "Live check of each store a removal comes from", "ok": not missing,
+        checks.append({"name": "Live check of stores", "ok": not missing,
                        "why": ("this draft removes nothing" if not n else
                                f"{n} of {n} stores answered a test crawl of the store in the last "
                                f"{LIVE_CHECK_DAYS} days" if not missing else
@@ -736,42 +749,53 @@ class Writes:
         """The keyword filter check: at 50 or fewer (step 9 with the running total), the short path; over 50, the
         draft build's eval_prefilter must be there, and each product Claude calls coffee marked keep_excluded (at most
         PREFILTER_UNREVIEWED_MAX unmarked), none drop_filter. Returns the check and what the Release page shows."""
-        name = "Keyword filters (CLAUDE.md step 9)"
+        name = "Keyword filters checked against Claude"
         if build is None or moved is None:
-            return {"check": {"name": name, "ok": False, "why": "not built yet"}, "eval": None}
+            return {"check": {"name": name, "ok": False, "state": "pending", "why": "the draft isn’t built yet"},
+                    "eval": None, "details": []}  # fmt: skip
         ev = await self.read(queries.prefilter_eval, build)
         digest = _filters_digest(await self._snapshot_doc(draft["snapshot_id"]))
         marks = await asyncio.to_thread(self.control.reviews, digest) if ev["coffee"] else {}
         for c in ev["coffee"]:
             c["review"] = marks.get(c["coffee_id"])
-        out = {"eval": ev, "digest": digest, "over": over, "moved": moved}
-        s = ev["summary"]
-        said = (f"{s['affected']:,} products newly excluded, of which {s['claude_coffee']:,} Claude calls coffee"
-                + (f" (agreement {s['share_not_coffee']:.0%}, Wilson 95% {s['wilson_low']:.0%}–{s['wilson_high']:.0%}"
-                   f"{'; ' + format(s['no_verdict'], ',') + ' without a verdict' if s['no_verdict'] else ''})"
-                   if s["affected"] else "")) if s else ""  # fmt: skip
+        # The figures behind the check, for the Details fold: plain words lead, numbers follow.
+        details = []
+        if s := ev["summary"]:
+            details.append(f"{_n(s['affected'], 'product')} newly excluded: Claude calls {s['claude_not_coffee']:,} not "
+                           f"coffee and {s['claude_coffee']:,} coffee, and has no verdict on {s['no_verdict']:,}.")  # fmt: skip
+            if s["affected"]:
+                details.append(f"Agreement with Claude: {s['share_not_coffee']:.0%} (Wilson 95% interval "
+                               f"{s['wilson_low']:.0%}–{s['wilson_high']:.0%}). No verdict counts against it.")  # fmt: skip
+        details.append(f"CLAUDE.md step 9: {_n(moved, 'public coffee')} moved by the filters; "
+                       + ("over 50 with the running total, so measured against Claude’s verdicts (eval_prefilter)."
+                          if over else "50 or fewer with the running total, so the preview’s list was the check."))  # fmt: skip
+        out = {"eval": ev, "digest": digest, "over": over, "moved": moved, "details": details}
         if not over:
             out["check"] = {"name": name, "ok": True,
-                            "why": f"{_n(moved, 'public coffee')} {'changes' if moved == 1 else 'change'}, within step 9’s 50 with the running total: the "
-                                   "short path (the preview listed them)" + (f". {said}" if said else "")}  # fmt: skip
+                            "why": f"a small change ({_n(moved, 'coffee')} {'leaves' if moved == 1 else 'leave'} the "
+                                   "catalog), checked in the preview"}  # fmt: skip
             return out
         if not ev["recorded"]:
-            out["check"] = {"name": name, "ok": False,
-                            "why": f"{_n(moved, 'public coffee')} {'changes' if moved == 1 else 'change'}, over 50 with the running total, and the draft "
-                                   "build has no evaluation of the filters (eval_prefilter): build the draft again"}  # fmt: skip
+            out["check"] = {
+                "name": name,
+                "ok": False,
+                "why": "the draft build didn’t check the filters against Claude: build the draft again",
+            }
             return out
         open_ = [c for c in ev["coffee"] if not c["review"]]
         dropped = [c for c in ev["coffee"] if c["review"] and c["review"]["mark"] == "drop_filter"]
         ok = len(open_) <= PREFILTER_UNREVIEWED_MAX and not dropped
-        why = f"over 50 with the running total, so measured against Claude’s verdicts: {said}"
         if dropped:
-            why += (f". You marked {_n(len(dropped), 'product')} “drop the filter”: remove the filter that excludes "
-                    f"{'it' if len(dropped) == 1 else 'them'} on the Queue, then build a new draft")  # fmt: skip
-        elif open_:
-            why += f". Mark each product Claude calls coffee below: {len(open_):,} still to review"
+            why = (f"you marked {_n(len(dropped), 'product')} “Drop the filter”: remove that filter on Filters, then "
+                   "build a new draft")  # fmt: skip
+            state = None
+        elif not ok:
+            why, state = f"Needs your review: {_n(len(open_), 'product')} Claude calls coffee", "needs review"
         else:
-            why += ". Each product Claude calls coffee is marked keep excluded" if ev["coffee"] else ""
-        out["check"] = {"name": name, "ok": ok, "why": why}
+            why = ("you checked each product Claude calls coffee" if ev["coffee"] else
+                   "Claude agrees: it calls none of these products coffee")  # fmt: skip
+            state = None
+        out["check"] = {"name": name, "ok": ok, "why": why} | ({"state": state} if state else {})
         return out
 
     async def effect(self, draft: dict) -> dict:

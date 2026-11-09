@@ -1,6 +1,6 @@
 # Keyword filters: how a change is measured
 
-The owner's keyword filters (the admin's Queue, Keyword filters) extend `classify.excluded`. A product whose title,
+The owner's keyword filters (the admin's Filters page) extend `classify.excluded`. A product whose title,
 product type or tags hold a filter's word or phrase is never a coffee and gets no Claude verdict. A filter only ever
 excludes. It matches whole words only: next to a letter, digit, apostrophe or hyphen it is unsure, doesn't match, and
 the product goes to Claude as before (`classify.KeywordFilter`).
@@ -52,7 +52,7 @@ model `eval_prefilter`. It doesn't wait for a code PR.
 - the owner reviews each of them on Release, marking it **Keep excluded** or **Drop the filter**. The marks are kept in
   the control plane (`control.prefilter_reviews`, audited, per filter set), so a draft built again on the same
   filters keeps them;
-- one **Drop the filter** mark refuses Publish. The owner removes that filter on the Queue (its preview shows what
+- one **Drop the filter** mark refuses Publish. The owner removes that filter on Filters (its preview shows what
   comes back) and builds a new draft. A draft never publishes a filter its owner said is wrong;
 - a draft build with no `eval_prefilter` (an older build, or a failed report step) refuses Publish over 50: build the
   draft again.

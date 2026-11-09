@@ -391,42 +391,58 @@ const errors = [];
       assert.equal(await page.locator("text=excluded · next draft").count(), 2);
     });
 
-    await check("Queue: keyword filters start empty, with the Add form under them", async () => {
-      await page.goto(`${cfg.act}/queue`);
+    // The keyword filters: their own page, as Jobs is: one line, the list, Add filter opens a sheet with the form.
+    async function addFilter(phrase) {
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await page.fill("#kf-phrase", phrase);
+      await page.check("form.kf-add input[name=field][value=title]");
+      await page.fill("#kf-reason", "never coffee");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => /the catalog|the served release/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+    }
+
+    await check("Filters: its own page, empty at first, the explanation behind ?", async () => {
+      await page.goto(`${cfg.act}/filters`);
       await settled(page);
-      assert.match(await page.textContent("section.kf"), /No keyword filters yet/);
-      assert.equal(await page.locator("#settings-doc").count(), 0, "the JSON editor is gone");
-      await page.locator("section.kf").scrollIntoViewIfNeeded();
+      assert.match(await page.textContent("[data-answer]"), /^0 filters/);
+      assert.match(await page.textContent("main"), /No keyword filters yet/);
+      assert.equal(await page.isVisible("text=isn’t sent to Claude"), false, "the prose is behind ?");
       await shoot(page, "kf-empty");
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await shoot(page, "kf-add-sheet", true);
+      await page.keyboard.press("Escape");
     });
 
-    await check("Queue: add a filter: the preview shows what it takes out of the served release before it is saved", async () => {
-      await page.fill("#kf-phrase", cfg.keyword || "decaf");
-      await page.check("form.kf-add input[name=field][value=title]");
-      await page.fill("#kf-reason", "a test filter");
-      await page.click("form.kf-add button[type=submit]");
-      await page.waitForFunction(() => /takes \d+ products? out of/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
-      assert.match(await page.textContent("dialog#confirm"), /CLAUDE\.md step 9/);
+    await check("Filters: Add filter previews in plain words, with the details folded, before it saves", async () => {
+      await addFilter("tea towel");
+      const body = await page.textContent("dialog#confirm [data-confirm-body]");
+      assert.doesNotMatch(body.split("Details")[0], /CLAUDE\.md|20\d{6}T/, "jargon is under Details");
       await shoot(page, "kf-preview", true);
       await page.click("[data-confirm-go]");
-      await toast(page, /Added the filter/);
+      await toast(page, /Added the filter “tea towel”/);
       await settled(page);
-      assert.match(await page.textContent("table.kf-list"), new RegExp(cfg.keyword || "decaf"));
+      assert.match(await page.textContent("[data-answer]"), /^1 filter · /);
+      assert.match(await page.textContent("table.kf-list"), /tea towel/);
       await shoot(page, "kf-list");
     });
 
-    await check("Queue: undo the filter from the outcome line, then add it again", async () => {
+    await check("Filters: undo from the outcome line, then add it again", async () => {
       await page.click("[data-result] [data-undo]");
       await toast(page, /Undone/);
       await settled(page);
-      assert.match(await page.textContent("section.kf"), /No keyword filters yet/);
-      await page.fill("#kf-phrase", cfg.keyword || "decaf");
-      await page.fill("#kf-reason", "a test filter");
-      await page.click("form.kf-add button[type=submit]");
-      await page.waitForFunction(() => /takes \d+ products? out of/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+      assert.match(await page.textContent("main"), /No keyword filters yet/);
+      await addFilter("tea towel");
       await page.click("[data-confirm-go]");
       await toast(page, /Added the filter/);
       await settled(page);
+    });
+
+    await check("Queue: no keyword filters or JSON editor left on it", async () => {
+      await page.goto(`${cfg.act}/queue`);
+      await settled(page);
+      assert.equal(await page.locator("#settings-doc, #kf-phrase").count(), 0);
     });
 
     await check("Queue: a rule's params are plain controls, checked first and saved", async () => {

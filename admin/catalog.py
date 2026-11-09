@@ -348,14 +348,18 @@ class PrefilterReader:
     def _item(r: dict):
         return products.item(r["title"], r["product_type"], list(r["tags"] or []), None, None, None)
 
-    def counts(self, filters: list[KeywordFilter]) -> dict[KeywordFilter, int]:
-        """How many of the build's products each filter matches (whatever else excludes them)."""
+    def counts(self, filters: list[KeywordFilter]) -> tuple[dict[KeywordFilter, int], int]:
+        """How many of the build's products each filter matches (whatever else excludes them), and how many any of
+        them matches (each product once)."""
         out = dict.fromkeys(filters, 0)
+        hit = 0
         for r in self.candidates(filters):
             it = self._item(r)
-            for f in filters:
-                out[f] += f.matches(it)
-        return out
+            found = [f for f in filters if f.matches(it)]
+            for f in found:
+                out[f] += 1
+            hit += bool(found)
+        return out, hit
 
     def changed(self, old: tuple[KeywordFilter, ...], new: tuple[KeywordFilter, ...]) -> list[dict]:
         """The products whose answer the change from `old` to `new` turns: excluded by the new set and not the old
