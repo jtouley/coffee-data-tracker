@@ -240,7 +240,8 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
   evidence, the decision, the listing, then the store (crawl flag, live check, fetches). It is the Queue's detail
   view (Owl-Listener `critique-information-density`: progressive disclosure, a detail view instead of inlining).
 - **Keyword filters are a page of their own (Filters, after Queue)**, laid out as Jobs is: one line ("2 filters ·
-  14 products excluded"), the list (word or phrase, where it's looked for, how many products it matches, why), Remove
+  14 products excluded", counting published filters only; one only in a draft is marked "in draft" and says what it
+  would take out), the list (word or phrase, where it's looked for, what it takes out, the weekly check, why), Remove
   in each row's ⋯ menu, recent changes with Undo in a fold, and **Add filter** beside the title opening a sheet with
   the form (word or phrase, a radio group for title, product type or tags, why). The explanation is behind `?`. Why its
   own page (`critique-information-density`, `better-layout`): the Queue is triage of one product at a time, filters are

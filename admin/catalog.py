@@ -387,7 +387,8 @@ class PrefilterReader:
                 out[hit] += 1
         return out, sum(out.values())
 
-    def changed(self, old: tuple[KeywordFilter, ...], new: tuple[KeywordFilter, ...]) -> list[dict]:
+    def changed(self, old: tuple[KeywordFilter, ...], new: tuple[KeywordFilter, ...],
+                served: tuple[KeywordFilter, ...] | None = None) -> list[dict]:  # fmt: skip
         """The products whose answer the change from `old` to `new` turns: excluded by the new set and not the old
         (`excluded`), or the reverse (`restored`). Products the code's rules exclude, and those an owner's decision
         settles, are left out: no filter changes them. Each row says which way, by which filter, and whether it is a
@@ -407,6 +408,7 @@ class PrefilterReader:
                 {k: r[k] for k in ("coffee_id", "roaster_id", "title", "url", "input_hash", "verdict_label",
                                    "unfiltered_is_coffee")}
                 | {"way": "excluded" if now else "restored", "filter": (now or was).name,  # type: ignore[union-attr]
+                   "in_served": classify.keyword_match(it, served if served is not None else old) is not None,
                    "public": bool(r["in_dim_coffee"]), "url": safe_url(r["url"])}
             )  # fmt: skip
         return out

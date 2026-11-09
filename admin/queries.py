@@ -704,10 +704,29 @@ def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
     return max(0.0, centre - half), min(1.0, centre + half)
 
 
+def wilson_weighted(strata: list[tuple[int, int, int]], z: float = 1.96) -> tuple[float, float, float]:
+    """A stratified share and its Wilson 95% interval (CLAUDE.md step 7: weights by stratum size). `strata`: one
+    (size, answered, positive) per stratum. The share is each answered stratum's share weighted by its size; the
+    interval is Wilson's at that share with Kish's effective sample size, sum(N_h)^2 / sum(N_h^2 / n_h). Strata with
+    nothing answered drop out (their weight goes to the others)."""
+    used = [(n_h, a, k) for n_h, a, k in strata if a > 0 and n_h > 0]
+    total = sum(n_h for n_h, _a, _k in used)
+    if not total:
+        return 0.0, 0.0, 1.0
+    p = sum(n_h / total * k / a for n_h, a, k in used)
+    n_eff = total * total / sum(n_h * n_h / a for n_h, a, _k in used)
+    z2 = z * z
+    centre = (p + z2 / (2 * n_eff)) / (1 + z2 / n_eff)
+    half = z * ((p * (1 - p) / n_eff + z2 / (4 * n_eff * n_eff)) ** 0.5) / (1 + z2 / n_eff)
+    return p, max(0.0, centre - half), min(1.0, centre + half)
+
+
 def prefilter_checks(lake: Lake, con, days: int = 28) -> dict[str, dict]:
     """The weekly check of the published keyword filters (verdict.SHADOW_SAMPLE): for each filter, the versions it
-    excluded that were sent to Claude anyway in the last `days`, how many Claude has answered (coffee or not_coffee),
-    and how many it calls coffee, with a Wilson 95% interval on that share (a random sample, so an estimate)."""
+    excluded that were sent to Claude anyway in the last `days`, how many Claude answered coffee or not coffee (an
+    unsure answer isn't counted as either), and the share it called coffee, weighted by store: the sample takes about
+    the same number from each store, so each (week, store) stratum is weighted by how many versions the filter
+    excluded there that week (stratum_size). A random sample, so the share is an estimate, with its interval."""
 
     def read() -> dict[str, dict]:
         rows = con.execute(
@@ -716,16 +735,22 @@ def prefilter_checks(lake: Lake, con, days: int = 28) -> dict[str, dict]:
                     v as (select input_hash, model, definition, label from {lake.scan("verdicts")}
                           qualify row_number() over (partition by input_hash, model, definition
                                                      order by decided_at desc) = 1)
-                select s.prefilter, count(distinct s.input_hash) as sampled,
+                select s.prefilter, s.run_date, s.roaster_id, max(coalesce(s.stratum_size, 1)) as size,
+                       count(distinct s.input_hash) as sampled,
                        count(distinct s.input_hash) filter (where v.label in ('coffee', 'not_coffee')) as answered,
                        count(distinct s.input_hash) filter (where v.label = 'coffee') as coffee
-                from s left join v using (input_hash, model, definition) group by 1""",
+                from s left join v using (input_hash, model, definition) group by 1, 2, 3""",
             [days],
         ).fetchall()
+        by: dict[str, list] = {}
+        for name, _week, _roaster, size, sampled, answered, coffee in rows:
+            by.setdefault(name, []).append((int(size), int(sampled), int(answered), int(coffee)))
         out = {}
-        for name, sampled, answered, coffee in rows:
-            lo, hi = wilson(coffee, answered)
-            out[name] = {"sampled": sampled, "answered": answered, "coffee": coffee, "low": lo, "high": hi}
+        for name, st in by.items():
+            share, lo, hi = wilson_weighted([(n_h, a, k) for n_h, _s, a, k in st])
+            out[name] = {"sampled": sum(x[1] for x in st), "answered": sum(x[2] for x in st),
+                         "coffee": sum(x[3] for x in st), "share": share, "low": lo, "high": hi,
+                         "strata": len(st)}  # fmt: skip
         return out
 
     return _empty_ok(read, {})

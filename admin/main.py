@@ -761,7 +761,7 @@ def create_app(
             build = (served or {}).get("build_id")
             off = list(settings.writes_off)
             ctx: dict = {"served": served, "build": build, "writes_off": off, "kf": None, "kf_history": [],
-                         "excluded": None, "sample": verdict.SHADOW_SAMPLE}  # fmt: skip
+                         "excluded": None, "in_draft": 0, "sample": verdict.SHADOW_SAMPLE}  # fmt: skip
             if not writes:
                 return ctx
 
@@ -777,10 +777,21 @@ def create_app(
             if kf["filters"] and build:
                 pf = PrefilterReader(catalog, build)
                 fs = [KeywordFilter(x["phrase"], x["field"]) for x in kf["filters"]]
-                counts, ctx["excluded"] = await reader.run(lambda _l, _c: pf.counts(fs))
+                # Published: in the served release's snapshot. A filter only in the control plane takes nothing
+                # out yet: it would, from the next published draft.
+                pinned = await reader.run(queries.build_snapshot, build)
+                served_kf = set(decisions.prefilter((pinned or {}).get("doc")))
+                counts, _all = await reader.run(lambda _l, _c: pf.counts(fs))
+                live = [one for one in fs if one in served_kf]
+                ctx["excluded"] = (await reader.run(lambda _l, _c: pf.counts(live)))[1] if live else 0
+                ctx["in_draft"] = sum(one not in served_kf for one in fs)
                 checks = await reader.run(queries.prefilter_checks)  # the weekly sample sent to Claude anyway
                 for x, one in zip(kf["filters"], fs, strict=True):
-                    x["matches"], x["check"] = counts[one], checks.get(one.name)
+                    x["matches"], x["check"], x["published"] = (
+                        counts[one],
+                        checks.get(one.name),
+                        one in served_kf,
+                    )
             return ctx
 
         return await part("filters", make)

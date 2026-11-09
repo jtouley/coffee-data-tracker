@@ -48,8 +48,8 @@
     {% set pf = ready.prefilter %}{% set px = pf.eval.summary.excluded if pf and pf.eval and pf.eval.summary else none %}
     {% if px and px.products %}
     <section class="pf-review" aria-labelledby="pf-title">
-      <h3 class="section" id="pf-title">{{ n(px.products) }} product{{ "s" if px.products != 1 }} taken out by keyword filters · Claude calls {{ n(px.claude_coffee) }} coffee, hasn’t seen {{ n(px.no_verdict) }}</h3>
-      {% if pf.review %}<p class="body prose">{% if pf.over %}A big change: mark each product below. Keep excluded if the filter is right for it; Drop the filter if it isn’t (then remove the filter on Filters and build a new draft).{% else %}A small change, so marking these is optional.{% endif %}</p>{% endif %}
+      <h3 class="section" id="pf-title">{{ n(px.products) }} product{{ "s" if px.products != 1 }} taken out by keyword filters · Claude calls {{ n(px.claude_coffee) }} coffee and {{ n(px.claude_not_coffee) }} not coffee, hasn’t decided {{ n(px.no_verdict) }}</h3>
+      {% if pf.review %}<p class="body prose">{% if pf.over %}A big change: mark each product below. Keep excluded if the filter is right for it; Drop the filter if it isn’t (then remove the filter on Filters and build a new draft). Once it’s published, the running total is over 50, so the next draft needs a full evaluation first, until one is recorded.{% else %}A small change, so marking these is optional.{% endif %}</p>{% endif %}
       {% if pf.details %}<details class="plan-details"><summary class="btn text start">Details</summary>{% for line in pf.details %}<p class="meta">{{ line }}</p>{% endfor %}</details>{% endif %}
       {% if pf.unseen and not writes_off and not info.ever_served %}
       <form class="actions mt12" data-write="/api/drafts/{{ draft.draft_id }}/classify" data-preview="/api/drafts/{{ draft.draft_id }}/classify/plan" data-confirm-title="Ask Claude about {{ n(pf.unseen) }} product{{ 's' if pf.unseen != 1 }}?" data-confirm-label="Start">
@@ -58,7 +58,7 @@
         <p class="meta why-not">Asks Claude about the {{ n(pf.unseen) }} it hasn’t seen. It costs money; answers come within a day.</p>
       </form>
       {% endif %}
-      {% for call, title in (("coffee", "Claude calls these coffee"), ("no_verdict", "Claude hasn’t seen these")) %}{% set items = pf.review | selectattr("claude", "equalto", call) | list %}
+      {% for call, title in (("coffee", "Claude calls these coffee"), ("no_verdict", "Claude hasn’t decided these")) %}{% set items = pf.review | selectattr("claude", "equalto", call) | list %}
       {% if items %}
       <h4 class="label mt16" id="pf-{{ call }}">{{ title }} ({{ n(items | length) }})</h4>
       <div class="frame" tabindex="0" role="region" aria-labelledby="pf-{{ call }}"><table class="dense review">

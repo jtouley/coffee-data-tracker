@@ -302,3 +302,17 @@ table.kf-list th, table.kf-list td { vertical-align: middle; }
 .field-error { color: var(--danger); font-size: 0.8125rem; margin: 4px 0 0; min-height: 0; }
 .field-error:empty { display: none; }
 .input[aria-invalid="true"] { border-color: var(--danger); }
+/* Filters on a phone: each filter is a stacked row, its ⋯ menu (Remove) always on screen at the row's end. */
+@media (max-width: 759px) {
+  table.kf-list { min-width: 0; width: 100%; }
+  table.kf-list thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.kf-list tbody { display: block; }
+  table.kf-list tr { display: grid; grid-template-columns: minmax(0, 1fr) 44px; column-gap: 8px; padding: 8px 0;
+    border-bottom: 1px solid var(--rule); }
+  table.kf-list th, table.kf-list td { display: block; border: 0; padding: 0; position: static; max-width: none;
+    min-width: 0; white-space: normal; text-align: start; grid-column: 1; }
+  table.kf-list td.act { grid-column: 2; grid-row: 1; }
+  table.kf-list td.c-in::before { content: "In "; color: var(--ink-2); }
+  table.kf-list td.c-out:not(.draft)::before { content: "Takes out "; color: var(--ink-2); }
+  table.kf-list td.c-in, table.kf-list td.c-out, table.kf-list td.c-check, table.kf-list td.c-why { font-size: 0.8125rem; }
+}

@@ -436,7 +436,7 @@ const errors = [];
       await page.click("[data-confirm-go]");
       await toast(page, /Added the filter “tea towel”/);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /^1 filter · /);
+      assert.match(await page.textContent("[data-answer]"), /^1 filter \(1 in draft\) · /); // not published yet
       assert.match(await page.textContent("table.kf-list"), /tea towel/);
       await shoot(page, "kf-list");
     });

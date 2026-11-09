@@ -73,7 +73,7 @@ def test_the_preview_counts_what_a_filter_newly_excludes_in_the_served_release(t
         and p["groups"][0]["items"][0]["url"] == "https://good.example/p/c1"
     )
     assert p["details"][0] == f"Checked against the served release {B1}."
-    assert "matches 3 products" in p["details"][1] and "hasn’t seen 1" in p["details"][1]
+    assert "matches 3 products" in p["details"][1] and "hasn’t decided 1" in p["details"][1]
     assert "CLAUDE.md step 9" in p["details"][2]
     assert not any("CLAUDE.md" in x or B1 in x for x in p["lines"])
     t = post(
@@ -168,7 +168,9 @@ def test_a_filter_is_saved_only_after_its_preview_and_is_versioned_audited_idemp
     )
     page = c.get("/part/filters").text
     # each filter counts only what it newly excludes: c1, x2, x7; not the mug (code) nor the owner's include (M6)
-    assert "1 filter · 3 products excluded" in page and '<td class="n">3</td>' in page
+    # not published yet: it takes nothing out until a draft carrying it is (M4); it would take out c1, x2, x7 (M6)
+    assert "1 filter (1 in draft) · 0 products excluded" in page and "in draft</span>" in page
+    assert "would take out 3" in page
     assert "“apron”" in page and "Remove…" in page and "Add filter" in page and "Preview…" in page
     assert "none sampled yet" in page
     assert "/filters" in c.get("/queue").text  # its own page in the nav
@@ -197,7 +199,12 @@ def test_undo_goes_through_the_preview_the_version_and_the_cap(tmp_path, lake, p
                                                       "based_on": str(v)})  # fmt: skip
     assert wrong.status_code == 400 and "reverse" in wrong.json()["detail"]
     p, u = _undo(c, change, "remove", v)
-    assert "Puts 1 product back in the catalog." in p["lines"]  # the undo's preview: what comes back
+    # the undo's preview: the filter was never published, so undoing its add puts nothing back (M4)
+    assert p["lines"][:2] == [
+        "Puts nothing back in the catalog.",
+        "“apron” in titles isn’t published yet: removing it only takes it out of the next draft.",
+    ]
+    assert p["public"] == 0 and p["in_all"] == 0
     assert u.json()["undone"] is True and not cp.keyword_filters()["filters"]
     assert post(c, f"/api/prefilter/{change}/undo", {"key": "u1"}).json() == u.json()  # idempotent on its key
     # a stale page's undo is a conflict
@@ -214,9 +221,35 @@ def test_undo_goes_through_the_preview_the_version_and_the_cap(tmp_path, lake, p
     assert "Undo…" in c.get("/part/filters").text  # Recent changes offers it, through the preview
 
 
-def test_removing_a_filter_counts_what_comes_back_and_never_waits(tmp_path, lake, pg_url):
+def _serve(lake_root, filters=(("apron", "title"),)):
+    """The served build B1's snapshot carries these keyword filters, as a published draft's would."""
+    from datetime import UTC, date, datetime
+
+    doc = decisions.snapshot("served-kf", "2026-10-19T00:00:00Z", [],
+                             keyword_filters=[{"phrase": ph, "field": fl} for ph, fl in filters])  # fmt: skip
+    Lake(str(lake_root)).write("builds", f"builds/run_date={W1}/build={B1}-snapshot.parquet", [
+        {"build_id": B1, "built_at": datetime(2026, 10, 20, 3, tzinfo=UTC), "run_date": date.fromisoformat(W1),
+         "kind": "snapshot", "unique_id": "served-kf", "checksum": decisions.digest(doc),
+         "payload": json.dumps(doc, sort_keys=True)}])  # fmt: skip
+
+
+def test_removing_an_unpublished_filter_puts_nothing_back(tmp_path, lake, pg_url):
+    """M4: against the served release, a filter only in the control plane has taken nothing out."""
     app, c, _ = make(tmp_path, lake.root, pg_url)
     _add(c)
+    v = str(app.state.writes.control.keyword_filters()["version"])
+    p = post(c, "/api/prefilter/check", {"key": "r", "event": "remove", "phrase": "apron", "field": "title",
+                                         "based_on": v}).json()  # fmt: skip
+    assert p["lines"][0] == "Puts nothing back in the catalog." and "isn’t published yet" in p["lines"][1]
+    assert (p["count"], p["public"], p["in_all"]) == (0, 0, 0) and not p["groups"]
+
+
+def test_removing_a_filter_counts_what_comes_back_and_never_waits(tmp_path, lake, pg_url):
+    _serve(lake.root)
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    assert "1 filter · " not in c.get("/part/filters").text  # the control plane has none yet
+    _add(c)
+    assert "1 filter · 3 products excluded" in c.get("/part/filters").text  # published: it takes them out
     v = str(app.state.writes.control.keyword_filters()["version"])
     p, r = _add(c, event="remove", key="r1", based_on=v, reason="too broad")
     assert p["lines"] == ["Puts 1 product back in the catalog.",
@@ -241,6 +274,7 @@ def test_a_removal_counts_seen_and_unseen_products_the_same_way_its_lists_do(tmp
          "url": f"https://m.example/p/{cid}", "is_listed": True, "input_hash": f"h-{cid}", "is_coffee": False,
          "classified_by": "rules", "verdict_label": label, "reason": "excluded:keyword:title:apron",
          "unfiltered_is_coffee": unfiltered} for cid, t, label, unfiltered in rows])  # fmt: skip
+    _serve(lake.root)
     app, c, _ = make(tmp_path, lake.root, pg_url)
     _add(c)
     v = str(app.state.writes.control.keyword_filters()["version"])
@@ -248,20 +282,46 @@ def test_a_removal_counts_seen_and_unseen_products_the_same_way_its_lists_do(tmp
                                          "based_on": v}).json()  # fmt: skip
     assert p["lines"] == ["Puts 2 products back in the catalog.",
                           "Removing a filter only hands products back to Claude and the rules, so it never waits for "
-                          "a review.", "Claude hasn’t seen 1 of them yet: the rules decide it until it does."]  # fmt: skip
+                          "a review.", "Claude hasn’t decided 1 of them yet: the rules decide it until it does."]  # fmt: skip
     groups = [(g["title"], [i["title"] for i in g["items"]], bool(g.get("details"))) for g in p["groups"]]
     assert groups == [("Claude calls these coffee (1)", ["Guji Apron"], False),
-                      ("Claude hasn’t seen these (1)", ["Apron Espresso"], False),
+                      ("Claude hasn’t decided these (1)", ["Apron Espresso"], False),
                       ("Also given back, not coffee", ["Linen Apron", "Waxed Apron"], True)]  # fmt: skip
     assert p["public"] == 2
 
 
+def test_past_the_cap_a_product_keeps_its_label(tmp_path, lake, pg_url, monkeypatch):
+    """M3: a moved product the list's cap cuts is counted under its own group ("and 1 more"), never filed under
+    "Also given back, not coffee"."""
+    monkeypatch.setattr(w, "PREFILTER_LIST_MAX", 0)
+    _serve(lake.root)
+    app, c, _ = make(tmp_path, lake.root, pg_url)
+    _add(c)
+    v = str(app.state.writes.control.keyword_filters()["version"])
+    p = post(c, "/api/prefilter/check", {"key": "r", "event": "remove", "phrase": "apron", "field": "title",
+                                         "based_on": v}).json()  # fmt: skip
+    coffee = next(g for g in p["groups"] if g["title"] == "Claude calls these coffee (1)")
+    assert coffee["items"] == [] and coffee["more"] == 1
+    rest = [i["title"] for g in p["groups"] if g.get("details") for i in g["items"]]
+    assert "Guji Apron" not in rest and sorted(rest) == ["Linen Apron", "Waxed Apron"]
+
+
+def test_the_weighted_interval_follows_the_stores():
+    from admin.queries import wilson, wilson_weighted
+
+    assert wilson_weighted([(5, 2, 1)])[1:] == wilson(1, 2)  # one stratum: plain Wilson
+    share, lo, hi = wilson_weighted([(900, 1, 1), (1, 1, 0), (1, 1, 0)])
+    assert share > 0.99 and lo > 0.1  # the big store decides the estimate, the small ones don't outvote it
+    assert wilson_weighted([(9, 0, 0)]) == (0.0, 0.0, 1.0)  # nothing answered: no estimate
+
+
 def _eval(lake_root, build, rows=(("c1", "coffee", "coffee"), ("x2", "not_coffee", "not_coffee"),
-                                  ("x7", None, "no_verdict")), restored=()):  # fmt: skip
+                                  ("x7", None, "no_verdict")), restored=(), hashes=None):  # fmt: skip
     """The draft build's census, as eval_prefilter and eval_prefilter_summary write it."""
     w = Lake(str(lake_root))
     prod = [{"build_id": build, "direction": "excluded", "coffee_id": cid, "roaster_id": "good.example",
-             "title": f"{cid} Apron", "url": f"https://good.example/p/{cid}", "input_hash": f"h-{cid}",
+             "title": f"{cid} Apron", "url": f"https://good.example/p/{cid}",
+             "input_hash": (hashes or {}).get(cid, f"h-{cid}"),
              "prefilter": "keyword:title:apron", "verdict_label": label, "claude": call, "is_coffee_after": False}
             for cid, label, call in rows]  # fmt: skip
     prod += [{"build_id": build, "direction": "restored", "coffee_id": cid, "roaster_id": "good.example",
@@ -304,7 +364,10 @@ def test_a_draft_carries_the_filters_and_publish_takes_the_short_path_at_50_or_f
     _eval(lake.root, b3)
     page = c.get(f"/part/release?build={b3}").text
     assert "Keyword filters checked against Claude." in page and "a small change (1 coffee leaves" in page
-    assert "3 products taken out by keyword filters · Claude calls 1 coffee, hasn’t seen 1" in page
+    assert (
+        "3 products taken out by keyword filters · Claude calls 1 coffee and 1 not coffee, hasn’t decided 1"
+        in page
+    )
     assert "marking these is optional" in page and "Claude has a verdict" not in page
     # one public coffee moves, and Change size says so: never 0 beside "1 public row leaves" (M2)
     assert "small: this draft changes 1 public coffee (all through keyword filters)" in page
@@ -332,8 +395,9 @@ def test_over_50_publish_waits_for_a_review_of_coffee_and_unseen_products(
     _eval(lake.root, b3)
     page = c.get(f"/part/release?build={b3}").text
     assert "A big change: mark each product below" in page
-    assert "Claude calls these coffee (1)" in page and "Claude hasn’t seen these (1)" in page
-    assert "Needs your review: 2 products (Claude calls 1 coffee, hasn’t seen 1)" in page
+    assert "Claude calls these coffee (1)" in page and "Claude hasn’t decided these (1)" in page
+    assert "Needs your review: 2 products (Claude calls 1 coffee, hasn’t decided 1)" in page
+    assert "the next draft needs a full evaluation first, until one is recorded" in page  # M5, said plainly
     assert 'st-warn"><i aria-hidden="true"></i>needs review' in page  # waiting, not failed
     assert "Can’t publish yet, waiting on: Keyword filters checked against Claude." in page
     assert "Classify these…" in page  # x7 has no verdict: Claude can be asked
@@ -346,7 +410,7 @@ def test_over_50_publish_waits_for_a_review_of_coffee_and_unseen_products(
     post(c, "/api/prefilter/reviews", {"key": "m1", "draft_id": did, "coffee_id": "c1", "input_hash": "h-c1",
                                        "mark": "keep_excluded"})  # fmt: skip
     no = post(c, f"/api/drafts/{did}/publish", {"key": "p2", "reason": "go"})
-    assert no.status_code == 409 and any("Needs your review: 1 product (Claude hasn’t seen 1)" in x
+    assert no.status_code == 409 and any("Needs your review: 1 product (Claude hasn’t decided 1)" in x
                                          for x in no.json()["reasons"])  # fmt: skip
     drop = post(c, "/api/prefilter/reviews", {"key": "m2", "draft_id": did, "coffee_id": "x7", "input_hash": "h-x7",
                                               "mark": "drop_filter"})  # fmt: skip
@@ -356,7 +420,7 @@ def test_over_50_publish_waits_for_a_review_of_coffee_and_unseen_products(
     post(c, "/api/prefilter/reviews", {"key": "m3", "draft_id": did, "coffee_id": "x7", "input_hash": "h-x7",
                                        "mark": "keep_excluded"})  # fmt: skip
     assert (
-        "you checked each product Claude calls coffee or hasn’t seen"
+        "you checked each product Claude calls coffee or hasn’t decided"
         in c.get(f"/part/release?build={b3}").text
     )
     ok = post(c, f"/api/drafts/{did}/publish", {"key": "p4", "reason": "aprons out"})
@@ -387,26 +451,21 @@ def test_only_unseen_products_never_read_as_claude_agreeing(tmp_path, lake, pg_u
     monkeypatch.setattr(w, "STEP9_LIMIT", 0)
     app, c, fake = make(tmp_path, lake.root, pg_url)
     d, doc, b3 = _drafted(tmp_path, c, lake, fake)
-    _eval(
-        lake.root,
-        b3,
-        rows=(("c1", None, "no_verdict"), ("x7", None, "no_verdict"), ("x8", "unsure", "no_verdict")),
-    )
+    # two products share one version (x9 is c1's): one version to send, as the job reads it (M1)
+    _eval(lake.root, b3, rows=(("c1", None, "no_verdict"), ("x9", None, "no_verdict"), ("x7", None, "no_verdict"),
+                               ("x8", "unsure", "no_verdict")), hashes={"x9": "h-c1"})  # fmt: skip
     page = c.get(f"/part/release?build={b3}").text
     assert "Claude agrees" not in page and "calls each one not coffee" not in page
-    assert "Needs your review: 3 products (Claude hasn’t seen 3)" in page and "(Claude was unsure)" in page
+    assert "Needs your review: 4 products (Claude hasn’t decided 4)" in page and "(Claude was unsure)" in page
+    assert "Asks Claude about the 2 it hasn’t seen" in page
     plan = post(c, f"/api/drafts/{d['draft_id']}/classify/plan", {"key": "q"}).json()
-    assert plan["lines"][0].startswith(
-        "Sends 2 products to Claude in one batch"
-    )  # the unsure one isn't resent
-    assert not plan["refusals"] and "--prefilter-snapshot " + d["snapshot_id"] in plan["details"][0]
+    # the confirm's count is what the job sends: the census's versions with no verdict (not the unsure one)
+    assert plan["lines"][0].startswith("Sends 2 products to Claude in one batch")
+    assert not plan["refusals"] and f"--prefilter-build {b3}" in plan["details"][0]
     r = post(c, f"/api/drafts/{d['draft_id']}/classify", {"key": "k1"})
     assert r.status_code == 200, r.json()
     run = fake.calls[-1]
-    assert (
-        run[1] == "build"
-        and f"--prefilter-snapshot {d['snapshot_id']} --prefilter-sha256 {decisions.digest(doc)}" in run[2][0]
-    )
+    assert run[1] == "build" and f"coffeedata classify --prefilter-build {b3} " in run[2][0]
     assert any(x["action"] == "job_start" and x["subject"] == "classify-review" for x in audit(app))
 
 
@@ -438,14 +497,16 @@ def test_the_filters_page_shows_the_weekly_check(tmp_path, lake, pg_url):
     _add(c)
     wl = Lake(str(lake.root))
     now = datetime.now(UTC).replace(microsecond=0)
+    # one store excluded 9 versions that week, another 1: one sampled from each; the big store's answer weighs 9x
     wl.write_partition("prefilter_samples", W3, "s1", [
-        {"sampled_at": now, "run_date": now.date(), "input_hash": h, "roaster_id": "r.example",
-         "prefilter": "keyword:title:apron", "model": "m", "definition": "d"} for h in ("s1", "s2", "s3")])  # fmt: skip
+        {"sampled_at": now, "run_date": now.date(), "input_hash": h, "roaster_id": r, "prefilter": "keyword:title:apron",
+         "model": "m", "definition": "d", "stratum_size": n} for h, r, n in
+        (("s1", "big.example", 9), ("s2", "small.example", 1), ("s3", "small.example", 1))])  # fmt: skip
     wl.write_partition("verdicts", W3, "v1", [
         {"decided_at": now, "input_hash": h, "model": "m", "definition": "d", "label": lab}
-        for h, lab in (("s1", "coffee"), ("s2", "not_coffee"))])  # fmt: skip
+        for h, lab in (("s1", "coffee"), ("s2", "not_coffee"), ("s3", "unsure"))])  # fmt: skip
     page = c.get("/part/filters").text
-    assert "1 of 2 called coffee" in page and "(9–91%)" in page
+    assert "90% called coffee" in page and "2 answered, weighted by store" in page  # unsure: neither
 
 
 def test_with_nothing_served_there_is_nothing_to_preview(tmp_path, pg_url):
