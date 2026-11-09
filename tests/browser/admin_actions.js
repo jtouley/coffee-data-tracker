@@ -391,28 +391,55 @@ const errors = [];
       assert.equal(await page.locator("text=excluded · next draft").count(), 2);
     });
 
-    await check("Queue: a settings edit that changes how a rule decides is checked first, and says it needs its evaluation", async () => {
-      await page.click("details.settings summary");
-      const doc = await page.inputValue("#settings-doc");
-      await page.fill("#settings-doc", doc.replace('"added": "supports"', '"added": "doubts"'));
-      await page.fill("#settings-reason", "a re-added coffee only doubts a removal");
+    await check("Queue: keyword filters start empty, with the Add form under them", async () => {
+      await page.goto(`${cfg.act}/queue`);
+      await settled(page);
+      assert.match(await page.textContent("section.kf"), /No keyword filters yet/);
+      assert.equal(await page.locator("#settings-doc").count(), 0, "the JSON editor is gone");
+      await page.locator("section.kf").scrollIntoViewIfNeeded();
+      await shoot(page, "kf-empty");
+    });
+
+    await check("Queue: add a filter: the preview shows what it takes out of the served release before it is saved", async () => {
+      await page.fill("#kf-phrase", cfg.keyword || "decaf");
+      await page.check("form.kf-add input[name=field][value=title]");
+      await page.fill("#kf-reason", "a test filter");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => /takes \d+ products? out of/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+      assert.match(await page.textContent("dialog#confirm"), /CLAUDE\.md step 9/);
+      await shoot(page, "kf-preview", true);
+      await page.click("[data-confirm-go]");
+      await toast(page, /Added the filter/);
+      await settled(page);
+      assert.match(await page.textContent("table.kf-list"), new RegExp(cfg.keyword || "decaf"));
+      await shoot(page, "kf-list");
+    });
+
+    await check("Queue: undo the filter from the outcome line, then add it again", async () => {
+      await page.click("[data-result] [data-undo]");
+      await toast(page, /Undone/);
+      await settled(page);
+      assert.match(await page.textContent("section.kf"), /No keyword filters yet/);
+      await page.fill("#kf-phrase", cfg.keyword || "decaf");
+      await page.fill("#kf-reason", "a test filter");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => /takes \d+ products? out of/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+      await page.click("[data-confirm-go]");
+      await toast(page, /Added the filter/);
+      await settled(page);
+    });
+
+    await check("Queue: a rule's params are plain controls, checked first and saved", async () => {
+      await page.click("details.settings summary.section");
+      await page.fill("#p-shared_body-min_products", "4");
       await page.click("form.settings-form button[type=submit]");
-      await page.waitForFunction(() => document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent.includes("full evaluation"));
+      await page.waitForFunction(() => /min_products/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
       await shoot(page, "settings-check", true);
+      await page.fill("#confirm-reason", "pasted text needs four products");
       await page.click("[data-confirm-go]");
       await toast(page, /Saved rule settings/);
       await settled(page);
-      assert.match(await page.textContent("details.settings summary"), /version/);
-    });
-
-    await check("Queue: settings the code can't read are refused, and nothing is saved", async () => {
-      if (!(await page.locator("details.settings").getAttribute("open"))) await page.click("details.settings summary");
-      await page.fill("#settings-doc", '{"schema": 1, "rules": []');
-      await page.fill("#settings-reason", "a broken edit");
-      await page.click("form.settings-form button[type=submit]");
-      await page.waitForFunction(() => /valid JSON/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""));
-      assert.equal(await page.getAttribute("[data-confirm-go]", "aria-disabled"), "true");
-      await page.click("dialog#confirm [data-close]");
+      assert.match(await page.textContent("details.settings summary.section"), /version/);
     });
 
     await check("Sources: search first, one Filter / Sort panel, compact rows with a quiet status and a ⋯ menu", async () => {
@@ -523,10 +550,10 @@ const errors = [];
       assert.match(await page.textContent("[data-counts]"), /1 flagged as a roaster · 2 flagged as not roasters/);
     });
 
-    await check("Release: the draft carries the rule settings and the crawl flag; Publish waits for the change's evaluation", async () => {
+    await check("Release: the draft carries the rule settings, the crawl flag and the keyword filter", async () => {
       await page.goto(`${cfg.act}/release`);
       await settled(page);
-      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag not in it/);
+      assert.match(await page.textContent("[data-answer]"), /rule settings, 1 crawl flag, 1 source flag, 1 keyword filter not in it/);
     });
 
     await check("The Monday window: refused, then started with a recorded reason", async () => {

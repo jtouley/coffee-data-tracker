@@ -532,6 +532,16 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         snap
     )  # places flagged roasters: stg_registry adds them
     extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
+    # The keyword filters: this build's (its snapshot's) and the served build's, so eval_prefilter can measure what
+    # a change newly excludes. A served snapshot that can't be read now gives no baseline: eval_prefilter then
+    # counts every filter's exclusions as new (more to review, never less).
+    try:
+        baseline_doc = _snapshot(argparse.Namespace(), lake, served)
+    except decisions.SnapshotError:
+        baseline_doc = None
+    extra["prefilter_path"] = str(
+        decisions.write_prefilter(snap, baseline_doc, db.parent / "prefilter.parquet")
+    )
     if snap is not None:
         extra["decisions_path"] = str(decisions.write_parquet(snap, db.parent / "decisions.parquet"))
         recorded.append({"kind": "snapshot", "unique_id": snap["snapshot_id"], "checksum": decisions.digest(snap),

@@ -343,6 +343,7 @@ function showResult(text, undo) {
 }
 
 function undoUrl(out) {
+  if (out.filter_change && out.undone === undefined) return `/api/prefilter/${encodeURIComponent(out.filter_change)}/undo`;
   if (out.decisions) return `/api/decisions/${encodeURIComponent(out.group || out.decisions[0])}/undo`;
   if (out.batch_id) return `/api/sources/flags/${encodeURIComponent(out.batch_id)}/undo`;
   return undefined;
@@ -367,6 +368,9 @@ function describe(out) {
   }
   if (out.restored !== undefined && out.reverted) return `Undone (${out.count}).` + (out.restored ? ` ${plural(out.restored, "coffee")} back in the catalog.` : "");
   if (out.reverted) return out.count ? `Undone (${out.count}): as it was before, from the next draft.` : "Already superseded: nothing to undo.";
+  if (out.undone !== undefined) return out.undone ? `Undone: “${out.phrase}” is ${out.event === "added" ? "removed" : "back"}, from the next draft.` : "Already changed again since: nothing to undo.";
+  if (out.filter_change) return `${out.event === "added" ? "Added" : "Removed"} the filter “${out.phrase}”. Build a draft on Release to see it in the catalog.`;
+  if (out.reviewed) return `Marked ${out.mark === "keep_excluded" ? "keep excluded" : "drop the filter"}.`;
   if (out.version_id) return `Saved rule settings ${out.version_id}. Build a draft on Release to see what changes.`;
   if ("crawl" in out) return `Crawl flag ${out.crawl ? "on" : "off"} for ${out.roaster_id}. It takes effect when a draft of it is published.`;
   return "Done.";
@@ -387,6 +391,36 @@ function renderPlan(box, plan) {
       p.className = "body";
       p.textContent = line;
       box.append(p);
+    }
+    for (const g of plan.groups || []) { // a keyword filter's preview: the products it moves, each with its store
+      const h = document.createElement("h3");
+      h.className = "label mt12";
+      h.textContent = g.title;
+      const ul = document.createElement("ul");
+      ul.className = "plist";
+      for (const it of g.items) {
+        const li = document.createElement("li");
+        const name = document.createElement(it.url ? "a" : "span");
+        if (it.url) {
+          name.className = "ev";
+          name.href = it.url; // https only: the server's safe_url
+          name.target = "_blank";
+          name.rel = "noreferrer noopener";
+        }
+        name.textContent = it.title || it.coffee_id;
+        const store = document.createElement("span");
+        store.className = "meta";
+        store.textContent = ` · ${it.roaster_id} · Claude: ${it.verdict_label ? it.verdict_label.replace("_", " ") : "no verdict"}`;
+        li.append(name, store);
+        ul.append(li);
+      }
+      box.append(h, ul);
+      if (g.more) {
+        const more = document.createElement("p");
+        more.className = "meta";
+        more.textContent = `and ${g.more.toLocaleString("en-US")} more`;
+        box.append(more);
+      }
     }
     for (const r of plan.refusals || []) {
       const x = document.createElement("p");
@@ -465,12 +499,14 @@ async function confirmWrite(form) {
   document.querySelectorAll("details[data-rowmenu][open]").forEach((m) => { m.open = false; });
   document.querySelectorAll("dialog.panel[open]").forEach((p) => p.close()); // the confirm stands alone
   if (!d.open) d.showModal();
+  delete form.dataset.previewed; // a save carries the token of the preview shown here, and no other
   if (form.dataset.preview) {
     body.textContent = "Checking what this starts…";
     go.setAttribute("aria-disabled", "true");
     try {
       const plan = await post(form.dataset.preview, fields(form));
       renderPlan(body, plan);
+      if (plan.token) form.dataset.previewed = plan.token;
       if ("planDetails" in form.dataset) { // the summary in words; the jobs and their exact commands under Details
         const more = document.createElement("details");
         more.className = "plan-details";
@@ -498,7 +534,8 @@ async function confirmWrite(form) {
     hint.textContent = "";
     busy(go, true);
     try {
-      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined };
+      const extra = { confirm: true, typed: typed.value.trim() || undefined, override: over.value.trim() || undefined,
+        previewed: form.dataset.previewed || undefined };
       if (ask.includes("reason")) extra.reason = reason.value;
       if (ask.includes("kind")) extra.kind = d.querySelector("input[name=confirm-kind]:checked").value;
       const out = await post(form.dataset.write, { ...fields(form), ...extra });

@@ -9,7 +9,7 @@
   <div class="state empty mt16"><h2 class="section">No builds yet</h2><p class="body"><code>builds</code> has no rows. A build records itself here when <code>coffeedata build</code> runs (the Tuesday build job).</p></div>
 {% else %}
 {% set p = pending %}
-<p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }}{% if p.settings_changed %}, rule settings{% endif %}{% if p.crawl_changed %}, {{ p.crawl_changed | length }} crawl flag{{ "s" if p.crawl_changed | length != 1 }}{% endif %}{% if p.sources_changed %}, {{ p.sources_changed | length }} source flag{{ "s" if p.sources_changed | length != 1 }}{% endif %} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
+<p class="answer" data-answer>Serving {{ served.build_id if served else "nothing" }}{% if served %} (week {{ served.run_date[:10] }}){% endif %}{% if p %} · {{ p.added + p.removed }} decision change{{ "s" if p.added + p.removed != 1 }}{% if p.settings_changed %}, rule settings{% endif %}{% if p.crawl_changed %}, {{ p.crawl_changed | length }} crawl flag{{ "s" if p.crawl_changed | length != 1 }}{% endif %}{% if p.sources_changed %}, {{ p.sources_changed | length }} source flag{{ "s" if p.sources_changed | length != 1 }}{% endif %}{% if p.prefilter_changed %}, {{ p.prefilter_changed | length }} keyword filter{{ "s" if p.prefilter_changed | length != 1 }}{% endif %} not in it{% endif %}{% if drafts %} · draft {{ drafts[0].draft_id }} {{ drafts[0].state }}{% endif %}</p>
 
 <h2 class="section">Decisions</h2>
 {% if not p %}
@@ -18,8 +18,8 @@
   <p class="body" role="alert">{{ p.sources_error }}. No draft can be built until then.</p>
 {% elif p.drafted %}
   <p class="body">Draft <code>{{ p.drafted }}</code> already builds them: review it below.</p>
-{% elif p.added or p.removed or p.settings_changed or p.crawl_changed or p.sources_changed %}
-  <p class="body">{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}{% if p.sources_changed %}{{ p.sources_changed | length }} place{{ "s" if p.sources_changed | length != 1 }} of the source list join or leave the registry (Sources). {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
+{% elif p.added or p.removed or p.settings_changed or p.crawl_changed or p.sources_changed or p.prefilter_changed %}
+  <p class="body">{% if p.prefilter_changed %}The keyword filters change: {{ p.prefilter_changed | map("replace", "keyword:", "") | join(", ") }}. {% endif %}{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}{% if p.sources_changed %}{{ p.sources_changed | length }} place{{ "s" if p.sources_changed | length != 1 }} of the source list join or leave the registry (Sources). {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
   {{ write_button("/api/drafts", "Build a draft", "Build a draft with the " ~ (p.effective | length) ~ " decisions in effect? It starts the build job with --draft: every gate runs, and the release is recorded but not served.", busy="Starting…", cls="primary") }}
 {% else %}
   <p class="body">The decisions in effect are the served release's{% if p.served_snapshot %} (snapshot <code>{{ p.served_snapshot }}</code>){% endif %}: nothing to build. Decide in the Queue or the Catalog.</p>
@@ -45,6 +45,26 @@
   <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %} <a class="ev" href="/catalog?build={{ build }}">Its catalog</a>.</p>
   {% if draft and ready %}
     <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status("ok" if c.ok else "failed") }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
+    {% set pf = ready.prefilter %}{% set ps = pf.eval.summary if pf and pf.eval else none %}
+    {% if ps %}
+    <section class="pf-review" aria-labelledby="pf-title">
+      <h3 class="section" id="pf-title">Keyword filters: {{ n(ps.affected) }} product{{ "s" if ps.affected != 1 }} newly excluded, of which {{ n(ps.claude_coffee) }} Claude calls coffee</h3>
+      <p class="body prose">{% if ps.affected %}Claude also calls {{ n(ps.claude_not_coffee) }} not coffee{% if ps.no_verdict %}, and has no verdict on {{ n(ps.no_verdict) }}{% endif %}. {% endif %}{% if pf.eval.coffee %}{% if pf.over %}This change moves more than 50 public coffees, so Publish waits until you mark each product below: keep it excluded, or drop the filter (remove it on the Queue and build a new draft).{% else %}Within step 9’s 50, so marking is optional: open each to check.{% endif %}{% endif %}</p>
+      {% if pf.eval.coffee %}
+      <div class="frame" tabindex="0" role="region" aria-label="Products Claude calls coffee"><table class="dense review">
+        <caption>Products the filters exclude that Claude calls coffee</caption>
+        <thead><tr><th scope="col">Product</th><th scope="col">Store</th><th scope="col">Filter</th><th scope="col">Your call</th></tr></thead>
+        <tbody>{% for c in pf.eval.coffee %}<tr>
+          <th scope="row">{{ ev(c.url, c.title or c.coffee_id) }}</th><td>{{ c.roaster_id }}</td><td>{{ (c.prefilter or "") | replace("keyword:", "") | replace("product_type:", "product type: ") | replace("title:", "title: ") | replace("tags:", "tags: ") }}</td>
+          <td class="call">{% if c.review %}<span class="mark">{{ "Keep excluded" if c.review.mark == "keep_excluded" else "Drop the filter" }}</span>{% endif %}
+            {% if not writes_off and not info.ever_served %}{% for mark, label in (("keep_excluded", "Keep excluded"), ("drop_filter", "Drop the filter")) %}{% if not c.review or c.review.mark != mark %}<form class="inline-form" data-write="/api/prefilter/reviews" data-now>
+              <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="draft_id" value="{{ draft.draft_id }}"><input type="hidden" name="coffee_id" value="{{ c.coffee_id }}"><input type="hidden" name="mark" value="{{ mark }}">
+              {% set shown = label if not c.review else label ~ " instead" %}<button class="btn {{ 'secondary' if not c.review else 'text' }} inline" type="submit" data-busy="Saving…" aria-label="{{ shown }}: {{ c.title or c.coffee_id }}">{{ shown }}</button></form>{% endif %}{% endfor %}{% endif %}</td>
+        </tr>{% endfor %}</tbody>
+      </table></div>
+      {% endif %}
+    </section>
+    {% endif %}
     {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public rows leave against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
     {% if draft.last_event == "publish_started" and not info.ever_served %}<p class="notice" role="status">Publishing: the publish job is running. See Jobs.</p>
     {% elif not info.ever_served and draft.last_event != "discarded" %}

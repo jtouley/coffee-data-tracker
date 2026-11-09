@@ -1,5 +1,6 @@
 """Every write the admin makes (docs/design/admin-registry.md §3, §5.2): start or cancel a pipeline job, decide or
-undo an include/exclude, build a draft, Publish, Roll back, Discard.
+undo an include/exclude, add, remove or undo a keyword filter, review what a filter change excludes, build a draft,
+Publish, Roll back, Discard.
 
 Each write:
 - is checked first (fields, the job guards, the Publish readiness), and refused with every reason;
@@ -14,6 +15,7 @@ A structured log line (`admin_write`) goes with every write, which the owner's a
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import json
 import re
 from collections.abc import Awaitable, Callable
@@ -21,11 +23,13 @@ from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 from typing import Any
 
+from coffeedata import classify, rules
 from coffeedata import decisions as snap
-from coffeedata import rules
+from coffeedata.classify import KeywordFilter
 
 from . import jobs as registry
 from . import queries
+from .catalog import PrefilterReader
 from .controlplane import ControlPlane, ControlPlaneError, new_id
 from .logs import emit
 from .runjobs import Jobs, JobsError, logs_url
@@ -34,6 +38,12 @@ from .store import Store
 TYPE_OVER = 50  # Publish asks for the count of public rows that leave above this (design §3)
 LIVE_CHECK_DAYS = 7
 STEP9_LIMIT = 50  # CLAUDE.md step 9: over this many products changed, the full evaluation
+# A keyword filter change over STEP9_LIMIT is measured in its draft build against Claude's verdicts (eval_prefilter,
+# eval/prefilter/README.md). Publish passes with at most this many products Claude calls coffee left without the
+# owner's review. A constant, not a setting: changing it is a code change, reviewed like any rule.
+PREFILTER_UNREVIEWED_MAX = 0
+PREFILTER_SAMPLE = 20  # the preview's sample of what a filter excludes
+PREFILTER_LIST_MAX = 50  # the preview lists at most this many products Claude calls coffee
 REASON = re.compile(r"[^\x00-\x1f\x7f]{3,300}")
 
 
@@ -68,6 +78,9 @@ class Readiness:
     removed: int | None
     needs_count: bool
     changed: int | None = None
+    prefilter: dict | None = (
+        None  # the keyword filter change's evaluation and the owner's review, when it has one
+    )
 
     @property
     def ready(self) -> bool:
@@ -347,12 +360,12 @@ class Writes:
 
     # --- rule settings and crawl flags -------------------------------------------------------------------------
 
-    async def check_settings(self, raw: object) -> dict:
+    async def check_settings(self, body: dict) -> dict:
         """What saving these settings would change, before it is saved: the changes, those that decide, and the
         evaluations they need at Publish (a preview acts on nothing)."""
         await self.ready()
         now = await asyncio.to_thread(self.control.settings)
-        new = rules.check(_settings_doc(raw))
+        new = rules.check(_settings_doc(body, now["doc"]))
         changed, deciding = rules.changed(now["doc"], new), rules.decides(now["doc"], new)
         needed = rules.evaluation_needed(now["doc"], new)
         lines = [f"Changes: {', '.join(changed)}." if changed else "Nothing changes."]
@@ -368,7 +381,8 @@ class Writes:
 
     async def save_settings(self, actor: str, key: str, body: dict) -> dict:
         await self.ready()
-        out = await asyncio.to_thread(self.control.save_settings, actor, key, _settings_doc(body.get("doc")),
+        now = await asyncio.to_thread(self.control.settings)
+        out = await asyncio.to_thread(self.control.save_settings, actor, key, _settings_doc(body, now["doc"]),
                                       body.get("based_on") or None, reason_of(body.get("reason")))  # fmt: skip
         written(action="settings", subject=out["version_id"], outcome="ok", decides=out["decides"])
         return out
@@ -383,6 +397,135 @@ class Writes:
                                       reason_of(body.get("reason")),
                                       None if seen not in ("on", "off") else seen == "on")  # fmt: skip
         written(action="crawl_flag", subject=roaster_id, outcome="ok", crawl=crawl)
+        return out
+
+    # --- keyword filters ------------------------------------------------------------------------------------------
+
+    async def prefilter_check(self, body: dict) -> dict:
+        """The preview a filter change needs before it can be saved: what it newly excludes in the served release
+        (or gives back, for a removal), how many of those are public coffees now, which Claude calls coffee, and
+        CLAUDE.md step 9's running total with it. Returns `token`, which the save must carry (a preview acts on
+        nothing)."""
+        await self.ready()
+        event, f, based_on = _filter_change(body)
+        now = await asyncio.to_thread(self.control.keyword_filters)
+        live = classify.keyword_filters(now["filters"])
+        served = await self.read(queries.served)
+        refusals: list[str] = []
+        if now["version"] != based_on:
+            refusals.append("the keyword filters changed since the page was loaded: reload and try again")
+        if event == "added" and f in live:
+            refusals.append(f"“{f.phrase}” is already a filter on {_field(f.field)}")
+        if event == "removed" and f not in live:
+            refusals.append(f"“{f.phrase}” isn't a filter on {_field(f.field)}")
+        if not served or self.catalog is None:
+            return {"lines": ["Nothing is served yet, so there is nothing to preview the filter against."],
+                    "refusals": refusals + ["nothing to preview against"]}  # fmt: skip
+        build = served["build_id"]
+        reader = PrefilterReader(self.catalog, build)
+        if f.field == "tags" and not await self.read(lambda _l, _c: reader.has_tags()):
+            refusals.append(f"the served release {build} has no tags to preview a filter on tags against: publish a "
+                            "build made with this change first")  # fmt: skip
+        new = tuple(sorted(set(live) | {f})) if event == "added" else tuple(x for x in live if x != f)
+        rows = await self.read(lambda _l, _c: reader.changed(live, new))
+        rel = await self.read(queries.releases)
+        total, last = await asyncio.to_thread(self.control.step9_total, rel["ever_served"])
+        coffee = [r for r in rows if r["verdict_label"] == "coffee"]
+        # What changes publicly: a public coffee a new filter takes out, or a product a removed filter gives back that
+        # Claude calls coffee (one with no verdict waits for Claude, then counts in its own draft).
+        moved = [r for r in rows if r["public"]] if event == "added" else coffee
+        in_all = total + len(moved)
+        over = in_all > STEP9_LIMIT
+        since = f"since the evaluation {last['path']}" if last else "since the running total started"
+        name = f"“{f.phrase}” in {_field(f.field)}"
+        claude = _claude_says(len(coffee), len(rows))
+        if event == "added":
+            lines = [f"{name} takes {_n(len(rows), 'product')} out of the served release {build}"
+                     + (f": {_n(len(moved), 'public coffee')} {'leaves' if len(moved) == 1 else 'leave'} the "
+                        f"catalog. {claude}." if rows else ".")]  # fmt: skip
+        else:
+            unknown = sum(r["verdict_label"] is None for r in rows)
+            lines = [f"Removing {name} gives {_n(len(rows), 'product')} back to Claude and the rules"
+                     + (f". {claude}: {'it comes' if len(coffee) == 1 else 'they come'} back to the catalog."
+                        if coffee else ".")
+                     + (f" {_n(unknown, 'product')} {'has' if unknown == 1 else 'have'} no verdict yet: Claude "
+                        "decides next week." if unknown else "")]  # fmt: skip
+        changed_all = f"CLAUDE.md step 9: {_n(in_all, 'public coffee')} changed in all {since}"
+        if not over:
+            lines.append(f"{changed_all}, 50 or fewer, so no full evaluation."
+                         + (" Check each product below before you save." if moved else ""))  # fmt: skip
+        else:
+            lines.append(f"{changed_all}, over 50. You can save it, and the draft build measures it against "
+                         "Claude’s verdicts. Publish then waits until you have marked each product Claude calls "
+                         "coffee, on Release.")  # fmt: skip
+        lines.append("Nothing changes for anyone until a draft of it is published (Release).")
+        groups = []
+        if coffee:
+            groups.append({"title": f"Claude calls {_n(len(coffee), 'product')} coffee", "items": coffee[:PREFILTER_LIST_MAX],
+                           "more": max(0, len(coffee) - PREFILTER_LIST_MAX)})  # fmt: skip
+        shown = {r["coffee_id"] for r in coffee[:PREFILTER_LIST_MAX]}
+        if not over and moved:
+            rest = [r for r in moved if r["coffee_id"] not in shown]
+            if rest:
+                groups.append({"title": "Public coffees it changes: check each", "items": rest, "more": 0})
+                shown |= {r["coffee_id"] for r in rest}
+        sample = [r for r in rows if r["coffee_id"] not in shown][:PREFILTER_SAMPLE]
+        if sample:
+            groups.append({"title": f"A sample of what it {'excludes' if event == 'added' else 'gives back'}",
+                           "items": sample, "more": 0})  # fmt: skip
+        return {"lines": lines, "refusals": refusals, "groups": groups, "token": _preview_token(event, f, based_on, build),
+                "count": len(rows), "public": len(moved), "claude_coffee": len(coffee), "in_all": in_all,
+                "over": over}  # fmt: skip
+
+    async def prefilter_save(self, actor: str, key: str, body: dict) -> dict:
+        """Add or remove a filter. Refused without the preview of exactly this change against the release served
+        now (`previewed`: the preview's token)."""
+        await self.ready()
+        event, f, based_on = _filter_change(body)
+        served = await self.read(queries.served)
+        want = _preview_token(event, f, based_on, (served or {}).get("build_id") or "")
+        if not served or body.get("previewed") != want:
+            raise ValueError(
+                "Preview this filter first: the preview shows what it excludes before it is saved"
+            )
+        out = await asyncio.to_thread(self.control.change_filter, actor, key, event, f.phrase, f.field,
+                                      reason_of(body.get("reason")), based_on)  # fmt: skip
+        written(action="keyword_filter", subject=f"{f.field}:{f.phrase}", outcome="ok", change=event)
+        return out
+
+    async def prefilter_undo(self, actor: str, key: str, change: str) -> dict:
+        await self.ready()
+        if not change.isdigit():
+            raise ValueError("bad filter change")
+        out = await asyncio.to_thread(self.control.undo_filter, actor, key, int(change))
+        written(action="keyword_filter_undo", subject=f"{out['field']}:{out['phrase']}", outcome="ok")
+        return out
+
+    async def prefilter_review(self, actor: str, key: str, body: dict) -> dict:
+        """Mark a product a draft's filter change newly excludes while Claude calls it coffee: keep_excluded or
+        drop_filter. Only a product the draft build's eval_prefilter lists can be marked."""
+        await self.ready()
+        draft_id = str(body.get("draft_id") or "")
+        draft = next(
+            (d for d in await asyncio.to_thread(self.control.drafts, 200) if d["draft_id"] == draft_id), None
+        )
+        if draft is None:
+            raise ValueError("no such draft")
+        rel = await self.read(queries.releases)
+        build = rel["by_draft"].get(draft_id)
+        if not build:
+            raise ValueError("the draft isn't built yet")
+        ev = await self.read(queries.prefilter_eval, build)
+        item = next((c for c in ev["coffee"] if c["coffee_id"] == body.get("coffee_id")), None)
+        if item is None:
+            raise ValueError(
+                "that product isn't one the draft's filters newly exclude while Claude calls it coffee"
+            )
+        digest = _filters_digest(await self._snapshot_doc(draft["snapshot_id"]))
+        out = await asyncio.to_thread(
+            self.control.review, actor, key, digest, draft_id, item, str(body.get("mark"))
+        )
+        written(action="prefilter_review", subject=item["coffee_id"], outcome="ok", mark=out["mark"])
         return out
 
     # --- the source list's flags ---------------------------------------------------------------------------------
@@ -419,11 +562,12 @@ class Writes:
         """The effective decisions, rule settings, crawl flags and source-list roasters against the served build's
         snapshot: what a draft would change. `served` and `drafts`: what the caller already read (Release reads each once)."""
         await self.ready()
-        effective, settings, states, flags = await asyncio.gather(
+        effective, settings, states, flags, kf = await asyncio.gather(
             asyncio.to_thread(self.control.effective),
             asyncio.to_thread(self.control.settings),
             asyncio.to_thread(self.control.roaster_states),
             asyncio.to_thread(self.control.source_flags),
+            asyncio.to_thread(self.control.keyword_filters),
         )
         if served is None:
             served = await self.read(queries.served)
@@ -440,6 +584,8 @@ class Writes:
         now_settings = snap.settings_of({"settings": doc} if doc else None)
         settings_changed = rules.changed(snap.settings_of(served_doc), now_settings)
         crawl_changed = sorted(set(off) ^ snap.crawl_off(served_doc))
+        prefilter = classify.keyword_filters(kf["filters"])
+        prefilter_changed = sorted(x.name for x in set(prefilter) ^ set(snap.prefilter(served_doc)))
         # Flags on the source list: places flagged roaster join the registry; registry roasters (which inherit
         # roaster) flagged not a roaster leave it.
         # `known`: the registry without the flags (the served release's, less the places its snapshot added), so a
@@ -466,7 +612,7 @@ class Writes:
             )
         sources_changed = sorted((set(sources) ^ set(snap.source_roasters(served_doc)))
                                  | (set(dropped) ^ set(snap.not_roasters(served_doc))))  # fmt: skip
-        mine = (now, now_settings, set(off), sources, dropped)
+        mine = (now, now_settings, set(off), sources, dropped, prefilter)
         # The latest draft still to review (not discarded or published), if it builds exactly these decisions on the
         # served release: no second draft for the same thing.
         drafted = None
@@ -478,28 +624,28 @@ class Writes:
             got = await asyncio.to_thread(self.snapshots.get, snap.key(d["snapshot_id"]))
             if got and ({(x["subject_kind"], x["subject"], x["action"]) for x in got["decisions"]},
                         snap.settings_of(got), snap.crawl_off(got), snap.source_roasters(got),
-                        snap.not_roasters(got)) == mine:  # fmt: skip
+                        snap.not_roasters(got), snap.prefilter(got)) == mine:  # fmt: skip
                 drafted = d["draft_id"]
             break
         return {"effective": effective, "added": len(now - before), "removed": len(before - now),
                 "settings": doc, "settings_version": settings["version_id"], "settings_changed": settings_changed,
                 "crawl_off": off, "crawl_changed": crawl_changed, "sources": sources, "not_roasters": dropped,
                 "sources_changed": sources_changed, "sources_error": sources_error,
+                "prefilter": [x.as_dict() for x in prefilter], "prefilter_changed": prefilter_changed,
                 "served": served, "served_snapshot": pinned and pinned["snapshot_id"], "drafted": drafted}  # fmt: skip
 
     async def build_draft(self, actor: str, key: str, override: str | None = None) -> dict:
         p = await self.pending()
         if p["sources_error"]:
             raise registry.Refused([p["sources_error"]])
-        if not (
-            p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
-        ):
-            raise ValueError("Nothing to build: the decisions, rule settings, crawl flags and source flags are the "
-                             "served release's")  # fmt: skip
+        if not (p["added"] or p["removed"] or p["settings_changed"] or p["crawl_changed"] or p["sources_changed"]
+                or p["prefilter_changed"]):  # fmt: skip
+            raise ValueError("Nothing to build: the decisions, rule settings, keyword filters, crawl flags and source "
+                             "flags are the served release's")  # fmt: skip
         sid, did = new_id("s").lower(), new_id("draft").lower()
         doc = snap.snapshot(sid, self.now().strftime("%Y-%m-%dT%H:%M:%SZ"), p["effective"], p["settings"],
                             [{"roaster_id": r, "crawl": False} for r in p["crawl_off"]], p["sources"],
-                            p["not_roasters"])  # fmt: skip
+                            p["not_roasters"], p["prefilter"])  # fmt: skip
         digest = snap.digest(doc)
         baseline = (p["served"] or {}).get("build_id")
         action = registry.ACTIONS["draft"]
@@ -531,11 +677,26 @@ class Writes:
              "why": f"built against {draft['baseline'] or 'nothing served'}; serving {now_id or 'nothing'}"},
         ]  # fmt: skip
         effect = await self.effect(draft)
-        # Step 9 counts the public coffees the draft's decisions change: rule settings change no public output.
+        # Step 9 counts the public coffees the draft's decisions and keyword filters change: rule settings change no
+        # public output.
         left = await self.read(queries.leaving, build, effect["coffees"]) if build else {"removed": None}
         removed, changed = left.get("removed"), left.get("changed")
         total, last = await asyncio.to_thread(self.control.step9_total, rel["ever_served"])
         since = f"since the evaluation {last['path']}" if last else "since the total was started"
+        prefilter = None
+        if effect["filters_changed"]:
+            moved = (
+                (await self.read(queries.leaving, build, effect["filter_coffees"])).get("changed")
+                if build
+                else None
+            )
+            over = bool(moved) and changed is not None and total + changed + moved > STEP9_LIMIT
+            prefilter = await self._prefilter_gate(draft, build, moved, over)
+            # Over 50, the filter change is measured on its own (eval_prefilter): its products aren't added to the
+            # running total, which the next full evaluation of the classifier restarts. At 50 or fewer they count.
+            if changed is not None and moved is not None and not over:
+                changed += moved
+            checks.append(prefilter["check"])
         checks.append({"name": "Evaluation (CLAUDE.md step 9)",
                        "ok": changed is None or total + changed <= STEP9_LIMIT,
                        "why": ("not built yet" if changed is None else
@@ -569,7 +730,49 @@ class Writes:
                                f"{LIVE_CHECK_DAYS} days" if not missing else
                                f"no answered test crawl in {LIVE_CHECK_DAYS} days: {', '.join(missing)}"),
                        "missing": missing})  # fmt: skip
-        return Readiness(checks, removed, bool(removed and removed > TYPE_OVER), changed)
+        return Readiness(checks, removed, bool(removed and removed > TYPE_OVER), changed, prefilter)
+
+    async def _prefilter_gate(self, draft: dict, build: str | None, moved: int | None, over: bool) -> dict:
+        """The keyword filter check: at 50 or fewer (step 9 with the running total), the short path; over 50, the
+        draft build's eval_prefilter must be there, and each product Claude calls coffee marked keep_excluded (at most
+        PREFILTER_UNREVIEWED_MAX unmarked), none drop_filter. Returns the check and what the Release page shows."""
+        name = "Keyword filters (CLAUDE.md step 9)"
+        if build is None or moved is None:
+            return {"check": {"name": name, "ok": False, "why": "not built yet"}, "eval": None}
+        ev = await self.read(queries.prefilter_eval, build)
+        digest = _filters_digest(await self._snapshot_doc(draft["snapshot_id"]))
+        marks = await asyncio.to_thread(self.control.reviews, digest) if ev["coffee"] else {}
+        for c in ev["coffee"]:
+            c["review"] = marks.get(c["coffee_id"])
+        out = {"eval": ev, "digest": digest, "over": over, "moved": moved}
+        s = ev["summary"]
+        said = (f"{s['affected']:,} products newly excluded, of which {s['claude_coffee']:,} Claude calls coffee"
+                + (f" (agreement {s['share_not_coffee']:.0%}, Wilson 95% {s['wilson_low']:.0%}–{s['wilson_high']:.0%}"
+                   f"{'; ' + format(s['no_verdict'], ',') + ' without a verdict' if s['no_verdict'] else ''})"
+                   if s["affected"] else "")) if s else ""  # fmt: skip
+        if not over:
+            out["check"] = {"name": name, "ok": True,
+                            "why": f"{_n(moved, 'public coffee')} {'changes' if moved == 1 else 'change'}, within step 9’s 50 with the running total: the "
+                                   "short path (the preview listed them)" + (f". {said}" if said else "")}  # fmt: skip
+            return out
+        if not ev["recorded"]:
+            out["check"] = {"name": name, "ok": False,
+                            "why": f"{_n(moved, 'public coffee')} {'changes' if moved == 1 else 'change'}, over 50 with the running total, and the draft "
+                                   "build has no evaluation of the filters (eval_prefilter): build the draft again"}  # fmt: skip
+            return out
+        open_ = [c for c in ev["coffee"] if not c["review"]]
+        dropped = [c for c in ev["coffee"] if c["review"] and c["review"]["mark"] == "drop_filter"]
+        ok = len(open_) <= PREFILTER_UNREVIEWED_MAX and not dropped
+        why = f"over 50 with the running total, so measured against Claude’s verdicts: {said}"
+        if dropped:
+            why += (f". You marked {_n(len(dropped), 'product')} “drop the filter”: remove the filter that excludes "
+                    f"{'it' if len(dropped) == 1 else 'them'} on the Queue, then build a new draft")  # fmt: skip
+        elif open_:
+            why += f". Mark each product Claude calls coffee below: {len(open_):,} still to review"
+        else:
+            why += ". Each product Claude calls coffee is marked keep excluded" if ev["coffee"] else ""
+        out["check"] = {"name": name, "ok": ok, "why": why}
+        return out
 
     async def effect(self, draft: dict) -> dict:
         """What a draft changes against the release it was built on: the coffees its changed decisions cover (a
@@ -605,9 +808,18 @@ class Writes:
                                    or d["subject"].split(":")[0], "platform": None}]  # fmt: skip
 
         coffees = sorted({m["coffee_id"] for d in changed for m in covered(d)})
+        # The keyword filters: the baseline's products whose answer the filter change turns (catalog.PrefilterReader)
+        old_kf, new_kf = snap.prefilter((pinned or {}).get("doc")), snap.prefilter(now_doc)
+        filter_coffees: list[str] = []
+        if old_kf != new_kf and draft["baseline"] and self.catalog is not None:
+            reader = PrefilterReader(self.catalog, draft["baseline"])
+            filter_coffees = sorted(
+                {r["coffee_id"] for r in await self.read(lambda _l, _c: reader.changed(old_kf, new_kf))}
+            )
         roasters = sorted({(m["roaster_id"], m.get("platform")) for d in removing for m in covered(d) if m["roaster_id"]},
                           key=lambda x: (x[0], x[1] or ""))  # fmt: skip
-        return {"coffees": coffees, "removal_roasters": roasters,
+        return {"coffees": coffees, "removal_roasters": roasters, "filter_coffees": filter_coffees,
+                "filters_changed": old_kf != new_kf,
                 "deciding": rules.decides(old_settings, new_settings),
                 "needs_evaluation": rules.evaluation_needed(old_settings, new_settings)}  # fmt: skip
 
@@ -715,11 +927,73 @@ class Writes:
         return out
 
 
-def _settings_doc(raw: object) -> object:
-    """The settings an edit sends: a JSON document, as text (the form's) or already parsed."""
+def _settings_doc(body: dict, current: dict) -> object:
+    """The settings an edit sends: the Queue's plain controls (`param:<rule>:<name>` fields: a whole number, or a
+    comma-separated list), applied to the current version; or a whole document (`doc`, the API's), as text or
+    parsed. The controls change params only: a family, a polarity or readiness changes how a rule decides, which
+    needs its full evaluation first (rules.EVALUATED), so it is never a form field."""
+    fields = {k: v for k, v in body.items() if k.startswith("param:")}
+    if fields:
+        doc = rules.check(current, strict=False)
+        by_id = {r["id"]: r for r in doc["rules"]}
+        for k, v in fields.items():
+            _, rid, name = (k.split(":") + ["", ""])[:3]
+            spec = rules.RULE_TYPES.get(rid) and rules.RULE_TYPES[rid].params.get(name)
+            if not spec:
+                raise ValueError(f"no setting {rid} {name}")
+            text = str(v).strip()
+            if spec.kind is int:
+                if not re.fullmatch(r"\d{1,6}", text):
+                    raise ValueError(f"{rid} {name.replace('_', ' ')} must be a whole number")
+                by_id[rid]["params"][name] = int(text)
+            else:
+                by_id[rid]["params"][name] = [x.strip() for x in text.split(",") if x.strip()]
+        return doc
+    raw = body.get("doc")
     if isinstance(raw, str):
         try:
             return json.loads(raw)
         except json.JSONDecodeError as e:
             raise ValueError(f"the settings aren't valid JSON: {e.msg} (line {e.lineno})") from e
     return raw
+
+
+def _field(field: str) -> str:
+    return {"title": "titles", "product_type": "product types", "tags": "tags"}[field]
+
+
+def _claude_says(coffee: int, of: int) -> str:
+    """'Claude calls 1 of them coffee', in words that read right for none, one and all."""
+    them = "it" if of == 1 else "them"
+    if coffee == 0:
+        return f"Claude calls none of {them} coffee" if of > 1 else "Claude doesn’t call it coffee"
+    if coffee == of:
+        return f"Claude calls {'it' if of == 1 else 'all of them'} coffee"
+    return f"Claude calls {coffee:,} of {them} coffee"
+
+
+def _n(n: int, word: str) -> str:
+    return f"{n:,} {word}{'' if n == 1 else 's'}"
+
+
+def _filter_change(body: dict) -> tuple[str, KeywordFilter, int | None]:
+    """A filter change from a form: the event (added or removed), the filter (classify checks it), and the version the
+    page showed."""
+    event = {"add": "added", "remove": "removed"}.get(str(body.get("event") or ""))
+    if event is None:
+        raise ValueError("add or remove a filter")
+    f = KeywordFilter(str(body.get("phrase") or ""), str(body.get("field") or ""))
+    raw = str(body.get("based_on") or "")
+    if raw and not raw.isdigit():
+        raise ValueError("bad filters version")
+    return event, f, int(raw) if raw else None
+
+
+def _preview_token(event: str, f: KeywordFilter, based_on: int | None, build: str) -> str:
+    """What the preview of one change against one served release returns, and its save must carry back."""
+    return hashlib.sha256(json.dumps([event, f.field, f.phrase, based_on, build]).encode()).hexdigest()[:32]
+
+
+def _filters_digest(doc: dict | None) -> str:
+    """The digest of a snapshot's keyword filters: the owner's review marks are kept per filter set."""
+    return hashlib.sha256(json.dumps([f.as_dict() for f in snap.prefilter(doc)]).encode()).hexdigest()

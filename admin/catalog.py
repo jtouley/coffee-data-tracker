@@ -14,7 +14,8 @@ from typing import Any, ClassVar
 
 import duckdb
 
-from coffeedata import quality
+from coffeedata import classify, products, quality
+from coffeedata.classify import KeywordFilter
 from coffeedata.lake import Lake
 
 from .queries import safe_url
@@ -30,7 +31,8 @@ COLUMN = {
     "stock": "stock",
 }
 PAGE = 100
-CACHE_VERSION = "v2"  # the products table's shape: a new version makes new files (v2: input_hash, platform)
+# The products table's shape: a new version makes new files (v2: input_hash, platform; v3: tags).
+CACHE_VERSION = "v3"
 FACET_VALUES = 40
 BUILD_ID = re.compile(r"^[0-9A-Za-z-]{1,64}$")
 
@@ -173,10 +175,14 @@ class Catalog:
 
             if "product_decisions" in ops:
                 con.execute(f"create table pd as select * from {src(ops['product_decisions'])}")
+                pd_cols = {c for (c,) in con.execute("select column_name from (describe pd)").fetchall()}
+                # tags: written from the keyword filters' change on; an older build has none (null: unknown)
+                pd_tags = "p.tags" if "tags" in pd_cols else "null::varchar[]"
                 base = f"""
                     select p.coffee_id, p.roaster_id, p.product_id, p.title, p.product_type, p.url,
                            p.first_seen, p.last_seen, p.is_listed, p.is_coffee, p.classified_by, p.verdict_model,
-                           p.verdict_label, p.reason, p.input_hash, {dim("platform", "varchar")} as platform,
+                           p.verdict_label, p.reason, p.input_hash, {pd_tags} as tags,
+                           {dim("platform", "varchar")} as platform,
                            {dim("title", "varchar")} as coffee_name,
                            {dim("origin_country", "varchar")} as origin_country, {dim("process", "varchar")} as process,
                            {dim("in_stock", "boolean")} as in_stock, {dim("min_price_usd", "double")} as min_price_usd,
@@ -189,7 +195,7 @@ class Catalog:
                            url, null::date as first_seen, null::date as last_seen, is_listed, true as is_coffee,
                            {dim("classified_by", "varchar")} as classified_by, null::varchar as verdict_model,
                            null::varchar as verdict_label, null::varchar as reason, null::varchar as input_hash,
-                           {dim("platform", "varchar")} as platform, title as coffee_name,
+                           null::varchar[] as tags, {dim("platform", "varchar")} as platform, title as coffee_name,
                            origin_country, process, in_stock, min_price_usd, price_per_100g, true as in_dim_coffee
                     from dim d"""
                 made_from = "dim_coffee only (this build has no product_decisions)"
@@ -202,10 +208,12 @@ class Catalog:
             )
             con.execute("create table meta (key varchar, value varchar)")
             n = con.execute("select count(*) from products").fetchone()[0]
+            has_tags = "product_decisions" in ops and pd_tags == "p.tags"
             con.executemany(
                 "insert into meta values (?, ?)",
-                [["build_id", build_id], ["made_from", made_from], ["products", str(n)]],
-            )
+                [["build_id", build_id], ["made_from", made_from], ["products", str(n)],
+                 ["tags", "yes" if has_tags else "no"]],
+            )  # fmt: skip
             con.execute("drop table dim")
             con.execute("drop table if exists pd")
             con.execute("checkpoint")
@@ -300,3 +308,74 @@ class Catalog:
             }
         finally:
             con.close()
+
+
+# --- keyword filters: what a filter matches in a build ------------------------------------------------------------
+
+MATCH_COLS = ("coffee_id", "roaster_id", "title", "product_type", "tags", "url", "input_hash", "reason",
+              "verdict_label", "in_dim_coffee", "is_coffee")  # fmt: skip
+SQL_FIELD = {"title": "title", "product_type": "product_type", "tags": "array_to_string(tags, ' | ')"}
+
+
+class PrefilterReader:
+    """The keyword filters against one build's products (its catalog file): what each matches, and what a change to
+    the set newly excludes or gives back. The same classify code as the build: SQL only narrows the candidates (a
+    case-insensitive substring), and classify.KeywordFilter decides the whole-word match."""
+
+    def __init__(self, catalog: Catalog, build_id: str):
+        self.catalog, self.build_id = catalog, build_id
+
+    def has_tags(self) -> bool:
+        return self.catalog.ensure(self.build_id).get("tags") == "yes"
+
+    def candidates(self, filters: list[KeywordFilter]) -> list[dict]:
+        """The build's products any of `filters` might match (each once)."""
+        if not filters:
+            return []
+        self.catalog.ensure(self.build_id)
+        where = " or ".join(f"{SQL_FIELD[f.field]} ilike ? escape '\\'" for f in filters)
+        like = ["%" + f.phrase.split(" ")[0].replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "%"
+                for f in filters]  # fmt: skip
+        con = duckdb.connect(str(self.catalog.path(self.build_id)), read_only=True)
+        try:
+            rows = con.execute(f"select {', '.join(MATCH_COLS)} from products where {where} "
+                               "order by roaster_id, title, coffee_id", like).fetchall()  # fmt: skip
+        finally:
+            con.close()
+        return [dict(zip(MATCH_COLS, r, strict=True)) for r in rows]
+
+    @staticmethod
+    def _item(r: dict):
+        return products.item(r["title"], r["product_type"], list(r["tags"] or []), None, None, None)
+
+    def counts(self, filters: list[KeywordFilter]) -> dict[KeywordFilter, int]:
+        """How many of the build's products each filter matches (whatever else excludes them)."""
+        out = dict.fromkeys(filters, 0)
+        for r in self.candidates(filters):
+            it = self._item(r)
+            for f in filters:
+                out[f] += f.matches(it)
+        return out
+
+    def changed(self, old: tuple[KeywordFilter, ...], new: tuple[KeywordFilter, ...]) -> list[dict]:
+        """The products whose answer the change from `old` to `new` turns: excluded by the new set and not the old
+        (`excluded`), or the reverse (`restored`). Products the code's rules exclude, and those an owner's decision
+        settles, are left out: no filter changes them. Each row says which way, by which filter, and whether it is a
+        public coffee now."""
+        diff = sorted(set(old) ^ set(new))
+        out = []
+        for r in self.candidates(diff):
+            if (r["reason"] or "").startswith("decision:"):
+                continue
+            it = self._item(r)
+            if classify.exclusion(it) is not None:  # the code's own rules: no filter changes it
+                continue
+            was, now = classify.keyword_match(it, old), classify.keyword_match(it, new)
+            if (was is None) == (now is None):
+                continue
+            out.append(
+                {k: r[k] for k in ("coffee_id", "roaster_id", "title", "url", "input_hash", "verdict_label")}
+                | {"way": "excluded" if now else "restored", "filter": (now or was).name,  # type: ignore[union-attr]
+                   "public": bool(r["in_dim_coffee"]), "url": safe_url(r["url"])}
+            )  # fmt: skip
+        return out

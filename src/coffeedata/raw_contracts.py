@@ -3,7 +3,7 @@
     raw         ingest -> lake          snapshots, bodies, fetches, and parked progress files
     manifest    every job -> control    run_manifests (the roasters an ingest sets out to fetch) and job_manifests
     enrichment  enrichment job -> lake  enrichments (Claude's llm rows; older lakes also hold crawl-time rules rows)
-    ops         build -> command center run_completeness, release_changes, product_decisions and mart_flags, beside
+    ops         build -> command center run_completeness, release_changes, product_decisions, mart_flags and eval_prefilter, beside
                 each release
 
 Each is written to contracts/internal/<name>.odcs.yaml, from lake.SCHEMAS (columns and types) and contract_docs
@@ -94,7 +94,13 @@ CONTRACTS: dict[str, dict[str, Any]] = {
         ],
     },
     "ops": {
-        "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags"],
+        "tables": [
+            "run_completeness",
+            "release_changes",
+            "product_decisions",
+            "mart_flags",
+            "eval_prefilter",
+        ],
         "producer": "coffeedata build (quality.write_ops: the build's dbt models, beside its release under ops/)",
         "producer_code": [
             "src/coffeedata/quality.py",
@@ -102,6 +108,7 @@ CONTRACTS: dict[str, dict[str, Any]] = {
             "dbt/models/marts/release_changes.sql",
             "dbt/models/marts/product_decisions.sql",
             "dbt/models/marts/mart_flags.sql",
+            "dbt/models/marts/eval_prefilter.sql",
         ],
         "consumers": ["the owner's command center (admin.registry.coffee)"],
     },

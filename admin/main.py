@@ -17,7 +17,6 @@ import asyncio
 import contextlib
 import contextvars
 import hashlib
-import json
 import mimetypes
 import re
 import secrets
@@ -34,11 +33,12 @@ from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Resp
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from coffeedata import decisions, quality, rules
+from coffeedata.classify import KeywordFilter
 from coffeedata.lake import Lake, no_files
 
 from . import jobs, logs, queries
 from .auth import SESSION_S, Auth, AuthError, AuthUnavailable, Session
-from .catalog import FACETS, Catalog, Filters
+from .catalog import FACETS, Catalog, Filters, PrefilterReader
 from .config import Settings, from_env
 from .controlplane import Conflict, ControlPlaneError
 from .logs import emit
@@ -55,7 +55,7 @@ PAGES = ("week", "queue", "jobs", "release", "catalog", "sources", "log")
 # What each page's data region reads, named on its loading state.
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
-    "queue": "mart_flags, fetches and the rule settings",
+    "queue": "mart_flags, fetches, the keyword filters and the rule settings",
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
@@ -63,7 +63,7 @@ READS = {
     "log": "the control plane's audit",
 }
 AUDITED = ("job_start", "job_cancel", "decide", "undo", "publish", "discard", "evaluation", "settings", "crawl_flag",
-           "source_flag", "source_flag_undo")  # fmt: skip
+           "source_flag", "source_flag_undo", "keyword_filter", "keyword_filter_undo", "prefilter_review")  # fmt: skip
 WRITES_PER_10_MIN = 60
 SLOW_S = 8  # the page says the lake is slow after this long (admin.js)
 WEEK_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -739,9 +739,25 @@ def create_app(
                 await cp(writes.control.settings, default=ctx["settings"]) if writes else ctx["settings"]
             )
             ctx["history"] = await cp(writes.control.settings_history, 5, default=[]) if writes else []
-            # shown as the deployed code reads it: a rule type retired since it was saved is left out, so an edit made
-            # from this text still checks
-            ctx["settings_json"] = json.dumps(rules.check(ctx["settings"]["doc"], strict=False), indent=2)
+            # the params as the deployed code reads them: a rule type retired since it was saved is left out
+            ctx["rule_params"] = [
+                {"id": r["id"], "params": [{"name": k, "number": spec.kind is int, "lo": spec.lo, "hi": spec.hi,
+                                            "value": r["params"][k]}
+                                           for k, spec in rules.RULE_TYPES[r["id"]].params.items()]}
+                for r in rules.check(ctx["settings"]["doc"], strict=False)["rules"] if rules.RULE_TYPES[r["id"]].params
+            ]  # fmt: skip
+            # The keyword filters (the control plane), each with how many of the served build's products it matches
+            kf = await cp(writes.control.keyword_filters, default=None) if writes else None
+            ctx["kf"] = kf
+            ctx["kf_history"] = (
+                await cp(writes.control.filter_history, 8, default=[]) if writes and kf else []
+            )
+            if kf and kf["filters"]:
+                pf = PrefilterReader(catalog, build)
+                fs = [KeywordFilter(x["phrase"], x["field"]) for x in kf["filters"]]
+                counts = await reader.run(lambda _l, _c: pf.counts(fs))
+                for x, one in zip(kf["filters"], fs, strict=True):
+                    x["matches"] = counts[one]
             return ctx
 
         return await part("queue", make)
@@ -914,11 +930,29 @@ def create_app(
 
     @app.post("/api/settings/check")
     async def settings_check(request: Request):
-        return await write(request, lambda _a, _k, b: on().check_settings(b.get("doc")), replay=False)
+        return await write(request, lambda _a, _k, b: on().check_settings(b), replay=False)
 
     @app.post("/api/settings")
     async def settings_save(request: Request):
         return await write(request, lambda a, k, b: on().save_settings(a, k, b))
+
+    @app.post("/api/prefilter/check")
+    async def prefilter_check(request: Request):
+        return await write(
+            request, lambda _a, _k, b: on().prefilter_check(b), replay=False
+        )  # a preview acts on nothing
+
+    @app.post("/api/prefilter")
+    async def prefilter_save(request: Request):
+        return await write(request, lambda a, k, b: on().prefilter_save(a, k, b))
+
+    @app.post("/api/prefilter/{change}/undo")
+    async def prefilter_undo(request: Request, change: str):
+        return await write(request, lambda a, k, b: on().prefilter_undo(a, k, change))
+
+    @app.post("/api/prefilter/reviews")
+    async def prefilter_review(request: Request):
+        return await write(request, lambda a, k, b: on().prefilter_review(a, k, b))
 
     @app.post("/api/roasters/{roaster_id}/crawl")
     async def crawl_flag(request: Request, roaster_id: str):

@@ -417,6 +417,27 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("verdict_model", pa.string()),
             ("verdict_label", pa.string()),
             ("reason", pa.string()),
+            ("tags", pa.list_(pa.string())),
+        ]
+    ),
+    "eval_prefilter": pa.schema(
+        [
+            ("build_id", pa.string()),
+            ("kind", pa.string()),
+            ("coffee_id", pa.string()),
+            ("roaster_id", pa.string()),
+            ("title", pa.string()),
+            ("url", pa.string()),
+            ("input_hash", pa.string()),
+            ("prefilter", pa.string()),
+            ("verdict_label", pa.string()),
+            ("affected", pa.int64()),
+            ("claude_not_coffee", pa.int64()),
+            ("claude_coffee", pa.int64()),
+            ("no_verdict", pa.int64()),
+            ("share_not_coffee", pa.float64()),
+            ("wilson_low", pa.float64()),
+            ("wilson_high", pa.float64()),
         ]
     ),
     "mart_flags": pa.schema(
@@ -617,7 +638,7 @@ GLOBS = {
 # hive_partitioning off (build_id is a column). Not in GLOBS: Lake.scan doesn't read them.
 OPS_GLOBS = {
     t: f"releases/*/*/ops/{t}.parquet"
-    for t in ("run_completeness", "release_changes", "product_decisions", "mart_flags")
+    for t in ("run_completeness", "release_changes", "product_decisions", "mart_flags", "eval_prefilter")
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {

@@ -167,7 +167,14 @@ def parse(msg: object) -> str | None:
     return label if label in LABELS else None
 
 
-def pending(lake: Lake, model_id: str, limit: int) -> list[dict]:
+def pending(lake: Lake, model_id: str, limit: int, filters: tuple | None = None) -> list[dict]:
+    """Product versions with no verdict for this model and definition, none in an open batch, that the rules and the
+    owner's keyword filters don't exclude. `filters`: the published snapshot's (decisions.served_prefilter) unless
+    given; a draft's filters reach Claude only once published."""
+    from . import decisions
+
+    if filters is None:
+        filters = decisions.served_prefilter(lake)
     sql = PENDING_SQL.format(
         input_hash=INPUT_HASH,
         **{t: lake.scan(t) for t in ("snapshots", "bodies", "verdicts", "verdict_batches")},
@@ -177,7 +184,7 @@ def pending(lake: Lake, model_id: str, limit: int) -> list[dict]:
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
-        if not excluded(item(r)):
+        if not excluded(item(r), filters):
             out.append(r)
             if len(out) >= limit:
                 break

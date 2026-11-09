@@ -400,6 +400,57 @@ unit_tests:
         - {coffee_id: "r:B", title: Tote, first_seen: 2026-10-12, last_seen: 2026-10-12, is_listed: false,
            is_coffee: false, verdict_label: unsure, reason: "signals:0"}
 
+  - name: eval_prefilter_measures_new_exclusions_against_claude
+    description: >-
+      Only products a filter newly excludes count (A-D; not E, which an old filter already excluded, nor F, which the
+      owner's include settles). Claude agrees on A and B, calls C coffee (listed for review) and has no verdict on D,
+      which is unknown, never agreement: 2 of 4, Wilson 95% 15.0% to 85.0%.
+    model: eval_prefilter
+    given:
+      - input: ref('product_decisions')
+        rows:
+          - {coffee_id: "r:A", roaster_id: r, title: Tea Towel, input_hash: a, verdict_label: not_coffee, reason: "excluded:keyword:title:tea towel"}
+          - {coffee_id: "r:B", roaster_id: r, title: Tea Towel 2, input_hash: b, verdict_label: not_coffee, reason: "excluded:keyword:title:tea towel"}
+          - {coffee_id: "r:C", roaster_id: r, title: Towel Blend, input_hash: c, verdict_label: coffee, reason: "excluded:keyword:title:towel"}
+          - {coffee_id: "r:D", roaster_id: r, title: Towel, input_hash: d, verdict_label: null, reason: "excluded:keyword:title:towel"}
+          - {coffee_id: "r:E", roaster_id: r, title: Old, input_hash: e, verdict_label: not_coffee, reason: "excluded:keyword:title:old"}
+          - {coffee_id: "r:F", roaster_id: r, title: Towel Kept, input_hash: f, verdict_label: coffee, reason: "decision:include"}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a, prefilter: "keyword:title:tea towel", prefilter_new: true}
+          - {input_hash: b, prefilter: "keyword:title:tea towel", prefilter_new: true}
+          - {input_hash: c, prefilter: "keyword:title:towel", prefilter_new: true}
+          - {input_hash: d, prefilter: "keyword:title:towel", prefilter_new: true}
+          - {input_hash: e, prefilter: "keyword:title:old", prefilter_new: false}
+          - {input_hash: f, prefilter: "keyword:title:towel", prefilter_new: true}
+    expect:
+      rows:
+        - {kind: summary, coffee_id: null, verdict_label: null, affected: 4, claude_not_coffee: 2, claude_coffee: 1,
+           no_verdict: 1, share_not_coffee: 0.5, wilson_low: 0.150036, wilson_high: 0.849964}
+        - {kind: product, coffee_id: "r:A", verdict_label: not_coffee, affected: null, claude_not_coffee: null,
+           claude_coffee: null, no_verdict: null, share_not_coffee: null, wilson_low: null, wilson_high: null}
+        - {kind: product, coffee_id: "r:B", verdict_label: not_coffee, affected: null, claude_not_coffee: null,
+           claude_coffee: null, no_verdict: null, share_not_coffee: null, wilson_low: null, wilson_high: null}
+        - {kind: product, coffee_id: "r:C", verdict_label: coffee, affected: null, claude_not_coffee: null,
+           claude_coffee: null, no_verdict: null, share_not_coffee: null, wilson_low: null, wilson_high: null}
+        - {kind: product, coffee_id: "r:D", verdict_label: null, affected: null, claude_not_coffee: null,
+           claude_coffee: null, no_verdict: null, share_not_coffee: null, wilson_low: null, wilson_high: null}
+
+  - name: eval_prefilter_with_nothing_affected_still_has_its_summary
+    description: A build whose filters exclude nothing new has one summary row of zeros and no share.
+    model: eval_prefilter
+    given:
+      - input: ref('product_decisions')
+        rows:
+          - {coffee_id: "r:A", input_hash: a, verdict_label: coffee, reason: "verdict:coffee"}
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: a, prefilter: null, prefilter_new: false}
+    expect:
+      rows:
+        - {kind: summary, affected: 0, claude_not_coffee: 0, claude_coffee: 0, no_verdict: 0, share_not_coffee: null,
+           wilson_low: null, wilson_high: null}
+
   - name: readiness_needs_two_families_and_no_doubt
     description: >-
       int_catalog_decided: a removal is ready with supports from two families and no doubt (E); not with a coverage

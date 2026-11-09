@@ -1,7 +1,7 @@
 """The admin's control plane: a Postgres database of who did what (docs/design/admin-registry.md §2).
 
-It holds the audit trail, the owner's include/exclude decisions (as events), the job runs the admin started, the
-decisions snapshots and the drafts built from them. Every table is append-only (a trigger refuses UPDATE, DELETE and
+It holds the audit trail, the owner's include/exclude decisions (as events), the owner's keyword filters (as
+events), the job runs the admin started, the decisions snapshots and the drafts built from them. Every table is append-only (a trigger refuses UPDATE, DELETE and
 TRUNCATE), so the trail can't be rewritten through the admin. The lake is never here: the admin reads the lake and
 only the pipeline's jobs write it.
 
@@ -31,7 +31,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import unquote, urlsplit
 
-from coffeedata import decisions, rules
+from coffeedata import classify, decisions, rules
 
 MIGRATIONS = Path(__file__).parent / "migrations"
 IDLE_S = 120  # a pooled connection idle longer than this is dropped, not reused
@@ -427,6 +427,127 @@ class ControlPlane:
         """Each roaster's latest crawl flag row (a roaster never changed has none: crawl on)."""
         with self.tx() as cur:
             return self._crawl(cur, roaster_ids)
+
+    # --- keyword filters (the Queue) ------------------------------------------------------------------------------
+
+    def change_filter(self, actor: str, key: str, event: str, phrase: str, field: str, reason: str,
+                      based_on: int | None) -> dict:  # fmt: skip
+        """Add a keyword filter, or remove one (`event` added or removed), from the version the page showed
+        (`based_on`: the latest change's id, None before the first): a change since is a Conflict. Adding a filter in
+        effect, or removing one that isn't, is refused. Idempotent on `key`; undone with undo_filter."""
+        if event not in ("added", "removed"):
+            raise ValueError("add or remove a filter")
+        f = classify.KeywordFilter(phrase, field)  # ValueError: not a filter
+        reason = _reason(reason)
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 4,))
+            if self._filters_version(cur) != based_on:
+                raise Conflict("the keyword filters changed since the page was loaded: reload and try again")
+            live = {(x["field"], x["phrase"]) for x in self._filters(cur)}
+            if event == "added" and (f.field, f.phrase) in live:
+                raise ValueError(f"“{f.phrase}” is already a filter on {f.field.replace('_', ' ')}")
+            if event == "added" and len(live) >= classify.KEYWORD_MAX:
+                raise ValueError(f"at most {classify.KEYWORD_MAX} keyword filters")
+            if event == "removed" and (f.field, f.phrase) not in live:
+                raise ValueError(f"“{f.phrase}” isn't a filter on {f.field.replace('_', ' ')}")
+            cur.execute("insert into control.keyword_filters (event, phrase, field, reason, actor) "
+                        "values (%s, %s, %s, %s, %s) returning id", (event, f.phrase, f.field, reason, actor))  # fmt: skip
+            fid = cur.fetchone()[0]
+            out = {"ok": True, "filter_change": fid, "event": event, "phrase": f.phrase, "field": f.field}
+            self.audit(cur, actor, "keyword_filter", f"{f.field}:{f.phrase}", "ok", out | {"reason": reason})
+            self.remember(cur, key, out)
+            return out
+
+    def undo_filter(self, actor: str, key: str, change: int) -> dict:
+        """Revert one change to the filters (an add becomes a removal, a removal an add), if it is still the latest
+        change to its filter: a filter changed again since keeps that later change. Idempotent on `key`."""
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 4,))
+            cur.execute("select event, phrase, field from control.keyword_filters where id = %s", (change,))
+            row = cur.fetchone()
+            if not row:
+                raise ValueError("no such filter change")
+            event, phrase, field = row
+            cur.execute(
+                "select max(id) from control.keyword_filters where field = %s and phrase = %s",
+                (field, phrase),
+            )
+            undone = cur.fetchone()[0] == change
+            fid = None
+            if undone:
+                back = "removed" if event == "added" else "added"
+                cur.execute("insert into control.keyword_filters (event, phrase, field, reason, undoes, actor) "
+                            "values (%s, %s, %s, 'undo', %s, %s) returning id", (back, phrase, field, change, actor))  # fmt: skip
+                fid = cur.fetchone()[0]
+            out = {"ok": True, "undone": undone, "filter_change": fid, "phrase": phrase, "field": field,
+                   "event": event}  # fmt: skip
+            self.audit(cur, actor, "keyword_filter_undo", f"{field}:{phrase}", "ok", out | {"undoes": change})
+            self.remember(cur, key, out)
+            return out
+
+    @staticmethod
+    def _filters_version(cur) -> int | None:
+        cur.execute("select max(id) from control.keyword_filters")
+        return cur.fetchone()[0]
+
+    @staticmethod
+    def _filters(cur) -> list[dict]:
+        cur.execute(
+            "select * from (select distinct on (field, phrase) id, event, phrase, field, reason, actor, at "
+            "from control.keyword_filters order by field, phrase, id desc) f where event = 'added' order by phrase, field"
+        )
+        cols = ("change", "event", "phrase", "field", "reason", "actor", "at")
+        return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def keyword_filters(self) -> dict:
+        """The filters in effect (each with the change that added it) and the version (the latest change's id)."""
+        with self.tx() as cur:
+            return {"version": self._filters_version(cur), "filters": self._filters(cur)}
+
+    def filter_history(self, limit: int = 10) -> list[dict]:
+        """The latest changes to the filters, newest first, each saying whether it is still its filter's latest."""
+        with self.tx() as cur:
+            cur.execute(
+                "select k.id, k.event, k.phrase, k.field, k.reason, k.undoes, k.actor, k.at, "
+                "k.id = (select max(id) from control.keyword_filters j where j.field = k.field and j.phrase = k.phrase) "
+                "from control.keyword_filters k order by k.id desc limit %s",
+                (limit,),
+            )
+            cols = ("change", "event", "phrase", "field", "reason", "undoes", "actor", "at", "latest")
+            return [dict(zip(cols, r, strict=True)) for r in cur.fetchall()]
+
+    def review(self, actor: str, key: str, filters: str, draft_id: str, item: dict, mark: str) -> dict:
+        """The owner's mark on a product a filter change newly excludes while Claude calls it coffee: keep_excluded or
+        drop_filter, for the filter set `filters` (its digest). Idempotent on `key`; marking again replaces it."""
+        if mark not in ("keep_excluded", "drop_filter"):
+            raise ValueError("mark it keep_excluded or drop_filter")
+        if not re.fullmatch(r"[0-9a-f]{64}", filters or "") or not ID.fullmatch(draft_id or ""):
+            raise ValueError("bad draft")
+        cid = str(item.get("coffee_id") or "")
+        if not cid or len(cid) > 300:
+            raise ValueError("no product")
+        with self.once(key) as (cur, first):
+            if first is not None:
+                return first
+            cur.execute("insert into control.prefilter_reviews (filters, coffee_id, input_hash, prefilter, mark, draft_id, "
+                        "actor) values (%s, %s, %s, %s, %s, %s, %s)",
+                        (filters, cid, item.get("input_hash"), item.get("prefilter"), mark, draft_id, actor))  # fmt: skip
+            out = {"ok": True, "reviewed": cid, "mark": mark}
+            self.audit(cur, actor, "prefilter_review", cid, "ok", out | {"draft": draft_id, "filters": filters,
+                                                                         "prefilter": item.get("prefilter")})  # fmt: skip
+            self.remember(cur, key, out)
+            return out
+
+    def reviews(self, filters: str) -> dict[str, dict]:
+        """Each product's latest mark for this filter set: {coffee_id: {mark, actor, at}}."""
+        with self.tx() as cur:
+            cur.execute("select distinct on (coffee_id) coffee_id, mark, actor, at from control.prefilter_reviews "
+                        "where filters = %s order by coffee_id, id desc", (filters,))  # fmt: skip
+            return {r[0]: {"mark": r[1], "actor": r[2], "at": r[3]} for r in cur.fetchall()}
 
     # --- the source list's flags (the Sources page) --------------------------------------------------------------
 

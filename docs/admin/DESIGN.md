@@ -239,8 +239,15 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
 - **A case is a section of the Queue** (`/queue?case=<coffee_id>`, "← Queue" back): the flags with polarity and
   evidence, the decision, the listing, then the store (crawl flag, live check, fetches). It is the Queue's detail
   view (Owl-Listener `critique-information-density`: progressive disclosure, a detail view instead of inlining).
+- **Keyword filters at the foot of the Queue**, before the rule settings: a list (word or phrase, where it's looked
+  for, how many products it matches), Remove on each, one Add form (word or phrase, a radio group for title, product
+  type or tags, why), and recent changes, each with Undo, in a fold. Add and Remove both open the preview first: what
+  the change takes out of the served release (or gives back), how many are public coffees, the products Claude calls
+  coffee with links, and a sample of 20 with their stores. Saving needs that preview.
 - **The rule settings fold at the foot of the Queue**: they are edited rarely, and only make sense next to the flags
-  they produce.
+  they produce. They are plain controls for each rule's params (numbers, and comma-separated lists). The JSON editor
+  is gone: a rule's family, polarity and readiness change how it decides, need their full evaluation, and aren't
+  edited here.
 
 | | Answer line | Then | Primary action |
 |---|---|---|---|

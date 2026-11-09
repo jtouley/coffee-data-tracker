@@ -319,6 +319,26 @@ models:
           - accepted_values: {arguments: {values: [include, exclude]}}
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
+  - name: stg_prefilter
+    description: >-
+      The owner's keyword filters (the admin's Queue), one row per filter of this build's snapshot or of the served
+      build's: a field and a word or phrase matched as whole words (coffeedata.classify.KeywordFilter). From var
+      prefilter_path, a Parquet file coffeedata.decisions wrote from the checked snapshots; no file, no rows. The
+      build never reads the admin's database.
+    columns:
+      - name: filter_key
+        description: "<field>:<phrase>: one row per filter."
+        data_tests: [unique, not_null]
+      - name: phrase
+        description: The word or phrase, lower case with single spaces, matched literally and as whole words.
+      - name: field
+        description: What it is matched against.
+        data_tests:
+          - accepted_values: {arguments: {values: [title, product_type, tags]}}
+      - name: applies
+        description: In this build's snapshot, so stg_products applies it.
+      - name: baseline
+        description: In the served build's snapshot (what customers get now), so excluding by it isn't new.
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
@@ -332,8 +352,17 @@ models:
         description: >-
           Why (products.decide_why): verdict:<label> when Claude's verdict decided, else the rule that did
           (classify.decision): excluded:<rule>, sauce, sweets, drinks, coffee_words, country, demonym, coffee_type, or
-          signals:<n>. An explanation only (product_decisions); nothing public reads it, and no test on it gates
-          a release.
+          signals:<n>; excluded:keyword:<field>:<phrase> when an owner's keyword filter excluded it. An explanation
+          only (product_decisions); nothing public reads it, and no test on it gates a release.
+      - name: prefilter
+        description: >-
+          The owner's keyword filter that excludes the version, as keyword:<field>:<phrase>, when one does and no
+          rule of the code already did; else null. A version a filter excludes is never a coffee and gets no
+          Claude verdict.
+      - name: prefilter_new
+        description: >-
+          A filter excludes it and none of the served build's filters would: this build is the first to exclude it.
+          eval_prefilter's population.
   - name: product_decisions
     description: >-
       Every product a store lists, coffee or not, as of its latest record, with the build's decision and why. Report
@@ -377,6 +406,57 @@ models:
       - name: reason
         description: Why (stg_products.reason).
         data_tests: [not_null]
+      - name: tags
+        description: >-
+          The store's tags on its latest record, decoded (stg_snapshots.tags): what a keyword filter on tags is
+          matched against in the admin's preview.
+  - name: eval_prefilter
+    description: >-
+      The evaluation of a keyword filter change, in the draft build that carries it (eval/prefilter/README.md). One
+      summary row, always present, then one row per product the change newly excludes (stg_products.prefilter_new,
+      as of its latest record, less products an owner's decision settles). The reference is Claude's stored verdict;
+      the population is every affected product, not a sample. Report only (tag report_only), run after the gate;
+      written beside the release as an ops table, which the admin's Publish reads when a change moves more than 50
+      products.
+    columns:
+      - name: kind
+        description: "summary (the counts, one row) or product (one affected product)."
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [summary, product]}}
+      - name: coffee_id
+        description: "The affected product (product rows); null on the summary row."
+        data_tests: [unique]
+      - name: roaster_id
+        description: "The roaster's normalized domain (product rows)."
+      - name: title
+        description: The title as the store sent it, latest record (product rows).
+      - name: url
+        description: The product's page on the store, as sent (product rows).
+      - name: input_hash
+        description: The product version the filter excludes (product rows).
+      - name: prefilter
+        description: "The filter that excludes it: keyword:<field>:<phrase> (product rows)."
+      - name: verdict_label
+        description: >-
+          Claude's stored label for the version (product rows): not_coffee agrees with the filter; coffee is a
+          confidently wrong candidate the owner reviews; unsure or null is unknown.
+        data_tests:
+          - accepted_values: {arguments: {values: [coffee, not_coffee, unsure]}}
+      - name: affected
+        description: Products the change newly excludes (summary row).
+      - name: claude_not_coffee
+        description: Of them, the ones Claude also calls not_coffee (summary row).
+      - name: claude_coffee
+        description: Of them, the ones Claude calls coffee, the confidently wrong candidates (summary row).
+      - name: no_verdict
+        description: Of them, the ones with no verdict, or unsure. Unknown, never counted as agreement (summary row).
+      - name: share_not_coffee
+        description: claude_not_coffee / affected; null when nothing is affected (summary row).
+      - name: wilson_low
+        description: The share's Wilson 95% interval, lower bound (summary row).
+      - name: wilson_high
+        description: The share's Wilson 95% interval, upper bound (summary row).
   - name: int_catalog_candidates
     description: >-
       One row per product (coffee_id), as of its latest record: what the rules (flag_*) read. is_coffee is the

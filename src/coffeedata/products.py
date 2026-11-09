@@ -7,7 +7,10 @@ from one with no coffee. Nothing at crawl time classifies or extracts (ELT): ing
 
 from __future__ import annotations
 
+from collections.abc import Sequence
+
 from . import classify, extract
+from .classify import KeywordFilter
 from .models import CatalogItem, Enrichment, Variant
 
 # The product-version key: everything the classifier and the extraction rules read. The same expression as
@@ -38,30 +41,34 @@ def item(title, product_type, tags, grams, body_hash, body_text) -> CatalogItem:
     )
 
 
-def decide(it: CatalogItem, label: str | None) -> tuple[bool, str]:
-    """(is_coffee, classified_by): Claude's stored verdict where there is one, unless the rules exclude the
-    product outright; otherwise the rules."""
-    is_coffee, by, _ = decide_why(it, label)
+Filters = Sequence[KeywordFilter]
+
+
+def decide(it: CatalogItem, label: str | None, filters: Filters = ()) -> tuple[bool, str]:
+    """(is_coffee, classified_by): Claude's stored verdict where there is one, unless the rules or the owner's
+    keyword filters (`filters`) exclude the product outright; otherwise the rules."""
+    is_coffee, by, _ = decide_why(it, label, filters)
     return is_coffee, by
 
 
-def decide_why(it: CatalogItem, label: str | None) -> tuple[bool, str, str]:
+def decide_why(it: CatalogItem, label: str | None, filters: Filters = ()) -> tuple[bool, str, str]:
     """decide's answer and why: verdict:<label> when Claude's verdict decided, else the rule that did
-    (classify.decision: excluded:<rule>, a named rule, or signals:<n>). The reason only explains the answer."""
-    exclusion = classify.exclusion(it)
+    (classify.decision: excluded:<rule>, excluded:keyword:<field>:<phrase>, a named rule, or signals:<n>). The
+    reason only explains the answer."""
+    exclusion = classify.exclusion(it, filters)
     if label in ("coffee", "not_coffee") and exclusion is None:
         return label == "coffee", "claude", f"verdict:{label}"
     is_coffee, why = classify.decision(it, exclusion)  # the exclusions ran once, above
     return is_coffee, "rules", why
 
 
-def rules(it: CatalogItem, label: str | None) -> Enrichment | None:
+def rules(it: CatalogItem, label: str | None, filters: Filters = ()) -> Enrichment | None:
     """The rule-based attributes of a coffee (None if it isn't one): what stg_products shows, and the base Claude
     enrichment builds on."""
-    return extract.rules(it) if decide(it, label)[0] else None
+    return extract.rules(it) if decide(it, label, filters)[0] else None
 
 
-def needs_claude(it: CatalogItem, label: str | None) -> Enrichment | None:
+def needs_claude(it: CatalogItem, label: str | None, filters: Filters = ()) -> Enrichment | None:
     """The rules' attributes when they leave a coffee incompletely described (extract.needs_llm), else None."""
-    e = rules(it, label)
+    e = rules(it, label, filters)
     return e if e is not None and extract.needs_llm(e) else None

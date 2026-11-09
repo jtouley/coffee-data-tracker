@@ -251,3 +251,44 @@ dialog .plan-details { margin-top: 8px; }
 @media (prefers-reduced-motion: no-preference) { .admin details > summary::after { transition: transform 120ms ease-out; } }
 .admin details:not(.rowmenu) > summary.btn.text { font-size: 0.9375rem; font-weight: 500; color: var(--ink); }
 .admin h2.section { font-size: 1.0625rem; color: var(--ink); }
+
+/* Keyword filters (the Queue) and their review (Release): one column, labels above their fields, helper text in
+   --ink-2 under the label; the filter list is a dense table like the others; the preview's product lists read as a
+   plain list with the store after each name. No new colours. */
+.prose { max-width: 72ch; }
+.kf-add { display: grid; gap: 16px; max-width: 36rem; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.kf-add h3 { margin: 0; color: var(--ink); font-weight: 600; font-size: 0.9375rem; }
+.fld { display: grid; gap: 4px; min-width: 0; }
+.fld > .flabel, .fld > legend.flabel { margin: 0; }
+.fld > .meta { margin: 0 0 4px; }
+.kf-add .input { min-height: 44px; font-size: 1rem; }
+.kf-add .choice { margin: 0; display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.kf-add .choice legend { margin-bottom: 4px; }
+.kf-add .choice label { min-height: 44px; display: inline-flex; align-items: center; padding: 0; text-indent: 0; }
+table.kf-list tbody th { white-space: normal; min-width: 8rem; max-width: 20rem; }
+table.kf-list td:nth-child(4) { white-space: normal; min-width: 12rem; max-width: 28rem; color: var(--ink-2); }
+.rule-params { border: 0; padding: 0; margin: 16px 0 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+.rule-params legend { grid-column: 1 / -1; color: var(--ink); font-weight: 600; margin-bottom: 4px; }
+.rule-params .num { max-width: 10rem; }
+ul.plist { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 4px; font-size: 0.9375rem; }
+ul.plist li { overflow-wrap: anywhere; }
+.pf-review { margin-top: 16px; }
+table.review tbody th { white-space: normal; min-width: 10rem; max-width: 22rem; }
+table.review td.call { white-space: normal; min-width: 12rem; }
+table.review td.call .mark { display: block; font-weight: 600; margin-bottom: 4px; }
+table.review td.call .inline-form + .inline-form .btn { margin-inline-start: 8px; }
+table.kf-list td .btn.text { min-height: 24px; padding-block: 0; vertical-align: baseline; line-height: inherit; }
+.pf-review h3.section { font-size: 0.9375rem; font-weight: 600; color: var(--ink); margin: 0 0 4px; }
+/* On a phone each product to review is a stacked row: the name, its store and filter, then the two calls, all on
+   screen (no sideways scroll to reach the buttons). */
+@media (max-width: 759px) {
+  table.review { min-width: 0; width: 100%; }
+  table.review thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  table.review tr { display: block; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  table.review tbody { display: block; }
+  table.review th, table.review td { display: block; border: 0; padding: 0; position: static; max-width: none; }
+  table.review td:nth-child(2), table.review td:nth-child(3) { display: inline; color: var(--ink-2); font-size: 0.8125rem; }
+  table.review td:nth-child(3)::before { content: " · "; }
+  table.review td.call { display: block; margin-top: 8px; min-width: 0; }
+}
+@media (max-width: 759px) { table.kf-list td .btn.text { min-height: 44px; } } /* a thumb's target on a phone */

@@ -671,3 +671,24 @@ def registry_ids(lake: Lake, con, build_id: str) -> set[str] | None:
 
 def to_json(value: Any) -> str:
     return json.dumps(value, default=str)
+
+
+def prefilter_eval(lake: Lake, con, build_id: str) -> dict:
+    """A draft build's evaluation of its keyword filter change (its ops table eval_prefilter): the summary and the
+    products Claude calls coffee (each to review). `recorded` False: the build has no eval_prefilter (built before
+    it existed, or its report step failed), so a change that needs it can't be published from it."""
+    src = ops_src(lake, build_id, "eval_prefilter")
+    if src is None:
+        return {"recorded": False, "summary": None, "coffee": []}
+    rows = _rows(
+        con.execute(
+            f"select * exclude (build_id) from {src} order by kind desc, roaster_id, title, coffee_id"
+        )
+    )
+    summary = next((r for r in rows if r["kind"] == "summary"), None)
+    coffee = [
+        r | {"url": safe_url(r["url"])}
+        for r in rows
+        if r["kind"] == "product" and r["verdict_label"] == "coffee"
+    ]
+    return {"recorded": summary is not None, "summary": summary, "coffee": coffee}

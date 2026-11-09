@@ -12,7 +12,7 @@ it: the lake changes only through the pipeline's own Cloud Run jobs, which the a
 | Page | Answers | Actions | Reads |
 |---|---|---|---|
 | Week | Did the week land (each connector's passes, merge, enrich, classify, build, the served release), and what failed (by HTTP status, challenge, partial, quarantined; the trend; every failed store) | a Test crawl link per failed store | `job_manifests`, `fetches`, `builds`, `serving_log`, ops `run_completeness` |
-| Queue | The served build's open flags by product, sorted by the public rows a removal touches, products with the same evidence together, one line each ("2 supports · ready", "1 doubt · 1 restore"); a product's case (`?case=<coffee_id>`): each flag with its polarity and evidence, the classifier's answer, the listing (type, tags, sizes, prices, description and how many products share it), the store's last 8 runs of fetches, its crawl flag and live check; the rule settings | Exclude or Include one product, or a group with the same evidence; Live check (a test crawl); the store's crawl flag; edit the rule settings | ops `mart_flags`, `fetches`, the control plane |
+| Queue | The served build's open flags by product, sorted by the public rows a removal touches, products with the same evidence together, one line each ("2 supports · ready", "1 doubt · 1 restore"); a product's case (`?case=<coffee_id>`): each flag with its polarity and evidence, the classifier's answer, the listing (type, tags, sizes, prices, description and how many products share it), the store's last 8 runs of fetches, its crawl flag and live check; the keyword filters, each with how many of the served build's products it matches; the rule settings | Exclude or Include one product, or a group with the same evidence; Live check (a test crawl); the store's crawl flag; add, remove or undo a keyword filter (each previewed against the served release before it can be saved); edit the rule settings' params | ops `mart_flags`, `fetches`, the control plane |
 | Jobs | Every job started from here, with its live status, duration, logs link and who started it | start any pipeline job; cancel a running one | the control plane, Cloud Run |
 | Release | The served release; the decisions not in it; drafts and their state; a build's changes (`release_changes`) and gate | Build a draft, Publish, Roll back, Discard | `builds`, `serving_log`, ops `release_changes`, the control plane |
 | Catalog | Every product of the served build (or one Release links to), coffee or not, with search and facets, and the owner's decision | Tick products, then Include or Exclude them, by `coffee_id` or by version (`input_hash`), with a reason in the confirm step; Undo | ops `product_decisions`, the release's `dim_coffee`, the control plane |
@@ -68,6 +68,9 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
     since the last recorded full evaluation, plus this draft's (Release records an evaluation, which starts the total
     again);
   - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
+  - a keyword filter change: at 50 or fewer public coffees with the running total, the short path (its preview listed
+    them); over 50, the draft build's `eval_prefilter` against Claude's verdicts, with every product Claude calls
+    coffee marked Keep excluded by the owner, and none Drop the filter (eval/prefilter/README.md);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
     version) answered a test crawl of the store itself in the last 7 days (a connector-wide test doesn't say which
@@ -166,7 +169,8 @@ defaults.
 ## The control plane
 
 Postgres (`admin/controlplane.py`, migrations in `admin/migrations/*.sql`): the audit trail, decisions as events,
-job runs, snapshots, drafts, rule settings versions, crawl flags and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
+job runs, snapshots, drafts, rule settings versions, keyword filters (as events) and the owner's review of what a
+filter change excludes, crawl flags and idempotency keys. Every table is append-only (a trigger refuses UPDATE, DELETE and
 TRUNCATE). The admin applies its migrations on its first use of the database after it starts (the first page or write
 that needs it), once each, under an advisory lock, in a `control` schema it creates and owns. They are additive and
 forward-only, so rolling the admin's image back to an earlier one leaves a schema it can still use.

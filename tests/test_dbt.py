@@ -751,7 +751,43 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=15 " in r.stdout
+    assert "PASS=17 " in r.stdout
+
+
+def test_keyword_filters_reach_the_build_through_its_snapshot_only(lake, tmp_path, monkeypatch):
+    """A snapshot's keyword filter (var prefilter_path, written by decisions.write_prefilter) excludes a product the
+    rules call coffee, names itself in the reason, and eval_prefilter counts it as newly excluded; a filter the
+    served build already had is not new. The build reads no database: an admin database URL that can't be reached
+    changes nothing."""
+    from coffeedata import decisions
+
+    monkeypatch.setenv("ADMIN_DATABASE_URL", "postgresql://nobody@127.0.0.1:1/none")
+    run(lake, "2026-10-19", "onyxcoffeelab.com",
+        [product("A", title="Ethiopia Apron Roast"), product("B", title="Kenya Roast"),
+         product("C", title="Linen Bag Roast")])  # fmt: skip
+    now = {"prefilter": [{"phrase": "apron", "field": "title"}, {"phrase": "linen", "field": "title"}]}
+    was = {"prefilter": [{"phrase": "linen", "field": "title"}]}
+    path = decisions.write_prefilter(now, was, tmp_path / "prefilter.parquet")
+    con = build(lake, tmp_path, prefilter_path=str(path))
+    got = dict(con.execute("select title, reason from product_decisions").fetchall())
+    assert got["Ethiopia Apron Roast"] == "excluded:keyword:title:apron"
+    assert (
+        got["Linen Bag Roast"] == "excluded:keyword:title:linen"
+        and got["Kenya Roast"] != got["Linen Bag Roast"]
+    )
+    assert {r[0] for r in con.execute("select title from dim_coffee").fetchall()} == {"Kenya Roast"}
+    summary = con.execute("select affected, claude_not_coffee, claude_coffee, no_verdict from eval_prefilter "
+                          "where kind = 'summary'").fetchone()  # fmt: skip
+    assert summary == (1, 0, 0, 1)  # only the new filter's product; no verdicts in this lake: unknown
+    assert con.execute("select title, prefilter from eval_prefilter where kind = 'product'").fetchall() == [
+        ("Ethiopia Apron Roast", "keyword:title:apron")]  # fmt: skip
+    con.close()
+    # no file: no filters, and the summary still says so
+    con = build(lake, tmp_path)
+    assert con.execute(
+        "select count(*) from product_decisions where reason like 'excluded:keyword:%'"
+    ).fetchone() == (0,)
+    assert con.execute("select kind, affected from eval_prefilter").fetchall() == [("summary", 0)]
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):

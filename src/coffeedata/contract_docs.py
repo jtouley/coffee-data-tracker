@@ -19,6 +19,8 @@ TABLES: dict[str, str] = {
     "build's coffee decision, what decided it and why (dbt product_decisions).",
     "mart_flags": "Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, "
     "evidence and the product's summary: ready to remove, and its evidence group (dbt mart_flags).",
+    "eval_prefilter": "Ops: the evaluation of the build's keyword filter change against Claude's stored verdicts: a "
+    "summary row, then each product the change newly excludes (dbt eval_prefilter; eval/prefilter/README.md).",
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
@@ -183,7 +185,27 @@ COLUMNS |= {
         "decided; null without one.",
         "reason": "Why: verdict:<label> when Claude's verdict decided, else the rule that did: excluded:<rule>, sauce, "
         "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the "
-        "owner's decision overrides them.",
+        "owner's decision overrides them. excluded:keyword:<field>:<phrase> names an owner's keyword filter.",
+        "tags": "The store's tags on its latest record, decoded: what a keyword filter on tags matches.",
+    },
+    "eval_prefilter": {
+        "build_id": _OPS_BUILD,
+        "kind": "summary (the counts, one row) or product (one affected product).",
+        "coffee_id": "The affected product; null on the summary row.",
+        "roaster_id": _ROASTER,
+        "title": "The title as the store sent it (latest record).",
+        "url": "The product's page on the store, as sent.",
+        "input_hash": "The product version the filter newly excludes.",
+        "prefilter": "The filter that excludes it: keyword:<field>:<phrase>.",
+        "verdict_label": "Claude's stored label: not_coffee agrees, coffee is a confidently wrong candidate, unsure "
+        "or null is unknown.",
+        "affected": "Products the change newly excludes (summary row).",
+        "claude_not_coffee": "Of them, Claude also says not_coffee (summary row).",
+        "claude_coffee": "Of them, Claude says coffee: the owner reviews each before Publish (summary row).",
+        "no_verdict": "Of them, no verdict or unsure: unknown, never agreement (summary row).",
+        "share_not_coffee": "claude_not_coffee / affected (summary row).",
+        "wilson_low": "The share's Wilson 95% interval, lower bound (summary row).",
+        "wilson_high": "The share's Wilson 95% interval, upper bound (summary row).",
     },
     "mart_flags": {
         "build_id": _OPS_BUILD,
@@ -272,7 +294,8 @@ QUALITY: dict[str, list[dict]] = {
          "enforced_by": "dbt run_manifest_mode_values"},
     ],
     "ops": [
-        {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags"],
+        {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags",
+                                          "eval_prefilter"],
          "dimension": "conformity", "severity": "error",
          "rule": "each ops file has exactly the contract's columns and types, and none is a release table",
          "engine": "pytest",
