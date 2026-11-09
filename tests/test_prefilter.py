@@ -36,6 +36,15 @@ def item(title="", ptype="", tags=()):
         ("gift linen", "tags", item("Guji", "", ["Gift", "linen goods"]), False),  # never across two tags
         ("apron", "title", item("Guji", "Apron"), False),  # only the field it names
         ("café", "title", item("CAFÉ Mug"), True),  # Unicode case folding
+        ("brew", "title", item("Cold‐brew Blend"), False),  # U+2010 hyphen: part of a word, unsure
+        ("brew", "title", item("Cold‑brew Blend"), False),  # U+2011 non-breaking hyphen
+        ("brew", "title", item("Cold–brew"), False),  # en dash
+        ("brew", "title", item("Brew’d Awakening"), False),  # curly apostrophe
+        ("brew", "title", item("Brewʼd"), False),  # modifier letter apostrophe
+        ("strasse", "title", item("Straße Espresso"), True),  # "ß" folds to "ss"
+        ("straße", "title", item("STRASSE Espresso"), True),
+        ("apron", "title", item("ＡＰＲＯＮ Classic"), True),  # full-width letters
+        ("apron", "title", item("ＡＰＲＯＮＳ"), False),  # full-width, part of a longer word
     ],
 )
 def test_a_filter_matches_whole_words_in_its_field(phrase, field, listing, hit):
@@ -169,6 +178,11 @@ def test_stg_products_names_the_filter_and_whether_it_is_new():
     assert m.row(r, {"h": ("coffee", "m")}, (apron,), (linen,))["prefilter_new"] is True
     kept = m.row(r, {"h": ("coffee", "m")}, (linen,), ())
     assert (kept["is_coffee"], kept["prefilter"], kept["prefilter_new"]) == (True, None, False)
+    assert (new["unfiltered_is_coffee"], new["prefilter_restored"]) == (True, False)
+    # the served build's filter is gone from this build's set: the version goes back to Claude and the rules
+    back = m.row(r, {"h": ("coffee", "m")}, (), (apron,))
+    assert (back["is_coffee"], back["prefilter_restored"], back["baseline_prefilter"]) == (True, True,
+                                                                                         "keyword:title:apron")  # fmt: skip
 
 
 # --- builds and jobs never read the admin's database -----------------------------------------------------------
@@ -190,3 +204,45 @@ def test_the_pipeline_never_imports_the_admin_or_a_database_driver():
     assert "ADMIN_DATABASE_URL" not in json.dumps(
         [p.read_text() for p in (ROOT / "src/coffeedata").rglob("*.py")]
     )
+
+
+# --- the weekly check of the published filters (verdict.SHADOW_SAMPLE) ---------------------------------------------
+
+
+def test_the_weekly_sample_is_deterministic_spread_across_roasters_and_capped():
+    from coffeedata import verdict
+
+    rows = [{"input_hash": f"{r}-{i}", "roaster_id": r, "prefilter": "keyword:title:apron"}
+            for r in ("a.example", "b.example", "c.example") for i in range(30)]  # fmt: skip
+    one = verdict.shadow_sample(rows, "2026-11-09")
+    assert one == verdict.shadow_sample(
+        list(reversed(rows)), "2026-11-09"
+    )  # the order it's read in doesn't matter
+    assert len(one) == verdict.SHADOW_SAMPLE == 20
+    per = {r: sum(x["roaster_id"] == r for x in one) for r in ("a.example", "b.example", "c.example")}
+    assert max(per.values()) - min(per.values()) <= 1  # one roaster at a time, in turn
+    assert one != verdict.shadow_sample(rows, "2026-11-16")  # each week draws afresh
+    assert (
+        verdict.shadow_sample(rows[:3], "2026-11-09")
+        and len(verdict.shadow_sample(rows[:3], "2026-11-09")) == 3
+    )
+
+
+def test_filtered_finds_what_the_filters_newly_exclude_and_nothing_the_code_does(monkeypatch):
+    from coffeedata import verdict
+
+    def r(h, title):
+        return {"input_hash": h, "title": title, "product_type": "", "tags": [], "grams": [340], "body_hash": "x",
+                "body_text": "", "roaster_id": "r.example"}  # fmt: skip
+
+    rows = [r("a", "Barista Apron"), r("b", "Apron Mug"), r("c", "Guji"), r("d", "Linen Apron")]
+    monkeypatch.setattr(verdict, "_pending_rows", lambda lake, model_id: iter(rows))
+    apron, linen = KeywordFilter("apron", "title"), KeywordFilter("linen apron", "title")
+    got = verdict.filtered(None, "m", (apron,))
+    assert [(x["input_hash"], x["prefilter"]) for x in got] == [
+        ("a", "keyword:title:apron"),
+        ("d", "keyword:title:apron"),
+    ]
+    assert [x["input_hash"] for x in verdict.filtered(None, "m", (apron,), (linen,))] == [
+        "a"
+    ]  # d: already excluded

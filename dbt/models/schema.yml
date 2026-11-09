@@ -321,7 +321,7 @@ models:
     description: One row per recorded build and whether it passed; the one definition of a passing build.
   - name: stg_prefilter
     description: >-
-      The owner's keyword filters (the admin's Queue), one row per filter of this build's snapshot or of the served
+      The owner's keyword filters (the admin's Filters page), one row per filter of this build's snapshot or of the served
       build's: a field and a word or phrase matched as whole words (coffeedata.classify.KeywordFilter). From var
       prefilter_path, a Parquet file coffeedata.decisions wrote from the checked snapshots; no file, no rows. The
       build never reads the admin's database.
@@ -362,7 +362,17 @@ models:
       - name: prefilter_new
         description: >-
           A filter excludes it and none of the served build's filters would: this build is the first to exclude it.
-          eval_prefilter's population.
+          eval_prefilter's excluded rows.
+      - name: prefilter_restored
+        description: >-
+          A filter of the served build excluded it and none of this build's does (and no rule of the code does): it
+          goes back to Claude and the rules. eval_prefilter's restored rows.
+      - name: baseline_prefilter
+        description: "The served build's filter that excluded a restored version: keyword:<field>:<phrase>; else null."
+      - name: unfiltered_is_coffee
+        description: >-
+          The answer without any keyword filter: Claude's verdict where there is one, else the rules. What a product a
+          filter excludes would be if the filter were removed.
   - name: product_decisions
     description: >-
       Every product a store lists, coffee or not, as of its latest record, with the build's decision and why. Report
@@ -410,53 +420,71 @@ models:
         description: >-
           The store's tags on its latest record, decoded (stg_snapshots.tags): what a keyword filter on tags is
           matched against in the admin's preview.
+      - name: unfiltered_is_coffee
+        description: >-
+          stg_products.unfiltered_is_coffee for the latest version, before any decision: whether a product a keyword
+          filter excludes would be coffee without it (the admin's removal preview).
   - name: eval_prefilter
     description: >-
-      The evaluation of a keyword filter change, in the draft build that carries it (eval/prefilter/README.md). One
-      summary row, always present, then one row per product the change newly excludes (stg_products.prefilter_new,
-      as of its latest record, less products an owner's decision settles). The reference is Claude's stored verdict;
-      the population is every affected product, not a sample. Report only (tag report_only), run after the gate;
-      written beside the release as an ops table, which the admin's Publish reads when a change moves more than 50
-      products.
+      What a keyword filter change does to today's catalog, one row per listed product it moves: a census of the
+      draft build, not a sample (eval/prefilter/README.md). excluded rows are products this build's filters newly
+      exclude; restored rows are products a removed filter gives back. Products an owner's decision settles and
+      products no store lists are left out. Report only (tag report_only); written beside the release as an ops
+      table, which the admin's Release page reads.
     columns:
-      - name: kind
-        description: "summary (the counts, one row) or product (one affected product)."
+      - name: direction
+        description: "excluded (a filter newly takes it out) or restored (a removed filter gives it back)."
         data_tests:
           - not_null
-          - accepted_values: {arguments: {values: [summary, product]}}
+          - accepted_values: {arguments: {values: [excluded, restored]}}
       - name: coffee_id
-        description: "The affected product (product rows); null on the summary row."
-        data_tests: [unique]
+        description: "<roaster domain>:<store product id>."
+        data_tests: [unique, not_null]
       - name: roaster_id
-        description: "The roaster's normalized domain (product rows)."
+        description: "The roaster's normalized domain."
       - name: title
-        description: The title as the store sent it, latest record (product rows).
+        description: The title as the store sent it, latest record.
       - name: url
-        description: The product's page on the store, as sent (product rows).
+        description: The product's page on the store, as sent.
       - name: input_hash
-        description: The product version the filter excludes (product rows).
+        description: The product version the change moves; the owner's review marks are kept against it.
+        data_tests: [not_null]
       - name: prefilter
-        description: "The filter that excludes it: keyword:<field>:<phrase> (product rows)."
+        description: "The filter that moves it: keyword:<field>:<phrase> (for a restored row, the removed filter)."
       - name: verdict_label
-        description: >-
-          Claude's stored label for the version (product rows): not_coffee agrees with the filter; coffee is a
-          confidently wrong candidate the owner reviews; unsure or null is unknown.
+        description: Claude's stored label for the version (coffee, not_coffee or unsure); null without one.
         data_tests:
           - accepted_values: {arguments: {values: [coffee, not_coffee, unsure]}}
-      - name: affected
-        description: Products the change newly excludes (summary row).
-      - name: claude_not_coffee
-        description: Of them, the ones Claude also calls not_coffee (summary row).
+      - name: claude
+        description: >-
+          Claude's call: coffee, not_coffee, or no_verdict (none yet, or unsure). An excluded product with coffee or
+          no_verdict is one the owner reviews before an over-50 Publish.
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [coffee, not_coffee, no_verdict]}}
+      - name: is_coffee_after
+        description: The build's answer with this change (a restored product with true comes back to the catalog).
+  - name: eval_prefilter_summary
+    description: >-
+      eval_prefilter's plain counts, one row per direction (excluded, restored), always both. A census: counts, no
+      interval (eval/prefilter/README.md). The test eval_prefilter_reconciles checks they add up. Report only.
+    columns:
+      - name: direction
+        description: "excluded or restored."
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values: {arguments: {values: [excluded, restored]}}
+      - name: products
+        description: Listed products the change moves in this direction.
       - name: claude_coffee
-        description: Of them, the ones Claude calls coffee, the confidently wrong candidates (summary row).
+        description: Of them, the ones Claude calls coffee.
+      - name: claude_not_coffee
+        description: Of them, the ones Claude calls not coffee.
       - name: no_verdict
-        description: Of them, the ones with no verdict, or unsure. Unknown, never counted as agreement (summary row).
-      - name: share_not_coffee
-        description: claude_not_coffee / affected; null when nothing is affected (summary row).
-      - name: wilson_low
-        description: The share's Wilson 95% interval, lower bound (summary row).
-      - name: wilson_high
-        description: The share's Wilson 95% interval, upper bound (summary row).
+        description: Of them, the ones with no verdict yet, or an unsure one.
+      - name: back_in_catalog
+        description: Of them, the ones the build counts as coffee with this change (a restored product coming back).
   - name: int_catalog_candidates
     description: >-
       One row per product (coffee_id), as of its latest record: what the rules (flag_*) read. is_coffee is the

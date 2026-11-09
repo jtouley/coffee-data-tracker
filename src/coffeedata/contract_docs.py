@@ -19,8 +19,9 @@ TABLES: dict[str, str] = {
     "build's coffee decision, what decided it and why (dbt product_decisions).",
     "mart_flags": "Ops: every flag a rule raised in the build, one row per rule and product, with its polarity, "
     "evidence and the product's summary: ready to remove, and its evidence group (dbt mart_flags).",
-    "eval_prefilter": "Ops: the evaluation of the build's keyword filter change against Claude's stored verdicts: a "
-    "summary row, then each product the change newly excludes (dbt eval_prefilter; eval/prefilter/README.md).",
+    "eval_prefilter": "Ops: each listed product the build's keyword filter change moves (newly excluded, or given "
+    "back by a removed filter), with Claude's call on it (dbt eval_prefilter; eval/prefilter/README.md).",
+    "eval_prefilter_summary": "Ops: eval_prefilter's plain counts, one row per direction (dbt eval_prefilter_summary).",
 }
 
 _RUN = "The weekly run (the Monday of its ISO week)."
@@ -187,25 +188,29 @@ COLUMNS |= {
         "sweets, drinks, coffee_words, country, demonym, coffee_type or signals:<n>; decision:<action> when the "
         "owner's decision overrides them. excluded:keyword:<field>:<phrase> names an owner's keyword filter.",
         "tags": "The store's tags on its latest record, decoded: what a keyword filter on tags matches.",
+        "unfiltered_is_coffee": "The answer without the owner's keyword filters (Claude's verdict, else the rules).",
     },
     "eval_prefilter": {
         "build_id": _OPS_BUILD,
-        "kind": "summary (the counts, one row) or product (one affected product).",
-        "coffee_id": "The affected product; null on the summary row.",
+        "direction": "excluded (a filter newly takes it out) or restored (a removed filter gives it back).",
+        "coffee_id": "The product the change moves.",
         "roaster_id": _ROASTER,
         "title": "The title as the store sent it (latest record).",
         "url": "The product's page on the store, as sent.",
-        "input_hash": "The product version the filter newly excludes.",
-        "prefilter": "The filter that excludes it: keyword:<field>:<phrase>.",
-        "verdict_label": "Claude's stored label: not_coffee agrees, coffee is a confidently wrong candidate, unsure "
-        "or null is unknown.",
-        "affected": "Products the change newly excludes (summary row).",
-        "claude_not_coffee": "Of them, Claude also says not_coffee (summary row).",
-        "claude_coffee": "Of them, Claude says coffee: the owner reviews each before Publish (summary row).",
-        "no_verdict": "Of them, no verdict or unsure: unknown, never agreement (summary row).",
-        "share_not_coffee": "claude_not_coffee / affected (summary row).",
-        "wilson_low": "The share's Wilson 95% interval, lower bound (summary row).",
-        "wilson_high": "The share's Wilson 95% interval, upper bound (summary row).",
+        "input_hash": "The product version the change moves.",
+        "prefilter": "The filter that moves it: keyword:<field>:<phrase>.",
+        "verdict_label": "Claude's stored label (coffee, not_coffee or unsure), or null.",
+        "claude": "Claude's call: coffee, not_coffee or no_verdict (none yet, or unsure).",
+        "is_coffee_after": "The build's answer with this change.",
+    },
+    "eval_prefilter_summary": {
+        "build_id": _OPS_BUILD,
+        "direction": "excluded or restored.",
+        "products": "Listed products the change moves in this direction.",
+        "claude_coffee": "Of them, Claude calls coffee.",
+        "claude_not_coffee": "Of them, Claude calls not coffee.",
+        "no_verdict": "Of them, no verdict yet or an unsure one.",
+        "back_in_catalog": "Of them, coffee with this change (restored products coming back).",
     },
     "mart_flags": {
         "build_id": _OPS_BUILD,
@@ -295,7 +300,7 @@ QUALITY: dict[str, list[dict]] = {
     ],
     "ops": [
         {"id": "ops_columns", "tables": ["run_completeness", "release_changes", "product_decisions", "mart_flags",
-                                          "eval_prefilter"],
+                                          "eval_prefilter", "eval_prefilter_summary"],
          "dimension": "conformity", "severity": "error",
          "rule": "each ops file has exactly the contract's columns and types, and none is a release table",
          "engine": "pytest",

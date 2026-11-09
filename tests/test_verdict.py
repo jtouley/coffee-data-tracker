@@ -226,7 +226,7 @@ def test_classify_runs_when_configured_even_if_rules_only_is_allowed(lake, monke
     monkeypatch.setenv("ANTHROPIC_API_KEY", "k")
     seen = []
     monkeypatch.setattr(verdict, "collect", lambda lk, d=None: seen.append("collect") or {"collected": 0})
-    monkeypatch.setattr(verdict, "submit", lambda lk, n: seen.append("submit") or {"submitted": 0})
+    monkeypatch.setattr(verdict, "submit", lambda lk, n, **_kw: seen.append("submit") or {"submitted": 0})
     cli.main(["classify", "--run-date", "2026-10-28"])
     assert seen == ["collect", "submit"]
     # The control plane's start and end rows (job classify), under the week's Monday.

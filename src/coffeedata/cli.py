@@ -331,7 +331,17 @@ def cmd_classify(args: argparse.Namespace) -> None:
     job = control.start(lake, "classify", connectors.week_of(args.run_date or _today()),
                         detail={"model": verdict.model(), **control.execution()})  # fmt: skip
     try:
-        out = {"collect": verdict.collect(lake, args.run_date), "submit": verdict.submit(lake, args.limit)}
+        only = None
+        if getattr(args, "prefilter_snapshot", None):
+            # A draft's review (the admin's Classify these): exactly the versions its keyword filters newly exclude
+            # that have no verdict, read from its snapshot (checked against the digest the admin recorded).
+            from . import decisions
+
+            doc = decisions.load(args.prefilter_snapshot, args.prefilter_sha256 or "")
+            only = verdict.filtered(lake, verdict.model() or "", decisions.prefilter(doc),
+                                    decisions.served_prefilter(lake))  # fmt: skip
+        out = {"collect": verdict.collect(lake, args.run_date),
+               "submit": verdict.submit(lake, args.limit, only=only, run_date=args.run_date)}  # fmt: skip
         deadline = time.monotonic() + args.wait * 60
         # Wait for this run's batches only; whatever is still running is collected by the next run.
         waiting = set(out["submit"].get("batch_ids", []))
@@ -532,13 +542,17 @@ def _build(args: argparse.Namespace, lake: Lake, db: Path, run_date: str, build_
         snap
     )  # places flagged roasters: stg_registry adds them
     extra["not_roasters"] = decisions.not_roasters(snap)  # flagged not a roaster: stg_registry drops them
-    # The keyword filters: this build's (its snapshot's) and the served build's, so eval_prefilter can measure what
-    # a change newly excludes. A served snapshot that can't be read now gives no baseline: eval_prefilter then
-    # counts every filter's exclusions as new (more to review, never less).
-    try:
-        baseline_doc = _snapshot(argparse.Namespace(), lake, served)
-    except decisions.SnapshotError:
-        baseline_doc = None
+    # The keyword filters: this build's (its snapshot's) and the served build's, so eval_prefilter can tell what a
+    # change moves. A build without --snapshot already applies the served snapshot, so it is its own baseline. A
+    # draft reads the served one; if that can't be read (a lake error, a bad snapshot), there is no baseline and
+    # eval_prefilter lists every filter's exclusions as new: more to review, never less. Logged, never fatal.
+    baseline_doc = snap
+    if getattr(args, "snapshot", None):
+        try:
+            baseline_doc = _snapshot(argparse.Namespace(), lake, served)
+        except Exception as e:  # noqa: BLE001 - the lake's IO errors vary (duckdb, fsspec, OSError); none is fatal
+            logging.warning("the served snapshot wasn't read for eval_prefilter's baseline: %s", _error(e))
+            baseline_doc = None
     extra["prefilter_path"] = str(
         decisions.write_prefilter(snap, baseline_doc, db.parent / "prefilter.parquet")
     )
@@ -1062,6 +1076,12 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--limit", type=int, default=100_000)
     c.add_argument("--run-date", default=None)
     c.add_argument("--wait", type=int, default=0, help="minutes to wait for the new batch")
+    c.add_argument(
+        "--prefilter-snapshot",
+        help="a draft's snapshot: classify only what its keyword filters newly "
+        "exclude and Claude hasn't seen (the admin's Classify these)",
+    )
+    c.add_argument("--prefilter-sha256", help="that snapshot's digest, as the admin recorded it")
     c.add_argument(
         "--allow-rules-only",
         action="store_true",

@@ -24,7 +24,7 @@ from datetime import UTC, date, datetime
 from importlib import resources
 from typing import cast
 
-from . import extract
+from . import classify, extract
 from .classify import excluded
 from .lake import Lake, new_batch_id
 from .models import CatalogItem, Variant
@@ -54,7 +54,7 @@ INPUT_HASH = (
 PENDING_SQL = """
 with v as (
     select distinct on (input_hash) {input_hash} as input_hash, s.title, s.product_type, s.tags, s.body_hash,
-           list_transform(s.variants, lambda v: v.grams) as grams
+           list_transform(s.variants, lambda v: v.grams) as grams, s.roaster_id
     from {snapshots} s
 ),
 done as (select distinct input_hash from {verdicts} where model = $model and definition = $definition),
@@ -167,6 +167,18 @@ def parse(msg: object) -> str | None:
     return label if label in LABELS else None
 
 
+def _pending_rows(lake: Lake, model_id: str):
+    """Every product version with no verdict for this model and definition and none in an open batch."""
+    sql = PENDING_SQL.format(
+        input_hash=INPUT_HASH,
+        **{t: lake.scan(t) for t in ("snapshots", "bodies", "verdicts", "verdict_batches")},
+    )
+    cur = lake.connect().execute(sql, {"model": model_id, "definition": DEFINITION_VERSION})
+    cols = [d[0] for d in cur.description]
+    for row in cur.fetchall():
+        yield dict(zip(cols, row, strict=True))
+
+
 def pending(lake: Lake, model_id: str, limit: int, filters: tuple | None = None) -> list[dict]:
     """Product versions with no verdict for this model and definition, none in an open batch, that the rules and the
     owner's keyword filters don't exclude. `filters`: the published snapshot's (decisions.served_prefilter) unless
@@ -175,19 +187,55 @@ def pending(lake: Lake, model_id: str, limit: int, filters: tuple | None = None)
 
     if filters is None:
         filters = decisions.served_prefilter(lake)
-    sql = PENDING_SQL.format(
-        input_hash=INPUT_HASH,
-        **{t: lake.scan(t) for t in ("snapshots", "bodies", "verdicts", "verdict_batches")},
-    )
-    cur = lake.connect().execute(sql, {"model": model_id, "definition": DEFINITION_VERSION})
-    cols = [d[0] for d in cur.description]
     out = []
-    for row in cur.fetchall():
-        r = dict(zip(cols, row, strict=True))
+    for r in _pending_rows(lake, model_id):
         if not excluded(item(r), filters):
             out.append(r)
             if len(out) >= limit:
                 break
+    return out
+
+
+# --- keyword filters: the weekly check, and a draft's review ---------------------------------------------------------
+
+# Each weekly classify run sends this many of the versions the published keyword filters excluded to Claude anyway,
+# so the Filters page can show how often a filter excludes something Claude calls coffee (eval/prefilter/README.md).
+# Claude's answer is stored as any verdict, and never changes the exclusion (the filter decides first).
+SHADOW_SAMPLE = 20
+SHADOW_SALT = "prefilter-shadow-v1"
+
+
+def _salted(*parts: str) -> str:
+    return hashlib.sha256("|".join((SHADOW_SALT, *parts)).encode()).hexdigest()
+
+
+def filtered(lake: Lake, model_id: str, filters, baseline=()) -> list[dict]:
+    """Pending versions (no verdict, none in flight) that `filters` exclude by a keyword, no rule of the code excludes,
+    and no filter of `baseline` already excluded; each with `prefilter`, the filter's name."""
+    out = []
+    for r in _pending_rows(lake, model_id):
+        it = item(r)
+        if classify.exclusion(it) is not None or classify.keyword_match(it, baseline) is not None:
+            continue
+        if hit := classify.keyword_match(it, filters):
+            out.append(r | {"prefilter": hit.name})
+    return out
+
+
+def shadow_sample(rows: list[dict], week: str, n: int = SHADOW_SAMPLE) -> list[dict]:
+    """A deterministic random sample of `rows`, spread across roasters: each roaster's versions in the order of a
+    salted hash of the version (input_hash), the roasters in the order of a salted hash of the roaster, then one
+    version per roaster in turn until `n`. The week is in the salt, so each week draws afresh."""
+    by_roaster: dict[str, list[dict]] = {}
+    for r in rows:
+        by_roaster.setdefault(r.get("roaster_id") or "", []).append(r)
+    queues = [sorted(v, key=lambda r: _salted(week, r["input_hash"]))
+              for _k, v in sorted(by_roaster.items(), key=lambda kv: _salted(week, kv[0]))]  # fmt: skip
+    out: list[dict] = []
+    while len(out) < n and any(queues):
+        for q in queues:
+            if q and len(out) < n:
+                out.append(q.pop(0))
     return out
 
 
@@ -196,16 +244,32 @@ def pending(lake: Lake, model_id: str, limit: int, filters: tuple | None = None)
 BATCH_SIZE = 10_000
 
 
-def submit(lake: Lake, limit: int = 100_000) -> dict:
-    """Send pending product versions to Claude in Message Batches (half price; results within a day)."""
+def submit(
+    lake: Lake, limit: int = 100_000, only: list[dict] | None = None, run_date: str | None = None
+) -> dict:
+    """Send pending product versions to Claude in Message Batches (half price; results within a day). With `only`,
+    exactly those versions (a draft's review: cli `classify --prefilter-snapshot`); otherwise every pending version,
+    plus the week's sample of what the published keyword filters excluded (SHADOW_SAMPLE), recorded in
+    prefilter_samples."""
     import anthropic
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
 
+    from . import connectors, decisions
+
     model_id = model()
     if not model_id:
         return {"skipped": "COFFEEDATA_VERDICT_MODEL is not set"}
-    todo = pending(lake, model_id, limit)
+    shadow: list[dict] = []
+    if only is not None:
+        todo = only[:limit]
+    else:
+        todo = pending(lake, model_id, limit)
+        served = decisions.served_prefilter(lake)
+        if served:
+            week = connectors.week_of(run_date or date.today().isoformat())
+            shadow = shadow_sample(filtered(lake, model_id, served), week)
+            todo = todo + shadow
     if not todo:
         return {"pending": 0}
     client = extract.client()
@@ -237,6 +301,14 @@ def submit(lake: Lake, limit: int = 100_000) -> dict:
         )  # fmt: skip
         out["submitted"] += len(reqs)
         out["batch_ids"].append(batch.id)
+        sampled = {r["input_hash"] for r in chunk} & {r["input_hash"] for r in shadow}
+        if sampled:  # the week's check of the keyword filters: which versions, for which filter
+            lake.write_partition("prefilter_samples", run_date or now.date().isoformat(), batch.id, [
+                {"sampled_at": now, "run_date": date.fromisoformat(run_date) if run_date else now.date(),
+                 "input_hash": r["input_hash"], "roaster_id": r.get("roaster_id"), "prefilter": r["prefilter"],
+                 "model": model_id, "definition": DEFINITION_VERSION}
+                for r in shadow if r["input_hash"] in sampled])  # fmt: skip
+            out["prefilter_sampled"] = out.get("prefilter_sampled", 0) + len(sampled)
     return out
 
 

@@ -22,10 +22,15 @@ SCHEMA = pa.schema(
         # (product_decisions); nothing public reads it.
         ("reason", pa.string()),
         # The owner's keyword filter that excludes the version (keyword:<field>:<phrase>), when one does and none of
-        # the code's rules already did; prefilter_new: that filter isn't in the served build's set, so this build is
-        # the first to exclude it (eval_prefilter measures those against Claude's verdicts).
+        # the code's rules already did; prefilter_new: no filter of the served build excluded it, so this build is
+        # the first to (eval_prefilter lists those). prefilter_restored: a filter of the served build excluded it and
+        # none of this build's does, so it goes back to Claude and the rules; baseline_prefilter names that filter.
+        # unfiltered_is_coffee: the answer without any keyword filter (Claude's verdict, else the rules).
         ("prefilter", pa.string()),
         ("prefilter_new", pa.bool_()),
+        ("prefilter_restored", pa.bool_()),
+        ("baseline_prefilter", pa.string()),
+        ("unfiltered_is_coffee", pa.bool_()),
         ("is_wholesale", pa.bool_()),
         ("clean_title", pa.string()),
         ("origin_country", pa.string()),
@@ -51,6 +56,7 @@ def row(r: dict, verdicts: dict[str, tuple[str, str]], filters=(), baseline=()) 
     label, verdict_model = verdicts.get(r["input_hash"], (None, None))
     is_coffee, classified_by, reason = products.decide_why(item, label, filters)
     keyword = reason.removeprefix("excluded:") if reason.startswith("excluded:keyword:") else None
+    was = classify.keyword_match(item, baseline) if classify.exclusion(item) is None else None
     out = {
         "input_hash": r["input_hash"],
         "is_coffee": is_coffee,
@@ -58,7 +64,10 @@ def row(r: dict, verdicts: dict[str, tuple[str, str]], filters=(), baseline=()) 
         "verdict_model": verdict_model if classified_by == "claude" else None,
         "reason": reason,
         "prefilter": keyword,
-        "prefilter_new": keyword is not None and classify.keyword_match(item, baseline) is None,
+        "prefilter_new": keyword is not None and was is None,
+        "prefilter_restored": keyword is None and was is not None,
+        "baseline_prefilter": was.name if was is not None else None,
+        "unfiltered_is_coffee": products.decide_why(item, label)[0] if keyword or was else is_coffee,
         "is_wholesale": classify.is_wholesale(item),
         "clean_title": item.title,
     }

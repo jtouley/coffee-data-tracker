@@ -281,6 +281,11 @@ schema:
       physicalType: string
     required: false
     description: 'The store''s tags on its latest record, decoded: what a keyword filter on tags matches.'
+  - name: unfiltered_is_coffee
+    logicalType: boolean
+    physicalType: bool
+    required: false
+    description: The answer without the owner's keyword filters (Claude's verdict, else the rules).
   quality:
   - id: product_decisions_ops_columns
     description: each ops file has exactly the contract's columns and types, and none is a release table.
@@ -494,24 +499,24 @@ schema:
 - name: eval_prefilter
   physicalName: eval_prefilter
   physicalType: table
-  description: 'Ops: the evaluation of the build''s keyword filter change against Claude''s stored verdicts: a summary row,
-    then each product the change newly excludes (dbt eval_prefilter; eval/prefilter/README.md).'
+  description: 'Ops: each listed product the build''s keyword filter change moves (newly excluded, or given back by a removed
+    filter), with Claude''s call on it (dbt eval_prefilter; eval/prefilter/README.md).'
   properties:
   - name: build_id
     logicalType: string
     physicalType: string
     required: false
     description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
-  - name: kind
+  - name: direction
     logicalType: string
     physicalType: string
     required: false
-    description: summary (the counts, one row) or product (one affected product).
+    description: excluded (a filter newly takes it out) or restored (a removed filter gives it back).
   - name: coffee_id
     logicalType: string
     physicalType: string
     required: false
-    description: The affected product; null on the summary row.
+    description: The product the change moves.
   - name: roaster_id
     logicalType: string
     physicalType: string
@@ -531,53 +536,27 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: The product version the filter newly excludes.
+    description: The product version the change moves.
   - name: prefilter
     logicalType: string
     physicalType: string
     required: false
-    description: 'The filter that excludes it: keyword:<field>:<phrase>.'
+    description: 'The filter that moves it: keyword:<field>:<phrase>.'
   - name: verdict_label
     logicalType: string
     physicalType: string
     required: false
-    description: 'Claude''s stored label: not_coffee agrees, coffee is a confidently wrong candidate, unsure or null is
-      unknown.'
-  - name: affected
-    logicalType: integer
-    physicalType: int64
+    description: Claude's stored label (coffee, not_coffee or unsure), or null.
+  - name: claude
+    logicalType: string
+    physicalType: string
     required: false
-    description: Products the change newly excludes (summary row).
-  - name: claude_not_coffee
-    logicalType: integer
-    physicalType: int64
+    description: 'Claude''s call: coffee, not_coffee or no_verdict (none yet, or unsure).'
+  - name: is_coffee_after
+    logicalType: boolean
+    physicalType: bool
     required: false
-    description: Of them, Claude also says not_coffee (summary row).
-  - name: claude_coffee
-    logicalType: integer
-    physicalType: int64
-    required: false
-    description: 'Of them, Claude says coffee: the owner reviews each before Publish (summary row).'
-  - name: no_verdict
-    logicalType: integer
-    physicalType: int64
-    required: false
-    description: 'Of them, no verdict or unsure: unknown, never agreement (summary row).'
-  - name: share_not_coffee
-    logicalType: number
-    physicalType: double
-    required: false
-    description: claude_not_coffee / affected (summary row).
-  - name: wilson_low
-    logicalType: number
-    physicalType: double
-    required: false
-    description: The share's Wilson 95% interval, lower bound (summary row).
-  - name: wilson_high
-    logicalType: number
-    physicalType: double
-    required: false
-    description: The share's Wilson 95% interval, upper bound (summary row).
+    description: The build's answer with this change.
   quality:
   - id: eval_prefilter_ops_columns
     description: each ops file has exactly the contract's columns and types, and none is a release table.
@@ -592,6 +571,60 @@ schema:
   customProperties:
   - property: lakeGlob
     value: releases/*/*/ops/eval_prefilter.parquet
+- name: eval_prefilter_summary
+  physicalName: eval_prefilter_summary
+  physicalType: table
+  description: 'Ops: eval_prefilter''s plain counts, one row per direction (dbt eval_prefilter_summary).'
+  properties:
+  - name: build_id
+    logicalType: string
+    physicalType: string
+    required: false
+    description: 'The build that wrote it (builds.build_id, the folder''s build=<id>): every row names its build.'
+  - name: direction
+    logicalType: string
+    physicalType: string
+    required: false
+    description: excluded or restored.
+  - name: products
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Listed products the change moves in this direction.
+  - name: claude_coffee
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, Claude calls coffee.
+  - name: claude_not_coffee
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, Claude calls not coffee.
+  - name: no_verdict
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, no verdict yet or an unsure one.
+  - name: back_in_catalog
+    logicalType: integer
+    physicalType: int64
+    required: false
+    description: Of them, coffee with this change (restored products coming back).
+  quality:
+  - id: eval_prefilter_summary_ops_columns
+    description: each ops file has exactly the contract's columns and types, and none is a release table.
+    type: custom
+    engine: pytest
+    implementation: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+    dimension: conformity
+    severity: error
+    customProperties:
+    - property: enforcedBy
+      value: tests/test_raw_contracts.py::test_ops_tables_follow_the_ops_contract
+  customProperties:
+  - property: lakeGlob
+    value: releases/*/*/ops/eval_prefilter_summary.parquet
 authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/src/coffeedata/lake.py
   type: implementation
@@ -620,6 +653,9 @@ authoritativeDefinitions:
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/eval_prefilter.sql
   type: implementation
   description: Producer
+- url: https://github.com/jtouley/coffee-data-tracker/blob/main/dbt/models/marts/eval_prefilter_summary.sql
+  type: implementation
+  description: Producer
 - url: https://github.com/jtouley/coffee-data-tracker/blob/main/tests/test_raw_contracts.py
   type: implementation
   description: Tests that hold producers and this contract together
@@ -632,6 +668,6 @@ customProperties:
   value:
   - the owner's command center (admin.registry.coffee)
 - property: interfaceFingerprint
-  value: 5a2a9b719bf021fa
+  value: b9a96979c7125866
 - property: docsFingerprint
-  value: 3e17d8bc85f09100
+  value: 5818f4ad77f3f611

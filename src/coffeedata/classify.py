@@ -144,9 +144,11 @@ KEYWORD_MAX = 200  # filters in one snapshot
 # A filter is a word or phrase: 3 to 60 characters of letters, digits, spaces, & ' . and -, starting with a letter or
 # digit and holding at least one letter. Nothing in it is a pattern: it is matched literally.
 _PHRASE = re.compile(r"[^\W_][\w &'.-]{2,59}")
-# Whole words only. A word character, an apostrophe or a hyphen next to the phrase means it is part of a longer word
-# ("tea" is not in "teapot", "tea-like" or "tea's"), so the filter is unsure and doesn't match.
-_EDGE = r"[\w'-]"
+# Whole words only. A word character (any script), an apostrophe or a hyphen next to the phrase means it is part of a
+# longer word ("tea" is not in "teapot", "tea-like", "tea's", "Tea’s" or "tea‐like"), so the filter is unsure and
+# doesn't match. Typographic apostrophes (’ ‘ ‛ ʼ ′) and Unicode hyphens and dashes (‐ ‑ ‒ – — ― − ﹣) count as well
+# as the ASCII ones: stores' titles use them.
+_EDGE = r"[\w'\u2018\u2019\u201b\u02bc\u2032\-\u2010-\u2015\u2212\ufe63]"
 
 
 def keyword_phrase(raw: object) -> str:
@@ -193,8 +195,14 @@ class KeywordFilter:
         return {"phrase": self.phrase, "field": self.field}
 
 
-def _norm(text: str) -> str:
+def keyword_text(text: str | None) -> str:
+    """Text as a filter reads it: NFKC (full-width letters become ASCII) and case-folded ("Straße" reads "strasse").
+    A filter's phrase is normalized the same way, so a phrase found in this text by substring is a candidate match;
+    KeywordFilter.matches decides."""
     return unicodedata.normalize("NFKC", text or "").casefold()
+
+
+_norm = keyword_text
 
 
 def keyword_filters(rows: Iterable[dict] | None) -> tuple[KeywordFilter, ...]:

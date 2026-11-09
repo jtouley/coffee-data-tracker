@@ -17,7 +17,10 @@ select
     {{ decided('s.decision', 'p.is_coffee') }} as is_coffee, p.classified_by, p.verdict_model, v.label as verdict_label,
     if(s.decision is null, p.reason, 'decision:' || s.decision) as reason,
     -- The store's tags (decoded): what a keyword filter on tags matches, for the admin's preview.
-    s.tags
+    s.tags,
+    -- The answer without the owner's keyword filters (Claude's verdict, else the rules), before any decision: what a
+    -- product a filter excludes would be if the filter were removed (the admin's removal preview).
+    p.unfiltered_is_coffee
 from s
 join {{ ref('stg_products') }} p using (input_hash)
 join {{ ref('stg_runs') }} run using (roaster_id, run_date)
