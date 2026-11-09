@@ -19,6 +19,9 @@ The admin counts the public coffees a filter change moves against the served rel
 - **Removing a filter:** a product it gives back that comes back as coffee: Claude's verdict, else the rules'
   answer without the filter (`product_decisions.unfiltered_is_coffee`). The build decides those products at once, so
   every one of them counts, not only the ones Claude calls coffee.
+- **Against the served release.** Both are measured against what customers get now: a filter only in the control
+  plane (in a draft, never published) has excluded nothing, so removing it puts nothing back and counts nothing, and
+  the Filters page marks it "in draft".
 
 The draft build then counts what actually changed in `public_coffee` (`release_changes`) for those products. Publish
 adds that number to the running total since the last full evaluation (`control.step9_total`).
@@ -26,6 +29,12 @@ adds that number to the running total since the last full evaluation (`control.s
 **It always counts, over 50 too.** The census below is a review, not a full evaluation: no held-out split, one
 reference labeler, no sealed score. So it never restarts the total. Only a recorded full evaluation of the classifier
 does that.
+
+**So the first change over 50 locks the drafts after it.** Once a filter change takes the running total past 50 and
+is published (a reviewed add, or a removal, which never waits), every later draft needs a full evaluation first,
+whatever it changes, until one is recorded on Release. That is CLAUDE.md step 9 as written: "a total over 50 needs
+the full process". The review lets that one change through; it doesn't stand in for the evaluation the drafts after
+it need. Release says so beside the check and in the preview.
 
 At 50 or fewer with the running total, the change takes step 9's short path:
 - **each product is checked by hand.** The preview lists every public coffee the change moves, grouped by Claude's
@@ -57,10 +66,11 @@ aren't "agreement" or "disagreement": they are unknown, and the owner looks at t
 - **A change that adds a filter, 50 or fewer** with the running total: the preview's list was the check.
 - **A change that adds a filter, over 50:** Publish waits until every product it takes out that **Claude calls
   coffee or hasn't seen** is marked on Release, *Keep excluded* or *Drop the filter*.
-  - **Classify these** (on Release) starts the classify job for exactly the products Claude hasn't seen. It goes
-    through the Jobs path, with its guards, window and confirm. The job reads the draft's snapshot by id and digest
-    and sends those versions in one batch at the batch price. Once the draft is built again, they appear with
-    Claude's call. An unsure verdict isn't sent again: the owner marks it.
+  - **Classify these** (on Release) starts the classify job for exactly the versions the draft build's census lists
+    as taken out with no verdict at all (`classify --prefilter-build`, `verdict.review_rows`). The confirm counts
+    the same rows, so what it says is what is sent, less any already in flight. It goes through the Jobs path, with
+    its guards, window and confirm, at the batch price. Once the draft is built again, they appear with Claude's
+    call. An unsure verdict isn't sent again: the owner marks it.
   - **The marks** are kept in the control plane (`control.prefilter_reviews`, audited) against the product
     **version** (`input_hash`). A rewritten listing needs a new mark.
   - **One "Drop the filter" refuses Publish.** The owner removes that filter (its preview shows what comes back)
@@ -85,19 +95,27 @@ it matches is excluded without a verdict. The census can't measure that; the wee
 
 ## 3. The weekly sample (`verdict.SHADOW_SAMPLE`, `prefilter_samples`)
 
-Each weekly classify run sends Claude a sample of the new product versions the published filters excluded that week,
-as if they hadn't been excluded.
+Each weekly classify run sends Claude a sample of the week's new product versions that the published filters
+excluded, as if they hadn't been excluded.
+- **The population:** versions with no verdict, first seen in the run's week (`verdict.this_week`), that a published
+  filter excludes and no rule of the code does. Older versions already had their week.
 - **How many:** `SHADOW_SAMPLE = 20` by default, a code constant.
 - **How they're drawn:** a salted hash of the version (`input_hash`), grouped by roaster. Roasters are taken in the
-  order of a salted hash, and one version per roaster in turn, so a single store can't fill the sample. The week is
-  in the salt, so each week draws afresh; the salt is `SHADOW_SALT`.
+  order of a salted hash, and one version per roaster in turn, so a single store can't fill the sample; that is
+  about equal allocation across stores. The week is in the salt, so each week draws afresh; the salt is
+  `SHADOW_SALT`. A version two stores list belongs to the same roaster every time.
 - **Claude's answer only reports.** It is stored like any verdict, and never changes the exclusion: the filter
   decides first.
-- **What's recorded:** each sampled version, the filter that excluded it, and the model and definition, in the lake
-  table `prefilter_samples`.
-- **What the Filters page shows:** for each filter over the last four weeks, how many of its sampled products Claude
-  called coffee, with a Wilson 95% interval. This one is a real random sample of the filter's exclusions, so the
-  interval estimates how often the filter takes out something Claude would call coffee.
+- **What's recorded:** each sampled version, the filter that excluded it, the model and definition, and the size of
+  its stratum: how many versions that filter excluded at that store that week (`stratum_size`). Table:
+  `prefilter_samples`.
+- **The estimate is weighted by store** (CLAUDE.md step 7). The sample takes about the same number from each store,
+  so an unweighted share would let small stores speak for large ones. Each (week, store) stratum's share Claude
+  called coffee is weighted by its stratum size, and the interval is Wilson's at that share with Kish's effective
+  sample size (`admin.queries.wilson_weighted`). An unsure answer counts as neither coffee nor not coffee, and a
+  stratum with no answer drops out. The Filters page shows the weighted share, its interval and how many answered.
+- **It fails open.** A problem drawing or recording the sample is logged and returned with the run's result. The
+  weekly classify still sends everything else.
 - **Cost:** about 20 extra Claude calls a week at the batch price, on top of the usual classify run.
 
 ## Running total

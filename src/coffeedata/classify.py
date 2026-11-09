@@ -148,14 +148,19 @@ _PHRASE = re.compile(r"[^\W_][\w &'.-]{2,59}")
 # longer word ("tea" is not in "teapot", "tea-like", "tea's", "Tea’s" or "tea‐like"), so the filter is unsure and
 # doesn't match. Typographic apostrophes (’ ‘ ‛ ʼ ′) and Unicode hyphens and dashes (‐ ‑ ‒ – — ― − ﹣) count as well
 # as the ASCII ones: stores' titles use them.
-_EDGE = r"[\w'\u2018\u2019\u201b\u02bc\u2032\-\u2010-\u2015\u2212\ufe63]"
+_EDGE = r"[\w'\u2018\u2019\u201b\u02bc\u2032\u00b4`\u0300-\u036f\-\u2010-\u2015\u2212\ufe63]"
+# Characters that are inside a word without showing (soft hyphen, zero-width space, joiners, word joiner, BOM):
+# removed before matching, so "Cold\u00adbrew" reads "coldbrew". Apostrophes, an acute accent and a backtick read as
+# the ASCII apostrophe, in text and in phrases alike, so "o'hara" matches "O’Hara".
+_INVISIBLE = dict.fromkeys(map(ord, "\u00ad\u200b\u200c\u200d\u2060\ufeff"))
+_APOSTROPHES = str.maketrans({c: "'" for c in "\u2018\u2019\u201b\u02bc\u2032\u00b4`\uff07"})
 
 
 def keyword_phrase(raw: object) -> str:
     """A filter's phrase as stored and matched: NFKC, lower case, single spaces. ValueError when it isn't one."""
     if not isinstance(raw, str):
         raise ValueError("a keyword filter is a word or phrase")
-    p = " ".join(unicodedata.normalize("NFKC", raw).casefold().split())
+    p = " ".join(keyword_text(raw).split())
     if not _PHRASE.fullmatch(p) or not any(c.isalpha() for c in p):
         raise ValueError(
             "a keyword filter is 3 to 60 characters: letters, digits, spaces, & ' . and -, with at least one letter"
@@ -199,7 +204,8 @@ def keyword_text(text: str | None) -> str:
     """Text as a filter reads it: NFKC (full-width letters become ASCII) and case-folded ("Straße" reads "strasse").
     A filter's phrase is normalized the same way, so a phrase found in this text by substring is a candidate match;
     KeywordFilter.matches decides."""
-    return unicodedata.normalize("NFKC", text or "").casefold()
+    text = (text or "").translate(_INVISIBLE).translate(_APOSTROPHES)  # before NFKC: it splits "´" into two
+    return unicodedata.normalize("NFKC", text).casefold()
 
 
 _norm = keyword_text

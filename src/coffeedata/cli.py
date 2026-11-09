@@ -332,14 +332,10 @@ def cmd_classify(args: argparse.Namespace) -> None:
                         detail={"model": verdict.model(), **control.execution()})  # fmt: skip
     try:
         only = None
-        if getattr(args, "prefilter_snapshot", None):
-            # A draft's review (the admin's Classify these): exactly the versions its keyword filters newly exclude
-            # that have no verdict, read from its snapshot (checked against the digest the admin recorded).
-            from . import decisions
-
-            doc = decisions.load(args.prefilter_snapshot, args.prefilter_sha256 or "")
-            only = verdict.filtered(lake, verdict.model() or "", decisions.prefilter(doc),
-                                    decisions.served_prefilter(lake))  # fmt: skip
+        if getattr(args, "prefilter_build", None):
+            # A draft's review (the admin's Classify these): exactly the versions its build's census lists as taken
+            # out by a new filter with no verdict, still pending (verdict.review_rows).
+            only = verdict.review_rows(lake, verdict.model() or "", args.prefilter_build)
         out = {"collect": verdict.collect(lake, args.run_date),
                "submit": verdict.submit(lake, args.limit, only=only, run_date=args.run_date)}  # fmt: skip
         deadline = time.monotonic() + args.wait * 60
@@ -1077,11 +1073,10 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--run-date", default=None)
     c.add_argument("--wait", type=int, default=0, help="minutes to wait for the new batch")
     c.add_argument(
-        "--prefilter-snapshot",
-        help="a draft's snapshot: classify only what its keyword filters newly "
-        "exclude and Claude hasn't seen (the admin's Classify these)",
+        "--prefilter-build",
+        help="a draft's build: classify only what its census lists as taken out by a new keyword filter with no "
+        "verdict (the admin's Classify these)",
     )
-    c.add_argument("--prefilter-sha256", help="that snapshot's digest, as the admin recorded it")
     c.add_argument(
         "--allow-rules-only",
         action="store_true",

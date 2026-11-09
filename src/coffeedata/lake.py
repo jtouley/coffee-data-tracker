@@ -456,6 +456,7 @@ SCHEMAS: dict[str, pa.Schema] = {
             ("prefilter", pa.string()),
             ("model", pa.string()),
             ("definition", pa.string()),
+            ("stratum_size", pa.int64()),
         ]
     ),
     "mart_flags": pa.schema(

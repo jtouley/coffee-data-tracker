@@ -45,6 +45,13 @@ def item(title="", ptype="", tags=()):
         ("straße", "title", item("STRASSE Espresso"), True),
         ("apron", "title", item("ＡＰＲＯＮ Classic"), True),  # full-width letters
         ("apron", "title", item("ＡＰＲＯＮＳ"), False),  # full-width, part of a longer word
+        ("brew", "title", item("Cold\u00adbrew"), False),  # a soft hyphen inside the word
+        ("brew", "title", item("Cold\u200bbrew"), False),  # a zero-width space
+        ("brew", "title", item("Cold\u2060brew"), False),  # a word joiner
+        ("brew", "title", item("Brew\u00b4d"), False),  # an acute accent used as an apostrophe
+        ("brew", "title", item("Brew`d"), False),  # a backtick
+        ("o'hara", "title", item("O’Hara Blend"), True),  # apostrophes fold to one on both sides
+        ("o’hara", "title", item("O'Hara Blend"), True),
     ],
 )
 def test_a_filter_matches_whole_words_in_its_field(phrase, field, listing, hit):
@@ -228,21 +235,84 @@ def test_the_weekly_sample_is_deterministic_spread_across_roasters_and_capped():
     )
 
 
-def test_filtered_finds_what_the_filters_newly_exclude_and_nothing_the_code_does(monkeypatch):
+def _pending_row(h, title, roaster="r.example", first_seen=None):
+    from datetime import date
+
+    return {"input_hash": h, "title": title, "product_type": "", "tags": [], "grams": [340], "body_hash": "x",
+            "body_text": "", "roaster_id": roaster, "first_seen": first_seen or date(2026, 11, 2)}  # fmt: skip
+
+
+def test_one_pass_splits_what_classify_sends_from_what_the_filters_excluded(monkeypatch):
     from coffeedata import verdict
 
-    def r(h, title):
-        return {"input_hash": h, "title": title, "product_type": "", "tags": [], "grams": [340], "body_hash": "x",
-                "body_text": "", "roaster_id": "r.example"}  # fmt: skip
-
-    rows = [r("a", "Barista Apron"), r("b", "Apron Mug"), r("c", "Guji"), r("d", "Linen Apron")]
+    rows = [_pending_row("a", "Barista Apron"), _pending_row("b", "Apron Mug"), _pending_row("c", "Guji"),
+            _pending_row("d", "Kenya")]  # fmt: skip
     monkeypatch.setattr(verdict, "_pending_rows", lambda lake, model_id: iter(rows))
-    apron, linen = KeywordFilter("apron", "title"), KeywordFilter("linen apron", "title")
-    got = verdict.filtered(None, "m", (apron,))
-    assert [(x["input_hash"], x["prefilter"]) for x in got] == [
-        ("a", "keyword:title:apron"),
-        ("d", "keyword:title:apron"),
-    ]
-    assert [x["input_hash"] for x in verdict.filtered(None, "m", (apron,), (linen,))] == [
-        "a"
-    ]  # d: already excluded
+    todo, excl = verdict.split_pending(None, "m", (KeywordFilter("apron", "title"),), 1)
+    assert [r["input_hash"] for r in todo] == [
+        "c"
+    ]  # capped at the limit; the mug is the code's, not a filter's
+    assert [(r["input_hash"], r["prefilter"]) for r in excl] == [("a", "keyword:title:apron")]
+
+
+def test_the_weekly_population_is_this_weeks_new_versions_with_their_strata():
+    from datetime import date
+
+    from coffeedata import verdict
+
+    rows = [_pending_row("a", "x", "r1", date(2026, 11, 3)) | {"prefilter": "keyword:title:apron"},
+            _pending_row("b", "x", "r1", date(2026, 10, 20)) | {"prefilter": "keyword:title:apron"},
+            _pending_row("c", "x", "r2", date(2026, 11, 2)) | {"prefilter": "keyword:title:apron"}]  # fmt: skip
+    week = verdict.this_week(rows, "2026-11-02")
+    assert [r["input_hash"] for r in week] == ["a", "c"]  # b was first seen weeks ago: it had its week
+    assert verdict.strata(week) == {("keyword:title:apron", "r1"): 1, ("keyword:title:apron", "r2"): 1}
+
+
+def test_classify_these_sends_exactly_the_census_unseen_versions(tmp_path, monkeypatch):
+    """M1: the job reads the draft build's census and sends its versions with no verdict, still pending: not the
+    unsure one, nor a delisted product or an old version of one, which the census doesn't list."""
+    import pyarrow as pa
+
+    from coffeedata import verdict
+    from coffeedata.lake import SCHEMAS, Lake
+
+    lake = Lake(str(tmp_path / "lake"))
+    rows = [{"build_id": "b1", "direction": "excluded", "coffee_id": cid, "input_hash": h, "verdict_label": lab,
+             "claude": "no_verdict" if lab != "coffee" else "coffee", "is_coffee_after": False}
+            for cid, h, lab in (("r:a", "h1", None), ("r:b", "h1", None), ("r:c", "h2", "unsure"),
+                                ("r:d", "h3", "coffee"), ("r:e", "h4", None))]  # fmt: skip
+    rows.append(rows[-1] | {"direction": "restored", "coffee_id": "r:f", "input_hash": "h5"})
+    lake.write_ops(
+        "eval_prefilter", "2026-11-02", "b1", pa.Table.from_pylist(rows, SCHEMAS["eval_prefilter"])
+    )
+    pending = [_pending_row(h, "x") for h in ("h1", "h2", "h3", "h5", "h-old", "h-delisted")]  # h4: in flight
+    monkeypatch.setattr(verdict, "_pending_rows", lambda lk, model_id: iter(pending))
+    assert [r["input_hash"] for r in verdict.review_rows(lake, "m", "b1")] == ["h1"]
+    assert verdict.review_rows(lake, "m", "no-such-build") == []
+
+
+def test_the_weekly_sample_fails_open(monkeypatch):
+    """L1: the sample only reports: if drawing it fails, classify still sends everything else."""
+    from coffeedata import decisions, verdict
+
+    rows = [_pending_row("a", "Barista Apron"), _pending_row("c", "Guji")]
+    monkeypatch.setattr(verdict, "_pending_rows", lambda lake, model_id: iter(rows))
+    monkeypatch.setattr(verdict, "model", lambda: "m")
+    monkeypatch.setattr(decisions, "served_prefilter", lambda lake: (KeywordFilter("apron", "title"),))
+    monkeypatch.setattr(verdict, "shadow_sample", lambda *a, **k: (_ for _ in ()).throw(RuntimeError("boom")))
+    sent = []
+
+    class Batches:
+        def create(self, requests):
+            sent.extend(r["custom_id"] for r in requests)
+            return type("B", (), {"id": "batch-1"})()
+
+    client = type("C", (), {"messages": type("M", (), {"batches": Batches()})()})()
+    monkeypatch.setattr(verdict.extract, "client", lambda: client)
+
+    class FakeLake:
+        def write(self, *a, **k):
+            pass
+
+    out = verdict.submit(FakeLake(), run_date="2026-11-02")
+    assert sent == ["c"] and "boom" in out["prefilter_sample_error"]

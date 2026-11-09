@@ -1,4 +1,4 @@
--- The owner's keyword filters (the admin's Queue; coffeedata.classify.KeywordFilter): one row per filter of this
+-- The owner's keyword filters (the admin's Filters page; coffeedata.classify.KeywordFilter): one row per filter of this
 -- build's snapshot (applies) or of the served build's (baseline), from a Parquet file coffeedata.decisions wrote
 -- after checking the snapshot's digest (var prefilter_path). A filter that applies extends classify.excluded in
 -- stg_products: a product it matches is never a coffee and gets no Claude verdict. The baseline rows let
