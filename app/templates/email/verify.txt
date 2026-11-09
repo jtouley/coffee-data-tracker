@@ -1,6 +1,6 @@
 Confirm your email
 
-One quick step before your first shot: confirm this is your email, so you can reset your password yourself.
+One quick step before your first shot: confirm this is your email{% if notices_only %}, for account notices{% else %}, so you can reset your password yourself{% endif %}.
 
 Confirm email:
 {{ link }}

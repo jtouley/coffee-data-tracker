@@ -38,7 +38,11 @@
     <div class="gear" id="email"><div class="n">Email</div><div class="d addr" data-email-status>{% if email %}{{ email.address }} · {{ "verified" if email.verified else "not verified yet" }}{% else %}No email{% endif %}</div></div>
     <details class="disclose" data-email-edit><summary class="link"><span>{{ "Change email" if email else "Add email" }}</span>{{ chevron() }}</summary>
       <form id="email-form" class="mt8" method="post" action="/setup?form=email" data-api="/api/email" data-busy="Sending link…" novalidate>
+        {%- if me.role == "owner" %}
+        {{ email_field(id="new-email", required=True, hint="For account notices. Your password is reset with the setup code, never by email. We’ll send a link to confirm it.") }}
+        {%- else %}
         {{ email_field(id="new-email", required=True, hint=("We’ll send a link to the new address. Until you confirm it, you can’t reset your password by email." if email else "For resetting your password yourself. We’ll send a link to confirm it; it works for 24 hours.")) }}
+        {%- endif %}
         {{ current_password("email-current") }}
         <div class="hint" data-hint role="alert"></div>
         <button class="btn secondary mt8" type="submit">Send link</button>

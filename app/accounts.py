@@ -1190,7 +1190,9 @@ class Accounts:
             acct = self.get(hit.user_id) if hit else None
         else:
             acct = self.by_name(text)
-        if acct is None or acct.disabled:
+        # The owner's account recovers with OWNER_SETUP_CODE only, never by email (owner decision, final review
+        # N9): like a turned-off account, the same reply as anyone's, and nothing is sent.
+        if acct is None or acct.disabled or acct.role == "owner":
             return "quiet", None
         if not self.windows.take({f"forgot:a:{acct.user_id}": (FORGOT_PER_EMAIL, HOUR)}, now):
             return "limited", None
@@ -1206,7 +1208,7 @@ class Accounts:
         request never touches the owner's reset links (review M4)."""
         acct = self.get(user_id)
         address = self.verified_email(user_id)
-        if acct is None or acct.disabled or address is None:
+        if acct is None or acct.disabled or acct.role == "owner" or address is None:
             return None
         token, issued = self.email_reset_token(acct)
         return address, acct, token, issued
@@ -1261,7 +1263,12 @@ class Accounts:
         if not issued <= now_ms + 60_000 or now_ms - issued > RESET_MINUTES * 60_000:
             return None
         acct = next((a for a in self.people() if hmac.compare_digest(self._tag(a.user_id), tag)), None)
-        if acct is None or acct.disabled or issued < self.reset_issued.get(acct.user_id, 0):
+        if (
+            acct is None
+            or acct.disabled
+            or acct.role == "owner"
+            or issued < self.reset_issued.get(acct.user_id, 0)
+        ):
             return None
         return acct if hmac.compare_digest(self._token_mac(acct, tag, issued), mac) else None
 

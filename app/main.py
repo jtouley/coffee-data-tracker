@@ -519,7 +519,9 @@ def create_app(
             return
         if link:
             address, token = link
-            mail.deliver(mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}")
+            acct = accounts_only().accounts.get(user_id)
+            mail.deliver(mailer, "verify", address, user_id, link=f"{app_url}/verify#{token}",
+                         notices_only=bool(acct and acct.role == "owner"))  # fmt: skip
         elif asked:
             mail.pad()
 
@@ -641,10 +643,11 @@ def create_app(
     def post_verify(body: dict, request: Request) -> dict:
         s = email_only()
         try:
-            s.accounts.verify_email(str(body.get("token") or ""), ip(request))
+            acct = s.accounts.verify_email(str(body.get("token") or ""), ip(request))
         except AccountError as e:
             raise HTTPException(e.status, e.detail) from None
-        return {"ok": True}
+        # The owner's email is for notices only: the owner resets with the setup code (owner decision, N9).
+        return {"ok": True, "notices_only": True} if acct.role == "owner" else {"ok": True}
 
     @app.post("/api/email")
     def post_email(body: dict, me: Writer) -> dict:
@@ -795,6 +798,7 @@ def create_app(
             and sessions is not None
             and not request.cookies.get(NUDGE_COOKIE)
             and not sessions.accounts.contacts.get(me.user_id)
+            and me.role != "owner"  # the owner resets with the setup code, not by email (N9)
         )
         if not bag and not last:
             return page(

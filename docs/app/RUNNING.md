@@ -321,6 +321,9 @@ accepts the new Terms and Privacy Policy once, on `/agree`.
   named, 10 an hour from one IP address, and 20 "no verified email" answers an hour in all. Past any of them the
   reply is the same as for an unknown account and nothing is sent. Every answer takes at least 2 s
   (`FORGOT_FLOOR`), so the reply's timing doesn't say whether a link went.
+- **The owner never resets by email** (owner decision, 2026-11-09): `/forgot` answers for the owner like any account
+  that can't get a link, and sends nothing. The owner's email, if added, is for notices; the owner's password resets
+  with `OWNER_SETUP_CODE` on `/reset`.
 - **Verify links:** 3 an hour per account (Send again, and changing the email).
 - **"No email came", and the limits.** Because the limits are shared, someone else can use up a name's 3 an hour,
   or the 20 "no verified email" answers an hour in all. A real member is then told "we've sent a link" (or, with

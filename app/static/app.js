@@ -1818,9 +1818,10 @@ async function verifyPage(box) {
   };
   if (!token) return expired();
   try {
-    await post("/api/verify", { token });
+    const reply = await post("/api/verify", { token });
     title.textContent = "Email verified";
-    status.textContent = "You can now reset your password by email.";
+    // The owner's email is for notices only: the owner resets with the setup code.
+    status.textContent = reply.notices_only ? "It’s used for account notices." : "You can now reset your password by email.";
     next.hidden = false;
   } catch (err) {
     if (err instanceof Unreachable) {

@@ -95,7 +95,9 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
   (`accounts.py:479-482`). It lasts 7 days, works once, and only its SHA-256 is stored.
 - The code is shown once, on the owner's screen, and the owner sends it however they like.
 - `/reset` sets the new password and signs out every device (`accounts.py:544-576`).
-- The owner recovers their own account with `OWNER_SETUP_CODE` (`accounts.py:551-559`).
+- The owner recovers their own account with `OWNER_SETUP_CODE` (`accounts.py:551-559`), **and only that way, never
+  by email** (owner decision, 2026-11-09). `/forgot` answers for the owner's username or address like any account
+  that can't get a link (the same reply and wait), and sends nothing. The owner may add an email for notices.
 
 **Email recovery (new), following OWASP's Forgot Password sheet ([OWASP-FP][owasp-fp]):**
 
@@ -110,6 +112,7 @@ work well." The rule list sits under the hint, as `<ul class="rules" id="passwor
 > - **The email goes inside the request, not in a background task.** Cloud Run gives no CPU after the reply.
 >   Every `/forgot` answer that gets past the limits is held to a 2 s floor (an async sleep); one refused by a
 >   limit comes back at once.
+> - **Never the owner.** The owner's account resets with `OWNER_SETUP_CODE` only (owner decision, 2026-11-09).
 > - **Limits:** 3 an hour per name or address and per account, 10 an hour per IP, and 20 "no verified email"
 >   answers an hour in all. All in memory.
 1. **Asking:** sign-in's "Forgot your password?" (`signin.html:31`) goes to the new `/forgot` page.

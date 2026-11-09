@@ -1145,3 +1145,38 @@ def test_start_up_deletes_contact_files_left_from_a_changed_email(app, owner, ou
     assert not (folder / f"{uid}__20260101T000000.parquet").exists()
     assert len(list(folder.glob(f"{uid}__*.parquet"))) == 2  # the current record's two files stay
     assert again.email(uid).address == "maya@example.com" and again.sweep_contacts() == []
+
+
+def test_the_owner_never_resets_by_email(app, owner, outbox, accounts):
+    """Owner decision (final review N9): the owner's account recovers with OWNER_SETUP_CODE only. /forgot answers
+    for it like any ineligible account (same reply, same floor) and sends nothing; a signed link for it wouldn't
+    work anyway; Setup and the emails call the owner's address what it is, for notices."""
+    me = accounts.by_name("jtouley")
+    page = owner.get("/setup").text
+    assert "Your password is reset with the setup code, never by email." in page
+    assert "For resetting your password yourself" not in page
+    assert owner.post("/api/email", json={"email": "owner@example.com", "current": PW}, headers=W).json()[
+        "email"
+    ]
+    (confirm,) = outbox.sent
+    assert "for account notices" in confirm.text and "reset your password" not in confirm.text
+    r = client(app).post("/api/verify", json={"token": link_in(confirm, "verify")}, headers=W)
+    assert r.json() == {"ok": True, "notices_only": True}
+    assert accounts.verified_email(me.user_id) == "owner@example.com"
+    outbox.sent.clear()
+    app.state.forgot_floor = 0.4
+    timings = {}
+    for who in ("jtouley", "owner@example.com", "nobody-at-all"):
+        t = time.perf_counter()
+        r = forgot(app, who)
+        timings[who] = time.perf_counter() - t
+        assert (r.status_code, r.json()) == (200, SAME), who
+    assert outbox.sent == []
+    assert all(0.4 <= t < 0.6 for t in timings.values()), timings  # held to the same floor as anyone's
+    assert accounts.forgot("jtouley", "9.9.9.9") == ("quiet", None)
+    assert accounts.reset_link(me.user_id) is None
+    token, _ = accounts.email_reset_token(me)
+    assert (
+        client(app).post("/api/reset", json={"code": token, "password": NEW_PW}, headers=W).status_code == 400
+    )
+    assert "Add an email so you can reset" not in owner.get("/").text  # no nudge for the owner either
