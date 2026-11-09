@@ -402,6 +402,19 @@ const errors = [];
       await page.waitForFunction(() => /the catalog|the served release/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
     }
 
+    await check("Filters: the Add form says what to fix under each field", async () => {
+      await page.goto(`${cfg.act}/filters`);
+      await settled(page);
+      await page.click("[data-title-actions] button:text-is('Add filter')");
+      await page.waitForSelector("dialog#add-filter[open]");
+      await page.click("form.kf-add button[type=submit]");
+      await page.waitForFunction(() => document.querySelector("#kf-phrase-error")?.textContent === "Fill this in.");
+      assert.equal(await page.getAttribute("#kf-phrase", "aria-invalid"), "true");
+      assert.equal(await page.evaluate(() => document.activeElement.id), "kf-phrase");
+      await shoot(page, "kf-add-errors", true);
+      await page.keyboard.press("Escape");
+    });
+
     await check("Filters: its own page, empty at first, the explanation behind ?", async () => {
       await page.goto(`${cfg.act}/filters`);
       await settled(page);
@@ -428,8 +441,13 @@ const errors = [];
       await shoot(page, "kf-list");
     });
 
-    await check("Filters: undo from the outcome line, then add it again", async () => {
-      await page.click("[data-result] [data-undo]");
+    await check("Filters: undo from Recent changes, through the same preview, then add it again", async () => {
+      assert.equal(await page.isVisible("[data-result] [data-undo]"), false, "no undo without its preview");
+      await page.click("details.settings summary:text-is('Recent changes')");
+      await page.click("button:text-is('Undo…')");
+      await page.waitForFunction(() => /the catalog/.test(document.querySelector("dialog#confirm[open] [data-confirm-body]")?.textContent || ""), null, { timeout: 30000 });
+      await shoot(page, "kf-undo-preview", true);
+      await page.click("[data-confirm-go]");
       await toast(page, /Undone/);
       await settled(page);
       assert.match(await page.textContent("main"), /No keyword filters yet/);

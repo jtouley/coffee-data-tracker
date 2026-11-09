@@ -19,7 +19,7 @@
 {% elif p.drafted %}
   <p class="body">Draft <code>{{ p.drafted }}</code> already builds them: review it below.</p>
 {% elif p.added or p.removed or p.settings_changed or p.crawl_changed or p.sources_changed or p.prefilter_changed %}
-  <p class="body">{% if p.prefilter_changed %}The keyword filters change: {{ p.prefilter_changed | map("replace", "keyword:", "") | join(", ") }}. {% endif %}{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}{% if p.sources_changed %}{{ p.sources_changed | length }} place{{ "s" if p.sources_changed | length != 1 }} of the source list join or leave the registry (Sources). {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
+  <p class="body">{% if p.prefilter_changed %}The keyword filters change: {% for x in p.prefilter_changed %}{{ x.verb }} “{{ x.phrase }}” in {{ x.where }}{{ "; " if not loop.last }}{% endfor %}. {% endif %}{% if p.settings_changed %}The rule settings change: {{ p.settings_changed | join(", ") }}. {% endif %}{% if p.crawl_changed %}The crawl flag changes for {{ p.crawl_changed | join(", ") }}. {% endif %}{% if p.sources_changed %}{{ p.sources_changed | length }} place{{ "s" if p.sources_changed | length != 1 }} of the source list join or leave the registry (Sources). {% endif %}A draft builds them with every gate and shows what changes; nothing is served until you Publish.</p>
   {{ write_button("/api/drafts", "Build a draft", "Build a draft with the " ~ (p.effective | length) ~ " decisions in effect? It starts the build job with --draft: every gate runs, and the release is recorded but not served.", busy="Starting…", cls="primary") }}
 {% else %}
   <p class="body">The decisions in effect are the served release's{% if p.served_snapshot %} (snapshot <code>{{ p.served_snapshot }}</code>){% endif %}: nothing to build. Decide in the Queue or the Catalog.</p>
@@ -45,26 +45,37 @@
   <p class="body mt12">{% if info.draft_id %}Draft <code>{{ info.draft_id }}</code>’s build. {% endif %}Week {{ info.run_date }}, {{ "passed" if info.passed else "failed" }} its checks. {% if served and served.build_id == build %}<strong>Served now.</strong>{% elif info.ever_served %}Served before.{% else %}Never served.{% endif %} <a class="ev" href="/catalog?build={{ build }}">Its catalog</a>.</p>
   {% if draft and ready %}
     <ul class="checks" aria-label="Publish needs">{% for c in ready.checks %}<li>{{ status(c.state or ("ok" if c.ok else "failed")) }} <span><strong>{{ c.name }}.</strong> {{ c.why }}{% if c.missing %} {% for r in c.missing %}<a class="ev" href="/jobs?{{ {"action": "crawl-one", "roaster": r} | urlencode }}#crawl-one">Test crawl {{ r }}</a>{{ ", " if not loop.last }}{% endfor %}{% endif %}</span></li>{% endfor %}</ul>
-    {% set pf = ready.prefilter %}{% set ps = pf.eval.summary if pf and pf.eval else none %}
-    {% if ps %}
+    {% set pf = ready.prefilter %}{% set px = pf.eval.summary.excluded if pf and pf.eval and pf.eval.summary else none %}
+    {% if px and px.products %}
     <section class="pf-review" aria-labelledby="pf-title">
-      <h3 class="section" id="pf-title">{{ n(ps.affected) }} product{{ "s" if ps.affected != 1 }} removed by keyword filters · Claude calls {{ n(ps.claude_coffee) }} of them coffee</h3>
-      {% if pf.eval.coffee %}<p class="body prose">{% if pf.over %}A big change: check each product Claude calls coffee and mark it. Keep excluded if the filter is right; Drop the filter if it isn’t (then remove the filter on Filters and build a new draft).{% else %}A small change, so marking these is optional.{% endif %}</p>{% endif %}
+      <h3 class="section" id="pf-title">{{ n(px.products) }} product{{ "s" if px.products != 1 }} taken out by keyword filters · Claude calls {{ n(px.claude_coffee) }} coffee, hasn’t seen {{ n(px.no_verdict) }}</h3>
+      {% if pf.review %}<p class="body prose">{% if pf.over %}A big change: mark each product below. Keep excluded if the filter is right for it; Drop the filter if it isn’t (then remove the filter on Filters and build a new draft).{% else %}A small change, so marking these is optional.{% endif %}</p>{% endif %}
       {% if pf.details %}<details class="plan-details"><summary class="btn text start">Details</summary>{% for line in pf.details %}<p class="meta">{{ line }}</p>{% endfor %}</details>{% endif %}
-      {% if pf.eval.coffee %}
-      <div class="frame" tabindex="0" role="region" aria-label="Products Claude calls coffee"><table class="dense review">
-        <caption>Products the filters exclude that Claude calls coffee</caption>
+      {% if pf.unseen and not writes_off and not info.ever_served %}
+      <form class="actions mt12" data-write="/api/drafts/{{ draft.draft_id }}/classify" data-preview="/api/drafts/{{ draft.draft_id }}/classify/plan" data-confirm-title="Ask Claude about {{ n(pf.unseen) }} product{{ 's' if pf.unseen != 1 }}?" data-confirm-label="Start">
+        <input type="hidden" name="key" value="{{ new_key() }}">
+        <button class="btn secondary inline" type="submit" data-busy="Checking…">Classify these…</button>
+        <p class="meta why-not">Asks Claude about the {{ n(pf.unseen) }} it hasn’t seen. It costs money; answers come within a day.</p>
+      </form>
+      {% endif %}
+      {% for call, title in (("coffee", "Claude calls these coffee"), ("no_verdict", "Claude hasn’t seen these")) %}{% set items = pf.review | selectattr("claude", "equalto", call) | list %}
+      {% if items %}
+      <h4 class="label mt16" id="pf-{{ call }}">{{ title }} ({{ n(items | length) }})</h4>
+      <div class="frame" tabindex="0" role="region" aria-labelledby="pf-{{ call }}"><table class="dense review">
+        <caption class="vh">{{ title }}: each with its store, the filter that takes it out and your call</caption>
         <thead><tr><th scope="col">Product</th><th scope="col">Store</th><th scope="col">Filter</th><th scope="col">Your call</th></tr></thead>
-        <tbody>{% for c in pf.eval.coffee %}<tr>
-          <th scope="row">{{ ev(c.url, c.title or c.coffee_id) }}</th><td>{{ c.roaster_id }}</td><td>{{ (c.prefilter or "") | replace("keyword:", "") | replace("product_type:", "product type: ") | replace("title:", "title: ") | replace("tags:", "tags: ") }}</td>
+        <tbody>{% for c in items %}<tr>
+          <th scope="row">{{ ev(c.url, c.title or c.coffee_id) }}{% if c.verdict_label == "unsure" %} <span class="meta">(Claude was unsure)</span>{% endif %}</th><td>{{ c.roaster_id }}</td><td>{% set parts = (c.prefilter or "").split(":") %}{% if parts | length == 3 %}“{{ parts[2] }}” in {{ {"title": "titles", "product_type": "product types", "tags": "tags"}[parts[1]] }}{% else %}{{ c.prefilter }}{% endif %}</td>
           <td class="call">{% if c.review %}<span class="mark">{{ "Keep excluded" if c.review.mark == "keep_excluded" else "Drop the filter" }}</span>{% endif %}
             {% if not writes_off and not info.ever_served %}{% for mark, label in (("keep_excluded", "Keep excluded"), ("drop_filter", "Drop the filter")) %}{% if not c.review or c.review.mark != mark %}<form class="inline-form" data-write="/api/prefilter/reviews" data-now>
-              <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="draft_id" value="{{ draft.draft_id }}"><input type="hidden" name="coffee_id" value="{{ c.coffee_id }}"><input type="hidden" name="mark" value="{{ mark }}">
+              <input type="hidden" name="key" value="{{ new_key() }}"><input type="hidden" name="draft_id" value="{{ draft.draft_id }}"><input type="hidden" name="coffee_id" value="{{ c.coffee_id }}"><input type="hidden" name="input_hash" value="{{ c.input_hash }}"><input type="hidden" name="mark" value="{{ mark }}">
               {% set shown = label if not c.review else label ~ " instead" %}<button class="btn {{ 'secondary' if not c.review else 'text' }} inline" type="submit" data-busy="Saving…" aria-label="{{ shown }}: {{ c.title or c.coffee_id }}">{{ shown }}</button></form>{% endif %}{% endfor %}{% endif %}</td>
         </tr>{% endfor %}</tbody>
       </table></div>
-      {% endif %}
+      {% endif %}{% endfor %}
     </section>
+    {% elif pf and pf.details %}
+    <details class="plan-details"><summary class="btn text start">Keyword filters: details</summary>{% for line in pf.details %}<p class="meta">{{ line }}</p>{% endfor %}</details>
     {% endif %}
     {% if ready.removed is not none %}<p class="body">{{ n(ready.removed) }} public row{{ "s" if ready.removed != 1 }} {{ "leaves" if ready.removed == 1 else "leave" }} against the release it was built on{% if ready.needs_count %}: more than 50, so Publish asks you to type the number{% endif %}.</p>{% endif %}
     {% if draft.last_event == "publish_started" and not info.ever_served %}<p class="notice" role="status">Publishing: the publish job is running. See Jobs.</p>

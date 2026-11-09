@@ -1,4 +1,4 @@
--- The owner's keyword filters (the Queue's Keyword filters section; coffeedata.classify.KeywordFilter) and the
+-- The owner's keyword filters (the admin's Filters page; coffeedata.classify.KeywordFilter) and the
 -- owner's review of what a filter change excludes against Claude's verdict (the Release page). Append-only like every
 -- control table.
 
@@ -18,10 +18,11 @@ create table control.keyword_filters (
 );
 create index keyword_filters_filter on control.keyword_filters (field, phrase, id desc);
 
--- One row per mark the owner gives a product that a filter change newly excludes while Claude calls it coffee
--- (eval_prefilter's confidently wrong candidates): keep_excluded, or drop_filter (the filter is wrong for it, so the
--- change can't be published as it is). `filters` is the digest of the filter set the draft carries, so a draft built
--- again on the same filters keeps its marks; the latest mark per (filters, coffee) stands.
+-- One row per mark the owner gives a product that a filter change newly excludes while Claude calls it coffee or
+-- has no verdict on it (eval_prefilter): keep_excluded, or drop_filter (the filter is wrong for it, so the change
+-- can't be published as it is). `filters` is the digest of the filter set the draft carries, so a draft built again
+-- on the same filters keeps its marks; the latest mark per (filters, coffee, input_hash) stands, so a mark is about
+-- the product version it was made on.
 create table control.prefilter_reviews (
     id         bigserial primary key,
     filters    text not null,

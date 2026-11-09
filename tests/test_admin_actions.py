@@ -150,8 +150,8 @@ def test_every_write_is_refused_signed_out_and_cross_site(tmp_path, lake, pg_url
         r for r in app.routes if "POST" in getattr(r, "methods", set()) and not r.path.startswith("/api/auth")
     ]
     # plan, start, cancel, decide, undo, draft, publish, discard, roll back, evaluation, settings check and save,
-    # crawl flag, source flags and their undo, keyword filters' preview, save and undo, and their review
-    assert len(writes) == 19
+    # crawl flag, source flags and their undo, keyword filters' preview, save, undo and review, and Classify these (plan, start)
+    assert len(writes) == 21
     anon = TestClient(app, base_url=ORIGIN)
     for r in writes:
         url = r.path.replace("{action}", "merge").replace("{run_id}", "r").replace("{target}", "d")

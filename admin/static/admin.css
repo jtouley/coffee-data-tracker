@@ -299,3 +299,6 @@ form.actions .why-not { flex: 1 1 16rem; align-self: center; margin: 0; }
 table.flagged td .btn.text.inline { display: inline; padding: 4px 0; margin: -4px 0;
   min-height: 0; font-size: inherit; line-height: inherit; }
 table.kf-list th, table.kf-list td { vertical-align: middle; }
+.field-error { color: var(--danger); font-size: 0.8125rem; margin: 4px 0 0; min-height: 0; }
+.field-error:empty { display: none; }
+.input[aria-invalid="true"] { border-color: var(--danger); }

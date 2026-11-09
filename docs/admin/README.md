@@ -69,9 +69,10 @@ Adding a job is one `Action` in `admin/jobs.py` and its name in `local.admin_job
     since the last recorded full evaluation, plus this draft's (Release records an evaluation, which starts the total
     again);
   - a rule settings change to how a rule decides has its evaluation (`coffeedata.rules.EVALUATED`);
-  - a keyword filter change: at 50 or fewer public coffees with the running total, the short path (its preview listed
-    them); over 50, the draft build's `eval_prefilter` against Claude's verdicts, with every product Claude calls
-    coffee marked Keep excluded by the owner, and none Drop the filter (eval/prefilter/README.md);
+  - a keyword filter change: every public coffee it moves counts toward the running total. A removal never waits.
+    A new filter over 50 waits until every product it takes out that Claude calls coffee or hasn't seen is marked
+    Keep excluded (none Drop the filter); Classify these asks Claude about the unseen ones first
+    (eval/prefilter/README.md);
   - the owner typed the count, when more than 50 public rows leave;
   - each store this draft removes a coffee from (a new exclude, an undone include, every roaster of an excluded
     version) answered a test crawl of the store itself in the last 7 days (a connector-wide test doesn't say which

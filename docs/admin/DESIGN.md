@@ -250,8 +250,10 @@ The design (#112 §5.1) lists Queue and Case as pages, and settings editing as i
   product with its store and Claude's call. The release, the counts and CLAUDE.md step 9's arithmetic are under
   Details. Saving needs that preview.
 - **On Release a waiting review isn't a failure**: "needs review" with the warn mark, in plain check names (Keyword
-  filters checked against Claude, Change size, Rule changes, Live check of stores), the agreement and its Wilson
-  interval under Details, and a disabled Publish that looks off, with what it waits on beside it.
+  filters checked against Claude, Change size, Rule changes, Live check of stores), and a disabled Publish that looks
+  off, with what it waits on beside it. The census is plain counts (taken out; Claude calls coffee, not coffee, hasn't
+  seen), under Details, never a rate. The review list is grouped by Claude's call: coffee first, then the products
+  Claude hasn't seen, with **Classify these** to ask Claude about them through the Jobs path.
 - **The rule settings fold at the foot of the Queue**: they are edited rarely, and only make sense next to the flags
   they produce. They are plain controls for each rule's params (numbers, and comma-separated lists). The JSON editor
   is gone: a rule's family, polarity and readiness change how it decides, need their full evaluation, and aren't

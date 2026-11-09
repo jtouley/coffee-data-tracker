@@ -32,7 +32,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from coffeedata import decisions, quality, rules
+from coffeedata import decisions, quality, rules, verdict
 from coffeedata.classify import KeywordFilter
 from coffeedata.lake import Lake, no_files
 
@@ -56,7 +56,7 @@ PAGES = ("week", "queue", "filters", "jobs", "release", "catalog", "sources", "l
 READS = {
     "week": "job_manifests, fetches, builds and serving_log",
     "queue": "mart_flags, fetches and the rule settings",
-    "filters": "the keyword filters and the served build's product_decisions",
+    "filters": "the keyword filters, the served build's product_decisions and the weekly sample's verdicts",
     "jobs": "job_runs and Cloud Run executions",
     "release": "builds, release_changes, serving_log and drafts",
     "catalog": "product_decisions, dim_coffee and decisions",
@@ -273,7 +273,7 @@ def create_app(
     if not settings.writes_off:
         assert settings.control and settings.jobs and settings.snapshots
         writes = Writes(settings.control, settings.jobs, settings.snapshots, reader.run, catalog=catalog,
-                        **({"now": now} if now else {}))  # fmt: skip
+                        secret=settings.session_secret, **({"now": now} if now else {}))  # fmt: skip
     else:
         emit("WARNING", event="admin_writes_off", reasons=settings.writes_off)
     limiter = Limiter()
@@ -761,7 +761,7 @@ def create_app(
             build = (served or {}).get("build_id")
             off = list(settings.writes_off)
             ctx: dict = {"served": served, "build": build, "writes_off": off, "kf": None, "kf_history": [],
-                         "excluded": None}  # fmt: skip
+                         "excluded": None, "sample": verdict.SHADOW_SAMPLE}  # fmt: skip
             if not writes:
                 return ctx
 
@@ -778,8 +778,9 @@ def create_app(
                 pf = PrefilterReader(catalog, build)
                 fs = [KeywordFilter(x["phrase"], x["field"]) for x in kf["filters"]]
                 counts, ctx["excluded"] = await reader.run(lambda _l, _c: pf.counts(fs))
+                checks = await reader.run(queries.prefilter_checks)  # the weekly sample sent to Claude anyway
                 for x, one in zip(kf["filters"], fs, strict=True):
-                    x["matches"] = counts[one]
+                    x["matches"], x["check"] = counts[one], checks.get(one.name)
             return ctx
 
         return await part("filters", make)
@@ -961,7 +962,7 @@ def create_app(
     @app.post("/api/prefilter/check")
     async def prefilter_check(request: Request):
         return await write(
-            request, lambda _a, _k, b: on().prefilter_check(b), replay=False
+            request, lambda a, _k, b: on().prefilter_check(a, b), replay=False
         )  # a preview acts on nothing
 
     @app.post("/api/prefilter")
@@ -970,11 +971,33 @@ def create_app(
 
     @app.post("/api/prefilter/{change}/undo")
     async def prefilter_undo(request: Request, change: str):
-        return await write(request, lambda a, k, b: on().prefilter_undo(a, k, change))
+        return await write(request, lambda a, k, b: on().prefilter_undo(a, k, change, b))
 
     @app.post("/api/prefilter/reviews")
     async def prefilter_review(request: Request):
         return await write(request, lambda a, k, b: on().prefilter_review(a, k, b))
+
+    @app.post("/api/drafts/{draft_id}/classify/plan")
+    async def classify_review_plan(request: Request, draft_id: str):
+        async def go(_actor, _key, _body):
+            plan, n = await on().classify_review_plan(draft_id)
+            word = "product" if n == 1 else "products"
+            lines = [f"Sends {n:,} {word} to Claude in one batch, at the batch price (about half the usual price per "
+                     "product): the ones this draft’s keyword filters take out that Claude hasn’t seen.",
+                     "Claude answers within a day. Then build the draft again: they join the review list with "
+                     "Claude’s call."]  # fmt: skip
+            if plan.window:
+                lines.append(f"Now is inside {plan.window}. Starting needs a reason, which is recorded.")
+            return {"lines": lines, "details": [f"{s.job}: {' '.join(s.args or [])}" for s in plan.steps],
+                    "refusals": plan.refusals, "window": plan.window}  # fmt: skip
+
+        return await write(request, go, replay=False)  # a preview acts on nothing
+
+    @app.post("/api/drafts/{draft_id}/classify")
+    async def classify_review(request: Request, draft_id: str):
+        return await write(
+            request, lambda a, k, b: on().classify_review(a, k, draft_id, b.get("override") or None)
+        )
 
     @app.post("/api/roasters/{roaster_id}/crawl")
     async def crawl_flag(request: Request, roaster_id: str):

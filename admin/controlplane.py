@@ -1,8 +1,9 @@
 """The admin's control plane: a Postgres database of who did what (docs/design/admin-registry.md §2).
 
 It holds the audit trail, the owner's include/exclude decisions (as events), the owner's keyword filters (as
-events), the job runs the admin started, the decisions snapshots and the drafts built from them. Every table is append-only (a trigger refuses UPDATE, DELETE and
-TRUNCATE), so the trail can't be rewritten through the admin. The lake is never here: the admin reads the lake and
+events) and review marks, the job runs the admin started, the decisions snapshots and the drafts built from them.
+Every table is append-only (a trigger refuses UPDATE, DELETE and TRUNCATE), so the trail can't be rewritten through
+the admin. The lake is never here: the admin reads the lake and
 only the pipeline's jobs write it.
 
 Two ways to connect, one interface (`ControlPlane(connect)`):
@@ -428,7 +429,7 @@ class ControlPlane:
         with self.tx() as cur:
             return self._crawl(cur, roaster_ids)
 
-    # --- keyword filters (the Queue) ------------------------------------------------------------------------------
+    # --- keyword filters (the Filters page) ---------------------------------------------------------------------
 
     def change_filter(self, actor: str, key: str, event: str, phrase: str, field: str, reason: str,
                       based_on: int | None) -> dict:  # fmt: skip
@@ -460,13 +461,17 @@ class ControlPlane:
             self.remember(cur, key, out)
             return out
 
-    def undo_filter(self, actor: str, key: str, change: int) -> dict:
+    def undo_filter(self, actor: str, key: str, change: int, based_on: int | None) -> dict:
         """Revert one change to the filters (an add becomes a removal, a removal an add), if it is still the latest
-        change to its filter: a filter changed again since keeps that later change. Idempotent on `key`."""
+        change to its filter, from the version the page showed (`based_on`: a change since is a Conflict) and within
+        KEYWORD_MAX filters, like any add. A filter changed again since keeps that later change. The admin previews
+        the revert first, as it does an add or a removal (Writes.prefilter_undo). Idempotent on `key`."""
         with self.once(key) as (cur, first):
             if first is not None:
                 return first
             cur.execute("select pg_advisory_xact_lock(%s)", (LOCK + 4,))
+            if self._filters_version(cur) != based_on:
+                raise Conflict("the keyword filters changed since the page was loaded: reload and try again")
             cur.execute("select event, phrase, field from control.keyword_filters where id = %s", (change,))
             row = cur.fetchone()
             if not row:
@@ -477,6 +482,8 @@ class ControlPlane:
                 (field, phrase),
             )
             undone = cur.fetchone()[0] == change
+            if undone and event == "removed" and len(self._filters(cur)) >= classify.KEYWORD_MAX:
+                raise ValueError(f"at most {classify.KEYWORD_MAX} keyword filters: remove one first")
             fid = None
             if undone:
                 back = "removed" if event == "added" else "added"
@@ -488,6 +495,13 @@ class ControlPlane:
             self.audit(cur, actor, "keyword_filter_undo", f"{field}:{phrase}", "ok", out | {"undoes": change})
             self.remember(cur, key, out)
             return out
+
+    def filter_change(self, change: int) -> dict | None:
+        """One change to the filters: its event, phrase and field (the undo's preview reverses it)."""
+        with self.tx() as cur:
+            cur.execute("select event, phrase, field from control.keyword_filters where id = %s", (change,))
+            r = cur.fetchone()
+            return dict(zip(("event", "phrase", "field"), r, strict=True)) if r else None
 
     @staticmethod
     def _filters_version(cur) -> int | None:
@@ -542,12 +556,14 @@ class ControlPlane:
             self.remember(cur, key, out)
             return out
 
-    def reviews(self, filters: str) -> dict[str, dict]:
-        """Each product's latest mark for this filter set: {coffee_id: {mark, actor, at}}."""
+    def reviews(self, filters: str) -> dict[tuple[str, str | None], dict]:
+        """Each product version's latest mark for this filter set: {(coffee_id, input_hash): {mark, actor, at}}. A
+        mark is about the version it was made on: a store that rewrites the listing needs a new one."""
         with self.tx() as cur:
-            cur.execute("select distinct on (coffee_id) coffee_id, mark, actor, at from control.prefilter_reviews "
-                        "where filters = %s order by coffee_id, id desc", (filters,))  # fmt: skip
-            return {r[0]: {"mark": r[1], "actor": r[2], "at": r[3]} for r in cur.fetchall()}
+            cur.execute("select distinct on (coffee_id, input_hash) coffee_id, input_hash, mark, actor, at "
+                        "from control.prefilter_reviews where filters = %s order by coffee_id, input_hash, id desc",
+                        (filters,))  # fmt: skip
+            return {(r[0], r[1]): {"mark": r[2], "actor": r[3], "at": r[4]} for r in cur.fetchall()}
 
     # --- the source list's flags (the Sources page) --------------------------------------------------------------
 

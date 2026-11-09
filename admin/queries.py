@@ -674,21 +674,58 @@ def to_json(value: Any) -> str:
 
 
 def prefilter_eval(lake: Lake, con, build_id: str) -> dict:
-    """A draft build's evaluation of its keyword filter change (its ops table eval_prefilter): the summary and the
-    products Claude calls coffee (each to review). `recorded` False: the build has no eval_prefilter (built before
-    it existed, or its report step failed), so a change that needs it can't be published from it."""
-    src = ops_src(lake, build_id, "eval_prefilter")
-    if src is None:
-        return {"recorded": False, "summary": None, "coffee": []}
-    rows = _rows(
-        con.execute(
-            f"select * exclude (build_id) from {src} order by kind desc, roaster_id, title, coffee_id"
-        )
+    """A draft build's census of its keyword filter change (ops eval_prefilter and eval_prefilter_summary): the
+    counts per direction, and the excluded products the owner reviews over 50 (Claude calls them coffee, or has no
+    verdict). `recorded` False: the build has neither table (built before them, or its report step failed)."""
+    rows_src, sum_src = (
+        ops_src(lake, build_id, "eval_prefilter"),
+        ops_src(lake, build_id, "eval_prefilter_summary"),
     )
-    summary = next((r for r in rows if r["kind"] == "summary"), None)
-    coffee = [
-        r | {"url": safe_url(r["url"])}
-        for r in rows
-        if r["kind"] == "product" and r["verdict_label"] == "coffee"
-    ]
-    return {"recorded": summary is not None, "summary": summary, "coffee": coffee}
+    if rows_src is None or sum_src is None:
+        return {"recorded": False, "summary": {}, "review": []}
+    summary = {r["direction"]: r for r in _rows(con.execute(f"select * exclude (build_id) from {sum_src}"))}
+    review = _rows(con.execute(
+        f"select * exclude (build_id) from {rows_src} where direction = 'excluded' and claude in ('coffee', "
+        "'no_verdict') order by claude, roaster_id, title, coffee_id"))  # fmt: skip
+    for r in review:
+        r["url"] = safe_url(r["url"])
+    return {"recorded": bool(summary), "summary": summary, "review": review}
+
+
+def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:
+    """The Wilson score interval for k of n (95% at z = 1.96)."""
+    if not n:
+        return 0.0, 1.0
+    p, z2 = k / n, z * z
+    centre, half = (
+        (p + z2 / (2 * n)) / (1 + z2 / n),
+        z * ((p * (1 - p) / n + z2 / (4 * n * n)) ** 0.5) / (1 + z2 / n),
+    )
+    return max(0.0, centre - half), min(1.0, centre + half)
+
+
+def prefilter_checks(lake: Lake, con, days: int = 28) -> dict[str, dict]:
+    """The weekly check of the published keyword filters (verdict.SHADOW_SAMPLE): for each filter, the versions it
+    excluded that were sent to Claude anyway in the last `days`, how many Claude has answered (coffee or not_coffee),
+    and how many it calls coffee, with a Wilson 95% interval on that share (a random sample, so an estimate)."""
+
+    def read() -> dict[str, dict]:
+        rows = con.execute(
+            f"""with s as (select * from {lake.scan("prefilter_samples")}
+                           where sampled_at >= now() - to_days(?::int)),
+                    v as (select input_hash, model, definition, label from {lake.scan("verdicts")}
+                          qualify row_number() over (partition by input_hash, model, definition
+                                                     order by decided_at desc) = 1)
+                select s.prefilter, count(distinct s.input_hash) as sampled,
+                       count(distinct s.input_hash) filter (where v.label in ('coffee', 'not_coffee')) as answered,
+                       count(distinct s.input_hash) filter (where v.label = 'coffee') as coffee
+                from s left join v using (input_hash, model, definition) group by 1""",
+            [days],
+        ).fetchall()
+        out = {}
+        for name, sampled, answered, coffee in rows:
+            lo, hi = wilson(coffee, answered)
+            out[name] = {"sampled": sampled, "answered": answered, "coffee": coffee, "low": lo, "high": hi}
+        return out
+
+    return _empty_ok(read, {})
