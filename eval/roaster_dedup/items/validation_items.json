@@ -1,0 +1,247 @@
+[
+ {
+  "id": "aguadulcecafe.com|frenchtownroasters.com",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "coffeetree.com|coffeetree.store",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "downeastcoffee.com|oceancoffee.com",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "heartwoodcoffee.com|heartwoodroastery.com",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "laddercoffee.com|laddercoffeespokane.com",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "oldworldcoffee.co|oldworldcoffeeroasters.com",
+  "stratum": "H1",
+  "split": "validation"
+ },
+ {
+  "id": "actualbrewing.com|calibercoffeeinc.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "actualbrewing.com|lionheadcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "actualbrewing.com|lotuscoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "actualbrewing.com|plantationcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "actualbrewing.com|reconstructioncoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "calibercoffeeinc.com|lionheadcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "calibercoffeeinc.com|lotuscoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "calibercoffeeinc.com|plantationcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "calibercoffeeinc.com|reconstructioncoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "lionheadcoffee.com|lotuscoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "lionheadcoffee.com|plantationcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "lionheadcoffee.com|reconstructioncoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "lotuscoffee.com|plantationcoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "lotuscoffee.com|reconstructioncoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "plantationcoffee.com|reconstructioncoffee.com",
+  "stratum": "H2",
+  "split": "validation"
+ },
+ {
+  "id": "greencastlecoffee.com|theroasterie.com",
+  "stratum": "C1",
+  "split": "validation"
+ },
+ {
+  "id": "81301coffee.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "anvilcoffee.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "biggunscoffee.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "cashuacoffee.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "conversatiocoffee.com|wildroastcoffeeco.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "csrcoffee.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "headrushroasters.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "headrushroasters.com|sigbrew.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "northcoastroasting.com|pacifikcoffee.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "pacifikcoffee.com|sigbrew.com",
+  "stratum": "C2",
+  "split": "validation"
+ },
+ {
+  "id": "blackwaterjava.com|blackwaterroasters.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "java-gourmet.com|javacoffee.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "javacentral.coffee|javacoffee.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "javacoffee.com|javadreampv.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "looneybean.com|looneybeanmammoth.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "noblecoyotecoffee.com|nobleroasters.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "ohiopylecoffee.com|ohioroasting.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "summitcoffee.com|summitsedgecoffee.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "thecoffeeroaster.sg|theroasterie.com",
+  "stratum": "N1",
+  "split": "validation"
+ },
+ {
+  "id": "1802roasters.com|boxxcoffee.la",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "1802roasters.com|groundworkcoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "artiscoffee.com|fourbarrelcoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "beanandbeancoffee.com|oslocoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "bendroasting.com|coffee4kids.org",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "colonialcoffee.com|greatcirclecoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "hortiprocess.com|javacoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ },
+ {
+  "id": "lostsockroasters.com|smallplanescoffee.com",
+  "stratum": "R1",
+  "split": "validation"
+ }
+]

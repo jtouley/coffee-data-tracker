@@ -99,7 +99,14 @@ def run(
     return b
 
 
-def probe(lake: Lake, run_date: str, roaster: str, status: str = "ok", platform: str = "shopify") -> None:
+def probe(
+    lake: Lake,
+    run_date: str,
+    roaster: str,
+    status: str = "ok",
+    platform: str = "shopify",
+    final_host: str | None = None,
+) -> None:
     b = batch()
     lake.write_partition(
         "probes",
@@ -112,7 +119,7 @@ def probe(lake: Lake, run_date: str, roaster: str, status: str = "ok", platform:
                 "probed_at": at(run_date, 6),
                 "roaster_id": roaster,
                 "status": status,
-                "final_host": roaster if status == "ok" else "",
+                "final_host": (final_host or roaster) if status == "ok" else "",
                 "platform": platform if status == "ok" else "",
             }
         ],

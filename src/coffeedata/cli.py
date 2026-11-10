@@ -237,8 +237,10 @@ def cmd_probe(args: argparse.Namespace) -> None:
 
     rows: list[dict] = []
     todo: list[str] = []
+    states: list = []
     try:
-        todo = probe_todo(registry.current(lake), args.run_date, args.stale_days)
+        states = registry.current(lake)
+        todo = probe_todo(states, args.run_date, args.stale_days)
         if args.only:
             todo = [args.only]
         if args.sample:  # the same stable hash order ingest uses, so `weekly --sample` probes what it ingests
@@ -268,6 +270,8 @@ def cmd_probe(args: argparse.Namespace) -> None:
     detail = control.detail_of(job) | {
         "probed": len(rows),
         "by_status": dict(Counter(r["status"] for r in rows)),
+        # Roasters whose site resolved to an active roaster's store: aliases from now on, never crawled (STATE_SQL).
+        "same_store": registry.same_store(rows, states),
         "files": len(files),
         "minutes": round((time.monotonic() - t0) / 60, 1),
     }
@@ -285,6 +289,11 @@ def cmd_probe(args: argparse.Namespace) -> None:
         f"probed {len(rows)} of {len(todo)} roasters ({ok} reachable)"
         + (f"; deadline reached, {left_over} left for the next run" if left_over else "")
     )
+    if detail["same_store"]:
+        print(
+            f"{len(detail['same_store'])} probed roaster(s) serve an active roaster's store and are aliases of it "
+            "(not crawled): " + ", ".join(f"{a} -> {b}" for a, b in list(detail["same_store"].items())[:20])
+        )
 
 
 def cmd_ingest(args: argparse.Namespace) -> None:

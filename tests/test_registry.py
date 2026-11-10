@@ -101,3 +101,49 @@ def test_a_probe_without_robots_txt_is_not_an_answer(lake):
     s = status(lake, rid)
     # last_probed is what stale-probe selection reads: the roaster is probed again next run, not in 28 days
     assert s.last_probed == "2026-11-01" and s.roaster.platform == "shopify"
+
+
+def test_host_key_is_one_store_whatever_the_case():
+    # Jones (eval/roaster_dedup): jonescoffee.com resolves to www.Jonescoffeeroasters.com, a capital J.
+    assert registry.host_key("www.Jonescoffeeroasters.com") == registry.host_key("jonescoffeeroasters.com")
+    assert registry.host_key("shop.magnumcoffee.com:443") == "magnumcoffee.com"
+
+
+def test_the_probe_names_domains_that_serve_an_active_roasters_store():
+    from coffeedata.models import Roaster
+
+    def state(rid, host, status="active"):
+        return registry.RoasterState(Roaster(roaster_id=rid, name=rid, host=host), status, None)
+
+    states = [
+        state("wonderstate.com", "wonderstate.com"),
+        state("thecafeconnection.com", "www.coffeemasters.shop"),
+        state("deadshop.com", "expireddomains.com", "no_catalog"),
+        state("bluechipcoffeeroaster.com", "bluechipcoffeeroaster.com"),
+    ]
+    rows = [
+        {"roaster_id": "kickapoocoffee.com", "status": "ok", "final_host": "WonderState.com"},  # a rebrand
+        {
+            "roaster_id": "coffeemasters.shop",
+            "status": "ok",
+            "final_host": "www.coffeemasters.shop",
+        },  # a newcomer
+        {"roaster_id": "wonderstate.com", "status": "ok", "final_host": "wonderstate.com"},  # itself
+        {"roaster_id": "parked.com", "status": "ok", "final_host": "expireddomains.com"},  # a parked domain
+        {
+            "roaster_id": "piatanoirroast.com",
+            "status": "ok",
+            "final_host": "piatanoirroast.com",
+        },  # white label
+        {"roaster_id": "down.com", "status": "unreachable", "final_host": ""},
+    ]
+    assert registry.same_store(rows, states) == {
+        "coffeemasters.shop": "thecafeconnection.com",
+        "kickapoocoffee.com": "wonderstate.com",
+    }
+
+
+def test_an_alias_is_never_crawled():
+    from coffeedata import ingest
+
+    assert "alias" not in ingest.INGESTABLE

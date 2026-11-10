@@ -4,7 +4,7 @@ apiVersion: v3.2.0
 kind: DataContract
 id: coffee-data-public-catalog
 name: Coffee Data public catalog
-version: 2.5.0
+version: 2.6.0
 status: active
 domain: coffee
 tags: [coffee, specialty-coffee, prices, weekly, open-data]
@@ -361,7 +361,8 @@ schema:
   description: >-
     One row per published roaster from the registry: in the US, not opted out, with at least one coffee seen, and
     known from a source that may be redistributed (Overture, the curated seed or a manual add, not OpenStreetMap
-    alone). A store outside the US (a registry correction) is never published.
+    alone). A store outside the US (a registry correction) is never published. One store is one row: a second
+    domain serving the same store (an alias) is never published, nor its coffees.
   synonyms:
   - synonym: roasteries
   - synonym: coffee roasters
@@ -431,6 +432,15 @@ schema:
     logicalType: date
     physicalType: date
     description: The weekly run that build checked; every row of a release has the same value.
+  quality:
+  - type: custom
+    engine: dbt
+    implementation: tests/public_roasters_unique_by_host.sql
+    dimension: uniqueness
+    severity: error
+    description: One store is one public roaster. No two public roasters have resolved hosts with the same key
+      (lower case, without a leading www, shop or store label); a second domain of a store is an alias, left out
+      with its coffees and price events.
 - name: public_price_event
   physicalName: public_price_event
   physicalType: table

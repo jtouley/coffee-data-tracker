@@ -4,7 +4,8 @@ with seed as (
            coalesce(try_cast(locations as integer), 1) as locations,
            coalesce(is_chain, 'false') = 'true' as is_chain, coalesce(opted_out, 'false') = 'true' as opted_out,
            nullif(final_host, '') as seed_host, nullif(platform, '') as seed_platform,
-           try_cast(nullif(last_probed, '') as date) as seed_probed, sources, nullif(country, '') as country
+           try_cast(nullif(last_probed, '') as date) as seed_probed, sources, nullif(country, '') as country,
+           nullif(lower(trim(alias_of)), '') as alias_of
     from read_csv('{{ var("config_dir") }}/roasters.csv', header = true, all_varchar = true)
 ),
 -- Every pick has a total order (the newest row; on a tie in added_at, the value itself), and sources are listed
@@ -26,6 +27,9 @@ select
     -- ISO 3166-1 alpha-2. The seed states it per roaster (a hand-checked correction for a store outside the US);
     -- a roaster the lake alone lists came from discovery, which keeps US places only.
     coalesce(s.country, 'US') as country,
+    -- Hand-checked: another roaster_id that serves the same store (a rebrand whose old domain doesn't redirect, so
+    -- the resolved host can't show it). dim_roaster makes this roaster an alias of it; null: decided by host alone.
+    s.alias_of,
     a.first_added  -- when the lake first listed it (null: from the seed list alone)
 from seed s
 full outer join added a using (roaster_id)

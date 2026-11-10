@@ -8,11 +8,16 @@
 --   * the shared titles listed by at most near_duplicate_rare_roasters roasters are at least
 --     near_duplicate_min_rare_containment of it, so that a few generic titles ("Colombia", "Decaf",
 --     "House Blend") never make a pair.
--- One row per pair. On the 2026-11-02 release this is 37 pairs; every one labelled was a real duplicate.
+-- One row per pair. On the 2026-11-02 release this was 37 pairs (every one labelled was a real duplicate); with the
+-- host aliases resolved (eval/roaster_dedup) the 11-09 replay lists none.
+-- A resolved alias (dim_roaster.status 'alias': the same host, or a hand-checked alias_of) is no longer a duplicate:
+-- aliases are left out, so what this lists is still to be decided (a rebrand whose old domain doesn't
+-- redirect is set by hand in config/roasters.csv alias_of).
 with t as (
     select distinct roaster_id, trim(regexp_replace(lower(title), '[^a-z0-9]+', ' ', 'g')) as title
     from {{ ref('int_current_catalog') }}
     where not is_wholesale and title is not null
+      and roaster_id not in (select roaster_id from {{ ref('dim_roaster') }} where roaster_id <> canonical_roaster_id)
 ),
 titles as (select * from t where title <> ''),
 listed_by as (select title, count(*) as roasters from titles group by title),
