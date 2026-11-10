@@ -1009,3 +1009,67 @@ def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_
     head, example = quality.tag_parity_messages(db)
     assert head.startswith("1 products decide differently on raw and decoded tags")
     assert example.startswith(f"{rid}:P 'Coffee P Roast': {', '.join(sorted(every))} differ")
+
+
+def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):
+    """stg_variant_grams (coffeedata.bag_weight) gives dim_coffee its grams: a weight in the product title, a
+    slug-style option or the description fills options the crawler stored none for; a misread option ("1/2 lb" stored
+    as 907 g) is corrected; a pack's single-bag weight is dropped. The raw snapshots keep what the crawler stored."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+
+    def opts(p, *variants):
+        p["variants"] = [
+            {
+                "variant_id": f"{p['product_id']}-{i}",
+                "title": t,
+                "price_usd": price,
+                "grams": g,
+                "available": True,
+            }
+            for i, (t, price, g) in enumerate(variants)
+        ]
+        return p
+
+    products = [
+        opts(product("A", title="Bolivia Coffee - 1 lb"), ("Whole Bean", 20.0, None), ("Drip", 20.0, None)),
+        opts(
+            product("B", title="Colombia Coffee"),
+            ("1-lb-whole-bean", 18.0, None),
+            ("5-lb-whole-bean", 80.0, None),
+        ),
+        opts(product("C", title="Mexico Coffee"), ("1/2 lb", 10.0, 907), ("1 lb", 18.0, 454)),
+        opts(product("D", title="Kenya Coffee"), ("Whole Bean", 17.0, None)),
+        opts(product("E", title="Peru Coffee"), ("12oz - 3 Pack", 45.0, 340)),
+    ]
+    run(lake, "2026-10-19", rid, products)
+    lake.write_partition(
+        "bodies",
+        "2026-10-19",
+        "b1",
+        [
+            {
+                "body_hash": "bD",
+                "body_text": "Bright and juicy.\n12 oz bag",
+                "first_seen_run": date(2026, 10, 19),
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    got = dict(
+        (
+            (pid, (p100, sizes))
+            for pid, p100, sizes in con.execute(
+                "select product_id, price_per_100g, bag_sizes_g from dim_coffee order by product_id"
+            ).fetchall()
+        )
+    )
+    assert got == {
+        "A": (4.41, [454]),
+        "B": (3.53, [454, 2268]),
+        "C": (3.96, [227, 454]),
+        "D": (5.0, [340]),
+        "E": (None, None),
+    }
+    raw = dict(con.execute("select product_id, [v.grams for v in variants] from stg_snapshots").fetchall())
+    assert raw["A"] == [None, None] and raw["C"] == [907, 454] and raw["E"] == [340]

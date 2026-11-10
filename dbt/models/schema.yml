@@ -304,6 +304,17 @@ models:
           The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
+  - name: stg_variant_grams
+    description: >-
+      The bag-weight rules (coffeedata.bag_weight), run once per distinct product title, description and options
+      (stg_snapshots.grams_key): each variant's grams, in the snapshot's order. dim_coffee prices bags with them.
+    columns:
+      - name: grams_key
+        data_tests: [unique, not_null]
+      - name: grams
+        description: >-
+          One per variant, by position: the option's own weight, else the one weight the product title or the
+          description states when the options cost the same; null where the text doesn't say (eval/bag_grams).
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
@@ -457,7 +468,7 @@ models:
       - name: price_per_100g
         description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
       - name: bag_sizes_g
-        description: "The bag sizes offered, in grams."
+        description: "The bag sizes offered, in grams (stg_variant_grams: an option's weight, or the one the product title or description states)."
       - name: release_build_id
         description: "The build that made this release."
       - name: release_run_date

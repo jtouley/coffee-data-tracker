@@ -293,7 +293,8 @@ unit_tests:
           cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
               timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
               'Kenya AA' as title, '' as product_type, 'b' as body_hash,
-              [{'variant_id': 'v', 'price_usd': 20.0, 'grams': 340, 'available': true, 'currency': 'USD'}] as variants))
+              [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
+                'currency': 'USD'}] as variants))
     given:
       - input: ref('stg_runs')
         rows:
