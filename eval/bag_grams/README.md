@@ -142,3 +142,27 @@ python bag_eval.py score    <data-dir> <set> labels_ref_<set>.json main branch [
 - The crawler still stores what `parse_grams` reads; the build reads the stored text again. Moving the same rules
   into the adapters, and storing what the adapters drop today (Shopify's option names, Square Online's item
   variations), is crawler work for after it's unfrozen.
+
+## Results (2026-11-11)
+
+Labelled by Claude subagents (claude-opus-5-5): labelers A and B independently, blind to each other and to both
+rules' predictions; a third (C), blind to A and B, settled the disagreements. A/B agreement (same word, or grams
+within 2%): train 245/250, validation 374/375, test 489/500; 17 settled by C. The test set was scored once with
+`--final`, after `sha256sum -c SHA256SUMS` passed. Stratum-weighted, Wilson 95% intervals.
+
+| Set | Rule | Accuracy | Confidently wrong | Right (a weight) |
+| --- | --- | --- | --- | --- |
+| train | main | 82.8% | 7.5% [1.5, 13.5] | 72.7% |
+| train | branch | 92.3% [86.2, 98.3] | 6.3% [0.3, 12.3] | 82.2% |
+| validation | main | 78.3% | 14.1% [7.5, 20.6] | 63.0% |
+| validation | branch | 84.1% [77.5, 90.8] | 13.2% [6.7, 19.8] | 68.8% |
+| **test** | main | 78.7% [74.2, 83.2] | 11.6% [7.2, 15.9] | 66.1% |
+| **test** | **branch** | **89.0% [84.4, 93.5]** | **7.6% [3.3, 12.0]** | **76.4%** |
+
+Paired, branch minus main, on test: accuracy +10.3 points [+9.9, +10.6]; confidently wrong -3.9 points
+[-4.1, -3.7]. The change ships: it is more accurate than `main` on every set and its confidently wrong share is
+lower on every set. Two limits: in stratum F (weights the change fills) 9 of 199 test fills are wrong; and in
+stratum K (weights both rules keep) 10 of 100 are wrong for both, so stored weights the change doesn't touch still
+carry errors (a follow-up, not this change).
+
+**Running total (CLAUDE.md step 9):** this full evaluation resets the total to 0.
