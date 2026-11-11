@@ -597,7 +597,9 @@ says "the last two that passed"; the code does the former). Read `new_passed`, `
 `price_per_100g_outliers`, `public_tables_reconcile` and `release_changes_explained` are warnings
 (`severity='warn'`) and never fail the gate, so none appears in `failing`. The last four keep their rows in the
 build's database (`store_failures`, schema `main_dbt_test__audit`); the build's `release notes:` lines say what the
-release changes against the served one, per reason. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+release changes against the served one, per reason. A `near_duplicate_roasters` row is a pair the host can't link (a
+rebrand whose old domain doesn't redirect): once checked by hand, set the old id's `alias_of` in
+`config/roasters.csv` to the id that stays. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
 `release_changes` and `release_changes_explained` are report only (tag `report_only`): `coffeedata build` runs them
 after the gate, in a dbt step of its own, so even an error there can't fail a build. What to do when they say

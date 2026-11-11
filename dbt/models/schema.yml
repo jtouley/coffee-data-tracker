@@ -325,6 +325,11 @@ models:
       - name: verdict_model
         description: "The verdict's model when classified_by = claude, else null."
   - name: mart_market
+    description: >-
+      One row per origin_country x process over the current catalog (int_current_catalog): non-wholesale, non-blend
+      coffees with an origin from US, non-chain roasters, each store counted once (canonical roaster ids only,
+      dim_roaster.canonical_roaster_id), with coffee and roaster counts, price per 100 g quantiles and the origin's
+      top tasting notes.
     data_tests:
       - unique:
           arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
@@ -554,9 +559,19 @@ models:
       - name: status
         description: >-
           As on main, from the last ok fetch's coffee count (int_fetches.coffees: as the crawl recorded it, else
-          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md).
+          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md). alias: another
+          roaster_id serves the same store (canonical_roaster_id); an alias is never crawled (registry.STATE_SQL
+          decides the same) and never public.
         data_tests:
-          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: >-
+          The one roaster_id its store is published under: alias_of if set; else, among active and pending
+          roasters whose resolved hosts share a key (macro host_key: lower case, without www/shop/store), one
+          already read, then the id equal to the key, then one sharing its first label, then a curated one, then
+          the earliest added, then the first by name; else roaster_id itself. public_roaster and mart_market keep
+          only roasters equal to it.
+        data_tests: [not_null]
   - name: mart_bag
     columns:
       - name: bag_id

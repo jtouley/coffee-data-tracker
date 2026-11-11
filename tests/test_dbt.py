@@ -258,6 +258,49 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
 
 
+def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_path):
+    """eval/roaster_dedup: a second domain whose site resolves to an active roaster's store is an alias, in the
+    crawl's state (registry.current) and in dbt alike. Discovery adds intelligentsiacoffee.com, whose probe lands on
+    www.Intelligentsia.com (any case): while it is only pending it is already the alias, so it is never crawled, and
+    once both were read the id equal to the host stays canonical. The alias is in no public table."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [{"added_at": datetime(2026, 11, 1, tzinfo=UTC), "source": "overture", "roaster_id": alias,
+          "name": "Intelligentsia Coffee"}],
+    )  # fmt: skip
+    run(lake, "2026-10-26", main, [product("A", 20.0), product("B", 18.0)])
+    probe(lake, "2026-11-01", alias, final_host="www.Intelligentsia.com")
+    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert (py[main], py[alias]) == ("active", "alias")
+    assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-02")[0]}
+    # Crawled anyway (as before this change), the same products under the second id: still one store.
+    run(lake, "2026-11-02", alias, [product("A", 20.0), product("B", 18.0)])
+    run(lake, "2026-11-02", main, [product("A", 20.0), product("B", 18.0)])
+    con = build(lake, tmp_path)
+    dbt = {
+        r[0]: r[1:]
+        for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster").fetchall()
+    }
+    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert {k: v[0] for k, v in dbt.items()} == py
+    assert dbt[alias] == ("alias", main) and dbt[main] == ("active", main)
+    assert [
+        r[0]
+        for r in con.execute(
+            "select roaster_id from public_roaster where roaster_id like 'intell%'"
+        ).fetchall()
+    ] == [main]
+    for t in ("public_coffee", "public_price_event"):
+        assert con.execute(f"select count(*) from {t} where roaster_id = ?", [alias]).fetchone() == (0,), t
+    assert con.execute("select count(*) from public_coffee where roaster_id = ?", [main]).fetchone() == (2,)
+
+
 def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
     """Status is decided as on main, from the last ok fetch's coffee count. A fetch from before ELT keeps the count
     its crawl recorded, even where today's rules see no coffee (kaldi.com 2026-10-26: 3,459 recorded, while its
@@ -744,13 +787,14 @@ def test_states_are_the_fifty():
 
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
-    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules. They read hand-written
-    rows, but dbt reads the column types of their inputs from built tables, so a small lake is built first."""
+    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
+    per store. They read hand-written rows, but dbt reads the column types of their inputs from built tables, so a
+    small lake is built first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=12 " in r.stdout
+    assert "PASS=14 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):

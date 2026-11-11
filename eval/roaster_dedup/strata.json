@@ -1,0 +1,74 @@
+{
+ "population": {
+  "H1": 37,
+  "H2": 31,
+  "C1": 115,
+  "C2": 441,
+  "N1": 154,
+  "R1": 2762
+ },
+ "eligible": {
+  "H1": {
+   "train": 27,
+   "validation": 6,
+   "test": 4
+  },
+  "H2": {
+   "train": 16,
+   "validation": 15,
+   "test": 0
+  },
+  "C1": {
+   "train": 34,
+   "validation": 1,
+   "test": 6
+  },
+  "C2": {
+   "train": 229,
+   "validation": 10,
+   "test": 2
+  },
+  "N1": {
+   "train": 51,
+   "validation": 9,
+   "test": 3
+  },
+  "R1": {
+   "train": 943,
+   "validation": 120,
+   "test": 129
+  }
+ },
+ "drawn": {
+  "H1": {
+   "train": 27,
+   "validation": 6,
+   "test": 4
+  },
+  "H2": {
+   "train": 16,
+   "validation": 15,
+   "test": 0
+  },
+  "C1": {
+   "train": 34,
+   "validation": 1,
+   "test": 6
+  },
+  "C2": {
+   "train": 36,
+   "validation": 10,
+   "test": 2
+  },
+  "N1": {
+   "train": 36,
+   "validation": 9,
+   "test": 3
+  },
+  "R1": {
+   "train": 24,
+   "validation": 8,
+   "test": 8
+  }
+ }
+}

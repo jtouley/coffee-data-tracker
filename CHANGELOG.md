@@ -18,6 +18,12 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- One store, one roaster: a roaster_id whose site resolves to another active roaster's store (the same host, any
+  case, without www/shop/store) is an alias (`dim_roaster.status`, `canonical_roaster_id`), never crawled and never
+  public; a hand-checked `alias_of` in `config/roasters.csv` covers a rebrand that doesn't redirect. The probe job
+  lists the domains it finds serving an active roaster's store. Public contract 2.6.0 adds the error rule
+  `public_roasters_unique_by_host`. Measured in `eval/roaster_dedup`.
+
 - Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
   (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
   cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the

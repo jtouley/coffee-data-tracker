@@ -363,3 +363,99 @@ unit_tests:
         - {input_hash: R, label: coffee, model: m}
         - {input_hash: S, label: coffee, model: m}
         - {input_hash: U, label: not_coffee, model: m}
+
+  - name: one_store_one_canonical_roaster
+    description: >-
+      dim_roaster.canonical_roaster_id (eval/roaster_dedup): ids whose resolved hosts share a key serve one store.
+      Jones: three ids, one host spelled www.Jonescoffeeroasters.com, so case must not matter; the canonical is the
+      id equal to the host. wonderstate/kickapoo: a rebrand, both curated, so curated can't decide; the id equal to
+      the host does. Union: no id equals unionroasters.com, so the one sharing its first label. Two white-label
+      stores (one supplier's catalog, separate businesses on their own domains) are not aliases.
+    model: dim_roaster
+    given:
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: jonescoffee.com, sources: overture, seed_host: www.Jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: jonescoffeeroasters.com, sources: overture, seed_host: www.jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: thebestcoffee.com, sources: overture, seed_host: www.jonescoffeeroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: kickapoocoffee.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: wonderstate.com, sources: curated, seed_host: wonderstate.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: silvercupcoffeeroasters.com, sources: overture, seed_host: unionroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: unionroasters.co, sources: overture, seed_host: unionroasters.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: bluechipcoffeeroaster.com, sources: overture, seed_host: bluechipcoffeeroaster.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: piatanoirroast.com, sources: overture, seed_host: www.piatanoirroast.com, seed_platform: shopify, opted_out: false, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        format: sql
+        rows: select null::varchar as roaster_id, null::date as run_date, null::boolean as ok, null::timestamptz as last_at where false
+      - input: ref('dim_coffee')
+        format: sql
+        rows: select null::varchar as roaster_id, null::boolean as is_listed, null::varchar as catalog_status, null::boolean as is_wholesale, null::boolean as in_stock where false
+      - input: ref('int_fetches')
+        rows:
+          - {roaster_id: jonescoffee.com, batch_id: b1, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: jonescoffeeroasters.com, batch_id: b2, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: thebestcoffee.com, batch_id: b3, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 30, coffees: 29}
+          - {roaster_id: kickapoocoffee.com, batch_id: b4, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: wonderstate.com, batch_id: b5, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 25, coffees: 23}
+          - {roaster_id: silvercupcoffeeroasters.com, batch_id: b6, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 9, coffees: 8}
+          - {roaster_id: unionroasters.co, batch_id: b7, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 9, coffees: 8}
+          - {roaster_id: bluechipcoffeeroaster.com, batch_id: b8, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 40, coffees: 38}
+          - {roaster_id: piatanoirroast.com, batch_id: b9, run_date: 2026-11-09, fetched_at: "2026-11-09 09:00:00+00", status: ok, products: 40, coffees: 38}
+    expect:
+      rows:
+        - {roaster_id: jonescoffee.com, status: alias, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: jonescoffeeroasters.com, status: active, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: thebestcoffee.com, status: alias, canonical_roaster_id: jonescoffeeroasters.com}
+        - {roaster_id: kickapoocoffee.com, status: alias, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: wonderstate.com, status: active, canonical_roaster_id: wonderstate.com}
+        - {roaster_id: silvercupcoffeeroasters.com, status: alias, canonical_roaster_id: unionroasters.co}
+        - {roaster_id: unionroasters.co, status: active, canonical_roaster_id: unionroasters.co}
+        - {roaster_id: bluechipcoffeeroaster.com, status: active, canonical_roaster_id: bluechipcoffeeroaster.com}
+        - {roaster_id: piatanoirroast.com, status: active, canonical_roaster_id: piatanoirroast.com}
+
+  - name: a_new_domain_never_takes_over_a_published_store
+    description: >-
+      The probe-time check, as dim_roaster sees it: a domain discovery adds later (pending: probed, never read)
+      whose site resolves to an active roaster's store is the alias, even though its id equals the host
+      (coffeemasters.shop beside thecafeconnection.com), so the published id and its history stay. Parked domains
+      (many roasters resolving to expireddomains.com, no catalog) never group. A hand-checked alias_of (a rebrand
+      that doesn't redirect) decides over the host; an opted-out roaster stays opted out.
+    model: dim_roaster
+    given:
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: thecafeconnection.com, sources: overture, seed_host: www.coffeemasters.shop, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: coffeemasters.shop, sources: overture, seed_host: www.coffeemasters.shop, seed_platform: shopify, opted_out: false, country: US, first_added: "2026-11-09 06:00:00+00"}
+          - {roaster_id: altruisticjoe.com, sources: overture, seed_host: expireddomains.com, seed_platform: other, opted_out: false, country: US}
+          - {roaster_id: timbertowncoffee.com, sources: overture, seed_host: expireddomains.com, seed_platform: other, opted_out: false, country: US}
+          - {roaster_id: oldname.com, sources: curated, seed_host: oldname.com, seed_platform: shopify, opted_out: false, country: US, alias_of: newname.com}
+          - {roaster_id: newname.com, sources: overture, seed_host: newname.com, seed_platform: shopify, opted_out: false, country: US}
+          - {roaster_id: leftus.com, sources: overture, seed_host: newname.com, seed_platform: shopify, opted_out: true, country: US}
+      - input: ref('stg_probes')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as status, null::timestamptz as probed_at, null::varchar as final_host, null::varchar as platform where false
+      - input: ref('int_roaster_runs')
+        format: sql
+        rows: select null::varchar as roaster_id, null::date as run_date, null::boolean as ok, null::timestamptz as last_at where false
+      - input: ref('dim_coffee')
+        format: sql
+        rows: select null::varchar as roaster_id, null::boolean as is_listed, null::varchar as catalog_status, null::boolean as is_wholesale, null::boolean as in_stock where false
+      - input: ref('int_fetches')
+        rows:
+          - {roaster_id: thecafeconnection.com, batch_id: b1, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 12, coffees: 10}
+          - {roaster_id: altruisticjoe.com, batch_id: b2, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 0, coffees: 0}
+          - {roaster_id: timbertowncoffee.com, batch_id: b3, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 0, coffees: 0}
+          - {roaster_id: oldname.com, batch_id: b4, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 12, coffees: 10}
+          - {roaster_id: newname.com, batch_id: b5, run_date: 2026-11-02, fetched_at: "2026-11-02 09:00:00+00", status: ok, products: 12, coffees: 10}
+    expect:
+      rows:
+        - {roaster_id: thecafeconnection.com, status: active, canonical_roaster_id: thecafeconnection.com}
+        - {roaster_id: coffeemasters.shop, status: alias, canonical_roaster_id: thecafeconnection.com}
+        - {roaster_id: altruisticjoe.com, status: no_catalog, canonical_roaster_id: altruisticjoe.com}
+        - {roaster_id: timbertowncoffee.com, status: no_catalog, canonical_roaster_id: timbertowncoffee.com}
+        - {roaster_id: oldname.com, status: alias, canonical_roaster_id: newname.com}
+        - {roaster_id: newname.com, status: active, canonical_roaster_id: newname.com}
+        - {roaster_id: leftus.com, status: opted_out, canonical_roaster_id: leftus.com}
