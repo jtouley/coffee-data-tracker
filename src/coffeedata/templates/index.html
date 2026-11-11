@@ -46,15 +46,15 @@ th.num { white-space: nowrap; }
 .filters label { display: flex; align-items: center; gap: 6px; color: var(--text-secondary); font-size: 13px; }
 .scroll { max-height: 560px; overflow: auto; border: 1px solid var(--border); border-radius: 8px; }
 .scroll table th { border-bottom: 1px solid var(--border); }
-/* The roaster's city and state, a quiet line under its name, with tighter leading so it costs little height. On a
-   phone the roaster column drops and the roaster sits under the coffee, as in "New since last week". */
+/* The roaster's city and state, quiet and after its name ("606 Coffee Roasters · Chicago, IL"), kept whole so it
+   wraps as one piece. On a phone the roaster column drops and the roaster sits under the coffee, as in "New since
+   last week". */
 #rows td { line-height: 1.4; }
-.place { display: block; color: var(--text-muted); font-size: 12px; }
-.browse th.roaster { width: 24%; }  /* room for most names on one line, so the place line is the only extra one */
+.place { color: var(--text-muted); font-size: 12px; white-space: nowrap; }
+.place::before { content: " · "; content: " · " / ""; }
+.browse th.roaster { width: 30%; }  /* room for most names and places on one line: desktop rows stay one line, as on main */
 .by { display: none; color: var(--text-secondary); }
-.by .place { display: inline; white-space: nowrap; }
-.by .place::before { content: " · "; content: " · " / ""; }
-.more { font: inherit; font-size: 14px; margin-top: 12px; padding: 10px 16px; min-height: 44px; border-radius: 6px;
+.more { font: inherit; font-size: 14px; margin-top: 12px; padding: 12px 16px; min-height: 48px; border-radius: 6px;
   border: 1px solid var(--border); background: var(--surface-0); color: var(--accent); cursor: pointer; }
 #tip { position: fixed; pointer-events: none; background: var(--surface-1); color: var(--text-primary);
   border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 16px rgb(0 0 0 / .12);
@@ -164,26 +164,31 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   const PAGE = 500;  // rows drawn at a time; "Show more" draws the next page, so every match can be reached
   const STATES = {{ state_titles | tojson }};  // "MI": "Michigan"
   const STATE_WORDS = {{ state_words | tojson }};  // ["west virginia", "WV"], longest first
-  let rows = [], C = {}, R = [], hits = [], shown = 0, said;
+  let rows = [], C = {}, CITIES = [], hits = [], shown = 0, wait;
   const STATUS = {preorder: "preorder", sold_out: "sold out", archived: "past offering"};
   const cell = (tr, text, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; td.textContent = text ?? ""; return td; };
   const word = w => new RegExp("(^|[^\\p{L}\\p{N}])" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=$|[^\\p{L}\\p{N}])", "u");
   const n = (k, one, many) => k.toLocaleString() + " " + (k === 1 ? one : many);
+  const quote = s => "“" + s + "”";
 
   // The search box, read as terms that must all match, in any letter case:
+  // - a city in the catalog ("Chicago", "Michigan City") is read first, as a phrase, wherever it is in the query, so
+  //   a state's name inside it isn't read as the state; it matches the roasters there, or the phrase in the text;
   // - a state's full name ("Michigan", "New York") matches that state's roasters, or the name as whole words in a
-  //   coffee's name, roaster, city or notes (so Michigan City, IN and "Michigan Cherry" are found too);
+  //   coffee's name, roaster, city or notes (so "Michigan Cherry" is found too). A state's name wins over a city of
+  //   the same name ("New York", "Washington") or one inside it ("York");
   // - a two-letter state code ("IL", "mi") is a whole word: on its own it means the state and nothing else, so "in"
   //   isn't every note with "in" in it; beside other words it is the state or that whole word ("la colombe");
   // - any other word matches inside the coffee's name, roaster, city or notes, as before.
-  // A city whose name holds a state's ("Michigan City", "Kansas City") is read as words, not as the state.
   function parse(q) {
-    const phrase = q.toLowerCase().replace(/[,;]/g, " ").replace(/\s+/g, " ").trim();
-    const city = R.some(ro => ro.city && ro.city.toLowerCase().includes(phrase));
-    let s = " " + phrase + " ";
+    let s = " " + q.toLowerCase().replace(/[,;]/g, " ").replace(/\s+/g, " ").trim() + " ";
     const terms = [];
+    // A state's name wins over a city that is that name or part of it ("New York" over York, PA).
+    const inState = city => STATE_WORDS.some(([name]) => (" " + name + " ").includes(" " + city + " ") && s.includes(" " + name + " "));
+    for (const city of CITIES)
+      if (s.includes(" " + city + " ") && !inState(city)) while (s.includes(" " + city + " ")) { terms.push({city, text: city}); s = s.replace(" " + city + " ", " "); }
     for (const [name, code] of STATE_WORDS)
-      while (s.includes(" " + name + " ") && !(city && phrase !== name)) { terms.push({state: code, re: word(name)}); s = s.replace(" " + name + " ", " "); }
+      while (s.includes(" " + name + " ")) { terms.push({state: code, re: word(name)}); s = s.replace(" " + name + " ", " "); }
     const words = s.trim().split(" ").filter(Boolean);
     for (const w of words) {
       const code = w.toUpperCase();
@@ -192,34 +197,50 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     }
     return terms;
   }
-  // 0: no match; 1: matched by the roaster's state; 2: matched in the text.
-  const test = (r, t) => t.state && R[r[C.roaster]].state === t.state ? 1 : t.re ? (t.re.test(r.text) ? 2 : 0) : t.text ? (r.text.includes(t.text) ? 2 : 0) : 0;
+  // 0: no match; 1: matched by where the roaster is; 2: matched in the text.
+  function test(r, t) {
+    if (t.state && r[C.roaster_state] === t.state) return 1;
+    if (t.city && r.city === t.city) return 1;
+    if (t.re) return t.re.test(r.text) ? 2 : 0;
+    return t.text && r.text.includes(t.text) ? 2 : 0;
+  }
 
-  // What the result line says: how many, and why they matched when the search names a state.
-  function summary(terms, byState) {
+  // What the result line says: how many, and, when the search names a place, which roasters' place matched.
+  function summary(terms, byPlace) {
     const k = hits.length, st = $("state").value, q = $("q").value.trim();
-    if (!k) return q ? "No coffees match “" + q + "”" + (st || $("origin").value || $("process").value || $("stock").checked ? " with these filters." : ".")
-                     : "No coffees match these filters.";
-    const roasters = new Set(hits.map(r => r[C.roaster])).size;
-    if (st) return n(k, "coffee", "coffees") + " from " + n(roasters, STATES[st] + " roaster", STATES[st] + " roasters") + ".";
-    const states = terms.filter(t => t.state);
-    if (states.length !== 1) return n(k, "coffee", "coffees") + " from " + n(roasters, "roaster", "roasters") + ".";
-    const t = states[0], name = STATES[t.state] + (t.code ? " (" + t.state + ")" : "");
-    if (byState === k) return n(k, "coffee", "coffees") + " from roasters in " + name + ".";
+    const narrowed = $("origin").value || $("process").value || st;
+    if (!k) {
+      const what = q ? " match " + quote(q) : "";
+      if (narrowed) return "No coffees" + what + " with these filters" + ($("stock").checked ? " (in stock only)." : ".");
+      return q ? "No coffees" + ($("stock").checked ? " in stock" : "") + what + "." : "No coffees.";
+    }
+    const coffees = n(k, "coffee", "coffees"), roasters = new Set(hits.map(r => r[C.roaster_id])).size;
+    const places = terms.filter(t => t.state || t.city), words = terms.filter(t => !t.state && !t.city).map(t => t.text);
+    const matching = words.length ? " matching " + quote(words.join(" ")) : "";
+    if (st) return coffees + matching + " from " + n(roasters, STATES[st] + " roaster", STATES[st] + " roasters") + ".";
+    if (!places.length) return coffees + matching + " from " + n(roasters, "roaster", "roasters") + ".";
+    // Where the roasters that matched by place are: "Chicago, IL"; "Michigan"; "Illinois (IL)" for a lone code.
+    const at = hits.filter(r => r.byPlace);
+    const cities = [...new Set(at.map(r => r.place))];
+    const city = places.find(t => t.city), code = places.find(t => t.code && !city);
+    const where = city ? (cities.length <= 2 ? cities.join(" and ") : city.city.replace(/(^|\s)\S/g, c => c.toUpperCase()) + " (" + cities.length + " places)")
+      : places.map(t => STATES[t.state] + (t.code ? " (" + t.state + ")" : "")).join(", ");
+    if (byPlace === k) return coffees + matching + " from roasters in " + where + ".";
     // A code beside other words that only matched as a word ("la colombe") says nothing about a state.
-    if (!byState && t.code) return n(k, "coffee", "coffees") + " from " + n(roasters, "roaster", "roasters") + ".";
+    if (!byPlace && code) return coffees + matching + " from " + n(roasters, "roaster", "roasters") + ".";
     // The rest matched in the text: a coffee named for the state, or a city like Michigan City, IN.
-    const other = k - byState, quoted = "“" + (t.code ? t.state : STATES[t.state]) + "”", where = " name, roaster, city or notes.";
-    if (!byState) return n(k, "coffee mentions ", "coffees mention ") + quoted + (k === 1 ? " in its" : " in their") + where;
-    return n(k, "coffee", "coffees") + ": " + byState.toLocaleString() + " from roasters in " + name + ", and "
-      + (other === 1 ? "1 that mentions " + quoted + " in its" : other.toLocaleString() + " that mention " + quoted + " in their") + where;
+    const t = city || places[0], said = quote(t.city ? city.city.replace(/(^|\s)\S/g, c => c.toUpperCase()) : t.code ? t.state : STATES[t.state]);
+    const other = k - byPlace, tail = " name, roaster, city or notes.";
+    if (!byPlace) return n(k, "coffee", "coffees") + matching + (k === 1 ? " mentions " : " mention ") + said + (k === 1 ? " in its" : " in their") + tail;
+    return coffees + matching + ": " + byPlace.toLocaleString() + " from roasters in " + where + ", and "
+      + (other === 1 ? "1 that mentions " + said + " in its" : other.toLocaleString() + " that mention " + said + " in their") + tail;
   }
 
   function draw(from) {
     const body = $("rows");
     let first;
     for (const r of hits.slice(from, from + PAGE)) {
-      const tr = body.insertRow(), td = tr.insertCell(), ro = R[r[C.roaster]];
+      const tr = body.insertRow(), td = tr.insertCell();
       if (r[C.url]) { const a = document.createElement("a"); a.href = r[C.url]; a.rel = "noopener"; a.textContent = r[C.title]; td.appendChild(a); first ??= a; }
       else td.textContent = r[C.title];
       if (!first) { tr.tabIndex = -1; first = tr; }
@@ -228,8 +249,8 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       // The roaster and its place: under the coffee on a phone, in their own column on a wider screen.
       const by = document.createElement("span"); by.className = "by"; td.appendChild(by);
       for (const el of [by, cell(tr, "", "hide-sm")]) {
-        el.append(ro.name);
-        if (ro.place) { const p = document.createElement("span"); p.className = "place"; p.textContent = ro.place; el.appendChild(p); }
+        el.append(r[C.roaster_name] ?? "");
+        if (r.place) { const p = document.createElement("span"); p.className = "place"; p.textContent = r.place; el.appendChild(p); }
       }
       cell(tr, r[C.origin_country], "hide-sm"); cell(tr, r[C.process], "hide-sm");
       cell(tr, (r[C.tasting_notes] || []).join(", "), "hide-sm notes");
@@ -242,46 +263,54 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     return first;
   }
 
-  function render(e) {
+  function render() {
+    clearTimeout(wait);
     const q = $("q").value.trim(), o = $("origin").value, p = $("process").value, st = $("state").value, s = $("stock").checked;
     const terms = parse(q);
-    const named = terms.some(t => t.state), perState = {};
-    let byState = 0;
+    const placed = terms.some(t => t.state || t.city), perState = {};
+    let byPlace = 0;
     hits = rows.filter(r => {
       if ((s && !r[C.in_stock]) || (o && r[C.origin_country] !== o) || (p && r[C.process] !== p)) return false;
       let how = 1;
-      for (const t of terms) { const m = test(r, t); if (!m) return false; if (t.state && m === 2) how = 2; }
-      const ro = R[r[C.roaster]];
-      (perState[ro.state] ??= new Set()).add(ro);  // the State options count roasters under every other filter
-      if (st && ro.state !== st) return false;
-      if (how === 1 && named) byState++;
+      for (const t of terms) { const m = test(r, t); if (!m) return false; if ((t.state || t.city) && m === 2) how = 2; }
+      (perState[r[C.roaster_state]] ??= new Set()).add(r[C.roaster_id]);  // the State options count roasters under every other filter
+      if (st && r[C.roaster_state] !== st) return false;
+      r.byPlace = placed && how === 1;
+      if (r.byPlace) byPlace++;
       return true;
     });
     for (const opt of $("state").options)
       if (opt.value) opt.textContent = STATES[opt.value] + " (" + (perState[opt.value]?.size ?? 0).toLocaleString() + ")";
     $("rows").textContent = "";
     draw(0);
-    // Announced as typing pauses, not on every key.
-    const text = summary(terms, byState);
-    clearTimeout(said);
-    if (e && e.target === $("q")) said = setTimeout(() => $("count").textContent = text, 300); else $("count").textContent = text;
+    $("count").textContent = summary(terms, byPlace);
+  }
+  // Typing waits for a pause, so the table and the count change together, once. A lone two-letter code waits longer:
+  // "mi" on the way to "mild" shouldn't flash Michigan's coffees.
+  function typed() {
+    clearTimeout(wait);
+    const v = $("q").value.trim();
+    wait = setTimeout(render, /^[a-z]{2}$/.test(v) && STATES[v.toUpperCase()] ? 700 : 150);
   }
 
-  fetch("catalog.json").then(r => r.json()).then(d => {
+  fetch("catalog.json{% if build_id %}?b={{ build_id | urlencode }}{% endif %}").then(r => r.json()).then(d => {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
-    // A coffee's "roaster" is a row number in the roaster lookup, which has each name and place once.
-    R = d.roasters.rows.map(([, name, city, state]) => ({name, city, state, place: [city, state].filter(Boolean).join(", ")}));
+    const cities = new Set();
     for (const r of rows) {
-      const ro = R[r[C.roaster]];
-      r.text = [r[C.title], ro.name, ro.city || "", ...(r[C.tasting_notes] || [])].join(" ").toLowerCase();
+      const city = r[C.roaster_city] || "";
+      r.city = city.toLowerCase(); r.place = [city, r[C.roaster_state]].filter(Boolean).join(", ");
+      r.text = [r[C.title], r[C.roaster_name], city, ...(r[C.tasting_notes] || [])].join(" ").toLowerCase();
+      if (r.city) cities.add(r.city);
     }
+    CITIES = [...cities].sort((a, b) => b.length - a.length || a.localeCompare(b));  // "michigan city" before "michigan"
     const fill = (id, values) => values.forEach(v => {
       const opt = document.createElement("option"); opt.value = v; opt.textContent = v; $(id).appendChild(opt); });
     const distinct = col => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort();
     fill("origin", distinct("origin_country")); fill("process", distinct("process"));
     // The roasters' states by name; render() writes each option's name and count.
-    fill("state", [...new Set(R.map(ro => ro.state))].filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));
-    ["q", "origin", "process", "state", "stock"].forEach(id => $(id).addEventListener("input", render));
+    fill("state", distinct("roaster_state").filter(v => STATES[v]).sort((a, b) => STATES[a].localeCompare(STATES[b])));
+    $("q").addEventListener("input", typed);
+    ["origin", "process", "state", "stock"].forEach(id => $(id).addEventListener("input", render));
     $("more").addEventListener("click", () => { const first = draw(shown); if (first) first.focus(); });
     render();
   }).catch(() => $("count").textContent = "Couldn't load the catalog.");

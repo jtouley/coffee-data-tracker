@@ -739,38 +739,46 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
         "license": "CDLA-Permissive-2.0",
         "license_url": "https://github.com/jtouley/coffee-data-tracker/blob/main/licenses/CDLA-Permissive-2.0.txt",
     }
-    assert list(catalog) == ["release", "columns", "rows", "roasters"]
+    assert list(catalog) == ["release", "columns", "rows"]
     landing = (out / "index.html").read_text()
     assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
 
 
-def test_site_catalog_names_each_roaster_once_with_its_place(lake, tmp_path):
-    """catalog.json lists each roaster once (id, name, city and state as stored, from public_roaster); a coffee's
-    `roaster` is that roaster's row number, so the name and place aren't repeated on every coffee. The page's script
-    reads both."""
+def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path):
+    """catalog.json is a published download, so it only gains columns: main's columns stay first, in their order, and
+    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches the file of its own build,
+    so a cached page never reads another release's catalog.json."""
     from coffeedata import site
 
     for rid in ("onyxcoffeelab.com", "1802roasters.com"):
         run(lake, "2026-10-19", rid, [product("A"), product("B")])
-    build(lake, tmp_path).close()
+    build(lake, tmp_path, build_id="20261020T060000-abcdef", as_of_run="2026-10-19", **ANY_RUN).close()
     out = tmp_path / "site"
     site.build(tmp_path / "coffee.duckdb", out)
     catalog = json.loads((out / "catalog" / "catalog.json").read_text())
-    assert catalog["roasters"] == {
-        "columns": ["roaster_id", "roaster_name", "city", "state"],
-        # The fixture registry has no city for 1802 Roasters: left empty, not guessed.
-        "rows": [["1802roasters.com", "1802 Roasters", None, "CA"], ["onyxcoffeelab.com", "Onyx Coffee Lab", "Rogers", "AR"]],
-    }  # fmt: skip
+    assert list(catalog) == ["release", "columns", "rows"]
+    assert catalog["columns"] == [
+        "coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
+        "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
+        "roaster_id", "roaster_city",
+    ]  # fmt: skip
     cols = catalog["columns"]
-    assert "roaster" in cols and not {"roaster_id", "roaster_name", "roaster_state"} & set(cols)
-    assert sorted(
-        (catalog["roasters"]["rows"][r[cols.index("roaster")]][0], r[cols.index("coffee_id")])
-        for r in catalog["rows"]
-    ) == sorted((rid, f"{rid}:{p}") for rid in ("onyxcoffeelab.com", "1802roasters.com") for p in "AB")
+    got = {tuple(r[cols.index(c)] for c in ("coffee_id", "roaster_id", "roaster_name", "roaster_state", "roaster_city"))
+           for r in catalog["rows"]}  # fmt: skip
+    # The fixture registry has no city for 1802 Roasters: left empty, not guessed.
+    assert got == {
+        ("onyxcoffeelab.com:A", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("onyxcoffeelab.com:B", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("1802roasters.com:A", "1802roasters.com", "1802 Roasters", "CA", None),
+        ("1802roasters.com:B", "1802roasters.com", "1802 Roasters", "CA", None),
+    }
     page = (out / "catalog" / "index.html").read_text()
+    assert 'fetch("catalog.json?b=20261020T060000-abcdef")' in page
     assert '<select id="state" aria-label="Roaster state (number of roasters)">' in page
     assert '<p class="note" id="count" role="status">' in page
     assert '"MI": "Michigan"' in page and '["west virginia", "WV"]' in page
+    # The Dataset JSON-LD describes the download as it is.
+    assert "plus roaster_city" in page
 
 
 # A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).

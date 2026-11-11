@@ -188,7 +188,7 @@ def dataset_jsonld(release: dict, link: dict[str, str | None], contract: dict | 
             "@type": "DataDownload",
             "name": "catalog.json",
             "description": "The site's catalog: every listed retail coffee from the public roasters, as JSON "
-            "(a subset of public_coffee's columns), with a lookup of its roasters' names, cities and states by roaster_id.",
+            "(a subset of public_coffee's columns, plus roaster_city: the roaster's city from public_roaster).",
             "encodingFormat": "application/json",
             "contentUrl": f"{site}/catalog/catalog.json",
         }
@@ -318,19 +318,14 @@ def build(db: Path, out: Path) -> Path:
     catalog = _q(
         con,
         """
-        select coffee_id, roaster_id as roaster, title, url, origin_country, process, roast_level,
-               tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
-        from site_coffee where is_listed and not is_wholesale and not is_chain order by roaster_name, title""",
-    )
-    # The catalog's roasters, once each: a coffee's `roaster` is its roaster's row number in this list, instead of
-    # the name and place repeated on every coffee (a number is smaller than the roaster_id, too). City and state are
-    # public_roaster's, as stored.
-    roasters = _q(
-        con,
-        """
-        select roaster_id, roaster_name, city, state from public_roaster
-        where roaster_id in (select roaster_id from site_coffee where is_listed and not is_wholesale and not is_chain)
-        order by roaster_name, roaster_id""",
+        select c.coffee_id, c.roaster_name, c.roaster_state, c.title, c.url, c.origin_country, c.process,
+               c.roast_level, c.tasting_notes, c.price_per_100g, c.min_price_usd, c.in_stock, c.catalog_status,
+               c.first_seen,
+               -- Added after main's columns, so readers that look columns up by position or name keep working:
+               -- the stable roaster key, and the roaster's city as public_roaster stores it.
+               c.roaster_id, r.city as roaster_city
+        from site_coffee c join public_roaster r using (roaster_id)
+        where c.is_listed and not c.is_wholesale and not c.is_chain order by c.roaster_name, c.title""",
     )
     reach = _q(
         con,
@@ -441,18 +436,17 @@ def build(db: Path, out: Path) -> Path:
         origin_price=origin_price,
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
+        # The page fetches catalog.json?b=<this build>, so a cached page never reads another release's file.
+        build_id=release.get("release_build_id") or "",
         state_titles=STATE_TITLES,
         state_words=STATE_WORDS,
     )
     (cat / "index.html").write_text(with_csp(html))
-    roaster_row = {r["roaster_id"]: i for i, r in enumerate(roasters)}
-    for r in catalog:
-        r["roaster"] = roaster_row[r["roaster"]]
     cols = list(catalog[0]) if catalog else []
     (cat / "catalog.json").write_text(
         json.dumps(
             {
-                # Which release this is and under what licence; the page's script reads the rest.
+                # Which release this is and under what licence; the page's script reads only columns and rows.
                 "release": {
                     "release_build_id": release["release_build_id"],
                     "release_run_date": release["release_run_date"],
@@ -462,10 +456,6 @@ def build(db: Path, out: Path) -> Path:
                 },
                 "columns": cols,
                 "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
-                "roasters": {
-                    "columns": ["roaster_id", "roaster_name", "city", "state"],
-                    "rows": [[r["roaster_id"], r["roaster_name"], r["city"], r["state"]] for r in roasters],
-                },
             },
             separators=(",", ":"),
         )
