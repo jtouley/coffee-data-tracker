@@ -315,3 +315,26 @@ def test_ci_opens_no_pipeline_issue_for_a_missing_report():
         _report(_test("classifier", "train", "passed", 0.99, 0.985)), "ci", None, None, False
     )
     assert [a["key"] for a in alerts] == ["eval:classifier"]
+
+
+def test_the_alert_jobs_hold_only_issues_write_and_never_a_hub_token():
+    """Each workflow's alert job: main only, never on a pull request, GITHUB_TOKEN limited to issues, no secret;
+    and the jobs that hold the Hub token can't write issues (docs/TRIAGE.md, Permissions and safety)."""
+    import yaml
+
+    workflows = ROOT / ".github" / "workflows"
+    for name in ("ci.yml", "eval-floors.yml", "prod-health.yml"):
+        wf = yaml.safe_load((workflows / name).read_text())
+        assert wf["permissions"] == {"contents": "read"}, name
+        for job_name, job in wf["jobs"].items():
+            text = yaml.safe_dump(job)
+            if job_name == "alert":
+                assert job["permissions"] == {"contents": "read", "issues": "write"}, name
+                assert "secrets." not in text, name
+                assert "github.ref == 'refs/heads/main'" in job["if"], name
+                if name == "ci.yml":
+                    assert "github.event_name == 'push'" in job["if"]
+            else:
+                assert "issues" not in (job.get("permissions") or {}), (name, job_name)
+            if "HF_TOKEN" in text:
+                assert job.get("if") == "github.ref == 'refs/heads/main'", (name, job_name)
