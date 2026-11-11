@@ -267,6 +267,59 @@ def test_a_crashed_floor_opens_an_issue_that_says_what_crashed():
     assert "| price/train | `test_x` | failed |" in body and "KeyError: 'price_strata.json'" in body
 
 
+def _floor(eval_name, nodeid_set, outcome, checks=(), message=""):
+    """A report entry as tests/evalfloor.py writes it, with the checks given (possibly none)."""
+    return {"nodeid": f"tests/test_{eval_name}_accuracy.py::test_x[{nodeid_set}]", "eval": eval_name,
+            "set": list(checks)[0]["set"] if checks else nodeid_set, "outcome": outcome, "checks": list(checks),
+            "message": message, "private": False}  # fmt: skip
+
+
+def _ok(set_name, metric):
+    return {"set": set_name, "metric": metric, "value": 0.99, "bound": 0.9, "kind": "floor", "op": ">=", "ok": True,
+            "unit": "share", "n": None, "interval": None}  # fmt: skip
+
+
+def test_a_crashed_floor_closes_once_its_set_passes():
+    """A floor that crashed (or lacked its input) before stating a check is stored under its test's name; the
+    passing run reports the real metrics. Every test of the set passing is what recovers it (TRIAGE.md step 6)."""
+    gh = FakeGitHub()
+    crashed = _report(_floor("dq", "price-train", "error", message="FileNotFoundError: dim_coffee.parquet"))
+    assert _sync(gh, crashed) == [("opened", "eval:dq", 1)]
+    passing = _report(_floor("dq", "price-train", "passed", [_ok("price/train", "weighted precision")]))
+    assert _sync(gh, passing) == [("closed", "eval:dq", 1)]
+
+
+def test_a_floor_read_from_its_message_closes_once_it_passes():
+    """bag_grams doesn't use floors(): its failure is parsed from the message, and a passing run reports no
+    checks at all, so its set passing closes the issue; a set that didn't pass keeps it open."""
+    gh = FakeGitHub()
+    parsed = {"set": "validation", "metric": "weighted accuracy", "value": 0.94, "bound": 0.956, "kind": "floor",
+              "op": ">=", "ok": False, "unit": "share", "n": None, "interval": None}  # fmt: skip
+    gate = {"set": None, "metric": "full-population accuracy", "value": 0.94, "bound": 0.95, "kind": "floor",
+            "op": ">=", "ok": False, "unit": "share", "n": None, "interval": None}  # fmt: skip
+    failed = _report(
+        _floor("bag_grams", "validation", "failed", [parsed]),
+        {"nodeid": "tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate",
+         "eval": "bag_grams", "set": "full_population_accuracy_meets_the_gate", "outcome": "failed",
+         "checks": [gate | {"set": "full_population_accuracy_meets_the_gate"}], "message": "", "private": False},
+    )  # fmt: skip
+    assert _sync(gh, failed) == [("opened", "eval:bag_grams", 1)]
+    validation_only = _report(
+        _floor("bag_grams", "validation", "passed"),
+        {"nodeid": "tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate",
+         "eval": "bag_grams", "set": "full_population_accuracy_meets_the_gate", "outcome": "failed",
+         "checks": [gate | {"set": "full_population_accuracy_meets_the_gate"}], "message": "", "private": False},
+    )  # fmt: skip
+    assert _sync(gh, validation_only) == [("updated", "eval:bag_grams", 1)]
+    all_pass = _report(
+        _floor("bag_grams", "validation", "passed"),
+        {"nodeid": "tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate",
+         "eval": "bag_grams", "set": "full_population_accuracy_meets_the_gate", "outcome": "passed",
+         "checks": [], "message": "", "private": False},
+    )  # fmt: skip
+    assert _sync(gh, all_pass) == [("closed", "eval:bag_grams", 1)]
+
+
 def test_ci_never_judges_the_private_evals_eval_floors_owns():
     """The reviewer's loop: eval-floors opens eval:origin; ci's report (whose private floors skipped) must not close
     it, so the next eval-floors run updates it instead of reopening it."""
@@ -344,6 +397,15 @@ def test_the_report_and_annotations_from_a_real_session(tmp_path):
             with floors("demo", name) as f:
                 f.at_least("accuracy", 0.9 if name == "train" else 0.99, 0.95, n=100, k=90 if name == "train" else 99)
 
+        @pytest.fixture
+        def broken_teardown():
+            yield
+            raise RuntimeError("teardown broke")
+
+        def test_teardown_after_a_miss(broken_teardown):
+            with floors("demo", "teardown") as f:
+                f.at_least("accuracy", 0.5, 0.95)
+
         def test_full_population_gate():
             assert 0.9412 >= 0.95, "full-population accuracy 0.9412 < 0.95 (README)"
 
@@ -371,6 +433,10 @@ def test_the_report_and_annotations_from_a_real_session(tmp_path):
     assert gate["eval"] == "demo" and gate["set"] == "full_population_gate"
     assert gate["checks"][0]["metric"] == "full-population accuracy" and gate["checks"][0]["value"] == 0.9412
     assert by["test_skipped"]["outcome"] == "skipped" and by["test_skipped"]["private"] is True
+    torn = by["test_teardown_after_a_miss"]  # the teardown error doesn't replace the floor's own failure
+    assert torn["outcome"] == "failed" and torn["message"].startswith(
+        "eval demo, set teardown: accuracy 50.00%"
+    )
     assert by["test_demo[train]"]["private"] is False
     assert not any(
         "test_units" in t["nodeid"] for t in doc["tests"]
@@ -384,7 +450,7 @@ def test_the_report_and_annotations_from_a_real_session(tmp_path):
 
     alerts = {a["key"]: a for a in triage.eval_alerts(doc, "ci", None, None)}
     assert alerts["eval:demo"]["firing"]
-    assert {c["set"] for c in alerts["eval:demo"]["checks"]} == {"train", "full_population_gate"}
+    assert {c["set"] for c in alerts["eval:demo"]["checks"]} == {"train", "teardown", "full_population_gate"}
 
 
 def test_ci_opens_no_pipeline_issue_for_a_missing_report():

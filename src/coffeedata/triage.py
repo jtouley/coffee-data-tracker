@@ -312,7 +312,11 @@ def sync(
         if not a["firing"]:
             if issue and issue["state"] == "open":
                 was = json.loads(_read_marker(issue.get("body"), "failing") or "[]")
-                if not set(was) <= _passed_names(a):
+                passed, sets = _passed_names(a), set(a.get("passed_sets", []))
+                # a stored check counts as recovered when it passed again, or when every test of its set passed
+                # (a crashed floor is stored under its test's name, and a floor read from its message reports no
+                # checks when it passes: the set passing is all a run can say)
+                if not all(n in passed or n.split("|", 1)[0] in sets for n in was):
                     continue  # a check that failed wasn't measured this time: nothing is known to have recovered
                 gh.comment(issue["number"], f"Recovered: every check passed in {run}. Closing.")
                 gh.update(issue["number"], state="closed", state_reason="completed")
@@ -411,14 +415,27 @@ def eval_alerts(
                     "unit": c.get("unit"), "interval": c.get("interval"),
                 })  # fmt: skip
         source = ts[0]["nodeid"].split("::")[0]
+        # every name a set goes by (its checks' set, the test's parameter) whose tests all passed in this run
+        names: dict[str, set[str]] = {}
+        for t in measured:
+            for set_name in {t["set"], _param(t["nodeid"]), *(c.get("set") for c in t["checks"])} - {None}:
+                names.setdefault(set_name, set()).add(t["outcome"])
+        passed_sets = sorted(n for n, outcomes in names.items() if outcomes == {"passed"})
         sets = sorted({c["set"] for c in checks if c["status"] not in OK})
         out.append({
             "key": f"eval:{name}", "kind": "eval", "title": f"eval regression: {name}", "severity": "critical",
             "firing": bool(bad), "checks": checks, "source": source, "context": ctx,
             "summary": f"The {name} eval failed on {', '.join(sets)} in {workflow}." if bad else "",
-            "messages": messages,
+            "messages": messages, "passed_sets": passed_sets,
         })  # fmt: skip
     return out
+
+
+def _param(nodeid: str) -> str | None:
+    """The test's parameter ("...[train]" is train), as tests/evalfloor.py names a set, else its own name."""
+    if nodeid.endswith("]") and "[" in nodeid:
+        return nodeid[nodeid.rindex("[") + 1 : -1]
+    return nodeid.rsplit("::", 1)[-1].removeprefix("test_")
 
 
 def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) -> list[dict]:

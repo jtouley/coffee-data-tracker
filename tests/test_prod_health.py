@@ -373,6 +373,26 @@ def test_an_acknowledged_change_is_reported_not_paged():
     )
 
 
+def test_a_fixed_bound_is_never_acknowledged(cfg):
+    """A metric with no baseline (freshness, a band test, the classifier) can't be measured against `by`: an entry
+    for it never matches, whatever its size."""
+    entry = {"metric": "fill:classifier", "change": "down", "by": 1.0, "from_run": "2026-01-01",
+             "until_run": "2026-12-31", "pr": 1, "why": "test"}  # fmt: skip
+    r = next(
+        r
+        for r in ph.judge({"fill:classifier": 0.1}, cfg, [entry], "2026-11-16")
+        if r["metric"] == "fill:classifier"
+    )
+    assert r["status"] == "warning"
+
+
+def test_a_listed_coffee_with_no_platform_keeps_the_catalog_wide_numbers(tmp_path):
+    rows = [_coffee(i) for i in range(9)] + [_coffee(99, platform=None, origin=None)]
+    x = ph.release_metrics(_write(tmp_path / "d.parquet", rows))
+    assert x["rows:listed"] == 10 and x["fill:origin"] == 0.9
+    assert x["rows:listed:unknown"] == 1 and x["fill:origin:unknown"] == 0.0 and x["rows:listed:shopify"] == 9
+
+
 def test_the_expected_shifts_file_is_well_formed(tmp_path):
     assert all(e["pr"] for e in ph.load_expected())
     bad = tmp_path / "x.toml"

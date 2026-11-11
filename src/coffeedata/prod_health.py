@@ -113,14 +113,19 @@ def release_metrics(dim_coffee: Path) -> dict[str, float]:
     exprs = [f'avg(({sql})::int) as "fill:{r}"' for r, sql in rules.items()]
     if "enrichment_method" in cols:
         exprs += [f'avg(({sql})::int) as "abstain:{r}"' for r, sql in ABSTAIN.items()]
-    q = f"select platform, count(*) as n, {', '.join(exprs)} from {_read(dim_coffee)} where {_listed(cols)}"
+    # grouping(platform) tells the catalog-wide row from a platform's; a listed coffee with no platform is its own
+    # "unknown" row, never mistaken for the whole catalog
+    q = (
+        f"select grouping(platform) as overall, coalesce(platform, 'unknown') as platform, count(*) as n, "
+        f"{', '.join(exprs)} from {_read(dim_coffee)} where {_listed(cols)}"
+    )
     out: dict[str, float] = {}
     rows = con.execute(q + " group by grouping sets ((platform), ())").fetchall()
     names = [d[0] for d in con.description]
     for row in rows:
         rec = dict(zip(names, row, strict=True))
-        platform = rec.pop("platform")
-        suffix = "" if platform is None else f":{platform}"
+        platform, overall = rec.pop("platform"), rec.pop("overall")
+        suffix = "" if overall else f":{platform}"
         out[f"rows:listed{suffix}"] = float(rec.pop("n"))
         for k, v in rec.items():
             if v is not None:
@@ -307,7 +312,8 @@ def _expected(r: dict[str, Any], expected: list[dict[str, Any]], run_date: str |
         if e["change"] not in (way, "either"):
             continue
         base = r.get("baseline")
-        if base is None or abs(r["value"] - base) <= float(e["by"]):
+        # a metric with a fixed bound has no baseline to measure the move from: never acknowledged, at any size
+        if base is not None and abs(r["value"] - base) <= float(e["by"]):
             return e
     return None
 
@@ -434,7 +440,8 @@ def summary(measured: dict[str, Any], results: list[dict[str, Any]]) -> str:
 #   - a relative drop from the median (REL), so a 3-point drop on a 96% fill rate warns;
 #   - K_SE binomial standard errors at the population size n, so a small platform isn't paged on noise;
 #   - K_MAD robust standard deviations of the history (1.4826 x MAD), for metrics that move week to week.
-# A low-fill platform keeps an absolute floor: a drop of a quarter always warns and of 55% (a halving) is critical.
+# A low-fill platform keeps an absolute floor: a drop of a quarter always warns, and of more than 45% (so a
+# halving) is critical.
 # Shares that should stay near 0 (abstain, changed) use an absolute margin instead; ratios centre on 1, median shifts
 # on 0.
 REL = {"warning": 0.03, "critical": 0.10}

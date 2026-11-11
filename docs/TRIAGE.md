@@ -21,7 +21,9 @@ Issues API outage can't turn ci red. The release gate stays the dbt tests in `co
 - [ ] 4. Use the section below for the issue's label (`eval-regression` or `prod-health`) and key.
 - [ ] 5. Critical `prod-health` that no change explains: decide on a rollback today
       ([When to roll back](#when-to-roll-back)).
-- [ ] 6. Fix the cause. The next run closes the issue. Don't close it by hand while the check still fails.
+- [ ] 6. Fix the cause. The next run that measures it closes the issue: every check it failed on passes again, or
+      (for a floor that crashed, or one read from its message such as bag_grams) every test of that set passes.
+      Don't close it by hand while the check still fails.
 
 ## Where alerts come from
 
@@ -198,6 +200,8 @@ the test run's report (`EVAL_REPORT`, `tests/evalfloor.py`) and never copy them.
 - The alert jobs use `GITHUB_TOKEN` with `issues: write` and `contents: read` only, install nothing, and run main's
   `coffeedata/triage.py`, which uses only the standard library. eval-alerts' job also has `actions: read`, to
   download that one ci run's report.
+- eval-alerts skips a ci run that isn't on main's tip. If the tip's own ci fails before its tests (lint), the
+  floors' alert waits for the next commit that reaches them, so it is delayed, never lost. This is left as is.
 - They never run on a pull request, so no PR code runs with the token. eval-alerts runs on `workflow_run`, which
   always uses main's workflow and code. It acts only for ci's push runs on main in this repository, downloads only
   that run's artifact (by its id), and alerts only when that run is on main's current tip.

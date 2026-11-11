@@ -165,6 +165,8 @@ def pytest_runtest_logreport(report):
     if report.skipped:
         r["outcome"] = "skipped"
     elif report.failed:
+        if report.when == "teardown" and r["outcome"] in ("failed", "error"):
+            return  # a teardown error after a failed floor keeps the floor's own message
         r["outcome"] = "failed" if report.when == "call" else "error"
         crash = getattr(getattr(report.longrepr, "reprcrash", None), "message", None) or str(report.longrepr)
         r["message"] = crash.removeprefix("AssertionError: ")[:2000]
