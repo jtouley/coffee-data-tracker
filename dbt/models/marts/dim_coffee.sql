@@ -103,3 +103,9 @@ join {{ ref('stg_runs') }} run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)
+-- One store's coffees once: an alias's (int_roaster_state: another roaster_id serves the same store) are the
+-- canonical id's own products, so every consumer of this table (the public tables, the marts, the quality tests,
+-- dim_roaster's counts) counts the canonical id's alone.
+where l.roaster_id not in (
+    select roaster_id from {{ ref('int_roaster_state') }} where roaster_id <> canonical_roaster_id
+)

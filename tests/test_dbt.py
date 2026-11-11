@@ -287,8 +287,11 @@ def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_
         r[0]: r[1:]
         for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster").fetchall()
     }
-    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
-    assert {k: v[0] for k, v in dbt.items()} == py
+    py = {
+        s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+        for s in registry.current(lake, FIX / "roasters.csv")
+    }
+    assert dbt == py
     assert dbt[alias] == ("alias", main) and dbt[main] == ("active", main)
     assert [
         r[0]
@@ -299,6 +302,54 @@ def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_
     for t in ("public_coffee", "public_price_event"):
         assert con.execute(f"select count(*) from {t} where roaster_id = ?", [alias]).fetchone() == (0,), t
     assert con.execute("select count(*) from public_coffee where roaster_id = ?", [main]).fetchone() == (2,)
+
+
+def test_a_store_keeps_its_alias_through_an_outage_a_week_without_coffee_and_an_opt_out(lake, tmp_path):
+    """Review of #137 (H1, M7): grouping never reads the crawl status, so the canonical id going unreachable, then
+    reading no coffee, then opting out never makes its alias a store of its own again. Each time the build passes
+    (public_roasters_unique_by_host and roaster_aliases_resolve are error tests), the alias is never crawled or
+    public, and Python's state agrees with dbt's on every roaster's status and canonical id."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+
+    def registry_row(rid, **kw):
+        lake.write(
+            "registry",
+            f"registry/source=overture/{rid}-{len(kw)}.parquet",
+            [{"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "overture", "roaster_id": rid, "name": rid}
+             | kw],
+        )  # fmt: skip
+
+    registry_row(alias)
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    run(lake, "2026-10-12", alias, [product("A", 20.0)])  # both read before the change
+    probe(lake, "2026-10-13", alias, final_host="www.intelligentsia.com")
+
+    def check(expected_main_status):
+        con = build(lake, tmp_path)
+        dbt = {r[0]: r[1:] for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster")
+               .fetchall()}  # fmt: skip
+        py = {s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+              for s in registry.current(lake, FIX / "roasters.csv")}  # fmt: skip
+        assert dbt == py
+        assert dbt[main] == (expected_main_status, main) and dbt[alias] == ("alias", main)
+        assert con.execute(
+            "select count(*) from public_roaster where roaster_id = ?", [alias]
+        ).fetchone() == (0,)
+        assert con.execute("select count(*) from dim_coffee where roaster_id = ?", [alias]).fetchone() == (0,)
+        con.close()
+        assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-30")[0]}
+
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # the canonical store is down for 3 runs
+    check("unreachable")
+    run(lake, "2026-11-09", main, [product("M", coffee=False)])  # back, with only a mug for sale
+    check("no_coffee")
+    registry_row(main, opted_out=True)  # the store opts out: its other domain stays out too
+    check("opted_out")
 
 
 def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
@@ -774,7 +825,8 @@ def test_every_roaster_status_has_a_coverage_label():
 
     from coffeedata import site
 
-    sql = (ROOT / "dbt" / "models" / "marts" / "dim_roaster.sql").read_text()
+    # dim_roaster's status is decided in int_roaster_state
+    sql = (ROOT / "dbt" / "models" / "intermediate" / "int_roaster_state.sql").read_text()
     statuses = set(re.findall(r"(?:then|else) '(\w+)'", sql))
     assert statuses and statuses == set(site.STATUS_LABELS)
 
@@ -794,7 +846,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=14 " in r.stdout
+    assert "PASS=15 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
