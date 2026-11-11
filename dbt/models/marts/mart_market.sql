@@ -4,8 +4,6 @@ with c as (
     select * from {{ ref('int_current_catalog') }}
     -- US roasters only, as the public tables: the market is the US one
     where not is_wholesale and not is_blend and origin_country is not null and not is_chain and roaster_country = 'US'
-      -- one store counted once: not an alias's copy of its canonical id's catalog (dim_roaster.canonical_roaster_id)
-      and roaster_id not in (select roaster_id from {{ ref('dim_roaster') }} where roaster_id <> canonical_roaster_id)
 ),
 notes as (
     select origin_country, note, count(*) as n

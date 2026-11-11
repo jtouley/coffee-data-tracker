@@ -173,11 +173,13 @@ customProperties:
         outcome: >-
           35 stores were published twice or three times, under 71 roaster_ids: a second domain (an old name, a
           café's domain, a rebrand) that redirects to the store's own. A roaster_id whose resolved host has the same
-          key as an active roaster's (lower case, without www/shop/store) is now an alias: never crawled, never
+          key as another roaster's (lower case, without www/shop/store) is now an alias: never crawled, never
           public, with its coffees and price events (the same store's products, which the canonical id carries
-          under its own coffee_ids; no history is moved across). The canonical id is the one already read, then the
-          one equal to the host, then curated, then the earliest added. White-label stores (one supplier's catalog
-          sold by separate businesses on their own domains) are separate stores and stay. public-catalog contract
+          under its own coffee_ids; no history is moved across). Grouping never reads the crawl status (an outage
+          never splits a store) and skips shared hosts (parked, shorteners, platforms); the canonical id is sticky:
+          an opted-out one, then a publishable one, then the one read first, then the one equal to the host.
+          White-label stores (one supplier's catalog sold by separate businesses on their own domains) are separate
+          stores and stay. public-catalog contract
           2.6.0, a minor version: a quality rule added (tests/public_roasters_unique_by_host.sql, error), fewer
           rows, no table, column, type or enum changed, so Snowflake needs no migrate. Measured in
           eval/roaster_dedup (main against the change, on held-out roaster pairs).

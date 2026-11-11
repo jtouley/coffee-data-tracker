@@ -267,11 +267,17 @@ def cmd_probe(args: argparse.Namespace) -> None:
         raise
     ok = sum(r["status"] == "ok" for r in rows)
     left_over = len(todo) - len(rows)
+    # Probed roasters that are now aliases of another roaster's store (the state after this probe's rows, so the
+    # crawl's own rule): never crawled or published. Only a report: a failure to read it never fails the probe.
+    try:
+        same = registry.same_store([r["roaster_id"] for r in rows], states, registry.current(lake))
+    except Exception as e:  # noqa: BLE001
+        logging.warning("probe: the same-store report failed: %s", e)
+        same = {}
     detail = control.detail_of(job) | {
         "probed": len(rows),
         "by_status": dict(Counter(r["status"] for r in rows)),
-        # Roasters whose site resolved to an active roaster's store: aliases from now on, never crawled (STATE_SQL).
-        "same_store": registry.same_store(rows, states),
+        "same_store": same,
         "files": len(files),
         "minutes": round((time.monotonic() - t0) / 60, 1),
     }
@@ -291,7 +297,7 @@ def cmd_probe(args: argparse.Namespace) -> None:
     )
     if detail["same_store"]:
         print(
-            f"{len(detail['same_store'])} probed roaster(s) serve an active roaster's store and are aliases of it "
+            f"{len(detail['same_store'])} probed roaster(s) serve another roaster's store and are aliases of it "
             "(not crawled): " + ", ".join(f"{a} -> {b}" for a, b in list(detail["same_store"].items())[:20])
         )
 

@@ -36,40 +36,21 @@ SEED_FIELDS = [
     "alias_of",  # hand-checked: the roaster_id that serves this same store (a rebrand that doesn't redirect)
 ]
 
-# Hosts that are never a roaster's own storefront (full suffixes).
-NOT_A_ROASTER_SITE = (
-    "facebook.com",
-    "instagram.com",
-    "yelp.com",
-    "linktr.ee",
-    "toasttab.com",
-    "google.com",
-    "business.site",
-    "square.site",
-    "squareup.com",
-    "order.online",
-    "doordash.com",
-    "ubereats.com",
-    "grubhub.com",
-    "tiktok.com",
-    "twitter.com",
-    "x.com",
-    "linkedin.com",
-    "tripadvisor.com",
-    "mapquest.com",
-    "youtube.com",
-    "clover.com",
-    "wixsite.com",
-    "godaddysites.com",
-    "weebly.com",
-    "blogspot.com",
-    "wordpress.com",
-    "gmail.com",
-    # Ordering vendors that Overture lists as a cafe's website (crawl 2026-11-02): Per Diem's own site, for Java
-    # House's North Liberty location (Java House is thejavahouse.com), and Spoon's ordering marketplace.
-    "tryperdiem.com",
-    "orderspoon.com",
-)
+ROOT = Path(__file__).resolve().parents[2]
+# Hosts many unrelated domains resolve to, one list for dbt and the crawl: dbt's seed shared_hosts (kinds
+# not_a_roaster, platform, parked, shortener, directory; a host covers its subdomains). Sharing one is no evidence of
+# one store, so such a host never groups roasters (dbt/macros/roaster_alias.sql).
+SHARED_HOSTS_CSV = ROOT / "dbt" / "seeds" / "shared_hosts.csv"
+
+
+def _shared_hosts() -> list[dict]:
+    with SHARED_HOSTS_CSV.open(newline="") as f:
+        return list(csv.DictReader(f))
+
+
+# Hosts that are never a roaster's own storefront (full suffixes): the seed's not_a_roaster rows (social, listing and
+# ordering sites; its note column says why an entry is there).
+NOT_A_ROASTER_SITE = tuple(r["host"] for r in _shared_hosts() if r["kind"] == "not_a_roaster")
 
 MAX_FAILURES = 3
 
@@ -82,14 +63,21 @@ def normalize_domain(d: str) -> str:
 
 def host_key(host: str) -> str:
     """One store's key from a resolved host: normalize_domain (www.Jonescoffeeroasters.com and jonescoffeeroasters.com
-    are one store). HOST_KEY_SQL (and dbt's host_key macro) is the same rule in SQL."""
+    are one store). dbt's host_key macro (dbt/macros/roaster_alias.sql) is the same rule in SQL; tests/test_registry.py
+    checks the two agree."""
     return normalize_domain(host)
 
 
-# host_key in SQL, for STATE_SQL; dbt/macros/roaster_alias.sql is the same expression.
-HOST_KEY_SQL = (
-    r"regexp_replace(rtrim(split_part(lower({h}), ':', 1), '.'), '^(www\d?|locations|shop|store)\.', '')"
-)
+ALIAS_MACROS = ROOT / "dbt" / "macros" / "roaster_alias.sql"
+
+
+def alias_macros():
+    """dbt/macros/roaster_alias.sql as a jinja2 module (host_key, is_shared_host, is_publishable, roaster_canonical):
+    the one statement of the alias rule, which dbt calls in int_roaster_state and STATE_SQL renders here."""
+    import jinja2
+
+    env = jinja2.Environment(undefined=jinja2.StrictUndefined, autoescape=False)
+    return env.from_string(ALIAS_MACROS.read_text()).module
 
 
 def not_a_roaster_site(domain: str) -> bool:
@@ -114,24 +102,37 @@ with seed as (
            coalesce(try_cast(locations as integer), 1) as locations, coalesce(is_chain, 'false') = 'true' as is_chain,
            coalesce(opted_out, 'false') = 'true' as opted_out, nullif(final_host, '') as final_host,
            nullif(platform, '') as platform, try_cast(nullif(last_probed, '') as date) as last_probed,
-           coalesce(sources, '') as sources, nullif(lower(trim(alias_of)), '') as alias_of
+           sources, nullif(country, '') as country, nullif(lower(trim(alias_of)), '') as alias_of
     from read_csv(?, header = true, all_varchar = true)
 ),
 added as (
     -- ties broken as in dbt's stg_registry and dim_roaster, so the two always agree
     select roaster_id, arg_max(name, (added_at, name)) as name, arg_max(city, (added_at, city)) as city,
            arg_max(state, (added_at, state)) as state, max(locations) as locations, bool_or(opted_out) as opted_out,
-           min(added_at) as first_added
+           string_agg(distinct source, '+' order by source) as sources, min(added_at) as first_added
     from {registry} where roaster_id is not null group by roaster_id
 ),
+-- Hosts many unrelated domains resolve to (dbt's seed shared_hosts); not_a_roaster ones are never a roaster.
+shared_hosts as (select host, kind from read_csv('{shared_hosts}', header = true, all_varchar = true)),
 roasters as (
     select coalesce(s.roaster_id, a.roaster_id) as roaster_id, coalesce(a.name, s.name) as name,
            coalesce(a.city, s.city) as city, coalesce(a.state, s.state) as state,
            coalesce(s.locations, a.locations, 1) as locations, coalesce(s.is_chain, false) as is_chain,
            coalesce(a.opted_out, false) or coalesce(s.opted_out, false) as opted_out,
            s.final_host as seed_host, s.platform as seed_platform, s.last_probed as seed_probed,
-           s.sources, s.alias_of, a.first_added
+           concat_ws('+', s.sources, a.sources) as sources, coalesce(s.country, 'US') as country, s.alias_of,
+           a.first_added
     from seed s full outer join added a using (roaster_id)
+    -- Dropped before the state and the stores are decided, so a dropped roaster never groups, as alias or
+    -- canonical: a platform or vendor site (NOT_A_ROASTER_SITE: an older seed or a lake registry row), and any
+    -- roaster the caller drops (registry.current's `dropped`: the admin's "not a roaster" flags, which dbt drops in
+    -- stg_registry). dbt keeps NOT_A_ROASTER_SITE ids in dim_roaster, but the alias rule never groups them either
+    -- (macro roaster_canonical: a shared host), so both sides decide every other roaster's store alike.
+    where not exists (
+        select 1 from shared_hosts sh
+        where sh.kind = 'not_a_roaster'
+          and (coalesce(s.roaster_id, a.roaster_id) = sh.host or ends_with(coalesce(s.roaster_id, a.roaster_id), '.' || sh.host))
+    ){dropped}
 ),
 -- A probe whose robots.txt didn't answer is no answer about the site: it doesn't count as probed, so the next
 -- probe run (stale-probe selection reads last_probed) tries the roaster again.
@@ -148,12 +149,15 @@ fetches as (select * from {fetches} where roaster_id is not null),
 -- Failure streaks count runs, not attempts: a run is ok if any attempt in it succeeded.
 runs as (
     select roaster_id, run_date, bool_or(status = 'ok') as ok, max(fetched_at) as last_at,
+           max(products) filter (where status = 'ok') as products,
            row_number() over (partition by roaster_id order by run_date desc) as rn
     from fetches group by roaster_id, run_date
 ),
 recent as (
     select roaster_id, count(*) filter (where rn <= {k}) as attempts,
-           count(*) filter (where rn <= {k} and not ok) as errors, max(last_at) as last_fetch
+           count(*) filter (where rn <= {k} and not ok) as errors, max(last_at) as last_fetch,
+           -- the first run that read a catalog (history: it only ever moves earlier), for the canonical id
+           min(run_date) filter (where ok and products > 0) as first_catalog_run
     from runs group by roaster_id
 ),
 last_ok as (
@@ -162,8 +166,8 @@ last_ok as (
 ),
 base as (
 select
-    r.roaster_id, r.name, r.city, r.state, r.locations, r.is_chain, r.opted_out, r.sources, r.alias_of,
-    r.first_added, coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
+    r.roaster_id, r.name, r.city, r.state, r.locations, r.is_chain, r.opted_out, r.sources, r.country, r.alias_of,
+    r.first_added, rc.first_catalog_run, coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
     -- A failed probe never erases a platform we already know; only fetch history decides unreachability.
     coalesce(g.platform, r.seed_platform) as platform,
     coalesce(cast(lp.probed_at as date), r.seed_probed) as last_probed,
@@ -185,41 +189,42 @@ left join recent rc using (roaster_id)
 left join last_ok lo using (roaster_id)
 left join last_ok_coffees lc using (roaster_id)  -- registered by connect_for_state
 ),
--- One store, one roaster_id, as dbt's dim_roaster decides it (its comment has the reasons): among active and pending
--- roasters with the same host key, the canonical id is one already read, then the id equal to the key, then one
--- whose first label is the key's, then a curated one (the seed's sources: only the seed lists curated roasters),
--- the earliest added, the first by name; a hand-checked alias_of overrides the host. Any other is an alias: never
--- crawled (not in ingest.INGESTABLE), still probed, so it becomes its own store again if its redirect ends.
-host_groups as (
-    select roaster_id,
-           first_value(roaster_id) over (
-               partition by {hk}
-               order by status = 'active' desc, roaster_id = {hk} desc,
-                        split_part(roaster_id, '.', 1) = split_part({hk}, '.', 1) desc,
-                        regexp_matches(coalesce(sources, ''), '(^|\+)curated') desc, first_added asc nulls last,
-                        roaster_id
-           ) as host_canonical
-    from base
-    where status in ('active', 'pending') and alias_of is null
+-- One store, one roaster_id: dbt/macros/roaster_alias.sql, rendered (alias_macros), so dbt's int_roaster_state
+-- decides the same. Any roaster but its store's canonical id is an alias: never crawled (ingest.crawlable), still
+-- probed, so it becomes its own store again if a later ok probe resolves it elsewhere.
+canonical as (
+{canonical}
 )
 select
     b.roaster_id, b.name, b.city, b.state, b.locations, b.is_chain, b.opted_out, b.host, b.platform, b.last_probed,
-    case when b.status <> 'opted_out' and coalesce(b.alias_of, h.host_canonical, b.roaster_id) <> b.roaster_id
-         then 'alias' else b.status end as status,
-    coalesce(b.alias_of, h.host_canonical, b.roaster_id) as canonical_roaster_id
+    case when b.status <> 'opted_out' and c.canonical_roaster_id <> b.roaster_id then 'alias' else b.status end
+        as status,
+    c.canonical_roaster_id
 from base b
-left join host_groups h using (roaster_id)
+join canonical c using (roaster_id)
 """
 
 
-def state_sql(lake: Lake) -> str:
+def state_sql(lake: Lake, dropped: frozenset[str] | set[str] = frozenset()) -> str:
     return STATE_SQL.format(
         registry=lake.scan("registry"),
         probes=lake.scan("probes"),
         fetches=lake.scan("fetches"),
         k=MAX_FAILURES,
-        hk=HOST_KEY_SQL.format(h="host"),
+        shared_hosts=_sql_str(str(SHARED_HOSTS_CSV)),
+        dropped=(
+            "\n    and coalesce(s.roaster_id, a.roaster_id) not in ("
+            + ", ".join(f"'{_sql_str(d)}'" for d in sorted(dropped))
+            + ")"
+            if dropped
+            else ""
+        ),
+        canonical=alias_macros().roaster_canonical("base", "shared_hosts"),
     )
+
+
+def _sql_str(v: str) -> str:
+    return v.replace("'", "''")
 
 
 # The products of each roaster's last ok fetch whose crawl recorded no coffee count (fetches.coffees is null: an ELT
@@ -259,22 +264,24 @@ def connect_for_state(lake: Lake):
     return con
 
 
-def same_store(probed: list[dict], states: list[RoasterState]) -> dict[str, str]:
-    """The probe's check for a domain that only adds a store twice: each probed roaster whose resolved host has the
-    key of a different active roaster's host, mapped to that roaster. Such a domain (a new one from discovery, often an
-    old or a café domain that redirects to the shop) is an alias from now on (STATE_SQL), so it is never crawled or
-    published; the probe job records the list (detail `same_store`) so the owner sees what discovery tried to add."""
-    active: dict[str, str] = {}
-    for s in sorted(states, key=lambda s: s.roaster.roaster_id):
-        if s.status == "active" and s.roaster.host:
-            active.setdefault(host_key(s.roaster.host), s.roaster.roaster_id)
+def same_store(probed: list[str], before: list[RoasterState], after: list[RoasterState]) -> dict[str, str]:
+    """The probe's report of a domain that only adds a store twice: each probed roaster that is an alias in the state
+    after the probe (registry.current, so the crawl's own rule) and wasn't one of the same store before, mapped to its
+    canonical id. Such a domain (often an old or a cafe domain that redirects to the shop) is never crawled or
+    published; the probe job records the list (detail `same_store`) so the owner sees what discovery tried to add. An
+    alias probed again and still an alias isn't listed again."""
+    was = {s.roaster.roaster_id: s.canonical_roaster_id for s in before if s.status == "alias"}
+    now = {s.roaster.roaster_id: s for s in after}
     out = {}
-    for row in probed:
-        rid, host = row.get("roaster_id"), row.get("final_host")
-        if rid and host and row.get("status") == "ok":
-            other = active.get(host_key(host))
-            if other and other != rid:
-                out[rid] = other
+    for rid in probed:
+        s = now.get(rid)
+        if (
+            s is not None
+            and s.status == "alias"
+            and s.canonical_roaster_id
+            and was.get(rid) != s.canonical_roaster_id
+        ):
+            out[rid] = s.canonical_roaster_id
     return dict(sorted(out.items()))
 
 
@@ -283,25 +290,26 @@ class RoasterState:
     roaster: Roaster
     status: str
     last_probed: str | None
+    # the roaster_id its store is crawled and published under (itself unless status is alias); None where unknown
+    canonical_roaster_id: str | None = None
 
 
-def current(lake: Lake, seed: Path = SEED) -> list[RoasterState]:
+def current(
+    lake: Lake, seed: Path = SEED, dropped: frozenset[str] | set[str] = frozenset()
+) -> list[RoasterState]:
     """Every roaster's state now. Retried on a transient connection error to a remote lake (lake.retry_transient):
-    it is each crawl job's first read of the hf:// lake."""
-    return retry_transient(_current, lake, seed)
+    it is each crawl job's first read of the hf:// lake. `dropped`: roaster_ids that are not roasters (the admin's
+    flags), left out before the stores are decided, as NOT_A_ROASTER_SITE hosts are."""
+    return retry_transient(_current, lake, seed, dropped)
 
 
-def _current(lake: Lake, seed: Path) -> list[RoasterState]:
+def _current(lake: Lake, seed: Path, dropped: frozenset[str] | set[str] = frozenset()) -> list[RoasterState]:
     con = connect_for_state(lake)
-    cur = con.execute(state_sql(lake) + " order by roaster_id", [str(seed)])
+    cur = con.execute(state_sql(lake, dropped) + " order by roaster_id", [str(seed)])
     cols = [d[0] for d in cur.description]
     out = []
     for row in cur.fetchall():
         r = dict(zip(cols, row, strict=True))
-        if not_a_roaster_site(r["roaster_id"]):
-            # a platform or vendor site (NOT_A_ROASTER_SITE), from an older seed or a lake registry row: never a
-            # roaster, so never crawled, whatever the lake still holds for it
-            continue
         roaster = Roaster(
             roaster_id=r["roaster_id"],
             name=r["name"] or r["roaster_id"],
@@ -311,5 +319,12 @@ def _current(lake: Lake, seed: Path) -> list[RoasterState]:
             platform=r["platform"] or "",
             is_chain=bool(r["is_chain"]),
         )
-        out.append(RoasterState(roaster, r["status"], str(r["last_probed"]) if r["last_probed"] else None))
+        out.append(
+            RoasterState(
+                roaster,
+                r["status"],
+                str(r["last_probed"]) if r["last_probed"] else None,
+                r["canonical_roaster_id"],
+            )
+        )
     return out

@@ -406,7 +406,7 @@ Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt 
     previous fetch (a platform whose fetches "succeed" with less, or a price wipe on one platform). Measured in
     `eval/dq`;
   - `public_roasters_unique_by_host` and `roaster_aliases_resolve`: one store is one public roaster. A roaster_id
-    whose site resolves to an active roaster's store (the same host, any case, without `www.`/`shop.`/`store.`) is
+    whose site resolves to another roaster's store (the same host, any case, without `www.`/`shop.`/`store.`) is
     an alias (`dim_roaster.status`, `canonical_roaster_id`): the crawl skips it and no public table lists it.
     A rebrand whose old domain doesn't redirect is set by hand (`alias_of` in `config/roasters.csv`). Measured in
     `eval/roaster_dedup`;

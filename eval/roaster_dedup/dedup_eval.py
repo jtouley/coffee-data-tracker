@@ -25,15 +25,18 @@ from pathlib import Path
 
 import duckdb
 
+from coffeedata import registry
+
 SALT = "coffeedata-roaster-dedup-2026-11-10"
 SETS = ("train", "validation", "test")
 LABELS = ("same_store", "different_store", "unsure")
 SEED = 20261110  # the samples of the sampled strata
 SAMPLE = {"C2": 60, "N1": 60, "R1": 40}
 
-HOST_KEY = (
-    r"regexp_replace(rtrim(split_part(lower(host), ':', 1), '.'), '^(www\d?|locations|shop|store)\.', '')"
-)
+# The change's own host key (dbt/macros/roaster_alias.sql, as registry renders it for the crawl). The split was drawn
+# with the round-1 expression (no scheme, path or leading-dot handling); on the 11-09 lake both give every roaster
+# the same key, so the sets are unchanged (README, Split).
+HOST_KEY = registry.alias_macros().host_key("host")
 NT = "trim(regexp_replace(lower(title), '[^a-z0-9]+', ' ', 'g'))"
 
 
