@@ -13,11 +13,11 @@ import pytest
 
 from coffeedata import registry
 
-from .lakehelp import probe, product, run
+from .lakehelp import needs_dbt, probe, product, run
 
 ROOT = Path(__file__).parent.parent
 FIX = Path(__file__).parent / "fixtures"
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+pytestmark = needs_dbt
 
 
 def run_dbt(lake, tmp_path, *args, **extra_vars):
@@ -256,6 +256,33 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
     assert dbt_status == py_status
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
+
+
+def test_python_and_dbt_agree_on_no_catalog_and_platformless_roasters(lake, tmp_path):
+    """The status CASE's last branches (registry.STATE_SQL and int_roaster_state): an ok fetch with no products is
+    no_catalog; a probe that answered with an HTTP error (platform http_<code>) or a roaster with no platform at all
+    is unreachable, however its fetches went."""
+    a, b, c = "onyxcoffeelab.com", "intelligentsia.com", "newroaster.example"
+    run(lake, "2026-10-19", a, [])  # ok, nothing listed
+    probe(lake, "2026-10-18", b, platform="http_404")
+    run(lake, "2026-10-19", b, [product("1")])  # even with an ok fetch of coffee
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [
+            {
+                "added_at": datetime(2026, 10, 1, tzinfo=UTC),
+                "source": "overture",
+                "roaster_id": c,
+                "name": "New",
+            }
+        ],
+    )  # never probed: no platform
+    con = build(lake, tmp_path)
+    dbt_status = dict(con.execute("select roaster_id, status from dim_roaster").fetchall())
+    py_status = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert dbt_status == py_status
+    assert (py_status[a], py_status[b], py_status[c]) == ("no_catalog", "unreachable", "unreachable")
 
 
 def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_path):
@@ -886,7 +913,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=15 " in r.stdout
+    assert "PASS=21 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1145,3 +1172,73 @@ def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_
     head, example = quality.tag_parity_messages(db)
     assert head.startswith("1 products decide differently on raw and decoded tags")
     assert example.startswith(f"{rid}:P 'Coffee P Roast': {', '.join(sorted(every))} differ")
+
+
+# Each error-severity guard that no input can trip through the models (its model's own filter already keeps such rows
+# out), with the bad row the guard exists to stop, written into the built table it reads.
+GUARD_BREAKS = {
+    "price_per_100g_in_range": "update dim_coffee set price_per_100g = 250 where product_id = 'A'",
+    "sane_coffee_listings": "update dim_coffee set title = 'Replacement Burrs' where product_id = 'A'",
+    "unique_runs": "insert into stg_runs select * from stg_runs limit 1",
+    "public_tables_are_facts_only": "alter table public_coffee add column tags varchar[]",
+}
+
+
+def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path):
+    """price_per_100g_in_range, sane_coffee_listings, unique_runs and public_tables_are_facts_only pass on every
+    synthetic build, since the models never produce such a row. Each is made to fail here, so a guard that stopped
+    selecting anything (a renamed column, a dropped ref) would show."""
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    run(lake, "2026-10-19", rid, [product("A"), product("B", 18.0)])
+    build(lake, tmp_path).close()
+    db = tmp_path / "coffee.duckdb"
+    clean = tmp_path / "clean.duckdb"
+    shutil.copy(db, clean)
+    for guard, break_it in GUARD_BREAKS.items():
+        ok = run_dbt(lake, tmp_path, "test", "--select", guard)
+        assert ok.returncode == 0 and "PASS=1 " in ok.stdout, (guard, ok.stdout[-2000:])
+        with duckdb.connect(str(db)) as con:
+            con.execute(break_it)
+        bad = run_dbt(lake, tmp_path, "test", "--select", guard)
+        assert bad.returncode != 0 and "ERROR=1 " in bad.stdout, (guard, bad.stdout[-2000:])
+        shutil.copy(clean, db)
+
+
+def test_a_chains_coffees_leave_the_market_and_the_site_catalog_but_not_the_weekly_table(lake, tmp_path):
+    """is_chain (the seed's flag): mart_market and the site's catalog, origin and reach figures leave a chain's coffees
+    out. public_market_weekly reads public_coffee, which has no is_chain, so it counts them (pinned as it is today)."""
+    import csv
+
+    from coffeedata import site
+
+    config = tmp_path / "config"
+    config.mkdir()
+    with (FIX / "roasters.csv").open() as f:
+        rows = list(csv.DictReader(f))
+    for r in rows:
+        r["is_chain"] = "true" if r["roaster_id"] == "intelligentsia.com" else r["is_chain"]
+    with (config / "roasters.csv").open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w.writeheader()
+        w.writerows(rows)
+    for rid, title in (("onyxcoffeelab.com", "Kenya Kiambu"), ("intelligentsia.com", "Kenya Gichathaini")):
+        probe(lake, "2026-10-18", rid)
+        run(lake, "2026-10-19", rid, [product("A", title=title)])
+    con = build(lake, tmp_path, config_dir=str(config), build_id="20261020T060000-abcdef", as_of_run="2026-10-19",
+                **ANY_RUN)  # fmt: skip
+    assert dict(con.execute("select roaster_id, is_chain from dim_coffee").fetchall()) == {
+        "onyxcoffeelab.com": False, "intelligentsia.com": True}  # fmt: skip
+    assert con.execute(
+        "select coffees, roasters from mart_market where origin_country = 'Kenya'"
+    ).fetchall() == [(1, 1)]
+    assert con.execute(
+        "select coffees, roasters from public_market_weekly where origin_country = 'Kenya'"
+    ).fetchall() == [(2, 2)]
+    con.close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]} == {
+        "onyxcoffeelab.com"
+    }

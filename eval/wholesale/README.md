@@ -14,6 +14,10 @@ requires, and the test set was scored twice. Both are explained below.
   versions, 51 roasters) and the output of `is_wholesale` of none: built from main and from the change on a local copy
   of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were identical.
 
+## Floor
+
+`tests/test_wholesale_accuracy.py` (CLAUDE.md step 8). `eval/floor_inputs.py` rebuilds `work/population.json` from the lake at df57f62 and checks it against `SHA256SUMS`'s hash; CI's eval-floors job runs the floor with it, so the floor no longer skips in CI (`docs/RULES.md`).
+
 ## Data
 
 - **Lake snapshot:** `hf://datasets/jtouley/coffee-data` at revision `df57f62`, copied into a local, read-only

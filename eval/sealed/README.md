@@ -4,6 +4,8 @@
 train or validation sets in `tests/fixtures/classifier_labels.jsonl`. Each was labeled twice, independently, by Claude subagents
 against `GUIDE.md`, without seeing any prediction; a third labeler settled the 14 disagreements (`settled.json`).
 
+**Floor (since 2026-11-11).** The set was scored once (RESULTS.md) and is now a regression fixture: `tests/test_sealed_accuracy.py` holds `products.decide` over Claude's frozen verdicts to a stratum-weighted accuracy of 0.982, and the rules alone to 0.940.
+
 Rules for using it:
 
 - Don't read the products or labels to tune rules, prompts or model choice. Choose on the validation set.

@@ -4,7 +4,6 @@ the build records and mart history that `coffeedata build-diff` compares."""
 import argparse
 import json
 import re
-import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -14,10 +13,10 @@ import pytest
 from coffeedata import quality
 from coffeedata.lake import Lake
 
-from .lakehelp import manifest, old_file, product, run
+from .lakehelp import manifest, needs_dbt, old_file, product, run
 from .test_dbt import build, run_dbt
 
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+pytestmark = needs_dbt
 RID = "onyxcoffeelab.com"
 FULL = [product(str(i)) for i in range(40)]
 

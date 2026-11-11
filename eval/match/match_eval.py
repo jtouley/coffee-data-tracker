@@ -52,15 +52,20 @@ def query(form: str, roaster: str, title: str) -> str:
     return title if form == "title" else f"{roaster} {title}"
 
 
-def split(lake_dir: str, data: Path) -> None:
-    cat = catalog(lake_dir)
+def draw(cat: dict[str, tuple[str, str, str]]) -> tuple[dict[str, list[str]], dict[str, list[str]]]:
+    """(every coffee per set, the PER_SET drawn per set), as `split` draws them (README, "Split")."""
     sets: dict[str, list[str]] = defaultdict(list)
     for cid, (rid, _, title) in cat.items():
         if not title.strip():
             continue  # nothing to type
         n = bucket(rid)
         sets["train" if n < 60 else "validation" if n < 80 else "test"].append(cid)
-    out = {name: sorted(keys, key=bucket)[:PER_SET] for name, keys in sets.items()}
+    return sets, {name: sorted(keys, key=bucket)[:PER_SET] for name, keys in sets.items()}
+
+
+def split(lake_dir: str, data: Path) -> None:
+    cat = catalog(lake_dir)
+    sets, out = draw(cat)
     data.mkdir(parents=True, exist_ok=True)
     (data / "split.json").write_text(json.dumps(out, indent=1))
     (HERE / "test_keys.txt").write_text("\n".join(out["test"]) + "\n")
@@ -80,7 +85,8 @@ def _predict(task: tuple[str, str]) -> tuple[str, str | None, float]:
     return task[0], got, time.perf_counter() - t
 
 
-def predict(lake_dir: str, data: Path, name: str, set_: str, out: Path | None) -> None:
+def run(lake_dir: str, keys: list[str]) -> list[tuple[str, str | None, float]]:
+    """match_coffee on both queries of each key, on every CPU: (key|form, prediction, seconds)."""
     global _lake
     from coffeedata import shots
     from coffeedata.lake import Lake
@@ -88,10 +94,25 @@ def predict(lake_dir: str, data: Path, name: str, set_: str, out: Path | None) -
     _lake = Lake(lake_dir)
     shots._index(_lake)  # load once, before the workers fork
     cat = catalog(lake_dir)
-    keys = json.loads((data / "split.json").read_text())[set_]
     tasks = [(f"{k}|{f}", query(f, cat[k][1], cat[k][2])) for k in keys for f in FORMS]
     with Pool() as pool:
-        results = pool.map(_predict, tasks, chunksize=8)
+        return pool.map(_predict, tasks, chunksize=8)
+
+
+def ambiguous_titles(cat: dict[str, tuple[str, str, str]]) -> set[str]:
+    """Normalized titles listed by more than one roaster: a title-only query can't say which is meant."""
+    roasters_by_title = defaultdict(set)
+    for _, r, t in cat.values():
+        if norm(t):
+            roasters_by_title[norm(t)].add(norm(r))
+    return {t for t, rs in roasters_by_title.items() if len(rs) > 1}
+
+
+def predict(lake_dir: str, data: Path, name: str, set_: str, out: Path | None) -> None:
+    from coffeedata import shots
+
+    keys = json.loads((data / "split.json").read_text())[set_]
+    results = run(lake_dir, keys)
     src = Path(shots.__file__).read_bytes()
     doc = {
         "name": name,
@@ -128,11 +149,7 @@ def score(lake_dir: str, data: Path, set_: str, preds: list[str], examples: int)
     if examples and set_ != "train":
         sys.exit("examples are shown for train only")
     cat = catalog(lake_dir)
-    roasters_by_title = defaultdict(set)
-    for _, r, t in cat.values():
-        if norm(t):
-            roasters_by_title[norm(t)].add(norm(r))
-    ambiguous = {t for t, rs in roasters_by_title.items() if len(rs) > 1}
+    ambiguous = ambiguous_titles(cat)
     folder = HERE if set_ == "test" else data
     docs = [json.loads((folder / f"pred_{p}_{set_}.json").read_text()) for p in preds]
     for doc in docs:

@@ -24,6 +24,10 @@ The review round (2026-11-11) changes no public row against the first round: the
 aliases out too (-993 and -6,369, the same rows). No other row of any public table differs (`except all` over every column but the release lineage); the market
 tables change only in their counts and prices (71 of 194 `public_market_weekly` cells).
 
+## Floor
+
+`tests/test_roaster_dedup_accuracy.py` holds the rule to the train and validation labels (CLAUDE.md step 8): every same-store pair called (29/29, 6/6) and no different-store pair called. Its input is the seed list in git (`config/roasters.csv`), so it runs in the test job.
+
 ## Data
 
 - The lake `hf://datasets/jtouley/coffee-data` at revision `f52838ec01c4002f0f84f994d23484eb8f797203`
@@ -133,6 +137,8 @@ judgement, and the guide restates the rule (above). A person's spot-check of the
 the labels are reused (as for the classifier eval's), at least the 39 `same_store` pairs and the H2 pairs. Wilson
 95% intervals; recall also weighted by stratum size (`strata.json`: C2, N1 and R1 are samples), the score
 command's `stratum-weighted`.
+
+Human spot-check (2026-11-11): the owner checked 20 train/validation pairs (8 labelled same store, 12 different), drawn by a fixed hash (`spotcheck-2026-11-11`). They agreed with all 20 labels. That includes lionheadcoffee.com · reconstructioncoffee.com, which both resolve to the parking host www.hugedomains.com and are different stores, and the rule never groups them because that host is in `shared_hosts`.
 
 | Set | Rule | Called same store | Precision | Confidently wrong | Recall | Weighted recall |
 | --- | --- | --- | --- | --- | --- | --- |

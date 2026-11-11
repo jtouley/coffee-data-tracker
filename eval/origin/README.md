@@ -12,6 +12,10 @@ is this one. Add each later change's count here.
   copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
   identical. 0 of them in the test set.
 
+## Floor
+
+`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): stratum-weighted agreement at least 0.959 and 0.836, wrong-country at most 0.040 and 0.160 (measured 2026-11-11, main 0cfa4d9; strata in `floor_strata.json`). Its listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and CI's eval-floors job runs it (`docs/RULES.md`).
+
 ## Data
 
 - Source: `hf://datasets/jtouley/coffee-data`, downloaded with `huggingface_hub.snapshot_download(repo_type=

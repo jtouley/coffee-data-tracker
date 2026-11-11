@@ -83,4 +83,5 @@ testpaths = ["tests"]
 pythonpath = ["."]
 markers = [
     "smoke: the fast CI smoke suite (`make smoke`): dbt, ingestion and web, on recorded fixtures, no network",
+    "private_eval: an accuracy floor over private lake inputs (eval/floor_inputs.py); CI's eval-floors job runs these",
 ]

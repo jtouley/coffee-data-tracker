@@ -20,9 +20,9 @@ import pytest
 from coffeedata import ingest, products, quality
 from coffeedata.lake import Lake
 
-from .lakehelp import at, manifest, probe, product, run
+from .lakehelp import at, manifest, needs_dbt, probe, product, run
 
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+pytestmark = needs_dbt
 WEEKS = ("2026-10-19", "2026-10-26")
 VERDICT_MODEL = "claude-test-model"
 ONYX = "onyxcoffeelab.com"
