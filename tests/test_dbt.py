@@ -1,5 +1,6 @@
 """Build the dbt project over a synthetic lake and check the derived history (the same SQL the weekly run uses)."""
 
+import hashlib
 import json
 import os
 import re
@@ -744,6 +745,111 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
     assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
 
 
+def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path):
+    """catalog.json is a published download, so it only gains columns: main's columns stay first, in their order, and
+    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches catalog.json?b=<a hash of the
+    file>, so a new page never reads a cached older file."""
+    from coffeedata import site
+
+    for rid in ("onyxcoffeelab.com", "1802roasters.com"):
+        run(lake, "2026-10-19", rid, [product("A"), product("B")])
+    build(lake, tmp_path, build_id="20261020T060000-abcdef", as_of_run="2026-10-19", **ANY_RUN).close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert list(catalog) == ["release", "columns", "rows"]
+    assert catalog["columns"] == [
+        "coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
+        "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
+        "roaster_id", "roaster_city",
+    ]  # fmt: skip
+    cols = catalog["columns"]
+    got = {tuple(r[cols.index(c)] for c in ("coffee_id", "roaster_id", "roaster_name", "roaster_state", "roaster_city"))
+           for r in catalog["rows"]}  # fmt: skip
+    # The fixture registry has no city for 1802 Roasters: left empty, not guessed.
+    assert got == {
+        ("onyxcoffeelab.com:A", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("onyxcoffeelab.com:B", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("1802roasters.com:A", "1802roasters.com", "1802 Roasters", "CA", None),
+        ("1802roasters.com:B", "1802roasters.com", "1802 Roasters", "CA", None),
+    }
+    page = (out / "catalog" / "index.html").read_text()
+    # The page asks for its own file by a hash of it, so a new page never gets a cached older one.
+    key = hashlib.sha256((out / "catalog" / "catalog.json").read_bytes()).hexdigest()[:12]
+    assert f'fetch("catalog.json?b={key}")' in page
+    assert '<select id="state" aria-label="Roaster state (number of roasters)">' in page
+    assert '<p class="note" id="count" role="status">' in page
+    assert '"MI": "Michigan"' in page and '["west virginia", "WV"]' in page
+    # The Dataset JSON-LD describes the download as it is.
+    assert "plus roaster_city" in page
+
+
+def test_the_sites_single_origin_definition_selects_public_market_weeklys_coffees(lake, tmp_path):
+    """site.SINGLE_ORIGIN, over the site's coffees, selects the same coffees public_market_weekly counts, cell for
+    cell, through every way a coffee leaves it: delisted, archived, wholesale, a blend, unknown origin (a sold-out
+    one stays). This lake has no chain roaster: the site leaves chains out, the table doesn't yet. So the page's origin count and its charts are the published table's, and a blend's origin list
+    ("Colombia, Brazil") is not an origin country."""
+    from coffeedata import site
+
+    rid = "onyxcoffeelab.com"
+    archived = product("A", title="Guatemala Huehuetenango", available=False) | {"tags": ["Archive"]}
+    products = [
+        product("K", title="Kenya Kamwangi AA Washed"),
+        product("E", title="Ethiopia Guji Natural", available=False),
+        product("B", title="Colombia Brazil House Blend"),
+        product("U", title="House Roast"),
+        product("W", title="Wholesale Kenya Kiambu 5LB"),
+        archived,
+    ]
+    probe(lake, "2026-10-11", rid)
+    run(lake, "2026-10-12", rid, [*products, product("D", title="Colombia Huila Washed")])
+    run(lake, "2026-10-19", rid, products)
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "llm1",
+        [
+            {
+                "extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+                "roaster_id": rid,
+                "product_id": "B",
+                "body_hash": "bB",
+                "method": "llm",
+                "needs_llm": False,
+                "origin_country": "Colombia, Brazil",
+                "is_blend": True,
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    # Each way out is really in the fixture.
+    got = {
+        r[0]: r[1:]
+        for r in con.execute(
+            "select product_id, is_listed, catalog_status, is_wholesale, is_blend, origin_country from dim_coffee"
+        ).fetchall()
+    }
+    assert got["D"][0] is False and got["A"][1] == "archived" and got["W"][2] is True
+    assert got["B"][3] is True and got["U"][4] is None and got["E"][1] == "sold_out"
+    cells = "select origin_country, coalesce(process, 'unknown'), count(*), count(*) filter (where in_stock)"
+    for view in site.SITE_VIEWS:
+        con.execute(view)
+    by_site = con.execute(f"{cells} from site_coffee where {site.SINGLE_ORIGIN} group by all").fetchall()
+    by_table = con.execute(
+        "select origin_country, process, coffees, in_stock from public_market_weekly"
+    ).fetchall()
+    assert sorted(by_site) == sorted(by_table) and {r[0] for r in by_table} == {"Kenya", "Ethiopia"}
+    con.close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    landing = (out / "index.html").read_text()
+    assert re.search(r'<div class="n">2</div><div class="l">origin countries</div>', landing)
+    assert re.search(r'<div class="n">4</div><div class="l">coffees listed</div>', landing)  # K, E, B, U
+    assert "Kenya: 1 coffees in stock" in landing and "Colombia, Brazil" not in landing
+    # The catalog page's process chart counts the same in-stock single origins as the landing's origin chart.
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1"]
+
+
 # A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).
 ANY_RUN = {"min_attempted_share": 0, "min_ok_share": 0}
 
@@ -1296,8 +1402,8 @@ def _build_with_a_chain(lake, tmp_path):
 
 
 def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
-    """is_chain (the seed's flag): mart_market and the site's catalog, origin and reach figures leave a chain's coffees
-    out."""
+    """is_chain (the seed's flag): mart_market and everything on the site (the catalog, the headline counts, the
+    charts and the states) leave a chain's coffees out."""
     from coffeedata import site
 
     con = _build_with_a_chain(lake, tmp_path)
@@ -1313,6 +1419,13 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
     assert {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]} == {
         "onyxcoffeelab.com"
     }
+    assert not site.INCLUDE_CHAINS
+    landing = (out / "index.html").read_text()
+    for n, label in ((1, "coffees listed"), (1, "roasters with coffee listed"), (1, "origin countries")):
+        assert f'<div class="n">{n}</div><div class="l">{label}</div>' in landing
+    assert "Kenya: 1 coffees in stock" in landing and "Gichathaini" not in landing
+    # The process chart: the chain's in-stock Kenya isn't counted either.
+    assert re.findall(r": (\d+) coffees in stock", (out / "catalog" / "index.html").read_text()) == ["1"]
 
 
 # --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------

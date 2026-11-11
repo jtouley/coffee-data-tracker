@@ -26,6 +26,11 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
     consents/<user_id>__<time>.parquet                    one file per acceptance or marketing choice
     contacts/<user_id>__<time>.parquet                    the account's email, sealed (app/contacts.py)
 
+Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
+by dbt and never released:
+
+    raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
+
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
 
@@ -500,9 +505,29 @@ SCHEMAS["contacts"] = pa.schema(
     ]
 )
 
-# Tables that live in the photo dataset or the users dataset rather than the main lake.
+# Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
+# lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
+# empty), and its own page's URL. Columns about prices are left out; no page HTML or images. Private, in its own
+# dataset (Lake.importers()): never a dbt source, never released, backend-only (for internal use and a future roaster
+# portal, which may show only the normalized values). Stated fields and normalized values are derived from it at read
+# time (importers.offers), never stored, so a better rule re-derives the whole history.
+SCHEMAS["importer_raw"] = pa.schema(
+    [
+        ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
+        ("fetched_at", pa.timestamp("s", tz="UTC")),
+        ("importer", pa.string()),  # importers.IMPORTERS key
+        ("source_url", pa.string()),
+        ("parser_version", pa.string()),
+        ("row", pa.int32()),  # the lot's position in the page's table, from 0
+        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
+        ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
+    ]
+)
+
+# Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
 USER_TABLES = ("users", "invites", "consents", "contacts")
+IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -528,6 +553,7 @@ GLOBS = {
     "invites": "invites/*.parquet",
     "consents": "consents/*.parquet",
     "contacts": "contacts/*.parquet",
+    "importer_raw": "raw/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -555,11 +581,12 @@ SCHEMA_FILES = {
     "invites": "invites/invite_id=schema.parquet",
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
+    "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
 }
 PENDING_DELETES = (
     "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset
 )
-LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES)
+LAKE_TABLES = tuple(t for t in SCHEMA_FILES if t not in PHOTO_TABLES + USER_TABLES + IMPORTER_TABLES)
 
 
 _REMOTE_FOLDERS: dict[str, frozenset[str] | None] = {}
@@ -690,6 +717,12 @@ class Lake:
         """The private users dataset: COFFEEDATA_USERS, or ./lake-users. Never a dbt source."""
         url = os.environ.get("COFFEEDATA_USERS") or "lake-users"
         return cls(url, staging="build/users-staging", tables=USER_TABLES)
+
+    @classmethod
+    def importers(cls) -> Lake:
+        """The private importers dataset: COFFEEDATA_IMPORTERS, or ./lake-importers. Never a dbt source."""
+        url = os.environ.get("COFFEEDATA_IMPORTERS") or "lake-importers"
+        return cls(url, staging="build/importers-staging", tables=IMPORTER_TABLES)
 
     # --- writing -------------------------------------------------------------------------------------
 

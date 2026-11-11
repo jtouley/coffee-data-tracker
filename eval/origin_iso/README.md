@@ -98,7 +98,7 @@ python origin_iso_eval.py score  <out-dir>                                   # t
   "Tanzania, United Republic of", "Congo, The Democratic Republic of the", "Venezuela, Bolivarian Republic of",
   "Lao People's Democratic Republic", "Viet Nam", "Côte d'Ivoire". The site can show common names instead (Bolivia,
   Tanzania, Laos, Vietnam, Venezuela, DR Congo, Côte d'Ivoire; `dbt/seeds/origin_display_name.csv`) behind one
-  switch, `COFFEEDATA_SITE_ORIGIN_NAMES=common` (default `iso`); the data and catalog.json's codes keep ISO's either
+  switch, `COFFEEDATA_SITE_ORIGIN_NAMES=common` (default `iso`); dim_coffee and the public tables keep ISO's either
   way. Recommended: common names on the site, ISO in the data.
 - **New Guinea** (13 coffees, mostly the rules' "New Guinea Highlands" style titles) has no country: the island is
   Papua New Guinea and Indonesia's Papua. Most such coffee is Papua New Guinea's, but that is a guess the mapping
