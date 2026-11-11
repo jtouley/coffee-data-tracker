@@ -14,12 +14,15 @@ seen as (
 -- Each variant's grams are the bag-weight rules' (stg_variant_grams, by position): the crawler's reading of the
 -- option's title, corrected where it misread it, and filled from the product title or description where the
 -- options state no weight (coffeedata.bag_weight; eval/bag_grams).
+-- A coffee whose version has no row there keeps its stored grams (variant_grams_are_valid fails the build first).
 latest as (
-    select l.* replace (list_transform(l.variants, lambda v, i: struct_update(v, grams := g.grams[i])) as variants)
+    select l.* replace (
+        if(g.grams is null, l.variants,
+           list_transform(l.variants, lambda v, i: struct_update(v, grams := g.grams[i]))) as variants)
     from (
         select * from s qualify row_number() over (partition by coffee_id order by run_date desc) = 1
     ) l
-    join {{ ref('stg_variant_grams') }} g using (grams_key)
+    left join {{ ref('stg_variant_grams') }} g using (grams_key)
     where l.is_coffee
 ),
 -- Claude's extraction of a description, where there is one, replaces the rules' attributes for it.

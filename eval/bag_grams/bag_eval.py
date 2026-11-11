@@ -7,6 +7,7 @@
     python bag_eval.py examples <data-dir> train <a> <b> [N]   # train only
     python bag_eval.py sample  <data-dir> <set> main <branch>
     python bag_eval.py seal    <data-dir> <set> main <branch>
+    python bag_eval.py fixture <data-dir> <out.jsonl> train validation test
     python bag_eval.py packet  <data-dir> <set>
     python bag_eval.py agree   <set> <labels_A.json> <labels_B.json>
     python bag_eval.py settle  <set> <labels_A.json> <labels_B.json> <labels_C.json> <labels_ref.json>
@@ -114,21 +115,31 @@ def load(data: Path, split: str | None = None) -> list[dict]:
 
 def cmd_predict(data: Path, name: str) -> None:
     """Each variant's grams under the rule on PYTHONPATH: coffeedata.bag_weight.product_grams when it exists
-    (the branch), else the stored grams (main: dbt reads the crawler's grams as stored)."""
+    (the branch), else the stored grams (main: dbt reads the crawler's grams as stored).
+
+    A candidate's settings ride in its name, for comparing levers on train and choosing on validation:
+    "<label>+u=<standard|drop|keep>+s=<title.tags.body.handle>" (the defaults are product_grams' own)."""
     try:
         from coffeedata.bag_weight import product_grams
     except ImportError:
         product_grams = None
+    opts: dict = {}
+    for part in name.split("+")[1:]:
+        k, _, v = part.partition("=")
+        if k == "u":
+            opts["unsupported"] = v
+        elif k == "s":
+            opts["sources"] = tuple(x for x in v.split(".") if x)
     out = {}
     for r in load(data):
         stored = [v["grams"] for v in r["variants"]]
         if product_grams is None:
             grams = stored
         else:
-            # candidates compared on validation: the option titles only, then the product title, then the description
-            title = "" if name.endswith("-options") else r["title"]
-            body = "" if name.endswith(("-options", "-title")) else r["body_text"]
-            grams = product_grams(title, body, [(v["title"], v["price"], v["grams"]) for v in r["variants"]])
+            options = [(v["title"], v["price"], v["grams"]) for v in r["variants"]]
+            grams = product_grams(
+                r["title"], r["body_text"], options, tags=r.get("tags"), handle=r.get("handle"), **opts
+            )
         out[r["coffee_id"]] = {v["variant_id"]: g for v, g in zip(r["variants"], grams, strict=True)}
     (data / f"pred_{name}.json").write_text(json.dumps(out, sort_keys=True))
     print(len(out), "coffees predicted as", name)
@@ -251,6 +262,48 @@ def cmd_sample(data: Path, split: str, main: str, branch: str) -> None:
         + "\n"
     )
     print(split, "strata", sizes, "drawn", Counter(d["stratum"] for d in drawn))
+
+
+FIXTURE_SETS = {"train": "train", "validation": "validation", "test": "test-2026-11-10"}
+
+
+def cmd_fixture(data: Path, out: Path, sets: list[str]) -> None:
+    """The regression fixture (CLAUDE.md step 8): each labeled item of these sets, with what the rules read (title,
+    description, tags, handle, every option's title, price and stored grams), its stratum and its reference label.
+    tests/test_bag_grams_accuracy.py holds the rules to floors over it. A description is cut at the end of the last
+    line that mentions a weight, so the file stays small and every rule reads what it read before."""
+    from coffeedata.bag_weight import mentions
+
+    rows = []
+    for split in sets:
+        items = json.loads((Path(__file__).parent / f"items_{split}.json").read_text())["items"]
+        labels = json.loads((Path(__file__).parent / "labels" / f"labels_ref_{split}.json").read_text())
+        pop = {r["coffee_id"]: r for r in load(data, split)}
+        for it in items:
+            r = pop[it["coffee_id"]]
+            body = r["body_text"] or ""
+            ends = [m.end for m in mentions(body)] if body else []
+            if ends:
+                nl = body.find("\n", max(ends))
+                body = body if nl < 0 else body[:nl]
+            else:
+                body = ""
+            rows.append(
+                {
+                    "set": FIXTURE_SETS[split],
+                    "coffee_id": r["coffee_id"],
+                    "stratum": it["stratum"],
+                    "label": labels[it["coffee_id"]],
+                    "item": r["item_variant_id"],
+                    "title": r["title"],
+                    "body": body,
+                    "tags": r["tags"],
+                    "handle": r["handle"],
+                    "options": [[v["variant_id"], v["title"], v["price"], v["grams"]] for v in r["variants"]],
+                }
+            )
+    out.write_text("".join(json.dumps(x, ensure_ascii=False, sort_keys=True) + "\n" for x in rows))
+    print(out, len(rows), out.stat().st_size // 1024, "KB")
 
 
 def cmd_seal(data: Path, split: str, names: list[str]) -> None:
@@ -461,6 +514,8 @@ def main() -> None:
         cmd_examples(data, a[2], a[3], a[4], int(a[5]) if len(a) > 5 else 40)
     elif cmd == "sample":
         cmd_sample(data, a[2], a[3], a[4])
+    elif cmd == "fixture":
+        cmd_fixture(data, Path(a[2]), a[3:])
     elif cmd == "seal":
         cmd_seal(data, a[2], a[3:])
     elif cmd == "packet":

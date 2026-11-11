@@ -36,10 +36,44 @@ from coffeedata.bag_weight import body_grams, product_grams, text_grams
         # abstain: no weight, disagreeing weights, packs, cases, fluid ounces
         ("Whole Bean", None),
         ("12 oz / 5 lb", None),
-        ("12 OZ BAGS x 3 CT / Whole Bean", None),
-        ("10oz Case Pack (6)", None),
-        ("Wholesale: 4 / 2 lbs / Ground", None),
-        ("20/2.00oz Packets / Roast & Ground", None),
+        # a pack with an explicit count is what the price buys: the total
+        ("12 OZ BAGS x 3 CT / Whole Bean", 1021),
+        ("10oz Case Pack (6)", 1701),
+        ("Wholesale: 4 / 2 lbs / Ground", 3629),
+        ("20/2.00oz Packets / Roast & Ground", 1134),
+        ("Retail Case (4 x 12 oz)", 1361),
+        ("12oz - 3 Pack / French Press", 1021),
+        ("Case of 6 - 10 oz. bags / Whole Bean", 1701),
+        ("6 count case (12 oz ground)", 2041),
+        ("1.5 oz 12 Pack / GROUND DECAF", 510),
+        ("8 / 1 lb Bags / Whole Bean", 3629),
+        ("Guatemala 10 oz Tin x 2", 567),
+        ("12 oz bag (Bundle of 4)", 1361),
+        ("Variety 3 Pack - 12oz Bali - 12oz Peru - 12oz Mexico", 1021),
+        ("5lbs (packed in separate 1lb bags)", 2268),
+        # a subscription option is one delivery (M5)
+        ("12 oz / Monthly", 340),
+        ("monthly-10lbs", 4536),
+        # "/" or "," right before the number (M4), and a unit glued to digits
+        ("Whole Bean/12oz", 340),
+        ("Whole Bean,1lb", 454),
+        ("5lb15-to-wwa ", 2268),
+        # mixed fractions and slug decimals (L1)
+        ("1 1/3 lb", 605),
+        ("0-5-lb", 227),
+        ("2-2-pounds", 998),
+        # a word before a weight is not a count unless it reads as one (L2)
+        ("Espresso Blend Two 12oz", 340),
+        # a coffee in a can is a weight; a "Small Batch" is not a batch size
+        ("1 lb. Can / Drip", 454),
+        ("Small Batch Colombia 12oz", 340),
+        # abstain: a pack or bundle with no count, merchandise, a fraction that reads two ways, drinks
+        ("12 oz Bundle", None),
+        ("Espresso Blend 12oz + Mug", None),
+        ("Kenya AA 4/5 lb", None),
+        ("Nitro Cold Brew 12oz Can", None),
+        ("Cold Brew Concentrate 32 oz", None),
+        ("3 Month Gift Subscription 12oz", None),
         ("12 fl oz", None),
         ("1,000g", None),
     ],
@@ -55,9 +89,14 @@ def test_option_titles(text, grams):
         ("Wonderland Blend WB 12OZ, SC", 340),
         ("Dark Sky (French Roast) 8 lb", 3629),
         # a product that isn't one bag of beans: no weight from its title
-        ("Lavazza Super Crema 2.2 lbs pack of 6", None),
+        ("Lavazza Super Crema 2.2 lbs pack of 6", 5987),
+        ("Original Donut Shop Medium Blend, Portion Pack 48/2 oz", 2722),
+        ("Silver Cup Blend DG 2.5 oz, PP 42ct", 2977),
+        ("Jamaican Me Crazy Portion Pack 1.5 oz", 43),
+        ("DARK ROAST - Cold Brew Blend by the lb.", 454),
         ("Ethiopia Sampler 4 oz", None),
-        ("Jamaican Me Crazy Portion Pack 1.5 oz", None),
+        ("Breakfast Blend K-Cups 12 count", None),
+        ("12oz Latte", None),
         ("Inti Honey - 20lb batch", None),
         ("Espresso Double Shot 2oz", None),
     ],
@@ -87,6 +126,11 @@ def test_product_titles(title, grams):
         ("Orders over 2 pounds receive best shipping rate.", None),
         ("each athlete runs with a 20-30 pound ruck sack", None),
         ("12oz. Brewed Coffee", None),
+        # a decaf's Swiss Water Process is not brewing water; "Royal Select" is not a choice of sizes
+        ("12oz bag of Colombia Royal Select Swiss Water Process Decaf.", 340),
+        ("A 1.5 oz packet of ground Breakfast Blend coffee pre-measured for 8-10 cups of coffee.", 43),
+        ("Great as a latte or espresso.\n12 oz bag", 340),
+        ("Coffee sold by the pound 16oz", 454),
         ("", None),
     ],
 )
@@ -111,7 +155,8 @@ def test_the_description_is_read_only_when_the_title_states_no_weight():
     assert product_grams("Kenya", "12 oz Bag. Bright.", [("Whole Bean", 20.0, None)]) == [340]
     # the title's weight wins; a title weight the rules reject (a pack) doesn't fall back to the description
     assert product_grams("Kenya 1 lb", "12 oz Bag.", [("", 20.0, None)]) == [454]
-    assert product_grams("Kenya 12oz 6 pack", "12 oz Bag.", [("", 90.0, None)]) == [None]
+    assert product_grams("Kenya 12oz 6 pack", "12 oz Bag.", [("", 90.0, None)]) == [2041]
+    assert product_grams("Kenya 12oz Bundle", "12 oz Bag.", [("", 90.0, None)]) == [None]
 
 
 def test_options_with_their_own_weights_are_not_overridden_by_the_title():
@@ -122,12 +167,57 @@ def test_options_with_their_own_weights_are_not_overridden_by_the_title():
 def test_stored_weights_the_crawler_misread_from_the_option_are_corrected_or_dropped():
     opts = [("1/2 lb", 10.0, 907), ("12oz - 3 Pack", 41.85, 340), ("5 lbs (2.27 kg)", 75.0, 2270)]
     # "5 lbs (2.27 kg)": the stored 2270 agrees with 5 lb (2268) to within rounding, so it stays as stored
-    assert product_grams("Mexico", "", opts) == [227, None, 2270]
+    assert product_grams("Mexico", "", opts) == [227, 1021, 2270]
+    # a stored weight the stricter rules can't read is dropped, not refilled
+    assert product_grams("Kenya 12 oz", "", [("Kenya AA 4/5 lb", 20.0, 2268)]) == [None]
 
 
-def test_stored_weights_from_elsewhere_are_kept():
-    # Shopify's variant grams, or a generic store's product name: not from the option's title, so kept as stored
-    assert product_grams("Ethiopia", "", [("Default Title", 20.0, 400), ("", 20.0, 340)]) == [400, 340]
+def test_stored_weights_from_elsewhere_are_kept_only_when_the_listing_states_them():
+    # Shopify's variant grams: kept when the listing states that weight anywhere, else what the listing states,
+    # else dropped (often a shipping weight)
+    assert product_grams(
+        "Ethiopia", "1 pound (16 ounces)", [("Whole", 18.95, 454), ("Decaf", 27.95, 454)]
+    ) == [454, 454]
+    assert product_grams("5lb Deadman's Reach", "", [("Espresso", 89.95, 2404), ("Drip", 89.95, 2404)]) == [
+        2268,
+        2268,
+    ]
+    assert product_grams("Trailblazer", "Light roast", [("Default Title", 19.0, 363)]) == [None]
+    assert product_grams("Tasco Coffee", "", [("Single Can", 2.99, 227)]) == [None]
+    # the other policies, kept for eval/bag_grams' comparison
+    assert product_grams("Trailblazer", "", [("Default Title", 19.0, 340)], unsupported="standard") == [340]
+    assert product_grams("Trailblazer", "", [("Default Title", 19.0, 363)], unsupported="standard") == [None]
+    assert product_grams("Trailblazer", "", [("Default Title", 19.0, 363)], unsupported="keep") == [363]
+
+
+def test_a_pack_the_rules_blank_is_not_refilled_from_the_title():
+    # H1: the title's weight is one bag's, not the pack's
+    assert product_grams("Peru Coffee 12 oz", "", [("12oz Bundle", 45.0, 340)]) == [None]
+    assert product_grams("Peru 12 oz", "", [("Single", 15.0, None), ("Bundle of 3", 16.0, None)]) == [
+        None,
+        None,
+    ]
+    assert product_grams("Peru 12 oz", "", [("Single", 15.0, None), ("Bundle", 16.0, None)]) == [None, None]
+
+
+def test_tags_and_handle_fill_only_when_the_title_states_no_weight():
+    assert product_grams("Kenya", "", [("Default Title", 20.0, None)], tags=["12oz", "Coffee"]) == [340]
+    assert product_grams("Kenya", "", [("", 20.0, None)], tags=["12oz", "5lb"]) == [None]
+    assert product_grams("Kenya 1 lb", "", [("", 20.0, None)], tags=["12oz"]) == [454]
+    assert product_grams("Peru Cajamarca", "", [("", 20.0, None)], handle="peru-cajamarca-12oz") == [340]
+    # a handle copied from another product's page is not read
+    assert product_grams("French Roast", "", [("", 20.0, None)], handle="italian-roast-12oz") == [None]
+    assert product_grams("French Roast", "", [("", 20.0, None)], handle="copy-of-french-roast-12oz") == [None]
+
+
+def test_long_descriptions_stay_linear():
+    # L5: the count lookups read a window, not the whole text before each mention
+    import time
+
+    body = "12 oz bag of beans. " * 4000
+    t = time.perf_counter()
+    product_grams("Kenya", body, [("Whole Bean", 20.0, None)])
+    assert time.perf_counter() - t < 2.0
 
 
 def test_no_options_and_no_prices():

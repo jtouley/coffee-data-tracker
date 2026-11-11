@@ -298,7 +298,7 @@ unit_tests:
           ) t(product_id, tags)
           cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
               timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
-              'Kenya AA' as title, '' as product_type, 'b' as body_hash,
+              'Kenya AA' as title, '' as product_type, 'b' as body_hash, 'kenya-aa' as handle,
               [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
                 'currency': 'USD'}] as variants))
     given:
@@ -552,3 +552,45 @@ unit_tests:
         - {roaster_id: intelligentsiacoffee.com, status: alias, canonical_roaster_id: intelligentsia.com}
         - {roaster_id: javaboulevard.com, status: active, canonical_roaster_id: javaboulevard.com}
         - {roaster_id: magnumcoffee.com, status: alias, canonical_roaster_id: javaboulevard.com}
+
+  - name: coffee_prices_use_the_rules_grams_by_position
+    description: >-
+      dim_coffee prices bags with stg_variant_grams's grams, matched to the variants by position (1-based): the
+      crawler stored 907 g for a "1/2 lb" option and none for a 5 lb one; the rules read 227 g and 2268 g. A coffee
+      whose version has no stg_variant_grams row keeps its stored grams (variant_grams_are_valid fails that build).
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
+                                  {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
+              ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
+          ) t(coffee_id, product_id, grams_key, variants)
+          cross join (select 'r' as roaster_id, date '2026-10-19' as run_date, 'h' as input_hash, 'b' as body_hash,
+              'h' as handle, 'https://r/p' as url, null::varchar as image, 'shopify' as platform,
+              []::varchar[] as tags, null::timestamptz as published_at)
+      - input: ref('stg_variant_grams')
+        format: sql
+        rows: select 'kA' as grams_key, 2 as options, [227, 2268]::integer[] as grams
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true, classified_by: rules, is_wholesale: false, clean_title: Kenya}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
+        - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}

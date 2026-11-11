@@ -886,7 +886,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=15 " in r.stdout
+    assert "PASS=16 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):
@@ -1150,7 +1150,9 @@ def test_the_build_fails_when_raw_and_decoded_tags_decide_differently(lake, tmp_
 def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):
     """stg_variant_grams (coffeedata.bag_weight) gives dim_coffee its grams: a weight in the product title, a
     slug-style option or the description fills options the crawler stored none for; a misread option ("1/2 lb" stored
-    as 907 g) is corrected; a pack's single-bag weight is dropped. The raw snapshots keep what the crawler stored."""
+    as 907 g) is corrected; a pack with a count is its total; a bundle's weight is dropped and not refilled from the
+    title; a stored weight the listing never states (Shopify's grams) is dropped. The raw snapshots keep what the
+    crawler stored."""
     rid = "onyxcoffeelab.com"
     probe(lake, "2026-10-18", rid)
 
@@ -1177,6 +1179,8 @@ def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):
         opts(product("C", title="Mexico Coffee"), ("1/2 lb", 10.0, 907), ("1 lb", 18.0, 454)),
         opts(product("D", title="Kenya Coffee"), ("Whole Bean", 17.0, None)),
         opts(product("E", title="Peru Coffee"), ("12oz - 3 Pack", 45.0, 340)),
+        opts(product("F", title="Sumatra Coffee 12 oz"), ("12 oz Bundle", 30.0, 340)),
+        opts(product("G", title="Ethiopia Coffee"), ("Default Title", 19.0, 363)),
     ]
     run(lake, "2026-10-19", rid, products)
     lake.write_partition(
@@ -1205,7 +1209,9 @@ def test_bag_weights_are_read_again_from_the_stored_text(lake, tmp_path):
         "B": (3.53, [454, 2268]),
         "C": (3.96, [227, 454]),
         "D": (5.0, [340]),
-        "E": (None, None),
+        "E": (4.41, [1021]),
+        "F": (None, None),
+        "G": (None, None),
     }
     raw = dict(con.execute("select product_id, [v.grams for v in variants] from stg_snapshots").fetchall())
     assert raw["A"] == [None, None] and raw["C"] == [907, 454] and raw["E"] == [340]

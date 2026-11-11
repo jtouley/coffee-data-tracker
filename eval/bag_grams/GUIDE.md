@@ -10,7 +10,7 @@ Write the answer as a whole number of grams, or `unknown`, or `unclear`.
 ## Grams
 
 - Use the weight the listing states for that option: in the option's own title first, then the listing's title,
-  then the description.
+  then its tags, then the description, then the URL handle.
 - Convert with 1 oz = 28.3495 g, 1 lb = 453.592 g, 1 kg = 1000 g, and round to the gram: 12 oz is 340, 16 oz and
   1 lb are 454, 2 lb is 907, 5 lb is 2268, 8 oz and 1/2 lb are 227. A listing that gives both ("12 oz (340 g)",
   "1 kg (2.2 lb)") means one weight: write the metric one if it gives one, else convert.
@@ -19,10 +19,18 @@ Write the answer as a whole number of grams, or `unknown`, or `unclear`.
 - An option that varies only by grind, roast level or decaf, with no weight of its own, has the weight the listing
   title or description gives for the coffee, if it gives one. If the options also differ in size (different
   prices, or titles like "Small" / "Large") and the listing doesn't say which size this option is, it's `unknown`.
+- Portion packs follow the same rule as other packs: a count and a size give the total ("Portion Pack 48/2 oz" is
+  2722, "42 / 2.5oz packets" is 2977, "PP 42ct" of 2.5 oz is 2977); a single packet that states its weight is that
+  weight ("A 1.5 oz packet" is 43). Without a count or a size it's `unknown`.
 - Samples count: a "4 oz sample" option is 113.
 - A subscription option ("every 2 weeks") is the weight of one delivery.
-- Use the listing only. Don't use the URL's handle when it disagrees with the title (stores copy old pages), don't
-  open the URL, and don't guess from the price or from the roaster's other listings.
+- Tags are part of the listing. Use a size tag ("12oz", "12 oz.", "Size: 5 lb") only when the option and the
+  listing's title give no weight, and only when the tags name exactly one size; tags naming two sizes ("12oz",
+  "5lb") say nothing about this option.
+- Use the URL handle only when the title gives no weight and the handle is this product's own (its words are the
+  title's): stores copy pages, so "italian-roast-12oz" on "French Roast", or a handle starting "copy-of-", doesn't
+  count.
+- Use the listing only. Don't open the URL, and don't guess from the price or from the roaster's other listings.
 
 ## unknown
 
@@ -31,8 +39,9 @@ The listing doesn't say how much coffee this option buys, or says it only ambigu
 - a weight that may not be this option's: "available in 12 oz and 5 lb bags" with no way to tell which option is
   which; "orders over 2 lb ship free"; a lot size ("only 20 lb this year"); a brewing amount ("20 g per cup");
 - a pack or sampler that doesn't say its total or its bag count and size;
-- pods, capsules, K-Cups, drip or steep bags, portion packets, cans and bottles, unless the listing states the total
-  coffee weight;
+- pods, capsules, K-Cups, drip or steep bags, canned or bottled drinks and concentrates, unless the listing states
+  the total coffee weight (a ground coffee sold in a can, "1 lb. Can", is a weight);
+- a bundle with merchandise ("12oz + Mug");
 - a drink sold by the cup ("12 oz Latte", "Espresso Double Shot") or anything that isn't coffee by weight.
 
 `unknown` is a correct answer, not a failure: the rules are meant to leave these blank.
@@ -47,3 +56,9 @@ sparingly: a confident wrong number is worse than `unclear`. Unclear items are l
 One JSON object per labeler: `{"<coffee_id>": 340, "<coffee_id>": "unknown", ...}`, a key for every item in the
 packet. Label each item on its own: don't look at another labeler's file, at any prediction, or at the scoring
 script's output.
+
+## Changes
+
+- 2026-11-11, after the first labeling round, for the second test set: portion packs follow the packs rule (count
+  × size), and tags and the URL handle are named as sources, settling the two questions the labelers raised. The
+  first round's labels were made under the earlier text and are not changed.
