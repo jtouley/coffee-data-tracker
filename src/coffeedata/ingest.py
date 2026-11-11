@@ -362,13 +362,16 @@ def select_parked(
     lake: Lake, run_date: str, adapter: str | None = None
 ) -> tuple[list[registry.RoasterState], dict[str, dict]]:
     """crawl-retry's work: the run's parked stores still without an ok fetch (of `adapter`'s roasters, when given:
-    the parked folder is shared by every connector's partition), and their progress."""
+    the parked folder is shared by every connector's partition), and their progress. A store that has since opted out
+    or become an alias (a probe resolved it to another roaster's store) is not resumed (_in_pool)."""
     resume = load_parked(lake, run_date)
     done, _ = retry_transient(_done_and_tried, lake, run_date)  # crawl-retry's first lake read: retried
     states = [
         s
         for s in registry.current(lake)
-        if s.roaster.roaster_id in resume.keys() - done and (adapter is None or s.roaster.adapter == adapter)
+        if s.roaster.roaster_id in resume.keys() - done
+        and (adapter is None or s.roaster.adapter == adapter)
+        and _in_pool(s)
     ]
     return states, {s.roaster.roaster_id: resume[s.roaster.roaster_id] for s in states}
 

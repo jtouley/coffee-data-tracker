@@ -601,7 +601,9 @@ release changes against the served one, per reason. A `near_duplicate_roasters` 
 rebrand whose old domain doesn't redirect): once checked by hand, set the old id's `alias_of` in
 `config/roasters.csv` to the id that stays. If unrelated roasters resolve to one host (a new parking, for-sale,
 shortener or directory site makes them aliases of each other), add the host to `dbt/seeds/shared_hosts.csv`: such a
-host never groups (dbt and the crawl read the same file). Settle `suspect_runs_need_review`'s rows with `override` (b.1).
+host never groups (dbt and the crawl read the same file). A `stranded_alias_stores` row (warn) is a store whose
+canonical id is unreachable while an alias still answers: if the canonical's domain is gone for good, set its
+`alias_of` in `config/roasters.csv` to that alias, so the store is crawled under the alias again. Settle `suspect_runs_need_review`'s rows with `override` (b.1).
 
 `release_changes` and `release_changes_explained` are report only (tag `report_only`): `coffeedata build` runs them
 after the gate, in a dbt step of its own, so even an error there can't fail a build. What to do when they say

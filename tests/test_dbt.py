@@ -352,6 +352,46 @@ def test_a_store_keeps_its_alias_through_an_outage_a_week_without_coffee_and_an_
     check("opted_out")
 
 
+def test_a_stranded_store_warns_and_two_stores_on_a_parked_host_are_two(lake, tmp_path):
+    """Final review of #137. N1: a canonical id that stays unreachable while its alias still answers is a store
+    nobody crawls, so stranded_alias_stores warns (the runbook's fix is alias_of). N2: two published stores whose
+    domains both lapsed to a parked host (hugedomains.com, seed shared_hosts) are two stores, as the alias rule has
+    them, so public_roasters_unique_by_host (error) passes."""
+    import re
+    from datetime import UTC, datetime
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [
+            {
+                "added_at": datetime(2026, 10, 1, tzinfo=UTC),
+                "source": "overture",
+                "roaster_id": alias,
+                "name": alias,
+            }
+        ],
+    )
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # gone for good
+    probe(lake, "2026-11-03", alias, final_host="www.intelligentsia.com")  # the alias still answers
+    for rid in ("counterculturecoffee.com", "anaheimcoffee.com"):
+        run(lake, "2026-11-02", rid, [product("B", 18.0)])
+        probe(lake, "2026-11-03", rid, final_host="www.hugedomains.com", platform="other")
+    r = build(lake, tmp_path, check=False)
+    assert r.returncode == 0, r.stdout[-3000:]
+    assert re.search(r"WARN 1 stranded_alias_stores", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert con.execute(
+        "select alias_id, canonical_id from main_dbt_test__audit.stranded_alias_stores"
+    ).fetchall() == [(alias, main)]
+    public = {r[0] for r in con.execute("select roaster_id from public_roaster").fetchall()}
+    assert {"counterculturecoffee.com", "anaheimcoffee.com"} <= public
+    con.close()
+
+
 def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
     """Status is decided as on main, from the last ok fetch's coffee count. A fetch from before ELT keeps the count
     its crawl recorded, even where today's rules see no coffee (kaldi.com 2026-10-26: 3,459 recorded, while its

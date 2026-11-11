@@ -163,3 +163,19 @@ the new 11-09 replay:
   outage bug (H1), so the fix to grouping caught them.
 - The split's key: the host key is now the shared macro's (it also strips a scheme, path and surrounding dots). On
   the 11-09 lake it gives all 3,203 roasters the same key as the first round's expression, so the sets are as drawn.
+
+**What the sealed score does and doesn't measure (final review, L7).** The fix round changed *how* the rule decides
+(every status groups, shared hosts never do, a sticky ranking), but on the 11-09 data it changed the output of 2
+roaster ids only, and of no product: the two H2 aliases below, both `no_catalog` with 0 coffees and never public.
+Under the root CLAUDE.md step 9 that is the light path (0 products changed since the full evaluation, at most 50),
+so no new test set was drawn. The sealed set has 0 H2 items, so its score measures the round-1 rule and carries over
+only because its predictions are identical; the evidence for the round-2 change is train (the two pairs) and the
+unit and integration tests. Per step 5, the scored test set now joins the regression fixtures and the next change
+to this rule draws a new test set.
+
+Hand-check of the two ids (train pairs, read with their evidence):
+
+| Alias (new) | Canonical | Evidence | Verdict |
+|---|---|---|---|
+| `cowabungaweb.com` | `cowabungaroasters.com` | the same name, "Cowabunga Coffee Roasters"; cowabungaweb.com's site resolves to cowabungaroasters.com (Squarespace); 0 coffees on both; the registry's towns differ (Hoboken, NJ / Warrington, PA) | same store (A and B agree); no public row moves |
+| `magnumcoffee.com` | `javaboulevard.com` | the same name, Magnum Coffee Roastery; javaboulevard.com's shop is shop.magnumcoffee.com (Shopify, 116 coffees), magnumcoffee.com resolves to www.magnumcoffee.com (no catalog); the registry's towns differ (Nunica, MI / a Las Vegas café listing) | same store's site (A and B agree); the id that reads the catalog stays canonical, so its 116 coffees stay public |
