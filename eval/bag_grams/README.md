@@ -217,7 +217,8 @@ label, shuffled, with no stratum or prediction.
 74fe323992a27a7c6cd2675dca81e5e131d75a6e7d1d12935f6920310794b273  population.json
 ```
 
-Round 1's rules were frozen at commit `e46a730`, round 2's at `a4baff0`.
+Round 1's rules were frozen at commit `e46a730`, round 2's at `a4baff0`, round 3's at `28314a0`. `SHA256SUMS` also
+pins round 3's `test3` (`items_test3.json`, `pred_branch2_test3.json` for `main`'s rules, `pred_branch3_test3.json`).
 
 ## Commands
 
@@ -404,3 +405,11 @@ By the rule fixed before labeling:
 The frozen rules (`branch3`) are `product_grams`' defaults, and the floors in `tests/test_bag_grams_accuracy.py` now
 include train-3 and validation-3 at these measured values; on the earlier sets they rise where the rules improved
 (validation 95.8% / 1.05%, the first test set 93.4% / 0.87%, test2 95.3% / 0.74%).
+
+### `test3`, drawn after the freeze
+
+Drawn at `28314a0` with `bag_eval.py changed <data> test3 branch2 branch3`: every test-split coffee whose grams the
+frozen rules change against `main` (`branch2`), less the 6 that round 1 or `test2` labeled. 83 coffees from 8 stores
+(the largest has 23); on every item's option the two rules differ. Its items and both rules' predictions are in
+`SHA256SUMS`, committed before any label. Labels are pending (fresh labelers A, B and C, as above); it is scored once
+with `score ... test3 labels_ref_test3.json branch2 branch3 --final`.
