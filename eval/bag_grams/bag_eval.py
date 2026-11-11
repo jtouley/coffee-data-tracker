@@ -440,10 +440,10 @@ def cmd_gate(data: Path, names: list[str]) -> None:
         est, lo, hi = weighted({k: [x for _, x in v] for k, v in per.items()}, sizes)
         clo, chi = clustered(per, sizes)
         rest = (n_pop - len(d)) / n_pop
-        f = lambda u: ok_d / n_pop + rest * u  # noqa: E731
+        a, a_lo, a_hi, a_clo, a_chi = (100 * (ok_d / n_pop + rest * u) for u in (est, lo, hi, clo, chi))
         print(
-            f"{name}: full population {100 * f(est):.2f}%  normal [{100 * f(lo):.2f}, {100 * f(hi):.2f}]"
-            f"  store-clustered [{100 * f(clo):.2f}, {100 * f(chi):.2f}]  (D: {ok_d}/{len(d)} right; rest"
+            f"{name}: full population {a:.2f}%  normal [{a_lo:.2f}, {a_hi:.2f}]"
+            f"  store-clustered [{a_clo:.2f}, {a_chi:.2f}]  (D: {ok_d}/{len(d)} right; rest"
             f" {100 * est:.2f}% from {sum(len(v) for v in per.values())} items)"
         )
 
