@@ -10,6 +10,7 @@ lower any accuracy or raise any confidently wrong share.
 """
 
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -40,7 +41,7 @@ FLOOR = {
     "test-2026-11-11": 0.953,
     "train-3": 0.717,
     "validation-3": 0.916,
-    "test3": 0.674,
+    "test3": 0.819,
 }
 CEILING = {
     "train": 0.001,
@@ -49,7 +50,7 @@ CEILING = {
     "test-2026-11-11": 0.0075,
     "train-3": 0.0257,
     "validation-3": 0.0834,
-    "test3": 0.1567,
+    "test3": 0.0,
 }
 
 
@@ -88,41 +89,41 @@ def _outcome(g: int | None, label: int | str) -> str:
     return "ok"
 
 
-# The full-population gate (CLAUDE.md step 7): the estimated share of all current coffees (eval/bag_grams'
-# population, 30,022) whose drawn option the rules get right or rightly leave blank must be at least 95%. The coffees
-# a round's change touches (eval/bag_grams/gate_d.json) are counted exactly from their census labels; every other
-# coffee is estimated from validation and test2, the sets stratified over their whole split that the rules weren't
-# tuned on (each stratum-weighted, the two combined by their stratum sizes).
-GATE = 0.95
-POPULATION = 30_022
-GATE_SETS = ("validation", "test-2026-11-11")
+# The full-population gate (CLAUDE.md step 7): the estimated share of the eval's population whose drawn option the
+# rules get right or rightly leave blank must be at least bag_eval.GATE. The coffees a round's change touches
+# (eval/bag_grams/gate_d.json) are counted exactly from their census labels; every other coffee is estimated from
+# bag_eval.GATE_SETS. The formula and the population are bag_eval's (full_population, POPULATION), not repeated here.
+sys.path.insert(0, str(ROOT / "eval" / "bag_grams"))
+import bag_eval  # noqa: E402
 
 
 def _population_estimate() -> float:
     d = set(json.loads((ROOT / "eval" / "bag_grams" / "gate_d.json").read_text()))
     rows = [json.loads(x) for x in LABELS.read_text().splitlines()]
     d_ok = {
-        r["coffee_id"]: _outcome(_grams(r), r["label"]) == "ok"
+        r["coffee_id"]: bag_eval.is_ok(_grams(r), r["label"])
         for r in rows
         if r["coffee_id"] in d and r["drawn"]
     }
     assert set(d_ok) == d, "every changed coffee needs a label for its drawn option"
-    per: dict[str, list[str]] = defaultdict(list)
+    per: dict[str, list[float]] = defaultdict(list)
     sizes: dict[str, int] = {}
-    for name in GATE_SETS:
-        meta = json.loads((ROOT / "eval" / "bag_grams" / f"items_{ITEMS[name]}.json").read_text())
-        sizes |= {f"{name}:{k}": v for k, v in meta["stratum_sizes"].items()}
+    for split in bag_eval.GATE_SETS:
+        meta = json.loads((ROOT / "eval" / "bag_grams" / f"items_{split}.json").read_text())
+        sizes |= {f"{split}:{k}": v for k, v in meta["stratum_sizes"].items()}
+    names = {bag_eval.FIXTURE_SETS[x]: x for x in bag_eval.GATE_SETS}
     for r in rows:
-        if r["set"] in GATE_SETS and r["coffee_id"] not in d and r["label"] != "unclear":
-            per[f"{r['set']}:{r['stratum']}"].append(_outcome(_grams(r), r["label"]))
-    total = sum(sizes[k] for k in per)
-    rest = sum(sizes[k] / total * xs.count("ok") / len(xs) for k, xs in per.items())
-    return (sum(d_ok.values()) + (POPULATION - len(d)) * rest) / POPULATION
+        if r["set"] in names and r["coffee_id"] not in d and r["label"] != "unclear":
+            per[f"{names[r['set']]}:{r['stratum']}"].append(float(bag_eval.is_ok(_grams(r), r["label"])))
+    a_u, _, _ = bag_eval.weighted(per, sizes)
+    return bag_eval.full_population(sum(d_ok.values()), len(d), a_u)
 
 
 def test_full_population_accuracy_meets_the_gate():
     est = _population_estimate()
-    assert est >= GATE, f"full-population accuracy {est:.4f} < {GATE} (eval/bag_grams/README.md)"
+    assert est >= bag_eval.GATE, (
+        f"full-population accuracy {est:.4f} < {bag_eval.GATE} (eval/bag_grams/README.md)"
+    )
 
 
 @pytest.mark.parametrize("name", sorted(FLOOR))

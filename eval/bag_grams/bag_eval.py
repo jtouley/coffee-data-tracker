@@ -371,7 +371,26 @@ def cmd_changed(data: Path, split: str, main: str, candidates: list[str]) -> Non
 # The full-population gate (CLAUDE.md step 7): the share of all current coffees whose drawn option the rules get
 # right (right, or rightly blank), at least GATE. See README "The full-population gate".
 GATE = 0.95
-GATE_SETS = ("validation", "test2")  # stratified over their whole split, and not tuned on (train is)
+GATE_SETS = (
+    "validation",
+    "test2",
+)  # stratified over their whole split; train, which rules are tuned on, isn't one
+# The eval's population: every current retail coffee of the 2026-11-02 snapshot (population.json, sha256 under "Sealed
+# files" in README.md), a frozen snapshot, not the live catalogue. tests/test_bag_grams_accuracy.py reads it here.
+POPULATION = 30_022
+
+
+def full_population(ok_d: int, n_d: int, a_u: float, n_pop: int = POPULATION) -> float:
+    """The gate's estimate: the D coffees counted exactly (ok_d of n_d right or rightly blank; an "unclear" label
+    counts as not right), every other coffee at a_U, the accuracy GATE_SETS estimate for them."""
+    return (ok_d + (n_pop - n_d) * a_u) / n_pop
+
+
+def is_ok(g: int | None, label: int | str) -> bool:
+    """Right, or rightly blank; an "unclear" label is neither (review L4 of #139)."""
+    return label != "unclear" and outcome(g, label) in ("right", "abstain_ok")
+
+
 LABELED = ("train", "validation", "test", "test2", "train-3", "validation-3", "test3")
 
 
@@ -385,19 +404,21 @@ def cmd_gate_d(data: Path, main: str, change: str, out: Path) -> None:
         for r in pop
         if pm[r["coffee_id"]].get(r["item_variant_id"]) != pc[r["coffee_id"]].get(r["item_variant_id"])
     )
-    labeled = _drawn_labels(data)
+    labeled = _drawn_labels({r["coffee_id"]: r for r in pop})
     missing = [c for c in d if c not in labeled]
     if missing:
         sys.exit(f"{len(missing)} changed coffees have no label for their drawn option, e.g. {missing[:3]}")
     old = json.loads(out.read_text()) if out.exists() else []
     out.write_text(json.dumps(sorted(set(old) | set(d)), indent=1) + "\n")
-    print(out.name, len(d), "changed coffees this round,", len(set(old) | set(d)), "in all")
+    unclear = sum(labeled[c] == "unclear" for c in d)
+    print(
+        out.name, len(d), "changed coffees this round,", len(set(old) | set(d)), "in all;", unclear, "unclear"
+    )
 
 
-def _drawn_labels(data: Path) -> dict[str, int | str]:
+def _drawn_labels(pop: dict[str, dict]) -> dict[str, int | str]:
     """Every reference label made for a coffee's drawn option, in any set."""
     here = Path(__file__).parent
-    pop = {r["coffee_id"]: r for r in load(data)}
     out: dict[str, int | str] = {}
     for split in LABELED:
         ref = json.loads((here / "labels" / f"labels_ref_{split}.json").read_text())
@@ -414,14 +435,13 @@ def cmd_gate(data: Path, names: list[str]) -> None:
     D's and the rest's share of the population. Normal and store-clustered 95% intervals (D adds none)."""
     here = Path(__file__).parent
     pop = {r["coffee_id"]: r for r in load(data)}
+    if len(pop) != POPULATION:
+        sys.exit(f"population.json has {len(pop)} coffees, not the eval's {POPULATION}")
     d = set(json.loads((here / "gate_d.json").read_text()))
-    labels = _drawn_labels(data)
-    n_pop = len(pop)
+    labels = _drawn_labels(pop)
     for name in names:
         pr = pred(data, name)
-        ok_d = sum(
-            outcome(pr[c].get(pop[c]["item_variant_id"]), labels[c]) in ("right", "abstain_ok") for c in d
-        )
+        ok_d = sum(is_ok(pr[c].get(pop[c]["item_variant_id"]), labels[c]) for c in d)
         sizes: dict[str, int] = {}
         per: dict[str, list[tuple[str, float]]] = defaultdict(list)
         for split in GATE_SETS:
@@ -435,12 +455,13 @@ def cmd_gate(data: Path, names: list[str]) -> None:
                     continue
                 g = pr[c].get(pop[c]["item_variant_id"])
                 per[f"{split}:{it['stratum']}"].append(
-                    (it.get("store") or pop[c]["group"], float(outcome(g, lab) in ("right", "abstain_ok")))
+                    (it.get("store") or pop[c]["group"], float(is_ok(g, lab)))
                 )
         est, lo, hi = weighted({k: [x for _, x in v] for k, v in per.items()}, sizes)
         clo, chi = clustered(per, sizes)
-        rest = (n_pop - len(d)) / n_pop
-        a, a_lo, a_hi, a_clo, a_chi = (100 * (ok_d / n_pop + rest * u) for u in (est, lo, hi, clo, chi))
+        a, a_lo, a_hi, a_clo, a_chi = (
+            100 * full_population(ok_d, len(d), u) for u in (est, lo, hi, clo, chi)
+        )
         print(
             f"{name}: full population {a:.2f}%  normal [{a_lo:.2f}, {a_hi:.2f}]"
             f"  store-clustered [{a_clo:.2f}, {a_chi:.2f}]  (D: {ok_d}/{len(d)} right; rest"
@@ -585,10 +606,14 @@ def cmd_settle(split: str, a: Path, b: Path, c: Path, out: Path) -> None:
     la, lb, lc = (json.loads(p.read_text()) for p in (a, b, c))
     ref = {}
     here = Path(__file__).parent
+    earlier: dict[str, dict] = {}
     for it in json.loads((here / f"items_{split}.json").read_text())["items"]:
         i = it["coffee_id"]
         if "label_from" in it:  # an earlier round's reference label for the same option
-            ref[i] = json.loads((here / "labels" / f"labels_ref_{it['label_from']}.json").read_text())[i]
+            src = it["label_from"]
+            if src not in earlier:
+                earlier[src] = json.loads((here / "labels" / f"labels_ref_{src}.json").read_text())
+            ref[i] = earlier[src][i]
         elif i in la and i in lb and same(la[i], lb[i]):
             ref[i] = la[i]
         elif i in lc:

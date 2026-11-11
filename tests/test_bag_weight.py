@@ -81,9 +81,9 @@ from coffeedata.bag_weight import body_grams, product_grams, text_grams
         # a count written as "N bags" is a count (review M1 of #136): the total
         ("Two 12 oz bags", 680),
         ("2 Bags - 12 oz", 680),
-        ("12oz (2 bags)", 680),
-        ("12 oz - 2 bags", 680),
         ("12 oz / 2 Bags", 680),
+        ("12oz x 2 bags", 680),
+        ("4.3 lb / 2 bags", 3901),
         ("(2) 12 oz. bags", 680),
         ("Two 12 oz. Bags / Every Week / Three Months", 680),
         ("Three 12 oz. Bags / Every 4 Weeks / Six Months", 1021),
@@ -96,6 +96,26 @@ from coffeedata.bag_weight import body_grams, product_grams, text_grams
         ("Whole Bean / 5 bags", None),
         ("Ground / 2 Bags | 5% off", None),
         ("2 bags of 12oz or 3 bags", None),
+        # review H1 of #139: a weight already the total isn't multiplied; a price tier isn't a count; a shape that can
+        # be either (each bag's weight, or the total) abstains
+        ("2 Bags (24 oz total)", 680),
+        ("2 Bags (24oz total) / French Press", 680),
+        ("5 lb (packed in 5 bags)", 2268),
+        ("24 oz combined, 2 bags", 680),
+        ("5lb (4 bags or more) / Ground", None),
+        ("12 oz - 2+ bags", None),
+        ("24 oz (2 bags)", None),
+        ("1 kg - 2 bags", None),
+        ("12oz (2 bags)", None),
+        ("2 Bags (24 oz)", None),
+        # review L1 of #139: one bag is no count, so a bundle or a subscription around it still blocks
+        ("1 Bag - 12oz / 3 Months Prepaid", None),
+        ("1 Bag 12oz + Mug", None),
+        ("One bag of 12oz - Gift Set", None),
+        # review L2 of #139: a slug digit pair is a decimal only as stores write them (halves, 2.2 lb)
+        ("2-1-lb", None),
+        ("1-4-lb ", None),
+        ("1-5-lb", 680),
     ],
 )
 def test_option_titles(text, grams):
@@ -154,6 +174,7 @@ def test_product_titles(title, grams):
         ("12oz. Brewed Coffee", None),
         ("Two 12 oz bags of specialty grade coffee, roasted-to-order", None),
         ("Nationwide Customers- you will receive (2) 12 oz. bags", None),
+        ("1 bag of 12oz", 340),
         # a weight outside a bag's range is a lot or a harvest, not a bag: the bag's own line still counts
         ("The first lot was 32 boxes (roughly - 2,000 lbs).\n12 ounce/ 340 grams", 340),
         ("Production is 12 million 70-kilo (154 lbs) bags a year.\nColombia (12oz)", 340),
@@ -257,6 +278,17 @@ def test_options_that_give_only_a_count_of_bags():
     ]
     opts = [("1 Bag", 10.0, None), ("2 Bags", 60.0, None)]
     assert product_grams("Kenya 12oz", "", opts) == [340, None]
+    # review L3 of #139: a count-only option alone is compared with the other options as one bag each, and with
+    # nothing to compare it abstains
+    assert product_grams("Kenya 12oz", "", [("Whole Bean", 12.0, None), ("5 bags", 15.0, None)]) == [
+        340,
+        None,
+    ]
+    assert product_grams("Kenya 12oz", "", [("Whole Bean", 12.0, None), ("5 bags", 58.0, None)]) == [
+        340,
+        1700,
+    ]
+    assert product_grams("Kenya 12oz", "", [("5 bags", 58.0, None)]) == [None]
     # a count that is also a pack or a case stays blocked, and so does the rest of the listing
     opts = [("Sumatra / Whole Bean", 15.0, None), ("3 Bag Bonus Pack / Whole Bean", 40.0, None)]
     assert product_grams("All That Dance", "12 oz bags", opts, count_fill=True) == [None, None]
@@ -267,6 +299,21 @@ def test_a_count_away_from_the_weight_multiplies_or_abstains():
     title = "Original Espresso Roast 12oz Whole Beans (Made in Brooklyn since 1972) x 2 Bags"
     assert product_grams(title, "", [("Default Title", 39.95, None)]) == [680]
     assert product_grams(title, "", [("Default Title", 39.95, None)], bag_counts="block") == [None]
+
+
+def test_a_listing_whose_two_bag_option_states_the_total():
+    # review H1 of #139 (ironmulecoffee.com's options): the total is the total
+    opts = [
+        ("1 Bag (12 oz) / Whole Bean", 14.0, 340),
+        ("2 Bags (24 oz total) / Whole Bean", 26.0, 680),
+        ("5 Pounds - Save 15% / Whole Bean", 50.0, 2268),
+    ]
+    assert product_grams("Frosted Muzzle - Medium Roast", "", opts) == [340, 680, 2268]
+
+
+def test_a_handle_with_a_count_before_its_weight():
+    # review L2 of #139: "2-1-lb" is not 2.1 lb; in a handle it reads as two 1 lb bags
+    assert product_grams("Kenya", "", [("Whole Bean", 30.0, None)], handle="kenya-2-1-lb-bags") == [907]
 
 
 def test_review_l1_l3_of_136():

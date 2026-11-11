@@ -66,9 +66,10 @@ _COUNT_BEFORE = [
     re.compile(r"\b(?:case|pack|box)\s+of\s+(\d{1,3})\s*[-–:,(]*\s*$", re.I),
     re.compile(r"(?<![\w.])(\d{1,3})\s*[-\s]?(?:count|ct|packs?|pk)\s*(?:case|box)?\s*[-–:,(]*\s*$", re.I),
     re.compile(r"\(\s*(two|three|four|five|six)\s+$", re.I),
-    # "2 Bags - 12 oz", "2 Bags X 17.6oz", "Two Bags (2.2 lb each)", "3 bags of 12oz", "2 bags / 12 oz" (review M1)
-    re.compile(rf"(?<![\w.]){_N}[\s-]*bags?\s*(?:of\s+|[-–:,(/x×]\s*)*$", re.I),
 ]
+# A count of bags right before a weight: "2 Bags - 12 oz", "2 Bags X 17.6oz", "Two Bags (2.2 lb each)", "3 bags of
+# 12oz" (review M1 of #136). The separator says whether the weight is each bag's (see _bags_count).
+_BAGS_BEFORE = re.compile(rf"(?<![\w.]){_N}[\s-]*bags?\s*(?P<sep>(?:of\s+|[-–:,(/x×]\s*)*)$", re.I)
 # A count right before a weight that "bags" follows: "Two 12 oz bags", "(2) 12 oz. bags" (review M1).
 _COUNT_BEFORE_BAGS = re.compile(rf"(?:(?<![\w.]){_N}|\(\s*{_N}\s*\))\s+$", re.I)
 _BAGS_NEXT = re.compile(r"^\.?\s*bags\b", re.I)
@@ -79,9 +80,21 @@ _COUNT_AFTER = [
     re.compile(r"^[\s.,\-–(]*(?:bags?\s*)?(?:pp\s*)?(\d{1,3})\s*-?\s*(?:packs?|pk|ct|count)\b", re.I),
     re.compile(r"^\.?\s*(?:bags?\s*)?case\s*pack\s*\(\s*(\d{1,3})\s*\)", re.I),
     re.compile(r"^\.?\s*(?:bags?\s*)?[(\[,\-–]?\s*(?:pack|case|box|bundle)\s+of\s+(\d{1,3})\b", re.I),
-    # "12oz (2 bags)", "12 oz - 2 bags", "12 oz / 2 Bags" (review M1)
-    re.compile(rf"^\.?\s*(?:bags?\s*)?[(\[,\-–/]?\s*(?:x\s*)?{_N}[\s-]*bags?\b", re.I),
 ]
+# ... and right after it: "12oz x 2 bags" and "12 oz / 2 bags" (an option's size, then its number of bags) name each
+# bag's weight; "24 oz (2 bags)", "1 kg - 2 bags" may name either.
+_BAGS_AFTER = re.compile(rf"^\.?\s*(?:bags?\s*)?(?P<sep>[(\[,\-–/]?)\s*(?P<x>x\s*)?{_N}[\s-]*bags?\b", re.I)
+# Around a count of bags: the weight is the total ("2 Bags (24 oz total)", "5 lb (packed in 5 bags)"), each bag's
+# ("Two Bags (2.2 lb each)"), or the count is a price tier, not this option's ("5lb (4 bags or more)") (review H1).
+_TOTAL = re.compile(
+    r"\b(?:total|in\s+all|combined|altogether|packed\s+(?:in|as)|ships?\s+(?:in|as)|split\s+into|divided\s+into)\b",
+    re.I,
+)
+_BAGS_WORD = re.compile(r"\bbags?\b", re.I)
+_EACH = re.compile(r"\b(?:each|per\s+bag|apiece|a\s+bag)\b", re.I)
+_TIER = re.compile(
+    r"\bor\s+more\b|\band\s+up\b|\bat\s+least\b|\bminimum\b|\bmin\.|\bbags?\s*\+|\d\s*\+\s*bags?", re.I
+)
 # A count of bags anywhere in a title or an option, away from any weight: "... 12oz Whole Beans (Made in Brooklyn
 # since 1972) x 2 Bags", "Whole Bean / 5 bags", "GOLD Label/2 bags" (review M1). One bag ("1 Bag") isn't a pack.
 _BAG_COUNT = re.compile(rf"(?<![\w.])(?:x\s*)?{_N}[\s-]*bags?\b", re.I)
@@ -198,6 +211,8 @@ def _value(m: re.Match[str]) -> tuple[float, int]:
         else:
             raise _Ambiguous(m.group(0))  # "4/5 lb": four fifths, or 4 and 5 lb?
     elif m.group("sa"):
+        if not _slug_decimal(m.group("sa"), m.group("sb")):
+            raise _Ambiguous(m.group(0))  # "2-1-lb": 2.1 lb, or 2 x 1 lb? (review L2 of #139)
         num = int(m.group("sa")) + int(m.group("sb")) / 10
     else:
         raw = m.group("num").lower().replace(",", "")
@@ -206,16 +221,41 @@ def _value(m: re.Match[str]) -> tuple[float, int]:
 
 
 def _count(text: str, start: int, end: int) -> int | None:
+    """The count a weight's neighbours give it, or None. Raises _Ambiguous when a count of bags is there but can't
+    be read one way (_bags_count)."""
     before, after = text[max(0, start - 30) : start], text[end : end + 30]
     for p in _COUNT_BEFORE:
         if m := p.search(before):
             return _as_count(m.group(1))
+    context = text[max(0, start - 30, text.rfind("\n", 0, start) + 1) : min(end + 30, _line_end(text, end))]
     if _BAGS_NEXT.search(after) and (m := _COUNT_BEFORE_BAGS.search(before)):
-        return _as_count(m.group(1) or m.group(2))
+        return _bags_count(_as_count(m.group(1) or m.group(2)), context, each=True)  # "Two 12 oz bags"
+    if m := _BAGS_BEFORE.search(before):
+        # "2 Bags - 12 oz", "2 Bags X 17.6oz" name each bag's weight; "2 Bags (24 oz" may be either
+        return _bags_count(_as_count(m.group(1)), context, each="(" not in m.group("sep"))
     for p in _COUNT_AFTER:
         if m := p.search(after):
             return _as_count(m.group(1))
+    if m := _BAGS_AFTER.search(after):
+        # "12oz x 2 bags" is each bag's; "24 oz (2 bags)", "1 kg - 2 bags" may be either
+        return _bags_count(_as_count(m.group(3)), context, each=bool(m.group("x")) or m.group("sep") == "/")
     return None
+
+
+def _bags_count(n: int, context: str, each: bool) -> int | None:
+    """A count of bags next to a weight (review M1 and H1 of #139): a price tier ("4 bags or more") is ambiguous;
+    total wording ("24 oz total", "packed in 5 bags") makes the weight the total (count 1); "each" or a shape that
+    names each bag's weight multiplies; anything else could be either and is ambiguous. One bag is no count at all,
+    so a bundle or a subscription around it still blocks (review L1)."""
+    if _TIER.search(context):
+        raise _Ambiguous(context)
+    if n == 1:
+        return None
+    if _TOTAL.search(context):
+        return 1
+    if each or _EACH.search(context):
+        return n
+    raise _Ambiguous(context)
 
 
 def _as_count(word: str) -> int:
@@ -225,9 +265,10 @@ def _as_count(word: str) -> int:
 def bag_count(text: str | None) -> int | None:
     """The one count of bags a title or an option states away from a weight ("x 2 Bags", "Whole Bean / 5 bags"),
     else None; two different counts are ambiguous."""
-    counts = {_as_count(m.group(1)) for m in _BAG_COUNT.finditer(_norm(text))}
-    if len(counts) > 1:
-        raise _Ambiguous(text or "")
+    text = _norm(text)
+    counts = {_as_count(m.group(1)) for m in _BAG_COUNT.finditer(text)}
+    if len(counts) > 1 or (counts and _TIER.search(text)):
+        raise _Ambiguous(text)
     return counts.pop() if counts else None
 
 
@@ -287,8 +328,14 @@ class Reading(NamedTuple):
     bags: int | None = None
 
 
-# A slug decimal in a URL handle ("colombia-0-5-lb"): read as "0.5" before the hyphens become spaces (review L1).
+# A slug decimal in a URL handle ("colombia-0-5-lb"): read as "0.5" before the hyphens become spaces (review L1);
+# another digit pair ("kenya-2-1-lb-bags") is left as two numbers, so a count before a weight reads as one.
 _SLUG_DECIMAL = re.compile(rf"(?<![\w.])(\d)-(\d)(?=-{_UNIT})", re.I)
+
+
+def _slug_decimal(whole: str, tenth: str) -> bool:
+    """The decimals stores write in slugs: halves (0.5, 1.5, 2.5) and 2.2 lb (1 kg)."""
+    return tenth == "5" or (whole, tenth) == ("2", "2")
 
 
 def read(
@@ -298,7 +345,9 @@ def read(
 ) -> Reading:
     """The one weight a title, an option, a tag or a URL handle states."""
     if where == "handle":
-        text = _SLUG_DECIMAL.sub(r"\1.\2", text or "").replace("-", " ")
+        text = _SLUG_DECIMAL.sub(
+            lambda m: f"{m[1]}.{m[2]}" if _slug_decimal(m[1], m[2]) else m[0], text or ""
+        ).replace("-", " ")
     text = text or ""
     if not text.strip():
         return Reading(None, False)
@@ -315,12 +364,18 @@ def read(
     )
     if any(p.search(text) for p in stops):
         return Reading(None, True)
+    if _TIER.search(text) and _BAGS_WORD.search(text):
+        return Reading(
+            None, True
+        )  # "2+ bags", "4 bags or more": a price tier, not this option's count (review H1)
     if n is not None and not any(m.counted for m in ms):
         if not ms:
             # a count without a size: one bag is a bag; more is a pack whose size comes from elsewhere, if at all.
             # A count that is also a pack or a case ("3 Bag Bonus Pack", "1 Case (12 Bags)") stays blocked.
             return Reading(None, True) if _PACK.search(text) else Reading(None, n > 1, n)
-        if n > 1:
+        if n > 1 and _TOTAL.search(text):
+            ms = [m._replace(counted=True) for m in ms]  # "... 24 oz total, 2 bags": the weight is the total
+        elif n > 1:
             if bag_counts != "multiply":
                 return Reading(None, True)
             ms = [m._replace(grams=m.bag * n, counted=True) for m in ms]
@@ -505,10 +560,16 @@ def _count_bag(
     bag_counts: BagCounts = "multiply",
 ) -> int | None:
     """One bag's weight for options that give only a count ("1 Bag", "3 bags"): the one weight the product states,
-    when every such option has a price and their prices per bag agree within COUNT_PRICE (so they are counts of one
-    bag size). None when the product's own weight is already a count ("12oz x 2 Bags")."""
+    when every such option has a price and the prices per bag agree within COUNT_PRICE (so they are counts of one bag
+    size). A count-only option alone is compared with the other options' prices, each taken as one bag ("Whole Bean"
+    at $12 beside "5 bags" at $15 is not five of it), and with no other option to compare it gives None (review L3 of
+    #139). None too when the product's own weight is already a count ("12oz x 2 Bags")."""
     per = [p / n for p, n in ((variants[i][1], n) for i, n in counts.items()) if p and n >= 1]
-    if len(per) != len(counts) or min(per) <= 0 or max(per) > COUNT_PRICE * min(per):
+    if len(per) != len(counts):
+        return None
+    if len(counts) == 1:
+        per += [p for i, (_, p, _) in enumerate(variants) if i not in counts and p]
+    if len(per) < 2 or min(per) <= 0 or max(per) > COUNT_PRICE * min(per):
         return None
     try:
         if bag_count(title) or any(m.counted for m in mentions(title or "")):

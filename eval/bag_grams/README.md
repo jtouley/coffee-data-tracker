@@ -43,7 +43,9 @@ totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total
 
 - Round 3 (bag counts, below): against `main` on the eval population, the candidates change the grams of 151–152
   coffees and the `price_per_100g` of 75–87 (the chosen rules: 152 and 87), so it goes through the full process
-  again (`test3`).
+  again (`test3`). Once `test3` was scored the total was 0.
+- Review of #139, H1 and L1–L3 (below): **15** coffees change against round 3's frozen rules (14 with another
+  `price_per_100g`), within step 9's light path. **Running total since the last full evaluation: 15.**
 
 ## Data
 
@@ -382,7 +384,7 @@ store-clustered intervals.
 
 | Set | Rule | Right | Wrong | Missed | Accuracy | Confidently wrong |
 |---|---|---|---|---|---|---|
-| validation-3 | main | 0/24 | 2/24 [2.3, 25.8] | 20/24 | 8.3% [0.0, 57.1] | 8.3% [0.0, 57.1] |
+| validation-3 | main | 0/24 (and 2/24 rightly blank) | 2/24 [2.3, 25.8] | 20/24 | 8.3% [0.0, 57.1] | 8.3% [0.0, 57.1] |
 | validation-3 | multiply, fill off | 21/24 [69.0, 95.7] | 2/24 | 1/24 | 87.5% [37.5, 98.2] | 8.3% [0.0, 57.1] |
 | validation-3 | block, fill off | 21/24 | 2/24 | 1/24 | 87.5% | 8.3% |
 | validation-3 | multiply, fill on | **22/24 [74.2, 97.7]** | 2/24 | 0/24 | **91.7% [42.9, 100.0]** | 8.3% [0.0, 57.1] |
@@ -445,7 +447,8 @@ change minus main: accuracy +51.8 points (normal [+35.6, +68.0], store-clustered
   confidently wrong of 30,022: **+0.18 points of accuracy and -0.18 points of confidently wrong** (exact on the
   labels, no sampling), on top of round 2's 95.4% / 0.9% (`test2`).
 - `test3` has joined the regression fixtures as `test3`, with floor 0.674 and ceiling 0.1567 (56/83 and 13/83). The
-  running total since the last full evaluation is 0; the next change draws a new test set.
+  running total since the last full evaluation is 0; the next change draws a new test set. (After the review's H1
+  fix, below: floor 0.819 and ceiling 0.0.)
 
 ## The full-population gate
 
@@ -475,3 +478,55 @@ A = ( #right in D  +  (N - |D|) * a_U ) / N
 The gate is on the estimate. Both lower bounds are below 95%: the data can't show that the population is above it,
 only that the best estimate is. A later rules change adds its own census to D (a new test set covers its changed
 coffees) and must keep A at or above 0.95; the slice sets' floors stay at their measured values.
+
+## Review of #139: H1 and L1–L5 (step 9's light path)
+
+The specialist review (H1): a count of bags next to a weight that is already the total was multiplied. `2 Bags (24
+oz total)` gave 1361 g instead of 680, the 12 ironmulecoffee.com regressions in `test3`, and the published
+`price_per_100g` fell 41% on those coffees. One general rule replaces it (`_bags_count` in `bag_weight.py`), not a
+store exception. A count of bags next to a weight:
+
+- with **total wording** (`total`, `in all`, `combined`, `altogether`, `packed in`, `ships in`, `split into`) gives
+  the stated weight as the total: `2 Bags (24 oz total)` 680, `5 lb (packed in 5 bags)` 2268;
+- with **tier wording** (`or more`, `and up`, `at least`, `minimum`, `2+ bags`) abstains: `5lb (4 bags or more)`;
+- with **`each`**, or in a shape that names each bag's weight (`2 Bags - 12 oz`, `2 Bags X 17.6oz`, `Two 12 oz
+  bags`, `12oz x 2 bags`, `12 oz / 2 bags` where `/` separates an option's size from its number of bags),
+  multiplies;
+- in a shape that can name either (`24 oz (2 bags)`, `1 kg - 2 bags`, `12oz (2 bags)`, `2 Bags (24 oz)`) abstains.
+  This is stricter than round 3, which multiplied the last two; no coffee in the population has them.
+
+Also: **L1**, one bag is no count, so `1 Bag - 12oz / 3 Months Prepaid`, `1 Bag 12oz + Mug` stay blocked and a
+description's `1 bag of 12oz` reads 340. **L2**, a slug digit pair is a decimal only as stores write them (halves,
+`2-2` for 2.2 lb): `2-1-lb` abstains in an option, and `kenya-2-1-lb-bags` reads as two 1 lb bags. **L3**, a
+count-only option alone is compared with the other options' prices as one bag each, and with nothing to compare it
+abstains. **L4**, an `unclear` label in D counts as not right instead of crashing. **L5**, the gate test takes
+`POPULATION` and the formula (`full_population`, `is_ok`) from `bag_eval.py`.
+
+**The 15 changed coffees, each checked by hand** (all in `test3`, a scored fixture now, or in validation; no other
+test-split coffee changes):
+
+| Coffees | Option | Round 3 | Now | Label | Check |
+|---|---|---|---|---|---|
+| 12 at ironmulecoffee.com (12 in `test3`) | `2 Bags (24 oz total)` (30 options) | 1361 | 680 | 680 on all 12 | right |
+| haobaobaocoffee.com (`test3`) | `5lb (4 bags or more)` (3 options) | 9072 | blank | 2268 | wrong → missed |
+| galaxygirlcoffee.com (`test`, labeled) | `1-2-lb` at $14.45 | 544 | blank | 454 | wrong → missed |
+| pourcityroasters.com (validation) | `1-4-lb ` at $5.50 | 635 | blank | none | 1.4 lb at $5.50 is implausible (a quarter pound is likelier): right to abstain |
+
+Measured on the fixture with these rules (floors and ceilings only move toward passing more strictly):
+
+| Set | Accuracy | Confidently wrong | Floor / ceiling |
+|---|---|---|---|
+| `test3` | 81.9% (68/83) | 0.0% (0/83) | 0.674 → **0.819** / 0.1567 → **0.0** |
+| every other set | unchanged | unchanged | unchanged |
+
+The gate (`bag_eval.py gate`): 95.57% (normal [93.75, 97.39], store-clustered [93.08, 97.40]); D 69 of 96 right.
+`gate_d.json` keeps round 3's 96: with these rules 91 coffees' drawn options differ from `main`, all among the 96,
+and every one of the 96 has a label, so counting all of them exactly stays correct.
+
+**Labeler runs (review N3).** The labelers were spawned by the orchestrator on claude-haiku-5-5; this README's author
+wrote the packets and prompts and never saw a transcript, so independence rests on the orchestrator's record. The
+inputs, by sha256 prefix (the packets themselves hold listing text and stay out of git): GUIDE `dbf87200da6f55a0`;
+train-3 packet `459cffe555e45eeb`, validation-3 `11af0c8e4a495066`, C's train-3 packet `d197fb1e1d86ae08`, test3
+`abe0095a3af63ac3`; prompts A `16ac7a4601fcb87e`, B `92a4b27860a1836f`, C `ce15f826fc595cf1` (round 3, phase 1), A
+`d4aef819ec8d9800`, B `306a7a9503cf9c19` (phase 2). test3's A and B files are byte-identical (all 83 values agree,
+and both kept the packet's key order).
