@@ -97,7 +97,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     </tbody></table></details>
   </section>
   <section>
-    <h2 class="serif">Coffees in stock, by process</h2>
+    <h2 class="serif">Single-origin coffees in stock, by process</h2>
     {{ charts.process | safe }}
     <details><summary>Table</summary><table><thead><tr><th>Process</th><th class="num">Coffees</th></tr></thead><tbody>
     {% for r in processes %}<tr><td>{{ r.process }}</td><td class="num">{{ r.n }}</td></tr>{% endfor %}

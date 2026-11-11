@@ -76,12 +76,12 @@ Databricks loads from S3 or GCS.
 
 `LISTING.md` is the source of truth for the listing copy. The Snowflake listing's attribute boxes are typed by
 hand from it, so nothing else would notice when a number there goes stale. Its `coverage-claims` comment maps
-each number in the copy to a `mart_build_profile` metric (`listed_coffees: about 38,000 coffees listed for
-sale`), and every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
+each number in the copy to a `mart_build_profile` metric (a `listed_coffees: <the copy's words>` line), and
+every build compares them. `listed_coffees` counts the coffees currently listed for sale, not
 wholesale (not `PUBLIC_COFFEE`'s rows), and `roasters_with_coffee` the roasters with at least one of them:
 - `coverage_claims_match_build` warns when a claim is more than 15% (`claim_tolerance` in
-  `dbt/dbt_project.yml`) from this build's metric, and `coffeedata build` prints the file and line to update.
-  It never holds a release back. Update the copy and the comment together, then retype the number in Snowflake.
+  `dbt/dbt_project.yml`) from this build's metric, and `coffeedata build` prints the file and line to update
+  and the build's number rounded for the copy ("about 41,000 now"). It never holds a release back. Update the copy and the comment together, then retype the number in Snowflake.
 - `coverage_claims_name_metrics` fails the build when a claim names a metric the profile doesn't have: that's a
   bug in the claim or the profile, not drift.
 - A claim whose text isn't in the copy, or has no number, fails CI

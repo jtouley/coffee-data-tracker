@@ -17,6 +17,7 @@ data/
 dbt/.user.yml
 lake-photos/
 lake-users/
+lake-importers/
 tests/browser/node_modules/
 
 # Terraform (src/terraform/)
