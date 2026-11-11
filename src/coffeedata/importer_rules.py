@@ -254,12 +254,15 @@ _TITLE_PARTS = re.compile(r"\s+[-–|/]\s+|\s*\|\s*")
 _LOT = re.compile(r"\blot\s*(?:no\.?|number|#)?\s*#?\s*(\d{3,7}(?:-\d{1,3})?)\b", re.I)
 _YEAR = re.compile(r"(?:19|20)\d\d")  # "Harvest Lot 2025": a year, not a lot number
 # A warehouse "name" that is only a preposition or a negation ("In Warehouse", "Not In Warehouse"): no name at all.
-_NOT_A_NAME = re.compile(r"(?:(?:not|no|out of)\s+)?(?:in|at|ex|our|the|a|stored at|from)?", re.I)
-_NEGATED = re.compile(r"\b(?:not|no|non|without|out of)\b", re.I)
+_NOT_A_NAME = re.compile(r"(?:(?:not|no(?!\.)|out of)\s+)?(?:in|at|ex|our|the|a|stored at|from)?", re.I)
+_NEGATED = re.compile(r"\b(?:not|no(?!\.)|non|without|out of)\b", re.I)  # "No. 2 Warehouse" is a number
 _WAREHOUSE = re.compile(
     r"^(?:(?:in|at|ex|stored at)\s+)?([A-Z][\w.' ]{1,40}?)\s+warehouse$|^warehouse\s*:?\s+([A-Z][\w.' ]{1,40})$",
     re.I,
 )
+# Island and state names (origins.ALIASES) that mean one origin in a coffee title; the rest (Java, Flores, Bali,
+# Congo) are also a variety, a farm name or two countries, so on a title alone they abstain.
+_TITLE_PLACES_OK = frozenset({"sumatra", "sulawesi", "kona", "hawaii", "puerto rico", "east timor"})
 _ROYAL_DECAF = re.compile(
     r"\bdecaf|\bdecaffeinated\b|\bswiss water\b|\bmountain water\b|\bsugar ?cane\b|\bethyl acetate\b|\bco2\b",
     re.I,
@@ -376,8 +379,11 @@ def royal_process(cells: dict[str, str | None]) -> str | None:
 
 
 def royal_origin(cells: dict[str, str | None]) -> str | None:
-    """The country an "Origin:" label gives, else the one country the title names; None when unclear. Both read the
-    catalog's aliases (origins.ALIASES: "Sumatra" is Indonesia), so a label and a title agree."""
+    """The country an "Origin:" label gives (read through origins.canonical_country, so "Origin: Sumatra" is
+    Indonesia), else the one country the title names. A title reads the catalog's country names (origins.COUNTRIES),
+    but of the island and state names among them only those that mean one place in a coffee title
+    (_TITLE_PLACES_OK): "Java" is also a variety and "Flores" a common farm name, so "Java Natural" or "Finca Las
+    Flores" never makes Indonesia. None when unclear."""
     from .origins import ALIASES, COUNTRIES, canonical_country
 
     labelled = royal_labelled(cells, "origin")
@@ -386,7 +392,10 @@ def royal_origin(cells: dict[str, str | None]) -> str | None:
         return names.pop() if len(names) == 1 and names <= set(COUNTRIES) else None
     title = cells.get("title") or ""
     found = {
-        canonical_country(c) for c in (*COUNTRIES, *ALIASES) if re.search(rf"\b{re.escape(c)}\b", title, re.I)
+        canonical_country(c)
+        for c in COUNTRIES
+        if (c.lower() not in ALIASES or c.lower() in _TITLE_PLACES_OK)
+        and re.search(rf"\b{re.escape(c)}\b", title, re.I)
     }
     return found.pop() if len(found) == 1 else None
 

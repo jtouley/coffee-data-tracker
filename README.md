@@ -391,8 +391,8 @@ alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it a
 environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the
 roaster registry and discovery, refuse the host outright (`http.schedule_only_host`). Its tests use invented
 products only (`tests/fixtures/importers/royal_synthetic_products.json`). **Owner step for a real drop at Royal:**
-set the repository variable `ROYAL_ACCEPT_DROP_WEEK` to that week's Monday (`YYYY-MM-DD`); the next scheduled run
-that week stores the thinned listing, and the value expires by itself after that week.
+set the repository variable `ROYAL_ACCEPT_DROP_WEEK` to the value the failure names (the failed week's Monday,
+`YYYY-MM-DD`); the next weekly run stores the thinned listing, and the value expires by itself a week later.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).

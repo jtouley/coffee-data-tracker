@@ -263,15 +263,24 @@ class ScheduleOnlyHost(Blocked):
 SCHEDULE_ONLY_HOSTS_SHA256 = frozenset({"1c556bc56014079a0a09b5ee70a3382f52ef714ade7280acdb9f187c3ba736bb"})
 
 
-def schedule_only_host(host: str | None) -> bool:
-    """Whether `host` (a host, domain or URL) is, or is under, one of SCHEDULE_ONLY_HOSTS_SHA256."""
-    h = (host or "").strip().lower()
-    h = urlsplit(h if "//" in h else f"//{h}").hostname or ""
-    labels = h.strip(".").split(".")
+def _schedule_only_name(name: str) -> bool:
+    labels = name.strip(".").split(".")
     return any(
         hashlib.sha256(".".join(labels[i:]).encode()).hexdigest() in SCHEDULE_ONLY_HOSTS_SHA256
         for i in range(len(labels) - 1)
     )
+
+
+def schedule_only_host(host: str | None) -> bool:
+    """Whether `host` (a host, domain or URL) is, or is under, one of SCHEDULE_ONLY_HOSTS_SHA256. Never raises: a
+    value urlsplit can't read ("[www.roaster.example](http", an unmatched bracket) is refused when any host-like part
+    of it is the store, and is otherwise not the store."""
+    h = (host or "").strip().lower()
+    try:
+        name = urlsplit(h if "//" in h else f"//{h}").hostname or ""
+    except ValueError:
+        return any(_schedule_only_name(part) for part in re.findall(r"[a-z0-9][a-z0-9.-]*", h))
+    return _schedule_only_name(name)
 
 
 # What Shopify's closed or deactivated storefront page says (lowercased). Read only on a non-200, non-JSON answer
@@ -556,11 +565,15 @@ class PoliteClient:
         max_response_bytes: int | None = None,
         deadline_s: float | None = None,
         schedule_only_ok: bool = False,
+        robots_query: bool = False,
     ):
         self.min_interval = min_interval
         # Only the scheduled importers job builds a client that may reach SCHEDULE_ONLY_HOSTS; every other one (the
         # crawl, the probe, discovery) refuses them outright, robots.txt included (ScheduleOnlyHost).
         self.schedule_only_ok = schedule_only_ok
+        # Whether robots.txt is checked against the path *and* the query sent (RFC 9309). On only for the importers
+        # job's client for now: what it changes for the roaster crawl hasn't been measured yet.
+        self.robots_query = robots_query
         # deadline_s: seconds from now after which no request is sent (DeadlineReached): the crawl job's window, so a
         # catalog still being read when it ends stops there and is stored as partial, instead of running past the job.
         self.deadline = None if deadline_s is None else time.monotonic() + deadline_s
@@ -872,7 +885,7 @@ class PoliteClient:
                     f"{urlparse(url).hostname}: fetched only by the scheduled importers job"
                 )
             # robots.txt rules match the path and the query (RFC 9309), so the params we'll send are checked too
-            checked = str(httpx.Request("GET", url, params=params).url) if params else url
+            checked = str(httpx.URL(url).copy_merge_params(params)) if params and self.robots_query else url
             if not robots and not self._allowed(checked):
                 raise SiteDisallowed(url) if self._disallows_site(url) else Blocked(url)
             r = self._send_retrying(url, params, page=not robots)

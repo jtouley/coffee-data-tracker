@@ -13,7 +13,7 @@ import hashlib
 import json
 import re
 import subprocess
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
 import httpx
@@ -61,7 +61,8 @@ def _store(pages: list[list[dict]], calls: list[httpx.Request], robots: str = "U
         body = {"products": pages[n - 1] if n <= len(pages) else []}
         return httpx.Response(200, json=body)
 
-    return PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler))
+    # robots_query: as the weekly command builds it (robots.txt checked on the path and the query)
+    return PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler), robots_query=True)
 
 
 def _pages_of(n: int) -> list[list[dict]]:
@@ -164,6 +165,25 @@ def test_robots_disallow_is_honored_on_the_path_and_the_query(robots):
     assert [c.url.path for c in calls] == ["/robots.txt"]
 
 
+def test_the_query_aware_robots_check_is_the_importers_clients_only():
+    """Scoped to the importers job's client in this PR: what it would change for the roaster crawl hasn't been
+    measured, so every other client still checks robots.txt against the path, as before."""
+    calls: list[httpx.Request] = []
+    with _store(_pages_of(250), calls, robots="User-agent: *\nDisallow: /*page=\n") as client:
+        client.robots_query = False
+        assert len(importers.read_royal(client, LISTING).lots) == 6
+    assert PoliteClient().robots_query is False
+
+
+def test_a_full_page_with_nothing_keyable_fails_at_once(monkeypatch):
+    monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 3)
+    calls: list[httpx.Request] = []
+    no_ids = [{k: v for k, v in p.items() if k != "id"} for p in PRODUCTS[:3]]
+    with _store([no_ids] * 30, calls) as client, pytest.raises(importers.LayoutChanged, match="no product"):
+        importers.read_royal(client, LISTING)
+    assert _pages_asked(calls) == ["1"]
+
+
 def test_pages_are_spaced(monkeypatch):
     """ROYAL_PAGE_INTERVAL before each page after the first, on top of the client's own per-host spacing."""
     monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 2)
@@ -181,6 +201,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
 
     def fake(lake, client, *a, **k):
         seen["ok"] = client.schedule_only_ok
+        seen["robots_query"] = client.robots_query
         return []
 
     monkeypatch.setattr(importers, "snapshot", fake)
@@ -188,7 +209,7 @@ def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(m
         cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
-    assert seen["ok"] is True
+    assert seen == {"ok": True, "robots_query": True}
     assert PoliteClient().schedule_only_ok is False  # every other client refuses it
 
 
@@ -348,9 +369,29 @@ def test_a_thinned_listing_fails_like_the_other_importers(tmp_path, monkeypatch)
         )
     assert res[0]["status"] == "failed" and "thinned" in res[0]["error"]
     # the way to accept it: the owner's week-scoped variable, never --accept-drop (a dispatch never fetches Royal)
-    assert (
-        "ROYAL_ACCEPT_DROP_WEEK to 2026-11-16" in res[0]["error"] and "--accept-drop" not in res[0]["error"]
-    )
+    assert "ROYAL_ACCEPT_DROP_WEEK=2026-11-16" in res[0]["error"] and "--accept-drop" not in res[0]["error"]
+
+
+def test_the_value_a_failed_week_names_is_accepted_by_the_next_weekly_run(tmp_path, monkeypatch):
+    """The workflow runs once a week: week N fails and names N's Monday; the owner sets exactly that; week N+1's
+    scheduled first attempt stores the thinned listing. A week later the value has expired."""
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    with _store(_pages_of(250), []) as client:  # week of 2026-11-09: 6 lots
+        importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    for k, v in SCHEDULED.items():
+        monkeypatch.setenv(k, v)
+    week_n = datetime(2026, 11, 18, 17, 37, tzinfo=UTC)  # week of 2026-11-16: thinned, fails
+    with _store([PRODUCTS[:2]], []) as client:
+        failed = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: week_n)
+    assert failed[0]["status"] == "failed"
+    m = re.search(r"ROYAL_ACCEPT_DROP_WEEK=(\S+?);", failed[0]["error"])
+    assert m and m.group(1) == "2026-11-16"
+    monkeypatch.setenv("ROYAL_ACCEPT_DROP_WEEK", m.group(1))
+    with _store([PRODUCTS[:2]], []) as client:  # week N+1, the next scheduled run
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: week_n + timedelta(days=7))
+    assert res[0]["status"] == "stored" and res[0]["accepted_drop"] is True
+    assert not importers.royal_accepts_drop(date(2026, 11, 30))[0]  # week N+2: expired
 
 
 SCHEDULED = {
@@ -367,11 +408,12 @@ SCHEDULED = {
         ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-16"}, True, None),
         (
             {**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-09"},
-            False,
-            "isn't this week",
-        ),  # last week's: expired
-        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-23"}, False, "isn't this week"),  # a future week
-        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "yes"}, False, "isn't this week"),
+            True,
+            None,
+        ),  # last week's: the week that failed
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-02"}, False, "isn't this week's"),  # expired
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-23"}, False, "isn't this week's"),  # a future week
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "yes"}, False, "isn't this week's"),
         (
             {**SCHEDULED, "GITHUB_RUN_ATTEMPT": "2", "ROYAL_ACCEPT_DROP_WEEK": "2026-11-16"},
             False,
@@ -554,6 +596,9 @@ def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_i
     for h in (host, f"www.{host}", f"https://{host}/products.json", f"shop.{host}"):
         assert http.schedule_only_host(h), h
     assert not http.schedule_only_host("shop.example") and not http.schedule_only_host(f"not{host}")
+    # a value urlsplit can't read never raises: the store inside it is still refused, anything else isn't the store
+    for bad in (f"[www.{host}](http", f"[{host}", f"{host}]", f"[x]({host})"):
+        assert http.schedule_only_host(bad), bad
 
     # a client that isn't the importers job's refuses before any request, robots.txt included (a mock transport
     # records it; nothing leaves this machine either way)
@@ -586,6 +631,40 @@ def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_i
     ])  # fmt: skip
     ids = {s.roaster.roaster_id for s in registry.current(lake)}
     assert "realroaster.com" in ids and not {host, f"shop.{host}"} & ids
+
+
+BAD_WEBSITES = [
+    "[www.roaster.example](http://roaster.example)",
+    "[bad.example",
+    "bad.example]",
+    "http://[::1",
+]
+
+
+@pytest.mark.parametrize("bad", BAD_WEBSITES)
+def test_a_malformed_host_never_breaks_discovery_the_registry_or_add_roaster(
+    bad, lake, tmp_path, monkeypatch
+):
+    """schedule_only_host sits in shared code (registry, discovery, add-roaster): a malformed value is "not the
+    store", never an exception."""
+    from coffeedata import cli, http, registry
+
+    assert http.schedule_only_host(bad) is False
+    assert http.schedule_only_host(registry.normalize_domain(bad)) is False
+    registry.is_storefront_host(registry.normalize_domain(bad))  # True or False, never raises
+    lake.write("registry", "registry/source=manual/x.parquet", [
+        {"added_at": datetime.now(UTC), "source": "manual", "roaster_id": rid, "name": "Added"}
+        for rid in (registry.normalize_domain(bad), "realroaster.com")
+    ])  # fmt: skip
+    assert "realroaster.com" in {s.roaster.roaster_id for s in registry._current(lake, registry.SEED)}
+    # add-roaster: refused as "not a roaster website", or accepted, but never a traceback
+    form = tmp_path / "issue.md"
+    form.write_text(f"### Roaster name\n\nAdded\n\n### Website\n\n{bad}\n\n### State\n\nOR\n")
+    monkeypatch.setenv("COFFEEDATA_LAKE", str(tmp_path / "lake-add"))
+    try:
+        cli.main(["add-roaster", "--file", str(form)])
+    except SystemExit as e:
+        assert e.code in (0, None) or "not a roaster website" in str(e.code), e.code
 
 
 # --- the rules: decide when the text says so, abstain otherwise --------------------------------------------------
@@ -693,7 +772,11 @@ def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") ->
         (_cells(body="Region: Huila."), "region", "Huila"),
         (_cells("Colombia Anaerobic Lot", ["Process: Natural"]), "process", "anaerobic"),  # anaerobic wins
         (_cells(tags=["Process: Natural", "Process: Natural."]), "process", "natural"),
-        (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # the catalog's alias, as the label gives
+        (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # one place in a coffee title
+        (_cells("Finca Las Flores Microlot - Lot 70412"), "origin", None),  # not Flores, Indonesia
+        (_cells("Java Natural - Lot 70412"), "origin", None),  # Java is a variety too
+        (_cells("Nicaragua Java Natural"), "origin", "Nicaragua"),
+        (_cells("Kenya AA - No. 2 Warehouse", ["Warehouse: No. 2"]), "warehouse", "No. 2"),  # a number
         (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
         (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number
     ],

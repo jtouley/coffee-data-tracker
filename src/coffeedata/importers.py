@@ -473,16 +473,21 @@ def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
 
 def royal_accepts_drop(week: date, env: dict[str, str] | None = None) -> tuple[bool, str | None]:
     """(accept, note): whether the owner's ROYAL_ACCEPT_DROP_VAR accepts a thinned Royal listing this week. Only on the
-    scheduled run's first attempt, and only when it names this week's Monday, so it expires by itself; any other
-    value is ignored, with a note for the result."""
+    scheduled run's first attempt, and only when it names this week's Monday or the previous week's: the week whose
+    run failed, which the failure message names, so the next weekly run (a week later) can use it. Any older or
+    other value is ignored, with a note for the result, so it expires by itself."""
     env = dict(os.environ) if env is None else env
     value = (env.get(ROYAL_ACCEPT_DROP_VAR) or "").strip()
     if not value:
         return False, None
     if not _scheduled_first_attempt(env):
         return False, f"{ROYAL_ACCEPT_DROP_VAR} ignored: read only on the scheduled run's first attempt"
-    if value != week.isoformat():
-        return False, f"{ROYAL_ACCEPT_DROP_VAR}={value!r} ignored: it isn't this week ({week.isoformat()})"
+    accepted = (week.isoformat(), (week - timedelta(days=7)).isoformat())
+    if value not in accepted:
+        return False, (
+            f"{ROYAL_ACCEPT_DROP_VAR}={value!r} ignored: it isn't this week's or last week's Monday "
+            f"({' or '.join(accepted)})"
+        )
     return True, None
 
 
@@ -512,6 +517,8 @@ def read_royal(
         if not data["products"]:
             break
         keyed = {str(p["id"]): p for p in batch if p.get("id") not in (None, "")}
+        if not keyed and len(data["products"]) >= ROYAL_PAGE_LIMIT:
+            raise LayoutChanged(f"{ROYAL}: page {page} is full but holds no product with an id; not stored")
         if repeated := keyed.keys() & products.keys():
             raise LayoutChanged(
                 f"{ROYAL}: page {page} repeats {len(repeated)} products already read (the store ignores `page`?); "
@@ -859,8 +866,8 @@ def snapshot(
             thinned = bool(last and len(parsed.lots) < MIN_SHARE_OF_LAST_WEEK * last)
             if thinned and not accept:
                 how = (
-                    f"if the drop is real, set the repository variable {ROYAL_ACCEPT_DROP_VAR} to {week.isoformat()} "
-                    "for the next scheduled run"
+                    f"if the drop is real, set the repository variable {ROYAL_ACCEPT_DROP_VAR}={week.isoformat()}; "
+                    "the next scheduled run (next week) accepts it"
                     if name == ROYAL
                     else "if the drop is real, run again with --accept-drop"
                 )

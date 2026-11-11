@@ -28,8 +28,9 @@
 # this workflow makes it fetch Royal; a failed Royal week waits for the next schedule. It isn't offered in the
 # dispatch `importer` choice (a dispatch with `all`, or a re-run, reports it skipped), and importers.royal_listing_url
 # refuses the address outside GitHub Actions, in another workflow, on any event but `schedule`, on a re-run, and
-# under pytest. A real drop at Royal is accepted for one week by the repository variable ROYAL_ACCEPT_DROP_WEEK set
-# to that week's Monday (YYYY-MM-DD), read on the same scheduled first attempt only.
+# under pytest. A real drop at Royal is accepted by the repository variable ROYAL_ACCEPT_DROP_WEEK set to the value
+# the failure names (the failed week's Monday, YYYY-MM-DD): the next weekly run accepts it, read on a scheduled first
+# attempt only, and it expires a week later.
 name: importers
 on:
   schedule:
