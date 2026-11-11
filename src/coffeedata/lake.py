@@ -30,7 +30,6 @@ Green-coffee importers' offer lists go to a fourth private dataset (`Lake.import
 by dbt and never released:
 
     raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
-    offers/week=YYYY-MM-DD/importer=<name>.parquet        the fields the page states, and our normalized values
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
 files, in dbt and in `state.py`, so re-running a step is safe: duplicates collapse on their natural keys.
@@ -506,65 +505,29 @@ SCHEMAS["contacts"] = pa.schema(
     ]
 )
 
-# Green-coffee importers' public offer lists, one file per importer per week and layer (importers.py). No prices,
-# page HTML or images. Private, in their own dataset (Lake.importers()): never a dbt source, never released, and
-# backend-only (for internal use and a future roaster portal, which may show only the normalized values).
-#
-# importer_raw: each lot word for word, as the roaster adapters keep a product: every cell of its row under the page's
-# header (null when empty), and its own page's URL. Only cells about prices are left out. Everything derived (the
-# normalized values in importer_offers, later categorization and labels) can be derived again from it.
+# Green-coffee importers' public offer lists (importers.py): raw only, one immutable file per importer per week. Each
+# lot word for word, as the roaster adapters keep a product: every cell of its row under the page's header (null when
+# empty), and its own page's URL. Columns about prices are left out; no page HTML or images. Private, in its own
+# dataset (Lake.importers()): never a dbt source, never released, backend-only (for internal use and a future roaster
+# portal, which may show only the normalized values). Stated fields and normalized values are derived from it at read
+# time (importers.offers), never stored, so a better rule re-derives the whole history.
 SCHEMAS["importer_raw"] = pa.schema(
-    [
-        ("week", pa.date32()),
-        ("fetched_at", pa.timestamp("s", tz="UTC")),
-        ("importer", pa.string()),
-        ("source_url", pa.string()),
-        ("row", pa.int32()),  # the lot's position in the page's table, from 0; joins importer_offers.row
-        ("lot_id", pa.string()),
-        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
-        ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
-    ]
-)
-# importer_offers: the fields the page states, and our model's values derived from importer_raw (importer_rules.py).
-SCHEMAS["importer_offers"] = pa.schema(
     [
         ("week", pa.date32()),  # the Monday of the fetch's ISO week: one snapshot per importer per week
         ("fetched_at", pa.timestamp("s", tz="UTC")),
         ("importer", pa.string()),  # importers.IMPORTERS key
         ("source_url", pa.string()),
         ("parser_version", pa.string()),
-        ("lot_id", pa.string()),  # the importer's own lot ID, where its page shows one (Cafe Imports)
-        ("name", pa.string()),
-        ("origin", pa.string()),  # as the page states it in its own column; never inferred from the name
-        ("region", pa.string()),
-        ("process", pa.string()),
-        ("status", pa.string()),  # spot, afloat, at_origin, in_store; another value as the page writes it
-        ("est_arrival", pa.string()),  # as stated, e.g. "Early Jan 2027"
-        ("warehouse", pa.string()),
-        ("bags", pa.int32()),
-        ("bag_size", pa.string()),  # as stated, e.g. "60 Kg"
-        ("bag_kg", pa.float64()),
-        ("row", pa.int32()),
-        # Our model's values (importer_rules.normalize, at rules_version); null where the rules abstain.
-        ("process_type", pa.string()),  # washed, natural, honey, anaerobic
-        ("varieties", pa.list_(pa.string())),
-        ("altitude_min_m", pa.int32()),
-        ("altitude_max_m", pa.int32()),
-        ("harvest_months", pa.list_(pa.string())),  # jan .. dec
-        ("grower_type", pa.string()),  # farm, cooperative, washing_station, micromill
-        ("grower_name", pa.string()),
-        (
-            "certifications",
-            pa.list_(pa.string()),
-        ),  # organic, fair_trade, rainforest_alliance; [] = stated none
-        ("rules_version", pa.string()),
+        ("row", pa.int32()),  # the lot's position in the page's table, from 0
+        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
+        ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
     ]
 )
 
 # Tables that live in the photo, users or importers dataset rather than the main lake.
 PHOTO_TABLES = ("photos",)
 USER_TABLES = ("users", "invites", "consents", "contacts")
-IMPORTER_TABLES = ("importer_raw", "importer_offers")
+IMPORTER_TABLES = ("importer_raw",)
 
 # Glob (relative to the lake root) that matches every file of a table, including its empty schema file.
 GLOBS = {
@@ -591,7 +554,6 @@ GLOBS = {
     "consents": "consents/*.parquet",
     "contacts": "contacts/*.parquet",
     "importer_raw": "raw/*/*.parquet",
-    "importer_offers": "offers/*/*.parquet",
 }
 # Where each table's zero-row schema file lives, so a glob over an empty lake still resolves.
 SCHEMA_FILES = {
@@ -620,7 +582,6 @@ SCHEMA_FILES = {
     "consents": "consents/user_id=schema.parquet",
     "contacts": "contacts/user_id=schema.parquet",
     "importer_raw": "raw/week=0000-00-00/importer=schema.parquet",
-    "importer_offers": "offers/week=0000-00-00/importer=schema.parquet",
 }
 PENDING_DELETES = (
     "deletes.pending.json"  # in a remote lake's staging folder: files still to delete from the dataset

@@ -1005,10 +1005,17 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     from . import importers
     from .http import PoliteClient
 
+    if unknown := set(args.importer or ()) - set(importers.IMPORTERS):
+        raise SystemExit(
+            f"no importer {', '.join(sorted(unknown))}; known: {', '.join(sorted(importers.IMPORTERS))}"
+        )
     lake = Lake.importers()
+    if args.require_hub and not lake.remote:
+        # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
+        raise SystemExit(f"COFFEEDATA_IMPORTERS must be an hf://datasets/ URL here, not {lake.url!r}")
     # One page per host, so the client's per-host spacing never applies; a slow page gets a minute.
     with PoliteClient(timeout=60.0, retries=3) as client:
-        results = importers.snapshot(lake, client, args.importer, date.fromisoformat(args.run_date))
+        results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
     return all(r["status"] != "failed" for r in results)
 
@@ -1256,16 +1263,21 @@ def main(argv: list[str] | None = None) -> None:
         help="with --served: build nothing and exit 0 when no release is served yet (the site workflow)",
     )
 
-    from .importers import IMPORTERS
-
     imp = add(
         "importer-snapshot",
         cmd_importer_snapshot,
         "this week's private snapshot of green importers' public offer lists ($COFFEEDATA_IMPORTERS)",
     )
-    imp.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to snapshot")
     imp.add_argument(
-        "--importer", action="append", choices=sorted(IMPORTERS), help="only this importer (repeatable)"
+        "--importer", action="append", help="only this importer (repeatable): cafe_imports, interamerican"
+    )
+    imp.add_argument(
+        "--accept-drop",
+        action="store_true",
+        help="store a week with under half the lots of the last stored week (a real drop, checked by hand)",
+    )
+    imp.add_argument(
+        "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"
     )
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")

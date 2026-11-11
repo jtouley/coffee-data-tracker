@@ -371,14 +371,14 @@ Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parque
 Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
 
 Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
-[`docs/IMPORTERS_DATASET_CARD.md`](docs/IMPORTERS_DATASET_CARD.md)). **They are backend-only, for internal use and a
-future roaster portal**: never in the public release, the `public_*` tables, the site or the public dataset, and dbt
-never reads them. Even in that portal, only the normalized values may be shown, never the importer's wording.
-`coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one pass a week over each
-importer's public offer page and stores two immutable layers per importer and week: `raw/` (each lot word for
-word: every cell of its row and its URL, as the roaster adapters keep a product's whole text) and `offers/` (the
-stated fields, and our normalized values from deterministic rules that abstain when unsure). No prices, page HTML
-or images.
+[`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
+for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
+public dataset, and dbt never reads them. Even in that portal, only the normalized values may be shown, never the
+importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
+week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
+text. The stated fields and our normalized values are derived from raw when read (`importers.offers()`), never
+stored, so a better rule re-derives the whole history. No prices, page HTML or images.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
