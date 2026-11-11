@@ -5,14 +5,16 @@ place, closed when the alert recovers (docs/TRIAGE.md).
     python -m coffeedata.triage prod <alerts.json> [--dry-run]
 
 An alert has a key (`eval:origin`, `prod:grams`, `pipeline:eval-floors`). The issue for a key is found by the marker
-`<!-- triage-key: <key> -->` in its body, among the issues labelled `triage` (open or closed), never by a search
-(GitHub's search index lags, and two runs close together would open two issues). Then:
+`<!-- triage-key: <key> -->` in its body, among the issues labelled `triage` (open or closed) that the workflows'
+bot opened (TRIAGE_AUTHOR, default github-actions[bot]), never by a search (GitHub's search index lags, and two runs
+close together would open two issues). The bot rewrites the body on every run: notes go in comments. Then:
 - firing, no issue: open one, labelled `triage`, the kind's label and the severity;
 - firing, an open issue: rewrite its body (the latest run), and comment only when what fails changed (a fingerprint
   of the failing checks is kept in the body), so a weekly run doesn't add a comment a week;
 - firing, a closed issue: reopen it with a comment, so one key keeps one history;
-- recovered (every check of the key passed in a run that measured it), an open issue: comment and close it.
-A key the run didn't measure (a skipped floor, a metric not in this release) is left as it is.
+- recovered, an open issue: comment and close it, but only when every check the issue was opened or last updated
+  for (kept in the body) was measured again and passed. A key, or a failing check, the run didn't measure (a
+  skipped floor, a metric not in this release) leaves the issue as it is.
 
 It needs only GITHUB_TOKEN with `issues: write` and GITHUB_REPOSITORY; it reads nothing else and runs no tested code.
 `--dry-run` prints what it would do and calls nothing.
@@ -25,6 +27,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import UTC, datetime
@@ -32,8 +35,10 @@ from pathlib import Path
 from typing import Any, Protocol
 
 TRIAGE = "triage"
+AUTHOR = "github-actions[bot]"  # who opens triage issues: GITHUB_TOKEN in the alert jobs
 KIND_LABEL = {"eval": "eval-regression", "pipeline": "eval-regression", "prod": "prod-health"}
 SEVERITIES = ("critical", "warning")
+OK = ("ok", "expected")  # a check that isn't failing: passed, or a breach an acknowledged change explains
 LABELS = {
     TRIAGE: ("d93f0b", "Opened by an alert: triage with docs/TRIAGE.md"),
     "eval-regression": ("b60205", "An accuracy floor or ceiling failed on main or in eval-floors"),
@@ -58,12 +63,15 @@ FIRST_STEPS = {
         "Re-run the workflow by hand once fixed; this issue closes on the next run that scores the floors.",
     ],
     "prod": [
-        "Open the run below; the table names each metric, its value, its bound and its baseline.",
-        "Compare the served release with the previous one: `uv run coffeedata build-diff` (RUNBOOK.md §5.1 a).",
-        "Check the rule's recent changes on main and the week's crawl (fetch-health, job_manifests).",
-        "Customers get bad data (a critical fill, price or volume breach that build-diff confirms): roll back with "
-        "`gh workflow run weekly -f rollback_to=previous` (docs/TRIAGE.md, When to roll back). The pipeline "
-        "itself is never blocked by this alert.",
+        "Open the run below; the table names each metric, its status and the bound it crossed. For the values, "
+        "re-run the check locally on a read-only copy of the lake (docs/TRIAGE.md, step 4).",
+        "Was it intended? Read the PRs merged since the previous release (their Effect sections) and the CHANGELOG. "
+        "A change that explains it gets an entry in config/prod_health_expected.toml, not a rollback.",
+        "Compare the served release with the previous one: `uv run coffeedata build-diff` (RUNBOOK.md §5.1 a), "
+        "and check the week's crawl (fetch-health, job_manifests).",
+        "Customers get bad data that no change explains (a critical fill, price or volume breach that build-diff "
+        "confirms): roll back with `gh workflow run weekly -f rollback_to=previous` (docs/TRIAGE.md, When to roll "
+        "back). The pipeline itself is never blocked by this alert.",
     ],
 }
 
@@ -84,7 +92,21 @@ class GitHub:
     def __init__(self, repo: str, token: str, api: str = "https://api.github.com"):
         self.base, self.token = f"{api.rstrip('/')}/repos/{repo}", token
 
-    def _call(self, method: str, path: str, body: dict | None = None) -> Any:
+    def _call(self, method: str, path: str, body: dict | None = None, attempts: int = 4) -> Any:
+        """One REST call; a network error, 429 or 5xx is retried with backoff (2, 4, 8 s)."""
+        for attempt in range(1, attempts + 1):
+            try:
+                return self._once(method, path, body)
+            except urllib.error.HTTPError as e:
+                if e.code not in (429, 500, 502, 503, 504) or attempt == attempts:
+                    raise
+            except (urllib.error.URLError, TimeoutError):
+                if attempt == attempts:
+                    raise
+            time.sleep(2.0**attempt)
+        raise AssertionError("unreachable")
+
+    def _once(self, method: str, path: str, body: dict | None) -> Any:
         req = urllib.request.Request(
             self.base + path,
             method=method,
@@ -184,10 +206,18 @@ def _read_marker(body: str | None, name: str) -> str | None:
     return None
 
 
+def _failing_names(alert: dict[str, Any]) -> list[str]:
+    return sorted(f"{c.get('set') or ''}|{c['name']}" for c in alert["checks"] if c["status"] not in OK)
+
+
+def _passed_names(alert: dict[str, Any]) -> set[str]:
+    return {f"{c.get('set') or ''}|{c['name']}" for c in alert["checks"] if c["status"] in OK}
+
+
 def fingerprint(alert: dict[str, Any]) -> str:
     """What fails, not by how much: a new comment when a check starts or stops failing or changes severity."""
     failing = sorted(
-        f"{c.get('set') or ''}|{c['name']}|{c['status']}" for c in alert["checks"] if c["status"] != "ok"
+        f"{c.get('set') or ''}|{c['name']}|{c['status']}" for c in alert["checks"] if c["status"] not in OK
     )
     return hashlib.sha256(json.dumps([alert["severity"], failing]).encode()).hexdigest()[:16]
 
@@ -204,7 +234,7 @@ def _fmt(x: Any, unit: str | None = None) -> str:
     return f"{x:.4g}"
 
 
-def _row(c: dict[str, Any]) -> str:
+def _row(c: dict[str, Any], values: bool = True) -> str:
     unit = c.get("unit")
     bound = "–"
     if c.get("threshold") is not None:
@@ -213,7 +243,12 @@ def _row(c: dict[str, Any]) -> str:
     ci = c.get("interval")
     ci_text = f"[{ci[0]:.1%}, {ci[1]:.1%}]" if ci else "–"
     base = _fmt(c.get("baseline"), unit) if "baseline" in c else None
-    cells = [c.get("set") or "", f"`{c['name']}`", c["status"], _fmt(c.get("value"), unit), bound]
+    status = c["status"] + (f" (#{c['pr']})" if c.get("pr") else "")
+    if (
+        not values
+    ):  # a production metric: the lake is private, so the issue names the check and its bound only
+        return "| " + " | ".join([c.get("set") or "", f"`{c['name']}`", status, bound]) + " |"
+    cells = [c.get("set") or "", f"`{c['name']}`", status, _fmt(c.get("value"), unit), bound]
     cells += [base or "–"] if "baseline" in c else [ci_text]
     return "| " + " | ".join(cells) + " |"
 
@@ -221,24 +256,22 @@ def _row(c: dict[str, Any]) -> str:
 def render(alert: dict[str, Any], now: str) -> str:
     kind = alert["kind"]
     prod = kind == "prod"
-    head = [
-        "Platform" if prod else "Set",
-        "Check",
-        "Status",
-        "Measured",
-        "Bound",
-        "Baseline" if prod else "Wilson 95%",
-    ]
+    head = (
+        ["Platform", "Check", "Status", "Bound"]
+        if prod
+        else ["Set", "Check", "Status", "Measured", "Bound", "Wilson 95%"]
+    )
     lines = [
         _marker("key", alert["key"]),
         _marker("fingerprint", fingerprint(alert)),
+        _marker("failing", json.dumps(_failing_names(alert))),
         f"**{alert['summary']}**" if alert.get("summary") else "",
         "",
         f"Severity: **{alert['severity']}**. Source: {alert.get('source') or '–'}.",
         "",
         "| " + " | ".join(head) + " |",
         "|" + "---|" * len(head),
-        *(_row(c) for c in alert["checks"]),
+        *(_row(c, values=not prod) for c in alert["checks"]),
         "",
     ]
     for m in alert.get("messages") or []:
@@ -249,11 +282,17 @@ def render(alert: dict[str, Any], now: str) -> str:
     lines += ["", f"### First steps ({RUNBOOK})", ""]
     steps = alert.get("steps") or FIRST_STEPS[kind]
     lines += [f"{i}. {s.format(source=alert.get('source') or '<the test>')}" for i, s in enumerate(steps, 1)]
-    lines += ["", f"_Updated {now} by the alert job; it closes this issue when the alert recovers._"]
+    lines += [
+        "",
+        f"_Updated {now} by the alert job, which rewrites this description on every run (add notes as comments). "
+        "It closes this issue once every failing check is measured again and passes._",
+    ]
     return "\n".join(lines)
 
 
-def sync(alerts: list[dict[str, Any]], gh: Client, now: str | None = None) -> list[tuple[str, str, int]]:
+def sync(
+    alerts: list[dict[str, Any]], gh: Client, now: str | None = None, author: str = AUTHOR
+) -> list[tuple[str, str, int]]:
     """Open, update, reopen or close one issue per alert key. Returns (action, key, issue number)."""
     now = now or datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
     if any(a["firing"] for a in alerts):
@@ -261,6 +300,8 @@ def sync(alerts: list[dict[str, Any]], gh: Client, now: str | None = None) -> li
             gh.ensure_label(name, color, desc)
     existing: dict[str, dict[str, Any]] = {}
     for found in gh.issues():  # newest first: the first issue seen for a key is the one kept
+        if (found.get("user") or {}).get("login") != author:
+            continue  # a hand-made or copied issue never takes over a key
         key = _read_marker(found.get("body"), "key")
         if key and key not in existing:
             existing[key] = found
@@ -270,13 +311,16 @@ def sync(alerts: list[dict[str, Any]], gh: Client, now: str | None = None) -> li
         run = (a.get("context") or {}).get("run") or "this run"
         if not a["firing"]:
             if issue and issue["state"] == "open":
+                was = json.loads(_read_marker(issue.get("body"), "failing") or "[]")
+                if not set(was) <= _passed_names(a):
+                    continue  # a check that failed wasn't measured this time: nothing is known to have recovered
                 gh.comment(issue["number"], f"Recovered: every check passed in {run}. Closing.")
                 gh.update(issue["number"], state="closed", state_reason="completed")
                 done.append(("closed", a["key"], issue["number"]))
             continue
         body = render(a, now)
         sev = f"severity:{a['severity']}"
-        labels = [TRIAGE, KIND_LABEL[a["kind"]], sev]
+        labels = [TRIAGE, a.get("label") or KIND_LABEL[a["kind"]], sev]
         title = f"[triage] {a['title']}"
         if issue is None:
             new = gh.create(title, body, labels)
@@ -303,9 +347,11 @@ def sync(alerts: list[dict[str, Any]], gh: Client, now: str | None = None) -> li
 
 
 def _failing(a: dict[str, Any]) -> str:
-    bad = [c for c in a["checks"] if c["status"] != "ok"]
+    bad = [c for c in a["checks"] if c["status"] not in OK]
+    values = a["kind"] != "prod"
     return "; ".join(
-        f"{c.get('set') or ''} {c['name']} {_fmt(c.get('value'), c.get('unit'))}".strip() for c in bad
+        f"{c.get('set') or ''} {c['name']} {_fmt(c.get('value'), c.get('unit')) if values else c['status']}".strip()
+        for c in bad
     )
 
 
@@ -318,49 +364,59 @@ def eval_alerts(
     run_url: str | None,
     sha: str | None,
     alert_if_missing: bool = True,
+    scope: str | None = None,
 ) -> list[dict]:
-    """One alert per eval in the floors' report (tests/evalfloor.py), plus, with `alert_if_missing`, one for the run
-    itself: firing when the report is missing (the floors never ran), recovered when it is there. ci leaves that
-    one out: a red main whose tests never reached the floors (a lint failure) is already plain to see."""
+    """One alert per eval in the floors' report (tests/evalfloor.py) that `scope` owns: "in-git" (ci: every floor
+    but the private ones) or "private" (eval-floors: the private_eval floors). A workflow never judges an eval it
+    doesn't own, so ci can't close an issue eval-floors opened. With `alert_if_missing`, one more alert for the run
+    itself: firing unless the report scored at least one floor in scope (a missing or empty report scored none).
+    ci leaves that one out: a red main whose tests never reached the floors (a lint failure) is plain to see."""
     ctx = {"workflow": workflow, "commit": sha, "run": run_url}
-    pipeline = {
-        "key": f"pipeline:{workflow}", "kind": "pipeline", "title": f"{workflow}: the floors didn't run",
-        "severity": "warning", "context": ctx, "source": f".github/workflows/{workflow}.yml",
-        "summary": f"The {workflow} run produced no floor report, so no floor was scored.",
-        "firing": report is None,
-        "checks": [{"name": "floor report written", "status": "warning" if report is None else "ok"}],
-    }  # fmt: skip
-    if report is None:
-        return [pipeline] if alert_if_missing else []
+    tests = [
+        t for t in (report or {}).get("tests", [])
+        if t.get("eval") and (scope is None or bool(t.get("private")) == (scope == "private"))
+    ]  # fmt: skip
+    scored = any(t["outcome"] != "skipped" for t in tests)
+    out = []
+    if alert_if_missing:
+        out.append({
+            "key": f"pipeline:{workflow}", "kind": "pipeline", "title": f"{workflow}: the floors didn't run",
+            "severity": "warning", "context": ctx, "source": f".github/workflows/{workflow}.yml",
+            "summary": f"The {workflow} run scored no floor"
+            + (" (no report)." if report is None else " (the report holds none)."),
+            "firing": not scored,
+            "checks": [{"name": "floors scored", "status": "ok" if scored else "warning"}],
+        })  # fmt: skip
     by_eval: dict[str, list[dict]] = {}
-    for t in report["tests"]:
-        if t.get("eval"):
-            by_eval.setdefault(t["eval"], []).append(t)
-    out = [pipeline] if alert_if_missing else []
-    for name, tests in sorted(by_eval.items()):
-        measured = [t for t in tests if t["outcome"] != "skipped"]
+    for t in tests:
+        by_eval.setdefault(t["eval"], []).append(t)
+    for name, ts in sorted(by_eval.items()):
+        measured = [t for t in ts if t["outcome"] != "skipped"]
         if not measured:
             continue  # skipped everywhere: nothing was measured, so nothing changes
         bad = [t for t in measured if t["outcome"] in ("failed", "error")]
         checks: list[dict[str, Any]] = []
+        messages = []
         for t in bad or measured:
-            got = t["checks"] or [{"set": t["set"], "metric": t["nodeid"].split("::")[-1], "ok": False}]
+            status = "error" if t["outcome"] == "error" else "failed"
+            got = [c for c in t["checks"] if not (bad and c.get("ok"))]
+            if bad and not got:  # it failed without a failing check (it crashed): say so, with its message
+                got = [{"set": t["set"], "metric": t["nodeid"].split("::")[-1].split("[")[0], "ok": False}]
+                messages.append(t["message"] or "(no message)")
             for c in got:
-                if bad and c.get("ok"):
-                    continue
                 checks.append({
                     "set": c.get("set") or t["set"], "name": c["metric"],
-                    "status": "ok" if c.get("ok") else ("error" if t["outcome"] == "error" else "failed"),
+                    "status": "ok" if c.get("ok") else status,
                     "value": c.get("value"), "threshold": c.get("bound"), "op": c.get("op"), "kind": c.get("kind"),
                     "unit": c.get("unit"), "interval": c.get("interval"),
                 })  # fmt: skip
-        source = tests[0]["nodeid"].split("::")[0]
-        sets = sorted({c["set"] for c in checks if c["status"] != "ok"})
+        source = ts[0]["nodeid"].split("::")[0]
+        sets = sorted({c["set"] for c in checks if c["status"] not in OK})
         out.append({
             "key": f"eval:{name}", "kind": "eval", "title": f"eval regression: {name}", "severity": "critical",
             "firing": bool(bad), "checks": checks, "source": source, "context": ctx,
             "summary": f"The {name} eval failed on {', '.join(sets)} in {workflow}." if bad else "",
-            "messages": [t["message"] for t in bad if not t["checks"] and t["message"]],
+            "messages": messages,
         })  # fmt: skip
     return out
 
@@ -368,7 +424,8 @@ def eval_alerts(
 def prod_pipeline_alert(measured: bool, run_url: str | None, sha: str | None) -> list[dict]:
     """The health check itself: firing when it produced no alerts file (the lake unreadable, a schema break)."""
     return [{
-        "key": "pipeline:prod-health", "kind": "pipeline", "title": "prod-health: the check didn't run",
+        "key": "pipeline:prod-health", "kind": "pipeline", "label": "prod-health",
+        "title": "prod-health: the check didn't run",
         "severity": "warning", "firing": not measured, "source": ".github/workflows/prod-health.yml",
         "summary": "The production health check couldn't measure the served release, so nothing was judged.",
         "checks": [{"name": "served release measured", "status": "ok" if measured else "warning"}],
@@ -389,22 +446,28 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("report", type=Path, help="the report; a missing file means the floors never ran")
     e.add_argument("--workflow", required=True)
     e.add_argument(
-        "--alert-if-missing", action="store_true", help="a missing report opens a pipeline:<workflow> issue"
+        "--alert-if-missing",
+        action="store_true",
+        help="a report that scored no floor opens pipeline:<workflow>",
     )
+    e.add_argument("--scope", choices=("in-git", "private"), help="the evals this workflow owns")
     pr = sub.add_parser("prod", help="issues from coffeedata.prod_health judge --out")
     pr.add_argument("alerts", type=Path)
     for s in (e, pr):
         s.add_argument("--dry-run", action="store_true")
+        s.add_argument("--run-url", help="the run the alert is about (default: this run)")
+        s.add_argument("--sha", help="the commit it ran on (default: GITHUB_SHA)")
     a = p.parse_args(argv)
     server, repo, run_id = (
         os.environ.get(k) for k in ("GITHUB_SERVER_URL", "GITHUB_REPOSITORY", "GITHUB_RUN_ID")
     )
-    run_url = f"{server}/{repo}/actions/runs/{run_id}" if server and repo and run_id else None
+    run_url = a.run_url or (f"{server}/{repo}/actions/runs/{run_id}" if server and repo and run_id else None)
+    sha = a.sha or os.environ.get("GITHUB_SHA")
     if a.cmd == "evals":
         report = json.loads(a.report.read_text()) if a.report.exists() else None
-        alerts = eval_alerts(report, a.workflow, run_url, os.environ.get("GITHUB_SHA"), a.alert_if_missing)
+        alerts = eval_alerts(report, a.workflow, run_url, sha, a.alert_if_missing, a.scope)
     else:
-        alerts = prod_pipeline_alert(a.alerts.exists(), run_url, os.environ.get("GITHUB_SHA"))
+        alerts = prod_pipeline_alert(a.alerts.exists(), run_url, sha)
         alerts += json.loads(a.alerts.read_text()) if a.alerts.exists() else []
     token = os.environ.get("GITHUB_TOKEN")
     gh: Client
@@ -415,7 +478,7 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     else:
         gh = GitHub(repo, token)
-    for action, key, number in sync(alerts, gh):
+    for action, key, number in sync(alerts, gh, author=os.environ.get("TRIAGE_AUTHOR") or AUTHOR):
         print(f"{action} {key} #{number}")
     firing = [x["key"] for x in alerts if x["firing"]]
     print(f"{len(firing)} alert(s) firing: {', '.join(firing) or 'none'}")

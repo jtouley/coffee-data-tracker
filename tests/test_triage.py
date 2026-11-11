@@ -30,13 +30,27 @@ class FakeGitHub:
     def issues(self):
         return [dict(i, labels=[{"name": n} for n in i["labels"]]) for i in reversed(self.store)]
 
+    def by_hand(self, title, body):
+        """An issue someone opened themselves (not the workflows' bot), labelled triage."""
+        n = len(self.store) + 1
+        self.store.append({"number": n, "title": title, "body": body, "labels": ["triage"], "state": "open",
+                           "user": {"login": "someone"}})  # fmt: skip
+        return n
+
     def _get(self, n):
         return next(i for i in self.store if i["number"] == n)
 
     def create(self, title, body, labels):
         n = len(self.store) + 1
         self.store.append(
-            {"number": n, "title": title, "body": body, "labels": list(labels), "state": "open"}
+            {
+                "number": n,
+                "title": title,
+                "body": body,
+                "labels": list(labels),
+                "state": "open",
+                "user": {"login": "github-actions[bot]"},
+            }  # fmt: skip
         )
         self.calls.append(f"create {n}")
         return {"number": n}
@@ -60,7 +74,8 @@ class FakeGitHub:
         self.labels_made.add(name)
 
 
-def _test(eval_name, set_name, outcome, value=None, bound=None, kind="floor", message="", interval=None):
+def _test(eval_name, set_name, outcome, value=None, bound=None, kind="floor", message="", interval=None,
+          private=False):  # fmt: skip
     checks = []
     if value is not None:
         ok = outcome == "passed"
@@ -68,7 +83,8 @@ def _test(eval_name, set_name, outcome, value=None, bound=None, kind="floor", me
                    "bound": bound, "kind": kind, "op": ">=" if kind == "floor" else "<=", "ok": ok,
                    "unit": "share", "n": None, "interval": interval}]  # fmt: skip
     return {"nodeid": f"tests/test_{eval_name}_accuracy.py::test_x[{set_name}]", "eval": eval_name,
-            "set": set_name, "outcome": outcome, "checks": checks, "message": message}  # fmt: skip
+            "set": set_name, "outcome": outcome, "checks": checks, "message": message,
+            "private": private}  # fmt: skip
 
 
 def _report(*tests):
@@ -159,6 +175,11 @@ def test_one_issue_per_eval_updated_reopened_and_closed():
     _sync(gh, worse)
     assert len(gh.comments[1]) == 1 and "validation" in gh.comments[1][0]
 
+    # Only validation measured this time (train skipped): train's failure isn't known to be fixed, so it stays open.
+    half = _report(_test("origin", "train", "skipped"), _test("origin", "validation", "passed", 0.9, 0.8))
+    assert _sync(gh, half) == []
+    assert gh.store[0]["state"] == "open"
+
     # Recovery: a comment and the issue closes.
     healthy = _report(
         _test("origin", "train", "passed", 0.96, 0.959), _test("origin", "validation", "passed", 0.9, 0.8)
@@ -176,7 +197,10 @@ def test_one_issue_per_eval_updated_reopened_and_closed():
 def test_a_skipped_eval_leaves_its_issue_alone():
     gh = FakeGitHub()
     _sync(gh, _report(_test("wholesale", "train", "failed", 0.9, 0.97)))
-    assert _sync(gh, _report(_test("wholesale", "train", "skipped"))) == []
+    # nothing scored: the wholesale issue is left alone (the run itself is what's wrong: pipeline:eval-floors)
+    assert _sync(gh, _report(_test("wholesale", "train", "skipped"))) == [
+        ("opened", "pipeline:eval-floors", 2)
+    ]
     assert gh.store[0]["state"] == "open"
 
 
@@ -201,10 +225,12 @@ def test_an_issue_is_found_by_its_key_not_its_title():
     _sync(gh, _report(_test("origin", "train", "failed", 0.9, 0.959)))
     gh.store[0]["title"] = "origin floor broke (renamed by hand)"
     gh.create("an unrelated triage issue", "no marker here", ["triage"])
+    # a newer copy of the bot's issue made by hand carries the same marker: it never takes the key over
+    gh.by_hand("copy", gh.store[0]["body"])
     assert _sync(gh, _report(_test("origin", "train", "failed", 0.9, 0.959))) == [
         ("updated", "eval:origin", 1)
     ]
-    assert len(gh.store) == 2
+    assert len(gh.store) == 3
 
 
 def test_severity_labels_follow_the_alert():
@@ -220,8 +246,45 @@ def test_a_missing_report_opens_a_pipeline_issue_that_closes_once_floors_run():
     gh = FakeGitHub()
     assert _sync(gh, None) == [("opened", "pipeline:eval-floors", 1)]
     assert "floors didn't run" in gh.store[0]["title"]
+    assert "eval-regression" in gh.store[0]["labels"]
+    # an empty report (a collection error) or one whose floors all skipped scored nothing: still firing
+    assert _sync(gh, _report()) == [("updated", "pipeline:eval-floors", 1)]
+    assert _sync(gh, _report(_test("origin", "train", "skipped"))) == [("updated", "pipeline:eval-floors", 1)]
     assert _sync(gh, _report(_test("origin", "train", "passed", 0.96, 0.959))) == [
         ("closed", "pipeline:eval-floors", 1)
+    ]
+
+
+def test_a_crashed_floor_opens_an_issue_that_says_what_crashed():
+    """A floor that raised after recording only passing checks (or none): the issue names the test and its
+    message, never an empty table."""
+    crashed = _test("dq", "price/train", "failed", 0.9, 0.85, message="KeyError: 'price_strata.json'")
+    crashed["checks"][0]["ok"] = True
+    gh = FakeGitHub()
+    _sync(gh, _report(crashed))
+    body = gh.store[0]["body"]
+    assert "The dq eval failed on price/train in eval-floors." in body
+    assert "| price/train | `test_x` | failed |" in body and "KeyError: 'price_strata.json'" in body
+
+
+def test_ci_never_judges_the_private_evals_eval_floors_owns():
+    """The reviewer's loop: eval-floors opens eval:origin; ci's report (whose private floors skipped) must not close
+    it, so the next eval-floors run updates it instead of reopening it."""
+    gh = FakeGitHub()
+    floors_run = _report(_test("origin", "train", "failed", 0.95, 0.959, private=True))
+    first = triage.sync(triage.eval_alerts(floors_run, "eval-floors", "R1", "s", True, "private"), gh)
+    assert first == [("opened", "eval:origin", 1)]
+    # ci's report: an in-git floor passed, the private origin floor skipped, and (before the fix) a unit test's
+    # passing floors("origin", ...) call; scope in-git leaves eval:origin alone whatever it holds
+    ci_run = _report(
+        _test("classifier", "train", "passed", 0.99, 0.985),
+        _test("origin", "train", "skipped", private=True),
+        _test("origin", "train", "passed", 0.96, 0.959, private=True),
+    )
+    assert triage.sync(triage.eval_alerts(ci_run, "ci", "R2", "s", False, "in-git"), gh) == []
+    assert gh.store[0]["state"] == "open" and gh.comments.get(1) is None
+    assert triage.sync(triage.eval_alerts(floors_run, "eval-floors", "R3", "s", True, "private"), gh) == [
+        ("updated", "eval:origin", 1)
     ]
 
 
@@ -249,13 +312,23 @@ def test_without_a_token_it_refuses_rather_than_guessing(tmp_path):
 
 def test_the_report_and_annotations_from_a_real_session(tmp_path):
     """A pytest session, with two xdist workers, over a floor that uses `floors` and one that only asserts (as
-    tests/test_bag_grams_accuracy.py does): the report names both, and each failure is an ::error annotation."""
+    tests/test_bag_grams_accuracy.py does): the report names both, and each failure is an ::error annotation. A
+    unit test that calls `floors` outside a floor file is never reported, and a private floor says so."""
     tests = tmp_path / "tests"
     tests.mkdir()
     (tests / "__init__.py").write_text("")
     (tests / "conftest.py").write_text(
         "from tests_floor.evalfloor import (  # noqa: F401\n"
-        "    pytest_runtest_call, pytest_runtest_logreport, pytest_sessionfinish, pytest_terminal_summary)\n"
+        "    pytest_itemcollected, pytest_runtest_call, pytest_runtest_logreport, pytest_sessionfinish,\n"
+        "    pytest_terminal_summary)\n"
+        "def pytest_configure(config):\n"
+        "    config.addinivalue_line('markers', 'private_eval: a private floor')\n"
+    )
+    (tests / "test_units.py").write_text(
+        "from tests_floor.evalfloor import floors\n"
+        "def test_a_unit_test_of_the_helper():\n"
+        "    with floors('origin', 'train') as f:\n"
+        "        f.at_least('weighted agreement', 0.99, 0.959)\n"
     )
     pkg = tmp_path / "tests_floor"
     pkg.mkdir()
@@ -274,6 +347,7 @@ def test_the_report_and_annotations_from_a_real_session(tmp_path):
         def test_full_population_gate():
             assert 0.9412 >= 0.95, "full-population accuracy 0.9412 < 0.95 (README)"
 
+        @pytest.mark.private_eval
         def test_skipped():
             pytest.skip("no inputs")
         """)
@@ -296,7 +370,11 @@ def test_the_report_and_annotations_from_a_real_session(tmp_path):
     gate = by["test_full_population_gate"]
     assert gate["eval"] == "demo" and gate["set"] == "full_population_gate"
     assert gate["checks"][0]["metric"] == "full-population accuracy" and gate["checks"][0]["value"] == 0.9412
-    assert by["test_skipped"]["outcome"] == "skipped"
+    assert by["test_skipped"]["outcome"] == "skipped" and by["test_skipped"]["private"] is True
+    assert by["test_demo[train]"]["private"] is False
+    assert not any(
+        "test_units" in t["nodeid"] for t in doc["tests"]
+    )  # a unit test of the helper isn't a floor
     # the annotation escapes % as GitHub's workflow commands require
     assert (
         "::error title=Eval floor demo / train::eval demo, set train: accuracy 90.00%25 < floor 95.00%25"
@@ -318,23 +396,34 @@ def test_ci_opens_no_pipeline_issue_for_a_missing_report():
 
 
 def test_the_alert_jobs_hold_only_issues_write_and_never_a_hub_token():
-    """Each workflow's alert job: main only, never on a pull request, GITHUB_TOKEN limited to issues, no secret;
-    and the jobs that hold the Hub token can't write issues (docs/TRIAGE.md, Permissions and safety)."""
+    """Each alert job: main only, never on a pull request, GITHUB_TOKEN limited to issues (plus reading the one ci
+    run's artifact for eval-alerts), no secret; the jobs that hold the Hub token can't write issues; and ci, which
+    deploy waits on, has no alerting at all (docs/TRIAGE.md, Permissions and safety)."""
     import yaml
 
     workflows = ROOT / ".github" / "workflows"
-    for name in ("ci.yml", "eval-floors.yml", "prod-health.yml"):
+    ci = yaml.safe_load((workflows / "ci.yml").read_text())
+    assert "alert" not in ci["jobs"] and "issues" not in (workflows / "ci.yml").read_text()
+    for name in ("ci.yml", "eval-floors.yml", "prod-health.yml", "eval-alerts.yml"):
         wf = yaml.safe_load((workflows / name).read_text())
         assert wf["permissions"] == {"contents": "read"}, name
         for job_name, job in wf["jobs"].items():
             text = yaml.safe_dump(job)
             if job_name == "alert":
-                assert job["permissions"] == {"contents": "read", "issues": "write"}, name
+                extra = {"actions": "read"} if name == "eval-alerts.yml" else {}
+                assert job["permissions"] == {"contents": "read", "issues": "write"} | extra, name
                 assert "secrets." not in text, name
-                assert "github.ref == 'refs/heads/main'" in job["if"], name
-                if name == "ci.yml":
-                    assert "github.event_name == 'push'" in job["if"]
+                if name == "eval-alerts.yml":
+                    for cond in ("workflow_run.event == 'push'", "workflow_run.head_branch == 'main'",
+                                 "head_repository.full_name == github.repository"):  # fmt: skip
+                        assert cond in job["if"], cond
+                else:
+                    assert "github.ref == 'refs/heads/main'" in job["if"], name
             else:
                 assert "issues" not in (job.get("permissions") or {}), (name, job_name)
             if "HF_TOKEN" in text:
                 assert job.get("if") == "github.ref == 'refs/heads/main'", (name, job_name)
+    alerts = yaml.safe_load((workflows / "eval-alerts.yml").read_text())
+    assert set(alerts[True]) == {"workflow_run"} and alerts[True]["workflow_run"]["workflows"] == ["ci"]
+    download = next(s for s in alerts["jobs"]["alert"]["steps"] if "download-artifact" in s.get("uses", ""))
+    assert download["with"]["run-id"] == "${{ github.event.workflow_run.id }}"  # that run's artifact only

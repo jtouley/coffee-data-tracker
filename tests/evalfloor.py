@@ -108,6 +108,15 @@ def floors(eval_name: str, set_name: str) -> Iterator[Floors]:
 # --- the report (hooks imported by tests/conftest.py) ----------------------------------------------------------
 
 _RESULTS: dict[str, dict[str, Any]] = {}
+_PRIVATE = "eval_floor_private"
+
+
+def pytest_itemcollected(item):
+    """Which workflow owns a floor: a private_eval floor is eval-floors', every other one ci's. Only the floor
+    files (tests/test_<eval>_accuracy.py) are reported: a unit test that calls `floors` (tests/test_triage.py) is
+    never taken for an eval, so ci's report can't say a private floor passed."""
+    if _ACCURACY.search(item.nodeid):
+        item.user_properties.append((_PRIVATE, item.get_closest_marker("private_eval") is not None))
 
 
 @pytest.hookimpl(hookwrapper=True)
@@ -142,16 +151,16 @@ def _set_of(nodeid: str) -> str:
 
 def pytest_runtest_logreport(report):
     m = _ACCURACY.search(report.nodeid)
-    checks = next((v for k, v in report.user_properties if k == _PROPERTY), None)
-    if not m and not checks:
+    if not m:
         return
+    props = dict(report.user_properties)
+    checks = props.get(_PROPERTY)
     r = _RESULTS.setdefault(report.nodeid, {
-        "nodeid": report.nodeid, "eval": m["eval"] if m else None, "set": _set_of(report.nodeid),
-        "outcome": "passed", "checks": [], "message": "",
+        "nodeid": report.nodeid, "eval": m["eval"], "set": _set_of(report.nodeid),
+        "private": bool(props.get(_PRIVATE)), "outcome": "passed", "checks": [], "message": "",
     })  # fmt: skip
     if report.when == "call" and checks:
         r["checks"] = checks
-        r["eval"] = r["eval"] or checks[0]["eval"]
         r["set"] = checks[0]["set"]
     if report.skipped:
         r["outcome"] = "skipped"
@@ -178,7 +187,11 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
         lines = r["message"].splitlines()[:3] or ["(no message)"]
         terminalreporter.write_line(f"{r['nodeid']}: {lines[0]}")
         if os.environ.get("GITHUB_ACTIONS") == "true":
-            title = f"Eval floor {r['eval']} / {r['set']}".replace(",", "%2C").replace(":", "%3A")
+            title = (
+                f"Eval floor {r['eval']} / {r['set']}".replace("%", "%25")
+                .replace(",", "%2C")
+                .replace(":", "%3A")
+            )
             text = "%0A".join(x.replace("%", "%25") for x in lines)
             terminalreporter.write_line(f"::error title={title}::{text}")
 
@@ -188,7 +201,7 @@ def pytest_sessionfinish(session, exitstatus):
     if not path or _is_worker(session.config):
         return
     doc = {
-        "version": 1,
+        "version": 2,
         "commit": os.environ.get("GITHUB_SHA"),
         "tests": sorted(_RESULTS.values(), key=lambda r: r["nodeid"]),
     }

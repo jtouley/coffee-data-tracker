@@ -14,8 +14,9 @@
 # HF_TOKEN the site and weekly workflows use. It is given to the one step that downloads; the tests never see it.
 #
 # Alerts (docs/TRIAGE.md): the tests write a report (EVAL_REPORT, tests/evalfloor.py), and the `alert` job opens or
-# updates one triage issue per failed eval, and closes it when the eval passes again; a run that never scored the
-# floors (no token, a failed download) opens the `pipeline:eval-floors` issue. The alert job has GITHUB_TOKEN with
+# updates one triage issue per failed private eval, and closes it when the eval passes again; a run that scored no
+# floor (no token, a failed download, an empty report) opens the `pipeline:eval-floors` issue. This workflow owns the
+# private evals only (--scope private); ci's floors are eval-alerts.yml's. eval-floors gates no deploy. The alert job has GITHUB_TOKEN with
 # issues: write and nothing else; it never sees the Hub token, and the floors job never gets issues: write.
 name: eval-floors
 on:
@@ -95,4 +96,4 @@ jobs:
           PYTHONPATH: src
         run: |
           python3 -m coffeedata.triage evals "$RUNNER_TEMP/report/eval-report.json" --workflow eval-floors \
-            --alert-if-missing
+            --scope private --alert-if-missing

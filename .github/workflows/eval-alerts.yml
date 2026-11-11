@@ -1,0 +1,66 @@
+# The eval alerts for ci's floors (docs/TRIAGE.md). When ci completes on a push to main, read the floors' report that
+# run uploaded and open, update or close one triage issue per in-git eval (coffeedata.triage --scope in-git).
+#
+# Its own workflow, so alerting can't change ci's result, which deploy.yml waits on: an Issues API outage or a bug
+# here leaves ci green and the deploy going. And it can't be steered by a pull request:
+# - workflow_run runs this file and checks out the code as they are on the default branch, never a PR's;
+# - the job runs only for ci's push runs on main in this repository (a fork's branch named main doesn't qualify);
+# - the report is downloaded from that one run (by its id), which only main's tests wrote; it is read as data;
+# - only the run on main's current tip alerts: an older commit's run finishing late doesn't restore old state.
+# GITHUB_TOKEN gets issues: write, actions: read (that run's artifact) and contents: read; there is no secret.
+name: eval-alerts
+on:
+  workflow_run:
+    workflows: [ci]
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: eval-alerts
+  cancel-in-progress: false
+jobs:
+  alert:
+    if: >-
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.conclusion != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    env:
+      HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+      RUN_ID: ${{ github.event.workflow_run.id }}
+      RUN_URL: ${{ github.event.workflow_run.html_url }}
+    steps:
+      - name: Is this ci run on main's tip?
+        id: tip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tip=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
+          if [ "$tip" = "$HEAD_SHA" ]; then echo "current=true" >> "$GITHUB_OUTPUT"
+          else echo "::notice::Not alerting for $HEAD_SHA: main is at $tip, whose ci run alerts."; fi
+      - if: steps.tip.outputs.current == 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - if: steps.tip.outputs.current == 'true'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        continue-on-error: true  # no report (ci failed before its tests): no eval was measured
+        with:
+          name: eval-report
+          path: ${{ runner.temp }}/report
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Open, update or close the triage issues
+        if: steps.tip.outputs.current == 'true'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: |
+          python3 -m coffeedata.triage evals "$RUNNER_TEMP/report/eval-report.json" --workflow ci --scope in-git \
+            --run-url "$RUN_URL" --sha "$HEAD_SHA"
