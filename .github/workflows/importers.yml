@@ -12,6 +12,12 @@
 # runs with the token. It needs a write token (HF_TOKEN, the one site.yml and weekly.yml use), since it creates the
 # private dataset on its first run and adds two files (raw and offers) per importer per week.
 #
+# Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
+# the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
+# and only a scheduled run gets it (COFFEEDATA_ROYAL_URL below is empty on a dispatch): an AI agent that can
+# dispatch this workflow still can't make it fetch Royal. importers.royal_listing_url refuses the address under
+# pytest, outside GitHub Actions, in another workflow and on any event but `schedule`.
+#
 # Nothing passes silently: no token, a fetch that fails, or a page whose layout changed (zero rows parsed) fails the
 # run, and that importer's week stays unwritten, so a dispatch the same week (after a fix) fetches it again. A week
 # already stored is never fetched again.
@@ -45,6 +51,8 @@ jobs:
           # importers.ensure_private refuses to write to any of these
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+          # Royal's store, for the scheduled run alone (see the note at the top)
+          COFFEEDATA_ROYAL_URL: ${{ github.event_name == 'schedule' && 'https://royalcoffee.com' || '' }}
         run: |
           if [ -z "$HF_TOKEN" ]; then
             echo "::error title=Importer snapshots::HF_TOKEN is not set, so the private importers dataset can't be written."

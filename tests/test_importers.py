@@ -153,6 +153,7 @@ def test_snapshot_writes_one_file_per_importer_per_week_and_never_fetches_it_aga
     assert [(r["importer"], r["status"], r.get("rows")) for r in first] == [
         ("cafe_imports", "stored", 4),
         ("interamerican", "stored", 4),
+        ("royal_coffee", "skipped", None),  # fetched by the scheduled workflow only
     ]
     path = tmp_path / "importers" / "offers" / "week=2026-11-09" / "importer=cafe_imports.parquet"
     t = pq.read_table(path).to_pylist()
@@ -179,7 +180,7 @@ def test_snapshot_writes_one_file_per_importer_per_week_and_never_fetches_it_aga
     calls.clear()
     with _client(_pages(), calls) as client:
         again = importers.snapshot(lake, client, today=date(2026, 11, 15), now=lambda: NOW)
-    assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
+    assert [r["status"] for r in again] == ["skipped", "skipped", "skipped"] and calls == []
     with pytest.raises(FileExistsError):  # immutable, as every lake file
         lake.write("importer_offers", importers.path("cafe_imports", date(2026, 11, 9)), t)
 
@@ -188,7 +189,7 @@ def test_a_changed_page_fails_that_importer_and_writes_nothing_for_it(tmp_path):
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with _client(_pages(ci="<html><body>maintenance</body></html>"), []) as client:
         res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["failed", "stored"]
+    assert [r["status"] for r in res] == ["failed", "stored", "skipped"]
     assert "LayoutChanged" in res[0]["error"]
     assert not (tmp_path / "importers" / importers.path("cafe_imports", date(2026, 11, 9))).exists()
 
@@ -202,7 +203,8 @@ def test_a_failed_fetch_fails_loudly(tmp_path):
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
         res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["failed", "failed"] and all("HTTP 403" in r["error"] for r in res)
+    assert [r["status"] for r in res] == ["failed", "failed", "skipped"]
+    assert all("HTTP 403" in r["error"] for r in res[:2])
 
 
 def test_robots_disallow_is_respected(tmp_path):
@@ -215,7 +217,7 @@ def test_robots_disallow_is_respected(tmp_path):
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
         res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
-    assert all(r["status"] == "failed" for r in res)
+    assert [r["status"] for r in res] == ["failed", "failed", "skipped"]
     assert set(calls) == {"/robots.txt"}  # never the page itself
 
 
@@ -268,7 +270,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
     lake = _remote(tmp_path, monkeypatch, api)
     with _client(_pages(), []) as client:
         res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
-    assert [r["status"] for r in res] == ["stored", "stored"]
+    assert [r["status"] for r in res] == ["stored", "stored", "skipped"]
     assert api.calls[:2] == [("create", "someone/importers", True, True), ("card", "README.md")]
     commits = [c[1] for c in api.calls if c[0] == "commit"]
     schemas = [
@@ -288,7 +290,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
     calls: list[str] = []
     with _client(_pages(), calls) as client:  # a fresh runner later that week: the dataset already has it
         again = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
-    assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
+    assert [r["status"] for r in again] == ["skipped", "skipped", "skipped"] and calls == []
 
 
 def test_refuses_a_public_dataset(tmp_path, monkeypatch):
@@ -343,9 +345,19 @@ def test_neither_layer_can_reach_anything_public():
         if f.is_file() and "__pycache__" not in f.parts:
             text = f.read_text(errors="ignore").lower()
             assert "importer" not in text and "coffeedata_importers" not in text, f
+            # Royal Coffee too: its key, its address variable and its store
+            assert "royal_coffee" not in text and "royal_url" not in text and "royalcoffee" not in text, f
     # the weekly build reads the main lake only
     cli = (root / "src/coffeedata/cli.py").read_text()
     assert cli.count("Lake.importers()") == 1  # importer-snapshot, nothing else
+    # Royal is raw-only: no offers file is ever written for it, and its derived values are computed on read by
+    # importers.derive, which nothing public calls
+    assert importers.IMPORTERS["royal_coffee"].raw_only
+    for f in sources + [root / "src/coffeedata/cli.py"]:
+        if f.is_file() and "__pycache__" not in f.parts:
+            assert "derive(" not in f.read_text(errors="ignore") and "normalize_royal" not in f.read_text(
+                errors="ignore"
+            ), f
 
 
 def test_rules_decide_or_abstain():

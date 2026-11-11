@@ -1,0 +1,108 @@
+{
+  "_synthetic": "SYNTHETIC FIXTURE. Every product here is invented for the Royal Coffee parser's tests: the titles, tags, prose, lot numbers, warehouse names, ids and prices are made up, and none was fetched from or copied out of any real store. The shape follows Shopify's documented storefront /products.json product (title, body_html, vendor, product_type, handle, tags, variants, options, images), as in this folder's sibling Shopify fixtures from other stores. Prices and images are present only so the tests can show they are never stored.",
+  "products": [
+    {
+      "id": 9000000000001,
+      "title": "Colombia Huila Pitalito Washed - Lot 70412 - Harborview Warehouse",
+      "handle": "colombia-huila-pitalito-washed-lot-70412",
+      "body_html": "<p>An invented example lot: smallholders deliver parchment to a shared dryer, and the cup is bright and sweet.</p>\n<p><strong>Altitude:</strong> 1,600–1,900 masl</p>\n<p><strong>Harvest:</strong> October – January</p>\n<p><img src=\"https://cdn.example.invalid/lot-70412.jpg\"></p>",
+      "published_at": "2026-09-14T10:00:00-07:00",
+      "created_at": "2026-09-14T09:55:00-07:00",
+      "updated_at": "2026-11-02T08:12:00-08:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Green Coffee",
+      "tags": ["Colombia", "Process: Washed", "Region: Huila", "Variety: Caturra, Castillo", "Certification: Organic"],
+      "variants": [
+        {"id": 9100000000001, "title": "1 bag (70 kg)", "option1": "1 bag (70 kg)", "option2": null, "option3": null, "sku": "SYN-70412-B", "requires_shipping": true, "taxable": true, "featured_image": {"src": "https://cdn.example.invalid/lot-70412-bag.jpg"}, "available": true, "price": "412.00", "grams": 70000, "compare_at_price": "450.00", "position": 1, "product_id": 9000000000001, "created_at": "2026-09-14T09:55:00-07:00", "updated_at": "2026-11-02T08:12:00-08:00"},
+        {"id": 9100000000002, "title": "Sample (200 g)", "option1": "Sample (200 g)", "option2": null, "option3": null, "sku": "SYN-70412-S", "requires_shipping": true, "taxable": true, "featured_image": null, "available": false, "price": "0.00", "grams": 200, "compare_at_price": null, "position": 2, "product_id": 9000000000001, "created_at": "2026-09-14T09:55:00-07:00", "updated_at": "2026-11-02T08:12:00-08:00"}
+      ],
+      "images": [{"id": 9200000000001, "src": "https://cdn.example.invalid/lot-70412.jpg", "width": 800, "height": 800}],
+      "options": [{"name": "Size", "position": 1, "values": ["1 bag (70 kg)", "Sample (200 g)"]}]
+    },
+    {
+      "id": 9000000000002,
+      "title": "Ethiopia Sidama Bensa Grade 1 Natural - Lot #70588 - Riverside Warehouse",
+      "handle": "ethiopia-sidama-bensa-natural-lot-70588",
+      "body_html": "<p>Invented prose for a sun-dried lot from a made-up washing station.</p><ul><li>Elevation: 2,000 to 2,250 meters</li><li>Harvest: Nov - Jan</li><li>Varieties: Heirloom, 74110</li></ul>",
+      "published_at": "2026-10-01T10:00:00-07:00",
+      "created_at": "2026-10-01T09:00:00-07:00",
+      "updated_at": "2026-11-03T08:00:00-08:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Green Coffee",
+      "tags": ["Ethiopia", "Natural", "Region: Sidama", "Rainforest Alliance"],
+      "variants": [
+        {"id": 9100000000003, "title": "1 bag (60 kg)", "option1": "1 bag (60 kg)", "option2": null, "option3": null, "sku": "SYN-70588-B", "requires_shipping": true, "taxable": true, "featured_image": null, "available": true, "price": "388.50", "grams": 60000, "compare_at_price": null, "position": 1, "product_id": 9000000000002, "created_at": "2026-10-01T09:00:00-07:00", "updated_at": "2026-11-03T08:00:00-08:00"}
+      ],
+      "images": [],
+      "options": [{"name": "Size", "position": 1, "values": ["1 bag (60 kg)"]}]
+    },
+    {
+      "id": 9000000000003,
+      "title": "Peru Cajamarca Decaf Washed - Lot 70733 - Harborview Warehouse",
+      "handle": "peru-cajamarca-decaf-lot-70733",
+      "body_html": "<p>An invented decaffeinated lot. Certifications: Organic, Fair Trade</p><p>Altitude: 1,750 m</p>",
+      "published_at": "2026-08-20T10:00:00-07:00",
+      "created_at": "2026-08-20T09:00:00-07:00",
+      "updated_at": "2026-10-20T08:00:00-07:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Green Coffee",
+      "tags": ["Peru", "Process: Decaf (Sugarcane EA)", "Region: Cajamarca"],
+      "variants": [
+        {"id": 9100000000004, "title": "1 bag (69 kg)", "option1": "1 bag (69 kg)", "option2": null, "option3": null, "sku": "SYN-70733-B", "requires_shipping": true, "taxable": true, "featured_image": null, "available": true, "price": "355.00", "grams": 69000, "compare_at_price": null, "position": 1, "product_id": 9000000000003, "created_at": "2026-08-20T09:00:00-07:00", "updated_at": "2026-10-20T08:00:00-07:00"}
+      ],
+      "images": [],
+      "options": [{"name": "Size", "position": 1, "values": ["1 bag (69 kg)"]}]
+    },
+    {
+      "id": 9000000000004,
+      "title": "Costa Rica Tarrazu Honey & Natural Blend - Lot 70801",
+      "handle": "costa-rica-tarrazu-blend-lot-70801",
+      "body_html": "<p>Invented: two made-up mills' lots combined.</p><p>Altitude: 4,500 ft</p><p>Harvest: 2025/26</p><p>Certification: Bird Friendly</p>",
+      "published_at": "2026-07-10T10:00:00-07:00",
+      "created_at": "2026-07-10T09:00:00-07:00",
+      "updated_at": "2026-10-10T08:00:00-07:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Green Coffee",
+      "tags": ["Costa Rica", "Process: Honey", "Process: Natural", "Region: Tarrazu", "Region: West Valley"],
+      "variants": [
+        {"id": 9100000000005, "title": "Box (22 kg)", "option1": "Box (22 kg)", "option2": null, "option3": null, "sku": "SYN-70801-X", "requires_shipping": true, "taxable": true, "featured_image": null, "available": true, "price": "260.00", "grams": 22000, "compare_at_price": null, "position": 1, "product_id": 9000000000004, "created_at": "2026-07-10T09:00:00-07:00", "updated_at": "2026-10-10T08:00:00-07:00"}
+      ],
+      "images": [],
+      "options": [{"name": "Size", "position": 1, "values": ["Box (22 kg)"]}]
+    },
+    {
+      "id": 9000000000005,
+      "title": "Brazil Mogiana Anaerobic Natural Yellow Bourbon - Lot 70950 / Lot 70951 - Lakeside Warehouse",
+      "handle": "brazil-mogiana-anaerobic-natural-lot-70950",
+      "body_html": "<p>Invented: cherries fermented in sealed tanks before drying on patios.</p><p>Variety: Yellow Bourbon</p><p>Altitude: 1,100m</p><p>Harvest: June - September</p>",
+      "published_at": "2026-06-01T10:00:00-07:00",
+      "created_at": "2026-06-01T09:00:00-07:00",
+      "updated_at": "2026-09-01T08:00:00-07:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Green Coffee",
+      "tags": ["Brazil", "Anaerobic", "Natural", "Region: Mogiana"],
+      "variants": [
+        {"id": 9100000000006, "title": "1 bag (60 kg)", "option1": "1 bag (60 kg)", "option2": null, "option3": null, "sku": "SYN-70950-B", "requires_shipping": true, "taxable": true, "featured_image": null, "available": false, "price": "301.00", "grams": 60000, "compare_at_price": null, "position": 1, "product_id": 9000000000005, "created_at": "2026-06-01T09:00:00-07:00", "updated_at": "2026-09-01T08:00:00-07:00"}
+      ],
+      "images": [],
+      "options": [{"name": "Size", "position": 1, "values": ["1 bag (60 kg)"]}]
+    },
+    {
+      "id": 9000000000006,
+      "title": "Green Coffee Sample Set",
+      "handle": "green-coffee-sample-set",
+      "body_html": "<p>Invented: a box of small samples from this month's lots.</p>",
+      "published_at": "2026-01-05T10:00:00-08:00",
+      "created_at": "2026-01-05T09:00:00-08:00",
+      "updated_at": "2026-11-01T08:00:00-07:00",
+      "vendor": "Synthetic Importer",
+      "product_type": "Samples",
+      "tags": ["Samples"],
+      "variants": [
+        {"id": 9100000000007, "title": "Default Title", "option1": "Default Title", "option2": null, "option3": null, "sku": "SYN-SET", "requires_shipping": true, "taxable": true, "featured_image": null, "available": true, "price": "45.00", "grams": 1500, "compare_at_price": null, "position": 1, "product_id": 9000000000006, "created_at": "2026-01-05T09:00:00-08:00", "updated_at": "2026-11-01T08:00:00-07:00"}
+      ],
+      "images": [{"id": 9200000000002, "src": "https://cdn.example.invalid/sample-set.jpg", "width": 800, "height": 800}],
+      "options": [{"name": "Title", "position": 1, "values": ["Default Title"]}]
+    }
+  ]
+}

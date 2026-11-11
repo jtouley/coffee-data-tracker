@@ -1006,8 +1006,9 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     from .http import PoliteClient
 
     lake = Lake.importers()
-    # One page per host, so the client's per-host spacing never applies; a slow page gets a minute.
-    with PoliteClient(timeout=60.0, retries=3) as client:
+    # One page per host for the HTML importers; Royal's listing pages are spaced by ROYAL_PAGE_INTERVAL (or the
+    # store's robots.txt Crawl-delay, if longer). A slow page gets a minute.
+    with PoliteClient(min_interval=importers.ROYAL_PAGE_INTERVAL, timeout=60.0, retries=3) as client:
         results = importers.snapshot(lake, client, args.importer, date.fromisoformat(args.run_date))
     _print(results)
     return all(r["status"] != "failed" for r in results)

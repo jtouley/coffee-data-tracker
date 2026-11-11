@@ -512,7 +512,8 @@ SCHEMAS["contacts"] = pa.schema(
 #
 # importer_raw: each lot word for word, as the roaster adapters keep a product: every cell of its row under the page's
 # header (null when empty), and its own page's URL. Only cells about prices are left out. Everything derived (the
-# normalized values in importer_offers, later categorization and labels) can be derived again from it.
+# normalized values in importer_offers, later categorization and labels) can be derived again from it. A Shopify
+# importer (Royal Coffee) keeps each product's kept fields as cells (importers.royal_cells), no prices or images.
 SCHEMAS["importer_raw"] = pa.schema(
     [
         ("week", pa.date32()),

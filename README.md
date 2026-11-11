@@ -380,6 +380,15 @@ word: every cell of its row and its URL, as the roaster adapters keep a product'
 stated fields, and our normalized values from deterministic rules that abstain when unsure). No prices, page HTML
 or images.
 
+Royal Coffee, a Shopify store, is the third importer, raw-only: its public `/products.json` listing is read one
+page of 250 after another, spaced, and each product is kept word for word (its fields, tags, options, variants
+without prices, and `body_html`'s text; no prices or images). Its values (lot number, warehouse, origin, region,
+process, varieties, altitude, harvest months, certifications) are derived when the raw layer is read
+(`importers.derive`, `importer_rules.normalize_royal`), never stored. Royal's terms restrict automated access and AI
+tools; the owner chose to include it. **No AI agent may access Royal's site:** its address is only in the
+importers workflow, passed to scheduled runs alone, and the code refuses it anywhere else (pytest, local runs, a
+dispatch). Its tests use invented products only (`tests/fixtures/importers/royal_synthetic_products.json`).
+
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
 - **A site being down never looks like a delisting.** A failed fetch is recorded with no products, and price

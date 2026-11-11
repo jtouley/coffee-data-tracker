@@ -11,13 +11,17 @@ respected):
   bags, bag weight, status (AFLOAT / IN STORE). No lot ID, origin, region, process or arrival column, so those
   stated fields stay empty.
 
+- Royal Coffee, a Shopify store: its public /products.json listing, 250 products a page, the pages spaced
+  ROYAL_PAGE_INTERVAL apart. Raw-only (below), and fetched only by the scheduled workflow: see royal_listing_url.
+
 Two layers, each one immutable file per importer per week, in a private Hugging Face dataset of its own
 (`COFFEEDATA_IMPORTERS`, created private by `ensure_private` with the existing credential):
 - importer_raw (`raw/`): each lot word for word, as the roaster adapters keep a product's whole text: every cell of
   its row under the page's header, and its own page's URL (only cells about prices are left out), so the normalized
   values and anything derived later can be derived again from it;
 - importer_offers (`offers/`): the fields the page states, and our model's values derived from the raw cells by
-  deterministic rules that abstain when unsure (importer_rules.py).
+  deterministic rules that abstain when unsure (importer_rules.py). A raw-only importer (Royal) has none: its
+  values are derived from the raw layer when it is read (derive), so a better rule re-derives every week.
 No prices, page HTML or images. Backend-only, for internal use and a future roaster portal (which may show only the
 normalized values, never the importer's wording): dbt never reads it, and nothing in the public tables, the release,
 the site or the public dataset does (tests/test_importers.py). A week already stored is never fetched again.
@@ -364,15 +368,154 @@ def parse_interamerican(html: str) -> list[dict]:
     return checked("interamerican", offers, bad)
 
 
+# --- Royal Coffee: a Shopify storefront's public product listing ---------------------------------------------------
+#
+# Royal Coffee's terms restrict automated access, single out AI tools, and restrict storing content; the owner chose
+# to include it and accepts that risk. To respect the terms' AI clause, no AI agent ever fetches the site: only the
+# scheduled importers workflow, a plain program, does, once a week. So the store's address is not in this code at all.
+# The workflow passes it in ROYAL_URL_VAR on scheduled runs only, and royal_listing_url() refuses it anywhere else
+# (under pytest, outside GitHub Actions, in another workflow, or on a dispatch). Tests use invented products and a
+# made-up host (tests/fixtures/importers/royal_synthetic_products.json).
+
+ROYAL = "royal_coffee"
+ROYAL_URL_VAR = "COFFEEDATA_ROYAL_URL"
+# The importers workflow's name, as GITHUB_WORKFLOW reports it.
+ROYAL_WORKFLOW = "importers"
+# The most products a /products.json page holds (adapters.shopify.PAGE_LIMIT, from Shopify's REST pagination docs), so
+# the listing takes the fewest pages.
+ROYAL_PAGE_LIMIT = 250
+# A listing that needs more pages than this has changed under us (or pages forever): fail, don't keep asking.
+ROYAL_MAX_PAGES = 20
+# Seconds between two requests to the store (the client's per-host spacing; a longer robots.txt Crawl-delay wins).
+ROYAL_PAGE_INTERVAL = 15.0
+
+
+class NotAllowedHere(RuntimeError):
+    """Royal's address was given to something other than the scheduled importers workflow."""
+
+
+def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
+    """Royal's /products.json URL on the scheduled importers workflow's run, else None (the importer is skipped).
+    NotAllowedHere when the address is set anywhere else: under pytest, outside GitHub Actions, in another workflow
+    or on a run that wasn't scheduled. Nothing else in the code knows the address."""
+    import sys
+
+    env = dict(os.environ) if env is None else env
+    base = (env.get(ROYAL_URL_VAR) or "").strip()
+    if not base:
+        return None
+    if (
+        env.get("GITHUB_ACTIONS") != "true"
+        or env.get("GITHUB_WORKFLOW") != ROYAL_WORKFLOW
+        or env.get("GITHUB_EVENT_NAME") != "schedule"
+    ):
+        raise NotAllowedHere(f"{ROYAL_URL_VAR} is read only on the scheduled {ROYAL_WORKFLOW} workflow")
+    if "PYTEST_CURRENT_TEST" in os.environ or "pytest" in sys.modules:
+        raise NotAllowedHere(f"{ROYAL_URL_VAR} is set under pytest; tests never reach Royal's site")
+    parts = urlsplit(base)
+    if parts.scheme != "https" or not parts.hostname or parts.path.strip("/") or parts.query:
+        raise NotAllowedHere(f"{ROYAL_URL_VAR} must be a bare https:// origin")
+    return f"https://{parts.hostname}/products.json"
+
+
+def read_royal(client: PoliteClient, url: str) -> list[dict]:
+    """Every product in the store's public listing, one page after another at ROYAL_PAGE_LIMIT a page, with the
+    crawler's client (our user agent, robots.txt honored, per-host spacing, bounded retries; never logged in). Stops
+    at the first page shorter than the limit (or empty, or repeating one already read), so a listing of N products
+    takes ceil(N / 250) requests, plus one when N is a multiple of 250. Then parse_royal."""
+    products: dict[str, dict] = {}
+    for page in range(1, ROYAL_MAX_PAGES + 1):
+        data = client.fetch_json(url, limit=ROYAL_PAGE_LIMIT, page=page)
+        if not isinstance(data, dict) or not isinstance(data.get("products"), list):
+            raise LayoutChanged(f"{ROYAL}: page {page} is not a /products.json listing")
+        batch = [p for p in data["products"] if isinstance(p, dict)]
+        new = {str(p.get("id")): p for p in batch if str(p.get("id")) not in products}
+        products |= new
+        if not new or len(data["products"]) < ROYAL_PAGE_LIMIT:
+            return parse_royal(list(products.values()), url)
+    raise LayoutChanged(f"{ROYAL}: more than {ROYAL_MAX_PAGES} pages of {ROYAL_PAGE_LIMIT}; not stored")
+
+
+# The product fields kept, by name (never by what their text says): anything else the listing carries, prices and
+# images included, is never stored. As the roaster adapters keep a Shopify product (snapshots and bodies), with the
+# body's text from body_html (text.html_to_text: its words, without markup or image tags).
+ROYAL_PRODUCT_FIELDS = ("id", "title", "handle", "vendor", "product_type", "tags", "published_at")
+ROYAL_VARIANT_FIELDS = ("id", "title", "option1", "option2", "option3", "sku", "available", "grams")
+ROYAL_OPTION_FIELDS = ("name", "values")
+
+
+def royal_cells(p: dict) -> dict[str, str | None]:
+    """One product word for word, as {field: text}: each kept field's value (a list of tags one per line; options and
+    variants as JSON with only their kept fields), and body_html's text. Null where the store gives nothing."""
+    import json
+
+    from .text import html_to_text
+
+    def text(v: object) -> str | None:
+        if v is None or v == "" or v == []:
+            return None
+        if isinstance(v, list) and all(isinstance(x, str) for x in v):
+            return "\n".join(v)
+        if isinstance(v, (list, dict)):
+            return json.dumps(v, ensure_ascii=False)
+        return str(v)
+
+    cells = {f: text(p.get(f)) for f in ROYAL_PRODUCT_FIELDS}
+    cells["body_text"] = html_to_text(p.get("body_html")) or None
+    cells["options"] = text(
+        [{k: o.get(k) for k in ROYAL_OPTION_FIELDS} for o in p.get("options") or [] if isinstance(o, dict)]
+    )
+    cells["variants"] = text(
+        [{k: v.get(k) for k in ROYAL_VARIANT_FIELDS} for v in p.get("variants") or [] if isinstance(v, dict)]
+    )
+    return cells
+
+
+def parse_royal(products: list[dict], url: str) -> list[dict]:
+    """The listing's products as raw rows. A product without an id, title or handle can't be read (counted, and more
+    than MAX_BAD_SHARE of them is LayoutChanged, as is an empty listing)."""
+    origin = f"{urlsplit(url).scheme}://{urlsplit(url).hostname}"
+    offers: list[dict] = []
+    bad = 0
+    for p in products:
+        if not p.get("id") or not str(p.get("title") or "").strip() or not p.get("handle"):
+            bad += 1
+            continue
+        offers.append(
+            {
+                "lot_id": None,
+                "row": len(offers),
+                "_raw": royal_cells(p),
+                "_url": f"{origin}/products/{p['handle']}",
+            }
+        )
+    return checked(ROYAL, offers, bad)
+
+
 @dataclass(frozen=True)
 class Importer:
-    url: str
-    parse: Callable[[str], list[dict]]
+    url: str | None
+    parse: Callable[[str], list[dict]] | None = None
+    # A source that isn't one HTML page: where it is this run (None: skip it) and how to read it.
+    locate: Callable[[], str | None] | None = None
+    read: Callable[[PoliteClient, str], list[dict]] | None = None
+    # Only the raw layer is stored; our values are derived from it when read (derive()).
+    raw_only: bool = False
+
+    def where(self) -> str | None:
+        return self.locate() if self.locate else self.url
+
+    def get(self, client: PoliteClient, url: str) -> list[dict]:
+        if self.read:
+            return self.read(client, url)
+        assert self.parse is not None
+        return self.parse(fetch(client, url))
 
 
 IMPORTERS = {
     "cafe_imports": Importer(CAFE_IMPORTS_URL, parse_cafe_imports),
     "interamerican": Importer(INTERAMERICAN_URL, parse_interamerican),
+    ROYAL: Importer(None, locate=royal_listing_url, read=read_royal, raw_only=True),
 }
 
 
@@ -393,9 +536,11 @@ def path(importer: str, week: date, table: str = "importer_offers") -> str:
     return f"{LAYERS[table]}/week={week.isoformat()}/importer={importer}.parquet"
 
 
-def split(importer: str, parsed: list[dict], base: dict) -> tuple[list[dict], list[dict]]:
+def split(
+    importer: str, parsed: list[dict], base: dict, offers_too: bool = True
+) -> tuple[list[dict], list[dict]]:
     """The parser's rows as (importer_raw rows, importer_offers rows): the raw cells verbatim, and the stated fields
-    with our normalized values derived from those cells."""
+    with our normalized values derived from those cells (none for a raw-only importer: `offers_too` False)."""
     from .importer_rules import normalize
 
     raw, offers = [], []
@@ -411,8 +556,19 @@ def split(importer: str, parsed: list[dict], base: dict) -> tuple[list[dict], li
                 "cells": [{"column": c, "text": v} for c, v in cells.items()],
             }
         )
-        offers.append(base | stated | normalize(importer, cells, origin=p["origin"]))
+        if offers_too:
+            offers.append(base | stated | normalize(importer, cells, origin=p["origin"]))
     return raw, offers
+
+
+def derive(raw_row: dict) -> dict:
+    """Our values for one importer_raw row, derived when it is read (importer_rules.normalize): nothing derived is
+    stored for a raw-only importer, so a better rule re-derives every week."""
+    from .importer_rules import normalize
+
+    cells = {c["column"]: c["text"] for c in raw_row["cells"]}
+    keep = ("week", "fetched_at", "importer", "source_url", "row", "url")
+    return {k: raw_row.get(k) for k in keep} | normalize(raw_row["importer"], cells)
 
 
 def _hub(fn: Callable, *args, **kwargs):
@@ -512,8 +668,21 @@ def snapshot(
     results: list[dict] = []
     ensure_private(lake)
     for name in names or list(IMPORTERS):
-        imp, rel = IMPORTERS[name], path(name, week)
+        imp = IMPORTERS[name]
+        # the file that says the week is stored: the offers file, or the raw file of a raw-only importer
+        rel = path(name, week, "importer_raw" if imp.raw_only else "importer_offers")
         try:
+            url = imp.where()
+            if url is None:  # Royal, on any run but the scheduled one
+                results.append(
+                    {
+                        "importer": name,
+                        "week": str(week),
+                        "status": "skipped",
+                        "reason": "fetched on schedule only",
+                    }
+                )
+                continue
             if stored(lake, rel):
                 lake.publish(
                     f"importer snapshot: {name}, week of {week}"
@@ -521,22 +690,23 @@ def snapshot(
                 results.append({"importer": name, "week": str(week), "status": "skipped"})
                 continue
             fetched_at = now().replace(microsecond=0)
-            parsed = imp.parse(fetch(client, imp.url))
+            parsed = imp.get(client, url)
             base = {
                 "week": week,
                 "fetched_at": fetched_at,
                 "importer": name,
-                "source_url": imp.url,
+                "source_url": url,
                 "parser_version": PARSER_VERSION,
             }
-            raw, offers = split(name, parsed, base)
+            raw, offers = split(name, parsed, base, offers_too=not imp.raw_only)
             # a raw file staged without its offers file is a write that died before finishing: never published
             (lake.root / path(name, week, "importer_raw")).unlink(missing_ok=True)
-            # both layers in one commit: a week has both or neither
+            # both layers in one commit: a week has both or neither (a raw-only importer: its raw file)
             lake.write("importer_raw", path(name, week, "importer_raw"), raw)
-            lake.write("importer_offers", rel, offers)
+            if not imp.raw_only:
+                lake.write("importer_offers", rel, offers)
             lake.publish(f"importer snapshot: {name}, week of {week}")
-            results.append({"importer": name, "week": str(week), "status": "stored", "rows": len(offers)})
+            results.append({"importer": name, "week": str(week), "status": "stored", "rows": len(raw)})
         except Exception as e:  # noqa: BLE001 - reported per importer; the caller fails the run
             log.error("%s: %s: %s", name, type(e).__name__, e)
             results.append(
