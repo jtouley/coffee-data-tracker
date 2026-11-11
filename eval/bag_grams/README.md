@@ -247,3 +247,21 @@ python bag_eval.py score    <data-dir> <set> labels_ref_<set>.json main branch2 
   change; moving the classifier onto these grams is a classifier change and is measured on its own eval.
 - The first release built after merge records the changed prices as `attributes_changed` in `release_changes`
   (report-only).
+
+## Round 2 sealed result (test2, 2026-11-11)
+
+Rules frozen at `a4baff0` with the owner's choice to drop unstated Shopify variant grams. `test2` (496 items, salt
+`coffeedata-bag-grams-test2-2026-11-11`) was labelled by Claude subagents (claude-opus-5-5): A and B independently and
+blind to the rules' predictions, agreeing on 488/496; a third (C), blind to A and B, settled the other 8. Scored once
+with `--final` after `sha256sum -c SHA256SUMS` passed. Stratum-weighted; store-clustered 95% intervals.
+
+| Rule | Accuracy | Confidently wrong | Right (a weight) |
+| --- | --- | --- | --- |
+| main | 84.2% [82.1, 86.3] | 10.5% [8.7, 11.8] | 70.7% [69.4, 72.5] |
+| **branch2** | **95.4% [92.7, 97.3]** | **0.9% [0.1, 2.1]** | **78.1% [75.6, 80.3]** |
+
+Paired, branch2 minus main: accuracy +11.2 points [+7.5, +14.0]; confidently wrong -9.6 points [-11.4, -6.9]. The
+change ships: above the 95% target on the sealed set, with confidently wrong weights cut from about 1 in 10 to about 1
+in 100. The cost the owner accepted: fewer unit prices on Shopify (94.4% to 87.8% of current retail coffees), because
+store-entered weights the listing never states are no longer trusted. `test2` now joins the regression fixtures; the
+next change draws a new test set.
