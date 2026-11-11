@@ -228,14 +228,16 @@ def normalize(importer: str, cells: dict[str, str | None], problems: list[str] |
 
 # --- Royal Coffee (a Shopify product listing; importers.royal_cells) -----------------------------------------------
 #
-# Derived when the raw layer is read (importers.derive: royal_stated and normalize), never stored. Built only from invented products in Shopify's
-# documented /products.json shape (tests/fixtures/importers/royal_synthetic_products.json): nothing here was seen on
-# the store's site, so every rule reads only text that labels itself ("Process: Washed", "Altitude: 1,800 masl", a
-# "Lot 12345" or "<Name> Warehouse" part of the title) and abstains (None) on anything else: no label, two labels
-# that disagree, a unit or wording it doesn't know. Not evaluated yet (CLAUDE.md): before anything relies on these
-# values they need labels from the real raw layer, which only a person (never an AI agent) may look at.
+# Derived when the raw layer is read (importers.derive: royal_stated and normalize), never stored. Built only from
+# invented products in Shopify's documented /products.json shape (tests/fixtures/importers/royal_synthetic_products.json):
+# nothing here was seen on the store's site. Region, varieties, altitude and harvest read only labelled text
+# ("Region: Huila", "Altitude: 1,800 masl"); lot number and warehouse read a "Lot 12345" or "<Name> Warehouse" part of
+# the title; origin, process and certifications also read the title and the tags that are one word or name. Each
+# abstains (None) when unsure: no label, two values that disagree, a negation, a unit or wording it doesn't know.
+# Not evaluated yet (CLAUDE.md): before anything relies on these values they need reference labels from the stored
+# raw layer; who may make those labels is for the owner to decide.
 
-ROYAL_RULES_VERSION = "royal-1"
+ROYAL_RULES_VERSION = "royal-2"
 
 # "Label: value" in a tag or at the start of a body line.
 _ROYAL_LABELS = {
@@ -246,10 +248,14 @@ _ROYAL_LABELS = {
     "altitude": r"altitude|elevation|growing altitude",
     "harvest": r"harvest(?: season| period| months?)?",
     "certification": r"certifications?|certified",
-    "warehouse": r"warehouse|location",
+    "warehouse": r"warehouse",  # never "Location:", which on a coffee listing is usually the farm
 }
 _TITLE_PARTS = re.compile(r"\s+[-–|/]\s+|\s*\|\s*")
 _LOT = re.compile(r"\blot\s*(?:no\.?|number|#)?\s*#?\s*(\d{3,7}(?:-\d{1,3})?)\b", re.I)
+_YEAR = re.compile(r"(?:19|20)\d\d")  # "Harvest Lot 2025": a year, not a lot number
+# A warehouse "name" that is only a preposition or a negation ("In Warehouse", "Not In Warehouse"): no name at all.
+_NOT_A_NAME = re.compile(r"(?:(?:not|no|out of)\s+)?(?:in|at|ex|our|the|a|stored at|from)?", re.I)
+_NEGATED = re.compile(r"\b(?:not|no|non|without|out of)\b", re.I)
 _WAREHOUSE = re.compile(
     r"^(?:(?:in|at|ex|stored at)\s+)?([A-Z][\w.' ]{1,40}?)\s+warehouse$|^warehouse\s*:?\s+([A-Z][\w.' ]{1,40})$",
     re.I,
@@ -276,8 +282,14 @@ _ROYAL_ALTITUDE = re.compile(
 )
 _ROYAL_CERTS = (
     ("organic", r"\b(?:usda |certified )?organic\b"),
-    ("fair_trade", r"\bfair ?trade(?: usa| certified)?\b|\bFTO\b"),
+    ("fair_trade", r"\bfair ?trade(?: usa| certified)?\b"),
     ("rainforest_alliance", r"\brainforest alliance(?: certified)?\b|\bRFA\b"),
+)
+# "FTO" alone can mean Fair Trade Organic or only Fair Trade: it counts only alongside both spelled out.
+_FTO = re.compile(r"\bFTO\b")
+# A modeled certification negated ("Non-Organic", "not Fair Trade"): the claim can't be read, so abstain.
+_CERT_NEGATED = re.compile(
+    r"\b(?:non|not|no|without)[\s-]+(?:certified\s+)?(?:usda\s+)?(?:organic|fair ?trade|rainforest)", re.I
 )
 
 
@@ -291,8 +303,11 @@ def royal_labelled(cells: dict[str, str | None], label: str) -> list[str]:
     found: list[str] = []
     for line in _lines(cells, "tags") + _lines(cells, "body_text"):
         for part in re.split(r"(?<=[.;])\s+(?=[A-Z][a-z]+:)", line):  # "... lot. Certifications: Organic"
-            if (m := pat.match(part.strip())) and m.group(1) not in found:
-                found.append(m.group(1))
+            if not (m := pat.match(part.strip())):
+                continue
+            value = m.group(1).rstrip(" .;,:")  # "Region: Huila." and "Region: Huila" agree
+            if value and value not in found:
+                found.append(value)
     return found
 
 
@@ -303,17 +318,24 @@ def _one(values: list[str]) -> str | None:
 
 
 def royal_lot(title: str | None) -> str | None:
-    """The lot number in the title ("Lot 70412", "Lot #70588"); None when there is none or more than one."""
-    return _one(_LOT.findall(title or ""))
+    """The lot number in the title ("Lot 70412", "Lot #70588"); None when there is none, more than one, or one that
+    reads as a year ("Harvest Lot 2025")."""
+    found = _LOT.findall(title or "")
+    if any(_YEAR.fullmatch(v) for v in found):
+        return None
+    return _one(found)
 
 
 def royal_warehouse(cells: dict[str, str | None]) -> str | None:
-    """The warehouse a title part names ("Harborview Warehouse") or a "Warehouse:" label gives; None when none does
-    or two disagree."""
+    """The warehouse a title part names ("Harborview Warehouse") or a "Warehouse:" label gives; None when none does,
+    two disagree, or the part is only a preposition or a negation ("In Warehouse", "Not In Warehouse")."""
     found = []
     for part in _TITLE_PARTS.split(cells.get("title") or ""):
         if m := _WAREHOUSE.match(part.strip()):
-            found.append(m.group(1) or m.group(2))
+            name = (m.group(1) or m.group(2)).strip()
+            if _NOT_A_NAME.fullmatch(name) or _NEGATED.search(part):
+                return None
+            found.append(name)
     return _one(found + royal_labelled(cells, "warehouse"))
 
 
@@ -329,22 +351,23 @@ def _process_kind(text: str) -> str | None:
 
 
 def royal_process(cells: dict[str, str | None]) -> str | None:
-    """washed, natural, honey or anaerobic. A decaf anywhere (title, tags, type, body) abstains. "Process:" labels
-    decide when there are any (all must agree); otherwise the title and the tags that are a process word and nothing
-    else ("Natural"), which must name one process between them."""
+    """washed, natural, honey or anaerobic. A decaf anywhere (title, tags, type, body) abstains. Anaerobic (or
+    carbonic) in a label, the title or a process tag wins, as in the catalog's rule (extract.rules). Otherwise
+    "Process:" labels decide when there are any (all must agree); else the title and the tags that are a process
+    word and nothing else ("Natural"), which must name one process between them."""
     everything = " ".join(
         filter(None, (cells.get(f) for f in ("title", "tags", "product_type", "body_text")))
     )
     if _ROYAL_DECAF.search(everything):
         return None
     labelled = royal_labelled(cells, "process")
+    plain = [t for t in _lines(cells, "tags") if ":" not in t and _process_kind(t) and len(t.split()) <= 3]
+    title = cells.get("title") or ""
+    if re.search(_PROCESS[0][1], " ".join([title, *plain, *labelled]), re.I):
+        return "anaerobic"
     if labelled:
         kinds = {_process_kind(v) for v in labelled}
         return kinds.pop() if len(kinds) == 1 else None
-    plain = [t for t in _lines(cells, "tags") if ":" not in t and _process_kind(t) and len(t.split()) <= 3]
-    title = cells.get("title") or ""
-    if re.search(_PROCESS[0][1], " ".join([title, *plain]), re.I):
-        return "anaerobic"
     kinds = {k for k in (_process_kind(title), *map(_process_kind, plain)) if k}
     # the title named two processes (_process_kind None) but a tag named one: still unclear
     if not _process_kind(title) and any(re.search(pat, title, re.I) for _, pat in _PROCESS[1:]):
@@ -353,15 +376,18 @@ def royal_process(cells: dict[str, str | None]) -> str | None:
 
 
 def royal_origin(cells: dict[str, str | None]) -> str | None:
-    """The country an "Origin:" label gives, else the one country the title names; None when unclear."""
-    from .origins import COUNTRIES, canonical_country
+    """The country an "Origin:" label gives, else the one country the title names; None when unclear. Both read the
+    catalog's aliases (origins.ALIASES: "Sumatra" is Indonesia), so a label and a title agree."""
+    from .origins import ALIASES, COUNTRIES, canonical_country
 
     labelled = royal_labelled(cells, "origin")
     if labelled:
         names = {canonical_country(v) for v in labelled}
         return names.pop() if len(names) == 1 and names <= set(COUNTRIES) else None
     title = cells.get("title") or ""
-    found = {c for c in COUNTRIES if re.search(rf"\b{re.escape(c)}\b", title, re.I)}
+    found = {
+        canonical_country(c) for c in (*COUNTRIES, *ALIASES) if re.search(rf"\b{re.escape(c)}\b", title, re.I)
+    }
     return found.pop() if len(found) == 1 else None
 
 
@@ -418,24 +444,34 @@ def royal_harvest_months(cells: dict[str, str | None]) -> list[str] | None:
 def royal_certifications(cells: dict[str, str | None]) -> list[str] | None:
     """The certifications claimed (normalize's `certifications`; the claimed half of the claimed/absent split) by
     "Certification:" labels, by tags that are a certification and nothing else, and by the title. None when nothing
-    claims one, or when a label names a program we don't model (the list would be incomplete). The store marks no
-    certification absent, so Royal's `not_certified` is always None: a certification it doesn't claim is unknown."""
+    claims one; when a label, a tag or the title names a program we don't model (_OTHER_CERTS: the list would be
+    incomplete) or negates a modeled one ("Non-Organic"); and for a bare "FTO" unless fair trade and organic are both
+    claimed outright. The store marks no certification absent, so Royal's `not_certified` is always None: a
+    certification it doesn't claim is unknown."""
+    labels = royal_labelled(cells, "certification")
+    plain_tags = [t for t in _lines(cells, "tags") if ":" not in t]
+    title = cells.get("title") or ""
+    if any(_OTHER_CERTS.search(t) or _CERT_NEGATED.search(t) for t in [*labels, *plain_tags, title]):
+        return None
+    fto = any(_FTO.search(t) for t in [*labels, *plain_tags, title])
     found: set[str] = set()
-    for value in royal_labelled(cells, "certification"):
-        rest = value
+    for value in labels:
+        rest = _FTO.sub("", value)
         for kind, pat in _ROYAL_CERTS:
             if re.search(pat, value, re.I):
                 found.add(kind)
                 rest = re.sub(pat, "", rest, flags=re.I)
         if re.sub(r"[\s,;&/+.]|\band\b|\bcertified\b", "", rest, flags=re.I):
             return None
-    sources = [t for t in _lines(cells, "tags") if ":" not in t] + [cells.get("title") or ""]
+    sources = [*plain_tags, title]
     for kind, pat in _ROYAL_CERTS:
         if any(
             re.search(pat, t, re.I) and (t is sources[-1] or re.fullmatch(rf"\s*(?:{pat})\s*", t, re.I))
             for t in sources
         ):
             found.add(kind)
+    if fto and not {"organic", "fair_trade"} <= found:
+        return None
     order = [k for k, _ in _ROYAL_CERTS]
     return sorted(found, key=order.index) or None
 

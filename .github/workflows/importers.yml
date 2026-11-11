@@ -23,10 +23,13 @@
 #
 # Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
 # the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
-# and only a scheduled run gets it (COFFEEDATA_ROYAL_URL below is empty on a dispatch): an AI agent that can
-# dispatch this workflow still can't make it fetch Royal. It isn't offered in the dispatch `importer` choice (a
-# dispatch with `all` reports it skipped), and importers.royal_listing_url refuses the address outside GitHub
-# Actions, in another workflow, on any event but `schedule`, and under pytest.
+# and only a scheduled run's first attempt gets it: COFFEEDATA_ROYAL_URL below is empty on a dispatch and on a re-run
+# (a re-run keeps the `schedule` event, so the attempt number is checked too). So neither dispatching nor re-running
+# this workflow makes it fetch Royal; a failed Royal week waits for the next schedule. It isn't offered in the
+# dispatch `importer` choice (a dispatch with `all`, or a re-run, reports it skipped), and importers.royal_listing_url
+# refuses the address outside GitHub Actions, in another workflow, on any event but `schedule`, on a re-run, and
+# under pytest. A real drop at Royal is accepted for one week by the repository variable ROYAL_ACCEPT_DROP_WEEK set
+# to that week's Monday (YYYY-MM-DD), read on the same scheduled first attempt only.
 name: importers
 on:
   schedule:
@@ -69,7 +72,8 @@ jobs:
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
           # Royal's store, for the scheduled run alone (see the note above `name:`)
-          COFFEEDATA_ROYAL_URL: ${{ github.event_name == 'schedule' && 'https://royalcoffee.com' || '' }}
+          COFFEEDATA_ROYAL_URL: ${{ github.event_name == 'schedule' && github.run_attempt == '1' && 'https://royalcoffee.com' || '' }}
+          ROYAL_ACCEPT_DROP_WEEK: ${{ github.event_name == 'schedule' && github.run_attempt == '1' && vars.ROYAL_ACCEPT_DROP_WEEK || '' }}
           ACCEPT_DROP: ${{ inputs.accept_drop && '1' || '' }}
           IMPORTER: ${{ inputs.importer }}  # a choice input, passed via env, never interpolated into the script
         run: |

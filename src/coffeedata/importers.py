@@ -370,6 +370,7 @@ class Parsed:
     lots: list[Lot]
     unreadable_rows: int  # rows without their identity, or with the wrong number of cells
     bad_cells: int  # cells that read as null (bags that aren't a number)
+    dropped_prices: int = 0  # Royal: fields whose value mentioned a price, left out (parse_royal)
 
 
 def parse(importer: str, html: str) -> Parsed:
@@ -404,9 +405,11 @@ def checked(importer: str, found: list[Lot], bad: int) -> Parsed:
 # Royal Coffee's terms restrict automated access, single out AI tools, and restrict storing content; the owner chose
 # to include it and accepts that risk. To respect the terms' AI clause, no AI agent ever fetches the site: only the
 # scheduled importers workflow, a plain program, does, once a week. So the store's address is not in this code at all.
-# The workflow passes it in ROYAL_URL_VAR on scheduled runs only, and royal_listing_url() refuses it anywhere else
-# (outside GitHub Actions, in another workflow, on a dispatch, or under pytest). Tests use invented products and a
-# made-up host (tests/fixtures/importers/royal_synthetic_products.json).
+# The workflow passes it in ROYAL_URL_VAR on a scheduled run's first attempt only, and royal_listing_url() refuses it
+# anywhere else (outside GitHub Actions, in another workflow, on a dispatch, on a re-run, or under pytest). That check
+# reads environment values any local process can set: it stops accidents, not a deliberate run. Every client but the
+# importers job's also refuses the host outright (http.schedule_only_host), and so do the roaster registry and
+# discovery. Tests use invented products and a made-up host (tests/fixtures/importers/royal_synthetic_products.json).
 
 ROYAL = "royal_coffee"
 ROYAL_URL_VAR = "COFFEEDATA_ROYAL_URL"
@@ -417,30 +420,49 @@ ROYAL_WORKFLOW = "importers"
 ROYAL_PAGE_LIMIT = 250
 # A listing that needs more pages than this has changed under us (or pages forever): fail, don't keep asking.
 ROYAL_MAX_PAGES = 20
-# Seconds between two requests to the store (the client's per-host spacing; a longer robots.txt Crawl-delay wins).
+# Seconds read_royal waits before each listing page after the first. The client's own per-host spacing applies on
+# top: its min_interval, or the store's robots.txt Crawl-delay up to http.MAX_CRAWL_DELAY (60 s).
 ROYAL_PAGE_INTERVAL = 15.0
+# The owner's one-week override for a real drop at Royal (a repository variable, given to a scheduled first attempt
+# only): the Monday of the week whose thinned listing may be stored, as YYYY-MM-DD.
+ROYAL_ACCEPT_DROP_VAR = "ROYAL_ACCEPT_DROP_WEEK"
 
 
 class NotAllowedHere(RuntimeError):
-    """Royal's address was given to something other than the scheduled importers workflow."""
+    """Royal's address was given to something other than the scheduled importers workflow's first attempt."""
+
+
+def _scheduled_first_attempt(env: dict[str, str]) -> bool:
+    """Whether this process is the importers workflow's scheduled run, on its first attempt (a re-run keeps the
+    original event, so the attempt number tells it apart)."""
+    return (
+        env.get("GITHUB_ACTIONS") == "true"
+        and env.get("GITHUB_WORKFLOW") == ROYAL_WORKFLOW
+        and env.get("GITHUB_EVENT_NAME") == "schedule"
+        and env.get("GITHUB_RUN_ATTEMPT") == "1"
+    )
 
 
 def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
-    """Royal's /products.json URL on the scheduled importers workflow's run, else None (the importer is skipped).
-    NotAllowedHere when the address is set anywhere else: outside GitHub Actions, in another workflow, on a run that
-    wasn't scheduled, or under pytest. Nothing else in the code knows the address."""
+    """Royal's /products.json URL on the importers workflow's scheduled run, first attempt; None anywhere else without
+    the address (the importer is skipped: a laptop, a test, a dispatch, a re-run). NotAllowedHere when the address is
+    set anywhere but there (or under pytest), and when that run lacks it (a workflow edit gone wrong must not pass
+    as a skip). Nothing else in the code knows the address."""
     import sys
 
     env = dict(os.environ) if env is None else env
     base = (env.get(ROYAL_URL_VAR) or "").strip()
+    scheduled = _scheduled_first_attempt(env)
     if not base:
+        if scheduled:
+            raise NotAllowedHere(
+                f"{ROYAL_URL_VAR} is empty on the scheduled run's first attempt; check the workflow"
+            )
         return None
-    if (
-        env.get("GITHUB_ACTIONS") != "true"
-        or env.get("GITHUB_WORKFLOW") != ROYAL_WORKFLOW
-        or env.get("GITHUB_EVENT_NAME") != "schedule"
-    ):
-        raise NotAllowedHere(f"{ROYAL_URL_VAR} is read only on the scheduled {ROYAL_WORKFLOW} workflow")
+    if not scheduled:
+        raise NotAllowedHere(
+            f"{ROYAL_URL_VAR} is read only on the scheduled {ROYAL_WORKFLOW} workflow's first attempt"
+        )
     if "PYTEST_CURRENT_TEST" in os.environ or "pytest" in sys.modules:
         raise NotAllowedHere(f"{ROYAL_URL_VAR} is set under pytest; tests never reach Royal's site")
     parts = urlsplit(base)
@@ -449,22 +471,63 @@ def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
     return f"https://{parts.hostname}/products.json"
 
 
-def read_royal(client: PoliteClient, url: str) -> Parsed:
-    """Every product in the store's public listing, one page after another at ROYAL_PAGE_LIMIT a page, with the
-    crawler's client (our user agent, robots.txt honored, per-host spacing, bounded retries; never logged in). Stops
-    at the first page shorter than the limit (or empty, or repeating one already read), so a listing of N products
-    takes ceil(N / 250) requests, plus one when N is a multiple of 250. Then parse_royal."""
+def royal_accepts_drop(week: date, env: dict[str, str] | None = None) -> tuple[bool, str | None]:
+    """(accept, note): whether the owner's ROYAL_ACCEPT_DROP_VAR accepts a thinned Royal listing this week. Only on the
+    scheduled run's first attempt, and only when it names this week's Monday, so it expires by itself; any other
+    value is ignored, with a note for the result."""
+    env = dict(os.environ) if env is None else env
+    value = (env.get(ROYAL_ACCEPT_DROP_VAR) or "").strip()
+    if not value:
+        return False, None
+    if not _scheduled_first_attempt(env):
+        return False, f"{ROYAL_ACCEPT_DROP_VAR} ignored: read only on the scheduled run's first attempt"
+    if value != week.isoformat():
+        return False, f"{ROYAL_ACCEPT_DROP_VAR}={value!r} ignored: it isn't this week ({week.isoformat()})"
+    return True, None
+
+
+def read_royal(
+    client: PoliteClient, url: str, last: int | None = None, sleep: Callable[[float], None] | None = None
+) -> Parsed:
+    """Every product in the store's public listing, one page after another at ROYAL_PAGE_LIMIT a page and
+    ROYAL_PAGE_INTERVAL apart, with the crawler's client (our user agent, robots.txt honored on the path and query,
+    bounded retries; never logged in). Then parse_royal.
+
+    - An empty page ends the listing.
+    - A short page ends it only once the products read reach `last` (the last stored week's count). Shopify can
+      return short pages with more behind them (adapters/shopify.py), so before that the next page is asked for
+      too. A listing of N products takes ceil(N / 250) pages when it hasn't shrunk, one more otherwise.
+    - A page that repeats a product already read means the store ignores `page`: LayoutChanged, since reading on
+      would store a truncated listing as a whole week. So is needing more than ROYAL_MAX_PAGES pages.
+    - Products without an id are kept apart, each counted on its own (never merged under one key)."""
     products: dict[str, dict] = {}
+    no_id: list[dict] = []
     for page in range(1, ROYAL_MAX_PAGES + 1):
+        if page > 1:
+            (sleep or time.sleep)(ROYAL_PAGE_INTERVAL)
         data = client.fetch_json(url, limit=ROYAL_PAGE_LIMIT, page=page)
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             raise LayoutChanged(f"{ROYAL}: page {page} is not a /products.json listing")
         batch = [p for p in data["products"] if isinstance(p, dict)]
-        new = {str(p.get("id")): p for p in batch if str(p.get("id")) not in products}
-        products |= new
-        if not new or len(data["products"]) < ROYAL_PAGE_LIMIT:
-            return parse_royal(list(products.values()), url)
-    raise LayoutChanged(f"{ROYAL}: more than {ROYAL_MAX_PAGES} pages of {ROYAL_PAGE_LIMIT}; not stored")
+        if not data["products"]:
+            break
+        keyed = {str(p["id"]): p for p in batch if p.get("id") not in (None, "")}
+        if repeated := keyed.keys() & products.keys():
+            raise LayoutChanged(
+                f"{ROYAL}: page {page} repeats {len(repeated)} products already read (the store ignores `page`?); "
+                "not stored, so a truncated listing is never a whole week"
+            )
+        products |= keyed
+        no_id += [p for p in batch if p.get("id") in (None, "")]
+        if (
+            len(data["products"]) < ROYAL_PAGE_LIMIT
+            and last is not None
+            and len(products) + len(no_id) >= last
+        ):
+            break
+    else:
+        raise LayoutChanged(f"{ROYAL}: more than {ROYAL_MAX_PAGES} pages of {ROYAL_PAGE_LIMIT}; not stored")
+    return parse_royal([*products.values(), *no_id], url)
 
 
 # The product fields kept, by name (never by what their text says): anything else the listing carries, prices and
@@ -504,22 +567,34 @@ def royal_cells(p: dict) -> dict[str, str | None]:
 
 def parse_royal(products: list[dict], url: str) -> Parsed:
     """The listing's products as Lots, checked like every importer's rows (`checked`): a product without an id, title
-    or handle lacks its identity. A currency amount in a kept cell fails the run, as on the other importers."""
+    or handle lacks its identity, each one counted. A field whose value mentions a price (CURRENCY: a product's prose
+    can mention a premium paid) is left out of that product, never stored, and counted; more than MAX_BAD_SHARE of
+    products with such a field fails the run, as too many unreadable rows do."""
     parts = urlsplit(url)
     found: list[Lot] = []
-    bad = 0
+    bad = dropped = priced = 0
     for p in products:
         if not p.get("id") or not str(p.get("title") or "").strip() or not p.get("handle"):
             bad += 1
             continue
         cells = royal_cells(p)
-        for col, text in cells.items():
-            if text and CURRENCY.search(text):
-                raise LayoutChanged(f"a price in the {col!r} field: prices are never stored")
+        hits = [col for col, text in cells.items() if text and CURRENCY.search(text)]
+        for col in hits:
+            cells[col] = None
+        dropped += len(hits)
+        priced += bool(hits)
         found.append(
             Lot(row=len(found), cells=cells, url=f"{parts.scheme}://{parts.hostname}/products/{p['handle']}")
         )
-    return checked(ROYAL, found, bad)
+    if found and priced / len(found) > MAX_BAD_SHARE:
+        raise LayoutChanged(
+            f"{ROYAL}: {priced} of {len(found)} products mention a price (more than {MAX_BAD_SHARE:.0%}); not stored"
+        )
+    if dropped:
+        log.warning("%s: %d fields of %d products mentioned a price, left out", ROYAL, dropped, priced)
+    parsed = checked(ROYAL, found, bad)
+    parsed.dropped_prices = dropped
+    return parsed
 
 
 @dataclass(frozen=True)
@@ -528,7 +603,9 @@ class Importer:
     columns: tuple[str, ...] = ()  # the columns its table must have
     # A source that isn't one HTML page: where it is this run (None: skip it) and how to read it.
     locate: Callable[[], str | None] | None = None
-    read: Callable[[PoliteClient, str], Parsed] | None = None
+    read: Callable[[PoliteClient, str, int | None], Parsed] | None = (
+        None  # (client, url, last stored week's rows)
+    )
 
     def where(self) -> str | None:
         return self.locate() if self.locate else self.url
@@ -754,13 +831,13 @@ def snapshot(
         imp, rel = IMPORTERS[name], path(name, week)
         try:
             url = imp.where()
-            if url is None:  # Royal, on any run but the scheduled one
+            if url is None:  # Royal, on any run but a scheduled one's first attempt
                 results.append(
                     {
                         "importer": name,
                         "week": str(week),
                         "status": "skipped",
-                        "reason": "fetched on schedule only",
+                        "reason": "fetched only on a scheduled run's first attempt",
                     }
                 )
                 continue
@@ -771,13 +848,28 @@ def snapshot(
                 results.append({"importer": name, "week": str(week), "status": "skipped"})
                 continue
             fetched_at = now().replace(microsecond=0)
-            parsed = imp.read(client, url) if imp.read else parse(name, fetch(client, url))
             last = last_count(lake, name, week)
-            if last and len(parsed.lots) < MIN_SHARE_OF_LAST_WEEK * last and not accept_drop:
+            parsed = imp.read(client, url, last) if imp.read else parse(name, fetch(client, url))
+            extra: dict = {}
+            accept = accept_drop
+            if name == ROYAL:
+                royal_ok, note = royal_accepts_drop(week)
+                accept = accept or royal_ok
+                extra = {"price_fields_dropped": parsed.dropped_prices} | ({"note": note} if note else {})
+            thinned = bool(last and len(parsed.lots) < MIN_SHARE_OF_LAST_WEEK * last)
+            if thinned and not accept:
+                how = (
+                    f"if the drop is real, set the repository variable {ROYAL_ACCEPT_DROP_VAR} to {week.isoformat()} "
+                    "for the next scheduled run"
+                    if name == ROYAL
+                    else "if the drop is real, run again with --accept-drop"
+                )
                 raise LayoutChanged(
                     f"{name}: {len(parsed.lots)} lots, under {MIN_SHARE_OF_LAST_WEEK:.0%} of the {last} in its last "
-                    "stored week (a thinned page?); if the drop is real, run again with --accept-drop"
+                    f"stored week (a thinned page?); {how}"
                 )
+            if thinned:
+                extra["accepted_drop"] = True
             base = {
                 "week": week,
                 "fetched_at": fetched_at,
@@ -806,6 +898,7 @@ def snapshot(
                     "null_cells": parsed.bad_cells,
                     "last_week_rows": last,
                 }
+                | extra
             )
         except Exception as e:  # noqa: BLE001 - reported per importer; the caller fails the run
             log.error("%s: %s: %s", name, type(e).__name__, e)

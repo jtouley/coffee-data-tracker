@@ -15,7 +15,7 @@ Raw only: one immutable file per importer per week, and a week already stored is
 | Path | What it holds |
 |---|---|
 | `raw/week=YYYY-MM-DD/importer=<name>.parquet` | Each lot word for word, as the page had it that week: every cell of its row under the page's header (null when empty), and its own page's URL |
-| `raw/week=YYYY-MM-DD/importer=royal_coffee.parquet` | Royal Coffee (a Shopify store's public product listing): each product word for word under its field name (`id`, `title`, `handle`, `vendor`, `product_type`, `tags`, `published_at`, `body_text` from `body_html`, and `options` and `variants` as JSON without prices or images), and its product page's URL. Fetched only by the scheduled workflow, never by an AI agent |
+| `raw/week=YYYY-MM-DD/importer=royal_coffee.parquet` | Royal Coffee (a Shopify store's public product listing): each product word for word under its field name (`id`, `title`, `handle`, `vendor`, `product_type`, `tags`, `published_at`, `body_text` from `body_html`, and `options` and `variants` as JSON without prices or images), and its product page's URL. A field that mentions a price is left out of that product. Fetched only by the scheduled workflow's first attempt, never by an AI agent |
 
 `week` is the Monday of the fetch's ISO week; `fetched_at` is when the page was fetched. Columns about prices are
 left out by their header (price, cost, FOB, differential), and a price in any kept cell (a currency amount, an

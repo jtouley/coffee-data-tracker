@@ -381,13 +381,18 @@ text. The stated fields and our normalized values are derived from raw when read
 stored, so a better rule re-derives the whole history. No prices, page HTML or images.
 
 Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
-after another, spaced, and each product is kept word for word (its fields, tags, options, variants without prices,
-and `body_html`'s text; no prices or images). Its values (lot number, warehouse, origin, region, process,
-varieties, altitude, harvest months, certifications) are derived on read like the others' (`importers.offers()`,
-`importer_rules.royal_stated` and `normalize_royal`), never stored. Royal's terms restrict automated access and AI
-tools; the owner chose to include it. **No AI agent may access Royal's site:** its address is only in the
-importers workflow, passed to scheduled runs alone, and the code refuses it anywhere else (pytest, local runs, a
-dispatch). Its tests use invented products only (`tests/fixtures/importers/royal_synthetic_products.json`).
+after another, 15 s apart, and each product is kept word for word (its fields, tags, options, variants without
+prices, and `body_html`'s text; no prices or images; a field that mentions a price is left out of that product).
+Its values (lot number, warehouse, origin, region, process, varieties, altitude, harvest months, certifications) are
+derived on read like the others' (`importers.offers()`, `importer_rules.royal_stated` and `normalize_royal`), never
+stored. Royal's terms restrict automated access and AI tools; the owner chose to include it. **No AI agent may
+access Royal's site.** Its address is only in the importers workflow, passed to a scheduled run's first attempt
+alone (never a dispatch or a re-run). `importers.royal_listing_url` refuses it anywhere else; that check reads
+environment values, so it stops accidents, not a deliberate run. Every HTTP client but the importers job's, and the
+roaster registry and discovery, refuse the host outright (`http.schedule_only_host`). Its tests use invented
+products only (`tests/fixtures/importers/royal_synthetic_products.json`). **Owner step for a real drop at Royal:**
+set the repository variable `ROYAL_ACCEPT_DROP_WEEK` to that week's Monday (`YYYY-MM-DD`); the next scheduled run
+that week stores the thinned listing, and the value expires by itself after that week.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).

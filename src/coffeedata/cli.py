@@ -1022,9 +1022,10 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     if args.require_hub and not lake.remote:
         # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
         raise SystemExit(f"COFFEEDATA_IMPORTERS must be an hf://datasets/ URL here, not {lake.url!r}")
-    # One page per host for the HTML importers; Royal's listing pages are spaced by ROYAL_PAGE_INTERVAL (or the
-    # store's robots.txt Crawl-delay, if longer). A slow page gets a minute.
-    with PoliteClient(min_interval=importers.ROYAL_PAGE_INTERVAL, timeout=60.0, retries=3) as client:
+    # One page per host for the HTML importers; Royal's listing pages wait ROYAL_PAGE_INTERVAL (importers.read_royal)
+    # on top of the client's spacing. A slow page gets a minute. This is the one client allowed to reach a host only
+    # the scheduled importers job fetches (http.schedule_only_host); importers.royal_listing_url decides whether it does.
+    with PoliteClient(timeout=60.0, retries=3, schedule_only_ok=True) as client:
         results = importers.snapshot(lake, client, args.importer, accept_drop=args.accept_drop)
     _print(results)
     return all(r["status"] != "failed" for r in results)

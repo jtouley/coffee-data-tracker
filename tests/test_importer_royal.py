@@ -9,6 +9,7 @@ no AI agent may access Royal's site, so nothing in this file was built from it.
 from __future__ import annotations
 
 import dataclasses
+import hashlib
 import json
 import re
 import subprocess
@@ -38,8 +39,16 @@ ROYAL_HOST = re.compile(r"(?<![\w-])(?:www\.)?royalcoffee\.com(?![\w-])", re.I)
 
 @pytest.fixture(autouse=True)
 def _offline(monkeypatch, no_network):
-    """No connection off this machine, and no Royal address in the environment, for every test here."""
-    monkeypatch.delenv(importers.ROYAL_URL_VAR, raising=False)
+    """No connection off this machine, no Royal address or drop override in the environment, and no wait between
+    listing pages (test_pages_are_spaced checks the wait), for every test here."""
+    for var in (
+        importers.ROYAL_URL_VAR,
+        importers.ROYAL_ACCEPT_DROP_VAR,
+        "GITHUB_RUN_ATTEMPT",
+        "GITHUB_EVENT_NAME",
+    ):
+        monkeypatch.delenv(var, raising=False)
+    monkeypatch.setattr(importers, "ROYAL_PAGE_INTERVAL", 0.0)
 
 
 def _store(pages: list[list[dict]], calls: list[httpx.Request], robots: str = "User-agent: *\nDisallow:\n"):
@@ -68,13 +77,17 @@ def test_the_fixture_is_labelled_synthetic_and_invented():
     assert hosts == {"cdn.example.invalid"}
 
 
+def _pages_asked(calls: list[httpx.Request]) -> list[str | None]:
+    return [c.url.params.get("page") for c in calls if c.url.path != "/robots.txt"]
+
+
 def test_listing_is_read_with_the_fewest_pages_politely_and_never_logged_in(monkeypatch):
     monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 4)
     calls: list[httpx.Request] = []
+    # last week had these 6: the short second page ends the listing, so the empty third is never asked for
     with _store(_pages_of(4), calls) as client:
-        parsed = importers.read_royal(client, LISTING)
+        parsed = importers.read_royal(client, LISTING, last=6)
     assert len(parsed.lots) == 6 and parsed.unreadable_rows == 0
-    # robots.txt first, then two pages: the second is short, so the empty third is never asked for
     assert [(c.url.path, dict(c.url.params)) for c in calls] == [
         ("/robots.txt", {}),
         ("/products.json", {"limit": "4", "page": "1"}),
@@ -85,17 +98,42 @@ def test_listing_is_read_with_the_fewest_pages_politely_and_never_logged_in(monk
         assert "authorization" not in c.headers and "cookie" not in c.headers
 
 
-def test_a_full_last_page_costs_one_empty_page_and_a_repeating_store_stops(monkeypatch):
+def test_an_early_short_page_doesnt_end_the_listing(monkeypatch):
+    """Shopify can return a short page with more behind it: before last week's count is reached (or with no
+    history), only an empty page ends the listing."""
+    monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 4)
+    calls: list[httpx.Request] = []
+    with _store([PRODUCTS[:2], PRODUCTS[2:6]], calls) as client:  # page 1 short, page 2 full
+        assert len(importers.read_royal(client, LISTING, last=6).lots) == 6
+    assert _pages_asked(calls) == ["1", "2", "3"]
+    calls.clear()  # no history: a short page is followed by one more request
+    with _store(_pages_of(4), calls) as client:
+        assert len(importers.read_royal(client, LISTING).lots) == 6
+    assert _pages_asked(calls) == ["1", "2", "3"]
+
+
+def test_a_full_last_page_costs_one_empty_page(monkeypatch):
     monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 3)
     calls: list[httpx.Request] = []
     with _store(_pages_of(3), calls) as client:
-        assert len(importers.read_royal(client, LISTING).lots) == 6
-    assert [c.url.params.get("page") for c in calls if c.url.path != "/robots.txt"] == ["1", "2", "3"]
+        assert len(importers.read_royal(client, LISTING, last=6).lots) == 6
+    assert _pages_asked(calls) == ["1", "2", "3"]
 
-    calls.clear()  # a store that ignores `page`, answering the first page every time
-    with _store([PRODUCTS[:3]] * 50, calls) as client:
-        assert len(importers.read_royal(client, LISTING).lots) == 3
-    assert [c.url.params.get("page") for c in calls if c.url.path != "/robots.txt"] == ["1", "2"]
+
+@pytest.mark.parametrize(
+    "pages",
+    [
+        [PRODUCTS[:3]] * 50,  # a store that ignores `page`, answering the first page every time
+        [PRODUCTS[:3], PRODUCTS[2:5]],  # pages that overlap
+        [PRODUCTS[:2], PRODUCTS[:2]],  # a short page, then the same one again
+    ],
+)
+def test_a_store_that_ignores_page_fails_instead_of_storing_a_truncated_week(monkeypatch, pages):
+    monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 3)
+    calls: list[httpx.Request] = []
+    with _store(pages, calls) as client, pytest.raises(importers.LayoutChanged, match="ignores `page`"):
+        importers.read_royal(client, LISTING)
+    assert _pages_asked(calls) == ["1", "2"]
 
 
 def test_a_listing_that_never_ends_fails_instead_of_paging_forever(monkeypatch):
@@ -110,35 +148,48 @@ def test_a_listing_that_never_ends_fails_instead_of_paging_forever(monkeypatch):
     assert len([c for c in calls if c.url.path != "/robots.txt"]) == 3
 
 
-def test_robots_disallow_is_honored():
+@pytest.mark.parametrize(
+    "robots",
+    [
+        "User-agent: *\nDisallow: /\n",
+        # a rule about the query only: matched against the path and the query we send (RFC 9309)
+        "User-agent: *\nDisallow: /*page=\n",
+        "User-agent: *\nDisallow: /products.json?limit=\n",
+    ],
+)
+def test_robots_disallow_is_honored_on_the_path_and_the_query(robots):
     calls: list[httpx.Request] = []
-    with (
-        _store(_pages_of(250), calls, robots="User-agent: *\nDisallow: /\n") as client,
-        pytest.raises(FetchError),
-    ):
+    with _store(_pages_of(250), calls, robots=robots) as client, pytest.raises(FetchError):
         importers.read_royal(client, LISTING)
     assert [c.url.path for c in calls] == ["/robots.txt"]
 
 
-def test_pages_are_spaced_by_the_cli_client():
-    """The weekly command's client waits ROYAL_PAGE_INTERVAL between two requests to one host."""
+def test_pages_are_spaced(monkeypatch):
+    """ROYAL_PAGE_INTERVAL before each page after the first, on top of the client's own per-host spacing."""
+    monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 2)
+    monkeypatch.setattr(importers, "ROYAL_PAGE_INTERVAL", 15.0)
+    waits: list[float] = []
+    with _store(_pages_of(2), []) as client:
+        importers.read_royal(client, LISTING, last=6, sleep=waits.append)
+    assert waits == [15.0, 15.0, 15.0]  # before pages 2, 3 and the empty 4th
+
+
+def test_the_weekly_command_builds_the_one_client_allowed_a_schedule_only_host(monkeypatch):
     from coffeedata import cli
 
     seen = {}
 
     def fake(lake, client, *a, **k):
-        seen["interval"] = client.min_interval
+        seen["ok"] = client.schedule_only_ok
         return []
 
-    orig = importers.snapshot
-    importers.snapshot = fake
+    monkeypatch.setattr(importers, "snapshot", fake)
     try:
         cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
-    finally:
-        importers.snapshot = orig
-    assert seen["interval"] == importers.ROYAL_PAGE_INTERVAL >= 10
+    assert seen["ok"] is True
+    assert PoliteClient().schedule_only_ok is False  # every other client refuses it
 
 
 def test_each_product_is_kept_word_for_word_without_prices_or_images():
@@ -181,15 +232,6 @@ def test_a_changed_listing_fails_loudly():
     unreadable = [{k: v for k, v in p.items() if k != "handle"} for p in PRODUCTS[:2]] + PRODUCTS[2:]
     with pytest.raises(importers.LayoutChanged, match="unreadable"):
         importers.parse_royal(unreadable, LISTING)
-    # a price that got into a kept field (here, the body's prose) fails the run, as on the other importers
-    # (#140's wider backstop: a currency amount, an amount per weight, a labelled price)
-    for prose in ("<p>Now only $4.10/lb</p>", "<p>Offered at 4.25 per kg</p>", "<p>Price: 4.25</p>"):
-        priced = [{**PRODUCTS[0], "body_html": prose}, *PRODUCTS[1:]]
-        with pytest.raises(importers.LayoutChanged, match="a price in the 'body_text' field"):
-            importers.parse_royal(priced, LISTING)
-    tagged = [{**PRODUCTS[0], "tags": [*PRODUCTS[0]["tags"], "FOB 3.90 USD"]}, *PRODUCTS[1:]]
-    with pytest.raises(importers.LayoutChanged, match="a price in the 'tags' field"):
-        importers.parse_royal(tagged, LISTING)
 
     def not_a_listing(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/robots.txt":
@@ -200,6 +242,60 @@ def test_a_changed_listing_fails_loudly():
     client = PoliteClient(min_interval=0, retries=1, transport=transport)
     with client, pytest.raises(importers.LayoutChanged, match="not a /products.json"):
         importers.read_royal(client, LISTING)
+
+
+def _many(n: int) -> list[dict]:
+    """n invented lots, each a copy of the fixture's second product with its own id, handle and lot number."""
+    base = PRODUCTS[1]
+    return [
+        {
+            **base,
+            "id": 9500000000000 + i,
+            "handle": f"{base['handle']}-{i}",
+            "title": f"Invented Lot {80000 + i}",
+        }
+        for i in range(n)
+    ]
+
+
+@pytest.mark.parametrize(
+    "where, value",
+    [
+        # #140's wider backstop: a currency amount, an amount per weight, a labelled price
+        ("body_html", "<p>Producers were paid a $0.30/lb premium.</p>"),
+        ("body_html", "<p>Offered at 4.25 per kg</p>"),
+        ("body_html", "<p>Price: 4.25</p>"),
+        ("tags", ["Process: Washed", "FOB 3.90 USD"]),
+    ],
+)
+def test_a_field_mentioning_a_price_is_left_out_of_that_product_only(where, value):
+    """One product's prose about a premium never fails the week: that field is left out of that product (never
+    stored), and counted. Above MAX_BAD_SHARE of products, the run fails, as too many unreadable rows do."""
+    field = "body_text" if where == "body_html" else where
+    products = _many(20)
+    products[0] = {**products[0], where: value}
+    parsed = importers.parse_royal(products, LISTING)
+    assert len(parsed.lots) == 20 and parsed.dropped_prices == 1
+    assert parsed.lots[0].cells[field] is None
+    assert all(lot.cells[field] for lot in parsed.lots[1:])
+    for k in range(3):  # 3 of 20 (15%)
+        products[k] = {**products[k], where: value}
+    with pytest.raises(importers.LayoutChanged, match="3 of 20 products mention a price"):
+        importers.parse_royal(products, LISTING)
+
+
+def test_products_without_an_id_are_each_counted(monkeypatch):
+    """Never merged under one key before the MAX_BAD_SHARE check: 4 of 34 is over 10%, 3 of 33 isn't."""
+    for missing, ok in ((4, False), (3, True)):
+        products = _many(30) + [{k: v for k, v in p.items() if k != "id"} for p in _many(missing)]
+        with _store([products], []) as client:
+            if ok:
+                assert importers.read_royal(client, LISTING).unreadable_rows == missing
+            else:
+                with pytest.raises(
+                    importers.LayoutChanged, match=f"{missing} of {30 + missing} rows unreadable"
+                ):
+                    importers.read_royal(client, LISTING)
 
 
 def _with_fake_store(monkeypatch):
@@ -251,6 +347,62 @@ def test_a_thinned_listing_fails_like_the_other_importers(tmp_path, monkeypatch)
             lake, client, [importers.ROYAL], now=lambda: datetime(2026, 11, 18, tzinfo=UTC)
         )
     assert res[0]["status"] == "failed" and "thinned" in res[0]["error"]
+    # the way to accept it: the owner's week-scoped variable, never --accept-drop (a dispatch never fetches Royal)
+    assert (
+        "ROYAL_ACCEPT_DROP_WEEK to 2026-11-16" in res[0]["error"] and "--accept-drop" not in res[0]["error"]
+    )
+
+
+SCHEDULED = {
+    "GITHUB_ACTIONS": "true",
+    "GITHUB_WORKFLOW": "importers",
+    "GITHUB_EVENT_NAME": "schedule",
+    "GITHUB_RUN_ATTEMPT": "1",
+}
+
+
+@pytest.mark.parametrize(
+    "env, accepted, note",
+    [
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-16"}, True, None),
+        (
+            {**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-09"},
+            False,
+            "isn't this week",
+        ),  # last week's: expired
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "2026-11-23"}, False, "isn't this week"),  # a future week
+        ({**SCHEDULED, "ROYAL_ACCEPT_DROP_WEEK": "yes"}, False, "isn't this week"),
+        (
+            {**SCHEDULED, "GITHUB_RUN_ATTEMPT": "2", "ROYAL_ACCEPT_DROP_WEEK": "2026-11-16"},
+            False,
+            "first attempt",
+        ),
+        (
+            {**SCHEDULED, "GITHUB_EVENT_NAME": "workflow_dispatch", "ROYAL_ACCEPT_DROP_WEEK": "2026-11-16"},
+            False,
+            "first attempt",
+        ),
+        (SCHEDULED, False, None),
+    ],
+)
+def test_a_real_drop_at_royal_is_accepted_for_one_week_by_the_owners_variable(
+    env, accepted, note, tmp_path, monkeypatch
+):
+    assert importers.royal_accepts_drop(date(2026, 11, 16), env)[0] is accepted
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    with _store(_pages_of(250), []) as client:
+        importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    for k, v in env.items():
+        monkeypatch.setenv(k, v)
+    with _store([PRODUCTS[:2]], []) as client:
+        res = importers.snapshot(
+            lake, client, [importers.ROYAL], now=lambda: datetime(2026, 11, 18, tzinfo=UTC)
+        )
+    assert res[0]["status"] == ("stored" if accepted else "failed")
+    assert res[0].get("accepted_drop") is (True if accepted else None)
+    if note:
+        assert note in importers.royal_accepts_drop(date(2026, 11, 16), env)[1]
 
 
 # --- private: the same private dataset checks as the other importers ---------------------------------------------
@@ -289,8 +441,35 @@ def test_without_its_address_royal_is_skipped_and_nothing_is_fetched(tmp_path):
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with _store([], calls) as client:
         res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
-    assert res[0]["status"] == "skipped" and res[0]["reason"] == "fetched on schedule only" and calls == []
+    assert res[0]["status"] == "skipped" and calls == []
+    assert res[0]["reason"] == "fetched only on a scheduled run's first attempt"
     assert importers.IMPORTERS[importers.ROYAL].url is None
+
+
+@pytest.mark.parametrize(
+    "context, status",
+    [
+        # a re-run keeps the `schedule` event: the workflow gives it no address, so Royal is skipped, nothing asked
+        ({**SCHEDULED, "GITHUB_RUN_ATTEMPT": "2"}, "skipped"),
+        ({**SCHEDULED, "GITHUB_RUN_ATTEMPT": "3"}, "skipped"),
+        ({**SCHEDULED, "GITHUB_EVENT_NAME": "workflow_dispatch"}, "skipped"),
+        # the scheduled first attempt without the address is a workflow edit gone wrong: fail, don't pass as a skip
+        (SCHEDULED, "failed"),
+    ],
+)
+def test_without_its_address_a_rerun_skips_royal_and_a_scheduled_first_attempt_fails(
+    context, status, tmp_path, monkeypatch
+):
+    for k, v in context.items():
+        monkeypatch.setenv(k, v)
+    calls: list[httpx.Request] = []
+    with _store(_pages_of(250), calls) as client:
+        res = importers.snapshot(
+            Lake(str(tmp_path / "i"), tables=IMPORTER_TABLES), client, [importers.ROYAL], now=lambda: NOW
+        )
+    assert res[0]["status"] == status and calls == []
+    if status == "failed":
+        assert "empty on the scheduled run's first attempt" in res[0]["error"]
 
 
 @pytest.mark.parametrize(
@@ -298,12 +477,10 @@ def test_without_its_address_royal_is_skipped_and_nothing_is_fetched(tmp_path):
     [
         {},  # a laptop or an agent's sandbox
         {"GITHUB_ACTIONS": "true", "GITHUB_WORKFLOW": "ci", "GITHUB_EVENT_NAME": "pull_request"},
-        {"GITHUB_ACTIONS": "true", "GITHUB_WORKFLOW": "importers", "GITHUB_EVENT_NAME": "workflow_dispatch"},
-        {
-            "GITHUB_ACTIONS": "true",
-            "GITHUB_WORKFLOW": "importers",
-            "GITHUB_EVENT_NAME": "schedule",
-        },  # but pytest
+        {**SCHEDULED, "GITHUB_EVENT_NAME": "workflow_dispatch"},
+        {**SCHEDULED, "GITHUB_RUN_ATTEMPT": "2"},  # a re-run of a scheduled run keeps its event
+        {**{k: v for k, v in SCHEDULED.items() if k != "GITHUB_RUN_ATTEMPT"}},  # no attempt number
+        SCHEDULED,  # but under pytest
     ],
 )
 def test_its_address_is_refused_anywhere_but_the_scheduled_workflow(context, tmp_path, monkeypatch):
@@ -340,15 +517,75 @@ def test_royals_address_is_only_in_the_scheduled_step_of_the_importers_workflow(
     steps = [s for job in wf["jobs"].values() for s in job["steps"]]
     holders = [s for s in steps if ROYAL_HOST.search(json.dumps(s))]
     assert len(holders) == 1 and "importer-snapshot" in holders[0]["run"]
-    # the address only when the run is scheduled, empty otherwise (this file never spells the address out)
+    # the address only on a scheduled run's first attempt, empty otherwise (this file never spells the address out)
+    first = r"github\.event_name == 'schedule' && github\.run_attempt == '1'"
     given = holders[0]["env"][importers.ROYAL_URL_VAR]
-    m = re.fullmatch(r"\$\{\{ github\.event_name == 'schedule' && '(https://[^']+)' \|\| '' \}\}", given)
+    m = re.fullmatch(rf"\$\{{\{{ {first} && '(https://[^']+)' \|\| '' \}}\}}", given)
     assert m and ROYAL_HOST.fullmatch(m.group(1).removeprefix("https://"))
     assert [k for k, v in holders[0]["env"].items() if ROYAL_HOST.search(str(v))] == [importers.ROYAL_URL_VAR]
+    # the owner's drop override, on the same scheduled first attempt only
+    assert re.fullmatch(
+        rf"\$\{{\{{ {first} && vars\.ROYAL_ACCEPT_DROP_WEEK \|\| '' \}}\}}",
+        holders[0]["env"][importers.ROYAL_ACCEPT_DROP_VAR],
+    )
     for wf_file in (ROOT / ".github/workflows").glob("*.y*ml"):
         if wf_file.name != "importers.yml":
             assert importers.ROYAL_URL_VAR not in wf_file.read_text(), wf_file
     assert wf["name"] == importers.ROYAL_WORKFLOW
+
+
+def _workflow_host() -> str:
+    """Royal's host, read from the one file that names it (so this file never spells it out)."""
+    text = (ROOT / ".github/workflows/importers.yml").read_text()
+    m = ROYAL_HOST.search(text)
+    assert m
+    return m.group(0)
+
+
+def test_no_other_client_can_reach_the_store_and_the_roaster_crawl_never_lists_it(lake, monkeypatch):
+    """Royal is refused outright outside the importers job: every PoliteClient but the one cmd_importer_snapshot
+    builds (robots.txt included), and the roaster registry, discovery and add-roaster, even when a lake addition
+    names it."""
+    from datetime import UTC, datetime
+
+    from coffeedata import http, registry
+
+    host = _workflow_host()
+    for h in (host, f"www.{host}", f"https://{host}/products.json", f"shop.{host}"):
+        assert http.schedule_only_host(h), h
+    assert not http.schedule_only_host("shop.example") and not http.schedule_only_host(f"not{host}")
+
+    # a client that isn't the importers job's refuses before any request, robots.txt included (a mock transport
+    # records it; nothing leaves this machine either way)
+    calls: list[httpx.Request] = []
+    transport = httpx.MockTransport(lambda r: calls.append(r) or httpx.Response(500))
+    with PoliteClient(min_interval=0, retries=1, transport=transport) as client:
+        with pytest.raises(http.ScheduleOnlyHost):
+            client.get(f"https://{host}/products.json", limit=250, page=1)
+        with pytest.raises(http.ScheduleOnlyHost):
+            client.get(f"https://www.{host}/")
+    assert calls == []
+
+    # the importers job's client may: shown with a made-up host put on the list, never the store itself
+    monkeypatch.setattr(
+        http,
+        "SCHEDULE_ONLY_HOSTS_SHA256",
+        http.SCHEDULE_ONLY_HOSTS_SHA256 | {hashlib.sha256(b"shop.example").hexdigest()},
+    )
+    with _store(_pages_of(250), []) as client, pytest.raises(http.ScheduleOnlyHost):
+        importers.read_royal(client, LISTING)
+    with _store(_pages_of(250), []) as client:
+        client.schedule_only_ok = True
+        assert len(importers.read_royal(client, LISTING).lots) == 6
+
+    # the roaster crawl: never a storefront, and dropped from the registry even when the lake adds it
+    assert not registry.is_storefront_host(host) and not registry.is_storefront_host(f"www.{host}")
+    lake.write("registry", "registry/source=manual/x.parquet", [
+        {"added_at": datetime.now(UTC), "source": "manual", "roaster_id": rid, "name": "Added"}
+        for rid in (host, f"shop.{host}", "realroaster.com")
+    ])  # fmt: skip
+    ids = {s.roaster.roaster_id for s in registry.current(lake)}
+    assert "realroaster.com" in ids and not {host, f"shop.{host}"} & ids
 
 
 # --- the rules: decide when the text says so, abstain otherwise --------------------------------------------------
@@ -438,6 +675,27 @@ def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") ->
         (_cells("Kenya AA - North Warehouse", ["Warehouse: South"]), "warehouse", None),
         (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
         (_cells("Colombia and Peru Blend"), "origin", None),
+        # the review's cases (#145): abstain, never guess
+        (_cells("Kenya AA - In Warehouse"), "warehouse", None),
+        (_cells("Kenya AA - Not In Warehouse"), "warehouse", None),
+        (_cells("Kenya AA - In Harborview Warehouse"), "warehouse", "Harborview"),
+        (
+            _cells(tags=["Location: Huila, Colombia"]),
+            "warehouse",
+            None,
+        ),  # usually the farm, never the warehouse
+        (_cells("Peru Non-Organic Cajamarca"), "certifications", None),
+        (_cells(tags=["Certification: Non-Organic"]), "certifications", None),
+        (_cells("Guatemala Bird Friendly Organic"), "certifications", None),  # a program we don't model
+        (_cells(tags=["FTO"]), "certifications", None),  # Fair Trade Organic, or only Fair Trade?
+        (_cells(tags=["Fair Trade", "Organic", "FTO"]), "certifications", ["organic", "fair_trade"]),
+        (_cells(tags=["Region: Huila"], body="Region: Huila. Process: Washed."), "region", "Huila"),
+        (_cells(body="Region: Huila."), "region", "Huila"),
+        (_cells("Colombia Anaerobic Lot", ["Process: Natural"]), "process", "anaerobic"),  # anaerobic wins
+        (_cells(tags=["Process: Natural", "Process: Natural."]), "process", "natural"),
+        (_cells("Sumatra Mandheling"), "origin", "Indonesia"),  # the catalog's alias, as the label gives
+        (_cells(tags=["Origin: Sumatra"]), "origin", "Indonesia"),
+        (_cells("Kenya Harvest Lot 2025"), "lot", None),  # a year, not a lot number
     ],
 )
 def test_rules_abstain_when_unsure(cells, field, expected):
@@ -450,5 +708,6 @@ def test_rules_abstain_when_unsure(cells, field, expected):
         "lot": lambda c: rules.royal_lot(c["title"]),
         "warehouse": rules.royal_warehouse,
         "origin": rules.royal_origin,
+        "region": rules.royal_region,
     }[field]
     assert fn(cells) == expected
