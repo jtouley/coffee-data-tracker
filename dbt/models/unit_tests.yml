@@ -594,3 +594,297 @@ unit_tests:
       rows:
         - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
         - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}
+
+  # --- Rules pinned by the rules audit (docs/RULES.md) ---------------------------------------------------------------
+
+  - name: price_per_100g_band_size_window_and_availability
+    description: >-
+      dim_coffee's prices. price_per_100g is the lowest of a coffee's variants that are retail, 150-2,500 g, priced
+      above 0, available (null counts as available) and $0.50-$100 per 100 g, all bounds inclusive; else null.
+      min_price_usd is the lowest price above 0 over every variant, sold out or wholesale included; bag_sizes_g
+      every distinct size. P1 in band; P2 under 150 g; P3 2,500 g exactly; P4 over 2,500 g; P5 under $0.50/100 g;
+      P6 $100/100 g exactly; P7 over $100/100 g; P8 its cheaper-per-gram bag ($2.94/100 g) is sold out, so the
+      available one ($4.00) counts; P9 wholesale; P10 priced 0 and unpriced; P11 availability unknown; P12 sold out.
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
+                 'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
+                 []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
+                 coffee_id as grams_key,
+                 variants::struct(variant_id varchar, title varchar, price_usd double, grams integer,
+                                  available boolean)[] as variants
+          from (values
+              ('r:P1', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P2', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 100, 'available': true}]),
+              ('r:P3', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 50.0, 'grams': 2500, 'available': true}]),
+              ('r:P4', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 60.0, 'grams': 2600, 'available': true}]),
+              ('r:P5', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.7, 'grams': 150, 'available': true}]),
+              ('r:P6', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 150.0, 'grams': 150, 'available': true}]),
+              ('r:P7', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 400.0, 'grams': 340, 'available': true}]),
+              ('r:P8', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 340, 'available': false},
+                             {'variant_id': 'b', 'title': 'Bag', 'price_usd': 40.0, 'grams': 1000, 'available': true}]),
+              ('r:P9', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P10', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.0, 'grams': 340, 'available': true},
+                              {'variant_id': 'b', 'title': 'Bag', 'price_usd': null, 'grams': 454, 'available': true}]),
+              ('r:P11', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 17.0, 'grams': 340, 'available': null}]),
+              ('r:P12', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': false}])
+          ) t(coffee_id, roaster_id, variants)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:P1", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P2", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P3", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P4", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P5", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P6", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P7", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P8", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P9", is_coffee: true, is_wholesale: true}
+          - {input_hash: "r:P10", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P11", is_coffee: true, is_wholesale: false}
+          - {input_hash: "r:P12", is_coffee: true, is_wholesale: false}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:P1", price_per_100g: 5.88, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P2", price_per_100g: null, min_price_usd: 10.0, bag_sizes_g: "[100]", in_stock: true}
+        - {coffee_id: "r:P3", price_per_100g: 2.0, min_price_usd: 50.0, bag_sizes_g: "[2500]", in_stock: true}
+        - {coffee_id: "r:P4", price_per_100g: null, min_price_usd: 60.0, bag_sizes_g: "[2600]", in_stock: true}
+        - {coffee_id: "r:P5", price_per_100g: null, min_price_usd: 0.7, bag_sizes_g: "[150]", in_stock: true}
+        - {coffee_id: "r:P6", price_per_100g: 100.0, min_price_usd: 150.0, bag_sizes_g: "[150]", in_stock: true}
+        - {coffee_id: "r:P7", price_per_100g: null, min_price_usd: 400.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P8", price_per_100g: 4.0, min_price_usd: 10.0, bag_sizes_g: "[340, 1000]", in_stock: true}
+        - {coffee_id: "r:P9", price_per_100g: null, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P10", price_per_100g: null, min_price_usd: null, bag_sizes_g: "[340, 454]", in_stock: true}
+        - {coffee_id: "r:P11", price_per_100g: 5.0, min_price_usd: 17.0, bag_sizes_g: "[340]", in_stock: true}
+        - {coffee_id: "r:P12", price_per_100g: null, min_price_usd: 20.0, bag_sizes_g: "[340]", in_stock: false}
+
+  - name: flavor_categories_come_from_the_lexicon
+    description: >-
+      dim_coffee.flavor_categories: each tasting note looked up in the flavor_lexicon seed (rows copied from it),
+      the distinct categories sorted. A note the seed doesn't list adds nothing; no notes, or none known, is an
+      empty list, never null. (The lookup is case-sensitive today: flavor_lookup_ignores_case, a suspected bug.)
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
+                 date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
+                 'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
+                 coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+          from (values ('r:F1'), ('r:F2'), ('r:F3'), ('r:F4')) t(coffee_id)
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['milk chocolate', 'blackberry', 'chocolate', 'lemon', 'not a note']"}
+          - {input_hash: "r:F2", is_coffee: true, is_wholesale: false, tasting_notes: "['lemon', 'jasmine']"}
+          - {input_hash: "r:F3", is_coffee: true, is_wholesale: false, tasting_notes: "[]"}
+          - {input_hash: "r:F4", is_coffee: true, is_wholesale: false, tasting_notes: null}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')  # rows as in seeds/flavor_lexicon.csv
+        rows:
+          - {note: blackberry, category: berry}
+          - {note: chocolate, category: chocolate}
+          - {note: milk chocolate, category: chocolate}
+          - {note: lemon, category: citrus}
+          - {note: jasmine, category: floral}
+    expect:
+      rows:
+        - {coffee_id: "r:F1", flavor_categories: "['berry', 'chocolate', 'citrus']"}
+        - {coffee_id: "r:F2", flavor_categories: "['citrus', 'floral']"}
+        - {coffee_id: "r:F3", flavor_categories: "[]"}
+        - {coffee_id: "r:F4", flavor_categories: "[]"}
+
+  - name: market_weekly_cells_leave_out_archived_blends_and_unknown_origins
+    description: >-
+      public_market_weekly counts public coffees that are listed, not archived, not wholesale, not blends and have
+      an origin; a missing process is its own cell, 'unknown'. (It counts chains, unlike mart_market and the site:
+      tests/test_dbt.py's xfail test_public_market_weekly_leaves_out_chains, a suspected bug.)
+    model: public_market_weekly
+    given:
+      - input: ref('public_coffee')
+        rows:
+          - {coffee_id: "a:1", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 6.0, last_seen: 2026-10-19}
+          - {coffee_id: "k:1", roaster_id: k, origin_country: Kenya, process: washed, is_listed: true, catalog_status: sold_out, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 8.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:2", roaster_id: a, origin_country: Kenya, process: null, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 5.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:3", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: archived, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:4", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: true, in_stock: true, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:5", roaster_id: a, origin_country: Kenya, process: washed, is_listed: true, catalog_status: available, is_wholesale: true, is_blend: false, in_stock: true, price_per_100g: null, last_seen: 2026-10-19}
+          - {coffee_id: "a:6", roaster_id: a, origin_country: null, process: washed, is_listed: true, catalog_status: available, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, last_seen: 2026-10-19}
+          - {coffee_id: "a:7", roaster_id: a, origin_country: Kenya, process: washed, is_listed: false, catalog_status: delisted, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 9.0, last_seen: 2026-10-26}
+    expect:
+      rows:
+        - {as_of_run: 2026-10-26, origin_country: Kenya, process: washed, coffees: 2, roasters: 2, in_stock: 1, median_price_per_100g: 7.0}
+        - {as_of_run: 2026-10-26, origin_country: Kenya, process: unknown, coffees: 1, roasters: 1, in_stock: 1, median_price_per_100g: 5.0}
+
+  - name: mart_market_is_us_retail_single_origins_without_chains
+    description: >-
+      mart_market counts the current catalog's coffees from US roasters that aren't chains, wholesale or blends and
+      have an origin; a missing process is 'unknown'. top_notes_for_origin: the origin's five most frequent notes
+      over those coffees, ties by note, across all its processes.
+    model: mart_market
+    given:
+      - input: ref('int_current_catalog')
+        rows:
+          - {coffee_id: "a:1", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 6.0, tasting_notes: "['blackcurrant', 'tomato', 'grapefruit']"}
+          - {coffee_id: "b:1", roaster_id: b, origin_country: Kenya, process: null, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: false, price_per_100g: 8.0, tasting_notes: "['blackcurrant', 'tomato', 'cola', 'honey', 'lime', 'rhubarb']"}
+          - {coffee_id: "k:1", roaster_id: k, origin_country: Kenya, process: washed, is_chain: true, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['chain note']"}
+          - {coffee_id: "c:1", roaster_id: c, origin_country: Kenya, process: washed, is_chain: false, roaster_country: CA, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['canada note']"}
+          - {coffee_id: "a:2", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: true, is_blend: false, in_stock: true, price_per_100g: null, tasting_notes: "['wholesale note']"}
+          - {coffee_id: "a:3", roaster_id: a, origin_country: Kenya, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: true, in_stock: true, price_per_100g: 9.0, tasting_notes: "['blend note']"}
+          - {coffee_id: "a:4", roaster_id: a, origin_country: null, process: washed, is_chain: false, roaster_country: US, is_wholesale: false, is_blend: false, in_stock: true, price_per_100g: 9.0, tasting_notes: "['no origin']"}
+    expect:
+      rows:
+        - {origin_country: Kenya, process: washed, coffees: 1, roasters: 1, in_stock: 1, median_price_per_100g: 6.0, top_notes_for_origin: "['blackcurrant', 'tomato', 'cola', 'grapefruit', 'honey']"}
+        - {origin_country: Kenya, process: unknown, coffees: 1, roasters: 1, in_stock: 0, median_price_per_100g: 8.0, top_notes_for_origin: "['blackcurrant', 'tomato', 'cola', 'grapefruit', 'honey']"}
+
+  - name: extraction_time_bucket_boundaries
+    description: >-
+      fct_shot.extraction_time_bucket: under 25 s is fast, 25 to 32 s inclusive is target, over 32 s (or no time)
+      is slow; brew_ratio is yield over dose to 2 places.
+    model: fct_shot
+    given:
+      - input: ref('stg_shots')
+        rows:
+          - {shot_id: s1, user_id: u, time_s: 24.9, dose_g: 18.0, yield_g: 36.0}
+          - {shot_id: s2, user_id: u, time_s: 25.0, dose_g: 18.0, yield_g: 40.0}
+          - {shot_id: s3, user_id: u, time_s: 32.0, dose_g: 18.0, yield_g: 45.0}
+          - {shot_id: s4, user_id: u, time_s: 32.1, dose_g: 18.0, yield_g: 27.0}
+          - {shot_id: s5, user_id: u, time_s: null, dose_g: 18.0, yield_g: null}
+      - input: ref('stg_bags')
+        rows: []
+      - input: ref('dim_equipment')
+        rows: []
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {shot_id: s1, extraction_time_bucket: fast, brew_ratio: 2.0}
+        - {shot_id: s2, extraction_time_bucket: target, brew_ratio: 2.22}
+        - {shot_id: s3, extraction_time_bucket: target, brew_ratio: 2.5}
+        - {shot_id: s4, extraction_time_bucket: slow, brew_ratio: 1.5}
+        - {shot_id: s5, extraction_time_bucket: slow, brew_ratio: null}
+
+  - name: shots_in_window_counts_target_shots_per_bag
+    description: >-
+      mart_bag.shots_in_window: a bag's shots whose extraction_time_bucket is target (fct_shot: 25-32 s); shots
+      with no bag aren't counted. (A bag with no shots gets null, not 0: a_bag_with_no_shots_has_none_in_window, a
+      suspected bug.)
+    model: mart_bag
+    given:
+      - input: ref('stg_bags')
+        rows:
+          - {bag_id: b1, user_id: u}
+      - input: ref('fct_shot')
+        rows:
+          - {shot_id: s1, user_id: u, bag_id: b1, extraction_time_bucket: target, time_s: 28.0, rating: 4}
+          - {shot_id: s2, user_id: u, bag_id: b1, extraction_time_bucket: fast, time_s: 20.0, rating: 2}
+          - {shot_id: s3, user_id: u, bag_id: b1, extraction_time_bucket: target, time_s: 32.0, rating: 3}
+          - {shot_id: s4, user_id: u, bag_id: null, extraction_time_bucket: target, time_s: 30.0, rating: 5}
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {bag_id: b1, shot_count: 3, shots_in_window: 2, best_shot_id: s1}
+
+  # --- Suspected bugs: what these models should output, failing today --------------------------------------------
+  # Tagged suspected_bug, so test_dbt_unit_tests leaves them out; tests/test_dbt.py runs each as a strict xfail, which
+  # fails once the model is fixed, so the fix moves the test into the passing set above.
+
+  - name: flavor_lookup_ignores_case
+    description: >-
+      A tasting note matches the flavor lexicon whatever its case ('Lemon' is lemon). Today the lookup is exact, so a
+      capitalised note (Claude's or a tag's) gets no category.
+    model: dim_coffee
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+                 'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
+                 []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
+                 'r:F1' as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['Lemon', 'Jasmine']"}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
+      - input: ref('flavor_lexicon')
+        rows:
+          - {note: lemon, category: citrus}
+          - {note: jasmine, category: floral}
+    expect:
+      rows:
+        - {coffee_id: "r:F1", flavor_categories: "['citrus', 'floral']"}
+
+  - name: a_bag_with_no_shots_has_none_in_window
+    description: >-
+      A bag with no shots has shots_in_window 0, as its shot_count is 0. Today it is null: shot_count is coalesced
+      and shots_in_window isn't.
+    model: mart_bag
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_bags')
+        rows:
+          - {bag_id: b2, user_id: u}
+      - input: ref('fct_shot')
+        rows: []
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {bag_id: b2, shot_count: 0, shots_in_window: 0}

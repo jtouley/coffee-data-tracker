@@ -28,7 +28,8 @@ jobs:
       - run: npm ci && npx playwright install --with-deps chromium
         working-directory: tests/browser
       - run: make test           # pre-commit hooks on every file, then every test but the smoke job's
-        env:
+        env:  # a missing dbt or browser fails the tests that need it instead of skipping them
+          REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
 
   # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no

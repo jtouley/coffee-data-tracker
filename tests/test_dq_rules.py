@@ -2,12 +2,10 @@
 (#12), price per 100 g outliers (#7) and cross-table reconciliation (#4). Each warns and never fails the build."""
 
 import re
-import shutil
 
 import duckdb
-import pytest
 
-from .lakehelp import manifest, run
+from .lakehelp import manifest, needs_dbt, run
 from .lakehelp import product as _product
 from .test_dbt import build, run_dbt
 from .test_quality import _passing_builds
@@ -21,7 +19,7 @@ def product(*args, **kwargs) -> dict:
     return p
 
 
-pytestmark = pytest.mark.skipif(shutil.which("dbt") is None, reason="dbt not installed")
+pytestmark = needs_dbt
 WEEK1, WEEK2 = "2026-10-19", "2026-10-26"
 
 

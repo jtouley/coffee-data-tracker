@@ -6,6 +6,7 @@ Each test names the cause it guards: the production jobs ran from 2026-11-02 and
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import types
 from datetime import UTC, date, datetime, timedelta
@@ -575,3 +576,166 @@ def test_rollup_skips_a_file_gcsfuse_reports_stale(lake, monkeypatch):
         control.finish(lake, control.start(lake, job, "2026-11-30"), "done")
     with pytest.raises(OSError, match="io"):  # any other error still stops the merge
         control.rollup(lake, "2026-11-30")
+
+
+# --- probe_one: which platform serves the catalog (rules audit #94) -------------------------------------------------
+
+
+def _probe(routes: dict[str, httpx.Response | Exception], domain: str = "a.com") -> dict:
+    """probe_one over mocked hosts: `routes` maps a URL regex to its answer; robots.txt allows everything and any
+    other URL is a 404."""
+    import respx
+
+    from coffeedata.http import PoliteClient
+
+    with respx.mock(assert_all_called=False) as m:
+        m.get(url__regex=r"https://[^/]+/robots\.txt").mock(
+            return_value=httpx.Response(200, text="User-agent: *\n")
+        )
+        for pattern, answer in routes.items():
+            route = m.get(url__regex=pattern)
+            if isinstance(answer, Exception):
+                route.mock(side_effect=answer)
+            else:
+                route.mock(return_value=answer)
+        m.get(url__regex=r".*").mock(return_value=httpx.Response(404))
+        with PoliteClient(min_interval=0, retries=1) as c:
+            return discover.probe_one(c, domain)
+
+
+HOME = r"https://a\.com/$"
+
+
+@pytest.mark.parametrize(
+    "routes,want",
+    [
+        # the JSON endpoints are asked first: Shopify's products.json, then WooCommerce's Store API
+        ({HOME: httpx.Response(200, text="<html>woocommerce</html>"),
+          r"/products\.json": httpx.Response(200, json={"products": []})}, "shopify"),
+        ({HOME: httpx.Response(200, text="<html></html>"),
+          r"/wp-json/wc/store/v1/products": httpx.Response(200, json=[])}, "woocommerce"),
+        # a products.json without "products", or a Store API answering an object, isn't that platform
+        ({HOME: httpx.Response(200, text="<html></html>"),
+          r"/products\.json": httpx.Response(200, json={"items": []}),
+          r"/wp-json/wc/store/v1/products": httpx.Response(200, json={"code": "x"})}, "other"),
+        # then the home page's markers, first match in HTML_MARKERS order
+        ({HOME: httpx.Response(200, text='<script src="//cdn.shopify.com/x.js"></script>')}, "shopify?"),
+        ({HOME: httpx.Response(200, text="<p>Powered by Squarespace</p> wixstatic")}, "squarespace?"),
+        ({HOME: httpx.Response(200, text="<p>BigCommerce</p>")}, "bigcommerce?"),
+        ({HOME: httpx.Response(200, text='<img src="https://static.wixstatic.com/a.png">')}, "wix?"),
+        ({HOME: httpx.Response(200, text='<body class="woocommerce-page">')}, "woocommerce?"),
+        ({HOME: httpx.Response(200, text='<link href="https://cdn.editmysite.com/x.css">')}, "square_online?"),
+        ({HOME: httpx.Response(200, text="<html data-wf-site=1>webflow</html>")}, "webflow?"),
+        ({HOME: httpx.Response(200, text="<html>plain</html>")}, "other"),
+    ],
+)  # fmt: skip
+def test_probe_detects_the_platform(routes, want):
+    out = _probe(routes)
+    assert (out["status"], out["platform"], out["final_host"], out["http_status"]) == (
+        "ok",
+        want,
+        "a.com",
+        200,
+    )
+
+
+def test_probe_reports_a_non_200_home_page_as_http_status():
+    out = _probe({HOME: httpx.Response(404)})
+    assert out == {"status": "http_404", "final_host": "a.com", "platform": "", "http_status": 404}
+
+
+def test_probe_tries_www_when_the_bare_host_does_not_answer():
+    out = _probe(
+        {HOME: httpx.ConnectError("refused"), r"https://www\.a\.com/$": httpx.Response(200, text="x")}
+    )
+    assert (out["status"], out["final_host"], out["platform"]) == ("ok", "www.a.com", "other")
+
+
+def test_probe_with_no_host_answering_is_unreachable():
+    out = _probe({r"https://(www\.)?a\.com/$": httpx.ConnectError("refused")})
+    assert out == {"status": "unreachable", "final_host": "", "platform": "", "http_status": None}
+
+
+# --- discovery filters: Overture (rules audit #92) and OpenStreetMap (#93) ------------------------------------------
+
+
+def _overture_place(name, cat="coffee_roastery", alts=(), x=-122.6, y=45.5, country="US", website="https://r.com",
+                    basic=None, conf=0.9, city="Portland", region="OR"):  # fmt: skip
+    return {"names": {"primary": name}, "taxonomy": {"primary": cat, "alternates": list(alts)},
+            "basic_category": basic, "bbox": {"xmin": x, "ymin": y}, "confidence": conf,
+            "addresses": [{"locality": city, "region": region, "country": country}],
+            "websites": [website] if website else None}  # fmt: skip
+
+
+def test_overture_filter_keeps_us_roasteries_with_a_storefront(tmp_path, monkeypatch):
+    """The scan's SQL over a local file shaped like Overture's places: in a US box and addressed in the US, with a
+    website, and tagged coffee_roastery (primary or alternate) or named "roast" with coffee in its category or name.
+    Websites are keyed by normalized domain, and only storefront hosts count."""
+    import duckdb
+
+    places = [
+        _overture_place("Tagged", website="https://tagged.com"),
+        _overture_place("Alt", cat="cafe", alts=["coffee_roastery"], website="https://alt.com"),
+        _overture_place("Beanery Roasters", cat="coffee_shop", website="https://roastcat.com"),
+        _overture_place("Sunrise Roasting", cat="food", basic="coffee_shop", website="https://basic.com"),
+        _overture_place("Roast Coffee House", cat="restaurant", website="https://roastname.com"),
+        _overture_place(
+            "Roast Beef Shop", cat="restaurant", website="https://beef.com"
+        ),  # no coffee anywhere
+        _overture_place("Cafe", cat="cafe", website="https://cafe.com"),  # not roasting
+        _overture_place(
+            "Toronto", country="CA", x=-79.4, y=43.7, website="https://ca.com"
+        ),  # in the box, not US
+        _overture_place("Guam", x=144.8, y=13.4, website="https://guam.com"),  # US, no box
+        _overture_place("Anchorage", x=-149.9, y=61.2, website="https://ak.com"),
+        _overture_place("Kona", x=-155.9, y=19.6, website="https://hi.com"),
+        _overture_place("No site", website=None),
+        _overture_place("Square", website="https://shop.square.site"),  # not a storefront of its own
+        # one domain, two places: one row, two locations, the more confident place's name
+        _overture_place("Two A", website="https://www.two.com/shop", conf=0.5),
+        _overture_place("Two B", website="https://two.com", conf=0.95, city="Salem"),
+    ]
+    src = tmp_path / "places.json"
+    src.write_text("\n".join(json.dumps(p) for p in places))
+    duckdb.execute(f"copy (select * from read_json('{src}')) to '{tmp_path}/part-0.parquet' (format parquet)")
+    monkeypatch.setattr(discover, "OVERTURE", str(tmp_path) + "/")
+    monkeypatch.setattr(discover.urllib.request, "urlopen",
+                        lambda *a, **k: types.SimpleNamespace(read=lambda: b"<Key>part-0.parquet</Key>"))  # fmt: skip
+    real_connect = duckdb.connect
+
+    class NoInstall:  # the test reads a local file: skip httpfs, which needs the network the first time
+        def __init__(self, con):
+            self.con = con
+
+        def sql(self, q):
+            return None if q.startswith("INSTALL httpfs") else self.con.sql(q)
+
+    monkeypatch.setattr(duckdb, "connect", lambda *a, **k: NoInstall(real_connect()))
+    rows = {r["roaster_id"]: r for r in discover.overture("2026-10-21.0")}
+    assert sorted(rows) == ["ak.com", "alt.com", "basic.com", "hi.com", "roastcat.com", "roastname.com",
+                            "tagged.com", "two.com"]  # fmt: skip
+    assert rows["two.com"]["locations"] == 2 and (rows["two.com"]["name"], rows["two.com"]["city"]) == (
+        "Two B",
+        "Salem",
+    )
+    assert rows["tagged.com"]["tagged_roastery"] and not rows["alt.com"]["tagged_roastery"]
+    assert rows["roastcat.com"]["roast_in_name"] and not rows["tagged.com"]["roast_in_name"]
+    assert rows["tagged.com"]["source"] == "overture-2026-10-21.0"
+
+
+def test_osm_keeps_storefront_websites_once(monkeypatch):
+    elements = {
+        "OR": [
+            {"tags": {"craft": "coffee_roaster", "name": "A", "website": "https://www.a-roast.com/"}},
+            {"tags": {"craft": "coffee_roaster", "name": "A again", "website": "https://a-roast.com"}},
+            {"tags": {"roastery": "yes", "name": "B", "contact:website": "https://b-roast.com"}},
+            {"tags": {"craft": "coffee_roaster", "name": "C", "website": "https://c.square.site"}},
+            {"tags": {"craft": "coffee_roaster", "name": "No site"}},
+        ],
+        "WA": [{"tags": {"craft": "coffee_roaster", "name": "A in WA", "website": "https://a-roast.com"}}],
+    }
+    monkeypatch.setattr(discover, "_overpass", lambda client, st, stop=None: elements[st])
+    rows = discover.osm(states=["OR", "WA"])
+    assert [(r["roaster_id"], r["name"], r["state"]) for r in rows] == [("a-roast.com", "A", "OR"),
+                                                                        ("b-roast.com", "B", "OR")]  # fmt: skip
+    assert all(r["source"] == "osm" and r["tagged_roastery"] for r in rows)
