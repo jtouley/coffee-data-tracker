@@ -308,3 +308,12 @@ It restricts deletions, blocks force-push, requires a PR (0 approvals) and requi
 - 2026-11-08 (owner): review standards are not optional. No "quick pass": each review must show every skill run, its findings, the changes, and before/after screenshots the orchestrator has looked at.
 - 2026-11-08 (owner rule): every design change: the orchestrator reviews the screenshots against the public site's clean design and sends them to the owner before calling it done.
 - 2026-11-09 (owner): cutover2 / Cloud Shell steps tonight or tomorrow. Two weekly runs on the current pipeline before the crawl fixes; then merge the admin stack (#124 -> #125 -> #128 -> #129 -> #131 -> #135) and move to the new admin panel. All stack PRs reviewed and green; #135 CI pending at 3d6fa9b.
+
+## 2026-11-11 decisions
+- #136 (bag weights) and #138 (rule test gaps) merged; CI, deploy and the first eval-floors run on main green.
+- Bag counts in words (#136 review M1): approved. Full CLAUDE.md process; builder stops before labeling to quote the count.
+- Weekly private importer snapshots (Cafe Imports, InterAmerican): approved. Private HF dataset created by code.
+- Site catalog counts must be computed from the release, never hard-coded.
+- Producer/farm/lot extraction: yes, once the crawlers are updated (after cutover2).
+- Royal: the owner questioned whether its terms bind a public, no-login page. Not crawled until decided.
+- Catalog location (state column/filter, city, metro): feasibility study running.
