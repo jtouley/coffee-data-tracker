@@ -23,11 +23,19 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 from markupsafe import Markup
 
 from . import public
-from .discover import US_STATES
+from .discover import STATE_NAMES, US_STATES
 from .http import USER_AGENT
 
 # The 50 states; DC and Puerto Rico are named separately on the launch page.
 STATES = [s for s in US_STATES if s not in ("DC", "PR")]
+# The catalog's State filter and search: each code's name as shown ("District of Columbia"), and every name the search
+# reads as a state, longest first so "west virginia" is read before "virginia".
+STATE_TITLES = {
+    code: " ".join(w if w == "of" else w.capitalize() for w in name.split())
+    for name, code in STATE_NAMES.items()
+    if name != "washington dc"
+}
+STATE_WORDS = sorted(STATE_NAMES.items(), key=lambda kv: (-len(kv[0]), kv[0]))
 # Roaster statuses (dim_roaster.status) in reading order, with what each means to a visitor.
 STATUS_LABELS = {
     "active": "Shop read, coffee found",
@@ -206,7 +214,7 @@ def dataset_jsonld(release: dict, link: dict[str, str | None], contract: dict | 
             "@type": "DataDownload",
             "name": "catalog.json",
             "description": "The site's catalog: every listed retail coffee from the public roasters, as JSON "
-            "(a subset of public_coffee's columns).",
+            "(a subset of public_coffee's columns, plus roaster_city: the roaster's city from public_roaster).",
             "encodingFormat": "application/json",
             "contentUrl": f"{site}/catalog/catalog.json",
         }
@@ -331,9 +339,14 @@ def build(db: Path, out: Path) -> Path:
     catalog = _q(
         con,
         """
-        select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
-               tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
-        from site_coffee where is_listed and not is_wholesale order by roaster_name, title""",
+        select c.coffee_id, c.roaster_name, c.roaster_state, c.title, c.url, c.origin_country, c.process,
+               c.roast_level, c.tasting_notes, c.price_per_100g, c.min_price_usd, c.in_stock, c.catalog_status,
+               c.first_seen,
+               -- Added after main's columns, so readers that look columns up by position or name keep working:
+               -- the stable roaster key, and the roaster's city as public_roaster stores it.
+               c.roaster_id, r.city as roaster_city
+        from site_coffee c join public_roaster r using (roaster_id)
+        where c.is_listed and not c.is_wholesale order by c.roaster_name, c.title""",
     )
     # The states are the listed coffees' roasters' (the same roasters as totals.roasters); the origins are the
     # single-origin listings' countries.
@@ -436,6 +449,23 @@ def build(db: Path, out: Path) -> Path:
     (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
+    cols = list(catalog[0]) if catalog else []
+    data = json.dumps(
+        {
+            # Which release this is and under what licence; the page's script reads only columns and rows.
+            "release": {
+                "release_build_id": release["release_build_id"],
+                "release_run_date": release["release_run_date"],
+                "contract": f"{release['contract']['id']}@{release['contract']['version']}",
+                "license": release["license"]["id"],
+                "license_url": release["license"]["url"],
+            },
+            "columns": cols,
+            "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
+        },
+        separators=(",", ":"),
+    )
+    (cat / "catalog.json").write_text(data)
     html = env.get_template("index.html").render(
         links=link,
         jsonld=jsonld,
@@ -447,26 +477,14 @@ def build(db: Path, out: Path) -> Path:
         origin_price=origin_price,
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
+        # The page fetches catalog.json?b=<a hash of the file>: a new page never reads a cached older file, even
+        # after a code-only redeploy of the same release. (Pages ignores the query, so a cached older page gets the
+        # current file; that is safe because the file only ever gains columns.)
+        data_key=hashlib.sha256(data.encode()).hexdigest()[:12],
+        state_titles=STATE_TITLES,
+        state_words=STATE_WORDS,
     )
     (cat / "index.html").write_text(with_csp(html))
-    cols = list(catalog[0]) if catalog else []
-    (cat / "catalog.json").write_text(
-        json.dumps(
-            {
-                # Which release this is and under what licence; the page's script reads only columns and rows.
-                "release": {
-                    "release_build_id": release["release_build_id"],
-                    "release_run_date": release["release_run_date"],
-                    "contract": f"{release['contract']['id']}@{release['contract']['version']}",
-                    "license": release["license"]["id"],
-                    "license_url": release["license"]["url"],
-                },
-                "columns": cols,
-                "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
-            },
-            separators=(",", ":"),
-        )
-    )
     site = str(link["site"])
     (out / "robots.txt").write_text(robots_txt(site))
     day = f"{generated:%Y-%m-%d}"

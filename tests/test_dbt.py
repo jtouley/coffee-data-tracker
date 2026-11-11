@@ -1,5 +1,6 @@
 """Build the dbt project over a synthetic lake and check the derived history (the same SQL the weekly run uses)."""
 
+import hashlib
 import json
 import os
 import re
@@ -742,6 +743,45 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
     assert list(catalog) == ["release", "columns", "rows"]
     landing = (out / "index.html").read_text()
     assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
+
+
+def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path):
+    """catalog.json is a published download, so it only gains columns: main's columns stay first, in their order, and
+    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches catalog.json?b=<a hash of the
+    file>, so a new page never reads a cached older file."""
+    from coffeedata import site
+
+    for rid in ("onyxcoffeelab.com", "1802roasters.com"):
+        run(lake, "2026-10-19", rid, [product("A"), product("B")])
+    build(lake, tmp_path, build_id="20261020T060000-abcdef", as_of_run="2026-10-19", **ANY_RUN).close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    catalog = json.loads((out / "catalog" / "catalog.json").read_text())
+    assert list(catalog) == ["release", "columns", "rows"]
+    assert catalog["columns"] == [
+        "coffee_id", "roaster_name", "roaster_state", "title", "url", "origin_country", "process", "roast_level",
+        "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
+        "roaster_id", "roaster_city",
+    ]  # fmt: skip
+    cols = catalog["columns"]
+    got = {tuple(r[cols.index(c)] for c in ("coffee_id", "roaster_id", "roaster_name", "roaster_state", "roaster_city"))
+           for r in catalog["rows"]}  # fmt: skip
+    # The fixture registry has no city for 1802 Roasters: left empty, not guessed.
+    assert got == {
+        ("onyxcoffeelab.com:A", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("onyxcoffeelab.com:B", "onyxcoffeelab.com", "Onyx Coffee Lab", "AR", "Rogers"),
+        ("1802roasters.com:A", "1802roasters.com", "1802 Roasters", "CA", None),
+        ("1802roasters.com:B", "1802roasters.com", "1802 Roasters", "CA", None),
+    }
+    page = (out / "catalog" / "index.html").read_text()
+    # The page asks for its own file by a hash of it, so a new page never gets a cached older one.
+    key = hashlib.sha256((out / "catalog" / "catalog.json").read_bytes()).hexdigest()[:12]
+    assert f'fetch("catalog.json?b={key}")' in page
+    assert '<select id="state" aria-label="Roaster state (number of roasters)">' in page
+    assert '<p class="note" id="count" role="status">' in page
+    assert '"MI": "Michigan"' in page and '["west virginia", "WV"]' in page
+    # The Dataset JSON-LD describes the download as it is.
+    assert "plus roaster_city" in page
 
 
 def test_the_sites_single_origin_definition_selects_public_market_weeklys_coffees(lake, tmp_path):

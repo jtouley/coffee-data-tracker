@@ -309,7 +309,9 @@ public contract at each build: name and description, the data licence
 the 2026-10-26 run on), every contract column as a variable, the downloads (`catalog.json`, and the Hugging Face
 files when `PUBLIC_EXPORT_URL` is an `hf://` dataset), and the release (`dateModified` is its run date, `version` its build id). The site also has a `robots.txt` that allows
 everything and a `sitemap.xml` of its pages. `catalog/catalog.json` starts with a `release` object (build id, run
-date, contract id and version, licence) before its `columns` and `rows`.
+date, contract id and version, licence) before its `columns` and `rows`. Each row is one coffee; columns are only ever added
+at the end (`roaster_id` and `roaster_city`, the roaster's city as `public_roaster` stores it, came after `first_seen`),
+so look them up by name in `columns`.
 
 ## How it works
 
