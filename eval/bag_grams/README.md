@@ -411,5 +411,67 @@ include train-3 and validation-3 at these measured values; on the earlier sets t
 Drawn at `28314a0` with `bag_eval.py changed <data> test3 branch2 branch3`: every test-split coffee whose grams the
 frozen rules change against `main` (`branch2`), less the 6 that round 1 or `test2` labeled. 83 coffees from 8 stores
 (the largest has 23); on every item's option the two rules differ. Its items and both rules' predictions are in
-`SHA256SUMS`, committed before any label. Labels are pending (fresh labelers A, B and C, as above); it is scored once
-with `score ... test3 labels_ref_test3.json branch2 branch3 --final`.
+`SHA256SUMS`, committed before any label, and scored once with `score ... test3 labels_ref_test3.json branch2
+branch3 --final`.
+
+### Round 3 sealed result (test3, 2026-11-11)
+
+Labelled by fresh Claude subagents (claude-haiku-5-5): A and B independently, blind to each other and to the rules'
+predictions, agreeing on 83/83 (Wilson [95.6, 100.0]; round 2's test2: 488/496), so the tiebreak (C) had nothing to
+settle. Scored once with `--final` after `sha256sum -c SHA256SUMS` passed for all 9 files. 83 items, none unclear,
+from 8 stores (the largest 23).
+
+| Rule | Right | Confidently wrong | Missed | Accuracy | Confidently wrong share |
+|---|---|---|---|---|---|
+| main (`branch2`) | 13/83 [9.4, 25.0] | 67/83 [71.0, 87.8] | 3/83 [1.2, 10.1] | 15.7%, normal [7.8, 23.5], store-clustered [0.0, 55.3] | 80.7%, normal [72.2, 89.3], store-clustered [38.7, 98.3] |
+| **change (`branch3`)** | **56/83 [56.8, 76.6]** | **13/83 [9.4, 25.0]** | 14/83 [10.3, 26.3] | **67.5%, normal [57.3, 77.6], store-clustered [17.5, 95.9]** | **15.7%, normal [7.8, 23.5], store-clustered [0.0, 55.3]** |
+
+Right, wrong and missed carry Wilson 95% intervals; no item was `unknown`, so none can be rightly blank. Paired,
+change minus main: accuracy +51.8 points (normal [+35.6, +68.0], store-clustered [-33.3, +94.4]); confidently wrong
+-65.1 points (normal [-81.0, -49.1], store-clustered [-97.9, +15.3]).
+
+- **By store (totals only).** Main wrong, change right: 54 items in 5 stores. Main wrong, change blank: 14 in 2
+  stores. Main right, change wrong: **13, of which 12 in one store (ironmulecoffee.com)** and 1 in another. So the
+  change's 13 confidently wrong answers are new ones, and almost all of them are one store's listing shape.
+- **The shipping rule (protocol 7).** On the point estimates and the normal intervals the change ships easily: accuracy
+  far above main's, confidently wrong far below. The store-clustered intervals, which are the ones to read here, are
+  wide with 8 stores: the accuracy difference's interval includes 0, and the wrong difference's upper end (+15.3)
+  is above the "about +1 point" bar. The data can't rule out that, store by store, the change is no better. That is
+  the owner's call, with the ironmulecoffee.com regression in view: fixing it is a new change, measured on a new test
+  set, and its listings were not read here.
+- **Whole population** (the measure of rounds 1 and 2: each coffee's own drawn option). Every coffee whose drawn
+  option the change touches is in a census with a reference label (96 coffees: 30 train, 18 validation, 48 test,
+  including 4 from round 1's or `test2`'s labels). Net, the change makes 54 more coffees right and 55 fewer
+  confidently wrong of 30,022: **+0.18 points of accuracy and -0.18 points of confidently wrong** (exact on the
+  labels, no sampling), on top of round 2's 95.4% / 0.9% (`test2`).
+- `test3` has joined the regression fixtures as `test3`, with floor 0.674 and ceiling 0.1567 (56/83 and 13/83). The
+  running total since the last full evaluation is 0; the next change draws a new test set.
+
+## The full-population gate
+
+The bar of CLAUDE.md step 7 for this field, as the owner set it on 2026-11-11: the estimated share of all current
+coffees (the population above, N = 30,022) whose drawn option the rules get right or rightly leave blank must be at
+least 95%. `tests/test_bag_grams_accuracy.py::test_full_population_accuracy_meets_the_gate` holds it, and
+`bag_eval.py gate <data> <rule>...` prints it with intervals.
+
+```
+A = ( #right in D  +  (N - |D|) * a_U ) / N
+```
+
+- **D** (`gate_d.json`, ids only): the coffees whose drawn option a round's change gave other grams, each with a
+  reference label for that option (round 3's census; `bag_eval.py gate-d <data> <main> <change> gate_d.json` adds a
+  round's coffees and refuses one without such a label). Counted exactly, with no sampling error. Round 3: 96.
+- **a_U**: accuracy on every other coffee, from `validation` and `test2`, the two sets stratified over their whole
+  split that no rule was tuned on (train was), leaving out their items in D. Each is stratum-weighted by its stratum
+  sizes; the two are combined by those sizes (6,830 and 5,228 coffees). Splits are by store hash, so either
+  split's coffees stand for the whole population.
+- The interval comes from a_U alone: normal over the strata, and store-clustered (stores resampled within strata).
+
+| Rule | Full-population accuracy | Normal 95% | Store-clustered 95% | D right |
+|---|---|---|---|---|
+| main before #139 (`branch2`) | 95.37% | [93.55, 97.19] | [92.89, 97.20] | 10/96 |
+| **#139 (`branch3`)** | **95.55%** | [93.73, 97.37] | [93.07, 97.38] | 64/96 |
+
+The gate is on the estimate. Both lower bounds are below 95%: the data can't show that the population is above it,
+only that the best estimate is. A later rules change adds its own census to D (a new test set covers its changed
+coffees) and must keep A at or above 0.95; the slice sets' floors stay at their measured values.

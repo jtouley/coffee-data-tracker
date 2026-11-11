@@ -4,7 +4,7 @@ subagents against eval/bag_grams/GUIDE.md, with disagreements settled by a third
 tests/fixtures/bag_grams_labels.jsonl holds the labeled items of eval/bag_grams: "train" (the rules were tuned on
 it), "validation" (versions were chosen on its totals), "test-2026-11-10" (the first sealed test set) and "test-2026-11-11"
 (the second, test2), each scored once and then added here as a regression fixture; and round 3's "train-3" and
-"validation-3" (every coffee the bag-count change touches in those splits). Each item is one option of a current retail listing, drawn by stratum;
+"validation-3" (every coffee the bag-count change touches in those splits) and its sealed "test3", scored once. Each item is one option of a current retail listing, drawn by stratum;
 the scores weight each stratum by its size in the set (eval/bag_grams/items_<set>.json). A rules change must not
 lower any accuracy or raise any confidently wrong share.
 """
@@ -26,6 +26,7 @@ ITEMS = {
     "test-2026-11-11": "test2",
     "train-3": "train-3",
     "validation-3": "validation-3",
+    "test3": "test3",
 }
 # Measured on 2026-11-11 with the rules frozen for round 3 (bag counts); raise these when the rules improve, never
 # lower them to pass. Accuracy: the share right (grams within 2% of the label) or rightly blank (label "unknown").
@@ -39,6 +40,7 @@ FLOOR = {
     "test-2026-11-11": 0.953,
     "train-3": 0.717,
     "validation-3": 0.916,
+    "test3": 0.674,
 }
 CEILING = {
     "train": 0.001,
@@ -47,6 +49,7 @@ CEILING = {
     "test-2026-11-11": 0.0075,
     "train-3": 0.0257,
     "validation-3": 0.0834,
+    "test3": 0.1567,
 }
 
 
@@ -59,21 +62,8 @@ def _scores(name: str) -> tuple[float, float, list[str]]:
     for r in map(json.loads, LABELS.read_text().splitlines()):
         if r["set"] != name or r["label"] == "unclear":
             continue
-        opts = [(o[1], o[2], o[3]) for o in r["options"]]
-        grams = dict(
-            zip(
-                [o[0] for o in r["options"]],
-                product_grams(r["title"], r["body"], opts, r["tags"], r["handle"]),
-                strict=True,
-            )
-        )
-        g, label = grams[r["item"]], r["label"]
-        if g is None:
-            outcome = "ok" if label == "unknown" else "missed"
-        elif label == "unknown" or abs(g - int(label)) > 0.02 * int(label):
-            outcome = "wrong"
-        else:
-            outcome = "ok"
+        g, label = _grams(r), r["label"]
+        outcome = _outcome(g, label)
         per[r["stratum"]].append(outcome)
         if outcome != "ok":
             shown.append(f"  {outcome:6} {label!s:>7} got {g!s:>6}  {r['title'][:70]}")
@@ -81,6 +71,58 @@ def _scores(name: str) -> tuple[float, float, list[str]]:
     acc = sum(sizes[k] / total * xs.count("ok") / len(xs) for k, xs in per.items())
     wrong = sum(sizes[k] / total * xs.count("wrong") / len(xs) for k, xs in per.items())
     return acc, wrong, shown
+
+
+def _grams(r: dict) -> int | None:
+    """The current rules' grams for the row's labeled option."""
+    opts = [(o[1], o[2], o[3]) for o in r["options"]]
+    grams = product_grams(r["title"], r["body"], opts, r["tags"], r["handle"])
+    return dict(zip([o[0] for o in r["options"]], grams, strict=True))[r["item"]]
+
+
+def _outcome(g: int | None, label: int | str) -> str:
+    if g is None:
+        return "ok" if label == "unknown" else "missed"
+    if label == "unknown" or abs(g - int(label)) > 0.02 * int(label):
+        return "wrong"
+    return "ok"
+
+
+# The full-population gate (CLAUDE.md step 7): the estimated share of all current coffees (eval/bag_grams'
+# population, 30,022) whose drawn option the rules get right or rightly leave blank must be at least 95%. The coffees
+# a round's change touches (eval/bag_grams/gate_d.json) are counted exactly from their census labels; every other
+# coffee is estimated from validation and test2, the sets stratified over their whole split that the rules weren't
+# tuned on (each stratum-weighted, the two combined by their stratum sizes).
+GATE = 0.95
+POPULATION = 30_022
+GATE_SETS = ("validation", "test-2026-11-11")
+
+
+def _population_estimate() -> float:
+    d = set(json.loads((ROOT / "eval" / "bag_grams" / "gate_d.json").read_text()))
+    rows = [json.loads(x) for x in LABELS.read_text().splitlines()]
+    d_ok = {
+        r["coffee_id"]: _outcome(_grams(r), r["label"]) == "ok"
+        for r in rows
+        if r["coffee_id"] in d and r["drawn"]
+    }
+    assert set(d_ok) == d, "every changed coffee needs a label for its drawn option"
+    per: dict[str, list[str]] = defaultdict(list)
+    sizes: dict[str, int] = {}
+    for name in GATE_SETS:
+        meta = json.loads((ROOT / "eval" / "bag_grams" / f"items_{ITEMS[name]}.json").read_text())
+        sizes |= {f"{name}:{k}": v for k, v in meta["stratum_sizes"].items()}
+    for r in rows:
+        if r["set"] in GATE_SETS and r["coffee_id"] not in d and r["label"] != "unclear":
+            per[f"{r['set']}:{r['stratum']}"].append(_outcome(_grams(r), r["label"]))
+    total = sum(sizes[k] for k in per)
+    rest = sum(sizes[k] / total * xs.count("ok") / len(xs) for k, xs in per.items())
+    return (sum(d_ok.values()) + (POPULATION - len(d)) * rest) / POPULATION
+
+
+def test_full_population_accuracy_meets_the_gate():
+    est = _population_estimate()
+    assert est >= GATE, f"full-population accuracy {est:.4f} < {GATE} (eval/bag_grams/README.md)"
 
 
 @pytest.mark.parametrize("name", sorted(FLOOR))

@@ -368,6 +368,86 @@ def cmd_changed(data: Path, split: str, main: str, candidates: list[str]) -> Non
     )
 
 
+# The full-population gate (CLAUDE.md step 7): the share of all current coffees whose drawn option the rules get
+# right (right, or rightly blank), at least GATE. See README "The full-population gate".
+GATE = 0.95
+GATE_SETS = ("validation", "test2")  # stratified over their whole split, and not tuned on (train is)
+LABELED = ("train", "validation", "test", "test2", "train-3", "validation-3", "test3")
+
+
+def cmd_gate_d(data: Path, main: str, change: str, out: Path) -> None:
+    """The coffees whose drawn option a change gives other grams (D), written to `out` (ids only). Every one must
+    have a reference label for that option in some set (a census covers them), else the gate can't count them."""
+    pm, pc = pred(data, main), pred(data, change)
+    pop = load(data)
+    d = sorted(
+        r["coffee_id"]
+        for r in pop
+        if pm[r["coffee_id"]].get(r["item_variant_id"]) != pc[r["coffee_id"]].get(r["item_variant_id"])
+    )
+    labeled = _drawn_labels(data)
+    missing = [c for c in d if c not in labeled]
+    if missing:
+        sys.exit(f"{len(missing)} changed coffees have no label for their drawn option, e.g. {missing[:3]}")
+    old = json.loads(out.read_text()) if out.exists() else []
+    out.write_text(json.dumps(sorted(set(old) | set(d)), indent=1) + "\n")
+    print(out.name, len(d), "changed coffees this round,", len(set(old) | set(d)), "in all")
+
+
+def _drawn_labels(data: Path) -> dict[str, int | str]:
+    """Every reference label made for a coffee's drawn option, in any set."""
+    here = Path(__file__).parent
+    pop = {r["coffee_id"]: r for r in load(data)}
+    out: dict[str, int | str] = {}
+    for split in LABELED:
+        ref = json.loads((here / "labels" / f"labels_ref_{split}.json").read_text())
+        for it in json.loads((here / f"items_{split}.json").read_text())["items"]:
+            r = pop[it["coffee_id"]]
+            if item_vid(it, r) == r["item_variant_id"] and it["coffee_id"] in ref:
+                out[it["coffee_id"]] = ref[it["coffee_id"]]
+    return out
+
+
+def cmd_gate(data: Path, names: list[str]) -> None:
+    """The full-population estimate for each rule: D (gate_d.json) counted exactly from its labels, the rest
+    estimated from GATE_SETS' items outside D (stratum-weighted, sets combined by their stratum sizes), weighted by
+    D's and the rest's share of the population. Normal and store-clustered 95% intervals (D adds none)."""
+    here = Path(__file__).parent
+    pop = {r["coffee_id"]: r for r in load(data)}
+    d = set(json.loads((here / "gate_d.json").read_text()))
+    labels = _drawn_labels(data)
+    n_pop = len(pop)
+    for name in names:
+        pr = pred(data, name)
+        ok_d = sum(
+            outcome(pr[c].get(pop[c]["item_variant_id"]), labels[c]) in ("right", "abstain_ok") for c in d
+        )
+        sizes: dict[str, int] = {}
+        per: dict[str, list[tuple[str, float]]] = defaultdict(list)
+        for split in GATE_SETS:
+            meta = json.loads((here / f"items_{split}.json").read_text())
+            ref = json.loads((here / "labels" / f"labels_ref_{split}.json").read_text())
+            for k, v in meta["stratum_sizes"].items():
+                sizes[f"{split}:{k}"] = v
+            for it in meta["items"]:
+                c, lab = it["coffee_id"], ref.get(it["coffee_id"])
+                if c in d or lab in (None, "unclear"):
+                    continue
+                g = pr[c].get(pop[c]["item_variant_id"])
+                per[f"{split}:{it['stratum']}"].append(
+                    (it.get("store") or pop[c]["group"], float(outcome(g, lab) in ("right", "abstain_ok")))
+                )
+        est, lo, hi = weighted({k: [x for _, x in v] for k, v in per.items()}, sizes)
+        clo, chi = clustered(per, sizes)
+        rest = (n_pop - len(d)) / n_pop
+        f = lambda u: ok_d / n_pop + rest * u  # noqa: E731
+        print(
+            f"{name}: full population {100 * f(est):.2f}%  normal [{100 * f(lo):.2f}, {100 * f(hi):.2f}]"
+            f"  store-clustered [{100 * f(clo):.2f}, {100 * f(chi):.2f}]  (D: {ok_d}/{len(d)} right; rest"
+            f" {100 * est:.2f}% from {sum(len(v) for v in per.values())} items)"
+        )
+
+
 FIXTURE_SETS = {
     "train": "train",
     "validation": "validation",
@@ -407,6 +487,7 @@ def cmd_fixture(data: Path, out: Path, sets: list[str]) -> None:
                     "stratum": it["stratum"],
                     "label": labels[it["coffee_id"]],
                     "item": item_vid(it, r),
+                    "drawn": item_vid(it, r) == r["item_variant_id"],
                     "title": r["title"],
                     "body": body,
                     "tags": r["tags"],
@@ -687,6 +768,10 @@ def main() -> None:
         cmd_sample(data, a[2], a[3], a[4])
     elif cmd == "changed":
         cmd_changed(data, a[2], a[3], a[4:])
+    elif cmd == "gate-d":
+        cmd_gate_d(data, a[2], a[3], Path(a[4]))
+    elif cmd == "gate":
+        cmd_gate(data, a[2:])
     elif cmd == "fixture":
         cmd_fixture(data, Path(a[2]), a[3:])
     elif cmd == "seal":
