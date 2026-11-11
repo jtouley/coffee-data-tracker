@@ -2,9 +2,9 @@
 to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
 private and never appear here; they are only in the app.
 
-Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) and their
-coffees appear, as in the public tables, except in the roaster status counts and the registry total, which count every
-roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
+Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) that aren't
+chains (INCLUDE_CHAINS) and their coffees appear, except in the roaster status counts and the registry total, which
+count every roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
 from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
 
 from __future__ import annotations
@@ -39,14 +39,31 @@ STATUS_LABELS = {
     "opted_out": "Opted out",
 }
 
-# The two catalog counts the site states, each with one definition, both computed from this build's data (never
-# written into a template or a page by hand; tests/test_stated_counts.py fails if one comes back):
+# Which roasters the site shows: the public roasters (public_roaster: not opted out, not known only from
+# OpenStreetMap), less chain roasters (dim_roaster.is_chain). Chains are still crawled but left out of what's
+# published. INCLUDE_CHAINS is the one switch: every count, chart, list and the catalog read site_roaster or
+# site_coffee. (public_market_weekly still counts chains; its strict xfail test_public_market_weekly_leaves_out_chains
+# and docs/RULES.md rule 77 are a separate change.) Temporary views: the database itself stays read-only.
+INCLUDE_CHAINS = False
+SITE_VIEWS = (
+    "create temp view site_roaster as select roaster_id from public_roaster"
+    + (
+        ""
+        if INCLUDE_CHAINS
+        else " where roaster_id not in (select roaster_id from dim_roaster where is_chain)"
+    ),
+    "create temp view site_coffee as select * from dim_coffee where roaster_id in (select roaster_id from site_roaster)",
+)
+# Every count and chart on the site uses one of two definitions over site_coffee, computed from this build's data
+# (never written into a template or a page by hand; tests/test_stated_counts.py fails if one comes back):
 # - LISTED, the current retail catalog: listed, not the roaster's archived back catalog, not wholesale. The headline
-#   coffees, in stock and roasters, the states, and mart_build_profile's listed_coffees and roasters_with_coffee.
-# - SINGLE_ORIGIN, the single-origin listings: LISTED, not a blend, origin known. It is public_market_weekly itself
-#   (its rows sum to them), so the origin chart and the origin count on the page match the published table.
+#   coffees, in stock and roasters, and the states. The same filter as int_current_catalog less wholesale, which
+#   mart_build_profile's listed_coffees and roasters_with_coffee count.
+# - SINGLE_ORIGIN: LISTED, not a blend, origin known. The origin count and all three charts (in stock by origin, by
+#   process, and the median price by origin). Over the same roasters it selects public_market_weekly's coffees
+#   (tests/test_dbt.py checks the two cell for cell).
 LISTED = "is_listed and catalog_status <> 'archived' and not is_wholesale"
-SINGLE_ORIGIN = "public_market_weekly"
+SINGLE_ORIGIN = f"{LISTED} and not is_blend and origin_country is not null"
 
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
@@ -283,25 +300,20 @@ def build(db: Path, out: Path) -> Path:
     import duckdb
 
     con = duckdb.connect(str(db), read_only=True)
-    # The site shows the public roasters only, the same ones as the public tables (public_roaster's filter: not
-    # opted out, not known only from OpenStreetMap). A temporary view: the database itself stays read-only.
-    con.execute(
-        "create temp view site_coffee as select * from dim_coffee "
-        "where roaster_id in (select roaster_id from public_roaster)"
-    )
+    for view in SITE_VIEWS:
+        con.execute(view)
     origin_price = _q(
         con,
-        """
+        f"""
         select origin_country, count(*) as n, median(price_per_100g) as med
-        from site_coffee where in_stock and not is_wholesale and not is_blend and not is_chain and price_per_100g is not null
-          and origin_country is not null
+        from site_coffee where {SINGLE_ORIGIN} and in_stock and price_per_100g is not null
         group by 1 having count(*) >= 5 order by n desc limit 12""",
     )
     processes = _q(
         con,
-        """
+        f"""
         select coalesce(process, 'not stated') as process, count(*) as n
-        from site_coffee where in_stock and not is_wholesale and not is_blend group by 1 order by n desc""",
+        from site_coffee where {SINGLE_ORIGIN} and in_stock group by 1 order by n desc""",
     )
     statuses = _q(con, "select status, count(*) as n from dim_roaster group by 1 order by n desc")
     # On the first run everything is "new"; only count coffees that appeared after the catalog's first day.
@@ -321,10 +333,10 @@ def build(db: Path, out: Path) -> Path:
         """
         select coffee_id, roaster_name, roaster_state, title, url, origin_country, process, roast_level,
                tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
-        from site_coffee where is_listed and not is_wholesale and not is_chain order by roaster_name, title""",
+        from site_coffee where is_listed and not is_wholesale order by roaster_name, title""",
     )
     # The states are the listed coffees' roasters' (the same roasters as totals.roasters); the origins are the
-    # single-origin listings' countries, read from the published table so the page and the table can't disagree.
+    # single-origin listings' countries.
     reach = (
         _q(
             con,
@@ -333,13 +345,15 @@ def build(db: Path, out: Path) -> Path:
                bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
         from site_coffee where {listed}""".format(states=", ".join(f"'{s}'" for s in STATES), listed=LISTED),
         )[0]
-        | _q(con, f"select count(distinct origin_country) as origins from {SINGLE_ORIGIN}")[0]
+        | _q(con, f"select count(distinct origin_country) as origins from site_coffee where {SINGLE_ORIGIN}")[
+            0
+        ]
     )
     origin_counts = _q(
         con,
         f"""
-        select origin_country, sum(in_stock)::bigint as n from {SINGLE_ORIGIN}
-        group by 1 having sum(in_stock) > 0 order by n desc, 1 limit 8""",
+        select origin_country, count(*) as n from site_coffee where {SINGLE_ORIGIN} and in_stock
+        group by 1 order by n desc, 1 limit 8""",
     )
     week = _q(
         con,
@@ -348,7 +362,7 @@ def build(db: Path, out: Path) -> Path:
                count(*) filter (where event = 'removed') as removed
         -- A left join: a product no longer classed as coffee has left dim_coffee, but its events still count.
         from fct_price_event e left join dim_coffee c using (coffee_id)
-        where not coalesce(c.is_wholesale, false) and e.roaster_id in (select roaster_id from public_roaster)
+        where not coalesce(c.is_wholesale, false) and e.roaster_id in (select roaster_id from site_roaster)
           and run_date > (select max(run_date) from fct_price_event) - interval 7 day""",
     )[0]
     for r in new + catalog:
@@ -373,13 +387,13 @@ def build(db: Path, out: Path) -> Path:
             "Median price per 100 g by origin",
         ),
         "process": hbar_chart(
-            [(r["process"], r["n"], f"{r['process']}: {r['n']} coffees") for r in processes],
+            [(r["process"], r["n"], f"{r['process']}: {r['n']:,} coffees in stock") for r in processes],
             "{:,.0f}",
-            "Coffees in stock by process",
+            "Single-origin coffees in stock by process",
         ),
         "origins": hbar_chart(
             [
-                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']} coffees in stock")
+                (r["origin_country"], r["n"], f"{r['origin_country']}: {r['n']:,} coffees in stock")
                 for r in origin_counts
             ],
             "{:,.0f}",
