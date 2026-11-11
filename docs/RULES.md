@@ -16,7 +16,8 @@ First drawn from an audit of `main` at `0cfa4d9` (96 rules); every gap that audi
   - Y: the test job (`make test`).
   - Y(dbt): the test job, building with dbt. The job sets `REQUIRE_DBT=1`, and the dbt-backed tests honour it
     (`tests/lakehelp.py::needs_dbt`), so a missing dbt fails them rather than skipping them.
-  - Y(evals): the eval-floors job, which rebuilds the floor's private inputs from the lake (below).
+  - Y(evals): the eval-floors workflow (`.github/workflows/eval-floors.yml`; every push to main, weekly, by hand),
+    which rebuilds the floor's private inputs from the lake (below). Never on pull requests.
 
 ## Floors
 
@@ -28,21 +29,27 @@ rate of confidently wrong answers, only ever lowered). All were measured on 2026
 | `tests/test_classifier_accuracy.py` | classify.is_coffee | `tests/fixtures/classifier_labels.jsonl` | in git | accuracy train 0.985, validation 0.935 | test |
 | `tests/test_sealed_accuracy.py` | products.decide over Claude's frozen verdicts; classify.is_coffee | `eval/sealed` (scored once 2026-10-28, now a regression fixture) | in git | stratum-weighted accuracy: decide 0.982, rules 0.940 | test |
 | `tests/test_roaster_dedup_accuracy.py` | roaster_canonical (one store, one roaster) | `eval/roaster_dedup/labels` | in git (`config/roasters.csv`) | train 29 and validation 6 same-store pairs called, recall 1.0; 0 different-store pairs called | test |
-| `tests/test_wholesale_accuracy.py` | classify.is_wholesale | `eval/wholesale/labels_ref.json` | private: `WHOLESALE_EVAL_DIR` | weighted precision / recall: train 0.97 / 0.85, validation 0.99 / 0.97 | eval-floors |
-| `tests/test_origin_accuracy.py` | extract origin_country | `eval/origin/labels_{train,validation}.json` | private: `ORIGIN_EVAL_DIR` | weighted agreement train 0.959, validation 0.836; wrong-country at most 0.040, 0.160 | eval-floors |
-| `tests/test_match_accuracy.py` | shots.match_coffee | mechanical (`eval/match/README.md`) | private: `MATCH_EVAL_DIR` | right of 2,000 queries: train 1,621, validation 1,632; confidently wrong at most 2, 3 | eval-floors |
-| `tests/test_dq_accuracy.py` | near_duplicate_roasters (#12), price_per_100g_outliers (#7) | `eval/dq/labels` | private: `DQ_EVAL_DIR` | #12: precision and recall 1.0, no distinct pair flagged (both sets); #7 weighted precision 0.857 / 0.957, recall 0.325 / 0.594, false-flag share at most 0.042 / 0.031 (train / validation) | eval-floors |
+| `tests/test_wholesale_accuracy.py` | classify.is_wholesale | `eval/wholesale/labels_ref.json` | private: `WHOLESALE_EVAL_DIR` | weighted precision / recall: train 0.97 / 0.85, validation 0.99 / 0.97 | eval-floors workflow |
+| `tests/test_origin_accuracy.py` | extract origin_country | `eval/origin/labels_{train,validation}.json` | private: `ORIGIN_EVAL_DIR` | train: weighted agreement 0.959, wrong-country at most 0.040; validation: 97 of its 111 labelled listings agree, at most 11 wrong-country (counts: its sample can't be redrawn, see eval/origin/floor_strata.json) | eval-floors workflow |
+| `tests/test_match_accuracy.py` | shots.match_coffee | mechanical (`eval/match/README.md`) | private: `MATCH_EVAL_DIR` | right of 2,000 queries: train 1,621, validation 1,632; confidently wrong at most 2, 3 | eval-floors workflow |
+| `tests/test_dq_accuracy.py` | near_duplicate_roasters (#12), price_per_100g_outliers (#7) | `eval/dq/labels` | private: `DQ_EVAL_DIR` | #12: precision and recall 1.0, no distinct pair flagged (both sets); #7 weighted precision 0.857 / 0.957, recall 0.325 / 0.594, false-flag share at most 0.042 / 0.031 (train / validation) | eval-floors workflow |
 
 The test sets stay sealed: the floors score train and validation only (except `eval/sealed`, already scored once).
 
 **Private inputs.** The labels are in git; the listings and catalogs they score are private lake data.
 `eval/floor_inputs.py` rebuilds them from the lake (`jtouley/coffee-data`), read-only, at the two revisions the evals
 were measured on (`df57f62`, the 2026-10-28 run; `b3bf5e8`, release `20261103T203218-956abd`), and checks each file
-against its recorded sha256. CI's eval-floors job runs it with the repository's existing `HF_TOKEN` secret (the one
-the site and weekly workflows use), given to that step only, then runs `pytest -m private_eval` with
-`REQUIRE_EVALS=1`: with the secret, a failed download, a changed checksum or a missing input fails the job. A pull
-request from a fork gets no secrets; the job then says so in a notice and runs nothing. Locally, a floor whose
-folder isn't set is skipped with the reason.
+against its recorded sha256. The eval-floors workflow (`.github/workflows/eval-floors.yml`) runs it on every push to
+main, weekly and by hand, then runs `pytest -m private_eval` with `REQUIRE_EVALS=1`.
+- It never runs on pull requests, so no PR branch's code runs with a Hub token; PRs run every floor whose inputs are
+  in git (the table's "test" rows) in ci's test job.
+- It is not part of ci, which deploy.yml waits on, so a Hub outage can't hold back a deploy.
+- No token, a failed download, a changed checksum or a missing input fails the run. Downloads retry network errors
+  and 408/429/5xx (backoff with jitter), nothing else. The built inputs are cached by what pins them.
+- Token: the `HF_READ_TOKEN` secret if the repository has one (a read-only token scoped to the lake dataset), else
+  the `HF_TOKEN` the site and weekly workflows use; only the download step gets it.
+
+Locally, a floor whose folder isn't set is skipped with the reason.
 
 **Not floored, and why:**
 - eval/dq #11 (per-adapter volume bands): it scores per-adapter metrics of five replayed builds that never existed
@@ -52,15 +59,22 @@ folder isn't set is skipped with the reason.
   floor could measure. `tests/test_dq_rules.py` makes both checks fire.
 - eval/run_quality and eval/crawl: no labels in the repo (running totals only).
 
-## Possible bugs, pinned as xfail
+## Suspected bugs, pinned as strict xfail
 
-Each is a strict xfail: the test states the expected output, and fails the build once the behaviour changes, so the
-fix removes the mark.
+Each test states the output the rule should give, and is a strict xfail with `raises=AssertionError`: it fails the
+build once the behaviour changes (the fix then removes the mark), and an unrelated error is never taken for the
+expected failure. The dbt ones are unit tests tagged `suspected_bug`, which `test_dbt_unit_tests` leaves out and
+`tests/test_dbt.py::test_suspected_bug_unit_tests` runs.
 
 - `tests/test_extract.py::test_a_sun_dried_process_tag_is_natural`: `tag_values` turns `-` into a space, so a
   `process:sun-dried` tag reads `sun dried`, which `_PROCESS`'s `sun-?dried` doesn't match; process is None.
 - `tests/test_extract.py::test_a_dot_thousands_separator_is_an_elevation`: "1.800 masl" (a dot as the thousands
   separator) is read as 1.8 m and dropped, not 1,800.
+- `tests/test_dbt.py::test_public_market_weekly_leaves_out_chains`: public_market_weekly reads public_coffee, which
+  has no is_chain, so it counts a chain's coffees that mart_market and the site leave out.
+- dbt unit `flavor_lookup_ignores_case`: the flavor lexicon lookup is exact, so a capitalised note gets no category.
+- dbt unit `a_bag_with_no_shots_has_none_in_window`: mart_bag gives a bag with no shots `shots_in_window` null, while
+  its shot_count is 0.
 
 ## Inventory
 
@@ -87,7 +101,7 @@ fix removes the mark.
 | 17 | dim_coffee in_stock (is_current and any available) | dbt/models/marts/dim_coffee.sql:80 | Public in_stock (38,536) | test_dbt.py history and catalog status tests | – | Y(dbt) |
 | 18 | dim_coffee safe url (`https?://` only) | dbt/models/marts/dim_coffee.sql:70 | Coffee published only with a safe link | test_dbt.py::test_safe_url (site), test_public_tables_are_facts_only… | – | Y(dbt) |
 | 19 | Claude extraction overrides rules attributes | dbt/models/marts/dim_coffee.sql:24 | attributes_source | test_dbt.py::test_claudes_extraction_still_overrides_the_rules | – | Y(dbt) |
-| 20 | flavor_categories via flavor_lexicon seed | dbt/models/marts/dim_coffee.sql:63 | Public flavor_categories (8,846 coffees) | dbt unit `flavor_categories_come_from_the_lexicon` | – | Y(dbt) |
+| 20 | flavor_categories via flavor_lexicon seed | dbt/models/marts/dim_coffee.sql:63 | Public flavor_categories (8,846 coffees) | dbt unit `flavor_categories_come_from_the_lexicon`; xfail `flavor_lookup_ignores_case` | – | Y(dbt) |
 | **Currency and country** | | | | | | |
 | 21 | `is_usd` macro (USD stated, or none and roaster in US) | dbt/macros/currency.sql:3 | Which prices publish as USD | test_currency.py (US-defaulted, CAD, cross-currency) | – | Y(dbt) |
 | 22 | stg_snapshots: `price_usd` null unless is_usd; variant_id de-dup `#i` | dbt/models/staging/stg_snapshots.sql:16 | Prices and variant keys | test_currency.py; test_dbt.py::test_repeated_variant_ids_in_raw_snapshots | – | Y(dbt) |
@@ -95,7 +109,7 @@ fix removes the mark.
 | 24 | Adapter currency readers (Shopify cookie/page, Woo `_currency`, Squarespace, Square store, JSON-LD offer) | src/coffeedata/adapters/*.py | Stored currency | test_currency.py (14 tests) | – | Y |
 | 25 | `public_prices_are_usd` quality rule | dbt/tests/public_prices_are_usd.sql | Build error on a non-USD public price | test_currency.py | – | Y(dbt) |
 | **Origin and process extraction (rules attributes: 42,625 coffees)** | | | | | | |
-| 26 | `extract.origin_country` plus `_strip_false_places`, Java, `_NO_ORIGIN`, multi-country title, regions, `_title_is_variety` | src/coffeedata/extract.py:287 | origin_country (21,510 rules coffees) | test_extract.py (70 probe cases + 6 tests) | F origin (weighted agreement train 0.959 / validation 0.836; wrong-country ceiling 0.040 / 0.160) | Cases Y; floor Y(evals) |
+| 26 | `extract.origin_country` plus `_strip_false_places`, Java, `_NO_ORIGIN`, multi-country title, regions, `_title_is_variety` | src/coffeedata/extract.py:287 | origin_country (21,510 rules coffees) | test_extract.py (70 probe cases + 6 tests) | F origin (train weighted agreement 0.959, wrong-country at most 0.040; validation 97 of 111 agree, at most 11 wrong-country) | Cases Y; floor Y(evals) |
 | 27 | `origins.canonical_country` aliases (Sumatra→Indonesia, Kona→US, Congo→DRC) | src/coffeedata/origins.py:82 | Country names | test_extract.py::test_canonical_country_aliases (every alias) | – | Y |
 | 28 | `_process` (anaerobic > honey > natural > washed), from tag, title, then "Process:" | src/coffeedata/extract.py:311 | process (7,839 rules coffees) | test_extract.py::test_process (natural, dry, semi-washed, wet-hulled, precedence within a text and across tag/title/body); xfail test_a_sun_dried_process_tag_is_natural | – | Y |
 | 29 | `_ROAST` (light/dark/medium patterns, roast tags) | src/coffeedata/extract.py:23 | roast_level (16,654 rules coffees) | test_extract.py::test_roast_level (light, nordic, dark, French, Italian, city, body patterns, tags, light-before-dark order) | – | Y |
@@ -148,13 +162,13 @@ fix removes the mark.
 | 72 | `price_event` CASE (new, relisted, price (USD to USD), availability) and `removed` at next complete run | dbt/macros/price_event.sql:11; dbt/models/marts/fct_price_event.sql:42 | Public price events | dbt units `price_event_types`, `price_events_skip_partial_runs`; test_dbt::test_relisting; test_currency.py | – | Y(dbt) |
 | 73 | public_roaster filter (not opted out, has coffee, publishable, US) | dbt/models/public/public_roaster.sql:17 | Public roasters | test_dbt.py::test_public_tables_are_facts_only_and_filtered; test_currency.py | – | Y(dbt) |
 | 74 | public_coffee (`url is not null`) / public_price_event (public coffees only) | dbt/models/public/public_coffee.sql:16 | Public rows | test_dbt.py; test_dq_rules reconcile | – | Y(dbt) |
-| 75 | public_market_weekly filter (listed, not archived, not wholesale, not blend, origin known) | dbt/models/public/public_market_weekly.sql:2 | Public market table (183 to 194 cells) | dbt unit `market_weekly_cells_leave_out_archived_blends_and_unknown_origins` (archived, blend, wholesale, no origin, `unknown` process; chains counted) | – | Y(dbt) |
+| 75 | public_market_weekly filter (listed, not archived, not wholesale, not blend, origin known) | dbt/models/public/public_market_weekly.sql:2 | Public market table (183 to 194 cells) | dbt unit `market_weekly_cells_leave_out_archived_blends_and_unknown_origins` (archived, blend, wholesale, no origin, `unknown` process); xfail test_dbt.py::test_public_market_weekly_leaves_out_chains | – | Y(dbt) |
 | 76 | mart_market filter (also not chain, US) and top-5 notes per origin | dbt/models/marts/mart_market.sql:6, :12 | Served mart and site | dbt unit `mart_market_is_us_retail_single_origins_without_chains` (chain, non-US, wholesale, blend, no origin, top-5 notes) | – | Y(dbt) |
-| 77 | `is_chain` exclusions (mart_market, site catalog, origin price, reach) | dbt/models/marts/mart_market.sql:3; src/coffeedata/site.py:287 | Site and market counts (2 chains, 149 coffees) | test_dbt.py::test_a_chains_coffees_leave_the_market_and_the_site_catalog_but_not_the_weekly_table; dbt unit `mart_market_is_us_retail_single_origins_without_chains` | – | Y(dbt) |
+| 77 | `is_chain` exclusions (mart_market, site catalog, origin price, reach) | dbt/models/marts/mart_market.sql:3; src/coffeedata/site.py:287 | Site and market counts (2 chains, 149 coffees) | test_dbt.py::test_a_chains_coffees_leave_the_market_and_the_site_catalog; dbt unit `mart_market_is_us_retail_single_origins_without_chains` | – | Y(dbt) |
 | 78 | mart_new_arrivals (first_seen = latest run, prev run exists, published since prev run, in stock, retail) | dbt/models/marts/mart_new_arrivals.sql:8 | New-arrivals list | test_dbt.py::test_new_arrivals_are_newly_published_not_newly_fetched | – | Y(dbt) |
 | 79 | Site aggregates (public roasters only, retail, ≥ 5 per origin) | src/coffeedata/site.py:281 | Site numbers | test_dbt.py::test_site_shows_only_the_public_roasters, wholesale twins | – | Y(dbt) |
 | 80 | MCP / app catalog search `retail_only`, filters | src/coffeedata/shots.py:66; src/coffeedata/mcp_server.py:64 | Search results | test_mcp.py; test_bags.py | – | Y |
-| 81 | fct_shot extraction_time_bucket (< 25 fast, ≤ 32 target, else slow), brew_ratio, grind_position | dbt/models/marts/fct_shot.sql:19 | Personal shot marts (not public) | dbt unit `extraction_time_bucket_boundaries` (25 and 32 s bounds, brew_ratio), `shots_in_window_counts_target_shots_per_bag` (mart_bag) | – | Y(dbt) |
+| 81 | fct_shot extraction_time_bucket (< 25 fast, ≤ 32 target, else slow), brew_ratio, grind_position | dbt/models/marts/fct_shot.sql:19 | Personal shot marts (not public) | dbt unit `extraction_time_bucket_boundaries` (25 and 32 s bounds, brew_ratio), `shots_in_window_counts_target_shots_per_bag` (mart_bag); xfail `a_bag_with_no_shots_has_none_in_window` | – | Y(dbt) |
 | 82 | mart_dial_in best recipe; mart_bag best shot | dbt/models/marts/mart_dial_in.sql:16 | Personal | dbt unit `dial_in_best_recipe_is_one_shot…`; test_dbt shots | – | Y(dbt) |
 | 83 | stg_shots latest, not deleted; stg_run_overrides tiebreak | dbt/models/staging/stg_shots.sql:7; stg_run_overrides.sql:6 | Dedupe | test_coffee/test_shots retractions; test_quality::test_overrides_given_in_the_same_second… | – | Y(dbt) |
 | 84 | `shots.match_coffee` / `_confident` (80 and 5 clear; candidates 50) | src/coffeedata/shots.py:194 | Bag and shot links | test_bags.py (≈ 12 match tests); test_shots.py | F match (right 1,621 / 1,632 of 2,000; confidently wrong at most 2 / 3) | Cases Y; floor Y(evals) |

@@ -1,18 +1,15 @@
 """Build small synthetic lakes for tests: a few roasters, a few weekly runs, chosen failures."""
 
-import os
-import shutil
 from datetime import UTC, date, datetime
 
 import pytest
 
 from coffeedata.lake import Lake
 
-# Tests that build with dbt skip where it isn't installed, except under REQUIRE_DBT (CI's test and smoke jobs): there
-# a missing dbt fails them instead, so CI never passes green having built nothing.
-needs_dbt = pytest.mark.skipif(
-    shutil.which("dbt") is None and not os.environ.get("REQUIRE_DBT"), reason="dbt not installed"
-)
+# Tests that build with dbt skip where it isn't installed, except under REQUIRE_DBT=1 (CI's test and smoke jobs):
+# there a missing dbt fails them, "REQUIRE_DBT is set, but dbt isn't installed" (smoke.require, via conftest's
+# dbt_installed fixture), so CI never passes green having built nothing.
+needs_dbt = pytest.mark.usefixtures("dbt_installed")
 
 _n = [0]
 

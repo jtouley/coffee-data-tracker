@@ -911,7 +911,7 @@ def test_dbt_unit_tests(lake, tmp_path):
     small lake is built first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
-    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
+    r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit", "--exclude", "tag:suspected_bug")
     assert r.returncode == 0, r.stdout[-4000:]
     assert "PASS=21 " in r.stdout
 
@@ -1205,12 +1205,9 @@ def test_each_pass_path_guard_fails_on_the_row_it_guards_against(lake, tmp_path)
         shutil.copy(clean, db)
 
 
-def test_a_chains_coffees_leave_the_market_and_the_site_catalog_but_not_the_weekly_table(lake, tmp_path):
-    """is_chain (the seed's flag): mart_market and the site's catalog, origin and reach figures leave a chain's coffees
-    out. public_market_weekly reads public_coffee, which has no is_chain, so it counts them (pinned as it is today)."""
+def _build_with_a_chain(lake, tmp_path):
+    """onyxcoffeelab.com and intelligentsia.com each list one Kenya; the seed marks intelligentsia.com a chain."""
     import csv
-
-    from coffeedata import site
 
     config = tmp_path / "config"
     config.mkdir()
@@ -1225,16 +1222,21 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog_but_not_the_week
     for rid, title in (("onyxcoffeelab.com", "Kenya Kiambu"), ("intelligentsia.com", "Kenya Gichathaini")):
         probe(lake, "2026-10-18", rid)
         run(lake, "2026-10-19", rid, [product("A", title=title)])
-    con = build(lake, tmp_path, config_dir=str(config), build_id="20261020T060000-abcdef", as_of_run="2026-10-19",
-                **ANY_RUN)  # fmt: skip
+    return build(lake, tmp_path, config_dir=str(config), build_id="20261020T060000-abcdef", as_of_run="2026-10-19",
+                 **ANY_RUN)  # fmt: skip
+
+
+def test_a_chains_coffees_leave_the_market_and_the_site_catalog(lake, tmp_path):
+    """is_chain (the seed's flag): mart_market and the site's catalog, origin and reach figures leave a chain's coffees
+    out."""
+    from coffeedata import site
+
+    con = _build_with_a_chain(lake, tmp_path)
     assert dict(con.execute("select roaster_id, is_chain from dim_coffee").fetchall()) == {
         "onyxcoffeelab.com": False, "intelligentsia.com": True}  # fmt: skip
     assert con.execute(
         "select coffees, roasters from mart_market where origin_country = 'Kenya'"
     ).fetchall() == [(1, 1)]
-    assert con.execute(
-        "select coffees, roasters from public_market_weekly where origin_country = 'Kenya'"
-    ).fetchall() == [(2, 2)]
     con.close()
     out = tmp_path / "site"
     site.build(tmp_path / "coffee.duckdb", out)
@@ -1242,3 +1244,41 @@ def test_a_chains_coffees_leave_the_market_and_the_site_catalog_but_not_the_week
     assert {r[catalog["columns"].index("coffee_id")].split(":")[0] for r in catalog["rows"]} == {
         "onyxcoffeelab.com"
     }
+
+
+# --- Suspected bugs (docs/RULES.md): what the models should output. Strict xfails: each fails once fixed. ---------
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="suspected bug: public_market_weekly reads public_coffee, which has no is_chain, so it counts a chain's "
+    "coffees that mart_market and the site leave out (today the Kenya cell is 2 coffees from 2 roasters)",
+)
+def test_public_market_weekly_leaves_out_chains(lake, tmp_path):
+    con = _build_with_a_chain(lake, tmp_path)
+    got = con.execute(
+        "select coffees, roasters from public_market_weekly where origin_country = 'Kenya'"
+    ).fetchall()
+    con.close()
+    assert got == [(1, 1)]
+
+
+@pytest.mark.xfail(
+    strict=True,
+    raises=AssertionError,
+    reason="suspected bugs: the dbt unit tests tagged suspected_bug fail today (flavor_lookup_ignores_case: a "
+    "capitalised note gets no category; a_bag_with_no_shots_has_none_in_window: null, not 0)",
+)
+@pytest.mark.parametrize(
+    "unit_test", ["flavor_lookup_ignores_case", "a_bag_with_no_shots_has_none_in_window"]
+)
+def test_suspected_bug_unit_tests(lake, tmp_path, unit_test):
+    run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
+    build(lake, tmp_path).close()  # dbt reads the inputs' column types from built tables
+    r = run_dbt(lake, tmp_path, "test", "--select", unit_test)
+    if (
+        r.returncode and "differs from" not in r.stdout
+    ):  # not the suspected output: a broken test, never an xfail
+        raise RuntimeError(r.stdout[-2000:])
+    assert r.returncode == 0 and "PASS=1 " in r.stdout, r.stdout[-2000:]

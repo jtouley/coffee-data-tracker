@@ -477,6 +477,7 @@ def test_process(title, tags, body, want):
 
 @pytest.mark.xfail(
     strict=True,
+    raises=AssertionError,
     reason="possible bug: tag_values turns '-' into ' ', so a 'process:sun-dried' tag reads 'sun dried', which "
     "_PROCESS's 'sun-?dried' doesn't match; today process is None",
 )
@@ -524,6 +525,7 @@ def test_elevation_range_clamp(body, want):
 
 @pytest.mark.xfail(
     strict=True,
+    raises=AssertionError,
     reason="possible bug: '1.800 masl' (a dot as the thousands separator, common in Latin American listings) "
     "is read as 1.8 m, so the elevation is dropped (None) instead of 1,800",
 )

@@ -631,8 +631,8 @@ unit_tests:
   - name: flavor_categories_come_from_the_lexicon
     description: >-
       dim_coffee.flavor_categories: each tasting note looked up in the flavor_lexicon seed (rows copied from it),
-      the distinct categories sorted. A note the seed doesn't list adds nothing; the lookup is exact, so a
-      capitalised note isn't found; no notes, or none known, is an empty list, never null.
+      the distinct categories sorted. A note the seed doesn't list adds nothing; no notes, or none known, is an
+      empty list, never null. (The lookup is case-sensitive today: flavor_lookup_ignores_case, a suspected bug.)
     model: dim_coffee
     given:
       - input: ref('stg_snapshots')
@@ -647,7 +647,7 @@ unit_tests:
       - input: ref('stg_products')
         rows:
           - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['milk chocolate', 'blackberry', 'chocolate', 'lemon', 'not a note']"}
-          - {input_hash: "r:F2", is_coffee: true, is_wholesale: false, tasting_notes: "['Lemon', 'Jasmine']"}
+          - {input_hash: "r:F2", is_coffee: true, is_wholesale: false, tasting_notes: "['lemon', 'jasmine']"}
           - {input_hash: "r:F3", is_coffee: true, is_wholesale: false, tasting_notes: "[]"}
           - {input_hash: "r:F4", is_coffee: true, is_wholesale: false, tasting_notes: null}
       - input: ref('stg_enrichments')
@@ -670,15 +670,15 @@ unit_tests:
     expect:
       rows:
         - {coffee_id: "r:F1", flavor_categories: "['berry', 'chocolate', 'citrus']"}
-        - {coffee_id: "r:F2", flavor_categories: "[]"}
+        - {coffee_id: "r:F2", flavor_categories: "['citrus', 'floral']"}
         - {coffee_id: "r:F3", flavor_categories: "[]"}
         - {coffee_id: "r:F4", flavor_categories: "[]"}
 
   - name: market_weekly_cells_leave_out_archived_blends_and_unknown_origins
     description: >-
       public_market_weekly counts public coffees that are listed, not archived, not wholesale, not blends and have
-      an origin; a missing process is its own cell, 'unknown'. Chains are counted here (public_coffee has no
-      is_chain), unlike mart_market and the site: K's chain coffee is in the Kenya cell.
+      an origin; a missing process is its own cell, 'unknown'. (It counts chains, unlike mart_market and the site:
+      tests/test_dbt.py's xfail test_public_market_weekly_leaves_out_chains, a suspected bug.)
     model: public_market_weekly
     given:
       - input: ref('public_coffee')
@@ -748,14 +748,14 @@ unit_tests:
 
   - name: shots_in_window_counts_target_shots_per_bag
     description: >-
-      mart_bag.shots_in_window: a bag's shots whose extraction_time_bucket is target (fct_shot: 25-32 s). A bag with
-      no shots has shot_count 0 and shots_in_window null (not coalesced, unlike shot_count).
+      mart_bag.shots_in_window: a bag's shots whose extraction_time_bucket is target (fct_shot: 25-32 s); shots
+      with no bag aren't counted. (A bag with no shots gets null, not 0: a_bag_with_no_shots_has_none_in_window, a
+      suspected bug.)
     model: mart_bag
     given:
       - input: ref('stg_bags')
         rows:
           - {bag_id: b1, user_id: u}
-          - {bag_id: b2, user_id: u}
       - input: ref('fct_shot')
         rows:
           - {shot_id: s1, user_id: u, bag_id: b1, extraction_time_bucket: target, time_s: 28.0, rating: 4}
@@ -769,4 +769,64 @@ unit_tests:
     expect:
       rows:
         - {bag_id: b1, shot_count: 3, shots_in_window: 2, best_shot_id: s1}
-        - {bag_id: b2, shot_count: 0, shots_in_window: null, best_shot_id: null}
+
+  # --- Suspected bugs: what these models should output, failing today --------------------------------------------
+  # Tagged suspected_bug, so test_dbt_unit_tests leaves them out; tests/test_dbt.py runs each as a strict xfail, which
+  # fails once the model is fixed, so the fix moves the test into the passing set above.
+
+  - name: flavor_lookup_ignores_case
+    description: >-
+      A tasting note matches the flavor lexicon whatever its case ('Lemon' is lemon). Today the lookup is exact, so a
+      capitalised note (Claude's or a tag's) gets no category.
+    model: dim_coffee
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
+                 'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
+                 []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
+                 [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['Lemon', 'Jasmine']"}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
+      - input: ref('int_roaster_state')
+        rows: []
+      - input: ref('flavor_lexicon')
+        rows:
+          - {note: lemon, category: citrus}
+          - {note: jasmine, category: floral}
+    expect:
+      rows:
+        - {coffee_id: "r:F1", flavor_categories: "['citrus', 'floral']"}
+
+  - name: a_bag_with_no_shots_has_none_in_window
+    description: >-
+      A bag with no shots has shots_in_window 0, as its shot_count is 0. Today it is null: shot_count is coalesced
+      and shots_in_window isn't.
+    model: mart_bag
+    config:
+      tags: [suspected_bug]
+    given:
+      - input: ref('stg_bags')
+        rows:
+          - {bag_id: b2, user_id: u}
+      - input: ref('fct_shot')
+        rows: []
+      - input: ref('dim_coffee')
+        rows: []
+      - input: ref('int_roaster_state')
+        rows: []
+    expect:
+      rows:
+        - {bag_id: b2, shot_count: 0, shots_in_window: 0}

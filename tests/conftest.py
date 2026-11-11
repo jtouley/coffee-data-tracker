@@ -68,6 +68,14 @@ def fixture_items(roasters):
 
 
 @pytest.fixture
+def dbt_installed():
+    """For tests that build with dbt (lakehelp.needs_dbt): skip without dbt, fail instead under REQUIRE_DBT=1."""
+    from .smoke import require_dbt
+
+    require_dbt()
+
+
+@pytest.fixture
 def no_network(monkeypatch):
     """The smoke suite's guard (tests/smoke.py): no connection off this machine, and no API keys."""
     from .smoke import block_network
