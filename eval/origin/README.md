@@ -5,12 +5,26 @@ the lake. It follows the classifier's precedent (`tests/test_classifier_accuracy
 the products are split before any result is read, the rules are tuned on train, chosen on validation and scored
 once on a sealed test set. The results are in `RESULTS.md`.
 
-**Running total (CLAUDE.md step 9):** 0 products whose `origin_country` changed since the last full evaluation, which
-is this one. Add each later change's count here.
+**Running total (CLAUDE.md step 9):** 20 products whose rules `origin_country` changed since the last full evaluation,
+which is this one. Add each later change's count here.
 - 0: decoding HTML entities in tags in dbt (`dbt-decode-tag-entities`) changed the tags of 1,087 products (1,090
   versions, 51 roasters) and the output of `origin_country` of none: built from main and from the change on a local
   copy of the lake (runs 2026-10-26 to 11-02, rules only), `stg_products` and every mart and public table were
   identical. 0 of them in the test set.
+- 20: the ISO 3166-1 mapping (`eval/origin_iso`) fixed two aliases the rules apply before anything is stored
+  (`origins.py`), compared with main 0879254 on one local copy of the lake (runs to 2026-11-09, stored verdicts):
+  "New Guinea" had matched "Guinea", the West African country, and Puerto Rico was folded into the United States.
+  Of the 20 coffees (34 product versions in `stg_products`): Guinea → New Guinea 12 (ISO: no single country, so
+  no public origin), Guinea → Papua New Guinea 5 ("Papa"/"Papau"/"Paupau New Guinea", "Papua New Guinean"),
+  United States → Puerto Rico 2, none → Papua New Guinea 1 ("Papa New Guinea Kongo"). Each was checked by hand
+  against its title and description: all 20 are right after the change (one, a blend "Espresso" with "coffee from
+  New Guinea", was and still is a blend's component, now without a country rather than with the wrong one). 5 of
+  them are in the sealed test set (count only). Unit tests: `test_extract.py::test_new_guinea_and_puerto_rico_titles`
+  and the alias cases.
+  The floor (`tests/test_origin_accuracy.py`): train unchanged; validation 96 of 111 agree, one under its floor of
+  97. Read as aggregates only: one validation listing labelled "United States" is now "Puerto Rico" (787 Coffee, a
+  Puerto Rican roaster); the label predates the decision that Puerto Rico is its own country. It is being labelled
+  again, blind and twice, under the new definition; the floor is not lowered.
 
 ## Floor
 

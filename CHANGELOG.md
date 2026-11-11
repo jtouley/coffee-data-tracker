@@ -91,6 +91,14 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Changed
 
+- **Origin countries are ISO 3166-1.** `origin_country` in dim_coffee and the public tables is the ISO English short
+  name, with `origin_country_code` (alpha-2) beside it; the captured spelling stays in the lake and in
+  `dim_coffee.origin_country_raw`. A versioned seed (`dbt/seeds/origin_country_iso.csv`, source and version in its
+  YAML) maps each captured spelling; a list of several origins, a continent or New Guinea has no country; a new
+  spelling fails the build (`origin_countries_are_mapped`). The 2026-11-09 release's 52 market origins for about 46
+  countries become 45. Puerto Rico is its own country, and "New Guinea" no longer reads as Guinea. Public contract
+  3.0.0. Measured over the full census of 149 spellings in `eval/origin_iso`.
+
 - The weekly merge keeps each connector partition it merged for 30 days instead of deleting it: the files it read
   move, unchanged, to `archive/raw/connector=<c>/run_date=<week>/merge=<batch>/` in the staging bucket, where nothing
   else reads, and a lifecycle rule on the bucket deletes `archive/` objects 30 days after the merge. The RUNBOOK

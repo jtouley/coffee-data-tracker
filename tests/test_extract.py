@@ -86,6 +86,20 @@ def test_java_is_an_origin_only_with_a_javanese_place():
     assert extract.rules(item("Sumatra Takengon")).origin_country == "Indonesia"
 
 
+def test_new_guinea_and_puerto_rico_titles():
+    # Found while mapping origins to ISO 3166-1 (eval/origin_iso): "New Guinea" read as Guinea, the West African
+    # country, and Puerto Rico as the United States.
+    assert extract.rules(item("New Guinea Highlands")).origin_country == "New Guinea"
+    assert extract.rules(item("Papa New Guinea")).origin_country == "Papua New Guinea"
+    assert extract.rules(item("Paupau New Guinea Roast 12 oz")).origin_country == "Papua New Guinea"
+    assert extract.rules(item("Papua New Guinea Kunjin")).origin_country == "Papua New Guinea"
+    assert extract.rules(item("Puerto Rico Yauco Selecto AA")).origin_country == "Puerto Rico"
+    assert (
+        extract.rules(item("Guinea Ziama", body="Grown in Guinea's forest region.")).origin_country
+        == "Guinea"
+    )
+
+
 def test_grab_bags_and_multi_country_titles_have_no_origin():
     multi = item("5 lb Single Origin Coffee — Puerto Rico Supremo, Mexico, or Colombia")
     assert extract.rules(multi).origin_country is None
@@ -544,7 +558,11 @@ def test_a_dot_thousands_separator_is_an_elevation():
         ("Flores", "Indonesia"),
         ("Kona", "United States"),
         ("Hawaii", "United States"),
-        ("Puerto Rico", "United States"),
+        ("Puerto Rico", "Puerto Rico"),  # its own ISO 3166-1 country, PR
+        ("New Guinea", "New Guinea"),  # the island, shared by two countries: not "Guinea"
+        ("papa new guinea", "Papua New Guinea"),
+        ("Papau New Guinea", "Papua New Guinea"),
+        ("Paupau New Guinea", "Papua New Guinea"),
         ("DR Congo", "Democratic Republic of the Congo"),
         ("Congo", "Democratic Republic of the Congo"),
         (" east timor ", "Timor-Leste"),

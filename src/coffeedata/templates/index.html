@@ -171,7 +171,8 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   }
   fetch("catalog.json").then(r => r.json()).then(d => {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
-    const fill = (id, col) => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort().forEach(v => {
+    // Alphabetical by the reader's locale: origins are ISO 3166-1 short names, some not ASCII ("Côte d'Ivoire").
+    const fill = (id, col) => [...new Set(rows.map(r => r[C[col]]).filter(Boolean))].sort((a, b) => a.localeCompare(b)).forEach(v => {
       const opt = document.createElement("option"); opt.value = v; opt.textContent = v; $(id).appendChild(opt); });
     fill("origin", "origin_country"); fill("process", "process");
     ["q", "origin", "process", "stock"].forEach(id => $(id).addEventListener("input", render));

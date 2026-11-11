@@ -154,6 +154,28 @@ models:
       - name: coffees
         description: Distinct products in the fetch that the rule calls coffee.
         data_tests: [not_null]
+  - name: int_origin_country
+    description: >-
+      One row per origin spelling the lake holds as captured (stg_products' rules, stg_enrichments' Claude rows),
+      resolved to ISO 3166-1 through the origin_country_iso seed (macros/origin_iso.sql): kind country with its codes,
+      short name and any sub-national region the spelling names; multiple for a list of several places (a blend or a
+      multi-origin offer); not_a_country or ambiguous as the seed lists them; unmapped for anything else.
+    columns:
+      - name: raw_value
+        description: "The origin as captured, unchanged."
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [country, multiple, not_a_country, ambiguous, unmapped]}}
+      - name: alpha2
+        description: "ISO 3166-1 alpha-2 code; null unless kind is country."
+      - name: alpha3
+        description: "ISO 3166-1 alpha-3 code; null unless kind is country."
+      - name: iso_short_name
+        description: "ISO 3166-1 English short name; null unless kind is country."
+      - name: region
+        description: "The sub-national place the spelling names (Hawaii, Sumatra), if any."
   - name: int_roaster_state
     description: >-
       One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
@@ -493,9 +515,18 @@ models:
       - name: weeks_listed
         description: "Counted runs it was listed in."
       - name: origin_country
-        description: "Origin country (Claude's extraction where there is one, else the rules)."
+        description: >-
+          Origin country as its ISO 3166-1 English short name (int_origin_country), from Claude's extraction where
+          there is one, else the rules. Null when the listing gives no single country: not stated, a blend's or a
+          multi-origin offer's list, a continent, or a place two countries share.
+      - name: origin_country_code
+        description: "The origin country's ISO 3166-1 alpha-2 code; null exactly when origin_country is."
+      - name: origin_country_raw
+        description: "The origin as captured, before the ISO mapping (any spelling, or a list of several)."
       - name: origin_region
-        description: "The region within the origin country (Claude's extraction where there is one, else the rules)."
+        description: >-
+          The region within the origin country (Claude's extraction where there is one, else the rules), or else the
+          sub-national place the captured origin names (Hawaii in "Hawaii, Usa").
       - name: producer
         description: "Farm, washing station or producer."
       - name: varietals
@@ -724,6 +755,8 @@ models:
         data_type: bigint
       - name: origin_country
         data_type: varchar
+      - name: origin_country_code
+        data_type: varchar
       - name: origin_region
         data_type: varchar
       - name: process
@@ -855,6 +888,10 @@ models:
         data_type: varchar
         constraints: [{type: not_null}]
         data_tests: [not_null]
+      - name: origin_country_code
+        data_type: varchar
+        constraints: [{type: not_null}]
+        data_tests: [not_null]
       - name: process
         data_type: varchar
         constraints: [{type: not_null}]
@@ -897,3 +934,48 @@ seeds:
     columns:
       - name: note
         data_tests: [unique]
+  - name: origin_country_iso
+    description: >-
+      Each origin spelling the lake has captured (and each one the rules can produce, origins.py), mapped to ISO
+      3166-1: kind country with the alpha-2 and alpha-3 codes and the ISO English short name, and the sub-national
+      region the spelling names (Hawaii, Sumatra); not_a_country (a continent or a region larger than a country) and
+      ambiguous (a place two countries share) carry no code. A list of several places isn't listed: the transform
+      reads it part by part (macros/origin_iso.sql). Measured over the full census of spellings in eval/origin_iso.
+    config:
+      meta:
+        mapping_version: "2026-11-11.1"
+        iso_standard: "ISO 3166-1:2020"
+        iso_source: >-
+          English short names (iso_short_name) as published by the ISO 3166 Maintenance Agency, in Debian iso-codes'
+          iso_3166-1 data, as packaged by pycountry 26.2.16 (PyPI wheel sha256
+          115c4baf7cceaa30f59a4694d79483c9167dbce7a9de4d3d571c5f3ea77c305a; databases/iso3166-1.json sha256
+          f01b812b57fba9f31ff621bf33e7c7570a01964dbeb5be2167e94decf538c89f). The iso_3166_1 seed is that file.
+      column_types: {raw_value: varchar, kind: varchar, alpha2: varchar, alpha3: varchar, iso_short_name: varchar,
+                     region: varchar}
+    data_tests:
+      - unique:
+          arguments: {column_name: "lower(trim(raw_value))"}  # the transform matches spellings this way
+    columns:
+      - name: raw_value
+        data_tests: [not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [country, not_a_country, ambiguous]}}
+  - name: iso_3166_1
+    description: >-
+      ISO 3166-1 (all 249 entries): alpha-2, alpha-3 and numeric codes, the English short name, and the common name
+      Debian iso-codes gives where the short name is a formal one (Bolivia, Tanzania, Viet Nam). Source and version
+      as origin_country_iso's meta: written unchanged from pycountry 26.2.16's databases/iso3166-1.json.
+    config:
+      meta:
+        iso_standard: "ISO 3166-1:2020"
+        iso_source: "Debian iso-codes iso_3166-1, as packaged by pycountry 26.2.16 (see origin_country_iso)"
+      column_types: {alpha2: varchar, alpha3: varchar, numeric: varchar, iso_short_name: varchar, common_name: varchar}
+    columns:
+      - name: alpha2
+        data_tests: [unique, not_null]
+      - name: alpha3
+        data_tests: [unique, not_null]
+      - name: iso_short_name
+        data_tests: [unique, not_null]

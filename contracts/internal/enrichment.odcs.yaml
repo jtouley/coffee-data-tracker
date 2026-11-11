@@ -60,7 +60,7 @@ schema:
     logicalType: string
     physicalType: string
     required: false
-    description: Origin country.
+    description: Origin country as Claude wrote it (any spelling, or a list); dim_coffee maps it to ISO 3166-1.
   - name: origin_region
     logicalType: string
     physicalType: string
@@ -174,4 +174,4 @@ customProperties:
 - property: interfaceFingerprint
   value: 476da22198cd35e9
 - property: docsFingerprint
-  value: 1763fc3abb0f2c82
+  value: bc65edc2bef31d0e

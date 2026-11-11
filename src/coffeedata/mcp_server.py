@@ -70,11 +70,17 @@ def search_coffees(
     if process:
         where.append("process = ?")
         params.append(process.lower())
-    if origin:
-        where.append("origin_country ilike ?")
-        params.append(f"%{origin}%")
     con = lake.connect()
     have = shots.mart_columns(lake)
+    if origin:
+        # origin_country is the ISO 3166-1 short name ("Viet Nam"); the captured spelling ("Vietnam") and the
+        # alpha-2 code ("VN") match too, where the export has them.
+        alts = ["origin_country ilike ?"] + ["origin_country_raw ilike ?"] * ("origin_country_raw" in have)
+        params += [f"%{origin}%"] * len(alts)
+        if "origin_country_code" in have:
+            alts.append("origin_country_code = upper(?)")
+            params.append(origin.strip())
+        where.append("(" + " or ".join(alts) + ")")
     retail = shots.retail_only(have)
     if not include_wholesale:
         where.append(retail)  # a roaster's wholesale twin isn't a second coffee

@@ -112,7 +112,7 @@ COLUMNS: dict[str, dict[str, str]] = {
         "body_hash": "The description it was extracted from.",
         "method": "llm (Claude), or rules in older lakes.",
         "needs_llm": "The rules left the coffee incompletely described.",
-        "origin_country": "Origin country.",
+        "origin_country": "Origin country as Claude wrote it (any spelling, or a list); dim_coffee maps it to ISO 3166-1.",
         "origin_region": "Origin region.",
         "producer": "Farm, washing station or producer.",
         "process": "washed, natural, honey, anaerobic or other.",
