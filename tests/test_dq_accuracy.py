@@ -20,7 +20,7 @@ from pathlib import Path
 import duckdb
 import pytest
 
-from .evalfloor import eval_dir
+from .evalfloor import eval_dir, floors
 from .lakehelp import needs_dbt
 from .smoke import require_dbt
 
@@ -125,6 +125,10 @@ def _scores(rule: str, name: str, data: Path, flags: set) -> dict[str, float]:
 def test_dq_warning_accuracy_does_not_regress(rule, name, built):
     data, flags = built
     s = _scores(rule, name, data, flags[rule])
-    for metric, floor in FLOOR[rule, name].items():
-        assert s[metric] >= floor, f"{rule} {name} {metric}: {s[metric]:.3f} < {floor}"
-    assert s["false_flags"] <= CEILING[rule, name], f"{rule} {name} false flags: {s['false_flags']:.3f}"
+    with floors("dq", f"{rule}/{name}") as f:
+        for metric, floor in FLOOR[rule, name].items():
+            f.at_least(f"weighted {metric}", s[metric], floor)
+        if rule == "dupes":
+            f.at_most("distinct pairs flagged", s["false_flags"], CEILING[rule, name], unit="count")
+        else:
+            f.at_most("weighted share of flags on right prices", s["false_flags"], CEILING[rule, name])

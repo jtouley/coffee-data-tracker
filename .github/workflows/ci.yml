@@ -31,6 +31,44 @@ jobs:
         env:  # a missing dbt or browser fails the tests that need it instead of skipping them
           REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
+          EVAL_REPORT: ${{ runner.temp }}/eval-report.json  # every accuracy floor's outcome (tests/evalfloor.py)
+      # On main, the floors' report goes to the alert job. On a pull request a failed floor fails this job, and its
+      # message and annotation name the eval, the set, the measured value and the floor.
+      - if: always() && github.event_name == 'push'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
+        with:
+          name: eval-report
+          path: ${{ runner.temp }}/eval-report.json
+          if-no-files-found: ignore
+          retention-days: 30
+
+  # A floor that fails on main opens or updates that eval's triage issue, and a floor back above its bound closes it
+  # (coffeedata.triage, docs/TRIAGE.md). Push to main only, so no pull request's code ever runs with the token, and
+  # the job installs nothing: it runs main's triage.py (standard library only) with GITHUB_TOKEN limited to issues.
+  alert:
+    needs: test
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.test.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # One at a time per workflow, so two runs never both find no issue and open two; a newer run waiting replaces
+    # an older one, and its report is the newer state anyway.
+    concurrency: {group: triage-ci, cancel-in-progress: false}
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c  # v8.0.1
+        continue-on-error: true  # no report (the job failed before the tests): no eval was measured
+        with:
+          name: eval-report
+          path: ${{ runner.temp }}/report
+      - name: Open, update or close the triage issues
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONPATH: src
+        run: python3 -m coffeedata.triage evals "$RUNNER_TEMP/report/eval-report.json" --workflow ci
 
   # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no
   # network. Branch protection requires `smoke`, the job below that waits for all three.
