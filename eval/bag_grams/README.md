@@ -97,7 +97,7 @@ totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total
 7. **Ships if** the change's weighted test accuracy is at least main's and its weighted wrong share doesn't rise
    meaningfully (the paired wrong difference's interval should sit at or below about +1 point).
 8. **Floors** (CLAUDE.md step 8): `tests/test_bag_grams_accuracy.py` scores the current rules on every labeled set
-   in `tests/fixtures/bag_grams_labels.jsonl` (train, validation, and the first test set as a regression fixture),
+   in `tests/fixtures/bag_grams_labels.jsonl` (train, validation, and both scored test sets as regression fixtures),
    weighted by stratum, and fails if accuracy falls below or the wrong share rises above the measured level.
    `bag_eval.py fixture` writes the fixture (a description is cut after its last weight line; the predictions on
    the cut text equal those on the full text for every item).
@@ -226,7 +226,7 @@ python bag_eval.py coverage <data-dir> <set> main branch2
 python bag_eval.py sample   <data-dir> <set> main branch2      # writes items_<set>.json here
 python bag_eval.py seal     <data-dir> <set> main branch2      # writes pred_<name>_<set>.json here
 python bag_eval.py packet   <data-dir> <set>                   # the labelers' packet, in <data-dir>
-python bag_eval.py fixture  <data-dir> ../../tests/fixtures/bag_grams_labels.jsonl train validation test
+python bag_eval.py fixture  <data-dir> ../../tests/fixtures/bag_grams_labels.jsonl train validation test test2
 python bag_eval.py agree    <set> labels_A_<set>.json labels_B_<set>.json
 python bag_eval.py settle   <set> labels_A_<set>.json labels_B_<set>.json labels_C_<set>.json labels_ref_<set>.json
 python bag_eval.py score    <data-dir> <set> labels_ref_<set>.json main branch2 [--final for test2, once]
@@ -263,5 +263,6 @@ with `--final` after `sha256sum -c SHA256SUMS` passed. Stratum-weighted; store-c
 Paired, branch2 minus main: accuracy +11.2 points [+7.5, +14.0]; confidently wrong -9.6 points [-11.4, -6.9]. The
 change ships: above the 95% target on the sealed set, with confidently wrong weights cut from about 1 in 10 to about 1
 in 100. The cost the owner accepted: fewer unit prices on Shopify (94.4% to 87.8% of current retail coffees), because
-store-entered weights the listing never states are no longer trusted. `test2` now joins the regression fixtures; the
-next change draws a new test set.
+store-entered weights the listing never states are no longer trusted (the owner's decision, 2026-11-11). `test2` has
+joined the regression fixtures as `test-2026-11-11`, with floor 0.953 and ceiling 0.0087 (its score of 95.36% and
+0.86%, rounded toward passing); the next change draws a new test set.

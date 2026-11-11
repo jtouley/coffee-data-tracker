@@ -2,8 +2,8 @@
 subagents against eval/bag_grams/GUIDE.md, with disagreements settled by a third.
 
 tests/fixtures/bag_grams_labels.jsonl holds the labeled items of eval/bag_grams: "train" (the rules were tuned on
-it), "validation" (versions were chosen on its totals) and "test-2026-11-10" (the first sealed test set, scored once
-and then added here as a regression fixture). Each item is one option of a current retail listing, drawn by stratum;
+it), "validation" (versions were chosen on its totals), "test-2026-11-10" (the first sealed test set) and "test-2026-11-11"
+(the second, test2), each scored once and then added here as a regression fixture. Each item is one option of a current retail listing, drawn by stratum;
 the scores weight each stratum by its size in the set (eval/bag_grams/items_<set>.json). A rules change must not
 lower any accuracy or raise any confidently wrong share.
 """
@@ -18,12 +18,12 @@ from coffeedata.bag_weight import product_grams
 
 ROOT = Path(__file__).parent.parent
 LABELS = Path(__file__).parent / "fixtures" / "bag_grams_labels.jsonl"
-ITEMS = {"train": "train", "validation": "validation", "test-2026-11-10": "test"}
+ITEMS = {"train": "train", "validation": "validation", "test-2026-11-10": "test", "test-2026-11-11": "test2"}
 # Measured on 2026-11-11 with the rules frozen for the second test set; raise these when the rules improve, never
 # lower them to pass. Accuracy: the share right (grams within 2% of the label) or rightly blank (label "unknown").
 # Wrong: the share confidently wrong (a weight for an "unknown" label, or off by more than 2%).
-FLOOR = {"train": 0.999, "validation": 0.956, "test-2026-11-10": 0.926}
-CEILING = {"train": 0.001, "validation": 0.011, "test-2026-11-10": 0.0161}
+FLOOR = {"train": 0.999, "validation": 0.956, "test-2026-11-10": 0.926, "test-2026-11-11": 0.953}
+CEILING = {"train": 0.001, "validation": 0.011, "test-2026-11-10": 0.0161, "test-2026-11-11": 0.0087}
 
 
 def _scores(name: str) -> tuple[float, float, list[str]]:

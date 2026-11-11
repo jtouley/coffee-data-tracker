@@ -284,7 +284,12 @@ def cmd_sample(data: Path, split: str, main: str, branch: str) -> None:
     print(split, "strata", sizes, "drawn", Counter(d["stratum"] for d in drawn))
 
 
-FIXTURE_SETS = {"train": "train", "validation": "validation", "test": "test-2026-11-10"}
+FIXTURE_SETS = {
+    "train": "train",
+    "validation": "validation",
+    "test": "test-2026-11-10",
+    "test2": "test-2026-11-11",
+}
 
 
 def cmd_fixture(data: Path, out: Path, sets: list[str]) -> None:
