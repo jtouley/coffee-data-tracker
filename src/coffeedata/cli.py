@@ -1000,6 +1000,27 @@ def cmd_delete_user(args: argparse.Namespace) -> None:
     print("Deleted. Deploy again (or restart the service) so the app forgets the turned-off account.")
 
 
+def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
+    """This week's private snapshot of each importer's public offer list (importers.py). Exits 1 if any failed."""
+    from . import importers
+    from .http import PoliteClient
+
+    lake = Lake.importers()
+    # One page per host, so the client's per-host spacing never applies; a slow page gets a minute.
+    with PoliteClient(timeout=60.0, retries=3) as client:
+        results = importers.snapshot(lake, client, args.importer, date.fromisoformat(args.run_date))
+    _print(results)
+    return all(r["status"] != "failed" for r in results)
+
+
+def cmd_importer_purge(args: argparse.Namespace) -> None:
+    """Remove a switched-off importer's raw text and offers, every week, from the importers dataset."""
+    from . import importers
+
+    files = importers.purge(Lake.importers(), args.importer, dry_run=args.dry_run)
+    _print({"importer": args.importer, "dry_run": args.dry_run, "files": files})
+
+
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1242,6 +1263,26 @@ def main(argv: list[str] | None = None) -> None:
         action="store_true",
         help="with --served: build nothing and exit 0 when no release is served yet (the site workflow)",
     )
+
+    from .importers import IMPORTERS
+
+    imp = add(
+        "importer-snapshot",
+        cmd_importer_snapshot,
+        "this week's private snapshot of green importers' public offer lists ($COFFEEDATA_IMPORTERS)",
+    )
+    imp.add_argument("--run-date", type=_run_date, default=_today(), help="any day of the week to snapshot")
+    imp.add_argument(
+        "--importer", action="append", choices=sorted(IMPORTERS), help="only this importer (repeatable)"
+    )
+
+    ipg = add(
+        "importer-purge",
+        cmd_importer_purge,
+        "remove a switched-off importer's files (raw text and offers, every week) from $COFFEEDATA_IMPORTERS",
+    )
+    ipg.add_argument("importer", choices=sorted(IMPORTERS))
+    ipg.add_argument("--dry-run", action="store_true", help="list the files, remove nothing")
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 
