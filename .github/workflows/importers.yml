@@ -1,0 +1,71 @@
+# Weekly private snapshots of green-coffee importers' public offer lists (src/coffeedata/importers.py): one pass a
+# week, one public page per importer, into a private Hugging Face dataset of its own. The snapshot is raw only: each
+# lot word for word (every cell of its row, and its URL), one immutable file per importer per week. Stated fields and
+# normalized values are derived from it at read time, never stored. No prices, page HTML or images. Backend-only:
+# dbt, the release, the site and the public export never read it.
+#
+# Why GitHub Actions and not the Cloud Run jobs: two page fetches and one small upload a week need no NAT IP, no
+# staging bucket and no crawl window, and a Cloud Run job would need new GCP resources (a job, a scheduler trigger,
+# IAM), which this repo only adds through terraform. Here it needs nothing new but the schedule.
+#
+# Like eval-floors.yml, it holds a Hub token, so it never runs on pull requests, and its job runs only on main (a
+# dispatch from another branch is skipped): no other branch's code (its scripts, or a package its uv.lock installs)
+# runs with the token. That guard is read from the ref's own workflow file, so it stops accidents, not someone who
+# can push; holding the token in a GitHub environment limited to main would enforce it (an owner setting). It needs
+# a write token (HF_TOKEN, the one site.yml and weekly.yml use), since it creates the private dataset on its first
+# run and adds one file per importer per week.
+#
+# Nothing passes silently: no token, a fetch that fails, a changed layout (a missing column, zero rows, rows without
+# their identity), a currency amount in a stored cell, or under half the lots of the importer's last stored week
+# fails the run, and that importer's week stays unwritten, so a dispatch the same week (after a fix, or with
+# importer and accept_drop for a real drop at that one importer) fetches it again. A week already stored is never
+# fetched again.
+name: importers
+on:
+  schedule:
+    - cron: "37 17 * * 3"  # Wednesdays 17:37 UTC
+  workflow_dispatch:
+    inputs:
+      importer:
+        description: "Only this importer (needed with accept_drop, so the override covers one importer)"
+        type: choice
+        options: [all, cafe_imports, interamerican]
+        default: all
+      accept_drop:
+        description: "Store this importer's week even with under half the lots of its last stored week (a real drop, checked by hand)"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: importers
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    # main's code only: a dispatch from another branch would run that branch's scripts and lockfile with the token
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - name: snapshot this week's offer lists (private dataset)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          # Defaults to <owner>/coffee-data-importers; set the IMPORTERS_URL variable to use another private dataset.
+          COFFEEDATA_IMPORTERS: ${{ vars.IMPORTERS_URL || format('hf://datasets/{0}/coffee-data-importers', github.repository_owner) }}
+          # importers.ensure_private refuses to write to any of these
+          COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
+          PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
+          ACCEPT_DROP: ${{ inputs.accept_drop && '1' || '' }}
+          IMPORTER: ${{ inputs.importer }}  # a choice input, passed via env, never interpolated into the script
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::error title=Importer snapshots::HF_TOKEN is not set, so the private importers dataset can't be written."
+            exit 1
+          fi
+          if [ "$IMPORTER" = all ]; then IMPORTER=""; fi
+          uv run coffeedata importer-snapshot --require-hub ${IMPORTER:+--importer "$IMPORTER"} ${ACCEPT_DROP:+--accept-drop}

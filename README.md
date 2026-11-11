@@ -245,6 +245,7 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_DB` | `build/coffee.duckdb` | The DuckDB file the MCP server reads. `build` and `weekly` take `--db` instead (same default); `site` and `export-public` default to `build/served.duckdb`, the served release |
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
+| `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by dbt or released |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -369,6 +370,16 @@ column existed read it as null.
 Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parquet` per photo in Hugging Face's
 `Image` layout, so a photo is never in the main lake. The app writes one when a bag's label is photographed.
 Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
+
+Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
+[`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
+for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
+public dataset, and dbt never reads them. Even in that portal, only the normalized values may be shown, never the
+importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
+week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
+text. The stated fields and our normalized values are derived from raw when read (`importers.offers()`), never
+stored, so a better rule re-derives the whole history. No prices, page HTML or images.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).
