@@ -14,7 +14,9 @@ is this one. Add each later change's count here.
 
 ## Floor
 
-`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): stratum-weighted agreement at least 0.959 and 0.836, wrong-country at most 0.040 and 0.160 (measured 2026-11-11, main 0cfa4d9; strata in `floor_strata.json`). Its listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and CI's eval-floors job runs it (`docs/RULES.md`).
+`tests/test_origin_accuracy.py` holds the rules to this eval's train and validation labels (CLAUDE.md step 8): on train, stratum-weighted agreement at least 0.959 and wrong-country at most 0.040, which reproduces the train row of RESULTS.md (96.0% / 3.9%; strata in `floor_strata.json`, the two predictions the train sample was drawn from). Validation's sample can't be redrawn from any committed rule set (the closest shares 59 of its 111 keys), so its weights and RESULTS.md's 88.0% / 11.6% can't be reproduced; its floor is a count over the 111 fixed labelled listings instead: at least 97 agree, at most 11 wrong-country (measured 2026-11-11, main 0cfa4d9). The listings are private: `eval/floor_inputs.py` rebuilds them from the lake at df57f62, and the eval-floors workflow runs the floor (`docs/RULES.md`).
+
+The floor's sensitivity is low: in train the `unchanged` stratum carries 97% of the weight on 25 labels, so one label there is worth about 3.9 points, and a regression that touches none of the labelled listings doesn't show. It catches a change on the labelled listings, not a change elsewhere.
 
 ## Data
 
