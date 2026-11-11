@@ -1,6 +1,6 @@
 """Royal Coffee, the third importer (coffeedata.importers, importer_rules): its Shopify listing read page by page,
-each product kept word for word without prices or images, raw-only and immutable per week, its values derived when
-read, and no network call to the store from any test or CI job.
+each product kept word for word without prices or images, raw only and immutable per week like the other importers,
+its values derived on read by the same transform, and no network call to the store from any test or CI job.
 
 Every product here is invented (tests/fixtures/importers/royal_synthetic_products.json) and every host is made up:
 no AI agent may access Royal's site, so nothing in this file was built from it.
@@ -30,8 +30,8 @@ FIXTURE = json.loads((Path(__file__).parent / "fixtures/importers/royal_syntheti
 PRODUCTS = FIXTURE["products"]
 FAKE = "https://shop.example"  # a made-up store
 LISTING = f"{FAKE}/products.json"
-WED, MON = date(2026, 11, 11), date(2026, 11, 9)
-NOW = datetime(2026, 11, 11, 17, 37, 5, tzinfo=UTC)
+MON = date(2026, 11, 9)
+NOW = datetime(2026, 11, 11, 17, 37, 5, tzinfo=UTC)  # a Wednesday in MON's week
 # Royal's address as it could be written in any file: its host, with or without www.
 ROYAL_HOST = re.compile(r"(?<![\w-])(?:www\.)?royalcoffee\.com(?![\w-])", re.I)
 
@@ -72,8 +72,8 @@ def test_listing_is_read_with_the_fewest_pages_politely_and_never_logged_in(monk
     monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 4)
     calls: list[httpx.Request] = []
     with _store(_pages_of(4), calls) as client:
-        rows = importers.read_royal(client, LISTING)
-    assert len(rows) == 6
+        parsed = importers.read_royal(client, LISTING)
+    assert len(parsed.lots) == 6 and parsed.unreadable_rows == 0
     # robots.txt first, then two pages: the second is short, so the empty third is never asked for
     assert [(c.url.path, dict(c.url.params)) for c in calls] == [
         ("/robots.txt", {}),
@@ -89,12 +89,12 @@ def test_a_full_last_page_costs_one_empty_page_and_a_repeating_store_stops(monke
     monkeypatch.setattr(importers, "ROYAL_PAGE_LIMIT", 3)
     calls: list[httpx.Request] = []
     with _store(_pages_of(3), calls) as client:
-        assert len(importers.read_royal(client, LISTING)) == 6
+        assert len(importers.read_royal(client, LISTING).lots) == 6
     assert [c.url.params.get("page") for c in calls if c.url.path != "/robots.txt"] == ["1", "2", "3"]
 
     calls.clear()  # a store that ignores `page`, answering the first page every time
     with _store([PRODUCTS[:3]] * 50, calls) as client:
-        assert len(importers.read_royal(client, LISTING)) == 3
+        assert len(importers.read_royal(client, LISTING).lots) == 3
     assert [c.url.params.get("page") for c in calls if c.url.path != "/robots.txt"] == ["1", "2"]
 
 
@@ -133,7 +133,7 @@ def test_pages_are_spaced_by_the_cli_client():
     orig = importers.snapshot
     importers.snapshot = fake
     try:
-        cli.main(["importer-snapshot", "--run-date", "2026-11-11"])
+        cli.main(["importer-snapshot"])
     except SystemExit as e:
         assert e.code in (0, None)
     finally:
@@ -142,9 +142,9 @@ def test_pages_are_spaced_by_the_cli_client():
 
 
 def test_each_product_is_kept_word_for_word_without_prices_or_images():
-    rows = importers.parse_royal(PRODUCTS, LISTING)
-    assert [r["row"] for r in rows] == list(range(6))
-    first = rows[0]["_raw"]
+    lots = importers.parse_royal(PRODUCTS, LISTING).lots
+    assert [lot.row for lot in lots] == list(range(6))
+    first = lots[0].cells
     assert list(first) == [*importers.ROYAL_PRODUCT_FIELDS, "body_text", "options", "variants"]
     p = PRODUCTS[0]
     assert first["title"] == p["title"] and first["handle"] == p["handle"] and first["id"] == str(p["id"])
@@ -158,9 +158,9 @@ def test_each_product_is_kept_word_for_word_without_prices_or_images():
     variants = json.loads(first["variants"])
     assert [set(v) for v in variants] == [set(importers.ROYAL_VARIANT_FIELDS)] * 2
     assert variants[0]["sku"] == "SYN-70412-B" and variants[1]["available"] is False
-    assert rows[0]["_url"] == f"{FAKE}/products/{p['handle']}"
-    for r in rows:
-        stored = json.dumps(r["_raw"])
+    assert lots[0].url == f"{FAKE}/products/{p['handle']}"
+    for lot in lots:
+        stored = json.dumps(lot.cells)
         for price in (
             "412.00",
             "450.00",
@@ -181,13 +181,20 @@ def test_a_changed_listing_fails_loudly():
     unreadable = [{k: v for k, v in p.items() if k != "handle"} for p in PRODUCTS[:2]] + PRODUCTS[2:]
     with pytest.raises(importers.LayoutChanged, match="unreadable"):
         importers.parse_royal(unreadable, LISTING)
-    calls: list[httpx.Request] = []
-    with _store([], calls) as client:
-        client_get = client.fetch_json
-        client.fetch_json = lambda url, **kw: {"items": []}  # type: ignore[method-assign]
-        with pytest.raises(importers.LayoutChanged, match="not a /products.json"):
-            importers.read_royal(client, LISTING)
-        client.fetch_json = client_get  # type: ignore[method-assign]
+    # a price that got into a kept field (here, the body's prose) fails the run, as on the other importers
+    priced = [{**PRODUCTS[0], "body_html": "<p>Now only $4.10/lb</p>"}, *PRODUCTS[1:]]
+    with pytest.raises(importers.LayoutChanged, match="currency amount in the 'body_text'"):
+        importers.parse_royal(priced, LISTING)
+
+    def not_a_listing(request: httpx.Request) -> httpx.Response:
+        if request.url.path == "/robots.txt":
+            return httpx.Response(200, text="User-agent: *\nDisallow:\n")
+        return httpx.Response(200, json={"items": []})
+
+    transport = httpx.MockTransport(not_a_listing)
+    client = PoliteClient(min_interval=0, retries=1, transport=transport)
+    with client, pytest.raises(importers.LayoutChanged, match="not a /products.json"):
+        importers.read_royal(client, LISTING)
 
 
 def _with_fake_store(monkeypatch):
@@ -195,28 +202,50 @@ def _with_fake_store(monkeypatch):
     monkeypatch.setitem(importers.IMPORTERS, importers.ROYAL, royal)
 
 
-def test_raw_only_one_immutable_file_a_week_and_values_derived_when_read(tmp_path, monkeypatch):
+def test_raw_only_one_immutable_file_a_week_and_values_derived_on_read(tmp_path, monkeypatch):
     _with_fake_store(monkeypatch)
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     calls: list[httpx.Request] = []
     with _store(_pages_of(250), calls) as client:
-        res = importers.snapshot(lake, client, [importers.ROYAL], today=WED, now=lambda: NOW)
-    assert res == [{"importer": "royal_coffee", "week": "2026-11-09", "status": "stored", "rows": 6}]
-    raw_path = tmp_path / "importers" / importers.path(importers.ROYAL, MON, "importer_raw")
-    assert not (tmp_path / "importers" / importers.path(importers.ROYAL, MON)).exists()  # no offers file
-    raw = pq.read_table(raw_path).to_pylist()
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert [(r["importer"], r["week"], r["status"], r["rows"]) for r in res] == [
+        ("royal_coffee", "2026-11-09", "stored", 6)
+    ]
+    assert sorted(f.relative_to(lake.root).as_posix() for f in lake.root.rglob("*.parquet")) == [
+        "raw/week=0000-00-00/importer=schema.parquet",
+        importers.path(importers.ROYAL, MON),
+    ]
+    raw = pq.read_table(lake.root / importers.path(importers.ROYAL, MON)).to_pylist()
     assert {(r["importer"], r["source_url"], r["week"]) for r in raw} == {("royal_coffee", LISTING, MON)}
     assert [r["url"] for r in raw] == [f"{FAKE}/products/{p['handle']}" for p in PRODUCTS]
-    # derived from the stored raw cells, never stored
-    first = importers.derive(raw[0])
-    assert first["lot_id"] == "70412" and first["process_type"] == "washed" and first["week"] == MON
+    # the same read-time transform as the other importers: derived from the stored cells, never stored
+    derived = [o for o in importers.offers(lake) if o["importer"] == "royal_coffee"]
+    assert [(o["lot_id"], o["warehouse"], o["process_type"]) for o in derived[:2]] == [
+        ("70412", "Harborview", "washed"),
+        ("70588", "Riverside", "natural"),
+    ]
+    assert derived[0]["name"] == PRODUCTS[0]["title"] and derived[0]["problems"] == []
 
     calls.clear()  # later that week: not fetched again, not rewritten
     with _store(_pages_of(250), calls) as client:
-        again = importers.snapshot(lake, client, [importers.ROYAL], today=date(2026, 11, 14), now=lambda: NOW)
+        again = importers.snapshot(
+            lake, client, [importers.ROYAL], now=lambda: datetime(2026, 11, 14, tzinfo=UTC)
+        )
     assert again[0]["status"] == "skipped" and calls == []
     with pytest.raises(FileExistsError):
-        lake.write("importer_raw", importers.path(importers.ROYAL, MON, "importer_raw"), raw)
+        lake.write("importer_raw", importers.path(importers.ROYAL, MON), raw)
+
+
+def test_a_thinned_listing_fails_like_the_other_importers(tmp_path, monkeypatch):
+    _with_fake_store(monkeypatch)
+    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
+    with _store(_pages_of(250), []) as client:
+        importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    with _store([PRODUCTS[:2]], []) as client:
+        res = importers.snapshot(
+            lake, client, [importers.ROYAL], now=lambda: datetime(2026, 11, 18, tzinfo=UTC)
+        )
+    assert res[0]["status"] == "failed" and "thinned" in res[0]["error"]
 
 
 # --- no test and no CI job ever reaches Royal -----------------------------------------------------------------------
@@ -226,7 +255,7 @@ def test_without_its_address_royal_is_skipped_and_nothing_is_fetched(tmp_path):
     calls: list[httpx.Request] = []
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with _store([], calls) as client:
-        res = importers.snapshot(lake, client, [importers.ROYAL], today=WED, now=lambda: NOW)
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
     assert res[0]["status"] == "skipped" and res[0]["reason"] == "fetched on schedule only" and calls == []
     assert importers.IMPORTERS[importers.ROYAL].url is None
 
@@ -257,7 +286,6 @@ def test_its_address_is_refused_anywhere_but_the_scheduled_workflow(context, tmp
             Lake(str(tmp_path / "i"), tables=IMPORTER_TABLES),
             client,
             [importers.ROYAL],
-            today=WED,
             now=lambda: NOW,
         )
     assert res[0]["status"] == "failed" and "NotAllowedHere" in res[0]["error"] and calls == []
@@ -313,9 +341,22 @@ EXPECTED = [
 
 @pytest.mark.parametrize("i", range(len(PRODUCTS)))
 def test_rules_on_the_synthetic_products(i):
-    cells = importers.parse_royal(PRODUCTS, LISTING)[i]["_raw"]
-    got = rules.normalize("royal_coffee", cells)
+    cells = importers.parse_royal(PRODUCTS, LISTING).lots[i].cells
+    problems: list[str] = []
+    got = importers.stated("royal_coffee", cells, problems) | rules.normalize("royal_coffee", cells, problems)
     lot, wh, origin, region, proc, var, (lo, hi), harvest, certs = EXPECTED[i]
+    assert problems == []
+    assert {
+        k: got.pop(k) for k in ("name", "process", "status", "est_arrival", "bags", "bag_size", "bag_kg")
+    } == {
+        "name": PRODUCTS[i]["title"],
+        "process": {0: "Washed", 2: "Decaf (Sugarcane EA)"}.get(i),  # the label, as stated
+        "status": None,
+        "est_arrival": None,
+        "bags": None,
+        "bag_size": None,
+        "bag_kg": None,
+    }
     assert got == {
         "lot_id": lot,
         "warehouse": wh,
@@ -326,6 +367,8 @@ def test_rules_on_the_synthetic_products(i):
         "altitude_min_m": lo,
         "altitude_max_m": hi,
         "harvest_months": harvest,
+        "grower_type": None,
+        "grower_name": None,
         "certifications": certs,
         "rules_version": rules.ROYAL_RULES_VERSION,
     }

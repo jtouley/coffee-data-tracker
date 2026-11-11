@@ -1,4 +1,4 @@
-"""Weekly private snapshots of green-coffee importers' public offer lists.
+"""Weekly private snapshots of green-coffee importers' public offer lists (ELT: the snapshot is raw only).
 
 Two importers, two public pages, fetched in one pass a week, never logged in, with the crawler's client
 (http.PoliteClient: our user agent, robots.txt honored, bounded retries with backoff and jitter, Retry-After
@@ -8,27 +8,34 @@ respected):
   and aren't on it): lot ID, name, origin, region, process, status (Spot / Afloat / At origin), estimated arrival,
   bags and bag size. No warehouse.
 - InterAmerican, https://interamericancoffee.com/our-offerings/ (a wpDataTables table): warehouse, product name,
-  bags, bag weight, status (AFLOAT / IN STORE). No lot ID, origin, region, process or arrival column, so those
-  stated fields stay empty.
+  bags, bag weight, status (AFLOAT / IN STORE). No lot ID, origin, region, process or arrival column.
+- Royal Coffee, a Shopify store: its public /products.json listing, ROYAL_PAGE_LIMIT products a page, the pages
+  spaced ROYAL_PAGE_INTERVAL apart, each product kept word for word under its field name (royal_cells). Fetched
+  only by the scheduled workflow, never by an AI agent: see royal_listing_url.
 
-- Royal Coffee, a Shopify store: its public /products.json listing, 250 products a page, the pages spaced
-  ROYAL_PAGE_INTERVAL apart. Raw-only (below), and fetched only by the scheduled workflow: see royal_listing_url.
+Stored (load): one immutable file per importer per week, `raw/week=<Monday>/importer=<name>.parquet`
+(importer_raw), in a private Hugging Face dataset of its own (`COFFEEDATA_IMPORTERS`, created private by
+`ensure_private` with the existing credential). Each lot is kept word for word, as the roaster adapters keep a
+product: every cell of its row under the page's header, and the lot's own page URL. Columns about prices are left
+out by their header (a header-less column, by what all its cells say), and a currency amount in any kept cell fails
+the run, so no price is ever stored. No page HTML or images either.
 
-Two layers, each one immutable file per importer per week, in a private Hugging Face dataset of its own
-(`COFFEEDATA_IMPORTERS`, created private by `ensure_private` with the existing credential):
-- importer_raw (`raw/`): each lot word for word, as the roaster adapters keep a product's whole text: every cell of
-  its row under the page's header, and its own page's URL (only cells about prices are left out), so the normalized
-  values and anything derived later can be derived again from it;
-- importer_offers (`offers/`): the fields the page states, and our model's values derived from the raw cells by
-  deterministic rules that abstain when unsure (importer_rules.py). A raw-only importer (Royal) has none: its
-  values are derived from the raw layer when it is read (derive), so a better rule re-derives every week.
-No prices, page HTML or images. Backend-only, for internal use and a future roaster portal (which may show only the
-normalized values, never the importer's wording): dbt never reads it, and nothing in the public tables, the release,
-the site or the public dataset does (tests/test_importers.py). A week already stored is never fetched again.
+Derived (transform), never stored: `offers()` reads the whole raw history and derives each lot's stated fields
+(`stated`) and our model's normalized values (importer_rules.normalize) at read time, so a better rule re-derives
+every week. Those rules abstain when unsure and aren't evaluated yet (CLAUDE.md): nothing relies on them.
 
-A changed page fails loudly (LayoutChanged): a missing table or column, zero rows, or more than MAX_BAD_SHARE of
-rows that can't be read is an error, never an empty or thinned snapshot. The importer's week is then left unwritten,
-so a re-run that week (after the parser is fixed) fetches it again.
+Backend-only, for internal use and a future roaster portal (which may show only the normalized values, never the
+importer's wording): dbt never reads the dataset, and nothing in the public tables, the release, the site or the
+public dataset does (tests/test_importers.py). A week already stored is never fetched again.
+
+A changed page fails loudly (LayoutChanged), and that importer's week stays unwritten so a run later that week
+fetches it again:
+- a missing table or column, zero rows, or more than MAX_BAD_SHARE of rows without their identity (lot ID, name);
+- a currency amount in a stored cell;
+- fewer than MIN_SHARE_OF_LAST_WEEK of the rows the last stored week had (a thinned page), unless the run is told to
+  accept the drop (`--accept-drop`, the workflow's `accept_drop` input).
+A single cell that can't be read (bags that aren't a number, a rule that fails on odd text) is null in the derived
+view and counted; it never fails the week.
 
 What these snapshots are for (arrival-to-roaster lag, after a year or more of history): the green-importer
 feasibility check, recommendation 2. .github/workflows/importers.yml runs it each week.
@@ -39,25 +46,32 @@ from __future__ import annotations
 import logging
 import os
 import re
+import tempfile
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from html.parser import HTMLParser
+from importlib import resources
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
 
 import httpx
+import pyarrow.parquet as pq
 
 from .http import FetchError, PoliteClient, challenge_error
 from .lake import Lake, _same_file
 
 log = logging.getLogger(__name__)
 
-PARSER_VERSION = "1"
-# A page where more than this share of table rows can't be read has changed under the parser: fail, don't thin.
+PARSER_VERSION = "2"
+# A page where more than this share of rows lack their identity (lot ID, name) has changed under the parser.
 MAX_BAD_SHARE = 0.10
-# Waits between tries of a Hub call this job can't do without (is this week already stored? is the dataset private?).
+# A week with fewer rows than this share of the importer's last stored week is a thinned page (pagination, a filter
+# default, a lazy load), not a real market move: the run fails unless told to accept the drop. Week-to-week swings
+# on these lists are far smaller (lots arrive and sell out over weeks); halving in one week is a page change.
+MIN_SHARE_OF_LAST_WEEK = 0.5
+# Waits between tries of a Hub call this job can't do without, on a transient failure only (`_transient`).
 HUB_RETRY_WAITS = (2.0, 6.0, 18.0)
 
 
@@ -178,45 +192,87 @@ def find_table(html: str, required: tuple[str, ...]) -> Table:
     raise LayoutChanged(f"no table with the columns {', '.join(required)}")
 
 
-class Record(dict[str, list[str]]):
-    """One table row as {column (casefolded): cell lines}, with every cell under its header as the page names it
-    (`cells`, in page order) and the row's link targets (`links`)."""
+@dataclass
+class Lot:
+    """One table row as stored: every cell under the page's header, word for word, and the lot's own page URL."""
 
-    cells: list[tuple[str, list[str]]]
-    links: list[str]
+    row: int
+    cells: dict[str, str | None]
+    url: str | None
 
 
-def records(table: Table) -> tuple[list[Record], int]:
-    """The table's rows, and how many rows had the wrong number of cells (left out)."""
+# A header naming a price or cost: that column is never stored.
+PRICE_HEADER = re.compile(r"\bprices?\b|\bcosts?\b|\$|/\s*lb\b", re.IGNORECASE)
+# A header-less column whose every non-empty cell is about prices ("Log In For Price") is a price column too.
+PRICE_TEXT = re.compile(r"\bprices?\b|\bpricing\b", re.IGNORECASE)
+# A currency amount: in a stored cell it means a price got past the column filter, so the run fails.
+CURRENCY = re.compile(r"[$€£]\s*\d|\bUSD\s*\d|\d\s*(?:USD|usd)\b")
+
+
+def _verbatim(lines: list[str]) -> str | None:
+    """A cell's text as the page shows it, line by line (whitespace runs collapsed, as a browser does)."""
+    return "\n".join(lines) or None
+
+
+def price_columns(table: Table, names: list[str]) -> set[int]:
+    """The columns left out as prices: by header, or, for a header-less column, by what all its cells say."""
+    out = {i for i, n in enumerate(names) if PRICE_HEADER.search(n)}
+    for i, h in enumerate(table.header):
+        texts = [" ".join(r[i]) for r in table.rows if i < len(r) and r[i]]
+        if not h and texts and all(PRICE_TEXT.search(x) for x in texts):
+            out.add(i)
+    return out
+
+
+def lots(html: str, required: tuple[str, ...], page: str) -> tuple[list[Lot], int]:
+    """Every row of the page's offer table as a Lot, and how many rows had the wrong number of cells (not kept)."""
+    table = find_table(html, required)
     names = [h or f"column {i + 1}" for i, h in enumerate(table.header)]  # a header cell with no text
-    out, bad = [], 0
+    drop = price_columns(table, names)
+    out: list[Lot] = []
+    bad = 0
     for k, row in enumerate(table.rows):
         if len(row) != len(names):
             bad += 1
             continue
-        rec = Record(zip((n.casefold() for n in names), row, strict=True))
-        rec.cells = list(zip(names, row, strict=True))
-        rec.links = table.links[k] if k < len(table.links) else []
-        out.append(rec)
+        cells = {names[i]: _verbatim(lines) for i, lines in enumerate(row) if i not in drop}
+        for col, text in cells.items():
+            if text and CURRENCY.search(text):
+                raise LayoutChanged(f"a currency amount in the {col!r} column: prices are never stored")
+        links = table.links[k] if k < len(table.links) else []
+        out.append(Lot(row=len(out), cells=cells, url=lot_url(links, page)))
     return out, bad
 
 
-def checked(importer: str, offers: list[dict], bad: int) -> list[dict]:
-    """The parsed offers, or LayoutChanged when there are none or too many rows couldn't be read."""
-    total = len(offers) + bad
-    if not offers:
-        raise LayoutChanged(f"{importer}: zero rows parsed ({bad} unreadable)")
-    if bad / total > MAX_BAD_SHARE:
-        raise LayoutChanged(f"{importer}: {bad} of {total} rows unreadable (more than {MAX_BAD_SHARE:.0%})")
-    if bad:
-        log.warning("%s: %d of %d rows unreadable, left out", importer, bad, total)
-    return offers
+def lot_url(links: list[str], page: str) -> str | None:
+    """The lot's own page on the importer's site: the row's first link on the same host, resolved against the
+    offer page (never a login or portal link)."""
+    host = urlsplit(page).hostname
+    for href in links:
+        url = urljoin(page, href)
+        parts = urlsplit(url)
+        if (
+            parts.scheme in ("http", "https")
+            and parts.hostname == host
+            and not re.search(r"login|portal", url, re.I)
+        ):
+            return url
+    return None
 
 
-# --- field readers ------------------------------------------------------------------------------------------------
+# --- the stated fields, read from the stored cells ----------------------------------------------------------------
 
 STATUSES = {"spot": "spot", "afloat": "afloat", "at origin": "at_origin", "in store": "in_store"}
 LB_KG = 0.45359237
+LOT_ID = re.compile(r"\d+(?:-\d+)?")  # a number; a lot split for another shipment has a suffix: "25748-2"
+
+
+def _whole(text: str | None) -> str | None:
+    return _clean(" ".join((text or "").split("\n"))) or None
+
+
+def _first_line(text: str | None) -> str:
+    return (text or "").split("\n")[0]
 
 
 def status(text: str) -> str | None:
@@ -235,137 +291,92 @@ def bag_kg(text: str) -> float | None:
     return round(n * LB_KG, 2) if unit.startswith("lb") else n * 1000 if unit == "mt" else n
 
 
-def _first(cell: list[str]) -> str:
-    return cell[0] if cell else ""
-
-
-def _whole(cell: list[str]) -> str | None:
-    return _clean(" ".join(cell)) or None
-
-
-def _verbatim(cell: list[str]) -> str | None:
-    """A cell's text as the page shows it, line by line (whitespace runs collapsed, as a browser does)."""
-    return "\n".join(cell) or None
-
-
-# A cell about prices ("Log In For Price", "$4.10/lb"): never stored, in either layer.
-PRICE = re.compile(r"\bprices?\b|\$\s*\d", re.IGNORECASE)
-
-
-def raw_cells(row: Record) -> dict[str, str | None]:
-    """Every cell of the row, word for word under its header, as the roaster adapters keep a product's whole text:
-    nothing trimmed or summarized, so everything derived later can be derived again from it. The only cells left out
-    are about prices; text the page hides from readers (`class="hide"` copies), markup, links and images were never
-    cell text."""
-    return {name: _verbatim(lines) for name, lines in row.cells if not PRICE.search(" ".join(lines))}
-
-
-def lot_url(row: Record, page: str) -> str | None:
-    """The lot's own page on the importer's site: the row's first link on the same host, resolved against the
-    offer page (never a login or portal link)."""
-    host = urlsplit(page).hostname
-    for href in row.links:
-        url = urljoin(page, href)
-        parts = urlsplit(url)
-        if (
-            parts.scheme in ("http", "https")
-            and parts.hostname == host
-            and not re.search(r"login|portal", url, re.I)
-        ):
-            return url
+def _bags(text: str | None, problems: list[str]) -> int | None:
+    t = _whole(text) or ""
+    if re.fullmatch(r"\d[\d,]*", t):
+        return int(t.replace(",", ""))
+    problems.append("bags")
     return None
 
 
-def _int(cell: list[str]) -> int | None:
-    t = _whole(cell) or ""
-    return int(t.replace(",", "")) if re.fullmatch(r"\d[\d,]*", t) else None
+def stated(importer: str, cells: dict[str, str | None], problems: list[str] | None = None) -> dict:
+    """The fields the page states for one lot, read from its stored cells. A cell that can't be read is None and
+    noted in `problems`; `lot_id` and `name` are None when the row lacks its identity."""
+    problems = [] if problems is None else problems
+    if importer == ROYAL:
+        from .importer_rules import royal_stated
 
-
-# --- the two pages ------------------------------------------------------------------------------------------------
-
-CAFE_IMPORTS_COLUMNS = (
-    "Origin",
-    "Name",
-    "ID",
-    "Bag Size",
-    "Bags",
-    "Location",
-    "Est Arrival",
-    "Region",
-    "Process",
-)
-
-
-LOT_ID = re.compile(r"\d+(?:-\d+)?")
-CAFE_IMPORTS_URL = "https://www.cafeimports.com/north-america/offerings"
-INTERAMERICAN_URL = "https://interamericancoffee.com/our-offerings/"
-
-
-def parse_cafe_imports(html: str) -> list[dict]:
-    """Cafe Imports' North America offerings table (id offering-table; the archive table beside it is filled in the
-    browser, so it is empty here and not read)."""
-    rows, bad = records(find_table(html, CAFE_IMPORTS_COLUMNS))
-    offers = []
-    for i, r in enumerate(rows):
-        lot, name, bags = _whole(r["id"]), _whole(r["name"]), _int(r["bags"])
-        # a lot ID is a number, and a lot split for another shipment carries a suffix: "25748-2"
-        if not lot or not LOT_ID.fullmatch(lot) or not name or bags is None:
-            bad += 1
-            continue
+        return royal_stated(cells, problems)
+    g = cells.get
+    if importer == "cafe_imports":
+        lot = _whole(g("ID"))
         # "Afloat / Est Arrival: Early Jan 2027" -> "Early Jan 2027"
-        arrival = re.sub(r"^.*?est\.? arrival:?\s*", "", _whole(r["est arrival"]) or "", flags=re.IGNORECASE)
-        offers.append(
-            {
-                "lot_id": lot,
-                "name": name,
-                "origin": _whole(r["origin"]),
-                "region": _whole(r["region"]),
-                "process": _whole(r["process"]),
-                "status": status(_first(r["location"])),
-                "est_arrival": arrival or None,
-                "warehouse": None,
-                "bags": bags,
-                "bag_size": _whole(r["bag size"]),
-                "bag_kg": bag_kg(_whole(r["bag size"]) or ""),
-                "row": i,
-                "_raw": raw_cells(r),
-                "_url": lot_url(r, CAFE_IMPORTS_URL),
-            }
-        )
-    return checked("cafe_imports", offers, bad)
+        arrival = re.sub(r"^.*?est\.? arrival:?\s*", "", _whole(g("Est Arrival")) or "", flags=re.IGNORECASE)
+        return {
+            "lot_id": lot if lot and LOT_ID.fullmatch(lot) else None,
+            "name": _whole(g("Name")),
+            "origin": _whole(g("Origin")),
+            "region": _whole(g("Region")),
+            "process": _whole(g("Process")),
+            "status": status(_first_line(g("Location"))),
+            "est_arrival": arrival or None,
+            "warehouse": None,
+            "bags": _bags(g("Bags"), problems),
+            "bag_size": _whole(g("Bag Size")),
+            "bag_kg": bag_kg(_whole(g("Bag Size")) or ""),
+        }
+    return {
+        "lot_id": None,
+        "name": _whole(g("Product")),
+        "origin": None,
+        "region": None,
+        "process": None,
+        "status": status(_whole(g("Status")) or ""),
+        "est_arrival": None,
+        "warehouse": _whole(g("Location/Destination")),
+        "bags": _bags(g("Available Bags"), problems),
+        "bag_size": _whole(g("Bag Weight")),
+        "bag_kg": bag_kg(_whole(g("Bag Weight")) or ""),
+    }
 
 
-INTERAMERICAN_COLUMNS = ("Location/Destination", "Product", "Available Bags", "Bag Weight", "Status")
+def identified(importer: str, fields: dict) -> bool:
+    """Whether a lot has its identity: a name, and on Cafe Imports a lot ID."""
+    return bool(fields["name"]) and (importer != "cafe_imports" or bool(fields["lot_id"]))
 
 
-def parse_interamerican(html: str) -> list[dict]:
-    """InterAmerican's offerings table (a wpDataTables table, rendered on the server)."""
-    rows, bad = records(find_table(html, INTERAMERICAN_COLUMNS))
-    offers = []
-    for i, r in enumerate(rows):
-        name, bags = _whole(r["product"]), _int(r["available bags"])
-        if not name or bags is None:
+@dataclass
+class Parsed:
+    lots: list[Lot]
+    unreadable_rows: int  # rows without their identity, or with the wrong number of cells
+    bad_cells: int  # cells that read as null (bags that aren't a number)
+
+
+def parse(importer: str, html: str) -> Parsed:
+    """The page's lots, checked: LayoutChanged on zero rows or more than MAX_BAD_SHARE without their identity."""
+    imp = IMPORTERS[importer]
+    assert imp.url is not None
+    found, bad = lots(html, imp.columns, imp.url)
+    return checked(importer, found, bad)
+
+
+def checked(importer: str, found: list[Lot], bad: int) -> Parsed:
+    """`found` as Parsed, after the checks every importer gets: LayoutChanged on zero rows or more than MAX_BAD_SHARE
+    without their identity; a cell that reads as null is counted."""
+    bad_cells = 0
+    for lot in found:
+        problems: list[str] = []
+        if not identified(importer, stated(importer, lot.cells, problems)):
             bad += 1
-            continue
-        offers.append(
-            {
-                "lot_id": None,
-                "name": name,
-                "origin": None,
-                "region": None,
-                "process": None,
-                "status": status(_whole(r["status"]) or ""),
-                "est_arrival": None,
-                "warehouse": _whole(r["location/destination"]),
-                "bags": bags,
-                "bag_size": _whole(r["bag weight"]),
-                "bag_kg": bag_kg(_whole(r["bag weight"]) or ""),
-                "row": i,
-                "_raw": raw_cells(r),
-                "_url": lot_url(r, INTERAMERICAN_URL),
-            }
-        )
-    return checked("interamerican", offers, bad)
+        bad_cells += len(problems)
+    total = len(found) + bad
+    if not found or len(found) == bad:
+        raise LayoutChanged(f"{importer}: zero rows parsed ({bad} unreadable)")
+    if bad / total > MAX_BAD_SHARE:
+        raise LayoutChanged(f"{importer}: {bad} of {total} rows unreadable (more than {MAX_BAD_SHARE:.0%})")
+    if bad or bad_cells:
+        log.warning("%s: %d of %d rows unreadable, %d cells null", importer, bad, total, bad_cells)
+    return Parsed(found, bad, bad_cells)
 
 
 # --- Royal Coffee: a Shopify storefront's public product listing ---------------------------------------------------
@@ -374,7 +385,7 @@ def parse_interamerican(html: str) -> list[dict]:
 # to include it and accepts that risk. To respect the terms' AI clause, no AI agent ever fetches the site: only the
 # scheduled importers workflow, a plain program, does, once a week. So the store's address is not in this code at all.
 # The workflow passes it in ROYAL_URL_VAR on scheduled runs only, and royal_listing_url() refuses it anywhere else
-# (under pytest, outside GitHub Actions, in another workflow, or on a dispatch). Tests use invented products and a
+# (outside GitHub Actions, in another workflow, on a dispatch, or under pytest). Tests use invented products and a
 # made-up host (tests/fixtures/importers/royal_synthetic_products.json).
 
 ROYAL = "royal_coffee"
@@ -396,8 +407,8 @@ class NotAllowedHere(RuntimeError):
 
 def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
     """Royal's /products.json URL on the scheduled importers workflow's run, else None (the importer is skipped).
-    NotAllowedHere when the address is set anywhere else: under pytest, outside GitHub Actions, in another workflow
-    or on a run that wasn't scheduled. Nothing else in the code knows the address."""
+    NotAllowedHere when the address is set anywhere else: outside GitHub Actions, in another workflow, on a run that
+    wasn't scheduled, or under pytest. Nothing else in the code knows the address."""
     import sys
 
     env = dict(os.environ) if env is None else env
@@ -418,7 +429,7 @@ def royal_listing_url(env: dict[str, str] | None = None) -> str | None:
     return f"https://{parts.hostname}/products.json"
 
 
-def read_royal(client: PoliteClient, url: str) -> list[dict]:
+def read_royal(client: PoliteClient, url: str) -> Parsed:
     """Every product in the store's public listing, one page after another at ROYAL_PAGE_LIMIT a page, with the
     crawler's client (our user agent, robots.txt honored, per-host spacing, bounded retries; never logged in). Stops
     at the first page shorter than the limit (or empty, or repeating one already read), so a listing of N products
@@ -445,8 +456,8 @@ ROYAL_OPTION_FIELDS = ("name", "values")
 
 
 def royal_cells(p: dict) -> dict[str, str | None]:
-    """One product word for word, as {field: text}: each kept field's value (a list of tags one per line; options and
-    variants as JSON with only their kept fields), and body_html's text. Null where the store gives nothing."""
+    """One product word for word, as {field: text}: each kept field's value (tags one per line; options and variants
+    as JSON with only their kept fields), and body_html's text. Null where the store gives nothing."""
     import json
 
     from .text import html_to_text
@@ -456,7 +467,7 @@ def royal_cells(p: dict) -> dict[str, str | None]:
             return None
         if isinstance(v, list) and all(isinstance(x, str) for x in v):
             return "\n".join(v)
-        if isinstance(v, (list, dict)):
+        if isinstance(v, list | dict):
             return json.dumps(v, ensure_ascii=False)
         return str(v)
 
@@ -471,113 +482,106 @@ def royal_cells(p: dict) -> dict[str, str | None]:
     return cells
 
 
-def parse_royal(products: list[dict], url: str) -> list[dict]:
-    """The listing's products as raw rows. A product without an id, title or handle can't be read (counted, and more
-    than MAX_BAD_SHARE of them is LayoutChanged, as is an empty listing)."""
-    origin = f"{urlsplit(url).scheme}://{urlsplit(url).hostname}"
-    offers: list[dict] = []
+def parse_royal(products: list[dict], url: str) -> Parsed:
+    """The listing's products as Lots, checked like every importer's rows (`checked`): a product without an id, title
+    or handle lacks its identity. A currency amount in a kept cell fails the run, as on the other importers."""
+    parts = urlsplit(url)
+    found: list[Lot] = []
     bad = 0
     for p in products:
         if not p.get("id") or not str(p.get("title") or "").strip() or not p.get("handle"):
             bad += 1
             continue
-        offers.append(
-            {
-                "lot_id": None,
-                "row": len(offers),
-                "_raw": royal_cells(p),
-                "_url": f"{origin}/products/{p['handle']}",
-            }
+        cells = royal_cells(p)
+        for col, text in cells.items():
+            if text and CURRENCY.search(text):
+                raise LayoutChanged(f"a currency amount in the {col!r} field: prices are never stored")
+        found.append(
+            Lot(row=len(found), cells=cells, url=f"{parts.scheme}://{parts.hostname}/products/{p['handle']}")
         )
-    return checked(ROYAL, offers, bad)
+    return checked(ROYAL, found, bad)
 
 
 @dataclass(frozen=True)
 class Importer:
     url: str | None
-    parse: Callable[[str], list[dict]] | None = None
+    columns: tuple[str, ...] = ()  # the columns its table must have
     # A source that isn't one HTML page: where it is this run (None: skip it) and how to read it.
     locate: Callable[[], str | None] | None = None
-    read: Callable[[PoliteClient, str], list[dict]] | None = None
-    # Only the raw layer is stored; our values are derived from it when read (derive()).
-    raw_only: bool = False
+    read: Callable[[PoliteClient, str], Parsed] | None = None
 
     def where(self) -> str | None:
         return self.locate() if self.locate else self.url
 
-    def get(self, client: PoliteClient, url: str) -> list[dict]:
-        if self.read:
-            return self.read(client, url)
-        assert self.parse is not None
-        return self.parse(fetch(client, url))
-
 
 IMPORTERS = {
-    "cafe_imports": Importer(CAFE_IMPORTS_URL, parse_cafe_imports),
-    "interamerican": Importer(INTERAMERICAN_URL, parse_interamerican),
-    ROYAL: Importer(None, locate=royal_listing_url, read=read_royal, raw_only=True),
+    "cafe_imports": Importer(
+        "https://www.cafeimports.com/north-america/offerings",
+        ("Origin", "Name", "ID", "Bag Size", "Bags", "Location", "Est Arrival", "Region", "Process"),
+    ),
+    "interamerican": Importer(
+        "https://interamericancoffee.com/our-offerings/",
+        ("Location/Destination", "Product", "Available Bags", "Bag Weight", "Status"),
+    ),
+    ROYAL: Importer(None, locate=royal_listing_url, read=read_royal),
 }
 
 
-CARD = Path("docs/IMPORTERS_DATASET_CARD.md")
+# --- the read-time transform --------------------------------------------------------------------------------------
+
+
+def derive(raw: dict) -> dict:
+    """One stored lot (an importer_raw row) as an offer: its keys, the stated fields and our normalized values.
+    `problems` lists what read as null."""
+    from .importer_rules import normalize
+
+    cells = {c["column"]: c["text"] for c in raw["cells"]}
+    problems: list[str] = []
+    keys = {k: raw[k] for k in ("week", "fetched_at", "importer", "row", "url")}
+    fields = stated(raw["importer"], cells, problems)
+    return keys | fields | normalize(raw["importer"], cells, problems) | {"problems": problems}
+
+
+def offers(lake: Lake) -> list[dict]:
+    """Every stored lot, every week, derived now (`derive`): rebuilt from raw on each read, never stored."""
+    rel = lake.connect().sql(
+        f"select * from {lake.scan('importer_raw')} where importer is not null order by week, importer, row"
+    )
+    return [derive(dict(zip(rel.columns, r, strict=True))) for r in rel.fetchall()]
 
 
 # --- the weekly job -----------------------------------------------------------------------------------------------
+
+CARD = "importers_card.md"  # the dataset card, shipped in the package
 
 
 def week_of(day: date) -> date:
     return day - timedelta(days=day.weekday())
 
 
-LAYERS = {"importer_raw": "raw", "importer_offers": "offers"}
+def path(importer: str, week: date) -> str:
+    return f"raw/week={week.isoformat()}/importer={importer}.parquet"
 
 
-def path(importer: str, week: date, table: str = "importer_offers") -> str:
-    return f"{LAYERS[table]}/week={week.isoformat()}/importer={importer}.parquet"
-
-
-def split(
-    importer: str, parsed: list[dict], base: dict, offers_too: bool = True
-) -> tuple[list[dict], list[dict]]:
-    """The parser's rows as (importer_raw rows, importer_offers rows): the raw cells verbatim, and the stated fields
-    with our normalized values derived from those cells (none for a raw-only importer: `offers_too` False)."""
-    from .importer_rules import normalize
-
-    raw, offers = [], []
-    for p in parsed:
-        cells = p["_raw"]
-        stated = {k: v for k, v in p.items() if not k.startswith("_")}
-        raw.append(
-            base
-            | {
-                "row": p["row"],
-                "lot_id": p["lot_id"],
-                "url": p["_url"],
-                "cells": [{"column": c, "text": v} for c, v in cells.items()],
-            }
-        )
-        if offers_too:
-            offers.append(base | stated | normalize(importer, cells, origin=p["origin"]))
-    return raw, offers
-
-
-def derive(raw_row: dict) -> dict:
-    """Our values for one importer_raw row, derived when it is read (importer_rules.normalize): nothing derived is
-    stored for a raw-only importer, so a better rule re-derives every week."""
-    from .importer_rules import normalize
-
-    cells = {c["column"]: c["text"] for c in raw_row["cells"]}
-    keep = ("week", "fetched_at", "importer", "source_url", "row", "url")
-    return {k: raw_row.get(k) for k in keep} | normalize(raw_row["importer"], cells)
+def _transient(e: BaseException) -> bool:
+    """A Hub failure worth retrying: a dropped connection, a timeout, a 429 or a 5xx. Never a 4xx, a missing repo or
+    a refused permission."""
+    response = getattr(e, "response", None)
+    code = getattr(response, "status_code", None)
+    if isinstance(code, int):
+        return code == 429 or code >= 500
+    return isinstance(e, ConnectionError | TimeoutError | httpx.TransportError) or any(
+        n in type(e).__name__ for n in ("Connection", "Timeout")
+    )
 
 
 def _hub(fn: Callable, *args, **kwargs):
-    """A Hub call this job can't go on without, retried after HUB_RETRY_WAITS; the last failure is raised."""
+    """A Hub call this job can't go on without, retried after HUB_RETRY_WAITS on a transient failure."""
     for wait in (*HUB_RETRY_WAITS, None):
         try:
             return fn(*args, **kwargs)
         except Exception as e:
-            if wait is None:
+            if wait is None or not _transient(e):
                 raise
             log.warning("Hub call failed (%s: %s); retrying in %.0fs", type(e).__name__, str(e)[:200], wait)
             time.sleep(wait)
@@ -585,45 +589,81 @@ def _hub(fn: Callable, *args, **kwargs):
 
 
 def _repo(url: str) -> str:
-    return url.removeprefix("hf://datasets/").split("@")[0].rstrip("/")
+    return url.removeprefix("hf://datasets/").split("@")[0].rstrip("/").casefold()
 
 
-# Datasets these snapshots must never be written to: the lake (its tables build the public release), the public
-# export, and the app's photo and account datasets.
-OTHER_DATASETS = ("COFFEEDATA_LAKE", "PUBLIC_EXPORT_URL", "COFFEEDATA_PHOTOS", "COFFEEDATA_USERS")
+# Datasets these snapshots must never be written to, by variable, with the owner's dataset as the default where CI
+# doesn't set the variable: the lake (its tables build the public release), the public export, and the app's photo
+# and account datasets.
+OTHER_DATASETS = {
+    "COFFEEDATA_LAKE": "hf://datasets/jtouley/coffee-data",
+    "PUBLIC_EXPORT_URL": "hf://datasets/jtouley/us-coffee-market",
+    "COFFEEDATA_PHOTOS": "hf://datasets/jtouley/coffee-data-photos",
+    "COFFEEDATA_USERS": "hf://datasets/jtouley/coffee-data-users",
+}
+# What an importers dataset may hold. An existing dataset with anything else is someone else's: refused.
+OWN_TOP_LEVEL = {"raw", "README.md", ".gitattributes"}
 
 
 def ensure_private(lake: Lake) -> None:
-    """Make sure the importers dataset is a private one of its own before anything is fetched or written: refuse
-    another dataset's URL, create it private if it doesn't exist yet (with HF_TOKEN), and refuse it if it is
-    public. A local lake needs none of this."""
+    """Make sure the importers dataset is a private one of its own before anything is fetched or written:
+    - its name is none of OTHER_DATASETS' (their variables' values and the defaults), compared case-insensitively;
+    - an existing dataset holds nothing but this job's files (OWN_TOP_LEVEL); a missing one is created private;
+    - the Hub says it is private (`private is True`; anything else is refused);
+    then send the dataset card if it is missing or changed. A local lake needs none of this."""
     if not lake.remote:
         return
-    repo = _repo(lake.url)
-    for var in OTHER_DATASETS:
-        other = os.environ.get(var) or ""
-        if other.startswith("hf://datasets/") and _repo(other) == repo:
-            raise RuntimeError(
-                f"COFFEEDATA_IMPORTERS names the same dataset as {var}; refusing to write there"
-            )
+    repo = lake._repo_id()
+    for var, default in OTHER_DATASETS.items():
+        for url in {default, os.environ.get(var) or ""}:
+            if url.startswith("hf://datasets/") and _repo(url) == repo.casefold():
+                raise RuntimeError(
+                    f"COFFEEDATA_IMPORTERS names the same dataset as {var}; refusing to write there"
+                )
     from huggingface_hub import HfApi
 
     api = HfApi(token=os.environ.get("HF_TOKEN"))
-    _hub(api.create_repo, repo, repo_type="dataset", private=True, exist_ok=True)
-    info = _hub(api.dataset_info, repo)
-    if info.private is not True:
+    if _hub(api.repo_exists, repo, repo_type="dataset"):
+        files = _hub(api.list_repo_files, repo, repo_type="dataset")
+        if foreign := sorted({f.split("/")[0] for f in files} - OWN_TOP_LEVEL):
+            raise RuntimeError(
+                f"{repo} holds files this job didn't write ({', '.join(foreign)}); refusing to use it"
+            )
+    else:
+        _hub(api.create_repo, repo, repo_type="dataset", private=True, exist_ok=True)
+    if _hub(api.dataset_info, repo).private is not True:
         raise RuntimeError(f"the importers dataset {repo} is not private; refusing to write to it")
-    # The dataset card says what this is and that it is backend-only; sent when missing or changed.
-    there = _hub(api.get_paths_info, repo, ["README.md"], repo_type="dataset")
-    if not there or not _same_file(there[0], CARD):
-        _hub(
-            api.upload_file,
-            path_or_fileobj=str(CARD),
-            path_in_repo="README.md",
-            repo_id=repo,
-            repo_type="dataset",
-            commit_message="dataset card",
-        )
+    card = resources.files("coffeedata").joinpath(CARD)
+    with tempfile.TemporaryDirectory() as d:
+        local = Path(d) / "README.md"
+        local.write_text(card.read_text())
+        there = _hub(api.get_paths_info, repo, ["README.md"], repo_type="dataset")
+        if not there or not _same_file(there[0], local):
+            _hub(
+                api.upload_file,
+                path_or_fileobj=str(local),
+                path_in_repo="README.md",
+                repo_id=repo,
+                repo_type="dataset",
+                commit_message="dataset card",
+            )
+
+
+def _weeks(lake: Lake, importer: str) -> list[str]:
+    """The paths of this importer's stored weeks, in the dataset and in staging, oldest first."""
+    suffix = f"/importer={importer}.parquet"
+    local = [
+        f.relative_to(lake.root).as_posix() for f in lake.root.glob(f"raw/week=*/importer={importer}.parquet")
+    ]
+    remote: list[str] = []
+    if lake.remote:
+        from huggingface_hub import HfApi
+
+        api = HfApi(token=os.environ.get("HF_TOKEN"))
+        remote = [
+            f for f in _hub(api.list_repo_files, lake._repo_id(), repo_type="dataset") if f.endswith(suffix)
+        ]
+    return sorted({p for p in [*local, *remote] if p.startswith("raw/week=") and "0000-00-00" not in p})
 
 
 def stored(lake: Lake, rel: str) -> bool:
@@ -635,7 +675,23 @@ def stored(lake: Lake, rel: str) -> bool:
     from huggingface_hub import HfApi
 
     api = HfApi(token=os.environ.get("HF_TOKEN"))
-    return bool(_hub(api.get_paths_info, _repo(lake.url), [rel], repo_type="dataset"))
+    return bool(_hub(api.get_paths_info, lake._repo_id(), [rel], repo_type="dataset"))
+
+
+def last_count(lake: Lake, importer: str, week: date) -> int | None:
+    """How many lots the importer's last stored week before `week` had; None when there is none."""
+    before = [p for p in _weeks(lake, importer) if p < path(importer, week)]
+    if not before:
+        return None
+    rel = before[-1]
+    if (lake.root / rel).exists():
+        return pq.read_metadata(lake.root / rel).num_rows
+    from huggingface_hub import HfApi
+
+    api = HfApi(token=os.environ.get("HF_TOKEN"))
+    with tempfile.TemporaryDirectory() as d:
+        local = _hub(api.hf_hub_download, lake._repo_id(), rel, repo_type="dataset", local_dir=d)
+        return pq.read_metadata(local).num_rows
 
 
 def fetch(client: PoliteClient, url: str) -> str:
@@ -655,22 +711,21 @@ def snapshot(
     lake: Lake,
     client: PoliteClient,
     names: list[str] | None = None,
-    today: date | None = None,
     now: Callable[[], datetime] = lambda: datetime.now(UTC),
+    accept_drop: bool = False,
 ) -> list[dict]:
-    """Fetch, parse and store each importer's page for the week of `today`, publishing each as it is written.
+    """Fetch each importer's page and store it raw for this week (the week of the fetch), publishing each file as it
+    is written.
 
-    One result per importer: `stored` (with its row count), `skipped` (the week was already stored, so the page
-    isn't fetched again) or `failed` (with the error). Every importer is tried; the caller fails the run when any
-    failed. Nothing is written for a failed importer.
+    One result per importer: `stored` (with its row and null-cell counts), `skipped` (the week was already stored,
+    so the page isn't fetched again) or `failed` (with the error). Every importer is tried; the caller fails the run
+    when any failed. Nothing is written for a failed importer.
     """
-    week = week_of(today or now().date())
-    results: list[dict] = []
     ensure_private(lake)
+    week = week_of(now().date())
+    results: list[dict] = []
     for name in names or list(IMPORTERS):
-        imp = IMPORTERS[name]
-        # the file that says the week is stored: the offers file, or the raw file of a raw-only importer
-        rel = path(name, week, "importer_raw" if imp.raw_only else "importer_offers")
+        imp, rel = IMPORTERS[name], path(name, week)
         try:
             url = imp.where()
             if url is None:  # Royal, on any run but the scheduled one
@@ -690,7 +745,13 @@ def snapshot(
                 results.append({"importer": name, "week": str(week), "status": "skipped"})
                 continue
             fetched_at = now().replace(microsecond=0)
-            parsed = imp.get(client, url)
+            parsed = imp.read(client, url) if imp.read else parse(name, fetch(client, url))
+            last = last_count(lake, name, week)
+            if last and len(parsed.lots) < MIN_SHARE_OF_LAST_WEEK * last and not accept_drop:
+                raise LayoutChanged(
+                    f"{name}: {len(parsed.lots)} lots, under {MIN_SHARE_OF_LAST_WEEK:.0%} of the {last} in its last "
+                    "stored week (a thinned page?); if the drop is real, run again with --accept-drop"
+                )
             base = {
                 "week": week,
                 "fetched_at": fetched_at,
@@ -698,15 +759,28 @@ def snapshot(
                 "source_url": url,
                 "parser_version": PARSER_VERSION,
             }
-            raw, offers = split(name, parsed, base, offers_too=not imp.raw_only)
-            # a raw file staged without its offers file is a write that died before finishing: never published
-            (lake.root / path(name, week, "importer_raw")).unlink(missing_ok=True)
-            # both layers in one commit: a week has both or neither (a raw-only importer: its raw file)
-            lake.write("importer_raw", path(name, week, "importer_raw"), raw)
-            if not imp.raw_only:
-                lake.write("importer_offers", rel, offers)
+            rows = [
+                base
+                | {
+                    "row": lot.row,
+                    "url": lot.url,
+                    "cells": [{"column": c, "text": v} for c, v in lot.cells.items()],
+                }
+                for lot in parsed.lots
+            ]
+            lake.write("importer_raw", rel, rows)
             lake.publish(f"importer snapshot: {name}, week of {week}")
-            results.append({"importer": name, "week": str(week), "status": "stored", "rows": len(raw)})
+            results.append(
+                {
+                    "importer": name,
+                    "week": str(week),
+                    "status": "stored",
+                    "rows": len(rows),
+                    "unreadable_rows": parsed.unreadable_rows,
+                    "null_cells": parsed.bad_cells,
+                    "last_week_rows": last,
+                }
+            )
         except Exception as e:  # noqa: BLE001 - reported per importer; the caller fails the run
             log.error("%s: %s: %s", name, type(e).__name__, e)
             results.append(

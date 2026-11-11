@@ -1,7 +1,8 @@
 # Weekly private snapshots of green-coffee importers' public offer lists (src/coffeedata/importers.py): one pass a
-# week, one public page per importer, into a private Hugging Face dataset of its own: each lot word for word (raw/:
-# every cell of its row, and its URL) and the stated fields with our normalized values (offers/). No prices, page
-# HTML or images. Backend-only: dbt, the release, the site and the public export never read it.
+# week, one public page per importer, into a private Hugging Face dataset of its own. The snapshot is raw only: each
+# lot word for word (every cell of its row, and its URL), one immutable file per importer per week. Stated fields and
+# normalized values are derived from it at read time, never stored. No prices, page HTML or images. Backend-only:
+# dbt, the release, the site and the public export never read it.
 #
 # Why GitHub Actions and not the Cloud Run jobs: two page fetches and one small upload a week need no NAT IP, no
 # staging bucket and no crawl window, and a Cloud Run job would need new GCP resources (a job, a scheduler trigger,
@@ -9,23 +10,30 @@
 #
 # Like eval-floors.yml, it holds a Hub token, so it never runs on pull requests, and its job runs only on main (a
 # dispatch from another branch is skipped): no other branch's code (its scripts, or a package its uv.lock installs)
-# runs with the token. It needs a write token (HF_TOKEN, the one site.yml and weekly.yml use), since it creates the
-# private dataset on its first run and adds two files (raw and offers) per importer per week.
+# runs with the token. That guard is read from the ref's own workflow file, so it stops accidents, not someone who
+# can push; holding the token in a GitHub environment limited to main would enforce it (an owner setting). It needs
+# a write token (HF_TOKEN, the one site.yml and weekly.yml use), since it creates the private dataset on its first
+# run and adds one file per importer per week.
 #
+# Nothing passes silently: no token, a fetch that fails, a changed layout (a missing column, zero rows, rows without
+# their identity), a currency amount in a stored cell, or under half the lots of the importer's last stored week
+# fails the run, and that importer's week stays unwritten, so a dispatch the same week (after a fix, or with
+# accept_drop for a real drop) fetches it again. A week already stored is never fetched again.
 # Royal Coffee (royal_coffee) is fetched on the scheduled run only. Its terms restrict automated access and AI tools;
 # the owner chose to include it, and no AI agent may ever access the site. So its address appears nowhere but here,
 # and only a scheduled run gets it (COFFEEDATA_ROYAL_URL below is empty on a dispatch): an AI agent that can
-# dispatch this workflow still can't make it fetch Royal. importers.royal_listing_url refuses the address under
-# pytest, outside GitHub Actions, in another workflow and on any event but `schedule`.
-#
-# Nothing passes silently: no token, a fetch that fails, or a page whose layout changed (zero rows parsed) fails the
-# run, and that importer's week stays unwritten, so a dispatch the same week (after a fix) fetches it again. A week
-# already stored is never fetched again.
+# dispatch this workflow still can't make it fetch Royal. importers.royal_listing_url refuses the address outside
+# GitHub Actions, in another workflow, on any event but `schedule`, and under pytest.
 name: importers
 on:
   schedule:
     - cron: "37 17 * * 3"  # Wednesdays 17:37 UTC
   workflow_dispatch:
+    inputs:
+      accept_drop:
+        description: "Store this week even with under half the lots of the last stored week (a real drop, checked by hand)"
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -51,11 +59,12 @@ jobs:
           # importers.ensure_private refuses to write to any of these
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}
-          # Royal's store, for the scheduled run alone (see the note at the top)
+          # Royal's store, for the scheduled run alone (see the note above `name:`)
           COFFEEDATA_ROYAL_URL: ${{ github.event_name == 'schedule' && 'https://royalcoffee.com' || '' }}
+          ACCEPT_DROP: ${{ inputs.accept_drop && '1' || '' }}
         run: |
           if [ -z "$HF_TOKEN" ]; then
             echo "::error title=Importer snapshots::HF_TOKEN is not set, so the private importers dataset can't be written."
             exit 1
           fi
-          uv run coffeedata importer-snapshot
+          uv run coffeedata importer-snapshot --require-hub ${ACCEPT_DROP:+--accept-drop}

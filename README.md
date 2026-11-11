@@ -371,20 +371,20 @@ Bag photos have their own dataset (`COFFEEDATA_PHOTOS`), one `photos/<id>.parque
 Accounts and invites have another private dataset (`COFFEEDATA_USERS`) that dbt never reads.
 
 Green importers' offer lists have a private dataset of their own too (`COFFEEDATA_IMPORTERS`,
-[`docs/IMPORTERS_DATASET_CARD.md`](docs/IMPORTERS_DATASET_CARD.md)). **They are backend-only, for internal use and a
-future roaster portal**: never in the public release, the `public_*` tables, the site or the public dataset, and dbt
-never reads them. Even in that portal, only the normalized values may be shown, never the importer's wording.
-`coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one pass a week over each
-importer's public offer page and stores two immutable layers per importer and week: `raw/` (each lot word for
-word: every cell of its row and its URL, as the roaster adapters keep a product's whole text) and `offers/` (the
-stated fields, and our normalized values from deterministic rules that abstain when unsure). No prices, page HTML
-or images.
+[`src/coffeedata/importers_card.md`](src/coffeedata/importers_card.md), its dataset card). **They are backend-only,
+for internal use and a future roaster portal**: never in the public release, the `public_*` tables, the site or the
+public dataset, and dbt never reads them. Even in that portal, only the normalized values may be shown, never the
+importer's wording. `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one
+pass a week over each importer's public offer page and stores it raw: one immutable `raw/` file per importer and
+week, each lot word for word (every cell of its row and its URL), as the roaster adapters keep a product's whole
+text. The stated fields and our normalized values are derived from raw when read (`importers.offers()`), never
+stored, so a better rule re-derives the whole history. No prices, page HTML or images.
 
-Royal Coffee, a Shopify store, is the third importer, raw-only: its public `/products.json` listing is read one
-page of 250 after another, spaced, and each product is kept word for word (its fields, tags, options, variants
-without prices, and `body_html`'s text; no prices or images). Its values (lot number, warehouse, origin, region,
-process, varieties, altitude, harvest months, certifications) are derived when the raw layer is read
-(`importers.derive`, `importer_rules.normalize_royal`), never stored. Royal's terms restrict automated access and AI
+Royal Coffee, a Shopify store, is the third importer: its public `/products.json` listing is read one page of 250
+after another, spaced, and each product is kept word for word (its fields, tags, options, variants without prices,
+and `body_html`'s text; no prices or images). Its values (lot number, warehouse, origin, region, process,
+varieties, altitude, harvest months, certifications) are derived on read like the others' (`importers.offers()`,
+`importer_rules.royal_stated` and `normalize_royal`), never stored. Royal's terms restrict automated access and AI
 tools; the owner chose to include it. **No AI agent may access Royal's site:** its address is only in the
 importers workflow, passed to scheduled runs alone, and the code refuses it anywhere else (pytest, local runs, a
 dispatch). Its tests use invented products only (`tests/fixtures/importers/royal_synthetic_products.json`).
