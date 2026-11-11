@@ -41,6 +41,9 @@ far more than 50 products: in a build of the stored lake (runs to 2026-11-09) ag
 totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total since the last full evaluation is
 0; add each later change's count here.
 
+- Round 3 (bag counts, below): against `main` on the eval population, the candidates change the grams of 151–152
+  coffees and the `price_per_100g` of 75–87, so it goes through the full process again (`test3`).
+
 ## Data
 
 - **Lake:** `hf://datasets/jtouley/coffee-data` at revision `f52838ec01c4002f0f84f994d23484eb8f797203` (head on
@@ -224,6 +227,7 @@ PYTHONPATH=<branch>/src python bag_eval.py predict <data-dir> branch2   # coffee
 PYTHONPATH=<branch>/src python bag_eval.py predict <data-dir> 'x+u=standard+s=title.body'   # a candidate
 python bag_eval.py coverage <data-dir> <set> main branch2
 python bag_eval.py sample   <data-dir> <set> main branch2      # writes items_<set>.json here
+python bag_eval.py changed  <data-dir> <set> main <candidate>...   # round 3's census sets (train-3, validation-3, test3)
 python bag_eval.py seal     <data-dir> <set> main branch2      # writes pred_<name>_<set>.json here
 python bag_eval.py packet   <data-dir> <set>                   # the labelers' packet, in <data-dir>
 python bag_eval.py fixture  <data-dir> ../../tests/fixtures/bag_grams_labels.jsonl train validation test test2
@@ -232,8 +236,9 @@ python bag_eval.py settle   <set> labels_A_<set>.json labels_B_<set>.json labels
 python bag_eval.py score    <data-dir> <set> labels_ref_<set>.json main branch2 [--final for test2, once]
 ```
 
-`score` refuses `test` and `test2` without `--final`, and refuses any rule whose predictions differ from its sealed
-`pred_<name>_<set>.json`.
+`score` refuses `test`, `test2` and `test3` without `--final`, refuses any rule whose predictions differ from its
+sealed `pred_<name>_<set>.json`, and, for those test sets, refuses a rule with no sealed file at all (review L4 of
+#136).
 
 ## What this doesn't cover
 
@@ -266,3 +271,82 @@ in 100. The cost the owner accepted: fewer unit prices on Shopify (94.4% to 87.8
 store-entered weights the listing never states are no longer trusted (the owner's decision, 2026-11-11). `test2` has
 joined the regression fixtures as `test-2026-11-11`, with floor 0.953 and ceiling 0.0087 (its score of 95.36% and
 0.86%, rounded toward passing); the next change draws a new test set.
+
+## Round 3: counts written as bags (in progress)
+
+The final review of #136 (finding M1): a count written as "N bags" wasn't read, so a multi-bag price got one bag's
+weight ("Two 12 oz bags", "2 Bags - 12 oz", "... 12oz Whole Beans ... x 2 Bags", "Buy The Whole Roast: (4) 1lb
+bags" all gave one bag), which halves the weight and doubles `price_per_100g`. With it, the review's L1 (slug
+decimals in a handle: `colombia-huila-0-5-lb` gave 2268), L2 (a stored `1,000g` was dropped) and L3 (a tag about
+shipping, `Free shipping over 2 lb`, filled 907).
+
+### The rules (`src/coffeedata/bag_weight.py`)
+
+- A count of bags right before or after a weight multiplies it, as other counts do: `2 Bags - 12 oz`, `2 Bags X
+  17.6oz`, `Two Bags (2.2 lb each)`, `Two 12 oz bags`, `(2) 12 oz. bags`, `12oz (2 bags)`, `12 oz / 2 Bags`. One bag
+  (`1 Bag (12 oz)`) is a bag, and a count already read (`2x 12oz ... to select two bags`) isn't read twice.
+- A count of bags elsewhere in a title or an option (`... 12oz Whole Beans (Made in Brooklyn since 1972) x 2 Bags`):
+  lever `bag_counts`, `multiply` (the total) or `block` (abstain).
+- An option that gives only a count (`1 bag`, `3 bags`, `Whole Bean / 5 bags`) is set aside: more than one bag is
+  blank, never one bag's weight, and no longer blocks the listing's other options; one bag is read like any other
+  option. Lever `count_fill`: on, such options take the count times the one bag weight the product states (`3 bags`
+  on "Organic Colombian Ground -12oz" is 1020), when their prices per bag agree within 1.5x (`COUNT_PRICE`; stores
+  discount larger counts); off, they stay blank. A count that is also a pack or a case (`3 Bag Bonus Pack`, `1 Case
+  (12 Bags)`) still blocks.
+- A description with a count of bags near its weight (`Two 12 oz bags of specialty grade coffee`) gives no weight,
+  as with other counts. A description's weight outside a bag's range (`roughly 2,000 lbs`, `70-kilo (154 lbs)
+  bags`) is a lot or a harvest and isn't read; without this, L2's thousands comma turned such a lot size into a
+  mention that blanked the bag's own line.
+- L1: a handle's slug decimal is read as a decimal (`0-5-lb` is 227). L2: a thousands comma is one number. L3: a tag
+  with shipping or lot wording (`_LOT`) is skipped.
+
+Tuned on train only: the train coffees each candidate changes were read one by one against GUIDE (`examples`-style
+diffs). That reading found and fixed two faults before any label: L2's lot-size side effect above, and count-only
+options that read as packs (`3 Bag Bonus Pack`) which, once they stopped blocking, let K-cup and cocoa options be
+filled. No validation or test listing was read.
+
+### Candidates and the choice rule (fixed before any label)
+
+Four candidates, `bag_counts` x `count_fill`: `b3+c=multiply+f=0`, `b3+c=block+f=0`, `b3+c=multiply+f=1`,
+`b3+c=block+f=1`. `main` is round 2's rules (`branch2`, unchanged since `a4baff0`).
+
+| Coffees whose grams change | train | validation | test split |
+|---|---|---|---|
+| any candidate against `main` | 39 | 24 | 89 |
+| `multiply` against `block` | 4 | **0** | 43 |
+| `count_fill` on against off | 6 | 3 | 15 |
+
+Validation can't separate `multiply` from `block`, and barely separates `count_fill`. So the rule, written before any
+label: choose on validation totals (accuracy, then the confidently wrong share); where validation ties, choose on
+train totals; where train ties too, the candidate that abstains (`block`, `count_fill` off). The sealed `test3` then
+measures the chosen rules against `main` once.
+
+The existing labels don't help: on round 1's train and validation items every candidate equals `main`, except 13
+validation fills where all four agree with each other. Accuracy is unchanged on train (100.0%) and up 0.2 points on
+validation (95.6% to 95.8%, wrong 1.1% both) for every candidate.
+
+### Sample design: a census of the changed coffees
+
+The change touches about 150 of 30,022 coffees, so a stratified sample of all coffees would hold almost none of them.
+Each set is instead a census of its split's coffees whose grams any candidate changes (one stratum, `D`), and each
+item labels one changed option: the coffee's round-1 labeled option if it changes, else the changed option with the
+lowest `sha256("coffeedata-bag-grams-counts-2026-11-11:" + coffee_id + ":" + variant_id)` (`bag_eval.py changed`).
+Outside `D` every candidate equals `main`, so the paired difference there is exactly 0 and the population figure is
+`D`'s difference times `D`'s share of the split.
+
+| Set | Changed coffees | Stores (largest) | Reuse a reference label | To label |
+|---|---|---|---|---|
+| `train-3` | 39 | 15 (11) | 0 | 39 |
+| `validation-3` | 24 | 7 (17) | 13 (round 1's validation, same option) | 11 |
+| `test3` (after the freeze) | 82 (`count_fill` off) or 83 (on) | 8 (23) | 0 | 82 or 83 |
+
+`test3` is drawn from the test split (the only stores no round has read while tuning) once the rules are frozen and
+committed, leaving out the 6 changed coffees round 1 or `test2` labeled. Its items and both rules' predictions go into
+`SHA256SUMS` before any label, and it is scored once with `--final`, with Wilson intervals on `D` and store-clustered
+ones (8 stores, one with 23 items: the clustered interval is the one to read). `items_train-3.json` and
+`items_validation-3.json` are here; `label_from` marks an item whose reference label is reused, and `packet`, `agree`
+and `settle` skip it or fill it in.
+
+Labeling, as in rounds 1 and 2: labelers A and B independently and blind to each other and to every prediction, and a
+third (C) blind to both, settling only their disagreements. Train and validation are labeled first, then the rules are
+frozen and `test3` drawn and labeled by fresh labelers.

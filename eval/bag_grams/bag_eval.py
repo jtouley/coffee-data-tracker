@@ -6,6 +6,7 @@
     python bag_eval.py masked  <data-dir> <set> <name>
     python bag_eval.py examples <data-dir> train <a> <b> [N]   # train only
     python bag_eval.py sample  <data-dir> <set> main <branch>
+    python bag_eval.py changed <data-dir> <set> main <candidate>...   # round 3: every coffee the candidates change
     python bag_eval.py seal    <data-dir> <set> main <branch>
     python bag_eval.py fixture <data-dir> <out.jsonl> train validation test
     python bag_eval.py packet  <data-dir> <set>
@@ -114,6 +115,19 @@ POPULATION_SET = {"test2": "test"}
 SALT2 = "coffeedata-bag-grams-test2-2026-11-11"
 SAMPLE["test2"] = {"F": 200, "C": 100, "A": 100, "K": 100}
 
+# Round 3 (bag counts, review M1 of #136): the change touches about a hundred coffees, so its sets are a census of
+# the coffees whose grams it changes (stratum D), one changed option each, rather than a stratified sample of all.
+# train-3 and validation-3 take every changed coffee of their split; test3, drawn only after the rules are frozen,
+# every changed coffee of the test split that no earlier round labeled.
+POPULATION_SET |= {"train-3": "train", "validation-3": "validation", "test3": "test"}
+SALT3 = "coffeedata-bag-grams-counts-2026-11-11"
+TEST_SETS = ("test", "test2", "test3")
+
+
+def item_vid(it: dict, r: dict) -> str:
+    """The option an item labels: its own (round 3 picks a changed one), else the coffee's labeled option."""
+    return it.get("variant_id") or r["item_variant_id"]
+
 
 def load(data: Path, split: str | None = None) -> list[dict]:
     rows = json.loads((data / "population.json").read_text())
@@ -126,7 +140,8 @@ def cmd_predict(data: Path, name: str) -> None:
     (the branch), else the stored grams (main: dbt reads the crawler's grams as stored).
 
     A candidate's settings ride in its name, for comparing levers on train and choosing on validation:
-    "<label>+u=<standard|drop|keep>+s=<title.tags.body.handle>" (the defaults are product_grams' own)."""
+    "<label>+u=<standard|drop|keep>+s=<title.tags.body.handle>+c=<multiply|block>+f=<0|1>" (the defaults are
+    product_grams' own)."""
     try:
         from coffeedata.bag_weight import product_grams
     except ImportError:
@@ -138,6 +153,10 @@ def cmd_predict(data: Path, name: str) -> None:
             opts["unsupported"] = v
         elif k == "s":
             opts["sources"] = tuple(x for x in v.split(".") if x)
+        elif k == "c":
+            opts["bag_counts"] = v
+        elif k == "f":
+            opts["count_fill"] = v == "1"
     out = {}
     for r in load(data):
         stored = [v["grams"] for v in r["variants"]]
@@ -284,11 +303,79 @@ def cmd_sample(data: Path, split: str, main: str, branch: str) -> None:
     print(split, "strata", sizes, "drawn", Counter(d["stratum"] for d in drawn))
 
 
+def cmd_changed(data: Path, split: str, main: str, candidates: list[str]) -> None:
+    """Round 3's census: every coffee of the set's split whose grams any candidate changes against main (stratum D),
+    each with one changed option to label: its round-1 labeled option if that one changes, else the changed option
+    with the lowest sha256(SALT3:coffee_id:variant_id). test3 leaves out every coffee an earlier round labeled, and
+    is drawn only once the rules are frozen (one candidate). Writes items_<set>.json here (ids only)."""
+    here = Path(__file__).parent
+    if split == "test3" and len(candidates) != 1:
+        sys.exit("test3 is drawn for the frozen rules only: one candidate")
+    pm, pcs = pred(data, main), [pred(data, c) for c in candidates]
+    # an earlier round's reference label for the same option is reused, not labeled again ("label_from")
+    earlier = POPULATION_SET[split] if split != "test3" else None
+    reuse: dict[str, str] = {}
+    if earlier:
+        ref = json.loads((here / "labels" / f"labels_ref_{earlier}.json").read_text())
+        reuse = {
+            it["coffee_id"]: earlier
+            for it in json.loads((here / f"items_{earlier}.json").read_text())["items"]
+        }
+        reuse = {c: e for c, e in reuse.items() if c in ref}
+    used = set()
+    if split == "test3":
+        for old in ("test", "test2"):
+            used |= {it["coffee_id"] for it in json.loads((here / f"items_{old}.json").read_text())["items"]}
+    drawn, left_out = [], 0
+    for r in load(data, split):
+        cid = r["coffee_id"]
+        changed = [
+            v["variant_id"]
+            for v in r["variants"]
+            if any(pc[cid].get(v["variant_id"]) != pm[cid].get(v["variant_id"]) for pc in pcs)
+        ]
+        if not changed:
+            continue
+        if cid in used:
+            left_out += 1
+            continue
+        vid = (
+            r["item_variant_id"]
+            if r["item_variant_id"] in changed
+            else min(changed, key=lambda v: h(f"{SALT3}:{cid}:{v}"))
+        )
+        d = {"coffee_id": cid, "stratum": "D", "store": r["group"], "variant_id": vid}
+        if cid in reuse and vid == r["item_variant_id"]:
+            d["label_from"] = reuse[cid]
+        drawn.append(d)
+    (here / f"items_{split}.json").write_text(
+        json.dumps(
+            {
+                "set": split,
+                "stratum_sizes": {"D": len(drawn)},
+                "items": sorted(drawn, key=lambda d: d["coffee_id"]),
+            },
+            indent=1,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+    st = Counter(d["store"] for d in drawn)
+    print(
+        f"{split}: {len(drawn)} changed coffees from {len(st)} stores (largest {max(st.values(), default=0)}); "
+        f"{left_out} left out as labeled before; {sum('label_from' in d for d in drawn)} reuse an earlier label, "
+        f"{sum('label_from' not in d for d in drawn)} to label"
+    )
+
+
 FIXTURE_SETS = {
     "train": "train",
     "validation": "validation",
     "test": "test-2026-11-10",
     "test2": "test-2026-11-11",
+    "train-3": "train-3",
+    "validation-3": "validation-3",
+    "test3": "test3",
 }
 
 
@@ -319,7 +406,7 @@ def cmd_fixture(data: Path, out: Path, sets: list[str]) -> None:
                     "coffee_id": r["coffee_id"],
                     "stratum": it["stratum"],
                     "label": labels[it["coffee_id"]],
-                    "item": r["item_variant_id"],
+                    "item": item_vid(it, r),
                     "title": r["title"],
                     "body": body,
                     "tags": r["tags"],
@@ -338,9 +425,7 @@ def cmd_seal(data: Path, split: str, names: list[str]) -> None:
     pop = {r["coffee_id"]: r for r in load(data, split)}
     for name in names:
         pr = pred(data, name)
-        out = {
-            it["coffee_id"]: pr[it["coffee_id"]].get(pop[it["coffee_id"]]["item_variant_id"]) for it in items
-        }
+        out = {it["coffee_id"]: pr[it["coffee_id"]].get(item_vid(it, pop[it["coffee_id"]])) for it in items}
         p = Path(__file__).parent / f"pred_{name}_{split}.json"
         p.write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
         print(p.name, len(out))
@@ -353,6 +438,8 @@ def cmd_packet(data: Path, split: str) -> None:
     pop = {r["coffee_id"]: r for r in load(data, split)}
     out = []
     for it in items:
+        if "label_from" in it:
+            continue  # labeled in an earlier round, for this same option
         r = pop[it["coffee_id"]]
         out.append(
             {
@@ -372,7 +459,7 @@ def cmd_packet(data: Path, split: str) -> None:
                     }
                     for v in r["variants"]
                 ],
-                "label_this_option": r["item_variant_id"],
+                "label_this_option": item_vid(it, r),
             }
         )
     random.Random(f"{SALT}:packet:{split}").shuffle(out)
@@ -395,6 +482,7 @@ def cmd_agree(split: str, a: Path, b: Path) -> None:
     items = [
         it["coffee_id"]
         for it in json.loads((Path(__file__).parent / f"items_{split}.json").read_text())["items"]
+        if "label_from" not in it
     ]
     missing = [i for i in items if i not in la or i not in lb]
     if missing:
@@ -411,6 +499,12 @@ def cmd_settle(split: str, a: Path, b: Path, c: Path, out: Path) -> None:
     """The reference: A where A and B agree, else C (the tiebreak labeled only the disagreements)."""
     la, lb, lc = (json.loads(p.read_text()) for p in (a, b, c))
     ref = {}
+    here = Path(__file__).parent
+    for it in json.loads((here / f"items_{split}.json").read_text())["items"]:
+        if "label_from" in it:  # an earlier round's reference label for the same option
+            ref[it["coffee_id"]] = json.loads(
+                (here / "labels" / f"labels_ref_{it['label_from']}.json").read_text()
+            )[it["coffee_id"]]
     for i in la:
         if same(la[i], lb[i]):
             ref[i] = la[i]
@@ -497,21 +591,26 @@ def cmd_score(data: Path, split: str, labels_file: Path, main: str, branch: str,
     intervals; the stratum-weighted accuracy (right + abstain_ok), wrong share and covered-right share, each with a
     normal-approximation 95% interval and a store-clustered bootstrap one; and the paired difference branch - main
     on the same items, with both intervals. Items labeled "unclear" are left out and counted."""
-    if split in ("test", "test2") and not final:
+    if split in TEST_SETS and not final:
         sys.exit("the test set is scored once, with --final")
     meta = json.loads((Path(__file__).parent / f"items_{split}.json").read_text())
     labels = json.loads(labels_file.read_text())
     sizes, items = meta["stratum_sizes"], meta["items"]
     pop = {r["coffee_id"]: r for r in load(data, split)}
     store = {it["coffee_id"]: it.get("store") or pop[it["coffee_id"]]["group"] for it in items}
+    vid = {it["coffee_id"]: item_vid(it, pop[it["coffee_id"]]) for it in items}
     preds = {name: pred(data, name) for name in (main, branch)}
     for name, pr in preds.items():  # the sealed predictions must be the ones scored
         sealed = Path(__file__).parent / f"pred_{name}_{split}.json"
         if sealed.exists():
             want = json.loads(sealed.read_text())
-            got = {i: pr[i].get(pop[i]["item_variant_id"]) for i in want}
+            got = {i: pr[i].get(vid[i]) for i in want}
             if got != want:
                 sys.exit(f"{name}'s predictions differ from {sealed.name}")
+        elif (
+            split in TEST_SETS
+        ):  # review L4: a test set is scored only against rules sealed before its labels
+            sys.exit(f"{sealed.name} is missing: seal {name} before scoring {split}")
     res: dict[str, dict[str, list[str]]] = {name: defaultdict(list) for name in preds}
     stores: dict[str, list[str]] = defaultdict(list)
     unclear: Counter = Counter()
@@ -522,7 +621,7 @@ def cmd_score(data: Path, split: str, labels_file: Path, main: str, branch: str,
             continue
         stores[it["stratum"]].append(store[it["coffee_id"]])
         for name, pr in preds.items():
-            g = pr[it["coffee_id"]].get(pop[it["coffee_id"]]["item_variant_id"])
+            g = pr[it["coffee_id"]].get(vid[it["coffee_id"]])
             res[name][it["stratum"]].append(outcome(g, lab))
     print(
         f"{split}: {len(items)} items, unclear {sum(unclear.values())} {dict(unclear)}; stratum sizes {sizes}"
@@ -584,6 +683,8 @@ def main() -> None:
         cmd_examples(data, a[2], a[3], a[4], int(a[5]) if len(a) > 5 else 40)
     elif cmd == "sample":
         cmd_sample(data, a[2], a[3], a[4])
+    elif cmd == "changed":
+        cmd_changed(data, a[2], a[3], a[4:])
     elif cmd == "fixture":
         cmd_fixture(data, Path(a[2]), a[3:])
     elif cmd == "seal":

@@ -75,7 +75,27 @@ from coffeedata.bag_weight import body_grams, product_grams, text_grams
         ("Cold Brew Concentrate 32 oz", None),
         ("3 Month Gift Subscription 12oz", None),
         ("12 fl oz", None),
-        ("1,000g", None),
+        # a thousands comma is one number (review L2 of #136)
+        ("1,000g", 1000),
+        ("2,000 g", 2000),
+        # a count written as "N bags" is a count (review M1 of #136): the total
+        ("Two 12 oz bags", 680),
+        ("2 Bags - 12 oz", 680),
+        ("12oz (2 bags)", 680),
+        ("12 oz - 2 bags", 680),
+        ("12 oz / 2 Bags", 680),
+        ("(2) 12 oz. bags", 680),
+        ("Two 12 oz. Bags / Every Week / Three Months", 680),
+        ("Three 12 oz. Bags / Every 4 Weeks / Six Months", 1021),
+        ("Default 12oz Whole Beans (Made in Brooklyn since 1972) x 2 Bags", 680),
+        # ... one bag is a bag, and a count already read isn't read twice
+        ("1 Bag (12 oz)", 340),
+        ("One 12 oz. Bag / Every Week", 340),
+        ("2x 12oz Whole Bean (for subscription, to select two bags)", 680),
+        # ... a count without a size gives no weight; two counts read two ways
+        ("Whole Bean / 5 bags", None),
+        ("Ground / 2 Bags | 5% off", None),
+        ("2 bags of 12oz or 3 bags", None),
     ],
 )
 def test_option_titles(text, grams):
@@ -99,6 +119,12 @@ def test_option_titles(text, grams):
         ("12oz Latte", None),
         ("Inti Honey - 20lb batch", None),
         ("Espresso Double Shot 2oz", None),
+        # review M1 of #136: "N bags" anywhere in a title is a count of its bags
+        ("Segafredo Intermezzo Whole Beans Coffee 2 Bags X 17.6oz/500g", 998),
+        ("Gran Crema Espresso Beans, Two Bags (2.2 lb each)", 1996),
+        ("Two 10oz Bags", 567),
+        ("Espresso Roast 5lb (Made in Brooklyn NY since 1972) x 2 Bags", 4536),
+        ("Espresso Beans (GOLD Label/2 bags)", None),
     ],
 )
 def test_product_titles(title, grams):
@@ -126,6 +152,11 @@ def test_product_titles(title, grams):
         ("Orders over 2 pounds receive best shipping rate.", None),
         ("each athlete runs with a 20-30 pound ruck sack", None),
         ("12oz. Brewed Coffee", None),
+        ("Two 12 oz bags of specialty grade coffee, roasted-to-order", None),
+        ("Nationwide Customers- you will receive (2) 12 oz. bags", None),
+        # a weight outside a bag's range is a lot or a harvest, not a bag: the bag's own line still counts
+        ("The first lot was 32 boxes (roughly - 2,000 lbs).\n12 ounce/ 340 grams", 340),
+        ("Production is 12 million 70-kilo (154 lbs) bags a year.\nColombia (12oz)", 340),
         # a decaf's Swiss Water Process is not brewing water; "Royal Select" is not a choice of sizes
         ("12oz bag of Colombia Royal Select Swiss Water Process Decaf.", 340),
         ("A 1.5 oz packet of ground Breakfast Blend coffee pre-measured for 8-10 cups of coffee.", 43),
@@ -208,6 +239,48 @@ def test_tags_and_handle_fill_only_when_the_title_states_no_weight():
     # a handle copied from another product's page is not read
     assert product_grams("French Roast", "", [("", 20.0, None)], handle="italian-roast-12oz") == [None]
     assert product_grams("French Roast", "", [("", 20.0, None)], handle="copy-of-french-roast-12oz") == [None]
+
+
+def test_options_that_give_only_a_count_of_bags():
+    # review M1 of #136: "3 bags" of no stated size is blank, never one bag's weight; the other options read as usual
+    opts = [("1 bag", 15.99, None), ("3 bags", 39.89, None), ("5 bags", 62.99, None)]
+    assert product_grams("Organic Colombian Ground -12oz", "", opts) == [340, None, None]
+    opts = [("Drip Grind / 1 Bag", 16.99, 340), ("Drip Grind / 5 bags", 60.0, 340)]
+    assert product_grams("Stay Awake", "12 oz bag", opts) == [340, None]
+    # with count_fill, the counts take the one bag weight the product states when the prices per bag agree
+    opts = [("1 bag", 15.99, None), ("3 bags", 39.89, None), ("5 bags", 62.99, None)]
+    assert product_grams("Organic Colombian Ground -12oz", "", opts, count_fill=True) == [340, 1020, 1700]
+    opts = [("1 Bag", 10.0, None), ("2 Bags", 60.0, None)]
+    assert product_grams("Kenya 12oz", "", opts, count_fill=True) == [340, None]
+    # a count that is also a pack or a case stays blocked, and so does the rest of the listing
+    opts = [("Sumatra / Whole Bean", 15.0, None), ("3 Bag Bonus Pack / Whole Bean", 40.0, None)]
+    assert product_grams("All That Dance", "12 oz bags", opts, count_fill=True) == [None, None]
+    assert product_grams("Kenya 12oz", "", [("1 Case (12 Bags)", 200.0, 454)]) == [None]
+
+
+def test_a_count_away_from_the_weight_multiplies_or_abstains():
+    title = "Original Espresso Roast 12oz Whole Beans (Made in Brooklyn since 1972) x 2 Bags"
+    assert product_grams(title, "", [("Default Title", 39.95, None)]) == [680]
+    assert product_grams(title, "", [("Default Title", 39.95, None)], bag_counts="block") == [None]
+
+
+def test_review_l1_l3_of_136():
+    # L1: a slug decimal in the handle is a decimal, as in an option
+    assert product_grams(
+        "Colombia Huila", "", [("Whole Bean", 10.0, None)], handle="colombia-huila-0-5-lb"
+    ) == [227]
+    assert product_grams(
+        "Colombia Huila", "", [("Whole Bean", 10.0, None)], handle="colombia-huila-2-5-lb"
+    ) == [1134]
+    # L2: a stored "1,000g" is the weight the option states
+    assert product_grams("Ethiopia", None, [("1,000g", 20.0, 1000)]) == [1000]
+    # L3: a tag about shipping is not the bag's size
+    assert product_grams(
+        "Ethiopia", None, [("Whole Bean", 20.0, None)], tags=["Free shipping over 2 lb"]
+    ) == [None]
+    assert product_grams("Ethiopia", None, [("Whole Bean", 20.0, None)], tags=["Free shipping", "12oz"]) == [
+        340
+    ]
 
 
 def test_long_descriptions_stay_linear():

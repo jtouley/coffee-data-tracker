@@ -8,7 +8,8 @@ shipping weight). dbt's stg_variant_grams runs `product_grams` over each coffee'
 dim_coffee prices bags with its grams instead of the stored ones.
 
 The grams are what the option's price buys: a pack with an explicit count is its total ("4 x 12 oz", "12oz - 3
-Pack", "Case of 6 - 10 oz. bags", "48/2 oz" portion packs), and a subscription option is one delivery. The rules
+Pack", "Case of 6 - 10 oz. bags", "48/2 oz" portion packs, "2 Bags - 12 oz", "Two 12 oz bags", "... 12oz ... x 2
+Bags"), and a subscription option is one delivery. The rules
 abstain rather than guess: a weight is used only when the text states one weight (or several that agree), nothing
 in it says the listing is a pack without a count, a bundle, pods, a drink or a choice of sizes, and, for a weight the
 product title, tags or description states, the options without a weight of their own cost the same (so size isn't
@@ -31,24 +32,31 @@ SAME_PRICE = 1.15
 AGREE = 0.02
 # The most bags a count multiplies by ("Case Pack (8)", "PP 42ct", "48/2 oz").
 MAX_COUNT = 99
+# Options that give only a count of bags ("1 Bag", "2 Bags | 5% off") are taken to be one bag size when their prices
+# per bag differ by no more than this share (stores discount the larger counts).
+COUNT_PRICE = 1.5
 
 _FRACTIONS = {2, 3, 4, 8, 16}
 _NUM = (
     r"(?P<num>(?P<whole>\d+)[\s-]+(?P<fn>\d{1,2})/(?P<fd>\d{1,2})"  # 1 1/2, 1-1/3
     r"|(?P<n>\d{1,2})/(?P<d>\d{1,2}(?:\.\d+)?)"  # 1/2; or a count, "48/2 oz", "6/12 oz."
     r"|(?P<sa>\d)-(?P<sb>\d)(?=-)"  # slug decimals: "0-5-lb", "2-2-pounds"
+    r"|\d{1,2},\d{3}(?![\d,])"  # a thousands comma: "1,000g"
     r"|\d+(?:\.\d+)?|\.\d+"
     r"|[½¼¾]|half|quarter|one|two|three|four|five)"
 )
 _UNIT = r"(?P<unit>kilo(?:gram)?s?|kgs?|lbs?|pounds?|ounces?|ozs?|onz|grams?|grs?|gms?|g)(?![a-z])"
 # A number, then a unit ("12 oz", "1-lb", "12_ounces", "5lb15"), or "#" (5# and "2.5 # bag" are pounds; "#5" is
-# not). A "/" or "," may come right before the number ("Whole Bean/12oz", "Whole Bean,1lb"), but not a digit's
-# thousands comma ("1,000g") or a decimal point.
+# not). A "/" or "," may come right before the number ("Whole Bean/12oz", "Whole Bean,1lb"), but not inside a
+# number ("1,000g" is read whole) or after a decimal point.
 _WEIGHT = re.compile(rf"(?<![\w.])(?<!\d,){_NUM}(?:\s*[-_]?\s*{_UNIT}|\s?(?P<hash>#)(?![\w#]))", re.I)
 _FACTOR = {"k": 1000.0, "l": 453.592, "p": 453.592, "o": 28.3495, "g": 1.0, "#": 453.592}
 _WORDS = {"½": 0.5, "¼": 0.25, "¾": 0.75, "half": 0.5, "quarter": 0.25, "one": 1, "two": 2, "three": 3}
 _WORDS |= {"four": 4, "five": 5}
-_COUNT_WORDS = {"two": 2, "three": 3, "four": 4, "five": 5, "six": 6}
+_COUNT_WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6}
+_COUNT_WORDS |= {"seven": 7, "eight": 8, "nine": 9, "ten": 10, "twelve": 12}
+# A count of bags: a number or a number word, then "bags" ("2 Bags", "Two bags", "5-bags").
+_N = r"(\d{1,2}|one|two|three|four|five|six|seven|eight|nine|ten|twelve)"
 
 # An explicit count of bags, right before a weight: "4 x 12 oz", "20/2.00oz", "8 / 1 lb", "Case of 6 - 10 oz",
 # "6 count case (12 oz", "Variety 3 Pack - 12oz", "(TWO 16 oz)". A grind or blend number isn't one ("No. 4 / 5 lbs").
@@ -58,7 +66,12 @@ _COUNT_BEFORE = [
     re.compile(r"\b(?:case|pack|box)\s+of\s+(\d{1,3})\s*[-–:,(]*\s*$", re.I),
     re.compile(r"(?<![\w.])(\d{1,3})\s*[-\s]?(?:count|ct|packs?|pk)\s*(?:case|box)?\s*[-–:,(]*\s*$", re.I),
     re.compile(r"\(\s*(two|three|four|five|six)\s+$", re.I),
+    # "2 Bags - 12 oz", "2 Bags X 17.6oz", "Two Bags (2.2 lb each)", "3 bags of 12oz", "2 bags / 12 oz" (review M1)
+    re.compile(rf"(?<![\w.]){_N}[\s-]*bags?\s*(?:of\s+|[-–:,(/x×]\s*)*$", re.I),
 ]
+# A count right before a weight that "bags" follows: "Two 12 oz bags", "(2) 12 oz. bags" (review M1).
+_COUNT_BEFORE_BAGS = re.compile(rf"(?:(?<![\w.]){_N}|\(\s*{_N}\s*\))\s+$", re.I)
+_BAGS_NEXT = re.compile(r"^\.?\s*bags\b", re.I)
 # ... and right after it: "12oz x 2", "10 oz Tin x 2", "12oz - 3 Pack", "1.5 oz 12 Pack", "2.5 oz, PP 42ct",
 # "5lbs Case Pack (8)", "12 oz (pack of 6)", "12 oz bags x 3 CT".
 _COUNT_AFTER = [
@@ -66,7 +79,12 @@ _COUNT_AFTER = [
     re.compile(r"^[\s.,\-–(]*(?:bags?\s*)?(?:pp\s*)?(\d{1,3})\s*-?\s*(?:packs?|pk|ct|count)\b", re.I),
     re.compile(r"^\.?\s*(?:bags?\s*)?case\s*pack\s*\(\s*(\d{1,3})\s*\)", re.I),
     re.compile(r"^\.?\s*(?:bags?\s*)?[(\[,\-–]?\s*(?:pack|case|box|bundle)\s+of\s+(\d{1,3})\b", re.I),
+    # "12oz (2 bags)", "12 oz - 2 bags", "12 oz / 2 Bags" (review M1)
+    re.compile(rf"^\.?\s*(?:bags?\s*)?[(\[,\-–/]?\s*(?:x\s*)?{_N}[\s-]*bags?\b", re.I),
 ]
+# A count of bags anywhere in a title or an option, away from any weight: "... 12oz Whole Beans (Made in Brooklyn
+# since 1972) x 2 Bags", "Whole Bean / 5 bags", "GOLD Label/2 bags" (review M1). One bag ("1 Bag") isn't a pack.
+_BAG_COUNT = re.compile(rf"(?<![\w.])(?:x\s*)?{_N}[\s-]*bags?\b", re.I)
 _TIMES_GLUED = re.compile(r"(\d)\s*([x×])(?=\d)", re.I)
 # "sold by the pound", "Blend by the lb.": one pound.
 _BY_THE_POUND = re.compile(r"\bby\s+the\s+(?:pound|lb)\b\.?", re.I)
@@ -140,6 +158,8 @@ _STANDARD = sorted(
 )
 
 Unsupported = Literal["standard", "drop", "keep"]
+# A count of bags away from the weight ("12oz Whole Beans ... x 2 Bags"): multiply the weight, or abstain.
+BagCounts = Literal["multiply", "block"]
 
 
 class _Ambiguous(Exception):
@@ -180,7 +200,7 @@ def _value(m: re.Match[str]) -> tuple[float, int]:
     elif m.group("sa"):
         num = int(m.group("sa")) + int(m.group("sb")) / 10
     else:
-        raw = m.group("num").lower()
+        raw = m.group("num").lower().replace(",", "")
         num = _WORDS[raw] if raw in _WORDS else float(raw)
     return num * factor, count
 
@@ -189,11 +209,26 @@ def _count(text: str, start: int, end: int) -> int | None:
     before, after = text[max(0, start - 30) : start], text[end : end + 30]
     for p in _COUNT_BEFORE:
         if m := p.search(before):
-            return _COUNT_WORDS.get(m.group(1).lower()) or int(m.group(1))
+            return _as_count(m.group(1))
+    if _BAGS_NEXT.search(after) and (m := _COUNT_BEFORE_BAGS.search(before)):
+        return _as_count(m.group(1) or m.group(2))
     for p in _COUNT_AFTER:
         if m := p.search(after):
-            return int(m.group(1))
+            return _as_count(m.group(1))
     return None
+
+
+def _as_count(word: str) -> int:
+    return _COUNT_WORDS.get(word.lower()) or int(word)
+
+
+def bag_count(text: str | None) -> int | None:
+    """The one count of bags a title or an option states away from a weight ("x 2 Bags", "Whole Bean / 5 bags"),
+    else None; two different counts are ambiguous."""
+    counts = {_as_count(m.group(1)) for m in _BAG_COUNT.finditer(_norm(text))}
+    if len(counts) > 1:
+        raise _Ambiguous(text or "")
+    return counts.pop() if counts else None
 
 
 def mentions(text: str) -> list[Mention]:
@@ -247,15 +282,29 @@ class Reading(NamedTuple):
     # The text says the price buys something other than one weight of coffee with no total given (a pack without a
     # count, a bundle, pods, a drink, a weight that reads two ways): no weight from elsewhere fills it either.
     blocked: bool
+    # A count of bags the text gives without a weight ("1 Bag", "Whole Bean / 5 bags"): the bag size must come from
+    # elsewhere.
+    bags: int | None = None
 
 
-def read(text: str | None, where: Literal["option", "title", "tags", "handle"] = "title") -> Reading:
+# A slug decimal in a URL handle ("colombia-0-5-lb"): read as "0.5" before the hyphens become spaces (review L1).
+_SLUG_DECIMAL = re.compile(rf"(?<![\w.])(\d)-(\d)(?=-{_UNIT})", re.I)
+
+
+def read(
+    text: str | None,
+    where: Literal["option", "title", "tags", "handle"] = "title",
+    bag_counts: BagCounts = "multiply",
+) -> Reading:
     """The one weight a title, an option, a tag or a URL handle states."""
-    text = (text or "").replace("-", " ") if where == "handle" else (text or "")
+    if where == "handle":
+        text = _SLUG_DECIMAL.sub(r"\1.\2", text or "").replace("-", " ")
+    text = text or ""
     if not text.strip():
         return Reading(None, False)
     try:
         ms = mentions(text)
+        n = bag_count(text)
     except _Ambiguous:
         return Reading(None, True)
     stops = (
@@ -266,6 +315,15 @@ def read(text: str | None, where: Literal["option", "title", "tags", "handle"] =
     )
     if any(p.search(text) for p in stops):
         return Reading(None, True)
+    if n is not None and not any(m.counted for m in ms):
+        if not ms:
+            # a count without a size: one bag is a bag; more is a pack whose size comes from elsewhere, if at all.
+            # A count that is also a pack or a case ("3 Bag Bonus Pack", "1 Case (12 Bags)") stays blocked.
+            return Reading(None, True) if _PACK.search(text) else Reading(None, n > 1, n)
+        if n > 1:
+            if bag_counts != "multiply":
+                return Reading(None, True)
+            ms = [m._replace(grams=m.bag * n, counted=True) for m in ms]
     if _PACK.search(text) and not any(m.counted for m in ms):
         return Reading(None, True)
     if _PACKED_AS.search(text) and ms:
@@ -290,6 +348,8 @@ def body_grams(text: str) -> int | None:
     except _Ambiguous:
         return None
     kept = []
+    # a weight outside a bag's range is a lot or a harvest ("roughly 2,000 lbs"), not a bag: not read at all
+    ms = [m for m in ms if MIN_G <= m.grams <= MAX_G]
     for m in ms:
         # the mention's own line, up to 40 characters either side
         near = text[
@@ -297,6 +357,8 @@ def body_grams(text: str) -> int | None:
         ]
         if m.counted or any(p.search(near) for p in (_PACK, _NOT_BEANS, _DRINK, _LOT)):
             return None
+        if any(_as_count(b.group(1)) > 1 for b in _BAG_COUNT.finditer(near)):
+            return None  # "ships as 2 bags": a pack
         if _SEVERAL_SIZES.search(near) and not _ONLY.search(near):
             return None
         # brewing words right around the mention: "per 12oz of liquid", "20 g of coffee with 320 g of water"
@@ -309,13 +371,15 @@ def body_grams(text: str) -> int | None:
     return _one(kept)
 
 
-def tags_grams(tags: Sequence[str] | None) -> int | None:
+def tags_grams(tags: Sequence[str] | None, bag_counts: BagCounts = "multiply") -> int | None:
     """The one size the tags name: every short tag that states a weight must state the same one."""
     values = []
     for t in tags or []:
         if len(t or "") > _TAG_MAX:
             continue
-        r = read(t, "tags")
+        if _LOT.search(t or ""):
+            continue  # "Free shipping over 2 lb": not this bag's size (review L3)
+        r = read(t, "tags", bag_counts)
         if r.blocked:
             return None
         if r.grams is not None:
@@ -342,6 +406,8 @@ def product_grams(
     handle: str | None = None,
     unsupported: Unsupported = "drop",
     sources: Sequence[str] = ("title", "tags", "body", "handle"),
+    bag_counts: BagCounts = "multiply",
+    count_fill: bool = False,
 ) -> list[int | None]:
     """Each variant's grams, from (option title, price, stored grams) and the product's title, tags, description
     and URL handle.
@@ -358,13 +424,21 @@ def product_grams(
        listing states that weight anywhere (title, description, tags, another option); else, by `unsupported`,
        dropped ("drop", the measured choice: such weights are often shipping weights), kept when it is a standard
        bag size ("standard"), or always kept ("keep"). eval/bag_grams compares them.
-    `sources` is the step-2 order; eval/bag_grams compares subsets of it."""
+    A count of bags is read like any other count ("2 Bags - 12 oz" is 680). An option that gives only a count ("1
+    Bag", "Whole Bean / 5 bags") with `count_fill` takes that many of the one bag weight the product states, when
+    the options' prices per bag agree (within COUNT_PRICE); without it, or failing that, more than one bag leaves
+    that option blank (the other options are read as usual).
+    `sources` is the step-2 order; `bag_counts` and `count_fill` are levers eval/bag_grams compares."""
     out: list[int | None] = []
     blocked = False
     elsewhere: set[int] = set()
-    for i, (vt, _, stored) in enumerate(variants):
-        r = read(vt, "option")
-        if r.grams is not None:
+    readings = [read(vt, "option", bag_counts) for vt, _, _ in variants]
+    # options that give only a count of bags ("1 Bag", "Whole Bean / 5 bags"): settled after the others
+    counts = {i: r.bags for i, r in enumerate(readings) if r.bags is not None and r.grams is None}
+    for i, ((vt, _, stored), r) in enumerate(zip(variants, readings, strict=True)):
+        if i in counts:
+            out.append(None)
+        elif r.grams is not None:
             out.append(stored if stored is not None and _close(r.grams, stored) else r.grams)
         elif r.blocked:
             out.append(None)
@@ -378,13 +452,28 @@ def product_grams(
                 elsewhere.add(i)
     if not variants:
         return out
-    own = [i for i, g in enumerate(out) if g is not None and i not in elsewhere]
-    need = [i for i, g in enumerate(out) if g is None or i in elsewhere]
+    if counts:
+        bag = None
+        if count_fill and not blocked:
+            bag = _count_bag(title, body_text, tags, handle, sources, variants, counts, bag_counts)
+        for i, n in counts.items():
+            if bag is not None:
+                total = round(bag * n)
+                out[i] = total if MIN_G <= total <= MAX_G else None
+            elif n == 1 and variants[i][2] is not None:
+                out[i] = variants[i][2]  # one bag of no stated size: like any other option from here on
+                elsewhere.add(i)
+        if bag is None:
+            # more than one bag of no known size stays blank (and isn't filled with one bag's weight); the other
+            # options are unaffected
+            counts = {i: n for i, n in counts.items() if n > 1}
+    own = [i for i, g in enumerate(out) if g is not None and i not in elsewhere and i not in counts]
+    need = [i for i, g in enumerate(out) if (g is None or i in elsewhere) and i not in counts]
     fill = None
     if need and not own and not blocked:
         prices = [p for p in (variants[i][1] for i in need) if p is not None and p > 0]
         if prices and max(prices) <= SAME_PRICE * min(prices):
-            fill = _product_weight(title, body_text, tags, handle, sources)
+            fill = _product_weight(title, body_text, tags, handle, sources, bag_counts)
     stated = None
     for i in need:
         if fill is not None:
@@ -402,6 +491,30 @@ def product_grams(
             can = _CAN.search(variants[i][0] or "") or _CAN.search(title or "")
             out[i] = g if keep and not blocked and not (can and not supported) else None
     return out
+
+
+def _count_bag(
+    title: str | None,
+    body_text: str | None,
+    tags: Sequence[str] | None,
+    handle: str | None,
+    sources: Sequence[str],
+    variants: Sequence[tuple[str | None, float | None, int | None]],
+    counts: dict[int, int],
+    bag_counts: BagCounts = "multiply",
+) -> int | None:
+    """One bag's weight for options that give only a count ("1 Bag", "3 bags"): the one weight the product states,
+    when every such option has a price and their prices per bag agree within COUNT_PRICE (so they are counts of one
+    bag size). None when the product's own weight is already a count ("12oz x 2 Bags")."""
+    per = [p / n for p, n in ((variants[i][1], n) for i, n in counts.items()) if p and n >= 1]
+    if len(per) != len(counts) or min(per) <= 0 or max(per) > COUNT_PRICE * min(per):
+        return None
+    try:
+        if bag_count(title) or any(m.counted for m in mentions(title or "")):
+            return None
+    except _Ambiguous:
+        return None
+    return _product_weight(title, body_text, tags, handle, sources, bag_counts)
 
 
 def _stated(
@@ -423,10 +536,11 @@ def _product_weight(
     tags: Sequence[str] | None,
     handle: str | None,
     sources: Sequence[str],
+    bag_counts: BagCounts = "multiply",
 ) -> int | None:
     """The one weight the product as a whole states, from the first source in `sources` that states one; None when a
     source reads as a pack, pods or a drink."""
-    t = read(title, "title")
+    t = read(title, "title", bag_counts)
     if t.blocked:
         return None
     if tags and any(
@@ -437,12 +551,12 @@ def _product_weight(
     for s in sources:
         if s == "title" and t.grams is not None:
             return t.grams
-        if s == "tags" and not title_states and (g := tags_grams(tags)) is not None:
+        if s == "tags" and not title_states and (g := tags_grams(tags, bag_counts)) is not None:
             return g
         if s == "body" and not title_states and (g := body_grams(body_text or "")) is not None:
             return g
         if s == "handle" and not title_states and _handle_is_title(handle, title):
-            h = read(handle, "handle")
+            h = read(handle, "handle", bag_counts)
             if h.blocked:
                 return None
             if h.grams is not None:
