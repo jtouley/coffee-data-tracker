@@ -328,6 +328,41 @@ models:
           The week counts in history: accepted or pinned by an override, partial, or not suspect; never when rejected.
   - name: stg_builds
     description: One row per recorded build and whether it passed; the one definition of a passing build.
+  - name: stg_snapshots
+    description: Every product a store listed at a counted fetch, with prices in USD only and tags decoded.
+    columns:
+      - name: input_hash
+        description: "Everything the classifier and the extraction rules read (macro product_input_hash)."
+      - name: grams_key
+        description: >-
+          Everything the bag-weight rules read (macro variant_grams_key): the title, description hash, raw tags,
+          handle, and each option's title, stated price and stored grams. stg_variant_grams runs once per value.
+  - name: stg_variant_grams_inputs
+    description: >-
+      One row per distinct input of the bag-weight rules (grams_key) among each coffee's latest run: what
+      coffeedata.bag_weight reads. Its grain differs from stg_product_inputs (input_hash), which leaves out the
+      options' titles and prices, the tags' order and the handle.
+    columns:
+      - name: grams_key
+        description: "stg_snapshots.grams_key (macro variant_grams_key)."
+        data_tests: [unique, not_null]
+      - name: variants
+        description: "Each option's title, price as the store states it, and the grams the crawler stored."
+  - name: stg_variant_grams
+    description: >-
+      The bag-weight rules (coffeedata.bag_weight), run once per stg_variant_grams_inputs row: each variant's
+      grams, in the snapshot's order. dim_coffee prices bags with them. variant_grams_are_valid checks the lengths
+      and the range.
+    columns:
+      - name: grams_key
+        data_tests: [unique, not_null]
+      - name: options
+        description: "How many options the version has: the length grams must have."
+      - name: grams
+        description: >-
+          One per variant, by position: what the option's price buys, from the option's own title; else the one
+          weight the product title, size tags, description or URL handle states when the options cost the same; a
+          stored weight the listing doesn't state is dropped; null where the text doesn't say (eval/bag_grams).
   - name: stg_products
     description: The classifier and extraction rules, run once per distinct product version (input_hash).
     columns:
@@ -486,7 +521,7 @@ models:
       - name: price_per_100g
         description: "The lowest plausible retail price per 100 g of an available bag, from USD prices only."
       - name: bag_sizes_g
-        description: "The bag sizes offered, in grams."
+        description: "The bag sizes offered, in grams (stg_variant_grams: an option's weight, or the one the product title or description states)."
       - name: release_build_id
         description: "The build that made this release."
       - name: release_run_date

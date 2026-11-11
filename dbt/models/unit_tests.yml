@@ -298,8 +298,9 @@ unit_tests:
           ) t(product_id, tags)
           cross join (select 'r.com' as roaster_id, '2026-10-19' as run_date, 'b1' as batch_id,
               timestamptz '2026-10-19 12:00:00+00' as fetched_at, true as is_coffee, 'p' as payload_hash,
-              'Kenya AA' as title, '' as product_type, 'b' as body_hash,
-              [{'variant_id': 'v', 'price_usd': 20.0, 'grams': 340, 'available': true, 'currency': 'USD'}] as variants))
+              'Kenya AA' as title, '' as product_type, 'b' as body_hash, 'kenya-aa' as handle,
+              [{'variant_id': 'v', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true,
+                'currency': 'USD'}] as variants))
     given:
       - input: ref('stg_runs')
         rows:
@@ -552,6 +553,48 @@ unit_tests:
         - {roaster_id: javaboulevard.com, status: active, canonical_roaster_id: javaboulevard.com}
         - {roaster_id: magnumcoffee.com, status: alias, canonical_roaster_id: javaboulevard.com}
 
+  - name: coffee_prices_use_the_rules_grams_by_position
+    description: >-
+      dim_coffee prices bags with stg_variant_grams's grams, matched to the variants by position (1-based): the
+      crawler stored 907 g for a "1/2 lb" option and none for a 5 lb one; the rules read 227 g and 2268 g. A coffee
+      whose version has no stg_variant_grams row keeps its stored grams (variant_grams_are_valid fails that build).
+    model: dim_coffee
+    given:
+      - input: ref('stg_snapshots')
+        format: sql
+        rows: |
+          select * from (values
+              ('r:A', 'A', 'kA', [{'variant_id': 'a1', 'title': '1/2 lb', 'price_usd': 10.0, 'grams': 907, 'available': true},
+                                  {'variant_id': 'a2', 'title': '5-lb-bag', 'price_usd': 70.0, 'grams': null, 'available': true}]),
+              ('r:B', 'B', 'kB', [{'variant_id': 'b1', 'title': '12 oz', 'price_usd': 17.0, 'grams': 340, 'available': true}])
+          ) t(coffee_id, product_id, grams_key, variants)
+          cross join (select 'r' as roaster_id, date '2026-10-19' as run_date, 'h' as input_hash, 'b' as body_hash,
+              'h' as handle, 'https://r/p' as url, null::varchar as image, 'shopify' as platform,
+              []::varchar[] as tags, null::timestamptz as published_at)
+      - input: ref('stg_variant_grams')
+        format: sql
+        rows: select 'kA' as grams_key, 2 as options, [227, 2268]::integer[] as grams
+      - input: ref('stg_products')
+        rows:
+          - {input_hash: h, is_coffee: true, classified_by: rules, is_wholesale: false, clean_title: Kenya}
+      - input: ref('stg_enrichments')
+        rows: []
+      - input: ref('stg_runs')
+        rows:
+          - {roaster_id: r, run_date: 2026-10-19, is_current: true}
+      - input: ref('stg_registry')
+        rows:
+          - {roaster_id: r, roaster_name: R, country: US}
+      - input: ref('int_roaster_state')
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('flavor_lexicon')
+        rows: []
+    expect:
+      rows:
+        - {coffee_id: "r:A", price_per_100g: 3.09, bag_sizes_g: "[227, 2268]"}
+        - {coffee_id: "r:B", price_per_100g: 5.0, bag_sizes_g: "[340]"}
+
   # --- Rules pinned by the rules audit (docs/RULES.md) ---------------------------------------------------------------
 
   - name: price_per_100g_band_size_window_and_availability
@@ -570,22 +613,24 @@ unit_tests:
           select coffee_id, roaster_id, split_part(coffee_id, ':', 2) as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, coffee_id as input_hash, 'b' as body_hash,
-                 variants::struct(variant_id varchar, price_usd double, grams integer, available boolean)[] as variants
+                 coffee_id as grams_key,
+                 variants::struct(variant_id varchar, title varchar, price_usd double, grams integer,
+                                  available boolean)[] as variants
           from (values
-              ('r:P1', 'r', [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
-              ('r:P2', 'r', [{'variant_id': 'a', 'price_usd': 10.0, 'grams': 100, 'available': true}]),
-              ('r:P3', 'r', [{'variant_id': 'a', 'price_usd': 50.0, 'grams': 2500, 'available': true}]),
-              ('r:P4', 'r', [{'variant_id': 'a', 'price_usd': 60.0, 'grams': 2600, 'available': true}]),
-              ('r:P5', 'r', [{'variant_id': 'a', 'price_usd': 0.7, 'grams': 150, 'available': true}]),
-              ('r:P6', 'r', [{'variant_id': 'a', 'price_usd': 150.0, 'grams': 150, 'available': true}]),
-              ('r:P7', 'r', [{'variant_id': 'a', 'price_usd': 400.0, 'grams': 340, 'available': true}]),
-              ('r:P8', 'r', [{'variant_id': 'a', 'price_usd': 10.0, 'grams': 340, 'available': false},
-                             {'variant_id': 'b', 'price_usd': 40.0, 'grams': 1000, 'available': true}]),
-              ('r:P9', 'r', [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
-              ('r:P10', 'r', [{'variant_id': 'a', 'price_usd': 0.0, 'grams': 340, 'available': true},
-                              {'variant_id': 'b', 'price_usd': null, 'grams': 454, 'available': true}]),
-              ('r:P11', 'r', [{'variant_id': 'a', 'price_usd': 17.0, 'grams': 340, 'available': null}]),
-              ('r:P12', 'r', [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': false}])
+              ('r:P1', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P2', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 100, 'available': true}]),
+              ('r:P3', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 50.0, 'grams': 2500, 'available': true}]),
+              ('r:P4', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 60.0, 'grams': 2600, 'available': true}]),
+              ('r:P5', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.7, 'grams': 150, 'available': true}]),
+              ('r:P6', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 150.0, 'grams': 150, 'available': true}]),
+              ('r:P7', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 400.0, 'grams': 340, 'available': true}]),
+              ('r:P8', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 10.0, 'grams': 340, 'available': false},
+                             {'variant_id': 'b', 'title': 'Bag', 'price_usd': 40.0, 'grams': 1000, 'available': true}]),
+              ('r:P9', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': true}]),
+              ('r:P10', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 0.0, 'grams': 340, 'available': true},
+                              {'variant_id': 'b', 'title': 'Bag', 'price_usd': null, 'grams': 454, 'available': true}]),
+              ('r:P11', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 17.0, 'grams': 340, 'available': null}]),
+              ('r:P12', 'r', [{'variant_id': 'a', 'title': 'Bag', 'price_usd': 20.0, 'grams': 340, 'available': false}])
           ) t(coffee_id, roaster_id, variants)
       - input: ref('stg_products')
         rows:
@@ -610,7 +655,11 @@ unit_tests:
         rows:
           - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
       - input: ref('int_roaster_state')
-        rows: []
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
       - input: ref('flavor_lexicon')
         rows: []
     expect:
@@ -641,8 +690,8 @@ unit_tests:
           select coffee_id, 'r' as roaster_id, split_part(coffee_id, ':', 2) as product_id,
                  date '2026-10-19' as run_date, 'h' as handle, 'https://r.example/p' as url, null::varchar as image,
                  'shopify' as platform, []::varchar[] as tags, null::timestamptz as published_at,
-                 coffee_id as input_hash, 'b' as body_hash,
-                 [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+                 coffee_id as input_hash, 'b' as body_hash, coffee_id as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
           from (values ('r:F1'), ('r:F2'), ('r:F3'), ('r:F4')) t(coffee_id)
       - input: ref('stg_products')
         rows:
@@ -659,7 +708,11 @@ unit_tests:
         rows:
           - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
       - input: ref('int_roaster_state')
-        rows: []
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
       - input: ref('flavor_lexicon')  # rows as in seeds/flavor_lexicon.csv
         rows:
           - {note: blackberry, category: berry}
@@ -788,7 +841,8 @@ unit_tests:
           select 'r:F1' as coffee_id, 'r' as roaster_id, 'F1' as product_id, date '2026-10-19' as run_date,
                  'h' as handle, 'https://r.example/p' as url, null::varchar as image, 'shopify' as platform,
                  []::varchar[] as tags, null::timestamptz as published_at, 'r:F1' as input_hash, 'b' as body_hash,
-                 [{'variant_id': 'a', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
+                 'r:F1' as grams_key,
+                 [{'variant_id': 'a', 'title': '12 oz', 'price_usd': 20.0, 'grams': 340, 'available': true}] as variants
       - input: ref('stg_products')
         rows:
           - {input_hash: "r:F1", is_coffee: true, is_wholesale: false, tasting_notes: "['Lemon', 'Jasmine']"}
@@ -801,7 +855,11 @@ unit_tests:
         rows:
           - {roaster_id: r, roaster_name: R, country: US, is_chain: false}
       - input: ref('int_roaster_state')
-        rows: []
+        format: sql
+        rows: select null::varchar as roaster_id, null::varchar as canonical_roaster_id where false
+      - input: ref('stg_variant_grams')  # no row: every variant keeps its stored grams
+        format: sql
+        rows: select null::varchar as grams_key, null::integer as options, null::integer[] as grams where false
       - input: ref('flavor_lexicon')
         rows:
           - {note: lemon, category: citrus}

@@ -4,7 +4,8 @@ Every rule in the code that decides something about the data (classifies a produ
 a public table, picks a roaster, gates a build), with what pins it. Keep it current: a PR that adds or changes such a
 rule adds its row here, with its test and, where it has a labeled eval, its floor (root `CLAUDE.md`, steps 8 and 9).
 
-First drawn from an audit of `main` at `0cfa4d9` (96 rules); every gap that audit listed is closed below.
+First drawn from an audit of `main` at `0cfa4d9` (96 rules); every gap that audit listed is closed below. #97 is the
+bag-weight rule #136 added afterwards.
 
 ## How to read it
 
@@ -22,11 +23,12 @@ First drawn from an audit of `main` at `0cfa4d9` (96 rules); every gap that audi
 ## Floors
 
 A floor is set at or just below the score measured when it was added, and is only ever raised (a ceiling, for a
-rate of confidently wrong answers, only ever lowered). All were measured on 2026-11-11 on `main` at `0cfa4d9`.
+rate of confidently wrong answers, only ever lowered). All were measured on 2026-11-11 on `main` at `0cfa4d9`, except bag_grams, which #136 set.
 
 | Floor | Rule | Labels | Inputs | Floors | CI job |
 |---|---|---|---|---|---|
 | `tests/test_classifier_accuracy.py` | classify.is_coffee | `tests/fixtures/classifier_labels.jsonl` | in git | accuracy train 0.985, validation 0.935 | test |
+| `tests/test_bag_grams_accuracy.py` (#136) | bag_weight | `tests/fixtures/bag_grams_labels.jsonl` (eval/bag_grams) | in git | weighted accuracy train 0.999, validation 0.956, the two scored test sets 0.926 and 0.953; weighted wrong at most 0.001, 0.011, 0.0161, 0.0087 | test |
 | `tests/test_sealed_accuracy.py` | products.decide over Claude's frozen verdicts; classify.is_coffee | `eval/sealed` (scored once 2026-10-28, now a regression fixture) | in git | stratum-weighted accuracy: decide 0.982, rules 0.940 | test |
 | `tests/test_roaster_dedup_accuracy.py` | roaster_canonical (one store, one roaster) | `eval/roaster_dedup/labels` | in git (`config/roasters.csv`) | train 29 and validation 6 same-store pairs called, recall 1.0; 0 different-store pairs called | test |
 | `tests/test_wholesale_accuracy.py` | classify.is_wholesale | `eval/wholesale/labels_ref.json` | private: `WHOLESALE_EVAL_DIR` | weighted precision / recall: train 0.97 / 0.85, validation 0.99 / 0.97 | eval-floors workflow |
@@ -94,7 +96,7 @@ expected failure. The dbt ones are unit tests tagged `suspected_bug`, which `tes
 | 11 | HTML-entity decoding of tags in dbt | dbt/macros/html_entities.sql:22 | Tags the rules read | test_html_entities.py; dbt unit `snapshot_tags_are_decoded` | – | Y |
 | 12 | `CatalogItem._unescape_title` (unescape up to 3 times, strip markup) | src/coffeedata/models.py:86 | clean_title | test_models.py::test_double_escaped…, test_markup… | – | Y |
 | **Bag weight and price** | | | | | | |
-| 13 | `models.parse_grams`: kg/lb/oz/g, range 30–25,000 g | src/coffeedata/models.py:231 | Variant grams, so price/100 g and bag sizes | test_models.py::test_parse_grams (10 cases) | – | Y |
+| 13 | `models.parse_grams`: kg/lb/oz/g, range 30–25,000 g | src/coffeedata/models.py:231 | The grams the crawler stores; since #136 the build reads them again (#97) | test_models.py::test_parse_grams (10 cases) | – | Y |
 | 14 | dim_coffee price_per_100g: not wholesale, 150–2,500 g, price > 0, available, $0.50–$100/100 g | dbt/models/marts/dim_coffee.sql:50 | Public price_per_100g (25,256 coffees) | dbt unit `price_per_100g_band_size_window_and_availability` (band, size window, both bounds, sold out, unknown availability, wholesale); test_dq_rules outliers | – | Y(dbt) |
 | 15 | dim_coffee min_price_usd (`price_usd > 0`), bag_sizes_g | dbt/models/marts/dim_coffee.sql:47 | Public min price (42,781) and sizes | dbt unit `price_per_100g_band_size_window_and_availability` (min_price_usd > 0 over every variant, bag_sizes_g); test_currency.py | – | Y(dbt) |
 | 16 | dim_coffee catalog_status: delisted, preorder (ship-date passed → available), available, archived, sold_out | dbt/models/marts/dim_coffee.sql:83 | Public catalog_status; site and market counts | test_dbt.py::test_catalog_status_separates_current_from_back_catalog | – | Y(dbt) |
@@ -186,11 +188,12 @@ expected failure. The dbt ones are unit tests tagged `suspected_bug`, which `tes
 | 94 | `probe_one` platform detection: JSON endpoints (shopify/woo/squarespace…) then HTML_MARKERS (`shopify?` …), `http_<code>`, blocked, robots_unavailable | src/coffeedata/discover.py:282 | Platform, so the adapter and whether the roaster is crawled | test_discover_probe_jobs.py::test_probe_detects_the_platform (JSON endpoints, every HTML marker, order, other), ::test_probe_reports_a_non_200_home_page_as_http_status, ::test_probe_tries_www_…, ::test_probe_with_no_host_answering_is_unreachable; test_crawl_fix_round.py::test_19 | – | Y |
 | 95 | `state_code` (names and codes, DC/PR) | src/coffeedata/discover.py:103 | Roaster state | test_registry.py::test_state_codes_from_the_issue_form | – | Y |
 | 96 | Probe staleness and order (never probed first, then oldest) | src/coffeedata/discover.py:342 / cli | What is probed | test_discover_probe_jobs.py | – | Y |
+| 97 | `bag_weight` via `stg_variant_grams`: each option's grams read again at build time from its stored title, then the product title or description; misreads corrected, packs totalled, bundles and weights the listing never states dropped, 30 g–25 kg; joined to dim_coffee by option position, a version with no row keeps its stored grams | src/coffeedata/bag_weight.py; dbt/models/staging/stg_variant_grams.py; dbt/models/marts/dim_coffee.sql:14 | Variant grams, so price_per_100g and bag sizes (added by #136) | test_bag_weight.py; test_dbt.py::test_bag_weights_are_read_again_from_the_stored_text; dbt unit `coffee_prices_use_the_rules_grams_by_position`; guard `variant_grams_are_valid` made to fail in test_dbt.py::test_each_pass_path_guard_fails_on_the_row_it_guards_against | F bag_grams (`tests/test_bag_grams_accuracy.py`, from #136) | Y(dbt) |
 
-### Counts (96 rules)
+### Counts (97 rules)
 
 | | Rules |
 |---|---|
-| Case-tested | 96 (every partial, pass-path-only and untested rule of the audit now has a case test) |
-| With an asserting floor | 8 rules under 7 floors: #1–2 (classifier, sealed rules), #3 (wholesale), #4 (sealed decide), #26 (origin), #41 (roaster_dedup), #84 (match), #90 (dq #12 and #7) |
+| Case-tested | 97 (every partial, pass-path-only and untested rule of the audit now has a case test) |
+| With an asserting floor | 9 rules under 8 floors: #97 (bag_grams); #1–2 (classifier, sealed rules), #3 (wholesale), #4 (sealed decide), #26 (origin), #41 (roaster_dedup), #84 (match), #90 (dq #12 and #7) |
 | Measured, no floor | #70 (dq #11), #90's #4 part, #68 (no labels) |

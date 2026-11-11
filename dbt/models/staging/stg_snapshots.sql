@@ -21,7 +21,9 @@ select s.roaster_id || ':' || s.product_id as coffee_id,
            {{ decode_tags_with('s.tags', 'html.tag_map') }} as tags),
        r.fetched_at,
        -- Everything the classifier and the extraction rules read. stg_products runs them once per distinct value.
-       {{ product_input_hash('s') }} as input_hash
+       {{ product_input_hash('s') }} as input_hash,
+       -- Everything the bag-weight rules read (coffeedata.bag_weight). stg_variant_grams runs them once per value.
+       {{ variant_grams_key('s') }} as grams_key
 from {{ lake('snapshots') }} s
 join {{ ref('stg_runs') }} r using (roaster_id, run_date, batch_id)
 left join {{ ref('stg_registry') }} g using (roaster_id)
