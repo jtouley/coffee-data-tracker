@@ -171,5 +171,8 @@ def test_no_hub_token_reaches_pull_request_code_and_the_floors_never_gate_deploy
     floors = yaml.safe_load((workflows / "eval-floors.yml").read_text())
     assert set(floors[True]) == {"push", "schedule", "workflow_dispatch"}
     assert floors[True]["push"] == {"branches": ["main"]}
+    # a dispatch can name any branch: every job holding the token runs on main only
+    for name, job in floors["jobs"].items():
+        assert job.get("if") == "github.ref == 'refs/heads/main'", name
     assert "private_eval" not in (workflows / "ci.yml").read_text()
     assert yaml.safe_load((workflows / "deploy.yml").read_text())[True]["workflow_run"]["workflows"] == ["ci"]

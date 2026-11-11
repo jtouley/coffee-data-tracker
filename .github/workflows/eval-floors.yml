@@ -3,8 +3,8 @@
 # revisions the evals were measured on, and checks each against its recorded sha256.
 #
 # Its own workflow, on purpose:
-# - It needs a Hub token, so it never runs on pull requests: no PR branch's code (its scripts, or a package its
-#   uv.lock installs) ever runs with the token. It runs on every push to main, weekly, and by hand. The floors whose
+# - It needs a Hub token, so it never runs on pull requests, and its job runs only on main (a dispatch from another
+#   branch is skipped): no other branch's code (its scripts, or a package its uv.lock installs) runs with the token. It runs on every push to main, weekly, and by hand. The floors whose
 #   inputs are in git run on every PR in ci's test job.
 # - deploy.yml waits on the ci workflow only, so a Hub outage or a lake revision gone can't hold back a deploy.
 # - Nothing passes silently: no token, a failed download, a changed checksum or a missing input fails the run
@@ -26,6 +26,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   floors:
+    # main's code only: a dispatch from another branch would run that branch's scripts and lockfile with the token
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
