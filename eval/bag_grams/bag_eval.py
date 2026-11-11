@@ -108,8 +108,16 @@ def cmd_build(lake: Path, data: Path) -> None:
     print({s: (c[s], g[s]) for s in SETS}, "coffees, roaster groups")
 
 
+# The second test set (test2) is drawn from the first test split's stores: the only stores none of whose listings
+# was read while the rules were tuned. Its items are none of the first round's.
+POPULATION_SET = {"test2": "test"}
+SALT2 = "coffeedata-bag-grams-test2-2026-11-11"
+SAMPLE["test2"] = {"F": 200, "C": 100, "A": 100, "K": 100}
+
+
 def load(data: Path, split: str | None = None) -> list[dict]:
     rows = json.loads((data / "population.json").read_text())
+    split = POPULATION_SET.get(split, split) if split else split
     return [r for r in rows if split is None or r["set"] == split]
 
 
@@ -245,13 +253,25 @@ def strata(data: Path, split: str, main: str, branch: str) -> dict[str, list[str
 
 def cmd_sample(data: Path, split: str, main: str, branch: str) -> None:
     st = strata(data, split, main, branch)
-    rng = random.Random(f"{SALT}:{split}")
+    salt = SALT2 if split == "test2" else SALT
+    if split == "test2":  # none of the first round's items, in any set
+        used = set()
+        for old in ("train", "validation", "test"):
+            used |= {
+                it["coffee_id"]
+                for it in json.loads((Path(__file__).parent / f"items_{old}.json").read_text())["items"]
+            }
+        st = {k: [i for i in v if i not in used] for k, v in st.items()}
+    rng = random.Random(f"{salt}:{split}")
     drawn = []
     for k in sorted(st):
         ids = list(st[k])
         rng.shuffle(ids)
         drawn += [{"coffee_id": i, "stratum": k} for i in ids[: SAMPLE[split][k]]]
     sizes = {k: len(v) for k, v in st.items()}
+    groups = {r["coffee_id"]: r["group"] for r in load(data, split)}
+    for d in drawn:
+        d["store"] = groups[d["coffee_id"]]
     here = Path(__file__).parent
     (here / f"items_{split}.json").write_text(
         json.dumps(
@@ -426,8 +446,34 @@ def outcome(g: int | None, label: int | str) -> str:
     return "right" if abs(g - int(label)) <= 0.02 * int(label) else "wrong"
 
 
+def clustered(
+    per: dict[str, list[tuple[str, float]]], sizes: dict[str, int], reps: int = 2000
+) -> tuple[float, float]:
+    """A 95% interval for the stratum-weighted mean that treats a store's items as one draw: within each stratum the
+    sampled stores are resampled with replacement (a store-clustered, stratified bootstrap; fixed seed)."""
+    rng = random.Random(f"{SALT}:bootstrap")
+    total = sum(sizes[k] for k in per)
+    by_store = {k: defaultdict(list) for k in per}
+    for k, xs in per.items():
+        for store, x in xs:
+            by_store[k][store].append(x)
+    stores = {k: list(v.values()) for k, v in by_store.items()}
+    ests = []
+    for _ in range(reps):
+        est = 0.0
+        for k, groups in stores.items():
+            if not groups:
+                continue
+            pick = [x for _ in groups for x in rng.choice(groups)]
+            est += sizes[k] / total * sum(pick) / len(pick)
+        ests.append(est)
+    ests.sort()
+    return ests[int(0.025 * reps)], ests[int(0.975 * reps) - 1]
+
+
 def weighted(per: dict[str, list[float]], sizes: dict[str, int]) -> tuple[float, float, float]:
-    """A stratum-weighted mean of per-item scores, with a normal 95% interval over the strata's variances."""
+    """A stratum-weighted mean of per-item scores, with a normal-approximation 95% interval over the strata's
+    variances (items taken as independent; clustered() is the store-clustered one)."""
     total = sum(sizes[k] for k in per)
     est = var = 0.0
     for k, xs in per.items():
@@ -443,14 +489,16 @@ def weighted(per: dict[str, list[float]], sizes: dict[str, int]) -> tuple[float,
 
 def cmd_score(data: Path, split: str, labels_file: Path, main: str, branch: str, final: bool) -> None:
     """Totals only. Per rule and stratum: right, wrong (confidently wrong), abstain_ok and missed, with Wilson 95%
-    intervals; the stratum-weighted accuracy (right + abstain_ok), wrong share and covered-right share; and the
-    paired difference branch - main on the same items. Items labeled "unclear" are left out and counted."""
-    if split == "test" and not final:
+    intervals; the stratum-weighted accuracy (right + abstain_ok), wrong share and covered-right share, each with a
+    normal-approximation 95% interval and a store-clustered bootstrap one; and the paired difference branch - main
+    on the same items, with both intervals. Items labeled "unclear" are left out and counted."""
+    if split in ("test", "test2") and not final:
         sys.exit("the test set is scored once, with --final")
     meta = json.loads((Path(__file__).parent / f"items_{split}.json").read_text())
     labels = json.loads(labels_file.read_text())
     sizes, items = meta["stratum_sizes"], meta["items"]
     pop = {r["coffee_id"]: r for r in load(data, split)}
+    store = {it["coffee_id"]: it.get("store") or pop[it["coffee_id"]]["group"] for it in items}
     preds = {name: pred(data, name) for name in (main, branch)}
     for name, pr in preds.items():  # the sealed predictions must be the ones scored
         sealed = Path(__file__).parent / f"pred_{name}_{split}.json"
@@ -460,18 +508,23 @@ def cmd_score(data: Path, split: str, labels_file: Path, main: str, branch: str,
             if got != want:
                 sys.exit(f"{name}'s predictions differ from {sealed.name}")
     res: dict[str, dict[str, list[str]]] = {name: defaultdict(list) for name in preds}
+    stores: dict[str, list[str]] = defaultdict(list)
     unclear: Counter = Counter()
     for it in items:
         lab = labels.get(it["coffee_id"])
         if lab is None or lab == "unclear":
             unclear[it["stratum"]] += 1
             continue
+        stores[it["stratum"]].append(store[it["coffee_id"]])
         for name, pr in preds.items():
             g = pr[it["coffee_id"]].get(pop[it["coffee_id"]]["item_variant_id"])
             res[name][it["stratum"]].append(outcome(g, lab))
     print(
         f"{split}: {len(items)} items, unclear {sum(unclear.values())} {dict(unclear)}; stratum sizes {sizes}"
     )
+    for k in sorted(stores):
+        top = Counter(stores[k]).most_common(1)[0]
+        print(f"  {k}: {len(stores[k])} items from {len(set(stores[k]))} stores; largest {top[1]} ({top[0]})")
     for name in preds:
         print(f"== {name}")
         for k in sorted(res[name]):
@@ -487,15 +540,27 @@ def cmd_score(data: Path, split: str, labels_file: Path, main: str, branch: str,
             ("right", ("right",)),
         ):
             est, lo, hi = weighted({k: [float(o in ok) for o in xs] for k, xs in res[name].items()}, sizes)
-            print(f"  weighted {label}: {100 * est:.1f}% [{100 * lo:.1f}, {100 * hi:.1f}]")
+            clo, chi = clustered(
+                {
+                    k: [(st, float(o in ok)) for st, o in zip(stores[k], xs, strict=True)]
+                    for k, xs in res[name].items()
+                },
+                sizes,
+            )
+            print(
+                f"  weighted {label}: {100 * est:.1f}%  normal [{100 * lo:.1f}, {100 * hi:.1f}]"
+                f"  store-clustered [{100 * clo:.1f}, {100 * chi:.1f}]"
+            )
     for label, ok in (("accuracy", ("right", "abstain_ok")), ("wrong", ("wrong",))):
         diff = {
             k: [float(b in ok) - float(m in ok) for m, b in zip(res[main][k], res[branch][k], strict=True)]
             for k in res[main]
         }
         est, lo, hi = weighted(diff, sizes)
+        clo, chi = clustered({k: list(zip(stores[k], xs, strict=True)) for k, xs in diff.items()}, sizes)
         print(
-            f"paired {label}, {branch} - {main}: {100 * est:+.1f} points [{100 * lo:+.1f}, {100 * hi:+.1f}]"
+            f"paired {label}, {branch} - {main}: {100 * est:+.1f} points  normal [{100 * lo:+.1f}, {100 * hi:+.1f}]"
+            f"  store-clustered [{100 * clo:+.1f}, {100 * chi:+.1f}]"
         )
 
 
