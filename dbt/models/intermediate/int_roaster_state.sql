@@ -31,7 +31,11 @@ last_ok as (
 ),
 base as (
 select
-    r.roaster_id, r.roaster_name, r.city, r.state, r.country, r.locations, r.is_chain, r.opted_out, r.sources,
+    r.roaster_id, r.roaster_name, r.city, r.state, r.country, r.locations,
+    -- A chain: more than chain_store_threshold stores (locations), unless seeds/chain_overrides.csv says otherwise.
+    -- Still crawled and kept in the internal marts; public_roaster leaves a chain out of every public output.
+    coalesce(o.is_chain, r.locations > {{ var('chain_store_threshold') }}) as is_chain,
+    r.opted_out, r.sources,
     r.alias_of, r.first_added, rc.first_catalog_run,
     coalesce(g.final_host, r.seed_host, r.roaster_id) as host,
     coalesce(g.platform, r.seed_platform) as platform,
@@ -49,6 +53,7 @@ select
         else 'no_catalog'
     end as crawl_status
 from {{ ref('stg_registry') }} r
+left join {{ ref('chain_overrides') }} o using (roaster_id)
 left join last_probe lp using (roaster_id)
 left join last_good_probe g using (roaster_id)
 left join recent rc using (roaster_id)

@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.6.0
+version: 2.7.0
 status: active
 domain: coffee
 description:
@@ -71,7 +71,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.6.0
+    version: 2.7.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -183,6 +183,17 @@ customProperties:
           2.6.0, a minor version: a quality rule added (tests/public_roasters_unique_by_host.sql, error), fewer
           rows, no table, column, type or enum changed, so Snowflake needs no migrate. Measured in
           eval/roaster_dedup (main against the change, on held-out roaster pairs).
+      - topic: chains leave the public data
+        decided: "2026-11-11"
+        outcome: >-
+          "Chains should still be scraped, but filtered from the public result. A chain is anything with over 20
+          stores." A roaster is a chain when its store count (the registry's locations: US Overture roastery places
+          that list its website) is over 20 (dbt var chain_store_threshold), unless dbt/seeds/chain_overrides.csv
+          decides otherwise, either way, with a reason. A chain is still crawled and stays in the lake and the
+          internal marts; public_roaster leaves it out, and with it its coffees, price events and market counts,
+          the site, the public dataset and the shares. public-catalog contract 2.7.0, a minor version: a quality
+          rule added (tests/public_tables_have_no_chain.sql, error), fewer rows (2 roasters and 149 coffees in
+          release 971bfe), no table, column, type or enum changed, so Snowflake needs no migrate.
 team:
   name: registry.coffee
   members:

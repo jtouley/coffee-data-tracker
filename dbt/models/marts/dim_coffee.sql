@@ -73,7 +73,7 @@ notes as (
     group by a.coffee_id
 )
 select
-    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, r.is_chain,
+    l.coffee_id, l.roaster_id, r.roaster_name, r.state as roaster_state, r.country as roaster_country, rs.is_chain,
     l.product_id, l.handle,
     -- Links come from roasters' feeds; keep only plain http(s) ones (no javascript:, data:, ...).
     a.clean_title as title, case when regexp_full_match(l.url, 'https?://[^\s"<>]+') then l.url end as url,
@@ -110,6 +110,7 @@ join seen s using (coffee_id)
 join attrs a using (coffee_id)
 join {{ ref('stg_runs') }} run using (roaster_id, run_date)
 left join {{ ref('stg_registry') }} r using (roaster_id)
+left join {{ ref('int_roaster_state') }} rs using (roaster_id)  -- is_chain (the store-count rule and its overrides)
 left join notes n using (coffee_id)
 left join prices p using (coffee_id)
 -- One store's coffees once: an alias's (int_roaster_state: another roaster_id serves the same store) are the

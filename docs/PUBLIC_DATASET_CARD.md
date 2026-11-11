@@ -44,6 +44,8 @@ from 'hf://datasets/jtouley/us-coffee-market/data/public_market_weekly.parquet' 
 - Store-internal ids other than the product id in `coffee_id` (`<roaster domain>:<store product id>`, stable across weeks).
 - Personal data, and roasters that opted out.
 - Roasters known only from OpenStreetMap.
+- Chains: roasters with more than 20 stores (or marked as chains by hand), and their coffees. They are still read
+  each week; they are left out of the public data.
 
 ## Method and caveats
 

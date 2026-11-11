@@ -1,8 +1,7 @@
 -- Seed list (config/roasters.csv) plus roasters added in the lake by discovery or by hand.
 with seed as (
     select roaster_id, name, nullif(city, '') as city, nullif(state, '') as state,
-           coalesce(try_cast(locations as integer), 1) as locations,
-           coalesce(is_chain, 'false') = 'true' as is_chain, coalesce(opted_out, 'false') = 'true' as opted_out,
+           coalesce(try_cast(locations as integer), 1) as locations, coalesce(opted_out, 'false') = 'true' as opted_out,
            nullif(final_host, '') as seed_host, nullif(platform, '') as seed_platform,
            try_cast(nullif(last_probed, '') as date) as seed_probed, sources, nullif(country, '') as country,
            nullif(lower(trim(alias_of)), '') as alias_of
@@ -21,7 +20,11 @@ added as (
 select
     coalesce(s.roaster_id, a.roaster_id) as roaster_id, coalesce(a.name, s.name) as roaster_name,
     coalesce(a.city, s.city) as city, coalesce(a.state, s.state) as state,
-    coalesce(s.locations, a.locations, 1) as locations, coalesce(s.is_chain, false) as is_chain,
+    -- The store count: the US Overture places that list this website and are roasteries (tagged coffee_roastery, or
+    -- a coffee place with "roast" in its name: discover.overture), as the seed recorded it; for a roaster the lake
+    -- alone lists, the most any discovery row counted (an OSM row counts 1). A cafe not tagged as a roastery isn't
+    -- counted, so a chain of cafes can read low (seeds/chain_overrides.csv). int_roaster_state decides is_chain.
+    coalesce(s.locations, a.locations, 1) as locations,
     coalesce(a.opted_out, false) or coalesce(s.opted_out, false) as opted_out,
     concat_ws('+', s.sources, a.sources) as sources, s.seed_host, s.seed_platform, s.seed_probed,
     -- ISO 3166-1 alpha-2. The seed states it per roaster (a hand-checked correction for a store outside the US);

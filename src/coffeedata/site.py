@@ -2,10 +2,10 @@
 to the catalog (catalog/index.html + catalog/catalog.json), the public Hugging Face dataset and the repo. Shots are
 private and never appear here; they are only in the app.
 
-Only the public roasters (dbt model `public_roaster`: not opted out, and not known only from OpenStreetMap) and their
-coffees appear, as in the public tables, except in the roaster status counts and the registry total, which count every
-roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD, built
-from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
+Only the public roasters (dbt model `public_roaster`: not opted out, not a chain, and not known only from
+OpenStreetMap) and their coffees appear, as in the public tables, except in the roaster status counts and the registry
+total, which count every roaster in dim_roaster. The landing page and the catalog carry a schema.org Dataset (JSON-LD,
+built from the public contract) for search engines, and the site has a robots.txt and a sitemap.xml."""
 
 from __future__ import annotations
 
@@ -275,7 +275,8 @@ def build(db: Path, out: Path) -> Path:
 
     con = duckdb.connect(str(db), read_only=True)
     # The site shows the public roasters only, the same ones as the public tables (public_roaster's filter: not
-    # opted out, not known only from OpenStreetMap). A temporary view: the database itself stays read-only.
+    # opted out, not a chain, not known only from OpenStreetMap). A temporary view: the database itself stays
+    # read-only.
     con.execute(
         "create temp view site_coffee as select * from dim_coffee "
         "where roaster_id in (select roaster_id from public_roaster)"

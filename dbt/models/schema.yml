@@ -158,11 +158,15 @@ models:
     description: >-
       One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
       (canonical_roaster_id, macros/roaster_alias.sql). registry.STATE_SQL decides both the same way for the crawl.
-      Upstream of dim_coffee, which leaves aliases out; dim_roaster adds the coffee counts.
+      Upstream of dim_coffee, which leaves aliases out; dim_roaster adds the coffee counts. Also where is_chain is
+      decided (dbt only: the crawl reads every roaster alike, chains included).
     columns:
       - name: roaster_id
         description: The roaster's normalized domain (registry roaster_id).
         data_tests: [unique, not_null]
+      - name: is_chain
+        description: "A chain: more than chain_store_threshold (20) stores (stg_registry.locations), unless seeds/chain_overrides.csv says otherwise, either way. Still crawled and kept in the internal marts; public_roaster leaves it out of every public output."
+        data_tests: [not_null]
       - name: host
         description: "The store's host: the last ok probe's, else the seed's, else the roaster_id. A failed probe never moves it."
       - name: first_catalog_run
@@ -473,7 +477,7 @@ models:
       - name: roaster_country
         description: "The roaster's country (ISO 3166-1 alpha-2, stg_registry; null for a roaster no longer in the registry). The public tables keep US only."
       - name: is_chain
-        description: "The roaster is a chain."
+        description: "The roaster is a chain (int_roaster_state.is_chain): out of mart_market and every public table."
       - name: product_id
         description: "The store's product id."
       - name: handle
@@ -577,9 +581,9 @@ models:
         description: "Country (ISO 3166-1 alpha-2): the seed's, US unless corrected; public_roaster keeps US only."
         data_tests: [not_null]
       - name: locations
-        description: "Number of locations."
+        description: "Its store count: US Overture places listing its website that are roasteries (tagged coffee_roastery, or a coffee place with roast in its name), as discovery counted them; 1 when unknown. Cafes not tagged as roasteries aren't counted, so a chain of cafes can read low."
       - name: is_chain
-        description: "The roaster runs multiple retail locations (the registry's is_chain)."
+        description: "A chain (int_roaster_state.is_chain): more than chain_store_threshold (20) stores, unless seeds/chain_overrides.csv says otherwise. Still crawled; never public."
       - name: opted_out
         description: "The roaster asked not to be crawled."
       - name: sources
@@ -763,7 +767,7 @@ models:
       - name: release_run_date
         data_type: date
   - name: public_roaster
-    description: "One row per published roaster: in the US, not opted out, with a coffee seen, from a redistributable source."
+    description: "One row per published roaster: in the US, not opted out, not a chain, with a coffee seen, from a redistributable source."
     # Defined by contracts/public-catalog.odcs.yaml (tests/test_contracts.py keeps the two in step).
     config:
       contract: {enforced: true}
@@ -879,6 +883,21 @@ models:
         data_type: date
 
 seeds:
+  - name: chain_overrides
+    description: >-
+      Hand-checked chain status that decides over the store-count rule (int_roaster_state.is_chain: more than
+      chain_store_threshold stores), either way: true for a chain whose store count reads low (discovery counts only
+      Overture places that are roasteries, so a chain of cafes is undercounted), false for a roaster the count calls
+      a chain that isn't one. Every row says why.
+    config:
+      column_types: {roaster_id: varchar, is_chain: boolean, reason: varchar}
+    columns:
+      - name: roaster_id
+        data_tests: [unique, not_null]
+      - name: is_chain
+        data_tests: [not_null]
+      - name: reason
+        data_tests: [not_null]
   - name: shared_hosts
     description: >-
       Hosts many unrelated domains resolve to, so sharing one is no evidence of one store (macros/roaster_alias.sql):
