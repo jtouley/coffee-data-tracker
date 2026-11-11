@@ -164,7 +164,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   const PAGE = 500;  // rows drawn at a time; "Show more" draws the next page, so every match can be reached
   const STATES = {{ state_titles | tojson }};  // "MI": "Michigan"
   const STATE_WORDS = {{ state_words | tojson }};  // ["west virginia", "WV"], longest first
-  let rows = [], C = {}, CITIES = [], hits = [], shown = 0, wait;
+  let rows = [], C = {}, CITIES = [], CITY_SET = new Set(), hits = [], shown = 0, wait;
   const STATUS = {preorder: "preorder", sold_out: "sold out", archived: "past offering"};
   const cell = (tr, text, cls) => { const td = tr.insertCell(); if (cls) td.className = cls; td.textContent = text ?? ""; return td; };
   const word = w => new RegExp("(^|[^\\p{L}\\p{N}])" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?=$|[^\\p{L}\\p{N}])", "u");
@@ -176,13 +176,18 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
   //   a state's name inside it isn't read as the state; it matches the roasters there, or the phrase in the text;
   // - a state's full name ("Michigan", "New York") matches that state's roasters, or the name as whole words in a
   //   coffee's name, roaster, city or notes (so "Michigan Cherry" is found too). A state's name wins over a city of
-  //   the same name ("New York", "Washington") or one inside it ("York");
+  //   the same name ("New York", "Washington") or one inside it ("York"); "New York City" and "NYC" are the city;
   // - a two-letter state code ("IL", "mi") is a whole word: on its own it means the state and nothing else, so "in"
   //   isn't every note with "in" in it; beside other words it is the state or that whole word ("la colombe");
   // - any other word matches inside the coffee's name, roaster, city or notes, as before.
   function parse(q) {
     let s = " " + q.toLowerCase().replace(/[,;]/g, " ").replace(/\s+/g, " ").trim() + " ";
     const terms = [];
+    // "New York City" and "NYC" are the city of New York (a state's name followed by "city", unless that is a city's
+    // own name, as Kansas City is).
+    const cityTerm = (said, city) => { while (s.includes(" " + said + " ")) { terms.push({city, text: city}); s = s.replace(" " + said + " ", " "); } };
+    for (const [name] of STATE_WORDS) if (CITY_SET.has(name) && !CITY_SET.has(name + " city")) cityTerm(name + " city", name);
+    if (CITY_SET.has("new york")) cityTerm("nyc", "new york");
     // A state's name wins over a city that is that name or part of it ("New York" over York, PA).
     const inState = city => STATE_WORDS.some(([name]) => (" " + name + " ").includes(" " + city + " ") && s.includes(" " + name + " "));
     for (const city of CITIES)
@@ -217,19 +222,20 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     const coffees = n(k, "coffee", "coffees"), roasters = new Set(hits.map(r => r[C.roaster_id])).size;
     const places = terms.filter(t => t.state || t.city), words = terms.filter(t => !t.state && !t.city).map(t => t.text);
     const matching = words.length ? " matching " + quote(words.join(" ")) : "";
-    if (st) return coffees + matching + " from " + n(roasters, STATES[st] + " roaster", STATES[st] + " roasters") + ".";
+    if (st) return coffees + (q ? " matching " + quote(q) : "") + " from " + n(roasters, STATES[st] + " roaster", STATES[st] + " roasters") + ".";
     if (!places.length) return coffees + matching + " from " + n(roasters, "roaster", "roasters") + ".";
     // Where the roasters that matched by place are: "Chicago, IL"; "Michigan"; "Illinois (IL)" for a lone code.
     const at = hits.filter(r => r.byPlace);
     const cities = [...new Set(at.map(r => r.place))];
     const city = places.find(t => t.city), code = places.find(t => t.code && !city);
-    const where = city ? (cities.length <= 2 ? cities.join(" and ") : city.city.replace(/(^|\s)\S/g, c => c.toUpperCase()) + " (" + cities.length + " places)")
-      : places.map(t => STATES[t.state] + (t.code ? " (" + t.state + ")" : "")).join(", ");
+    const stored = c => rows.find(r => r.city === c)?.[C.roaster_city] || c;  // the city as the data spells it
+    const where = city ? (cities.length <= 2 ? cities.join(" and ") : stored(city.city) + " (" + cities.length + " places)")
+      : places.filter((t, i, a) => a.findIndex(u => u.state === t.state) === i).map(t => STATES[t.state] + (t.code ? " (" + t.state + ")" : "")).join(", ");
     if (byPlace === k) return coffees + matching + " from roasters in " + where + ".";
     // A code beside other words that only matched as a word ("la colombe") says nothing about a state.
     if (!byPlace && code) return coffees + matching + " from " + n(roasters, "roaster", "roasters") + ".";
     // The rest matched in the text: a coffee named for the state, or a city like Michigan City, IN.
-    const t = city || places[0], said = quote(t.city ? city.city.replace(/(^|\s)\S/g, c => c.toUpperCase()) : t.code ? t.state : STATES[t.state]);
+    const t = city || places[0], said = quote(t.city ? stored(city.city) : t.code ? t.state : STATES[t.state]);
     const other = k - byPlace, tail = " name, roaster, city or notes.";
     if (!byPlace) return n(k, "coffee", "coffees") + matching + (k === 1 ? " mentions " : " mention ") + said + (k === 1 ? " in its" : " in their") + tail;
     return coffees + matching + ": " + byPlace.toLocaleString() + " from roasters in " + where + ", and "
@@ -285,15 +291,15 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
     draw(0);
     $("count").textContent = summary(terms, byPlace);
   }
-  // Typing waits for a pause, so the table and the count change together, once. A lone two-letter code waits longer:
-  // "mi" on the way to "mild" shouldn't flash Michigan's coffees.
+  // Typing waits for a pause, so the table and the count change together, once. A lone two-letter code waits longer,
+  // in any case (phones capitalise the first letter): "Mi" on the way to "Mild" shouldn't flash Michigan's coffees.
   function typed() {
     clearTimeout(wait);
     const v = $("q").value.trim();
-    wait = setTimeout(render, /^[a-z]{2}$/.test(v) && STATES[v.toUpperCase()] ? 700 : 150);
+    wait = setTimeout(render, /^[a-z]{2}$/i.test(v) && STATES[v.toUpperCase()] ? 700 : 150);
   }
 
-  fetch("catalog.json{% if build_id %}?b={{ build_id | urlencode }}{% endif %}").then(r => r.json()).then(d => {
+  fetch("catalog.json{% if data_key %}?b={{ data_key }}{% endif %}").then(r => r.json()).then(d => {
     d.columns.forEach((c, i) => C[c] = i); rows = d.rows;
     const cities = new Set();
     for (const r of rows) {
@@ -302,6 +308,7 @@ footer { margin-top: 28px; color: var(--text-muted); font-size: 12px; }
       r.text = [r[C.title], r[C.roaster_name], city, ...(r[C.tasting_notes] || [])].join(" ").toLowerCase();
       if (r.city) cities.add(r.city);
     }
+    CITY_SET = cities;
     CITIES = [...cities].sort((a, b) => b.length - a.length || a.localeCompare(b));  // "michigan city" before "michigan"
     const fill = (id, values) => values.forEach(v => {
       const opt = document.createElement("option"); opt.value = v; opt.textContent = v; $(id).appendChild(opt); });

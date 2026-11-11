@@ -31,6 +31,7 @@ ROASTERS = [
     ("capitolbeans.com", "Capitol Beans", "Washington", "DC"),
     ("drycreek.coffee", "Dry Creek Roasting", None, "TX"),
     ("empire.coffee", "Empire Roasters", "Brooklyn", "NY"),
+    ("gotham.coffee", "Gotham Roasters", "New York", "NY"),  # "new york city" and "nyc" are this city
     ("lapaloma.coffee", "La Paloma Coffee", "Oakland", "CA"),
     ("littlehavana.coffee", "Little Havana Roasters", "Miami", "FL"),
     ("maplecity.coffee", "Maple City Coffee", "Michigan City", "IN"),
@@ -47,6 +48,7 @@ COLUMNS = ["coffee_id", "roaster_name", "roaster_state", "title", "url", "origin
            "tasting_notes", "price_per_100g", "min_price_usd", "in_stock", "catalog_status", "first_seen",
            "roaster_id", "roaster_city"]  # fmt: skip
 BUILD = "20261110T061836-test01"
+KEY = "0123abcd4567"  # site.build passes a hash of catalog.json
 
 
 def coffee(
@@ -67,6 +69,7 @@ def catalog() -> dict:
         coffee("capitolbeans.com", "Capitol Roast"),
         coffee("drycreek.coffee", "Dry Creek Drip"),
         coffee("empire.coffee", "Empire Blend", notes=("vermont maple",)),
+        coffee("gotham.coffee", "Gotham Blend"),
         coffee("lapaloma.coffee", "Paloma House"),
         coffee("littlehavana.coffee", "Miami Nights", notes=("mild", "cacao")),
         coffee("littlehavana.coffee", "Michigan Cherry"),
@@ -99,7 +102,7 @@ def render(out: Path) -> None:
     html = env.get_template("index.html").render(
         links=site.links(), jsonld="", totals={"coffees": 0, "in_stock": 0, "roasters": 0}, status_rows=[],
         charts={"origin_price": "", "process": ""}, new=[], coverage={"registry": {}}, origin_price=[],
-        processes=[], generated="2026-11-09 12:00 UTC", build_id=BUILD, state_titles=site.STATE_TITLES,
+        processes=[], generated="2026-11-09 12:00 UTC", data_key=KEY, state_titles=site.STATE_TITLES,
         state_words=site.STATE_WORDS,
     )  # fmt: skip
     (out / "catalog").mkdir(parents=True)
@@ -116,7 +119,7 @@ def test_catalog_search_and_state_filter_in_a_browser(tmp_path):
     shots.mkdir(parents=True, exist_ok=True)
     try:
         r = subprocess.run(
-            ["node", str(BROWSER / "catalog_flow.js"), f"http://127.0.0.1:{server.server_port}", str(shots), BUILD],
+            ["node", str(BROWSER / "catalog_flow.js"), f"http://127.0.0.1:{server.server_port}", str(shots), KEY],
             capture_output=True, text=True, timeout=300, cwd=BROWSER,
         )  # fmt: skip
     finally:

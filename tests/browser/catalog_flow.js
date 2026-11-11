@@ -3,12 +3,12 @@
 // behaviour is checked at 390 px; then each of 390 px and desktop, light and dark, gets the no-sideways-scroll check,
 // a screenshot and axe (where axe-core is installed, as in CI). Also a slow catalog.json and a failed one. Any
 // request off 127.0.0.1 fails the run.
-// Usage: node catalog_flow.js <site url> <screenshot dir> <build id>
+// Usage: node catalog_flow.js <site url> <screenshot dir> <the page's catalog.json key>
 const { chromium } = require("playwright");
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 
-const [site, out, build] = process.argv.slice(2);
+const [site, out, key] = process.argv.slice(2);
 let AXE = null;
 try { AXE = fs.readFileSync(require.resolve("axe-core/axe.min.js"), "utf8"); } catch (e) {}
 
@@ -38,13 +38,13 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
   const browser = await chromium.launch();
   const errors = [];
   try {
-    // A slow catalog.json: "Loading…" until it arrives; it is the build's own file (?b=<build id>).
+    // A slow catalog.json: "Loading…" until it arrives; the page asks for its own file (?b=<a hash of it>).
     {
       const { context, page, fetched } = await open(browser, { width: 390, height: 844 }, "light", errors, 1500);
       assert.equal(await page.textContent("#count"), "Loading…");
       await loaded(page);
       assert.match(await page.textContent("#count"), /^\d[\d,]* coffees? from/);
-      assert.deepEqual(fetched, [`?b=${build}`]);
+      assert.deepEqual(fetched, [`?b=${key}`]);
       await context.close();
     }
     // A failed one says so.
@@ -85,12 +85,23 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
     await search("");
     await page.evaluate(() => { window.seen = []; new MutationObserver(() => window.seen.push(document.getElementById("count").textContent))
       .observe(document.getElementById("count"), { childList: true, characterData: true, subtree: true }); });
-    await page.type("#q", "mild", { delay: 120 });
-    await page.waitForTimeout(400);
-    const seen = await page.evaluate(() => window.seen);
-    assert.ok(seen.length && !seen.some((t) => /Michigan/.test(t)), seen.join(" | "));
+    // Nor with a capital first letter, as phones type it: "Mild", "Colombia", "Panama", "Washed" and "Decaf" never
+    // show a state (MI, CO, PA, WA, DE) on the way, nor a result for the two-letter start alone.
+    for (const q of ["mild", "Mild", "Colombia", "Panama", "Washed", "Decaf"]) {
+      await page.fill("#q", ""); await page.waitForTimeout(250);
+      await page.evaluate(() => { window.seen = []; });
+      await page.type("#q", q, { delay: 250 });
+      await page.waitForTimeout(400);
+      const seen = await page.evaluate(() => window.seen);
+      const flash = (t) => /Michigan|Colorado|Pennsylvania|Washington|Delaware/.test(t) || t.includes(`“${q.slice(0, 2)}”`);
+      assert.ok(seen.length && !seen.some(flash), `${q}: ${seen.join(" | ")}`);
+    }
     // The count and the table change together.
+    await search("mild");
     assert.equal(await rowCount(), Math.min(500, Number((await page.textContent("#count")).match(/^[\d,]+/)[0].replace(/,/g, ""))));
+    await search("Decaf");
+    assert.equal(await rowCount(), 0);
+    assert.equal(await page.textContent("#count"), "No coffees in stock match “Decaf”.");
     // "in" is Indiana: not Indonesia, and not the word "in" in a note.
     assert.equal(await search("IN"), "1 coffee from roasters in Indiana (IN).");
     assert.deepEqual(await titles(), ["Lakefront Blend"]);
@@ -124,7 +135,12 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
       assert.deepEqual(await titles(), ["Windy City Espresso"], q);
     }
     assert.equal(await search("ILLINOIS"), "1 coffee from roasters in Illinois.");
-    assert.equal(await search("new york"), "1 coffee from roasters in New York.");
+    assert.equal(await search("new york"), "2 coffees from roasters in New York.");
+    // "New York City" and "NYC" are the city; "new york" stays the state.
+    for (const q of ["new york city", "NYC", "nyc gotham"]) {
+      assert.match(await search(q), /^1 coffee (matching “gotham” )?from roasters in New York, NY\.$/, q);
+      assert.deepEqual(await titles(), ["Gotham Blend"], q);
+    }
     assert.equal(await search("vermont"), "1 coffee mentions “Vermont” in its name, roaster, city or notes.");
     // Beside other words a code may also be that whole word, so a roaster named "La ..." is still found.
     assert.equal(await search("la paloma"), "1 coffee matching “paloma” from 1 roaster.");
@@ -155,7 +171,8 @@ async function open(browser, viewport, scheme, errors, slow = 0, fail = false) {
     await page.selectOption("#process", "natural");
     assert.equal(await count(), "10 coffees matching “cherry” from 1 Michigan roaster.");
     await page.selectOption("#process", "");
-    assert.equal(await search("Michigan"), "620 coffees from 1 Michigan roaster.");  // not the IN or FL ones
+    // Not the IN or FL ones; the line quotes the search too.
+    assert.equal(await search("Michigan"), "620 coffees matching “Michigan” from 1 Michigan roaster.");
     await page.uncheck("#stock");
     assert.match(await count(), /^621 coffees/);  // the sold-out one
     await page.check("#stock");

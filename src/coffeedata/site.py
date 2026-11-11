@@ -449,6 +449,23 @@ def build(db: Path, out: Path) -> Path:
     (out / "bot" / "index.html").write_text(with_csp(bot))
     cat = out / "catalog"
     cat.mkdir(exist_ok=True)
+    cols = list(catalog[0]) if catalog else []
+    data = json.dumps(
+        {
+            # Which release this is and under what licence; the page's script reads only columns and rows.
+            "release": {
+                "release_build_id": release["release_build_id"],
+                "release_run_date": release["release_run_date"],
+                "contract": f"{release['contract']['id']}@{release['contract']['version']}",
+                "license": release["license"]["id"],
+                "license_url": release["license"]["url"],
+            },
+            "columns": cols,
+            "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
+        },
+        separators=(",", ":"),
+    )
+    (cat / "catalog.json").write_text(data)
     html = env.get_template("index.html").render(
         links=link,
         jsonld=jsonld,
@@ -460,30 +477,14 @@ def build(db: Path, out: Path) -> Path:
         origin_price=origin_price,
         processes=processes,
         generated=generated.strftime("%Y-%m-%d %H:%M UTC"),
-        # The page fetches catalog.json?b=<this build>, so a cached page never reads another release's file.
-        build_id=release.get("release_build_id") or "",
+        # The page fetches catalog.json?b=<a hash of the file>: a new page never reads a cached older file, even
+        # after a code-only redeploy of the same release. (Pages ignores the query, so a cached older page gets the
+        # current file; that is safe because the file only ever gains columns.)
+        data_key=hashlib.sha256(data.encode()).hexdigest()[:12],
         state_titles=STATE_TITLES,
         state_words=STATE_WORDS,
     )
     (cat / "index.html").write_text(with_csp(html))
-    cols = list(catalog[0]) if catalog else []
-    (cat / "catalog.json").write_text(
-        json.dumps(
-            {
-                # Which release this is and under what licence; the page's script reads only columns and rows.
-                "release": {
-                    "release_build_id": release["release_build_id"],
-                    "release_run_date": release["release_run_date"],
-                    "contract": f"{release['contract']['id']}@{release['contract']['version']}",
-                    "license": release["license"]["id"],
-                    "license_url": release["license"]["url"],
-                },
-                "columns": cols,
-                "rows": [[_jsonable(r[c]) for c in cols] for r in catalog],
-            },
-            separators=(",", ":"),
-        )
-    )
     site = str(link["site"])
     (out / "robots.txt").write_text(robots_txt(site))
     day = f"{generated:%Y-%m-%d}"

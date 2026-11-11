@@ -1,5 +1,6 @@
 """Build the dbt project over a synthetic lake and check the derived history (the same SQL the weekly run uses)."""
 
+import hashlib
 import json
 import os
 import re
@@ -746,8 +747,8 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
 
 def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path):
     """catalog.json is a published download, so it only gains columns: main's columns stay first, in their order, and
-    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches the file of its own build,
-    so a cached page never reads another release's catalog.json."""
+    roaster_id and roaster_city (public_roaster's city, as stored) follow. The page fetches catalog.json?b=<a hash of the
+    file>, so a new page never reads a cached older file."""
     from coffeedata import site
 
     for rid in ("onyxcoffeelab.com", "1802roasters.com"):
@@ -773,7 +774,9 @@ def test_site_catalog_adds_the_roasters_city_after_mains_columns(lake, tmp_path)
         ("1802roasters.com:B", "1802roasters.com", "1802 Roasters", "CA", None),
     }
     page = (out / "catalog" / "index.html").read_text()
-    assert 'fetch("catalog.json?b=20261020T060000-abcdef")' in page
+    # The page asks for its own file by a hash of it, so a new page never gets a cached older one.
+    key = hashlib.sha256((out / "catalog" / "catalog.json").read_bytes()).hexdigest()[:12]
+    assert f'fetch("catalog.json?b={key}")' in page
     assert '<select id="state" aria-label="Roaster state (number of roasters)">' in page
     assert '<p class="note" id="count" role="status">' in page
     assert '"MI": "Michigan"' in page and '["west virginia", "WV"]' in page
