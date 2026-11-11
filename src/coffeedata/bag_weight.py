@@ -407,7 +407,7 @@ def product_grams(
     unsupported: Unsupported = "drop",
     sources: Sequence[str] = ("title", "tags", "body", "handle"),
     bag_counts: BagCounts = "multiply",
-    count_fill: bool = False,
+    count_fill: bool = True,
 ) -> list[int | None]:
     """Each variant's grams, from (option title, price, stored grams) and the product's title, tags, description
     and URL handle.
@@ -425,10 +425,11 @@ def product_grams(
        dropped ("drop", the measured choice: such weights are often shipping weights), kept when it is a standard
        bag size ("standard"), or always kept ("keep"). eval/bag_grams compares them.
     A count of bags is read like any other count ("2 Bags - 12 oz" is 680). An option that gives only a count ("1
-    Bag", "Whole Bean / 5 bags") with `count_fill` takes that many of the one bag weight the product states, when
-    the options' prices per bag agree (within COUNT_PRICE); without it, or failing that, more than one bag leaves
-    that option blank (the other options are read as usual).
-    `sources` is the step-2 order; `bag_counts` and `count_fill` are levers eval/bag_grams compares."""
+    Bag", "Whole Bean / 5 bags") takes that many of the one bag weight the product states, when the options' prices
+    per bag agree (within COUNT_PRICE); failing that, or with count_fill=False, more than one bag leaves that option
+    blank (the other options are read as usual).
+    `sources` is the step-2 order; `bag_counts` and `count_fill` are levers eval/bag_grams compares (round 3 chose
+    "multiply" and count_fill on validation, then train, totals)."""
     out: list[int | None] = []
     blocked = False
     elsewhere: set[int] = set()

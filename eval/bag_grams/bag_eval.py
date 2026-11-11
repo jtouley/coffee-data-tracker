@@ -485,9 +485,12 @@ def cmd_agree(split: str, a: Path, b: Path) -> None:
         if "label_from" not in it
     ]
     missing = [i for i in items if i not in la or i not in lb]
-    if missing:
-        sys.exit(f"{len(missing)} items lack a label, e.g. {missing[:3]}")
-    diff = sorted(i for i in items if not same(la[i], lb[i]))
+    stray = sorted((set(la) | set(lb)) - set(items))
+    if missing or stray:
+        print(
+            f"{len(missing)} items lack a label from A or B (C settles them); {len(stray)} keys name no item"
+        )
+    diff = sorted(i for i in items if i in missing or not same(la[i], lb[i]))
     lo, hi = wilson(len(items) - len(diff), len(items))
     print(
         f"{split}: agree {len(items) - len(diff)}/{len(items)} [{100 * lo:.1f}, {100 * hi:.1f}]; to settle {len(diff)}"
@@ -496,22 +499,21 @@ def cmd_agree(split: str, a: Path, b: Path) -> None:
 
 
 def cmd_settle(split: str, a: Path, b: Path, c: Path, out: Path) -> None:
-    """The reference: A where A and B agree, else C (the tiebreak labeled only the disagreements)."""
+    """The reference, item by item: A where A and B agree, else C (the tiebreak labeled only the disagreements, and
+    any item A or B left without a label, e.g. under a mistyped key). Keys that name no item are ignored."""
     la, lb, lc = (json.loads(p.read_text()) for p in (a, b, c))
     ref = {}
     here = Path(__file__).parent
     for it in json.loads((here / f"items_{split}.json").read_text())["items"]:
+        i = it["coffee_id"]
         if "label_from" in it:  # an earlier round's reference label for the same option
-            ref[it["coffee_id"]] = json.loads(
-                (here / "labels" / f"labels_ref_{it['label_from']}.json").read_text()
-            )[it["coffee_id"]]
-    for i in la:
-        if same(la[i], lb[i]):
+            ref[i] = json.loads((here / "labels" / f"labels_ref_{it['label_from']}.json").read_text())[i]
+        elif i in la and i in lb and same(la[i], lb[i]):
             ref[i] = la[i]
         elif i in lc:
             ref[i] = lc[i]
         else:
-            sys.exit(f"{i}: A and B disagree and C has no label")
+            sys.exit(f"{i}: A and B disagree or one has no label, and C has no label")
     out.write_text(json.dumps(ref, indent=1, sort_keys=True) + "\n")
     print(
         split,

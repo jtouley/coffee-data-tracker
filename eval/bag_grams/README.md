@@ -42,7 +42,8 @@ totals, and a fresh sealed test set (`test2`). Once `test2` is scored, the total
 0; add each later change's count here.
 
 - Round 3 (bag counts, below): against `main` on the eval population, the candidates change the grams of 151–152
-  coffees and the `price_per_100g` of 75–87, so it goes through the full process again (`test3`).
+  coffees and the `price_per_100g` of 75–87 (the chosen rules: 152 and 87), so it goes through the full process
+  again (`test3`).
 
 ## Data
 
@@ -272,7 +273,7 @@ store-entered weights the listing never states are no longer trusted (the owner'
 joined the regression fixtures as `test-2026-11-11`, with floor 0.953 and ceiling 0.0087 (its score of 95.36% and
 0.86%, rounded toward passing); the next change draws a new test set.
 
-## Round 3: counts written as bags (in progress)
+## Round 3: counts written as bags
 
 The final review of #136 (finding M1): a count written as "N bags" wasn't read, so a multi-bag price got one bag's
 weight ("Two 12 oz bags", "2 Bags - 12 oz", "... 12oz Whole Beans ... x 2 Bags", "Buy The Whole Roast: (4) 1lb
@@ -350,3 +351,56 @@ and `settle` skip it or fill it in.
 Labeling, as in rounds 1 and 2: labelers A and B independently and blind to each other and to every prediction, and a
 third (C) blind to both, settling only their disagreements. Train and validation are labeled first, then the rules are
 frozen and `test3` drawn and labeled by fresh labelers.
+
+### Labels for train-3 and validation-3 (2026-11-11)
+
+Labelled by Claude subagents (claude-haiku-5-5) against `GUIDE.md`: labelers A and B independently, each blind to
+the other and to every rule's prediction, with only the guide and the packet; a third (C), blind to A and B, settled
+the items they didn't agree on. None of them wrote the rules. A person's spot-check is still to come, as for the
+earlier rounds.
+
+| Set | A–B agreement | Wilson 95% | Settled by C | Reference labels |
+|---|---|---|---|---|
+| validation-3 | 11/11 | [74.1, 100.0] | 0 | 24 (13 reused from round 1's validation) |
+| train-3 | 34/39 (87.2%) | [73.3, 94.4] | 5 | 39 |
+
+- Train's agreement is well below round 2's test2 (488/496, 98.4% [96.8, 99.2]). Four of the five items are one
+  store's listings (store group `coffeemasters.shop`), one listing shape the two labelers read differently; C gave
+  all four 1020. Every candidate leaves those four blank, so they count as misses for all four and decide nothing
+  between them.
+- The fifth is a key error, not a disagreement: labeler A wrote its label under a coffee id that names no coffee
+  (the packet's id with its last four hex digits changed), with the same value B gave the real item. It wasn't
+  re-keyed by hand; `agree` counts it as missing and C labeled the item. Counting it as agreement, train is 35/39
+  (89.7% [76.4, 95.9]). `settle` now works item by item, so a stray key can't stand in for an item (the earlier
+  rounds' references reproduce byte for byte).
+
+### Scores and the choice
+
+Stratum `D` only (every candidate equals `main` outside it). Wilson intervals per outcome; the weighted figures with
+store-clustered intervals.
+
+| Set | Rule | Right | Wrong | Missed | Accuracy | Confidently wrong |
+|---|---|---|---|---|---|---|
+| validation-3 | main | 0/24 | 2/24 [2.3, 25.8] | 20/24 | 8.3% [0.0, 57.1] | 8.3% [0.0, 57.1] |
+| validation-3 | multiply, fill off | 21/24 [69.0, 95.7] | 2/24 | 1/24 | 87.5% [37.5, 98.2] | 8.3% [0.0, 57.1] |
+| validation-3 | block, fill off | 21/24 | 2/24 | 1/24 | 87.5% | 8.3% |
+| validation-3 | multiply, fill on | **22/24 [74.2, 97.7]** | 2/24 | 0/24 | **91.7% [42.9, 100.0]** | 8.3% [0.0, 57.1] |
+| validation-3 | block, fill on | 22/24 | 2/24 | 0/24 | 91.7% | 8.3% |
+| train-3 | main | 0/39 | 32/39 [67.3, 91.0] | 6/39 | 2.6% [0.0, 10.7] | 82.1% [52.6, 97.5] |
+| train-3 | multiply, fill off | 24/39 | 0/39 [0.0, 9.0] | 14/39 | 64.1% | 0.0% |
+| train-3 | block, fill off | 20/39 | 0/39 | 18/39 | 53.8% | 0.0% |
+| train-3 | multiply, fill on | **28/39 [56.2, 83.5]** | 1/39 [0.5, 13.2] | 10/39 | **71.8% [36.0, 93.0]** | 2.6% [0.0, 10.7] |
+| train-3 | block, fill on | 24/39 | 1/39 | 14/39 | 61.5% | 2.6% |
+
+By the rule fixed before labeling:
+- **`count_fill` on**: validation's accuracy is higher with it (22/24 against 21/24, one item), its wrong share the
+  same.
+- **`bag_counts="multiply"`**: validation ties (no validation coffee separates the two), and so does its wrong
+  share; train decides: 71.8% against 61.5%, wrong 2.6% both. The four train items that separate them are one
+  store's titles (`... x 2 Bags`, on which A and B agreed), and `multiply` is right on all four.
+- Both choices rest on very few items and stores; the sealed `test3` is the measure.
+- Train shows one confidently wrong answer that `count_fill` adds; validation shows none.
+
+The frozen rules (`branch3`) are `product_grams`' defaults, and the floors in `tests/test_bag_grams_accuracy.py` now
+include train-3 and validation-3 at these measured values; on the earlier sets they rise where the rules improved
+(validation 95.8% / 1.05%, the first test set 93.4% / 0.87%, test2 95.3% / 0.74%).

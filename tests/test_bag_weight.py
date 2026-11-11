@@ -244,14 +244,19 @@ def test_tags_and_handle_fill_only_when_the_title_states_no_weight():
 def test_options_that_give_only_a_count_of_bags():
     # review M1 of #136: "3 bags" of no stated size is blank, never one bag's weight; the other options read as usual
     opts = [("1 bag", 15.99, None), ("3 bags", 39.89, None), ("5 bags", 62.99, None)]
-    assert product_grams("Organic Colombian Ground -12oz", "", opts) == [340, None, None]
+    assert product_grams("Organic Colombian Ground -12oz", "", opts, count_fill=False) == [340, None, None]
     opts = [("Drip Grind / 1 Bag", 16.99, 340), ("Drip Grind / 5 bags", 60.0, 340)]
-    assert product_grams("Stay Awake", "12 oz bag", opts) == [340, None]
-    # with count_fill, the counts take the one bag weight the product states when the prices per bag agree
+    assert product_grams("Stay Awake", "12 oz bag", opts, count_fill=False) == [340, None]
+    # count_fill (the chosen default): the counts take the one bag weight the product states when the prices per
+    # bag agree; when they don't, a count of more than one stays blank
     opts = [("1 bag", 15.99, None), ("3 bags", 39.89, None), ("5 bags", 62.99, None)]
-    assert product_grams("Organic Colombian Ground -12oz", "", opts, count_fill=True) == [340, 1020, 1700]
+    assert product_grams("Organic Colombian Ground -12oz", "", opts) == [340, 1020, 1700]
+    assert product_grams("Stay Awake", "12 oz bag", [("1 Bag", 16.99, 340), ("5 bags", 60.0, 340)]) == [
+        340,
+        1700,
+    ]
     opts = [("1 Bag", 10.0, None), ("2 Bags", 60.0, None)]
-    assert product_grams("Kenya 12oz", "", opts, count_fill=True) == [340, None]
+    assert product_grams("Kenya 12oz", "", opts) == [340, None]
     # a count that is also a pack or a case stays blocked, and so does the rest of the listing
     opts = [("Sumatra / Whole Bean", 15.0, None), ("3 Bag Bonus Pack / Whole Bean", 40.0, None)]
     assert product_grams("All That Dance", "12 oz bags", opts, count_fill=True) == [None, None]

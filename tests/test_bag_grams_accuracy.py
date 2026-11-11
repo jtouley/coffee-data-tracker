@@ -3,7 +3,8 @@ subagents against eval/bag_grams/GUIDE.md, with disagreements settled by a third
 
 tests/fixtures/bag_grams_labels.jsonl holds the labeled items of eval/bag_grams: "train" (the rules were tuned on
 it), "validation" (versions were chosen on its totals), "test-2026-11-10" (the first sealed test set) and "test-2026-11-11"
-(the second, test2), each scored once and then added here as a regression fixture. Each item is one option of a current retail listing, drawn by stratum;
+(the second, test2), each scored once and then added here as a regression fixture; and round 3's "train-3" and
+"validation-3" (every coffee the bag-count change touches in those splits). Each item is one option of a current retail listing, drawn by stratum;
 the scores weight each stratum by its size in the set (eval/bag_grams/items_<set>.json). A rules change must not
 lower any accuracy or raise any confidently wrong share.
 """
@@ -18,12 +19,35 @@ from coffeedata.bag_weight import product_grams
 
 ROOT = Path(__file__).parent.parent
 LABELS = Path(__file__).parent / "fixtures" / "bag_grams_labels.jsonl"
-ITEMS = {"train": "train", "validation": "validation", "test-2026-11-10": "test", "test-2026-11-11": "test2"}
-# Measured on 2026-11-11 with the rules frozen for the second test set; raise these when the rules improve, never
+ITEMS = {
+    "train": "train",
+    "validation": "validation",
+    "test-2026-11-10": "test",
+    "test-2026-11-11": "test2",
+    "train-3": "train-3",
+    "validation-3": "validation-3",
+}
+# Measured on 2026-11-11 with the rules frozen for round 3 (bag counts); raise these when the rules improve, never
 # lower them to pass. Accuracy: the share right (grams within 2% of the label) or rightly blank (label "unknown").
-# Wrong: the share confidently wrong (a weight for an "unknown" label, or off by more than 2%).
-FLOOR = {"train": 0.999, "validation": 0.956, "test-2026-11-10": 0.926, "test-2026-11-11": 0.953}
-CEILING = {"train": 0.001, "validation": 0.011, "test-2026-11-10": 0.0161, "test-2026-11-11": 0.0087}
+# Wrong: the share confidently wrong (a weight for an "unknown" label, or off by more than 2%). train-3 and
+# validation-3 are round 3's census of the coffees that change (eval/bag_grams/README.md): low on train-3 because
+# its misses are listings the rules leave blank (the label is a weight), not wrong ones.
+FLOOR = {
+    "train": 0.999,
+    "validation": 0.958,
+    "test-2026-11-10": 0.933,
+    "test-2026-11-11": 0.953,
+    "train-3": 0.717,
+    "validation-3": 0.916,
+}
+CEILING = {
+    "train": 0.001,
+    "validation": 0.0106,
+    "test-2026-11-10": 0.0088,
+    "test-2026-11-11": 0.0075,
+    "train-3": 0.0257,
+    "validation-3": 0.0834,
+}
 
 
 def _scores(name: str) -> tuple[float, float, list[str]]:
