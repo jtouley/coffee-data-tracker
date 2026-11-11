@@ -9,7 +9,7 @@ coffee in it.
 
 Every roaster runs its own online store, so there's no single place to compare origins, processes and prices, or to
 see when a coffee's price changes or it sells out. A paper shot log isn't tied to a specific coffee or grinder. This
-project reads each roaster's public store once a week, starting from a seed list of about 3,200 US roasters, keeps
+project reads each roaster's public store once a week, starting from a seed list of US roasters, keeps
 every weekly snapshot, and turns them into tables you can query with SQL: what's listed now, what changed, and how
 your shots of a given coffee went. The weekly crawl runs as scheduled Cloud Run jobs, and GitHub Actions publishes the site. The data lives in a lake
 of Parquet files: a Hugging Face dataset or a local folder.
@@ -261,9 +261,10 @@ Everything is set through environment variables. Nothing is required for a local
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION` | none | `s3://` exports (any DuckDB AWS credential source works) |
 | `GCS_HMAC_KEY_ID`, `GCS_HMAC_SECRET` | none | `gs://` exports |
 
-The seed list is [`config/roasters.csv`](config/roasters.csv): 3,205 roasters from Overture Maps and a curated
-list. Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and
-this file stays as it is.
+The seed list is [`config/roasters.csv`](config/roasters.csv): roasters from Overture Maps and a curated list.
+Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and this
+file stays as it is. The site counts them all each week ("roasters in the registry" on
+[registry.coffee](https://registry.coffee/)).
 
 ## Run it on GitHub
 
@@ -446,8 +447,9 @@ stored, so a better rule re-derives the whole history. No prices, page HTML or i
   - `run_manifest_mode_values`: every run manifest's `mode` is `full`, `sample`, `only` or `retry_failed`
     (`run_completeness` takes the expected set from the full ones);
   - `coverage_claims_match_build`: the coverage numbers we publish (`marketplace/LISTING.md`'s coverage-claims
-    comment, such as "about 38,000 coffees listed for sale") are within 15% (`claim_tolerance`) of this build's
-    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update;
+    comment, one `metric: text` line per number) are within 15% (`claim_tolerance`) of this build's
+    `mart_build_profile`. It only warns, and `coffeedata build` prints the file and line to update, with the
+    build's number rounded for the copy;
     `coverage_claims_name_metrics` fails the build if a claim names a metric the profile doesn't have;
   - the facts-only guardrail and the enforced dbt contracts on the public tables.
 
