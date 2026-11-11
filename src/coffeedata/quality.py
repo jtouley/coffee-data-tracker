@@ -369,6 +369,16 @@ def compare_hashes(
     return out
 
 
+def about(n: float) -> str:
+    """A count rounded to two significant figures for copy ("about 41,000"): what a stale coverage claim should say
+    now, computed from the build rather than worked out by hand."""
+    n = round(n)
+    if n < 100:
+        return f"{n:,}"
+    step = 10 ** (len(str(n)) - 2)
+    return f"{round(n / step) * step:,}"
+
+
 def coverage_claims(path: Path | None = None, strict: bool = True) -> list[dict]:
     """The numeric claims in `path`'s (default LISTING) coverage-claims comment, one `metric: text` line each: the
     metric in mart_build_profile, the text as it appears in the copy, its number (the stated value) and `source`,
@@ -441,7 +451,8 @@ def coverage_claim_messages(db: Path) -> list[str]:
                     off = "far" if r[4] is None else f"{r[4]:+.0%}"  # None: the build has 0
                     out.append(
                         f"{r[0]}: {r[2]!r} is {off} off this build's {r[1]} ({r[3]:,.0f}; tolerance "
-                        f"{r[5]:.0%}): update the line and its coverage-claims entry, then the Snowflake listing"
+                        f"{r[5]:.0%}): update the line (about {about(r[3])} now) and its coverage-claims entry, "
+                        "then the Snowflake listing"
                     )
     finally:
         con.close()

@@ -744,6 +744,52 @@ def test_site_shows_only_the_public_roasters(lake, tmp_path):
     assert '"version":"20261027T060000-abcdef"' in landing and '"dateModified":"2026-10-26"' in landing
 
 
+def test_the_landing_page_counts_origins_from_the_single_origin_listings(lake, tmp_path):
+    """The origin count and the in-stock-by-origin chart are public_market_weekly's: a blend's origin list
+    ("Colombia, Brazil") is not an origin country, and the page's numbers are the published table's."""
+    from coffeedata import site
+
+    rid = "onyxcoffeelab.com"
+    probe(lake, "2026-10-18", rid)
+    products = [
+        product("K", title="Kenya Kamwangi AA Washed"),
+        product("E", title="Ethiopia Guji Natural"),
+        product("B", title="Colombia Brazil House Blend"),
+    ]
+    run(lake, "2026-10-19", rid, products)
+    lake.write_partition(
+        "enrichments",
+        "2026-10-19",
+        "llm1",
+        [
+            {
+                "extracted_at": datetime(2026, 10, 19, 12, tzinfo=UTC),
+                "roaster_id": rid,
+                "product_id": "B",
+                "body_hash": "bB",
+                "method": "llm",
+                "needs_llm": False,
+                "origin_country": "Colombia, Brazil",
+                "is_blend": True,
+            }
+        ],
+    )
+    con = build(lake, tmp_path)
+    assert con.execute(
+        "select sum(coffees), count(distinct origin_country) from public_market_weekly"
+    ).fetchone() == (
+        2,
+        2,
+    )
+    con.close()
+    out = tmp_path / "site"
+    site.build(tmp_path / "coffee.duckdb", out)
+    landing = (out / "index.html").read_text()
+    assert re.search(r'<div class="n">2</div><div class="l">origin countries</div>', landing)
+    assert re.search(r'<div class="n">3</div><div class="l">coffees listed</div>', landing)
+    assert "Kenya: 1 coffees in stock" in landing and "Colombia, Brazil" not in landing
+
+
 # A release's vars without the run checks (the fixture registry lists roasters these lakes never fetch).
 ANY_RUN = {"min_attempted_share": 0, "min_ok_share": 0}
 

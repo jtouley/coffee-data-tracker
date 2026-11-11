@@ -39,6 +39,15 @@ STATUS_LABELS = {
     "opted_out": "Opted out",
 }
 
+# The two catalog counts the site states, each with one definition, both computed from this build's data (never
+# written into a template or a page by hand; tests/test_stated_counts.py fails if one comes back):
+# - LISTED, the current retail catalog: listed, not the roaster's archived back catalog, not wholesale. The headline
+#   coffees, in stock and roasters, the states, and mart_build_profile's listed_coffees and roasters_with_coffee.
+# - SINGLE_ORIGIN, the single-origin listings: LISTED, not a blend, origin known. It is public_market_weekly itself
+#   (its rows sum to them), so the origin chart and the origin count on the page match the published table.
+LISTED = "is_listed and catalog_status <> 'archived' and not is_wholesale"
+SINGLE_ORIGIN = "public_market_weekly"
+
 # --- inline SVG charts (single series, role-based colors from CSS variables) -------------------------
 
 
@@ -301,11 +310,11 @@ def build(db: Path, out: Path) -> Path:
     new = _q(con, f"{public_new} order by first_seen desc, roaster_name, title, coffee_id limit 25")
     totals = _q(
         con,
-        """
+        f"""
         select count(*) as coffees,
                count(*) filter (where in_stock) as in_stock,
                count(distinct roaster_id) as roasters
-        from site_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale""",
+        from site_coffee where {LISTED}""",
     )[0]
     catalog = _q(
         con,
@@ -314,22 +323,23 @@ def build(db: Path, out: Path) -> Path:
                tasting_notes, price_per_100g, min_price_usd, in_stock, catalog_status, first_seen
         from site_coffee where is_listed and not is_wholesale and not is_chain order by roaster_name, title""",
     )
-    reach = _q(
-        con,
-        """
-        select count(distinct origin_country) as origins,
-               count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
+    # The states are the listed coffees' roasters' (the same roasters as totals.roasters); the origins are the
+    # single-origin listings' countries, read from the published table so the page and the table can't disagree.
+    reach = (
+        _q(
+            con,
+            """
+        select count(distinct roaster_state) filter (where roaster_state in ({states})) as states,
                bool_or(roaster_state = 'DC') as has_dc, bool_or(roaster_state = 'PR') as has_pr
-        from site_coffee where is_listed and catalog_status <> 'archived' and not is_wholesale and not is_chain""".format(
-            states=", ".join(f"'{s}'" for s in STATES)
-        ),
-    )[0]
+        from site_coffee where {listed}""".format(states=", ".join(f"'{s}'" for s in STATES), listed=LISTED),
+        )[0]
+        | _q(con, f"select count(distinct origin_country) as origins from {SINGLE_ORIGIN}")[0]
+    )
     origin_counts = _q(
         con,
-        """
-        select origin_country, count(*) as n from site_coffee
-        where in_stock and not is_wholesale and not is_blend and not is_chain and origin_country is not null
-        group by 1 order by n desc, 1 limit 8""",
+        f"""
+        select origin_country, sum(in_stock)::bigint as n from {SINGLE_ORIGIN}
+        group by 1 having sum(in_stock) > 0 order by n desc, 1 limit 8""",
     )
     week = _q(
         con,
