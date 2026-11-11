@@ -34,6 +34,7 @@ STATUS_LABELS = {
     "no_coffee": "Shop read, no coffee for sale",
     "no_catalog": "Shop read, nothing listed",
     "pending": "Not read yet",
+    "alias": "Same shop as another roaster listed here",
     "unreachable": "Site down, or no shop we can read",
     "opted_out": "Opted out",
 }

@@ -4,7 +4,7 @@ apiVersion: v1.1.0
 kind: DataProduct
 id: coffee-data
 name: Coffee Data
-version: 2.5.0
+version: 2.6.0
 status: active
 domain: coffee
 description:
@@ -71,7 +71,7 @@ outputPorts:
   - name: public-catalog
     description: Facts-only public tables (public_coffee, public_roaster, public_price_event, public_market_weekly).
     type: tables
-    version: 2.5.0
+    version: 2.6.0
     contractId: coffee-data-public-catalog
 customProperties:
   - property: license
@@ -168,6 +168,21 @@ customProperties:
           none changed or removed). A release is served only if the build had a verdict model and at least 85% of listed
           coffees were decided by Claude's coffee-or-not verdict; until 2026-11 every release was the rules alone.
           No table, column, type or enum changed, so Snowflake needs no migrate.
+      - topic: one store, one roaster
+        decided: "2026-11-10"
+        outcome: >-
+          35 stores were published twice or three times, under 71 roaster_ids: a second domain (an old name, a
+          café's domain, a rebrand) that redirects to the store's own. A roaster_id whose resolved host has the same
+          key as another roaster's (lower case, without www/shop/store) is now an alias: never crawled, never
+          public, with its coffees and price events (the same store's products, which the canonical id carries
+          under its own coffee_ids; no history is moved across). Grouping never reads the crawl status (an outage
+          never splits a store) and skips shared hosts (parked, shorteners, platforms); the canonical id is sticky:
+          an opted-out one, then a publishable one, then the one read first, then the one equal to the host.
+          White-label stores (one supplier's catalog sold by separate businesses on their own domains) are separate
+          stores and stay. public-catalog contract
+          2.6.0, a minor version: a quality rule added (tests/public_roasters_unique_by_host.sql, error), fewer
+          rows, no table, column, type or enum changed, so Snowflake needs no migrate. Measured in
+          eval/roaster_dedup (main against the change, on held-out roaster pairs).
 team:
   name: registry.coffee
   members:

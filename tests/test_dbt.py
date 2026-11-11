@@ -258,6 +258,140 @@ def test_python_and_dbt_agree_on_roaster_status(lake, tmp_path):
     assert (py_status[a], py_status[b], py_status[c]) == ("active", "no_coffee", "unreachable")
 
 
+def test_one_store_is_one_roaster_in_python_dbt_and_the_public_tables(lake, tmp_path):
+    """eval/roaster_dedup: a second domain whose site resolves to an active roaster's store is an alias, in the
+    crawl's state (registry.current) and in dbt alike. Discovery adds intelligentsiacoffee.com, whose probe lands on
+    www.Intelligentsia.com (any case): while it is only pending it is already the alias, so it is never crawled, and
+    once both were read the id equal to the host stays canonical. The alias is in no public table."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [{"added_at": datetime(2026, 11, 1, tzinfo=UTC), "source": "overture", "roaster_id": alias,
+          "name": "Intelligentsia Coffee"}],
+    )  # fmt: skip
+    run(lake, "2026-10-26", main, [product("A", 20.0), product("B", 18.0)])
+    probe(lake, "2026-11-01", alias, final_host="www.Intelligentsia.com")
+    py = {s.roaster.roaster_id: s.status for s in registry.current(lake, FIX / "roasters.csv")}
+    assert (py[main], py[alias]) == ("active", "alias")
+    assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-02")[0]}
+    # Crawled anyway (as before this change), the same products under the second id: still one store.
+    run(lake, "2026-11-02", alias, [product("A", 20.0), product("B", 18.0)])
+    run(lake, "2026-11-02", main, [product("A", 20.0), product("B", 18.0)])
+    con = build(lake, tmp_path)
+    dbt = {
+        r[0]: r[1:]
+        for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster").fetchall()
+    }
+    py = {
+        s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+        for s in registry.current(lake, FIX / "roasters.csv")
+    }
+    assert dbt == py
+    assert dbt[alias] == ("alias", main) and dbt[main] == ("active", main)
+    assert [
+        r[0]
+        for r in con.execute(
+            "select roaster_id from public_roaster where roaster_id like 'intell%'"
+        ).fetchall()
+    ] == [main]
+    for t in ("public_coffee", "public_price_event"):
+        assert con.execute(f"select count(*) from {t} where roaster_id = ?", [alias]).fetchone() == (0,), t
+    assert con.execute("select count(*) from public_coffee where roaster_id = ?", [main]).fetchone() == (2,)
+
+
+def test_a_store_keeps_its_alias_through_an_outage_a_week_without_coffee_and_an_opt_out(lake, tmp_path):
+    """Review of #137 (H1, M7): grouping never reads the crawl status, so the canonical id going unreachable, then
+    reading no coffee, then opting out never makes its alias a store of its own again. Each time the build passes
+    (public_roasters_unique_by_host and roaster_aliases_resolve are error tests), the alias is never crawled or
+    public, and Python's state agrees with dbt's on every roaster's status and canonical id."""
+    from datetime import UTC, datetime
+
+    from coffeedata import ingest
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+
+    def registry_row(rid, **kw):
+        lake.write(
+            "registry",
+            f"registry/source=overture/{rid}-{len(kw)}.parquet",
+            [{"added_at": datetime(2026, 10, 1, tzinfo=UTC), "source": "overture", "roaster_id": rid, "name": rid}
+             | kw],
+        )  # fmt: skip
+
+    registry_row(alias)
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    run(lake, "2026-10-12", alias, [product("A", 20.0)])  # both read before the change
+    probe(lake, "2026-10-13", alias, final_host="www.intelligentsia.com")
+
+    def check(expected_main_status):
+        con = build(lake, tmp_path)
+        dbt = {r[0]: r[1:] for r in con.execute("select roaster_id, status, canonical_roaster_id from dim_roaster")
+               .fetchall()}  # fmt: skip
+        py = {s.roaster.roaster_id: (s.status, s.canonical_roaster_id)
+              for s in registry.current(lake, FIX / "roasters.csv")}  # fmt: skip
+        assert dbt == py
+        assert dbt[main] == (expected_main_status, main) and dbt[alias] == ("alias", main)
+        assert con.execute(
+            "select count(*) from public_roaster where roaster_id = ?", [alias]
+        ).fetchone() == (0,)
+        assert con.execute("select count(*) from dim_coffee where roaster_id = ?", [alias]).fetchone() == (0,)
+        con.close()
+        assert alias not in {s.roaster.roaster_id for s in ingest.select_states(lake, "2026-11-30")[0]}
+
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # the canonical store is down for 3 runs
+    check("unreachable")
+    run(lake, "2026-11-09", main, [product("M", coffee=False)])  # back, with only a mug for sale
+    check("no_coffee")
+    registry_row(main, opted_out=True)  # the store opts out: its other domain stays out too
+    check("opted_out")
+
+
+def test_a_stranded_store_warns_and_two_stores_on_a_parked_host_are_two(lake, tmp_path):
+    """Final review of #137. N1: a canonical id that stays unreachable while its alias still answers is a store
+    nobody crawls, so stranded_alias_stores warns (the runbook's fix is alias_of). N2: two published stores whose
+    domains both lapsed to a parked host (hugedomains.com, seed shared_hosts) are two stores, as the alias rule has
+    them, so public_roasters_unique_by_host (error) passes."""
+    import re
+    from datetime import UTC, datetime
+
+    main, alias = "intelligentsia.com", "intelligentsiacoffee.com"
+    lake.write(
+        "registry",
+        "registry/source=overture/x.parquet",
+        [
+            {
+                "added_at": datetime(2026, 10, 1, tzinfo=UTC),
+                "source": "overture",
+                "roaster_id": alias,
+                "name": alias,
+            }
+        ],
+    )
+    run(lake, "2026-10-12", main, [product("A", 20.0)])
+    for d in ("2026-10-19", "2026-10-26", "2026-11-02"):
+        run(lake, d, main, None)  # gone for good
+    probe(lake, "2026-11-03", alias, final_host="www.intelligentsia.com")  # the alias still answers
+    for rid in ("counterculturecoffee.com", "anaheimcoffee.com"):
+        run(lake, "2026-11-02", rid, [product("B", 18.0)])
+        probe(lake, "2026-11-03", rid, final_host="www.hugedomains.com", platform="other")
+    r = build(lake, tmp_path, check=False)
+    assert r.returncode == 0, r.stdout[-3000:]
+    assert re.search(r"WARN 1 stranded_alias_stores", r.stdout), r.stdout[-3000:]
+    con = duckdb.connect(str(tmp_path / "coffee.duckdb"), read_only=True)
+    assert con.execute(
+        "select alias_id, canonical_id from main_dbt_test__audit.stranded_alias_stores"
+    ).fetchall() == [(alias, main)]
+    public = {r[0] for r in con.execute("select roaster_id from public_roaster").fetchall()}
+    assert {"counterculturecoffee.com", "anaheimcoffee.com"} <= public
+    con.close()
+
+
 def test_roaster_status_reads_the_recorded_coffee_count_else_counts_it(lake, tmp_path):
     """Status is decided as on main, from the last ok fetch's coffee count. A fetch from before ELT keeps the count
     its crawl recorded, even where today's rules see no coffee (kaldi.com 2026-10-26: 3,459 recorded, while its
@@ -731,7 +865,8 @@ def test_every_roaster_status_has_a_coverage_label():
 
     from coffeedata import site
 
-    sql = (ROOT / "dbt" / "models" / "marts" / "dim_roaster.sql").read_text()
+    # dim_roaster's status is decided in int_roaster_state
+    sql = (ROOT / "dbt" / "models" / "intermediate" / "int_roaster_state.sql").read_text()
     statuses = set(re.findall(r"(?:then|else) '(\w+)'", sql))
     assert statuses and statuses == set(site.STATUS_LABELS)
 
@@ -744,13 +879,14 @@ def test_states_are_the_fifty():
 
 def test_dbt_unit_tests(lake, tmp_path):
     """dbt's unit tests (dbt/models/unit_tests.yml): the suspect-run rule, each kind of price event, tag decoding, the
-    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules. They read hand-written
-    rows, but dbt reads the column types of their inputs from built tables, so a small lake is built first."""
+    partial and challenged runs the fetch-health check reads, the dial-in and verdict tie rules, one canonical roaster
+    per store. They read hand-written rows, but dbt reads the column types of their inputs from built tables, so a
+    small lake is built first."""
     run(lake, "2026-10-19", "onyxcoffeelab.com", [product("A")])
     build(lake, tmp_path).close()
     r = run_dbt(lake, tmp_path, "test", "--select", "test_type:unit")
     assert r.returncode == 0, r.stdout[-4000:]
-    assert "PASS=12 " in r.stdout
+    assert "PASS=15 " in r.stdout
 
 
 def test_public_files_are_written_in_key_order(lake, tmp_path):

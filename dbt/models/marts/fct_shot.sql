@@ -5,7 +5,7 @@ with s as (
     -- coffee and roast date into a shot that didn't have them.
     select s.coffee_id as shot_coffee_id, s.coffee_freetext as shot_coffee_freetext, s.roast_date as shot_roast_date,
     s.* replace (
-        coalesce(s.coffee_id, b.coffee_id) as coffee_id,
+        {{ canonical_coffee_id('coalesce(s.coffee_id, b.coffee_id)') }} as coffee_id,
         coalesce(s.coffee_freetext, b.coffee_freetext) as coffee_freetext,
         coalesce(s.roast_date, b.roast_date) as roast_date
     )

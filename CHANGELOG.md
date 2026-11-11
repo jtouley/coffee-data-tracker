@@ -18,6 +18,16 @@ The first release: the rebuild from PR #9 onward. Earlier history (2024, PRs #1â
 
 ### Added
 
+- One store, one roaster: a roaster_id whose site resolves to another roaster's store (the same host, any case,
+  without www/shop/store; never a parked, shortener, directory or platform host, `dbt/seeds/shared_hosts.csv`) is an
+  alias (`dim_roaster.status`, `canonical_roaster_id`), never crawled, never in `dim_coffee`, `fct_price_event` or
+  the public tables; a hand-checked `alias_of` in `config/roasters.csv` covers a rebrand that doesn't redirect. The
+  grouping never reads the crawl status and the canonical id is sticky (an opt-out, then a publishable id, then the
+  one read first), so an outage never splits a store. The rule is written once (`dbt/macros/roaster_alias.sql`),
+  for dbt and the crawl. The probe job lists the domains that became aliases. The site's coverage table counts
+  aliases on a row of their own. Public contract 2.6.0 adds the error rule
+  `public_roasters_unique_by_host`. Measured in `eval/roaster_dedup`.
+
 - Data-quality rules, all warn only and measured on held-out data in `eval/dq`: per-adapter volume bands
   (`adapter_volume_in_band`), near-duplicate roasters, price per 100 g outliers within origin and process, and
   cross-table reconciliation (`public_tables_reconcile`; `release_changes` / `release_changes_explained` against the

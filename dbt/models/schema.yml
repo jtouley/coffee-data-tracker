@@ -154,6 +154,30 @@ models:
       - name: coffees
         description: Distinct products in the fetch that the rule calls coffee.
         data_tests: [not_null]
+  - name: int_roaster_state
+    description: >-
+      One row per roaster in the registry: its crawl status from probe and fetch history, and the store it serves
+      (canonical_roaster_id, macros/roaster_alias.sql). registry.STATE_SQL decides both the same way for the crawl.
+      Upstream of dim_coffee, which leaves aliases out; dim_roaster adds the coffee counts.
+    columns:
+      - name: roaster_id
+        description: The roaster's normalized domain (registry roaster_id).
+        data_tests: [unique, not_null]
+      - name: host
+        description: "The store's host: the last ok probe's, else the seed's, else the roaster_id. A failed probe never moves it."
+      - name: first_catalog_run
+        description: "The first run that read a catalog (an ok fetch with products); null: never. History, so it only ever moves earlier: the canonical id's sticky rank."
+      - name: crawl_status
+        description: "The status from history alone, before aliases (dim_roaster.status's values but alias)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+      - name: status
+        description: "crawl_status, or alias when another roaster_id serves the same store (an opted-out id keeps opted_out)."
+        data_tests:
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: "The one roaster_id its store is crawled and published under (macros/roaster_alias.sql); roaster_id itself when it is its store's."
+        data_tests: [not_null]
   - name: int_roaster_runs
     description: One row per roaster and run, over all of the run's attempts (a run counts, not an attempt).
     data_tests:
@@ -314,6 +338,11 @@ models:
       - name: verdict_model
         description: "The verdict's model when classified_by = claude, else null."
   - name: mart_market
+    description: >-
+      One row per origin_country x process over the current catalog (int_current_catalog): non-wholesale, non-blend
+      coffees with an origin from US, non-chain roasters, each store counted once (canonical roaster ids only,
+      dim_roaster.canonical_roaster_id), with coffee and roaster counts, price per 100 g quantiles and the origin's
+      top tasting notes.
     data_tests:
       - unique:
           arguments: {column_name: "coalesce(origin_country, '') || '|' || coalesce(process, '')"}
@@ -543,9 +572,20 @@ models:
       - name: status
         description: >-
           As on main, from the last ok fetch's coffee count (int_fetches.coffees: as the crawl recorded it, else
-          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md).
+          counted with the crawl's rule). Moving status to facts is a follow-up (DESIGN.md). alias: another
+          roaster_id serves the same store (canonical_roaster_id); an alias is never crawled (registry.STATE_SQL
+          decides the same), has no coffee in dim_coffee and is never public. The site's coverage table counts
+          aliases on a row of their own.
         data_tests:
-          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog]}}
+          - accepted_values: {arguments: {values: [opted_out, unreachable, pending, active, no_coffee, no_catalog, alias]}}
+      - name: canonical_roaster_id
+        description: >-
+          The one roaster_id its store is crawled and published under (int_roaster_state; the rule and its order
+          are in macros/roaster_alias.sql): roasters whose resolved hosts share a key (macro host_key), whatever
+          their status, unless the key is a shared host (seed shared_hosts), are one store; alias_of overrides the
+          host. The canonical id is sticky: an opted-out one, then a publishable one, then the one whose catalog was
+          read first. dim_coffee and fct_price_event keep only roasters equal to it.
+        data_tests: [not_null]
   - name: mart_bag
     columns:
       - name: bag_id
@@ -804,6 +844,19 @@ models:
         data_type: date
 
 seeds:
+  - name: shared_hosts
+    description: >-
+      Hosts many unrelated domains resolve to, so sharing one is no evidence of one store (macros/roaster_alias.sql):
+      not_a_roaster (registry.NOT_A_ROASTER_SITE: social, listing and ordering sites, never a roaster's storefront),
+      platform (a platform's own home page, where a closed store can redirect), parked (domains for sale),
+      shortener and directory. A host covers its subdomains. registry.py reads the same file.
+    columns:
+      - name: host
+        data_tests: [unique, not_null]
+      - name: kind
+        data_tests:
+          - not_null
+          - accepted_values: {arguments: {values: [not_a_roaster, platform, parked, shortener, directory]}}
   - name: flavor_lexicon
     description: Tasting note -> SCA flavor-wheel-style category. Unknown notes stay uncategorized.
     columns:

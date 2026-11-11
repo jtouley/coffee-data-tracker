@@ -1,6 +1,6 @@
 -- One row per bag, per user: how many shots it took, the best one (highest rating, latest wins ties, then shot_id,
 -- as in mart_dial_in), and how many days off roast the first and last shots were. Personal: private marts only.
-with b as (select * from {{ ref('stg_bags') }}),
+with b as (select * replace ({{ canonical_coffee_id('coffee_id') }} as coffee_id) from {{ ref('stg_bags') }}),
 s as (select * from {{ ref('fct_shot') }} where bag_id is not null),
 per_bag as (
     select
