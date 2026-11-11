@@ -1013,14 +1013,6 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
     return all(r["status"] != "failed" for r in results)
 
 
-def cmd_importer_purge(args: argparse.Namespace) -> None:
-    """Remove a switched-off importer's raw text and offers, every week, from the importers dataset."""
-    from . import importers
-
-    files = importers.purge(Lake.importers(), args.importer, dry_run=args.dry_run)
-    _print({"importer": args.importer, "dry_run": args.dry_run, "files": files})
-
-
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s", stream=sys.stderr)
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -1275,14 +1267,6 @@ def main(argv: list[str] | None = None) -> None:
     imp.add_argument(
         "--importer", action="append", choices=sorted(IMPORTERS), help="only this importer (repeatable)"
     )
-
-    ipg = add(
-        "importer-purge",
-        cmd_importer_purge,
-        "remove a switched-off importer's files (raw text and offers, every week) from $COFFEEDATA_IMPORTERS",
-    )
-    ipg.add_argument("importer", choices=sorted(IMPORTERS))
-    ipg.add_argument("--dry-run", action="store_true", help="list the files, remove nothing")
 
     add("mcp", cmd_mcp, "run the MCP server over stdio")
 

@@ -13,7 +13,9 @@ respected):
 
 Two layers, each one immutable file per importer per week, in a private Hugging Face dataset of its own
 (`COFFEEDATA_IMPORTERS`, created private by `ensure_private` with the existing credential):
-- importer_raw (`raw/`): each lot's name and description cells, verbatim;
+- importer_raw (`raw/`): each lot word for word, as the roaster adapters keep a product's whole text: every cell of
+  its row under the page's header, and its own page's URL (only cells about prices are left out), so the normalized
+  values and anything derived later can be derived again from it;
 - importer_offers (`offers/`): the fields the page states, and our model's values derived from the raw cells by
   deterministic rules that abstain when unsure (importer_rules.py).
 No prices, page HTML or images. Backend-only, for internal use and a future roaster portal (which may show only the
@@ -23,10 +25,6 @@ the site or the public dataset does (tests/test_importers.py). A week already st
 A changed page fails loudly (LayoutChanged): a missing table or column, zero rows, or more than MAX_BAD_SHARE of
 rows that can't be read is an error, never an empty or thinned snapshot. The importer's week is then left unwritten,
 so a re-run that week (after the parser is fixed) fetches it again.
-
-Kill switch: each source has an `enabled` flag in config/importers.yaml, and the IMPORTERS_DISABLED variable turns
-sources off without a merge (`enabled`). A switched-off source is neither fetched nor stored, and `purge` (coffeedata
-importer-purge) removes everything stored for it, with the dataset's history.
 
 What these snapshots are for (arrival-to-roaster lag, after a year or more of history): the green-importer
 feasibility check, recommendation 2. .github/workflows/importers.yml runs it each week.
@@ -39,10 +37,11 @@ import os
 import re
 import time
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urljoin, urlsplit
 
 import httpx
 
@@ -70,6 +69,7 @@ class Table:
     attrs: dict[str, str]
     header: list[str]
     rows: list[list[list[str]]]  # each row's cells; each cell's text in lines (split at <br>)
+    links: list[list[str]] = field(default_factory=list)  # each row's link targets (href), in page order
 
 
 class _TableReader(HTMLParser):
@@ -89,6 +89,8 @@ class _TableReader(HTMLParser):
             self._skip += 1
         elif tag in ("span", "div", "small", "em", "a", "strong", "b", "i"):
             self._hidden.append("hide" in a.get("class", "").split())
+            if tag == "a" and a.get("href") and self._stack and (cell := self._stack[-1][2]) is not None:
+                cell["links"].append(a["href"])
         elif tag == "table":
             self._stack.append((Table(a, [], []), None, None))
         elif not self._stack:
@@ -100,7 +102,7 @@ class _TableReader(HTMLParser):
             t, row, _ = self._stack[-1]
             if row is None:  # a cell outside a <tr>: start one
                 row = []
-            self._stack[-1] = (t, row, {"tag": tag, "lines": [""]})
+            self._stack[-1] = (t, row, {"tag": tag, "lines": [""], "links": []})
         elif tag == "br":
             _, _, cell = self._stack[-1]
             if cell is not None:
@@ -128,6 +130,7 @@ class _TableReader(HTMLParser):
                     t.header = [_text(c["lines"]) for c in row]
                 elif any(c["tag"] == "td" for c in row):
                     t.rows.append([[_clean(x) for x in c["lines"] if _clean(x)] for c in row])
+                    t.links.append([href for c in row for href in c["links"]])
             self._stack[-1] = (t, None, None)
         elif tag == "table":
             self._close_cell()
@@ -171,15 +174,26 @@ def find_table(html: str, required: tuple[str, ...]) -> Table:
     raise LayoutChanged(f"no table with the columns {', '.join(required)}")
 
 
-def records(table: Table) -> tuple[list[dict[str, list[str]]], int]:
-    """The table's rows as {column: cell lines}, and how many rows had the wrong number of cells (left out)."""
-    keys = [h.casefold() for h in table.header]
+class Record(dict[str, list[str]]):
+    """One table row as {column (casefolded): cell lines}, with every cell under its header as the page names it
+    (`cells`, in page order) and the row's link targets (`links`)."""
+
+    cells: list[tuple[str, list[str]]]
+    links: list[str]
+
+
+def records(table: Table) -> tuple[list[Record], int]:
+    """The table's rows, and how many rows had the wrong number of cells (left out)."""
+    names = [h or f"column {i + 1}" for i, h in enumerate(table.header)]  # a header cell with no text
     out, bad = [], 0
-    for row in table.rows:
-        if len(row) != len(keys):
+    for k, row in enumerate(table.rows):
+        if len(row) != len(names):
             bad += 1
             continue
-        out.append(dict(zip(keys, row, strict=True)))
+        rec = Record(zip((n.casefold() for n in names), row, strict=True))
+        rec.cells = list(zip(names, row, strict=True))
+        rec.links = table.links[k] if k < len(table.links) else []
+        out.append(rec)
     return out, bad
 
 
@@ -230,8 +244,32 @@ def _verbatim(cell: list[str]) -> str | None:
     return "\n".join(cell) or None
 
 
-def raw_cells(row: dict[str, list[str]], columns: tuple[str, ...]) -> dict[str, str | None]:
-    return {c: _verbatim(row[c.casefold()]) for c in columns if c.casefold() in row}
+# A cell about prices ("Log In For Price", "$4.10/lb"): never stored, in either layer.
+PRICE = re.compile(r"\bprices?\b|\$\s*\d", re.IGNORECASE)
+
+
+def raw_cells(row: Record) -> dict[str, str | None]:
+    """Every cell of the row, word for word under its header, as the roaster adapters keep a product's whole text:
+    nothing trimmed or summarized, so everything derived later can be derived again from it. The only cells left out
+    are about prices; text the page hides from readers (`class="hide"` copies), markup, links and images were never
+    cell text."""
+    return {name: _verbatim(lines) for name, lines in row.cells if not PRICE.search(" ".join(lines))}
+
+
+def lot_url(row: Record, page: str) -> str | None:
+    """The lot's own page on the importer's site: the row's first link on the same host, resolved against the
+    offer page (never a login or portal link)."""
+    host = urlsplit(page).hostname
+    for href in row.links:
+        url = urljoin(page, href)
+        parts = urlsplit(url)
+        if (
+            parts.scheme in ("http", "https")
+            and parts.hostname == host
+            and not re.search(r"login|portal", url, re.I)
+        ):
+            return url
+    return None
 
 
 def _int(cell: list[str]) -> int | None:
@@ -255,9 +293,8 @@ CAFE_IMPORTS_COLUMNS = (
 
 
 LOT_ID = re.compile(r"\d+(?:-\d+)?")
-# The cells kept verbatim in importer_raw: the name and description cells, and those the normalized values are
-# derived from. Never the price link, the page's links or images.
-CAFE_IMPORTS_RAW = ("Origin", "Grade", "Name", "Notes", "Certification", "Region", "Process", "Program")
+CAFE_IMPORTS_URL = "https://www.cafeimports.com/north-america/offerings"
+INTERAMERICAN_URL = "https://interamericancoffee.com/our-offerings/"
 
 
 def parse_cafe_imports(html: str) -> list[dict]:
@@ -287,14 +324,14 @@ def parse_cafe_imports(html: str) -> list[dict]:
                 "bag_size": _whole(r["bag size"]),
                 "bag_kg": bag_kg(_whole(r["bag size"]) or ""),
                 "row": i,
-                "_raw": raw_cells(r, CAFE_IMPORTS_RAW),
+                "_raw": raw_cells(r),
+                "_url": lot_url(r, CAFE_IMPORTS_URL),
             }
         )
     return checked("cafe_imports", offers, bad)
 
 
 INTERAMERICAN_COLUMNS = ("Location/Destination", "Product", "Available Bags", "Bag Weight", "Status")
-INTERAMERICAN_RAW = ("Product", "Distinction")
 
 
 def parse_interamerican(html: str) -> list[dict]:
@@ -320,7 +357,8 @@ def parse_interamerican(html: str) -> list[dict]:
                 "bag_size": _whole(r["bag weight"]),
                 "bag_kg": bag_kg(_whole(r["bag weight"]) or ""),
                 "row": i,
-                "_raw": raw_cells(r, INTERAMERICAN_RAW),
+                "_raw": raw_cells(r),
+                "_url": lot_url(r, INTERAMERICAN_URL),
             }
         )
     return checked("interamerican", offers, bad)
@@ -333,35 +371,12 @@ class Importer:
 
 
 IMPORTERS = {
-    "cafe_imports": Importer("https://www.cafeimports.com/north-america/offerings", parse_cafe_imports),
-    "interamerican": Importer("https://interamericancoffee.com/our-offerings/", parse_interamerican),
+    "cafe_imports": Importer(CAFE_IMPORTS_URL, parse_cafe_imports),
+    "interamerican": Importer(INTERAMERICAN_URL, parse_interamerican),
 }
 
 
-CONFIG = Path("config/importers.yaml")
 CARD = Path("docs/IMPORTERS_DATASET_CARD.md")
-
-
-def enabled(config: Path = CONFIG, disabled_env: str | None = None) -> dict[str, bool]:
-    """Each importer's switch: its `enabled` in config/importers.yaml, turned off by IMPORTERS_DISABLED (a
-    comma-separated list of names). An importer the file doesn't list, a name it lists that isn't an importer, or an
-    unknown name in IMPORTERS_DISABLED is an error: the switch must never be mistyped into doing nothing."""
-    import yaml
-
-    cfg = yaml.safe_load(config.read_text()) or {}
-    if set(cfg) != set(IMPORTERS):
-        raise ValueError(f"{config} must list exactly {sorted(IMPORTERS)}; it lists {sorted(cfg)}")
-    on = {}
-    for name, entry in cfg.items():
-        flag = entry.get("enabled") if isinstance(entry, dict) else None
-        if not isinstance(flag, bool):
-            raise ValueError(f"{config}: {name}.enabled must be true or false")
-        on[name] = flag
-    raw = os.environ.get("IMPORTERS_DISABLED", "") if disabled_env is None else disabled_env
-    off = {n.strip() for n in raw.split(",") if n.strip()}
-    if unknown := off - set(IMPORTERS):
-        raise ValueError(f"IMPORTERS_DISABLED names no importer: {sorted(unknown)}")
-    return {n: on[n] and n not in off for n in IMPORTERS}
 
 
 # --- the weekly job -----------------------------------------------------------------------------------------------
@@ -386,13 +401,14 @@ def split(importer: str, parsed: list[dict], base: dict) -> tuple[list[dict], li
     raw, offers = [], []
     for p in parsed:
         cells = p["_raw"]
-        stated = {k: v for k, v in p.items() if k != "_raw"}
+        stated = {k: v for k, v in p.items() if not k.startswith("_")}
         raw.append(
             base
             | {
                 "row": p["row"],
                 "lot_id": p["lot_id"],
-                "cells": [{"column": c, "text": v} for c, v in cells.items() if v is not None],
+                "url": p["_url"],
+                "cells": [{"column": c, "text": v} for c, v in cells.items()],
             }
         )
         offers.append(base | stated | normalize(importer, cells, origin=p["origin"]))
@@ -485,25 +501,17 @@ def snapshot(
     names: list[str] | None = None,
     today: date | None = None,
     now: Callable[[], datetime] = lambda: datetime.now(UTC),
-    switches: dict[str, bool] | None = None,
 ) -> list[dict]:
     """Fetch, parse and store each importer's page for the week of `today`, publishing each as it is written.
 
-    One result per importer: `disabled` (switched off: `enabled`), `stored` (with its row count), `skipped` (the
-    week was already stored, so the page isn't fetched again) or `failed` (with the error). Every enabled importer
-    is tried; the caller fails the run when any failed. Nothing is written for a failed importer.
+    One result per importer: `stored` (with its row count), `skipped` (the week was already stored, so the page
+    isn't fetched again) or `failed` (with the error). Every importer is tried; the caller fails the run when any
+    failed. Nothing is written for a failed importer.
     """
-    switches = enabled() if switches is None else switches
     week = week_of(today or now().date())
     results: list[dict] = []
-    todo = [n for n in names or list(IMPORTERS) if switches[n]]
+    ensure_private(lake)
     for name in names or list(IMPORTERS):
-        if not switches[name]:
-            log.info("%s: switched off (config/importers.yaml or IMPORTERS_DISABLED); not fetched", name)
-            results.append({"importer": name, "week": str(week), "status": "disabled"})
-    if todo:
-        ensure_private(lake)
-    for name in todo:
         imp, rel = IMPORTERS[name], path(name, week)
         try:
             if stored(lake, rel):
@@ -540,35 +548,3 @@ def snapshot(
                 }
             )
     return results
-
-
-def purge(lake: Lake, name: str, switches: dict[str, bool] | None = None, dry_run: bool = False) -> list[str]:
-    """Remove every file of one importer, both layers and every week, from the dataset (and staging), then drop the
-    dataset's history so the removed text can't be read from an old revision. Only for a switched-off importer, so
-    the next run doesn't fetch it again. Returns the files removed (or, with dry_run, that would be)."""
-    switches = enabled() if switches is None else switches
-    if name not in IMPORTERS:
-        raise ValueError(f"no importer {name!r}")
-    if switches[name]:
-        raise RuntimeError(
-            f"{name} is still switched on: turn it off (config/importers.yaml) before purging it"
-        )
-    suffix = f"/importer={name}.parquet"
-    if lake.remote:
-        from huggingface_hub import HfApi
-
-        api = HfApi(token=os.environ.get("HF_TOKEN"))
-        there = _hub(api.list_repo_files, _repo(lake.url), repo_type="dataset")
-    else:
-        there = [f.relative_to(lake.root).as_posix() for f in lake.root.rglob("*.parquet")]
-    staged = (
-        [f.relative_to(lake.root).as_posix() for f in lake.root.rglob("*.parquet")] if lake.remote else []
-    )
-    files = sorted(
-        {f for f in [*there, *staged] if f.split("/")[0] in LAYERS.values() and f.endswith(suffix)}
-    )
-    if dry_run or not files:
-        return files
-    lake.publish(f"purge importer {name}", delete=tuple(files))
-    lake.squash(f"purge importer {name}: history dropped")
-    return files

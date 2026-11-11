@@ -1,7 +1,7 @@
 # Weekly private snapshots of green-coffee importers' public offer lists (src/coffeedata/importers.py): one pass a
-# week, one public page per importer, into a private Hugging Face dataset of its own: each lot's name and description
-# cells verbatim (raw/) and the stated fields with our normalized values (offers/). No prices, page HTML or images.
-# Backend-only: dbt, the release, the site and the public export never read it.
+# week, one public page per importer, into a private Hugging Face dataset of its own: each lot word for word (raw/:
+# every cell of its row, and its URL) and the stated fields with our normalized values (offers/). No prices, page
+# HTML or images. Backend-only: dbt, the release, the site and the public export never read it.
 #
 # Why GitHub Actions and not the Cloud Run jobs: two page fetches and one small upload a week need no NAT IP, no
 # staging bucket and no crawl window, and a Cloud Run job would need new GCP resources (a job, a scheduler trigger,
@@ -11,9 +11,6 @@
 # dispatch from another branch is skipped): no other branch's code (its scripts, or a package its uv.lock installs)
 # runs with the token. It needs a write token (HF_TOKEN, the one site.yml and weekly.yml use), since it creates the
 # private dataset on its first run and adds two files (raw and offers) per importer per week.
-#
-# Kill switch: config/importers.yaml (`enabled: false`), or, without a merge, the repository variable
-# IMPORTERS_DISABLED (comma-separated source names). `coffeedata importer-purge <name>` then removes what was stored.
 #
 # Nothing passes silently: no token, a fetch that fails, or a page whose layout changed (zero rows parsed) fails the
 # run, and that importer's week stays unwritten, so a dispatch the same week (after a fix) fetches it again. A week
@@ -45,7 +42,6 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           # Defaults to <owner>/coffee-data-importers; set the IMPORTERS_URL variable to use another private dataset.
           COFFEEDATA_IMPORTERS: ${{ vars.IMPORTERS_URL || format('hf://datasets/{0}/coffee-data-importers', github.repository_owner) }}
-          IMPORTERS_DISABLED: ${{ vars.IMPORTERS_DISABLED }}
           # importers.ensure_private refuses to write to any of these
           COFFEEDATA_LAKE: ${{ vars.LAKE_URL }}
           PUBLIC_EXPORT_URL: ${{ vars.PUBLIC_EXPORT_URL }}

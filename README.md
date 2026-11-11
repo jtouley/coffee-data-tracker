@@ -246,7 +246,6 @@ Everything is set through environment variables. Nothing is required for a local
 | `COFFEEDATA_PHOTOS` | `lake-photos` | A separate private dataset for the app's bag photos |
 | `COFFEEDATA_USERS` | `lake-users` | A separate private dataset for the app's accounts and invites |
 | `COFFEEDATA_IMPORTERS` | `lake-importers` | A separate private dataset for weekly snapshots of green importers' public offer lists (`coffeedata importer-snapshot`, `.github/workflows/importers.yml`); never read by dbt or released |
-| `IMPORTERS_DISABLED` | none | Kill switch: comma-separated importer names to skip, on top of `config/importers.yaml` |
 | `SESSION_SECRET`, `AUTH_PEPPER`, `OWNER_SETUP_CODE` | none | The app's sign-in; see [`docs/app/RUNNING.md`](docs/app/RUNNING.md) |
 | `COFFEEDATA_LABEL_MODEL` | `DEFAULT_MODEL` in `app/labels.py` | The model that reads bag labels (`app/eval/bag_read.py` compares Opus and Haiku) |
 | `COFFEEDATA_OWNER_ID` | `owner` | The owner's `user_id`; shots, bags and equipment with no `user_id` are the owner's |
@@ -376,11 +375,10 @@ Green importers' offer lists have a private dataset of their own too (`COFFEEDAT
 future roaster portal**: never in the public release, the `public_*` tables, the site or the public dataset, and dbt
 never reads them. Even in that portal, only the normalized values may be shown, never the importer's wording.
 `coffeedata importer-snapshot` (`.github/workflows/importers.yml`, weekly on main) makes one pass a week over each
-enabled importer's public offer page and stores two immutable layers per importer and week: `raw/` (each lot's name
-and description cells, verbatim) and `offers/` (the stated fields, and our normalized values from deterministic rules
-that abstain when unsure). No prices, page HTML or images. Each source has a kill switch (`enabled` in
-`config/importers.yaml`, or the `IMPORTERS_DISABLED` variable), and `coffeedata importer-purge <name>` removes what
-was stored for a switched-off source.
+importer's public offer page and stores two immutable layers per importer and week: `raw/` (each lot word for
+word: every cell of its row and its URL, as the roaster adapters keep a product's whole text) and `offers/` (the
+stated fields, and our normalized values from deterministic rules that abstain when unsure). No prices, page HTML
+or images.
 
 - **Re-running a week is safe.** Only roasters without a successful fetch that week are fetched again, and
   `stg_runs` keeps only the latest successful batch per roaster and week (checked in `tests/test_dbt.py`).

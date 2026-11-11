@@ -29,7 +29,7 @@ The app's accounts go to a third private dataset (`Lake.users()`), never read by
 Green-coffee importers' offer lists go to a fourth private dataset (`Lake.importers()`, importers.py), never read
 by dbt and never released:
 
-    raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot's name and description cells, verbatim
+    raw/week=YYYY-MM-DD/importer=<name>.parquet           each lot word for word: every cell of its row, its URL
     offers/week=YYYY-MM-DD/importer=<name>.parquet        the fields the page states, and our normalized values
 
 Current state ("what's listed now", "is this roaster reachable", price history) is always *derived* from these
@@ -510,7 +510,9 @@ SCHEMAS["contacts"] = pa.schema(
 # page HTML or images. Private, in their own dataset (Lake.importers()): never a dbt source, never released, and
 # backend-only (for internal use and a future roaster portal, which may show only the normalized values).
 #
-# importer_raw: the lot's cells verbatim (its name and description cells), as the page had them that week.
+# importer_raw: each lot word for word, as the roaster adapters keep a product: every cell of its row under the page's
+# header (null when empty), and its own page's URL. Only cells about prices are left out. Everything derived (the
+# normalized values in importer_offers, later categorization and labels) can be derived again from it.
 SCHEMAS["importer_raw"] = pa.schema(
     [
         ("week", pa.date32()),
@@ -519,6 +521,7 @@ SCHEMAS["importer_raw"] = pa.schema(
         ("source_url", pa.string()),
         ("row", pa.int32()),  # the lot's position in the page's table, from 0; joins importer_offers.row
         ("lot_id", pa.string()),
+        ("url", pa.string()),  # the lot's own page on the importer's site, when the row links to one
         ("cells", pa.list_(pa.struct([("column", pa.string()), ("text", pa.string())]))),
     ]
 )

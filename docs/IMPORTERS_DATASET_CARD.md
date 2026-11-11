@@ -14,17 +14,9 @@ One immutable file per importer per week and layer; a week already stored is nev
 
 | Path | What it holds |
 |---|---|
-| `raw/week=YYYY-MM-DD/importer=<name>.parquet` | Raw layer: each lot's name and description cells, verbatim, as the page had them that week |
+| `raw/week=YYYY-MM-DD/importer=<name>.parquet` | Raw layer: each lot word for word, as the page had it that week: every cell of its row under the page's header, and its own page's URL, so everything derived can be derived again from it. Only cells about prices are left out |
 | `offers/week=YYYY-MM-DD/importer=<name>.parquet` | The fields the page states (lot ID, name, origin, region, process, status, estimated arrival, warehouse, bags, bag size) and our normalized values derived from the raw layer (process type, varieties, altitude, harvest months, grower type and name, certifications) |
 
 `week` is the Monday of the fetch's ISO week; `fetched_at` is when the page was fetched. The normalized values come
 from deterministic rules (`src/coffeedata/importer_rules.py`, `rules_version`) that leave a value empty when the text
 doesn't settle it. They haven't been evaluated yet.
-
-## Turning a source off
-
-Set its `enabled` to `false` in `config/importers.yaml` (or name it in the `IMPORTERS_DISABLED` repository variable),
-then remove everything stored for it, both layers, every week, and the dataset's history:
-
-    uv run coffeedata importer-purge <name> --dry-run   # lists the files
-    uv run coffeedata importer-purge <name>

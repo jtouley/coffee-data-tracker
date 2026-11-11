@@ -1,6 +1,6 @@
 """Weekly private importer snapshots (coffeedata.importers, importer_rules): the parsers on small saved pages, loud
-failure on a changed layout, the raw and normalized layers, one immutable file per importer, week and layer, the kill
-switch and purge, the private dataset, and that neither layer can reach anything public."""
+failure on a changed layout, the raw and normalized layers, one immutable file per importer, week and layer, the
+private dataset, and that neither layer can reach anything public."""
 
 from __future__ import annotations
 
@@ -21,7 +21,6 @@ from coffeedata.lake import GLOBS, IMPORTER_TABLES, LAKE_TABLES, SCHEMAS, Lake
 FIXTURES = Path(__file__).parent / "fixtures" / "importers"
 CI_HTML = (FIXTURES / "cafeimports.html").read_text()
 IA_HTML = (FIXTURES / "interamerican.html").read_text()
-ALL_ON = dict.fromkeys(importers.IMPORTERS, True)
 WED = date(2026, 11, 11)
 MON = date(2026, 11, 9)  # its week
 NOW = datetime(2026, 11, 11, 17, 37, 5, 123, tzinfo=UTC)
@@ -31,7 +30,7 @@ def test_cafe_imports_rows():
     rows = importers.parse_cafe_imports(CI_HTML)
     by_lot = {r["lot_id"]: r for r in rows}
     assert list(by_lot) == ["25973", "26784", "26453", "25748-2"]
-    assert {k: v for k, v in by_lot["25973"].items() if k != "_raw"} == {
+    assert {k: v for k, v in by_lot["25973"].items() if not k.startswith("_")} == {
         "lot_id": "25973",
         "name": 'Asociación De Caficultores De Taipiplaya "ASOCAFE" (GrainPro)',
         "origin": "Bolivia",
@@ -45,9 +44,9 @@ def test_cafe_imports_rows():
         "bag_kg": 69.0,
         "row": 0,
     }
-    # the raw cells, verbatim: name and description, and those the normalized values come from
+    # the raw cells, word for word
     assert by_lot["25973"]["_raw"]["Notes"].startswith("Graham with mild kahlua")
-    assert set(by_lot["25973"]["_raw"]) <= set(importers.CAFE_IMPORTS_RAW)
+    assert by_lot["25973"]["_url"].startswith(importers.CAFE_IMPORTS_URL + "?view=beanology.view.")
     assert by_lot["26453"]["status"] == "at_origin" and by_lot["26453"]["est_arrival"] is None
     # an afloat lot: its estimated arrival as stated, without the status or label before it
     assert by_lot["25748-2"]["status"] == "afloat" and by_lot["25748-2"]["est_arrival"] == "Mid Nov 2026"
@@ -66,21 +65,35 @@ def test_interamerican_rows():
     assert all(r[k] is None for r in rows for k in ("lot_id", "origin", "region", "process", "est_arrival"))
 
 
-def test_only_allowed_fields_are_stored():
-    """No prices, links, page HTML or images in either layer: only the schemas' columns, and in the raw layer only
-    the allowlisted cells' text."""
+def test_raw_layer_is_every_cell_word_for_word_and_nothing_about_prices():
+    """Like the roaster adapters' raw snapshots: every cell of the lot's row under the page's header, full text, so
+    everything derived can be derived again. Only the price cell is left out; no markup, links or images."""
+    expected = {
+        "cafe_imports": [
+            h for h in importers.find_table(CI_HTML, importers.CAFE_IMPORTS_COLUMNS).header if h
+        ],
+        "interamerican": importers.find_table(IA_HTML, importers.INTERAMERICAN_COLUMNS).header,
+    }
     for name, html in (("cafe_imports", CI_HTML), ("interamerican", IA_HTML)):
         raw, offers = importers.split(name, importers.IMPORTERS[name].parse(html), {})
-        allowed = {"cafe_imports": importers.CAFE_IMPORTS_RAW, "interamerican": importers.INTERAMERICAN_RAW}[
-            name
-        ]
         for r in raw:
             assert set(r) <= {f.name for f in SCHEMAS["importer_raw"]}
-            assert {c["column"] for c in r["cells"]} <= set(allowed)
-            assert not any(s in c["text"] for c in r["cells"] for s in ("<", "http", "$", "Log In For Price"))
+            assert [c["column"] for c in r["cells"]] == expected[
+                name
+            ]  # the price cell's column is the only one out
+            assert not any(s in (c["text"] or "") for c in r["cells"] for s in ("<", "$", "Price"))
+            assert r["url"] and r["url"].startswith("https://")
         for o in offers:
             assert set(o) <= {f.name for f in SCHEMAS["importer_offers"]}
             assert not any("$" in str(v) or "http" in str(v) for v in o.values())
+    # full text, not trimmed: a whole cupping-notes cell and a two-line status cell
+    raw, _ = importers.split("cafe_imports", importers.parse_cafe_imports(CI_HTML), {})
+    cells = {c["column"]: c["text"] for c in raw[1]["cells"]}
+    assert cells["Notes"] == (
+        "Caramel, burnt sugar, and oolong tea flavors with juicy acidity and syrupy sweetness."
+    )
+    assert cells["Location"] == "Afloat\nEst Arrival: Jan 2027"
+    assert cells["Est Arrival"] == "Afloat\nEst Arrival: Early Jan 2027"
 
 
 @pytest.mark.parametrize(
@@ -136,7 +149,7 @@ def test_snapshot_writes_one_file_per_importer_per_week_and_never_fetches_it_aga
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     calls: list[str] = []
     with _client(_pages(), calls) as client:
-        first = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        first = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert [(r["importer"], r["status"], r.get("rows")) for r in first] == [
         ("cafe_imports", "stored", 4),
         ("interamerican", "stored", 4),
@@ -165,7 +178,7 @@ def test_snapshot_writes_one_file_per_importer_per_week_and_never_fetches_it_aga
     # later the same week: nothing is fetched, nothing rewritten
     calls.clear()
     with _client(_pages(), calls) as client:
-        again = importers.snapshot(lake, client, today=date(2026, 11, 15), now=lambda: NOW, switches=ALL_ON)
+        again = importers.snapshot(lake, client, today=date(2026, 11, 15), now=lambda: NOW)
     assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
     with pytest.raises(FileExistsError):  # immutable, as every lake file
         lake.write("importer_offers", importers.path("cafe_imports", date(2026, 11, 9)), t)
@@ -174,7 +187,7 @@ def test_snapshot_writes_one_file_per_importer_per_week_and_never_fetches_it_aga
 def test_a_changed_page_fails_that_importer_and_writes_nothing_for_it(tmp_path):
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with _client(_pages(ci="<html><body>maintenance</body></html>"), []) as client:
-        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert [r["status"] for r in res] == ["failed", "stored"]
     assert "LayoutChanged" in res[0]["error"]
     assert not (tmp_path / "importers" / importers.path("cafe_imports", date(2026, 11, 9))).exists()
@@ -188,7 +201,7 @@ def test_a_failed_fetch_fails_loudly(tmp_path):
 
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
-        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert [r["status"] for r in res] == ["failed", "failed"] and all("HTTP 403" in r["error"] for r in res)
 
 
@@ -201,38 +214,9 @@ def test_robots_disallow_is_respected(tmp_path):
 
     lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
     with PoliteClient(min_interval=0, retries=1, transport=httpx.MockTransport(handler)) as client:
-        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert all(r["status"] == "failed" for r in res)
     assert set(calls) == {"/robots.txt"}  # never the page itself
-
-
-def test_kill_switch(tmp_path, monkeypatch):
-    lake = Lake(str(tmp_path / "importers"), tables=IMPORTER_TABLES)
-    calls: list[str] = []
-    switches = {"cafe_imports": False, "interamerican": True}
-    with _client(_pages(), calls) as client:
-        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=switches)
-    assert [r["status"] for r in res] == ["disabled", "stored"]
-    assert not any("cafeimports" in c for c in calls)
-
-    cfg = tmp_path / "importers.yaml"
-    cfg.write_text("cafe_imports: {enabled: true}\ninteramerican: {enabled: false}\n")
-    assert importers.enabled(cfg, "") == {"cafe_imports": True, "interamerican": False}
-    assert importers.enabled(cfg, "cafe_imports") == {"cafe_imports": False, "interamerican": False}
-    with pytest.raises(ValueError, match="names no importer"):
-        importers.enabled(cfg, "cafe-imports")  # a mistyped switch is an error, not a no-op
-    cfg.write_text("cafe_imports: {enabled: true}\n")
-    with pytest.raises(ValueError, match="must list exactly"):
-        importers.enabled(cfg, "")
-    cfg.write_text("cafe_imports: {enabled: 'no'}\ninteramerican: {enabled: true}\n")
-    with pytest.raises(ValueError, match="true or false"):
-        importers.enabled(cfg, "")
-
-
-def test_the_committed_config_lists_every_importer():
-    cfg = yaml.safe_load(importers.CONFIG.read_text())
-    assert set(cfg) == set(importers.IMPORTERS)
-    assert importers.enabled(disabled_env="") == {n: cfg[n]["enabled"] for n in importers.IMPORTERS}
 
 
 class FakeApi:
@@ -283,7 +267,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
     api = FakeApi(private=True)
     lake = _remote(tmp_path, monkeypatch, api)
     with _client(_pages(), []) as client:
-        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        res = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert [r["status"] for r in res] == ["stored", "stored"]
     assert api.calls[:2] == [("create", "someone/importers", True, True), ("card", "README.md")]
     commits = [c[1] for c in api.calls if c[0] == "commit"]
@@ -303,7 +287,7 @@ def test_remote_dataset_is_created_private_and_written_once_per_week(tmp_path, m
 
     calls: list[str] = []
     with _client(_pages(), calls) as client:  # a fresh runner later that week: the dataset already has it
-        again = importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        again = importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert [r["status"] for r in again] == ["skipped", "skipped"] and calls == []
 
 
@@ -312,7 +296,7 @@ def test_refuses_a_public_dataset(tmp_path, monkeypatch):
     lake = _remote(tmp_path, monkeypatch, api)
     calls: list[str] = []
     with _client(_pages(), calls) as client, pytest.raises(RuntimeError, match="not private"):
-        importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
+        importers.snapshot(lake, client, today=WED, now=lambda: NOW)
     assert calls == [] and not any(c[0] == "commit" for c in api.calls)
 
 
@@ -324,27 +308,6 @@ def test_refuses_the_lake_or_any_other_dataset(tmp_path, monkeypatch, var):
     with pytest.raises(RuntimeError, match=f"same dataset as {var}"):
         importers.ensure_private(lake)
     assert api.calls == []
-
-
-def test_purge_removes_a_switched_off_importer_everywhere(tmp_path, monkeypatch):
-    api = FakeApi(private=True)
-    lake = _remote(tmp_path, monkeypatch, api)
-    with _client(_pages(), []) as client:
-        importers.snapshot(lake, client, today=WED, now=lambda: NOW, switches=ALL_ON)
-        importers.snapshot(lake, client, today=date(2026, 11, 18), now=lambda: NOW, switches=ALL_ON)
-    with pytest.raises(RuntimeError, match="still switched on"):
-        importers.purge(lake, "cafe_imports", switches=ALL_ON)
-    off = ALL_ON | {"cafe_imports": False}
-    listed = importers.purge(lake, "cafe_imports", switches=off, dry_run=True)
-    assert listed == sorted(
-        importers.path("cafe_imports", w, t)
-        for w in (date(2026, 11, 9), date(2026, 11, 16))
-        for t in importers.LAYERS
-    )
-    assert importers.purge(lake, "cafe_imports", switches=off) == listed
-    assert not any("cafe_imports" in f for f in api.existing)
-    assert any("interamerican" in f for f in api.existing)  # the other source is untouched
-    assert api.calls[-1] == ("squash",)  # and the removed text can't be read from an old revision
 
 
 def test_neither_layer_can_reach_anything_public():
@@ -382,9 +345,7 @@ def test_neither_layer_can_reach_anything_public():
             assert "importer" not in text and "coffeedata_importers" not in text, f
     # the weekly build reads the main lake only
     cli = (root / "src/coffeedata/cli.py").read_text()
-    assert (
-        "Lake.importers()" in cli and cli.count("Lake.importers()") == 2
-    )  # snapshot and purge, nothing else
+    assert cli.count("Lake.importers()") == 1  # importer-snapshot, nothing else
 
 
 def test_rules_decide_or_abstain():
