@@ -263,7 +263,7 @@ Everything is set through environment variables. Nothing is required for a local
 The seed list is [`config/roasters.csv`](config/roasters.csv): roasters from Overture Maps and a curated list.
 Roasters added later by discovery (including OpenStreetMap) or the issue form are recorded in the lake, and this
 file stays as it is. The site counts them all each week ("roasters in the registry" on
-[registry.coffee](https://registry.coffee/)); this README states no counts, so none of them can go stale.
+[registry.coffee](https://registry.coffee/)).
 
 ## Run it on GitHub
 
