@@ -1,0 +1,56 @@
+# The accuracy floors whose inputs are private lake data (tests marked private_eval: wholesale, origin, match, dq;
+# docs/RULES.md). Their labels are in git; eval/floor_inputs.py rebuilds the inputs from the lake, read-only, at the
+# revisions the evals were measured on, and checks each against its recorded sha256.
+#
+# Its own workflow, on purpose:
+# - It needs a Hub token, so it never runs on pull requests: no PR branch's code (its scripts, or a package its
+#   uv.lock installs) ever runs with the token. It runs on every push to main, weekly, and by hand. The floors whose
+#   inputs are in git run on every PR in ci's test job.
+# - deploy.yml waits on the ci workflow only, so a Hub outage or a lake revision gone can't hold back a deploy.
+# - Nothing passes silently: no token, a failed download, a changed checksum or a missing input fails the run
+#   (REQUIRE_EVALS=1 turns a floor's skip into a failure).
+#
+# Token: HF_READ_TOKEN when the repository has that secret (a read-only token scoped to the lake dataset), else the
+# HF_TOKEN the site and weekly workflows use. It is given to the one step that downloads; the tests never see it.
+name: eval-floors
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 19 * * 2"  # Tuesdays 19:23 UTC: the pinned revisions are still there, the floors still hold
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: eval-floors-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  floors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with: {persist-credentials: false}
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
+        with: {python-version: "3.12"}
+      - run: uv sync --locked
+      - run: uv run python -c "import duckdb; duckdb.connect().install_extension('httpfs')"  # dbt's profile loads it
+      # The inputs are fixed (pinned revisions, recorded checksums), so they are cached by what pins them; the
+      # script still checks every checksum, and downloads only what doesn't match.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+        with:
+          path: ${{ runner.temp }}/eval-inputs
+          key: eval-inputs-${{ hashFiles('eval/floor_inputs.py', 'eval/wholesale/population.py', 'eval/wholesale/rules.py', 'eval/origin/labels_*.json') }}
+      - name: build the floors' inputs from the lake (read-only)
+        env:
+          HF_TOKEN: ${{ secrets.HF_READ_TOKEN || secrets.HF_TOKEN }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::error title=Eval floors::Neither HF_READ_TOKEN nor HF_TOKEN is set, so the floors over private lake data can't run."
+            exit 1
+          fi
+          uv run python eval/floor_inputs.py "$RUNNER_TEMP/eval-inputs" --github-env "$GITHUB_ENV"
+      - run: uv run pytest -q -m private_eval -rs
+        env:
+          REQUIRE_EVALS: "1"
+          REQUIRE_DBT: "1"

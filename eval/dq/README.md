@@ -14,7 +14,7 @@ Results are in "Results" below; how each rule was chosen is under its own headin
 
 ## Floors
 
-`tests/test_dq_accuracy.py` runs #12 and #7 as dbt compiles them over release `20261103T203218-956abd`'s served `dim_coffee` and `dim_roaster` (private; `eval/floor_inputs.py` fetches them from the lake at b3bf5e8), redraws the samples with this folder's `items` code, checks they are the labelled ones, and holds train and validation to the scores measured 2026-11-11 on main 0cfa4d9 (the Results below): #12 precision and recall 1.0 with no distinct pair flagged; #7 weighted precision 0.857 / 0.957, recall 0.325 / 0.594, false-flag share at most 0.042 / 0.031. #11 and #4 have no floor: #11's inputs are metrics of replayed builds that never existed in the lake, and #4 has 3 labelled items of one label. CI's eval-floors job runs it (`docs/RULES.md`).
+`tests/test_dq_accuracy.py` runs #12 and #7 as dbt compiles them over release `20261103T203218-956abd`'s served `dim_coffee` and `dim_roaster` (private; `eval/floor_inputs.py` fetches them from the lake at b3bf5e8), redraws the samples with this folder's `items` code, checks they are the labelled ones, and holds train and validation to the scores measured 2026-11-11 on main 0cfa4d9 (the Results below): #12 precision and recall 1.0 with no distinct pair flagged; #7 weighted precision 0.857 / 0.957, recall 0.325 / 0.594, false-flag share at most 0.042 / 0.031. #11 and #4 have no floor: #11's inputs are metrics of replayed builds that never existed in the lake, and #4 has 3 labelled items of one label. The eval-floors workflow runs it (`docs/RULES.md`).
 
 ## Data
 

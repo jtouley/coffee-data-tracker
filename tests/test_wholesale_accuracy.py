@@ -2,7 +2,7 @@
 
 The labeled data is private lake data, so it isn't in the repo: WHOLESALE_EVAL_DIR is the eval folder (its work/
 holds population.json), which eval/floor_inputs.py rebuilds from the lake, read-only, at the revision the eval was
-measured on. CI's eval-floors job runs this; without the folder it skips (fails under REQUIRE_EVALS=1). Validation is
+measured on. The eval-floors workflow runs this; without the folder it skips (fails under REQUIRE_EVALS=1). Validation is
 judged on its total only.
 """
 

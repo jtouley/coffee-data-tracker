@@ -16,7 +16,7 @@ requires, and the test set was scored twice. Both are explained below.
 
 ## Floor
 
-`tests/test_wholesale_accuracy.py` (CLAUDE.md step 8). `eval/floor_inputs.py` rebuilds `work/population.json` from the lake at df57f62 and checks it against `SHA256SUMS`'s hash; CI's eval-floors job runs the floor with it, so the floor no longer skips in CI (`docs/RULES.md`).
+`tests/test_wholesale_accuracy.py` (CLAUDE.md step 8). `eval/floor_inputs.py` rebuilds `work/population.json` from the lake at df57f62 and checks it against `SHA256SUMS`'s hash; the eval-floors workflow runs the floor with it on every push to main, weekly and by hand, so the floor no longer goes unrun (`docs/RULES.md`).
 
 ## Data
 

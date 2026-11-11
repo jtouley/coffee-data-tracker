@@ -7,7 +7,7 @@ The results are in `RESULTS.md`.
 
 ## Floor
 
-`tests/test_match_accuracy.py` holds `match_coffee` to train and validation (CLAUDE.md step 8): right at least 1,621 and 1,632 of 2,000 queries, confidently wrong at most 2 and 3 (measured 2026-11-11, main 0cfa4d9, the same as RESULTS.md). The catalog is private: `eval/floor_inputs.py` fetches it from the lake at df57f62 (the sha256 above), and CI's eval-floors job runs it (`docs/RULES.md`).
+`tests/test_match_accuracy.py` holds `match_coffee` to train and validation (CLAUDE.md step 8): right at least 1,621 and 1,632 of 2,000 queries, confidently wrong at most 2 and 3 (measured 2026-11-11, main 0cfa4d9, the same as RESULTS.md). The catalog is private: `eval/floor_inputs.py` fetches it from the lake at df57f62 (the sha256 above), and the eval-floors workflow runs it (`docs/RULES.md`).
 
 ## Data
 

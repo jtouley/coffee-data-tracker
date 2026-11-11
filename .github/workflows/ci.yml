@@ -32,40 +32,6 @@ jobs:
           REQUIRE_DBT: "1"
           REQUIRE_BROWSER: "1"
 
-  # The accuracy floors whose inputs are private lake data (tests marked private_eval: wholesale, origin, match, dq).
-  # Their labels are in git; eval/floor_inputs.py rebuilds the inputs from the lake, read-only, at the revisions the
-  # evals were measured on, with the HF_TOKEN the site and weekly workflows already use, and checks each against its
-  # recorded sha256. The token is given to that one step only; the tests never see it. With the token, a download or
-  # checksum that fails fails the job, and REQUIRE_EVALS makes a floor without its inputs fail. Without it (a pull
-  # request from a fork, where GitHub passes no secrets), the job says so and runs nothing.
-  eval-floors:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
-        with: {persist-credentials: false}
-      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2  # v10.3.3
-        with: {python-version: "3.12"}
-      - run: uv sync --locked
-      - run: uv run python -c "import duckdb; duckdb.connect().install_extension('httpfs')"  # dbt's profile loads it
-      - name: build the floors' inputs from the lake (read-only)
-        id: inputs
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-          if [ -z "$HF_TOKEN" ]; then
-            echo "::notice title=Eval floors not run::No HF_TOKEN on this run (a pull request from a fork gets no secrets), so the floors over private lake data (wholesale, origin, match, dq) were not run. They run on every push and on pull requests from this repository."
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          uv run python eval/floor_inputs.py "$RUNNER_TEMP/eval-inputs" --github-env "$GITHUB_ENV"
-          echo "run=true" >> "$GITHUB_OUTPUT"
-      - if: steps.inputs.outputs.run == 'true'
-        run: uv run pytest -q -m private_eval -rs
-        env:
-          REQUIRE_EVALS: "1"
-          REQUIRE_DBT: "1"
-
   # The fast check on every PR and push (`make smoke`): three parts in parallel, over the recorded fixtures, with no
   # network. Branch protection requires `smoke`, the job below that waits for all three.
   smoke-part:

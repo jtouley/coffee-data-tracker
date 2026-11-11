@@ -1,6 +1,6 @@
 """Where an accuracy floor finds its private inputs (eval/floor_inputs.py rebuilds them from the lake, read-only).
 
-Locally, a floor whose folder isn't set is skipped, saying why. CI's eval-floors job sets REQUIRE_EVALS=1 once it has
+Locally, a floor whose folder isn't set is skipped, saying why. The eval-floors workflow sets REQUIRE_EVALS=1 once it has
 built the inputs, so there a missing folder fails the floor instead of skipping it.
 """
 
