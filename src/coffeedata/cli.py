@@ -1009,6 +1009,15 @@ def cmd_importer_snapshot(args: argparse.Namespace) -> bool:
         raise SystemExit(
             f"no importer {', '.join(sorted(unknown))}; known: {', '.join(sorted(importers.IMPORTERS))}"
         )
+    if args.accept_drop and (scheduled := set(args.importer or ()) & set(importers.SCHEDULE_ONLY)):
+        raise SystemExit(
+            f"{', '.join(sorted(scheduled))} is fetched only by the scheduled run; a drop there can't be accepted"
+            " on a dispatch"
+        )
+    if args.accept_drop and len(set(args.importer or ())) != 1:
+        raise SystemExit(
+            "--accept-drop needs exactly one --importer: the override covers the importer checked by hand"
+        )
     lake = Lake.importers()
     if args.require_hub and not lake.remote:
         # a local lake on a CI runner is thrown away with it: the run would report "stored" and keep nothing
@@ -1277,7 +1286,8 @@ def main(argv: list[str] | None = None) -> None:
     imp.add_argument(
         "--accept-drop",
         action="store_true",
-        help="store a week with under half the lots of the last stored week (a real drop, checked by hand)",
+        help="with one --importer: store its week even with under half the lots of its last stored week (a real "
+        "drop, checked by hand)",
     )
     imp.add_argument(
         "--require-hub", action="store_true", help="fail unless COFFEEDATA_IMPORTERS is an hf:// dataset (CI)"

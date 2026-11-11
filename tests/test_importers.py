@@ -148,9 +148,26 @@ def test_prices_are_left_out_by_column_and_a_stray_amount_fails():
     assert (
         importers.parse("cafe_imports", noted).lots[1].cells["Notes"].startswith("Great value at this price.")
     )
-    # a currency amount under any other header is a price that got past the filter: fail, never store it
-    with pytest.raises(importers.LayoutChanged, match="currency amount"):
-        importers.parse("cafe_imports", _with_column(CI_HTML, "Offer", "$4.25/lb"))
+    # columns headed as prices by trade terms are dropped too
+    for header in ("FOB", "Differential", "Diff (c/lb)"):
+        page = _with_column(CI_HTML, header, "4.10")
+        assert all(header not in lot.cells for lot in importers.parse("cafe_imports", page).lots)
+    # a price under any other header got past the filter: fail, never store it
+    for cell in ("$4.25/lb", "4,50 €", "Price: 4.25", "4.25/lb", "310 c/lb", "4.10 per kg", "USD 4.10"):
+        with pytest.raises(importers.LayoutChanged, match="currency amount"):
+            importers.parse("cafe_imports", _with_column(CI_HTML, "Offer", cell))
+    # weights and dates are not prices
+    for text in ("60 Kg", "59 Kg Bags", "1MT Supersacks", "Est Arrival: Jan 2027", "Screen 16+"):
+        assert not importers.CURRENCY.search(text)
+
+
+def test_a_repeated_header_keeps_every_cell():
+    page = CI_HTML.replace(
+        "<th data-rel='notes' data-visible='false'>Notes</th>", "<th>Notes</th><th>Notes</th>"
+    )
+    page = re.sub(r"(<td>\s*[^<]*?(?:Graham|Caramel|Tons|Lots|Cocoa)[^<]*</td>)", r"\1<td>second</td>", page)
+    cells = importers.parse("cafe_imports", page).lots[0].cells
+    assert cells["Notes"].startswith("Graham") and cells["Notes (2)"] == "second"
 
 
 # --- loud failure ---------------------------------------------------------------------------------------------------
@@ -161,7 +178,7 @@ def test_prices_are_left_out_by_column_and_a_stray_amount_fails():
     [
         ("<html><body><p>We're updating our offerings.</p></body></html>", "no table with the columns"),
         # the table is there but rendered by the browser: zero rows is an error, never an empty snapshot
-        (CI_HTML.split("<tbody>")[0] + "<tbody></tbody></table>", "zero rows parsed"),
+        (CI_HTML.split("<tbody>")[0] + "<tbody></tbody></table>", "zero readable rows"),
         # a renamed column
         (CI_HTML.replace(">Bags</th>", ">Quantity</th>"), "no table with the columns"),
         # most lots lost their identity (the ID column now holds something else)
@@ -240,6 +257,10 @@ def test_other_rules_decide_or_abstain():
     assert rules.harvest_months("Harvest: Nov - Feb") == ["nov", "dec", "jan", "feb"]
     assert rules.harvest_months("Harvested December through March") == ["dec", "jan", "feb", "mar"]
     assert rules.harvest_months("This harvest declined because of rain") is None
+    assert rules.harvest_months("This harvest may be smaller") is None  # a verb
+    assert rules.harvest_months("Harvest: May") == ["may"]
+    assert rules.harvest_months("harvested in May") == ["may"]
+    assert rules.harvest_months("Harvest May - Aug") == ["may", "jun", "jul", "aug"]
     assert rules.harvest_months("Graham with mild kahlua") is None
     # grower: a part of the name with a grower word; a placeholder keeps the type but not the name
     assert rules.grower("Natural - Fazenda Santa Lucia - Yellow Bourbon (GrainPro)") == (
@@ -251,22 +272,31 @@ def test_other_rules_decide_or_abstain():
     assert rules.grower("Guatemala Huehuetenango ASDECAFE SHB EP Organic") == (None, None)
 
 
+NOT_FT_ORG = (None, ["fair_trade", "organic"])
+
+
 @pytest.mark.parametrize(
     "text, want",
     [
-        ("nft,norg,Microlot,Microlot nft,norg,", []),  # every modeled one marked absent, nothing else named
+        # "nft,norg": not fair trade, not organic; anything else (Rainforest Alliance) stays unknown
+        ("nft,norg", NOT_FT_ORG),
+        ("nft,norg,Microlot,Microlot nft,norg,", NOT_FT_ORG),
         (
             "Fair Trade,Fairtrade,Organic,FTO Norte FTO Fair Trade,Fairtrade,Organic,FTO",
-            ["organic", "fair_trade"],
+            (["organic", "fair_trade"], None),
         ),
-        ("Indonesia Sumatra Mandheling G1 TP Fairtrade USA Organic Certified", ["organic", "fair_trade"]),
-        # unknown, never "none"
-        ("nft,Organic,Organic La Paz nft,norg,", None),  # claimed and denied
-        ("C.A.F.E. Practices", None),  # a program we don't model
-        ("Bird Friendly", None),
-        ("nft,norg,Bird Friendly", None),
-        ("Colombia Popayan Supremo", None),  # silent
-        ("Certified", None),
+        (
+            "Indonesia Sumatra Mandheling G1 TP Fairtrade USA Organic Certified",
+            (["organic", "fair_trade"], None),
+        ),
+        ("nft,Organic,Organic Microlot", (["organic"], ["fair_trade"])),
+        # unknown
+        ("nft,Organic,Organic La Paz nft,norg,", (None, None)),  # claimed and denied
+        ("C.A.F.E. Practices", (None, None)),  # a program we don't model
+        ("Bird Friendly", (None, None)),
+        ("nft,norg,Bird Friendly", (None, None)),
+        ("Colombia Popayan Supremo", (None, None)),  # silent
+        ("Certified", (None, None)),
     ],
 )
 def test_certifications(text, want):
@@ -275,18 +305,18 @@ def test_certifications(text, want):
 
 def test_fixture_lots_normalized():
     ci = _offers("cafe_imports", CI_HTML)
-    assert [(o["process_type"], o["grower_type"], o["certifications"]) for o in ci] == [
-        ("washed", "cooperative", None),  # its cell says both "Organic" and "norg"
-        ("washed", None, []),
-        ("natural", None, []),
-        ("honey", "micromill", []),
+    assert [(o["process_type"], o["grower_type"], o["certifications"], o["not_certified"]) for o in ci] == [
+        ("washed", "cooperative", None, None),  # its cell says both "Organic" and "norg"
+        ("washed", None, *NOT_FT_ORG),
+        ("natural", None, *NOT_FT_ORG),
+        ("honey", "micromill", *NOT_FT_ORG),
     ]
     ia = _offers("interamerican", IA_HTML)
-    assert [(o["process_type"], o["certifications"]) for o in ia] == [
-        ("natural", None),
-        (None, ["organic", "fair_trade"]),
-        ("natural", None),
-        ("natural", None),
+    assert [(o["process_type"], o["certifications"], o["not_certified"]) for o in ia] == [
+        ("natural", None, None),
+        (None, ["organic", "fair_trade"], None),
+        ("natural", None, None),
+        ("natural", None, None),
     ]
     assert {o["rules_version"] for o in ci + ia} == {rules.RULES_VERSION}
 
@@ -629,13 +659,30 @@ def test_cli_refuses_a_local_lake_in_ci_and_an_unknown_importer(tmp_path, monkey
         cli.main(["importer-snapshot", "--require-hub"])
     with pytest.raises(SystemExit, match="no importer royal"):
         cli.main(["importer-snapshot", "--importer", "royal"])
+    # accepting a drop covers one importer, named: never every importer in the run
+    for argv in (
+        ["--accept-drop"],
+        ["--accept-drop", "--importer", "cafe_imports", "--importer", "interamerican"],
+    ):
+        with pytest.raises(SystemExit, match="exactly one --importer"):
+            cli.main(["importer-snapshot", *argv])
+    # Royal only fetches on the schedule: a dispatch can't accept a drop there
+    with pytest.raises(SystemExit, match="fetched only by the scheduled run"):
+        cli.main(["importer-snapshot", "--importer", "royal_coffee", "--accept-drop"])
 
 
 def test_workflow_runs_on_main_only_and_never_on_pull_requests():
     """Its job holds a Hub write token: like eval-floors, a schedule and dispatch only, and the job runs on main."""
     wf = yaml.safe_load((Path(__file__).parent.parent / ".github/workflows/importers.yml").read_text())
     assert set(wf[True]) == {"schedule", "workflow_dispatch"}  # YAML 1.1 reads `on:` as True
-    assert set(wf[True]["workflow_dispatch"]["inputs"]) == {"accept_drop"}
+    inputs = wf[True]["workflow_dispatch"]["inputs"]
+    assert set(inputs) == {"importer", "accept_drop"}
+    # every importer but the ones only the schedule fetches (Royal): those are never offered on a dispatch
+    assert importers.SCHEDULE_ONLY == ("royal_coffee",)
+    assert inputs["importer"]["options"] == [
+        "all",
+        *(k for k in importers.IMPORTERS if k not in importers.SCHEDULE_ONLY),
+    ]
     assert wf["permissions"] == {"contents": "read"}
     for name, job in wf["jobs"].items():
         assert job.get("if") == "github.ref == 'refs/heads/main'", name

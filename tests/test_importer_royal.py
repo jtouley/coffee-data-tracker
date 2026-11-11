@@ -176,15 +176,20 @@ def test_each_product_is_kept_word_for_word_without_prices_or_images():
 
 
 def test_a_changed_listing_fails_loudly():
-    with pytest.raises(importers.LayoutChanged, match="zero rows"):
+    with pytest.raises(importers.LayoutChanged, match="zero readable rows"):
         importers.parse_royal([], LISTING)
     unreadable = [{k: v for k, v in p.items() if k != "handle"} for p in PRODUCTS[:2]] + PRODUCTS[2:]
     with pytest.raises(importers.LayoutChanged, match="unreadable"):
         importers.parse_royal(unreadable, LISTING)
     # a price that got into a kept field (here, the body's prose) fails the run, as on the other importers
-    priced = [{**PRODUCTS[0], "body_html": "<p>Now only $4.10/lb</p>"}, *PRODUCTS[1:]]
-    with pytest.raises(importers.LayoutChanged, match="currency amount in the 'body_text'"):
-        importers.parse_royal(priced, LISTING)
+    # (#140's wider backstop: a currency amount, an amount per weight, a labelled price)
+    for prose in ("<p>Now only $4.10/lb</p>", "<p>Offered at 4.25 per kg</p>", "<p>Price: 4.25</p>"):
+        priced = [{**PRODUCTS[0], "body_html": prose}, *PRODUCTS[1:]]
+        with pytest.raises(importers.LayoutChanged, match="a price in the 'body_text' field"):
+            importers.parse_royal(priced, LISTING)
+    tagged = [{**PRODUCTS[0], "tags": [*PRODUCTS[0]["tags"], "FOB 3.90 USD"]}, *PRODUCTS[1:]]
+    with pytest.raises(importers.LayoutChanged, match="a price in the 'tags' field"):
+        importers.parse_royal(tagged, LISTING)
 
     def not_a_listing(request: httpx.Request) -> httpx.Response:
         if request.url.path == "/robots.txt":
@@ -246,6 +251,34 @@ def test_a_thinned_listing_fails_like_the_other_importers(tmp_path, monkeypatch)
             lake, client, [importers.ROYAL], now=lambda: datetime(2026, 11, 18, tzinfo=UTC)
         )
     assert res[0]["status"] == "failed" and "thinned" in res[0]["error"]
+
+
+# --- private: the same private dataset checks as the other importers ---------------------------------------------
+
+
+def test_royal_goes_only_to_the_private_importers_dataset(tmp_path, monkeypatch):
+    """#140's private-dataset checks cover Royal: its one raw file a week is committed to the private importers
+    dataset, after the privacy check, and never to a dataset that isn't private."""
+    from tests.test_importers import FakeApi, _remote
+
+    _with_fake_store(monkeypatch)
+    api = FakeApi()
+    lake = _remote(tmp_path, monkeypatch, api)
+    with _store(_pages_of(250), []) as client:
+        res = importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+    assert res[0]["status"] == "stored"
+    assert api.calls[:2] == [("create", "someone/importers", True, True), ("card", "README.md")]
+    assert [c[1] for c in api.calls if c[0] == "commit"] == [
+        sorted(["raw/week=0000-00-00/importer=schema.parquet", importers.path(importers.ROYAL, MON)])
+    ]
+
+    for private in (False, None):  # a dataset that isn't private: refused before Royal is asked for anything
+        api = FakeApi(private=private)
+        lake = _remote(tmp_path / str(private), monkeypatch, api)
+        calls: list[httpx.Request] = []
+        with _store(_pages_of(250), calls) as client, pytest.raises(RuntimeError, match="not private"):
+            importers.snapshot(lake, client, [importers.ROYAL], now=lambda: NOW)
+        assert calls == [] and not any(c[0] in ("commit", "card") for c in api.calls)
 
 
 # --- no test and no CI job ever reaches Royal -----------------------------------------------------------------------
@@ -370,6 +403,7 @@ def test_rules_on_the_synthetic_products(i):
         "grower_type": None,
         "grower_name": None,
         "certifications": certs,
+        "not_certified": None,  # the store never marks one absent: unknown, never "not certified"
         "rules_version": rules.ROYAL_RULES_VERSION,
     }
 
@@ -386,6 +420,8 @@ def _cells(title: str = "Invented Lot", tags: list[str] = (), body: str = "") ->
         (_cells(body="Altitude: Bags of 1,000 m"), "altitude", (None, None)),
         (_cells(body="This harvest declined because of rain"), "harvest", None),
         (_cells(body="Harvest: Dec"), "harvest", ["dec"]),
+        (_cells(body="Harvest: may be smaller this year"), "harvest", None),  # the verb, not the month
+        (_cells(body="Harvest: May"), "harvest", ["may"]),
         (_cells("Mexico Natural", body="Processed with mountain water decaf method"), "process", None),
         (_cells("Rwanda Washed", ["Natural"]), "process", None),  # title and tag disagree
         (_cells("Indonesia Wet-Hulled"), "process", "honey"),
